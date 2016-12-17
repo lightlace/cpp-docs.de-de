@@ -1,0 +1,30 @@
+---
+title: "Interner Fehler. Die Speicherinformationen konnten nicht abgerufen werden."
+ms.custom: na
+ms.date: "11/17/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: na
+ms.topic: "article"
+f1_keywords: 
+  - "vbrDiagnosticInfo_Memory"
+ms.assetid: 1ba8f774-5858-438e-914e-99fddc9e5e7e
+caps.latest.revision: 7
+caps.handback.revision: "7"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# Interner Fehler. Die Speicherinformationen konnten nicht abgerufen werden.
+Fehler beim Aufruf einer der Eigenschaften für Speicherinformationen des `My.Computer.Info`\-Objekts.  
+  
+### So beheben Sie diesen Fehler  
+  
+-   Fügen Sie rund um den Aufruf der Eigenschaft für Speicherinformationen des `My.Computer.Info`\-Objekts einen `Try...Catch`\-Block hinzu.  
+  
+## Siehe auch  
+ [My.Computer.Info Object](../Topic/My.Computer.Info%20Object.md)   
+ [Ausnahmen\- und Fehlerbehandlung in Visual Basic](assetId:///3e351e73-cf23-40ab-8b60-05794160529e)   
+ [Try...Catch...Finally Statement](../Topic/Try...Catch...Finally%20Statement%20\(Visual%20Basic\).md)

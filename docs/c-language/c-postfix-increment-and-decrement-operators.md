@@ -1,0 +1,46 @@
+---
+title: "C - Inkrementierungs- und Dekrementierungsoperatoren in Postfixnotation"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "Inkrementoperatoren, Syntax"
+  - "Skalare Operatoren"
+  - "Typen [C], Skalar"
+ms.assetid: 56ba218d-65f9-405f-8684-caccc0ca33aa
+caps.latest.revision: 8
+caps.handback.revision: "8"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# C - Inkrementierungs- und Dekrementierungsoperatoren in Postfixnotation
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Postfix\-Inkrementoperatoren und Postfix\-Dekrementoperatoren sind skalare Typen, die änderbare l\-Werte sind.  
+  
+## Syntax  
+ *postfix\-expression*:  
+ *postfix\-expression*  **\+\+**  
+  
+ *postfix\-expression*  **––**  
+  
+ Das Ergebnis des Postfix\-Inkrementoperators oder Postfix\-Dekrementoperators ist der Wert des Operanden.  Nachdem das Ergebnis erreicht ist, wird der Wert des Operanden \(erhöht oder verringert\).  Der folgende Code veranschaulicht den Postfix\-Inkrementoperator.  
+  
+```  
+if( var++ > 0 )  
+    *p++ = *q++;  
+```  
+  
+ In diesem Beispiel wird die Variable `var` mit 0 verglichen und dann erhöht.  Wenn `var` vor der Erhöhung positiv war, wird die nächste Anweisung ausgeführt.  Zuerst wird der Wert des Objekts, auf das durch `q` gezeigt wird, dem Objekt zugewiesen, auf das durch `p` gezeigt wird.  Anschließend werden `q` und `p` erhöht.  
+  
+## Siehe auch  
+ [Inkrementierungs\- und Dekrementierungsoperatoren in Postfixnotation: \+\+ und \-\-](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)

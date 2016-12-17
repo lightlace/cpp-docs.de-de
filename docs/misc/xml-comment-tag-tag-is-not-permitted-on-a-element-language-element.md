@@ -1,0 +1,36 @@
+---
+title: "Das XML-Kommentartag &quot;&lt;Tag&gt;&quot; ist im Sprachelement &quot;&lt;Element&gt;&quot; nicht zul&#228;ssig."
+ms.custom: na
+ms.date: "11/17/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: na
+ms.topic: "article"
+f1_keywords: 
+  - "vbc42306"
+  - "bc42306"
+helpviewer_keywords: 
+  - "BC42306"
+ms.assetid: 12846822-0609-4298-a8b2-b022abfa3765
+caps.latest.revision: 12
+caps.handback.revision: "12"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# Das XML-Kommentartag &quot;&lt;Tag&gt;&quot; ist im Sprachelement &quot;&lt;Element&gt;&quot; nicht zul&#228;ssig.
+Das XML\-Kommentartag "\<Tag\>" ist in einem \<Element\>\-Element nicht zulässig. Der XML\-Kommentar wird ignoriert.  
+  
+ Ein XML\-Kommentartag wird von dem Sprachelement, auf das es angewendet wird, nicht unterstützt.  
+  
+ **Fehler\-ID:** BC42306  
+  
+### So beheben Sie diesen Fehler  
+  
+-   Entfernen Sie das nicht unterstützte XML\-Kommentartag.  
+  
+## Siehe auch  
+ [XML Comment Tags](../Topic/Recommended%20XML%20Tags%20for%20Documentation%20Comments%20\(Visual%20Basic\).md)   
+ [Documenting Your Code with XML](../Topic/Documenting%20Your%20Code%20with%20XML%20\(Visual%20Basic\).md)

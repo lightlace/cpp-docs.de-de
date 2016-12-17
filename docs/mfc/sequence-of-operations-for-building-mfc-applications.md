@@ -1,0 +1,57 @@
+---
+title: "Reihenfolge der Operationen zur Erstellung von MFC-Anwendungen"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "Anwendungen [MFC], Entwickeln"
+ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
+caps.latest.revision: 11
+caps.handback.revision: "7"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# Reihenfolge der Operationen zur Erstellung von MFC-Anwendungen
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Folgende Tabelle beschreibt die allgemeine Sequenz, die in der Regel zu, während Sie die MFC\-Anwendung entwickeln.  
+  
+### Ordnen Sie zum Erstellen einer Anwendung mit dem Framework sequenziell  
+  
+|Aufgabe|Hierzu|Das Framework führt|  
+|-------------|------------|-------------------------|  
+|Erstellen Sie ein Anwendungsskelett.|Führen Sie [MFC\-Anwendungs\-Assistent](../mfc/reference/mfc-application-wizard.md) aus.  Geben Sie die Optionen, die Sie in den Optionsseiten soll.  Optionen zählen die Vereinfachung die Anwendung einer COM\-Komponente ein, des Containers oder der beider; Hinzufügen von Automatisierung; und die Anforderung Datenbank\-bewusst wird.|Der MFC\-Anwendungs\-Assistent erstellt die Dateien für ein Anwendungsskelett, einschließlich Quelldateien für die Anwendung, Dokument, Ansicht und Rahmenfenster; ; eine Ressourcendatei eine Projektdatei; und andere, so angepasst zu der Spezifikation.|  
+|Siehe, was das Framework und der MFC\-Anwendungs\-Assistent bieten, ohne eine Zeile eigenen Code hinzuzufügen.|Erstellen Sie die Skelettanwendung auf und führen Sie es in Visual C\+\+ aus.|Das ausgeführte Anwendungsskelett abgeleitet viel Standard\- **Datei**, **Bearbeiten**, **Ansicht** und **Hilfe** Menübefehle vom Framework.  Für MDI\-Anwendungen rufen Sie gleichzeitig auch einer voll funktionsfähigen ab \- funktionsfähiges Menü Fenster und Framework verwaltet Erstellung, Anordnung und Zerstörung von untergeordneten MDI\-Fenstern.|  
+|Erstellen der Benutzeroberfläche der Anwendung.|Verwenden Sie Visual C\+\+\- [Ressourcen\-Editoren](../mfc/resource-editors.md), um die Benutzeroberfläche der Anwendung visuell bearbeiten:<br /><br /> -   Erstellen von Menüs.<br />-   Definieren Sie Zugriffstasten.<br />-   Erstellen Sie Dialogfelder.<br />-   Erstellen und Bearbeiten von Bitmaps, Symbole und Cursor.<br />-   Bearbeiten Sie die Symbolleiste, die für Sie im MFC\-Anwendungs\-Assistenten erstellt wird.<br />-   Erstellen und Bearbeiten andere Ressourcen.<br /><br /> Sie können das Dialogfeld im Dialog\-Editor auch testen.|Die Standardressourcendatei, die vom MFC\-Anwendungs\-Assistenten erstellt wird, enthält viele Ressourcen, die Sie benötigen.  Visual C\+\+ können Sie vorhandene Ressourcen bearbeiten und neue Ressourcen problemlos und visuell hinzufügen.|  
+|Zuordnungsmenüs an Handlerfunktionen.|Verwenden Sie die Schaltfläche **Ereignisse** im [Eigenschaftenfenster](../Topic/Properties%20Window.md), um Menüs und Zugriffstasten an Handlerfunktionen im Code zu.|Das Eigenschaftenfenster wird Meldungszuordnungseinträge und leere Funktionsvorlagen in die Quelldateien, die Sie angeben ein und verwaltet viele manuellen Codierungsaufgaben.|  
+|Schreiben Sie den Handlercode.|Verwenden Sie die Klassenansicht, um direkt zum Code im Quellcode\-Editor zu springen.  Füllen Sie den Code für die Handlerfunktionen aus.  Weitere Informationen über die Verwendung der Klassenansicht und über Assistenten, die einem Projekt Code hinzufügen können, finden Sie unter [Hinzufügen neuer Funktionen mit Code\-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md).|Klassenansicht wird der Editor, führt zur leeren Funktionsvorlage Bildlauf und positioniert den Cursor für Sie.|  
+|Zuordnungssymbolleistenschaltflächen auf Befehle.|Zuordnen jeder Schaltfläche auf der Symbolleiste auf einen Menü\- oder Zugriffstastenbefehl zu, indem Sie die Schaltfläche der entsprechende Befehl ID zuweisen|Das Framework steuert die Zeichnungen und aktiviert, deaktiviert, überprüft, und andere sichtbare Aspekte der Symbolleisten\-Schaltflächen.|  
+|Testen Sie die Handlerfunktionen.|Erstellen Sie das Programm neu und verwenden Sie die integrierten Debugtools, um zu testen, dass die Handler ordnungsgemäß funktionieren.|Sie können durch den Code geführt werden oder erfassen, um zu sehen, wie diese Handler aufgerufen werden.  Wenn Sie den Handlercode ergänzt haben, werden die Befehle von Handler.  Das Framework automatisch deaktiviert Menüelemente und Symbolleisten\-Schaltflächen, die nicht verarbeitet werden.|  
+|Fügen Sie unter [Dialogfelder](../mfc/dialog-boxes.md) hinzu.|Entwerfen Sie Dialogfeldvorlagenressourcen mit dem Dialog\-Editor.  Erstellen Sie dann eine Dialogfeldklasse und den Code, der das Dialogfeld behandelt.|Das Framework verwaltet das Dialogfeld und erleichtert, die Informationen abrufen, die vom Benutzer eingegeben werden.|  
+|Initialisieren Sie, Überprüfen und rufen Sie Dialogfelddaten ab.|Sie können auch festlegen, wie die Steuerelemente des Dialogfelds initialisiert und überprüft werden sollen.  Verwenden Sie Visual Studio, um Membervariablen der Dialogfeldklasse hinzuzufügen und diese den Dialogfeldkontrollen zuzuordnen.  Geben Sie Validierungsregeln an, für jedes Steuerelement angewendet werden, wie der Benutzer Daten eingibt.  Erstellen Sie Ihre eigenen benutzerdefinierten Validierungen bereit, wenn Sie möchten.|Das Framework verwaltet Dialogfeldinitialisierung und Validierung.  Wenn der Benutzer ungültige Informationen eingibt, zeigt das Framework ein Meldungsfeld an und ermöglicht dem Benutzer die Daten erneut eingeben.|  
+|Erstellen Sie zusätzliche Klassen.|Verwenden Sie die Klassenansicht, um zusätzliche Dokument, Ansicht und Rahmenfensterklassen über den hinaus zu erstellen, die automatisch vom MFC\-Anwendungs\-Assistenten erstellt werden.  Sie können zusätzliche Datenbankrecordsetklassen, Dialogfeldklassen erstellen, z. B. \(Mit Klassenansicht, können Sie die Klassen erstellen, die nicht von MFC\-Klassen abgeleitet werden\).|Klassenansicht fügt diesen Klassen den Quelldateien und Codierungshilfen hinzu, die Sie die Verbindungen auf eventuelle Befehle definieren, sie behandeln.|  
+|Fügen Sie vorgefertigte Komponenten der Anwendung.|Verwenden Sie `New Item dialog box`, um eine Vielzahl von Elementen hinzufügen.|Diese Elemente sind einfach, in die Anwendung integrieren und Sie zu einem viel Arbeit.|  
+|Implementieren Sie die Dokumentklasse.|Implementieren Sie die anwendungsspezifische Dokumentklasse oder Klassen.  Fügen Sie Membervariablen hinzu, um Datenstrukturen aufzunehmen.  Fügen Sie Memberfunktionen hinzu, um eine Schnittstelle an Daten bereitzustellen.|Das Framework kann bereits mit Dokumentdatendateien interagieren.  Es kann Dokumentdateien, Lesen öffnen und schließen und die Daten des Dokuments schreiben und behandelt andere Benutzeroberflächen.  Sie können untersuchen auf, wie die Daten des Dokuments bearbeiten.|  
+|Implementieren geöffnet, speichern und speichern als Befehle.|Schreiben Sie Code für die `Serialize`\-Memberfunktion des Dokuments.|Das Framework wird Dialogfelder für **Öffnen**, **Speichern** und **Speichern unter** Befehle im Menü **Datei** an.  Es liest und schreibt anschließend ein Dokument mit dem Datenformat, das in der `Serialize`\-Memberfunktion angegeben wird.|  
+|Implementieren Sie die Ansichtsklasse.|Implementieren Sie eine oder mehrere Ansichtsklassen entsprechend Ihren Dokumenten.  Implementieren Sie die Memberfunktionen der Ansicht, die Sie der Benutzeroberfläche mit Klassenansicht belegen.  Eine Vielzahl von [CView](../mfc/reference/cview-class.md) abgeleitete Klassen sind, einschließlich [CListView](../mfc/reference/clistview-class.md) und [CTreeView](../mfc/reference/ctreeview-class.md) verfügbar.|Das Framework verwaltet die meisten der Beziehung zwischen einem Dokument und der Ansicht.  Die Memberfunktionen der Ansicht greifen auf das Dokument der Ansicht, um das Bild auf dem Bildschirm oder der gedruckten Seite zu rendern zu und die Datenstrukturen des Dokuments als Reaktion auf Benutzerbearbeitungsbefehle zu aktualisieren.|  
+|Vergrößern Sie Standarddruck.|Wenn Sie paginierten Drucken unterstützen müssen, Überschreibungsansichtsmemberfunktionen.|Das Framework unterstützt **Drucken**, **Seite einrichten** und **Seitenansicht** Befehle im Menü **Datei**.  Sie müssen ihm mitteilen, wie das Dokument in mehrere Seiten verteilt wird.|  
+|Fügen Sie einen hinzu.|Wenn Sie einen Bildlauf unterstützen müssen, leiten Sie die Ansichtsklasse oder Klassen aus [CScrollView](../mfc/reference/cscrollview-class.md).|Die Ansicht werden automatisch Bildlaufleisten hinzu, wenn das Ansichtsfenster zu klein ist.|  
+|Erstellen Sie Formularansichten.|Wenn Sie Ansichten auf die Dialogfeldvorlagenressourcen basieren soll, berechnen Sie die Ansichtsklasse oder Klassen aus [CFormView](../mfc/reference/cformview-class.md).|Die Ansicht verwendet die Dialogfeldvorlagen\-Ressource an Steuerelemente.  Der Benutzer kann von Steuerelement zu Steuerelement in der Ansicht mit der TAB\-TASTE.|  
+|Erstellen Sie Datenbankformulare.|Wenn Sie eine formularbasierte Datenzugriffs\-Anwendung soll, berechnen Sie die Ansichtsklasse von [CRecordView](../mfc/reference/crecordview-class.md) \(für die ODBC\-Programmierung\).|Die Ansicht Funktionsweise einer Formularansicht, aber ihre Steuerelemente werden an den Feldern eines [CRecordset](../mfc/reference/crecordset-class.md) verbunden Objekts, das eine Datenbanktabelle darstellt.  MFC verschieben Daten zwischen den Steuerelementen und das Recordset für Sie.|  
+|Erstellen eines einfachen Text\-Editor erstellt.|Wenn Sie die Ansicht ein einfacher Text\-Editor sein soll, berechnen Sie die Ansichtsklasse oder Klassen aus [CEditView](../mfc/reference/ceditview-class.md) oder [CRichEditView](../mfc/reference/cricheditview-class.md).|Die Ansicht enthält Editierfunktionen, Unterstützung der Zwischenablage und Dateieingabe\/ausgabe.  `CRichEditView` stellt formatierten Text.|  
+|Fügen Sie Splitterfenster hinzu.|Wenn Sie die Faltung des Bildschirms unterstützt werden, fügen Sie einem [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)\-Objekt dem SDI\-Rahmenfenster oder \-untergeordnetem MDI\-Fenster hinzu und verknüpfen Sie sie oben in der Memberfunktion [OnCreateClient](../Topic/CFrameWnd::OnCreateClient.md) des Fensters.|Das Framework stellt SplitterFeldkontrollen neben den Bildlaufleisten und verwaltet das Teilen der Ansicht in mehrere Bereiche.  Wenn der Benutzer ein Fenster wird, erstellt das Framework und fügt zusätzliche Ansichtsobjekte zum Dokument an.|  
+|Erstellen Sie auf, Testen und Debuggen Sie die Anwendung.|Verwenden Sie die Funktionen von Visual C\+\+, um die Anwendung zu erstellen, testen und debuggen können.|Visual C\+\+ können Sie anpassen kompilieren, verknüpfen und andere Optionen.  Sie können auch die Quellcode\- und Klassenstruktur durchsuchen.|  
+  
+## Siehe auch  
+ [Reihenfolge der Operationen zur Erstellung von OLE\-Anwendungen](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
+ [Operationssequenz zur Erstellung von ActiveX\-Steuerelementen](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
+ [Reihenfolge der Operationen zur Erstellung Datenbankanwendungen](../mfc/sequence-of-operations-for-creating-database-applications.md)   
+ [Erstellen im Framework](../mfc/building-on-the-framework.md)

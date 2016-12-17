@@ -1,0 +1,59 @@
+---
+title: "CriticalSectionTraits-Struktur"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "reference"
+f1_keywords: 
+  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CriticalSectionTraits-Struktur"
+ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
+caps.latest.revision: 3
+caps.handback.revision: "3"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# CriticalSectionTraits-Struktur
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Spezialisiert ein CriticalSections\-Objekt, um entweder einen ungültigen kritischen Abschnitt oder eine Funktion zu unterstützen, um einen kritischen Abschnitt freizugeben.  
+  
+## Syntax  
+  
+```  
+struct CriticalSectionTraits;  
+```  
+  
+## Member  
+  
+### Öffentliche Typedefs  
+  
+|Name|**Beschreibung**|  
+|----------|----------------------|  
+|`Type`|`typedef`, das einen Zeiger zu einem kritischen Abschnitt definiert.  `Type` wird als `typedef CRITICAL_SECTION* Type;` definiert.|  
+  
+### Öffentliche Methoden  
+  
+|Name|**Beschreibung**|  
+|----------|----------------------|  
+|[CriticalSectionTraits::GetInvalidValue\-Methode](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Spezialisiert eine CriticalSections\-Vorlage, damit die Vorlage immer ungültig ist.|  
+|[CriticalSectionTraits::Unlock\-Methode](../windows/criticalsectiontraits-unlock-method.md)|Spezialisiert eine CriticalSections\-Vorlage, sodass sie das Freigeben des Besitzes des angegebenen Abschnittsobjekts kritischen unterstützt.|  
+  
+## Vererbungshierarchie  
+ `CriticalSectionTraits`  
+  
+## Anforderungen  
+ **Header:** corewrappers.h  
+  
+ **Namespace:**  Microsoft::WRL::Wrappers::HandleTraits  
+  
+## Siehe auch  
+ [Microsoft::WRL::Wrappers::HandleTraits\-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

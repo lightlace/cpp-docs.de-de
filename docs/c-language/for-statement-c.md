@@ -1,0 +1,90 @@
+---
+title: "for-Anweisung (C)"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "for-Schlüsselwort [C]"
+ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
+caps.latest.revision: 9
+caps.handback.revision: "9"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# for-Anweisung (C)
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Mit der `for`\-Anweisung können Sie eine Anweisung oder eine Verbundanweisung so häufig wie angegeben wiederholen.  Der Text einer `for`\-Anweisung wird nicht oder mehrmals ausgeführt, bis eine optionale Bedingung falsch ist.  Sie können optionale Ausdrücke in der `for`\-Anweisung verwenden, um Werte während der Ausführung der `for`\-Anweisung zu initialisieren und zu ändern.  
+  
+## Syntax  
+ *iteration\-statement*:  
+ `for` \( `init-expression` opt ; `cond-expression`opt ; `loop-expression` opt \)`statement`  
+  
+ Eine `for`\-Anweisung wird wie folgt ausgeführt:  
+  
+1.  `init-expression` wird ausgewertet, sofern vorhanden.  Dadurch wird die Initialisierung für die Schleife angegeben.  Für den Typ `init-expression` besteht keine Einschränkung.  
+  
+2.  `cond-expression` wird ausgewertet, sofern vorhanden.  Dieser Ausdruck muss einen arithmetischen Typ oder einen Zeigertyp aufweisen.  Er wird vor jeder Iteration ausgewertet.  Drei Ergebnisse sind möglich:  
+  
+    -   Wenn `cond-expression` "true" \(ungleich 0 \(null\)\) ist, wird `statement` ausgeführt; `loop-expression` wird ggf. ausgewertet.  `loop-expression` wird nach jeder Iterationen ausgewertet.  Für den zugehörigen Typ besteht keine Einschränkung.  Nebeneffekte werden in der Reihenfolge ausgeführt.  Der Prozess beginnt anschließend erneut mit der Auswertung von `cond-expression`.  
+  
+    -   Wenn `cond-expression` weggelassen wird, gilt `cond-expression` dennoch als "true" und die Ausführung wird genau wie im vorherigen Absatz beschrieben fortgesetzt.  Eine `for`\-Anweisung ohne ein `cond-expression`\-Argument wird nur beendet, wenn eine `break`\- oder `return`\-Anweisung innerhalb des Anweisungstexts ausgeführt wird, oder wenn `goto` \(eine Anweisung mit Bezeichnung außerhalb des `for`\-Anweisungstexts\) ausgeführt wird.  
+  
+    -   Wenn `cond-expression` `false` \(0\) ist, wird die `for`\-Anweisung beendet und das Steuerelement an die nächste Anweisung im Programm weitergegeben.  
+  
+ Eine `for`\-Anweisung wird auch dann beendet, wenn eine `break`\-, `goto`\- oder `return`\-Anweisung innerhalb des Anweisungstexts ausgeführt wird.  Eine `continue`\-Anweisung in einer `for`\-Schleife führt zur Auswertung von `loop-expression`.  Wenn eine `break`\-Anweisung innerhalb einer `for`\-Schleife ausgeführt wird, wird `loop-expression` weder ausgewertet noch ausgeführt.  Diese Anweisung  
+  
+```  
+for( ;; )  
+```  
+  
+ ist die übliche Methode zum Erstellen einer Endlosschleife, die nur mit einer `break`\-, `goto`\- oder `return`\-Anweisung beendet werden kann.  
+  
+## Code  
+ In diesem Beispiel wird die `for`\-Anweisung veranschaulicht.  
+  
+```  
+// c_for.c  
+int main()  
+{  
+   char* line = "H e  \tl\tlo World\0";  
+   int space = 0;  
+   int tab = 0;  
+   int i;  
+   int max = strlen(line);  
+   for (i = 0; i < max; i++ )   
+   {  
+      if ( line[i] == ' ' )  
+      {  
+          space++;  
+      }  
+      if ( line[i] == '\t' )  
+      {  
+          tab++;  
+      }  
+   }  
+  
+   printf("Number of spaces: %i\n", space);  
+   printf("Number of tabs: %i\n", tab);  
+   return 0;  
+}  
+```  
+  
+## Ausgabe  
+  
+```  
+Number of spaces: 4  
+Number of tabs: 2  
+```  
+  
+## Siehe auch  
+ [Anweisungen](../c-language/statements-c.md)

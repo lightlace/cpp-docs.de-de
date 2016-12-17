@@ -1,0 +1,54 @@
+---
+title: "Compilerfehler C3721"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C3721"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C3721"
+ms.assetid: c696ca38-3e00-4875-abbe-7bce0f46930e
+caps.latest.revision: 13
+caps.handback.revision: "13"
+ms.author: "corob"
+manager: "ghogen"
+---
+# Compilerfehler C3721
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+'Signatur': Die Ereignissignatur ist nicht kompatibel  
+  
+ Ein Ereignis wurde falsch deklariert.  Weitere Informationen finden Sie unter [\_\_event](../../cpp/event.md).  
+  
+ C3721 ist nur mit **\/clr:oldSyntax** erreichbar.  
+  
+## Beispiel  
+ Im folgenden Beispiel wird C3721 generiert.  
+  
+```  
+// C3721.cpp  
+// compile with: /clr:oldSyntax /c  
+using namespace System;  
+  
+public __delegate void MyDel();  
+  
+public __gc class X {  
+   __event void add_E1();      // C3721  
+   // try the following line instead  
+   // __event void add_E1(MyDel * p);  
+  
+   __event void remove_E1();   // C3721  
+   // __event void remove_E1(MyDel * p);  
+   // try the following line instead  
+  
+   __event void raise_E1();  
+};  
+```

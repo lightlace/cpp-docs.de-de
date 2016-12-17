@@ -1,0 +1,87 @@
+---
+title: "list::rend (STL/CLR)"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "reference"
+f1_keywords: 
+  - "cliext::list::rend"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "rend-Member [STL/CLR]"
+ms.assetid: b51030ad-1bca-42b0-b890-db47111d2921
+caps.latest.revision: 16
+caps.handback.revision: "14"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# list::rend (STL/CLR)
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Legt das Ende der umgekehrten kontrollierten Sequenz fest.  
+  
+## Syntax  
+  
+```  
+reverse_iterator rend();  
+```  
+  
+## Hinweise  
+ Die Memberfunktion gibt einem umgekehrten Iterator zurück, der nur über den Anfang der Sequenz gesteuerten hinaus zeigt.  Demzufolge wird der `end` der umgekehrten Sequenz bestimmt.  Sie können damit einen Iterator abrufen, der das `current` Ende der kontrollierten Sequenz in umgekehrter Reihenfolge bestimmt; der Zustand kann sich jedoch ändern, sobald sich die Länge der kontrollierten Sequenz ändert.  
+  
+## Beispiel  
+  
+```  
+// cliext_list_rend.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect first two items   
+    cliext::list<wchar_t>::reverse_iterator rit = c1.rend();   
+    --rit;   
+    System::Console::WriteLine("*-- --rend() = {0}", *--rit);   
+    System::Console::WriteLine("*--rend() = {0}", *++rit);   
+  
+// alter first two items and reinspect   
+    *--rit = L'x';   
+    *++rit = L'y';   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+  **ein b c**  
+**\*\- \-\-rend\(\) \= b**  
+**\*\-\-rend\(\) \= "**  
+ **y x c**   
+## Anforderungen  
+ **Header:** \<cliext\/Liste\>  
+  
+ **Namespace:** cliext  
+  
+## Siehe auch  
+ [list](../dotnet/list-stl-clr.md)   
+ [list::begin](../dotnet/list-begin-stl-clr.md)   
+ [list::end](../dotnet/list-end-stl-clr.md)   
+ [list::rbegin](../dotnet/list-rbegin-stl-clr.md)

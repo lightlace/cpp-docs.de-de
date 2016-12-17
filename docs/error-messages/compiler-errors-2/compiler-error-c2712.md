@@ -1,0 +1,64 @@
+---
+title: "Compilerfehler C2712"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C2712"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C2712"
+ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
+caps.latest.revision: 15
+caps.handback.revision: "15"
+ms.author: "corob"
+manager: "ghogen"
+---
+# Compilerfehler C2712
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+\_\_try kann nicht in Funktionen verwendet werden, die eine Objektentladung benötigen  
+  
+ Fehler C2712 kann auftreten, wenn Sie [\/EHsc](../../build/reference/eh-exception-handling-model.md) verwenden und eine Funktion mit strukturierter Ausnahmebehandlung auch Objekte besitzt, die eine Entladung \(Zerstörung\) benötigen.  
+  
+ Folgende Lösungen sind möglich:  
+  
+-   Verschieben Sie Code, der SEH benötigt, zu einer anderen Funktion.  
+  
+-   Schreiben Sie Funktionen, die SEH verwenden, neu, um die Verwendung von lokalen Variablen und Parameter, die über Destruktoren verfügen, zu vermeiden.  Verwenden Sie SEH nicht in Konstruktoren oder Destruktoren  
+  
+-   Kompilieren ohne \/EHsc  
+  
+ Fehler C2712 kann auch auftreten, wenn Sie eine mit dem [\_\_event](../../cpp/event.md)\-Schlüsselwort deklarierte Methode aufrufen.  Da das Ereignis möglicherweise in einer Multithreadumgebung verwendet wird, generiert der Compiler Code, der die Bearbeitung des zugrunde liegenden Ereignisobjekts verhindert und dann den generierten Code in eine SEH\-[try\-finally\-Anweisung](../../cpp/try-finally-statement.md) einschließt.  Folglich wird Fehler C2712 auftreten, wenn Sie die Ereignismethode aufrufen und ein Argument, dessen Typ einen Destruktor enthält, als Wert übergeben.  Eine Lösung besteht in diesem Fall darin, das Argument als konstanten Verweis zu übergeben.  
+  
+## Beispiel  
+ C2712 kann auch auftreten, wenn Sie die Kompilierung mit **\/clr:pure** ausführen und einen statischen Array von Zeigern auf Funktionen in einem `__try`\-Block deklarieren.  Ein statischer Member benötigt den Compiler, um die dynamische Initialisierung unter **\/clr:pure** zu verwenden, wodurch eine C\+\+\-Ausnahmebehandlung impliziert ist.  Eine C\+\+\-Ausnahmebehandlung ist jedoch in einem `__try`\-Block nicht zulässig.  
+  
+ Im folgenden Beispiel wird C2712 generiert und gezeigt, wie Sie diesen Fehler beheben:  
+  
+```  
+// C2712.cpp  
+// compile with: /clr:pure /c  
+struct S1 {  
+   static int smf();  
+   void fnc();  
+};  
+  
+void S1::fnc() {  
+   __try {  
+      static int (*array_1[])() = {smf,};   // C2712  
+  
+      // OK  
+      static int (*array_2[2])();  
+      array_2[0] = smf;  
+    }  
+    __except(0) {}  
+}  
+```
