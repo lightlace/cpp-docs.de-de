@@ -1,0 +1,85 @@
+---
+title: "list::reference (STL/CLR)"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "reference"
+f1_keywords: 
+  - "cliext::list::reference"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "Verweismember [STL/CLR]"
+ms.assetid: 318a4566-63f2-4744-8e06-14f7c5608d82
+caps.latest.revision: 17
+caps.handback.revision: "15"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# list::reference (STL/CLR)
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Der Typ eines Verweises auf ein Element.  
+  
+## Syntax  
+  
+```  
+typedef value_type% reference;  
+```  
+  
+## Hinweise  
+ Der Typ beschreibt einen Verweis auf ein Element.  
+  
+## Beispiel  
+  
+```  
+// cliext_list_reference.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    cliext::list<wchar_t>::iterator it = c1.begin();   
+    for (; it != c1.end(); ++it)   
+        {   // get a reference to an element   
+        cliext::list<wchar_t>::reference ref = *it;   
+        System::Console::Write(" {0}", ref);   
+        }   
+    System::Console::WriteLine();   
+  
+// modify contents " a b c"   
+    for (it = c1.begin(); it != c1.end(); ++it)   
+        {   // get a reference to an element   
+        cliext::list<wchar_t>::reference ref = *it;   
+  
+        ref += (wchar_t)(L'A' - L'a');   
+        System::Console::Write(" {0}", ref);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+  **ein b c**  
+ **B C**   
+## Anforderungen  
+ **Header:** \<cliext\/Liste\>  
+  
+ **Namespace:** cliext  
+  
+## Siehe auch  
+ [list](../dotnet/list-stl-clr.md)   
+ [list::const\_reference](../dotnet/list-const-reference-stl-clr.md)   
+ [list::value\_type](../dotnet/list-value-type-stl-clr.md)

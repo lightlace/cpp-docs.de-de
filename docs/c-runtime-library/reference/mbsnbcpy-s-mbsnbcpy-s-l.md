@@ -1,0 +1,147 @@
+---
+title: "_mbsnbcpy_s, _mbsnbcpy_s_l"
+ms.custom: na
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "article"
+apiname: 
+  - "_mbsnbcpy_s_l"
+  - "_mbsnbcpy_s"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+  - "api-ms-win-crt-multibyte-l1-1-0.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "mbsnbcpy_s_l"
+  - "_mbsnbcpy_s"
+  - "mbsnbcpy_s"
+  - "_mbsnbcpy_s_l"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "_mbsnbcpy_s-Funktion"
+  - "_mbsnbcpy_s_l-Funktion"
+  - "_tcsncpy_s-Funktion"
+  - "_tcsncpy_s_l-Funktion"
+  - "mbsnbcpy_s-Funktion"
+  - "mbsnbcpy_s_l-Funktion"
+  - "tcsncpy_s-Funktion"
+  - "tcsncpy_s_l-Funktion"
+ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
+caps.latest.revision: 29
+caps.handback.revision: "29"
+ms.author: "corob"
+manager: "ghogen"
+---
+# _mbsnbcpy_s, _mbsnbcpy_s_l
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+Kopiert `n` Bytes einer Zeichenfolge in eine Zielzeichenfolge.  Diese Versionen von [\_mbsnbcpy, \_mbsnbcpy\_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md) enthalten Sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+  
+> [!IMPORTANT]
+>  Diese API kann nicht in Anwendungen verwendet werden, die in Windows\-Runtime ausgeführt werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+  
+## Syntax  
+  
+```  
+errno_t _mbsnbcpy_s(  
+   unsigned char * strDest,  
+   size_t sizeInBytes,  
+   const unsigned char * strSource,  
+   size_t count   
+);  
+errno_t _mbsnbcpy_s_l(  
+   unsigned char * strDest,  
+   size_t sizeInBytes,  
+   const unsigned char * strSource,  
+   size_t count,  
+   _locale_t locale  
+);  
+template <size_t size>  
+errno_t _mbsnbcpy_s(  
+   unsigned char (&strDest)[size],  
+   const unsigned char * strSource,  
+   size_t count   
+); // C++ only  
+template <size_t size>  
+errno_t _mbsnbcpy_s_l(  
+   unsigned char (&strDest)[size],  
+   const unsigned char * strSource,  
+   size_t count,  
+   _locale_t locale  
+); // C++ only  
+```  
+  
+#### Parameter  
+ `strDest`  
+ Ziel für die zu kopierende Zeichenfolge.  
+  
+ `sizeInBytes`  
+ Größe des Zielpuffers.  
+  
+ `strSource`  
+ Zu kopierende Zeichenfolge.  
+  
+ `count`  
+ Anzahl der zu kopierenden Bytes.  
+  
+ `locale`  
+ Zu verwendendes Gebietsschema.  
+  
+## Rückgabewert  
+ Bei Erfolg gleich 0 \(null\); `EINVAL`, wenn ein ungültiger Parameter übergeben wurde.  
+  
+## Hinweise  
+ Die `_mbsnbcpy_s`\-Funktion kopiert `count` Bytes von `strSource` nach `strDest`.  Wenn `count` die Größe von `strDest` überschreitet, ist eine der Eingabezeichenfolgen ein NULL\-Zeiger, oder wenn `sizeInBytes` oder `count` 0 \(null\) ist, ruft die Funktion, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, den Handler für ungültige Parameter auf.  Wenn die weitere Ausführung zugelassen wird, gibt die Funktion `EINVAL` zurück.  Wenn sich Quell\- und Zielzeichenfolgen überlappen, ist das Verhalten von `_mbsnbcpy_s` undefiniert.  
+  
+ Der Ausgabewert ist von der `LC_CTYPE`\-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Die Versionen dieser Funktionen ohne das `_l`\-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+  
+> [!NOTE]
+>  Anders als die nicht sichere Version dieser Funktion füllt `_mbsnbcpy_s` nichts mit 0 \(null\) auf, und die Zeichenfolge wird immer mit NULL beendet.  
+  
+ In C\+\+ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen \(wodurch kein Größenargument mehr angegeben werden muss\), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+  
+ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf.  Mit [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md) deaktivieren Sie dieses Verhalten.  
+  
+### Zuordnung generischer Textroutinen  
+  
+|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
+|----------------------|------------------------------------------|----------------------|-------------------------|  
+|`_tcsncpy_s`|`_strncpy_s`|`_mbsnbcpy_s`|`_wcsncpy_s`|  
+|`_tcsncpy_s_l`|`_strncpy_s_l`|`_mbsnbcpy_s_l`|`_wcsncpy_s_l`|  
+  
+## Anforderungen  
+  
+|Routine|Erforderlicher Header|  
+|-------------|---------------------------|  
+|`_mbsnbcpy_s`|\<mbstring.h\>|  
+|`_mbsnbcpy_s_l`|\<mbstring.h\>|  
+  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+  
+## .NET Framework-Entsprechung  
+ Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+  
+## Siehe auch  
+ [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
+ [\_mbsnbcat, \_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [\_mbsnbcmp, \_mbsnbcmp\_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
+ [\_strncnt, \_wcsncnt, \_mbsnbcnt, \_mbsnbcnt\_l, \_mbsnccnt, \_mbsnccnt\_l](../../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)   
+ [\_mbsnbicmp, \_mbsnbicmp\_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
+ [\_mbsnbset, \_mbsnbset\_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
+ [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)

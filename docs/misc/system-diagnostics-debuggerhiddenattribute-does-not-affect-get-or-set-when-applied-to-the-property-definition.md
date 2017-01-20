@@ -1,0 +1,45 @@
+---
+title: "System.Diagnostics.DebuggerHiddenAttribute hat bei Anwendung auf die Eigenschaftsdefinition keine Auswirkungen auf &quot;Get&quot; oder &quot;Set&quot;."
+ms.custom: na
+ms.date: "11/24/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: na
+ms.topic: "article"
+f1_keywords: 
+  - "bc40051"
+  - "vbc40051"
+helpviewer_keywords: 
+  - "BC40051"
+ms.assetid: 623d5e48-7fb2-48a9-bbbb-92914b08c01c
+caps.latest.revision: 10
+caps.handback.revision: "10"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# System.Diagnostics.DebuggerHiddenAttribute hat bei Anwendung auf die Eigenschaftsdefinition keine Auswirkungen auf &quot;Get&quot; oder &quot;Set&quot;.
+System.Diagnostics.DebuggerHiddenAttribute hat bei Anwendung auf die Eigenschaftsdefinition keine Auswirkungen auf 'Get' oder 'Set'. Wenden Sie das Attribut direkt auf die „Get“\- und "Set"\-Verfahren an.  
+  
+ Das <xref:System.Diagnostics.DebuggerHiddenAttribute> wird auf eine Eigenschaftsdeklaration angewendet.  
+  
+ Der Quellcode kann das <xref:System.Diagnostics.DebuggerHiddenAttribute> auf eine Prozedur anwenden. Dies signalisiert dem Visual Studio\-Debugger, dass innerhalb der Prozedur kein Beenden möglich ist und es zudem nicht gestattet ist, Haltepunkte in der Prozedur festzulegen.  
+  
+ Obwohl Sie <xref:System.Diagnostics.DebuggerHiddenAttribute> auf eine Eigenschaft anwenden können, hat dies keine Auswirkung. Es hat nur den gewünschten Effekt, wenn Sie es auf die `Get`\- oder `Set`\-Prozedur der Eigenschaft anwenden.  
+  
+ Standardmäßig ist diese Meldung eine Warnung. Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](../Topic/Configuring%20Warnings%20in%20Visual%20Basic.md).  
+  
+ **Fehler\-ID:** BC40051  
+  
+### So beheben Sie diesen Fehler  
+  
+-   Entfernen Sie das <xref:System.Diagnostics.DebuggerHiddenAttribute> aus der Eigenschaftendeklaration, und wenden Sie es entsprechend auf die `Get`\- oder `Set`\-Prozeduren der Eigenschaft an.  
+  
+## Siehe auch  
+ <xref:System.Diagnostics.DebuggerHiddenAttribute>   
+ [Eigenschaftenprozeduren](../Topic/Property%20Procedures%20\(Visual%20Basic\).md)   
+ [Property Statement](../Topic/Property%20Statement.md)   
+ [Get Statement](../Topic/Get%20Statement.md)   
+ [Set Statement](../Topic/Set%20Statement%20\(Visual%20Basic\).md)

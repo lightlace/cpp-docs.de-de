@@ -1,0 +1,58 @@
+---
+title: "do-while-Anweisung (C)"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "article"
+f1_keywords: 
+  - "do"
+  - "while"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "do-while-Schlüsselwort [C]"
+ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
+caps.latest.revision: 7
+caps.handback.revision: "7"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# do-while-Anweisung (C)
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Mit der `do-while`\-Anweisung wird eine Anweisung oder ein Anweisungsblock wiederholt ausgeführt, bis ein bestimmter Ausdruck den Wert "false" liefert.  
+  
+## Syntax  
+ *iteration\-statement*:  
+ **do**  *Ausdruck*  **while \(**  *Anweisung*  **\)**  
+  
+ Der *Ausdruck* in einer `do-while`\-Anweisung wird ausgewertet, nachdem der Text der Schleife ausgeführt wird.  Daher wird der Text der Schleife immer mindestens einmal ausgeführt.  
+  
+ Der *Ausdruck* muss einen arithmetischen Typ oder einen Zeigertyp aufweisen.  Die Ausführung erfolgt folgendermaßen:  
+  
+1.  Der Anweisungstext wird ausgeführt.  
+  
+2.  Danach wird *expression*, der Ausdruck, ausgewertet.  Wenn *expression* "false" ist, wird die `do-while`\-Anweisung beendet und das Steuerelement an die nächste Anweisung im Programm weitergegeben.  Wenn *expression* "true" \(ungleich 0 \(null\)\) ist, wird der Prozess wiederholt, beginnend mit Schritt 1.  
+  
+ Die `do-while`\-Anweisung kann auch beendet werden, wenn eine **break**\-, eine `goto`\- oder eine `return`\-Anweisung innerhalb des Anweisungstexts ausgeführt wird.  
+  
+ In diesem Beispiel wird die `do-while`\-Anweisung veranschaulicht:  
+  
+```  
+do   
+{  
+    y = f( x );  
+    x--;  
+} while ( x > 0 );  
+```  
+  
+ In dieser `do-while`\-Anweisung werden die beiden Anweisungen `y = f( x );` und `x--;` unabhängig vom Anfangswert von `x` ausgeführt.  Anschließend wird `x > 0` ausgewertet.  Wenn `x` größer als 0 ist, wird der Anweisungstext noch einmal ausgeführt und `x > 0` erneut ausgewertet.  Der Anweisungstext wird wiederholt ausgeführt, solange `x` größer als 0 ist.  Die Ausführung der `do-while`\-Anweisung wird beendet, wenn `x` 0 oder negativ ist.  Der Text der Schleife wird mindestens einmal ausgeführt.  
+  
+## Siehe auch  
+ [do\-while\-Anweisung \(C\+\+\)](../cpp/do-while-statement-cpp.md)

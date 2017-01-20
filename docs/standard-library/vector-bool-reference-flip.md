@@ -1,0 +1,85 @@
+---
+title: "vector&lt;bool&gt;::reference::flip"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "article"
+f1_keywords: 
+  - "vector<bool>::reference::flip"
+  - "std::vector<bool>::reference::flip"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "reference::flip-Methode"
+ms.assetid: ef940365-cbe4-4a87-a3e2-1f3cfa357e29
+caps.latest.revision: 21
+caps.handback.revision: "15"
+ms.author: "corob"
+manager: "ghogen"
+---
+# vector&lt;bool&gt;::reference::flip
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Kehrt den booleschen Wert eines [vector\<bool\>](../standard-library/vector-bool-class.md)\-Elements um, auf das verwiesen wird.  
+  
+## Syntax  
+  
+```  
+void flip();  
+```  
+  
+## Beispiel  
+  
+```cpp  
+// vector_bool_ref_flip.cpp  
+// compile with: /EHsc /W4  
+#include <vector>  
+#include <iostream>  
+  
+int main()  
+{  
+    using namespace std;  
+    cout << boolalpha;  
+  
+    vector<bool> vb = { true, false, false, true, true };  
+  
+    cout << "The vector is: " << endl << "    ";  
+    for (const auto& b : vb) {  
+        cout << b << " ";  
+    }  
+    cout << endl;  
+  
+    vector<bool>::reference vbref = vb.front();  
+    vbref.flip();  
+  
+    cout << "The vector with first element flipped is: " << endl << "    ";  
+    for (const auto& b : vb) {  
+        cout << b << " ";  
+    }  
+    cout << endl;  
+}  
+  
+```  
+  
+## Ausgabe  
+  
+```  
+The vector is:  
+    true false false true true  
+The vector with first element flipped is:  
+    false false false true true  
+```  
+  
+## Anforderungen  
+ **Header:** \<vector\>  
+  
+ **Namespace:** std  
+  
+## Siehe auch  
+ [vector\<bool\>::reference\-Klasse](../standard-library/vector-bool-reference-class.md)   
+ [Standard Template Library](../misc/standard-template-library.md)

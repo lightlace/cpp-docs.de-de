@@ -1,0 +1,29 @@
+---
+title: "auto-Speicherklassenspezifizierer"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+  - "C"
+ms.assetid: 8e73f57e-aa92-4e41-91ea-5c8ad2a2b332
+caps.latest.revision: 6
+caps.handback.revision: "6"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# auto-Speicherklassenspezifizierer
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Der **auto**\-Speicherklassenspezifizierer deklariert eine automatische Variable, eine Variable mit lokaler Lebensdauer.  Eine **auto**\-Variable ist nur im Block sichtbar, in dem sie deklariert ist.  Deklarationen von **auto**\-Variablen können Initialisierer enthalten, wie in [Initialisierung](../c-language/initialization.md) erläutert.  Da Variablen mit der **auto**\-Speicherklasse nicht automatisch initialisiert werden, sollten Sie sie entweder explizit initialisieren, wenn Sie sie deklarieren, oder ihnen Anfangswerte in Anweisungen innerhalb des Blocks zuweisen.  Die Werte von nicht initialisierten **auto**\-Variablen sind nicht definiert. \(Eine lokale Variable der **auto**\- oder **register**\-Speicherklasse wird jedes Mal initialisiert, wenn sie gültig wird und ein Initialisierer angegeben ist.\)  
+  
+ Eine interne **static**\-Variable \(eine statische Variable mit lokalem oder Blockgültigkeitsbereich\) kann mit der Adresse eines externen oder **static**\-Elements, aber nicht mit der Adresse eines anderen **auto**\-Elements initialisiert werden, da die Adresse eines **auto**\-Elements keine Konstante ist.  
+  
+## Siehe auch  
+ [Auto\-Schlüsselwort](../cpp/auto-keyword.md)

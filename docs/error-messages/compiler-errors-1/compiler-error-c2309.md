@@ -1,0 +1,46 @@
+---
+title: "Compilerfehler C2309"
+ms.custom: na
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: na
+ms.suite: na
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: na
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C2309"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C2309"
+ms.assetid: 6303d5b5-72cf-42b8-92ce-b1eb48e80d48
+caps.latest.revision: 8
+caps.handback.revision: "8"
+ms.author: "corob"
+manager: "ghogen"
+---
+# Compilerfehler C2309
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+catch\-Handler erwartet eine Ausnahmedeklaration in Klammern  
+  
+ Ein **catch**\-Handler hat keinen in Klammern eingeschlossenen Typ.  
+  
+ Im folgenden Beispiel wird C2309 generiert:  
+  
+```  
+// C2309.cpp  
+// compile with: /EHsc  
+#include <eh.h>  
+class C {};  
+int main() {  
+   try {  
+      throw "ooops!";  
+   }  
+   catch C {}   // C2309  
+   // try the following line instead  
+   // catch( C ) {}  
+}  
+```
