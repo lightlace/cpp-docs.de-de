@@ -1,13 +1,12 @@
 ---
-title: "_pipe"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_pipe | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_pipe"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_pipe"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_pipe-Funktion"
   - "pipe-Funktion"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "Pipes, Erstellen"
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _pipe
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

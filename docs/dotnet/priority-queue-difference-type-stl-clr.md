@@ -1,13 +1,12 @@
 ---
-title: "priority_queue::difference_type (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "priority_queue::difference_type (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::priority_queue::difference_type"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "difference_type-Member [STL/CLR]"
 ms.assetid: 4bedce11-244c-428b-b5e2-e6bbf5674803
 caps.latest.revision: 14
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # priority_queue::difference_type (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

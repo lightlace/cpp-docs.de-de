@@ -1,13 +1,12 @@
 ---
-title: "TN056: Installieren lokalisierter MFC-Komponenten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN056: Installieren lokalisierter MFC-Komponenten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.components"
@@ -27,9 +26,10 @@ helpviewer_keywords:
   - "TN056"
 ms.assetid: 0b582615-3bb1-4fc0-b569-d127d6deccd3
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN056: Installieren lokalisierter MFC-Komponenten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

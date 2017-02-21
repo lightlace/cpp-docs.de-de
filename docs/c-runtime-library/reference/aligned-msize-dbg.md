@@ -1,13 +1,12 @@
 ---
-title: "_aligned_msize_dbg"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_aligned_msize_dbg | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_aligned_msize_dbg"
@@ -31,9 +30,10 @@ helpviewer_keywords:
   - "_aligned_msize_dbg"
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _aligned_msize_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

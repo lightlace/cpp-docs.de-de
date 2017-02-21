@@ -1,13 +1,12 @@
 ---
-title: "CBindStatusCallback Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CBindStatusCallback Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CBindStatusCallback"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "data transfer [C++], Asynchron"
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
 caps.latest.revision: 22
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CBindStatusCallback Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

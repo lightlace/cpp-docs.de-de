@@ -1,13 +1,12 @@
 ---
-title: "Container-Klasse::empty"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Container-Klasse::empty | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "empty-Methode"
 ms.assetid: 2055418d-3c42-4d28-a7db-111586119ed9
 caps.latest.revision: 8
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Container-Klasse::empty
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

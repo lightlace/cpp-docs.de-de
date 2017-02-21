@@ -1,13 +1,12 @@
 ---
-title: "_fseek_nolock, _fseeki64_nolock"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_fseek_nolock, _fseeki64_nolock | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fseek_nolock"
@@ -31,7 +30,6 @@ f1_keywords:
   - "fseeki64_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fseek_nolock-Funktion"
   - "_fseeki64_nolock-Funktion"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "seek-Dateizeiger"
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _fseek_nolock, _fseeki64_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

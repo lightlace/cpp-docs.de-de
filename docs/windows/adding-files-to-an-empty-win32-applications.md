@@ -1,13 +1,12 @@
 ---
-title: "Hinzuf&#252;gen von Dateien zu leeren Win32-Anwendungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hinzuf&#252;gen von Dateien zu leeren Win32-Anwendungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Projekte [C++], Hinzufügen von Elementen"
 ms.assetid: 070098e8-0396-49fe-a697-3daa2f1be6de
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Hinzuf&#252;gen von Dateien zu leeren Win32-Anwendungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

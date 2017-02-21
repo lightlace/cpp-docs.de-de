@@ -1,13 +1,12 @@
 ---
-title: "remove_pointer-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "remove_pointer-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "remove_pointer"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "remove_pointer"
 ms.assetid: 2cd4e417-32fb-4f53-bd16-4e8a98240832
 caps.latest.revision: 20
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # remove_pointer-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

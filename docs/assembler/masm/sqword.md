@@ -1,13 +1,12 @@
 ---
-title: "SQWORD"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "SQWORD | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "SQWORD"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "SQWORD directive"
 ms.assetid: 329245f1-af34-4540-a912-73e9045c47fa
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # SQWORD
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Datenbankunterst&#252;tzung, MFC-Anwendungs-Assistent"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Datenbankunterst&#252;tzung, MFC-Anwendungs-Assistent | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.appwiz.mfc.exe.database"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "MFC-Anwendungs-Assistent, Datenbankunterstützung"
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
 caps.latest.revision: 9
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Datenbankunterst&#252;tzung, MFC-Anwendungs-Assistent
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

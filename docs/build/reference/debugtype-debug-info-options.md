@@ -1,13 +1,12 @@
 ---
-title: "/ DEBUGTYPE (Debuginformationsoptionen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/ DEBUGTYPE (Debuginformationsoptionen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/debugtype"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-DEBUGTYPE (Linkeroption)"
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
 caps.latest.revision: 2
-caps.handback.revision: "2"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # / DEBUGTYPE (Debuginformationsoptionen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

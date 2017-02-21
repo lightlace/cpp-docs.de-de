@@ -1,14 +1,13 @@
 ---
-title: "CAB-Dateien, Cabsf, cabsl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CAB-Dateien, Cabsf, cabsl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "cabs"
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/cabsf"
   - "complex/cabsl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "cabs-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "cabsl-Funktion"
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # CAB-Dateien, Cabsf, cabsl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

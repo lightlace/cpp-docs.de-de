@@ -1,13 +1,12 @@
 ---
-title: "_putw"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_putw | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_putw"
@@ -29,7 +28,6 @@ f1_keywords:
   - "putw"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_putw-Funktion"
   - "Ganze Zahlen, Schreiben in Streams"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "Streams, Schreiben von ganzen Zahlen in"
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _putw
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

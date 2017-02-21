@@ -1,13 +1,12 @@
 ---
-title: "IRowsetUpdateImpl::IsUpdateAllowed"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IRowsetUpdateImpl::IsUpdateAllowed | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IRowsetUpdateImpl::IsUpdateAllowed"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "IsUpdateAllowed-Methode"
 ms.assetid: d6daf3b3-a8e0-4275-a67d-897dea01e297
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IRowsetUpdateImpl::IsUpdateAllowed
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

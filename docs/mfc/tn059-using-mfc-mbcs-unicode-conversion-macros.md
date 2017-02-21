@@ -1,13 +1,12 @@
 ---
-title: "TN059: Verwenden von MFC MBCS/Unicode-Umwandlungsmakros"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN059: Verwenden von MFC MBCS/Unicode-Umwandlungsmakros | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.mbcs"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "Unicode [C++], OLE-Schnittstellen"
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN059: Verwenden von MFC MBCS/Unicode-Umwandlungsmakros
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

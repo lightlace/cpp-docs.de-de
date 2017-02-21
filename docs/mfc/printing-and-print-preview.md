@@ -1,13 +1,12 @@
 ---
-title: "Drucken und Druckvorschau"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Drucken und Druckvorschau | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Drucken [MFC]"
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Drucken und Druckvorschau
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

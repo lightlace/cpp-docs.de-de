@@ -1,13 +1,12 @@
 ---
-title: "CSecurityDesc Class"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CSecurityDesc Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL::CSecurityDesc"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CSecurityDesc class"
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
 caps.latest.revision: 24
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # CSecurityDesc Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

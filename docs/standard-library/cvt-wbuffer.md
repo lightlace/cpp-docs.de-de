@@ -1,13 +1,12 @@
 ---
-title: "&lt;cvt/wbuffer&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;cvt-wbuffer&gt;&lt;/cvt-wbuffer&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "stdext.cvt.<cvt/wbuffer>"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "cvt/wbuffer-Header"
 ms.assetid: 6e6eb44c-1bc4-4d8c-a4bd-b39c753ce725
 caps.latest.revision: 17
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # &lt;cvt/wbuffer&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "/vd (Konstruktionsverschiebungen deaktivieren)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/vd (Konstruktionsverschiebungen deaktivieren) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/vd"
@@ -27,9 +26,10 @@ helpviewer_keywords:
   - "vtordisp-Felder"
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # /vd (Konstruktionsverschiebungen deaktivieren)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

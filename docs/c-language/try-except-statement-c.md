@@ -1,13 +1,12 @@
 ---
-title: "try-except-Anweisung (C)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "try-except-Anweisung (C) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "__except"
@@ -18,7 +17,6 @@ f1_keywords:
   - "__try_cpp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__except-Schlüsselwort [C]"
   - "__except-Schlüsselwort [C], In try-except"
@@ -29,9 +27,10 @@ helpviewer_keywords:
   - "try-except-Schlüsselwort [C]"
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # try-except-Anweisung (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CMFCRibbonGalleryMenuButton Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCRibbonGalleryMenuButton Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCRibbonGalleryMenuButton"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCRibbonGalleryMenuButton class"
 ms.assetid: 4d459d9b-8b1a-4371-92f6-dc4ce6cc42c8
 caps.latest.revision: 22
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CMFCRibbonGalleryMenuButton Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

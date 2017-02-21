@@ -1,13 +1,12 @@
 ---
-title: "set::size_type (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "set::size_type (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::set::size_type"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "size_type-Member [STL/CLR]"
 ms.assetid: df478b73-b2e6-4add-b22a-39a216753037
 caps.latest.revision: 15
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # set::size_type (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

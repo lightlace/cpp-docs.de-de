@@ -1,13 +1,13 @@
 ---
-title: "_fread_nolock_s"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.reviewer: na
-ms.suite: na
+title: "_fread_nolock_s2 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fread_nolock_s"
@@ -28,13 +28,13 @@ f1_keywords:
   - "_fread_nolock_s"
   - "stdio/_fread_nolock_s"
 dev_langs: 
-  - "C"
   - "C++"
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # _fread_nolock_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

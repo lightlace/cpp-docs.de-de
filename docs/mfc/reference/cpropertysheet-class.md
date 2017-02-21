@@ -1,13 +1,12 @@
 ---
-title: "CPropertySheet Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CPropertySheet Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CPropertySheet"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Registerkarten-Dialogfelder"
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
 caps.latest.revision: 30
-caps.handback.revision: "19"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # CPropertySheet Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "HUGE_VAL, _HUGE"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "HUGE_VAL, _HUGE | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_HUGE"
@@ -19,16 +18,16 @@ f1_keywords:
   - "HUGE_VAL"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_HUGE-Konstante"
   - "HUGE_VAL-Konstante"
   - "Double-Wert"
 ms.assetid: 3f044b45-02cd-46b2-b1de-87fd0441dd6a
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # HUGE_VAL, _HUGE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

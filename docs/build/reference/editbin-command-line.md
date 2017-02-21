@@ -1,13 +1,12 @@
 ---
-title: "EDITBIN-Befehlszeile"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "EDITBIN-Befehlszeile | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "editbin"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "EDITBIN (Programm), Befehlszeile"
 ms.assetid: 28ff7f92-6c4e-4e7f-86d8-80d5b2f91662
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # EDITBIN-Befehlszeile
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

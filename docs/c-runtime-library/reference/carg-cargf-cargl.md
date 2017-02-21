@@ -1,14 +1,13 @@
 ---
-title: "Carg, Cargf, cargl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Carg, Cargf, cargl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "carg"
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/cargf"
   - "complex/cargl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "Carg-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Cargl-Funktion"
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Carg, Cargf, cargl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

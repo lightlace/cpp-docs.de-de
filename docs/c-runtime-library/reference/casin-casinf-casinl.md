@@ -1,14 +1,13 @@
 ---
-title: "Casin, Casinf, casinl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Casin, Casinf, casinl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "casin"
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/casinf"
   - "complex/casinl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "Casin-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Casinl-Funktion"
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Casin, Casinf, casinl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

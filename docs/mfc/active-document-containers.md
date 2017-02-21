@@ -1,13 +1,12 @@
 ---
-title: "Active Document-Container"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Active Document-Container | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "MFC-COM [C++], Active Document-Einschluss"
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Active Document-Container
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

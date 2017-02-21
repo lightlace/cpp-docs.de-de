@@ -1,13 +1,12 @@
 ---
-title: "Upgrading eines vorhandenen ActiveX-Steuerelements"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Upgrading eines vorhandenen ActiveX-Steuerelements | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "Aktualisieren von ActiveX-Steuerelementen"
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
 caps.latest.revision: 15
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Upgrading eines vorhandenen ActiveX-Steuerelements
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

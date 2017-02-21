@@ -1,13 +1,12 @@
 ---
-title: "pow, powf, powl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "pow, powf, powl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "powl"
@@ -33,7 +32,6 @@ f1_keywords:
   - "powf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_powl-Funktion"
   - "Berechnen von Exponentialen"
@@ -45,9 +43,10 @@ helpviewer_keywords:
   - "powl-Funktion"
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # pow, powf, powl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

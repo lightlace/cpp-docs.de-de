@@ -1,13 +1,12 @@
 ---
-title: "__ull_rshift"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__ull_rshift | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "__ull_rshift"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "__ull_rshift intrinsic"
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # __ull_rshift
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

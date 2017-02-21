@@ -1,13 +1,12 @@
 ---
-title: "mbtowc, _mbtowc_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "mbtowc, _mbtowc_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "mbtowc"
@@ -30,16 +29,16 @@ f1_keywords:
   - "mbtowc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbtowc_l-Funktion"
   - "mbtowc-Funktion"
   - "mbtowc_l-Funktion"
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # mbtowc, _mbtowc_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

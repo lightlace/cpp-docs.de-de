@@ -1,13 +1,12 @@
 ---
-title: "memcpy_s, wmemcpy_s"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "memcpy_s, wmemcpy_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "memcpy_s"
@@ -30,15 +29,15 @@ f1_keywords:
   - "memcpy_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "memcpy_s-Funktion"
   - "wmemcpy_s-Funktion"
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
 caps.latest.revision: 27
-caps.handback.revision: "27"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # memcpy_s, wmemcpy_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

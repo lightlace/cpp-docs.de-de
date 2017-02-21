@@ -1,13 +1,12 @@
 ---
-title: "Erstellen von Desktopprojekten mit Anwendungs-Assistenten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen von Desktopprojekten mit Anwendungs-Assistenten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.appwiz.mfcexe.project"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Visual C++-Projekte, Erstellen"
 ms.assetid: 090c6423-deb8-4a00-817d-337eb5644544
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Erstellen von Desktopprojekten mit Anwendungs-Assistenten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

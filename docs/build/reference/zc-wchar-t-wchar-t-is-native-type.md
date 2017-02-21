@@ -1,13 +1,12 @@
 ---
-title: "/Zc:wchar_t (wchar_t ist der systemeigene Typ)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Zc:wchar_t (wchar_t ist der systemeigene Typ) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLWCECompilerTool.TreatWChar_tAsBuiltInType"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "-Zc (Compileroptionen) [C++]"
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # /Zc:wchar_t (wchar_t ist der systemeigene Typ)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

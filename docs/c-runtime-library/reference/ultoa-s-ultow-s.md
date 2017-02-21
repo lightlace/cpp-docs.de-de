@@ -1,13 +1,12 @@
 ---
-title: "_ultoa_s, _ultow_s"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ultoa_s, _ultow_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ultow_s"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_ultoa_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ultoa_s-Funktion"
   - "_ultow_s-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "ultow_s-Funktion"
 ms.assetid: 606ce905-6752-46ac-a15a-bdc22920e1d4
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _ultoa_s, _ultow_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

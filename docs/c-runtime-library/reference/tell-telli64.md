@@ -1,13 +1,12 @@
 ---
-title: "_tell, _telli64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_tell, _telli64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_telli64"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_tell"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tell-Funktion"
   - "_telli64-Funktion"
@@ -42,9 +40,10 @@ helpviewer_keywords:
   - "telli64-Funktion"
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _tell, _telli64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

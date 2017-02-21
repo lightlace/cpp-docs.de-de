@@ -1,13 +1,12 @@
 ---
-title: "Inhalt eines Makefiles"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Inhalt eines Makefiles | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Makefiles, Inhalt"
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Inhalt eines Makefiles
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

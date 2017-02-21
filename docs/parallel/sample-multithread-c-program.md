@@ -1,21 +1,21 @@
 ---
-title: "Beispiel f&#252;r ein C-Multithreadprogramm"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Beispiel f&#252;r ein C-Multithreadprogramm | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Beispiel f&#252;r ein C-Multithreadprogramm
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

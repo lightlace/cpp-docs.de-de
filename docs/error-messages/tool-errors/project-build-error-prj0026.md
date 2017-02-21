@@ -1,13 +1,12 @@
 ---
-title: "Projektbuildfehler PRJ0026"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Projektbuildfehler PRJ0026 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "PRJ0026"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "PRJ0026"
 ms.assetid: c52bc9b5-8b22-4015-b477-8645ae56c489
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Projektbuildfehler PRJ0026
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

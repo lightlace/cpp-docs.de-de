@@ -1,13 +1,12 @@
 ---
-title: "Bearbeiten der Struktursteuerelement-Bezeichnung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Bearbeiten der Struktursteuerelement-Bezeichnung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Struktursteuerelemente, Bearbeiten von Bezeichnungen"
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Bearbeiten der Struktursteuerelement-Bezeichnung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Tools f&#252;r die profilgesteuerte Optimierung (PGO)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Tools f&#252;r die profilgesteuerte Optimierung (PGO) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Profilgesteuerte Optimierungen, Tools"
 ms.assetid: c6254018-d462-4fc1-a899-ac8637487c44
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Tools f&#252;r die profilgesteuerte Optimierung (PGO)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

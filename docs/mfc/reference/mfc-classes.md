@@ -1,13 +1,12 @@
 ---
-title: "MFC-Klassen"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-Klassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Klassen [C++], MFC"
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
 caps.latest.revision: 33
-caps.handback.revision: "33"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # MFC-Klassen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

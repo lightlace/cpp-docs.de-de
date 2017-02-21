@@ -1,13 +1,12 @@
 ---
-title: "Transaktion: Ausf&#252;hren einer Transaktion in einem Recordset (ODBC)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Transaktion: Ausf&#252;hren einer Transaktion in einem Recordset (ODBC) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Transaktionen, Aktualisieren von Recordsets"
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Transaktion: Ausf&#252;hren einer Transaktion in einem Recordset (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "displaybind"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "displaybind | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "vc-attr.displaybind"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "displaybind attribute"
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # displaybind
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

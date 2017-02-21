@@ -1,13 +1,12 @@
 ---
-title: "Multithreading: Erstellen von Benutzeroberfl&#228;chenthreads"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Multithreading: Erstellen von Benutzeroberfl&#228;chenthreads | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CREATE_SUSPENDED"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Benutzeroberflächenthreads [C++]"
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Multithreading: Erstellen von Benutzeroberfl&#228;chenthreads
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

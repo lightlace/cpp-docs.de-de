@@ -1,13 +1,12 @@
 ---
-title: "_WAIT_CHILD, _WAIT_GRANDCHILD"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_WAIT_CHILD, _WAIT_GRANDCHILD | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_WAIT_GRANDCHILD"
@@ -16,7 +15,6 @@ f1_keywords:
   - "_WAIT_CHILD"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_WAIT_CHILD-Konstante"
   - "_WAIT_GRANDCHILD-Konstante"
@@ -24,9 +22,10 @@ helpviewer_keywords:
   - "WAIT_GRANDCHILD-Konstante"
 ms.assetid: 7acd96fa-d118-4339-bb00-e5afaf286945
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _WAIT_CHILD, _WAIT_GRANDCHILD
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_isatty"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "isatty | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_isatty"
@@ -25,20 +24,17 @@ apilocation:
   - "api-ms-win-crt-stdio-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_isatty"
+  - "isatty"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_isatty-Funktion"
-  - "Zeichengeräteüberprüfung"
-  - "Überprüfen von Zeichengeräten"
   - "isatty-Funktion"
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # _isatty
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

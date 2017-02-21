@@ -1,13 +1,12 @@
 ---
-title: "task_completion_event-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "task_completion_event-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ppltasks/concurrency::task_completion_event"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "task_completion_event-Klasse"
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
 caps.latest.revision: 11
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # task_completion_event-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

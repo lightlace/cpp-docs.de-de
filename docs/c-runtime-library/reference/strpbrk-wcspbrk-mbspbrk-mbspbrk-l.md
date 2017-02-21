@@ -1,13 +1,12 @@
 ---
-title: "strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mbspbrk"
@@ -37,7 +36,6 @@ f1_keywords:
   - "wcspbrk"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fstrpbrk-Funktion"
   - "_ftcspbrk-Funktion"
@@ -56,9 +54,10 @@ helpviewer_keywords:
   - "wcspbrk-Funktion"
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
 caps.latest.revision: 30
-caps.handback.revision: "28"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

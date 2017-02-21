@@ -1,14 +1,13 @@
 ---
-title: "Is_nothrow_destructible-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Is_nothrow_destructible-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "is_nothrow_destructible"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "is_nothrow_destructible"
 ms.assetid: 0bbd8a28-e312-4d72-bd28-aac027f974d3
 caps.latest.revision: 12
-caps.handback.revision: "2"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Is_nothrow_destructible-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

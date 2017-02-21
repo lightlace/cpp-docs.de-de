@@ -1,13 +1,12 @@
 ---
-title: "_AtlCreateWndData Structure"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_AtlCreateWndData Structure | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ATL::_AtlCreateWndData"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "AtlCreateWndData structure"
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
 caps.latest.revision: 15
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _AtlCreateWndData Structure
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

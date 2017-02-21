@@ -1,25 +1,24 @@
 ---
-title: "&#220;bersicht &#252;ber Deklarationen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#220;bersicht &#252;ber Deklarationen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Deklarationen, Informationen über Deklarationen"
   - "Typqualifizierer"
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # &#220;bersicht &#252;ber Deklarationen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

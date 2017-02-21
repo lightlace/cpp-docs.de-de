@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2801"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2801 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2801"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2801"
 ms.assetid: 35dfc7ea-9e37-4e30-baa1-944dc61302f5
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Compilerfehler C2801
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

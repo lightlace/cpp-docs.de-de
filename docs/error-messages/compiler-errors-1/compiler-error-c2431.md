@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2431"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2431 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2431"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2431"
 ms.assetid: 88a5b648-c89f-47d1-a20e-63231ab4f0f7
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Compilerfehler C2431
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "remove_all_extents-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "remove_all_extents-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.tr1.remove_all_extents"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "remove_all_extents"
 ms.assetid: 548dc536-82e7-423a-b8c1-443d66d9632e
 caps.latest.revision: 16
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # remove_all_extents-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

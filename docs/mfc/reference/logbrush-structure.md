@@ -1,13 +1,12 @@
 ---
-title: "LOGBRUSH-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "LOGBRUSH-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "LOGBRUSH"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LOGBRUSH-Struktur"
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
 caps.latest.revision: 11
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # LOGBRUSH-Struktur
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

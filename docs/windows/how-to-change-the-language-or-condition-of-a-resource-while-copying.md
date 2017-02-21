@@ -1,13 +1,12 @@
 ---
-title: "How to: Change the Language or Condition of a Resource While Copying"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "How to: Change the Language or Condition of a Resource While Copying | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.resvw.resource.changing"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "condition property of resource"
 ms.assetid: 8f622ab0-bac2-468f-ae70-78911afc4759
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # How to: Change the Language or Condition of a Resource While Copying
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CDocItem Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDocItem Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CDocItem"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "server documents, document items"
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
 caps.latest.revision: 22
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CDocItem Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_fputc_nolock, _fputwc_nolock"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_fputc_nolock, _fputwc_nolock | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fputwc_nolock"
@@ -34,7 +33,6 @@ f1_keywords:
   - "_fputtc_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fputc_nolock-Funktion"
   - "_fputtc_nolock-Funktion"
@@ -45,9 +43,10 @@ helpviewer_keywords:
   - "Streams, Schreiben von Zeichen in"
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
 caps.latest.revision: 17
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _fputc_nolock, _fputwc_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

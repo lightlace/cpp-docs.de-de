@@ -1,13 +1,12 @@
 ---
-title: "CPoint-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CPoint-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CPoint"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CPoint-Klasse"
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
 caps.latest.revision: 22
-caps.handback.revision: "22"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CPoint-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

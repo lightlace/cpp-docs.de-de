@@ -1,13 +1,12 @@
 ---
-title: "memicmp"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "memicmp | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "memicmp"
@@ -27,14 +26,14 @@ f1_keywords:
   - "memicmp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "memicmp-Funktion"
 ms.assetid: 45362e9c-7c64-41e9-92bb-7d4999a8635b
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # memicmp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

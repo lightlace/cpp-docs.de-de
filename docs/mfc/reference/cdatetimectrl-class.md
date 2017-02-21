@@ -1,13 +1,12 @@
 ---
-title: "CDateTimeCtrl Class"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDateTimeCtrl Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CDateTimeCtrl"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "DateTimePicker control [MFC], CDateTimeCtrl class"
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 caps.latest.revision: 23
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CDateTimeCtrl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

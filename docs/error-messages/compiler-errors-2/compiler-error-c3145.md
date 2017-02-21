@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3145"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3145 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C3145"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3145"
 ms.assetid: f165c874-0f51-45c7-85e8-ebe321cbc168
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Compilerfehler C3145
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

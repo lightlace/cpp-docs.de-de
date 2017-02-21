@@ -1,13 +1,12 @@
 ---
-title: "cpp_quote"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "cpp_quote | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "vc-attr.cpp_quote"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "cpp_quote attribute"
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # cpp_quote
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

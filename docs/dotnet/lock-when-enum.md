@@ -1,13 +1,12 @@
 ---
-title: "lock_when-Enumeration"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "lock_when-Enumeration | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "msclr::lock_when"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "lock_when-Enumeration"
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
 caps.latest.revision: 9
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # lock_when-Enumeration
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

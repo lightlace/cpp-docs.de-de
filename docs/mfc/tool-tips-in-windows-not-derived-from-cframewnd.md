@@ -1,13 +1,12 @@
 ---
-title: "QuickInfos in Fenstern, die nicht von CFrameWnd abgeleitet sind"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "QuickInfos in Fenstern, die nicht von CFrameWnd abgeleitet sind | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "TTN_NEEDTEXT-Meldung"
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # QuickInfos in Fenstern, die nicht von CFrameWnd abgeleitet sind
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

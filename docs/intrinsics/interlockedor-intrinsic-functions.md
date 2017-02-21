@@ -1,13 +1,12 @@
 ---
-title: "Systeminterne Funktionen „_InterlockedOr“"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Systeminterne Funktionen „_InterlockedOr“ | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_InterlockedOr8_nf"
@@ -67,9 +66,10 @@ helpviewer_keywords:
   - "Systeminterne Funktion „InterlockedOr64“"
 ms.assetid: 5f265240-7af8-44b7-b952-19f3a9c56186
 caps.latest.revision: 19
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Systeminterne Funktionen „_InterlockedOr“
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

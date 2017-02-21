@@ -1,13 +1,12 @@
 ---
-title: "IRowsetLocateImpl::GetRowsAt"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IRowsetLocateImpl::GetRowsAt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "GetRowsAt"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "GetRowsAt-Methode"
 ms.assetid: 6aeb09dc-3aa8-4729-97a8-144dd27063f7
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IRowsetLocateImpl::GetRowsAt
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "pair::swap (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "pair::swap (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::pair::swap"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "swap-Member [STL/CLR]"
 ms.assetid: 7f5cbfa0-3702-40ab-a3f4-ffde02126095
 caps.latest.revision: 11
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # pair::swap (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

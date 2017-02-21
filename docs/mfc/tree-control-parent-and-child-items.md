@@ -1,13 +1,12 @@
 ---
-title: "&#220;bergeordnete und untergeordnete Elemente in einem Struktursteuerelement"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#220;bergeordnete und untergeordnete Elemente in einem Struktursteuerelement | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Struktursteuerelemente, Übergeordnete und untergeordnete Elemente"
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # &#220;bergeordnete und untergeordnete Elemente in einem Struktursteuerelement
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Makros f&#252;r Buildbefehle und -eigenschaften"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Makros f&#252;r Buildbefehle und -eigenschaften | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles"
@@ -103,9 +102,10 @@ helpviewer_keywords:
   - "WebDeployRoot-Makro $(WebDeployRoot)"
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
 caps.latest.revision: 22
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Makros f&#252;r Buildbefehle und -eigenschaften
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

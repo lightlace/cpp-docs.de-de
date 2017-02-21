@@ -1,13 +1,12 @@
 ---
-title: "TN030: Anpassen des Druckvorgangs und der Druckvorschau"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN030: Anpassen des Druckvorgangs und der Druckvorschau | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.print"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "TN030"
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN030: Anpassen des Druckvorgangs und der Druckvorschau
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

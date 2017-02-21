@@ -1,13 +1,12 @@
 ---
-title: "&lt; Tuple &gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt; Tuple &gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "<tuple>"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Tupelheader [TR1]"
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # &lt; Tuple &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

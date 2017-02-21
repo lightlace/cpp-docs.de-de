@@ -1,13 +1,12 @@
 ---
-title: "Aktivieren und Deaktivieren von Diensten f&#252;r einen Anbieter"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Aktivieren und Deaktivieren von Diensten f&#252;r einen Anbieter | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Serviceanbieter [OLE DB]"
 ms.assetid: 3deac1bb-f660-407a-92ef-95e139e280c0
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Aktivieren und Deaktivieren von Diensten f&#252;r einen Anbieter
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

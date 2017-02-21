@@ -1,13 +1,12 @@
 ---
-title: "_execle, _wexecle"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_execle, _wexecle | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_execle"
@@ -31,7 +30,6 @@ f1_keywords:
   - "_wexecle"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_execle-Funktion"
   - "_wexecle-Funktion"
@@ -39,9 +37,10 @@ helpviewer_keywords:
   - "wexecle-Funktion"
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
 caps.latest.revision: 22
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _execle, _wexecle
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

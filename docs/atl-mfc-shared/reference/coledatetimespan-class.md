@@ -1,13 +1,12 @@
 ---
-title: "COleDateTimeSpan Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "COleDateTimeSpan Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL.COleDateTimeSpan"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "timespan"
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
 caps.latest.revision: 19
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # COleDateTimeSpan Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

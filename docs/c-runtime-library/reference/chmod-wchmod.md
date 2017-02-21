@@ -1,13 +1,12 @@
 ---
-title: "_chmod, _wchmod"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_chmod, _wchmod | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_chmod"
@@ -31,7 +30,6 @@ f1_keywords:
   - "wchmod"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_chmod-Funktion"
   - "_wchmod-Funktion"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "wchmod-Funktion"
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
 caps.latest.revision: 23
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _chmod, _wchmod
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

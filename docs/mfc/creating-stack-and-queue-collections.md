@@ -1,13 +1,12 @@
 ---
-title: "Erstellen von Stack- und Warteschlangenauflistungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen von Stack- und Warteschlangenauflistungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Stack-Auflistungen"
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Erstellen von Stack- und Warteschlangenauflistungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

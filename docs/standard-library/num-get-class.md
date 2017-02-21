@@ -1,13 +1,12 @@
 ---
-title: "num_get-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "num_get-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "num_get"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "num_get-Klasse"
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # num_get-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

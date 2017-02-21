@@ -1,13 +1,12 @@
 ---
-title: "unchecked_array_iterator-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "unchecked_array_iterator-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "unchecked_array_iterator"
@@ -16,9 +15,10 @@ dev_langs:
   - "C++"
 ms.assetid: 693b3b30-4e3a-465b-be06-409700bc50b1
 caps.latest.revision: 15
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # unchecked_array_iterator-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

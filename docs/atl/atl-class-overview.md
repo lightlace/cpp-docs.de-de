@@ -1,13 +1,12 @@
 ---
-title: "ATL Class Overview"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ATL Class Overview | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.atl.classes"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Klassen [C++], ATL"
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ATL Class Overview
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

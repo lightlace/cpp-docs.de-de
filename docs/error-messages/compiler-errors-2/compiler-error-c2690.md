@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2690"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2690 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2690"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2690"
 ms.assetid: f165a806-14bd-4942-99b7-8a9fc7dea227
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Compilerfehler C2690
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

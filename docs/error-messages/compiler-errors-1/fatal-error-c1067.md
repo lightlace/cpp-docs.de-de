@@ -1,13 +1,12 @@
 ---
-title: "Schwerwiegender Fehler C1067"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schwerwiegender Fehler C1067 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C1067"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C1067"
 ms.assetid: e2c94be6-4573-4571-aac9-73d657fe9f96
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Schwerwiegender Fehler C1067
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

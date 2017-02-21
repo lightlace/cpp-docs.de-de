@@ -1,13 +1,12 @@
 ---
-title: "Referenz zur STL/CLR-Bibliothek"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Referenz zur STL/CLR-Bibliothek | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "STL/CLR, Verteilung"
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Referenz zur STL/CLR-Bibliothek
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

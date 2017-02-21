@@ -1,13 +1,12 @@
 ---
-title: "_spawnle, _wspawnle"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_spawnle, _wspawnle | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_spawnle"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_wspawnle"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "spawnle-Funktion"
   - "Prozesse, Erstellen"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "_spawnle-Funktion"
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _spawnle, _wspawnle
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "&lt;cwctype&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;cwctype&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::<cwctype>"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "cwctype-Header"
 ms.assetid: 46476f95-b8c3-4ab2-a172-9a1be91124b7
 caps.latest.revision: 18
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # &lt;cwctype&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

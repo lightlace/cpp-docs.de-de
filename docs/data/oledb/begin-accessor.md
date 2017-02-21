@@ -1,13 +1,12 @@
 ---
-title: "BEGIN_ACCESSOR"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "BEGIN_ACCESSOR | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "BEGIN_ACCESSOR"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "BEGIN_ACCESSOR-Makro, Syntax"
 ms.assetid: 59d0ff3e-7cfd-4ce8-9a1c-d664c0892a52
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # BEGIN_ACCESSOR
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "list::to_array (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "list::to_array (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::list::to_array"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "to_array-Member [STL/CLR]"
 ms.assetid: 3ea7b90c-127b-43cd-804b-019b86b77582
 caps.latest.revision: 14
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # list::to_array (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

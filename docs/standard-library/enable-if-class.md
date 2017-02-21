@@ -1,13 +1,12 @@
 ---
-title: "enable_if-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "enable_if-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "enable_if"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "enable_if"
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 caps.latest.revision: 28
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # enable_if-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

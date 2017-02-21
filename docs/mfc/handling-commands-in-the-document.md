@@ -1,13 +1,12 @@
 ---
-title: "Behandeln von Kommentaren in einem Dokument"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Behandeln von Kommentaren in einem Dokument | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "WM_COMMAND"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "WM_COMMAND"
 ms.assetid: c7375584-27af-4275-b2fd-afea476785d0
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Behandeln von Kommentaren in einem Dokument
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

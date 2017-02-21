@@ -1,13 +1,12 @@
 ---
-title: "_get_wpgmptr"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_get_wpgmptr | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_get_wpgmptr"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_get_wpgmptr"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_get_wpgmptr-Funktion"
   - "_wpgmptr (globale Variable)"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "wpgmptr (globale Variable)"
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _get_wpgmptr
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "multiset::size_type (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "multiset::size_type (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::multiset::size_type"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "size_type-Member [STL/CLR]"
 ms.assetid: 6ddadf69-ab2d-4b06-a59c-982c2e29f718
 caps.latest.revision: 14
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # multiset::size_type (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "cputs"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "cputs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "cputs"
@@ -27,14 +26,14 @@ f1_keywords:
   - "cputs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "cputs-Funktion"
 ms.assetid: 0c2a7d4e-623a-4cb2-a0f9-1900c05bac08
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # cputs
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

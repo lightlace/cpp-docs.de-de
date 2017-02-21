@@ -1,13 +1,12 @@
 ---
-title: "binary_negate (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "binary_negate (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::binary_negate"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "binary_negate-Funktion [STL/CLR]"
 ms.assetid: 0c3b47eb-0f37-4cb2-b879-4c9f0e57d275
 caps.latest.revision: 16
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # binary_negate (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

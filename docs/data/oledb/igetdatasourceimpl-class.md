@@ -1,13 +1,12 @@
 ---
-title: "IGetDataSourceImpl-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IGetDataSourceImpl-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IGetDataSourceImpl"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "IGetDataSourceImpl-Klasse"
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # IGetDataSourceImpl-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CByteArray Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CByteArray Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CByteArray"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "MFC collection classes, Bytearrays"
 ms.assetid: 53d4a512-657c-4187-9609-e3f5339a78e0
 caps.latest.revision: 23
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CByteArray Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

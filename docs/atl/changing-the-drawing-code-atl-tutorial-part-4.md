@@ -1,13 +1,12 @@
 ---
-title: "&#196;ndern des Zeichencodes (ATL-Lernprogramm, Teil 4)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#196;ndern des Zeichencodes (ATL-Lernprogramm, Teil 4) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "_ATL_MIN_CRT-Makro"
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
 caps.latest.revision: 18
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # &#196;ndern des Zeichencodes (ATL-Lernprogramm, Teil 4)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_cgets, _cgetws"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_cgets, _cgetws | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_cgetws"
@@ -27,7 +26,6 @@ f1_keywords:
   - "_cgets"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_cgets-Funktion"
   - "_cgetws-Funktion"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "Zeichenfolgen [C++], Abrufen aus Konsole"
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
 caps.latest.revision: 32
-caps.handback.revision: "32"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # _cgets, _cgetws
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

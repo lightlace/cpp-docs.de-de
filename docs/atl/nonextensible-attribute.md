@@ -1,13 +1,12 @@
 ---
-title: "nonextensible Attribute"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "nonextensible Attribute | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "nonextensible"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "nonextensible attribute"
 ms.assetid: 02a4a18b-ffd3-4d53-8fd1-feb1c05ad5ac
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # nonextensible Attribute
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

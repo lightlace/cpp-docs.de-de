@@ -1,25 +1,24 @@
 ---
-title: "Pr&#228;prozessordirektiven"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Pr&#228;prozessordirektiven | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Direktiven, Präprozessor"
   - "Präprozessor, Direktiven"
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Pr&#228;prozessordirektiven
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

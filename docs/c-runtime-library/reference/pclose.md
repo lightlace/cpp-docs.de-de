@@ -1,13 +1,12 @@
 ---
-title: "_pclose"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_pclose | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_pclose"
@@ -29,16 +28,16 @@ f1_keywords:
   - "pclose"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_pclose-Funktion"
   - "pclose-Funktion"
   - "Pipes, Schließen"
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _pclose
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

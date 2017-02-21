@@ -1,13 +1,12 @@
 ---
-title: "atan, atanf, atanl, atan2, atan2f, atan2l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "atan, atanf, atanl, atan2, atan2f, atan2l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "atan2f"
@@ -38,7 +37,6 @@ f1_keywords:
   - "atan2f"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "arctangent-Funktion"
   - "atan-Funktion"
@@ -50,9 +48,10 @@ helpviewer_keywords:
   - "Trigonometrische Funktionen"
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
 caps.latest.revision: 21
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # atan, atanf, atanl, atan2, atan2f, atan2l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "auto_handle::get"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "auto_handle::get | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "auto_handle::get"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "auto_handle::get"
 ms.assetid: 8c75727b-8f21-44b3-be3e-7eb8858da4f7
 caps.latest.revision: 10
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # auto_handle::get
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

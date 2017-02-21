@@ -1,13 +1,12 @@
 ---
-title: "CStreamRowset::CStreamRowset"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CStreamRowset::CStreamRowset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CStreamRowset::CStreamRowset"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "CStreamRowset-Klasse, Konstruktor"
 ms.assetid: 66f0f56b-ae7a-4e71-80cd-f17b1bd1c458
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CStreamRowset::CStreamRowset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

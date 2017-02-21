@@ -1,13 +1,12 @@
 ---
-title: "IRowsetImpl::IRowsetImpl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IRowsetImpl::IRowsetImpl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IRowsetImpl.IRowsetImpl"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "IRowsetImpl-Konstruktor"
 ms.assetid: 44ef30c8-9fa5-492b-b90b-40723745dc20
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IRowsetImpl::IRowsetImpl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

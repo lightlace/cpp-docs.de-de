@@ -1,13 +1,12 @@
 ---
-title: "hash_multiset::rbegin (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "hash_multiset::rbegin (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::hash_multiset::rbegin"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "rbegin-Member [STL/CLR]"
 ms.assetid: 69a06d99-3262-495b-9956-5f155162da33
 caps.latest.revision: 15
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # hash_multiset::rbegin (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

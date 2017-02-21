@@ -1,13 +1,12 @@
 ---
-title: "Beispiele f&#252;r Lambda-Ausdr&#252;cke"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Beispiele f&#252;r Lambda-Ausdr&#252;cke | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "lambda-Ausdrücke [C++], Beispiele"
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 caps.latest.revision: 22
-caps.handback.revision: "20"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Beispiele f&#252;r Lambda-Ausdr&#252;cke
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

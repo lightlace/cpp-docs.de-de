@@ -1,13 +1,12 @@
 ---
-title: "execlpe"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "execlpe | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "execlpe"
@@ -27,14 +26,14 @@ f1_keywords:
   - "execlpe"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "execlpe-Funktion"
 ms.assetid: 33b28785-43e3-4971-b139-33743a7c9a32
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # execlpe
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

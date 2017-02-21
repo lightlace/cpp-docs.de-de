@@ -1,16 +1,14 @@
 ---
-title: "Setting the Width of a Horizontal Scroll Bar"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Setting the Width of a Horizontal Scroll Bar | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "list controls, scroll bar width"
@@ -22,9 +20,10 @@ helpviewer_keywords:
   - "scroll bars, width"
 ms.assetid: 51dad141-aa0b-46a3-a82c-46b80d603d94
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Setting the Width of a Horizontal Scroll Bar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

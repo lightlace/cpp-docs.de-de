@@ -1,13 +1,12 @@
 ---
-title: "private (OpenMP)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "private (OpenMP) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "private"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "private OpenMP clause"
 ms.assetid: 772904a2-1345-4562-90e6-eb4dc85aea1a
 caps.latest.revision: 12
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # private (OpenMP)
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

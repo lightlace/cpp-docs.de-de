@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2757"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2757 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2757"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2757"
 ms.assetid: 421f102f-8a32-4d47-a109-811ddf2c909d
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Compilerfehler C2757
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

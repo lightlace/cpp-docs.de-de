@@ -1,13 +1,12 @@
 ---
-title: "&#214;ffnen von Dateien"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#214;ffnen von Dateien | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -27,9 +26,10 @@ helpviewer_keywords:
   - "Öffnen von Dateien, in MFC"
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # &#214;ffnen von Dateien
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

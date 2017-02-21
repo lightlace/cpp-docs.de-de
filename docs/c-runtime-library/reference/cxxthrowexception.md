@@ -1,13 +1,12 @@
 ---
-title: "_CxxThrowException"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_CxxThrowException | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_CxxThrowException"
@@ -33,9 +32,10 @@ helpviewer_keywords:
   - "CxxThrowException-Funktion"
 ms.assetid: 0b90bef5-b7d2-46e0-88e2-59e531e01a4d
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _CxxThrowException
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Reihenfolge der Operationen zur Erstellung von OLE-Anwendungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Reihenfolge der Operationen zur Erstellung von OLE-Anwendungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "OLE-Anwendungen [C++], Erstellen"
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Reihenfolge der Operationen zur Erstellung von OLE-Anwendungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

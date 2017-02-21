@@ -1,13 +1,12 @@
 ---
-title: "CComCriticalSection Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CComCriticalSection Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL.CComCriticalSection"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CComCriticalSection class"
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
 caps.latest.revision: 21
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CComCriticalSection Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

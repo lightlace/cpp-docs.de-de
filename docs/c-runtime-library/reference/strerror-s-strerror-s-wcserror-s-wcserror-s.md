@@ -1,13 +1,12 @@
 ---
-title: "strerror_s, _strerror_s, _wcserror_s, __wcserror_s"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strerror_s, _strerror_s, _wcserror_s, __wcserror_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "__wcserror_s"
@@ -37,7 +36,6 @@ f1_keywords:
   - "_strerror_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__wcserror_s-Funktion"
   - "_strerror_s-Funktion"
@@ -51,9 +49,10 @@ helpviewer_keywords:
   - "wcserror_s-Funktion"
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

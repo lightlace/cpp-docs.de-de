@@ -1,13 +1,12 @@
 ---
-title: "/Zp (Ausrichten des Strukturmembers)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Zp (Ausrichten des Strukturmembers) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/zp"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "-Zp (Compileroption) [C++]"
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /Zp (Ausrichten des Strukturmembers)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

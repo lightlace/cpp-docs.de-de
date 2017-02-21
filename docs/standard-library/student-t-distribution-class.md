@@ -1,13 +1,12 @@
 ---
-title: "student_t_distribution-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "student_t_distribution-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::tr1::student_t_distribution"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "student_t_distribution-Klasse"
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
 caps.latest.revision: 16
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # student_t_distribution-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

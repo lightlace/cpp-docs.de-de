@@ -1,14 +1,13 @@
 ---
-title: "Cproj, Cprojf, cprojl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Cproj, Cprojf, cprojl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "cproj"
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/cprojf"
   - "complex/cprojl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "Cproj-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Cprojl-Funktion"
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Cproj, Cprojf, cprojl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

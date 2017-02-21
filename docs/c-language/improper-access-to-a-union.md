@@ -1,22 +1,21 @@
 ---
-title: "Unsachgem&#228;&#223;er Zugriff auf eine Union"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Unsachgem&#228;&#223;er Zugriff auf eine Union | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: b273d984-62a8-4003-9a87-bf0149d3f2dd
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Unsachgem&#228;&#223;er Zugriff auf eine Union
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

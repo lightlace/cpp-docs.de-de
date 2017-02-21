@@ -1,13 +1,12 @@
 ---
-title: "filesystem_error-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "filesystem_error-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "filesystem/std::tr2::sys::filesystem_error"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
 caps.latest.revision: 13
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # filesystem_error-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

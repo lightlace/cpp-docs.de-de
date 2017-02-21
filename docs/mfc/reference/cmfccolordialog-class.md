@@ -1,13 +1,12 @@
 ---
-title: "CMFCColorDialog Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCColorDialog Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCColorDialog"
@@ -30,9 +29,10 @@ helpviewer_keywords:
   - "CMFCColorDialog::PreTranslateMessage method"
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
 caps.latest.revision: 30
-caps.handback.revision: "18"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # CMFCColorDialog Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "ATL-Konzepte (Active Template Library)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ATL-Konzepte (Active Template Library) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "ATL, Informationen über ATL"
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
 caps.latest.revision: 18
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # ATL-Konzepte (Active Template Library)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

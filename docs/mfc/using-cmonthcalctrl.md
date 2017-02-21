@@ -1,13 +1,12 @@
 ---
-title: "Verwenden von CMonthCalCtrl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von CMonthCalCtrl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CMonthCalCtrl"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMonthCalCtrl-Klasse, Informationen über CMonthCalCtrl-Klasse"
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Verwenden von CMonthCalCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

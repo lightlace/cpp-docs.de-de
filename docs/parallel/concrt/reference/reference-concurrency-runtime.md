@@ -1,13 +1,12 @@
 ---
-title: "Referenz (Concurrency Runtime)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Referenz (Concurrency Runtime) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_My_segment"
@@ -463,10 +462,11 @@ helpviewer_keywords:
   - "HRESULT-Typdefinition"
   - "LPSECURITY_ATTRIBUTES-Typdefinition"
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-caps.latest.revision: 16
-caps.handback.revision: "10"
+caps.latest.revision: 15
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Referenz (Concurrency Runtime)
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

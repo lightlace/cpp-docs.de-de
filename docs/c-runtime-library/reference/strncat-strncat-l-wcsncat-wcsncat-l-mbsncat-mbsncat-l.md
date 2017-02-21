@@ -1,13 +1,12 @@
 ---
-title: "strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "strncat"
@@ -44,7 +43,6 @@ f1_keywords:
   - "_tcsncat"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcsncat-Funktion"
   - "_mbsncat-Funktion"
@@ -68,10 +66,11 @@ helpviewer_keywords:
   - "tcsnccat_l-Funktion"
   - "wcsncat-Funktion"
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-caps.latest.revision: 29
-caps.handback.revision: "27"
+caps.latest.revision: 27
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

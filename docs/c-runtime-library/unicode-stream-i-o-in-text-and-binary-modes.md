@@ -1,19 +1,17 @@
 ---
-title: "Unicodestream-E/A im Text- und Bin&#228;rmodus"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Unicodestream-E/A im Text- und Bin&#228;rmodus | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "E/A [CRT], Unicode-Stream"
   - "Stream-E/A-Routinen"
@@ -21,9 +19,10 @@ helpviewer_keywords:
   - "Unicode, Stream-E/A-Routinen"
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Unicodestream-E/A im Text- und Bin&#228;rmodus
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

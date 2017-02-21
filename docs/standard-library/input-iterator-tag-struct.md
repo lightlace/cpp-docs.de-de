@@ -1,13 +1,12 @@
 ---
-title: "input_iterator_tag-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "input_iterator_tag-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "input_iterator_tag"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "input_iterator_tag-Struktur"
 ms.assetid: ad68a4c6-f315-4ce1-8b74-c1fc71bd1577
 caps.latest.revision: 20
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # input_iterator_tag-Struktur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

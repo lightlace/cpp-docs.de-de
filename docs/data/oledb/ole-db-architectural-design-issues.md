@@ -1,13 +1,12 @@
 ---
-title: "Fragen zum OLE&#160;DB-Architekturdesign"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Fragen zum OLE&#160;DB-Architekturdesign | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "OLE DB, Überlegungen zum Anwendungsentwurf"
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Fragen zum OLE&#160;DB-Architekturdesign
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

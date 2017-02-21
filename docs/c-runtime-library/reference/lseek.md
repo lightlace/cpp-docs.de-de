@@ -1,13 +1,12 @@
 ---
-title: "lseek"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "lseek | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "lseek"
@@ -27,14 +26,14 @@ f1_keywords:
   - "lseek"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "lseek-Funktion"
 ms.assetid: 137d7741-5c2e-443e-811a-6a01417fcae7
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # lseek
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

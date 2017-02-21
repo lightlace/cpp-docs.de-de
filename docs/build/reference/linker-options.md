@@ -1,13 +1,12 @@
 ---
-title: "Linkeroptionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkeroptionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "link"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Linker [C++], Aufgelistete Optionen"
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
 caps.latest.revision: 37
-caps.handback.revision: "35"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # Linkeroptionen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

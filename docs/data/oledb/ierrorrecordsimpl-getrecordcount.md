@@ -1,13 +1,12 @@
 ---
-title: "IErrorRecordsImpl::GetRecordCount"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IErrorRecordsImpl::GetRecordCount | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IErrorRecordsImpl::GetRecordCount"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "GetRecordCount-Methode"
 ms.assetid: 44388bc3-1c64-4491-a1c5-28f3497ef040
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IErrorRecordsImpl::GetRecordCount
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

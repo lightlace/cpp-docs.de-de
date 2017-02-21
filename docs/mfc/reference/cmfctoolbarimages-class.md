@@ -1,13 +1,12 @@
 ---
-title: "CMFCToolBarImages Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCToolBarImages Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCToolBarImages"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCToolBarImages class"
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 caps.latest.revision: 31
-caps.handback.revision: "19"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # CMFCToolBarImages Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

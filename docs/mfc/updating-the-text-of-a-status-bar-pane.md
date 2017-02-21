@@ -1,13 +1,12 @@
 ---
-title: "Aktualisieren des Textes in der Statusleiste"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Aktualisieren des Textes in der Statusleiste | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Benutzerschnittstellenobjekte, Aktualisieren"
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Aktualisieren des Textes in der Statusleiste
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CAutoHideDockSite Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CAutoHideDockSite Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CAutoHideDockSite"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "CAutoHideDockSite class"
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
 caps.latest.revision: 32
-caps.handback.revision: "21"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # CAutoHideDockSite Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

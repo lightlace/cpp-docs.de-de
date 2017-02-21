@@ -1,13 +1,12 @@
 ---
-title: "_aligned_offset_realloc"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_aligned_offset_realloc | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_aligned_offset_realloc"
@@ -29,15 +28,15 @@ f1_keywords:
   - "_aligned_offset_realloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "aligned_offset_realloc-Funktion"
   - "_aligned_offset_realloc-Funktion"
 ms.assetid: e0263533-991e-41b0-acc9-1b8a51ab9ecd
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _aligned_offset_realloc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

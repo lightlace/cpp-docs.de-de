@@ -1,13 +1,12 @@
 ---
-title: "Aggregation"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Aggregation | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "aggregation [C++]"
 ms.assetid: 7125bb8e-b269-4b50-9bba-295b467a54cc
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Aggregation
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

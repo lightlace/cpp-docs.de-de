@@ -1,13 +1,12 @@
 ---
-title: "CRowsetImpl::m_strIndexText"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CRowsetImpl::m_strIndexText | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CRowsetImpl::m_strIndexText"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "m_strIndexText"
 ms.assetid: fa5465b8-67c6-4efa-b786-d5bca67b9f96
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # CRowsetImpl::m_strIndexText
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

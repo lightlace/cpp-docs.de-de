@@ -1,13 +1,12 @@
 ---
-title: "_fclose_nolock"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_fclose_nolock | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fclose_nolock"
@@ -29,16 +28,16 @@ f1_keywords:
   - "_fclose_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fclose_nolock-Funktion"
   - "fclose_nolock-Funktion"
   - "Streams, Schließen"
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _fclose_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

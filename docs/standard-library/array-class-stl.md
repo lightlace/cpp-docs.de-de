@@ -1,13 +1,12 @@
 ---
-title: "array-Klasse (STL)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "array-Klasse (STL) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "array/std::tr1::array"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "array-Klasse [TR1]"
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 caps.latest.revision: 22
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # array-Klasse (STL)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

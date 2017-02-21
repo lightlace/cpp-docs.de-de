@@ -1,21 +1,21 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4437"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 4) C4437 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 dev_langs: 
   - "C++"
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Compilerwarnung (Stufe 4) C4437
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

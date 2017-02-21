@@ -1,13 +1,12 @@
 ---
-title: "ImplementsHelper::CastToUnknown-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ImplementsHelper::CastToUnknown-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::Details::ImplementsHelper::CastToUnknown"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CastToUnknown-Methode"
 ms.assetid: 5bcfcbaf-c75f-4d43-87b3-0d6838c838d9
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ImplementsHelper::CastToUnknown-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

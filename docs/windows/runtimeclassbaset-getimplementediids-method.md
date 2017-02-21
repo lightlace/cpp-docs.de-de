@@ -1,13 +1,12 @@
 ---
-title: "RuntimeClassBaseT::GetImplementedIIDS-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "RuntimeClassBaseT::GetImplementedIIDS-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "GetImplementedIIDS-Methode"
 ms.assetid: adae54da-521d-4add-87f5-242fbd85f33b
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # RuntimeClassBaseT::GetImplementedIIDS-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

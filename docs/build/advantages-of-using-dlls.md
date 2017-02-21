@@ -1,13 +1,12 @@
 ---
-title: "Vorteile der Verwendung von DLLs"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Vorteile der Verwendung von DLLs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Links [C++], Dynamisch und statisch im Vergleich"
 ms.assetid: 8956c8ee-e7b3-446f-a0c6-462381747690
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Vorteile der Verwendung von DLLs
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

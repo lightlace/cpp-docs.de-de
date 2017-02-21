@@ -1,13 +1,12 @@
 ---
-title: "CMFCVisualManagerOfficeXP Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCVisualManagerOfficeXP Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCVisualManagerOfficeXP"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCVisualManagerOfficeXP class"
 ms.assetid: 46b6f854-37c2-4836-8f56-5cb6ff63c9af
 caps.latest.revision: 28
-caps.handback.revision: "16"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # CMFCVisualManagerOfficeXP Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

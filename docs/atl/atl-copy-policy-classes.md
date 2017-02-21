@@ -1,13 +1,12 @@
 ---
-title: "ATL Copy Policy Classes"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ATL Copy Policy Classes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Daten [C++], ATL"
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
 caps.latest.revision: 13
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # ATL Copy Policy Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Projektbuildfehler PRJ0023"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Projektbuildfehler PRJ0023 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "PRJ0023"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "PRJ0023"
 ms.assetid: ed55a320-e7c8-489f-886e-825feee0d576
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Projektbuildfehler PRJ0023
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

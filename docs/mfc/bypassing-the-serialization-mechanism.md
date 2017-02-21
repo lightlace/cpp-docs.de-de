@@ -1,13 +1,12 @@
 ---
-title: "Umgehen des Serialisierungsmechanismus"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Umgehen des Serialisierungsmechanismus | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Serialisierung [C++], Rolle des Frameworks"
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Umgehen des Serialisierungsmechanismus
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

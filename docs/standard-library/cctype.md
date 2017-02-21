@@ -1,13 +1,12 @@
 ---
-title: "&lt;cctype&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;cctype&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.<cctype>"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "cctype-Header"
 ms.assetid: 3fd18bfd-c414-4def-bac1-c362e1fe8b71
 caps.latest.revision: 18
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # &lt;cctype&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

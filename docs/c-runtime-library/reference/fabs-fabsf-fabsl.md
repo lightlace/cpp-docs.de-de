@@ -1,13 +1,12 @@
 ---
-title: "Fabs, Fabsf, fabsl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Fabs, Fabsf, fabsl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "fabsf"
@@ -35,7 +34,6 @@ f1_keywords:
   - "math\fabsl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Absolute Werte"
   - "fabsf-Funktion"
@@ -44,9 +42,10 @@ helpviewer_keywords:
   - "Fabsl-Funktion"
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Fabs, Fabsf, fabsl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

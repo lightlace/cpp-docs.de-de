@@ -1,21 +1,21 @@
 ---
-title: "Beispielmakefile"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Beispielmakefile | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
 ms.assetid: 8343ce71-5556-4ae0-8d1e-7efd82673070
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Beispielmakefile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

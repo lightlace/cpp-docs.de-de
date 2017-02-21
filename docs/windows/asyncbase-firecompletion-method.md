@@ -1,13 +1,12 @@
 ---
-title: "AsyncBase::FireCompletion-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "AsyncBase::FireCompletion-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "async/Microsoft::WRL::AsyncBase::FireCompletion"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "FireCompletion-Methode"
 ms.assetid: b5e29d6d-52e7-4148-a7f3-a313b1359819
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # AsyncBase::FireCompletion-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

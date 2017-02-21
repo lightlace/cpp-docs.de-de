@@ -1,13 +1,12 @@
 ---
-title: "CCreateContext Structure"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CCreateContext Structure | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CCreateContext"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CCreateContext structure"
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
 caps.latest.revision: 22
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CCreateContext Structure
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

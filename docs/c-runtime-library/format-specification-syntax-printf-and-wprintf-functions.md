@@ -1,13 +1,12 @@
 ---
-title: "Syntax der Formatangabe: printf- und wprintf-Funktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Syntax der Formatangabe: printf- und wprintf-Funktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcr90.dll"
@@ -21,7 +20,6 @@ f1_keywords:
   - "wprintf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Flag-Direktiven für printf-Funktion"
   - "Formatangabefelder für printf-Funktion"
@@ -33,9 +31,10 @@ helpviewer_keywords:
   - "type-Felder, printf-Funktion"
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Syntax der Formatangabe: printf- und wprintf-Funktionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

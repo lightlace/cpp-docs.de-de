@@ -1,13 +1,12 @@
 ---
-title: "Benutzerdatens&#228;tze"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Benutzerdatens&#228;tze | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "COLUMN_ENTRY_MAP"
@@ -26,9 +25,10 @@ helpviewer_keywords:
   - "Benutzerdatensätze, OLE DB-Consumervorlagen"
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Benutzerdatens&#228;tze
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

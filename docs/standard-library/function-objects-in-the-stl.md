@@ -1,13 +1,12 @@
 ---
-title: "Funktionsobjekte in der STL"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Funktionsobjekte in der STL | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "function-Objekte"
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
 caps.latest.revision: 6
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Funktionsobjekte in der STL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

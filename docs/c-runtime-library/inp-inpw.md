@@ -1,13 +1,12 @@
 ---
-title: "inp, inpw"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "inp, inpw | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "inp"
@@ -26,15 +25,15 @@ f1_keywords:
   - "inp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "inp-Funktion"
   - "inpw-Funktion"
 ms.assetid: c7e1eeac-77cd-47ff-b843-4095b4c31d3b
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # inp, inpw
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

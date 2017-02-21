@@ -1,13 +1,12 @@
 ---
-title: "Vectorizer- and Parallelizer-Meldungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Vectorizer- and Parallelizer-Meldungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C5011"
@@ -19,9 +18,10 @@ dev_langs:
   - "C++"
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Vectorizer- and Parallelizer-Meldungen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

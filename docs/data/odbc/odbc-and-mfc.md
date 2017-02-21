@@ -1,13 +1,12 @@
 ---
-title: "ODBC und MFC"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ODBC und MFC | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "ODBC [C++], MFC"
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # ODBC und MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

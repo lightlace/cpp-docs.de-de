@@ -1,13 +1,12 @@
 ---
-title: "Exemplarische Vorgehensweise: Implementieren von Futures"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exemplarische Vorgehensweise: Implementieren von Futures | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Futures, Implementieren [Concurrency Runtime]"
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
 caps.latest.revision: 25
-caps.handback.revision: "25"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Exemplarische Vorgehensweise: Implementieren von Futures
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

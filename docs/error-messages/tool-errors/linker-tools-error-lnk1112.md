@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolfehler LNK1112"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolfehler LNK1112 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK1112"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK1112"
 ms.assetid: 425793d8-37e6-4072-9b6e-c3d4e9c12562
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Linkertoolfehler LNK1112
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

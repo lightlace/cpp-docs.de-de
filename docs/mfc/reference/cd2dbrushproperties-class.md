@@ -1,13 +1,12 @@
 ---
-title: "CD2DBrushProperties-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CD2DBrushProperties-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CD2DBrushProperties"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CD2DBrushProperties-Klasse"
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
 caps.latest.revision: 18
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # CD2DBrushProperties-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

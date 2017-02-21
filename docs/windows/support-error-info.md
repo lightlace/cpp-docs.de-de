@@ -1,13 +1,12 @@
 ---
-title: "support_error_info"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "support_error_info | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "vc-attr.support_error_info"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "support_error_info-Attribut"
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # support_error_info
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_execvp, _wexecvp"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_execvp, _wexecvp | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_execvp"
@@ -31,7 +30,6 @@ f1_keywords:
   - "_wexecvp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_execvp-Funktion"
   - "_wexecvp-Funktion"
@@ -39,9 +37,10 @@ helpviewer_keywords:
   - "wexecvp-Funktion"
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _execvp, _wexecvp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

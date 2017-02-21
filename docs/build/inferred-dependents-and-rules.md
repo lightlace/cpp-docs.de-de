@@ -1,13 +1,12 @@
 ---
-title: "Hergeleitete abh&#228;ngige Dateien und Regeln"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hergeleitete abh&#228;ngige Dateien und Regeln | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Regeln, Hergeleitet"
 ms.assetid: 9381e74a-53d9-445c-836d-0ff7ef6112d9
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Hergeleitete abh&#228;ngige Dateien und Regeln
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

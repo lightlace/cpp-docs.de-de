@@ -1,13 +1,12 @@
 ---
-title: "IQuickActivateImpl Class"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IQuickActivateImpl Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL::IQuickActivateImpl"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "IQuickActivateImpl class"
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
 caps.latest.revision: 20
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # IQuickActivateImpl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

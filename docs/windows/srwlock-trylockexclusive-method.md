@@ -1,13 +1,12 @@
 ---
-title: "SRWLock::TryLockExclusive-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "SRWLock::TryLockExclusive-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "TryLockExclusive-Methode"
 ms.assetid: 661e8b19-3058-4511-8742-c9fbb90412c7
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # SRWLock::TryLockExclusive-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

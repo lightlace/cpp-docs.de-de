@@ -1,13 +1,12 @@
 ---
-title: "GetUniqueFileName"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "GetUniqueFileName | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "GetUniqueFileName"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "GetUniqueFilename-Methode"
 ms.assetid: f9760e1a-82d0-4d8b-b00a-6f4c36f6b2c6
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # GetUniqueFileName
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

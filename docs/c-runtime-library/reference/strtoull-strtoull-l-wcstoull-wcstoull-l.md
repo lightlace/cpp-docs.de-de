@@ -1,13 +1,12 @@
 ---
-title: "strtoull, _strtoull_l, wcstoull, _wcstoull_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strtoull, _strtoull_l, wcstoull, _wcstoull_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_strtoull_l"
@@ -45,9 +44,10 @@ helpviewer_keywords:
   - "wcstoull-Funktion"
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # strtoull, _strtoull_l, wcstoull, _wcstoull_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

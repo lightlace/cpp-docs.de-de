@@ -1,13 +1,12 @@
 ---
-title: "/TLBID (Ressourcen-ID f&#252;r TypeLib festlegen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/TLBID (Ressourcen-ID f&#252;r TypeLib festlegen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/tlbid"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "Typbibliotheken, Angeben der Ressourcen-ID"
 ms.assetid: 434b28a2-4656-4d52-ac82-8b18bf486fb2
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /TLBID (Ressourcen-ID f&#252;r TypeLib festlegen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

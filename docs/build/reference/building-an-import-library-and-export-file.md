@@ -1,13 +1,12 @@
 ---
-title: "Erstellen einer Importbibliothek und einer Exportdatei"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen einer Importbibliothek und einer Exportdatei | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLibrarianTool.ModuleDefinitionFile"
@@ -36,9 +35,10 @@ helpviewer_keywords:
   - "-OUT (Bibliotheks-Manager-Option)"
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Erstellen einer Importbibliothek und einer Exportdatei
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_RTC_SetErrorType"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_RTC_SetErrorType | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_RTC_SetErrorType"
@@ -28,16 +27,16 @@ f1_keywords:
   - "_RTC_SetErrorType"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Laufzeitfehler"
   - "RTC_SetErrorType-Funktion"
   - "_RTC_SetErrorType-Funktion"
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _RTC_SetErrorType
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

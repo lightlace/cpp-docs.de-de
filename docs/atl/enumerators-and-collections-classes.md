@@ -1,13 +1,12 @@
 ---
-title: "Enumerators and Collections Classes"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Enumerators and Collections Classes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.atl.enum"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Enumeratoren, ATL-Klassen"
 ms.assetid: fcd093b2-98bf-444d-94ab-9a55520a5051
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Enumerators and Collections Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

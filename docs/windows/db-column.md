@@ -1,13 +1,12 @@
 ---
-title: "db_column"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "db_column | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "vc-attr.db_column"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "db_column attribute"
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # db_column
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

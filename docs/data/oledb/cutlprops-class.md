@@ -1,13 +1,12 @@
 ---
-title: "CUtlProps-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CUtlProps-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CUtlProps"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CUtlProps-Klasse"
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # CUtlProps-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "out_of_range-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "out_of_range-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "out_of_range"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "out_of_range-Klasse"
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
 caps.latest.revision: 25
-caps.handback.revision: "25"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # out_of_range-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

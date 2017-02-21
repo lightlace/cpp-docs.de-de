@@ -1,13 +1,12 @@
 ---
-title: "Schritte zum Entwerfen eines Assistenten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schritte zum Entwerfen eines Assistenten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Benutzerdefinierte Assistenten, Entwerfen"
 ms.assetid: dc22746b-99e3-4569-a8b4-b3d7cbabf8f2
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Schritte zum Entwerfen eines Assistenten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

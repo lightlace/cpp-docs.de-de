@@ -1,13 +1,12 @@
 ---
-title: "multimap::iterator (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "multimap::iterator (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::multimap::iterator"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "iterator-Member [STL/CLR]"
 ms.assetid: 2923f4bc-b216-477b-b10e-22bf15847c67
 caps.latest.revision: 15
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # multimap::iterator (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

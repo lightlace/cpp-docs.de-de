@@ -1,13 +1,12 @@
 ---
-title: "/DEFAULTLIB (Standardbibliothek festlegen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/DEFAULTLIB (Standardbibliothek festlegen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.DefaultLibraries"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Bibliotheken, Hinzufügen zur Liste der"
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /DEFAULTLIB (Standardbibliothek festlegen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

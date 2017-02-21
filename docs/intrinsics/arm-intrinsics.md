@@ -1,13 +1,12 @@
 ---
-title: "Systeminterne ARM-Funktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Systeminterne ARM-Funktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "arm_neon/vsetq_lane_p8"
@@ -1942,9 +1941,10 @@ helpviewer_keywords:
   - "Interna, ARM"
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Systeminterne ARM-Funktionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

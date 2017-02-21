@@ -1,24 +1,23 @@
 ---
-title: "Dialog Editor States (Guides and Grids)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Dialog Editor States (Guides and Grids) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "Dialog editor, guides and margins"
 ms.assetid: dbacf9ef-e8b0-4125-a7ce-84911c482e98
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Dialog Editor States (Guides and Grids)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

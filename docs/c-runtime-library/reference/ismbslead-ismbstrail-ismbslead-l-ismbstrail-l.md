@@ -1,13 +1,12 @@
 ---
-title: "_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ismbstrail"
@@ -40,7 +39,6 @@ f1_keywords:
   - "_ismbslead_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbslead-Funktion"
   - "_ismbslead_l-Funktion"
@@ -52,9 +50,10 @@ helpviewer_keywords:
   - "ismbstrail_l-Funktion"
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
 caps.latest.revision: 22
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4682"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 4) C4682 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C4682"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4682"
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerwarnung (Stufe 4) C4682
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

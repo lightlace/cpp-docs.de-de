@@ -1,13 +1,12 @@
 ---
-title: "Suchen nach Speicher&#252;berschreibungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Suchen nach Speicher&#252;berschreibungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Speicher, Überschreibungen"
 ms.assetid: da7c5d77-a267-415f-a8ab-ee5ce5bfc286
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Suchen nach Speicher&#252;berschreibungen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

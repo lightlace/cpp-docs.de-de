@@ -1,13 +1,12 @@
 ---
-title: "Hinzuf&#252;gen von Objekten und Steuerelementen zu einem ATL-Projekt"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hinzuf&#252;gen von Objekten und Steuerelementen zu einem ATL-Projekt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "vc.appwiz.ATL.controls"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Assistenten [C++], ATL-Projekte"
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
 caps.latest.revision: 12
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Hinzuf&#252;gen von Objekten und Steuerelementen zu einem ATL-Projekt
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

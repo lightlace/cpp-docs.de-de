@@ -1,13 +1,12 @@
 ---
-title: "Ressourcenverwaltungsklassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ressourcenverwaltungsklassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Ressourcen [C++], Verwaltung"
 ms.assetid: 1040e813-f1cd-4b13-83b6-d329f8e75d2e
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Ressourcenverwaltungsklassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

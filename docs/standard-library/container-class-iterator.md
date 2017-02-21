@@ -1,13 +1,12 @@
 ---
-title: "Container-Klasse::iterator"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Container-Klasse::iterator | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "iterator-Methode"
 ms.assetid: f9c49d1c-17cb-4b17-8e54-09e3ea41ca26
 caps.latest.revision: 8
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Container-Klasse::iterator
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

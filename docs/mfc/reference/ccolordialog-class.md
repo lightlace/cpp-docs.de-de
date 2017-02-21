@@ -1,13 +1,12 @@
 ---
-title: "CColorDialog Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CColorDialog Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CColorDialog"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Dialogfelder, Farben"
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
 caps.latest.revision: 25
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CColorDialog Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

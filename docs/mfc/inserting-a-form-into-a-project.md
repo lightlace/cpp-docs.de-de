@@ -1,13 +1,12 @@
 ---
-title: "Einf&#252;gen eines Formulars in ein Projekt"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Einf&#252;gen eines Formulars in ein Projekt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Einfügen von"
 ms.assetid: f3bd2998-3ce2-496d-ac5c-57ca70eec7cb
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Einf&#252;gen eines Formulars in ein Projekt
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

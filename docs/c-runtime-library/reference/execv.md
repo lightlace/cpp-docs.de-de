@@ -1,13 +1,12 @@
 ---
-title: "execv"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "execv | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "execv"
@@ -27,14 +26,14 @@ f1_keywords:
   - "execv"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "execv-Funktion"
 ms.assetid: b097d606-9384-427a-9a1d-707dc4ce03ae
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # execv
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

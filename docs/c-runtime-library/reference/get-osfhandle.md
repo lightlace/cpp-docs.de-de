@@ -1,13 +1,12 @@
 ---
-title: "_get_osfhandle"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_get_osfhandle | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_get_osfhandle"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_get_osfhandle"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Betriebssysteme, Abrufen von Dateihandles"
   - "get_osfhandle-Funktion"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "Dateihandles [C++], Betriebssystem"
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _get_osfhandle
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

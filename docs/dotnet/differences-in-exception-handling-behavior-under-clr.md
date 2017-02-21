@@ -1,13 +1,12 @@
 ---
-title: "Unterschiede im Ausnahmebehandlungsverhalten unter /CLR"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Unterschiede im Ausnahmebehandlungsverhalten unter /CLR | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "set_se_translator-Funktion"
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Unterschiede im Ausnahmebehandlungsverhalten unter /CLR
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CDataConnection::operator BOOL"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDataConnection::operator BOOL | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CDataConnection::operatorBOOL"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "operator bool"
 ms.assetid: ad0bea7f-61ff-47f7-8127-32a31e3e9b9d
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CDataConnection::operator BOOL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

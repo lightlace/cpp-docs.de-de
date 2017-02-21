@@ -1,13 +1,12 @@
 ---
-title: "_ismbbkalnum, _ismbbkalnum_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ismbbkalnum, _ismbbkalnum_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ismbbkalnum"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_ismbbkalnum_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbbkalnum_l-Funktion"
   - "ismbbkalnum_l-Funktion"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "ismbbkalnum-Funktion"
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
 caps.latest.revision: 19
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _ismbbkalnum, _ismbbkalnum_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

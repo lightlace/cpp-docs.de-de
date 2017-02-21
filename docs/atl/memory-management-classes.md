@@ -1,13 +1,12 @@
 ---
-title: "Memory Management Classes"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Memory Management Classes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Speicher, Verwalten"
 ms.assetid: be564a5e-577e-40a7-bfe3-25ad21e57270
 caps.latest.revision: 11
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Memory Management Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

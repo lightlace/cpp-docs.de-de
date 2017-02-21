@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Abfangen von Ausnahmen, die von der MSIL ausgel&#246;st wurden, in systemeigenem Code"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Abfangen von Ausnahmen, die von der MSIL ausgel&#246;st wurden, in systemeigenem Code | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "MSIL, Auffangen von Ausnahmen in systemeigenem Code"
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
 caps.latest.revision: 9
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Gewusst wie: Abfangen von Ausnahmen, die von der MSIL ausgel&#246;st wurden, in systemeigenem Code
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

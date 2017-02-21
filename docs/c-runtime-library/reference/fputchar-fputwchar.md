@@ -1,13 +1,12 @@
 ---
-title: "_fputchar, _fputwchar"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_fputchar, _fputwchar | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fputchar"
@@ -34,7 +33,6 @@ f1_keywords:
   - "_fputchar"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fputchar-Funktion"
   - "_fputtchar-Funktion"
@@ -45,9 +43,10 @@ helpviewer_keywords:
   - "Standardausgabe, Schreiben in"
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
 caps.latest.revision: 15
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _fputchar, _fputwchar
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

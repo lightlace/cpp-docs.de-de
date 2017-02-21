@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4255"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 4) C4255 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4255"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4255"
 ms.assetid: 2087b635-4b4c-4182-8a01-c26770d2bb88
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Compilerwarnung (Stufe 4) C4255
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

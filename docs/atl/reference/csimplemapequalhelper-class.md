@@ -1,13 +1,12 @@
 ---
-title: "CSimpleMapEqualHelper Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CSimpleMapEqualHelper Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CSimpleMapEqualHelper"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CSimpleMapEqualHelper class"
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
 caps.latest.revision: 20
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CSimpleMapEqualHelper Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

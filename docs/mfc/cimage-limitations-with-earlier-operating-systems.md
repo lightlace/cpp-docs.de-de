@@ -1,13 +1,12 @@
 ---
-title: "Einschr&#228;nkungen f&#252;r CImage in fr&#252;heren Betriebssystemen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Einschr&#228;nkungen f&#252;r CImage in fr&#252;heren Betriebssystemen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CImage"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CImage-Klasse, Einschränkungen"
 ms.assetid: 4bedaab8-7dd1-4c91-ab35-b75fb56765b0
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Einschr&#228;nkungen f&#252;r CImage in fr&#252;heren Betriebssystemen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

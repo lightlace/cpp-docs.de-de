@@ -1,13 +1,12 @@
 ---
-title: "_heapwalk"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_heapwalk | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_heapwalk"
@@ -29,16 +28,16 @@ f1_keywords:
   - "_heapwalk"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_heapwalk-Funktion"
   - "Debuggen [CRT], Heapbezogene Probleme"
   - "heapwalk-Funktion"
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
 caps.latest.revision: 22
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _heapwalk
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

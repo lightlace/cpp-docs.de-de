@@ -1,13 +1,12 @@
 ---
-title: "Systeminterne Funktionen „_InterlockedIncrement“"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Systeminterne Funktionen „_InterlockedIncrement“ | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_InterlockedIncrement_acq"
@@ -55,9 +54,10 @@ helpviewer_keywords:
   - "Systeminterne Funktion „InterlockedIncrement64_rel“"
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Systeminterne Funktionen „_InterlockedIncrement“
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

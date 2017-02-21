@@ -1,13 +1,13 @@
 ---
-title: "quick_exit"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.reviewer: na
-ms.suite: na
+title: "quick_exit1 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "quick_exit"
@@ -29,15 +29,15 @@ f1_keywords:
   - "process/quick_exit"
   - "stdlib/quick_exit"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "quick_exit-Funktion"
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # quick_exit
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

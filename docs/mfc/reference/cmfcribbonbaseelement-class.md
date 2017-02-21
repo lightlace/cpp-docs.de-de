@@ -1,13 +1,12 @@
 ---
-title: "CMFCRibbonBaseElement Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCRibbonBaseElement Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCRibbonBaseElement"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCRibbonBaseElement class"
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 caps.latest.revision: 34
-caps.handback.revision: "22"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # CMFCRibbonBaseElement Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

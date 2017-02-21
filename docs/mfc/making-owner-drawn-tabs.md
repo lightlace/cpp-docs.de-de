@@ -1,13 +1,12 @@
 ---
-title: "Erstellen von Ownerdrawn-Registerkarten"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen von Ownerdrawn-Registerkarten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Registerkarten, Ownerdrawn"
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Erstellen von Ownerdrawn-Registerkarten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "double_2-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "double_2-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "amp_short_vectors/Concurrency::graphics::double_2::set_x"
@@ -39,9 +38,10 @@ dev_langs:
   - "C++"
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
 caps.latest.revision: 11
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # double_2-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

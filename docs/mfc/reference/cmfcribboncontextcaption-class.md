@@ -1,13 +1,12 @@
 ---
-title: "CMFCRibbonContextCaption Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCRibbonContextCaption Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCRibbonContextCaption"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCRibbonContextCaption class"
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
 caps.latest.revision: 24
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CMFCRibbonContextCaption Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

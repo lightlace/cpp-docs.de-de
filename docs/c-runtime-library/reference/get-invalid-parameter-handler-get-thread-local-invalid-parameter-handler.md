@@ -1,13 +1,12 @@
 ---
-title: "_get_invalid_parameter_handler _get_thread_local_invalid_parameter_handler"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_get_invalid_parameter_handler _get_thread_local_invalid_parameter_handler | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_get_invalid_parameter_handler"
@@ -31,16 +30,16 @@ f1_keywords:
   - "_get_thread_local_invalid_parameter_handler"
   - "stdlib/_get_thread_local_invalid_parameter_handler"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "_get_thread_local_invalid_parameter_handler-Funktion"
   - "_get_invalid_parameter_handler-Funktion"
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # _get_invalid_parameter_handler _get_thread_local_invalid_parameter_handler
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

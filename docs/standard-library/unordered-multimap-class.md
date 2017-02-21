@@ -1,13 +1,12 @@
 ---
-title: "unordered_multimap-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "unordered_multimap-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "unordered_map/std::tr1::unordered_multimap"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "unordered_multimap-Klasse [TR1]"
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 caps.latest.revision: 28
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # unordered_multimap-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

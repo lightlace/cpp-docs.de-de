@@ -1,13 +1,12 @@
 ---
-title: "_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mbsupr_l"
@@ -26,6 +25,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntoskrnl.exe"
   - "ucrtbase.dll"
   - "api-ms-win-crt-multibyte-l1-1-0.dll"
   - "api-ms-win-crt-string-l1-1-0.dll"
@@ -42,7 +42,6 @@ f1_keywords:
   - "_wcsupr"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fstrupr-Funktion"
   - "_ftcsupr-Funktion"
@@ -71,9 +70,10 @@ helpviewer_keywords:
   - "wcsupr_l-Funktion"
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
 caps.latest.revision: 26
-caps.handback.revision: "26"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "RuntimeClassFlags::value-Konstante"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "RuntimeClassFlags::value-Konstante | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::RuntimeClassFlags::value"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Wertkonstante"
 ms.assetid: df5e6939-a424-489f-a5da-0027b0eee230
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # RuntimeClassFlags::value-Konstante
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

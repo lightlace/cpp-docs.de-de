@@ -1,13 +1,12 @@
 ---
-title: "Uhr"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Uhr | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "clock"
@@ -28,7 +27,6 @@ f1_keywords:
   - "clock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Berechnen der verwendeten Prozessorzeit"
   - "clock-Funktion"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "Uhrzeit, Prozessor berechnen"
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
 caps.latest.revision: 15
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Uhr
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

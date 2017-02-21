@@ -1,13 +1,12 @@
 ---
-title: "IRowsetUpdateImpl::m_mapCachedData"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IRowsetUpdateImpl::m_mapCachedData | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IRowsetUpdateImpl.m_mapCachedData"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "m_mapCachedData"
 ms.assetid: 65131743-8580-48c8-bb22-68f17c9dfa13
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IRowsetUpdateImpl::m_mapCachedData
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

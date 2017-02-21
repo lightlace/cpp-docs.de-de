@@ -1,17 +1,15 @@
 ---
-title: "Datentypspezifizierer und Entsprechungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Datentypspezifizierer und Entsprechungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Datentypen [C++], Entsprechungen"
   - "Datentypen [C++], Bezeichner"
@@ -24,9 +22,10 @@ helpviewer_keywords:
   - "Nullerweiterung"
 ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Datentypspezifizierer und Entsprechungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

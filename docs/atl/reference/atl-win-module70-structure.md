@@ -1,13 +1,12 @@
 ---
-title: "_ATL_WIN_MODULE70 Structure"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ATL_WIN_MODULE70 Structure | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_ATL_WIN_MODULE70"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "ATL_WIN_MODULE70 structure"
 ms.assetid: a0aaf3ea-ca77-46ec-bd53-4dfb61dffbea
 caps.latest.revision: 15
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _ATL_WIN_MODULE70 Structure
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

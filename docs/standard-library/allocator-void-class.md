@@ -1,13 +1,12 @@
 ---
-title: "allocator&lt;void&gt;-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "allocator&lt;void&gt;-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "memory/std::allocator<void>"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "allocator<void>-Klasse"
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
 caps.latest.revision: 18
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # allocator&lt;void&gt;-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

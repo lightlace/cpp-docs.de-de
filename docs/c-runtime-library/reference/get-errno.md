@@ -1,13 +1,12 @@
 ---
-title: "_get_errno"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_get_errno | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_get_errno"
@@ -28,16 +27,16 @@ f1_keywords:
   - "_get_errno"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_get_errno-Funktion"
   - "errno (globale Variable)"
   - "get_errno-Funktion"
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
 caps.latest.revision: 19
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _get_errno
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

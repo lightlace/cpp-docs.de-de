@@ -1,13 +1,12 @@
 ---
-title: "Hinzuf&#252;gen von ATL-Unterst&#252;tzung zu einem MFC-Projekt"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hinzuf&#252;gen von ATL-Unterst&#252;tzung zu einem MFC-Projekt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.codewiz.adding.atl.mfc"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "MFC, ATL-Unterstützung"
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Hinzuf&#252;gen von ATL-Unterst&#252;tzung zu einem MFC-Projekt
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

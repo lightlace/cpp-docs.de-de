@@ -1,13 +1,12 @@
 ---
-title: "&#220;berschreiben der Standardwerte f&#252;r Anbieterdienste"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#220;berschreiben der Standardwerte f&#252;r Anbieterdienste | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Serviceanbieter [OLE DB]"
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # &#220;berschreiben der Standardwerte f&#252;r Anbieterdienste
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

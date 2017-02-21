@@ -1,13 +1,12 @@
 ---
-title: "_CrtGetDumpClient"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_CrtGetDumpClient | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_CrtGetDumpClient"
@@ -28,15 +27,15 @@ f1_keywords:
   - "_CrtGetDumpClient"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CrtGetDumpClient-Funktion"
   - "CrtGetDumpClient-Funktion"
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _CrtGetDumpClient
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

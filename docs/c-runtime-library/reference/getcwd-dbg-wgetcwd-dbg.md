@@ -1,13 +1,12 @@
 ---
-title: "_getcwd_dbg, _wgetcwd_dbg"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_getcwd_dbg, _wgetcwd_dbg | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wgetcwd_dbg"
@@ -32,7 +31,6 @@ f1_keywords:
   - "wgetcwd_dbg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getcwd_dbg-Funktion"
   - "_wgetcwd_dbg-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Arbeitsverzeichnis"
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _getcwd_dbg, _wgetcwd_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Beschr&#228;nkungen f&#252;r das verz&#246;gerte Laden von DLLs"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Beschr&#228;nkungen f&#252;r das verz&#246;gerte Laden von DLLs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "DLLs [C++], Einschränkungen"
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Beschr&#228;nkungen f&#252;r das verz&#246;gerte Laden von DLLs
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

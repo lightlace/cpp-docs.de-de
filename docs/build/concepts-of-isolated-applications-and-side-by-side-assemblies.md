@@ -1,13 +1,12 @@
 ---
-title: "Konzept der isolierten Anwendungen und der parallelen Assemblys"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Konzept der isolierten Anwendungen und der parallelen Assemblys | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Isolierte Assemblys [C++]"
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Konzept der isolierten Anwendungen und der parallelen Assemblys
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

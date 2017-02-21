@@ -1,13 +1,12 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Verwenden von vordefinierten Eigenschaftenseiten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-ActiveX-Steuerelemente: Verwenden von vordefinierten Eigenschaftenseiten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CLSID_CPicturePropPage"
@@ -26,9 +25,10 @@ helpviewer_keywords:
   - "Basiseigenschaften, Bestandseigenschaftenseiten"
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC-ActiveX-Steuerelemente: Verwenden von vordefinierten Eigenschaftenseiten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

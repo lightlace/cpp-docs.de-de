@@ -1,13 +1,12 @@
 ---
-title: "CReversalTransition-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CReversalTransition-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "afxanimationcontroller/CReversalTransition"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CReversalTransition-Klasse"
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
 caps.latest.revision: 18
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # CReversalTransition-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

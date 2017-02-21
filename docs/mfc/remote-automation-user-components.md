@@ -1,13 +1,12 @@
 ---
-title: "Benutzerkomponenten f&#252;r Remoteautomatisierung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Benutzerkomponenten f&#252;r Remoteautomatisierung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Remoteautomatisierung [C++], Benutzerkomponenten"
 ms.assetid: 601591cc-a442-440a-988e-baf3284b0d46
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Benutzerkomponenten f&#252;r Remoteautomatisierung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_set_fmode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_set_fmode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_set_fmode"
@@ -29,7 +28,6 @@ f1_keywords:
   - "set_fmode"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_set_fmode-Funktion"
   - "Dateiübersetzung [C++], Standardmodus"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "set_fmode-Funktion"
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
 caps.latest.revision: 19
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _set_fmode
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

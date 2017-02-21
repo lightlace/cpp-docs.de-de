@@ -1,13 +1,12 @@
 ---
-title: "&lt;random&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;random&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "<random>"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "random-Header"
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
 caps.latest.revision: 58
-caps.handback.revision: "46"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 58
 ---
 # &lt;random&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

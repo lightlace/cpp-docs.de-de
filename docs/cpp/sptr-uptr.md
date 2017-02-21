@@ -1,13 +1,12 @@
 ---
-title: "__sptr, __uptr"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__sptr, __uptr | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "__uptr_cpp"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "__uptr-Modifizierer"
 ms.assetid: c7f5f3b2-9106-4a0b-a6de-d1588ab153ed
 caps.latest.revision: 7
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # __sptr, __uptr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

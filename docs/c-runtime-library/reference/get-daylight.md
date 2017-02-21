@@ -1,13 +1,12 @@
 ---
-title: "_get_daylight"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_get_daylight | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "__daylight"
@@ -30,16 +29,16 @@ f1_keywords:
   - "_get_daylight"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_get_daylight-Funktion"
   - "Sommerzeit-Offset"
   - "get_daylight-Funktion"
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _get_daylight
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

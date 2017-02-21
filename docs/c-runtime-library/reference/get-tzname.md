@@ -1,13 +1,12 @@
 ---
-title: "_get_tzname"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_get_tzname | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_get_tzname"
@@ -29,16 +28,16 @@ f1_keywords:
   - "get_tzname"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_get_tzname-Funktion"
   - "get_tzname-Funktion"
   - "Zeitzonen"
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _get_tzname
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

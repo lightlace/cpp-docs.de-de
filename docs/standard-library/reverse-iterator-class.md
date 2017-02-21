@@ -1,13 +1,12 @@
 ---
-title: "reverse_iterator-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "reverse_iterator-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "reverse_iterator"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "reverse_iterator-Klasse"
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
 caps.latest.revision: 21
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # reverse_iterator-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

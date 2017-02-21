@@ -1,13 +1,12 @@
 ---
-title: "_BitScanReverse, _BitScanReverse64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_BitScanReverse, _BitScanReverse64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_BitScanReverse64"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "bsr instruction"
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _BitScanReverse, _BitScanReverse64
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

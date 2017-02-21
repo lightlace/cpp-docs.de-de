@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Schreiben eines Suchalgorithmus [Concurrency Runtime]"
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
 caps.latest.revision: 15
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Gewusst wie: Verwenden der Ausnahmebehandlung zum Verlassen einer Parallel-Schleife
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

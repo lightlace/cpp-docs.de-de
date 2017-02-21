@@ -1,13 +1,12 @@
 ---
-title: "BLOB_NAME"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "BLOB_NAME | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "BLOB_NAME"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "BLOB_NAME-Makro"
 ms.assetid: 757acd0d-946d-447d-937e-94ecd700ba38
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # BLOB_NAME
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

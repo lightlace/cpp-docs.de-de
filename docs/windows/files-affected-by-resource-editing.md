@@ -1,13 +1,12 @@
 ---
-title: "Files Affected by Resource Editing"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Files Affected by Resource Editing | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "resources [Visual Studio], editing"
 ms.assetid: d0820df1-ba84-40ac-bce9-29ea5ee7e3f8
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Files Affected by Resource Editing
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

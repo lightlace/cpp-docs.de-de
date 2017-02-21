@@ -1,13 +1,12 @@
 ---
-title: "CMFCRibbonFontComboBox Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCRibbonFontComboBox Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCRibbonFontComboBox"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCRibbonFontComboBox class"
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
 caps.latest.revision: 24
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CMFCRibbonFontComboBox Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

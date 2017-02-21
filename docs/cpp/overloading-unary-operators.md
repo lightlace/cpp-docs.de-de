@@ -1,13 +1,12 @@
 ---
-title: "&#220;berladen von un&#228;ren Operatoren"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#220;berladen von un&#228;ren Operatoren | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "C++"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Unäre Operatoren, Plus"
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # &#220;berladen von un&#228;ren Operatoren
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

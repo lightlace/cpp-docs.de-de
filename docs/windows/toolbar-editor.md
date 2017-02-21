@@ -1,13 +1,12 @@
 ---
-title: "Toolbar Editor"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Toolbar Editor | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.toolbar.F1"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Toolbar editor"
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Toolbar Editor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

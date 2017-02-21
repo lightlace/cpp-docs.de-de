@@ -1,13 +1,12 @@
 ---
-title: "CIPAddressCtrl Class"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CIPAddressCtrl Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CIPAddressCtrl"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "IP address control"
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
 caps.latest.revision: 22
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CIPAddressCtrl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

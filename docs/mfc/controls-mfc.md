@@ -1,13 +1,12 @@
 ---
-title: "Steuerelemente (MFC)"
-ms.custom: na
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Steuerelemente (MFC) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Steuerelemente [MFC]"
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Steuerelemente (MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

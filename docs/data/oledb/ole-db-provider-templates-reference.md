@@ -1,13 +1,12 @@
 ---
-title: "Referenz der OLE&#160;DB-Anbietervorlagen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Referenz der OLE&#160;DB-Anbietervorlagen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.templates.ole"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "OLE DB-Anbietervorlagen"
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Referenz der OLE&#160;DB-Anbietervorlagen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

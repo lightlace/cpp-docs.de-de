@@ -1,13 +1,12 @@
 ---
-title: "Gemischte (systemeigene und verwaltete) Assemblys"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gemischte (systemeigene und verwaltete) Assemblys | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "Systemeigener Code [C++], .NET-Interoperabilität"
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
 caps.latest.revision: 35
-caps.handback.revision: "35"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # Gemischte (systemeigene und verwaltete) Assemblys
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

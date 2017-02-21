@@ -1,13 +1,12 @@
 ---
-title: "Creating a Tool Tip for a Toolbar Button"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Creating a Tool Tip for a Toolbar Button | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Toolbar editor, creating tool tips"
 ms.assetid: 0af65342-fd78-4e78-8d0d-dc68f7fc462e
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Creating a Tool Tip for a Toolbar Button
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

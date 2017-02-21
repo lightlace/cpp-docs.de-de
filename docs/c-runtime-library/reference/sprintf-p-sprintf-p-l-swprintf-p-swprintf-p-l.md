@@ -1,13 +1,12 @@
 ---
-title: "_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_sprintf_p"
@@ -37,7 +36,6 @@ f1_keywords:
   - "swprintf_p_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "sprintf_p_l-Funktion"
   - "swprintf_p-Funktion"
@@ -54,9 +52,10 @@ helpviewer_keywords:
   - "_stprintf_p_l-Funktion"
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

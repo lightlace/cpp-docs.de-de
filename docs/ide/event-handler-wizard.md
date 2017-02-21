@@ -1,13 +1,12 @@
 ---
-title: "Ereignishandler-Assistent"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ereignishandler-Assistent | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.codewiz.eventhandler.overview"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Ereignishandler-Assistent [C++]"
 ms.assetid: af8e1835-94b1-4d9a-b353-c519e011d3a1
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ereignishandler-Assistent
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

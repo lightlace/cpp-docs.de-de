@@ -1,13 +1,12 @@
 ---
-title: "/GENPROFILE, /FASTGENPROFILE (Profilerstellung instrumentierenden Build generieren)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/GENPROFILE, /FASTGENPROFILE (Profilerstellung instrumentierenden Build generieren) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "GENPROFILE"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "FASTGENPROFILE"
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # /GENPROFILE, /FASTGENPROFILE (Profilerstellung instrumentierenden Build generieren)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

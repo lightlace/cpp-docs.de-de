@@ -1,13 +1,12 @@
 ---
-title: "atanh, atanhf, atanhl"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "atanh, atanhf, atanhl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "atanhl"
@@ -38,9 +37,10 @@ helpviewer_keywords:
   - "atanhl-Funktion"
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
 caps.latest.revision: 8
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # atanh, atanhf, atanhl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

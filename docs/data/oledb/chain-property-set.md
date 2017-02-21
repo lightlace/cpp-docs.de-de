@@ -1,13 +1,12 @@
 ---
-title: "CHAIN_PROPERTY_SET"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CHAIN_PROPERTY_SET | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CHAIN_PROPERTY_SET"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CHAIN_PROPERTY_SET-Makro"
 ms.assetid: 2bcf6d7d-f4e5-480d-9140-1e32a0994c94
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CHAIN_PROPERTY_SET
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

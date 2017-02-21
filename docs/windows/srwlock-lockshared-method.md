@@ -1,13 +1,12 @@
 ---
-title: "SRWLock::LockShared-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "SRWLock::LockShared-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::LockShared"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LockShared-Methode"
 ms.assetid: 9d826a5c-b6a2-4430-ac85-d5753cbca889
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # SRWLock::LockShared-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

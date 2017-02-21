@@ -1,13 +1,12 @@
 ---
-title: "atof, _atof_l, _wtof, _wtof_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "atof, _atof_l, _wtof, _wtof_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wtof_l"
@@ -42,7 +41,6 @@ f1_keywords:
   - "corecrt_wstdlib/_wtof_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tstof-Funktion"
   - "atof_l-Funktion"
@@ -58,9 +56,10 @@ helpviewer_keywords:
   - "Zeichenfolgenkonvertierung, in Gleitkommawerte"
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
 caps.latest.revision: 26
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # atof, _atof_l, _wtof, _wtof_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

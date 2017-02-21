@@ -1,13 +1,12 @@
 ---
-title: "ComPtr::InternalRelease-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ComPtr::InternalRelease-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "client/Microsoft::WRL::ComPtr::InternalRelease"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "InternalRelease-Methode"
 ms.assetid: a5554f37-b32b-48a7-8443-847f84cd43ec
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # ComPtr::InternalRelease-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

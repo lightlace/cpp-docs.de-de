@@ -1,13 +1,12 @@
 ---
-title: "CTranslations, CTranslationInfo"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CTranslations, CTranslationInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "m_szCatalog"
@@ -37,9 +36,10 @@ helpviewer_keywords:
   - "m_szTargetSchema"
 ms.assetid: 19a64828-2d4c-42a0-8bfb-b010e334a9b3
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # CTranslations, CTranslationInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

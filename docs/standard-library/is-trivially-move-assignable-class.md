@@ -1,13 +1,12 @@
 ---
-title: "Is_trivially_move_assignable-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Is_trivially_move_assignable-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "is_trivially_move_assignable"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "is_trivially_move_assignable"
 ms.assetid: 374f7322-0706-4bc1-a1a5-4191d0315e28
 caps.latest.revision: 11
-caps.handback.revision: "1"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Is_trivially_move_assignable-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

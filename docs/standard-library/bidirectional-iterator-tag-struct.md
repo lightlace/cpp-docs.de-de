@@ -1,13 +1,12 @@
 ---
-title: "bidirectional_iterator_tag-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "bidirectional_iterator_tag-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "xutility/std::bidirectional_iterator_tag"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "bidirectional_iterator_tag-Struktur"
 ms.assetid: 9ac06066-b8ae-44b6-bee4-b05855f6a31a
 caps.latest.revision: 20
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # bidirectional_iterator_tag-Struktur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

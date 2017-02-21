@@ -1,13 +1,12 @@
 ---
-title: "/Zl (Kein Standardbibliotheksname)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Zl (Kein Standardbibliotheksname) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/zi"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "-Zl (Compileroption) [C++]"
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /Zl (Kein Standardbibliotheksname)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

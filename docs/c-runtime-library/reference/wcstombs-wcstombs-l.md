@@ -1,13 +1,12 @@
 ---
-title: "wcstombs, _wcstombs_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "wcstombs, _wcstombs_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "wcstombs"
@@ -30,7 +29,6 @@ f1_keywords:
   - "_wcstombs_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_wcstombs_l-Funktion"
   - "Zeichen, Konvertieren"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "Breitzeichen, Konvertieren"
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
 caps.latest.revision: 30
-caps.handback.revision: "28"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # wcstombs, _wcstombs_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

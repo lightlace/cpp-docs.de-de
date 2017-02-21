@@ -1,13 +1,12 @@
 ---
-title: "multi_link_registry-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "multi_link_registry-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "agents/concurrency::multi_link_registry"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "multi_link_registry-Klasse"
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
 caps.latest.revision: 19
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # multi_link_registry-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

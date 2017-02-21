@@ -1,13 +1,12 @@
 ---
-title: "Implementieren der MFC-Symbolleiste"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Implementieren der MFC-Symbolleiste | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -28,9 +27,10 @@ helpviewer_keywords:
   - "Symbolleisten [C++], Implementieren von MFC-Symbolleisten"
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Implementieren der MFC-Symbolleiste
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

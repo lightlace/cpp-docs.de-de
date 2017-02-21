@@ -1,13 +1,12 @@
 ---
-title: "CFileDialog Class"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CFileDialog Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CFileDialog"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Dialogfelder, common"
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
 caps.latest.revision: 47
-caps.handback.revision: "37"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 49
 ---
 # CFileDialog Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

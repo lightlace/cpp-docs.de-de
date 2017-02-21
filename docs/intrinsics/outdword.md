@@ -1,13 +1,12 @@
 ---
-title: "__outdword"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__outdword | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "__outdword"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "__outdword intrinsic"
 ms.assetid: ed1e4994-a84b-4759-8bf9-cd48fb073f4d
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __outdword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

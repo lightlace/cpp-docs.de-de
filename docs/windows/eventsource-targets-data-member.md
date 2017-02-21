@@ -1,13 +1,12 @@
 ---
-title: "EventSource::targets_-Datenmember"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "EventSource::targets_-Datenmember | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "event/Microsoft::WRL::EventSource::targets_"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "targets_-Datenmember"
 ms.assetid: 5d5cee05-3315-4514-bce2-19173c923c7d
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # EventSource::targets_-Datenmember
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

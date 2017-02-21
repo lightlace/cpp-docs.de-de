@@ -1,13 +1,12 @@
 ---
-title: "_com_error::Description"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_com_error::Description | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "_com_error.Description"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Description-Methode"
 ms.assetid: 88191e24-4ee8-44a6-8c4c-3758e22e0548
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _com_error::Description
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "COLUMN_NAME_EX"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "COLUMN_NAME_EX | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "COLUMN_NAME_EX"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "COLUMN_NAME_EX-Makro"
 ms.assetid: 4f916a85-f6ae-464a-9cbe-0a56dbb274a6
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # COLUMN_NAME_EX
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

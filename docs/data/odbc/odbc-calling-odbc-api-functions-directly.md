@@ -1,13 +1,12 @@
 ---
-title: "ODBC: Direktes Aufrufen von ODBC-API-Funktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ODBC: Direktes Aufrufen von ODBC-API-Funktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "ODBC-Klassen [C++], Im Vergleich zu ODBC API"
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # ODBC: Direktes Aufrufen von ODBC-API-Funktionen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

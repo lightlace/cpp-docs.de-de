@@ -1,13 +1,12 @@
 ---
-title: "_FREEENTRY, _USEDENTRY"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_FREEENTRY, _USEDENTRY | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "USEDENTRY"
@@ -16,7 +15,6 @@ f1_keywords:
   - "FREEENTRY"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_FREEENTRY-Konstante"
   - "_USEDENTRY-Konstante"
@@ -24,9 +22,10 @@ helpviewer_keywords:
   - "USEDENTRY-Konstante"
 ms.assetid: 26f658e6-6846-4a4e-9984-262cfe392770
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _FREEENTRY, _USEDENTRY
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

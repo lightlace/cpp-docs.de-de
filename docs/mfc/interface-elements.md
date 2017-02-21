@@ -1,13 +1,12 @@
 ---
-title: "Schnittstellenelemente"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schnittstellenelemente | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "MFC-Feature Pack, Architektur"
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
 caps.latest.revision: 28
-caps.handback.revision: "24"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Schnittstellenelemente
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

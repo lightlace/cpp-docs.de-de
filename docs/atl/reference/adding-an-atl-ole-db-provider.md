@@ -1,13 +1,12 @@
 ---
-title: "Hinzuf&#252;gen eines ATL-OLE DB-Anbieters"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hinzuf&#252;gen eines ATL-OLE DB-Anbieters | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "OLE DB, Hinzufügen von ATL-OLE DB-Anbietern zu Projekten"
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
 caps.latest.revision: 12
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Hinzuf&#252;gen eines ATL-OLE DB-Anbieters
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Module::DecrementObjectCount-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Module::DecrementObjectCount-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "module/Microsoft::WRL::Module::DecrementObjectCount"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "DecrementObjectCount-Methode"
 ms.assetid: 6a06d1f9-7881-4f0e-891f-46b0e5c4f604
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Module::DecrementObjectCount-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

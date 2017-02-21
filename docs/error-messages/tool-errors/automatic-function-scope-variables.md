@@ -1,13 +1,12 @@
 ---
-title: "Automatische Variablen (mit Funktionsg&#252;ltigkeitsbereich)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Automatische Variablen (mit Funktionsg&#252;ltigkeitsbereich) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Variablen, Automatisch"
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Automatische Variablen (mit Funktionsg&#252;ltigkeitsbereich)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

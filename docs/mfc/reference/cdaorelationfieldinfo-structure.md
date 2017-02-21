@@ -1,13 +1,12 @@
 ---
-title: "CDaoRelationFieldInfo-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDaoRelationFieldInfo-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CDaoRelationFieldInfo"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "DAO (Datenzugriffsobjekte), Relations-Auflistung"
 ms.assetid: 47cb89ca-dc80-47ce-96fd-cc4b88512558
 caps.latest.revision: 13
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # CDaoRelationFieldInfo-Struktur
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

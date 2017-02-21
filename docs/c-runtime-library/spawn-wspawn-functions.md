@@ -1,13 +1,12 @@
 ---
-title: "_spawn- und _wspawn-Funktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_spawn- und _wspawn-Funktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcr80.dll"
@@ -32,7 +31,6 @@ f1_keywords:
   - "wspawn"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tspawnve-Funktion"
   - "_spawn-Funktionen"
@@ -57,9 +55,10 @@ helpviewer_keywords:
   - "_tspawnle-Funktion"
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
 caps.latest.revision: 26
-caps.handback.revision: "24"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _spawn- und _wspawn-Funktionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

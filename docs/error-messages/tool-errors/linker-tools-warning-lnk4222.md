@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolwarnung LNK4222"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolwarnung LNK4222 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK4222"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK4222"
 ms.assetid: b7bb1794-41fb-4c83-b9b0-59c0d786a7da
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Linkertoolwarnung LNK4222
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

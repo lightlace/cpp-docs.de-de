@@ -1,14 +1,13 @@
 ---
-title: "Is_trivially_constructible-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Is_trivially_constructible-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "is_trivially_constructible"
@@ -17,14 +16,14 @@ f1_keywords:
   - "type_traits/std::is_trivially_constructible"
 dev_langs: 
   - "C++"
-  - "c++"
 helpviewer_keywords: 
   - "is_trivially_constructible"
 ms.assetid: 3fa918c1-e66f-4d0e-a11b-be1fb2c02e7b
 caps.latest.revision: 12
-caps.handback.revision: "2"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Is_trivially_constructible-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

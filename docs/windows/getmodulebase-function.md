@@ -1,13 +1,12 @@
 ---
-title: "GetModuleBase-Funktion"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "GetModuleBase-Funktion | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::GetModuleBase"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
 caps.latest.revision: 2
-caps.handback.revision: "2"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # GetModuleBase-Funktion
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

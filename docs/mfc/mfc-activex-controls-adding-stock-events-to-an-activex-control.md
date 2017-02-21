@@ -1,13 +1,12 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von vordefinierten Ereignissen zu einem ActiveX-Steuerelement"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von vordefinierten Ereignissen zu einem ActiveX-Steuerelement | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "EVENT__STOCK_ERROR"
@@ -53,9 +52,10 @@ helpviewer_keywords:
   - "ReadyStateChange-Ereignis"
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von vordefinierten Ereignissen zu einem ActiveX-Steuerelement
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

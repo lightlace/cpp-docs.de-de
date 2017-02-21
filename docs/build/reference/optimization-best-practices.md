@@ -1,13 +1,12 @@
 ---
-title: "Empfohlene Vorgehensweisen f&#252;r die Optimierung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Empfohlene Vorgehensweisen f&#252;r die Optimierung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Optimierung, bewährte Methoden"
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Empfohlene Vorgehensweisen f&#252;r die Optimierung
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "hash_set::bucket_count (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "hash_set::bucket_count (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::hash_set::bucket_count"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "bucket_count-Member [STL/CLR]"
 ms.assetid: 3ff49f99-b70d-4455-93e8-2bdc983a0e67
 caps.latest.revision: 14
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # hash_set::bucket_count (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

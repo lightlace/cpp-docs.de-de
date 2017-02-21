@@ -1,13 +1,12 @@
 ---
-title: "out_of_memory-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "out_of_memory-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "amprt/Concurrency::out_of_memory"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "out_of_memory-Klasse"
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
 caps.latest.revision: 11
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # out_of_memory-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

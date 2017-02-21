@@ -1,13 +1,12 @@
 ---
-title: "Verwenden von Bildlisten in einem Symbolleisten-Steuerelement"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von Bildlisten in einem Symbolleisten-Steuerelement | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Symbolleisten-Steuerelemente [MFC], Bild"
 ms.assetid: ccbe8df4-4ed9-4b54-bb93-9a1dcb3b97eb
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Verwenden von Bildlisten in einem Symbolleisten-Steuerelement
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

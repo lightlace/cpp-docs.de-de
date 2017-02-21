@@ -1,13 +1,12 @@
 ---
-title: "CMapStringToOb Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMapStringToOb Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMapStringToOb"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Zeichenfolgen [C++], class for mapping"
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
 caps.latest.revision: 20
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CMapStringToOb Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

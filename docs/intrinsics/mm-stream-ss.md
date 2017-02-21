@@ -1,13 +1,12 @@
 ---
-title: "_mm_stream_ss"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mm_stream_ss | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_mm_stream_ss"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "_mm_stream_ss intrinsic"
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
 caps.latest.revision: 13
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _mm_stream_ss
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

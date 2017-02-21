@@ -1,13 +1,12 @@
 ---
-title: "/Yu (Vorkompilierte Headerdatei verwenden)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Yu (Vorkompilierte Headerdatei verwenden) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/yu"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "-Yu (Compileroption) [C++]"
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /Yu (Vorkompilierte Headerdatei verwenden)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

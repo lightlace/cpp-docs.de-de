@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4535"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 3) C4535 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4535"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4535"
 ms.assetid: 2c5ad1aa-2558-41d1-8f06-47fef74c8d9b
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Compilerwarnung (Stufe 3) C4535
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Eigenschaftenseiten &quot;HLSL&quot;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Eigenschaftenseiten &quot;HLSL&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.FXCompilerTool.AdditionalOptionsPage"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Eigenschaftenseiten &quot;HLSL&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

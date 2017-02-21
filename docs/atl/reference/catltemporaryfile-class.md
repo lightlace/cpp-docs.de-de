@@ -1,13 +1,12 @@
 ---
-title: "CAtlTemporaryFile Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CAtlTemporaryFile Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CAtlTemporaryFile"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CAtlTemporaryFile class"
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
 caps.latest.revision: 18
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # CAtlTemporaryFile Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

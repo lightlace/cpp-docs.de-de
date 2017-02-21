@@ -1,13 +1,12 @@
 ---
-title: "COleControlContainer Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "COleControlContainer Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "COleControlContainer"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Benutzerdefinierte Steuerelemente [MFC], sites"
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
 caps.latest.revision: 21
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # COleControlContainer Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

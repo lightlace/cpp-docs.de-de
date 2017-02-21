@@ -1,13 +1,12 @@
 ---
-title: "Heap-Konstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Heap-Konstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_HEAPBADPTR"
@@ -18,7 +17,6 @@ f1_keywords:
   - "_HEAPEND"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_HEAPBADBEGIN-Konstanten"
   - "_HEAPBADNODE-Konstanten"
@@ -35,9 +33,10 @@ helpviewer_keywords:
   - "HEAPOK-Konstanten"
 ms.assetid: 3f751bb9-2dc4-486f-b5f5-9061c96d3754
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Heap-Konstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Eine STL-Auflistung mit der for-each-Klausel durchlaufen"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Eine STL-Auflistung mit der for-each-Klausel durchlaufen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "DTL-Auflistungen, Iteration über"
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
 caps.latest.revision: 14
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Eine STL-Auflistung mit der for-each-Klausel durchlaufen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

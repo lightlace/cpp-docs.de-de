@@ -1,13 +1,12 @@
 ---
-title: "_fdopen, _wfdopen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_fdopen, _wfdopen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fdopen"
@@ -32,7 +31,6 @@ f1_keywords:
   - "tfdopen"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fdopen-Funktion"
   - "_tfdopen-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "wfdopen-Funktion"
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
 caps.latest.revision: 23
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _fdopen, _wfdopen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

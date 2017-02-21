@@ -1,13 +1,12 @@
 ---
-title: "strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wcstoumax_l"
@@ -44,9 +43,10 @@ helpviewer_keywords:
   - "wcstoumax-Funktion"
 ms.assetid: 566769f9-495b-4508-b9c6-02217a578897
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "fgetpos"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fgetpos | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "fgetpos"
@@ -28,15 +27,15 @@ f1_keywords:
   - "fgetpos"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "fgetpos-Funktion"
   - "Streams, Dateipositionsindikator"
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # fgetpos
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

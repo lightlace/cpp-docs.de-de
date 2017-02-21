@@ -1,13 +1,12 @@
 ---
-title: "/LTCG (Code zur Verkn&#252;pfungszeit generieren)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/LTCG (Code zur Verkn&#252;pfungszeit generieren) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.LinkTimeCodeGeneration"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "-LTCG (Linkeroption)"
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
 caps.latest.revision: 22
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # /LTCG (Code zur Verkn&#252;pfungszeit generieren)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

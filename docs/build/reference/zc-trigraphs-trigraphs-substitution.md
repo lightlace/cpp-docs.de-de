@@ -1,13 +1,12 @@
 ---
-title: "/Zc:trigraphs (Trigraphen-Ersetzung)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Zc:trigraphs (Trigraphen-Ersetzung) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/Zc"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "-Zc (Compileroptionen) [C++]"
 ms.assetid: e3d6058f-400d-4966-a3aa-800cfdf69cbf
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # /Zc:trigraphs (Trigraphen-Ersetzung)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

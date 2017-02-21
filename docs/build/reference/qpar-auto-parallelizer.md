@@ -1,13 +1,12 @@
 ---
-title: "/Qpar (Automatische Parallelisierung)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Qpar (Automatische Parallelisierung) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /Qpar (Automatische Parallelisierung)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

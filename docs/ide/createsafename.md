@@ -1,13 +1,12 @@
 ---
-title: "CreateSafeName"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CreateSafeName | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CreateSafeName"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CreateSafeName-Methode"
 ms.assetid: 3a0dd4af-776d-4c25-aff9-4c539f173cb8
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CreateSafeName
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

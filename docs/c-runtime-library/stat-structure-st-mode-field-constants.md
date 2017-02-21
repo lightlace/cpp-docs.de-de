@@ -1,13 +1,12 @@
 ---
-title: "_stat Structure st_mode-Feldkonstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_stat Structure st_mode-Feldkonstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "S_IFCHR"
@@ -26,7 +25,6 @@ f1_keywords:
   - "_S_IFREG"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_S_IEXEC-Funktion"
   - "_S_IFCHR-Funktion"
@@ -47,9 +45,10 @@ helpviewer_keywords:
   - "stat-Struktur, Konstanten"
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _stat Structure st_mode-Feldkonstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

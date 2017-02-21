@@ -1,13 +1,12 @@
 ---
-title: "gmtime, _gmtime32, _gmtime64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "gmtime, _gmtime32, _gmtime64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_gmtime32"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_gmtime64"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_gmtime32-Funktion"
   - "_gmtime64-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Zeitstrukturkonvertierung"
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
 caps.latest.revision: 30
-caps.handback.revision: "30"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # gmtime, _gmtime32, _gmtime64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

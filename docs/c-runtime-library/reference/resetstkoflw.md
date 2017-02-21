@@ -1,13 +1,12 @@
 ---
-title: "_resetstkoflw"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_resetstkoflw | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_resetstkoflw"
@@ -28,7 +27,6 @@ f1_keywords:
   - "_resetstkoflw"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_resetstkoflw-Funktion"
   - "resetstkoflw-Funktion"
@@ -36,9 +34,10 @@ helpviewer_keywords:
   - "Stapel, Wiederherstellen"
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _resetstkoflw
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "hash_map::const_reverse_iterator (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "hash_map::const_reverse_iterator (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::hash_map::const_reverse_iterator"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "const_reverse_iterator-Member [STL/CLR]"
 ms.assetid: 0c31131a-6eb6-4b14-bab9-ebc8ff25f414
 caps.latest.revision: 14
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # hash_map::const_reverse_iterator (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

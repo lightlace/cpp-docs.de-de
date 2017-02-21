@@ -1,13 +1,12 @@
 ---
-title: "Regul&#228;re, dynamisch mit MFC verkn&#252;pfte DLLs"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Regul&#228;re, dynamisch mit MFC verkn&#252;pfte DLLs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Gemeinsam genutzte DLL-Versionen [C++]"
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Regul&#228;re, dynamisch mit MFC verkn&#252;pfte DLLs
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "AsyncBase::Close-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "AsyncBase::Close-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "async/Microsoft::WRL::AsyncBase::Close"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Close-Methode"
 ms.assetid: a52b1124-754b-4393-b491-64aae0c22f1c
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # AsyncBase::Close-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

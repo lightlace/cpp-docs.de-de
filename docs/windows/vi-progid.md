@@ -1,13 +1,12 @@
 ---
-title: "vi_progid"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "vi_progid | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "vc-attr.vi_progid"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "vi_progid attribute"
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # vi_progid
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

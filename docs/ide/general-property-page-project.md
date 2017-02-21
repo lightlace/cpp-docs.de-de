@@ -1,13 +1,12 @@
 ---
-title: "Eigenschaftenseite &quot;Allgemein&quot; (Projekt)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Eigenschaftenseite &quot;Allgemein&quot; (Projekt) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCConfiguration.IntermediateDirectory"
@@ -37,9 +36,10 @@ helpviewer_keywords:
   - "Unicode, Erstellen einer C++-Buildkonfiguration"
 ms.assetid: 593b383c-cd0f-4dcd-ad65-9ec9b4b19c45
 caps.latest.revision: 30
-caps.handback.revision: "30"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # Eigenschaftenseite &quot;Allgemein&quot; (Projekt)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

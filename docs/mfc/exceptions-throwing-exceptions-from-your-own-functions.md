@@ -1,13 +1,12 @@
 ---
-title: "Ausnahmen: Ausnahmen in eigenen Funktionen ausl&#246;sen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausnahmen: Ausnahmen in eigenen Funktionen ausl&#246;sen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Auslösen von Ausnahmen, from-Funktionen"
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ausnahmen: Ausnahmen in eigenen Funktionen ausl&#246;sen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

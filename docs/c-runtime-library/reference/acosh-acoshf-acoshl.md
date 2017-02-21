@@ -1,13 +1,12 @@
 ---
-title: "acosh, acoshf, acoshl"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "acosh, acoshf, acoshl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "acoshf"
@@ -41,9 +40,10 @@ helpviewer_keywords:
   - "Acoshl-Funktion"
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # acosh, acoshf, acoshl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

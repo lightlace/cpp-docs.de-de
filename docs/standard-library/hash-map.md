@@ -1,13 +1,12 @@
 ---
-title: "&lt;hash_map&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;hash_map&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.<hash_map>"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "hash_map-Header"
 ms.assetid: 0765708a-a668-42a2-9800-654c857bdcc2
 caps.latest.revision: 27
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # &lt;hash_map&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

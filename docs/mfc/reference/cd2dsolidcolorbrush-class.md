@@ -1,13 +1,12 @@
 ---
-title: "CD2DSolidColorBrush-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CD2DSolidColorBrush-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CD2DSolidColorBrush"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CD2DSolidColorBrush-Klasse"
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
 caps.latest.revision: 16
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # CD2DSolidColorBrush-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_vswprintf_s_l"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_vstprintf_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_vstprintf_s_l-Funktion"
   - "vsprintf_s_l-Funktion"
@@ -47,9 +45,10 @@ helpviewer_keywords:
   - "_vswprintf_s_l-Funktion"
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
 caps.latest.revision: 26
-caps.handback.revision: "24"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CTokenGroups Class"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CTokenGroups Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL::CTokenGroups"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CTokenGroups class"
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
 caps.latest.revision: 23
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CTokenGroups Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

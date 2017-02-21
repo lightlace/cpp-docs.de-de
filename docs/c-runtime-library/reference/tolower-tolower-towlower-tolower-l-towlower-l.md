@@ -1,13 +1,12 @@
 ---
-title: "tolower, _tolower, towlower, _tolower_l, _towlower_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "tolower, _tolower, towlower, _tolower_l, _towlower_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_tolower_l"
@@ -25,6 +24,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntdll.dll"
   - "ucrtbase.dll"
   - "api-ms-win-crt-string-l1-1-0.dll"
 apitype: "DLLExport"
@@ -35,7 +35,6 @@ f1_keywords:
   - "towlower"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tolower-Funktion"
   - "_tolower_l-Funktion"
@@ -53,9 +52,10 @@ helpviewer_keywords:
   - "towlower_l-Funktion"
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
 caps.latest.revision: 22
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # tolower, _tolower, towlower, _tolower_l, _towlower_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

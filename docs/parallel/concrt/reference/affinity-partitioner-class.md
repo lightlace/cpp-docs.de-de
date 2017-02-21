@@ -1,13 +1,12 @@
 ---
-title: "affinity_partitioner-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "affinity_partitioner-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ppl/concurrency::affinity_partitioner"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "affinity_partitioner-Klasse"
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
 caps.latest.revision: 9
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # affinity_partitioner-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

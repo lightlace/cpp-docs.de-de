@@ -1,29 +1,28 @@
 ---
-title: "Signalaktionskonstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Signalaktionskonstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "SIG_IGN"
   - "SIG_DFL"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "SIG_DFL-Konstante"
   - "SIG_IGN-Konstante"
   - "Signalaktionskonstante"
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Signalaktionskonstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

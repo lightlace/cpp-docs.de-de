@@ -1,13 +1,12 @@
 ---
-title: "CMFCColorBar Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCColorBar Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCColorBar"
@@ -44,9 +43,10 @@ helpviewer_keywords:
   - "CMFCColorBar::m_strOtherColor data member"
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
 caps.latest.revision: 35
-caps.handback.revision: "23"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # CMFCColorBar Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

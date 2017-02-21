@@ -1,13 +1,12 @@
 ---
-title: "CMFCMaskedEdit Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCMaskedEdit Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCMaskedEdit"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CMFCMaskedEdit constructor"
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
 caps.latest.revision: 30
-caps.handback.revision: "18"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # CMFCMaskedEdit Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_mktemp, _wmktemp"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mktemp, _wmktemp | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wmktemp"
@@ -33,7 +32,6 @@ f1_keywords:
   - "_mktemp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mktemp-Funktion"
   - "_tmktemp-Funktion"
@@ -45,9 +43,10 @@ helpviewer_keywords:
   - "wmktemp-Funktion"
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
 caps.latest.revision: 25
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # _mktemp, _wmktemp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CMFCTasksPaneTaskGroup Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCTasksPaneTaskGroup Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCTasksPaneTaskGroup"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCTasksPaneTaskGroup class"
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
 caps.latest.revision: 33
-caps.handback.revision: "21"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # CMFCTasksPaneTaskGroup Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

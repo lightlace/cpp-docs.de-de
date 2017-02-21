@@ -1,13 +1,12 @@
 ---
-title: "CXMLAccessor::GetXMLColumnData"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CXMLAccessor::GetXMLColumnData | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ATL.CXMLAccessor.GetXMLColumnData"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "GetXMLColumnData-Methode"
 ms.assetid: 719e8efe-8758-4af7-a855-0e44ea196546
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # CXMLAccessor::GetXMLColumnData
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "/SECTION (Abschnittsattribute festlegen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/SECTION (Abschnittsattribute festlegen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/section"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "-SECTION (Linkeroption)"
 ms.assetid: 92b69d81-e421-462e-b46f-7d0dff9b9d16
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /SECTION (Abschnittsattribute festlegen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

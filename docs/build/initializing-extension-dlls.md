@@ -1,13 +1,12 @@
 ---
-title: "Initialisieren von Erweiterungs-DLLs"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Initialisieren von Erweiterungs-DLLs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Initialisieren von DLLs"
 ms.assetid: 08ad0381-3808-4bea-a93c-c9ba62496543
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Initialisieren von Erweiterungs-DLLs
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

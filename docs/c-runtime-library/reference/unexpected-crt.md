@@ -1,13 +1,12 @@
 ---
-title: "unexpected (CRT)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "unexpected (CRT) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "unexpected"
@@ -27,14 +26,14 @@ f1_keywords:
   - "unexpected"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Unerwarteter Funktionstyp"
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # unexpected (CRT)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

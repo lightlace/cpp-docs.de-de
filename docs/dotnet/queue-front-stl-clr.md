@@ -1,13 +1,12 @@
 ---
-title: "queue::front (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "queue::front (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::queue::front"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "front-Member [STL/CLR]"
 ms.assetid: 9d7bb95f-5896-42f7-86fa-004a7a65cc94
 caps.latest.revision: 17
-caps.handback.revision: "15"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # queue::front (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ctime64_s"
@@ -41,7 +40,6 @@ f1_keywords:
   - "ctime32_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_wctime32_s-Funktion"
   - "ctime64_s-Funktion"
@@ -63,9 +61,10 @@ helpviewer_keywords:
   - "_tctime32_s-Funktion"
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
 caps.latest.revision: 27
-caps.handback.revision: "27"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "SafeInt-Bibliothek"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "SafeInt-Bibliothek | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "index-page "
 f1_keywords: 
   - "SafeInt"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "SafeInt-Bibliothek"
 ms.assetid: 5321e875-67c5-49d7-9650-85a876552d14
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # SafeInt-Bibliothek
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

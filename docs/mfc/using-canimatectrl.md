@@ -1,13 +1,12 @@
 ---
-title: "Verwenden von CAnimateCtrl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von CAnimateCtrl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CAnimateCtrl"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Steuerelemente [MFC], Animation"
 ms.assetid: 696c0805-bef0-4e2e-a9e7-b37b9215b7f0
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Verwenden von CAnimateCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

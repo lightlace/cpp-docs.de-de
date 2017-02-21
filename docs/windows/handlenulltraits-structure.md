@@ -1,13 +1,12 @@
 ---
-title: "HANDLENullTraits-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "HANDLENullTraits-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "HANDLENullTraits-Struktur"
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # HANDLENullTraits-Struktur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

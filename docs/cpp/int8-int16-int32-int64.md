@@ -1,13 +1,12 @@
 ---
-title: "__int8, __int16, __int32, __int64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__int8, __int16, __int32, __int64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "__int8_cpp"
@@ -29,9 +28,10 @@ helpviewer_keywords:
   - "Ganzzahlentypen [C++]"
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
 caps.latest.revision: 11
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # __int8, __int16, __int32, __int64
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

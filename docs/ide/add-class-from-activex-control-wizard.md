@@ -1,13 +1,12 @@
 ---
-title: "Hinzuf&#252;gen einer Klasse mit dem ActiveX-Steuerelement-Assistenten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hinzuf&#252;gen einer Klasse mit dem ActiveX-Steuerelement-Assistenten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.codewiz.class.axcontrol"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Assistent zum Hinzufügen von Klassen aus ActiveX-Steuerelementen [C++]"
 ms.assetid: 668d801c-5fb6-4176-9191-5c38995a4713
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Hinzuf&#252;gen einer Klasse mit dem ActiveX-Steuerelement-Assistenten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

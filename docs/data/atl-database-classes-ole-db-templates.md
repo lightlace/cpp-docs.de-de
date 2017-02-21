@@ -1,13 +1,12 @@
 ---
-title: "ATL-Datenbankklassen (OLE&#160;DB-Vorlagen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ATL-Datenbankklassen (OLE&#160;DB-Vorlagen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "OLE DB-Vorlagen [C++], ATL-Datenbankklassen"
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # ATL-Datenbankklassen (OLE&#160;DB-Vorlagen)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

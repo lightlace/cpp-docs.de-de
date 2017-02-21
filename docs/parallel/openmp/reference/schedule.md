@@ -1,13 +1,12 @@
 ---
-title: "schedule"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "schedule | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "schedule"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "schedule OpenMP clause"
 ms.assetid: 286f1fc3-6598-4837-b4c8-8b1fa3193965
 caps.latest.revision: 12
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # schedule
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

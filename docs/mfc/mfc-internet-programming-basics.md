@@ -1,13 +1,12 @@
 ---
-title: "Grundlagen der MFC-Internetprogrammierung"
-ms.custom: na
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Grundlagen der MFC-Internetprogrammierung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -27,9 +26,10 @@ helpviewer_keywords:
   - "WinInet-Klassen"
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
 caps.latest.revision: 18
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Grundlagen der MFC-Internetprogrammierung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

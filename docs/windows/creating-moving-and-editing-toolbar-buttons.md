@@ -1,13 +1,12 @@
 ---
-title: "Creating, Moving, and Editing Toolbar Buttons"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Creating, Moving, and Editing Toolbar Buttons | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "toolbar buttons (in Toolbar editor), creating"
 ms.assetid: d0f0c6c6-9d7e-42b5-a86a-7558127386e7
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Creating, Moving, and Editing Toolbar Buttons
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

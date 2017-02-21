@@ -1,13 +1,12 @@
 ---
-title: "&quot;FreeLibrary&quot; und &quot;AfxFreeLibrary&quot;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&quot;FreeLibrary&quot; und &quot;AfxFreeLibrary&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "FreeLibrary"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "DLLs [C++], Entladen"
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # &quot;FreeLibrary&quot; und &quot;AfxFreeLibrary&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

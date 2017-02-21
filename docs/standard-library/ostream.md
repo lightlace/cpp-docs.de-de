@@ -1,13 +1,12 @@
 ---
-title: "&lt;ostream&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;ostream&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.<ostream>"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "ostream-Header"
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
 caps.latest.revision: 20
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # &lt;ostream&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

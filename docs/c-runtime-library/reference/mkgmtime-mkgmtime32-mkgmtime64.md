@@ -1,13 +1,12 @@
 ---
-title: "_mkgmtime, _mkgmtime32, _mkgmtime64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mkgmtime, _mkgmtime32, _mkgmtime64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mkgmtime32"
@@ -35,7 +34,6 @@ f1_keywords:
   - "_mkgmtime"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "mkgmtime32-Funktion"
   - "time-Funktionen"
@@ -48,9 +46,10 @@ helpviewer_keywords:
   - "Uhrzeit, Konvertieren"
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _mkgmtime, _mkgmtime32, _mkgmtime64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "OLE-Standarddialogfeld-Klassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "OLE-Standarddialogfeld-Klassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.classes.ole"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "OLE (allgemeine Dialogfeldklassen) [C++]"
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # OLE-Standarddialogfeld-Klassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

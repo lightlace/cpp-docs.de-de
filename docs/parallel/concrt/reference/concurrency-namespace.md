@@ -1,13 +1,12 @@
 ---
-title: "concurrency-Namespace"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "concurrency-Namespace | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "concurrent_priority_queue/concurrency"
@@ -31,9 +30,10 @@ helpviewer_keywords:
   - "Concurrency-Namespace"
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
 caps.latest.revision: 37
-caps.handback.revision: "37"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # concurrency-Namespace
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

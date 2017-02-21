@@ -1,13 +1,12 @@
 ---
-title: "Lambda-Ausdruckssyntax"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Lambda-Ausdruckssyntax | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "VCF1 Lambda_CPP"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "lambda-Ausdrücke [C++], Syntax"
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
 caps.latest.revision: 26
-caps.handback.revision: "24"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Lambda-Ausdruckssyntax
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

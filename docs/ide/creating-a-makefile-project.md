@@ -1,13 +1,12 @@
 ---
-title: "Erstellen eines Makefile-Projekts"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen eines Makefile-Projekts | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.appwiz.makefile.project"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Projektdateien [C++], Makefile-Projekte"
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Erstellen eines Makefile-Projekts
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

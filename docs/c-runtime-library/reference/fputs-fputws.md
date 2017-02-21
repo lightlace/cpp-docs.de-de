@@ -1,13 +1,12 @@
 ---
-title: "fputs, fputws"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fputs, fputws | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "fputs"
@@ -31,7 +30,6 @@ f1_keywords:
   - "_fputts"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fputts-Funktion"
   - "fputs-Funktion"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "Streams, Schreiben von Zeichenfolgen zu"
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # fputs, fputws
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

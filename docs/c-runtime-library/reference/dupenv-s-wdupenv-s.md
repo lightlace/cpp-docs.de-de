@@ -1,13 +1,12 @@
 ---
-title: "_dupenv_s, _wdupenv_s"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_dupenv_s, _wdupenv_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_dupenv_s"
@@ -34,7 +33,6 @@ f1_keywords:
   - "_wdupenv_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_dupenv_s-Funktion"
   - "_tdupenv_s-Funktion"
@@ -45,9 +43,10 @@ helpviewer_keywords:
   - "wdupenv_s-Funktion"
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _dupenv_s, _wdupenv_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

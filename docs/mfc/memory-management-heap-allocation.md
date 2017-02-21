@@ -1,13 +1,12 @@
 ---
-title: "Speicherverwaltung: Heapbelegung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Speicherverwaltung: Heapbelegung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "new-Operator, Verwenden mit Debuggen (MFC)"
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Speicherverwaltung: Heapbelegung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

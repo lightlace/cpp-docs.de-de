@@ -1,13 +1,12 @@
 ---
-title: "END_ACCESSOR"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "END_ACCESSOR | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "END_ACCESSOR"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "END_ACCESSOR-Makro"
 ms.assetid: 26f74167-68c4-4909-a474-73dc7ebc9542
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # END_ACCESSOR
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

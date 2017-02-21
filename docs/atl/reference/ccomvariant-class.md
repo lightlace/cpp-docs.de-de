@@ -1,13 +1,12 @@
 ---
-title: "CComVariant Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CComVariant Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL.CComVariant"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "VARIANT macro, ATL"
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
 caps.latest.revision: 26
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # CComVariant Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "ATL und der freethreaded Marshaller"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ATL und der freethreaded Marshaller | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Threading [C++], Marshaler in ATL"
 ms.assetid: 2db88a13-2217-4ebc-aa7e-432d5da902eb
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ATL und der freethreaded Marshaller
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

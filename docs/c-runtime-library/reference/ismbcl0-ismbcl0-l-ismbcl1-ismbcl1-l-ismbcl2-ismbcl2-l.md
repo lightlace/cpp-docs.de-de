@@ -1,13 +1,12 @@
 ---
-title: "_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ismbcl2"
@@ -44,7 +43,6 @@ f1_keywords:
   - "ismbcl2_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbcl0-Funktion"
   - "_ismbcl0_l-Funktion"
@@ -60,9 +58,10 @@ helpviewer_keywords:
   - "ismbcl2_l-Funktion"
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

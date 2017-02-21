@@ -1,13 +1,12 @@
 ---
-title: "requestedit"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "requestedit | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "vc-attr.requestedit"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "requestedit attribute"
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # requestedit
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

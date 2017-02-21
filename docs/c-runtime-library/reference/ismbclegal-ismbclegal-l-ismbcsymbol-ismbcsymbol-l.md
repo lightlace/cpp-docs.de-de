@@ -1,13 +1,12 @@
 ---
-title: "_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ismbclegal_l"
@@ -38,7 +37,6 @@ f1_keywords:
   - "ismbclegal"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbclegal-Funktion"
   - "_ismbclegal_l-Funktion"
@@ -54,9 +52,10 @@ helpviewer_keywords:
   - "istlegal_l-Funktion"
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

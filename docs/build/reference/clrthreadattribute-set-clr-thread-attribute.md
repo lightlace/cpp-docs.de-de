@@ -1,13 +1,12 @@
 ---
-title: "/CLRTHREADATTRIBUTE (Festlegen des CLR-Threadattributs)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/CLRTHREADATTRIBUTE (Festlegen des CLR-Threadattributs) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.CLRThreadAttribute"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "-CLRTHREADATTRIBUTE (Linkeroption)"
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /CLRTHREADATTRIBUTE (Festlegen des CLR-Threadattributs)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

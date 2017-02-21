@@ -1,19 +1,17 @@
 ---
-title: "Datei-Lese-/Schreibzugriffkonstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Datei-Lese-/Schreibzugriffkonstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.constants.file"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Zugriffkonstanten für Datei-Lese-/Schreibvorgänge"
   - "Konstanten [C++], Dateiattribute"
@@ -22,9 +20,10 @@ helpviewer_keywords:
   - "Schreibzugriffkonstanten"
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Datei-Lese-/Schreibzugriffkonstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

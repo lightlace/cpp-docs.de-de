@@ -1,13 +1,12 @@
 ---
-title: "istream_iterator-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "istream_iterator-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "iterator/std::istream_iterator"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "istream_iterator-Klasse"
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
 caps.latest.revision: 18
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # istream_iterator-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

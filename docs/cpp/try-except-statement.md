@@ -1,13 +1,12 @@
 ---
-title: "try-except-Anweisung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "try-except-Anweisung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "_abnormal_termination_cpp"
@@ -36,9 +35,10 @@ helpviewer_keywords:
   - "try-except-Schlüsselwort [C++]"
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # try-except-Anweisung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

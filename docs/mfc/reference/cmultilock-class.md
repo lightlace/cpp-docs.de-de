@@ -1,13 +1,12 @@
 ---
-title: "CMultiLock Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMultiLock Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMultiLock"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "synchronization objects, Zugriffssteuerung"
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
 caps.latest.revision: 20
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CMultiLock Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

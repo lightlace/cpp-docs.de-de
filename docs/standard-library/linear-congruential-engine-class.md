@@ -1,13 +1,12 @@
 ---
-title: "linear_congruential_engine-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "linear_congruential_engine-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.tr1.linear_congruential_engine"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "linear_congruential_engine-Klasse"
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 caps.latest.revision: 21
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # linear_congruential_engine-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

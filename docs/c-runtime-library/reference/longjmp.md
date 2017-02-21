@@ -1,13 +1,12 @@
 ---
-title: "longjmp"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "longjmp | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "longjmp"
@@ -27,15 +26,15 @@ f1_keywords:
   - "longjmp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "longjmp-Funktion"
   - "Wiederherstellen der Stapelumgebung und des Ausführungsgebietschemas"
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # longjmp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

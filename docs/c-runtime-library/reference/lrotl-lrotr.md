@@ -1,13 +1,12 @@
 ---
-title: "_lrotl, _lrotr"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_lrotl, _lrotr | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_lrotl"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_lrotl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_lrotl-Funktion"
   - "_lrotr function"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Rotierende Bits"
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # _lrotl, _lrotr
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

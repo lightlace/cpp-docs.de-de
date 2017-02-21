@@ -1,16 +1,14 @@
 ---
-title: "Creating a Custom Brush (Image Editor for Icons)"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Creating a Custom Brush (Image Editor for Icons) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "colors [C++], brush"
@@ -21,9 +19,10 @@ helpviewer_keywords:
   - "custom brushes"
 ms.assetid: 750881aa-6f47-4de9-8ca6-a7a12afc6383
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Creating a Custom Brush (Image Editor for Icons)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

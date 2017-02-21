@@ -1,13 +1,12 @@
 ---
-title: "modulus-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "modulus-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "modulus"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "modulus-Struktur"
 ms.assetid: 86d342f7-b7b1-46a4-b0bb-6b7ae827369b
 caps.latest.revision: 20
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # modulus-Struktur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

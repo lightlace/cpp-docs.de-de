@@ -1,13 +1,12 @@
 ---
-title: "_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_strtoui64"
@@ -38,7 +37,6 @@ f1_keywords:
   - "wcstoui64_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_strtoui64-Funktion"
   - "_strtoui64_l-Funktion"
@@ -51,9 +49,10 @@ helpviewer_keywords:
   - "wcstoui64_l-Funktion"
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
 caps.latest.revision: 19
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

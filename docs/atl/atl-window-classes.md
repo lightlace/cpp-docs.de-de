@@ -1,13 +1,12 @@
 ---
-title: "ATL-Fensterklassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ATL-Fensterklassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Fenster [C++], Erstellen von übergeordneten Klassen"
 ms.assetid: 1d12b708-de3e-49d5-9e41-42fe4769fa62
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ATL-Fensterklassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

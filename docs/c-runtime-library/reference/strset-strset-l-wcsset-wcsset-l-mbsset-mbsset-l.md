@@ -1,13 +1,12 @@
 ---
-title: "_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wcsset"
@@ -47,7 +46,6 @@ f1_keywords:
   - "_tcsset"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fstrset-Funktion"
   - "_ftcsset-Funktion"
@@ -71,9 +69,10 @@ helpviewer_keywords:
   - "wcsset_l-Funktion"
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
 caps.latest.revision: 31
-caps.handback.revision: "29"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

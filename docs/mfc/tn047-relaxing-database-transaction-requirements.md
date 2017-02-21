@@ -1,13 +1,12 @@
 ---
-title: "TN047: Abschw&#228;chen der Anforderungen f&#252;r eine Datenbanktransaktion"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN047: Abschw&#228;chen der Anforderungen f&#252;r eine Datenbanktransaktion | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.data"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "TN047"
 ms.assetid: f93c51cf-a8c0-43d0-aa47-7bcb8333d693
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN047: Abschw&#228;chen der Anforderungen f&#252;r eine Datenbanktransaktion
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

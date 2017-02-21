@@ -1,13 +1,12 @@
 ---
-title: "Stile des Schiebeleisten-Steuerelements"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Stile des Schiebeleisten-Steuerelements | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "SBS_VERT"
@@ -34,9 +33,10 @@ helpviewer_keywords:
   - "Bildlaufleisten, Stile"
 ms.assetid: 8bcde35b-387d-49ae-bdd6-7cda9f5dae26
 caps.latest.revision: 12
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Stile des Schiebeleisten-Steuerelements
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

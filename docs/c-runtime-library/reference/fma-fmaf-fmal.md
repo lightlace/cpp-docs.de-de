@@ -1,14 +1,13 @@
 ---
-title: "FMA, Fmaf, fmal"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "FMA, Fmaf, fmal | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "fma"
@@ -35,7 +34,6 @@ f1_keywords:
   - "math/fmaf"
   - "math/fmal"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "fma-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Fmal-Funktion"
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # FMA, Fmaf, fmal
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

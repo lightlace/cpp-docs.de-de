@@ -1,13 +1,12 @@
 ---
-title: "Anforderungen f&#252;r die Erstellung von Windows Vista-Standardsteuerelementen"
-ms.custom: na
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Anforderungen f&#252;r die Erstellung von Windows Vista-Standardsteuerelementen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Allgemeine Steuerelemente (MFC), Build-Anforderungen"
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
 caps.latest.revision: 18
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Anforderungen f&#252;r die Erstellung von Windows Vista-Standardsteuerelementen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

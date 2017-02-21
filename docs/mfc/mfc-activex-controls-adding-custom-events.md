@@ -1,13 +1,12 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von benutzerdefinierten Ereignissen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von benutzerdefinierten Ereignissen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -26,9 +25,10 @@ helpviewer_keywords:
   - "MFC-ActiveX-Steuerelemente, Ereignisse"
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
 caps.latest.revision: 14
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von benutzerdefinierten Ereignissen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

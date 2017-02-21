@@ -1,13 +1,12 @@
 ---
-title: "_read"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_read | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_read"
@@ -28,7 +27,6 @@ f1_keywords:
   - "_read"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_read-Funktion"
   - "Daten [C++], Lesen"
@@ -38,9 +36,10 @@ helpviewer_keywords:
   - "Lesen von Daten [C++]"
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _read
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

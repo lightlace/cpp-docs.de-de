@@ -1,13 +1,12 @@
 ---
-title: "_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_snprintf_s"
@@ -41,7 +40,6 @@ f1_keywords:
   - "sntprintf_s_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_snprintf_s-Funktion"
   - "_snprintf_s_l-Funktion"
@@ -58,9 +56,10 @@ helpviewer_keywords:
   - "snwprintf_s_l-Funktion"
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
 caps.latest.revision: 32
-caps.handback.revision: "32"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_scalb"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_scalb | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_scalb"
@@ -29,16 +28,16 @@ f1_keywords:
   - "_scalb"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_scalb-Funktion"
   - "Exponentielle Berechnungen"
   - "scalb-Funktion"
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _scalb
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

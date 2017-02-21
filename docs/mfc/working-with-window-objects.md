@@ -1,13 +1,12 @@
 ---
-title: "Arbeiten mit Fensterobjekten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Arbeiten mit Fensterobjekten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Fensterobjekte, Arbeiten mit"
 ms.assetid: f73aa254-90e3-46a9-8e9b-d78b7054a331
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Arbeiten mit Fensterobjekten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Befehlszeilenwarnung D9025"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Befehlszeilenwarnung D9025 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "D9025"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "D9025"
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Befehlszeilenwarnung D9025
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

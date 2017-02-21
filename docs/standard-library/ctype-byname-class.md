@@ -1,13 +1,12 @@
 ---
-title: "ctype_byname-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ctype_byname-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "xlocale/std::ctype_byname"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "ctype_byname-Klasse"
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
 caps.latest.revision: 22
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # ctype_byname-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

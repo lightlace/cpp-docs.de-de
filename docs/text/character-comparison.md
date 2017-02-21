@@ -1,13 +1,12 @@
 ---
-title: "Zeichenvergleich"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Zeichenvergleich | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "MBCS [C++], Zeichenvergleich"
 ms.assetid: 18846e44-3e6e-40c4-9b42-3153fb15db20
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Zeichenvergleich
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

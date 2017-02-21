@@ -1,13 +1,12 @@
 ---
-title: "vector::erase (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "vector::erase (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::vector::erase"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "erase-Member [STL/CLR]"
 ms.assetid: 624905eb-83c0-499b-a07a-c10aebd7acc3
 caps.latest.revision: 17
-caps.handback.revision: "15"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # vector::erase (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

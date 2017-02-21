@@ -1,13 +1,12 @@
 ---
-title: "Design Principles for Collection and Enumerator Interfaces"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Design Principles for Collection and Enumerator Interfaces | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "enumerator interfaces"
 ms.assetid: ea19a39e-6333-41a1-be62-5435c236640e
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Design Principles for Collection and Enumerator Interfaces
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

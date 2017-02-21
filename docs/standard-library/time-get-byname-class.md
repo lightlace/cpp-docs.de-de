@@ -1,13 +1,12 @@
 ---
-title: "time_get_byname-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "time_get_byname-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.time_get_byname"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "time_get_byname-Klasse"
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
 caps.latest.revision: 25
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # time_get_byname-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

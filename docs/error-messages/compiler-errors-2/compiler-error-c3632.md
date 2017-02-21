@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3632"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3632 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C3632"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3632"
 ms.assetid: a04e3217-f5a1-4461-a1db-d69fd096d468
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerfehler C3632
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

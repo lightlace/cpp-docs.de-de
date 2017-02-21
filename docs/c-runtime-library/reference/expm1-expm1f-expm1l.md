@@ -1,13 +1,12 @@
 ---
-title: "expm1, expm1f, expm1l"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "expm1, expm1f, expm1l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "expm1l"
@@ -38,9 +37,10 @@ helpviewer_keywords:
   - "expm1l-Funktion"
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # expm1, expm1f, expm1l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

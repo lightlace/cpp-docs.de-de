@@ -1,13 +1,12 @@
 ---
-title: "_searchenv, _wsearchenv"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_searchenv, _wsearchenv | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_searchenv"
@@ -33,7 +32,6 @@ f1_keywords:
   - "searchenv"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_searchenv-Funktion"
   - "_tsearchenv-Funktion"
@@ -46,9 +44,10 @@ helpviewer_keywords:
   - "wsearchenv-Funktion"
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
 caps.latest.revision: 33
-caps.handback.revision: "31"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # _searchenv, _wsearchenv
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

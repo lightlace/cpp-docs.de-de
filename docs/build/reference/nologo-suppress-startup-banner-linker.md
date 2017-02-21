@@ -1,13 +1,12 @@
 ---
-title: "/NOLOGO (Startbanner unterdr&#252;cken) (Linker)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/NOLOGO (Startbanner unterdr&#252;cken) (Linker) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.SuppressStartupBanner"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "Versionsnummern, Verhindern der Linkeranzeige"
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /NOLOGO (Startbanner unterdr&#252;cken) (Linker)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

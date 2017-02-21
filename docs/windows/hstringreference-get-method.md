@@ -1,13 +1,12 @@
 ---
-title: "HStringReference::Get-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "HStringReference::Get-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: ee5f4d6e-5628-4fcf-af2d-d63d70c1ec13
 caps.latest.revision: 2
-caps.handback.revision: "2"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # HStringReference::Get-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

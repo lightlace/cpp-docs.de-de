@@ -1,13 +1,12 @@
 ---
-title: "_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wcsnicmp"
@@ -49,7 +48,6 @@ f1_keywords:
   - "string/_strnicmp_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcsncicmp-Funktion"
   - "_ftcsnicmp-Funktion"
@@ -77,9 +75,10 @@ helpviewer_keywords:
   - "wcsnicmp_l-Funktion"
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
 caps.latest.revision: 24
-caps.handback.revision: "24"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

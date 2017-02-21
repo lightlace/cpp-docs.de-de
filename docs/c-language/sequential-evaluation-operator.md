@@ -1,26 +1,25 @@
 ---
-title: "Operator f&#252;r sequenzielle Auswertungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Operator f&#252;r sequenzielle Auswertungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Kommaoperator"
   - "Operatoren [C++], sequential-evaluation"
   - "sequential-evaluation-Operator"
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Operator f&#252;r sequenzielle Auswertungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

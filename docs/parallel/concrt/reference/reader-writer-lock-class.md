@@ -1,13 +1,12 @@
 ---
-title: "reader_writer_lock-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "reader_writer_lock-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "concrt/concurrency::reader_writer_lock"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "reader_writer_lock-Klasse"
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
 caps.latest.revision: 21
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # reader_writer_lock-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

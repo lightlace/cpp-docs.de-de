@@ -1,13 +1,12 @@
 ---
-title: "CDBPropSet::AddProperty"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDBPropSet::AddProperty | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CDBPropSet::AddProperty"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "AddProperty-Methode"
 ms.assetid: dc9539d3-1ee4-40f3-9281-2068e6d65e93
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # CDBPropSet::AddProperty
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

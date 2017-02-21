@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2587"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2587 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2587"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2587"
 ms.assetid: 7637a2c7-35d4-4b5a-a8f2-515a7bda98fd
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Compilerfehler C2587
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

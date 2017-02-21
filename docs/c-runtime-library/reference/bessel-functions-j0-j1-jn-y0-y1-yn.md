@@ -1,13 +1,12 @@
 ---
-title: "Bessel-Funktionen: _j0, _j1, _jn, _y0, _y1, _yn"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Bessel-Funktionen: _j0, _j1, _jn, _y0, _y1, _yn | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_j0"
@@ -39,7 +38,6 @@ f1_keywords:
   - "_yn"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Bessel-Funktionen"
   - "_j0-Funktion"
@@ -50,9 +48,10 @@ helpviewer_keywords:
   - "_yn-Funktion"
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Bessel-Funktionen: _j0, _j1, _jn, _y0, _y1, _yn
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

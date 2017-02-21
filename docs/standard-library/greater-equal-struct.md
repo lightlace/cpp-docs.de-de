@@ -1,13 +1,12 @@
 ---
-title: "greater_equal-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "greater_equal-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.greater_equal"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "greater_equal-Funktion"
 ms.assetid: a8ba911b-7af8-4653-b972-d8618f4df7d5
 caps.latest.revision: 22
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # greater_equal-Struktur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

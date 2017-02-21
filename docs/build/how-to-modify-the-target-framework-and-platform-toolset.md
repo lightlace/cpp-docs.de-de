@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: &#196;ndern des Zielframeworks und des Plattformtoolsets"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: &#196;ndern des Zielframeworks und des Plattformtoolsets | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 f1_keywords: 
   - "msbuild.cpp.howto.modifytargetframeworkandplatformtoolset"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "MSBuild (C++), Gewusst wie: Ändern des Zielframeworks und des Plattformtoolsets"
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
 caps.latest.revision: 32
-caps.handback.revision: "32"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # Gewusst wie: &#196;ndern des Zielframeworks und des Plattformtoolsets
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

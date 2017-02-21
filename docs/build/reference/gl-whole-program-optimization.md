@@ -1,13 +1,12 @@
 ---
-title: "/GL (Optimierung des ganzen Programms)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/GL (Optimierung des ganzen Programms) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/gl"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Optimierungen ganzer Programme und C++-Compiler"
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /GL (Optimierung des ganzen Programms)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

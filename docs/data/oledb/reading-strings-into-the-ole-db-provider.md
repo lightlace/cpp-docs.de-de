@@ -1,13 +1,12 @@
 ---
-title: "Einlesen von Zeichenfolgen in den OLE&#160;DB-Anbieter"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Einlesen von Zeichenfolgen in den OLE&#160;DB-Anbieter | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "OLE DB-Anbieter, Einlesen von Zeichenfolgen in"
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Einlesen von Zeichenfolgen in den OLE&#160;DB-Anbieter
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

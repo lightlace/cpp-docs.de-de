@@ -1,13 +1,12 @@
 ---
-title: "Zuordnen von Meldungen zu Funktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Zuordnen von Meldungen zu Funktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.codewiz.mapping.msg.function"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Windows-Nachrichten [C++], Hinzufügen von Meldungshandlern"
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Zuordnen von Meldungen zu Funktionen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

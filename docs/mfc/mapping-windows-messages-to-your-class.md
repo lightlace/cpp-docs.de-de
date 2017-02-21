@@ -1,13 +1,12 @@
 ---
-title: "Zuordnen von Windows-Meldungen zu einer Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Zuordnen von Windows-Meldungen zu einer Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Windows-Nachrichten [C++], Zuordnen in Dialogklassen"
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Zuordnen von Windows-Meldungen zu einer Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

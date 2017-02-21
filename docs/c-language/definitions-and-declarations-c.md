@@ -1,24 +1,23 @@
 ---
-title: "Definitionen und Deklarationen (C)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Definitionen und Deklarationen (C) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Exportfunktionen"
 ms.assetid: d150395a-89d4-4298-9ac4-08f84fe1261c
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Definitionen und Deklarationen (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CD2DRadialGradientBrush Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CD2DRadialGradientBrush Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CD2DRadialGradientBrush"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CD2DRadialGradientBrush-Klasse"
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
 caps.latest.revision: 17
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # CD2DRadialGradientBrush Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

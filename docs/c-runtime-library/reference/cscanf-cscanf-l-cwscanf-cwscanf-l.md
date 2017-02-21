@@ -1,13 +1,12 @@
 ---
-title: "_cscanf, _cscanf_l, _cwscanf, _cwscanf_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_cscanf, _cscanf_l, _cwscanf, _cwscanf_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_cscanf_l"
@@ -40,7 +39,6 @@ f1_keywords:
   - "_tcscanf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_cscanf-Funktion"
   - "_cscanf_l-Funktion"
@@ -57,9 +55,10 @@ helpviewer_keywords:
   - "tcscanf_l-Funktion"
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
 caps.latest.revision: 23
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

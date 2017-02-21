@@ -1,13 +1,12 @@
 ---
-title: "IsNaN, _isnan, _isnanf"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IsNaN, _isnan, _isnanf | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_isnan"
@@ -35,7 +34,6 @@ f1_keywords:
   - "_isnanf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "NAN ("Not a Number", keine Zahl)"
   - "_isnan-Funktion"
@@ -44,9 +42,10 @@ helpviewer_keywords:
   - "isnan-Funktion"
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # IsNaN, _isnan, _isnanf
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

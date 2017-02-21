@@ -1,13 +1,12 @@
 ---
-title: "Empfangen von Benachrichtigungen von Standardsteuerelementen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Empfangen von Benachrichtigungen von Standardsteuerelementen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ON_NOTIFY"
@@ -25,9 +24,10 @@ helpviewer_keywords:
   - "WM_NOTIFY-Meldung"
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Empfangen von Benachrichtigungen von Standardsteuerelementen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

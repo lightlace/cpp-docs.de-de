@@ -1,13 +1,12 @@
 ---
-title: "_fpieee_flt"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_fpieee_flt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fpieee_flt"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_fpieee_flt"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fpieee_flt-Funktion"
   - "Ausnahmebehandlung, Gleitkomma"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "fpieee_flt-Funktion"
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _fpieee_flt
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

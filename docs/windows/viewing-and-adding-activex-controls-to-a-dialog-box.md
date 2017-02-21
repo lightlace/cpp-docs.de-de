@@ -1,18 +1,16 @@
 ---
-title: "Viewing and Adding ActiveX Controls to a Dialog Box"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Viewing and Adding ActiveX Controls to a Dialog Box | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.controls.activex"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "dialog boxes [C++], adding ActiveX controls"
@@ -20,9 +18,10 @@ helpviewer_keywords:
   - "ActiveX controls [C++], adding to dialog boxes"
 ms.assetid: e1c2e3ae-e1b0-40d3-9766-623007073856
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Viewing and Adding ActiveX Controls to a Dialog Box
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

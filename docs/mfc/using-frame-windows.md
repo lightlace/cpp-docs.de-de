@@ -1,13 +1,12 @@
 ---
-title: "Verwenden von Rahmenfenstern"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von Rahmenfenstern | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Fenster [C++], Rahmenfenster"
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Verwenden von Rahmenfenstern
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

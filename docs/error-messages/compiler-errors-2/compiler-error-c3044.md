@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3044"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3044 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C3044"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3044"
 ms.assetid: 9f3e25b2-4676-49ab-97bf-6c88cd0fa377
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Compilerfehler C3044
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

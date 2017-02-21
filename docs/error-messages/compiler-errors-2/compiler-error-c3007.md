@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3007"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3007 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C3007"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3007"
 ms.assetid: e415ef42-bdc9-4f32-8198-5e25b289a089
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Compilerfehler C3007
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

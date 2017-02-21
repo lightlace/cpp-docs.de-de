@@ -1,13 +1,12 @@
 ---
-title: "Seiteneffekte bei Abh&#228;ngigkeiten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Seiteneffekte bei Abh&#228;ngigkeiten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "NMAKE (Programm), abhängige Dateien"
 ms.assetid: d4e8db25-fdc0-4d73-81ec-1538f2e1b3e8
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Seiteneffekte bei Abh&#228;ngigkeiten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

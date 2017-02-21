@@ -1,13 +1,12 @@
 ---
-title: "Methoden zum Erstellen von QuickInfos"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Methoden zum Erstellen von QuickInfos | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "QuickInfos [C++], QuickInfo-Steuerelemente"
 ms.assetid: b015e9f4-ddfb-49a4-a5a6-fa2d45e4d328
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Methoden zum Erstellen von QuickInfos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

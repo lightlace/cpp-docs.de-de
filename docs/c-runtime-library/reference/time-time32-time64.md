@@ -1,13 +1,12 @@
 ---
-title: "time, _time32, _time64"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "time, _time32, _time64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "time"
@@ -35,7 +34,6 @@ f1_keywords:
   - "_time32"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "time32-Funktion"
   - "_time32-Funktion"
@@ -45,9 +43,10 @@ helpviewer_keywords:
   - "time64-Funktion"
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
 caps.latest.revision: 22
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # time, _time32, _time64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

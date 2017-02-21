@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Kapseln einer systemeigenen Klasse zur Verwendung in C#"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Kapseln einer systemeigenen Klasse zur Verwendung in C# | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Systemeigener Code [C++], Visual C# und"
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Gewusst wie: Kapseln einer systemeigenen Klasse zur Verwendung in C#
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

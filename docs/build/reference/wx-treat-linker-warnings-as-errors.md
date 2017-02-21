@@ -1,13 +1,12 @@
 ---
-title: "/WX (Linkerwarnungen als Fehler behandeln)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/WX (Linkerwarnungen als Fehler behandeln) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/WX"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-WX (Linkeroption)"
 ms.assetid: e4ba97c7-93f7-43ae-a4bb-d866790926c9
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /WX (Linkerwarnungen als Fehler behandeln)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

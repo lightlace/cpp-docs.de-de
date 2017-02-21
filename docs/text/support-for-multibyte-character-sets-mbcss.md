@@ -1,13 +1,12 @@
 ---
-title: "Unterst&#252;tzung von Mehrbyte-Zeichens&#228;tzen (MBCS)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Unterst&#252;tzung von Mehrbyte-Zeichens&#228;tzen (MBCS) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_mbcs"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Mehrbytezeichen [C++]"
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Unterst&#252;tzung von Mehrbyte-Zeichens&#228;tzen (MBCS)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

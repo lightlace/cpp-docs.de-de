@@ -1,13 +1,12 @@
 ---
-title: "TN021: Befehls- und Meldungsrouting"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN021: Befehls- und Meldungsrouting | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.routing"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Windows-Nachrichten [C++], Routing"
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # TN021: Befehls- und Meldungsrouting
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

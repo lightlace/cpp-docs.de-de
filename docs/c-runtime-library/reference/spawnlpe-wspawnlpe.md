@@ -1,13 +1,12 @@
 ---
-title: "_spawnlpe, _wspawnlpe"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_spawnlpe, _wspawnlpe | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_spawnlpe"
@@ -32,7 +31,6 @@ f1_keywords:
   - "wspawnlpe"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_spawnlpe-Funktion"
   - "_wspawnlpe-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "wspawnlpe-Funktion"
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _spawnlpe, _wspawnlpe
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CreateClassFactory-Funktion"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CreateClassFactory-Funktion | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "module/Microsoft::WRL::Details::CreateClassFactory"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CreateClassFactory-Funktion"
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
 caps.latest.revision: 2
-caps.handback.revision: "2"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # CreateClassFactory-Funktion
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "char_traits&lt;char16_t&gt;-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "char_traits&lt;char16_t&gt;-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::char_traits<char16_t>"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "char_traits<char16_t>-Klasse"
 ms.assetid: 5daf3b62-dd6e-451f-b189-0350a04ff966
 caps.latest.revision: 15
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # char_traits&lt;char16_t&gt;-Struktur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

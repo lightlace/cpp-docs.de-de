@@ -1,19 +1,17 @@
 ---
-title: "Gebietsschema-Namen, Sprachen und Zeichenfolgen f&#252;r L&#228;nder und Regionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gebietsschema-Namen, Sprachen und Zeichenfolgen f&#252;r L&#228;nder und Regionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.strings"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Sprache/Land-Zeichenfolgen"
   - "Lokalisierung, Gebietsschema"
@@ -22,9 +20,10 @@ helpviewer_keywords:
   - "Sprachezeichenfolgen"
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Gebietsschema-Namen, Sprachen und Zeichenfolgen f&#252;r L&#228;nder und Regionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

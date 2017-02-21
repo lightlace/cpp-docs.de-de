@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnungs C4001 Through C4099"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compiler-Warnungen C4000 &#252;ber C4199 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4000"
@@ -102,9 +101,10 @@ dev_langs:
   - "C++"
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Compilerwarnungs C4001 Through C4099
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

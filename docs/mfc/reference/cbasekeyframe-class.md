@@ -1,13 +1,12 @@
 ---
-title: "CBaseKeyFrame-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CBaseKeyFrame-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CBaseKeyFrame"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CBaseKeyFrame-Klasse"
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
 caps.latest.revision: 17
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # CBaseKeyFrame-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

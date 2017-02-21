@@ -1,13 +1,12 @@
 ---
-title: "Ressourcencompiler: Schwerwiegender Fehler RC1105"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ressourcencompiler: Schwerwiegender Fehler RC1105 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "RC1105"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "RC1105"
 ms.assetid: 80ce18e7-44ee-4844-bede-321fe0844d56
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ressourcencompiler: Schwerwiegender Fehler RC1105
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

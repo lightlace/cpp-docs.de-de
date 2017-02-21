@@ -1,13 +1,12 @@
 ---
-title: "ftell, _ftelli64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ftell, _ftelli64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ftelli64"
@@ -30,7 +29,6 @@ f1_keywords:
   - "ftell"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftelli64-Funktion"
   - "Dateizeiger [C++]"
@@ -39,9 +37,10 @@ helpviewer_keywords:
   - "ftelli64-Funktion"
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
 caps.latest.revision: 19
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # ftell, _ftelli64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

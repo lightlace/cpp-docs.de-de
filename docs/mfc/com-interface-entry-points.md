@@ -1,13 +1,12 @@
 ---
-title: "Einstiegspunkte f&#252;r COM-Schnittstellen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Einstiegspunkte f&#252;r COM-Schnittstellen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Zustandsverwaltung, OLE/COM-Schnittstellen"
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Einstiegspunkte f&#252;r COM-Schnittstellen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

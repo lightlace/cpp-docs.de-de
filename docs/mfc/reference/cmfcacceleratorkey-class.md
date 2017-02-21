@@ -1,13 +1,12 @@
 ---
-title: "CMFCAcceleratorKey Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCAcceleratorKey Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCAcceleratorKey"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCAcceleratorKey class"
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
 caps.latest.revision: 36
-caps.handback.revision: "24"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 38
 ---
 # CMFCAcceleratorKey Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

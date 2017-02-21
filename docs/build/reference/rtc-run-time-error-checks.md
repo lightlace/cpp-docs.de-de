@@ -1,13 +1,12 @@
 ---
-title: "/RTC (Laufzeitfehler&#252;berpr&#252;fungen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/RTC (Laufzeitfehler&#252;berpr&#252;fungen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/rtc"
@@ -36,9 +35,10 @@ helpviewer_keywords:
   - "Laufzeitfehler, Laufzeitüberprüfungen"
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # /RTC (Laufzeitfehler&#252;berpr&#252;fungen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "TN065: Unterst&#252;tzung f&#252;r duale Schnittstellen f&#252;r OLE-Automatisierungsserver"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN065: Unterst&#252;tzung f&#252;r duale Schnittstellen f&#252;r OLE-Automatisierungsserver | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.ole"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "TN065"
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # TN065: Unterst&#252;tzung f&#252;r duale Schnittstellen f&#252;r OLE-Automatisierungsserver
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

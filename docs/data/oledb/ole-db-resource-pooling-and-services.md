@@ -1,13 +1,12 @@
 ---
-title: "OLE&#160;DB-Ressourcenpooling und -Dienste"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "OLE&#160;DB-Ressourcenpooling und -Dienste | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Serviceanbieter [OLE DB]"
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # OLE&#160;DB-Ressourcenpooling und -Dienste
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CAtlServiceModuleT::Run Function"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CAtlServiceModuleT::Run Function | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CServiceModule::Run"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "ATL-Dienste, Sicherheit"
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
 caps.latest.revision: 12
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # CAtlServiceModuleT::Run Function
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

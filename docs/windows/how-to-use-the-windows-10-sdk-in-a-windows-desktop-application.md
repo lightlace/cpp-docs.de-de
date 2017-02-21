@@ -1,21 +1,21 @@
 ---
-title: "Gewusst wie: Verwenden des Windows&#160;10-SDKs in einer Windows-Desktopanwendung"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Verwenden des Windows&#160;10-SDKs in einer Windows-Desktopanwendung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 dev_langs: 
   - "C++"
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Gewusst wie: Verwenden des Windows&#160;10-SDKs in einer Windows-Desktopanwendung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_strdec, _wcsdec, _mbsdec, _mbsdec_l"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_strdec, _wcsdec, _mbsdec, _mbsdec_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wcsdec"
@@ -38,7 +37,6 @@ f1_keywords:
   - "_wcsdec"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsdec-Funktion"
   - "_mbsdec_l-Funktion"
@@ -52,9 +50,10 @@ helpviewer_keywords:
   - "wcsdec-Funktion"
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
 caps.latest.revision: 24
-caps.handback.revision: "24"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _strdec, _wcsdec, _mbsdec, _mbsdec_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

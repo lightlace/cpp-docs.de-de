@@ -1,13 +1,12 @@
 ---
-title: "&lt; Stdexcept &gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt; Stdexcept &gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.<stdexcept>"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "stdexcept-Header"
 ms.assetid: 495c10b1-1e60-4514-9f8f-7fda11a2f522
 caps.latest.revision: 19
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # &lt; Stdexcept &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

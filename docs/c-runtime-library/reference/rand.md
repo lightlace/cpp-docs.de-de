@@ -1,13 +1,12 @@
 ---
-title: "rand"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "rand | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "rand"
@@ -28,7 +27,6 @@ f1_keywords:
   - "rand"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Generieren von pseudozufälligen Zahlen"
   - "Zahlen, Generieren von pseudozufälligen"
@@ -38,9 +36,10 @@ helpviewer_keywords:
   - "Zufallszahlen, Generieren"
 ms.assetid: 75d9df25-7aaf-4a88-b940-2775559634e8
 caps.latest.revision: 20
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # rand
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

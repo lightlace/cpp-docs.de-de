@@ -1,13 +1,12 @@
 ---
-title: "&#220;berladungsaufl&#246;sung von Funktionsvorlagenaufrufen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#220;berladungsaufl&#246;sung von Funktionsvorlagenaufrufen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Auflösung von Funktionsvorlagenüberladungen"
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
 caps.latest.revision: 11
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # &#220;berladungsaufl&#246;sung von Funktionsvorlagenaufrufen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

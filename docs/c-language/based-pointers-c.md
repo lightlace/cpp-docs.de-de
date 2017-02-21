@@ -1,17 +1,15 @@
 ---
-title: "Basierte Zeiger (C)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Basierte Zeiger (C) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__based-Schlüsselwort [C]"
   - "Basierende Adressierung"
@@ -19,9 +17,10 @@ helpviewer_keywords:
   - "Zeiger, Basiert"
 ms.assetid: b5446920-89e0-4e2f-91f3-1f2a769a08e8
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Basierte Zeiger (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

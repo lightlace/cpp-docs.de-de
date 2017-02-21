@@ -1,13 +1,12 @@
 ---
-title: "concurrent_priority_queue-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "concurrent_priority_queue-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "concurrent_priority_queue/concurrency::concurrent_priority_queue"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "concurrent_priority_queue-Klasse"
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
 caps.latest.revision: 9
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # concurrent_priority_queue-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

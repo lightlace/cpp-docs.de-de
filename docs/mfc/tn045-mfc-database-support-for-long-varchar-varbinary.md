@@ -1,13 +1,12 @@
 ---
-title: "TN045: MFC- und Datenbankunterst&#252;tzung f&#252;r LONGVARCHAR und LONGVARBINARY"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN045: MFC- und Datenbankunterst&#252;tzung f&#252;r LONGVARCHAR und LONGVARBINARY | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.data"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Varchar-Datentyp"
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN045: MFC- und Datenbankunterst&#252;tzung f&#252;r LONGVARCHAR und LONGVARBINARY
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

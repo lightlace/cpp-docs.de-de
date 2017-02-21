@@ -1,13 +1,12 @@
 ---
-title: "/Zc:rvalueCast (Typkonvertierungsregeln erzwingen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Zc:rvalueCast (Typkonvertierungsregeln erzwingen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "rvaluecast"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "-Zc (Compileroptionen) [C++]"
 ms.assetid: 7825277d-e565-4c48-b0fb-76ac0b0c6e38
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /Zc:rvalueCast (Typkonvertierungsregeln erzwingen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

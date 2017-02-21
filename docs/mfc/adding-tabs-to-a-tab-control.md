@@ -1,13 +1,12 @@
 ---
-title: "Hinzuf&#252;gen von Registerkarten zum Registersteuerelement"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hinzuf&#252;gen von Registerkarten zum Registersteuerelement | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Registerkarten, Hinzufügen zur CTabCtrl-Klasse"
 ms.assetid: 7f3d9340-e3c7-4c71-9912-be57534ecc78
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Hinzuf&#252;gen von Registerkarten zum Registersteuerelement
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Systeminterne Funktionen „_interlockedbittestandreset“"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Systeminterne Funktionen „_interlockedbittestandreset“ | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_interlockedbittestandreset_rel"
@@ -29,9 +28,10 @@ helpviewer_keywords:
   - "Lock_btr-Anweisung"
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Systeminterne Funktionen „_interlockedbittestandreset“
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

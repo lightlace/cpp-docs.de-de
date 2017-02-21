@@ -1,13 +1,12 @@
 ---
-title: "Argument&#252;bergabe und Benennungskonventionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Argument&#252;bergabe und Benennungskonventionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "C++"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "thiscall-Schlüsselwort [C++]"
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Argument&#252;bergabe und Benennungskonventionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

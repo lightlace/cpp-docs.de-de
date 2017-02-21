@@ -1,13 +1,12 @@
 ---
-title: "strupr, wcsupr"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strupr, wcsupr | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "strupr"
@@ -29,15 +28,15 @@ f1_keywords:
   - "wcsupr"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "strupr-Funktion"
   - "wcsupr-Funktion"
 ms.assetid: 17dfe1cd-3b09-4702-9f89-2207f44953e6
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # strupr, wcsupr
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

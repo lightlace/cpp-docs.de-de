@@ -1,13 +1,12 @@
 ---
-title: "shuffle_order_engine-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "shuffle_order_engine-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "shuffle_order_engine"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "shuffle_order_engine-Klasse"
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
 caps.latest.revision: 17
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # shuffle_order_engine-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

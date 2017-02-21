@@ -1,13 +1,12 @@
 ---
-title: "Signalkonstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Signalkonstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "SIGTERM"
@@ -18,7 +17,6 @@ f1_keywords:
   - "SIGSEGV"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "SIGABRT-Konstante"
   - "SIGFPE-Konstante"
@@ -29,9 +27,10 @@ helpviewer_keywords:
   - "SIGTERM-Konstante"
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Signalkonstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Kumulative Abh&#228;ngigkeiten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Kumulative Abh&#228;ngigkeiten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Abhängigkeiten"
 ms.assetid: fa6dd777-80b8-437d-87a7-aec0ed818a49
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Kumulative Abh&#228;ngigkeiten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

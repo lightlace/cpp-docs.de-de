@@ -1,28 +1,27 @@
 ---
-title: "make_public"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "make_public | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc-pragma.make_public"
   - "make_public_CPP"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "make_public-Pragma"
   - "Pragmas, make_public"
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # make_public
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

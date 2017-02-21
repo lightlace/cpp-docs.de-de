@@ -1,13 +1,12 @@
 ---
-title: "numeric_limits-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "numeric_limits-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::numeric_limits"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "numeric_limits-Klasse"
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 caps.latest.revision: 26
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # numeric_limits-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

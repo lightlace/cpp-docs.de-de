@@ -1,14 +1,13 @@
 ---
-title: "Is_literal_type-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Is_literal_type-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "is_literal_type"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "is_literal_type"
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
 caps.latest.revision: 12
-caps.handback.revision: "2"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Is_literal_type-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

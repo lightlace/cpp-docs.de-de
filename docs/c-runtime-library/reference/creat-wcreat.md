@@ -1,13 +1,12 @@
 ---
-title: "_creat, _wcreat"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_creat, _wcreat | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_creat"
@@ -33,7 +32,6 @@ f1_keywords:
   - "_tcreat"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "wcreat-Funktion"
   - "_wcreat-Funktion"
@@ -44,9 +42,10 @@ helpviewer_keywords:
   - "_tcreat-Funktion"
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 caps.latest.revision: 21
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _creat, _wcreat
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Programmieren mit CComBSTR (ATL)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Programmieren mit CComBSTR (ATL) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Unicode, Verwenden von CComBSTR [ATL]"
 ms.assetid: d3bd0851-d132-4be9-9c4c-6ccba17acb2b
 caps.latest.revision: 11
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Programmieren mit CComBSTR (ATL)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

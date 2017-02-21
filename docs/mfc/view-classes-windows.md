@@ -1,13 +1,12 @@
 ---
-title: "Ansichtsklassen (Windows)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ansichtsklassen (Windows) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.classes.view"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Ansichtsklassen, Windows"
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ansichtsklassen (Windows)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_mm_cvtss_si64x"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mm_cvtss_si64x | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_mm_cvtss_si64x"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "_mm_cvtss_si64x intrinsic"
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
 caps.latest.revision: 13
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _mm_cvtss_si64x
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Hosten eines Windows Form-Benutzersteuerelements in einem MFC-Dialogfeld"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hosten eines Windows Form-Benutzersteuerelements in einem MFC-Dialogfeld | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Windows Forms [C++], MFC-Unterstützung"
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Hosten eines Windows Form-Benutzersteuerelements in einem MFC-Dialogfeld
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

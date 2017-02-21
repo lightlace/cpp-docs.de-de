@@ -1,14 +1,13 @@
 ---
-title: "timespec_get, _timespec32_get, _timespec64_get"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Timespec_get, _timespec32_get, _timespec64_get1 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "timespec_get"
@@ -38,7 +37,6 @@ f1_keywords:
   - "_timespec32"
   - "_timespec64"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "timespec_get-Funktion"
@@ -46,9 +44,10 @@ helpviewer_keywords:
   - "_timespec64_get-Funktion"
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # timespec_get, _timespec32_get, _timespec64_get
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

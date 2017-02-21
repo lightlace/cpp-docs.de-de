@@ -1,13 +1,12 @@
 ---
-title: "OLE-Hintergrund: Verlinken und Einbetten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "OLE-Hintergrund: Verlinken und Einbetten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "OLE, verknüpfte Elemente"
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # OLE-Hintergrund: Verlinken und Einbetten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

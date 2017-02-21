@@ -1,13 +1,12 @@
 ---
-title: "multimap::const_reverse_iterator (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "multimap::const_reverse_iterator (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::multimap::const_reverse_iterator"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "const_reverse_iterator-Member [STL/CLR]"
 ms.assetid: edc5129e-f2ca-4d3a-a898-365ad0a587e4
 caps.latest.revision: 14
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # multimap::const_reverse_iterator (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

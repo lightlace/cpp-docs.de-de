@@ -1,13 +1,12 @@
 ---
-title: "&lt;filesystem&gt;-Operatoren"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;filesystem&gt;-Operatoren | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "FILESYSTEM/std::experimental::filesystem::v1::operator=="
@@ -32,9 +31,10 @@ dev_langs:
   - "C++"
 ms.assetid: 102c4833-aa3b-41a8-8998-f5003c546bfd
 caps.latest.revision: 12
-caps.handback.revision: "3"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # &lt;filesystem&gt;-Operatoren
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

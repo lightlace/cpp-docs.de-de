@@ -1,13 +1,12 @@
 ---
-title: "CGlobalHeap Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CGlobalHeap Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL.CGlobalHeap"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CGlobalHeap class"
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
 caps.latest.revision: 19
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CGlobalHeap Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "IsAttributedProject"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IsAttributedProject | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IsAttributedProject"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "IsAttributedProject-Methode"
 ms.assetid: 8fe41c0c-40e7-42be-8e15-94a2bbbe87cc
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # IsAttributedProject
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

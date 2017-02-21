@@ -1,13 +1,12 @@
 ---
-title: "/LARGEADDRESSAWARE (Umfangreiche Adressen verarbeiten)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/LARGEADDRESSAWARE (Umfangreiche Adressen verarbeiten) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.LargeAddressAware"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "-LARGEADDRESSAWARE (Linkeroption)"
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /LARGEADDRESSAWARE (Umfangreiche Adressen verarbeiten)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

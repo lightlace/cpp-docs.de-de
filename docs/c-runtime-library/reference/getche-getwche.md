@@ -1,13 +1,12 @@
 ---
-title: "_getche, _getwche"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_getche, _getwche | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_getwche"
@@ -30,7 +29,6 @@ f1_keywords:
   - "_getwche"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getche-Funktion"
   - "_getwche-Funktion"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "getwche-Funktion"
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
 caps.latest.revision: 23
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _getche, _getwche
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

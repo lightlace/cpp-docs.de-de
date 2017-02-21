@@ -1,13 +1,12 @@
 ---
-title: "Running the Program as a Local Server"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Running the Program as a Local Server | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Debuggen [ATL], running services as local server"
 ms.assetid: eb9701e6-e2a8-4666-897f-0c893aec8ac7
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Running the Program as a Local Server
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

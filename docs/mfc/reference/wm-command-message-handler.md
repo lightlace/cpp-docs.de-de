@@ -1,13 +1,12 @@
 ---
-title: "WM_COMMAND-Meldungshandler"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "WM_COMMAND-Meldungshandler | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "WM_COMMAND"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Windows-ON_COMMAND-Meldungshandler"
 ms.assetid: ec5b727c-b287-42f3-85b3-26776e0caac6
 caps.latest.revision: 11
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # WM_COMMAND-Meldungshandler
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

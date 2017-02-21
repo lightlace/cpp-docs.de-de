@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4047"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 1) C4047 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4047"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4047"
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerwarnung (Stufe 1) C4047
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

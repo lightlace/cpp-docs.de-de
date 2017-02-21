@@ -1,13 +1,12 @@
 ---
-title: "Importieren in eine Anwendung mithilfe von &quot;__declspec(dllimport)&quot;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Importieren in eine Anwendung mithilfe von &quot;__declspec(dllimport)&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "__declspec"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Importieren von DLLs [C++], __declspec(dllimport)"
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Importieren in eine Anwendung mithilfe von &quot;__declspec(dllimport)&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

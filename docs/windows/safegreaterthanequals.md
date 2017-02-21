@@ -1,13 +1,12 @@
 ---
-title: "SafeGreaterThanEquals"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "SafeGreaterThanEquals | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SafeGreaterThanEquals"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "SafeGreaterThanEquals-Funktion"
 ms.assetid: 43312fa9-d925-4f9f-a352-a190c02b3005
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # SafeGreaterThanEquals
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

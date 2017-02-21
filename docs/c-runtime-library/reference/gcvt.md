@@ -1,13 +1,12 @@
 ---
-title: "_gcvt"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_gcvt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_gcvt"
@@ -28,7 +27,6 @@ f1_keywords:
   - "_gcvt"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CVTBUFSIZE"
   - "_gcvt-Funktion"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "Zeichenfolgen [C++], Konvertieren aus Gleitkommazahl"
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
 caps.latest.revision: 25
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # _gcvt
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Schemarowset-Klassen und Typedef-Klassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schemarowset-Klassen und Typedef-Klassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.templates.ole"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Schemarowsets, Klassen"
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Schemarowset-Klassen und Typedef-Klassen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

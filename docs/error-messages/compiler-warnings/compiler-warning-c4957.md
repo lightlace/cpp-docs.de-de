@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung C4957"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung C4957 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C4957"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4957"
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Compilerwarnung C4957
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Typen- und Variablengr&#246;&#223;en in der Inlineassembly"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Typen- und Variablengr&#246;&#223;en in der Inlineassembly | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "length"
@@ -26,9 +25,10 @@ helpviewer_keywords:
   - "Variablen, Typ"
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Typen- und Variablengr&#246;&#223;en in der Inlineassembly
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

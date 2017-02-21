@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3277"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3277 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C3277"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3277"
 ms.assetid: 8ac5f476-e30c-4879-92c6-f03cdbd74045
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerfehler C3277
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

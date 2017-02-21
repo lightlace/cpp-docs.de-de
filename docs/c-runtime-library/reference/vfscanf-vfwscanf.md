@@ -1,13 +1,12 @@
 ---
-title: "vfscanf, vfwscanf"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "vfscanf, vfwscanf | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "vfwscanf"
@@ -30,12 +29,12 @@ f1_keywords:
   - "vfscanf"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
 caps.latest.revision: 6
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # vfscanf, vfwscanf
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

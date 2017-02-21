@@ -1,13 +1,12 @@
 ---
-title: "Die Hilfsfunktion"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Die Hilfsfunktion | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Hilfsfunktionen"
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Die Hilfsfunktion
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

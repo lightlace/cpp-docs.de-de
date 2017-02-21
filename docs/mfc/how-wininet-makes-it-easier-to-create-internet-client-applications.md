@@ -1,13 +1,12 @@
 ---
-title: "Vereinfachtes Erstellen von Internetclientanwendungen mit WinInet"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Vereinfachtes Erstellen von Internetclientanwendungen mit WinInet | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "WinInet-Klassen, kontra WinSock"
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Vereinfachtes Erstellen von Internetclientanwendungen mit WinInet
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

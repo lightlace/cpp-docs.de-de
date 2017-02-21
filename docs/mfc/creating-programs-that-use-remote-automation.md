@@ -1,13 +1,12 @@
 ---
-title: "Erstellen von Programmen, die Remoteautomatisierung verwenden"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen von Programmen, die Remoteautomatisierung verwenden | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Remoteautomatisierung, Erstellen von Programmen"
 ms.assetid: 8eb31320-1037-4029-b1f3-fdc9406dbaf1
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Erstellen von Programmen, die Remoteautomatisierung verwenden
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

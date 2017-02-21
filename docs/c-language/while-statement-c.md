@@ -1,27 +1,26 @@
 ---
-title: "while-Anweisung (C)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "while-Anweisung (C) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "while"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "while-Schlüsselwort [C]"
   - "while-Schlüsselwort [C], Syntax"
 ms.assetid: d0c970b8-12a9-4827-afb2-a051111834b7
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # while-Anweisung (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

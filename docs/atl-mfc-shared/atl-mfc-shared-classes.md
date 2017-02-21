@@ -1,13 +1,12 @@
 ---
-title: "ATL/MFC Shared Classes"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ATL/MFC Shared Classes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "index-page "
 f1_keywords: 
   - "vc.classes.shared"
@@ -32,9 +31,10 @@ helpviewer_keywords:
   - "shared classes, MFC und ATL"
 ms.assetid: e13aaac3-21ec-4f4d-8834-432b40fde544
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # ATL/MFC Shared Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

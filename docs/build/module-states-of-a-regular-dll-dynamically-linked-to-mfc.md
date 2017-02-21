@@ -1,13 +1,12 @@
 ---
-title: "Modulzust&#228;nde einer regul&#228;ren, dynamisch mit MFC verkn&#252;pften DLL"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Modulzust&#228;nde einer regul&#228;ren, dynamisch mit MFC verkn&#252;pften DLL | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Reguläre DLLs [C++], Dynamisch verknüpft mit MFC"
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Modulzust&#228;nde einer regul&#228;ren, dynamisch mit MFC verkn&#252;pften DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

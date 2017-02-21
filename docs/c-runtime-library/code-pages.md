@@ -1,19 +1,17 @@
 ---
-title: "Codepages"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Codepages | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.international"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ANSI [C++], Codepages"
   - "Zeichensätze [C++], Codepages"
@@ -24,9 +22,10 @@ helpviewer_keywords:
   - "System-Standardcodepage"
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Codepages
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Debuggen des Anbieters"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Debuggen des Anbieters | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Visual C++-Debugger, Debuggen von Anbietern"
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Debuggen des Anbieters
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CCommand::SetParameterInfo"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CCommand::SetParameterInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "SetParameterInfo"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "SetParameterInfo-Methode"
 ms.assetid: a70e92f4-1e73-41d7-a5b7-c6ebb45a6477
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CCommand::SetParameterInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

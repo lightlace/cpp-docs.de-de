@@ -1,26 +1,25 @@
 ---
-title: "raw_dispinterfaces"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "raw_dispinterfaces | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "raw_dispinterfaces"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "raw_dispinterfaces-Attribut"
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # raw_dispinterfaces
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

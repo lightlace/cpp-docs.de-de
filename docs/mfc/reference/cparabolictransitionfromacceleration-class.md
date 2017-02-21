@@ -1,13 +1,12 @@
 ---
-title: "CParabolicTransitionFromAcceleration-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CParabolicTransitionFromAcceleration-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "afxanimationcontroller/CParabolicTransitionFromAcceleration"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CParabolicTransitionFromAcceleration-Klasse"
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
 caps.latest.revision: 18
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # CParabolicTransitionFromAcceleration-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Win32-Internetklassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Win32-Internetklassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.classes.win32"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "WinInet-Klassen, Klassen"
 ms.assetid: b49601d5-3025-4068-9408-316b54ee4375
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Win32-Internetklassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

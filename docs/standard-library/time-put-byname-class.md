@@ -1,13 +1,12 @@
 ---
-title: "time_put_byname-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "time_put_byname-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "time_put_byname"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "time_put_byname-Klasse"
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
 caps.latest.revision: 25
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # time_put_byname-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

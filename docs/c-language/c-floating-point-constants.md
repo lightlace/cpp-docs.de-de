@@ -1,17 +1,15 @@
 ---
-title: "C-Gleitkommakonstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "C-Gleitkommakonstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Konstanten, Gleitkomma"
   - "double-Datentyp, Gleitkommakonstanten"
@@ -21,9 +19,10 @@ helpviewer_keywords:
   - "Typen [C], Konstanten"
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # C-Gleitkommakonstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

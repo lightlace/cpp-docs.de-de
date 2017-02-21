@@ -1,13 +1,12 @@
 ---
-title: "_cabs"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_cabs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_cabs"
@@ -30,7 +29,6 @@ f1_keywords:
   - "_cabsl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_cabs-Funktion"
   - "_cabsl-Funktion"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "Berechnen absoluter Werte"
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
 caps.latest.revision: 13
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _cabs
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

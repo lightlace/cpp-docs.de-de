@@ -1,13 +1,12 @@
 ---
-title: "_BitScanForward, _BitScanForward64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_BitScanForward, _BitScanForward64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_BitScanForward"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "bsf instruction"
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _BitScanForward, _BitScanForward64
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

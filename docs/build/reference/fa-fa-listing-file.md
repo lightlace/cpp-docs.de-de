@@ -1,13 +1,12 @@
 ---
-title: "/FA, /Fa (Listendatei)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/FA, /Fa (Listendatei) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLWCECompilerTool.AssemblerListingLocation"
@@ -27,9 +26,10 @@ helpviewer_keywords:
   - "Auflisten des Dateityps"
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /FA, /Fa (Listendatei)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

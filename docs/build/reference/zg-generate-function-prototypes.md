@@ -1,13 +1,12 @@
 ---
-title: "/Zg (Funktionsprototypen generieren)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Zg (Funktionsprototypen generieren) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/zg"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "-Zg (Compileroption) [C++]"
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /Zg (Funktionsprototypen generieren)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

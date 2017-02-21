@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4561"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 1) C4561 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4561"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4561"
 ms.assetid: 3a10c12c-601b-4b6c-9861-331fd022e021
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Compilerwarnung (Stufe 1) C4561
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

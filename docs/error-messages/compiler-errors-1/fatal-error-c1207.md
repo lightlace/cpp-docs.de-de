@@ -1,13 +1,12 @@
 ---
-title: "Schwerwiegender Fehler C1207"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schwerwiegender Fehler C1207 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C1207"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C1207"
 ms.assetid: cd31b410-9523-47db-883c-e69a9351ffa2
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Schwerwiegender Fehler C1207
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

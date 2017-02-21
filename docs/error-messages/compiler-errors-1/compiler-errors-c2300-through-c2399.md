@@ -1,21 +1,21 @@
 ---
-title: "Compilerfehlers C2300 Through C2399"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehlers C2300 Through C2399 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 dev_langs: 
   - "C++"
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
 caps.latest.revision: 14
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Compilerfehlers C2300 Through C2399
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

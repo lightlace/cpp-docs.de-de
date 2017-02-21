@@ -1,28 +1,27 @@
 ---
-title: "pop_macro"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "pop_macro | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc-pragma.pop_macro"
   - "pop_macro_CPP"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "pop_macro-Pragma"
   - "Pragmas, pop_macro"
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
 caps.latest.revision: 11
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # pop_macro
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

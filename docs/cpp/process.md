@@ -1,13 +1,12 @@
 ---
-title: "Prozess"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Prozess | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "Process"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "process __declspec-Schlüsselwort"
 ms.assetid: 60eecc2f-4eef-4567-b9db-aaed34733023
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Prozess
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

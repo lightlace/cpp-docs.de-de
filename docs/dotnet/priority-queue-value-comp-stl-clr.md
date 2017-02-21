@@ -1,13 +1,12 @@
 ---
-title: "priority_queue::value_comp (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "priority_queue::value_comp (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::priority_queue::value_comp"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "value_comp-Member [STL/CLR]"
 ms.assetid: af28e541-087d-4837-9ff0-cd36d4cfc57a
 caps.latest.revision: 15
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # priority_queue::value_comp (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

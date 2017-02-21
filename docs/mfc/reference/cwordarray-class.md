@@ -1,13 +1,12 @@
 ---
-title: "CWordArray Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CWordArray Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CWordArray"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "WORD data type"
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
 caps.latest.revision: 26
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # CWordArray Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

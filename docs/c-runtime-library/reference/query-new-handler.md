@@ -1,13 +1,12 @@
 ---
-title: "_query_new_handler"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_query_new_handler | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_query_new_handler"
@@ -29,7 +28,6 @@ f1_keywords:
   - "query_new_handler"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_query_new_handler-Funktion"
   - "Fehlerbehandlung"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "query_new_handler-Funktion"
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # _query_new_handler
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

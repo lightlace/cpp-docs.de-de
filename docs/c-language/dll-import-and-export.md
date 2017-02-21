@@ -1,26 +1,25 @@
 ---
-title: "DLL-Import und -Export"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "DLL-Import und -Export | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dllexport-Attribut [C++]"
   - "dllexport-Attribut [C++], Speicherklassenattribut"
   - "dllimport-Attribut [C++], Speicherklassenattribut"
 ms.assetid: ab058610-0190-4354-8955-86db66add7c6
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # DLL-Import und -Export
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

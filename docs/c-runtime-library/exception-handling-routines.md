@@ -1,26 +1,25 @@
 ---
-title: "Ausnahmebehandlungsroutinen"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausnahmebehandlungsroutinen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.exceptions"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Ausnahmebehandlung, Routinen"
 ms.assetid: f60548c6-850a-4e1e-a79b-a2a6a541ab62
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Ausnahmebehandlungsroutinen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

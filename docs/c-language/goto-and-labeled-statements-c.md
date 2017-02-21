@@ -1,28 +1,27 @@
 ---
-title: "goto und bezeichnete Anweisungen (C)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "goto und bezeichnete Anweisungen (C) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "goto"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "goto-Schlüsselwort [C]"
   - "Anweisung mit Bezeichnung"
   - "Anweisungen, Mit Bezeichnung"
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # goto und bezeichnete Anweisungen (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

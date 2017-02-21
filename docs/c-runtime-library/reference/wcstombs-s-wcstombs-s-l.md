@@ -1,13 +1,12 @@
 ---
-title: "wcstombs_s, _wcstombs_s_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "wcstombs_s, _wcstombs_s_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wcstombs_s_l"
@@ -30,7 +29,6 @@ f1_keywords:
   - "_wcstombs_s_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "wcstombs_s-Funktion"
   - "Zeichenfolgenkonvertierung, Breitzeichen"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "zeichenfolgenkonvertierung von Multibyte-Zeichenfolgen"
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
 caps.latest.revision: 31
-caps.handback.revision: "31"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # wcstombs_s, _wcstombs_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

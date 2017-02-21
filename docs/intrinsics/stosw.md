@@ -1,13 +1,12 @@
 ---
-title: "__stosw"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__stosw | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "__stosw"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "rep stosw-Anweisung"
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
 caps.latest.revision: 15
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # __stosw
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

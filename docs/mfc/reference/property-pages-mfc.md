@@ -1,13 +1,12 @@
 ---
-title: "Eigenschaftenseiten (MFC)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Eigenschaftenseiten (MFC) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.macros"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Eigenschaftenseiten, Globale MFC-Funktionen"
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
 caps.latest.revision: 14
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Eigenschaftenseiten (MFC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

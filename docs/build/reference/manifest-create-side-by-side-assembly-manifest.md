@@ -1,13 +1,12 @@
 ---
-title: "/MANIFEST (Erstellen eines Manifests f&#252;r eine parallele Assembly)"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/MANIFEST (Erstellen eines Manifests f&#252;r eine parallele Assembly) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.GenerateManifest"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-MANIFEST (Linkeroption)"
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # /MANIFEST (Erstellen eines Manifests f&#252;r eine parallele Assembly)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

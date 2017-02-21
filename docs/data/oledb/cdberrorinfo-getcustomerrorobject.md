@@ -1,13 +1,12 @@
 ---
-title: "CDBErrorInfo::GetCustomErrorObject"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDBErrorInfo::GetCustomErrorObject | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CDBErrorInfo::GetCustomErrorObject"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "GetCustomErrorObject-Methode"
 ms.assetid: 295c053c-b76c-47a5-adfb-333e65d2df0d
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CDBErrorInfo::GetCustomErrorObject
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

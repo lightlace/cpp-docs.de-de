@@ -1,21 +1,21 @@
 ---
-title: "ISO646-Operatoren"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ISO646-Operatoren | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
 ms.assetid: 93e6d3e7-4889-4d8e-8dcb-c1a6b9bbe0f5
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # ISO646-Operatoren
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

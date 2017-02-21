@@ -1,13 +1,12 @@
 ---
-title: "Zuordnungen von Konstanten und globalen Variablen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Zuordnungen von Konstanten und globalen Variablen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_tenviron"
@@ -15,7 +14,6 @@ f1_keywords:
   - "_tfinddata_t"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tenviron-Funktion"
   - "_TEOF-Typ"
@@ -26,9 +24,10 @@ helpviewer_keywords:
   - "tfinddatat-Funktion"
 ms.assetid: 3af4fd3e-9ed5-4ed9-96fd-7031e5126fd1
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Zuordnungen von Konstanten und globalen Variablen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

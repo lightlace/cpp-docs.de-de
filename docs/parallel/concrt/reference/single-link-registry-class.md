@@ -1,13 +1,12 @@
 ---
-title: "single_link_registry-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "single_link_registry-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "agents/concurrency::single_link_registry"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "single_link_registry-Klasse"
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
 caps.latest.revision: 19
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # single_link_registry-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

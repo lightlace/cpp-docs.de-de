@@ -1,13 +1,12 @@
 ---
-title: "CMFCToolBarComboBoxButton Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCToolBarComboBoxButton Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCToolBarComboBoxButton"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCToolBarComboBoxButton class"
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
 caps.latest.revision: 30
-caps.handback.revision: "17"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # CMFCToolBarComboBoxButton Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

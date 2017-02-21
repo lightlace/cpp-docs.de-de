@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2254"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2254 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2254"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2254"
 ms.assetid: 49bb3d7e-3bdf-4af6-937c-fa627be412a9
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Compilerfehler C2254
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

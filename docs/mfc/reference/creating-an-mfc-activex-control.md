@@ -1,13 +1,12 @@
 ---
-title: "Erstellen eines MFC-ActiveX-Steuerelements"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen eines MFC-ActiveX-Steuerelements | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.appwiz.activex.project"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "MFC ActiveX-Steuerelemente [C++], Erstellen"
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
 caps.latest.revision: 13
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Erstellen eines MFC-ActiveX-Steuerelements
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

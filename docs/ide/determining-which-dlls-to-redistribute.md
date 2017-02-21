@@ -1,13 +1,12 @@
 ---
-title: "Ermitteln der neu zu verteilenden DLLs"
-ms.custom: na
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ermitteln der neu zu verteilenden DLLs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Verteilen von DLLs"
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
 caps.latest.revision: 31
-caps.handback.revision: "31"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # Ermitteln der neu zu verteilenden DLLs
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

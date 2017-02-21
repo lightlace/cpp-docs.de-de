@@ -1,13 +1,12 @@
 ---
-title: "CMFCPopupMenuBar-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCPopupMenuBar-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCPopupMenuBar"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCPopupMenuBar-Klasse"
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
 caps.latest.revision: 32
-caps.handback.revision: "20"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # CMFCPopupMenuBar-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

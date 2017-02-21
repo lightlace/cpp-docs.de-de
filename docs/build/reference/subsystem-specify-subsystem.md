@@ -1,13 +1,12 @@
 ---
-title: "/SUBSYSTEM (Subsystem angeben)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/SUBSYSTEM (Subsystem angeben) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/subsystem"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Subsystemspezifikationen"
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
 caps.latest.revision: 25
-caps.handback.revision: "25"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # /SUBSYSTEM (Subsystem angeben)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

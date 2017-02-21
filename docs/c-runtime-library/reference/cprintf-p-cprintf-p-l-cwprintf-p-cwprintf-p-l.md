@@ -1,13 +1,12 @@
 ---
-title: "_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_cprintf_p_l"
@@ -39,7 +38,6 @@ f1_keywords:
   - "cprintf_p_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_cprintf_p-Funktion"
   - "_cprintf_p_l-Funktion"
@@ -55,9 +53,10 @@ helpviewer_keywords:
   - "tcprintf_p_l-Funktion"
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
 caps.latest.revision: 26
-caps.handback.revision: "24"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # _cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

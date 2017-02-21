@@ -1,14 +1,13 @@
 ---
-title: "Ctanh, Ctanhf, ctanhl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ctanh, Ctanhf, ctanhl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "ctanh"
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/ctanhf"
   - "complex/ctanhl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "Ctanh-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Ctanhf-Funktion"
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Ctanh, Ctanhf, ctanhl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

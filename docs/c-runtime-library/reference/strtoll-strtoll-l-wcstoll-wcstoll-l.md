@@ -1,13 +1,12 @@
 ---
-title: "strtoll, _strtoll_l, wcstoll, _wcstoll_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strtoll, _strtoll_l, wcstoll, _wcstoll_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "strtoll"
@@ -45,9 +44,10 @@ helpviewer_keywords:
   - "wcstoll-Funktion"
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # strtoll, _strtoll_l, wcstoll, _wcstoll_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

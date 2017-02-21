@@ -1,13 +1,12 @@
 ---
-title: "CTime Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CTime Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL.CTime"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "shared classes, CTime"
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
 caps.latest.revision: 30
-caps.handback.revision: "19"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # CTime Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

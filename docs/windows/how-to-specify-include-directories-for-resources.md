@@ -1,13 +1,12 @@
 ---
-title: "How to: Specify Include Directories for Resources"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "How to: Specify Include Directories for Resources | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "resources [Visual Studio], including in projects"
 ms.assetid: d6a7c0f6-4810-4bb0-b4b7-7d2476a20ca2
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # How to: Specify Include Directories for Resources
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

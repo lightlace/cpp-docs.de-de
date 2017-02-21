@@ -1,13 +1,12 @@
 ---
-title: "putenv"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "putenv | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "putenv"
@@ -28,14 +27,14 @@ f1_keywords:
   - "putenv"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "putenv-Funktion"
 ms.assetid: 1dc49ef3-6b12-484c-8e60-7048bcc999f1
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # putenv
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Binden von Importen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Binden von Importen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "DELAY:NOBIND (Linkeroption)"
 ms.assetid: bb766038-deb1-41b1-bcbc-29a30e8c1e2a
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Binden von Importen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

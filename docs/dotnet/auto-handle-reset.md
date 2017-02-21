@@ -1,13 +1,12 @@
 ---
-title: "auto_handle::reset"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "auto_handle::reset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "auto_handle.reset"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "auto_handle::reset"
 ms.assetid: 32dc3a83-80fd-45c9-8f79-8c4096c30f57
 caps.latest.revision: 10
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # auto_handle::reset
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

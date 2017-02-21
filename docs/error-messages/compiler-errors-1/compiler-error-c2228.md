@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2228"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2228 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C2228"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2228"
 ms.assetid: 901cadb1-ce90-4ae0-a360-547a9ba2ca18
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerfehler C2228
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

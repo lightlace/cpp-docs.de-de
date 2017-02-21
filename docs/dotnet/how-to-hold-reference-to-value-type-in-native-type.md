@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Verweis auf Werttyp in systemeigenem Typ"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Verweis auf Werttyp in systemeigenem Typ | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Werttyp-Verweis in systemeigenem Typ"
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
 caps.latest.revision: 8
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Gewusst wie: Verweis auf Werttyp in systemeigenem Typ
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

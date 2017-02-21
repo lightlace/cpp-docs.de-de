@@ -1,13 +1,12 @@
 ---
-title: "CDynamicStringAccessor::GetString"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDynamicStringAccessor::GetString | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CDynamicStringAccessor.GetString"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "GetString-Methode"
 ms.assetid: 4af27f27-7589-49f5-93d8-6ef05c023c8a
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # CDynamicStringAccessor::GetString
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

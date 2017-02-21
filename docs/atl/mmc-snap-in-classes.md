@@ -1,13 +1,12 @@
 ---
-title: "MMC Snap-In Classes"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MMC Snap-In Classes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.atl.MMC"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "MMC Snap-In classes"
 ms.assetid: 4af1d5af-687f-48b1-b2c5-fa252241b4d6
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # MMC Snap-In Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

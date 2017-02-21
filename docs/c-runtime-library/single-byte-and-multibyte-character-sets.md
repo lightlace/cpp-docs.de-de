@@ -1,19 +1,17 @@
 ---
-title: "Einzelbyte- und Mehrbyte-Zeichens&#228;tze"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Einzelbyte- und Mehrbyte-Zeichens&#228;tze | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.character.multibyte"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Zeichensätze [C++], Mehrbyte"
   - "Zeichensätze [C++], Einzelbyte"
@@ -21,9 +19,10 @@ helpviewer_keywords:
   - "SBCS (Einzelbyte-Zeichensatz)"
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Einzelbyte- und Mehrbyte-Zeichens&#228;tze
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

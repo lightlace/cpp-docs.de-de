@@ -1,13 +1,12 @@
 ---
-title: "db_command"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "db_command | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "vc-attr.db_command"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "db_command-Attribut"
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # db_command
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

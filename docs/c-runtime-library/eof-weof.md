@@ -1,28 +1,27 @@
 ---
-title: "EOF, WEOF"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "EOF, WEOF | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "EOF"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "EOF-Funktion"
   - "WEOF-Funktion"
   - "Ende der Datei"
 ms.assetid: a7150563-cdae-4cdf-9798-ad509990e505
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # EOF, WEOF
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

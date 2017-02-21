@@ -1,13 +1,12 @@
 ---
-title: "exit, _Exit, _exit"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "exit, _Exit, _exit | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_exit"
@@ -34,7 +33,6 @@ f1_keywords:
   - "stdlib/_Exit"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "exit-Funktion"
   - "_exit-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Prozessbeendigung, aufrufen"
 ms.assetid: b1501fa6-27c2-478c-9e93-cc4fd802a01f
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # exit, _Exit, _exit
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

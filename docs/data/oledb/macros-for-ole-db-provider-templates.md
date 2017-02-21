@@ -1,13 +1,12 @@
 ---
-title: "Makros f&#252;r OLE DB-Anbietervorlagen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Makros f&#252;r OLE DB-Anbietervorlagen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.templates.ole"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Anbietervorlagenmakros (OLE DB)"
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Makros f&#252;r OLE DB-Anbietervorlagen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

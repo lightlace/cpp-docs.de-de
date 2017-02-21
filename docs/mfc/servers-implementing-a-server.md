@@ -1,13 +1,12 @@
 ---
-title: "Server: Implementieren eines Servers"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Server: Implementieren eines Servers | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Server, Implementieren"
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Server: Implementieren eines Servers
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

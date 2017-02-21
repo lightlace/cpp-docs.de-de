@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4929"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 1) C4929 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4929"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4929"
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Compilerwarnung (Stufe 1) C4929
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

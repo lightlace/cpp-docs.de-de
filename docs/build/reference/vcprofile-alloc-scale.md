@@ -1,13 +1,12 @@
 ---
-title: "VCPROFILE_ALLOC_SCALE"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "VCPROFILE_ALLOC_SCALE | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VCPROFILE_ALLOC_SCALE"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "VCPROFILE_ALLOC_SCALE-Umgebungsvariable"
 ms.assetid: 5cb5ce27-f9b8-489b-b46c-d6e9bcab2d34
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # VCPROFILE_ALLOC_SCALE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

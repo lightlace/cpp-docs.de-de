@@ -1,13 +1,12 @@
 ---
-title: "Konstruieren von Eingabestreamobjekten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Konstruieren von Eingabestreamobjekten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Eingabestreamobjekte"
 ms.assetid: ab94866e-6ffe-4f15-b4db-0bd23e636075
 caps.latest.revision: 8
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Konstruieren von Eingabestreamobjekten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "bitor"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "bitor | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcrt.dll"
@@ -31,9 +30,10 @@ helpviewer_keywords:
   - "bitor-Funktion"
 ms.assetid: 3c0a3711-9c74-41f2-b400-2f7797da30d1
 caps.latest.revision: 12
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # bitor
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

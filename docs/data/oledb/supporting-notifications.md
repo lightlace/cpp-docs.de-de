@@ -1,13 +1,12 @@
 ---
-title: "Unterst&#252;tzen von Benachrichtigungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Unterst&#252;tzen von Benachrichtigungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Rowsets, Ereignisbenachrichtigungen"
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Unterst&#252;tzen von Benachrichtigungen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

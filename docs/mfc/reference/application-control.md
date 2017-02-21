@@ -1,13 +1,12 @@
 ---
-title: "Anwendungssteuerelement"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Anwendungssteuerelement | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.macros"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Anwendungssteuerelement"
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
 caps.latest.revision: 12
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Anwendungssteuerelement
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Output (Ger&#228;tekontext)-Klassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Output (Ger&#228;tekontext)-Klassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.classes.output"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Fensterzeichnungsklassen"
 ms.assetid: 35fd6435-a38e-42c6-a3fa-cd6f39370fc3
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Output (Ger&#228;tekontext)-Klassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

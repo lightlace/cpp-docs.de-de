@@ -1,13 +1,12 @@
 ---
-title: "CAsyncMonikerFile Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CAsyncMonikerFile Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CAsyncMonikerFile"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "OLE-Steuerelemente [C++], Asynchron"
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
 caps.latest.revision: 23
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CAsyncMonikerFile Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

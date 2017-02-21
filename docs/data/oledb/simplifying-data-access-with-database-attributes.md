@@ -1,13 +1,12 @@
 ---
-title: "Vereinfachen des Datenzugriffs mit Datenbankattributen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Vereinfachen des Datenzugriffs mit Datenbankattributen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc-attr.db_param"
@@ -29,9 +28,10 @@ helpviewer_keywords:
   - "OLE DB-Consumer [C++], Datenbankattribute"
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Vereinfachen des Datenzugriffs mit Datenbankattributen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

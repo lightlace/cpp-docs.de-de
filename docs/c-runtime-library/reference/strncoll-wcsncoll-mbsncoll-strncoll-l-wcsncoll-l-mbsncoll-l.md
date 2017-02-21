@@ -1,13 +1,12 @@
 ---
-title: "_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_strncoll"
@@ -46,7 +45,6 @@ f1_keywords:
   - "mbsncoll"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcsnccoll-Funktion"
   - "_ftcsncoll-Funktion"
@@ -72,9 +70,10 @@ helpviewer_keywords:
   - "wcsncoll_l-Funktion"
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

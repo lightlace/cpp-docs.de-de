@@ -1,13 +1,12 @@
 ---
-title: "Microsoft::WRL-Namespace"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Microsoft::WRL-Namespace | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "WRL-Namespace"
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Microsoft::WRL-Namespace
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

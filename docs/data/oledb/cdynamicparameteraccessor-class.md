@@ -1,13 +1,12 @@
 ---
-title: "CDynamicParameterAccessor-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDynamicParameterAccessor-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ATL.CDynamicParameterAccessor"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CDynamicParameterAccessor-Klasse"
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # CDynamicParameterAccessor-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

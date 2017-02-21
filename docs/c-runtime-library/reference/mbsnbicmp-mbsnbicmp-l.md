@@ -1,13 +1,12 @@
 ---
-title: "_mbsnbicmp, _mbsnbicmp_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mbsnbicmp, _mbsnbicmp_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mbsnbicmp_l"
@@ -38,7 +37,6 @@ f1_keywords:
   - "_mbsnbicmp_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsnbicmp-Funktion"
   - "_mbsnbicmp_l-Funktion"
@@ -52,9 +50,10 @@ helpviewer_keywords:
   - "mbsnbicmp_l-Funktion"
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _mbsnbicmp, _mbsnbicmp_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

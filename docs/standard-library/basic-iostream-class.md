@@ -1,13 +1,12 @@
 ---
-title: "basic_iostream-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "basic_iostream-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "istream/std::basic_iostream"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "basic_iostream-Klasse"
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
 caps.latest.revision: 22
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # basic_iostream-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

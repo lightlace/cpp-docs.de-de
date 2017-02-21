@@ -1,13 +1,12 @@
 ---
-title: "IErrorRecordsImpl::GetBasicErrorInfo"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IErrorRecordsImpl::GetBasicErrorInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ATL::IErrorRecordsImpl::GetBasicErrorInfo"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "GetBasicErrorInfo-Methode"
 ms.assetid: d0b4dec3-f32a-4aaa-8365-524f2e7c8395
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # IErrorRecordsImpl::GetBasicErrorInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

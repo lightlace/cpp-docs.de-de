@@ -1,13 +1,12 @@
 ---
-title: "Mathematische Fehlerkonstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Mathematische Fehlerkonstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_PLOSS"
@@ -18,7 +17,6 @@ f1_keywords:
   - "_OVERFLOW"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_DOMAIN-Konstante"
   - "_OVERFLOW-Konstante"
@@ -35,9 +33,10 @@ helpviewer_keywords:
   - "UNDERFLOW-Konstante"
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Mathematische Fehlerkonstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

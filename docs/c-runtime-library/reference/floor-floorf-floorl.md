@@ -1,13 +1,12 @@
 ---
-title: "floor, floorf, floorl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "floor, floorf, floorl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "floorf"
@@ -33,7 +32,6 @@ f1_keywords:
   - "floorf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Berechnungsgrundlagen von Werten"
   - "floor-Funktion"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "floorl-Funktion"
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
 caps.latest.revision: 15
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # floor, floorf, floorl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

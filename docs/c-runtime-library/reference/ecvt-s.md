@@ -1,13 +1,12 @@
 ---
-title: "_ecvt_s"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ecvt_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ecvt_s"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_ecvt_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ecvt_s-Funktion"
   - "Konvertieren doppelter Zahlen"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "Zahlen, Konvertieren"
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
 caps.latest.revision: 25
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # _ecvt_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

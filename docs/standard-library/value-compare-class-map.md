@@ -1,13 +1,12 @@
 ---
-title: "value_compare-Klasse (&lt;map&gt;)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "value_compare-Klasse (&lt;map&gt;) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::value_compare"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "value_compare-Klasse"
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
 caps.latest.revision: 21
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # value_compare-Klasse (&lt;map&gt;)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

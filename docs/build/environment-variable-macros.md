@@ -1,13 +1,12 @@
 ---
-title: "Makros von Umgebungsvariablen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Makros von Umgebungsvariablen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "NMAKE (Programm), Umgebungvariablenmakros"
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Makros von Umgebungsvariablen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

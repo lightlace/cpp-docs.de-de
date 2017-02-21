@@ -1,13 +1,12 @@
 ---
-title: "Aufrufen von DLL-Funktionen aus Visual&#160;Basic-Anwendungen heraus"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Aufrufen von DLL-Funktionen aus Visual&#160;Basic-Anwendungen heraus | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Funktionen [C++], Aufrufen von DLL-Funktionen aus Visual Basic"
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Aufrufen von DLL-Funktionen aus Visual&#160;Basic-Anwendungen heraus
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,22 +1,21 @@
 ---
-title: "Argumente f&#252;r &quot;main&quot;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Argumente f&#252;r &quot;main&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: 39824fef-05ad-461d-ae82-49447dda8060
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Argumente f&#252;r &quot;main&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

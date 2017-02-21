@@ -1,13 +1,12 @@
 ---
-title: "FactoryCache::cookie-Datenmember"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "FactoryCache::cookie-Datenmember | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "module/Microsoft::WRL::Details::FactoryCache::cookie"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "cookie-Datenmember"
 ms.assetid: b1bc79af-a896-4e3b-8afa-64733022eddf
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # FactoryCache::cookie-Datenmember
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

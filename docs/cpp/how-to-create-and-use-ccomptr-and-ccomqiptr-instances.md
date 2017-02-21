@@ -1,21 +1,21 @@
 ---
-title: "Gewusst wie: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Gewusst wie: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

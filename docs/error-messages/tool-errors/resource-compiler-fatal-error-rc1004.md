@@ -1,13 +1,12 @@
 ---
-title: "Ressourcencompiler: Schwerwiegender Fehler RC1004"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ressourcencompiler: Schwerwiegender Fehler RC1004 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "RC1004"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "RC1004"
 ms.assetid: f9b703d4-6767-4721-9450-37079bcc7152
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ressourcencompiler: Schwerwiegender Fehler RC1004
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

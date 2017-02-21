@@ -1,13 +1,12 @@
 ---
-title: "&lt;new&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;new&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::<new>"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "new-Header"
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
 caps.latest.revision: 18
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # &lt;new&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

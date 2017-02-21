@@ -1,13 +1,12 @@
 ---
-title: "basic_regex-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "basic_regex-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::tr1::basic_regex"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "basic_regex-Klasse [TR1]"
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
 caps.latest.revision: 21
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # basic_regex-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

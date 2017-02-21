@@ -1,13 +1,12 @@
 ---
-title: "Previewing Resources"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Previewing Resources | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.resvw.resource.previewing"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "code, viewing"
 ms.assetid: d6abda66-0e2b-4ac3-a59a-a57b8c6fb70b
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Previewing Resources
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

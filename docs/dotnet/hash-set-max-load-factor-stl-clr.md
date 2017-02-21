@@ -1,13 +1,12 @@
 ---
-title: "hash_set::max_load_factor (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "hash_set::max_load_factor (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::hash_set::max_load_factor"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "max_load_factor-Member [STL/CLR]"
 ms.assetid: 9aef46b1-e7c2-488c-a219-77c1c0de6dc4
 caps.latest.revision: 16
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # hash_set::max_load_factor (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

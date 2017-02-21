@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnungs C4200 Through C4584"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnungs C4200 Through C4399 generiert | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4203"
@@ -45,9 +44,10 @@ dev_langs:
   - "C++"
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
 caps.latest.revision: 19
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Compilerwarnungs C4200 Through C4584
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

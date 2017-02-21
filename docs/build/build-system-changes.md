@@ -1,13 +1,12 @@
 ---
-title: "Buildsystem&#228;nderungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Buildsystem&#228;nderungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.msbuild.changes"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "MSBuild, Buildsystemänderungen"
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Buildsystem&#228;nderungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

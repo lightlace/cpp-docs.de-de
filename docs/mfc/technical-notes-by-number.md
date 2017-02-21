@@ -1,13 +1,12 @@
 ---
-title: "Technische Hinweise – nach Nummern geordnet"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Technische Hinweise – nach Nummern geordnet | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.tables.mfc.technotes"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: aaa449be-9167-4510-a490-af872c4f60a2
 caps.latest.revision: 13
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Technische Hinweise – nach Nummern geordnet
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

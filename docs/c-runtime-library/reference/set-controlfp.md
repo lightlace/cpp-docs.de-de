@@ -1,13 +1,12 @@
 ---
-title: "_set_controlfp"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_set_controlfp | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_set_controlfp"
@@ -29,16 +28,16 @@ f1_keywords:
   - "_set_controlfp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_set_controlfp-Funktion"
   - "Gleitkommafunktionen, Festlegen des Steuerworts"
   - "set_controlfp-Funktion"
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _set_controlfp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

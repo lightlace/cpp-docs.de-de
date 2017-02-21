@@ -1,13 +1,12 @@
 ---
-title: "Ausdrucksauswertungsfehler CXX0016"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausdrucksauswertungsfehler CXX0016 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "CXX0016"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CXX0016"
 ms.assetid: af94a2ae-e835-4da6-8d2f-5c879f72eda2
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ausdrucksauswertungsfehler CXX0016
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

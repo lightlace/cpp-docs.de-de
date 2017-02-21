@@ -1,13 +1,12 @@
 ---
-title: "Systeminterne Funktionen „_InterlockedDecrement“"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Systeminterne Funktionen „_InterlockedDecrement“ | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_InterlockedDecrement16_rel_cpp"
@@ -55,9 +54,10 @@ helpviewer_keywords:
   - "Systeminterne Funktion „InterlockedDecrement64_rel“"
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
 caps.latest.revision: 23
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Systeminterne Funktionen „_InterlockedDecrement“
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

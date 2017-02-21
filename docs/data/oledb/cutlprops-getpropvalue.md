@@ -1,13 +1,12 @@
 ---
-title: "CUtlProps::GetPropValue"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CUtlProps::GetPropValue | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CUtlProps::GetPropValue"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "GetPropValue-Methode"
 ms.assetid: 9a3fbadb-7814-48f7-96a4-b960fc4ecf2e
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CUtlProps::GetPropValue
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

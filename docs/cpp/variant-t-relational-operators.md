@@ -1,13 +1,12 @@
 ---
-title: "_variant_t-Operatoren (relational)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_variant_t-Operatoren (relational) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "_variant_t::operator=="
@@ -28,9 +27,10 @@ helpviewer_keywords:
   - "Relationale Operatoren, _variant_t-Klasse"
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _variant_t-Operatoren (relational)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

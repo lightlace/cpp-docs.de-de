@@ -1,13 +1,12 @@
 ---
-title: "&#220;bersicht &#252;ber Memberfunktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#220;bersicht &#252;ber Memberfunktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "This-Zeiger, Und nicht statische Memberfunktionen"
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # &#220;bersicht &#252;ber Memberfunktionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "/STUB (Name der MS-DOS-Stubdatei)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/STUB (Name der MS-DOS-Stubdatei) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/stub"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "Windows-API [C++], Anhängen eines MS-DOS-Stub-Programms"
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /STUB (Name der MS-DOS-Stubdatei)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

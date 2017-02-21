@@ -1,13 +1,12 @@
 ---
-title: "IRowsetLocateImpl::m_rgBookmarks"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IRowsetLocateImpl::m_rgBookmarks | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "m_rgBookmarks"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "m_rgbookmarks"
 ms.assetid: ab9bc0f0-d58b-4e0b-8d42-0681fbf0d20b
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IRowsetLocateImpl::m_rgBookmarks
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

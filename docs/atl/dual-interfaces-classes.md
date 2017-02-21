@@ -1,13 +1,12 @@
 ---
-title: "Duale Schnittstellenklassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Duale Schnittstellenklassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.atl.interfaces.dual"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "duale Schnittstellen, Klassen"
 ms.assetid: c2b1b165-ff39-4e4a-a683-91eca9158304
 caps.latest.revision: 12
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Duale Schnittstellenklassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

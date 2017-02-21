@@ -1,13 +1,12 @@
 ---
-title: "/SWAPRUN (Linkerausgabe in Auslagerungsdatei laden)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/SWAPRUN (Linkerausgabe in Auslagerungsdatei laden) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.SwapRunFromNet"
@@ -26,9 +25,10 @@ helpviewer_keywords:
   - "-SWAPRUN (Linkeroption)"
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /SWAPRUN (Linkerausgabe in Auslagerungsdatei laden)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

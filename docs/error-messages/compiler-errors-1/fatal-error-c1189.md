@@ -1,13 +1,12 @@
 ---
-title: "Schwerwiegender Fehler C1189"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schwerwiegender Fehler C1189 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C1189"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C1189"
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Schwerwiegender Fehler C1189
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

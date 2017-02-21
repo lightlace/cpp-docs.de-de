@@ -1,13 +1,12 @@
 ---
-title: "Argumentbezogene Namenssuche (Koenig) in Funktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Argumentbezogene Namenssuche (Koenig) in Funktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Koenig-Suche"
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Argumentbezogene Namenssuche (Koenig) in Funktionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

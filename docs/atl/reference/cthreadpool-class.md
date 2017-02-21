@@ -1,13 +1,12 @@
 ---
-title: "CThreadPool Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CThreadPool Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL.CThreadPool"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CThreadPool class"
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
 caps.latest.revision: 22
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CThreadPool Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "stdext-Namespace"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "stdext-Namespace | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "stdext"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "stdext-Namespace"
 ms.assetid: 3e94fc89-0584-424f-bc09-081b73379545
 caps.latest.revision: 10
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # stdext-Namespace
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

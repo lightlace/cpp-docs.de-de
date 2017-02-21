@@ -1,13 +1,12 @@
 ---
-title: "Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcr80.dll"
@@ -22,15 +21,15 @@ f1_keywords:
   - "_tcstoi64"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Analysieren, Numerische Zeichenfolgen"
   - "Zeichenfolgenkonvertierung, zu numerischen Werten"
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Funktionen zur Konvertierung von Zeichenfolgen in numerische Werte
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

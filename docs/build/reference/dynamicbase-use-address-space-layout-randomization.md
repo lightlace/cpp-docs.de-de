@@ -1,13 +1,12 @@
 ---
-title: "/DYNAMICBASE (Address Space Layout Randomization verwenden)"
-ms.custom: na
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/DYNAMICBASE (Address Space Layout Randomization verwenden) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.RandomizedBaseAddress"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-DYNAMICBASE (Linkeroption)"
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /DYNAMICBASE (Address Space Layout Randomization verwenden)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Deklarieren einer auf der neuen Steuerelementklasse basierenden Variablen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Deklarieren einer auf der neuen Steuerelementklasse basierenden Variablen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.codewiz.classes.control.variable"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Variablen, Steuerelementklassen"
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Deklarieren einer auf der neuen Steuerelementklasse basierenden Variablen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

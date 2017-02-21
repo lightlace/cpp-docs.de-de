@@ -1,13 +1,12 @@
 ---
-title: "Standardtypen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Standardtypen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "__time64_t"
@@ -65,7 +64,6 @@ f1_keywords:
   - "_CRT_ALLOC_HOOK"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__finddata64_t-Typ"
   - "__stat64-Typ"
@@ -147,9 +145,10 @@ helpviewer_keywords:
   - "wint_t-Typ"
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
 caps.latest.revision: 27
-caps.handback.revision: "27"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # Standardtypen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

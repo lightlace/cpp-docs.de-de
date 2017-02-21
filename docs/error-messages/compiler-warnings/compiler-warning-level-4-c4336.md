@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4336"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 4) C4336 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4336"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4336"
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerwarnung (Stufe 4) C4336
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

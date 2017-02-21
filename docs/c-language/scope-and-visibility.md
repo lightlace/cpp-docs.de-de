@@ -1,26 +1,25 @@
 ---
-title: "Bereich und Sichtbarkeit"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Bereich und Sichtbarkeit | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Dateibereich [C++]"
   - "Gültigkeitsbereich, Stufen"
   - "Sichtbarkeit"
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Bereich und Sichtbarkeit
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

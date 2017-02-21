@@ -1,13 +1,12 @@
 ---
-title: "logb, logbf, logbl, _logb, _logbf"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "logb, logbf, logbl, _logb, _logbf | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "logb"
@@ -36,7 +35,6 @@ f1_keywords:
   - "logbf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_logb-Funktion"
   - "_logbf-Funktion"
@@ -50,9 +48,10 @@ helpviewer_keywords:
   - "Mantissen, Gleitkommavariablen"
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # logb, logbf, logbl, _logb, _logbf
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

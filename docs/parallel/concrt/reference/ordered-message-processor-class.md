@@ -1,13 +1,12 @@
 ---
-title: "ordered_message_processor-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ordered_message_processor-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "agents/concurrency::ordered_message_processor"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "ordered_message_processor-Klasse"
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
 caps.latest.revision: 17
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # ordered_message_processor-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

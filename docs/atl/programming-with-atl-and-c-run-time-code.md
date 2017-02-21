@@ -1,13 +1,12 @@
 ---
-title: "Programmieren mit ATL- und C-Laufzeitcode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Programmieren mit ATL- und C-Laufzeitcode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CRT, Verwenden mit ATL"
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
 caps.latest.revision: 12
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Programmieren mit ATL- und C-Laufzeitcode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

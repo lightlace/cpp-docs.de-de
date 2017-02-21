@@ -1,13 +1,12 @@
 ---
-title: "_endthread, _endthreadex"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_endthread, _endthreadex | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_endthread"
@@ -32,7 +31,6 @@ f1_keywords:
   - "endthread"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_endthread-Funktion"
   - "endthread-Funktion"
@@ -42,9 +40,10 @@ helpviewer_keywords:
   - "Threading [C++], Terminieren von threads"
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _endthread, _endthreadex
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

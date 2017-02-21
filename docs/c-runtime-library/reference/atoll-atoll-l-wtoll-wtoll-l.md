@@ -1,13 +1,12 @@
 ---
-title: "atoll, _atoll_l, _wtoll, _wtoll_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wtoll"
@@ -44,9 +43,10 @@ helpviewer_keywords:
   - "atoll-Funktion"
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
 caps.latest.revision: 7
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # atoll, _atoll_l, _wtoll, _wtoll_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

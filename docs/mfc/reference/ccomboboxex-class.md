@@ -1,13 +1,12 @@
 ---
-title: "CComboBoxEx Class"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CComboBoxEx Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CComboBoxEx"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Windows common controls [C++], extended combo boxes"
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
 caps.latest.revision: 26
-caps.handback.revision: "15"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # CComboBoxEx Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

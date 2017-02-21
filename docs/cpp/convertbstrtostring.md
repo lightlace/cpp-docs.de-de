@@ -1,13 +1,12 @@
 ---
-title: "ConvertBSTRToString"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ConvertBSTRToString | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ConvertBSTRToString"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "ConvertBSTRToString-Funktion"
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
 caps.latest.revision: 11
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # ConvertBSTRToString
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

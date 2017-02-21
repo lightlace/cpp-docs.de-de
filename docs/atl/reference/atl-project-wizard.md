@@ -1,13 +1,12 @@
 ---
-title: "ATL-Projekt-Assistent"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ATL-Projekt-Assistent | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "vc.appwiz.atl.com.overview"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "ATL-Projekte, Erstellen"
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # ATL-Projekt-Assistent
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Verarbeiten von Benachrichtigungsmeldungen in einem Grundleisten-Steuerelement"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verarbeiten von Benachrichtigungsmeldungen in einem Grundleisten-Steuerelement | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "RBN_-Benachrichtigungsmeldungen, Beschreibung von"
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Verarbeiten von Benachrichtigungsmeldungen in einem Grundleisten-Steuerelement
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

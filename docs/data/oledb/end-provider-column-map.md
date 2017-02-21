@@ -1,13 +1,12 @@
 ---
-title: "END_PROVIDER_COLUMN_MAP"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "END_PROVIDER_COLUMN_MAP | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "END_PROVIDER_COLUMN_MAP"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "END_PROVIDER_COLUMN_MAP-Makro"
 ms.assetid: f096a2e6-e793-4708-a29a-289dee7040ca
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # END_PROVIDER_COLUMN_MAP
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

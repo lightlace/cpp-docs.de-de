@@ -1,21 +1,21 @@
 ---
-title: "Befehlszeilenfehler D8000 bis D9000"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Befehlszeilenfehler D8000 bis D9000 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 dev_langs: 
   - "C++"
 ms.assetid: d02ec7df-26a5-4198-ac92-87b29ec9d5c8
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Befehlszeilenfehler D8000 bis D9000
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_setmaxstdio"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_setmaxstdio | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_setmaxstdio"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_setmaxstdio"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_setmaxstdio-Funktion"
   - "Maximale offene Dateien"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "setmaxstdio-Funktion"
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _setmaxstdio
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

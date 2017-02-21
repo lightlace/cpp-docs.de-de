@@ -1,13 +1,12 @@
 ---
-title: "Meldungen und Befehle im Framework"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Meldungen und Befehle im Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Meldungsgesteuerte Programmierung"
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Meldungen und Befehle im Framework
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

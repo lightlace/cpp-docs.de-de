@@ -1,13 +1,12 @@
 ---
-title: "_ecvt"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ecvt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ecvt"
@@ -25,20 +24,17 @@ apilocation:
   - "api-ms-win-crt-convert-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_ecvt"
+  - "ecvt"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_ecvt-Funktion"
-  - "Konvertieren doppelter Zahlen"
   - "ecvt-Funktion"
-  - "Zahlen, Konvertieren"
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
 caps.latest.revision: 21
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # _ecvt
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

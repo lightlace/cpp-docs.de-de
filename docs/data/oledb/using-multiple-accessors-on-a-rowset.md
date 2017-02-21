@@ -1,13 +1,12 @@
 ---
-title: "Verwenden mehrerer Accessoren f&#252;r ein Rowset"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden mehrerer Accessoren f&#252;r ein Rowset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Rowsets [C++], Mehrere Accessoren"
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Verwenden mehrerer Accessoren f&#252;r ein Rowset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

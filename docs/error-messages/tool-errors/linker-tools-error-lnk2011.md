@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolfehler LNK2011"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolfehler LNK2011 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK2011"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK2011"
 ms.assetid: 04991ef5-49d5-46c7-8eee-a9d1d3fc541e
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Linkertoolfehler LNK2011
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

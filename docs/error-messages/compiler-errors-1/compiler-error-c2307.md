@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2307"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2307 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2307"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2307"
 ms.assetid: ce6c8033-a673-4679-9883-bedec36ae385
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerfehler C2307
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

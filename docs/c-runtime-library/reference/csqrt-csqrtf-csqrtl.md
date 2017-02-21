@@ -1,14 +1,13 @@
 ---
-title: "Csqrt, Csqrtf, csqrtl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Csqrt, Csqrtf, csqrtl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "csqrt"
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/csqrtf"
   - "complex/csqrtl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "Csqrt-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Csqrtl-Funktion"
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Csqrt, Csqrtf, csqrtl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

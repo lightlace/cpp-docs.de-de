@@ -1,13 +1,12 @@
 ---
-title: "auto_handle::operator bool"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "auto_handle::operator bool | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "auto_handle.operator bool"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "auto_handle::operator bool"
 ms.assetid: 2e535e99-cf87-4008-b588-02c587d77453
 caps.latest.revision: 12
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # auto_handle::operator bool
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

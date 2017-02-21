@@ -1,13 +1,12 @@
 ---
-title: "CWnd-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CWnd-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CWnd"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "windows [C++]"
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 caps.latest.revision: 27
-caps.handback.revision: "17"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # CWnd-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

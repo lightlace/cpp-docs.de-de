@@ -1,13 +1,12 @@
 ---
-title: "&lt;unordered_set&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;unordered_set&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "<unordered_set>"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "unordered_set-Header [TR1]"
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
 caps.latest.revision: 20
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # &lt;unordered_set&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

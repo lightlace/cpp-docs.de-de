@@ -1,13 +1,12 @@
 ---
-title: "sizeof-Operator"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "sizeof-Operator | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sizeof_cpp"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "sizeof-Operator"
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # sizeof-Operator
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

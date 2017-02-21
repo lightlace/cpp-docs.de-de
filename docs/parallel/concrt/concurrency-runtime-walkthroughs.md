@@ -1,13 +1,12 @@
 ---
-title: "Exemplarische Vorgehensweisen f&#252;r die Concurrency Runtime"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exemplarische Vorgehensweisen f&#252;r die Concurrency Runtime | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Exemplarische Vorgehensweisen [Concurrency Runtime]"
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
 caps.latest.revision: 14
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Exemplarische Vorgehensweisen f&#252;r die Concurrency Runtime
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

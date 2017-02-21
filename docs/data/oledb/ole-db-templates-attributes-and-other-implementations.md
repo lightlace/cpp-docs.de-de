@@ -1,13 +1,12 @@
 ---
-title: "Vorlagen, Attribute und andere Implementierungen von OLE&#160;DB"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Vorlagen, Attribute und andere Implementierungen von OLE&#160;DB | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "OLE DB, Implementierungen"
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Vorlagen, Attribute und andere Implementierungen von OLE&#160;DB
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

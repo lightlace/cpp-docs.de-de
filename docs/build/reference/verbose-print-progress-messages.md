@@ -1,13 +1,12 @@
 ---
-title: "/VERBOSE (Statusmeldungen ausgeben)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/VERBOSE (Statusmeldungen ausgeben) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/verbose"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "-VERBOSE (Linkeroption)"
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /VERBOSE (Statusmeldungen ausgeben)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

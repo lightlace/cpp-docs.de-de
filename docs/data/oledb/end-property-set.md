@@ -1,13 +1,12 @@
 ---
-title: "END_PROPERTY_SET"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "END_PROPERTY_SET | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "END_PROPERTY_SET"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "END_PROPERTY_SET-Makro"
 ms.assetid: c20a5c97-1d6e-41c5-be2f-244e008e87af
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # END_PROPERTY_SET
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

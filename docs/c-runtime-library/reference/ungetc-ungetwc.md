@@ -1,13 +1,12 @@
 ---
-title: "ungetc, ungetwc"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ungetc, ungetwc | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "ungetwc"
@@ -31,7 +30,6 @@ f1_keywords:
   - "ungetc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ungettc-Funktion"
   - "Zeichen, zurück auf den Stream"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "ungetwc-Funktion"
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
 caps.latest.revision: 16
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # ungetc, ungetwc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Inlinedateien in einem Makefile"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Inlinedateien in einem Makefile | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "NMAKE (Programm), Inlinedateien"
 ms.assetid: ff48a64f-773d-410c-9726-f867ad4c8030
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Inlinedateien in einem Makefile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

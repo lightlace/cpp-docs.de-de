@@ -1,16 +1,14 @@
 ---
-title: "Using the 256-Color Palette (Image Editor for Icons)"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Using the 256-Color Palette (Image Editor for Icons) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "256-color palette"
@@ -21,9 +19,10 @@ helpviewer_keywords:
   - "icons, color"
 ms.assetid: 1506ed00-669b-4a21-b1a4-39b6a84a78bb
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Using the 256-Color Palette (Image Editor for Icons)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

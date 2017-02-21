@@ -1,13 +1,12 @@
 ---
-title: "Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Exemplarische Vorgehensweisen [C++]"
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
 caps.latest.revision: 36
-caps.handback.revision: "32"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_tempnam_dbg, _wtempnam_dbg"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_tempnam_dbg, _wtempnam_dbg | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wtempnam_dbg"
@@ -31,7 +30,6 @@ f1_keywords:
   - "_wtempnam_dbg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tempnam_dbg-Funktion"
   - "_wtempnam_dbg-Funktion"
@@ -42,9 +40,10 @@ helpviewer_keywords:
   - "wtempnam_dbg-Funktion"
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _tempnam_dbg, _wtempnam_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "setvbuf"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "setvbuf | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "setvbuf"
@@ -28,16 +27,16 @@ f1_keywords:
   - "setvbuf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Steuern von Streampufferung"
   - "setvbuf-Funktion"
   - "Streampufferung"
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
 caps.latest.revision: 16
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # setvbuf
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3360"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3360 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C3360"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3360"
 ms.assetid: 6acf983a-dbb6-422b-b045-a34bb4ba6761
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerfehler C3360
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

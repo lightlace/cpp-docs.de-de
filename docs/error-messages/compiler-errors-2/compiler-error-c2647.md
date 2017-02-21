@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2647"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2647 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2647"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2647"
 ms.assetid: 1034589e-bc3e-41a6-831f-2a1a4b8a2500
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Compilerfehler C2647
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

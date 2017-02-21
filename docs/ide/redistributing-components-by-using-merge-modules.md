@@ -1,13 +1,12 @@
 ---
-title: "Neuverteilen von Komponenten mit Mergemodulen"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Neuverteilen von Komponenten mit Mergemodulen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Verteilen von Anwendungen, Verwenden von Mergemodulen"
 ms.assetid: 93b84211-bf9b-4a78-9f22-474ac2ef7840
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Neuverteilen von Komponenten mit Mergemodulen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "binary_delegate_noreturn (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "binary_delegate_noreturn (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::binary_delegate_noreturn"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "binary_delegate_noreturn-Funktion [STL/CLR]"
 ms.assetid: 055c7e9d-e5c3-48fe-9327-3f6316e8a51e
 caps.latest.revision: 8
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # binary_delegate_noreturn (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

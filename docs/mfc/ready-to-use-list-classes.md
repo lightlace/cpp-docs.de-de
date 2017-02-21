@@ -1,13 +1,12 @@
 ---
-title: "Einsatzbereite Listenklassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Einsatzbereite Listenklassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.classes.list"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Listenklassen"
 ms.assetid: aed8e9bd-edb7-4620-84a2-77c20322abd7
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Einsatzbereite Listenklassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

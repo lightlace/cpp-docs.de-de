@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolfehler LNK1245"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolfehler LNK1245 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK1245"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK1245"
 ms.assetid: 179c8165-ffbb-44cd-9f24-5250f29577cc
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Linkertoolfehler LNK1245
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

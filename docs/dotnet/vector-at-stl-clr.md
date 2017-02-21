@@ -1,13 +1,12 @@
 ---
-title: "vector::at (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "vector::at (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::vector::at"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "at-Member [STL/CLR]"
 ms.assetid: 9af9f829-48b8-4906-ba4a-b43454acb2c7
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # vector::at (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

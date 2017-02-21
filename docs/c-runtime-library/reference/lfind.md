@@ -1,13 +1,12 @@
 ---
-title: "_lfind"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "lfind | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_lfind"
@@ -26,22 +25,16 @@ apilocation:
 apitype: "DLLExport"
 f1_keywords: 
   - "lfind"
-  - "_lfind"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_lfind-Funktion"
-  - "Arrays [CRT], Suchen"
-  - "Suchen von Schlüsseln in Arrays"
   - "lfind-Funktion"
-  - "Lineares Suchen"
-  - "Suchen, Linear"
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
 caps.latest.revision: 20
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # _lfind
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Stile f&#252;r das Statussteuerelement"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Stile f&#252;r das Statussteuerelement | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Statussteuerelemente [C++], Formate"
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Stile f&#252;r das Statussteuerelement
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

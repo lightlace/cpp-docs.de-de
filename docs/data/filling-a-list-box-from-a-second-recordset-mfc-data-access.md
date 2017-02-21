@@ -1,13 +1,12 @@
 ---
-title: "F&#252;llen eines Listenfelds aus einem zweiten Recordset MFC-(Datenzugriff)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "F&#252;llen eines Listenfelds aus einem zweiten Recordset MFC-(Datenzugriff) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -25,9 +24,10 @@ helpviewer_keywords:
   - "Recordsets [C++], Füllen von Listen- oder Kombinationsfeldern"
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # F&#252;llen eines Listenfelds aus einem zweiten Recordset MFC-(Datenzugriff)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

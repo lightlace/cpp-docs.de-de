@@ -1,13 +1,12 @@
 ---
-title: "_beginthread, _beginthreadex"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_beginthread, _beginthreadex | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_beginthread"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_beginthreadex"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_beginthread-Funktion"
   - "Threading [C++], Erstellen von threads"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "beginthread-Funktion"
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
 caps.latest.revision: 36
-caps.handback.revision: "36"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # _beginthread, _beginthreadex
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

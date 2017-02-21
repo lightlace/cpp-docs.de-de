@@ -1,13 +1,12 @@
 ---
-title: "Version Information Editor"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Version Information Editor | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.version.F1"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "resource editors, Version Information editor"
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
 caps.latest.revision: 13
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Version Information Editor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

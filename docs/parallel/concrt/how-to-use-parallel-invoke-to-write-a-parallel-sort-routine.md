@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Verwenden von parallel_invoke zum Schreiben einer Runtime f&#252;r paralleles Sortieren"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Verwenden von parallel_invoke zum Schreiben einer Runtime f&#252;r paralleles Sortieren | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Verbessern der parallelen Leistung mit Aufgabengruppen [Concurrency Runtime]"
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
 caps.latest.revision: 23
-caps.handback.revision: "20"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Gewusst wie: Verwenden von parallel_invoke zum Schreiben einer Runtime f&#252;r paralleles Sortieren
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

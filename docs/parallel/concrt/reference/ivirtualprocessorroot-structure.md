@@ -1,13 +1,12 @@
 ---
-title: "IVirtualProcessorRoot-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IVirtualProcessorRoot-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "concrtrm/concurrency::IVirtualProcessorRoot"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "IVirtualProcessorRoot-Struktur"
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
 caps.latest.revision: 18
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # IVirtualProcessorRoot-Struktur
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

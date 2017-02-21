@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen von Men&#252;band-Steuerelementen und Ereignishandlern"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Hinzuf&#252;gen von Men&#252;band-Steuerelementen und Ereignishandlern | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Menübandsteuerelemente, Hinzufügen"
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Gewusst wie: Hinzuf&#252;gen von Men&#252;band-Steuerelementen und Ereignishandlern
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

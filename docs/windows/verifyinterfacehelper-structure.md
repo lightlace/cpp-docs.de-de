@@ -1,13 +1,12 @@
 ---
-title: "VerifyInterfaceHelper-Struktur"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "VerifyInterfaceHelper-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::Details::VerifyInterfaceHelper"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "VerifyInterfaceHelper-Struktur"
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # VerifyInterfaceHelper-Struktur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

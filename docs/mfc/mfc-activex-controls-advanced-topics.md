@@ -1,13 +1,12 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Weiterf&#252;hrende Themen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-ActiveX-Steuerelemente: Weiterf&#252;hrende Themen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "ThrowError-Methode"
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
 caps.latest.revision: 13
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # MFC-ActiveX-Steuerelemente: Weiterf&#252;hrende Themen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

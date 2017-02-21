@@ -1,13 +1,12 @@
 ---
-title: "fseek, _fseeki64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fseek, _fseeki64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fseeki64"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_fseeki64"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fseeki64-Funktion"
   - "Dateizeiger [C++]"
@@ -39,9 +37,10 @@ helpviewer_keywords:
   - "seek-Dateizeiger"
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
 caps.latest.revision: 23
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # fseek, _fseeki64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

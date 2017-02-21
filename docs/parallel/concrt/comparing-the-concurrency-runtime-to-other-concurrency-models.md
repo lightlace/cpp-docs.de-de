@@ -1,13 +1,12 @@
 ---
-title: "Concurrency Runtime im Vergleich zu anderen Parallelit&#228;tsmodellen"
-ms.custom: na
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Concurrency Runtime im Vergleich zu anderen Parallelit&#228;tsmodellen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Concurrency Runtime im Vergleich zu anderen Modellen"
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Concurrency Runtime im Vergleich zu anderen Parallelit&#228;tsmodellen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

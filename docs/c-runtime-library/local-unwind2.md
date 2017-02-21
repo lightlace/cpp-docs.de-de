@@ -1,13 +1,12 @@
 ---
-title: "_local_unwind2"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_local_unwind2 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_local_unwind2"
@@ -30,9 +29,10 @@ helpviewer_keywords:
   - "local_unwind2-Funktion"
 ms.assetid: 44f1fa82-e01e-490f-a6e6-18fc6811c28c
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # _local_unwind2
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

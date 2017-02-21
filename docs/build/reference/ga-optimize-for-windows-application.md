@@ -1,13 +1,12 @@
 ---
-title: "/GA (F&#252;r Windows-Anwendung optimieren)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/GA (F&#252;r Windows-Anwendung optimieren) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLCompilerTool.OptimizeForWindowsApplication"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Optimieren für Windows (Compileroptionen)"
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /GA (F&#252;r Windows-Anwendung optimieren)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

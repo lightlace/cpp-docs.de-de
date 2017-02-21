@@ -1,13 +1,12 @@
 ---
-title: "reduction"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "reduction | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "reduction"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "reduction OpenMP clause"
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
 caps.latest.revision: 11
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # reduction
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CL-Befehlsdateien"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CL-Befehlsdateien | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "cl"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Befehlsdateien, CL-Compiler"
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # CL-Befehlsdateien
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_CrtDbgBreak"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_CrtDbgBreak | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_CrtDbgBreak"
@@ -28,15 +27,15 @@ f1_keywords:
   - "CrtDbgBreak"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CrtDbgBreak-Funktion"
   - "CrtDbgBreak-Funktion"
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _CrtDbgBreak
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "tan, tanf, tanl, tanh, tanhf, tanhl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "tan, tanf, tanl, tanh, tanhf, tanhl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "tanhf"
@@ -40,7 +39,6 @@ f1_keywords:
   - "tanhl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tanl-Funktion"
   - "tanhl-Funktion"
@@ -56,9 +54,10 @@ helpviewer_keywords:
   - "Hyperbolische Funktionen"
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
 caps.latest.revision: 16
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # tan, tanf, tanl, tanh, tanhf, tanhl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

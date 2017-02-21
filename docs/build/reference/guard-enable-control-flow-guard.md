@@ -1,13 +1,12 @@
 ---
-title: "/guard (Ablaufsteuerungsschutz aktivieren)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/guard (Ablaufsteuerungsschutz aktivieren) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/guard"
@@ -16,9 +15,10 @@ dev_langs:
   - "C++"
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # /guard (Ablaufsteuerungsschutz aktivieren)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3842"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3842 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C3842"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3842"
 ms.assetid: 41a1a44a-c618-40a2-8d26-7da27d14095d
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Compilerfehler C3842
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

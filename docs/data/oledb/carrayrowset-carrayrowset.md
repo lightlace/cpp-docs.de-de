@@ -1,13 +1,12 @@
 ---
-title: "CArrayRowset::CArrayRowset"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CArrayRowset::CArrayRowset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ATL::CArrayRowset::CArrayRowset"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "CArrayRowset-Klasse, Konstruktor"
 ms.assetid: 189076f3-4a7f-4284-ba96-aa0b284fd8f0
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CArrayRowset::CArrayRowset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

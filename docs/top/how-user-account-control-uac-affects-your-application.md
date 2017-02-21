@@ -1,26 +1,6 @@
 ---
-title: "Wie Benutzerkontensteuerung (UAC) die Anwendung beeinflusst"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UAC [C++]"
-  - "Sicherheit [C++], Benutzerkontensteuerung"
-  - "Benutzerkonten [C++]"
-  - "Benutzerkontensteuerung [C++]"
-ms.assetid: 0d001870-253e-4989-b689-f78035953799
-caps.latest.revision: 5
-caps.handback.revision: "5"
-ms.author: "ghogen"
-manager: "ghogen"
+redirect_url: /cpp/security/how-user-account-control-uac-affects-your-application
+caps.handback.revision: 5
 ---
 # Wie Benutzerkontensteuerung (UAC) die Anwendung beeinflusst
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

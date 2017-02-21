@@ -1,13 +1,12 @@
 ---
-title: "Using IDispEventImpl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Using IDispEventImpl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IDispEventImpl"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "IDispEventImpl class, Verwenden"
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
 caps.latest.revision: 12
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Using IDispEventImpl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

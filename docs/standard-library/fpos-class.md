@@ -1,13 +1,12 @@
 ---
-title: "fpos-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fpos-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.fpos"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "fpos-Klasse, Infos über die fpos-Klasse"
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
 caps.latest.revision: 20
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # fpos-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

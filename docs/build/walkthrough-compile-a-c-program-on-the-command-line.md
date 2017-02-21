@@ -1,16 +1,13 @@
 ---
-title: "Exemplarische Vorgehensweise: Kompilieren eines C-Programms in der Befehlszeile"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exemplarische Vorgehensweise: Kompilieren eines C-Programms in der Befehlszeile | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
 helpviewer_keywords: 
   - "Kompilieren eines C-Programms [C++]"
   - "Befehlszeilenanwendung [C++], C-Programme"
@@ -18,9 +15,10 @@ helpviewer_keywords:
   - "Visual C, Kompilieren"
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
 caps.latest.revision: 46
-caps.handback.revision: "31"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # Exemplarische Vorgehensweise: Kompilieren eines C-Programms in der Befehlszeile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

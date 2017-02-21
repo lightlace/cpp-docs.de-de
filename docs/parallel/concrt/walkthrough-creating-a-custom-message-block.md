@@ -1,13 +1,12 @@
 ---
-title: "Exemplarische Vorgehensweise: Erstellen eines benutzerdefinierten Nachrichtenblocks"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exemplarische Vorgehensweise: Erstellen eines benutzerdefinierten Nachrichtenblocks | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Benutzerdefinierte Nachrichtenblöcke erstellen [Concurrency Runtime]"
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Exemplarische Vorgehensweise: Erstellen eines benutzerdefinierten Nachrichtenblocks
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

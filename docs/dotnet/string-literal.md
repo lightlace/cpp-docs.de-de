@@ -1,13 +1,12 @@
 ---
-title: "Zeichenfolgenliterale"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Zeichenfolgenliterale | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Zeichenfolgen [C++], Zeichenfolgenliterale"
 ms.assetid: 6d1fc3f8-0d58-4d68-9678-16b4f6dc4766
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Zeichenfolgenliterale
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

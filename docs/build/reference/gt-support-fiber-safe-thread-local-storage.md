@@ -1,13 +1,12 @@
 ---
-title: "/GT (Fiber-sicheren lokalen Thread-Speicher unterst&#252;tzen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/GT (Fiber-sicheren lokalen Thread-Speicher unterst&#252;tzen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLCompilerTool.EnableFiberSafeOptimizations"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "Lokaler Threadspeicher"
 ms.assetid: 071fec79-c701-432b-9970-457344133159
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /GT (Fiber-sicheren lokalen Thread-Speicher unterst&#252;tzen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

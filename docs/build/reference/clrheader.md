@@ -1,13 +1,12 @@
 ---
-title: "/CLRHEADER"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/CLRHEADER | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/CLRHEADER"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-CLRHEADER (dumpbin-Option)"
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /CLRHEADER
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

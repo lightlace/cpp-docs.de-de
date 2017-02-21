@@ -1,13 +1,12 @@
 ---
-title: "getenv_s, _wgetenv_s"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "getenv_s, _wgetenv_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "getenv_s"
@@ -31,7 +30,6 @@ f1_keywords:
   - "_wgetenv_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tgetenv_s-Funktion"
   - "_wgetenv_s-Funktion"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "wgetenv_s-Funktion"
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
 caps.latest.revision: 42
-caps.handback.revision: "40"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 42
 ---
 # getenv_s, _wgetenv_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "__event"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__event | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "__event_cpp"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Ereignisse [C++], __event"
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # __event
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

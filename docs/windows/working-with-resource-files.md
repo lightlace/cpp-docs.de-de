@@ -1,13 +1,12 @@
 ---
-title: "Working with Resource Files"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Working with Resource Files | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "resource files, about resource files"
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
 caps.latest.revision: 22
-caps.handback.revision: "18"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Working with Resource Files
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

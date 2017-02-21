@@ -1,13 +1,12 @@
 ---
-title: "Eigenschaftenseite &quot;Tool zum Generieren von XML-Daten&quot;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Eigenschaftenseite &quot;Tool zum Generieren von XML-Daten&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCXMLDataGeneratorTool.GeneratedProxyLanguage"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Tool zum Generieren von XML-Daten (Eigenschaftenseite)"
 ms.assetid: b2ef1c12-3419-429d-bb9d-bd7d9ffe1ffb
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Eigenschaftenseite &quot;Tool zum Generieren von XML-Daten&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

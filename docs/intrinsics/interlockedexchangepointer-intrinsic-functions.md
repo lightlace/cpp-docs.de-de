@@ -1,13 +1,12 @@
 ---
-title: "Systeminterne Funktionen „_InterlockedExchangePointer“"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Systeminterne Funktionen „_InterlockedExchangePointer“ | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_InterlockedExchangePointer_cpp"
@@ -31,9 +30,10 @@ helpviewer_keywords:
   - "Systeminterne Funktion „InterlockedExchangePointer_acq“"
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Systeminterne Funktionen „_InterlockedExchangePointer“
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

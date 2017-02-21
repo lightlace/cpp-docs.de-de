@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2086"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2086 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2086"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2086"
 ms.assetid: 4329bf72-90c8-444c-8524-4ef75e6b2139
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerfehler C2086
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

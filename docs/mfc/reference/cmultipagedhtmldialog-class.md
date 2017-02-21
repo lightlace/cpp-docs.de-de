@@ -1,13 +1,12 @@
 ---
-title: "CMultiPageDHtmlDialog Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMultiPageDHtmlDialog Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMultiPageDHtmlDialog"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMultiPageDHtmlDialog class"
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
 caps.latest.revision: 22
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CMultiPageDHtmlDialog Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

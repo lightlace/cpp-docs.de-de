@@ -1,13 +1,12 @@
 ---
-title: "_open_osfhandle"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_open_osfhandle | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_open_osfhandle"
@@ -29,16 +28,16 @@ f1_keywords:
   - "open_osfhandle"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "open_osfhandle-Funktion"
   - "Dateihandles [C++], Zuordnen"
   - "_open_osfhandle-Funktion"
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _open_osfhandle
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

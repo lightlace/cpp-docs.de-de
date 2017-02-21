@@ -1,13 +1,12 @@
 ---
-title: "allocator_unbounded-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "allocator_unbounded-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "stdext::allocators::allocator_unbounded"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "allocator_unbounded-Klasse"
 ms.assetid: facbaea1-b320-4d99-96da-039b2642f352
 caps.latest.revision: 17
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # allocator_unbounded-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

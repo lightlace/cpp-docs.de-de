@@ -1,13 +1,12 @@
 ---
-title: "CPrintDialogEx Class"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CPrintDialogEx Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CPrintDialogEx"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Print Setup dialog box"
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
 caps.latest.revision: 22
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CPrintDialogEx Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

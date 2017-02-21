@@ -1,13 +1,12 @@
 ---
-title: "Funktionen der C-Laufzeitbibliothek zur Threadsteuerung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Funktionen der C-Laufzeitbibliothek zur Threadsteuerung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Threading [C++], Steuern von Threads"
 ms.assetid: 39d0529c-c392-4c6f-94f5-105d1e8054e4
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Funktionen der C-Laufzeitbibliothek zur Threadsteuerung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

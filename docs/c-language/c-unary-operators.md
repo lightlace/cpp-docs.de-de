@@ -1,25 +1,24 @@
 ---
-title: "C-Operatoren (un&#228;r)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "C-Operatoren (un&#228;r) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Operatoren [C], Unär"
   - "Unäre Operatoren"
 ms.assetid: 743e00b1-f874-4c0d-b211-8c24d4af9739
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # C-Operatoren (un&#228;r)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

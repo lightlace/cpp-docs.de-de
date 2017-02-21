@@ -1,13 +1,12 @@
 ---
-title: "CRowset-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CRowset-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ATL.CRowset<TAccessor>"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "CRowset-Klasse"
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # CRowset-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Understanding Backus Nauer Form (BNF) Syntax"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Understanding Backus Nauer Form (BNF) Syntax | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "BNF notation"
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
 caps.latest.revision: 15
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Understanding Backus Nauer Form (BNF) Syntax
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

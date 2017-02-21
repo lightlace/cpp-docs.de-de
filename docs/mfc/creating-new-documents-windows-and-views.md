@@ -1,13 +1,12 @@
 ---
-title: "Erstellen neuer Dokumente, Fenster und Ansichten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen neuer Dokumente, Fenster und Ansichten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -35,9 +34,10 @@ helpviewer_keywords:
   - "Fenster [C++], MDI"
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Erstellen neuer Dokumente, Fenster und Ansichten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

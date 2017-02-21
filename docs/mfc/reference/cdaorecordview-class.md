@@ -1,13 +1,12 @@
 ---
-title: "CDaoRecordView Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDaoRecordView Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CDaoRecordView"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Datengebundene Steuerelemente [C++], DAO-Steuerelemente"
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
 caps.latest.revision: 23
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CDaoRecordView Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

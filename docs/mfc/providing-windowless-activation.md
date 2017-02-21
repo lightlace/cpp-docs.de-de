@@ -1,13 +1,12 @@
 ---
-title: "Bereitstellung von fensterloser Aktivierung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Bereitstellung von fensterloser Aktivierung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Fensterlose Aktivierung von MFC-ActiveX-Steuerelementen"
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Bereitstellung von fensterloser Aktivierung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

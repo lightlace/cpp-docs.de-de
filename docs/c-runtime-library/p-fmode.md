@@ -1,13 +1,12 @@
 ---
-title: "__p__fmode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__p__fmode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "__p__fmode"
@@ -28,9 +27,10 @@ helpviewer_keywords:
   - "__p__fmode"
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # __p__fmode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

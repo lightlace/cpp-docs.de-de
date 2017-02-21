@@ -1,13 +1,12 @@
 ---
-title: "Dateinamen-Suchfunktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Dateinamen-Suchfunktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcr100.dll"
@@ -20,7 +19,6 @@ apilocation:
 apitype: "DLLExport"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Dateinamen [C++], Suchen nach"
   - "_find-Funktion"
@@ -29,9 +27,10 @@ helpviewer_keywords:
   - "_wfind-Funktion"
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
 caps.latest.revision: 26
-caps.handback.revision: "26"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # Dateinamen-Suchfunktionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

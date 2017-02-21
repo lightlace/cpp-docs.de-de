@@ -1,13 +1,12 @@
 ---
-title: "FtmBase::DisconnectObject-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "FtmBase::DisconnectObject-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ftm/Microsoft::WRL::FtmBase::DisconnectObject"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "DisconnectObject-Methode"
 ms.assetid: 33253eec-3a65-4e72-8525-0249245a4790
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # FtmBase::DisconnectObject-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

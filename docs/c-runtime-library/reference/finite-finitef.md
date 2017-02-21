@@ -1,13 +1,12 @@
 ---
-title: "_finite, _finitef"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_finite, _finitef | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_finite"
@@ -34,16 +33,16 @@ f1_keywords:
   - "float/_finite"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "finite-Funktion"
   - "_finite-Funktion"
   - "_finitef function"
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _finite, _finitef
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

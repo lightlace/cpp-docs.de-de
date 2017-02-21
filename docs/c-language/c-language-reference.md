@@ -1,19 +1,17 @@
 ---
-title: "C-Sprachreferenz"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "C-Sprachreferenz | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "index-page "
 f1_keywords: 
   - "c"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "C, Sprachreferenz"
   - "Sprachreferenz, C"
@@ -21,9 +19,10 @@ helpviewer_keywords:
   - "Visual C, Sprachreferenz"
 ms.assetid: 3a306c30-8dd2-435b-bd1c-c143b02c0872
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # C-Sprachreferenz
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

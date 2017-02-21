@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4820"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 4) C4820 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4820"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4820"
 ms.assetid: 17aa29f4-c287-49b8-bc43-8ed82ffed5ea
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Compilerwarnung (Stufe 4) C4820
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

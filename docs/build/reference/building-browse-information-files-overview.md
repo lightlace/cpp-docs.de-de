@@ -1,13 +1,12 @@
 ---
-title: "Erstellen von Browseinformationsdateien: &#220;bersicht"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen von Browseinformationsdateien: &#220;bersicht | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "BSC-Dateien, Informationen über BSC-Dateien"
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Erstellen von Browseinformationsdateien: &#220;bersicht
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

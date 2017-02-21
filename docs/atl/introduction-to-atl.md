@@ -1,13 +1,12 @@
 ---
-title: "Einf&#252;hrung in ATL"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Einf&#252;hrung in ATL | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "index-page "
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "COM-Objekte, creating in ATL"
 ms.assetid: 77f565e8-c4ec-4a80-af4b-7278fcfe5c98
 caps.latest.revision: 16
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Einf&#252;hrung in ATL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

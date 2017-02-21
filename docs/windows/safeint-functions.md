@@ -1,13 +1,12 @@
 ---
-title: "SafeInt-Funktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "SafeInt-Funktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Funktionen, SafeInt"
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # SafeInt-Funktionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

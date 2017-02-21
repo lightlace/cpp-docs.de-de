@@ -1,13 +1,12 @@
 ---
-title: "marshal_context::marshal_as"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "marshal_context::marshal_as | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "marshal_context::marshal_as"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "marshal_context-Klasse [C++], Operationen"
 ms.assetid: 24a1afee-51c0-497c-948c-f77fe43635c8
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # marshal_context::marshal_as
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

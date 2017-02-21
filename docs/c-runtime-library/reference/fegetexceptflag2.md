@@ -1,14 +1,13 @@
 ---
-title: "fegetexceptflag"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fegetexceptflag2 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "fegetexceptflag"
@@ -29,15 +28,15 @@ f1_keywords:
   - "fegetexceptflag"
   - "fenv/fegetexceptflag"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "Fegetexceptflag-Funktion"
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # fegetexceptflag
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

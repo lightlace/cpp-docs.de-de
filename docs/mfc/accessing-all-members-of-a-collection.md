@@ -1,13 +1,12 @@
 ---
-title: "Zugreifen auf alle Elemente einer Auflistung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Zugreifen auf alle Elemente einer Auflistung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -26,9 +25,10 @@ helpviewer_keywords:
   - "Schleifenstrukturen, Schleifendurchlauf durch Auflistungen"
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Zugreifen auf alle Elemente einer Auflistung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

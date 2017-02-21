@@ -1,13 +1,12 @@
 ---
-title: "/I (Zus&#228;tzliche Includeverzeichnisse)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/I (Zus&#228;tzliche Includeverzeichnisse) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories"
@@ -25,9 +24,10 @@ helpviewer_keywords:
   - "Einrichten von Include-Verzeichnissen"
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /I (Zus&#228;tzliche Includeverzeichnisse)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

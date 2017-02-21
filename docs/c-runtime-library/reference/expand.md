@@ -1,13 +1,12 @@
 ---
-title: "_expand"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_expand | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_expand"
@@ -35,16 +34,16 @@ f1_keywords:
   - "_expand"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_expand-Funktion"
   - "expand-Funktion"
   - "Speicherblöcke, Ändern der Größe"
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
 caps.latest.revision: 22
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _expand
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

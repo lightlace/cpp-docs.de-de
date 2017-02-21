@@ -1,13 +1,12 @@
 ---
-title: "Erstellen eigener Dialogfeldklassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen eigener Dialogfeldklassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "MFC-Dialogfelder, Erstellen"
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Erstellen eigener Dialogfeldklassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,18 +1,16 @@
 ---
-title: "Creating an Icon or Other Image (Image Editor for Icons)"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Creating an Icon or Other Image (Image Editor for Icons) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.bitmap"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "bitmaps [C++]"
@@ -24,9 +22,10 @@ helpviewer_keywords:
   - "Image editor [C++], creating images"
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Creating an Icon or Other Image (Image Editor for Icons)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

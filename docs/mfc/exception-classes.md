@@ -1,13 +1,12 @@
 ---
-title: "Ausnahmeklassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausnahmeklassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.classes.exception"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "MFC, Ausnahmen"
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ausnahmeklassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

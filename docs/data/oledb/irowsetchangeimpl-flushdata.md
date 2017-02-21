@@ -1,13 +1,12 @@
 ---
-title: "IRowsetChangeImpl::FlushData"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IRowsetChangeImpl::FlushData | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IRowsetChangeImpl::FlushData"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "FlushData-Methode"
 ms.assetid: fd4bc73b-bc25-4aab-90d5-0bed92670c88
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IRowsetChangeImpl::FlushData
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

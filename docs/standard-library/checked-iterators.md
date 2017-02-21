@@ -1,13 +1,12 @@
 ---
-title: "&#220;berpr&#252;fte Iteratoren"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#220;berpr&#252;fte Iteratoren | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_SECURE_SCL"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Sichere Standard-C++-Bibliothek"
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
 caps.latest.revision: 30
-caps.handback.revision: "29"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # &#220;berpr&#252;fte Iteratoren
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

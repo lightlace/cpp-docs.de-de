@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3893"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3893 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C3893"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3893"
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerfehler C3893
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

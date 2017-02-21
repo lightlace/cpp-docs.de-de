@@ -1,13 +1,12 @@
 ---
-title: "InvokeHelper-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "InvokeHelper-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "event/Microsoft::WRL::Details::InvokeHelper"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "InvokeHelper-Struktur"
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # InvokeHelper-Struktur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

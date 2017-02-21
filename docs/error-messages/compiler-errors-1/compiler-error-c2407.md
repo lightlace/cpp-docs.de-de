@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2407"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2407 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C2407"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2407"
 ms.assetid: faf38041-cf0f-4624-b6f8-30ce0e1efc1e
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerfehler C2407
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

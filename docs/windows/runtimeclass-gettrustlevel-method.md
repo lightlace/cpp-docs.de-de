@@ -1,13 +1,12 @@
 ---
-title: "RuntimeClass::GetTrustLevel-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "RuntimeClass::GetTrustLevel-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::RuntimeClass::GetTrustLevel"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "GetTrustLevel-Methode"
 ms.assetid: bd90407e-6dd7-41c3-9ea0-c402c276014a
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # RuntimeClass::GetTrustLevel-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

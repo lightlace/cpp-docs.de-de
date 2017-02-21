@@ -1,13 +1,12 @@
 ---
-title: "Benachrichtigungsmeldungen des Schieberegler-Steuerelements"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Benachrichtigungsmeldungen des Schieberegler-Steuerelements | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Schieberegler-Steuerelemente, Benachrichtigungsmeldungen"
 ms.assetid: b9121104-3889-4a10-92bf-f3723f1af9d0
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Benachrichtigungsmeldungen des Schieberegler-Steuerelements
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

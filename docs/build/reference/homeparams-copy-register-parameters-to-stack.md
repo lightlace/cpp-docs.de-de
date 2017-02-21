@@ -1,13 +1,12 @@
 ---
-title: "/homeparams (Registerparameter in den Stapel kopieren)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/homeparams (Registerparameter in den Stapel kopieren) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/homeparams"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "-homeparams (Compileroption) [C++]"
 ms.assetid: 51067de4-24f7-436b-b8d9-bc867a7d53aa
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /homeparams (Registerparameter in den Stapel kopieren)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

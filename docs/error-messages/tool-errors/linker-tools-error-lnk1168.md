@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolfehler LNK1168"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolfehler LNK1168 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK1168"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK1168"
 ms.assetid: 97ead151-fd99-46fe-9a1d-7e84dc0b8cc8
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Linkertoolfehler LNK1168
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

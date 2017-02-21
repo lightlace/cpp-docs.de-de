@@ -1,13 +1,12 @@
 ---
-title: "TN049: MFC/OLE MBCS f&#252;r die Unicode-&#220;bersetzungsebene (MFCANS32)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN049: MFC/OLE MBCS f&#252;r die Unicode-&#220;bersetzungsebene (MFCANS32) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.mbcs"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "TN049"
 ms.assetid: c027e30d-8a51-4e28-b215-13fc49b40431
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN049: MFC/OLE MBCS f&#252;r die Unicode-&#220;bersetzungsebene (MFCANS32)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

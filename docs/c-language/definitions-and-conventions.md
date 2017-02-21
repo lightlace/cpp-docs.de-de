@@ -1,24 +1,23 @@
 ---
-title: "Definitionen und Konventionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Definitionen und Konventionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Definition von Nichtterminals"
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Definitionen und Konventionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Optionen, ATL-Assistent f&#252;r einfache Objekte"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Optionen, ATL-Assistent f&#252;r einfache Objekte | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "vc.codewiz.class.atl.simple.options"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "ATL-Assistent für einfache Objekte, Optionen"
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
 caps.latest.revision: 14
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Optionen, ATL-Assistent f&#252;r einfache Objekte
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

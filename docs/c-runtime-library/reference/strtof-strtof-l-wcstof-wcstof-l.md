@@ -1,13 +1,12 @@
 ---
-title: "strtof, _strtof_l, wcstof, _wcstof_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strtof, _strtof_l, wcstof, _wcstof_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_strtof_l"
@@ -49,9 +48,10 @@ helpviewer_keywords:
   - "wcstof-Funktion"
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
 caps.latest.revision: 9
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # strtof, _strtof_l, wcstof, _wcstof_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

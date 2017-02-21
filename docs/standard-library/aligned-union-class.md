@@ -1,13 +1,12 @@
 ---
-title: "aligned_union-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "aligned_union-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "aligned_union"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "aligned_union"
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
 caps.latest.revision: 10
-caps.handback.revision: "2"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # aligned_union-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

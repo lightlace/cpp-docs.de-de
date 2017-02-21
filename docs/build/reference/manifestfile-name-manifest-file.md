@@ -1,13 +1,12 @@
 ---
-title: "/MANIFESTFILE (Benennen der Manifestdatei)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/MANIFESTFILE (Benennen der Manifestdatei) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.ManifestFile"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-MANIFESTFILE (Linkeroption)"
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /MANIFESTFILE (Benennen der Manifestdatei)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

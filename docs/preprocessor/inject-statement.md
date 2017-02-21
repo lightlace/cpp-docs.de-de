@@ -1,26 +1,25 @@
 ---
-title: "inject_statement"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "inject_statement | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "inject_statement"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "inject_statement-Attribut"
 ms.assetid: 07d6f0f4-d9fb-4e18-aa62-f235f142ff5e
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # inject_statement
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

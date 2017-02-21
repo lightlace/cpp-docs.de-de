@@ -1,13 +1,12 @@
 ---
-title: "CMDIFrameWndEx-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMDIFrameWndEx-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMDIFrameWndEx.AddDockSite"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CMDIFrameWndEx-Klasse"
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 caps.latest.revision: 42
-caps.handback.revision: "29"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 44
 ---
 # CMDIFrameWndEx-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

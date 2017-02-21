@@ -1,13 +1,12 @@
 ---
-title: "Erstellen einer Konsolenanwendung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen einer Konsolenanwendung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Konsolenanwendungen, Win32"
 ms.assetid: aedfb6b3-ca1f-4e8e-8439-1b680810ee47
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Erstellen einer Konsolenanwendung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

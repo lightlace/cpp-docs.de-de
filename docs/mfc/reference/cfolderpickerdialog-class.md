@@ -1,13 +1,12 @@
 ---
-title: "CFolderPickerDialog Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CFolderPickerDialog Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "afxdlgs/CFolderPickerDialog"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CFolderPickerDialog class"
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
 caps.latest.revision: 22
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CFolderPickerDialog Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

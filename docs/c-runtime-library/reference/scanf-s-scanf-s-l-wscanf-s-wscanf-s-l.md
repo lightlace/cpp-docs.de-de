@@ -1,13 +1,12 @@
 ---
-title: "scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "wscanf_s"
@@ -35,7 +34,6 @@ f1_keywords:
   - "_scanf_s_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Lesen von Daten [C++] aus Eingabestreams"
   - "Puffer [C++], Pufferüberlauf"
@@ -54,9 +52,10 @@ helpviewer_keywords:
   - "Puffer [C++], Vermeiden von Überläufen"
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
 caps.latest.revision: 33
-caps.handback.revision: "33"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

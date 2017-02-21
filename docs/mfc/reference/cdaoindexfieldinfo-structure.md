@@ -1,13 +1,12 @@
 ---
-title: "CDaoIndexFieldInfo-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDaoIndexFieldInfo-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CDaoIndexFieldInfo"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "DAO (Datenzugriffsobjekte), Indexfelderauflistung"
 ms.assetid: 097ee8a6-83b1-4db7-8f05-d62a2deefe19
 caps.latest.revision: 12
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # CDaoIndexFieldInfo-Struktur
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

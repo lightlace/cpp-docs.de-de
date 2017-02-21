@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Verwenden von Buildereignissen in MSBuild-Projekten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Verwenden von Buildereignissen in MSBuild-Projekten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "msbuild.cpp.howto.usebuildevents"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "MSBuild (C++), Gewusst wie: Verwenden von Buildereignissen in Projekten"
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
 caps.latest.revision: 23
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Gewusst wie: Verwenden von Buildereignissen in MSBuild-Projekten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "MFC-Unterst&#252;tzung in ATL-Projekten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-Unterst&#252;tzung in ATL-Projekten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "vc.atl.addmfc"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "ATL-Projekte, MFC-Unterstützung"
 ms.assetid: f90b4276-cb98-4c11-902c-9ebcfe6f954b
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # MFC-Unterst&#252;tzung in ATL-Projekten
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

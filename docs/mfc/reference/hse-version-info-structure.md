@@ -1,13 +1,12 @@
 ---
-title: "HSE_VERSION_INFO-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "HSE_VERSION_INFO-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "HSE_VERSION_INFO"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "HSE_VERSION_INFO-Struktur"
 ms.assetid: 4837312d-68c8-4d05-9afa-1934d7d49b20
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # HSE_VERSION_INFO-Struktur
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2871"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2871 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2871"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2871"
 ms.assetid: 44aeb84d-61f0-45e0-8dad-22a3cd46b7f8
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerfehler C2871
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

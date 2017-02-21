@@ -1,13 +1,12 @@
 ---
-title: "Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Shell-Steuerelemente (MFC)"
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
 caps.latest.revision: 14
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

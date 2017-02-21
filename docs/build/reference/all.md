@@ -1,13 +1,12 @@
 ---
-title: "/ALL"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/ALL | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/all"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-ALL-dumpbin-Option"
 ms.assetid: aa7eb74a-33ba-4d77-8620-3d7ea8b19952
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /ALL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

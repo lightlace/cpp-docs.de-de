@@ -1,13 +1,12 @@
 ---
-title: "istreambuf_iterator-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "istreambuf_iterator-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "istreambuf_iterator"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "istreambuf_iterator-Klasse"
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
 caps.latest.revision: 19
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # istreambuf_iterator-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
