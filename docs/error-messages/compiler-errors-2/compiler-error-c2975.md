@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2975"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2975 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2975"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2975"
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerfehler C2975
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

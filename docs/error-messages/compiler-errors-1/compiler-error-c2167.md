@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2167"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2167 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C2167"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2167"
 ms.assetid: 3de3de96-12cd-47df-b24e-34cc9747ef83
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerfehler C2167
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

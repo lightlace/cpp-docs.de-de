@@ -1,13 +1,12 @@
 ---
-title: "try-finally-Anweisung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "try-finally-Anweisung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "__try"
@@ -29,9 +28,10 @@ helpviewer_keywords:
   - "try-finally-Schlüsselwort [C++]"
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # try-finally-Anweisung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

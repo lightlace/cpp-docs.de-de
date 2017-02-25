@@ -1,13 +1,12 @@
 ---
-title: "attribute"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "attribute | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "vc-attr.attribute"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "attributes [C++], custom"
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # attribute
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Aktive Dokumente"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Aktive Dokumente | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Ansichten [C++], Aktive Dokumente"
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Aktive Dokumente
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

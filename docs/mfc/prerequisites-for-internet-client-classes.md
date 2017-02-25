@@ -1,13 +1,12 @@
 ---
-title: "Voraussetzungen f&#252;r Internetclientklassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Voraussetzungen f&#252;r Internetclientklassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -27,9 +26,10 @@ helpviewer_keywords:
   - "URLs [C++], Internetclientanwendungen"
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Voraussetzungen f&#252;r Internetclientklassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

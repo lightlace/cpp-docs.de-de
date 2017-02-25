@@ -1,13 +1,12 @@
 ---
-title: "Hostmodell f&#252;r RDO-Datensteuerelemente in einem Container"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hostmodell f&#252;r RDO-Datensteuerelemente in einem Container | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "RemoteData-Steuerelement, Hostmodell"
 ms.assetid: ca598bac-9fef-40e6-b6cd-03d817e16b2e
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Hostmodell f&#252;r RDO-Datensteuerelemente in einem Container
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

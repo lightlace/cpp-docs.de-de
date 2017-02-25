@@ -1,13 +1,12 @@
 ---
-title: "greater (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "greater (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::greater"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "greater-Funktion [STL/CLR]"
 ms.assetid: a6dfe5e3-b5a5-4ec4-8e53-8dd33a37d10d
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # greater (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

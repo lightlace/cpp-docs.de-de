@@ -1,14 +1,13 @@
 ---
-title: "Catan, Catanf, catanl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Catan, Catanf, catanl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "catan"
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/catanf"
   - "complex/catanl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "Catan-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Catanl-Funktion"
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Catan, Catanf, catanl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Finding an Entry in an Accelerator Table"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Finding an Entry in an Accelerator Table | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "accelerator tables [C++], finding entries"
 ms.assetid: 98146b12-571e-48ea-a660-eb6b1834a79b
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Finding an Entry in an Accelerator Table
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

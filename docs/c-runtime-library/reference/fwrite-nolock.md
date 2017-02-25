@@ -1,13 +1,12 @@
 ---
-title: "_fwrite_nolock"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_fwrite_nolock | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fwrite_nolock"
@@ -29,16 +28,16 @@ f1_keywords:
   - "fwrite_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fwrite_nolock-Funktion"
   - "fwrite_nolock-Funktion"
   - "Streams, Schreiben von Daten auf"
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _fwrite_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "strtol, wcstol, _strtol_l, _wcstol_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strtol, wcstol, _strtol_l, _wcstol_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "strtol"
@@ -36,7 +35,6 @@ f1_keywords:
   - "_tcstol_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_strtol_l-Funktion"
   - "_tcstol-Funktion"
@@ -49,9 +47,10 @@ helpviewer_keywords:
   - "wcstol_l-Funktion"
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # strtol, wcstol, _strtol_l, _wcstol_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CRBMultiMap Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CRBMultiMap Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CRBMultiMap"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CRBMultiMap class"
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
 caps.latest.revision: 19
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CRBMultiMap Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Aktualisieren einer Spalte, wenn eine andere Tabelle einen Verweis auf die Zeile enth&#228;lt"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Aktualisieren einer Spalte, wenn eine andere Tabelle einen Verweis auf die Zeile enth&#228;lt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Rowsets, Spaltenaktualisierungen"
 ms.assetid: abb5db69-055d-431f-b12d-ad2940a661ba
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Aktualisieren einer Spalte, wenn eine andere Tabelle einen Verweis auf die Zeile enth&#228;lt
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

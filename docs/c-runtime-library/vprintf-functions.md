@@ -1,13 +1,12 @@
 ---
-title: "vprintf-Funktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "vprintf-Funktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcr110.dll"
@@ -21,15 +20,15 @@ f1_keywords:
   - "vprintf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Formatierter Text [C++]"
   - "vprintf-Funktion"
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # vprintf-Funktionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

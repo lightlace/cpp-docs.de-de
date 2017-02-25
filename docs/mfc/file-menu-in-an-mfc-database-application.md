@@ -1,13 +1,12 @@
 ---
-title: "Das Dateimen&#252; in einer MFC-Datenbankanwendung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Das Dateimen&#252; in einer MFC-Datenbankanwendung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Datenbankanwendungen [C++] Befehle im Menü „Datei“"
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Das Dateimen&#252; in einer MFC-Datenbankanwendung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

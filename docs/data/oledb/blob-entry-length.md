@@ -1,13 +1,12 @@
 ---
-title: "BLOB_ENTRY_LENGTH"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "BLOB_ENTRY_LENGTH | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "BLOB_ENTRY_LENGTH"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "BLOB_ENTRY_LENGTH-Makro"
 ms.assetid: 832d21ab-5fdd-49ad-af6e-4fca5722ec93
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # BLOB_ENTRY_LENGTH
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

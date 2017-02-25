@@ -1,22 +1,21 @@
 ---
-title: "Umbenennen mit einem bereits vorhandenen Namen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Umbenennen mit einem bereits vorhandenen Namen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: fc2a8f29-f757-4ce0-8d7f-7f8cff7f49ab
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Umbenennen mit einem bereits vorhandenen Namen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

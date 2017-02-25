@@ -1,13 +1,12 @@
 ---
-title: "MFC-Programm oder Steuern von Quell- und Headerdateien"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-Programm oder Steuern von Quell- und Headerdateien | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Dateitypen [C++], MFC-Quelle und -Header"
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC-Programm oder Steuern von Quell- und Headerdateien
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

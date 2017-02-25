@@ -1,13 +1,12 @@
 ---
-title: "Grundleisten-Steuerelemente und B&#228;nder"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Grundleisten-Steuerelemente und B&#228;nder | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "rebar-Steuerelemente, Arbeiten mit Bereichen in"
 ms.assetid: b647e7a5-9ea7-48b1-8e5f-096d104748f0
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Grundleisten-Steuerelemente und B&#228;nder
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

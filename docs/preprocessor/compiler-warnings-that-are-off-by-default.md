@@ -1,25 +1,24 @@
 ---
-title: "Standardm&#228;&#223;ig deaktivierte Compilerwarnungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Standardm&#228;&#223;ig deaktivierte Compilerwarnungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "cl.exe-Compiler, Festlegen von Optionen"
   - "Warnungen, Compiler"
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 caps.latest.revision: 39
-caps.handback.revision: "37"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # Standardm&#228;&#223;ig deaktivierte Compilerwarnungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

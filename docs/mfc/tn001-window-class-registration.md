@@ -1,13 +1,12 @@
 ---
-title: "TN001: Fensterklassenregistrierung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN001: Fensterklassenregistrierung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.registration"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "WNDCLASS"
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
 caps.latest.revision: 16
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # TN001: Fensterklassenregistrierung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

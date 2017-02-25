@@ -1,13 +1,12 @@
 ---
-title: "Festlegen der Pfad- und Umgebungsvariablen f&#252;r Befehlszeilenbuilds"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Festlegen der Pfad- und Umgebungsvariablen f&#252;r Befehlszeilenbuilds | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 f1_keywords: 
   - "include"
@@ -28,9 +27,10 @@ helpviewer_keywords:
   - "VCVARS32.bat (Datei)"
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
 caps.latest.revision: 17
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Festlegen der Pfad- und Umgebungsvariablen f&#252;r Befehlszeilenbuilds
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

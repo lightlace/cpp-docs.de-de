@@ -1,13 +1,12 @@
 ---
-title: "is_trivially_default_constructible-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "is_trivially_default_constructible-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "is_trivially_default_constructible"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "is_trivially_default_constructible"
 ms.assetid: 653ecd73-909f-4dd8-b95a-d1164d1c2da4
 caps.latest.revision: 17
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # is_trivially_default_constructible-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "operator SHORT"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "operator SHORT | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "operator SHORT"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "SHORT operator"
 ms.assetid: 41e0982a-4f4e-4b48-ba58-e32d72053249
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # operator SHORT
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "MakeAndInitialize-Funktion"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MakeAndInitialize-Funktion | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::Details::MakeAndInitialize"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # MakeAndInitialize-Funktion
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

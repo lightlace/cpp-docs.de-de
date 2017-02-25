@@ -1,13 +1,12 @@
 ---
-title: "UI Support Classes"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "UI Support Classes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.atl.ui"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Benutzeroberflächen, support classes"
 ms.assetid: 313dfc95-308a-4118-b919-5a3c3673b865
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # UI Support Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

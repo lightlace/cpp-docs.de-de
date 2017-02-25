@@ -1,17 +1,15 @@
 ---
-title: "Funktionsdeklarationen und -definitionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Funktionsdeklarationen und -definitionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Deklarieren von Funktionen"
   - "Deklarieren von Funktionen, Funktionsdefinitionen"
@@ -23,9 +21,10 @@ helpviewer_keywords:
   - "Lokale Deklarationen"
 ms.assetid: 43fd98eb-7441-4473-a5d9-fc88c75577f7
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Funktionsdeklarationen und -definitionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

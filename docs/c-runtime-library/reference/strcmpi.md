@@ -1,13 +1,12 @@
 ---
-title: "strcmpi"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strcmpi | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_strcmpi"
@@ -28,14 +27,14 @@ f1_keywords:
   - "strcmpi"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "strcmpi-Funktion"
 ms.assetid: 74206b2f-9bca-4d32-9cdc-93cb94c2aaa1
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # strcmpi
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

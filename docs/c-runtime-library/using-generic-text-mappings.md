@@ -1,19 +1,17 @@
 ---
-title: "Verwenden von Zuordnungen f&#252;r generischen Text"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von Zuordnungen f&#252;r generischen Text | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_UNICODE"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_MBCS-Datentyp"
   - "_T-Typ"
@@ -39,9 +37,10 @@ helpviewer_keywords:
   - "UNICODE-Konstante"
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Verwenden von Zuordnungen f&#252;r generischen Text
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

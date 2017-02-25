@@ -1,13 +1,12 @@
 ---
-title: "Schema (MFC-Datenzugriff)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schema (MFC-Datenzugriff) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Strukturen [C++], Datenbank"
 ms.assetid: 7d17e35f-1ccf-4853-b915-5b8c7a45b9ee
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Schema (MFC-Datenzugriff)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

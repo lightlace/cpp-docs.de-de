@@ -1,13 +1,12 @@
 ---
-title: "bitand"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "bitand | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcrt.dll"
@@ -31,9 +30,10 @@ helpviewer_keywords:
   - "bitand-Funktion"
 ms.assetid: 279cf9b5-fac1-49de-b329-f1a31b3481fe
 caps.latest.revision: 12
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # bitand
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

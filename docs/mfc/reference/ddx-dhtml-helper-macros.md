@@ -1,13 +1,12 @@
 ---
-title: "DDX_DHtml Helper Macros"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "DDX_DHtml Helper Macros | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "DDX_DHtml"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Makros, exchanging data with HMTL pages"
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
 caps.latest.revision: 14
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # DDX_DHtml Helper Macros
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

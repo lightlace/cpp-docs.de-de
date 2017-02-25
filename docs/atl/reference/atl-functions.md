@@ -1,13 +1,12 @@
 ---
-title: "ATL Functions"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ATL Functions | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Funktionen [ATL]"
 ms.assetid: 69db0cb2-de1d-445b-b692-020d6e8c2173
 caps.latest.revision: 17
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # ATL Functions
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "TN063: Debuggen von Interneterweiterungs-DLLs"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN063: Debuggen von Interneterweiterungs-DLLs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vs.debug.dlls"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "TN063"
 ms.assetid: 7012d592-9d2f-491a-b417-48e5c2a7680f
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN063: Debuggen von Interneterweiterungs-DLLs
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

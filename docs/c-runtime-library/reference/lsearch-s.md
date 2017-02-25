@@ -1,13 +1,12 @@
 ---
-title: "_lsearch_s"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_lsearch_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_lsearch_s"
@@ -29,7 +28,6 @@ f1_keywords:
   - "lsearch_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_lsearch_s-Funktion"
   - "Arrays [CRT], Suchen"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "Werte, Suchen nach"
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _lsearch_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

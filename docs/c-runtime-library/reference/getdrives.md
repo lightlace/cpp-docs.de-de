@@ -1,13 +1,12 @@
 ---
-title: "_getdrives"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_getdrives | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_getdrives"
@@ -29,16 +28,16 @@ f1_keywords:
   - "_getdrives"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getdrives-Funktion"
   - "Datenträgerlaufwerke"
   - "getdrives-Funktion"
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _getdrives
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

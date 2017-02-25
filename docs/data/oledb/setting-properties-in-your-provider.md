@@ -1,13 +1,12 @@
 ---
-title: "Festlegen von Eigenschaften im Anbieter"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Festlegen von Eigenschaften im Anbieter | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Eigenschaften [C++], OLE DB-Anbieter"
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Festlegen von Eigenschaften im Anbieter
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

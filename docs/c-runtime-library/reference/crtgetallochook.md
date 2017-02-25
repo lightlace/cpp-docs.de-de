@@ -1,13 +1,12 @@
 ---
-title: "_CrtGetAllocHook"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_CrtGetAllocHook | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_CrtGetAllocHook"
@@ -28,15 +27,15 @@ f1_keywords:
   - "_CrtGetAllocHook"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CrtGetAllocHook-Funktion"
   - "CrtGetAllocHook-Funktion"
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _CrtGetAllocHook
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

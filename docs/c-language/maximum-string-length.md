@@ -1,17 +1,15 @@
 ---
-title: "Maximal zul&#228;ssige Zeichenfolgenl&#228;nge"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Maximal zul&#228;ssige Zeichenfolgenl&#228;nge | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Längen, Zeichenfolgen"
   - "Maximal zulässige Zeichenfolgenlänge"
@@ -19,9 +17,10 @@ helpviewer_keywords:
   - "Zeichenfolgen [C++], Länge"
 ms.assetid: 99a80e4a-6212-47b7-a6bd-bdf99bd44928
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Maximal zul&#228;ssige Zeichenfolgenl&#228;nge
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

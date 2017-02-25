@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolwarnung LNK4039"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolwarnung LNK4039 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK4039"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK4039"
 ms.assetid: ed7b1783-a7b2-4d3e-8afb-ca1648dae2c2
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Linkertoolwarnung LNK4039
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

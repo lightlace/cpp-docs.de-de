@@ -1,13 +1,12 @@
 ---
-title: "Drucken mit RichEdit-Steuerelementen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Drucken mit RichEdit-Steuerelementen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Rich-Edit-Steuerelemente, Drucken"
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Drucken mit RichEdit-Steuerelementen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

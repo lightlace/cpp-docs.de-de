@@ -1,17 +1,15 @@
 ---
-title: "Konvertierungen von ganzzahligen Typen ohne Vorzeichen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Konvertierungen von ganzzahligen Typen ohne Vorzeichen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Datentypkonvertierung [C++], Ganzzahlen mit und ohne Vorzeichen"
   - "Ganze Zahlen, Konvertieren"
@@ -20,9 +18,10 @@ helpviewer_keywords:
   - "Typkonvertierung [C++], Ganzzahlen mit und ohne Vorzeichen"
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Konvertierungen von ganzzahligen Typen ohne Vorzeichen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "strcoll-Funktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strcoll-Funktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcr120.dll"
@@ -21,7 +20,6 @@ f1_keywords:
   - "strcoll"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Codepages, Verwenden für Zeichenfolgevergleiche"
   - "strcoll-Funktionen"
@@ -29,9 +27,10 @@ helpviewer_keywords:
   - "Zeichenfolgen [C++], Vergleichen nach Codepage"
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # strcoll-Funktionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

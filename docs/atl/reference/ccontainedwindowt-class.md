@@ -1,13 +1,12 @@
 ---
-title: "CContainedWindowT Class"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CContainedWindowT Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CContainedWindow"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "contained windows"
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
 caps.latest.revision: 23
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CContainedWindowT Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

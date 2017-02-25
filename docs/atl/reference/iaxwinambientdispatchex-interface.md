@@ -1,13 +1,12 @@
 ---
-title: "IAxWinAmbientDispatchEx Interface"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IAxWinAmbientDispatchEx Interface | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL.IAxWinAmbientDispatchEx"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "IAxWinAmbientDispatchEx interface"
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
 caps.latest.revision: 25
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # IAxWinAmbientDispatchEx Interface
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

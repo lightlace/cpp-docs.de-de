@@ -1,13 +1,12 @@
 ---
-title: "CComObject Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CComObject Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL.CComObject<Base>"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "CComObject class"
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
 caps.latest.revision: 19
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CComObject Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

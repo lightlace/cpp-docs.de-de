@@ -1,17 +1,15 @@
 ---
-title: "Umwandlungsoperatoren"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Umwandlungsoperatoren | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Umwandlungsoperatoren"
   - "Operatoren [C++], Umwandlung"
@@ -19,9 +17,10 @@ helpviewer_keywords:
   - "Typkonvertierung, Umwandlungsoperatoren"
 ms.assetid: 43b90bbd-39ef-43e6-ae5d-e8a67a01de40
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Umwandlungsoperatoren
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3116"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3116 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C3116"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3116"
 ms.assetid: 597463e1-a5cc-4ed3-a917-eae9a61d3312
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Compilerfehler C3116
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

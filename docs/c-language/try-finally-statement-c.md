@@ -1,13 +1,12 @@
 ---
-title: "try-finally-Anweisung (C)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "try-finally-Anweisung (C) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "try_cpp"
@@ -16,7 +15,6 @@ f1_keywords:
   - "finally_cpp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__finally-Schlüsselwort [C]"
   - "__finally-Schlüsselwort [C], try-finally-Anweisung (Syntax)"
@@ -26,9 +24,10 @@ helpviewer_keywords:
   - "try-finally-Schlüsselwort [C]"
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # try-finally-Anweisung (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

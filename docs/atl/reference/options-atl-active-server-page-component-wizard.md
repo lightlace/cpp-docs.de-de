@@ -1,13 +1,12 @@
 ---
-title: "Optionen, ATL-Assistent f&#252;r Active Server Page-Komponenten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Optionen, ATL-Assistent f&#252;r Active Server Page-Komponenten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "vc.codewiz.class.atl.asp.options"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "ATL-Assistent für Active Server Page-Komponenten, Optionen"
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
 caps.latest.revision: 12
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Optionen, ATL-Assistent f&#252;r Active Server Page-Komponenten
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

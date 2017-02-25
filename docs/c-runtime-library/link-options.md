@@ -1,17 +1,15 @@
 ---
-title: "Linkoptionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkoptionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "nothrownew.obj"
   - "newmode.obj"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "pnoarg.obj"
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Linkoptionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

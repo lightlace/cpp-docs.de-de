@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3059"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3059 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C3059"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3059"
 ms.assetid: 57220324-8286-4cab-a1ab-45385eb1eae0
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerfehler C3059
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

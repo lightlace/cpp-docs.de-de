@@ -1,13 +1,12 @@
 ---
-title: "Semaphore::Lock-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Semaphore::Lock-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::Semaphore::Lock"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Lock-Methode"
 ms.assetid: 0eef6ede-dc7d-4f09-a6c8-2f7d39d65bfa
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Semaphore::Lock-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

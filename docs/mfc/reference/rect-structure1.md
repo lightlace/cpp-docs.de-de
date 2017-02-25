@@ -1,13 +1,12 @@
 ---
-title: "RECT-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "RECT-Structure1 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "LPRECT"
@@ -15,13 +14,14 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "LPRECT-Struktur"
   - "RECT-Struktur"
+  - "LPRECT-Struktur"
 ms.assetid: 1b3160de-64e9-40d1-89eb-af3e0fd6acf0
 caps.latest.revision: 13
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # RECT-Struktur
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

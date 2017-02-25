@@ -1,13 +1,12 @@
 ---
-title: "OLE DB Consumer Attributes"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "OLE DB Consumer Attributes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "attributes [C++], OLE DB consumer"
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # OLE DB Consumer Attributes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

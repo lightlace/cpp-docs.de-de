@@ -1,13 +1,12 @@
 ---
-title: "auto_gcroot::get"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "auto_gcroot::get | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "msclr::auto_gcroot::get"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "auto_gcroot::get"
 ms.assetid: 0e922019-1cf5-4220-b5ab-6c4a2a6b40ec
 caps.latest.revision: 13
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # auto_gcroot::get
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Verwenden fr&#252;herer Symbolleisten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden fr&#252;herer Symbolleisten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "COldToolBar"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Symbolleisten [C++], Abwärtskompatibilität"
 ms.assetid: 3543257c-8547-43f0-a66a-ee641dc1cf89
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Verwenden fr&#252;herer Symbolleisten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

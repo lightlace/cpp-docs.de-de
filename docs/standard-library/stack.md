@@ -1,13 +1,12 @@
 ---
-title: "&lt; Stack &gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt; Stack &gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.<stack>"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "stack-Header"
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # &lt; Stack &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

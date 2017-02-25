@@ -1,13 +1,12 @@
 ---
-title: "fseek- und _lseek-Konstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fseek- und _lseek-Konstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "SEEK_END"
@@ -15,16 +14,16 @@ f1_keywords:
   - "SEEK_CUR"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "SEEK_CUR-Konstante"
   - "SEEK_END-Konstante"
   - "SEEK_SET-Konstante"
 ms.assetid: 9deeb13e-5aa3-4c33-80d8-721c80a4de9d
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # fseek- und _lseek-Konstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_recalloc_dbg"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_recalloc_dbg | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_recalloc_dbg"
@@ -28,15 +27,15 @@ f1_keywords:
   - "_recalloc_dbg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_recalloc_dbg-Funktion"
   - "recalloc_dbg-Funktion"
 ms.assetid: 43c3e9b2-be6d-4508-9b0f-3220c8a47ca3
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _recalloc_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

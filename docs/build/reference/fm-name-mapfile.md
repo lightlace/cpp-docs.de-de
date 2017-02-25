@@ -1,13 +1,12 @@
 ---
-title: "/Fm (Name der Zuordnungsdatei)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Fm (Name der Zuordnungsdatei) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/fm"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Zuordnungsdateien [C++], Erstellen des Linkers"
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /Fm (Name der Zuordnungsdatei)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Ausf&#252;hren von Memberfunktion"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausf&#252;hren von Memberfunktion | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "WinMain-Methode, calls CWinApp::Run"
 ms.assetid: 24ab7597-2354-495b-9a20-2c8ccc7385b3
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Ausf&#252;hren von Memberfunktion
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "NMAKE: Schwerwiegender Fehler U1045"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "NMAKE: Schwerwiegender Fehler U1045 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "U1045"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "U1045"
 ms.assetid: dc70d162-14b9-4107-9237-7514044d72e3
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # NMAKE: Schwerwiegender Fehler U1045
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CPane Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CPane Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CPane"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CPane class"
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 caps.latest.revision: 30
-caps.handback.revision: "18"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # CPane Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

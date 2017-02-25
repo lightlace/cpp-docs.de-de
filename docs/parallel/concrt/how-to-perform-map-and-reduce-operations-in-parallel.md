@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Paralleles Ausf&#252;hren von Zuordnungs- und Reduzierungsoperationen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Paralleles Ausf&#252;hren von Zuordnungs- und Reduzierungsoperationen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Parallel_reduce-Funktion, Beispiel:"
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Gewusst wie: Paralleles Ausf&#252;hren von Zuordnungs- und Reduzierungsoperationen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

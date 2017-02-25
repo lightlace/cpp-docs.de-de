@@ -1,13 +1,12 @@
 ---
-title: "Men&#252;s und Ressourcen: Men&#252;s schachteln"
-ms.custom: na
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Men&#252;s und Ressourcen: Men&#252;s schachteln | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Visuelle Bearbeitung, Anwendungsmenüs und Ressourcen"
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
 caps.latest.revision: 9
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Men&#252;s und Ressourcen: Men&#252;s schachteln
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

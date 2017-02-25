@@ -1,13 +1,12 @@
 ---
-title: "Fehlerbehandlung in JScript-Assistentendateien"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Fehlerbehandlung in JScript-Assistentendateien | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "JScript-Fehlerbehandlung bei Assistenten"
 ms.assetid: 6df3ba46-7ab6-484c-ac45-b08f4b6a5900
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Fehlerbehandlung in JScript-Assistentendateien
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

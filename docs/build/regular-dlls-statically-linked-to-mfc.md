@@ -1,13 +1,12 @@
 ---
-title: "Regul&#228;re, statisch mit MFC verkn&#252;pfte DLLs"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Regul&#228;re, statisch mit MFC verkn&#252;pfte DLLs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "USRDLLs, Statisch gebunden mit MFC"
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Regul&#228;re, statisch mit MFC verkn&#252;pfte DLLs
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

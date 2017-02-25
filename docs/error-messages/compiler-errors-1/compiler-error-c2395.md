@@ -1,13 +1,12 @@
 ---
-title: "Compiler Error C2395"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compiler Error C2395 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2395"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2395"
 ms.assetid: 2d9e3b28-8c2c-4f41-a57f-61ef88fc2af0
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Compiler Error C2395
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,17 +1,15 @@
 ---
-title: "Initialisierung von Aggregattypen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Initialisierung von Aggregattypen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Aggregattypen [C++]"
   - "Aggregate [C++], Initialisieren"
@@ -20,9 +18,10 @@ helpviewer_keywords:
   - "union-Schlüsselwort [C], Deklarationen"
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Initialisierung von Aggregattypen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

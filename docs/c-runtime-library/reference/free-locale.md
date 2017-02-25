@@ -1,13 +1,12 @@
 ---
-title: "_free_locale"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_free_locale | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_free_locale"
@@ -30,7 +29,6 @@ f1_keywords:
   - "_free_locale"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__free_locale-Funktion"
   - "_free_locale-Funktion"
@@ -38,9 +36,10 @@ helpviewer_keywords:
   - "Gebietsschemas, Freigeben"
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _free_locale
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

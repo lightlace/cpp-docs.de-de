@@ -1,13 +1,12 @@
 ---
-title: "_memccpy"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_memccpy | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_memccpy"
@@ -28,15 +27,15 @@ f1_keywords:
   - "_memccpy"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_memccpy-Funktion"
   - "memccpy-Funktion"
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _memccpy
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

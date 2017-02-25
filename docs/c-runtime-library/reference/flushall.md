@@ -1,13 +1,12 @@
 ---
-title: "_flushall"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_flushall | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_flushall"
@@ -28,7 +27,6 @@ f1_keywords:
   - "_flushall"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "flushall-Funktion"
   - "Leeren von Streams"
@@ -36,9 +34,10 @@ helpviewer_keywords:
   - "_flushall-Funktion"
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
 caps.latest.revision: 16
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _flushall
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

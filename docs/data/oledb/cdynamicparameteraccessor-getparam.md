@@ -1,13 +1,12 @@
 ---
-title: "CDynamicParameterAccessor::GetParam"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDynamicParameterAccessor::GetParam | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CDynamicParameterAccessor::GetParam"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "GetParam-Methode"
 ms.assetid: 893a6bf8-7b55-4f6d-8a10-a43b13be7f56
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CDynamicParameterAccessor::GetParam
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

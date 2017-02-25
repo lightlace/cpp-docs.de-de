@@ -1,13 +1,12 @@
 ---
-title: "/favor (Optimieren f&#252;r Besonderheiten der Architektur)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/favor (Optimieren f&#252;r Besonderheiten der Architektur) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/favor"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "/favor (Compileroption) [C++]"
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
 caps.latest.revision: 31
-caps.handback.revision: "31"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # /favor (Optimieren f&#252;r Besonderheiten der Architektur)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

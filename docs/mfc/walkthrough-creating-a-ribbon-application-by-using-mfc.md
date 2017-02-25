@@ -1,13 +1,12 @@
 ---
-title: "Exemplarische Vorgehensweise: Erstellen einer Men&#252;bandanwendung mithilfe von MFC"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exemplarische Vorgehensweise: Erstellen einer Men&#252;bandanwendung mithilfe von MFC | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Menübandanwendung, Erstellen (MFC)"
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 caps.latest.revision: 21
-caps.handback.revision: "17"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Exemplarische Vorgehensweise: Erstellen einer Men&#252;bandanwendung mithilfe von MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

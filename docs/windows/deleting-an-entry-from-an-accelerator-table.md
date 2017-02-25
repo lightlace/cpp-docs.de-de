@@ -1,13 +1,12 @@
 ---
-title: "Deleting an Entry From an Accelerator Table"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Deleting an Entry From an Accelerator Table | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "keyboard shortcuts [C++], deleting entry from accelerator table"
 ms.assetid: cc9cd499-dc04-4fe6-9393-a3e471e115a6
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Deleting an Entry From an Accelerator Table
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

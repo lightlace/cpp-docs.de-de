@@ -1,13 +1,12 @@
 ---
-title: "__clrcall"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__clrcall | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "__clrcall"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "__clrcall-Schlüsselwort [C++]"
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 caps.latest.revision: 17
-caps.handback.revision: "15"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # __clrcall
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

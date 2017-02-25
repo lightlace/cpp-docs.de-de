@@ -1,13 +1,12 @@
 ---
-title: "/WINMD (Windows-Metadaten generieren)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/WINMD (Windows-Metadaten generieren) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.GenerateWindowsMetadata"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /WINMD (Windows-Metadaten generieren)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

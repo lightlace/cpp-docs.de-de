@@ -1,13 +1,12 @@
 ---
-title: "Elapsed Time: General-Purpose Classes"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Elapsed Time: General-Purpose Classes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Uhrzeit, elapsed"
 ms.assetid: e5c5d3d2-ce1d-409e-875c-98848434e716
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Elapsed Time: General-Purpose Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

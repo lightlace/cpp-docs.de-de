@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung C4972"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung C4972 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C4972"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4972"
 ms.assetid: d18e8e65-b2ef-4d75-a207-fbd0c17c9060
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Compilerwarnung C4972
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4365"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 4) C4365 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4365"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4365"
 ms.assetid: af4b4191-bdfd-4dbb-8229-3ba4405df257
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Compilerwarnung (Stufe 4) C4365
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

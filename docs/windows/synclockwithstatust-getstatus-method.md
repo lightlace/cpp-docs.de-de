@@ -1,13 +1,12 @@
 ---
-title: "SyncLockWithStatusT::GetStatus-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "SyncLockWithStatusT::GetStatus-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::GetStatus"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "GetStatus-Methode"
 ms.assetid: d448b51d-a63d-40d9-a9ee-4aad3204118d
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # SyncLockWithStatusT::GetStatus-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

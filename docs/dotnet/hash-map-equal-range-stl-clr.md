@@ -1,13 +1,12 @@
 ---
-title: "hash_map::equal_range (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "hash_map::equal_range (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::hash_map::equal_range"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "equal_range-Member [STL/CLR]"
 ms.assetid: 9b9a18b8-42fd-4d17-91bd-df85e583cf61
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # hash_map::equal_range (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

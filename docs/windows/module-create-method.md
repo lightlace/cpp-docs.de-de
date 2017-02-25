@@ -1,13 +1,12 @@
 ---
-title: "Module::Create-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Module::Create-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "module/Microsoft::WRL::Module::Create"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Create-Methode"
 ms.assetid: bfa97fd7-5226-4604-92a5-3b9697053e64
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Module::Create-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

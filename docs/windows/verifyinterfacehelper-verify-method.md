@@ -1,13 +1,12 @@
 ---
-title: "VerifyInterfaceHelper::Verify-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "VerifyInterfaceHelper::Verify-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::Details::VerifyInterfaceHelper::Verify"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Verify-Methode"
 ms.assetid: 619752f0-f0b0-4711-a7d4-efb48c2f8798
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # VerifyInterfaceHelper::Verify-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

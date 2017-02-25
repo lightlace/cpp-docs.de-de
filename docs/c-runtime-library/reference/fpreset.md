@@ -1,13 +1,12 @@
 ---
-title: "_fpreset"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_fpreset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fpreset"
@@ -29,16 +28,16 @@ f1_keywords:
   - "fpreset"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fpreset-Funktion"
   - "Gleitkommazahlen, Neu festlegen von mathematischen Paketen"
   - "fpreset-Funktion"
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
 caps.latest.revision: 16
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _fpreset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

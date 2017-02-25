@@ -1,13 +1,12 @@
 ---
-title: "Ausgabestreams"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausgabestreams | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Ausgabestreams"
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
 caps.latest.revision: 12
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Ausgabestreams
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

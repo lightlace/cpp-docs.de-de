@@ -1,13 +1,12 @@
 ---
-title: "IDBInitializeImpl::m_dwStatus"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IDBInitializeImpl::m_dwStatus | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ATL::IDBInitializeImpl::m_dwStatus"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "m_dwStatus"
 ms.assetid: 7621ccff-ca60-4b75-9c6a-c104bd0e2038
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # IDBInitializeImpl::m_dwStatus
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3183"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3183 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C3183"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3183"
 ms.assetid: dbd0f020-c739-43c9-947e-9ce21537331b
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Compilerfehler C3183
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

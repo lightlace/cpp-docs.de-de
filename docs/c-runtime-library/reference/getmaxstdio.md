@@ -1,13 +1,12 @@
 ---
-title: "_getmaxstdio"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_getmaxstdio | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_getmaxstdio"
@@ -29,7 +28,6 @@ f1_keywords:
   - "getmaxstdio"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getmaxstdio-Funktion"
   - "Dateien [C++], Zahl offen"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "Offene Dateien, Abrufen einer Zahl"
 ms.assetid: 700ca8ce-4a8c-4e00-9467-dfa9d6b831a0
 caps.latest.revision: 13
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _getmaxstdio
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

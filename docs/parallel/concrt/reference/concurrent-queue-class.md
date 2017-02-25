@@ -1,13 +1,12 @@
 ---
-title: "concurrent_queue-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "concurrent_queue-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "concurrent_queue/concurrency::concurrent_queue"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "concurrent_queue-Klasse"
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
 caps.latest.revision: 21
-caps.handback.revision: "15"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # concurrent_queue-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

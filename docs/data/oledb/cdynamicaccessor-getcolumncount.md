@@ -1,13 +1,12 @@
 ---
-title: "CDynamicAccessor::GetColumnCount"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDynamicAccessor::GetColumnCount | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ATL.CDynamicAccessor.GetColumnCount"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "GetColumnCount-Methode"
 ms.assetid: cd72cb01-6b89-4b13-9867-fbac6efc90d0
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CDynamicAccessor::GetColumnCount
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

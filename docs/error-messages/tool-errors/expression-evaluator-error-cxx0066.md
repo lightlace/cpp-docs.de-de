@@ -1,13 +1,12 @@
 ---
-title: "Ausdrucksauswertungsfehler CXX0066"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausdrucksauswertungsfehler CXX0066 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "CXX0066"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CXX0066"
 ms.assetid: 1321e4e1-b441-424b-9e76-c208d4a6f6ea
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ausdrucksauswertungsfehler CXX0066
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

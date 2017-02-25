@@ -1,13 +1,12 @@
 ---
-title: "PROTO"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "PROTO | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "PROTO"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "PROTO directive"
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # PROTO
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

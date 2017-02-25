@@ -1,13 +1,12 @@
 ---
-title: "MFC-Anwendungs-Assistent"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-Anwendungs-Assistent | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.appwiz.mfc.exe.overview"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "MFC-Anwendungs-Assistent"
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
 caps.latest.revision: 14
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # MFC-Anwendungs-Assistent
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

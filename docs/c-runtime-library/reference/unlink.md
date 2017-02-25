@@ -1,13 +1,12 @@
 ---
-title: "unlink"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "unlink | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "unlink"
@@ -27,14 +26,14 @@ f1_keywords:
   - "unlink"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "unlink-Funktion"
 ms.assetid: 2cd82055-5770-48be-88ee-4b2c70541c46
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # unlink
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

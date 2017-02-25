@@ -1,13 +1,12 @@
 ---
-title: "Steuerleistenklassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Steuerleistenklassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.classes.control"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Steuerleisten, Klassen"
 ms.assetid: 11009103-cad8-4309-85ce-3d2e858e1818
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Steuerleistenklassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

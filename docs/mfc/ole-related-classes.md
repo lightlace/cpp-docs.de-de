@@ -1,13 +1,12 @@
 ---
-title: "OLE-bezogene Klassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "OLE-bezogene Klassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.classes.ole"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "OLE-Klassen [C++]"
 ms.assetid: 2135cf54-1d9d-4e0e-91b4-943b3440effa
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # OLE-bezogene Klassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

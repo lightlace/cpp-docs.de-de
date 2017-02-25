@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 2) C4056"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 2) C4056 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4056"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4056"
 ms.assetid: a3c3a9b8-ec30-452d-96cb-3694adcce789
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerwarnung (Stufe 2) C4056
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

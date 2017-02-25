@@ -1,13 +1,12 @@
 ---
-title: "IErrorRecordsImpl::m_rgErrors"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IErrorRecordsImpl::m_rgErrors | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IErrorRecordsImpl::m_rgErrors"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "m_rgErrors"
 ms.assetid: 295552bd-7a76-41cb-8f09-90e2caf47f69
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IErrorRecordsImpl::m_rgErrors
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

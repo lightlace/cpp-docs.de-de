@@ -1,13 +1,12 @@
 ---
-title: "__noop"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__noop | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "__noop_cpp"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "__noop-Schlüsselwort [C++]"
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # __noop
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

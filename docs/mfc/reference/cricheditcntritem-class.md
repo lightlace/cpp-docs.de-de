@@ -1,13 +1,12 @@
 ---
-title: "CRichEditCntrItem Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CRichEditCntrItem Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CRichEditCntrItem"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Rich-Edit-Steuerelemente, Verwenden"
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
 caps.latest.revision: 24
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CRichEditCntrItem Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Resource Files (Visual Studio)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Resource Files (Visual Studio) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -27,9 +26,10 @@ helpviewer_keywords:
   - "resource script files, unsupported types"
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
 caps.latest.revision: 18
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Resource Files (Visual Studio)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

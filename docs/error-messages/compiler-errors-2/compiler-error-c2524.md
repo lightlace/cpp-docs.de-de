@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2524"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2524 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2524"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2524"
 ms.assetid: e71d17f5-2fc2-416b-8dbd-e9bed85eb33a
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerfehler C2524
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

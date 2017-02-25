@@ -1,13 +1,12 @@
 ---
-title: "regex_error-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "regex_error-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::tr1::regex_error"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "regex_error-Klasse [TR1]"
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
 caps.latest.revision: 19
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # regex_error-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

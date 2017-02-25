@@ -1,13 +1,12 @@
 ---
-title: "getc, getwc"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "getc, getwc | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "getwc"
@@ -32,7 +31,6 @@ f1_keywords:
   - "getc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_gettc-Funktion"
   - "Zeichen, Lesen"
@@ -44,9 +42,10 @@ helpviewer_keywords:
   - "Streams, Lesen von Zeichen aus"
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # getc, getwc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Projektbuildfehler PRJ0050"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Projektbuildfehler PRJ0050 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "PRJ0050"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "PRJ0050"
 ms.assetid: ceef3b37-0acf-4abd-ac62-aa830b4fa145
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Projektbuildfehler PRJ0050
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

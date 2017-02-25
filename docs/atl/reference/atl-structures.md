@@ -1,13 +1,12 @@
 ---
-title: "ATL Structures"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ATL Structures | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "index-page "
 f1_keywords: 
   - "vc.atl.structures"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Strukturen, ATL"
 ms.assetid: 622173c8-6f2e-457c-8fae-28d4e80ecdb5
 caps.latest.revision: 14
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # ATL Structures
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

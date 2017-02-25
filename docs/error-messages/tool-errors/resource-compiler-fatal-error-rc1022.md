@@ -1,13 +1,12 @@
 ---
-title: "Ressourcencompiler: Schwerwiegender Fehler RC1022"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ressourcencompiler: Schwerwiegender Fehler RC1022 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "RC1022"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "RC1022"
 ms.assetid: 30a0f3c7-08a8-4c40-b0de-46ee5feb789d
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ressourcencompiler: Schwerwiegender Fehler RC1022
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

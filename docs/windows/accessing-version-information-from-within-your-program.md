@@ -1,13 +1,12 @@
 ---
-title: "Accessing Version Information from Within Your Program"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Accessing Version Information from Within Your Program | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.version"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "version information"
 ms.assetid: 18622333-d9e8-4309-9465-677cd10c79b1
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Accessing Version Information from Within Your Program
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

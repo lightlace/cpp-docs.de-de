@@ -1,13 +1,12 @@
 ---
-title: "Fenster &quot;Farben&quot; (Bildbearbeitung f&#252;r Symbole)"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Fenster &quot;Farben&quot; (Bildbearbeitung f&#252;r Symbole) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.colorswindow"
@@ -26,9 +25,10 @@ helpviewer_keywords:
   - "Farbanzeige"
 ms.assetid: 1d9b6c16-bf1d-4488-a19b-5d6fe601846a
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Fenster &quot;Farben&quot; (Bildbearbeitung f&#252;r Symbole)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

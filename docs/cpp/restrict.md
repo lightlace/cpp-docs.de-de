@@ -1,27 +1,26 @@
 ---
-title: "restrict"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__restrict | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
-  - "restrict"
-  - "restrict_cpp"
+  - "__restrict"
+  - "__restrict_cpp"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "__declspec-Schlüsselwort [C++], restrict"
-  - "restrict __declspec-Schlüsselwort"
+  - "__restrict-Schlüsselwort [C++]"
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # restrict
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

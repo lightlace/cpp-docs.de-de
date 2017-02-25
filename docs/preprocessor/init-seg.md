@@ -1,29 +1,28 @@
 ---
-title: "init_seg"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "init_seg | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc-pragma.init_seg"
   - "init_seg_CPP"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Datensegmentinitialisierung [C++]"
   - "init_seg-Pragma"
   - "Pragmas, init_seg"
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
 caps.latest.revision: 13
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # init_seg
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

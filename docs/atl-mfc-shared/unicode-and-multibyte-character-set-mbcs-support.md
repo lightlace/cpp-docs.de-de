@@ -1,13 +1,12 @@
 ---
-title: "Unterst&#252;tzung f&#252;r Unicode- und Multibyte-Zeichens&#228;tze (MBCS)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Unterst&#252;tzung f&#252;r Unicode- und Multibyte-Zeichens&#228;tze (MBCS) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Zeichenfolgen [C++], Zeichensatzunterstützung"
 ms.assetid: 44b3193b-c92d-40c5-9fa8-5774da303cce
 caps.latest.revision: 17
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Unterst&#252;tzung f&#252;r Unicode- und Multibyte-Zeichens&#228;tze (MBCS)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

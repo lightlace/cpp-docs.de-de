@@ -1,13 +1,12 @@
 ---
-title: "Hinzuf&#252;gen einer neuen Schnittstelle in einem ATL-Projekt"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hinzuf&#252;gen einer neuen Schnittstelle in einem ATL-Projekt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "vc.appwiz.ATL.interface"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Schnittstellen, Hinzufügen zu ATL-Objekten"
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Hinzuf&#252;gen einer neuen Schnittstelle in einem ATL-Projekt
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

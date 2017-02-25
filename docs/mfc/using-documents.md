@@ -1,13 +1,12 @@
 ---
-title: "Verwenden von Dokumenten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von Dokumenten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -25,9 +24,10 @@ helpviewer_keywords:
   - "Schreiben in Dateien [C++]"
 ms.assetid: f390d6d8-d0e1-4497-9b6a-435f7ce0776c
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Verwenden von Dokumenten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_aligned_realloc"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_aligned_realloc | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_aligned_realloc"
@@ -29,15 +28,15 @@ f1_keywords:
   - "aligned_realloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "aligned_realloc-Funktion"
   - "_aligned_realloc-Funktion"
 ms.assetid: 80ce96e8-6087-416f-88aa-4dbb8cb1d218
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _aligned_realloc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_ismbb-Routinen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ismbb-Routinen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcr110.dll"
@@ -23,15 +22,15 @@ f1_keywords:
   - "ismbb"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbb-Routinen"
   - "ismbb-Routinen"
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _ismbb-Routinen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

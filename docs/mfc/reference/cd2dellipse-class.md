@@ -1,13 +1,12 @@
 ---
-title: "CD2DEllipse-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CD2DEllipse-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "afxrendertarget/CD2DEllipse"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CD2DEllipse-Klasse"
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
 caps.latest.revision: 18
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # CD2DEllipse-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

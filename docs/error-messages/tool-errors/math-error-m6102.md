@@ -1,13 +1,12 @@
 ---
-title: "Mathematischer Fehler M6102"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Mathematischer Fehler M6102 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "M6102"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "M6102"
 ms.assetid: dbd2241f-6595-431e-9597-d9dbdb3a0ca2
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Mathematischer Fehler M6102
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

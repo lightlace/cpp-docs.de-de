@@ -1,13 +1,12 @@
 ---
-title: "Deklaration eines verwalteten Klassentyps"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Deklaration eines verwalteten Klassentyps | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "Werttypen, Deklarieren"
 ms.assetid: 16de9c94-91d7-492f-8ac7-f0729cc627e9
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Deklaration eines verwalteten Klassentyps
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

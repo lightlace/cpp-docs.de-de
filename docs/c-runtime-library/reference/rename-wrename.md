@@ -1,13 +1,12 @@
 ---
-title: "rename, _wrename"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "rename, _wrename | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "rename"
@@ -31,7 +30,6 @@ f1_keywords:
   - "Rename"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_trename-Funktion"
   - "_wrename-Funktion"
@@ -46,9 +44,10 @@ helpviewer_keywords:
   - "wrename-Funktion"
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # rename, _wrename
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

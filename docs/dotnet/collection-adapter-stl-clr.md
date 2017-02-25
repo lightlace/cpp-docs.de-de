@@ -1,13 +1,12 @@
 ---
-title: "collection_adapter (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "collection_adapter (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::collection_adapter"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "collection_adapter-Klasse [STL/CLR]"
 ms.assetid: 31964058-1f50-48bf-82c2-b0b3cc8a7887
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # collection_adapter (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

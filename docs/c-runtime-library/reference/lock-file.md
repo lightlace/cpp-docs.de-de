@@ -1,13 +1,12 @@
 ---
-title: "_lock_file"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_lock_file | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_lock_file"
@@ -29,16 +28,16 @@ f1_keywords:
   - "lock_file"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_lock_file-Funktion"
   - "Dateisperrung [C++]"
   - "lock_file-Funktion"
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _lock_file
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

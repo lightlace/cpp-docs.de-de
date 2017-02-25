@@ -1,13 +1,12 @@
 ---
-title: "setbuf"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "setbuf | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "setbuf"
@@ -28,15 +27,15 @@ f1_keywords:
   - "setbuf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "setbuf-Funktion"
   - "Streampufferung"
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
 caps.latest.revision: 16
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # setbuf
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

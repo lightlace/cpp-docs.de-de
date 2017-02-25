@@ -1,13 +1,12 @@
 ---
-title: "bad_weak_ptr-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "bad_weak_ptr-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "memory/std::tr1::bad_weak_ptr"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "bad_weak_ptr-Klasse [TR1]"
 ms.assetid: a09336d5-7237-4480-ab6b-3787e0e6025e
 caps.latest.revision: 20
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # bad_weak_ptr-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Dialogfeld &quot;ActiveX-Steuerelement einf&#252;gen&quot;"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Dialogfeld &quot;ActiveX-Steuerelement einf&#252;gen&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.dialog.insertActiveXControls"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "ActiveX-Steuerelemente [C++], Hinzufügen zu Dialogfeldern"
 ms.assetid: 06638ea3-0726-40da-a989-9b89292d0e3d
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Dialogfeld &quot;ActiveX-Steuerelement einf&#252;gen&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

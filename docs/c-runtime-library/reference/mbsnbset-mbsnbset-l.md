@@ -1,13 +1,12 @@
 ---
-title: "_mbsnbset, _mbsnbset_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mbsnbset, _mbsnbset_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mbsnbset"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_mbsnbset_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsnbset-Funktion"
   - "_mbsnbset_l-Funktion"
@@ -44,9 +42,10 @@ helpviewer_keywords:
   - "tcsnset_l-Funktion"
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
 caps.latest.revision: 24
-caps.handback.revision: "24"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _mbsnbset, _mbsnbset_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

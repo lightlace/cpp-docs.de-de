@@ -1,13 +1,12 @@
 ---
-title: "TN068: Ausf&#252;hren von Transaktionen mit dem Microsoft Access 7 ODBC-Treiber"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN068: Ausf&#252;hren von Transaktionen mit dem Microsoft Access 7 ODBC-Treiber | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.data.odbc"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Transaktionen, Microsoft Access"
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN068: Ausf&#252;hren von Transaktionen mit dem Microsoft Access 7 ODBC-Treiber
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

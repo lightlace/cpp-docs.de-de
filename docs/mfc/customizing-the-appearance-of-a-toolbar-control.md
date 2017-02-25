@@ -1,13 +1,12 @@
 ---
-title: "Anpassen der Darstellung eines Symbolleisten-Steuerelements"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Anpassen der Darstellung eines Symbolleisten-Steuerelements | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "TBSTYLE_"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Transparente Symbolleisten"
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Anpassen der Darstellung eines Symbolleisten-Steuerelements
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

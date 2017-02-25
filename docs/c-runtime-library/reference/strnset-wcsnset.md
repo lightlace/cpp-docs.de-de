@@ -1,13 +1,12 @@
 ---
-title: "strnset, wcsnset"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strnset, wcsnset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "strnset"
@@ -29,15 +28,15 @@ f1_keywords:
   - "strnset"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "strnset-Funktion"
   - "wcsnset-Funktion"
 ms.assetid: e7868ac9-dc34-4606-bd3c-0fb2e7c51631
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # strnset, wcsnset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

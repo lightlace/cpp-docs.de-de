@@ -1,13 +1,12 @@
 ---
-title: "Windows Sockets: Beispiel f&#252;r das Verwenden von Sockets mit Archiven"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Windows Sockets: Beispiel f&#252;r das Verwenden von Sockets mit Archiven | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Windows-Sockets [C++], mit Archiven"
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Windows Sockets: Beispiel f&#252;r das Verwenden von Sockets mit Archiven
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

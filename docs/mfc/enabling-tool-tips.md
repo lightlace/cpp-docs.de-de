@@ -1,13 +1,12 @@
 ---
-title: "Erstellen von QuickInfos"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen von QuickInfos | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "QuickInfos [C++], Initialisieren"
 ms.assetid: 06b7c889-7722-4ce6-8b88-9efa50fe6369
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Erstellen von QuickInfos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

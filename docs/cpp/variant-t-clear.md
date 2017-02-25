@@ -1,13 +1,12 @@
 ---
-title: "_variant_t::Clear"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_variant_t::Clear | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "_variant_t::Clear"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "VARIANT-Objekt, clear"
 ms.assetid: 844d43fa-9628-4643-a877-c1e129838b4e
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _variant_t::Clear
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

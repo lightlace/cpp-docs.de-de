@@ -1,13 +1,12 @@
 ---
-title: "_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mbcjistojms"
@@ -38,7 +37,6 @@ f1_keywords:
   - "mbcjmstojis"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbcjistojms-Funktion"
   - "_mbcjistojms_l-Funktion"
@@ -50,9 +48,10 @@ helpviewer_keywords:
   - "mbcjmstojis_l-Funktion"
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

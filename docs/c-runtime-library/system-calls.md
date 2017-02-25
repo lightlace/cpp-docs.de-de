@@ -1,27 +1,26 @@
 ---
-title: "Systemaufrufe"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Systemaufrufe | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.system"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Systemaufrufe"
   - "Windows [C++], Systemaufrufe"
 ms.assetid: 0255f2ec-a5a0-487e-8b09-9dad001d81ed
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Systemaufrufe
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

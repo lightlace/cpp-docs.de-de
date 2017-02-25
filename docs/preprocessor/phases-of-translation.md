@@ -1,17 +1,15 @@
 ---
-title: "Phasen der &#220;bersetzung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Phasen der &#220;bersetzung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Dateiübersetzung [C++], Compilerprozess"
   - "Dateien [C++], Verschiebung"
@@ -21,9 +19,10 @@ helpviewer_keywords:
   - "Verschiebung, Compilerprozess"
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Phasen der &#220;bersetzung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

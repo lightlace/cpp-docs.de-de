@@ -1,13 +1,12 @@
 ---
-title: "vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_vsnwprintf_s"
@@ -25,6 +24,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntdll.dll"
   - "ucrtbase.dll"
 apitype: "DLLExport"
 f1_keywords: 
@@ -33,7 +33,6 @@ f1_keywords:
   - "_vsnwprintf_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_vsnprintf_s-Funktion"
   - "_vsnprintf_s_l-Funktion"
@@ -50,9 +49,10 @@ helpviewer_keywords:
   - "vsnwprintf_s_l-Funktion"
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
 caps.latest.revision: 30
-caps.handback.revision: "28"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

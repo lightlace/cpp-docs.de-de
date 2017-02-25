@@ -1,13 +1,12 @@
 ---
-title: "strspn, wcsspn, _mbsspn, _mbsspn_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strspn, wcsspn, _mbsspn, _mbsspn_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mbsspn_l"
@@ -36,7 +35,6 @@ f1_keywords:
   - "strspn"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcsspn-Funktion"
   - "_mbsspn-Funktion"
@@ -52,9 +50,10 @@ helpviewer_keywords:
   - "wcsspn-Funktion"
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
 caps.latest.revision: 22
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # strspn, wcsspn, _mbsspn, _mbsspn_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

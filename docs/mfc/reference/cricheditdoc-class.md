@@ -1,13 +1,12 @@
 ---
-title: "CRichEditDoc Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CRichEditDoc Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CRichEditDoc"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Rich-Edit-Steuerelemente, OLE container"
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
 caps.latest.revision: 24
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CRichEditDoc Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

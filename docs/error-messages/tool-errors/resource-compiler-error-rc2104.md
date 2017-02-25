@@ -1,13 +1,12 @@
 ---
-title: "Ressourcencompiler: Fehler RC2104"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ressourcencompiler: Fehler RC2104 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "RC2104"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "RC2104"
 ms.assetid: 792a3bd8-cb4c-4817-b288-4ce37082b582
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Ressourcencompiler: Fehler RC2104
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

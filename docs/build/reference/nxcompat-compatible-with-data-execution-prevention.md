@@ -1,13 +1,12 @@
 ---
-title: "/NXCOMPAT (kompatibel mit Datenausf&#252;hrungsverhinderung)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/NXCOMPAT (kompatibel mit Datenausf&#252;hrungsverhinderung) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/NXCOMPAT"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-NXCOMPAT (Linkeroption)"
 ms.assetid: 5858e7ff-24d3-4ac3-9046-af2c9e220d9b
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /NXCOMPAT (kompatibel mit Datenausf&#252;hrungsverhinderung)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

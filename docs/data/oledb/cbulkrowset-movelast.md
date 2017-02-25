@@ -1,13 +1,12 @@
 ---
-title: "CBulkRowset::MoveLast"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CBulkRowset::MoveLast | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CBulkRowset.MoveLast"
@@ -25,9 +24,10 @@ helpviewer_keywords:
   - "MoveLast-Methode"
 ms.assetid: c880f8b4-9ab6-49ee-8c2d-72d240782514
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CBulkRowset::MoveLast
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

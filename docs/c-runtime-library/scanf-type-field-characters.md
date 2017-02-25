@@ -1,13 +1,12 @@
 ---
-title: "scanf-Typenfeldzeichen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "scanf-Typenfeldzeichen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcr90.dll"
@@ -21,14 +20,14 @@ f1_keywords:
   - "scanf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "scanf-Funktion, Typenfeldzeichen"
 ms.assetid: 5d546a84-715b-44ca-b1c5-bbe997f9ff62
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # scanf-Typenfeldzeichen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

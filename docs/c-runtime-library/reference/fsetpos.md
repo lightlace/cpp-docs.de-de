@@ -1,13 +1,12 @@
 ---
-title: "fsetpos"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fsetpos | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "fsetpos"
@@ -28,15 +27,15 @@ f1_keywords:
   - "fsetpos"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "fsetpos-Funktion"
   - "Streams, Festlegen von Positionsindikatoren"
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # fsetpos
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

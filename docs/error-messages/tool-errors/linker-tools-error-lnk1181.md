@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolfehler LNK1181"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolfehler LNK1181 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK1181"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK1181"
 ms.assetid: 984b0db6-e331-4284-b2a7-a212fe96c486
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Linkertoolfehler LNK1181
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

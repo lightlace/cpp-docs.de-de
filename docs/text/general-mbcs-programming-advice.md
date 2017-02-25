@@ -1,13 +1,12 @@
 ---
-title: "Allgemeine Ratschl&#228;ge f&#252;r die MBCS-Programmierung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Allgemeine Ratschl&#228;ge f&#252;r die MBCS-Programmierung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_mbcs"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "MS Shell Dlg"
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Allgemeine Ratschl&#228;ge f&#252;r die MBCS-Programmierung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

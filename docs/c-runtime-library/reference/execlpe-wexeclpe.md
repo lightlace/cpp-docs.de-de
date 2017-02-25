@@ -1,13 +1,12 @@
 ---
-title: "_execlpe, _wexeclpe"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_execlpe, _wexeclpe | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_execlpe"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_execlpe"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_execlpe-Funktion"
   - "_wexeclpe-Funktion"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "wexeclpe-Funktion"
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _execlpe, _wexeclpe
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

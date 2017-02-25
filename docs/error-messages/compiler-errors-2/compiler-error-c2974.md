@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2974"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2974 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2974"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2974"
 ms.assetid: 1b444260-f2bf-48d7-ab1e-35573d8c4a0e
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerfehler C2974
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

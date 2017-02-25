@@ -1,13 +1,12 @@
 ---
-title: "_get_pgmptr"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_get_pgmptr | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_get_pgmptr"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_get_pgmptr"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_get_pgmptr-Funktion"
   - "_pgmptr (globale Variable)"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "pgmptr (globale Variable)"
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _get_pgmptr
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Implementing CComObjectRootEx"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Implementing CComObjectRootEx | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CComObjectRootEx"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CComObjectRootEx class"
 ms.assetid: 79630c44-f2df-4e9e-b730-400a0ebfbd2b
 caps.latest.revision: 13
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Implementing CComObjectRootEx
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

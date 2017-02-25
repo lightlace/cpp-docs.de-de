@@ -1,13 +1,12 @@
 ---
-title: "Zeitliche Steuerung der Ausnahmebehandlung: Eine Zusammenfassung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Zeitliche Steuerung der Ausnahmebehandlung: Eine Zusammenfassung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "C++"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Beendigungshandler, Planen"
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Zeitliche Steuerung der Ausnahmebehandlung: Eine Zusammenfassung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

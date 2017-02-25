@@ -1,13 +1,12 @@
 ---
-title: "_aligned_free"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_aligned_free | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_aligned_free"
@@ -29,15 +28,15 @@ f1_keywords:
   - "_aligned_free"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_aligned_free-Funktion"
   - "aligned_free-Funktion"
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _aligned_free
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

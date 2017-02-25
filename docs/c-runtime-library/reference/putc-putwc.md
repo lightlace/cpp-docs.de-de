@@ -1,13 +1,12 @@
 ---
-title: "putc, putwc"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "putc, putwc | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "putwc"
@@ -31,7 +30,6 @@ f1_keywords:
   - "putc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_puttc-Funktion"
   - "Zeichen, Schreiben"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "Streams, Schreiben von Zeichen in"
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # putc, putwc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

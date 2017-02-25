@@ -1,13 +1,12 @@
 ---
-title: "COleSafeArray Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "COleSafeArray Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "COleSafeArray"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "safe arrays"
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
 caps.latest.revision: 22
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # COleSafeArray Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

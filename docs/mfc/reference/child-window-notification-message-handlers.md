@@ -1,13 +1,12 @@
 ---
-title: "Handler f&#252;r Benachrichtigungsmeldungen untergeordneter Fenster"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Handler f&#252;r Benachrichtigungsmeldungen untergeordneter Fenster | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ChildWindow"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Fenster [C++], Meldungshandler"
 ms.assetid: fddfdd08-8ecf-4f84-8b45-5a84616aaa8d
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Handler f&#252;r Benachrichtigungsmeldungen untergeordneter Fenster
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

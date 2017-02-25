@@ -1,13 +1,12 @@
 ---
-title: "Systeminterne Funktionen „_interlockedbittestandset“"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Systeminterne Funktionen „_interlockedbittestandset“ | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_interlockedbittestandset_cpp"
@@ -29,9 +28,10 @@ helpviewer_keywords:
   - "lock_bts-Anweisung"
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Systeminterne Funktionen „_interlockedbittestandset“
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

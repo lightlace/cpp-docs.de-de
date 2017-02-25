@@ -1,13 +1,12 @@
 ---
-title: "Recordset: Deklarieren einer Klasse f&#252;r eine vordefinierte Abfrage (ODBC)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Recordset: Deklarieren einer Klasse f&#252;r eine vordefinierte Abfrage (ODBC) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Gespeicherte Prozeduren, Und Recordsets"
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Recordset: Deklarieren einer Klasse f&#252;r eine vordefinierte Abfrage (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

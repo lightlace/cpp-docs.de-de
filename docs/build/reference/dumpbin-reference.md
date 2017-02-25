@@ -1,13 +1,12 @@
 ---
-title: "DUMPBIN-Referenz"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "DUMPBIN-Referenz | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "dumpbin"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Microsoft COFF-Binärdateidumper"
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # DUMPBIN-Referenz
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

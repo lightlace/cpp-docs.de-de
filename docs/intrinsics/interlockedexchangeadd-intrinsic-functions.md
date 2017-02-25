@@ -1,13 +1,12 @@
 ---
-title: "Systeminterne Funktionen „_InterlockedExchangeAdd“"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Systeminterne Funktionen „_InterlockedExchangeAdd“ | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_InterlockedExchangeAdd64_nf"
@@ -66,9 +65,10 @@ helpviewer_keywords:
   - "Systeminterne Funktion „InterlockedExchangeAdd64_rel“"
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
 caps.latest.revision: 19
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Systeminterne Funktionen „_InterlockedExchangeAdd“
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

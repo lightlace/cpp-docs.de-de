@@ -1,13 +1,12 @@
 ---
-title: "Ausdr&#252;cke f&#252;r den Pr&#228;prozessorlauf eines Makefiles"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausdr&#252;cke f&#252;r den Pr&#228;prozessorlauf eines Makefiles | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Vorverarbeiten von Makefiles"
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ausdr&#252;cke f&#252;r den Pr&#228;prozessorlauf eines Makefiles
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

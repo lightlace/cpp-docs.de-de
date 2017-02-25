@@ -1,13 +1,12 @@
 ---
-title: "SafeNotEquals"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "SafeNotEquals | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SafeNotEquals"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "SafeNotEquals-Funktion"
 ms.assetid: 032e45a8-4159-4b55-b7cc-ecd27f4e4788
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # SafeNotEquals
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

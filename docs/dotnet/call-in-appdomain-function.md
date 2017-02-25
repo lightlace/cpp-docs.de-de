@@ -1,13 +1,12 @@
 ---
-title: "call_in_appdomain-Funktion"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "call_in_appdomain-Funktion | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "call_in_appdomain"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "call_in_appdomain-Funktion"
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # call_in_appdomain-Funktion
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

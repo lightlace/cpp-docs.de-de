@@ -1,13 +1,12 @@
 ---
-title: "unordered_set-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "unordered_set-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.tr1.unordered_set"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "unordered_set-Klasse [TR1]"
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 caps.latest.revision: 23
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # unordered_set-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

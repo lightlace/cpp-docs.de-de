@@ -1,17 +1,15 @@
 ---
-title: "&#220;bliche arithmetische Konvertierungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#220;bliche arithmetische Konvertierungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Arithmetische Konvertierungen [C++]"
   - "Arithmetische Operatoren [C++], Typkonvertierungen"
@@ -21,9 +19,10 @@ helpviewer_keywords:
   - "Typkonvertierung [C++], Arithmetisch"
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # &#220;bliche arithmetische Konvertierungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

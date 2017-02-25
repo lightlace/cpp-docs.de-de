@@ -1,13 +1,12 @@
 ---
-title: "CObList Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CObList Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CObList"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Objekte [C++], lists of"
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
 caps.latest.revision: 20
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # CObList Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,21 +1,21 @@
 ---
-title: "Snap-In Object Macros"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Snap-In Object Macros | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
 caps.latest.revision: 16
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Snap-In Object Macros
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Aktualisieren von Daten mit dem RDO-Remote-Datensteuerelement"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Aktualisieren von Daten mit dem RDO-Remote-Datensteuerelement | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "RemoteData-Steuerelement, Aktualisieren von Daten"
 ms.assetid: abb4175f-612e-4645-905e-c0fa918b0fd7
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Aktualisieren von Daten mit dem RDO-Remote-Datensteuerelement
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

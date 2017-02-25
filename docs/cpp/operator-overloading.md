@@ -1,13 +1,12 @@
 ---
-title: "&#220;berladen von Operatoren"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#220;berladen von Operatoren | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "operator_cpp"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Neu definierbare Operatoren"
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # &#220;berladen von Operatoren
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "ComPtrRef::GetAddressOf-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ComPtrRef::GetAddressOf-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "client/Microsoft::WRL::Details::ComPtrRef::GetAddressOf"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "GetAddressOf-Methode"
 ms.assetid: 797df323-a2fa-412b-ab60-32cce3721096
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ComPtrRef::GetAddressOf-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

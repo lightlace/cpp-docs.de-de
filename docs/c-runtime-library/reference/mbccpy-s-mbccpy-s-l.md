@@ -1,13 +1,12 @@
 ---
-title: "_mbccpy_s, _mbccpy_s_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mbccpy_s, _mbccpy_s_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mbccpy_s"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_mbccpy_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbccpy_s-Funktion"
   - "_mbccpy_s_l-Funktion"
@@ -44,9 +42,10 @@ helpviewer_keywords:
   - "tccpy_s_l-Funktion"
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
 caps.latest.revision: 30
-caps.handback.revision: "30"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # _mbccpy_s, _mbccpy_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

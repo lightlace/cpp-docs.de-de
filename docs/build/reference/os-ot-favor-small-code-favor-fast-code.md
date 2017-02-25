@@ -1,13 +1,12 @@
 ---
-title: "/Os, /Ot (Kompakten Code bevorzugen, Schnellen Code bevorzugen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Os, /Ot (Kompakten Code bevorzugen, Schnellen Code bevorzugen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed"
@@ -28,9 +27,10 @@ helpviewer_keywords:
   - "Kompakter Computercode"
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /Os, /Ot (Kompakten Code bevorzugen, Schnellen Code bevorzugen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

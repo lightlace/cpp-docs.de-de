@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Erh&#246;hen der Effizienz mithilfe von parallelen Containern"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Erh&#246;hen der Effizienz mithilfe von parallelen Containern | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "concurrent_vector-Klasse, Beispiele"
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
 caps.latest.revision: 13
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Gewusst wie: Erh&#246;hen der Effizienz mithilfe von parallelen Containern
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

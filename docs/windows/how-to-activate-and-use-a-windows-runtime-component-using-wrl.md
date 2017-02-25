@@ -1,21 +1,21 @@
 ---
-title: "Gewusst wie: Aktivieren und Verwenden einer Windows-Runtime-Komponente mit WRL"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Aktivieren und Verwenden einer Windows-Runtime-Komponente mit WRL | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Gewusst wie: Aktivieren und Verwenden einer Windows-Runtime-Komponente mit WRL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

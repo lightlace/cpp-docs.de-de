@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4640"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 3) C4640 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4640"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4640"
 ms.assetid: f76871f6-e436-4c35-9793-d2f22f7e1c7f
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerwarnung (Stufe 3) C4640
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

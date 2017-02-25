@@ -1,13 +1,12 @@
 ---
-title: "Erstellen eines erweiterten Kombinationsfeld-Steuerelements"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen eines erweiterten Kombinationsfeld-Steuerelements | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Erweiterte Kombinationsfelder, Erstellen"
 ms.assetid: a964267e-97b6-4e77-9f89-55bb5c68913f
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Erstellen eines erweiterten Kombinationsfeld-Steuerelements
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

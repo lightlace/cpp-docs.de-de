@@ -1,13 +1,12 @@
 ---
-title: "&#196;ndern der Stile von Listensteuerelementen"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#196;ndern der Stile von Listensteuerelementen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Stile, CListCtrl"
 ms.assetid: be74a005-0795-417c-9056-f6342aa74b26
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # &#196;ndern der Stile von Listensteuerelementen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

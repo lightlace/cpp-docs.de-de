@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2272"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2272 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2272"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2272"
 ms.assetid: 1517706a-9c27-452e-9b10-3424b3d232bc
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerfehler C2272
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

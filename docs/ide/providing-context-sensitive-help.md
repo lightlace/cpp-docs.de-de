@@ -1,13 +1,12 @@
 ---
-title: "Bereitstellen kontextbezogener Hilfe"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Bereitstellen kontextbezogener Hilfe | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Benutzerdefinierte Assistenten, Implementieren der Hilfe"
 ms.assetid: c6c4d961-29d3-4d16-9f39-b12545aba540
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Bereitstellen kontextbezogener Hilfe
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

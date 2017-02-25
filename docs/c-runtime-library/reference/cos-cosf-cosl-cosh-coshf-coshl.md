@@ -1,13 +1,12 @@
 ---
-title: "cos, cosf, cosl, cosh, coshf, coshl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "cos, cosf, cosl, cosh, coshf, coshl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "coshl"
@@ -38,7 +37,6 @@ f1_keywords:
   - "coshf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Berechnen von Kosinus"
   - "cos-Funktion"
@@ -53,9 +51,10 @@ helpviewer_keywords:
   - "Trigonometrische Funktionen"
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
 caps.latest.revision: 17
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # cos, cosf, cosl, cosh, coshf, coshl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

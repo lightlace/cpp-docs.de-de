@@ -1,13 +1,12 @@
 ---
-title: "_lseek, _lseeki64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_lseek, _lseeki64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_lseeki64"
@@ -31,7 +30,6 @@ f1_keywords:
   - "lseeki64"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_lseek-Funktion"
   - "_lseeki64-Funktion"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "seek-Dateizeiger"
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _lseek, _lseeki64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

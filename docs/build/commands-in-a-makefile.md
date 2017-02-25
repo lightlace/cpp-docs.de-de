@@ -1,13 +1,12 @@
 ---
-title: "Befehle in einem Makefile"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Befehle in einem Makefile | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Befehle, Makefiles"
 ms.assetid: 8085517e-42f4-493b-b8f8-44311fc08c64
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Befehle in einem Makefile
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

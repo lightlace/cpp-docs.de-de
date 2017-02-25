@@ -1,13 +1,12 @@
 ---
-title: "__readpmc"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__readpmc | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "__readpmc"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "rdpmc-Anweisung"
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __readpmc
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

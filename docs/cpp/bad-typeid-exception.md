@@ -1,13 +1,12 @@
 ---
-title: "bad_typeid-Ausnahme"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "bad_typeid-Ausnahme | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "bad_typeid"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Ausnahmen, bad_typeid"
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # bad_typeid-Ausnahme
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

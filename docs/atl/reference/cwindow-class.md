@@ -1,13 +1,12 @@
 ---
-title: "CWindow Class"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CWindow Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL.CWindow"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CWindow class"
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
 caps.latest.revision: 21
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CWindow Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

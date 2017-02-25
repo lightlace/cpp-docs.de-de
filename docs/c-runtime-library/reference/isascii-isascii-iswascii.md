@@ -1,13 +1,12 @@
 ---
-title: "Isascii, __isascii, iswascii"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Isascii, __isascii, iswascii | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "iswascii"
@@ -36,7 +35,6 @@ f1_keywords:
   - "corecrt_wctype/iswascii"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__isascii-Funktion"
   - "_isascii-Funktion"
@@ -46,9 +44,10 @@ helpviewer_keywords:
   - "iswascii-Funktion"
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
 caps.latest.revision: 22
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Isascii, __isascii, iswascii
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

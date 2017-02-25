@@ -1,13 +1,12 @@
 ---
-title: "Tear-Off Interfaces Classes"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Tear-Off Interfaces Classes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.atl.interfaces.tear-off"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "tear-off interfaces classes"
 ms.assetid: 14e4ab01-9213-43e5-bef5-78af1e6206ff
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Tear-Off Interfaces Classes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

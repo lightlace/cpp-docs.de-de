@@ -1,13 +1,12 @@
 ---
-title: "/FD (Minimale Neuerstellung in der IDE)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/FD (Minimale Neuerstellung in der IDE) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/FD"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-FD (Compileroption) [C++]"
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /FD (Minimale Neuerstellung in der IDE)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

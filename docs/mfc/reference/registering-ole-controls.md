@@ -1,13 +1,12 @@
 ---
-title: "Registrieren des OLE-Steuerelements"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Registrieren des OLE-Steuerelements | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.macros.ole"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Registrieren von OLE-Steuerelementen"
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 caps.latest.revision: 15
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Registrieren des OLE-Steuerelements
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

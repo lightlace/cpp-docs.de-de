@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnungs C4600 Through C4999"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compiler-Warnungen C4600 generiert &#252;ber C4799 ausgegeben | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4602"
@@ -72,9 +71,10 @@ dev_langs:
   - "C++"
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 caps.latest.revision: 23
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Compilerwarnungs C4600 Through C4999
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

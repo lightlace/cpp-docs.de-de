@@ -1,13 +1,12 @@
 ---
-title: "&lt;iterator&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;iterator&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::<iterator>"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "iterator-Header"
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
 caps.latest.revision: 27
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # &lt;iterator&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

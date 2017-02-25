@@ -1,13 +1,12 @@
 ---
-title: "IEnumOnSTLImpl Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IEnumOnSTLImpl Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "IEnumOnSTLImpl"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "IEnumOnSTLImpl class"
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
 caps.latest.revision: 20
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # IEnumOnSTLImpl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

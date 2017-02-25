@@ -1,13 +1,12 @@
 ---
-title: "Registerkarten und Attribute von Registerkarten-Steuerelementen"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Registerkarten und Attribute von Registerkarten-Steuerelementen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Registerkarten, Attribute"
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Registerkarten und Attribute von Registerkarten-Steuerelementen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

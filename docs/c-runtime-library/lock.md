@@ -1,13 +1,12 @@
 ---
-title: "_lock"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_lock | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_lock"
@@ -31,9 +30,10 @@ helpviewer_keywords:
   - "_lock-Funktion"
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _lock
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

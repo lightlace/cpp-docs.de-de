@@ -1,17 +1,15 @@
 ---
-title: "C-Bezeichner"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "C-Bezeichner | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Bezeichner"
   - "Bezeichner, C"
@@ -21,9 +19,10 @@ helpviewer_keywords:
   - "Symbole, Berücksichtigung der Groß-/Kleinschreibung"
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # C-Bezeichner
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

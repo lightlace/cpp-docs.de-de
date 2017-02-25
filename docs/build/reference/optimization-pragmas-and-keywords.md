@@ -1,13 +1,12 @@
 ---
-title: "Pragmas und Schl&#252;sselw&#246;rter f&#252;r die Optimierung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Pragmas und Schl&#252;sselw&#246;rter f&#252;r die Optimierung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Pragmas, Für Optimierung"
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Pragmas und Schl&#252;sselw&#246;rter f&#252;r die Optimierung
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

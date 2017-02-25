@@ -1,13 +1,12 @@
 ---
-title: "Eigenschaftenseite &quot;NMake&quot;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Eigenschaftenseite &quot;NMake&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCNMakeTool.ReBuildCommandLine"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "NMake (Eigenschaftenseite)"
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Eigenschaftenseite &quot;NMake&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

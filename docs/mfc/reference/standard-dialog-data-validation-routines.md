@@ -1,13 +1,12 @@
 ---
-title: "Standardroutinen zur Pr&#252;fung der Dialogfelddaten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Standardroutinen zur Pr&#252;fung der Dialogfelddaten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Standarddialog, Datenvalidierungsroutine"
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
 caps.latest.revision: 13
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Standardroutinen zur Pr&#252;fung der Dialogfelddaten
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

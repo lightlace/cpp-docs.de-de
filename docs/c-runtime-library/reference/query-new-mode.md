@@ -1,13 +1,12 @@
 ---
-title: "_query_new_mode"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_query_new_mode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_query_new_mode"
@@ -29,16 +28,16 @@ f1_keywords:
   - "_query_new_mode"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_query_new_mode-Funktion"
   - "Handlermodi"
   - "query_new_mode-Funktion"
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # _query_new_mode
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

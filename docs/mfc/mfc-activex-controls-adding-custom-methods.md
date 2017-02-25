@@ -1,13 +1,12 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von benutzerdefinierten Methoden"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von benutzerdefinierten Methoden | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "PtInCircle (benutzerdefinierte Methode)"
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen von benutzerdefinierten Methoden
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

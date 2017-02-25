@@ -1,13 +1,12 @@
 ---
-title: "CCommand::Close"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CCommand::Close | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CCommand.Close"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Close-Methode"
 ms.assetid: 4da9c02c-7082-4e47-a0fa-78b546f0f7d2
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # CCommand::Close
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

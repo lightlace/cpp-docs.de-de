@@ -1,16 +1,14 @@
 ---
-title: "Flipping an Image (Image Editor for Icons)"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Flipping an Image (Image Editor for Icons) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "Image editor [C++], flipping and rotating images"
@@ -18,9 +16,10 @@ helpviewer_keywords:
   - "images [C++], rotating"
 ms.assetid: a63d251c-7343-4ad6-9442-1faa04a9a2a1
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Flipping an Image (Image Editor for Icons)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

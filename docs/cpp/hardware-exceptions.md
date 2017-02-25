@@ -1,13 +1,12 @@
 ---
-title: "Hardwareausnahmen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hardwareausnahmen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Fehler auf niedriger Ebene"
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Hardwareausnahmen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_mbsnbcmp, _mbsnbcmp_l"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mbsnbcmp, _mbsnbcmp_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mbsnbcmp"
@@ -33,7 +32,6 @@ f1_keywords:
   - "_mbsnbcmp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsnbcmp-Funktion"
   - "_mbsnbcmp_l-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "tcsncmp-Funktion"
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
 caps.latest.revision: 23
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _mbsnbcmp, _mbsnbcmp_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

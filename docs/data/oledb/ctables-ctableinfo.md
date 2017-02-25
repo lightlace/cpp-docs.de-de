@@ -1,13 +1,12 @@
 ---
-title: "CTables, CTableInfo"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CTables, CTableInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "m_szCatalog"
@@ -39,9 +38,10 @@ helpviewer_keywords:
   - "TABLE_SCHEMA"
 ms.assetid: 57670f1b-ba99-43b0-b406-4c75b44f14f6
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CTables, CTableInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "/Yd (Debuginformationen in Objektdatei ablegen)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Yd (Debuginformationen in Objektdatei ablegen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/yd"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "-Yd (Compileroption) [C++]"
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /Yd (Debuginformationen in Objektdatei ablegen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

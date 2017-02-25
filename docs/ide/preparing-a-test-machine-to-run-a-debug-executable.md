@@ -1,13 +1,12 @@
 ---
-title: "Vorbereiten eines Testcomputers zum Ausf&#252;hren einer ausf&#252;hrbaren Debugdatei"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Vorbereiten eines Testcomputers zum Ausf&#252;hren einer ausf&#252;hrbaren Debugdatei | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Ausführbare Debugdatei, Vorbereiten eines Testcomputers zum Ausführen"
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Vorbereiten eines Testcomputers zum Ausf&#252;hren einer ausf&#252;hrbaren Debugdatei
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

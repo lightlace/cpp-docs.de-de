@@ -1,27 +1,26 @@
 ---
-title: "Pufferbearbeitung"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Pufferbearbeitung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.memory"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Puffer"
   - "Puffer, Manipulationsroutinen"
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Pufferbearbeitung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

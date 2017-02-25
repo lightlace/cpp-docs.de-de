@@ -1,13 +1,12 @@
 ---
-title: "WeakRef::CopyTo-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "WeakRef::CopyTo-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "client/Microsoft::WRL::WeakRef::CopyTo"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CopyTo-Methode"
 ms.assetid: f83de6da-b3d4-41a6-9845-cd725ecf3b75
 caps.latest.revision: 5
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # WeakRef::CopyTo-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

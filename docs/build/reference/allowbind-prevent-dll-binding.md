@@ -1,13 +1,12 @@
 ---
-title: "/ALLOWBIND (DLL-Bindung verhindern)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/ALLOWBIND (DLL-Bindung verhindern) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.PreventDLLBinding"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "Verhindern von DLL-Bindungen"
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /ALLOWBIND (DLL-Bindung verhindern)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

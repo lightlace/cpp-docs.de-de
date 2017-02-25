@@ -1,13 +1,12 @@
 ---
-title: "Schwerwiegender Fehler C1001"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schwerwiegender Fehler C1001 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C1001"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C1001"
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Schwerwiegender Fehler C1001
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

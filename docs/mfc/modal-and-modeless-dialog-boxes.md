@@ -1,13 +1,12 @@
 ---
-title: "Modale und nicht modale Dialogfelder"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Modale und nicht modale Dialogfelder | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Nicht modale Dialogfelder"
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Modale und nicht modale Dialogfelder
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

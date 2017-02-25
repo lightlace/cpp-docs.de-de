@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Konvertieren zwischen verschiedenen Zeichenfolgentypen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Konvertieren zwischen verschiedenen Zeichenfolgentypen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Zeichenfolgen [C++], Konvertieren"
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Gewusst wie: Konvertieren zwischen verschiedenen Zeichenfolgentypen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

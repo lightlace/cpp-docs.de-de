@@ -1,13 +1,12 @@
 ---
-title: "CDataRecoveryHandler Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDataRecoveryHandler Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CDataRecoveryHandler"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CDataRecoveryHandler class"
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
 caps.latest.revision: 18
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # CDataRecoveryHandler Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

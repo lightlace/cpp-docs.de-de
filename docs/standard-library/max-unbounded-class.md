@@ -1,13 +1,12 @@
 ---
-title: "max_unbounded-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "max_unbounded-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "allocators/stdext::max_unbounded"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "max_unbounded-Klasse"
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
 caps.latest.revision: 18
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # max_unbounded-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

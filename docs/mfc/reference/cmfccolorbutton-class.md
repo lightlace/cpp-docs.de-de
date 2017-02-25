@@ -1,13 +1,12 @@
 ---
-title: "CMFCColorButton Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCColorButton Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCColorButton"
@@ -28,9 +27,10 @@ helpviewer_keywords:
   - "CMFCColorButton::m_strOtherText data member"
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
 caps.latest.revision: 34
-caps.handback.revision: "22"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # CMFCColorButton Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Bildverarbeitungsnetzwerke, Erstellen [Concurrency Runtime]"
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 caps.latest.revision: 15
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Exemplarische Vorgehensweise: Erstellen eines Bildverarbeitungsnetzwerks
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

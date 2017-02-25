@@ -1,13 +1,12 @@
 ---
-title: "Men&#252;s und Ressourcen (OLE)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Men&#252;s und Ressourcen (OLE) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -29,9 +28,10 @@ helpviewer_keywords:
   - "Visuelle Bearbeitung, Anwendungsmenüs und Ressourcen"
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Men&#252;s und Ressourcen (OLE)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

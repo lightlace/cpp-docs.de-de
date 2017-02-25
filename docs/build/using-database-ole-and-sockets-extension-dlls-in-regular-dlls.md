@@ -1,13 +1,12 @@
 ---
-title: "Verwenden von Datenbank-, OLE- und Sockets-Erweiterungs-DLLs in regul&#228;ren DLLs"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von Datenbank-, OLE- und Sockets-Erweiterungs-DLLs in regul&#228;ren DLLs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "DLLs [C++], Reguläre"
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Verwenden von Datenbank-, OLE- und Sockets-Erweiterungs-DLLs in regul&#228;ren DLLs
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

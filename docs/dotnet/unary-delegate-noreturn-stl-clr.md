@@ -1,13 +1,12 @@
 ---
-title: "unary_delegate_noreturn (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "unary_delegate_noreturn (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::unary_delegate_noreturn"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "unary_delegate_noreturn-Funktion [STL/CLR]"
 ms.assetid: 3c3fb143-f60f-4e28-a66b-690e3a7b2f9b
 caps.latest.revision: 8
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # unary_delegate_noreturn (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

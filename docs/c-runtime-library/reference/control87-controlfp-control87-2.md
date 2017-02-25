@@ -1,13 +1,12 @@
 ---
-title: "_control87, _controlfp, __control87_2"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_control87, _controlfp, __control87_2 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_control87"
@@ -36,7 +35,6 @@ f1_keywords:
   - "_control87_2"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__control87_2-Funktion"
   - "_control87-Funktion"
@@ -50,9 +48,10 @@ helpviewer_keywords:
   - "Gleitkommazahlen, Steuerwort"
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
 caps.latest.revision: 34
-caps.handback.revision: "34"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # _control87, _controlfp, __control87_2
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

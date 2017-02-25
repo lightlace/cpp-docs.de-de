@@ -1,13 +1,12 @@
 ---
-title: "Rahmenfensterstile (MFC)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Rahmenfensterstile (MFC) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "FWS_ADDTOTITLE"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "Stile, Fenster"
 ms.assetid: d21f270e-a088-4962-a2ae-8c03334b5a06
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Rahmenfensterstile (MFC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

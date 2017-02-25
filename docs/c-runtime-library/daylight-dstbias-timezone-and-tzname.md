@@ -1,13 +1,12 @@
 ---
-title: "_daylight, _dstbias, _timezone und _tzname"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_daylight, _dstbias, _timezone und _tzname | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "tzname"
@@ -18,7 +17,6 @@ f1_keywords:
   - "daylight"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Zeitzonen"
   - "Anpassungen der Uhrzeit"
@@ -33,9 +31,10 @@ helpviewer_keywords:
   - "Zeitzonenvariablen"
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _daylight, _dstbias, _timezone und _tzname
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

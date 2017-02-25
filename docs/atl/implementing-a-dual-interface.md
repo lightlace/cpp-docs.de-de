@@ -1,13 +1,12 @@
 ---
-title: "Implementing a Dual Interface"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Implementing a Dual Interface | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "IDispatchImpl-Klasse, implementing dual interfaces"
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
 caps.latest.revision: 12
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Implementing a Dual Interface
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

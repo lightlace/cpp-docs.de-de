@@ -1,24 +1,23 @@
 ---
-title: "Pr&#228;prozessor"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Pr&#228;prozessor | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Präprozessor"
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Pr&#228;prozessor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_sopen_s, _wsopen_s"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_sopen_s, _wsopen_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_sopen_s"
@@ -32,7 +31,6 @@ f1_keywords:
   - "sopen_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_sopen_s-Funktion"
   - "_wsopen_s-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "wsopen_s-Funktion"
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
 caps.latest.revision: 29
-caps.handback.revision: "29"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # _sopen_s, _wsopen_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

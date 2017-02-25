@@ -1,13 +1,12 @@
 ---
-title: "&lt;cstring&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;cstring&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::<cstring>"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "cstring-Header"
 ms.assetid: d665429f-5d39-4712-9c0a-68c8abcc3536
 caps.latest.revision: 17
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # &lt;cstring&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

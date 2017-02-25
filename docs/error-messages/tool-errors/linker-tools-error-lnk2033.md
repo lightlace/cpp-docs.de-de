@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolfehler LNK2033"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolfehler LNK2033 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK2033"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK2033"
 ms.assetid: d61db467-9328-4788-bf54-e2a20537f13f
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Linkertoolfehler LNK2033
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_write"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schreiben | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_write"
@@ -24,19 +23,17 @@ apilocation:
   - "ucrtbase.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_write"
+  - "write"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_write-Funktion"
-  - "Dateien [C++], Schreiben in"
   - "write-Funktion"
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
 caps.latest.revision: 21
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # _write
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

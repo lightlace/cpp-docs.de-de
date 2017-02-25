@@ -1,13 +1,12 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH-Makro"
 ms.assetid: a60b1a8b-0903-4ff4-91ec-ed62126449fb
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

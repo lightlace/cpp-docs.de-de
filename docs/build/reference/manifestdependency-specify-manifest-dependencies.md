@@ -1,13 +1,12 @@
 ---
-title: "/MANIFESTDEPENDENCY (Angeben von Manifestabh&#228;ngigkeiten)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/MANIFESTDEPENDENCY (Angeben von Manifestabh&#228;ngigkeiten) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.AdditionalManifestDependencies"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-MANIFESTDEPENDENCY (Linkeroption)"
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /MANIFESTDEPENDENCY (Angeben von Manifestabh&#228;ngigkeiten)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

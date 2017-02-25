@@ -1,14 +1,13 @@
 ---
-title: "Lrint, Lrintf, Lrintl, Llrint, Llrintf, llrintl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Lrint, Lrintf, Lrintl, Llrint, Llrintf, llrintl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "lrint"
@@ -44,7 +43,6 @@ f1_keywords:
   - "math/llrintf"
   - "math/llrintl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "Lrint-Funktion"
@@ -55,9 +53,10 @@ helpviewer_keywords:
   - "Llrintl-Funktion"
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Lrint, Lrintf, Lrintl, Llrint, Llrintf, llrintl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

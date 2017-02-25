@@ -1,13 +1,12 @@
 ---
-title: "/KEYCONTAINER (Schl&#252;sselcontainer zum Signieren einer Assembly festlegen)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/KEYCONTAINER (Schl&#252;sselcontainer zum Signieren einer Assembly festlegen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.KeyContainer"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "-KEYCONTAINER (Linkeroption)"
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /KEYCONTAINER (Schl&#252;sselcontainer zum Signieren einer Assembly festlegen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

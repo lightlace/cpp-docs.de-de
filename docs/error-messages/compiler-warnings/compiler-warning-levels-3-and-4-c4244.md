@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufes 3 and 4) C4244"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufes 3 and 4) C4244 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4244"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4244"
 ms.assetid: f116bb09-c479-4b4e-a647-fe629a1383f6
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Compilerwarnung (Stufes 3 and 4) C4244
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

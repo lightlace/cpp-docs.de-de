@@ -1,13 +1,12 @@
 ---
-title: "Festlegen von DLLs f&#252;r verz&#246;gertes Laden"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Festlegen von DLLs f&#252;r verz&#246;gertes Laden | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "DELAYLOAD (Linkeroption)"
 ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Festlegen von DLLs f&#252;r verz&#246;gertes Laden
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

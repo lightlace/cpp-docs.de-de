@@ -1,13 +1,12 @@
 ---
-title: "memset, wmemset"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "memset, wmemset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "wmemset"
@@ -22,6 +21,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntdll.dll"
   - "ucrtbase.dll"
   - "api-ms-win-crt-string-l1-1-0.dll"
 apitype: "DLLExport"
@@ -30,15 +30,15 @@ f1_keywords:
   - "wmemset"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "memset-Funktion"
   - "wmemset-Funktion"
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # memset, wmemset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

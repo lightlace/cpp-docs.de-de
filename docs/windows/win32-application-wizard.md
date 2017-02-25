@@ -1,13 +1,12 @@
 ---
-title: "Win32-Anwendungs-Assistent"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Win32-Anwendungs-Assistent | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.appwiz.win32.overview"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Win32-Projekt-Assistent"
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Win32-Anwendungs-Assistent
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

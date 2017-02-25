@@ -1,13 +1,12 @@
 ---
-title: "Extrahieren eines Bibliothekmembers"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Extrahieren eines Bibliothekmembers | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "Lib"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Bibliotheken, Extrahieren von Membern"
 ms.assetid: a2c5c2a1-9b7e-489a-a9a4-1dec694e1fc5
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Extrahieren eines Bibliothekmembers
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

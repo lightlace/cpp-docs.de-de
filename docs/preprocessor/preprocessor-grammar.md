@@ -1,26 +1,25 @@
 ---
-title: "Pr&#228;prozessorgrammatik"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Pr&#228;prozessorgrammatik | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Grammatik, Präprozessor"
   - "Präprozessor"
   - "Präprozessor, Grammatik"
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Pr&#228;prozessorgrammatik
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

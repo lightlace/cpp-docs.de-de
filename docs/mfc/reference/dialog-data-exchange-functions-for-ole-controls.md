@@ -1,13 +1,12 @@
 ---
-title: "Dialogdatenaustausch-Funktionen f&#252;r OLE-Steuerelemente"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Dialogdatenaustausch-Funktionen f&#252;r OLE-Steuerelemente | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.macros.data"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "OLE-Steuerelemente, DDX-Funktionen"
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
 caps.latest.revision: 13
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Dialogdatenaustausch-Funktionen f&#252;r OLE-Steuerelemente
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

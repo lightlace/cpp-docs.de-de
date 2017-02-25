@@ -1,13 +1,12 @@
 ---
-title: "CAtlFile Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CAtlFile Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CAtlFile"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CAtlFile class"
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
 caps.latest.revision: 23
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CAtlFile Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

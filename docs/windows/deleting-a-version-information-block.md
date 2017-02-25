@@ -1,13 +1,12 @@
 ---
-title: "Deleting a Version Information Block"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Deleting a Version Information Block | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.version"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "resources [Visual Studio], deleting version information"
 ms.assetid: 4e1641eb-d5b2-4183-b273-bc5b51af1537
 caps.latest.revision: 13
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Deleting a Version Information Block
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

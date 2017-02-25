@@ -1,13 +1,12 @@
 ---
-title: "Concurrency::graphics-Namespace"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Concurrency::graphics-Namespace | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "amp_graphics/Concurrency::graphics"
@@ -16,9 +15,10 @@ dev_langs:
   - "C++"
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
 caps.latest.revision: 14
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Concurrency::graphics-Namespace
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

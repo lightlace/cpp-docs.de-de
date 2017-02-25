@@ -1,13 +1,12 @@
 ---
-title: "Ausnahmebehandlungskonstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausnahmebehandlungskonstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "EXCEPTION_CONTINUE_SEARCH"
@@ -16,7 +15,6 @@ f1_keywords:
   - "EXCEPTION_EXECUTE_HANDLER"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "VH-Konstanten"
   - "Ausnahmebehandlung, Konstanten"
@@ -25,9 +23,10 @@ helpviewer_keywords:
   - "EXCEPTION_EXECUTE_HANDLER-Konstante"
 ms.assetid: e1870f41-be9e-46a3-a2ea-830dfbaa18fb
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ausnahmebehandlungskonstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

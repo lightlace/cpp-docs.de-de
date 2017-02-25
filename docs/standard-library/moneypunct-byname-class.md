@@ -1,13 +1,12 @@
 ---
-title: "moneypunct_byname-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "moneypunct_byname-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.moneypunct_byname"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "moneypunct_byname-Klasse"
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
 caps.latest.revision: 22
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # moneypunct_byname-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

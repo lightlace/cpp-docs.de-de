@@ -1,13 +1,12 @@
 ---
-title: "MFC-DLL-Assistent"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-DLL-Assistent | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.appwiz.mfc.dll.overview"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "MFC-DLLs [C++], Erstellen"
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # MFC-DLL-Assistent
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

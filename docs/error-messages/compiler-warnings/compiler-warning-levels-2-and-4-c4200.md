@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufes 2 and 4) C4200"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufes 2 and 4) C4200 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4200"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4200"
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Compilerwarnung (Stufes 2 and 4) C4200
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

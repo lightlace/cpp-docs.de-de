@@ -1,13 +1,12 @@
 ---
-title: "Objektmodelldienste zur Laufzeit"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Objektmodelldienste zur Laufzeit | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.macros"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Objektmodelldienste-Makros zur Laufzeit"
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
 caps.latest.revision: 15
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Objektmodelldienste zur Laufzeit
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

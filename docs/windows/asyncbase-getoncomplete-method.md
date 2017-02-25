@@ -1,13 +1,12 @@
 ---
-title: "AsyncBase::GetOnComplete-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "AsyncBase::GetOnComplete-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "async/Microsoft::WRL::AsyncBase::GetOnComplete"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "GetOnComplete-Methode"
 ms.assetid: f06ae02d-9a88-41d2-b749-bdc1a7ff8748
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # AsyncBase::GetOnComplete-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

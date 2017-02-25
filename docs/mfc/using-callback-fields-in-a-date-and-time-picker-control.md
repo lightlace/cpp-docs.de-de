@@ -1,13 +1,12 @@
 ---
-title: "Verwenden von R&#252;ckruffeldern in einem Steuerelement f&#252;r die Datums- und Zeitauswahl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von R&#252;ckruffeldern in einem Steuerelement f&#252;r die Datums- und Zeitauswahl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "DTN_FORMATQUERY"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "DTN_FORMATQUERY-Benachrichtigung"
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Verwenden von R&#252;ckruffeldern in einem Steuerelement f&#252;r die Datums- und Zeitauswahl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

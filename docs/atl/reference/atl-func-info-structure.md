@@ -1,13 +1,12 @@
 ---
-title: "_ATL_FUNC_INFO Structure"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ATL_FUNC_INFO Structure | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_ATL_FUNC_INFO"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "ATL_FUNC_INFO structure"
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
 caps.latest.revision: 21
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _ATL_FUNC_INFO Structure
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4028"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 1) C4028 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4028"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4028"
 ms.assetid: c3e8b70b-e870-416c-a285-bba5f71dbfc6
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Compilerwarnung (Stufe 1) C4028
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

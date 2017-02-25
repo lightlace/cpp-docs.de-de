@@ -1,13 +1,12 @@
 ---
-title: "_set_abort_behavior"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_set_abort_behavior | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_set_abort_behavior"
@@ -29,16 +28,16 @@ f1_keywords:
   - "set_abort_behavior"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_set_abort_behavior-Funktion"
   - "Abbrechen von Programmen"
   - "set_abort_behavior-Funktion"
 ms.assetid: 43918766-e4ba-4b1f-80e8-1a4a910cd452
 caps.latest.revision: 26
-caps.handback.revision: "24"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # _set_abort_behavior
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

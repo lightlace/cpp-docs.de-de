@@ -1,13 +1,12 @@
 ---
-title: "/volatile (Interpretation des volatile-Schl&#252;sselworts)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/volatile (Interpretation des volatile-Schl&#252;sselworts) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/volatile:iso"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "-volatile (Compileroption) [C++]"
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # /volatile (Interpretation des volatile-Schl&#252;sselworts)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

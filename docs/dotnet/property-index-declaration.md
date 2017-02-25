@@ -1,13 +1,12 @@
 ---
-title: "Deklaration von Eigenschaftenindizes"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Deklaration von Eigenschaftenindizes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Indexer"
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Deklaration von Eigenschaftenindizes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

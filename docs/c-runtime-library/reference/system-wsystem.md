@@ -1,13 +1,12 @@
 ---
-title: "system, _wsystem"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "system, _wsystem | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "system"
@@ -30,7 +29,6 @@ f1_keywords:
   - "_wsystem"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tsystem-Funktion"
   - "_wsystem-Funktion"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "wsystem-Funktion"
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # system, _wsystem
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

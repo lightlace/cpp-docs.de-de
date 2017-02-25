@@ -1,13 +1,12 @@
 ---
-title: "allocator_base-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "allocator_base-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "allocators.allocator_base"
@@ -25,9 +24,10 @@ helpviewer_keywords:
   - "allocator_base-Klasse"
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 caps.latest.revision: 17
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # allocator_base-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

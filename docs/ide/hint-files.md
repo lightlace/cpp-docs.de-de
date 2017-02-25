@@ -1,13 +1,12 @@
 ---
-title: "Hinweisdateien"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hinweisdateien | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "cpp.hint"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Klassenansicht, Hinweisdatei"
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
 caps.latest.revision: 32
-caps.handback.revision: "32"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # Hinweisdateien
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Befehle und Tabellen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Befehle und Tabellen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Tabellen [C++], OLE DB-Consumervorlagen"
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Befehle und Tabellen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CDockablePaneAdapter Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDockablePaneAdapter Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CDockablePaneAdapter"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CDockablePaneAdapter class"
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
 caps.latest.revision: 22
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CDockablePaneAdapter Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

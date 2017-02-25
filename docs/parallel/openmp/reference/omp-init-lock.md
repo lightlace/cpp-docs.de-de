@@ -1,13 +1,12 @@
 ---
-title: "omp_init_lock"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "omp_init_lock | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "omp_init_lock"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "omp_init_lock OpenMP function"
 ms.assetid: 7a65e3e2-2e31-4645-964c-c1e82e2a4d0e
 caps.latest.revision: 15
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # omp_init_lock
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

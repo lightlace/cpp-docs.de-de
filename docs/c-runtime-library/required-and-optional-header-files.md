@@ -1,27 +1,26 @@
 ---
-title: "Erforderliche und optionale Headerdateien"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erforderliche und optionale Headerdateien | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.headers"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Headerdateien, erforderlich zur Laufzeit"
   - "Includedateien, erforderlich zur Laufzeit"
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Erforderliche und optionale Headerdateien
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

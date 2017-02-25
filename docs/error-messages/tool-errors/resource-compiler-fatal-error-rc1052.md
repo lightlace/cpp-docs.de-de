@@ -1,13 +1,12 @@
 ---
-title: "Ressourcencompiler: Schwerwiegender Fehler RC1052"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ressourcencompiler: Schwerwiegender Fehler RC1052 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "RC1052"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "RC1052"
 ms.assetid: 59803673-492b-44fa-80fa-df93b8aaf9fb
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Ressourcencompiler: Schwerwiegender Fehler RC1052
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

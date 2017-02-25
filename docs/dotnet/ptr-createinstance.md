@@ -1,13 +1,12 @@
 ---
-title: "ptr::CreateInstance"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ptr::CreateInstance | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ptr.CreateInstance"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "ptr::CreateInstance"
 ms.assetid: 9e8e4c4c-1651-4839-8829-5857d74470fe
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # ptr::CreateInstance
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

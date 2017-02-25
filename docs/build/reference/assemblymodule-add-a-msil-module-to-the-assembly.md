@@ -1,13 +1,12 @@
 ---
-title: "/ASSEMBLYMODULE (MSIL-Modul zur Assembly hinzuf&#252;gen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/ASSEMBLYMODULE (MSIL-Modul zur Assembly hinzuf&#252;gen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/assemblymodule"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "-ASSEMBLYMODULE (Linkeroption)"
 ms.assetid: 67357da8-e4b6-49fd-932c-329a5777f143
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /ASSEMBLYMODULE (MSIL-Modul zur Assembly hinzuf&#252;gen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

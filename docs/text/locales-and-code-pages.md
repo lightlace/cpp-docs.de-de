@@ -1,13 +1,12 @@
 ---
-title: "Gebietsschemas und Codepages"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gebietsschemas und Codepages | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -26,9 +25,10 @@ helpviewer_keywords:
   - "Mehrbytecodepages [C++]"
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Gebietsschemas und Codepages
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

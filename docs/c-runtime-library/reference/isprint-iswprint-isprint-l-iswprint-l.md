@@ -1,13 +1,12 @@
 ---
-title: "isprint, iswprint, _isprint_l, _iswprint_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "isprint, iswprint, _isprint_l, _iswprint_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "iswprint"
@@ -33,7 +32,6 @@ f1_keywords:
   - "isprint"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_isprint_l-Funktion"
   - "_istprint-Funktion"
@@ -45,9 +43,10 @@ helpviewer_keywords:
   - "iswprint_l-Funktion"
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # isprint, iswprint, _isprint_l, _iswprint_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

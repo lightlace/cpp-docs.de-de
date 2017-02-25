@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Erstellen von COM-Komponenten ohne Registrierung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Erstellen von COM-Komponenten ohne Registrierung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "COM-Komponenten, Ohne Registrierung"
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Gewusst wie: Erstellen von COM-Komponenten ohne Registrierung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

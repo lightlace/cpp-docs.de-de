@@ -1,13 +1,12 @@
 ---
-title: "codecvt_byname-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "codecvt_byname-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std.codecvt_byname"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "codecvt_byname-Klasse"
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
 caps.latest.revision: 24
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # codecvt_byname-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Creating New Toolbars"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Creating New Toolbars | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.toolbar"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Insert Resource"
 ms.assetid: 1b28264b-0718-4df8-9f65-979805d2efef
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Creating New Toolbars
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "is_error_condition_enum-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "is_error_condition_enum-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::is_error_condition_enum"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "is_error_condition_enum-Klasse"
 ms.assetid: 752bb87a-c61c-4304-9254-5aaf228b59c0
 caps.latest.revision: 15
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # is_error_condition_enum-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2582"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2582 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2582"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2582"
 ms.assetid: ee1b9378-8bcd-4792-b87e-6d7a466d29ed
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Compilerfehler C2582
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

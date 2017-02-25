@@ -1,13 +1,12 @@
 ---
-title: "ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ctime64"
@@ -40,7 +39,6 @@ f1_keywords:
   - "ctime"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tctime64-Funktion"
   - "_ctime32-Funktion"
@@ -62,9 +60,10 @@ helpviewer_keywords:
   - "Uhrzeit, Konvertieren"
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
 caps.latest.revision: 25
-caps.handback.revision: "25"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

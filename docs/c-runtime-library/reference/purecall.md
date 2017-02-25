@@ -1,13 +1,12 @@
 ---
-title: "_purecall"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_purecall | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_purecall"
@@ -21,6 +20,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntoskrnl.exe"
   - "ucrtbase.dll"
 apitype: "DLLExport"
 f1_keywords: 
@@ -33,9 +33,10 @@ helpviewer_keywords:
   - "purecall-Funktion"
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _purecall
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

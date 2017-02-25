@@ -1,13 +1,12 @@
 ---
-title: "&lt; numerisch &gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt; numerisch &gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::<numeric>"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Header < numerisch >"
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
 caps.latest.revision: 23
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # &lt; numerisch &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,21 +1,21 @@
 ---
-title: "&#220;bersicht &#252;ber ARM-ABI-Konventionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#220;bersicht &#252;ber ARM-ABI-Konventionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # &#220;bersicht &#252;ber ARM-ABI-Konventionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

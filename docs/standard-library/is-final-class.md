@@ -1,13 +1,13 @@
 ---
-title: "Is_final-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.reviewer: na
-ms.suite: na
+title: "Is_final-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "is_final"
@@ -16,14 +16,14 @@ f1_keywords:
   - "type_traits/std::is_final"
 dev_langs: 
   - "C++"
-  - "c++"
 helpviewer_keywords: 
   - "is_final"
 ms.assetid: 9dbad82f-6685-4909-94e8-98e4a93994b9
 caps.latest.revision: 12
-caps.handback.revision: "2"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Is_final-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

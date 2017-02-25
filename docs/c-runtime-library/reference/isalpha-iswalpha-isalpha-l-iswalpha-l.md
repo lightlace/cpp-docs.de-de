@@ -1,13 +1,12 @@
 ---
-title: "isalpha, iswalpha, _isalpha_l, _iswalpha_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "isalpha, iswalpha, _isalpha_l, _iswalpha_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "iswalpha"
@@ -37,7 +36,6 @@ f1_keywords:
   - "_iswalpha_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_isalpha_l-Funktion"
   - "_ismbcalpha-Funktion"
@@ -50,9 +48,10 @@ helpviewer_keywords:
   - "iswalpha_l-Funktion"
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # isalpha, iswalpha, _isalpha_l, _iswalpha_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

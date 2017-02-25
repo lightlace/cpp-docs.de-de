@@ -1,22 +1,21 @@
 ---
-title: "Einschlie&#223;lich Dateinamen in Klammern"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Einschlie&#223;lich Dateinamen in Klammern | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: 6a4e5411-c35e-48b8-90ef-b37ac324ed94
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Einschlie&#223;lich Dateinamen in Klammern
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

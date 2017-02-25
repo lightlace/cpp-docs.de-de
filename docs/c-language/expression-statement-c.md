@@ -1,25 +1,24 @@
 ---
-title: "Ausdrucksanweisung (C)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausdrucksanweisung (C) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Ausdrucksanweisungen"
   - "Anweisungen, Ausdruck"
 ms.assetid: 1085982b-dc16-4c1e-9ddd-0cd85c8fe2e3
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Ausdrucksanweisung (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

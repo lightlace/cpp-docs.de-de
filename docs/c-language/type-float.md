@@ -1,17 +1,15 @@
 ---
-title: "Typ &quot;float&quot;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Typ &quot;float&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "double-Datentyp, Typ "float""
   - "Länge des Exponenten"
@@ -26,9 +24,10 @@ helpviewer_keywords:
   - "Typ "float""
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Typ &quot;float&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

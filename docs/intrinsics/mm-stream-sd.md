@@ -1,13 +1,12 @@
 ---
-title: "_mm_stream_sd"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mm_stream_sd | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_mm_stream_sd"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "movntsd-Anweisung"
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
 caps.latest.revision: 14
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _mm_stream_sd
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

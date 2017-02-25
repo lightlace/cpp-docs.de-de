@@ -1,13 +1,12 @@
 ---
-title: "fopen, _wfopen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fopen, _wfopen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wfopen"
@@ -33,7 +32,6 @@ f1_keywords:
   - "stdio/fopen"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Öffnen von Dateien, für Datei-e/a"
   - "wfopen-Funktion"
@@ -44,9 +42,10 @@ helpviewer_keywords:
   - "fopen-Funktion"
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
 caps.latest.revision: 56
-caps.handback.revision: "56"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 56
 ---
 # fopen, _wfopen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

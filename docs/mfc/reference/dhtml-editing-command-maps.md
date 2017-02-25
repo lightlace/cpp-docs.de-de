@@ -1,21 +1,21 @@
 ---
-title: "Befehlszuordnungen f&#252;r DHTML-Bearbeitungsbefehle"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Befehlszuordnungen f&#252;r DHTML-Bearbeitungsbefehle | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
 caps.latest.revision: 14
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Befehlszuordnungen f&#252;r DHTML-Bearbeitungsbefehle
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

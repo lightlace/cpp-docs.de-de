@@ -1,28 +1,27 @@
 ---
-title: "Gleitkommaunterst&#252;tzung"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gleitkommaunterst&#252;tzung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.math"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Gleitkommazahlen"
   - "Gleitkommazahlen, Mathematische Routinen"
   - "Mathematische Routinen"
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
 caps.latest.revision: 17
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Gleitkommaunterst&#252;tzung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

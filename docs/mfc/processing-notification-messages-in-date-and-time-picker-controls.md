@@ -1,13 +1,12 @@
 ---
-title: "Verarbeiten von Benachrichtigungsmeldungen in Steuerelementen f&#252;r Zeit und Datum"
-ms.custom: na
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verarbeiten von Benachrichtigungsmeldungen in Steuerelementen f&#252;r Zeit und Datum | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "DTN_CLOSEUP"
@@ -25,9 +24,10 @@ helpviewer_keywords:
   - "DTN_FORMAT-Benachrichtigung"
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Verarbeiten von Benachrichtigungsmeldungen in Steuerelementen f&#252;r Zeit und Datum
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

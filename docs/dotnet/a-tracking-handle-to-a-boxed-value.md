@@ -1,13 +1,12 @@
 ---
-title: "Ein Trackinghandle f&#252;r einen geschachtelten Wert"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ein Trackinghandle f&#252;r einen geschachtelten Wert | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Geschachtelte Werttypen, Trackinghandle für"
 ms.assetid: 16c92048-5b74-47d5-8eca-dfea3d38879a
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Ein Trackinghandle f&#252;r einen geschachtelten Wert
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

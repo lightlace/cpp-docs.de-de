@@ -1,13 +1,12 @@
 ---
-title: "ICommandImpl::CreateRowset"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ICommandImpl::CreateRowset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ICommandImpl::CreateRowset"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CreateRowset-Methode"
 ms.assetid: a0890009-205e-4970-879f-01ed9d6a93f1
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # ICommandImpl::CreateRowset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

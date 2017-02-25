@@ -1,13 +1,12 @@
 ---
-title: "operator GE"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "operator GE | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "GE"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "operator GE"
 ms.assetid: 28804311-174d-42d0-9ce1-2187b81bc844
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # operator GE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

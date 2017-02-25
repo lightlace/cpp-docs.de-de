@@ -1,17 +1,15 @@
 ---
-title: "Funktionsaufrufe"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Funktionsaufrufe | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Funktionsaufrufe"
   - "Funktionsaufrufe, Informationen über Funktionsaufrufe"
@@ -19,9 +17,10 @@ helpviewer_keywords:
   - "Funktionen [C], Aufrufen"
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Funktionsaufrufe
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

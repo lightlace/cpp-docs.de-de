@@ -1,13 +1,12 @@
 ---
-title: "Accelerator Editor"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Accelerator Editor | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.accelerator.F1"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Accelerator editor"
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Accelerator Editor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

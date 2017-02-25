@@ -1,13 +1,12 @@
 ---
-title: "Erstellte Klassen, MFC-Anwendungs-Assistent"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellte Klassen, MFC-Anwendungs-Assistent | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.appwiz.mfc.exe.classes"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "MFC-Anwendungs-Assistent, generierte Klassen"
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
 caps.latest.revision: 13
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Erstellte Klassen, MFC-Anwendungs-Assistent
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

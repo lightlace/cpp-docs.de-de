@@ -1,13 +1,12 @@
 ---
-title: "jitintrinsic"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "jitintrinsic | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "jitintrinsic"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "jitintrinsic __declspec-Modifizierer"
 ms.assetid: 23dbe416-7ef6-442b-b16d-9a81aab04fa6
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # jitintrinsic
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

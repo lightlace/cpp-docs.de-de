@@ -1,13 +1,12 @@
 ---
-title: "_mbsnbcat, _mbsnbcat_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mbsnbcat, _mbsnbcat_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mbsnbcat_l"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_mbsnbcat_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsnbcat-Funktion"
   - "_mbsnbcat_l-Funktion"
@@ -44,9 +42,10 @@ helpviewer_keywords:
   - "tcsncat_l-Funktion"
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
 caps.latest.revision: 29
-caps.handback.revision: "29"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # _mbsnbcat, _mbsnbcat_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

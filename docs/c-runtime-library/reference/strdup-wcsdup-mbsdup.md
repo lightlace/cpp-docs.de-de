@@ -1,13 +1,12 @@
 ---
-title: "_strdup, _wcsdup, _mbsdup"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_strdup, _wcsdup, _mbsdup | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_strdup"
@@ -36,7 +35,6 @@ f1_keywords:
   - "_wcsdup"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "wcsdup-Funktion"
   - "ftcsdup-Funktion"
@@ -54,9 +52,10 @@ helpviewer_keywords:
   - "_tcsdup-Funktion"
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _strdup, _wcsdup, _mbsdup
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_initterm, _initterm_e"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_initterm, _initterm_e | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_initterm_e"
@@ -39,9 +38,10 @@ helpviewer_keywords:
   - "_initterm_e-Funktion"
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _initterm, _initterm_e
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

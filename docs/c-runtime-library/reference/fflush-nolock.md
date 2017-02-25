@@ -1,13 +1,12 @@
 ---
-title: "_fflush_nolock"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_fflush_nolock | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fflush_nolock"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_fflush_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fflush_nolock-Funktion"
   - "fflush_nolock-Funktion"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "Streams, Leeren"
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _fflush_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

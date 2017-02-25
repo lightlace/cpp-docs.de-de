@@ -1,14 +1,13 @@
 ---
-title: "Is_constructible-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Is_constructible-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "is_constructible"
@@ -17,14 +16,14 @@ f1_keywords:
   - "type_traits/std::is_constructible"
 dev_langs: 
   - "C++"
-  - "c++"
 helpviewer_keywords: 
   - "is_constructible"
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
 caps.latest.revision: 14
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Is_constructible-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

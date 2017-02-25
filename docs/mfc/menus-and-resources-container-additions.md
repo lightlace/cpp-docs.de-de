@@ -1,13 +1,12 @@
 ---
-title: "Men&#252;s und Ressourcen: Containererweiterungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Men&#252;s und Ressourcen: Containererweiterungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IDP_OLE_INIT_FAILED"
@@ -27,9 +26,10 @@ helpviewer_keywords:
   - "VK_ESCAPE-Taste"
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Men&#252;s und Ressourcen: Containererweiterungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

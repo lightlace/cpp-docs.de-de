@@ -1,13 +1,12 @@
 ---
-title: "WM_-Meldungshandler: N - O"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "WM_-Meldungshandler: N - O | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ON_WM_NCHITTEST"
@@ -48,9 +47,10 @@ helpviewer_keywords:
   - "WM_-Meldungen"
 ms.assetid: 4efd1cda-b642-4e8b-89e8-73255fa70d77
 caps.latest.revision: 17
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # WM_-Meldungshandler: N - O
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

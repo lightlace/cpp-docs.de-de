@@ -1,13 +1,12 @@
 ---
-title: "Eingabestream-Manipulatoren"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Eingabestream-Manipulatoren | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Eingabestreams, Manipulatoren"
 ms.assetid: 0addcacb-7b7b-4d70-9775-a59abc400fb3
 caps.latest.revision: 8
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Eingabestream-Manipulatoren
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

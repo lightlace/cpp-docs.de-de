@@ -1,13 +1,12 @@
 ---
-title: "DUMPBIN-Optionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "DUMPBIN-Optionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "dumpbin"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "DUMPBIN (Programm), Optionen"
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # DUMPBIN-Optionen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

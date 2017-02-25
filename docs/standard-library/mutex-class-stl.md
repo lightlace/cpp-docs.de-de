@@ -1,13 +1,12 @@
 ---
-title: "mutex-Klasse (STL)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "mutex-Klasse (STL) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "mutex/std::mutex"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 7999d055-f74f-4303-810f-8d3c9cde2f69
 caps.latest.revision: 11
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # mutex-Klasse (STL)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_ismbbkprint, _ismbbkprint_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ismbbkprint, _ismbbkprint_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ismbbkprint"
@@ -32,7 +31,6 @@ f1_keywords:
   - "ismbbkprint_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbbkprint-Funktion"
   - "ismbbkprint_l-Funktion"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "_ismbbkprint_l-Funktion"
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _ismbbkprint, _ismbbkprint_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

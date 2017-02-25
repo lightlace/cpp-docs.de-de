@@ -1,25 +1,24 @@
 ---
-title: "Konvertierungen von anderen Typen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Konvertierungen von anderen Typen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Typumwandlungen, Konvertierung"
   - "Werte, Konvertieren"
 ms.assetid: 30fbd974-8f5a-4b70-ac44-d3937b96b702
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Konvertierungen von anderen Typen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

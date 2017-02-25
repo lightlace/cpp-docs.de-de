@@ -1,13 +1,12 @@
 ---
-title: "Abs, Labs, Llabs, _abs64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Abs, Labs, Llabs, _abs64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "abs"
@@ -39,7 +38,6 @@ f1_keywords:
   - "cmath/abs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Absolute Werte"
   - "abs-Funktion"
@@ -48,9 +46,10 @@ helpviewer_keywords:
   - "Berechnen absoluter Werte"
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
 caps.latest.revision: 29
-caps.handback.revision: "29"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # Abs, Labs, Llabs, _abs64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

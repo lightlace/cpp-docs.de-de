@@ -1,14 +1,13 @@
 ---
-title: "Cacos, Cacosf, cacosl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Cacos, Cacosf, cacosl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "cacos"
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/cacosf"
   - "complex/cacosl"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "Cacos-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Cacosl-Funktion"
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Cacos, Cacosf, cacosl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

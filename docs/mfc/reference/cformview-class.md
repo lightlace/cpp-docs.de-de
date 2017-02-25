@@ -1,13 +1,12 @@
 ---
-title: "CFormView Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CFormView Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CFormView"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Ansichten, containing controls"
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
 caps.latest.revision: 23
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CFormView Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

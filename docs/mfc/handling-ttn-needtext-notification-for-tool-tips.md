@@ -1,13 +1,12 @@
 ---
-title: "Behandeln der TTN_NEEDTEXT-Benachrichtigung f&#252;r QuickInfos"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Behandeln der TTN_NEEDTEXT-Benachrichtigung f&#252;r QuickInfos | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "TTN_NEEDTEXT"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "TTN_NEEDTEXT-Meldung"
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
 caps.latest.revision: 16
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Behandeln der TTN_NEEDTEXT-Benachrichtigung f&#252;r QuickInfos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

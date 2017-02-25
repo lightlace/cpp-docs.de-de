@@ -1,13 +1,12 @@
 ---
-title: "Vorkompilierte Headerdateien"
-ms.custom: na
-ms.date: "11/17/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Vorkompilierte Headerdateien | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - ""stdafx.h""
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "stdafx.cpp"
 ms.assetid: 8228d87a-5609-41f3-9697-b16094c000e5
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Vorkompilierte Headerdateien
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

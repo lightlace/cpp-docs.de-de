@@ -1,13 +1,12 @@
 ---
-title: "wcrtomb_s"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "wcrtomb_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "wcrtomb_s"
@@ -28,7 +27,6 @@ f1_keywords:
   - "wcrtomb_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Konvertieren von Breitzeichen"
   - "wcrtomb_s-Funktion"
@@ -36,9 +34,10 @@ helpviewer_keywords:
   - "Zeichen, konvertieren"
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
 caps.latest.revision: 22
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # wcrtomb_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

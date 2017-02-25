@@ -1,13 +1,12 @@
 ---
-title: "concurrent_vector-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "concurrent_vector-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "concurrent_vector/Concurrency::concurrent_vector"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "concurrent_vector-Klasse"
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 caps.latest.revision: 21
-caps.handback.revision: "15"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # concurrent_vector-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

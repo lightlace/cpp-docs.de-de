@@ -1,13 +1,12 @@
 ---
-title: "multitype_join-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "multitype_join-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "agents/concurrency::multitype_join"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "multitype_join-Klasse"
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # multitype_join-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

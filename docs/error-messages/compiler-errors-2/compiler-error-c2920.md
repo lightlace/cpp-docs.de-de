@@ -1,13 +1,12 @@
 ---
-title: "Compiler Error C2920"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compiler Error C2920 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2920"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2920"
 ms.assetid: 0a4cb2de-00a0-4209-8160-c7ce6ed7d9ab
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compiler Error C2920
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

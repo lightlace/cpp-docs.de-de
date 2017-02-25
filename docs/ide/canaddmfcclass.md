@@ -1,13 +1,12 @@
 ---
-title: "CanAddMFCClass"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CanAddMFCClass | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CanAddMFCClass"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CanAddMFCClass-Methode"
 ms.assetid: 6a97a410-b028-4aad-9b06-04c12cf481eb
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CanAddMFCClass
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

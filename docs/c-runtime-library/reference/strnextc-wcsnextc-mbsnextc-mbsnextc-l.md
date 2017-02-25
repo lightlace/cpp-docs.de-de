@@ -1,13 +1,12 @@
 ---
-title: "_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_strnextc"
@@ -42,7 +41,6 @@ f1_keywords:
   - "wcsnextc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsnextc-Funktion"
   - "_mbsnextc_l-Funktion"
@@ -56,9 +54,10 @@ helpviewer_keywords:
   - "wcsnextc-Funktion"
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

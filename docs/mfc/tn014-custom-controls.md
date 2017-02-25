@@ -1,13 +1,12 @@
 ---
-title: "TN014: Benutzerdefinierte Steuerelemente"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN014: Benutzerdefinierte Steuerelemente | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.controls"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "TN014"
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
 caps.latest.revision: 21
-caps.handback.revision: "17"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # TN014: Benutzerdefinierte Steuerelemente
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

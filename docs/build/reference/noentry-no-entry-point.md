@@ -1,13 +1,12 @@
 ---
-title: "/NOENTRY (Kein Einstiegspunkt)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/NOENTRY (Kein Einstiegspunkt) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.ResourceOnlyDLL"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "Nur-Ressourcen-DLLs [C++], Erstellen"
 ms.assetid: 0214dd41-35ad-43ab-b892-e636e038621a
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /NOENTRY (Kein Einstiegspunkt)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

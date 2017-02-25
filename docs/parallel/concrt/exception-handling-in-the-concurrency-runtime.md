@@ -1,13 +1,12 @@
 ---
-title: "Ausnahmebehandlung in der Concurrency Runtime"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausnahmebehandlung in der Concurrency Runtime | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Aufgabengruppen, Ausnahmebehandlung [Concurrency Runtime]"
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
 caps.latest.revision: 29
-caps.handback.revision: "26"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # Ausnahmebehandlung in der Concurrency Runtime
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

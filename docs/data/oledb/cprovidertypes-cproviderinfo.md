@@ -1,13 +1,12 @@
 ---
-title: "CProviderTypes, CProviderInfo"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CProviderTypes, CProviderInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "m_bIsLong"
@@ -77,9 +76,10 @@ helpviewer_keywords:
   - "MINIMUM_SCALE"
 ms.assetid: 6f1620ff-c2f0-4f5b-931c-27b0cd2a580d
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CProviderTypes, CProviderInfo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

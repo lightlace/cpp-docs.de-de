@@ -1,13 +1,12 @@
 ---
-title: "Linkerunterst&#252;tzung f&#252;r verz&#246;gertes Laden von DLLs"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkerunterst&#252;tzung f&#252;r verz&#246;gertes Laden von DLLs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Verzögertes Laden von DLLs, Linkerunterstützung"
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Linkerunterst&#252;tzung f&#252;r verz&#246;gertes Laden von DLLs
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

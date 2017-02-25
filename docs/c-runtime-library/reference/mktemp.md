@@ -1,13 +1,12 @@
 ---
-title: "mktemp"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "mktemp | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "mktemp"
@@ -27,14 +26,14 @@ f1_keywords:
   - "mktemp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "mktemp-Funktion"
 ms.assetid: b58cba60-034f-4e63-b312-ccbcd489d0a7
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # mktemp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

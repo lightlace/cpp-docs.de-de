@@ -1,13 +1,12 @@
 ---
-title: "/INCREMENTAL (inkrementell verkn&#252;pfen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/INCREMENTAL (inkrementell verkn&#252;pfen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/incremental"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "LINK-Tool [C++], Optionen für vollständiges Verknüpfen"
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
 caps.latest.revision: 12
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /INCREMENTAL (inkrementell verkn&#252;pfen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

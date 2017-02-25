@@ -1,13 +1,12 @@
 ---
-title: "Schritte in einer typischen Internetclientanwendung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schritte in einer typischen Internetclientanwendung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "WinInet-Klassen, Programmieren"
 ms.assetid: 7aba135c-7c15-4e2f-8c34-bbaf792c89a6
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Schritte in einer typischen Internetclientanwendung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

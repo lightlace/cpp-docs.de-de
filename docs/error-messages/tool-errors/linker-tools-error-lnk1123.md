@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolfehler LNK1123"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolfehler LNK1123 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK1123"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK1123"
 ms.assetid: fe47af69-0f42-4792-9133-541192cd8514
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Linkertoolfehler LNK1123
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

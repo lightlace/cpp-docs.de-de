@@ -1,13 +1,12 @@
 ---
-title: "_free_dbg"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_free_dbg | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_free_dbg"
@@ -28,7 +27,6 @@ f1_keywords:
   - "free_dbg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Speicherblöcke, Freigeben"
   - "Freigeben von Arbeitsspeicher"
@@ -36,9 +34,10 @@ helpviewer_keywords:
   - "free_dbg-Funktion"
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _free_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

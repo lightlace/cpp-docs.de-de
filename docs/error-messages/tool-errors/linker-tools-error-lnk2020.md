@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolfehler LNK2020"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolfehler LNK2020 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK2020"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK2020"
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Linkertoolfehler LNK2020
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

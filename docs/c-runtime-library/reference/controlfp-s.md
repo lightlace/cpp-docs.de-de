@@ -1,13 +1,12 @@
 ---
-title: "_controlfp_s"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_controlfp_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_controlfp_s"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_controlfp_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_controlfp_s-Funktion"
   - "controlfp_s-Funktion"
@@ -38,9 +36,10 @@ helpviewer_keywords:
   - "Gleitkommazahlen, Steuerwort"
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 caps.latest.revision: 28
-caps.handback.revision: "28"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # _controlfp_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

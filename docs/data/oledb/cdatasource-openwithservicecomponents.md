@@ -1,13 +1,12 @@
 ---
-title: "CDataSource::OpenWithServiceComponents"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDataSource::OpenWithServiceComponents | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CDataSource::OpenWithServiceComponents"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "OpenWithServiceComponents-Methode"
 ms.assetid: 49c1d037-36ae-4fde-8e54-ced623abe1a9
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # CDataSource::OpenWithServiceComponents
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

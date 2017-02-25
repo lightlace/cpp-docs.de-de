@@ -1,20 +1,18 @@
 ---
-title: "pointers_to_members"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "pointers_to_members | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "pointers_to_members_CPP"
   - "vc-pragma.pointers_to_members"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Klassenmember, Zeiger auf"
   - "Member, Zeiger auf"
@@ -22,9 +20,10 @@ helpviewer_keywords:
   - "Pragmas, pointers_to_members"
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # pointers_to_members
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

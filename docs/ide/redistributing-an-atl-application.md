@@ -1,13 +1,12 @@
 ---
-title: "Verteilen von ATL-Anwendungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verteilen von ATL-Anwendungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Verteilen von OLE DB-Vorlagen"
 ms.assetid: 9a696b22-2345-43ec-826b-be7cb8cfd676
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Verteilen von ATL-Anwendungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

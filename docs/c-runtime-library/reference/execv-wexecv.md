@@ -1,13 +1,12 @@
 ---
-title: "_execv, _wexecv"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_execv, _wexecv | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wexecv"
@@ -31,7 +30,6 @@ f1_keywords:
   - "wexecv"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_execv-Funktion"
   - "_wexecv-Funktion"
@@ -39,9 +37,10 @@ helpviewer_keywords:
   - "wexecv-Funktion"
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
 caps.latest.revision: 23
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _execv, _wexecv
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

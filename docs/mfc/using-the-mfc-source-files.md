@@ -1,13 +1,12 @@
 ---
-title: "Verwenden der MFC-Quelldateien"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden der MFC-Quelldateien | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Quelldateien, MFC"
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Verwenden der MFC-Quelldateien
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

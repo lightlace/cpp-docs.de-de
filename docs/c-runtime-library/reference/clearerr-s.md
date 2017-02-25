@@ -1,13 +1,12 @@
 ---
-title: "clearerr_s"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "clearerr_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "clearerr_s"
@@ -28,16 +27,16 @@ f1_keywords:
   - "clearerr_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "clearerr_s-Funktion"
   - "Fehlerindikator für Streams"
   - "Neufestlegen von Streamfehlerindikator"
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
 caps.latest.revision: 19
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # clearerr_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

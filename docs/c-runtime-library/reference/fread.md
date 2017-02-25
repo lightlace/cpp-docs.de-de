@@ -1,13 +1,12 @@
 ---
-title: "fread"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fread | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "fread"
@@ -28,7 +27,6 @@ f1_keywords:
   - "fread"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Daten [C++], Lesen aus Eingabesteam"
   - "fread-Funktion"
@@ -36,9 +34,10 @@ helpviewer_keywords:
   - "Streams [C++], Lesen von Daten aus"
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
 caps.latest.revision: 17
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # fread
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

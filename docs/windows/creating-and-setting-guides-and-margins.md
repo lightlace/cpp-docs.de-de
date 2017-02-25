@@ -1,16 +1,14 @@
 ---
-title: "Creating and Setting Guides and Margins"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Creating and Setting Guides and Margins | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "guides, clearing"
@@ -23,9 +21,10 @@ helpviewer_keywords:
   - "margins, moving"
 ms.assetid: fafa4545-8f00-436f-b590-300e76601156
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Creating and Setting Guides and Margins
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "bsearch"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "bsearch | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "bsearch"
@@ -28,15 +27,15 @@ f1_keywords:
   - "bsearch"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "arrays [CRT], binäre Suche"
   - "bsearch-Funktion"
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
 caps.latest.revision: 22
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # bsearch
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "ceil, ceilf, ceill"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ceil, ceilf, ceill | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "ceilf"
@@ -32,7 +31,6 @@ f1_keywords:
   - "ceill"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Berechnen der Werteobergrenze"
   - "ceil-Funktion"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "ceil-Funktion"
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # ceil, ceilf, ceill
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

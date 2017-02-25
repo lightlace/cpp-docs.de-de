@@ -1,13 +1,12 @@
 ---
-title: "Fenster-, Dialog- und Steuerelementklassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Fenster-, Dialog- und Steuerelementklassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.classes.mfc"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Fenster [C++], Dialogklassen und Steuerelementklassen"
 ms.assetid: b3610da6-9644-49b7-adbf-0e04f0d6d2b5
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Fenster-, Dialog- und Steuerelementklassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

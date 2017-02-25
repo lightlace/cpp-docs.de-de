@@ -1,13 +1,12 @@
 ---
-title: "Verwenden von CDateTimeCtrl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von CDateTimeCtrl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CDateTimeCtrl"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "DateTimePicker-Steuerelement [MFC], CDateTimeCtrl-Klasse"
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Verwenden von CDateTimeCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

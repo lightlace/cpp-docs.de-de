@@ -1,27 +1,26 @@
 ---
-title: "Argumentzugriff"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Argumentzugriff | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.arguments"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Argumentzugriffsmakros [C++]"
   - "Argumentlisten variabler Länge"
 ms.assetid: 7046ae34-a0ec-44f0-815d-3209492a3e19
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Argumentzugriff
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

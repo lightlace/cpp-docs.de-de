@@ -1,13 +1,12 @@
 ---
-title: "output_iterator_tag-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "output_iterator_tag-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::output_iterator_tag"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "output_iterator_tag-Struktur"
 ms.assetid: c23a4331-b069-4fa0-9c3a-1c9be7095553
 caps.latest.revision: 19
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # output_iterator_tag-Struktur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

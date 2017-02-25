@@ -1,13 +1,12 @@
 ---
-title: "Ein Beispiel f&#252;r die Kommentare"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ein Beispiel f&#252;r die Kommentare | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "MFC-Quelldateien, Kommentarbeispiel"
 ms.assetid: eb8ddea2-74de-4d5c-93d6-596f7c5e58a7
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Ein Beispiel f&#252;r die Kommentare
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

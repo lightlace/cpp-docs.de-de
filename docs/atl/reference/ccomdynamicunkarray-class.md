@@ -1,13 +1,12 @@
 ---
-title: "CComDynamicUnkArray Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CComDynamicUnkArray Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL.CComDynamicUnkArray"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Verbindungspunkte [C++], Verwalten"
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
 caps.latest.revision: 17
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # CComDynamicUnkArray Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

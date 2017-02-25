@@ -1,13 +1,12 @@
 ---
-title: "-clr (Common Language Runtime -Kompilierung)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "-clr (Common Language Runtime -Kompilierung) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/CLR"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "Common Language Runtime, /clr (Compileroption)"
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
 caps.latest.revision: 72
-caps.handback.revision: "72"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 72
 ---
 # /clr (Common&#160;Language&#160;Runtime-Kompilierung)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

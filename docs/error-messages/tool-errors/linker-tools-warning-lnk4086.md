@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolwarnung LNK4086"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolwarnung LNK4086 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK4086"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK4086"
 ms.assetid: ea1eecbb-ba2c-41bb-9a4f-fa0808a4b92d
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Linkertoolwarnung LNK4086
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

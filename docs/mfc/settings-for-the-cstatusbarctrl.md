@@ -1,13 +1,12 @@
 ---
-title: "Einstellungen f&#252;r CStatusBarCtrl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Einstellungen f&#252;r CStatusBarCtrl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CStatusBarCtrl"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Statusleiste-Steuerelement, Einstellungen"
 ms.assetid: adeba0c3-17f3-435c-b140-a57845e9ce49
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Einstellungen f&#252;r CStatusBarCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

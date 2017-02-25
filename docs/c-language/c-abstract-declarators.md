@@ -1,25 +1,24 @@
 ---
-title: "C-Deklaratoren (abstrakt)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "C-Deklaratoren (abstrakt) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Abstrakte Deklarationen"
   - "Deklaratoren, abstract"
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # C-Deklaratoren (abstrakt)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

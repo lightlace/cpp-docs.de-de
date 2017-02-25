@@ -1,13 +1,12 @@
 ---
-title: "CriticalSection::cs_-Datenmember"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CriticalSection::cs_-Datenmember | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::cs_"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "cs_-Datenmember"
 ms.assetid: d00ff777-9491-47b4-bdf8-e7615ffcd789
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # CriticalSection::cs_-Datenmember
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

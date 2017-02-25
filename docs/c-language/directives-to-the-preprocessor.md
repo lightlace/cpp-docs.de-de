@@ -1,22 +1,21 @@
 ---
-title: "Direktiven f&#252;r den Pr&#228;prozessor"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Direktiven f&#252;r den Pr&#228;prozessor | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: adc6251e-cf6b-4508-bdbb-55f446c838d3
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Direktiven f&#252;r den Pr&#228;prozessor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

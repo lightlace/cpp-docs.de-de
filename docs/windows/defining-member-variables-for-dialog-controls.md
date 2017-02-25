@@ -1,16 +1,14 @@
 ---
-title: "Defining Member Variables for Dialog Controls"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Defining Member Variables for Dialog Controls | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "member variables, defining for controls"
@@ -19,9 +17,10 @@ helpviewer_keywords:
   - "Dialog editor, defining member variables for controls"
 ms.assetid: 84347c63-c33c-4b04-91f5-6d008c45ba58
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Defining Member Variables for Dialog Controls
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

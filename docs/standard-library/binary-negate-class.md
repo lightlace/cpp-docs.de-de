@@ -1,13 +1,12 @@
 ---
-title: "binary_negate-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "binary_negate-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "xfunctional/std::binary_negate"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "binary_negate-Klasse"
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
 caps.latest.revision: 20
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # binary_negate-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

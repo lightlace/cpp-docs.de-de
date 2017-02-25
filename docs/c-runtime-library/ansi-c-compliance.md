@@ -1,19 +1,17 @@
 ---
-title: "ANSI C-Kompatibilit&#228;t"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ANSI C-Kompatibilit&#228;t | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "Ansi"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ANSI [C++], C-Standard"
   - "Kompatibilität [C++], ANSI-C"
@@ -25,9 +23,10 @@ helpviewer_keywords:
   - "Unterstriche, Zeilenabstand"
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ANSI C-Kompatibilit&#228;t
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3052"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3052 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C3052"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3052"
 ms.assetid: 87480c42-1ceb-4775-8d20-88c54a7bb6a6
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerfehler C3052
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

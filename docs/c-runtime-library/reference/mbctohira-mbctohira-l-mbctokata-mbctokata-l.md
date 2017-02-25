@@ -1,13 +1,12 @@
 ---
-title: "_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mbctohira"
@@ -38,7 +37,6 @@ f1_keywords:
   - "_mbctokata_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbctohira-Funktion"
   - "_mbctohira_l-Funktion"
@@ -50,9 +48,10 @@ helpviewer_keywords:
   - "mbctokata_l-Funktion"
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
 caps.latest.revision: 19
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,17 +1,15 @@
 ---
-title: "Trigraphen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Trigraphen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "? Symbol, Trigraph"
   - "??-Trigraph"
@@ -27,9 +25,10 @@ helpviewer_keywords:
   - "Trigraphen"
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
 caps.latest.revision: 8
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Trigraphen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "/Fd (Programmdatenbank-Dateiname)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Fd (Programmdatenbank-Dateiname) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/FD"
@@ -25,9 +24,10 @@ helpviewer_keywords:
   - "Programmdatenbank-Dateiname [C++]"
 ms.assetid: 3977a9ed-f0ac-45df-bf06-01cedd2ba85a
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /Fd (Programmdatenbank-Dateiname)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

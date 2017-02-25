@@ -1,13 +1,12 @@
 ---
-title: "CAxWindow2T Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CAxWindow2T Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL::CAxWindow2T<TBase>"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "CAxWindow2 class"
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
 caps.latest.revision: 22
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CAxWindow2T Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

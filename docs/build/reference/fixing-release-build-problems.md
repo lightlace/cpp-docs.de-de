@@ -1,13 +1,12 @@
 ---
-title: "Beheben von Problemen mit dem Releasebuild"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Beheben von Problemen mit dem Releasebuild | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Problembehandlung in Visual C++, Releasebuilds"
 ms.assetid: a0c0818e-4c47-4fe0-a611-50d61a41bd88
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Beheben von Problemen mit dem Releasebuild
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

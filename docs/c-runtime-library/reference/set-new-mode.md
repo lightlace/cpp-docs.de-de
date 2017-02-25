@@ -1,13 +1,12 @@
 ---
-title: "_set_new_mode"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_set_new_mode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_set_new_mode"
@@ -29,16 +28,16 @@ f1_keywords:
   - "_set_new_mode"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_set_new_mode-Funktion"
   - "Handlermodi"
   - "set_new_mode-Funktion"
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _set_new_mode
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Windows Sockets: Wie Sockets mit Archiven arbeiten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Windows Sockets: Wie Sockets mit Archiven arbeiten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Windows-Sockets [C++], mit Archiven"
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Windows Sockets: Wie Sockets mit Archiven arbeiten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

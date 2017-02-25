@@ -1,26 +1,25 @@
 ---
-title: "Datenausrichtung"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Datenausrichtung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "data.alignment"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Datenausrichtung [C++]"
 ms.assetid: 35ac3d2d-a4b3-421b-954f-b7372b1f18e1
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Datenausrichtung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

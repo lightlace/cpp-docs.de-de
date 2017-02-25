@@ -1,13 +1,12 @@
 ---
-title: "fwide"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fwide | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "fwide"
@@ -31,9 +30,10 @@ helpviewer_keywords:
   - "fwide-Funktion"
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # fwide
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

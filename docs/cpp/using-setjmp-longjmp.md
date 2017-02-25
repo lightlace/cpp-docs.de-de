@@ -1,13 +1,12 @@
 ---
-title: "Verwenden von &quot;setjmp/longjmp&quot;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von &quot;setjmp/longjmp&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "longjmp"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "SETJMPEX.H"
 ms.assetid: 96be8816-f6f4-4567-9a9c-0c3c720e37c5
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Verwenden von &quot;setjmp/longjmp&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

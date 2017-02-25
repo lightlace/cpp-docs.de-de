@@ -1,13 +1,12 @@
 ---
-title: "_acmdln, _tcmdln, _wcmdln"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_acmdln, _tcmdln, _wcmdln | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wcmdln"
@@ -33,9 +32,10 @@ helpviewer_keywords:
   - "wcmdln (globale Variable)"
 ms.assetid: 4fc0a6a0-3f93-420a-a19f-5276061ba539
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _acmdln, _tcmdln, _wcmdln
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

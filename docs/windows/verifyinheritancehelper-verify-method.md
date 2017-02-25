@@ -1,13 +1,12 @@
 ---
-title: "VerifyInheritanceHelper::Verify-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "VerifyInheritanceHelper::Verify-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::Details::VerifyInheritanceHelper::Verify"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Verify-Methode"
 ms.assetid: 3360082b-81ad-4191-9ec3-b4372f7207d7
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # VerifyInheritanceHelper::Verify-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

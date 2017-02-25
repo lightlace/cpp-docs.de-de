@@ -1,13 +1,12 @@
 ---
-title: "_tempnam, _wtempnam, tmpnam, _wtmpnam"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_tempnam, _wtempnam, tmpnam, _wtmpnam | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wtempnam"
@@ -36,7 +35,6 @@ f1_keywords:
   - "_tempnam"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tempnam-Funktion"
   - "_ttmpnam-Funktion"
@@ -52,9 +50,10 @@ helpviewer_keywords:
   - "wtmpnam-Funktion"
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
 caps.latest.revision: 20
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _tempnam, _wtempnam, tmpnam, _wtmpnam
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

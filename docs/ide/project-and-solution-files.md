@@ -1,13 +1,12 @@
 ---
-title: "Projekt- und Projektmappendateien"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Projekt- und Projektmappendateien | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.files.projectandsolution"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Projektdateien [C++]"
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Projekt- und Projektmappendateien
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

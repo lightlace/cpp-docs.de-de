@@ -1,16 +1,14 @@
 ---
-title: "Selecting Multiple Controls"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Selecting Multiple Controls | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "Dialog editor, selecting controls"
@@ -19,9 +17,10 @@ helpviewer_keywords:
   - "controls [C++], removing from groups"
 ms.assetid: efbdbade-0a3a-4328-b36e-a6376c06e8de
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Selecting Multiple Controls
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

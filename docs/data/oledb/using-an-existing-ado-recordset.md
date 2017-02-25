@@ -1,13 +1,12 @@
 ---
-title: "Verwenden eines vorhandenen ADO-Recordsets"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden eines vorhandenen ADO-Recordsets | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Recordsets [C++], Verwenden in OLE DB"
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Verwenden eines vorhandenen ADO-Recordsets
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

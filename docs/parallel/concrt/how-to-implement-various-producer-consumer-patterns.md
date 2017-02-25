@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Implementieren verschiedener Producer-Consumer-Muster"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Implementieren verschiedener Producer-Consumer-Muster | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Implementieren von Producer-Consumer-Mustern [Concurrency Runtime]"
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
 caps.latest.revision: 17
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Gewusst wie: Implementieren verschiedener Producer-Consumer-Muster
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

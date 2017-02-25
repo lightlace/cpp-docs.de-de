@@ -1,13 +1,12 @@
 ---
-title: "bad_function_call-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "bad_function_call-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::tr1::bad_function_call"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "bad_function_call-Klasse [TR1]"
 ms.assetid: b70a0268-43ff-4f3b-a283-faf1cb172d4c
 caps.latest.revision: 20
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # bad_function_call-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

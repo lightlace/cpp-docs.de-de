@@ -1,13 +1,12 @@
 ---
-title: "_CrtSetBreakAlloc"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_CrtSetBreakAlloc | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_CrtSetBreakAlloc"
@@ -28,15 +27,15 @@ f1_keywords:
   - "_CrtSetBreakAlloc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CrtSetBreakAlloc-Funktion"
   - "CrtSetBreakAlloc-Funktion"
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _CrtSetBreakAlloc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

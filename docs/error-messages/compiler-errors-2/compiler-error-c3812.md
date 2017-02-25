@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3812"
-ms.custom: na
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3812 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C3812"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3812"
 ms.assetid: 326ac706-9a5f-4851-b9d2-b90c64c75532
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Compilerfehler C3812
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

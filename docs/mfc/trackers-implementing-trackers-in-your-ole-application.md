@@ -1,13 +1,12 @@
 ---
-title: "Tracker: Implementieren von Trackern in einer OLE-Anwendung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Tracker: Implementieren von Trackern in einer OLE-Anwendung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Nachverfolgen von OLE-Elementen"
 ms.assetid: 5103a517-65bd-441a-8a53-02915ff3ef08
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Tracker: Implementieren von Trackern in einer OLE-Anwendung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

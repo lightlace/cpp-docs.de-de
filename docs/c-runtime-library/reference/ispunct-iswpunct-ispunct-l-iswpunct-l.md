@@ -1,13 +1,12 @@
 ---
-title: "ispunct, iswpunct, _ispunct_l, _iswpunct_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ispunct, iswpunct, _ispunct_l, _iswpunct_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "ispunct"
@@ -33,7 +32,6 @@ f1_keywords:
   - "ispunct"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ispunct_l-Funktion"
   - "_istpunct-Funktion"
@@ -45,9 +43,10 @@ helpviewer_keywords:
   - "iswpunct_l-Funktion"
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # ispunct, iswpunct, _ispunct_l, _iswpunct_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

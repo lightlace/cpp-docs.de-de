@@ -1,25 +1,24 @@
 ---
-title: "Pr&#228;prozessoroperatoren"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Pr&#228;prozessoroperatoren | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Operatoren [C++], Präprozessor"
   - "Präprozessoroperatoren"
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Pr&#228;prozessoroperatoren
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

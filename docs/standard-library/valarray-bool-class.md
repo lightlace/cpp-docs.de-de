@@ -1,13 +1,12 @@
 ---
-title: "valarray&lt;bool&gt;-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "valarray&lt;bool&gt;-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "valarray<bool>"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "valarray<bool>-Klasse"
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
 caps.latest.revision: 14
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # valarray&lt;bool&gt;-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

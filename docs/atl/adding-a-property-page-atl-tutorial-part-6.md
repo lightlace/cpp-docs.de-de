@@ -1,21 +1,21 @@
 ---
-title: "Hinzuf&#252;gen einer Eigenschaftenseite (ATL-Lernprogramm, Teil 6)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hinzuf&#252;gen einer Eigenschaftenseite (ATL-Lernprogramm, Teil 6) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 dev_langs: 
   - "C++"
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
 caps.latest.revision: 15
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Hinzuf&#252;gen einer Eigenschaftenseite (ATL-Lernprogramm, Teil 6)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

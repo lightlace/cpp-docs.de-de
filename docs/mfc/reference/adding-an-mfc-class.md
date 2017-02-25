@@ -1,13 +1,12 @@
 ---
-title: "Hinzuf&#252;gen einer MFC-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hinzuf&#252;gen einer MFC-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.codewiz.classes.adding.mfc"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "MFC, Hinzufügen von Klassen"
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
 caps.latest.revision: 13
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Hinzuf&#252;gen einer MFC-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

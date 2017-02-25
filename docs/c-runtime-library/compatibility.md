@@ -1,28 +1,27 @@
 ---
-title: "Kompatibilit&#228;t"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Kompatibilit&#228;t | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.programs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Kompatibilität"
   - "Kompatibilität, Laufzeitbibliotheken in C"
   - "CRT, Kompatibilität"
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Kompatibilit&#228;t
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

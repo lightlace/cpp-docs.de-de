@@ -1,13 +1,12 @@
 ---
-title: "Datenquelle: Programmgesteuertes Erstellen einer Tabelle in einer ODBC-Datenquelle"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Datenquelle: Programmgesteuertes Erstellen einer Tabelle in einer ODBC-Datenquelle | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Tabellen [C++], Programmgesteuertes Erstellen"
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Datenquelle: Programmgesteuertes Erstellen einer Tabelle in einer ODBC-Datenquelle
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

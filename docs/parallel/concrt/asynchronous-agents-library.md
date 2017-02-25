@@ -1,13 +1,12 @@
 ---
-title: "Asynchronous Agents Library"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Asynchronous Agents Library | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Asynchronous Agents Library"
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
 caps.latest.revision: 33
-caps.handback.revision: "33"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # Asynchronous Agents Library
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

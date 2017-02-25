@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4490"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 1) C4490 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4490"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4490"
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Compilerwarnung (Stufe 1) C4490
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

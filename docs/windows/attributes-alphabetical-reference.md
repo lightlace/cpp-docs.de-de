@@ -1,13 +1,12 @@
 ---
-title: "Attributes Alphabetical Reference"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Attributes Alphabetical Reference | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "index-page "
 f1_keywords: 
   - "vc.attributes"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "attributes [C++]"
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Attributes Alphabetical Reference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

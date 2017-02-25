@@ -1,13 +1,12 @@
 ---
-title: "/Zc:forScope (&#220;bereinstimmung in for-Schleifenbereich erzwingen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Zc:forScope (&#220;bereinstimmung in for-Schleifenbereich erzwingen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLCompilerTool.ForceConformanceInForLoopScope"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "-Zc (Compileroptionen) [C++]"
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # /Zc:forScope (&#220;bereinstimmung in for-Schleifenbereich erzwingen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

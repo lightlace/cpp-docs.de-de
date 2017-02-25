@@ -1,13 +1,12 @@
 ---
-title: "Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "agent-Klasse, Beispiel"
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
 caps.latest.revision: 24
-caps.handback.revision: "21"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

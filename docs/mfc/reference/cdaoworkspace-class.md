@@ -1,13 +1,12 @@
 ---
-title: "CDaoWorkspace Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDaoWorkspace Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CDaoWorkspace"
@@ -37,9 +36,10 @@ helpviewer_keywords:
   - "Workspaces collection"
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 caps.latest.revision: 24
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # CDaoWorkspace Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

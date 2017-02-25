@@ -1,13 +1,12 @@
 ---
-title: "_malloca"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_malloca | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_malloca"
@@ -28,16 +27,16 @@ f1_keywords:
   - "_malloca"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_malloca-Funktion"
   - "malloca-Funktion"
   - "Speicherreservierung, Stapel"
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
 caps.latest.revision: 27
-caps.handback.revision: "27"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # _malloca
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

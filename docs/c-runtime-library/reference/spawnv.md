@@ -1,13 +1,12 @@
 ---
-title: "spawnv"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "spawnv | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "spawnv"
@@ -27,14 +26,14 @@ f1_keywords:
   - "spawnv"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "spawnv-Funktion"
 ms.assetid: 6f9b247c-1524-4c24-b846-6925fe22f1cd
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # spawnv
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

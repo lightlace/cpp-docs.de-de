@@ -1,13 +1,12 @@
 ---
-title: "WeakReference::WeakReference-Konstruktor"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "WeakReference::WeakReference-Konstruktor | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::Details::WeakReference::WeakReference"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "WeakReference, Konstruktor"
 ms.assetid: 4959a9d7-78ea-423d-a46b-50d010d29fff
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # WeakReference::WeakReference-Konstruktor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

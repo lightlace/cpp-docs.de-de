@@ -1,13 +1,12 @@
 ---
-title: "Empfohlene Vorgehensweisen im Zusammenhang mit der Concurrency Runtime"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Empfohlene Vorgehensweisen im Zusammenhang mit der Concurrency Runtime | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Nicht zu empfehlende Vorgehensweisen [Concurrency Runtime]"
 ms.assetid: 7231d4be-d1e3-401d-8b66-94fd51b587c9
 caps.latest.revision: 10
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Empfohlene Vorgehensweisen im Zusammenhang mit der Concurrency Runtime
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

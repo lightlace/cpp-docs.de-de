@@ -1,13 +1,12 @@
 ---
-title: "Schlie&#223;en von Dateien"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schlie&#223;en von Dateien | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "MFC [C++], Dateivorgänge"
 ms.assetid: 8415a3a8-3c75-45b0-ac2a-d5385f49bdb3
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Schlie&#223;en von Dateien
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

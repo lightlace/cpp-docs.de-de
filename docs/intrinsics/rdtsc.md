@@ -1,13 +1,12 @@
 ---
-title: "__rdtsc"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__rdtsc | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "__rdtsc"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Read Time Stamp Counter-Anweisung"
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
 caps.latest.revision: 17
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # __rdtsc
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

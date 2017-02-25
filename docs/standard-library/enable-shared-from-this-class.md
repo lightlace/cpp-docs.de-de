@@ -1,13 +1,12 @@
 ---
-title: "enable_shared_from_this-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "enable_shared_from_this-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "tr1.enable_shared_from_this"
@@ -25,9 +24,10 @@ helpviewer_keywords:
   - "enable_shared_from_this-Klasse [TR1]"
 ms.assetid: 9237603d-22e2-421f-b070-838ac006baf5
 caps.latest.revision: 22
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # enable_shared_from_this-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

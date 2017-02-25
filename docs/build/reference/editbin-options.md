@@ -1,13 +1,12 @@
 ---
-title: "EDITBIN-Optionen"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "EDITBIN-Optionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "editbin"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "EDITBIN (Programm), Optionen"
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # EDITBIN-Optionen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

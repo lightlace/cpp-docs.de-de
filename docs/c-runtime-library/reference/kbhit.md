@@ -1,13 +1,12 @@
 ---
-title: "_kbhit"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "kbhit | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_kbhit"
@@ -25,26 +24,17 @@ apilocation:
   - "api-ms-win-crt-stdio-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_kbhit"
   - "kbhit"
-  - "conio/_kbhit"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_kbhit-Funktion"
-  - "Konsole"
-  - "Konsole, Überprüfen"
   - "kbhit-Funktion"
-  - "Tastatureingabe"
-  - "Tastaturen, Überprüfen der Eingabe"
-  - "Tastaturen, Tastatureingabe"
-  - "Benutzereingabe, Überprüfen der Tastatur"
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _kbhit
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

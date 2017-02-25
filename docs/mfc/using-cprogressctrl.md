@@ -1,13 +1,12 @@
 ---
-title: "Verwenden von CProgressCtrl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von CProgressCtrl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CProgressCtrl"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Statussteuerelemente [C++], Verwenden"
 ms.assetid: 61473270-196b-41ab-bf2b-467f46673539
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Verwenden von CProgressCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

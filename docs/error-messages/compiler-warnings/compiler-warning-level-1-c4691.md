@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4691"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 1) C4691 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4691"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4691"
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Compilerwarnung (Stufe 1) C4691
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

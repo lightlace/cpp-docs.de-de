@@ -1,17 +1,15 @@
 ---
-title: "Speicherklassenspezifizierer &quot;extern&quot;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Speicherklassenspezifizierer &quot;extern&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "extern-Schlüsselwort [C]"
   - "extern-Schlüsselwort [C], Speicherklassenspezifizierer"
@@ -20,9 +18,10 @@ helpviewer_keywords:
   - "Speicherklassenspezifizierer, extern"
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Speicherklassenspezifizierer &quot;extern&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

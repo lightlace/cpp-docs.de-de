@@ -1,13 +1,12 @@
 ---
-title: "_getche_nolock, _getwche_nolock"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_getche_nolock, _getwche_nolock | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_getche_nolock"
@@ -33,7 +32,6 @@ f1_keywords:
   - "gettche_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getche_nolock-Funktion"
   - "_gettche_nolock-Funktion"
@@ -45,9 +43,10 @@ helpviewer_keywords:
   - "getwche_nolock-Funktion"
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _getche_nolock, _getwche_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,26 +1,25 @@
 ---
-title: "tlbid"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "tlbid | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "tlbid"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tlbid-Attribut"
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # tlbid
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

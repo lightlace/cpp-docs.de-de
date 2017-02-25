@@ -1,13 +1,12 @@
 ---
-title: "tell"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "tell | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "tell"
@@ -27,14 +26,14 @@ f1_keywords:
   - "tell"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tell-Funktion"
 ms.assetid: 3a92a40d-f472-4545-a493-f57c340ee798
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # tell
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

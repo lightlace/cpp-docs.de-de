@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4350"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 1) C4350 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4350"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4350"
 ms.assetid: 4cc8ed67-64c4-4da5-a7a5-a639232baa23
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerwarnung (Stufe 1) C4350
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

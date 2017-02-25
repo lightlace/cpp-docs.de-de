@@ -1,31 +1,6 @@
 ---
-title: "Ausf&#252;hren als Mitglied der Gruppe Benutzer"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "PRJ0050"
-  - "VCD0047"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Benutzergruppe [C++]"
-  - "Sicherheit [C++], Benutzergruppe"
-  - "Windows-Konten [C++]"
-  - "Benutzer ohne Administratorrechte [C++]"
-  - "Benutzerkonten [C++]"
-  - "Administrator (nicht ausgeführt als) [C++]"
-ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-caps.latest.revision: 17
-caps.handback.revision: "17"
-ms.author: "ghogen"
-manager: "ghogen"
+redirect_url: /cpp/security/running-as-a-member-of-the-users-group
+caps.handback.revision: 17
 ---
 # Ausf&#252;hren als Mitglied der Gruppe Benutzer
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

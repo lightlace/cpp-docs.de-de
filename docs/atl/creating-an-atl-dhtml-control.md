@@ -1,13 +1,12 @@
 ---
-title: "Creating an ATL DHTML Control"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Creating an ATL DHTML Control | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "HTML-Steuerelemente, Erstellen"
 ms.assetid: 1d8f0ede-7d8b-4959-976e-b4d0e2a87f5a
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Creating an ATL DHTML Control
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

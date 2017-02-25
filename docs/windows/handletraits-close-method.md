@@ -1,13 +1,12 @@
 ---
-title: "HANDLETraits::Close-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "HANDLETraits::Close-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Close-Methode"
 ms.assetid: 3c631a7c-ccce-472a-b1da-aab8fa815c13
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # HANDLETraits::Close-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

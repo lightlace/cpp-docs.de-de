@@ -1,13 +1,12 @@
 ---
-title: "/MACHINE (Zielplattform angeben)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/MACHINE (Zielplattform angeben) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.TargetMachine"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Zielplattform"
 ms.assetid: 8d41bf4b-7e53-4ab9-9085-d852b08d31c2
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /MACHINE (Zielplattform angeben)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

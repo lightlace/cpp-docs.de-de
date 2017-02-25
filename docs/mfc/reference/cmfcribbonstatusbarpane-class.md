@@ -1,13 +1,12 @@
 ---
-title: "CMFCRibbonStatusBarPane Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCRibbonStatusBarPane Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCRibbonStatusBarPane"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCRibbonStatusBarPane class"
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
 caps.latest.revision: 31
-caps.handback.revision: "19"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # CMFCRibbonStatusBarPane Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

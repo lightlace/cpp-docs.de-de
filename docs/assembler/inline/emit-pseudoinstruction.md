@@ -1,13 +1,12 @@
 ---
-title: "_emit Pseudoinstruction"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_emit Pseudoinstruction | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_emit"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Bytedefinition (Inlineassembly)"
 ms.assetid: 004c48f3-364c-4e82-9a51-e326f9cc7b2b
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _emit Pseudoinstruction
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

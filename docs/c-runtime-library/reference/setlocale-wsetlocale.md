@@ -1,13 +1,12 @@
 ---
-title: "setlocale, _wsetlocale"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "setlocale, _wsetlocale | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wsetlocale"
@@ -31,7 +30,6 @@ f1_keywords:
   - "setlocale"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tsetlocale-Funktion"
   - "_wsetlocale-Funktion"
@@ -42,9 +40,10 @@ helpviewer_keywords:
   - "wsetlocale-Funktion"
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 caps.latest.revision: 31
-caps.handback.revision: "29"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # setlocale, _wsetlocale
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

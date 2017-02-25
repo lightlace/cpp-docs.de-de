@@ -1,13 +1,12 @@
 ---
-title: "Interne globale CRT-Elemente und Funktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Interne globale CRT-Elemente und Funktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "__acrt_iob_func"
@@ -825,9 +824,10 @@ helpviewer_keywords:
   - "__C_specific_handler"
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Interne globale CRT-Elemente und Funktionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

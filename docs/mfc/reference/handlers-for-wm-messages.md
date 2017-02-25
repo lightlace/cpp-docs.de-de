@@ -1,13 +1,12 @@
 ---
-title: "Handler f&#252;r WM_-Meldungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Handler f&#252;r WM_-Meldungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "WM_"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "WM_-Meldungen"
 ms.assetid: cad81690-90bf-4f77-943f-a435e7563bdd
 caps.latest.revision: 11
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Handler f&#252;r WM_-Meldungen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

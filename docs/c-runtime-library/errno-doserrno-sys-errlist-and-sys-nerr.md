@@ -1,13 +1,12 @@
 ---
-title: "errno, _doserrno, _sys_errlist und _sys_nerr"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "errno, _doserrno, _sys_errlist und _sys_nerr | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_errno"
@@ -21,7 +20,6 @@ f1_keywords:
   - "_doserrno"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_doserrno (globale Variable)"
   - "_sys_errlist (globale Variable)"
@@ -33,9 +31,10 @@ helpviewer_keywords:
   - "sys_nerr (globale Variable)"
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # errno, _doserrno, _sys_errlist und _sys_nerr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

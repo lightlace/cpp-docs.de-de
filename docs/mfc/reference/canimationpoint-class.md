@@ -1,13 +1,12 @@
 ---
-title: "CAnimationPoint Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CAnimationPoint Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CAnimationPoint"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CAnimationPoint-Klasse"
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
 caps.latest.revision: 17
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # CAnimationPoint Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_RPT-, _RPTF-, _RPTW- und _RPTFW-Makros"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_RPT-, _RPTF-, _RPTW- und _RPTFW-Makros | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcrt.dll"
@@ -43,7 +42,6 @@ f1_keywords:
   - "_RPTF1"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Debuggen [CRT], Verwenden von Makros"
   - "_RPTW3-Makro"
@@ -98,9 +96,10 @@ helpviewer_keywords:
   - "RPTW1-Makro"
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _RPT-, _RPTF-, _RPTW- und _RPTFW-Makros
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

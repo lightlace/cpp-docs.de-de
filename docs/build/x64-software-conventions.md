@@ -1,13 +1,12 @@
 ---
-title: "x64-Softwarekonventionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "x64-Softwarekonventionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "x64 Codierungskonventionen"
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # x64-Softwarekonventionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

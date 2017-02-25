@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4554"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 3) C4554 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4554"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4554"
 ms.assetid: 55bb68f0-2e80-4330-8921-51083c4f8d53
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Compilerwarnung (Stufe 3) C4554
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

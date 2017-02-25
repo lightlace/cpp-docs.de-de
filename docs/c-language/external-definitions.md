@@ -1,25 +1,24 @@
 ---
-title: "Externe Definitionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Externe Definitionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Externe Definitionen"
   - "Externe Verknüpfung, Variable Deklarationen"
 ms.assetid: 41e37bfc-b360-43b1-9972-28af2d365b20
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Externe Definitionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

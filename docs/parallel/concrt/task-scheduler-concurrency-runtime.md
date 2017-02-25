@@ -1,13 +1,12 @@
 ---
-title: "Taskplaner (Concurrency Runtime)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Taskplaner (Concurrency Runtime) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -27,9 +26,10 @@ helpviewer_keywords:
   - "wait-Funktion [Concurrency Runtime]"
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
 caps.latest.revision: 42
-caps.handback.revision: "41"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 41
 ---
 # Taskplaner (Concurrency Runtime)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

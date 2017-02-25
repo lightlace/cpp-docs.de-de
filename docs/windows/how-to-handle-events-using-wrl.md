@@ -1,21 +1,21 @@
 ---
-title: "Gewusst wie: Behandeln von Ereignissen mit WRL"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Behandeln von Ereignissen mit WRL | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Gewusst wie: Behandeln von Ereignissen mit WRL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

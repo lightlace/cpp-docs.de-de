@@ -1,16 +1,14 @@
 ---
-title: "Defining Mnemonics (Access Keys)"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Defining Mnemonics (Access Keys) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "access keys [C++], adding"
@@ -26,9 +24,10 @@ helpviewer_keywords:
   - "access keys [C++]"
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Defining Mnemonics (Access Keys)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

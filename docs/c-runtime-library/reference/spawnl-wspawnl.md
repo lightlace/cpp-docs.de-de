@@ -1,13 +1,12 @@
 ---
-title: "_spawnl, _wspawnl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_spawnl, _wspawnl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wspawnl"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_spawnl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "spawnl-Funktion"
   - "Prozesse, Erstellen"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Prozesserstellung"
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _spawnl, _wspawnl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

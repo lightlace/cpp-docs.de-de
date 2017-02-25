@@ -1,13 +1,12 @@
 ---
-title: "__if_exists-Anweisung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__if_exists-Anweisung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "__if_exists_cpp"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Symbole, Testen auf Vorhandensein"
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # __if_exists-Anweisung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

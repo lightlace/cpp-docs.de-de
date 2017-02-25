@@ -1,13 +1,12 @@
 ---
-title: "PROPERTY_INFO_ENTRY_EX"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "PROPERTY_INFO_ENTRY_EX | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "PROPERTY_INFO_ENTRY_EX"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "PROPERTY_INFO_ENTRY_EX-Makro"
 ms.assetid: af32dfcd-4c50-449d-af3b-48d21bd67a04
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # PROPERTY_INFO_ENTRY_EX
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

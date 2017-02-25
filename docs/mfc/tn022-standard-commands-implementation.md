@@ -1,13 +1,12 @@
 ---
-title: "TN022: Implementieren von Standardbefehlen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN022: Implementieren von Standardbefehlen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.commands"
@@ -70,9 +69,10 @@ helpviewer_keywords:
   - "TN022"
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN022: Implementieren von Standardbefehlen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

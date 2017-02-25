@@ -1,13 +1,12 @@
 ---
-title: "_CrtDoForAllClientObjects"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_CrtDoForAllClientObjects | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_CrtDoForAllClientObjects"
@@ -29,15 +28,15 @@ f1_keywords:
   - "crtdbg/_CrdDoForAllClientObjects"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CrtDoForAllClientObjects-Funktion"
   - "CrtDoForAllClientObjects-Funktion"
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
 caps.latest.revision: 18
-caps.handback.revision: "18"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _CrtDoForAllClientObjects
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

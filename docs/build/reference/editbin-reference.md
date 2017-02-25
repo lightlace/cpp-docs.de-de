@@ -1,13 +1,12 @@
 ---
-title: "EDITBIN-Referenz"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "EDITBIN-Referenz | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "editbin"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Objektdateien, Ändern"
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # EDITBIN-Referenz
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

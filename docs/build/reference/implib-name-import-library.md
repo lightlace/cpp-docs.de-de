@@ -1,13 +1,12 @@
 ---
-title: "/IMPLIB (Name der Importbibliothek)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/IMPLIB (Name der Importbibliothek) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/implib"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Importbibliotheken, Überschreiben des Standardnamens"
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /IMPLIB (Name der Importbibliothek)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

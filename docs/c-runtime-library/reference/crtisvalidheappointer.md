@@ -1,13 +1,12 @@
 ---
-title: "_CrtIsValidHeapPointer"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_CrtIsValidHeapPointer | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_CrtIsValidHeapPointer"
@@ -28,15 +27,15 @@ f1_keywords:
   - "_CrtIsValidHeapPointer"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CrtIsValidHeapPointer-Funktion"
   - "CrtIsValidHeapPointer-Funktion"
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _CrtIsValidHeapPointer
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

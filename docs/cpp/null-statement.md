@@ -1,13 +1,12 @@
 ---
-title: "NULL-Anweisung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "NULL-Anweisung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "NULL-Werte, Ausdrücke"
 ms.assetid: 606f5953-55f0-40c8-ae03-3ee3a819b851
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # NULL-Anweisung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

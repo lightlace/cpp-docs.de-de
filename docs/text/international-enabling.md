@@ -1,13 +1,12 @@
 ---
-title: "Aktivierung der Internationalen Programmierung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Aktivierung der Internationalen Programmierung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Unicode [C++], Aktivieren"
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Aktivierung der Internationalen Programmierung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2939"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2939 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C2939"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2939"
 ms.assetid: 455b050b-f2dc-4b5b-bd6a-e1f81d3d1644
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Compilerfehler C2939
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

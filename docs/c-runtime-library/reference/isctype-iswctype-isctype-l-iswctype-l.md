@@ -1,13 +1,12 @@
 ---
-title: "_isctype, iswctype, _isctype_l, _iswctype_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_isctype, iswctype, _isctype_l, _iswctype_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_isctype_l"
@@ -38,7 +37,6 @@ f1_keywords:
   - "_iswctype_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_isctype-Funktion"
   - "_isctype_l-Funktion"
@@ -50,9 +48,10 @@ helpviewer_keywords:
   - "iswctype_l-Funktion"
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
 caps.latest.revision: 17
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _isctype, iswctype, _isctype_l, _iswctype_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

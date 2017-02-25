@@ -1,13 +1,12 @@
 ---
-title: "Datengebundene Steuerelemente (ADO und RDO)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Datengebundene Steuerelemente (ADO und RDO) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "Datengebundene Steuerelemente [C++], ActiveX"
 ms.assetid: 337fdc86-7916-41a9-a7df-13355c8218e9
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Datengebundene Steuerelemente (ADO und RDO)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 4) C4234"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 4) C4234 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4234"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4234"
 ms.assetid: f7fecd5c-8248-4fde-8446-502aedc357ca
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerwarnung (Stufe 4) C4234
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

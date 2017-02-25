@@ -1,13 +1,12 @@
 ---
-title: "qsort_s"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "qsort_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "qsort_s"
@@ -28,7 +27,6 @@ f1_keywords:
   - "qsort_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Arrays [C++], Sortieren"
   - "qsort_s-Funktion"
@@ -36,9 +34,10 @@ helpviewer_keywords:
   - "Sortieren von Arrays"
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # qsort_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

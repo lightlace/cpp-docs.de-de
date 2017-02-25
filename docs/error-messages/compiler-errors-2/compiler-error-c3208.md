@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3208"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3208 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C3208"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3208"
 ms.assetid: 6d060bfe-52cf-4599-8f70-bdeb5a670df3
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Compilerfehler C3208
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,26 +1,25 @@
 ---
-title: "Operanden und Ausdr&#252;cke"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Operanden und Ausdr&#252;cke | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Ausdrücke [C++], Syntax"
   - "Operanden"
   - "Operanden, Definition"
 ms.assetid: 8453b095-a017-4c70-9a64-e3b2bd1e35e5
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Operanden und Ausdr&#252;cke
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

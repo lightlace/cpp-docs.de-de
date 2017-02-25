@@ -1,13 +1,12 @@
 ---
-title: "ActiveX-Steuerelemente f&#252;r das Internet"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ActiveX-Steuerelemente f&#252;r das Internet | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "OLE-Steuerelemente [C++], Upgrade auf ActiveX"
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
 caps.latest.revision: 14
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # ActiveX-Steuerelemente f&#252;r das Internet
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

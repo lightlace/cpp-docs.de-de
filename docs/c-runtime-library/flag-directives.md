@@ -1,13 +1,12 @@
 ---
-title: "Flag-Direktiven"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Flag-Direktiven | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcr120.dll"
@@ -21,7 +20,6 @@ f1_keywords:
   - "c.flags"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Flag-Direktiven für printf-Funktion"
   - "Formatangabefelder für printf-Funktion"
@@ -29,9 +27,10 @@ helpviewer_keywords:
   - "printf-Funktion, Formatangabefelder"
 ms.assetid: b00cbdc9-1e5c-4b30-9f56-c1ef8d383767
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Flag-Direktiven
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

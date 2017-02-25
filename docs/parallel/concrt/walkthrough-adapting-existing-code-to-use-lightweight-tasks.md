@@ -1,13 +1,12 @@
 ---
-title: "Exemplarische Vorgehensweise: Anpassen von vorhandenem Code f&#252;r die Verwendung einfacher Aufgaben"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exemplarische Vorgehensweise: Anpassen von vorhandenem Code f&#252;r die Verwendung einfacher Aufgaben | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Einfache Aufgaben, Verwenden [Concurrency Runtime]"
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
 caps.latest.revision: 14
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Exemplarische Vorgehensweise: Anpassen von vorhandenem Code f&#252;r die Verwendung einfacher Aufgaben
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

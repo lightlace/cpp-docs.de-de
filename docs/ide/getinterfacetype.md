@@ -1,13 +1,12 @@
 ---
-title: "GetInterfaceType"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "GetInterfaceType | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "GetInterfaceType"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "GetInterfaceType-Methode"
 ms.assetid: cc6403a8-0c2b-47f7-a8f7-9db95df87d5a
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # GetInterfaceType
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

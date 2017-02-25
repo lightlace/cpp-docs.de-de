@@ -1,13 +1,12 @@
 ---
-title: "CComCurrency Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CComCurrency Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CComCurrency"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CComCurrency class"
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
 caps.latest.revision: 21
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # CComCurrency Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

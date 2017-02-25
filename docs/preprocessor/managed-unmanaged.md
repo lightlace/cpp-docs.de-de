@@ -1,13 +1,12 @@
 ---
-title: "managed, unmanaged"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "managed, unmanaged | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc-pragma.unmanaged"
@@ -16,7 +15,6 @@ f1_keywords:
   - "vc-pragma.managed"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "managed-Pragma"
   - "Pragmas, Verwaltet"
@@ -24,9 +22,10 @@ helpviewer_keywords:
   - "unmanaged-Pragma"
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
 caps.latest.revision: 15
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # managed, unmanaged
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

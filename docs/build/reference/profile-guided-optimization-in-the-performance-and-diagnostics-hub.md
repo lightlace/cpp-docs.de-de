@@ -1,21 +1,21 @@
 ---
-title: "Profilgesteuerte Optimierung im Leistungs- und Diagnosehub"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Profilgesteuerte Optimierung im Leistungs- und Diagnosehub | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Profilgesteuerte Optimierung im Leistungs- und Diagnosehub
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

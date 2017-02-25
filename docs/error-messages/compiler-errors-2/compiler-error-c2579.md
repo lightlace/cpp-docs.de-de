@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2579"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2579 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2759"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2759"
 ms.assetid: ab090a8d-5462-4046-a1a6-8007e354dedb
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Compilerfehler C2579
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

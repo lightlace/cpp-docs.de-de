@@ -1,13 +1,12 @@
 ---
-title: "_onexit, _onexit_m"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_onexit, _onexit_m | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_onexit"
@@ -31,7 +30,6 @@ f1_keywords:
   - "_onexit_m"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "onexit-Funktion"
   - "Registrierung, Registrieren von Beendigungsroutinen"
@@ -42,9 +40,10 @@ helpviewer_keywords:
   - "Registrieren zum Aufruf bei Beendigung"
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _onexit, _onexit_m
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

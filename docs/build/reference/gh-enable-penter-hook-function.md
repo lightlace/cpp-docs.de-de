@@ -1,13 +1,12 @@
 ---
-title: "/Gh (_penter-Hookfunktion aktivieren)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/Gh (_penter-Hookfunktion aktivieren) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_penter"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "-Gh (Compileroption) [C++]"
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # /Gh (_penter-Hookfunktion aktivieren)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Problembehandlung f&#252;r Buildanpassungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Problembehandlung f&#252;r Buildanpassungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Problembehandlung [C++], Builds"
 ms.assetid: e4ceb177-fbee-4ed3-a7d7-80f0d78c1d07
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Problembehandlung f&#252;r Buildanpassungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

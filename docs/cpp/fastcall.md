@@ -1,13 +1,12 @@
 ---
-title: "__fastcall"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__fastcall | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "__fastcall"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "__fastcall-Schlüsselwort [C++]"
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # __fastcall
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

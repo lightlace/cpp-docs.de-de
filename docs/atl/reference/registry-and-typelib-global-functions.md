@@ -1,13 +1,12 @@
 ---
-title: "Registry and TypeLib Global Functions"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Registry and TypeLib Global Functions | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "RegistryDataExchange function, Globale Funktionen"
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
 caps.latest.revision: 22
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Registry and TypeLib Global Functions
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

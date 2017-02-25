@@ -1,13 +1,12 @@
 ---
-title: "unordered_multiset-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "unordered_multiset-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "tr1::unordered_multiset"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "unordered_multiset-Klasse [TR1]"
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
 caps.latest.revision: 24
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # unordered_multiset-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

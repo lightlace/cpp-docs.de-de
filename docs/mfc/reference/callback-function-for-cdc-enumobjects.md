@@ -1,13 +1,12 @@
 ---
-title: "R&#252;ckruffunktion f&#252;r CDC::EnumObjects"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "R&#252;ckruffunktion f&#252;r CDC::EnumObjects | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "Callback Function for CDC::EnumObjects"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Rückruffunktionen, für CDC::EnumObjects"
 ms.assetid: 380088b1-88a5-4fb4-bbb5-dd9e8386572b
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # R&#252;ckruffunktion f&#252;r CDC::EnumObjects
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

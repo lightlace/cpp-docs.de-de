@@ -1,13 +1,12 @@
 ---
-title: "set_unexpected (CRT)"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "set_unexpected (CRT) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "set_unexpected"
@@ -27,16 +26,16 @@ f1_keywords:
   - "set_unexpected"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Ausnahmebehandlung, Terminierung"
   - "set_unexpected-Funktion"
   - "Unerwarteter Funktionstyp"
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # set_unexpected (CRT)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

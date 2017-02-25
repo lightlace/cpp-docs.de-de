@@ -1,13 +1,12 @@
 ---
-title: "_bstr_t::_bstr_t"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_bstr_t::_bstr_t | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "_bstr_t::_bstr_t"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "BSTR-Objekt"
 ms.assetid: 116d994e-5a72-4351-afbe-866c80b4c165
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # _bstr_t::_bstr_t
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

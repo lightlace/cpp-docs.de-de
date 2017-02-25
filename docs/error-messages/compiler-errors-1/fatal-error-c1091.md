@@ -1,13 +1,12 @@
 ---
-title: "Schwerwiegender Fehler C1091"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schwerwiegender Fehler C1091 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C1091"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C1091"
 ms.assetid: 812d4201-9154-48b0-b9af-5959c082ca33
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Schwerwiegender Fehler C1091
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Benutzeroberfl&#228;chen-Features, MFC-Anwendungs-Assistent"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Benutzeroberfl&#228;chen-Features, MFC-Anwendungs-Assistent | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.appwiz.mfc.exe.ui"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "MFC-Anwendungs-Assistent, Benutzeroberflächen-Features"
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Benutzeroberfl&#228;chen-Features, MFC-Anwendungs-Assistent
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

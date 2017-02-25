@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2834"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2834 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2834"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2834"
 ms.assetid: 28f9f6eb-ab2a-4e64-aaaa-9d14f955de41
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compilerfehler C2834
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

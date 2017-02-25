@@ -1,13 +1,12 @@
 ---
-title: "Empfohlene Vorgehensweisen in der Asynchronous Agents Library"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Empfohlene Vorgehensweisen in der Asynchronous Agents Library | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Zu vermeidende Methoden, Asynchronous Agents Library"
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
 caps.latest.revision: 15
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Empfohlene Vorgehensweisen in der Asynchronous Agents Library
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

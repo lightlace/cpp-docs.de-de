@@ -1,13 +1,12 @@
 ---
-title: "vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_vfprintf_l"
@@ -32,7 +31,6 @@ f1_keywords:
   - "vfprintf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_vfwprintf_l-Funktion"
   - "_vftprintf-Funktion"
@@ -47,9 +45,10 @@ helpviewer_keywords:
   - "Formatierter Text [C++]"
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

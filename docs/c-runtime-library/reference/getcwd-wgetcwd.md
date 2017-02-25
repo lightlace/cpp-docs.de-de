@@ -1,13 +1,12 @@
 ---
-title: "_getcwd, _wgetcwd"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_getcwd, _wgetcwd | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wgetcwd"
@@ -34,7 +33,6 @@ f1_keywords:
   - "_tgetcwd"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "getcwd-Funktion"
   - "Arbeitsverzeichnis"
@@ -45,9 +43,10 @@ helpviewer_keywords:
   - "Verzeichnisse [C++], aktuelle Arbeit"
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
 caps.latest.revision: 24
-caps.handback.revision: "24"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _getcwd, _wgetcwd
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CD2DLayer-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CD2DLayer-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "afxrendertarget/CD2DLayer"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CD2DLayer-Klasse"
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
 caps.latest.revision: 18
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # CD2DLayer-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

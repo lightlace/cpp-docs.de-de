@@ -1,13 +1,12 @@
 ---
-title: "/NOASSEMBLY (MSIL-Modul erstellen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/NOASSEMBLY (MSIL-Modul erstellen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/NOASSEMBLY"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "-NOASSEMBLY (Linkeroption)"
 ms.assetid: 3cea4e70-f451-4395-a626-1930b1b127fe
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /NOASSEMBLY (MSIL-Modul erstellen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,21 +1,21 @@
 ---
-title: "/APPCONTAINER (Windows Store-App)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/APPCONTAINER (Windows Store-App) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # /APPCONTAINER (Windows Store-App)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

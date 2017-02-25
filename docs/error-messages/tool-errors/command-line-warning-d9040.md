@@ -1,13 +1,12 @@
 ---
-title: "Befehlszeilenwarnung D9040"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Befehlszeilenwarnung D9040 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "D9040"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "D9040"
 ms.assetid: 415e7f04-c1bd-4ac1-924a-03efa4645140
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Befehlszeilenwarnung D9040
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

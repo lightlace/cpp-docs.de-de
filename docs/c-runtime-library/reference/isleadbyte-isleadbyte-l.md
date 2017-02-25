@@ -1,13 +1,12 @@
 ---
-title: "isleadbyte, _isleadbyte_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "isleadbyte, _isleadbyte_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_isleadbyte_l"
@@ -31,7 +30,6 @@ f1_keywords:
   - "isleadbyte"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Führende Bytes"
   - "_isleadbyte_l-Funktion"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "isleadbyte-Funktion"
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # isleadbyte, _isleadbyte_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "BEGIN_PROVIDER_COLUMN_MAP"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "BEGIN_PROVIDER_COLUMN_MAP | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "BEGIN_PROVIDER_COLUMN_MAP"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "BEGIN_PROVIDER_COLUMN_MAP-Makro"
 ms.assetid: 506b8c0f-6be9-4c97-ba81-c4b7f7d428fa
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # BEGIN_PROVIDER_COLUMN_MAP
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

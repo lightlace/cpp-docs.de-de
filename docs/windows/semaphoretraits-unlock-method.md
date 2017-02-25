@@ -1,13 +1,12 @@
 ---
-title: "SemaphoreTraits::Unlock-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "SemaphoreTraits::Unlock-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Unlock-Methode"
 ms.assetid: 4e0ea808-b70d-43f7-81ef-998c3b34e3a0
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # SemaphoreTraits::Unlock-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

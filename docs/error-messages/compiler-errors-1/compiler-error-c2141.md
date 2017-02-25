@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2141"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2141 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2141"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2141"
 ms.assetid: 10cf770f-0500-4220-ac90-a863b7ea5fe6
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Compilerfehler C2141
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "MFC MBCS DLL-Add-On"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC MBCS DLL-Add-On | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "MFC"
 ms.assetid: bebec0ff-e019-42ca-b5df-8c218ac5b54a
 caps.latest.revision: 17
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # MFC MBCS DLL-Add-On
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

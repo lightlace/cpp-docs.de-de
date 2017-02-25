@@ -1,13 +1,12 @@
 ---
-title: "CAccessorRowset-Member"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CAccessorRowset-Member | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CAccessorRowset"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CAccessorRowset-Klasse, Member"
 ms.assetid: 40fc4545-960f-419c-ae78-4c31b1ee8c8d
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # CAccessorRowset-Member
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

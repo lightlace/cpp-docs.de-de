@@ -1,13 +1,12 @@
 ---
-title: "strncmp, wcsncmp, _mbsncmp, _mbsncmp_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strncmp, wcsncmp, _mbsncmp, _mbsncmp_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "strncmp"
@@ -24,6 +23,7 @@ apilocation:
   - "msvcr110_clr0400.dll"
   - "msvcr120.dll"
   - "msvcr120_clr0400.dll"
+  - "ntdll.dll"
   - "ucrtbase.dll"
   - "api-ms-win-crt-multibyte-l1-1-0.dll"
   - "api-ms-win-crt-string-l1-1-0.dll"
@@ -38,7 +38,6 @@ f1_keywords:
   - "wcsncmp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ftcsnccmp-Funktion"
   - "_ftcsncmp-Funktion"
@@ -59,9 +58,10 @@ helpviewer_keywords:
   - "wcsncmp-Funktion"
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
 caps.latest.revision: 28
-caps.handback.revision: "26"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

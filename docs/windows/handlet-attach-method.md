@@ -1,13 +1,12 @@
 ---
-title: "HandleT::Attach-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "HandleT::Attach-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::HandleT::Attach"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Attach-Methode"
 ms.assetid: a8783a18-bbf6-456c-98a3-e2048a10d79f
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # HandleT::Attach-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

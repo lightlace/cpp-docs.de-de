@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3299"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3299 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C3299"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3299"
 ms.assetid: 7cabdf01-bceb-404f-9401-cdd9c7fc1641
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Compilerfehler C3299
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

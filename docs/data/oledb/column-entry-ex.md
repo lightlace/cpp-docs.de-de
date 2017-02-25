@@ -1,13 +1,12 @@
 ---
-title: "COLUMN_ENTRY_EX"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "COLUMN_ENTRY_EX | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "COLUMN_ENTRY_EX"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "COLUMN_ENTRY_EX-Marko"
 ms.assetid: dfad1b67-51c3-4289-b89a-da42d7e8bb88
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # COLUMN_ENTRY_EX
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

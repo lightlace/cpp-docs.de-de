@@ -1,13 +1,12 @@
 ---
-title: "CBulkRowset::CBulkRowset"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CBulkRowset::CBulkRowset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ATL.CBulkRowset<TAccessor>.CBulkRowset"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "CBulkRowset-Klasse, Konstruktor"
 ms.assetid: 930e3562-63b6-4dd9-b248-8e8fb27d9c63
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CBulkRowset::CBulkRowset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

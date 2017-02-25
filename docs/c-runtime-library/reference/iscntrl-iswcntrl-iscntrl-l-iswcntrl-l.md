@@ -1,13 +1,12 @@
 ---
-title: "iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "iscntrl"
@@ -36,7 +35,6 @@ f1_keywords:
   - "_istcntrl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_iscntrl_l-Funktion"
   - "_istcntrl-Funktion"
@@ -47,9 +45,10 @@ helpviewer_keywords:
   - "iswcntrl-Funktion"
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
 caps.latest.revision: 19
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

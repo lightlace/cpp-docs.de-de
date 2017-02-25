@@ -1,13 +1,12 @@
 ---
-title: "/AI (Metadatenverzeichnisse festlegen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/AI (Metadatenverzeichnisse festlegen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLCompilerTool.AdditionalUsingDirectories"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "-AI (Compileroption) [C++]"
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /AI (Metadatenverzeichnisse festlegen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

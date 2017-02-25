@@ -1,13 +1,12 @@
 ---
-title: "Systeminterne Funktionen „_InterlockedCompareExchangePointer“"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Systeminterne Funktionen „_InterlockedCompareExchangePointer“ | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_InterlockedCompareExchangePointer_HLERelease"
@@ -35,9 +34,10 @@ helpviewer_keywords:
   - "Systeminterne Funktion „InterlockedCompareExchangePointer_rel“"
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
 caps.latest.revision: 19
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Systeminterne Funktionen „_InterlockedCompareExchangePointer“
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

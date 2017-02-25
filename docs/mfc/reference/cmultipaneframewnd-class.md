@@ -1,13 +1,12 @@
 ---
-title: "CMultiPaneFrameWnd Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMultiPaneFrameWnd Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMultiPaneFrameWnd"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMultiPaneFrameWnd class"
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
 caps.latest.revision: 36
-caps.handback.revision: "24"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 38
 ---
 # CMultiPaneFrameWnd Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "assert-Makro, _assert, _wassert"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "assert-Makro, _assert, _wassert | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "assert"
@@ -33,16 +32,16 @@ f1_keywords:
   - "assert/_wassert"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Abbrechen von Programmen"
   - "assert-Funktion"
   - "assert-Makro"
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
 caps.latest.revision: 23
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # assert-Makro, _assert, _wassert
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

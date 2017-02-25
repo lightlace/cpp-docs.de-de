@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolwarnung LNK4010"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolwarnung LNK4010 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK4010"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK4010"
 ms.assetid: 2824cf99-4174-4b60-a6e2-c01e9f1ee52d
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Linkertoolwarnung LNK4010
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

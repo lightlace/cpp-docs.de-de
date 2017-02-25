@@ -1,13 +1,12 @@
 ---
-title: "ITopologyExecutionResource-Struktur"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ITopologyExecutionResource-Struktur | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "concrtrm/concurrency::ITopologyExecutionResource"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "ITopologyExecutionResource-Struktur"
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
 caps.latest.revision: 10
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # ITopologyExecutionResource-Struktur
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

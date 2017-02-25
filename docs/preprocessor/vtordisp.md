@@ -1,28 +1,27 @@
 ---
-title: "vtordisp"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "vtordisp | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc-pragma.vtordisp"
   - "vtordisp_CPP"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Pragmas, vtordisp"
   - "vtordisp-Pragma"
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # vtordisp
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

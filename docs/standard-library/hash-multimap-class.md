@@ -1,13 +1,12 @@
 ---
-title: "hash_multimap-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "hash_multimap-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "stdext::hash_multimap"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "hash_multimap-Klasse"
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 caps.latest.revision: 24
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # hash_multimap-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

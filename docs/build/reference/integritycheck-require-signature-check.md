@@ -1,21 +1,21 @@
 ---
-title: "/INTEGRITYCHECK (Signaturpr&#252;fung erforderlich)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/INTEGRITYCHECK (Signaturpr&#252;fung erforderlich) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /INTEGRITYCHECK (Signaturpr&#252;fung erforderlich)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

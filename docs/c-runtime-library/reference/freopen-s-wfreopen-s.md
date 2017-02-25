@@ -1,13 +1,12 @@
 ---
-title: "freopen_s, _wfreopen_s"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "freopen_s, _wfreopen_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wfreopen_s"
@@ -31,7 +30,6 @@ f1_keywords:
   - "_wfreopen_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tfreopen_s-Funktion"
   - "_wfreopen_s-Funktion"
@@ -41,9 +39,10 @@ helpviewer_keywords:
   - "wfreopen_s-Funktion"
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
 caps.latest.revision: 27
-caps.handback.revision: "25"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # freopen_s, _wfreopen_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "&#196;nderungen innerhalb einer Zugriffstastentabelle"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#196;nderungen innerhalb einer Zugriffstastentabelle | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Bearbeiten in einer Zugriffstastentabelle Tastenkombinationen [C++]"
 ms.assetid: 545b650b-4f26-4b20-8431-d942548443bd
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # &#196;nderungen innerhalb einer Zugriffstastentabelle
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CCommand::ReleaseCommand"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CCommand::ReleaseCommand | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CCommand.ReleaseCommand"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "ReleaseCommand-Methode"
 ms.assetid: 3b58230c-13d5-45c5-b43e-bb013ecc3019
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CCommand::ReleaseCommand
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

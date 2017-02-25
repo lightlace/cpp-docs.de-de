@@ -1,13 +1,12 @@
 ---
-title: "mbsinit"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "mbsinit | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "mbsinit"
@@ -27,14 +26,14 @@ f1_keywords:
   - "mbsinit"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "mbsinit-Funktion"
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # mbsinit
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

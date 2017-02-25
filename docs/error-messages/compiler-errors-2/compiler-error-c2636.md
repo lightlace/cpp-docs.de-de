@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2636"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2636 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2636"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2636"
 ms.assetid: 379873ec-8d05-49f8-adf1-b067bc07bdb8
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Compilerfehler C2636
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

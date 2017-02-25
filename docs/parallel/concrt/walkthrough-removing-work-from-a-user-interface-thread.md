@@ -1,13 +1,12 @@
 ---
-title: "Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberfl&#228;chenthread"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberfl&#228;chenthread | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Benutzeroberflächenthreads, Entfernen von Arbeit aus [Concurrency Runtime]"
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
 caps.latest.revision: 14
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberfl&#228;chenthread
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

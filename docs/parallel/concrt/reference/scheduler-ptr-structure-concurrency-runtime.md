@@ -1,13 +1,12 @@
 ---
-title: "scheduler_ptr-Struktur (Concurrency Runtime)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "scheduler_ptr-Struktur (Concurrency Runtime) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "pplinterface/concurrency::scheduler_ptr"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
 caps.latest.revision: 8
-caps.handback.revision: "1"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # scheduler_ptr-Struktur (Concurrency Runtime)
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

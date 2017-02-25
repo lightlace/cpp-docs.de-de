@@ -1,13 +1,12 @@
 ---
-title: "&lt; funktionale &gt;"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt; funktionale &gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "<functional>"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "functional-Header"
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
 caps.latest.revision: 27
-caps.handback.revision: "27"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # &lt; funktionale &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

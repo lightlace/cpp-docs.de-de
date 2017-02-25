@@ -1,13 +1,12 @@
 ---
-title: "IsMFCProject"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IsMFCProject | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IsMFCProject"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "IsMFCProject-Methode"
 ms.assetid: 98dd57df-9fdb-40d7-afcf-4b99e9d54dad
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # IsMFCProject
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

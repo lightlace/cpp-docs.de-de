@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4667"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 1) C4667 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4667"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4667"
 ms.assetid: 5d2b7fe0-4f0e-4cd6-b432-ca02c3d194ab
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Compilerwarnung (Stufe 1) C4667
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

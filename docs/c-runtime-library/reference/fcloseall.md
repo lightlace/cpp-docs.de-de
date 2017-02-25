@@ -1,13 +1,12 @@
 ---
-title: "fcloseall"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fcloseall | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "fcloseall"
@@ -27,14 +26,14 @@ f1_keywords:
   - "fcloseall"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "fcloseall-Funktion"
 ms.assetid: 4f14acde-5bc5-43da-a709-7a3c559df3cf
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # fcloseall
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

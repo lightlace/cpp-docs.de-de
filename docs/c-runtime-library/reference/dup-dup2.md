@@ -1,13 +1,12 @@
 ---
-title: "_dup, _dup2"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_dup, _dup2 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_dup"
@@ -30,7 +29,6 @@ f1_keywords:
   - "_dup"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_dup-Funktion"
   - "_dup2-Funktion"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "Dateihandles [C++], Neuzuweisen"
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
 caps.latest.revision: 19
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _dup, _dup2
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

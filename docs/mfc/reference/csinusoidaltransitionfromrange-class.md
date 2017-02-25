@@ -1,13 +1,12 @@
 ---
-title: "CSinusoidalTransitionFromRange-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CSinusoidalTransitionFromRange-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "afxanimationcontroller/CSinusoidalTransitionFromRange"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CSinusoidalTransitionFromRange-Klasse"
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
 caps.latest.revision: 18
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # CSinusoidalTransitionFromRange-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

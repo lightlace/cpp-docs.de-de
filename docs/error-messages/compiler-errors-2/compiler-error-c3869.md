@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C3869"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C3869 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C3869"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C3869"
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Compilerfehler C3869
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

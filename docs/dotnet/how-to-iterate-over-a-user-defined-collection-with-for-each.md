@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Durchlaufen einer benutzerdefinierten Auflistung mit der for-each-Klausel"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Durchlaufen einer benutzerdefinierten Auflistung mit der for-each-Klausel | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Auflistungen, Iteration über"
 ms.assetid: 0efd9e3c-d7bb-4f6c-9938-e0e65d191433
 caps.latest.revision: 8
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Gewusst wie: Durchlaufen einer benutzerdefinierten Auflistung mit der for-each-Klausel
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

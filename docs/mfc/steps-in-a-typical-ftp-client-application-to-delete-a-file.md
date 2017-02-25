@@ -1,13 +1,12 @@
 ---
-title: "Schritte zum L&#246;schen einer Datei in einer typischen FTP-Clientanwendung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schritte zum L&#246;schen einer Datei in einer typischen FTP-Clientanwendung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "WinInet-Klassen, FTP"
 ms.assetid: 2c347a96-c0a4-4827-98fe-668406e552bc
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Schritte zum L&#246;schen einer Datei in einer typischen FTP-Clientanwendung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

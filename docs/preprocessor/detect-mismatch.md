@@ -1,13 +1,12 @@
 ---
-title: "detect_mismatch"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "detect_mismatch | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc-pragma.detect_mismatch"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Pragmas, detect_mismatch"
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # detect_mismatch
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

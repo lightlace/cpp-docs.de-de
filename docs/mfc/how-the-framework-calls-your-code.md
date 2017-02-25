@@ -1,13 +1,12 @@
 ---
-title: "Wie das Framework Code aufruft"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Wie das Framework Code aufruft | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "MFC [C++], Aufrufen von Code aus"
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Wie das Framework Code aufruft
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

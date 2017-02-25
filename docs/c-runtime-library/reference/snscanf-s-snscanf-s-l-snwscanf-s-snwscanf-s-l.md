@@ -1,13 +1,12 @@
 ---
-title: "_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_snwscanf_s_l"
@@ -41,7 +40,6 @@ f1_keywords:
   - "sntscanf_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_snscanf_s-Funktion"
   - "_snscanf_s_l-Funktion"
@@ -60,9 +58,10 @@ helpviewer_keywords:
   - "Zeichenfolgen [C++], Lesen von Daten aus"
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
 caps.latest.revision: 24
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "setvbuf-Konstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "setvbuf-Konstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_IOFBF"
@@ -15,7 +14,6 @@ f1_keywords:
   - "_IOLBF"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_IOFBF-Konstante"
   - "_IOLBF-Konstante"
@@ -25,9 +23,10 @@ helpviewer_keywords:
   - "IONBF-Konstante"
 ms.assetid: a6ec4dd5-1f24-498c-871a-e874cd28d33c
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # setvbuf-Konstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

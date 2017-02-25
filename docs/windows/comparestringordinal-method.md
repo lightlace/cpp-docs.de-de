@@ -1,13 +1,12 @@
 ---
-title: "CompareStringOrdinal-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CompareStringOrdinal-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # CompareStringOrdinal-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

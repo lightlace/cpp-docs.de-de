@@ -1,16 +1,14 @@
 ---
-title: "Editing Parts of an Image (Image Editor for Icons)"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Editing Parts of an Image (Image Editor for Icons) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "Image editor [C++], editing images"
@@ -24,9 +22,10 @@ helpviewer_keywords:
   - "graphics [C++], editing"
 ms.assetid: ff4f5fef-71a4-4fd8-825e-049399fed391
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Editing Parts of an Image (Image Editor for Icons)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

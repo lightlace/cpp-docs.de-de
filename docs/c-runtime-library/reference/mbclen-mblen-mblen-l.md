@@ -1,13 +1,12 @@
 ---
-title: "_mbclen, mblen, _mblen_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_mbclen, mblen, _mblen_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_mbclen"
@@ -37,7 +36,6 @@ f1_keywords:
   - "mbclen"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbclen-Funktion"
   - "_mblen_l-Funktion"
@@ -48,9 +46,10 @@ helpviewer_keywords:
   - "tclen-Funktion"
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
 caps.latest.revision: 24
-caps.handback.revision: "24"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _mbclen, mblen, _mblen_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

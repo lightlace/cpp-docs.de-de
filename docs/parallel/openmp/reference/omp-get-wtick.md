@@ -1,13 +1,12 @@
 ---
-title: "omp_get_wtick"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "omp_get_wtick | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "omp_get_wtick"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "omp_get_wtick OpenMP function"
 ms.assetid: 8ca950cd-4952-4081-bc0b-8544dd27ad30
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # omp_get_wtick
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

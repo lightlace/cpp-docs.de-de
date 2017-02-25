@@ -1,13 +1,12 @@
 ---
-title: "multimap::generic_reverse_iterator (STL/CLR)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "multimap::generic_reverse_iterator (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "cliext::multimap::generic_reverse_iterator"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "generic_reverse_iterator-Member [STL/CLR]"
 ms.assetid: c84d2512-fb93-4dc6-bc24-5aaa4bbb04f0
 caps.latest.revision: 8
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # multimap::generic_reverse_iterator (STL/CLR)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Dynamic Link Library-Unterst&#252;tzung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Dynamic Link Library-Unterst&#252;tzung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "USRDLLs, DLL-Unterstützung"
 ms.assetid: cc31c69f-3c78-4db1-9ecd-0fd8dc3217e3
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Dynamic Link Library-Unterst&#252;tzung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

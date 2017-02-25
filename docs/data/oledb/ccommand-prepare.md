@@ -1,13 +1,12 @@
 ---
-title: "CCommand::Prepare"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CCommand::Prepare | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CCommand.Prepare"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Prepare-Methode"
 ms.assetid: f0e473fc-2f7a-4d29-96c2-1328dc21e702
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CCommand::Prepare
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

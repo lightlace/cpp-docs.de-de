@@ -1,13 +1,12 @@
 ---
-title: "_matherr"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_matherr | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_matherr"
@@ -28,15 +27,15 @@ f1_keywords:
   - "matherr"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_matherr-Funktion"
   - "matherr-Funktion"
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _matherr
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CHeaderCtrl Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CHeaderCtrl Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CHeaderCtrl"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Windows common controls [C++], CHeaderCtrl"
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
 caps.latest.revision: 24
-caps.handback.revision: "14"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CHeaderCtrl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

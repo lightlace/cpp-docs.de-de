@@ -1,25 +1,24 @@
 ---
-title: "Zusammenfassung von Lebensdauer und Sichtbarkeit"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Zusammenfassung von Lebensdauer und Sichtbarkeit | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Lebensdauer, Und Sichtbarkeit"
   - "Sichtbarkeit, Bezeichner"
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Zusammenfassung von Lebensdauer und Sichtbarkeit
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

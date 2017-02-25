@@ -1,13 +1,12 @@
 ---
-title: "/kernel (Binary f&#252;r den Kernelmodus erstellen)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/kernel (Binary f&#252;r den Kernelmodus erstellen) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/kernel"
@@ -16,9 +15,10 @@ dev_langs:
   - "C++"
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /kernel (Binary f&#252;r den Kernelmodus erstellen)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

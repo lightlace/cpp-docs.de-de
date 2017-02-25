@@ -1,13 +1,12 @@
 ---
-title: "CDynamicAccessor::GetColumnFlags"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CDynamicAccessor::GetColumnFlags | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CDynamicAccessor.GetColumnFlags"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "GetColumnFlags-Methode"
 ms.assetid: b2ba2f3a-2c61-4a49-abfb-75823908ccf4
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CDynamicAccessor::GetColumnFlags
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

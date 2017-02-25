@@ -1,13 +1,12 @@
 ---
-title: "Including Shared (Read-Only) or Calculated Symbols"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Including Shared (Read-Only) or Calculated Symbols | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.symbol.shared.calculated"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "shared symbols"
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Including Shared (Read-Only) or Calculated Symbols
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

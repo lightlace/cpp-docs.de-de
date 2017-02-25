@@ -1,13 +1,12 @@
 ---
-title: "Feldstatus-Datenmember in vom Assistenten generierten Accessoren"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Feldstatus-Datenmember in vom Assistenten generierten Accessoren | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "OLE DB-Consumervorlagen, Feldstatus"
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Feldstatus-Datenmember in vom Assistenten generierten Accessoren
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

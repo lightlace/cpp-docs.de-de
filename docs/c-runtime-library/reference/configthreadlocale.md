@@ -1,13 +1,12 @@
 ---
-title: "_configthreadlocale"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_configthreadlocale | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_configthreadlocale"
@@ -29,7 +28,6 @@ f1_keywords:
   - "configthreadlocale"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_configthreadlocale-Funktion"
   - "configthreadlocale-Funktion"
@@ -38,9 +36,10 @@ helpviewer_keywords:
   - "Threadgebietsschema"
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
 caps.latest.revision: 24
-caps.handback.revision: "22"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _configthreadlocale
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

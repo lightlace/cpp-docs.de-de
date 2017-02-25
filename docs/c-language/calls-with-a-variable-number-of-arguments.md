@@ -1,17 +1,15 @@
 ---
-title: "Aufrufe mit einer variablen Anzahl von Argumenten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Aufrufe mit einer variablen Anzahl von Argumenten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "...-Auslassungszeichen"
   - "Argumente [C++], Funktion"
@@ -23,9 +21,10 @@ helpviewer_keywords:
   - "VARARGS.H"
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Aufrufe mit einer variablen Anzahl von Argumenten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

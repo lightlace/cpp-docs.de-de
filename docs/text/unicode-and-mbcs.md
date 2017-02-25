@@ -1,13 +1,12 @@
 ---
-title: "Unicode und MBCS"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Unicode und MBCS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_mbcs"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "Laufzeit [C++], Sprachenportabilität"
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Unicode und MBCS
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

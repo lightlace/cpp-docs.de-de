@@ -1,13 +1,12 @@
 ---
-title: "COLUMN_NAME_STATUS"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "COLUMN_NAME_STATUS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "COLUMN_NAME_STATUS"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "COLUMN_NAME_STATUS-Makro"
 ms.assetid: a6204755-6739-4116-b414-9b8fa7ab6549
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # COLUMN_NAME_STATUS
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

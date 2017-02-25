@@ -1,13 +1,12 @@
 ---
-title: "bad_alloc-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "bad_alloc-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::bad_alloc"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "bad_alloc-Klasse"
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
 caps.latest.revision: 26
-caps.handback.revision: "26"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # bad_alloc-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

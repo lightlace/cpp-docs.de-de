@@ -1,13 +1,12 @@
 ---
-title: "Editing Accelerator Tables"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Editing Accelerator Tables | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.accelerator"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "keyboard shortcuts [C++], editing in an accelerator table"
 ms.assetid: 56e24efb-d06b-4ed9-8915-1f99f725e247
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Editing Accelerator Tables
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

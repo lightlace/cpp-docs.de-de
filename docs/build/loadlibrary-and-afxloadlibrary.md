@@ -1,13 +1,12 @@
 ---
-title: "LoadLibrary und AfxLoadLibrary"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "LoadLibrary und AfxLoadLibrary | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "LoadLibrary"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "LoadLibrary-Methode"
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # LoadLibrary und AfxLoadLibrary
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

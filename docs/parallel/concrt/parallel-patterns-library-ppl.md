@@ -1,13 +1,12 @@
 ---
-title: "Parallel Patterns Library (PPL)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Parallel Patterns Library (PPL) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Parallel Patterns Library (PPL)"
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
 caps.latest.revision: 27
-caps.handback.revision: "27"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # Parallel Patterns Library (PPL)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

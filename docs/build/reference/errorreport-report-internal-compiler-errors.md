@@ -1,13 +1,12 @@
 ---
-title: "/errorReport (Meldung &#252;ber interne Compilerfehler)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/errorReport (Meldung &#252;ber interne Compilerfehler) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLCompilerTool.ErrorReporting"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-errorReport (Compileroption) [C++]"
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
 caps.latest.revision: 21
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # /errorReport (Meldung &#252;ber interne Compilerfehler)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

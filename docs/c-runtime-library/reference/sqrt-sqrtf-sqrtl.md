@@ -1,13 +1,12 @@
 ---
-title: "sqrt, sqrtf, sqrtl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "sqrt, sqrtf, sqrtl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "sqrtl"
@@ -32,7 +31,6 @@ f1_keywords:
   - "_sqrtl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_sqrtl-Funktion"
   - "Berechnen von Quadratwurzeln"
@@ -42,9 +40,10 @@ helpviewer_keywords:
   - "Quadratwurzeln, Berechnen"
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
 caps.latest.revision: 18
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # sqrt, sqrtf, sqrtl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

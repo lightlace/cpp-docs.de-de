@@ -1,13 +1,12 @@
 ---
-title: "CBasePane Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CBasePane Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CBasePane::get_accKeyboardShortcut"
@@ -85,9 +84,10 @@ helpviewer_keywords:
   - "Serialize method"
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
 caps.latest.revision: 43
-caps.handback.revision: "32"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 44
 ---
 # CBasePane Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

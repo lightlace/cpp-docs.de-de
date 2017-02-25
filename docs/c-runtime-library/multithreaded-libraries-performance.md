@@ -1,17 +1,15 @@
 ---
-title: "Leistung von Multithreadbibliotheken"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Leistung von Multithreadbibliotheken | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Bibliotheken, Multithread"
   - "Multithread-Bibliotheken"
@@ -19,9 +17,10 @@ helpviewer_keywords:
   - "Threading [C++], Leistung"
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Leistung von Multithreadbibliotheken
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

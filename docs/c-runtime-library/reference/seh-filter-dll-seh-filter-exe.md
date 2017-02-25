@@ -1,13 +1,12 @@
 ---
-title: "_seh_filter_dll, _seh_filter_exe"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_seh_filter_dll, _seh_filter_exe | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_XcptFilter"
@@ -42,9 +41,10 @@ helpviewer_keywords:
   - "_seh_filter_exe-Funktion"
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _seh_filter_dll, _seh_filter_exe
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

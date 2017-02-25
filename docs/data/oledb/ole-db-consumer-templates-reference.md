@@ -1,13 +1,12 @@
 ---
-title: "Referenz der OLE&#160;DB-Consumervorlagen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Referenz der OLE&#160;DB-Consumervorlagen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc-attr.db_param"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "OLE DB-Consumervorlagen, Klassen"
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Referenz der OLE&#160;DB-Consumervorlagen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

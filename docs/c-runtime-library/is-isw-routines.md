@@ -1,13 +1,12 @@
 ---
-title: "is- und isw-Routinen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "is- und isw-Routinen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcr110_clr0400.dll"
@@ -22,15 +21,15 @@ f1_keywords:
   - "is"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "is-Routinen"
   - "isw-Routinen"
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # is- und isw-Routinen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

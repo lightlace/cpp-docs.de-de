@@ -1,13 +1,12 @@
 ---
-title: "&#220;bersicht &#252;ber Elementzust&#228;nde des Struktursteuerung-Steuerelements"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&#220;bersicht &#252;ber Elementzust&#228;nde des Struktursteuerung-Steuerelements | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Struktursteuerelemente, Übersicht über Elementzustände"
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
 caps.latest.revision: 14
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # &#220;bersicht &#252;ber Elementzust&#228;nde des Struktursteuerung-Steuerelements
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

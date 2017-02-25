@@ -1,13 +1,12 @@
 ---
-title: "Was ist ein CArchive-Objekt?"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Was ist ein CArchive-Objekt? | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CArchive"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "CArchive-Klasse, Informationen über die CArchive-Klasse"
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Was ist ein CArchive-Objekt?
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

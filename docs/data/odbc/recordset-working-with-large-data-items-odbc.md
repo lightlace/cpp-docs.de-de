@@ -1,13 +1,12 @@
 ---
-title: "Recordset: Arbeiten mit gro&#223;en Datenelementen (ODBC)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Recordset: Arbeiten mit gro&#223;en Datenelementen (ODBC) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Recordsets, Binary Large Objects (BLOBs)"
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Recordset: Arbeiten mit gro&#223;en Datenelementen (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

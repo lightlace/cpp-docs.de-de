@@ -1,13 +1,12 @@
 ---
-title: "Linking to the CRT in Your ATL Project"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linking to the CRT in Your ATL Project | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "DllMainCRTStartup"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "wWinMainCRTStartup method"
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
 caps.latest.revision: 12
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Linking to the CRT in Your ATL Project
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

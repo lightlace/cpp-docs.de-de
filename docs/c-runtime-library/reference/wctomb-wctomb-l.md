@@ -1,13 +1,12 @@
 ---
-title: "wctomb, _wctomb_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "wctomb, _wctomb_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_wctomb_l"
@@ -29,7 +28,6 @@ f1_keywords:
   - "wctomb"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_wctomb_l-Funktion"
   - "Zeichen, Konvertieren"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "Breitzeichen, Konvertieren"
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
 caps.latest.revision: 23
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # wctomb, _wctomb_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

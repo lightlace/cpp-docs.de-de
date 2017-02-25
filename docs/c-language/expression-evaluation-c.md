@@ -1,25 +1,24 @@
 ---
-title: "Ausdrucksauswertung (C)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausdrucksauswertung (C) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Ausdrucksauswertung"
   - "Ausdrücke [C++], Auswerten"
 ms.assetid: 9493f8cc-64a2-4284-9aaf-26eec11c4f40
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ausdrucksauswertung (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

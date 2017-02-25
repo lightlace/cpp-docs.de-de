@@ -1,13 +1,12 @@
 ---
-title: "concurrent_unordered_set-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "concurrent_unordered_set-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "concurrent_unordered_set/concurrency::concurrent_unordered_set"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "concurrent_unordered_set-Klasse"
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
 caps.latest.revision: 12
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # concurrent_unordered_set-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

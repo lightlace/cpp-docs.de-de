@@ -1,13 +1,12 @@
 ---
-title: "Testen des Anbieters"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Testen des Anbieters | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Testen, OLE DB-Anbieter"
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Testen des Anbieters
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

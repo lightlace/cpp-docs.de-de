@@ -1,13 +1,12 @@
 ---
-title: "Abrufen von Daten aus dem Dialogfeldobjekt"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Abrufen von Daten aus dem Dialogfeldobjekt | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -32,9 +31,10 @@ helpviewer_keywords:
   - "Benutzereingabe [C++], Abrufen aus MFC-Dialogfeldern"
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Abrufen von Daten aus dem Dialogfeldobjekt
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

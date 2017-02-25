@@ -1,17 +1,15 @@
 ---
-title: "Erweitern von Platzhalterargumenten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erweitern von Platzhalterargumenten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Sternchen-Platzhalter"
   - "Erweitern von Platzhalterargumenten"
@@ -19,9 +17,10 @@ helpviewer_keywords:
   - "Platzhalter, Erweitern"
 ms.assetid: 80a11c4b-0199-420e-a342-cf1d803be5bc
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Erweitern von Platzhalterargumenten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

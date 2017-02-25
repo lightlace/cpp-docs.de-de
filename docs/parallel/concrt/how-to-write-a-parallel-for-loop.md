@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Schreiben einer parallel_for-Schleife"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Schreiben einer parallel_for-Schleife | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "parallel_for-Funktion, Beispiel"
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
 caps.latest.revision: 15
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Gewusst wie: Schreiben einer parallel_for-Schleife
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

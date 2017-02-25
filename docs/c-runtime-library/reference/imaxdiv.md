@@ -1,13 +1,12 @@
 ---
-title: "imaxdiv"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "imaxdiv | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "imaxdiv"
@@ -32,9 +31,10 @@ helpviewer_keywords:
   - "imaxdiv-Funktion"
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
 caps.latest.revision: 7
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # imaxdiv
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,25 +1,24 @@
 ---
-title: "Standardwerte f&#252;r Datum und Uhrzeit"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Standardwerte f&#252;r Datum und Uhrzeit | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Datumsangaben, Standard für _DATE und _TIME"
   - "Uhrzeit, Standard"
 ms.assetid: 2a00a772-94f9-4513-a76b-63441456c1e6
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Standardwerte f&#252;r Datum und Uhrzeit
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

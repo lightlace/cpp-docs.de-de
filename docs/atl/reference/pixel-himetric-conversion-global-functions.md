@@ -1,21 +1,21 @@
 ---
-title: "Pixel/HIMETRIC Conversion Global Functions"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Globale Pixel HIMETRIC-Konvertierungsfunktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
   - "C++"
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
 caps.latest.revision: 19
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Pixel/HIMETRIC Conversion Global Functions
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

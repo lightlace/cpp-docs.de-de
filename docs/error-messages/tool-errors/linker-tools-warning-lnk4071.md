@@ -1,13 +1,12 @@
 ---
-title: "Linkertoolwarnung LNK4071"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Linkertoolwarnung LNK4071 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "LNK4071"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "LNK4071"
 ms.assetid: 803f8c34-8219-4f55-a4ae-7133ceff2ba3
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Linkertoolwarnung LNK4071
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

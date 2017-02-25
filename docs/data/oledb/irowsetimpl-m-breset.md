@@ -1,13 +1,12 @@
 ---
-title: "IRowsetImpl::m_bReset"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IRowsetImpl::m_bReset | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ATL.IRowsetImpl.m_bReset"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "m_bReset"
 ms.assetid: d423f9f3-4d48-4d0c-b152-684c81a0b34e
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # IRowsetImpl::m_bReset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

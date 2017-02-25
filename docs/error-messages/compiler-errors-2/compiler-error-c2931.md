@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2931"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2931 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C2931"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2931"
 ms.assetid: 33430407-b149-4ba3-baf8-b0dae1ea3a5d
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Compilerfehler C2931
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

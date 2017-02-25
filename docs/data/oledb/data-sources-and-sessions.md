@@ -1,13 +1,12 @@
 ---
-title: "Datenquellen und Sitzungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Datenquellen und Sitzungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "OLE DB-Consumervorlagen [C++], Datenquellen"
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Datenquellen und Sitzungen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

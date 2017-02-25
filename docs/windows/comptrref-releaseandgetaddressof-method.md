@@ -1,13 +1,12 @@
 ---
-title: "ComPtrRef::ReleaseAndGetAddressOf-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ComPtrRef::ReleaseAndGetAddressOf-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "client/Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "ReleaseAndGetAddressOf-Methode"
 ms.assetid: 004aac42-e135-41ce-8d1d-4c5969d55004
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ComPtrRef::ReleaseAndGetAddressOf-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

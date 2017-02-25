@@ -1,13 +1,12 @@
 ---
-title: "Syntax f&#252;r die Linkerbefehlszeile"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Syntax f&#252;r die Linkerbefehlszeile | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Linkerbefehlszeile [C++]"
 ms.assetid: e2a31e17-77bd-4e74-9305-75b105b26539
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Syntax f&#252;r die Linkerbefehlszeile
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Anwendungseinstellungen, ATL-Projekt-Assistent"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Anwendungseinstellungen, ATL-Projekt-Assistent | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "vc.appwiz.atl.com.appset"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "ATL-Projekt-Assistent, Anwendungseinstellungen"
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
 caps.latest.revision: 17
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Anwendungseinstellungen, ATL-Projekt-Assistent
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

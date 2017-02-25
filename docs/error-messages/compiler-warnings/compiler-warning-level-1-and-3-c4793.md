@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe&#160;1 und&#160;3) C4793"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe&#160;1 und&#160;3) C4793 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C4793"
@@ -26,9 +25,10 @@ helpviewer_keywords:
   - "C6640"
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
 caps.latest.revision: 28
-caps.handback.revision: "26"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # Compilerwarnung (Stufe&#160;1 und&#160;3) C4793
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "__outword"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__outword | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "__outword"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "out-Anweisung"
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __outword
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

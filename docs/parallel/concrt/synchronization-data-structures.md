@@ -1,13 +1,12 @@
 ---
-title: "Synchronisierungsdatenstrukturen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Synchronisierungsdatenstrukturen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Strukturen für Synchronisierungsdaten"
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
 caps.latest.revision: 26
-caps.handback.revision: "25"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Synchronisierungsdatenstrukturen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

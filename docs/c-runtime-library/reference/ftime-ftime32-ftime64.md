@@ -1,13 +1,12 @@
 ---
-title: "_ftime, _ftime32, _ftime64"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ftime, _ftime32, _ftime64 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ftime64"
@@ -35,7 +34,6 @@ f1_keywords:
   - "ftime32"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ftime64-Funktion"
   - "_ftime64-Funktion"
@@ -47,9 +45,10 @@ helpviewer_keywords:
   - "Uhrzeit, Abrufen aktueller"
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
 caps.latest.revision: 27
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # _ftime, _ftime32, _ftime64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Entwerfen und Erstellen einer Datensatzansicht (MFC-Datenzugriff)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Entwerfen und Erstellen einer Datensatzansicht (MFC-Datenzugriff) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "Datensatzansichten, Entwerfen"
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Entwerfen und Erstellen einer Datensatzansicht (MFC-Datenzugriff)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

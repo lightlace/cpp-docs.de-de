@@ -1,13 +1,12 @@
 ---
-title: "__debugbreak"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "__debugbreak | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "__debugbreak_cpp"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Haltepunkte, __debugbreak-systemintern"
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # __debugbreak
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

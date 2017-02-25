@@ -1,13 +1,12 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Ereignisse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-ActiveX-Steuerelemente: Ereignisse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "Bestandereignissen"
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC-ActiveX-Steuerelemente: Ereignisse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

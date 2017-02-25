@@ -1,13 +1,12 @@
 ---
-title: "CreateActivationFactory-Funktion"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CreateActivationFactory-Funktion | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "module/Microsoft::WRL::Details::CreateActivationFactory"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CreateActivationFactory-Funktion"
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
 caps.latest.revision: 2
-caps.handback.revision: "2"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # CreateActivationFactory-Funktion
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

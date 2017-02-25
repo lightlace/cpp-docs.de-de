@@ -1,13 +1,12 @@
 ---
-title: "CMFCImagePaintArea Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCImagePaintArea Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCImagePaintArea"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CMFCImagePaintArea class"
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
 caps.latest.revision: 21
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CMFCImagePaintArea Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

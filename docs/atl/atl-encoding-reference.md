@@ -1,13 +1,12 @@
 ---
-title: "ATL-Codierungsreferenz"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ATL-Codierungsreferenz | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "Codierung, Funktionen"
 ms.assetid: 82d4fdf3-3c4a-4fe2-b297-8ffb4714406f
 caps.latest.revision: 8
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # ATL-Codierungsreferenz
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

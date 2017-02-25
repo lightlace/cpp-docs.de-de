@@ -1,13 +1,12 @@
 ---
-title: "Hosten eines Windows Forms-Benutzersteuerelements als MFC-Ansicht"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hosten eines Windows Forms-Benutzersteuerelements als MFC-Ansicht | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Steuerelemente für Windows Forms [C++], Hosten als MFC-Ansicht"
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Hosten eines Windows Forms-Benutzersteuerelements als MFC-Ansicht
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

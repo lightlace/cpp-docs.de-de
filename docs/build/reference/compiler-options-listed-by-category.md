@@ -1,13 +1,12 @@
 ---
-title: "Compileroptionen nach Kategorien sortiert"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compileroptionen nach Kategorien sortiert | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Compileroptionen, C++"
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
 caps.latest.revision: 64
-caps.handback.revision: "64"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 64
 ---
 # Compileroptionen nach Kategorien sortiert
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

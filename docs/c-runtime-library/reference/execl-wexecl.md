@@ -1,13 +1,12 @@
 ---
-title: "_execl, _wexecl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_execl, _wexecl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_execl"
@@ -31,7 +30,6 @@ f1_keywords:
   - "wexecl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_execl-Funktion"
   - "_wexecl-Funktion"
@@ -39,9 +37,10 @@ helpviewer_keywords:
   - "wexecl-Funktion"
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
 caps.latest.revision: 23
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _execl, _wexecl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

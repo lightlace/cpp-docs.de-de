@@ -1,13 +1,12 @@
 ---
-title: "_STATIC_ASSERT-Makro"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_STATIC_ASSERT-Makro | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcrt.dll"
@@ -29,9 +28,10 @@ helpviewer_keywords:
   - "_STATIC_ASSERT-Makro"
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _STATIC_ASSERT-Makro
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

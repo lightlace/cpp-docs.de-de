@@ -1,13 +1,12 @@
 ---
-title: "basic_ofstream-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "basic_ofstream-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "std::basic_ofstream"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "basic_ofstream-Klasse"
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 caps.latest.revision: 24
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # basic_ofstream-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "/SYMBOLS"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/SYMBOLS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/symbols"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "Symbole, Dumperstellung"
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /SYMBOLS
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

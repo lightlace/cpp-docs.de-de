@@ -1,13 +1,12 @@
 ---
-title: "/DELAYLOAD (Laden von Import verz&#246;gern)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/DELAYLOAD (Laden von Import verz&#246;gern) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/delayload"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "-DELAYLOAD (Linkeroption)"
 ms.assetid: 39ea0f1e-5c01-450f-9c75-2d9761ff9b28
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /DELAYLOAD (Laden von Import verz&#246;gern)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

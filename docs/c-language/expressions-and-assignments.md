@@ -1,17 +1,15 @@
 ---
-title: "Ausdr&#252;cke und Zuweisungen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ausdr&#252;cke und Zuweisungen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Zuweisen von Werten in C"
   - "Zuweisungsoperatoren, Zuweisen von Werten in Ausdrücken"
@@ -23,9 +21,10 @@ helpviewer_keywords:
   - "Visual C, Ausdrücke"
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Ausdr&#252;cke und Zuweisungen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

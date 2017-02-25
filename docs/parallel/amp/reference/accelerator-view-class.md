@@ -1,13 +1,12 @@
 ---
-title: "accelerator_view-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "accelerator_view-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "amprt/Concurrency::accelerator_view"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "accelerator_view-Klasse"
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
 caps.latest.revision: 18
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # accelerator_view-Klasse
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

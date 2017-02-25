@@ -1,13 +1,12 @@
 ---
-title: "/ALLOWISOLATION (Manifestsuche)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/ALLOWISOLATION (Manifestsuche) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/ALLOWISOLATION"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "-ALLOWISOLATION (Linkeroption)"
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /ALLOWISOLATION (Manifestsuche)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

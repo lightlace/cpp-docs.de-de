@@ -1,13 +1,12 @@
 ---
-title: "CHtmlEditView Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CHtmlEditView Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CHtmlEditView"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CHtmlEditView class"
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
 caps.latest.revision: 24
-caps.handback.revision: "13"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # CHtmlEditView Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

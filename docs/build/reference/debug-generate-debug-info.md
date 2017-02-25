@@ -1,13 +1,12 @@
 ---
-title: "/DEBUG (Debuginfo generieren)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/DEBUG (Debuginfo generieren) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCLinkerTool.GenerateDebugInformation"
@@ -26,10 +25,11 @@ helpviewer_keywords:
   - "PDB-Dateien, Generieren von Debuginformationen"
   - "Programmdatenbanken [C++]"
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-caps.latest.revision: 11
-caps.handback.revision: "10"
+caps.latest.revision: 10
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /DEBUG (Debuginfo generieren)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

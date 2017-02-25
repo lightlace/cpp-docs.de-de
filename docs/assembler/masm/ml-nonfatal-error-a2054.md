@@ -1,13 +1,12 @@
 ---
-title: "ML Nonfatal Error A2054"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ML Nonfatal Error A2054 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "A2054"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "A2054"
 ms.assetid: 878a2ced-0b88-49e5-bea5-0a014efb08b6
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ML Nonfatal Error A2054
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

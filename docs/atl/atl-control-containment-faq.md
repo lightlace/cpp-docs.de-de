@@ -1,13 +1,12 @@
 ---
-title: "Fragen und Antworten zur ATL-Steuerelementkapselung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Fragen und Antworten zur ATL-Steuerelementkapselung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "Hosten von Steuerelementen mit ATL"
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
 caps.latest.revision: 15
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Fragen und Antworten zur ATL-Steuerelementkapselung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

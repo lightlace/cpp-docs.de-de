@@ -1,13 +1,12 @@
 ---
-title: "Verwenden von CToolBarCtrl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Verwenden von CToolBarCtrl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CToolBarCtrl"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Symbolleisten-Steuerelemente [MFC], Erstellen"
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
 caps.latest.revision: 11
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Verwenden von CToolBarCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

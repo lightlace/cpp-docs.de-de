@@ -1,14 +1,13 @@
 ---
-title: "Creal, Crealf, creall"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Creal, Crealf, creall | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "cpp"
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "creal"
@@ -35,7 +34,6 @@ f1_keywords:
   - "complex/crealf"
   - "complex/creall"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "Creal-Funktion"
@@ -43,9 +41,10 @@ helpviewer_keywords:
   - "Creall-Funktion"
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Creal, Crealf, creall
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CAnimationValue-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CAnimationValue-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "afxanimationcontroller/CAnimationValue"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CAnimationValue-Klasse"
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
 caps.latest.revision: 17
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # CAnimationValue-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

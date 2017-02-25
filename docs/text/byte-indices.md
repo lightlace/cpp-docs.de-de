@@ -1,13 +1,12 @@
 ---
-title: "Byte-Indizes"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Byte-Indizes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "MBCS [C++], Byteindizes"
 ms.assetid: f6e7774a-86c6-41c2-89e3-74fd46432e47
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Byte-Indizes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

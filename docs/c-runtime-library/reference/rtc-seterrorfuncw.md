@@ -1,13 +1,12 @@
 ---
-title: "_RTC_SetErrorFuncW"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_RTC_SetErrorFuncW | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_RTC_SetErrorFuncW"
@@ -28,7 +27,6 @@ f1_keywords:
   - "RTC_SetErrorFuncW"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Laufzeitfehler"
   - "RTC_SetErrorFuncW-Funktion"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "RTC_error_fnW-Typedef"
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _RTC_SetErrorFuncW
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

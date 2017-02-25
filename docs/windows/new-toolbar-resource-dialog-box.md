@@ -1,13 +1,12 @@
 ---
-title: "Dialogfeld &quot;Neue Symbolleistenressource&quot;"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Dialogfeld &quot;Neue Symbolleistenressource&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.editors.newtoolbarresource"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Neue Symbolleistenressource (Dialogfeld)"
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Dialogfeld &quot;Neue Symbolleistenressource&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

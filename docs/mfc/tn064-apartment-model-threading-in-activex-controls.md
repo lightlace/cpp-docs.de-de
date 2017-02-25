@@ -1,13 +1,12 @@
 ---
-title: "TN064: Apartmentmodellthreading in ActiveX-Steuerelementen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN064: Apartmentmodellthreading in ActiveX-Steuerelementen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.controls.activex"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "TN064"
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN064: Apartmentmodellthreading in ActiveX-Steuerelementen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

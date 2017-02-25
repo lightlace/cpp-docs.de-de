@@ -1,13 +1,12 @@
 ---
-title: "Sicherheitsfunktionen in der CRT"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Sicherheitsfunktionen in der CRT | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_CRT_SECURE_NO_DEPRECATE"
@@ -15,7 +14,6 @@ f1_keywords:
   - "_CRT_SECURE_NO_WARNINGS"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CRT_NONSTDC_NO_DEPRECATE"
   - "_CRT_NONSTDC_NO_WARNINGS"
@@ -36,9 +34,10 @@ helpviewer_keywords:
   - "CRT mit erweiterter Sicherheit"
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
 caps.latest.revision: 23
-caps.handback.revision: "23"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Sicherheitsfunktionen in der CRT
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

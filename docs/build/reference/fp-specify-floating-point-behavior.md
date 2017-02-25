@@ -1,13 +1,12 @@
 ---
-title: "/fp (Festlegen des Gleitkommaverhaltens)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/fp (Festlegen des Gleitkommaverhaltens) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "VC.Project.VCCLCompilerTool.floatingPointModel"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "-Fp (Compileroption) [C++]"
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # /fp (Festlegen des Gleitkommaverhaltens)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

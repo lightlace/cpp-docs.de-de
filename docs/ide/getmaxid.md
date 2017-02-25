@@ -1,13 +1,12 @@
 ---
-title: "GetMaxID"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "GetMaxID | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "GetMaxID"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "GetMaxID-Methode"
 ms.assetid: a155ec2e-6132-4e40-9b85-d710538778a1
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # GetMaxID
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

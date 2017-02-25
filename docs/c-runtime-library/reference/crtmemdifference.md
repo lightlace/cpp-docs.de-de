@@ -1,13 +1,12 @@
 ---
-title: "_CrtMemDifference"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_CrtMemDifference | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_CrtMemDifference"
@@ -28,15 +27,15 @@ f1_keywords:
   - "CrtMemDifference"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "CrtMemDifference-Funktion"
   - "_CrtMemDifference-Funktion"
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
 caps.latest.revision: 16
-caps.handback.revision: "16"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _CrtMemDifference
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

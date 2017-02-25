@@ -1,13 +1,12 @@
 ---
-title: "Implements::CanCastTo-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Implements::CanCastTo-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::Implements::CanCastTo"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "CanCastTo-Methode"
 ms.assetid: a8e85c7d-4dcd-446d-bebc-a97da46ce44a
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Implements::CanCastTo-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

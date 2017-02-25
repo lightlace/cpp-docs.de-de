@@ -1,13 +1,12 @@
 ---
-title: "isupper, _isupper_l, iswupper, _iswupper_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "isupper, _isupper_l, iswupper, _iswupper_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "isupper"
@@ -33,7 +32,6 @@ f1_keywords:
   - "iswupper"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_istupper-Funktion"
   - "_isupper_l-Funktion"
@@ -45,9 +43,10 @@ helpviewer_keywords:
   - "iswupper_l-Funktion"
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
 caps.latest.revision: 21
-caps.handback.revision: "21"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # isupper, _isupper_l, iswupper, _iswupper_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

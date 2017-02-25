@@ -1,13 +1,12 @@
 ---
-title: "/HEAP"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "/HEAP | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "/heap"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "/HEAP-editbin-Option"
 ms.assetid: 6ce759b5-75b7-44ff-a5fd-3a83a0ba9a48
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /HEAP
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

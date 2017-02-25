@@ -1,19 +1,17 @@
 ---
-title: "Debugroutinen"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Debugroutinen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.debug"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Debuggen [CRT], Verwenden von Makros"
   - "Makros, Debuggen mit"
@@ -22,9 +20,10 @@ helpviewer_keywords:
   - "Debuggen [CRT], Laufzeitroutinen"
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Debugroutinen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

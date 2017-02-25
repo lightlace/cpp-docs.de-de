@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Laden einer Men&#252;bandressource aus einer MFC-Anwendung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Laden einer Men&#252;bandressource aus einer MFC-Anwendung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "Menübandressource, Laden"
 ms.assetid: 1c76bb8f-6345-414a-9f3f-128815ceadc5
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Gewusst wie: Laden einer Men&#252;bandressource aus einer MFC-Anwendung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

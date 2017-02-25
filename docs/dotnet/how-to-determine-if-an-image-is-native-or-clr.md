@@ -1,13 +1,12 @@
 ---
-title: "Gewusst wie: Ermitteln, ob ein Bild systemeigen oder CLR ist"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Gewusst wie: Ermitteln, ob ein Bild systemeigen oder CLR ist | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Bilder [C++], CLR-Überprüfung"
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Gewusst wie: Ermitteln, ob ein Bild systemeigen oder CLR ist
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "hash-Struktur (STL)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "hash-Struktur (STL) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "thread/std::hash"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 4a8bf5bc-4334-4070-936b-98585f8a073b
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # hash-Struktur (STL)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

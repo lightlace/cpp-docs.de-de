@@ -1,13 +1,12 @@
 ---
-title: "&lt;type_traits&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt;type_traits&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "<type_traits>"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "type_traits"
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
 caps.latest.revision: 35
-caps.handback.revision: "25"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # &lt;type_traits&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

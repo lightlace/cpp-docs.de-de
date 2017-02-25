@@ -1,13 +1,12 @@
 ---
-title: "Ein- oder Ausblenden der Symbolleiste des Dialog-Editors"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Ein- oder Ausblenden der Symbolleiste des Dialog-Editors | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Dialog-Editor, anzeigen oder ausblenden der Symbolleiste"
 ms.assetid: 93c255e1-90eb-48b6-8602-450acda75bed
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ein- oder Ausblenden der Symbolleiste des Dialog-Editors
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

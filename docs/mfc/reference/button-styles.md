@@ -1,13 +1,12 @@
 ---
-title: "Schaltfl&#228;chenstile"
-ms.custom: na
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schaltfl&#228;chenstile | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "BS_DEFPUSHBUTTON"
@@ -69,9 +68,10 @@ helpviewer_keywords:
   - "Stile, Schaltflächeobjekte"
 ms.assetid: 41206f72-2b92-4250-ae32-31184046402f
 caps.latest.revision: 20
-caps.handback.revision: "15"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Schaltfl&#228;chenstile
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

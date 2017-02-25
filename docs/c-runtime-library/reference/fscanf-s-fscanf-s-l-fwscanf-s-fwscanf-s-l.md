@@ -1,13 +1,12 @@
 ---
-title: "fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "fwscanf_s"
@@ -35,7 +34,6 @@ f1_keywords:
   - "fwscanf_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fscanf_s_l-Funktion"
   - "_ftscanf_s-Funktion"
@@ -52,9 +50,10 @@ helpviewer_keywords:
   - "Streams [C++], Lesen von formatierten Daten aus"
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
 caps.latest.revision: 28
-caps.handback.revision: "26"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

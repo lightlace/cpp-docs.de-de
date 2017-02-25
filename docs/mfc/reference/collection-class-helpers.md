@@ -1,13 +1,12 @@
 ---
-title: "Hilfsfunktionen f&#252;r die Auflistungsklasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Hilfsfunktionen f&#252;r die Auflistungsklasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.macros.classes"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "SerializeElements-Funktion"
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
 caps.latest.revision: 14
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Hilfsfunktionen f&#252;r die Auflistungsklasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

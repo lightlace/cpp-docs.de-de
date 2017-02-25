@@ -1,13 +1,12 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "OnFontChanged"
@@ -30,9 +29,10 @@ helpviewer_keywords:
   - "Stock Font-Eigenschaft"
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

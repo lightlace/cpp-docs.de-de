@@ -1,13 +1,12 @@
 ---
-title: "Sichere Remoteautomatisierung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Sichere Remoteautomatisierung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Sicherheit [MFC], Remoteautomatisierung"
 ms.assetid: 276b300d-c0b5-4bd8-8bf5-0270994b9cfa
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Sichere Remoteautomatisierung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

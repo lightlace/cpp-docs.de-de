@@ -1,13 +1,12 @@
 ---
-title: "CD2DLinearGradientBrush-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CD2DLinearGradientBrush-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "afxrendertarget/CD2DLinearGradientBrush"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "CD2DLinearGradientBrush-Klasse"
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
 caps.latest.revision: 17
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # CD2DLinearGradientBrush-Klasse
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

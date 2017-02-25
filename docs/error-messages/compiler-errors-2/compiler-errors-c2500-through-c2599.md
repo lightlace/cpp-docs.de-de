@@ -1,21 +1,21 @@
 ---
-title: "Compilerfehlers C2500 Through C2599"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehlers C2500 Through C2599 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 dev_langs: 
   - "C++"
 ms.assetid: a869aaed-e9f6-49e3-b273-00ea7f45bed7
 caps.latest.revision: 15
-caps.handback.revision: "15"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Compilerfehlers C2500 Through C2599
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

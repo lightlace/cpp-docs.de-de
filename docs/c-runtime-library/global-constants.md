@@ -1,26 +1,25 @@
 ---
-title: "Globale Konstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Globale Konstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.constants"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Globale Konstanten"
 ms.assetid: 778d86fd-3ca6-4d2b-b4c5-aee6dc1efe6b
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Globale Konstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

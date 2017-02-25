@@ -1,13 +1,12 @@
 ---
-title: "ModuleBase::ModuleBase-Konstruktor"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ModuleBase::ModuleBase-Konstruktor | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "implements/Microsoft::WRL::Details::ModuleBase::ModuleBase"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "ModuleBase, Konstruktor"
 ms.assetid: f5aeb035-b938-45d9-aed2-3b5b75921191
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ModuleBase::ModuleBase-Konstruktor
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

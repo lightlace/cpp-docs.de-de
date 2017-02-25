@@ -1,13 +1,12 @@
 ---
-title: "pointer_to_unary_function-Klasse"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "pointer_to_unary_function-Klasse | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "xfunctional/std::pointer_to_unary_function"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "pointer_to_unary_function-Funktion"
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
 caps.latest.revision: 21
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # pointer_to_unary_function-Klasse
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

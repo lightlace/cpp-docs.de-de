@@ -1,19 +1,17 @@
 ---
-title: "E/A auf niedriger Ebene"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "E/A auf niedriger Ebene | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Dateihandles [C++]"
   - "Dateihandles [C++], E/A-Funktionen"
@@ -22,9 +20,10 @@ helpviewer_keywords:
   - "E/A-Routine auf niedriger Ebene"
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # E/A auf niedriger Ebene
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

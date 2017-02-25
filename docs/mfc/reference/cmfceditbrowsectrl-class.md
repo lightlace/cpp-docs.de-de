@@ -1,13 +1,12 @@
 ---
-title: "CMFCEditBrowseCtrl Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCEditBrowseCtrl Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCEditBrowseCtrl"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "CMFCEditBrowseCtrl::PreTranslateMessage method"
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
 caps.latest.revision: 33
-caps.handback.revision: "21"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # CMFCEditBrowseCtrl Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

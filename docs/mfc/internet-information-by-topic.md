@@ -1,13 +1,12 @@
 ---
-title: "Themenliste f&#252;r Internetinformationen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Themenliste f&#252;r Internetinformationen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -15,9 +14,10 @@ helpviewer_keywords:
   - "MFC, Internetanwendungen"
 ms.assetid: 93a8b6c9-d274-492a-90b3-cf43a77edb1d
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Themenliste f&#252;r Internetinformationen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "CMFCOutlookBarPane Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CMFCOutlookBarPane Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "CMFCOutlookBarPane"
@@ -23,9 +22,10 @@ helpviewer_keywords:
   - "SmartUpdate method"
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
 caps.latest.revision: 30
-caps.handback.revision: "18"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # CMFCOutlookBarPane Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4160"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerwarnung (Stufe 1) C4160 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-csharp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "C4160"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C4160"
 ms.assetid: a9610cb7-cac4-4a74-8b4e-049030ebb92b
 caps.latest.revision: 5
-caps.handback.revision: "5"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Compilerwarnung (Stufe 1) C4160
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

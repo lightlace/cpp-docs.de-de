@@ -1,24 +1,23 @@
 ---
-title: "Abschneiden von Gleitkommawerten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Abschneiden von Gleitkommawerten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Gleitkommazahlen, Abschneiden"
 ms.assetid: 051a6e22-c636-4af8-9ac4-40160f4affca
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Abschneiden von Gleitkommawerten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "HandleT::Detach-Methode"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "HandleT::Detach-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "corewrappers/Microsoft::WRL::Wrappers::HandleT::Detach"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Detach-Methode"
 ms.assetid: f7df0f90-fafb-4d1b-a215-a6c62941f6b0
 caps.latest.revision: 3
-caps.handback.revision: "3"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # HandleT::Detach-Methode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

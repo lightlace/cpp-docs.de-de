@@ -1,13 +1,12 @@
 ---
-title: "Bereitstellen von Drag &amp; Drop-Unterst&#252;tzung f&#252;r Headerelemente"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Bereitstellen von Drag &amp; Drop-Unterst&#252;tzung f&#252;r Headerelemente | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Headerelemente in Headersteuerelementen"
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Bereitstellen von Drag &amp; Drop-Unterst&#252;tzung f&#252;r Headerelemente
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

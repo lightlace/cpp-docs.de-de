@@ -1,13 +1,12 @@
 ---
-title: "_CrtSetReportHook2, _CrtSetReportHookW2"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_CrtSetReportHook2, _CrtSetReportHookW2 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_CrtSetReportHook2"
@@ -31,7 +30,6 @@ f1_keywords:
   - "_CrtSetReportHook2"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "CrtSetReportHook2-Funktion"
   - "_CrtSetReportHook2-Funktion"
@@ -39,9 +37,10 @@ helpviewer_keywords:
   - "CrtSetReportHookW2-Funktion"
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
 caps.latest.revision: 14
-caps.handback.revision: "14"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _CrtSetReportHook2, _CrtSetReportHookW2
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

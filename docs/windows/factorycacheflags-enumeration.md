@@ -1,13 +1,12 @@
 ---
-title: "FactoryCacheFlags-Enumeration"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "FactoryCacheFlags-Enumeration | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "module/Microsoft::WRL::FactoryCacheFlags"
@@ -15,9 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 6f54258f-0144-4264-9608-414e5905f6fb
 caps.latest.revision: 4
-caps.handback.revision: "4"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # FactoryCacheFlags-Enumeration
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

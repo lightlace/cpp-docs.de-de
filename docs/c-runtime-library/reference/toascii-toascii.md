@@ -1,13 +1,12 @@
 ---
-title: "ToAscii __toascii"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ToAscii __toascii | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "__toascii"
@@ -31,7 +30,6 @@ f1_keywords:
   - "ctype/__toascii"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "toascii-Funktion"
   - "zeichenfolgenkonvertierung in ASCII-Zeichen"
@@ -39,9 +37,10 @@ helpviewer_keywords:
   - "ASCII-Zeichen konvertieren in"
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
 caps.latest.revision: 13
-caps.handback.revision: "13"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # ToAscii __toascii
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

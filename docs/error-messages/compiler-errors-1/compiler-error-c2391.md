@@ -1,13 +1,12 @@
 ---
-title: "Compilerfehler C2391"
-ms.custom: na
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Compilerfehler C2391 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "error-reference"
 f1_keywords: 
   - "C2391"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "C2391"
 ms.assetid: 63a9c6b9-03cc-4517-885c-bdcd048643b3
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Compilerfehler C2391
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Erstellen einer formularbasierten MFC-Anwendung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Erstellen einer formularbasierten MFC-Anwendung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.appwiz.mfcforms.project"
@@ -18,9 +17,10 @@ helpviewer_keywords:
   - "Formularbasierte Anwendungen"
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
 caps.latest.revision: 12
-caps.handback.revision: "8"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Erstellen einer formularbasierten MFC-Anwendung
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

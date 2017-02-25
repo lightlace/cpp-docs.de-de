@@ -1,13 +1,12 @@
 ---
-title: "STL Containers"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "STL Containers | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "STL-Container"
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
 caps.latest.revision: 29
-caps.handback.revision: "29"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # STL Containers
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

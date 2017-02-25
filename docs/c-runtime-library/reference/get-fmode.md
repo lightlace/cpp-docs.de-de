@@ -1,13 +1,12 @@
 ---
-title: "_get_fmode"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_get_fmode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_get_fmode"
@@ -29,16 +28,16 @@ f1_keywords:
   - "_get_fmode"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_get_fmode-Funktion"
   - "Dateiübersetzung [C++], Standardmodus"
   - "get_fmode-Funktion"
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
 caps.latest.revision: 19
-caps.handback.revision: "19"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _get_fmode
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

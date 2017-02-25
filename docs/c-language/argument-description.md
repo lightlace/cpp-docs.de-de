@@ -1,17 +1,15 @@
 ---
-title: "Argumentbeschreibung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Argumentbeschreibung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "argc-Argument"
   - "Argumente [C++], Für main-Funktion"
@@ -20,9 +18,10 @@ helpviewer_keywords:
   - "main-Funktion, Syntax"
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Argumentbeschreibung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

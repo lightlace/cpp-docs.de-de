@@ -1,13 +1,12 @@
 ---
-title: "IErrorRecordsImpl::AddErrorRecord"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "IErrorRecordsImpl::AddErrorRecord | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "IErrorRecordsImpl.AddErrorRecord"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "AddErrorRecords-Methode"
 ms.assetid: b5f8e9ae-509d-454f-b511-4bda7e972607
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # IErrorRecordsImpl::AddErrorRecord
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

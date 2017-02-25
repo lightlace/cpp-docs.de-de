@@ -1,28 +1,27 @@
 ---
-title: "Meldung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Meldung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "message_CPP"
   - "vc-pragma.message"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "message-Pragma"
   - "Pragmas, Meldung"
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
 caps.latest.revision: 7
-caps.handback.revision: "7"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Meldung
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

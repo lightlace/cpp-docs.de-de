@@ -1,13 +1,12 @@
 ---
-title: "Viewing a Menu as a Pop-up Menu"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Viewing a Menu as a Pop-up Menu | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "menus, pop-up"
 ms.assetid: 220a16dd-a6e8-4362-af85-68fbfce2870e
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Viewing a Menu as a Pop-up Menu
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

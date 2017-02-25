@@ -1,13 +1,12 @@
 ---
-title: "_ismbbgraph, _ismbbgraph_l"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_ismbbgraph, _ismbbgraph_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_ismbbgraph_l"
@@ -32,7 +31,6 @@ f1_keywords:
   - "ismbbgraph_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbbgraph_l-Funktion"
   - "ismbbgraph_l-Funktion"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "ismbbgraph-Funktion"
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
 caps.latest.revision: 20
-caps.handback.revision: "20"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _ismbbgraph, _ismbbgraph_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

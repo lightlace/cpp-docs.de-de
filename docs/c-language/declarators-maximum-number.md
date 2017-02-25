@@ -1,24 +1,23 @@
 ---
-title: "Deklaratoren: Maximale Anzahl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Deklaratoren: Maximale Anzahl | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Deklaratoren, Maximale Anzahl von"
 ms.assetid: f8410673-e11a-4830-89a3-3ffb7bb6562d
 caps.latest.revision: 6
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Deklaratoren: Maximale Anzahl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

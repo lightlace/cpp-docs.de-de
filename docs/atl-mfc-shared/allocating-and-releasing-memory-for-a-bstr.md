@@ -1,13 +1,12 @@
 ---
-title: "Allocating and Releasing Memory for a BSTR"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Allocating and Releasing Memory for a BSTR | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "bstr"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "Zeichenfolgen [C++], Freigeben"
 ms.assetid: 98041e29-3442-4a02-b425-7a4a13e9cc84
 caps.latest.revision: 13
-caps.handback.revision: "9"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Allocating and Releasing Memory for a BSTR
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

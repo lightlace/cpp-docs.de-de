@@ -1,13 +1,12 @@
 ---
-title: "FAQ (H&#228;ufig gestellte Fragen) zu DLLs"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "FAQ (H&#228;ufig gestellte Fragen) zu DLLs | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Problembehandlung [C++], DLLs"
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
 caps.latest.revision: 9
-caps.handback.revision: "9"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # FAQ (H&#228;ufig gestellte Fragen) zu DLLs
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

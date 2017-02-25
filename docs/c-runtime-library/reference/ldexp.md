@@ -1,13 +1,12 @@
 ---
-title: "ldexp"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ldexp | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "ldexp"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_ldexpl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Berechnen reeller Zahlen"
   - "Berechnen reeller Zahlen"
@@ -39,9 +37,10 @@ helpviewer_keywords:
   - "Mantissen, Gleitkommavariablen"
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # ldexp
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

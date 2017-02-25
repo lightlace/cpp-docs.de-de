@@ -1,13 +1,12 @@
 ---
-title: "Freigeben von Konstanten"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Freigeben von Konstanten | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "_SH_DENYNO"
@@ -17,7 +16,6 @@ f1_keywords:
   - "_SH_COMPAT"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_SH_COMPAT-Konstante"
   - "_SH_DENYNO-Konstante"
@@ -32,9 +30,10 @@ helpviewer_keywords:
   - "Freigeben von Konstanten"
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
 caps.latest.revision: 8
-caps.handback.revision: "8"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Freigeben von Konstanten
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

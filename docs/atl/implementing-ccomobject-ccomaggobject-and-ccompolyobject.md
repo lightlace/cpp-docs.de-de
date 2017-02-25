@@ -1,13 +1,12 @@
 ---
-title: "Implementing CComObject, CComAggObject, and CComPolyObject"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Implementing CComObject, CComAggObject, and CComPolyObject | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "CComPolyObject"
@@ -22,9 +21,10 @@ helpviewer_keywords:
   - "CreateInstance-Methode"
 ms.assetid: 5aabe938-104d-492e-9c41-9f7fb1c62098
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Implementing CComObject, CComAggObject, and CComPolyObject
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "_fcvt_s"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_fcvt_s | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "_fcvt_s"
@@ -29,7 +28,6 @@ f1_keywords:
   - "_fcvt_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fcvt_s-Funktion"
   - "Konvertieren von Gleitkommazahlen, zu Zeichenfolgen"
@@ -37,9 +35,10 @@ helpviewer_keywords:
   - "Gleitkommafunktionen, Konvertieren einer Zahl in eine Zeichenfolge"
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 caps.latest.revision: 27
-caps.handback.revision: "25"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # _fcvt_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

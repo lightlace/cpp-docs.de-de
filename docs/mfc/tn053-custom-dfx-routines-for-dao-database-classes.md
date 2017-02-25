@@ -1,13 +1,12 @@
 ---
-title: "TN053: Benutzereigene DFX-Routinen f&#252;r DAO-Datenbankklassen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "TN053: Benutzereigene DFX-Routinen f&#252;r DAO-Datenbankklassen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.dfx"
@@ -24,9 +23,10 @@ helpviewer_keywords:
   - "TN053"
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
 caps.latest.revision: 10
-caps.handback.revision: "6"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN053: Benutzereigene DFX-Routinen f&#252;r DAO-Datenbankklassen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

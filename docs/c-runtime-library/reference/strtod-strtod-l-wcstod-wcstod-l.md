@@ -1,13 +1,12 @@
 ---
-title: "strtod, _strtod_l, wcstod, _wcstod_l"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "strtod, _strtod_l, wcstod, _wcstod_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "wcstod"
@@ -39,7 +38,6 @@ f1_keywords:
   - "corecrt_wstdlib/_wcstod_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_strtod_l-Funktion"
   - "_tcstod-Funktion"
@@ -54,9 +52,10 @@ helpviewer_keywords:
   - "wcstod_l-Funktion"
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
 caps.latest.revision: 20
-caps.handback.revision: "17"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # strtod, _strtod_l, wcstod, _wcstod_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,13 +1,12 @@
 ---
-title: "Schlie&#223;en des Dialogfelds"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Schlie&#223;en des Dialogfelds | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
@@ -16,9 +15,10 @@ helpviewer_keywords:
   - "MFC-Dialogfelder, Schließen"
 ms.assetid: 946f5675-c482-46a4-a5dd-34fe138ffae5
 caps.latest.revision: 9
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Schlie&#223;en des Dialogfelds
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

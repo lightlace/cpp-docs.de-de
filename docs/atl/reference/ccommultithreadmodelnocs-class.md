@@ -1,13 +1,12 @@
 ---
-title: "CComMultiThreadModelNoCS Class"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CComMultiThreadModelNoCS Class | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "ATL::CComMultiThreadModelNoCS"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Threading [ATL]"
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
 caps.latest.revision: 18
-caps.handback.revision: "7"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # CComMultiThreadModelNoCS Class
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

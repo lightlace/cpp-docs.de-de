@@ -1,13 +1,12 @@
 ---
-title: "Exportieren aus einer DLL mithilfe von &quot;__declspec(dllexport)&quot;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Exportieren aus einer DLL mithilfe von &quot;__declspec(dllexport)&quot; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "dllexport"
@@ -21,9 +20,10 @@ helpviewer_keywords:
   - "Namen [C++], DLL-Exporte nach"
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 caps.latest.revision: 11
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Exportieren aus einer DLL mithilfe von &quot;__declspec(dllexport)&quot;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

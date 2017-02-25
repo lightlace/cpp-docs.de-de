@@ -1,13 +1,12 @@
 ---
-title: "ldiv, lldiv"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "ldiv, lldiv | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
   - "ldiv"
@@ -30,7 +29,6 @@ f1_keywords:
   - "lldiv"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Berechnen von Quotienten"
   - "Berechnen von Restwerten"
@@ -40,9 +38,10 @@ helpviewer_keywords:
   - "Restwerte berechnen"
 ms.assetid: 68ab5d83-27a4-479c-9d52-d055eb139eca
 caps.latest.revision: 12
-caps.handback.revision: "12"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # ldiv, lldiv
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

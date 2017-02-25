@@ -1,13 +1,12 @@
 ---
-title: "_exec- und _wexec-Funktionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "_exec- und _wexec-Funktionen | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 apilocation: 
   - "msvcr110_clr0400.dll"
@@ -40,7 +39,6 @@ f1_keywords:
   - "_wexec"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_exec-Funktion"
   - "_texecl-Funktion"
@@ -65,9 +63,10 @@ helpviewer_keywords:
   - "wexec-Funktion"
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
 caps.latest.revision: 24
-caps.handback.revision: "24"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _exec- und _wexec-Funktionen
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

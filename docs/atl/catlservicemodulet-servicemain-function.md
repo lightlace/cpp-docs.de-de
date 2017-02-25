@@ -1,13 +1,12 @@
 ---
-title: "CAtlServiceModuleT::ServiceMain Function"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "CAtlServiceModuleT::ServiceMain Function | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "ServiceMain"
@@ -19,9 +18,10 @@ helpviewer_keywords:
   - "ServiceMain method"
 ms.assetid: f21408c1-1919-4dec-88d8-bf5b39ac9808
 caps.latest.revision: 10
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # CAtlServiceModuleT::ServiceMain Function
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

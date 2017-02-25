@@ -1,13 +1,12 @@
 ---
-title: "Klassenfabriken und Lizenzierung"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "Klassenfabriken und Lizenzierung | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "vc.mfc.macros.classes"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "Klassenfactorys, und Lizenzieren"
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
 caps.latest.revision: 13
-caps.handback.revision: "5"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Klassenfabriken und Lizenzierung
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

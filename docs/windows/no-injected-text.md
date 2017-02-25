@@ -1,13 +1,12 @@
 ---
-title: "no_injected_text"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "no_injected_text | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "vc-attr.no_injected_text"
@@ -17,9 +16,10 @@ helpviewer_keywords:
   - "no_injected_text attribute"
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
 caps.latest.revision: 10
-caps.handback.revision: "10"
+author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # no_injected_text
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

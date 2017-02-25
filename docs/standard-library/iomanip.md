@@ -1,13 +1,12 @@
 ---
-title: "&lt; Iomanip &gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
+title: "&lt; Iomanip &gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
-ms.tgt_pltfrm: na
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "iomanip/std::<iomanip>"
@@ -20,9 +19,10 @@ helpviewer_keywords:
   - "iomanip-Header"
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
 caps.latest.revision: 21
-caps.handback.revision: "11"
+author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # &lt; Iomanip &gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
