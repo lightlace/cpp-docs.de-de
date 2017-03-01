@@ -11,7 +11,6 @@
 # [Linux-Entwicklung](linux/download-install-and-setup-the-linux-development-workload.md)
 # [.NET-Entwicklung mit C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [Cloud- und Webprogrammierung in Visual C++](cloud/cloud-and-web-programming-in-visual-cpp.md)
-## [C++ REST SDK (Codename „Casablanca“)](cloud/cpp-rest-sdk-codename-casablanca.md)
 # [Parallele Programmierung](parallel/parallel-programming-in-visual-cpp.md)
 # [Datenzugriff](data/data-access-programming-mfc-atl.md)
 # [Text und Zeichenfolgen](text/text-and-strings-in-visual-cpp.md)
@@ -24,8 +23,3 @@
 # [Visual C++-Beispiele](visual-cpp-samples.md)
 # [Hilfe und Community für Visual C++](visual-cpp-help-and-community.md)
 # [Melden eines Problems mit dem Visual C++-Toolset](how-to-report-a-problem-with-the-visual-cpp-toolset.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
