@@ -1,62 +1,78 @@
 ---
-title: "copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "copysignf"
-  - "copysignl"
-  - "_copysignl"
-  - "_copysign"
-  - "_copysignf"
-  - "copysign"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_copysignl"
-  - "copysign"
-  - "copysignf"
-  - "_copysign"
-  - "copysignl"
-  - "_copysignf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_copysign-Funktion"
-  - "_copysignf-Funktion"
-  - "_copysignl-Funktion"
-  - "copysign-Funktion"
-  - "copysignf-Funktion"
-  - "copysignl-Funktion"
+title: copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- copysignf
+- copysignl
+- _copysignl
+- _copysign
+- _copysignf
+- copysign
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _copysignl
+- copysign
+- copysignf
+- _copysign
+- copysignl
+- _copysignf
+dev_langs:
+- C++
+helpviewer_keywords:
+- copysignl function
+- _copysignl function
+- copysign function
+- _copysignf function
+- _copysign function
+- copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 513ba53a63351b7239c0612103c41977e930eafa
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 Gibt einen Wert zurück, der die Größe eines Arguments und das Zeichen eines anderen Arguments aufweist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double copysign(   
@@ -89,33 +105,33 @@ long double _copysignl(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `x`  
  Der Gleitkommawert, der als Betrag des Ergebnisses zurückgegeben wird.  
   
  `y`  
  Der Gleitkommawert, der als Zeichen des Ergebnisses zurückgegeben wird.  
   
- [Routinen für die Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)  
+ [Floating-Point Support Routines (Routinen für die Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)  
   
-## Rückgabewert  
- Die `copysign`\-Funktionen geben einen Gleitkommawert zurück, der die Größe von `x` und das Zeichen von `y` kombiniert.  Es gibt keine Fehlerrückgabe.  
+## <a name="return-value"></a>Rückgabewert  
+ Die `copysign`-Funktionen geben einen Gleitkommawert zurück, der die Größe von `x` und das Zeichen von `y` kombiniert. Es gibt keine Fehlerrückgabe.  
   
-## Hinweise  
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von `copysign` aufrufen, die `float` oder `long double`\-Werte verwenden und zurückgeben.  In einem C\-Programm verwendet `copysign` immer `double` und gibt diesen Wert zurück.  
+## <a name="remarks"></a>Hinweise  
+ Da C++ das Überladen zulässt, können Sie Überladungen von `copysign` aufrufen, die `float` oder `long double`-Werte verwenden und zurückgeben. In einem C-Programm verwendet `copysign` immer `double` und gibt diesen Wert zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_copysign`|\<float.h\>|  
-|`copysign`, `copysignf`, `copysignl`, `_copysignf` `_copysignl`|\<math.h\>|  
+|-------------|---------------------|  
+|`_copysign`|\<float.h>|  
+|`copysign`, `copysignf`, `copysignl`, `_copysignf``_copysignl`|\<math.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [Fabs, Fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
- [\_chgsign, \_chgsignf, \_chgsignl](../../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)
+## <a name="see-also"></a>Siehe auch  
+ [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
+ [_chgsign, _chgsignf, _chgsignl](../../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)

@@ -1,49 +1,65 @@
 ---
-title: "_malloca | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_malloca"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "malloca"
-  - "_malloca"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_malloca-Funktion"
-  - "malloca-Funktion"
-  - "Speicherreservierung, Stapel"
+title: _malloca | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _malloca
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- malloca
+- _malloca
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory allocation, stack
+- malloca function
+- _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _malloca
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 70a37640ec7f6024539ad1e2134152190e698133
+ms.lasthandoff: 02/24/2017
 
-Belegt Speicher für den Stapel.  Dies ist eine Version von [\_alloca](../../c-runtime-library/reference/alloca.md) mit werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="malloca"></a>_malloca
+Belegt Speicher für den Stapel. Dies ist eine sicherere Version von [_alloca](../../c-runtime-library/reference/alloca.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void *_malloca(   
@@ -51,40 +67,40 @@ void *_malloca(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `size`  
- Im Stapel zugeordnet, Bytes.  
+ Bytes, die vom Stapel zugeordnet werden.  
   
-## Rückgabewert  
- Die Routine `_malloca` gibt ein `void` Zeiger auf den reservierten Platz zurück, der garantiert wird, zum Speichern eines beliebigen Typs Objekt ordnungsgemäß ausgerichtet sind.  Wenn `size` 0 ist, wird `_malloca` ein Element der Länge 0 zu und gibt einen gültigen Zeiger zu diesem Element zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ Die `_malloca`-Routine gibt einen `void`-Zeiger auf den zugeordneten Speicherplatz zurück, der für die Speicherung eines beliebigen Objekttyps entsprechend ausgerichtet ist. Wenn `size` 0 ist, weist `_malloca` ein Element der Länge 0 zu und gibt einen gültigen Zeiger auf dieses Element zurück.  
   
- Eine Stapelüberlaufausnahme wird generiert, wenn das Leerzeichen nicht zugeordnet werden kann.  Die Stapelüberlaufausnahme ist keine C\+\+\-Ausnahme; er ist eine strukturierte Ausnahme.  Anstatt, die C\+\+\-Ausnahmebehandlung zu verwenden, müssen Sie [Strukturierte Ausnahmebehandlung](../../cpp/structured-exception-handling-c-cpp.md) \(SEH\) verwenden.  
+ Eine Stapelüberlaufausnahme wird generiert, wenn der Speicherplatz nicht zugeordnet werden kann. Die Stapelüberlaufausnahme ist keine C++-Ausnahme, sondern eine strukturierte Ausnahme. Sie müssen anstelle der C++-Ausnahmebehandlung die [Strukturierte Ausnahmebehandlung](../../cpp/structured-exception-handling-c-cpp.md) (Structured Exception Handling, SEH) verwenden.  
   
-## Hinweise  
- `_malloca` ordnet `size` Bytes vom Programmstapel oder vom Heap zu, wenn die Anforderung eine bestimmte Größe in Bytes überschreitet, die von `_ALLOCA_S_THRESHOLD` angegeben werden.  Der Unterschied zwischen `_malloca` und `_alloca` ist, dass `_alloca` immer auf dem Stapel zugeordnet wird, unabhängig von der Größe.  Anders als `_alloca` der keinen Aufruf `free`, dem so zugeordneten Arbeitsspeicher freizugeben benötigt oder ermöglicht, erfordert `_malloca` die Verwendung von [\_freea](../../c-runtime-library/reference/freea.md), Arbeitsspeicher freizugeben.  Im Debugmodus belegt `_malloca` immer vom Heap Speicher.  
+## <a name="remarks"></a>Hinweise  
+ `_malloca` ordnet `size`-Bytes aus dem Programmstapel oder dem Heap zu, wenn die Anforderung eine bestimmte Größe in Bytes überschreitet, die von `_ALLOCA_S_THRESHOLD` angegeben ist. Der Unterschied zwischen `_malloca` und `_alloca` ist, dass `_alloca` immer auf dem Stapel zuordnet, unabhängig von der Größe. Im Gegensatz zu `_alloca`, wobei kein Aufruf auf `free` erforderlich bzw. zulässig ist, um den zugeordneten Speicher freizugeben, erfordert `_malloca` den Gebrauch von [_freea](../../c-runtime-library/reference/freea.md), um den Speicher freizugeben. Im Debugmodus weist `_malloca` immer Speicher vom Heap zu.  
   
- Es gibt Einschränkungen zu `_malloca` in einem Ausnahmehandler \(EH\) explizit aufrufen.  Eh\-Routinen, die auf x86\-class Prozessoren ausgeführt werden, werden in einen eigenen Arbeitsspeicherframen: Sie führen Aufgaben im Speicherplatz aus, der nicht auf der aktuellen Position des Stapelzeigers der übergeordneten Funktion ist.  Die häufigsten Implementierungen enthalten Ausdrücke der Windows NTstrukturierten ausnahmebehandlung \(SEH\) und C\+\+\-catch\-Klausel.  Daher `_malloca` in folgenden Szenarien führt explizit aufrufen Programmausfälle während Resultsets zur aufrufenden EH\-Routine:  
+ Es gelten Einschränkungen beim expliziten Aufruf von `_malloca` in einem Ausnahmehandler (exception handler, EH). EH-Routinen, die auf x86-Klasse-Prozessoren ausgeführt werden, arbeiten in ihrem eigenen Speicherrahmen: Sie führen Ihre Tasks im Speicherplatz aus, der nicht auf der aktuellen Position des Stapelzeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Daher führt das explizite Aufrufen von `_malloca` in jedem der folgenden Szenarios zu einem Programmfehler während der Rückgabe auf die aufrufende EH-Routine.  
   
--   Windows NT SEH Ausnahmefilterausdruck: `__except` \(`_malloca ()` \)  
+-   Filterausdrücke der Windows NT-SEH-Ausnahme: `__except` (`_malloca ()` )  
   
--   Windows NT SEH endgültiger Ausnahmehandler: `__finally` } {`_malloca ()`  
+-   Endgültige Ausnahmehandler von Windows NT-SEH: `__finally` {`_malloca ()` }  
   
--   Catch\-Klausel\-Ausdruck C\+\+ EH  
+-   C++-EH-Catch-Klauselausdruck  
   
- `_malloca` kann jedoch direkt aus einer EH\-Routine oder einem von der Anwendung bereitgestellten Rückruf aufgerufen werden, der aufgerufen von einem der zuvor aufgelisteten EH\-Szenarien abruft.  
+ Allerdings kann `_malloca` direkt innerhalb einer EH-Routine aufgerufen werden oder von einem von einer Anwendung bereitgestellten Rückruf, der von einem der zuvor aufgeführten EH-Szenarios aufgerufen wird.  
   
 > [!IMPORTANT]
->  In Windows XP wenn `_malloca` innerhalb eines try\/catch\-Blocks aufgerufen wird, müssen Sie [\_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md) im catch\-Block aufrufen.  
+>  Wenn unter Windows XP `_malloca` innerhalb eines try/catch-Blocks aufgerufen wird, müssen Sie [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md) im Catch-Block aufrufen.  
   
- Neben den oben beschriebenen Einschränkungen wenn die Option [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md), `_malloca` kann nicht in Blöcken `__except` verwendet werden.  Weitere Informationen finden Sie unter [\/clr\- Einschränkungen](../../build/reference/clr-restrictions.md).  
+ Zusätzlich zu den oben genannten Einschränkungen kann bei Verwendung der Option [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) `_malloca` nicht in `__except`-Blöcken verwendet werden. Weitere Informationen finden Sie unter [Einschränkungen für „/clr“](../../build/reference/clr-restrictions.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_malloca`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_malloca`|\<malloc.h>|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_malloca_simple.c  
@@ -104,7 +120,7 @@ int main()
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_malloca_exception.c  
@@ -164,24 +180,24 @@ int main()
 }  
 ```  
   
-## Eingabe  
+## <a name="input"></a>Eingabe  
   
 ```  
 1000  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 Enter the number of bytes to allocate using _malloca: 1000  
 ```  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Speicherbelegung](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
- [\_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)
+ [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)

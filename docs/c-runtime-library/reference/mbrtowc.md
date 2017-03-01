@@ -1,47 +1,63 @@
 ---
-title: "mbrtowc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbrtowc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbrtowc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mbrtowc-Funktion"
+title: mbrtowc | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbrtowc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbrtowc
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# mbrtowc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: de5737e8427d88b192d59291fc7b4805a7f6510b
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="mbrtowc"></a>mbrtowc
 Konvertieren eines Multibytezeichens im aktuellen Gebietsschema in das entsprechende Breitzeichen mit der Möglichkeit des Neustarts in der Mitte eines Multibytezeichens.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_t mbrtowc(  
@@ -52,46 +68,46 @@ size_t mbrtowc(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `wchar`  
- Adresse eines Breitzeichens für die Aufnahme der konvertierten Breitzeichenfolge \(Typ `wchar_t`\).  Dieser Wert kann ein NULL\-Zeiger sein, wenn keine Rückgabebreitzeichen erforderlich ist.  
+ Adresse eines Breitzeichens für die Aufnahme der konvertierten Breitzeichenfolge (Typ `wchar_t`). Dieser Wert kann ein NULL-Zeiger sein, wenn keine Rückgabebreitzeichen erforderlich ist.  
   
  `mbchar`  
- Adresse einer Sequenz von Bytes \(ein Multibytezeichen\).  
+ Adresse einer Sequenz von Bytes (ein Multibytezeichen).  
   
  `count`  
  Anzahl zu überprüfender Bytes.  
   
  `mbstate`  
- Zeiger auf das Konvertierungzustandsobjekt.  Wenn dieser Wert ein NULL\-Zeiger ist, verwendet die Funktion ein statisches internes Konvertierungszustandsobjekt.  Da das interne `mbstate_t`\-Objekt nicht threadsicher ist, wird empfohlen, immer Ihr eigenes `mbstate`\-Argument zu übergeben.  
+ Zeiger auf das Konvertierungzustandsobjekt. Wenn dieser Wert ein NULL-Zeiger ist, verwendet die Funktion ein statisches internes Konvertierungszustandsobjekt. Da das interne `mbstate_t`-Objekt nicht threadsicher ist, wird empfohlen, immer Ihr eigenes `mbstate`-Argument zu übergeben.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Einer der folgenden Werte:  
   
  0  
- Die nächsten `count` oder weniger Bytes schließen das Multibytezeichen ab, das das NULLl\-Breitzeichen darstellt, das in `wchar` gespeichert wird, wenn `wchar` kein NULL\-Zeiger ist.  
+ Die nächsten `count` oder weniger Bytes schließen das Multibytezeichen ab, das das NULLl-Breitzeichen darstellt, das in `wchar` gespeichert wird, wenn `wchar` kein NULL-Zeiger ist.  
   
  1 bis `count`, inklusive  
- Die nächsten `count` oder weniger Bytes schließen ein gültiges Multibytezeichen ab.  Der zurückgegebene Wert ist die Anzahl der Bytes, die das Multybytezeichen abschließen.  Das entsprechende Breitzeichen wird im `wchar` gespeichert, wenn `wchar` kein NULL\-Zeiger ist.  
+ Die nächsten `count` oder weniger Bytes schließen ein gültiges Multibytezeichen ab. Der zurückgegebene Wert ist die Anzahl der Bytes, die das Multybytezeichen abschließen. Das entsprechende Breitzeichen wird im `wchar` gespeichert, wenn `wchar` kein NULL-Zeiger ist.  
   
- \(size\_t\)\(\-1\)  
- Es ist ein Codierungsfehler aufgetreten.  Die nächsten `count` oder weniger Bytes tragen nicht zu einem vollständigen und gültigen Multibytezeichen bei.  In diesem Fall wird `errno` auf EILSEQ festgelegt, und der Konvertierungsumwandlungszustand in `mbstate` ist nicht angegeben.  
+ (size_t)(-1)  
+ Es ist ein Codierungsfehler aufgetreten. Die nächsten `count` oder weniger Bytes tragen nicht zu einem vollständigen und gültigen Multibytezeichen bei. In diesem Fall wird `errno` auf EILSEQ festgelegt, und der Konvertierungsumwandlungszustand in `mbstate` ist nicht angegeben.  
   
- \(size\_t\)\(\-2\)  
- Die nächsten `count` Bytes tragen zu einem unvollständigen, jedoch möglicherweisen gültigen Multibytezeichen bei und alle `count` Bytes wurden verarbeitet.  Kein Wert wird in `wchar` gespeichert, aber `mbstate` wird so aktualisiert, dass die Funktion neu gestartet wird.  
+ (size_t)(-2)  
+ Die nächsten `count` Bytes tragen zu einem unvollständigen, jedoch möglicherweisen gültigen Multibytezeichen bei und alle `count` Bytes wurden verarbeitet. Kein Wert wird in `wchar` gespeichert, aber `mbstate` wird so aktualisiert, dass die Funktion neu gestartet wird.  
   
-## Hinweise  
- Wenn `mbchar` ist ein NULL\-Zeiger ist, entspricht die Funktion dem Aufruf:  
+## <a name="remarks"></a>Hinweise  
+ Wenn `mbchar` ist ein NULL-Zeiger ist, entspricht die Funktion dem Aufruf:  
   
  `mbrtowc(NULL, "", 1, &mbstate)`  
   
  In diesem Fall werden die Werte der Argumente `wchar` und `count` ignoriert.  
   
- Wenn `mbchar` kein NULL\-Zeiger ist, überprüft die Funktion `count` Bytes aus`mbchar`, um die erforderliche Anzahl von Bytes bestimmen, die zum Abschließen des nächsten Multibytezeichens erforderlich sind.  Wenn das nächste Zeichen gültig ist, wird das entsprechende Multibytezeichen in `wchar` gespeichert, wenn es kein NULL\-Zeiger ist.  Wenn es sich bei dem Zeichen um das entsprechende NULL\-Breitzeichen handelt, ist der resultierenden Zustand von `mbstate` der ursprüngliche Konvertierungszustand.  
+ Wenn `mbchar` kein NULL-Zeiger ist, überprüft die Funktion `count` Bytes aus`mbchar`, um die erforderliche Anzahl von Bytes bestimmen, die zum Abschließen des nächsten Multibytezeichens erforderlich sind. Wenn das nächste Zeichen gültig ist, wird das entsprechende Multibytezeichen in `wchar` gespeichert, wenn es kein NULL-Zeiger ist. Wenn es sich bei dem Zeichen um das entsprechende NULL-Breitzeichen handelt, ist der resultierenden Zustand von `mbstate` der ursprüngliche Konvertierungszustand.  
   
- Die `mbrtowc`\-Funktion unterscheidet sich von [mbtowc, \_mbtowc\_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md) durch die Neustartmöglichkeit.  Der Konvertierungszustand wird für nachfolgende Aufrufe der gleichen oder anderer Funktionen, die neu gestartet werden können, in `mbstate` gespeichert.  Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Eine Anwendung sollte beispielsweise `wcsrlen` anstelle von `wcslen` verwenden, wenn ein nachfolgender Aufruf von `wcsrtombs` anstelle von `wcstombs` verwendet wird.  
+ Die `mbrtowc`-Funktion unterscheidet sich von [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md) durch die Neustartmöglichkeit. Der Konvertierungszustand wird für nachfolgende Aufrufe der gleichen oder anderer Funktionen, die neu gestartet werden können, in `mbstate` gespeichert. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Eine Anwendung sollte beispielsweise `wcsrlen` anstelle von `wcslen` verwenden, wenn ein nachfolgender Aufruf von `wcsrtombs` anstelle von `wcstombs` verwendet wird.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Konvertiert ein Multibytezeichen in das entsprechende Breitzeichen.  
   
 ```  
@@ -200,7 +216,7 @@ int main(int argc, char* argv[])
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 Locale set to: "French_Canada.1252"  
@@ -209,16 +225,16 @@ Multibyte String: AaBbCcÜïα∩≡xXyYzZ
 WC String: AaBbCcÜïα∩≡xXyYzZ  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`mbrtowc`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`mbrtowc`|\<wchar.h>|  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [Interpretation von Mehrbytezeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+ [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

@@ -1,49 +1,65 @@
 ---
-title: "fesetenv1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fesetenv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fesetenv"
-  - "fenv/fesetenv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Fesetenv-Funktion"
+title: fesetenv1 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fesetenv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fesetenv
+- fenv/fesetenv
+dev_langs:
+- C++
+helpviewer_keywords:
+- fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# fesetenv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 40e20a2c6a3f3c22b9206ce078146b44bb841f68
+ms.lasthandoff: 02/24/2017
 
-Legt die aktuelle Gleitkomma\-Umgebung.  
+---
+# <a name="fesetenv"></a>fesetenv
+Legt die aktuelle Gleitkommaausnahme fest  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int fesetenv(  
@@ -52,29 +68,29 @@ int fesetenv(
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `penv`  
- Zeiger auf ein `fenv_t` Objekt, das eine Gleitkommazahl Umgebung festgelegt durch einen Aufruf von enthält [fegetenv](../Topic/fegetenv2.md) oder [feholdexcept](../Topic/feholdexcept1.md). Sie können auch Standard Gleitkomma Autostart angeben, indem Sie das FE\_DFL\_ENV\-Makro.  
+ Zeiger auf ein `fenv_t`-Objekt, das eine Gleitkommaumgebung enthält, das durch einen Aufruf von [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) oder [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9) festgelegt ist. Sie können auch die standardmäßige Startgleitkommaumgebung mit dem Makro FE_DFL_ENV angeben.  
   
-## Rückgabewert  
- Gibt 0 zurück, wenn die Umgebung erfolgreich festgelegt wurde. Andernfalls wird einen Wert ungleich NULL zurückgegeben.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt 0 zurück, wenn die Umgebung erfolgreich eingerichtet wurde.        Andernfalls wird ein Wert ungleich&0; (null) zurückgegeben.  
   
-## Hinweise  
- Die `fesetenv` Funktion legt die aktuelle Gleitkomma\-Umgebung aus der in gespeicherte Wert dem `fenv_t` Objekt verweist `penv`. Die floating Point\-Umgebung ist ein Satz von Status\-Flags und Steuerelement\-Modi, die gleitkommaberechnungen beeinflussen. Dies schließt das Rundungsverhalten und die Statusflags für Gleitkommaausnahmen. Wenn `penv` nicht FE\_DFL\_ENV oder verweist nicht auf eine gültige `fenv_t` \-Objekt nachfolgendes Verhalten ist nicht definiert.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `fesetenv` legt die aktuelle Gleitkommaumgebung aus dem im `fenv_t`-Objekt gespeicherten Wert fest, auf das `penv` verweist. Die Gleitkommaumgebung ist ein Satz von Statusflags und Steuermodi, die Gleitkommaberechnungen beeinflussen. Dies beinhaltet das Rundungsverhalten und die Statusflags für Gleitkommaausnahmen.  Wenn `penv` nicht FE_DFL_ENV ist oder nicht auf ein gültiges `fenv_t`-Objekt verweist, ist das daraus resultierende Verhalten nicht definiert.  
   
- Ein Aufruf dieser Funktion legt die Ausnahme Status\-Flags, die in der `penv` \-Objekt löst keine Ausnahmen.  
+ Ein Aufruf dieser Funktion legt die Ausnahmestatusflags im `penv`-Objekt fest, löst diese Ausnahmen aber nicht aus.  
   
- Um diese Funktion verwenden zu können, müssen Sie wieder deaktivieren Gleitkomma Optimierungen, die Zugriff mithilfe von verhindern könnten die `#pragma fenv_access(on)` Richtlinie vor dem Aufruf. Weitere Informationen finden Sie unter [fenv\_access](../../preprocessor/fenv-access.md).  
+ Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Funktion|C\-Header|C\+\+\-Header|  
-|--------------|---------------|-------------------|  
-|`fesetenv`|\<fenv.h\>|\<cfenv\>|  
+|Funktion|C-Header|C++-Header|  
+|--------------|--------------|------------------|  
+|`fesetenv`|\<fenv.h>|\<cfenv>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fegetenv](../../c-runtime-library/reference/fegetenv1.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   

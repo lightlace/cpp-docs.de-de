@@ -1,84 +1,130 @@
 ---
-title: "fisher_f_distribution-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.fisher_f_distribution"
-  - "tr1.fisher_f_distribution"
-  - "std::tr1::fisher_f_distribution"
-  - "fisher_f_distribution"
-  - "random/std::tr1::fisher_f_distribution"
-  - "tr1::fisher_f_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fisher_f_distribution-Klasse"
+title: fisher_f_distribution Class | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- fisher_f_distribution
+- std::fisher_f_distribution
+- random/std::fisher_f_distribution
+- std::fisher_f_distribution::reset
+- random/std::fisher_f_distribution::reset
+- std::fisher_f_distribution::m
+- random/std::fisher_f_distribution::m
+- std::fisher_f_distribution::n
+- random/std::fisher_f_distribution::n
+- std::fisher_f_distribution::param
+- random/std::fisher_f_distribution::param
+- std::fisher_f_distribution::min
+- random/std::fisher_f_distribution::min
+- std::fisher_f_distribution::max
+- random/std::fisher_f_distribution::max
+- std::fisher_f_distribution::operator()
+- random/std::fisher_f_distribution::operator()
+- std::fisher_f_distribution::param_type
+- random/std::fisher_f_distribution::param_type
+- std::fisher_f_distribution::param_type::m
+- random/std::fisher_f_distribution::param_type::m
+- std::fisher_f_distribution::param_type::n
+- random/std::fisher_f_distribution::param_type::n
+- std::fisher_f_distribution::param_type::operator==
+- random/std::fisher_f_distribution::param_type::operator==
+- std::fisher_f_distribution::param_type::operator!=
+- random/std::fisher_f_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- fisher_f_distribution class
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# fisher_f_distribution-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
+ms.openlocfilehash: 3a0fc233334909249f75978ba095cb3f31af90dc
+ms.lasthandoff: 02/24/2017
 
-Generiert eine Fisher\-F\-Verteilung.  
+---
+# <a name="fisherfdistribution-class"></a>fisher_f_distribution-Klasse
+Generiert eine Fisher-F-Verteilung.  
   
-## Syntax  
-  
+## <a name="syntax"></a>Syntax  
 ```  
-template<class RealType = double>  
+template<class RealType = double>
 class fisher_f_distribution  
-{  
+   {  
 public:  
-    // types  
-    typedef RealType result_type;  
-    struct param_type;  
-    // constructor and reset functions  
-    explicit fisher_f_distribution(RealType m = 1.0, RealType n = 1.0);  
-    explicit fisher_f_distribution(const param_type& parm);  
-    void reset();  
-    // generating functions  
-    template<class URNG>  
-    result_type operator()(URNG& gen);  
-    template<class URNG>  
-    result_type operator()(URNG& gen, const param_type& parm);  
-    // property functions  
-    RealType m() const;  
-    RealType n() const;  
-    param_type param() const;  
-    void param(const param_type& parm);  
-    result_type min() const;  
-    result_type max() const;  
-};  
+   // types  
+   typedef RealType result_type;  
+   struct param_type;  // constructor and reset functions  
+   explicit fisher_f_distribution(result_type m = 1.0, result_type n = 1.0);
+   explicit fisher_f_distribution(const param_type& parm);
+   void reset();
+
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+
+   // property functions  
+   result_type m() const;
+   result_type n() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
+#### <a name="parameters"></a>Parameter  
+*RealType*  
+Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
-#### Parameter  
- `RealType`  
- Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Mögliche Typen finden Sie unter [\<random\>](../standard-library/random.md).  
+*URNG* Das einheitliche Zufallszahlengenerator-Modul. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
-## Hinweise  
- Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der Fisher\-F\-Verteilung verteilter Wert ausgeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert. Wenn kein entsprechend der Fisher-Verteilung verteilter Wert ausgeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
   
 ||||  
 |-|-|-|  
-|[fisher\_f\_distribution::fisher\_f\_distribution](../Topic/fisher_f_distribution::fisher_f_distribution.md)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[fisher\_f\_distribution::param\_type](../Topic/fisher_f_distribution::param_type.md)|  
+|[fisher_f_distribution::fisher_f_distribution](#fisher_f_distribution__fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
+|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[fisher_f_distribution::param_type](#fisher_f_distribution__param_type)|  
   
  Die Eigenschaftsfunktionen `m()` und `n()` geben die Werte für die gespeicherten Verteilungsparameter `m` bzw. `n` zurück.  
   
- Weitere Informationen zur von verteilungsklassen und deren Member finden Sie unter [\<random\>](../standard-library/random.md).  
+Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.  
+
+Die `min()`- und `max()`-Memberfunktion gibt das jeweils kleinst- und größtmögliche Ergebnis zurück.  
   
- Detaillierte Informationen über die F\-Verteilung, finden Sie im Wolfram MathWorld\-Artikel [F\-Verteilung](http://go.microsoft.com/fwlink/?LinkId=400899).  
+Die `reset()`-Memberfunktion verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus dem Modul bezogen wurden.  
   
-## Beispiel  
+Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entweder dem aktuellen oder dem spezifizierten Parameterpaket zurück, das auf dem URNG-Modul basiert.
+  
+ Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
+  
+ Ausführliche Informationen über die Fisher-Verteilung finden Sie im Wolfram MathWorld-Artikel [F-Distribution](http://go.microsoft.com/fwlink/LinkId=400899).  
+  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -138,29 +184,29 @@ int main()
   
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
  Erste Ausführung:  
   
 ```  
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1  
 Enter a floating point value for the 'n' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == 0  
 max() == 1.79769e+308  
 m() == 1.0000000000  
 n() == 1.0000000000  
 Distribution for 10 samples:  
-          1:   0.0204569549  
-          2:   0.0221376644  
-          3:   0.0297234962  
-          4:   0.1600937252  
-          5:   0.2775342196  
-          6:   0.3950701700  
-          7:   0.8363200295  
-          8:   0.9512500702  
-          9:   2.7844815974  
-         10:   3.4320929653  
+    1: 0.0204569549  
+    2: 0.0221376644  
+    3: 0.0297234962  
+    4: 0.1600937252  
+    5: 0.2775342196  
+    6: 0.3950701700  
+    7: 0.8363200295  
+    8: 0.9512500702  
+    9: 2.7844815974  
+    10: 3.4320929653  
 ```  
   
  Zweite Ausführung:  
@@ -169,22 +215,22 @@ Distribution for 10 samples:
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1  
 Enter a floating point value for the 'n' distribution parameter (must be greater than zero): .1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == 0  
 max() == 1.79769e+308  
 m() == 1.0000000000  
 n() == 0.1000000000  
 Distribution for 10 samples:  
-          1:   0.0977725649  
-          2:   0.5304122767  
-          3:   4.9468518084  
-          4:  25.1012074939  
-          5:  48.8082121613  
-          6: 401.8075539377  
-          7: 8199.5947873699  
-          8: 226492.6855335717  
-          9: 2782062.6639740225  
-         10: 20829747131.7185860000  
+    1: 0.0977725649  
+    2: 0.5304122767  
+    3: 4.9468518084  
+    4: 25.1012074939  
+    5: 48.8082121613  
+    6: 401.8075539377  
+    7: 8199.5947873699  
+    8: 226492.6855335717  
+    9: 2782062.6639740225  
+    10: 20829747131.7185860000  
 ```  
   
  Dritte Ausführung:  
@@ -193,28 +239,86 @@ Distribution for 10 samples:
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): .1  
 Enter a floating point value for the 'n' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == 0  
 max() == 1.79769e+308  
 m() == 0.1000000000  
 n() == 1.0000000000  
 Distribution for 10 samples:  
-          1:   0.0000000000  
-          2:   0.0000000000  
-          3:   0.0000000000  
-          4:   0.0000000000  
-          5:   0.0000000033  
-          6:   0.0000073975  
-          7:   0.0000703800  
-          8:   0.0280427735  
-          9:   0.2660239949  
-         10:   3.4363333954  
+    1: 0.0000000000  
+    2: 0.0000000000  
+    3: 0.0000000000  
+    4: 0.0000000000  
+    5: 0.0000000033  
+    6: 0.0000073975  
+    7: 0.0000703800  
+    8: 0.0280427735  
+    9: 0.2660239949  
+    10: 3.4363333954  
 ```  
   
-## Anforderungen  
- **Header:** \<random\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<random>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namefisherfdistributionfisherfdistributiona--fisherfdistributionfisherfdistribution"></a><a name="fisher_f_distribution__fisher_f_distribution"></a> fisher_f_distribution::fisher_f_distribution  
+ Erstellt die Verteilung.  
+  
+```  
+explicit fisher_f_distribution(result_type m = 1.0, result_type n = 1.0);
+explicit fisher_f_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Parameter  
+*m*  
+ Der `m`-Verteilungsparameter.  
+  
+*n*  
+ Der `n`-Verteilungsparameter.  
+  
+*parm*  
+ Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.  
+  
+### <a name="remarks"></a>Hinweise  
+ **Voraussetzung:** `0.0 < m` und `0.0 < n`  
+  
+ Mit dem ersten Konstruktor wird ein Objekt erstellt, in dessen gespeichertem `m`-Wert der Wert *m* enthalten ist und dessen gespeicherter `n`-Wert den Wert *n* enthält.  
+  
+ Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
+  
+##  <a name="a-namefisherfdistributionparamtypea--fisherfdistributionparamtype"></a><a name="fisher_f_distribution__param_type"></a> fisher_f_distribution::param_type  
+ Speichert die Parameter der Verteilung.  
+  
+```cpp  
+struct param_type {  
+   typedef fisher_f_distribution<result_type> distribution_type;  
+   param_type(result_type m = 1.0, result_type n = 1.0);
+   result_type m() const;
+   result_type n() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+### <a name="parameters"></a>Parameter  
+*m*  
+ Der `m`-Verteilungsparameter.  
+  
+*n*  
+ Der `n`-Verteilungsparameter.  
+  
+*right*  
+Das mit diesem `param_type`-Objekt zu vergleichende Objekt.  
+  
+### <a name="remarks"></a>Hinweise  
+ **Vorbedingung:** `0.0 < m` und `0.0 < n`  
+  
+ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteilers, an die Memberfunktion `param()` (zur Festlegung der gespeicherten Parameter einer vorhandenen Verteilung) und an `operator()` (zur Verwendung anstelle der gespeicherten Parameter) übergeben werden.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [\<random>](../standard-library/random.md)
+
+
+
+

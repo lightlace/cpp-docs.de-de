@@ -1,78 +1,94 @@
 ---
-title: "is_placeholder-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_placeholder"
-  - "std.tr1.is_placeholder"
-  - "functional/std::tr1::is_placeholder"
-  - "std::tr1::is_placeholder"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_placeholder-Klasse [TR1]"
+title: is_placeholder-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_placeholder
+- std::is_placeholder
+- functional/std::is_placeholder
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_placeholder class
 ms.assetid: 2b21a792-96d1-4bb8-b911-0db796510835
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# is_placeholder-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: a3624a752a500410ad906ba43a6c65310ba1cb41
+ms.lasthandoff: 02/24/2017
 
-Testet, ob Typ ein Platzhalter ist.  
+---
+# <a name="isplaceholder-class"></a>is_placeholder-Klasse
+Testet, ob der Typ ein Platzhalter ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
-template<class Ty>  
-    struct is_placeholder {  
-    static const int value;  
-    };  
-```  
+Struktur is_placeholder {  
+   static const int value;  
+   };  
   
-## Hinweise  
- Der konstante Wert `value` ist 0, wenn der Typ `Ty` kein Platzhalter ist; Andernfalls ist der Wert die Position des Funktionsaufrufarguments, dass er gebunden wird.  Sie verwenden ihn, um den Wert `N` für den N\-ten Platzhalter `_N` zu bestimmen.  
+## <a name="remarks"></a>Hinweise  
+ Der konstante Wert `value` ist 0, wenn der Typ `Ty` kein Platzhalter ist; andernfalls ist der Wert die Position des Funktionsaufrufarguments, an die es gebunden wird. Sie verwenden es zum Bestimmen des Werts `N` für den N-ten Platzhalter `_N`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
-// std_tr1__functional__is_placeholder.cpp   
+```cpp  
+// std__functional__is_placeholder.cpp   
 // compile with: /EHsc   
 #include <functional>   
 #include <iostream>   
   
 using namespace std::placeholders;   
   
-template<class Expr>   
-    void test_for_placeholder(const Expr&)   
-    {   
-    std::cout << std::is_placeholder<Expr>::value << std::endl;   
-    }   
-  
-int main()   
-    {   
-    test_for_placeholder(3.0);   
-    test_for_placeholder(_3);   
-  
-    return (0);   
-    }  
-  
+template<class Expr>
+void test_for_placeholder(const Expr&)
+{
+    std::cout << std::is_placeholder<Expr>::value << std::endl;
+}
+
+int main()
+{
+    test_for_placeholder(3.0);
+    test_for_placeholder(_3);
+
+    return (0);
+}  
 ```  
   
-  **0**  
-**3**   
-## Anforderungen  
- **Header:** \<functional\>  
+```Output  
+0  
+3  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<functional>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\_1\-Objekt](../standard-library/1-object.md)
+## <a name="see-also"></a>Siehe auch  
+ [_1 Objekt](../standard-library/1-object.md)
+
+

@@ -1,50 +1,66 @@
 ---
-title: "mbstowcs, _mbstowcs_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbstowcs"
-  - "_mbstowcs_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbstowcs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbstowcs_l-Funktion"
-  - "mbstowcs-Funktion"
-  - "mbstowcs_l-Funktion"
+title: mbstowcs, _mbstowcs_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbstowcs
+- _mbstowcs_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbstowcs
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mbstowcs_l function
+- mbstowcs_l function
+- mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# mbstowcs, _mbstowcs_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
+ms.lasthandoff: 02/24/2017
 
-Konvertiert eine Sequenz von Mehrbytezeichen zu der entsprechenden Reihenfolge von Breitzeichen.  Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [mbstowcs\_s, \_mbstowcs\_s\_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md).  
+---
+# <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
+Konvertiert eine Multibyte-Zeichensequenz in eine entsprechende Breitzeichensequenz. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_mbsnbcpy_s, _mbsnbcpy_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_t mbstowcs(  
@@ -73,46 +89,46 @@ size_t _mbstowcs_l(
 ); // C++ only  
 ```  
   
-#### Parameter  
- \[out\] `wcstr`  
- Die Adresse einer Sequenz der Breitzeichen.  
+#### <a name="parameters"></a>Parameter  
+ [out] `wcstr`  
+ Adresse einer Breitzeichensequenz.  
   
- \[in\] `mbstr`  
- Die Adresse einer Sequenz NULL beendete Mehrbytezeichen.  
+ [in] `mbstr`  
+ Adresse einer Multibyte-Zeichensequenz.  
   
- \[in\] `count`  
- Die maximale Anzahl der Mehrbytezeichen zu konvertieren.  
+ [in] `count`  
+ Die maximale Anzahl zu konvertierender Multibytezeichen.  
   
- \[in\] `locale`  
+ [in] `locale`  
  Das zu verwendende Gebietsschema.  
   
-## Rückgabewert  
- Wenn `mbstowcs` erfolgreich die Quellzeichenfolge konvertiert, wird die Anzahl der konvertierten Mehrbytezeichen zurück.  Wenn das Argument `wcstr``NULL` ist, gibt die Funktion der erforderlichen Größe \(Breitzeichen\) in der Zielzeichenfolge zurück.  Wenn `mbstowcs` ein ungültiges Mehrbytezeichen stößt, gibt es \- 1 zurück.  Falls der Rückgabewert `count` ist, ist die Zeichenfolge mit Breitzeichen nicht auf NULL enden.  
+## <a name="return-value"></a>Rückgabewert  
+ Wenn `mbstowcs` die Quellzeichenfolge erfolgreich konvertiert, gibt es die Anzahl von konvertierten Multibytezeichen zurück. Wenn das `wcstr`-Argument `NULL` ist, gibt die Funktion die erforderliche Größe der Zielzeichenfolge (in Breitzeichen) zurück. Wenn `mbstowcs` ein ungültiges Multibytezeichen erkennt, gibt es –1 zurück. Wenn der Rückgabewert `count` ist, endet die Breitzeichenfolge nicht mit NULL.  
   
 > [!IMPORTANT]
->  Stellen Sie sicher, dass `wcstr` und `mbstr` nicht überschneiden und dass `count` richtig die Anzahl Mehrbytezeichen an verschiedenen mitgeteilt.  
+>  Stellen Sie sicher, dass `wcstr` und `mbstr` nicht überlappen und dass `count` die Anzahl zu konvertierenderMultibytezeichen korrekt darstellt.  
   
-## Hinweise  
- Die `mbstowcs`\-Funktion konvertiert bis zu einer maximalen Anzahl `count` Mehrbytezeichen, die von `mbstr` in eine Zeichenfolge aus entsprechenden Breitzeichen dargestellt werden, die durch das aktuelle Gebietsschema bestimmt werden.  Sie speichert die resultierende Zeichenfolge mit Breitzeichen an der Adresse, die durch `wcstr` dargestellt wird *.* Das Ergebnis ist auf eine Reihe von Aufrufen zu `mbtowc` ähnlich.  Wenn `mbstowcs` das Einzelbytenull\-zeichen \("\\0"\) entweder vor trifft oder, wenn `count` auftritt, das Nullzeichen zu einem NULL\-Breitzeichen wird \(L"\\0"\) und wird beendet.  Daher ist die Zeichenfolge mit Breitzeichen bei `wcstr` auf NULL endende nur, wenn ein NULL\-Zeichen während der Konvertierung gefunden wird.  Wenn die Sequenzen, die von `wcstr` und `mbstr` Überlappung, das Verhalten dargestellt werden, die definiert.  
+## <a name="remarks"></a>Hinweise  
+ Die `mbstowcs`-Funktion konvertiert `count`-Multibytezeichen, bis zu einer maximalen Anzahl, auf die von `mbstr` verwiesen wird, in eine entsprechende Breitzeichenfolge, die vom aktuellen Gebietsschema angegeben werden. Die entstandene Breitzeichenfolge wird unter der von `wcstr`* dargestellten Adresse gespeichert.* Das Ergebnis ähnelt dem einer Reihe von Aufrufen an `mbtowc`. Wenn `mbstowcs` das Singlebyte-Zeichen NULL ('\0') erkennt, entweder bevor oder nachdem `count` aufgetreten ist, konvertiert es das Zeichen NULL in ein Breitzeichen-Zeichen NULL(L'\0') und hält an. Folglich endet die Breitzeichen-Zeichenfolge bei `wcstr` nur dann auf NULL, wenn ein NULL-Zeichen während der Konvertierung erkannt wird. Wenn die Sequenzen, auf die von `wcstr` und `mbstr` verwiesen wird, überlappen, ist das Verhalten nicht definiert.  
   
- Wenn das Argument `wcstr``NULL` ist, gibt `mbstowcs` die Anzahl der Breitzeichen, die sich aus der Konvertierung zu erhalten, ohne ein abschließendes zurück.  Die Quellzeichenfolge muss auf null endende sein, sodass der richtige Wert zurückgegeben werden kann.  Wenn Sie die resultierende Zeichenfolge mit Breitzeichen auf null endende sein müssen, fügen Sie dem zurückgegebenen Wert hinzu.  
+ Wenn das `wcstr`-Argument `NULL` ist, gibt `mbstowcs` die Anzahl von Breitzeichen zurück, die bei einer Konvertierung entstehen würden; ein NULL-Terminator wird dabei nicht eingeschlossen. Die Quellzeichenfolge muss auf NULL enden, damit der korrekte Wert zurückgegeben wird. Wenn Sie wollen, dass die resultierende Breitzeichenfolge auf NULL endet, fügen Sie dem Rückgabewert&1; hinzu.  
   
- Wenn `mbstr` das Argument `NULL` ist oder wenn `count``INT_MAX` ist \>, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren, wird errno auf `EINVAL` und Funktionsrückgaben \-1 festgelegt.  
+ Wenn das `mbstr`-Argumente `NULL` ist, oder wenn `count` >`INT_MAX` ist, wird der ungültige Parameterhandler wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird errno auf `EINVAL` festgelegt, und die Funktion gibt –1 zurück.  
   
- `mbstowcs` verwendet das aktuelle Gebietsschema jedes gebietsschemaabhängigen Verhalten; `_mbstowcs_l`  ist identisch, es verwendet das Gebietsschema, das ein\- stattdessen übergeben wird.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ `mbstowcs` verwendet das aktuelle Gebietsschema für jedes Verhalten, das vom Gebietsschema abhängig ist; `_mbstowcs_l` ist identisch, nur dass sie stattdessen das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
- In C\+\+ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`mbstowcs`|\<stdlib.h\>|  
-|`_mbstowcs_l`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`mbstowcs`|\<stdlib.h>|  
+|`_mbstowcs_l`|\<stdlib.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_mbstowcs.c  
@@ -194,24 +210,28 @@ int main( void )
 }  
 ```  
   
-  **Gebietsschemainformationen festgelegt auf Japanese\_Japan.932**  
-**in ein Mehrbytezeichenfolge:**  
- **Erforderliche Größe: 4**  
- **Anzahl Bytes geschrieben zur Mehrbytezeichenfolge: 4**  
- **Hexadezimalwerte der Mehrbytezeichen: 0x82 0xa0 0x82 0xa1**  
- **Verwendung von der Codepage 932 und 0x9f als führende Bytes.**  
-**konvertieren wieder Zeichenfolge mit Breitzeichen:**  
- **Zeichen konvertiert: 2**  
- **Hexadezimalwert von Breitzeichen ersten 2: 0x3042 0x3043**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Locale information set to Japanese_Japan.932  
+Convert to multibyte string:  
+  Required Size: 4  
+  Number of bytes written to multibyte string: 4  
+  Hex values of the  multibyte characters: 0x82 0xa0 0x82 0xa1  
+  Codepage 932 uses 0x81 to 0x9f as lead bytes.  
   
-## Siehe auch  
+Convert back to wide-character string:  
+  Characters converted: 2  
+  Hex value of first 2 wide characters: 0x3042 0x3043  
+```  
+  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [Interpretation von Mehrbytezeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbtowc, \_mbtowc\_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs, \_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)

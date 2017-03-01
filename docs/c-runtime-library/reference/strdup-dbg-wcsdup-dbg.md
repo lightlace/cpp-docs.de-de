@@ -1,63 +1,90 @@
 ---
-title: "_strdup_dbg, _wcsdup_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strdup_dbg"
-  - "_wcsdup_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wcsdup_dbg"
-  - "strdup_dbg"
-  - "_strdup_dbg"
-  - "wcsdup_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_strdup_dbg-Funktion"
-  - "_wcsdup_dbg-Funktion"
-  - "Kopieren von Zeichenfolgen"
-  - "Verdoppeln von Zeichenfolgen"
-  - "stdup_dbg-Funktion"
-  - "Zeichenfolgen [C++], Kopieren"
-  - "Zeichenfolgen [C++], Duplizieren"
-  - "wcsdup_dbg-Funktion"
+title: _strdup_dbg, _wcsdup_dbg | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strdup_dbg
+- _wcsdup_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _wcsdup_dbg
+- strdup_dbg
+- _strdup_dbg
+- wcsdup_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wcsdup_dbg function
+- stdup_dbg function
+- copying strings
+- duplicating strings
+- strings [C++], copying
+- strings [C++], duplicating
+- _strdup_dbg function
+- wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _strdup_dbg, _wcsdup_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 22798d52d78a822c538055b55fd8f10660de780c
+ms.lasthandoff: 02/24/2017
 
-Versionen von [\_strdup and \_wcsdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md), die die Debugversion von `malloc` verwenden.  
+---
+# <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
+Versionen von [_strdup und _wcsdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md), die die Debugversion von `malloc` verwenden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-char *_strdup_dbg(    const char *strSource,    int blockType,    const char *filename,    int linenumber  ); wchar_t *_wcsdup_dbg(    const wchar_t *strSource,    int blockType,    const char *filename,    int linenumber  );  
+char *_strdup_dbg(  
+   const char *strSource,  
+   int blockType,  
+   const char *filename,  
+   int linenumber   
+);  
+wchar_t *_wcsdup_dbg(  
+   const wchar_t *strSource,  
+   int blockType,  
+   const char *filename,  
+   int linenumber   
+);  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `strSource`  
  Mit NULL endende Quellzeichenfolge.  
   
@@ -70,35 +97,35 @@ char *_strdup_dbg(    const char *strSource,    int blockType,    const char *fi
  `linenumber`  
  Zeilennummer in der Quelldatei, in der die Belegung angefordert wurde, oder NULL.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Jede dieser Funktionen gibt einen Zeiger auf den Speicherort für die kopierte Zeichenfolge oder `NULL` zurück, wenn der Speicher nicht belegt werden kann.  
   
-## Hinweise  
- Die Funktionen `_strdup_dbg` und `_wcsdup_dbg` sind identisch mit `_strdup` und `_wcsdup`, außer dass bei Definition von `_DEBUG` diese Funktionen die Debugversion von `malloc` und `_malloc_dbg` verwenden, um Speicher für die duplizierte Zeichenfolge zu belegen.  Weitere Informationen zu den Debugfunktionen von `_malloc_dbg` finden Sie unter [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+## <a name="remarks"></a>Hinweise  
+ Die Funktionen `_strdup_dbg` und `_wcsdup_dbg` sind identisch mit `_strdup` und `_wcsdup`, außer dass bei Definition von `_DEBUG` diese Funktionen die Debugversion von `malloc` und `_malloc_dbg` verwenden, um Speicher für die duplizierte Zeichenfolge zu belegen. Weitere Informationen zu den Debugfunktionen von `_malloc_dbg` finden Sie unter [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
- In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen.  Stattdessen können Sie das `_CRTDBG_MAP_ALLOC`\-Flag definieren.  Wenn `_CRTDBG_MAP_ALLOC` definiert ist, werden Aufrufe von `_strdup` und `_wcsdup` zu `_strdup_dbg` bzw. `_wcsdup_dbg` neu zugeordnet, wobei `blockType` auf `_NORMAL_BLOCK` festgelegt wird.  Daher müssen Sie diese Funktionen nicht explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als `_CLIENT_BLOCK` markieren.  Weitere Informationen zu Blocktypen finden Sie unter [Blocktypen auf dem Debugheap](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap).  
+ In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie das `_CRTDBG_MAP_ALLOC`-Flag definieren. Wenn `_CRTDBG_MAP_ALLOC` definiert ist, werden Aufrufe von `_strdup` und `_wcsdup` zu `_strdup_dbg` bzw. `_wcsdup_dbg` neu zugeordnet, wobei `blockType` auf `_NORMAL_BLOCK` festgelegt wird. Daher müssen Sie diese Funktionen nicht explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als `_CLIENT_BLOCK` markieren. Weitere Informationen zu den Blocktypen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE und \_MBCS nicht definiert.|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|-------------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsdup_dbg`|`_strdup_dbg`|`_mbsdup`|`_wcsdup_dbg`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_strdup_dbg`, `_wcsdup_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_strdup_dbg`, `_wcsdup_dbg`|\<crtdbg.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Alle Debugversionen der [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Debugversionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## .NET Framework-Entsprechung  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
  [System::String::Clone](https://msdn.microsoft.com/en-us/library/system.string.clone.aspx)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [\_strdup, \_wcsdup, \_mbsdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md)   
- [Debugversionen von Heapreservierungsfunktionen](../Topic/Debug%20Versions%20of%20Heap%20Allocation%20Functions.md)
+ [_strdup, _wcsdup, _mbsdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md)   
+ [Debugversionen von Heapreservierungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)

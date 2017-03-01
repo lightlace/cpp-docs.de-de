@@ -1,50 +1,67 @@
 ---
-title: "Eingabestreams | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Daten [C++], Lesen aus Eingabesteam"
-  - "Eingabestreamobjekte"
-  - "Eingabestreams"
-  - "Lesen von Daten [C++], aus Eingabestreams"
+title: Eingabestreams | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], from input streams
+- data [C++], reading from input stream
+- input streams
+- input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Eingabestreams
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 344c0c29531ee44445b89f14396593cdd48a25ad
+ms.lasthandoff: 02/24/2017
 
-Ein Eingabestreamobjekt ist eine Quelle von Bytes.  Die drei wichtigsten Eingabestreamklassen sind [istream](assetId:///6801779e-260e-416d-b4ec-fef5ff1b2371), [ifstream](../Topic/ifstream.md) und [istringstream](../Topic/istringstream.md).  
+---
+# <a name="input-streams"></a>Eingabestreams
+Ein Eingabestreamobjekt ist eine Quelle von Bytes. Die drei wichtigsten Eingabestreamklassen sind [istream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md), und [istringstream](../standard-library/basic-istringstream-class.md).  
   
- Die `istream`\-Klasse wird am besten für sequenzielle Textmoduseingabe verwendet.  Sie können Objekte der Klasse `istream` für gepufferten oder nicht zwischengespeicherten Vorgang konfigurieren.  Alle Funktionen der Basisklasse, `ios`, ist in `istream` enthalten.  Sie erstellen Objekte selten von der Klasse `istream`.  Verwenden Sie im Allgemeinen das vordefinierte `cin`\-Objekt, das eigentlich ein Objekt der Klasse [ostream](../standard-library/ostream.md) ist.  In einigen Fällen können Sie `cin` mit anderen Streamobjekten nach Programmstart zuweisen.  
+ Die `istream`-Klasse wird am besten für die sequenzielle Textmodus-Eingabe verwendet. Sie können Objekte der Klasse `istream` für einen gepufferten oder ungepufferten Vorgang konfigurieren. Alle Funktionalitäten der Basisklasse `ios` sind in `istream` enthalten. Sie werden nur selten Objekte aus der Klasse `istream` erstellen. Stattdessen werden Sie in der Regel das vordefinierte `cin`-Objekt verwenden, welches eigentlich ein Objekt der Klasse [ostream](../standard-library/basic-ostream-class.md) ist. In einigen Fällen weisen Sie nach dem Programmstart `cin` auf andere Streamobjekte zu.  
   
- Die `ifstream`\-Klasse unterstützt Datenträgerdateieingabe.  Wenn Sie nur eine für typisierte Datenträgerdatei benötigen, erstellen Sie ein Objekt der Klasse `ifstream`.  Sie können Textmodusdaten Binärdatei oder angeben.  Wenn Sie einen Dateinamen im Konstruktor angeben, wird die Datei automatisch geöffnet, wenn das Objekt erstellt wird.  Andernfalls können Sie die Funktion `open` verwenden, nachdem Sie den Standardkonstruktor aufgerufen haben.  Viele Formatierungsoptionen und Memberfunktionen anwenden auf `ifstream`\-Objekte.  Alle Funktionen der Basisklassen `ios` und `istream` ist in `ifstream` enthalten.  
+ Die `ifstream`-Klasse unterstützt die Datenträgereingabe. Wenn Sie einen Datenträger nur für Eingaben benötigen, erstellen Sie ein Objekt der Klasse `ifstream`. Sie können die Binär-oder Textmodusdaten angeben. Wenn Sie im Konstruktor einen Dateinamen angeben, wird die Datei automatisch geöffnet, wenn das Objekt erstellt wird. Andernfalls können Sie die `open`-Funktion nach dem Aufrufen des Standardkonstruktors verwenden. Viele Formatierungsoptionen und Memberfunktionen gelten für `ifstream`-Objekte. Alle Funktionalitäten der Basisklasse `ios` und `istream` sind in `ifstream` enthalten.  
   
- Wie die Bibliotheksfunktion `sscanf_s`, die `istringstream` Generische eingegebenen Zeichenfolgen von den im Arbeitsspeicher.  Um Daten aus einem Zeichenarray zu extrahieren das über einen Nullterminator verfügt, ordnen Sie zu und initialisieren Sie der Zeichenfolge, erstellen Sie ein Objekt der Klasse `istringstream`.  
+ Wie die Bibliotheksfunktion `sscanf_s` unterstützt die `istringstream`-Klasse die Eingabe von Zeichenfolgen im Arbeitsspeicher. Um Daten von einem Zeichenarray zu extrahieren, das einen NULL-Terminator hat, ordnen Sie die Zeichenfolge zu und initialisieren Sie sie. Anschließend erstellen Sie ein Objekt der Klasse `istringstream`.  
   
-## In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt  
  [Konstruieren von Eingabestreamobjekten](../standard-library/constructing-input-stream-objects.md)  
   
  [Verwenden von Extraktionsoperatoren](../standard-library/using-extraction-operators.md)  
   
  [Überprüfen von Extraktionen](../standard-library/testing-for-extraction-errors.md)  
   
- [Eingabestream\-Manipulatoren](../standard-library/input-stream-manipulators.md)  
+ [Eingabestream-Manipulatoren](../standard-library/input-stream-manipulators.md)  
   
- [Eingabestream\-Memberfunktionen](../standard-library/input-stream-member-functions.md)  
+ [Eingabestream-Memberfunktionen](../standard-library/input-stream-member-functions.md)  
   
- [Überladen des Operators \>\> für eigene Klassen](../standard-library/overloading-the-input-operator-for-your-own-classes.md)  
+ [Überladen des Operators >> für eigene Klassen](../standard-library/overloading-the-input-operator-for-your-own-classes.md)  
   
-## Siehe auch  
- [iostream\-Programmierung](../standard-library/iostream-programming.md)
+## <a name="see-also"></a>Siehe auch  
+ [iostream-Programmierung](../standard-library/iostream-programming.md)
+

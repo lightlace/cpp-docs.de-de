@@ -1,55 +1,72 @@
 ---
-title: "_dupenv_s_dbg, _wdupenv_s_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_dupenv_s_dbg"
-  - "_wdupenv_s_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tdupenv_s_dbg"
-  - "_dupenv_s_dbg"
-  - "_wdupenv_s_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tdupenv_s_dbg-Funktion"
-  - "dupenv_s_dbg-Funktion"
-  - "_wdupenv_s_dbg-Funktion"
-  - "Umgebungsvariablen"
-  - "tdupenv_s_dbg-Funktion"
-  - "wdupenv_s_dbg-Funktion"
-  - "_dupenv_s_dbg-Funktion"
+title: _dupenv_s_dbg, _wdupenv_s_dbg | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _dupenv_s_dbg
+- _wdupenv_s_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _tdupenv_s_dbg
+- _dupenv_s_dbg
+- _wdupenv_s_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tdupenv_s_dbg function
+- dupenv_s_dbg function
+- _wdupenv_s_dbg function
+- environment variables
+- tdupenv_s_dbg function
+- wdupenv_s_dbg function
+- _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# _dupenv_s_dbg, _wdupenv_s_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bfe2abe691a3f82b261f36f7581c4284aa1f6624
+ms.lasthandoff: 02/24/2017
 
-Ruft einen Wert aus der aktuellen Umgebung ab.  Versionen von [\_dupenv\_s, \_wdupenv\_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md), die Speicher mit [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md) belegen, um zusätzliche Debuginformationen bereitzustellen.  
+---
+# <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
+Ruft einen Wert aus der aktuellen Umgebung ab.  Versionen von [_dupenv_s, _wdupenv_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md), die Speicher mit [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) belegen, um zusätzliche Debuginformationen bereitzustellen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t _dupenv_s_dbg(  
@@ -70,7 +87,7 @@ errno_t _wdupenv_s_dbg(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `buffer`  
  Puffer zum Speichern des Variablenwerts.  
   
@@ -89,34 +106,34 @@ errno_t _wdupenv_s_dbg(
  `linenumber`  
  Zeilennummer in der Quelldatei oder `NULL`.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Null bei Erfolg, ein Fehlercode, wenn ein Fehler auftritt.  
   
- Diese Funktionen überprüfen ihre Parameter; wenn `buffer` oder `varname``NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, legen die Funktionen `errno` auf `EINVAL` fest und geben `EINVAL` zurück.  
+ Diese Funktionen überprüfen ihre Parameter; wenn `buffer` oder `varname` `NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen die Funktionen `errno` auf `EINVAL` fest und geben `EINVAL` zurück.  
   
  Wenn diese Funktionen nicht genug Arbeitsspeicher zuordnen können, legen sie `buffer` auf `NULL` und `numberOfElements` auf 0 fest und geben `ENOMEM` zurück.  
   
-## Hinweise  
- Die `_dupenv_s_dbg`\- und `_wdupenv_s_dbg`\-Funktionen sind identisch mit `_dupenv_s` und `_wdupenv_s`, außer dass bei Definition von `_DEBUG` diese Funktionen die Debugversion von [malloc](../../c-runtime-library/reference/malloc.md), [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md) verwenden, um Speicher für den Wert der Umgebungsvariable zu belegen.  Weitere Informationen zu den Debugfunktionen von `_malloc_dbg` finden Sie unter [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+## <a name="remarks"></a>Hinweise  
+ Die `_dupenv_s_dbg`- und `_wdupenv_s_dbg`-Funktionen sind identisch mit `_dupenv_s` und `_wdupenv_s`, außer dass bei Definition von `_DEBUG` diese Funktionen die Debugversion von [malloc](../../c-runtime-library/reference/malloc.md), [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) verwenden, um Speicher für den Wert der Umgebungsvariable zu belegen. Weitere Informationen zu den Debugfunktionen von `_malloc_dbg` finden Sie unter [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
- In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen.  Stattdessen können Sie das `_CRTDBG_MAP_ALLOC`\-Flag definieren.  Wenn `_CRTDBG_MAP_ALLOC` definiert ist, werden Aufrufe von `_dupenv_s` und `_wdupenv_s` zu `_dupenv_s_dbg` bzw. `_wdupenv_s_dbg` neu zugeordnet, wobei `blockType` auf `_NORMAL_BLOCK` festgelegt wird.  Daher müssen Sie diese Funktionen nicht explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als `_CLIENT_BLOCK` markieren.  Weitere Informationen zu den Blocktypen finden Sie unter [Blocktypen auf dem Debugheap](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap).  
+ In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie das `_CRTDBG_MAP_ALLOC`-Flag definieren. Wenn `_CRTDBG_MAP_ALLOC` definiert ist, werden Aufrufe von `_dupenv_s` und `_wdupenv_s` zu `_dupenv_s_dbg` bzw. `_wdupenv_s_dbg` neu zugeordnet, wobei `blockType` auf `_NORMAL_BLOCK` festgelegt wird. Daher müssen Sie diese Funktionen nicht explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als `_CLIENT_BLOCK` markieren. Weitere Informationen zu den Blocktypen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tdupenv_s_dbg`|`_dupenv_s_dbg`|`_dupenv_s_dbg`|`_wdupenv_s_dbg`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_dupenv_s_dbg`|\<crtdbg.h\>|  
-|`_wdupenv_s_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_dupenv_s_dbg`|\<crtdbg.h>|  
+|`_wdupenv_s_dbg`|\<crtdbg.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_dupenv_s_dbg.c  
@@ -140,18 +157,18 @@ int main( void )
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl  
 nonexistentvariable = (null)  
 ```  
   
-## .NET Framework-Entsprechung  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
  [System::Environment::GetEnvironmentVariable](https://msdn.microsoft.com/en-us/library/system.environment.getenvironmentvariable.aspx)  
   
-## Siehe auch  
- [Prozess\- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
- [Umgebungskonstanten](../../c-runtime-library/environmental-constants.md)   
- [getenv\_s, \_wgetenv\_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
- [\_putenv\_s, \_wputenv\_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)
+## <a name="see-also"></a>Siehe auch  
+ [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
+ [Environmental Constants (Umgebungskonstanten)](../../c-runtime-library/environmental-constants.md)   
+ [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
+ [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)

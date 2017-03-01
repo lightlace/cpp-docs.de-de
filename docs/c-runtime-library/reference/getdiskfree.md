@@ -1,55 +1,71 @@
 ---
-title: "_getdiskfree | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getdiskfree"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "getdiskfree"
-  - "_getdiskfree"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_diskfree_t-Typ"
-  - "_getdiskfree-Funktion"
-  - "Datenträgergröße"
-  - "diskfree_t-Typ"
-  - "getdiskfree-Funktion"
+title: _getdiskfree | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getdiskfree
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- getdiskfree
+- _getdiskfree
+dev_langs:
+- C++
+helpviewer_keywords:
+- diskfree_t type
+- _getdiskfree function
+- _diskfree_t type
+- disk size
+- getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _getdiskfree
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5d4d3fea944955b75002e88e3692d42954612a3a
+ms.lasthandoff: 02/24/2017
 
-Verwendet Informationen über ein Laufwerk zum Auffüllen einer `_diskfree_t`\-Struktur.  
+---
+# <a name="getdiskfree"></a>_getdiskfree
+Verwendet Informationen über ein Laufwerk zum Auffüllen einer `_diskfree_t`-Struktur.  
   
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die im [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Diese API kann nicht in Anwendungen verwendet werden, die im [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 unsigned _getdiskfree(  
@@ -58,18 +74,18 @@ unsigned _getdiskfree(
 );  
 ```  
   
-#### Parameter  
- \[in\] `drive`  
+#### <a name="parameters"></a>Parameter  
+ [in] `drive`  
  Das Laufwerk, zu dem Sie Informationen abrufen möchten.  
   
- \[out\] `driveinfo`  
- Eine `_diskfree_t`\-Struktur, die mit Informationen über den Datenträger aufgefüllt wird.  
+ [out] `driveinfo`  
+ Eine `_diskfree_t`-Struktur, die mit Informationen über den Datenträger aufgefüllt wird.  
   
-## Rückgabewert  
- Wenn die Funktion erfolgreich ist, ist der Rückgabewert „0“.  Wenn die Funktion fehlerhaft ist, wird der Fehlercode als Rückgabewert ausgegeben.  Der Wert `errno` wird für Fehler festgelegt, die durch das Betriebssystem zurückgegeben werden.  Weitere Informationen über durch `errno` angezeigte Fehlerbedingungen finden Sie unter [errno\-Konstanten](../../c-runtime-library/errno-constants.md).  
+## <a name="return-value"></a>Rückgabewert  
+ Wenn die Funktion erfolgreich ist, ist der Rückgabewert „0“. Wenn die Funktion fehlerhaft ist, wird der Fehlercode als Rückgabewert ausgegeben. Der Wert `errno` wird für Fehler festgelegt, die durch das Betriebssystem zurückgegeben werden. Weitere Informationen über durch `errno` angezeigte Fehlerbedingungen finden Sie unter [errno-Konstante](../../c-runtime-library/errno-constants.md).  
   
-## Hinweise  
- Die `_diskfree_t`\-Struktur wurde in „Direct.h“ definiert.  
+## <a name="remarks"></a>Hinweise  
+ Die `_diskfree_t`-Struktur wurde in „Direct.h“ definiert.  
   
 ```  
 struct _diskfree_t {   
@@ -80,7 +96,7 @@ struct _diskfree_t {
 };  
 ```  
   
- Diese Funktion überprüft ihre Parameter.  Wenn der `driveinfo`\-Zeiger `NULL` ist oder wenn `drive` ein ungültiges Laufwerk angibt, ruft diese Funktion einen ungültigen Parameterhandler ab, wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird.  Wenn die weitere Ausführung zugelassen wird, gibt die Funktion `EINVAL` zurück und setzt `errno` auf `EINVAL`.  Der gültige Laufwerksbereich liegt zwischen 0 und 26.  Ein `drive`\-Wert von „0“ gibt das aktuelle Laufwerk an. Danach werden Zahlen Buchstaben des englischen Alphabets zugeordnet, „1“ deutet demnach auf Laufwerk A, „3“ auf Laufwerk C usw. hin.  
+ Diese Funktion überprüft ihre Parameter. Wenn der `driveinfo`-Zeiger `NULL` ist oder wenn `drive` ein ungültiges Laufwerk angibt, ruft diese Funktion einen ungültigen Parameterhandler ab, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion `EINVAL` zurück und setzt `errno` auf `EINVAL`. Der gültige Laufwerksbereich liegt zwischen 0 und 26. Ein `drive`-Wert von „0“ gibt das aktuelle Laufwerk an. Danach werden Zahlen Buchstaben des englischen Alphabets zugeordnet, „1“ deutet demnach auf Laufwerk A, „3“ auf Laufwerk C usw. hin.  
   
  `total_clusters`  
  Die Gesamtanzahl der Cluster, die auf dem Laufwerk verwendet werden und verfügbar sind.  
@@ -94,18 +110,19 @@ struct _diskfree_t {
  `bytes_per_sector`  
  Die Größe jedes Sektors in Byte.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_getdiskfree`|\<direct.h\>|  
+|-------------|---------------------|  
+|`_getdiskfree`|\<direct.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
-// crt_getdiskfree.c  
+  
+      // crt_getdiskfree.c  
 // compile with: /c  
 #include <windows.h>  
 #include <direct.h>  
@@ -193,16 +210,19 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 }  
 ```  
   
-  **\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=**  
-**&#124;LAUFWERK&#124;GESAMTCLUSTER&#124;VERFÜGBARE CLUSTER&#124;SEKTOREN \/ CLUSTER&#124;BYTES \/ SEKTOR&#124;**  
-**&#124;\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;**  
-**&#124;  A: &#124; Das Gerät ist nicht bereit.  &#124;                 &#124;              &#124;**  
-**&#124;  C: &#124;    4.721.093 &#124;    3.778.303 &#124;               8 &#124;          512 &#124;**  
-**&#124;  D: &#124;    1.956.097 &#124;    1.800.761 &#124;               8 &#124;          512 &#124;**  
-**&#124;  E: &#124; Das Gerät ist nicht bereit.  &#124;                 &#124;              &#124;**  
-**\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=**    
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+======================================================================  
+|DRIVE|TOTAL CLUSTERS|AVAIL CLUSTERS|SECTORS / CLUSTER|BYTES / SECTOR|  
+|=====|==============|==============|=================|==============|  
+|  A: | The device is not ready.    |                 |              |  
+|  C: |    4,721,093 |    3,778,303 |               8 |          512 |  
+|  D: |    1,956,097 |    1,800,761 |               8 |          512 |  
+|  E: | The device is not ready.    |                 |              |  
+======================================================================  
+```  
   
-## Siehe auch  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
  [Verzeichnissteuerung](../../c-runtime-library/directory-control.md)

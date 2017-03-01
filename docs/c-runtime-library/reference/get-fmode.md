@@ -1,83 +1,99 @@
 ---
-title: "_get_fmode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_fmode"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "get_fmode"
-  - "_get_fmode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_get_fmode-Funktion"
-  - "Dateiübersetzung [C++], Standardmodus"
-  - "get_fmode-Funktion"
+title: _get_fmode | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_fmode
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- get_fmode
+- _get_fmode
+dev_langs:
+- C++
+helpviewer_keywords:
+- _get_fmode function
+- file translation [C++], default mode
+- get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _get_fmode
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3b0bd528d45bbd3b68da91c14626b3bfadb6695a
+ms.lasthandoff: 02/24/2017
 
-Ruft den Standarddateiübersetzungsmodus für Datei\-E\/A\-Vorgänge ab.  
+---
+# <a name="getfmode"></a>_get_fmode
+Ruft den Standarddateiübersetzungsmodus für Datei E/A-Vorgänge auf.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-errno_t _get_fmode(   
-   int * pmode   
+errno_t _get_fmode(   
+   int * pmode   
 );  
 ```  
   
-#### Parameter  
- \[out\] `pmode`  
- Ein Zeiger auf eine mit der aktuellen Standardmodus zu füllenden Integer: `_O_TEXT` oder `_O_BINARY`.  
+#### <a name="parameters"></a>Parameter  
+ [out] `pmode`  
+ Ein Zeiger auf eine ganze Zahl, die durch den aktuellen Standardmodus ersetzt werden soll: `_O_TEXT` oder `_O_BINARY`.  
   
-## Rückgabewert  
- Gibt null zurück, wenn dies; ein Fehlercode auf Fehler.  Wenn `pmode``NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `EINVAL` zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt&0; (null) zurück, wenn der Vorgang erfolgreich war. Wenn ein Fehler auftritt, erscheint ein Fehlercode. Wenn `pmode` `NULL` ist, wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `EINVAL` zurück.  
   
-## Hinweise  
- Die Funktion ruft den Wert der globalen Variablen [\_fmode](../../c-runtime-library/fmode.md) ab.  Diese Variable gibt den Standarddateiübersetzungsmodus für und Streamdatei\-e\/a\-Vorgänge die systemnahen, wie `_open`, `_pipe`, `fopen` und `freopen` an.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion legt die globale Variable [_fmode](../../c-runtime-library/fmode.md) fest. Diese Variable gibt den Standard-Dateiübersetzungsmodus für Datei-E/A-Vorgänge auf niedriger Ebene und Stream-Datei-E/A-Vorgänge an, wie z.B. `_open`, `_pipe`, `fopen` und `freopen`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|Optionaler Header|  
-|-------------|---------------------------|-----------------------|  
-|`_get_fmode`|\<stdlib.h\>|\<fcntl.h\>|  
+|-------------|---------------------|---------------------|  
+|`_get_fmode`|\<stdlib.h>|\<fcntl.h >|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
- Siehe das Beispiel in [\_set\_fmode](../../c-runtime-library/reference/set-fmode.md).  
+## <a name="example"></a>Beispiel  
+ Siehe das Beispiel in [_set_fmode](../../c-runtime-library/reference/set-fmode.md).  
   
-## Entsprechung in .NET Framework  
- Nicht zutreffend.  Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf.  Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [\_fmode](../../c-runtime-library/fmode.md)   
- [\_set\_fmode](../../c-runtime-library/reference/set-fmode.md)   
- [\_setmode](../../c-runtime-library/reference/setmode.md)   
- [Text\- und Binärmodusdatei\-E\/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md)
+## <a name="see-also"></a>Siehe auch  
+ [_fmode](../../c-runtime-library/fmode.md)   
+ [_set_fmode](../../c-runtime-library/reference/set-fmode.md)   
+ [_setmode](../../c-runtime-library/reference/setmode.md)   
+ [Text- und Binärmodusdatei-E/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md)

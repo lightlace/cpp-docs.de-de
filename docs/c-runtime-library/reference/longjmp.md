@@ -1,47 +1,63 @@
 ---
-title: "longjmp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "longjmp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "longjmp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "longjmp-Funktion"
-  - "Wiederherstellen der Stapelumgebung und des Ausführungsgebietschemas"
+title: longjmp | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- longjmp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- longjmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- restoring stack environment and execution locale
+- longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# longjmp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8d6ae9f6207bc0cc42ec2a0749ddfb6253c496f6
+ms.lasthandoff: 02/24/2017
 
-Wiederherstellungsstapelumgebung und Ausführungsgebietsschema.  
+---
+# <a name="longjmp"></a>longjmp
+Stellt die Stapelumgebung und das Ausführungsgebietschema wieder her  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -51,47 +67,47 @@ Wiederherstellungsstapelumgebung und Ausführungsgebietsschema.
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `env`  
- Variable, in der die Umgebung gespeichert wird.  
+ Variable, in die die Umgebung gespeichert wird  
   
- *Wert*  
- Um `setjmp` Aufruf zurückgegeben werden, Wert.  
+ *value*  
+ Der Wert, der dem Aufruf `setjmp` zurückgegeben wird.  
   
-## Hinweise  
- `longjmp` Die Funktion stellt einen Stapelumgebungs\- und \-ausführungsgebietsschema zurückgesetzt, das zuvor in `env` vom `setjmp` gespeichert wird.  `setjmp` und `longjmp` bieten eine Möglichkeit, nicht lokalen `goto` auszuführen; Sie werden in der Regel verwendet, um dem Fehlerbehandlungs\- Ablaufsteuerung oder Wiederherstellungscode zuvor in einer aufgerufenen Routine zu übergeben, ohne die Aufrufs\- normalen und Rückholkonventionen zu verwenden.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `longjmp` stellt eine Stapelumgebung und das Ausführungsgebietsschema wieder her, was zuvor von `setjmp` in `env` gespeichert wurde. `setjmp` und `longjmp` können in der Regel eine nicht lokale `goto`-Variable ausführen. Diese werden normalerweise verwendet, um die Ausführungssteuerung an den Fehlerbehandlungs- oder Wiederherstellungscode in einer vorher aufgerufenen Routine zu übergeben, ohne die standardmäßigen Aufruf- oder Rückgabekonventionen zu verwenden.  
   
- Ein Aufruf von `setjmp` wird die aktuelle Stapelumgebung, in `env` gespeichert.  Ein nachfolgender Aufruf `longjmp` wird die gespeicherte Umgebung und das Von zum Punkt direkt nach dem entsprechenden `setjmp` Aufruf zurückgesetzt.  Ausführungszusammenfassungen, als ob *Wert* gerade durch den Aufruf `setjmp` zurückgegeben wurde.  Die Werte aller Variablen \(außer Registervariablen\) das dem RoutineSteuerelement empfangenden zugänglich sind, enthalten die Werte, die sie aufwiesen, als `longjmp` aufgerufen wurde.  Die Werte von Registervariablen sind unvorhersehbar.  Der Wert, der von `setjmp` zurückgegeben, muss ungleich 0 \(null\) sein.  Wenn als *Wert* 0 übergeben wird, wird der Wert 1 in der eigentlichen Beendigung ersetzt.  
+ Ein Aufruf von `setjmp` speichert die aktuelle Stapelumgebung in `env`. Ein nachfolgender Aufruf von `longjmp` stellt die gespeicherte Umgebung wieder her und übergibt die Steuerung an den Punkt sofort nach dem entsprechenden `setjmp`-Aufruf. Die Ausführung wird fortgesetzt, als ob der *Wert* gerade vom `setjmp`-Aufruf zurückgegeben worden wäre. Die Werte aller Variablen (mit Ausnahme der Variablen „register“), die für die für das Steuerelement zur Routineerfassung zugänglich sind, erhalten die ursprünglichen Werte des `longjmp`-Aufrufs. Die Werte der Registervariablen sind unvorhersehbar. Der Wert, der von `setjmp` zurückgegeben wird, muss ungleich null sein. Wenn der *Wert* als 0 übergeben wird, wird der Wert 1 in der tatsächlichen Rückgabe ersetzt.  
   
- Rufen Sie `longjmp` vor der Funktion, die `setjmp` zurückgibt aufgerufen hat; andernfalls sind die Ergebnisse unvorhersehbar.  
+ Rufen Sie `longjmp` auf, bevor die Funktion zurückgegeben wird, die `setjmp` aufruft. Andernfalls sind die Ergebnisse unvorhersehbar.  
   
- Beachten Sie die folgenden Einschränkungen, wenn `longjmp` verwendet wird:  
+ Beachten Sie außerdem die folgenden Einschränkungen, wenn Sie `longjmp` verwenden:  
   
--   Nehmen Sie nicht an, dass die Werte der Registervariablen gleich bleiben.  Die Werte von Registervariablen aufrufenden nicht in `setjmp` werden den richtigen Werten wiederhergestellt werden, nachdem `longjmp` ausgeführt.  
+-   Gehen Sie nicht davon aus, dass die Werte der Registervariablen unverändert bleiben. Die Werte der Registervariablen in der Routine, die `setjmp` aufrufen, können nicht mehr auf die richtigen Werte wiederhergestellt werden, nachdem `longjmp` ausgeführt wurde.  
   
--   Verwenden Sie `longjmp` nicht zur Steuerung aus einer UnterbrechungBehandlungsroutine out, es sei denn, die Unterbrechung durch eine Gleitkommaausnahme verursacht wird.  In diesem Fall kehrt ein Programm möglicherweise von einem Unterbrechungssteuerungsprogramm zu `longjmp` zurück, wenn es zuerst das mathematische GleitkommaPaket initialisiert, indem Sie `_fpreset` aufrufen.  
+-   Verwenden Sie nicht `longjmp`, um das Steuerelement aus einer Interruptbehandlungsroutine zu übertragen, es sei denn, der Interrupt wurde durch eine Gleitkommaausnahme hervorgerufen. In diesem Fall kann ein Programm aus einem Interrupthandler über `longjmp` zurückgegeben werden, wenn das mathematische Gleitkommazahlpaket durch Aufrufen von `_fpreset` erneut initialisiert wird.  
   
-     **Notiz** gibt acht, wenn `setjmp` und `longjmp` in C\+\+\-Programmen verwendet.  Da diese Funktionen nicht C\+\+\-Objektsemantik unterstützen, ist es sicherer, den C\+\+\-Ausnahmebehandlungsmechanismus zu verwenden.  
+     **Hinweis**: Vorsicht bei der Verwendung von `setjmp` und `longjmp` in C++-Programmen. Da diese Funktionen keine C++-Objektsemantik unterstützt, ist es sicherer, den C++-Mechanismus zur Behandlung von Ausnahmen zu verwenden.  
   
- Weitere Informationen finden Sie unter [Verwenden des setjmp und des longjmp](../../cpp/using-setjmp-longjmp.md).  
+ Weitere Informationen finden Sie unter [Verwenden von „setjmp/longjmp“](../../cpp/using-setjmp-longjmp.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`longjmp`|\<setjmp.h\>|  
+|-------------|---------------------|  
+|`longjmp`|\<setjmp.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
- Im Beispiel für [\_fpreset](../../c-runtime-library/reference/fpreset.md).  
+## <a name="example"></a>Beispiel  
+ Siehe das Beispiel für [_fpreset](../../c-runtime-library/reference/fpreset.md).  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [Prozess\- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
  [setjmp](../../c-runtime-library/reference/setjmp.md)

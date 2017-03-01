@@ -1,56 +1,76 @@
 ---
-title: "Is_constructible-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_constructible"
-  - "std.is_constructible"
-  - "std::is_constructible"
-  - "type_traits/std::is_constructible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_constructible"
+title: is_constructible-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_constructible
+- std.is_constructible
+- std::is_constructible
+- type_traits/std::is_constructible
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Is_constructible-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 6c4a5d8e24f22a79a4bf442ab690f1b1dbdca580
+ms.lasthandoff: 02/24/2017
 
-Testet, ob ein Typ erstellt ist, wenn die angegebenen Argumenttypen verwendet werden.  
+---
+# <a name="isconstructible-class"></a>is_constructible-Klasse
+Testet, ob ein Typ konstruierbar ist, wenn die angegebenen Argumenttypen verwendet werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```
 template <class T, class... Args>  
-    struct is_constructible;  
+struct is_constructible;
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
  Der abzufragende Typ.  
   
  `Args`  
- Die Argumenttypen entsprechend in einem Konstruktor einer `T`.  
+ Die Argumenttypen, mit denen eine Übereinstimmung im Konstruktor von `T` gefunden werden soll.  
   
-## Hinweise  
- Eine Instanz des Typs Prädikat enthält true, wenn der Typ `T` ist mit den Argumenttypen in erstellbaren `Args`, andernfalls enthält er false. Typ `T` ist erstellbaren Wenn die Definition der Variablen `T t(std::declval<Args>()...);` wohlgeformt ist. Beide `T` und alle Typen in `Args` vollständige Typen sein `void`, oder Arrays von unbekannten gebunden.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist TRUE, wenn der Typ `T` durch die Verwendung der Argumenttypen von `Args` konstruierbar ist; andernfalls ist sie FALSE. Typ `T` ist konstruierbar, wenn die Variablendefinition `T t(std::declval<Args>()...);` wohlgeformt ist. Sowohl `T` als auch alle Typen in `Args` müssen vollständige Typen `void` sein oder Arrays mit unbekannter Grenze.  
   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>Siehe auch  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

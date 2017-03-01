@@ -1,42 +1,60 @@
 ---
-title: "Eingabe-/Ausgabealternativen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "E/A [C++], alternatives"
+title: Eingabe-/Ausgabealternativen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Eingabe-/Ausgabealternativen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 45cec9f7c4c45ef12c7d22a7c3c311f7ce3f4cb5
+ms.lasthandoff: 02/24/2017
 
-Visual C\+\+ stellt mehrere Alternativen für E\/A\-Programmierung bereit:  
+---
+# <a name="inputoutput-alternatives"></a>Eingabe-/Ausgabealternativen
+Visual C++ stellt mehrere Alternativen für die E/A-Programmierung bereit:  
   
--   C\-Laufzeitbibliothek direkt, ungepufferte E\/A.  
+-   Direkte C-Laufzeitbibliothek, ungepufferte E/A.  
   
--   ANSI C\-Laufzeitbibliotheksstream E\/A.  
+-   ANSI C-Laufzeitbibliotheksstream E/A.  
   
--   Konsole und Port direkte E\/A.  
+-   Direkte Konsole und Port-E/A.  
   
--   Microsoft Foundation Class\-Bibliothek.  
+-   Microsoft Foundation Class-Bibliothek.  
   
--   Microsoft\-C\+\+\-Standardbibliothek.  
+-   Microsoft C++ Standardbibliothek.  
   
- Die der iostream\-Headerdatei Klassen sind zur gepuffert, E\/A des formatierten Texts nützlich.  Sie sind außerdem für ungepufferte oder binäre E\/A nützlich, wenn Sie eine C\+\+\-Programmierungsschnittstelle benötigen und sich entscheiden, die \(Microsoft Foundation Class \(MFC\) nicht verwenden.  Die der iostream\-Headerdatei Klassen sind eine objektorientierte E\/A\-Alternative an C\-Laufzeitfunktionen.  
+ Die iostream-Klassen sind für gepufferten, formatierten Text E/A nützlich. Sie sind auch für ungepufferte oder binäre E/A nützlich, wenn Sie eine C++-Programmierschnittstelle benötigen und nicht die Microsoft Foundation Class (MFC)-Bibliothek verwenden möchten. Die iostream-Klassen sind eine objektorientierte E/A-Alternative zu den C-Laufzeitfunktionen.  
   
- Sie können der iostream\-Headerdatei Klassen mit dem Betriebssystem Microsoft Windows verwenden.  Zeichenfolgen\- und Dateistreams arbeiten ohne Einschränkungen, die Zeichenmodusstreamobjekte `cin`, `cout`, `cerr` und `clog` sind mit der Windows\-grafischenBenutzeroberfläche inkonsistent.  Sie können benutzerdefinierte Streamklassen auch abgeleitet werden, die direkt mit der Umgebungsvariable interagieren.  
+ Sie können die iostream-Klassen mit dem Microsoft Windows-Betriebssystem verwenden. Zeichenfolgen- und Dateistreams arbeiten ohne Einschränkungen, aber die Streamobjekte im Zeichenmodus `cin`, `cout`, `cerr`, und `clog` sind inkonsistent mit der grafischen Windows-Benutzeroberfläche. Sie können auch benutzerdefinierte stream-Klassen ableiten, die direkt mit der Windows-Umgebung interagieren.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Funktionsweise eines Streams](../standard-library/what-a-stream-is.md)
+
+

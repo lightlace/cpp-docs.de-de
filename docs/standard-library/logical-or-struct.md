@@ -1,78 +1,90 @@
 ---
-title: "logical_or-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.logical_or"
-  - "std::logical_or"
-  - "logical_or"
-  - "xfunctional/std::logical_or"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_or-Klasse"
-  - "logical_or-Struktur"
+title: logical_or-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.logical_or
+- std::logical_or
+- logical_or
+- xfunctional/std::logical_or
+dev_langs:
+- C++
+helpviewer_keywords:
+- logical_or class
+- logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# logical_or-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 4928eb5d79877dd4d1e2c1a1c0f25dbc29e4ec1b
+ms.lasthandoff: 02/24/2017
 
-Ein vordefiniertes Funktionsobjekt, mit dem der logische Disjunktionsvorgang \(`operator||`\) auf die Argumente ausgeführt werden kann.  
+---
+# <a name="logicalor-struct"></a>logical_or-Struktur
+Ein vordefiniertes Funktionsobjekt, mit dem der logische Disjunktionsvorgang (`operator||`) auf die Argumente ausgeführt werden kann.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
-template<class Type = void>  
-   struct logical_or : public binary_function<Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator||  
-template<>  
-   struct logical_or<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            || std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct logical_or : public binary_function<Type, Type, bool>  
+{
+    bool operator()(const Type& Left, const Type& Right) const;
+ };
+
+// specialized transparent functor for operator||
+template <>
+struct logical_or<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) || std::forward<U>(Right));
+ };
 ```  
   
-#### Parameter  
- `Type`, `Type1`, `Type2`  
- Jeder Typ, der ein `operator||`\-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.  
+#### <a name="parameters"></a>Parameter  
+ `Type`, `T`, `U`  
+ Jeder Typ, der ein `operator||`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.  
   
  `Left`  
- Der linke Operand des logischen Disjunktionsvorgangs.  Die nicht spezialisierte Vorlage besitzt ein lvalue\-Verweisargument vom Typ `Type`.  Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue\-Verweisargumenten des abgeleiteten Typs `Type1`.  
+ Der linke Operand des logischen Disjunktionsvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `T`.  
   
  `Right`  
- Der rechte Operand des logischen Disjunktionsvorgangs.  Die nicht spezialisierte Vorlage besitzt ein lvalue\-Verweisargument vom Typ `Type`.  Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue\-Verweisargumenten des abgeleiteten Typs `Type2`.  
+ Der rechte Operand des logischen Disjunktionsvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.  
   
-## Rückgabewert  
- Das Ergebnis von `Left` `||` `Right`.  Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator||` zurückgegebenen Typs.  
+## <a name="return-value"></a>Rückgabewert  
+ Das Ergebnis von `Left``||``Right`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator||` zurückgegebenen Typs.  
   
-## Hinweise  
- Bei benutzerdefinierten Typen gibt es keine verkürzte Operandenauswertung.  Beide Argumente werden von `operator||` ausgewertet.  
+## <a name="remarks"></a>Hinweise  
+ Bei benutzerdefinierten Typen gibt es keine verkürzte Operandenauswertung. Beide Argumente werden von `operator||` ausgewertet.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // functional_logical_or.cpp  
 // compile with: /EHsc  
 #include <deque>  
@@ -119,19 +131,26 @@ int main( )
       cout << *iter3 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+Original deque:  
+ d1 = ( true true false false true false false )  
+Original deque:  
+ d2 = ( false false false true true true true )  
+The deque which is the disjuction of d1 & d2 is:  
+ d3 = ( true true false true true true true )  
+*\  
+  
 ```  
   
-  **Ursprüngliche Doppelschlange:**  
- **d1 \= \(true true false false true false false\)**  
-**Ursprüngliche Doppelschlange:**  
- **d2 \= \(false false false true true true true\)**  
-**Die Doppelschlange, die die Disjunktion von d1 & d2 ist:**  
- **d3 \= \(true und false true true true true\)**   
-## Anforderungen  
- **Header:** \<functional\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<functional>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standard Template Library](../misc/standard-template-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

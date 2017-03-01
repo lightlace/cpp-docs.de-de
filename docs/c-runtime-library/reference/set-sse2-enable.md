@@ -1,50 +1,67 @@
 ---
-title: "_set_SSE2_enable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_SSE2_enable"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_set_SSE2_enable"
-  - "set_SSE2_enable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_SSE2_enable-Funktion"
-  - "Streaming SIMD Extensions 2-Anweisungen"
-  - "set_SSE2_enable-Funktion"
+title: _set_SSE2_enable | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_SSE2_enable
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _set_SSE2_enable
+- set_SSE2_enable
+dev_langs:
+- C++
+helpviewer_keywords:
+- _set_SSE2_enable function
+- Streaming SIMD Extensions 2 instructions
+- set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _set_SSE2_enable
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 158ce2d16db5a37870ea55c548796d975065f422
+ms.lasthandoff: 02/24/2017
 
-Aktiviert oder deaktiviert die Verwendung von Anweisungen [SIMD\-Streamingerweiterungen 2](assetId:///f98440eb-73a9-4f96-b203-ac41bb6701ea) \(SSE2\-Anweisungen\) in den CRT\-Matheroutinen. \(Dieses Feature ist nicht auf x64\-Architekturen verfügbar, da SSE2\-Anweisungen standardmäßig aktiviert wird.\)  
+---
+# <a name="setsse2enable"></a>_set_SSE2_enable
+Aktiviert oder deaktiviert die Verwendung von [SIMD-Streamingerweiterungen 2](http://msdn.microsoft.com/en-us/f98440eb-73a9-4f96-b203-ac41bb6701ea)-Anweisungen (SSE2) mathematischen CRT-Routinen. (Diese Funktion ist nicht auf x64-Architekturen verfügbar, da SSE2 standardmäßig aktiviert ist.)  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int _set_SSE2_enable(  
@@ -52,15 +69,15 @@ int _set_SSE2_enable(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `flag`  
- 1, um der Implementierung SSE2\-Anweisungen zu aktivieren; 0, um der Implementierung SSE2\-Anweisungen zu deaktivieren.  Standardmäßig wird Implementierung SSE2\-Anweisungen in Prozessoren aktiviert, die sie unterstützen.  
+ 1, um die SSE2-Implementierung zu aktivieren; 0, um die SSE2-Implementierung zu deaktivieren. Standardmäßig ist die SSE2-Implementierung auf Prozessoren aktiviert, die sie unterstützen.  
   
-## Rückgabewert  
- Wert ungleich 0 \(null\), wenn Implementierung SSE2\-Anweisungen aktiviert wird; null wenn Implementierung SSE2\-Anweisungen deaktiviert wird.  
+## <a name="return-value"></a>Rückgabewert  
+ Wert ungleich null, wenn die SSE2-Implementierung aktiviert ist;&0;, wenn die SSE2-Implementierung deaktiviert ist.  
   
-## Hinweise  
- Die folgenden Funktionen sind Implementierungen SSE2\-Anweisungen, die aktiviert werden können, indem `_set_SSE2_enable` verwendet:  
+## <a name="remarks"></a>Hinweise  
+ Die folgenden Funktionen haben SSE2-Implementierungen, die mithilfe von `_set_SSE2_enable` aktiviert werden können:  
   
 -   [atan](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)  
   
@@ -78,22 +95,22 @@ int _set_SSE2_enable(
   
 -   [pow](../../c-runtime-library/reference/pow-powf-powl.md)  
   
- Die Implementierungen SSE2\-Anweisungen dieser Funktionen können möglicherweise etwas unterschiedliche Antworten als die Standardimplementierungen, da Zwischenwerte SSE2\-Anweisungen 64\-Bit\-Gleitkommamengen sind, die Standardimplementierungszwischenwerte 80 Bitgleitkommamengen sind.  
+ Die SSE2-Implementierung dieser Funktionen unterscheiden sich möglicherweise geringfügig von den Standardimplementierungen, da SSE2-Zwischenwerte 64-Bit-Gleitkommamengen sind, aber die Zwischenwerte der Standardimplementierung 80-Bit-Gleitkommamengen sind.  
   
 > [!NOTE]
->  Wenn die Compileroption [\/Oi \(Generieren Sie systeminterne Funktionen\)](../../build/reference/oi-generate-intrinsic-functions.md) verwenden, das Projekt zu kompilieren, wird es möglicherweise, dass `_set_SSE2_enable` keine Auswirkungen.  Die Compileroption `/Oi` erteilt den Compiler der geringer, dass systeminterne Funktionen verwenden, um CRT\-Aufrufe ersetzen; dieses Verhalten hebt die Auswirkungen von `_set_SSE2_enable` auf.  Wenn Sie sicherstellen möchten, dass `/Oi` nicht `_set_SSE2_enable` überschreibt, verwenden Sie `/Oi-`, das Projekt zu kompilieren.  Dies kann außerdem ratsam, wenn Sie andere Compilerschalter verwenden, die `/Oi` haben.  
+>  Wenn Sie die Compileroption [/Oi (Systeminterne Funktionen erstellen)](../../build/reference/oi-generate-intrinsic-functions.md) verwenden, um das Projekt zu kompilieren, scheint `_set_SSE2_enable` möglicherweise keine Auswirkung zu haben. Die Compileroption `/Oi` gibt der Compiler die Berechtigung zum Verwenden von systeminternen Funktionen, um CRT-Aufrufe zu ersetzen; dieses Verhalten überschreibt die Auswirkung von `_set_SSE2_enable`. Wenn Sie sicherzustellen möchten, dass `/Oi` `_set_SSE2_enable` nicht außer Kraft setzt, kompilieren Sie Ihr Projekt mit `/Oi-`. Dies kann auch dann sinnvoll sein, wenn Sie andere Compilerswitches verwenden, die `/Oi` beinhalten.  
   
- Die Implementierung SSE2\-Anweisungen wird nur verwendet, wenn alle Ausnahmen maskiert werden.  Verwenden Sie [\_control87, \_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md), Ausnahmen zum Ausblenden.  
+ Die SSE2-Implementierung wird nur verwendet, wenn alle Ausnahmen maskiert werden. Verwenden Sie [_control87, _controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) zum Maskieren von Ausnahmen.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_set_SSE2_enable`|\<math.h\>|  
+|-------------|---------------------|  
+|`_set_SSE2_enable`|\<math.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_set_SSE2_enable.c  
@@ -116,8 +133,8 @@ int main()
   
  `SSE2 enabled.`  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [CRT\-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md)
+## <a name="see-also"></a>Siehe auch  
+ [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md)

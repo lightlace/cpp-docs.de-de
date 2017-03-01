@@ -1,62 +1,75 @@
 ---
-title: "add_volatile-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::add_volatile"
-  - "add_volatile"
-  - "std.tr1.add_volatile"
-  - "std.add_volatile"
-  - "std::add_volatile"
-  - "type_traits/std::add_volatile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "add_volatile-Klasse [TR1]"
-  - "add_volatile"
+title: add_volatile-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- add_volatile
+- std::add_volatile
+- type_traits/std::add_volatile
+dev_langs:
+- C++
+helpviewer_keywords:
+- add_volatile class
+- add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# add_volatile-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 8630a5c0b97b85e0dc75e8b470974bb7d223a511
+ms.openlocfilehash: c770950bfb69eaee2fde9aca63b0010f5a2da26a
+ms.lasthandoff: 02/24/2017
 
-Wandelt den angegebenen Typ in einen volatile\-Typ um.  
+---
+# <a name="addvolatile-class"></a>add_volatile-Klasse
+Wandelt einen angegebenen Typ in einen volatile-Typ um.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<class Ty>  
-    struct add_volatile;  
-  
-template<class T>  
+template <class Ty>  
+struct add_volatile;  
+ 
+template <class T>
 using add_volatile_t = typename add_volatile<T>::type;  
 ```  
   
-#### Parameter  
- `Ty`  
- Der zu ändernde Typ.  
+### <a name="parameters"></a>Parameter  
+*T*  
+Der zu ändernde Typ.  
   
-## Hinweise  
- Eine Instanz des Typmodifizierers enthält einen geänderten Typ, der `Ty` ist, wenn `Ty` ein Verweis, eine Funktion oder ein volatile\-qualified\-Typ ist; andernfalls `volatile Ty`.  
+## <a name="remarks"></a>Hinweise  
+Eine Instanz des `add_volatile<T>` enthält einen geänderten typedef-Member`type`, der *T* ist, wenn *T* ein Verweis, eine Funktion oder ein volatile-qualified-Typ ist; andernfalls `volatile` *T*. Das Alias `add_volatile_t` ist eine Verknüpfung für den Zugriff auf den typedef-Member`type`. 
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 #include <type_traits>   
 #include <iostream>   
   
 int main()   
-    {   
+{   
     std::add_volatile_t<int> *p = (volatile int *)0;   
   
     p = p;  // to quiet "unused" warning   
@@ -64,16 +77,20 @@ int main()
         << typeid(*p).name() << std::endl;   
   
     return (0);   
-    }  
-  
+} 
 ```  
   
-  **add\_volatile\<int\> \=\= int**   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+```Output  
+add_volatile<int> == int  
+```  
   
- **Namespace:** std  
+## <a name="requirements"></a>Anforderungen  
+
+**Header:** \<type_traits>  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [remove\_volatile\-Klasse](../standard-library/remove-volatile-class.md)
+**Namespace:** std  
+  
+## <a name="see-also"></a>Siehe auch  
+[<type_traits>](../standard-library/type-traits.md)   
+[remove_volatile-Klasse](../standard-library/remove-volatile-class.md)
+

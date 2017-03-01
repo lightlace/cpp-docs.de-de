@@ -1,70 +1,84 @@
 ---
-title: "logical_not-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.logical_not"
-  - "logical_not"
-  - "xfunctional/std::logical_not"
-  - "std::logical_not"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_not-Klasse"
-  - "logical_not-Struktur"
+title: logical_not-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.logical_not
+- logical_not
+- xfunctional/std::logical_not
+- std::logical_not
+dev_langs:
+- C++
+helpviewer_keywords:
+- logical_not class
+- logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# logical_not-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 2f84361ba71a50601349542797840e2d45ffad21
+ms.lasthandoff: 02/24/2017
 
-Ein vordefiniertes Funktionsobjekt, mit dem der logische NOT\-Vorgang \(`operator!`\) auf das Argument ausgeführt werden kann.  
+---
+# <a name="logicalnot-struct"></a>logical_not-Struktur
+Ein vordefiniertes Funktionsobjekt, mit dem der logische NOT-Vorgang (`operator!`) auf das Argument ausgeführt werden kann.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template <class Type = void>
+struct logical_not : public unary_function<Type, bool>  
+{
+    bool operator()(const Type& Left) const;
+};
+
+// specialized transparent functor for operator!
+template <>
+struct logical_not<void>  
+{
+  template <class Type>
+  auto operator()(Type&& Left) const`
+     -> decltype(!std::forward<Type>(Left));
+ };
 ```  
-template<class Type = void>  
-   struct logical_not : public unary_function<Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left  
-      ) const;  
-   };  
   
-// specialized transparent functor for operator!  
-template<>  
-   struct logical_not<void>  
-   {  
-      template<class Type>  
-      auto operator()(Type&& Left) const  
-         -> decltype(!std::forward<Type>(Left));  
-   };  
-  
-```  
-  
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `Type`  
- Jeder Typ, der ein `operator!`\-Element unterstützt, das einen Operanden des angegebenen oder abgeleiteten Typs akzeptiert.  
+ Jeder Typ, der ein `operator!`-Element unterstützt, das einen Operanden des angegebenen oder abgeleiteten Typs akzeptiert.  
   
  `Left`  
- Der Operand des logischen NOT\-Vorgangs.  Die nicht spezialisierte Vorlage besitzt ein lvalue\-Verweisargument vom Typ `Type`.  Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue\-Verweisargumenten des abgeleiteten Typs `Type`.  
+ Der Operand des logischen NOT-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `Type`.  
   
-## Rückgabewert  
- Das Ergebnis von `!``Left`.  Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator!` zurückgegebenen Typs.  
+## <a name="return-value"></a>Rückgabewert  
+ Das Ergebnis von `!``Left`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator!` zurückgegebenen Typs.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // functional_logical_not.cpp  
 // compile with: /EHsc  
 #include <deque>  
@@ -99,17 +113,23 @@ int main( )
       cout << *iter2 << " ";  
    cout << ")" << endl;  
 }  
+/* Output:  
+Original deque:  
+ d1 = ( false true false true false true false )  
+The deque with its values negated is:  
+ d2 = ( true false true false true false true )  
+ */  
 ```  
   
-  **Ursprüngliche Doppelschlange:**  
- **d1 \= \(false false true true false true false\)**  
-**Die Doppelschlange mit dem negierten Werten lautet:**  
- **d2 \= \( true false true false true false true\)**   
-## Anforderungen  
- **Header:** \<functional\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<functional>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standard Template Library](../misc/standard-template-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

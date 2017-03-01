@@ -1,55 +1,68 @@
 ---
-title: "is_compound-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::is_compound"
-  - "is_compound"
-  - "std.tr1.is_compound"
-  - "std.is_compound"
-  - "std::is_compound"
-  - "type_traits/std::is_compound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_compound-Klasse [TR1]"
-  - "is_compound"
+title: is_compound-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_compound
+- std::is_compound
+- type_traits/std::is_compound
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_compound class
+- is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# is_compound-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 2137c8a92c3821137ab1669b4b9162fd309d0fbe
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="iscompound-class"></a>is_compound-Klasse
 Testet, ob der angegebene Typ nicht grundlegend ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<class Ty>  
-    struct is_compound;  
+template <class Ty>  
+struct is_compound;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
  Der abzufragende Typ.  
   
-## Hinweise  
- Eine Instanz des Typs Prädikat enthält `false`, wenn der Typ von `Ty` ein grundlegender Typ ist \(d. h., wenn [is\_fundamental](../standard-library/is-fundamental-class.md)`<``Ty``>` `true` enthält\), andernfalls enthält sie `true`.  Daher enthält das Prädikat `true`, wenn `Ty` ein Arraytyp ist, ein Funktionstyp, ein Zeiger auf `void` oder ein Objekt oder eine Funktion, ein Verweis, eine Klasse, eine Union, eine Enumeration oder ein Zeiger auf ein nicht\-statisches Klassenmember oder eine *cv\-qualified*\-Form eines dieser Elemente.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats enthält `false`, wenn der Typ von `Ty` ein grundlegender Typ ist (d.h., wenn [is_fundamental](../standard-library/is-fundamental-class.md)`<``Ty``>` `true` enthält); andernfalls ist `true` enthalten. Daher enthält das Prädikat `true`, wenn `Ty` ein Arraytyp, ein Funktionstyp, ein Zeiger auf `void` oder auf ein Objekt oder eine Funktion, ein Verweis, eine Klasse, eine Vereinigung, eine Enumeration oder ein Zeiger auf ein nicht-statisches Klassenmember oder eine *cv-qualified*-Form eines dieser Elemente ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
-// std_tr1__type_traits__is_compound.cpp   
+```cpp  
+// std__type_traits__is_compound.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -79,17 +92,21 @@ int main()
   
 ```  
   
-  **is\_compound\<trivial\> \=\= true**  
-**is\_compound\<int\[\]\> \=\= true**  
-**is\_compound\<int\(\)\> \=\= true**  
-**is\_compound\<int&\> \=\= true**  
-**is\_compound\<void \*\> \=\= true**  
-**is\_compound\<int\> \=\= false**   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+```Output  
+is_compound<trivial> == true  
+is_compound<int[]> == true  
+is_compound<int()> == true  
+is_compound<int&> == true  
+is_compound<void *> == true  
+is_compound<int> == false  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_class\-Klasse](../standard-library/is-class-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [is_class-Klasse](../standard-library/is-class-class.md)
+

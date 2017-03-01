@@ -1,70 +1,232 @@
 ---
-title: "error_category-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::error_category"
-  - "system_error/std::error_category"
-  - "error_category"
-  - "std.error_category"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "error_category-Klasse"
+title: error_category-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::error_category
+- system_error/std::error_category
+- error_category
+- std.error_category
+dev_langs:
+- C++
+helpviewer_keywords:
+- error_category class
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# error_category-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 7700ffce8b04f9caad33c08f03f0585c29a43efd
+ms.lasthandoff: 02/24/2017
 
-Stellt die abstrakte, allgemeine Basis für Objekte, die eine Kategorie von Fehlercodes beschreibt.  
+---
+# <a name="errorcategory-class"></a>error_category-Klasse
+Stellt die abstrakte, allgemeine Basis für Objekte dar, die eine Fehlercodekategorie beschreibt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+class error_category;
 ```  
-class error_category;  
-```  
   
-## Hinweise  
- Implementieren Sie zwei vordefinierte Objekte `error_category`: [generic\_category](../Topic/generic_category.md) und [system\_category](../Topic/system_category.md).  
+## <a name="remarks"></a>Hinweise  
+ `error_category` wird von zwei vordefinierten Objekten implementiert: [generic_category](../standard-library/system-error-functions.md#generic_category) und [system_category](../standard-library/system-error-functions.md#system_category).  
   
-### TypeDefs  
+### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[value\_type](../Topic/error_category::value_type.md)|Ein Typ, der Wert, der den gespeicherten Fehler darstellt.|  
+|[value_type](#error_category__value_type)|Ein Typ, der den gespeicherten Fehlercodewert darstellt.|  
   
-### Memberfunktionen  
-  
-|||  
-|-|-|  
-|[default\_error\_condition](../Topic/error_category::default_error_condition.md)|Speichert den Wert des Fehler\-Code für eine Bedingung Fehlerobjekt.|  
-|[equivalent](../Topic/error_category::equivalent.md)|Gibt einen Wert, der angibt, ob Fehlerobjekte gleich sind.|  
-|[message](../Topic/error_category::message.md)|Gibt den Namen des angegebenen Fehlercodes.|  
-|[Name](../Topic/error_category::name.md)|Gibt den Namen der Kategorie.|  
-  
-### Operatoren  
+### <a name="member-functions"></a>Memberfunktionen  
   
 |||  
 |-|-|  
-|[operator\=\=](../Topic/error_category::operator==.md)|Gleichheit zwischen `error_category` Objekte.|  
-|[Operator\!\=](../Topic/error_category::operator!=.md)|Prüft auf Ungleichheit zwischen `error_category` Objekte.|  
-|[Operator \<](../Topic/error_category::operator%3C.md)|Testet, ob die [Error\_category](../standard-library/error-category-class.md) Objekt ist kleiner als der `error_category` Objekt für den Vergleich übergeben.|  
+|[default_error_condition](#error_category__default_error_condition)|Speichert den Fehlercodewert für ein Fehlerbedingungsobjekt.|  
+|[equivalent](#error_category__equivalent)|Gibt einen Wert zurück, der angibt, ob Fehlerobjekte gleichwertig sind.|  
+|[message](#error_category__message)|Gibt den Namen des angegebenen Fehlercodes zurück.|  
+|[name](#error_category__name)|Gibt den Namen der Kategorie zurück.|  
   
-## Anforderungen  
- **Header:** \<system\_error\>  
+### <a name="operators"></a>Operatoren  
+  
+|||  
+|-|-|  
+|[operator==](#error_category__operator_eq_eq)|Prüft auf Gleichheit zwischen `error_category`-Objekten.|  
+|[operator!=](#error_category__operator_neq)|Prüft auf Ungleichheit zwischen `error_category`-Objekten.|  
+|[operator<](#error_category__operator_lt_)|Testet, ob das [error_category](../standard-library/error-category-class.md)-Objekt kleiner ist als das `error_category`-Objekt, das für den Vergleich übergeben wurde.|  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<system_error>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<system\_error\>](../standard-library/system-error.md)
+##  <a name="a-nameerrorcategorydefaulterrorconditiona--errorcategorydefaulterrorcondition"></a><a name="error_category__default_error_condition"></a> error_category::default_error_condition  
+ Speichert den Fehlercodewert für ein Fehlerbedingungsobjekt.  
+  
+```
+virtual error_condition default_error_condition(int _Errval) const;
+```  
+  
+### <a name="parameters"></a>Parameter  
+  
+|Parameter|Beschreibung|  
+|---------------|-----------------|  
+|`_Errval`|Der Fehlercodewert, der in [error_condition](../standard-library/error-condition-class.md) gespeichert werden soll.|  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt `error_condition(_Errval, *this)`zurück.  
+  
+### <a name="remarks"></a>Hinweise  
+  
+##  <a name="a-nameerrorcategoryequivalenta--errorcategoryequivalent"></a><a name="error_category__equivalent"></a> error_category::equivalent  
+ Gibt einen Wert zurück, der angibt, ob Fehlerobjekte gleichwertig sind.  
+  
+```
+virtual bool equivalent(value_type _Errval,
+    const error_condition& _Cond) const;
+
+virtual bool equivalent(const error_code& _Code,
+    value_type _Errval) const;
+```  
+  
+### <a name="parameters"></a>Parameter  
+  
+|Parameter|Beschreibung|  
+|---------------|-----------------|  
+|`_Errval`|Der zu vergleichende Fehlercodewert.|  
+|`_Cond`|Das zu vergleichende [error_condition](../standard-library/error-condition-class.md)-Objekt.|  
+|`_Code`|Das zu vergleichende [error_code](../standard-library/error-code-class.md)-Objekt.|  
+  
+### <a name="return-value"></a>Rückgabewert  
+ `true`, wenn Kategorie und Wert gleich sind; andernfalls `false`.  
+  
+### <a name="remarks"></a>Hinweise  
+ Die erste Memberfunktion gibt `*this == _Cond.category() && _Cond.value() == _Errval` zurück.  
+  
+ Die zweite Memberfunktion gibt `*this == _Code.category() && _Code.value() == _Errval` zurück.  
+  
+##  <a name="a-nameerrorcategorymessagea--errorcategorymessage"></a><a name="error_category__message"></a> error_category::message  
+ Gibt den Namen des angegebenen Fehlercodes zurück.  
+  
+```
+virtual string message(error_code::value_type val) const = 0;
+```  
+  
+### <a name="parameters"></a>Parameter  
+  
+|Parameter|Beschreibung|  
+|---------------|-----------------|  
+|`val`|Der zu beschreibende Fehlercodewert.|  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt einen beschreibenden Namen des Fehlercodes `val` für die Kategorie zurück.  
+  
+### <a name="remarks"></a>Hinweise  
+  
+##  <a name="a-nameerrorcategorynamea--errorcategoryname"></a><a name="error_category__name"></a> error_category::name  
+ Gibt den Namen der Kategorie zurück.  
+  
+```
+virtual const char *name() const = 0;
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt den Namen der Kategorie als Bytezeichenfolge zurück, die mit null endet.  
+  
+### <a name="remarks"></a>Hinweise  
+  
+##  <a name="a-nameerrorcategoryoperatoreqeqa--errorcategoryoperator"></a><a name="error_category__operator_eq_eq"></a> error_category::operator==  
+ Prüft auf Gleichheit zwischen `error_category`-Objekten.  
+  
+```
+bool operator==(const error_category& right) const;
+```  
+  
+### <a name="parameters"></a>Parameter  
+  
+|Parameter|Beschreibung|  
+|---------------|-----------------|  
+|`right`|Das Objekt, das auf Gleichheit getestet werden soll.|  
+  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn die Objekte gleich sind; **FALSE**, wenn die Objekte nicht gleich sind.  
+  
+### <a name="remarks"></a>Hinweise  
+ Dieser Memberoperator gibt `this == &right` zurück.  
+  
+##  <a name="a-nameerrorcategoryoperatorneqa--errorcategoryoperator"></a><a name="error_category__operator_neq"></a> error_category::operator!=  
+ Prüft auf Ungleichheit zwischen `error_category`-Objekten.  
+  
+```
+bool operator!=(const error_category& right) const;
+```  
+  
+### <a name="parameters"></a>Parameter  
+  
+|Parameter|Beschreibung|  
+|---------------|-----------------|  
+|`right`|Das Objekt, das auf Ungleichheit geprüft werden soll.|  
+  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn das Objekt `error_category` nicht dem Objekt `error_category` entspricht, das an `right` übergeben wird; andernfalls **FALSE**.  
+  
+### <a name="remarks"></a>Hinweise  
+ Der Memberoperator gibt `(!*this == right)` zurück.  
+  
+##  <a name="a-nameerrorcategoryoperatorlta--errorcategoryoperatorlt"></a><a name="error_category__operator_lt_"></a> error_category::operator&lt;  
+ Testet, ob das [error_category](../standard-library/error-category-class.md)-Objekt kleiner ist als das `error_category`-Objekt, das für den Vergleich übergeben wurde.  
+  
+```
+bool operator<(const error_category& right) const;
+```  
+  
+### <a name="parameters"></a>Parameter  
+  
+|Parameter|Beschreibung|  
+|---------------|-----------------|  
+|`right`|Das zu vergleichende `error_category`-Objekt.|  
+  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn das Objekt, das an `error_category` übergeben wird, kleiner ist als das an `error_category` übergebene Objekt; andernfalls **FALSE**.  
+  
+### <a name="remarks"></a>Hinweise  
+ Der Memberoperator gibt `this < &right` zurück.  
+  
+##  <a name="a-nameerrorcategoryvaluetypea--errorcategoryvaluetype"></a><a name="error_category__value_type"></a> error_category::value_type  
+ Ein Typ, der den gespeicherten Fehlercodewert darstellt.  
+  
+```
+typedef int value_type;
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Diese Typdefinition ist ein Synonym für `int`.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [<system_error>](../standard-library/system-error.md)
+
+
+
+

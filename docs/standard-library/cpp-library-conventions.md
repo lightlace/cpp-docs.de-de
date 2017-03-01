@@ -1,62 +1,80 @@
 ---
-title: "C++-Bibliothekskonventionen"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Klassen [C++]"
-  - "Codekonventionen, C++-Standardbibliothek"
-  - "Konventionen [C++], C++-Standardbibliothek"
-  - "Funktionsnamen [C++]"
-  - "Funktionen [C++], Bibliotheks-Benennungskonventionen"
-  - "Benennungskonventionen [C++], C++-Bibliothek"
-  - "Benennungskonventionen [C++], C++-Standardbibliothek"
-  - "C++-Standardbibliothek, Konventionen"
+title: C++-Bibliothekskonventionen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ Standard Library, conventions
+- classes [C++]
+- functions [C++], library naming conventions
+- naming conventions [C++], C++ Standard Library
+- conventions [C++], C++ Standard Library
+- function names [C++]
+- coding conventions, C++ Standard Library
+- naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
 caps.latest.revision: 9
-caps.handback.revision: "8"
-ms.author: "corob"
-manager: "ghogen"
----
-# C++-Bibliothekskonventionen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 55d3959b12b1b1a25a6c4b5c65fce59db57cf838
+ms.lasthandoff: 02/24/2017
 
-Die C\+\+\-Bibliothek entspricht viel die gleichen Konventionen wie der C\-Standardbibliothek, sowie einige, die hier beschriebenen.  
+---
+# <a name="c-library-conventions"></a>C++-Bibliothekskonventionen
+Die C++-Bibliothek erfüllt ähnliche Konventionen wie die C-Standardbibliothek und noch einige weitere, die nachfolgend beschrieben werden.  
   
- Eine Implementierung enthält bestimmte Breite in, wie diese Typen und Funktionen in der C\+\+\-Bibliothek deklariert:  
+ Eine Implementierung verfügt über einen gewissen Spielraum, wenn es um die Deklarierung von Typen und Funktionen in der C++-Standardbibliothek geht:  
   
--   Namen der Funktionen in der C\-Standardbibliothek haben möglicherweise entweder extern \# " C\+\+" oder externen C" binden.  Schließen Sie die entsprechende Standard\-C\-Kopfzeile anstatt deklarieren eine Bibliotheksentität inline ein.  
+-   Namen von Funktionen in der C-Standardbibliothek enthalten entweder einen externen #„C++“ oder einen extern „C“-Link. Fügen Sie den entsprechenden Standard-C-Header ein anstatt eine Inline-Bibliotheksentität zu deklarieren.  
   
--   Ein Memberfunktionsname in einer Bibliothek hat möglicherweise Zusatzfunktionsunterzeichnungen über denen, die in diesem Dokument aufgeführten.  Sie können sicherstellen, dass ein Funktionsaufruf, der hier beschriebenen, sich wie erwartet verhält, aber Sie können die Adresse einer Bibliotheksmemberfunktion nicht zuverlässig nehmen. \(Der Typ möglicherweise ist nicht, was Sie erwarten.\)  
+-   Ein Memberfunktionsname in einer Bibliotheksklasse hat möglicherweise weitere Funktionssignaturen zusätzlich zu denen, die in diesem Dokument aufgeführt werden. Sie können davon ausgehen, dass sich ein an dieser Stelle beschriebener Funktionsaufruf wie erwartet verhält. Die Adresse einer Bibliotheksmemberfunktion kann jedoch nicht zuverlässig entgegengenommen werden. (Der Typ entspricht möglicherweise nicht Ihren Erwartungen.)  
   
--   Eine Bibliothek verfügt möglicherweise nicht dokumentierten \(nicht virtuelle Basisklassen\).  Eine Klasse, die dokumentiert wird, wie von einer anderen Klasse abgeleitete, tatsächlich wird von dieser Klasse durch andere nicht dokumentierten Klassen abgeleitet werden.  
+-   Eine Bibliotheksklasse hat möglicherweise nicht dokumentierte (nicht virtuelle) Basisklassen. Eine von einer anderen Klasse als abgeleitet dokumentierte Klasse kann durchaus über andere nicht dokumentierte Klassen von dieser Klasse abgeleitet werden.  
   
--   Ein Typ, der als Synonym für einen ganzzahligen Typ definiert wird, kann der gleiche ist, das einer binden ganzzahligen eingibt.  
+-   Ein Typ, der als Synonym für einen ganzzahligen Typ definiert ist, kann einem von mehreren unterschiedlichen Integertypen entsprechen.  
   
--   Ein Bitmaskentyp kann als jedes implementiert werden ein ganzzahliger Typ oder Enumeration.  In beiden Fällen können Sie bitweisen Operationen \(wie `AND` und `OR`\) für Werte des gleichen Bitmaskentyps ausführen.  Die Elemente `A` und `B` eines Bitmaskentyps sind Werte ungleich 0 \(null\) so, dass `A` &`B` ist.  
+-   Ein Bitmaskentyp kann entweder als ganzzahliger Typ oder als Enumeration implementiert werden. In beiden Fällen können Sie bitweise Operationen (z.B. `AND` und `OR`) auf Werte desselben Bitmaskentyps ausführen. Die Elemente `A` und `B` eines Bitmaskentyps sind Werte ungleich Null. `A`  &  `B` ist somit Null.  
   
--   Eine Bibliotheksfunktion, die Ausnahmespezifikationen keine enthält, kann eine beliebige, Ausnahme auslösen, sofern ihre Definition eindeutig eine solche Möglichkeit einschränkt.  
+-   Eine Bibliotheksfunktion ohne Angabe von Ausnahmen kann eine zufällige Ausnahme auslösen, sofern ihre Definition eine solche Möglichkeit nicht eindeutig einschränkt.  
   
- Umgekehrt gibt es einige Beschränkungen:  
+ Andererseits bestehen durchaus einige Einschränkungen:  
   
--   Die C\-Standardbibliothek verwendet keine maskierenden Makros.  Nur Signaturen der angegebenen Funktion werden, nicht jedoch die Namen der Funktionen selbst reserviert.  
+-   Die C-Standardbibliothek verwendet keine Maskierungsmakros. Nur bestimmte Funktionssignaturen sind reserviert, jedoch nicht die Namen der Funktionen selbst.  
   
--   Ein Bibliotheksfunktionsname außerhalb einer Klasse hat nicht zusätzliche, nicht dokumentiert, Funktionssignaturen.  Sie können die Adresse zuverlässig nehmen.  
+-   Der Name einer Bibliotheksfunktion außerhalb einer Klasse verfügt nicht über zusätzliche, nicht dokumentierte Funktionssignaturen. Sie können seine Adresse sicher entgegennehmen.  
   
--   Basisklassen und Memberfunktionen beschriebenes so virtuelles sicherlich sind virtuell, wie jene, die beschrieben werden wie nicht virtuell, sicherlich nicht virtuell sind.  
+-   Als virtuell beschriebene Basisklassen und Memberfunktionen sind nachweislich virtuell. Die als nicht virtuell beschriebenen sind ebenso nachweislich nicht virtuell.  
   
--   Zwei Typen, die von der C\+\+\-Bibliothek definiert werden, sind immer unterscheiden, es sei denn, dass dieses Dokument explizit andernfalls vorsieht.  
+-   Zwei durch die C++-Bibliothek definierte Typen sind stets unterschiedlich, sofern nicht ausdrücklich anders in diesem Dokument dargestellt.  
   
--   Die Funktionen, die durch die Bibliothek, einschließlich der Standardversionen von austauschbaren Funktionen angegeben werden, können diese Ausnahmen *höchstens* auslösen, die in beliebiger Ausnahmespezifikation aufgeführt werden.  keine Destruktoren, die durch die Bibliothek angegeben sind, lösen Ausnahmen aus.  Funktionen in der C\-Standardbibliothek weitergeben eine Ausnahme, wie wenn `qsort` eine Vergleichsfunktion aufruft, die eine Ausnahme auslöst, jedoch andernfalls nicht lösen Ausnahmen aus.  
+-   Von der Bibliothek bereitgestellte Funktionen, einschließlich Standardversionen ersetzbarer Funktionen, können *bestenfalls * jene Ausnahmen auslösen, die in einer Ausnahmespezifikation aufgeführt sind. Von der Bibliothek bereitgestellte Destruktoren können keine Ausnahmen auslösen. Funktionen in der C-Standardbibliothek können möglicherweise eine Ausnahme weitergeben, wenn `qsort` eine Vergleichsfunktion aufruft, die eine Ausnahme auslöst. Anderenfalls lösen sie keine Ausnahmen aus.  
   
-## Siehe auch  
- [STL\-Übersicht](../standard-library/cpp-standard-library-overview.md)   
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++ Standard Library Overview (Übersicht über die C++-Standardbibliothek)](../standard-library/cpp-standard-library-overview.md)   
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

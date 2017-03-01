@@ -1,60 +1,91 @@
 ---
-title: "Funktionsobjekte in der STL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Funktionselemente"
-  - "C++-Standardbibliothek, Funktionselemente"
-  - "C++-Standardbibliothek, Funktionsobjekte"
-  - "function-Objekte"
+title: Funktionsobjekte in der C++-Standardbibliothek | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- functors
+- C++ Standard Library, functors
+- C++ Standard Library, function objects
+- function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Funktionsobjekte in der STL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 3928493eeb4aa09511b3e58d27383c7a480d06ad
+ms.lasthandoff: 02/24/2017
 
-Ein *Funktionsobjekt* oder *Funktionselement* ist ein beliebiger Typ, der „operator\(\)“ implementiert. Dieser Operator wird als *Aufrufoperator* oder manchmal als *Anwendungsoperator* bezeichnet. Die Standard Template Library verwendet Funktionsobjekte hauptsächlich als Sortierungskriterien für Container und in den Algorithmen.  
+---
+# <a name="function-objects-in-the-c-standard-library"></a>Funktionsobjekte in der C++-Standardbibliothek
+Ein *Funktionsobjekt*oder *Funktionselement*ist ein beliebiger Typ, der „operator()“ implementiert. Dieser Operator wird als *Aufrufoperator* oder manchmal als *Anwendungsoperator*bezeichnet. Die C++-Standardbibliothek verwendet Funktionsobjekte hauptsächlich als Sortierungskriterien für Container und in Algorithmen.  
   
  „Funktionsobjekte“ bieten gegenüber einem konventionellen Funktionsaufruf zwei wesentliche Vorteile. Der erste Vorteil ist, dass ein Funktionsobjekt einen Zustand enthalten kann. Der zweite Vorteil ist, dass ein Funktionsobjekt ein Typ ist und daher nicht als Vorlagenparameter verwendet werden kann.  
   
-## Erstellen eines Funktionsobjekts  
- Um ein Funktionsobjekt zu erstellen, erstellen Sie einen Typ, und implementieren Sie „operator\(\)“, z. B.:  
+## <a name="creating-a-function-object"></a>Erstellen eines Funktionsobjekts  
+ Um ein Funktionsobjekt zu erstellen, erstellen Sie einen Typ, und implementieren Sie „operator()“, z. B.:  
+  
+class-Funktionselement  
+   {  
+   public:  
+   int operator()(int a, int b)  
+   {  
+   return a <b;  
+   }  
+   };  
+  
+ Die letzte Zeile der `main` -Funktion zeigt, wie Sie das Funktionsobjekt aufrufen. Dieser Aufruf ähnelt einem Aufruf einer Funktion. Tatsächlich wird aber „operator()“ des Typs „Funktionselement“ aufgerufen. Diese Ähnlichkeit zwischen dem Aufruf eines Funktionsobjekts und einer Funktion hat zum Begriff „Funktionsobjekt“ geführt.  
+  
+## <a name="function-objects-and-containers"></a>Funktionsobjekte und Container  
+ Die C++-Standardbibliothek enthält mehrere Funktionsobjekte in der Headerdatei [\<functional>](../standard-library/functional.md). Eine Verwendung dieser Funktionsobjekte ist als Sortierungskriterium für Container. Beispielsweise wird der `set` -Container wie folgt deklariert:  
   
 ```  
-class Functor { public: int operator()(int a, int b) { return a < b; } }; int main() { Functor f; int a = 5; int b = 7; int ans = f(a, b); }  
+template <class Key,  
+    class Traits=less<Key>,  
+    class Allocator=allocator<Key>>  
+class set  
 ```  
   
- Die letzte Zeile der `main`\-Funktion zeigt, wie Sie das Funktionsobjekt aufrufen. Dieser Aufruf ähnelt einem Aufruf einer Funktion. Tatsächlich wird aber „operator\(\)“ des Typs „Funktionselement“ aufgerufen. Diese Ähnlichkeit zwischen dem Aufruf eines Funktionsobjekts und einer Funktion hat zum Begriff „Funktionsobjekt“ geführt.  
+ Das zweite Vorlagenargument ist das Funktionsobjekt „ `less`“. Dieses Funktionsobjekt gibt `true` zurück, wenn der erste an sie übergebene Parameter kleiner als der zweite übergebene Parameter ist. Da einige Container ihre Elemente sortieren, benötigt der Container eine Möglichkeit zum Vergleich von zwei Elementen, und dies wird mithilfe des Funktionsobjekts erreicht. Sie können eigene Sortierungskriterien für Container definieren, indem Sie ein Funktionsobjekt erstellen und es in der Vorlagenliste für den Container angeben.  
   
-## Funktionsobjekte und Container  
- Die Standard Template Library enthält mehrere Funktionsobjekte in der [\<functional\>](../standard-library/functional.md)\-Headerdatei. Eine Verwendung dieser Funktionsobjekte ist als Sortierungskriterium für Container. Beispielsweise wird der `set`\-Container wie folgt deklariert:  
-  
-```  
-template < class Key, class Traits=less<Key>, class Allocator=allocator<Key> > class set  
-```  
-  
- Das zweite Vorlagenargument ist das Funktionsobjekt „`less`“. Dieses Funktionsobjekt gibt `true` zurück, wenn der erste an sie übergebene Parameter kleiner als der zweite übergebene Parameter ist. Da einige Container ihre Elemente sortieren, benötigt der Container eine Möglichkeit zum Vergleich von zwei Elementen, und dies wird mithilfe des Funktionsobjekts erreicht. Sie können eigene Sortierungskriterien für Container definieren, indem Sie ein Funktionsobjekt erstellen und es in der Vorlagenliste für den Container angeben.  
-  
-## Funktionsobjekte und Algorithmen  
- Eine weitere Verwendungsmöglichkeit von Funktionsobjekten ist in Algorithmen. Beispielsweise wird der `remove_if`\-Algorithmus wie folgt deklariert:  
+## <a name="function-objects-and-algorithms"></a>Funktionsobjekte und Algorithmen  
+ Eine weitere Verwendungsmöglichkeit von Funktionsobjekten ist in Algorithmen. Beispielsweise wird der `remove_if` -Algorithmus wie folgt deklariert:  
   
 ```  
-template<class ForwardIterator, class Predicate> ForwardIterator remove_if( ForwardIterator _First, ForwardIterator _Last, Predicate _Pred );  
+template <class ForwardIterator, class Predicate>  
+ForwardIterator remove_if(
+    ForwardIterator first,  
+    ForwardIterator last,  
+    Predicate pred);
 ```  
   
- Das letzte Argument für `remove_if` ist ein Funktionsobjekt, das einen booleschen Wert zurückgibt \(ein *Prädikat*\). Wenn das Ergebnis des Funktionsobjekts `true` ist, wird das Element aus dem Container entfernt, auf den die Iteratoren `_First` und `_Last` zugreifen. Sie können eines der Funktionsobjekte verwenden, die im [\<functional\>](../standard-library/functional.md)\-Header für das Argument `_Pred` deklariert sind, oder ein eigenes erstellen.  
+ Das letzte Argument für `remove_if` ist ein Funktionsobjekt, das einen booleschen Wert zurückgibt (ein *Prädikat*). Wenn das Ergebnis des Funktionsobjekts `true` ist, wird das Element aus dem Container entfernt, auf den die Iteratoren ` first` und ` last`zugreifen. Sie können eines der Funktionsobjekte verwenden, die im Header [\<functional>](../standard-library/functional.md) für das Argument ` pred` deklariert sind, oder ein eigenes erstellen.  
   
-## Siehe auch  
- [Standard Template Library](../misc/standard-template-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+
+

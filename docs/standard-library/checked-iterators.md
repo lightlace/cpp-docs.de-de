@@ -1,137 +1,148 @@
 ---
-title: "&#220;berpr&#252;fte Iteratoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_SECURE_SCL"
-  - "_SECURE_SCL_THROWS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "checked-Iteratoren"
-  - "Iteratoren, checked"
-  - "Sichere Bibliotheken"
-  - "Sichere Bibliotheken, C++-Standardbibliothek"
-  - "Sichere Standard-C++-Bibliothek"
+title: "Überprüfte Iteratoren | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _SECURE_SCL_THROWS
+dev_langs:
+- C++
+helpviewer_keywords:
+- Safe Libraries
+- Safe Libraries, C++ Standard Library
+- Safe C++ Standard Library
+- iterators, checked
+- checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# &#220;berpr&#252;fte Iteratoren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
+ms.openlocfilehash: eb90255295534d42cb4400d2db2c43467b633187
+ms.lasthandoff: 02/24/2017
 
-Aktivierte Iteratoren stellen sicher, dass die Grenzen des Containers nicht überschrieben werden.  
+---
+# <a name="checked-iterators"></a>Checked Iterators
+Aktivierte Iteratoren stellen sicher, dass die Grenzen des Containers nicht überschrieben werden. Überprüfte Iteratoren werden auf Releasebuilds und auf Debugbuilds angewendet. Weitere Informationen zur Verwendung von Debugiteratoren beim Kompilieren im Debugmodus finden Sie unter [Debug Iterator Support (Unterstützung für Iteratordebugging)](../standard-library/debug-iterator-support.md).  
   
- Aktivierte Iteratoren werden auf Releasebuilds und Debugbuilds angewendet.  Weitere Informationen zur Verwendung von Iteratoren beim Kompilieren im Debugmodus finden Sie unter [Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md).  
+## <a name="remarks"></a>Hinweise  
+Informationen über das Deaktivieren der Warnungen, die für überprüfte Iteratoren generiert werden, finden Sie unter [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
   
-## Hinweise  
- Informationen zur Deaktivierung von Warnungen, die durch aktivierte Iteratoren generiert werden, finden Sie unter [\_SCL\_SECURE\_NO\_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
-  
- Sie können folgendes Symbol mit der Funktion für aktivierte Iteratoren verwenden.  
-  
- `_SECURE_SCL`  
- Wenn `_SECURE_SCL` als 1 definiert wird, verursacht die unsichere Verwendung von Iteratoren einen Laufzeitfehler und das Programm wird beendet.  Lautet die Definition 0, werden aktivierte Iteratoren deaktiviert.  Standardmäßig ist der Wert für `_SECURE_SCL` 0 für Releasebuilds und 1 für Debugbuilds.  
+Sie können das Präprozessormakro [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) verwenden, um die Funktion der überprüften Iteratoren zu aktivieren oder zu deaktivieren. Wenn `_ITERATOR_DEBUG_LEVEL` als 1 oder 2 definiert ist, verursacht die unsichere Verwendung von Iteratoren einen Laufzeitfehler, und das Programm wird beendet. Lautet die Definition 0, werden aktivierte Iteratoren deaktiviert. Standardmäßig hat `_ITERATOR_DEBUG_LEVEL` den Wert 0 für Releasebuilds und den Wert 2 für Debugbuilds.  
   
 > [!IMPORTANT]
->  Verwenden Sie `_ITERATOR_DEBUG_LEVEL` zur Steuerung von [\_SECURE\_SCL](../standard-library/secure-scl.md).  Weitere Informationen finden Sie unter [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md).  
+> Ältere Dokumentationen und Quellcode beziehen sich möglicherweise auf das [_SECURE_SCL](../standard-library/secure-scl.md)-Makro. Verwenden Sie `_ITERATOR_DEBUG_LEVEL` zur Steuerung von `_SECURE_SCL`. Weitere Informationen finden Sie unter [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).  
   
- Wenn `_SECURE_SCL` als 1 definiert ist, werden folgende SCL\-Überprüfungen ausgeführt:  
+Wenn `_ITERATOR_DEBUG_LEVEL` als 1 oder 2 definiert ist, werden die folgenden Iteratorprüfungen durchgeführt:  
   
--   Alle Standarditeratoren \(beispielsweise [vector::iterator](../Topic/vector::iterator.md)\) werden aktiviert.  
+-   Alle Standarditeratoren (beispielsweise [vector::iterator](../standard-library/vector-class.md#vector__iterator)) werden überprüft.  
   
--   Wenn ein Ausgabeiterator ein aktivierter Iterator ist, erhalten Sie bei Aufrufen der Standardfunktion aktiviertes Verhalten \(beispielsweise [std::copy](../Topic/copy.md)\).  
+-   Wenn ein Ausgabeiterator ein überprüfter Iterator ist, wird das Verhalten von Aufrufen der Standardbibliotheksfunktionen wie [std::copy](../standard-library/algorithm-functions.md#copy) überprüft.  
   
--   Wenn der Ausgabeiterator ein nicht aktivierter Iterator ist, werden durch Aufrufe der Standardfunktion Compilerwarnungen verursacht.  
+-   Wenn ein Ausgabeiterator ein nicht überprüfter Iterator ist, verursachen Aufrufe der Standardbibliotheksfunktionen Compilerwarnungen.  
   
--   Die folgenden Funktionen generieren einen Laufzeitfehler, wenn ein Zugriff außerhalb der Grenzen des Containers erfolgt:  
+-   Die folgenden Funktionen verursachen einen Laufzeitfehler, wenn ein Zugriff außerhalb der Grenzen des Containers erfolgt:  
   
 |||||  
 |-|-|-|-|  
-|[basic\_string::operator](../Topic/basic_string::operator.md)|[bitset::operator](../Topic/bitset::operator.md)|[deque::back](../Topic/deque::back.md)|[deque::front](../Topic/deque::front.md)|  
-|[deque::operator](../Topic/deque::operator.md)|[list::back](../Topic/list::back.md)|[list::front](../Topic/list::front.md)|[queue::back](../Topic/queue::back.md)|  
-|[queue::front](../Topic/queue::front.md)|[vector::operator](../Topic/vector::operator.md)|[vector::back](../Topic/vector::back.md)|[vector::front](../Topic/vector::front.md)|  
+|[basic_string::operator\[\]](../standard-library/basic-string-class.md#basic_string__operator_at)|[bitset::operator\[\]](../standard-library/bitset-class.md#bitset__operator_at)|[deque::back](../standard-library/deque-class.md#deque__back)|[deque::front](../standard-library/deque-class.md#deque__front)|  
+|[deque::operator\[\]](../standard-library/deque-class.md#deque__operator_at)|[list::back](../standard-library/list-class.md#list__back)|[list::front](../standard-library/list-class.md#list__front)|[queue::back](../standard-library/queue-class.md#queue__back)|  
+|[queue::front](../standard-library/queue-class.md#queue__front)|[vector::operator\[\]](../standard-library/vector-class.md#vector__operator_at)|[vector::back](../standard-library/vector-class.md#vector__back)|[vector::front](../standard-library/vector-class.md#vector__front)|  
   
- Wenn `_SECURE_SCL` als 0 definiert ist:  
+Wenn `_ITERATOR_DEBUG_LEVEL` als 0 definiert ist:  
   
--   Alle Standarditeratoren sind nicht aktiviert \(Iteratoren können über die Containergrenzen hinaus verschoben werden, was zu nicht definiertem Verhalten führt\).  
+-   Alle Standarditeratoren werden nicht überprüft. Iteratoren können über die Containergrenzen hinausgehen, was zu nicht definiertem Verhalten führt.  
   
--   Wenn ein Ausgabeiterator ein aktivierter Iterator ist, erhalten Sie bei Aufrufen der Standardfunktion aktiviertes Verhalten \(beispielsweise `std::copy`\).  
+-   Wenn ein Ausgabeiterator ein überprüfter Iterator ist, wird das Verhalten von Aufrufen der Standardbibliotheksfunktionen wie `std::copy` überprüft.  
   
--   Wenn ein Ausgabeiterator ein nicht aktivierter Iterator ist, erhalten Sie bei Aufrufen der Standardfunktion nicht aktiviertes Verhalten \(beispielsweise `std::copy`\).  
+-   Wenn ein Ausgabeiterator ein nicht überprüfter Iterator ist, wird das Verhalten von Aufrufen der Standardbibliotheksfunktionen nicht überprüft.  
   
- Ein aktivierter Iterator bezieht sich auf einen Iterator, der `invalid_parameter_handler` aufruft, wenn Sie versuchen, über die Grenzen des Containers hinaus zu wechseln.  Weitere Informationen über `invalid_parameter_handler` finden Sie unter [Parametervalidierung](../c-runtime-library/parameter-validation.md).  
+Ein überprüfter Iterator bezieht sich auf einen Iterator, der `invalid_parameter_handler` aufruft, wenn Sie versuchen, über die Grenzen des Containers hinauszuwechseln. Weitere Informationen über `invalid_parameter_handler` finden Sie unter [Parametervalidierung](../c-runtime-library/parameter-validation.md).  
   
- [checked\_array\_iterator\-Klasse](../standard-library/checked-array-iterator-class.md) und [unchecked\_array\_iterator\-Klasse](../standard-library/unchecked-array-iterator-class.md) sind die Iteratoradapter, die aktivierte Iteratoren unterstützen.  
+Die Iteratoradaptoren, die überprüfte Iteratoren unterstützen, sind die [checked_array_iterator-Klasse](../standard-library/checked-array-iterator-class.md) und die [unchecked_array_iterator-Klasse](../standard-library/unchecked-array-iterator-class.md).  
   
-## Beispiel  
- Beim Kompilieren mit `_SECURE_SCL 1` tritt ein Laufzeitfehler auf, wenn Sie versuchen, mit dem Indizierungsoperator bestimmter Klassen auf ein Element zuzugreifen, das sich außerhalb der Grenzen des Containers befindet.  
+## <a name="example"></a>Beispiel  
+  
+Beim Kompilieren mit `_ITERATOR_DEBUG_LEVEL`, das auf 1 oder 2 gesetzt ist, tritt ein Laufzeitfehler auf, wenn Sie versuchen, mit dem Indizierungsoperator bestimmter Klassen auf ein Element zuzugreifen, das sich außerhalb der Containergrenzen befindet.  
   
 ```cpp  
-// checked_iterators_1.cpp  
-// cl.exe /Zi /MDd /EHsc /W4  
+// checked_iterators_1.cpp  
+// cl.exe /Zi /MDd /EHsc /W4  
   
-#define _ITERATOR_DEBUG_LEVEL 1  
-// implies #define _SECURE_SCL 1  
+#define _ITERATOR_DEBUG_LEVEL 1  
   
-#include <vector>  
-#include <iostream>  
+#include <vector>  
+#include <iostream>  
   
-using namespace std;  
+using namespace std;  
   
-int main()   
+int main()  
 {  
-    vector<int> v;  
-    v.push_back(67);  
+   vector<int> v;  
+   v.push_back(67);  
   
-    int i = v[0];  
-    cout << i << endl;  
+   int i = v[0];  
+   cout << i << endl;  
   
-    i = v[1]; // triggers invalid parameter handler  
-};  
-  
+   i = v[1]; //triggers invalid parameter handler  
+}  
 ```  
   
- Dieses Programm druckt "67" und zeigt ein Assertionsfehlerdialogfeld mit zusätzlichen Informationen über den Fehler an.  
+Dieses Programm gibt „67“ aus und zeigt dann ein Assertionsfehlerdialogfeld mit zusätzlichen Informationen zu dem Fehler an.  
   
-## Beispiel  
- Wenn Sie mit `_SECURE_SCL 1` kompilieren, tritt entsprechend ein Laufzeitfehler auf, wenn Sie versuchen, mit dem Anfang oder dem Ende bestimmter Klassen auf ein Element zuzugreifen und der Container leer ist.  
+## <a name="example"></a>Beispiel  
+  
+Wenn Sie auf ähnliche Weise mit `_ITERATOR_DEBUG_LEVEL` kompilieren, das auf 1 oder 2 gesetzt ist, tritt ein Laufzeitfehler auf, wenn Sie versuchen, auf ein Element zuzugreifen, indem Sie `front` oder `back` in Containerklassen verwenden, wenn der Container leer ist.  
   
 ```cpp  
-// checked_iterators_2.cpp  
-// cl.exe /Zi /MDd /EHsc /W4  
+// checked_iterators_2.cpp  
+// cl.exe /Zi /MDd /EHsc /W4  
+#define _ITERATOR_DEBUG_LEVEL 1  
   
-#define _ITERATOR_DEBUG_LEVEL 1  
-// implies #define _SECURE_SCL 1  
+#include <vector>  
+#include <iostream>  
   
-#include <vector>  
-#include <iostream>  
+using namespace std;  
   
-using namespace std;  
-  
-int main()   
+int main()  
 {  
-    vector<int> v;  
+   vector<int> v;  
   
-    int& i = v.front(); // triggers invalid parameter handler  
-};  
-  
+   int& i = v.front(); // triggers invalid parameter handler  
+}  
 ```  
   
- Dieses Programm zeigt ein Assertionsfehlerdialogfeld mit zusätzlichen Informationen über den Fehler an.  
+Dieses Programm zeigt ein Assertionsfehlerdialogfeld mit zusätzlichen Informationen zu dem Fehler an.  
   
- Im folgenden Code werden verschiedene Anwendungsfälle für Iteratoren mit Kommentaren veranschaulicht.  
+## <a name="example"></a>Beispiel  
+  
+Im folgenden Code werden verschiedene Anwendungsfälle für Iteratoren mit Kommentaren veranschaulicht. In der Standardeinstellung ist `_ITERATOR_DEBUG_LEVEL` in Debugbuilds auf 2 und in Verkaufsversionen auf 0 festgelegt.  
   
 ```cpp  
-// cl.exe /MTd /EHsc /W4  
+// checked_iterators_3.cpp  
+// cl.exe /MTd /EHsc /W4  
+  
 #include <algorithm>  
 #include <array>  
 #include <iostream>  
@@ -142,7 +153,9 @@ int main() 
   
 using namespace std;  
   
-template <typename C> void print(const string& s, const C& c) {  
+template <typename C> 
+void print(const string& s, const C& c)  
+{  
     cout << s;  
   
     for (const auto& e : c) {  
@@ -159,7 +172,7 @@ int main()
     print("v: ", v);  
   
     // OK: vector::iterator is checked in debug mode  
-    // (i.e. an overrun will trigger a debug assertion)  
+    // (i.e. an overrun causes a debug assertion)  
     vector<int> v2(16);  
     transform(v.begin(), v.end(), v2.begin(), [](int n) { return n * 2; });  
     print("v2: ", v2);  
@@ -171,34 +184,34 @@ int main()
     print("v3: ", v3);  
   
     // OK: array::iterator is checked in debug mode  
-    // (i.e. an overrun will trigger a debug assertion)  
+    // (i.e. an overrun causes a debug assertion)  
     array<int, 16> a4;  
     transform(v.begin(), v.end(), a4.begin(), [](int n) { return n * 4; });  
     print("a4: ", a4);  
   
     // OK: Raw arrays are checked in debug mode  
-    // (an overrun will trigger a debug assertion)  
-    // NOTE: This applies only when raw arrays are given to STL algorithms!  
+    // (an overrun causes a debug assertion)  
+    // NOTE: This applies only when raw arrays are given to C++ Standard Library algorithms!  
     int a5[16];  
     transform(v.begin(), v.end(), a5, [](int n) { return n * 5; });  
     print("a5: ", a5);  
   
     // WARNING C4996: Pointers cannot be checked in debug mode  
-    // (an overrun will trigger undefined behavior)  
+    // (an overrun causes undefined behavior)  
     int a6[16];  
     int * p6 = a6;  
     transform(v.begin(), v.end(), p6, [](int n) { return n * 6; });  
     print("a6: ", a6);  
   
     // OK: stdext::checked_array_iterator is checked in debug mode  
-    // (an overrun will trigger a debug assertion)  
+    // (an overrun causes a debug assertion)  
     int a7[16];  
     int * p7 = a7;  
     transform(v.begin(), v.end(), stdext::make_checked_array_iterator(p7, 16), [](int n) { return n * 7; });  
     print("a7: ", a7);  
   
     // WARNING SILENCED: stdext::unchecked_array_iterator is marked as checked in debug mode  
-    // (it performs no checking, so an overrun will trigger undefined behavior)  
+    // (it performs no checking, so an overrun causes undefined behavior)  
     int a8[16];  
     int * p8 = a8;  
     transform(v.begin(), v.end(), stdext::make_unchecked_array_iterator(p8), [](int n) { return n * 8; });  
@@ -207,17 +220,18 @@ int main()
   
 ```  
   
-## Ausgabe  
- Das Kompilieren des im vorherigen Abschnitt gezeigten Codes mit `cl.exe /EHsc /W4 /MTd` führt zu folgender Compilerwarnung. Die Kompilierung in eine ausführbare Datei wird jedoch ohne Fehler ausgeführt:  
+Beim Kompilieren dieses Codes mit `cl.exe /EHsc /W4 /MTd checked_iterators_3.cpp` gibt der Compiler eine Warnung aus, die Kompilierung erfolgt aber ohne Fehler in eine ausführbare Datei:  
   
-```  
-algorithm(1026) : warning C4996: 'std::_Transform1': Function call with parameters that may be unsafe - this call rel  
-ies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'  
+```Output  
+algorithm(1026) : warning C4996: 'std::_Transform1': Function call with parameters 
+that may be unsafe - this call relies on the caller to check that the passed values 
+are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation 
+on how to use Visual C++ 'Checked Iterators'  
 ```  
   
- Das Ausführen der ausführbaren Konsolen\-App\-Datei ergibt folgende Ausgabe:  
+Bei der Ausführung in der Befehlszeile erzeugt die ausführbare Datei die folgende Ausgabe:  
   
-```  
+```Output  
 v: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  
 v2: 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30  
 v3: 0 3 6 9 12 15 18 21 24 27 30 33 36 39 42 45  
@@ -228,6 +242,8 @@ a7: 0 7 14 21 28 35 42 49 56 63 70 77 84 91 98 105
 a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120  
 ```  
   
-## Siehe auch  
- [STL\-Übersicht](../standard-library/cpp-standard-library-overview.md)   
- [Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)   
+ [Debug Iterator Support (Unterstützung für Iteratordebugging)](../standard-library/debug-iterator-support.md)
+
+

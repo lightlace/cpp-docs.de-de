@@ -1,55 +1,71 @@
 ---
-title: "_chgsign, _chgsignf, _chgsignl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_chgsignl"
-  - "_chgsign"
-  - "_chgsignf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_chgsignf"
-  - "chgsign"
-  - "_chgsignl"
-  - "_chgsign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_chgsign-Funktion"
-  - "_chgsignf-Funktion"
-  - "_chgsignl-Funktion"
-  - "chgsign-Funktion"
+title: _chgsign, _chgsignf, _chgsignl | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _chgsignl
+- _chgsign
+- _chgsignf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _chgsignf
+- chgsign
+- _chgsignl
+- _chgsign
+dev_langs:
+- C++
+helpviewer_keywords:
+- _chgsignl function
+- _chgsignf function
+- chgsign function
+- _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _chgsign, _chgsignf, _chgsignl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 45dd5ed9f4212a13d1adc0f9ea6baba0f7768bc7
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="chgsign-chgsignf-chgsignl"></a>_chgsign, _chgsignf, _chgsignl
 Kehrt das Zeichen eines Gleitkommaarguments um.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double _chgsign(   
@@ -63,26 +79,26 @@ long double _chgsignl(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `x`  
  Der zu ändernde Gleitkommawert.  
   
-## Rückgabewert  
- Die `_chgsign`\-Funktionen geben einen Wert zurück, der gleich dem Gleitkommaargument `x` ist, aber mit umgekehrtem Vorzeichen.  Es gibt keine Fehlerrückgabe.  
+## <a name="return-value"></a>Rückgabewert  
+ Die `_chgsign`-Funktionen geben einen Wert zurück, der gleich dem Gleitkommaargument `x` ist, aber mit umgekehrtem Vorzeichen. Es gibt keine Fehlerrückgabe.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_chgsign`|\<float.h\>|  
-|`_chgsignf`, `_chgsignl`|\<math.h\>|  
+|-------------|---------------------|  
+|`_chgsign`|\<float.h>|  
+|`_chgsignf`, `_chgsignl`|\<math.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [Fabs, Fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
- [copysign, copysignf, copysignl, \_copysign, \_copysignf, \_copysignl](../../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
+ [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
+ [copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](../../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)

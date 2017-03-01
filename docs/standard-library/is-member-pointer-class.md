@@ -1,55 +1,68 @@
 ---
-title: "is_member_pointer-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::is_member_pointer"
-  - "is_member_pointer"
-  - "std.tr1.is_member_pointer"
-  - "std.is_member_pointer"
-  - "std::is_member_pointer"
-  - "type_traits/std::is_member_pointer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_member_pointer-Klasse [TR1]"
-  - "is_member_pointer"
+title: is_member_pointer-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_member_pointer
+- std::is_member_pointer
+- type_traits/std::is_member_pointer
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_member_pointer class
+- is_member_pointer
 ms.assetid: da07ff4e-9ee0-4baa-ad93-1741f10913d1
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_member_pointer-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 3f6040bd57b98bb79c2e041a8f6f1ce39b90f7eb
+ms.lasthandoff: 02/24/2017
 
-Testet, ob Typ ein Memberzeiger ist.  
+---
+# <a name="ismemberpointer-class"></a>is_member_pointer-Klasse
+Testet, ob der Typ ein Zeiger auf den Member ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<class Ty>  
-    struct is_member_pointer;  
+template <class Ty>  
+struct is_member_pointer;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
- Der Typ in Abfragen.  
+ Der abzufragende Typ.  
   
-## Hinweise  
- Eine Instanz der Typprädikatgriffe True, wenn der Typ `Ty` ein Zeiger auf eine Memberfunktion oder ein Zeiger z Memberobjekt ist oder ein `cv-qualified` Formular von einem davon; andernfalls false hält er an.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist TRUE, wenn der Typ `Ty` ein Zeiger auf eine Memberfunktion, ein Zeiger auf ein Memberobjekt oder ein `cv-qualified`-Formular von einem davon ist, andernfalls ist sie FALSE.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
-// std_tr1__type_traits__is_member_pointer.cpp   
+```cpp  
+// std__type_traits__is_member_pointer.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -84,16 +97,20 @@ int main()
   
 ```  
   
-  **is\_member\_pointertrivial \<\*\> \=\= false**  
-**is\_member\_pointerint \<trivial::\*\> \=\= true**  
-**is\_member\_pointerint \<\(functional::\*\)\(\)\-\> \=\= true**   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+```Output  
+is_member_pointer<trivial *> == false  
+is_member_pointer<int trivial::*> == true  
+is_member_pointer<int (functional::*)()> == true  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_member\_function\_pointer\-Klasse](../standard-library/is-member-function-pointer-class.md)   
- [is\_member\_object\_pointer\-Klasse](../standard-library/is-member-object-pointer-class.md)   
- [is\_pointer\-Klasse](../standard-library/is-pointer-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [is_member_function_pointer-Klasse](../standard-library/is-member-function-pointer-class.md)   
+ [is_member_object_pointer-Klasse](../standard-library/is-member-object-pointer-class.md)   
+ [is_pointer-Klasse](../standard-library/is-pointer-class.md)
+

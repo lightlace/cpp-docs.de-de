@@ -1,50 +1,66 @@
 ---
-title: "_get_tzname | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_tzname"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_get_tzname"
-  - "get_tzname"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_get_tzname-Funktion"
-  - "get_tzname-Funktion"
-  - "Zeitzonen"
+title: _get_tzname | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_tzname
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _get_tzname
+- get_tzname
+dev_langs:
+- C++
+helpviewer_keywords:
+- _get_tzname function
+- time zones
+- get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _get_tzname
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 2a7712c311c5007b2d50578d78452d6c989a7ad1
+ms.lasthandoff: 02/24/2017
 
-Ruft die Zeichenfolgendarstellung des Zeitzonennamens oder des Tageslicht\-Normalzeit\-Zonennamens ab \(DST\).  
+---
+# <a name="gettzname"></a>_get_tzname
+Ruft die Darstellung der Zeichenfolge vom Namen der Zeitzone oder den Name der Standard-Sommerzeitzone (DST) ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t _get_tzname(  
@@ -55,62 +71,62 @@ errno_t _get_tzname(
 );  
 ```  
   
-#### Parameter  
- \[out\] `pReturnValue`  
- Die Zeichenfolgenlänge von `timeZoneName` einschließlich einen Nullterminator.  
+#### <a name="parameters"></a>Parameter  
+ [out] `pReturnValue`  
+ Die Länge der Zeichenfolge von `timeZoneName` einschließlich eines NULL-Terminators.  
   
- \[out\] `timeZoneName`  
- Die Adresse einer Zeichenfolge für die Darstellung des Zeitzonennamens oder des Tageslicht\-Normalzeit\-Zonennamens \(DST\), je nach `index`.  
+ [out] `timeZoneName`  
+ Die Adresse einer Zeichenfolge für die Darstellung des Namens der Zeitzone oder des Namens der Standard-Sommerzeitzone (DST), abhängig von `index`.  
   
- \[in\] `sizeInBytes`  
- Die Größe der Zeichenfolge `timeZoneName` in Bytes.  
+ [in] `sizeInBytes`  
+ Die Größe der `timeZoneName`-Zeichenfolge in Bytes.  
   
- \[in\] `index`  
- Der Index von einem der beiden Zeitzonennamen abzurufen.  
+ [in] `index`  
+ Der Index eines der zwei abzurufenden Zeitzonen.  
   
-## Rückgabewert  
- Null wenn erfolgreich; andernfalls ein `errno`\-Typwert.  
+## <a name="return-value"></a>Rückgabewert  
+ Null (0), wenn erfolgreich; andernfalls ein `errno`-Zeichenwert.  
   
- Wenn entweder `timeZoneName` ist `NULL` oder `sizeInBytes` einmal oder kleiner als null \(jedoch nicht beide\) ist, wird ein ungültiger Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EINVAL` zurück.  
+ Wenn `timeZoneName`, `NULL` oder `sizeInBytes` null oder kleiner als null ist (aber nicht beides), wird ein Handler für ungültige Parameter abgerufen, siehe Beschreibung unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EINVAL` zurück.  
   
-### Fehlerbedingungen  
+### <a name="error-conditions"></a>Fehlerbedingungen  
   
 |`pReturnValue`|`timeZoneName`|`sizeInBytes`|`index`|Rückgabewert|Inhalt von `timeZoneName`|  
-|--------------------|--------------------|-------------------|-------------|------------------|-------------------------------|  
-|Größe von TZ\-Namen|`NULL`|0|0 oder 1|0|nicht geändert|  
-|Größe von TZ\-Namen|any|\> 0|0 oder 1|0|TZ\-Name|  
-|nicht geändert|`NULL`|\> 0|any|`EINVAL`|nicht geändert|  
-|nicht geändert|any|0 \(Null\)|any|`EINVAL`|nicht geändert|  
-|nicht geändert|any|\> 0|\> 1|`EINVAL`|nicht geändert|  
+|--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|  
+|Größe des ZZ-Namens|`NULL`|0|0 oder 1|0|nicht geändert|  
+|Größe des ZZ-Namens|any|> 0|0 oder 1|0|ZZ-Name|  
+|nicht geändert|`NULL`|> 0|alle|`EINVAL`|nicht geändert|  
+|nicht geändert|any|Null|alle|`EINVAL`|nicht geändert|  
+|nicht geändert|any|> 0|> 1|`EINVAL`|nicht geändert|  
   
-## Hinweise  
- Die `_get_tzname`\-Funktion ruft die Zeichenfolgendarstellung des Zeitzonennamens oder des Tageslicht\-Normalzeit\-Zonennamens \(DST\) in die Adresse von `timeZoneName` abhängig von dem Indexwert, zusammen mit der Größe der Zeichenfolge in `pReturnValue` ab.  Wenn `timeZoneName``NULL` und `sizeInBytes` gleich ist, nur wird die Größe der Zeichenfolge der Zeitzone in Bytes in `pReturnValue` zurückgegeben.  Die Indexwerte müssen entweder 0 für Normalzeit\-Zone oder 1 für Tageslicht\-Normalzeit\-Zone sein; alle anderen Werte des Index verfügen unbestimmte Ergebnisse.  
+## <a name="remarks"></a>Hinweise  
+ Die `_get_tzname`-Funktion ruft die Darstellung der Zeichenfolge des Namens der Zeitzone oder des Namens der Standard-Sommerzeit (DST) in die Adresse von `timeZoneName` ab, je nach Indexwert sowie der Größe der Zeichenfolge in `pReturnValue`. Wenn `timeZoneName` `NULL` ist und `sizeInBytes` gleich null, wird nur die Größe der Zeichenfolge der beiden Zeitzonen in Bytes in `pReturnValue` zurückgegeben. Die Indexwerte müssen entweder für Standard-Zeitzonen 0 oder 1 für Standard-Sommerzeitzonen betragen. Alle anderen Indexwerte haben unbestimmte Ergebnisse.  
   
-### Indexwerte  
+### <a name="index-values"></a>Indexwerte  
   
-|`index`|Inhalt von `timeZoneName`|`timeZoneName` Standardwerte|  
-|-------------|-------------------------------|----------------------------------|  
-|0|Zeitzonenname|"PST"|  
-|1|Tageslicht\-Normalzeit\-Zonenname|"PDT"|  
-|\> 1 oder \< 0|`errno` auf `EINVAL` festgelegt|nicht geändert|  
+|`index`|Inhalt von `timeZoneName`|`timeZoneName` Standardwert|  
+|-------------|--------------------------------|----------------------------------|  
+|0|Name der Zeitzone|„PST“|  
+|1|Name der Standard-Sommerzeitzone|„PDT“|  
+|> 1 oder < 0|`errno` auf `EINVAL` festgelegt.|nicht geändert|  
   
- Es sei denn, die Werten explizit während der Laufzeit geändert werden, sind die Standardwerte PST "" und "PDT" bzw.  Die Größe dieser Zeichenarrays wird vom `TZNAME_MAX`\-Wert bestimmt.  
+ Werden die Werte nicht ausdrücklich während der Laufzeit geändert, sind die Standardwerte „PST“ und „PDT“.  Die Größen dieser Zeichenarrays unterliegen dem `TZNAME_MAX`-Wert.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_get_tzname`|\<time.h\>|  
+|-------------|---------------------|  
+|`_get_tzname`|\<time.h>|  
   
  Weitere Informationen finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
- [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
- [\_get\_daylight](../../c-runtime-library/reference/get-daylight.md)   
- [\_get\_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
- [\_get\_timezone](../../c-runtime-library/reference/get-timezone.md)   
- [TZNAME\_MAX](../../c-runtime-library/tzname-max.md)
+ [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
+ [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
+ [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
+ [_get_timezone](../../c-runtime-library/reference/get-timezone.md)   
+ [TZNAME_MAX](../../c-runtime-library/tzname-max.md)
