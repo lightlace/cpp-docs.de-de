@@ -1,63 +1,120 @@
 ---
-title: "CMFCTabToolTipInfo Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCTabToolTipInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCTabToolTipInfo struct"
+title: CMFCTabToolTipInfo Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCTabToolTipInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
 caps.latest.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# CMFCTabToolTipInfo Structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: b9750cd9369313a3ed6ea9474d401cd0068a75fa
+ms.lasthandoff: 02/24/2017
 
-Diese Struktur enthält Informationen über die MDI\-Registerkarte, der der Benutzer auf zeigt.  
+---
+# <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo-Struktur
+Diese Struktur enthält Informationen über die MDI-Registerkarte, der der Benutzer über bewegt wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CMFCTabToolTipInfo  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Datenmember  
+### <a name="data-members"></a>Datenmember  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCTabToolTipInfo::m\_nTabIndex](../Topic/CMFCTabToolTipInfo::m_nTabIndex.md)|Gibt den Index des Tab\-Steuerelements an.|  
-|[CMFCTabToolTipInfo::m\_pTabWnd](../Topic/CMFCTabToolTipInfo::m_pTabWnd.md)|Ein Zeiger auf das Tab\-Steuerelement.|  
-|[CMFCTabToolTipInfo::m\_strText](../Topic/CMFCTabToolTipInfo::m_strText.md)|Der QuickInfo\-Text.|  
+|[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Gibt den Index des Registerkarten-Steuerelements.|  
+|[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Ein Zeiger auf das Registerkarten-Steuerelement.|  
+|[CMFCTabToolTipInfo::m_strText](#m_strtext)|Der QuickInfo-Text.|  
   
-## Hinweise  
- Ein Zeiger auf eine `CMFCTabToolTipInfo`\-Struktur wird als Parameter der `AFX_WM_ON_GET_TAB_TOOLTIP` Meldung übergeben.  Diese Meldung wird generiert, wenn MDI\-Registerkarten und die Benutzerbewegungen des mauszeigers zu einem Tab\-Steuerelement aktiviert werden.  
+## <a name="remarks"></a>Hinweise  
+ Ein Zeiger auf eine `CMFCTabToolTipInfo` Struktur als Parameter übergeben wird die `AFX_WM_ON_GET_TAB_TOOLTIP` Nachricht. Diese Meldung wird generiert, wenn MDI-Registerkarten aktiviert sind und der Benutzer über ein Registerkarten-Steuerelement bewegt wird.  
   
-## Beispiel  
- Im folgenden Beispiel wird gezeigt, wie `CMFCTabToolTipInfo` in [MDITabsDemo\-Beispiel: MDI im Registerkartenformat](../../top/visual-cpp-samples.md) verwendet wird.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt wie `CMFCTabToolTipInfo` werden in der [MDITabsDemo-Beispiel: MFC-im Registerkartenformat MDI-Anwendung](../../visual-cpp-samples.md).  
   
- [!CODE [NVC_MFC_MDITabsDemo#2](../CodeSnippet/VS_Snippets_Misc/NVC_MFC_MDITabsDemo#2)]  
+ [!code-cpp[NVC_MFC_MDITabsDemo&#2;](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CMFCTabToolTipInfo](../../mfc/reference/cmfctabtooltipinfo-structure.md)  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxbasetabctrl.h  
   
-## Siehe auch  
+##  <a name="a-namemntabindexa--cmfctabtooltipinfomntabindex"></a><a name="m_ntabindex"></a>CMFCTabToolTipInfo::m_nTabIndex  
+ Gibt den Index des Registerkarten-Steuerelements.  
+  
+```  
+int m_nTabIndex;  
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Der Index der Registerkarte für die der Benutzer zeigt.  
+  
+### <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt wie `m_nTabIndex` werden in der [MDITabsDemo-Beispiel: MFC-im Registerkartenformat MDI-Anwendung](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_MDITabsDemo&#2;](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]  
+  
+##  <a name="a-namemptabwnda--cmfctabtooltipinfomptabwnd"></a><a name="m_ptabwnd"></a>CMFCTabToolTipInfo::m_pTabWnd  
+ Ein Zeiger auf das Registerkarten-Steuerelement.  
+  
+```  
+CMFCBaseTabCtrl* m_pTabWnd;  
+```  
+  
+### <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt wie `m_pTabWnd` werden in der [MDITabsDemo-Beispiel: MFC-im Registerkartenformat MDI-Anwendung](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_MDITabsDemo&#2;](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]  
+  
+##  <a name="a-namemstrtexta--cmfctabtooltipinfomstrtext"></a><a name="m_strtext"></a>CMFCTabToolTipInfo::m_strText  
+ Der QuickInfo-Text.  
+  
+```  
+CString m_strText;  
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Wenn die Zeichenfolge leer ist, wird die QuickInfo nicht angezeigt.  
+  
+### <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt wie `m_strText` werden in der [MDITabsDemo-Beispiel: MFC-im Registerkartenformat MDI-Anwendung](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_MDITabsDemo&#2;](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]  
+  
+## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [Klassen](../../mfc/reference/mfc-classes.md)   
- [CMDIFrameWndEx::EnableMDITabs](../Topic/CMDIFrameWndEx::EnableMDITabs.md)   
- [CMDITabInfo::m\_bTabCustomTooltips](../Topic/CMDITabInfo::m_bTabCustomTooltips.md)
+ [Klassen](../../mfc/reference/mfc-classes.md)
+

@@ -1,64 +1,140 @@
 ---
-title: "ICommandUI Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ICommandUI"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandUI interface"
+title: ICommandUI Schnittstelle | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ICommandUI
+dev_langs:
+- C++
+helpviewer_keywords:
+- ICommandUI interface
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# ICommandUI Interface
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 1db6b3fa58639140322816c37103566353b15633
+ms.lasthandoff: 02/24/2017
 
-Verwaltet Benutzeroberflächenbefehle.  
+---
+# <a name="icommandui-interface"></a>ICommandUI-Schnittstelle
+Verwaltet von Befehlen der Benutzeroberfläche.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 interface class ICommandUI  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[ICommandUI::Check](../Topic/ICommandUI::Check.md)|Legt das Benutzeroberflächenelement für diesen Befehl zum entsprechenden Aktivierungszustand fest.|  
-|[ICommandUI::ContinueRouting](../Topic/ICommandUI::ContinueRouting.md)|Weist den BefehlRouting Mechanismus mit, um das Weiterleiten der aktuellen Meldung in der Kette von Handlern fortzusetzen.|  
-|[ICommandUI::Enabled](../Topic/ICommandUI::Enabled.md)|Aktiviert oder deaktiviert das Benutzeroberflächenelement für diesen Befehl.|  
-|[ICommandUI::ID](../Topic/ICommandUI::ID.md)|Ruft die ID des Benutzeroberflächenobjekts ab, das vom `ICommandUI`\-Objekt dargestellt wird.|  
-|[ICommandUI::Index](../Topic/ICommandUI::Index.md)|Ruft den Index des Benutzeroberflächenobjekts ab, das vom `ICommandUI`\-Objekt dargestellt wird.|  
-|[ICommandUI::Radio](../Topic/ICommandUI::Radio.md)|Legt das Benutzeroberflächenelement für diesen Befehl zum entsprechenden Aktivierungszustand fest.|  
-|[ICommandUI::Text](../Topic/ICommandUI::Text.md)|Legt den Text des Benutzeroberflächenelements für diesen Befehl fest.|  
+|[icommandui__Check](#check)|Legt die Benutzer-Interface-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.|  
+|[ICommandUI::ContinueRouting](#continuerouting)|Teilt Befehlsrouting Mechanismus für die Weiterleitung der aktuellen Nachricht der Vererbungskette Handler fortgesetzt.|  
+|[ICommandUI::Enabled](#enabled)|Aktiviert oder deaktiviert die Benutzer-Interface-Element für diesen Befehl.|  
+|[ICommandUI::ID](#id)|Ruft die ID des das Benutzeroberflächenobjekt, dargestellt durch die `ICommandUI` Objekt.|  
+|[ICommandUI::Index](#index)|Ruft den Index des das Benutzeroberflächenobjekt, dargestellt durch die `ICommandUI` Objekt.|  
+|[ICommandUI::Radio](#radio)|Legt die Benutzer-Interface-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.|  
+|[ICommandUI::Text](#text)|Legt den Text des Elements Schnittstelle Benutzer für diesen Befehl.|  
   
-## Hinweise  
- Diese Schnittstelle stellt Methoden und Eigenschaften, die Benutzeroberflächenbefehle verwalten.  `ICommandUI` ist zu [CCmdUI Class](../../mfc/reference/ccmdui-class.md) vergleichbar, außer dass `ICommandUI` wird für MFC\-Anwendungen verwendet, die mit .NET\-Komponenten zusammenarbeiten.  
+## <a name="remarks"></a>Hinweise  
+ Diese Schnittstelle stellt Methoden und Eigenschaften, die von Befehlen der Benutzeroberfläche verwalten. `ICommandUI`ähnelt dem [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md), außer dass `ICommandUI` für MFC-Anwendung, die mit .NET Komponenten Zusammenwirken verwendet wird.  
   
- `ICommandUI` wird innerhalb eines `ON_UPDATE_COMMAND_UI`\-Handlers in [ICommandTarget](../../mfc/reference/icommandtarget-interface.md) von abgeleitete Klasse verwendet.  Wenn ein Benutzer einer Anwendung \(aktiviert oder klickt\), ein Menü aktiviert, wird jedes Menüelement angezeigt, wie aktiviert oder deaktiviert.  Das Ziel jedes Menübefehls stellt diese Informationen aus dem Implementieren eines Handlers `ON_UPDATE_COMMAND_UI` bereit.  Für jedes der Befehlsbenutzeroberflächenobjekte in der Anwendung, verwenden Sie das Eigenschaftenfenster, um einen Eintrag in der Meldungszuordnung und einen Funktionsprototyp für jeden Handler zu erstellen.  
+ `ICommandUI`wird verwendet, in ein `ON_UPDATE_COMMAND_UI` -Handler in einer [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-abgeleiteten Klasse. Wenn ein Benutzer einer Anwendung (aktiviert oder Klicks) aktiviert wird ein Menü, jedes Menüelement angezeigt, als aktiviert oder deaktiviert. Das Ziel der einzelnen Menübefehle bietet diese Informationen durch die Implementierung einer `ON_UPDATE_COMMAND_UI` Handler. Verwenden Sie für jeden Befehl Schnittstelle Benutzerobjekte in Ihrer Anwendung das Eigenschaftenfenster Meldungszuordnungseintrags und Funktionsprototyp für jeden Handler erstellen.  
   
- Weitere Informationen darüber, wie die `ICommandUI`\-Schnittstelle im Befehlsrouting verwendet wird, finden Sie unter [Gewusst wie: Hinzufügen von Befehlsrouting zum Windows Forms\-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
+ Weitere Informationen darüber, wie der `ICommandUI` Schnittstelle in Befehlsrouting verwendet wird, finden Sie unter [Gewusst wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
   
- Weitere Informationen zur Verwendung von Windows Forms, finden Sie unter [Verwenden eines Windows Form\-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [mithilfe eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
- Weitere Informationen dazu, wie Benutzeroberflächenbefehle in MFC verwaltet werden, finden Sie unter [CCmdUI Class](../../mfc/reference/ccmdui-class.md).  
+ Weitere Informationen dazu, wie Benutzeroberflächenbefehlen in MFC verwaltet werden, finden Sie unter [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md).  
   
-## Anforderungen  
- **Header:** afxwinforms.h \(definiert in Assembly in \\ atlmfc \\ lib mfcmifc80.dll\)  
+## <a name="a-namechecka-icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+Legt die Benutzer-Interface-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.
+```
+property UICheckState Check;
+```
+## <a name="remarks"></a>Hinweise  
+Diese Eigenschaft legt die Benutzer-Interface-Element für diesen Befehl an den entsprechenden Aktivierungszustand. Kontrollkästchen auf der folgenden Werte festgelegt:  
+- 0 deaktivieren  
+- 1 Überprüfen  
+- Legen Sie unbestimmt&2;  
+
+## <a name="a-namecontinueroutinga-icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting   
+Weist den Befehl Weiterleitungsmechanismus routing der aktuellen Nachricht der Vererbungskette Handler fortgesetzt.
+```
+void ContinueRouting();
+```
+## <a name="remarks"></a>Hinweise
+Dies ist ein erweiterter Member-Funktion, die in Verbindung mit einem Ereignishandler ON_COMMAND_EX verwendet werden soll, die FALSE zurückgibt. Weitere Informationen finden Sie unter Technische Hinweis TN006: Meldungszuordnungen.
+
+## <a name="a-nameenableda-icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled 
+Aktiviert oder deaktiviert die Benutzer-Interface-Element für diesen Befehl.
+```
+property bool Enabled;
+```
+## <a name="remarks"></a>Hinweise
+Diese Eigenschaft aktiviert bzw. deaktiviert das User Interface-Element für diesen Befehl. Legen Sie aktiviert, um "true" aktiviert das Element "false", um es zu deaktivieren.
+
+## <a name="a-nameida-icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+Ruft die ID des Benutzerobjekts für die Schnittstelle durch das ICommandUI-Objekt dargestellt wird.
+```
+property unsigned int ID;
+```
+## <a name="remarks"></a>Hinweise
+Diese Eigenschaft ruft die ID (ein Handle) des Menüelements, Symbolleisten-Schaltfläche oder andere Benutzeroberflächen-Objekt, das vom ICommandUI-Objekt dargestellt.
+
+## <a name="a-nameindexa-icommanduiindex"></a><a name="index"></a>ICommandUI::Index   
+Ruft den Index des Benutzerobjekts für die Schnittstelle durch das ICommandUI-Objekt dargestellt wird.
+```
+property unsigned int Index;
+```
+## <a name="remarks"></a>Hinweise
+Diese Eigenschaft ruft den Index (ein Handle) des Menüelements, Symbolleisten-Schaltfläche oder andere Benutzeroberflächen-Objekt, das vom ICommandUI-Objekt dargestellt.
+
+## <a name="a-nameradioa-icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio 
+Legt die Benutzer-Interface-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.
+```
+property bool Radio;
+```
+## <a name="remarks"></a>Hinweise
+Diese Eigenschaft legt die Benutzer-Interface-Element für diesen Befehl an den entsprechenden Aktivierungszustand. Legen Sie "true" aktiviert das Element Sender, um. andernfalls FALSE.
+
+## <a name="a-nametexta-icommanduitext"></a><a name="text"></a>ICommandUI::Text 
+Legt den Text des Elements Schnittstelle Benutzer für diesen Befehl.
+```
+property String^ Text;
+```
+## <a name="remarks"></a>Hinweise
+Diese Eigenschaft legt den Text des Elements Schnittstelle Benutzer für diesen Befehl. Legen Sie Text mit einem Text-Zeichenfolge-Handle.
+
+## <a name="requirements"></a>Anforderungen  
+ **Header:** afxwinforms.h (definiert in der Assembly atlmfc\lib\mfcmifc80.dll)  
   
-## Siehe auch  
- [CCmdUI Class](../../mfc/reference/ccmdui-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md)
+

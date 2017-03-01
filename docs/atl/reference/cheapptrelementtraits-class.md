@@ -1,71 +1,82 @@
 ---
-title: "CHeapPtrElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CHeapPtrElementTraits"
-  - "CHeapPtrElementTraits"
-  - "ATL::CHeapPtrElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeapPtrElementTraits class"
+title: Klasse CHeapPtrElementTraits | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CHeapPtrElementTraits
+- CHeapPtrElementTraits
+- ATL::CHeapPtrElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CHeapPtrElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: cf442a47a8f7f56a9563b73d03224165248232d5
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse stellt Methoden, statische Funktionen und die Typdefinitionen, wenn sie die Auflistungen Heapzeiger nützlich sind, erstellt.  
+---
+# <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits-Klasse
+Diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen hilfreich zum Erstellen von Sammlungen des Heap-Zeiger.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen nicht verwendet werden, die in der Windows Runtime ausführen.  
+>  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template<typename T, class Allocator = ATL::CCRTAllocator>  
+class CHeapPtrElementTraits : 
+   public CDefaultElementTraits<ATL::CHeapPtr<T, Allocator>>
 ```  
   
-      template<  
-typename T,  
-class Allocator= ATL::CCRTAllocator  
->  
-class CHeapPtrElementTraits : public CDefaultElementTraits<  
-ATL::CHeapPtr< T, Allocator>  
->  
-```  
-  
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Der in der Auflistungsklasse gespeichert werden, Objekttyp.  
+ Der Objekttyp in der Auflistungsklasse gespeichert werden.  
   
  `Allocator`  
- Die Speicherbelegungsklasse zur Verwendung.  Der Standardwert ist [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ Die Speicher-Allocation-Klasse verwenden. Der Standardwert ist [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CHeapPtrElementTraits::INARGTYPE](../Topic/CHeapPtrElementTraits::INARGTYPE.md)|Der für das Hinzufügen von Elementen zum Auflistungsklassenobjekt Datentyp, zu verwenden.|  
-|[CHeapPtrElementTraits::OUTARGTYPE](../Topic/CHeapPtrElementTraits::OUTARGTYPE.md)|Der für das Abrufen von Elementen vom Datentyp, Auflistungsklassenobjekt zu verwenden.|  
+|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Der Datentyp für das Klassenobjekt Auflistung Elemente hinzugefügt.|  
+|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Der Datentyp für das Abrufen von Elementen aus der-Auflistung-Klasse.|  
   
-## Hinweise  
- Diese Klasse stellt Methoden, statische Funktionen und Typdefinitionen für die Unterstützung der Erstellung der Auflistungsklassenobjekte bereit, die Heapzeiger enthalten.  Die Klasse wird von abgeleitet `CHeapPtrList``CHeapPtrElementTraits`.  
+## <a name="remarks"></a>Hinweise  
+ Diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen für dadurch, dass die Erstellung von Auflistungsobjekten-Klasse, die Heap-Zeiger. Die Klasse `CHeapPtrList` leitet sich von `CHeapPtrElementTraits`.  
   
- Weitere Informationen finden Sie unter [ATL\-Auflistungsklassen](../../atl/atl-collection-classes.md).  
+ Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -76,10 +87,25 @@ ATL::CHeapPtr< T, Allocator>
   
  `CHeapPtrElementTraits`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atlcoll.h  
   
-## Siehe auch  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [CComHeapPtr Class](../../atl/reference/ccomheapptr-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--cheapptrelementtraitsinargtype"></a><a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
+ Der Datentyp für das Klassenobjekt Auflistung Elemente hinzugefügt.  
+  
+```
+typedef CHeapPtr<T, Allocator>& INARGTYPE;
+```  
+  
+##  <a name="a-nameoutargtypea--cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
+ Der Datentyp für das Abrufen von Elementen aus der-Auflistung-Klasse.  
+  
+```
+typedef T *& OUTARGTYPE;
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
+ [CComHeapPtr-Klasse](../../atl/reference/ccomheapptr-class.md)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+

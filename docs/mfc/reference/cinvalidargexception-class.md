@@ -1,54 +1,68 @@
 ---
-title: "CInvalidArgException Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CInvalidArgException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CInvalidArgException class"
+title: Klasse CInvalidArgException | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CInvalidArgException
+dev_langs:
+- C++
+helpviewer_keywords:
+- CInvalidArgException class
 ms.assetid: e43d7c67-1157-47f8-817a-804083e8186e
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# CInvalidArgException Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 4091c0e8a35320482eba193c89c90982c7e4fca9
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse stellt eine ungültige ArgumentAusnahmebedingung dar.  
+---
+# <a name="cinvalidargexception-class"></a>CInvalidArgException-Klasse
+Diese Klasse stellt eine Ausnahmebedingung für ein ungültiges Argument dar.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 class CInvalidArgException : public CSimpleException  
-  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CInvalidArgException::CInvalidArgException](../Topic/CInvalidArgException::CInvalidArgException.md)|Der \-Konstruktor.|  
+|[CInvalidArgException::CInvalidArgException](#cinvalidargexception)|Der Konstruktor.|  
   
-## Hinweise  
- Ein Objekt `CInvalidArgException` stellt eine ungültige ArgumentAusnahmebedingung dar.  
+## <a name="remarks"></a>Hinweise  
+ Ein `CInvalidArgException` -Objekt stellt eine Ausnahmebedingung Ungültiges Argument dar.  
   
- Weitere Informationen zur Ausnahmebehandlung, finden Sie im Thema [CExceptions\-Klasse](../../mfc/reference/cexception-class.md) und [Ausnahmebehandlung \(MFC\)](../../mfc/exception-handling-in-mfc.md).  
+ Weitere Informationen über Ausnahmebehandlung, finden Sie unter der [CException-Klasse](../../mfc/reference/cexception-class.md) Thema und [Ausnahmebehandlung (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
@@ -56,9 +70,20 @@ class CInvalidArgException : public CSimpleException
   
  `CInvalidArgException`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
   
-## Siehe auch  
+##  <a name="a-namecinvalidargexceptiona--cinvalidargexceptioncinvalidargexception"></a><a name="cinvalidargexception"></a>CInvalidArgException::CInvalidArgException  
+ Der Konstruktor.  
+  
+```  
+CInvalidArgException();
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie diesen Konstruktor nicht direkt. Rufen Sie die globale Funktion **AfxThrowInvalidArgException**.  
+  
+## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CSimpleException Class](../../mfc/reference/csimpleexception-class.md)
+ [CSimpleException-Klasse](../../mfc/reference/csimpleexception-class.md)
+

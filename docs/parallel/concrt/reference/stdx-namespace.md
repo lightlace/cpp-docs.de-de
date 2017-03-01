@@ -1,43 +1,63 @@
 ---
-title: "stdx-Namespace | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppltasks/stdx"
-dev_langs: 
-  - "C++"
+title: Stdx-Namespace | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppltasks/stdx
+dev_langs:
+- C++
 ms.assetid: 0e25b138-1dfa-4073-a0b6-14bed81c774c
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# stdx-Namespace
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 1f1fffccf87a9cab55459fbba8739a6e34161b87
+ms.lasthandoff: 02/24/2017
 
-## Syntax  
+---
+# <a name="stdx-namespace"></a>stdx-Namespace
+## <a name="syntax"></a>Syntax  
   
+```
+namespace stdx;
 ```  
-namespace stdx;  
-```  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Funktionen  
+### <a name="functions"></a>Funktionen  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[declval\-Funktion](../../../parallel/concrt/reference/declval-function.md)||  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[Declval-Funktion](declval-function.md)||  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** ppltasks.h  
   
-## Siehe auch  
- [Referenz](../../../parallel/concrt/reference/reference-concurrency-runtime.md)
+## <a name="see-also"></a>Siehe auch  
+ [Referenz](reference-concurrency-runtime.md)
+
+
+
+

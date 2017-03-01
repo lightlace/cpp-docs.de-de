@@ -1,79 +1,90 @@
 ---
-title: "CComEnum Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CComEnum"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComEnum class"
+title: Klasse CComEnum | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CComEnum
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CComEnum Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 72c172d7a619bb4fd1bd265e465653b691c0bc7b
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse definiert ein COM\-Enumeratorobjekt auf einem Array.  
+---
+# <a name="ccomenum-class"></a>CComEnum-Klasse
+Diese Klasse definiert ein COM-Enumerator-Objekt basierend auf einem Array.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template <class Base,
+    const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>  
+class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
+ T,
+    Copy>,
+ public CComObjectRootEx<ThreadModel>
 ```  
   
-      template <  
-   class Base,  
-   const IID* piid,  
-   class T,  
-   class Copy,  
-   class ThreadModel = CcomObjectThreadModel  
->  
-class ATL_NO_VTABLE CComEnum :  
-   public CComEnumImpl<Base, piid, T, Copy>,  
-   public CComObjectRootEx< ThreadModel >  
-```  
-  
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `Base`  
- Eine COM\-Enumerator \([IEnumXXXX](https://msdn.microsoft.com/en-us/library/ms680089.aspx)\)\-Schnittstelle.  
+ Eine COM-Enumerator ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) Schnittstelle.  
   
  `piid`  
- Ein Zeiger auf den Schnittstellen\-ID der Enumeratorschnittstelle.  
+ Ein Zeiger auf die Schnittstellen-ID der Enumeratorschnittstelle.  
   
  `T`  
- Der Typ des Elements verfügbar gemacht die Enumeratorschnittstelle.  
+ Der Typ des Elements, die von der Enumeratorschnittstelle verfügbar gemacht werden.  
   
  `Copy`  
- Homogenes [Kopierrichtlinienklasse](../../atl/atl-copy-policy-classes.md).  
+ Eine homogene [kopieren Richtlinienklasse](../../atl/atl-copy-policy-classes.md).  
   
  `ThreadModel`  
- Das Threadingmodell der Klasse.  Dieser Parameter wird standardmäßig der globalen Objektthreadmodell, das im Projekt verwendet wird.  
+ Das Threadingmodell der-Klasse. Dieser Parameter ist standardmäßig das globale Objekt Threadmodell in Ihrem Projekt verwendet.  
   
-## Hinweise  
- `CComEnum` definiert ein COM\-Enumeratorobjekt auf einem Array.  Diese Klasse ist [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) analog, die einen Enumerator auf Grundlage eines STL\-Container implementiert.  Typische Schritte für die Verwendung dieser Klasse werden unten erläutert.  Weitere Informationen finden Sie unter [ATL\-Auflistungen und \-Enumeratoren](../../atl/atl-collections-and-enumerators.md).  
+## <a name="remarks"></a>Hinweise  
+ `CComEnum`definiert ein COM-Enumerator-Objekt basierend auf einem Array. Diese Klasse entspricht dem [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) implementiert einen Enumerator basierend auf einen Container für die C++-Standardbibliothek. Schritte für die Verwendung dieser Klasse werden im folgenden beschrieben. Weitere Informationen finden Sie unter [ATL-Auflistungen und-Enumerationen](../../atl/atl-collections-and-enumerators.md).  
   
-## Um diese Klasse verwenden:  
+## <a name="to-use-this-class"></a>Diese Klasse verwendet:  
   
--   `typedef` eine Spezialisierung dieser Klasse.  
+- `typedef`eine Spezialisierung dieser Klasse.  
   
--   Verwenden Sie `typedef` als Vorlagenargument in einer Spezialisierung von `CComObject`.  
+-   Verwenden der `typedef` als Vorlagenargument in eine Spezialisierung der `CComObject`.  
   
 -   Erstellen Sie eine Instanz der `CComObject` Spezialisierung.  
   
--   Initialisieren Sie das Enumeratorobjekt, indem Sie [CComEnumImpl::Init](../Topic/CComEnumImpl::Init.md) aufrufen.  
+-   Initialisieren Sie das Enumeratorobjekt durch Aufrufen von [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init).  
   
--   Geben Sie die Enumeratorschnittstelle an den Client zurück.  
+-   Die Enumeratorschnittstelle an den Client zurückgeben.  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `CComObjectRootBase`  
   
  `Base`  
@@ -84,22 +95,23 @@ class ATL_NO_VTABLE CComEnum :
   
  `CComEnum`  
   
-## Anforderungen  
- **Header:**  möchten  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** Standardschnittstellen  
   
-## Beispiel  
- Der Code, der unten angezeigt wird, stellt eine wiederverwendbare Funktion zum Erstellen und Initialisieren eines Enumeratorobjekts bereit.  
+## <a name="example"></a>Beispiel  
+ Der folgende Code bietet eine wieder verwendbare Funktion zum Erstellen und initialisieren ein Enumeratorobjekt.  
   
- [!CODE [NVC_ATL_COM#32](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_COM#32)]  
+ [!code-cpp[NVC_ATL_COM&#32;](../../atl/codesnippet/cpp/ccomenum-class_1.h)]  
   
- Diese Vorlagenfunktion kann verwendet werden, um die `_NewEnum`\-Eigenschaft einer Auflistungsschnittstelle wie unten gezeigt zu implementieren:  
+ Diese Vorlagenfunktion kann zur Implementierung der `_NewEnum` Eigenschaft einer Auflistung-Schnittstelle, wie unten dargestellt:  
   
- [!CODE [NVC_ATL_COM#33](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_COM#33)]  
+ [!code-cpp[NVC_ATL_COM&33;](../../atl/codesnippet/cpp/ccomenum-class_2.h)]  
   
- Dieser Code erstellt `typedef` für `CComEnum`, der einen Vektor von **VARIANT** s durch die **IEnumVariant**\-Schnittstelle verfügbar macht.  Die Klasse **CVariantArrayCollection** spezialisiert einfach **CreateEnumerator**, um mit Enumeratorobjekten dieses Typs zu arbeiten und führt die notwendigen Argumente an.  
+ Dieser Code erstellt ein `typedef` für `CComEnum` , verfügbar macht einen Vektor von **VARIANT**s über die **IEnumVariant** Schnittstelle. Die **CVariantArrayCollection** Klasse einfach spezialisiert **CreateEnumerator** zum Arbeiten mit Objekten der Enumerator von diesem Typ auf und übergibt die erforderlichen Argumente.  
   
-## Siehe auch  
- [Class Overview](../../atl/atl-class-overview.md)   
- [CComObjectThreadModel](../Topic/CComObjectThreadModel.md)   
- [CComEnumImpl Class](../../atl/reference/ccomenumimpl-class.md)   
- [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+ [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
+ [CComEnumImpl-Klasse](../../atl/reference/ccomenumimpl-class.md)   
+ [CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)
+

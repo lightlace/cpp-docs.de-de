@@ -1,75 +1,94 @@
 ---
-title: "Steuerelementtypen f&#252;r die Symbolleiste | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Steuerelementtypen für die Symbolleiste"
+title: "Steuerelementtypen für die Symbolleiste | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ToolBar control styles
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Steuerelementtypen f&#252;r die Symbolleiste
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 1c50009a50c5b80e007add9de679315df6aecea9
+ms.lasthandoff: 02/24/2017
 
-[CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) enthält einen Satz Formatflags, die die Darstellung und das Verhalten der Schaltfläche bestimmen.  Sie können eine Kombination dieser Flags festlegen, indem Sie [CMFCToolBarButton::SetStyle](../Topic/CMFCToolBarButton::SetStyle.md) aufrufen.  Dieses Thema führt die Formatflagwerte und ihre Bedeutung auf.  
+---
+# <a name="toolbar-control-styles"></a>Steuerelementtypen für die Symbolleiste
+[CMFCToolBarButton-Klasse](../../mfc/reference/cmfctoolbarbutton-class.md) verfügt über eine Reihe von Style-Flags, die bestimmen, die Darstellung und Verhalten der Schaltfläche. Sie können eine Kombination dieser Flags festlegen, durch Aufrufen von [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). Dieses Thema enthält die Style-Flagwerte und deren Bedeutung aufgeführt.  
   
-## Eigenschaftswerte  
- Die folgenden Werte bestimmt den Typ der Schaltfläche, der das Steuerelement darstellt:  
+## <a name="property-values"></a>Eigenschaftswerte  
+ Die folgenden Werte bestimmen den Typ der Schaltfläche, die das Steuerelement darstellt:  
   
- TBBS\_BUTTON  
- Standardpushbutton \(Standard\).  
+ TBBS_BUTTON  
+ Standard Pushbutton (Standard).  
   
- TBBS\_CHECKBOX  
- Kontrollkästchen.  
+ TBBS_CHECKBOX  
+ Das Kontrollkästchen.  
   
- TBBS\_CHECKGROUP  
- Der Beginn einer Gruppe Kontrollkästchen.  
+ TBBS_CHECKGROUP  
+ Der Anfang einer Gruppe von Kontrollkästchen.  
   
- TBBS\_GROUP  
- Der Beginn einer Gruppe Schaltflächen.  
+ TBBS_GROUP  
+ Der Anfang einer Gruppe von Optionsfeldern.  
   
- TBBS\_SEPARATOR  
+ TBBS_SEPARATOR  
  Trennzeichen.  
   
  Die folgenden Werte stellen den aktuellen Status des Steuerelements dar:  
   
- TBBS\_CHECKED  
- Kontrollkästchen wird überprüft.  
+ TBBS_CHECKED  
+ Das Kontrollkästchen ist aktiviert.  
   
- TBBS\_DISABLED  
+ TBBS_DISABLED  
  Steuerelement ist deaktiviert.  
   
- TBBS\_INDETERMINATE  
- Kontrollkästchen ist in einem unbestimmten Zustand.  
+ TBBS_INDETERMINATE  
+ Das Kontrollkästchen ist in einem unbestimmten Zustand.  
   
- TBBS\_PRESSED  
- Schaltfläche ist aktiviert.  
+ TBBS_PRESSED  
+ Gedrückt wird.  
   
- Die folgenden sich das Layout der Schaltfläche in der Symbolleiste:  
+ Der folgende Wert ändert das Layout der Schaltfläche in der Symbolleiste:  
   
- TBBS\_BREAK  
- Setzt das Element auf einer neuen Zeile oder einer neuen Spalte ohne trennende Spalten.  
+ TBBS_BREAK  
+ Platziert das Element in einer neuen Zeile oder in einer neuen Spalte ohne die Trennung von Spalten.  
   
-## Hinweise  
- Das aktuelle Format wird in [CMFCToolBarButton::m\_nStyle](../Topic/CMFCToolBarButton::m_nStyle.md) gespeichert.  Legen Sie keinen neuen Wert in `m_nStyle` direkt fest, da auf abgeleitete Klassen zusätzliches ausführen, Verarbeitung, wenn Sie `SetStyles` aufrufen.  
+## <a name="remarks"></a>Hinweise  
+ Die aktuelle Formatvorlage befindet sich in [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Legen Sie einen neuen Wert nicht in `m_nStyle` direkt, da einige abgeleiteten Klassen zusätzliche Verarbeitungsschritte beim Aufruf von `SetStyles`.  
   
- Der visuelle Manager bestimmt die Darstellung der Schaltflächen in jedem Zustand.  Weitere Informationen finden Sie unter [Visualisierungs\-Manager](../../mfc/visualization-manager.md).  
+ Visuelle Manager bestimmt die Darstellung der Schaltflächen in den einzelnen Zuständen. Finden Sie unter [Visualisierungs-Manager](../../mfc/visualization-manager.md) für Weitere Informationen.  
   
-## Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxtoolbarbutton.h  
   
-## Siehe auch  
- [MFC\-Makros, globale Funktionen und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)   
- [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [Visualisierungs\-Manager](../../mfc/visualization-manager.md)
+## <a name="see-also"></a>Siehe auch  
+ [Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CMFCToolBarButton-Klasse](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Visualisierungs-Manager](../../mfc/visualization-manager.md)
+
+
+

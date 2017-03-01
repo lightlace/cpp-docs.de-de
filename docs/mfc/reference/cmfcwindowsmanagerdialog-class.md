@@ -1,71 +1,106 @@
 ---
-title: "CMFCWindowsManagerDialog Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCWindowsManagerDialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCWindowsManagerDialog class"
+title: Klasse CMFCWindowsManagerDialog | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCWindowsManagerDialog
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCWindowsManagerDialog class
 ms.assetid: 35b4b0db-33c4-4b22-94d8-5e3396341340
 caps.latest.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# CMFCWindowsManagerDialog Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 9f1508cfd3844fed413edd69063f1b3e64e80195
+ms.lasthandoff: 02/24/2017
 
-Das Objekt `CMFCWindowsManagerDialog` ermöglicht es einem Benutzer, um untergeordnete MDI\-Fenster in einer MDI\-Anwendung zu verwalten.  
+---
+# <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog-Klasse
+Das `CMFCWindowsManagerDialog` Objekt ermöglicht einem Benutzer, untergeordnete MDI-Fenster in einer MDI-Anwendung zu verwalten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCWindowsManagerDialog : public CDialog  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](../Topic/CMFCWindowsManagerDialog::CMFCWindowsManagerDialog.md)|Erstellt ein `CMFCWindowsManagerDialog`\-Objekt.|  
+|[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](#cmfcwindowsmanagerdialog)|Erstellt ein `CMFCWindowsManagerDialog`-Objekt.|  
   
-## Hinweise  
- `CMFCWindowsManagerDialog` enthält eine Liste von untergeordneten MDI\-Fenstern, die in der Anwendung geöffnet sind.  Der Benutzer kann den Zustand der untergeordneten MDI\-Fenster manuell steuern, indem er dieses Dialogfeld verwendet.  
+## <a name="remarks"></a>Hinweise  
+ Die `CMFCWindowsManagerDialog` enthält eine Liste von untergeordneten MDI-Fenstern, die derzeit in der Anwendung geöffnet sind. Der Benutzer kann den Status des untergeordneten MDI-Fenster mithilfe dieses Dialogfelds manuell steuern.  
   
- `CMFCWindowsManagerDialog` wird innerhalb [CMDIFrameWndEx\-Klasse](../../mfc/reference/cmdiframewndex-class.md) eingebettet.  `CMFCWindowsManagerDialog` ist keine Klasse, die Sie manuell erstellen möchten.  Rufen Sie die Funktion [CMDIFrameWndEx::ShowWindowsDialog](../Topic/CMDIFrameWndEx::ShowWindowsDialog.md) auf, und sie erstellt und zeigt ein `CMFCWindowsManagerDialog`\-Objekt.  
+ `CMFCWindowsManagerDialog`eingebettet in der [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md). Die `CMFCWindowsManagerDialog` ist keine Klasse, die manuell erstellt werden soll. Rufen Sie stattdessen die Funktion [CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog), und erstellen und Anzeigen einer `CMFCWindowsManagerDialog` Objekt.  
   
-## Beispiel  
- Das folgende Beispiel zeigt, wie ein `CMFCWindowsManagerDialog`\-Objekt erstellt, indem es `CMDIFrameWndEx::ShowWindowsDialog` aufruft.  Dieser Codeausschnitt ist Teil [Visual Studio\-Demobeispiel](../../top/visual-cpp-samples.md).  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCWindowsManagerDialog` -Objekt durch Aufrufen von `CMDIFrameWndEx::ShowWindowsDialog`. Dieser Codeausschnitt ist Teil der [Demobeispiel für Visual Studio](../../visual-cpp-samples.md).  
   
- [!CODE [NVC_MFC_VisualStudioDemo#18](../CodeSnippet/VS_Snippets_Misc/NVC_MFC_VisualStudioDemo#18)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo&18;](../../mfc/codesnippet/cpp/cmfcwindowsmanagerdialog-class_1.cpp)]  
   
-## Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [CDialog\-Klasse](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
  [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxWindowsManagerDialog.h  
   
-## Siehe auch  
+##  <a name="a-namecmfcwindowsmanagerdialoga--cmfcwindowsmanagerdialogcmfcwindowsmanagerdialog"></a><a name="cmfcwindowsmanagerdialog"></a>CMFCWindowsManagerDialog::CMFCWindowsManagerDialog  
+ Erstellt eine [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) Objekt.  
+  
+```  
+CMFCWindowsManagerDialog(
+    CMDIFrameWndEx* pMDIFrame,  
+    BOOL bHelpButton = FALSE);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ [in] `pMDIFrame`  
+ Ein Zeiger auf das Fenster übergeordnete oder Besitzer.  
+  
+ [in] `bHelpButton`  
+ Ein boolescher Parameter, der angibt, ob das Framework zeigt eine **Hilfe** Schaltfläche.  
+  
+### <a name="remarks"></a>Hinweise  
+ Weitere Informationen zu visuellen Manager, finden Sie unter [Visualisierungs-Manager](../../mfc/visualization-manager.md).  
+  
+## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
  [Klassen](../../mfc/reference/mfc-classes.md)   
- [CMDIFrameWndEx\-Klasse](../../mfc/reference/cmdiframewndex-class.md)   
- [CMDIFrameWndEx::ShowWindowsDialog](../Topic/CMDIFrameWndEx::ShowWindowsDialog.md)
+ [CMDIFrameWndEx-Klasse](../../mfc/reference/cmdiframewndex-class.md)
+
