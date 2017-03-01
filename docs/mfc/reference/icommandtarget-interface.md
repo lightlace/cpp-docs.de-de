@@ -1,29 +1,45 @@
 ---
-title: "ICommandTarget-Schnittstelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ICommandTarget"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandTarget-Schnittstelle"
+title: ICommandTarget Schnittstelle | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ICommandTarget
+dev_langs:
+- C++
+helpviewer_keywords:
+- ICommandTarget interface
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
 caps.latest.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# ICommandTarget-Schnittstelle
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 825fde18c56afb91bdb469212817109dc35abf68
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="icommandtarget-interface"></a>ICommandTarget-Schnittstelle
 Stellt ein Benutzersteuerelement mit einer Schnittstelle zum Empfangen von Befehlen aus einem Befehlsquellobjekt bereit.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,7 +54,7 @@ interface class ICommandTarget
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ICommandTarget:: Initialize](#icommandtarget__initialize)|Initialisiert das Zielobjekt für den Befehl.|  
+|[ICommandTarget:: Initialize](#initialize)|Initialisiert das Zielobjekt für den Befehl.|  
   
 ## <a name="remarks"></a>Hinweise  
  Beim Hosten eines Benutzersteuerelements in MFC-Ansicht, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) Routen Befehle und Update-Befehl UI-Nachrichten auf das Benutzersteuerelement, damit Sie die MFC-Befehle (z. B. Frame Menüelemente und Symbolleisten-Schaltflächen) verarbeiten kann. Durch die Implementierung `ICommandTarget`, geben Sie dem Benutzersteuerelement einen Verweis auf die [ICommandSource](../../mfc/reference/icommandsource-interface.md) Objekt.  
@@ -50,13 +66,11 @@ interface class ICommandTarget
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwinforms.h (definiert in der Assembly atlmfc\lib\mfcmifc80.dll)  
   
-##  <a name="a-nameicommandtargetinitializea-icommandtargetinitialize"></a><a name="icommandtarget__initialize"></a> ICommandTarget:: Initialize  
+##  <a name="a-nameinitializea-icommandtargetinitialize"></a><a name="initialize"></a>ICommandTarget:: Initialize  
  Initialisiert das Zielobjekt für den Befehl.  
   
 ```  
-void Initialize(ICommandSource^ cmdSource);
-
- 
+void Initialize(ICommandSource^ cmdSource);  
 ```  
   
 ### <a name="parameters"></a>Parameter  
@@ -71,6 +85,7 @@ void Initialize(ICommandSource^ cmdSource);
 ## <a name="see-also"></a>Siehe auch  
  [Gewusst wie: Hinzufügen von Befehl Befehlsrouting zum Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [ICommandSource-Schnittstelle](../../mfc/reference/icommandsource-interface.md)
+
 
 
 

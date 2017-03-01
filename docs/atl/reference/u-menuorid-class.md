@@ -1,68 +1,110 @@
 ---
-title: "_U_MENUorID Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL._U_MENUorID"
-  - "ATL::_U_MENUorID"
-  - "_U_MENUorID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_U_MENUorID class"
-  - "U_MENUorID class"
+title: Klasse _U_MENUorID | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL._U_MENUorID
+- ATL::_U_MENUorID
+- _U_MENUorID
+dev_langs:
+- C++
+helpviewer_keywords:
+- U_MENUorID class
+- _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _U_MENUorID Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: f7c0a5c34c4e103f830a029f58cdfa00dcb58a32
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse stellt Wrapper für **CreateWindow** und **CreateWindowEx** bereit.  
+---
+# <a name="umenuorid-class"></a>_U_MENUorID-Klasse
+Diese Klasse stellt Wrapper für **CreateWindow** und **CreateWindowEx**.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen nicht verwendet werden, die in der Windows Runtime ausführen.  
+>  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+class _U_MENUorID
 ```  
   
-class _U_MENUorID  
+## <a name="members"></a>Mitglieder  
   
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[_U_MENUorID::_U_MENUorID](#_u_menuorid___u_menuorid)|Der Konstruktor.|  
+  
+### <a name="public-data-members"></a>Öffentliche Datenmember  
+  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Ein Handle für ein Menü.|  
+  
+## <a name="remarks"></a>Hinweise  
+ Dieses Argument-Adapterklasse ermöglicht entweder IDs ( **UINT**s) oder im Menü Handles ( `HMENU`s) an eine Funktion übergeben werden, ohne eine explizite Umwandlung auf dem Teil des Aufrufers.  
+  
+ Diese Klasse dient zum Implementieren der Windows-API-Wrapper insbesondere der [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) und [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Funktionen, die akzeptiert ein `HMENU` -Argument, das möglicherweise ein Bezeichner des untergeordneten Fensters ( **UINT**) anstatt ein Menü-Handle. Beispielsweise sehen Sie diese Klasse verwendet als Parameter für [CWindowImpl:: Create](cwindowimpl-class.md#create).  
+
+  
+ Die Klasse definiert zwei Konstruktorüberladungen: eine akzeptiert einen **UINT** Argument und die andere akzeptiert einen `HMENU` Argument. Die **UINT** Argument nur umgewandelt wird ein `HMENU` im Konstruktor und das Ergebnis in der Klasse einzelnen Datenmember gespeicherten [M_hMenu](#_u_menuorid__m_hmenu). Das Argument für die `HMENU` Konstruktor direkt ohne Konvertierung gespeichert ist.  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** atlwin.h  
+  
+##  <a name="a-nameumenuoridmhmenua--umenuoridmhmenu"></a><a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
+ Die Klasse enthält den Wert, der zu einem seiner Konstruktoren übergeben, als öffentliche `HMENU` -Datenmember.  
+  
+```
+HMENU m_hMenu;
 ```  
   
-## Mitglieder  
+##  <a name="a-nameumenuoridumenuorida--umenuoridumenuorid"></a><a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
+ Die **UINT** Argument nur umgewandelt wird ein `HMENU` im Konstruktor und das Ergebnis in der Klasse einzelnen Datenmember gespeicherten [M_hMenu](#_u_menuorid__m_hmenu).  
   
-### Öffentliche Konstruktoren  
+```
+_U_MENUorID(UINT nID);  
+_U_MENUorID(HMENU hMenu);
+```  
   
-|Name|Description|  
-|----------|-----------------|  
-|[\_U\_MENUorID::\_U\_MENUorID](../Topic/_U_MENUorID::_U_MENUorID.md)|Der \-Konstruktor.|  
+### <a name="parameters"></a>Parameter  
+ `nID`  
+ Ein Bezeichner des untergeordneten Fensters.  
   
-### Öffentliche Datenmember  
+ `hMenu`  
+ Ein Menühandle.  
   
-|Name|Description|  
-|----------|-----------------|  
-|[\_U\_MENUorID::m\_hMenu](../Topic/_U_MENUorID::m_hMenu.md)|Ein Handle zu einem Menü.|  
+### <a name="remarks"></a>Hinweise  
+ Das Argument für die `HMENU` Konstruktor direkt ohne Konvertierung gespeichert ist.  
   
-## Hinweise  
- Diese Argumentadapterklasse können entweder **UINT** IDs \(s\) oder die an eine Funktion übergeben werden Menühandles `HMENU`\(s\), ohne eine explizite Umwandlung erforderlich vonseiten des Aufrufers.  
-  
- Diese Klasse ist für das Implementieren von Wrappern zu den [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) und [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)\-Funktionen der Windows\-API, insbesondere entwickelt, die `HMENU` akzeptieren ein Argument, das ein Bezeichner des untergeordneten MDI\-Fensters \(**UINT**\) und nicht werden, wann ein Menühandle ist.  Beispielsweise können Sie diese Klasse als Parameter zu [CWindowImpl::Create](../Topic/CWindowImpl::Create.md) in Verwendung finden.  
-  
- Die Klasse definiert zwei Konstruktorüberladungen: Sie akzeptiert ein **UINT**\-Argument und der andere akzeptiert ein `HMENU`\-Argument.  Das **UINT**\-Argument wird nur für `HMENU` im Konstruktor und im Ergebnis umgewandelt, die im Einzelnen Datenmember der Klasse, [m\_hMenu](../Topic/_U_MENUorID::m_hMenu.md) gespeichert werden.  Das Argument in `HMENU`\-Konstruktor wird direkt ohne Konvertierung gespeichert.  
-  
-## Anforderungen  
- **Header:**  atlwin.h  
-  
-## Siehe auch  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+

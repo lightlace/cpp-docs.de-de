@@ -1,102 +1,119 @@
 ---
-title: "CByteArray Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CByteArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arrays [C++], byte"
-  - "Bytearrays"
-  - "CByteArray class"
-  - "MFC collection classes, Bytearrays"
+title: "Leistungsfähiger | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CByteArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- CByteArray class
+- byte arrays
+- arrays [C++], byte
+- MFC collection classes, byte arrays
 ms.assetid: 53d4a512-657c-4187-9609-e3f5339a78e0
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CByteArray Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: e2ddbaf9895dc957d9bc9743df4b4a6b827d3bce
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cbytearray-class"></a>Leistungsfähiger
 Unterstützt dynamische Bytearrays.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CByteArray : public CObject  
 ```  
   
-## Mitglieder  
- Die Memberfunktionen von `CByteArray` sind \- Memberfunktion der Klasse [CObArray](../../mfc/reference/cobarray-class.md) ähnlich.  Aufgrund dieser Ähnlichkeit, können Sie die `CObArray` Referenzdokumentation für Memberfunktionsbesonderen verwenden.  Wenn Sie einen `CObject` Zeiger als Funktionsparameter oder Rückgabewert finden, ersetzen Sie **BYTE**.  
+## <a name="members"></a>Mitglieder  
+ Die Memberfunktionen von `CByteArray` ähneln den Memberfunktionen der Klasse [CObArray](../../mfc/reference/cobarray-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObArray`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo ein `CObject` Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie durch eine **BYTE**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
- beispielsweise übersetzt zu  
+ Beispielsweise übersetzt zu  
   
  `BYTE CByteArray::GetAt( int <nIndex> ) const;`  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CObArray::CObArray](../Topic/CObArray::CObArray.md)|Erstellt ein leeres Array.|  
+|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Erstellt ein leeres Array.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CObArray::Add](../Topic/CObArray::Add.md)|Fügt ein Element am Ende des Arrays hinzu; vergrößert das Array.|  
-|[CObArray::Append](../Topic/CObArray::Append.md)|Fügt ein anderes Array dem Array an; vergrößert das Array.|  
-|[CObArray::Copy](../Topic/CObArray::Copy.md)|Kopiert ein anderes Array dem Array; vergrößert das Array.|  
-|[CObArray::ElementAt](../Topic/CObArray::ElementAt.md)|Gibt einen temporären Verweis in Byte innerhalb des Arrays zurück.|  
-|[CObArray::FreeExtra](../Topic/CObArray::FreeExtra.md)|Gibt alle nicht verwendeten Arbeitsspeicher über der aktuellen Obergrenze frei.|  
-|[CObArray::GetAt](../Topic/CObArray::GetAt.md)|Gibt den Wert an einem angegebenen Index zurück.|  
-|[CObArray::GetCount](../Topic/CObArray::GetCount.md)|Ruft die Anzahl der Elemente in diesem Array ab.|  
-|[CObArray::GetData](../Topic/CObArray::GetData.md)|Ermöglicht den Zugriff auf Elemente im Array.  Kann **NULL**.|  
-|[CObArray::GetSize](../Topic/CObArray::GetSize.md)|Ruft die Anzahl der Elemente in diesem Array ab.|  
-|[CObArray::GetUpperBound](../Topic/CObArray::GetUpperBound.md)|Gibt den größten gültigen Index zurück.|  
-|[CObArray::InsertAt](../Topic/CObArray::InsertAt.md)|Fügt ein Element \(oder alle Elemente in anderen Array\) zu einem angegebenen Index ein.|  
-|[CObArray::IsEmpty](../Topic/CObArray::IsEmpty.md)|Bestimmt, ob das Array leer ist.|  
-|[CObArray::RemoveAll](../Topic/CObArray::RemoveAll.md)|Entfernt alle Elemente aus diesem Array.|  
-|[CObArray::RemoveAt](../Topic/CObArray::RemoveAt.md)|Entfernt ein Element an einem bestimmten Index.|  
-|[CObArray::SetAt](../Topic/CObArray::SetAt.md)|Legt den Wert für einen angegebenen Index fest; Array nicht zulässig, um vergrößert.|  
-|[CObArray::SetAtGrow](../Topic/CObArray::SetAtGrow.md)|Legt den Wert für einen angegebenen Index fest; vergrößert das Array.|  
-|[CObArray::SetSize](../Topic/CObArray::SetSize.md)|Legt die Anzahl der fest in diesem Array enthalten von Elementen.|  
+|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Fügt am Ende des Arrays ein Element hinzu; vergrößert das Array bei Bedarf.|  
+|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Hängt ein anderes Array an das Array an; vergrößert das Array bei Bedarf.|  
+|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Kopiert ein anderes Array in das Array; vergrößert das Array bei Bedarf.|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Gibt einen temporären Verweis auf das Byte im Array zurück.|  
+|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Gibt den gesamten nicht verwendeten Arbeitsspeicher über der aktuellen Obergrenze frei.|  
+|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Gibt den Wert an einem bestimmten Index zurück.|  
+|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Ruft die Anzahl der Elemente im Array ab.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Ermöglicht den Zugriff auf Elemente im Array. Kann **NULL**.|  
+|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Ruft die Anzahl der Elemente im Array ab.|  
+|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Gibt den größten gültigen Index zurück.|  
+|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Fügt ein Element (oder alle Elemente in einem anderen Array) am angegebenen Index ein.|  
+|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Bestimmt, ob das Array leer ist.|  
+|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Entfernt alle Elemente aus diesem Array.|  
+|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Entfernt ein Element an einem spezifischen Index.|  
+|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Legt den Wert für einen bestimmten Index fest; Array darf nicht vergrößert werden.|  
+|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Legt den Wert für einen bestimmten Index fest; vergrößert das Array bei Bedarf.|  
+|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Legt die Anzahl der Elemente im Array fest.|  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CObArray::operator](../Topic/CObArray::operator.md)|Legt fest oder ruft das Element am angegebenen Index ab.|  
+|[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|  
   
-## Hinweise  
- `CByteArray` enthält das `IMPLEMENT_SERIAL`\-Makro, um die Serialisierung und das Speichern seiner Elemente zu unterstützen.  Wenn ein Bytearray zu einem Archiv, entweder mit dem überladenen Operator Einfüge\-**\<\<**\(\) oder mit der `Serialize`\-Memberfunktion gespeichert wird, wird jedes Element wiederum serialisiert.  
+## <a name="remarks"></a>Hinweise  
+ `CByteArray`enthält die `IMPLEMENT_SERIAL` Makro zur Unterstützung der Serialisierung und Sicherung der Elemente. Wenn ein Array von Bytes in ein Archiv, entweder mit den überladenen einfügen gespeichert ist ( ** << **) Operator oder mit der `Serialize` Member-Funktion jedes Element ist, was wiederum serialisiert.  
   
 > [!NOTE]
->  Vor der Verwendung eines Arrays, verwenden Sie `SetSize`, um die Größe und für sie Speicher reserviert.  Wenn Sie nicht `SetSize` verwenden, wird das Hinzufügen von Elementen zu dem Array es, mehrfach neu zugeordnet werden und kopiert werden.  Allgemeine Neuzuordnung und das Kopieren sind ineffizient und können Arbeitsspeicher fragmentieren.  
+>  Vor dem Verwenden eines Arrays, verwenden Sie `SetSize`, um dessen Größe festzustellen, und weisen dafür Arbeitsspeicher zu. Wenn Sie `SetSize` nicht verwenden, kann das Hinzufügen von Elementen zu Ihrem Array dazu führen, dass es häufig neu zugeordnet und kopiert wird. Häufige Neuzuordnungen und Kopiervorgänge sind ineffizient und können zu einer Fragmentierung des Arbeitsspeichers führen.  
   
- Wenn Sie Debugausgabe von einzelnen Elemente im Array benötigen, müssen Sie die Tiefe des `CDumpContext`\-Objekts auf 1 festlegen oder größer ist.  
+ Wenn Sie die Ausgabe einzelner Elemente im Array debuggen müssen, müssen Sie festlegen, dass die Tiefe der der `CDumpContext` Objekt in 1 oder höher.  
   
- Weitere Informationen zur Verwendung von `CByteArray`, finden Sie im Artikel [Auflistungen](../../mfc/collections.md).  
+ Weitere Informationen zur Verwendung von `CByteArray`, finden Sie im Artikel [Sammlungen](../../mfc/collections.md).  
   
-## Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  `CByteArray`  
   
-## Anforderungen  
- **Header:**  afxcoll.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** afxcoll.h  
   
-## Siehe auch  
- [CObject Class](../../mfc/reference/cobject-class.md)   
+## <a name="see-also"></a>Siehe auch  
+ [CObject-Klasse](../../mfc/reference/cobject-class.md)   
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CObArray Class](../../mfc/reference/cobarray-class.md)
+ [CObArray-Klasse](../../mfc/reference/cobarray-class.md)
+

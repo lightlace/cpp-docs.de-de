@@ -1,64 +1,103 @@
 ---
-title: "_U_RECT Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::_U_RECT"
-  - "_U_RECT"
-  - "ATL._U_RECT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_U_RECT class"
-  - "U_RECT class"
+title: Klasse _U_RECT | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::_U_RECT
+- _U_RECT
+- ATL._U_RECT
+dev_langs:
+- C++
+helpviewer_keywords:
+- U_RECT class
+- _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _U_RECT Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: 5a375921fd51b19eb2e9020d3175a56df8549461
+ms.lasthandoff: 02/24/2017
 
-Diese Argumentadapterklasse können entweder an eine Funktion übergeben werden `RECT` Zeiger oder Verweise, die im Hinblick auf Zeiger implementiert wird.  
+---
+# <a name="urect-class"></a>_U_RECT-Klasse
+Dieses Argument-Adapterklasse ermöglicht `RECT` Zeiger oder Verweise auf eine Funktion übergeben werden, die im Hinblick auf Zeiger implementiert wird.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen nicht verwendet werden, die in der Windows Runtime ausführen.  
+>  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```
+class _U_RECT```  
   
-class _U_RECT  
+## Members  
   
-```  
-  
-## Mitglieder  
-  
-### Öffentliche Konstruktoren  
+### Public Constructors  
   
 |Name|Description|  
 |----------|-----------------|  
-|[\_U\_RECT::\_U\_RECT](../Topic/_U_RECT::_U_RECT.md)|Der \-Konstruktor.|  
+|[_U_RECT::_U_RECT](#_u_rect___u_rect)|The constructor.|  
   
-### Öffentliche Datenmember  
+### Public Data Members  
   
 |Name|Description|  
 |----------|-----------------|  
-|[\_U\_RECT::m\_lpRect](../Topic/_U_RECT::m_lpRect.md)|Zeiger auf `RECT`.|  
+|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Pointer to a `RECT`.|  
   
-## Hinweise  
- Die Klasse definiert zwei Konstruktorüberladungen: Sie akzeptiert ein **RECT&**\-Argument und der andere akzeptiert ein `LPRECT`\-Argument.  Der erste Konstruktor speichert die Adresse des Bezugsarguments im Einzelnen Datenmember der Klasse, [m\_lpRect](../Topic/_U_RECT::m_lpRect.md).  Das Argument in Zeigerkonstruktor wird direkt ohne Konvertierung gespeichert.  
+## Remarks  
+ The class defines two constructor overloads: one accepts a **RECT&** argument and the other accepts an `LPRECT` argument. The first constructor stores the address of the reference argument in the class's single data member, [m_lpRect](#_u_rect__m_lprect). The argument to the pointer constructor is stored directly without conversion.  
   
-## Anforderungen  
- **Header:**  atlwin.h  
+## Requirements  
+ **Header:** atlwin.h  
   
-## Siehe auch  
+##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect  
+ The class holds the value passed to either of its constructors as a public `LPRECT` data member.  
+  
+```
+LPRECT M_lpRect;
+```  
+  
+##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT  
+ The address of the reference argument is stored in the class's single data member, [m_lpRect](#_u_rect__m_lprect).  
+  
+```
+_U_RECT (RECT & rc);  
+_U_RECT (LPRECT LpRect);
+```  
+  
+### Parameters  
+ `rc`  
+ A `RECT` reference.  
+  
+ `lpRect`  
+ A `RECT` pointer.  
+  
+### Remarks  
+ The argument to the pointer constructor is stored directly without conversion.  
+  
+## See Also  
  [Class Overview](../../atl/atl-class-overview.md)
+

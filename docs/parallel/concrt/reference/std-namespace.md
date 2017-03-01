@@ -1,43 +1,65 @@
 ---
-title: "std-Namespace | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppltasks/std"
-dev_langs: 
-  - "C++"
+title: Std Namespace | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppltasks/std
+dev_langs:
+- C++
 ms.assetid: b3a41cfa-0b64-485d-9e79-23407dca07ba
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# std-Namespace
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 25c6d8be54ff6d8475492ba4e54f77ec721a0ae0
+ms.lasthandoff: 02/24/2017
 
-## Syntax  
+---
+# <a name="std-namespace"></a>std-Namespace
+## <a name="syntax"></a>Syntax  
   
+```
+namespace std;
 ```  
-namespace std;  
-```  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Funktionen  
+### <a name="functions"></a>Funktionen  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[make\_exception\_ptr\-Funktion](../../../parallel/concrt/reference/make-exception-ptr-function.md)||  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[Make_exception_ptr-Funktion](make-exception-ptr-function.md)||  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** ppltasks.h  
   
-## Siehe auch  
- [Referenz](../../../parallel/concrt/reference/reference-concurrency-runtime.md)
+## <a name="see-also"></a>Siehe auch  
+ [Referenz](reference-concurrency-runtime.md)
+
+
+
+
+
+

@@ -1,67 +1,79 @@
 ---
-title: "CAutoVectorPtrElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CAutoVectorPtrElementTraits<T>"
-  - "ATL.CAutoVectorPtrElementTraits"
-  - "ATL.CAutoVectorPtrElementTraits<T>"
-  - "ATL::CAutoVectorPtrElementTraits"
-  - "CAutoVectorPtrElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAutoVectorPtrElementTraits class"
+title: Klasse CAutoVectorPtrElementTraits | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CAutoVectorPtrElementTraits<T>
+- ATL.CAutoVectorPtrElementTraits
+- ATL.CAutoVectorPtrElementTraits<T>
+- ATL::CAutoVectorPtrElementTraits
+- CAutoVectorPtrElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CAutoVectorPtrElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: d7b7418b713993f539f56e70715296d5af265d28
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse stellt Methoden, statische Funktionen und die Typdefinitionen, die zur Auflistungen intelligenten Zeiger mit dem neuen Vektor\- und delet\-Operatoren nützlich sind, erstellt.  
+---
+# <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits-Klasse
+Diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen hilfreich beim Erstellen von Auflistungen von intelligenten Zeigern, die mit dem Vektor new und-Operator delete.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen nicht verwendet werden, die in der Windows Runtime ausführen.  
+>  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```
+template <typename T>  
+class CAutoVectorPtrElementTraits : 
+   public CDefaultElementTraits<ATL::CAutoVectorPtr<T>>
+```    
   
-      template<  
-typename T  
->  
-class CAutoVectorPtrElementTraits : public CDefaultElementTraits<  
-ATL::CAutoVectorPtr< T>  
->  
-```  
-  
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
  Der Zeigertyp.  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CAutoVectorPtrElementTraits::INARGTYPE](../Topic/CAutoVectorPtrElementTraits::INARGTYPE.md)|Der für das Hinzufügen von Elementen zum Auflistungsklassenobjekt Datentyp, zu verwenden.|  
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](../Topic/CAutoVectorPtrElementTraits::OUTARGTYPE.md)|Der für das Abrufen von Elementen vom Datentyp, Auflistungsklassenobjekt zu verwenden.|  
+|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Der Datentyp für das Klassenobjekt Auflistung Elemente hinzugefügt.|  
+|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Der Datentyp für das Abrufen von Elementen aus der-Auflistung-Klasse.|  
   
-## Hinweise  
- Diese Klasse stellt Methoden, statische Funktionen und Typdefinitionen für die Unterstützung der Erstellung der Auflistungsklassenobjekte bereit, die intelligente Zeiger enthalten.  Anders als [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) verwendet diese Klasse den neuen Vektor und die delet\-Operatoren.  
+## <a name="remarks"></a>Hinweise  
+ Diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen für die Erstellung von Auflistungsobjekten-Klasse, die intelligente Zeiger Netzwerkstack. Im Gegensatz zu [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), diese Klasse verwendet Vektor new und delete-Operatoren.  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -72,10 +84,25 @@ ATL::CAutoVectorPtr< T>
   
  `CAutoVectorPtrElementTraits`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atlcoll.h  
   
-## Siehe auch  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [CAutoVectorPtr Class](../../atl/reference/cautovectorptr-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--cautovectorptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE  
+ Der Datentyp für das Klassenobjekt Auflistung Elemente hinzugefügt.  
+  
+```
+typedef CAutoVectorPtr<T>& INARGTYPE;
+```  
+  
+##  <a name="a-nameoutargtypea--cautovectorptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE  
+ Der Datentyp für das Abrufen von Elementen aus der-Auflistung-Klasse.  
+  
+```
+typedef T*& OUTARGTYPE;
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
+ [CAutoVectorPtr-Klasse](../../atl/reference/cautovectorptr-class.md)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+

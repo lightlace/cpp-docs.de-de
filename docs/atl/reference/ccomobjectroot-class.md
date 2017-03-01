@@ -1,51 +1,66 @@
 ---
-title: "CComObjectRoot Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CComObjectRoot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComObjectRoot class"
+title: Klasse CComObjectRoot | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CComObjectRoot
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComObjectRoot class
 ms.assetid: f8797c38-6e73-4f67-85c2-71654cffa8eb
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# CComObjectRoot Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 31295a07704e272799398aa82c6a9f0bbac17717
+ms.openlocfilehash: 34653d55091a8e872f075010a0ef7cecbb3484c8
+ms.lasthandoff: 02/24/2017
 
-Dieses Typedef von [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) ist auf dem Standard Threadingmodell des Servers auf Vorlagen basierende.  
+---
+# <a name="ccomobjectroot-class"></a>CComObjectRoot-Klasse
+Diese Typdefinition des [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) ist für die Standardeinstellung des Servers Threadingmodell vorlagenbasiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 ```  
   
-typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;  
+## <a name="remarks"></a>Hinweise  
+ `CComObjectRoot`ist ein `typedef` von [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) für die Standardeinstellung des Servers Threadingmodell vorlagenbasiert. Daher [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) verweist entweder [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) oder [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).  
   
-```  
+ `CComObjectRootEx`Objekt Verweis Anzahl Management für aggregierte und aggregierten Objekte verarbeitet werden. Sie enthält den Verweiszähler des Objekts, wenn das Objekt wird nicht aggregiert, und den Zeiger auf die äußere unbekannte enthält, wenn das Objekt gerade zusammengesetzt wird. Für aggregierte Objekte `CComObjectRootEx` Methoden können zum Behandeln des Fehlers des inneren Objekts zu erstellen und zu schützen, das äußere Objekt löschen Wenn innere Schnittstellen freigegeben werden oder das innere Objekt werden gelöscht.  
   
-## Hinweise  
- `CComObjectRoot` ist `typedef` von [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) vorlagenbasierten auf dem Standard Threadingmodell des Servers.  Daher verweist [CComObjectThreadModel](../Topic/CComObjectThreadModel.md) entweder [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) oder [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** Standardschnittstellen  
   
- `CComObjectRootEx` Handleobjektverweis\-Anzahlverwaltung für nicht aggregiertes und zusammengesetzte Objekte.  Sie enthält die Objektverweisanzahl, wenn das Objekt nicht aggregiert wird, und enthält den Zeiger des äußeren Unbekannten an, wenn das Objekt aggregiert wird.  Für zusammengesetzte Objekte können `CComObjectRootEx`\-Methoden verwendet werden, um den Fehler des inneren Objekts dem Konstrukt zu behandeln, und das äußere Objekt vom Löschen, wenn innere Schnittstellen freigegeben werden oder das innere Objekt zu schützen wird gelöscht.  
-  
-## Anforderungen  
- **Header:** atlcom.h  
-  
-## Siehe auch  
- [CComObjectRootEx Class Members](assetId:///e3ce9c3d-9c8e-4fe5-b682-8e56740a0164)   
- [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)   
- [CComAggObject Class](../../atl/reference/ccomaggobject-class.md)   
- [CComObject Class](../../atl/reference/ccomobject-class.md)   
- [CComPolyObject Class](../../atl/reference/ccompolyobject-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>Siehe auch  
+ [CComObjectRootEx Klassenmember](http://msdn.microsoft.com/en-us/e3ce9c3d-9c8e-4fe5-b682-8e56740a0164)   
+ [CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)   
+ [CComAggObject-Klasse](../../atl/reference/ccomaggobject-class.md)   
+ [CComObject-Klasse](../../atl/reference/ccomobject-class.md)   
+ [CComPolyObject-Klasse](../../atl/reference/ccompolyobject-class.md)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+
