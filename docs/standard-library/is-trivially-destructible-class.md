@@ -1,53 +1,73 @@
 ---
-title: "Is_trivially_destructible-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "is_trivially_destructible"
-  - "std.is_trivially_destructible"
-  - "std::is_trivially_destructible"
-  - "type_traits/std::is_trivially_destructible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_trivially_destructible"
+title: is_trivially_destructible-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- is_trivially_destructible
+- std.is_trivially_destructible
+- std::is_trivially_destructible
+- type_traits/std::is_trivially_destructible
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_trivially_destructible
 ms.assetid: 3f7a787d-2448-40c5-ac51-a228318e02ce
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Is_trivially_destructible-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 523d8a6ce58f39340bd33406439774824f85b7cb
+ms.lasthandoff: 02/24/2017
 
-Testet, ob der Typ im Grunde zerstörbaren ist.  
+---
+# <a name="istriviallydestructible-class"></a>is_trivially_destructible-Klasse
+Testet, ob der Typ trivial zerstörbar ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```
 template <class T>  
-    struct is_trivially_destructible;  
+struct is_trivially_destructible;
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
  Der abzufragende Typ.  
   
-## Hinweise  
- Eine Instanz des Typs Prädikat enthält true, wenn der Typ `T` ist ein zerstörbaren, und der Destruktor für den Compiler bekannt ist, keine nicht trivialen Vorgänge verwenden. Es enthält, andernfalls false.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist TRUE, wenn der Typ `T` ein zerstörbarer Typ ist, und der Destruktor beim Compiler keine nicht trivialen Operationen verwendet. Andernfalls ist sie FALSE.  
   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>Siehe auch  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

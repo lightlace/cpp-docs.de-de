@@ -1,112 +1,354 @@
 ---
-title: "reference_wrapper-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.reference_wrapper"
-  - "tr1.reference_wrapper"
-  - "reference_wrapper"
-  - "tr1::reference_wrapper"
-  - "xrefwrap/std::tr1::reference_wrapper"
-  - "std::tr1::reference_wrapper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reference_wrapper-Klasse"
-  - "reference_wrapper-Klasse [TR1]"
+title: reference_wrapper-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- reference_wrapper
+- std::reference_wrapper
+- functional/std::reference_wrapper
+- type_traits/std::reference_wrapper
+- xrefwrap/std::reference_wrapper
+- type_traits/std::reference_wrapper::get
+- type_traits/std::reference_wrapper::operator()
+dev_langs:
+- C++
+helpviewer_keywords:
+- reference_wrapper class
+- reference_wrapper
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# reference_wrapper-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: f0e7b22e4fbd6f54d390adfe70f7bfb99e4bc5df
+ms.openlocfilehash: 1b6968f2300e5214575cc5385c136d6f27bab10a
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="referencewrapper-class"></a>reference_wrapper-Klasse
 Umschließt einen Verweis.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<class Ty>  
-    class reference_wrapper  
-    : public unary_function<T1, Ret>        // see below  
-    : public binary_function<T1, T2, Ret>   // see below  
-    {  
+template <class Ty>  
+class reference_wrapper  
+{  
 public:  
     typedef Ty type;  
-    typedef T0 result_type;                 // see below  
-  
-    reference_wrapper(Ty&);  
-  
-    Ty& get() const;  
-    operator Ty&() const;  
-    template<class T1, class T2, ..., class TN>  
-        typename result_of<T(T1, T2, ..., TN)>::type  
-        operator()(T1&, T2&, ..., TN&);  
-  
+ 
+    reference_wrapper(Ty&) noexcept;
+    operator Ty&() const noexcept;
+    Ty& get() const noexcept;
+
+    template <class... Types> 
+    auto operator()(Types&&... args) const ->
+        decltype(std::invoke(get(), std::forward<Types>(args)...));
+ 
 private:  
     Ty *ptr; // exposition only  
-    };  
+};  
 ```  
   
-## Hinweise  
- Ein `reference_wrapper<Ty>`\-Objekt kann über eine Kopie erstellt und zugewiesen werden und enthält einen Zeiger, der auf ein Objekt des Typs `Ty` zeigt.  
+## <a name="remarks"></a>Hinweise  
+Ein `reference_wrapper<Ty>`-Wrapper kann um einen Verweis auf ein Objekt oder eine Funktion des Typs `Ty` über eine Kopie erstellt und zugewiesen werden und enthält einen Zeiger, der auf ein Objekt dieses Typs zeigt. Ein `reference_wrapper` kann zum Speichern von Verweisen in Standardcontainern und zum Übergeben von Objekten durch einen Verweis auf `std::bind` verwendet werden.  
   
- Ein `reference_wrapper<Ty>`\-Spezialisierungsobjekt wird nur dann aus `std::unary_function<T1, Ret>` abgeleitet \(somit definiert es den geschachtelten Typ `result_type` als Synonym für `Ret` und den geschachtelten Typ `argument_type` als Synonym für `T1`\), wenn für den Typ `Ty` Folgendes gilt:  
+Der `Ty`-Typ muss ein Objekttyp oder Funktionstyp sein, oder eine statische Assertion kann nicht zum Zeitpunkt der Kompilierung ausgeführt werden.  
   
- Er ist ein Funktionstyp oder ein Zeiger auf einen Funktionstyp, der ein Argument des Typs `T1` hat und `Ret` zurückgibt; oder  
+Die Hilfsfunktionen [std::ref](functional-functions.md#ref_function) und [std::cref](functional-functions.md#cref_function) dienen zum Erstellen von `reference_wrapper`-Objekten.  
   
- er ist ein Zeiger auf eine Memberfunktion `Ret T::f() cv`, wobei `cv` den cv\-Qualifizierern der Memberfunktion entspricht; der Typ `T1` ist `cv` `T*`; oder  
-  
- er ist ein Klassentyp, der aus `unary_function<T1, Ret>` abgeleitet wurde.  
-  
- Ein `reference_wrapper<Ty>`\-Spezialisierungsobjekt wird nur dann aus `std::binary_function<T1, T2, Ret>` abgeleitet \(somit definiert es den geschachtelten Typ `result_type` als Synonym für `Ret`, den geschachtelten Typ `first_argument_type` als Synonym für `T1` und den geschachtelten Typ `second_argument_type` als Synonym für `T2`\), wenn für den Typ `Ty` Folgendes gilt:  
-  
- Er ist ein Funktionstyp oder ein Zeiger auf einen Funktionstyp, der zwei Argumente des Typs `T1` und `T2` hat und `Ret` zurückgibt; oder  
-  
- er ist ein Zeiger auf eine Memberfunktion `Ret T::f(T2) cv`, wobei `cv` den cv\-Qualifizierern der Memberfunktion entspricht; der Typ `T1` ist `cv` `T*`; oder  
-  
- er ist ein Klassentyp, der aus `binary_function<T1, T2, Ret>` abgeleitet wurde.  
-  
-### Konstruktoren  
+### <a name="constructors"></a>Konstruktoren  
   
 |||  
 |-|-|  
-|[reference\_wrapper::reference\_wrapper](../Topic/reference_wrapper::reference_wrapper.md)|Erstellt ein Objekt vom Typ `reference_wrapper`.|  
+|[reference_wrapper::reference_wrapper](#reference_wrapper)|Erstellt ein Objekt vom Typ `reference_wrapper`.|  
   
-### TypeDefs  
-  
-|||  
-|-|-|  
-|[reference\_wrapper::result\_type](../Topic/reference_wrapper::result_type.md)|Der schwache Ergebnistyp des umschlossenen Verweises.|  
-|[reference\_wrapper::type](../Topic/reference_wrapper::type.md)|Der Typ des umschlossenen Verweises.|  
-  
-### Memberfunktionen  
+### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[reference\_wrapper::get](../Topic/reference_wrapper::get.md)|Ruft den umschlossenen Verweis ab.|  
+|[reference_wrapper::result_type](#result_type)|Der schwache Ergebnistyp des umschlossenen Verweises.|  
+|[reference_wrapper::type](#type)|Der Typ des umschlossenen Verweises.|  
   
-### Operatoren  
+### <a name="member-functions"></a>Memberfunktionen  
   
 |||  
 |-|-|  
-|[reference\_wrapper::operator Ty&](../Topic/reference_wrapper::operator%20Ty&.md)|Ruft einen Zeiger auf den umschlossenen Verweis ab.|  
-|[reference\_wrapper::operator\(\)](../Topic/reference_wrapper::operator\(\).md)|Ruft den umschlossenen Verweis auf.|  
+|[reference_wrapper::get](#get)|Ruft den umschlossenen Verweis ab.|  
   
-## Anforderungen  
- **Header:** \<functional\>  
+### <a name="operators"></a>Operatoren  
+  
+|||  
+|-|-|  
+|[reference_wrapper::operator Ty&amp;](#operator_ty_amp_)|Ruft einen Zeiger auf den umschlossenen Verweis ab.|  
+|[reference_wrapper::operator()](#operator_call)|Ruft den umschlossenen Verweis auf.|  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<functional>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [cref\-Funktion](../Topic/cref%20Function.md)   
- [ref\-Funktion](../Topic/ref%20Function.md)
+##  <a name="a-namegeta--referencewrapperget"></a><a name="get"></a> reference_wrapper::get  
+ Ruft den umschlossenen Verweis ab.  
+  
+```  
+Ty& get() const noexcept;
+```  
+  
+### <a name="remarks"></a>Hinweise  
+Die Memberfunktion gibt den umschlossenen Verweis zurück.  
+  
+### <a name="example"></a>Beispiel  
+  
+```cpp  
+// std__functional__reference_wrapper_get.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int main() {   
+    int i = 1;   
+    std::reference_wrapper<int> rwi(i);   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "rwi = " << rwi << std::endl;   
+    rwi.get() = -1;   
+    std::cout << "i = " << i << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+rwi = 1  
+i = -1  
+```  
+  
+##  <a name="a-nameoperatortyampa--referencewrapperoperator-tyamp"></a><a name="operator_ty_amp_"></a> reference_wrapper::operator Ty&amp;  
+ Ruft den umschlossenen Verweis auf.  
+  
+```  
+operator Ty&() const noexcept;
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Der Memberoperator gibt `*ptr`zurück.  
+  
+### <a name="example"></a>Beispiel  
+  
+```cpp  
+// std__functional__reference_wrapper_operator_cast.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int main() {   
+    int i = 1;   
+    std::reference_wrapper<int> rwi(i);   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "(int)rwi = " << (int)rwi << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+(int)rwi = 1  
+```  
+  
+##  <a name="a-nameoperatorcalla--referencewrapperoperator"></a><a name="operator_call"></a> reference_wrapper::operator()  
+ Ruft den umschlossenen Verweis auf.  
+  
+```  
+template <class... Types>  
+auto operator()(Types&&... args);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Types`  
+ Die Argumentlisttypen.  
+  
+ `args`  
+ Die Argumentliste.  
+  
+### <a name="remarks"></a>Hinweise  
+ Das Vorlagenmember `operator()` gibt `std::invoke(get(), std::forward<Types>(args)...)` zurück.  
+  
+### <a name="example"></a>Beispiel  
+  
+```cpp  
+// std__functional__reference_wrapper_operator_call.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    std::reference_wrapper<int (int)> rwi(neg);   
+  
+    std::cout << "rwi(3) = " << rwi(3) << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+rwi(3) = -3  
+```  
+  
+##  <a name="a-namereferencewrappera--referencewrapperreferencewrapper"></a><a name="reference_wrapper"></a> reference_wrapper::reference_wrapper  
+ Erstellt ein Objekt vom Typ `reference_wrapper`.  
+  
+```  
+reference_wrapper(Ty& val) noexcept;
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Ty`  
+ Der zu umschließende Typ.  
+  
+ `val`  
+ Der zu umschließende Wert.  
+  
+### <a name="remarks"></a>Hinweise  
+ Der Konstruktor legt den gespeicherten Wert `ptr` auf `&val` fest.  
+  
+### <a name="example"></a>Beispiel  
+  
+```cpp  
+// std__functional__reference_wrapper_reference_wrapper.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    int i = 1;   
+    std::reference_wrapper<int> rwi(i);   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "rwi = " << rwi << std::endl;   
+    rwi.get() = -1;   
+    std::cout << "i = " << i << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+rwi = 1  
+i = -1  
+```  
+  
+##  <a name="a-nameresulttypea--referencewrapperresulttype"></a><a name="result_type"></a> reference_wrapper::result_type  
+ Der schwache Ergebnistyp des umschlossenen Verweises.  
+  
+```  
+typedef R result_type;  
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Die `result_type`-Typedefinition ist ein Synonym für den schwachen Ergebnistyp einer umschlossenen Funktion. Diese Typdefinition gilt nur für Funktionstypen.  
+  
+### <a name="example"></a>Beispiel  
+  
+```cpp  
+// std__functional__reference_wrapper_result_type.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    typedef std::reference_wrapper<int (int)> Mywrapper;   
+    Mywrapper rwi(neg);   
+    Mywrapper::result_type val = rwi(3);   
+  
+    std::cout << "val = " << val << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+val = -3  
+```  
+  
+##  <a name="a-nametypea--referencewrappertype"></a><a name="type"></a> reference_wrapper::type  
+ Der Typ des umschlossenen Verweises.  
+  
+```  
+typedef Ty type;  
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Die Typedef stellt ein Synonym für das Vorlagenargument `Ty`dar.  
+  
+### <a name="example"></a>Beispiel  
+  
+```cpp  
+// std__functional__reference_wrapper_type.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val) {   
+    return (-val);   
+}   
+  
+int main() {   
+    int i = 1;   
+    typedef std::reference_wrapper<int> Mywrapper;   
+    Mywrapper rwi(i);   
+    Mywrapper::type val = rwi.get();   
+  
+    std::cout << "i = " << i << std::endl;   
+    std::cout << "rwi = " << val << std::endl;   
+  
+    return (0);   
+}  
+```  
+  
+```Output  
+i = 1  
+rwi = 1  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [cref-Funktion](../standard-library/functional-functions.md#cref_function)   
+ [ref-Funktion](../standard-library/functional-functions.md#ref_function)
+
+

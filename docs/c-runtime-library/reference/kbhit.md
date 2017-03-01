@@ -1,74 +1,99 @@
 ---
-title: "kbhit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_kbhit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "kbhit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "kbhit-Funktion"
+title: _kbhit | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _kbhit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _kbhit
+- kbhit
+- conio/_kbhit
+dev_langs:
+- C++
+helpviewer_keywords:
+- keyboard input
+- user input, checking for keyboard
+- kbhit function
+- console
+- console, checking
+- keyboards, keyboard input
+- _kbhit function
+- keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# _kbhit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e213247266cad2c0f96b96057cf8e6933dfe45c6
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="kbhit"></a>_kbhit
 Überprüft die Konsole auf Tastatureingaben.  
   
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows\-Runtime ausgeführt werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 int _kbhit( void );  
 ```  
   
-## Rückgabewert  
- `_kbhit` gibt einen Wert ungleich 0 \(null\) zurück, wenn eine Taste gedrückt wurde.  Andernfalls wird 0 \(null\) zurückgegeben.  
+## <a name="return-value"></a>Rückgabewert  
+ `_kbhit` gibt einen Wert ungleich&0; (null) zurück, wenn eine Taste gedrückt wurde. Andernfalls wird 0 (null) zurückgegeben.  
   
-## Hinweise  
- Die `_kbhit`\-Funktion überprüft die Konsole auf eine neue Tastatureingabe.  Wenn die Funktion einen Wert ungleich 0 \(null\) zurückgibt, befindet sich eine Tastatureingabe im Puffer.  Das Programm kann dann `_getch` oder `_getche` aufrufen, um die Tastatureingabe zu erhalten.  
+## <a name="remarks"></a>Hinweise  
+ Die `_kbhit`-Funktion überprüft die Konsole auf eine neue Tastatureingabe. Wenn die Funktion einen Wert ungleich&0; (null) zurückgibt, befindet sich eine Tastatureingabe im Puffer. Das Programm kann dann `_getch` oder `_getche` aufrufen, um die Tastatureingabe zu erhalten.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_kbhit`|\<conio.h\>|  
+|-------------|---------------------|  
+|`_kbhit`|\<conio.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_kbhit.c  
@@ -93,12 +118,12 @@ int main( void )
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!  
 Key struck was 'q'   
 ```  
   
-## Siehe auch  
- [Konsole und Port\-E\/A](../../c-runtime-library/console-and-port-i-o.md)
+## <a name="see-also"></a>Siehe auch  
+ [Konsole und Port-E/A](../../c-runtime-library/console-and-port-i-o.md)

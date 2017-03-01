@@ -1,72 +1,89 @@
 ---
-title: "&lt;condition_variable&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<condition_variable>"
-dev_langs: 
-  - "C++"
+title: '&lt;condition_variable&gt; | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <condition_variable>
+dev_langs:
+- C++
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# &lt;condition_variable&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 6002dcd4cd0fe35c99ce56a1d9fd3b5f3c23dd08
+ms.lasthandoff: 02/24/2017
 
-Definiert die Klassen [condition\_variable](../standard-library/condition-variable-class.md) und [condition\_variable\_any](../standard-library/condition-variable-any-class.md), die verwendet werden, um Objekte zu erstellen, die auf eine Bedingung warten, um ausgeführt zu werden.  
+---
+# <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
+Definiert die Klassen [condition_variable](../standard-library/condition-variable-class.md) und [condition_variable_any](../standard-library/condition-variable-any-class.md), mit denen die Objekte erstellt werden, die auf das Eintreten einer Bedingung warten.  
   
- Für diesen Header wird "Concurrency Runtime \(ConcRT\)" verwendet, sodass er zusammen mit anderen ConcRT\-Mechanismen verwendet werden kann.  Weitere Informationen über ConcRT finden Sie unter [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).  
+ Für diesen Header wird "Concurrency Runtime (ConcRT)" verwendet, sodass er zusammen mit anderen ConcRT-Mechanismen verwendet werden kann. Weitere Informationen finden Sie unter [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <condition_variable>  
 ```  
   
 > [!NOTE]
->  In Code, der mithilfe von **\/clr** oder **\/clr:pure** kompiliert wird, wird dieser Header blockiert.  
+>  In Code, der kompiliert wird **/CLR**, dieser Header blockiert.  
   
-### Hinweise  
- Code, dass auf eine Bedingungsvariable `mutex` verwenden müssen.  Ein aufrufenden Thread muss `mutex` sperren, bevor er die Funktionen aufgerufen, die auf die Bedingungsvariable warten.  `mutex` wird dann gesperrt, wenn die aufgerufene Funktion zurückkehrt.  `mutex` wird nicht gesperrt, während der Thread auf die Bedingung true wartet, um zu werden.  Damit es keine unvorhersehbaren Ergebnissen gibt, jeder Thread, dass auf eine Bedingungsvariable das gleiche `mutex`\-Objekt verwenden müssen.  
+### <a name="remarks"></a>Hinweise  
+ Code, der auf eine Bedingungsvariable wartet, muss auch einen `mutex` verwenden. Ein aufrufender Thread muss den `mutex` vor dem Aufrufen der Funktionen, die auf die Bedingungsvariable warten, sperren. Der `mutex` ist dann gesperrt, wenn die aufgerufene Funktion zurückgegeben wird. Die `mutex` ist nicht gesperrt, während der Thread auf das Eintreten der Bedingung wartet. Damit keine unvorhersehbaren Ergebnisse produziert werden, muss jeder Thread, der auf eine Bedingungsvariable wartet, das gleiche `mutex` Objekt verwenden.  
   
- Objekte des Typs `condition_variable_any` können mit einem Mutex eines Typs verwendet werden.  Der Typ des Mutex, der verwendet wird, muss die `try_lock`\-Methode nicht bereitstellen.  Objekte des Typs `condition_variable` können mit einem Mutex des Typs `unique_lock<mutex>` nur verwendet werden.  Objekte dieses Typs sind möglicherweise schneller als Objekte vom Typ `condition_variable_any<unique_lock<mutex>>`.  
+ Objekte vom Typ `condition_variable_any` können mit einem Mutex eines beliebigen Typs verwendet werden. Der Typ des verwendeten Mutex muss keine `try_lock`-Methode angeben. Objekte vom Typ `condition_variable` können ausschließlich mit einem Mutex des Typs `unique_lock<mutex>` verwendet werden. Objekte dieses Typs sind möglicherweise schneller als Objekte vom Typ `condition_variable_any<unique_lock<mutex>>`.  
   
- Um auf Ereignisse warten, sperren Sie zuerst der Mutex, und rufen Sie dann eine der Methoden `wait` auf der Bedingungsvariable auf.  Die `wait` Aufruf wird blockiert auf einen anderen Thread signalisiert der Bedingungsvariable.  
+ Sie warten auf ein Ereignis, indem Sie zuerst den Mutex sperren und anschließend eine der `wait`-Methoden auf der Bedingungsvariablen aufrufen. Der `wait`-Aufruf wird so lange gesperrt, bis ein anderer Thread die Bedingungsvariable signalisiert.  
   
- *Unechtes Wecken* tritt auf, wenn Threads, die Bedingungsvariablen wartende sind, ohne dass entsprechende Benachrichtigungen nicht blockiert werden.  Um solche unechte Wecken zu erkennen, codieren Sie Wartungsarbeiten dass eine Bedingung erfüllt werden ob Bedingung explizit überprüfen sollten wenn die Coderückgaben von einem Wartevorgang arbeiten.  Dies wird normalerweise durchgeführt, indem eine Schleife verwendet; Sie können `wait(unique_lock<mutex>& lock, Predicate pred)` verwenden, um diese Schleife für Sie ausgeführt.  
+ *Spurious Wakeups* treten auf, wenn die Threads, die auf die Bedingungsvariable warten, ohne geeignete Benachrichtigungen entsperrt werden. Ein solches fälschliches Aufwecken kann durch den Code, der auf das Eintreten der Bedingung wartet, erkannt werden. Dazu muss er jedoch prüfen, ob die Bedingung, auf die er wartet, tatsächlich eingetreten ist. Dies erfolgt in der Regel mithilfe einer Schleife. Verwenden Sie `wait(unique_lock<mutex>& lock, Predicate pred)`, um diese Schleife für Sie durchzuführen.  
   
 ```cpp  
-while (condition is false)  
-    wait for condition variable;  
+while (condition is false)
+    wait for condition variable;
 ```  
   
- `condition_variable_any` und `condition_variable` werden jeweils über drei Methoden, die auf eine Bedingung warten.  
+ Die `condition_variable_any`- und `condition_variable`- Klassen verfügen über drei Methoden, um auf eine Bedingung zu warten.  
   
--   `wait` Wartung einen unendlichen Zeitraum.  
+- `wait` wartet für einen unbegrenzten Zeitraum.  
   
--   `wait_until` wartet auf einen angegebenen `time`.  
+- `wait_until` wartet, bis einem angegebenen Zeitpunkt (`time`).  
   
--   Wartet `wait_for` einen angegebenen `time interval`.  
+- `wait_for` wartet, bis zu einer angegebenen Dauer (`time interval`).  
   
- Jede dieser Methoden verfügt über zwei überladene Versionen.  Ein gerade wartet und kann unecht aufwachen.  Der andere akzeptiert ein zusätzliches Vorlagenargument, das ein Prädikat definiert.  Die Methode wird erst zurückgegeben, wenn das Prädikat `true` ist.  
+ Jede dieser Methoden verfügt über zwei überladene Versionen. Eine davon wartet einfach und kann fälschlicherweise aufwachen. Die andere verwendet ein zusätzliches Vorlagenargument, das ein Prädikat definiert. Die Methode gibt erst dann zurück, wenn das Prädikat den Wert `true` hat.  
   
- Jede Klasse besitzt ebenfalls zwei Methoden, die verwendet werden, um eine Bedingungsvariable zu benachrichtigen, dass die Bedingung `true` ist.  
+ Jede Klasse verfügt auch über zwei Methoden, mit denen eine Bedingungsvariable benachrichtigt wird, dass die Bedingung den Wert `true` hat.  
   
--   `notify_one` wird einem der Threads auf, der die Bedingungsvariable wartet.  
+- `notify_one` weckt einen der Threads auf, der auf die Bedingungsvariable wartet.  
   
--   `notify_all` wird alle Threads, die die Bedingungsvariable warten.  
+- `notify_all` weckt alle Threads auf, die auf die Bedingungsvariable warten.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
- [condition\_variable\-Klasse](../standard-library/condition-variable-class.md)   
- [condition\_variable\_any\-Klasse](../standard-library/condition-variable-any-class.md)   
- [cv\_status\-Enumeration](../Topic/cv_status%20Enumeration.md)
+ [condition_variable-Klasse](../standard-library/condition-variable-class.md)   
+ [condition_variable_any-Klasse](../standard-library/condition-variable-any-class.md)
+

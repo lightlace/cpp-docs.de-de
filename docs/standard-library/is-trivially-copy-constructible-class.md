@@ -1,54 +1,74 @@
 ---
-title: "is_trivially_copy_constructible-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_trivially_copy_constructible"
-  - "std.is_trivially_copy_constructible"
-  - "std::is_trivially_copy_constructible"
-  - "type_traits/std::is_trivially_copy_constructible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_trivially_copy_constructible"
+title: is_trivially_copy_constructible-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_trivially_copy_constructible
+- std.is_trivially_copy_constructible
+- std::is_trivially_copy_constructible
+- type_traits/std::is_trivially_copy_constructible
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# is_trivially_copy_constructible-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: a9f40518942be5632f13dee3865b603f04cbca84
+ms.lasthandoff: 02/24/2017
 
-Testet, ob der Typ einen trivialen kopienkonstruktor aufweist.  
+---
+# <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible-Klasse
+Testet, ob der Typ einen trivialen Kopierkonstruktor aufweist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template <class T>
+struct is_trivially_copy_constructible;
 ```  
-template<class T>  
-    struct is_trivially_copy_constructible;  
-```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
  Der abzufragende Typ.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Eine Instanz des Typprädikats ist „true“, wenn der `T` Typ eine Klasse ist, die einen trivialen Kopierkonstruktor aufweist; andernfalls „false“.  
   
- Für eine Klasse einen Kopierkonstruktor `T` ist trivial, wenn er implizit deklariert ist, die Klasse `T` verfügt über keine virtuellen Funktionen oder virtuellen Basen, die direkte Grundlagen der Klasse `T` trivial Kopierkonstruktoren verfügen, die Klassen alle nicht statischen Datenmember des Klassentyps trivial Kopierkonstruktoren und Klassen alle nicht statischen Datenmember vom Typarray der Klasse trivial Kopierkonstruktoren.  
+ Ein Kopierkonstruktor für eine Klasse `T` ist trivial, wenn er implizit deklariert wurde. Die Klasse `T` verfügt über keine virtuellen Funktionen oder Basen und alle direkten Basen der Klasse `T` haben triviale Kopierkonstruktoren. Die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Kopierkonstruktoren und die Klassen aller nicht statischen Datenmember vom Typ „array“ der Klasse haben triviale Kopierkonstruktoren.  
   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>Siehe auch  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

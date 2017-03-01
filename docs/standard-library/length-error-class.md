@@ -1,32 +1,48 @@
 ---
-title: "length_error-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdexcept/std::length_error"
-  - "length_error"
-  - "std::length_error"
-  - "std.length_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "length_error-Klasse"
+title: length_error-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdexcept/std::length_error
+- length_error
+- std::length_error
+- std.length_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- length_error class
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# length_error-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3846e5efd8c93d74e196cd31890b484f4befbca4
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="lengtherror-class"></a>length_error-Klasse
 Die Klasse fungiert als Basisklasse für alle Ausnahmen, die ausgelöst werden, um einen Versuch zu melden, ein Objekt zu erstellen, das zu lang ist, um angegeben werden zu können.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,11 +58,11 @@ public:
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Rückgabewert von [Was](../standard-library/exception-class1.md) ist eine Kopie des **Nachricht**`.`[Daten](../standard-library/basic-string-class.md#basic_string__data).  
+ Der von [Was](../standard-library/exception-class.md) zurückgegebene Wert ist eine Kopie von **Nachricht**`.`[Daten](../standard-library/basic-string-class.md#basic_string__data).  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // length_error.cpp  
 // compile with: /EHsc /GR /MDd  
 #include <vector>  
@@ -87,11 +103,12 @@ Type class std::length_error
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** \< Stdexcept>  
+ **Header:** \<stdexcept>  
   
  **Namespace:** std  
   
 ## <a name="see-also"></a>Siehe auch  
- [Logic_error-Klasse](../standard-library/logic-error-class.md)   
+ [logic_error-Klasse](../standard-library/logic-error-class.md)   
  [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

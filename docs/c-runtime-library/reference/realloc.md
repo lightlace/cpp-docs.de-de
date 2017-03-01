@@ -1,58 +1,75 @@
 ---
-title: "realloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "realloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_brealloc"
-  - "_nrealloc"
-  - "realloc"
-  - "_frealloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_brealloc-Funktion"
-  - "realloc-Funktion"
-  - "nrealloc-Funktion"
-  - "frealloc-Funktion"
-  - "_nrealloc-Funktion"
-  - "Arbeitsspeicherblöcke, Neuzuordnen"
-  - "Arbeitsspeicher, Neuzuordnen"
-  - "_frealloc-Funktion"
-  - "Neuzuordnung von Arbeitsspeicherblöcken"
+title: realloc | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- realloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _brealloc
+- _nrealloc
+- realloc
+- _frealloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- _brealloc function
+- realloc function
+- nrealloc function
+- frealloc function
+- _nrealloc function
+- memory blocks, reallocating
+- memory, reallocating
+- _frealloc function
+- reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# realloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dd20bf67c0854cf837ff5cf4f22308f977b06734
+ms.lasthandoff: 02/24/2017
 
-Zuordnen Speicherblöcke neu zu.  
+---
+# <a name="realloc"></a>realloc
+Neubelegung von Arbeitsspeicherblöcken.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void *realloc(  
@@ -61,50 +78,50 @@ void *realloc(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `memblock`  
- Zeiger zuvor dem reservierten Speicherblock.  
+ Zeiger zum vorherigen belegten Speicherblock.  
   
  `size`  
  Neue Größe in Bytes.  
   
-## Rückgabewert  
- `realloc` gibt ein `void` Zeiger auf das neu zugeordnete \(und möglicherweise bewegt\) Speicherblock zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ `realloc` gibt einen `void`-Zeiger auf den neu belegten (und möglicherweise verschobenen) Speicherblock zurück.  
   
- Falls nicht genügend verfügbarer Speicher gibt, z des Blocks der angegebenen Größe zu erweitern, ist der erste Block unverändert gelassen, und `NULL` wird zurückgegeben.  
+ Wenn nicht genügend Arbeitsspeicher verfügbar ist, um den Block auf die vorgegebene Größe auszudehnen, bleibt der ursprüngliche Block unverändert, und `NULL` wird zurückgegeben.  
   
- Wenn `size` null ist, wird der Block, auf den durch `memblock` gezeigt wird, freigegeben; der Rückgabewert ist `NULL` und `memblock` ist Left, an einem freigegebenen Block selbst zu zeigen.  
+ Wenn `size`&0; ist, wird der Block, auf den durch `memblock` gezeigt wird, freigegeben; der Rückgabewert ist `NULL`, und `memblock` zeigt auf den freigegebenen Block.  
   
- Der Rückgabewert zeigt auf einem Speicherplatz, der garantiert wird, zum Speichern eines beliebigen Typs Objekt ordnungsgemäß ausgerichtet sind.  Um einen Zeiger auf einen anderen Typ als `void` zu erhalten, verwenden Sie eine Typumwandlung für den Rückgabewert.  
+ Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einen anderen Typ als `void` zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert.  
   
-## Hinweise  
- Die `realloc`\-Funktion änder die Größe eines reservierten Speicherblocks.  Das Argument `memblock` zeigt auf den Anfang des Speicherblocks.  Wenn `memblock``NULL` ist, verhält sich genauso wie `realloc` und `malloc` ordnet einem neuen Block `size` Bytes zu.  Wenn `memblock` nicht `NULL` ist, sollte ein Zeiger sein, der bei einem vorherigen Aufruf von `calloc`, `malloc` oder `realloc` zurückgegeben wird.  
+## <a name="remarks"></a>Hinweise  
+ Die `realloc`-Funktion ändert die Größe eines zugeordneten Speicherblocks. Das `memblock`-Argument zeigt auf den Anfang des Speicherblocks. Wenn `memblock` `NULL` ist, dann verhält sich `realloc` genauso wie `malloc` und weist einen neuen Block an `size`-Bytes zu. Wenn `memblock` nicht `NULL` ist, wird ein Zeiger von einem vorherigen Aufruf an `calloc`, `malloc` oder `realloc` zurückgegeben.  
   
- Das Argument `size` gibt die neue Größe des Blocks, in Bytes.  Der Inhalt des Blocks entspricht z kürzeren der neuen und den alten Größen unverändert, obwohl der neue Block in einem anderen Speicherort befinden kann.  Da der neue Block in einer neuen Speicherort sein kann, wird der Zeiger, der von `realloc` zurückgegeben wird, nicht gewährleistet, dass sich der Zeiger zu sein, der vom `memblock`\-Argument übergeben wird.  `realloc` stellt nicht neu belegte Arbeitsspeicher bei Auslösung im Fall von Pufferzunahme auf Null ein.  
+ Das `size`-Argument gibt die neue Größe des Blocks in Bytes an. Der Inhalt des Blocks bleibt bis zum Minimum von neuer und alter Größe unverändert, obwohl sich der neue Block an einem anderen Speicherort befinden kann. Da der neue Block an einem neuen Speicherort liegen kann, kann nicht garantiert werden, dass der von `realloc` zurückgegebene Zeiger mit dem durch das `memblock`-Argument übergebenen Zeiger identisch ist. Falls der Puffer vergrößert wird, stellt `realloc` nicht sicher, dass der neu belegte Arbeitsspeicher mit&0; belegt ist.  
   
- `realloc` wird `errno` auf `ENOMEM` fest, wenn die Speicherbelegung fehlschlägt, oder wenn der angeforderte Arbeitsspeicher `_HEAP_MAXREQ` überschreitet.  Informationen hierzu und andere Fehlercodes, finden Sie unter [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `realloc` setzt `errno` auf `ENOMEM`, wenn eine Speicherbelegung fehlschlägt oder wenn der benötigte Speicherplatz größer als `_HEAP_MAXREQ` ist. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `realloc` Ruft `malloc` um die Funktion der [\_set\_new\_mode](../../c-runtime-library/reference/set-new-mode.md) verwenden, um den neuen Handlermodus festzulegen.  Der neue Handlermodus gibt an, ob bei einem Fehler `malloc` die neue Handlerroutine aufgerufen werden soll, wie dies von [\_set\_new\_handler](../../c-runtime-library/reference/set-new-handler.md) festgelegt ist.  Standardmäßig ruft `malloc` bei einem Speicherbelegungsfehler nicht die neue Handlerroutine auf.  Sie können dieses Standardverhalten überschreiben, sodass, wenn `realloc` Speicher nicht belegen kann,`malloc` die neue Handlerroutine genauso aufruft wie der `new`\-Operator, wenn dieser aus demselben Grund fehlschlägt.  Um den Standardwert zu überschreiben, rufen Sie  
+ `realloc` ruft `malloc` auf, um mithilfe der C++-Funktion [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) den neuen Handlermodus festzulegen. Der neue Handlermodus gibt an, ob bei einem Fehler die neue Handlerroutine von `malloc` aufgerufen werden soll, wie dies von [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) festgelegt ist. Standardmäßig ruft `malloc` bei einem Speicherbelegungsfehler nicht die neue Handlerroutine auf. Sie können dieses Standardverhalten überschreiben, sodass, wenn `realloc` Speicher nicht belegen kann,`malloc` die neue Handlerroutine genauso aufruft wie der `new`-Operator, wenn dieser aus demselben Grund fehlschlägt. Um den Standardwert zu überschreiben, rufen Sie  
   
 ```  
 _set_new_mode(1)  
 ```  
   
- früh in ein Programm oder Link mit NEWMODE.OBJ \(siehe [Linkoptionen](../../c-runtime-library/link-options.md)\).  
+ rechtzeitig im Programm auf, oder stellen Sie eine Verknüpfung mit NEWMODE.OBJ (siehe [Linkoptionen](../../c-runtime-library/link-options.md)) her.  
   
- Wenn die Anwendung mit einer Debugversion der C\-Laufzeitbibliotheken verknüpft ist, wird `realloc` von [\_realloc\_dbg](../../c-runtime-library/reference/realloc-dbg.md) auf.  Weitere Informationen dazu, wie der Heap während des Debuggingsprozesses verwaltet wird, finden Sie unter [Der CRT\-Debugheap](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Wenn die Anwendung mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist, wird `realloc` in [_realloc_dbg](../../c-runtime-library/reference/realloc-dbg.md) aufgelöst. Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
   
- `realloc` ist als `__declspec(noalias)` gekennzeichnet und `__declspec(restrict)` heißt, dass die Funktion, die gewährleistet sind globale Variablen nicht zu ändern und der zurückgegebene Zeiger nicht von Alias\-.  Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [Einschränken ein](../../cpp/restrict.md).  
+ `realloc` ist als `__declspec(noalias)` und `__declspec(restrict)` gekennzeichnet, das bedeutet, dass die Funktion globale Variablen definitiv nicht ändert und dass der zurückgegebene Zeiger keinen Alias hat. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`realloc`|\<stdlib.h\> und \<malloc.h\>|  
+|-------------|---------------------|  
+|`realloc`|\<stdlib.h> und \<malloc.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_realloc.c  
@@ -146,12 +163,15 @@ int main( void )
 }  
 ```  
   
-  **Größe des Blockes nach von malloc 1000 long\-Werte: 4000**  
-**Größe des Blockes nach realloc von 1000 Short Überlappung mehr: 8000**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Size of block after malloc of 1000 longs: 4000  
+Size of block after realloc of 1000 more longs: 8000  
+```  
   
-## Siehe auch  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
  [Speicherbelegung](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   

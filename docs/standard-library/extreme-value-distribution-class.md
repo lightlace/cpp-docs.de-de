@@ -1,61 +1,124 @@
 ---
-title: "extreme_value_distribution-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.extreme_value_distribution"
-  - "tr1::extreme_value_distribution"
-  - "tr1.extreme_value_distribution"
-  - "std::tr1::extreme_value_distribution"
-  - "random/std::tr1::extreme_value_distribution"
-  - "extreme_value_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "extreme_value_distribution-Klasse"
+title: extreme_value_distribution-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- extreme_value_distribution
+- std::extreme_value_distribution
+- random/std::extreme_value_distribution
+- std::extreme_value_distribution::reset
+- random/std::extreme_value_distribution::reset
+- std::extreme_value_distribution::a
+- random/std::extreme_value_distribution::a
+- std::extreme_value_distribution::b
+- random/std::extreme_value_distribution::b
+- std::extreme_value_distribution::param
+- random/std::extreme_value_distribution::param
+- std::extreme_value_distribution::min
+- random/std::extreme_value_distribution::min
+- std::extreme_value_distribution::max
+- random/std::extreme_value_distribution::max
+- std::extreme_value_distribution::operator()
+- random/std::extreme_value_distribution::operator()
+- std::extreme_value_distribution::param_type
+- random/std::extreme_value_distribution::param_type
+- std::extreme_value_distribution::param_type::a
+- random/std::extreme_value_distribution::param_type::a
+- std::extreme_value_distribution::param_type::b
+- random/std::extreme_value_distribution::param_type::b
+- std::extreme_value_distribution::param_type::operator==
+- random/std::extreme_value_distribution::param_type::operator==
+- std::extreme_value_distribution::param_type::operator!=
+- random/std::extreme_value_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- extreme_value_distribution class
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# extreme_value_distribution-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
+ms.openlocfilehash: 8d7cab089d2fbffa447e1060188b605b6ebfdb65
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="extremevaluedistribution-class"></a>extreme_value_distribution-Klasse
 Generiert eine Extremwertverteilung.  
   
-## Syntax  
-  
+## <a name="syntax"></a>Syntax  
 ```  
-template<class RealType = double> class extreme_value_distribution { public:     // types     typedef RealType result_type;     struct param_type;     // constructor and reset functions     explicit extreme_value_distribution(RealType a = 0.0, RealType b = 1.0);     explicit extreme_value_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     RealType a() const;     RealType b() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
-```  
+template<class RealType = double>
+class extreme_value_distribution  
+   {  
+public:  
+   // types  
+   typedef RealType result_type;  
+   struct param_type;  
+   
+   // constructor and reset functions  
+   explicit extreme_value_distribution(result_type a = 0.0, result_type b = 1.0);
+   explicit extreme_value_distribution(const param_type& parm);
+   void reset();
+   
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   
+   // property functions  
+   result_type a() const;
+   result_type b() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
+```    
+### <a name="parameters"></a>Parameter  
+*RealType*  
+Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
-#### Parameter  
- `RealType`  
- Der Gleitkommaergebnistyp. Der Standardwert ist `double`.  Die möglichen Typen finden Sie unter [\<random\>](../standard-library/random.md).  
+*URNG* Das Zufallszahlengenerator-Modul. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).
   
-## Hinweise  
- Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der Extremwertverteilung verteilter Wert ausgeben wird, geben Sie `double` ein.  Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert. Wenn kein entsprechend der Extremwertverteilung verteilter Wert ausgeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
   
 ||||  
 |-|-|-|  
-|[extreme\_value\_distribution::extreme\_value\_distribution](../Topic/extreme_value_distribution::extreme_value_distribution.md)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|  
-|`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[extreme\_value\_distribution::param\_type](../Topic/extreme_value_distribution::param_type.md)|  
+|[extreme_value_distribution::extreme_value_distribution](#extreme_value_distribution__extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|  
+|`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[extreme_value_distribution::param_type](#extreme_value_distribution__param_type)|  
   
  Die Eigenschaftsfunktionen `a()` und `b()` geben ihre entsprechenden Werte für die gespeicherten Verteilungsparameter `a` und `b` zurück.  
   
- Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random\>](../standard-library/random.md).  
+ Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
   
- Ausführliche Informationen über die Extremwertverteilung finden Sie im Wolfram MathWorld\-Artikel [Extreme Value Distribution](http://go.microsoft.com/fwlink/?LinkId=401110).  
+ Ausführliche Informationen über die Extremwertverteilung finden Sie im Wolfram MathWorld-Artikel [Extreme Value Distribution](http://go.microsoft.com/fwlink/LinkId=401110).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -113,38 +176,94 @@ int main()
   
     test(a_dist, b_dist, samples);  
 }  
-  
 ```  
   
-## Ausgabe  
-  
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'a' distribution parameter: 0  
 Enter a floating point value for the 'b' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == -1.79769e+308  
 max() == 1.79769e+308  
 a() == 0.0000000000  
 b() == 1.0000000000  
 Distribution for 10 samples:  
-          1:  -0.8813940331  
-          2:  -0.7698972281  
-          3:   0.2951258007  
-          4:   0.3110450734  
-          5:   0.4210546820  
-          6:   0.4210688771  
-          7:   0.4598857960  
-          8:   1.3155194200  
-          9:   1.5379170046  
-         10:   2.0568757061  
+    1: -0.8813940331  
+    2: -0.7698972281  
+    3: 0.2951258007  
+    4: 0.3110450734  
+    5: 0.4210546820  
+    6: 0.4210688771  
+    7: 0.4598857960  
+    8: 1.3155194200  
+    9: 1.5379170046  
+    10: 2.0568757061  
 ```  
   
-## Anforderungen  
- **Header:** \<random\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<random>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-nameextremevaluedistributionextremevaluedistributiona--extremevaluedistributionextremevaluedistribution"></a><a name="extreme_value_distribution__extreme_value_distribution"></a> extreme_value_distribution::extreme_value_distribution  
+ Erstellt die Verteilung.  
+  
+```  
+explicit extreme_value_distribution(result_type a_value = 0.0, result_type b_value = 1.0);
+explicit extreme_value_distribution(const param_type& parm);  
+```  
+  
+### <a name="parameters"></a>Parameter  
+*a_value*  
+ Der `a`-Verteilungsparameter.  
+  
+*b_value*  
+ Der `b`-Verteilungsparameter.  
+  
+*parm*  
+ Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.  
+  
+### <a name="remarks"></a>Hinweise  
+ **Vorbedingung:** `0.0 < b`  
+  
+ Mit dem ersten Konstruktor wird ein Objekt erstellt, in dessen gespeichertem `a`-Wert der Wert *a_value* enthalten ist und dessen gespeicherter `b`-Wert den Wert *b_value* enthält.  
+  
+ Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
+  
+##  <a name="a-nameextremevaluedistributionparamtypea--extremevaluedistributionparamtype"></a><a name="extreme_value_distribution__param_type"></a> extreme_value_distribution::param_type  
+Speichert die Parameter der Verteilung.  
+  
+```cpp  
+struct param_type {  
+   typedef extreme_value_distribution<result_type> distribution_type;  
+   param_type(result_type a_value = 0.0, result_type b_value = 1.0);
+   result_type a() const;
+   result_type b() const;
+    
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+  
+### <a name="parameters"></a>Parameter  
+*a_value*  
+ Der `a`-Verteilungsparameter.  
+  
+*b_value*  
+ Der `b`-Verteilungsparameter.  
+  
+*right*  
+ Das mit diesem `param_type`-Objekt zu vergleichende Objekt.  
+  
+### <a name="remarks"></a>Hinweise  
+ **Vorbedingung:** `0.0 < b`  
+  
+ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteilers, an die Memberfunktion `param()` (zur Festlegung der gespeicherten Parameter einer vorhandenen Verteilung) und an `operator()` (zur Verwendung anstelle der gespeicherten Parameter) übergeben werden.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [\<random>](../standard-library/random.md)
+
+
+
+

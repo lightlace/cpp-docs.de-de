@@ -1,33 +1,49 @@
 ---
-title: "&lt; Codecvt &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "codecvt"
-  - "std::<codecvt>"
-  - "std.<codecvt>"
-  - "<codecvt>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "codecvt-Header"
+title: '&lt;codecvt&gt; | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- codecvt
+- std::<codecvt>
+- std.<codecvt>
+- <codecvt>
+dev_langs:
+- C++
+helpviewer_keywords:
+- codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# &lt; Codecvt &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: 119af430ef2d333780587ce72fb5be65faf43892
+ms.lasthandoff: 02/24/2017
 
-Definiert mehrere Vorlagenklassen, die Objekte, die basierend auf der Vorlagenklasse beschreiben [Codecvt](../standard-library/codecvt-class.md). Diese Objekte können dienen als [gebietsschemafacets](../standard-library/locale-class.md#facet_class) Konvertierungen zwischen einer Sequenz von Werten des Typs steuern `Elem` und eine Sequenz von Werten des Typs `char`.  
+---
+# <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
+Definiert mehrere Vorlagenklassen, die Objekte anhand der Vorlagenklasse [codecvt](../standard-library/codecvt-class.md) beschreiben. Diese Objekte können als [Gebietsschemafacets](../standard-library/locale-class.md#facet_class) dienen, die Konvertierungen zwischen einer Sequenz von Werten des Typs `Elem` und einer Sequenz von Werten des Typs `char` steuern.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,55 +53,57 @@ Definiert mehrere Vorlagenklassen, die Objekte, die basierend auf der Vorlagenkl
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die gebietsschemafacets in diesem Header deklariert Konvertieren zwischen mehreren zeichencodierungen. Für Breitzeichen (innerhalb des Programms in fester Größe ganzen Zahlen gespeichert):  
+ Die in diesem Header deklarierten Gebietsschemafacets führen Konvertierungen zwischen verschiedenen Zeichencodierungen durch. Bei Breitzeichen (innerhalb des Programms als ganze Zahlen mit fester Größe gespeichert):  
   
--   UCS-4 ist Unicode (ISO 10646) innerhalb des Programms codiert  
+-   UCS-4 ist innerhalb des Programms codierter Unicode (ISO 10646)  
   
--   UCS-4 ist Unicode (ISO 10646) innerhalb der Anwendung als 32-Bit-Ganzzahl codiert.  
+-   UCS-4 ist innerhalb des Programms als 32-Bit-Integer codierter Unicode (ISO 10646).  
   
--   UCS-2 wird Unicode codiert innerhalb des Programms  
+-   UCS-2 ist innerhalb des Programms codierter Unicode  
   
--   UCS-2 ist Unicode im Programm als 16-Bit-Ganzzahl codiert.  
+-   UCS-2 ist innerhalb des Programms als 16-Bit-Integer codierter Unicode.  
   
--   UTF-16 wird Unicode codiert wurde, in die Anwendung als eine  
+-   UTF-16 ist innerhalb des Programms als eines von beidem codierter Unicode  
   
--   UTF-16 wird Unicode im Programm als ein oder zwei 16-Bit-Ganzzahlen codiert. (Beachten Sie, dass dies nicht alle Anforderungen von einer gültigen Breitzeichen-Codierung für Standard-C oder C++-Standard entspricht. Dennoch ist es daher verbreitet.)  
+-   UTF-16 ist innerhalb des Programms als eine oder zwei 16-Bit-Integer codierter Unicode. (Hinweis: Dies erfüllt nicht alle Anforderungen einer gültigen Breitzeichencodierung für Standard C oder Standard C++. Es ist aber als solches weit verbreitet.)  
   
- Für Bytestreams (in einer Datei gespeichert, als ein Byte-Sequenz übertragen oder gespeichert, die innerhalb des Programms in einem Array von `char`):  
+ Bei Bytestreams (in einer Datei gespeichert, als Bytesequenz übertragen oder innerhalb des Programms in einem Array von `char` gespeichert):  
   
--   UTF-8 ist Unicode codiert  
+-   UTF-8 ist Unicode-codiert  
   
--   UTF-8 ist Unicode als mindestens 8-Bit-Bytes mit deterministisch Byte Order in einen Bytestream codiert.  
+-   UTF-8 ist innerhalb eines Bytestreams als eine oder mehrere&8;-Bit-Bytes mit deterministischer Bytereihenfolge Unicode-codiert.  
   
--   UTF-16LE wird Unicode codiert  
+-   UTF-16LE ist Unicode-codiert  
   
--   UTF-16LE ist in einem Bytestream als UTF-16 codierte Unicode jeder 16-Bit-Ganzzahl, die zunächst als zwei 8-Bit-Bytes weniger signifikante Byte dargestellt.  
+-   UTF-16LE ist in einem Bytestream als UTF-16 Unicode-codiert, wobei jeder 16-Bit-Integer als zwei 8-Bit-Bytes dargestellt wird (das weniger signifikante Byte zuerst).  
   
--   UTF-16BE wird Unicode codiert  
+-   UTF-16BE ist Unicode-codiert  
   
--   UTF-16BE ist in einem Bytestream als UTF-16 codierte Unicode jeder 16-Bit-Ganzzahl, die zunächst als zwei 8-Bit-Bytes, größere Byte dargestellt.  
+-   UTF-16BE ist in einem Bytestream als UTF-16 Unicode-codiert, wobei jeder 16-Bit-Integer als zwei 8-Bit-Bytes dargestellt wird (das signifikantere Byte zuerst).  
   
 ### <a name="enumerations"></a>Enumerationen  
   
 |||  
 |-|-|  
-|[codecvt_mode](../Topic/%3Ccodecvt%3E%20enums.md#codecvt_mode_enumeration)|Gibt die Konfigurationsinformationen für gebietsschemafacets an.|  
+|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode_enumeration)|Gibt die Konfigurationsinformationen für Gebietsschemafacets an.|  
   
 ### <a name="classes"></a>Klassen  
   
 |||  
 |-|-|  
-|[codecvt_utf8](../Topic/%3Ccodecvt%3E%20functions.md#codecvt_utf8)|Stellt die gebietsschemafacet zwischen Breitzeichen als UCS-2 oder UCS-4 codiert und eines Bytestreams, der als UTF-8 codiert konvertiert.|  
-|[codecvt_utf8_utf16](%3Ccodecvt%3E%20functions.md#codecvt_utf8_utf16)|Stellt gebietsschemafacet zwischen Zeichen als UTF-16 codiert und eines Bytestreams, der als UTF-8 codiert konvertiert.|  
-|[codecvt_utf16](../Topic/%3Ccodecvt%3E%20functions.md#codecvt_utf16)|Stellt die gebietsschemafacet zwischen Breitzeichen als UCS-2 oder UCS-4 codiert und einem Bytestream codiert als UTF-16LE oder UTF-16BE konvertiert.|  
+|[codecvt_utf8](codecvt-utf8-class.md)|Stellt ein Gebietsschemafacet dar, das eine Konvertierung durchführt zwischen Breitzeichen, die als UCS-2 oder UCS-4 codiert sind, und einem Bytestream, der als UTF-8 codiert ist.|  
+|[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Stellt ein Gebietsschemafacet dar, das eine Konvertierung durchführt zwischen Breitzeichen, die als UTF-16 codiert sind, und einem Bytestream, der als UTF-8 codiert ist.|  
+|[codecvt_utf16](codecvt-utf16-class.md)|Stellt ein Gebietsschemafacet dar, das eine Konvertierung durchführt zwischen Breitzeichen, die als UCS-2 oder UCS-4 codiert sind, und einem Bytestream, der als UTF-16LE oder UTF-16BE codiert ist.|  
+
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** \< Codecvt>  
+ **Header:** \<codecvt>  
   
- **Namespace:** Stdt  
+ **Namespace:** stdt  
   
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)
+
 
 
 

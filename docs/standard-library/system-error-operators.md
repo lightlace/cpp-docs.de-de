@@ -1,0 +1,116 @@
+---
+title: '&lt;system_error&gt;-Operatoren | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
+caps.latest.revision: 11
+manager: ghogen
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 82f7876aca66524ba50b1e01b74437d8a2117976
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt;-Operatoren
+||||  
+|-|-|-|  
+|[operator!=](#operator_neq)|[operator&lt;](#operator_lt_)|[operator==](#operator_eq_eq)|  
+  
+##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a> operator==  
+ Testet, ob das Objekt links vom Operator gleich dem Objekt rechts vom Operator ist.  
+  
+```
+bool operator==(const error_code& left,
+    const error_condition& right);
+
+bool operator==(const error_condition& left,
+    const error_code& right);
+```  
+  
+### <a name="parameters"></a>Parameter  
+  
+|Parameter|Beschreibung|  
+|---------------|-----------------|  
+|`left`|Das Objekt, das auf Gleichheit getestet werden soll.|  
+|`right`|Das Objekt, das auf Gleichheit getestet werden soll.|  
+  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn die Objekte gleich sind; **FALSE**, wenn die Objekte nicht gleich sind.  
+  
+### <a name="remarks"></a>Hinweise  
+ Die Funktion gibt `left.category() == right.category() && left.value() == right.value()`zurück.  
+  
+##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a> operator!=  
+ Testet, ob das Objekt links vom Operator ungleich dem Objekt rechts vom Operator ist.  
+  
+```
+bool operator!=(const error_code& left,
+    const error_condition& right);
+
+bool operator!=(const error_condition& left,
+    const error_code& right);
+```  
+  
+### <a name="parameters"></a>Parameter  
+  
+|Parameter|Beschreibung|  
+|---------------|-----------------|  
+|`left`|Das Objekt, das auf Ungleichheit geprüft werden soll.|  
+|`right`|Das Objekt, das auf Ungleichheit geprüft werden soll.|  
+  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn das in `left` übergebene Objekt nicht gleich dem in `right` übergebenen Objekt ist, andernfalls **FALSE**.  
+  
+### <a name="remarks"></a>Hinweise  
+ Die Funktion gibt `!(left == right)`zurück.  
+  
+##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a> operator&lt;  
+ Testet, ob ein Objekt kleiner ist als das Objekt, das für den Vergleich übergeben wurde.  
+  
+```
+template <class _Enum>  
+inline bool operator<(
+    _Enum left,
+    typename enable_if<is_error_code_enum<_Enum>::value,
+    const error_code&>::type right);
+
+template <class _Enum>  
+inline bool operator<(
+    typename enable_if<is_error_code_enum<_Enum>::value,
+    const error_code&>::type left, _Enum right);
+
+template <class _Enum>  
+inline bool operator<(
+    _Enum left,
+    typename enable_if<is_error_condition_enum<_Enum>::value,
+    const error_condition&>::type right);
+
+template <class _Enum>  
+inline bool operator<(
+    typename enable_if<is_error_condition_enum<_Enum>::value,
+    const error_condition&>::type left, _Enum right);
+```  
+  
+### <a name="parameters"></a>Parameter  
+  
+|Parameter|Beschreibung|  
+|---------------|-----------------|  
+|`left`|Das zu vergleichende Objekt.|  
+|`right`|Das zu vergleichende Objekt.|  
+  
+### <a name="return-value"></a>Rückgabewert  
+ **TRUE**, wenn das in `left` übergebene Objekt kleiner als das in `right` übergebene ist; andernfalls **FALSE**.  
+  
+### <a name="remarks"></a>Hinweise  
+ Mit dieser Funktion wird die Fehlerreihenfolge getestet.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [<system_error>](../standard-library/system-error.md)
+
+
+
+
