@@ -1,49 +1,65 @@
 ---
-title: "clearerr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "clearerr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "clearerr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clearerr-Funktion"
-  - "Fehlerindikator für Streams"
-  - "Neufestlegen von Streamfehlerindikator"
+title: clearerr | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- clearerr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- clearerr
+dev_langs:
+- C++
+helpviewer_keywords:
+- error indicator for streams
+- resetting stream error indicator
+- clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# clearerr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 78dcc9fba6fe013005540a72df80b58c127d39da
+ms.lasthandoff: 02/24/2017
 
-Setzt den Fehler für einen Stream zurück.  Eine sicherere Version dieser Funktion ist verfügbar; finden Sie unter [clearerr\_s](../../c-runtime-library/reference/clearerr-s.md).  
+---
+# <a name="clearerr"></a>clearerr
+Setzt den Fehlerindikator für einen Stream zurück. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [clearerr_s](../../c-runtime-library/reference/clearerr-s.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void clearerr(  
@@ -51,26 +67,26 @@ void clearerr(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `stream`  
- Zeiger zur `FILE`\-Struktur.  
+ Zeiger zur `FILE` -Struktur.  
   
-## Hinweise  
- Die `clearerr`\-Funktion setzt den Fehler und den Dateiende\-Indikator für `stream` zurück.  Fehlerindikatoren werden nicht automatisch gelöscht; einmal wird der Fehler für den jeweiligen Stream festgelegt, fahren Vorgänge auf diesem Stream fort, um einem Fehlerwert bis `clearerr`, `fseek`, `fsetpos` zurückzugeben, oder `rewind` wird aufgerufen.  
+## <a name="remarks"></a>Hinweise  
+ Die `clearerr`-Funktion setzt den Fehlerindikator und den Dateiende-Indikator für `stream` zurück. Fehlerindikatoren werden nicht automatisch gelöscht; sobald der Fehlerindikator für einen bestimmten Stream festgelegt wurde, geben Operationen in diesem Stream weiterhin einen Fehlerwert zurück, bis `clearerr`, `fseek`, `fsetpos` oder `rewind` aufgerufen wird.  
   
- Wenn `stream` den Wert `NULL` annimmt, wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen.  Wenn die Ausführung zulässig ist, um fortzufahren, Sätze `errno` dieser Funktion in `EINVAL` und gibt an.  Weitere Informationen über `errno` und Fehlercodes, finden Sie unter [errno Konstanten](../../c-runtime-library/errno-constants.md).  
+ Wenn `stream` `NULL` ist, wird der Handler für ungültige Parameter wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und kehrt dann zurück. Weitere Informationen über `errno` und andere Fehlercodes finden Sie unter [errno-Konstanten](../../c-runtime-library/errno-constants.md).  
   
- Eine sicherere Version dieser Funktion ist verfügbar; finden Sie unter [clearerr\_s](../../c-runtime-library/reference/clearerr-s.md).  
+ Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [clearerr_s](../../c-runtime-library/reference/clearerr-s.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`clearerr`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`clearerr`|\<stdio.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_clearerr.c  
@@ -104,16 +120,26 @@ int main( void )
 }  
 ```  
   
-  **`nnWrite` Fehler: Kein Fehler**  
-**Bewirkt Eingabe einen Fehler? n**  
-**Kein Lesefehler**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
   
-## Siehe auch  
- [Fehlerbehandlung](../../c-runtime-library/error-handling-crt.md)   
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [\_eof](../../c-runtime-library/reference/eof.md)   
+n  
+  
+```  
+  
+```Output  
+  
+      nWrite error: No error  
+Will input cause an error? n  
+No read error  
+```  
+  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Error Handling (Fehlerbehandlung)](../../c-runtime-library/error-handling-crt.md)   
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [_eof](../../c-runtime-library/reference/eof.md)   
  [feof](../../c-runtime-library/reference/feof.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror, \_wperror](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

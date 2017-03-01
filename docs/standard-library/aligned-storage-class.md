@@ -1,60 +1,73 @@
 ---
-title: "aligned_storage-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "aligned_storage"
-  - "std::tr1::aligned_storage"
-  - "std.tr1.aligned_storage"
-  - "std.aligned_storage"
-  - "std::aligned_storage"
-  - "type_traits/std::aligned_storage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aligned_storage-Klasse [TR1]"
-  - "aligned_storage"
+title: aligned_storage-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- aligned_storage
+- std::aligned_storage
+- type_traits/std::aligned_storage
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_storage class
+- aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# aligned_storage-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 0da44c2fb505b2edbce9e5ccb028a6e167b4cf17
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="alignedstorage-class"></a>aligned_storage-Klasse
 Erstellt einen entsprechend ausgerichteten Typ.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<std::size_t Len, std::size_t Align>  
-    struct aligned_storage;  
-  
+template <std::size_t Len, std::size_t Align>  
+struct aligned_storage;  
+ 
 template <std::size_t Len, std::size_t Align = alignment_of<max_align_t>::value>  
-    using aligned_storage_t = typename aligned_storage<Len, Align>::type;  
+using aligned_storage_t = typename aligned_storage<Len, Align>::type;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `Len`  
  Die Objektgröße.  
   
  `Align`  
  Die Objektausrichtung.  
   
-## Hinweise  
- Die Vorlage Member Typedef `type` ist ein Synonym für ein POD\-Typ mit Ausrichtung `Align` und Größe `Len`.`Align` muss gleich sein `alignment_of<T>::value` für einen Typ `T`, oder die standardmäßige Ausrichtung.  
+## <a name="remarks"></a>Hinweise  
+ Der Vorlagenmember typedef-`type` ist ein Synonym für einen POD-Typ mit der Ausrichtung `Align` und der Größe `Len`. `Align` muss gleich sein mit `alignment_of<T>::value` für manche `T`-Typen oder mit der standardmäßigen Ausrichtung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 #include <type_traits>   
 #include <iostream>   
   
@@ -73,14 +86,16 @@ int main()
 ```  
   
 ```Output  
-Alignment_of < Int > == 4 ausgerichtet, doppelte == 8  
+alignment_of<int> == 4  
+aligned to double == 8  
 ```  
   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [alignment\_of\-Klasse](../standard-library/alignment-of-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [alignment_of-Klasse](../standard-library/alignment-of-class.md)
+

@@ -1,85 +1,325 @@
 ---
-title: "unique_lock-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mutex/std::unique_lock"
-dev_langs: 
-  - "C++"
+title: unique_lock-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mutex/std::unique_lock
+dev_langs:
+- C++
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# unique_lock-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 27145bb5aab7087ddf9dd7d56d51f242062268ff
+ms.lasthandoff: 02/24/2017
 
-Stellt eine Vorlage dar, die instanziiert werden kann, um Objekte zu erstellen, die die Sperre und das Entsperren von `mutex` verwalten.  
+---
+# <a name="uniquelock-class"></a>unique_lock-Klasse
+Stellt eine Vorlage dar, die zum Erstellen von Objekten instanziiert werden kann, die das Sperren und Entsperren von `mutex` verwalten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template <class Mutex>
+class unique_lock;
 ```  
-template<class Mutex>  
-class unique_lock;  
-```  
   
-## Hinweise  
- Das Vorlagenargument `Mutex` muss einen *Mutextyp* benennen.  
+## <a name="remarks"></a>Hinweise  
+ Das Vorlagenargument `Mutex` muss einen *Mutex-Typ* benennen.  
   
- Wird intern speichert `unique_lock` einen Zeiger auf einen zugeordneten Objekt `mutex` und `bool`, das angibt, ob der aktuelle Thread `mutex` besitzt.  
+ Intern speichert ein `unique_lock` einen Zeiger auf ein zugeordnetes `mutex`-Objekt und einen `bool`, der angibt, ob der aktuelle Thread das `mutex` besitzt.  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|`unique_lock::mutex_type`|Synonym für das Vorlagenargument `Mutex`.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|`mutex_type`|Synonym für das Vorlagenargument `Mutex`.|  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[unique\_lock::unique\_lock\-Konstruktor](../Topic/unique_lock::unique_lock%20Constructor.md)|Erstellt ein `unique_lock`\-Objekt.|  
-|[unique\_lock::~unique\_lock\-Destruktor](../Topic/unique_lock::~unique_lock%20Destructor.md)|Gibt alle Ressourcen freigeben, die mit dem `unique_lock`\-Objekt zugeordnet werden.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[unique_lock-Konstruktor](#unique_lock__unique_lock_constructor)|Erstellt ein `unique_lock`-Objekt.|  
+|[~unique_lock-Destruktor](#unique_lock___dtorunique_lock_destructor)|Gibt alle Ressourcen frei, die dem `unique_lock`-Objekt zugeordnet sind.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[unique\_lock::lock\-Methode](../Topic/unique_lock::lock%20Method.md)|Blockiert den aufrufenden Thread, bis der Thread den Besitz zugeordneten `mutex` abruft.|  
-|[unique\_lock::mutex\-Methode](../Topic/unique_lock::mutex%20Method.md)|Ruft den gespeicherten Zeiger zu zugeordneten `mutex` ab.|  
-|[unique\_lock::owns\_lock\-Methode](../Topic/unique_lock::owns_lock%20Method.md)|Gibt an, dass der aufrufende Thread zugeordnete `mutex` besitzt.|  
-|[unique\_lock::release\-Methode](../Topic/unique_lock::release%20Method.md)|Hebt `unique_lock` des Objekts vom zugeordneten `mutex`\-Objekt die Zuordnung.|  
-|[unique\_lock::swap\-Methode](../Topic/unique_lock::swap%20Method.md)|Vertauscht zugeordnete `mutex` und den Besitzstatus mit dem eines bestimmten Objekts aus.|  
-|[unique\_lock::try\_lock\-Methode](../Topic/unique_lock::try_lock%20Method.md)|Versucht, ohne Blockierung in den Besitz des verknüpften `mutex` zu gelangen.|  
-|[unique\_lock::try\_lock\_for\-Methode](../Topic/unique_lock::try_lock_for%20Method.md)|Versucht, ohne Blockierung in den Besitz des verknüpften `mutex` zu gelangen.|  
-|[unique\_lock::try\_lock\_until\-Methode](../Topic/unique_lock::try_lock_until%20Method.md)|Versucht, ohne Blockierung in den Besitz des verknüpften `mutex` zu gelangen.|  
-|[unique\_lock::unlock\-Methode](../Topic/unique_lock::unlock%20Method.md)|Gibt Besitz zugeordneten `mutex`.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[lock](#unique_lock__lock_method)|Blockiert den aufrufenden Thread, bis der Thread in den Besitz des zugeordneten `mutex` gelangt.|  
+|[mutex](#unique_lock__mutex_method)|Ruft den gespeicherten Zeiger auf das zugeordnete `mutex` auf.|  
+|[owns_lock](#unique_lock__owns_lock_method)|Gibt an, ob der aufrufende Thread das zugeordnete `mutex` besitzt.|  
+|[release](#unique_lock__release_method)|Trennt das `unique_lock`-Objekt vom zugeordneten `mutex`-Objekt.|  
+|[swap](#unique_lock__swap_method)|Tauscht das zugeordnete `mutex` und den Besitzstatus mit dem eines angegebenen Objekts.|  
+|[try_lock](#unique_lock__try_lock_method)|Versucht, ohne Blockierung in den Besitz des verknüpften `mutex` zu gelangen.|  
+|[try_lock_for](#unique_lock__try_lock_for_method)|Versucht, ohne Blockierung in den Besitz des verknüpften `mutex` zu gelangen.|  
+|[try_lock_until](#unique_lock__try_lock_until_method)|Versucht, ohne Blockierung in den Besitz des verknüpften `mutex` zu gelangen.|  
+|[unlock](#unique_lock__unlock_method)|Gibt den Besitz des zugeordneten `mutex` frei.|  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[unique\_lock::operator bool Operator](../Topic/unique_lock::operator%20bool%20Operator.md)|Gibt an, dass der aufrufende Thread Besitz zugeordneten `mutex`.|  
-|[unique\_lock::operator\= Operator](../Topic/unique_lock::operator=%20Operator.md)|Kopiert der gespeicherten `mutex` Zeiger und den zugeordneten Besitzstatus von einem angegebenen Objekt.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[operator bool](#unique_lock__operator_bool)|Gibt an, ob der anrufende Thread das zugeordnete `mutex` besitzt.|  
+|[operator=](#unique_lock__operator_eq)|Kopiert den gespeicherten `mutex`-Zeiger und den zugehörigen Besitzstatus aus einem angegebenen Objekt.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `unique_lock`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** mutex  
   
  **Namespace:** std  
   
-## Siehe auch  
+##  <a name="a-nameuniquelocklockmethoda--lock"></a><a name="unique_lock__lock_method"></a> lock  
+ Blockiert den aufrufenden Thread, bis der Thread in den Besitz des zugeordneten `mutex` gelangt.  
+  
+```cpp  
+void lock();
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Wenn der gespeicherte `mutex`-Zeiger `null` ist, löst diese Methode einen [system_error](../standard-library/system-error-class.md) aus, der den Fehlercode `operation_not_permitted` hat.  
+  
+ Wenn der aufrufende Thread das zugeordnete `mutex` bereits besitzt, löst diese Methode einen `system_error` aus, der den Fehlercode `resource_deadlock_would_occur` hat.  
+  
+ Andernfalls ruft diese Methode `lock` auf dem zugeordneten `mutex` auf und setzt das interne Ownershipflag des Threads auf `true`.  
+  
+##  <a name="a-nameuniquelockmutexmethoda--mutex"></a><a name="unique_lock__mutex_method"></a> mutex  
+ Ruft den gespeicherten Zeiger auf das zugeordnete `mutex` auf.  
+  
+```cpp  
+mutex_type *mutex() const noexcept;
+```  
+  
+##  <a name="a-nameuniquelockoperatorboola--operator-bool"></a><a name="unique_lock__operator_bool"></a> operator bool  
+ Gibt an, ob der aufrufende Thread das zugeordnete Mutex besitzt.  
+  
+```cpp  
+explicit operator bool() noexcept
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ `true` wenn der Thread das Mutex besitzt; andernfalls `false`.  
+  
+##  <a name="a-nameuniquelockoperatoreqa--operator"></a><a name="unique_lock__operator_eq"></a> operator=  
+ Kopiert den gespeicherten `mutex`-Zeiger und den zugehörigen Besitzstatus aus einem angegebenen Objekt.  
+  
+```cpp  
+unique_lock& operator=(unique_lock&& Other) noexcept;
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Other`  
+ Ein `unique_lock`-Objekt.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ `*this`  
+  
+### <a name="remarks"></a>Hinweise  
+ Wenn der aufrufende Thread das zuvor zugeordnete `mutex` besitzt, weist diese Methode die neuen Werte zu, bevor sie `unlock` auf dem `mutex` aufruft.  
+  
+ Nach dem Erstellen der Kopie setzt diese Methode `Other` in einen standardmäßig konstruierten Zustand.  
+  
+##  <a name="a-nameuniquelockownslockmethoda--ownslock"></a><a name="unique_lock__owns_lock_method"></a> owns_lock  
+ Gibt an, ob der aufrufende Thread das zugeordnete `mutex` besitzt.  
+  
+```cpp  
+bool owns_lock() const noexcept;
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ `true` wenn der Thread das `mutex` besitzt; andernfalls `false`.  
+  
+##  <a name="a-nameuniquelockreleasemethoda--release"></a><a name="unique_lock__release_method"></a> release  
+ Trennt das `unique_lock`-Objekt vom zugeordneten `mutex`-Objekt.  
+  
+```cpp  
+mutex_type *release() noexcept;
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Der vorherige Wert des gespeicherten `mutex`-Zeigers.  
+  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode setzt den Wert des gespeicherten `mutex`-Zeigers auf 0 und das interne `mutex`-Ownershipflag auf `false`.  
+  
+##  <a name="a-nameuniquelockswapmethoda--swap"></a><a name="unique_lock__swap_method"></a> swap  
+ Tauscht das zugeordnete `mutex` und den Besitzstatus mit dem eines angegebenen Objekts.  
+  
+```
+void swap(unique_lock& Other) noexcept;
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Other`  
+ Ein `unique_lock`-Objekt.  
+  
+##  <a name="a-nameuniquelocktrylockmethoda--trylock"></a><a name="unique_lock__try_lock_method"></a> try_lock  
+ Versucht, ohne Blockierung in den Besitz des verknüpften `mutex` zu gelangen.  
+  
+```cpp  
+bool try_lock() noexcept;
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ `true`, wenn die Methode erfolgreich in den Besitz von `mutex` gelangt; andernfalls `false`.  
+  
+### <a name="remarks"></a>Hinweise  
+ Wenn der gespeicherte `mutex`-Zeiger `null` ist, löst die Methode einen [system_error](../standard-library/system-error-class.md) aus, der den Fehlercode `operation_not_permitted` hat.  
+  
+ Wenn der aufrufende Thread das `mutex` bereits besitzt, löst die Methode einen `system_error` aus, der den Fehlercode `resource_deadlock_would_occur` hat.  
+  
+##  <a name="a-nameuniquelocktrylockformethoda--trylockfor"></a><a name="unique_lock__try_lock_for_method"></a> try_lock_for  
+ Versucht, ohne Blockierung in den Besitz des verknüpften `mutex` zu gelangen.  
+  
+```
+template <class Rep, class Period>
+bool try_lock_for(
+    const chrono::duration<Rep, Period>& Rel_time);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Rel_time`  
+ Ein [chrono::duration](../standard-library/duration-class.md)-Objekt, das angibt, wie lange die Methode höchstens versucht, in den Besitz von `mutex` zu gelangen.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ `true`, wenn die Methode erfolgreich in den Besitz von `mutex` gelangt; andernfalls `false`.  
+  
+### <a name="remarks"></a>Hinweise  
+ Wenn der gespeicherte `mutex`-Zeiger `null` ist, löst die Methode einen [system_error](../standard-library/system-error-class.md) aus, der den Fehlercode `operation_not_permitted` hat.  
+  
+ Wenn der aufrufende Thread das `mutex` bereits besitzt, löst die Methode einen `system_error` aus, der den Fehlercode `resource_deadlock_would_occur` hat.  
+  
+##  <a name="a-nameuniquelocktrylockuntilmethoda--trylockuntil"></a><a name="unique_lock__try_lock_until_method"></a> try_lock_until  
+ Versucht, ohne Blockierung in den Besitz des verknüpften `mutex` zu gelangen.  
+  
+```cpp  
+template <class Clock, class Duration>
+bool try_lock_until(const chrono::time_point<Clock, Duration>& Abs_time);
+
+bool try_lock_until(const xtime* Abs_time);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Abs_time`  
+ Ein Zeitpunkt, der den Schwellenwert angibt, nach dem die Methode nicht mehr versucht, in den Besitz von `mutex` zu gelangen.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ `true`, wenn die Methode erfolgreich in den Besitz von `mutex` gelangt; andernfalls `false`.  
+  
+### <a name="remarks"></a>Hinweise  
+ Wenn der gespeicherte `mutex`-Zeiger `null` ist, löst die Methode einen [system_error](../standard-library/system-error-class.md) aus, der den Fehlercode `operation_not_permitted` hat.  
+  
+ Wenn der aufrufende Thread das `mutex` bereits besitzt, löst die Methode einen `system_error` aus, der den Fehlercode `resource_deadlock_would_occur` hat.  
+  
+##  <a name="a-nameuniquelockuniquelockconstructora--uniquelock-constructor"></a><a name="unique_lock__unique_lock_constructor"></a> unique_lock-Konstruktor  
+ Erstellt ein `unique_lock`-Objekt.  
+  
+```cpp  
+unique_lock() noexcept;
+unique_lock(unique_lock&& Other) noexcept;
+explicit unique_lock(mutex_type& Mtx);
+
+unique_lock(mutex_type& Mtx, adopt_lock_t Adopt);
+
+unique_lock(mutex_type& Mtx, defer_lock_t Defer) noexcept;
+unique_lock(mutex_type& Mtx, try_to_lock_t Try);
+
+template <class Rep, class Period>
+unique_lock(mutex_type& Mtx,
+    const chrono::duration<Rep, Period>  
+Rel_time);
+
+template <class Clock, class Duration>
+unique_lock(mutex_type& Mtx,
+    const chrono::time_point<Clock, Duration>  
+Abs_time);
+
+unique_lock(mutex_type& Mtx,
+    const xtime* Abs_time) noexcept;
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Mtx`  
+ Ein Mutex-Typobjekt.  
+  
+ `Rel_time`  
+ Ein [chrono::duration](../standard-library/duration-class.md)-Objekt, das angibt, wie lange die Methode höchstens versucht, in den Besitz des `mutex` zu gelangen.  
+  
+ `Abs_time`  
+ Ein Zeitpunkt, der den Schwellenwert angibt, nach dem die Methode nicht mehr versucht, in den Besitz von `mutex` zu gelangen.  
+  
+ `Other`  
+ Ein `unique_lock`-Objekt.  
+  
+### <a name="remarks"></a>Hinweise  
+ Der erste Konstruktor erstellt ein Objekt, das den zugeordneten Mutexzeigerwert 0 hat.  
+  
+ Der zweite Konstruktor verschiebt den zugeordneten Mutexstatus von `Other`. Nach dem Verschieben ist `Other` keinem Mutex mehr zugeordnet.  
+  
+ Die übrigen Konstruktoren speichern & `Mtx` als gespeicherten `mutex`-Zeiger. Der Besitz des `mutex` wird durch das zweite Argument bestimmt, falls vorhanden.  
+  
+|||  
+|-|-|  
+|`No argument`|Der Besitz wird durch Aufrufen der `lock`-Methode auf dem zugeordneten `mutex`-Objekt erlangt.|  
+|`Adopt`|Der Besitz wird angenommen. `Mtx` muss gesperrt sein, wenn der Konstruktor aufgerufen wird.|  
+|`Defer`|Es wird davon ausgegangen, dass der aufrufende Thread das `mutex`-Objekt nicht besitzt. `Mtx` darf nicht gesperrt sein, wenn der Konstruktor aufgerufen wird.|  
+|`Try`|Der Besitz wird durch Aufrufen von `try_lock` auf dem zugeordneten `mutex`-Objekt bestimmt. Der Konstruktor löst nichts aus.|  
+|`Rel_time`|Der Besitz wird durch Aufrufen von `try_lock_for(Rel_time)` bestimmt.|  
+|`Abs_time`|Der Besitz wird durch Aufrufen von `try_lock_until(Abs_time)` bestimmt.|  
+  
+##  <a name="a-nameuniquelockdtoruniquelockdestructora--uniquelock-destructor"></a><a name="unique_lock___dtorunique_lock_destructor"></a> ~unique_lock-Destruktor  
+ Gibt alle Ressourcen frei, die dem `unique_lock`-Objekt zugeordnet sind.  
+  
+```cpp  
+~unique_lock() noexcept;
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Wenn der aufrufende Thread das zugehörige `mutex` besitzt, gibt der Destruktor den Besitz durch Aufrufen von unlock auf dem `mutex`-Objekt frei.  
+  
+##  <a name="a-nameuniquelockunlockmethoda--unlock"></a><a name="unique_lock__unlock_method"></a> unlock  
+ Gibt den Besitz des zugeordneten `mutex` frei.  
+  
+```cpp  
+void unlock();
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Wenn der aufrufende Thread das zugeordnete `mutex` nicht besitzt, löst diese Methode einen [system_error](../standard-library/system-error-class.md) aus, der den Fehlercode `operation_not_permitted` hat.  
+  
+ Andernfalls ruft diese Methode `unlock` auf dem zugeordneten `mutex` auf und setzt das interne Ownershipflag des Threads auf `false`.  
+  
+## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex\>](../standard-library/mutex.md)
+ [\<mutex>](../standard-library/mutex.md)
+
+
+
+

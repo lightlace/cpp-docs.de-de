@@ -1,59 +1,128 @@
 ---
-title: "uniform_real_distribution-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tr1::uniform_real_distribution"
-  - "std::tr1::uniform_real_distribution"
-  - "random/std::tr1::uniform_real_distribution"
-  - "uniform_real_distribution"
-  - "std.tr1.uniform_real_distribution"
-  - "tr1.uniform_real_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "uniform_real_distribution-Klasse"
+title: uniform_real_distribution-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- uniform_real_distribution
+- std::uniform_real_distribution
+- random/std::uniform_real_distribution
+- std::uniform_real_distribution::reset
+- random/std::uniform_real_distribution::reset
+- std::uniform_real_distribution::a
+- random/std::uniform_real_distribution::a
+- std::uniform_real_distribution::b
+- random/std::uniform_real_distribution::b
+- std::uniform_real_distribution::param
+- random/std::uniform_real_distribution::param
+- std::uniform_real_distribution::min
+- random/std::uniform_real_distribution::min
+- std::uniform_real_distribution::max
+- random/std::uniform_real_distribution::max
+- std::uniform_real_distribution::operator()
+- random/std::uniform_real_distribution::operator()
+- std::uniform_real_distribution::param_type
+- random/std::uniform_real_distribution::param_type
+- std::uniform_real_distribution::param_type::a
+- random/std::uniform_real_distribution::param_type::a
+- std::uniform_real_distribution::param_type::b
+- random/std::uniform_real_distribution::param_type::b
+- std::uniform_real_distribution::param_type::operator==
+- random/std::uniform_real_distribution::param_type::operator==
+- std::uniform_real_distribution::param_type::operator!=
+- random/std::uniform_real_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- uniform_real_distribution class
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# uniform_real_distribution-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
+ms.openlocfilehash: a7de3cf77ff7a70b13f57a1f06e015aa806c2a11
+ms.lasthandoff: 02/24/2017
 
-Generiert eine einheitliche \(jeder Wert ist gleichermaßen wahrscheinlich\) Gleitkommaverteilung innerhalb eines Ausgabebereichs, der inklusive\-exklusive ist.  
+---
+# <a name="uniformrealdistribution-class"></a>uniform_real_distribution-Klasse
+Generiert eine einheitliche (jeder Wert ist gleichermaßen wahrscheinlich) Gleitkommaverteilung innerhalb eines Ausgabebereichs, der inklusive-exklusive ist.  
   
-## Syntax  
-  
+## <a name="syntax"></a>Syntax  
 ```  
-template<class RealType = double> class uniform_real_distribution { public:     // types     typedef RealType result_type;     struct param_type;     // constructors and reset functions     explicit uniform_real_distribution(RealType a = 0.0, RealType b = 1.0);     explicit uniform_real_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     result_type a() const;     result_type b() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
-```  
+template<class RealType = double>
+   class uniform_real_distribution {
+public:
+   // types 
+   typedef RealType result_type;
+   struct param_type;
+
+   // constructors and reset functions 
+   explicit uniform_real_distribution(
+      result_type a = 0.0, result_type b = 1.0);
+   explicit uniform_real_distribution(const param_type& parm);
+   void reset();
+
+   // generating functions 
+   template <class URNG>  
+      result_type operator()(URNG& gen);
+   template <class URNG>
+      result_type operator()(URNG& gen, const param_type& parm);
+
+   // property functions 
+   result_type a() const;
+   result_type b() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+};
+ ``` 
+### <a name="parameters"></a>Parameter  
+*RealType*  
+Der Gleitkommaergebnistyp. Der Standardwert ist `double`. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
-#### Parameter  
- `RealType`  
- Der Gleitkommaergebnistyp. Der Standardwert ist `double`.  Die möglichen Typen finden Sie unter [\<random\>](../standard-library/random.md).  
-  
-## Hinweise  
- Die Vorlagenklasse beschreibt eine inklusive\-exklusive Verteilung, die Werte eines vom Benutzer angegebenen Ganzzahltyps mit einer Verteilung erzeugt, damit jeder Wert gleichermaßen wahrscheinlich ist.  Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
+## <a name="remarks"></a>Hinweise  
+Die Vorlagenklasse beschreibt eine inklusive-exklusive Verteilung, die Werte eines vom Benutzer angegebenen Ganzzahltyps mit einer Verteilung erzeugt, damit jeder Wert gleichermaßen wahrscheinlich ist. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
   
 ||||  
 |-|-|-|  
-|[uniform\_real\_distribution::uniform\_real\_distribution](../Topic/uniform_real_distribution::uniform_real_distribution.md)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|  
-|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[uniform\_real\_distribution::param\_type](../Topic/uniform_real_distribution::param_type.md)|  
+|[uniform_real_distribution::uniform_real_distribution](#uniform_real_distribution__uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|  
+|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[uniform_real_distribution::param_type](#uniform_real_distribution__param_type)|  
   
- Das Eigenschaftsmember `a()` gibt die aktuell gespeicherte Untergrenze der Verteilung zurück, während `b()` die aktuell gespeicherte Obergrenze zurückgibt.  Für diese Verteilungsklasse sind diese Höchst\- und Mindestwerte dieselben wie die von den allgemeinen Eigenschaftsfunktionen `min()` und `max()` zurückgegebenen \(beschrieben im Thema [\<random\>](../standard-library/random.md)\).  
+Das Eigenschaftsmember `a()` gibt die aktuell gespeicherte Untergrenze der Verteilung zurück, während `b()` die aktuell gespeicherte Obergrenze zurückgibt. Für diese Verteilungsklasse sind diese Höchst- und Mindestwerte dieselben wie die von den allgemeinen Eigenschaftsfunktionen `min()` und `max()` zurückgegebenen (beschrieben im Thema [\<random>](../standard-library/random.md)).  
   
- Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random\>](../standard-library/random.md).  
+Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.  
+
+Die `min()`- und `max()`-Memberfunktion gibt das jeweils kleinst- und größtmögliche Ergebnis zurück.  
   
-## Beispiel  
+Die `reset()`-Memberfunktion verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus dem Modul bezogen wurden.  
+  
+Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entweder dem aktuellen oder dem spezifizierten Parameterpaket zurück, das auf dem URNG-Modul basiert.
+  
+Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
+  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -111,37 +180,88 @@ int main()
   
 ```  
   
-## Ausgabe  
-  **Drücken Sie STRG\-Z, um die Dateneingabe zu umgehen und die Ausführung mit Standardwerten zu starten.  Geben Sie einen Gleitkommawert für die Untergrenze der Verteilung ein: 0,5**  
-**Geben Sie einen Gleitkommawert für die Obergrenze der Verteilung ein: 1**  
-**Geben Sie einen Ganzzahlwert für die Samplinganzahl ein: 20**  
-**Untergrenze \=\= 0,5**  
-**Obergrenze \=\= 1**  
-**Verteilung für 20 Samplings:**  
- **1: 0.5144304741**  
- **2: 0.6003997192**  
- **3: 0.6060792968**  
- **4: 0.6270416650**  
- **5: 0.6295091197**  
- **6: 0.6437749373**  
- **7: 0.6513740058**  
- **8: 0.7062379346**  
- **9: 0.7117609406**  
- **10: 0.7206888566**  
- **11: 0.7423223702**  
- **12: 0.7826033033**  
- **13: 0.8112872958**  
- **14: 0.8440467608**  
- **15: 0.8461254641**  
- **16: 0.8598305065**  
- **17: 0.8640874069**  
- **18: 0.8770968361**  
- **19: 0.9397858282**  
- **20: 0.9804645012**    
-## Anforderungen  
- **Header:** \<random\>  
+```Output  
+Use CTRL-Z to bypass data entry and run using default values.
+Enter a floating point value for the lower bound of the distribution: 0
+Enter a floating point value for the upper bound of the distribution: 1
+Enter an integer value for the sample count: 10
+lower bound == 0
+upper bound == 1
+Distribution for 10 samples:
+          1: 0.0288609485
+          2: 0.2007994386
+          3: 0.3027480117
+          4: 0.4124758695
+          5: 0.4413777133
+          6: 0.4846447405
+          7: 0.6225745916
+          8: 0.6880935217
+          9: 0.7541936723
+         10: 0.8795716566
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<random>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-nameuniformrealdistributionuniformrealdistributiona--uniformrealdistributionuniformrealdistribution"></a><a name="uniform_real_distribution__uniform_real_distribution"></a> uniform_real_distribution::uniform_real_distribution  
+Erstellt die Verteilung.  
+  
+```  
+explicit uniform_real_distribution(result_type a = 0.0, result_type b = 1.0);
+explicit uniform_real_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Parameter  
+*a*  
+Die Untergrenze (einschließend) für Zufallswerte.  
+  
+*b*  
+Die Obergrenze (ausschließend) für Zufallswerte.  
+  
+*parm*  
+Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.  
+  
+### <a name="remarks"></a>Hinweise  
+ **Vorbedingung:** `a < b`  
+  
+Mit dem ersten Konstruktor wird ein Objekt erstellt, in dessen gespeichertem `a`-Wert der Wert *a* enthalten ist und dessen gespeicherter `b`-Wert den Wert *b* enthält.  
+  
+Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
+  
+##  <a name="a-nameuniformrealdistributionparamtypea--uniformrealdistributionparamtype"></a><a name="uniform_real_distribution__param_type"></a> uniform_real_distribution::param_type  
+ Speichert alle Parameter der Verteilung.  
+  
+```  
+struct param_type {  
+   typedef uniform_real_distribution<result_type> distribution_type;  
+   param_type(result_type a = 0.0, result_type b = 1.0);
+   result_type a() const;
+   result_type b() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+### <a name="parameters"></a>Parameter  
+*a*  
+Die Untergrenze (einschließend) für Zufallswerte.  
+  
+*b*  
+Die Obergrenze (ausschließend) für Zufallswerte.  
+  
+*right*  
+Das mit diesem `param_type`-Objekt zu vergleichende Objekt.  
+  
+### <a name="remarks"></a>Hinweise  
+ **Vorbedingung:** `a < b`  
+  
+Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteilers, an die Memberfunktion `param()` (zur Festlegung der gespeicherten Parameter einer vorhandenen Verteilung) und an `operator()` (zur Verwendung anstelle der gespeicherten Parameter) übergeben werden.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [\<random>](../standard-library/random.md)
+
+
+
+

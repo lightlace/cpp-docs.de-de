@@ -1,54 +1,70 @@
 ---
-title: "_cabs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cabs"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cabsl"
-  - "_cabs"
-  - "_cabsl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_cabs-Funktion"
-  - "_cabsl-Funktion"
-  - "Absolute Werte"
-  - "cabs-Funktion"
-  - "cabsl-Funktion"
-  - "Berechnen absoluter Werte"
+title: _cabs | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cabs
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- cabsl
+- _cabs
+- _cabsl
+dev_langs:
+- C++
+helpviewer_keywords:
+- cabs function
+- cabsl function
+- absolute values
+- _cabsl function
+- _cabs function
+- calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# _cabs
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 649c3d34e1ebcfc7af2fa3ef0b500dc1f630a967
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cabs"></a>_cabs
 Berechnet den absoluten Wert einer komplexen Zahl.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double _cabs(   
@@ -56,25 +72,25 @@ double _cabs(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `z`  
  Komplexe Zahl.  
   
-## Rückgabewert  
- `_cabs` Gibt den absoluten Wert des Arguments zurück, wenn der Vorgang erfolgreich ist.  Auf Überlauf gibt `_cabs``HUGE_VAL` zurück und legt `errno` auf `ERANGE` fest.  Sie können die Fehlerbehandlung mit [\_matherr](../../c-runtime-library/reference/matherr.md) ändern.  
+## <a name="return-value"></a>Rückgabewert  
+ `_cabs` gibt im Erfolgsfall den absoluten Wert seines Arguments zurück. Bei einem Überlauf gibt `_cabs` `HUGE_VAL` aus und setzt `errno` auf `ERANGE`. Sie können die Fehlerbehandlung mit [_matherr](../../c-runtime-library/reference/matherr.md) ändern.  
   
-## Hinweise  
- Die `_cabs`\-Funktion berechnet den absoluten Wert einer komplexen Zahl, die einer Struktur des Typs [\_complex](../../c-runtime-library/standard-types.md) sein muss.  Die Struktur `z` wird echter `x` \- Komponente und von imaginären `y`\- Komponente zusammen.  Ein Aufruf von `_cabs` erzeugt eine Wertentsprechung zu der Ausdrücken `sqrt`\( `z.x``*``z.x``+``z.y`\*`z.y` \).  
+## <a name="remarks"></a>Hinweise  
+ Die `_cabs`-Funktion berechnet den absoluten Wert einer komplexen Zahl, die eine Struktur des Typs [_complex](../../c-runtime-library/standard-types.md) aufweisen muss. Die Struktur `z` besteht aus einer reellen Komponente `x` und einer imaginären Komponente `y`. Ein Aufruf von `_cabs` generiert einen Wert, der dem Wert des Ausdrucks `sqrt`( `z.x``*``z.x``+``z.y`*`z.y` ) entspricht.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_cabs`|\<math.h\>|  
+|-------------|---------------------|  
+|`_cabs`|\<math.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_cabs.c  
@@ -95,12 +111,14 @@ int main( void )
 }  
 ```  
   
-  **Der absolute Wert 3,000000 \+ 4.000000I ist 5,000000**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+The absolute value of 3.000000 + 4.000000i is 5.000000  
+```  
   
-## Siehe auch  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [Abs, Labs, Llabs, \_abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
- [Fabs, Fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
- [labs, llabs](../../misc/labs-llabs.md)
+ [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
+ [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   

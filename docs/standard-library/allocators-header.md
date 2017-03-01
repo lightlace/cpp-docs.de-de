@@ -1,72 +1,88 @@
 ---
-title: "&lt;allocators&gt;"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "stdext::<allocators>"
-  - "allocators/stdext::allocators"
-  - "<allocators>"
-  - "stdext.<allocators>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "allocators-Header"
+title: '&lt;allocators&gt; | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdext::<allocators>
+- allocators/stdext::allocators
+- <allocators>
+- stdext.<allocators>
+dev_langs:
+- C++
+helpviewer_keywords:
+- allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
 caps.latest.revision: 19
-caps.handback.revision: "9"
-ms.author: "corob"
-manager: "ghogen"
----
-# &lt;allocators&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: fa76512c47fd7412227a26de3de05190c687c4b3
+ms.lasthandoff: 02/24/2017
 
-Definiert mehrere Vorlagen, die Speicherblöcken, für Knoten\-basierte Container unterstützen und freizugeben.  
+---
+# <a name="ltallocatorsgt"></a>&lt;allocators&gt;
+Definiert mehrere Vorlagen, die dabei helfen, Speicherblöcke für knotenbasierte Container zuzuweisen und freizugeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <allocators>  
 ```  
   
-## Hinweise  
- Die \<Zuweisungskopfzeile\> stellt sechs Zuweisungsvorlagen, die verwendet werden können, um Speicherverwaltungsstrategien für Knoten\-basierte Container auszuwählen.  Bei Verwendung mit diesen Vorlagen, stellt auch sie mehrere verschiedene Synchronisierungsfilter, um die Speicherverwaltungsstrategie zu einer Vielzahl verschiedener Multithreadingschemas anzupassen \(einschließlich keine\).  Die Anpassung einer Speicherverwaltungsstrategie mit der bekannten Speicherauslastungsmuster und der Synchronisierungsanforderungen, einer bestimmten Anwendung kann die Geschwindigkeit häufig erhöhen oder die Gesamtarbeitsspeicheranforderungen einer Anwendung verringern.  
+## <a name="remarks"></a>Hinweise  
+ Der Header \<allocators> stellt sechs Allocatorvorlagen bereit, die dazu verwendet werden können, Strategien zur Speicherverwaltung für knotenbasierte Container auszuwählen. Für den Gebrauch mit diesen Vorlagen stellt es außerdem mehrere verschiedene Synchronisierungsfilter bereit, mit deren Hilfe Sie Strategien zur Speicherverwaltung an eine Vielzahl von Multithread-Schemas (oder auch an kein Schema) anpassen können. Das Anpassen einer Strategie zur Speicherverwaltung an ein bekanntes Speicherauslastungsmuster und an Synchronisierungsanforderungen einer bestimmten Anwendung können oft die Geschwindigkeit erhöhen oder die Gesamtspeicheranforderung einer Anwendung reduzieren.  
   
- Die Zuweisungsvorlagen werden mit wiederverwendbaren Komponenten implementiert, die angepasst werden oder ersetzt werden können, um zusätzliche Speicherverwaltungsstrategien bereitzustellen.  
+ Allocatorvorlagen werden mit wiederverwendbaren Komponenten implementiert, die angepasst oder ersetzt werden können, um weitere Strategien zur Speicherverwaltung bereitzustellen.  
   
- Die Knoten\-basierten Container in der C\+\+\-Standardbibliothek \(std::list, std::set, std::multiset, std::map und std::multimap\) speichern ihre Elemente in den einzelnen Knoten.  Alle Knoten für einen bestimmten Containertyp sind die gleiche Größe, daher wird die Flexibilität eines allgemeinen Speicher\-Managers nicht benötigt.  Da die Größe eines Speicherblocks zur Kompilierzeit bekannt ist, kann der Speicher\-Manager viel einfacher sein und schneller.  
+ Knotenbasierte Container in der C++-Standardbibliothek (std::list, std::set, std::multiset, std::map und std::multimap) speichern ihre Elemente in einzelnen Knoten. Alle Knoten für einen bestimmten Containertyp sind gleich groß, weshalb die Flexibilität eines allgemeinen Speicher-Managers nicht erforderlich ist. Weil die Größe jedes Speicherblocks beim Kompilierzeitpunkt bekannt ist, ist der Speicher-Manager sehr viel einfacher und schneller.  
   
- Wenn sie mit Containern, die nicht Knoten\-basiert sind \(wie das C\+\+\-Standardbibliotheks\-Container std::vector std::deque und Std::basic\_string\) verwendet werden, verfügen die alllocator Vorlagen ordnungsgemäß, jedoch werden sich, keine Leistungsverbesserung über die Standardzuweisung bereitzustellen.  
+ Die Allocatorvorlagen funktionieren korrekt, wenn sie mit nicht knotenbasierten Containern (wie z.B. die C++-Standardbibliothekcontainer std::vector std::deque und std::basic_string) verwendet werden. Diese führen aber nicht zu einer Leistungsverbesserung im Vergleich zum Standardallocator.  
   
- Eine Zuweisung ist eine Vorlagenklasse, die ein Objekt beschrieben wird, das Speicherzuweisung und Freigeben für Objekte und Objektarrays eines festgelegten Typ verwaltet.  Zuweisungsobjekte werden von mehreren Containervorlagenklassen in der C\+\+\-Standardbibliothek verwendet.  
+ Ein Allocator ist eine Vorlagenklasse, die ein Objekt beschreibt, das Speicherbelegung und -freigaben von Objekten und Arrays von Objekten eines angegeben Typs verwaltet. Zuweisungsobjekte werden in mehreren Containervorlagenklassen in der C++-Standardbibliothek verwendet.  
   
- Die Zuweisungen sind alle Vorlagen dieses Typs:  
+ Allocators sind alle Vorlagen folgenden Typs:  
   
- `template<class`  `Type` `>`  
+ `template<class` `Type` `>`  
   
  `class allocator;`  
   
- wobei das Vorlagenargument `Type` der Typ ist, der durch die Zuweisungsinstanz verwaltet wird.  Die C\+\+\-Standardbibliothek enthält eine Vorlagenklasse Standardzuweisung, [Zuweisung](../standard-library/allocator-class.md), die in [\<memory\>](../standard-library/memory.md) definiert wird.  Die \<Zuweisungskopfzeile\> stellt die folgenden Zuweisungen:  
+ in denen das Vorlagenargument `Type` der von der Allocatorinstanz verwaltete Typ ist. Die C++-Standardbibliothek stellt einen Standardallocator, Vorlagenklasse [allocator](../standard-library/allocator-class.md), bereit, der in [\<memory>](../standard-library/memory.md) definiert ist. Der Header \<allocators> stellt folgende Allocators bereit:  
   
--   [allocator\_newdel](../standard-library/allocator-newdel-class.md)  
+- [allocator_newdel](../standard-library/allocator-newdel-class.md)  
   
--   [allocator\_unbounded](../standard-library/allocator-unbounded-class.md)  
+- [allocator_unbounded](../standard-library/allocator-unbounded-class.md)  
   
--   [allocator\_fixed\_size](../standard-library/allocator-fixed-size-class.md)  
+- [allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)  
   
--   [allocator\_variable\_size](../standard-library/allocator-variable-size-class.md)  
+- [allocator_variable_size](../standard-library/allocator-variable-size-class.md)  
   
--   [allocator\_suballoc](../standard-library/allocator-suballoc-class.md)  
+- [allocator_suballoc](../standard-library/allocator-suballoc-class.md)  
   
--   [allocator\_chunklist](../standard-library/allocator-chunklist-class.md)  
+- [allocator_chunklist](../standard-library/allocator-chunklist-class.md)  
   
- Verwenden Sie eine entsprechende Instanziierung einer Zuweisung als zweites Typargument, wenn Sie einen Container, wie im folgenden Codebeispiel erstellen.  
+ Verwenden Sie eine passende Istanziierung eines Allocators als zweiten Typargument, während Sie einen Container erstellen, wie z.B. in folgendem Beispiel.  
   
  `#include <list>`  
   
@@ -74,9 +90,9 @@ Definiert mehrere Vorlagen, die Speicherblöcken, für Knoten\-basierte Containe
   
  `std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`  
   
- \_List0 ordnet Knoten mit `allocator_chunklist` und dem Standardsynchronisierungsfilter zu.  
+ „_List0“ weist Knoten mit `allocator_chunklist` und dem standardmäßigen Synchronisierungsfilter zu.  
   
- Verwenden Sie das Makro [ALLOCATOR\_DECL](../Topic/ALLOCATOR_DECL%20\(%3Callocators%3E\).md), um Zuweisungsvorlagen mit Synchronisierungsfiltern Standardtrennzeichen abweichendes zu erstellen:  
+ Verwenden Sie das Makro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl), wenn Sie Allocatorvorlagen mit anderen als den standardmäßigen Synchronisierungsfiltern erstellen wollen:  
   
  `#include <list>`  
   
@@ -86,94 +102,98 @@ Definiert mehrere Vorlagen, die Speicherblöcken, für Knoten\-basierte Containe
   
  `std::list<int, alloc<int> > _List1;`  
   
- \_Lst1 ordnet Knoten mit `allocator_chunklist` und der [synchronization\_per\_thread](../standard-library/sync-per-thread-class.md) Synchronisierungsfilter zu.  
+ „_Lst1“ weist Knoten mit `allocator_chunklist` und dem Synchronisierungsfilter [sync_per_thread](../standard-library/sync-per-thread-class.md) zu.  
   
- Eine Blocks\-Zuweisung ist ein Cache oder ein Filter.  Ein Cache ist eine Vorlagenklasse, die ein Argument std::size\_t Typ akzeptiert.  Er definiert eine Blocks\-Zuweisung Speicherblöcken, die einer einzelnen Größe zuordnet und freigibt.  Er muss Arbeitsspeicher mit dem Operator `new` abgerufen, aber er muss, keinen zusätzlichen Aufruf zu machen den Operator `new` für jeden Block.  Er kann, beispielsweise, suballocate von einem größeren Block oder Cache von freigegebenen Blöcke für nachfolgende Neuzuordnung.  
+ Eine Blockzuweisung ist ein Cache oder ein Filter. Ein Cache ist eine Vorlagenklasse, die ein Argument des Typs std::size_t akzeptiert. Er definiert eine Blockzuweisung, die Speicherblöcke einheitlicher Größe zuweist und freigibt. Er muss mithilfe des Operators `new` Arbeitsspeicher erhalten; er darf jedoch nicht für jeden Block den Operator `new` separat aufrufen. Möglicherweise stellt er Unterzuordnungen aus einem größeren Block her, oder er zwischenspeichert möglicherweise freigegebene Blöcke für eine darauffolgende Freigabe.  
   
- Mit einem Compiler, der nicht kompilieren kann, binden Sie den Wert des verwendeten std::size\_t Arguments, als Vorlage instanziiert wurde, ist nicht unbedingt der Wert des Arguments \_Sz erneut Memberfunktionen eines Cache übergeben wird, zuordnen und freigeben.  
+ Bei einem Compiler, der keine Neubindungen kompilieren kann, ist der Wert des Arguments std::size_t, das verwendet wurde, als die Vorlage instanziieert wurde, nicht unbedingt der Wert des Arguments _Sz, das an die Memberfunktionen „allocate“ und „deallocate“ eines Caches übergeben wurde.  
   
- \<Zuweisungen\> stellt die folgenden Cachevorlagen:  
+ \<allocators> stellt folgende Cachevorlagen bereit:  
   
--   [cache\_freelist](../standard-library/cache-freelist-class.md)  
+- [cache_freelist](../standard-library/cache-freelist-class.md)  
   
--   [cache\_suballoc](../standard-library/cache-suballoc-class.md)  
+- [cache_suballoc](../standard-library/cache-suballoc-class.md)  
   
--   [cache\_chunklist](../standard-library/cache-chunklist-class.md)  
+- [cache_chunklist](../standard-library/cache-chunklist-class.md)  
   
- Ein Filter ist eine Blocks\-Zuweisung, deren Memberfunktionen mit einer anderen Blocks\-Zuweisung implementiert, die dorthin als Vorlagenargument übergeben wird.  Die häufigste Nutzungsform des Filters ist ein Synchronisierungsfilter, der eine Synchronisierungsrichtlinie anwenden, um Zugriff auf die Memberfunktionen einer Instanz einer anderen Blocks\-Zuweisung zu steuern. \<Zuweisungen\> stellt die folgenden Synchronisierungsfilter:  
+ Ein Filter ist ein Blockallocator, der seine Memberfunktionen mithilfe eines anderen Blockallocators implementiert, der als Vorlagenargument übergeben wurde. Synchronisierungsfilter sind die häufigste Filterform, die eine Synchronisierungsrichtlinie anwenden, um den Zugriff auf die Memberfunktionen einer Instanz eines anderen Blockallocators zu steuern. \<allocators> stellt folgende Synchronisierungsfilter bereit:  
   
--   [synchronization\_none](../standard-library/sync-none-class.md)  
+- [sync_none](../standard-library/sync-none-class.md)  
   
--   [synchronization\_per\_container](../standard-library/sync-per-container-class.md)  
+- [sync_per_container](../standard-library/sync-per-container-class.md)  
   
--   [synchronization\_per\_thread](../standard-library/sync-per-thread-class.md)  
+- [sync_per_thread](../standard-library/sync-per-thread-class.md)  
   
--   [synchronization\_shared](../standard-library/sync-shared-class.md)  
+- [sync_shared](../standard-library/sync-shared-class.md)  
   
- \<Zuweisungen\> stellt auch den Filter [rts\_alloc](../standard-library/rts-alloc-class.md), der mehrere Blocks\-Zuweisung als Generatorinstanziierung und bestimmt enthält, die einer Instanz, um für Zuordnungs\- oder Freigabe statt zur Kompilierzeit zur Laufzeit verwenden zu können.  Es wird mit Compilern verwendet, die nicht kompiliert können erneut binden.  
+ \<allocators> stellt auch den Filter [rts_alloc](../standard-library/rts-alloc-class.md) bereit, der mehrere Blockbelegungsinstanzen enthält und der ermittelt zur Laufzeit, nicht zur Kompilierzeit, welche Instanz für die Belegung oder Freigabe von Speicher zu verwenden ist. Sie wird mit Compilern verwendet, die keine Neubindungen kompilieren können.  
   
- Eine Synchronisierungsrichtlinie bestimmt z Instanzenhandles gleichzeitige Zuordnung einer Zuweisung und Freigabenanforderungen von mehreren Threads.  Die einfachste Richtlinie ist, alle Anforderungen nach dem zugrunde liegenden Cacheobjekt direkt übergeben und belässt Synchronisierungsverwaltung dem Benutzer.  Eine komplexere Richtlinie kann, einen Mutex zu verwenden sein, um Zugriff auf das zugrunde liegenden Cacheobjekt zu serialisieren.  
+ Eine Synchronisierungsrichtlinie legt fest, wie Allocatorinstanzen gleichzeitige Belegungs- und Freigabeanforderungen aus verschiedenen Threads verarbeiten. Die einfachste Richtlinie ist, alle Anforderungen direkt an das zugrundeliegende Cacheobjekt zu übergeben; die Synchronisierungsverwaltung wird dem Nutzer überlassen. Eine komplexere Richtlinie wäre z.B. das Verwenden eines Mutex zur Serialisierung des Zugriffs auf den zugrundeliegenden Cache.  
   
- Wenn ein Compiler die Kompilierung von Singlethreadanwendung und Multithreadanwendungen unterstützt, ist der Standardsynchronisierungsfilter für einfädige Anwendungen `sync_none`; für alle anderen Fällen ist es `sync_shared`.  
+ Wenn ein Compiler das Kompilieren sowohl von Singlethread- als auch von Multithread-Anwendungen unterstützt, ist der standardmäßige Synchronisierungsfilter für Singlethread-Anwendung `sync_none`; andernfalls ist er `sync_shared`.  
   
- Die Cachevorlage `cache_freelist` akzeptiert ein maximales Klassenargument, das die maximale Anzahl der bestimmt in der Liste der freien Blöcke zu speichernden Elemente.  
+ Die Cachevorlage `cache_freelist` akzeptiert ein Argument der max-Klasse, das die maximale Anzahl von in der Freiliste zu speichernden Elementen festlegt.  
   
- \<Zuweisungen\> maximale stellt die folgenden Klassen:  
+ \<allocators> stellt folgende max-Klassen bereit:  
   
--   [max\_none](../standard-library/max-none-class.md)  
+- [max_none](../standard-library/max-none-class.md)  
   
--   [max\_unbounded](../standard-library/max-unbounded-class.md)  
+- [max_unbounded](../standard-library/max-unbounded-class.md)  
   
--   [max\_fixed\_size](../standard-library/max-fixed-size-class.md)  
+- [max_fixed_size](../standard-library/max-fixed-size-class.md)  
   
--   [max\_variable\_size](../standard-library/max-variable-size-class.md)  
+- [max_variable_size](../standard-library/max-variable-size-class.md)  
   
-### Makros  
-  
-|||  
-|-|-|  
-|[ALLOCATOR\_DECL](../Topic/ALLOCATOR_DECL%20\(%3Callocators%3E\).md)|Ergibt eine Zuweisungsvorlagenklasse.|  
-|[CACHE\_CHUNKLIST](../Topic/CACHE_CHUNKLIST%20\(%3Callocators%3E\).md)|Ergibt `stdext::allocators::cache_chunklist<sizeof(Type)>`.|  
-|[CACHE\_FREELIST](../Topic/CACHE_FREELIST%20\(%3Callocators%3E\).md)|Ergibt `stdext::allocators::cache_freelist<sizeof(Type), max>`.|  
-|[CACHE\_SUBALLOC](../Topic/CACHE_SUBALLOC%20\(%3Callocators%3E\).md)|Ergibt `stdext::allocators::cache_suballoc<sizeof(Type)>`.|  
-|[SYNC\_DEFAULT](../Topic/SYNC_DEFAULT%20\(%3Callocators%3E\).md)|Ergibt einen Synchronisierungsfilter.|  
-  
-### Operatoren  
+### <a name="macros"></a>Makros  
   
 |||  
 |-|-|  
-|[Operator\!\=](../Topic/operator!=%20\(%3Callocators%3E\).md)|Es wird auf Ungleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|  
-|[Operator\=\=](../Topic/operator==%20\(%3Callocators%3E\).md)|Es wird auf Gleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|  
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Gibt eine Allocatorvorlagenklasse aus.|  
+|[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Gibt `stdext::allocators::cache_chunklist<sizeof(Type)>` aus.|  
+|[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Gibt `stdext::allocators::cache_freelist<sizeof(Type), max>` aus.|  
+|[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|Gibt `stdext::allocators::cache_suballoc<sizeof(Type)>` aus.|  
+|[SYNC_DEFAULT](../standard-library/allocators-functions.md#sync_default)|Gibt einen Synchronisierungsfilter aus.|  
   
-### Klassen  
+### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[allocator\_base](../standard-library/allocator-base-class.md)|Definiert die Basisklasse und Common funktioniert erforderlich, um eine benutzerdefinierte Zuordnung von einem Synchronisierungsfilter zu erstellen.|  
-|[allocator\_chunklist](../standard-library/allocator-chunklist-class.md)|Beschreibt ein Objekt, das Speicherzuweisung und Freigeben für Objekte mithilfe eines Cache Typs [cache\_chunklist](../standard-library/cache-chunklist-class.md).|  
-|[allocator\_fixed\_size](../standard-library/allocator-fixed-size-class.md)|Beschreibt ein Objekt, das Speicherzuweisung und Freigeben für Objekte des Typs `Type` mit einem Cache Typ [cache\_freelist](../standard-library/cache-freelist-class.md) mit einer Länge verwaltet, die durch [max\_fixed\_size](../standard-library/max-fixed-size-class.md) verwaltet wird.|  
-|[allocator\_newdel](../standard-library/allocator-newdel-class.md)|Implementiert eine Zuweisung, die `operator delete` verwendet, um einen Speicherblock freizugeben und `operator new`, um einen Speicherblock zuzuordnen.|  
-|[allocator\_suballoc](../standard-library/allocator-suballoc-class.md)|Beschreibt ein Objekt, das Speicherzuweisung und Freigeben für Objekte des Typs `Type` mit einem Cache Typs [cache\_suballoc](../standard-library/cache-suballoc-class.md).|  
-|[allocator\_unbounded](../standard-library/allocator-unbounded-class.md)|Beschreibt ein Objekt, das Speicherzuweisung und Freigeben für Objekte des Typs `Type` mit einem Cache Typ [cache\_freelist](../standard-library/cache-freelist-class.md) mit einer Länge verwaltet, die durch [max\_unbounded](../standard-library/max-unbounded-class.md) verwaltet wird.|  
-|[allocator\_variable\_size](../standard-library/allocator-variable-size-class.md)|Beschreibt ein Objekt, das Speicherzuweisung und Freigeben für Objekte des Typs `Type` mit einem Cache Typ [cache\_freelist](../standard-library/cache-freelist-class.md) mit einer Länge verwaltet, die durch [max\_variable\_size](../standard-library/max-variable-size-class.md) verwaltet wird.|  
-|[cache\_chunklist](../standard-library/cache-chunklist-class.md)|Definiert eine Blocks\-Zuweisung Speicherblöcken, die einer einzelnen Größe zuordnet und freigibt.|  
-|[cache\_freelist](../standard-library/cache-freelist-class.md)|Definiert eine Blocks\-Zuweisung Speicherblöcken, die einer einzelnen Größe zuordnet und freigibt.|  
-|[cache\_suballoc](../standard-library/cache-suballoc-class.md)|Definiert eine Blocks\-Zuweisung Speicherblöcken, die einer einzelnen Größe zuordnet und freigibt.|  
+|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#operator_neq)|Es wird auf Ungleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|  
+|[operator== (\<allocators>)](../standard-library/allocators-operators.md#operator_eq_eq)|Es wird auf Gleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|  
+  
+### <a name="classes"></a>Klassen  
+  
+|||  
+|-|-|  
+|[allocator_base](../standard-library/allocator-base-class.md)|Definiert die Basisklasse und allgemeine Funktionen, die zum Erstellen einer benutzerdefinierten Zuweisung von einem Synchronisierungsfilter erforderlich sind.|  
+|[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objekte, die einen Zwischenspeicher des Typs [cache_chunklist](../standard-library/cache-chunklist-class.md) verwenden.|  
+|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objekte des Typs `Type` verwaltet, die einen Cache des Typs [cache_freelist](../standard-library/cache-freelist-class.md) mit einer von [max_fixed_size](../standard-library/max-fixed-size-class.md) verwalteten Länge verwenden.|  
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementiert einen Allocator, der `operator delete` verwendet, um einen Speicherblock freizugeben, und der `operator new` verwendet, um einen Speicherblock zuzuweisen.|  
+|[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objekte des Typs `Type` verwaltet, die einen Cache des Typs [cache_suballoc](../standard-library/cache-suballoc-class.md) verwenden.|  
+|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objekte des Typs `Type` verwaltet, die einen Cache des Typs [cache_freelist](../standard-library/cache-freelist-class.md) mit einer von [max_unbound](../standard-library/max-unbounded-class.md) verwalteten Länge verwenden.|  
+|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objekte des Typs `Type` verwaltet, die einen Cache des Typs [cache_freelist](../standard-library/cache-freelist-class.md) mit einer von [max_variable_size](../standard-library/max-variable-size-class.md) verwalteten Länge verwenden.|  
+|[cache_chunklist](../standard-library/cache-chunklist-class.md)|Definiert eine Blockzuweisung, die Speicherblöcke einheitlicher Größe zuweist und freigibt.|  
+|[cache_freelist](../standard-library/cache-freelist-class.md)|Definiert eine Blockzuweisung, die Speicherblöcke einheitlicher Größe zuweist und freigibt.|  
+|[cache_suballoc](../standard-library/cache-suballoc-class.md)|Definiert eine Blockzuweisung, die Speicherblöcke einheitlicher Größe zuweist und freigibt.|  
 |[freelist](../standard-library/freelist-class.md)|Verwaltet eine Liste von Speicherblöcken.|  
-|[max\_fixed\_size](../standard-library/max-fixed-size-class.md)|Beschreibt ein maximales Klassenobjekt, das ein [freelist](../standard-library/freelist-class.md)\-Objekt einer festen maximale Länge eingeschränkt.|  
-|[max\_none](../standard-library/max-none-class.md)|Beschreibt ein maximales Klassenobjekt, das ein [freelist](../standard-library/freelist-class.md)\-Objekt auf eine maximale Länge von null einschränkt.|  
-|[max\_unbounded](../standard-library/max-unbounded-class.md)|Beschreibt ein maximales Klassenobjekt, das nicht die maximale Länge eines [freelist](../standard-library/freelist-class.md)\-Objekts beschränkt.|  
-|[max\_variable\_size](../standard-library/max-variable-size-class.md)|Beschreibt ein maximales Klassenobjekt, das ein [freelist](../standard-library/freelist-class.md)\-Objekt auf eine maximale Länge eingeschränkt, die zur Anzahl von reservierten Speicherblöcken ungefähr proportional ist.|  
-|[rts\_alloc](../standard-library/rts-alloc-class.md)|Die rts\_alloc Vorlagenklasse [Filter](../standard-library/allocators-header.md) beschreibt, die ein Array Cacheinstanzen enthält und bestimmt, die als eine Instanz, um für Zuordnungs\- und Freigabe statt zur Kompilierzeit zur Laufzeit verwenden zu können.|  
-|[synchronization\_none](../standard-library/sync-none-class.md)|Beschreibt einen Synchronisierungsfilter, der keine Synchronisierung bietet.|  
-|[synchronization\_per\_container](../standard-library/sync-per-container-class.md)|Beschreibt einen Synchronisierungsfilter, wofür ein separates Cacheobjekt für jedes Zuweisungsobjekt bereitstellt.|  
-|[synchronization\_per\_thread](../standard-library/sync-per-thread-class.md)|Beschreibt einen Synchronisierungsfilter, wofür ein separates Cacheobjekt für jeden Thread enthält.|  
-|[synchronization\_shared](../standard-library/sync-shared-class.md)|Beschreibt einen Synchronisierungsfilter, der einen Mutex verwendet, um Zugriff auf einen Cacheobjekt zu steuern, auf das alle Zuweisungen freigegeben wird.|  
+|[max_fixed_size](../standard-library/max-fixed-size-class.md)|Beschreibt ein Objekt der max-Klasse, das ein [freelist](../standard-library/freelist-class.md)-Objekt auf eine maximale Länge begrenzt.|  
+|[max_none](../standard-library/max-none-class.md)|Beschreibt ein Objekt der max-Klasse, das ein [freelist](../standard-library/freelist-class.md)-Objekt auf eine maximale Länge von null begrenzt.|  
+|[max_unbounded](../standard-library/max-unbounded-class.md)|Beschreibt ein Objekt der max-Klasse, das die maximale Länge eines [freelist](../standard-library/freelist-class.md)-Objekts nicht einschränkt.|  
+|[max_variable_size](../standard-library/max-variable-size-class.md)|Beschreibt ein Objekt der max-Klasse, das die maximale Länge eines [freelist](../standard-library/freelist-class.md)-Objekts auf eine maximale Länge einschränkt, die annähernd proportional zur Anzahl von zugewiesenen Speicherblöcken ist.|  
+|[rts_alloc](../standard-library/rts-alloc-class.md)|Die rts_alloc-Vorlagenklasse beschreibt einen [Filter](../standard-library/allocators-header.md), der ein Array von Cache-Instanzen enthält, und ermittelt zur Laufzeit, nicht zur Kompilierzeit, welche Instanz für die Belegung und Freigabe von Speicher zu verwenden ist.|  
+|[sync_none](../standard-library/sync-none-class.md)|Beschreibt einen Synchronisierungsfilter, der keine Synchronisierung bietet.|  
+|[sync_per_container](../standard-library/sync-per-container-class.md)|Beschreibt einen Synchronisierungsfilter, der für jedes Zuweisungsobjekt ein getrenntes Cacheobjekt bereitstellt.|  
+|[sync_per_thread](../standard-library/sync-per-thread-class.md)|Beschreibt einen Synchronisierungsfilter, der für jeden Thread ein getrenntes Cacheobjekt bereitstellt.|  
+|[sync_shared](../standard-library/sync-shared-class.md)|Beschreibt einen Synchronisierungsfilter, in dem ein Mutex verwendet wird, um den Zugriff auf ein Cacheobjekt zu steuern, das von allen Allocators gemeinsam verwendet wird.|  
   
-## Anforderungen  
- Zuweisungen **Header:** \<\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<allocators>  
   
  **Namespace:** stdext  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

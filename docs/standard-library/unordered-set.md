@@ -1,55 +1,72 @@
 ---
-title: "&lt;unordered_set&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<unordered_set>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unordered_set-Header [TR1]"
+title: '&lt;unordered_set&gt; | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <unordered_set>
+dev_langs:
+- C++
+helpviewer_keywords:
+- unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# &lt;unordered_set&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
+ms.openlocfilehash: a7fcb706317f7185d260daab15ae14f478176768
+ms.lasthandoff: 02/24/2017
 
-Definiert die Containervorlagenklassen [unordered\_multiset](../standard-library/unordered-multiset-class.md) und [unordered\_set](../standard-library/unordered-set-class.md) und ihre unterstützenden Vorlagen.  
+---
+# <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
+Definiert die Containervorlagenklassen [unordered_multiset](../standard-library/unordered-multiset-class.md) und [unordered_set](../standard-library/unordered-set-class.md) und deren unterstützenden Vorlagen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <unordered_set>  
 ```  
   
-### Klassen  
+### <a name="classes"></a>Klassen  
   
 |||  
 |-|-|  
-|[unordered\_multiset\-Klasse](../standard-library/unordered-multiset-class.md)|Speichert Hashtabelle von Schlüsseln.|  
-|[unordered\_set\-Klasse](../standard-library/unordered-set-class.md)|Speichert Hashtabelle von Schlüsseln.|  
+|[unordered_multiset-Klasse](../standard-library/unordered-multiset-class.md)|Speichert die Hashtabelle mit Schlüsseln.|  
+|[unordered_set-Klasse](../standard-library/unordered-set-class.md)|Speichert die Hashtabelle mit Schlüsseln.|  
   
-### Funktionen  
+### <a name="functions"></a>Funktionen  
   
 |||  
 |-|-|  
-|[operator\!\= \(unordered\_multiset\)](../Topic/operator!=%20\(unordered_multiset\).md)|Testet, ob das unordered\_multiset Objekt auf der linken Seite des Operators nicht gleich dem unordered\_multiset Objekt auf der rechten Seite ist.|  
-|[operator\=\= \(unordered\_multiset\)](../Topic/operator==%20\(unordered_multiset\).md)|Testet, ob das unordered\_multiset Objekt auf der linken Seite des Operators unordered\_multiset Objekt gleich dem auf der rechten Seite ist.|  
-|[swap\-Funktion \(unordered\_multiset\)](../Topic/swap%20Function%20\(unordered_multiset\).md)|Austausche zwei Multisets.|  
-|[operator\!\= \(unordered\_set\)](../Topic/operator!=%20\(unordered_set\).md)|Testet, ob das unordered\_set Objekt auf der linken Seite des Operators nicht gleich dem unordered\_set Objekt auf der rechten Seite ist.|  
-|[operator\=\= \(unordered\_set\)](../Topic/operator==%20\(unordered_set\).md)|Testet, ob das unordered\_set Objekt auf der linken Seite des Operators unordered\_set Objekt gleich dem auf der rechten Seite ist.|  
-|[swap\-Funktion \(unordered\_set\)](../Topic/swap%20Function%20\(unordered_set\).md)|Austausche beiden Sätze.|  
+|[operator!=](../standard-library/unordered-set-operators.md#operator_neq)|Überprüft, ob das unordered_multiset-Objekt links vom Operator ungleich dem unordered_multiset-Objekt rechts vom Operator ist.|  
+|[operator==](../standard-library/unordered-set-operators.md#operator_eq_eq)|Überprüft, ob das unordered_multiset-Objekt links vom Operator gleich dem unordered_multiset-Objekt rechts vom Operator ist.|  
+|[swap-Funktion](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Vertauscht zwei Multimengen.|  
+|[operator!=](../standard-library/unordered-set-operators.md#operator_neq)|Testet, ob das unordered_set-Objekt links vom Operator ungleich dem unordered_set-Objekt rechts vom Operator ist.|  
+|[operator==](../standard-library/unordered-set-operators.md#operator_eq_eq)|Testet, ob das unordered_set-Objekt links vom Operator gleich dem unordered_set-Objekt rechts vom Operator ist.|  
+|[swap-Funktion](../standard-library/unordered-set-functions.md#swap)|Vertauscht zwei Mengen.|  
   
-## Siehe auch  
- [unordered\_map\-Klasse](../standard-library/unordered-map-class.md)   
- [unordered\_multimap\-Klasse](../standard-library/unordered-multimap-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [unordered_map-Klasse](../standard-library/unordered-map-class.md)   
+ [unordered_multimap-Klasse](../standard-library/unordered-multimap-class.md)
+

@@ -1,78 +1,95 @@
 ---
-title: "_CrtGetReportHook | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtGetReportHook"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtGetReportHook"
-  - "_CrtGetReportHook"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtGetReportHook-Funktion"
-  - "_CrtGetReportHook-Funktion"
+title: _CrtGetReportHook | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtGetReportHook
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtGetReportHook
+- _CrtGetReportHook
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtGetReportHook function
+- _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtGetReportHook
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7f70ab172614c6bc3d4462f31f8a17590ddaab55
+ms.lasthandoff: 02/24/2017
 
-Ruft die clientdefinierte Berichtsfunktion ab, um sie mit der C\-Laufzeit für den Debug\-Berichterstellungsprozess zu verknüpfen \(nur Debugversion\).  
+---
+# <a name="crtgetreporthook"></a>_CrtGetReportHook
+Ruft die clientdefinierte Berichtsfunktion ab, um sie mit der C-Laufzeit für den Debug-Berichterstellungsprozess zu verknüpfen (nur Debugversion).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 _CRT_REPORT_HOOK _CrtGetReportHook( void );  
 ```  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Gibt die aktuelle clientdefinierte Berichtsfunktion zurück.  
   
-## Hinweise  
- `_CrtGetReportHook` ermöglicht es einer Anwendung, die aktuelle Berichtsfunktion für den Debugbibliothek\-Berichterstellungsprozess der C\-Laufzeit abzurufen.  
+## <a name="remarks"></a>Hinweise  
+ `_CrtGetReportHook` ermöglicht es einer Anwendung, die aktuelle Berichtsfunktion für den Debugbibliothek-Berichterstellungsprozess der C-Laufzeit abzurufen.  
   
- Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und zum Schreiben eigener clientdefinierter Hookfunktionen finden Sie unter [Schreiben von Hookfunktionen zum Debuggen](../Topic/Debug%20Hook%20Function%20Writing.md).  
+ Weitere Informationen zur Verwendung anderer hookfähiger Laufzeitfunktionen und zum Schreiben eigener clientdefinierter Hookfunktionen finden Sie unter [Debug Hook Function Writing (Schreiben von Hookfunktionen zum Debuggen)](/visualstudio/debugger/debug-hook-function-writing).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_CrtGetReportHook`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtGetReportHook`|\<crtdbg.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Nur Debugversionen von [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
- Ein Beispiel für die Verwendung von `_CrtSetReportHook` finden Sie unter [report](assetId:///f6e08c30-6bd9-459a-830a-56deec0d2051).  
+## <a name="example"></a>Beispiel  
+ Ein Beispiel für die Verwendung von `_CrtSetReportHook` finden Sie unter [report](http://msdn.microsoft.com/en-us/f6e08c30-6bd9-459a-830a-56deec0d2051).  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Debugroutinen](../../c-runtime-library/debug-routines.md)   
- [\_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md)
+ [_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md)

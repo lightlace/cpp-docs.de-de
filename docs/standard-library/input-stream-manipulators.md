@@ -1,31 +1,49 @@
 ---
-title: "Eingabestream-Manipulatoren | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Eingabestreamobjekte"
-  - "Eingabestreams, Manipulatoren"
+title: Eingabestream-Manipulatoren | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- input streams, manipulators
+- input stream objects
 ms.assetid: 0addcacb-7b7b-4d70-9775-a59abc400fb3
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Eingabestream-Manipulatoren
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e1c7e8f5e1075230f008e4cb5f9a6ac843c75502
+ms.lasthandoff: 02/24/2017
 
-Viele Manipulatoren, wie [setprecision](../Topic/setprecision.md), werden für die `ios`\-Klasse definiert und betreffen daher auf Eingabestreams.  Wenige Manipulatoren jedoch tatsächlich Eingabestreamobjekte beeinflussen.  Von denen, die, der die wichtigsten Schritte, sind die Basismanipulatoren \-, `dec`\-, `oct`\- und `hex`, die die Konvertierungsbasis bestimmen, die mit Zahlen aus dem Eingabestream verwendet wird.  
+---
+# <a name="input-stream-manipulators"></a>Eingabestream-Manipulatoren
+Viele Manipulatoren, z.B. [setprecision]--brokenlink--(../Topic/not%20found:3ddde610-70cc-4cfa-8a89-3e83d1d356a8.md#setprecision), werden für die `ios`-Klasse definiert und somit für Eingabestreams verwendet. Einige Manipulatoren beeinflussen jedoch tatsächlich Eingabestreamobjekte. Für diejenigen, die das tun, sind die Basismanipulatoren `dec`, `oct` und `hex` die Wichtigsten, welche die Konvertierungsbasis festlegen, die Zahlen aus dem Eingabestream verwendet.  
   
- Auf Extraktion ermöglicht der `hex` Manipulator Verarbeitung von verschiedenen Eingabeformaten.  Beispielsweise werden c, C, 0xc, 0xC, 0Xc und alle 0XC als ganze Dezimalzahl 12 interpretiert.  Jedes Zeichen als 0 bis 9, A bis F, a bis f, X x und beendet die numerische Konvertierung.  Somit wird die Sequenz `"124n5"` die Zahl 124. mit der [basic\_ios::fail](../Topic/basic_ios::fail.md) Bitsatz konvertiert.  
+ Während des Extrahierens ermöglicht der `hex`-Manipulator die Verarbeitung von verschiedenen Eingabeformaten. Zum Beispiel c, C, 0xc, 0xC, 0Xc und 0XC werden alle als die ganze Dezimalzahl 12 interpretiert. Jedes Zeichen außer 0 bis 9, A bis F, a bis f, x und X beendet die numerische Konvertierung. Demnach wird die Sequenz `"124n5"` mit dem festgelegten [basic_ios::fail](../standard-library/basic-ios-class.md#basic_ios__fail)-Bit in die Zahl 124 konvertiert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Eingabestreams](../standard-library/input-streams.md)
+
+

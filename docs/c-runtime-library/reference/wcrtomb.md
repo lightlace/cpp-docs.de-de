@@ -1,50 +1,66 @@
 ---
-title: "wcrtomb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcrtomb"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcrtomb"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zeichen, Konvertieren"
-  - "Mehrbytezeichen"
-  - "wcrtomb-Funktion"
-  - "Breitzeichen, Konvertieren"
+title: wcrtomb | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcrtomb
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcrtomb
+dev_langs:
+- C++
+helpviewer_keywords:
+- wide characters, converting
+- wcrtomb function
+- multibyte characters
+- characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# wcrtomb
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 853295a50158caa92ed9370b6267e4e623f7d790
+ms.lasthandoff: 02/24/2017
 
-Konvertiert ein Breitzeichen in seine Mehrbytezeichendarstellung.  Eine sicherere Version dieser Funktion ist verfügbar; finden Sie unter [wcrtomb\_s](../../c-runtime-library/reference/wcrtomb-s.md).  
+---
+# <a name="wcrtomb"></a>wcrtomb
+Konvertieren von Breitzeichen in die Multibyte-Zeichendarstellung. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_t wcrtomb(  
@@ -60,32 +76,32 @@ size_t wcrtomb(
 ); // C++ only  
 ```  
   
-#### Parameter  
- \[out\] `mbchar`  
- Das resultierendes die Mehrbyte\-Codepage konvertierte Zeichen.  
+#### <a name="parameters"></a>Parameter  
+ [out] `mbchar`  
+ Das resultierende in Multibyte konvertierte Zeichen.  
   
- \[in\] `wchar`  
- Bei einem Breitzeichen zu konvertieren.  
+ [in] `wchar`  
+ Ein zu konvertierendes Breitzeichen.  
   
- \[in\] `mbstate`  
- Ein Zeiger auf ein `mbstate_t`\-Objekt.  
+ [in] `mbstate`  
+ Ein Zeiger auf ein `mbstate_t` -Objekt.  
   
-## Rückgabewert  
- Gibt die Anzahl von Bytes erforderlich, um das konvertierte Mehrbytezeichen; andernfalls \-1 darstellen zurück, wenn ein Fehler auftritt.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt die Anzahl der Bytes zurück, die erforderlich sind, um das konvertierte Multibytezeichen darzustellen, oder andernfalls -1, wenn ein Fehler auftritt.  
   
-## Hinweise  
- Die `wcrtomb`\-Funktion konvertiert ein Breitzeichen und beginnt im angegebenen Konvertierungszustand, der in `mbstate`, den Wert enthalten ist, der in `wchar`, in die Adresse enthalten wird, die durch `mbchar` dargestellt wird.  Der Rückgabewert ist die Anzahl von Bytes erforderlich, um das entsprechende Mehrbytezeichen darzustellen, aber es wird nicht mehr als `MB_CUR_MAX` Bytes zurück.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `wcrtomb` konvertiert ein Breitzeichen, beginnend beim angegebenen Konvertierungsstatus, der in `mbstate` enthalten ist, vom in `wchar` enthaltenen Wert in die von `mbchar` dargestellte Adresse. Der Rückgabewert ist die Anzahl der Bytes, die erforderlich sind, um das entsprechende Multibytezeichen darzustellen. Es werden jedoch höchstens `MB_CUR_MAX` Bytes zurückgegeben.  
   
- Wenn `mbstate` NULL ist, wird das interne `mbstate_t`\-Objekt, das den Konvertierungszustand von `mbchar` enthält, verwendet.  Wenn die Zeichensequenz `wchar` keine entsprechende Mehrbytezeichendarstellung hat, wird \-1 zurückgegeben und `errno` ist auf `EILSEQ` festgelegt.  
+ Wenn `mbstate` NULL ist, wird das interne `mbstate_t`-Objekt verwendet, das den Konvertierungsstatus von `mbchar` enthält. Wenn die Zeichensequenz `wchar` nicht über eine entsprechende Multibyte-Zeichendarstellung verfügt, wird -1 zurückgegeben, und `errno` wird auf `EILSEQ` festgelegt.  
   
- Die `wcrtomb`\-Funktion unterscheidet sich von [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) durch ihre Neustartfähigkeit.  Der Konvertierungszustand wird in `mbstate` für nachfolgende Aufrufe an den gleichen oder anderen restartable Funktionen gespeichert.  Ergebnisse werden undefiniert, wenn Sie die Verwendung von restartable und nonrestartable Funktionen kombiniert.  Beispielsweise würde eine Anwendung `wcsrlen` statt `wcsnlen` verwenden, wenn ein nachfolgender Aufruf `wcsrtombs` statt `wcstombs` verwendet wurden.  
+ Die `wcrtomb`-Funktion unterscheidet sich von [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) durch die Neustartmöglichkeit. Der Konvertierungszustand wird für nachfolgende Aufrufe der gleichen oder anderer Funktionen, die neu gestartet werden können, in `mbstate` gespeichert. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert. Beispiel: Eine Anwendung würde `wcsrlen` anstelle von `wcsnlen` verwenden, wenn ein nachfolgender Aufruf von `wcsrtombs` anstelle von `wcstombs` verwendet würde.  
   
- In C\+\+ ist diese Funktion eine Vorlagenüberladung, die aufgerufen wird, das später speichern, Entsprechungen dieser Funktion.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ hat diese Funktion eine Vorlagenüberladung, mit der die neuere, sichere Entsprechung dieser Funktion aufgerufen wird. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
   
-## Ausnahmen  
- Die Funktion `wcrtomb` ist multithreadsicher, solange keine Funktion im aktuellen Thread `setlocale` aufruft, wenn diese Funktion ausführt und während `mbstate` NULL ist.  
+## <a name="exceptions"></a>Ausnahmen  
+ Die `wcrtomb`-Funktion ist multithreadsicher, solange keine Funktion im aktuellen Thread `setlocale` aufruft, während diese Funktion ausgeführt wird und `mbstate` NULL ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_wcrtomb.c  
@@ -124,18 +140,21 @@ int main( void )
 }  
 ```  
   
-  **Das entsprechende Breitzeichen "Q" wurde in "Q\-" Mehrbytezeichen konvertiert.**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+The corresponding wide character "Q" was converted to the "Q" multibyte character.  
+```  
   
-## Anforderungen  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`wcrtomb`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`wcrtomb`|\<wchar.h>|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [Interpretation von Mehrbytezeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [mbsinit](../../c-runtime-library/reference/mbsinit.md)

@@ -1,32 +1,48 @@
 ---
-title: "logic_error-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdexcept/std::logic_error"
-  - "std::logic_error"
-  - "logic_error"
-  - "std.logic_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logic_error-Klasse"
+title: logical_error-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdexcept/std::logic_error
+- std::logic_error
+- logic_error
+- std.logic_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# logic_error-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 5a4a0075d072a98f8f5dd067e404b188e6a78f51
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="logicerror-class"></a>logic_error-Klasse
 Die Klasse fungiert als Basisklasse für alle Ausnahmen, die ausgelöst werden, um Fehler zu melden, die mutmaßlich vor einer Programmausführung erkennbar sind, etwa Verletzungen von logischen Vorbedingungen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,11 +58,11 @@ public:
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Rückgabewert von [Was](../standard-library/exception-class1.md) ist eine Kopie des **Nachricht**`.`[Daten](../standard-library/basic-string-class.md#basic_string__data).  
+ Der von [Was](../standard-library/exception-class.md) zurückgegebene Wert ist eine Kopie von **Nachricht**`.`[Daten](../standard-library/basic-string-class.md#basic_string__data).  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // logic_error.cpp  
 // compile with: /EHsc /GR  
 #include <iostream>  
@@ -74,11 +90,12 @@ Type: class std::logic_error
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** \< Stdexcept>  
+ **Header:** \<stdexcept>  
   
  **Namespace:** std  
   
 ## <a name="see-also"></a>Siehe auch  
-[Exception-Klasse](../standard-library/exception-class1.md)  
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[exception-Klasse](../standard-library/exception-class.md)  
+ [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

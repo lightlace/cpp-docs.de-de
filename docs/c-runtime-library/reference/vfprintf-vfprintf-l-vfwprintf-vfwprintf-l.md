@@ -1,59 +1,75 @@
 ---
-title: "vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vfprintf_l"
-  - "vfprintf"
-  - "vfwprintf"
-  - "_vfwprintf_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vfwprintf"
-  - "_vftprintf"
-  - "vfprintf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_vfwprintf_l-Funktion"
-  - "_vftprintf-Funktion"
-  - "vfprintf-Funktion"
-  - "_vftprintf_l-Funktion"
-  - "vfprintf_l-Funktion"
-  - "vftprintf_l-Funktion"
-  - "vfwprintf_l-Funktion"
-  - "vftprintf-Funktion"
-  - "vfwprintf-Funktion"
-  - "_vfprintf_l-Funktion"
-  - "Formatierter Text [C++]"
+title: vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vfprintf_l
+- vfprintf
+- vfwprintf
+- _vfwprintf_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vfwprintf
+- _vftprintf
+- vfprintf
+dev_langs:
+- C++
+helpviewer_keywords:
+- _vfwprintf_l function
+- _vftprintf function
+- vfprintf function
+- _vftprintf_l function
+- vfprintf_l function
+- vftprintf_l function
+- vfwprintf_l function
+- vftprintf function
+- vfwprintf function
+- _vfprintf_l function
+- formatted text [C++]
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e04e0d21d88abf57f2e258b74a28f5a3612539a3
+ms.lasthandoff: 02/24/2017
 
-Schreiben von formatierter Ausgabe mithilfe eines Zeigers, der auf eine Liste von Argumenten zeigt. Sicherere Versionen dieser Funktionen vorhanden. finden Sie unter [Vfprintf_s _vfprintf_s_l, Vfwprintf_s _vfwprintf_s_l](../../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md).  
+---
+# <a name="vfprintf-vfprintfl-vfwprintf-vfwprintfl"></a>vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
+Schreiben von formatierter Ausgabe mithilfe eines Zeigers, der auf eine Liste von Argumenten zeigt. Sicherere Versionen dieser Funktionen sind vorhanden. Informationen hierzu finden Sie unter [vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l](../../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -84,7 +100,7 @@ int _vfwprintf_l(
   
 #### <a name="parameters"></a>Parameter  
  `stream`  
- Zeiger zur `FILE`-Struktur.  
+ Zeiger zur `FILE` -Struktur.  
   
  `format`  
  Formatangabe.  
@@ -98,9 +114,9 @@ int _vfwprintf_l(
  Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Rückgabewert  
- `vfprintf` und `vfwprintf` geben die Anzahl der geschriebenen Zeichen ohne das abschließende Nullzeichen zurück oder einen negativen Wert, wenn ein Ausgabefehler auftritt. Wenn entweder `stream` oder `format` ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, geben die Funktionen – 1 zurück und legen `errno` auf `EINVAL` fest.  
+ `vfprintf` und `vfwprintf` geben die Anzahl der geschriebenen Zeichen ohne das abschließende Nullzeichen zurück oder einen negativen Wert, wenn ein Ausgabefehler auftritt. Wenn `stream` oder `format` ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen –&1; zurück und legen `errno` auf `EINVAL` fest.  
   
- Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, Errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Hinweise  
  Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt anschließend die vorhandenen Daten in `stream`.  
@@ -126,17 +142,17 @@ int _vfwprintf_l(
 |`vfprintf`, _`vfprintf_l`|\<stdio.h> und \<stdarg.h>|\<varargs.h>*|  
 |`vfwprintf`, _`vfwprintf_l`|\<stdio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|  
   
- \* Erforderlich für die Kompatibilität mit UNIX V.  
+ \* Benötigt für die Kompatibilität mit UNIX V.  
   
- Weitere Informationen zur Kompatibilität, finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
+ Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Stream-e/a](../../c-runtime-library/stream-i-o.md)   
- [Vprintf-Funktionen](../../c-runtime-library/vprintf-functions.md)   
- [Fprintf, _fprintf_l, Fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [Printf, _printf_l, Wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [Sprintf _sprintf_l, Swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [Va_arg, Va_copy, Va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+ [Stream I/O (Stream-E/A)](../../c-runtime-library/stream-i-o.md)   
+ [vprintf Functions (vprintf-Funktionen)](../../c-runtime-library/vprintf-functions.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

@@ -1,49 +1,66 @@
 ---
-title: "wcsrtombs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcsrtombs"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcsrtombs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wcsrtombs-Funktion"
-  - "Zeichenfolgenkonvertierung, Breitzeichen"
-  - "Breitzeichen, Zeichenfolgen"
+title: wcsrtombs | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcsrtombs
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcsrtombs
+dev_langs:
+- C++
+helpviewer_keywords:
+- wcsrtombs function
+- string conversion, wide characters
+- wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# wcsrtombs
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8dcf86093b363bd890e15ba7eb326a4187e65999
+ms.lasthandoff: 02/24/2017
 
-Konvertiert eine Zeichenfolge mit Breitzeichen zu seiner Mehrbytezeichenzeichenfolgendarstellung.  Eine sicherere Version dieser Funktion ist verfügbar; finden Sie unter [wcsrtombs\_s](../../c-runtime-library/reference/wcsrtombs-s.md).  
+---
+# <a name="wcsrtombs"></a>wcsrtombs
+Konvertieren von Breitzeichen in die Multibyte-Zeichenfolgendarstellung. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [wcsrtombs_s](../../c-runtime-library/reference/wcsrtombs-s.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_t wcsrtombs(  
@@ -61,37 +78,37 @@ size_t wcsrtombs(
 ); // C++ only  
 ```  
   
-#### Parameter  
- \[out\] `mbstr`  
- Der Adressenplatz der resultierenden konvertierten Mehrbytezeichenzeichenfolge.  
+#### <a name="parameters"></a>Parameter  
+ [out] `mbstr`  
+ Der Adressspeicherort der resultierenden konvertierten Multibyte-Zeichenfolge.  
   
- \[in\] `wcstr`  
- Zeigt indirekt auf den Speicherort der zu konvertierende Zeichenfolge mit Breitzeichen.  
+ [in] `wcstr`  
+ Indirekter Zeiger auf den Speicherort der Breitzeichenfolge, die konvertiert werden soll.  
   
- \[in\] `count`  
- Die Anzahl für zu konvertierenden Zeichens.  
+ [in] `count`  
+ Die Anzahl der zu konvertierenden Zeichen.  
   
- \[in\] `mbstate`  
- Ein Zeiger auf ein `mbstate_t` Konvertierungszustandsobjekt.  
+ [in] `mbstate`  
+ Ein Zeiger auf ein `mbstate_t`-Konvertierungszustandsobjekt.  
   
-## Rückgabewert  
- Gibt die Anzahl an Bytes konvertiert nicht erfolgreich, einschließlich das ungültige endgültige NULL\-Zeichen\-Byte \(falls vorhanden\); andernfalls \-1 zurück, wenn ein Fehler aufgetreten ist.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt die Anzahl der erfolgreich konvertierten Bytes zurück, wobei das abschließende NULL-Byte (falls vorhanden) nicht eingeschlossen ist. Andernfalls wird bei einem Fehler -1 zurückgegeben.  
   
-## Hinweise  
- Die `wcsrtombs`\-Funktion konvertiert eine Zeichenfolge mit Breitzeichen und beginnt im angegebenen Konvertierungszustand, der in `mbstate`, im indirekten spitzen die Werte zu in `wcstr`, in die Adresse von `mbstr` enthalten ist.  Die Konvertierung wird für jedes Zeichen bis fort: nachdem eine NULL\-Zeichenfolge, die beendet Breitzeichen, aufgetreten ist, wenn ein nicht übereinstimmendes Zeichen festgestellt wird, oder das nächste Zeichen als der Grenzwert übersteigt, die in `count` enthalten war.  Wenn `wcsrtombs` das NULL\-Breitzeichen \(L"\\0"\) entweder vor trifft oder, wenn `count` auftritt, wird es zu einem äußerst 0 konvertiert und anhält.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `wcsrtombs` konvertiert eine Zeichenfolge aus Breitzeichen, beginnend beim angegebenen Konvertierungsstatus, der in `mbstate` enthalten ist, von den Werten, auf die in `wcstr` indirekt gezeigt wird, in die Adresse von `mbstr`. Die Konvertierung wird für jedes Zeichen fortgeführt, bis ein abschließendes NULL-Breitzeichen gefunden wird, ein nicht übereinstimmendes Zeichen gefunden wird oder das nächste Zeichen den in `count` enthaltenen Grenzwert übersteigen würde. Wenn `wcsrtombs` das Breitzeichen NULL (L'\0') erkennt, entweder vor oder bei `count`, wird es in ein 8-Bit-0-Zeichen konvertiert und beendet.  
   
- Daher ist die Mehrbytezeichenzeichenfolge bei `mbstr` auf NULL endende nur, wenn `wcsrtombs` ein Breitzeichennull\-zeichen während der Konvertierung gefunden wird.  Wenn die Sequenzen, die von `wcstr` und `mbstr` Überlappung, das Verhalten von `wcsrtombs` dargestellt werden, die definiert.  `wcsrtombs` wird durch die LC\_TYPE\-Kategorie des aktuellen Gebietsschemas beeinflusst.  
+ Folglich endet die Multibyte-Zeichenfolge bei `mbstr` nur dann auf NULL, wenn `wcsrtombs` während der Konvertierung ein Breitzeichen NULL findet. Wenn die Sequenzen, auf die von `wcstr` und `mbstr` verwiesen wird, überlappen, ist das Verhalten von `wcsrtombs` nicht definiert. `wcsrtombs` wird von der LC_TYPE-Kategorie des aktuellen Gebietsschemas beeinflusst.  
   
- Die `wcsrtombs`\-Funktion unterscheidet sich von [wcstombs, \_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md) durch ihre Neustartfähigkeit.  Der Konvertierungszustand wird in `mbstate` für nachfolgende Aufrufe an den gleichen oder anderen restartable Funktionen gespeichert.  Ergebnisse werden undefiniert, wenn Sie die Verwendung von restartable und nonrestartable Funktionen kombiniert.  Beispielsweise würde eine Anwendung `wcsrlen` statt `wcsnlen` verwenden, wenn ein nachfolgender Aufruf `wcsrtombs` statt `wcstombs` verwendet wurden.  
+ Die Funktion `wcsrtombs` unterscheidet sich von [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md) durch die Neustartmöglichkeit. Der Konvertierungszustand wird für nachfolgende Aufrufe der gleichen oder anderer Funktionen, die neu gestartet werden können, in `mbstate` gespeichert. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Beispiel: Eine Anwendung würde `wcsrlen` anstelle von `wcsnlen` verwenden, wenn ein nachfolgender Aufruf von `wcsrtombs` anstelle von `wcstombs` verwendet würde.  
   
- Wenn das Argument `mbstr``NULL` ist, gibt `wcsrtombs` die erforderlichen Größe in Bytes der Zielzeichenfolge zurück.  Wenn `mbstate` NULL ist, wird der interne `mbstate_t` Konvertierungszustand verwendet.  Wenn die Zeichensequenz `wchar` keine entsprechende Mehrbytezeichendarstellung hat, wird \-1 zurückgegeben und `errno` ist auf `EILSEQ` festgelegt.  
+ Wenn das `mbstr`-Argument `NULL` ist, gibt `wcsrtombs` die erforderliche Größe der Zielzeichenfolge in Bytes zurück. Wenn `mbstate` NULL ist, wird der interne Konvertierungsstatus `mbstate_t` verwendet. Wenn die Zeichensequenz `wchar` nicht über eine entsprechende Multibyte-Zeichendarstellung verfügt, wird -1 zurückgegeben, und `errno` wird auf `EILSEQ` festgelegt.  
   
- In C\+\+ ist diese Funktion eine Vorlagenüberladung, die aufgerufen wird, das später, speichern Entsprechung dieser Funktion.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ hat diese Funktion eine Vorlagenüberladung, mit der die neuere, sichere Entsprechung dieser Funktion aufgerufen wird. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
   
-## Ausnahmen  
- Die Funktion `wcsrtombs` ist multithreadsicher, solange keine Funktion im aktuellen Thread `setlocale` aufruft, wenn diese Funktion ausführt und `mbstate` nicht NULL ist.  
+## <a name="exceptions"></a>Ausnahmen  
+ Die `wcsrtombs`-Funktion ist multithreadsicher, solange keine Funktion im aktuellen Thread `setlocale` aufruft, während diese Funktion ausgeführt wird und `mbstate` nicht NULL ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_wcsrtombs.cpp  
@@ -133,22 +150,25 @@ int main()
 }  
 ```  
   
-  **Die Zeichenfolge wurde erfolgreich konvertiert.**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+The string was successfuly converted.  
+```  
   
-## Anforderungen  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`wcsrtombs`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`wcsrtombs`|\<wchar.h>|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [Interpretation von Mehrbytezeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)   
- [wcrtomb\_s](../../c-runtime-library/reference/wcrtomb-s.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [wcstombs, \_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [mbsinit](../../c-runtime-library/reference/mbsinit.md)

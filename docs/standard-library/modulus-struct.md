@@ -1,78 +1,90 @@
 ---
-title: "modulus-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "modulus"
-  - "std::modulus"
-  - "xfunctional/std::modulus"
-  - "std.modulus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modulus-Klasse"
-  - "modulus-Struktur"
+title: modulus-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- modulus
+- std::modulus
+- xfunctional/std::modulus
+- std.modulus
+dev_langs:
+- C++
+helpviewer_keywords:
+- modulus class
+- modulus struct
 ms.assetid: 86d342f7-b7b1-46a4-b0bb-6b7ae827369b
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# modulus-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 430f1f9c0fcc58e3b4bfef167356960eb132b3f7
+ms.lasthandoff: 02/24/2017
 
-Ein vordefiniertes Funktionsobjekt, das den Modulusdivisionsvorgang \(`operator%`\) auf den Argumenten ausführt.  
+---
+# <a name="modulus-struct"></a>modulus-Struktur
+Ein vordefiniertes Funktionsobjekt, das den Divisionsvorgang ( `operator%`) auf den jeweiligen Argumenten ausführt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
-template<class Type = void>  
-   struct modulus : public binary_function <Type, Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left,   
-         const Type& Right   
-         ) const;  
-   };  
-  
-// specialized transparent functor for operator%  
-template<>  
-   struct modulus<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-      -> decltype(std::forward<Type1>(Left)  
-         % std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct modulus : public binary_function <Type, Type, Type>  
+{
+    Type operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator%
+template <>
+struct modulus<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) % std::forward<U>(Right));
+};
 ```  
   
-#### Parameter  
- `Type`, `Type1`, `Type2`  
- Jeder Typ, der ein `operator%`\-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.  
+#### <a name="parameters"></a>Parameter  
+ `Type`, `T`, `U`  
+ Jeder Typ, der ein `operator%`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.  
   
  `Left`  
- Der linke Operand des Modulusvorgangs.  Die nicht spezialisierte Vorlage besitzt ein lvalue\-Verweisargument vom Typ `Type`.  Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue\-Verweisargumenten des abgeleiteten Typs `Type1`.  
+ Der linke Operand des Modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `T`.  
   
  `Right`  
- Der rechte Operand des Modulusvorgangs.  Die nicht spezialisierte Vorlage besitzt ein lvalue\-Verweisargument vom Typ `Type`.  Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue\-Verweisargumenten des abgeleiteten Typs `Type2`.  
+ Der rechte Operand des Modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.  
   
-## Rückgabewert  
- Das Ergebnis von `Left` `%` `Right`.  Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator%` zurückgegebenen Typs.  
+## <a name="return-value"></a>Rückgabewert  
+ Das Ergebnis von `Left``%``Right`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator%` zurückgegebenen Typs.  
   
-## Hinweise  
- Das `modulus`\-Funktionselement wird auf Ganzzahltypen für die grundlegenden Datentypen oder benutzerdefinierte Typen beschränkt, die `operator%` implementieren.  
+## <a name="remarks"></a>Hinweise  
+ Das `modulus`-Funktionselement wird auf Ganzzahltypen für die grundlegenden Datentypen oder benutzerdefinierte Typen beschränkt, die `operator%` implementieren.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // functional_modulus.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -118,17 +130,23 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+/* Output:  
+The vector v1 = ( 5 10 15 20 25 30 )  
+The vector v2 = ( 3 6 9 12 15 18 )  
+The element-wise remainders of the modular division  
+ are: ( 2 4 6 8 10 12 )  
+ */  
 ```  
   
-  **Der Vektor v1 \= \(5 10 15 20 25 30\)**  
-**Der Vektor v2 \= \(3 6 9 12 15 18\)**  
-**Die elementweisen Reste der modularen Division**  
- **sind: \(2 4 6 8 10 12\)**   
-## Anforderungen  
- **Header:** \<functional\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<functional>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standard Template Library](../misc/standard-template-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,67 +1,85 @@
 ---
-title: "Verwenden von C++-Bibliotheksheadern"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Kopfzeilen"
-  - "Kopfzeilen, Benennung in C++-Include-Direktive"
-  - "Kopfzeilen, C++-Standardbibliothek"
-  - "INCLUDE-Direktive"
-  - "Bibliothek-Header"
-  - "C++-Standardbibliothek, Kopfzeilen"
-  - "Standard-Header in C++"
+title: Verwenden von C++-Bibliotheksheadern | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- headers, naming in C++ include directive
+- standard header in C++
+- headers
+- INCLUDE directive
+- headers, C++ Standard Library
+- library headers
+- C++ Standard Library, headers
 ms.assetid: a36e889e-1af2-4cd9-a211-bfc7a3fd8e85
 caps.latest.revision: 10
-caps.handback.revision: "9"
-ms.author: "corob"
-manager: "ghogen"
----
-# Verwenden von C++-Bibliotheksheadern
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 69a20e17403e755031466f269b932a4b14aa523b
+ms.lasthandoff: 02/24/2017
 
-Sie schließen den Inhalt einer Standardheader ein, indem Sie sie in einer benennen.  
+---
+# <a name="using-c-library-headers"></a>Verwenden von C++-Bibliotheksheadern
+Der Inhalt eines Standardheaders kann durch Benennen in einer include-Direktive eingebunden werden.  
   
 ```  
-#include <iostream>   // include I/O facilities  
+#include <iostream>// include I/O facilities  
 ```  
   
- Fügen Sie die Standardheader Sie können in jeder Reihenfolge mehrmals einschließen, einen Standardheader, oder mindestens zwei Standardkopfzeilen, die dasselbe Makro oder gleich definieren, geben ein.  Schließen Sie keine Standardheader in einer Deklaration ein.  Definieren Sie keine Makros, die dieselben Namen, die Schlüsselwörter, bevor Sie einen Standardheader einschließen.  
+ Die Standardheader können in beliebiger Reihenfolge eingebunden werden. Ein Standardheader kann mehrmals eingebunden werden. Und es können mehrere Standardheader eingebunden werden, die dasselbe Makro oder denselben Typ definieren. Ein Standardheader darf jedoch nicht in eine Deklaration eingebunden werden. Definieren Sie keine Makros, die dieselben Namen wie Schlüsselwörter haben, bevor Sie einen Standardheader einschließen.  
   
- Bibliothekskopfzeile eine C\+\+\-Headerdatei schließt alle anderen C\+\+\-Bibliothekskopfzeilen ein, die die erforderliche Typen definieren muss. \(Stellen sind explizit alle C\+\+\-Bibliothekskopfzeilen erfordert in einer Übersetzungseinheit jedoch aus Angst falsch, dass Sie über die tatsächlichen Abhängigkeiten schätzen.\) Eine Standard\-C\-Kopfzeile enthält niemals eine andere Standardheader ein.  Eine Standardheader deklariert oder definiert nur die Entitäten, die für diese in diesem Dokument beschriebenen.  
+ Ein C++-Bibliotheksheader enthält alle anderen C++-Bibliotheksheader, die zum Definieren der erforderlichen Typen benötigt werden. (In einer Übersetzungseinheit benötigte C++-Bibliotheksheader müssen immer explizit eingebunden werden, damit keine falschen Annahmen über die tatsächlichen Abhängigkeiten getroffen werden.) Ein C-Standardheader enthält niemals einen anderen Standardheader. Mit einem Standardheader werden lediglich die in diesem Dokument hierfür beschriebenen Entitäten deklariert bzw. definiert.  
   
- Jede Funktion in der Bibliothek wird in einer Standardheader deklariert.  Anders als in Standard\-C stellt die Standardheader nie ein maskierendes Makro mit dem Namen der Funktion, die die Funktionsdeklaration maskiert und dieselben Auswirkungen erreicht.  Weitere Informationen zum Maskieren von Makros, finden Sie unter [C\+\+\-Bibliothekskonventionen](../standard-library/cpp-library-conventions.md).  
+ Alle Funktionen in der Bibliothek werden in einem Standardheader deklariert. Im Gegensatz zu Standard C wird vom Standardheader kein Maskierungsmakro mit demselben Namen wie die Funktion bereitgestellt, das die Funktionsdeklaration maskiert und denselben Effekt erzielt. Weitere Informationen zu Maskierungsmakros finden Sie unter [C++ Library Conventions (C++-Bibliothekskonventionen)](../standard-library/cpp-library-conventions.md).  
   
- Alle Namen als `operator delete` und `operator new` in den C\+\+\-Bibliothekskopfzeilen werden im `std`\-Namespace oder in einem Namespace definiert, der sich innerhalb des `std` geschachtelt. Namespace  Sie verweisen auf den Namen beispielsweise `cin` als `std::cin` an.  Beachten Sie jedoch dass Makronamen nicht für Namespacequalifikation sind, das Sie schreiben immer `__STD_COMPLEX` ohne einen Namespacequalifizierer.  
+ Alle Namen außer `operator delete` und `operator new` in den C++-Bibliotheksheadern werden im Namespace `std` oder in einem Namespace definiert, der innerhalb von Namespace `std` geschachtelt ist. Auf den Namen `cin` wird beispielsweise mit `std::cin` verwiesen. Makronamen unterliegen nicht der Namespacequalifikation. Daher wird `__STD_COMPLEX` ohne Namespacequalifizierer geschrieben.  
   
- In einigen Übersetzungsumgebung einschließlich Bibliothekskopfzeile einer C\+\+ kann die externen Namen herausheben, die ebenfalls im Namespace `std` im globalen Namespace, mit einzelnen `using`\-Deklarationen für jeden der Namen deklariert werden.  Andernfalls stellt die Header Bibliotheksnamen keine in den aktuellen Namespace vor.  
+ In einigen Übersetzungsumgebungen kann das Einbinden eines C++-Bibliotheksheaders dazu führen, dass externe, im Namespace `std` deklarierte Namen mit individuellen `using`-Deklarationen für die einzelnen Namen auch in den globalen Namespace gehoben werden. Ist dies nicht der Fall, werden vom Header *keine* Bibliotheksnamen in den aktuellen Namespace eingeführt.  
   
- Der C\+\+\-Standard erfordert, dass die C\-Standardkopfzeilen alle externen Namen im `std` deklarieren, dann werden sie in den globalen Namespace mit Personen `using`\-Deklarationen für die Namen aus.  Aber in einer Übersetzungsumgebung schließen die C\-Standardkopfzeilen keine Namespacedeklarationen ein und deklarieren alle Namen direkt im globalen Namespace.  Daher ist die portabelste Methode, Namespaces zu begegnen, zwei Regeln befolgen:  
+ Der C++-Standard verlangt, dass die C-Standardheader alle externen Namen in Namespace `std` deklarieren und sie anschließend mit individuellen `using`-Deklarationen für die einzelnen Namen in den globalen Namespace heben. In einigen Übersetzungsumgebungen enthalten die C-Standardheader jedoch keine Namespacedeklarationen. Stattdessen werden alle Namen direkt im globalen Namespace deklariert. Somit wird das Ergebnis am besten portierbar, wenn im Umgang mit Namespaces zwei Regeln befolgt werden:  
   
--   Um im `std` zu deklarieren sicherlich schließen ein externer Name der normalerweise in \<stdlib.h beispielsweise\>deklariert wird das cstdlib \<Header.\>  Kenntnis Sie, dass der Name möglicherweise auch im globalen Namespace deklariert wird.  
+-   Deklarieren Sie einen externen Namen, der traditionell in \<stdlib.h> deklariert wird, unbedingt in Namespace `std`, indem Sie beispielsweise den Header \<cstdlib> einbinden. Beachten Sie, dass der Name möglicherweise auch im globalen Namespace deklariert wird.  
   
--   Um im globalen Namespace einen externen Namen sicherlich zu deklarieren, der in \<stdlib.h deklariert wird, schließen Sie\>den Header stdlib.h \<direkt\> ein.  Kenntnis Sie, dass der Name möglicherweise auch im `std` deklariert wäre.  
+-   Deklarieren Sie einen externen, in \<stdlib.h> deklarierten Namen unbedingt im globalen Namespace, indem Sie den Header \<stdlib.h> direkt einbinden. Beachten Sie, dass der Name möglicherweise auch im Namespace `std` deklariert wird.  
   
- Wenn Sie `std::abort` aufrufen möchten, nicht ordnungsgemäß beendet zur Folge haben, sollten Sie cstdlib \>einschließen \<.  Wenn Sie `abort` aufrufen möchten, sollten Sie stdlib.h \<einschließen.\>  
+ Wenn Sie also `std::abort` aufrufen möchten, um eine nicht normale Beendigung zu verursachen, binden Sie \<cstdlib> ein. Wenn Sie `abort` aufrufen möchten, binden Sie \<stdlib.h> ein.  
   
- Alternativ können Sie eine Deklaration schreiben:  
+ Alternativ können Sie folgende Deklaration schreiben:  
   
 ```  
 using namespace std;  
 ```  
   
- Bibliotheksnamen das alle im aktuellen Namespace öffnet.  Wenn Sie z dieser Deklaration sofort schließlich schreiben, markieren Sie die Namen in den globalen Namespace aus.  Sie können Namespaceüberlegungen im Rest der Übersetzungseinheit anschließend ignorieren.  Sie vermeiden auch die meisten Unterschiede über unterschiedliche Übersetzungsumgebung.  
+ Damit werden alle Bibliotheksnamen in den aktuellen Namespace eingebunden. Wenn Sie diese Deklaration direkt nach den include-Direktiven einfügen, werden die Namen in den globalen Namespace gehoben. Danach müssen Sie sich in der restlichen Übersetzungseinheit um Namespaces keine Gedanken mehr zu machen. Außerdem umgehen Sie damit die meisten Differenzen zwischen unterschiedlichen Übersetzungsumgebungen.  
   
- Sofern, dass ausdrücklich angegeben, definieren Sie möglicherweise keine Namen im `std`\-Namespace oder einem Namespace, der im Namespace `std`, innerhalb des Programms geschachtelt wird.  
+ Sofern nicht ausdrücklich anders angegeben, sollten Sie Namen nicht im Namespace `std` oder in einem Namespace angeben, der im Namespace `std` in Ihrem Programm geschachtelt ist.  
   
-## Siehe auch  
- [STL\-Übersicht](../standard-library/cpp-standard-library-overview.md)   
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [C++ Standard Library Overview (Übersicht über die C++-Standardbibliothek)](../standard-library/cpp-standard-library-overview.md)   
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

@@ -1,49 +1,65 @@
 ---
-title: "clearerr_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "clearerr_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "clearerr_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clearerr_s-Funktion"
-  - "Fehlerindikator für Streams"
-  - "Neufestlegen von Streamfehlerindikator"
+title: clearerr_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- clearerr_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- clearerr_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- error indicator for streams
+- resetting stream error indicator
+- clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# clearerr_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: a8904000ae9175f0f6d43b70bc8c6af5e5b572dc
+ms.lasthandoff: 02/24/2017
 
-Setzt den Fehler für einen Stream zurück.  Dies ist eine Version von [clearerr](../../c-runtime-library/reference/clearerr.md) mit werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="clearerrs"></a>clearerr_s
+Setzt den Fehlerindikator für einen Stream zurück. Dies ist eine sicherere Version von [clearerr](../../c-runtime-library/reference/clearerr.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t clearerr_s(  
@@ -51,27 +67,27 @@ errno_t clearerr_s(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `stream`  
- Zeiger `FILE`\-Struktur  
+ Zeiger zur `FILE`-Struktur  
   
-## Rückgabewert  
- Null wenn erfolgreich; `EINVAL`, wenn `stream` NULL ist.  
+## <a name="return-value"></a>Rückgabewert  
+ Null, wenn erfolgreich; `EINVAL`, wenn `stream` NULL ist.  
   
-## Hinweise  
- Die `clearerr_s`\-Funktion setzt den Fehler und den Dateiende\-Indikator für `stream` zurück.  Fehlerindikatoren werden nicht automatisch gelöscht; einmal wird der Fehler für den jeweiligen Stream festgelegt, fahren Vorgänge auf diesem Stream fort, um einem Fehlerwert bis `clearerr_s`, `clearerr`, `fseek`, `fsetpos` zurückzugeben, oder `rewind` wird aufgerufen.  
+## <a name="remarks"></a>Hinweise  
+ Die `clearerr_s`-Funktion setzt den Fehlerindikator und den Dateiende-Indikator für `stream` zurück. Fehlerindikatoren werden nicht automatisch gelöscht; sobald der Fehlerindikator für einen bestimmten Stream festgelegt wurde, geben Operationen in diesem Stream weiterhin einen Fehlerwert zurück, bis `clearerr_s`, `clearerr`, `fseek`, `fsetpos` oder `rewind` aufgerufen wird.  
   
- Wenn `stream` NULL ist, wird der ungültige Parameterhandler wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen.  Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EINVAL` zurück.  
+ Wenn `stream` NULL ist, wird der Handler für ungültige Parameter wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EINVAL` zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`clearerr_s`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`clearerr_s`|\<stdio.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_clearerr_s.c  
@@ -113,16 +129,26 @@ int main( void )
 }  
 ```  
   
-  **`nnWrite` Fehler: Ungültiger Dateideskriptor**  
-**Bewirkt Eingabe einen Fehler? n**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
   
-## Siehe auch  
- [Fehlerbehandlung](../../c-runtime-library/error-handling-crt.md)   
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
+n  
+  
+```  
+  
+```Output  
+  
+      nWrite error: Bad file descriptor  
+Will input cause an error? n  
+```  
+  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Error Handling (Fehlerbehandlung)](../../c-runtime-library/error-handling-crt.md)   
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
- [\_eof](../../c-runtime-library/reference/eof.md)   
+ [_eof](../../c-runtime-library/reference/eof.md)   
  [feof](../../c-runtime-library/reference/feof.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror, \_wperror](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

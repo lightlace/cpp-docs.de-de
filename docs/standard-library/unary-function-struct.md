@@ -1,53 +1,66 @@
 ---
-title: "unary_function-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.unary_function"
-  - "unary_function"
-  - "functional/std::unary_function"
-  - "std::unary_function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_function-Klasse"
+title: unary_function-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.unary_function
+- unary_function
+- functional/std::unary_function
+- std::unary_function
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# unary_function-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 3b7f2da8315046e7ed39f73e76832940f5ba199b
+ms.lasthandoff: 02/24/2017
 
-Eine niedrige leere Struktur, die definiert Typen werden geerbt, die von abgeleiteten Klassen, das kein unäres Funktionsobjekt bereitstellt.  
+---
+# <a name="unaryfunction-struct"></a>unary_function-Struktur
+Eine leere Basisstruktur, mit der Typen definiert werden, die möglicherweise von abgeleiteten Klassen geerbt werden, die ein unäres Funktionsobjekt bereitstellt.  
   
-## Syntax  
-  
+## <a name="syntax"></a>Syntax  
 ```  
-  
-   template<class Arg, class Result>  
-struct unary_function {  
-   typedef Arg argument_type;  
-   typedef Result result_type;  
+struct unary_function 
+{
+   typedef Arg argument_type;
+   typedef Result result_type;
 };  
-```  
+``` 
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenstruktur dient als Basis für Klassen, die eine Memberfunktion der Form **result_type**`operator()`( **constargument_type&**) **const** definieren.  
   
-## Hinweise  
- Die Vorlagenstruktur dient als Basisklasse für die Klassen, die eine Memberfunktion des Formulars **result\_type** `operator()`**const** \(**argument\_type &**\) **const** definieren.  
+ Alle diese abgeleiteten unären Funktionen können auf ihren einzigen Argumenttyp als **argument_type** und ihren Rückgabetyp als **result_type** verweisen.  
   
- Alle diese abgeleitete unäre Funktionen können ihren einzigen Argumenttyp als **argument\_type** und den Rückgabetyp verweisen als **result\_type**.  
+## <a name="example"></a>Beispiel  
   
-## Beispiel  
-  
-```  
+```cpp  
 // functional_unary_function.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -89,16 +102,21 @@ int main()
     cout << "The number of elements in v1 greater than 10 is: "  
          << result1 << "." << endl;  
 }  
+\* Output:   
+The vector v1 = ( 0 5 10 15 20 25 )  
+The number of elements in v1 greater than 10 is: 3.  
+*\  
 ```  
   
-  **Der Vektor v1 \= \(0 5 10 15 20 25\)**  
-**Die Anzahl der Elemente in v1, das größer 10 ist, ist: 3.**   
-## Anforderungen  
- **Header:** \<functional\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<functional>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [unary\_function\<\>\-Struktur](../misc/unary-function-angles-structure.md)   
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standard Template Library](../misc/standard-template-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

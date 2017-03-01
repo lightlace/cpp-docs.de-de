@@ -1,83 +1,95 @@
 ---
-title: "binder2nd-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.binder2nd"
-  - "binder2nd"
-  - "xfunctional/std::binder2nd"
-  - "std::binder2nd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder2nd-Klasse"
+title: binder2nd-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.binder2nd
+- binder2nd
+- xfunctional/std::binder2nd
+- std::binder2nd
+dev_langs:
+- C++
+helpviewer_keywords:
+- binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# binder2nd-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: f19b476ae903c915d4231621c39a88bf70b08685
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="binder2nd-class"></a>binder2nd-Klasse
 Eine Vorlagenklasse, mit der ein Konstruktor bereitgestellt wird, der ein binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert, indem das zweite Argument der binären Funktion an einen angegebenen Wert gebunden wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
-template<class Operation>  
-   class binder2nd  
-      : public unary_function <  
-         typename Operation::first_argument_type,  
-         typename Operation::result_type>   
-   {  
-   public:  
-   typedef typename Operation::argument_type argument_type;  
-   typedef typename Operation::result_type result_type;  
-   binder2nd(  
-      const Operation& _Func,  
-      const typename Operation::second_argument_type& _Right  
-   );  
-   result_type operator()(  
-      const argument_type& _Left  
-   ) const;  
-   result_type operator()(  
-      argument_type& _Left  
-   ) const;  
-   protected:  
-   Operation op;  
-   typename Operation::second_argument_type value;  
-   };  
+```
+template <class Operation>
+class binder2nd
+    : public unaryFunction <typename Operation::first_argument_type,
+    typename Operation::result_type>
+{
+public:
+    typedef typename Operation::argument_type argument_type;
+    typedef typename Operation::result_type result_type;
+    binder2nd(
+        const Operation& Func,
+        const typename Operation::second_argument_type& right);
+
+    result_type operator()(const argument_type& left) const;
+    result_type operator()(argument_type& left) const;
+
+protected:
+    Operation op;
+    typename Operation::second_argument_type value;
+};
 ```  
   
-#### Parameter  
- `_Func`  
- Das einem Funktionsobjekt unären zu konvertierende binäre Funktionsobjekt.  
+#### <a name="parameters"></a>Parameter  
+ `Func`  
+ Das binäre Funktionsobjekt, das in ein unäres Funktionsobjekt konvertiert werden soll.  
   
- `_Right`  
- Der Wert, auf das das zweite Argument des binären Funktionsobjekts gebunden werden soll.  
+ `right`  
+ Der Wert, an den das zweite Argument des binären Funktionsobjekts gebunden werden soll.  
   
- `_Left`  
- Der Wert des Arguments, das das benutzerdefinierte binären Objekt z festen Wert des zweiten Arguments vergleicht.  
+ `left`  
+ Der Wert des Arguments, den das angepasste binäre Objekt mit dem festen Wert des zweiten Arguments vergleicht.  
   
-## Rückgabewert  
- Das unäre Funktionsobjekt, das aus dem Binden des zweiten Arguments des binären Funktionsobjekts dem Wert `_Right.` entsteht  
+## <a name="return-value"></a>Rückgabewert  
+ Das unäre Funktionsobjekt, das aus dem Binden des zweiten Arguments des binären Funktionsobjekts an den Wert `right.` resultiert  
   
-## Hinweise  
- Die Vorlagenklasse speichert eine Kopie eines \_Func des binären Funktionsobjekts in **op** und eine Kopie von `_Right` in **Wert**.  Es definiert die Memberfunktion `operator()` als Rückgabe von `_Left`\( **op**, **Wert**\).  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse speichert eine Kopie eines binären Funktionsobjekts _ *Func* in **op** und eine Kopie von `right` in **value**. Für seine Memberfunktion `operator()` definiert sie die Rückgabe **op**( `left`, **value**).  
   
- Wenn `_Func` ein Objekt des Typs **Vorgang** ist und c eine Konstante ist, wird [bind2nd](../Topic/bind2nd%20Function.md) \( `_Func`, `c` \) in `binder2nd``binder2nd`\<**Vorgang**\>\-Klassenkonstruktor \( `_Func`, `c` \) und bequemeres entsprechend.  
+ Wenn `Func` ein Objekt vom Typ **Operation** und c eine Konstante ist, dann entspricht [bind2nd](../standard-library/functional-functions.md#bind2nd_function) ( `Func`, `c` ) dem `binder2nd`-Klassenkonstruktor `binder2nd`\< **Operation**> ( `Func`, `c` ) und ist komfortabler.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // functional_binder2nd.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -118,16 +130,22 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "  
          << result2 << "." << endl;  
 }  
+/* Output:  
+The vector v1 = ( 0 5 10 15 20 25 )  
+The number of elements in v1 greater than 10 is: 3.  
+The number of elements in v1 less than 10 is: 2.  
+*/  
 ```  
   
-  **Der Vektor v1 \= \(0 5 10 15 20 25\)**  
-**Die Anzahl der Elemente in v1, das größer 10 ist, ist: 3.**  
-**Die Anzahl der Elemente in v1 kleiner als 10 ist: 2.**   
-## Anforderungen  
- **Header:** \<functional\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<functional>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standard Template Library](../misc/standard-template-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,56 +1,72 @@
 ---
-title: "_expand | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_expand"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_bexpand"
-  - "fexpand"
-  - "expand"
-  - "nexpand"
-  - "_fexpand"
-  - "_nexpand"
-  - "bexpand"
-  - "_expand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_expand-Funktion"
-  - "expand-Funktion"
-  - "Speicherblöcke, Ändern der Größe"
+title: _expand | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _expand
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _bexpand
+- fexpand
+- expand
+- nexpand
+- _fexpand
+- _nexpand
+- bexpand
+- _expand
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory blocks, changing size
+- _expand function
+- expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# _expand
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d02e1ae2ec08a3fcd93700acb84c918f83088b1f
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="expand"></a>_expand
 Ändert die Größe eines Speicherblocks.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void *_expand(   
@@ -59,41 +75,41 @@ void *_expand(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `memblock`  
- Zeiger zuvor dem reservierten Speicherblock.  
+ Zeiger zum vorherigen belegten Speicherblock.  
   
  `size`  
  Neue Größe in Bytes.  
   
-## Rückgabewert  
- `_expand` gibt ein void\-Zeiger zum neu belegten Speicherblock zurück.  `_expand`, außer `realloc`, kann einen Block nicht verschieben, um die Größe zu ändern.  Wenn genügend Arbeitsspeicher vorhanden ist, der den Block, zu erweitern ist verfügbar, ohne es zu verschieben, wird der Parameter `memblock` in `_expand` dem Rückgabewert.  
+## <a name="return-value"></a>Rückgabewert  
+ `_expand` gibt einen leeren Zeiger auf den neu belegten Speicherblock zurück. `_expand` kann, im Gegensatz zu `realloc`, einen Block nicht verschieben, um dessen Größe zu ändern. Daher entspricht der `memblock`-Parameter auf `_expand` dem Rückgabewert, wenn genug Speicher vorhanden ist, um den Block auszudehnen, ohne ihn zu verschieben.  
   
- `_expand` gibt `NULL` zurück, wenn ein Fehler während des Vorgangs erkannt wird.  Wenn `_expand` verwendet wird, um einen Speicherblock verkleinert wird, hat er möglicherweise Beschädigung im kleinen Blocksheap oder ein ungültiger Blockszeiger und geben `NULL` zurück.  
+ `_expand` gibt `NULL` zurück, wenn ein Fehler während des Vorgangs auftritt. Wenn `_expand` z.B. verwendet wird, um einen Speicherblock zu verkleinern, könnte eine Beschädigung im kleinen Blockheap oder ein ungültiger Blockzeiger festgestellt und `NULL` zurückgegeben werden.  
   
- Wenn nicht genügend Arbeitsspeicher vorhanden ist, der den Block, der angegebenen Größe zu erweitern ist verfügbar, ohne sie zu verschieben, wird `NULL` zurückgegeben.  `_expand` gibt nie einem Block zurück, der in eine Größe als kleiner angefordert erweitert wird.  Wenn ein Fehler auftritt, gibt `errno` die Art des Fehlers an.  Weitere Informationen zu `errno` finden Sie unter [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Wenn nicht genügend Speicher vorhanden ist, um den Block auf die angegebene Größe auszudehnen, ohne ihn zu verschieben, gibt die Funktion `NULL` zurück. `_expand` gibt einen Block zurück, der auf eine kleinere Größe als angegeben ausgedehnt wurde. Wenn ein Fehler auftritt, gibt `errno` die Art des Fehlers an. Weitere Informationen zu `errno` finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Der Rückgabewert zeigt auf einem Speicherplatz, der garantiert wird, zum Speichern eines beliebigen Typs Objekt ordnungsgemäß ausgerichtet sind.  Um die neue Größe des Elements zu überprüfen, verwenden Sie `_msize`.  Um einen Zeiger auf einen anderen Typ als `void` zu erhalten, verwenden Sie eine Typumwandlung für den Rückgabewert.  
+ Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Verwenden Sie `_msize`, um die neue Größe des Elements zu überprüfen. Um einen Zeiger auf einen anderen Typ als `void` zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert.  
   
-## Hinweise  
- Die `_expand`\-Funktion änder die Größe eines zuvor reservierten Speicherblocks durch den Versuch, Vertrag Block zu erweitern oder abzuschließen, ohne seinen Speicherort im Heap zu verschieben.  Der `memblock`\-Parameter zeigt auf den Anfang des Blocks.  Der `size`\-Parameter gibt die neue Größe des Blocks, in Bytes.  Der Inhalt des Blocks entspricht z kürzeren der neuen und den alten Größen unverändert.  `memblock` sollte kein Block liegen, der freigegeben wurde.  
+## <a name="remarks"></a>Hinweise  
+ Die `_expand`-Funktion ändert die Größe eines zuvor belegten Speicherblocks, indem versucht wird, den Block ohne Verschieben seiner Position im Heap zu erweitern oder zu verkleinern. Der Parameter `memblock` zeigt auf den Anfang des Blocks. Der Parameter `size` gibt die neue Größe des Blocks in Bytes an. Der Inhalt des Blocks bleibt bis zum Minimum von neuer und alter Größe unverändert. `memblock` sollte kein Block sein, der freigegeben wurde.  
   
 > [!NOTE]
->  Auf 64\-Bit\-Plattformen keiner `_expand` möglicherweise nicht Vertrag Blocks, wenn die neue Größe kleiner ist, wenn die aktuelle Größe ab; insbesondere wenn der Block kleiner als 16K an Größe und daher in der Fragmentierungs\-Heap zugeordnet wurde, schlägt `_expand` den Block unverändert und gibt `memblock` zurück.  
+>  Auf 64-Bit-Plattformen verkleinert `_expand` den Block möglicherweise nicht, wenn die neue Größe kleiner ist als die aktuelle Größe. Besonders wenn der Block kleiner als 16K war und daher im niedrigen Fragmentierungs-Heap belegt war, ändert `_expand` den Block nicht und gibt `memblock` zurück.  
   
- Wenn die Anwendung mit einer Debugversion der C\-Laufzeitbibliotheken verknüpft ist, wird `_expand` von [\_expand\_dbg](../../c-runtime-library/reference/expand-dbg.md) auf.  Weitere Informationen dazu, wie der Heap während des Debuggingsprozesses verwaltet wird, finden Sie unter [Der CRT\-Debugheap](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Wenn die Anwendung mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist, wird `_expand` in [_expand_dbg](../../c-runtime-library/reference/expand-dbg.md) aufgelöst. Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [The CRT Debug Heap (CRT-Debugheap)](/visualstudio/debugger/crt-debug-heap-details).  
   
- Diese Funktion überprüft ihre Parameter.  Wenn `memblock` ein NULL\-Zeiger befindet, wird von dieser Funktion ein ungültiger Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL` zurück.  Wenn `size` größer als `_HEAP_MAXREQ` ist, wird `errno` auf `ENOMEM` festgelegt und die Funktion gibt `NULL` zurück.  
+ Diese Funktion überprüft ihre Parameter. Wenn `memblock` ein NULL-Zeiger ist, ruft diese Funktion einen Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL`zurück. Wenn `size` größer als `_HEAP_MAXREQ` ist, wird `errno` auf `ENOMEM` festgelegt, und die Funktion gibt `NULL` zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`_expand`|\<malloc.h\>|  
+|--------------|---------------------|  
+|`_expand`|\<malloc.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_expand.c  
@@ -121,16 +137,19 @@ int main( void )
 }  
 ```  
   
-  **Reservieren Sie eine Puffergröße mit 512 Elementen zu**  
-**Zugeordnet 512 Bytes an 002C12BC**  
-**Erweiterter Block zu 1024 Bytes an 002C12BC**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Allocate a 512 element buffer  
+Allocated 512 bytes at 002C12BC  
+Expanded block to 1024 bytes at 002C12BC  
+```  
   
-## Siehe auch  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
  [Speicherbelegung](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
- [\_msize](../../c-runtime-library/reference/msize.md)   
+ [_msize](../../c-runtime-library/reference/msize.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)

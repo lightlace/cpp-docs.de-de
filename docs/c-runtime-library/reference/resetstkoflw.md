@@ -1,53 +1,69 @@
 ---
-title: "_resetstkoflw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_resetstkoflw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "resetstkoflw"
-  - "_resetstkoflw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_resetstkoflw-Funktion"
-  - "resetstkoflw-Funktion"
-  - "Stapelüberlauf"
-  - "Stapel, Wiederherstellen"
+title: _resetstkoflw | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _resetstkoflw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- resetstkoflw
+- _resetstkoflw
+dev_langs:
+- C++
+helpviewer_keywords:
+- resetstkoflw function
+- stack overflow
+- stack, recovering
+- _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _resetstkoflw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="resetstkoflw"></a>_resetstkoflw
 Führt nach einem Stapelüberlauf eine Wiederherstellung durch.  
   
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows\-Runtime ausgeführt werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -55,35 +71,35 @@ int _resetstkoflw ( void );
   
 ```  
   
-## Rückgabewert  
- Bei erfolgreicher Funktion ist der Wert ungleich 0 \(null\), sonst Null.  
+## <a name="return-value"></a>Rückgabewert  
+ Bei erfolgreicher Funktion ist der Wert ungleich&0; (null), sonst Null.  
   
-## Hinweise  
- Die `_resetstkoflw`\-Funktion sorgt nach Stapelüberläufen für eine Wiederherstellung, sodass ein Programm fortgesetzt werden kann, statt mit einem schwerwiegenden Ausnahmefehler fehlzuschlagen.  Wenn die `_resetstkoflw`\-Funktion nicht aufgerufen wird, gibt es nach der vorherigen Ausnahme keine Schutzseiten.  Beim nächsten Stapelüberlauf treten keine Ausnahmen auf, und der Prozess wird ohne Ausgabe einer Warnung beendet.  
+## <a name="remarks"></a>Hinweise  
+ Die `_resetstkoflw`-Funktion sorgt nach Stapelüberläufen für eine Wiederherstellung, sodass ein Programm fortgesetzt werden kann, statt mit einem schwerwiegenden Ausnahmefehler fehlzuschlagen. Wenn die `_resetstkoflw`-Funktion nicht aufgerufen wird, gibt es nach der vorherigen Ausnahme keine Schutzseiten. Beim nächsten Stapelüberlauf treten keine Ausnahmen auf, und der Prozess wird ohne Ausgabe einer Warnung beendet.  
   
- Wenn ein Thread in einer Anwendung eine **EXCEPTION\_STACK\_OVERFLOW**\-Ausnahme verursacht, hat der Thread seinen Stapel in einem beschädigten Zustand belassen.  Dies steht im Gegensatz zu anderen Ausnahmen wie **EXCEPTION\_ACCESS\_VIOLATION** oder **EXCEPTION\_INT\_DIVIDE\_BY\_ZERO**, bei denen der Stapel nicht beschädigt ist.  Der Stapel ist auf einen beliebig kleinen Wert festgelegt, wenn das Programm das erste Mal geladen wird.  Der Stapel vergrößert sich dann bei Bedarf, um die Anforderungen des Threads zu erfüllen.  Dieses wird implementiert, indem eine Seite mit PAGE\_GUARD\-Zugriff am Ende des aktuellen Stapel eingefügt wird.  Weitere Informationen finden Sie unter dem Link zum [Erstellen von Schutzseiten](http://msdn.microsoft.com/library/windows/desktop/aa366549).  
+ Wenn ein Thread in einer Anwendung eine **EXCEPTION_STACK_OVERFLOW**-Ausnahme verursacht, hat der Thread seinen Stapel in einem beschädigten Zustand belassen. Dies steht im Gegensatz zu anderen Ausnahmen wie **EXCEPTION_ACCESS_VIOLATION** oder **EXCEPTION_INT_DIVIDE_BY_ZERO**, bei denen der Stapel nicht beschädigt ist. Der Stapel ist auf einen beliebig kleinen Wert festgelegt, wenn das Programm das erste Mal geladen wird. Der Stapel vergrößert sich dann bei Bedarf, um die Anforderungen des Threads zu erfüllen. Dieses wird implementiert, indem eine Seite mit PAGE_GUARD-Zugriff am Ende des aktuellen Stapel eingefügt wird. Weitere Informationen finden Sie unter dem Link zum [Erstellen von Schutzseiten](http://msdn.microsoft.com/library/windows/desktop/aa366549).  
   
  Wenn der Code den Stapelzeiger veranlasst, auf eine Adresse auf dieser Seite zu zeigen, wird eine Ausnahme ausgelöst und das System führt die folgenden drei Schritte durch:  
   
--   Entfernen des PAGE\_GUARD\-Schutzes auf der Schutzseite, sodass der Thread Daten im Speicher lesen und schreiben kann.  
+-   Entfernen des PAGE_GUARD-Schutzes auf der Schutzseite, sodass der Thread Daten im Speicher lesen und schreiben kann.  
   
 -   Zuordnen einer neuen Schutzseite, die sich eine Seite unterhalb der letzten befindet.  
   
 -   Wiederholen der Anweisung, die die Ausnahme ausgelöst hat.  
   
- Auf diese Weise kann das System die Größe des Stapels für den Thread automatisch erhöhen.  Jeder Thread in einem Prozess hat eine maximale Stapelgröße.  Die Stapelgröße wird zur Kompilierungszeit durch die [\/STACK \(Stapelreservierungen\)](../../build/reference/stack-stack-allocations.md)\- oder die [STACKSIZE](../../build/reference/stacksize.md)\-Anweisung in der DEF\-Datei des Projekts festgelegt.  
+ Auf diese Weise kann das System die Größe des Stapels für den Thread automatisch erhöhen. Jeder Thread in einem Prozess hat eine maximale Stapelgröße. Die Stapelgröße wird zur Kompilierungszeit durch die [/STACK (Stapelreservierung)](../../build/reference/stack-stack-allocations.md)- oder die [STACKSIZE](../../build/reference/stacksize.md)-Anweisung in der DEF-Datei des Projekts festgelegt.  
   
  Wenn die maximale Stapelgröße überschritten wird, führt das System die folgenden drei Schritte aus:  
   
--   Entfernen des PAGE\_GUARD\-Schutzes auf der Schutzseite, wie zuvor beschrieben.  
+-   Entfernen des PAGE_GUARD-Schutzes auf der Schutzseite, wie zuvor beschrieben.  
   
--   Versuchen, eine neue Schutzseite unterhalb des letzten zuzuweisen.  Dies schlägt jedoch fehl, da die maximale Stapelgröße überschritten wurde.  
+-   Versuchen, eine neue Schutzseite unterhalb des letzten zuzuweisen. Dies schlägt jedoch fehl, da die maximale Stapelgröße überschritten wurde.  
   
 -   Auslösen einer Ausnahme, sodass der Thread diese im Ausnahmeblock behandeln kann.  
   
- Beachten Sie, dass der Stapel ab diesem Punkt keine Schutzseite mehr hat.  Wenn das Programm das nächste Mal den Stapel bis zu dem Ende vergrößert, an dem eine Schutzseite vorhanden sein sollte, schreibt das Programm über den Stapel hinaus und verursacht eine Zugriffsverletzung.  
+ Beachten Sie, dass der Stapel ab diesem Punkt keine Schutzseite mehr hat. Wenn das Programm das nächste Mal den Stapel bis zu dem Ende vergrößert, an dem eine Schutzseite vorhanden sein sollte, schreibt das Programm über den Stapel hinaus und verursacht eine Zugriffsverletzung.  
   
- Rufen Sie `_resetstkoflw` auf, um die Schutzseite wiederherzustellen, wenn die Wiederherstellung nach einer Stapelüberlauf\-Ausnahme ausgeführt wird.  Diese Funktion kann aus dem Hauptkörper eines `__except`\-Blocks heraus oder außerhalb eines **\_\_except** \-Blocks aufgerufen werden.  Es gibt jedoch einige Einschränkungen hinsichtlich der Verwendung.  `_resetstkoflw` sollte nie aufgerufen werden von:  
+ Rufen Sie `_resetstkoflw` auf, um die Schutzseite wiederherzustellen, wenn die Wiederherstellung nach einer Stapelüberlauf-Ausnahme ausgeführt wird. Diese Funktion kann aus dem Hauptkörper eines `__except`-Blocks heraus oder außerhalb eines **__except**-Blocks aufgerufen werden. Es gibt jedoch einige Einschränkungen hinsichtlich der Verwendung. `_resetstkoflw` sollte nie aufgerufen werden von:  
   
 -   einem Filterausdruck  
   
@@ -91,32 +107,32 @@ int _resetstkoflw ( void );
   
 -   einer Funktion, die von einer Filterfunktion aufgerufen wurde.  
   
--   einem **catch**\-Block  
+-   Ein **catch**-Block.  
   
--   Einem `__finally`\-Block.  
+-   Einem `__finally`-Block.  
   
  An diesen Punkten ist der Stapel noch nicht ausreichend entladen.  
   
- Stapelüberlauf\-Ausnahmen werden als strukturierte Ausnahmen und nicht als C\+\+\-Ausnahmen generiert, sodass `_resetstkoflw` in einem herkömmlichen **catch**\-Block nicht hilfreich ist, da keine Stapelüberlauf\-Ausnahmen abgefangen werden.  Wenn allerdings [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md) verwendet wird, um einen strukturierten Ausnahmeübersetzer zu implementieren, der C\+\+\-Ausnahmen auslöst \(siehe zweites Beispiel\), führt eine Stapelüberlauf\-Ausnahme zu einer C\+\+\-Ausnahme, die von einem C\+\+\-Catch\-Block behandelt werden kann.  
+ Stapelüberlauf-Ausnahmen werden als strukturierte Ausnahmen und nicht als C++-Ausnahmen generiert, sodass `_resetstkoflw` in einem herkömmlichen **catch**-Block nicht hilfreich ist, da keine Stapelüberlauf-Ausnahmen abgefangen werden. Wenn allerdings [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) verwendet wird, um einen strukturierten Ausnahmeübersetzer zu implementieren, der C++-Ausnahmen auslöst (siehe zweites Beispiel), führt eine Stapelüberlauf-Ausnahme zu einer C++-Ausnahme, die von einem C++-Catch-Block behandelt werden kann.  
   
- Das Aufrufen von **\_resetstkoflw** in einem C\+\+\-Catch\-Block, der von einer Ausnahme erreicht wird, die von einer strukturierten Ausnahmeübersetzerfunktion ausgelöst wird, ist nicht sicher.  In diesem Fall wird der Stapelspeicher nicht freigegeben und die Stapelzeiger wird nicht bis außerhalb des Catch\-Blocks zurückgesetzt, auch wenn Destruktoren für alle zerstörbaren Objekte vor dem Catch\-Block aufgerufen wurden.  Diese Funktion sollte erst aufgerufen werden, wenn der Stapelspeicher freigegeben und der Stapelzeiger zurückgesetzt wurde.  Daher sollte sie erst nach dem Beenden des Catch\-Blocks aufgerufen werden.  Im Catch\-Block sollte so wenig Stapelspeicherplatz verwendet werden wie möglich, da ein Stapelüberlauf, der in einem Catch\-Block auftritt, der selbst versucht, sich nach einem vorherigen Stapelüberlauf wiederherzustellen, nicht wiederhergestellt werden kann und dazu führen kann, dass das Programm nicht mehr reagiert, da der Überlauf in dem Catch\-Block eine Ausnahme auslöst, die vom selben Catch\-Block behandelt wird.  
+ Das Aufrufen von **_resetstkoflw** in einem C++-Catch-Block, der von einer Ausnahme erreicht wird, die von einer strukturierten Ausnahmeübersetzerfunktion ausgelöst wird, ist nicht sicher. In diesem Fall wird der Stapelspeicher nicht freigegeben und die Stapelzeiger wird nicht bis außerhalb des Catch-Blocks zurückgesetzt, auch wenn Destruktoren für alle zerstörbaren Objekte vor dem Catch-Block aufgerufen wurden. Diese Funktion sollte erst aufgerufen werden, wenn der Stapelspeicher freigegeben und der Stapelzeiger zurückgesetzt wurde. Daher sollte sie erst nach dem Beenden des Catch-Blocks aufgerufen werden. Im Catch-Block sollte so wenig Stapelspeicherplatz verwendet werden wie möglich, da ein Stapelüberlauf, der in einem Catch-Block auftritt, der selbst versucht, sich nach einem vorherigen Stapelüberlauf wiederherzustellen, nicht wiederhergestellt werden kann und dazu führen kann, dass das Programm nicht mehr reagiert, da der Überlauf in dem Catch-Block eine Ausnahme auslöst, die vom selben Catch-Block behandelt wird.  
   
- Es gibt Situationen, in denen **\_resetstkoflw** trotz Verwendung am richten Speicherort fehlschlagen kann, beispielsweise in einem **\_\_except** \-Block.  Wenn selbst nach der Stapelentladung nicht genug Stapelspeicher vorhanden ist, um **\_resetstkoflw** ausführen, ohne auf die letzte Seite des Stapels zu schreiben, dann schlägt **\_resetstkoflw** fehl, kann die letzte Seite des Stapels nicht als Schutzseite wiederherstellen und gibt 0 zurück, um einen Fehler anzuzeigen.  Daher sollte zu einer sicheren Verwendung dieser Funktion das Überprüfen des Rückgabewerts gehören, anstatt davon auszugehen, dass der Stapel sicher verwendet werden kann.  
+ Es gibt Situationen, in denen **_resetstkoflw** trotz Verwendung am richtigen Speicherort fehlschlagen kann, beispielsweise in einem **__except**-Block. Wenn selbst nach der Stapelentladung nicht genug Stapelspeicher vorhanden ist, um **_resetstkoflw** ausführen, ohne auf die letzte Seite des Stapels zu schreiben, dann schlägt **_resetstkoflw** fehl, kann die letzte Seite des Stapels nicht als Schutzseite wiederherstellen und gibt 0 zurück, um einen Fehler anzuzeigen. Daher sollte zu einer sicheren Verwendung dieser Funktion das Überprüfen des Rückgabewerts gehören, anstatt davon auszugehen, dass der Stapel sicher verwendet werden kann.  
   
- Die strukturierte Ausnahmebehandlung fängt keine `STATUS_STACK_OVERFLOW`\-Ausnahme ab, wenn die Anwendung mit `/clr` oder `/clr:pure` kompiliert wird \(siehe [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md)\).  
+ Strukturierte Ausnahmebehandlung fängt kein `STATUS_STACK_OVERFLOW` Ausnahme bei der Kompilierung der Anwendung mit `/clr` (finden Sie unter [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md)).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_resetstkoflw`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_resetstkoflw`|\<malloc.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
- **Bibliotheken:** Alle Versionen der [CRT\-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).  
+ **Bibliotheken:** Alle Versionen der [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
- Das folgende Beispiel zeigt die empfohlene Verwendung der `_resetstkoflw`\-Funktion.  
+## <a name="example"></a>Beispiel  
+ Das folgende Beispiel zeigt die empfohlene Verwendung der `_resetstkoflw`-Funktion.  
   
 ```  
 // crt_resetstkoflw.c  
@@ -185,7 +201,7 @@ int main(int ac)
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
  Ohne Programmargumente:  
   
 ```  
@@ -219,10 +235,10 @@ loop #10
 resetting stack overflow  
 ```  
   
-### **Beschreibung**  
- Das folgenden Beispiel zeigt die empfohlene Verwendung von `_resetstkoflw` in einem Programm, in dem strukturierte Ausnahmen in C\+\+\-Ausnahmen konvertiert werden.  
+### <a name="description"></a>Beschreibung  
+ Das folgenden Beispiel zeigt die empfohlene Verwendung von `_resetstkoflw` in einem Programm, in dem strukturierte Ausnahmen in C++-Ausnahmen konvertiert werden.  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // crt_resetstkoflw2.cpp  
@@ -304,7 +320,7 @@ int main ( )
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  
@@ -312,8 +328,8 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [\_alloca](../../c-runtime-library/reference/alloca.md)
+## <a name="see-also"></a>Siehe auch  
+ [_alloca](../../c-runtime-library/reference/alloca.md)

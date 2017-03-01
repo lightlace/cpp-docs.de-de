@@ -1,54 +1,73 @@
 ---
-title: "Schreiben eigener Manipulatoren ohne Argumente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Manipulatoren"
+title: Schreiben eigener Manipulatoren ohne Argumente | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Schreiben eigener Manipulatoren ohne Argumente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 276bba3dd5ce5debd926ebbc4ccfaf52c6b92097
+ms.lasthandoff: 02/24/2017
 
-Schreibenmanipulatoren, die keine Argumente verwenden, erfordert Klassenableitung weder noch Verwendung von komplexen Makros.  Angenommen, das Drucker die Paare \<ESC\>erfordert \[fett Modus eingeben.  Sie können dieses Paar direkt in den Stream einfügen:  
+---
+# <a name="writing-your-own-manipulators-without-arguments"></a>Schreiben eigener Manipulatoren ohne Argumente
+Das Schreiben von Manipulatoren, die keine Argumente verwenden, erfordert weder eine Klassenableitung noch die Verwendung von komplexen Makros. Angenommen, Ihr Drucker erfordert das Paar \<ESC>[, um in den Fettdruckmodus zu wechseln. Sie können dieses Paar direkt in den Stream einfügen:  
   
 ```  
-cout << "regular " << '\033' << '[' << "boldface" << endl;  
+cout <<"regular " <<'\033' <<'[' <<"boldface" <<endl;  
 ```  
   
- Alternativ können Sie den Manipulator `bold` definieren, der die Zeichen eingefügt wird:  
+ Oder Sie können den `bold`-Manipulator definieren, der die Zeichen eingefügt:  
   
 ```  
-ostream& bold( ostream& os ) {  
-    return os << '\033' << '[';  
+ostream& bold(ostream& os) {  
+    return os <<'\033' <<'[';  
 }  
-cout << "regular " << bold << "boldface" << endl;  
+cout <<"regular " <<bold <<"boldface" <<endl;  
 ```  
   
- Die `bold` global definierte Funktion nimmt ein Verweisargument `ostream` und der `ostream` \- Verweis zurück.  Es ist keine Memberfunktion oder ein Friend, da es keinen Zugriff auf private Klassenelementen erfordert.  Die `bold` verbindet Funktion den Stream, da der Operator `<<` des Streams überladen ist, damit dieser Typ der Funktion, mit einer Deklaration zu akzeptieren angezeigt, die ungefähr folgendermaßen aussieht:  
+ Die global definierte `bold`-Funktion nimmt ein `ostream`-Verweisargument und gibt den `ostream`-Verweis zurück. Dabei handelt es sich um keine Member- oder Friend-Funktion, da kein Zugriff auf private Klassenelemente benötigt wird. Die `bold`-Funktion stellt eine Verbindung mit dem Stream her, da der `<<`-Operator des Streams überladen ist, um diesen Typ von Funktion zu akzeptieren, wobei eine Deklaration verwendet wird, die in etwa wie folgt aussieht:  
   
 ```  
 _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))  
-{     
-   // call ios_base manipulator  
-   (*_Pfn)(*(ios_base *)this);  
-   return (*this);  
+{     // call ios_base manipulator  
+ (*_Pfn)(*(ios_base *)this);
+
+    return (*this);
+
 }  
 ```  
   
- Sie können diese Funktion verwenden, um andere überladene Operatoren zu erweitern.  In diesem Fall ist jedoch zufällig, dass `bold` Zeichen in den Stream einfügt.  Die Funktion wird, wenn diese in den Stream eingefügt werden, nicht unbedingt aufgerufen, wenn die angrenzenden Zeichen gedruckt werden.  Daher kann das Drucken aufgrund der Pufferung des Streams verzögert werden.  
+ Sie können diese Funktion verwenden, um andere überladene Operatoren zu erweitern. In diesem Fall fügt `bold` in der Folge Zeichen in den Stream ein. Die Funktion wird aufgerufen, wenn sie in den Stream eingefügt wird, nicht zwangsläufig beim Drucken der angrenzenden Zeichen. Folglich könnte es aufgrund der Streampufferung beim Drucken zu Verzögerungen kommen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Ausgabestreams](../standard-library/output-streams.md)
+
+

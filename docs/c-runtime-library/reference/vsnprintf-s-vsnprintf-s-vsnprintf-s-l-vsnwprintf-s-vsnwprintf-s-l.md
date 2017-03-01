@@ -1,65 +1,81 @@
 ---
-title: "vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vsnwprintf_s"
-  - "_vsnwprintf_s_l"
-  - "_vsnprintf_s"
-  - "vsnprintf_s"
-  - "_vsnprintf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_vsnprintf_s"
-  - "_vsntprintf_s"
-  - "_vsnwprintf_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_vsnprintf_s-Funktion"
-  - "_vsnprintf_s_l-Funktion"
-  - "_vsntprintf_s-Funktion"
-  - "_vsntprintf_s_l-Funktion"
-  - "_vsnwprintf_s-Funktion"
-  - "_vsnwprintf_s_l-Funktion"
-  - "Formatierter Text [C++]"
-  - "vsnprintf_s-Funktion"
-  - "vsnprintf_s_l-Funktion"
-  - "vsntprintf_s-Funktion"
-  - "vsntprintf_s_l-Funktion"
-  - "vsnwprintf_s-Funktion"
-  - "vsnwprintf_s_l-Funktion"
+title: vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vsnwprintf_s
+- _vsnwprintf_s_l
+- _vsnprintf_s
+- vsnprintf_s
+- _vsnprintf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _vsnprintf_s
+- _vsntprintf_s
+- _vsnwprintf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- vsnwprintf_s function
+- _vsntprintf_s function
+- _vsntprintf_s_l function
+- vsntprintf_s function
+- vsnwprintf_s_l function
+- vsnprintf_s_l function
+- vsntprintf_s_l function
+- _vsnwprintf_s_l function
+- _vsnprintf_s function
+- vsnprintf_s function
+- _vsnprintf_s_l function
+- _vsnwprintf_s function
+- formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 77f03f71842dda7f56ff81b8cd3e369b21d110e9
+ms.lasthandoff: 02/24/2017
 
-Schreiben von formatierter Ausgabe mithilfe eines Zeigers, der auf eine Liste von Argumenten zeigt.  Diese Versionen von [vsnprintf, \_vsnprintf, \_vsnprintf\_l, \_vsnwprintf, \_vsnwprintf\_l](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) enthalten Sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
+Schreiben von formatierter Ausgabe mithilfe eines Zeigers, der auf eine Liste von Argumenten zeigt. Dies sind Versionen von [vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) mit Sicherheitsverbesserungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int vsnprintf_s(  
@@ -115,15 +131,15 @@ int _vsnwprintf_s(
 ); // C++ only  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `buffer`  
  Speicherort für die Ausgabe.  
   
  `sizeOfBuffer`  
- Die `buffer`\-Größe für die Ausgabe als Zeichenanzahl.  
+ Die `buffer`-Größe für die Ausgabe als Zeichenanzahl.  
   
  `count`  
- Die maximale Anzahl von zu schreibenden Zeichen \(ohne das abschließende Nullzeichen\) oder [\_TRUNCATE](../../c-runtime-library/truncate.md).  
+ Die maximale Anzahl von zu schreibenden Zeichen (ohne das abschließende Zeichen NULL) oder [_TRUNCATE](../../c-runtime-library/truncate.md).  
   
  `format`  
  Formatangabe.  
@@ -136,60 +152,60 @@ int _vsnwprintf_s(
   
  Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Rückgabewert  
- `vsnprintf_s`,`_vsnprintf_s`  und `_vsnwprintf_s`  geben die Anzahl der geschriebenen Zeichen, ohne das abschließende NULL\-Zeichen oder einem negativen Wert zurück, wenn ein Ausgabefehler auftritt.  `vsnprintf_s` ist identisch mit `_vsnprintf_s`.  `vsnprintf_s` ist zwecks Kompatibilität mit dem ANSI\-Standard enthalten.  `_vnsprintf` wird aus Gründen der Abwärtskompatibilität beibehalten.  
+## <a name="return-value"></a>Rückgabewert  
+ `vsnprintf_s`,`_vsnprintf_s` und `_vsnwprintf_s` geben die Anzahl der geschriebenen Zeichen ohne das abschließende Zeichen NULL zurück, oder einen negativen Wert, wenn ein Ausgabefehler auftritt. `vsnprintf_s` ist identisch mit `_vsnprintf_s`. `vsnprintf_s` ist zwecks Kompatibilität mit dem ANSI-Standard enthalten. `_vnsprintf` wird aus Gründen der Abwärtskompatibilität beibehalten.  
   
- Wenn der Speicher, der zum Speichern der Daten und eines abschließenden Nullzeichens erforderlich ist, `sizeOfBuffer` überschreitet, wird wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben der Handler für ungültige Parameter aufgerufen, sofern `count` nicht [\_TRUNCATE](../../c-runtime-library/truncate.md) entspricht. In diesem Fall wird der Anteil der Zeichenfolge geschrieben, der in `buffer` passt, und es wird "– 1" zurückgegeben.  Wenn die Ausführung nach Aufruf des Handlers für ungültige Parameter fortgesetzt wird, legen diese Funktionen `buffer` auf eine leere Zeichenfolge und `errno` auf `ERANGE` fest und geben "– 1" zurück.  
+ Wenn der Speicher, der zum Speichern der Daten und eines abschließenden Zeichens NULL erforderlich ist, `sizeOfBuffer` überschreitet, wird wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben der Handler für ungültige Parameter aufgerufen, sofern `count` nicht [_TRUNCATE](../../c-runtime-library/truncate.md) entspricht. In diesem Fall wird der Anteil der Zeichenfolge geschrieben, der in `buffer` passt, und es wird „-1“ zurückgegeben. Wenn die Ausführung nach Aufruf des Handlers für ungültige Parameter fortgesetzt wird, legen diese Funktionen `buffer` auf eine leere Zeichenfolge und `errno` auf `ERANGE` fest und geben "–&1;" zurück.  
   
- Wenn `buffer` oder `format` ein `NULL`\-Zeiger ist oder wenn `count` kleiner oder gleich 0 ist, wird der Handler für ungültige Parameter aufgerufen.  Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben – 1 zurück.  
+ Wenn `buffer` oder `format` ein `NULL`-Zeiger ist oder wenn `count` kleiner oder gleich&0; ist, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben -1 zurück.  
   
-### Fehlerbedingungen  
+### <a name="error-conditions"></a>Fehlerbedingungen  
   
-|`Condition`|Return|`errno`|  
+|`Condition`|Zurück|`errno`|  
 |-----------------|------------|-------------|  
-|`buffer` ist  `NULL`.|\-1|`EINVAL`|  
-|`format` ist  `NULL`.|\-1|`EINVAL`|  
-|`count` \<\= 0|\-1|`EINVAL`|  
-|`sizeOfBuffer` zu klein \(und `count` \!\= `_TRUNCATE`\)|"– 1" \(und `buffer` wird auf eine leere Zeichenfolge festgelegt\)|`ERANGE`|  
+|`buffer` ist gleich `NULL`.|-1|`EINVAL`|  
+|`format` ist gleich `NULL`.|-1|`EINVAL`|  
+|`count` <= 0|-1|`EINVAL`|  
+|`sizeOfBuffer` zu klein (und `count` != `_TRUNCATE`)|"–&1;" (und `buffer` wird auf eine leere Zeichenfolge festgelegt)|`ERANGE`|  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt dann bis zu `count` Zeichen der angegebenen Daten in den Arbeitsspeicher, auf den `buffer` verweist, und fügt ein abschließendes Nullzeichen an.  
   
- Wenn `count`[\_TRUNCATE](../../c-runtime-library/truncate.md) ist, schreiben diese Funktionen den Anteil der Zeichenfolge, der in `buffer` passt, wobei Platz für das abschließende Nullzeichen gelassen wird.  Wenn die gesamte Zeichenfolge \(mit dem abschließenden Nullzeichen\) in `buffer` passt, geben diese Funktionen die Anzahl der geschriebenen Zeichen zurück \(ohne das abschließende Nullzeichen\). Andernfalls geben diese Funktionen "– 1" zurück, um ein Abschneiden anzugeben.  
+ Wenn `count` [_TRUNCATE](../../c-runtime-library/truncate.md) ist, schreiben diese Funktionen den Anteil der Zeichenfolge, der in `buffer` passt, wobei Platz für das abschließende Zeichen NULL gelassen wird. Wenn die gesamte Zeichenfolge (mit dem abschließenden Nullzeichen) in `buffer` passt, geben diese Funktionen die Anzahl der geschriebenen Zeichen zurück (ohne das abschließende Nullzeichen). Andernfalls geben diese Funktionen "–&1;" zurück, um ein Abschneiden anzugeben.  
   
- Die Versionen dieser Funktionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
+ Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
 > [!IMPORTANT]
->  Stellen Sie sicher, dass `format` keine benutzerdefinierte Zeichenfolge ist.  Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Stellen Sie sicher, dass `format` keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
 > [!NOTE]
 >  Um sicherzustellen, dass genügend Platz für das abschließende Nullzeichen vorhanden ist, achten Sie darauf, dass `count` kleiner als die Pufferlänge ist oder verwenden Sie `_TRUNCATE`.  
   
- In C\+\+ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen \(wodurch kein Größenargument mehr angegeben werden muss\), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vsntprintf_s`|`_vsnprintf_s`|`_vsnprintf_s`|`_vsnwprintf_s`|  
 |`_vsntprintf_s_l`|`_vsnprintf_s_l`|`_vsnprintf_s_l`|`_vsnwprintf_s_l`|  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|Optionale Header|  
-|-------------|---------------------------|----------------------|  
-|`vsnprintf_s`|\<stdio.h\> und \<stdarg.h\>|\<varargs.h\>\*|  
-|`_vsnprintf_s`, `_vsnprintf_s_l`|\<stdio.h\> und \<stdarg.h\>|\<varargs.h\>\*|  
-|`_vsnwprintf_s`, `_vsnwprintf_s_l`|\<stdio.h\> oder \<wchar.h\> und \<stdarg.h\>|\<varargs.h\>\*|  
+|-------------|---------------------|----------------------|  
+|`vsnprintf_s`|\<stdio.h> und \<stdarg.h>|\<varargs.h>*|  
+|`_vsnprintf_s`, `_vsnprintf_s_l`|\<stdio.h> und \<stdarg.h>|\<varargs.h>*|  
+|`_vsnwprintf_s`, `_vsnwprintf_s_l`|\<stdio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|  
   
  \* Benötigt für die Kompatibilität mit UNIX V.  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_vsnprintf_s.cpp  
@@ -204,7 +220,8 @@ void FormatOutput(LPCSTR formatstring, ...)
    va_list args;  
    va_start(args, formatstring);  
    nSize = vsnprintf_s( buff, _countof(buff), _TRUNCATE, formatstring, args);  
-   printf("nSize: %d, buff: %s\n", nSize, buff);  
+   printf("nSize: %d, buff: %s\n", nSize, buff); 
+   va_end(args); 
 }  
   
 int main() {  
@@ -214,13 +231,16 @@ int main() {
 }  
 ```  
   
-  **nSize: 8, buff: Hi there**  
-**nSize: 9, buff: Hi there\!**  
-**nSize: \-1, buff: Hi there\!**   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [vprintf\-Funktionen](../../c-runtime-library/vprintf-functions.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+```Output  
+nSize: 8, buff: Hi there  
+nSize: 9, buff: Hi there!  
+nSize: -1, buff: Hi there!  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stream I/O (Stream-E/A)](../../c-runtime-library/stream-i-o.md)   
+ [vprintf Functions (vprintf-Funktionen)](../../c-runtime-library/vprintf-functions.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

@@ -1,56 +1,76 @@
 ---
-title: "Is_trivially_constructible-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "is_trivially_constructible"
-  - "std.is_trivially_constructible"
-  - "std::is_trivially_constructible"
-  - "type_traits/std::is_trivially_constructible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_trivially_constructible"
+title: is_trivially_constructible-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- is_trivially_constructible
+- std.is_trivially_constructible
+- std::is_trivially_constructible
+- type_traits/std::is_trivially_constructible
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_trivially_constructible
 ms.assetid: 3fa918c1-e66f-4d0e-a11b-be1fb2c02e7b
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Is_trivially_constructible-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4acc8f686d918391966949134a5c2b3c1a0a41a5
+ms.lasthandoff: 02/24/2017
 
-Testet, ob ein Typ im Grunde erstellbaren bei die angegebenen Argumenttypen verwendet werden.  
+---
+# <a name="istriviallyconstructible-class"></a>Is_trivially_constructible-Klasse
+Testet, ob ein Typ trivial konstruierbar ist, wenn die angegebenen Argumenttypen verwendet werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```
 template <class T, class... Args>  
-    struct is_trivially_constructible;  
+struct is_trivially_constructible;
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
  Der abzufragende Typ.  
   
  `Args`  
- Die Argumenttypen entsprechend in einem Konstruktor einer `T`.  
+ Die Argumenttypen, mit denen eine Übereinstimmung im Konstruktor von `T` gefunden werden soll.  
   
-## Hinweise  
- Eine Instanz des Typs Prädikat enthält true, wenn der Typ `T` ist im Grunde erstellbaren mit den Argumenttypen in `Args`, andernfalls enthält er false. Typ `T` ist im Grunde erstellbaren Wenn die Definition der Variablen `T t(std::declval<Args>()...);` wohlgeformt ist, und ist bekannt, dass keine nicht trivialen Vorgänge aufrufen. Beide `T` und alle Typen in `Args` vollständige Typen sein `void`, oder Arrays von unbekannten gebunden.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist TRUE, wenn der Typ `T` durch die Verwendung der Argumenttypen von `Args` trivial konstruierbar ist; andernfalls ist sie FALSE. Typ `T` ist trivial konstruierbar, wenn die Variablendefinition `T t(std::declval<Args>()...);` wohlgeformt ist, und keine nicht trivialen Operationen aufruft. Sowohl `T` als auch alle Typen in `Args` müssen vollständige Typen `void` sein oder Arrays mit unbekannter Grenze.  
   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>Siehe auch  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

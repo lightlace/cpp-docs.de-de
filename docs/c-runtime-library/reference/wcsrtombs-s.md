@@ -1,49 +1,65 @@
 ---
-title: "wcsrtombs_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcsrtombs_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcsrtombs_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zeichenfolgenkonvertierung, Breitzeichen"
-  - "wcsrtombs_s-Funktion"
-  - "Breitzeichen, Zeichenfolgen"
+title: wcsrtombs_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcsrtombs_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcsrtombs_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- string conversion, wide characters
+- wcsrtombs_s function
+- wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# wcsrtombs_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 52f3395cc878c1f051867d81ee12d0c9b3de619d
+ms.lasthandoff: 02/24/2017
 
-Konvertiert eine Zeichenfolge mit Breitzeichen zu seiner Mehrbytezeichenzeichenfolgendarstellung.  Eine Version von [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) mit werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="wcsrtombss"></a>wcsrtombs_s
+Konvertieren von Breitzeichen in die Multibyte-Zeichenfolgendarstellung. Eine Version von [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) mit Sicherheitserweiterungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t wcsrtombs_s(  
@@ -64,66 +80,66 @@ errno_t wcsrtombs_s(
 ); // C++ only  
 ```  
   
-#### Parameter  
- \[out\] `pReturnValue`  
- Die Anzahl der Zeichen konvertiert.  
+#### <a name="parameters"></a>Parameter  
+ [out] `pReturnValue`  
+ Die Anzahl von konvertierten Zeichen.  
   
- \[out\] `mbstr`  
- Die Adresse eines Puffers für Zurückhalten konvertierte Mehrbytezeichenzeichenfolge.  
+ [out] `mbstr`  
+ Die Pufferadresse für die resultierende konvertierte Multibyte-Zeichenfolge.  
   
- \[out\] `sizeInBytes`  
- Die Größe in Bytes des Puffers `mbstr`.  
+ [out] `sizeInBytes`  
+ Die Größe des `mbstr`-Puffers in Bytes.  
   
- \[in\] `wcstr`  
- Punkte die zu konvertierende Zeichenfolge mit Breitzeichen.  
+ [in] `wcstr`  
+ Zeigt auf die zu konvertierende Breitzeichenfolge.  
   
- \[in\] `count`  
- Die maximale Anzahl der im Puffer `mbstr` gespeichert werden, Bytes oder [\_TRUNCATE](../../c-runtime-library/truncate.md).  
+ [in] `count`  
+ Die maximale Anzahl der Bytes, die im `mbstr`-Puffer gespeichert werden sollen, oder [_TRUNCATE](../../c-runtime-library/truncate.md).  
   
- \[in\] `mbstate`  
- Ein Zeiger auf ein `mbstate_t` Konvertierungszustandsobjekt.  
+ [in] `mbstate`  
+ Ein Zeiger auf ein `mbstate_t`-Konvertierungszustandsobjekt.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Null, wenn erfolgreich, Fehlercode bei Fehler.  
   
-|Fehlerstatus|Rückgabewert und `errno`|  
-|------------------|------------------------------|  
-|`mbstr` ist `NULL` und `sizeInBytes` \> 0|`EINVAL`|  
-|`wcstr` ist `NULL`|`EINVAL`|  
-|Der Zielpuffer ist zu klein, die konvertierte Zeichenfolge zu enthalten \(es sei denn, `count` ; `_TRUNCATE` ist siehe Hinweise\) unten|`ERANGE`|  
+|Fehlerbedingung|Rückgabewert und `errno`|  
+|---------------------|------------------------------|  
+|`mbstr` ist gleich `NULL` und `sizeInBytes` > 0|`EINVAL`|  
+|`wcstr` ist gleich `NULL`.|`EINVAL`|  
+|Der Zielpuffer ist für die konvertierte Zeichenfolge zu klein (es sei denn, `count` ist gleich `_TRUNCATE`; siehe Abschnitt „Hinweise“)|`ERANGE`|  
   
- Wenn diese Bedingungen auftritt, wird die ungültige Parameterausnahme aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren, gibt die Funktion einen Fehlercode zurück und legt `errno` fest, wie in der Tabelle angegeben.  
+ Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die Ausführung fortgesetzt werden kann, gibt die Funktion einen Fehlercode zurück und legt `errno` wie in der Tabelle angegeben fest.  
   
-## Hinweise  
- Die `wcsrtombs_s`\-Funktion konvertiert eine Zeichenfolge mit Breitzeichen, die von `wcstr` in die Mehrbytezeichen dargestellt werden, die im Puffer gespeichert werden, auf den `mbstr`, mit dem Konvertierungszustandes gezeigt wird, die in `mbstate` enthalten ist.  Die Konvertierung wird für jedes Zeichen fortgesetzt, bis eine dieser Bedingungen erfüllt ist:  
+## <a name="remarks"></a>Hinweise  
+ Die `wcsrtombs_s`-Funktion konvertiert eine Zeichenfolge mit Breitzeichen, auf die indirekt von `wcstr` gezeigt wird, in im Puffer gespeicherte Multibytezeichen, auf die von `mbstr` gezeigt wird, und verwendet dafür den in `mbstate` enthaltenen Konvertierungsstatus. Die Konvertierung wird für jedes Zeichen fortgesetzt, bis eine der folgenden Bedingungen eintritt:  
   
--   Ein NULL\-Makro Breitzeichen auftritt  
+-   Ein Breitzeichen NULL wird erkannt.  
   
--   Bei einem Breitzeichen, die nicht konvertiert werden kann, wird ausgeführt  
+-   Ein Breitzeichen, das nicht konvertiert werden kann, wird erkannt.  
   
--   Die Anzahl der Bytes, die im `mbstr` Puffer gespeichert werden, entspricht `count`.  
+-   Die Anzahl der Bytes, die im `mbstr`-Puffer gespeichert sind, ist gleich `count`.  
   
- Die Zielzeichenfolge ist immer auf NULL enden \(selbst im Falle eines Fehlers.\)  
+ Die Zielzeichenfolge endet immer mit NULL, selbst bei einem Fehler.  
   
- Wenn `count` den speziellen Wert [\_TRUNCATE](../../c-runtime-library/truncate.md) ist, konvertiert `wcsrtombs_s` so weit der Zeichenfolge, wie in den Zielpuffer passt, wobei Platz für einen Nullterminator weiterhin beibehalten.  
+ Wenn `count` der spezielle Wert [_TRUNCATE](../../c-runtime-library/truncate.md) ist, konvertiert `wcsrtombs_s` einen so großen Teil der Zeichenfolge wie in den Zielpuffer passt, während weiterhin Platz für ein NULL-Abschlusszeichen bleibt.  
   
- Wenn `wcsrtombs_s` erfolgreich die Quellzeichenfolge konvertiert, wird die Größe in Bytes der konvertierten Zeichenfolge, einschließlich das NULL\-Zeichen, in `*`\(ein `pReturnValue` bereit gestelltes `pReturnValue` nicht `NULL` ist\).  Dies tritt auf, `mbstr`, wenn das Argument `NULL` und bietet eine Möglichkeit, die erforderliche Puffergröße zu ermitteln.  Beachten Sie, dass, wenn `mbstr``NULL` ist, die `count` ignoriert wird.  
+ Wenn `wcsrtombs_s` die Quellzeichenfolge erfolgreich konvertiert, wird die Größe der konvertierten Zeichenfolge in Bytes und das NULL-Abschlusszeichen in `*``pReturnValue` geschrieben, vorausgesetzt, `pReturnValue` ist ungleich `NULL`. Dieser Fehler tritt auch dann auf, wenn das `mbstr`-Argument `NULL` ist und es eine Methode zur Bestimmung der erforderlichen Puffergröße bietet. Bitte beachten Sie, dass `count` ignoriert wird, wenn `mbstr` gleich `NULL` ist.  
   
- Wenn `wcsrtombs_s` ein Breitzeichen trifft, das er nicht auf einen Mehrbytezeichen konvertieren kann, wird \-1 in `*``pReturnValue`, legt den Zielpuffer auf eine leere Zeichenfolge fest, wird `errno` auf `EILSEQ` festgelegt und `EILSEQ` zurückgegeben.  
+ Wenn `wcsrtombs_s` ein Breitzeichen erkennt, das nicht in ein Multibytezeichen konvertiert werden kann, wird -1 in `*``pReturnValue` geschrieben, der Zielpuffer auf eine leere Zeichenfolge festgelegt, `errno` auf `EILSEQ` festgelegt und `EILSEQ` zurückgegeben.  
   
- Wenn die Sequenzen, die von `wcstr` und `mbstr` Überlappung, das Verhalten von `wcsrtombs_s` dargestellt werden, die definiert.  `wcsrtombs_s` wird durch die LC\_TYPE\-Kategorie des aktuellen Gebietsschemas beeinflusst.  
+ Wenn die Sequenzen, auf die von `wcstr` und `mbstr` verwiesen wird, überlappen, ist das Verhalten von `wcsrtombs_s` nicht definiert. `wcsrtombs_s` wird von der LC_TYPE-Kategorie des aktuellen Gebietsschemas beeinflusst.  
   
 > [!IMPORTANT]
->  Stellen Sie sicher, dass `wcstr` und `mbstr` nicht überschneiden und dass `count` richtig die Anzahl der Breitzeichen an verschiedenen mitgeteilt.  
+>  Stellen Sie sicher, dass `wcstr` und `mbstr` nicht überlappen und dass `count` die Anzahl zu konvertierender Breitzeichen korrekt darstellt.  
   
- Die `wcsrtombs_s`\-Funktion unterscheidet sich von [wcstombs\_s, \_wcstombs\_s\_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md) durch ihre Neustartfähigkeit.  Der Konvertierungszustand wird in `mbstate` für nachfolgende Aufrufe an den gleichen oder anderen restartable Funktionen gespeichert.  Ergebnisse werden undefiniert, wenn Sie die Verwendung von restartable und nonrestartable Funktionen kombiniert.  Beispielsweise würde eine Anwendung `wcsrlen` statt `wcslen` verwenden, wenn ein nachfolgender Aufruf `wcsrtombs_s` statt `wcstombs_s.` verwendet wurden  
+ Die Funktion `wcsrtombs_s` unterscheidet sich von [wcstombs_s, _wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md) durch die Neustartmöglichkeit. Der Konvertierungszustand wird für nachfolgende Aufrufe der gleichen oder anderer Funktionen, die neu gestartet werden können, in `mbstate` gespeichert. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert. Beispiel: Eine Anwendung würde `wcsrlen` anstelle von `wcslen` verwenden, wenn ein nachfolgender Aufruf von `wcsrtombs_s` anstelle von `wcstombs_s.` verwendet würde.  
   
- In C\+\+ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen \(wodurch kein Größenargument mehr angegeben werden muss\), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
   
-## Ausnahmen  
- Die Funktion `wcsrtombs_s` ist multithreadsicher, solange keine Funktion im aktuellen Thread `setlocale` aufruft, wenn diese Funktion ausführt und `mbstate` NULL ist.  
+## <a name="exceptions"></a>Ausnahmen  
+ Die `wcsrtombs_s`-Funktion ist multithreadsicher, solange keine Funktion im aktuellen Thread `setlocale` aufruft, während diese Funktion ausgeführt wird und `mbstate` NULL ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_wcsrtombs_s.cpp  
@@ -166,22 +182,25 @@ void main()
 }  
 ```  
   
-  **Die Zeichenfolge wurde erfolgreich konvertiert.**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+The string was successfully converted.  
+```  
   
-## Anforderungen  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`wcsrtombs_s`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`wcsrtombs_s`|\<wchar.h>|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [Interpretation von Mehrbytezeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)   
- [wcrtomb\_s](../../c-runtime-library/reference/wcrtomb-s.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [wcstombs, \_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [mbsinit](../../c-runtime-library/reference/mbsinit.md)

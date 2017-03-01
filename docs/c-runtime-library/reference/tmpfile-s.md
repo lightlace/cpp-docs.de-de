@@ -1,49 +1,66 @@
 ---
-title: "tmpfile_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "tmpfile_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "tmpfile_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Temporäre Dateien"
-  - "tmpfile_s-Funktion"
-  - "Temporäre Dateien, Erstellen"
+title: tmpfile_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- tmpfile_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- tmpfile_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- temporary files
+- tmpfile_s function
+- temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# tmpfile_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 04ccc149a214ccad7007ef140e87a5c20986b343
+ms.lasthandoff: 02/24/2017
 
-Erstellt eine temporäre Datei.  Es ist eine Version von [tmpfile](../../c-runtime-library/reference/tmpfile.md) mit werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="tmpfiles"></a>tmpfile_s
+Erstellt eine temporäre Datei. Dies ist eine Version von [tmpfile](../../c-runtime-library/reference/tmpfile.md) mit Sicherheitserweiterungen wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t tmpfile_s(  
@@ -51,40 +68,40 @@ errno_t tmpfile_s(
 );  
 ```  
   
-#### Parameter  
- \[out\] `pFilePtr`  
+#### <a name="parameters"></a>Parameter  
+ [out] `pFilePtr`  
  Die Adresse eines Zeigers, um die Adresse des generierten Zeigers in einen Stream zu speichern.  
   
-## Rückgabewert  
- Gibt bei Erfolg 0 \(null\) zurück und einen Fehlercode, wenn ein Fehler auftritt.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt bei Erfolg 0 (null) zurück und einen Fehlercode, wenn ein Fehler auftritt.  
   
-### Fehlerbedingungen  
+### <a name="error-conditions"></a>Fehlerbedingungen  
   
-|`pFilePtr`|**Rückgabewert**|**Contents of**  `pFilePtr`|  
+|`pFilePtr`|**Rückgabewert**|**Inhalte von** `pFilePtr`|  
 |----------------|----------------------|---------------------------------|  
 |`NULL`|`EINVAL`|nicht geändert|  
   
- Wenn der obige Parametervalidierungsfehler auftritt, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren, wird `errno` auf `EINVAL` festgelegt und der Rückgabewert ist `EINVAL`.  
+ Wenn der obengenannte Parametervalidierungsfehler auftritt, wird der ungültige Parameterhandler wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `errno` zu `EINVAL`, und der Rückgabewert ist `EINVAL`.  
   
-## Hinweise  
- Die `tmpfile_s`\-Funktion erstellt eine temporäre Datei und fügt einen Zeiger auf diesem Stream in das `pFilePtr` ein Argument.  Die temporäre Datei wird im Stammverzeichnis erstellt.  Um keine temporäre Datei in einem Verzeichnis als dem Stammverzeichnis zu erstellen, verwenden Sie [tmpnam\_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md) oder [tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) in Verbindung mit [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `tmpfile_s` erstellt eine temporäre Datei und versieht diesen Stream im Argument `pFilePtr` mit einem Zeiger. Die temporäre Datei wird im Stammverzeichnis erstellt. Verwenden Sie zum Erstellen einer temporären Datei in einem anderen Verzeichnis als dem Stammverzeichnis [tmpnam_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md) oder [tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) in Verbindung mit [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
   
- Wenn die Datei nicht geöffnet werden kann, wird `tmpfile_s` von `NULL` in `pFilePtr`\-Parameter.  Diese temporäre Datei wird automatisch gelöscht, wenn die Datei wird geschlossen, wenn das Programm beendet wird normalerweise oder `_rmtmp` aufgerufen und wird, dass das aktuelle Arbeitsverzeichnis nicht ändert.  Die temporäre Datei ist im Modus `w+b` \(unärer Lese\-\/Schreibzugriff\) geöffnet.  
+ Wenn die Datei nicht geöffnet werden kann, schreibt `tmpfile_s` `NULL` in den Parameter `pFilePtr`. Diese temporäre Datei wird automatisch gelöscht, wenn die Datei geschlossen wird, wenn das Programm normal beendet wird oder wenn `_rmtmp` aufgerufen wird, vorausgesetzt, dass sich das aktuelle Arbeitsverzeichnis nicht ändert. Die temporäre Datei wird im (binären Lese-/Schreib-) Modus `w+b` geöffnet.  
   
- Fehler kann, wenn Sie versuchen, mehr als `TMP_MAX_S` vorkommen \(siehe STDIO.H\) Aufrufe mit `tmpfile_s.`  
+ Ein Fehler kann auftreten, wenn Sie mehr als `TMP_MAX_S` (siehe STDIO.H) Aufrufe mit `tmpfile_s.` versuchen.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`tmpfile_s`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`tmpfile_s`|\<stdio.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 > [!NOTE]
->  Dieses Beispiel erfordert Administratorrechte für die Ausführung unter Windows Vista.  
+>  Für dieses Beispiel benötigen Sie Administratorrechte, um es unter Windows Vista auszuführen.  
   
 ```  
 // crt_tmpfile_s.c  
@@ -116,14 +133,17 @@ int main( void )
 }  
 ```  
   
-  **Temporäre Datei 1 erstellt wurde**  
-**Temporäre Datei 2 erstellt wurde**  
-**Temporäre Datei 3 erstellt wurde**  
-**3 temporäre Dateien gelöscht**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Temporary file 1 was created  
+Temporary file 2 was created  
+Temporary file 3 was created  
+3 temporary files deleted  
+```  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [\_rmtmp](../../c-runtime-library/reference/rmtmp.md)   
- [\_tempnam, \_wtempnam, tmpnam, \_wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [_rmtmp](../../c-runtime-library/reference/rmtmp.md)   
+ [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)

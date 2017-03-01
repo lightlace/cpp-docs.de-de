@@ -1,57 +1,73 @@
 ---
-title: "_mktemp_s, _wmktemp_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mktemp_s"
-  - "_wmktemp_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wmktemp_s"
-  - "mktemp_s"
-  - "_mktemp_s"
-  - "_wmktemp_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mktemp_s-Funktion"
-  - "_tmktemp_s-Funktion"
-  - "_wmktemp_s-Funktion"
-  - "Dateien [C++], Temporär"
-  - "mktemp_s-Funktion"
-  - "Temporäre Dateien [C++]"
-  - "tmktemp_s-Funktion"
-  - "wmktemp_s-Funktion"
+title: _mktemp_s, _wmktemp_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mktemp_s
+- _wmktemp_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- wmktemp_s
+- mktemp_s
+- _mktemp_s
+- _wmktemp_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tmktemp_s function
+- mktemp_s function
+- _wmktemp_s function
+- _mktemp_s function
+- files [C++], temporary
+- tmktemp_s function
+- wmktemp_s function
+- temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _mktemp_s, _wmktemp_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0497919857206342c75e998c7ee714f89bc066e5
+ms.lasthandoff: 02/24/2017
 
-Erstellt einen eindeutigen Dateinamen.  Diese Versionen von [\_mktemp, \_wmktemp](../../c-runtime-library/reference/mktemp-wmktemp.md) enthalten Sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
+Erstellt einen eindeutigen Dateinamen. Dabei handelt es sich um Versionen von [_mktemp, _wmktem](../../c-runtime-library/reference/mktemp-wmktemp.md) mit den unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschriebenen Erweiterungen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t _mktemp_s(  
@@ -72,75 +88,75 @@ errno_t _wmktemp_s(
 ); // C++ only  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `template`  
- Dateinamenmuster.  
+ Muster des Dateinamens.  
   
  `sizeInChars`  
- Größe des Puffers in den Einzelbytezeichen in `_mktemp_s`; Breitzeichen in `_wmktemp_s`, einschließlich das NULL\-Zeichen.  
+ Größe des Puffers in `_mktemp_s` in Einzelbytezeichen; Breitzeichen in `_wmktemp_s`, einschließlich NULL-Terminator.  
   
-## Rückgabewert  
- NULL zurückgeben beider Funktionen bei Erfolg; ein Fehlercode auf Fehler.  
+## <a name="return-value"></a>Rückgabewert  
+ Beide Funktionen geben bei Erfolg null und bei Fehlern einen Fehlercode zurück.  
   
-### Fehlerbedingungen  
+### <a name="error-conditions"></a>Fehlerbedingungen  
   
-|`template`|`sizeInChars`|**Rückgabewert**|**neuen Wert in der Vorlage**|  
-|----------------|-------------------|----------------------|-----------------------------------|  
-|`NULL`|any|`EINVAL`|`NULL`|  
-|Falsches Format \(siehe `Remarks`\-Abschnitt zur ordnungsgemäßen Format\)|any|`EINVAL`|leere Zeichenfolge|  
-|any|\<\= Zahl von X|`EINVAL`|leere Zeichenfolge|  
+|`template`|`sizeInChars`|**Rückgabewert**|**Neuer Wert in Vorlage**|  
+|----------------|-------------------|----------------------|-------------------------------|  
+|`NULL`|alle|`EINVAL`|`NULL`|  
+|Ungültiges Format (für gültiges Format siehe Abschnitt `Remarks`)|alle|`EINVAL`|Leere Zeichenfolge|  
+|any|<= Anzahl von X|`EINVAL`|Leere Zeichenfolge|  
   
- Wenn eine der oben genannten Fehlerzustände, tritt der ungültige Parameterhandler wird aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren, wird `errno` auf `EINVAL` festgelegt und die Funktionen gibt `EINVAL` zurück.  
+ Wenn eine der genannten Fehlerbedingungen auftritt, wird ein Handler für ungültige Parameter aufgerufen (siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md)). Wird die weitere Ausführung zugelassen, wird `errno` auf `EINVAL` gesetzt, und die Funktionen geben `EINVAL` zurück.  
   
-## Hinweise  
- Die Funktion `_mktemp_s` erstellt einen eindeutigen Dateinamen, indem das Argument `template`, sodass ändert, nachdem der Aufruf, der `template` Zeiger auf eine Zeichenfolge zeigt, die den neuen Dateinamen enthält.  `_mktemp_s` behandelt automatisch Mehrbyte\-Zeichenfolgen\-Argumente entsprechend und derzeit erkennt Mehrbytezeichensequenzen entsprechend der Mehrbyte\-Codepage vom Laufzeitsystem.  `_wmktemp_s` ist eine Breitzeichen\-Version von `_mktemp_s`; das Argument von `_wmktemp_s` ist eine Zeichenfolge mit Breitzeichen.  `_wmktemp_s` und `_mktemp_s` identisch verhalten sich andernfalls, dass `_wmktemp_s` nicht behandelt Mehrbyte\-Zeichenfolgen.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `_mktemp_s` vergibt einen eindeutigen Dateinamen, indem sie das Argument `template` ändert. Auf diese Weise verweist der Zeiger für `template` nach dem Aufruf auf eine Zeichenfolge mit dem neuen Dateinamen. `_mktemp_s` behandelt Multibyte-Zeichenfolgenargumente automatisch richtig. Die Erkennung von Multibyte-Zeichenfolgen erfolgt auf Grundlage der vom Laufzeitsystem zum jeweiligen Zeitpunkt verwendeten Multibyte-Codeseite. Bei `_wmktemp_s` handelt es sich um eine Breitzeichenversion von `_mktemp_s`. Das Argument von `_wmktemp_s` ist eine Breitzeichenfolge. `_wmktemp_s` und `_mktemp_s` verhalten sich ansonsten identisch. Allerdings verarbeitet `_wmktemp_s` keine Multibyte-Zeichenfolgen.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|------------------------------------------|----------------------|-------------------------|  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tmktemp_s`|`_mktemp_s`|`_mktemp_s`|`_wmktemp_s`|  
   
- Das Argument `template` hat die Form `baseXXXXXX`, wobei `base` der Teil des neuen Dateinamen ist, den Sie bereitstellen und jedes X ist ein Platzhalter für ein Zeichen, das von `_mktemp_s` angegeben wird.  Jedes Platzhalterzeichen in `template` muss einem Großbuchstaben X. sein.  `_mktemp_s` verwaltet `base` bei und ersetzt das erste schleppende X durch ein alphabetisches Zeichen.  `_mktemp_s` ersetzt folgenden nachfolgenden Xs durch einen fünfstelligen Wert; Dieser Wert ist eine eindeutige Zahl, die den aufrufenden Prozesses oder in Multithreadprogrammen, der aufrufende Thread gekennzeichnet.  
+ Das Argument `template` hat das Format `baseXXXXXX`, wobei es sich bei `base` um den von Ihnen angegebenen Teil des neuen Dateinamens und bei den einzelnen X um Platzhalter für ein von `_mktemp_s` bereitgestelltes Zeichen handelt. Die einzelnen Platzhalterzeichen in `template` müssen als X in Großschreibung angegeben sein. `_mktemp_s` behält `base` bei und ersetzt das erste nachgestellte X mit einem alphabetischen Zeichen. `_mktemp_s` ersetzt das nächste nachgestellte X mit einem fünfstelligen Wert. Bei diesem Wert handelt es sich um eine eindeutige Nummer, die zur Identifizierung des aufrufenden Prozesses bzw. in Multithreadprogrammen des aufrufenden Threads dient.  
   
- Jeder erfolgreichen Aufruf von `_mktemp_s` ändert `template`.  In jedem nachfolgenden Aufrufs vom selben Prozess oder der Thread mit demselben `template`\-Argument, `_mktemp_s` Überprüfungen für Dateinamen, dass Abgleichungsnamen durch `_mktemp_s` in vorherigen Aufrufen zurückkehrten.  Wenn keine Datei für einen angegebenen Namen vorhanden ist, die `_mktemp_s` zurückgibt, benennen.  Wenn Dateien für alle vorher zurückgegebenen Namen vorhanden, erstellt `_mktemp_s` einen neuen Namen, indem das alphabetisches Zeichen, das er im zuvor zurückgegebenen Namen mit dem nächsten verfügbaren Kleinbuchstaben verwendete, in der Reihenfolge, von "a" bis "z".  Wenn `base` ist:  
+ Bei jedem erfolgreichen Aufruf von `_mktemp_s` wird `template` geändert. Bei jedem darauffolgenden Aufruf aus demselben Prozess oder Thread mit demselben Argument `template` sucht `_mktemp_s` nach Dateinamen, die den von `_mktemp_s` im Rahmen vorheriger Aufrufe zurückgegebenen Namen entsprechen. Wenn für einen bestimmten Namen keine Datei vorhanden ist, gibt `_mktemp_s` diesen Namen zurück. Wenn für alle zuvor zurückgegebenen Namen Dateien vorhanden sind, erstellt `_mktemp_s` einen neuen Namen, indem das im zuvor zurückgegebenen Namen enthaltene alphabetische Zeichen durch den nächsten verfügbaren Kleinbuchstaben (in absteigender Reihenfolge von „a“ bis „z“) ersetzt wird. Ist `base` beispielsweise  
   
 ```  
 fn  
 ```  
   
- und der fünfstellige Wert, der von `_mktemp_s` angegeben wird, ist der zurückgegebene 12345, Vorname ist:  
+ und der von `_mktemp_s` bereitgestellte fünfstellige Wert 12345, lautet der erste zurückgegebene Name:  
   
 ```  
 fna12345  
 ```  
   
- Wenn dieser Name verwendet wird, um FNA12345 Datei erstellen und diese Datei vorhanden ist, ist der folgende Name, der in einem Aufruf aus den gleichen Prozess oder Thread mit gleichem `base` für `template` zurückgegeben wird:  
+ Wenn dieser Name verwendet wird, um die Datei FNA12345 zu erstellen, und diese Datei noch vorhanden ist, lautet der nächste bei einem Aufruf aus demselben Prozess oder Thread mit demselben `base` für `template` zurückgegebene Name:  
   
 ```  
 fnb12345  
 ```  
   
- Wenn FNA12345 nicht vorhanden ist, ist der zurückgegebene folgende Namen erneut:  
+ Ist FNA12345 nicht vorhanden, lautet der nächste zurückgegebene Name erneut:  
   
 ```  
 fna12345  
 ```  
   
- `_mktemp_s` kann maximal 26 eindeutige Dateinamen für eine bestimmte Kombination von Basis\- und Vorlagenwerten erstellen.  Daher ist FNZ12345 der letzte eindeutige Dateiname `_mktemp_s` kann für `base` erstellen und `template` beschränkt wird in diesem Beispiel.  
+ `_mktemp_s` kann bis zu 26 eindeutige Dateinamen für eine beliebige Kombination aus Basis- und Vorlagenwerten erstellen. Daher ist FNZ12345 der letzte eindeutige Dateiname, den `_mktemp_s` für die in diesem Beispiel verwendeten Werte für `base` und `template` vergeben kann.  
   
- In C\+\+ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen \(wodurch kein Größenargument mehr angegeben werden muss\), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_mktemp_s`|\<io.h\>|  
-|`_wmktemp_s`|\<io.h oder\> wchar.h \<\>|  
+|-------------|---------------------|  
+|`_mktemp_s`|\<io.h>|  
+|`_wmktemp_s`|\<io.h> oder \<wchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_mktemp_s.cpp  
@@ -184,7 +200,7 @@ int main()
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 Unique filename is fna03188  
@@ -194,15 +210,15 @@ Unique filename is fnd03188
 Unique filename is fne03188  
 ```  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dateibehandlung](../../c-runtime-library/file-handling.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [\_getpid](../../c-runtime-library/reference/getpid.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [\_tempnam, \_wtempnam, tmpnam, \_wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   
- [tmpfile\_s](../../c-runtime-library/reference/tmpfile-s.md)
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [_getpid](../../c-runtime-library/reference/getpid.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   
+ [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)

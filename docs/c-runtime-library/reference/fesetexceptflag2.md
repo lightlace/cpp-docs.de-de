@@ -1,49 +1,65 @@
 ---
-title: "fesetexceptflag2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fesetexceptflag"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fesetexceptflag"
-  - "fenv/fesetexceptflag"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Fesetexceptflag-Funktion"
+title: fesetexceptflag2 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fesetexceptflag
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fesetexceptflag
+- fenv/fesetexceptflag
+dev_langs:
+- C++
+helpviewer_keywords:
+- fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# fesetexceptflag
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e03e1a12b27eb5401a31f7096ae46d8a779d4a70
+ms.lasthandoff: 02/24/2017
 
-Legt die angegebenen Gleitkomma\-Status\-Flags in der aktuellen Gleitkomma\-Umgebung.  
+---
+# <a name="fesetexceptflag"></a>fesetexceptflag
+Legt die angegebenen Gleitkomma-Statusflags in der aktuellen Gleitkommaumgebung fest  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int fesetexceptflag(  
@@ -53,40 +69,40 @@ int fesetexceptflag(
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `pstatus`  
- Zeiger auf ein  `fexcept_t` Objekt, das die Werte der Ausnahme Status\-Flags festgelegt werden soll. Das Objekt kann festgelegt werden, durch einen vorherigen Aufruf von [fegetexceptflag](../Topic/fegetexceptflag1.md).  
+ Zeiger auf ein `fexcept_t`-Objekt, das die Werte enthält, auf die die Ausnahmestatusflags festgelegt werden sollen. Das Objekt kann auf einen früheren Aufruf von [fegetexceptflag](http://msdn.microsoft.com/Library/5031bc1a-9834-4573-9113-160a55eb9654) festgelegt werden .  
   
  `excepts`  
- Gleitkommaausnahmen Status\-Flags festgelegt.  
+ Die festzulegenden Gleitkommaausnahme-Statusflags  
   
-## Rückgabewert  
- Wenn die angegebene Ausnahme\-Statusflags erfolgreich festgelegt sind, wird 0 zurückgegeben. Andernfalls wird einen Wert ungleich NULL zurückgegeben.  
+## <a name="return-value"></a>Rückgabewert  
+ Wenn alle angegebenen Ausnahmestatusflags erfolgreich festgelegt wurden, wird 0 zurückgegeben. Andernfalls wird ein Wert ungleich&0; (null) zurückgegeben.  
   
-## Hinweise  
- Die `fesetexceptflag` Funktion legt den Zustand des angegebenen Gleitkommaausnahme Status\-Flags `excepts` mit den entsprechenden Werten der `fexcept_t` Objekt verweist `pstatus`.  Es löst keine Ausnahmen aus. Die `pstatus` Zeiger muss einem gültigen zeigen `fexcept_t` Objekt oder nachfolgendes Verhalten ist nicht definiert. Die `fesetexceptflag` \-Funktion unterstützt diese Ausnahme Makrowerte in `excepts`, die in \< fenv.h \> definiert:  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `fesetexceptflag` legt den Zustand der von `excepts` angegebenen Gleitkommaausnahme-Statusflags auf die Werten der entsprechenden `fexcept_t`-Objekte fest, auf die `pstatus` verweist.  Es löst die Ausnahmen aber nicht aus. Der `pstatus`-Zeiger muss auf ein gültiges `fexcept_t`-Objekt zeigen. Andernfalls ist das daraus resultierende Verhalten nicht definiert. Die Funktion `fesetexceptflag` unterstützt diese, in \<fenv.h> definierten Werte der Ausnahmemakros in `excepts`:  
   
-|Ausnahme\-Makro|Beschreibung|  
-|---------------------|------------------|  
-|FE\_DIVBYZERO|Eine Singularität oder pol Fehler in einer zuvor Gleitkommaoperation; ein Unendlichkeitswert erstellt wurde.|  
-|FE\_INEXACT|Die Funktion wurde erzwungen, das gespeicherte Ergebnis einer zuvor Gleitkommaoperation gerundet.|  
-|FE\_INVALID|Domänenfehler in einer zuvor Gleitkommaoperation.|  
-|FE\_OVERFLOW|Ein Fehler aufgetreten. eine frühere Gleitkommaoperation Ergebnis war zu groß dargestellt werden soll.|  
-|FE\_UNDERFLOW|Eine frühere Gleitkommaoperation Ergebnis war zu klein für die bei voller Genauigkeit dargestellt werden; ein Denormal\-Wert wurde erstellt.|  
-|FE\_ALLEXCEPT|Der bitweise OR aller unterstützt Gleitkommaausnahmen.|  
+|Ausnahmemakro|Beschreibung|  
+|---------------------|-----------------|  
+|FE_DIVBYZERO|Eine Singularität oder ein Polstellenfehler aus einer früheren Gleitkommaoperation; ein Unendlichkeitswert wurde erstellt.|  
+|FE_INEXACT|Die Funktion wurde gezwungen, das gespeicherte Ergebnis einer früheren Gleitkommaoperation zu runden.|  
+|FE_INVALID|Ein Domänenfehler ist in einer früheren Gleitkommaoperation aufgetreten.|  
+|FE_OVERFLOW|Ein Bereichsfehler ist aufgetreten; das Ergebnis einer früheren Gleitkommaoperation war zu groß, um dargestellt zu werden.|  
+|FE_UNDERFLOW|Das Ergebnis einer früheren Gleitkommaoperation war zu klein, um ganz genau dargestellt zu werden; ein nicht normaler Wert wurde erstellt.|  
+|FE_ALLEXCEPT|Bitweiser OR-Operator oder alle unterstützten Gleitkommaausnahmen|  
   
- Die `excepts` Argument NULL ist, werden möglicherweise einer der unterstützten Gleitkommaausnahme Makros oder das bitweise oder der zwei oder mehr der Makros. Jeder andere Argumentwert wird nicht definiert.  
+ Das Argument `excepts` kann entweder null, eines der unterstützten Gleitkommaausnahme-Makros oder das bitweise OR von mindestens zwei der Makros sein. Der Effekt von jedem anderen Argumentwert ist nicht definiert.  
   
- Um diese Funktion verwenden zu können, müssen Sie wieder deaktivieren Gleitkomma Optimierungen, die Zugriff mithilfe von verhindern könnten die `#pragma fenv_access(on)` Richtlinie vor dem Aufruf. Weitere Informationen finden Sie unter [fenv\_access](../../preprocessor/fenv-access.md).  
+ Um diese Funktion zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimierungen deaktivieren, die den Zugriff mithilfe der `#pragma fenv_access(on)`-Direktive verhindern könnten. Weitere Informationen finden Sie unter [fenv_access](../../preprocessor/fenv-access.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Funktion|C\-Header|C\+\+\-Header|  
-|--------------|---------------|-------------------|  
-|`fesetexceptflag`|\<fenv.h\>|\<cfenv\>|  
+|Funktion|C-Header|C++-Header|  
+|--------------|--------------|------------------|  
+|`fesetexceptflag`|\<fenv.h>|\<cfenv>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fegetexceptflag](../../c-runtime-library/reference/fegetexceptflag2.md)

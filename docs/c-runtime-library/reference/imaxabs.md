@@ -1,47 +1,63 @@
 ---
-title: "imaxabs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "imaxabs"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "imaxabs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "imaxabs-Funktion"
+title: imaxabs | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- imaxabs
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- imaxabs
+dev_langs:
+- C++
+helpviewer_keywords:
+- imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# imaxabs
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 467f967446b0dd4976fa0fc695924a97b471a6b6
+ms.openlocfilehash: 1e721b0c0900ae476bbe4c531f265369d004ab37
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="imaxabs"></a>imaxabs
 Berechnet den absoluten Wert einer ganzen Zahl beliebiger Größe.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 intmax_t imaxabs(  
@@ -49,28 +65,28 @@ intmax_t imaxabs(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *n*  
  Ganzzahliger Wert.  
   
-## Rückgabewert  
- Die `imaxabs`\-Funktion gibt den absoluten Wert des Arguments zurück.  Es gibt keine Fehlerrückgabe.  
+## <a name="return-value"></a>Rückgabewert  
+ Die `imaxabs`-Funktion gibt den absoluten Wert des Arguments zurück. Es gibt keine Fehlerrückgabe.  
   
 > [!NOTE]
->  Da der mithilfe von `intmax_t` darstellbare Bereich von negativen ganzen Zahlen größer als der entsprechende Bereich von positiven ganzen Zahlen ist, die mithilfe dieses Typs dargestellt werden können, kann für `imaxabs` ein nicht konvertierbares Argument bereitgestellt werden.  Wenn der absolute Wert des Arguments nicht durch den Rückgabetyp dargestellt werden kann, wird das Verhalten von `imaxabs` nicht definiert.  
+>  Da der mithilfe von `intmax_t` darstellbare Bereich von negativen ganzen Zahlen größer als der entsprechende Bereich von positiven ganzen Zahlen ist, die mithilfe dieses Typs dargestellt werden können, kann für `imaxabs` ein nicht konvertierbares Argument bereitgestellt werden. Wenn der absolute Wert des Arguments nicht durch den Rückgabetyp dargestellt werden kann, wird das Verhalten von `imaxabs` nicht definiert.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`imaxabs`|\<inttypes.h\>|  
+|-------------|---------------------|  
+|`imaxabs`|\<inttypes.h>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_imaxabs.c  
@@ -90,14 +106,16 @@ int main(int argc, char *argv[])
 }  
 ```  
   
-  **Der absolute Wert von – 9223372036854775806 ist 9223372036854775806**   
-## .NET Framework-Entsprechung  
+```Output  
+The absolute value of -9223372036854775806 is 9223372036854775806  
+```  
+  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
  [System::Math::Abs](https://msdn.microsoft.com/en-us/library/system.math.abs.aspx)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [Abs, Labs, Llabs, \_abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
- [\_cabs](../../c-runtime-library/reference/cabs.md)   
- [Fabs, Fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
- [labs, llabs](../../misc/labs-llabs.md)
+ [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
+ [_cabs](../../c-runtime-library/reference/cabs.md)   
+ [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   

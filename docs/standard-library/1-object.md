@@ -1,48 +1,64 @@
 ---
-title: "_1-Objekt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1._1"
-  - "_1"
-  - "std::tr1::_1"
-  - "functional/std::tr1::_1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_1-Objekt [TR1]"
+title: _1-Objekt | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _1
+- std::_1
+- functional/std::_1
+dev_langs:
+- C++
+helpviewer_keywords:
+- _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _1-Objekt
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
+ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="1-object"></a>_1-Objekt
 Platzhalter für austauschbare Argumente.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace placeholders {  
-  extern unspecified _1, _2, ... _M  
-  } // namespace placeholders (within std)  
+    extern unspecified _1,
+    _2, ... _M  
+ } // namespace placeholders (within std)  
 ```  
   
-## Hinweise  
- Bei den Objekte `_1, _2, ... _M` handelt es sich um Platzhalter, die jeweils das erste, zweite, ..., n\-te Argument in einem Funktionsaufruf eines Objekts festlegen, das von [bind\-Funktion](../Topic/bind%20Function.md) zurückgegeben wird.  Sie verwenden `_N`, um anzugeben, wo das n\-te Argument bei Auswertung des Bindungsausdrucks eingefügt werden soll.  
+## <a name="remarks"></a>Hinweise  
+ Bei den Objekten `_1, _2, ... _M` handelt es sich um Platzhalter, die jeweils das erste, zweite, ..., n-te Argument in einem Funktionsaufruf eines Objekts festlegen, das von [bind-Funktion](../standard-library/functional-functions.md#bind_function) zurückgegeben wird. Sie verwenden `_N`, um anzugeben, wo das n-te Argument bei Auswertung des Bindungsausdrucks eingefügt werden soll.  
   
  In dieser Implementierung lautet der Wert von `M` 20.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
 // std__functional_placeholder.cpp   
@@ -80,20 +96,26 @@ int main()
   
 ```  
   
-  **1^2 \=\= 1**  
-**2^2 \=\= 4**  
-**3^2 \=\= 9**  
-**1\*2 \=\= 2**  
-**2\*2 \=\= 4**  
-**3\*2 \=\= 6**  
-**1^2 \=\= 1**  
-**2^2 \=\= 4**  
-**3^2 \=\= 9**   
-## Anforderungen  
- **Header:** \<functional\>  
+```Output  
+1^2 == 1  
+2^2 == 4  
+3^2 == 9  
+  
+1*2 == 2  
+2*2 == 4  
+3*2 == 6  
+  
+1^2 == 1  
+2^2 == 4  
+3^2 == 9  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<functional>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [bind\-Funktion](../Topic/bind%20Function.md)   
- [is\_placeholder\-Klasse](../standard-library/is-placeholder-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [bind-Funktion](../standard-library/functional-functions.md#bind_function)   
+ [is_placeholder-Klasse](../standard-library/is-placeholder-class.md)
+

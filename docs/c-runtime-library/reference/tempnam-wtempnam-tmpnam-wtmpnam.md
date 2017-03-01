@@ -1,66 +1,82 @@
 ---
-title: "_tempnam, _wtempnam, tmpnam, _wtmpnam | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtempnam"
-  - "_wtmpnam"
-  - "tmpnam"
-  - "_tempnam"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wtempnam"
-  - "_wtmpnam"
-  - "wtmpnam"
-  - "tmpnam"
-  - "_wtempnam"
-  - "_tempnam"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tempnam-Funktion"
-  - "_ttmpnam-Funktion"
-  - "_wtempnam-Funktion"
-  - "_wtmpnam-Funktion"
-  - "Dateinamen [C++], Erstellen temporärer"
-  - "Dateinamen [C++], Temporär"
-  - "tempnam-Funktion"
-  - "Temporäre Dateien, Erstellen"
-  - "tmpnam-Funktion"
-  - "ttmpnam-Funktion"
-  - "wtempnam-Funktion"
-  - "wtmpnam-Funktion"
+title: _tempnam, _wtempnam, tmpnam, _wtmpnam | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtempnam
+- _wtmpnam
+- tmpnam
+- _tempnam
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wtempnam
+- _wtmpnam
+- wtmpnam
+- tmpnam
+- _wtempnam
+- _tempnam
+dev_langs:
+- C++
+helpviewer_keywords:
+- wtempnam function
+- file names [C++], creating temporary
+- _tempnam function
+- ttmpnam function
+- tmpnam function
+- tempnam function
+- wtmpnam function
+- temporary files, creating
+- file names [C++], temporary
+- _ttmpnam function
+- _wtmpnam function
+- _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _tempnam, _wtempnam, tmpnam, _wtmpnam
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e4f0eff8758694e97bfb310f9cfa650cb28cefa4
+ms.lasthandoff: 02/24/2017
 
-Generieren Sie Namen, die Sie verwenden können, um temporäre Dateien zu erstellen.  Sicherere Versionen einiger dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [tmpnam\_s, \_wtmpnam\_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md).  
+---
+# <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
+Generiert Namen, die Sie verwenden können, um temporäre Dateien zu erstellen. Sicherere Versionen einiger dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [tmpnam_s, _wtmpnam_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 char *_tempnam(  
@@ -79,59 +95,59 @@ wchar_t *_wtmpnam(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `prefix`  
- Die Zeichenfolge, die den Namen vorangestellt wird, der von `_tempnam` zurück.  
+ Die Zeichenfolge, die den von `_tempnam` zurückgegebenen Namen vorangestellt wird.  
   
  `dir`  
- Der Pfad verwendet im Dateinamen, wenn keine TMP\-Umgebungsvariable vorhanden ist oder wenn TMP kein gültiges Verzeichnis befindet.  
+ Der im Dateinamen verwendete Pfad, wenn es keine TMP-Umgebungsvariable gibt oder wenn TMP kein gültiges Verzeichnis ist.  
   
  `str`  
- Zeiger, der den generierten Namen enthält und dem Namen identisch ist, der von der Funktion zurückgegeben.  Dies ist eine einfache Möglichkeit, den generierten Namen zu speichern.  
+ Zeiger, der den generierten Namen enthält und mit dem von der Funktion zurückgegebenen Namen identisch ist. Dies ist eine einfache Möglichkeit, den generierten Namen zu speichern.  
   
-## Rückgabewert  
- Jede dieser Funktionen gibt einen Zeiger an das generierte Namen oder `NULL` zurück, wenn ein Fehler auftritt.  Fehler kann, wenn Sie versuchen, mehr als `TMP_MAX` vorkommen \(siehe STDIO.H\) Aufrufe mit `tmpnam` oder wenn Sie `_tempnam` verwenden und es ist ein ungültiger Verzeichnisname, der i TMP\-Umgebungsvariable und im `dir`\-Parameter angegeben.  
+## <a name="return-value"></a>Rückgabewert  
+ Jede Funktion gibt einen Zeiger auf den erzeugten Namen zurück oder `NULL`, falls ein Fehler vorliegt. Fehler können auftreten, wenn Sie mehr als `TMP_MAX`-Aufrufe (siehe STDIO.H) mit `tmpnam` versuchen oder wenn Sie `_tempnam` verwenden und ein ungültiger Verzeichnisname in der TMP-Umgebungsvariablen und im `dir`-Parameter angegeben wurde.  
   
 > [!NOTE]
->  Die Zeiger, die von `tmpnam` und `_wtmpnam` zurückgegeben werden, zeigen auf statischen internen Puffer.  [frei](../../c-runtime-library/reference/free.md) sollte nicht aufgerufen werden, um diesen Zeiger freizugeben.  `free` muss für Zeiger die aufgerufen werden, die von `_tempnam` und `_wtempnam` zugeordnet sind.  
+>  Die von `tmpnam` und `_wtmpnam` zurückgegebenen Zeiger zeigen auf die internen statischen Puffer. [free](../../c-runtime-library/reference/free.md) sollte nicht aufgerufen werden, um die Zuordnung dieser Zeiger aufzuheben. `free` muss für von `_tempnam` und `_wtempnam` zugeordnete Zeiger aufgerufen werden.  
   
-## Hinweise  
- Jede dieser Funktionen gibt den Namen einer Datei zurück, die nicht vorhanden ist.  `tmpnam` gibt einen Namen ab, der im aktuellen Arbeitsverzeichnis eindeutig ist und `_tempnam` können Sie einen eindeutigen Namen in einem Verzeichnis als die aktuelle generieren.  Hinweis, als wenn ein Dateiname mit einem umgekehrten Schrägstrich und keine Pfadinformationen, beispielsweise \\fname21, diese vorangestellt wird, gibt an, dass der Name für das aktuelle Arbeitsverzeichnis gültig ist.  
+## <a name="remarks"></a>Hinweise  
+ Jede dieser Funktionen gibt den Namen einer Datei zurück, die derzeit nicht vorhanden ist. `tmpnam` gibt einen Namen in das aktuelle Arbeitsverzeichnis ein, und `_tempnam` ermöglicht Ihnen, einen eindeutigen Namen in einem anderen Verzeichnis als dem aktuellen zu generieren. Wenn einem Dateinamen ohne Pfadinformationen ein umgekehrter Schrägstrich vorangestellt ist, wie z.B. \fname21, weist dies darauf hin, dass der Name für das aktuelle Arbeitsverzeichnis gültig ist.  
   
- Für `tmpnam` können Sie diesen erzeugten Dateinamen im `str` speichern.  Wenn `str``NULL` ist, dann bleibt `tmpnam` das Ergebnis in einem internen statischen Puffer.  So zerstören alle nachfolgenden Aufrufe diesen Wert.  Der Name, der von `tmpnam` generiert wurde, besteht aus einem Programm\-generierten Dateinamen, und nach dem ersten Aufruf von `tmpnam` aus, eine Dateierweiterung von sequenziellen Zahlen in Basis 32 \(.1\-.vvu, wenn `TMP_MAX` in STDIO.H 32.767 ist\).  
+ Für `tmpnam` können Sie diesen generierten Dateinamen in `str` speichern. Wenn `str` `NULL` ist, dann hinterlässt `tmpnam` das Ergebnis in einem internen statischen Puffer. Alle nachfolgenden Aufrufe zerstören deshalb diesen Wert. Der von `tmpnam` generierte Name besteht aus einem vom Programm generierten Dateinamen und nach dem ersten Aufruf von `tmpnam` aus einer Dateierweiterung aus aufeinanderfolgenden Zahlen mit Basis 32 (.1-.vvu, wenn `TMP_MAX` in STDIO.H 32,767 ist).  
   
  `_tempnam` generiert einen eindeutigen Dateinamen für ein Verzeichnis, das durch die folgenden Regeln ausgewählt wird:  
   
--   Wenn die TMP\-Umgebungsvariable auf einen gültigen Verzeichnisnamen definiert und festgelegt wird, sind eindeutige Dateinamen für das Verzeichnis generiert, das von TMP angegeben wird.  
+-   Wenn die TMP-Umgebungsvariable definiert und auf einen gültigen Verzeichnisnamen festgelegt ist, werden eindeutige Dateinamen für das von TMP angegebene Verzeichnis generiert.  
   
--   Wenn die TMP\-Umgebungsvariable nicht definiert wird, oder, wenn diese auf den Namen eines Verzeichnisses festgelegt wird, das nicht vorhanden ist, verwendet `_tempnam` den `dir`\-Parameter als Pfad, für den er eindeutige Namen generiert.  
+-   Wenn die TMP-Umgebungsvariable nicht definiert oder wenn sie auf den Namen eines nicht vorhandenen Verzeichnisses festgelegt ist, verwendet `_tempnam` den `dir`-Parameter als Pfad, für den eindeutige Namen generiert werden.  
   
--   Wenn die TMP\-Umgebungsvariable nicht definiert wird, oder, wenn er auf den Namen eines Verzeichnisses festgelegt wird, das nicht vorhanden ist, und wenn `dir` entweder `NULL` oder mehreren in den Namen eines Verzeichnisses, das nicht vorhanden ist, verwendet `_tempnam` das aktuelle Arbeitsverzeichnis, um eindeutige Namen zu generieren.  Derzeit wenn TMP und `dir` Namen von Verzeichnissen angeben, die nicht vorhanden sind, generiert der Funktionsaufruf `_tempnam` aus.  
+-   Wenn die TMP-Umgebungsvariable nicht definiert oder wenn sie auf den Namen eines nicht vorhandenen Verzeichnisses festgelegt ist, und wenn `dir` entweder `NULL` oder auf den Namen eines nicht vorhandenen Verzeichnisses festgelegt ist, verwendet `_tempnam` das aktuelle Arbeitsverzeichnis, um eindeutige Namen zu generieren. Wenn TMP und `dir` Namen von Verzeichnissen angeben, die nicht vorhanden sind, schlägt die `_tempnam`-Funktion zurzeit fehl.  
   
- Der Name, der von `_tempnam` zurückgegeben wird, ist eine Verkettung von `prefix` und von sequenziellen Zahl, die kombiniert, um einen eindeutigen Dateinamen für das angegebene Verzeichnis zu erstellen.  `_tempnam` generiert Dateinamen, die ohne Erweiterung geöffnet.  `_tempnam` verwendet [malloc](../../c-runtime-library/reference/malloc.md), um Platz für den Dateinamen zuzuordnen; das Programm ist für die Freigabe dieses Speichers zuständig, wenn es nicht mehr benötigt wird.  
+ Der von `_tempnam` zurückgegebene Name ist eine Verkettung von `prefix` und einer sequentiellen Nummer, die kombiniert werden, um einen eindeutigen Verzeichnisnamen für das angegebene Verzeichnis zu erstellen. `_tempnam` generiert Dateinamen, die keine Erweiterung haben. `_tempnam` verwendet [malloc](../../c-runtime-library/reference/malloc.md), um Arbeitsspeicher für den Dateinamen zuzuweisen. Das Programm ist für die Freigabe dieses Speicherplatzes verantwortlich, wenn er nicht mehr benötigt wird.  
   
- `_tempnam` und `tmpnam` verarbeiten automatisch Mehrbyte\-Zeichenfolgen\-Argumente entsprechend und erkennen Mehrbytezeichensequenzen entsprechend der OEM\-Codepage, die vom Betriebssystem abgerufen wird.  `_wtempnam` ist eine Breitzeichen\-Version von `_tempnam`; die Argumente und der Rückgabewert von `_wtempnam` sind Zeichenfolgen mit Breitzeichen.  `_wtempnam` und `_tempnam` identisch verhalten sich, dass `_wtempnam` nicht behandelt Mehrbyte\-Zeichenfolgen.  `_wtmpnam` ist eine Breitzeichenversion von `tmpnam`. Das Argument und der Rückgabewert von `_wtmpnam` sind Zeichenfolgen mit Breitzeichen.  `_wtmpnam` und `tmpnam` identisch verhalten sich, dass `_wtmpnam` nicht behandelt Mehrbyte\-Zeichenfolgen.  
+ `_tempnam` und `tmpnam` behandeln Multibyte-Zeichenfolgenargumente automatisch als richtig. Die Erkennung von Multibyte-Zeichenfolgen erfolgt auf der Grundlage der Codepage des OEM aus dem Betriebssystem. `_wtempnam` ist eine Breitzeichenversion von `_tempnam`. Die Argumente und der Rückgabewert von `_wtempnam` sind Zeichenfolgen mit Breitzeichen. `_wtempnam` und `_tempnam` verhalten sich identisch, mit dem Unterschied, dass `_wtempnam` keine Multibyte-Zeichenfolgen verarbeitet. `_wtmpnam` ist eine Breitzeichenversion von `tmpnam`. Das Argument und der Rückgabewert von `_wtmpnam` sind Zeichenfolgen mit Breitzeichen. `_wtmpnam` und `tmpnam` verhalten sich identisch, mit dem Unterschied, dass `_wtmpnam` keine Multibyte-Zeichenfolgen verarbeitet.  
   
- Wenn `_DEBUG` und `_CRTDBG_MAP_ALLOC` definiert werden, sind `_tempnam` und `_wtempnam` durch Aufrufe [\_tempnam\_dbg und \_wtempnam\_dbg](../../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md) ersetzt.  
+ Wenn `_DEBUG` und `_CRTDBG_MAP_ALLOC` definiert sind, werden `_tempnam` und `_wtempnam` durch Aufrufe für [_tempnam_dbg und _wtempnam_dbg](../../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md) ersetzt.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ttmpnam`|`tmpnam`|`tmpnam`|`_wtmpnam`|  
 |`_ttempnam`|`_tempnam`|`_tempnam`|`_wtempnam`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_tempnam`|\<stdio.h\>|  
-|`_wtempnam`, `_wtmpnam`|\<stdio.h\> oder \<wchar.h\>|  
-|`tmpnam`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_tempnam`|\<stdio.h>|  
+|`_wtempnam`, `_wtmpnam`|\<stdio.h> oder \<wchar.h>|  
+|`tmpnam`|\<stdio.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_tempnam.c  
@@ -172,15 +188,18 @@ int main( void )
 }  
 ```  
   
-  **\\ s1gk. ist sicher, als temporäre Datei zu verwenden.**  
-**C:\\DOCUME~1\\user\\LOCALS~1\\Temp\\2\\stq2 ist sicher, als temporäre Datei zu verwenden.**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+\s1gk. is safe to use as a temporary file.  
+C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
+```  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
- [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
  [tmpfile](../../c-runtime-library/reference/tmpfile.md)   
- [tmpfile\_s](../../c-runtime-library/reference/tmpfile-s.md)
+ [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)

@@ -1,71 +1,81 @@
 ---
-title: "unary_negate-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unary_negate"
-  - "std::unary_negate"
-  - "std.unary_negate"
-  - "xfunctional/std::unary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_negate-Klasse"
+title: unary_negate-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unary_negate
+- std::unary_negate
+- std.unary_negate
+- xfunctional/std::unary_negate
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# unary_negate-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 078ee71844b0ac5cd02b182287a7a6db6caa04db
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="unarynegate-class"></a>unary_negate-Klasse
 Eine Klasse, mit der eine Memberfunktion bereitgestellt wird, die den Rückgabewert einer angegebenen unären Funktion negiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template <class Predicate>
+class unary_negate
+    : public unaryFunction<typename Predicate::argument_type, bool>
+{
+public:
+    explicit unary_negate(const Predicate& Func);
+    bool operator()(const typename Predicate::argument_type& left) const;
+};
 ```  
   
-   template<class Predicate>  
-class unary_negate  
-   : public unary_function<  
-      typename Predicate::argument_type,  
-      bool>   
-{  
-public:  
-explicit unary_negate(  
-   const Predicate& _Func  
-);  
-bool operator()(  
-   const typename Predicate::argument_type& _Left ) const;  
-};  
-```  
+#### <a name="parameters"></a>Parameter  
+ `Func`  
+ Die unäre Funktion, die negiert werden soll.  
   
-#### Parameter  
- `_Func`  
- Der unäre negiert werden Funktion.  
+ `left`  
+ Der Operand der unären Funktion, die negiert werden soll.  
   
- `_Left`  
- Der Operand der unären negiert werden Funktion.  
+## <a name="return-value"></a>Rückgabewert  
+ Die Negation der unären Funktion.  
   
-## Rückgabewert  
- Die der Negation unären Funktion.  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse speichert eine Kopie eines unären Funktionsobjekts _ *Func*. Für die Memberfunktion `operator()` definiert die Klasse **!**\_ als Rückgabewert. *Func(left).*  
   
-## Hinweise  
- Die Vorlagenklasse speichert eine Kopie eines \_Func des unären Funktionsobjekts *.*  Sie definiert die Memberfunktion `operator()` als Rückgabe von **\!**\_*Func\(\_Left\).*  
+ Der Konstruktor von `unary_negate` wird nur selten direkt verwendet. Die Hilfsfunktion [not1](../standard-library/functional-functions.md#not1_function) bietet einen einfacheren Weg, um das Adapterprädikat **unary_negator** zu deklarieren und zu verwenden.  
   
- Der Konstruktor des `unary_negate` wird selten direkt verwendet.  Die Hilfsfunktion [not1](../Topic/not1%20Function.md) bietet eine einfachere Möglichkeit, das **unary\_negator** Adapterprädikat zu deklarieren und zu verwenden.  
+## <a name="example"></a>Beispiel  
   
-## Beispiel  
-  
-```  
+```cpp  
 // functional_unary_negate.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -108,16 +118,22 @@ int main()
     cout << "The number of elements in v1 not greater than 10 is: "  
          << result2 << "." << endl;  
 }  
+/* Output:  
+The vector v1 = ( 0 5 10 15 20 25 30 35 )  
+The number of elements in v1 greater than 10 is: 5.  
+The number of elements in v1 not greater than 10 is: 3.  
+*/  
 ```  
   
-  **Der Vektor v1 \= \(0 5 10 15 20 25 30 35\)**  
-**Die Anzahl der Elemente in v1, das größer 10 ist, ist: 5.**  
-**Die Anzahl der Elemente in v1, das als 10 nicht größer ist, ist: 3.**   
-## Anforderungen  
- **Header:** \<functional\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<functional>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standard Template Library](../misc/standard-template-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

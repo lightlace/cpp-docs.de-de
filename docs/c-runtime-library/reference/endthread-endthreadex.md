@@ -1,56 +1,72 @@
 ---
-title: "_endthread, _endthreadex | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_endthread"
-  - "_endthreadex"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_endthread"
-  - "endthreadex"
-  - "_endthreadex"
-  - "endthread"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_endthread-Funktion"
-  - "endthread-Funktion"
-  - "Terminieren von Threads"
-  - "endthreadex-Funktion"
-  - "_endthreadex-Funktion"
-  - "Threading [C++], Terminieren von threads"
+title: _endthread, _endthreadex | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _endthread
+- _endthreadex
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _endthread
+- endthreadex
+- _endthreadex
+- endthread
+dev_langs:
+- C++
+helpviewer_keywords:
+- _endthread function
+- endthread function
+- terminating threads
+- endthreadex function
+- _endthreadex function
+- threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _endthread, _endthreadex
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e1e2211a34a7cc146d1ce3b791927ffc206edaef
+ms.lasthandoff: 02/24/2017
 
-Beendet einen Thread. `_endthread` beendet einen von `_beginthread` erstellten Thread, und  `_endthreadex` beendet einen von `_beginthreadex` erstellten Thread.  
+---
+# <a name="endthread-endthreadex"></a>_endthread, _endthreadex
+Beendet einen Thread. `_endthread` beendet einen von `_beginthread` erstellten Thread, und  `_endthreadex` beendet einen von`_beginthreadex`erstellten Thread.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void _endthread( void );  
@@ -59,41 +75,41 @@ void _endthreadex(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `retval`  
  Threadexitcode.  
   
-## Hinweise  
- Sie können `_endthread` oder `_endthreadex` explizit aufrufen, um einen Thread zu beenden. Allerdings wird `_endthread` oder `_endthreadex` automatisch aufgerufen, wenn der Thread aus der als Parameter an `_beginthread` oder `_beginthreadex` übergebenen Routine zurückgegeben wird. Das Beenden eines Threads durch Aufruf von `endthread` oder `_endthreadex` stellt die ordnungsgemäße Wiederherstellung der dem Thread zugeordneten Ressourcen sicher.  
+## <a name="remarks"></a>Hinweise  
+ Sie können `_endthread` oder `_endthreadex` explizit aufrufen, um einen Thread zu beenden. Allerdings wird `_endthread` oder `_endthreadex` automatisch aufgerufen, wenn der Thread aus der als Parameter an `_beginthread` oder `_beginthreadex`übergebenen Routine zurückgegeben wird. Das Beenden eines Threads durch Aufruf von `endthread` oder `_endthreadex` stellt die ordnungsgemäße Wiederherstellung der dem Thread zugeordneten Ressourcen sicher.  
   
 > [!NOTE]
->  Rufen Sie für eine mit „Libcmt.lib“ verknüpfte ausführbare Datei die [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx)\-Win32\-API nicht auf, damit das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen gehindert wird.`_endthread` und `_endthreadex` geben zugeordnete Threadressourcen frei und rufen dann `ExitThread` auf.  
+>  Rufen Sie für eine mit „Libcmt.lib“ verknüpfte ausführbare Datei die [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) -Win32-API nicht auf, damit das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen gehindert wird. `_endthread` und `_endthreadex` geben zugeordnete Threadressourcen frei und rufen dann `ExitThread` auf.  
   
- `_endthread` schließt das Threadhandle automatisch. \(Dieses Verhalten unterscheidet sich von dem der `ExitThread`\-Win32\-API.\) Wenn Sie also `_beginthread` und `_endthread` verwenden, schließen Sie das Threadhandle nicht explizit mit dem Aufruf der [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx)\-Win32\-API.  
+ `_endthread` schließt das Threadhandle automatisch. (Dieses Verhalten unterscheidet sich von dem der `ExitThread`-Win32-API.) Wenn Sie also `_beginthread` und `_endthread` verwenden, schließen Sie das Threadhandle nicht explizit mit dem Aufruf der [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx)-Win32-API.  
   
- Wie die `ExitThread`\-Win32\-API schließt `_endthreadex` nicht das Threadhandle. Wenn Sie also `_beginthreadex` und `_endthreadex` verwenden, müssen Sie das Threadhandle durch Aufrufen der `CloseHandle`\-Win32\-API schließen.  
+ Wie die `ExitThread` -Win32-API schließt `_endthreadex` nicht das Threadhandle. Wenn Sie also `_beginthreadex` und `_endthreadex` verwenden, müssen Sie das Threadhandle durch Aufrufen der `CloseHandle`-Win32-API schließen.  
   
 > [!NOTE]
->  `_endthread` und `_endthreadex` führen dazu, dass im Thread ausstehende C\+\+\-Destruktoren nicht aufgerufen werden.  
+>  `_endthread` und `_endthreadex` führen dazu, dass im Thread ausstehende C++-Destruktoren nicht aufgerufen werden.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`_endthread`|\<process.h\>|  
-|`_endthreadex`|\<process.h\>|  
+|--------------|---------------------|  
+|`_endthread`|\<process.h>|  
+|`_endthreadex`|\<process.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Bibliotheken  
- Nur Multithread\-Versionen von [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Nur Multithread-Versionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
- Weitere Informationen finden Sie im Beispiel für [\_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md).  
+## <a name="example"></a>Beispiel  
+ Weitere Informationen finden Sie im Beispiel für [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md).  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [Prozess\- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
- [\_beginthread, \_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)
+## <a name="see-also"></a>Siehe auch  
+ [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   
+ [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)

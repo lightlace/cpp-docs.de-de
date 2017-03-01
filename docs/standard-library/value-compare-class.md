@@ -1,68 +1,89 @@
 ---
-title: "value_compare-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::value_compare"
-  - "std.value_compare"
-  - "value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_compare-Klasse"
+title: value_compare-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::value_compare
+- std.value_compare
+- value_compare
+dev_langs:
+- C++
+helpviewer_keywords:
+- value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Klassen value_compare-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: c82ae35feadcf1f28af47d3f055e854f7bcf6a34
+ms.lasthandoff: 02/24/2017
 
-Stellt ein Funktionsobjekt bereit, das die Elemente eines hash\_map vergleichen kann, indem die Werte ihrer Schlüssel verglichen, um ihre relative Position im hash\_map zu bestimmen.  
+---
+# <a name="valuecompare-class"></a>value_compare-Klasse
+Stellt ein Funktionsobjekt bereit, das die Elemente einer hash_map vergleichen kann, indem die Werte ihrer Schlüssel verglichen werden, um deren relative Reihenfolge in der hash_map zu bestimmen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+class value_compare
+ : std::public binary_function<value_type, value_type, bool>
+{
+public:
+    bool operator()(
+    const value_type& left,
+    const value_type& right) const
+ {
+    return (comp(left.first, right.first));
+
+ }
+protected:
+    value_compare(const key_compare& c) : comp (c) { }
+    key_compare comp;
+};
 ```  
-class value_compare  
-    : std::public binary_function<value_type, value_type, bool>   
-{  
-public:  
-    bool operator( )(  
-        const value_type& _Left,  
-        const value_type& _Right ) const  
-        {  
-            return ( comp( _Left.first, _Right.first ) );   
-        }  
-protected:  
-    value_compare( const key_compare& c ) : comp (c) { }  
-    key_compare comp;  
-};  
-```  
   
-## Hinweise  
- Die Vergleichskriterien, die vom value\_compare zwischen **value\_types** aus ganzen Elementen enthalten werden durch ein hash\_map bereitgestellt werden, wird ein Vergleich zwischen den Schlüsseln der jeweiligen Elemente durch die Erweiterungsklassenkonstruktion verursacht.  Der Memberfunktionsoperator verwendet das Objekt **Komp.** vom Typ `key_compare` gespeichert im Funktionsobjekt, das vom value\_compare bereitgestellt wird, um die Sortierschlüsselkomponenten von zwei Elementen zu vergleichen.  
+## <a name="remarks"></a>Hinweise  
+ Die von value_compare bei einem Vergleich von **value_types** ganzer, in einer hash_map enthaltener Elemente bereitgestellten Vergleichskriterien werden von einem Vergleich der Schlüssel der jeweiligen Elemente durch die Erweiterungsklassenkonstruktion induziert. Der Operator der Memberfunktion verwendet das Objekt **comp** vom Typ `key_compare`, das in dem Funktionsobjekt gespeichert ist, das von value_compare für den Vergleich der Sortierschlüsselkomponenten von zwei Elementen bereitgestellt wird.  
   
- Für hash\_sets und hash\_multisets die einfache Container sind, in die die Schlüsselwerte zu Elementwerten identisch sind, ist value\_compare entspricht `key_compare`; für hash\_maps und hash\_multimaps sind sie nicht, da der Wert der `pair`\-Typ keine Elemente auf den Wert des Schlüssels des Elements identisch ist.  
+ Bei hash_sets und hash_multisets, bei denen es sich um einfache Container handelt, bei denen die Schlüsselwerte mit den Elementwerten übereinstimmen, stimmt value_compare mit `key_compare` überein; bei hash_maps und hash_multimaps nicht, da der Wert von Elementen vom Typ `pair` nicht mit dem Wert des Elementschlüssels identisch ist.  
   
- In Visual C\+\+ .NET 2003 sind Member der [\<hash\_map\>](../standard-library/hash-map.md) und [\<hash\_set\>](../standard-library/hash-set.md) Headerdateien nicht mehr im STD\-Namespace enthalten. Sie wurden stattdessen in den stdext\-Namespace verschoben.  Weitere Informationen finden Sie unter [Der stdext\-Namespace](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003 sind Member der Headerdateien [<hash_map>](../standard-library/hash-map.md) und [<hash_set>](../standard-library/hash-set.md) nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
-## Beispiel  
- Im Beispiel für [hash\_map::value\_comp](../Topic/hash_map::value_comp.md) als Beispiel dafür, wie value\_compare deklariert und verwendet.  
+## <a name="example"></a>Beispiel  
+ Im Beispiel für [hash_map::value_comp](../standard-library/hash-map-class.md#hash_map__value_comp) wird verdeutlicht, wie value_compare deklariert und verwendet wird.  
   
-## Anforderungen  
- **Header:** \<hash\_map\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<hash_map>  
   
  **Namespace:** stdext  
   
-## Siehe auch  
- [binary\_function\-Struktur](../standard-library/binary-function-struct.md)   
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standard Template Library](../misc/standard-template-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [binary_function Struct (binary_function-Struktur)](../standard-library/binary-function-struct.md)   
+ [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,87 +1,103 @@
 ---
-title: "_CrtIsValidHeapPointer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtIsValidHeapPointer"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtlsValidHeapPointer"
-  - "_CrtIsValidHeapPointer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtIsValidHeapPointer-Funktion"
-  - "CrtIsValidHeapPointer-Funktion"
+title: _CrtIsValidHeapPointer | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtIsValidHeapPointer
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtlsValidHeapPointer
+- _CrtIsValidHeapPointer
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CrtIsValidHeapPointer function
+- CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtIsValidHeapPointer
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 22c993d09b1f1633fa6d9bfc6219008148beb9a6
+ms.lasthandoff: 02/24/2017
 
-Überprüft, ob sich ein angegebener Zeiger in einem Heap befindet, der durch eine C\-Laufzeitbibliothek zugewiesen wurde, aber nicht notwendigerweise durch die CRT\-Bibliothek des Aufrufers.  In CRT\-Versionen vor Visual Studio 2010 wird dadurch überprüft, ob sich der angegebene Zeiger im lokalen Heap befindet \(nur Debugversion\).  
+---
+# <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
+Überprüft, ob sich ein angegebener Zeiger in einem Heap befindet, der durch eine C-Laufzeitbibliothek zugewiesen wurde, aber nicht notwendigerweise durch die CRT-Bibliothek des Aufrufers. In CRT-Versionen vor Visual Studio 2010 wird dadurch überprüft, ob sich der angegebene Zeiger im lokalen Heap befindet (nur Debugversion).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-        int _CrtIsValidHeapPointer(   
+      int _CrtIsValidHeapPointer(   
    const void *userData   
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `userData`  
  Zeiger auf den Anfang eines belegten Speicherblocks.  
   
-## Rückgabewert  
- `_CrtIsValidHeapPointer` gibt TRUE zurück, wenn sich der angegebene Zeiger im Heap befindet, der von allen Instanzen der CRT\-Bibliothek gemeinsam verwendet wird.  In CRT\-Versionen vor Visual Studio 2010 wird TRUE wiedergegeben, wenn sich der angegebene Zeiger im lokalen Heap befindet.  Andernfalls gibt die Funktion FALSE zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ `_CrtIsValidHeapPointer` gibt TRUE zurück, wenn sich der angegebene Zeiger im Heap befindet, der von allen Instanzen der CRT-Bibliothek gemeinsam verwendet wird. In CRT-Versionen vor Visual Studio 2010 wird TRUE wiedergegeben, wenn sich der angegebene Zeiger im lokalen Heap befindet. Andernfalls gibt die Funktion FALSE zurück.  
   
-## Hinweise  
- Wir empfehlen nicht, diese Funktion zu verwenden.  Ab der Visual Studio 2010\-CRT\-Bibliothek nutzen alle CRT\-Bibliotheken gemeinsam einen OS\-Heap, den *Prozessheap*.  Die `_CrtIsValidHeapPointer`\-Funktion meldet, ob der Zeiger in einem CRT\-Heap zugewiesen wurde, aber nicht, dass er durch die CRT\-Bibliothek des Aufrufers zugewiesen wurde.  Betrachten Sie beispielsweise einen Block, der mit der Visual Studio 2010\-Version der CRT\-Bibliothek zugeordnet wurde.  Wenn die von der Visual Studio 2012\-Version der CRT\-Bibliothek exportierte `_CrtIsValidHeapPointer`\-Funktion den Zeiger testet, wird TRUE zurückgegeben.  Dies ist kein nützlicher Test mehr.  In Versionen der CRT\-Bibliothek vor Visual Studio 2010 wird die Funktion verwendet, um sicherzustellen, dass sich eine bestimmte Speicheradresse im lokalen Heap befindet.  Der lokale Heap verweist auf den Heap, der von einer bestimmten Instanz der C\-Laufzeitbibliothek erstellt und verwaltet wird.  Wenn eine Dynamic Link Library \(DLL\) einen statischen Link zur Laufzeitbibliothek enthält, hat sie ihre eigene Instanz des Laufzeitheaps und daher ihren eigenen Heap, unabhängig vom lokalen Heap der Anwendung.  Wenn [\_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von `_CrtIsValidHeapPointer` während der Vorverarbeitung entfernt.  
+## <a name="remarks"></a>Hinweise  
+ Wir empfehlen nicht, diese Funktion zu verwenden. Ab der Visual Studio 2010-CRT-Bibliothek nutzen alle CRT-Bibliotheken gemeinsam einen OS-Heap, den *Prozessheap*. Die `_CrtIsValidHeapPointer`-Funktion meldet, ob der Zeiger in einem CRT-Heap zugewiesen wurde, aber nicht, dass er durch die CRT-Bibliothek des Aufrufers zugewiesen wurde. Betrachten Sie beispielsweise einen Block, der mit der Visual Studio 2010-Version der CRT-Bibliothek zugeordnet wurde. Wenn die von der Visual Studio 2012-Version der CRT-Bibliothek exportierte `_CrtIsValidHeapPointer`-Funktion den Zeiger testet, wird TRUE zurückgegeben. Dies ist kein nützlicher Test mehr. In Versionen der CRT-Bibliothek vor Visual Studio 2010 wird die Funktion verwendet, um sicherzustellen, dass sich eine bestimmte Speicheradresse im lokalen Heap befindet. Der lokale Heap verweist auf den Heap, der von einer bestimmten Instanz der C-Laufzeitbibliothek erstellt und verwaltet wird. Wenn eine Dynamic Link Library (DLL) einen statischen Link zur Laufzeitbibliothek enthält, hat sie ihre eigene Instanz des Laufzeitheaps und daher ihren eigenen Heap, unabhängig vom lokalen Heap der Anwendung. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von `_CrtIsValidHeapPointer` während der Vorverarbeitung entfernt.  
   
- Da diese Funktion TRUE oder FALSE zurückgibt, kann sie an eine der [\_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)\-Makros übergeben werden, um einen einfachen Debug\-Fehlerbehandlungsmechanismus zu erstellen.  Im folgenden Beispiel wird ein Assertionsfehler ausgelöst, wenn sich die angegebene Adresse nicht im lokalen Heap befindet:  
+ Da diese Funktion TRUE oder FALSE zurückgibt, kann sie an eine der [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)-Makros übergeben werden, um einen einfachen Debug-Fehlerbehandlungsmechanismus zu erstellen. Im folgenden Beispiel wird ein Assertionsfehler ausgelöst, wenn sich die angegebene Adresse nicht im lokalen Heap befindet:  
   
 ```  
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );  
 ```  
   
- Weitere Informationen dazu, wie `_CrtIsValidHeapPointer` mit anderen Debugfunktionen und \-makros verwendet werden kann, finden Sie unter [Makros für die Berichterstellung](../Topic/Macros%20for%20Reporting.md).  Weitere Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [Details zum CRT\-Debugheap](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Weitere Informationen dazu, wie `_CrtIsValidHeapPointer` mit anderen Debugfunktionen und -makros verwendet werden kann, finden Sie unter [Makros für die Berichterstellung](/visualstudio/debugger/macros-for-reporting). Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [Details zum CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_CrtIsValidHeapPointer`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtIsValidHeapPointer`|\<crtdbg.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Nur Debugversionen von [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Nur Debugversionen von [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie getestet wird, ob der Arbeitsspeicher gültig ist, wenn er mit C\-Laufzeitbibliotheken vor Visual Studio 2010 verwendet wird.  Dieses Beispiel wird für Benutzer von Legacycode der CRT\-Bibliothek bereitgestellt.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie getestet wird, ob der Arbeitsspeicher gültig ist, wenn er mit C-Laufzeitbibliotheken vor Visual Studio 2010 verwendet wird. Dieses Beispiel wird für Benutzer von Legacycode der CRT-Bibliothek bereitgestellt.  
   
 ```  
 // crt_isvalid.c  
@@ -132,15 +148,15 @@ int main( void )
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 my_pointer has read and write accessibility.  
 my_pointer is within the local heap.  
 ```  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Debugroutinen](../../c-runtime-library/debug-routines.md)
