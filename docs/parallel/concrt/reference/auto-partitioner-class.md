@@ -1,53 +1,86 @@
 ---
-title: "auto_partitioner-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppl/concurrency::auto_partitioner"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_partitioner-Klasse"
+title: Auto_partitioner-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppl/concurrency::auto_partitioner
+dev_langs:
+- C++
+helpviewer_keywords:
+- auto_partitioner class
 ms.assetid: 7cc08e5d-20b4-47a4-b4b5-c214a78f5a9e
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# auto_partitioner-Klasse
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 8092a0d6c4fe6053a3bb7e80e659ab6a7628664a
+ms.lasthandoff: 02/24/2017
 
-Die `auto_partitioner`\-Klasse stellt die Standardmethoden `parallel_for`, `parallel_for_each` und `parallel_transform` dar, die verwendet werden, um den Bereich zu partitionieren, den sie durchlaufen.  Diese Partitionierungsmethode verwendet Bereichsstealing zum Lastenausgleich sowie Abbruch pro Durchlauf.  
+---
+# <a name="autopartitioner-class"></a>auto_partitioner-Klasse
+Die `auto_partitioner`-Klasse stellt die Standardmethoden `parallel_for`, `parallel_for_each` und `parallel_transform` dar, die verwendet werden, um den Bereich zu partitionieren, den sie durchlaufen. Diese Partitionierungsmethode verwendet Bereichsstealing zum Lastenausgleich sowie Abbruch pro Durchlauf.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+class auto_partitioner;
 ```  
-class auto_partitioner;  
-```  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[auto\_partitioner::auto\_partitioner\-Konstruktor](../Topic/auto_partitioner::auto_partitioner%20Constructor.md)|Erstellt ein `auto_partitioner`\-Objekt.|  
-|[auto\_partitioner::~auto\_partitioner\-Destruktor](../Topic/auto_partitioner::~auto_partitioner%20Destructor.md)|Zerstört ein `auto_partitioner`\-Objekt.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[Auto_partitioner-Konstruktor](#ctor)|Erstellt ein `auto_partitioner`-Objekt.|  
+|[~ Auto_partitioner-Destruktor](#dtor)|Zerstört ein `auto_partitioner`-Objekt.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `auto_partitioner`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** ppl.h  
   
  **Namespace:** Parallelität  
   
-## Siehe auch  
- [concurrency\-Namespace](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namedtora-autopartitioner"></a><a name="dtor"></a>~ Auto_partitioner 
+
+ Zerstört ein `auto_partitioner`-Objekt.  
+  
+```
+~auto_partitioner();
+```  
+  
+##  <a name="a-namectora-autopartitioner"></a><a name="ctor"></a>auto_partitioner 
+
+ Erstellt ein `auto_partitioner`-Objekt.  
+  
+```
+auto_partitioner();
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency-Namespace](concurrency-namespace.md)
+

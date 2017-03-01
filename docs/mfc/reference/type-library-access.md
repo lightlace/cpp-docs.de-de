@@ -1,39 +1,99 @@
 ---
-title: "Zugreifen auf die Typbibliothek | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.macros"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Typbibliotheken, Aufrufen"
+title: Geben Sie Zugriff auf die Medienbibliothek | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.macros
+dev_langs:
+- C++
+helpviewer_keywords:
+- type libraries, accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Zugreifen auf die Typbibliothek
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
+ms.openlocfilehash: 8a3fbcf66036ef3df3bd34b5182dac8af3dfccef
+ms.lasthandoff: 02/24/2017
 
-Typbibliotheken stellen den Schnittstellen eines OLE\-Steuerelements anderen OLE\-bewussten Anwendungen aus.  Jedes OLE\-Steuerelement muss eine Typbibliothek haben, wenn eine oder mehrere Schnittstellen verfügbar gemacht werden sollen.  
+---
+# <a name="type-library-access"></a>Zugreifen auf die Typbibliothek
+Typbibliotheken verfügbar machen, die Schnittstellen eines OLE-Steuerelements an andere OLE-kompatible Anwendung. Jedes Steuerelement OLE benötigen eine Typbibliothek aus, wenn eine oder mehrere Schnittstellen verfügbar gemacht werden sollen.  
   
- Die folgenden Makros ermöglichen einem OLE\-Steuerelement, um Zugriff an seine eigene Typbibliothek zu ermöglichen:  
+ Die folgenden Makros zulassen ein OLE-Steuerelements Zugriff auf eigenen Typbibliothek:  
   
-### Typbibliotheks\-Zugriff  
+### <a name="type-library-access"></a>Zugreifen auf die Typbibliothek  
   
 |||  
 |-|-|  
-|[DECLARE\_OLETYPELIB](../Topic/DECLARE_OLETYPELIB.md)|Deklariert eine `GetTypeLib`\-Memberfunktion eines OLE\-Steuerelements \(muss in der Klassendeklaration verwendet werden\).|  
-|[IMPLEMENT\_OLETYPELIB](../Topic/IMPLEMENT_OLETYPELIB.md)|Implementiert eine `GetTypeLib`\-Memberfunktion eines OLE\-Steuerelements \(muss in die Klassenimplementierung verwendet werden\).|  
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Deklariert einen `GetTypeLib` -Memberfunktion eines OLE-Steuerelements (muss in der Klassendeklaration verwendet werden).|  
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementiert eine `GetTypeLib` -Memberfunktion eines OLE-Steuerelements (muss in der klassenimplementierung verwendet werden).|  
   
-## Siehe auch  
- [MFC\-Makros, globale Funktionen und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+##  <a name="a-namedeclareoletypeliba--declareoletypelib"></a><a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
+ Deklariert die `GetTypeLib` -Memberfunktion der Steuerelementklasse.  
+  
+```   
+DECLARE_OLETYPELIB(class_name)   
+```  
+  
+### <a name="parameters"></a>Parameter  
+ *CLASS_NAME*  
+ Der Name von der Control-Klasse, die im Zusammenhang mit der Typbibliothek.  
+  
+### <a name="remarks"></a>Hinweise  
+ Verwenden Sie dieses Makro in der Headerdatei der Control-Klasse.  
+
+### <a name="requirements"></a>Anforderungen  
+ **Header:** afxdisp.h  
+
+##  <a name="a-nameimplementoletypeliba--implementoletypelib"></a><a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
+ Implementiert das Steuerelement `GetTypeLib` Member-Funktion.  
+  
+```   
+IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)   
+```  
+  
+### <a name="parameters"></a>Parameter  
+ *CLASS_NAME*  
+ Der Name von der Control-Klasse, die im Zusammenhang mit der Typbibliothek.  
+  
+ *tlid*  
+ Die ID der Typbibliothek.  
+  
+ `wVerMajor`  
+ Die Typ-Bibliothek Hauptversionsnummer.  
+  
+ `wVerMinor`  
+ Die Typ-Bibliothek Nebenversionsnummer.  
+  
+### <a name="remarks"></a>Hinweise  
+ Dieses Makro muss angezeigt werden, in der Implementierungsdatei für alle Control-Klasse, verwendet die `DECLARE_OLETYPELIB` Makro.  
+
+### <a name="requirements"></a>Anforderungen  
+ **Header:** afxdisp.h  
+   
+## <a name="see-also"></a>Siehe auch  
+ [Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+

@@ -1,76 +1,162 @@
 ---
-title: "CBitmapRenderTarget Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxrendertarget/CBitmapRenderTarget"
-  - "CBitmapRenderTarget"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBitmapRenderTarget-Klasse"
+title: CBitmapRenderTarget-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxrendertarget/CBitmapRenderTarget
+- CBitmapRenderTarget
+dev_langs:
+- C++
+helpviewer_keywords:
+- CBitmapRenderTarget class
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# CBitmapRenderTarget Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
+ms.openlocfilehash: 11bea138185df23c9f3cc79491c71d86861a6bdc
+ms.lasthandoff: 02/24/2017
 
-Ein Wrapper für "ID2D1BitmapRenderTarget".  
+---
+# <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget-Klasse
+Ein Wrapper für ID2D1BitmapRenderTarget.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBitmapRenderTarget : public CRenderTarget;  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::CBitmapRenderTarget](../Topic/CBitmapRenderTarget::CBitmapRenderTarget.md)|Erstellt ein CBitmapRenderTarget\-Objekt.|  
+|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|Erstellt ein CBitmapRenderTarget-Objekt.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::Attach](../Topic/CBitmapRenderTarget::Attach.md)|Hängt die vorhandene Renderingzielschnittstelle an das Objekt an|  
-|[CBitmapRenderTarget::Detach](../Topic/CBitmapRenderTarget::Detach.md)|Trennt die Renderingzielschnittstelle vom Objekt|  
-|[CBitmapRenderTarget::GetBitmap](../Topic/CBitmapRenderTarget::GetBitmap.md)|Ruft die Bitmap für dieses Renderingziel ab.  Die zurückgegebene Bitmap kann für Zeichenvorgänge verwendet werden.|  
-|[CBitmapRenderTarget::GetBitmapRenderTarget](../Topic/CBitmapRenderTarget::GetBitmapRenderTarget.md)|Gibt die ID2D1BitmapRenderTarget\-Schnittstelle zurück|  
+|[CBitmapRenderTarget::Attach](#attach)|Hängt die vorhandene Ziel-Schnittstelle für das Objekt zu rendern|  
+|[CBitmapRenderTarget::Detach](#detach)|Trennt die Renderingzielschnittstelle vom Objekt|  
+|[CBitmapRenderTarget::GetBitmap](#getbitmap)|Ruft die Bitmap für dieses Renderingziel ab. Die zurückgegebene Bitmap kann für Zeichenvorgänge verwendet werden.|  
+|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Gibt die ID2D1BitmapRenderTarget-Schnittstelle|  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget\*](../Topic/CBitmapRenderTarget::operator%20ID2D1BitmapRenderTarget*.md)|Gibt die ID2D1BitmapRenderTarget\-Schnittstelle zurück|  
+|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Gibt die ID2D1BitmapRenderTarget-Schnittstelle|  
   
-### Geschützte Datenmember  
+### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::m\_pBitmapRenderTarget](../Topic/CBitmapRenderTarget::m_pBitmapRenderTarget.md)|Ein Zeiger auf ein ID2D1BitmapRenderTarget\-Objekt.|  
+|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|Ein Zeiger auf ein ID2D1BitmapRenderTarget-Objekt.|  
   
-## Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
   
- [CBitmapRenderTarget](../../mfc/reference/cbitmaprendertarget-class.md)  
+ `CBitmapRenderTarget` 
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-## Siehe auch  
+##  <a name="a-nameattacha--cbitmaprendertargetattach"></a><a name="attach"></a>CBitmapRenderTarget::Attach  
+ Hängt die vorhandene Ziel-Schnittstelle für das Objekt zu rendern  
+  
+```  
+void Attach(ID2D1BitmapRenderTarget* pTarget);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `pTarget`  
+ Vorhandene Renderingzielschnittstelle. NULL darf nicht sein  
+  
+##  <a name="a-namecbitmaprendertargeta--cbitmaprendertargetcbitmaprendertarget"></a><a name="cbitmaprendertarget"></a>CBitmapRenderTarget::CBitmapRenderTarget  
+ Erstellt ein CBitmapRenderTarget-Objekt.  
+  
+```  
+CBitmapRenderTarget();
+```  
+  
+##  <a name="a-namedetacha--cbitmaprendertargetdetach"></a><a name="detach"></a>CBitmapRenderTarget::Detach  
+ Trennt die Renderingzielschnittstelle vom Objekt  
+  
+```  
+ID2D1BitmapRenderTarget* Detach();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf getrennte Renderingzielschnittstelle.  
+  
+##  <a name="a-namegetbitmapa--cbitmaprendertargetgetbitmap"></a><a name="getbitmap"></a>CBitmapRenderTarget::GetBitmap  
+ Ruft die Bitmap für dieses Renderingziel ab. Die zurückgegebene Bitmap kann für Zeichenvorgänge verwendet werden.  
+  
+```  
+BOOL GetBitmap(CD2DBitmap& bitmap);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `bitmap`  
+ Diese Methode zurückgibt, enthält die gültige Bitmap für dieses Renderingziel. Diese Bitmap kann für Zeichenvorgänge verwendet werden.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Wenn die Methode erfolgreich ist, wird TRUE zurückgegeben. Andernfalls wird FALSE zurückgegeben.  
+  
+##  <a name="a-namegetbitmaprendertargeta--cbitmaprendertargetgetbitmaprendertarget"></a><a name="getbitmaprendertarget"></a>CBitmapRenderTarget::GetBitmapRenderTarget  
+ Gibt die ID2D1BitmapRenderTarget-Schnittstelle  
+  
+```  
+ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf eine ID2D1BitmapRenderTarget-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
+  
+##  <a name="a-namempbitmaprendertargeta--cbitmaprendertargetmpbitmaprendertarget"></a><a name="m_pbitmaprendertarget"></a>CBitmapRenderTarget::m_pBitmapRenderTarget  
+ Ein Zeiger auf ein ID2D1BitmapRenderTarget-Objekt.  
+  
+```  
+ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;  
+```  
+  
+##  <a name="a-nameoperatorid2d1bitmaprendertargetstara--cbitmaprendertargetoperator-id2d1bitmaprendertarget"></a><a name="operator_id2d1bitmaprendertarget_star"></a>CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
+ Gibt die ID2D1BitmapRenderTarget-Schnittstelle  
+  
+```  
+operator ID2D1BitmapRenderTarget*();
+```   
+  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf eine ID2D1BitmapRenderTarget-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
+  
+## <a name="see-also"></a>Siehe auch  
  [Klassen](../../mfc/reference/mfc-classes.md)
+

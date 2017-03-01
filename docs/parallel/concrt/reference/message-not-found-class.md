@@ -1,55 +1,89 @@
 ---
-title: "message_not_found-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::message_not_found"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "message_not_found-Klasse"
+title: Message_not_found-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::message_not_found
+dev_langs:
+- C++
+helpviewer_keywords:
+- message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# message_not_found-Klasse
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: dc9fe8db2e454581acdc1ef63c0915845f3ad90f
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="messagenotfound-class"></a>message_not_found-Klasse
 Diese Klasse beschreibt eine Ausnahme, die ausgelöst wird, wenn ein Meldungsblock keine angeforderte Meldung finden kann.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+class message_not_found : public std::exception;
 ```  
-class message_not_found : public std::exception;  
-```  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[message\_not\_found::message\_not\_found\-Konstruktor](../Topic/message_not_found::message_not_found%20Constructor.md)|Überladen.  Erstellt ein `message_not_found`\-Objekt.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[Message_not_found-Konstruktor](#ctor)|Überladen. Erstellt ein `message_not_found`-Objekt.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `exception`  
   
  `message_not_found`  
   
-## Anforderungen  
- **Header:** concrt.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** concrt.h hinzu  
   
  **Namespace:** Parallelität  
   
-## Siehe auch  
- [concurrency\-Namespace](../../../parallel/concrt/reference/concurrency-namespace.md)   
+##  <a name="a-namectora-messagenotfound"></a><a name="ctor"></a>message_not_found 
+
+ Erstellt ein `message_not_found`-Objekt.  
+  
+```
+explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();
+
+message_not_found() throw();
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_Message`  
+ Eine beschreibende Fehlermeldung.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency-Namespace](concurrency-namespace.md)   
  [Asynchrone Nachrichtenblöcke](../../../parallel/concrt/asynchronous-message-blocks.md)
+
+
+
+

@@ -1,70 +1,134 @@
 ---
-title: "CComCritSecLock Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CComCritSecLock"
-  - "ATL.CComCritSecLock<TLock>"
-  - "ATL::CComCritSecLock<TLock>"
-  - "ATL.CComCritSecLock"
-  - "CComCritSecLock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComCritSecLock class"
+title: Klasse CComCritSecLock | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CComCritSecLock
+- ATL.CComCritSecLock<TLock>
+- ATL::CComCritSecLock<TLock>
+- ATL.CComCritSecLock
+- CComCritSecLock
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComCritSecLock Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 71b9ab8b11adc946656c2192c2f0f06555ef1254
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse stellt Methoden zum Sperren und Entsperren eines das kritischen Abschnittsobjekts bereit.  
+---
+# <a name="ccomcritseclock-class"></a>CComCritSecLock-Klasse
+Diese Klasse stellt Methoden zum Sperren und Entsperren von einem kritischen Abschnittsobjekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template<class TLock> class CComCritSecLock
 ```  
   
-      template<  
-   class TLock  
-> class CComCritSecLock  
-```  
-  
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *TLock*  
- Das zu sperrende Objekt und entsperrt wurden.  
+ Das Objekt gesperrt und entsperrt werden.  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CComCritSecLock::CComCritSecLock](../Topic/CComCritSecLock::CComCritSecLock.md)|Der \-Konstruktor.|  
-|[CComCritSecLock::~CComCritSecLock](../Topic/CComCritSecLock::~CComCritSecLock.md)|Der Destruktor.|  
+|[CComCritSecLock::CComCritSecLock](#ctor)|Der Konstruktor.|  
+|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|Der Destruktor.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CComCritSecLock::Lock](../Topic/CComCritSecLock::Lock.md)|Rufen Sie diese Methode auf, um das kritischen Abschnittsobjekt zu sperren.|  
-|[CComCritSecLock::Unlock](../Topic/CComCritSecLock::Unlock.md)|Rufen Sie diese Methode auf, um das kritischen Abschnittsobjekt zu entsperren.|  
+|[CComCritSecLock::Lock](#lock)|Rufen Sie diese Methode, um das Objekt des kritischen Abschnitts zu sperren.|  
+|[CComCritSecLock::Unlock](#unlock)|Rufen Sie diese Methode, um das Objekt des kritischen Abschnitts zu entsperren.|  
   
-## Hinweise  
- Verwenden Sie diese Klasse, um Objekte auf eine Weise als mit [CComCriticalSections\-Klasse](../../atl/reference/ccomcriticalsection-class.md) oder [CComAutoCriticalSections\-Klasse](../../atl/reference/ccomautocriticalsection-class.md) zu sperren und zu entsperren.  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie diese Klasse zum Sperren und Entsperren von Objekten auf sicherere Weise als mit der ["CComCriticalSection"-Klasse](../../atl/reference/ccomcriticalsection-class.md) oder [CComAutoCriticalSection Klasse](../../atl/reference/ccomautocriticalsection-class.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-## Siehe auch  
- [CComCriticalSection Class](../../atl/reference/ccomcriticalsection-class.md)   
- [CComAutoCriticalSection Class](../../atl/reference/ccomautocriticalsection-class.md)
+##  <a name="a-namectora--ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+ Der Konstruktor.  
+  
+```
+CComCritSecLock(TLock& cs, bool bInitialLock = true);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ *cs*  
+ Das Objekt des kritischen Abschnitts.  
+  
+ `bInitialLock`  
+ Der Zustand der ersten Sperre: **true** bedeutet gesperrt.  
+  
+### <a name="remarks"></a>Hinweise  
+ Initialisiert das Objekt des kritischen Abschnitts.  
+  
+##  <a name="a-namedtora--ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+ Der Destruktor.  
+  
+```
+~CComCritSecLock() throw();
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Hebt die Sperre Objekt des kritischen Abschnitts.  
+  
+##  <a name="a-namelocka--ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Lock  
+ Rufen Sie diese Methode, um das Objekt des kritischen Abschnitts zu sperren.  
+  
+```
+HRESULT Lock() throw();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt S_OK zurück, wenn das Objekt erfolgreich gesperrt wurde, oder einen HRESULT-Fehler bei einem Fehler.  
+  
+### <a name="remarks"></a>Hinweise  
+ Wenn das Objekt bereits gesperrt ist, tritt ein ASSERT-Fehler in Debugbuilds.  
+  
+##  <a name="a-nameunlocka--ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Unlock  
+ Rufen Sie diese Methode, um das Objekt des kritischen Abschnitts zu entsperren.  
+  
+```
+void Unlock() throw();
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Wenn das Objekt bereits entsperrt ist, tritt ein ASSERT-Fehler in Debugbuilds.  
+  
+## <a name="see-also"></a>Siehe auch  
+ ["CComCriticalSection"-Klasse](../../atl/reference/ccomcriticalsection-class.md)   
+ [CComAutoCriticalSection-Klasse](../../atl/reference/ccomautocriticalsection-class.md)
+

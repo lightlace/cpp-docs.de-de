@@ -1,64 +1,85 @@
 ---
-title: "_ATL_WIN_MODULE70 Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ATL_WIN_MODULE70"
-  - "ATL::_ATL_WIN_MODULE70"
-  - "ATL._ATL_WIN_MODULE70"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_WIN_MODULE70 structure"
-  - "ATL_WIN_MODULE70 structure"
+title: _ATL_WIN_MODULE70 Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _ATL_WIN_MODULE70
+- ATL::_ATL_WIN_MODULE70
+- ATL._ATL_WIN_MODULE70
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ATL_WIN_MODULE70 structure
+- ATL_WIN_MODULE70 structure
 ms.assetid: a0aaf3ea-ca77-46ec-bd53-4dfb61dffbea
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _ATL_WIN_MODULE70 Structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
+ms.openlocfilehash: 383384c8f08b98592f92b5d38850137c1c0c6d54
+ms.lasthandoff: 02/24/2017
 
-Wird von Fenstercode in ATL.  
+---
+# <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70-Struktur
+Windowing-Code in ATL verwendet  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+struct _ATL_WIN_MODULE70 {
+    UNIT cbSize; 
+    CRITICAL_SECTION m_csWindowCreate;
+    _AtlCreateWndData* m_pCreateWndList;
+    CSimpleArray<ATOM> m_rgWindowClassAtoms;
+};
 ```  
   
-      struct _ATL_WIN_MODULE70{  
-   UNIT cbSize;  
-   CRITICAL_SECTION m_csWindowCreate;  
-   _AtlCreateWndData* m_pCreateWndList;  
-   CSimpleArray<ATOM> m_rgWindowClassAtoms;  
-};  
-```  
-  
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
  `cbSize`  
- Die Größe der Struktur, verwendet für die Versionsverwaltung.  
+ Die Größe der Struktur, die für die Versionskontrolle verwendet.  
   
  `m_csWindowCreate`  
- Wird verwendet, um den Zugriff auf das Fensterregistrierungscode zu serialisieren.  Intern verwendet von ATL.  
+ Zum Zugriff auf Fenster Registrierungscode zu serialisieren. Wird intern verwendet, ATL  
   
- **m\_pCreateWndList**  
- Wird verwendet, um Fenster auf ihre Objekte binden.  Intern verwendet von ATL.  
+ **m_pCreateWndList**  
+ Zum Binden von Windows in ihre Objekte verwendet. Wird intern verwendet, ATL  
   
- **m\_rgWindowClassAtoms**  
- Wird verwendet, um Fensterklassenregistrierungen nachzuverfolgen, damit sie in der Beendigung ordnungsgemäß Registrierung aufgehoben werden können.  Intern verwendet von ATL.  
+ **m_rgWindowClassAtoms**  
+ Verwendet, um das Fenster Klasse Registrierungen verfolgen, damit sie ordnungsgemäß bei Beendigung aufgehoben werden können. Wird intern verwendet, ATL  
   
-## Hinweise  
- [\_ATL\_WIN\_MODULE](../Topic/_ATL_WIN_MODULE.md) wird als Typedef von `_ATL_WIN_MODULE70` definiert.  
+## <a name="remarks"></a>Hinweise  
+ [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) ist definiert als Typedef von `_ATL_WIN_MODULE70`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen](../../atl/reference/atl-structures.md)
+
+
+
+
+
+

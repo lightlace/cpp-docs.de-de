@@ -1,43 +1,59 @@
 ---
-title: "Linkertoolfehler LNK2022 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2022"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2022"
+title: Linkertoolfehler Lnk2022 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK2022
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK2022
 ms.assetid: d2128c73-dde3-4b8e-a9b2-0a153acefb3b
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Linkertoolfehler LNK2022
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 91fb85679fd6c66bc97974912a2de688f494d5e9
+ms.lasthandoff: 02/24/2017
 
-Fehler bei Metadatenoperation \(HRESULT\): Fehlermeldung  
+---
+# <a name="linker-tools-error-lnk2022"></a>Linkertoolfehler LNK2022
+Fehler bei der Metadatenoperation (HRESULT): Error_message  
   
- Der Linker hat beim Zusammenführen von Metadaten einen Fehler ermittelt.  Um eine erfolgreiche Verknüpfung zu gewährleisten, müssen die Metadatenfehler aufgelöst werden.  
+ Der Linker hat einen Fehler beim Zusammenführen von Metadaten. Die Metadatenfehler müssen behoben werden, um erfolgreich zu verknüpfen.  
   
- In diesem Fall können Sie eine Fehlerdiagnose durchführen, indem Sie **ildasm –tokens** für die Objektdateien auszuführen. Suchen Sie nach den Typen, deren Token in `error_message` aufgeführt sind, und vergleichen Sie diese.  In den Metadaten sind zwei verschiedene Typen mit demselben Namen ungültig – auch dann, wenn lediglich das Layouttyp\-Attribut verschieden ist.  
+ Eine Möglichkeit zur diagnose dieses Problems ist die Ausführung **Ildasm – Tokens** auf die Objektdateien welche haben die Token aufgeführt, `error_message`, und suchen Sie nach unterschieden.  In den Metadaten zwei verschiedene Typen mit demselben Namen ist ungültig, auch wenn nur Layouttyp-Attribut unterscheidet.  
   
- LNK2022 wird z. B. ausgegeben, wenn ein Typ \(z. B. eine Struktur\) in mehreren Kompiliereinheiten mit demselben Namen vorhanden ist, die jedoch miteinander in Konflikt stehende Definitionen enthalten, und wenn Sie die Kompilierung mit [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) durchführen.  Stellen Sie in diesem Fall sicher, dass der Typ in allen Kompiliereinheiten identisch definiert ist.  Der Typname wird in `error_message` aufgeführt.  
+ Eine Ursache für LNK2022 ist, wenn ein Typ (z. B. eine Struktur) in mehrere Kompiliereinheit mit dem gleichen Namen, jedoch mit in Konflikt stehende Definitionen vorhanden ist und beim Kompilieren mit [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  In diesem Fall stellen Sie sicher, dass der Typ in jeder Kompiliereinheit identisch ist.  Der Typname steht in `error_message`.  
   
- Eine weitere mögliche Ursache für LNK2022 besteht darin, dass vom Linker eine Metadatendatei an einem Speicherort erkannt wird, der sich von dem Speicherort unterscheidet, der für den Compiler angegeben wurde \(mit [\#using](../../preprocessor/hash-using-directive-cpp.md)\).  Stellen Sie sicher, dass die Metadatendatei \(.dll oder .netmodule\) im selben Speicherort befindet, wenn sie den Linker übergeben wird, da es war, als es den Compiler.  
+ Eine weitere mögliche Ursache für LNK2022 wird der Linker eine Metadatendatei an einem anderen Speicherort für den Compiler angegeben wurde (mit [#using](../../preprocessor/hash-using-directive-cpp.md) ). Stellen Sie sicher, dass die Metadatendatei (.dll oder .netmodule) am gleichen Speicherort, an den Linker übergeben wird, wie bei der Übergabe an den Compiler.  
   
- Wenn Sie eine ATL\-Anwendung erstellen und in wenigstens einer Kompiliereinheit [\_ATL\_MIXED](../Topic/_ATL_MIXED.md) verwenden, müssen Sie [\_ATL\_MIXED](../Topic/_ATL_MIXED.md) in jeder Kompiliereinheit verwenden.  
+ Beim Erstellen einer ATL-Anwendung, die Verwendung von [_ATL_MIXED](http://msdn.microsoft.com/Library/11b59a83-7098-43e2-9f7b-408299930966) ist in jeder Kompiliereinheit erforderlich, wenn er in mindestens einer verwendet wird.  
   
-## Beispiel  
- Im folgenden Beispiel wird ein leerer Typ definiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird einen leeren Typ definiert.  
   
 ```  
 // LNK2022_a.cpp  
@@ -45,10 +61,10 @@ Fehler bei Metadatenoperation \(HRESULT\): Fehlermeldung
 public ref class Test {};  
 ```  
   
-## Beispiel  
- In diesem Beispiel wird verdeutlicht, dass zwei Quellcodedateien nicht verknüpft werden können, wenn diese Dateien Typen mit gleichem Namen aber verschiedenen Definitionen enthalten.  
+## <a name="example"></a>Beispiel  
+ Dieses Beispiel zeigt, dass zwei Quellcodedateien verknüpft werden können, die den gleichen Namen, aber unterschiedliche Definitionen enthalten.  
   
- Im folgenden Beispiel wird LNK2022 generiert.  
+ Im folgende Beispiel wird LNK2022 generiert.  
   
 ```  
 // LNK2022_b.cpp  

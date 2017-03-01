@@ -1,77 +1,182 @@
 ---
-title: "CDCRenderTarget-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxrendertarget/CDCRenderTarget"
-  - "CDCRenderTarget"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDCRenderTarget-Klasse"
+title: CDCRenderTarget-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxrendertarget/CDCRenderTarget
+- CDCRenderTarget
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDCRenderTarget class
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# CDCRenderTarget-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 2bbd62b06f4287904fce49f8a6ce9900476b07c0
+ms.lasthandoff: 02/24/2017
 
-Ein Wrapper für "ID2D1DCRenderTarget".  
+---
+# <a name="cdcrendertarget-class"></a>CDCRenderTarget-Klasse
+Ein Wrapper für ID2D1DCRenderTarget.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDCRenderTarget : public CRenderTarget;  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CDCRenderTarget::CDCRenderTarget](../Topic/CDCRenderTarget::CDCRenderTarget.md)|Erstellt ein CDCRenderTarget\-Objekt.|  
+|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Erstellt einen CDCRenderTarget-Objekt.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CDCRenderTarget::Attach](../Topic/CDCRenderTarget::Attach.md)|Hängt die vorhandene Renderingzielschnittstelle an das Objekt an|  
-|[CDCRenderTarget::BindDC](../Topic/CDCRenderTarget::BindDC.md)|Bindet das Renderingziel an den Gerätekontext, an den es Zeichenbefehle ausgibt|  
-|[CDCRenderTarget::Create](../Topic/CDCRenderTarget::Create.md)|Erstellt einen CDCRenderTarget.|  
-|[CDCRenderTarget::Detach](../Topic/CDCRenderTarget::Detach.md)|Trennt die Renderingzielschnittstelle vom Objekt|  
-|[CDCRenderTarget::GetDCRenderTarget](../Topic/CDCRenderTarget::GetDCRenderTarget.md)|Gibt die ID2D1DCRenderTarget\-Schnittstelle zurück|  
+|[CDCRenderTarget::Attach](#attach)|Hängt die vorhandene Ziel-Schnittstelle für das Objekt zu rendern|  
+|[CDCRenderTarget::BindDC](#binddc)|Bindet das Renderingziel an den Gerätekontext, den es Zeichenbefehle ausgibt|  
+|[CDCRenderTarget::Create](#create)|Erstellt einen CDCRenderTarget.|  
+|[CDCRenderTarget::Detach](#detach)|Trennt die Renderingzielschnittstelle vom Objekt|  
+|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|Gibt die ID2D1DCRenderTarget-Schnittstelle|  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CDCRenderTarget::operator ID2D1DCRenderTarget\*](../Topic/CDCRenderTarget::operator%20ID2D1DCRenderTarget*.md)|Gibt die ID2D1DCRenderTarget\-Schnittstelle zurück|  
+|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Gibt die ID2D1DCRenderTarget-Schnittstelle|  
   
-### Geschützte Datenmember  
+### <a name="protected-data-members"></a>Geschützte Datenmember  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CDCRenderTarget::m\_pDCRenderTarget](../Topic/CDCRenderTarget::m_pDCRenderTarget.md)|Ein Zeiger auf ein ID2D1DCRenderTarget\-Objekt.|  
+|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Ein Zeiger auf ein ID2D1DCRenderTarget-Objekt.|  
   
-## Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
   
  [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-## Siehe auch  
+##  <a name="a-nameattacha--cdcrendertargetattach"></a><a name="attach"></a>CDCRenderTarget::Attach  
+ Hängt die vorhandene Ziel-Schnittstelle für das Objekt zu rendern  
+  
+```  
+void Attach(ID2D1DCRenderTarget* pTarget);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `pTarget`  
+ Vorhandene Renderingzielschnittstelle. NULL darf nicht sein  
+  
+##  <a name="a-namebinddca--cdcrendertargetbinddc"></a><a name="binddc"></a>CDCRenderTarget::BindDC  
+ Bindet das Renderingziel an den Gerätekontext, den es Zeichenbefehle ausgibt  
+  
+```  
+BOOL BindDC(
+    const CDC& dc,  
+    const CRect& rect);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `dc`  
+ Der Gerätekontext, an den das Renderingziel Zeichenbefehle ausgibt  
+  
+ `rect`  
+ Die Dimensionen des Handles für einen Gerätekontext (HDC) an das Renderziel gebunden ist  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Wenn die Methode erfolgreich ist, wird TRUE zurückgegeben. Andernfalls wird FALSE zurückgegeben.  
+  
+##  <a name="a-namecdcrendertargeta--cdcrendertargetcdcrendertarget"></a><a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
+ Erstellt einen CDCRenderTarget-Objekt.  
+  
+```  
+CDCRenderTarget();
+```  
+  
+##  <a name="a-namecreatea--cdcrendertargetcreate"></a><a name="create"></a>CDCRenderTarget::Create  
+ Erstellt einen CDCRenderTarget.  
+  
+```  
+BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `props`  
+ Den Renderingmodus, Pixelformat, Remotingoptionen, DPI-Informationen und die minimale DirectX-Unterstützung für Hardwarerendering erforderlich.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Wenn die Methode erfolgreich ist, wird TRUE zurückgegeben. Andernfalls wird FALSE zurückgegeben.  
+  
+##  <a name="a-namedetacha--cdcrendertargetdetach"></a><a name="detach"></a>CDCRenderTarget::Detach  
+ Trennt die Renderingzielschnittstelle vom Objekt  
+  
+```  
+ID2D1DCRenderTarget* Detach();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf getrennte Renderingzielschnittstelle.  
+  
+##  <a name="a-namegetdcrendertargeta--cdcrendertargetgetdcrendertarget"></a><a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
+ Gibt die ID2D1DCRenderTarget-Schnittstelle  
+  
+```  
+ID2D1DCRenderTarget* GetDCRenderTarget();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf eine ID2D1DCRenderTarget-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
+  
+##  <a name="a-namempdcrendertargeta--cdcrendertargetmpdcrendertarget"></a><a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
+ Ein Zeiger auf ein ID2D1DCRenderTarget-Objekt.  
+  
+```  
+ID2D1DCRenderTarget* m_pDCRenderTarget;  
+```  
+  
+##  <a name="a-nameoperatorid2d1dcrendertargetstara--cdcrendertargetoperator-id2d1dcrendertarget"></a><a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
+ Gibt die ID2D1DCRenderTarget-Schnittstelle  
+  
+```  
+operator ID2D1DCRenderTarget*();
+```   
+  
+### <a name="return-value"></a>Rückgabewert  
+ Zeiger auf eine ID2D1DCRenderTarget-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
+  
+## <a name="see-also"></a>Siehe auch  
  [Klassen](../../mfc/reference/mfc-classes.md)
+

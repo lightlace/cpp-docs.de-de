@@ -1,97 +1,115 @@
 ---
-title: "ATL-Steuerelement-Assistent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.control.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL-Steuerelement-Assistent"
-  - "ATL-Projekte, Hinzufügen von Steuerelementen"
-  - "Steuerelemente [ATL], Hinzufügen zu Projekten"
+title: ATL-Steuerelement-Assistenten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.control.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL projects, adding controls
+- controls [ATL], adding to projects
+- ATL Control Wizard
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# ATL-Steuerelement-Assistent
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
+ms.openlocfilehash: 586ac14878ccd6908d025d706b72f3c9856d1b39
+ms.lasthandoff: 02/24/2017
 
-Fügt ein ATL\-Steuerelement in ein ATL\-Projekt \(oder in ein MFC\-Projekt mit ATL\-Unterstützung\) ein.  Mithilfe dieses Assistenten fügen Sie eine von drei Steuerelementarten ein:  
+---
+# <a name="atl-control-wizard"></a>ATL-Steuerelement-Assistent
+Fügt ein ATL-Projekt (oder einem MFC-Projekt mit ATL-Unterstützung) ein ATL-Steuerelement. Mit diesem Assistenten können Sie eine der drei Arten von Steuerelementen einfügen:  
   
--   Standardsteuerelement  
+-   Standard-Steuerelement  
   
--   Zusammengesetztes Steuerelement  
+-   Zusammengesetzte Steuerelemente  
   
--   DHTML\-Steuerelement  
+-   DHTML-Steuerelement  
   
- Zusätzlich können Sie ein Minimal\-Steuerelement implementieren, indem Sie die Schnittstellen aus der Liste der [Schnittstellen](../../atl/reference/interfaces-atl-control-wizard.md) entfernen, die standardmäßig für die Steuerelemente bereitgestellt und in den meisten Containern geöffnet werden.  Die Schnittstellen, die für das Steuerelement unterstützt werden sollen, können auf der Seite **Schnittstellen** des Assistenten festgelegt werden.  
+ Sie können angeben ein minimal-Steuerelement, entfernen die Schnittstellen aus der [Schnittstellen](../../atl/reference/interfaces-atl-control-wizard.md) Liste, die standardmäßig für die Steuerelemente in den meisten Containern geöffnet bereitgestellt werden. Sie können festlegen, dass die Schnittstellen, die für das Steuerelement unterstützt werden sollen die **Schnittstellen** Seite des Assistenten.  
   
-## Hinweise  
- Das von diesem Assistenten erstellte Registrierungsskript registriert die COM\-Komponenten unter HKEY\_CURRENT\_USER und nicht unter HKEY\_LOCAL\_MACHINE.  Um dieses Verhalten zu ändern, legen Sie die Option **Komponente für alle Benutzer registrieren** des ATL\-Assistenten fest.  
+## <a name="remarks"></a>Hinweise  
+ Von diesem Assistenten erstellte Registrierungsskript registriert seine COM-Komponenten unter HKEY_CURRENT_USER anstelle von HKEY_LOCAL_MACHINE. Um dieses Verhalten zu ändern, legen Sie die **Register-Komponente für alle Benutzer** Option des ATL-Assistenten.  
   
-## Namen  
- Geben Sie die Namen für Objekt, Schnittstelle und Klassen an, die dem Projekt hinzugefügt werden sollen.  Mit Ausnahme von **Kurzname** können alle weiteren Felder unabhängig voneinander geändert werden.  Wenn Sie den Eintrag unter **Kurzer Name** ändern, wirkt sich die Änderung auf die Namen in allen anderen Feldern auf dieser Seite aus.  Wenn Sie den Namen unter **Coclass** im COM\-Abschnitt ändern, wirkt sich die Änderung auf die Felder **Typ** aus, der Name unter **Schnittstelle** und **Programm\-ID** bleibt jedoch unverändert.  Das Namenssystem ist so ausgelegt, dass alle Namen während der Entwicklung des Steuerelements leicht identifizierbar sind.  
+## <a name="names"></a>Namen  
+ Geben Sie den Namen für das Objekt, die Schnittstelle und die Klassen, die dem Projekt hinzugefügt werden. Mit Ausnahme von **Kurznamen**, alle weiteren Felder unabhängig voneinander geändert werden können. Wenn Sie den Text ändern **Kurznamen**, wirkt sich die Änderung auf die Namen in allen anderen Feldern auf dieser Seite. Wenn Sie ändern die **Co-Klasse** Name im COM-Abschnitt der Änderung wirkt sich die **Typ** Feld jedoch **Schnittstelle** Name und **ProgID** nicht ändern. Dieses Namenssystem ist so ausgelegt, dass alle Namen leicht identifizierbaren für Sie bei der Entwicklung Ihrer Kontrolle.  
   
 > [!NOTE]
->  **Coclass** kann nur bei nicht attributierten Steuerelementen bearbeitet werden.  Verfügt das Projekt über Attribute, kann **Coclass** nicht bearbeitet werden.  
+>  **Coclass** kann nur bei nicht attributierten Steuerelementen bearbeitet werden. Wenn das Projekt über Attribute, kann nicht bearbeitet **Co-Klasse**.  
   
-### C\+\+  
- Liefert Informationen über die C\+\+\-Klasse, die zur Implementierung des Objekts erstellt wurde.  
+### <a name="c"></a>C++  
+ Enthält Informationen über die C++-Klasse erstellt, um das Objekt zu implementieren.  
   
- **Kurzer Name**  
- Legt den abgekürzten Namen für das Objekt fest.  Der hier angegebene Name bestimmt den Klassennamen sowie den unter **Coclass** angegebenen Namen, die Dateinamen \(.cpp und .H\), den Schnittstellennamen, und die Namen der **Typen** sowie die ProgID, sofern Sie diese Felder nicht einzeln ändern.  
+ **Kurzname**  
+ Legt den abgekürzten Namen für das Objekt. Der Name, den Sie bestimmt die Klasse und **Coclass** Namen, die Datei (. CPP und. (H) Namen, der Name der Schnittstelle, und die **Typ** Namen, sofern Sie diese Felder einzeln ändern.  
   
  **Klasse**  
- Legt den Namen der Klasse fest, durch die das Objekt implementiert wird.  Dieser Name basiert auf dem unter **Kurzer Name** angegebenen Namen. Allerdings wird der Buchstabe C als typisches Präfix für einen Klassennamen vorangestellt.  
+ Legt den Namen der Klasse, die das Objekt implementiert. Dieser Name basiert auf der Name, den Sie in **Kurznamen**, 'C', das Standard-Präfix für einen Klassennamen vorangestellt.  
   
- **.h\-Datei**  
- Legt den Namen der Headerdatei für die neue Objektklasse fest.  Dieser Name basiert standardmäßig auf dem unter **Kurzer Name** angegebenen Namen.  Klicken Sie auf die Schaltfläche mit den Auslassungspunkten \(...\), um den Dateinamen am gewünschten Speicherort zu speichern oder um die Klassendeklaration an eine vorhandene Datei anzufügen.  Wenn Sie eine vorhandene Datei auswählen, wird sie vom Assistenten erst am ausgewählten Speicherort gespeichert, nachdem Sie auf **Fertig stellen** geklickt haben.  
+ **.h-Datei**  
+ Legt den Namen der Headerdatei für die neue Klasse des Objekts. Dieser Name basiert standardmäßig auf dem Namen, den Sie in bereitstellen **Kurznamen**. Klicken Sie auf die Schaltfläche, um den Dateinamen am Speicherort Ihrer Wahl speichern oder die Klassendeklaration an eine vorhandene Datei anfügen. Wenn Sie eine vorhandene Datei auswählen, der Assistent wird gespeichert, an den ausgewählten Speicherort bis auf **Fertig stellen**.  
   
- Der Assistent ist nicht in der Lage, Dateien zu überschreiben.  Wenn Sie den Namen einer vorhandenen Datei auswählen und dann auf **Fertig stellen** klicken, wird vom Assistenten eine Bestätigung angefordert, die Klassendeklaration an den Inhalt der Datei anzufügen.  Klicken Sie auf **Ja**, um die Datei anzufügen, und klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.  
+ Der Assistent überschrieben eine Datei nicht. Wenn Sie den Namen einer vorhandenen Datei, auswählen, wenn Sie auf **Fertig stellen**, die vom Assistenten aufgefordert, anzugeben, ob die Klassendeklaration an den Inhalt der Datei angefügt werden sollen. Klicken Sie auf **Ja** anzufügenden Datei ein, klicken Sie auf **keine** zum Assistenten zurückzukehren und einen anderen Dateinamen angeben.  
   
- **.cpp\-Datei**  
- Legt für die neue Objektklasse den Namen der Implementierungsdatei fest.  Dieser Name basiert standardmäßig auf dem unter **Kurzer Name** angegebenen Namen.  Klicken Sie auf die Schaltfläche mit den Auslassungspunkten \(...\), um den Dateinamen am gewünschten Speicherort zu speichern.  Die Datei wird erst am ausgewählten Speicherort gespeichert, wenn Sie im Assistenten auf **Fertig stellen** klicken.  
+ **CPP-Datei**  
+ Legt den Namen der Implementierungsdatei für die neue Klasse des Objekts. Dieser Name basiert standardmäßig auf dem Namen, den Sie in bereitstellen **Kurznamen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am Speicherort Ihrer Wahl zu speichern. Die Datei wird nicht am ausgewählten Speicherort gespeichert, bis Sie auf **Fertig stellen** im Assistenten.  
   
- Der Assistent ist nicht in der Lage, Dateien zu überschreiben.  Wenn Sie den Namen einer vorhandenen Datei auswählen und dann auf **Fertig stellen** klicken, werden Sie vom Assistenten gefragt, ob die Klassenimplementierung an den Inhalt der Datei angefügt werden soll.  Klicken Sie auf **Ja**, um die Datei anzufügen, und klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.  
+ Der Assistent überschrieben eine Datei nicht. Wenn Sie den Namen einer vorhandenen Datei, auswählen, wenn Sie auf **Fertig stellen**, die vom Assistenten aufgefordert, anzugeben, ob die Implementierung der Klasse an den Inhalt der Datei angefügt werden sollen. Klicken Sie auf **Ja** anzufügenden Datei ein, klicken Sie auf **keine** zum Assistenten zurückzukehren und einen anderen Dateinamen angeben.  
   
  **Attributiert**  
- Gibt an, ob das Objekt Attribute verwendet.  Wenn Sie einem attributierten ATL\-Projekt ein Objekt hinzufügen, ist diese Option aktiviert und kann nicht geändert werden.  Dies bedeutet, dass einem Projekt, das mit Attributunterstützung erstellt wurde, nur attributierte Objekte hinzugefügt werden können.  
+ Gibt an, ob das Objekt Attribute verwendet. Wenn Sie einem attributierten ATL-Projekt ein Objekt hinzufügen, ist diese Option aktiviert und nicht verfügbar ist, ändern. Also können Sie nur attributierte Objekte zu einem Projekt mit Attribut-Unterstützung hinzufügen.  
   
- Ein attributiertes Objekt kann lediglich einem ATL\-Projekt hinzugefügt werden, das Attribute verwendet.  Wenn Sie diese Option für ein ATL\-Projekt auswählen, das nicht über Attributunterstützung verfügt, werden Sie vom Assistenten gefragt, ob dem Projekt Attributunterstützung hinzugefügt werden soll.  
+ Sie können ein attributiertes Objekt nur ein ATL-Projekt hinzufügen, die Attribute verwendet. Wenn Sie diese Option für ein ATL-Projekt, die kein Attribut unterstützen verfügt auswählen, werden Sie vom Assistenten aufgefordert, anzugeben, ob Sie Attribut-Unterstützung zum Projekt hinzufügen möchten.  
   
- Alle Objekte, die nach Auswahl dieser Option hinzugefügt wurden, werden automatisch als attributiert konfiguriert \(das Kontrollkästchen ist aktiviert\).  Sie können das Kontrollkästchen deaktivieren, um ein Objekt hinzuzufügen, das keine Attribute verwendet.  
+ Standardmäßig werden alle Objekte, die Sie hinzufügen, nachdem Sie diese Option festlegen als attributierte festgelegt (das Kontrollkästchen ist aktiviert). Sie können dieses Kontrollkästchen, um ein Objekt hinzuzufügen, die Attribute nicht deaktivieren.  
   
- Weitere Informationen finden Sie unter [Anwendungseinstellungen, ATL\-Projekt\-Assistent](../../atl/reference/application-settings-atl-project-wizard.md) und [Grundlegende Funktionsweise von Attributen](../../windows/basic-mechanics-of-attributes.md).  
+ Finden Sie unter [Application Settings, ATL-Projekt-Assistent](../../atl/reference/application-settings-atl-project-wizard.md) und [grundlegende Funktionsweise von Attributen](../../windows/basic-mechanics-of-attributes.md) Weitere Informationen.  
   
-### COM  
- Bietet Informationen über die COM\-Funktionen des Objekts.  
+### <a name="com"></a>COM  
+ Enthält Informationen über die COM-Funktionalität für das Objekt.  
   
- **Coclass**  
- Legt den Namen der Komponentenklasse fest. Sie enthält eine Liste der vom Objekt unterstützten Schnittstellen.  
+ **Co-Klasse**  
+ Legt den Namen der Komponente-Klasse enthält eine Liste von Schnittstellen, die vom Objekt unterstützt wird.  
   
 > [!NOTE]
->  Wenn Sie das Projekt unter Verwendung von Attributen erstellen oder auf der entsprechenden Seite dieses Assistenten angeben, dass das Steuerelement Attribute verwendet, können Sie diese Option nicht ändern, da das **coclass**\-Attribut nicht in ATL enthalten ist.  
+>  Wenn Sie das Projekt unter Verwendung von Attributen erstellen oder auf dieser Seite des Assistenten angeben, dass das Steuerelement Attribute verwendet, können Sie diese Option nicht ändern, da ATL nicht enthalten ist die **Coclass** Attribut.  
   
- **Interface**  
- Legt den Namen der Schnittstelle für das Objekt fest.  Dem Schnittstellennamen wird standardmäßig der Buchstabe "I" vorangestellt.  
+ **Benutzeroberfläche**  
+ Legt den Namen der Schnittstelle für das Objekt. Standardmäßig wird eine Schnittstelle namens "I" vorangestellt.  
   
- **Text \[Type\]**  
- Legt die in der Registrierung verwendete Objektbeschreibung fest.  
+ **Typ**  
+ Legt die Beschreibung des Objekts, die in der Registrierung angezeigt wird  
   
- **ProgID**  
- Legt den Namen fest, den Container anstelle der CLSID des Objekts verwenden können.  Dieses Feld wird nicht automatisch aufgefüllt.  Wenn Sie dieses Feld nicht manuell auffüllen, steht das Steuerelement möglicherweise anderen Tools nicht zur Verfügung.  ActiveX\-Steuerelemente, die ohne `ProgID` generiert werden, sind z. B. im Dialogfeld **ActiveX\-Steuerelement einfügen** nicht verfügbar.  Weitere Informationen über das Dialogfeld finden Sie unter [Dialogfeld "ActiveX\-Steuerelement einfügen"](../../mfc/insert-activex-control-dialog-box.md).  
+ **Programm-ID**  
+ Legt den Namen, den Container anstelle der CLSID des Objekts verwendet werden können. Dieses Feld wird nicht automatisch aufgefüllt. Wenn Sie dieses Feld nicht manuell auffüllen, kann das Steuerelement nicht mit anderen Tools verfügbar. Z. B. ActiveX-Steuerelemente, die generiert werden, ohne eine `ProgID` sind nicht verfügbar in der **ActiveX-Steuerelement einfügen** Dialogfeld. Weitere Informationen über das Dialogfeld finden Sie unter [ActiveX-Steuerelement-Dialogfeld einfügen](../../windows/insert-activex-control-dialog-box.md).  
   
-## Siehe auch  
- [ATL Control](../../atl/reference/adding-an-atl-control.md)   
- [Adding Functionality to the Composite Control](../../atl/adding-functionality-to-the-composite-control.md)   
- [Fundamentals of ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md)
+## <a name="see-also"></a>Siehe auch  
+ [ATL-Steuerelement](../../atl/reference/adding-an-atl-control.md)   
+ [Hinzufügen von Funktionalität zum zusammengesetzten Steuerelement](../../atl/adding-functionality-to-the-composite-control.md)   
+ [Grundlagen von ATL-COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)
+
+

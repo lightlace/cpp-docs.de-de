@@ -1,92 +1,109 @@
 ---
-title: "ATL-Makros | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, Makros"
-  - "Makros, ATL"
+title: ATL-Makros | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL, macros
+- macros, ATL
 ms.assetid: 788bd803-e7dc-4dc5-9e8d-31649471415b
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# ATL-Makros
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: 04df63d36c1ac8dbcb93c3f9503d97decad994f8
+ms.lasthandoff: 02/24/2017
 
-Um ein ATL\-Makro nach Kategorie verwendet, finden Sie unter den folgenden Themen.  
+---
+# <a name="atl-macros"></a>ATL-Makros
+Ein ATL-Makros nach Kategorie finden Sie unter den folgenden Themen.  
   
- [Aggregation und Makro Class Factory](../../atl/reference/aggregation-and-class-factory-macros.md)  
- Erstellen Sie Methoden zum Steuern von Aggregation und des Deklarierens von Class Factory bereit.  
+ [Aggregation und Factory-Makros](../../atl/reference/aggregation-and-class-factory-macros.md)  
+ Ermöglichen Sie das Steuern der Aggregation und Klassenfactorys zu deklarieren.  
   
- [Kategorien\-Makros](../../atl/reference/category-macros.md)  
- Definieren Sie Kategorienzuordnungen.  
+ [Kategorie-Makros](../../atl/reference/category-macros.md)  
+ Definieren Sie die Kategorie zugeordnet.  
   
- [COM\-Zuordnungs\-Makros](../../atl/reference/com-map-macros.md)  
- Definieren Sie COM\-Schnittstellen\-Zuordnungen.  
+ [Makros für COM-Zuordnung](../../atl/reference/com-map-macros.md)  
+ Definieren Sie die COM-Schnittstelle zugeordnet.  
   
- [Compileroptions\-Makros](../../atl/reference/compiler-options-macros.md)  
- Steuerbestimmte Compilerfunktionen.  
+ [Compileroptionen Makros](../../atl/reference/compiler-options-macros.md)  
+ Bestimmten Compiler-Funktionen zu steuern.  
   
- [Makros des zusammengesetzten Steuerelements](../../atl/reference/composite-control-macros.md)  
- Definieren Sie Ereignissenkenzuordnungen und Einträge.  
+ [Makros zusammengesetzter Steuerelemente](../../atl/reference/composite-control-macros.md)  
+ Definieren Sie ereignissenkenzuordnungen und Einträge.  
   
- [Verbindungspunkt\-Makros](../../atl/reference/connection-point-macros.md)  
- Definieren Sie Verbindungspunktzuordnungen und \-Einträge.  
+ [Connection Point-Makros](../../atl/reference/connection-point-macros.md)  
+ Connection Point-Karten und Einträge zu definieren.  
   
- [Debuggen und Fehlerberichts\-Makros](../../atl/reference/debugging-and-error-reporting-macros.md)  
- Erstellen Sie das nützliche Debugging bereit und Trace nutzen Funktionen aus.  
+ [Debuggen und die Fehlerberichterstattung Makros](../../atl/reference/debugging-and-error-reporting-macros.md)  
+ Geben Sie nützlich, Debuggen und Trace-Funktionen.  
   
- [Ausnahmebehandlungs\-Makros](../../atl/reference/exception-handling-macros.md)  
- Planen Sie Unterstützung für Ausnahmebehandlung.  
+ [Behandlung von Ausnahmemakros](../../atl/reference/exception-handling-macros.md)  
+ Bieten Sie Unterstützung für Ausnahmebehandlung.  
   
- [Meldungszuordnungs\-Makros](../../atl/reference/message-map-macros-atl.md)  
- Definieren Sie Meldungszuordnungen und Einträge.  
+ [Meldungszuordnungsmakros](../../atl/reference/message-map-macros-atl.md)  
+ Definieren Sie meldungszuordnungen und Einträge.  
   
- [Objektzuordnungs\-Makros](../../atl/reference/object-map-macros.md)  
- Definieren Sie Objektzuordnungen und Einträge.  
+ [Map-Makros](../../atl/reference/object-map-macros.md)  
+ Definieren Sie Objekt-Zuordnungen und Einträge.  
   
- [Planen Sie Status\-Makros ein](../../atl/reference/object-status-macros.md)  
- Satzflags, die ActiveX\-Steuerelemente gehören.  
+ [Status-Makros](../../atl/reference/object-status-macros.md)  
+ ActiveX-Steuerelemente zur Flags festgelegt.  
   
- [Eigenschaft\-Zuordnungs\-Makros](../../atl/reference/property-map-macros.md)  
- Definieren Sie Eigenschaftzuordnungen und \-Einträge.  
+ [Eigenschaftenmakros](../../atl/reference/property-map-macros.md)  
+ Definieren Sie eigenschaftenzuordnungen und Einträge.  
   
- [Registrierungs\-Daten\-Exchange\-Makros](../../atl/reference/registry-data-exchange-macros.md)  
- Führen Sie Registrierungs\-Daten\-Exchange\-Vorgänge aus.  
+ [Registrierung Data Exchange-Makros](../../atl/reference/registry-data-exchange-macros.md)  
+ Registrierung Datenaustausch Vorgänge ausführen.  
   
- [Registrierungs\-Makros](../../atl/reference/registry-macros.md)  
- Definieren Sie wichtige und alle Registrierungsfunktionen.  
+ [Registrierung von Makros](../../atl/reference/registry-macros.md)  
+ Definieren Sie nützliche Art Bibliothek und Registrierung Funktionen.  
   
- [Halten Sie Zuordnungs\-Makros aus](../../atl/reference/service-map-macros.md)  
- Definieren Sie Dienstzuordnungen und \-Einträge.  
+ [Dienst-Map-Makros](../../atl/reference/service-map-macros.md)  
+ Definieren Sie dienstzuordnungen und Einträge.  
   
- [Snap\-Inobjekt\-Makros](../../atl/reference/snap-in-object-macros.md)  
- Planen Sie Unterstützung für Snap\-Inerweiterungen.  
+ [Snap-in-Makros](../../atl/reference/snap-in-object-macros.md)  
+ Snap-in-Erweiterungen unterstützen.  
   
- [Makros für Zeichenfolgenkonvertierung](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md)  
- Erstellen Sie Zeichenkonvertierungsfunktionen bereit.  
+ [Zeichenfolgenkonvertierungsmakros](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)  
+ Stellen Sie Zeichenfolge Funktionen für die Konvertierung.  
   
- [Fensterklassen\-Makros](../../atl/reference/window-class-macros.md)  
- Definieren Sie Fensterklassenhilfsprogramme.  
+ [Fenster-Makros](../../atl/reference/window-class-macros.md)  
+ Dienstprogramme für Fenster-Klasse zu definieren.  
   
- [Windows\-Meldungs\-Makros](../../atl/reference/windows-messages-macros.md)  
- vorwärts Fenstermeldungen.  
+ [Windows-Nachrichten Makros](../../atl/reference/windows-messages-macros.md)  
+ Weiterleiten Sie Fensternachrichten.  
   
-## Siehe auch  
- [ATL Macros Alphabetical Reference](../Topic/ATL%20Macros%20Alphabetical%20Reference.md)   
- [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md)   
+## <a name="see-also"></a>Siehe auch  
+
+ [ATL-COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)   
  [Funktionen](../../atl/reference/atl-functions.md)   
- [Global Variables](../../atl/reference/atl-global-variables.md)   
+ [Globale Variablen](../../atl/reference/atl-global-variables.md)   
  [Strukturen](../../atl/reference/atl-structures.md)   
- [Typedefs](../../atl/reference/atl-typedefs.md)   
+ [Typdefinitionen](../../atl/reference/atl-typedefs.md)   
  [Klassen](../../atl/reference/atl-classes.md)
+

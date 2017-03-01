@@ -1,67 +1,122 @@
 ---
-title: "Win32ThreadTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "Win32ThreadTraits"
-  - "ATL::Win32ThreadTraits"
-  - "ATL.Win32ThreadTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Threading [ATL], creation functions"
-  - "Threading [ATL], Windows threads"
-  - "Win32ThreadTraits class"
+title: Klasse Win32ThreadTraits | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- Win32ThreadTraits
+- ATL::Win32ThreadTraits
+- ATL.Win32ThreadTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- threading [ATL], Windows threads
+- threading [ATL], creation functions
+- Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# Win32ThreadTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: fa331e05d647b5e2b9a0a76581e75d6b40366f95
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse stellt die Erstellungsfunktion für einen Windows\-Thread bereit.  Verwenden Sie diese Klasse, wenn der Thread nicht CRT\-Funktionen verwendet.  
+---
+# <a name="win32threadtraits-class"></a>Win32ThreadTraits-Klasse
+Diese Klasse stellt die Funktion für ein Windows-Thread. Verwenden Sie diese Klasse, wenn der Thread keine CRT-Funktionen verwenden möchten.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen nicht verwendet werden, die in der Windows Runtime ausführen.  
+>  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+class Win32ThreadTraits
 ```  
   
-class Win32ThreadTraits  
+## <a name="members"></a>Mitglieder  
   
-```  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-## Mitglieder  
-  
-### Öffentliche Methoden  
-  
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[Win32ThreadTraits::CreateThread](../Topic/Win32ThreadTraits::CreateThread.md)|\(Statisch\) rufen Sie diese Funktion auf, um einen Thread zu erstellen, der CRT\-Funktionen nicht verwenden soll.|  
+|[Win32ThreadTraits::CreateThread](#createthread)|(Statisch) Rufen Sie diese Funktion, um einen Thread zu erstellen, der keine CRT-Funktionen verwenden sollten.|  
   
-## Hinweise  
- Threadmerkmale sind Klassen, die eine Erstellungsfunktion für einen bestimmten Typ Thread bereitstellen.  Die Erstellungsfunktion verfügt über die gleiche Signatur und Semantik wie die Funktion Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453).  
+## <a name="remarks"></a>Hinweise  
+ Thread-Merkmale sind Klassen, die eine Funktion für einen bestimmten Thread zu ermöglichen. Die Funktion verfügt über die gleiche Signatur und Semantik wie die Windows- [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Funktion.  
   
- Threadmerkmale werden durch die folgenden Klassen:  
+ Thread-Merkmale werden durch die folgenden Klassen verwendet:  
   
--   [CThreadPool](../../atl/reference/cthreadpool-class.md)  
+- [CThreadPool](../../atl/reference/cthreadpool-class.md)  
   
--   [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
+- [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
   
- Wenn der Thread CRT\-Funktionen verwendet, verwenden Sie stattdessen [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md).  
+ Wenn der Thread CRT-Funktionen verwenden, verwenden Sie [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) stattdessen.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-## Siehe auch  
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namecreatethreada--win32threadtraitscreatethread"></a><a name="createthread"></a>Win32ThreadTraits::CreateThread  
+ Rufen Sie diese Funktion, um einen Thread zu erstellen, der keine CRT-Funktionen verwenden sollten.  
+  
+```
+static HANDLE CreateThread(
+    LPSECURITY_ATTRIBUTES lpsa,
+    DWORD dwStackSize,
+    LPTHREAD_START_ROUTINE pfnThreadProc,
+    void* pvParam,
+    DWORD dwCreationFlags,
+    DWORD* pdwThreadId) throw();
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `lpsa`  
+ Die Sicherheitsattribute für den neuen Thread.  
+  
+ `dwStackSize`  
+ Die Stapelgröße für den neuen Thread.  
+  
+ `pfnThreadProc`  
+ Die Threadprozedur des neuen Threads.  
+  
+ `pvParam`  
+ Der Parameter an die Threadprozedur übergeben werden.  
+  
+ `dwCreationFlags`  
+ Die Erstellung flags (0 oder CREATE_SUSPENDED).  
+  
+ `pdwThreadId`  
+ [out] Die Adresse der DWORD-Variablen, die bei Erfolg die Thread-ID des neu erstellten Threads empfängt.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt das Handle für den neu erstellten Thread oder NULL bei einem Fehler zurück. Rufen Sie [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) um erweiterte Fehlerinformationen abzurufen.  
+  
+### <a name="remarks"></a>Hinweise  
+ Finden Sie unter [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Weitere Informationen über die Parameter dieser Funktion.  
+  
+ Diese Funktion ruft `CreateThread` auf den Thread zu erstellen.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+

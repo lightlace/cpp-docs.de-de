@@ -1,81 +1,99 @@
 ---
-title: "WM_-Meldungen: S | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ON_WM_SYSDEADCHAR"
-  - "ON_WM_SYSKEYDOWN"
-  - "ON_WM_STYLECHANGING"
-  - "ON_WM_STYLECHANGED"
-  - "ON_WM_SPOOLERSTATUS"
-  - "ON_WM_SYSCHAR"
-  - "ON_WM_SETFOCUS"
-  - "ON_WM_SIZE"
-  - "ON_WM_SIZING"
-  - "ON_WM_SETCURSOR"
-  - "ON_WM_SYSCOMMAND"
-  - "ON_WM_SETTINGCHANGE"
-  - "ON_WM_SHOWWINDOW"
-  - "ON_WM_SYSKEYUP"
-  - "ON_WM_SIZECLIPBOARD"
-  - "ON_WM_SYSCOLORCHANGE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ON_WM_SETCURSOR"
-  - "ON_WM_SETFOCUS"
-  - "ON_WM_SETTINGCHANGE"
-  - "ON_WM_SHOWWINDOW"
-  - "ON_WM_SIZE"
-  - "ON_WM_SIZECLIPBOARD"
-  - "ON_WM_SIZING"
-  - "ON_WM_SPOOLERSTATUS"
-  - "ON_WM_STYLECHANGED"
-  - "ON_WM_STYLECHANGING"
-  - "ON_WM_SYSCHAR"
-  - "ON_WM_SYSCOLORCHANGE"
-  - "ON_WM_SYSCOMMAND"
-  - "ON_WM_SYSDEADCHAR"
-  - "ON_WM_SYSKEYDOWN"
-  - "ON_WM_SYSKEYUP"
-  - "WM_-Meldungen"
+title: 'WM_-Meldungen: S | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ON_WM_SYSDEADCHAR
+- ON_WM_SYSKEYDOWN
+- ON_WM_STYLECHANGING
+- ON_WM_STYLECHANGED
+- ON_WM_SPOOLERSTATUS
+- ON_WM_SYSCHAR
+- ON_WM_SETFOCUS
+- ON_WM_SIZE
+- ON_WM_SIZING
+- ON_WM_SETCURSOR
+- ON_WM_SYSCOMMAND
+- ON_WM_SETTINGCHANGE
+- ON_WM_SHOWWINDOW
+- ON_WM_SYSKEYUP
+- ON_WM_SIZECLIPBOARD
+- ON_WM_SYSCOLORCHANGE
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_WM_SIZE
+- ON_WM_SETFOCUS
+- ON_WM_SIZING
+- ON_WM_SYSCHAR
+- ON_WM_SETTINGCHANGE
+- ON_WM_SYSDEADCHAR
+- ON_WM_SHOWWINDOW
+- ON_WM_STYLECHANGING
+- ON_WM_SYSCOMMAND
+- ON_WM_STYLECHANGED
+- ON_WM_SPOOLERSTATUS
+- ON_WM_SYSCOLORCHANGE
+- ON_WM_SETCURSOR
+- ON_WM_SIZECLIPBOARD
+- ON_WM_SYSKEYUP
+- ON_WM_SYSKEYDOWN
+- WM_ messages
 ms.assetid: 4b9aec79-a98f-4aa0-a3d9-110941b6dcbc
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# WM_-Meldungen: S
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 339b03be41187ad0249ae38d36d4640401247a83
+ms.lasthandoff: 02/24/2017
 
-Die Einträge die folgende Zuordnung entsprechen den Funktionsprototypen.  
+---
+# <a name="wm-messages-s"></a>WM_-Meldungen: S
+Die folgenden Zuordnungseinträge entsprechen die Funktionsprototypen.  
   
-|Zuordnungseintrag|Funktionsprototyp|  
-|-----------------------|-----------------------|  
-|ON\_WM\_SETCURSOR\(\)|afx\_msg BOOL [OnSetCursor](../Topic/CWnd::OnSetCursor.md)\(CWnd\*, UINT, UINT\);|  
-|ON\_WM\_SETFOCUS\(\)|afx\_msg void [OnSetFocus](../Topic/CWnd::OnSetFocus.md)\(CWnd\*\);|  
-|ON\_WM\_SETTINGCHANGE\(\)|afx\_msg void [OnSettingChange](../Topic/CWnd::OnSettingChange.md)\(UINT\-uFlags, LPCTSTR\-lpszSection\);|  
-|ON\_WM\_SHOWWINDOW\(\)|afx\_msg void [OnShowWindow](../Topic/CWnd::OnShowWindow.md)\(BOOL, UINT\);|  
-|ON\_WM\_SIZE\(\)|afx\_msg void [OnSize](../Topic/CWnd::OnSize.md)\(UINT, int, int\);|  
-|ON\_WM\_SIZECLIPBOARD\(\)|afx\_msg void [OnSizeClipboard](../Topic/CWnd::OnSizeClipboard.md)\(CWnd\*, HANDLE\);|  
-|ON\_WM\_SIZING\(\)|afx\_msg void [OnSizing](../Topic/CWnd::OnSizing.md)\(UINT, LPRECT\);|  
-|ON\_WM\_SPOOLERSTATUS\(\)|afx\_msg void [OnSpoolerStatus](../Topic/CWnd::OnSpoolerStatus.md)\(UINT, UINT\);|  
-|ON\_WM\_STYLECHANGED\(\)|afx\_msg void [OnStyleChanged](../Topic/CWnd::OnStyleChanged.md)\(int, LPSTYLESTRUCT\);|  
-|ON\_WM\_STYLECHANGING\(\)|afx\_msg void [OnStyleChanging](../Topic/CWnd::OnStyleChanging.md)\(int, LPSTYLESTRUCT\);|  
-|ON\_WM\_SYSCHAR\(\)|afx\_msg void [OnSysChar](../Topic/CWnd::OnSysChar.md)\(UINT, UINT, UINT\);|  
-|ON\_WM\_SYSCOLORCHANGE\(\)|afx\_msg void [OnSysColorChange](../Topic/CWnd::OnSysColorChange.md)\(\);|  
-|ON\_WM\_SYSCOMMAND\(\)|afx\_msg void [OnSysCommand](../Topic/CWnd::OnSysCommand.md)\(UINT, LONG\);|  
-|ON\_WM\_SYSDEADCHAR\(\)|afx\_msg void [OnSysDeadChar](../Topic/CWnd::OnSysDeadChar.md)\(UINT, UINT, UINT\);|  
-|ON\_WM\_SYSKEYDOWN\(\)|afx\_msg void [OnSysKeyDown](../Topic/CWnd::OnSysKeyDown.md)\(UINT, UINT, UINT\);|  
-|ON\_WM\_SYSKEYUP\(\)|afx\_msg void [OnSysKeyUp](../Topic/CWnd::OnSysKeyUp.md)\(UINT, UINT, UINT\);|  
+|Eintrag für die Zuordnung|Funktionsprototyp|  
+|---------------|------------------------|  
+|ON_WM_SETCURSOR)|Afx_msg BOOL [OnSetCursor](../../mfc/reference/cwnd-class.md#onsetcursor)(CWnd *, "uint", "uint");|  
+|ON_WM_SETFOCUS)|Afx_msg Void [OnSetFocus](../../mfc/reference/cwnd-class.md#onsetfocus)(CWnd *);|  
+|ON_WM_SETTINGCHANGE)|Afx_msg Void [OnSettingChange](../../mfc/reference/cwnd-class.md#onsettingchange)(UINT uFlags, LPCTSTR LpszSection);|  
+|ON_WM_SHOWWINDOW)|Afx_msg Void [OnShowWindow](../../mfc/reference/cwnd-class.md#onshowwindow)(BOOL, "uint");|  
+|ON_WM_SIZE)|Afx_msg Void [OnSize](../../mfc/reference/cwnd-class.md#onsize)(UINT, Int, Int);|  
+|ON_WM_SIZECLIPBOARD)|Afx_msg Void [OnSizeClipboard](../../mfc/reference/cwnd-class.md#onsizeclipboard)(CWnd *, HANDLE);|  
+|ON_WM_SIZING)|Afx_msg Void [OnSizing](../../mfc/reference/cwnd-class.md#onsizing)(UINT, LPRECT);|  
+|ON_WM_SPOOLERSTATUS)|Afx_msg Void [OnSpoolerStatus](../../mfc/reference/cwnd-class.md#onspoolerstatus)("uint", "uint");|  
+|ON_WM_STYLECHANGED)|Afx_msg Void [OnStyleChanged](../../mfc/reference/cwnd-class.md#onstylechanged)(Int, LPSTYLESTRUCT);|  
+|ON_WM_STYLECHANGING)|Afx_msg Void [OnStyleChanging](../../mfc/reference/cwnd-class.md#onstylechanging)(Int, LPSTYLESTRUCT);|  
+|ON_WM_SYSCHAR)|Afx_msg Void [OnSysChar](../../mfc/reference/cwnd-class.md#onsyschar)("uint", "uint", "uint");|  
+|ON_WM_SYSCOLORCHANGE)|Afx_msg Void [OnSysColorChange](../../mfc/reference/cwnd-class.md#onsyscolorchange)();|  
+|ON_WM_SYSCOMMAND)|Afx_msg Void [OnSysCommand](../../mfc/reference/cwnd-class.md#onsyscommand)(UINT, LONG);|  
+|ON_WM_SYSDEADCHAR)|Afx_msg Void [OnSysDeadChar](../../mfc/reference/cwnd-class.md#onsysdeadchar)("uint", "uint", "uint");|  
+|ON_WM_SYSKEYDOWN)|Afx_msg Void [OnSysKeyDown](../../mfc/reference/cwnd-class.md#onsyskeydown)("uint", "uint", "uint");|  
+|ON_WM_SYSKEYUP)|Afx_msg Void [OnSysKeyUp](../../mfc/reference/cwnd-class.md#onsyskeyup)("uint", "uint", "uint");|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)   
- [Handler für WM\_\-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
+ [Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
+
+

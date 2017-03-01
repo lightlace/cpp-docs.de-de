@@ -1,73 +1,158 @@
 ---
-title: "CAccelerateDecelerateTransition-Class1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CAccelerateDecelerateTransition"
-  - "afxanimationcontroller/CAccelerateDecelerateTransition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAccelerateDecelerateTransition-Klasse"
+title: CAccelerateDecelerateTransition-Class1 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CAccelerateDecelerateTransition
+- afxanimationcontroller/CAccelerateDecelerateTransition
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAccelerateDecelerateTransition class
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# CAccelerateDecelerateTransition-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: f11dc96b48695b998fb17c33735e8f56bce517b7
+ms.lasthandoff: 02/24/2017
 
-Implementiert einen Übergang mit Beschleunigung\/Verlangsamung.  
+---
+# <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition-Klasse
+Implementiert einen Übergang mit Beschleunigung/Verlangsamung.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAccelerateDecelerateTransition : public CBaseTransition;  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](../Topic/CAccelerateDecelerateTransition::CAccelerateDecelerateTransition.md)|Erstellt ein Übergangsobjekt.|  
+|[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|Erstellt ein Übergangsobjekt.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::Create](../Topic/CAccelerateDecelerateTransition::Create.md)|Ruft die Übergangsbibliothek auf, um ein gekapseltes COM\-Übergangsobjekt zu erstellen.  \(Überschreibt [CBaseTransition::Create](../Topic/CBaseTransition::Create.md).\)|  
+|[CAccelerateDecelerateTransition::Create](#create)|Ruft die Übergangsbibliothek um gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### Öffentliche Datenmember  
+### <a name="public-data-members"></a>Öffentliche Datenmember  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::m\_accelerationRatio](../Topic/CAccelerateDecelerateTransition::m_accelerationRatio.md)|Das Verhältnis zur während der Beschleunigung verstrichenen Zeit.|  
-|[CAccelerateDecelerateTransition::m\_decelerationRatio](../Topic/CAccelerateDecelerateTransition::m_decelerationRatio.md)|Das Verhältnis zur während der Verlangsamung verstrichenen Zeit.|  
-|[CAccelerateDecelerateTransition::m\_duration](../Topic/CAccelerateDecelerateTransition::m_duration.md)|Die Dauer des Übergangs.|  
-|[CAccelerateDecelerateTransition::m\_finalValue](../Topic/CAccelerateDecelerateTransition::m_finalValue.md)|Der Wert der Animationsvariablen am Ende des Übergangs.|  
+|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Das Verhältnis der Zeit damit verbracht, Beschleunigung.|  
+|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Das Verhältnis der Zeit, die der Dauer verstrichenen.|  
+|[CAccelerateDecelerateTransition::m_duration](#m_duration)|Die Dauer des Übergangs.|  
+|[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|Der Wert der Animationsvariablen am Ende des Übergangs.|  
   
-## Hinweise  
- Während eines Übergangs mit Beschleunigung\/Verlangsamung wird die Animationsvariable über die Dauer des Übergangs beschleunigt und anschließend verlangsamt und endet mit einem angegebenen Wert.  Sie können unabhängig voneinander steuern, wie schnell die Variable beschleunigt und langsamer wird, indem Sie unterschiedliche Beschleunigungs\- und Verlangsamungsraten angeben.  Wenn die ursprüngliche Geschwindigkeit 0 \(null\) ist, ist die Beschleunigungsrate der Zeitabschnitt, in dem die Variable beschleunigt. Ebenso verhält es sich mit der Verlangsamungsrate.  Wenn die ursprüngliche Geschwindigkeit ungleich 0 \(null\) ist, ist dies der Zeitabschnitt zwischen dem Erreichen der Geschwindigkeit 0 \(null\) und dem Ende des Übergangs.  Das Beschleunigungsverhältnis und das Verlangsamungsverhältnis sollten in der Summe maximal 1.0 ergeben.  Da alle Übergänge automatisch gelöscht werden, wird empfohlen, sie mit dem new\-Operator zuzuordnen.  Das gekapselte IUIAnimationTransition\-COM\-Objekt wird von CAnimationController::AnimateGroup erstellt. Bis zur Erstellung ist es NULL.  Das Ändern von Membervariablen nach der Erstellung dieses COM\-Objekts hat keine Auswirkungen.  
+## <a name="remarks"></a>Hinweise  
+ Während eine schnellere-Übergang verlangsamt, Animationsvariablen beschleunigt und anschließend verlangsamt die Dauer des Übergangs, endet mit einem angegebenen Wert. Sie können steuern, wie schnell die Variable beschleunigt und durch Angabe der anderen Beschleunigung und Verlangsamung Verhältnisse unabhängig, verlangsamt. Wenn die ursprüngliche Geschwindigkeit&0; (null) ist, ist die den Anteil der Dauer, die die Variable beschäftigen beschleunigen; mit der Verlangsamungsrate. Die ursprüngliche Geschwindigkeit ungleich NULL ist, ist der Bruchteil der Zeit zwischen der Geschwindigkeit&0; (null) und das Ende des Übergangs zu erreichen. Das Beschleunigungsverhältnis und der Verlangsamungsrate sollte auf ein Maximum von 1,0 summieren. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, sie mit dem Operator new. Das gekapselte IUIAnimationTransition-COM-Objekt wird von CAnimationController:: erst erstellt, ist NULL. Ändern Membervariablen, nach der Erstellung dieses COM-Objekt hat keine Auswirkung.  
   
-## Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
- [CAccelerateDecelerateTransition](../../mfc/reference/cacceleratedeceleratetransition-class1.md)  
+ `CAccelerateDecelerateTransition`   
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxanimationcontroller.h  
   
-## Siehe auch  
+##  <a name="a-namecacceleratedeceleratetransitiona--cacceleratedeceleratetransitioncacceleratedeceleratetransition"></a><a name="cacceleratedeceleratetransition"></a>CAccelerateDecelerateTransition::CAccelerateDecelerateTransition  
+ Erstellt ein Übergangsobjekt.  
+  
+```  
+CAccelerateDecelerateTransition(
+    UI_ANIMATION_SECONDS duration,  
+    DOUBLE finalValue,  
+    DOUBLE accelerationRatio = 0.3,  
+    DOUBLE decelerationRatio = 0.3);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `duration`  
+ Die Dauer des Übergangs.  
+  
+ `finalValue`  
+ Der Wert der Animationsvariablen am Ende des Übergangs.  
+  
+ `accelerationRatio`  
+ Das Verhältnis der Zeit damit verbracht, Beschleunigung.  
+  
+ `decelerationRatio`  
+ Das Verhältnis der Zeit, die der Dauer verstrichenen.  
+  
+##  <a name="a-namecreatea--cacceleratedeceleratetransitioncreate"></a><a name="create"></a>CAccelerateDecelerateTransition::Create  
+ Ruft die Übergangsbibliothek um gekapselte COM-Übergangsobjekt zu erstellen.  
+  
+```  
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionFactory* *\not used*\);
+```  
+  
+### <a name="parameters"></a>Parameter  
+`pLibrary`  
+ Ein Zeiger auf eine [IUIAnimationTransitionLibrary-Schnittstelle](https://msdn.microsoft.com/library/windows/desktop/dd371897), die eine Bibliothek mit standard-Übergänge definiert.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ True, wenn der Übergang erfolgreich erstellt wird. andernfalls FALSE.  
+  
+##  <a name="a-namemaccelerationratioa--cacceleratedeceleratetransitionmaccelerationratio"></a><a name="m_accelerationratio"></a>CAccelerateDecelerateTransition::m_accelerationRatio  
+ Das Verhältnis der Zeit damit verbracht, Beschleunigung.  
+  
+```  
+DOUBLE m_accelerationRatio;  
+```  
+  
+##  <a name="a-namemdecelerationratioa--cacceleratedeceleratetransitionmdecelerationratio"></a><a name="m_decelerationratio"></a>CAccelerateDecelerateTransition::m_decelerationRatio  
+ Das Verhältnis der Zeit, die der Dauer verstrichenen.  
+  
+```  
+DOUBLE m_decelerationRatio;  
+```  
+  
+##  <a name="a-namemdurationa--cacceleratedeceleratetransitionmduration"></a><a name="m_duration"></a>CAccelerateDecelerateTransition::m_duration  
+ Die Dauer des Übergangs.  
+  
+```  
+UI_ANIMATION_SECONDS m_duration;  
+```  
+  
+##  <a name="a-namemfinalvaluea--cacceleratedeceleratetransitionmfinalvalue"></a><a name="m_finalvalue"></a>CAccelerateDecelerateTransition::m_finalValue  
+ Der Wert der Animationsvariablen am Ende des Übergangs.  
+  
+```  
+DOUBLE m_finalValue;  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Klassen](../../mfc/reference/mfc-classes.md)
+

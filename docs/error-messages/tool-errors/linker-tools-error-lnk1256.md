@@ -1,37 +1,53 @@
 ---
-title: "Linkertoolfehler LNK1256 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "xml"
-  - "LNK1256"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1256"
+title: Linkertoolfehler Lnk1256 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- xml
+- LNK1256
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK1256
 ms.assetid: 55b64b2b-a56b-436c-a55e-ec9c6dcb050e
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Linkertoolfehler LNK1256
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 02231366d7b20be51e7b918fe7932fc80a38b169
+ms.lasthandoff: 02/24/2017
 
-Fehler bei ALINK\-Operation: Ursache  
+---
+# <a name="linker-tools-error-lnk1256"></a>Linkertoolfehler LNK1256
+Fehler bei ALINK-Operation: Ursache  
   
- Ein häufiger Grund für LNK1256 ist eine falsche Versionsnummer für eine Assembly.  Der Wert 65535 ist für keinen Teil der Assemblyversionsnummer zulässig.  Der gültige Bereich für Assemblyversionen ist 0 – 65534.  
+ Ein häufiger Grund für LNK1256 ist eine falsche Versionsnummer für eine Assembly. Der Wert 65535 ist für keinen Teil der Assemblyversionsnummer zulässig. Der gültige Bereich für Assemblyversionen ist 0 – 65534.  
   
- LNK1256 kann auch entstehen, wenn ALINK den benannten Schlüsselcontainer nicht finden konnte.  Löschen Sie den Schlüsselcontainer und fügen Sie ihn erneut denCSP für starke Namen mit Hilfe von [Sn.exe \(Strong Name Tool\)](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) hinzu  
+ LNK1256 kann auch entstehen, wenn ALINK den benannten Schlüsselcontainer nicht finden konnte. Den Schlüsselcontainer löschen und erneut hinzufügen, CSP für starke Namen mit [Sn.exe (Strong Name-Tool)](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6).  
   
- Ein weiterer Grund für LNK1256 ist ein Versionskonflikt zwischen dem Linker und Alink.dll.  Dies kann durch eine fehlerhafte Installation von Visual Studio verursacht werden.  Verwenden Sie **Programme und Funktionen** in der Windows\-Systemsteuerung, um Visual Studio zu reparieren oder neu zu installieren.  
+ Ein weiterer Grund für LNK1256 ist ein Versionskonflikt zwischen dem Linker und Alink.dll. Dies kann durch eine fehlerhafte Installation von Visual Studio verursacht werden. Verwendung **Programme und Funktionen** in der Windows-Systemsteuerung zu reparieren oder installieren Sie Visual Studio.  
   
  Im folgende Beispiel wird LNK1256 generiert:  
   

@@ -1,61 +1,77 @@
 ---
-title: "CMFCRibbonLabel Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCRibbonLabel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCRibbonLabel class"
+title: Klasse CMFCRibbonLabel | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCRibbonLabel
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCRibbonLabel class
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CMFCRibbonLabel Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: b93e0f6c46818515c8d6bcd8d71b78dcaa435ea6
+ms.lasthandoff: 02/24/2017
 
-Implementiert eine nicht\-klickbare Beschriftung für ein Menüband.  
+---
+# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel-Klasse
+Implementiert eine nicht anklickbare Bezeichnung für ein Menüband.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonLabel : public CMFCRibbonButton  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCRibbonLabel::CMFCRibbonLabel](../Topic/CMFCRibbonLabel::CMFCRibbonLabel.md)|erstellt und initialisiert ein `CMFCRibbonLabel`\-Objekt mit der angegebenen Textzeichenfolge.|  
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Erstellt und initialisiert ein `CMFCRibbonLabel` -Objekt mit der angegebenen Textzeichenfolge.|  
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Destruktor.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|`CMFCRibbonLabel::CreateObject`|Wird vom Framework, um eine dynamische Instanz dieses Klassentyps zu erstellen.|  
-|`CMFCRibbonLabel::GetThisClass`|Wird vom Framework, um ein Zeiger auf [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)\-Objekt abzurufen, das diesem Klassentyp zugeordnet ist.|  
-|[CMFCRibbonLabel::SetACCData](../Topic/CMFCRibbonLabel::SetACCData.md)|Bestimmt die Barrierefreiheitsdaten für das aktuelle Menübandbezeichnungselement.  \(Überschreibungen [CMFCRibbonButton::SetACCData](../Topic/CMFCRibbonButton::SetACCData.md).\)|  
+|`CMFCRibbonLabel::CreateObject`|Wird vom Framework verwendet, um eine dynamische Instanz dieses Klassentyps zu erstellen.|  
+|`CMFCRibbonLabel::GetThisClass`|Vom Framework verwendet werden, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das Klassentyp zugeordnet ist.|  
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Bestimmt die Eingabehilfen-Daten für das aktuelle Element der Menüband-Bezeichnung. (Überschreibt [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
   
-### Hinweise  
- Nachdem Sie eine Menübandbezeichnung erstellen, fügen Sie sie einem Bereich hinzu, indem Sie [CMFCRibbonPanel::Add](../Topic/CMFCRibbonPanel::Add.md) aufrufen.  
+### <a name="remarks"></a>Hinweise  
+ Nach der Erstellung einer Bezeichnung Menüband hinzufügen zu einem Element durch Aufrufen von [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
- Sie können eine Menübandbezeichnung nicht der Symbolleiste für den Schnellzugriff hinzufügen.  
+ Sie können keine Menüband-Bezeichnung Symbolleiste für den Schnellzugriff hinzufügen.  
   
-## Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
@@ -63,10 +79,46 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxRibbonLabel.h  
   
-## Siehe auch  
+##  <a name="a-namecmfcribbonlabela--cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+ Erstellt und initialisiert ein [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) -Objekt, das die angegebene Zeichenfolge angezeigt.  
+  
+```  
+CMFCRibbonLabel(
+    LPCTSTR lpszText,  
+    BOOL bIsMultiLine = FALSE);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ [in] `lpszText`  
+ Der Text in der Bezeichnung angezeigt werden.  
+  
+ [in] `bIsMultiLine`  
+ `TRUE`um anzugeben, dass die Bezeichnung eine mehrzeilige Bezeichnung ist; andernfalls `FALSE`.  
+  
+##  <a name="a-namesetaccdataa--cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+ Bestimmt die Eingabehilfen-Daten für das aktuelle Element der Menüband-Bezeichnung.  
+  
+```  
+virtual BOOL SetACCData(
+    CWnd* pParent,  
+    CAccessibilityData& data);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ [in] `pParent`  
+ Stellt das übergeordnete Fenster der aktuellen Bezeichnung Menüband dar.  
+  
+ [out] `data`  
+ Ein Objekt vom Typ `CAccessibilityData` , die mit den Zugriff auf Daten der aktuellen Menüband Bezeichnung aufgefüllt wird.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ `TRUE`Wenn die `data` Parameter wurde erfolgreich mit den Zugriff auf Daten der aktuellen Menüband Bezeichnung aufgefüllt, andernfalls `FALSE`.  
+  
+## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
  [Klassen](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)
+ [CMFCRibbonButton-Klasse](../../mfc/reference/cmfcribbonbutton-class.md)
+

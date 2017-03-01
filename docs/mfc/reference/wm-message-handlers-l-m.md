@@ -1,82 +1,100 @@
 ---
-title: "WM_-Meldungshandler: L - M | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ON_WM_MENUSELECT"
-  - "ON_WM_MBUTTONDBLCLK"
-  - "ON_WM_MOUSEACTIVATE"
-  - "ON_WM_MOUSEMOVE"
-  - "ON_WM_MOVING"
-  - "ON_WM_LBUTTONUP"
-  - "ON_WM_LBUTTONDBLCLK"
-  - "ON_WM_MEASUREITEM"
-  - "ON_WM_MDIACTIVATE"
-  - "ON_WM_MOVE"
-  - "ON_WM_LBUTTONDOWN"
-  - "ON_WM_MBUTTONDOWN"
-  - "ON_WM_MENUCHAR"
-  - "ON_WM_MBUTTONUP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ON_WM_LBUTTONDBLCLK"
-  - "ON_WM_LBUTTONDOWN"
-  - "ON_WM_LBUTTONUP"
-  - "ON_WM_MBUTTONDBLCLK"
-  - "ON_WM_MBUTTONDOWN"
-  - "ON_WM_MBUTTONUP"
-  - "ON_WM_MDIACTIVATE"
-  - "ON_WM_MEASUREITEM"
-  - "ON_WM_MENUCHAR"
-  - "ON_WM_MENUSELECT"
-  - "ON_WM_MOUSEACTIVATE"
-  - "ON_WM_MOUSEMOVE"
-  - "ON_WM_MOVE"
-  - "ON_WM_MOVING"
-  - "WM_-Meldungen"
+title: 'WM_-Meldungshandler: L - M | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ON_WM_MENUSELECT
+- ON_WM_MBUTTONDBLCLK
+- ON_WM_MOUSEACTIVATE
+- ON_WM_MOUSEMOVE
+- ON_WM_MOVING
+- ON_WM_LBUTTONUP
+- ON_WM_LBUTTONDBLCLK
+- ON_WM_MEASUREITEM
+- ON_WM_MDIACTIVATE
+- ON_WM_MOVE
+- ON_WM_LBUTTONDOWN
+- ON_WM_MBUTTONDOWN
+- ON_WM_MENUCHAR
+- ON_WM_MBUTTONUP
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_WM_MENUSELECT
+- ON_WM_MBUTTONDBLCLK
+- ON_WM_MOVE
+- ON_WM_MOUSEACTIVATE
+- ON_WM_MBUTTONUP
+- ON_WM_MOUSEMOVE
+- ON_WM_MENUCHAR
+- ON_WM_MBUTTONDOWN
+- ON_WM_MEASUREITEM
+- ON_WM_MOVING
+- ON_WM_LBUTTONDOWN
+- ON_WM_MDIACTIVATE
+- ON_WM_LBUTTONDBLCLK
+- ON_WM_LBUTTONUP
+- WM_ messages
 ms.assetid: 96ecaaf1-6d13-4e12-a454-535635967489
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# WM_-Meldungshandler: L - M
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 645e8ef051624977571830f2f1b40e54c55603f0
+ms.lasthandoff: 02/24/2017
 
-Die Einträge die folgende Zuordnung links entsprechen den Funktionsprototypen rechts:  
+---
+# <a name="wm-message-handlers-l---m"></a>WM_-Meldungshandler: L - M
+Die folgenden Einträge der Karte auf der linken Seite entsprechen die Funktionsprototypen auf der rechten Seite:  
   
-|Zuordnungseintrag|Funktionsprototyp|  
-|-----------------------|-----------------------|  
-|ON\_WM\_LBUTTONDBLCLK\(\)|afx\_msg void [OnLButtonDblClk](../Topic/CWnd::OnLButtonDblClk.md)\(UINT, CPoint\);|  
-|ON\_WM\_LBUTTONDOWN\(\)|afx\_msg void [OnLButtonDown](../Topic/CWnd::OnLButtonDown.md)\(UINT, CPoint\);|  
-|ON\_WM\_LBUTTONUP\(\)|afx\_msg void [OnLButtonUp](../Topic/CWnd::OnLButtonUp.md)\(UINT, CPoint\);|  
-|ON\_WM\_MBUTTONDBLCLK\(\)|afx\_msg void [OnMButtonDblClk](../Topic/CWnd::OnMButtonDblClk.md)\(UINT, CPoint\);|  
-|ON\_WM\_MBUTTONDOWN\(\)|afx\_msg void [OnMButtonDown](../Topic/CWnd::OnMButtonDown.md)\(UINT, CPoint\);|  
-|ON\_WM\_MBUTTONUP\(\)|afx\_msg void [OnMButtonUp](../Topic/CWnd::OnMButtonUp.md)\(UINT, CPoint\);|  
-|ON\_WM\_MDIACTIVATE\(\)|afx\_msg void [OnMDIActivate](../Topic/CWnd::OnMDIActivate.md)\(BOOL, CWnd\*, CWnd\*\);|  
-|ON\_WM\_MEASUREITEM\(\)|afx\_msg void [OnMeasureItem](../Topic/CWnd::OnMeasureItem.md)\(LPMEASUREITEMSTRUCT\);|  
-|ON\_WM\_MENUCHAR\(\)|afx\_msg LANGES [OnMenuChar](../Topic/CWnd::OnMenuChar.md)\(UINT, UINT, CMenu\*\);|  
-|ON\_WM\_MENUDRAG\(\)|afx\_msg UINT [OnMenuDrag](../Topic/CWnd::OnMenuDrag.md)\(UINT, CMenu\*\);|  
-|ON\_WM\_MENUGETOBJECT\(\)|afx\_msg UINT [OnMenuGetObject](../Topic/CWnd::OnMenuGetObject.md)\(MENUGETOBJECTINFO\*\);|  
-|ON\_WM\_MENURBUTTONUP\(\)|afx\_msg void [OnMenuRButtonUp](../Topic/CWnd::OnMenuRButtonUp.md)\(UINT, CMenu\*\);|  
-|ON\_WM\_MENUSELECT\(\)|afx\_msg void [OnMenuSelect](../Topic/CWnd::OnMenuSelect.md)\(UINT, UINT, HMENU\);|  
-|ON\_WM\_MOUSEACTIVATE\(\)|afx\_msg int [OnMouseActivate](../Topic/CWnd::OnMouseActivate.md)\(CWnd\*, UINT, UINT\);|  
-|ON\_WM\_MOUSEHOVER\(\)|afx\_msg void [OnMouseHover](../Topic/CWnd::OnMouseHover.md)\(UINT, CPoint\);|  
-|ON\_WM\_MOUSEHWHEEL\(\)|afx\_msg void [OnMouseHWheel](../Topic/CWnd::OnMouseHWheel.md)\(UINT, Short, CPoint\);|  
-|ON\_WM\_MOUSELEAVE\(\)|afx\_msg void [OnMouseLeave](../Topic/CWnd::OnMouseLeave.md)\(\);|  
-|ON\_WM\_MOUSEMOVE\(\)|afx\_msg void [OnMouseMove](../Topic/CWnd::OnMouseMove.md)\(UINT, CPoint\);|  
-|ON\_WM\_MOUSEWHEEL\(\)|afx\_msg BOOL [OnMouseWheel](../Topic/CWnd::OnMouseWheel.md)\(UINT, Short, CPoint\);|  
-|ON\_WM\_MOVE\(\)|afx\_msg void [OnMove](../Topic/CWnd::OnMove.md)\(int, int\);|  
-|ON\_WM\_MOVING\(\)|afx\_msg void [OnMoving](../Topic/CWnd::OnMoving.md)\(UINT, LPRECT\);|  
+|Eintrag für die Zuordnung|Funktionsprototyp|  
+|---------------|------------------------|  
+|ON_WM_LBUTTONDBLCLK()|Afx_msg Void [OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk)(UINT, CPoint);|  
+|ON_WM_LBUTTONDOWN()|Afx_msg Void [OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)(UINT, CPoint);|  
+|ON_WM_LBUTTONUP()|Afx_msg Void [OnLButtonUp](../../mfc/reference/cwnd-class.md#onlbuttonup)(UINT, CPoint);|  
+|ON_WM_MBUTTONDBLCLK()|Afx_msg Void [OnMButtonDblClk](../../mfc/reference/cwnd-class.md#onmbuttondblclk)(UINT, CPoint);|  
+|ON_WM_MBUTTONDOWN()|Afx_msg Void [OnMButtonDown](../../mfc/reference/cwnd-class.md#onmbuttondown)(UINT, CPoint);|  
+|ON_WM_MBUTTONUP()|Afx_msg Void [OnMButtonUp](../../mfc/reference/cwnd-class.md#onmbuttonup)(UINT, CPoint);|  
+|ON_WM_MDIACTIVATE()|Afx_msg Void [OnMDIActivate](../../mfc/reference/cwnd-class.md#onmdiactivate)(BOOL CWnd * CWnd\*);|  
+|ON_WM_MEASUREITEM()|Afx_msg Void [OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)(LPMEASUREITEMSTRUCT);|  
+|ON_WM_MENUCHAR()|Afx_msg lang [OnMenuChar](../../mfc/reference/cwnd-class.md#onmenuchar)(UINT, UINT, CMenu *);|  
+|ON_WM_MENUDRAG()|Afx_msg UINT [OnMenuDrag](../../mfc/reference/cwnd-class.md#onmenudrag)(UINT, CMenu *);|  
+|ON_WM_MENUGETOBJECT()|Afx_msg UINT [OnMenuGetObject](../../mfc/reference/cwnd-class.md#onmenugetobject)(MENUGETOBJECTINFO *);|  
+|ON_WM_MENURBUTTONUP()|Afx_msg Void [OnMenuRButtonUp](../../mfc/reference/cwnd-class.md#onmenurbuttonup)(UINT, CMenu *);|  
+|ON_WM_MENUSELECT()|Afx_msg Void [OnMenuSelect](../../mfc/reference/cwnd-class.md#onmenuselect)(UINT, UINT, HMENU);|  
+|ON_WM_MOUSEACTIVATE()|Afx_msg Int [OnMouseActivate](../../mfc/reference/cwnd-class.md#onmouseactivate)(CWnd *, "uint", "uint");|  
+|ON_WM_MOUSEHOVER()|Afx_msg Void [OnMouseHover](../../mfc/reference/cwnd-class.md#onmousehover)(UINT, CPoint);|  
+|ON_WM_MOUSEHWHEEL()|Afx_msg Void [OnMouseHWheel](../../mfc/reference/cwnd-class.md#onmousehwheel)(UINT, short, CPoint);|  
+|ON_WM_MOUSELEAVE()|Afx_msg Void ["OnMouseLeave"](../../mfc/reference/cwnd-class.md#onmouseleave)();|  
+|ON_WM_MOUSEMOVE()|Afx_msg Void [OnMouseMove](../../mfc/reference/cwnd-class.md#onmousemove)(UINT, CPoint);|  
+|ON_WM_MOUSEWHEEL()|Afx_msg BOOL [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)(UINT, short, CPoint);|  
+|ON_WM_MOVE()|Afx_msg Void [OnMove](../../mfc/reference/cwnd-class.md#onmove)(Int, Int);|  
+|ON_WM_MOVING()|Afx_msg Void [OnMoving](../../mfc/reference/cwnd-class.md#onmoving)(UINT, LPRECT);|  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)   
- [Handler für WM\_\-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
+ [Handler für WM_-Meldungen](../../mfc/reference/handlers-for-wm-messages.md)
+
+

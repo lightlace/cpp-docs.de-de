@@ -1,80 +1,97 @@
 ---
-title: "AFX_EXTENSION_MODULE-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AFX_EXTENSION_MODULE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AFX_EXTENSION_MODULE-Struktur"
+title: AFX_EXTENSION_MODULE-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- AFX_EXTENSION_MODULE
+dev_langs:
+- C++
+helpviewer_keywords:
+- AFX_EXTENSION_MODULE structure
 ms.assetid: b85a989c-d0c5-4b28-b53c-dad45b75704e
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# AFX_EXTENSION_MODULE-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: f2699316266e9cc061fa898c4176e36ae8323b33
+ms.lasthandoff: 02/24/2017
 
-`AFX_EXTENSION_MODULE` wird während der Initialisierung von MFC\-Erweiterungs\-DLLs verwendet, um den Zustand des Erweiterungs\-DLL\-Moduls aufzunehmen.  
+---
+# <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE-Struktur
+Der `AFX_EXTENSION_MODULE` wird während der Initialisierung der Erweiterung der MFC-DLLs verwendet, um den Status der Erweiterung DLL-Modul zu halten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      struct AFX_EXTENSION_MODULE  
+struct AFX_EXTENSION_MODULE  
 {  
-   BOOL bInitialized;  
-   HMODULE hModule;  
-   HMODULE hResource;  
-   CRuntimeClass* pFirstSharedClass;  
-   COleObjectFactory* pFirstSharedFactory;  
+    BOOL bInitialized;  
+    HMODULE hModule;  
+    HMODULE hResource;  
+    CRuntimeClass* pFirstSharedClass;  
+    COleObjectFactory* pFirstSharedFactory;  
 };  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *bInitialized*  
- **TRUE**, wenn das DLL\-Modul mit `AfxInitExtensionModule` initialisiert wurde.  
+ **True,** Wenn das DLL-Modul initialisiert wurde, mit `AfxInitExtensionModule`.  
   
  `hModule`  
- Gibt dem Handle des DLL\-Moduls an.  
+ Gibt das Handle für das DLL-Modul an.  
   
  *hResource*  
- Gibt dem Handle des benutzerdefinierten Ressourcenmoduls der DLL an.  
+ Gibt das Handle des Moduls benutzerdefinierte Ressourcen-DLL.  
   
  *pFirstSharedClass*  
- Ein Zeiger zu Informationen die Struktur \( `CRuntimeClass` \) zur ersten Laufzeitklasse des DLL\-Moduls.  Wird verwendet, um den Start der Ablaufklassenliste bereitzustellen.  
+ Ein Zeiger auf Informationen (die `CRuntimeClass` Struktur) zur ersten Laufzeitklasse das DLL-Modul. Wird verwendet, um den Anfang der Liste der Common Language Runtime bereitzustellen.  
   
  *pFirstSharedFactory*  
- Ein Zeiger auf das DLL\-Modul Objekt zuerst Factory ein \(ein `COleObjectFactory`\-Objekt\).  Wird verwendet, um den Start der Klassenfactoryliste bereitzustellen.  
+ Ein Zeiger auf das erste Objekt-Factory das DLL-Modul (ein `COleObjectFactory` Objekt). Wird verwendet, um den Anfang der Liste der Factory bereitzustellen.  
   
-## Hinweise  
- MFC\-Erweiterungs\-DLL\-Anforderung, zwei Dinge in ihrem `DllMain` auszuführen arbeiten:  
+## <a name="remarks"></a>Hinweise  
+ MFC-Erweiterungs-DLLs müssen zwei Dinge in ihren `DllMain` Funktion:  
   
--   Rufen Sie [AfxInitExtensionModule](../Topic/AfxInitExtensionModule.md) auf und überprüfen Sie den Rückgabewert.  
+-   Rufen Sie [AfxInitExtensionModule](http://msdn.microsoft.com/library/15f0c820-ff34-4da6-8077-79afbbb8dac1) , und überprüfen Sie den Rückgabewert.  
   
--   Erstellen Sie ein **CDynLinkLibrary**\-Objekt, wenn die DLL [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)\-Objekte exportieren oder eigene benutzerdefinierten Ressourcen hat.  
+-   Erstellen einer **CDynLinkLibrary** Objekt, wenn die DLL exportieren [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) Objekte oder verfügt über eine eigene benutzerdefinierte Ressourcen.  
   
- Die `AFX_EXTENSION_MODULE`\-Struktur wird verwendet, um eine Kopie des Erweiterungs\-DLL\-Modulzustandes, einschließlich einer Kopie der Ablaufklassenobjekte enthalten, die von der Erweiterungs\-DLL als Teil der normalen statischen ausgeführten Objektkonstruktion initialisiert wurden, bevor `DllMain` eingegeben wird.  Beispiel:  
+ Die `AFX_EXTENSION_MODULE` -Struktur verwendet, um eine Kopie der Erweiterung DLL Modulstatus, einschließlich einer Kopie der Objekte der Common Language Runtime-Klasse, die als Teil der normalen statische Objektkonstruktion ausgeführt, bevor mit der Erweiterung DLL initialisiert wurden `DllMain` eingegeben wird. Zum Beispiel:  
   
- [!CODE [NVC_MFC_DLL#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_DLL#2)]  
+ [!code-cpp[NVC_MFC_DLL&#2;](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- Die Modulinformationen, die in der `AFX_EXTENSION_MODULE`\-Struktur gespeichert werden, können in das Objekt **CDynLinkLibrary** kopiert werden.  Beispiel:  
+ Die Modulinformationen aus der `AFX_EXTENSION_MODULE` Struktur kopiert werden kann, in der **CDynLinkLibrary** Objekt. Zum Beispiel:  
   
- [!CODE [NVC_MFC_DLL#5](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_DLL#5)]  
+ [!code-cpp[NVC_MFC_DLL&5;](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [AfxInitExtensionModule](../Topic/AfxInitExtensionModule.md)   
- [AfxTermExtensionModule](../Topic/AfxTermExtensionModule.md)
+ [AfxInitExtensionModule](http://msdn.microsoft.com/library/15f0c820-ff34-4da6-8077-79afbbb8dac1)   
+ [AfxTermExtensionModule](http://msdn.microsoft.com/library/b64de402-f1e3-4c26-9823-08c07876aaaa)
+
+

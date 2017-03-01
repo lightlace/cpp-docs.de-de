@@ -1,59 +1,100 @@
 ---
-title: "IView Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IView"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IView class"
-  - "views [MFC]"
-  - "Ansichten, Klassen"
+title: IView-Schnittstelle | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IView
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC]
+- IView class
+- views, classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# IView Interface
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 9a8b5f2d9d123aa3032cb30ecdbdd1cd380b32f8
+ms.lasthandoff: 02/24/2017
 
-Implementiert mehrere Möglichkeiten, die [CWinFormsView](../../mfc/reference/cwinformsview-class.md) verwendet, Ansichtsbenachrichtigungen zu einem verwalteten Steuerelement zu senden.  
+---
+# <a name="iview-interface"></a>IView--Schnittstelle
+Implementiert mehrere Möglichkeiten, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) zum Senden von Benachrichtigungen anzeigen an einem verwalteten Steuerelement verwendet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 interface class IView  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[IView::OnActivateView](../Topic/IView::OnActivateView.md)|Aufgerufen von MFC, wenn eine Ansicht aktiviert oder deaktiviert ist.|  
-|[IView::OnInitialUpdate](../Topic/IView::OnInitialUpdate.md)|Aufgerufen vom Framework, nachdem die erste Ansicht zum Dokument angefügt wurde, jedoch bevor die Ansicht zuerst angezeigt wird.|  
-|[IView::OnUpdate](../Topic/IView::OnUpdate.md)|Aufgerufen von MFC, nachdem das Dokument der Ansicht geändert wurde, Diese Funktion kann der Ansicht, um die Anzeige zu aktualisieren, um Änderungen wiederzugeben.|  
+|[IView::OnActivateView](#onactivateview)|Von MFC aufgerufen, wenn eine Ansicht aktiviert oder deaktiviert wird.|  
+|[IView:: OnInitialUpdate](#oninitialupdate)|Vom Framework aufgerufen, nachdem die Ansicht zuerst an das Dokument angefügt ist, aber vor dem Beginn der Ansicht angezeigt wird.|  
+|[IView::OnUpdate](#onupdate)|Von MFC aufgerufen, nachdem die Ansicht Dokument geändert wurde. mit dieser Funktion können die Ansicht, um seine Anzeige Änderungen entsprechend aktualisiert.|  
   
-## Hinweise  
- `IView` implementiert verschiedene Methoden, die `CWinFormsView` Verwendung, allgemeine Ansichtsbenachrichtigungen zu einem gehosteten Steuerelement verwalteten weiterzuleiten.  Diese sind [OnInitialUpdate](../Topic/IView::OnInitialUpdate.md), [OnUpdate](../Topic/IView::OnUpdate.md) und [OnActivateView](../Topic/IView::OnActivateView.md).  
+## <a name="remarks"></a>Hinweise  
+ `IView`mehrere Methoden implementiert, die `CWinFormsView` verwendet, um allgemeine Ansicht Benachrichtigungen zu einem gehosteten verwalteten Steuerelement weiterzuleiten. Dies sind [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) und [OnActivateView](#onactivateview).  
   
- `IView` ist zu [CView](../../mfc/reference/cview-class.md) ähnlich, wird jedoch nur mit verwalteten Ansichten und Steuerelemente verwendet.  
+ `IView`ähnelt dem [CView](../../mfc/reference/cview-class.md), aber nur für verwaltete Ansichten und Steuerelemente verwendet wird.  
   
- Weitere Informationen zur Verwendung von Windows Forms, finden Sie unter [Verwenden eines Windows Form\-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [mithilfe eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-## Anforderungen  
- Header: afxwinforms.h \(definiert in Assembly in \\ atlmfc \\ lib mfcmifc80.dll\)  
-  
-## Siehe auch  
- [CWinFormsView Class](../../mfc/reference/cwinformsview-class.md)   
- [CView Class](../../mfc/reference/cview-class.md)
+
+## <a name="requirements"></a>Anforderungen  
+ Header: afxwinforms.h (definiert in der Assembly atlmfc\lib\mfcmifc80.dll)  
+
+## <a name="a-nameonactivateviewa-iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+Von MFC aufgerufen, wenn eine Ansicht aktiviert oder deaktiviert wird.
+```
+void OnActivateView(bool activate);
+```
+## <a name="parameters"></a>Parameter
+`activate`  
+Gibt an, ob die Sicht wird aktiviert oder deaktiviert.  
+
+## <a name="a-nameoninitialupdatea-iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView:: OnInitialUpdate
+Vom Framework aufgerufen, nachdem die Ansicht zuerst an das Dokument angefügt ist, aber vor dem Beginn der Ansicht angezeigt wird.
+```
+void OnInitialUpdate();
+```
+
+## <a name="a-nameonupdatea-iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate 
+Vom MFC aufgerufen, nachdem die Ansicht Dokument geändert wurde.  
+```
+void OnUpdate();
+```
+## <a name="remarks"></a>Hinweise  
+Mit dieser Funktion können die Ansicht, um seine Anzeige Änderungen entsprechend aktualisiert.
+
+## <a name="see-also"></a>Siehe auch  
+ [CWinFormsView-Klasse](../../mfc/reference/cwinformsview-class.md)   
+ [CView-Klasse](../../mfc/reference/cview-class.md)
+

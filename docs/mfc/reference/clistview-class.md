@@ -1,63 +1,79 @@
 ---
-title: "CListView Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CListView"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListView class"
-  - "Ansichten, and common controls"
+title: CListView-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CListView
+dev_langs:
+- C++
+helpviewer_keywords:
+- views, and common controls
+- CListView class
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# CListView Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: ebf6c93aa6d88d1942af4ecb9e3373fa57d84b65
+ms.lasthandoff: 02/24/2017
 
-Vereinfacht Verwendung des Listensteuerelements und des [Verwendung](../../mfc/reference/clistctrl-class.md), die Klasse, die Listensteuerelementfunktionalität kapselt, mit Dokument\-\/Ansichtarchitektur MFC.  
+---
+# <a name="clistview-class"></a>CListView-Klasse
+Vereinfacht die Verwendung des Steuerelements und der [CListCtrl](../../mfc/reference/clistctrl-class.md), Klasse, die Listensteuerelement-Funktionalität, mit der MFC-Dokument-/ Ansichtarchitektur kapselt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CListView : public CCtrlView  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CListView::CListView](../Topic/CListView::CListView.md)|Erstellt ein `CListView`\-Objekt.|  
+|[CListView::CListView](#clistview)|Erstellt ein `CListView`-Objekt.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CListView::GetListCtrl](../Topic/CListView::GetListCtrl.md)|Gibt das Listensteuerelement zurück, das mit der Ansicht zugeordnet ist.|  
+|[CListView::GetListCtrl](#getlistctrl)|Das mit der Ansicht verknüpfte Listensteuerelement zurück.|  
   
-### Geschützte Methoden  
+### <a name="protected-methods"></a>Geschützte Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CListView::RemoveImageList](../Topic/CListView::RemoveImageList.md)|Entfernt die angegebene Bildliste aus der Listenansicht.|  
+|[CListView::RemoveImageList](#removeimagelist)|Entfernt die angegebene Liste in der Listenansicht angezeigt.|  
   
-## Hinweise  
- Weitere Informationen über diese Architektur, finden Sie in der Übersicht für die Klasse und die [CView](../../mfc/reference/cview-class.md) Querverweise, die hier genannt werden.  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen zu dieser Architektur, finden Sie unter Übersicht über die für die [CView](../../mfc/reference/cview-class.md) -Klasse und die Querverweise genannten vorhanden.  
   
-## Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -69,11 +85,43 @@ class CListView : public CCtrlView
   
  `CListView`  
   
-## Anforderungen  
- **Header:**  afxcview.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** afxcview.h  
   
-## Siehe auch  
- [MFC\-Beispiel ROWLIST](../../top/visual-cpp-samples.md)   
- [CCtrlView Class](../../mfc/reference/cctrlview-class.md)   
+##  <a name="a-nameclistviewa--clistviewclistview"></a><a name="clistview"></a>CListView::CListView  
+ Erstellt ein `CListView`-Objekt.  
+  
+```  
+CListView();
+```  
+  
+##  <a name="a-namegetlistctrla--clistviewgetlistctrl"></a><a name="getlistctrl"></a>CListView::GetListCtrl  
+ Rufen Sie diese Memberfunktion zum Abrufen eines Verweises auf das Listensteuerelement, das der Ansicht zugeordnet.  
+  
+```  
+CListCtrl& GetListCtrl() const;  
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Verweis auf das Listensteuerelement, das der Ansicht zugeordnet.  
+  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCListView&#7;](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
+  
+##  <a name="a-nameremoveimagelista--clistviewremoveimagelist"></a><a name="removeimagelist"></a>CListView::RemoveImageList  
+ Entfernt die angegebene Liste in der Listenansicht angezeigt.  
+  
+```  
+void RemoveImageList(int nImageList);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `nImageList`  
+ Der nullbasierte Index des Bilds zu entfernen.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [MFC-Beispiel ROWLIST](../../visual-cpp-samples.md)   
+ [CCtrlView-Klasse](../../mfc/reference/cctrlview-class.md)   
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CCtrlView Class](../../mfc/reference/cctrlview-class.md)
+ [CCtrlView-Klasse](../../mfc/reference/cctrlview-class.md)
+

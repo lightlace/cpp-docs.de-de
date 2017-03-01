@@ -1,77 +1,139 @@
 ---
-title: "CNonStatelessWorker Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CNonStatelessWorker<Worker>"
-  - "ATL::CNonStatelessWorker"
-  - "ATL.CNonStatelessWorker"
-  - "CNonStatelessWorker"
-  - "ATL::CNonStatelessWorker<Worker>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CNonStatelessWorker class"
+title: Klasse CNonStatelessWorker | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CNonStatelessWorker<Worker>
+- ATL::CNonStatelessWorker
+- ATL.CNonStatelessWorker
+- CNonStatelessWorker
+- ATL::CNonStatelessWorker<Worker>
+dev_langs:
+- C++
+helpviewer_keywords:
+- CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CNonStatelessWorker Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 804b87bf752aac5cecf64cb61b4d53d6269963f2
+ms.lasthandoff: 02/24/2017
 
-Empfängt Anforderungen aus einem Threadpool und leitet sie an ein Workerobjekt weiter, die bei jeder Anforderung erstellt und zerstört wird.  
+---
+# <a name="cnonstatelessworker-class"></a>CNonStatelessWorker-Klasse
+Erhält die Anfragen von einem Threadpool und übergibt sie an eine Worker-Objekt, das erstellt und zerstört wird bei jeder Anforderung.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen nicht verwendet werden, die in der Windows Runtime ausführen.  
+>  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template <class Worker>  
+class CNonStatelessWorker
 ```  
   
-      template <  
-class Worker  
->  
-class CNonStatelessWorker  
-```  
-  
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *Worker*  
- Eine Arbeitsthreadklasse in Übereinstimmung mit [Workerprototyp](../../atl/reference/worker-archetype.md) geeignet für das Behandeln von den Anforderungen in die Warteschlange gestellt [CThreadPool](../../atl/reference/cthreadpool-class.md) auf.  
+ Eine Worker-Thread-Klasse mit der [Worker Prototyp](../../atl/reference/worker-archetype.md) geeignet, für die Verarbeitung von Anforderungen für in die Warteschlange [CThreadPool](../../atl/reference/cthreadpool-class.md).  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CNonStatelessWorker::RequestType](../Topic/CNonStatelessWorker::RequestType.md)|Implementierung von [WorkerArchetype::RequestType](../Topic/WorkerArchetype::RequestType.md).|  
+|[CNonStatelessWorker::RequestType](#requesttype)|Implementierung von [WorkerArchetype::RequestType](worker-archetype.md#requesttype).|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CNonStatelessWorker::Execute](../Topic/CNonStatelessWorker::Execute.md)|Implementierung von [WorkerArchetype::Execute](../Topic/WorkerArchetype::Execute.md).|  
-|[CNonStatelessWorker::Initialize](../Topic/CNonStatelessWorker::Initialize.md)|Implementierung von [WorkerArchetype::Initialize](../Topic/WorkerArchetype::Initialize.md).|  
-|[CNonStatelessWorker::Terminate](../Topic/CNonStatelessWorker::Terminate.md)|Implementierung von [WorkerArchetype::Terminate](../Topic/WorkerArchetype::Terminate.md).|  
+|[CNonStatelessWorker::Execute](#execute)|Implementierung von [WorkerArchetype::Execute](worker-archetype.md#execute).|  
+|[CNonStatelessWorker::Initialize](#initialize)|Implementierung von [WorkerArchetype::Initialize](worker-archetype.md#initialize).|  
+|[CNonStatelessWorker::Terminate](#terminate)|Implementierung von [WorkerArchetype::Terminate](worker-archetype.md#terminate).|  
   
-## Hinweise  
- Diese Klasse ist ein einfacher Arbeitsthread zur Verwendung mit [CThreadPool](../../atl/reference/cthreadpool-class.md).  Diese Klasse stellt keine AnforderungBehandlung Funktionen aus der eigenen.  Stattdessen instanziiert sie eine Instanz *des Workers* pro Anforderung und delegiert die Implementierung der Methoden zu dieser Instanz.  
+## <a name="remarks"></a>Hinweise  
+ Diese Klasse ist für die Verwendung mit einem einfachen Arbeitsthread [CThreadPool](../../atl/reference/cthreadpool-class.md). Diese Klasse stellt alle Funktionen Anforderungsbehandlung eigene bereit. In diesem Fall instanziiert eine Instanz des *Worker* pro Anforderung und delegiert die Implementierung der Methoden auf diese Instanz.  
   
- Der Vorteil dieser Klasse besteht darin, dass eine komfortable Möglichkeit, das Modell für für vorhandene Arbeitsthreadklassen zu ändern.  `CThreadPool` stellt einen einzelnen Worker während der Lebensdauer des Threads, sodass erstellt, wenn der Workerklassen\-Griffzustand, es diesen über mehrere Anforderungen enthält.  Durch Erstellen einfach diese Klasse in der `CNonStatelessWorker` Vorlage, vor der Verwendung mit `CThreadPool` beschränkt ist, die Lebensdauer des Workers und des Zustands, die sie enthält, einer einzelnen Anforderung umschließt.  
+ Der Vorteil dieser Klasse ist, dass es sich um eine einfache Möglichkeit, ändern Sie das Zustandsmodell für vorhandene Worker-Thread-Klassen bereitstellt. `CThreadPool`einen einzelnen Worker für die Lebensdauer des Threads erstellt, wenn die Workerklasse den Zustand enthält, es in mehreren Anforderungen aufnehmen kann. Indem es einfach dieser Klasse in der `CNonStatelessWorker` Vorlage vor der Verwendung mit `CThreadPool`, die Lebensdauer von Arbeitskraft und den Status, er ist beschränkt auf eine einzelne Anforderung enthält.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atlutil.h  
   
-## Siehe auch  
- [CThreadPool Class](../../atl/reference/cthreadpool-class.md)   
- [Worker Archetype](../../atl/reference/worker-archetype.md)   
+##  <a name="a-nameexecutea--cnonstatelessworkerexecute"></a><a name="execute"></a>CNonStatelessWorker::Execute  
+ Implementierung von [WorkerArchetype::Execute](worker-archetype.md#execute).  
+
+  
+```
+void Execute(
+    Worker::RequestType request,
+    void* pvWorkerParam,
+    OVERLAPPED* pOverlapped);
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode erstellt eine Instanz der *Worker* Klasse auf dem Stapel und die Aufrufe [initialisieren](worker-archetype.md#initialize) für dieses Objekt. Wenn die Initialisierung erfolgreich ist, ruft diese Methode auch [ausführen](worker-archetype.md#execute) und [Terminate](worker-archetype.md#terminate) auf dasselbe Objekt.  
+
+  
+##  <a name="a-nameinitializea--cnonstatelessworkerinitialize"></a><a name="initialize"></a>CNonStatelessWorker::Initialize  
+ Implementierung von [WorkerArchetype::Initialize](worker-archetype.md#initialize).  
+  
+```
+BOOL Initialize(void* /* pvParam */) throw();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt immer TRUE zurück.  
+  
+### <a name="remarks"></a>Hinweise  
+ Diese Klasse führt keine Initialisierung `Initialize`.  
+  
+##  <a name="a-namerequesttypea--cnonstatelessworkerrequesttype"></a><a name="requesttype"></a>CNonStatelessWorker::RequestType  
+ Implementierung von [WorkerArchetype::RequestType](worker-archetype.md#requesttype).  
+  
+```
+typedef Worker::RequestType RequestType;
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Diese Klasse behandelt denselben Typ von Arbeitsaufgabe wie die Klasse für die *Worker* Template-Parameter. Finden Sie unter [CNonStatelessWorker Übersicht über](../../atl/reference/cnonstatelessworker-class.md) Informationen.  
+  
+##  <a name="a-nameterminatea--cnonstatelessworkerterminate"></a><a name="terminate"></a>CNonStatelessWorker::Terminate  
+ Implementierung von [WorkerArchetype::Terminate](worker-archetype.md#terminate).  
+  
+```
+void Terminate(void* /* pvParam */) throw();
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Diese Klasse führt keine Bereinigung `Terminate`.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [CThreadPool-Klasse](../../atl/reference/cthreadpool-class.md)   
+ [Worker-Prototyp](../../atl/reference/worker-archetype.md)   
  [Klassen](../../atl/reference/atl-classes.md)
+

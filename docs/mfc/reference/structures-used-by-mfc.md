@@ -1,31 +1,47 @@
 ---
-title: "Von MFC verwendete Strukturen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.structures"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Strukturen"
-  - "Strukturen, MFC"
+title: Von MFC verwendete Strukturen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.structures
+dev_langs:
+- C++
+helpviewer_keywords:
+- structures
+- structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Von MFC verwendete Strukturen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: d26b374e233326ac5acc97486edc8d38e6bf5d81
+ms.openlocfilehash: 68c5119715516a4a35af56bc8dd7ce4d9176ee97
+ms.lasthandoff: 02/24/2017
 
-Die folgende Tabelle enthält die Strukturen, die von verschiedenen Memberfunktionen aufgerufen werden. Weitere Informationen zur Verwendung des individuellen Struktur finden Sie in den Klassen und Member-Funktionen, die in der Liste "Siehe auch" für jede Struktur notiert haben.  
+---
+# <a name="structures-used-by-mfc"></a>Von MFC verwendete Strukturen
+Die folgende Tabelle enthält die Strukturen, die von verschiedenen Memberfunktionen aufgerufen werden. Finden Sie weitere Informationen über die Verwendung der einzelnen Struktur für die Klassen und Member-Funktionen finden Sie in der Liste "Siehe auch" für jede Struktur.  
   
 |[ABC-Struktur](../../mfc/reference/abc-structure.md)|[HSE_VERSION_INFO-Struktur](../../mfc/reference/hse-version-info-structure.md)|  
 |--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|  
@@ -42,7 +58,7 @@ Die folgende Tabelle enthält die Strukturen, die von verschiedenen Memberfunkti
 |[CDaoQueryDefInfo-Struktur](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA-Struktur](../../mfc/reference/rgndata-structure.md)|  
 |[CDaoRelationFieldInfo-Struktur](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[SOCKADDR-Struktur](../../mfc/reference/sockaddr-structure.md)|  
 |[CDaoRelationInfo-Struktur](../../mfc/reference/cdaorelationinfo-structure.md)|[SOCKADDR_IN-Struktur](../../mfc/reference/sockaddr-in-structure.md)|  
-|[CDaoTableDefInfo-Struktur](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME-Struktur](SYSTEMTIME%20Structure.xml)
+|[CDaoTableDefInfo-Struktur](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME-Struktur](systemtime-structure1.md)
 |[CDaoWorkspaceInfo-Struktur](../../mfc/reference/cdaoworkspaceinfo-structure.md)|[WINDOWPLACEMENT-Struktur](../../mfc/reference/windowplacement-structure.md)|  
 |[CODBCFieldInfo-Struktur](../../mfc/reference/codbcfieldinfo-structure.md)|[WINDOWPOS-Struktur](../../mfc/reference/windowpos-structure1.md)  
 |[COLORADJUSTMENT-Struktur](../../mfc/reference/coloradjustment-structure.md)|[WSADATA-Struktur](../../mfc/reference/wsadata-structure.md)|  
@@ -57,4 +73,5 @@ Die folgende Tabelle enthält die Strukturen, die von verschiedenen Memberfunkti
   
 ## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
 

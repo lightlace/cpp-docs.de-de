@@ -1,46 +1,62 @@
 ---
-title: "Linkertoolwarnung LNK4227 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4227"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4227"
+title: Linkertoolwarnung Lnk4227 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK4227
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Linkertoolwarnung LNK4227
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: ee566318c7d19159f9a2c084d348b5010a65e2de
+ms.lasthandoff: 02/24/2017
 
-Warnung bei Metadatenoperation \(HRESULT\): Warnmeldung  
+---
+# <a name="linker-tools-warning-lnk4227"></a>Linkertoolwarnung LNK4227
+Warnung bei Metadatenoperation (HRESULT): Warning_message  
   
- Der Linker hat bei der Zusammenführung Unterschiede in den Metadaten entdeckt:  
+Der Linker entdeckt Unterschiede in den Metadaten beim Zusammenführen:  
   
--   Eine oder mehrere referenzierte Assemblys bei der derzeit erstellten Assembly.  
+-   Eine oder mehrere Assemblys verwiesen wird mit der Assembly, die gerade erstellt wird.  
   
 -   Eine oder mehrere Quellcodedateien in einer Kompilierung.  
   
- LNK4227 kann beispielsweise auftreten, wenn zwei globale Funktionen mit dem gleichen Namen vorhanden sind, bei denen die Parameterinformationen jedoch unterschiedlich deklariert sind \(wenn die Deklarationen nicht bei allen Kompiliereinheiten einheitlich sind\).  Wenn Sie Sie ildasm.exe \/TEXT \/METADATEN `object_file` für jede OBJ\-Datei verwenden, wird deutlich, wie sehr sich die Typen voneinander unterscheiden.  
+Z. B. LNK4227 kann verursacht werden, wenn zwei globale mit demselben Namen, aber unterschiedlich deklariert Parameterinformationen Funktionen (Deklarationen sind nicht konsistent in jeder Kompiliereinheit). Mithilfe von ildasm.exe/Text/Metadata `object_file` auf einzelnen OBJ-Datei, und Sie sollte wie die Typen unterscheiden.  
   
- LNK4227 meldet auch Probleme, die von einem anderen Tool verursacht werden.  Informationen zu **al.exe** finden Sie beispielsweise unter [Fehler und Warnungen des Al.exe\-Tools](assetId:///7f125d49-0a03-47a6-9ba9-d61a679a7d4b).  
+LNK4227 meldet auch Probleme, die mit einem anderen Tool stammen. Z. B. al.exe; finden Sie unter [Al.exe Tool Fehler und Warnungen](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b).  
   
- Um die Warnung zu vermeiden, müssen die Probleme mit Metadaten behoben werden.  
+Probleme mit Metadaten müssen behoben werden, um die Warnung zu vermeiden.  
   
- LNK4227 wird beispielsweise ausgegeben, wenn eine Assembly, auf die verwiesen wird, mit einer anderen Signatur versehen ist als die Assembly, die auf diese Assembly verweist.  
+Beispielsweise wird LNK4227 generiert, wenn eine Assembly anders als die Assembly signiert wurde, die darauf verweist.  
   
- Im folgenden Beispiel wird LNK4227 generiert:  
+Im folgende Beispiel wird LNK4227 generiert:  
   
 ```  
 // LNK4227.cpp  
@@ -52,7 +68,7 @@ using namespace System::Reflection;
 int main() {}  
 ```  
   
- und anschließend  
+ Und dann  
   
 ```  
 // LNK4227b.cpp  
@@ -69,38 +85,9 @@ ref class MyClass
 };  
 ```  
   
- Im folgenden Beispiel wird LNK4227 generiert:  
+LNK4227 kann auch generiert werden, wenn Versionsnummern im falschen Format an Assemblyattribute übergeben werden.  Die ' *'-Notation ist für AssemblyVersionAttribute spezifisch.  Um diese Warnung zu beheben, verwenden Sie nur Zahlen in die Versionsattribute AssemblyVersionAttribute.  
   
-```  
-// LNK4227c.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System::Reflection;  
-  
-[assembly:AssemblyDelaySignAttribute(false)];  
-  
-int main() {}  
-```  
-  
- und anschließend  
-  
-```  
-// LNK4227d.cpp  
-// compile with: /clr:oldSyntax LNK4227c.cpp /FeLNK4227d.exe  
-#using <mscorlib.dll>  
-using namespace System::Reflection;  
-using namespace System::Runtime::CompilerServices;  
-  
-[assembly:AssemblyDelaySignAttribute(true)];  
-  
-__gc class MyClass  
-{  
-};  
-```  
-  
- LNK4227 kann auch generiert werden, wenn Versionsnummern im falschen Format an Assemblyattribute übergeben werden.  Die '\*'\-Notation ist für AssemblyVersionAttribute spezifisch.  Diese Warnung kann vermieden werden, indem für die Versionsattribute nur Zahlen verwendet werden, die sich von AssemblyVersionAttribute unterscheiden.  
-  
- Im folgenden Beispiel wird LNK4227 generiert:  
+Im folgende Beispiel wird LNK4227 generiert:  
   
 ```  
 // LNK4227e.cpp  

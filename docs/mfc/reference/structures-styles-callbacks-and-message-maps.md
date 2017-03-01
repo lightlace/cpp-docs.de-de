@@ -1,50 +1,70 @@
 ---
-title: "Strukturen, Stile, R&#252;ckrufe und Meldungszuordnungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.structures"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Rückruffunktionen, MFC"
-  - "Meldungszuordnungen, MFC"
-  - "Strukturen, MFC"
-  - "Stile, MFC"
+title: "Strukturen, Stile, Rückrufe und Meldungszuordnungen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.structures
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback functions, MFC
+- styles, MFC
+- message maps, MFC
+- structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Strukturen, Stile, R&#252;ckrufe und Meldungszuordnungen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
+ms.openlocfilehash: 6d540c5b39d756701c527231a03c06e439d84f3c
+ms.lasthandoff: 02/24/2017
 
-Dieser Abschnitt dokumentierte die Strukturen, die Formate und die Rückruffunktionen, die von der Microsoft Foundation Class\-Bibliothek und die MFC\-Meldungszuordnungen verwendet werden.  
+---
+# <a name="structures-styles-callbacks-and-message-maps"></a>Strukturen, Stile, Rückrufe und Meldungszuordnungen
+Dieser Abschnitt beschreibt die Strukturen, Stile und Callback-Funktionen, die von der Microsoft Foundation Class-Bibliothek verwendet, und die MFC-meldungszuordnungen.  
   
-## In diesem Abschnitt  
- [Strukturen verwendet von MFC](../../mfc/reference/structures-used-by-mfc.md)  
- Stellt Links zu Strukturen bereit, die von anderen Memberfunktionen aufgerufen werden.  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Von MFC verwendete Strukturen](../../mfc/reference/structures-used-by-mfc.md)  
+ Enthält Links zu den Strukturen, die von verschiedenen Memberfunktionen aufgerufen.  
   
- [Formatvorlagen verwendet von MFC](../../mfc/reference/styles-used-by-mfc.md)  
- Enthält Links zu den Formaten bereitstellen, die verwendet werden, wenn MFC erstellen, übergeben werden.  
+ [Von MFC verwendete Stile](../../mfc/reference/styles-used-by-mfc.md)  
+ Enthält Links zu die Stile, die beim Erstellen von MFC-Objekten verwendet.  
   
- [Rückruffunktionen verwendet von MFC](../../mfc/reference/callback-functions-used-by-mfc.md)  
- Stellt Links zu Einführungen Rückruffunktionen bereit, die in der MFC\-Bibliothek werden.  
+ [Von MFC verwendete Rückruffunktionen](../../mfc/reference/callback-functions-used-by-mfc.md)  
+ Enthält Links zu Callback-Funktionen, die in der MFC-Bibliothek angezeigt wird.  
   
- [Meldungszuordnungstabellen](../../mfc/reference/message-maps-mfc.md)  
- Beschreibt die Meldungszuordnungsmakros und die `CWnd` Meldungszuordnungseinträge.  
+ [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)  
+ Beschreibt die Meldungszuordnungsmakros und `CWnd` Meldungszuordnungseinträge.  
   
-## Verwandte Abschnitte  
- [Klassenbibliotheks\-Übersicht](../../mfc/class-library-overview.md)  
- Die Klassen in der MFC\-Bibliothek werden nach Kategorie aufgeführt.  
+## <a name="related-sections"></a>Verwandte Abschnitte  
+ [Übersicht über die Klassenbibliothek](../../mfc/class-library-overview.md)  
+ Die Klassen in der MFC-Bibliothek werden nach Kategorie aufgeführt.  
   
- [MFC\-Beispiele](../../top/visual-cpp-samples.md)  
- Stellt Links zu Beispielen bereit, die mit der MFC\-Bibliothek wird.
+ [MFC-Beispiele](../../visual-cpp-samples.md)  
+ Enthält Links zu Beispielen, die veranschaulichen die Verwendung der MFC-Bibliothek.
+
+
+
+

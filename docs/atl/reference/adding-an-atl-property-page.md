@@ -1,47 +1,65 @@
 ---
-title: "Hinzuf&#252;gen einer ATL-Eigenschaftenseite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL-Projekte, Hinzufügen von Eigenschaftenseiten"
-  - "Steuerelemente [ATL], Eigenschaftenseiten"
-  - "Eigenschaftenseiten, Hinzufügen"
+title: "Eine ATL-Eigenschaftenseite hinzufügen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages, adding
+- ATL projects, adding property pages
+- controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Hinzuf&#252;gen einer ATL-Eigenschaftenseite
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: 7b6a6220a33890d99e6fb2bd81ce832b38720c50
+ms.lasthandoff: 02/24/2017
 
-Damit dem Projekt eine ATL \(Active Template Library\)\-Eigenschaftenseite hinzugefügt werden kann, ist es erforderlich, dass das Projekt als ATL\-Anwendung oder als MFC\-Anwendung mit ATL\-Unterstützung erstellt wurde.  Sie können den [ATL\-Projekt\-Assistenten](../../atl/reference/atl-project-wizard.md) verwenden, um eine ATL\-Anwendung zu erstellen, oder der [MFC\-Anwendung ein ATL\-Objekt hinzufügen](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), um die ATL\-Unterstützung in eine MFC\-Anwendung zu implementieren.  
+---
+# <a name="adding-an-atl-property-page"></a>Hinzufügen einer ATL-Eigenschaftenseite
+Um eine Eigenschaftenseite Active Template Library (ATL) zu Ihrem Projekt hinzuzufügen, dass Ihr Projekt als ATL-Anwendung oder einer MFC-Anwendung mit ATL-Unterstützung erstellt wurde. Können Sie die [ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md) eine ATL-Anwendung erstellen oder [der MFC-Anwendung ein ATL-Objekt hinzufügen](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.  
   
- Wenn Sie eine Eigenschaftenseite für ein Steuerelement hinzufügen, muss das Steuerelement die [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)\-Schnittstelle unterstützen.  Wenn Sie ein [ATL\-Steuerelement erstellen](../../atl/reference/adding-an-atl-control.md), indem Sie den [ATL\-Steuerelement\-Assistenten](../../atl/reference/atl-control-wizard.md) ausführen, befindet sich diese Schnittstelle standardmäßig in der Ableitungsliste der Steuerelementklasse.  
+ Wenn Sie eine Eigenschaftenseite für ein Steuerelement hinzufügen, muss das Steuerelement unterstützt die [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) Schnittstelle. Diese Schnittstelle ist standardmäßig in der Ableitungsliste des Steuerelements Klasse, wenn Sie [erstellen ein ATL-Steuerelements](../../atl/reference/adding-an-atl-control.md) mithilfe der [ATL-Steuerelement-Assistenten](../../atl/reference/atl-control-wizard.md).  
   
 > [!NOTE]
->  Wenn [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) nicht in der Ableitungsliste der Steuerelementklasse enthalten ist, müssen Sie sie manuell hinzufügen.  
+>  Wenn eine Klasse keinen [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) in der Ableitungsliste, Sie müssen diese manuell hinzufügen.  
   
-### So fügen Sie dem Projekt eine ATL\-Eigenschaftenseite hinzu  
+### <a name="to-add-an-atl-property-page-to-your-project"></a>Um dem Projekt eine ATL-Eigenschaftenseite hinzufügen  
   
-1.  Klicken Sie entweder im **Projektmappen\-Explorer** oder in der [Klassenansicht](assetId:///8d7430a9-3e33-454c-a9e1-a85e3d2db925) mit der rechten Maustaste auf den Namen des Projekts, dem Sie die ATL\-Eigenschaftenseite hinzufügen möchten.  
+1.  In beiden **Projektmappen-Explorer** oder [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), mit der rechten Maustaste des Namens des Projekts, dem Sie die ATL-Eigenschaftenseite hinzufügen möchten.  
   
-2.  Klicken Sie im Kontextmenü zunächst auf **Hinzufügen** und dann auf **Klasse hinzufügen**.  
+2.  Klicken Sie im Kontextmenü auf **hinzufügen** und klicken Sie dann auf **Klasse hinzufügen**.  
   
-3.  Klicken Sie im Bereich "Vorlagen" des Dialogfelds [Klasse hinzufügen](../../ide/add-class-dialog-box.md) zunächst auf **ATL COM\+ 1.0\-Komponente** und dann auf **Öffnen**, um den [ATL COM\+ 1.0 Komponenten\-Assistenten](../../atl/reference/atl-property-page-wizard.md) anzuzeigen.  
+3.  In der [Klasse hinzufügen](../../ide/add-class-dialog-box.md) klicken Sie im Dialogfeld im Bereich Vorlagen auf **ATL-Eigenschaftenseite** und klicken Sie dann auf **öffnen** zum Anzeigen der [ATL-Eigenschaftenseiten-Assistent](../../atl/reference/atl-property-page-wizard.md).  
   
- Nachdem Sie eine Eigenschaftenseite für ein Steuerelement erstellt haben, müssen Sie den [PROP\_PAGE](../Topic/PROP_PAGE.md)\-Eintrag in der Eigenschaftenzuordnung des Steuerelements angeben.  
+ Wenn Sie eine Eigenschaftenseite für ein Steuerelement erstellen, geben Sie die [PROP_PAGE](http://msdn.microsoft.com/library/2155973e-b96c-4385-bf85-5d6112c969b8) Eintrag in der eigenschaftszuordnung für das Steuerelement.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten](../../atl/atl-com-property-pages.md)   
- [Fundamentals of ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md)   
- [Example: Implementing a Property Page](../../atl/example-implementing-a-property-page.md)
+ [Grundlagen von ATL-COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Beispiel: Implementieren einer Eigenschaftenseite](../../atl/example-implementing-a-property-page.md)
+
+

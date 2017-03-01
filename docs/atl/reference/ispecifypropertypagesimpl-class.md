@@ -1,81 +1,107 @@
 ---
-title: "ISpecifyPropertyPagesImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ISpecifyPropertyPagesImpl"
-  - "ATL.ISpecifyPropertyPagesImpl<T>"
-  - "ATL::ISpecifyPropertyPagesImpl"
-  - "ATL::ISpecifyPropertyPagesImpl<T>"
-  - "ATL.ISpecifyPropertyPagesImpl"
-  - "ISpecifyPropertyPagesImpl Class"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ISpecifyPropertyPages"
-  - "ISpecifyPropertyPagesImpl class"
-  - "Eigenschaftenseiten, CLSIDs associated with"
+title: ISpecifyPropertyPagesImpl Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ISpecifyPropertyPagesImpl
+- ATL.ISpecifyPropertyPagesImpl<T>
+- ATL::ISpecifyPropertyPagesImpl
+- ATL::ISpecifyPropertyPagesImpl<T>
+- ATL.ISpecifyPropertyPagesImpl
+- ISpecifyPropertyPagesImpl Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages, CLSIDs associated with
+- ISpecifyPropertyPages
+- ISpecifyPropertyPagesImpl class
 ms.assetid: 4e4b9795-b656-4d56-9b8c-85941e7731f9
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# ISpecifyPropertyPagesImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 4d5f74de2ec6569527221cf94df6f7921f4bb4c9
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse implementiert **IUnknown** und stellt eine Standardimplementierung der Schnittstelle [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217).  
+---
+# <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl-Klasse
+Diese Klasse implementiert **IUnknown** und enthält die standardmäßige Implementierung der [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) Schnittstelle.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen nicht verwendet werden, die in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausführen.  
+>  Diese Klasse und ihre Member können in Anwendungen, die in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden, nicht verwendet werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template<class T>  
+class ATL_NO_VTABLE ISpecifyPropertyPagesImpl 
+   : public ISpecifyPropertyPages
 ```  
   
-      template<  
-class T   
->  
-class ATL_NO_VTABLE ISpecifyPropertyPagesImpl :  
-public ISpecifyPropertyPages  
-```  
-  
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Die Klasse, die von abgeleitet `ISpecifyPropertyPagesImpl`.  
+ Abgeleitet von die Klasse `ISpecifyPropertyPagesImpl`.  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[ISpecifyPropertyPagesImpl::GetPages](../Topic/ISpecifyPropertyPagesImpl::GetPages.md)|Füllt ein gezähltes Array UUID\-Werte aus.  Jedes UUID entspricht dem CLSID für eine der Eigenschaftenseiten, die im Eigenschaftenblatt des Objekts angezeigt werden können.|  
+|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Füllt ein Array von UUID gezählt-Werte. Jede UUID entspricht die CLSID für eine der Eigenschaftenseiten, die im Eigenschaftenfenster des Objekts angezeigt werden.|  
   
-## Hinweise  
- Die [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)\-Schnittstelle ermöglicht einem Client, erhält eine Liste der CLSID für die Eigenschaftenseiten, die von einem Objekt unterstützt werden.  \- Klasse `ISpecifyPropertyPagesImpl` stellt eine Standardimplementierung dieser Schnittstelle und implementiert **IUnknown**, indem Informationen zum Sicherungsgerät in Debugbuilds sendet.  
+## <a name="remarks"></a>Hinweise  
+ Die [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) Schnittstelle ermöglicht es einen Client zum Abrufen einer Liste von CLSIDs für die Eigenschaftenseiten, die von einem Objekt unterstützt. Klasse `ISpecifyPropertyPagesImpl` bietet eine Standardimplementierung dieser Schnittstelle und implementiert **IUnknown** durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus erstellt.  
   
 > [!NOTE]
->  Führen Sie nicht die Schnittstelle verfügbar **ISpecifyPropertyPages** wenn das Objekt nicht Eigenschaftenseiten unterstützt.  
+>  Machen Sie nicht die **ISpecifyPropertyPages** Schnittstelle, wenn das Objekt Eigenschaftenseiten nicht unterstützt.  
   
- **Verwandte Elemente** [ATL\-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL\-Projekts](../../atl/reference/creating-an-atl-project.md)  
+ **Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `ISpecifyPropertyPages`  
   
  `ISpecifyPropertyPagesImpl`  
   
-## Anforderungen  
- **Header:**  möchten  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** Standardschnittstellen  
   
-## Siehe auch  
- [IPropertyPageImpl Class](../../atl/reference/ipropertypageimpl-class.md)   
- [IPerPropertyBrowsingImpl Class](../../atl/reference/iperpropertybrowsingimpl-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namegetpagesa--ispecifypropertypagesimplgetpages"></a><a name="getpages"></a>ISpecifyPropertyPagesImpl::GetPages  
+ Füllt das Array in der [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) Struktur mit den CLSIDs für die Eigenschaftenseiten, die im Eigenschaftenfenster des Objekts angezeigt werden.  
+  
+```
+STDMETHOD(GetPages)(CAUUID* pPages);
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ ATL verwendet die Objekttabelle Eigenschaft jedes CLSID abrufen.  
+  
+ Finden Sie unter [ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+## <a name="see-also"></a>Siehe auch  
+ [IPropertyPageImpl-Klasse](../../atl/reference/ipropertypageimpl-class.md)   
+ [IPerPropertyBrowsingImpl-Klasse](../../atl/reference/iperpropertybrowsingimpl-class.md)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+

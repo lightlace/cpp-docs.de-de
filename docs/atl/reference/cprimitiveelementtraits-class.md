@@ -1,64 +1,77 @@
 ---
-title: "CPrimitiveElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CPrimitiveElementTraits<T>"
-  - "CPrimitiveElementTraits"
-  - "ATL.CPrimitiveElementTraits"
-  - "ATL::CPrimitiveElementTraits<T>"
-  - "ATL::CPrimitiveElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPrimitiveElementTraits class"
+title: Klasse CPrimitiveElementTraits | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CPrimitiveElementTraits<T>
+- CPrimitiveElementTraits
+- ATL.CPrimitiveElementTraits
+- ATL::CPrimitiveElementTraits<T>
+- ATL::CPrimitiveElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CPrimitiveElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 44e3849ebf2de09bc9b62e28df0f70bf52ac95e6
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse stellt Standardmethoden und Funktionen für eine Auflistungsklasse bereit, die aus primitiven Datentypen besteht.  
+---
+# <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits-Klasse
+Diese Klasse stellt Standardmethoden und Funktionen für die Auflistungsklasse eine von primitiven Datentypen besteht.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template <typename T>  
+class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
-      template<  
-   typename T  
-> class CPrimitiveElementTraits :   
-   public CDefaultElementTraits< T >  
-```  
-  
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Der Typ von den im Auflistungsklassenobjekt gespeichert werden, Daten.  
+ Der Typ der Daten in der Klasse Auflistungsobjekt gespeichert werden.  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CPrimitiveElementTraits::INARGTYPE](../Topic/CPrimitiveElementTraits::INARGTYPE.md)|Der für das Hinzufügen von Elementen zum Auflistungsklassenobjekt Datentyp, zu verwenden.|  
-|[CPrimitiveElementTraits::OUTARGTYPE](../Topic/CPrimitiveElementTraits::OUTARGTYPE.md)|Der für das Abrufen von Elementen vom Datentyp, Auflistungsklassenobjekt zu verwenden.|  
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Der Datentyp für das Klassenobjekt Auflistung Elemente hinzugefügt.|  
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Der Datentyp für das Abrufen von Elementen aus der-Auflistung-Klasse.|  
   
-## Hinweise  
- Diese Klasse bietet Standardverhalten statische Funktionen und Methoden zum Verschieben, Kopieren, Vergleichen und die hackenden Grunddatentypelemente, die in einer Auflistungsklasse gespeichert werden, ein Objekt.  
+## <a name="remarks"></a>Hinweise  
+ Diese Klasse enthält statische Standard-Funktionen und Methoden zum Verschieben, kopieren, vergleichen und hashing primitiven Typ Datenelemente in ein Objekt der Klasse Auflistung gespeichert.  
   
- Weitere Informationen finden Sie unter [ATL\-Auflistungsklassen](../../atl/atl-collection-classes.md).  
+ Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -69,9 +82,24 @@ Diese Klasse stellt Standardmethoden und Funktionen für eine Auflistungsklasse 
   
  `CPrimitiveElementTraits`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atlcoll.h  
   
-## Siehe auch  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
+ Der Datentyp für das Klassenobjekt Auflistung Elemente hinzugefügt.  
+  
+```
+typedef T INARGTYPE;
+```  
+  
+##  <a name="a-nameoutargtypea--cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
+ Der Datentyp für das Abrufen von Elementen aus der-Auflistung-Klasse.  
+  
+```
+typedef T& OUTARGTYPE;
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+

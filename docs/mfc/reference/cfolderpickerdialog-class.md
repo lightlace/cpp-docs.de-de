@@ -1,57 +1,73 @@
 ---
-title: "CFolderPickerDialog Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxdlgs/CFolderPickerDialog"
-  - "CFolderPickerDialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFolderPickerDialog class"
+title: Klasse CFolderPickerDialog | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxdlgs/CFolderPickerDialog
+- CFolderPickerDialog
+dev_langs:
+- C++
+helpviewer_keywords:
+- CFolderPickerDialog class
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CFolderPickerDialog Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 0d020544a16056d3f4db538750ed5a16b54f9a51
+ms.lasthandoff: 02/24/2017
 
-CFolderPickerDialog\-Klasse implementiert CFileDialog im Ordner\-Auswahlmodus.  
+---
+# <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog-Klasse
+CFolderPickerDialog-Klasse implementiert CFileDialog im ordnerauswahlmodus.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFolderPickerDialog : public CFileDialog;  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CFolderPickerDialog::~CFolderPickerDialog](../Topic/CFolderPickerDialog::~CFolderPickerDialog.md)|Destruktor.|  
-|[CFolderPickerDialog::CFolderPickerDialog](../Topic/CFolderPickerDialog::CFolderPickerDialog.md)|Konstruktor.|  
+|[CFolderPickerDialog:: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destruktor.|  
+|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Konstruktor.|  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
   
-## Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [CDialog\-Klasse](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
  [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
   
@@ -59,8 +75,44 @@ class CFolderPickerDialog : public CFileDialog;
   
  `CFolderPickerDialog`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxdlgs.h  
   
-## Siehe auch  
+##  <a name="a-namecfolderpickerdialoga--cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog  
+ Konstruktor.  
+  
+```  
+explicit CFolderPickerDialog(
+    LPCTSTR lpszFolder = NULL,  
+    DWORD dwFlags = 0,  
+    CWnd* pParentWnd = NULL,  
+    DWORD dwSize = 0);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `lpszFolder`  
+ Ausgangsordner.  
+  
+ `dwFlags`  
+ Eine Kombination von ein oder mehrere Flags, die Sie im Dialogfeld anpassen können.  
+  
+ `pParentWnd`  
+ Ein Zeiger auf die Dialogfeldobjekt übergeordnete Fenster oder das Besitzer.  
+  
+ `dwSize`  
+ Die Größe der OPENFILENAME-Struktur.  
+  
+### <a name="remarks"></a>Hinweise  
+  
+##  <a name="a-namedtorcfolderpickerdialoga--cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog:: ~ CFolderPickerDialog  
+ Destruktor.  
+  
+```  
+virtual ~CFolderPickerDialog();
+```  
+  
+### <a name="remarks"></a>Hinweise  
+  
+## <a name="see-also"></a>Siehe auch  
  [Klassen](../../mfc/reference/mfc-classes.md)
+

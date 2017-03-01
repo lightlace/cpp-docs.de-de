@@ -1,82 +1,230 @@
 ---
-title: "call-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::call"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call-Klasse"
+title: Call-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concurrency::call
+- agents/concurrency::call
+dev_langs:
+- C++
+helpviewer_keywords:
+- call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# call-Klasse
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 19244e5527207f852256e646abd18ad298fb28cd
+ms.openlocfilehash: b3cfec104346b212217a6854af2390c412c9e015
+ms.lasthandoff: 02/24/2017
 
-Ein `call`\-Meldungsblock ist ein geordneter `target_block` mit mehreren Quellen, der eine bestimmte Funktion aufruft, wenn eine Nachricht empfangen wird.  
+---
+# <a name="call-class"></a>call-Klasse
+Ein `call`-Meldungsblock ist ein geordneter `target_block` mit mehreren Quellen, der eine bestimmte Funktion aufruft, wenn eine Nachricht empfangen wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template<class T, class _FunctorType = std::function<void(T const&)>>
+class call : public target_block<multi_link_registry<ISource<T>>>;
 ```  
-template<  
-   class _Type,  
-   class _FunctorType = std::tr1::function<void(_Type const&)>  
->  
-class call : public target_block<multi_link_registry<ISource<_Type>>>;  
-```  
   
-#### Parameter  
- `_Type`  
- Der Nutzlasttyp der Meldungen, die an diesen Block weitergegeben wurden.  
+#### <a name="parameters"></a>Parameter  
+ `T`  
+ Der Nutzlasttyp der Nachrichten an diesen Block weitergegeben.  
   
  `_FunctorType`  
- Die Signatur von Funktionen, die dieser Block akzeptieren kann.  
+ Die Signatur der Funktionen, die dieser Block akzeptieren kann.  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[call::call\-Konstruktor](../Topic/call::call%20Constructor.md)|Überladen.  Erstellt einen `call`\-Meldungsblock.|  
-|[call::~call\-Destruktor](../Topic/call::~call%20Destructor.md)|Zerstört den `call`\-Meldungsblock.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[Rufen Sie den Konstruktor](#ctor)|Überladen. Erstellt eine `call` Meldungsblocks.|  
+|[~ call-Destruktor](#dtor)|Zerstört die `call` Meldungsblocks.|  
   
-### Geschützte Methoden  
+### <a name="protected-methods"></a>Geschützte Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[call::process\_input\_messages\-Methode](../Topic/call::process_input_messages%20Method.md)|Führt \- Funktion auf den Eingabenachrichten aus.|  
-|[call::process\_message\-Methode](../Topic/call::process_message%20Method.md)|Verarbeitet eine Meldung, die von diesem `call`\-Meldungsblock akzeptiert wurde.|  
-|[call::propagate\_message\-Methode](../Topic/call::propagate_message%20Method.md)|Übergibt eine Meldung asynchron von einem `ISource`\-Block an diesen `call`\-Meldungsblock.  Wird bei Aufruf durch einen Quellblock von der `propagate`\-Methode aufgerufen.|  
-|[call::send\_message\-Methode](../Topic/call::send_message%20Method.md)|Übergibt eine Meldung synchron von einem `ISource`\-Block an diesen `call`\-Meldungsblock.  Wird bei Aufruf durch einen Quellblock von der `send`\-Methode aufgerufen.|  
-|[call::supports\_anonymous\_source\-Methode](../Topic/call::supports_anonymous_source%20Method.md)|Überschreibt die `supports_anonymous_source`\-Methode, um anzugeben, dass der Block die Nachrichten verwenden kann, die es von einer Quelle bereitgestellt werden, die nicht verknüpft wird. Überschreibungen \( [ITarget::supports\_anonymous\_source](../Topic/ITarget::supports_anonymous_source%20Method.md)\).|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[Process_input_messages-Methode](#process_input_messages)|Führt die Aufruf-Funktion für eingehende Nachrichten.|  
+|[Process_message-Methode](#process_message)|Verarbeitet eine Meldung, die von diesem akzeptiert wurde `call` Meldungsblocks.|  
+|[Propagate_message-Methode](#propagate_message)|Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `call` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.|  
+|[Send_message-Methode](#send_message)|Übergibt synchron eine Meldung von einer `ISource` -Block an diesen `call` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.|  
+|[Supports_anonymous_source-Methode](#supports_anonymous_source)|Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block akzeptieren kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist. (Überschreibt [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
-## Hinweise  
- Weitere Informationen finden Sie unter [Asynchrone Nachrichtenblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
-## Vererbungshierarchie  
- [ITarget](../../../parallel/concrt/reference/itarget-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [ITarget](itarget-class.md)  
   
- [target\_block](../../../parallel/concrt/reference/target-block-class.md)  
+ [target_block](target-block-class.md)  
   
  `call`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** agents.h  
   
  **Namespace:** Parallelität  
   
-## Siehe auch  
- [concurrency\-Namespace](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [transformer\-Klasse](../../../parallel/concrt/reference/transformer-class.md)
+##  <a name="a-namectora-call"></a><a name="ctor"></a>Rufen Sie 
+
+ Erstellt eine `call` Meldungsblocks.  
+  
+```
+call(
+    _Call_method const& _Func);
+
+call(
+    _Call_method const& _Func,
+    filter_method const& _Filter);
+
+call(
+    Scheduler& _PScheduler,
+    _Call_method const& _Func);
+
+call(
+    Scheduler& _PScheduler,
+    _Call_method const& _Func,
+    filter_method const& _Filter);
+
+call(
+    ScheduleGroup& _PScheduleGroup,
+    _Call_method const& _Func);
+
+call(
+    ScheduleGroup& _PScheduleGroup,
+    _Call_method const& _Func,
+    filter_method const& _Filter);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_Func`  
+ Eine Funktion, die für jede akzeptierte Meldung aufgerufen wird.  
+  
+ `_Filter`  
+ Eine Filterfunktion, die bestimmt, ob die angebotene Nachrichten akzeptiert werden sollen.  
+  
+ `_PScheduler`  
+ Das `Scheduler`-Objekt, in dem die Weiterleitungsaufgabe für den `call`-Meldungsblock geplant ist.  
+  
+ `_PScheduleGroup`  
+ Das `ScheduleGroup`-Objekt, in dem die Weiterleitungsaufgabe für den `call`-Meldungsblock geplant ist. Das verwendete `Scheduler` -Objekt wird von der Planungsgruppe impliziert.  
+  
+### <a name="remarks"></a>Hinweise  
+ Die Runtime verwendet das Standardplanungsprogramm, wenn Sie den `_PScheduler` -Parameter oder den `_PScheduleGroup` -Parameter nicht angeben.  
+  
+ Der Typ `_Call_method` ist ein Funktionselement mit der Signatur `void (T const &)` die aufgerufen wird, von diesem `call` -Meldungsblock, eine Nachricht zu verarbeiten.  
+  
+ Der Typ `filter_method` ist ein Funktionselement mit der Signatur `bool (T const &)` die aufgerufen wird, von diesem `call` -Meldungsblock zu bestimmen, ob eine bereitgestellte Meldung akzeptiert werden sollen.  
+  
+##  <a name="a-namedtora-call"></a><a name="dtor"></a>~ Aufrufen 
+
+ Zerstört die `call` Meldungsblocks.  
+  
+```
+~call();
+```  
+  
+##  <a name="a-nameprocessinputmessagesa-processinputmessages"></a><a name="process_input_messages"></a>process_input_messages 
+
+ Führt die Aufruf-Funktion für eingehende Nachrichten.  
+  
+```
+virtual void process_input_messages(_Inout_ message<T>* _PMessage);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_PMessage`  
+  
+##  <a name="a-nameprocessmessagea-processmessage"></a><a name="process_message"></a>process_message 
+
+ Verarbeitet eine Meldung, die von diesem akzeptiert wurde `call` Meldungsblocks.  
+  
+```
+virtual void process_message(_Inout_ message<T>* _PMessage);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_PMessage`  
+ Ein Zeiger auf die Meldung, die behandelt werden sollen.  
+  
+##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+
+ Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `call` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.  
+  
+```
+virtual message_status propagate_message(
+    _Inout_ message<T>* _PMessage,
+    _Inout_ ISource<T>* _PSource);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_PMessage`  
+ Ein Zeiger auf das `message`-Objekt.  
+  
+ `_PSource`  
+ Ein Zeiger für den Quellblock, der die Meldung anbietet.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein [Message_status](concurrency-namespace-enums.md) Anzeichen, was das Ziel entschieden, mit der Meldung zu tun.  
+  
+##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+
+ Übergibt synchron eine Meldung von einer `ISource` -Block an diesen `call` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.  
+  
+```
+virtual message_status send_message(
+    _Inout_ message<T>* _PMessage,
+    _Inout_ ISource<T>* _PSource);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_PMessage`  
+ Ein Zeiger auf das `message`-Objekt.  
+  
+ `_PSource`  
+ Ein Zeiger für den Quellblock, der die Meldung anbietet.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein [Message_status](concurrency-namespace-enums.md) Anzeichen, was das Ziel entschieden, mit der Meldung zu tun.  
+  
+##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+
+ Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block akzeptieren kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist.  
+  
+```
+virtual bool supports_anonymous_source();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ `true`Da der Block nicht angebotene Nachrichten nicht verschieben.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency-Namespace](concurrency-namespace.md)   
+ [Transformer-Klasse](transformer-class.md)
+

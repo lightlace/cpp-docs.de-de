@@ -1,37 +1,53 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4823 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4823"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4823"
+title: Compiler (Stufe 3) C4823 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4823
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4823
 ms.assetid: 8a77560d-dcea-4cae-aebb-8ebf1b4cef85
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Compilerwarnung (Stufe 3) C4823
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: ea03723f9ccae2348a47ae4894097f5cd9f8b5a1
+ms.lasthandoff: 02/24/2017
 
-'Funktion' verwendet einen festen Zeiger, die Entladesemantik ist aber nicht aktiviert.Verwenden Sie evtl. \/EHa  
+---
+# <a name="compiler-warning-level-3-c4823"></a>Compilerwarnung (Stufe 3) C4823
+'Funktion': verwendet feste Zeiger zu, aber entladen nicht aktiviert. Erwägen Sie/EHa  
   
- Um die Fixierung eines Objekts auf dem verwalteten Heap aufzuheben, auf das von einem festen, in einem Blockbereich deklarierten Zeiger verwiesen wird, simuliert der Compiler das Verhalten von Destruktoren für lokale Klassen und "gibt quasi vor", dass der feste Zeiger über einen Destruktor verfügt, durch den der Zeiger zu einem NULL\-Zeiger wird.  Damit nach dem Auslösen einer Ausnahme ein Destruktor aufgerufen werden kann, muss die Objektentladung aktiviert werden, was durch die Verwendung von [\/EHsc](../../build/reference/eh-exception-handling-model.md) ermöglicht wird.  
+Um ein Objekt im verwalteten Heap verweist ein fester Zeiger in einem Blockbereich deklarierten zu lösen, simuliert der Compiler das Verhalten von Destruktoren für lokale Klassen und "als", ob der feste Zeiger über einen Destruktor aufweist, der den Zeiger hebt. Um einen Aufruf von einem Destruktor nach dem Auslösen einer Ausnahme zu aktivieren, müssen Sie aktivieren Objekt zu entladen, können Sie mithilfe von [/EHsc](../../build/reference/eh-exception-handling-model.md).  
   
- Sie können die Fixierung des Objekts auch manuell aufheben und die Warnmeldung ignorieren.  
+Sie können auch manuell lösen das Objekt und die Warnung ignorieren.  
   
-## Beispiel  
- Im folgenden Beispiel wird C4823 generiert.  
+## <a name="example"></a>Beispiel  
+Im folgende Beispiel wird C4823 generiert.  
   
 ```  
 // C4823.cpp  
@@ -56,30 +72,4 @@ int main() {
    f( gcnew G );  
 }  
 ```  
-  
-## Beispiel  
- C4823 kann auch bei Verwendung von **\/clr:oldSyntax** generiert werden.  Im folgenden Beispiel wird C4823 generiert.  
-  
-```  
-// C4823_b.cpp  
-// compile with: /clr:oldSyntax /W3 /EHa-  
-using namespace System;  
-  
-__gc struct G {  
-   int m;  
-};  
-  
-void f(G* pG) {  
-   try {  
-      int __pin* p = &pG->m;  
-      // manually unpin, ignore warning  
-      // p = 0;  
-      throw new Exception;  
-   }  
-   catch(Exception*) {}  
-}   // C4823  
-  
-int main() {  
-   f( new G );  
-}  
-```
+

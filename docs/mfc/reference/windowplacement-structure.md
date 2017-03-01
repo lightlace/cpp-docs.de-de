@@ -1,91 +1,108 @@
 ---
-title: "WINDOWPLACEMENT-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WINDOWPLACEMENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WINDOWPLACEMENT-Struktur"
+title: WINDOWPLACEMENT-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WINDOWPLACEMENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- WINDOWPLACEMENT structure
 ms.assetid: ea7d61f6-eb57-478e-9b08-7c1d07091aa8
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# WINDOWPLACEMENT-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 62cf7003f43d50d5998dd527ae5ad7b10ab95686
+ms.lasthandoff: 02/24/2017
 
-Die `WINDOWPLACEMENT`\-Struktur enthält Informationen über die Position eines Fensters auf dem Bildschirm**.**  
+---
+# <a name="windowplacement-structure"></a>WINDOWPLACEMENT-Struktur
+Die `WINDOWPLACEMENT` Struktur enthält Informationen über die Platzierung eines Fensters auf dem Bildschirm**.**  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagWINDOWPLACEMENT {     /* wndpl */  
-   UINT length;  
-   UINT flags;  
-   UINT showCmd;  
-   POINT ptMinPosition;  
-   POINT ptMaxPosition;  
-   RECT rcNormalPosition;  
+typedef struct tagWINDOWPLACEMENT {     /* wndpl */  
+    UINT length;  
+    UINT flags;  
+    UINT showCmd;  
+    POINT ptMinPosition;  
+    POINT ptMaxPosition;  
+    RECT rcNormalPosition;  
 } WINDOWPLACEMENT;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *length*  
- Gibt die Länge, in Bytes, Struktur an**.**  
+ Gibt die Länge in Bytes, der Struktur**.**  
   
  `flags`  
- Gibt Flags an, die die Position des Fensters minimierten \- Methode steuern, durch die das Fenster wiederhergestellt wird.  Dieser Member kann eine oder beide der folgenden Flags sein:  
+ Gibt Flags an, die die Position eines minimierten Fensters und der Methode, die mit der Fenster wiederhergestellt wird. Dieser Member kann eine oder beide der folgenden Werte sein:  
   
--   **WPF\_SETMINPOSITION** gibt an, dass die X\- und Y\-Positionen minimierten des Fensters spezifizierter angegeben sein können**.** Dieses Flag muss angegeben werden, wenn die Koordinaten in den **ptMinPosition**\-Member festgelegt werden.  
+- **WPF_SETMINPOSITION** gibt an, dass die x und y-Position des minimierten Fensters angegeben werden können**.** Dieses Flag muss angegeben werden, wenn die Koordinaten, in festgelegt werden der **PtMinPosition** Element.  
   
--   **WPF\_RESTORETOMAXIMIZED** gibt, dass das wiederhergestellte Fenster maximiert wird, unabhängig davon, ob es maximiert war, bevor minimiert wurde.  Diese Einstellung ist nur gültig, nächsten wenn das Fenster wiederhergestellt wird.  Sie wird nicht das Standardwiederherstellungsverhalten.  Dieses Flag ist nur gültig, wenn der **SW\_SHOWMINIMIZED**\-Wert **showCmd** für den Member angegeben wird.  
+- **WPF_RESTORETOMAXIMIZED** gibt an, dass das wiederhergestellte Fenster maximiert werden wird, unabhängig davon, ob es maximiert wurde, bevor er minimiert wurde. Diese Einstellung gilt nur das nächste Mal das Fenster wiederhergestellt wird. Er ändert nicht das Standardverhalten für die Wiederherstellung. Dieses Flag ist nur gültig, wenn die **SW_SHOWMINIMIZED** angegebene Wert ist die **ShowCmd** Member.  
   
  *showCmd*  
- Gibt den aktuellen Anzeigezustand des Fensters an.  Dieser Member kann einer der folgenden Werte sein:  
+ Gibt den aktuellen Anzeigestatus des Fensters. Dieser Member kann einen der folgenden Werte sein:  
   
--   **SW\_HIDE** blendet das Fenster aus und führt Aktivierung an einen anderen Fenster.  
+- **SW_HIDE** Blendet das Fenster aus und übergibt die Aktivierung zu einem anderen Fenster.  
   
--   **SW\_MINIMIZE** minimiert das angegebene Fenster und aktiviert das Fenster der obersten Ebene in der Liste des Systems.  
+- **SW_MINIMIZE** minimiert das angegebene Fenster und das Fenster das obersten Ebene in der Liste des Systems aktiviert.  
   
--   **SW\_RESTORE** ermöglicht und wird ein Fenster gezeigt.  Wenn das Fenster minimiert oder maximiert ist, stellt Windows es in seine Originalgröße und die Position zurückgesetzt \(gleicher wie **SW\_SHOWNORMAL**\).  
+- **SW_RESTORE** aktiviert und ein Fenster angezeigt. Wenn das Fenster minimiert oder maximiert wird, wird Windows diese in seiner ursprünglichen Größe und Position (identisch mit **SW_SHOWNORMAL**).  
   
--   **SW\_SHOW** kann ein Fenster und wird in der aktuellen Größe und Position in an.  
+- **SW_SHOW** aktiviert ein Fenster und zeigt es in seiner aktuellen Größe und Position.  
   
--   **SW\_SHOWMAXIMIZED** kann ein Fenster und wird als maximiertes Fenster an.  
+- **SW_SHOWMAXIMIZED** aktiviert ein Fenster und zeigt ihn als eines maximierten Fensters.  
   
--   **SW\_SHOWMINIMIZED** kann ein Fenster und wird als Symbol an.  
+- **SW_SHOWMINIMIZED** aktiviert ein Fenster und als Symbol angezeigt.  
   
--   **SW\_SHOWMINNOACTIVE** wird ein Fenster als Symbol an.  Das Fenster, das derzeit aktiv bleibt aktiv.  
+- **SW_SHOWMINNOACTIVE** ein Fenster als Symbol angezeigt. Das derzeit aktive Fenster bleibt aktiv.  
   
--   **SW\_SHOWNA** wird ein Fenster in ihrem aktuellen Zustand her.  Das Fenster, das derzeit aktiv bleibt aktiv.  
+- **SW_SHOWNA** zeigt ein Fenster in seinem aktuellen Zustand. Das derzeit aktive Fenster bleibt aktiv.  
   
--   **SW\_SHOWNOACTIVATE** wird ein Fenster in der aktuellen Größe und Position in an.  Das Fenster, das derzeit aktiv bleibt aktiv.  
+- **SW_SHOWNOACTIVATE** zeigt ein Fenster in der letzten Größe und Position. Das derzeit aktive Fenster bleibt aktiv.  
   
--   **SW\_SHOWNORMAL** ermöglicht und wird ein Fenster gezeigt.  Wenn das Fenster minimiert oder maximiert ist, stellt Windows es in seine Originalgröße und die Position zurückgesetzt \(gleicher wie **SW\_RESTORE**\).  
+- **SW_SHOWNORMAL** aktiviert und ein Fenster angezeigt. Wenn das Fenster minimiert oder maximiert wird, wird Windows diese in seiner ursprünglichen Größe und Position (identisch mit **SW_RESTORE**).  
   
  *ptMinPosition*  
- Gibt die Position der oberen linken Ecke des Fensters, wenn das Fenster minimiert wird.  
+ Gibt die Position der oberen linken Fensterecke an, wenn das Fenster minimiert wird.  
   
  `ptMaxPosition`  
- Gibt die Position der oberen linken Ecke des Fensters, wenn das Fenster maximiert wird.  
+ Gibt die Position der oberen linken Fensterecke an, wenn das Fenster maximiert ist.  
   
  *rcNormalPosition*  
- Gibt die Koordinaten des Fensters, wenn das Fenster in der normalen Position \(wiederhergestellten\) ist.  
+ Das Fenster Koordinaten angibt, wenn das Fenster in der normalen Position (wiederhergestellt) ist.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** winuser.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::SetWindowPlacement](../Topic/CWnd::SetWindowPlacement.md)
+ [CWnd::SetWindowPlacement](../../mfc/reference/cwnd-class.md#setwindowplacement)
+
+

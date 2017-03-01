@@ -1,97 +1,114 @@
 ---
-title: "WINDOWPOS Structure1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WINDOWPOS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WINDOWPOS Struktur"
+title: WINDOWPOS Structure1 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WINDOWPOS
+dev_langs:
+- C++
+helpviewer_keywords:
+- WINDOWPOS structure
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# WINDOWPOS-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 522b15d630c3a5a3593010250db0491601493c69
+ms.lasthandoff: 02/24/2017
 
-Die `WINDOWPOS`\-Struktur enthält Informationen über die Größe und die Position eines Fensters.  
+---
+# <a name="windowpos-structure1"></a>WINDOWPOS Structure1
+Die `WINDOWPOS` Struktur enthält Informationen über die Größe und Position eines Fensters.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagWINDOWPOS { /* wp */  
-   HWND hwnd;  
-   HWND hwndInsertAfter;  
-   int x;  
-   int y;  
-   int cx;  
-   int cy;  
-   UINT flags;  
+typedef struct tagWINDOWPOS { /* wp */  
+    HWND hwnd;  
+    HWND hwndInsertAfter;  
+    int x;  
+    int y;  
+    int cx;  
+    int cy;  
+    UINT flags;  
 } WINDOWPOS;  
 ```  
   
-#### Parameter  
- *hwnd*  
+#### <a name="parameters"></a>Parameter  
+ *HWND*  
  Identifiziert das Fenster.  
   
  *hwndInsertAfter*  
- Identifiziert das Fenster, hinter dem dieses Fenster platziert wird.  
+ Identifiziert das Fenster hinter, dem in diesem Fenster befindet.  
   
  *x*  
- Gibt die Position des linken Rands des Fensters an.  
+ Gibt die Position des linken Rands des Fensters.  
   
  *y*  
- Gibt die Position des rechten Rands des Fensters an.  
+ Gibt die Position des rechten Rands des Fensters.  
   
  `cx`  
- Gibt der Fensterbreite, in Pixel an.  
+ Gibt die Breite des Fensters in Pixel.  
   
  `cy`  
- Gibt der Fensterhöhe, in Pixel an.  
+ Gibt die Höhe des Fensters in Pixel.  
   
  `flags`  
- Gibt den Fenster\-Positionieren von Optionen an.  Dieser Member kann einer der folgenden Werte sein:  
+ Gibt die Optionen im Fenster positioniert. Dieser Member kann einen der folgenden Werte sein:  
   
--   **SWP\_DRAWFRAME** zeichnet Frames \(definiert in der Klassenbeschreibung zum Fenster\) das Fenster.  Das Fenster `WM_NCCALCSIZE` empfängt eine Meldung.  
+- **SWP_DRAWFRAME** zeichnet einen Rahmen (definiert in der Beschreibung der Klasse für das Fenster), um das Fenster. Das Fenster empfängt eine `WM_NCCALCSIZE` Nachricht.  
   
--   **SWP\_FRAMECHANGED** `WM_NCCALCSIZE` sendet eine Meldung im Fenster, wenn die Größe des Fensters nicht geändert wird.  Wenn dieses Flag nicht angegeben wird, wird `WM_NCCALCSIZE` nur gesendet, wenn die Größe des Fensters geändert wird.  
+- **SWP_FRAMECHANGED** sendet eine `WM_NCCALCSIZE` Meldung in das Fenster, auch wenn die Größe des Fensters nicht geändert wird. Wenn dieses Flag nicht angegeben ist, `WM_NCCALCSIZE` wird nur gesendet, wenn die Größe des Fensters geändert wird.  
   
--   **SWP\_HIDEWINDOW** blendet das Fenster aus.  
+- **SWP_HIDEWINDOW** Blendet das Fenster aus.  
   
--   `SWP_NOACTIVATE` ermöglicht keine das Fenster.  
+- `SWP_NOACTIVATE`Das Fenster wird nicht aktiviert werden.  
   
--   **SWP\_NOCOPYBITS** verwirft den gesamten Inhalt des Clientbereichs.  Wenn dieses Flag nicht angegeben wird, wird der gültige Inhalt des Clientbereichs zurück in den Clientbereich gespeichert und kopiert, nachdem das Fenster angepasst oder neu angeordnet ist.  
+- **SWP_NOCOPYBITS** verwirft den gesamten Inhalt des Clientbereichs. Wenn dieses Flag nicht angegeben ist, werden der gültige Inhalt des Clientbereichs gespeichert und wieder in den Clientbereich kopiert werden, nachdem das Fenster angepasst oder neu angeordnet wird.  
   
--   `SWP_NOMOVE` verwaltet aktuelle Position beibehalten \(ignoriert die **w** und **y**\-Member\).  
+- `SWP_NOMOVE`Behält die aktuelle Position (ignoriert die **x** und **y** Elemente).  
   
--   **SWP\_NOOWNERZORDER** ändert nicht die Position des Besitzerfensters in der Z\-Reihenfolge.  
+- **SWP_NOOWNERZORDER** ändert nicht das Besitzerfenster Position in der Z-Reihenfolge.  
   
--   `SWP_NOSIZE` verwaltet aktuelle Größe \(ignoriert die **cx** und **cy**\-Member\).  
+- `SWP_NOSIZE`Aktuelle Größe beibehält (ignoriert die **Cx** und **cy** Elemente).  
   
--   **SWP\_NOREDRAW** zeichnet keine Änderungen neu.  
+- **SWP_NOREDRAW** Änderungen wird nicht neu gezeichnet.  
   
--   **SWP\_NOREPOSITION** entspricht der **SWP\_NOOWNERZORDER**.  
+- **SWP_NOREPOSITION** wie **SWP_NOOWNERZORDER**.  
   
--   **SWP\_NOSENDCHANGING** verhindert, dass das Fenster die Meldung empfängt. `WM_WINDOWPOSCHANGING`  
+- **SWP_NOSENDCHANGING** verhindert, empfangen die `WM_WINDOWPOSCHANGING` Nachricht.  
   
--   `SWP_NOZORDER` verwaltet aktuelle Reihenfolge bei \(ignoriert den **hwndInsertAfter**\-Member\).  
+- `SWP_NOZORDER`Beibehalten der aktuellen Sortierung (ignoriert die **HwndInsertAfter** Element).  
   
--   **SWP\_SHOWWINDOW** zeigt das Fenster.  
+- **SWP_SHOWWINDOW** zeigt das Fenster an.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** winuser.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnWindowPosChanging](../Topic/CWnd::OnWindowPosChanging.md)
+ [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)
+
+

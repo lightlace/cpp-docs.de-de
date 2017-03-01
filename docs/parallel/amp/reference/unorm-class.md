@@ -1,64 +1,129 @@
 ---
-title: "unorm-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::unorm"
-  - "amp/Concurrency::graphics::unorm"
-dev_langs: 
-  - "C++"
+title: Unorm-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::unorm
+- amp/Concurrency::graphics::unorm
+dev_langs:
+- C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# unorm-Klasse
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: aae5de80bed3b2d3d5c15285c2d12f2f6771a251
+ms.lasthandoff: 02/24/2017
 
-Erstellen Sie eine unorm Zahl dar.  Jedes Element ist eine Gleitkommazahl im Bereich von \[0.0f, 1.0f\].  
+---
+# <a name="unorm-class"></a>unorm-Klasse
+Darstellen Sie eine Zahl Unorm. Jedes Element ist ein Gleitkommatyp Gleitkommazahl im Bereich von [0, 0F, 1. 0f].  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class unorm;  
 ```  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[unorm::unorm\-Konstruktor](../Topic/unorm::unorm%20Constructor.md)|Überladen.  Standardkonstruktor.  Initialisieren Sie zu 0.0f.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[Unorm-Konstruktor](#ctor)|Überladen. Standardkonstruktor 0, 0F initialisieren.|  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|unorm::operator\- Operator||  
-|unorm::operator float Operator|Konvertierungsoperator.  Konvertieren Sie die unorm Zahl einem Gleitkommawert.|  
-|unorm::operator\*\= Operator||  
-|unorm::operator\-\/\=operator||  
-|unorm::operator\+\+\-Operator||  
-|unorm::operator\+\=\-Operator||  
-|unorm::operator\= Operator||  
-|unorm::operator\-\= Operator||  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|unorm::Operator - Operator||  
+|unorm::Operator Float-Operator|Operator für die Konvertierung. Konvertiert die Unorm Zahl in eine Gleitkommazahl doppelter Wert.|  
+|unorm::Operator * =-Operator||  
+|unorm::Operator / =-Operator||  
+|unorm::Operator Operator++-Operator||  
+|unorm::Operator:: Operator +=-Operator||  
+|unorm::Operator = (Operator)||  
+|unorm::Operator-=-Operator||  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `unorm`  
   
-## Anforderungen  
- **Header:** amp\_short\_vectors.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** amp_short_vectors.h  
   
- **Namespace:** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Siehe auch  
- [Concurrency::graphics\-Namespace](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora-unorm"></a><a name="ctor"></a>"unorm" 
+
+ Standardkonstruktor 0, 0F initialisieren.  
+  
+```  
+unorm(
+    void) restrict(amp,
+    cpu);
+
+ 
+explicit unorm(
+    float _V) restrict(amp,
+    cpu);
+
+ 
+explicit unorm(
+    unsigned int _V) restrict(amp,
+    cpu);
+
+ 
+explicit unorm(
+    int _V) restrict(amp,
+    cpu);
+
+ 
+explicit unorm(
+    double _V) restrict(amp,
+    cpu);
+
+ 
+unorm(
+    const unorm& _Other) restrict(amp,
+    cpu);
+
+ 
+inline explicit unorm(
+    const norm& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_V`  
+ Der Wert, der zum Initialisieren verwendet wird.  
+  
+ `_Other`  
+ Die Norm-Objekt, das zum Initialisieren verwendet.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency:: Graphics-Namespace](concurrency-graphics-namespace.md)
+
