@@ -1,50 +1,66 @@
 ---
-title: "rewind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rewind"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "rewind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dateizeiger [C++]"
-  - "Dateizeiger [C++], Neupositionieren"
-  - "Neupositionieren von Dateizeigern"
-  - "rewind-Funktion"
+title: rewind | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rewind
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- rewind
+dev_langs:
+- C++
+helpviewer_keywords:
+- rewind function
+- repositioning file pointers
+- file pointers [C++], repositioning
+- file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# rewind
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 814e09b9e3278ea4ea20752894584e502c9e6597
+ms.lasthandoff: 02/24/2017
 
-Ordnet der Dateizeiger am Beginn einer Datei neu.  
+---
+# <a name="rewind"></a>rewind
+Setzt den Dateizeiger einer Datei wieder an den Anfang.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -53,35 +69,35 @@ Ordnet der Dateizeiger am Beginn einer Datei neu.
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `stream`  
- Zeiger auf die **FILE**\-Struktur.  
+ Zeiger auf die **FILE**-Struktur.  
   
-## Hinweise  
- Die **rewind**\-Funktion ordnet der Dateizeiger neu mit `stream` am Anfang der Datei zugeordnet ist.  Ein Aufruf **rewind** entspricht ähnelt  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion **rewind** verschiebt den Dateizeiger, der `stream` dem Anfang der Datei zuordnet. Der Aufruf **rewind** ist vergleichbar mit  
   
- **\(void\) fseek\(** `stream`**, 0L,** `SEEK_SET` **\);**  
+ **(void) fseek(** `stream`**, 0L,** `SEEK_SET` **);**  
   
- jedoch, außer `fseek`, werden **rewind** die Fehlerindikatoren für den Stream und der Dateiende\-Indikator.  Auch als `fseek`, gibt **rewind** keinen Wert zurück, um anzugeben, ob der Zeiger erfolgreich verschoben wurde.  
+ Im Unterschied zu `fseek` löscht **rewind** die Fehlerindikatoren für den Stream und für den Dateiendeindikator. Im Unterschied zu `fseek` gibt **rewind** keinen Wert zurück, der anzeigt, ob der Zeiger erfolgreich verschoben wurde.  
   
- Die Tastaturpuffer löschen, verwenden Sie **rewind** mit dem Stream `stdin`, der mit der Tastatur standardmäßig zugeordnet ist.  
+ Um den Tastaturpuffer zu löschen, verwenden Sie **rewind** mit dem Datenstrom `stdin`, der der Tastatur standardmäßig zugeordnet ist.  
   
- Wenn ein Stream `NULL` Zeiger ist, ist der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren wird, gibt dieser Funktion und `errno` auf `EINVAL` festgelegt.  
+ Wenn Stream ein `NULL`-Zeiger ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird diese Funktion zurückgegeben und `errno` auf `EINVAL` festgesetzt.  
   
- Weitere Informationen über diese und andere Fehlercodes finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|**Rückspulen**|\<stdio.h\>|  
+|-------------|---------------------|  
+|**rewind**|\<stdio.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_rewind.c  
@@ -114,15 +130,15 @@ int main( void )
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 The values written are: 1 and -37  
 The values read are: 1 and -37  
 ```  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)

@@ -1,69 +1,85 @@
 ---
-title: "_strdec, _wcsdec, _mbsdec, _mbsdec_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wcsdec"
-  - "_strdec"
-  - "_mbsdec"
-  - "_mbsdec_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_strdec"
-  - "mbsdec_l"
-  - "strdec"
-  - "_mbsdec"
-  - "_mbsdec_l"
-  - "mbsdec"
-  - "wcsdec"
-  - "_wcsdec"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsdec-Funktion"
-  - "_mbsdec_l-Funktion"
-  - "_strdec-Funktion"
-  - "_tcsdec-Funktion"
-  - "_wcsdec-Funktion"
-  - "mbsdec-Funktion"
-  - "mbsdec_l-Funktion"
-  - "strdec-Funktion"
-  - "tcsdec-Funktion"
-  - "wcsdec-Funktion"
+title: _strdec, _wcsdec, _mbsdec, _mbsdec_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wcsdec
+- _strdec
+- _mbsdec
+- _mbsdec_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _strdec
+- mbsdec_l
+- strdec
+- _mbsdec
+- _mbsdec_l
+- mbsdec
+- wcsdec
+- _wcsdec
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsdec_l function
+- mbsdec function
+- tcsdec function
+- _tcsdec function
+- _strdec function
+- _wcsdec function
+- _mbsdec_l function
+- strdec function
+- wcsdec function
+- _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _strdec, _wcsdec, _mbsdec, _mbsdec_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c372d65ca9d3c49aee32cb51fea67859dc11a7fb
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 Setzt einen Zeichenfolgenzeiger um ein Zeichen zurück.  
   
 > [!IMPORTANT]
->  `mbsdec` und `mbsdec_l` können in Anwendungen, die in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden, nicht verwendet werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `mbsdec` und `mbsdec_l` können in Anwendungen, die in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden, nicht verwendet werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 unsigned char *_strdec(  
@@ -85,55 +101,56 @@ unsigned char *_mbsdec_l(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `start`  
- Zeiger auf ein beliebiges Zeichen \(oder bei `_mbsdec` und \_`mbsdec_l` das erste Byte eines Multibytezeichens\) in der Quellzeichenfolge. In der Quellzeichenfolge muss `start` vor `current` stehen.  
+ Zeiger auf ein beliebiges Zeichen (oder bei `_mbsdec` und _`mbsdec_l` das erste Byte eines Multibytezeichens) in der Quellzeichenfolge. In der Quellzeichenfolge muss `start` vor `current` stehen.  
   
  `current`  
- Zeiger auf ein beliebiges Zeichen \(oder bei `_mbsdec` und \_`mbsdec_l` das erste Byte eines Multibytezeichens\) in der Quellzeichenfolge. In der Quellzeichenfolge muss `current` nach `start` stehen.  
+ Zeiger auf ein beliebiges Zeichen (oder bei `_mbsdec` und _`mbsdec_l` das erste Byte eines Multibytezeichens) in der Quellzeichenfolge. In der Quellzeichenfolge muss `current` nach `start` stehen.  
   
  `locale`  
  Zu verwendendes Gebietsschema.  
   
-## Rückgabewert  
- \_`_mbsdec`,`mbsdec_l`, `_strdec` und `_wcsdec` geben jeweils einen Zeiger auf das Zeichen zurück, das unmittelbar vor `current` steht. `_mbsdec` gibt `NULL` zurück, wenn der Wert von `start` größer oder gleich `current` ist.  `_tcsdec` wird einer dieser Funktionen zugeordnet und der Rückgabewert hängt von der Zuordnung ab.  
+## <a name="return-value"></a>Rückgabewert  
+ _`_mbsdec`,`mbsdec_l`, `_strdec` und `_wcsdec` geben jeweils einen Zeiger auf das Zeichen zurück, das unmittelbar vor `current` steht. `_mbsdec` gibt `NULL` zurück, wenn der Wert von `start` größer oder gleich `current` ist. `_tcsdec` wird einer dieser Funktionen zugeordnet und der Rückgabewert hängt von der Zuordnung ab.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Die Funktionen `_mbsdec` und `_mbsdec_l` geben einen Zeiger auf das erste Byte des Multibytezeichens zurück, das unmittelbar vor `current` in der Zeichenfolge steht, die `start` enthält.  
   
- Der Ausgabewert wird durch die Einstellung der `LC_CTYPE`\-Kategorieneinstellung des Gebietsschemas beeinflusst. Weitere Informationen finden Sie unter [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `_mbsdec` erkennt Multibytezeichensequenzen nach dem derzeit verwendeten Gebietsschema. `_mbsdec_l` ist nahezu identisch, verwendet jedoch stattdessen den übergebenen Gebietsschemaparameter.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ Der Ausgabewert ist von der `LC_CTYPE`-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  `_mbsdec` erkennt Multibytezeichensequenzen gemäß dem derzeit verwendeten Gebietsschema. `_mbsdec_l` ist nahezu identisch, verwendet jedoch stattdessen den übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
- Wenn `start` oder `current` den Wert `NULL` aufweisen, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `EINVAL` zurück und stellt `errno` auf `EINVAL` ein.  
+ Wenn `start` oder `current` `NULL` ist, wird der Handler für ungültige Parameter, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `EINVAL` zurück und stellt `errno` auf `EINVAL` ein.  
   
 > [!IMPORTANT]
->  Diese Funktionen sind möglicherweise für Pufferüberlaufrisiken anfällig.  Pufferüberläufe können für Systemangriffe eingesetzt werden, da sie zu einer unbefugten Ausweitung der Berechtigungen führen.  Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Diese Funktionen sind möglicherweise für Pufferüberlaufrisiken anfällig. Pufferüberläufe können für Systemangriffe eingesetzt werden, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|------------------------------------------|----------------------|-------------------------|  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsdec`|`_strdec`|`_mbsdec`|`_wcsdec`|  
   
- `_strdec` und `_wcsdec` sind Einzelbytezeichen\- und Breitzeichenversionen von `_mbsdec` und `_mbsdec_l`.  `_strdec` und `_wcsdec` werden nur für diese Zuordnung bereitgestellt und sollten nicht für andere Zwecke verwendet werden.  
+ `_strdec` und `_wcsdec` sind Einzelbytezeichen- und Breitzeichenversionen von `_mbsdec` und `_mbsdec_l`. `_strdec` und `_wcsdec` werden nur für diese Zuordnung bereitgestellt und sollten nicht für andere Zwecke verwendet werden.  
   
- Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Zuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).  
+ Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|Optionaler Header|  
-|-------------|---------------------------|-----------------------|  
-|`_mbsdec`|\<mbstring.h\>|\<mbctype.h\>|  
-|`_mbsdec_l`|\<mbstring.h\>|\<mbctype.h\>|  
-|`_strdec`|\<tchar.h\>||  
-|`_wcsdec`|\<tchar.h\>||  
+|-------------|---------------------|---------------------|  
+|`_mbsdec`|\<mbstring.h>|\<mbctype.h>|  
+|`_mbsdec_l`|\<mbstring.h>|\<mbctype.h>|  
+|`_strdec`|\<tchar.h>||  
+|`_wcsdec`|\<tchar.h>||  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine Verwendung von `_tcsdec` veranschaulicht.  
   
 ```  
-#include <iostream>  
+  
+      #include <iostream>  
 #include <tchar.h>  
 using namespace std;  
   
@@ -181,11 +198,11 @@ int main()
   
 ```  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [\_strinc, \_wcsinc, \_mbsinc, \_mbsinc\_l](../../c-runtime-library/reference/strinc-wcsinc-mbsinc-mbsinc-l.md)   
- [\_strnextc, \_wcsnextc, \_mbsnextc, \_mbsnextc\_l](../../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)   
- [\_strninc, \_wcsninc, \_mbsninc, \_mbsninc\_l](../../c-runtime-library/reference/strninc-wcsninc-mbsninc-mbsninc-l.md)
+ [_strinc, _wcsinc, _mbsinc, _mbsinc_l](../../c-runtime-library/reference/strinc-wcsinc-mbsinc-mbsinc-l.md)   
+ [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](../../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)   
+ [_strninc, _wcsninc, _mbsninc, _mbsninc_l](../../c-runtime-library/reference/strninc-wcsninc-mbsninc-mbsninc-l.md)

@@ -1,47 +1,65 @@
 ---
-title: "getw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "getw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "getw-Funktion"
+title: _getw | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _getw
+dev_langs:
+- C++
+helpviewer_keywords:
+- _getw function
+- integers, getting from streams
+- getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# _getw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 96bf37d1cd8d04a47b1e7ae43252fcde369b5943
+ms.lasthandoff: 02/24/2017
 
-Ruft eine ganze Zahl aus einem Stream ab.  
+---
+# <a name="getw"></a>_getw
+Ruft eine Ganzzahl aus einem Stream ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int _getw(   
@@ -49,25 +67,25 @@ int _getw(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `stream`  
- Zeiger auf die `FILE`\-Struktur.  
+ Zeiger auf die `FILE`-Struktur.  
   
-## Rückgabewert  
- `_getw` gibt dem Lesen des ganzzahligen Wert zurück.  Bei dem Rückgabewert `EOF` gibt entweder einen Fehler oder eine Datei an.  Da der `EOF`\-Wert auch ein legitimer ganzzahliger Wert, eine mit `feof` oder `ferror`, ein Dateiende oder einen Fehlerzustand zu überprüfen.  Wenn `stream` den Wert `NULL` annimmt, wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen.  Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `EOF` zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ `_getw` gibt den gelesenen Wert in Form einer ganzen Zahl zurück. Ein Rückgabewert von `EOF` gibt einen Fehler oder ein Dateiende an. Da der `EOF`-Wert jedoch auch ein legitimer Wert einer Ganzzahl ist, verwenden Sie `feof` oder `ferror`, um eine Dateiendebedingung oder eine Fehlerbedingung zu prüfen. Wenn `stream` `NULL` ist, wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `EOF` zurück.  
   
-## Hinweise  
- Die `_getw`\-Funktion liest den folgenden Binärwert des Typs `int` aus der Datei, die `stream` zugeordnet wird und erhöht den Zeiger der zugeordneten Datei \(sofern vorhanden\), um den folgenden ungelesenen Zeichen zu veranschaulichen.  `_getw` nimmt keine besondere Ausrichtung von Elementen im Stream.  Probleme mit Portieren `_getw` können auftreten, da die Größe des Typs `int` und die Reihenfolge von Bytes innerhalb des `int`\-Typs über Systemen unterscheiden.  
+## <a name="remarks"></a>Hinweise  
+ Die `_getw`-Funktion liest den nächsten Binärwert des Typs `int` aus der Datei, die `stream` zugeordnet ist, und erhöht den zugeordneten Dateizeiger (sofern vorhanden), um zum nächsten ungelesenen Zeichen zu zeigen. `_getw` geht nicht von allen speziellen Elementausrichtungen im Stream aus. Probleme beim Portieren können mit `_getw` auftreten, da die Größe des `int`-Typs und die Anordnung der Bytes im `int`-Typ über Systeme hinweg unterschiedlich sind.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_getw`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_getw`|\<stdio.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_getw.c  
@@ -102,22 +120,22 @@ int main( void )
 }  
 ```  
   
-## Eingabe: crt\_getw.txt  
+## <a name="input-crtgetwtxt"></a>Eingabe: crt_getw.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 First data word in file: 0x656e694c  
 ```  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [\_putw](../../c-runtime-library/reference/putw.md)
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [_putw](../../c-runtime-library/reference/putw.md)

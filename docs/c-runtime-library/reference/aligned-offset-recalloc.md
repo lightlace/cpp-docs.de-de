@@ -1,49 +1,66 @@
 ---
-title: "_aligned_offset_recalloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_offset_recalloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "aligned_offset_recalloc"
-  - "_aligned_offset_recalloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aligned_offset_recalloc-Funktion"
-  - "_aligned_offset_recalloc-Funktion"
+title: _aligned_offset_recalloc | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_offset_recalloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- aligned_offset_recalloc
+- _aligned_offset_recalloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_offset_recalloc function
+- _aligned_offset_recalloc function
 ms.assetid: a258f54e-eeb4-4853-96fc-007d710f98e9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# _aligned_offset_recalloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 29b1ec185542bdec1fdb70c4c11842367e7ebf50
+ms.lasthandoff: 02/24/2017
 
-Ändert die Größe eines Speicherblocks, der mit [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md) oder [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) zugeordnet wurde und initialisiert den Arbeitsspeicher von 0.  
+---
+# <a name="alignedoffsetrecalloc"></a>_aligned_offset_recalloc
+Ändert die Größe eines Speicherblocks, der mit [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) oder [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) belegt ist und den Speicher auf 0 initialisiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void * _aligned_offset_recalloc(  
@@ -55,44 +72,44 @@ void * _aligned_offset_recalloc(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `memblock`  
- Der aktuelle Speicherblockzeiger.  
+ Der Zeiger auf den aktuellen Speicherblock.  
   
  `num`  
  Anzahl der Elemente.  
   
  `size`  
- Länge in Bytes jedes Elements.  
+ Länge jedes Elements in Bytes.  
   
  `alignment`  
- Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.  
+ Der Zuweisungswert, muss eine ganzzahlige Potenz von 2 sein.  
   
  `offset`  
  Der Offset in der Speicherbelegung zum Erzwingen der Ausrichtung.  
   
-## Rückgabewert  
- `_aligned_offset_recalloc` gibt ein void\-Zeiger zum neu zugeordnete \(und möglicherweise bewegt\) Speicherblock zurück.  Der Rückgabewert ist `NULL`, wenn die Größe \(null und das Pufferargument nicht `NULL` ist oder wenn nicht genügend verfügbarer Speicher gibt, z des Blocks der angegebenen Größe zu erweitern.  Im ersten Fall wird der erste Block freigegeben.  Im zweiten Fall ist der erste Block unverändert.  Der Rückgabewert zeigt auf einem Speicherplatz, der garantiert wird, zum Speichern eines beliebigen Typs Objekt ordnungsgemäß ausgerichtet sind.  Um einen Zeiger auf einen anderen Typ als void abzurufen, verwenden Sie eine Typumwandlung für den Rückgabewert.  
+## <a name="return-value"></a>Rückgabewert  
+ `_aligned_offset_recalloc` gibt einen leeren Zeiger auf den neu belegten (und möglicherweise verschobenen) Speicherblock zurück. Der Rückgabewert ist `NULL`, wenn die Größe&0; ist und das Pufferargument nicht `NULL` ist oder wenn nicht genügend Speicherplatz vorhanden ist, um den Block auf die vorgegebene Größe auszudehnen. Im ersten Fall wird der ursprüngliche Block freigegeben. Im zweiten Fall wird der ursprüngliche Block nicht geändert. Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einen anderen Typ als den leeren zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert.  
   
- `_aligned_offset_recalloc` ist als `__declspec(noalias)` gekennzeichnet und `__declspec(restrict)` heißt, dass die Funktion, die gewährleistet sind globale Variablen nicht zu ändern und der zurückgegebene Zeiger nicht von Alias\-.  Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [Einschränken ein](../../cpp/restrict.md).  
+ `_aligned_offset_recalloc` ist als `__declspec(noalias)` und `__declspec(restrict)` gekennzeichnet, das bedeutet, dass die Funktion globale Variablen definitiv nicht ändert und dass der zurückgegebene Zeiger keinen Alias hat. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).  
   
-## Hinweise  
- Wie [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) können eine `_aligned_offset_recalloc` mit einem Offset innerhalb der Struktur ausgerichtet sind, Struktur.  
+## <a name="remarks"></a>Hinweise  
+ Genau wie [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) erlaubt `_aligned_offset_recalloc` die Ausrichtung einer Struktur an einem Offset innerhalb der Struktur.  
   
- `_aligned_offset_recalloc` basiert auf `malloc`.  Weitere Informationen zum Verwenden von `_aligned_offset_malloc`, finden Sie unter [malloc](../../c-runtime-library/reference/malloc.md).  Wenn `memblock``NULL` ist, die Funktionsaufrufe `_aligned_offset_malloc` intern.  
+ `_aligned_offset_recalloc` ist auf `malloc` basiert. Weitere Informationen über die Verwendung von `_aligned_offset_malloc` finden Sie unter [malloc](../../c-runtime-library/reference/malloc.md). Wenn `memblock` `NULL` ist, ruft die Funktion `_aligned_offset_malloc` intern auf.  
   
- Diese Funktion legt `errno` auf `ENOMEM` fest, wenn die Speicherbelegung fehlgeschlagen ist, oder wenn die angeforderte Größe \(`num` \* `size`\) ist größer als `_HEAP_MAXREQ` ist.  Weitere Informationen zu `errno` finden Sie unter [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  Darüber hinaus überprüft `_aligned_offset_recalloc` auch die eigenen Parameter.  Wenn `alignment` keine Potenz von 2 ist, oder wenn `offset` größer oder gleich die angeforderte Größe und den Wert ungleich 0 ist, Aufrufe dieser Funktion Parameterhandler der ungültige, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `NULL` zurück und stellt `errno` auf `EINVAL` ein.  
+ Diese Funktion legt `errno` auf `ENOMEM` fest, wenn die Speicherbelegung fehlgeschlagen ist oder die angeforderte Größe(`num` * `size`) größer als `_HEAP_MAXREQ` war. Weitere Informationen zu `errno` finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Darüber hinaus überprüft `_aligned_offset_recalloc` auch die eigenen Parameter. Wenn `alignment` keine Potenz von 2 ist oder `offset` größer als oder gleich der angeforderten Größe und ungleich 0 ist, ruft diese Funktion den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `NULL` zurück und stellt `errno` auf `EINVAL` ein.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_aligned_offset_recalloc`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_aligned_offset_recalloc`|\<malloc.h>|  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenausrichtung](../../c-runtime-library/data-alignment.md)   
- [\_recalloc](../../c-runtime-library/reference/recalloc.md)   
- [\_aligned\_recalloc](../../c-runtime-library/reference/aligned-recalloc.md)
+ [_recalloc](../../c-runtime-library/reference/recalloc.md)   
+ [_aligned_recalloc](../../c-runtime-library/reference/aligned-recalloc.md)

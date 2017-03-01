@@ -1,48 +1,64 @@
 ---
-title: "setbuf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "setbuf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setbuf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "setbuf-Funktion"
-  - "Streampufferung"
+title: setbuf | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- setbuf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- setbuf
+dev_langs:
+- C++
+helpviewer_keywords:
+- setbuf function
+- stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# setbuf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ce7ea86029a99b5727fa1d7bd033044431a1fbff
+ms.lasthandoff: 02/24/2017
 
-Kontrollenstreampufferung.  Diese Funktion ist veraltet; Verwenden Sie stattdessen [setvbuf](../../c-runtime-library/reference/setvbuf.md).  
+---
+# <a name="setbuf"></a>setbuf
+Steuert die Streampufferung. Diese Funktion ist veraltet. Verwenden Sie stattdessen [setvbuf](../../c-runtime-library/reference/setvbuf.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void setbuf(  
@@ -51,27 +67,27 @@ void setbuf(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `stream`  
- Zeiger zur `FILE`\-Struktur.  
+ Zeiger zur `FILE` -Struktur.  
   
  `buffer`  
- Benutzer\-zugeordneter Puffer.  
+ Vom Benutzer zugeordneter Speicher.  
   
-## Hinweise  
- Die `setbuf`\-Funktion steuert Pufferung für `stream`.  Das `stream`\-Argument muss eine geöffnete Datei verweisen, die nicht gelesen wurde oder geschrieben wurde.  Wenn das Argument `buffer``NULL` ist, ist der Stream ungepuffert.  Wenn nicht, muss der Puffer für ein Zeichenarray der Länge `BUFSIZ` veranschaulichen, in der `BUFSIZ` die Puffergröße ist, wie in STDIO.H. definiert.  Der vom Benutzer angegebene, Puffer anstelle des standardmäßigen System\-zugeordneten Puffers für den jeweiligen Stream, wird für E\/A\-Pufferung verwendet.  Der Stream `stderr` ist standardmäßig ungepuffert, doch Sie können `setbuf` verwenden, um Puffer `stderr` zuzuweisen.  
+## <a name="remarks"></a>Hinweise  
+ Die `setbuf`-Funktion steuert die Pufferung für `stream`. Das `stream`-Argument muss auf eine offene Datei verweisen, die noch nicht gelesen oder geschrieben wurde. Wenn das `buffer`-Argument `NULL` ist, wird der Stream nicht gepuffert. Wenn dies nicht der Fall ist, muss der Puffer auf ein Zeichenarray der Länge `BUFSIZ` zeigen, wobei `BUFSIZ` die in STDIO.H definierte Puffergröße ist. Für den E/A-Pufferbetrieb wird anstelle des systemseitig für den gegebenen Stream reservierten Puffers der vom Benutzer angegebene Puffer verwendet. Der Stream `stderr` ist standardmäßig ungepuffert, aber Sie können `setbuf` verwenden, um Puffer `stderr` zuzuweisen.  
   
- `setbuf` wurde durch die [setvbuf](../../c-runtime-library/reference/setvbuf.md) ersetzt, das die bevorzugte Routine für neuen Code ist.  `setbuf` wird für die Kompatibilität mit vorhandenem Code beibehalten.  
+ `setbuf` wurde durch die Routine [setvbuf](../../c-runtime-library/reference/setvbuf.md) ersetzt, die die bevorzugte Routine für neuen Code ist. `setbuf` wird zwecks Kompatibilität mit vorhandenem Code beibehalten.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`setbuf`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`setbuf`|\<stdio.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_setbuf.c  
@@ -105,14 +121,17 @@ int main( void )
 }  
 ```  
   
-  **stream1 festgelegt auf benutzerdefinierten Puffer an: 0012FCDC**  
-**Pufferung stream2 deaktiviert**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+stream1 set to user-defined buffer at: 0012FCDC  
+stream2 buffering disabled  
+```  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [fflush](../../c-runtime-library/reference/fflush.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

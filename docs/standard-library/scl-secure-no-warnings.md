@@ -1,65 +1,83 @@
 ---
-title: "_SCL_SECURE_NO_WARNINGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_SCL_SECURE_NO_DEPRECATE"
-  - "_SCL_SECURE_NO_WARNINGS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_SCL_SECURE_NO_DEPRECATE"
-  - "_SCL_SECURE_NO_WARNINGS"
+title: _SCL_SECURE_NO_WARNINGS | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _SCL_SECURE_NO_DEPRECATE
+- _SCL_SECURE_NO_WARNINGS
+dev_langs:
+- C++
+helpviewer_keywords:
+- _SCL_SECURE_NO_DEPRECATE
+- _SCL_SECURE_NO_WARNINGS
 ms.assetid: ef0ddea9-7c62-4b53-8b64-5f4fd369776f
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# _SCL_SECURE_NO_WARNINGS
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: e2f39c4f07235c75204a63e634053f887682337e
+ms.lasthandoff: 02/24/2017
 
-Das Aufrufen unsicheren möglicherweise eine der Methoden in der C\+\+\-Standardbibliothek führt unter [Compilerwarnung \(Stufe 3\) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).  Um diese Warnung zu deaktivieren, definieren Sie Makro\- **\_SCL\_SECURE\_NO\_WARNINGS** im Code:  
+---
+# <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
+Ein Aufruf einer der potenziell unsicheren Methoden in der C++-Standardbibliothek führt zu einer [Compilerwarnung (Stufe 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Um diese Warnung zu deaktivieren, definieren Sie das Makro **_SCL_SECURE_NO_WARNINGS** in Ihrem Code:  
   
 ```  
 #define _SCL_SECURE_NO_WARNINGS  
 ```  
   
-## Hinweise  
- Andere Möglichkeiten, die Warnung enthält C4996 zu deaktivieren:  
+## <a name="remarks"></a>Hinweise  
+ Weitere Methoden zum Deaktivieren der Warnung C4996 sind u.a.:  
   
--   Mit der Compileroption [\/D \(Präprozessordefinitionen\)](../build/reference/d-preprocessor-definitions.md):  
+-   Mithilfe der Compileroption [/D (Präprozessordefinitionen)](../build/reference/d-preprocessor-definitions.md):  
   
-    ```  
+ ```  
     cl /D_SCL_SECURE_NO_WARNINGS [other compiler options] myfile.cpp  
-    ```  
+```  
   
--   Mit der Compileroption [\/w](../build/reference/compiler-option-warning-level.md):  
+-   Mithilfe der Compileroption [/w](../build/reference/compiler-option-warning-level.md):  
   
-    ```  
+ ```  
     cl /wd4996 [other compiler options] myfile.cpp  
-    ```  
+```  
   
--   Verwenden der [\#Pragmawarnung](../preprocessor/warning.md)\-Direktiven:  
+-   Mithilfe der Anweisung [#pragma warning](../preprocessor/warning.md):  
   
-    ```  
-    #pragma warning(disable:4996)  
-    ```  
+ ```  
+ #pragma warning(disable:4996)  
+```  
   
- Außerdem können den Umfang des Warnens von C4996 mit der Compileroption **\/w\<l\>\<n\>** manuell ändern.  Beispielsweise Warnung C4996 auf Ebene 4 festlegen:  
+ Sie können die Stufe der Warnung C4996 mit der Compileroption **/w\<l >\<n >** auch manuell ändern. Um beispielsweise die Warnung C4996 auf Stufe 4 festzulegen:  
   
 ```  
 cl /w44996 [other compiler options] myfile.cpp  
 ```  
   
- Weitere Informationen finden Sie unter [\/w, \/Wn, \/WX, \/Wall, \/wln, \/wdn, \/wen, \/won \(Warnstufe\)](../build/reference/compiler-option-warning-level.md).  
+ Weitere Informationen finden Sie unter [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warnstufe)](../build/reference/compiler-option-warning-level.md).  
   
-## Siehe auch  
- [Sichere Bibliotheken: C\+\+\-Standardbibliothek](../standard-library/safe-libraries-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Sichere Bibliotheken: C++-Standardbibliothek](../standard-library/safe-libraries-cpp-standard-library.md)
+
+

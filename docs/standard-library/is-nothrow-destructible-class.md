@@ -1,53 +1,73 @@
 ---
-title: "Is_nothrow_destructible-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "is_nothrow_destructible"
-  - "std.is_nothrow_destructible"
-  - "std::is_nothrow_destructible"
-  - "type_traits/std::is_nothrow_destructible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_nothrow_destructible"
+title: is_nothrow_destructible-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- is_nothrow_destructible
+- std.is_nothrow_destructible
+- std::is_nothrow_destructible
+- type_traits/std::is_nothrow_destructible
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_nothrow_destructible
 ms.assetid: 0bbd8a28-e312-4d72-bd28-aac027f974d3
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Is_nothrow_destructible-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 77d1507bc3b83bcb65ca9a44fc7fbfe706ed78b6
+ms.lasthandoff: 02/24/2017
 
-Testet, ob der Typ zerstörbaren ist und der Destruktor für den Compiler bekannt ist, aus.  
+---
+# <a name="isnothrowdestructible-class"></a>is_nothrow_destructible-Klasse
+Testet, ob der Typ zerstörbar ist, und ob der Compiler weiß, dass der Destruktor nicht ausgelöst wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
+```
 template <class T>  
-    struct is_nothrow_destructible;  
+struct is_nothrow_destructible;
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
  Der abzufragende Typ.  
   
-## Hinweise  
- Eine Instanz des Typs Prädikat enthält true, wenn der Typ `T` ist ein zerstörbaren, und der Destruktor für den Compiler bekannt ist, aus. Es enthält, andernfalls false.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typprädikats ist TRUE, wenn der Typ `T` ein zerstörbarer Typ ist, und wenn der Compiler weiß, dass der Destruktor nicht ausgelöst wird. Andernfalls ist sie FALSE.  
   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>Siehe auch  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

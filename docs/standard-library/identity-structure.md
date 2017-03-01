@@ -1,60 +1,77 @@
 ---
-title: "identity-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::identity"
-  - "utility/std::identity"
-  - "identity"
-  - "std.identity"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "identity-Klasse"
-  - "identity-Struktur"
+title: identity Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::identity
+- utility/std::identity
+- identity
+- std.identity
+dev_langs:
+- C++
+helpviewer_keywords:
+- identity class
+- identity structure
 ms.assetid: 990756fd-7969-4b39-ad7e-0878e8dac8fd
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# identity-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: a7404d2c1a785fd66489421fd7b9689260e0986d
+ms.lasthandoff: 02/24/2017
 
-Eine Struktur, die eine Typdefinition als Vorlagenparameter bereitstellt.  
+---
+# <a name="identity-structure"></a>identity-Struktur
+Eine Struktur, die eine Typdefinition als den Vorlagenparameter bereitstellt.  
   
-## Syntax  
-  
+## <a name="syntax"></a>Syntax  
 ```  
-template<class Type>  
-   struct identity {  
-      typedef Type type;  
-      Type operator()(const Type& _Left) const;  
+struct identity {
+   typedef Type type;
+   Type operator()(const Type& left) const;
    };  
 ```  
+#### <a name="parameters"></a>Parameter  
   
-#### Parameter  
+|Parameter|Beschreibung|  
+|---------------|-----------------|  
+|`left`|Der zu identifizierende Wert.|  
   
-|Parameter|**Beschreibung**|  
-|---------------|----------------------|  
-|`_Left`|Der zu identifizieren Wert.|  
+## <a name="remarks"></a>Hinweise  
+ Die Klasse enthält die öffentliche Typdefinition `type`, was dem Vorlagenparametertyp entspricht. Es wird in Verbindung mit der Vorlagenfunktion [forward](../standard-library/utility-functions.md#forward) verwendet, um sicherzustellen, dass ein Funktionsparameter den gewünschten Typ aufweist.  
   
-## Hinweise  
- Die Klasse enthält die Definition eines öffentlichen Typs `type`, die mit dem Vorlagenparametertyp ist.  Sie wird in Verbindung mit Vorlagenfunktion [forward](../Topic/forward.md) verwendet, um sicherzustellen, dass ein Funktionsparameter den gewünschten Typ verfügt.  
+ Aufgrund der Kompatibilität mit älteren Codes definiert die Klasse auch die identity-Funktion `operator()`, welche deren Argument `left` zurückgibt.  
   
- Um Kompatibilität mit älterem Code, definiert die Klasse zusätzlich die Identitätsfunktion `operator()`, die das Argument `_Left` zurückgibt.  
-  
-## Anforderungen  
- **Header:** Hilfsprogramm \<\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<utility>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<utility\>](../standard-library/utility.md)
+## <a name="see-also"></a>Siehe auch  
+ [\<utility>](../standard-library/utility.md)
+
+
+
+

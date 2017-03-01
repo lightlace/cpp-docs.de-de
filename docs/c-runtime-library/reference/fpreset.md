@@ -1,69 +1,85 @@
 ---
-title: "_fpreset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fpreset"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fpreset"
-  - "fpreset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fpreset-Funktion"
-  - "Gleitkommazahlen, Neu festlegen von mathematischen Paketen"
-  - "fpreset-Funktion"
+title: _fpreset | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fpreset
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fpreset
+- fpreset
+dev_langs:
+- C++
+helpviewer_keywords:
+- fpreset function
+- floating-point numbers, resetting math package
+- _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _fpreset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 0d5bf6ef97700e010a6565eccf7087a613adf9c3
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="fpreset"></a>_fpreset
 Setzt das Gleitkommapaket zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void _fpreset( void );  
 ```  
   
-## Hinweise  
- Die Funktion `_fpreset` initialisiert das mathematische GleitkommaPaket.  `_fpreset` ist normalerweise mit `signal`, `system` oder den `_exec` oder `_spawn`\-Funktionen verwendet.  Wenn ein Programm Gleitkommafehlersignale \(`SIGFPE`\) mit `signal` an, kann sich von Gleitkommafehlern sicher beheben, indem Sie `_fpreset` aufrufen und `longjmp` verwendet.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `_fpreset` initialisiert das Gleitkomma-Mathematikpaket neu. `_fpreset` wird in der Regel mit `signal`, `system` oder den Funktionen `_exec` oder `_spawn` verwendet. Wenn ein Programm Signale für Gleitkommafehler (`SIGFPE`) mit `signal` empfängt, kann es problemlos von Gleitkommafehlern wiederhergestellt werden, indem `_fpreset` und `longjmp` aufgerufen werden.  
   
- Diese Funktion wird bei Kompilierung mit [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md) oder `/clr:pure` veraltet, da Common Language Runtime nur die Standardgleitkommagenauigkeit unterstützt.  
+ Diese Funktion ist veraltet, beim Kompilieren mit [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) , da die common Language Runtime nur die standardmäßige Genauigkeit von Gleitkommawerten unterstützt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`_fpreset`|\<float.h\>|  
+|--------------|---------------------|  
+|`_fpreset`|\<float.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_fpreset.c  
@@ -172,11 +188,14 @@ void fpcheck( void )
 }  
 ```  
   
-  **5 durch 0 dividiert...**  
-**Fehler 131: Division durch Null**   
-## Siehe auch  
+```Output  
+Dividing    5 by    0...  
+Error 131: Divide by zero  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [\_exec\- und \_wexec\-Funktionen](../../c-runtime-library/exec-wexec-functions.md)   
+ [_exec- und _wexec-Funktionen](../../c-runtime-library/exec-wexec-functions.md)   
  [signal](../../c-runtime-library/reference/signal.md)   
- [\_spawn\- und \_wspawn\-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, \_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+ [_spawn-, _wspawn-Funktionen](../../c-runtime-library/spawn-wspawn-functions.md)   
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

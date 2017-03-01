@@ -1,65 +1,84 @@
 ---
-title: "&lt;deque&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::<deque>"
-  - "<deque>"
-  - "std.<deque>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "deque-Header"
+title: '&lt;deque&gt; | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::<deque>
+- <deque>
+- std.<deque>
+dev_langs:
+- C++
+helpviewer_keywords:
+- deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# &lt;deque&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 399ee327dffdd3c223718e9fb2d36bbff0a74f81
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ltdequegt"></a>&lt;deque&gt;
 Definiert die Containervorlagenklasse "deque" und einige unterstützende Vorlagen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-  
 #include <deque>  
   
 ```  
   
-### Operatoren  
+### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[Operator\!\=](../Topic/operator!=%20\(%3Cdeque%3E\).md)|Überprüft, ob das deque\-Objekt links vom Operator ungleich dem deque\-Objekt rechts vom Operator ist.|  
-|[Operator \<](../Topic/operator%3C%20\(%3Cdeque%3E\).md)|Überprüft, ob das deque\-Objekt links vom Operator kleiner als das deque\-Objekt rechts vom Operator ist.|  
-|[Operator \<\=](../Topic/operator%3C=%20\(%3Cdeque%3E\).md)|Überprüft, ob das deque\-Objekt links vom Operator kleiner gleich dem deque\-Objekt rechts vom Operator ist.|  
-|[operator\=\=](../Topic/operator==%20\(%3Cdeque%3E\).md)|Überprüft, ob das deque\-Objekt links vom Operator gleich dem deque\-Objekt rechts vom Operator ist.|  
-|[Operator \>](../Topic/operator%3E%20\(%3Cdeque%3E\).md)|Überprüft, ob das deque\-Objekt links vom Operator größer als das deque\-Objekt rechts vom Operator ist.|  
-|[Operator \>\=](../Topic/operator%3E=%20\(%3Cdeque%3E\).md)|Überprüft, ob das deque\-Objekt links vom Operator größer gleich dem deque\-Objekt rechts vom Operator ist.|  
+|[operator!=](../standard-library/deque-operators.md#operator_neq)|Überprüft, ob das deque-Objekt links vom Operator ungleich dem deque-Objekt rechts vom Operator ist.|  
+|[operator<](../standard-library/deque-operators.md#operator_lt_)|Überprüft, ob das deque-Objekt links vom Operator kleiner als das deque-Objekt rechts vom Operator ist.|  
+|[operator\<=](../standard-library/deque-operators.md#operator_lt__eq)|Überprüft, ob das deque-Objekt links vom Operator kleiner gleich dem deque-Objekt rechts vom Operator ist.|  
+|[operator==](../standard-library/deque-operators.md#operator_eq_eq)|Überprüft, ob das deque-Objekt links vom Operator gleich dem deque-Objekt rechts vom Operator ist.|  
+|[operator>](../standard-library/deque-operators.md#operator_gt_)|Überprüft, ob das deque-Objekt links vom Operator größer als das deque-Objekt rechts vom Operator ist.|  
+|[operator>=](../standard-library/deque-operators.md#operator_gt__eq)|Überprüft, ob das deque-Objekt links vom Operator größer gleich dem deque-Objekt rechts vom Operator ist.|  
   
-### Funktionen  
-  
-|||  
-|-|-|  
-|[swap](../Topic/swap%20\(%3Cdeque%3E\).md)|Tauscht die Elemente von zwei deque\-Objekten aus.|  
-  
-### Klassen  
+### <a name="functions"></a>Funktionen  
   
 |||  
 |-|-|  
-|[deque\-Klasse](../standard-library/deque-class.md)|Eine Vorlagenklasse für Sequenzcontainer, in der Elemente eines angegebenen Typs in einer linearen Anordnung angeordnet sind und die, wie Vektoren, schnellen zufälligen Zugriff auf jedes Element sowie effizientes Einfügen und Löschen auf der Rückseite des Containers ermöglicht.|  
+|[swap](../standard-library/deque-functions.md#swap)|Tauscht die Elemente von zwei deque-Objekten aus.|  
   
-## Siehe auch  
+### <a name="classes"></a>Klassen  
+  
+|||  
+|-|-|  
+|[deque-Klasse](../standard-library/deque-class.md)|Eine Vorlagenklasse für Sequenzcontainer, in der Elemente eines angegebenen Typs in einer linearen Anordnung angeordnet sind und die, wie Vektoren, schnellen zufälligen Zugriff auf jedes Element sowie effizientes Einfügen und Löschen auf der Rückseite des Containers ermöglicht.|  
+  
+## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Standard Template Library](../misc/standard-template-library.md)
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,50 +1,66 @@
 ---
-title: "_scalb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_scalb"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "scalb"
-  - "_scalb"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_scalb-Funktion"
-  - "Exponentielle Berechnungen"
-  - "scalb-Funktion"
+title: _scalb | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _scalb
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- scalb
+- _scalb
+dev_langs:
+- C++
+helpviewer_keywords:
+- exponential calculations
+- _scalb function
+- scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _scalb
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ade761d8fa3e37d4e190a05db5b93cd9e5f63cca
+ms.lasthandoff: 02/24/2017
 
-Skaliert Argument durch Potenz 2.  
+---
+# <a name="scalb"></a>_scalb
+Skaliert das Argument als zweite Potenz.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double _scalb(  
@@ -53,32 +69,32 @@ double _scalb(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `x`  
- Mit doppelter Genauigkeit, Gleitkommawert.  
+ Gleitkommawert mit doppelter Genauigkeit.  
   
  `exp`  
- Langer ganzzahliger Exponent.  
+ Ganzzahlexponent.  
   
-## Rückgabewert  
- Gibt einen exponentiellen Wert zurück, wenn der Vorgang erfolgreich ist.  Auf Überlauf \(abhängig vom Vorzeichen einer `x`\), wird `_scalb``HUGE_VAL` zurück; \+\/\- die Variable `errno` ist auf `ERANGE` festgelegt.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt bei Erfolg einen Exponentialwert zurück. Bei einem Überlauf und abhängig vom Vorzeichen von `x` gibt `_scalb` +/– `HUGE_VAL` zurück. Die `errno`-Variable wird auf `ERANGE` gesetzt.  
   
- Weitere Informationen über diese und andere Rückgabecodes, finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen zu diesem und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die `_scalb`\-Funktion berechnet den Wert von `x *` 2exp.  
+## <a name="remarks"></a>Hinweise  
+ Die `_scalb`-Funktion berechnet den Wert `x *` 2exp.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_scalb`|\<float.h\>|  
+|-------------|---------------------|  
+|`_scalb`|\<float.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
  [ldexp](../../c-runtime-library/reference/ldexp.md)

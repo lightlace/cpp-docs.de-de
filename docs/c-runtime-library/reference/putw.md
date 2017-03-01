@@ -1,51 +1,67 @@
 ---
-title: "_putw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_putw"
-  - "putw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putw-Funktion"
-  - "Ganze Zahlen, Schreiben in Streams"
-  - "putw-Funktion"
-  - "Streams, Schreiben von ganzen Zahlen in"
+title: _putw| Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _putw
+- putw
+dev_langs:
+- C++
+helpviewer_keywords:
+- integers, writing to streams
+- putw function
+- streams, writing integers to
+- _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _putw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ae689f0f299f307bdda9771d4929623e04a7196f
+ms.lasthandoff: 02/24/2017
 
-Schreibt eine ganze Zahl einem Stream.  
+---
+# <a name="putw"></a>_putw
+Schreibt eine ganze Zahl in einen Stream.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -55,33 +71,33 @@ Schreibt eine ganze Zahl einem Stream.
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *binint*  
- Ausgegeben werden ganze binären Ganzzahlwert.  
+ Binäre Ganzzahl wird ausgegeben.  
   
  `stream`  
- Zeiger zu der **FILE**\-Struktur.  
+ Zeiger auf die **FILE**-Struktur.  
   
-## Rückgabewert  
- Gibt dem geschriebenen Wert zurück.  Bei dem Rückgabewert `EOF` könnte einen Fehler an.  Da `EOF` auch ein legitimer ganzzahliger Wert, mit `ferror`, einen Fehler zu überprüfen.  Wenn `stream` ein NULL\-Zeiger ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EOF` zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt den geschriebenen Wert zurück. Ein Rückgabewert von `EOF` könnte einen Fehler anzeigen. Da `EOF` auch ein legitimer Ganzzahlwert ist, sollten Sie `ferror` verwenden, um Fehler zu überprüfen. Wenn `stream` ein NULL-Zeiger ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EOF` zurück.  
   
- Weitere Informationen über diese und andere Fehlercodes finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die `_putw`\-Funktion wird ein Binärwert des Typs `int` zur aktuellen Position *des Streams.* `_putw` beeinflusst die Ausrichtung von Elementen im Stream noch davon ausgegangen wird keine besondere Ausrichtung.  `_putw` ist hauptsächlich für die Kompatibilität mit früheren Bibliotheken.  Portabilitätsprobleme können sich mit `_putw` auf, weil die Größe von `int` und die Reihenfolge von Bytes innerhalb `int` Systemen zu unterscheiden.  
+## <a name="remarks"></a>Hinweise  
+ Die `_putw`-Funktion schreibt einen binären Wert vom Typ `int` an der aktuellen Position des *Stream.* `_putw` beeinflusst die Elementausrichtungen im Stream nicht und geht auch nicht von speziellen Ausrichtungen aus. `_putw` ist in erster Linie für die Kompatibilität mit früheren Bibliotheken verantwortlich. Portabilitätsprobleme können mit `_putw` auftreten, da die Größe von `int` und die Anordnung der Bytes in `int` über Systeme hinweg unterschiedlich sind.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_putw`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_putw`|\<stdio.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_putw.c  
@@ -113,15 +129,15 @@ int main( void )
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 Wrote ten words  
 ```  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [\_getw](../../c-runtime-library/reference/getw.md)
+## <a name="see-also"></a>Siehe auch  
+ [E/A-Stream](../../c-runtime-library/stream-i-o.md)   
+ [_getw](../../c-runtime-library/reference/getw.md)

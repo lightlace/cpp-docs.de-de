@@ -1,57 +1,74 @@
 ---
-title: "Sample Container-Member | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "container-Klassen"
+title: Sample Container-Member | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Sample Container-Member
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 2d8485f7fa62f2aaf3d3e6be920620aaf14fd7ca
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="sample-container-members"></a>Sample Container-Member
 > [!NOTE]
->  Dieses Thema ist in der Visual C\+\+\-Dokumentation nicht als funktionsfähiges Beispiel von den Containern, die in der C\+\+\-Standardbibliothek verwendet werden.  Weitere Informationen finden Sie unter [STL\-Container](../standard-library/stl-containers.md).  
+>  Dieses Thema ist in der Dokumentation zu Visual C++ als nicht funktionierendes Beispiel für Container aufgeführt, die in der C++-Standardbibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).  
   
-## Referenz  
+## <a name="reference"></a>Verweis  
   
-## Typedefs  
-  
-|||  
-|-|-|  
-|[const\_iterator](../standard-library/container-class-const-iterator.md)|Beschreibt ein Objekt, das als konstanter Iterator für die gesteuerte Sequenz dienen kann.|  
-|[const\_reference](../standard-library/container-class-const-reference.md)|Beschreibt ein Objekt, das als konstanten Verweis auf ein Element der Sequenz gesteuerten dienen kann.|  
-|[const\_reverse\_iterator](../standard-library/container-class-const-reverse-iterator.md)|Beschreibt ein Objekt, das als konstanter umgekehrter Iterator für die gesteuerte Sequenz dienen kann.|  
-|[difference\_type](../standard-library/container-class-difference-type.md)|Beschreibt ein Objekt, das den Unterschied zwischen den Adressen aller zwei Elemente in der Sequenz gesteuerten darstellen kann.|  
-|[Iterator](../standard-library/container-class-iterator.md)|Beschreibt ein Objekt, das als Iterator für die gesteuerte Sequenz dienen kann.|  
-|[Verweis](../standard-library/container-class-reference.md)|Beschreibt ein Objekt, das als Verweis auf ein Element der Sequenz gesteuerten dienen kann.|  
-|[reverse\_iterator](../standard-library/container-class-reverse-iterator.md)|Beschreibt ein Objekt, das als umgekehrter Iterator für die gesteuerte Sequenz dienen kann.|  
-|[size\_type](../standard-library/container-class-size-type.md)|Beschreibt ein Objekt, das die Länge jeder gesteuerten Sequenz darstellen kann.|  
-|[value\_type](../standard-library/container-class-value-type.md)|Fungiert ein Synonym für den Vorlagenparameter **Ty**.|  
-  
-## Memberfunktionen  
+## <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[begin](../standard-library/container-class-begin.md)|Gibt ein Iterator zurück, der beim ersten Element der Sequenz zeigt \(oder direkt über dem Ende eine leere Sequenz hinaus\).|  
-|[clear](../standard-library/container-class-clear.md)|Ruft [Löschen](../standard-library/container-class-erase.md) auf \( [Starten](../standard-library/container-class-begin.md), [Ende](../standard-library/container-class-end.md)\).|  
-|[empty](../standard-library/container-class-empty.md)|Gibt **true**  für eine leere gesteuerte Sequenz zurück.|  
-|[end](../standard-library/container-class-end.md)|Gibt ein Iterator zurück, der nur über das Ende der Sequenz hinaus zeigt.|  
-|[Löschen](../standard-library/container-class-erase.md)|Löscht ein Element.|  
-|[max\_size](../standard-library/container-class-max-size.md)|Gibt die Länge der längsten Sequenz, die das Objekt steuern kann, in der konstanten Zeit unabhängig von der Länge gesteuerten der Sequenz zurück.|  
-|[rbegin](../standard-library/container-class-rbegin.md)|Gibt einen umgekehrten Iterator, der direkt über dem Ende der Sequenz gesteuerten hinaus zeigt zurück und legt den Anfang der Rücksequenz fest.|  
-|[rend](../standard-library/container-class-rend.md)|Die Memberfunktion gibt einem umgekehrten Iterator, der beim ersten Element der Sequenz zeigt \(oder direkt über dem Ende eine leere Sequenz hinaus\) zurück und legt das Ende der Rücksequenz fest.|  
-|[size](../standard-library/container-class-size.md)|Gibt die Länge der gesteuerten Sequenz, in der konstanten Zeit unabhängig von der Länge gesteuerten der Sequenz zurück.|  
-|[swap](../standard-library/container-class-swap.md)|Vertauscht die gesteuerten Sequenzen zwischen **\*this** und `_Right`.|
+|[const_iterator](../standard-library/container-class-const-iterator.md)|Beschreibt ein Objekt, das als konstanter Iterator für die gesteuerte Sequenz fungieren kann.|  
+|[const_reference](../standard-library/container-class-const-reference.md)|Beschreibt ein Objekt, das als konstanter Verweis auf ein Element der gesteuerten Sequenz fungieren kann.|  
+|[const_reverse_iterator](../standard-library/container-class-const-reverse-iterator.md)|Beschreibt ein Objekt, das als konstanter Reverse-Iterator für die gesteuerte Sequenz fungieren kann.|  
+|[difference_type](../standard-library/container-class-difference-type.md)|Beschreibt ein Objekt, das die Differenz zwischen den Adressen von zwei beliebigen Elementen in der gesteuerten Sequenz darstellen kann.|  
+|[Iterator](../standard-library/container-class-iterator.md)|Beschreibt ein Objekt, das als Iterator für die gesteuerte Sequenz fungieren kann.|  
+|[Verweis](../standard-library/container-class-reference.md)|Beschreibt ein Objekt, das als Verweis auf ein Element der gesteuerten Sequenz fungieren kann.|  
+|[reverse_iterator](../standard-library/container-class-reverse-iterator.md)|Beschreibt ein Objekt, das als Reverse-Iterator für die gesteuerte Sequenz fungieren kann.|  
+|[size_type](../standard-library/container-class-size-type.md)|Beschreibt ein Objekt, das die Länge einer beliebigen gesteuerten Sequenz darstellen kann.|  
+|[value_type](../standard-library/container-class-value-type.md)|Dient als ein Synonym für den Vorlagenparameter **Ty**.|  
+  
+## <a name="member-functions"></a>Memberfunktionen  
+  
+|||  
+|-|-|  
+|[begin](../standard-library/container-class-begin.md)|Gibt einen Iterator zurück, der auf das erste Element der Sequenz zeigt (bzw. unmittelbar hinter das Ende einer leeren Sequenz).|  
+|[clear](../standard-library/container-class-clear.md)|Ruft [erase](../standard-library/container-class-erase.md)([begin](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md)) auf.|  
+|[empty](../standard-library/container-class-empty.md)|Gibt **TRUE** für eine leere gesteuerte Sequenz zurück.|  
+|[end](../standard-library/container-class-end.md)|Gibt einen Iterator zurück, der direkt hinter das Ende der Sequenz verweist.|  
+|[erase](../standard-library/container-class-erase.md)|Löscht ein Element.|  
+|[max_size](../standard-library/container-class-max-size.md)|Gibt die Länge der längsten Sequenz zurück, die das Objekt in konstanter Zeit und unabhängig von der Länge der gesteuerten Sequenz steuern kann.|  
+|[rbegin](../standard-library/container-class-rbegin.md)|Gibt einen Reverse-Iterator zurück, der auf die Position unmittelbar hinter dem Ende der gesteuerten Sequenz zeigt und den Anfang der umgekehrten Sequenz festlegt.|  
+|[rend](../standard-library/container-class-rend.md)|Die Memberfunktion gibt einen Reverse-Iterator zurück, der auf das erste Element der Sequenz zeigt (bzw. unmittelbar hinter das Ende einer leeren Sequenz) und das Ende der umgekehrte Sequenz festlegt.|  
+|[size](../standard-library/container-class-size.md)|Gibt die Länge der gesteuerten Sequenz zurück, in konstanter Zeit und unabhängig von der Länge der gesteuerten Sequenz.|  
+|[swap](../standard-library/container-class-swap.md)
+

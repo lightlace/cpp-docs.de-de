@@ -1,67 +1,83 @@
 ---
-title: "_get_errno | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_errno"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_get_errno"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_get_errno-Funktion"
-  - "errno (globale Variable)"
-  - "get_errno-Funktion"
+title: _get_errno | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_errno
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _get_errno
+dev_langs:
+- C++
+helpviewer_keywords:
+- get_errno function
+- errno global variable
+- _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _get_errno
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: adb8837820dd316ebc5a33ab0aa6e3f8ea99b492
+ms.lasthandoff: 02/24/2017
 
-Ruft den aktuellen Wert der globalen Variablen der errno ab.  
+---
+# <a name="geterrno"></a>_get_errno
+Ruft den aktuellen Wert der globalen errno-Variable ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-errno_t _get_errno(   
-   int * pValue   
+errno_t _get_errno(   
+   int * pValue   
 );  
 ```  
   
-#### Parameter  
- \[out\] `pValue`  
- Ein Zeiger auf eine mit dem aktuellen Wert der Variablen `errno` zu füllenden Integer.  
+#### <a name="parameters"></a>Parameter  
+ [out] `pValue`  
+ Ein Zeiger auf eine ganze Zahl, die durch den aktuellen Wert der `errno`-Variable ersetzt werden soll.  
   
-## Rückgabewert  
- Gibt null zurück, wenn dies; ein Fehlercode auf Fehler.  Wenn `pValue``NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EINVAL` zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt&0; (null) zurück, wenn der Vorgang erfolgreich war. Wenn ein Fehler auftritt, erscheint ein Fehlercode. Wenn `pValue` `NULL` ist, wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EINVAL` zurück.  
   
-## Hinweise  
- Mögliche Werte von `errno` werden in Errno.h definiert.  Siehe auch [errno\-Konstanten](../../c-runtime-library/errno-constants.md).  
+## <a name="remarks"></a>Hinweise  
+ Mögliche Werte von `errno` sind in Errno.h definiert. Siehe auch [errno-Konstanten](../../c-runtime-library/errno-constants.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_get_errno.c  
@@ -82,19 +98,22 @@ int main()
 }  
 ```  
   
-  **errno \= 2**  
-**FYI, ENOENT \= 2**   
-## Anforderungen  
+```Output  
+errno = 2  
+fyi, ENOENT = 2  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|Optionaler Header|  
-|-------------|---------------------------|-----------------------|  
-|`_get_errno`|\<stdlib.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_get_errno`|\<stdlib.h>|\<errno.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Entsprechung in .NET Framework  
- Nicht zutreffend.  Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf.  Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [\_set\_errno](../../c-runtime-library/reference/set-errno.md)   
- [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+## <a name="see-also"></a>Siehe auch  
+ [_set_errno](../../c-runtime-library/reference/set-errno.md)   
+ [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)

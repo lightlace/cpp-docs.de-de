@@ -1,49 +1,65 @@
 ---
-title: "_set_se_translator | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_se_translator"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_set_se_translator"
-  - "set_se_translator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_se_translator-Funktion"
-  - "Ausnahmebehandlung, Ändern"
-  - "set_se_translator-Funktion"
+title: _set_se_translator | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_se_translator
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _set_se_translator
+- set_se_translator
+dev_langs:
+- C++
+helpviewer_keywords:
+- set_se_translator function
+- exception handling, changing
+- _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _set_se_translator
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: d8d43b39c9f71807d68f20cb4873abf96d3f91e8
+ms.lasthandoff: 02/24/2017
 
-Behandelt Win32\-Ausnahmen \(C\-strukturierte Ausnahmen\) als C\+\+\-typisierte Ausnahmen.  
+---
+# <a name="setsetranslator"></a>_set_se_translator
+Behandelt Win32-Ausnahmen (C-strukturierte Ausnahmen) als C++-typisierte Ausnahmen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 _se_translator_function _set_se_translator(  
@@ -51,45 +67,43 @@ _se_translator_function _set_se_translator(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `seTransFunction`  
- Zeiger auf die Übersetzerfunktion Wechselstrom\-strukturierterAusnahme, die Sie schreiben.  
+ Zeiger auf eine strukturierte C-Ausnahmeübersetzerfunktion, die Sie schreiben.  
   
-## Rückgabewert  
- Gibt einen Zeiger zur vorherigen Übersetzerfunktion zurück, die von `_set_se_translator` registriert wird, dass die vorherige Funktion später wiederhergestellt werden kann.  Wenn keine vorherige Funktion festgelegt wurde, kann der Rückgabewert verwendet werden, um das Standardverhalten wiederherzustellen; Dieser Wert kann NULL sein.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt einen Zeiger auf die vorherige Übersetzerfunktion zurück, die von `_set_se_translator` registriert wurde, sodass die vorherige Funktion später wiederhergestellt werden kann. Wenn keine vorherige Funktion festgelegt wurde, kann der Rückgabewert verwendet werden, um das Standardverhalten wiederherzustellen. Dieser Wert kann NULL sein.  
   
-## Hinweise  
- Die `_set_se_translator`\-Funktion bietet eine Möglichkeit, Win32\-Ausnahmen \(C\-strukturierte Ausnahmen\) als C\+\+\-Typausnahmen zu behandeln.  Um von Handler eine C\+\+\-Headerdatei `catch` behandelt werden C\-Ausnahme zuzulassen jedem, definieren Sie zuerst Wechselstrom\-Ausnahmewrapperklasse der verwendet werden oder berechnet werden kann aus, um einen speziellen Klassentyp Wechselstrom\-Ausnahme zuzuschreiben.  Um diese Klasse zu verwenden, installieren Sie eine benutzerdefinierte C\-Ausnahmeübersetzerfunktion die von der internen Wechselstrom\-Ausnahme des Mechanismus für die Ausnahmenbehandlung jedes Mal ausgelöst wird aufgerufen wird.  Innerhalb der Übersetzerfunktion können Sie typisierte jede Ausnahme auslösen, die von einem entsprechenden Handler C\+\+ `catch` abgefangen werden kann.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `_set_se_translator` bietet eine Möglichkeit zur Behandlung von Win32-Ausnahmen (strukturierte C-Ausnahmen) als C++-typisierte Ausnahmen. Damit jede C-Ausnahme von einem C++-`catch`-Handler behandelt wird, definieren Sie zunächst eine Wrapperklasse für eine C-Ausnahme definieren, die verwendet oder abgeleitet werden kann, um einer C-Ausnahme einen speziellen Klassentyp zuzuordnen. Um diese Klasse zu verwenden, installieren Sie eine benutzerdefinierte C-Ausnahmeübersetzungsfunktion, die bei jedem Auslösen einer C-Ausnahme vom internen Mechanismus für die Ausnahmebehandlung aufgerufen wird. In der Übersetzerfunktion können Sie beliebige typisierte Ausnahmen auslösen, die von einem übereinstimmenden C++-`catch`-Handler abgefangen werden kann.  
   
- Sie müssen [\/EHa](../../build/reference/eh-exception-handling-model.md) verwenden, wenn Sie `_set_se_translator` verwenden.  
+ Verwenden Sie [/EHa](../../build/reference/eh-exception-handling-model.md), wenn Sie `_set_se_translator` verwenden.  
   
- Um eine benutzerdefinierte Übersetzungsfunktion anzugeben, rufen Sie `_set_se_translator`  mit dem Namen der Übersetzungsfunktion als Argument auf.  Die Übersetzerfunktion, die Sie schreiben, wird einmal für jeden Funktionsaufruf im Stapel aufgerufen, der Blöcke `try`  verfügt.  Es gibt keine Standardübersetzerfunktion.  
+ Um eine benutzerdefinierte Übersetzungsfunktion anzugeben, rufen Sie `_set_se_translator` mit dem Namen der Übersetzungsfunktion als Argument auf. Die Übersetzerfunktion, die Sie schreiben, wird einmal für jeden Funktionsaufruf im Stapel mit `try`-Blöcken aufgerufen. Es gibt keine standardmäßige Übersetzerfunktion.  
   
- die Übersetzerfunktion sollte nicht länger als Aktionen auslösen Eingabe eine C\+\+\-Ausnahme.  Wenn alle sie zusätzlich zum Auslösen bewirkt \(wie das Schreiben in eine Protokolldatei\), Vorkommnisse kann das Programm nicht wie erwartet, da die Häufigkeit, die die Übersetzerfunktion aufgerufen wird, plattformabhängig ist.  
+ Ihre Übersetzerfunktion sollte lediglich eine C++-typisierte Ausnahme auslösen. Wenn sich die Funktion nicht auf die Auslösung beschränkt (z.B. in eine Protokolldatei schreibt), verhält sich Ihr Programm möglicherweise nicht wie erwartet, da die Anzahl von Aufrufen der Übersetzerfunktion plattformabhängig ist.  
   
- In einer Multithreadumgebung werden Übersetzerfunktionen separat für jeden Thread beibehalten.  Anforderungen der neue Threads, eine eigene Übersetzerfunktion zu installieren.  Daher ist jeder Thread verantwortlich für die eigene Übersetzungsbehandlung.  `_set_se_translator`  entspricht einem Thread vorgesehen; eine andere DLL kann eine andere Übersetzungsfunktion installieren.  
+ In einer Multithreadumgebung werden die Übersetzerfunktionen für jeden Thread separat verwaltet. Jeder neue Thread muss eine eigene Übersetzerfunktion installieren. Daher ist jeder Thread für die eigene Übersetzungsbehandlung verantwortlich. `_set_se_translator` ist für einen Thread spezifisch; eine andere DLL kann eine unterschiedliche Übersetzungsfunktion installieren.  
   
- Die `seTransFunction`\-Funktion, die Sie schreiben, muss eine Eingeboren\-kompilierte Funktion sein \(kompiliert nicht mit \/clr\).  Sie muss eine ganze Zahl ohne Vorzeichen und einen Zeiger auf eine Struktur Win32\- `_EXCEPTION_POINTERS` als Argumente verwenden.  Die Argumente werden Rückgabewerte von Aufrufen der Win32\-API `GetExceptionCode` und `GetExceptionInformation`\-Funktionen, bzw.  
+ Die `seTransFunction`-Funktion, die Sie schreiben, muss eine nativ kompilierte Funktion sein (nicht mit /clr kompiliert). Als Argumente sind eine ganze Zahl ohne Vorzeichen und ein Zeiger auf eine Win32-`_EXCEPTION_POINTERS`-Struktur erforderlich. Die Argumente sind die Rückgabewerte von Aufrufen der `GetExceptionCode`- und `GetExceptionInformation`-Funktion der Win32-API.  
   
 ```  
 typedef void (*_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );  
 ```  
   
- Für `_set_se_translator` gibt es Auswirkungen, wenn es sich dynamisch mit CRT verknüpft; eine andere DLL im Prozess `_set_se_translator` aufrufen und hat möglicherweise den Handler durch eigene.  
+ Für `_set_se_translator` sind Auswirkungen bei der dynamischen Verknüpfung mit der CRT gegeben; eine andere DLL im Prozess ruft möglicherweise `_set_se_translator` auf und ersetzt Ihren Handler durch einen eigenen.  
   
- Wenn Sie in verwaltetem Code `_set_se_translator` \(der Code kompiliert mit \/clr\) oder gemischtem systemeigenen und verwalteten Code verwenden, beachten Sie, dass der die Ausnahmen Übersetzer auswirkt, die nur im systemeigenen Code generiert werden.  Keine verwalteten Ausnahmen, die in verwaltetem Code generiert werden \(z, wenn eine `System::Exception` ausgelöst wird\), werden nicht durch die Übersetzerfunktion weitergeleitet.  Ausnahmen, die in verwaltetem Code mithilfe der Win32\-Funktion `RaiseException` ausgelöst werden oder über eine Systemausnahme wie eine Division durch nullausnahme verursacht sind, werden durch den Übersetzer weitergeleitet.  
+ Bei Verwendung `_set_se_translator` aus verwaltetem Code (Code mit /clr kompiliert) oder gemischtem nativem und verwaltetem Code beachten Sie, dass der Übersetzer sich nur auf Ausnahmen auswirkt, die in nativem Code generiert werden. Alle verwalteten Ausnahmen, die in verwaltetem Code generiert wurden (z.B. beim Auslösen von `System::Exception`), werden nicht über die Übersetzerfunktion weitergeleitet. Mithilfe der Win32-Funktion `RaiseException` oder durch eine Systemausnahme wie eine Division durch Null-Ausnahme in verwaltetem Code ausgelöste Ausnahmen werden nicht über den Übersetzer weitergeleitet.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_set_se_translator`|\<eh.h\>|  
-  
- Die Funktionalität, die von `_set_se_translator` bereitgestellt wird, nicht in Code verfügbar, der mit der [\/clr: rein](../../build/reference/clr-common-language-runtime-compilation.md)\-Compileroption kompiliert wird.  
+|-------------|---------------------|  
+|`_set_se_translator`|\<eh.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_settrans.cpp  
@@ -142,11 +156,14 @@ void trans_func( unsigned int u, EXCEPTION_POINTERS* pExp )
 }  
 ```  
   
-  **In trans\_func.**  
-**In schließlich**  
-**Fing \_\_try eine Ausnahme mit SE\_Exception ab.**   
-## Beispiel  
- Obwohl die Funktionalität, die von `_set_se_translator` bereitgestellt wird, nicht in verwalteten Code verfügbar ist, ist es möglich, diese Zuordnung im systemeigenen Code zu verwenden, auch wenn dieser Code systemeigene einer Kompilierung unter dem Schalter `/clr` ist, solange der systemeigene Code mithilfe von `#pragma unmanaged` angegeben wird.  Wenn eine strukturierte Ausnahme in verwaltetem Code ausgelöst wird, der zugeordnet werden soll, müssen der Code, der generiert und die Steuerpunkte die Ausnahme mit `pragma` gekennzeichnet werden.  Im folgenden Code wird eine mögliche Verwendung an.  Weitere Informationen finden Sie unter [Pragma\-Direktiven und das \_\_Pragma\-Schlüsselwort](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
+```Output  
+In trans_func.  
+In finally  
+Caught a __try exception with SE_Exception.  
+```  
+  
+## <a name="example"></a>Beispiel  
+ Obwohl die von `_set_se_translator` bereitgestellte Funktionalität in verwaltetem Code nicht verfügbar ist, es ist möglich, diese Zuordnung in nativem Code zu verwenden, auch wenn sich der native Code in einer Kompilierung unter dem `/clr`-Switch befindet, solange der native Code mithilfe von `#pragma unmanaged` angegeben wird. Wenn eine strukturierte Ausnahme in verwaltetem Code ausgelöst wird, der zugeordnet werden soll, muss der Code, der die Ausnahme generiert und behandelt, mit dem `pragma` gekennzeichnet werden. Der folgende Code veranschaulicht eine mögliche Verwendung. Weitere Informationen finden Sie unter [Pragma-Direktiven und das __Pragma-Schlüsselwort](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
   
 ```  
 // crt_set_se_translator_clr.cpp  
@@ -197,14 +214,17 @@ int main(int argc, char** argv) {
 }  
 ```  
   
-  **Übersetzung der strukturierten Ausnahmehandlers zu eine C\+\+\-Ausnahme.**  
-**Abgefangenes CMyException.**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Translating the structured exception to a C++ exception.  
+Caught CMyException.  
+```  
   
-## Siehe auch  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
  [Ausnahmebehandlungsroutinen](../../c-runtime-library/exception-handling-routines.md)   
- [set\_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
- [set\_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
+ [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
+ [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
  [terminate](../../c-runtime-library/reference/terminate-crt.md)   
  [unexpected](../../c-runtime-library/reference/unexpected-crt.md)

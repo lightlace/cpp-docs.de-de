@@ -1,54 +1,71 @@
 ---
-title: "_pipe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_pipe"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "pipe"
-  - "_pipe"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_pipe-Funktion"
-  - "pipe-Funktion"
-  - "Pipes"
-  - "Pipes, Erstellen"
+title: _pipe | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _pipe
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- pipe
+- _pipe
+dev_langs:
+- C++
+helpviewer_keywords:
+- pipes, creating
+- _pipe function
+- pipes
+- pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _pipe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0e45008d3f55c11cfa7da2aa4db9ca1277a6f77f
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="pipe"></a>_pipe
 Erstellt eine Pipe zum Lesen und Schreiben.  
   
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die im [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Diese API kann nicht in Anwendungen verwendet werden, die im [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -59,9 +76,9 @@ int textmode
 );  
 ```  
   
-#### Parameter  
- `pfds`\[2\]  
- Array für Deskriptoren für Lese\- und Schreibdatei.  
+#### <a name="parameters"></a>Parameter  
+ `pfds`[2]  
+ Array für Deskriptoren für Lese- und Schreibdatei.  
   
  `psize`  
  Menge des zugesicherten Arbeitsspeichers.  
@@ -69,53 +86,54 @@ int textmode
  `textmode`  
  Dateimodus.  
   
-## Rückgabewert  
- Gibt bei Erfolg 0 zurück.  Gibt bei einem Fehler – 1 zurück.  Bei einem Fehler wird `errno` auf einen dieser Werte festgelegt:  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt bei Erfolg 0 zurück. Gibt bei einem Fehler –&1; zurück. Bei einem Fehler wird `errno` auf einen dieser Werte festgelegt:  
   
 -   `EMFILE` gibt an, dass keine weiteren Dateideskriptoren verfügbar sind.  
   
 -   `ENFILE` gibt einen Systemdateitabellenüberlauf an.  
   
--   `EINVAL` gibt an, dass entweder das Array `pfds` ein NULL\-Zeiger ist, oder dass ein ungültiger Wert für `textmode` übergeben wurde.  
+-   `EINVAL` gibt an, dass entweder das Array `pfds` ein NULL-Zeiger ist, oder dass ein ungültiger Wert für `textmode` übergeben wurde.  
   
- Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die `_pipe`\-Funktion erstellt eine neue *Pipe*. Die Pipe ist ein künstlicher Ein\-\/Ausgabekanal und wird von einem Programm verwendet, um Informationen an andere Programmen zu übergeben.  Eine Pipe ähnelt einer Datei, da sie über einen Dateizeiger, einen Dateideskriptor oder über beides verfügt. Es kann aus ihr gelesen oder in sie geschrieben werden, indem die Ein\- und Ausgabefunktionen der Standardbibliothek verwendet werden.  Eine Pipe repräsentiert jedoch weder eine bestimmte Datei noch ein bestimmtes Gerät.  Stattdessen repräsentiert die Pipe einen temporären Speicher im Arbeitsspeicher, der vom Arbeitsspeicher des Programms unabhängig ist und vollständig über das Betriebssystem gesteuert wird.  
+## <a name="remarks"></a>Hinweise  
+ Die `_pipe`-Funktion erstellt eine neue *pipe*, die ein künstlicher Ein-/Ausgabekanal ist und von einem Programm verwendet wird, um Informationen an andere Programme zu übergeben. Eine Pipe ähnelt einer Datei, da sie über einen Dateizeiger, einen Dateideskriptor oder über beides verfügt. Es kann aus ihr gelesen oder in sie geschrieben werden, indem die Ein- und Ausgabefunktionen der Standardbibliothek verwendet werden. Eine Pipe repräsentiert jedoch weder eine bestimmte Datei noch ein bestimmtes Gerät. Stattdessen repräsentiert die Pipe einen temporären Speicher im Arbeitsspeicher, der vom Arbeitsspeicher des Programms unabhängig ist und vollständig über das Betriebssystem gesteuert wird.  
   
- `_pipe` ähnelt `_open`, öffnet jedoch die Pipe zum Lesen und Schreiben und gibt statt einem zwei Dateideskriptoren zurück.  Das Programm kann beide Seiten der Pipe verwenden oder diejenige Seite schließen, die sie nicht benötigt.  Zum Beispiel erstellt der Befehlsprozessor in Windows eine Pipe, wenn ein Befehl wie `PROGRAM1 | PROGRAM2` ausgeführt wird.  
+ `_pipe` ähnelt `_open`, öffnet jedoch die Pipe zum Lesen und Schreiben und gibt statt einem zwei Dateideskriptoren zurück. Das Programm kann beide Seiten der Pipe verwenden oder diejenige Seite schließen, die sie nicht benötigt. Zum Beispiel erstellt der Befehlsprozessor in Windows eine Pipe, wenn ein Befehl wie `PROGRAM1 | PROGRAM2` ausgeführt wird.  
   
- Der Standardausgabedeskriptor von `PROGRAM1` ist dem Schreibdeskriptor der Pipe angefügt.  Der Standardeingabedeskriptor von `PROGRAM2` ist dem Lesedeskriptor der Pipe angefügt.  Hierdurch entfällt die Notwendigkeit, temporäre Dateien zu erstellen, um Informationen an andere Programme zu übergeben.  
+ Der Standardausgabedeskriptor von `PROGRAM1` ist dem Schreibdeskriptor der Pipe angefügt. Der Standardeingabedeskriptor von `PROGRAM2` ist dem Lesedeskriptor der Pipe angefügt. Hierdurch entfällt die Notwendigkeit, temporäre Dateien zu erstellen, um Informationen an andere Programme zu übergeben.  
   
- Die `_pipe`\-Funktion gibt zwei Dateideskriptoren an die Pipe im `pfds`\-Argument zurück.  Das Element `pfds`\[0\] enthält den Lesedeskriptor und das Element `pfds`\[1\] enthält den Schreibdeskriptor.  Pipedateideskriptoren werden auf die gleiche Weise wie andere Dateideskriptoren verwendet. \(Die Eingabe und die Ausgabefunktionen auf niedriger Ebene `_read` und `_write` können aus einer Pipe lesen und in eine Pipe schreiben.\) Um die Pipeendebedingung zu erkennen, suchen Sie nach einer `_read`\-Anforderung, die 0 als Anzahl der gelesenen Bytes zurückgibt.  
+ Die `_pipe`-Funktion gibt zwei Dateideskriptoren an die Pipe im `pfds`-Argument zurück. Das Element `pfds`[0] enthält den Lesedeskriptor und das Element `pfds`[1] enthält den Schreibdeskriptor. Pipedateideskriptoren werden auf die gleiche Weise wie andere Dateideskriptoren verwendet. (Die Eingabe und die Ausgabefunktionen auf niedriger Ebene `_read` und `_write` können aus einer Pipe lesen und in eine Pipe schreiben.) Um die Pipeendebedingung zu erkennen, suchen Sie nach einer `_read`-Anforderung, die 0 als Anzahl der gelesenen Bytes zurückgibt.  
   
- Das `psize`\-Argument gibt in Bytes den die Menge an Arbeitsspeicher an, die für die Pipe zugesichert ist.  Das `textmode`\-Argument gibt den Übersetzungsmodus für die Pipe an.  Die Manifestkonstante `_O_TEXT` gibt eine Textübersetzung an, und die Konstante  `_O_BINARY` gibt die Binärübersetzung an. \(Unter [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md) finden Sie eine Beschreibung von Text\- und Binärmodi.\) Wenn das `textmode`\-Argument 0 ist, verwendet `_pipe` den Standardübersetzungsmodus, der durch die Standardmodusvariable [\_fmode](../../c-runtime-library/fmode.md) angegeben ist.  
+ Das `psize`-Argument gibt in Bytes den die Menge an Arbeitsspeicher an, die für die Pipe zugesichert ist. Das `textmode`-Argument gibt den Übersetzungsmodus für die Pipe an. Die Manifestkonstante `_O_TEXT` gibt eine Textübersetzung an, und die Konstante  `_O_BINARY` gibt die Binärübersetzung an. (Unter [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md) finden Sie eine Beschreibung von Text- und Binärmodi.) Wenn das `textmode`-Argument 0 ist, verwendet `_pipe` den Standardübersetzungsmodus, der durch die Standardmodusvariable [_fmode](../../c-runtime-library/fmode.md) angegeben ist.  
   
- In Multithreadprogrammen wird keine Sperre ausgeführt.  Die zurückgegebenen Dateideskriptoren werden neu geöffnet und sollten von keinem Thread referenziert werden, bis der `_pipe`\-Aufruf abgeschlossen ist.  
+ In Multithreadprogrammen wird keine Sperre ausgeführt. Die zurückgegebenen Dateideskriptoren werden neu geöffnet und sollten von keinem Thread referenziert werden, bis der `_pipe`-Aufruf abgeschlossen ist.  
   
- Um mit der `_pipe`\-Funktion zwischen einem übergeordneten Prozess und einen untergeordneten Prozess zu kommunizieren, darf jeder Prozess nur über einen Deskriptor verfügen, der auf der Pipe geöffnet ist.  Die Deskriptoren müssen entgegengesetzt sein: Wenn das übergeordnete Element über einen geöffneten Lesedeskriptor verfügt, muss das untergeordnete Element über einen geöffneten Schreibdeskriptor verfügen.  Die einfachste Möglichkeit besteht darin, dass Sie `OR` \(  `|`\) auf das `_O_NOINHERIT`\-Flag mit `textmode` anwenden.  Anschließend erstellen Sie mit `_dup` oder `_dup2` eine vererbbare Kopie des Pipedeskriptors, den Sie dem untergeordneten Element übergeben möchten.  Schließen Sie den ursprünglichen Deskriptor, und starten Sie dann den untergeordneten Prozess.  Schließen Sie nach dem Startaufruf den doppelten Deskriptor im übergeordneten Prozess.  Weitere Informationen finden Sie im zweiten Beispiel weiter unten in diesem Artikel.  
+ Um mit der `_pipe`-Funktion zwischen einem übergeordneten Prozess und einen untergeordneten Prozess zu kommunizieren, darf jeder Prozess nur über einen Deskriptor verfügen, der auf der Pipe geöffnet ist. Die Deskriptoren müssen entgegengesetzt sein: Wenn das übergeordnete Element über einen geöffneten Lesedeskriptor verfügt, muss das untergeordnete Element über einen geöffneten Schreibdeskriptor verfügen. Die einfachste Möglichkeit besteht darin, dass Sie das `_O_NOINHERIT`-Flag mit `textmode` `OR` (`|`). Anschließend erstellen Sie mit `_dup` oder `_dup2` eine vererbbare Kopie des Pipedeskriptors, den Sie dem untergeordneten Element übergeben möchten. Schließen Sie den ursprünglichen Deskriptor, und starten Sie dann den untergeordneten Prozess. Schließen Sie nach dem Startaufruf den doppelten Deskriptor im übergeordneten Prozess. Weitere Informationen finden Sie im zweiten Beispiel weiter unten in diesem Artikel.  
   
- Im Windows\-Betriebssystem wird eine Pipe zerstört, wenn alle zugehörigen Deskriptoren geschlossen sind. \(Wenn alle Lesedeskriptoren auf der Pipe geschlossen sind, dann führt das Schreiben in die Pipe zu einem Fehler.\) Alle Lese\- und Schreibvorgänge auf der Pipe werden nicht ausgeführt, bis es genügend Daten oder ausreichend Pufferplatz gibt, um die E\/A\-Anforderung abzuschließen.  
+ Im Windows-Betriebssystem wird eine Pipe zerstört, wenn alle zugehörigen Deskriptoren geschlossen sind. (Wenn alle Lesedeskriptoren auf der Pipe geschlossen sind, dann führt das Schreiben in die Pipe zu einem Fehler.) Alle Lese- und Schreibvorgänge auf der Pipe werden nicht ausgeführt, bis es genügend Daten oder ausreichend Pufferplatz gibt, um die E/A-Anforderung abzuschließen.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|Optionaler Header|  
-|-------------|---------------------------|-----------------------|  
-|`_pipe`|\<io.h\>|\<fcntl.h\>,1 \<errno.h\>2|  
+|-------------|---------------------|---------------------|  
+|`_pipe`|\<io.h>|\<fcntl.h>,1 \<errno.h>2|  
   
- 1 Für `_O_BINARY`\- und `_O_TEXT`\-Definitionen.  
+ 1 Für `_O_BINARY`- und `_O_TEXT`-Definitionen.  
   
- 2 `errno`\-Definitionen.  
+ 2 `errno`-Definitionen.  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel 1  
+## <a name="example-1"></a>Beispiel 1  
   
 ```  
-// crt_pipe.c  
+  
+      // crt_pipe.c  
 /* This program uses the _pipe function to pass streams of  
  * text to spawned processes.  
  */  
@@ -198,7 +216,7 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 Son, what is the square root of 1000?  
@@ -219,8 +237,8 @@ Son, what is the square root of 8000?
 Dad, the square root of 8000 is 89.44.  
 ```  
   
-## Beispiel 2  
- Dies ist eine einfache Filteranwendung.  Er erzeugt die Anwendung crt\_pipe\_beeper, nachdem eine Pipe erstellt wurde, die das erzeugte stdout\-Objekt der Anwendung auf den Filter lenkt.  Der Filter entfernt ASCII 7\(Signalton\)\-Zeichen.  
+## <a name="example-2"></a>Beispiel 2  
+ Dies ist eine einfache Filteranwendung. Er erzeugt die Anwendung crt_pipe_beeper, nachdem eine Pipe erstellt wurde, die das erzeugte stdout-Objekt der Anwendung auf den Filter lenkt. Der Filter entfernt ASCII 7(Signalton)-Zeichen.  
   
 ```  
 // crt_pipe_beeper.c  
@@ -334,7 +352,7 @@ int main(int argc, char** argv)
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 This is speaker beep number 1...  
@@ -349,9 +367,9 @@ This is speaker beep number 9...
 This is speaker beep number 10...  
 ```  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [Prozess\- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+## <a name="see-also"></a>Siehe auch  
+ [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

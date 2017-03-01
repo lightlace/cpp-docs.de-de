@@ -1,33 +1,49 @@
 ---
-title: "CType &lt; Char &gt;-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ctype<char>"
-  - "locale/std::ctype<char>"
-  - "std::ctype<char>"
-  - "std.ctype<char>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CType < Char >-Klasse"
+title: ctype&lt;char&gt;-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ctype<char>
+- locale/std::ctype<char>
+- std::ctype<char>
+- std.ctype<char>
+dev_langs:
+- C++
+helpviewer_keywords:
+- ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# CType &lt; Char &gt;-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 0acae30ecbe670c87179f4cc2f5a2b8066ef3a4c
+ms.lasthandoff: 02/24/2017
 
-Die Klasse ist eine explizite Spezialisierung der Vorlagenklasse **Ctype \< CharType**> eingeben `char`, beschreibt ein Objekt, das als gebietsschemafacet zur verschiedene Eigenschaften eines Zeichens vom Typ charakterisieren dienen kann `char`.  
+---
+# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt;-Klasse
+Die Klasse stellt eine explizite Spezialisierung der Vorlagenklasse **ctype\<CharType**> für den Typ `char` dar und beschreibt ein Objekt, das als Gebietsschemafacet dienen kann, um verschiedene Eigenschaften eines Zeichens vom Typ `char` zu kennzeichnen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -130,29 +146,30 @@ protected:
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die explizite Spezialisierung unterscheidet sich von der Vorlagenklasse auf verschiedene Weise:  
+ Die explizite Spezialisierung unterscheidet sich von der Vorlagenklasse in verschiedenen Punkten:  
   
--   Ein Objekt der Klasse Ctype < `char`> speichert einen Zeiger auf das erste Element einer Ctype Mask-Tabelle, ein Array von UCHAR_MAX + 1 Elementen des Typs **ctype_base::mask**. Es speichert auch eine Boolean-Objekt, der angibt, ob das Array gelöscht werden soll (mit `operator delete[]`) beim Ctype \< **Elem**>-Objekt zerstört wird.  
+-   Ein Objekt der Klasse ctype< `char`> speichert einen Zeiger auf das erste Element einer ctype-Maskentabelle. Hierbei handelt es sich um ein Array mit UCHAR_MAX + 1-Elementen vom Typ **ctype_base::mask**. Darüber hinaus speichert es ein boolesches Objekt, das angibt, ob das Array (mit `operator delete[]`) gelöscht werden soll, wenn das ctype\< **Elem**>-Objekt zerstört wird.  
   
--   Die einzige öffentliche Konstruktor können Sie angeben **Registerkarte**, die Ctype-Maske-Tabelle und **del**, Boolean-Objekt, das ist "true", wenn das Array werden soll gelöscht, sobald Ctype < `char`> Objekt zerstört wird, sowie den Verweiszähler dieser Planergruppe Parameter Refs.  
+-   Mit dem zugehörigen einzigen öffentlichen Konstruktor können Sie **tab**, die ctype-Maskentabelle, und **del**, das boolesche Objekt angeben, das wahr ist, wenn das Array beim Zerstören des ctype< `char`>-Objekts gelöscht werden soll. Zudem können Sie den Parameter „refs“ angeben, der als Referenzzähler dient.  
   
--   Die geschützte Memberfunktion **Tabelle** Gibt die gespeicherte Ctype Maske Tabelle zurück.  
+-   Die geschützte Memberfunktion **table** gibt die gespeicherte ctype-Maskentabelle zurück.  
   
--   Der statische Member-Objekt **Table_size** Gibt die minimale Anzahl von Elementen in einer Ctype-Maske-Tabelle.  
+-   Das statische Memberobjekt **table_size** gibt die in einer ctype-Maskentabelle mindestens erforderliche Anzahl von Elementen an.  
   
--   Die geschützte statische Memberfunktion **Classic_table**(Ctype Maske gibt die Tabelle zurück, die das Gebietsschema "C".  
+-   Die geschützte statische Memberfunktion **classic_table** gibt die dem Gebietsschema „C“ entsprechende ctype-Maskentabelle zurück.  
   
--   Es sind keine geschützten virtuellen Memberfunktionen [Do_is](../standard-library/ctype-class.md#ctype__do_is), [Do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is), oder [Do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not). Die entsprechende öffentliche Memberfunktionen führen Sie die entsprechenden Vorgänge selbst.  
+-   Die geschützten virtuellen Memberfunktionen [do_is](../standard-library/ctype-class.md#ctype__do_is), [do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is) bzw. [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not) werden nicht verwendet. Die entsprechenden öffentlichen Memberfunktionen führen die jeweiligen Vorgänge selbst aus.  
   
- Die Memberfunktionen [Do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) und [Do_widen](../standard-library/ctype-class.md#ctype__do_widen) Elemente ohne Änderungen kopiert.  
+ Die Memberfunktionen [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) und [do_widen](../standard-library/ctype-class.md#ctype__do_widen) kopieren Elemente unverändert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** \< Gebietsschema>  
+ **Header:** \<locale>  
   
  **Namespace:** std  
   
 ## <a name="see-also"></a>Siehe auch  
- [Facet-Klasse](../Topic/facet%20Class.md)   
- [Ctype_base-Klasse](../standard-library/ctype-base-class.md)   
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet-Klasse](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
+ [ctype_base-Klasse](../standard-library/ctype-base-class.md)   
+ [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

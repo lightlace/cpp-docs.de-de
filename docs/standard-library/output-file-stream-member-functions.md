@@ -1,72 +1,98 @@
 ---
-title: "Ausgabedateistream-Memberfunktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ausgabestreams, Memberfunktionen"
+title: Ausgabedateistream-Memberfunktionen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams, member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ausgabedateistream-Memberfunktionen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
+ms.lasthandoff: 02/24/2017
 
-Ausgabestreammemberfunktionen haben drei Typen: die, die an Manipulatoren entsprechen, die, die unformatierte Schreibvorgänge ausführen und die, die andernfalls den Streamzustand ändern und keinen entsprechenden Manipulator oder Einfügungsoperator haben.  Eine sequenzielle, formatiertes Ausgabe können nur Einfügungsoperatoren und \-manipulatoren.  Bei einer direkten binäre Datenträgerausgabe verwenden Sie andere Memberfunktionen, mit oder ohne Einfügungsoperatoren.  
+---
+# <a name="output-file-stream-member-functions"></a>Ausgabedateistream-Memberfunktionen
+Ausgabedateistream-Memberfunktionen verfügen über drei Arten: die, die Manipulatoren entsprechen, die, die unformatierte Schreibvorgänge ausführen, und die, die andernfalls den Streamstatus ändern und keinen entsprechenden Manipulator oder Einfügungsoperator haben. Für die sequenzielle, formatierte Ausgabe können Sie nur Einfügungsoperatoren und Manipulatoren verwenden. Bei einer binäre Datenträgerausgabe verwenden Sie andere Memberfunktionen, mit oder ohne Einfügungsoperatoren.  
   
-## Die geöffnete Funktion für Ausgabestreams  
- Um einen Ausgabedateistream \([ofstream](../Topic/ofstream.md)\) zu verwenden, müssen Sie den Stream mit einer bestimmten Datenträgerdatei im Konstruktor oder in der **open**\-Funktion zuordnen.  Wenn Sie die Funktion **open** verwenden, können Sie das gleiche Streamobjekt mit von Dateien verwenden.  In beiden Fällen sind die Argumente, die die Datei beschreiben, identisch.  
+## <a name="the-open-function-for-output-streams"></a>Die open-Funktion für Ausgabestreams  
+ Um einen Ausgabedateistream ([ofstream](../standard-library/basic-ofstream-class.md)) zu verwenden, müssen Sie diesen Stream einer bestimmten Datenträgerdatei im Konstruktor oder der **open**-Funktion zuweisen. Bei Verwendung der **open**-Funktion können Sie das gleiche Streamobjekt mit einer Reihe von Dateien wiederverwenden. In beiden Fällen sind die Argumente, die die Datei beschreiben identisch.  
   
- Wenn Sie die Datei öffnen, die mit einem Ausgabestream zugeordnet ist, ist im Grunde ein **open\_mode**\-Flag an.  Sie können diese Flags kombinieren, als die Enumeratoren in der Klasse `ios`, mit dem bitweisen OR \(definiert werden &#124; Operator.\)  [ios\_base::openmode](../Topic/ios_base::openmode.md) finden Sie eine Liste der Enumeratoren.  
+ Wenn Sie die Datei öffnen, die einem Ausgabestream zugeordnet ist, geben Sie in der Regel ein **open_mode**-Flag an. Sie können diese Flags kombinieren, die in der `ios`-Klasse mit dem bitweisen OR-Operator ( &#124; ) als Enumeratoren definiert werden. Finden Sie unter [ios_base:: openmode](../standard-library/ios-base-class.md#ios_base__openmode) eine Liste der Enumeratoren.  
   
- Drei allgemeine Ausgabestreamsituationen beziehen Modusoptionen zusammen:  
+ Drei allgemeine Situationen für die Ausgabestreams umfassen Modusoptionen:  
   
--   Erstellen einer Datei.  Wenn die Datei bereits vorhanden ist, wird die alte Version gelöscht.  
+-   Erstellen einer Datei. Wenn die Datei bereits vorhanden ist, wird die alte Version gelöscht.  
   
-    ```  
-    ostream ofile( "FILENAME" );  // Default is ios::out  
-    ofstream ofile( "FILENAME", ios::out ); // Equivalent to above  
-    ```  
-  
--   Datensätze zu einer vorhandenen Datei oder dem Erstellen ein anfügen, wenn es nicht vorhanden ist.  
-  
-    ```  
-    ofstream ofile( "FILENAME", ios::app );  
-    ```  
-  
--   Zwei Dateien einzeln auf demselben Stream öffnen.  
-  
-    ```  
-    ofstream ofile();  
-    ofile.open( "FILE1", ios::in );  
-    // Do some output  
-    ofile.close(); // FILE1 closed  
-    ofile.open( "FILE2", ios::in );  
-    // Do some more output  
-    ofile.close(); // FILE2 closed  
-    // When ofile goes out of scope it is destroyed.  
-    ```  
-  
-## Der gesetzte Funktion  
- Die **put**\-Funktion schreibt ein Zeichen in den Ausgabestream.  Die beiden folgenden Anweisungen sind identisch standardmäßig, die zweite wird von der Formatargumente des Streams betroffen:  
-  
-```  
-cout.put( 'A' ); // Exactly one character written  
-cout << 'A'; // Format arguments 'width' and 'fill' apply   
+ ```  
+    ostream ofile("FILENAME");
+// Default is ios::out  
+    ofstream ofile("FILENAME", ios::out);
+
+// Equivalent to above  
 ```  
   
-## Die geschriebene Funktion  
- Die **Schreiben**\-Funktion wird ein Speicherblock in einen Ausgabedateistream.  Das Längenargument gibt die Anzahl von Bytes geschrieben an.  In diesem Beispiel wird ein Ausgabedateistream erstellt und schreibt den Binärwert der `Date`\-Struktur darauf:  
+-   Anfügen von Datensätzen an eine vorhandene Datei oder Erstellen derselben, wenn sie nicht vorhanden ist.  
+  
+ ```  
+    ofstream ofile("FILENAME", ios::app);
+```  
+  
+-   Einzelnes Öffnen von zwei Dateien auf demselben Stream.  
+  
+ ```  
+    ofstream ofile();
+ofile.open("FILE1",
+    ios::in);
+// Do some output  
+    ofile.close();
+
+// FILE1 closed  
+    ofile.open("FILE2",
+    ios::in);
+// Do some more output  
+    ofile.close();
+
+// FILE2 closed  // When ofile goes out of scope it is destroyed.  
+```  
+  
+## <a name="the-put-function"></a>Die put-Funktion  
+ Die **put**-Funktion schreibt ein Zeichen in den Ausgabestream. Die beiden folgenden Anweisungen sind standardmäßig identisch, aber die zweite ist von den Streamformatargumenten betroffen:  
+  
+```  
+cout.put('A');
+
+// Exactly one character written  
+cout <<'A'; // Format arguments 'width' and 'fill' apply   
+```  
+  
+## <a name="the-write-function"></a>Die write-Funktion  
+ Die **write**-Funktion schreibt einen Speicherblock in einen Ausgabestream für die Datei. Das Längenargument bestimmt die Anzahl geschriebener Bytes. Dieses Beispiel erstellt einen Ausgabestream für die Datei und schreibt den binären Wert der `Date`-Struktur hinein:  
   
 ```  
 // write_function.cpp  
@@ -87,53 +113,55 @@ int main( )
 }  
 ```  
   
- Die **Schreiben**\-Funktion beendet nicht auf, wenn ein NULL\-Zeichen erreicht, sodass die vollständige Klassenstruktur geschrieben.  Die Funktion akzeptiert zwei Argumente: ein `char` Zeiger und eine Anzahl zu schreiben Zeichen.  Beachten Sie die erforderliche Umwandlung in **char\*** vor die Adresse des Strukturobjekts.  
+ Die **write**-Funktion wird nicht beendet, wenn ein NULL-Zeichen erreicht wird, sodass die vollständige Klassenstruktur geschrieben wird. Die Funktion akzeptiert zwei Argumente: ein `char`-Zeiger und die Anzahl der zu schreibenden Zeichen. Beachten Sie die erforderliche Umwandlung in **char\*** vor der Adressierung des Strukturobjekts.  
   
-## Die seekp und tellp Funktionen  
- Ein Ausgabedateistream internen enthält einen Zeiger, der auf der Position zeigt, in der Daten als Nächstes geschrieben werden sollen.  Die Memberfunktion `seekp` legt diesen Zeiger fest und stellt daher direkte Datenträgerdateiausgabe.  Die Memberfunktion `tellp` gibt der Dateiposition zurück.  Beispiele, die die Eingabestreamentsprechungen in `seekp` und `tellp` verwenden, finden Sie unter [Die seekg und tellg Funktionen](../standard-library/input-stream-member-functions.md).  
+## <a name="the-seekp-and-tellp-functions"></a>Die Funktionen seekp und tellp  
+ Ein Ausgabestream für die Datei hält einen internen Zeiger, der auf die Position zeigt, in der die Daten als nächstes geschrieben werden sollen. Die `seekp`-Memberfunktion legt diesen Zeiger fest und bietet somit Random_Access-Datenträgerdateiausgaben. Die `tellp`-Memberfunktion gibt die gespeicherte Dateiposition zurück. Beispiele für die Verwendung von Entsprechungen des Eingabestreams für `seekp` und `tellp`, finden Sie unter [Die Funktionen seekg und tellg](../standard-library/input-stream-member-functions.md).  
   
-## Die Funktion für Ausgabestreams neben  
- Die **schließen**\-Memberfunktion enthält die Datenträgerdatei, die einem Ausgabedateistream zugeordnet ist.  Die Datei muss geschlossen werden, um alle Datenträgerausgabe abzuschließen.  Falls notwendig schließt der `ofstream` Destruktor die Datei für Sie, jedoch können Sie die Funktion **schließen** verwenden, wenn Sie eine andere Datei für dasselbe Streamobjekt öffnen müssen.  
+## <a name="the-close-function-for-output-streams"></a>Die close-Funktion für Ausgabestreams  
+ Die **close**-Memberfunktion schließt die Datenträgerdatei, die einem Ausgabestream für Dateien zugeordnet ist. Die Datei muss geschlossen werden, um alle Datenträgerausgaben abzuschließen. Wenn nötig, schließt der `ofstream`-Destruktor die Datei für Sie, aber Sie können die **close**-Funktion verwenden, wenn Sie eine andere Datei für das gleiche Streamobjekt öffnen müssen.  
   
- Der Ausgabestreamdestruktor schließt automatisch die Datei eines Streams, wenn der Konstruktor oder die **open**\-Memberfunktion Öffnen der Datei.  Wenn Sie den Konstruktor ein Dateideskriptor für eine BereitsOPEN\-Datei führen oder die **Anfügen**\-Memberfunktion verwenden, müssen Sie die Datei explizit schließen.  
+ Der Destruktor der Ausgabestream schließt eine Streamdatei nur automatisch, wenn den Konstruktor oder die **open**-Memberfunktion die Datei geöffnet haben. Wenn Sie einen Dateideskriptor einer bereits geöffneten Datei dem Konstruktor übergeben oder die **attach**-Memberfunktion nutzen, müssen Sie die Datei explizit schließen.  
   
-##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Fehler, der Funktionen verarbeitet  
- Verwenden Sie diese, Memberfunktionen um für Fehler, beim Schreiben zu testen zu einem Stream:  
+##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> Fehlerverarbeitende Funktionen  
+ Verwenden Sie diese Memberfunktionen, um beim Schreiben in einen Stream auf Fehler zu testen:  
   
 |Funktion|Rückgabewert|  
 |--------------|------------------|  
-|[mehrdeutig](../Topic/basic_ios::bad.md)|Gibt **true** zurück, wenn ein nicht behebbarer Fehler gibt.|  
-|[Fehler](../Topic/basic_ios::fail.md)|Gibt **true** zurück, wenn ein nicht behebbarer Fehler oder eine "erwarteten" Zustand, wie einem Konvertierungsfehler wird oder wenn die Datei nicht gefunden wird.  Die Verarbeitung kann sich nach einem Aufruf von **nicht aktiviert** mit einem nullargument häufig fortsetzen.|  
-|[gut](../Topic/basic_ios::good.md)|Gibt **true** zurück, wenn kein anzubindender Fehlerzustand \(nicht behebbar oder anderes\) und gibt das Dateiendeflag wurde nicht festgelegt.|  
-|[EOF](../Topic/basic_ios::eof.md)|Gibt **true** auf der Dateiende\-Bedingung zurück.|  
-|[clear](../Topic/basic_ios::clear.md)|Legt den Zustand des internen Fehlers fest.  Wenn es den Standardargumenten aufgerufen wird, wird er alle Fehlerbits.|  
-|[rdstate](../Topic/basic_ios::rdstate.md)|Gibt den aktuellen Fehlerzustand zurück.|  
+|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Gibt **TRUE** zurück, wenn ein nicht behebbarer Fehler vorhanden ist.|  
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Gibt **TRUE** zurück, wenn ein nicht behebbarer Fehler oder eine „erwartete“ Bedingung, wie z.B. ein Konvertierungsfehler vorhanden ist oder wenn die Datei nicht gefunden wird. Die Verarbeitung kann oft nach einem **clear**-Aufruf mit einem null-Argument fortgesetzt werden.|  
+|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Gibt **TRUE** zurück, wenn kein Fehler (nicht behebbar oder anderweitig) vorhanden und das End-of-File-Flag nicht festgelegt ist.|  
+|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Gibt **TRUE** auf das End-of-File-Bedingung zurück.|  
+|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Legt den internen Fehlerzustand fest. Wenn mit den Standardargumenten aufgerufen, löscht er alle Fehlerbits.|  
+|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Gibt den aktuellen Fehlerstatus zurück.|  
   
- Der **\!**\-Operator wird überladen, um die gleiche Aufgabe wie die **Fehler**\-Funktion auszuführen.  Wenn der Ausdruck:  
+ Der **!** Operator wird überladen, um dieselbe Funktion wie die **fail**-Funktion auszuführen. Daher ist der Ausdruck:  
   
 ```  
-if( !cout)...  
+if(!cout)...  
 ```  
   
  identisch mit folgendem Ausdruck:  
   
 ```  
-if( cout.fail() )...  
+if(cout.fail())...  
 ```  
   
- **void\*\(\)** Der Operator wird überladen, um die Invertierung des **\!**\-Operators sein; so der Ausdruck:  
+ Der **void\*()**-Operator wird überladen, um das Gegenteil des **!** Operator zu sein; daher kommt der Ausdruck:  
   
 ```  
-if( cout)...  
+if(cout)...  
 ```  
   
- entspricht:  
+ gleich:  
   
 ```  
-if( !cout.fail() )...  
+if(!cout.fail())...  
 ```  
   
- Der Operator **void\*\(\)** ist nicht zu **good** äquivalent, da nicht zum Dateiende testet.  
+ Der **void\*()**-Operator entspricht nicht **good**, da er nicht das Ende der Datei testet.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Ausgabestreams](../standard-library/output-streams.md)
+
+

@@ -1,55 +1,68 @@
 ---
-title: "rank-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::rank"
-  - "std.tr1.rank"
-  - "rank"
-  - "std.rank"
-  - "std::rank"
-  - "type_traits/std::rank"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rank-Klasse [TR1]"
-  - "rank"
+title: rank-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- rank
+- std::rank
+- type_traits/std::rank
+dev_langs:
+- C++
+helpviewer_keywords:
+- rank class
+- rank
 ms.assetid: bc9f1b8f-800f-46ca-b6f4-d8579ed5406a
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# rank-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: f0e7b22e4fbd6f54d390adfe70f7bfb99e4bc5df
+ms.openlocfilehash: d5b88cb6002d0a96ea84c92877df1083d7e2c4f5
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="rank-class"></a>rank-Klasse
 Ruft die Anzahl der Arraydimensionen ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<class Ty>  
-    struct rank;  
+template <class Ty>  
+struct rank;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
  Der abzufragende Typ.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Die Typabfrage enthält den Wert der Anzahl der Dimensionen des Arraytyps `Ty` oder 0, wenn `Ty` kein Arraytyp ist.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
-// std_tr1__type_traits__rank.cpp   
+```cpp  
+// std__type_traits__rank.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -69,14 +82,17 @@ int main()
 ```  
   
 ```Output  
-Rang < Int > == Rang < Int [5] > 0 == 1 Rank < Int [5] [10] > == 2  
+rank<int> == 0  
+rank<int[5]> == 1  
+rank<int[5][10]> == 2  
 ```  
   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [extent\-Klasse](../standard-library/extent-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [extent-Klasse](../standard-library/extent-class.md)
+

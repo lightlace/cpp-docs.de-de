@@ -1,55 +1,71 @@
 ---
-title: "wctomb_s, _wctomb_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wctomb_s_l"
-  - "wctomb_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wctomb_s"
-  - "_wctomb_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_wctomb_s_l-Funktion"
-  - "Zeichen, Konvertieren"
-  - "Zeichenfolgenkonvertierung, Mehrbytezeichenfolgen"
-  - "Zeichenfolgenkonvertierung, Breitzeichen"
-  - "wctomb_s-Funktion"
-  - "wctomb_s_l-Funktion"
-  - "Breitzeichen, Konvertieren"
+title: wctomb_s, _wctomb_s_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wctomb_s_l
+- wctomb_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wctomb_s
+- _wctomb_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- wctomb_s function
+- wctomb_s_l function
+- string conversion, wide characters
+- wide characters, converting
+- _wctomb_s_l function
+- characters, converting
+- string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# wctomb_s, _wctomb_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 94973bf59580354aed75b8c7a3a154f415060163
+ms.lasthandoff: 02/24/2017
 
-Konvertiert ein Breitzeichen zum entsprechenden Mehrbytezeichen.  Eine Version von [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) mit werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
+Konvertiert ein Breitzeichen in das entsprechende Multibytezeichen. Eine Version von [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) mit Sicherheitserweiterungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t wctomb_s(  
@@ -67,53 +83,53 @@ errno_t _wctomb_s_l(
 );  
 ```  
   
-#### Parameter  
- \[out\] `pRetValue`  
- Die Anzahl der Bytes oder ein Code, der das Ergebnis angibt.  
+#### <a name="parameters"></a>Parameter  
+ [out] `pRetValue`  
+ Die Anzahl von Bytes oder ein Code, der das Ergebnis angibt.  
   
- \[out\] `mbchar`  
- Die Adresse eines Mehrbytezeichens.  
+ [out] `mbchar`  
+ Die Adresse eines Multibytezeichens.  
   
- \[in\] `sizeInBytes`  
- Größe des Puffers `mbchar`.  
+ [in] `sizeInBytes`  
+ Größe des `mbchar`-Puffers.  
   
- \[in\] `wchar`  
- Bei einem Breitzeichen.  
+ [in] `wchar`  
+ Ein Breitzeichen.  
   
- \[in\] `locale`  
+ [in] `locale`  
  Das zu verwendende Gebietsschema.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Null, wenn erfolgreich, Fehlercode bei Fehler.  
   
  Fehlerbedingungen  
   
 |`mbchar`|`sizeInBytes`|Rückgabewert|`pRetValue`|  
 |--------------|-------------------|------------------|-----------------|  
-|`NULL`|\>0|`EINVAL`|nicht geändert|  
-|any|\>`INT_MAX`|`EINVAL`|nicht geändert|  
+|`NULL`|>0|`EINVAL`|nicht geändert|  
+|alle|>`INT_MAX`|`EINVAL`|nicht geändert|  
 |any|zu klein|`EINVAL`|nicht geändert|  
   
- Wenn eine der oben genannten Fehlerzustände, tritt der ungültige Parameterhandler wird aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, gibt `wctomb``EINVAL` zurück und setzt `errno` auf `EINVAL`.  
+ Wenn eine der oben genannten Fehlerbedingungen auftritt, wird ein Handler für ungültige Parameter aufgerufen (siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md)). Wenn die weitere Ausführung zugelassen wird, gibt `wctomb` `EINVAL` zurück und setzt `errno` auf `EINVAL`.  
   
-## Hinweise  
- Die `wctomb_s`\-Funktion konvertiert sein `wchar`\-Argument zum entsprechenden Mehrbytezeichen und speichert das Ergebnis bei `mbchar`.  Sie können die Funktion von einem beliebigen Punkt in jedes Programm aufrufen.  
+## <a name="remarks"></a>Hinweise  
+ Die `wctomb_s`-Funktion konvertiert das `wchar`-Argument in das entsprechende Multibytezeichen und speichert das Ergebnis in `mbchar`. Sie können die Funktion von einem beliebigen Punkt in einem beliebigen Programm aufrufen.  
   
- Wenn `wctomb_s` das Breitzeichen einem Mehrbytezeichen konvertiert, werden die Anzahl von Bytes \(die nie größer als `MB_CUR_MAX` ist, in das Breitzeichen in die ganze Zahl ein, die auf den durch `pRetValue` gezeigt wird.  Wenn `wchar` das NULL\-Breitzeichen \(L"\\0"\) ist, wird `wctomb_s``pRetValue` mit 1. aus.  Wenn der Zielzeiger `mbchar` NULL ist, gibt `wctomb_s` 0 in `pRetValue` ein.  Wenn die Konvertierung nicht im aktuellen Gebietsschema möglich ist, wird `wctomb_s` \- 1 in `pRetValue`.  
+ Wenn `wctomb_s` das Breitzeichen in ein Multibytezeichen konvertiert, wird die Anzahl von Bytes (die nie größer als `MB_CUR_MAX` ist) im Breitzeichen in den Integer geschrieben, auf den von `pRetValue` gezeigt wird. Wenn `wchar` das Breitzeichen NULL (L'\0') ist, füllt `wctomb_s` `pRetValue` mit 1. Wenn der Zielzeiger `mbchar` NULL ist, schreibt `wctomb_s` 0 in `pRetValue`. Wenn die Konvertierung im aktuellen Gebietsschema nicht möglich ist, schreibt `wctomb_s` -1 in `pRetValue`.  
   
- `wctomb_s` verwendet das aktuelle Gebietsschema zu gebietsschemaabhängiger Informationen; `_wctomb_s_l` ist identisch, es verwendet das Gebietsschema, das ein\- stattdessen übergeben wird.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ `wctomb_s` verwendet das aktuelle Gebietsschema für jedes Verhalten, das vom Gebietsschema abhängig ist; `_wctomb_s_l` ist identisch, nur dass sie stattdessen das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`wctomb_s`|\<stdlib.h\>|  
-|`_wctomb_s_l`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`wctomb_s`|\<stdlib.h>|  
+|`_wctomb_s_l`|\<stdlib.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
- Dieses Programm veranschaulicht das Verhalten der Funktion `wctomb`.  
+## <a name="example"></a>Beispiel  
+ Dieses Programm stellt das Verhalten der Funktion `wctomb` dar.  
   
 ```  
 // crt_wctomb_s.cpp  
@@ -133,17 +149,20 @@ int main( void )
 }  
 ```  
   
-  **Konvertiert ein Breitzeichen:**  
- **Zeichen konvertiert: 1**  
- **Mehrbytezeichen: a**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Convert a wide character:  
+   Characters converted: 1  
+   Multibyte character: a  
+```  
   
-## Siehe auch  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, \_mbstowcs\_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, \_mbtowc\_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs, \_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

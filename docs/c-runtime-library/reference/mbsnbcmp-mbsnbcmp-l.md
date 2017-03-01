@@ -1,60 +1,76 @@
 ---
-title: "_mbsnbcmp, _mbsnbcmp_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnbcmp"
-  - "_mbsnbcmp_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbsnbcmp"
-  - "tcsnbmp"
-  - "_mbsnbcmp_l"
-  - "mbsnbcmp_l"
-  - "_mbsnbcmp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsnbcmp-Funktion"
-  - "_mbsnbcmp_l-Funktion"
-  - "_tcsncmp-Funktion"
-  - "mbsnbcmp-Funktion"
-  - "mbsnbcmp_l-Funktion"
-  - "tcsncmp-Funktion"
+title: _mbsnbcmp, _mbsnbcmp_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnbcmp
+- _mbsnbcmp_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbsnbcmp
+- tcsnbmp
+- _mbsnbcmp_l
+- mbsnbcmp_l
+- _mbsnbcmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsnbcmp_l function
+- mbsnbcmp function
+- tcsncmp function
+- _mbsnbcmp_l function
+- _tcsncmp function
+- _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _mbsnbcmp, _mbsnbcmp_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 052aed3d0897821ae617677913ed37e773f6d02d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 Vergleicht die ersten `n` Bytes von zwei Multibytezeichenfolgen.  
   
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die im [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Diese API kann nicht in Anwendungen verwendet werden, die im [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int _mbsnbcmp(  
@@ -70,7 +86,7 @@ int _mbsnbcmp_l(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `string1, string2`  
  Die zu vergleichende Zeichenfolgen.  
   
@@ -80,43 +96,43 @@ int _mbsnbcmp_l(
  `locale`  
  Das zu verwendende Gebietsschema.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert gibt die ordinale Beziehung der untergeordneten Zeichenfolgen von `string1` und `string` an.  
   
 |Rückgabewert|Beschreibung|  
-|------------------|------------------|  
-|\< 0|Die untergeordnete Zeichenfolge `string1` ist kleiner als die untergeordnete Zeichenfolge `string2`.|  
+|------------------|-----------------|  
+|< 0|Die untergeordnete Zeichenfolge `string1` ist kleiner als die untergeordnete Zeichenfolge `string2`.|  
 |0|Die untergeordnete Zeichenfolge `string1` ist mit der untergeordneten Zeichenfolge `string2` identisch.|  
-|\> 0|Die untergeordnete Zeichenfolge `string1` ist größer als die untergeordnete Zeichenfolge `string2`.|  
+|> 0|Die untergeordnete Zeichenfolge `string1` ist größer als die untergeordnete Zeichenfolge `string2`.|  
   
- Bei einem Parametervalidierungsfehler geben `_mbsnbcmp` und `_mbsnbcmp_l` `_NLSCMPERROR` zurück \(definiert in \<string.h\> und \<mbstring.h\>\).  
+ Bei einem Parametervalidierungsfehler geben `_mbsnbcmp` und `_mbsnbcmp_l` `_NLSCMPERROR` zurück (definiert in \<string.h> und \<mbstring.h>).  
   
-## Hinweise  
- Die `_mbsnbcmp`\-Funktionen vergleichen höchstens die ersten `count` Bytes in `string1` und `string2` und geben einen Wert zurück, der die Beziehung zwischen den untergeordneten Zeichenfolgen angibt.  `_mbsnbcmp` ist eine Version von `_mbsnbicmp` unter Berücksichtigung von Groß\- und Kleinschreibung.  Im Gegensatz zu `_mbsnbcoll`, wird `_mbsnbcmp` nicht durch die Sortierung des Gebietsschemas beeinflusst.  `_mbsnbcmp` erkennt Multibytezeichenfolgen gemäß der aktuellen Multibyte\-[Codepage](../../c-runtime-library/code-pages.md).  
+## <a name="remarks"></a>Hinweise  
+ Die `_mbsnbcmp`-Funktionen vergleichen höchstens die ersten `count` Bytes in `string1` und `string2` und geben einen Wert zurück, der die Beziehung zwischen den untergeordneten Zeichenfolgen angibt. `_mbsnbcmp` ist eine Version von `_mbsnbicmp` unter Berücksichtigung von Groß- und Kleinschreibung. Im Gegensatz zu `_mbsnbcoll`, wird `_mbsnbcmp` nicht durch die Sortierung des Gebietsschemas beeinflusst. `_mbsnbcmp` erkennt Multibytezeichenfolgen gemäß der aktuellen Multibyte-[Codepage](../../c-runtime-library/code-pages.md).  
   
  `_mbsnbcmp` ähnelt `_mbsncmp`, mit der Ausnahme, dass `_mbsncmp` Zeichenfolgen nach Zeichen und nicht nach Bytes vergleicht.  
   
- Der Ausgabewert wird von der `LC_CTYPE`\-Kategorieeinstellung des Gebietsschemas beeinflusst, die die vorangestellten und nachstehenden Bytes von Multibytezeichen angibt.  Weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Die `_mbsnbcmp`\-Funktion verwendet das aktuelle Gebietsschema für dieses gebietsschemaabhängige Verhalten.  Die `_mbsnbcmp_l`\-Funktion ist identisch, abgesehen davon, dass sie stattdessen den `locale`\-Parameter verwendet.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ Der Ausgabewert wird von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas beeinflusst, die die vorangestellten und nachstehenden Bytes von Multibytezeichen angibt. Weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die `_mbsnbcmp`-Funktion verwendet das aktuelle Gebietsschema für dieses gebietsschemaabhängige Verhalten. Die `_mbsnbcmp_l`-Funktion ist identisch, abgesehen davon, dass sie stattdessen den `locale`-Parameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
- Wenn `string1` oder `string2` ein NULL\-Zeiger ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, geben die Funktionen `_NLSCMPERROR` zurück und legen `errno` auf `EINVAL` fest.  
+ Wenn `string1` oder `string2` ein NULL-Zeiger ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen `_NLSCMPERROR` zurück und legen `errno` auf `EINVAL` fest.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|------------------------------------------|----------------------|-------------------------|  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|---------------------------------------|--------------------|-----------------------|  
 |`_tcsncmp`|[strncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|`_mbsnbcmp`|[wcsncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|  
 |`_tcsncmp_l`|[strncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|`_mbsnbcml`|[wcsncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_mbsnbcmp`|\<mbstring.h\>|  
-|`_mbsnbcmp_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_mbsnbcmp`|\<mbstring.h>|  
+|`_mbsnbcmp_l`|\<mbstring.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_mbsnbcmp.c  
@@ -153,7 +169,7 @@ int main( void )
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 Compare strings:  
@@ -167,14 +183,14 @@ Function: _mbsnicmp _mbsnicmp (first 10 characters only)
 Result:   String 1 is equal to string 2  
 ```  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
- [\_mbsnbcat, \_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [\_mbsnbicmp, \_mbsnbicmp\_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [_mbsnbicmp, _mbsnbicmp_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [Interpretation von Mehrbytezeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+ [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

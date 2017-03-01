@@ -1,55 +1,68 @@
 ---
-title: "is_fundamental-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_fundamental"
-  - "std.tr1.is_fundamental"
-  - "std::tr1::is_fundamental"
-  - "std.is_fundamental"
-  - "std::is_fundamental"
-  - "type_traits/std::is_fundamental"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_fundamental-Klasse [TR1]"
-  - "is_fundamental"
+title: is_fundamental-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_fundamental
+- std::is_fundamental
+- type_traits/std::is_fundamental
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_fundamental class
+- is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_fundamental-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: ba389ba4db5b559314b9db19cbb08d9f86ba4e7d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isfundamental-class"></a>is_fundamental-Klasse
 Prüft, ob der Typ ungültig oder arithmetisch ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<class Ty>  
-    struct is_fundamental;  
+template <class Ty>  
+struct is_fundamental;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `Ty`  
  Der abzufragende Typ.  
   
-## Hinweise  
- Eine Instanz des Typs Prädikat enthält true, wenn der Typ `Ty` ein grundlegender Typ ist, d. h., `void`, ein ganzzahliger Typ, ein Gleitkommawert, oder ein `cv-qualified`\-Formular, andernfalls enthält er false.  
+## <a name="remarks"></a>Hinweise  
+ Eine Instanz des Typs Prädikat enthält true, wenn der Typ `Ty` ein grundlegender Typ ist, d. h., `void`, ein ganzzahliger Typ, ein Gleitkommawert, oder ein `cv-qualified`-Formular, andernfalls enthält er false.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
-// std_tr1__type_traits__is_fundamental.cpp   
+```cpp  
+// std__type_traits__is_fundamental.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -75,15 +88,19 @@ int main()
   
 ```  
   
-  **is\_fundamental\<trivial\> \=\= false**  
-**is\_fundamental\<int\> \=\= true**  
-**is\_fundamental\<const float\> \=\= true**  
-**is\_fundamental\<void\> \=\= true**   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+```Output  
+is_fundamental<trivial> == false  
+is_fundamental<int> == true  
+is_fundamental<const float> == true  
+is_fundamental<void> == true  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_compound\-Klasse](../standard-library/is-compound-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [is_compound-Klasse](../standard-library/is-compound-class.md)
+

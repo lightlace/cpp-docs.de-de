@@ -1,76 +1,94 @@
 ---
-title: "_get_wpgmptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_wpgmptr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "get_wpgmptr"
-  - "_get_wpgmptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_get_wpgmptr-Funktion"
-  - "_wpgmptr (globale Variable)"
-  - "get_wpgmptr-Funktion"
-  - "wpgmptr (globale Variable)"
+title: _get_wpgmptr | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_wpgmptr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- get_wpgmptr
+- _get_wpgmptr
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wpgmptr global variable
+- get_wpgmptr function
+- wpgmptr global variable
+- _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _get_wpgmptr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 906db908729f64aa282c6a7d5eff7a6482f1c847
+ms.lasthandoff: 02/24/2017
 
-Ruft den aktuellen Wert der globalen `_wpgmptr`\-Variable ab.  
+---
+# <a name="getwpgmptr"></a>_get_wpgmptr
+Ruft den aktuellen Wert der globalen `_wpgmptr`-Variable ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-errno_t _get_wpgmptr(     wchar_t **pValue  );  
+errno_t _get_wpgmptr(   
+   wchar_t **pValue   
+);  
 ```  
   
-#### Parameter  
- \[out\] `pValue`  
- Ein Zeiger für eine Zeichenfolge, die mit dem aktuellen Wert der `_wpgmptr`\-Variable ausgefüllt wird.  
+#### <a name="parameters"></a>Parameter  
+ [out] `pValue`  
+ Ein Zeiger für eine Zeichenfolge, die mit dem aktuellen Wert der `_wpgmptr`-Variable ausgefüllt wird.  
   
-## Rückgabewert  
- Gibt 0 \(null\) zurück, wenn der Vorgang erfolgreich war. Wenn ein Fehler auftritt, erscheint ein Fehlercode.  Wenn `pValue` den Wert `NULL` annimmt, wird wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben der Handler für ungültige Parameter aufgerufen.  Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EINVAL` zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt&0; (null) zurück, wenn der Vorgang erfolgreich war. Wenn ein Fehler auftritt, erscheint ein Fehlercode. Wenn `pValue` `NULL` ist, wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EINVAL` zurück.  
   
-## Hinweise  
- Die globale `_wpgmptr`\-Variable enthält den vollständigen Pfad für die ausführbare Datei, die dem Prozess als Breitzeichen\-Zeichenfolge zugeordnet ist.  Weitere Informationen finden Sie unter [\_pgmptr, \_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
+## <a name="remarks"></a>Hinweise  
+ Die globale `_wpgmptr`-Variable enthält den vollständigen Pfad für die ausführbare Datei, die dem Prozess als Breitzeichen-Zeichenfolge zugeordnet ist. Weitere Informationen finden Sie unter [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_get_wpgmptr`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_get_wpgmptr`|\<stdlib.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [\_get\_pgmptr](../../c-runtime-library/reference/get-pgmptr.md)
+## <a name="see-also"></a>Siehe auch  
+ [_get_pgmptr](../../c-runtime-library/reference/get-pgmptr.md)

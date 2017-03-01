@@ -1,72 +1,88 @@
 ---
-title: "_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_snprintf_s"
-  - "_snprintf_s_l"
-  - "_snwprintf_s"
-  - "_snwprintf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_snwprintf_s_l"
-  - "_sntprintf_s_l"
-  - "snprintf_s_l"
-  - "_snprintf_s_l"
-  - "_sntprintf_s"
-  - "_snprintf_s"
-  - "snprintf_s"
-  - "_snwprintf_s"
-  - "snwprintf_s_l"
-  - "snwprintf_s"
-  - "sntprintf_s"
-  - "sntprintf_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_snprintf_s-Funktion"
-  - "_snprintf_s_l-Funktion"
-  - "_sntprintf_s-Funktion"
-  - "_sntprintf_s_l-Funktion"
-  - "_snwprintf_s-Funktion"
-  - "_snwprintf_s_l-Funktion"
-  - "Formatierter Text [C++]"
-  - "snprintf_s-Funktion"
-  - "snprintf_s_l-Funktion"
-  - "sntprintf_s-Funktion"
-  - "sntprintf_s_l-Funktion"
-  - "snwprintf_s-Funktion"
-  - "snwprintf_s_l-Funktion"
+title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _snprintf_s
+- _snprintf_s_l
+- _snwprintf_s
+- _snwprintf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _snwprintf_s_l
+- _sntprintf_s_l
+- snprintf_s_l
+- _snprintf_s_l
+- _sntprintf_s
+- _snprintf_s
+- snprintf_s
+- _snwprintf_s
+- snwprintf_s_l
+- snwprintf_s
+- sntprintf_s
+- sntprintf_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _snprintf_s_l function
+- _snwprintf_s_l function
+- _sntprintf_s_l function
+- snwprintf_s_l function
+- snprintf_s function
+- _snprintf_s function
+- snprintf_s_l function
+- _sntprintf_s function
+- sntprintf_s_l function
+- sntprintf_s function
+- snwprintf_s function
+- _snwprintf_s function
+- formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
 caps.latest.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8a3e2cd1a9bff5c7cb08e30753e98b1769e0b7fa
+ms.lasthandoff: 02/24/2017
 
-Schreibt formatierte Daten in eine Zeichenfolge. Dies sind die Versionen von [snprintf, \_snprintf, \_snprintf\_l, \_snwprintf, \_snwprintf\_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
+Schreibt formatierte Daten in eine Zeichenfolge. Dies sind Versionen von [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) mit Sicherheitsverbesserungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int _snprintf_s(  
@@ -115,15 +131,15 @@ int _snwprintf_s(
 ); // C++ only  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `buffer`  
  Speicherort für die Ausgabe.  
   
  `sizeOfBuffer`  
- Die Größe des Speicherorts für die Ausgabe. Passen Sie die Größe `bytes` für `_snprintf_s` oder Größe in `words` für `_snwprintf_s`.  
+ Die Größe des Speicherorts für die Ausgabe. Größe in `bytes` für `_snprintf_s` oder Größe in `words` für `_snwprintf_s`.  
   
  `Count`  
- Maximale Anzahl von Zeichen zu speichern, oder [\_TRUNCATE](../../c-runtime-library/truncate.md).  
+ Die maximale Anzahl der zu speichernden Zeichen oder [_TRUNCATE](../../c-runtime-library/truncate.md).  
   
  `format`  
  Formatsteuerzeichenfolge.  
@@ -134,46 +150,46 @@ int _snwprintf_s(
  `locale`  
  Das zu verwendende Gebietsschema.  
   
-## Rückgabewert  
- `_snprintf_s` Gibt die Anzahl der Zeichen, die in gespeicherten `buffer`, das abschließende Null\-Zeichen wird dabei nicht mitgezählt.`_snwprintf_s` Gibt die Anzahl der Breitzeichen, die in gespeicherten `buffer`, das abschließende null\-Breitzeichen wird dabei nicht mitgezählt.  
+## <a name="return-value"></a>Rückgabewert  
+ `_snprintf_s` gibt die Anzahl der in `buffer` gespeicherten Zeichen zurück. Das abschließende NULL-Zeichen wird dabei nicht mitgezählt. `_snwprintf_s` gibt die Anzahl der in `buffer` gespeicherten Breitzeichen zurück. Das abschließende NULL-Breitzeichen wird dabei nicht mitgezählt.  
   
- Wenn Speicher zum Speichern der Daten und ein abschließendes Nullzeichen überschreitet `sizeOfBuffer`, Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die Ausführung nach Aufruf des Handlers für ungültige Parameter fortgesetzt wird, legen diese Funktionen `buffer` auf eine leere Zeichenfolge und `errno` auf `ERANGE` fest und geben "– 1" zurück.  
+ Wenn der Speicher, der zum Speichern der Daten und eines abschließenden NULL-Zeichens erforderlich ist, `sizeOfBuffer` überschreitet, wird, wie in [Parameter Validation (Parameterbehandlung)](../../c-runtime-library/parameter-validation.md) beschrieben, der Handler für ungültige Parameter aufgerufen. Wenn die Ausführung nach Aufruf des Handlers für ungültige Parameter fortgesetzt wird, legen diese Funktionen `buffer` auf eine leere Zeichenfolge und `errno` auf `ERANGE` fest und geben "–&1;" zurück.  
   
- Wenn `buffer` oder `format` ein `NULL`\-Zeiger ist oder wenn `count` kleiner oder gleich 0 ist, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben \-1 zurück.  
+ Wenn `buffer` oder `format` ein `NULL`-Zeiger ist oder wenn `count` kleiner oder gleich&0; ist, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben -1 zurück.  
   
- Weitere Informationen über diese und andere Fehlercodes finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die `_snprintf_s` \-Funktion formatiert und speichert `count` oder weniger Zeichen in `buffer` und fügt ein abschließendes Nullzeichen. Jedes Argument \(sofern vorhanden\) konvertiert und entsprechend der jeweiligen Formatangabe in output `format`. Die Formatierung ist konsistent mit den `printf` \-Funktionsreihe; Siehe [Syntax der Formatangabe: printf\- und wprintf\-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  
+## <a name="remarks"></a>Hinweise  
+ Die `_snprintf_s`-Funktion formatiert und speichert `count` oder weniger Zeichen in `buffer` und fügt ein abschließendes Nullzeichen an. Jedes Argument (falls vorhanden) wird entsprechend der jeweiligen Formatangabe in `format` konvertiert und ausgegeben. Die Formatierung stimmt mit der `printf`-Funktionsfamilie überein, siehe [Syntax der Formatangabe: printf- und wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  
   
- Wenn `count` ist [\_TRUNCATE](../../c-runtime-library/truncate.md), dann `_snprintf_s` Schreibvorgänge Teil der Zeichenfolge wie passt `buffer` wobei Platz für das abschließende Nullzeichen. Wenn die gesamte Zeichenfolge \(mit dem abschließenden Nullzeichen\) in passt `buffer`, dann `_snprintf_s` Gibt die Anzahl der Zeichen, die \(ohne das abschließende Nullzeichen\) geschrieben; andernfalls `_snprintf_s` gibt\-1 an, dass das Abschneiden aufgetreten ist.  
+ Wenn `count` [_TRUNCATE](../../c-runtime-library/truncate.md) ist, schreibt `_snprintf_s` den Teil der Zeichenfolge, der in `buffer` passt, wobei Platz für das abschließende NULL-Zeichen gelassen wird. Wenn die gesamte Zeichenfolge (mit dem abschließenden NULL-Zeichen) in `buffer` passt, gibt `_snprintf_s` die Anzahl der geschriebenen Zeichen zurück (ohne das abschließende NULL-Zeichen). Andernfalls gibt `_snprintf_s` „-1“ zurück, um ein Abschneiden anzugeben.  
   
 > [!IMPORTANT]
 >  Stellen Sie sicher, dass `format` keine benutzerdefinierte Zeichenfolge ist.  
   
- `_snwprintf_s` ist eine Breitzeichen\-Version von `_snprintf_s`. Die Zeigerargumente zu `_snwprintf_s` sind Breitzeichen\-Zeichenfolgen. Die Erkennung von Codierungsfehlern in `_snwprintf_s` unterscheidet sich möglicherweise von der in `_snprintf_s`.`_snwprintf_s`, z. B. `swprintf_s`, schreibt die Ausgabe in eine Zeichenfolge anstelle eines Ziels vom Typ `FILE`.  
+ `_snwprintf_s` ist eine Breitzeichen-Version von `_snprintf_s`. Die Zeigerargumente zu `_snwprintf_s` sind Breitzeichen-Zeichenfolgen. Die Erkennung von Codierungsfehlern in `_snwprintf_s` unterscheidet sich möglicherweise von der in `_snprintf_s`. Genau wie `swprintf_s` schreibt `_snwprintf_s` die Ausgabe in eine Zeichenfolge anstatt in ein Ziel vom Typ `FILE`.  
   
- Die Versionen dieser Funktionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
+ Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
- In C\+\+ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen \(wodurch kein Größenargument mehr angegeben werden muss\), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|------------------------------------------|----------------------|-------------------------|  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_sntprintf_s`|`_snprintf_s`|`_snprintf_s`|`_snwprintf_s`|  
 |`_sntprintf_s_l`|`_snprintf_s_l`|`_snprintf_s_l`|`_snwprintf_s_l`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_snprintf_s`, `_snprintf_s_l`|\<stdio.h\>|  
-|`_snwprintf_s`, `_snwprintf_s_l`|\<stdio.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`_snprintf_s`, `_snprintf_s_l`|\<stdio.h>|  
+|`_snwprintf_s`, `_snwprintf_s_l`|\<stdio.h> oder \<wchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_snprintf_s.cpp  
@@ -271,17 +287,44 @@ int main( void )
   
 ```Output  
   
-Count = 8; 10-Byte-Puffer neuer Inhalt von Dest: ' <<< 121 >> ' Count = 9. 10-Byte-Puffer neuer Inhalt von Dest: '<<< 121 >>> ' Count = 10; 10-Byte-Puffer neuer Inhalt von Dest: '<<< 121 >>> ' Zielpuffer ist zu klein: Count = 10; 10-Byte-Puffer Handler für ungültige Parameter aufgerufen: ("Puffer zu klein", 0) neuer Inhalt von Dest: '' Abschneiden Beispiele: 10-Byte-Puffer; Abschneiden Semantik neuer Inhalt von Dest: ' <<< 1221 >> "abgeschnitten, 10-Byte-Puffer; Abschneiden Semantik neuer Inhalt von Dest: '<<< 121 >>> ' nicht abgeschnitten, sichere Vorlage Überladung Beispiel: Handler für ungültige Parameter aufgerufen: ("Puffer zu klein", 0) neuer Inhalt von Dest: "  
+count = 8; 10-byte buffer  
+    new contents of dest: '<<<121>>'  
+  
+count = 9; 10-byte buffer  
+    new contents of dest: '<<<121>>>'  
+  
+count = 10; 10-byte buffer  
+    new contents of dest: '<<<121>>>'  
+  
+Destination buffer too small:  
+  
+count = 10; 10-byte buffer  
+Invalid parameter handler invoked: ("Buffer too small", 0)  
+    new contents of dest: ''  
+  
+Truncation examples:  
+  
+10-byte buffer; truncation semantics  
+    new contents of dest: '<<<1221>>'  
+    truncation did occur  
+  
+10-byte buffer; truncation semantics  
+    new contents of dest: '<<<121>>>'  
+    truncation did not occur  
+  
+Secure template overload example:  
+Invalid parameter handler invoked: ("Buffer too small", 0)  
+    new contents of dest: ''  
 ```  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [vprintf\-Funktionen](../../c-runtime-library/vprintf-functions.md)
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [vprintf-Funktionen](../../c-runtime-library/vprintf-functions.md)

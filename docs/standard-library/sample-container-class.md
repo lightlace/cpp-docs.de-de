@@ -1,47 +1,63 @@
 ---
-title: "Sample Container-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "container-Klassen"
+title: Sample Container-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- container classes
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Sample Container-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 0f45ecbb6746c8d660e699ac0f7c08ecfb5dbb68
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="sample-container-class"></a>Sample Container-Klasse
 > [!NOTE]
->  Dieses Thema ist in der Dokumentation zu Visual C++ als Beispiel funktioniert nicht für Container, die in der C++-Standardbibliothek verwendet. Weitere Informationen finden Sie unter [STL-Containern](../standard-library/stl-containers.md).  
+>  Dieses Thema ist in der Dokumentation zu Visual C++ als nicht funktionierendes Beispiel für Container aufgeführt, die in der C++-Standardbibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).  
   
- Beschreibt ein Objekt, das eine Elementsequenz variabler Länge Sequenz von Elementen, in der Regel vom Typ steuert **Ty**. Die Folge ist unterschiedlich, abhängig von der tatsächlichen Container gespeichert.  
+ Beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, normalerweise vom Typ **Ty**. Die Folge ist unterschiedlich gespeichert, abhängig vom tatsächlichen Container.  
   
- Eine Container-Konstruktor oder Member-Funktion möglicherweise Anlass Aufruf des Konstruktors **Ty**(**const Ty &**) oder die Funktion **Ty::operator =**(**const Ty &**). Wenn solch ein Aufruf eine Ausnahme auslöst, wird das Containerobjekt verpflichtet, um die Integrität beizubehalten, und jede Ausnahme erneut auslösen, fängt. Sie können sicher austauschen, zuweisen, löschen oder ein Container-Objekt zerstört, nachdem sie eine dieser Ausnahmen auslöst. Im Allgemeinen, Vorhersagen nicht jedoch andernfalls den Zustand der vom Container-Objekt Sequenz.  
+ Ein Containerkonstruktor oder eine Memberfunktion finden möglicherweise Anlass, den Konstruktor **Ty**(**const Ty &**) oder die Funktion **Ty::operator =**(**const Ty &**) aufzurufen. Wenn solch ein Aufruf eine Ausnahme auslöst, ist das Containerobjekt verpflichtet, seine Integrität beizubehalten, und jede Ausnahme, die es entdeckt, erneut auslösen. Sie können ein Containerobjekt sicher austauschen, zuweisen, löschen oder zerstören, nachdem es eine dieser Ausnahmen auslöst. Im Allgemeinen jedoch können Sie den Zustand der vom Containerobjekt kontrollierten Sequenz andernfalls nicht vorhersagen.  
   
  Einige zusätzliche Vorsichtsmaßnahmen:  
   
--   Wenn der Ausdruck **~ Ty** eine Ausnahme auslöst, der resultierende Status der Container-Objekt ist nicht definiert.  
+-   Wenn der Ausdruck **~ Ty** eine Ausnahme auslöst, ist der resultierende Status des Containerobjekts nicht definiert.  
   
--   Wenn der Container ein Zuweisungsobjekt speichert *al*, und *al* löst eine Ausnahme aufgrund eines Aufrufs von anderen als *al***.allocate**, der resultierende Status der Container-Objekt ist nicht definiert.  
+-   Wenn der Container ein Zuweisungsobjekt *al* speichert, und *al* eine Ausnahme auslöst, die kein Ergebnis eines Aufrufs von *al***.allocate** ist, dann ist der resultierende Status des Containerobjekts nicht definiert.  
   
--   Wenn der Container ein Funktionsobjekt speichert *Comp*, bestimmen, wie die kontrollierte Sequenz sortiert und *Comp* eine beliebige Ausnahme auslöst, der resultierende Status der Container-Objekt ist nicht definiert.  
+-   Wenn der Container ein Funktionsobjekt *comp* speichert, um zu bestimmen, wie die kontrollierte Sequenz sortiert wird und *comp* eine beliebige Ausnahme auslöst, ist der resultierende Status des Containerobjekts nicht definiert.  
   
- Der von Ihnen definierten Containerklassen STL erfüllen noch weitere Anforderungen, wie in den folgenden Abschnitten beschrieben.  
+ Die Containerklassen, die von der C++-Standardbibliothek definiert werden, erfüllen noch weitere Anforderungen, wie in den folgenden Abschnitten beschrieben.  
   
- Container-Vorlagenklasse [Liste](../standard-library/list-class.md) deterministisch und nützlich, Verhalten auch bei den oben beschriebenen Ausnahmen enthält. Z. B. wenn eine Ausnahme wird, wird beim Einfügen von einem ausgelöst oder mehreren Elementen, der Container unverändert, und die Ausnahme erneut ausgelöst wird.  
+ Die Containervorlagenklasse [list](../standard-library/list-class.md) enthält deterministisches und nützliches Verhalten, auch bei den oben beschriebenen Ausnahmen. Wenn beispielsweise eine Ausnahme während des Einfügens von einem oder mehreren Elementen ausgelöst wird, bleibt der Container unverändert, und die Ausnahme wird erneut ausgelöst.  
   
- Für *alle* der von Ihnen definierten Containerklassen STL, wenn eine Ausnahme, während die folgenden Memberfunktionen aufrufen ausgelöst wird:  
+ Für *alle* Containerklassen, die von der C++-Standardbibliothek definiert werden, wird eine Ausnahme ausgelöst, während die folgenden Memberfunktionen aufgerufen werden:  
   
 ```  
 <A NAME="vclrfcontainerinsert"></A>insert // single element inserted  
@@ -49,52 +65,53 @@ caps.handback.revision: 10
 <A NAME="vclrfcontainerpushfront"></A>push_front  
 ```  
   
- der Container unverändert, und die Ausnahme erneut ausgelöst wird.  
+ bleibt der Container unverändert, und die Ausnahme wird erneut ausgelöst.  
   
- Für *alle* die Containerklassen von STL definiert, während die folgenden Memberfunktionen aufrufen wird keine Ausnahme ausgelöst:  
+ Für *alle* Containerklassen, die von der C++-Standardbibliothek definiert werden, wird keine Ausnahme ausgelöst, während die folgenden Memberfunktionen aufgerufen werden:  
   
 ```  
 <A NAME="vclrfcontainerpopback"></A>pop_back  
 <A NAME="vclrfcontainerpopfront"></A>pop_front  
 ```  
   
- Die Memberfunktion [Löschen](../standard-library/container-class-erase.md) löst eine Ausnahme aus, nur, wenn ein Kopiervorgang (Zuweisung oder Copy-Konstruktion) eine Ausnahme auslöst.  
+ Die Memberfunktion [erase](../standard-library/container-class-erase.md) löst eine Ausnahme nur aus, wenn ein Kopiervorgang (Zuweisung oder Copy-Konstruktion) eine Ausnahme auslöst.  
   
  Darüber hinaus wird keine Ausnahme ausgelöst, während des Kopiervorgangs eines Iterators, der von einer Memberfunktion zurückgegeben wird.  
   
- Die Memberfunktion [Swap](../standard-library/container-class-swap.md) stellt zusätzliche Zusagen *alle* definiert, die von STL-Container-Klassen:  
+ Die Memberfunktion [swap](../standard-library/container-class-swap.md) macht zusätzliche Zusagen für *alle* Containerklassen, die von der C++-Standardbibliothek definiert werden:  
   
--   Die Memberfunktion löst eine Ausnahme aus, nur dann, wenn der Container eine Zuweisung Objekt al, speichert und `al` löst eine Ausnahme aus, wenn Sie kopiert.  
+-   Die Memberfunktion löst eine Ausnahme nur dann aus, wenn der Container eine Zuweisungsobjekt al speichert und `al` löst beim Kopiervorgang eine Ausnahme aus.  
   
--   Verweise, Zeiger und Iteratoren, mit denen Elemente der gesteuerten Sequenzen getauscht bleiben gültig.  
+-   Verweise, Zeiger und Iteratoren, die getauschte Elemente der gesteuerten Sequenzen anzeigen, bleiben gültig.  
   
- Ein Objekt einer Container-Klasse, die von STL definiert reserviert und freigegeben Speicher für die gesteuerte Sequenz durch eine gespeicherte Objekt vom Typ `Alloc`, dem es sich gewöhnlich um einen Vorlagenparameter. Solches Zuweisungsobjekt muss die gleiche externe Schnittstelle wie ein Objekt der Klasse haben **Allocator \< Ty>**. Insbesondere `Alloc` muss der gleiche Typ wie **Alloc::rebind \< Value_type >:: andere**  
+ Ein Objekt einer Containerklasse, die von der C++-Standardbibliothek definiert wird, reserviert Speicher und gibt ihn für die gesteuerte Sequenz frei, die sie durch ein gespeichertes Objekt vom Typ `Alloc` kontrolliert. Dieser ist gewöhnlich ein Vorlagenparameter. Ein solches Zuweisungsobjekt muss die gleiche externe Schnittstelle wie ein Objekt der Klasse **allocator\<Ty>** aufweisen. Insbesondere `Alloc` muss der gleiche Typ wie **Alloc::rebind<value_type>:: other** sein.  
   
- Für *alle* von Ihnen definierten Containerklassen STL, die Memberfunktion **Alloc Get_allocator const;** eine Kopie der das gespeicherte Zuordnungsobjekt zurückgegeben. Beachten Sie, dass das gespeicherte Zuordnungsobjekt *nicht* kopiert, wenn das Containerobjekt zugewiesen wird. Alle Konstruktoren initialisieren den in gespeicherten Wert **Zuweisung**,  `Alloc` wenn der Konstruktor keine Zuweisungsparameter enthält.  
+ Für *alle* Containerklassen, die von der C++-Standardbibliothek definiert werden, gibt die Memberfunktion **Alloc get_allocator const;** eine Kopie des gespeicherten Zuordnungsobjekts zurück. Beachten Sie, dass das gespeicherte Zuweisungsobjekt *nicht* kopiert wird, wenn das Containerobjekt zugewiesen wird. Alle Konstruktoren initialisieren den in **Zuweisung** gespeicherten Wert zu `Alloc`, wenn der Konstruktor keine Zuweisungsparameter enthält.  
   
- Entsprechend dem C++-Standard kann eine Container-Klasse, die von STL definiert, die darstellen:  
+ Entsprechend dem C++-Standard kann eine Container-Klasse, die die C++-Standardbibliothek definiert, folgendes darstellen:  
   
--   Alle Objekte der Klasse `Alloc` Vergleich auf Gleichheit.  
+-   Alle Objekte der Klasse `Alloc` sind beim Vergleich gleich.  
   
--   Typ **Alloc::const_pointer** entspricht **const Ty \***.  
+-   Der Typ **Alloc::const_pointer** ist derselbe wie **const Ty \***.  
   
--   Typ **Alloc::const_reference** entspricht **const Ty &**.  
+-   Der Typ **Alloc::const_pointer** ist derselbe wie **const Ty& **.  
   
--   Typ **Alloc::pointer** entspricht **Ty \***.  
+-   Der Typ **Alloc::const_pointer** ist derselbe wie **Ty \***.  
   
--   Typ **Alloc::reference** entspricht **Ty &**.  
+-   Der Typ **Alloc::const_pointer** ist derselbe wie **Ty& **.  
   
- In dieser Implementierung werden jedoch Container nicht solche vereinfachende Annahmen zu machen. Daher arbeiten sie ordnungsgemäß mit Allocator-Objekte, die ehrgeizigere sind:  
+ In dieser Implementierung treffen Container jedoch nicht solche vereinfachende Annahmen. Daher arbeiten sie ordnungsgemäß mit Zuweisungsobjekten, die ehrgeiziger sind:  
   
--   Alle Objekte der Klasse `Alloc` muss nicht vergleichen gleich. (Sie können mehrere Speicher-Pools verwalten.)  
+-   Alle Objekte der `Alloc`-Klasse werden beim Vergleich nicht gleich abschneiden. (Sie können mehrere Speicherpools verwalten.)  
   
--   Typ **Alloc::const_pointer** müssen nicht identisch sein **const Ty \***. (Ein const-Zeiger kann auf eine Klasse sein.)  
+-   Der Typ **Alloc::const_pointer** braucht nicht vom selben Type wie **const Ty \***. (Ein const-Zeiger kann eine Klasse sein.)  
   
--   Typ **Alloc::pointer** müssen nicht identisch sein **Ty \***. (Ein Zeiger kann auf eine Klasse sein.)  
+-   Der Typ **Alloc::pointer** braucht nicht vom selben Type wie **Ty \***. (Ein Zeiger kann eine Klasse sein.)  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header**: \< sample Container>  
+ **Header**: \<sample container>  
   
 ## <a name="see-also"></a>Siehe auch  
- [\< Sample-Container>](../standard-library/sample-container.md)
+ [\<sample container>](../standard-library/sample-container.md)
+
 

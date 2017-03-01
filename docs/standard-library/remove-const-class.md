@@ -1,59 +1,72 @@
 ---
-title: "remove_const-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.remove_const"
-  - "std::tr1::remove_const"
-  - "remove_const"
-  - "std.remove_const"
-  - "std::remove_const"
-  - "type_traits/std::remove_const"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remove_const-Klasse [TR1]"
-  - "remove_const"
+title: remove_const-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- remove_const
+- std::remove_const
+- type_traits/std::remove_const
+dev_langs:
+- C++
+helpviewer_keywords:
+- remove_const class
+- remove_const
 ms.assetid: feb76fb3-9228-41d6-80f6-2fbb04daec43
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# remove_const-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 39a88c886636c7c79c50771b5d4a91b26be954b4
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="removeconst-class"></a>remove_const-Klasse
 Wandelt einen Typ in einen nicht konstanten Typ um.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<class T>  
-    struct remove_const;  
+template <class T>  
+struct remove_const;
 ```  
   
 ```  
-template<class T>  
-  using remove_const_t = typename remove_const<T>::type;  
+template <class T>  
+using remove_const_t = typename remove_const<T>::type;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
  Der zu ändernde Typ.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Eine Instanz von `remove_const<T>` enthält einen geänderten Typ, der `T1` ist, wenn `T` das Format `const T1` hat; andernfalls `T`.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 #include <type_traits>   
 #include <iostream>   
   
@@ -67,16 +80,19 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
-  **remove\_const\_t\<const int\> \=\= int**   
-## Anforderungen  
- **Header:** \<type\_traits\>  
+```Output  
+remove_const_t<const int> == int  
+```  
+  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [add\_const\-Klasse](../standard-library/add-const-class.md)   
- [remove\_cv\-Klasse](../standard-library/remove-cv-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [add_const-Klasse](../standard-library/add-const-class.md)   
+ [remove_cv-Klasse](../standard-library/remove-cv-class.md)
+

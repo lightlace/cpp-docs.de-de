@@ -1,65 +1,81 @@
 ---
-title: "_searchenv_s, _wsearchenv_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wsearchenv_s"
-  - "_searchenv_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-environment-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_searchenv_s"
-  - "_wsearchenv_s"
-  - "wsearchenv_s"
-  - "searchenv_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_searchenv_s-Funktion"
-  - "_tsearchenv_s-Funktion"
-  - "_wsearchenv_s-Funktion"
-  - "Pufferüberläufe"
-  - "Puffer [C++], Vermeiden von Überläufen"
-  - "Puffer [C++], Pufferüberläufe"
-  - "Umgebungspfade"
-  - "Umgebungspfade, Suchen nach Dateien"
-  - "Dateien [C++], Suchen"
-  - "searchenv_s-Funktion"
-  - "tsearchenv_s-Funktion"
-  - "wsearchenv_s-Funktion"
+title: _searchenv_s, _wsearchenv_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wsearchenv_s
+- _searchenv_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-environment-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _searchenv_s
+- _wsearchenv_s
+- wsearchenv_s
+- searchenv_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- tsearchenv_s function
+- files [C++], finding
+- buffers [C++], buffer overruns
+- environment paths, searching for files
+- wsearchenv_s function
+- searchenv_s function
+- _tsearchenv_s function
+- buffer overruns
+- buffers [C++], avoiding overruns
+- _wsearchenv_s function
+- _searchenv_s function
+- environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
 caps.latest.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# _searchenv_s, _wsearchenv_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c70908d3c884eed962560e0a5284c66c3c234a7e
+ms.lasthandoff: 02/24/2017
 
-Sucht mithilfe von Umgebungspfaden nach einer Datei.  Diese Versionen von [\_searchenv, \_wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md) enthalten Sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
+Sucht mithilfe von Umgebungspfaden nach einer Datei. Diese Versionen von [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
   
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows\-Runtime ausgeführt werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t _searchenv_s(  
@@ -88,61 +104,61 @@ errno_t _wsearchenv_s(
 ); // C++ only  
 ```  
   
-#### Parameter  
- \[in\] `filename`  
+#### <a name="parameters"></a>Parameter  
+ [in] `filename`  
  Der Name der zu suchenden Datei.  
   
- \[in\] `varname`  
+ [in] `varname`  
  Zu durchsuchende Umgebung.  
   
- \[out\] `pathname`  
+ [out] `pathname`  
  Puffer zum Speichern des vollständigen Pfades.  
   
- \[in\] `numberOfElements`  
- Größe des Puffers `pathname`.  
+ [in] `numberOfElements`  
+ Größe des `pathname`-Puffers.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt.  
   
  Wenn `filename` eine leere Zeichenfolge ist, dann ist der Rückgabewert `ENOENT`.  
   
-### Fehlerbedingungen  
+### <a name="error-conditions"></a>Fehlerbedingungen  
   
 |`filename`|`varname`|`pathname`|`numberOfElements`|Rückgabewert|Inhalt von `pathname`|  
-|----------------|---------------|----------------|------------------------|------------------|---------------------------|  
-|any|any|`NULL`|any|`EINVAL`|nicht verfügbar|  
-|`NULL`|any|any|any|`EINVAL`|nicht geändert|  
-|any|any|any|\<\= 0|`EINVAL`|nicht geändert|  
+|----------------|---------------|----------------|------------------------|------------------|----------------------------|  
+|any|alle|`NULL`|any|`EINVAL`|nicht verfügbar|  
+|`NULL`|alle|alle|alle|`EINVAL`|nicht geändert|  
+|any|alle|any|<= 0|`EINVAL`|nicht geändert|  
   
- Wenn einer dieser Fehlerzustände auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben `EINVAL` zurück.  
+ Wenn eine dieser Fehlerbedingungen auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben `EINVAL` zurück.  
   
-## Hinweise  
- Die `_searchenv_s`\-Routine sucht in der angegebenen Domäne nach der Zieldatei.  Die `varname`\-Variable kann jede beliebige Umgebungsvariable oder benutzerdefinierte Variable sein, die eine Liste von Verzeichnispfaden angibt, wie z. B. `PATH`, `LIB` und `INCLUDE`.  Da `_searchenv_s` die Groß\-\/Kleinschreibung beachtet, sollte `varname` mit der Groß\-\/Kleinschreibung der Umgebungsvariablen übereinstimmen.  Wenn `varname` nicht mit dem Namen einer in der Umgebung des Prozesses definierten Umgebungsvariablen übereinstimmt, gibt die Funktion Null zurück und die Variable `pathname` bleibt unverändert.  
+## <a name="remarks"></a>Hinweise  
+ Die `_searchenv_s`-Routine sucht in der angegebenen Domäne nach der Zieldatei. Die `varname`-Variable kann jede beliebige Umgebungsvariable oder benutzerdefinierte Variable sein, die eine Liste von Verzeichnispfaden angibt, wie z. B. `PATH`, `LIB` und `INCLUDE`. Da `_searchenv_s` die Groß-/Kleinschreibung beachtet, sollte `varname` mit der Groß-/Kleinschreibung der Umgebungsvariablen übereinstimmen. Wenn `varname` nicht mit dem Namen einer in der Umgebung des Prozesses definierten Umgebungsvariablen übereinstimmt, gibt die Funktion Null zurück und die Variable `pathname` bleibt unverändert.  
   
- Die Routine sucht zuerst im aktuellen Arbeitsverzeichnis nach der Datei.  Wenn die Datei dort nicht gefunden wird, werden als Nächstes die in der Umgebungsvariablen angegebenen Verzeichnisse durchsucht.  Wenn die Zieldatei in einem dieser Verzeichnisse ist, wird der neu erstellte Pfad in `pathname` kopiert.  Wenn die Datei `filename` nicht gefunden wird, enthält `pathname` eine leere auf NULL abschließende Zeichenfolge.  
+ Die Routine sucht zuerst im aktuellen Arbeitsverzeichnis nach der Datei. Wenn die Datei dort nicht gefunden wird, werden als Nächstes die in der Umgebungsvariablen angegebenen Verzeichnisse durchsucht. Wenn die Zieldatei in einem dieser Verzeichnisse ist, wird der neu erstellte Pfad in `pathname` kopiert. Wenn die Datei `filename` nicht gefunden wird, enthält `pathname` eine leere auf NULL abschließende Zeichenfolge.  
   
- Der Puffer `pathname` sollte mindestens `_MAX_PATH` Zeichen lang sein, um die volle Länge des erstellten Pfadnamens zu unterstützen.  Andernfalls kann `_searchenv_s` den `pathname`\-Puffer überlaufen lassen, was zu einem unerwarteten Verhalten führt.  
+ Der Puffer `pathname` sollte mindestens `_MAX_PATH` Zeichen lang sein, um die volle Länge des erstellten Pfadnamens zu unterstützen. Andernfalls kann `_searchenv_s` den `pathname`-Puffer überlaufen lassen, was zu einem unerwarteten Verhalten führt.  
   
- `_wsearchenv_s` ist eine Breitzeichenversion von `_searchenv_s`. Die Argumente für `_wsearchenv_s` sind Zeichenfolgen mit Breitzeichen.  `_wsearchenv_s` und `_searchenv_s` verhalten sich andernfalls identisch.  
+ `_wsearchenv_s` ist eine Breitzeichenversion von `_searchenv_s`. Die Argumente für `_wsearchenv_s` sind Zeichenfolgen mit Breitzeichen. `_wsearchenv_s` und `_searchenv_s` verhalten sich andernfalls identisch.  
   
- In C\+\+ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen \(wodurch kein Größenargument mehr angegeben werden muss\), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|------------------------------------------|----------------------|-------------------------|  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tsearchenv_s`|`_searchenv_s`|`_searchenv_s`|`_wsearchenv_s`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_searchenv_s`|\<stdlib.h\>|  
-|`_wsearchenv_s`|\<stdlib.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`_searchenv_s`|\<stdlib.h>|  
+|`_wsearchenv_s`|\<stdlib.h> oder \<wchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_searchenv_s.c  
@@ -173,13 +189,16 @@ int main( void )
 }  
 ```  
   
-  **Pfad für CL.EXE:**  
-**C:\\Program Files\\Microsoft Visual Studio 2010\\VC\\BIN\\CL.EXE**   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Path for CL.EXE:  
+C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE  
+```  
   
-## Siehe auch  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
  [Verzeichnissteuerung](../../c-runtime-library/directory-control.md)   
- [\_searchenv, \_wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)   
- [getenv, \_wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
- [\_putenv, \_wputenv](../../c-runtime-library/reference/putenv-wputenv.md)
+ [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)   
+ [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
+ [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)

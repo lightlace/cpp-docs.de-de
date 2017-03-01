@@ -1,59 +1,75 @@
 ---
-title: "_splitpath, _wsplitpath | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wsplitpath"
-  - "_splitpath"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wsplitpath"
-  - "_splitpath"
-  - "splitpath"
-  - "_wsplitpath"
-  - "_tsplitpath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_splitpath-Funktion"
-  - "_tsplitpath-Funktion"
-  - "_wsplitpath-Funktion"
-  - "Pfadnamen"
-  - "Pfadnamen"
-  - "splitpath-Funktion"
-  - "tsplitpath-Funktion"
-  - "wsplitpath-Funktion"
+title: _splitpath, _wsplitpath | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wsplitpath
+- _splitpath
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wsplitpath
+- _splitpath
+- splitpath
+- _wsplitpath
+- _tsplitpath
+dev_langs:
+- C++
+helpviewer_keywords:
+- _splitpath function
+- pathnames
+- wsplitpath function
+- splitpath function
+- _wsplitpath function
+- tsplitpath function
+- path names
+- _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _splitpath, _wsplitpath
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: af46452d23eb6194a0562dc37bbe082a56762a2b
+ms.lasthandoff: 02/24/2017
 
-Unterbrechen Sie einen Pfadnamen in Komponenten.  Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [\_splitpath\_s, \_wsplitpath\_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
+---
+# <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
+Unterteilen Sie einen Pfadnamen in Komponenten. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void _splitpath(  
@@ -72,71 +88,71 @@ void _wsplitpath(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `path`  
- Vollständiger Pfad.  
+ Vollständiger Pfad  
   
  `drive`  
- Laufwerkbuchstabe, gefolgt von einem Doppelpunkt \(`:`\).  Sie können `NULL` für diesen Parameter übergeben, wenn der Laufwerkbuchstaben benötigen.  
+ Laufwerkbuchstabe, gefolgt von einem Doppelpunkt (`:`). Sie können `NULL` für diesen Parameter übergeben, wenn Sie den Laufwerksbuchstaben nicht benötigen.  
   
  `dir`  
- Verzeichnispfad, z nachgestellten Schrägstrich.  Schrägstrich \( `/` \), umgekehrte Schrägstriche \( `\` \) oder beide verwendet werden.  Sie können `NULL` für diesen Parameter übergeben, wenn Sie den Verzeichnispfad benötigen.  
+ Verzeichnispfad, einschl. nachstehender Schrägstrich. Führende Schrägstriche ( `/` ), umgekehrte Schrägstriche ( `\` ) oder beide können verwendet werden. Sie können `NULL` für diesen Parameter übergeben, wenn Sie den Verzeichnispfad nicht benötigen.  
   
  `fname`  
- Geringer Dateiname \(ohne Erweiterung\).  Sie können `NULL` für diesen Parameter übergeben, wenn der Dateiname benötigen.  
+ Basisdateiname (ohne Erweiterung). Sie können `NULL` für diesen Parameter übergeben, wenn Sie den Dateinamen nicht benötigen.  
   
  `ext`  
- Dateinamenerweiterung, einschließlich führenden Punkt \(`.`\).  Sie können `NULL` für diesen Parameter übergeben, wenn Sie nicht die Dateinamenerweiterung benötigen.  
+ Dateierweiterung, einschl. führender Punkt (`.`). Sie können `NULL` für diesen Parameter übergeben, wenn Sie die Dateierweiterung nicht benötigen.  
   
-## Hinweise  
- Die `_splitpath`\-Funktion wird ein Pfad in seine vier Komponenten.  `_splitpath` behandelt automatisch Mehrbyte\-Zeichenfolgen\-Argumente entsprechend und derzeit erkennt Mehrbytezeichensequenzen entsprechend der Mehrbyte\-Codepage.  `_wsplitpath` ist eine Breitzeichenversion von `_splitpath`. Die Argumente für `_wsplitpath` sind Zeichenfolgen mit Breitzeichen.  Anderenfalls verhalten sich diese Funktionen identisch.  
+## <a name="remarks"></a>Hinweise  
+ Die `_splitpath`-Funktion teilt einen Pfad in seine vier Komponenten auf. `_splitpath` behandelt Multibyte-Zeichenfolgenargumente automatisch richtig. Die Erkennung von Multibyte-Zeichenfolgen erfolgt auf der Grundlage der aktuell verwendeten Multibyte-Codeseite. `_wsplitpath` ist eine Breitzeichenversion von `_splitpath`. Die Argumente für `_wsplitpath` sind Zeichenfolgen mit Breitzeichen. Anderenfalls verhalten sich diese Funktionen identisch.  
   
- **Sicherheitshinweis** Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar.  Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen.  Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  Sicherere Versionen dieser Funktionen sind verfügbar; finden Sie unter [\_splitpath\_s, \_wsplitpath\_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
+ **Sicherheitshinweis:** Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795). Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tsplitpath`|`_splitpath`|`_splitpath`|`_wsplitpath`|  
   
- Jede Komponente des vollständigen Pfads wird in einem separaten Puffer gespeichert; die Manifestkonstanten `_MAX_DRIVE`, `_MAX_DIR`, `_MAX_FNAME` und `_MAX_EXT` \(definiert in STDLIB.H\) Geben Sie die maximale Größe für jede Dateikomponente an.  Erfassen Sie Komponenten, die größer sind, als die entsprechende Konstantenursachen\-Heapbeschädigung Manifest.  
+ Jede Komponente des vollständigen Pfads wird in einem separaten Puffer gespeichert. Die Manifestkonstanten `_MAX_DRIVE`, `_MAX_DIR`, `_MAX_FNAME` und `_MAX_EXT` (in STDLIB.H definiert) geben die maximale Größe für jede Dateikomponente an. Dateikomponenten, die größer als die entsprechenden Manifestkonstanten sind, können zur Beschädigung des Heaps führen.  
   
- Jeder Puffer muss wie die zugehörige Manifest Konstanten so groß sein, potenziellen Pufferüberlauf zu vermeiden.  
+ Jeder Puffer muss so groß wie die entsprechende Manifestkonstante sein, damit ein potenzieller Pufferüberlauf vermieden werden kann.  
   
- In der folgenden Tabelle sind die Werte der Manifestkonstanten auf.  
+ In der folgenden Tabelle werden die Werte der Manifestkonstanten aufgelistet.  
   
 |Name|Wert|  
-|----------|----------|  
-|\_MAX\_DRIVE|3|  
-|\_MAX\_DIR|256|  
-|\_MAX\_FNAME|256|  
-|\_MAX\_EXT|256|  
+|----------|-----------|  
+|_MAX_DRIVE|3|  
+|_MAX_DIR|256|  
+|_MAX_FNAME|256|  
+|_MAX_EXT|256|  
   
- Wenn der vollständige Pfad keine Komponente, \(beispielsweise ein Dateiname\) enthält, weist `_splitpath` leere Zeichenfolgen den entsprechenden Puffer zu.  
+ Wenn der vollständige Pfad keine Komponente (z.B. Dateiname) enthält, weist `_splitpath` den entsprechenden Puffern leere Zeichenfolgen zu.  
   
- Sie können `NULL` auf `_splitpath` für jeden Parameter unterschiedlich `path`  übergeben, das Sie nicht benötigen.  
+ Sie können `NULL` an `_splitpath` für alle Parameter außer `path` übergeben, die Sie nicht benötigen.  
   
- Wenn `path` den Wert `NULL` annimmt, wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen.  Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `EINVAL` zurück.  
+ Wenn `path` `NULL` ist, wird der Handler für ungültige Parameter wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `EINVAL` zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_splitpath`|\<stdlib.h\>|  
-|`_wsplitpath`|\<stdlib.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`_splitpath`|\<stdlib.h>|  
+|`_wsplitpath`|\<stdlib.h> oder \<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
- Im Beispiel für [\_makepath](../../c-runtime-library/reference/makepath-wmakepath.md).  
+## <a name="example"></a>Beispiel  
+ Siehe Beispiel für [_makepath](../../c-runtime-library/reference/makepath-wmakepath.md).  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dateibehandlung](../../c-runtime-library/file-handling.md)   
- [\_fullpath, \_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [\_makepath, \_wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [\_splitpath\_s, \_wsplitpath\_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)
