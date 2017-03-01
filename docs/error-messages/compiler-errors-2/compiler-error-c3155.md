@@ -1,35 +1,51 @@
 ---
-title: "Compilerfehler C3155 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3155"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3155"
+title: Compiler-Fehler C3155 generiert | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3155
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3155
 ms.assetid: b04a42e1-64e7-40f8-81fe-c7945348b2cf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C3155
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: 651eb1a03eed55a3d383a32f027991a4a56d4371
+ms.lasthandoff: 02/24/2017
 
-Attribute sind in einem Eigenschaften\-Indexer nicht zulässig  
+---
+# <a name="compiler-error-c3155"></a>Compiler-Fehler C3155 generiert
+In einem Eigenschaftenindexer sind keine Attribute zulässig.  
   
- Eine indizierte Eigenschaft wurde falsch deklariert.  Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von indizierten Eigenschaften](../../misc/how-to-use-indexed-properties.md).  
+Eine indizierte Eigenschaft wurde falsch deklariert. Weitere Informationen finden Sie unter [Gewusst wie: Verwenden von Eigenschaften in C++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird C3155 generiert.  
+## <a name="example"></a>Beispiel  
+Im folgende Beispiel wird C3155 generiert.  
   
 ```  
 // C3155.cpp  

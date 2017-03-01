@@ -1,78 +1,206 @@
 ---
-title: "combinable-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppl/concurrency::combinable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "combinable-Klasse"
+title: combinable-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppl/concurrency::combinable
+dev_langs:
+- C++
+helpviewer_keywords:
+- combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# combinable-Klasse
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 4ed3ce3d441566a0fb301d01123335846d86a8af
+ms.lasthandoff: 02/24/2017
 
-Das `combinable<T>`\-Objekt ist dazu gedacht, threadprivate Kopien von Daten bereitzustellen, mit denen sperrenfreie, threadlokale Unterberechnungen in parallelen Algorithmen durchgeführt werden können.  Am Ende des Parallelvorgangs können die threadprivaten Unterbrechungen in einem Endergebnis zusammengeführt werden.  Diese Klasse kann anstelle einer freigegebenen Variable verwendet werden, und sie kann zu einer Leistungsverbesserung führen, wenn andernfalls Konflikte mit dieser freigegebenen Variable entstehen würden.  
+---
+# <a name="combinable-class"></a>combinable-Klasse
+Das `combinable<T>`-Objekt ist dazu gedacht, threadprivate Kopien von Daten bereitzustellen, mit denen sperrenfreie, threadlokale Unterberechnungen in parallelen Algorithmen durchgeführt werden können. Am Ende des Parallelvorgangs können die threadprivaten Unterbrechungen in einem Endergebnis zusammengeführt werden. Diese Klasse kann anstelle einer freigegebenen Variable verwendet werden, und sie kann zu einer Leistungsverbesserung führen, wenn andernfalls Konflikte mit dieser freigegebenen Variable entstehen würden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template<typename T>
+class combinable;
 ```  
-template<  
-   typename _Ty  
->  
-class combinable;  
-```  
   
-#### Parameter  
- `_Ty`  
- Der Datentyp des endgültigen zusammengeführten Ergebnisses.  Der Typ muss über einen Kopier\- und einen Standardkonstruktor verfügen.  
+#### <a name="parameters"></a>Parameter  
+ `T`  
+ Der Datentyp des endgültigen zusammengeführten Ergebnisses. Der Typ muss es sich um einen Kopierkonstruktor und einen Standardkonstruktor verfügen.  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[combinable::combinable\-Konstruktor](../Topic/combinable::combinable%20Constructor.md)|Überladen.  Erstellt ein neues `combinable`\-Objekt.|  
-|[combinable::~combinable\-Destruktor](../Topic/combinable::~combinable%20Destructor.md)|Zerstört ein `combinable`\-Objekt.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[combinable-Konstruktor](#ctor)|Überladen. Erstellt ein neues `combinable`-Objekt.|  
+|[~ combinable-Destruktor](#dtor)|Zerstört ein `combinable`-Objekt.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[combinable::clear\-Methode](../Topic/combinable::clear%20Method.md)|Löscht alle berechneten Zwischenergebnisse aus einer vorherigen Verwendung.|  
-|[combinable::combine\-Methode](../Topic/combinable::combine%20Method.md)|Berechnet einen endgültigen Wert aus dem Satz lokaler Unterberechnungen im Thread, indem die bereitgestellte combine\-Funktion aufgerufen wird.|  
-|[combinable::combine\_each\-Methode](../Topic/combinable::combine_each%20Method.md)|Berechnet einen endgültigen Wert aus dem Satz lokaler Unterberechnungen im Thread, indem die bereitgestellte combine\-Funktion einmal für jede lokale Unterberechnung im Thread aufgerufen wird.  Das Endergebnis wird vom Funktionsobjekt akkumuliert.|  
-|[combinable::local\-Methode](../Topic/combinable::local%20Method.md)|Überladen.  Gibt einen Verweis auf die private Unterberechnung in einem Thread zurück.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[Clear-Methode](#clear)|Löscht alle berechneten Zwischenergebnisse aus einer vorherigen Verwendung.|  
+|[Combine-Methode](#combine)|Berechnet einen endgültigen Wert aus dem Satz von threadlokale unterberechnungen durch Aufrufen der Funktionselement bereitgestellten kombinieren.|  
+|[Combine_each-Methode](#combine_each)|Berechnet einen endgültigen Wert aus dem Satz von threadlokale unterberechnungen durch Aufrufen der angegebenen kombinieren Funktionselement einmal pro Thread-lokalen untergeordnete Berechnung. Das Endergebnis wird vom Funktionsobjekt akkumuliert.|  
+|[Local-Methode](#local)|Überladen. Gibt einen Verweis auf die untergeordnete threadprivate-Berechnung.|  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[combinable::operator\=\-Operator](../Topic/combinable::operator=%20Operator.md)|Weist einem `combinable`\-Objekt von einem anderen `combinable`\-Objekt zu.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[Operator =-Operator](#operator_eq)|Weist eine `combinable` -Objekt von einem anderen `combinable` Objekt.|  
   
-## Hinweise  
- Weitere Informationen finden Sie unter [Parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md).  
+## <a name="remarks"></a>Hinweise  
+ Weitere Informationen finden Sie unter [parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `combinable`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** ppl.h  
   
  **Namespace:** Parallelität  
   
-## Siehe auch  
- [concurrency\-Namespace](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namecleara-clear"></a><a name="clear"></a>Deaktivieren 
+
+ Löscht alle berechneten Zwischenergebnisse aus einer vorherigen Verwendung.  
+  
+```
+void clear();
+```  
+  
+##  <a name="a-namectora-combinable"></a><a name="ctor"></a>combinable 
+
+ Erstellt ein neues `combinable`-Objekt.  
+  
+```
+combinable();
+
+template <typename _Function>
+explicit combinable(_Function _FnInitialize);
+
+combinable(const combinable& _Copy);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_Function`  
+ Der Typ des Objekts Funktionselement Initialisierung.  
+  
+ `_FnInitialize`  
+ Eine Funktion, die aufgerufen wird, um jeden neuen privaten-Wert des Typs initialisieren `T`. Es muss einen Funktionsaufrufoperator mit der Signatur unterstützen `T ()`.  
+  
+ `_Copy`  
+ Eine vorhandene `combinable` Objekt, das in dieses Objekt kopiert werden.  
+  
+### <a name="remarks"></a>Hinweise  
+ Der erste Konstruktor initialisiert neue Elemente mit dem Standardkonstruktor für den Typ `T`.  
+  
+ Der zweite Konstruktor initialisiert neue Elemente als angegebene Funktionselement für die Initialisierung mithilfe der `_FnInitialize` Parameter.  
+  
+ Der dritte Konstruktor ist der Kopierkonstruktor.  
+  
+##  <a name="a-namedtora-combinable"></a><a name="dtor"></a>~ combinable 
+
+ Zerstört ein `combinable`-Objekt.  
+  
+```
+~combinable();
+```  
+  
+##  <a name="a-namecombinea-combine"></a><a name="combine"></a>Kombinieren 
+
+ Berechnet einen endgültigen Wert aus dem Satz von threadlokale unterberechnungen durch Aufrufen der Funktionselement bereitgestellten kombinieren.  
+  
+```
+template<typename _Function>
+T combine(_Function _FnCombine) const;
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_Function`  
+ Der Typ des Funktionsobjekts, das aufgerufen wird, um zwei threadlokale unterberechnungen kombinieren.  
+  
+ `_FnCombine`  
+ Das Funktionselement ist, das verwendet wird, um die unterberechnungen zu kombinieren. Die Signatur ist `T (T, T)` oder `T (const T&, const T&)`, und sie muss assoziativ und kommutativ sein.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Das endgültige Ergebnis der Kombination aller privaten unterberechnungen.  
+  
+##  <a name="a-namecombineeacha-combineeach"></a><a name="combine_each"></a>combine_each 
+
+ Berechnet einen endgültigen Wert aus dem Satz von threadlokale unterberechnungen durch Aufrufen der angegebenen kombinieren Funktionselement einmal pro Thread-lokalen untergeordnete Berechnung. Das Endergebnis wird vom Funktionsobjekt akkumuliert.  
+  
+```
+template<typename _Function>
+void combine_each(_Function _FnCombine) const;
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_Function`  
+ Der Typ des Funktionsobjekts, das aufgerufen wird, um eine einzelne untergeordnete Thread-Local-Berechnung zu kombinieren.  
+  
+ `_FnCombine`  
+ Das Funktionselement, das verwendet wird, um eine untergeordnete Berechnung zu kombinieren. Die Signatur ist `void (T)` oder `void (const T&)`, und Sie muss assoziativ und kommutativ sein.  
+  
+##  <a name="a-namelocala-local"></a><a name="local"></a>lokale 
+
+ Gibt einen Verweis auf die untergeordnete threadprivate-Berechnung.  
+  
+```
+T& local();
+
+T& local(bool& _Exists);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_Exists`  
+ Ein Verweis auf einen booleschen Wert. Der boolesche Wert, der durch dieses Argument verwiesen wird festgelegt werden `true` Wenn untergeordnete Berechnung bereits auf diesem Thread vorhanden war, und legen Sie auf `false` war dies die erste untergeordnete Berechnung in diesem Thread.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Verweis auf die untergeordnete threadprivate-Berechnung.  
+  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>Operator = 
+
+ Weist eine `combinable` -Objekt von einem anderen `combinable` Objekt.  
+  
+```
+combinable& operator= (const combinable& _Copy);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_Copy`  
+ Eine vorhandene `combinable` Objekt, das in dieses Objekt kopiert werden.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Verweis auf das `combinable`-Objekt.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency-Namespace](concurrency-namespace.md)
+

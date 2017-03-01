@@ -1,38 +1,54 @@
 ---
-title: "Compilerfehler C2026 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2026"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2026"
+title: Compiler-Fehler C2026 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2026
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2026
 ms.assetid: 8e64b6e1-b967-479b-be97-d12dc4a8e389
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2026
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
+ms.openlocfilehash: c429f81c64b7710b7edc2b8540d98e8c790e4062
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="compiler-error-c2026"></a>Compiler-Fehler C2026
 Zeichenfolge zu lang, Zeichen am Ende wurden entfernt  
   
- Die Zeichenfolge überschreitet die maximale Länge von 16380 Einzelbytezeichen.  
+ Die Zeichenfolge ist länger als der maximal 16380 Einzelbytezeichen.  
   
- Vor der Verkettung nebeneinander liegender Zeichenfolgen darf eine Zeichenfolge maximal 16380 Einzelbytezeichen lang sein.  
+ Vor angrenzende Zeichenfolgen verkettet werden darf keine Zeichenfolge maximal 16380 Einzelbyte-Zeichen lang sein.  
   
- Dieser Fehler wird außerdem von einer Unicode\-Zeichenfolge ausgelöst, die ungefähr halb so lang ist.  
+ Eine Unicode-Zeichenfolge von ungefähr halb so lang würde auch diese Fehler generiert.  
   
- Durch eine wie folgt definierte Zeichenfolge wird der Fehler C2026 ausgegeben:  
+ Wenn Sie eine Zeichenfolge, die wie folgt definiert haben, wird es C2026:  
   
 ```  
 char sz[] =  
@@ -42,7 +58,7 @@ long string here\
 ";  
 ```  
   
- Die Zeichenfolge kann folgendermaßen unterteilt werden:  
+ Sie könnten es wie folgt aufteilen:  
   
 ```  
 char sz[] =  
@@ -52,4 +68,4 @@ imagine a really, really "
 ";  
 ```  
   
- Sehr umfangreiche Zeichenfolgenliterale \(32 KB oder mehr\) können in einer benutzerdefinierten Ressource oder externen Datei gespeichert werden.  Weitere Informationen finden Sie unter [Erstellen einer neuen benutzerdefinierten Ressource oder Datenressource](../../mfc/creating-a-new-custom-or-data-resource.md).
+ Möglicherweise möchten Sie zum Speichern von sehr umfangreiche Zeichenfolgenliterale (32 KB oder mehr) aus einer benutzerdefinierten Ressource oder eine externe Datei. Finden Sie unter [Erstellen einer neuen benutzerdefinierten Ressource oder Datenressource](../../windows/creating-a-new-custom-or-data-resource.md) Weitere Informationen.

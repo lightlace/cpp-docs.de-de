@@ -1,29 +1,45 @@
 ---
-title: "Compilerfehler C2873 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2873"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2873"
+title: Compilerfehler C2873 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2873
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2873
 ms.assetid: 7a10036b-400e-4364-bd2f-dcd7370c5e28
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerfehler C2873
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: 6c4cb41ad915054bb5f597b8b0eee3bf57d876c9
+ms.lasthandoff: 02/24/2017
 
-'Symbol': Das Symbol kann nicht in einer using\-Deklaration verwendet werden  
+---
+# <a name="compiler-error-c2873"></a>Compilerfehler C2873
+'Symbol': Symbol kann nicht in einer using-Deklaration verwendet werden  
   
- In einer `using`\-Direktive fehlt ein [namespace](../../misc/namespace-declaration.md)\-Schlüsselwort.  Dadurch wird der Code vom Compiler fälschlicherweise als [using\-Deklaration](../../cpp/using-declaration.md) und nicht als [using\-Direktive](../../misc/using-directive-cpp.md) interpretiert.
+ Ein `using` -Direktive fehlt ein [Namespace](../../cpp/namespaces-cpp.md) Schlüsselwort. Dies bewirkt, dass den Compiler den Code als fälschlicherweise eine [using-Deklaration](../../cpp/using-declaration.md) anstelle eines [using-Direktive](../../cpp/namespaces-cpp.md#using_directives).

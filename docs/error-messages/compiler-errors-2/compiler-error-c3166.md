@@ -1,63 +1,48 @@
 ---
-title: "Compilerfehler C3166 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3166"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3166"
+title: Compiler-Fehler C3166 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3166
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3166
 ms.assetid: ec3e330d-c15d-4158-8268-09101486c566
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compilerfehler C3166
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 13ff799b21825c24ae98cfd416e7e2021b6bd2bb
+ms.lasthandoff: 02/24/2017
 
-'Zeiger' : Ein Zeiger auf einen internen \_\_gc\-Zeiger kann nicht als Member von 'Typ' deklariert werden  
+---
+# <a name="compiler-error-c3166"></a>Compiler-Fehler C3166
+"Zeiger": einen Zeiger auf einen internen __gc-Zeiger kann nicht als Member von 'Typ' deklariert  
   
- Der Compiler hat eine ungültige Zeigerdeklaration gefunden \(ein [\_\_nogc](../../misc/nogc.md)\-Pointer auf einen [\_\_gc](../../misc/gc.md)\-Pointer.\).  Diese Syntax wird in zukünftigen Versionen u. U. unterstützt.  
+Der Compiler hat eine ungültige Zeigerdeklaration gefunden (ein `__nogc` Zeiger auf eine `__gc` Zeiger.). 
   
- C3166 ist nur mit **\/clr:oldSyntax** erreichbar.  
-  
- Im folgenden Beispiel wird C3166 generiert:  
-  
-```  
-// C3166.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System;  
-  
-__gc struct G {  
-   int __gc* __nogc* p;   // C3166  
-};  
-  
-public __gc class H {  
-public:  
-   Int32 __gc* __nogc* p;   // C3166  
-};  
-  
-public __value struct I {  
-   int __gc* __nogc* p;   // C3166  
-};  
-  
-public __value class J {  
-public:  
-   int __gc* __nogc* p;   // C3166  
-};  
-  
-int main() {  
-   G* pG = new G;  
-   H* pH = new H;  
-}  
-```
+C3166 ist nur mit der veralteten-Compileroption erreichbar **/CLR: oldSyntax**.  
+

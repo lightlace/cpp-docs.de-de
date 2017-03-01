@@ -1,36 +1,54 @@
 ---
-title: "Compilerfehler C3767 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3767"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3767"
+title: Compiler-Fehler C3767 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3767
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Compilerfehler C3767
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: b0cce511d895aae218c1b2ab04d129173b049983
+ms.lasthandoff: 02/24/2017
 
-'Funktion': Auf mögliche Funktion\(en\) kann nicht zugegriffen werden  
+---
+# <a name="compiler-error-c3767"></a>Compilerfehler C3767
+'Funktion': Auf mögliche Funktion(en) kann nicht zugegriffen werden  
   
- Bei einer in einer Klasse definierten Friend\-Funktion wird nicht davon ausgegangen, dass sie so behandelt wird, als wäre sie im globalen Gültigkeitsbereich des Namespaces definiert und deklariert worden.  Sie kann jedoch mittels einer argumentbezogenen Suche gefunden werden.  
+ Bei einer in einer Klasse definierten Friend-Funktion wird nicht davon ausgegangen, dass sie so behandelt wird, als wäre sie im globalen Gültigkeitsbereich des Namespaces definiert und deklariert worden. Sie kann jedoch mittels einer argumentbezogenen Suche gefunden werden.  
   
- C3767 kann auch von einer wichtigen Änderung verursacht worden sein: Systemeigene Typen sind nun in einer **\/clr**\-Kompilierung standardmäßig privat. Weitere Informationen finden Sie unter [Typsichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).  
+ C3767 kann auch von einer wichtigen Änderung verursacht worden sein: systemeigene Typen sind jetzt standardmäßig privat ein **/CLR** -Kompilierung finden Sie unter [geben Sichtbarkeit](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) Weitere Informationen.  
   
- Im folgenden Beispiel wird C3767 generiert:  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3767 generiert:  
   
 ```  
 // C3767a.cpp  
@@ -61,38 +79,7 @@ int main() {
 };  
 ```  
   
- Im folgenden Beispiel wird C3767 generiert:  
-  
-```  
-// C3767b.cpp  
-// compile with: /clr:oldSyntax  
-using namespace System;  
-__delegate void TestDel();  
-  
-public __gc class MyClass {  
-public:  
-   static __event TestDel * MyClass_Event;  
-};  
-  
-public __gc class MyClass2 : public MyClass {  
-public:  
-   void Test() {  
-      MyClass* patient = new MyClass;  
-      patient->MyClass_Event();  
-    }  
-};  
-  
-int main() {  
-   MyClass* x = new MyClass;  
-   x->MyClass_Event();   // C3767  
-  
-   // OK  
-   MyClass2 * y = new MyClass2();  
-   y->Test();  
-};  
-```  
-  
- Im folgenden Beispiel wird C3767 generiert:  
+ Im folgende Beispiel wird C3767 generiert:  
   
 ```  
 // C3767c.cpp  
@@ -114,31 +101,9 @@ ref class Der : public Base {
 };  
 ```  
   
- Im folgenden Beispiel wird C3767 generiert:  
+ In Visual C++ .NET 2002 wurde die Compilersuche nach Symbolen wie geändert. In einigen Fällen suchte der Compiler automatisch nach Symbolen in einem bestimmten Namespace. Nun wird die argumentbezogene Suche verwendet.  
   
-```  
-// C3767d.cpp  
-// compile with: /clr:oldSyntax /c  
-  
-__gc class Base {  
-protected:  
-   void Method() {  
-      System::Console::WriteLine("protected");  
-   }  
-};  
-  
-__gc class Der : public Base {  
-   void Method() {  
-      ((Base*)this)->Method();   // C3767  
-      // try the following line instead  
-      // Base::Method();  
-   }  
-};  
-```  
-  
- In Visual C\+\+ .NET 2002 wurde die Compilersuche nach Symbolen geändert.  In einigen Fällen suchte der Compiler automatisch nach Symbolen in einem bestimmten Namespace.  Mittlerweile wird die argumentbezogene Suche verwendet.  
-  
- Im folgenden Beispiel wird C3767 generiert:  
+ Im folgende Beispiel wird C3767 generiert:  
   
 ```  
 // C3767e.cpp  
@@ -157,7 +122,7 @@ int main() {
 }  
 ```  
   
- Wenn Code sowohl in Visual C\+\+ .NET 2003 als auch in Visual C\+\+ .NET 2002 gültig sein soll, sollten Sie die Friend\-Funktion im Klassenbereich deklarieren und im Namespacebereich definieren:  
+ Für Code, der in Visual C++ .NET 2003 und Visual C++ .NET 2002 gültig ist, die Friend-Funktion im Klassenbereich deklarieren und im Namespacebereich definieren:  
   
 ```  
 // C3767f.cpp  

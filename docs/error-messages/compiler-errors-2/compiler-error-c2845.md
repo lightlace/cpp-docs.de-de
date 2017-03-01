@@ -1,51 +1,46 @@
 ---
-title: "Compilerfehler C2845 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2845"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2845"
+title: Compilerfehler C2845 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2845
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2845
 ms.assetid: 31b28ee9-978f-403b-94d8-dbaacd24cce0
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compilerfehler C2845
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: edb941c3c8f3481fc31ab6af6fec446c7722a74f
+ms.lasthandoff: 02/24/2017
 
-'Operator': Zeigerarithmetik ist für diesen Typ nicht zulässig  
+---
+# <a name="compiler-error-c2845"></a>Compilerfehler C2845
+'Operator': Zeigerarithmetik ist für diesen Typ nicht zulässig.  
   
- Der Zeiger kann nicht auf eine verwaltete Klasse erhöht werden.  
-  
- **Managed Extensions for C\+\+**  
-  
- Der Zeiger kann nicht auf eine [\_\_gc](../../misc/gc.md)\-Klasse erhöht werden.  Zeichenfolgenoperatoren sind außerdem nur mit **\/clr** gültig \(nicht mit **\/clr:oldSyntax**\).  
-  
- Im folgenden Beispiel wird C2845 generiert:  
-  
-```  
-// C2845b.cpp  
-// compile with: /clr:oldSyntax  
-using namespace System;  
-__gc class X {};  
-  
-int main() {  
-   X *pX = new X;  
-   pX++;   // C2845  
-  
-   String * a = new String("abc");  
-   String * b = new String("def");  
-   Console::WriteLine(a + b);   // C2845 not with /clr:oldSyntax  
-}  
-```
+ Den Zeiger auf eine verwaltete Klasse kann nicht erhöht werden.  
+

@@ -1,39 +1,55 @@
 ---
-title: "Compilerfehler C3104 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3104"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3104"
+title: Compilerfehler C3104 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3104
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Compilerfehler C3104
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.lasthandoff: 02/24/2017
 
-Ungültiges Attributargument  
+---
+# <a name="compiler-error-c3104"></a>Compilerfehler C3104
+Unzulässiges Attributargument.  
   
- Für ein Attribut wurde ein ungültiges Argument angegeben.  
+ Sie haben ein ungültiges Argument für ein Attribut angegeben.  
   
- Weitere Informationen finden Sie unter [Attribute Parameter Types](../../windows/attribute-parameter-types-cpp-component-extensions.md).  
+ Finden Sie unter [Attributparametertypen](../../windows/attribute-parameter-types-cpp-component-extensions.md) Weitere Informationen.  
   
- Dieser Fehler kann infolge einer Verbesserung der Compilerkonformität für Visual C\+\+ 2005 ausgegeben werden: Wenn verwaltete Arrays an benutzerdefinierte Attribute übergeben werden, wird der Arraytyp nicht mehr aus der Aggregatinitialisierungsliste abgeleitet.  Es ist nun erforderlich, sowohl den Arraytyp als auch die Initialisiererliste anzugeben.  
+ Dieser Fehler kann aufgrund der Compilerkonformität, die für Visual C++ 2005 generiert werden: Wenn verwaltete Arrays an benutzerdefinierte Attribute übergeben werden, wird der Typ des Arrays nicht mehr aus der abgeleitet. Es ist nun erforderlich, den Typ des Arrays als auch die Initialisiererliste anzugeben.  
   
-## Beispiel  
- Im folgenden Beispiel wird C3104 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3104 generiert.  
   
 ```  
 // C3104a.cpp  
@@ -52,8 +68,8 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird C3104 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3104 generiert.  
   
 ```  
 // C3104b.cpp  
@@ -79,27 +95,4 @@ ref class B {};
 [A(0)]  
 ref class B {};  
 ```  
-  
-## Beispiel  
- Im folgenden Beispiel wird C3104 generiert.  
-  
-```  
-// C3104c.cpp  
-// compile with: /clr:oldSyntax /c  
-using namespace System;  
-  
-[ attribute(Class) ]  
-public __gc class AnotherAttr {  
-public:  
-   AnotherAttr(Object* arr __gc[]) : var0(arr) {}  
-   Object* var1 __gc[];  
-   Object* var0 __gc[];  
-};  
-  
-[ AnotherAttr( { __box(3.14159), S"pi" }, var1 = { S"a", S"b" } ) ]   // C3104  
-public __gc class Class1 {};  
-  
-// OK  
-[ AnotherAttr( new Object * __gc[] {__box(3.14159), S"pi" }, var1 = new Object * __gc[] { S"a", S"b" } ) ]  
-public __gc class Class2 {};  
-```
+

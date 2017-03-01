@@ -1,35 +1,51 @@
 ---
-title: "Compilerfehler C3633 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3633"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3633"
+title: Compiler-Fehler C3633 generiert | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3633
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3633
 ms.assetid: 7d65babf-2191-4d67-a69f-f5c4c2ddf946
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Compilerfehler C3633
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 76b98ae31e8d8416360415fd5989975533d6fb66
+ms.lasthandoff: 02/24/2017
 
-'Member' kann nicht als Member von verwaltetem 'Typ' definiert werden  
+---
+# <a name="compiler-error-c3633"></a>Compilerfehler C3633
+'Member' kann nicht als Member des verwalteten 'Typs' definiert werden.  
   
- CLR\-Verweisklassendatenmember können nur vom Typ POD C\+\+ sein.  In einem CLR\-Typ kann nur ein systemeigener POD\-Typ instanziiert werden.  Zum Beispiel kann ein POD\-Typ keinen Kopierkonstruktor oder einen Zuweisungsoperator enthalten.  
+CLR-Verweisklassendatenmember der Klasse darf nicht von einem nicht - POD C++-Typ sein.  Sie können nur einen systemeigenen POD-Typ in einen CLR-Typ instanziieren.  Ein POD-Typ kann nicht z. B. ein Kopierkonstruktor oder einen Zuweisungsoperator enthalten.  
   
-## Beispiel  
- Im folgenden Beispiel wird C3633 generiert.  
+## <a name="example"></a>Beispiel  
+Im folgende Beispiel wird C3633 generiert.  
   
 ```  
 // C3633.cpp  
@@ -50,24 +66,4 @@ public:
     ~B() { delete a2; }  
 };  
 ```  
-  
-## Beispiel  
- Im folgenden Beispiel wird C3633 generiert.  
-  
-```  
-// C3633_b.cpp  
-// compile with: /clr:oldSyntax /c  
-class A1 {  
-public:  
-   A1() { II = 0; }  
-   int II;  
-};  
-  
-__gc class B {  
-public:  
-   A1 a1;   // C3633  
-   A1 * a2;   // OK  
-   B() : a2( new A1 ) {}  
-    ~B() { delete a2; }  
-};  
-```
+

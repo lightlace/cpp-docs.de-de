@@ -1,34 +1,50 @@
 ---
-title: "Compilerfehler C3255 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3255"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3255"
+title: Compilerfehler C3255 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3255
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3255
 ms.assetid: 877ffca2-fd92-44b6-9060-6091b928b1c1
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Compilerfehler C3255
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 2739be65060cabd5e40fb0156c44aca23f0b7dcc
+ms.lasthandoff: 02/24/2017
 
-'Werttyp': Werttypobjekt kann nicht dynamisch auf systemeigenem Heap zugewiesen werden  
+---
+# <a name="compiler-error-c3255"></a>Compilerfehler C3255
+'Werttyp': Werttypobjekt auf systemeigenen Heap kann nicht dynamisch zugewiesen werden  
   
- Instanzen eines Werttyps \(siehe [Classes and Structs](../../windows/classes-and-structs-cpp-component-extensions.md)\), die verwaltete Member enthalten, können zwar auf dem Stapel, nicht aber auf dem Heap erstellt werden.  
+ Instanzen eines Werttyps (finden Sie unter [Klassen und Strukturen](../../windows/classes-and-structs-cpp-component-extensions.md)), die verwaltete Member enthalten, auf dem Stapel aber nicht auf dem Heap erstellt werden.  
   
- Im folgenden Beispiel wird C3255 generiert:  
+ Im folgende Beispiel wird C3255 generiert:  
   
 ```  
 // C3255.cpp  
@@ -48,27 +64,4 @@ int main() {
    V v2;  
 }  
 ```  
-  
- **Managed Extensions for C\+\+**  
-  
- Im folgenden Beispiel wird C3255 generiert:  
-  
-```  
-// C3255b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System;  
-  
-__value struct V {  
-   Object* o;  
-};  
-  
-__value struct V2 {  
-   int i;  
-};  
-  
-int main() {  
-   V* pv = __nogc new V;   // C3255  
-   V2* pv2 = __nogc new V2;   // OK  
-}  
-```
+
