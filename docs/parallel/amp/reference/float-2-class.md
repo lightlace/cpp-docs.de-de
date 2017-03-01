@@ -1,129 +1,215 @@
 ---
-title: "float_2-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::float_2::yx"
-  - "amp_short_vectors/Concurrency::graphics::float_2::operator-="
-  - "amp_short_vectors/Concurrency::graphics::float_2::operator++"
-  - "amp_short_vectors/Concurrency::graphics::float_2::operator-"
-  - "amp_short_vectors/Concurrency::graphics::float_2::r"
-  - "amp_short_vectors/Concurrency::graphics::float_2::get_yx"
-  - "amp_short_vectors/Concurrency::graphics::float_2::get_xy"
-  - "amp_short_vectors/Concurrency::graphics::float_2::operator/="
-  - "amp_short_vectors/Concurrency::graphics::float_2::set_yx"
-  - "amp_short_vectors/Concurrency::graphics::float_2::x"
-  - "amp_short_vectors/Concurrency::graphics::float_2::get_y"
-  - "amp_short_vectors/Concurrency::graphics::float_2::operator+="
-  - "amp_short_vectors/Concurrency::graphics::float_2::gr"
-  - "amp_short_vectors/Concurrency::graphics::float_2::operator="
-  - "amp_short_vectors/Concurrency::graphics::float_2::set_x"
-  - "amp_short_vectors/Concurrency::graphics::float_2::operator--"
-  - "amp_short_vectors/Concurrency::graphics::float_2::get_x"
-  - "amp_short_vectors/Concurrency::graphics::float_2::operator*="
-  - "amp_short_vectors/Concurrency::graphics::float_2::rg"
-  - "amp_short_vectors/Concurrency::graphics::float_2::set_xy"
-  - "amp_short_vectors/Concurrency::graphics::float_2::xy"
-  - "amp_short_vectors/Concurrency::graphics::float_2"
-  - "amp_short_vectors/Concurrency::graphics::float_2::set_y"
-  - "amp_short_vectors/Concurrency::graphics::float_2::y"
-  - "amp_short_vectors/Concurrency::graphics::float_2::g"
-dev_langs: 
-  - "C++"
+title: float_2-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::float_2::yx
+- amp_short_vectors/Concurrency::graphics::float_2::operator-=
+- amp_short_vectors/Concurrency::graphics::float_2::operator++
+- amp_short_vectors/Concurrency::graphics::float_2::operator-
+- amp_short_vectors/Concurrency::graphics::float_2::r
+- amp_short_vectors/Concurrency::graphics::float_2::get_yx
+- amp_short_vectors/Concurrency::graphics::float_2::get_xy
+- amp_short_vectors/Concurrency::graphics::float_2::operator/=
+- amp_short_vectors/Concurrency::graphics::float_2::set_yx
+- amp_short_vectors/Concurrency::graphics::float_2::x
+- amp_short_vectors/Concurrency::graphics::float_2::get_y
+- amp_short_vectors/Concurrency::graphics::float_2::operator+=
+- amp_short_vectors/Concurrency::graphics::float_2::gr
+- amp_short_vectors/Concurrency::graphics::float_2::operator=
+- amp_short_vectors/Concurrency::graphics::float_2::set_x
+- amp_short_vectors/Concurrency::graphics::float_2::operator--
+- amp_short_vectors/Concurrency::graphics::float_2::get_x
+- amp_short_vectors/Concurrency::graphics::float_2::operator*=
+- amp_short_vectors/Concurrency::graphics::float_2::rg
+- amp_short_vectors/Concurrency::graphics::float_2::set_xy
+- amp_short_vectors/Concurrency::graphics::float_2::xy
+- amp_short_vectors/Concurrency::graphics::float_2
+- amp_short_vectors/Concurrency::graphics::float_2::set_y
+- amp_short_vectors/Concurrency::graphics::float_2::y
+- amp_short_vectors/Concurrency::graphics::float_2::g
+dev_langs:
+- C++
 ms.assetid: b3ebd48e-f8c8-4f00-a640-357f702f0cae
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# float_2-Klasse
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 05707bd43a8f9b89a93c0da0011c46d67361fc84
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="float2-class"></a>float_2-Klasse
 Stellt einen kurzen Vektor aus zwei Gleitkommazahlen dar.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class float_2;  
 ```  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
+|Name|Beschreibung|  
+|----------|-----------------|  
 |`value_type`||  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[float\_2::float\_2\-Konstruktor](../Topic/float_2::float_2%20Constructor.md)|Überladen.  Standardkonstruktor, initialisiert alle Elemente mit 0.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[float_2-Konstruktor](#ctor)|Überladen. Standardkonstruktor, initialisiert alle Elemente mit 0.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|float\_2::get\_x\-Methode||  
-|float\_2::get\_xy\-Methode||  
-|float\_2::get\_y\-Methode||  
-|float\_2::get\_yx\-Methode||  
-|float\_2::ref\_g\-Methode||  
-|float\_2::ref\_r\-Methode||  
-|float\_2::ref\_x\-Methode||  
-|float\_2::ref\_y\-Methode||  
-|float\_2::set\_x\-Methode||  
-|float\_2::set\_xy\-Methode||  
-|float\_2::set\_y\-Methode||  
-|float\_2::set\_yx\-Methode||  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|float_2::get_x-Methode||  
+|float_2::get_xy-Methode||  
+|float_2::get_y-Methode||  
+|float_2::get_yx-Methode||  
+|float_2::ref_g-Methode||  
+|float_2::ref_r-Methode||  
+|float_2::ref_x-Methode||  
+|float_2::ref_y-Methode||  
+|float_2::set_x-Methode||  
+|float_2::set_xy-Methode||  
+|float_2::set_y-Methode||  
+|float_2::set_yx-Methode||  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|float\_2::operator\-–Operator||  
-|float\_2::operator\-\-–Operator||  
-|float\_2::operator\*\=\-Operator||  
-|float\_2::operator\/\=\-Operator||  
-|float\_2::operator\+\+\-Operator||  
-|float\_2::operator\+\=\-Operator||  
-|float\_2::operator\=\-Operator||  
-|float\_2::operator\-\=\-Operator||  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|float_2::operator-–Operator||  
+|float_2::operator--–Operator||  
+|float_2::operator*=-Operator||  
+|float_2::operator/=-Operator||  
+|float_2::operator++-Operator||  
+|float_2::operator+=-Operator||  
+|float_2::operator=-Operator||  
+|float_2::operator-=-Operator||  
   
-### Öffentliche Konstanten  
+### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[float\_2::size\-Konstante](../Topic/float_2::size%20Constant.md)||  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[Size-Konstante](#float_2__size)||  
   
-### Öffentliche Datenmember  
+### <a name="public-data-members"></a>Öffentliche Datenmember  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|float\_2::g\-Datenmember||  
-|float\_2::gr\-Datenmember||  
-|float\_2::r\-Datenmember||  
-|float\_2::rg\-Datenmember||  
-|float\_2::x\-Datenmember||  
-|float\_2::xy\-Datenmember||  
-|float\_2::y\-Datenmember||  
-|float\_2::yx\-Datenmember||  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|float_2::g-Datenmember||  
+|float_2::gr-Datenmember||  
+|float_2::r-Datenmember||  
+|float_2::rg-Datenmember||  
+|float_2::x-Datenmember||  
+|float_2::xy-Datenmember||  
+|float_2::y-Datenmember||  
+|float_2::yx-Datenmember||  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `float_2`  
   
-## Anforderungen  
- **Header:** amp\_short\_vectors.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** amp_short_vectors.h  
   
- **Namespace:** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Siehe auch  
- [Concurrency::graphics\-Namespace](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora-float2"></a><a name="ctor"></a>float_2 
+
+ Standardkonstruktor, initialisiert alle Elemente mit 0.  
+  
+```  
+float_2() restrict(amp,
+    cpu);
+
+ 
+float_2(
+    float _V0,  
+    float _V1) restrict(amp,
+    cpu);
+
+ 
+float_2(
+    float _V) restrict(amp,
+    cpu);
+
+ 
+float_2(
+    const float_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline float_2(
+    const uint_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline float_2(
+    const int_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline float_2(
+    const unorm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline float_2(
+    const norm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline float_2(
+    const double_2& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_V0`  
+ Der Wert 0-Element zu initialisieren.  
+  
+ `_V1`  
+ Der Wert 1 Element initialisiert werden.  
+  
+ `_V`  
+ Der Wert für die Initialisierung.  
+  
+ `_Other`  
+ Das Objekt, das zum Initialisieren verwendet.  
+  
+##  <a name="a-namefloat2sizea-size"></a><a name="float_2__size"></a>Größe 
+
+```  
+static const int size = 2;  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency:: Graphics-Namespace](concurrency-graphics-namespace.md)
+

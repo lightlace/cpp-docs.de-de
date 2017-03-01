@@ -1,31 +1,47 @@
 ---
-title: "CRgn-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CRgn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HRGN"
-  - "CRgn-Klasse"
-  - "MFC-Regionen"
+title: CRgn-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CRgn
+dev_langs:
+- C++
+helpviewer_keywords:
+- HRGN
+- CRgn class
+- regions, MFC
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# CRgn-Klasse
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 9ec2634a2495d301e09b483d60db8838be0b14ab
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="crgn-class"></a>CRgn-Klasse
 Kapselt einen Bereich der Windows GDI (Graphics Device Interface).  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,37 +56,37 @@ class CRgn : public CGdiObject
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CRgn::CRgn](#crgn__crgn)|Erstellt ein `CRgn`-Objekt.|  
+|[CRgn::CRgn](#crgn)|Erstellt ein `CRgn`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CRgn::CombineRgn](#crgn__combinergn)|Legt ein `CRgn` Objekt, sodass sie die Vereinigung von zwei angegebenen entspricht `CRgn` Objekte.|  
-|[CRgn::CopyRgn](#crgn__copyrgn)|Legt ein `CRgn` Objekt, sodass es sich um eine Kopie einer angegebenen ist `CRgn` Objekt.|  
-|[CRgn::CreateEllipticRgn](#crgn__createellipticrgn)|Initialisiert ein `CRgn` Objekt mit einem elliptischen Bereich.|  
-|[CRgn::CreateEllipticRgnIndirect](#crgn__createellipticrgnindirect)|Initialisiert ein `CRgn` Objekt mit einem elliptischen Bereich definiert eine [RECT](../../mfc/reference/rect-structure1.md) Struktur.|  
-|[CRgn::CreateFromData](#crgn__createfromdata)|Erstellt einen Bereich aus der angegebenen Region und die Transformation Daten.|  
-|[CRgn::CreateFromPath](#crgn__createfrompath)|Erstellt einen Bereich aus dem Pfad, der den angegebenen Gerätekontext ausgewählt ist.|  
-|[CRgn::CreatePolygonRgn](#crgn__createpolygonrgn)|Initialisiert ein `CRgn` Objekt mit einem polygonalen Bereich. Das System schließt das Polygon automatisch, ggf. durch Zeichnen einer Linie zwischen dem letzten Scheitelpunkt zum ersten.|  
-|[CRgn::CreatePolyPolygonRgn](#crgn__createpolypolygonrgn)|Initialisiert ein `CRgn` Objekt mit einem Bereich mit einer Reihe von geschlossenen Polygonen. Die Polygone können sein, oder möglicherweise überlappen.|  
-|[CRgn::CreateRectRgn](#crgn__createrectrgn)|Initialisiert ein `CRgn` -Objekt mit einem rechteckigen Bereich.|  
-|[CRgn::CreateRectRgnIndirect](#crgn__createrectrgnindirect)|Initialisiert ein `CRgn` -Objekt mit einem rechteckigen Bereichs, durch eine [RECT](../../mfc/reference/rect-structure1.md) Struktur.|  
-|[CRgn::CreateRoundRectRgn](#crgn__createroundrectrgn)|Initialisiert ein `CRgn` -Objekt mit einem rechteckigen Bereich mit abgerundeten Ecken.|  
-|[CRgn::EqualRgn](#crgn__equalrgn)|Überprüft zwei `CRgn` Objekte bestimmen, ob diese gleich sind.|  
-|[CRgn::FromHandle](#crgn__fromhandle)|Gibt einen Zeiger auf ein `CRgn` Objekt, wenn ein Handle auf einen Windows-Bereich angegeben.|  
-|[CRgn::GetRegionData](#crgn__getregiondata)|Füllt den angegebenen Puffer mit Daten, die den angegebenen Bereich beschreibt.|  
-|[CRgn::GetRgnBox](#crgn__getrgnbox)|Ruft die Koordinaten des umschließenden Rechtecks von einem `CRgn` Objekt.|  
-|[CRgn::OffsetRgn](#crgn__offsetrgn)|Verschiebt ein `CRgn` -Objekt mit den angegebenen Offsets.|  
-|[CRgn::PtInRegion](#crgn__ptinregion)|Bestimmt, ob es sich bei ein angegebenen Punkt in der Region befindet.|  
-|[CRgn::RectInRegion](#crgn__rectinregion)|Bestimmt, ob ein Teil einem angegebenen Rechteck innerhalb der Grenzen des Bereichs ist.|  
-|[CRgn::SetRectRgn](#crgn__setrectrgn)|Legt die `CRgn` Objekt in den angegebenen rechteckige Bereich.|  
+|[CRgn::CombineRgn](#combinergn)|Legt eine `CRgn` Objekt, sodass sie die Vereinigung von zwei angegebenen entspricht `CRgn` Objekte.|  
+|[CRgn::CopyRgn](#copyrgn)|Legt eine `CRgn` Objekt, sodass es sich um eine Kopie einer angegebenen ist `CRgn` Objekt.|  
+|[CRgn::CreateEllipticRgn](#createellipticrgn)|Initialisiert ein `CRgn` Objekt mit einem elliptischen Bereich.|  
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialisiert eine `CRgn` Objekt mit einem elliptischen Bereich definiert ein [RECT](../../mfc/reference/rect-structure1.md) Struktur.|  
+|[CRgn::CreateFromData](#createfromdata)|Erstellt einen Bereich aus der angegebenen Region und die Transformation Daten.|  
+|[CRgn::CreateFromPath](#createfrompath)|Erstellt einen Bereich aus dem Pfad, der den angegebenen Gerätekontext ausgewählt ist.|  
+|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initialisiert ein `CRgn` Objekt mit einem polygonalen Bereich. Das System schließt das Polygon automatisch, ggf. durch Zeichnen einer Linie zwischen dem letzten Scheitelpunkt zum ersten.|  
+|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Initialisiert ein `CRgn` Objekt mit einem Bereich mit einer Reihe von geschlossenen Polygonen. Die Polygone können sein, oder möglicherweise überlappen.|  
+|[CRgn::CreateRectRgn](#createrectrgn)|Initialisiert ein `CRgn` -Objekt mit einem rechteckigen Bereich.|  
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initialisiert eine `CRgn` -Objekt mit einem rechteckigen Bereichs, durch eine [RECT](../../mfc/reference/rect-structure1.md) Struktur.|  
+|[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Initialisiert ein `CRgn` -Objekt mit einem rechteckigen Bereich mit abgerundeten Ecken.|  
+|[CRgn::EqualRgn](#equalrgn)|Überprüft zwei `CRgn` Objekte bestimmen, ob diese gleich sind.|  
+|[CRgn::FromHandle](#fromhandle)|Gibt einen Zeiger auf ein `CRgn` Objekt, wenn ein Handle auf einen Windows-Bereich angegeben.|  
+|[CRgn::GetRegionData](#getregiondata)|Füllt den angegebenen Puffer mit Daten, die den angegebenen Bereich beschreibt.|  
+|[CRgn::GetRgnBox](#getrgnbox)|Ruft die Koordinaten des umschließenden Rechtecks von einem `CRgn` Objekt.|  
+|[CRgn::OffsetRgn](#offsetrgn)|Verschiebt ein `CRgn` -Objekt mit den angegebenen Offsets.|  
+|[CRgn::PtInRegion](#ptinregion)|Bestimmt, ob es sich bei ein angegebenen Punkt in der Region befindet.|  
+|[CRgn::RectInRegion](#rectinregion)|Bestimmt, ob ein Teil einem angegebenen Rechteck innerhalb der Grenzen des Bereichs ist.|  
+|[CRgn::SetRectRgn](#setrectrgn)|Legt die `CRgn` Objekt in den angegebenen rechteckige Bereich.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CRgn::operator HRGN](#crgn__operator_hrgn)|Gibt das Windows-Handle, das Bestandteil der `CRgn` Objekt.|  
+|[CRgn::operator HRGN](#operator_hrgn)|Gibt das Windows-Handle, das Bestandteil der `CRgn` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ein Bereich ist ein elliptischen oder polygonalen Bereich innerhalb eines Fensters. Um Bereiche zu verwenden, verwenden Sie die Memberfunktionen der Klasse `CRgn` mit die Clipping definierten Funktionen als Member der Klasse `CDC`.  
@@ -89,7 +105,7 @@ class CRgn : public CGdiObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-namecrgncombinergna-crgncombinergn"></a><a name="crgn__combinergn"></a>  CRgn::CombineRgn  
+##  <a name="a-namecombinergna--crgncombinergn"></a><a name="combinergn"></a>CRgn::CombineRgn  
  Erstellt eine neue GDI-Region durch Kombinieren von zwei vorhandenen Bereichen.  
   
 ```  
@@ -124,7 +140,7 @@ int CombineRgn(
   
 - **COMPLEXREGION** neue Region hat Ränder überlappen.  
   
-- **Fehler BEIM** keine neue Region erstellt.  
+- **Fehler beim** keine neue Region erstellt.  
   
 - **NULLREGION** neue Region ist leer.  
   
@@ -137,13 +153,13 @@ int CombineRgn(
   
  Die Größe eines Bereichs ist auf 32.767 von 32.767 logische Einheiten oder 64 KB begrenzt, welcher Wert kleiner ist.  
   
- Verwendung [CopyRgn](#crgn__copyrgn) einfach eine Region in einer anderen Region kopieren.  
+ Verwendung [CopyRgn](#copyrgn) einfach eine Region in einer anderen Region kopieren.  
   
 ### <a name="example"></a>Beispiel  
- [!CODE [NVC_MFCDocView#144](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocView#144)]  
+ [!code-cpp[NVC_MFCDocView&#144;](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
-##  <a name="a-namecrgncopyrgna-crgncopyrgn"></a><a name="crgn__copyrgn"></a>  CRgn::CopyRgn  
- Kopiert den Bereich definiert `pRgnSrc` in der `CRgn` Objekt.  
+##  <a name="a-namecopyrgna--crgncopyrgn"></a><a name="copyrgn"></a>CRgn::CopyRgn  
+ Kopiert den Bereich definiert `pRgnSrc` in den `CRgn` Objekt.  
   
 ```  
 int CopyRgn(CRgn* pRgnSrc);
@@ -158,19 +174,19 @@ int CopyRgn(CRgn* pRgnSrc);
   
 - **COMPLEXREGION** neue Region hat Ränder überlappen.  
   
-- **Fehler BEIM** keine neue Region erstellt.  
+- **Fehler beim** keine neue Region erstellt.  
   
 - **NULLREGION** neue Region ist leer.  
   
 - **SIMPLEREGION** neue Region besitzt keine überlappenden Rahmen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die neue Region die Region, die früher in gespeicherten ersetzt die `CRgn` Objekt. Diese Funktion ist eine besondere Variante der [CombineRgn](#crgn__combinergn) Member-Funktion.  
+ Die neue Region die Region, die früher in gespeicherten ersetzt die `CRgn` Objekt. Diese Funktion ist eine besondere Variante der [CombineRgn](#combinergn) Member-Funktion.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CRgn::CreateEllipticRgn](#crgn__createellipticrgn).  
+  Siehe das Beispiel für [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
-##  <a name="a-namecrgncreateellipticrgna-crgncreateellipticrgn"></a><a name="crgn__createellipticrgn"></a>  CRgn::CreateEllipticRgn  
+##  <a name="a-namecreateellipticrgna--crgncreateellipticrgn"></a><a name="createellipticrgn"></a>CRgn::CreateEllipticRgn  
  Erstellt einen elliptischen Bereich.  
   
 ```  
@@ -205,9 +221,9 @@ BOOL CreateEllipticRgn(
  Wenn er abgeschlossen hat, verwenden eine Region erstellt, mit der `CreateEllipticRgn` -Funktion, eine Anwendung sollte auswählen des Bereichs, der den Gerätekontext und die Verwendung der `DeleteObject` Funktion zu entfernen.  
   
 ### <a name="example"></a>Beispiel  
- [!CODE [NVC_MFCDocView#145](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocView#145)]  
+ [!code-cpp[NVC_MFCDocView&#145;](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
   
-##  <a name="a-namecrgncreateellipticrgnindirecta-crgncreateellipticrgnindirect"></a><a name="crgn__createellipticrgnindirect"></a>  CRgn::CreateEllipticRgnIndirect  
+##  <a name="a-namecreateellipticrgnindirecta--crgncreateellipticrgnindirect"></a><a name="createellipticrgnindirect"></a>CRgn::CreateEllipticRgnIndirect  
  Erstellt einen elliptischen Bereich.  
   
 ```  
@@ -229,9 +245,9 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
  Wenn er abgeschlossen hat, verwenden eine Region erstellt, mit der `CreateEllipticRgnIndirect` -Funktion, eine Anwendung sollte auswählen des Bereichs, der den Gerätekontext und die Verwendung der `DeleteObject` Funktion zu entfernen.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CRgn::CreateRectRgnIndirect](#crgn__createrectrgnindirect).  
+  Siehe das Beispiel für [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).  
   
-##  <a name="a-namecrgncreatefromdataa-crgncreatefromdata"></a><a name="crgn__createfromdata"></a>  CRgn::CreateFromData  
+##  <a name="a-namecreatefromdataa--crgncreatefromdata"></a><a name="createfromdata"></a>CRgn::CreateFromData  
  Erstellt einen Bereich aus der angegebenen Region und die Transformation Daten.  
   
 ```  
@@ -243,7 +259,7 @@ BOOL CreateFromData(
   
 ### <a name="parameters"></a>Parameter  
  *lpXForm*  
- Verweist auf eine [XFORM](../../mfc/reference/xform-structure.md) -Datenstruktur, die die Transformation definiert, die für die Region ausgeführt werden. Wenn dieser Zeiger ist **NULL**, die Identitätstransformation wird verwendet.  
+ Verweist auf ein [XFORM](../../mfc/reference/xform-structure.md) -Datenstruktur, die die Transformation definiert, die für die Region ausgeführt werden. Wenn dieser Zeiger ist **NULL**, die Identitätstransformation wird verwendet.  
   
  `nCount`  
  Gibt die Anzahl der Bytes, die auf den `pRgnData`.  
@@ -257,7 +273,7 @@ BOOL CreateFromData(
 ### <a name="remarks"></a>Hinweise  
  Eine Anwendung kann Daten für eine Region abrufen, durch Aufrufen der `CRgn::GetRegionData` Funktion.  
   
-##  <a name="a-namecrgncreatefrompatha-crgncreatefrompath"></a><a name="crgn__createfrompath"></a>  CRgn::CreateFromPath  
+##  <a name="a-namecreatefrompatha--crgncreatefrompath"></a><a name="createfrompath"></a>CRgn::CreateFromPath  
  Erstellt einen Bereich aus dem Pfad, der den angegebenen Gerätekontext ausgewählt ist.  
   
 ```  
@@ -274,7 +290,7 @@ BOOL CreateFromPath(CDC* pDC);
 ### <a name="remarks"></a>Hinweise  
  Der Gerätekontext, der durch identifiziert die `pDC` Parameter muss einen geschlossenen Pfad enthalten. Nach dem `CreateFromPath` konvertiert einen Pfad in einen Bereich, Windows verwirft den geschlossenen Pfad aus dem Gerätekontext.  
   
-##  <a name="a-namecrgncreatepolygonrgna-crgncreatepolygonrgn"></a><a name="crgn__createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
+##  <a name="a-namecreatepolygonrgna--crgncreatepolygonrgn"></a><a name="createpolygonrgn"></a>CRgn::CreatePolygonRgn  
  Erstellt einen polygonalen Bereich.  
   
 ```  
@@ -286,7 +302,7 @@ BOOL CreatePolygonRgn(
   
 ### <a name="parameters"></a>Parameter  
  `lpPoints`  
- Verweist auf ein Array von **PUNKT** Strukturen oder ein Array von `CPoint` Objekte. Jede Struktur gibt die X-Koordinate und y-Koordinate des Scheitelpunkts des Polygons. Die **PUNKT** -Struktur hat folgende Form:  
+ Verweist auf ein Array von **Punkt** Strukturen oder ein Array von `CPoint` Objekte. Jede Struktur gibt die X-Koordinate und y-Koordinate des Scheitelpunkts des Polygons. Die **Punkt** -Struktur hat folgende Form:  
   
  `typedef struct tagPOINT {`  
   
@@ -297,7 +313,7 @@ BOOL CreatePolygonRgn(
  `} POINT;`  
   
  `nCount`  
- Gibt die Anzahl der **PUNKT** Strukturen oder `CPoint` Objekte im Array auf die `lpPoints`.  
+ Gibt die Anzahl der **Punkt** Strukturen oder `CPoint` Objekte im Array auf die `lpPoints`.  
   
  `nMode`  
  Gibt den Füllmodus für die Region an. Dieser Parameter kann entweder sein **ALTERNATIVEN** oder **WICKLUNGSREIHENFOLGEN**.  
@@ -317,9 +333,9 @@ BOOL CreatePolygonRgn(
  Wenn eine Anwendung nicht mehr verwendet eine Region erstellt, mit der `CreatePolygonRgn` -Funktion sollten sie die Region, der den Gerätekontext und die Verwendung auswählen die `DeleteObject` Funktion zu entfernen.  
   
 ### <a name="example"></a>Beispiel  
- [!CODE [NVC_MFCDocView#146](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocView#146)]  
+ [!code-cpp[NVC_MFCDocView&#146;](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
   
-##  <a name="a-namecrgncreatepolypolygonrgna-crgncreatepolypolygonrgn"></a><a name="crgn__createpolypolygonrgn"></a>  CRgn::CreatePolyPolygonRgn  
+##  <a name="a-namecreatepolypolygonrgna--crgncreatepolypolygonrgn"></a><a name="createpolypolygonrgn"></a>CRgn::CreatePolyPolygonRgn  
  Erstellt einen Bereich mit einer Reihe von geschlossenen Polygonen.  
   
 ```  
@@ -332,7 +348,7 @@ BOOL CreatePolyPolygonRgn(
   
 ### <a name="parameters"></a>Parameter  
  `lpPoints`  
- Verweist auf ein Array von **PUNKT** Strukturen oder ein Array von `CPoint` -Objekten, die die Eckpunkte der Polygone definiert. Jedes Polygon muss explizit geschlossen werden, da das System nicht diese automatisch geschlossen wird. Die Polygone werden nacheinander festgelegt. Die **PUNKT** -Struktur hat folgende Form:  
+ Verweist auf ein Array von **Punkt** Strukturen oder ein Array von `CPoint` -Objekten, die die Eckpunkte der Polygone definiert. Jedes Polygon muss explizit geschlossen werden, da das System nicht diese automatisch geschlossen wird. Die Polygone werden nacheinander festgelegt. Die **Punkt** -Struktur hat folgende Form:  
   
  `typedef struct tagPOINT {`  
   
@@ -365,9 +381,9 @@ BOOL CreatePolyPolygonRgn(
   
  Wenn die Polygon-Füllmodus ist **WICKLUNGSREIHENFOLGEN**, verwendet das System die Richtung, in der Abbildung, um festzustellen, ob das Ausfüllen eines Bereichs gezeichnet wurde. Jedes Liniensegment in einem Polygon wird im Uhrzeigersinn oder gegen den Uhrzeigersinn gezeichnet. Wenn eine imaginäre Linie gezeichnet aus einem eingeschlossenen Bereich außerhalb einer Abbildung im Uhrzeigersinn Liniensegment durchläuft, wird die Anzahl erhöht. Wenn die Zeile gegen den Uhrzeigersinn Liniensegment durchläuft, wird der Zähler verringert. Der Bereich wird ausgefüllt, wenn der Wert ungleich NULL ist, wenn die Zeile außerhalb der Abbildung erreicht.  
   
- Wenn eine Anwendung nicht mehr verwendet eine Region erstellt, mit der `CreatePolyPolygonRgn` -Funktion sollten sie die Region, der den Gerätekontext und die Verwendung auswählen die [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#cgdiobject__deleteobject) Member-Funktion, um ihn zu entfernen.  
+ Wenn eine Anwendung nicht mehr verwendet eine Region erstellt, mit der `CreatePolyPolygonRgn` -Funktion sollten sie die Region, der den Gerätekontext und die Verwendung auswählen die [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) Member-Funktion, um ihn zu entfernen.  
   
-##  <a name="a-namecrgncreaterectrgna-crgncreaterectrgn"></a><a name="crgn__createrectrgn"></a>  CRgn::CreateRectRgn  
+##  <a name="a-namecreaterectrgna--crgncreaterectrgn"></a><a name="createrectrgn"></a>CRgn::CreateRectRgn  
  Erstellt einen rechteckigen Bereich, die in gespeichert ist die `CRgn` Objekt.  
   
 ```  
@@ -397,14 +413,14 @@ BOOL CreateRectRgn(
 ### <a name="remarks"></a>Hinweise  
  Die Größe eines Bereichs ist auf 32.767 von 32.767 logische Einheiten oder 64 KB begrenzt, welcher Wert kleiner ist.  
   
- Wenn er abgeschlossen wurde, mit einer Region erstellt, indem `CreateRectRgn`, eine Anwendung verwenden, sollten die [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#cgdiobject__deleteobject) Member-Funktion, um den Bereich zu entfernen.  
+ Wenn er abgeschlossen wurde, mit einer Region erstellt, indem `CreateRectRgn`, eine Anwendung verwenden, sollten die [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) Member-Funktion, um den Bereich zu entfernen.  
   
 ### <a name="example"></a>Beispiel  
- [!CODE [NVC_MFCDocView#147](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocView#147)]  
+ [!code-cpp[NVC_MFCDocView&#147;](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]  
   
- Ein zusätzliches Beispiel finden Sie unter [CRgn::CombineRgn](#crgn__combinergn).  
+ Ein zusätzliches Beispiel finden Sie unter [CRgn::CombineRgn](#combinergn).  
   
-##  <a name="a-namecrgncreaterectrgnindirecta-crgncreaterectrgnindirect"></a><a name="crgn__createrectrgnindirect"></a>  CRgn::CreateRectRgnIndirect  
+##  <a name="a-namecreaterectrgnindirecta--crgncreaterectrgnindirect"></a><a name="createrectrgnindirect"></a>CRgn::CreateRectRgnIndirect  
  Erstellt einen rechteckigen Bereich, die in gespeichert ist die `CRgn` Objekt.  
   
 ```  
@@ -433,12 +449,12 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ### <a name="remarks"></a>Hinweise  
  Die Größe eines Bereichs ist auf 32.767 von 32.767 logische Einheiten oder 64 KB begrenzt, welcher Wert kleiner ist.  
   
- Wenn er abgeschlossen wurde, mit einer Region erstellt, indem `CreateRectRgnIndirect`, eine Anwendung verwenden, sollten die [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#cgdiobject__deleteobject) Member-Funktion, um den Bereich zu entfernen.  
+ Wenn er abgeschlossen wurde, mit einer Region erstellt, indem `CreateRectRgnIndirect`, eine Anwendung verwenden, sollten die [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) Member-Funktion, um den Bereich zu entfernen.  
   
 ### <a name="example"></a>Beispiel  
- [!CODE [NVC_MFCDocView#148](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocView#148)]  
+ [!code-cpp[NVC_MFCDocView&#148;](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
   
-##  <a name="a-namecrgncreateroundrectrgna-crgncreateroundrectrgn"></a><a name="crgn__createroundrectrgn"></a>  CRgn::CreateRoundRectRgn  
+##  <a name="a-namecreateroundrectrgna--crgncreateroundrectrgn"></a><a name="createroundrectrgn"></a>CRgn::CreateRoundRectRgn  
  Erstellt einen rechteckigen Bereich mit abgerundeten Ecken, die in gespeichert ist die `CRgn` Objekt.  
   
 ```  
@@ -476,12 +492,12 @@ BOOL CreateRoundRectRgn(
 ### <a name="remarks"></a>Hinweise  
  Die Größe eines Bereichs ist auf 32.767 von 32.767 logische Einheiten oder 64 KB begrenzt, welcher Wert kleiner ist.  
   
- Wenn eine Anwendung nicht mehr verwendet eine Region erstellt, mit der `CreateRoundRectRgn` -Funktion sollten sie die Region, der den Gerätekontext und die Verwendung auswählen die [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#cgdiobject__deleteobject) Member-Funktion, um ihn zu entfernen.  
+ Wenn eine Anwendung nicht mehr verwendet eine Region erstellt, mit der `CreateRoundRectRgn` -Funktion sollten sie die Region, der den Gerätekontext und die Verwendung auswählen die [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) Member-Funktion, um ihn zu entfernen.  
   
 ### <a name="example"></a>Beispiel  
- [!CODE [NVC_MFCDocView#149](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocView#149)]  
+ [!code-cpp[NVC_MFCDocView&#149;](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
   
-##  <a name="a-namecrgncrgna-crgncrgn"></a><a name="crgn__crgn"></a>  CRgn::CRgn  
+##  <a name="a-namecrgna--crgncrgn"></a><a name="crgn"></a>CRgn::CRgn  
  Erstellt ein `CRgn`-Objekt.  
   
 ```  
@@ -489,18 +505,16 @@ CRgn();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der `m_hObject` -Datenmember enthält keine gültige Windows-GDI-Region, bis das Objekt, mit einem oder mehreren der anderen initialisiert wurde `CRgn` Memberfunktionen.  
+ Die `m_hObject` -Datenmember enthält keine gültige Windows-GDI-Region, bis das Objekt, mit einem oder mehreren der anderen initialisiert wurde `CRgn` Memberfunktionen.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CRgn::CreateRoundRectRgn](#crgn__createroundrectrgn).  
+  Siehe das Beispiel für [CRgn::CreateRoundRectRgn](#createroundrectrgn).  
   
-##  <a name="a-namecrgnequalrgna-crgnequalrgn"></a><a name="crgn__equalrgn"></a>  CRgn::EqualRgn  
+##  <a name="a-nameequalrgna--crgnequalrgn"></a><a name="equalrgn"></a>CRgn::EqualRgn  
  Bestimmt, ob die angegebene Region in der Region in gespeicherten entspricht der `CRgn` Objekt.  
   
 ```  
-BOOL EqualRgn(CRgn* pRgn) const;
-
- 
+BOOL EqualRgn(CRgn* pRgn) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
@@ -511,9 +525,9 @@ BOOL EqualRgn(CRgn* pRgn) const;
  Wert ungleich NULL, wenn die beiden Bereiche gleichwertig sind; andernfalls 0.  
   
 ### <a name="example"></a>Beispiel  
- [!CODE [NVC_MFCDocView#150](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocView#150)]  
+ [!code-cpp[NVC_MFCDocView&#150;](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
   
-##  <a name="a-namecrgnfromhandlea-crgnfromhandle"></a><a name="crgn__fromhandle"></a>  CRgn::FromHandle  
+##  <a name="a-namefromhandlea--crgnfromhandle"></a><a name="fromhandle"></a>CRgn::FromHandle  
  Gibt einen Zeiger auf ein `CRgn` Objekt, wenn ein Handle auf einen Windows-Bereich angegeben.  
   
 ```  
@@ -530,15 +544,13 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 ### <a name="remarks"></a>Hinweise  
  Wenn ein `CRgn` Objekt noch nicht angefügt, das Handle zu einem temporären `CRgn` Objekt erstellt und angefügt wird. Dieser temporäre `CRgn` Objekt ist nur dann gültig, bis das nächste Mal die Anwendung Leerlaufzeit in seiner Ereignisschleife aufweist, zu der Zeit, dass alle temporären Grafik Objekte gelöscht werden. Anders ausgedrückt: Dies ist, dass das temporäre Objekt nur während der Verarbeitung der Nachricht ein Fenster gültig ist.  
   
-##  <a name="a-namecrgngetregiondataa-crgngetregiondata"></a><a name="crgn__getregiondata"></a>  CRgn::GetRegionData  
+##  <a name="a-namegetregiondataa--crgngetregiondata"></a><a name="getregiondata"></a>CRgn::GetRegionData  
  Füllt den angegebenen Puffer mit Daten, die den Bereich beschreibt.  
   
 ```  
 int GetRegionData(
     LPRGNDATA lpRgnData,  
-    int nCount) const;
-
- 
+    int nCount) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
@@ -549,18 +561,16 @@ int GetRegionData(
  Gibt die Größe in Bytes, der die `lpRgnData` Puffer.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die Funktion erfolgreich ist und `nCount` Gibt eine ausreichende Anzahl von Bytes, der Rückgabewert ist immer `nCount`. Wenn die Funktion fehlschlägt oder `nCount` gibt kleiner als ausreichende Anzahl von Bytes, ist der Rückgabewert 0 (Fehler).  
+ Wenn die Funktion erfolgreich ist und `nCount` gibt eine ausreichende Anzahl von Bytes, der Rückgabewert ist immer `nCount`. Wenn die Funktion fehlschlägt oder `nCount` gibt kleiner als ausreichende Anzahl von Bytes, ist der Rückgabewert 0 (Fehler).  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Daten umfassen die Dimensionen der Rechtecke, die den Bereich bilden. Diese Funktion dient in Verbindung mit der `CRgn::CreateFromData` Funktion.  
   
-##  <a name="a-namecrgngetrgnboxa-crgngetrgnbox"></a><a name="crgn__getrgnbox"></a>  CRgn::GetRgnBox  
+##  <a name="a-namegetrgnboxa--crgngetrgnbox"></a><a name="getrgnbox"></a>CRgn::GetRgnBox  
  Ruft die Koordinaten des umschließenden Rechtecks der ab dem `CRgn` Objekt.  
   
 ```  
-int GetRgnBox(LPRECT lpRect) const;
-
- 
+int GetRgnBox(LPRECT lpRect) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
@@ -586,24 +596,22 @@ int GetRgnBox(LPRECT lpRect) const;
   
 - **NULLREGION** Region ist leer.  
   
-- **Fehler BEIM** `CRgn` Objekts gibt kein gültigen Bereichs.  
+- **Fehler beim** `CRgn` Objekts gibt kein gültigen Bereichs.  
   
 - **SIMPLEREGION** Region besitzt keine überlappenden Rahmen.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CRgn::CreatePolygonRgn](#crgn__createpolygonrgn).  
+  Siehe das Beispiel für [CRgn::CreatePolygonRgn](#createpolygonrgn).  
   
-##  <a name="a-namecrgnoffsetrgna-crgnoffsetrgn"></a><a name="crgn__offsetrgn"></a>  CRgn::OffsetRgn  
+##  <a name="a-nameoffsetrgna--crgnoffsetrgn"></a><a name="offsetrgn"></a>CRgn::OffsetRgn  
  Verschiebt die Region, die in gespeicherten der `CRgn` -Objekt mit den angegebenen Offsets.  
   
 ```  
 int OffsetRgn(
     int x,  
-    int y);
-
- 
-int OffsetRgn(
-    POINT point);
+    int y);  
+  
+int OffsetRgn(POINT point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
@@ -614,14 +622,14 @@ int OffsetRgn(
  Gibt die Anzahl der Einheiten nach oben oder unten zu verschieben.  
   
  `point`  
- Die X-Koordinate des `point` Gibt die Anzahl der Einheiten, die zum Verschieben von links oder rechts. Die y-Koordinate des `point` Gibt die Anzahl der Einheiten nach oben oder unten zu verschieben. Die `point` Parameter befinden sich entweder eine **PUNKT** Struktur oder ein `CPoint` Objekt.  
+ Die X-Koordinate des `point` gibt die Anzahl der Einheiten, die zum Verschieben von links oder rechts. Die y-Koordinate des `point` gibt die Anzahl der Einheiten nach oben oder unten zu verschieben. Die `point` Parameter befinden sich entweder eine **Punkt** Struktur oder ein `CPoint` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der neue Bereich Typ. Einer der folgenden Werte sind möglich:  
   
 - **COMPLEXREGION** Bereich hat Ränder überlappen.  
   
-- **FEHLER** Bereichshandle ist ungültig.  
+- **Fehler** Bereichshandle ist ungültig.  
   
 - **NULLREGION** Region ist leer.  
   
@@ -633,63 +641,57 @@ int OffsetRgn(
  Die Koordinatenwerte eines Bereichs müssen kleiner oder gleich 32.767 und größer als oder gleich – 32.768 sein. Die *x* und *y* Parameter müssen sorgfältig ausgewählt werden, um zu verhindern, dass ungültige Region Koordinaten.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CRgn::CreateEllipticRgn](#crgn__createellipticrgn).  
+  Siehe das Beispiel für [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
-##  <a name="a-namecrgnoperatorhrgna-crgnoperator-hrgn"></a><a name="crgn__operator_hrgn"></a>  CRgn::operator HRGN  
+##  <a name="a-nameoperatorhrgna--crgnoperator-hrgn"></a><a name="operator_hrgn"></a>CRgn::operator HRGN  
  Verwenden Sie diesen Operator zum Abrufen der angefügten Windows GDI-Handle für die `CRgn` Objekt.  
   
-''' Operator HRGN() const;
-
- 
+```  
+operator HRGN() const;  
 ```  
   
-### Return Value  
- If successful, a handle to the Windows GDI object represented by the `CRgn` object; otherwise **NULL**.  
+### <a name="return-value"></a>Rückgabewert  
+ Wenn erfolgreich, ein Handle für das Windows-GDI-Objekt durch dargestellt die `CRgn` Objekt; andernfalls **NULL**.  
   
-### Remarks  
- This operator is a casting operator, which supports direct use of an **HRGN** object.  
+### <a name="remarks"></a>Hinweise  
+ Dieser Operator ist ein Typumwandlungsoperator verwendet, die direkte Verwendung von unterstützt ein **HRGN** Objekt.  
   
- For more information about using graphic objects, see the article [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Weitere Informationen zur Verwendung von Grafikobjekten, finden Sie im Artikel [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="crgn__ptinregion"></a>  CRgn::PtInRegion  
- Checks whether the point given by *x* and *y* is in the region stored in the `CRgn` object.  
+##  <a name="a-nameptinregiona--crgnptinregion"></a><a name="ptinregion"></a>CRgn::PtInRegion  
+ Überprüft, ob der Punkt, der durch *x* und *y* in der Region in gespeichert ist die `CRgn` Objekt.  
   
 ```  
-BOOL PtInRegion (Int X,  
-    Int y) const;
-
- 
- 
-BOOL PtInRegion (Punkt) const;
-
- 
+BOOL PtInRegion(
+    int x,  
+    int y) const;  
+  
+BOOL PtInRegion(POINT point) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parameter  
  *x*  
- Specifies the logical x-coordinate of the point to test.  
+ Gibt die logische X-Koordinate des Punktes, der überprüft.  
   
  *y*  
- Specifies the logical y-coordinate of the point to test.  
+ Gibt die logische y-Koordinate des Punktes, der überprüft.  
   
  `point`  
- The x- and y-coordinates of `point` specify the x- and y-coordinates of the point to test the value of. The `point` parameter can either be a **POINT** structure or a `CPoint` object.  
+ Die x- und y-Koordinaten der `point` geben die x- und y-Koordinaten des Punkts, der den Wert testen. Die `point` Parameter kann entweder ein **Punkt** Struktur oder ein `CPoint` Objekt.  
   
-### Return Value  
- Nonzero if the point is in the region; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn der Punkt in der Region ist; andernfalls 0.  
   
-##  <a name="crgn__rectinregion"></a>  CRgn::RectInRegion  
- Determines whether any part of the rectangle specified by `lpRect` is within the boundaries of the region stored in the `CRgn` object.  
+##  <a name="a-namerectinregiona--crgnrectinregion"></a><a name="rectinregion"></a>CRgn::RectInRegion  
+ Bestimmt, ob alle Teile des Rechtecks durch angegebene `lpRect` innerhalb der Grenzen des Bereichs gespeichert, der `CRgn` Objekt.  
   
 ```  
-BOOL RectInRegion(LPCRECT lpRect) const;
-
- 
+BOOL RectInRegion(LPCRECT lpRect) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parameter  
  `lpRect`  
- Points to a `RECT` structure or `CRect` object. The `RECT` structure has the following form:  
+ Verweist auf eine `RECT` Struktur oder `CRect` Objekt. Die `RECT` -Struktur hat folgende Form:  
   
  `typedef struct tagRECT {`  
   
@@ -703,46 +705,47 @@ BOOL RectInRegion(LPCRECT lpRect) const;
   
  `} RECT;`  
   
-### Return Value  
- Nonzero if any part of the specified rectangle lies within the boundaries of the region; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich NULL, wenn alle Teil des angegebenen Rechtecks liegt innerhalb der Grenzen des Bereichs; andernfalls 0.  
   
-##  <a name="crgn__setrectrgn"></a>  CRgn::SetRectRgn  
- Creates a rectangular region.  
+##  <a name="a-namesetrectrgna--crgnsetrectrgn"></a><a name="setrectrgn"></a>CRgn::SetRectRgn  
+ Erstellt einen rechteckigen Bereich.  
   
 ```  
-void SetRectRgn (Int X1,  
-    Int-y1,  
-    Int x2  
-    Int-y2);
-
- 
-void SetRectRgn (LPCRECT LpRect);
+void SetRectRgn(
+    int x1,  
+    int y1,  
+    int x2,  
+    int y2);  
+  
+void SetRectRgn(LPCRECT lpRect);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parameter  
  `x1`  
- Specifies the x-coordinate of the upper-left corner of the rectangular region.  
+ Gibt die X-Koordinate der oberen linken Ecke des rechteckigen Bereichs.  
   
  `y1`  
- Specifies the y-coordinate of the upper-left corner of the rectangular region.  
+ Gibt die y-Koordinate der oberen linken Ecke des rechteckigen Bereichs.  
   
  `x2`  
- Specifies the x-coordinate of the lower-right corner of the rectangular region.  
+ Gibt die X-Koordinate der unteren rechten Ecke des rechteckigen Bereichs.  
   
  `y2`  
- Specifies the y-coordinate of the lower-right corner of the rectangular region.  
+ Gibt die y-Koordinate der unteren rechten Ecke des rechteckigen Bereichs.  
   
  `lpRect`  
- Specifies the rectangular region. Can be either a pointer to a `RECT` structure or a `CRect` object.  
+ Gibt den rechteckigen Bereich an. Kann entweder ein Zeiger auf eine `RECT` Struktur oder ein `CRect` Objekt.  
   
-### Remarks  
- Unlike [CreateRectRgn](#crgn__createrectrgn), however, it does not allocate any additional memory from the local Windows application heap. Instead, it uses the space allocated for the region stored in the `CRgn` object. This means that the `CRgn` object must already have been initialized with a valid Windows region before calling `SetRectRgn`. The points given by `x1`, `y1`, `x2`, and `y2` specify the minimum size of the allocated space.  
+### <a name="remarks"></a>Hinweise  
+ Im Gegensatz zu [CreateRectRgn](#createrectrgn), es werden keine zusätzlichen Speicher reserviert, vom lokalen Heap der Windows-Anwendung. Stattdessen wird den Speicherplatz für die Region in gespeicherte der `CRgn` Objekt. Dies bedeutet, dass die `CRgn` Objekt bereits initialisiert worden sein, mit einem gültigen Windows-Bereich vor dem Aufruf von `SetRectRgn`. Die Punkte, die vom `x1`, `y1`, `x2`, und `y2` Geben Sie die minimale Größe des belegten Speicherplatzes.  
   
- Use this function instead of the `CreateRectRgn` member function to avoid calls to the local memory manager.  
+ Verwenden Sie diese Funktion statt der `CreateRectRgn` Member-Funktion zu vermeiden, dass der lokale Speicher-Manager aufgerufen.  
   
-## See Also  
- [CWnd Class](../../mfc/reference/cwnd-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>Siehe auch  
+ [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
+
 
 
 

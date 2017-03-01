@@ -1,91 +1,109 @@
 ---
-title: "CREATESTRUCT-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CREATESTRUCT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CREATESTRUCT-Struktur"
+title: CREATESTRUCT-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CREATESTRUCT
+dev_langs:
+- C++
+helpviewer_keywords:
+- CREATESTRUCT structure
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# CREATESTRUCT-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: ec72d4725cb7e5959369b24a6ff7f0e3e9da1ca7
+ms.lasthandoff: 02/24/2017
 
-Die `CREATESTRUCT`\-Struktur definiert, die Initialisierungsparameter die der Fensterprozedur eine Anwendung übergeben werden.  
+---
+# <a name="createstruct-structure"></a>CREATESTRUCT-Struktur
+Die `CREATESTRUCT` Struktur definiert die Initialisierungsparameter an die Fensterprozedur einer Anwendung übergeben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagCREATESTRUCT {  
-   LPVOID lpCreateParams;  
-   HANDLE hInstance;  
-   HMENU hMenu;  
-   HWND hwndParent;  
-   int cy;  
-   int cx;  
-   int y;  
-   int x;  
-   LONG style;  
-   LPCSTR lpszName;  
-   LPCSTR lpszClass;  
-   DWORD dwExStyle;  
+typedef struct tagCREATESTRUCT {  
+    LPVOID lpCreateParams;  
+    HANDLE hInstance;  
+    HMENU hMenu;  
+    HWND hwndParent;  
+    int cy;  
+    int cx;  
+    int y;  
+    int x;  
+    LONG style;  
+    LPCSTR lpszName;  
+    LPCSTR lpszClass;  
+    DWORD dwExStyle;  
 } CREATESTRUCT;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `lpCreateParams`  
- Punkte, um das Fenster zu erstellen zu den zu verwendenden Daten.  
+ Zeigt auf Daten verwendet werden, um das Fenster zu erstellen.  
   
  `hInstance`  
- Identifiziert das ModulInstanzhandle des Moduls, dem das neue Fenster besitzt.  
+ Identifiziert die Modulinstanz Handle des Moduls, das das neue Fenster besitzt.  
   
  `hMenu`  
- Identifiziert das durch das neue Fenster verwendet werden, Menü.  Wenn ein untergeordnetes Fenster, die ganzzahlige ID enthält  
+ Identifiziert das Menü im neuen Fenster verwendet werden. Wenn ein untergeordnetes Fenster enthält die Integer-ID.  
   
  `hwndParent`  
- Identifiziert das Fenster, das das neue Fenster besitzt.  Dieser Member ist **NULL**, wenn das neue Fenster ein Fenster der obersten Ebene ist.  
+ Identifiziert das Fenster, das neue Fenster besitzt. Dieser Member ist **NULL** , wenn das neue Fenster der obersten Ebene ist.  
   
  `cy`  
- Gibt die Höhe des neuen Fensters an.  
+ Gibt die Höhe des neuen Fensters.  
   
  `cx`  
- Gibt die Breite des neuen Fensters an.  
+ Gibt die Breite des neuen Fensters.  
   
  `y`  
- Gibt der y\-Koordinate der linken oberen Ecke des neuen Fensters an.  Koordinaten sind relativ zum übergeordneten Fenster, wenn das neue Fenster ein untergeordnetes Fenster ist; andernfalls sind Koordinaten relativ zum Bildschirmursprung.  
+ Gibt die y-Koordinate der oberen linken Ecke des neuen Fensters. Koordinaten sind relativ zum übergeordneten Fenster, das neue Fenster ist ein untergeordnetes Fenster. Andernfalls werden Koordinaten relativ zum Bildschirmursprung.  
   
  `x`  
- Gibt der x\-Koordinate der linken oberen Ecke des neuen Fensters an.  Koordinaten sind relativ zum übergeordneten Fenster, wenn das neue Fenster ein untergeordnetes Fenster ist; andernfalls sind Koordinaten relativ zum Bildschirmursprung.  
+ Gibt die X-Koordinate der oberen linken Ecke des neuen Fensters. Koordinaten sind relativ zum übergeordneten Fenster, das neue Fenster ist ein untergeordnetes Fenster. Andernfalls werden Koordinaten relativ zum Bildschirmursprung.  
   
  `style`  
- Gibt [Format](../../mfc/reference/styles-used-by-mfc.md) des neuen Fensters an.  
+ Gibt des neuen Fensters [Stil](../../mfc/reference/styles-used-by-mfc.md).  
   
  `lpszName`  
- Zeigt auf eine auf NULL endende Zeichenfolge, die den Namen des neuen Fensters angibt.  
+ Zeigt auf eine auf Null endende Zeichenfolge, die das neue Fenster Namen angibt.  
   
  `lpszClass`  
- Zeigt auf eine auf NULL endende Zeichenfolge, die den Windows\-Klassennamen des neuen Fensters angibt \(Struktur einer [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) ; Weitere Informationen finden Sie im [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]\).  
+ Verweist auf eine auf Null endende Zeichenfolge, die das neue Fenster Windows-Klassennamen angibt (eine [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur; Weitere Informationen finden Sie unter den [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]).  
   
  `dwExStyle`  
- [erweitertes Format](../../mfc/reference/extended-window-styles.md) Gibt für das neue Fenster an.  
+ Gibt die [erweiterten Stil](../../mfc/reference/extended-window-styles.md) für das neue Fenster.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** winuser.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnCreate](../Topic/CWnd::OnCreate.md)
+ [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)
+
+
+

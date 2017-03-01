@@ -1,36 +1,51 @@
 ---
-title: "DELETEITEMSTRUCT-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DELETEITEMSTRUCT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DELETEITEMSTRUCT-Struktur"
+title: DELETEITEMSTRUCT-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DELETEITEMSTRUCT
+dev_langs:
+- C++
+helpviewer_keywords:
+- DELETEITEMSTRUCT structure
 ms.assetid: 48d3998c-f4a8-402a-bf90-df3770a78685
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# DELETEITEMSTRUCT-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: f5936cbb863cf8ace851609cb1dc8352e21f9456
+ms.lasthandoff: 02/24/2017
 
-Die `DELETEITEMSTRUCT`\-Struktur beschreibt ein gelöschtes Ownerdrawnlistenfeld\- oder \-Kombinationsfeldelement.  
+---
+# <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT-Struktur
+Die `DELETEITEMSTRUCT` Struktur beschreibt ein gelöschtes Ownerdrawn-Listenfeld oder Kombinationsfeld Element.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagDELETEITEMSTRUCT { /* ditms */  
+typedef struct tagDELETEITEMSTRUCT { /* ditms */  
     UINT CtlType;  
     UINT CtlID;  
     UINT itemID;  
@@ -39,28 +54,31 @@ Die `DELETEITEMSTRUCT`\-Struktur beschreibt ein gelöschtes Ownerdrawnlistenfeld
 } DELETEITEMSTRUCT;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `CtlType`  
- Gibt **ODT\_LISTBOX** \(einem Ownerdrawn Listenfeld\) oder **ODT\_COMBOBOX** an \(ein Ownerdrawnkombinationsfeld\).  
+ Gibt an, **ODT_LISTBOX** (ein Ownerdrawn Listenfeld) oder **ODT_COMBOBOX** (ein Ownerdrawn-Kombinationsfeld).  
   
  `CtlID`  
- Gibt den Bezeichner des Listenfelds oder Kombinationsfeld an.  
+ Gibt den Bezeichner der im Listenfeld oder Kombinationsfeld.  
   
  `itemID`  
- Gibt Index des Elements in Listenfeldern oder im Kombinationsfeld an, die entfernt wird.  
+ Gibt den Index des Elements im Listenfeld oder Kombinationsfeld entfernt an.  
   
  `hwndItem`  
  Bezeichnet das Steuerelement.  
   
  `itemData`  
- Gibt anwendungsdefinierten Daten für das Element angegeben.  Dieser Wert wird dem Steuerelement im Parameter **lParam** der Meldung übergeben, die dem Element dem Listenfeld oder dem Kombinationsfeld.  
+ Gibt anwendungsspezifische Daten für das Element an. Dieser Wert wird übergeben, um das Steuerelement in der **lParam** -Parameter der Nachricht, die Sie im Listenfeld oder Kombinationsfeld das Element hinzufügt.  
   
-## Hinweise  
- Wenn ein Element aus dem Listenfeld aus einem Kombinationsfeld oder entfernt wird, oder wenn das Listenfeld oder das Kombinationsfeld zerstört, Windows `WM_DELETEITEM` sendet die Meldung an den Besitzer für gelöschte jedes Element.  Der Parameter **lParam** der Meldung enthält einen Zeiger auf diese Struktur.  
+## <a name="remarks"></a>Hinweise  
+ Wenn ein Element entfernt wird, aus dem Listenfeld oder Kombinationsfeld oder das Listenfeld oder Kombinationsfeld zerstört wird, sendet Windows die `WM_DELETEITEM` Nachricht an den Besitzer für die einzelnen Elemente. Die **lParam** -Parameter der Nachricht enthält einen Zeiger auf diese Struktur.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnDeleteItem](../Topic/CWnd::OnDeleteItem.md)
+ [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)
+
+
+

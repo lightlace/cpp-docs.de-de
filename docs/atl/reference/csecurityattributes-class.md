@@ -1,74 +1,121 @@
 ---
-title: "CSecurityAttributes Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CSecurityAttributes"
-  - "ATL::CSecurityAttributes"
-  - "CSecurityAttributes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSecurityAttributes class"
+title: CSecurityAttributes Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CSecurityAttributes
+- ATL::CSecurityAttributes
+- CSecurityAttributes
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# CSecurityAttributes Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: 24dfba8b6125172cc2d4ff7a32b61da412bfe2be
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse ist ein einfacher Wrapper für die Sicherheitsattributstruktur.  
+---
+# <a name="csecurityattributes-class"></a>CSecurityAttributes-Klasse
+Diese Klasse ist ein einfacher Wrapper für die Struktur der Sicherheits-Attribute.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können in Anwendungen nicht verwendet werden, die in der Windows Runtime ausführen.  
+>  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+class CSecurityAttributes : public SECURITY_ATTRIBUTES
 ```  
   
-class CSecurityAttributes : public SECURITY_ATTRIBUTES  
+## <a name="members"></a>Mitglieder  
   
-```  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-## Mitglieder  
-  
-### Öffentliche Konstruktoren  
-  
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CSecurityAttributes::CSecurityAttributes](../Topic/CSecurityAttributes::CSecurityAttributes.md)|Der \-Konstruktor.|  
+|[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|Der Konstruktor.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CSecurityAttributes::Set](../Topic/CSecurityAttributes::Set.md)|Rufen Sie diese Methode auf, um die Attribute des `CSecurityAttributes`\-Objekts festzulegen.|  
+|[CSecurityAttributes:: Set](#set)|Rufen Sie diese Methode, um die Attribute der Festlegen der `CSecurityAttributes` Objekt.|  
   
-## Hinweise  
- Die **SECURITY\_ATTRIBUTES**\-Struktur enthält [Sicherheitsdeskriptor](http://msdn.microsoft.com/library/windows/desktop/aa379561), das für die Erstellung eines Objekts verwendet wird und gibt an, ob das Handle, das abgerufen wird, indem diese Struktur an angibt, vererbbar ist.  
+## <a name="remarks"></a>Hinweise  
+ Die **SECURITY_ATTRIBUTES** Struktur enthält eine [Sicherheitsdeskriptor](http://msdn.microsoft.com/library/windows/desktop/aa379561) verwendet für die Erstellung eines Objekts und gibt an, ob das Handle abgerufen, indem die Angabe dieser Struktur geerbt werden kann.  
   
- Eine Einführung in Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](http://msdn.microsoft.com/library/windows/desktop/aa374860) in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](http://msdn.microsoft.com/library/windows/desktop/aa374860) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `SECURITY_ATTRIBUTES`  
   
  `CSecurityAttributes`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
   
-## Siehe auch  
- [Beispiel für die Sicherheit](../../top/visual-cpp-samples.md)   
- [SECURITY\_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
- [security descriptor](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
- [Class Overview](../../atl/atl-class-overview.md)   
- [Security Global Functions](../../atl/reference/security-global-functions.md)
+##  <a name="a-namecsecurityattributesa--csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
+ Der Konstruktor.  
+  
+```
+CSecurityAttributes() throw();
+explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInheritsHandle = false) throw(...);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `rSecurityDescriptor`  
+ Verweis auf den Sicherheitsdeskriptor.  
+  
+ `bInheritsHandle`  
+ Gibt an, ob das zurückgegebene Handle geerbt wird, wenn ein neuer Prozess erstellt wird. Wenn dieses Element auf true festgelegt ist, erbt der neue Prozess das Handle.  
+  
+##  <a name="a-nameseta--csecurityattributesset"></a><a name="set"></a>CSecurityAttributes:: Set  
+ Rufen Sie diese Methode, um die Attribute der Festlegen der `CSecurityAttributes` Objekt.  
+  
+```
+void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `rSecurityDescriptor`  
+ Verweis auf den Sicherheitsdeskriptor.  
+  
+ `bInheritHandle`  
+ Gibt an, ob das zurückgegebene Handle geerbt wird, wenn ein neuer Prozess erstellt wird. Wenn dieses Element auf true festgelegt ist, erbt der neue Prozess das Handle.  
+  
+### <a name="remarks"></a>Hinweise  
+ Diese Methode wird vom Konstruktor initialisiert werden, verwendet die `CSecurityAttributes` Objekt.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Beispiel für die Sicherheit](../../visual-cpp-samples.md)   
+ [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
+ [Sicherheitsdeskriptor](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+ [Globale Funktionen für Sicherheit](../../atl/reference/security-global-functions.md)
+
