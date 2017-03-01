@@ -1,36 +1,52 @@
 ---
-title: "Compilerfehler C2327 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2327"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2327"
+title: Compiler-Fehler Fehler C2327 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2327
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Compilerfehler C2327
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 62834115e3ad9c9733326a1bc94e5fa51209f485
+ms.lasthandoff: 02/24/2017
 
-'Symbol': Ist kein Typname, nicht statisch und kein Enumerator  
+---
+# <a name="compiler-error-c2327"></a>Compilerfehler C2327
+'Symbol': ist kein Typname, statischen oder Enumerator  
   
- Der Code innerhalb einer geschachtelten Klasse versucht, auf einen Member einer einschließenden Klasse zuzugreifen. Dieser Member ist kein Typname, kein statischer Member und kein Enumerator.  
+ Code innerhalb einer geschachtelten Klasse versucht, einen Member der einschließenden Klasse zuzugreifen, der einen Namen, einen statischen Member oder einen Enumerator ist.  
   
- Wenn beim Kompilieren mit **\/clr** der Fehler C2327 auftritt, liegt das häufig daran, dass der Name einer Eigenschaft mit dem des Eigenschaftentyps identisch ist.  
+ Beim Kompilieren mit **/CLR**, eine häufige Ursache für Fehler C2327 ist eine Eigenschaft mit dem gleichen Namen wie der Eigenschaftentyp.  
   
- Im folgenden Beispiel wird C2327 generiert:  
+ Im folgende Beispiel wird C2327 generiert:  
   
 ```  
 // C2327.cpp  
@@ -49,7 +65,7 @@ public:
 };  
 ```  
   
- C2327 tritt möglicherweise auch auf, wenn ein Typname von einem Membernamen verdeckt wird:  
+ Fehler C2327 kann auch auftreten, wenn der Name eines Typs durch den Namen eines Members verdeckt wird:  
   
 ```  
 // C2327b.cpp  
@@ -63,7 +79,7 @@ class S {
 };  
 ```  
   
- Dabei kann auch Fehler C2327 ausgelöst werden. In diesem Fall muss der Datentyp des Parameters vollständig angeben werden.  
+ In dieser Situation kann auch Fehler C2327 ausgelöst, in dem Sie den Datentyp des Parameters vollständig angeben müssen:  
   
 ```  
 // C2327c.cpp  
@@ -78,7 +94,7 @@ struct B {
 };  
 ```  
   
- Im folgenden Beispiel wird C2327 generiert:  
+ Im folgende Beispiel wird C2327 generiert:  
   
 ```  
 // C2327d.cpp  
@@ -112,35 +128,7 @@ namespace NA {
 }  
 ```  
   
- C2327 kann auch bei Verwendung von Managed Extensions for C\+\+ ausgegeben werden:  
-  
-```  
-// C2327e.cpp  
-// compile with: /clr:oldSyntax /c  
-using namespace System;  
-namespace NA {  
-   public __value enum E : Int32 {  
-      one = 1, two = 2, three = 3  
-   };  
-  
-   public __gc class A {  
-      E m_e;  
-      public:  
-         __property E get_E() {  
-            return m_e;  
-         }  
-         // At set_E compiler doesn't know whether E is get_E or   
-         // Enum E, therefore fully qualifying Enum E is necessary  
-         __property void set_E(E e) {   // C2327  
-         // try the following line instead  
-         // __property void set_E(NA::E e) {  
-            m_e = e;  
-         }  
-   };  
-}  
-```  
-  
- Im folgenden Beispiel tritt C2327 auf, da der Name einer Eigenschaft mit dem des Eigenschaftstyps identisch ist:  
+Im folgende Beispiel tritt C2327 auf, da der Eigenschaft den gleichen Namen wie der Eigenschaftstyp ist:  
   
 ```  
 // C2327f.cpp  
@@ -165,31 +153,4 @@ private:
    // ::Address address;  
 };  
 ```  
-  
- Im folgenden Beispiel tritt C2327 auf, da der Name einer Eigenschaft mit dem des Eigenschaftstyps identisch ist:  
-  
-```  
-// C2327g.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-public __value struct Address {};  
-  
-public __gc class Person {  
-public:  
-   __property ::Address get_Address() {     
-      return address;  
-   }  
-  
-   __property void set_Address(Address addr)   // C2327  
-   // try the following line instead  
-   // __property void set_Address(::Address addr) {  
-      address = addr;   
-   }  
-  
-private:  
-   Address address;   // C2327  
-  
-   // try the following line instead  
-   // ::Address address;  
-};  
-```
+

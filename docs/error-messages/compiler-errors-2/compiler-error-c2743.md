@@ -1,39 +1,55 @@
 ---
-title: "Compilerfehler C2743 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2743"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2743"
+title: Compiler-Fehler C2743 generiert | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2743
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2743
 ms.assetid: 644cd444-21d2-471d-a176-f5f52c5a0b73
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C2743
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 7420231e64515b556cfe81fc695eda5f75231506
+ms.lasthandoff: 02/24/2017
 
-'Typ': catch von systemeigenem Typ mit \_\_clrcall\-Destruktor oder copy\-Konstruktor nicht möglich  
+---
+# <a name="compiler-error-c2743"></a>Compiler-Fehler C2743 generiert
+'Typ': catch von systemeigenem Typ mit __clrcall-Destruktor oder Kopierkonstruktor kann nicht  
   
- Ein mit **\/clr** \(nicht mit **\/clr:pure**\) kompiliertes Modul hat versucht, eine Ausnahme systemeigenen Typs aufzufangen, wobei der Destruktor bzw. copy\-Konstruktor des Typs die \_`_clrcall`\-Aufrufkonvention verwendet.  
+ Ein Modul kompiliert mit **/CLR** hat versucht, eine Ausnahme systemeigenen Typs aufzufangen, wobei Destruktor des Typs oder der Kopierkonstruktor verwendet `__clrcall` Aufrufkonvention.  
   
- Von einer mit **\/clr** \(nicht **\/clr:pure**\) kompilierten Ausnahmebehandlung wird erwartet, dass es sich bei den Memberfunktionen in einem systemeigenen Typ um [\_\_cdecl](../../cpp/cdecl.md) und nicht um [\_\_clrcall](../../cpp/clrcall.md) handelt.  Systemeigene Typen mit Memberfunktionen, die die `__clrcall`\-Aufrufkonvention verwenden, können nicht in einem mit **\/clr** kompilierten Modul abgefangen werden.  
+ Bei der Kompilierung mit **/CLR**, Ausnahmebehandlung erwartet die Memberfunktionen in einem systemeigenen Typ zu [__cdecl](../../cpp/cdecl.md) und nicht [__clrcall](../../cpp/clrcall.md). Systemeigene Typen mit Memberfunktionen verwenden `__clrcall` Aufrufkonvention kann nicht aufgefangen werden, in einem Modul kompiliert mit **/CLR**.  
   
- Weitere Informationen finden Sie unter [\/clr \(Common Language Runtime\-Kompilierung\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Beispiel  
- Im folgenden Beispiel wird C2743 generiert.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C2743 generiert.  
   
 ```  
 // C2743.cpp  

@@ -1,40 +1,57 @@
 ---
-title: "Compilerfehler C2143 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2143"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2143"
+title: Compiler-Fehler C2143 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2143
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# Compilerfehler C2143
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: faa9361da0091ec86628af19a03eadb133ea43cc
+ms.lasthandoff: 02/24/2017
 
-Syntaxfehler: Es fehlt 'Token1' vor 'Token2'  
+---
+# <a name="compiler-error-c2143"></a>Compilerfehler C2143
+Syntaxfehler: Fehlendes 'token1' vor 'token2'  
   
- Der Compiler hat ein spezifisches Token \(also ein anderes Sprachelement als ein Leerzeichen\) erwartet und stattdessen ein anderes Token gefunden.  
+ Der Compiler hat ein spezifisches Token (d. h. ein Sprachelement als ein Leerzeichen) erwartet und stattdessen ein anderes Token gefunden.  
   
- Informationen zu diesem Fehler, wenn sie auftritt, wenn Sie einen im verwenden, finden Sie unter [Knowledge Base\-Artikel 241706](http://support.microsoft.com/kb/241706).  
+ Informationen zu diesem Fehler, wenn es tritt auf, wenn Sie einen Function-Try-Block verwenden, finden Sie unter [Knowledge Base-Artikel 241706](http://support.microsoft.com/kb/241706).  
   
- Anhand der [C\+\+\-Sprachreferenz](../../cpp/cpp-language-reference.md) können Sie feststellen, ob der Code syntaktisch falsch ist.  Da der Compiler diesen Fehler möglicherweise direkt nach dem Treffen auf die Zeile meldet, durch die das Problem verursacht wird, prüfen Sie einige Codezeilen vor der fehlerhaften Zeile.  
+ Überprüfen Sie die [C++-Sprachreferenz](../../cpp/cpp-language-reference.md) bestimmt der Code syntaktisch falsch ist. Da der Compiler diesen Fehler zu melden kann, nachdem sie die Zeile stößt, die das Problem verursacht, überprüfen Sie einige Codezeilen vor der fehlerhaften.  
   
- C2143 kann in unterschiedlichen Situationen auftreten.  
+ C2143 kann in verschiedenen Situationen auftreten.  
   
- Er kann, wenn ein Operator, der ein Name \(`::`, `->` und `.`\) angeben kann vom Schlüsselwort `template` gefolgt werden muss, wie in diesem Beispiel erfolgen:  
+ Er kann auftreten, wenn ein Operator, der einen Namen zu qualifizieren, kann (`::`, `->`, und `.`) muss das Schlüsselwort folgen `template`, wie im folgenden Beispiel:  
   
 ```cpp  
 class MyClass  
@@ -47,7 +64,7 @@ class MyClass
   
 ```  
   
- Standardmäßig übernimmt C\+\+ an, dass `Ty::PutFuncType` keine Vorlage ist; Daher wird folgende `<` als Kleiner\-als\-Zeichen interpretiert.  Sie müssen explizit dem Compiler mitteilen, dass `PutFuncType` eine Vorlage darstellt, sodass sie der spitzen Klammer ordnungsgemäß analysieren kann.  Um diesen Fehler zu beheben, verwenden Sie das Schlüsselwort `template` im abhängigen Namen des Typs, wie hier gezeigt:  
+ Standardmäßig C++ setzt voraus, dass `Ty::PutFuncType` keine Vorlage; daher die folgenden `<` wird als ein interpretiert-als-Zeichen.  Sie müssen den Compiler anweisen explizit, die `PutFuncType` ist eine Vorlage, damit es ordnungsgemäß auf die Spitze Klammer analysieren kann. Um diesen Fehler zu korrigieren, verwenden die `template` Schlüsselwort im abhängigen Typ-Namen, wie hier gezeigt:  
   
 ```cpp  
 class MyClass  
@@ -60,7 +77,7 @@ class MyClass
   
 ```  
   
- C2143 kann auftreten, wenn **\/clr** verwendet wird und eine `using`\-Direktive einen Syntaxfehler haben:  
+ C2143 kann auftreten, wenn **/CLR** wird verwendet, und ein `using` Richtlinie einen Syntaxfehler aufweist:  
   
 ```cpp  
 // C2143a.cpp  
@@ -69,7 +86,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;  
 ```  
   
- Es kann auch auftreten, wenn Sie versuchen, eine Quellcodedatei zu kompilieren, indem Sie CLR\-Syntax ohne auch mit **\/clr** verwenden:  
+ Es kann auch auftreten, wenn Sie versuchen, eine Quellcodedatei mit CLR-Syntax ohne Kompilieren **/CLR**:  
   
 ```cpp  
 // C2143b.cpp  
@@ -83,7 +100,7 @@ int main() {
 }  
 ```  
   
- Das erste Zeichen hinter, das eine `if`\-Anweisung folgt, muss eine öffnende runde Klammer sein.  Der Compiler kann keine anderen Zeichen übersetzen:  
+ Das erste folgende Zeichen kein Leerzeichen ein `if` -Anweisung muss eine öffnende runde Klammer sein. Der Compiler kann nicht alles andere übersetzen:  
   
 ```cpp  
 // C2143c.cpp  
@@ -98,9 +115,9 @@ int main() {
 }  
 ```  
   
- C2143 kann auftreten, wenn einer schließenden geschweiften Klammer, einer Klammer oder ein Semikolon fehlt auf der Zeile, in der der Fehler oder in einer der Zeilen darüber oben erkannt wird:  
+ C2143 kann auftreten, wenn eine schließende geschweifte Klammer, eine Klammer oder ein Semikolon in der Zeile nicht vorhanden ist, in dem der Fehler aufgetreten ist, oder auf eine der Zeilen direkt über:  
   
-```caml  
+```cpp  
 // C2143d.cpp  
 // compile with: /c  
 class X {  
@@ -109,7 +126,7 @@ class X {
 } x;  
 ```  
   
- Oder wenn ein ungültiges Tag in einer Klassendeklaration gibt:  
+ Oder wenn ein ungültiges Tag in einer Klassendeklaration:  
   
 ```cpp  
 // C2143e.cpp  
@@ -121,7 +138,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK  
 ```  
   
- Wenn eine Bezeichnung nicht an eine Anweisung angefügt ist.  Zum Positionieren einer solchen Bezeichnung \(beispielsweise am Ende einer zusammengesetzten Anweisung\) muss sie an eine NULL\-Anweisung angefügt werden.  
+ Oder wenn eine Bezeichnung nicht an eine Anweisung angefügt ist. Wenn Sie eine Bezeichnung allein platzieren müssen, z. B. am Ende einer zusammengesetzten Anweisung fügen Sie es an eine null-Anweisung:  
   
 ```cpp  
 // C2143f.cpp  
@@ -135,7 +152,7 @@ void func1() {
 }  
 ```  
   
- Der Fehler kann auftreten, wenn ein nicht qualifizierter Aufruf eines Typs in der C\+\+\-Standardbibliothek wird:  
+ Der Fehler kann auftreten, wenn ein nicht qualifizierter Aufruf an einen Typ in der C++-Standardbibliothek hergestellt wird:  
   
 ```cpp  
 // C2143g.cpp  
@@ -145,7 +162,7 @@ static vector<char> bad;   // C2143
 static std::vector<char> good;   // OK  
 ```  
   
- Oder es gibt ein fehlendes `typename`\-Schlüsselwort:  
+ Oder es ist ein fehlendes `typename` Schlüsselwort:  
   
 ```cpp  
 // C2143h.cpp  
@@ -164,7 +181,7 @@ X<T>::Y X<T>::memFunc() {   // C2143
 }  
 ```  
   
- Wenn Sie versuchen, eine explizite Instanziierung definiert wird:  
+ Oder wenn Sie versuchen, eine explizite Instanziierung zu definieren:  
   
 ```cpp  
 // C2143i.cpp  
@@ -177,9 +194,9 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK  
 ```  
   
- In einem C\-Programm müssen Variablen am Anfang der Funktion deklariert werden. Nachdem die Funktion nicht\-Deklaration\-Anweisungen ausgeführt hat, können die Variablen nicht deklariert werden.  
+ In einem C-Programm müssen Variablen am Anfang der Funktion deklariert werden, und sie können nicht deklariert werden, nachdem die Funktion nicht-Declaration-Anweisungen ausführt.  
   
-```c  
+```C  
 // C2143j.c  
 int main()   
 {  
@@ -187,5 +204,5 @@ int main()
     i++;  
     int j = 0; // C2143  
 }  
-  
-```
+```  
+

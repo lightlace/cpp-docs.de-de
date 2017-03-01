@@ -1,34 +1,50 @@
 ---
-title: "Compilerfehler C2627 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2627"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2627"
+title: Compiler-Fehler C2627 generiert | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2627
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2627
 ms.assetid: 7fc6c5ac-c7c9-4f0b-ad52-f52252526458
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C2627
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: 2d0354971d4f512c7ba98a1e6d0f7cb014cba5af
+ms.lasthandoff: 02/24/2017
 
-'Funktion': Memberfunktion ist in einer anonymen Union nicht zulässig  
+---
+# <a name="compiler-error-c2627"></a>Compiler-Fehler C2627 generiert
+'Funktion': Memberfunktion ist in einer anonymen Union nicht zulässig.  
   
- In einer [anonymen Union](../../misc/anonymous-unions.md) sind keine Memberfunktionen zulässig.  
+ Ein [anonyme Union](../../cpp/unions.md#anonymous_unions) Memberfunktionen nicht möglich.  
   
- Im folgenden Beispiel wird C2627 generiert:  
+ Im folgende Beispiel wird C2627 generiert:  
   
 ```  
 // C2627.cpp  

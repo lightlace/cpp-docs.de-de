@@ -1,51 +1,48 @@
 ---
-title: "Compilerfehler C2696 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2696"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2696"
+title: Compiler-Fehler C2696 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2696
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2696
 ms.assetid: 6c6eb7df-1230-4346-9a73-abf14c20785d
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Compilerfehler C2696
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 08b8a7990efbf981aec342b99bbb558fd9fab8d5
+ms.lasthandoff: 02/24/2017
 
-Es kann kein temporäres Objekt eines verwalteten Typs 'Typ' erstellt werden  
+---
+# <a name="compiler-error-c2696"></a>Compiler-Fehler C2696
+Ein temporäres Objekt eines verwalteten Typs 'Typ' kann nicht erstellt werden.  
   
- Wenn in einem nicht verwalteten Programm Verweise auf `const` enthalten sind, ruft der Compiler den Konstruktor auf und erstellt ein temporäres Objekt auf dem Stapel.  Eine verwaltete Klasse kann auf dem Stapel jedoch grundsätzlich nicht erstellt werden.  
+Verweise auf `const` in einem nicht verwalteten Programm bewirken, dass der Compiler den Konstruktor aufzurufen, und erstellen ein temporäres Objekt auf dem Stapel. Eine verwaltete Klasse kann jedoch nie auf dem Stapel erstellt werden.  
   
- C2696 ist nur über **\/clr:oldSyntax** erreichbar.  
-  
- Im folgenden Beispiel wird C2696 generiert:  
-  
-```  
-// C2696b.cpp  
-// compile with: /clr:oldSyntax  
-  
-__gc class G {  
-public:  
-   G( int i ) {}  
-};  
-  
-void func( const G& g );  
-  
-int main() {  
-   func( 1 );   // C2696  
-   G *myG = new G( 1 );   // OK  
-   func( *myG );  
-}  
-```
+C2696 ist nur über die veralteten Compileroption erreichbar **/CLR: oldSyntax**.  
+
