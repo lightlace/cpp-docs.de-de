@@ -1,55 +1,71 @@
 ---
-title: "CUserException Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CUserException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CUserException class"
-  - "Fehler [C++], Abfangen"
-  - "Ausnahmen, Auslösen"
-  - "operations [C++]"
-  - "operations [C++], Anhalten"
-  - "Auslösen von Ausnahmen, stopping user operations"
+title: Klasse CUserException | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CUserException
+dev_langs:
+- C++
+helpviewer_keywords:
+- operations [C++], stopping
+- exceptions, throwing
+- CUserException class
+- errors [C++], trapping
+- operations [C++]
+- throwing exceptions, stopping user operations
 ms.assetid: 2156ba6d-2cce-415a-9000-6f02c26fcd7d
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# CUserException Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: 8548ffa7ad9032e174d650e210a70a29b0e3f19d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cuserexception-class"></a>CUserException-Klasse
 Wird ausgelöst, um einen Endbenutzervorgang zu beenden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CUserException : public CSimpleException  
 ```  
   
-## Hinweise  
- Verwendung `CUserException`, wenn Sie den Wurfs\-\/Erfassungsausnahmemechanismus für anwendungsspezifische Ausnahmen verwenden möchten. "  Benutzer" im Klassennamen kann interpretiert werden, wie "My Benutzer Ausnahmes einige bereit, das ich behandeln muss".  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie `CUserException` Wenn Ausnahmemechanismus Throw/Catch für anwendungsspezifische Ausnahmen verwendet werden sollen. "User" in der Klassenname kann interpretiert werden, wie"Meine Benutzer etwas außergewöhnlichen, behandelt werden muss."  
   
- `CUserException` wird normalerweise ausgelöst, nachdem die globale Funktion `AfxMessageBox` aufgerufen wurde, um den Benutzer zu benachrichtigen, dass ein Vorgang fehlgeschlagen ist.  Wenn Sie einen Ausnahmehandler schreiben, behandeln Sie die Ausnahme besonders, da der Benutzer normalerweise bereits vom Fehler benachrichtigt wurde.  Das Framework löst diese Ausnahme in einigen Fällen aus.  Um `CUserException` sich auszulösen, warnen Sie den Benutzer und rufen dann die globale Funktion `AfxThrowUserException` auf.  
+ Ein `CUserException` ausgelöst, in der Regel nach dem Aufrufen der globalen Funktion `AfxMessageBox` zur Benachrichtigung des Benutzers, der ein Vorgang fehlgeschlagen ist. Wenn Sie einen Ausnahmehandler schreiben, behandeln Sie die Ausnahme, besonders, da der Benutzer bereits in der Regel Fehler benachrichtigt wurde. Das Framework löst diese Ausnahme in einigen Fällen. Auslösen einer `CUserException` selbst den Benutzer zu warnen, und rufen Sie anschließend die globale Funktion `AfxThrowUserException`.  
   
- Im Beispiel unten, eine Funktion, die Vorgänge enthält, die möglicherweise Warnungen der Benutzer und auslöst `CUserException` belassen.  Die aufrufende Funktion wird die Ausnahme abgefangen und behandelt sie besonders:  
+ Im folgenden Beispiel eine Funktion, die Vorgänge, die möglicherweise fehlschlagen, benachrichtigt den Benutzer, und löst eine `CUserException`. Die aufrufende Funktion fängt die Ausnahme ab und verarbeitet sie speziell:  
   
- [!CODE [NVC_MFCExceptions#24](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCExceptions#24)]  
+ [!code-cpp[NVC_MFCExceptions&#24;](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]  
   
- Weitere Informationen zur Verwendung von `CUserException`, finden Sie im Artikel [Ausnahmebehandlung \(MFC\)](../../mfc/exception-handling-in-mfc.md).  
+ Weitere Informationen zur Verwendung von `CUserException`, finden Sie im Artikel [Ausnahmebehandlung (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## Vererbungshierarchie  
- [CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+ [Von CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
@@ -57,12 +73,10 @@ class CUserException : public CSimpleException
   
  `CUserException`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CException Class](../../mfc/reference/cexception-class.md)   
- [AfxMessageBox](../Topic/AfxMessageBox.md)   
- [AfxThrowUserException](../Topic/AfxThrowUserException.md)   
- [Wie behebe ich: Erstellen Sie die eigenen benutzerdefinierten Ausnahme\-Klassen?](http://go.microsoft.com/fwlink/?LinkId=128045)
+ [CException-Klasse](../../mfc/reference/cexception-class.md)
+

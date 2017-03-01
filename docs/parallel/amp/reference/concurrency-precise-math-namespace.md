@@ -1,179 +1,198 @@
 ---
-title: "Concurrency::precise_math-Namespace | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_math/Concurrency::precise_math"
-dev_langs: 
-  - "C++"
+title: 'Concurrency:: precise_math-Namespace | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_math/Concurrency::precise_math
+dev_langs:
+- C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Concurrency::precise_math-Namespace
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: b64bd3e3702701ae2685d6688d88988dd91dc5d0
+ms.lasthandoff: 02/24/2017
 
-Funktionen im `precise_math`\-Namespace sind C99\-kompatibel.  werden Versionen der einfachen Genauigkeit und mit doppelter Genauigkeit jeder Funktion enthalten.  Beispielsweise ist `acos` die Version mit doppelter Genauigkeit und `acosf` ist die Version mit einfacher Genauigkeit.  Diese Funktionen, einschließlich der Genauigkeitsfunktionen, benötigen erweiterte Unterstützung mit doppelter Genauigkeit auf der Zugriffstaste.  Verwenden Sie [accelerator::supports\_double\_precision\-Datenmember](../Topic/accelerator::supports_double_precision%20Data%20Member.md), um zu bestimmen, wenn Sie diese Funktionen auf einer bestimmten Tastenkombination ausführen können.  
+---
+# <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math-Namespace
+Funktionen im `precise_math`-Namespace sind C99-kompatibel. Sowohl einfache Genauigkeit, und doppelte Genauigkeit Versionen jeder Funktion enthalten sind. Beispielsweise `acos` ist die Version mit doppelter Genauigkeit und `acosf` ist die Version mit einfacher Genauigkeit. Diese Funktionen, einschließlich der Funktionen mit einfacher Genauigkeit erfordern erweiterte Unterstützung mit doppelter Genauigkeit auf der Zugriffstaste. Sie können die [Accelerator:: supports_double_precision-Datenmember](accelerator-class.md#supports_double_precision) bestimmt, ob Sie diese Funktionen auf eine bestimmte Zugriffstaste ausführen können. 
+
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```vb  
+```cpp  
 namespace precise_math;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Funktionen  
+### <a name="functions"></a>Funktionen  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[acos\-Funktion](../Topic/acos%20Function.md)|Überladen.  Berechnet den Arkuskosinus des Arguments|  
-|[acosf\-Funktion](../Topic/acosf%20Function.md)|Berechnet den Arkuskosinus des Arguments|  
-|[acosh\-Funktion](../Topic/acosh%20Function.md)|Überladen.  Berechnet den hyperbolischen Arkuskosinus des Arguments|  
-|[acoshf\-Funktion](../Topic/acoshf%20Function.md)|Berechnet den hyperbolischen Arkuskosinus des Arguments|  
-|[asin\-Funktion](../Topic/asin%20Function.md)|Überladen.  Berechnet den Arkussinus des Arguments|  
-|[asinf\-Funktion](../Topic/asinf%20Function.md)|Berechnet den Arkussinus des Arguments|  
-|[asinh\-Funktion](../Topic/asinh%20Function.md)|Überladen.  Berechnet den hyperbolischen Arkussinus des Arguments|  
-|[asinhf\-Funktion](../Topic/asinhf%20Function.md)|Berechnet den hyperbolischen Arkussinus des Arguments|  
-|[atan\-Funktion](../Topic/atan%20Function.md)|Überladen.  Berechnet den Arkustangens des Arguments|  
-|[atan2\-Funktion](../Topic/atan2%20Function.md)|Überladen.  Berechnet den Arkustangens von \_Y\/\_X|  
-|[atan2f\-Funktion](../Topic/atan2f%20Function.md)|Berechnet den Arkustangens von \_Y\/\_X|  
-|[atanf\-Funktion](../Topic/atanf%20Function.md)|Berechnet den Arkustangens des Arguments|  
-|[atanh\-Funktion](../Topic/atanh%20Function.md)|Überladen.  Berechnet den hyperbolischer Arkustangens des Arguments|  
-|[atanhf\-Funktion](../Topic/atanhf%20Function.md)|Berechnet den hyperbolischer Arkustangens des Arguments|  
-|[cbrt\-Funktion](../Topic/cbrt%20Function.md)|Überladen.  Berechnet die echte Kubikwurzel des Arguments|  
-|[cbrtf\-Funktion](../Topic/cbrtf%20Function.md)|Berechnet die echte Kubikwurzel des Arguments|  
-|[ceil\-Funktion](../Topic/ceil%20Function.md)|Überladen.  Berechnet die Höchstwert des Arguments|  
-|[ceilf\-Funktion](../Topic/ceilf%20Function.md)|Berechnet die Höchstwert des Arguments|  
-|[copysign\-Funktion](../Topic/copysign%20Function.md)|Überladen.  Erzeugt einen Wert mit der Größe \_X und das Zeichen von \_Y|  
-|[copysignf\-Funktion](../Topic/copysignf%20Function.md)|Erzeugt einen Wert mit der Größe \_X und das Zeichen von \_Y|  
-|[cos\-Funktion](../Topic/cos%20Function.md)|Überladen.  Berechnet den Kosinus des Arguments|  
-|[cosf\-Funktion](../Topic/cosf%20Function.md)|Berechnet den Kosinus des Arguments|  
-|[cosh\-Funktion](../Topic/cosh%20Function.md)|Überladen.  Berechnet den Hyperbelkosinuswert des Arguments|  
-|[coshf\-Funktion](../Topic/coshf%20Function.md)|Berechnet den Hyperbelkosinuswert des Arguments|  
-|[cospi\-Funktion](../Topic/cospi%20Function.md)|Überladen.  Berechnet den Kosinuswert von Pi \* \_X|  
-|[cospif\-Funktion](../Topic/cospif%20Function.md)|Berechnet den Kosinuswert von Pi \* \_X|  
-|[erf\-Funktion](../Topic/erf%20Function.md)|Überladen.  Berechnet die Fehlerfunktion von \_X|  
-|[erfc\-Funktion](../Topic/erfc%20Function.md)|Überladen.  Berechnet die komplementäre Fehlerfunktion von \_X|  
-|[erfcf\-Funktion](../Topic/erfcf%20Function.md)|Berechnet die komplementäre Fehlerfunktion von \_X|  
-|[erfcinv\-Funktion](../Topic/erfcinv%20Function.md)|Überladen.  Berechnet die umgekehrte komplementäre Fehlerfunktion von \_X|  
-|[erfcinvf\-Funktion](../Topic/erfcinvf%20Function.md)|Berechnet die umgekehrte komplementäre Fehlerfunktion von \_X|  
-|[erff\-Funktion](../Topic/erff%20Function.md)|Berechnet die Fehlerfunktion von \_X|  
-|[erfinv\-Funktion](../Topic/erfinv%20Function.md)|Überladen.  Berechnet die umgekehrte Fehlerfunktion von \_X|  
-|[erfinvf\-Funktion](../Topic/erfinvf%20Function.md)|Berechnet die umgekehrte Fehlerfunktion von \_X|  
-|[exp\-Funktion](../Topic/exp%20Function.md)|Überladen.  Berechnet die Basis\-E, die vom Argument exponential ist|  
-|[exp10\-Funktion](../Topic/exp10%20Function.md)|Überladen.  Berechnet die Basis\-10, die vom Argument exponential ist|  
-|[exp10f\-Funktion](../Topic/exp10f%20Function.md)|Berechnet die Basis\-10, die vom Argument exponential ist|  
-|[exp2\-Funktion](../Topic/exp2%20Function.md)|Überladen.  Berechnet die Basis\-2, die vom Argument exponential ist|  
-|[exp2f\-Funktion](../Topic/exp2f%20Function.md)|Berechnet die Basis\-2, die vom Argument exponential ist|  
-|[expf\-Funktion](../Topic/expf%20Function.md)|Berechnet die Basis\-E, die vom Argument exponential ist|  
-|[expm1\-Funktion](../Topic/expm1%20Function.md)|Überladen.  Berechnet die Basis\-E, die vom Argument, minus 1 Exponential ist|  
-|[expm1f\-Funktion](../Topic/expm1f%20Function.md)|Berechnet die Basis\-E, die vom Argument, minus 1 Exponential ist|  
-|[fabs\-Funktion](../Topic/fabs%20Function.md)|Überladen.  Gibt den absoluten Wert des Arguments zurück.|  
-|[fabsf\-Funktion](../Topic/fabsf%20Function.md)|Gibt den absoluten Wert des Arguments zurück.|  
-|[fdim\-Funktion](../Topic/fdim%20Function.md)|Überladen.  Bestimmt die positiven Unterschied zwischen den Argumenten|  
-|[fdimf\-Funktion](../Topic/fdimf%20Function.md)|Bestimmt die positiven Unterschied zwischen den Argumenten|  
-|[floor\-Funktion](../Topic/floor%20Function.md)|Überladen.  Berechnet den Tiefstwert des Arguments|  
-|[floorf\-Funktion](../Topic/floorf%20Function.md)|Berechnet den Tiefstwert des Arguments|  
-|[fma\-Funktion](../Topic/fma%20Function.md)|Überladen.  Berechnung \_X \(\* \_Y\) \+ \_Z, abgerundet als ein dreifacher Operation|  
-|[fmaf\-Funktion](../Topic/fmaf%20Function.md)|Berechnung \_X \(\* \_Y\) \+ \_Z, abgerundet als ein dreifacher Operation|  
-|[fmax\-Funktion](../Topic/fmax%20Function.md)|Überladen.  Festlegung des höchsten numerischen Werts der Argumente|  
-|[fmaxf\-Funktion](../Topic/fmaxf%20Function.md)|Festlegung des höchsten numerischen Werts der Argumente|  
-|[fmin\-Funktion](../Topic/fmin%20Function.md)|Überladen.  Festlegung des niedrigsten numerischen Werts der Argumente|  
-|[fminf\-Funktion](../Topic/fminf%20Function.md)|Festlegung des niedrigsten numerischen Werts der Argumente|  
-|[fmod\-Funktion \(C\+\+ AMP\)](../Topic/fmod%20Function%20\(C++%20AMP\).md)|Überladen.  Berechnet den Gleitkommarest von \_X\/\_Y|  
-|[fmodf\-Funktion](../Topic/fmodf%20Function.md)|Berechnet den Gleitkommarest von \_X\/\_Y|  
-|[fpclassify\-Funktion](../Topic/fpclassify%20Function.md)|Überladen.  Klassifiziert den Argumentwert als nan, unendlich, Normal, subnormal, gleich|  
-|[frexp\-Funktion](../Topic/frexp%20Function.md)|Überladen.  Ruft die Mantisse und den Exponenten von \_X ab|  
-|[frexpf\-Funktion](../Topic/frexpf%20Function.md)|Ruft die Mantisse und den Exponenten von \_X ab|  
-|[hypot\-Funktion](../Topic/hypot%20Function.md)|Überladen.  Berechnet die Quadratwurzel der Summe der Quadrate von \_X und von \_Y|  
-|[hypotf\-Funktion](../Topic/hypotf%20Function.md)|Berechnet die Quadratwurzel der Summe der Quadrate von \_X und von \_Y|  
-|[ilogb\-Funktion](../Topic/ilogb%20Function.md)|Überladen.  Extrahiert den Exponenten \_X als der int\-Wert mit Vorzeichen|  
-|[ilogbf\-Funktion](../Topic/ilogbf%20Function.md)|Extrahiert den Exponenten \_X als der int\-Wert mit Vorzeichen|  
-|[isfinite\-Funktion](../Topic/isfinite%20Function.md)|Überladen.  Bestimmt, ob das Argument einen über begrenzten Wert verfügt|  
-|[isinf\-Funktion](../Topic/isinf%20Function.md)|Überladen.  Bestimmt, ob das Argument unendlich ist|  
-|[isnan\-Funktion](../Topic/isnan%20Function.md)|Überladen.  Bestimmt, ob das Argument ein NaN|  
-|[isnormal\-Funktion](../Topic/isnormal%20Function.md)|Überladen.  Bestimmt, ob das Argument ein normaler Block ist|  
-|[ldexp\-Funktion](../Topic/ldexp%20Function.md)|Überladen.  Berechnet eine reelle Zahl aus der Mantisse und dem Exponent|  
-|[ldexpf\-Funktion](../Topic/ldexpf%20Function.md)|Berechnet eine reelle Zahl aus der Mantisse und dem Exponent|  
-|[lgamma\-Funktion](../Topic/lgamma%20Function.md)|Überladen.  Berechnet den natürlichen Logarithmus des absoluten Wert des Gammas vom Argument|  
-|[lgammaf\-Funktion](../Topic/lgammaf%20Function.md)|Berechnet den natürlichen Logarithmus des absoluten Wert des Gammas vom Argument|  
-|[log\-Funktion](../Topic/log%20Function.md)|Überladen.  Berechnet den Basis\-E\-Logarithmus des Arguments|  
-|[log10\-Funktion](../Topic/log10%20Function.md)|Überladen.  Berechnet den Basis\-10\-Logarithmus des Arguments|  
-|[log10f\-Funktion](../Topic/log10f%20Function.md)|Berechnet den Basis\-10\-Logarithmus des Arguments|  
-|[log1p\-Funktion](../Topic/log1p%20Function.md)|Überladen.  Berechnet den Basis\-Elogarithmus von 1 plus Argument|  
-|[log1pf\-Funktion](../Topic/log1pf%20Function.md)|Berechnet den Basis\-Elogarithmus von 1 plus Argument|  
-|[log2\-Funktion](../Topic/log2%20Function.md)|Überladen.  Berechnet den Basis\-2\-Logarithmus des Arguments|  
-|[log2f\-Funktion](../Topic/log2f%20Function.md)|Berechnet den Basis\-2\-Logarithmus des Arguments|  
-|[logb\-Funktion](../Topic/logb%20Function.md)|Überladen.  Extrahiert den Exponenten von \_X, als ganzzahliger Wert mit Vorzeichen im Gleitkommaformats|  
-|[logbf\-Funktion](../Topic/logbf%20Function.md)|Extrahiert den Exponenten von \_X, als ganzzahliger Wert mit Vorzeichen im Gleitkommaformats|  
-|[logf\-Funktion](../Topic/logf%20Function.md)|Berechnet den Basis\-E\-Logarithmus des Arguments|  
-|[modf\-Funktion](../Topic/modf%20Function.md)|Überladen.  Teilt \_X in Nachkommastellen und ganze Zahlen auf.|  
-|[modff\-Funktion](../Topic/modff%20Function.md)|Teilt \_X in Nachkommastellen und ganze Zahlen auf.|  
-|[nan\-Funktion](../Topic/nan%20Function.md)|Gibt einen stillen nan zurück|  
-|[nanf\-Funktion](../Topic/nanf%20Function.md)|Gibt einen stillen nan zurück|  
-|[nearbyint\-Funktion](../Topic/nearbyint%20Function.md)|Überladen.  Rundet das Argument in einen Ganzzahlwert im Gleitkommaformat, mit der aktuellen rundenden Richtung.|  
-|[nearbyintf\-Funktion](../Topic/nearbyintf%20Function.md)|Rundet das Argument in einen Ganzzahlwert im Gleitkommaformat, mit der aktuellen rundenden Richtung.|  
-|[nextafter\-Funktion](../Topic/nextafter%20Function.md)|Überladen.  Bestimmen Sie den nächsten darstellbaren Wert, im Typ der Funktion, nach \_X in Richtung \_Y|  
-|[nextafterf\-Funktion](../Topic/nextafterf%20Function.md)|Bestimmen Sie den nächsten darstellbaren Wert, im Typ der Funktion, nach \_X in Richtung \_Y|  
-|[phi\-Funktion](../Topic/phi%20Function.md)|Überladen.  Gibt der kumulativen Verteilungsfunktion des Arguments zurück|  
-|[phif\-Funktion](../Topic/phif%20Function.md)|Gibt der kumulativen Verteilungsfunktion des Arguments zurück|  
-|[pow\-Funktion](../Topic/pow%20Function.md)|Überladen.  Berechnet \_X potenziert mit \_Y|  
-|[powf\-Funktion](../Topic/powf%20Function.md)|Berechnet \_X potenziert mit \_Y|  
-|[probit\-Funktion](../Topic/probit%20Function.md)|Überladen.  Gibt der umgekehrten kumulativen Verteilungsfunktion des Arguments zurück|  
-|[probitf\-Funktion](../Topic/probitf%20Function.md)|Gibt der umgekehrten kumulativen Verteilungsfunktion des Arguments zurück|  
-|[rcbrt\-Funktion](../Topic/rcbrt%20Function.md)|Überladen.  Gibt das gegenseitige der Kubikwurzel des Arguments zurück|  
-|[rcbrtf\-Funktion](../Topic/rcbrtf%20Function.md)|Gibt das gegenseitige der Kubikwurzel des Arguments zurück|  
-|[Restfunktion](../Topic/remainder%20Function.md)|Überladen.  Berechnet den Rest: \_X REM\- Y|  
-|[remainderf\-Funktion](../Topic/remainderf%20Function.md)|Berechnet den Rest: \_X REM\- Y|  
-|[remquo\-Funktion](../Topic/remquo%20Function.md)|Überladen.  Berechnet denselben Rest wie \_X REM\- Y.  Berechnet auch die unteren 23 Bits des ganzzahligen Quotienten \_X\/\_Y und gibt, die dasselbe Zeichen wie \_X\/\_Y bewerten.  Es speichert diesen Wert mit Vorzeichen in der ganzen Zahl, die von \_Quo gezeigt wird.|  
-|[remquof\-Funktion](../Topic/remquof%20Function.md)|Berechnet denselben Rest wie \_X REM\- Y.  Berechnet auch die unteren 23 Bits des ganzzahligen Quotienten \_X\/\_Y und gibt, die dasselbe Zeichen wie \_X\/\_Y bewerten.  Es speichert diesen Wert mit Vorzeichen in der ganzen Zahl, die von \_Quo gezeigt wird.|  
-|[round\-Funktion](../Topic/round%20Function.md)|Überladen.  Rundet \_X auf die nächste ganze Zahl|  
-|[roundf\-Funktion](../Topic/roundf%20Function.md)|Rundet \_X auf die nächste ganze Zahl|  
-|[rsqrt\-Funktion](../Topic/rsqrt%20Function.md)|Überladen.  Gibt den Kehrwert der Quadratwurzel des Arguments zurück|  
-|[rsqrtf\-Funktion](../Topic/rsqrtf%20Function.md)|Gibt den Kehrwert der Quadratwurzel des Arguments zurück|  
-|[scalb\-Funktion](../Topic/scalb%20Function.md)|Überladen.  Multipliziert \_X durch FLT\_RADIX Leistungsfähigkeit zum \_Y|  
-|[scalbf\-Funktion](../Topic/scalbf%20Function.md)|Multipliziert \_X durch FLT\_RADIX Leistungsfähigkeit zum \_Y|  
-|[scalbn\-Funktion](../Topic/scalbn%20Function.md)|Überladen.  Multipliziert \_X durch FLT\_RADIX Leistungsfähigkeit zum \_Y|  
-|[scalbnf\-Funktion](../Topic/scalbnf%20Function.md)|Multipliziert \_X durch FLT\_RADIX Leistungsfähigkeit zum \_Y|  
-|[signbit\-Funktion](../Topic/signbit%20Function.md)|Überladen.  Bestimmt, ob das Zeichen von \_X negativ ist|  
-|[signbitf\-Funktion](../Topic/signbitf%20Function.md)|Bestimmt, ob das Zeichen von \_X negativ ist|  
-|[sin\-Funktion](../Topic/sin%20Function.md)|Überladen.  Berechnet den Sinuswert des Arguments|  
-|[sincos\-Funktion](../Topic/sincos%20Function.md)|Überladen.  Berechnet Sinus\- und Kosinuswert von \_X|  
-|[sincosf\-Funktion](../Topic/sincosf%20Function.md)|Berechnet Sinus\- und Kosinuswert von \_X|  
-|[sinf\-Funktion](../Topic/sinf%20Function.md)|Berechnet den Sinuswert des Arguments|  
-|[sinh\-Funktion](../Topic/sinh%20Function.md)|Überladen.  Berechnet den Hyperbelsinuswert des Arguments|  
-|[sinhf\-Funktion](../Topic/sinhf%20Function.md)|Berechnet den Hyperbelsinuswert des Arguments|  
-|[sinpi\-Funktion](../Topic/sinpi%20Function.md)|Überladen.  Berechnet den Sinuswert von Pi \* \_X|  
-|[sinpif\-Funktion](../Topic/sinpif%20Function.md)|Berechnet den Sinuswert von Pi \* \_X|  
-|[sqrt\-Funktion](../Topic/sqrt%20Function.md)|Überladen.  Berechnet den squre Stamm des Arguments|  
-|[sqrtf\-Funktion](../Topic/sqrtf%20Function.md)|Berechnet den squre Stamm des Arguments|  
-|[tan\-Funktion](../Topic/tan%20Function.md)|Überladen.  Berechnet den Tangenswert des Arguments|  
-|[tanf\-Funktion](../Topic/tanf%20Function.md)|Berechnet den Tangenswert des Arguments|  
-|[tanh\-Funktion](../Topic/tanh%20Function.md)|Überladen.  Berechnet den Hyperbeltangenswert des Arguments|  
-|[tanhf\-Funktion](../Topic/tanhf%20Function.md)|Berechnet den Hyperbeltangenswert des Arguments|  
-|[tanpi\-Funktion](../Topic/tanpi%20Function.md)|Überladen.  Berechnet den Tangenswert von Pi \* \_X|  
-|[tanpif\-Funktion](../Topic/tanpif%20Function.md)|Berechnet den Tangenswert von Pi \* \_X|  
-|[tgamma\-Funktion](../Topic/tgamma%20Function.md)|Überladen.  Berechnet die Gamma\-Funktion von \_X|  
-|[tgammaf\-Funktion](../Topic/tgammaf%20Function.md)|Berechnet die Gamma\-Funktion von \_X|  
-|[trunc\-Funktion](../Topic/trunc%20Function.md)|Überladen.  Schneidet das Argument der ganzzahligen Komponente ab|  
-|[truncf\-Funktion](../Topic/truncf%20Function.md)|Schneidet das Argument der ganzzahligen Komponente ab|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[ACOS-Funktion](concurrency-precise-math-namespace-functions.md#acos)|Überladen. Berechnet den Arkuskosinus des Arguments|  
+|[Acosf-Funktion](concurrency-precise-math-namespace-functions.md#acosf)|Berechnet den Arkuskosinus des Arguments|  
+|[Acosh-Funktion](concurrency-precise-math-namespace-functions.md#acosh)|Überladen. Berechnet den umgekehrten hyperbolischen Kosinus des Arguments|  
+|[Acoshf-Funktion](concurrency-precise-math-namespace-functions.md#acoshf)|Berechnet den umgekehrten hyperbolischen Kosinus des Arguments|  
+|[ASIN-Funktion](concurrency-precise-math-namespace-functions.md#asin)|Überladen. Berechnet den Arkussinus des Arguments|  
+|[Asinf-Funktion](concurrency-precise-math-namespace-functions.md#asinf)|Berechnet den Arkussinus des Arguments|  
+|[Asinh-Funktion](concurrency-precise-math-namespace-functions.md#asinh)|Überladen. Berechnet den umgekehrten hyperbolischen Sinus des Arguments|  
+|[Asinhf-Funktion](concurrency-precise-math-namespace-functions.md#asinhf)|Berechnet den umgekehrten hyperbolischen Sinus des Arguments|  
+|[ATAN-Funktion](concurrency-precise-math-namespace-functions.md#atan)|Überladen. Berechnet den Arkustangens des Arguments|  
+|[atan2-Funktion](concurrency-precise-math-namespace-functions.md#atan2)|Überladen. Berechnet den Arkustangens von _Y/_X|  
+|[atan2f-Funktion](concurrency-precise-math-namespace-functions.md#atan2f)|Berechnet den Arkustangens von _Y/_X|  
+|[Atanf-Funktion](concurrency-precise-math-namespace-functions.md#atanf)|Berechnet den Arkustangens des Arguments|  
+|[Atanh-Funktion](concurrency-precise-math-namespace-functions.md#atanh)|Überladen. Berechnet den umgekehrten hyperbolischen Tangens des Arguments|  
+|[Atanhf-Funktion](concurrency-precise-math-namespace-functions.md#atanhf)|Berechnet den umgekehrten hyperbolischen Tangens des Arguments|  
+|[Cbrt-Funktion](concurrency-precise-math-namespace-functions.md#cbrt)|Überladen. Berechnet die Kubikwurzel real des Arguments|  
+|[Cbrtf-Funktion](concurrency-precise-math-namespace-functions.md#cbrtf)|Berechnet die Kubikwurzel real des Arguments|  
+|[ceil-Funktion](concurrency-precise-math-namespace-functions.md#ceil)|Überladen. Berechnet den Höchstwert des Arguments|  
+|[Ceilf-Funktion](concurrency-precise-math-namespace-functions.md#ceilf)|Berechnet den Höchstwert des Arguments|  
+|[Copysign-Funktion](concurrency-precise-math-namespace-functions.md#copysign)|Überladen. Produziert einen Wert mit der Größe von _X und das Zeichen _y|  
+|[Copysignf-Funktion](concurrency-precise-math-namespace-functions.md#copysignf)|Produziert einen Wert mit der Größe von _X und das Zeichen _y|  
+|[cos Funktion](concurrency-precise-math-namespace-functions.md#cos)|Überladen. Berechnet den Kosinus des Arguments|  
+|[Cosf-Funktion](concurrency-precise-math-namespace-functions.md#cosf)|Berechnet den Kosinus des Arguments|  
+|[cosh-Funktion](concurrency-precise-math-namespace-functions.md#cosh)|Überladen. Berechnet den Hyperbelkosinuswert des Arguments|  
+|[Coshf-Funktion](concurrency-precise-math-namespace-functions.md#coshf)|Berechnet den Hyperbelkosinuswert des Arguments|  
+|[Cospi-Funktion](concurrency-precise-math-namespace-functions.md#cospi)|Überladen. Berechnet den Kosinuswert von Pi * _X|  
+|[Cospif-Funktion](concurrency-precise-math-namespace-functions.md#cospif)|Berechnet den Kosinuswert von Pi * _X|  
+|[Erf-Funktion](concurrency-precise-math-namespace-functions.md#erf)|Überladen. Berechnet die Fehlerfunktion von _X|  
+|[ErfC-Funktion](concurrency-precise-math-namespace-functions.md#erfc)|Überladen. Berechnet die komplementäre Fehlerfunktion von _X|  
+|[Erfcf-Funktion](concurrency-precise-math-namespace-functions.md#erfcf)|Berechnet die komplementäre Fehlerfunktion von _X|  
+|[Erfcinv-Funktion](concurrency-precise-math-namespace-functions.md#erfcinv)|Überladen. Berechnet die inverse komplementäre Fehlerfunktion von _X|  
+|[Erfcinvf-Funktion](concurrency-precise-math-namespace-functions.md#erfcinvf)|Berechnet die inverse komplementäre Fehlerfunktion von _X|  
+|[Erff-Funktion](concurrency-precise-math-namespace-functions.md#erff)|Berechnet die Fehlerfunktion von _X|  
+|[Erfinv-Funktion](concurrency-precise-math-namespace-functions.md#erfinv)|Überladen. Berechnet die inverse Error-Funktion von _X|  
+|[Erfinvf-Funktion](concurrency-precise-math-namespace-functions.md#erfinvf)|Berechnet die inverse Error-Funktion von _X|  
+|[EXP-Funktion](concurrency-precise-math-namespace-functions.md#exp)|Überladen. Berechnet die Basis-E, die vom Argument exponential ist|  
+|[exp10-Funktion](concurrency-precise-math-namespace-functions.md#exp10)|Überladen. Berechnet die Basis&10; vom Argument exponential|  
+|[exp10f-Funktion](concurrency-precise-math-namespace-functions.md#exp10f)|Berechnet die Basis&10; vom Argument exponential|  
+|[EXP2-Funktion](concurrency-precise-math-namespace-functions.md#exp2)|Überladen. Berechnet die Basis-2, die vom Argument exponential ist|  
+|[exp2f-Funktion](concurrency-precise-math-namespace-functions.md#exp2f)|Berechnet die Basis-2, die vom Argument exponential ist|  
+|[Expf-Funktion](concurrency-precise-math-namespace-functions.md#expf)|Berechnet die Basis-E, die vom Argument exponential ist|  
+|[expm1-Funktion](concurrency-precise-math-namespace-functions.md#expm1)|Überladen. Berechnet die Basis-E, die vom Argument exponential ist, minus 1|  
+|[expm1f-Funktion](concurrency-precise-math-namespace-functions.md#expm1f)|Berechnet die Basis-E, die vom Argument exponential ist, minus 1|  
+|[Fabs-Funktion](concurrency-precise-math-namespace-functions.md#fabs)|Überladen. Gibt den absoluten Wert des Arguments zurück.|  
+|[Fabsf-Funktion](concurrency-precise-math-namespace-functions.md#fabsf)|Gibt den absoluten Wert des Arguments zurück.|  
+|[Fdim-Funktion](concurrency-precise-math-namespace-functions.md#fdim)|Überladen. Bestimmt den positiven Unterschied zwischen den Argumenten|  
+|[Fdimf-Funktion](concurrency-precise-math-namespace-functions.md#fdimf)|Bestimmt den positiven Unterschied zwischen den Argumenten|  
+|[Floor-Funktion](concurrency-precise-math-namespace-functions.md#floor)|Überladen. Berechnet den Tiefstwert des Arguments|  
+|[Floorf-Funktion](concurrency-precise-math-namespace-functions.md#floorf)|Berechnet den Tiefstwert des Arguments|  
+|[FMA-Funktion](concurrency-precise-math-namespace-functions.md#fma)|Überladen. Berechnen (_X * _Y) + _Z, als ternärer Vorgang gerundet|  
+|[Fmaf-Funktion](concurrency-precise-math-namespace-functions.md#fmaf)|Berechnen (_X * _Y) + _Z, als ternärer Vorgang gerundet|  
+|[Fmax-Funktion](concurrency-precise-math-namespace-functions.md#fmax)|Überladen. Festlegung des höchsten numerischen Werts der Argumente|  
+|[Fmaxf-Funktion](concurrency-precise-math-namespace-functions.md#fmaxf)|Festlegung des höchsten numerischen Werts der Argumente|  
+|[Fmin-Funktion](concurrency-precise-math-namespace-functions.md#fmin)|Überladen. Festlegung des niedrigsten numerischen Werts der Argumente|  
+|[Fminf-Funktion](concurrency-precise-math-namespace-functions.md#fminf)|Festlegung des niedrigsten numerischen Werts der Argumente|  
+|[Fmod-Funktion (C++-AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Überladen. Berechnet den Gleitkommarest von _X/_Y|  
+|[Fmodf-Funktion](concurrency-precise-math-namespace-functions.md#fmodf)|Berechnet den Gleitkommarest von _X/_Y|  
+|[Fpclassify-Funktion](concurrency-precise-math-namespace-functions.md#fpclassify)|Überladen. Den Argumentwert klassifiziert, wie NaN, unendlich, Normal, subnormal,&0; (null)|  
+|[Frexp-Funktion](concurrency-precise-math-namespace-functions.md#frexp)|Überladen. Ruft die Mantisse und den Exponenten von _X ab|  
+|[Frexpf-Funktion](concurrency-precise-math-namespace-functions.md#frexpf)|Ruft die Mantisse und den Exponenten von _X ab|  
+|[Hypot-Funktion](concurrency-precise-math-namespace-functions.md#hypot)|Überladen. Berechnet die Quadratwurzel der Summe der Quadrate von _X und _Y|  
+|[Hypotf-Funktion](concurrency-precise-math-namespace-functions.md#hypotf)|Berechnet die Quadratwurzel der Summe der Quadrate von _X und _Y|  
+|[Ilogb-Funktion](concurrency-precise-math-namespace-functions.md#ilogb)|Überladen. Extrahieren Sie den Exponenten von _X als Wert mit Vorzeichen int|  
+|[Ilogbf-Funktion](concurrency-precise-math-namespace-functions.md#ilogbf)|Extrahieren Sie den Exponenten von _X als Wert mit Vorzeichen int|  
+|[IsFinite-Funktion](concurrency-precise-math-namespace-functions.md#isfinite)|Überladen. Bestimmt, ob das Argument einen über begrenzten Wert verfügt|  
+|[Isinf-Funktion](concurrency-precise-math-namespace-functions.md#isinf)|Überladen. Bestimmt, ob das Argument unendlich ist|  
+|[IsNaN-Funktion](concurrency-precise-math-namespace-functions.md#isnan)|Überladen. Bestimmt, ob das Argument ein NaN|  
+|[Isnormal-Funktion](concurrency-precise-math-namespace-functions.md#isnormal)|Überladen. Bestimmt, ob das Argument ein normaler|  
+|[Ldexp-Funktion](concurrency-precise-math-namespace-functions.md#ldexp)|Überladen. Berechnet eine reelle Zahl aus der Mantisse und dem Exponent|  
+|[Ldexpf-Funktion](concurrency-precise-math-namespace-functions.md#ldexpf)|Berechnet eine reelle Zahl aus der Mantisse und dem Exponent|  
+|[Lgamma-Funktion](concurrency-precise-math-namespace-functions.md#lgamma)|Überladen. Berechnet den natürlichen Logarithmus der Absolute Wert des Gamma des Arguments|  
+|[Lgammaf-Funktion](concurrency-precise-math-namespace-functions.md#lgammaf)|Berechnet den natürlichen Logarithmus der Absolute Wert des Gamma des Arguments|  
+|[log-Funktion](concurrency-precise-math-namespace-functions.md#log)|Überladen. Berechnet den Basis-E-Logarithmus des Arguments|  
+|[LOG10-Funktion](concurrency-precise-math-namespace-functions.md#log10)|Überladen. Berechnet den Basis-10-Logarithmus des Arguments|  
+|[log10f-Funktion](concurrency-precise-math-namespace-functions.md#log10f)|Berechnet den Basis-10-Logarithmus des Arguments|  
+|[log1p-Funktion](concurrency-precise-math-namespace-functions.md#log1p)|Überladen. Berechnet den Basis-e-Logarithmus des 1 plus das argument|  
+|[log1pf-Funktion](concurrency-precise-math-namespace-functions.md#log1pf)|Berechnet den Basis-e-Logarithmus des 1 plus das argument|  
+|[log2-Funktion](concurrency-precise-math-namespace-functions.md#log2)|Überladen. Berechnet den Basis-2-Logarithmus des Arguments|  
+|[log2f-Funktion](concurrency-precise-math-namespace-functions.md#log2f)|Berechnet den Basis-2-Logarithmus des Arguments|  
+|[Logb-Funktion](concurrency-precise-math-namespace-functions.md#logb)|Überladen. Extrahiert den Exponenten von _x ab, als eine Ganzzahl mit Vorzeichen im Gleitkommaformat|  
+|[Logbf-Funktion](concurrency-precise-math-namespace-functions.md#logbf)|Extrahiert den Exponenten von _x ab, als eine Ganzzahl mit Vorzeichen im Gleitkommaformat|  
+|[Logf-Funktion](concurrency-precise-math-namespace-functions.md#logf)|Berechnet den Basis-E-Logarithmus des Arguments|  
+|[Modf-Funktion](concurrency-precise-math-namespace-functions.md#modf)|Überladen. Teilt _X in Nachkommastellen und ganze Zahlen auf.|  
+|[Modff-Funktion](concurrency-precise-math-namespace-functions.md#modff)|Teilt _X in Nachkommastellen und ganze Zahlen auf.|  
+|[NaN-Funktion](concurrency-precise-math-namespace-functions.md#nan)|Gibt ein stilles NaN zurück|  
+|[Nanf-Funktion](concurrency-precise-math-namespace-functions.md#nanf)|Gibt ein stilles NaN zurück|  
+|[Nearbyint-Funktion](concurrency-precise-math-namespace-functions.md#nearbyint)|Überladen. Rundet das Argument in einen ganzzahligen Wert im Gleitkommaformat mit dem aktuellen Rundung.|  
+|[Nearbyintf-Funktion](concurrency-precise-math-namespace-functions.md#nearbyintf)|Rundet das Argument in einen ganzzahligen Wert im Gleitkommaformat mit dem aktuellen Rundung.|  
+|[Nextafter-Funktion](concurrency-precise-math-namespace-functions.md#nextafter)|Überladen. Bestimmen Sie den nächsten darstellbaren Wert, im Typ der Funktion, nach _X in Richtung _Y|  
+|[Nextafterf-Funktion](concurrency-precise-math-namespace-functions.md#nextafterf)|Bestimmen Sie den nächsten darstellbaren Wert, im Typ der Funktion, nach _X in Richtung _Y|  
+|[Phi-Funktion](concurrency-precise-math-namespace-functions.md#phi)|Überladen. Gibt die kumulative Verteilungsfunktion des Arguments zurück|  
+|[Phif-Funktion](concurrency-precise-math-namespace-functions.md#phif)|Gibt die kumulative Verteilungsfunktion des Arguments zurück|  
+|[Pow-Funktion](concurrency-precise-math-namespace-functions.md#pow)|Überladen. Berechnet _X potenziert mit _Y|  
+|[Powf-Funktion](concurrency-precise-math-namespace-functions.md#powf)|Berechnet _X potenziert mit _Y|  
+|[probit-Funktion](concurrency-precise-math-namespace-functions.md#probit)|Überladen. Gibt die inverse kumulative Verteilungsfunktion des Arguments zurück|  
+|[Probitf-Funktion](concurrency-precise-math-namespace-functions.md#probitf)|Gibt die inverse kumulative Verteilungsfunktion des Arguments zurück|  
+|[Rcbrt-Funktion](concurrency-precise-math-namespace-functions.md#rcbrt)|Überladen. Gibt den Kehrwert der die Kubikwurzel des Arguments zurück|  
+|[Rcbrtf-Funktion](concurrency-precise-math-namespace-functions.md#rcbrtf)|Gibt den Kehrwert der die Kubikwurzel des Arguments zurück|  
+|[Restfunktion](concurrency-precise-math-namespace-functions.md#remainder)|Überladen. Berechnet den Rest: _X REM _Y|  
+|[Remainderf-Funktion](concurrency-precise-math-namespace-functions.md#remainderf)|Berechnet den Rest: _X REM _Y|  
+|[Remquo-Funktion](concurrency-precise-math-namespace-functions.md#remquo)|Überladen. Berechnet den gleichen Rest als _X REM _Y. Auch die unteren 23 Bits von den ganzzahligen Quotienten _X/_Y berechnet, und gibt dieser Wert die gleichen Vorzeichen wie _X/_Y. Dieser Wert mit Vorzeichen in die ganze Zahl, die auf den _Quo gespeichert.|  
+|[Remquof-Funktion](concurrency-precise-math-namespace-functions.md#remquof)|Berechnet den gleichen Rest als _X REM _Y. Auch die unteren 23 Bits von den ganzzahligen Quotienten _X/_Y berechnet, und gibt dieser Wert die gleichen Vorzeichen wie _X/_Y. Dieser Wert mit Vorzeichen in die ganze Zahl, die auf den _Quo gespeichert.|  
+|[Round-Funktion](concurrency-precise-math-namespace-functions.md#round)|Überladen. Rundet _X auf die nächste ganze Zahl|  
+|[Roundf-Funktion](concurrency-precise-math-namespace-functions.md#roundf)|Rundet _X auf die nächste ganze Zahl|  
+|[Rsqrt-Funktion](concurrency-precise-math-namespace-functions.md#rsqrt)|Überladen. Gibt den Kehrwert der Quadratwurzel des Arguments zurück|  
+|[Rsqrtf-Funktion](concurrency-precise-math-namespace-functions.md#rsqrtf)|Gibt den Kehrwert der Quadratwurzel des Arguments zurück|  
+|[Scalb-Funktion](concurrency-precise-math-namespace-functions.md#scalb)|Überladen. Multipliziert _X von FLT_RADIX auf die Power-_Y|  
+|[Scalbf-Funktion](concurrency-precise-math-namespace-functions.md#scalbf)|Multipliziert _X von FLT_RADIX auf die Power-_Y|  
+|[Scalbn-Funktion](concurrency-precise-math-namespace-functions.md#scalbn)|Überladen. Multipliziert _X von FLT_RADIX auf die Power-_Y|  
+|[Scalbnf-Funktion](concurrency-precise-math-namespace-functions.md#scalbnf)|Multipliziert _X von FLT_RADIX auf die Power-_Y|  
+|[Signbit-Funktion](concurrency-precise-math-namespace-functions.md#signbit)|Überladen. Bestimmt, ob die Vorzeichen von _X negativ ist.|  
+|[Signbitf-Funktion](concurrency-precise-math-namespace-functions.md#signbitf)|Bestimmt, ob die Vorzeichen von _X negativ ist.|  
+|[SIN-Funktion](concurrency-precise-math-namespace-functions.md#sin)|Überladen. Berechnet den Sinuswert des Arguments|  
+|[Sincos-Funktion](concurrency-precise-math-namespace-functions.md#sincos)|Überladen. Berechnet Sinus- und Kosinuswert von _X|  
+|[Sincosf-Funktion](concurrency-precise-math-namespace-functions.md#sincosf)|Berechnet Sinus- und Kosinuswert von _X|  
+|[Sinf-Funktion](concurrency-precise-math-namespace-functions.md#sinf)|Berechnet den Sinuswert des Arguments|  
+|[Sinh-Funktion](concurrency-precise-math-namespace-functions.md#sinh)|Überladen. Berechnet den Hyperbelsinuswert des Arguments|  
+|[Sinhf-Funktion](concurrency-precise-math-namespace-functions.md#sinhf)|Berechnet den Hyperbelsinuswert des Arguments|  
+|[Sinpi-Funktion](concurrency-precise-math-namespace-functions.md#sinpi)|Überladen. Berechnet den Sinuswert von Pi * _X|  
+|[Sinpif-Funktion](concurrency-precise-math-namespace-functions.md#sinpif)|Berechnet den Sinuswert von Pi * _X|  
+|[Sqrt-Funktion](concurrency-precise-math-namespace-functions.md#sqrt)|Überladen. Berechnet den Squre Stamm des Arguments|  
+|[Sqrtf-Funktion](concurrency-precise-math-namespace-functions.md#sqrtf)|Berechnet den Squre Stamm des Arguments|  
+|[Tan-Funktion](concurrency-precise-math-namespace-functions.md#tan)|Überladen. Berechnet den Tangenswert des Arguments|  
+|[Tanf-Funktion](concurrency-precise-math-namespace-functions.md#tanf)|Berechnet den Tangenswert des Arguments|  
+|[Tanh-Funktion](concurrency-precise-math-namespace-functions.md#tanh)|Überladen. Berechnet den Hyperbeltangenswert des Arguments|  
+|[Tanhf-Funktion](concurrency-precise-math-namespace-functions.md#tanhf)|Berechnet den Hyperbeltangenswert des Arguments|  
+|[Tanpi-Funktion](concurrency-precise-math-namespace-functions.md#tanpi)|Überladen. Berechnet den Tangenswert von Pi * _X|  
+|[Tanpif-Funktion](concurrency-precise-math-namespace-functions.md#tanpif)|Berechnet den Tangenswert von Pi * _X|  
+|[Tgamma-Funktion](concurrency-precise-math-namespace-functions.md#tgamma)|Überladen. Berechnet die Gammafunktion von _X|  
+|[Tgammaf-Funktion](concurrency-precise-math-namespace-functions.md#tgammaf)|Berechnet die Gammafunktion von _X|  
+|[TRUNC-Funktion](concurrency-precise-math-namespace-functions.md#trunc)|Überladen. Schneidet das Argument der ganzzahligen Komponente ab|  
+|[Truncf-Funktion](concurrency-precise-math-namespace-functions.md#truncf)|Schneidet das Argument der ganzzahligen Komponente ab|  
   
-## Anforderungen  
- **Header:** amp\_math.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** amp_math.h  
   
- **Namespace:** Nebenläufigkeit  
+ **Namespace:** Parallelität  
   
-## Siehe auch  
- [Concurrency\-Namespace \(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency-Namespace (C++-AMP)](concurrency-namespace-cpp-amp.md)
+

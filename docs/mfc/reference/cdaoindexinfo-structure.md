@@ -1,120 +1,136 @@
 ---
-title: "CDaoIndexInfo-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoIndexInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoIndexInfo-Struktur"
-  - "DAO (Datenzugriffsobjekte), Auflistung von Indizes"
+title: CDaoIndexInfo-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoIndexInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO (Data Access Objects), Indexes collection
+- CDaoIndexInfo structure
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoIndexInfo-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 92206d8d8f9b2315fb859e2712a83d32a4c293ad
+ms.lasthandoff: 02/24/2017
 
-Die `CDaoIndexInfo`\-Struktur enthält Informationen dazu Indexobjekt, das für Datenzugriffsobjekte \(DAO\) definiert ist.  
+---
+# <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo-Struktur
+Die `CDaoIndexInfo` Struktur enthält Informationen zu einem Indexobjekt, das für Datenzugriffsobjekte (DAO) definiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      struct CDaoIndexInfo {  
-   CDaoIndexInfo( );                   // Constructor  
-   CString m_strName;                  // Primary  
-   CDaoIndexFieldInfo* m_pFieldInfos;  // Primary  
-   short m_nFields;                    // Primary  
-   BOOL m_bPrimary;                    // Secondary  
-   BOOL m_bUnique;                     // Secondary  
-   BOOL m_bClustered;                  // Secondary  
-   BOOL m_bIgnoreNulls;                // Secondary  
-   BOOL m_bRequired;                   // Secondary  
-   BOOL m_bForeign;                    // Secondary  
-   long m_lDistinctCount;              // All  
-  
-   // Below the // Implementation comment:  
-   // Destructor, not otherwise documented  
+struct CDaoIndexInfo {  
+    CDaoIndexInfo();
+*// Constructor  
+    CString m_strName;  // Primary  
+    CDaoIndexFieldInfo* m_pFieldInfos;  // Primary  
+    short m_nFields;    // Primary  
+    BOOL m_bPrimary;    // Secondary  
+    BOOL m_bUnique;     // Secondary  
+    BOOL m_bClustered;  // Secondary  
+    BOOL m_bIgnoreNulls;                // Secondary  
+    BOOL m_bRequired;   // Secondary  
+    BOOL m_bForeign;    // Secondary  
+    long m_lDistinctCount;              // All  
+ *// Below the // Implementation comment: *// Destructor, not otherwise documented  
 };   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `m_strName`  
- Benennt das eindeutig Feldobjekt.  Ausführliche Informationen finden Sie im Thema "Name\-Eigenschaft" in der DAO\-Hilfe.  
+ Field-Objekt bezeichnet eindeutig. Details finden Sie im Thema "Name-Eigenschaft" in der DAO-Hilfe.  
   
  `m_pFieldInfos`  
- Ein Zeiger auf ein Array von [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md)\-Objekte das Angeben ein, das Tabledef\- oder Recordsetfelder Schlüsselfelder in einem Index sind.  Jedes Objekt identifiziert ein Feld im Index.  Die Standardindexreihenfolge aufsteigend ist.  Ein Indexobjekt kann eine oder mehrere Felder verfügen, die Indexschlüssel für jeden Datensatz darstellen.  Diese können aufsteigend, weiter oder eine Kombination sein.  
+ Ein Zeiger auf ein Array von [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) Objekte, der angibt, welche Felder Tabledef oder DAO-Recordsets Felder in einem Index sind. Jedes Objekt identifiziert ein Feld im Index. Index Standardreihenfolge ist Aufsteigend. Ein Index-Objekt können ein oder mehrere Felder, Indexschlüssel für jeden Datensatz darstellt. Diese können, absteigend, oder eine Kombination Aufsteigend.  
   
  `m_nFields`  
- Die Anzahl von Feldern gespeichert in `m_pFieldInfos`.  
+ Die Anzahl der Felder, die in gespeicherten `m_pFieldInfos`.  
   
- *m\_bPrimary*  
- Wenn die primäre Eigenschaft **TRUE** ist, stellt das Primärindex Indexobjekt einen dar.  Ein Primärindex besteht aus einem oder mehreren Feldern eindeutig, die sämtliche Datensätze einer Tabelle in einer vordefinierten Reihenfolge identifizieren.  Da das Indexfeld eindeutig sein muss, wird die eindeutige Eigenschaft des Indexobjekts auch auf **TRUE** der DAO festgelegt.  Wenn der Primärindex aus mehr als einem Feld besteht, kann jedes Feld doppelte Werte enthalten, aber jede Kombination der Werte in allen indizierten Feldern muss eindeutig sein.  Ein Primärindex besteht aus einem Schlüssel für die Tabelle und enthält normalerweise die gleichen Felder wie der Primärschlüssel.  
+ *m_bPrimary*  
+ Wenn die primäre Eigenschaft ist **TRUE**, Index-Objekt stellt einen primären Index dar. Ein primärer Index besteht aus einem oder mehreren Feldern, die alle Datensätze in einer Tabelle in einer vordefinierten Reihenfolge eindeutig zu identifizieren. Da Indexfeld eindeutig sein muss, ist die Unique-Eigenschaft des Index-Objekts auch zum Festlegen **TRUE** in DAO. Wenn der primäre Index aus mehr als einem Feld besteht, kann jedes Feld doppelte Werte enthalten, aber jede Kombination der Werte aller indizierten Felder muss eindeutig sein. Ein primärer Index besteht aus einem Schlüssel für die Tabelle und in der Regel enthält die gleichen Felder als Primärschlüssel.  
   
- Wenn Sie einen Primärschlüssel für eine Tabelle, die Primärschlüssel automatisch wie der Primärindex für die Tabelle definiert werden.  Weitere Informationen finden Sie in den Themen "primäre Eigenschaft" und "Eigenschaft eindeutige" in der DAO\-Hilfe.  
-  
-> [!NOTE]
->  Es kann höchstens einen Primärindex auf einer Tabelle ein.  
-  
- *m\_bUnique*  
- Gibt an, ob ein Indexobjekt einen eindeutigen Index für eine Tabelle darstellt.  Wenn diese Eigenschaft **TRUE** ist, stellt das Indexobjekt einen Index dar, der mehrdeutig ist.  Ein eindeutiger Index besteht aus einem oder mehreren Feldern, die logisch sämtliche Datensätze einer Tabelle einer eindeutigen, vordefinierten Reihenfolge anordnen.  Wenn der Index aus einem Feld besteht, müssen Werte in diesem Feld für die gesamte Tabelle eindeutig sein.  Wenn der Index aus mehr als einem Feld besteht, kann jedes Feld doppelte Werte enthalten, aber jede Kombination der Werte in allen indizierten Feldern muss eindeutig sein.  
-  
- Wenn die eindeutige und primären Eigenschaften eines Indexobjekts auf **TRUE** festgelegt ist, ist der Index eindeutig und primär: Sie identifiziert eindeutig alle Datensätze in der Tabelle in einer vordefinierten, logischen Reihenfolge.  Wenn die primäre Eigenschaft auf **FALSE** festgelegt ist, ist der Index ein alternativer Schlüssel.  Alternative \(beide Schlüssel ver\- und Nicht\-Schlüssel\), ordnen logisch Datensätze in einer vordefinierten Reihenfolge, ohne als Bezeichner für Datensätze in der Tabelle verwenden.  
-  
- Weitere Informationen finden Sie in den Themen "primäre Eigenschaft" und "Eigenschaft eindeutige" in der DAO\-Hilfe.  
-  
- *m\_bClustered*  
- Gibt an, ob ein Indexobjekt einen gruppierten Index für eine Tabelle darstellt.  Wenn diese Eigenschaft **TRUE** ist, stellt das Indexobjekt einen gruppierten Index dar; Andernfalls führt es nicht.  Ein gruppierter Index besteht aus einem oder mehrere nicht um Schlüssel zu Feldern, mit denen zusammen entnommen, sämtliche Datensätze einer Tabelle in einer vordefinierten Reihenfolge anordnen.  Mit einem gruppierten Index werden die Daten in der Tabelle als solche in der Reihenfolge gespeichert, die von der gruppierten Index angegeben wird.  Ein gruppierter Index bietet effiziente Akteneinsicht in einer Tabelle.  Weitere Informationen finden Sie, dass das Thema "Eigenschaft" in der DAO\-Hilfe gruppierte.  
+ Wenn Sie einen Primärschlüssel für eine Tabelle festlegen, wird der Primärschlüssel automatisch als der primäre Index für die Tabelle definiert. Weitere Informationen finden Sie unter den Themen "Primäre Property" und "Unique-Eigenschaft" in der DAO-Hilfe.  
   
 > [!NOTE]
->  Die gruppierten Eigenschaft wird ignoriert für Datenbanken, die das Microsoft Jet\-Datenbankmodul verwenden, da das Jet\-Datenbank\-Modul nicht gruppierter Indizes unterstützt.  
+>  Vorhanden sein können, höchstens über einen primären Index für eine Tabelle.  
   
- *m\_bIgnoreNulls*  
- Gibt an, ob Indexeinträge für Datensätze gibt, die NULL\-Werte auf ihren Indexgebieten haben.  Wenn diese Eigenschaft **TRUE**, über Felder mit NULL\-Werten keinen Indexeintrag.  Um für Datensätze mithilfe eines Felds schneller finden zu machen, können Sie einen Index für das Feld definieren.  Wenn Sie ungültige Einträge auf einen indizierten Feld zulassen und zahlreiche Einträge erwarten, dass NULL zu sein, können Sie die IgnoreNulls\-Eigenschaft zum Indexobjekt zu **TRUE** festlegen, um den Speicherplatz reduzieren, den der Index verwendet.  Die IgnoreNulls\-Eigenschafteneinstellung und die erforderliche Einstellung bestimmt zusammen, ob ein Datensatz mit einem ungültigen Indexwert einen Indexeintrag verfügt, wie die folgende Tabelle zeigt.  
+ *m_bUnique*  
+ Gibt an, ob ein Indexobjekt einen eindeutigen Index für eine Tabelle darstellt. Wenn diese Eigenschaft ist **TRUE**, Index-Objekt stellt einen Index, der eindeutig ist. Ein eindeutiger Index besteht aus einem oder mehreren Feldern, die alle Datensätze in einer Tabelle in einer eindeutigen, vordefinierten Reihenfolge logisch anordnen. Wenn der Index aus einem Feld besteht, müssen Werte für die gesamte Tabelle eindeutig sein. Wenn der Index aus mehreren Feldern besteht, kann jedes Feld doppelte Werte enthalten, aber jede Kombination der Werte aller indizierten Felder muss eindeutig sein.  
   
-|IgnoreNulls|Erforderlich|NULL in dem Indexgebiet|  
-|-----------------|------------------|-----------------------------|  
-|True|False|NULL\-Wert zulässig; kein Indexeintrag hinzugefügt.|  
-|False|False|NULL\-Wert zulässig; Indexeintrag hinzugefügt.|  
-|True oder False|True|NULL\-Wert unzulässig; kein Indexeintrag hinzugefügt.|  
+ Wenn die Unique- und die primären eines Index-Objekts Eigenschaften **TRUE**, der Index ist eindeutig und primär: Es werden alle Datensätze in der Tabelle in einer vordefinierten, logischen Reihenfolge eindeutig identifiziert. Wenn die Primärschlüssel-Eigenschaft, um festgelegt wird **FALSE**, der Index ist ein sekundärer Index. Sekundäre Indizes (mit und ohne Schlüssel) ordnen Datensätze logisch in einer vordefinierten Reihenfolge ohne als Bezeichner für Datensätze in der Tabelle zu dienen.  
   
- Weitere Informationen finden Sie im Thema "IgnoreNulls\-Eigenschaft" in der DAO\-Hilfe.  
+ Weitere Informationen finden Sie unter den Themen "Primäre Property" und "Unique-Eigenschaft" in der DAO-Hilfe.  
+  
+ *m_bClustered*  
+ Gibt an, ob ein Index-Objekt einen gruppierten Index für eine Tabelle darstellt. Wenn diese Eigenschaft ist **TRUE**, Index-Objekt stellt einen gruppierten Index; andernfalls nicht. Ein gruppierter Index besteht aus einem oder mehreren Nichtschlüsselfeldern, die zusammen genommen alle Datensätze in einer Tabelle in einer vordefinierten Reihenfolge anordnen. Mit einem gruppierten Index werden die Daten in der Tabelle wörtlich in der Reihenfolge angegeben werden, indem der gruppierte Index gespeichert. Ein gruppierter Index bietet effizienten Zugriff auf Datensätze in einer Tabelle. Weitere Informationen finden Sie unter dem Thema "Clustered-Eigenschaft" DAO-Hilfe.  
+  
+> [!NOTE]
+>  Die Clustered-Eigenschaft wird für Datenbanken ignoriert, die das Microsoft Jet-Datenbankmodul verwenden, da das Jet-Datenbankmodul keine gruppierten Indizes unterstützt.  
+  
+ *m_bIgnoreNulls*  
+ Gibt an, ob es werden Indexeinträge für Datensätze, die Null-Werte in den Indexfeldern haben. Wenn diese Eigenschaft ist **TRUE**, Felder mit Null-Werten haben keinen Indexeintrag. Um die Suche nach Datensätzen, die mit einem Feld schneller zu machen, können Sie einen Index für das Feld definieren. Wenn Sie Null-Einträge in einem indizierten Feld zulassen und erwarten, viele Einträge dass den Wert Null haben, können Sie festlegen, dass die IgnoreNulls-Eigenschaft für das Indexobjekt, das **TRUE** Speicherplatz reduzieren, die der Index verwendet. Die IgnoreNulls-Eigenschaft und der Einstellung für die erforderliche Eigenschaft bestimmen zusammen, ob ein Datensatz mit einem Null-Indexwert die folgende Tabelle zeigt einen Indexeintrag verfügt.  
+  
+|IgnoreNulls|Erforderlich|NULL-Index-Feld|  
+|-----------------|--------------|-------------------------|  
+|True|False|NULL-Wert zulässig; Es wird kein Indexeintrag hinzugefügt.|  
+|False|False|NULL-Wert zulässig; Indexeintrag hinzugefügt.|  
+|True oder False|True|NULL-Wert nicht zulässig; Es wird kein Indexeintrag hinzugefügt.|  
+  
+ Weitere Informationen finden Sie unter dem Thema "IgnoreNulls-Eigenschaft" in der DAO-Hilfe.  
   
  `m_bRequired`  
- Gibt an, ob ein DAO\-Indexobjekt einen Wert ungleich null ist.  Wenn diese Eigenschaft **TRUE** ist, ermöglicht das Indexobjekt keinen NULL\-Wert.  Weitere Informationen finden Sie, dass das Thema "Eigenschaft" in der DAO\-Hilfe erforderlich.  
+ Gibt an, ob ein DAO-Index-Objekt einen Wert ungleich Null erfordert. Wenn diese Eigenschaft ist **TRUE**, Indexobjekt lässt sich nicht auf einen Null-Wert. Weitere Informationen finden Sie unter dem Thema "Erforderliche Eigenschaft" DAO-Hilfe.  
   
 > [!TIP]
->  Wenn Sie diese Eigenschaft entweder für ein DAO\-Indexobjekt oder ein Feldobjekt festlegen können \(enthalten durch eine tabledef\-, ein Recordset oder ein Querydef\-Objekt\), legen Sie es für das Feldobjekt fest.  Die Gültigkeit der Eigenschafteneinstellung für ein Feldobjekt wird zuvor überprüft wird, die von einem Indexobjekt.  
+>  Wenn Sie diese Eigenschaft für ein DAO-Index-Objekt oder ein Field-Objekt (eine Tabledef, Recordset oder ein Querydef-Objekt enthalten) festlegen können, legen Sie sie für das Field-Objekt. Die Gültigkeit der Einstellung der Eigenschaft für ein Field-Objekt wird überprüft, bevor der Index-Objekts.  
   
- *m\_bForeign*  
- Gibt an, ob ein Indexobjekt einen Fremdschlüssel in einer Tabelle dar.  Wenn diese Eigenschaft **TRUE** ist, stellt der Index einen Fremdschlüssel in einer Tabelle dar.  Bei einem Fremdschlüssel besteht aus einem oder mehreren Feldern in einer eindeutig fremden Tabelle, die eine Zeile in einer Tabelle ermitteln.  Das Microsoft Jet\-Datenbankmodul erstellt ein Indexobjekt der fremden Tabelle und legt die fremde Eigenschaft fest, wenn Sie eine Beziehung erstellen, die referenzielle Integrität gewährleistet.  Weitere Informationen finden Sie im Thema "fremde Eigenschaft" in der DAO\-Hilfe.  
+ *m_bForeign*  
+ Gibt an, ob ein Indexobjekt einen Fremdschlüssel in einer Tabelle darstellt. Wenn diese Eigenschaft ist **TRUE**, der Index einen Fremdschlüssel in einer Tabelle darstellt. Ein Fremdschlüssel besteht aus einem oder mehreren Feldern in einer Fremdtabelle, die eine Zeile in einer primären Tabelle eindeutig identifizieren. Das Microsoft Jet-Datenbankmodul erstellt ein Indexobjekt für die Fremdtabelle und legt die Foreign-Eigenschaft, wenn Sie eine Beziehung erstellen, die referenzielle Integrität gewährleistet. Weitere Informationen finden Sie unter dem Thema "Foreign-Eigenschaft" in der DAO-Hilfe.  
   
- *m\_lDistinctCount*  
- Gibt die Anzahl der eindeutigen Werte zum Indexobjekt angezeigt, die in der zugeordneten Tabelle enthalten sind.  Überprüfen Sie die DistinctCount\-Eigenschaft, um die eindeutigen Werte oder Schlüssel, in einem Index zu bestimmen.  Jede beliebige Taste wird nur einmal erfasst, obwohl sie mehrere Vorkommen dieses Werts gibt, wenn die Werte Indexerlaubnis dupliziert.  Diese Informationen sind nützlich in Anwendungen, die versuchen, den Datenzugriff zu optimieren, indem Indexinformationen auswerten.  Die Anzahl eindeutiger Werte ist auch als Kardinalität eines Indexobjekts.  Die DistinctCount\-Eigenschaft nicht immer wieder die tatsächliche Anzahl von Tasten zu einem bestimmten Zeitpunkt.  Beispielsweise wird eine Änderung, die durch ein Transaktionsrollback verursacht wird, nicht sofort in der DistinctCount\-Eigenschaft wiedergegeben.  Weitere Informationen finden Sie im Thema "DistinctCount\-Eigenschaft" in der DAO\-Hilfe.  
+ *m_lDistinctCount*  
+ Gibt die Anzahl der eindeutigen Werte für die Index-Objekt, die in der zugeordneten Tabelle enthalten sind. Überprüfen Sie die DistinctCount-Eigenschaft zum Ermitteln der Anzahl von eindeutigen Werten oder Schlüsseln in einem Index. Eine beliebige Taste wird nur einmal gezählt, obwohl es möglicherweise mehrere Vorkommen dieses Werts sein, wenn der Index doppelte Werte zulässt. Diese Informationen sind nützlich, die versuchen, Zugriff auf Daten durch das Auswerten von Indexinformationen zu optimieren. Die Anzahl von eindeutigen Werten wird auch die Kardinalität des Index-Objekts. Die DistinctCount-Eigenschaft wider nicht immer die tatsächliche Anzahl von Schlüsseln zu einem bestimmten Zeitpunkt. Beispielsweise wird eine Änderung durch ein Transaktionsrollback nicht sofort in der DistinctCount-Eigenschaft wiedergegeben werden. Weitere Informationen finden Sie unter dem Thema "DistinctCount-Eigenschaft" in der DAO-Hilfe.  
   
-## Hinweise  
- Die Verweise auf primärem, und einen sekundären alle oben geben an, wie die Informationen durch die `GetIndexInfo`\-Memberfunktion in den Klassen [CDaoTableDef](../Topic/CDaoTableDef::GetIndexInfo.md) und [CDaoRecordset](../Topic/CDaoRecordset::GetIndexInfo.md) zurückgegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ Die Verweise auf die primären, sekundären und alle oben anzugeben, wie die Informationen zurückgegeben werden, durch die `GetIndexInfo` -Memberfunktion in Klassen [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) und [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).  
   
- Indexobjekte werden nicht durch eine MFC\-Klasse dargestellt.  Stattdessen DAO\-Objekte MFC\-Objekten enthalten, die der [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) zugrunde liegen, eine Auflistung Indexobjekte, die aufgerufen Indexauflistung.  Diese Klassen stellen Memberfunktionen, um auf einzelne Elemente aus Indexinformationen zuzugreifen, oder Sie können mit einem `CDaoIndexInfo`\-Objekt in einem gemeinsam zugreifen, indem Sie die Memberfunktion `GetIndexInfo` des enthaltenden Objekts aufrufen.  
+ Index-Objekte werden nicht von einer MFC-Klasse dargestellt. Stattdessen DAO Objekten zugrunde liegenden MFC-Objekte der Klasse [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) enthalten eine Auflistung von indexobjekten, die die Auflistung von Indizes aufgerufen. Diese Klassen Memberfunktionen für den Zugriff auf einzelne Elemente von Indexinformationen oder können sie gleichzeitig mit zugreifen ein `CDaoIndexInfo` -Objekt durch Aufrufen der `GetIndexInfo` -Memberfunktion des enthaltenden Objekts.  
   
- `CDaoIndexInfo` verfügt über einen Konstruktor und Destruktoren, um den Indexfeldinformationen in `m_pFieldInfos` korrekt zuzuordnen und freizugeben.  
+ `CDaoIndexInfo`verfügt über einen Konstruktor und Destruktor um ordnungsgemäß reservieren und Freigeben von den Index Feldinformationen in `m_pFieldInfos`.  
   
- Die Informationen, die durch die `GetIndexInfo`\-Memberfunktion eines Tabledef\-Objekts abgerufen werden, werden in einer `CDaoIndexInfo`\-Struktur gespeichert.  Rufen Sie die Memberfunktion `GetIndexInfo` des enthaltenden Tabledef\-Objekts auf, in dessen Indexauflistung das Indexobjekt gespeichert wird.  `CDaoIndexInfo` definiert auch eine `Dump`\-Memberfunktion in Debugbuilds.  Sie können `Dump` verwenden, um den Inhalt eines `CDaoIndexInfo`\-Objekts zu speichern.  
+ Informationen abgerufen werden, indem Sie die `GetIndexInfo` -Memberfunktion des Tabledef-Objekts befindet sich in einer `CDaoIndexInfo` Struktur. Rufen Sie die `GetIndexInfo` -Memberfunktion des enthaltenden Tabledef-Objekts, das in die Auflistung, deren Indizes die Indexobjekt gespeichert ist. `CDaoIndexInfo`definiert auch eine `Dump` Memberfunktion im Debugmodus erstellt. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoIndexInfo` Objekt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxdao.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoTableDef::GetIndexInfo](../Topic/CDaoTableDef::GetIndexInfo.md)
+ [CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)
+
+

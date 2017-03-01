@@ -1,118 +1,134 @@
 ---
-title: "CDaoQueryDefInfo-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoQueryDefInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoQueryDefInfo-Struktur"
-  - "DAO (Datenzugriffsobjekte), QueryDefs-Auflistung"
+title: CDaoQueryDefInfo-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoQueryDefInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO (Data Access Objects), QueryDefs collection
+- CDaoQueryDefInfo structure
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoQueryDefInfo-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 80e681345091ef54e2be2e3f1c1ea6ccaefd9d17
+ms.lasthandoff: 02/24/2017
 
-Die `CDaoQueryDefInfo`\-Struktur enthält Informationen über ein Querydef\-Objekt, das für Datenzugriffsobjekte \(DAO\) definiert ist.  
+---
+# <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo-Struktur
+Die `CDaoQueryDefInfo` Struktur enthält Informationen zur Querydef-Objekts für Datenzugriffsobjekte (DAO) definiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      struct CDaoQueryDefInfo  
+struct CDaoQueryDefInfo  
 {  
-   CString m_strName;               // Primary  
-   short m_nType;                   // Primary  
-   COleDateTime m_dateCreated;      // Secondary  
-   COleDateTime m_dateLastUpdated;  // Secondary  
-   BOOL m_bUpdatable;               // Secondary  
-   BOOL m_bReturnsRecords;          // Secondary  
-   CString m_strSQL;                // All  
-   CString m_strConnect;            // All  
-   short m_nODBCTimeout;            // All  
+    CString m_strName;               // Primary  
+    short m_nType;   // Primary  
+    COleDateTime m_dateCreated;      // Secondary  
+    COleDateTime m_dateLastUpdated;  // Secondary  
+    BOOL m_bUpdatable;               // Secondary  
+    BOOL m_bReturnsRecords;          // Secondary  
+    CString m_strSQL;                // All  
+    CString m_strConnect;            // All  
+    short m_nODBCTimeout;            // All  
 };  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `m_strName`  
- Benennt das eindeutig Querydef\-Objekt.  Weitere Informationen finden Sie im Thema "Name\-Eigenschaft" in der DAO\-Hilfe.  Aufruf [CDaoQueryDef::GetName](../Topic/CDaoQueryDef::GetName.md), um diese Eigenschaft direkt abrufen.  
+ Das Querydef-Objekt bezeichnet eindeutig. Weitere Informationen finden Sie im Thema "Name-Eigenschaft" in der DAO-Hilfe. Rufen Sie [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) dieser Eigenschaft direkt abgerufen.  
   
  `m_nType`  
- Ein Wert, der dem Betriebstyp eines Querydef\-Objekts angibt.  Folgende Werte sind zulässig:  
+ Ein Wert, der den Betrieb eines Querydef-Objekts angibt. Die folgenden Werte sind möglich:  
   
--   **dbQSelect** ausgewählt \- Abfrage wählt Datensätze aus.  
+- **DbQSelect** auswählen, die Abfrage wählt Datensätze.  
   
--   **dbQAction** \- Aktion die Abfrage werden verschoben oder die Änderungsdaten jedoch keine Datensätze zurück.  
+- **DbQAction** Aktion, die Abfrage verschiebt oder Daten geändert, jedoch keine Datensätze zurückgibt.  
   
--   **dbQCrosstab** Kreuztabelle \- Abfrage gibt Daten in einem Arbeitsblatt ähnlichen Format zurück.  
+- **DbQCrosstab** Kreuztabelle – die Abfrage gibt Daten in einem Tabellenformat zurück.  
   
--   **dbQDelete** Löschen \- Abfrage löscht einen angegebene Gruppe von Zeilen.  
+- **DbQDelete** löschen – Löscht die Abfrage angegebenen Zeilen.  
   
--   Aktualisieren \-**dbQUpdate** die Abfrage ändert eine Gruppe von Datensätzen.  
+- **DbQUpdate** Update – die Abfrage ändert eine Gruppe von Datensätzen.  
   
--   Fügen **dbQAppend** \- die Abfrage fügt neue Datensätze am Ende einer Tabelle oder der Abfrage hinzu.  
+- **DbQAppend** anfügen, die Abfrage fügt neue Datensätze am Ende einer Tabelle oder Abfrage.  
   
--   **dbQMakeTable** Machen\-Tabelle \- Abfrage wird eine neue Tabelle aus einem Recordset erstellt.  
+- **DbQMakeTable** Tabelle, die Abfrage erstellt eine neue Tabelle aus einem Recordset.  
   
--   **dbQDDL** \- die Datendefinition Abfrage auswirkt die Struktur von Tabellen oder ihrer Teile.  
+- **DbQDDL** Datendefinition: die Abfrage wirkt sich auf die Struktur der Tabellen oder deren Komponenten.  
   
--   Bereitstellung **dbQSQLPassThrough** \- SQL\-Anweisung wird direkt dem Datenbank\-Back\-End, ohne verursacht übergeben.  
+- **DbQSQLPassThrough** Pass-Through – die SQL-Anweisung wird direkt an die Datenbank-Back-End, ohne intermediate Verarbeitung übergeben.  
   
--   Union **dbQSetOperation** \- die Abfrage erstellt ein Recordset\-Objekt vom Typ Momentaufnahme, das Daten von allen angegebenen Datensätze in zwei oder mehr Tabellen enthält mit einem doppelten Datensätzen entfernt.  Um die Duplikate einzuschließen, fügen Sie das Schlüsselwort **ALLE** in die SQL\-Anweisung der Querydef hinzu.  
+- **DbQSetOperation** Union-Abfrage erstellt eine Momentaufnahme vom Typ-Objekt, das mit Daten aus allen angegebenen Datensätzen in zwei oder mehr Tabellen, wobei doppelte Datensätze entfernt. Um die Duplikate einzuschließen, fügen Sie das Schlüsselwort **alle** in SQL-Anweisung der Querydef.  
   
--   **dbQSPTBulk** mit **dbQSQLPassThrough** verwendet, um eine Abfrage anzugeben, die keine Datensätze zurückgibt.  
+- **DbQSPTBulk** mit verwendete **DbQSQLPassThrough** zum Angeben einer Abfrage, die keine Datensätze zurückgibt.  
   
 > [!NOTE]
->  Wenn Sie eine SQL Pass\-Through\-Abfrage zu erstellen, legen Sie die **dbQSQLPassThrough** Konstante fest.  Dies wird automatisch vom Microsoft Jet\-Datenbankmodul festgelegt, wenn Sie ein Querydef\-Objekt erstellen und die Connect\-Eigenschaft festlegen.  
+>  Um eine SQL-Pass-Through-Abfrage zu erstellen, legen Sie nicht die **DbQSQLPassThrough** konstant. Dies wird automatisch durch das Microsoft Jet-Datenbankmodul festgelegt, wenn Sie ein Querydef-Objekt erstellen, und legen Sie die Connect-Eigenschaft.  
   
- Weitere Informationen finden Sie im Thema "Typeigenschaft" in der DAO\-Hilfe.  
+ Weitere Informationen finden Sie im Thema "Typeigenschaft" DAO-Hilfe.  
   
  `m_dateCreated`  
- Das Datum und die Uhrzeit, die die Querydef erstellt wurde.  Um das Datum direkt abgerufen, das die Querydef erstellt, die die [GetDateCreated](../Topic/CDaoTableDef::GetDateCreated.md)`CDaoTableDef`\-Memberfunktion des Objekts aufgerufen Sie wurde, das der Tabelle zugeordnet ist.  Siehe Kommentare unten weitere Informationen.  Siehe auch das Thema "DateCreated, LastUpdated\-Eigenschaften" in der DAO\-Hilfe.  
+ Das Datum und die Uhrzeit der Erstellung die Querydef. Rufen Sie direkt das Datum die Querydef erstellt wurde, rufen Sie die [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) Memberfunktion der `CDaoTableDef` -Objekt in der Tabelle zugeordnet. Weitere Informationen finden Sie unter Kommentare. Außerdem finden Sie im Thema "DateCreated LastUpdated-Eigenschaften", DAO-Hilfe.  
   
  `m_dateLastUpdated`  
- Das Datum und die Uhrzeit der letzten Änderung vorgenommen an der Querydef.  Um das Datum direkt abzurufen, das die Tabelle zuletzt aktualisiert, die [GetDateLastUpdated](../Topic/CDaoQueryDef::GetDateLastUpdated.md)\-Memberfunktion der Querydef Aufrufen Sie wurde.  Siehe Kommentare unten weitere Informationen.  Und finden Sie im Thema "DateCreated, LastUpdated\-Eigenschaften" in der DAO\-Hilfe.  
+ Datum und Uhrzeit der letzten Änderung der Querydef. Rufen Sie direkt das Datum in der Tabelle zuletzt aktualisiert wurde, rufen Sie die [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) -Memberfunktion der Querydef. Weitere Informationen finden Sie unter Kommentare. Und finden Sie im Thema "DateCreated LastUpdated-Eigenschaften" in der DAO-Hilfe.  
   
  `m_bUpdatable`  
- Gibt an, ob Änderungen vorgenommen werden können an einem Querydef\-Objekt.  Wenn diese Eigenschaft **TRUE** ist, ist die Querydef aktualisierbar; andernfalls ist sie nicht.  Aktualisierbares Möglichkeit die Abfragedefinition des Querydef\-Objekts kann geändert werden.  Die aktualisierbare Eigenschaft eines Querydef\-Objekts wird auf **TRUE** festgelegt, wenn die Abfragedefinition aktualisiert werden kann, wenn das resultierende Recordset nicht aktualisierbar ist.  Um diese Eigenschaft direkt abrufen, rufen Sie die [CanUpdate](../Topic/CDaoQueryDef::CanUpdate.md)\-Memberfunktion der Querydef auf.  Weitere Informationen finden Sie im Thema "aktualisierbare Eigenschaft" in der DAO\-Hilfe.  
+ Gibt an, ob ein Querydef-Objekt geändert werden kann. Wenn diese Eigenschaft ist **TRUE**, Querydef aktualisierbar, andernfalls nicht. Aktualisierbar bedeutet, dass die Abfragedefinition für das Querydef-Objekt geändert werden kann. Die Updatable-Eigenschaft eines Querydef-Objekts auf festgelegt ist **TRUE** Wenn die Abfragedefinition aktualisiert werden kann, selbst wenn das resultierende Recordset nicht aktualisierbar ist. Um diese Eigenschaft direkt zu abzurufen, rufen Sie der Querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) Member-Funktion. Weitere Informationen finden Sie unter dem Thema "Aktualisierbare-Eigenschaft" in der DAO-Hilfe.  
   
- *m\_bReturnsRecords*  
- Gibt an, ob eine SQL Pass\-Through\-Abfrage zu einer externen Datenbank Datensätze zurückgibt.  Wenn diese Eigenschaft **TRUE** ist, gibt die Abfrage Datensätze zurück.  Um diese Eigenschaft direkt abrufen, rufen Sie [CDaoQueryDef::GetReturnsRecords](../Topic/CDaoQueryDef::GetReturnsRecords.md) auf.  Nicht alle SQL Pass\-Through\-Abfragen zu den Rückgabedatensätzen der externe Datenbanken.  aktualisiert beispielsweise eine SQL\- **UPDATE** Datensätze, ohne die Datensätze zurückzugeben, während eine SQL\- **AUSWÄHLEN** Datensätze zurückgibt.  Weitere Informationen finden Sie im Thema "ReturnsRecords\-Eigenschaft" in der DAO\-Hilfe.  
+ *m_bReturnsRecords*  
+ Gibt an, ob eine SQL-Pass-Through-Abfrage für eine externe Datenbank Datensätze zurückgibt. Wenn diese Eigenschaft ist **TRUE**, die Abfrage Datensätze zurückgibt. Um diese Eigenschaft direkt abzurufen, rufen Sie [CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords). Nicht alle SQL Pass-Through-Abfragen an externe Datenbanken geben Datensätze zurück. Z. B. eine SQL **UPDATE** Anweisung aktualisiert Datensätze, ohne Datensätze zurückzugeben, während eine SQL **wählen** Anweisung gibt Datensätze zurück. Weitere Informationen finden Sie unter dem Thema "ReturnsRecords-Eigenschaft" in der DAO-Hilfe.  
   
- *m\_strSQL*  
- Die SQL\-Anweisung, die die Abfrage definiert, kann durch ein Querydef\-Objekt aus.  Die SQL\-Eigenschaft enthält die SQL\-Anweisung, die bestimmt, wie Datensätze ausgewählt, gruppiert und sortiert werden, wenn Sie die Abfrage ausführen.  Sie können die Abfrage verwenden, um Datensätze auszuwählen, die in einem Dynaset oder Recordset\-Objekt einzuschließen in einem vom Typ Momentaufnahme.  Sie können Massenabfragen auch definieren, um Daten zu ändern, ohne die Datensätze zurückzugeben.  Sie können den Wert dieser Eigenschaft direkt abrufen, indem Sie die [GetSQL](../Topic/CDaoQueryDef::GetSQL.md)\-Memberfunktion der Querydef aufrufen.  
+ *m_strSQL*  
+ Die SQL-Anweisung, die die Abfrage ausgeführt, indem ein Querydef-Objekt definiert. Die SQL-Eigenschaft enthält die SQL-Anweisung, die bestimmt, wie Datensätze ausgewählt, gruppiert und sortiert werden, wenn Sie die Abfrage ausführen. Sie können die Abfrage verwenden, zum Auswählen von Datensätzen in einem Recordset-Objekt vom Typ Dynaset oder Snapshot aufgenommen. Außerdem können massenabfragen, um Daten zu ändern, ohne Datensätze zurückzugeben. Sie können den Wert dieser Eigenschaft abrufen, direkt durch Aufrufen der Querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) Member-Funktion.  
   
  `m_strConnect`  
- Stellt Informationen zu Quelle einer Datenbank bereit, die in einer Pass\-Through\-Abfrage verwendet wird.  Diese Informationen akzeptieren die Form einer Verbindungszeichenfolge an.  Weitere Informationen zu schließen Sie Zeichenfolgen und nach Informationen über den Wert dieser Eigenschaft direkt abrufen, finden die Memberfunktion [CDaoDatabase::GetConnect](../Topic/CDaoDatabase::GetConnect.md) an.  
+ Enthält Informationen über die Quelle einer Datenbank in einer Pass-Through-Abfrage verwendet. Diese Informationen hat das Format einer Verbindungszeichenfolge. Weitere Informationen zu Verbindungszeichenfolgen und Informationen direkt das Abrufen des Werts dieser Eigenschaft finden Sie unter der [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) Member-Funktion.  
   
- *m\_nODBCTimeout*  
- Die Anzahl von Sekunden, die das Microsoft Jet\-Datenbankmodul wartet, bevor ein Timeoutfehler auftritt, wenn eine Abfrage auf eine ODBC\-Datenbank ausgeführt wird.  Wenn Sie eine ODBC\-Datenbank, wie Microsoft SQL Server verwenden, gibt es möglicherweise Verzögerungen aufgrund des Netzwerkdatenverkehrs oder der Beanspruchung Grafikoperationen des ODBC\-Servers.  Statt unbegrenzt warten, können Sie angeben, wie lange das Microsoft Jet\-Modul wartet, bevor ein Fehler generiert.  Der Standardtimeoutwert ist 60 Sekunden.  Sie können den Wert dieser Eigenschaft direkt abrufen, indem Sie die [GetODBCTimeout](../Topic/CDaoQueryDef::GetODBCTimeout.md)\-Memberfunktion der Querydef aufrufen.  Weitere Informationen finden Sie im Thema "ODBCTimeout\-Eigenschaft" in der DAO\-Hilfe.  
+ *m_nODBCTimeout*  
+ Die Anzahl der Sekunden an, die das Microsoft Jet-Datenbankmodul, bevor ein Timeout-Fehler wartet tritt auf, wenn eine Abfrage auf eine ODBC-Datenbank ausgeführt wird. Bei Verwendung eine ODBC-Datenbank, z. B. Microsoft SQL Server kann aufgrund von Netzwerk-Netzwerkverkehrs oder extremer Nutzung des ODBC-Servers verzögert sein. Anstatt abzuwarten, können Sie angeben, wie lange das Microsoft Jet-Datenbankmodul wartet, bevor er einen Fehler erzeugt. Der Standard-Timeoutwert beträgt 60 Sekunden. Sie können den Wert dieser Eigenschaft abrufen, direkt durch Aufrufen der Querydef [GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout) Member-Funktion. Weitere Informationen finden Sie unter dem Thema "ODBCTimeout-Eigenschaft" DAO-Hilfe.  
   
-## Hinweise  
- Die Querydef ist ein Objekt der Klasse [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md).  Die Verweise auf primärem, und einen sekundären alle oben geben an, wie die Informationen durch die [GetQueryDefInfo](../Topic/CDaoDatabase::GetQueryDefInfo.md)\-Memberfunktion in der `CDaoDatabase`\- Klasse zurückgegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ Die Querydef ist ein Objekt der Klasse [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Die Verweise auf die primären, sekundären und alle oben anzugeben, wie die Informationen zurückgegeben werden, durch die [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) Memberfunktion Klasse `CDaoDatabase`.  
   
- Die Informationen, die von der [CDaoDatabase::GetQueryDefInfo](../Topic/CDaoDatabase::GetQueryDefInfo.md)\-Memberfunktion aufgerufen werden, werden in einer `CDaoQueryDefInfo`\-Struktur gespeichert.  Rufen Sie `GetQueryDefInfo` für das Datenbankobjekt auf, in dessen Querydefauflistung das Querydef\-Objekt gespeichert wird.  `CDaoQueryDefInfo` definiert auch eine `Dump`\-Memberfunktion in Debugbuilds.  Sie können `Dump` verwenden, um den Inhalt eines `CDaoQueryDefInfo`\-Objekts zu speichern.  `CDaoDatabase`\-Klasse stellt auch Memberfunktionen für alle Eigenschaften direkt zugreifen, die in einem `CDaoQueryDefInfo`\-Objekt zurückgegeben werden, müssen Sie wahrscheinlich selten `GetQueryDefInfo` aufrufen.  
+ Informationen abgerufen werden, indem Sie die [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) -Memberfunktion befindet sich in einer `CDaoQueryDefInfo` Struktur. Rufen Sie `GetQueryDefInfo` für das Datenbankobjekt, in dessen QueryDefs-Auflistung das Querydef-Objekt gespeichert ist. `CDaoQueryDefInfo`definiert auch eine `Dump` Memberfunktion im Debugmodus erstellt. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoQueryDefInfo` Objekt. Klasse `CDaoDatabase` auch stellt Memberfunktionen zur direkten Zugriff auf alle Eigenschaften zurückgegeben, die einem `CDaoQueryDefInfo` Objekts müssen Sie wahrscheinlich nur in seltenen Fällen rufen Sie `GetQueryDefInfo`.  
   
- Wenn Sie ein neues oder Feld\- Parameterobjekt zu Feldern oder die Parameterauflistung eines Querydef\-Objekts anfügen, wird eine Ausnahme ausgelöst, wenn die zugrunde liegende Datenbank nicht den Datentyp unterstützt, der für das neue Objekt angegeben wird.  
+ Wenn Sie ein neues Feld oder Parameter-Objekt an die Felder oder Parameter-Auflistung eines Querydef-Objekts anfügen, wird eine Ausnahme ausgelöst, wenn die zugrunde liegende Datenbank den für das neue Objekt angegebenen Datentyp nicht unterstützt.  
   
- Die Datums\- Uhrzeiteinstellungen werden vom Computer abgeleitet, auf dem die Querydef erstellt oder zuletzt aktualisiert.  In einer Mehrbenutzerumgebung sollten Benutzer diese Einstellungen direkt vom Dateiserver mithilfe des Befehls **net time** abrufen, Diskrepanzen in den Eigenschafteneinstellungen DateCreated und LastUpdated zu vermeiden.  
+ Die Einstellungen für Datum und Uhrzeit werden vom Computer abgeleitet, auf denen die Querydef erstellt oder zuletzt aktualisiert wurde. In einer Umgebung mit mehreren Benutzern sollten Benutzer diese Einstellungen abrufen, direkt aus der Datei mithilfe der **net Time** Befehl aus, um die Unterschiede in den Einstellungen der Eigenschaft DateCreated und LastUpdated zu vermeiden.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxdao.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)   
- [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)
+ [CDaoQueryDef-Klasse](../../mfc/reference/cdaoquerydef-class.md)   
+ [CDaoDatabase-Klasse](../../mfc/reference/cdaodatabase-class.md)
+

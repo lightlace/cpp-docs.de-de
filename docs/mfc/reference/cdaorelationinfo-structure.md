@@ -1,92 +1,107 @@
 ---
-title: "CDaoRelationInfo-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoRelationInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoRelationInfo-Struktur"
-  - "DAO (Datenzugriffsobjekte), Relations-Auflistung"
+title: CDaoRelationInfo-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoRelationInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO (Data Access Objects), Relations collection
+- CDaoRelationInfo structure
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoRelationInfo-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 7c3a8195aed2c3b3fe5c78c98afcc6e72a83cc21
+ms.lasthandoff: 02/24/2017
 
-Die `CDaoRelationInfo`\-Struktur enthält Informationen über eine Beziehung, der zwischen Feldern aus zwei Tabellen in einem [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)\-Objekt definiert wird.  
+---
+# <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo-Struktur
+Die `CDaoRelationInfo` Struktur enthält Informationen über eine Beziehung zwischen zwei Tabellen in Feldern definiert eine [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) Objekt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      struct CDaoRelationInfo  
+struct CDaoRelationInfo  
 {  
-   CDaoRelationInfo( );                    // Constructor  
-   CString m_strName;                      // Primary  
-   CString m_strTable;                     // Primary  
-   CString m_strForeignTable;              // Primary  
-   long m_lAttributes;                     // Secondary  
-   CDaoRelationFieldInfo* m_pFieldInfos;   // Secondary  
-   short m_nFields;                        // Secondary  
-   // Below the // Implementation comment:  
-   // Destructor, not otherwise documented  
+    CDaoRelationInfo();
+*// Constructor  
+    CString m_strName;      // Primary  
+    CString m_strTable;     // Primary  
+    CString m_strForeignTable;              // Primary  
+    long m_lAttributes;     // Secondary  
+    CDaoRelationFieldInfo* m_pFieldInfos;   // Secondary  
+    short m_nFields;        // Secondary *// Below the // Implementation comment: *// Destructor, not otherwise documented  
 };  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `m_strName`  
- Benennt eindeutig das Beziehungsobjekt.  Weitere Informationen finden Sie im Thema "Name\-Eigenschaft" in der DAO\-Hilfe.  
+ Die Relation-Objekt bezeichnet eindeutig. Weitere Informationen finden Sie im Thema "Name-Eigenschaft" in der DAO-Hilfe.  
   
- *m\_strTable*  
- Benennt die Tabelle in der Beziehung.  
+ *m_strTable*  
+ Den Namen der primären Tabelle in der Beziehung.  
   
- *m\_strForeignTable*  
- Benennt die fremden Tabelle in der Beziehung.  Eine fremden Tabelle ist eine Tabelle, die verwendet wird, um Fremdschlüssel zu enthalten.  Im Allgemeinen verwenden Sie eine fremden Tabelle, um die referenzielle Integrität zu erstellen oder zu erzwingen.  Die fremden Tabelle ist normalerweise auf die n\-Seite einer 1: n\-Beziehung.  Beispiele für Fremdtabelleneinschließung Tabellen das Einbinden von Codes für die Zustände amerikanischen oder die kanadisches Provinzen oder die Kundenreihenfolgen.  
+ *m_strForeignTable*  
+ Den Namen der Fremdschlüsseltabelle in der Beziehung. Fremdtabelle ist eine Tabelle mit dem Fremdschlüssel enthält. Im Allgemeinen verwenden Sie eine Fremdtabelle einrichten bzw. die referenzielle Integrität erzwingen. Die Fremdtabelle befindet sich normalerweise auf der n-Seite einer&1;: n-Beziehung. Fremde Tabellen gehören Tabellen, für die American Zustände oder kanadischen Provinzen oder Aufträge des Kunden enthält.  
   
  `m_lAttributes`  
- Enthält Informationen zum Beziehungstyp.  Der Wert dieses Members kann eines der folgenden Elemente befinden:  
+ Enthält Informationen über den Typ der Beziehung. Der Wert dieses Elements kann eines der folgenden sein:  
   
--   Beziehung ist **dbRelationUnique** erfolgt.  
+- **DbRelationUnique** Beziehung&1;:&1; ist.  
   
--   Beziehung wird **dbRelationDontEnforce** nicht erzwungen keine \(referenzielle Integrität\).  
+- **DbRelationDontEnforce** Beziehung wird nicht erzwungen (keine referentielle Integrität).  
   
--   **dbRelationInherited** ist in einer Beziehung nicht aktuellen Datenbank, die die zwei umschlossenen Tabellen enthält.  
+- **DbRelationInherited** Beziehung in einer-Datenbank, die zwei angefügten Tabellen enthält.  
   
--   **dbRelationLeft** Die Beziehung ist ein linksjoin.  Ein linker äußerer Join enthält alle Datensätze vom ersten \(links\) aus zwei Tabellen, wenn es keine entsprechenden Werte nach Datensätzen in der zweiten Tabelle \(rechten\) gibt.  
+- **DbRelationLeft** der Beziehung ist eine linke Verknüpfung. Eine linke äußere Verknüpfung enthält alle Datensätze aus der ersten (linken) der beiden Tabellen, selbst wenn keine übereinstimmenden Werte für Datensätze in der zweiten (rechten) Tabelle vorhanden sind.  
   
--   **dbRelationRight** Die Beziehung ist ein Join rechts.  Ein rechten äußeren Join werden alle Datensätze des zweiten \(rechts\) aus zwei Tabellen, wenn es keine entsprechenden Werte nach Datensätzen in der ersten \(linken\) Tabelle gibt.  
+- **DbRelationRight** beruht auf einer rechten Verknüpfung. Eine rechte äußere Verknüpfung enthält alle Datensätze aus der zweiten (rechten) von zwei Tabellen, selbst wenn keine übereinstimmenden Werte für Datensätze in der ersten (linken) Tabelle vorhanden sind.  
   
--   **dbRelationUpdateCascade** Updates überlagern.  
+- **DbRelationUpdateCascade** Updates kaskadieren.  
   
--   **dbRelationDeleteCascade** Löschen kaskadiert.  
+- **DbRelationDeleteCascade** Löschvorgänge werden weitergegeben.  
   
  `m_pFieldInfos`  
- Ein Zeiger auf ein Array [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)\-Strukturen.  Das Array enthält ein Objekt für jedes Feld in der Beziehung.  Der `m_nFields` Datenmember gibt eine Anzahl der Arrayelemente.  
+ Ein Zeiger auf ein Array von [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) Strukturen. Das Array enthält ein Objekt für jedes Feld in der Beziehung. Der `m_nFields` -Datenmember gibt die Anzahl der Elemente des Arrays.  
   
  `m_nFields`  
- Die Anzahl von `CDaoRelationFieldInfo` im `m_pFieldInfos` \- Datenmember ein.  
+ Die Anzahl der `CDaoRelationFieldInfo` Objekte in der `m_pFieldInfos` -Datenmember.  
   
-## Hinweise  
- Die Verweise auf primärem und einen sekundären oben genanntem geben an, wie die Informationen durch die [GetRelationInfo](../Topic/CDaoDatabase::GetRelationInfo.md)\-Memberfunktion in der `CDaoDatabase`\- Klasse zurückgegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ Die Verweise auf die primären und sekundären oben anzugeben, wie die Informationen zurückgegeben werden, durch die [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) Memberfunktion Klasse `CDaoDatabase`.  
   
- Beziehungsobjekte werden nicht durch eine MFC\-Klasse dargestellt.  Stattdessen wird das DAO\-Objekt, das ein MFC\-Objekt der `CDaoDatabase`\-Klasse liegt zugrunde, eine Auflistung Beziehungsobjekte bei: `CDaoDatabase` stellt Memberfunktionen, um auf mehrere einzelne Elemente aus Beziehungsinformationen zuzugreifen, oder Sie können mit einem `CDaoRelationInfo`\-Objekt in einem gemeinsam zugreifen, indem Sie die Memberfunktion `GetRelationInfo` des übergeordneten Datenbankobjekts aufrufen.  
+ Beziehung zwischen Objekten werden nicht von einer MFC-Klasse dargestellt. Stattdessen, das zugrunde liegende ein MFC-Objekt des DAO-Objekt die `CDaoDatabase` Klasse verwaltet eine Auflistung von Beziehungsobjekte: `CDaoDatabase` stellt Memberfunktionen den Zugriff auf einige einzelne Elemente der Beziehung Informationen, oder Sie können darauf zugreifen, gleichzeitig mit einer `CDaoRelationInfo` -Objekt durch Aufrufen der `GetRelationInfo` -Memberfunktion des enthaltenden Objekts der Datenbank.  
   
- Die Informationen, die von der [CDaoDatabase::GetRelationInfo](../Topic/CDaoDatabase::GetRelationInfo.md)\-Memberfunktion aufgerufen werden, werden in einer `CDaoRelationInfo`\-Struktur gespeichert.  `CDaoRelationInfo` definiert auch eine `Dump`\-Memberfunktion in Debugbuilds.  Sie können `Dump` verwenden, um den Inhalt eines `CDaoRelationInfo`\-Objekts zu speichern.  
+ Informationen abgerufen werden, indem Sie die [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) -Memberfunktion befindet sich in einer `CDaoRelationInfo` Struktur. `CDaoRelationInfo`definiert auch eine `Dump` Memberfunktion im Debugmodus erstellt. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoRelationInfo` Objekt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxdao.h  
   
-## Siehe auch  
- [CDaoRelationFieldInfo\-Struktur](../../mfc/reference/cdaorelationfieldinfo-structure.md)
+## <a name="see-also"></a>Siehe auch  
+ [CDaoRelationFieldInfo-Struktur](../../mfc/reference/cdaorelationfieldinfo-structure.md)
+

@@ -1,45 +1,63 @@
 ---
-title: "Compilerwarnung (Stufe 2) C4412 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4412"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4412"
+title: Compiler (Stufe 2) C4412 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4412
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerwarnung (Stufe 2) C4412
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 92aa12514088d0fbffbe826a495d76b49ab311d1
+ms.lasthandoff: 02/24/2017
 
-'Funktion': Funktionssignatur enthält Typ 'Typ'; C\+\+\-Objekte können nicht sicher zwischen reinem und gemischtem oder systemeigenem Code übergeben werden.  
+---
+# <a name="compiler-warning-level-2-c4412"></a>Compilerwarnung (Stufe 2) C4412
+'Funktion': Funktionssignatur enthält Typ 'Type'; C++-Objekte sind nicht sicher zwischen reinem Code übergeben und gemischtem oder systemeigenem.  
   
- Vom Compiler wurde eine potenziell unsichere Situation entdeckt, die zu einem Laufzeitfehler führen könnte: Eine über dllimport importierte Funktion wird von einer **\/clr:pure**\-Kompiliereinheit aufgerufen, und die Funktionssignatur enthält einen unsicheren Typ.  Ein Typ ist unsicher, wenn er eine Memberfunktion enthält oder ein Datenmember besitzt, das ein unsicherer Typ oder eine Dereferenzierung auf einen unsicheren Typ ist.  
+ Die **/CLR: pure** -Compileroption in Visual Studio 2015 veraltet ist.  
   
- Dies ist aufgrund der unterschiedlichen Standardaufrufkonventionen von reinem und systemeigenem Code \(oder gemischtem systemeigenen und verwaltetem Code\) unsicher.  Stellen Sie beim Importieren einer Funktion \(über `dllimport`\) in eine **\/clr:pure**\-Kompiliereinheit sicher, dass die Deklarationen der einzelnen Typen in der Signatur mit denjenigen in der Kompiliereinheit identisch sind, die die Funktion exportiert \(achten Sie besonders auf die Unterschiede der impliziten Aufrufkonventionen\).  
+ Der Compiler hat eine potenziell unsichere Situation, die bei einem Laufzeitfehler verursachen: erfolgt ein Aufruf von einer **/CLR: pure** Kompiliereinheit an eine Funktion, die über Dllimport und die Funktionssignatur importiert wurde, enthält einen unsicheren Typ. Ein Typ ist unsicher, wenn es eine Memberfunktion enthält oder einen Datenmember, der einen unsicheren Typ oder eine Dereferenzierung zu einem unsicheren Typ ist.  
   
- Eine virtuelle Memberfunktion ist besonders anfällig für unerwartete Ergebnisse.  Es sollten jedoch auch nicht virtuelle Funktionen getestet werden, um sicherzustellen, dass Sie korrekte Ergebnisse erhalten.  Wenn Sie sicher sind, dass Sie korrekte Ergebnisse erhalten, können Sie diese Warnung ignorieren.  
+ Dies ist unsicher aufgrund der Unterschied in der Standard-Aufrufkonventionen zwischen reinem und systemeigenem Code (oder gemischten systemeigenen und verwalteten). Beim Importieren (über `dllimport`) eine Funktion in einer **/CLR: pure** Kompiliereinheit, stellen Sie sicher, dass die Deklarationen der einzelnen Typen in der Signatur mit denjenigen in der Kompiliereinheit identisch, die die Funktion sind (Achten Sie besonders auf die Unterschiede in der impliziten Aufrufkonventionen) exportiert.  
   
- Weitere Information zu **\/clr:pure** finden Sie unter [Gewusst wie: Migrieren auf \/clr:pure](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md).  
+ Eine virtuelle Memberfunktion ist besonders anfällig für unerwartete Ergebnisse zurückgibt.  Allerdings sollten auch eine nicht virtuelle Funktion getestet werden, um sicherzustellen, dass Sie die richtigen Ergebnisse erhalten. Wenn Sie sicher sind, dass Sie die richtigen Ergebnisse erhalten, können Sie diese Warnung ignorieren.  
   
- C4412 ist standardmäßig deaktiviert.  Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) und [dllexport, dllimport](../../cpp/dllexport-dllimport.md).  
+ Weitere Informationen zu **/CLR: reine**, finden Sie unter [wie: Migrieren auf/CLR: pure (C++ / CLI)](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md).  
   
- Um diese Warnung zu vermeiden, entfernen Sie alle Funktionen aus dem Typ.  
+ C4412 ist standardmäßig deaktiviert. Finden Sie unter [Compiler Warnungen, die Are Off standardmäßig](../../preprocessor/compiler-warnings-that-are-off-by-default.md) und [Dllexport, Dllimport](../../cpp/dllexport-dllimport.md) Weitere Informationen.  
   
-## Beispiel  
- Im folgenden Beispiel wird C4412 generiert.  
+ Um diese Warnung zu beheben, entfernen Sie alle Funktionen aus dem Typ.  
+  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C4412 generiert.  
   
 ```  
 // C4412.cpp  
@@ -65,8 +83,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Das folgende Beispiel ist eine Headerdatei, in der zwei Typen deklariert werden.  Der `Unsafe`\-Typ ist unsicher, da er eine Memberfunktion besitzt.  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel ist eine Headerdatei, die zwei Typen deklariert werden. Die `Unsafe` -Typ ist unsicher, da er eine Memberfunktion besitzt.  
   
 ```  
 // C4412.h  
@@ -84,8 +102,8 @@ struct Safe {
 };  
 ```  
   
-## Beispiel  
- In diesem Beispiel werden Funktionen mit den in der Headerdatei definierten Typen exportiert.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel exportiert die Funktionen mit den Typen, die in der Headerdatei definiert.  
   
 ```  
 // C4412_2.cpp  
@@ -100,10 +118,10 @@ __declspec(dllexport) Unsafe * __cdecl func() { return new Unsafe; }
 __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }  
 ```  
   
-## Beispiel  
- Die Standardaufrufkonvention in einer **\/clr:pure**\-Kompilierung unterscheidet sich von derjenigen bei einer systemeigenen Kompilierung.  Wenn C4412.h eingeschlossen wird, ist `Test` der Standard für `__clrcall`.  Wenn Sie dieses Programm kompilieren und ausführen \(verwenden Sie nicht **\/c**\), verursacht das Programm eine Ausnahme.  
+## <a name="example"></a>Beispiel  
+ Die Standardaufrufkonvention einer **/CLR: pure** Kompilierung unterscheidet sich von einer systemeigenen Kompilierung.  Wenn C4412.h eingeschlossen ist, wird `Test` standardmäßig `__clrcall`. Wenn Sie kompilieren und führen Sie dieses Programm (verwenden Sie keine **/c**), das Programm wird eine Ausnahme ausgelöst.  
   
- Im folgenden Beispiel wird C4412 generiert.  
+ Im folgende Beispiel wird C4412 generiert.  
   
 ```  
 // C4412_3.cpp  

@@ -1,75 +1,136 @@
 ---
-title: "CWinFormsView Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CWinFormsView"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CWinFormsView class"
-  - "MFC [C++], Windows Forms-Unterstützung"
-  - "Windows Forms [C++], MFC-Unterstützung"
+title: CWinFormsView Class | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CWinFormsView
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC [C++], Windows Forms support
+- CWinFormsView class
+- Windows Forms [C++], MFC support
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
 caps.latest.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# CWinFormsView Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 6c49d711da747e4c6cbad0f883d93196b6a98057
+ms.openlocfilehash: 7aadcc1aa887cb6be1ddbb8f3797c4a9e1af5b6a
+ms.lasthandoff: 02/24/2017
 
-Stellt generische Funktionen zum Hosten eines Windows Forms\-Steuerelements als MFC\-Ansicht bereit.  
+---
+# <a name="cwinformsview-class"></a>CWinFormsView-Klasse
+Stellt generische Funktionen zum Hosten eines Windows Forms-Steuerelements als MFC-Ansicht bereit.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CWinFormsView : public CView;  
 ```  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CWinFormsView::CWinFormsView](../Topic/CWinFormsView::CWinFormsView.md)|Erstellt ein `CWinFormsView`\-Objekt.|  
+|[CWinFormsView::CWinFormsView](#cwinformsview)|Erstellt ein `CWinFormsView`-Objekt.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CWinFormsView::GetControl](../Topic/CWinFormsView::GetControl.md)|Ruft einen Zeiger auf das Windows Forms\-Steuerelement ab.|  
+|[CWinFormsView::](#getcontrol)|Ruft einen Zeiger auf das Windows Forms-Steuerelement.|  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name||  
 |----------|-|  
-|[CWinFormsView::operator Control^](../Topic/CWinFormsView::operator%20Control%5E.md)|Wandelt einen Typ als Zeiger auf einem Windows Forms\-Steuerelement um.|  
+|[CWinFormsView::operator Steuerelement ^](#operator_control)|Wandelt einen Typ ein Zeiger auf ein Windows Forms-Steuerelement.|  
   
-## Hinweise  
- MFC verwendet die `CWinFormsView`\-Klasse, um eine .NET Framework\-WindowsForms\-Steuerelement innerhalb einer MFC\-Ansicht zu hosten.  Das Steuerelement ist ein untergeordnetes Element der systemeigenen Ansicht und nimmt den gesamten Clientbereich der MFC\-Ansicht.  Das Ergebnis ist einer `CFormView` ähneln und ermöglicht es Ihnen, den Windows Forms\-Designer und die Laufzeit zu nutzen, umfangreiche formularbasierte Ansichten zu erstellen.  
+## <a name="remarks"></a>Hinweise  
+ MFC verwendet die `CWinFormsView` -Klasse zum Hosten von .NET Framework Windows Forms-Steuerelements in einer MFC-Ansicht. Das Steuerelement ist ein untergeordnetes Element der einheitlichen Ansicht und nimmt den gesamten Clientbereich der MFC-Ansicht. Das Ergebnis ähnelt einem `CFormView` anzeigen, sodass Sie nutzen Windows Forms-Designer und Laufzeit, um umfangreiche formularbasierte Ansichten zu erstellen.  
   
- Weitere Informationen zur Verwendung von Windows Forms, finden Sie unter [Verwenden eines Windows Form\-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
-  
-> [!NOTE]
->  Windows Forms\-Integration funktioniert nur in Projekten, die dynamisch mit MFC verknüpft sind \(Projekte, in denen AFXDLL definiert ist\).  
+ Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [mithilfe eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 > [!NOTE]
->  CWinFormsView unterstützt nicht das MFC\-Splitterfenster \([CSplitterWnd Class](../../mfc/reference/csplitterwnd-class.md)\).  Derzeit nur das Windows Form\-Splitter\-Steuerelement \(<xref:System.Windows.Forms.Splitter>\) wird unterstützt.  
+>  MFC-Windows Forms-Integration funktioniert nur in Projekten, die dynamisch mit MFC verknüpft (Projekte, in denen AFXDLL definiert ist).  
   
-## Anforderungen  
+> [!NOTE]
+>  CWinFormsView unterstützt nicht die MFC-Splitterfenster ( [CSplitterWnd Klasse](../../mfc/reference/csplitterwnd-class.md)). Derzeit nur das Windows Forms Splitter-Steuerelement wird unterstützt.  
+  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxwinforms.h  
   
-## Siehe auch  
+##  <a name="a-namecwinformsviewa--cwinformsviewcwinformsview"></a><a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
+ Erstellt ein `CWinFormsView`-Objekt.  
+  
+```  
+CWinFormsView(System::Type^ pManagedViewType);  
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `pManagedViewType`  
+ Ein Zeiger auf den Datentyp des Windows Forms-Benutzersteuerelements.   
+  
+### <a name="example"></a>Beispiel  
+ Im folgenden Beispiel die `CUserView` Klasse erbt von `CWinFormsView` und übergibt den `UserControl1` an die `CWinFormsView` Konstruktor. `UserControl1`ist eine benutzerdefinierte Steuerelement ControlLibrary1.dll.  
+  
+ [!code-cpp[NVC_MFC_Managed&#1;](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]  
+  
+ [!code-cpp[NVC_MFC_Managed&#2;](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
+  
+##  <a name="a-namegetcontrola--cwinformsviewgetcontrol"></a><a name="getcontrol"></a>CWinFormsView::  
+ Ruft einen Zeiger auf das Windows Forms-Steuerelement.  
+  
+```  
+System::Windows::Forms::Control^ GetControl() const;  
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf ein `System.Windows.Forms.Control` Objekt.  
+  
+### <a name="remarks"></a>Hinweise  
+ Ein Beispiel zur Verwendung von Windows Forms finden Sie unter [mithilfe eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+  
+##  <a name="a-nameoperatorcontrola--cwinformsviewoperator-control"></a><a name="operator_control"></a>CWinFormsView::operator Steuerelement ^  
+ Wandelt einen Typ ein Zeiger auf ein Windows Forms-Steuerelement.  
+  
+```  
+operator System::Windows::Forms::Control^() const;  
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Mit diesem Operator können Sie übergeben ein `CWinFormsView` Ansicht, um Funktionen, die einen Zeiger auf ein Windows Forms-Steuerelement des Typs <xref:System.Windows.Forms.Control>.</xref:System.Windows.Forms.Control> akzeptieren  
+  
+### <a name="example"></a>Beispiel  
+  Finden Sie unter [CWinFormsView::](#getcontrol).  
+  
+## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CWinFormsControl Class](../../mfc/reference/cwinformscontrol-class.md)   
- [CWinFormsDialog Class](../../mfc/reference/cwinformsdialog-class.md)   
- [CFormView Class](../../mfc/reference/cformview-class.md)
+ [CWinFormsControl-Klasse](../../mfc/reference/cwinformscontrol-class.md)   
+ [CWinFormsDialog-Klasse](../../mfc/reference/cwinformsdialog-class.md)   
+ [CFormView-Klasse](../../mfc/reference/cformview-class.md)
+

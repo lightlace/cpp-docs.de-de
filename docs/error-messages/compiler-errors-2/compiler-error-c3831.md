@@ -1,34 +1,51 @@
 ---
-title: "Compilerfehler C3831 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3831"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3831"
+title: Compiler-Fehler C3831 generiert | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3831
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3831
 ms.assetid: a125d8dc-b75a-4ea0-b6c7-fe7b119dba25
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C3831
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 9b0dc2a5da701c94408e79053df721af38cada62
+ms.lasthandoff: 02/24/2017
 
-'Member': 'Klasse' kann keinen festen Datenmember oder eine Memberfunktion aufweisen, die einen festen Zeiger zurückgibt  
+---
+# <a name="compiler-error-c3831"></a>Compilerfehler C3831
+'Member': 'Klasse' keinen festen Datenmember oder eine Memberfunktion, die einen festen Zeiger zurückgibt  
   
- [pin\_ptr \(C\+\+\/CLI\)](../../windows/pin-ptr-cpp-cli.md) oder [\_\_pin](../../misc/pin.md) wurde falsch verwendet.  
+ [Pin_ptr (C++ / CLI)](../../windows/pin-ptr-cpp-cli.md) wurde falsch verwendet.  
   
- Im folgenden Beispiel wird C3831 generiert:  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C3831 generiert:  
   
 ```  
 // C3831a.cpp  
@@ -50,33 +67,4 @@ int main() {
    pin_ptr<int> p = &y.i;  
 }  
 ```  
-  
- Im folgenden Beispiel wird C3831 generiert:  
-  
-```  
-// C3831b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-  
-__gc class Y  
-{  
-};  
-  
-__gc class X  
-{  
-   Y __pin * mbr_Y;   // C3831  
-   Y * mbr_Y2;   // OK  
-  
-   Y __pin * mf_Y()  // C3831  
-   {  
-      Y __pin * pY = new Y();  
-      return pY;  
-   }  
-  
-   Y * mf_Y2()   // OK  
-   {  
-      Y * pY = new Y();  
-      return pY;  
-   }  
-};  
-```
+

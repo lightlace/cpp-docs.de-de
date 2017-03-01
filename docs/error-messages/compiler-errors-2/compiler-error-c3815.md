@@ -1,75 +1,48 @@
 ---
-title: "Compilerfehler C3815 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3815"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3815"
+title: Compiler-Fehler C3815 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3815
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3815
 ms.assetid: c5a3b404-6341-4fd3-92af-152b404c4dde
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C3815
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 0c8c034d7d52e66bcd88c2a1046c40c68a9e0784
+ms.lasthandoff: 02/24/2017
 
-Der Rückgabetyp der Methode 'get\_accessor' muss mit dem Typ des letzten Parameters des Setter übereinstimmen  
+---
+# <a name="compiler-error-c3815"></a>Compilerfehler C3815
+der Rückgabetyp der Methode 'Get_accessor' muss der Typ des letzten Parameters des Setter übereinstimmen.  
   
- Bei der Deklaration von [Eigenschaften](../../misc/property.md) muss der Rückgabewert der `get_accessor`\-Methode mit dem letzten Parameter in der Deklaration der set accessor\-Methode übereinstimmen.  
+ Beim Deklarieren von Eigenschaften, die den Rückgabewert der `get_accessor` Methode muss den letzten Parameter in der Deklaration der Set-Accessor-Methode entsprechen.  
   
- C3815 ist nur mit **\/clr:oldSyntax** erreichbar.  
-  
- Im folgenden Beispiel wird C3815 generiert:  
-  
-```  
-// C3815.cpp  
-// compile with: /clr:oldSyntax /LD  
-#using <mscorlib.dll>  
-__gc class X  
-{  
-public:  
-   __property char get_N()  
-   // try the following line instead  
-   // __property int get_N()  
-   {  
-      return m_val;  
-   }  
-  
-   __property void set_N( int val)  
-   {  
-      m_val = val;  
-   }  
-  
-private:  
-   int m_val;  
-};   // C3815  
-```  
-  
- Das folgende Beispiel veranschaulicht, wie Sie Eigenschaften überladen können, sodass der Rückgabetyp des Getters nicht mehr dem letzten Parameters des Setters entspricht.  
-  
-```  
-// C3815b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-public __gc class MyClass {  
-public:  
-// 1st property:  
-   __property System::Int32 get_p1();  
-   __property void set_p1(System::Int32 i);  
-  
-// 2nd property (only setter):  
-   __property void set_p1(System::Int32* i);  
-  
-};  
-```
+ C3815 ist nur erreichbar, mit der veralteten-Compileroption **/CLR: oldSyntax**.  
+

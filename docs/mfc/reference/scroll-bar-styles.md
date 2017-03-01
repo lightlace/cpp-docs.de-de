@@ -1,67 +1,85 @@
 ---
-title: "Stile des Schiebeleisten-Steuerelements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SBS_VERT"
-  - "SBS_SIZEBOXBOTTOMRIGHTALIGN"
-  - "SBS_LEFTALIGN"
-  - "SBS_RIGHTALIGN"
-  - "SBS_TOPALIGN"
-  - "SBS_SIZEBOXTOPLEFTALIGN"
-  - "SBS_BOTTOMALIGN"
-  - "SBS_SIZEBOX"
-  - "SBS_HORZ"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SBS_BOTTOMALIGN-Konstante"
-  - "SBS_HORZ-Konstante"
-  - "SBS_LEFTALIGN-Konstante"
-  - "SBS_RIGHTALIGN-Konstante"
-  - "SBS_SIZEBOX-Konstante"
-  - "SBS_SIZEBOXBOTTOMRIGHTALIGN-Konstante"
-  - "SBS_SIZEBOXTOPLEFTALIGN-Konstante"
-  - "SBS_TOPALIGN-Konstante"
-  - "SBS_VERT-Konstante"
-  - "Bildlaufleisten, Stile"
+title: Stile des Schiebeleisten Steuerelements | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SBS_VERT
+- SBS_SIZEBOXBOTTOMRIGHTALIGN
+- SBS_LEFTALIGN
+- SBS_RIGHTALIGN
+- SBS_TOPALIGN
+- SBS_SIZEBOXTOPLEFTALIGN
+- SBS_BOTTOMALIGN
+- SBS_SIZEBOX
+- SBS_HORZ
+dev_langs:
+- C++
+helpviewer_keywords:
+- SBS_HORZ constant
+- SBS_TOPALIGN constant
+- SBS_SIZEBOX constant
+- SBS_BOTTOMALIGN constant
+- SBS_VERT constant
+- SBS_LEFTALIGN constant
+- SBS_SIZEBOXBOTTOMRIGHTALIGN constant
+- scroll bars, styles
+- SBS_SIZEBOXTOPLEFTALIGN constant
+- SBS_RIGHTALIGN constant
 ms.assetid: 8bcde35b-387d-49ae-bdd6-7cda9f5dae26
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Stile des Schiebeleisten-Steuerelements
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 778fe7b0f6f6319884df4ed9c5ccbe8e34bd8d42
+ms.lasthandoff: 02/24/2017
 
--   **SBS\_BOTTOMALIGN** mit dem **SBS\_HORZ** verwendete Format.  Der untere Rand der Bildlaufleiste wird am unteren Rand des Rechtecks ausgerichtet, das in der **Erstellen**\-Memberfunktion angegeben wird.  Die Bildlaufleiste vorhanden die Standardhöhe für Systembildlaufleisten.  
+---
+# <a name="scroll-bar-styles"></a>Stile des Schiebeleisten-Steuerelements
+-   **SBS_BOTTOMALIGN** verwendet, mit der **SBS_HORZ** Stil. Der untere Rand der Bildlaufleiste am unteren Rand des Rechtecks im angegebenen ausgerichtet ist die **erstellen** Member-Funktion. Die Bildlaufleiste verfügt über die Standardhöhe zum System Bildlaufleisten.  
   
--   **SBS\_HORZ** legt eine horizontale Bildlaufleiste fest.  Wenn weder das **SBS\_BOTTOMALIGN** noch **SBS\_TOPALIGN** Format angegeben ist, verfügt die Bildlaufleiste die Höhe, Breite und Position, die in der **Erstellen**\-Memberfunktion angegeben wird.  
+-   **SBS_HORZ** kennzeichnet eine horizontale Bildlaufleiste angezeigt. Wenn weder die **SBS_BOTTOMALIGN** noch **SBS_TOPALIGN** Format angegeben, die Bildlaufleiste verfügt über die Höhe, Breite und Position im angegebenen der **erstellen** Member-Funktion.  
   
--   **SBS\_LEFTALIGN** mit dem **SBS\_VERT** verwendete Format.  Der linke Rand der Bildlaufleiste ist dem linken Rand des Rechtecks ausgerichtet, das in der **Erstellen**\-Memberfunktion angegeben wird.  Die Bildlaufleiste vorhanden die Standardbreite für Systembildlaufleisten.  
+-   **SBS_LEFTALIGN** verwendet, mit der **SBS_VERT** Stil. Der linke Rand der Bildlaufleiste am linken Rand des Rechtecks im angegebenen ausgerichtet ist die **erstellen** Member-Funktion. Die Bildlaufleiste verfügt über die Standardbreite für System-Bildlaufleisten.  
   
--   **SBS\_RIGHTALIGN** mit dem **SBS\_VERT** verwendete Format.  Der rechte Rand der Bildlaufleiste ist dem rechten Rand des Rechtecks ausgerichtet, das in der **Erstellen**\-Memberfunktion angegeben wird.  Die Bildlaufleiste vorhanden die Standardbreite für Systembildlaufleisten.  
+-   **SBS_RIGHTALIGN** verwendet, mit der **SBS_VERT** Stil. Der rechte Rand der Bildlaufleiste am rechten Rand des Rechtecks im angegebenen ausgerichtet ist die **erstellen** Member-Funktion. Die Bildlaufleiste verfügt über die Standardbreite für System-Bildlaufleisten.  
   
--   **SBS\_SIZEBOX** legt ein Größenfeld fest.  Wenn weder das **SBS\_SIZEBOXBOTTOMRIGHTALIGN** noch **SBS\_SIZEBOXTOPLEFTALIGN** Format angegeben ist, verfügt das Größenfeld die Höhe, Breite und Position, die in der **Erstellen**\-Memberfunktion angegeben wird.  
+-   **SBS_SIZEBOX** kennzeichnet ein Feld. Wenn weder die **SBS_SIZEBOXBOTTOMRIGHTALIGN** noch **SBS_SIZEBOXTOPLEFTALIGN** Format angegeben, das Größeneinstellungsfeld hat, Höhe, Breite und Position im angegebenen der **erstellen** Member-Funktion.  
   
--   **SBS\_SIZEBOXBOTTOMRIGHTALIGN** mit dem **SBS\_SIZEBOX** verwendete Format.  Die rechte untere Ecke des Größenfelds wird mit der rechten unteren Ecke des Rechtecks ausgerichtet, das in der **Erstellen**\-Memberfunktion angegeben wird.  Das Größenfeld hat die Standardgröße für Systemgrößenfelder.  
+-   **SBS_SIZEBOXBOTTOMRIGHTALIGN** verwendet, mit der **SBS_SIZEBOX** Stil. Unten rechts neben dem Größeneinstellungsfeld mit der rechten unteren Ecke des Rechtecks im angegebenen ausgerichtet ist die **erstellen** Member-Funktion. Das Größeneinstellungsfeld ist die Standardgröße für System Felder.  
   
--   **SBS\_SIZEBOXTOPLEFTALIGN** mit dem **SBS\_SIZEBOX** verwendete Format.  Die linke obere Ecke des Größenfelds wird mit der oberen linken Ecke des Rechtecks ausgerichtet, das in der **Erstellen**\-Memberfunktion angegeben wird.  Das Größenfeld hat die Standardgröße für Systemgrößenfelder.  
+-   **SBS_SIZEBOXTOPLEFTALIGN** verwendet, mit der **SBS_SIZEBOX** Stil. Die linke obere Ecke des Größeneinstellungsfeld mit der linken oberen Ecke des Rechtecks in angegebenen ausgerichtet ist die **erstellen** Member-Funktion. Das Größeneinstellungsfeld ist die Standardgröße für System Felder.  
   
--   **SBS\_SIZEGRIP** entspricht der **SBS\_SIZEBOX** ausgelösten, aber mit einem Rand.  
+-   **SBS_SIZEGRIP** wie **SBS_SIZEBOX**, jedoch mit einer erhöhten Kante.  
   
--   **SBS\_TOPALIGN** mit dem **SBS\_HORZ** verwendete Format.  Der obere Rand der Bildlaufleiste wird mit dem oberen Rand des Rechtecks ausgerichtet, das in der **Erstellen**\-Memberfunktion angegeben wird.  Die Bildlaufleiste vorhanden die Standardhöhe für Systembildlaufleisten.  
+-   **SBS_TOPALIGN** verwendet, mit der **SBS_HORZ** Stil. Der obere Rand der Bildlaufleiste orientiert sich am oberen Rand des Rechtecks im angegebenen der **erstellen** Member-Funktion. Die Bildlaufleiste verfügt über die Standardhöhe zum System Bildlaufleisten.  
   
--   **SBS\_VERT** legt eine vertikale Bildlaufleiste fest.  Wenn weder das **SBS\_RIGHTALIGN** noch **SBS\_LEFTALIGN** Format angegeben ist, verfügt die Bildlaufleiste die Höhe, Breite und Position, die in der **Erstellen**\-Memberfunktion angegeben wird.  
+-   **SBS_VERT** kennzeichnet eine vertikale Bildlaufleiste angezeigt. Wenn weder die **SBS_RIGHTALIGN** noch **SBS_LEFTALIGN** Format angegeben, die Bildlaufleiste verfügt über die Höhe, Breite und Position im angegebenen der **erstellen** Member-Funktion.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Von MFC verwendete Stile](../../mfc/reference/styles-used-by-mfc.md)   
- [CScrollBar::Create](../Topic/CScrollBar::Create.md)   
- [Scroll Bar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb787533)
+ [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)   
+ [Steuerelementtypen für die Bildlaufleiste](http://msdn.microsoft.com/library/windows/desktop/bb787533)
+
+

@@ -1,62 +1,48 @@
 ---
-title: "Compilerfehler C3817 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3817"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3817"
+title: Compiler-Fehler C3817 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3817
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3817
 ms.assetid: c6dbb57a-c65e-4040-8dd2-85bd9d4fd337
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerfehler C3817
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 42721462ec84f2cbee92f808ffb5b8004b260aea
+ms.lasthandoff: 02/24/2017
 
-'Deklaration': Eigenschaft kann nur auf eine Funktion angewendet werden  
+---
+# <a name="compiler-error-c3817"></a>Compilerfehler C3817
+"Deklaration": Eigenschaft kann nur auf eine Funktion angewendet werden  
   
- Das Schlüsselwort [property](../../misc/property.md) kann nur auf eine Funktionsdefinition angewendet werden.  
+ Die `property` Schlüsselwort kann nur auf eine Funktionsdefinition angewendet werden.  
   
- C3817 ist nur über **\/clr:oldSyntax** erreichbar.  
-  
- Im folgenden Beispiel wird C3817 generiert:  
-  
-```  
-// C3817.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-  
-__gc class G {  
-      __property int x;   // C3817  
-   };  
-  
-// the following class defines a property  
-__gc class X {  
-public:  
-   __property int get_N( int i ) {  
-      Console::WriteLine( L"int" );  
-      return m_val[i];  
-   }  
-  
-   __property void set_N( int i, int val ) {  
-      m_val[i] = val;  
-   }  
-  
-private:  
-   int m_val[10];  
-};  
-  
-int main() {  
-}  
-```
+ C3817 ist nur über die veralteten Compileroption erreichbar **/CLR: oldSyntax**.  
+

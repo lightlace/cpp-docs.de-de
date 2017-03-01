@@ -1,34 +1,51 @@
 ---
-title: "short_vector_traits-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::short_vector_traits"
-dev_langs: 
-  - "C++"
+title: Short_vector_traits-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::short_vector_traits
+dev_langs:
+- C++
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# short_vector_traits-Struktur
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
+ms.openlocfilehash: aa123da5dfb5675a4b44d386224bf17e79df40a3
+ms.lasthandoff: 02/24/2017
 
-short\_vector\_traits ermöglicht retrival der zugrunde liegenden Vektorlänge skalaren und des Typs eines kurzen Vektortyps Skalarwert oder des Typs  
+---
+# <a name="shortvectortraits-structure"></a>short_vector_traits-Struktur
+Short_vector_traits ermöglicht das Abrufen von der zugrunde liegenden Länge des Vektors und skalaren Typ ein kurzer Vektor des Typs oder einen skalaren Typ  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<  
-   typename _Type  
+template<
+    typename T  
 >  
 struct short_vector_traits;  
 template<>  
@@ -81,36 +98,49 @@ template<>
 struct short_vector_traits<double_4>;  
 ```  
   
-#### Parameter  
- `_Type`  
+#### <a name="parameters"></a>Parameter  
+ `T`  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
+|Name|Beschreibung|  
+|----------|-----------------|  
 |`value_type`||  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[short\_vector\_traits::short\_vector\_traits\-Konstruktor](../Topic/short_vector_traits::short_vector_traits%20Constructor.md)||  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[short_vector_traits:: short_vector_traits-Konstruktor](#ctor)||  
   
-### Öffentliche Konstanten  
+### <a name="public-constants"></a>Öffentliche Konstanten  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[short\_vector\_traits::size\-Konstante](../Topic/short_vector_traits::size%20Constant.md)||  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[short_vector_traits:: size-Konstante](#size)||  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `short_vector_traits`  
   
-## Anforderungen  
- **Header:** amp\_short\_vectors.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** amp_short_vectors.h  
   
- **Namespace:** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Siehe auch  
- [Concurrency::graphics\-Namespace](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora--shortvectortraitsshortvectortraits-constructor"></a><a name="ctor"></a>short_vector_traits:: short_vector_traits-Konstruktor  
+  
+```  
+short_vector_traits();
+```  
+  
+##  <a name="a-namesizea--shortvectortraitssize-constant"></a><a name="size"></a>short_vector_traits:: size-Konstante  
+  
+```  
+static int const size = 1;  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency:: Graphics-Namespace](concurrency-graphics-namespace.md)
+

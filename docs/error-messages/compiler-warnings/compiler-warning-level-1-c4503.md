@@ -1,38 +1,54 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4503 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4503"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4503"
+title: Compiler (Stufe 1) C4503 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4503
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerwarnung (Stufe 1) C4503
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: f999fcb73860bfd2fabb3484e78f313a32240dee
+ms.lasthandoff: 02/24/2017
 
-'Bezeichner': Die Länge des ergänzten Namens wurde überschritten. Der Name wurde gekürzt.  
+---
+# <a name="compiler-warning-level-1-c4503"></a>Compilerwarnung (Stufe 1) C4503
+'Bezeichner': ergänzter Name zu lang, Name wurde abgeschnitten.  
   
- Der ergänzte Name war länger als maximal vom Compiler erlaubt \(4096\) und wurde deshalb gekürzt.  Sie vermeiden diese Warnung und die Kürzung, indem Sie die Anzahl der Argumente oder die Namenslänge der verwendeten Bezeichner verringern.  
+ Der ergänzte Name war länger als maximal vom Compiler erlaubt (4096) und wurde abgeschnitten. Um diese Warnung und die Kürzung zu vermeiden, verringern Sie die Anzahl der Argumente oder die Namenslänge der verwendeten Bezeichner.  
   
- Diese Warnung wird u. a. ausgegeben, wenn der Code wiederholt Vorlagen enthält, die auf Vorlagen spezialisiert sind:   Zum Beispiel eine Zuordnung von Zuordnungen \(in der Standard\-C\+\+\-Bibliothek\).  In diesem Fall können Sie die Typdefinitionen zu einem Typ \(z. B. eine Struktur\) umwandeln, der die Zuordnung enthält.  
+ Eine Situation, in dem diese Warnung ausgegeben wird, ist, wenn der Code wiederholt Vorlagen auf Vorlagen spezialisiert.  Z. B. eine Zuordnung von Zuordnungen (in der C++-Standardbibliothek).  In diesem Fall können Sie den Typdefinitionen an einen Typ (z. B. "Struct"), mit der Zuordnung.  
   
- Unter Umständen können Sie sich jedoch auch dazu entschließen, den Code nicht umzustrukturieren.  Es ist möglich, eine Anwendung weiterzugeben, die C4503 generiert. Wenn jedoch zur Verknüpfungszeit Fehler für ein gekürztes Symbol ausgegeben werden, treten beim Ermitteln des in der Fehlermeldung enthaltenen Symboltyps zusätzliche Schwierigkeiten auf.  Debuggen wird ebenfalls erschwert: Der Debugger ist nicht mehr ohne weiteres in der Lage, einem Typnamen einen Symbolnamen zuzuweisen.  Die ordnungsgemäße Ausführung des Programms wird durch den gekürzten Namen jedoch nicht beeinflusst.  
+ Sie können jedoch nicht den Code umstrukturieren.  Es ist möglich, eine Anwendung, die C4503 generiert ist, wenn Sie auf ein Symbol abgeschnittene Link Fehler erhalten, es jedoch schwieriger, den Typ des Symbols in den Fehler zu ermitteln.  Debuggen wird auch schwieriger sein. der Debugger ist difficultly Zuordnung Symbolname Namen vorhanden.  Die Richtigkeit des Programms, ist jedoch nicht betroffen, durch den gekürzten Namen.  
   
- Im folgenden Beispiel wird C4503 generiert:  
+ Im folgende Beispiel wird C4503 generiert:  
   
 ```  
 // C4503.cpp  
@@ -50,7 +66,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;  
 ```  
   
- Im folgenden Beispiel wird eine Möglichkeit dargestellt, den Code umzuschreiben, sodass C4503 vermieden wird:  
+ Das folgende Beispiel zeigt eine Möglichkeit, Schreiben Sie den Code, um C4503 zu beheben:  
   
 ```  
 // C4503b.cpp  

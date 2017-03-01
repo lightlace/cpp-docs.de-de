@@ -1,52 +1,69 @@
 ---
-title: "Concurrency::graphics::direct3d-Namespace | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_graphics/Concurrency::graphics::direct3d"
-  - "amp_short_vectors/Concurrency::graphics::direct3d"
-dev_langs: 
-  - "C++"
+title: Concurrency::Graphics::Direct3D Namespace | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics::direct3d
+- amp_short_vectors/Concurrency::graphics::direct3d
+dev_langs:
+- C++
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Concurrency::graphics::direct3d-Namespace
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: a17faa4f0d6bcc29c9d249fd99dd3a5df3b29884
+ms.lasthandoff: 02/24/2017
 
-Stellt die [get\_texture](../Topic/get_texture%20Function.md)\-Methode und [make\_texture](../Topic/make_texture%20Function.md)\-Methode bereit.  
+---
+# <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d-Namespace
+Stellt die [Get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) und [Make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) Methoden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace direct3d;  
 ```  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Funktionen  
+### <a name="functions"></a>Funktionen  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[get\_sampler\-Funktion](../Topic/get_sampler%20Function.md)|Rufen Sie die Direct3D\-Samplerstatus\-Schnittstelle für die angegebene Zugriffstastenansicht ab, die das angegebene Samplerobjekt darstellt.|  
-|[get\_texture\-Funktion](../Topic/get_texture%20Function.md)|Ruft die Direct3D\-Texturschnittstelle ab, die dem angegebenen [texture](../../../parallel/amp/reference/texture-class.md)\-Objekt zugrunde liegt.|  
-|[make\_sampler\-Funktion](../Topic/make_sampler%20Function.md)|Erstellen Sie einen Sampler aus einem Direct3D\-Samplerstatusschnittstellenzeiger.|  
-|[make\_texture\-Funktion](../Topic/make_texture%20Function.md)|Erstellt ein [texture](../../../parallel/amp/reference/texture-class.md)\-Objekt mithilfe der angegebenen Parameter.|  
-|[msad4\-Funktion](../Topic/msad4%20Function.md)|Vergleicht einen 4\-Byte\-Verweiswert und einen 8\-Byte\-Quellwert und sammelt einen Vektor von 4 Summen.|  
+|Name<br /><br /> Beschreibung|  
+|--------------------------|  
+|[Get_sampler-Funktion](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Rufen Sie die Direct3D-Samplerstatus-Schnittstelle für die angegebene Zugriffstastenansicht ab, die das angegebene Samplerobjekt darstellt.|  
+|[Get_texture-Funktion](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Ruft die Direct3D-texturschnittstelle zugrunde liegenden angegebenen [Textur](texture-class.md) Objekt.|  
+|[Make_sampler-Funktion](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Erstellen Sie einen Sampler aus einem Direct3D-Samplerstatusschnittstellenzeiger.|  
+|[Make_texture-Funktion](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Erstellt eine [Textur](texture-class.md) Objekt mit den angegebenen Parametern.|  
+|[msad4-Funktion](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Vergleicht einen 4-Byte-Verweiswert und einen 8-Byte-Quellwert und sammelt einen Vektor von 4 Summen.|  
   
-## Anforderungen  
- **Header:** amp\_graphics.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** amp_graphics.h  
   
- **Namespace:** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Siehe auch  
- [Concurrency::graphics\-Namespace](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency:: Graphics-Namespace](concurrency-graphics-namespace.md)
+

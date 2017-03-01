@@ -1,55 +1,133 @@
 ---
-title: "scoped_d3d_access_lock-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: scoped_d3d_access_lock-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# scoped_d3d_access_lock-Klasse
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: c5bc6183b3abc7a5598159717b0dbfa1dae2a05d
+ms.lasthandoff: 02/24/2017
 
-RAII\-Wrapper für eine D3D\-Zugriffssperre auf einem accelerator\_view\-Objekt.  
+---
+# <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock-Klasse
+RAII-Wrapper für eine D3D-Zugriffssperre auf einem accelerator_view-Objekt.  
   
-## Syntax  
+### <a name="syntax"></a>Syntax  
   
 ```  
 class scoped_d3d_access_lock;  
 ```  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[scoped\_d3d\_access\_lock::scoped\_d3d\_access\_lock\-Konstruktor](../Topic/scoped_d3d_access_lock::scoped_d3d_access_lock%20Constructor.md)|Überladen.  Erstellt ein `scoped_d3d_access_lock`\-Objekt.  Die Sperre wird aufgehoben, wenn dieses Objekt den Gültigkeitsbereich verlässt.|  
-|[scoped\_d3d\_access\_lock::~scoped\_d3d\_access\_lock\-Destruktor](../Topic/scoped_d3d_access_lock::~scoped_d3d_access_lock%20Destructor.md)|Gibt die D3D\-Zugriffssperre auf dem zugeordneten `accelerator_view`\-Objekt frei.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[scoped_d3d_access_lock-Konstruktor](#ctor)|Überladen. Erstellt ein `scoped_d3d_access_lock`-Objekt. Die Sperre wird aufgehoben, wenn dieses Objekt den Gültigkeitsbereich verlässt.|  
+|[~ scoped_d3d_access_lock-Destruktor](#dtor)|Gibt die D3D-Zugriffssperre auf dem zugeordneten `accelerator_view`-Objekt frei.|  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[scoped\_d3d\_access\_lock::operator\= Operator](../Topic/scoped_d3d_access_lock::operator=%20Operator.md)|Übernimmt den Besitz einer Sperre eines anderen `scoped_d3d_access_lock`\-Objekts.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[Operator =-Operator](#operator_eq)|Übernimmt den Besitz einer Sperre eines anderen `scoped_d3d_access_lock`-Objekts.|  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `scoped_d3d_access_lock`  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** amprt.h  
   
- **Namespace:** concurrency::direct3d  
+ **Namespace:** Concurrency:: Direct3D  
+
+##  <a name="a-namectora-scopedd3daccesslock"></a><a name="ctor"></a>scoped_d3d_access_lock 
+
+ Erstellt ein `scoped_d3d_access_lock`-Objekt. Die Sperre wird aufgehoben, wenn dieses Objekt den Gültigkeitsbereich verlässt.  
+ 
+```  
+explicit scoped_d3d_access_lock(// [1] constructor  
+    accelerator_view& _Av);
+
+ 
+explicit scoped_d3d_access_lock(// [2] constructor  
+    accelerator_view& _Av,  
+    adopt_d3d_access_lock_t _T);
+
+ 
+scoped_d3d_access_lock(// [3] move constructor  
+    scoped_d3d_access_lock&& _Other);
+```  
   
-## Siehe auch  
- [Concurrency::direct3d\-Namespace](../../../parallel/amp/reference/concurrency-direct3d-namespace.md)
+### <a name="parameters"></a>Parameter  
+ `_Av`  
+ Das `accelerator_view`-Objekt, für das die Sperre übernommen wird.  
+  
+ `_T`  
+ Das `adopt_d3d_access_lock_t`-Objekt.  
+  
+ `_Other`  
+ Das `scoped_d3d_access_lock`-Objekt, dessen vorhandene Sperre aufgehoben werden soll.  
+  
+## <a name="construction"></a>Konstruktion  
+ [1]-Konstruktor  
+ Ruft eine D3D-Zugriffssperre auf dem angegebenen [Accelerator_view](accelerator-view-class.md) Objekt. Die Konstruktion wird blockiert, bis die Sperre abgerufen wird.  
+  
+ [2]-Konstruktor  
+ Übernimmt eine D3D-Zugriffssperre aus der angegebenen [Accelerator_view](accelerator-view-class.md) Objekt.  
+  
+ [3]-Bewegungskonstruktor  
+ Hebt eine vorhandene D3D-Zugriffssperre eines anderen `scoped_d3d_access_lock`-Objekts auf. Die Konstruktion wird nicht blockiert.  
+
+  
+##  <a name="a-namedtora-scopedd3daccesslock"></a><a name="dtor"></a>~ scoped_d3d_access_lock 
+
+ Gibt die D3D-Zugriffssperre auf dem zugeordneten `accelerator_view`-Objekt frei.  
+  
+```  
+~scoped_d3d_access_lock();
+```  
+## <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>Operator = 
+
+Übernimmt den Besitz einer D3D-Zugriffssperre eines anderen `scoped_d3d_access_lock`-Objekts und hebt die vorherige Sperre auf.  
+ 
+```  
+scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `_Other`  
+ Das accelerator_view-Objekt, von dem die D3D-Zugriffssperre verschoben werden soll.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Verweis auf dieses `scoped_accelerator_view_lock`-Objekt.  
+
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency:: Direct3D-Namespace](concurrency-direct3d-namespace.md)
+

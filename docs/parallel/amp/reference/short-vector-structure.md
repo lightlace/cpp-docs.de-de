@@ -1,35 +1,52 @@
 ---
-title: "short_vector-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::short_vector"
-dev_langs: 
-  - "C++"
+title: Short_vector-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::short_vector
+dev_langs:
+- C++
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# short_vector-Struktur
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
+ms.openlocfilehash: f8df5600c8af80b4d279fc1fde0cc4c2ab9337eb
+ms.lasthandoff: 02/24/2017
 
-short\_vector stellt metaprogramming Definitionen, die für kurze Vektoren generisch Programmierung nützlich sind.  
+---
+# <a name="shortvector-structure"></a>short_vector-Struktur
+Short_vector bietet Metaprogrammierung Definitionen, die für die kurzvektoren im allgemeinen Programmierung nützlich sind.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<  
-   typename _Scalar_type,  
-   int _Size  
+template<
+    typename _Scalar_type,  
+    int _Size  
 >  
 struct short_vector;  
 template<>  
@@ -82,31 +99,38 @@ template<>
 struct short_vector<double, 4>;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `_Scalar_type`  
  `_Size`  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
+|Name|Beschreibung|  
+|----------|-----------------|  
 |`type`||  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[short\_vector::short\_vector\-Konstruktor](../Topic/short_vector::short_vector%20Constructor.md)||  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[short_vector:: short_vector-Konstruktor](#ctor)||  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `short_vector`  
   
-## Anforderungen  
- **Header:** amp\_short\_vectors.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** amp_short_vectors.h  
   
- **Namespace:** Concurrency::graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-## Siehe auch  
- [Concurrency::graphics\-Namespace](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora--shortvectorshortvector-constructor"></a><a name="ctor"></a>short_vector:: short_vector-Konstruktor  
+  
+```  
+short_vector();
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Concurrency:: Graphics-Namespace](concurrency-graphics-namespace.md)
+

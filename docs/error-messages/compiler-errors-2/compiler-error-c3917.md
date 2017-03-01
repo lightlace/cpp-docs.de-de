@@ -1,38 +1,52 @@
 ---
-title: "Compilerfehler C3917 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3917"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3917"
+title: Compiler-Fehler C3917 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3917
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3917
 ms.assetid: a24cd0c9-262f-46e5-9488-1c01f945933d
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compilerfehler C3917
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: d7ce6fbec9278893fd4f3f6b75c74ef91718646b
+ms.lasthandoff: 02/24/2017
 
-'Eigenschaft': veraltetes Konstruktdeklarationsformat  
+---
+# <a name="compiler-error-c3917"></a>Compilerfehler C3917
+"Eigenschaft": veralteter Konstrukt  
   
- Eine Eigenschaft oder Ereignisdefinition verwendet eine Syntax aus einer früheren Version.  
+Die Definition einer Eigenschaft oder Ereignis verwendet die Syntax von einer früheren Version.  
   
- Wenn Sie die Syntax aus einer früheren Version einsetzen möchten, verwenden Sie [\/clr:oldSyntax](../../build/reference/clr-common-language-runtime-compilation.md).  
+Weitere Informationen finden Sie unter [Eigenschaft](../../windows/property-cpp-component-extensions.md).  
   
- Weitere Informationen finden Sie unter [Eigenschaft](../../windows/property-cpp-component-extensions.md).  
-  
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // C3917.cpp  

@@ -1,60 +1,76 @@
 ---
-title: "CDaoRelationFieldInfo-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoRelationFieldInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoRelationFieldInfo-Struktur"
-  - "DAO (Datenzugriffsobjekte), Relations-Auflistung"
+title: CDaoRelationFieldInfo-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoRelationFieldInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO (Data Access Objects), Relations collection
+- CDaoRelationFieldInfo structure
 ms.assetid: 47cb89ca-dc80-47ce-96fd-cc4b88512558
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoRelationFieldInfo-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 23d7497502f611cf2311e574556186dc5f7c7d3d
+ms.lasthandoff: 02/24/2017
 
-Die `CDaoRelationFieldInfo`\-Struktur enthält Informationen zu einem Feld in Beziehungen, die für Datenzugriffsobjekte \(DAO\) definiert ist.  
+---
+# <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo-Struktur
+Die `CDaoRelationFieldInfo` Struktur enthält Informationen zu einem Feld in einer Beziehung für Datenzugriffsobjekte (DAO) definiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      struct CDaoRelationFieldInfo  
+struct CDaoRelationFieldInfo  
 {  
-   CString m_strName;           // Primary  
-   CString m_strForeignName;    // Primary  
+    CString m_strName;           // Primary  
+    CString m_strForeignName;    // Primary  
 };  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `m_strName`  
- Der Name des Felds in der Beziehung.  
+ Der Name des Felds in der primären Tabelle der Beziehung.  
   
  `m_strForeignName`  
  Der Name des Felds in der fremden Tabelle der Beziehung.  
   
-## Hinweise  
- Ein DAO\-Beziehungsobjekt sind die Felder in einer Tabelle und den Feldern in einer fremden Tabelle an, die die Beziehung definieren.  Die Verweise auf primärem in der obigen Strukturdefinition geben an, wie diese Informationen im `m_pFieldInfos`\-Member eines [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)\-Objekts zurückgegeben werden, das mithilfe der Memberfunktion [GetRelationInfo](../Topic/CDaoDatabase::GetRelationInfo.md) der Klasse `CDaoDatabase` abgerufen wird, aufgerufen.  
+## <a name="remarks"></a>Hinweise  
+ Ein DAO-Relation-Objekt gibt die Felder in der primären Tabelle und die Felder in einer Fremdtabelle, die die Beziehung zu definieren. Die Verweise auf die primären in die obige Strukturdefinition anzugeben, wie die Informationen zurückgegeben werden, in der `m_pFieldInfos` Mitglied einer [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) Objekt abgerufen, indem die [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) Memberfunktion der Klasse `CDaoDatabase`.  
   
- Beziehungsobjekte und Beziehungsfeldobjekte werden nicht durch eine MFC\-Klasse dargestellt.  Stattdessen enthält die DAO\-Objekte MFC\-Objekten, die der Klasse [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) zugrunde liegen, eine Auflistung Beziehungsobjekte, die aufgerufen Beziehungsauflistung.  Jedes Beziehungsobjekt enthält wiederum eine Auflistung Beziehungsfeldobjekte.  Jedes Beziehungsfeldobjekt besteht ein Feld in der Tabelle mit einem Feld in der fremden Tabelle aufeinander.  Zusammen entnommen, werden die Beziehungsfeldobjekte eine Gruppe Felder in jeder Tabelle, die zusammen die Beziehung definieren.  Mit `CDaoDatabase` können Sie auf Beziehungsobjekte mit `CDaoRelationInfo` zugreifen, Objekt, indem die `GetRelationInfo`\-Memberfunktion aufruft.  Das `CDaoRelationInfo`\-Objekt hat und dann ein Datenmember, `m_pFieldInfos`, der in einem Array `CDaoRelationFieldInfo`\-Objekten zeigt.  
+ Beziehung und Beziehung Feldobjekte werden nicht von einer MFC-Klasse dargestellt. Stattdessen der DAO zugrunde liegenden MFC-Objekte der Klasse Objekte [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) enthalten eine Auflistung von Beziehungsobjekte, die Relations-Auflistung aufgerufen. Jede Relation-Objekt enthält wiederum eine Auflistung von Beziehungsobjekte-Feld. Jedes Feld Beziehungsobjekt korreliert ein Feld in der primären Tabelle mit einem Feld in der fremden Tabelle. Zusammen genommen Beziehung Feldobjekte definieren eine Gruppe von Feldern in jeder Tabelle, die zusammen die Beziehung zu definieren. `CDaoDatabase`ermöglicht den Zugriff auf Beziehungsobjekte mit einer `CDaoRelationInfo` -Objekt durch Aufrufen der `GetRelationInfo` Member-Funktion. Die `CDaoRelationInfo` -Objekt, dann hat einen Datenmember, `m_pFieldInfos`, verweist auf ein Array von `CDaoRelationFieldInfo` Objekte.  
   
- Rufen Sie die Memberfunktion [GetRelationInfo](../Topic/CDaoDatabase::GetRelationInfo.md) des enthaltenden `CDaoDatabase`\-Objekts auf, in dem Beziehungen Auflistung das Beziehungsobjekt gespeichert wird, das, Sie interessiert.  Informieren Sie dann das `m_pFieldInfos`[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)\-Member des Objekts.  `CDaoRelationFieldInfo` definiert auch eine `Dump`\-Memberfunktion in Debugbuilds.  Sie können `Dump` verwenden, um den Inhalt eines `CDaoRelationFieldInfo`\-Objekts zu speichern.  
+ Rufen Sie die [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) -Memberfunktion des enthaltenden `CDaoDatabase` Objekt in dessen Relations-Auflistung ist das Beziehungsobjekt gespeichert Sie interessiert sind. Dann Zugriff auf die `m_pFieldInfos` Mitglied der [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) Objekt. `CDaoRelationFieldInfo`definiert auch eine `Dump` Memberfunktion im Debugmodus erstellt. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoRelationFieldInfo` Objekt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxdao.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoRelationInfo\-Struktur](../../mfc/reference/cdaorelationinfo-structure.md)
+ [CDaoRelationInfo-Struktur](../../mfc/reference/cdaorelationinfo-structure.md)
+

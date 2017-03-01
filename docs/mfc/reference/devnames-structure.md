@@ -1,63 +1,82 @@
 ---
-title: "DEVNAMES-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DEVNAMES"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DEVNAMES"
+title: DEVNAMES-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DEVNAMES
+dev_langs:
+- C++
+helpviewer_keywords:
+- DEVNAMES
 ms.assetid: aac97f60-2169-471a-ba5d-c0baed9eed9a
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# DEVNAMES-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 698a338c94dfa402dd51fa4f683b92a5d30cc0cd
+ms.lasthandoff: 02/24/2017
 
-Die `DEVNAMES`\-Struktur enthält Zeichenfolgen, die den Treiber, das Gerät und die Ausgabeanschlussnamen für einen Drucker identifizieren.  
+---
+# <a name="devnames-structure"></a>DEVNAMES-Struktur
+Die `DEVNAMES` Struktur enthält Zeichenfolgen, die der Treiber, Geräte und Ausgabe-Anschlussnamen für einen Drucker zu identifizieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagDEVNAMES { /* dvnm */  
+typedef struct tagDEVNAMES { /* dvnm */  
     WORD wDriverOffset;  
     WORD wDeviceOffset;  
     WORD wOutputOffset;  
-    WORD wDefault;  
-    /* driver, device, and port-name strings follow wDefault */  
+    WORD wDefault; */* driver,
+    device,
+    and port-name strings follow wDefault */  
 } DEVNAMES;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *wDriverOffset*  
- \(Eingabe\/Ausgabe\) gibt den Offset in Zeichen an eine auf NULL endende Zeichenfolge, die den Dateinamen \(ohne Dateinamenerweiterung\) des Gerätetreibers enthält.  Bei Eingabe wird diese Zeichenfolge verwendet, um den Drucker zu bestimmen, der im Dialogfeld ursprünglich angezeigt.  
+ (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die eine auf Null endende Zeichenfolge, die den Dateinamen (ohne Erweiterung) des Gerätetreibers enthält. Bei der Eingabe wird diese Zeichenfolge bestimmt den Drucker mit der ursprünglich im Dialogfeld angezeigt.  
   
  *wDeviceOffset*  
- \(Eingabe\/Ausgabe\) gibt den Offset in Zeichen auf NULL endende Zeichenfolge an \(Maximum von 32 Bytes einschließlich die NULL\) die den Namen des Geräts enthält.  Diese Zeichenfolge muss dem **dmDeviceName**\-Member der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)\-Struktur identisch sein.  
+ (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die Null-terminierte Zeichenfolge (maximal 32 Bytes, die das Nullzeichen) mit dem Namen des Geräts. Diese Zeichenfolge muss identisch mit der **DmDeviceName** Mitglied der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Struktur.  
   
  *wOutputOffset*  
- \(Eingabe\/Ausgabe\) gibt den Offset in Zeichen auf NULL endende Zeichenfolge, die den DOS\-Gerätenamen für den physischen Ausgabemedium \(Ausgabeanschluss\) enthält.  
+ (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die auf Null endende Zeichenfolge, die der DOS-Gerätename für das physikalische Ausgabemedium (Ausgabeanschluss) enthält.  
   
  *wDefault*  
- Gibt an, ob die Zeichenfolgen, die in der `DEVNAMES`\-Struktur enthalten sind, den Standarddrucker identifizieren.  Diese Zeichenfolge wird verwendet, um sicherzustellen, dass der nicht als Standarddrucker der letzte Druckvorgang geändert hat.  Bei Eingabe wenn das Flag **DN\_DEFAULTPRN** festgelegt ist, werden die anderen Werte in der `DEVNAMES`\-Struktur vor den aktuellen Standarddrucker überprüft.  Wenn eine der Zeichenfolgen gleichen Sie nicht ab, wird eine Fehlermeldung angezeigt, die Benutzer informierend, dass das Dokument z umformatiert werden muss.  Bei Ausgabe wird der **wDefault**\-Member nur geändert, wenn das Drucks\-Setupdialogfeld angezeigt wurde und der Benutzer die Schaltfläche OK ausgewählt.  Das **DN\_DEFAULTPRN**\-Flag wird festgelegt, wenn der Standarddrucker ausgewählt wurde.  Wenn ein bestimmter Drucker ausgewählt, wird das Flag nicht festgelegt.  Alle anderen Bits in diesem Member werden zur internen Verwendung durch die Druckdialogfeldfeldprozedur reserviert.  
+ Gibt an, ob sich die Zeichenfolgen in der `DEVNAMES` -Struktur als Standarddrucker zu ermitteln. Diese Zeichenfolge wird verwendet, um sicherzustellen, dass seit der letzten Druckvorgang nicht als Standarddrucker geändert hat. Auf Benutzereingaben, wenn die **DN_DEFAULTPRN** Flag festgelegt ist, die anderen Werte der `DEVNAMES` Struktur mit den Standarddrucker verglichen. Wenn eine der Zeichenfolgen nicht übereinstimmen, wird eine Warnung angezeigt, die das Dokument neu formatiert werden angezeigt. Bei der Ausgabe der **wDefault** Element geändert wird, nur, wenn das Dialogfeld Seite einrichten angezeigt wurde und der Benutzer die Schaltfläche "OK hat". Die **DN_DEFAULTPRN** Flag wird festgelegt, wenn der Standarddrucker ausgewählt wurde. Wenn ein bestimmter Drucker ausgewählt ist, wird das Flag nicht festgelegt. Alle anderen Bits in diesem Member sind von der Prozedur Drucken-Dialogfeld für die interne Verwendung reserviert.  
   
-## Hinweise  
- Die **PrintDlg**\-Funktion verwendet diese Zeichenfolgen, um Member im systemdefiniertem Drucken zu initialisieren.  Wenn der Benutzer das Dialogfeld geschlossen wird, werden Informationen über den ausgewählten Drucker in der Struktur zurückgegeben.  
+## <a name="remarks"></a>Hinweise  
+ Die **PrintDlg** Funktion verwendet diese Zeichenfolgen in das Dialogfeld Drucken vom System definierte Member initialisiert. Wenn der Benutzer das Dialogfeld geschlossen wird, werden Informationen über den ausgewählten Drucker in dieser Struktur zurückgegeben.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** commdlg.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPrintDialog::CreatePrinterDC](../Topic/CPrintDialog::CreatePrinterDC.md)
+ [CPrintDialog::CreatePrinterDC](../../mfc/reference/cprintdialog-class.md#createprinterdc)
+
+
+
