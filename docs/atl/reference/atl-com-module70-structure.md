@@ -1,68 +1,89 @@
 ---
-title: "_ATL_COM_MODULE70 Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::_ATL_COM_MODULE70"
-  - "ATL._ATL_COM_MODULE70"
-  - "_ATL_COM_MODULE70"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_COM_MODULE70 structure"
-  - "ATL_COM_MODULE70 structure"
+title: _ATL_COM_MODULE70 Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::_ATL_COM_MODULE70
+- ATL._ATL_COM_MODULE70
+- _ATL_COM_MODULE70
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ATL_COM_MODULE70 structure
+- ATL_COM_MODULE70 structure
 ms.assetid: 5b0b2fd0-bdeb-4c7e-8870-78fa69ace6e6
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _ATL_COM_MODULE70 Structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
+ms.openlocfilehash: 503c2a29cf0e70020b012911c51b056f00562374
+ms.lasthandoff: 02/24/2017
 
-Wird vom Code nämlich in ATL.  
+---
+# <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70-Struktur
+Verwendung durch COM-bezogene Code in ATL  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+struct _ATL_COM_MODULE70 {
+    UINT cbSize;
+    HINSTANCE m_hInstTypeLib;
+    _ATL_OBJMAP_ENTRY** m_ppAutoObjMapFirst;
+    _ATL_OBJMAP_ENTRY** m_ppAutoObjMapLast;
+    CRITICAL_SECTION m_csObjMap;
+};
 ```  
   
-      struct _ATL_COM_MODULE70{  
-   UINT cbSize;  
-   HINSTANCE m_hInstTypeLib;  
-   _ATL_OBJMAP_ENTRY** m_ppAutoObjMapFirst;  
-   _ATL_OBJMAP_ENTRY** m_ppAutoObjMapLast;  
-   CRITICAL_SECTION m_csObjMap;  
-};  
-```  
-  
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
  `cbSize`  
- Die Größe der Struktur, verwendet für die Versionsverwaltung.  
+ Die Größe der Struktur, die für die Versionskontrolle verwendet.  
   
  `m_hInstTypeLib`  
- Die Handleinstanz die Typbibliothek für dieses Modul.  
+ Der Handle-Instanz, die die Typbibliothek für dieses Modul.  
   
- **m\_ppAutoObjMapFirst**  
- Adresse des Arrayelements, das den Anfang der Objektzuordnungseinträge für dieses Modul angibt.  
+ **m_ppAutoObjMapFirst**  
+ Die Adresse des Arrayelements, die den Beginn der Einträge in der Objekt-Zuordnung für dieses Modul.  
   
- **m\_ppAutoObjMapLast**  
- Adresse des Arrayelements, das das Ende der Objektzuordnungseinträge für dieses Modul angibt.  
+ **m_ppAutoObjMapLast**  
+ Die Adresse des Arrayelements, der das Ende der Objekt-Zuordnungseinträge für dieses Modul.  
   
  `m_csObjMap`  
- Kritischer Abschnitt, um den Zugriff auf den Objektzuordnungseinträgen zu serialisieren.  Intern verwendet von ATL.  
+ Kritischen Abschnitt zum Zugriff auf den Zuordnungseinträgen Objekt zu serialisieren. Wird intern verwendet, ATL  
   
-## Hinweise  
- [\_ATL\_COM\_MODULE](../Topic/_ATL_COM_MODULE.md) wird als Typedef von `_ATL_COM_MODULE70` definiert.  
+## <a name="remarks"></a>Hinweise  
+ [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) ist definiert als Typedef von `_ATL_COM_MODULE70`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen](../../atl/reference/atl-structures.md)
+
+
+
+
+
+

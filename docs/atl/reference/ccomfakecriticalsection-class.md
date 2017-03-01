@@ -1,59 +1,114 @@
 ---
-title: "CComFakeCriticalSection Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComFakeCriticalSection"
-  - "CComFakeCriticalSection"
-  - "ATL::CComFakeCriticalSection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComFakeCriticalSection class"
+title: Klasse CComFakeCriticalSection | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComFakeCriticalSection
+- CComFakeCriticalSection
+- ATL::CComFakeCriticalSection
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComFakeCriticalSection Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: 2c1269288e03a8ac9f359dad9acf1a81ddbc84c2
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse stellt die bereit, die dieselben Methoden wie [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) stellt aber keinen kritischen Abschnitt.  
+---
+# <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection-Klasse
+Diese Klasse bietet dieselben Methoden wie ["CComCriticalSection"](../../atl/reference/ccomcriticalsection-class.md) jedoch kein kritischen Abschnitts.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+class CComFakeCriticalSection
 ```  
   
-class CComFakeCriticalSection  
+## <a name="members"></a>Mitglieder  
   
-```  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-## Mitglieder  
-  
-### Öffentliche Methoden  
-  
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CComFakeCriticalSection::Init](../Topic/CComFakeCriticalSection::Init.md)|Keine Auswirkung, da es keinen kritischen Abschnitt gibt.|  
-|[CComFakeCriticalSection::Lock](../Topic/CComFakeCriticalSection::Lock.md)|Keine Auswirkung, da es keinen kritischen Abschnitt gibt.|  
-|[CComFakeCriticalSection::Term](../Topic/CComFakeCriticalSection::Term.md)|Keine Auswirkung, da es keinen kritischen Abschnitt gibt.|  
-|[CComFakeCriticalSection::Unlock](../Topic/CComFakeCriticalSection::Unlock.md)|Keine Auswirkung, da es keinen kritischen Abschnitt gibt.|  
+|[CComFakeCriticalSection::Init](#init)|Hat keine Auswirkung, da keine kritischen Abschnitt vorhanden ist.|  
+|[CComFakeCriticalSection::Lock](#lock)|Hat keine Auswirkung, da keine kritischen Abschnitt vorhanden ist.|  
+|[CComFakeCriticalSection::Term](#term)|Hat keine Auswirkung, da keine kritischen Abschnitt vorhanden ist.|  
+|[CComFakeCriticalSection::Unlock](#unlock)|Hat keine Auswirkung, da keine kritischen Abschnitt vorhanden ist.|  
   
-## Hinweise  
- `CComFakeCriticalSection` führt die Methoden, die in [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) gefunden werden.  stellt jedoch `CComFakeCriticalSection` keinen kritischen Abschnitt; Daher gehen seine Methoden nichts.  
+## <a name="remarks"></a>Hinweise  
+ `CComFakeCriticalSection`spiegelt die Methoden in ["CComCriticalSection"](../../atl/reference/ccomcriticalsection-class.md). Allerdings `CComFakeCriticalSection` bietet kein kritischen Abschnitts; daher seine Methoden werden keine Aktionen ausgeführt.  
   
- In der Regel verwenden Sie `CComFakeCriticalSection` durch einen `typedef` Namen, entweder `AutoCriticalSection` oder `CriticalSection`.  Wenn [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) oder [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), Verweis beider `typedef` Namen `CComFakeCriticalSection` verwendet werden.  Wenn sie [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) verwenden, verweisen darauf [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) und `CComCriticalSection`, bzw.  
+ Normalerweise verwenden Sie `CComFakeCriticalSection` über eine `typedef` name entweder `AutoCriticalSection` oder `CriticalSection`. Bei Verwendung [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) oder [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), beide `typedef` Namen Verweis `CComFakeCriticalSection`. Bei Verwendung [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), sie verweisen auf [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) und `CComCriticalSection`bzw..  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** atlcore.h  
   
-## Siehe auch  
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinita--ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSection::Init  
+ Hat keine Auswirkung, da keine kritischen Abschnitt vorhanden ist.  
+  
+```
+HRESULT Init() throw();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt S_OK zurück.  
+  
+##  <a name="a-namelocka--ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSection::Lock  
+ Hat keine Auswirkung, da keine kritischen Abschnitt vorhanden ist.  
+  
+```
+HRESULT Lock() throw();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt S_OK zurück.  
+  
+##  <a name="a-nameterma--ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSection::Term  
+ Hat keine Auswirkung, da keine kritischen Abschnitt vorhanden ist.  
+  
+```
+HRESULT Term() throw();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt S_OK zurück.  
+  
+##  <a name="a-nameunlocka--ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSection::Unlock  
+ Hat keine Auswirkung, da keine kritischen Abschnitt vorhanden ist.  
+  
+```
+HRESULT Unlock() throw();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt S_OK zurück.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+

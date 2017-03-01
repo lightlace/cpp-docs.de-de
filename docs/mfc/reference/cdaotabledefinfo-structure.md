@@ -1,113 +1,121 @@
 ---
-title: "CDaoTableDefInfo-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoTableDefInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoTableDefInfo-Struktur"
-  - "DAO (Datenzugriffsobjekte), TableDefs-Auflistung"
+title: CDaoTableDefInfo-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoTableDefInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDaoTableDefInfo structure
+- DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoTableDefInfo-Struktur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 4d1ac5ca00f98f8c34332ce2eb1a180ab715e6ba
+ms.lasthandoff: 02/24/2017
 
-Die `CDaoTableDefInfo`\-Struktur enthält Informationen über ein Tabledef\-Objekt, das für Datenzugriffsobjekte \(DAO\) definiert ist.  
+---
+# <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo-Struktur
+Die `CDaoTableDefInfo` Struktur enthält Informationen über ein Tabledef-Objekt, das für Datenzugriffsobjekte (DAO) definiert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      struct CDaoTableDefInfo  
+struct CDaoTableDefInfo  
 {  
-   CString m_strName;               // Primary  
-   BOOL m_bUpdatable;               // Primary  
-   long m_lAttributes;              // Primary  
-   COleDateTime m_dateCreated;      // Secondary  
-   COleDateTime m_dateLastUpdated;  // Secondary  
-   CString m_strSrcTableName;       // Secondary  
-   CString m_strConnect;            // Secondary  
-   CString m_strValidationRule;     // All  
-   CString m_strValidationText;     // All  
-   long m_lRecordCount;             // All  
+    CString m_strName;               // Primary  
+    BOOL m_bUpdatable;               // Primary  
+    long m_lAttributes;              // Primary  
+    COleDateTime m_dateCreated;      // Secondary  
+    COleDateTime m_dateLastUpdated;  // Secondary  
+    CString m_strSrcTableName;       // Secondary  
+    CString m_strConnect;            // Secondary  
+    CString m_strValidationRule;     // All  
+    CString m_strValidationText;     // All  
+    long m_lRecordCount;             // All  
 };  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `m_strName`  
- Benennt das eindeutig Tabledef\-Objekt.  Um den Wert dieser Eigenschaft direkt abrufen, rufen Sie die [GetName](../Topic/CDaoTableDef::GetName.md) Tabledef\- Memberfunktion des Objekts auf.  Weitere Informationen finden Sie im Thema "Name\-Eigenschaft" in der DAO\-Hilfe.  
+ Das Tabledef-Objekt bezeichnet eindeutig. Um den Wert dieser Eigenschaft direkt abzurufen, rufen Sie des Tabledef-Objekts [GetName](../../mfc/reference/cdaotabledef-class.md#getname) Member-Funktion. Weitere Informationen finden Sie im Thema "Name-Eigenschaft" in der DAO-Hilfe.  
   
  `m_bUpdatable`  
- Gibt an, ob Änderungen vorgenommen werden können der Tabelle.  Die schnelle Möglichkeit zu bestimmen, ob eine Tabelle aktualisierbar ist, ist, ein `CDaoTableDef`\-Objekt für die Tabelle zu öffnen und die [CanUpdate](../Topic/CDaoTableDef::CanUpdate.md)\-Memberfunktion des Objekts aufzurufen.  `CanUpdate` gibt immer ungleich 0 \(null\) \(**TRUE**\) für ein neu erstelltes Objekt tabledef\- und 0 \(**FALSE**\) für ein angefügtes Tabledef\-Objekt zurück.  Ein neues Tabledef\-Objekt kann angefügt werden nur zu einer Datenbank, für die der aktuelle Benutzer Schreibberechtigung hat.  Wenn die Tabelle nur nonupdatable Felder enthält, `CanUpdate` gibt 0 zurück.  Wenn eine oder mehrere Felder aktualisierbar sind, gibt `CanUpdate` ungleich 0 \(null\) zurück.  Sie können nur die aktualisierbaren Felder bearbeiten.  Weitere Informationen finden Sie im Thema "aktualisierbare Eigenschaft" in der DAO\-Hilfe.  
+ Gibt an, ob die Tabelle geändert werden kann. Der schnellste Weg, zu bestimmen, ob eine Tabelle aktualisierbar ist zu öffnen ist ein `CDaoTableDef` Objekt für die Tabelle, und rufen Sie des Objekts [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) Member-Funktion. `CanUpdate`Gibt immer einen Wert ungleich Null (**TRUE**) für eine neu erstellte Tabledef-Objekt und 0 (**FALSE**) für eine angefügte Tabledef-Objekt. Ein neues Tabledef-Objekt kann nur an eine Datenbank angefügt werden, für die der aktuelle Benutzer über Schreibberechtigungen verfügt. Wenn die Tabelle nur aktualisierbare Felder enthält `CanUpdate` gibt 0 zurück. Wenn ein oder mehrere Felder aktualisierbar sind `CanUpdate` gibt einen Wert ungleich NULL zurück. Sie können nur die aktualisierbaren Felder bearbeiten. Weitere Informationen finden Sie unter dem Thema "Aktualisierbare-Eigenschaft" in der DAO-Hilfe.  
   
  `m_lAttributes`  
- Gibt Eigenschaften der Tabelle an, die vom Tabledef\-Objekt dargestellt wird.  Um die aktuellen Attribute einer tabledef\- abzurufen, rufen Sie die zugehörige Memberfunktion [GetAttributes](../Topic/CDaoTableDef::GetAttributes.md) auf.  Der zurückgegebene Wert kann eine Kombination dieser langen Konstanten sein \(unter Verwendung des bitweisen OR \(  **&#124;**\) Operator\):  
+ Gibt die Eigenschaften der Tabelle durch das Tabledef-Objekt dargestellt wird. Rufen Sie zum Abrufen der aktuellen Attribute einer Tabledef seine [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) Member-Funktion. Der zurückgegebene Wert kann eine Kombination der folgenden long-Konstanten (mit dem bitweisen OR (**|**) Operator):  
   
--   **dbAttachExclusive** für Datenbanken, die das Microsoft Jet\-Datenbankmodul verwenden, gibt der Tabelle ist eine umschlossene Tabelle an, die für die exklusive Verwendung geöffnet ist.  
+- **DbAttachExclusive** für Datenbanken, die das Microsoft Jet-Datenbankmodul verwenden, gibt die Tabelle ist eine verknüpfte Tabelle, die für die exklusive Verwendung geöffnet.  
   
--   **dbAttachSavePWD** für Datenbanken, die das Microsoft Jet\-Datenbankmodul verwenden, gibt an, dass die Benutzer\-ID und Kennwort für die umschlossene Tabelle mit den eingetragenen Verbindungsinformationen gespeichert werden.  
+- **DbAttachSavePWD** für Datenbanken, die das Microsoft Jet-Datenbankmodul verwenden, gibt an, dass die Benutzer-ID und das Kennwort für die verknüpfte Tabelle mit den Verbindungsinformationen gespeichert werden.  
   
--   **dbSystemObject** gibt der Tabelle ist eine Systemtabelle an, die vom Microsoft Jet\-Datenbankmodul bereitgestellt wird. \(Schreibgeschützt.\)  
+- **DbSystemObject** gibt an, dass die Tabelle eine Systemtabelle, die von der Microsoft Jet-Datenbankmodul bereitgestellt. (Schreibgeschützt.)  
   
--   **dbHiddenObject** gibt der Tabelle ist eine verborgene Tabelle an, die vom Microsoft Jet\-Datenbankmodul bereitgestellt wird \(für temporäre verwenden\). \(Schreibgeschützt.\)  
+- **DbHiddenObject** gibt an, in der Tabelle ist eine verborgene Tabelle, die von der Microsoft Jet-Datenbankmodul (für die temporäre Verwendung) bereitgestellt. (Schreibgeschützt.)  
   
--   **dbAttachedTable** gibt der Tabelle ist eine umschlossene Tabelle aus einer Datenbank NichtODBC, wie einer Paradoxdatenbank an.  
+- **DbAttachedTable** gibt an, in der Tabelle ist eine verknüpfte Tabelle aus einer nicht-ODBC-Datenbank, z. B. eine Paradox-Datenbank.  
   
--   **dbAttachedODBC** gibt der Tabelle ist eine umschlossene Tabelle einer ODBC\-Datenbank, wie Microsoft SQL Server an.  
+- **DbAttachedODBC** gibt an, in der Tabelle ist eine verknüpfte Tabelle aus einer ODBC-Datenbank, z. B. Microsoft SQL Server.  
   
  `m_dateCreated`  
- Das Datum und die Uhrzeit, die die Tabelle erstellt wurde.  Um das Datum direkt abzurufen, das die Tabelle erstellt, die die [GetDateCreated](../Topic/CDaoTableDef::GetDateCreated.md)`CDaoTableDef`\-Memberfunktion des Objekts aufgerufen Sie wurde, das der Tabelle zugeordnet ist.  Siehe Kommentare unten weitere Informationen.  Weitere Informationen finden Sie im Thema "DateCreated, LastUpdated\-Eigenschaften" in der DAO\-Hilfe.  
+ Das Datum und die Uhrzeit der Erstellung die Tabelle. Rufen Sie direkt das Datum in der Tabelle erstellt wurde, rufen Sie die [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) Memberfunktion der `CDaoTableDef` -Objekt in der Tabelle zugeordnet. Weitere Informationen finden Sie unter Kommentare. Verwandte Informationen finden Sie im Thema "DateCreated LastUpdated-Eigenschaften" in der DAO-Hilfe.  
   
  `m_dateLastUpdated`  
- Das Datum und die Uhrzeit der letzten Änderung vorgenommen am Entwurf der Tabelle.  Um das Datum direkt abzurufen, das die Tabelle zuletzt aktualisiert, die [GetDateLastUpdated](../Topic/CDaoTableDef::GetDateLastUpdated.md)`CDaoTableDef`\-Memberfunktion des Objekts aufgerufen Sie wurde, das der Tabelle zugeordnet ist.  Siehe Kommentare unten weitere Informationen.  Weitere Informationen finden Sie im Thema "DateCreated, LastUpdated\-Eigenschaften" in der DAO\-Hilfe.  
+ Datum und Uhrzeit der letzten Änderung für den Entwurf der Tabelle. Aufrufen, rufen Sie direkt das Datum der letzten die Tabelle Aktualisierung der [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) Memberfunktion der `CDaoTableDef` -Objekt in der Tabelle zugeordnet. Weitere Informationen finden Sie unter Kommentare. Verwandte Informationen finden Sie im Thema "DateCreated LastUpdated-Eigenschaften" in der DAO-Hilfe.  
   
- *m\_strSrcTableName*  
- Gibt den Namen einer Tabelle umschlossenen ggf. an.  Um den Quelltabellennamen direkt abrufen, rufen Sie die [GetSourceTableName](../Topic/CDaoTableDef::GetSourceTableName.md)`CDaoTableDef`\-Memberfunktion des Objekts auf, das der Tabelle zugeordnet ist.  
+ *m_strSrcTableName*  
+ Gibt den Namen einer angefügten Tabelle an, sofern vorhanden. Um Namen der Quelltabelle direkt abzurufen, rufen Sie die [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) Memberfunktion der `CDaoTableDef` -Objekt in der Tabelle zugeordnet.  
   
  `m_strConnect`  
- Stellt Informationen zu Quelle einer geöffneten Datenbank.  Sie können diese Eigenschaft überprüfen, indem Sie die Memberfunktion [GetConnect](../Topic/CDaoTableDef::GetConnect.md) des `CDaoTableDef`\-Objekts aufrufen.  Weitere Informationen über Zeichenfolgen schließen Sie, `GetConnect` an.  
+ Enthält Informationen über die Quelle einer geöffneten Datenbank. Sehen Sie diese Eigenschaft durch Aufrufen der [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) Memberfunktion Ihrer `CDaoTableDef` Objekt. Weitere Informationen zu Verbindungszeichenfolgen, finden Sie unter `GetConnect`.  
   
  `m_strValidationRule`  
- Ein Wert, der die Daten der tabledef\- überprüft, fängt auf, während sie in eine Tabelle geändert oder hinzugefügt werden.  Validierung wird nur für Datenbanken unterstützt, die das Microsoft Jet\-Datenbankmodul verwenden.  Um die Validierungsregel direkt abrufen, rufen Sie die [GetValidationRule](../Topic/CDaoTableDef::GetValidationRule.md)`CDaoTableDef`\-Memberfunktion des Objekts auf, das der Tabelle zugeordnet ist.  Weitere Informationen finden Sie im Thema "ValidationRule\-Eigenschaft" in der DAO\-Hilfe.  
+ Ein Wert, der die Daten in Feldern Tabledef überprüft werden soll, wenn sie eine Tabelle hinzugefügt oder geändert werden. Überprüfung wird nur für Datenbanken unterstützt, die das Microsoft Jet-Datenbankmodul verwenden. Um die Validierungsregel direkt abzurufen, rufen die [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) Memberfunktion der `CDaoTableDef` -Objekt in der Tabelle zugeordnet. Weitere Informationen finden Sie unter dem Thema "ValidationRule-Eigenschaft" in der DAO-Hilfe.  
   
  `m_strValidationText`  
- Ein Wert, der den Text der Meldung angibt, die von der Anwendung anzeigen soll, wenn die Validierungsregel, die durch die ValidationRule\-Eigenschaft angegeben ist, nicht erfüllt ist.  Weitere Informationen finden Sie im Thema "ValidationText\-Eigenschaft" in der DAO\-Hilfe.  
+ Ein Wert, der den Text der Nachricht angibt, die die Anwendung angezeigt werden soll, wenn durch die ValidationRule-Eigenschaft angegebenen nicht erfüllt wird. Verwandte Informationen finden Sie im Thema "ValidationText-Eigenschaft" in der DAO-Hilfe.  
   
- *m\_lRecordCount*  
- Die Anzahl von Datensätzen in einem Tabledef\-Objekt zugegriffen.  Diese Eigenschaft ist schreibgeschützt.  Um die Anzahl der Datensätze direkt abrufen, rufen Sie die [GetRecordCount](../Topic/CDaoTableDef::GetRecordCount.md)`CDaoTableDef`\-Memberfunktion des Objekts auf.  Die Dokumentation für `GetRecordCount` beschreibt die Anzahl der Datensätze weiter.  Beachten Sie, dass diese Anzahl abruft, kann einen zeitaufwändigen Vorgang darstellen, wenn die Tabelle zahlreiche Datensätze enthält.  
+ *m_lRecordCount*  
+ Die Anzahl der Datensätze, die in einem Tabledef-Objekt zugegriffen. Die Einstellung dieser Eigenschaft ist schreibgeschützt. Um die Anzahl der Datensätze direkt abzurufen, rufen die [GetRecordCount](../../mfc/reference/cdaotabledef-class.md#getrecordcount) Memberfunktion der `CDaoTableDef` Objekt. Die Dokumentation für `GetRecordCount` beschreibt die Anzahl der Datensätze weiter. Beachten Sie, dass diese Anzahl abrufen ein zeitaufwändiger Vorgang sein kann, wenn die Tabelle viele Datensätze enthält.  
   
-## Hinweise  
- Die tabledef\- ist ein Objekt der Klasse [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md).  Die Verweise auf primärem, und einen sekundären alle oben geben an, wie die Informationen durch die [GetTableDefInfo](../Topic/CDaoDatabase::GetTableDefInfo.md)\-Memberfunktion in der `CDaoDatabase`\- Klasse zurückgegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ Tabledef ist ein Objekt der Klasse [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). Die Verweise auf die primären, sekundären und alle oben anzugeben, wie die Informationen zurückgegeben werden, durch die [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) Memberfunktion Klasse `CDaoDatabase`.  
   
- Die Informationen, die von der [CDaoDatabase::GetTableDefInfo](../Topic/CDaoDatabase::GetTableDefInfo.md)\-Memberfunktion aufgerufen werden, werden in einer `CDaoTableDefInfo`\-Struktur gespeichert.  Rufen Sie die Memberfunktion `GetTableDefInfo` des `CDaoDatabase`\-Objekts auf, in dessen Tabledef\-Auflistung das Tabledef\-Objekt gespeichert wird.  `CDaoTableDefInfo` definiert auch eine `Dump`\-Memberfunktion in Debugbuilds.  Sie können `Dump` verwenden, um den Inhalt eines `CDaoTableDefInfo`\-Objekts zu speichern.  
+ Informationen abgerufen werden, indem Sie die [CDaoDatabase:: GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) -Memberfunktion befindet sich in einer `CDaoTableDefInfo` Struktur. Rufen Sie die `GetTableDefInfo` Memberfunktion der `CDaoDatabase` -Objekt, dessen TableDefs-Auflistung Tabledef-Objekts gespeichert ist. `CDaoTableDefInfo`definiert auch eine `Dump` Memberfunktion im Debugmodus erstellt. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoTableDefInfo` Objekt.  
   
- Die Datums\- Uhrzeiteinstellungen werden vom Computer abgeleitet, auf dem die Basistabelle erstellt oder zuletzt aktualisiert.  In einer Mehrbenutzerumgebung sollten Benutzer diese Einstellungen direkt vom Dateiserver abrufen, um Diskrepanzen in den Eigenschafteneinstellungen DateCreated und LastUpdated zu vermeiden.  
+ Die Einstellungen für Datum und Uhrzeit werden vom Computer abgeleitet, auf denen die Basistabelle erstellt oder zuletzt aktualisiert wurde. In einer Umgebung mit mehreren Benutzern sollten die Benutzer diese Einstellungen direkt vom Dateiserver zu Vermeidung von abweichungen in der DateCreated und LastUpdated-Eigenschaft abrufen.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** afxdao.h  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
- [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)   
- [CDaoTableDef::CanUpdate](../Topic/CDaoTableDef::CanUpdate.md)   
- [CDaoTableDef::GetAttributes](../Topic/CDaoTableDef::GetAttributes.md)   
- [CDaoTableDef::GetDateCreated](../Topic/CDaoTableDef::GetDateCreated.md)   
- [CDaoTableDef::GetDateLastUpdated](../Topic/CDaoTableDef::GetDateLastUpdated.md)   
- [CDaoTableDef::GetRecordCount](../Topic/CDaoTableDef::GetRecordCount.md)   
- [CDaoTableDef::GetSourceTableName](../Topic/CDaoTableDef::GetSourceTableName.md)   
- [CDaoTableDef::GetValidationRule](../Topic/CDaoTableDef::GetValidationRule.md)   
- [CDaoTableDef::GetValidationText](../Topic/CDaoTableDef::GetValidationText.md)
+ [CDaoTableDef-Klasse](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoDatabase-Klasse](../../mfc/reference/cdaodatabase-class.md)
+

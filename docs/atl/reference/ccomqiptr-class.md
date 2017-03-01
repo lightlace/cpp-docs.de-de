@@ -1,81 +1,136 @@
 ---
-title: "CComQIPtr Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComQIPtr"
-  - "ATL::CComQIPtr"
-  - "CComQIPtr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComQIPtr class"
+title: CComQIPtr Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComQIPtr
+- ATL::CComQIPtr
+- CComQIPtr
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComQIPtr Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: e2060a0be3f9780191c316c2df41115e66033d4d
+ms.lasthandoff: 02/24/2017
 
-Eine Klasse des intelligenten Zeigermechanismus zum Verwalten von COM\-Schnittstellenzeigern.  
+---
+# <a name="ccomqiptr-class"></a>CComQIPtr-Klasse
+Ein intelligenter Zeiger-Klasse für die Verwaltung von COM-Schnittstellenzeigern.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template<class T, const IID* piid= &__uuidof(T)>  
+class CComQIPtr: public CComPtr<T>
 ```  
   
-      template<  
-   class T,  
-   const IID* piid = &__uuidof(T)  
->  
-class CComQIPtr: public CComPtr<T>  
-```  
-  
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `T`  
- Eine COM\-Schnittstelle, die den Typ des zu speichernden Zeigers angibt.  
+ Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.  
   
  `piid`  
- Ein Zeiger auf IID von `T`.  
+ Ein Zeiger auf die ID der `T`.  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CComQIPtr::CComQIPtr](../Topic/CComQIPtr::CComQIPtr.md)|Konstruktor.|  
+|[CComQIPtr::CComQIPtr](#ccomqiptr)|Konstruktor.|  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CComQIPtr::operator \=](../Topic/CComQIPtr::operator%20=.md)|Weist einen Zeiger auf das Memberzeiger zu.|  
+|[CComQIPtr::operator =](#operator_eq)|Weist einen Zeiger auf den Member-Zeiger.|  
   
-## Hinweise  
- ATL verwendet `CComQIPtr` und [CComPtr](../../atl/reference/ccomptr-class.md), um COM\-Schnittstellenzeiger verwalten, die von [CComPtrBase](../../atl/reference/ccomptrbase-class.md) berechnen.  Beide Klassen führen automatische Verweiszählung durch Aufrufe `AddRef` und zu **Release** aus.  Überladene Operatoren behandeln gibt eine Reihe von Zeigeroperationen.  
+## <a name="remarks"></a>Hinweise  
+ ATL verwendet `CComQIPtr` und [CComPtr](../../atl/reference/ccomptr-class.md) die zum Verwalten von COM-Schnittstellenzeigern abgeleitet [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Beide Klassen auszuführen, automatische verweiszählung, die durch Aufrufe von `AddRef` und **Version**. Überladene Operatoren Zeigeroperationen zu behandeln.  
   
-## Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
   
  [CComPtr](../../atl/reference/ccomptr-class.md)  
   
  `CComQIPtr`  
   
-## Anforderungen  
- **Header:**  atlcomcli.h  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** atlcomcli.h  
   
-## Siehe auch  
- [CComPtr::CComPtr](../Topic/CComPtr::CComPtr.md)   
- [CComQIPtr::CComQIPtr](../Topic/CComQIPtr::CComQIPtr.md)   
- [CComPtrBase Class](../../atl/reference/ccomptrbase-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)   
- [CComQIPtrElementTraits Class](../../atl/reference/ccomqiptrelementtraits-class.md)
+##  <a name="a-nameccomqiptra--ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a>CComQIPtr::CComQIPtr  
+ Der Konstruktor.  
+  
+```
+CComQIPtr() throw();
+CComQIPtr(T* lp) throw();
+CComQIPtr(IUnknown* lp) throw();
+CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `lp`  
+ Wird verwendet, um den Schnittstellenzeiger zu initialisieren.  
+  
+ `T`  
+ Eine COM-Schnittstelle.  
+  
+ `piid`  
+ Ein Zeiger auf die ID der `T`.  
+  
+##  <a name="a-nameoperatoreqa--ccomqiptroperator-"></a><a name="operator_eq"></a>CComQIPtr::operator =  
+ Der Zuweisungsoperator.  
+  
+```
+T* operator= (T* lp) throw();
+T* operator= (const CComQIPtr<T, piid>& lp) throw();
+T* operator= (IUnknown* lp) throw();
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `lp`  
+ Wird verwendet, um den Schnittstellenzeiger zu initialisieren.  
+  
+ `T`  
+ Eine COM-Schnittstelle.  
+  
+ `piid`  
+ Ein Zeiger auf die ID der `T`.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt einen Zeiger auf die aktualisierte `CComQIPtr` Objekt.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
+ [CComQIPtr::CComQIPtr](#ccomqiptr)   
+ [CComPtrBase-Klasse](../../atl/reference/ccomptrbase-class.md)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+ [CComQIPtrElementTraits-Klasse](../../atl/reference/ccomqiptrelementtraits-class.md)
+

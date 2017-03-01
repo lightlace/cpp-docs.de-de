@@ -1,71 +1,127 @@
 ---
-title: "CComClassFactory Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComClassFactory"
-  - "CComClassFactory"
-  - "ATL::CComClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComClassFactory class"
+title: CComClassFactory Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComClassFactory
+- CComClassFactory
+- ATL::CComClassFactory
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CComClassFactory Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: c7c488732d7b32248acaaa5c5c9c6a29404c3872
+ms.lasthandoff: 02/24/2017
 
-Diese Klasse implementiert die Schnittstelle [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364).  
+---
+# <a name="ccomclassfactory-class"></a>CComClassFactory-Klasse
+Diese Klasse implementiert die [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) Schnittstelle.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+class CComClassFactory 
+   : public IClassFactory,  
+     public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
-   class CComClassFactory : public IClassFactory,   
-public CComObjectRootEx< CComGlobalsThreadModel >  
-```  
+## <a name="members"></a>Mitglieder  
   
-## Mitglieder  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-### Öffentliche Methoden  
-  
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|[CComClassFactory::CreateInstance](../Topic/CComClassFactory::CreateInstance.md)|Erstellt ein Objekt des angegebenen CLSID.|  
-|[CComClassFactory::LockServer](../Topic/CComClassFactory::LockServer.md)|Sperrt die Klassenfactory im Arbeitsspeicher.|  
+|[CComClassFactory::CreateInstance](#createinstance)|Erstellt ein Objekt der angegebenen CLSID.|  
+|[CComClassFactory::LockServer](#lockserver)|Sperrt die Klassenfactory im Arbeitsspeicher.|  
   
-## Hinweise  
- `CComClassFactory` [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) implementiert die Schnittstelle, die Methoden zum Erstellen eines Objekts eines bestimmten CLSID enthält, sowie die Klassenfactory im Arbeitsspeicher, um schneller erstellt werden sperrt Objekte zu ermöglichen die neuen.  **IClassFactory** muss für jede Klasse implementiert werden, in der Sie in der Systemregistrierung registrieren und, zu dem Sie einem CLSID zuweisen.  
+## <a name="remarks"></a>Hinweise  
+ `CComClassFactory`implementiert die [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) -Schnittstelle, die Methoden für das Erstellen eines Objekts einer bestimmten CLSID sowie das Sperren der Klassenfactory im Arbeitsspeicher, um neue Objekte schneller erstellt werden können. **IClassFactory** für jede Klasse, die Sie in der Registrierung und die CLSID zuweisen registrieren implementiert werden muss.  
   
- ATL\-Objekte rufen normalerweise eine Klassenfactory ab, indem von [CComCoClass](../../atl/reference/ccomcoclass-class.md) berechnen.  Diese Klasse enthält das Makro [DECLARE\_CLASSFACTORY](../Topic/DECLARE_CLASSFACTORY.md), das `CComClassFactory` als Standardklassenfactory deklariert.  Um diesen Standard zu überschreiben, geben Sie eines der Makros `DECLARE_CLASSFACTORY`*XXX* in der Klassendefinition.  Zum Beispiel verwendet das [DECLARE\_CLASSFACTORY\_EX](../Topic/DECLARE_CLASSFACTORY_EX.md)\-Makro die angegebene Klasse für die Klassenfactory:  
+ ATL-Objekte abrufen eine Klassenfactory normalerweise durch Ableiten von [CComCoClass](../../atl/reference/ccomcoclass-class.md). Diese Klasse enthält das Makro [DECLARE_CLASSFACTORY](http://msdn.microsoft.com/library/51a6b925-07c0-4d3a-9174-0b8c808975e4), die deklariert wird, `CComClassFactory` als die standardmäßige Klassenfactory. Um diese Standardeinstellung zu überschreiben, geben Sie einen von der `DECLARE_CLASSFACTORY` *XXX* Makros in die Klassendefinition. Zum Beispiel die [DECLARE_CLASSFACTORY_EX](http://msdn.microsoft.com/library/4181ef00-0f30-4e19-b0ee-e7648062e926) Makro verwendet die angegebene Klasse für die Klassenfactory:  
   
- [!CODE [NVC_ATL_COM#8](../CodeSnippet/VS_Snippets_Cpp/NVC_ATL_COM#8)]  
+ [!code-cpp[NVC_ATL_COM&#8;](../../atl/codesnippet/cpp/ccomclassfactory-class_1.h)]  
   
- Die oben aufgeführte Klassendefinition gibt an, dass **CMyClassFactory** als die Standardklassenfactory des Objekts verwendet wird.  **CMyClassFactory** muss von `CComClassFactory` ableiten und `CreateInstance` überschreiben.  
+ Die oben genannten Klassendefinition gibt an, dass **CMyClassFactory** als Standard-Klassenfactory des Objekts verwendet wird. **CMyClassFactory** durch Ableiten von `CComClassFactory` , und überschreiben Sie `CreateInstance`.  
   
- ATL stellt drei weitere Makros, die eine Klassenfactory deklarieren:  
+ ATL stellt drei Makros, die eine Klassenfactory deklarieren:  
   
--   [DECLARE\_CLASSFACTORY2](../Topic/DECLARE_CLASSFACTORY2.md) verwendet [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md), das Erstellen von eine Lizenz steuert.  
+- [DECLARE_CLASSFACTORY2](http://msdn.microsoft.com/library/38a6c969-7297-4bb1-9ba6-1fe2d355b285) verwendet [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md), welche Steuerelemente erstellen, die über eine Lizenz.  
   
--   [DECLARE\_CLASSFACTORY\_AUTO\_THREAD](../Topic/DECLARE_CLASSFACTORY_AUTO_THREAD.md) verwendet [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md), das Objekte in mehreren Apartments erstellt.  
+- [DECLARE_CLASSFACTORY_AUTO_THREAD](http://msdn.microsoft.com/library/19d7105e-03e8-4412-9f5e-5384c8a5e18f) verwendet [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md), die Objekte in mehreren Apartments erstellt.  
   
--   [DECLARE\_CLASSFACTORY\_SINGLETON](../Topic/DECLARE_CLASSFACTORY_SINGLETON.md) verwendet [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), das ein einzelnes [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)\-Objekt erstellt.  
+- [DECLARE_CLASSFACTORY_SINGLETON](http://msdn.microsoft.com/library/0e4a3964-c03d-463e-884c-fe3b416db478) verwendet [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), die ein einzelnes erstellt [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) Objekt.  
   
-## Anforderungen  
- **Header:**  möchten  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** Standardschnittstellen  
   
-## Siehe auch  
- [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)   
- [CComGlobalsThreadModel](../Topic/CComGlobalsThreadModel.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namecreateinstancea--ccomclassfactorycreateinstance"></a><a name="createinstance"></a>CComClassFactory::CreateInstance  
+ Erstellt ein Objekt der angegebenen CLSID und ruft einen Schnittstellenzeiger für dieses Objekt ab.  
+  
+```
+STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `pUnkOuter`  
+ [in] Wenn das Objekt als Teil einer Aggregatfunktion gehört, dann erstellt wird `pUnkOuter` muss die äußere unbekannte sein. Andernfalls `pUnkOuter` muss **NULL**.  
+  
+ `riid`  
+ [in] Die IID der angeforderten Schnittstelle. Wenn `pUnkOuter` nicht **NULL**, `riid` muss **IID_IUnknown**.  
+  
+ `ppvObj`  
+ [out] Ein Zeiger auf den Schnittstellenzeiger vom `riid`. Wenn das Objekt diese Schnittstelle nicht unterstützt `ppvObj` Wert **NULL**.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT` -Wert.  
+  
+##  <a name="a-namelockservera--ccomclassfactorylockserver"></a><a name="lockserver"></a>CComClassFactory::LockServer  
+ Inkrementiert und dekrementiert die Sperrenanzahl Modul durch Aufrufen von **_Module::Lock** und **_Module::Unlock**bzw..  
+  
+```
+STDMETHOD(LockServer)(BOOL fLock);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `fLock`  
+ [in] Wenn **TRUE**, die Anzahl der Sperren erhöht, andernfalls die Anzahl der Sperren wird verringert.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Standard `HRESULT` -Wert.  
+  
+### <a name="remarks"></a>Hinweise  
+ **_Module** bezieht sich auf die globale Instanz des [CComModule](../../atl/reference/ccommodule-class.md) oder eine Klasse abgeleitet.  
+  
+ Aufrufen von `LockServer` ermöglicht einem Client auf eine halten, damit mehrere Objekte können schnell erstellt werden.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)   
+ [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+
