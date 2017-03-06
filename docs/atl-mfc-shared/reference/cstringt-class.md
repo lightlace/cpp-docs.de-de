@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9660db5ff0d41a31f7d2a4e824df4e4bdf6a00e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 961dc75623ec04993d118e46e1d4ba73a9aadcec
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT-Klasse
@@ -692,7 +692,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
  Ein Zeiger auf eine Liste von Argumenten.  
   
 ### <a name="remarks"></a>Hinweise  
- Schreibt eine formatierte Zeichenfolge und eine Variable Liste von Argumenten, die eine `CStringT` Zeichenfolge in der gleichen Weise wie `vsprintf_s` Daten als Array im C-Format Zeichen formatiert.  
+ Schreibt eine formatierte Zeichenfolge und eine Variable Liste von Argumenten, die einen `CStringT` Zeichenfolge in der gleichen Weise wie `vsprintf_s` Daten als Array im C-Format Zeichen formatiert.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities&#119;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_14.cpp)]  
@@ -1226,7 +1226,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
  Gibt die Anzahl Instanzen ersetzt das Zeichen oder Substring oder&0; (null) zurück, wenn die Zeichenfolge nicht geändert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- `Replace`die Länge der Zeichenfolge kann geändert werden, da `pszNew` und `pszOld` müssen nicht dieselbe Länge aufweisen und mehrere Kopien der alten Teilzeichenfolge in das neue Projekt geändert werden können. Die Funktion führt die Groß-/Kleinschreibung beachtet.  
+ `Replace`die Länge der Zeichenfolge kann geändert werden, da `pszNew` und `pszOld` müssen nicht dieselbe Länge aufweisen und mehrere Kopien der alten Teilzeichenfolge in das neue geändert werden können. Die Funktion führt die Groß-/Kleinschreibung beachtet.  
   
  Beispiele für `CStringT` Instanzen sind `CString`, `CStringA`, und `CStringW`.  
   
@@ -1340,7 +1340,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  Eine Zeichenfolge, die als eine Reihe von Zeichen interpretiert werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine Teilzeichenfolge, die Zeichen in der Zeichenfolge, die in enthält `pszCharSet`, mit dem ersten Zeichen in der Zeichenfolge beginnt und endet, wenn ein Zeichen in der Zeichenfolge gefunden wird, der nicht `pszCharSet.``SpanIncluding` eine leere Zeichenfolge zurückgibt, ist das erste Zeichen in der Zeichenfolge nicht in der angegebenen Menge.  
+ Eine Teilzeichenfolge, die Zeichen in der Zeichenfolge, die in enthält `pszCharSet`, mit dem ersten Zeichen in der Zeichenfolge beginnt und endet, wenn ein Zeichen in der Zeichenfolge gefunden wird, der nicht `pszCharSet`. `SpanIncluding`das erste Zeichen in der Zeichenfolge nicht in der angegebenen Menge wird eine leere Zeichenfolge zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn das erste Zeichen der Zeichenfolge nicht in den Zeichensatz ist `SpanIncluding` eine leere Zeichenfolge zurückgegeben. Andernfalls wird eine Folge von aufeinander folgenden Zeichen, die in der Menge zurückgegeben.  

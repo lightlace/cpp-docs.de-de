@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: deed13f7e44246eca1e9d3d138f73d0f540dc0b1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: a0724b0ea8922d1f39d8cf7ccd630068c32ea3ac
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T-Klasse
@@ -133,7 +133,7 @@ HWND Create(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `CAxWindow2T::Create`Aufrufe [CWindow::Create](../../atl/reference/cwindow-class.md#create) mit der `LPCTSTR``lpstrWndClass` Parameter festgelegt werden, um die Fensterklasse, das Hosten von Steuerelementen bereitstellt ( **AtlAxWinLic80**).  
+ `CAxWindow2T::Create`Aufrufe [CWindow::Create](../../atl/reference/cwindow-class.md#create) mit der `LPCTSTR lpstrWndClass` Parameter festgelegt werden, um die Fensterklasse, das Hosten von Steuerelementen bereitstellt ( **AtlAxWinLic80**).  
   
  Finden Sie unter `CWindow::Create` eine Beschreibung der Parameter und Rückgabewert.  
   

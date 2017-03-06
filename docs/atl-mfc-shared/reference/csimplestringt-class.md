@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 791b9ec18cc71fe19f633c12afdc48c835c2bf14
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: e273aff69b9c8dbea4fb829798b2e9d58351b9dd
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT-Klasse
@@ -121,7 +121,7 @@ class CSimpleStringT
 |[CSimpleStringT::operator =](#operator_eq)|Weist einen neuen Wert zu einem `CSimpleStringT` Objekt.|  
   
 ### <a name="remarks"></a>Hinweise  
- `CSimpleStringT`ist die Basisklasse für die verschiedenen Zeichenfolgenklassen, die von Visual C++ unterstützt. Es bietet minimale Unterstützung zur Verwaltung des Arbeitsspeichers der String-Objekt und grundlegende pufferbearbeitung. Erweiterte String-Objekten finden Sie unter [CStringT-Klasse](../../atl-mfc-shared/reference/cstringt-class.md).  
+ `CSimpleStringT`ist die Basisklasse für die verschiedenen Zeichenfolgenklassen, die von Visual C++ unterstützt. Es bietet minimale Unterstützung zur Verwaltung des Arbeitsspeichers der grundlegenden pufferbearbeitung und String-Objekt. Erweiterte String-Objekten finden Sie unter [CStringT-Klasse](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlsimpstr.h  
@@ -269,7 +269,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
  Erstellt ein neues `CSimpleStringT`-Objekt. Da die Konstruktoren die Eingabedaten in neuen reservierten Speicher kopieren, können die Speicher-Ausnahmen führen.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die Verwendung von `CSimpleStringT::CSimpleStringT` mithilfe der ATL `typedef``CSimpleString`. `CSimpleString`ist eine häufig verwendete Spezialisierung der Klassenvorlage `CSimpleStringT`.  
+ Das folgende Beispiel veranschaulicht die Verwendung von `CSimpleStringT::CSimpleStringT` mithilfe der ATL `typedef` `CSimpleString`. `CSimpleString`ist eine häufig verwendete Spezialisierung der Klassenvorlage `CSimpleStringT`.  
   
 ```cpp  
 CSimpleString s1(pMgr);
@@ -551,7 +551,7 @@ Tests ein `CSimpleStringT` Objekt für die leere Bedingung.
 bool IsEmpty() const throw();  
 ```  
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **true** Wenn das `CSimpleStringT` Objekt hat die Länge 0 andernfalls **false**.  
+ Gibt **true** Wenn das `CSimpleStringT` Objekt hat die Länge 0; andernfalls **false**.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um zu bestimmen, ob das Objekt eine leere Zeichenfolge enthält.  

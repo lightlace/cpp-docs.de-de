@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5ac891241f29df515864c01fc449197f39bbaedd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 56b8b5c3574a7a53a4e259412b1b1326973bcac9
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ctime-class"></a>CTime-Klasse
@@ -94,7 +94,7 @@ class CTime
   
  `CTime`Werte basieren auf koordinierte Weltzeit (UTC), die koordinierte Weltzeit (Greenwich Mean Time, GMT) entspricht. Finden Sie unter [Uhrzeitverwaltung](../../c-runtime-library/time-management.md) Informationen darüber, wie die Zeitzone bestimmt wird.  
   
- Beim Erstellen einer `CTime` -Objekts der `nDST` -Parameter auf 0, um anzugeben, dass die Normalzeit gilt, oder auf einen Wert größer als 0 weist darauf hin, Sommerzeit gilt oder auf einen Wert kleiner als 0 (null), damit die C-Laufzeitbibliothek Code Compute, ob Normalzeit oder Sommerzeit gilt. `tm_isdst` ist ein Pflichtfeld. Wenn nicht festgelegt ist, dessen Wert nicht definiert ist und der Rückgabewert von [Mktime](../../c-runtime-library/reference/mktime-mktime32-mktime64.md) ist unvorhersehbar. Wenn `timeptr` verweist auf eine tm-Struktur, die von einem vorherigen Aufruf zurückgegebene [Asctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md), [_gmtime_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md), oder [Localtime_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)der `tm_isdst` Feld enthält den richtigen Wert.  
+ Beim Erstellen einer `CTime` -Objekts der `nDST` -Parameter auf 0, um anzugeben, dass die Normalzeit gilt, oder auf einen Wert größer als 0 weist darauf hin, Sommerzeit gilt oder auf einen Wert kleiner als 0 (null), damit die C-Laufzeitbibliothek Code Compute, ob Normalzeit oder Sommerzeit gilt. `tm_isdst` ist ein Pflichtfeld. Wenn nicht festgelegt ist, dessen Wert nicht definiert ist und der Rückgabewert von [Mktime](../../c-runtime-library/reference/mktime-mktime32-mktime64.md) ist unvorhersehbar. Wenn `timeptr` verweist auf eine tm-Struktur, die von einem vorherigen Aufruf zurückgegebene [Asctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md), [_gmtime_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md), oder [Localtime_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md), `tm_isdst` Feld enthält den richtigen Wert.  
   
  Eine Begleitklasse [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md), stellt ein Zeitintervall dar.  
   
@@ -183,13 +183,13 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="remarks"></a>Hinweise  
  Jeder Konstruktor wird im folgenden beschrieben:  
   
-- **CTime (); **Erstellt ein nicht initialisiertes `CTime` Objekt. Mit diesem Konstruktor können Sie definieren `CTime` -Objekt des Arrays. Sie sollten solche Arrays mit welchen Zeiten vor der Verwendung initialisieren.  
+- **CTime(); ** Erstellt ein nicht initialisiertes `CTime` Objekt. Mit diesem Konstruktor können Sie definieren `CTime` -Objekt des Arrays. Sie sollten solche Arrays mit welchen Zeiten vor der Verwendung initialisieren.  
   
-- **CTime (const CTime &); **Erstellt eine `CTime` -Objekt von einem anderen `CTime` Wert.  
+- **CTime (const CTime &); ** Erstellt eine `CTime` -Objekt von einem anderen `CTime` Wert.  
   
-- **CTime (__time64_t); **Erstellt eine `CTime` -Objekt aus einer **__time64_t** Typ. Dieser Konstruktor erwartet eine UTC-Zeit und das Ergebnis in die lokale Zeit konvertiert, vor dem Speichern des Ergebnisses.  
+- **CTime (__time64_t); ** Erstellt eine `CTime` -Objekt aus einer **__time64_t** Typ. Dieser Konstruktor erwartet eine UTC-Zeit und das Ergebnis in die lokale Zeit konvertiert, vor dem Speichern des Ergebnisses.  
   
-- **CTime (Int, Int,...) **Erstellt ein `CTime` Objekt Ortszeit Komponenten mit den einzelnen Komponenten beschränkt, die den folgenden Bereichen:  
+- **CTime (Int, Int,...) ** Erstellt ein `CTime` Objekt Ortszeit Komponenten mit den einzelnen Komponenten beschränkt, die den folgenden Bereichen:  
   
     |Komponente|Bereich|  
     |---------------|-----------|  
@@ -202,11 +202,11 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
      Dieser Konstruktor wird die entsprechende Konvertierung in UTC. Die Version der Microsoft Foundation Class-Bibliothek bestätigt werden, wenn eine oder mehrere Zeitkomponenten liegt außerhalb des Bereichs. Sie müssen die Argumente vor dem Aufruf überprüfen. Dieser Konstruktor erwartet, dass eine lokale Zeit.  
   
-- `CTime`( **WORD, WORD** ) **;** Erstellt ein `CTime` Objekt aus den angegebenen Werten von MS-DOS-Datum und Uhrzeit. Dieser Konstruktor erwartet, dass eine lokale Zeit.  
+- **CTime (WORD, WORD); ** Erstellt ein `CTime` Objekt aus den angegebenen Werten von MS-DOS-Datum und Uhrzeit. Dieser Konstruktor erwartet, dass eine lokale Zeit.  
   
-- `CTime`( **const SYSTEMTIME&** ) **;** Erstellt eine `CTime` -Objekt aus einer `SYSTEMTIME` Struktur. Dieser Konstruktor erwartet, dass eine lokale Zeit.  
+- **CTime (const SYSTEMTIME &); ** Erstellt eine `CTime` -Objekt aus einer `SYSTEMTIME` Struktur. Dieser Konstruktor erwartet, dass eine lokale Zeit.  
   
-- `CTime`( **const FILETIME&** ) **;** Erstellt eine `CTime` -Objekt aus einer `FILETIME` Struktur. Verwenden Sie wahrscheinlich nicht `CTime``FILETIME` -Initialisierung direkt. Bei Verwendung einer `CFile` Objekt um eine Datei zu manipulieren `CFile::GetStatus` Ruft den Zeitstempel der Datei für Sie durch eine `CTime` Objekt initialisiert wird, mit einer `FILETIME` Struktur. Dieser Konstruktor wird als Zeit basierend auf UTC-Zeit und konvertiert automatisch den Wert in die lokale Zeit vor dem Speichern des Ergebnisses.  
+- **CTime (const FILETIME &); ** Erstellt eine `CTime` -Objekt aus einer `FILETIME` Struktur. Verwenden Sie wahrscheinlich nicht `CTime FILETIME` -Initialisierung direkt. Bei Verwendung einer `CFile` Objekt um eine Datei zu manipulieren `CFile::GetStatus` Ruft den Zeitstempel der Datei für Sie durch eine `CTime` Objekt initialisiert wird, mit einer `FILETIME` Struktur. Dieser Konstruktor wird als Zeit basierend auf UTC-Zeit und konvertiert automatisch den Wert in die lokale Zeit vor dem Speichern des Ergebnisses.  
   
     > [!NOTE]
     >  Der Konstruktor mit **DBTIMESTAMP** Parameter ist nur verfügbar, wenn OLEDB.h enthalten ist.  
@@ -269,7 +269,7 @@ CString FormatGmt(UINT nFormatID) const;
  Siehe das Beispiel für [CTime::Format](#format).  
   
 ##  <a name="a-namegetasdbtimestampa--ctimegetasdbtimestamp"></a><a name="getasdbtimestamp"></a>CTime::GetAsDBTIMESTAMP  
- Rufen Sie diese Memberfunktion konvertiert die Informationen gespeichert, die der `CTime` Objekt in eine Win32-kompatible DBTIMESTAMP-Struktur.  
+ Rufen Sie diese Memberfunktion konvertiert die Informationen gespeichert, die der `CTime` Objekt in eine Win32-kompatiblen DBTIMESTAMP-Struktur.  
   
 ```  
 bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
@@ -370,7 +370,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 ### <a name="remarks"></a>Hinweise  
  `GetGmtTm`Gibt die UTC zurück.  
   
- `ptm` darf nicht `NULL` sein. Wenn Sie das alte Verhalten, in dem zurückkehren möchten `ptm` möglicherweise `NULL` um anzugeben, dass ein interner, statisch zugewiesene Puffer verwendet werden soll, dann heben Sie die Definition `_SECURE_ATL`.  
+ `ptm` darf nicht `NULL` sein. Wenn Sie das alte Verhalten, in dem möchten `ptm` möglicherweise `NULL` um anzugeben, dass ein interner, statisch zugewiesene Puffer verwendet werden soll, dann heben Sie die Definition `_SECURE_ATL`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities&#155;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_9.cpp)]  
@@ -408,7 +408,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 ### <a name="remarks"></a>Hinweise  
  `GetLocalTm`Gibt die lokale Zeit zurück.  
   
- `ptm` darf nicht `NULL` sein. Wenn Sie das alte Verhalten, in dem zurückkehren möchten `ptm` möglicherweise `NULL` um anzugeben, dass ein interner, statisch zugewiesene Puffer verwendet werden soll, dann heben Sie die Definition `_SECURE_ATL`.  
+ `ptm` darf nicht `NULL` sein. Wenn Sie das alte Verhalten, in dem möchten `ptm` möglicherweise `NULL` um anzugeben, dass ein interner, statisch zugewiesene Puffer verwendet werden soll, dann heben Sie die Definition `_SECURE_ATL`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities&#157;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_11.cpp)]  
