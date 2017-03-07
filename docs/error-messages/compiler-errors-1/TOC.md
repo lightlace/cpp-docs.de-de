@@ -1,4 +1,4 @@
-# [C-C++-Buildfehler](c-cpp-build-errors.md)
+# [C/C++-Buildfehler](c-cpp-build-errors.md)
 # [Schwerwiegende Compilerfehler C999 bis C1999](compiler-fatal-errors-c999-through-c1999.md)
 ## [Schwerwiegender Fehler C999](fatal-error-c999.md)
 ## [Schwerwiegender Fehler C1001](fatal-error-c1001.md)

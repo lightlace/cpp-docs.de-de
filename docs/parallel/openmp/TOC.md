@@ -102,6 +102,6 @@
 ### [C.1 Notation](c-1-notation.md)
 ### [C.2 Regeln](c-2-rules.md)
 ## [D. Verwenden der schedule-Klausel](d-using-the-schedule-clause.md)
-## [E. Durch die Implementierung definiertes Verhalten in OpenMP C-C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+## [E. Durch die Implementierung definiertes Verhalten in OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 ## [F. Neue Funktionen und Erläuterungen in Version 2.0](f-new-features-and-clarifications-in-version-2-0.md)
 # [Referenz](reference/toc.md)

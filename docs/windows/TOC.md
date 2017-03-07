@@ -3,6 +3,7 @@
 # [Microsoft Foundation Classes (MFC)](../mfc/TOC.md)
 # [Freigegebene ATL- und MFC-Klassen](../atl-mfc-shared/TOC.md)
 # [Komponentenerweiterungen für Laufzeitplattformen](component-extensions-for-runtime-platforms.md)
+## [C++/CX](../cppcx/TOC.md)
 ## [Nachverfolgungsverweisoperator (Komponentenerweiterungen für C++)](tracking-reference-operator-cpp-component-extensions.md)
 ## [Handle für Objekt (^) (Komponentenerweiterungen für C++)](handle-to-object-operator-hat-cpp-component-extensions.md)
 ## [abstract (Komponentenerweiterungen für C++)](abstract-cpp-component-extensions.md)
