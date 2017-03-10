@@ -1,135 +1,52 @@
 ---
-title: "operator new (CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr90.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-  - "msvcr120.dll"
-apitype: "DLLExport"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator new"
-  - "Skalar neu"
+title: operator new (CRT) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr90.dll
+- msvcr110_clr0400.dll
+- msvcr80.dll
+- msvcr100.dll
+- msvcr110.dll
+- msvcr120.dll
+apitype: DLLExport
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator new
+- scalar new
 ms.assetid: 4ae51618-a4e6-4172-b324-b99d86d1bdca
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# operator new (CRT)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ccda808b150756c09f1a08d751f19a76e7ff6a4e
+ms.lasthandoff: 02/24/2017
 
-Ordnet Speicherblock im Heap zu  
-  
-## Syntax  
-  
-```  
-  
-      void *__cdecl operator new(  
-   size_t count  
-);  
-void *__cdecl operator new(  
-   size_t count,   
-   void * object  
-) throw();  
-void *__cdecl operator new(  
-   size_t count,   
-   const std::nothrow_t&  
-) throw();  
-```  
-  
-#### Parameter  
- *count*  
- Die Größe der Speicherbelegung.  
-  
- *Objekt*  
- Ein Zeiger auf einen Speicherblock, in dem das Objekt erstellt wird.  
-  
-## Rückgabewert  
- Ein Zeiger zur niedrigsten Byteadresse des neu reserviertes Speicher.  
-  
-## Hinweise  
- Dieses Formular von `operator new` wird als skalares neues, im Gegensatz zu dem neuen Formular des Vektors \([Operator new&#91;&#93;](../c-runtime-library/new-operator-crt.md)\).  
-  
- Das erste Formular dieses Operators wird als das nonplacement Formular.  Das zweite Format dieses Operators bezeichnet, da die Positionierungsform und das dritte Formular dieses Operators nicht die auslösende Positionierungsform ist.  
-  
- Das erste Formular des Operators wird vom Compiler definiert und nicht new.h erfordert, im Programm eingefügt werden.  
-  
- [Operator](../c-runtime-library/operator-delete-crt.md) gibt den Arbeitsspeicher frei, der `operator new` zugeordnet ist.  
-  
- Sie können konfigurieren, ob neue Operator gibt NULL oder lösen eine Ausnahme auf Fehler aus.  Weitere Informationen finden Sie unter [Die Operatoren new und delete](../cpp/new-and-delete-operators.md).  
-  
- Mit Ausnahme von auslösendem oder NO\-auslösendem Verhalten verhält sich das CRT `operator new` wie [Operator neu](../Topic/operator%20new%20\(%3Cnew%3E\).md) in der C\+\+\-Standardbibliothek.  
-  
-## Anforderungen  
-  
-|Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|**new**|\<new.h\>|  
-  
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../c-runtime-library/crt-library-features.md).  
-  
-## Beispiel  
- Im Folgenden wird gezeigt, wie Skalar, nonplacement Formular von `operator new` verwendet.  
-  
-```  
-// crt_new1.cpp  
-#include <stdio.h>  
-int main() {  
-   int * i = new int(6);  
-   printf("%d\n", *i);  
-   delete i;  
-}  
-```  
-  
- Im Folgenden wird gezeigt, wie die skalare Positionierungsform von `operator new` verwendet.  
-  
-```  
-// crt_new2.cpp  
-#include <stdio.h>  
-#include <new.h>  
-int main() {  
-   int * i = new int(12);  
-   printf("*i = %d\n", *i);  
-   // initialize existing memory (i) with, in this case, int(7)  
-   int * j = new(i) int(7);   // placement new  
-   printf("*j = %d\n", *j);  
-   printf("*i = %d\n", *i);  
-   delete i;   // or, could have deleted j  
-}  
-```  
-  
- Im Folgenden wird gezeigt, wie Skalar, Platzierung, NO\-THROW\-Formular von `operator new` verwendet.  
-  
-```  
-// crt_new3.cpp  
-#include <stdio.h>  
-#include <new.h>  
-int main() {  
-   // allocates memory, initialize (8) and if call fails, new returns null  
-   int * k = new(std::nothrow) int(8);   // placement new  
-   printf("%d\n", *k);  
-   delete k;  
-}  
-```  
-  
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
-  
-## Siehe auch  
- [Speicherbelegung](../c-runtime-library/memory-allocation.md)
+---
+# <a name="operator-new-crt"></a>operator new (CRT)
+Ab Visual Studio 2013 unterstützt die Universal C Runtime (UCRT) die C++-spezifischen Funktionen „operator new“ und „operator delete“ nicht mehr. Diese gehören jetzt zur C++-Standardbibliothek. Weitere Informationen finden Sie in der C++-Sprachreferenz unter [Operatoren „new“ und „delete“](../cpp/new-and-delete-operators.md) und [Operator „new“](../cpp/new-operator-cpp.md). 
+
+

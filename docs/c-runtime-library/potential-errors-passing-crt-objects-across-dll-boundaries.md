@@ -1,62 +1,68 @@
 ---
-title: "Potenzielle Fehler bei der &#220;bergabe von CRT-Objekten &#252;ber DLL-Grenzen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL-Konflikte [C++]"
+title: "Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Potenzielle Fehler bei der &#220;bergabe von CRT-Objekten &#252;ber DLL-Grenzen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
+ms.openlocfilehash: 8aadc8b14104b3bc74905b5187c7dfe76fa8d2f4
+ms.lasthandoff: 02/24/2017
 
-Wenn Sie übergeben, wendet C\-Laufzeit \(CRT\) wie Dateihandles, Gebietsschemas und Umgebungsvariablen in ein, oder aus einer DLL \(Funktionsaufrufe über der DLL\-Grenze\) auschecken, kann unerwartetes Verhalten auftreten, wenn die DLL sowie von Dateien, die in die DLL aufrufen, unterschiedliche Kopien der CRT\-Bibliotheken verwenden.  
+---
+# <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen
+Beim Übergeben von CRT-Objekten (C Run Time, C-Laufzeit) wie z.B. Dateihandles, Gebietsschemas und Umgebungsvariablen in eine oder aus einer DLL (Funktionsaufrufe über die DLL-Grenze hinweg), kann ein unerwartetes Verhalten auftreten, wenn die DLL und die Dateien, die die DLL aufrufen, unterschiedliche Kopien der CRT-Bibliotheken verwenden.  
   
- Ein verwandtes Problem kann auftreten, wenn Sie Speicher belegen \(entweder explizit mit `new` oder `malloc` oder implizit mit `strdup`, `strstreambuf::str`, z.\) und dann einen Zeiger über eine freigegeben werden DLL\-führen Begrenzung.  Dies kann eine Speicherzugriffsverletzung verursachen oder Beschädigung häufen, wenn die DLL und ihre Benutzer unterschiedliche Kopien der CRT\-Bibliotheken verwenden.  
+ Ein ähnliches Problem kann auftreten, wenn Sie Speicher belegen (entweder explizit mit `new` oder `malloc` oder implizit mit `strdup`, `strstreambuf::str` usw.) und dann einen Zeiger über eine DLL-Grenze hinweg übergeben, wo er freigegeben wird. Dies kann eine Speicherzugriffsverletzung oder Heapbeschädigung verursachen, wenn die DLL und ihre Benutzer unterschiedliche Kopien der CRT-Bibliotheken verwenden.  
   
- Ein weiteres Symptom dieses Problems kann ein Fehler im Ausgabefenster während des Debuggens wie sein:  
+ Ein anderes Symptom dieses Problems kann ein Fehler sein, der während des Debuggens im Ausgabefenster auftritt, wie z.B. der folgende:  
   
- HEAP\[\]: Ungültige Adresse angegebene zu RtlValidateHeap \(\#,\#\)  
+ HEAP[]: Ungültige Adresse angegeben für RtlValidateHeap(#,#)  
   
-## Ursachen  
- Jede Kopie der CRT\-Bibliothek gelten separate und anderen Zustand.  Als solche Objekte wie CRT, Dateihandles Umgebungsvariablen ein, Gebietsschemas und sind für die Kopie des CRT nur gültig, in das diese Objekte zugeordnet oder festgelegt werden.  Wenn eine DLL und ihre Benutzer unterschiedliche Kopien der CRT\-Bibliothek verwenden, können Sie diese CRT\-Objekte über der DLL\-Grenze nicht übergeben und sie davon ausgehen, auf der anderen Seite ordnungsgemäß übernommen werden.  
+## <a name="causes"></a>Ursachen  
+ Jede Kopie der CRT-Bibliothek verfügt über einen eigenen Status, der von Ihrer App oder DLL im lokalen Threadspeicher gespeichert wird. Daher gelten CRT-Objekte wie Dateihandles, Umgebungsvariablen und Gebietsschemas nur für die Kopie der CRT in derjenigen App oder DLL, in der diese Objekte zugewiesen oder festgelegt sind. Wenn eine DLL und die zugehörigen App-Clients verschiedene Kopien der CRT-Bibliothek verwenden, können Sie diese CRT-Objekte nicht über die DLL-Grenze hinweg übergeben und damit rechnen, dass diese auf der anderen Seite ordnungsgemäß übernommen werden. Dies gilt insbesondere für CRT-Versionen vor der Universal CRT in Visual Studio 2015 und höher. Für jede mit Visual C++ 2013 oder früher erstellte Version von Visual Studio gab es eine versionsspezifische CRT-Bibliothek. Die internen Implementierungsdetails der CRT wie z.B. die Datenstrukturen und Benennungskonventionen unterschieden sich von Version zu Version. Die dynamische Verknüpfung von Code, der für eine Version der CRT kompiliert wurde, mit einer anderen Version der CRT-DLL wurde nie unterstützt. Die Verknüpfung funktionierte zwar zuweilen, das war aber eher Glück als Absicht.  
   
- Da jede Kopie der CRT\-Bibliothek den eigenen Heapmanager verfügt, Speicher belegend in einer CRT\-Bibliothek und den Zeiger über eine durch eine andere Kopie der CRT\-Bibliothek gemeinsam genutzt DLL\-Grenze, stellt eine mögliche Ursache für Heapbeschädigung beginnt.  
+ Und da jede Kopie der CRT-Bibliothek einen eigenen Heap-Manager aufweist, ist das Belegen von Speicher in einer CRT-Bibliothek und das Übergeben des Zeigers über eine DLL-Grenze hinweg zur Freigabe durch eine andere Kopie der CRT-Bibliothek eine potenzielle Ursache für eine Beschädigung des Heaps. Wenn Sie Ihre DLL so konzipieren, dass sie CRT-Objekte über die Grenze hinweg übergibt oder Speicher belegt, der außerhalb der DLL freigegeben werden soll, müssen Sie die App-Clients der DLL so einrichten, dass sie dieselbe Kopie der CRT-Bibliothek verwenden wie die DLL. Die DLL und die DLL-Clients verwenden normalerweise nur dann die gleiche Kopie der CRT-Bibliothek, wenn beide zur Ladezeit mit der gleichen Version der CRT-DLL verknüpft sind. Da die von Visual Studio 2015 und später auch Windows 10 verwendete DLL-Version der Universal CRT-Bibliothek jetzt eine zentral bereitgestellte Windows-Komponente ist (ucrtbase.dll), kann sie für Apps verwendet werden, die mit Visual Studio 2015 und höher erstellt werden. Eine Einschränkung gilt aber auch hier: Auch wenn der CRT-Code identisch ist, können Sie Speicher, der in einem Heap belegt ist, nicht einer Komponente zuweisen, die einen anderen Heap verwendet.  
   
- Falls die DLL entwerfen, dass sie CRT\-Objekte über die Begrenzung hinweg wird oder es, außerhalb der DLL gemeinsam genutzt belegt und erwartet, sollten Sie die DLL\-Benutzer ein, um die gleiche Kopie der CRT\-Bibliothek wie die DLL zu verwenden.  Die DLL und ihre Benutzer verwenden die gleiche Kopie der CRT\-Bibliothek, wenn beide mit derselben Version der CRT\-DLL verknüpft werden.  Dies kann ein Problem darstellen, wenn Sie Anwendungen kombinieren, die mit Visual C\+\+ 5.0 mit DLLs erstellt werden, die von Visual C\+\+ 4.1 oder früher erstellt werden.  Da die DLL\-Version der CRT\-Bibliothek, die von Visual C\+\+ 4.1, verwendete msvcrt40.dll ist und das, die von Visual 5,0, verwendete msvcrt.dll ist, können Sie die Anwendung nicht erstellen, die gleiche Kopie der CRT\-Bibliothek wie diese DLLs verwenden.  
+## <a name="example"></a>Beispiel  
   
- Es gibt jedoch eine Ausnahme.  In Version englischer US und in einigen anderen lokalisierten Versionen von Windows 2000, z Deutschem, Französisch und Tschechen, wird eine Weiterleitungsversion des msvcrt40.dll \(Version 4.20\) enthalten.  Folglich obwohl die DLL mit msvcrt40.dll verknüpft wird und der Benutzer mit msvcrt.dll verknüpft ist, verwenden Sie die gleiche Kopie der CRT\-Bibliothek, da alle Aufrufe, die zu msvcrt40.dll ausgeführt werden, an msvcrt.dll weitergeleitet werden.  
+### <a name="description"></a>Beschreibung  
+ Dieses Beispiel übergibt ein Dateihandle über eine DLL-Grenze.  
   
- Es ist dieser Weiterleitungsversion von msvcrt40.dll nicht in verschiedenen lokalisierten Versionen von Windows 2000, z Japanisch, Koreanisch und Chinesisch verfügbar.  Wenn die Anwendung auf diese Betriebssysteme abzielt, müssen Sie entweder erhalten eine aktualisierte Version der DLL, die nicht auf msvcrt40.dll beruht oder ändern die Anwendung, nicht für die Anwendung die gleiche Kopie der CRT\-Bibliotheken zu verlassen.  Wenn Sie die DLL entwickelt haben, bedeutet diese Neuerstellen sie mit Visual C\+\+ 4.2 oder höher.  Wenn eine DLL von Drittanbietern ist, müssen Sie dem Anbieter für ein Upgrade wenden.  
+ Die DLL und die EXE-Datei wurden mit /MD erstellt, sodass sie sich eine einzige Kopie der CRT teilen.  
   
- Beachten Sie, dass diese Weiterleitung DLL\-Version von msvcrt40.dll \(Version 4.20\) nicht verteilt werden kann.  
+ Wenn Sie die Dateien mit „/MT“ neu erstellen, sodass sie getrennte Kopien der CRT verwenden, zieht die Ausführung der resultierenden „test1Main.exe“ eine Zugriffsverletzung nach sich.  
   
-## Beispiel  
-  
-### **Beschreibung**  
- In diesem Beispiel führt ein Dateihandle über eine DLL\-Grenze.  
-  
- Die DLL und die EXE\-Datei mit \/MD erstellt werden, sodass sie eine einzige Kopie des CRT frei.  
-  
- Wenn Sie mit \/MT neu erstellen, damit sie eigene Kopien des CRT verwenden, führt das Ausführen des resultierenden test1Main.exe eine Zugriffsverletzung.  
-  
-### Code  
-  
-```  
+```cpp  
 // test1Dll.cpp  
-// compile with: /MD /LD  
+// compile with: cl /EHsc /W4 /MD /LD test1Dll.cpp  
 #include <stdio.h>  
 __declspec(dllexport) void writeFile(FILE *stream)  
 {  
@@ -66,11 +72,9 @@ __declspec(dllexport) void writeFile(FILE *stream)
 }  
 ```  
   
-### Code  
-  
-```  
+```cpp  
 // test1Main.cpp  
-// compile with: /MD test1dll.lib  
+// compile with: cl /EHsc /W4 /MD test1Main.cpp test1Dll.lib  
 #include <stdio.h>  
 #include <process.h>  
 void writeFile(FILE *stream);  
@@ -84,22 +88,18 @@ int main(void)
 }  
 ```  
   
-### Ausgabe  
-  
-```  
+```Output  
 this is a string  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### **Beschreibung**  
- In diesem Beispiel führt Umgebungsvariablen über eine DLL\-Grenze.  
+### <a name="description"></a>Beschreibung  
+ Dieses Beispiel übergibt Umgebungsvariablen über eine DLL-Grenze hinweg.  
   
-### Code  
-  
-```  
+```cpp  
 // test2Dll.cpp  
-// compile with: /MT /LD  
+// compile with: cl /EHsc /W4 /MT /LD test2Dll.cpp  
 #include <stdio.h>  
 #include <stdlib.h>  
   
@@ -117,13 +117,11 @@ __declspec(dllexport) void readEnv()
       printf( "MYLIB has not been set.\n");  
    free( libvar );  
 }  
-```  
+```   
   
-### Code  
-  
-```  
+```cpp  
 // test2Main.cpp  
-// compile with: /MT /link test2dll.lib  
+// compile with: cl /EHsc /W4 /MT test2Main.cpp test2dll.lib   
 #include <stdlib.h>  
 #include <stdio.h>  
   
@@ -136,17 +134,15 @@ int main( void )
 }  
 ```  
   
-### Ausgabe  
-  
-```  
+```Output  
 MYLIB has not been set.  
 ```  
   
- Wenn die DLL und die EXE\-Datei mit \/MD erstellt werden, sodass nur eine Kopie des CRT verwendet wird, wird das Programm erfolgreich ausgeführt und erzeugt die folgende Ausgabe:  
+ Wenn sowohl die DLL als auch die ausführbare Datei mit „/MD“ erstellt wurden, sodass nur eine einzige Kopie der CRT verwendet wird, wird das Programm erfolgreich ausgeführt und erzeugt folgende Ausgabe:  
   
 ```  
 New MYLIB variable is: c:\mylib;c:\yourlib  
 ```  
   
-## Siehe auch  
- [CRT\-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md)
+## <a name="see-also"></a>Siehe auch  
+ [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md)
