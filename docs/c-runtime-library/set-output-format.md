@@ -1,51 +1,68 @@
 ---
-title: "_set_output_format | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_output_format"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr120.dll"
-  - "msvcr100.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-  - "msvcr110.dll"
-  - "msvcr80.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "set_output_format"
-  - "_set_output_format"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_output_format-Funktion"
-  - "_TWO_DIGIT_EXPONENT-Konstante"
-  - "Ausgabeformatierung"
-  - "set_output_format-Funktion"
-  - "TWO_DIGIT_EXPONENT-Konstante"
+title: _set_output_format | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_output_format
+apilocation:
+- msvcrt.dll
+- msvcr120.dll
+- msvcr100.dll
+- msvcr110_clr0400.dll
+- msvcr90.dll
+- msvcr110.dll
+- msvcr80.dll
+apitype: DLLExport
+f1_keywords:
+- set_output_format
+- _set_output_format
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TWO_DIGIT_EXPONENT constant
+- output formatting
+- TWO_DIGIT_EXPONENT constant
+- _set_output_format function
+- set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _set_output_format
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: caab4bfb3d2228d037996ececc09faa06e90a3f2
+ms.lasthandoff: 02/24/2017
 
-Passt die von den Funktionen für formatierte E\/A verwendeten Ausgabeformate an.  
+---
+# <a name="setoutputformat"></a>_set_output_format
+Passt die von den Funktionen für formatierte E/A verwendeten Ausgabeformate an.  
   
 > [!IMPORTANT]
 >  Diese Funktion ist veraltet. Von Visual Studio 2015 an ist sie nicht in der CRT verfügbar.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 unsigned int _set_output_format(  
@@ -53,42 +70,82 @@ unsigned int _set_output_format(
 );  
 ```  
   
-#### Parameter  
- \[in\] `format`  
+#### <a name="parameters"></a>Parameter  
+ [in] `format`  
  Ein Wert, der das zu verwendende Format darstellt.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Das vorherige Ausgabeformat.  
   
-## Hinweise  
- `_set_output_format` wird verwendet, um die Ausgabe von Funktionen für formatierte E\/A, wie z. B. [printf\_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) zu konfigurieren. Zurzeit ist die einzige Formatierungskonvention, die von dieser Funktion geändert werden kann, die Anzahl der Stellen, die in Exponenten in der Ausgabe von Gleitkommazahlen angezeigt werden.  
+## <a name="remarks"></a>Hinweise  
+ `_set_output_format` wird verwendet, um die Ausgabe von formatierten E/A-Funktionen, wie z.B. [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md), zu konfigurieren. Zurzeit ist die einzige Formatierungskonvention, die von dieser Funktion geändert werden kann, die Anzahl der Stellen, die in Exponenten in der Ausgabe von Gleitkommazahlen angezeigt werden.  
   
- Standardmäßig erfolgt die Ausgabe von Gleitkommazahlen durch Funktionen wie `printf_s`, `wprintf_s` und ähnliche Funktionen in der Standard\-C\-Bibliothek von Visual C\+\+ mit drei Stellen für den Exponenten, selbst wenn keine drei Stellen für die Darstellung des Werts des Exponenten erforderlich sind. Nullen werden verwendet, um den Wert auf drei Stellen aufzufüllen.`_set_output_format` ermöglicht Ihnen, dieses Verhalten zu ändern, sodass nur zwei Stellen im Exponenten geduckt werden, es sei denn, die Größe des Exponenten macht eine dritte Stelle erforderlich.  
+ Standardmäßig erfolgt die Ausgabe von Gleitkommazahlen durch Funktionen wie `printf_s`, `wprintf_s`und ähnliche Funktionen in der Standard-C-Bibliothek von Visual C++ mit drei Stellen für den Exponenten, selbst wenn keine drei Stellen für die Darstellung des Werts des Exponenten erforderlich sind. Nullen werden verwendet, um den Wert auf drei Stellen aufzufüllen. `_set_output_format` ermöglicht Ihnen, dieses Verhalten zu ändern, sodass nur zwei Stellen im Exponenten geduckt werden, es sei denn, die Größe des Exponenten macht eine dritte Stelle erforderlich.  
   
- Um zweistellige Exponenten zu aktivieren, rufen Sie diese Funktion mit dem Parameter `_TWO_DIGIT_EXPONENT` auf, wie im Beispiel gezeigt. Um die zweistelligen Exponenten zu deaktivieren, rufen Sie diese Funktion mit dem Argument „0“ auf.  
+ Um zweistellige Exponenten zu aktivieren, rufen Sie diese Funktion mit dem Parameter `_TWO_DIGIT_EXPONENT`auf, wie im Beispiel gezeigt. Um die zweistelligen Exponenten zu deaktivieren, rufen Sie diese Funktion mit dem Argument „0“ auf.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_set_output_format`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_set_output_format`|\<stdio.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md) in der Einführung.  
   
-## .NET Framework-Entsprechung  
- Nicht zutreffend. Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
-// crt_set_output_format.c #include <stdio.h> void printvalues(double x, double y) { printf_s("%11.4e %11.4e\n", x, y); printf_s("%11.4E %11.4E\n", x, y); printf_s("%11.4g %11.4g\n", x, y); printf_s("%11.4G %11.4G\n", x, y); } int main() { double x = 1.211E-5; double y = 2.3056E-112; unsigned int old_exponent_format; // Use the default format printvalues(x, y); // Enable two-digit exponent format old_exponent_format = _set_output_format(_TWO_DIGIT_EXPONENT); printvalues(x, y); // Disable two-digit exponent format _set_output_format( old_exponent_format ); printvalues(x, y); }  
+// crt_set_output_format.c  
+#include <stdio.h>  
+  
+void printvalues(double x, double y)  
+{  
+   printf_s("%11.4e %11.4e\n", x, y);  
+   printf_s("%11.4E %11.4E\n", x, y);  
+   printf_s("%11.4g %11.4g\n", x, y);  
+   printf_s("%11.4G %11.4G\n", x, y);  
+}  
+  
+int main()  
+{  
+   double x = 1.211E-5;  
+   double y = 2.3056E-112;  
+   unsigned int old_exponent_format;  
+  
+   // Use the default format  
+   printvalues(x, y);  
+  
+   // Enable two-digit exponent format  
+   old_exponent_format = _set_output_format(_TWO_DIGIT_EXPONENT);  
+  
+   printvalues(x, y);  
+  
+   // Disable two-digit exponent format  
+   _set_output_format( old_exponent_format );  
+  
+   printvalues(x, y);  
+}  
 ```  
   
 ```Output  
-1.2110e-005 2.3056e-112 1.2110E-005 2.3056E-112 1.211e-005  2.306e-112 1.211E-005  2.306E-112 1.2110e-05 2.3056e-112 1.2110E-05 2.3056E-112 1.211e-05  2.306e-112 1.211E-05  2.306E-112 1.2110e-005 2.3056e-112 1.2110E-005 2.3056E-112 1.211e-005  2.306e-112 1.211E-005  2.306E-112  
+1.2110e-005 2.3056e-112  
+1.2110E-005 2.3056E-112  
+ 1.211e-005  2.306e-112  
+ 1.211E-005  2.306E-112  
+ 1.2110e-05 2.3056e-112  
+ 1.2110E-05 2.3056E-112  
+  1.211e-05  2.306e-112  
+  1.211E-05  2.306E-112  
+1.2110e-005 2.3056e-112  
+1.2110E-005 2.3056E-112  
+ 1.211e-005  2.306e-112  
+ 1.211E-005  2.306E-112  
 ```  
   
-## Siehe auch  
- [printf\_s, \_printf\_s\_l, wprintf\_s, \_wprintf\_s\_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
- [printf\-Typenfeldzeichen](../c-runtime-library/printf-type-field-characters.md)   
- [\_get\_output\_format](../c-runtime-library/get-output-format.md)
+## <a name="see-also"></a>Siehe auch  
+ [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
+ [printf-Typenfeldzeichen](../c-runtime-library/printf-type-field-characters.md)   
+ [_get_output_format](../c-runtime-library/get-output-format.md)

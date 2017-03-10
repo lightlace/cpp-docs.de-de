@@ -1,44 +1,60 @@
 ---
-title: "C-Sprachreferenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-f1_keywords: 
-  - "c"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C, Sprachreferenz"
-  - "Sprachreferenz, C"
-  - "Visual C"
-  - "Visual C, Sprachreferenz"
+title: C-Programmiersprachenreferenz | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+f1_keywords:
+- c
+dev_langs:
+- C++
+helpviewer_keywords:
+- Visual C
+- C, language reference
+- Visual C, language reference
+- language reference, C
 ms.assetid: 3a306c30-8dd2-435b-bd1c-c143b02c0872
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# C-Sprachreferenz
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3c140b9d49421e8a9f0082351f5e64608506b8ea
+ms.lasthandoff: 02/24/2017
 
-Die *C\-Programmiersprachenreferenz* beschreibt die C\-Programmiersprache wie in Microsoft C implementiert.  Die Organisation des Buchs basiert auf dem ANSI C\-Standard mit zusätzlichem Material zu den Microsoft\-Erweiterungen für den ANSI C\-Standard.  
+---
+# <a name="c-language-reference"></a>C-Programmiersprachenreferenz
+Die *C-Programmiersprachenreferenz* beschreibt die Programmiersprache C, wie sie in Microsoft C implementiert ist. Die Organisation des Buchs basiert auf dem ANSI C-Standard (auch als C89 bezeichnet) und bietet zusätzliches Material zu den Microsoft-Erweiterungen des ANSI C-Standards.  
   
--   [Organisation der C\-Programmiersprachenreferenz](../c-language/organization-of-the-c-language-reference.md)  
+-   [Organisation der C-Programmiersprachenreferenz](../c-language/organization-of-the-c-language-reference.md)  
   
- Zusätzliches Referenzmaterial für C\+\+ und den Präprozessor finden Sie unter:  
+Zusätzliches Referenzmaterial für C++ und den Präprozessor finden Sie unter:  
   
--   [C\+\+\-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)  
+-   [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)  
   
 -   [Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)  
   
- Compiler\- und Linkeroptionen werden unter [Referenz zur C\/C\+\+\-Erstellung](../build/reference/c-cpp-building-reference.md) dokumentiert.  
+Optionen für Compiler und Linker werden unter [Referenz zur C/C++-Erstellung](../build/reference/c-cpp-building-reference.md) dokumentiert.  
   
-## Siehe auch  
- [C\/C\+\+\-Sprachen](../misc/c-cpp-languages.md)   
- [Visual C\+\+ Libraries Reference](assetId:///fec23c40-10c0-4857-9cdc-33a3b99b30ae)
+## <a name="see-also"></a>Siehe auch  
+[C/C++-Sprache und Standardbibliotheken](../cpp/c-cpp-language-and-standard-libraries.md)   
+

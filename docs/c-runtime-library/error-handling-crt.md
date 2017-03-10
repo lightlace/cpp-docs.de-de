@@ -1,47 +1,63 @@
 ---
-title: "Fehlerbehandlung (CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.errors"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Fehlerbehandlung, Routinen in C für"
-  - "Fehlerbehandlung, Bibliothekenroutinen"
-  - "Logikfehler"
-  - "Testen, für Programmfehler"
+title: Fehlerbehandlung (CRT) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.errors
+dev_langs:
+- C++
+helpviewer_keywords:
+- error handling, C routines for
+- logic errors
+- error handling, library routines
+- testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Fehlerbehandlung (CRT)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ab0f6998aa2f4f6ba5066cbc1d4c6813dcbaab0b
+ms.lasthandoff: 02/24/2017
 
-Verwenden Sie diese, um Programmfehler Routinen zu behandeln.  
+---
+# <a name="error-handling-crt"></a>Fehlerbehandlung (CRT)
+Verwenden Sie diese Routinen, um Programmfehler zu behandeln.  
   
-### Fehlerbehandlungs\-Routinen  
+### <a name="error-handling-routines"></a>Routinen zur Fehlerbehandlung  
   
-|Routine|Verwendung|.NET Framework\-Entsprechung|  
-|-------------|----------------|----------------------------------|  
-|Makro [Assertion](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Test für Programmierlogikfehler; verfügbar in der Version und die Debugversionen der Laufzeitbibliothek|[\<caps:sentence id\="tgt8" sentenceid\="14fd9bf776829d73028df00162f7533f" class\="tgtSentence"\>System::Diagnostics::Debug::Assert\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
-|Makros [\_ASSERT, \_ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Wie auch `assert`, jedoch nur verfügbar in den Debugversionen der Laufzeitbibliothek|[\<caps:sentence id\="tgt11" sentenceid\="14fd9bf776829d73028df00162f7533f" class\="tgtSentence"\>System::Diagnostics::Debug::Assert\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
-|[clearerr](../c-runtime-library/reference/clearerr.md)|Rücksetzungsfehlerindikator.  Das Aufrufen von `rewind` oder das Schließen eines Streams kann außerdem den Fehler zurück.|Nicht zutreffend.  Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf.  Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).|  
-|[\_eof](../c-runtime-library/reference/eof.md)|Überprüfung Dateiende E\/A in der auf niedriger Ebene|Nicht zutreffend.  Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf.  Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).|  
-|[feof](../c-runtime-library/reference/feof.md)|Test für Dateiende.  Dateiende wird auch wenn `_read`  gibt 0 angegeben.|Nicht zutreffend.  Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf.  Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).|  
-|[ferror](../c-runtime-library/reference/ferror.md)|Test für Stream E\/A\-Fehler|Nicht zutreffend.  Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf.  Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).|  
-|Makros [\_RPT, \_RPTF](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)|Generiert einen Bericht, der mit `printf` vergleichbar, jedoch die Debugversionen der Laufzeitbibliothek nur verfügbar ist|Nicht zutreffend.  Mit `PInvoke` rufen Sie die Standard\-C\-Funktion auf.  Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](../Topic/Platform%20Invoke%20Examples.md).|  
-|[\_set\_error\_mode](../c-runtime-library/reference/set-error-mode.md)|Ändert das `__error_mode`, um einen nicht standardmäßigen Speicherort zu bestimmen, in dem die C\-Laufzeit eine Fehlermeldung für einen Fehler geschrieben wird, der möglicherweise das Programm beendet.||  
-|[\_set\_purecall\_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Legt den Handler einer reinen virtuellen Funktionsaufruf fest.||  
+|Routine|Verwendung|.NET Framework-Entsprechung|  
+|-------------|---------|-------------------------------|  
+|Makro [assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Testet auf Fehler in der Programmierungslogik; ist sowohl in den Release- als auch den Debugversionen der Laufzeitbibliothek verfügbar.|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
+|Makros [_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Entspricht `assert`, ist aber nur in den Debugversionen der Laufzeitbibliothek verfügbar.|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
+|[clearerr](../c-runtime-library/reference/clearerr.md)|Setzt den Fehlerindikator zurück. Das Aufrufen von `rewind` oder das Schließen eines Streams setzt den Fehlerindikator ebenfalls zurück.|Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_eof](../c-runtime-library/reference/eof.md)|Prüft das Dateiende in E/A auf niedriger Ebene.|Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[feof](../c-runtime-library/reference/feof.md)|Prüft das Dateiende. Das Dateiende wird auch angezeigt, wenn `_read` 0 zurückgibt.|Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[ferror](../c-runtime-library/reference/ferror.md)|Prüft auf E/A-Fehler im Stream.|Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|Makros [_RPT, _RPTF](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)|Generiert einen Bericht ähnlich wie bei `printf`, ist aber nur in den Debugversionen der Laufzeitbibliothek verfügbar.|Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Ändert `__error_mode`, um einen nicht standardmäßigen Speicherort zu bestimmen, in dem die C-Laufzeit eine Fehlermeldung für einen Fehler schreibt, der das Programm möglicherweise beendet.||  
+|[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Legt den Handler für einen rein virtuellen Funktionsaufruf fest.||  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)

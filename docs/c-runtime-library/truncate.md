@@ -1,77 +1,93 @@
 ---
-title: "_TRUNCATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_TRUNCATE"
-  - "TRUNCATE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_TRUNCATE-Konstante"
-  - "TRUNCATE-Konstante"
+title: _TRUNCATE | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _TRUNCATE
+- TRUNCATE
+dev_langs:
+- C++
+helpviewer_keywords:
+- TRUNCATE constant
+- _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _TRUNCATE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8aa045caaaaa198c4ddbf19d03decca8d1372155
+ms.lasthandoff: 02/24/2017
 
-Gibt Zeichenfolgenabschneidenverhalten an.  
+---
+# <a name="truncate"></a>_TRUNCATE
+Gibt das Abschneideverhalten von Zeichenfolgen an.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <stdlib.h>  
 ```  
   
-## Hinweise  
- `_TRUNCATE` aktiviert Abschneidenverhalten, wenn Sie `count` als Parameter an diese Funktionen übergeben werden:  
+## <a name="remarks"></a>Hinweise  
+ `_TRUNCATE` aktiviert das Abschneideverhalten, wenn es als `count`-Parameter an folgende Funktionen übergeben wird:  
   
- [strncpy\_s, \_strncpy\_s\_l, wcsncpy\_s, \_wcsncpy\_s\_l, \_mbsncpy\_s, \_mbsncpy\_s\_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
   
- [strncat\_s, \_strncat\_s\_l, wcsncat\_s, \_wcsncat\_s\_l, \_mbsncat\_s, \_mbsncat\_s\_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
+ [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
   
- [mbstowcs\_s, \_mbstowcs\_s\_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
+ [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
   
- [mbsrtowcs\_s](../c-runtime-library/reference/mbsrtowcs-s.md)  
+ [mbsrtowcs_s](../c-runtime-library/reference/mbsrtowcs-s.md)  
   
- [wcstombs\_s, \_wcstombs\_s\_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
+ [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
   
- [wcsrtombs\_s](../c-runtime-library/reference/wcsrtombs-s.md)  
+ [wcsrtombs_s](../c-runtime-library/reference/wcsrtombs-s.md)  
   
- [\_snprintf\_s, \_snprintf\_s\_l, \_snwprintf\_s, \_snwprintf\_s\_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
+ [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
   
- [vsnprintf\_s, \_vsnprintf\_s, \_vsnprintf\_s\_l, \_vsnwprintf\_s, \_vsnwprintf\_s\_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
+ [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
   
- Wenn der den Zielpuffer zu klein ist, wird die gesamte Zeichenfolge aufzunehmen, ist das normale Verhalten dieser Funktionen, es als Fehlerkonstellation zu behandeln \(siehe [Parametervalidierung](../c-runtime-library/parameter-validation.md)\).  Wenn Zeichenfolgenabschneiden aktiviert ist, indem `_TRUNCATE` übergibt, kopieren Sie diese Funktionen nur so viel der Zeichenfolge, z anpassen, den Zielpuffer auf NULL enden verlassend und erfolgreich Sie zurückkehren.  
+ Wenn der Zielpuffer zu klein für die gesamte Zeichenfolge ist, wird es von diesen Funktionen nach normalem Verhalten als Fehlersituation behandelt (siehe [Parametervalidierung](../c-runtime-library/parameter-validation.md)). Wenn jedoch das Abschneiden der Zeichenfolge durch das Übergeben von `_TRUNCATE` aktiviert wird, kopieren diese Funktionen nur so viel von der Zeichenfolge wie passt, sodass der Zielpuffer auf NULL endet, und kehren erfolgreich zurück.  
   
- Eine Abschneidenänderungen Sie die Rückgabewerte der betroffenen Funktionen auf.  Die folgenden Funktionen geben 0, wenn kein Kürzung auftritt, oder `STRUNCATE` zurück, wenn das Abschneiden auftritt:  
+ Das Abschneiden der Zeichenfolge ändert die Rückgabewerte der betroffenen Funktionen. Die folgenden Funktionen geben 0 zurück, wenn kein Abschneiden erfolgt, und `STRUNCATE`, wenn abgeschnitten wird:  
   
- [strncpy\_s, \_strncpy\_s\_l, wcsncpy\_s, \_wcsncpy\_s\_l, \_mbsncpy\_s, \_mbsncpy\_s\_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
   
- [strncat\_s, \_strncat\_s\_l, wcsncat\_s, \_wcsncat\_s\_l, \_mbsncat\_s, \_mbsncat\_s\_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
+ [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
   
- [wcstombs\_s, \_wcstombs\_s\_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
+ [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
   
- [mbstowcs\_s, \_mbstowcs\_s\_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
+ [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
   
- Die folgenden Funktionen geben der Anzahl der kopierten Zeichen, wenn kein Kürzung auftritt, oder \-1 zurück, wenn das Abschneiden auftritt \(das Verhalten der ursprünglichen snprintf Funktionen abgleichend\):  
+ Die folgenden Funktionen geben die Anzahl der kopierten Zeichen zurück, wenn kein Abschneiden erfolgt, oder -1, wenn abgeschnitten wird (entsprechend dem Verhalten der ursprünglichen snprintf-Funktionen):  
   
- [\_snprintf\_s, \_snprintf\_s\_l, \_snwprintf\_s, \_snwprintf\_s\_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
+ [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
   
- [vsnprintf\_s, \_vsnprintf\_s, \_vsnprintf\_s\_l, \_vsnwprintf\_s, \_vsnwprintf\_s\_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
+ [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_truncate.c  
@@ -89,7 +105,10 @@ int main()
 }  
 ```  
   
-  **Schnittmaske aufgetreten\!**  
-**'1234'**   
-## Siehe auch  
+```Output  
+truncation occurred!  
+'1234'  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Globale Konstanten](../c-runtime-library/global-constants.md)
