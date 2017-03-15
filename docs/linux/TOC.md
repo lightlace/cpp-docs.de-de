@@ -1,0 +1,5 @@
+# [Herunterladen, Installieren und Einrichten der Linux-Arbeitsauslastung](download-install-and-setup-the-linux-development-workload.md)
+# [Erstellen eines neuen Linux-Projekts](create-a-new-linux-project.md)
+# [Konfigurieren eines Linux-Projekts](configure-a-linux-project.md)
+# [Aufbauen einer Verbindung mit Ihrem Linux-Remotecomputer](connect-to-your-remote-linux-computer.md)
+# [Bereitstellen, Ausführen und Debuggen eines Linux-Projekts](deploy-run-and-debug-your-linux-project.md)

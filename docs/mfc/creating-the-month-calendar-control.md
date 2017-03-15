@@ -1,0 +1,49 @@
+---
+title: "Erstellen des Monatskalender-Steuerelements | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CMonthCalCtrl-Klasse, Erstellen"
+  - "Monatskalender-Steuerelement"
+  - "Monatskalender-Steuerelement, Erstellen"
+ms.assetid: 185cc642-85e9-4365-8a4c-d90b75b010f7
+caps.latest.revision: 10
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+caps.handback.revision: 6
+---
+# Erstellen des Monatskalender-Steuerelements
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Wie das Monatskalender\-Steuerelement erstellt wird, hängt davon ab, ob Sie das Steuerelement in einem Dialogfeld verwenden oder in einem nondialog Fenster erstellen.  
+  
+### So CMonthCalCtrl direkt in einem Dialogfeld verwendet werden  
+  
+1.  Im Dialog\-Editor fügen Sie ein Monatskalender\-Steuerelement der Dialogfeldvorlagen\-Ressource hinzu.  Geben Sie an seiner Steuerelement\-ID  
+  
+2.  Geben Sie alle erforderlichen Formaten, mithilfe des Eigenschaftendialogfelds des Monatskalender\-Steuerelements an.  
+  
+3.  Verwenden Sie [Assistent zum Hinzufügen von Membervariablen](../ide/adding-a-member-variable-visual-cpp.md), um eine Membervariable vom Typ [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md) mit der Steuerelementeigenschaft hinzuzufügen.  Sie können diesen Member verwenden, um `CMonthCalCtrl`\-Memberfunktionen aufrufen.  
+  
+4.  Verwenden Sie das Eigenschaftenfenster, die Handlerfunktionen in Dialogklasse für alle Monatskalender\-Steuerelement\-Benachrichtigungsmeldungen zuzuordnen, die Sie bearbeiten müssen \(siehe [Zuordnungs\-Meldungen auf Funktionen](../mfc/reference/mapping-messages-to-functions.md)\).  
+  
+5.  In [OnInitDialog](../Topic/CDialog::OnInitDialog.md) legen Sie alle überzähligen Stile für das `CMonthCalCtrl`\-Objekt fest.  
+  
+### So CMonthCalCtrl in einem nondialog Fenster verwenden  
+  
+1.  Definieren Sie das Steuerelement in der Ansicht oder der Fensterklasse.  
+  
+2.  Rufen Sie die Memberfunktion [Erstellen](../Topic/CMonthCalCtrl::Create.md) des Steuerelements, möglicherweise in [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md), möglicherweise schon in der [OnCreate](../Topic/CWnd::OnCreate.md)\-Handlerfunktion des übergeordneten Fensters auf \(wenn Sie das Steuerelement unterordnen\).  Legen Sie die Stile für das Steuerelement fest.  
+  
+## Siehe auch  
+ [Verwenden von CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
+ [Steuerelemente](../mfc/controls-mfc.md)

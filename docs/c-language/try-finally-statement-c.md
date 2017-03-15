@@ -1,0 +1,71 @@
+---
+title: "try-finally-Anweisung (C) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "try_cpp"
+  - "try"
+  - "finally"
+  - "finally_cpp"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "__finally-Schlüsselwort [C]"
+  - "__finally-Schlüsselwort [C], try-finally-Anweisung (Syntax)"
+  - "Strukturierte Ausnahmebehandlung, try-finally"
+  - "try-catch-Schlüsselwort [C]"
+  - "try-catch-Schlüsselwort [C], try-finally-Schlüsselwort [C]"
+  - "try-finally-Schlüsselwort [C]"
+ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
+caps.latest.revision: 7
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+caps.handback.revision: 7
+---
+# try-finally-Anweisung (C)
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+**Microsoft\-spezifisch**  
+  
+ Die `try-finally`\-Anweisung ist eine Microsoft\-Erweiterung zur Programmiersprache C, die es Zielanwendungen ermöglicht, den Bereinigungscode auszuführen, auch wenn die Ausführung eines Codeblocks unterbrochen wird.  Die Bereinigung besteht aus Aufgaben wie z. B. Neuzuweisung von Arbeitsspeicher, Schließen von Dateien und Freigeben von Dateihandles.  Die `try-finally`\-Anweisung ist besonders nützlich für Routinen, in denen an mehreren Stellen eine Fehlerüberprüfung durchgeführt wird, die eine vorzeitige Rückgabe von der Routine verursachen könnte.  
+  
+ *try\-finally\-statement*:  
+ **\_\_try**  *compound\-statement*  
+  
+ **\_\_finally**  *compound\-statement*  
+  
+ Die Verbundanweisung nach der `__try`\-Klausel ist der abgesicherte Abschnitt.  Die Verbundanweisung nach der `__finally`\-Klausel ist der Beendigungshandler.  Der Handler gibt eine Reihe von Aktionen an, die beim Verlassen des abgesicherten Abschnitts ausgeführt werden, ungeachtet dessen, ob der abgesicherte Abschnitt durch eine Ausnahme \(ungewöhnlicher Abbruch\) oder durch ein standardmäßiges Fortfahren \(gewöhnlicher Abbruch\) verlassen wird.  
+  
+ Die Steuerung erreicht eine `__try`\-Anweisung durch einfache sequenzielle Ausführung \(Fortfahren\).  Wenn die Steuerung zur `__try`\-Anweisung wechselt, wird der zugehörige Handler aktiv.  Die Ausführung erfolgt folgendermaßen:  
+  
+1.  Der geschützte Bereich wird ausgeführt.  
+  
+2.  Der Beendigungshandler wird aufgerufen.  
+  
+3.  Wenn der Beendigungshandler abgeschlossen ist, wird die Ausführung nach der `__finally`\-Anweisung fortgesetzt.  Unabhängig davon, wie der abgesicherte Abschnitt endet \(z. B. über eine `goto`\-Anweisung aus dem abgesicherten Text oder über eine `return`\-Anweisung\), wird der Beendigungshandler ausgeführt, bevor die Ablaufsteuerung aus dem abgesicherten Abschnitt heraus bewegt wird.  
+  
+ Das `__leave`\-Schlüsselwort ist innerhalb eines `try-finally`\-Anweisungsblocks gültig.  Die Wirkung von `__leave` besteht darin, zum Ende des `try-finally`\-Blocks zu springen.  Der Beendigungshandler wird sofort ausgeführt.  Obwohl das gleiche Ergebnis mit einer `goto`\-Anweisung erreicht werden kann, verursacht eine `goto`\-Anweisung eine Stapelentladung.  Die `__leave`\-Anweisung ist effizienter, da sie keine Stapelentladung verursacht.  
+  
+ Eine `try-finally`\-Anweisung mithilfe einer `return`\-Anweisung oder der `longjmp`\-Laufzeitfunktion zu beenden, wird als nicht ordnungsgemäße Beendigung angesehen.  Es ist nicht zulässig, in eine `__try`\-Anweisung zu springen, wohingegen das Herausspringen aus einer solchen zulässig ist.  Alle `__finally`\-Anweisungen, die zwischen dem Anfangspunkt und dem Ziel aktiv sind, müssen ausgeführt werden.  Dies ist eine so genannte "lokale Entladung".  
+  
+ Der Beendigungshandler wird nicht aufgerufen, wenn ein Prozess während der Ausführung einer `try-finally`\-Anweisung abgebrochen wird.  
+  
+> [!NOTE]
+>  Die strukturierte Ausnahmebehandlung arbeitet mit C\- und C\+\+\-Quelldateien.  Sie ist jedoch nicht speziell für C\+\+ entwickelt.  Sie können sicherstellen, dass der Code portabler ist, indem Sie die C\+\+\-Ausnahmebehandlung verwenden.  Der C\+\+\-Ausnahmebehandlungsmechanismus ist außerdem viel flexibler, da er Ausnahmen eines beliebigen Typs behandeln kann.  
+  
+> [!NOTE]
+>  Für C\+\+\-Programme sollte die C\+\+\-Ausnahmebehandlung anstelle der strukturierten Ausnahmebehandlung verwendet werden.  Weitere Informationen finden Sie unter [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md) in *C\+\+\-Sprachreferenz*.  
+  
+ Weitere Informationen zur Funktionsweise der `try-finally`\-Anweisung finden Sie im Beispiel für die [try\-except\-Anweisung](../c-language/try-except-statement-c.md).  
+  
+ **END Microsoft\-spezifisch**  
+  
+## Siehe auch  
+ [try\-finally\-Anweisung](../cpp/try-finally-statement.md)

@@ -1,0 +1,47 @@
+---
+title: "Schreiben eines Beendigungshandlers | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "Ausnahmebehandlung, Beendigungshandler"
+  - "Ausnahmen, Terminieren"
+  - "Handler"
+  - "Handler, Terminierung"
+  - "Strukturierte Ausnahmebehandlung, Beendigungshandler"
+  - "Beendigungshandler"
+  - "Beendigungshandler, Schreiben"
+  - "try-catch-Schlüsselwort [C++], Beendigungshandler"
+ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
+caps.latest.revision: 7
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+caps.handback.revision: 7
+---
+# Schreiben eines Beendigungshandlers
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Im Gegensatz zu einem Ausnahmehandler wird ein Beendigungshandler immer ausgeführt, unabhängig davon, ob der geschützte Codeblock ordnungsgemäß beendet wurde.  Der Beendigungshandler sollte nur sicherstellen, dass Ressourcen, wie Arbeitsspeicher, Handles und Dateien ordnungsgemäß geschlossen werden, unabhängig davon, wie die Ausführung eines Codeabschnitts beendet wird.  
+  
+ Beendigungshandler verwenden die try\-finally\-Anweisung.  
+  
+## Worüber möchten Sie mehr erfahren?  
+  
+-   [Die try\-finally\-Anweisung](../cpp/try-finally-statement.md)  
+  
+-   [Bereinigen von Ressourcen](../cpp/cleaning-up-resources.md)  
+  
+-   [Zeitliche Steuerung von Aktionen in der Ausnahmebehandlung](../cpp/timing-of-exception-handling-a-summary.md)  
+  
+-   [Einschränkungen bei Beendigungshandlern](../cpp/restrictions-on-termination-handlers.md)  
+  
+## Siehe auch  
+ [Strukturierte Ausnahmebehandlung](../cpp/structured-exception-handling-c-cpp.md)

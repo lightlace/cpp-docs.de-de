@@ -1,0 +1,132 @@
+---
+title: _putenv, _wputenv | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putenv
+- _wputenv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-environment-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tputenv
+- _wputenv
+- _putenv
+- wputenv
+- tputenv
+dev_langs:
+- C++
+helpviewer_keywords:
+- _putenv function
+- environment variables, deleting
+- putenv function
+- tputenv function
+- environment variables, creating
+- wputenv function
+- _wputenv function
+- _tputenv function
+- environment variables, modifying
+ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
+caps.latest.revision: 22
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9fc67bbf6c900a79825fe62b6882c4459c348d61
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="putenv-wputenv"></a>_putenv, _wputenv
+Erstellt, ändert oder entfernt Umgebungsvariablen. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md).  
+  
+> [!IMPORTANT]
+>  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+  
+## <a name="syntax"></a>Syntax  
+  
+```  
+int _putenv(  
+   const char *envstring   
+);  
+int _wputenv(  
+   const wchar_t *envstring   
+);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+ `envstring`  
+ Definition der Umgebungszeichenfolge.  
+  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt 0 bei Erfolg oder – 1 bei einem Fehler zurück.  
+  
+## <a name="remarks"></a>Hinweise  
+ Die `_putenv`-Funktion fügt neue Umgebungsvariablen hinzu oder ändert die Werte vorhandener Umgebungsvariablen. Umgebungsvariablen definieren die Umgebung, in der ein Prozess ausgeführt wird (beispielsweise der Standardsuchpfad für die mit einem Programm zu verknüpfenden Bibliotheken). `_wputenv` ist eine Breitzeichenversion von `_putenv`. Das `envstring`-Argument für `_wputenv` ist eine Breitzeichenfolge.  
+  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
+  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|`_tputenv`|`_putenv`|`_putenv`|`_wputenv`|  
+  
+ Das `envstring`-Argument muss ein Zeiger auf eine Zeichenfolge der Form `varname=string` sein, wobei `varname` der Name der hinzuzufügenden oder zu ändernden Umgebungsvariablen ist und `string` der Wert der Variablen. Wenn `varname` bereits Teil der Umgebung ist, wird sein Wert durch `string`ersetzt. Andernfalls werden die neue `varname`-Variable und ihr `string`-Wert zur Umgebung hinzugefügt. Sie können eine Variable aus der Umgebung entfernen, indem Sie einen leeren `string` angeben, d. h., indem Sie nur `varname=` angeben.  
+  
+ `_putenv` und `_wputenv` wirken sich nur auf die Umgebung aus, die für den aktuellen Prozess lokal ist. Sie können sie nicht zum Ändern der Umgebung auf Befehlsebene verwenden. Das bedeutet, dass diese Funktionen nur bei Datenstrukturen funktionieren, auf die die Laufzeitbibliothek zugreifen kann, aber nicht bei dem Umgebungssegment, das vom Betriebssystem für einen Prozess erstellt wurde. Wenn der aktuelle Prozess beendet wird, wird die Umgebung auf die Ebene des aufrufenden Prozesses zurückgesetzt (in den meisten Fällen die Betriebssystemebene). Die geänderte Umgebung kann jedoch an alle neue Prozesse übergeben werden, die von `_spawn`, `_exec` oder `system` erstellt werden, und diese neuen Prozesse rufen alle neuen Elemente ab, die von `_putenv` und `_wputenv` hinzugefügt werden.  
+  
+ Ändern Sie keinen Umgebungseintrag direkt: Verwenden Sie stattdessen zum Ändern `_putenv` oder `_wputenv`. Das direkte Loslösen von Elementen des globalen `_environ[]`-Arrays kann nämlich dazu führen, dass ein ungültiger Speicher anvisiert wird.  
+  
+ `getenv` und `_putenv` verwenden die globale Variable `_environ`, um auf die Umgebungstabelle zuzugreifen; `_wgetenv` und `_wputenv` verwenden `_wenviron`. `_putenv` und `_wputenv` ändern möglicherweise den Wert von `_environ` und `_wenviron`, wodurch das `_envp`-Argument für `main` und das _`wenvp`-Argument für `wmain` ungültig werden. Es ist daher sicherer mit `_environ` oder `_wenviron` auf die Umgebungsinformationen zuzugreifen. Weitere Informationen über die Beziehung von `_putenv` und `_wputenv` mit globalen Variablen finden Sie unter [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
+  
+> [!NOTE]
+>  Die Familien `_putenv` und `_getenv` der Funktionen sind nicht threadsicher. `_getenv` gibt möglicherweise einen Zeichenfolgenzeiger zurück, während `_putenv` die Zeichenfolge ändert, was zu zufälligen Fehlern führen kann. Stellen Sie sicher, dass Aufrufe dieser Funktionen synchronisiert sind.  
+  
+## <a name="requirements"></a>Anforderungen  
+  
+|Routine|Erforderlicher Header|  
+|-------------|---------------------|  
+|`_putenv`|\<stdlib.h>|  
+|`_wputenv`|\<stdlib.h> oder \<wchar.h>|  
+  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+  
+## <a name="example"></a>Beispiel  
+ Ein Beispiel für die Verwendung von `_putenv` finden Sie unter [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md).  
+  
+## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
+ Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
+ [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
+ [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)

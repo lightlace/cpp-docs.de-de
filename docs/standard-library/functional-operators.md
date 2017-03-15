@@ -1,0 +1,153 @@
+---
+title: '&lt;functional&gt; operators | Microsoft-Dokumentation'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::operator!=
+- functional/std::operator!=
+- std::operator==
+- functional/std::operator==
+dev_langs:
+- C++
+helpviewer_keywords:
+- functional operators
+ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
+caps.latest.revision: 13
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translationtype: Machine Translation
+ms.sourcegitcommit: 0194fbc3e45c270ca7537285c5c6b4e768c65a90
+ms.openlocfilehash: 3a4ab558f46f99850aed286865ae5dbbd7d4a6af
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="ltfunctionalgt-operators"></a>&lt;functional&gt;-Operatoren
+|||  
+|-|-|  
+|[operator!=](#operator_neq)|[operator==](#operator_eq_eq)|  
+  
+##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a> operator==  
+ Testet, ob das aufrufbare Objekt leer ist.  
+  
+```  
+template <class Fty>  
+bool operator==(const function<Fty>& f, null_ptr_type npc);
+
+template <class Fty>  
+bool operator==(null_ptr_type npc, const function<Fty>& f);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Fty`  
+ Der zu umschließende Funktionstyp.  
+  
+ `f`  
+ Das Funktionsobjekt  
+  
+ `npc`  
+ Ein Nullzeiger.  
+  
+### <a name="remarks"></a>Hinweise  
+ Beide Operatoren nehmen ein Argument, das einen Verweis auf ein `function`-Objekt darstellt, und ein Argument, das eine Nullzeigerkonstante ist. Beide geben nur dann true zurück, wenn das `function`-Objekt ist leer.  
+  
+### <a name="example"></a>Beispiel  
+  
+```cpp  
+// std__functional__operator_eq.cpp
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+
+int neg(int val)
+{
+    return (-val);
+}
+
+int main()
+{
+    std::function<int(int)> fn0;
+    std::cout << std::boolalpha << "empty == "
+        << (fn0 == 0) << std::endl;
+
+    std::function<int(int)> fn1(neg);
+    std::cout << std::boolalpha << "empty == "
+        << (fn1 == 0) << std::endl;
+
+    return (0);
+}
+  
+```  
+  
+```Output  
+empty == true  
+empty == false  
+```  
+  
+##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a> operator!=  
+ Testet, ob das aufrufbare Objekt nicht leer ist.  
+  
+```  
+template <class Fty>  
+bool operator!=(const function<Fty>& f, null_ptr_type npc);
+
+template <class Fty>  
+bool operator!=(null_ptr_type npc, const function<Fty>& f);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Fty`  
+ Der zu umschließende Funktionstyp.  
+  
+ `f`  
+ Das Funktionsobjekt  
+  
+ `npc`  
+ Ein Nullzeiger.  
+  
+### <a name="remarks"></a>Hinweise  
+ Beide Operatoren nehmen ein Argument, das einen Verweis auf ein `function`-Objekt darstellt, und ein Argument, das eine Nullzeigerkonstante ist. Beide geben nur dann TRUE zurück, wenn das `function`-Objekt nicht leer ist.  
+  
+### <a name="example"></a>Beispiel  
+  
+```cpp  
+// std__functional__operator_ne.cpp   
+// compile with: /EHsc   
+#include <functional>   
+#include <iostream>   
+  
+int neg(int val)   
+    {   
+    return (-val);   
+    }   
+  
+int main()   
+    {   
+    std::function<int (int)> fn0;   
+    std::cout << std::boolalpha << "not empty == "   
+        << (fn0 != 0) << std::endl;   
+  
+    std::function<int (int)> fn1(neg);   
+    std::cout << std::boolalpha << "not empty == "   
+        << (fn1 != 0) << std::endl;   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+not empty == false  
+not empty == true  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [\<functional>](../standard-library/functional.md)
+
+

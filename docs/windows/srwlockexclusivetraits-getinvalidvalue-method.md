@@ -1,0 +1,44 @@
+---
+title: "SRWLockExclusiveTraits::GetInvalidValue-Methode | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "GetInvalidValue-Methode"
+ms.assetid: b192f07b-ffbd-4f25-ab96-03d6c5de06b1
+caps.latest.revision: 3
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+caps.handback.revision: 3
+---
+# SRWLockExclusiveTraits::GetInvalidValue-Methode
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Ruft ein SRWLockExclusiveTraits\-Objekt ab, die immer ungültig ist.  
+  
+## Syntax  
+  
+```  
+inline static Type GetInvalidValue();  
+```  
+  
+## Rückgabewert  
+ Ein leeres SRWLockExclusiveTraits\-Objekt.  
+  
+## Anforderungen  
+ **Header:** corewrappers.h  
+  
+ **Namespace:**  Microsoft::WRL::Wrappers::HandleTraits  
+  
+## Siehe auch  
+ [SRWLockExclusiveTraits\-Struktur](../windows/srwlockexclusivetraits-structure.md)
