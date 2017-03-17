@@ -9,8 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxadv/CJumpList
 - CJumpList
+- AFXADV/CJumpList
+- AFXADV/CJumpList::CJumpList
+- AFXADV/CJumpList::AbortList
+- AFXADV/CJumpList::AddDestination
+- AFXADV/CJumpList::AddKnownCategory
+- AFXADV/CJumpList::AddTask
+- AFXADV/CJumpList::AddTasks
+- AFXADV/CJumpList::AddTaskSeparator
+- AFXADV/CJumpList::ClearAll
+- AFXADV/CJumpList::ClearAllDestinations
+- AFXADV/CJumpList::CommitList
+- AFXADV/CJumpList::GetDestinationList
+- AFXADV/CJumpList::GetMaxSlots
+- AFXADV/CJumpList::GetRemovedItems
+- AFXADV/CJumpList::InitializeList
+- AFXADV/CJumpList::SetAppID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,14 +96,14 @@ class CJumpList;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxadv.h  
   
-##  <a name="a-namedtorcjumplista--cjumplistcjumplist"></a><a name="_dtorcjumplist"></a>CJumpList:: ~ CJumpList  
+##  <a name="_dtorcjumplist"></a>CJumpList:: ~ CJumpList  
  Zerstört ein `CJumpList`-Objekt.  
   
 ```  
 ~CJumpList();
 ```  
   
-##  <a name="a-nameabortlista--cjumplistabortlist"></a><a name="abortlist"></a>CJumpList::AbortList  
+##  <a name="abortlist"></a>CJumpList::AbortList  
  Eine Liste erstellen-Transaktion abbricht, ohne zu übernehmen.  
   
 ```  
@@ -98,7 +113,7 @@ void AbortList();
 ### <a name="remarks"></a>Hinweise  
  Das Aufrufen dieser Methode hat dieselbe Wirkung wie das Zerstören `CJumpList` ohne Aufruf von `CommitList`.  
   
-##  <a name="a-nameadddestinationa--cjumplistadddestination"></a><a name="adddestination"></a>CJumpList::AddDestination  
+##  <a name="adddestination"></a>CJumpList::AddDestination  
  Ziel hinzugefügt der Liste.  
   
 ```  
@@ -138,7 +153,7 @@ BOOL AddDestination(
 ### <a name="remarks"></a>Hinweise  
  Die Instanz von `CJumpList` intern akkumuliert hinzugefügten Ziele und dann ein Commit in `CommitList`.  
   
-##  <a name="a-nameaddknowncategorya--cjumplistaddknowncategory"></a><a name="addknowncategory"></a>CJumpList::AddKnownCategory  
+##  <a name="addknowncategory"></a>CJumpList::AddKnownCategory  
  Fügt eine Kategorie bezeichnet der.  
   
 ```  
@@ -154,7 +169,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ### <a name="remarks"></a>Hinweise  
  Kategorien bekanntermaßen häufig und zuletzt Kategorien, die wir automatisch für jede Anwendung berechnet, die nutzt `SHAddToRecentDocs` (oder indirekt verwendet, wie die Shell im Auftrag von der Anwendung in einigen Szenarien aufgerufen wird).  
   
-##  <a name="a-nameaddtaska--cjumplistaddtask"></a><a name="addtask"></a>CJumpList::AddTask  
+##  <a name="addtask"></a>CJumpList::AddTask  
  Die kanonische Aufgaben Kategorie hinzugefügt Elemente.  
   
 ```  
@@ -192,7 +207,7 @@ BOOL AddTask(IShellLink* pShellLink);
 ### <a name="remarks"></a>Hinweise  
  Die Instanz von `CJumpList` sammelt die angegebenen Vorgänge und die Zielliste während hinzugefügt `CommitList`. Task-Elemente in einer Kategorie am unteren Rand der Anwendung Ziel im Menü angezeigt. Diese Kategorie hat Vorrang vor allen anderen Kategorien, wenn sie in der Benutzeroberfläche aufgefüllt wird.  
   
-##  <a name="a-nameaddtasksa--cjumplistaddtasks"></a><a name="addtasks"></a>CJumpList::AddTasks  
+##  <a name="addtasks"></a>CJumpList::AddTasks  
  Die kanonische Aufgaben Kategorie hinzugefügt Elemente.  
   
 ```  
@@ -208,7 +223,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ### <a name="remarks"></a>Hinweise  
  Die Instanz von CJumpList sammelt die angegebenen Vorgänge und während der Empfängerliste hinzugefügt `CommitList`. Task-Elemente in einer Kategorie am unteren Rand der Anwendung Ziel im Menü angezeigt. Diese Kategorie hat Vorrang vor allen anderen Kategorien, wenn sie in der Benutzeroberfläche aufgefüllt wird.  
   
-##  <a name="a-nameaddtaskseparatora--cjumplistaddtaskseparator"></a><a name="addtaskseparator"></a>CJumpList::AddTaskSeparator  
+##  <a name="addtaskseparator"></a>CJumpList::AddTaskSeparator  
  Fügt ein Trennzeichen zwischen Aufgaben.  
   
 ```  
@@ -218,7 +233,7 @@ BOOL AddTaskSeparator();
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL bei erfolgreicher Ausführung, 0, wenn er nicht ist.  
   
-##  <a name="a-namecjumplista--cjumplistcjumplist"></a><a name="cjumplist"></a>CJumpList::CJumpList  
+##  <a name="cjumplist"></a>CJumpList::CJumpList  
  Erstellt ein `CJumpList`-Objekt.  
   
 ```  
@@ -229,7 +244,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
  `bAutoCommit`  
  Wenn dieser Parameter auf "false" ist die Liste nicht automatisch im Destruktor übertragen wurde.  
   
-##  <a name="a-nameclearalla--cjumplistclearall"></a><a name="clearall"></a>CJumpList::ClearAll  
+##  <a name="clearall"></a>CJumpList::ClearAll  
  Entfernt alle Aufgaben und Ziele, die der aktuellen Instanz der hinzugefügten `CJumpList` bisher.  
   
 ```  
@@ -239,7 +254,7 @@ void ClearAll();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode löscht und alle Daten und internen Schnittstellen frei.  
   
-##  <a name="a-nameclearalldestinationsa--cjumplistclearalldestinations"></a><a name="clearalldestinations"></a>CJumpList::ClearAllDestinations  
+##  <a name="clearalldestinations"></a>CJumpList::ClearAllDestinations  
  Entfernt alle Ziele, die bisher mit der aktuellen Instanz von CJumpList hinzugefügt wurden.  
   
 ```  
@@ -249,7 +264,7 @@ void ClearAllDestinations();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, wenn müssen Sie alle Ziele entfernen, die bisher in der Ziel-Liste erstellen von der aktuellen Sitzung hinzugefügt wurden, und andere Ziele erneut hinzufügen. Wenn die interne `ICustomDestinationList` wurde initialisiert, es bleibt aktiv.  
   
-##  <a name="a-namecommitlista--cjumplistcommitlist"></a><a name="commitlist"></a>CJumpList::CommitList  
+##  <a name="commitlist"></a>CJumpList::CommitList  
  Beendet eine Liste erstellen-Transaktion und führt einen Commit für die gemeldeten Liste in den zugehörigen Speicher (in diesem Fall der Registrierung).  
   
 ```  
@@ -261,7 +276,7 @@ BOOL CommitList();
 ### <a name="remarks"></a>Hinweise  
  Der Commit ist atomar. Wenn dies fehlschlägt, wird ein Fehler zurückgegeben werden.  Wenn `CommitList` aufgerufen wird, wird die aktuelle Liste der entfernten Elemente werden bereinigt. Das Aufrufen dieser Methode setzt das Objekt, damit sie nicht über eine aktive Transaktion für den Aufbau von Liste verfügt. Zum Aktualisieren der Liste `BeginList` erneut aufgerufen werden muss.  
   
-##  <a name="a-namegetdestinationlista--cjumplistgetdestinationlist"></a><a name="getdestinationlist"></a>CJumpList::GetDestinationList  
+##  <a name="getdestinationlist"></a>CJumpList::GetDestinationList  
  Ruft einen Schnittstellenzeiger auf Zielliste ab.  
   
 ```  
@@ -273,7 +288,7 @@ ICustomDestinationList* GetDestinationList();
 ### <a name="remarks"></a>Hinweise  
  Wenn die Sprungliste nicht initialisiert wurde, oder ein Commit ausgeführt oder wurde abgebrochen, wird der zurückgegebene Wert `NULL`.  
   
-##  <a name="a-namegetmaxslotsa--cjumplistgetmaxslots"></a><a name="getmaxslots"></a>CJumpList::GetMaxSlots  
+##  <a name="getmaxslots"></a>CJumpList::GetMaxSlots  
  Ruft die maximale Anzahl von Elementen, einschließlich der Kategorie-Header, die in der aufrufenden Anwendung Ziel im Menü angezeigt werden können.  
   
 ```  
@@ -285,7 +300,7 @@ UINT GetMaxSlots() const;
 ### <a name="remarks"></a>Hinweise  
  Clientanwendungen melden möglicherweise nur eine Reihe von Elementen und Kategorie-Header, die bis zu diesem Wert kombiniert. Wenn Aufrufe von `AppendCategory`, `AppendKnownCategory`, oder `AddUserTasks` diese Anzahl übersteigt, wird Fehler zurückgegeben.  
   
-##  <a name="a-namegetremoveditemsa--cjumplistgetremoveditems"></a><a name="getremoveditems"></a>CJumpList::GetRemovedItems  
+##  <a name="getremoveditems"></a>CJumpList::GetRemovedItems  
  Gibt ein Array von Elementen, die darstellen entfernt Ziele.  
   
 ```  
@@ -297,7 +312,7 @@ IObjectArray* GetRemovedItems();
 ### <a name="remarks"></a>Hinweise  
  Die entfernten Ziele werden bei der Initialisierung der Sprungliste abgerufen. Beim Generieren einer neuen Zielliste Applications vorausgesetzt, dass die Zieleliste entfernten deaktivieren die Überwachungsdaten für jedes Element der entfernten NodeList-Enumerator zurückgegebenes zuerst verarbeitet. Wenn eine Anwendung versucht, ein Element bereitstellen, die gerade, in der Transaktion, die die aktuelle aufrufen entfernt wurde, um `BeginList` gestartet, der Aufruf der Methode, die das Element erneut hinzugefügt fehl, um sicherzustellen, dass die Anwendung die Liste entfernte zu beachten sind.  
   
-##  <a name="a-nameinitializelista--cjumplistinitializelist"></a><a name="initializelist"></a>CJumpList::InitializeList  
+##  <a name="initializelist"></a>CJumpList::InitializeList  
  Beginnt eine Transaktion Liste erstellen.  
   
 ```  
@@ -309,7 +324,7 @@ BOOL InitializeList();
 ### <a name="remarks"></a>Hinweise  
  Sie müssen diese Methode explizit aufrufen, es sei denn, Sie einen Zeiger auf abrufen möchten `ICustomDestinationList` mit `GetDestinationList`, die Anzahl der Steckplätze verfügbar, die mit `GetMaxSlots`, oder eine Liste der entfernten Elemente mit `GetRemovedItems`.  
   
-##  <a name="a-namesetappida--cjumplistsetappid"></a><a name="setappid"></a>CJumpList::SetAppID  
+##  <a name="setappid"></a>CJumpList::SetAppID  
  Legt die Benutzer-Modell-ID für die Liste, die erstellt wird.  
   
 ```  

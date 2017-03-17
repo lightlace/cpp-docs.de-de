@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CControlBar
+- AFXEXT/CControlBar
+- AFXEXT/CControlBar::CControlBar
+- AFXEXT/CControlBar::CalcDynamicLayout
+- AFXEXT/CControlBar::CalcFixedLayout
+- AFXEXT/CControlBar::CalcInsideRect
+- AFXEXT/CControlBar::DoPaint
+- AFXEXT/CControlBar::DrawBorders
+- AFXEXT/CControlBar::DrawGripper
+- AFXEXT/CControlBar::EnableDocking
+- AFXEXT/CControlBar::GetBarStyle
+- AFXEXT/CControlBar::GetBorders
+- AFXEXT/CControlBar::GetCount
+- AFXEXT/CControlBar::GetDockingFrame
+- AFXEXT/CControlBar::IsFloating
+- AFXEXT/CControlBar::OnUpdateCmdUI
+- AFXEXT/CControlBar::SetBarStyle
+- AFXEXT/CControlBar::SetBorders
+- AFXEXT/CControlBar::SetInPlaceOwner
+- AFXEXT/CControlBar::m_bAutoDelete
+- AFXEXT/CControlBar::m_pInPlaceOwner
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +135,7 @@ class CControlBar : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxext.h  
   
-##  <a name="a-namecalcdynamiclayouta--ccontrolbarcalcdynamiclayout"></a><a name="calcdynamiclayout"></a>CControlBar::CalcDynamicLayout  
+##  <a name="calcdynamiclayout"></a>CControlBar::CalcDynamicLayout  
  Das Framework ruft diese Member-Funktion, um die Dimensionen der eine dynamische Werkzeugleiste zu berechnen.  
   
 ```  
@@ -147,7 +167,7 @@ virtual CSize CalcDynamicLayout(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Memberfunktion, um Ihre eigenen dynamischen Layouts in Klassen bieten Sie eine von Ableitung `CControlBar`. MFC-Klassen abgeleitet `CControlBar`, wie z. B. [CToolbar](../../mfc/reference/ctoolbar-class.md), überschreiben Sie diese Memberfunktion auf, und ihre eigene Implementierung bereitstellen.  
   
-##  <a name="a-namecalcfixedlayouta--ccontrolbarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CControlBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>CControlBar::CalcFixedLayout  
  Rufen Sie diese Memberfunktion zum Berechnen der horizontalen einer Steuerleiste.  
   
 ```  
@@ -178,7 +198,7 @@ virtual CSize CalcFixedLayout(
 |**FALSE**|**"TRUE"**|Keine größenanpassung verfügbar|Horizontal|Andocken|  
 |**FALSE**|**FALSE**|Keine größenanpassung verfügbar|Vertikal ausgerichtet|Andocken|  
   
-##  <a name="a-namecalcinsiderecta--ccontrolbarcalcinsiderect"></a><a name="calcinsiderect"></a>CControlBar::CalcInsideRect  
+##  <a name="calcinsiderect"></a>CControlBar::CalcInsideRect  
  Das Framework ruft diese Funktion, um den Clientbereich der Steuerleiste zu berechnen.  
   
 ```  
@@ -199,14 +219,14 @@ virtual void CalcInsideRect(
   
  Überschreiben Sie diese Funktion, um die Darstellung der Rahmen und das ziehelement der Steuerleiste anpassen.  
   
-##  <a name="a-nameccontrolbara--ccontrolbarccontrolbar"></a><a name="ccontrolbar"></a>CControlBar::CControlBar  
+##  <a name="ccontrolbar"></a>CControlBar::CControlBar  
  Erstellt ein `CControlBar`-Objekt.  
   
 ```  
 CControlBar();
 ```  
   
-##  <a name="a-namedopainta--ccontrolbardopaint"></a><a name="dopaint"></a>CControlBar::DoPaint  
+##  <a name="dopaint"></a>CControlBar::DoPaint  
  Aufgerufen, um die Rahmen und das ziehelement der Steuerleiste zu rendern.  
   
 ```  
@@ -222,7 +242,7 @@ virtual void DoPaint(CDC* pDC);
   
  Eine weitere Anpassungsmethode besteht im Überschreiben der `DrawBorders` und `DrawGripper` Funktionen und benutzerdefinierte Zeichnung Code für die Rahmen und Ziehpunkte hinzuzufügen. Da diese Methoden, die standardmäßig aufgerufen werden `DoPaint` , eine Überschreibung der `DoPaint` ist nicht erforderlich.  
   
-##  <a name="a-namedrawbordersa--ccontrolbardrawborders"></a><a name="drawborders"></a>CControlBar::DrawBorders  
+##  <a name="drawborders"></a>CControlBar::DrawBorders  
  Aufgerufen, um die Rahmen der Steuerleiste zu rendern.  
   
 ```  
@@ -241,7 +261,7 @@ virtual void DrawBorders(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um die Darstellung der Balken Steuerelementrahmen anzupassen.  
   
-##  <a name="a-namedrawgrippera--ccontrolbardrawgripper"></a><a name="drawgripper"></a>CControlBar::DrawGripper  
+##  <a name="drawgripper"></a>CControlBar::DrawGripper  
  Aufgerufen, um das ziehelement der Steuerleiste zu rendern.  
   
 ```  
@@ -260,7 +280,7 @@ virtual void DrawGripper(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um die Darstellung des Steuerelements Leiste ziehelements anpassen.  
   
-##  <a name="a-nameenabledockinga--ccontrolbarenabledocking"></a><a name="enabledocking"></a>CControlBar:: EnableDocking  
+##  <a name="enabledocking"></a>CControlBar:: EnableDocking  
  Rufen Sie diese Funktion, um eine Steuerleiste angedockt werden aktivieren.  
   
 ```  
@@ -288,7 +308,7 @@ void EnableDocking(DWORD dwDockStyle);
 ### <a name="remarks"></a>Hinweise  
  Die angegebenen Seiten müssen einer der Seiten zum Andocken von Rahmenfenster Ziel aktiviert entsprechen oder Steuerleiste kann nicht zu diesem Frame Fenster angedockt werden.  
   
-##  <a name="a-namegetbarstylea--ccontrolbargetbarstyle"></a><a name="getbarstyle"></a>CControlBar::GetBarStyle  
+##  <a name="getbarstyle"></a>CControlBar::GetBarStyle  
  Mit dieser Funktion können Sie ermitteln, welche **CBRS_** (Steuerelementtypen Leiste) die Einstellungen werden derzeit für die Steuerleiste festgelegt.  
   
 ```  
@@ -301,7 +321,7 @@ DWORD GetBarStyle();
 ### <a name="remarks"></a>Hinweise  
  Verarbeitet keine **WS_** (Fenster Formate).  
   
-##  <a name="a-namegetbordersa--ccontrolbargetborders"></a><a name="getborders"></a>CControlBar::GetBorders  
+##  <a name="getborders"></a>CControlBar::GetBorders  
  Gibt die aktuellen rahmenwerte der Steuerleiste zurück.  
   
 ```  
@@ -311,7 +331,7 @@ CRect GetBorders() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CRect` -Objekt, das die aktuelle Breite (in Pixel) der einzelnen Seiten des Steuerelementobjekts Balken enthält. Z. B. der Wert der `left` Member der [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die Breite des linken Rahmens.  
   
-##  <a name="a-namegetcounta--ccontrolbargetcount"></a><a name="getcount"></a>CControlBar::GetCount  
+##  <a name="getcount"></a>CControlBar::GetCount  
  Gibt die Anzahl der nicht - `HWND` Elemente auf der `CControlBar` Objekt.  
   
 ```  
@@ -324,7 +344,7 @@ int GetCount() const;
 ### <a name="remarks"></a>Hinweise  
  Der Typ des Elements hängt vom abgeleiteten Objekt: Bereiche für [CStatusBar](../../mfc/reference/cstatusbar-class.md) Objekte, Schaltflächen und Trennzeichen für [CToolBar](../../mfc/reference/ctoolbar-class.md) Objekte.  
   
-##  <a name="a-namegetdockingframea--ccontrolbargetdockingframe"></a><a name="getdockingframe"></a>CControlBar::GetDockingFrame  
+##  <a name="getdockingframe"></a>CControlBar::GetDockingFrame  
  Rufen Sie diese Memberfunktion, um einen Zeiger auf das aktuelle Rahmenfenster zu erhalten, die Steuerleiste angedockt ist.  
   
 ```  
@@ -339,7 +359,7 @@ CFrameWnd* GetDockingFrame() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zu andockbaren Balken, finden Sie unter [CControlBar:: EnableDocking](#enabledocking) und [CFrameWnd:: DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).  
   
-##  <a name="a-nameisfloatinga--ccontrolbarisfloating"></a><a name="isfloating"></a>CControlBar::IsFloating  
+##  <a name="isfloating"></a>CControlBar::IsFloating  
  Rufen Sie diese Memberfunktion, um festzustellen, ob die Steuerleiste frei verschiebbar oder angedockt ist.  
   
 ```  
@@ -352,7 +372,7 @@ BOOL IsFloating() const;
 ### <a name="remarks"></a>Hinweise  
  Ändern Sie den Status aus einer Steuerleiste angedockt, sondern frei beweglich, rufen Sie [CFrameWnd::FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar).  
   
-##  <a name="a-namembautodeletea--ccontrolbarmbautodelete"></a><a name="m_bautodelete"></a>CControlBar::m_bAutoDelete  
+##  <a name="m_bautodelete"></a>CControlBar::m_bAutoDelete  
  Wenn der Wert ungleich&0; (null) ist, wird das `CControlBar`-Objekt gelöscht, sobald die Windows-Steuerleiste beschädigt wird.  
   
 ```  
@@ -366,14 +386,14 @@ BOOL m_bAutoDelete;
   
  Legen Sie diese Variable auf einen Wert ungleich NULL, wenn Sie reservieren einer `CControlBar` Objekt auf dem Heap, und Sie nicht planen, rufen Sie **löschen**.  
   
-##  <a name="a-namempinplaceownera--ccontrolbarmpinplaceowner"></a><a name="m_pinplaceowner"></a>CControlBar::m_pInPlaceOwner  
+##  <a name="m_pinplaceowner"></a>CControlBar::m_pInPlaceOwner  
  Der direkte Besitzer der Steuerleiste.  
   
 ```  
 CWnd* m_pInPlaceOwner;  
 ```  
   
-##  <a name="a-nameonupdatecmduia--ccontrolbaronupdatecmdui"></a><a name="onupdatecmdui"></a>CControlBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>CControlBar::OnUpdateCmdUI  
  Diese Member-Funktion wird vom Framework zum Aktualisieren des Status der Symbolleiste oder Status Leiste aufgerufen.  
   
 ```  
@@ -394,7 +414,7 @@ virtual void OnUpdateCmdUI(
   
  `OnUpdateCmdUI`wird vom Framework aufgerufen, wenn die Anwendung im Leerlauf befindet. Das Rahmenfenster aktualisiert werden, muss ein untergeordnetes Fenster mindestens indirekt eines Rahmenfensters sichtbar sein. `OnUpdateCmdUI`ist eine erweiterte überschrieben.  
   
-##  <a name="a-namesetbarstylea--ccontrolbarsetbarstyle"></a><a name="setbarstyle"></a>CControlBar::SetBarStyle  
+##  <a name="setbarstyle"></a>CControlBar::SetBarStyle  
  Mit dieser Funktion können Sie die gewünschte festgelegt **CBRS_** Stile für die Steuerleiste.  
   
 ```  
@@ -434,7 +454,7 @@ void SetBarStyle(DWORD dwStyle);
 ### <a name="remarks"></a>Hinweise  
  Hat keine Auswirkung auf die **WS_** (Fensterstil)-Einstellungen.  
   
-##  <a name="a-namesetbordersa--ccontrolbarsetborders"></a><a name="setborders"></a>CControlBar::SetBorders  
+##  <a name="setborders"></a>CControlBar::SetBorders  
  Rufen Sie diese Funktion, um die Größe der Steuerleiste Rand festgelegt.  
   
 ```  
@@ -468,7 +488,7 @@ void SetBorders(LPCRECT lpRect);
   
  [!code-cpp[NVC_MFCControlLadenDialog&#61;](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]  
   
-##  <a name="a-namesetinplaceownera--ccontrolbarsetinplaceowner"></a><a name="setinplaceowner"></a>CControlBar::SetInPlaceOwner  
+##  <a name="setinplaceowner"></a>CControlBar::SetInPlaceOwner  
  Ändert den direkten Besitzer einer Steuerleiste.  
   
 ```  

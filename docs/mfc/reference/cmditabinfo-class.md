@@ -10,8 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDITabInfo
-- CMDITabInfo.CMDITabInfo
-- CMDITabInfo::CMDITabInfo
+- AFXMDICLIENTAREAWND/CMDITabInfo
+- AFXMDICLIENTAREAWND/CMDITabInfo::Serialize
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bAutoColor
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bDocumentMenu
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bEnableTabSwap
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bFlatFrame
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabCloseButton
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabCustomTooltips
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabIcons
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_nTabBorderSize
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_style
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_tabLocation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +105,7 @@ class CMDITabInfo
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxmdiclientareawnd.h  
   
-##  <a name="a-namembactivetabclosebuttona--cmditabinfombactivetabclosebutton"></a><a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
+##  <a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
  Gibt an, ob ein **schließen** Schaltfläche auf die Bezeichnung der aktiven Registerkarte angezeigt wird.  
   
 ```  
@@ -105,7 +115,7 @@ BOOL m_bActiveTabCloseButton;
 ### <a name="remarks"></a>Hinweise  
  Wenn `TRUE`, zeigt die Bezeichnung der aktiven Registerkarte ein **schließen** Schaltfläche. Die **schließen** Schaltfläche wird von der rechten oberen Ecke des Registerkartenbereichs entfernt. Andernfalls wird die Bezeichnung der aktiven Registerkarte nicht angezeigt ein **schließen** Schaltfläche. Die **schließen** Schaltfläche in der rechten oberen Ecke des Registerkartenbereichs angezeigt.  
   
-##  <a name="a-namembautocolora--cmditabinfombautocolor"></a><a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
+##  <a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
  Gibt an, ob jede MDI-Registerkarte eine eigene Farbe aufweist.  
   
 ```  
@@ -115,7 +125,7 @@ BOOL m_bAutoColor;
 ### <a name="remarks"></a>Hinweise  
  Wenn `TRUE`, jede Registerkarte weist eine eigene Farbe. Der Satz von Farben wird von der MFC-Bibliothek verwaltet. Andernfalls werden die Registerkarten in Weiß angezeigt. Der Standardwert ist `FALSE`.  
   
-##  <a name="a-namembdocumentmenua--cmditabinfombdocumentmenu"></a><a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
+##  <a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
  Gibt an, ob jede Registerkarte ein Popup-Menü angezeigt, die eine Liste der geöffneten Dokumente am rechten Rand des Registerkartenbereichs angezeigt wird.  
   
 ```  
@@ -125,7 +135,7 @@ BOOL m_bDocumentMenu;
 ### <a name="remarks"></a>Hinweise  
  Wenn `TRUE`, jede Registerkarte Windows zeigt ein Popup-Menü, das eine Liste der geöffneten Dokumente am rechten Rand des Registerkartenbereichs; Andernfalls wird das Registerkartenfenster Bildlaufschaltflächen am rechten Rand des Registerkartenbereichs. Der Standardwert ist `FALSE`.  
   
-##  <a name="a-namembenabletabswapa--cmditabinfombenabletabswap"></a><a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
+##  <a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
  Gibt an, ob der Benutzer die Positionen der Registerkarten ziehen austauschen kann.  
   
 ```  
@@ -135,14 +145,14 @@ BOOL m_bEnableTabSwap;
 ### <a name="remarks"></a>Hinweise  
  Wenn `TRUE`, der Benutzer kann die Registerkarten Positionen ändern, indem Sie die Registerkarten ziehen. Andernfalls kann nicht der Benutzer die Registerkarten Positionen ändern. Der Standardwert ist `TRUE`.  
   
-##  <a name="a-namembflatframea--cmditabinfombflatframe"></a><a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
+##  <a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
  Gibt an, ob jede im Registerkartenfenster einen flachen Rahmen hat.  
   
 ```  
 BOOL m_bFlatFrame;  
 ```  
   
-##  <a name="a-namembtabclosebuttona--cmditabinfombtabclosebutton"></a><a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
+##  <a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
  Gibt an, ob jede Registerkartenfenster zeigt eine **schließen** Schaltfläche.  
   
 ```  
@@ -152,7 +162,7 @@ BOOL m_bTabCloseButton;
 ### <a name="remarks"></a>Hinweise  
  Wenn `TRUE`, zeigt jede im Registerkartenfenster der **schließen** auf den rechten Rand der Registerkarte auf die Schaltfläche. Andernfalls die **schließen** Schaltfläche wird nicht angezeigt. Der Standardwert ist `TRUE`.  
   
-##  <a name="a-namembtabcustomtooltipsa--cmditabinfombtabcustomtooltips"></a><a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
+##  <a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
  Gibt an, ob die Registerkarten in QuickInfos.  
   
 ```  
@@ -162,7 +172,7 @@ BOOL m_bTabCustomTooltips;
 ### <a name="remarks"></a>Hinweise  
  Wenn `TRUE`, die Anwendung sendet eine `AFX_WM_ON_GET_TAB_TOOLTIP` Nachricht an den Hauptframe. Sie können diese Nachricht behandeln, indem die `ON_REGISTERED_MESSAGE` Makro.  
   
-##  <a name="a-namembtabiconsa--cmditabinfombtabicons"></a><a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
+##  <a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
  Gibt an, ob Symbole auf MDI-Registerkarten anzuzeigen.  
   
 ```  
@@ -172,7 +182,7 @@ BOOL m_bTabIcons;
 ### <a name="remarks"></a>Hinweise  
  Wenn `TRUE`, Symbole werden auf jeder MDI-Registerkarte angezeigt. Andernfalls werden die Symbole nicht auf Registerkarten angezeigt. Der Standardwert ist `FALSE`.  
   
-##  <a name="a-namemntabbordersizea--cmditabinfomntabbordersize"></a><a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
+##  <a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
  Rahmengröße angibt in Pixel der einzelnen Registerkartenfenster.  
   
 ```  
@@ -182,7 +192,7 @@ int m_nTabBorderSize;
 ### <a name="remarks"></a>Hinweise  
  [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) gibt den Standardwert zurück.  
   
-##  <a name="a-namemstylea--cmditabinfomstyle"></a><a name="m_style"></a>CMDITabInfo::m_style  
+##  <a name="m_style"></a>CMDITabInfo::m_style  
  Gibt den Stil der registerkartenbezeichnungen.  
   
 ```  
@@ -210,7 +220,7 @@ CMFCTabCtrl::Style m_style
  `STYLE_3D_ROUNDED_SCROLL`  
  -3D-Format mit round registerkartenbezeichnungen.  
   
-##  <a name="a-namemtablocationa--cmditabinfomtablocation"></a><a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
+##  <a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
  Gibt an, ob die Bezeichnungen Registerkarten am oberen oder unteren Rand der Seite befinden.  
   
 ```  
@@ -224,7 +234,7 @@ CMFCTabCtrl::Location m_tabLocation;
   
 -   LOCATION_TOP: die Registerkarten Bezeichnungen befinden sich am oberen Rand der Seite  
   
-##  <a name="a-nameserializea--cmditabinfoserialize"></a><a name="serialize"></a>CMDITabInfo::Serialize  
+##  <a name="serialize"></a>CMDITabInfo::Serialize  
  Liest oder schreibt dieses Objekt aus einem Archiv oder in ein Archiv.  
   
 ```  

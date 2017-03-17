@@ -10,10 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CElementTraitsBase
-- ATL::CElementTraitsBase
-- ATL.CElementTraitsBase<T>
-- ATL::CElementTraitsBase<T>
-- ATL.CElementTraitsBase
+- ATLCOLL/ATL::CElementTraitsBase
+- ATLCOLL/ATL::CElementTraitsBase::INARGTYPE
+- ATLCOLL/ATL::CElementTraitsBase::OUTARGTYPE
+- ATLCOLL/ATL::CElementTraitsBase::CopyElements
+- ATLCOLL/ATL::CElementTraitsBase::RelocateElements
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class CElementTraitsBase
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcoll.h  
   
-##  <a name="a-namecopyelementsa--celementtraitsbasecopyelements"></a><a name="copyelements"></a>CElementTraitsBase::CopyElements  
+##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
  Rufen Sie diese Methode, um in ein Objekt der Klasse Auflistung gespeicherten Elemente kopieren.  
   
 ```
@@ -104,21 +105,21 @@ static void CopyElements(
 ### <a name="remarks"></a>Hinweise  
  Die Quelle und Ziel-Elemente sollten sich nicht überschneiden.  
   
-##  <a name="a-nameinargtypea--celementtraitsbaseinargtype"></a><a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
+##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
  Der Datentyp für Elemente der Auflistung hinzugefügt werden soll.  
   
 ```
 typedef const T& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--celementtraitsbaseoutargtype"></a><a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
+##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
  Der Datentyp für das Abrufen von Elementen aus der Auflistung.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="a-namerelocateelementsa--celementtraitsbaserelocateelements"></a><a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
+##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
  Rufen Sie diese Methode, um in ein Objekt der Klasse Auflistung gespeicherten Elemente zu verschieben.  
   
 ```

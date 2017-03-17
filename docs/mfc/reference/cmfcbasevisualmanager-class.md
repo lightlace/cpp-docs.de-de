@@ -10,9 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCBaseVisualManager
-- CMFCBaseVisualManager.~CMFCBaseVisualManager
-- ~CMFCBaseVisualManager
-- CMFCBaseVisualManager::~CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager::CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawCheckBox
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawComboBorder
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawComboDropButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawPushButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawRadioButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawStatusBarProgress
+- AFXVISUALMANAGER/CMFCBaseVisualManager::FillReBarPane
+- AFXVISUALMANAGER/CMFCBaseVisualManager::GetStandardWindowsTheme
+- AFXVISUALMANAGER/CMFCBaseVisualManager::CleanUpThemes
+- AFXVISUALMANAGER/CMFCBaseVisualManager::UpdateSystemColors
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +111,7 @@ class CMFCBaseVisualManager: public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxvisualmanager.h  
   
-##  <a name="a-namecleanupthemesa--cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
+##  <a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
  Aufrufe `CloseThemeData` für alle Handles in abgerufen `UpdateSystemColors`.  
   
 ```  
@@ -112,14 +121,14 @@ void CleanUpThemes();
 ### <a name="remarks"></a>Hinweise  
  Nur für interne Verwendung.  
   
-##  <a name="a-namecmfcbasevisualmanagera--cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
+##  <a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
  Erstellt und initialisiert ein `CMFCBaseVisualManager`-Objekt.  
   
 ```  
 CMFCBaseVisualManager();
 ```  
   
-##  <a name="a-namedrawcheckboxa--cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox  
+##  <a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox  
  Zeichnet ein Kontrollkästchen-Steuerelement mit dem aktuellen Windows-Design.  
   
 ```  
@@ -167,7 +176,7 @@ virtual BOOL DrawCheckBox(
 |1|CBS_CHECKEDNORMAL|  
 |2|CBS_MIXEDNORMAL|  
   
-##  <a name="a-namedrawcombobordera--cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder  
+##  <a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder  
  Zeichnet den Rahmen des Kombinationsfelds mit dem aktuellen Windows-Design.  
   
 ```  
@@ -198,7 +207,7 @@ virtual BOOL DrawComboBorder(
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn der Design-API aktiviert ist. andernfalls `FALSE`.  
   
-##  <a name="a-namedrawcombodropbuttona--cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton  
+##  <a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton  
  Zeichnet eine Kombinationsfeld Dropdown-Schaltfläche mit dem aktuellen Windows-Design.  
   
 ```  
@@ -223,7 +232,7 @@ virtual BOOL DrawComboDropButton(
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn der Design-API aktiviert ist. andernfalls `FALSE`.  
   
-##  <a name="a-namedrawpushbuttona--cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton  
+##  <a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton  
  Zeichnet eine Schaltfläche mit dem aktuellen Windows-Design.  
   
 ```  
@@ -250,7 +259,7 @@ virtual BOOL DrawPushButton(
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn der Design-API aktiviert ist. andernfalls `FALSE`.  
   
-##  <a name="a-namedrawradiobuttona--cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton  
+##  <a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton  
  Zeichnet ein Optionsfeld-Steuerelement mit dem aktuellen Windows-Design.  
   
 ```  
@@ -285,7 +294,7 @@ virtual BOOL DrawRadioButton(
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn der Design-API aktiviert ist. andernfalls `FALSE`.  
   
-##  <a name="a-namedrawstatusbarprogressa--cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress  
+##  <a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress  
  Zeichnet Statusanzeige auf der Statusleiste-Steuerelement ( [CMFCStatusBar-Klasse](../../mfc/reference/cmfcstatusbar-class.md)) mit dem aktuellen Windows-Design.  
   
 ```  
@@ -332,7 +341,7 @@ virtual BOOL DrawStatusBarProgress(
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn der Design-API aktiviert ist. andernfalls `FALSE`.  
   
-##  <a name="a-namefillrebarpanea--cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane  
+##  <a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane  
  Füllt den Hintergrund des Grundleisten-Steuerelement mit der aktuellen Windows-Designs.  
   
 ```  
@@ -355,7 +364,7 @@ virtual void FillReBarPane(
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn der Design-API aktiviert ist. andernfalls `FALSE`.  
   
-##  <a name="a-namegetstandardwindowsthemea--cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme  
+##  <a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme  
  Ruft das aktuelle Windows-Design ab.  
   
 ```  
@@ -375,7 +384,7 @@ virtual WinXpTheme GetStandardWindowsTheme();
   
 - `WinXpTheme_Silver`-Silber-Design.  
   
-##  <a name="a-nameupdatesystemcolorsa--cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors  
+##  <a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors  
  Aufrufe `OpenThemeData` zum Abrufen von Handles für die verschiedenen Steuerelemente zeichnen: Windows, Symbolleisten, Schaltflächen und So weiter.  
   
 ```  

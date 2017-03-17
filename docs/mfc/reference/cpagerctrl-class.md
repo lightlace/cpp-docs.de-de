@@ -8,6 +8,30 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CPagerCtrl
+- AFXCMN/CPagerCtrl
+- AFXCMN/CPagerCtrl::CPagerCtrl
+- AFXCMN/CPagerCtrl::Create
+- AFXCMN/CPagerCtrl::CreateEx
+- AFXCMN/CPagerCtrl::ForwardMouse
+- AFXCMN/CPagerCtrl::GetBkColor
+- AFXCMN/CPagerCtrl::GetBorder
+- AFXCMN/CPagerCtrl::GetButtonSize
+- AFXCMN/CPagerCtrl::GetButtonState
+- AFXCMN/CPagerCtrl::GetDropTarget
+- AFXCMN/CPagerCtrl::GetScrollPos
+- AFXCMN/CPagerCtrl::IsButtonDepressed
+- AFXCMN/CPagerCtrl::IsButtonGrayed
+- AFXCMN/CPagerCtrl::IsButtonHot
+- AFXCMN/CPagerCtrl::IsButtonInvisible
+- AFXCMN/CPagerCtrl::IsButtonNormal
+- AFXCMN/CPagerCtrl::RecalcSize
+- AFXCMN/CPagerCtrl::SetBkColor
+- AFXCMN/CPagerCtrl::SetBorder
+- AFXCMN/CPagerCtrl::SetButtonSize
+- AFXCMN/CPagerCtrl::SetChild
+- AFXCMN/CPagerCtrl::SetScrollPos
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +122,7 @@ class CPagerCtrl : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcmn.h  
   
-##  <a name="a-namecpagerctrla--cpagerctrlcpagerctrl"></a><a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl  
+##  <a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl  
  Erstellt ein `CPagerCtrl`-Objekt.  
   
 ```  
@@ -108,7 +132,7 @@ CPagerCtrl();
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CPagerCtrl::Create](#create) oder [CPagerCtrl::CreateEx](#createex) Methode, um einem Pagersteuerelement erstellen und Anfügen an die `CPagerCtrl` Objekt.  
   
-##  <a name="a-namecreatea--cpagerctrlcreate"></a><a name="create"></a>CPagerCtrl::Create  
+##  <a name="create"></a>CPagerCtrl::Create  
  Erstellt ein Pagersteuerelement mit der angegebenen Formate und fügt ihn der aktuellen `CPagerCtrl` Objekt.  
   
 ```  
@@ -139,7 +163,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="a-namecreateexa--cpagerctrlcreateex"></a><a name="createex"></a>CPagerCtrl::CreateEx  
+##  <a name="createex"></a>CPagerCtrl::CreateEx  
  Erstellt ein Pagersteuerelement mit dem angegebenen erweiterten Stile und fügt ihn der aktuellen `CPagerCtrl` Objekt.  
   
 ```  
@@ -167,7 +191,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Hinweise  
  Um ein Pager-Steuerelement zu erstellen, deklarieren einen `CPagerCtrl` Variable, rufen Sie dann die [CPagerCtrl::Create](#create) oder [CPagerCtrl::CreateEx](#createex) Methode für diese Variable.  
   
-##  <a name="a-nameforwardmousea--cpagerctrlforwardmouse"></a><a name="forwardmouse"></a>CPagerCtrl::ForwardMouse  
+##  <a name="forwardmouse"></a>CPagerCtrl::ForwardMouse  
  Aktiviert oder deaktiviert die Weiterleitung [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) Nachrichten an das Fenster, das in das aktuelle Pagersteuerelement enthalten ist.  
   
 ```  
@@ -183,7 +207,7 @@ void ForwardMouse(BOOL bForward);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetbordera--cpagerctrlgetborder"></a><a name="getborder"></a>CPagerCtrl::GetBorder  
+##  <a name="getborder"></a>CPagerCtrl::GetBorder  
  Ruft die Rahmenstärke des aktuellen Pager-Steuerelements ab.  
   
 ```  
@@ -201,7 +225,7 @@ int GetBorder() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2&5;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
-##  <a name="a-namegetbkcolora--cpagerctrlgetbkcolor"></a><a name="getbkcolor"></a>CPagerCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CPagerCtrl::GetBkColor  
  Ruft die Hintergrundfarbe des aktuellen Pager-Steuerelements ab.  
   
 ```  
@@ -219,7 +243,7 @@ COLORREF GetBkColor() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2&4;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="a-namegetbuttonsizea--cpagerctrlgetbuttonsize"></a><a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize  
+##  <a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize  
  Ruft die Größe der Schaltfläche des aktuellen Pager-Steuerelements ab.  
   
 ```  
@@ -234,7 +258,7 @@ int GetButtonSize() const;
   
  Verfügt das Pagersteuerelement der `PGS_HORZ` Stil, die Größe der Schaltfläche bestimmt die Breite der Pagerschaltflächen, und wenn das Pagersteuerelement verfügt die `PGS_VERT` Stil, die Größe der Schaltfläche bestimmt die Höhe der Pagerschaltflächen. Weitere Informationen finden Sie unter [Pager Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
-##  <a name="a-namegetbuttonstatea--cpagerctrlgetbuttonstate"></a><a name="getbuttonstate"></a>CPagerCtrl::GetButtonState  
+##  <a name="getbuttonstate"></a>CPagerCtrl::GetButtonState  
  Ruft den Zustand der angegebenen Bildlaufschaltfläche in der aktuellen Pagersteuerelement.  
   
 ```  
@@ -253,7 +277,7 @@ DWORD GetButtonState(int iButton) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdroptargeta--cpagerctrlgetdroptarget"></a><a name="getdroptarget"></a>CPagerCtrl::GetDropTarget  
+##  <a name="getdroptarget"></a>CPagerCtrl::GetDropTarget  
  Ruft die [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Schnittstelle für das aktuelle Pagersteuerelement.  
   
 ```  
@@ -268,7 +292,7 @@ IDropTarget* GetDropTarget() const;
   
  Diese Methode sendet die [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Der Aufrufer dieser Methode ist verantwortlich für das Aufrufen der `Release` Mitglied der [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Schnittstelle, wenn die Schnittstelle nicht mehr benötigt wird.  
   
-##  <a name="a-namegetscrollposa--cpagerctrlgetscrollpos"></a><a name="getscrollpos"></a>CPagerCtrl::GetScrollPos  
+##  <a name="getscrollpos"></a>CPagerCtrl::GetScrollPos  
  Ruft die Bildlaufposition des aktuellen Pager-Steuerelements ab.  
   
 ```  
@@ -286,7 +310,7 @@ int GetScrollPos() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
-##  <a name="a-nameisbuttondepresseda--cpagerctrlisbuttondepressed"></a><a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed  
+##  <a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed  
  Gibt an, ob die angegebenen Bildlaufschaltfläche der aktuellen Pagersteuerelement im gedrückten Zustand ist.  
   
 ```  
@@ -305,7 +329,7 @@ BOOL IsButtonDepressed(int iButton) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Anschließend wird geprüft, ob der Zustand, der zurückgegeben wird `PGF_DEPRESSED`. Weitere Informationen finden Sie im Abschnitt Return-Wert, der die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
   
-##  <a name="a-nameisbuttongrayeda--cpagerctrlisbuttongrayed"></a><a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed  
+##  <a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed  
  Gibt an, ob die angegebenen Bildlaufschaltfläche der aktuellen Pagersteuerelement grau dargestellt ist.  
   
 ```  
@@ -324,7 +348,7 @@ BOOL IsButtonGrayed(int iButton) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Anschließend wird geprüft, ob der Zustand, der zurückgegeben wird `PGF_GRAYED`. Weitere Informationen finden Sie im Abschnitt Return-Wert, der die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
   
-##  <a name="a-nameisbuttonhota--cpagerctrlisbuttonhot"></a><a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot  
+##  <a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot  
  Gibt an, ob die angegebenen Bildlaufschaltfläche der aktuellen Pagersteuerelement im aktiven Zustand ist.  
   
 ```  
@@ -343,7 +367,7 @@ BOOL IsButtonHot(int iButton) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Anschließend wird geprüft, ob der Zustand, der zurückgegeben wird `PGF_HOT`. Weitere Informationen finden Sie im Abschnitt Return-Wert, der die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
   
-##  <a name="a-nameisbuttoninvisiblea--cpagerctrlisbuttoninvisible"></a><a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonInvisible  
+##  <a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonInvisible  
  Gibt an, ob die angegebenen Bildlaufschaltfläche der aktuellen Pagersteuerelement nicht sichtbar ist.  
   
 ```  
@@ -369,7 +393,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2&6;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
-##  <a name="a-nameisbuttonnormala--cpagerctrlisbuttonnormal"></a><a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal  
+##  <a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal  
  Gibt an, ob die angegebenen Bildlaufschaltfläche der aktuellen Pagersteuerelement im normalen Zustand ist.  
   
 ```  
@@ -388,7 +412,7 @@ BOOL IsButtonNormal(int iButton) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Anschließend wird geprüft, ob der Zustand, der zurückgegeben wird `PGF_NORMAL`. Weitere Informationen finden Sie im Abschnitt Return-Wert, der die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
   
-##  <a name="a-namerecalcsizea--cpagerctrlrecalcsize"></a><a name="recalcsize"></a>CPagerCtrl::RecalcSize  
+##  <a name="recalcsize"></a>CPagerCtrl::RecalcSize  
  Bewirkt, dass das aktuelle Pagersteuerelement die Größe des Fensters enthaltenen neu berechnet.  
   
 ```  
@@ -408,7 +432,7 @@ void RecalcSize();
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
-##  <a name="a-namesetbkcolora--cpagerctrlsetbkcolor"></a><a name="setbkcolor"></a>CPagerCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>CPagerCtrl::SetBkColor  
  Legt die Hintergrundfarbe des aktuellen Pager-Steuerelements fest.  
   
 ```  
@@ -432,7 +456,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2&4;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="a-namesetbordera--cpagerctrlsetborder"></a><a name="setborder"></a>CPagerCtrl::SetBorder  
+##  <a name="setborder"></a>CPagerCtrl::SetBorder  
  Legt die Rahmengröße des aktuellen Pager-Steuerelements.  
   
 ```  
@@ -456,7 +480,7 @@ int SetBorder(int iBorder);
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="a-namesetbuttonsizea--cpagerctrlsetbuttonsize"></a><a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize  
+##  <a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize  
  Legt die Größe der Schaltfläche des aktuellen Pager-Steuerelements fest.  
   
 ```  
@@ -482,7 +506,7 @@ int SetButtonSize(int iButtonSize);
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="a-namesetchilda--cpagerctrlsetchild"></a><a name="setchild"></a>CPagerCtrl::SetChild  
+##  <a name="setchild"></a>CPagerCtrl::SetChild  
  Legt den im Fenster für das aktuelle Pagersteuerelement fest.  
   
 ```  
@@ -505,7 +529,7 @@ void SetChild(HWND hwndChild);
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="a-namesetscrollposa--cpagerctrlsetscrollpos"></a><a name="setscrollpos"></a>CPagerCtrl::SetScrollPos  
+##  <a name="setscrollpos"></a>CPagerCtrl::SetScrollPos  
  Legt die Bildlaufposition des aktuellen Pager-Steuerelements fest.  
   
 ```  

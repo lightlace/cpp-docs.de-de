@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCImageEditorPaletteBar
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::GetRowHeight
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +86,7 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afximageeditordialog.h  
   
-##  <a name="a-namegetrowheighta--cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
+##  <a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
  Gibt die Höhe der Symbolleisten-Schaltflächen.  
   
 ```  
@@ -93,7 +96,7 @@ virtual int GetRowHeight() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Höhe der einzelnen Schaltflächen auf der Symbolleiste.  
   
-##  <a name="a-nameisbuttonextrasizeavailablea--cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
+##  <a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
  Bestimmt, ob die Symbolleiste Schaltflächen angezeigt werden kann, die Rahmen erweitert haben.  
   
 ```  

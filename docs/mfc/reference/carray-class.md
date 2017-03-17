@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CArray
+- AFXTEMPL/CArray
+- AFXTEMPL/CArray::CArray
+- AFXTEMPL/CArray::Add
+- AFXTEMPL/CArray::Append
+- AFXTEMPL/CArray::Copy
+- AFXTEMPL/CArray::ElementAt
+- AFXTEMPL/CArray::FreeExtra
+- AFXTEMPL/CArray::GetAt
+- AFXTEMPL/CArray::GetCount
+- AFXTEMPL/CArray::GetData
+- AFXTEMPL/CArray::GetSize
+- AFXTEMPL/CArray::GetUpperBound
+- AFXTEMPL/CArray::InsertAt
+- AFXTEMPL/CArray::IsEmpty
+- AFXTEMPL/CArray::RemoveAll
+- AFXTEMPL/CArray::RemoveAt
+- AFXTEMPL/CArray::SetAt
+- AFXTEMPL/CArray::SetAtGrow
+- AFXTEMPL/CArray::SetSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +141,7 @@ class CArray : public CObject
 ## <a name="requirements"></a>Anforderungen  
  `Header:`afxtempl.h  
   
-##  <a name="a-nameadda--carrayadd"></a><a name="add"></a>CArray::Add  
+##  <a name="add"></a>CArray::Add  
  Fügt ein neues Element am Ende ein Array, das Array um 1 vergrößert.  
   
 ```  
@@ -145,7 +164,7 @@ INT_PTR Add(ARG_TYPE newElement);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#22;](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
   
-##  <a name="a-nameappenda--carrayappend"></a><a name="append"></a>CArray::Append  
+##  <a name="append"></a>CArray::Append  
  Rufen Sie diese Memberfunktion, um den Inhalt eines Arrays an das Ende eines anderen hinzufügen.  
   
 ```  
@@ -167,7 +186,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&23;](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
   
-##  <a name="a-namecarraya--carraycarray"></a><a name="carray"></a>CArray::CArray  
+##  <a name="carray"></a>CArray::CArray  
  Erstellt ein leeres Array.  
   
 ```  
@@ -180,7 +199,7 @@ CArray();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#24;](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
   
-##  <a name="a-namecopya--carraycopy"></a><a name="copy"></a>CArray::Copy  
+##  <a name="copy"></a>CArray::Copy  
  Verwenden Sie diese Memberfunktion, die Elemente eines Arrays in ein anderes kopiert.  
   
 ```  
@@ -199,7 +218,7 @@ void Copy(const CArray& src);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#25;](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
   
-##  <a name="a-nameelementata--carrayelementat"></a><a name="elementat"></a>CArray::ElementAt  
+##  <a name="elementat"></a>CArray::ElementAt  
  Gibt einen temporären Verweis auf das angegebene Element innerhalb des Arrays zurück.  
   
 ```  
@@ -220,7 +239,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [GetSize](#getsize).  
   
-##  <a name="a-namefreeextraa--carrayfreeextra"></a><a name="freeextra"></a>CArray::FreeExtra  
+##  <a name="freeextra"></a>CArray::FreeExtra  
  Zusätzlichen Speicher, der belegt wurde, während das Array angebaut wurde frei.  
   
 ```  
@@ -233,7 +252,7 @@ void FreeExtra();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [GetData](#getdata).  
   
-##  <a name="a-namegetata--carraygetat"></a><a name="getat"></a>CArray::GetAt  
+##  <a name="getat"></a>CArray::GetAt  
  Gibt das Arrayelement am angegebenen Index zurück.  
   
 ```  
@@ -257,7 +276,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#26;](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
   
-##  <a name="a-namegetcounta--carraygetcount"></a><a name="getcount"></a>CArray::GetCount  
+##  <a name="getcount"></a>CArray::GetCount  
  Gibt die Anzahl der Arrayelemente.  
   
 ```  
@@ -273,7 +292,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#27;](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
   
-##  <a name="a-namegetdataa--carraygetdata"></a><a name="getdata"></a>CArray::GetData  
+##  <a name="getdata"></a>CArray::GetData  
  Verwenden Sie diese Memberfunktion auf die Elemente in einem Array direkt zugreifen.  
   
 ```  
@@ -296,7 +315,7 @@ TYPE* GetData();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#28;](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
   
-##  <a name="a-namegetsizea--carraygetsize"></a><a name="getsize"></a>CArray::GetSize  
+##  <a name="getsize"></a>CArray::GetSize  
  Gibt die Größe des Arrays zurück.  
   
 ```  
@@ -309,7 +328,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#29;](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
   
-##  <a name="a-namegetupperbounda--carraygetupperbound"></a><a name="getupperbound"></a>CArray::GetUpperBound  
+##  <a name="getupperbound"></a>CArray::GetUpperBound  
  Gibt die aktuellen Obergrenze für dieses Array zurück.  
   
 ```  
@@ -324,7 +343,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CArray::GetAt](#getat).  
   
-##  <a name="a-nameinsertata--carrayinsertat"></a><a name="insertat"></a>CArray::InsertAt  
+##  <a name="insertat"></a>CArray::InsertAt  
  Die erste Version der `InsertAt` Fügt ein Element (oder mehrere Kopien eines Elements) an einem angegebenen Index in einem Array.  
   
 ```  
@@ -367,7 +386,7 @@ void InsertAt(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#30;](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
   
-##  <a name="a-nameisemptya--carrayisempty"></a><a name="isempty"></a>CArray::IsEmpty  
+##  <a name="isempty"></a>CArray::IsEmpty  
  Bestimmt, ob das Array leer ist.  
   
 ```  
@@ -377,7 +396,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn das Array keine Elemente enthält; andernfalls 0.  
   
-##  <a name="a-nameoperatorata--carrayoperator-"></a><a name="operator_at"></a>CArray::operator\[\]  
+##  <a name="operator_at"></a>CArray::operator\[\]  
  Diese Indexoperatoren sind praktisch Ersatz für die [SetAt](#setat) und [GetAt](#getat) Funktionen.  
   
 ```  
@@ -400,7 +419,7 @@ const TYPE& operator[](int_ptr nindex) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#34;](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
   
-##  <a name="a-namerelocateelementsa--carrayrelocateelements"></a><a name="relocateelements"></a>CArray::RelocateElements  
+##  <a name="relocateelements"></a>CArray::RelocateElements  
  Verschiebt Daten in einen neuen Puffer an, wenn das Array vergrößert oder verkleinert werden soll.  
   
 ```  
@@ -428,7 +447,7 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
   
  Für Arrays, das ein Element enthält einen Zeiger auf einen Member oder eine andere Struktur enthält einen Zeiger auf eine der Elemente des Arrays werden die Zeiger in einfachen Kopieren nicht aktualisiert. In diesem Fall können Sie Zeiger korrigieren, indem Sie implementieren eine Spezialisierung der `RelocateElements` mit den entsprechenden Typen. Sie können auch für das Kopieren von Daten zuständig.  
   
-##  <a name="a-nameremovealla--carrayremoveall"></a><a name="removeall"></a>CArray::RemoveAll  
+##  <a name="removeall"></a>CArray::RemoveAll  
  Entfernt alle Elemente aus diesem Array.  
   
 ```  
@@ -441,7 +460,7 @@ void RemoveAll();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#31;](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
   
-##  <a name="a-nameremoveata--carrayremoveat"></a><a name="removeat"></a>CArray::RemoveAt  
+##  <a name="removeat"></a>CArray::RemoveAt  
  Entfernt eine oder mehrere Elemente, beginnend am angegebenen Index in ein Array.  
   
 ```  
@@ -465,7 +484,7 @@ void RemoveAt(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#32;](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
   
-##  <a name="a-namesetata--carraysetat"></a><a name="setat"></a>CArray::SetAt  
+##  <a name="setat"></a>CArray::SetAt  
  Legt das Arrayelement am angegebenen Index fest.  
   
 ```  
@@ -490,7 +509,7 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [GetAt](#getat).  
   
-##  <a name="a-namesetatgrowa--carraysetatgrow"></a><a name="setatgrow"></a>CArray::SetAtGrow  
+##  <a name="setatgrow"></a>CArray::SetAtGrow  
  Legt das Arrayelement am angegebenen Index fest.  
   
 ```  
@@ -513,7 +532,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&33;](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
   
-##  <a name="a-namesetsizea--carraysetsize"></a><a name="setsize"></a>SetSize  
+##  <a name="setsize"></a>SetSize  
  Legt die Größe des ein leeres oder vorhandenes Array fest. belegt Speicher aus, falls erforderlich.  
   
 ```  

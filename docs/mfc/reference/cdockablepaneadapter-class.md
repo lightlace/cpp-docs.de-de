@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockablePaneAdapter
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::GetWrappedWnd
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::LoadState
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SaveState
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SetWrappedWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +79,7 @@ class CDockablePaneAdapter : public CDockablePane
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxDockablePaneAdapter.h  
   
-##  <a name="a-namegetwrappedwnda--cdockablepaneadaptergetwrappedwnd"></a><a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
+##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
  Gibt den zugrunde liegenden Fensters für den Adapter andockbaren Bereich zurück.  
   
 ```  
@@ -87,7 +92,7 @@ virtual CWnd* GetWrappedWnd() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um das umschlossene Fenster zuzugreifen.  
   
-##  <a name="a-nameloadstatea--cdockablepaneadapterloadstate"></a><a name="loadstate"></a>CDockablePaneAdapter::LoadState  
+##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
  Lädt den Zustand des Bereichs aus der Registrierung.  
   
 ```  
@@ -111,7 +116,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesavestatea--cdockablepaneadaptersavestate"></a><a name="savestate"></a>CDockablePaneAdapter::SaveState  
+##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
  Speichert den Zustand des Bereichs in der Registrierung.  
   
 ```  
@@ -135,7 +140,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetwrappedwnda--cdockablepaneadaptersetwrappedwnd"></a><a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
+##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
  Das zugrunde liegende Fenster festgelegt für den Adapter andockbaren Bereich.  
   
 ```  

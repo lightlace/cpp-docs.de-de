@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHttpFile
+- AFXINET/CHttpFile
+- AFXINET/CHttpFile::CHttpFile
+- AFXINET/CHttpFile::AddRequestHeaders
+- AFXINET/CHttpFile::EndRequest
+- AFXINET/CHttpFile::GetFileURL
+- AFXINET/CHttpFile::GetObject
+- AFXINET/CHttpFile::GetVerb
+- AFXINET/CHttpFile::QueryInfo
+- AFXINET/CHttpFile::QueryInfoStatusCode
+- AFXINET/CHttpFile::SendRequest
+- AFXINET/CHttpFile::SendRequestEx
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +102,7 @@ class CHttpFile : public CInternetFile
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxinet.h  
   
-##  <a name="a-nameaddrequestheadersa--chttpfileaddrequestheaders"></a><a name="addrequestheaders"></a>CHttpFile:: AddRequestHeaders  
+##  <a name="addrequestheaders"></a>CHttpFile:: AddRequestHeaders  
  Rufen Sie diese Memberfunktion zum Hinzufügen oder weitere HTTP-Anforderungsheader der HTTP-Anforderung verarbeiten.  
   
 ```  
@@ -136,7 +147,7 @@ BOOL AddRequestHeaders(
 > [!NOTE]
 >  Die Anwendung kann in mehrere Header übergeben `pstrHeaders` oder `str` für eine `AddRequestHeaders` -Aufruf mit `HTTP_ADDREQ_FLAG_ADD` oder `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Wenn die Anwendung versucht, entfernen oder Ersetzen Sie einen Header mit **HTTP_ADDREQ_FLAG_REMOVE** oder `HTTP_ADDREQ_FLAG_REPLACE`, nur einen Header kann angegeben werden, `lpszHeaders`.  
   
-##  <a name="a-namechttpfilea--chttpfilechttpfile"></a><a name="chttpfile"></a>CHttpFile::CHttpFile  
+##  <a name="chttpfile"></a>CHttpFile::CHttpFile  
  Diese Member-Funktion wird aufgerufen, um das Erstellen einer `CHttpFile` Objekt.  
   
 ```  
@@ -183,7 +194,7 @@ CHttpFile(
   
  Der Standardwert für `dwContext` von MFC gesendet wird die `CHttpFile` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellten Objekt der `CHttpFile` Objekt. Beim Aufruf von `CInternetSession::OpenURL` oder `CHttpConnection` zum Erstellen einer `CHttpFile` -Objekt können Sie die Standardeinstellung, um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen überschreiben. Die Kontext-ID wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) um den Status des Objekts bereitzustellen, mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) Weitere Informationen über den Kontextbezeichner.  
   
-##  <a name="a-nameendrequesta--chttpfileendrequest"></a><a name="endrequest"></a>CHttpFile::EndRequest  
+##  <a name="endrequest"></a>CHttpFile::EndRequest  
  Rufen Sie diese Memberfunktion, um eine Anforderung an einen HTTP-Server Beenden der [SendRequestEx](#sendrequestex) Member-Funktion.  
   
 ```  
@@ -209,7 +220,7 @@ BOOL EndRequest(
 ### <a name="remarks"></a>Hinweise  
  Der Standardwert für `dwContext` von MFC gesendet wird die `CHttpFile` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellten Objekt der `CHttpFile` Objekt. Beim Aufruf von [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) oder [CHttpConnection](../../mfc/reference/chttpconnection-class.md) zum Erstellen einer `CHttpFile` -Objekt können Sie die Standardeinstellung, um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen überschreiben. Die Kontext-ID wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) um den Status des Objekts bereitzustellen, mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) Weitere Informationen über den Kontextbezeichner.  
   
-##  <a name="a-namegetfileurla--chttpfilegetfileurl"></a><a name="getfileurl"></a>CHttpFile::GetFileURL  
+##  <a name="getfileurl"></a>CHttpFile::GetFileURL  
  Rufen Sie diese Memberfunktion zum Abrufen des Namens der Datei HTTP-URL.  
   
 ```  
@@ -222,7 +233,7 @@ virtual CString GetFileURL() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Memberfunktion erst nach einem erfolgreichen Aufruf von [SendRequest](#sendrequest) oder auf einer `CHttpFile` Objekt erfolgreich erstellt, indem [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="a-namegetobjecta--chttpfilegetobject"></a><a name="getobject"></a>CHttpFile::GetObject  
+##  <a name="getobject"></a>CHttpFile::GetObject  
  Rufen Sie diese Memberfunktion zum Abrufen des Namens des zugeordneten Objekts `CHttpFile`.  
   
 ```  
@@ -235,7 +246,7 @@ CString GetObject() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Memberfunktion erst nach einem erfolgreichen Aufruf von [SendRequest](#sendrequest) oder auf einer `CHttpFile` Objekt erfolgreich erstellt, indem [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="a-namegetverba--chttpfilegetverb"></a><a name="getverb"></a>CHttpFile::GetVerb  
+##  <a name="getverb"></a>CHttpFile::GetVerb  
  Rufen Sie diese Memberfunktion zum Abrufen der HTTP-Verb (oder Methode) zugeordneten `CHttpFile`.  
   
 ```  
@@ -248,7 +259,7 @@ CString GetVerb() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Memberfunktion erst nach einem erfolgreichen Aufruf von [SendRequest](#sendrequest) oder auf einer `CHttpFile` Objekt erfolgreich erstellt, indem [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="a-namequeryinfoa--chttpfilequeryinfo"></a><a name="queryinfo"></a>CHttpFile::  
+##  <a name="queryinfo"></a>CHttpFile::  
  Rufen Sie diese Memberfunktion zum Zurückgeben der Antwort oder Anforderungsheader aus einer HTTP-Anforderung.  
   
 ```  
@@ -365,7 +376,7 @@ BOOL QueryInfo(
   
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
-##  <a name="a-namequeryinfostatuscodea--chttpfilequeryinfostatuscode"></a><a name="queryinfostatuscode"></a>QueryInfoStatusCode  
+##  <a name="queryinfostatuscode"></a>QueryInfoStatusCode  
  Rufen Sie diese Memberfunktion zum Abrufen des Statuscode einer HTTP-Anforderung zugeordnet, und platzieren Sie es in der angegebenen `dwStatusCode` Parameter.  
   
 ```  
@@ -402,7 +413,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 |500|Unbekannter Serverfehler|  
 |503|Server-Kapazität erreicht|  
   
-##  <a name="a-namesendrequesta--chttpfilesendrequest"></a><a name="sendrequest"></a>CHttpFile:: SendRequest  
+##  <a name="sendrequest"></a>CHttpFile:: SendRequest  
  Rufen Sie diese Memberfunktion zum Senden einer Anforderung an einen HTTP-Server.  
   
 ```  
@@ -438,7 +449,7 @@ BOOL SendRequest(
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, ermitteln Sie die Ursache des Fehlers durch Untersuchen der ausgelösten [CInternetException](../../mfc/reference/cinternetexception-class.md) Objekt.  
   
-##  <a name="a-namesendrequestexa--chttpfilesendrequestex"></a><a name="sendrequestex"></a>CHttpFile::SendRequestEx  
+##  <a name="sendrequestex"></a>CHttpFile::SendRequestEx  
  Rufen Sie diese Memberfunktion zum Senden einer Anforderung an einen HTTP-Server.  
   
 ```  

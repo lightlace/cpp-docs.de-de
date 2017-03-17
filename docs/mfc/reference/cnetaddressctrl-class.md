@@ -8,6 +8,16 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl::CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl::Create
+- AFXCMN/CNetAddressCtrl::CreateEx
+- AFXCMN/CNetAddressCtrl::DisplayErrorTip
+- AFXCMN/CNetAddressCtrl::GetAddress
+- AFXCMN/CNetAddressCtrl::GetAllowType
+- AFXCMN/CNetAddressCtrl::SetAllowType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +112,7 @@ class CNetAddressCtrl : public CEdit
   
  Zusätzliche Anforderungen für diese Klasse finden Sie im [erstellen Anforderungen für Windows Vista-Standardsteuerelementen](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="a-namecnetaddressctrla--cnetaddressctrlcnetaddressctrl"></a><a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
+##  <a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
  Erstellt ein `CNetAddressCtrl`-Objekt.  
   
 ```  
@@ -112,7 +122,7 @@ CNetAddressCtrl();
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CNetAddressCtrl::Create](#create) oder [CNetAddressCtrl::CreateEx](#createex) Methode, um ein Netzwerk-Steuerelement erstellen, und fügen Sie es auf die `CNetAddressCtrl` Objekt.  
   
-##  <a name="a-namecreatea--cnetaddressctrlcreate"></a><a name="create"></a>CNetAddressCtrl::Create  
+##  <a name="create"></a>CNetAddressCtrl::Create  
  Erstellt eine Netzwerkadressen-Steuerelement mit der angegebenen Formate und fügt Sie es mit dem aktuellen `CNetAddressCtrl` Objekt.  
   
 ```  
@@ -135,7 +145,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Rückgabewert  
  `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-##  <a name="a-namecreateexa--cnetaddressctrlcreateex"></a><a name="createex"></a>CNetAddressCtrl::CreateEx  
+##  <a name="createex"></a>CNetAddressCtrl::CreateEx  
  Erstellt eine Netzwerkadressen-Steuerelement mit dem angegebenen erweiterten Stile und fügt Sie es mit dem aktuellen `CNetAddressCtrl` Objekt.  
   
 ```  
@@ -160,7 +170,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>Rückgabewert  
  `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
   
-##  <a name="a-namedisplayerrortipa--cnetaddressctrldisplayerrortip"></a><a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
+##  <a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
  Zeigt eine Fehlermeldung in die SprechblasenInfo, die die aktuellen Netzwerkadressen-Steuerelement zugeordnet ist.  
   
 ```  
@@ -175,7 +185,7 @@ HRESULT DisplayErrorTip();
   
  Diese Nachricht Ruft die [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) -Makro, das in beschriebene der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Dieses Makro sendet die `NCM_DISPLAYERRORTIP` Nachricht.  
   
-##  <a name="a-namegetaddressa--cnetaddressctrlgetaddress"></a><a name="getaddress"></a>CNetAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>CNetAddressCtrl::GetAddress  
  Ruft eine geprüfte und analysierte Darstellung der Netzwerkadresse, die die aktuellen Netzwerkadressen-Steuerelement zugeordnet ist.  
   
 ```  
@@ -198,7 +208,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
  Diese Methode ruft die [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) -Makro, das in beschriebene der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Dieses Makro sendet die `NCM_GETADDRESS` Nachricht.  
   
-##  <a name="a-namegetallowtypea--cnetaddressctrlgetallowtype"></a><a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
+##  <a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
  Ruft den Typ der Adresse, die die aktuellen Netzwerkadressen-Steuerelement unterstützt werden.  
   
 ```  
@@ -211,7 +221,7 @@ DWORD GetAllowType() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Nachricht Ruft die [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) -Makro, das in beschriebene der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Dieses Makro sendet die `NCM_GETALLOWTYPE` Nachricht.  
   
-##  <a name="a-namesetallowtypea--cnetaddressctrlsetallowtype"></a><a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
+##  <a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
  Legt den Typ der Adresse, die die aktuellen Netzwerkadressen-Steuerelement unterstützt werden.  
   
 ```  

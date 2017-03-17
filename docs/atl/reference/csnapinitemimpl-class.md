@@ -10,8 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
-- ATL.CSnapInItemImpl
-- ATL::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl::AddMenuItems
+- ATLSNAP/ATL::CSnapInItemImpl::Command
+- ATLSNAP/ATL::CSnapInItemImpl::CreatePropertyPages
+- ATLSNAP/ATL::CSnapInItemImpl::FillData
+- ATLSNAP/ATL::CSnapInItemImpl::GetResultPaneInfo
+- ATLSNAP/ATL::CSnapInItemImpl::GetResultViewType
+- ATLSNAP/ATL::CSnapInItemImpl::GetScopePaneInfo
+- ATLSNAP/ATL::CSnapInItemImpl::Notify
+- ATLSNAP/ATL::CSnapInItemImpl::QueryPagesFor
+- ATLSNAP/ATL::CSnapInItemImpl::SetMenuInsertionFlags
+- ATLSNAP/ATL::CSnapInItemImpl::SetToolbarButtonInfo
+- ATLSNAP/ATL::CSnapInItemImpl::UpdateMenuState
+- ATLSNAP/ATL::CSnapInItemImpl::UpdateToolbarButton
+- ATLSNAP/ATL::CSnapInItemImpl::m_bstrDisplayName
+- ATLSNAP/ATL::CSnapInItemImpl::m_resultDataItem
+- ATLSNAP/ATL::CSnapInItemImpl::m_scopeDataItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +125,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsnap.h  
   
-##  <a name="a-nameaddmenuitemsa--csnapinitemimpladdmenuitems"></a><a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
  Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
   
 ```
@@ -145,7 +161,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED** Datenobjekt hat einen ungültigen Typ.  
   
-##  <a name="a-namecommanda--csnapinitemimplcommand"></a><a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>CSnapInItemImpl::Command  
  Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
   
 ```
@@ -167,7 +183,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED** Datenobjekt hat einen ungültigen Typ.  
   
-##  <a name="a-namecreatepropertypagesa--csnapinitemimplcreatepropertypages"></a><a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
  Diese Methode implementiert die Win32-Funktion [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
   
 ```
@@ -199,14 +215,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED** Datenobjekt hat einen ungültigen Typ.  
   
-##  <a name="a-namecsnapinitemimpla--csnapinitemimplcsnapinitemimpl"></a><a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
  Erstellt ein `CSnapInItemImpl`-Objekt.  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="a-namefilldataa--csnapinitemimplfilldata"></a><a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>CSnapInItemImpl::FillData  
  Diese Funktion wird aufgerufen, um Informationen über das Element abzurufen.  
   
 ```
@@ -223,7 +239,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>Hinweise  
  Um diese Funktion ordnungsgemäß zu implementieren, kopieren Sie die richtige Informationen in den Datenstrom ( `pStream`), abhängig vom Format Zwischenablage `cf`.  
   
-##  <a name="a-namegetresultviewtypea--csnapinitemimplgetresultviewtype"></a><a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
  Rufen Sie diese Funktion, um den Typ der Ansicht für den Ergebnisbereich des Snap-in-Objekts abrufen.  
   
 ```
@@ -243,7 +259,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 ermöglicht die Standardoptionen für die Ansicht.  
   
-##  <a name="a-namegetscopepaneinfoa--csnapinitemimplgetscopepaneinfo"></a><a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
  Rufen Sie diese Funktion zum Abrufen der **SCOPEDATAITEM** Struktur das Snap-in.  
   
 ```
@@ -254,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out] Ein Zeiger auf die **SCOPEDATAITEM** Struktur der `CSnapInItemImpl` Objekt.  
   
-##  <a name="a-namegetresultpaneinfoa--csnapinitemimplgetresultpaneinfo"></a><a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
  Rufen Sie diese Funktion zum Abrufen der **RESULTDATAITEM** Struktur das Snap-in.  
   
 ```
@@ -265,28 +281,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out] Ein Zeiger auf die **RESULTDATAITEM** Struktur der `CSnapInItemImpl` Objekt.  
   
-##  <a name="a-namembstrdisplaynamea--csnapinitemimplmbstrdisplayname"></a><a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
  Enthält die Zeichenfolge für das Knotenelement angezeigt.  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="a-namemscopedataitema--csnapinitemimplmscopedataitem"></a><a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
  Die `SCOPEDATAITEM` Struktur des-Snap-in-Objekts.  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="a-namemresultdataitema--csnapinitemimplmresultdataitem"></a><a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
  Die [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) Struktur des-Snap-in-Objekts.  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="a-namenotifya--csnapinitemimplnotify"></a><a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>CSnapInItemImpl::Notify  
  Wird aufgerufen, wenn das Objekt-Snap-in auf der Benutzer ausgeführt wird.  
   
 ```
@@ -354,14 +370,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED** Datenobjekt hat einen ungültigen Typ.  
   
-##  <a name="a-namequerypagesfora--csnapinitemimplquerypagesfor"></a><a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
  Wird aufgerufen, um festzustellen, ob der Snap-In-Knoten Eigenschaftenseiten unterstützt.  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="a-namesetmenuinsertionflagsa--csnapinitemimplsetmenuinsertionflags"></a><a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
  Mit dieser Funktion können Sie im Menü Einfügen, angegebenen Flags durch Ändern `pInsertionAllowed`, für das Snap-In-Objekt.  
   
 ```
@@ -390,7 +406,7 @@ void SetMenuInsertionFlags(
   
  Sie sollten nicht versuchen, legen Sie die Bits in `pInsertionAllowed` , wurden ursprünglich gelöscht. Zukünftige Versionen von MMC können Bits, die derzeit nicht definiert werden, sodass Sie Bits nicht ändern müssen, die derzeit nicht definiert sind.  
   
-##  <a name="a-namesettoolbarbuttoninfoa--csnapinitemimplsettoolbarbuttoninfo"></a><a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
  Rufen Sie diese Funktion, um alle Symbolleiste Schaltflächenstile, des Objekts-Snap-in zu ändern, bevor die Symbolleiste erstellt wird.  
   
 ```
@@ -432,7 +448,7 @@ void SetToolbarButtonInfo(
   
 - `TBSTYLE_SEP`Erstellt ein Trennzeichen, eine kleine zeitliche Lücke zwischen Schaltflächengruppen bereitstellen. Eine Schaltfläche mit diesem Format erhält keine Benutzereingaben.  
   
-##  <a name="a-nameupdatemenustatea--csnapinitemimplupdatemenustate"></a><a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
  Rufen Sie diese Funktion, um ein Menüelement zu ändern, bevor es in das Kontextmenü des Snap-in-Objekts eingefügt wird.  
   
 ```
@@ -480,7 +496,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED** und **MF_UNCHECKED**.  
   
-##  <a name="a-nameupdatetoolbarbuttona--csnapinitemimplupdatetoolbarbutton"></a><a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
  Rufen Sie diese Funktion, um eine Symbolleisten-Schaltfläche des Objekts-Snap-in zu ändern, bevor er angezeigt wird.  
   
 ```

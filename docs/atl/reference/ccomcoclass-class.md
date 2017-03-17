@@ -10,8 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComCoClass
-- ATL.CComCoClass
-- ATL::CComCoClass
+- ATLCOM/ATL::CComCoClass
+- ATLCOM/ATL::CComCoClass::CreateInstance
+- ATLCOM/ATL::CComCoClass::Error
+- ATLCOM/ATL::CComCoClass::GetObjectCLSID
+- ATLCOM/ATL::CComCoClass::GetObjectDescription
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +89,7 @@ class CComCoClass
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
   
-##  <a name="a-namecreateinstancea--ccomcoclasscreateinstance"></a><a name="createinstance"></a>CComCoClass::CreateInstance  
+##  <a name="createinstance"></a>CComCoClass::CreateInstance  
  Verwenden Sie diese `CreateInstance` Funktionen zum Erstellen einer Instanz einer COM-Objekt und einen Schnittstellenzeiger ohne Verwendung der COM-API abrufen.  
   
 ```
@@ -124,7 +127,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
   
  [!code-cpp[NVC_ATL_COM&#11;](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   
-##  <a name="a-nameerrora--ccomcoclasserror"></a><a name="error"></a>CComCoClass::Error  
+##  <a name="error"></a>CComCoClass::Error  
  Diese statischen Funktion richtet die `IErrorInfo` Schnittstelle Fehlerinformationen an den Client bereitstellen.  
   
 ```
@@ -197,7 +200,7 @@ static HRESULT Error(
   
  Wenn die `hRes` Parameter ist ein Wert ungleich NULL `Error` gibt den Wert der `hRes`. Wenn `hRes` ist&0; (null), und klicken Sie dann auf die ersten vier Versionen von `Error` zurückgeben `DISP_E_EXCEPTION`. Die letzten beiden Versionen zurück, das Ergebnis des Makros **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.  
   
-##  <a name="a-namegetobjectclsida--ccomcoclassgetobjectclsid"></a><a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
+##  <a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
  Bietet eine einheitliche Methode zum Abrufen der CLSID des Objekts.  
   
 ```
@@ -207,7 +210,7 @@ static const CLSID& WINAPI GetObjectCLSID();
 ### <a name="return-value"></a>Rückgabewert  
  Klassen-ID des Objekts.  
   
-##  <a name="a-namegetobjectdescriptiona--ccomcoclassgetobjectdescription"></a><a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
+##  <a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
  Die statische Funktion ruft die Beschreibung für das Klassenobjekt ab.  
   
 ```

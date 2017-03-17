@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPropExchange
+- AFXCTL/CPropExchange
+- AFXCTL/CPropExchange::ExchangeBlobProp
+- AFXCTL/CPropExchange::ExchangeFontProp
+- AFXCTL/CPropExchange::ExchangePersistentProp
+- AFXCTL/CPropExchange::ExchangeProp
+- AFXCTL/CPropExchange::ExchangeVersion
+- AFXCTL/CPropExchange::GetVersion
+- AFXCTL/CPropExchange::IsAsynchronous
+- AFXCTL/CPropExchange::IsLoading
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +95,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxctl.h  
   
-##  <a name="a-nameexchangeblobpropa--cpropexchangeexchangeblobprop"></a><a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
  Serialisiert eine Eigenschaft, die binary large Object (BLOB)-Daten speichert.  
   
 ```  
@@ -114,7 +123,7 @@ virtual BOOL ExchangeBlobProp(
   
  Die Funktionen **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, und **CPropsetPropExchange::ExchangeBlobProp** überschreiben diese rein virtuelle Funktion.  
   
-##  <a name="a-nameexchangefontpropa--cpropexchangeexchangefontprop"></a><a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
  Tauscht zwischen einem Speichermedium und dem Steuerelement eine Font-Eigenschaft.  
   
 ```  
@@ -146,7 +155,7 @@ virtual BOOL ExchangeFontProp(
   
  Die Funktionen **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, und **CPropsetPropExchange::ExchangeFontProp** überschreiben diese rein virtuelle Funktion.  
   
-##  <a name="a-nameexchangepersistentpropa--cpropexchangeexchangepersistentprop"></a><a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
  Tauscht eine Eigenschaft zwischen dem Steuerelement und eine Datei.  
   
 ```  
@@ -178,7 +187,7 @@ virtual BOOL ExchangePersistentProp(
   
  Die Funktionen **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, und **CPropsetPropExchange::ExchangePersistentProp** überschreiben diese rein virtuelle Funktion.  
   
-##  <a name="a-nameexchangepropa--cpropexchangeexchangeprop"></a><a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
  Tauscht eine Eigenschaft zwischen einem Speichermedium und dem Steuerelement.  
   
 ```  
@@ -220,7 +229,7 @@ virtual BOOL ExchangeProp(
   
  Die Funktionen **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, und **CPropsetPropExchange::ExchangeProp** überschreiben diese rein virtuelle Funktion.  
   
-##  <a name="a-nameexchangeversiona--cpropexchangeexchangeversion"></a><a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
  Vom Framework aufgerufen, Persistenz einer Versionsnummer zu behandeln.  
   
 ```  
@@ -243,7 +252,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Funktion erfolgreich ausgeführt wurde; andernfalls 0.  
   
-##  <a name="a-namegetversiona--cpropexchangegetversion"></a><a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>CPropExchange::GetVersion  
  Rufen Sie diese Funktion, um die Versionsnummer des Steuerelements abzurufen.  
   
 ```  
@@ -253,7 +262,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>Rückgabewert  
  Die Versionsnummer des Steuerelements.  
   
-##  <a name="a-nameisasynchronousa--cpropexchangeisasynchronous"></a><a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
  Bestimmt, ob die Eigenschaft Nachrichtenaustausch asynchron ausgeführt werden.  
   
 ```  
@@ -263,7 +272,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt True, wenn Eigenschaften sind ausgetauscht asynchron ist, andernfalls FALSE.  
   
-##  <a name="a-nameisloadinga--cpropexchangeisloading"></a><a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>CPropExchange::IsLoading  
  Rufen Sie diese Funktion, um festzustellen, ob die Eigenschaften werden auf das Steuerelement geladen oder daraus gespeichert.  
   
 ```  

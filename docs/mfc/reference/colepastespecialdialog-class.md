@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog::COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog::AddFormat
+- AFXODLGS/COlePasteSpecialDialog::AddLinkEntry
+- AFXODLGS/COlePasteSpecialDialog::AddStandardFormats
+- AFXODLGS/COlePasteSpecialDialog::CreateItem
+- AFXODLGS/COlePasteSpecialDialog::DoModal
+- AFXODLGS/COlePasteSpecialDialog::GetDrawAspect
+- AFXODLGS/COlePasteSpecialDialog::GetIconicMetafile
+- AFXODLGS/COlePasteSpecialDialog::GetPasteIndex
+- AFXODLGS/COlePasteSpecialDialog::GetSelectionType
+- AFXODLGS/COlePasteSpecialDialog::m_ps
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +116,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxodlgs.h  
   
-##  <a name="a-nameaddformata--colepastespecialdialogaddformat"></a><a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
+##  <a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
  Rufen Sie diese Funktion zum Hinzufügen neuer Formate für der Liste der Formate, die Ihre Anwendung in einem einfügen-Vorgang unterstützt.  
   
 ```  
@@ -158,7 +170,7 @@ void AddFormat(
   
  Weitere Informationen finden Sie unter der [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Enumerationstyps in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameaddlinkentrya--colepastespecialdialogaddlinkentry"></a><a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
+##  <a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
  Fügt einen neuen Eintrag zur Liste der unterstützten Formate der Zwischenablage.  
   
 ```  
@@ -172,7 +184,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ### <a name="return-value"></a>Rückgabewert  
  Ein [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) -Struktur, die Informationen für den neuen linkeintrag enthält.  
   
-##  <a name="a-nameaddstandardformatsa--colepastespecialdialogaddstandardformats"></a><a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
+##  <a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
  Rufen Sie diese Funktion, um die folgenden Formate der Zwischenablage in die Liste der Formate hinzufügen, die Ihre Anwendung in einem einfügen-Vorgang unterstützt:  
   
 ```  
@@ -197,7 +209,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
  Diese Formate werden zur Unterstützung von einbetten und Verknüpfen von verwendet.  
   
-##  <a name="a-namecolepastespecialdialoga--colepastespecialdialogcolepastespecialdialog"></a><a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
+##  <a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
  Erstellt ein `COlePasteSpecialDialog`-Objekt.  
   
 ```  
@@ -230,7 +242,7 @@ COlePasteSpecialDialog(
   
  Weitere Informationen finden Sie unter der [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Enumerationstyps in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreateitema--colepastespecialdialogcreateitem"></a><a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
+##  <a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
  Erstellt das neue Element, das im Dialogfeld "Inhalte einfügen" ausgewählt wurde.  
   
 ```  
@@ -247,7 +259,7 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion sollte nur aufgerufen werden, nachdem [DoModal](#domodal) gibt **IDOK**.  
   
-##  <a name="a-namedomodala--colepastespecialdialogdomodal"></a><a name="domodal"></a>COlePasteSpecialDialog::DoModal  
+##  <a name="domodal"></a>COlePasteSpecialDialog::DoModal  
  Zeigt das Dialogfeld OLE einfügen.  
   
 ```  
@@ -268,7 +280,7 @@ virtual INT_PTR DoModal();
   
  Wenn `DoModal` gibt **IDOK**, Sie können andere Memberfunktionen aufrufen zum Abrufen von Einstellungen oder Eingabe von Informationen vom Benutzer in das Dialogfeld.  
   
-##  <a name="a-namegetdrawaspecta--colepastespecialdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
  Bestimmt, ob der Benutzer das ausgewählte Element als Symbol angezeigt hat.  
   
 ```  
@@ -287,7 +299,7 @@ DVASPECT GetDrawAspect() const;
   
  Weitere Informationen zum Zeichnen von Aspekt, finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegeticonicmetafilea--colepastespecialdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
  Ruft die Metadatei, die vom Benutzer ausgewählten Element zugeordnet.  
   
 ```  
@@ -297,7 +309,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Rückgabewert  
  Das Handle der Metadatei mit den iconic Aspekt des ausgewählten Elements, wenn das Kontrollkästchen als Symbol ausgewählt wurde, wenn das Dialogfeld, durch Auswahl geschlossen wurde **OK**andernfalls **NULL**.  
   
-##  <a name="a-namegetpasteindexa--colepastespecialdialoggetpasteindex"></a><a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
+##  <a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
  Ruft der Indexwert dem Eintrag zugeordneten ausgewählt wurden.  
   
 ```  
@@ -310,7 +322,7 @@ int GetPasteIndex() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter der [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetselectiontypea--colepastespecialdialoggetselectiontype"></a><a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
  Bestimmt den Typ der Auswahl der Benutzer.  
   
 ```  
@@ -347,7 +359,7 @@ UINT GetSelectionType() const;
   
 - **COlePasteSpecialDialog::pasteStatic** das ausgewählte Format wurde eine Metadatei.  
   
-##  <a name="a-namempsa--colepastespecialdialogmps"></a><a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
+##  <a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
  Struktur des Typs **OLEUIPASTESPECIAL** zum Steuern des Verhaltens im Dialogfeld "Inhalte einfügen" verwendet.  
   
 ```  

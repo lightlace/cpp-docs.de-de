@@ -9,9 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlModule
 - CAtlModule
-- ATL.CAtlModule
+- ATLBASE/ATL::CAtlModule
+- ATLBASE/ATL::CAtlModule::CAtlModule
+- ATLBASE/ATL::CAtlModule::AddCommonRGSReplacements
+- ATLBASE/ATL::CAtlModule::AddTermFunc
+- ATLBASE/ATL::CAtlModule::GetGITPtr
+- ATLBASE/ATL::CAtlModule::GetLockCount
+- ATLBASE/ATL::CAtlModule::Lock
+- ATLBASE/ATL::CAtlModule::Term
+- ATLBASE/ATL::CAtlModule::Unlock
+- ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceD
+- ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceDHelper
+- ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceS
+- ATLBASE/ATL::CAtlModule::m_libid
+- ATLBASE/ATL::CAtlModule::m_pGIT
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +108,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="a-nameaddcommonrgsreplacementsa--catlmoduleaddcommonrgsreplacements"></a><a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
+##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
  Überschreiben Sie diese Methode zum Hinzufügen von Parametern zur ATL-Registrierungskomponente (Registrar) Ersatz-Zuordnung.  
   
 ```
@@ -115,7 +127,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
   
  Finden Sie unter [mithilfe von ersetzbaren Parametern (die Registrierungsstelle Präprozessor)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) für weitere Details.  
   
-##  <a name="a-nameaddtermfunca--catlmoduleaddtermfunc"></a><a name="addtermfunc"></a>CAtlModule::AddTermFunc  
+##  <a name="addtermfunc"></a>CAtlModule::AddTermFunc  
  Fügt eine neue Funktion aufgerufen werden, wenn das Modul beendet wird.  
   
 ```
@@ -132,7 +144,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="a-namecatlmodulea--catlmodulecatlmodule"></a><a name="catlmodule"></a>CAtlModule::CAtlModule  
+##  <a name="catlmodule"></a>CAtlModule::CAtlModule  
  Der Konstruktor.  
   
 ```
@@ -142,7 +154,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>Hinweise  
  Datenmember initialisiert, und einen kritischen Abschnitt, um das Modul Thread initiiert.  
   
-##  <a name="a-namedtora--catlmodulecatlmodule"></a><a name="dtor"></a>Von CAtlModule:: ~ von CAtlModule  
+##  <a name="dtor"></a>Von CAtlModule:: ~ von CAtlModule  
  Der Destruktor.  
   
 ```
@@ -152,7 +164,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle Datenmember frei.  
   
-##  <a name="a-namegetgitptra--catlmodulegetgitptr"></a><a name="getgitptr"></a>CAtlModule::GetGITPtr  
+##  <a name="getgitptr"></a>CAtlModule::GetGITPtr  
  Ruft einen Zeiger der globalen Schnittstellentabelle ab.  
   
 ```
@@ -173,7 +185,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  Finden Sie unter [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) Informationen auf der globalen Schnittstellentabelle.  
   
-##  <a name="a-namegetlockcounta--catlmodulegetlockcount"></a><a name="getlockcount"></a>CAtlModule::GetLockCount  
+##  <a name="getlockcount"></a>CAtlModule::GetLockCount  
  Gibt die Anzahl der Sperren zurück.  
   
 ```
@@ -183,7 +195,7 @@ virtual LONG GetLockCount() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Anzahl der Sperren zurück. Dieser Wert möglicherweise hilfreich für die Diagnose und Debuggen.  
   
-##  <a name="a-namelocka--catlmodulelock"></a><a name="lock"></a>CAtlModule::Lock  
+##  <a name="lock"></a>CAtlModule::Lock  
  Erhöht die Anzahl der Sperren.  
   
 ```
@@ -193,21 +205,21 @@ virtual LONG Lock() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Erhöht die Anzahl der Sperren, und gibt den aktualisierten Wert. Dieser Wert möglicherweise hilfreich für die Diagnose und Debuggen.  
   
-##  <a name="a-namemlibida--catlmodulemlibid"></a><a name="m_libid"></a>CAtlModule::m_libid  
+##  <a name="m_libid"></a>CAtlModule::m_libid  
  Enthält die GUID für das aktuelle Modul.  
   
 ```
 static GUID m_libid;
 ```  
   
-##  <a name="a-namempgita--catlmodulempgit"></a><a name="m_pgit"></a>CAtlModule::m_pGIT  
+##  <a name="m_pgit"></a>CAtlModule::m_pGIT  
  Ein Zeiger auf die Global Interface Table.  
   
 ```
 IGlobalInterfaceTable* m_pGIT;
 ```  
   
-##  <a name="a-nameterma--catlmoduleterm"></a><a name="term"></a>CAtlModule::Term  
+##  <a name="term"></a>CAtlModule::Term  
  Gibt alle Datenmember frei.  
   
 ```
@@ -217,7 +229,7 @@ void Term() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle Datenmember frei. Diese Methode wird vom Destruktor aufgerufen.  
   
-##  <a name="a-nameunlocka--catlmoduleunlock"></a><a name="unlock"></a>CAtlModule::Unlock  
+##  <a name="unlock"></a>CAtlModule::Unlock  
  Verringert die Sperrenanzahl.  
   
 ```
@@ -227,7 +239,7 @@ virtual LONG Unlock() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Verringert die Sperrenanzahl und gibt den aktualisierten Wert. Dieser Wert möglicherweise hilfreich für die Diagnose und Debuggen.  
   
-##  <a name="a-nameupdateregistryfromresourceda--catlmoduleupdateregistryfromresourced"></a><a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD  
+##  <a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD  
  Führt das Skript in einer angegebenen Ressource an-oder ein Objekt enthalten sind.  
   
 ```
@@ -265,7 +277,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
   
  Diese Methode ruft [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) und [IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister).  
   
-##  <a name="a-nameupdateregistryfromresourcedhelpera--catlmoduleupdateregistryfromresourcedhelper"></a><a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper  
+##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper  
  Diese Methode wird aufgerufen, indem Sie `UpdateRegistryFromResourceD` zum Durchführen der registrierungsaktualisierung.  
   
 ```
@@ -291,7 +303,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode stellt die Implementierung der [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced).  
   
-##  <a name="a-nameupdateregistryfromresourcesa--catlmoduleupdateregistryfromresources"></a><a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS  
+##  <a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS  
  Führt das Skript in einer angegebenen Ressource an-oder ein Objekt enthalten sind. Diese Methode an, die statisch mit der ATL-Registrierungskomponente verknüpft.  
   
 ```

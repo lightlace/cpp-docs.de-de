@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - ICommandUI
+- AFXWINFORMS/ICommandUI
+- AFXWINFORMS/icommandui__Check
+- AFXWINFORMS/ICommandUI::ContinueRouting
+- AFXWINFORMS/ICommandUI::Enabled
+- AFXWINFORMS/ICommandUI::ID
+- AFXWINFORMS/ICommandUI::Index
+- AFXWINFORMS/ICommandUI::Radio
+- AFXWINFORMS/ICommandUI::Text
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -73,7 +81,7 @@ interface class ICommandUI
   
  Weitere Informationen dazu, wie Benutzeroberflächenbefehlen in MFC verwaltet werden, finden Sie unter [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md).  
   
-## <a name="a-namechecka-icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+## <a name="check"></a>ICommandUI::Check  
 Legt die Benutzer-Interface-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.
 ```
 property UICheckState Check;
@@ -84,7 +92,7 @@ Diese Eigenschaft legt die Benutzer-Interface-Element für diesen Befehl an den 
 - 1 Überprüfen  
 - Legen Sie unbestimmt&2;  
 
-## <a name="a-namecontinueroutinga-icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting   
+## <a name="continuerouting"></a>ICommandUI::ContinueRouting   
 Weist den Befehl Weiterleitungsmechanismus routing der aktuellen Nachricht der Vererbungskette Handler fortgesetzt.
 ```
 void ContinueRouting();
@@ -92,7 +100,7 @@ void ContinueRouting();
 ## <a name="remarks"></a>Hinweise
 Dies ist ein erweiterter Member-Funktion, die in Verbindung mit einem Ereignishandler ON_COMMAND_EX verwendet werden soll, die FALSE zurückgibt. Weitere Informationen finden Sie unter Technische Hinweis TN006: Meldungszuordnungen.
 
-## <a name="a-nameenableda-icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled 
+## <a name="enabled"></a>ICommandUI::Enabled 
 Aktiviert oder deaktiviert die Benutzer-Interface-Element für diesen Befehl.
 ```
 property bool Enabled;
@@ -100,7 +108,7 @@ property bool Enabled;
 ## <a name="remarks"></a>Hinweise
 Diese Eigenschaft aktiviert bzw. deaktiviert das User Interface-Element für diesen Befehl. Legen Sie aktiviert, um "true" aktiviert das Element "false", um es zu deaktivieren.
 
-## <a name="a-nameida-icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+## <a name="id"></a>ICommandUI::ID  
 Ruft die ID des Benutzerobjekts für die Schnittstelle durch das ICommandUI-Objekt dargestellt wird.
 ```
 property unsigned int ID;
@@ -108,7 +116,7 @@ property unsigned int ID;
 ## <a name="remarks"></a>Hinweise
 Diese Eigenschaft ruft die ID (ein Handle) des Menüelements, Symbolleisten-Schaltfläche oder andere Benutzeroberflächen-Objekt, das vom ICommandUI-Objekt dargestellt.
 
-## <a name="a-nameindexa-icommanduiindex"></a><a name="index"></a>ICommandUI::Index   
+## <a name="index"></a>ICommandUI::Index   
 Ruft den Index des Benutzerobjekts für die Schnittstelle durch das ICommandUI-Objekt dargestellt wird.
 ```
 property unsigned int Index;
@@ -116,7 +124,7 @@ property unsigned int Index;
 ## <a name="remarks"></a>Hinweise
 Diese Eigenschaft ruft den Index (ein Handle) des Menüelements, Symbolleisten-Schaltfläche oder andere Benutzeroberflächen-Objekt, das vom ICommandUI-Objekt dargestellt.
 
-## <a name="a-nameradioa-icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio 
+## <a name="radio"></a>ICommandUI::Radio 
 Legt die Benutzer-Interface-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.
 ```
 property bool Radio;
@@ -124,7 +132,7 @@ property bool Radio;
 ## <a name="remarks"></a>Hinweise
 Diese Eigenschaft legt die Benutzer-Interface-Element für diesen Befehl an den entsprechenden Aktivierungszustand. Legen Sie "true" aktiviert das Element Sender, um. andernfalls FALSE.
 
-## <a name="a-nametexta-icommanduitext"></a><a name="text"></a>ICommandUI::Text 
+## <a name="text"></a>ICommandUI::Text 
 Legt den Text des Elements Schnittstelle Benutzer für diesen Befehl.
 ```
 property String^ Text;

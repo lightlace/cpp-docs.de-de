@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObject<Base>
-- ATL::CComObject
-- ATL::CComObject<Base>
-- ATL.CComObject
 - CComObject
+- ATLCOM/ATL::CComObject
+- ATLCOM/ATL::CComObject::CComObject
+- ATLCOM/ATL::CComObject::AddRef
+- ATLCOM/ATL::CComObject::CreateInstance
+- ATLCOM/ATL::CComObject::QueryInterface
+- ATLCOM/ATL::CComObject::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +90,7 @@ class CComObject : public Base
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
   
-##  <a name="a-nameaddrefa--ccomobjectaddref"></a><a name="addref"></a>CComObject::AddRef  
+##  <a name="addref"></a>CComObject::AddRef  
  Inkrementiert den Verweiszähler für das Objekt.  
   
 ```
@@ -98,7 +100,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Rückgabewert  
  Diese Funktion gibt den neuen inkrementiert Verweiszähler für das Objekt. Dieser Wert möglicherweise hilfreich bei der Diagnose oder testen.  
   
-##  <a name="a-nameccomobjecta--ccomobjectccomobject"></a><a name="ccomobject"></a>CComObject::CComObject  
+##  <a name="ccomobject"></a>CComObject::CComObject  
  Der Konstruktor inkrementiert die Sperrenanzahl des Moduls.  
   
 ```
@@ -114,7 +116,7 @@ CComObject(void* = NULL);
   
  Wenn ein `CComObject`-abgeleitetes Objekt wird erfolgreich erstellt mithilfe der **neue** Operatoren und der Verweiszähler ist 0. Um den Verweiszähler auf den korrekten Wert (1) festzulegen, stellen Sie einen Aufruf der [AddRef](#addref) Funktion.  
   
-##  <a name="a-namedtora--ccomobjectccomobject"></a><a name="dtor"></a>CComObject:: ~ CComObject  
+##  <a name="dtor"></a>CComObject:: ~ CComObject  
  Der Destruktor.  
   
 ```
@@ -125,7 +127,7 @@ CComObject();
  Alle zugeordnete Ressourcen freigegeben, Aufrufe [FinalRelease](ccomobjectrootex-class.md#finalrelease), und verringert das Modul Sperrenanzahl.  
 
   
-##  <a name="a-namecreateinstancea--ccomobjectcreateinstance"></a><a name="createinstance"></a>CComObject::CreateInstance  
+##  <a name="createinstance"></a>CComObject::CreateInstance  
  Die statische Funktion können Sie zum Erstellen eines neuen **CComObject** `Base` ** > ** -Objekts, ohne den Aufwand für das [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
@@ -149,7 +151,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
  [!code-cpp[NVC_ATL_COM NR.&39;](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
-##  <a name="a-namequeryinterfacea--ccomobjectqueryinterface"></a><a name="queryinterface"></a>CComObject::QueryInterface  
+##  <a name="queryinterface"></a>CComObject::QueryInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
   
 ```
@@ -171,7 +173,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="a-namereleasea--ccomobjectrelease"></a><a name="release"></a>CComObject::Release  
+##  <a name="release"></a>CComObject::Release  
  Dekrementiert den Verweiszähler für das Objekt.  
   
 ```

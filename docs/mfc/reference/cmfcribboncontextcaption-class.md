@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonContextCaption
+- AFXRIBBONBAR/CMFCRibbonContextCaption
+- AFXRIBBONBAR/CMFCRibbonContextCaption::GetColor
+- AFXRIBBONBAR/CMFCRibbonContextCaption::GetRightTabX
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +79,7 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxRibbonBar.h  
   
-##  <a name="a-namegetcolora--cmfcribboncontextcaptiongetcolor"></a><a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
+##  <a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
  Gibt die Hintergrundfarbe der Beschriftung zurück.  
   
 ```  
@@ -105,7 +108,7 @@ AFX_RibbonCategoryColor GetColor() const;
 ### <a name="remarks"></a>Hinweise  
  Die Farbe der Beschriftung kann festgelegt werden, durch Aufrufen von [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) oder [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).  
   
-##  <a name="a-namegetrighttabxa--cmfcribboncontextcaptiongetrighttabx"></a><a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
+##  <a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
  Ruft die Position des rechten Rands des Menübandregisterkarte der Kategorie ab.  
   
 ```  

@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSecurityAttributes
-- ATL::CSecurityAttributes
 - CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes::CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes::Set
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +81,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
   
-##  <a name="a-namecsecurityattributesa--csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
+##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
  Der Konstruktor.  
   
 ```
@@ -95,7 +96,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
  `bInheritsHandle`  
  Gibt an, ob das zurückgegebene Handle geerbt wird, wenn ein neuer Prozess erstellt wird. Wenn dieses Element auf true festgelegt ist, erbt der neue Prozess das Handle.  
   
-##  <a name="a-nameseta--csecurityattributesset"></a><a name="set"></a>CSecurityAttributes:: Set  
+##  <a name="set"></a>CSecurityAttributes:: Set  
  Rufen Sie diese Methode, um die Attribute der Festlegen der `CSecurityAttributes` Objekt.  
   
 ```

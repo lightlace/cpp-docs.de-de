@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CObArray
+- AFXCOLL/CObArray
+- AFXCOLL/CObArray::CObArray
+- AFXCOLL/CObArray::Add
+- AFXCOLL/CObArray::Append
+- AFXCOLL/CObArray::Copy
+- AFXCOLL/CObArray::ElementAt
+- AFXCOLL/CObArray::FreeExtra
+- AFXCOLL/CObArray::GetAt
+- AFXCOLL/CObArray::GetCount
+- AFXCOLL/CObArray::GetData
+- AFXCOLL/CObArray::GetSize
+- AFXCOLL/CObArray::GetUpperBound
+- AFXCOLL/CObArray::InsertAt
+- AFXCOLL/CObArray::IsEmpty
+- AFXCOLL/CObArray::RemoveAll
+- AFXCOLL/CObArray::RemoveAt
+- AFXCOLL/CObArray::SetAt
+- AFXCOLL/CObArray::SetAtGrow
+- AFXCOLL/CObArray::SetSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,7 +137,7 @@ class CObArray : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcoll.h  
   
-##  <a name="a-nameadda--cobarrayadd"></a><a name="add"></a>CObArray::Add  
+##  <a name="add"></a>CObArray::Add  
  Fügt ein neues Element am Ende ein Array, das Array um 1 vergrößert.  
   
 ```  
@@ -159,7 +178,7 @@ INT_PTR Add(CObject* newElement);
   
  `[1] = a CAge at $4468 40`  
   
-##  <a name="a-nameappenda--cobarrayappend"></a><a name="append"></a>CObArray::Append  
+##  <a name="append"></a>CObArray::Append  
  Rufen Sie diese Memberfunktion, um den Inhalt eines anderen Arrays an das Ende des angegebenen Arrays hinzuzufügen.  
   
 ```  
@@ -194,7 +213,7 @@ INT_PTR Append(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections&#76;](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
-##  <a name="a-namecopya--cobarraycopy"></a><a name="copy"></a>CObArray::Copy  
+##  <a name="copy"></a>CObArray::Copy  
  Rufen Sie diese Memberfunktion, um die Elemente im angegebenen Array mit den Elementen eines anderen Arrays des gleichen Typs zu überschreiben.  
   
 ```  
@@ -224,7 +243,7 @@ void Copy(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections&#77;](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
-##  <a name="a-namecobarraya--cobarraycobarray"></a><a name="cobarray"></a>CObArray::CObArray  
+##  <a name="cobarray"></a>CObArray::CObArray  
  Erstellt ein leeres `CObject` Arrays.  
   
 ```  
@@ -248,7 +267,7 @@ CObArray();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections&#78;](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
   
-##  <a name="a-nameelementata--cobarrayelementat"></a><a name="elementat"></a>CObArray::ElementAt  
+##  <a name="elementat"></a>CObArray::ElementAt  
  Gibt einen temporären Verweis auf den Elementzeiger innerhalb des Arrays zurück.  
   
 ```  
@@ -279,7 +298,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CObArray::GetSize](#getsize).  
   
-##  <a name="a-namefreeextraa--cobarrayfreeextra"></a><a name="freeextra"></a>CObArray::FreeExtra  
+##  <a name="freeextra"></a>CObArray::FreeExtra  
  Zusätzlichen Speicher, der belegt wurde, während das Array angebaut wurde frei.  
   
 ```  
@@ -303,7 +322,7 @@ void FreeExtra();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CObArray::GetData](#getdata).  
   
-##  <a name="a-namegetata--cobarraygetat"></a><a name="getat"></a>CObArray::GetAt  
+##  <a name="getat"></a>CObArray::GetAt  
  Gibt das Arrayelement am angegebenen Index zurück.  
   
 ```  
@@ -338,7 +357,7 @@ CObject* GetAt(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections&#79;](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
-##  <a name="a-namegetcounta--cobarraygetcount"></a><a name="getcount"></a>CObArray::GetCount  
+##  <a name="getcount"></a>CObArray::GetCount  
  Gibt die Anzahl der Arrayelemente.  
   
 ```  
@@ -367,7 +386,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections&#80;](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
-##  <a name="a-namegetdataa--cobarraygetdata"></a><a name="getdata"></a>CObArray::GetData  
+##  <a name="getdata"></a>CObArray::GetData  
  Verwenden Sie diese Member-Funktion, um direkten Zugriff auf die Elemente im Array zu erhalten.  
   
 ```  
@@ -400,7 +419,7 @@ CObject** GetData();
   
  [!code-cpp[NVC_MFCCollections&#81;](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
-##  <a name="a-namegetsizea--cobarraygetsize"></a><a name="getsize"></a>CObArray::GetSize  
+##  <a name="getsize"></a>CObArray::GetSize  
  Gibt die Größe des Arrays zurück.  
   
 ```  
@@ -426,7 +445,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections&#82;](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
-##  <a name="a-namegetupperbounda--cobarraygetupperbound"></a><a name="getupperbound"></a>CObArray::GetUpperBound  
+##  <a name="getupperbound"></a>CObArray::GetUpperBound  
  Gibt die aktuellen Obergrenze für dieses Array zurück.  
   
 ```  
@@ -457,7 +476,7 @@ INT_PTR GetUpperBound() const;
   
  [!code-cpp[NVC_MFCCollections&83;](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
-##  <a name="a-nameinsertata--cobarrayinsertat"></a><a name="insertat"></a>CObArray::InsertAt  
+##  <a name="insertat"></a>CObArray::InsertAt  
  Fügt ein Element (oder alle Elemente in einem anderen Array) am angegebenen Index ein.  
   
 ```  
@@ -521,7 +540,7 @@ void InsertAt(
   
  `[2] = a CAge at $4606 40`  
   
-##  <a name="a-nameisemptya--cobarrayisempty"></a><a name="isempty"></a>CObArray::IsEmpty  
+##  <a name="isempty"></a>CObArray::IsEmpty  
  Bestimmt, ob das Array leer ist.  
   
 ```  
@@ -531,7 +550,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn das Array leer ist; andernfalls 0.  
   
-##  <a name="a-nameoperatorata--cobarrayoperator--"></a><a name="operator_at"></a>CObArray::operator]  
+##  <a name="operator_at"></a>CObArray::operator]  
  Diese Indexoperatoren sind praktisch Ersatz für die `SetAt` und `GetAt` Funktionen.  
   
 ```  
@@ -560,7 +579,7 @@ CObject* operator[](int_ptr nindex) const;
   
  [!code-cpp[NVC_MFCCollections&#88;](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
-##  <a name="a-nameremovealla--cobarrayremoveall"></a><a name="removeall"></a>CObArray::RemoveAll  
+##  <a name="removeall"></a>CObArray::RemoveAll  
  Entfernt alle Zeiger aus diesem Array jedoch nicht tatsächlich die `CObject` Objekte.  
   
 ```  
@@ -588,7 +607,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections&#85;](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
-##  <a name="a-nameremoveata--cobarrayremoveat"></a><a name="removeat"></a>CObArray::RemoveAt  
+##  <a name="removeat"></a>CObArray::RemoveAt  
  Entfernt eine oder mehrere Elemente, beginnend am angegebenen Index in ein Array.  
   
 ```  
@@ -633,7 +652,7 @@ void RemoveAt(
   
  `[0] = a CAge at $4606 40`  
   
-##  <a name="a-namesetata--cobarraysetat"></a><a name="setat"></a>CObArray::SetAt  
+##  <a name="setat"></a>CObArray::SetAt  
  Legt das Arrayelement am angegebenen Index fest.  
   
 ```  
@@ -678,7 +697,7 @@ void SetAt(
   
  `[1] = a CAge at $47A0 40`  
   
-##  <a name="a-namesetatgrowa--cobarraysetatgrow"></a><a name="setatgrow"></a>CObArray::SetAtGrow  
+##  <a name="setatgrow"></a>CObArray::SetAtGrow  
  Legt das Arrayelement am angegebenen Index fest.  
   
 ```  
@@ -725,7 +744,7 @@ void SetAtGrow(
   
  `[3] = a CAge at $4840 65`  
   
-##  <a name="a-namesetsizea--cobarraysetsize"></a><a name="setsize"></a>CObArray::SetSize  
+##  <a name="setsize"></a>CObArray::SetSize  
  Legt die Größe des ein leeres oder vorhandenes Array fest. belegt Speicher aus, falls erforderlich.  
   
 ```  

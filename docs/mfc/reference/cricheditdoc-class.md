@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRichEditDoc
+- AFXRICH/CRichEditDoc
+- AFXRICH/CRichEditDoc::CreateClientItem
+- AFXRICH/CRichEditDoc::GetStreamFormat
+- AFXRICH/CRichEditDoc::GetView
+- AFXRICH/CRichEditDoc::m_bRTF
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CRichEditDoc : public COleServerDoc
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxrich.h  
   
-##  <a name="a-namecreateclientitema--cricheditdoccreateclientitem"></a><a name="createclientitem"></a>CRichEditDoc::CreateClientItem  
+##  <a name="createclientitem"></a>CRichEditDoc::CreateClientItem  
  Rufen Sie diese Funktion zum Erstellen einer `CRichEditCntrItem` -Objekt und fügen sie zu diesem Dokument.  
   
 ```  
@@ -114,7 +119,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
  Weitere Informationen finden Sie unter der [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetstreamformata--cricheditdocgetstreamformat"></a><a name="getstreamformat"></a>CRichEditDoc::GetStreamFormat  
+##  <a name="getstreamformat"></a>CRichEditDoc::GetStreamFormat  
  Rufen Sie diese Funktion, um zu bestimmen, das Text-Format für den Inhalt des rich-Edit streaming.  
   
 ```  
@@ -131,7 +136,7 @@ int GetStreamFormat() const;
 ### <a name="remarks"></a>Hinweise  
  Der zurückgegebene Wert basiert auf der [M_bRTF](#m_brtf) -Datenmember. Diese Funktion gibt `SF_RTF` Wenn `m_bRTF` ist **TRUE**, andernfalls `SF_TEXT`.  
   
-##  <a name="a-namegetviewa--cricheditdocgetview"></a><a name="getview"></a>CRichEditDoc::GetView  
+##  <a name="getview"></a>CRichEditDoc::GetView  
  Rufen Sie diese Funktion für den Zugriff auf die [CRichEditView](../../mfc/reference/cricheditview-class.md) Objekt zugeordneten `CRichEditDoc` Objekt.  
   
 ```  
@@ -144,7 +149,7 @@ virtual CRichEditView* GetView() const;
 ### <a name="remarks"></a>Hinweise  
  Der Text und Formatierung Informationen enthalten sind die `CRichEditView` Objekt. Das `CRichEditDoc` -Objekt verwaltet die OLE-Elemente für die Serialisierung. Sollte es nicht nur eine `CRichEditView` für jede `CRichEditDoc`.  
   
-##  <a name="a-namembrtfa--cricheditdocmbrtf"></a><a name="m_brtf"></a>CRichEditDoc::m_bRTF  
+##  <a name="m_brtf"></a>CRichEditDoc::m_bRTF  
  Wenn **TRUE**, gibt an, dass [CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin) und [CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout) sollten Absatz- und Zeichenformaten Merkmale speichern.  
   
 ```  

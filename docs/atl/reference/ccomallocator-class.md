@@ -9,9 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComAllocator
-- ATL::CComAllocator
 - CComAllocator
+- ATLBASE/ATL::CComAllocator
+- ATLBASE/ATL::CComAllocator::Allocate
+- ATLBASE/ATL::CComAllocator::Free
+- ATLBASE/ATL::CComAllocator::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -66,7 +68,7 @@ class CComAllocator
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="a-nameallocatea--ccomallocatorallocate"></a><a name="allocate"></a>CComAllocator::Allocate  
+##  <a name="allocate"></a>CComAllocator::Allocate  
  Rufen Sie diese statische Funktion auf, um Arbeitsspeicher zu belegen.  
   
 ```
@@ -83,7 +85,7 @@ static void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Hinweise  
  Belegt Arbeitsspeicher. Finden Sie unter [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) für weitere Details.  
   
-##  <a name="a-namefreea--ccomallocatorfree"></a><a name="free"></a>CComAllocator::Free  
+##  <a name="free"></a>CComAllocator::Free  
  Rufen Sie diese statischen Funktion um belegten Speicher freizugeben.  
   
 ```
@@ -97,7 +99,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt den Arbeitsspeicher frei. Finden Sie unter [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) für weitere Details.  
   
-##  <a name="a-namereallocatea--ccomallocatorreallocate"></a><a name="reallocate"></a>CComAllocator::Reallocate  
+##  <a name="reallocate"></a>CComAllocator::Reallocate  
  Rufen Sie diese statischen Funktion auf, um Arbeitsspeicher neu zuzuordnen.  
   
 ```

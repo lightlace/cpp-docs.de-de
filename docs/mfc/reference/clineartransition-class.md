@@ -10,7 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CLinearTransition
-- afxanimationcontroller/CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition::CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition::Create
+- AFXANIMATIONCONTROLLER/CLinearTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CLinearTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CLinearTransition : public CBaseTransition;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxanimationcontroller.h  
   
-##  <a name="a-nameclineartransitiona--clineartransitionclineartransition"></a><a name="clineartransition"></a>CLinearTransition::CLinearTransition  
+##  <a name="clineartransition"></a>CLinearTransition::CLinearTransition  
  Erstellt einen linearen Übergang-Objekt und initialisiert es mit Dauer und endgültigen Wert.  
   
 ```  
@@ -99,7 +103,7 @@ CLinearTransition(
  `dblFinalValue`  
  Der Wert der Animationsvariablen am Ende des Übergangs.  
   
-##  <a name="a-namecreatea--clineartransitioncreate"></a><a name="create"></a>CLinearTransition::Create  
+##  <a name="create"></a>CLinearTransition::Create  
  Ruft die Übergangsbibliothek um gekapselte COM-Übergangsobjekt zu erstellen.  
   
 ```  
@@ -115,14 +119,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Übergang erfolgreich erstellt wird. andernfalls FALSE.  
   
-##  <a name="a-namemdblfinalvaluea--clineartransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
  Der Wert der Animationsvariablen am Ende des Übergangs.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdurationa--clineartransitionmduration"></a><a name="m_duration"></a>CLinearTransition::m_duration  
+##  <a name="m_duration"></a>CLinearTransition::m_duration  
  Die Dauer des Übergangs.  
   
 ```  

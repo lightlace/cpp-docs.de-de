@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComContainedObject
+- ATLCOM/ATL::CComContainedObject
+- ATLCOM/ATL::CComContainedObject::CComContainedObject
+- ATLCOM/ATL::CComContainedObject::AddRef
+- ATLCOM/ATL::CComContainedObject::GetControllingUnknown
+- ATLCOM/ATL::CComContainedObject::QueryInterface
+- ATLCOM/ATL::CComContainedObject::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +93,7 @@ class CComContainedObject : public Base
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
   
-##  <a name="a-nameaddrefa--ccomcontainedobjectaddref"></a><a name="addref"></a>CComContainedObject::AddRef  
+##  <a name="addref"></a>CComContainedObject::AddRef  
  Inkrementiert den Verweiszähler für das Objekt.  
   
 ```
@@ -97,7 +103,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der möglicherweise hilfreich für die Diagnose oder testen.  
   
-##  <a name="a-nameccomcontainedobjecta--ccomcontainedobjectccomcontainedobject"></a><a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject  
+##  <a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject  
  Der Konstruktor.  
   
 ```
@@ -111,7 +117,7 @@ CComContainedObject(void* pv);
 ### <a name="remarks"></a>Hinweise  
  Legt die `m_pOuterUnknown` Member Zeiger (vererbt, bis die `Base` Klasse) auf `pv`.  
   
-##  <a name="a-namedtora--ccomcontainedobjectccomcontainedobject"></a><a name="dtor"></a>CComContainedObject:: ~ CComContainedObject  
+##  <a name="dtor"></a>CComContainedObject:: ~ CComContainedObject  
  Der Destruktor.  
   
 ```
@@ -121,7 +127,7 @@ CComContainedObject(void* pv);
 ### <a name="remarks"></a>Hinweise  
  Gibt alle zugeordnete Ressourcen frei.  
   
-##  <a name="a-namegetcontrollingunknowna--ccomcontainedobjectgetcontrollingunknown"></a><a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
+##  <a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
  Gibt die `m_pOuterUnknown` Member Zeiger (über vererbt der *Base* Klasse), enthält des Besitzerobjekts **IUnknown**.  
   
 ```
@@ -134,7 +140,7 @@ IUnknown* GetControllingUnknown();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ist möglicherweise virtuellen Wenn `Base` deklariert hat, die [DECLARE_GET_CONTROLLING_UNKNOWN](http://msdn.microsoft.com/library/82b0199a-a9d5-4f95-a711-fa1ae18e1f77) Makro.  
   
-##  <a name="a-namequeryinterfacea--ccomcontainedobjectqueryinterface"></a><a name="queryinterface"></a>CComContainedObject::QueryInterface  
+##  <a name="queryinterface"></a>CComContainedObject::QueryInterface  
  Ruft einen Zeiger auf die Schnittstelle, die in dem Objekt angefordert.  
   
 ```
@@ -156,7 +162,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="a-namereleasea--ccomcontainedobjectrelease"></a><a name="release"></a>CComContainedObject::Release  
+##  <a name="release"></a>CComContainedObject::Release  
  Dekrementiert den Verweiszähler für das Objekt.  
   
 ```

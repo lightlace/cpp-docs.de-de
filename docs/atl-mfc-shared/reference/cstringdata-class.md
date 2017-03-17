@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStringData
+- ATLSIMPSTR/ATL::CStringData
+- ATLSIMPSTR/ATL::AddRef
+- ATLSIMPSTR/ATL::data
+- ATLSIMPSTR/ATL::IsLocked
+- ATLSIMPSTR/ATL::IsShared
+- ATLSIMPSTR/ATL::Lock
+- ATLSIMPSTR/ATL::Release
+- ATLSIMPSTR/ATL::Unlock
+- ATLSIMPSTR/ATL::nAllocLength
+- ATLSIMPSTR/ATL::nDataLength
+- ATLSIMPSTR/ATL::nRefs
+- ATLSIMPSTR/ATL::pStringMgr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +110,7 @@ struct CStringData
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsimpstr.h  
   
-##  <a name="a-nameaddrefa--cstringdataaddref"></a><a name="addref"></a>CStringData::AddRef  
+##  <a name="addref"></a>CStringData::AddRef  
  Inkrementiert den Verweiszähler des String-Objekt.  
   
 ```
@@ -111,7 +123,7 @@ void AddRef() throw();
 > [!NOTE]
 >  Rufen Sie diese Methode nicht auf eine Zeichenfolge mit einer negativen Verweisanzahl, da eine negative Anzahl gibt an, dass der Zeichenfolgenpuffer gesperrt ist.  
   
-##  <a name="a-namedataa--cstringdatadata"></a><a name="data"></a>CStringData::data  
+##  <a name="data"></a>CStringData::data  
  Gibt einen Zeiger auf den Zeichenpuffer eines Zeichenfolgenobjekts zurück.  
   
 ```
@@ -127,7 +139,7 @@ void* data() throw();
 > [!NOTE]
 >  Dieser Puffer ist nicht von zugeordnet der `CStringData` Objekt jedoch über den Zeichenfolgen-Manager bei Bedarf. Wenn zugeordnet, wird der Puffer auf das Datenobjekt Zeichenfolge angefügt.  
   
-##  <a name="a-nameislockeda--cstringdataislocked"></a><a name="islocked"></a>CStringData::IsLocked  
+##  <a name="islocked"></a>CStringData::IsLocked  
  Bestimmt, ob die Zeichenpuffer gesperrt ist.  
   
 ```
@@ -140,7 +152,7 @@ bool IsLocked() const throw();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um zu bestimmen, ob ein Zeichenfolgenobjekt der Zeichenpuffer gesperrt ist.  
   
-##  <a name="a-nameisshareda--cstringdataisshared"></a><a name="isshared"></a>CStringData::IsShared  
+##  <a name="isshared"></a>CStringData::IsShared  
  Bestimmt, ob die Zeichenpuffer.  
   
 ```
@@ -153,7 +165,7 @@ bool IsShared() const throw();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um zu bestimmen, ob die Zeichenpuffer eines String-Objekts von mehreren String-Objekten gegenwärtig freigegeben ist.  
   
-##  <a name="a-namelocka--cstringdatalock"></a><a name="lock"></a>CStringData::Lock  
+##  <a name="lock"></a>CStringData::Lock  
  Sperrt den Zeichenpuffer zugeordnete String-Objekt.  
   
 ```
@@ -166,7 +178,7 @@ void Lock() throw();
 > [!NOTE]
 >  Ein Zeichenpuffer kann nur gesperrt werden, falls der Puffer in höhere Zeichenfolgenobjekte nicht freigegeben wird.  
   
-##  <a name="a-namenalloclengtha--cstringdatanalloclength"></a><a name="nalloclength"></a>CStringData::nAllocLength  
+##  <a name="nalloclength"></a>CStringData::nAllocLength  
  Die Länge des Zeichenpuffers reservierte.  
   
 ```
@@ -176,7 +188,7 @@ int nAllocLength;
 ### <a name="remarks"></a>Hinweise  
  Speichert die Länge des Datenpuffers zugeordneten in `XCHAR`s (einschließlich abschließenden Nullzeichen).  
   
-##  <a name="a-namendatalengtha--cstringdatandatalength"></a><a name="ndatalength"></a>CStringData::nDataLength  
+##  <a name="ndatalength"></a>CStringData::nDataLength  
  Aktuelle Länge der String-Objekt.  
   
 ```
@@ -186,7 +198,7 @@ int nDataLength;
 ### <a name="remarks"></a>Hinweise  
  Speichert die Länge der aktuell verwendeten Daten in `XCHAR`s (einschließlich abschließenden Nullzeichen).  
   
-##  <a name="a-namenrefsa--cstringdatanrefs"></a><a name="nrefs"></a>CStringData::nRefs  
+##  <a name="nrefs"></a>CStringData::nRefs  
  Der Verweiszähler des String-Objekts.  
   
 ```
@@ -196,7 +208,7 @@ long nRefs;
 ### <a name="remarks"></a>Hinweise  
  Speichert den Verweiszähler des String-Objekts. Dieser Zähler gibt die Anzahl der Zeichenfolgenobjekte der höheren, die das Datenobjekt Zeichenfolge zugeordnet sind. Ein negativer Wert gibt an, dass das Datenobjekt Zeichenfolge derzeit gesperrt ist.  
   
-##  <a name="a-namepstringmgra--cstringdatapstringmgr"></a><a name="pstringmgr"></a>CStringData::pStringMgr  
+##  <a name="pstringmgr"></a>CStringData::pStringMgr  
  Der Speicher-Manager des zugeordneten Objekts.  
   
 ```
@@ -206,7 +218,7 @@ IAtlStringMgr* pStringMgr;
 ### <a name="remarks"></a>Hinweise  
  Speichert die Speicher-Manager für das Objekt zugeordnete Zeichenfolge. Weitere Informationen zu Speicher-Manager und Zeichenfolgen finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-namereleasea--cstringdatarelease"></a><a name="release"></a>CStringData::Release  
+##  <a name="release"></a>CStringData::Release  
  Dekrementiert den Verweiszähler des String-Objekts.  
   
 ```
@@ -220,7 +232,7 @@ void Release() throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities&#104;](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
-##  <a name="a-nameunlocka--cstringdataunlock"></a><a name="unlock"></a>CStringData::Unlock  
+##  <a name="unlock"></a>CStringData::Unlock  
  Entsperrt den Zeichenpuffer zugeordnete String-Objekt.  
   
 ```

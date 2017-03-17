@@ -10,8 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IThreadPoolConfig
-- ATL::IThreadPoolConfig
-- ATL.IThreadPoolConfig
+- ATLUTIL/ATL::IThreadPoolConfig
+- ATLUTIL/ATL::GetSize
+- ATLUTIL/ATL::GetTimeout
+- ATLUTIL/ATL::SetSize
+- ATLUTIL/ATL::SetTimeout
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +74,7 @@ __interface
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlutil.h  
   
-##  <a name="a-namegetsizea--ithreadpoolconfiggetsize"></a><a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
  Rufen Sie diese Methode, um die Anzahl der Threads im Pool zu erhalten.  
   
 ```
@@ -88,7 +91,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities&#134;](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
-##  <a name="a-namegettimeouta--ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
  Rufen Sie diese Methode, um die maximale Zeit in Millisekunden abzurufen, die der Threadpool, bis ein Thread warten soll beendet.  
   
 ```
@@ -105,7 +108,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="example"></a>Beispiel  
  Finden Sie unter [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="a-namesetsizea--ithreadpoolconfigsetsize"></a><a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
  Rufen Sie diese Methode, um die Anzahl der Threads im Pool festgelegt.  
   
 ```
@@ -126,7 +129,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="example"></a>Beispiel  
  Finden Sie unter [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="a-namesettimeouta--ithreadpoolconfigsettimeout"></a><a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
  Rufen Sie diese Methode, um die maximale Zeit in Millisekunden, die der Threadpool, bis ein Thread warten soll beendet.  
   
 ```

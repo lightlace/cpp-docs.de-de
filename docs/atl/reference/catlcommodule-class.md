@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlComModule
 - CAtlComModule
-- ATL::CAtlComModule
+- ATLBASE/ATL::CAtlComModule
+- ATLBASE/ATL::CAtlComModule::CAtlComModule
+- ATLBASE/ATL::CAtlComModule::RegisterServer
+- ATLBASE/ATL::CAtlComModule::RegisterTypeLib
+- ATLBASE/ATL::CAtlComModule::UnregisterServer
+- ATLBASE/ATL::CAtlComModule::UnRegisterTypeLib
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +85,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="a-namecatlcommodulea--catlcommodulecatlcommodule"></a><a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
+##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
  Der Konstruktor.  
   
 ```
@@ -91,7 +95,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>Hinweise  
  Initialisiert das Modul.  
   
-##  <a name="a-namedtora--catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule:: ~ CAtlComModule  
+##  <a name="dtor"></a>CAtlComModule:: ~ CAtlComModule  
  Der Destruktor.  
   
 ```
@@ -101,7 +105,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle Klassenfactorys frei.  
   
-##  <a name="a-nameregisterservera--catlcommoduleregisterserver"></a><a name="registerserver"></a>CAtlComModule::RegisterServer  
+##  <a name="registerserver"></a>CAtlComModule::RegisterServer  
  Rufen Sie diese Methode zum Aktualisieren der Registrierungs für jedes Objekt in der objektzuordnung.  
   
 ```
@@ -121,7 +125,7 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ### <a name="remarks"></a>Hinweise  
  Ruft die globale Funktion [AtlComModuleRegisterServer](http://msdn.microsoft.com/library/d11a0c91-0c56-4b1b-a5f5-1287970f798b).  
   
-##  <a name="a-nameregistertypeliba--catlcommoduleregistertypelib"></a><a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
+##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
  Rufen Sie diese Methode, um eine Typbibliothek zu registrieren.  
   
 ```
@@ -139,7 +143,7 @@ HRESULT RegisterTypeLib();
 ### <a name="remarks"></a>Hinweise  
  Informationen zu einer Typbibliothek und der Registrierung hinzugefügt. Enthält die Modulinstanz mehrere Typbibliotheken, verwenden Sie die erste Version dieser Methode, um anzugeben, welche Typbibliothek verwendet werden soll.  
   
-##  <a name="a-nameunregisterservera--catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
+##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
  Rufen Sie diese Methode, um jedes Objekt in der objektzuordnung aufheben.  
   
 ```
@@ -161,7 +165,7 @@ HRESULT UnregisterServer(
 ### <a name="remarks"></a>Hinweise  
  Ruft die globale Funktion [AtlComModuleUnregisterServer](http://msdn.microsoft.com/library/c4ef3da4-def7-4aaf-b005-573a02e389d5).  
   
-##  <a name="a-nameunregistertypeliba--catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
+##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
  Rufen Sie diese Methode, um die Registrierung einer Typbibliothek aufzuheben.  
   
 ```

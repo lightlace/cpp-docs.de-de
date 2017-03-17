@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.IAxWinAmbientDispatchEx
 - IAxWinAmbientDispatchEx
-- ATL::IAxWinAmbientDispatchEx
+- No header/ATL::IAxWinAmbientDispatchEx
+- No header/ATL::SetAmbientDispatch
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +81,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 |Typbibliothek|ATL.dll|  
 |C++|konnte IRegistrar (auch in ATLBase.h enthalten)|  
   
-##  <a name="a-namesetambientdispatcha--iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
+##  <a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
  Diese Methode wird aufgerufen, um die Standardschnittstelle für die ambient-Eigenschaft mit einer benutzerdefinierten Benutzeroberfläche zu ergänzen.  
   
 ```

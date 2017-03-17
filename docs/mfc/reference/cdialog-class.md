@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialog
+- AFXWIN/CDialog
+- AFXWIN/CDialog::CDialog
+- AFXWIN/CDialog::Create
+- AFXWIN/CDialog::CreateIndirect
+- AFXWIN/CDialog::DoModal
+- AFXWIN/CDialog::EndDialog
+- AFXWIN/CDialog::GetDefID
+- AFXWIN/CDialog::GotoDlgCtrl
+- AFXWIN/CDialog::InitModalIndirect
+- AFXWIN/CDialog::MapDialogRect
+- AFXWIN/CDialog::NextDlgCtrl
+- AFXWIN/CDialog::OnInitDialog
+- AFXWIN/CDialog::OnSetFont
+- AFXWIN/CDialog::PrevDlgCtrl
+- AFXWIN/CDialog::SetDefID
+- AFXWIN/CDialog::SetHelpID
+- AFXWIN/CDialog::OnCancel
+- AFXWIN/CDialog::OnOK
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -135,7 +153,7 @@ class CDialog : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-namecdialoga--cdialogcdialog"></a><a name="cdialog"></a>CDialog::CDialog  
+##  <a name="cdialog"></a>CDialog::CDialog  
  Um ressourcenbasierte modales Dialogfeld zu konstruieren, rufen Sie entweder öffentlichen Form des Konstruktors.  
   
 ```  
@@ -170,7 +188,7 @@ CDialog();
   
  Verwenden Sie zum Erstellen eines nicht modalen Dialogfelds geschützter Form der `CDialog` Konstruktor. Der Konstruktor ist geschützt, da Sie eine eigene Klasse im Dialogfeld zum Implementieren eines nicht modalen Dialogfelds abgeleitet werden müssen. Erstellen eines nicht modalen Dialogfelds ist ein zweistufiger Prozess. Rufen Sie zuerst den Konstruktor; Rufen Sie dann die **erstellen** Member-Funktion zum Erstellen einer Ressource-basiertes Dialogfeld oder rufen Sie `CreateIndirect` im Dialogfeld aus einer Vorlage im Arbeitsspeicher erstellen.  
   
-##  <a name="a-namecreatea--cdialogcreate"></a><a name="create"></a>CDialog::Create  
+##  <a name="create"></a>CDialog::Create  
  Rufen Sie **erstellen** ein nicht modales Dialogfeld mit einer Vorlage im Dialogfeld aus einer Ressource zu erstellen.  
   
 ```  
@@ -213,7 +231,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog&#62;](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
   
-##  <a name="a-namecreateindirecta--cdialogcreateindirect"></a><a name="createindirect"></a>CDialog::CreateIndirect  
+##  <a name="createindirect"></a>CDialog::CreateIndirect  
  Rufen Sie diese Memberfunktion, um ein nicht modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher zu erstellen.  
   
 ```  
@@ -253,7 +271,7 @@ virtual BOOL CreateIndirect(
   
  Dialogfelder, die ActiveX-Steuerelemente enthalten, erfordern zusätzliche Informationen einer **DLGINIT** Ressource. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage einen MFC-ActiveX-Steuerelemente erstellen." Knowledge Base-Artikeln finden Sie in der MSDN Library Visual Studio-Dokumentation oder unter [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="a-namedomodala--cdialogdomodal"></a><a name="domodal"></a>Methode CDialog:: DoModal  
+##  <a name="domodal"></a>Methode CDialog:: DoModal  
  Rufen Sie diese Memberfunktion zum Aufrufen des modale Dialogfelds und das Dialogfeld Ergebnis zurückgeben.  
   
 ```  
@@ -274,7 +292,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog&#63;](../../mfc/codesnippet/cpp/cdialog-class_2.cpp)]  
   
-##  <a name="a-nameenddialoga--cdialogenddialog"></a><a name="enddialog"></a>CDialog::EndDialog  
+##  <a name="enddialog"></a>CDialog::EndDialog  
  Rufen Sie diese Memberfunktion, um ein modales Dialogfeld zu beenden.  
   
 ```  
@@ -297,7 +315,7 @@ void EndDialog(int nResult);
   
  [!code-cpp[NVC_MFCControlLadenDialog&#65;](../../mfc/codesnippet/cpp/cdialog-class_4.cpp)]  
   
-##  <a name="a-namegetdefida--cdialoggetdefid"></a><a name="getdefid"></a>CDialog::GetDefID  
+##  <a name="getdefid"></a>CDialog::GetDefID  
  Rufen Sie die `GetDefID` Memberfunktion, die die ID des Steuerelements pushbutton Standard für ein Dialogfeld zu erhalten.  
   
 ```  
@@ -310,7 +328,7 @@ DWORD GetDefID() const;
 ### <a name="remarks"></a>Hinweise  
  Dies ist normalerweise auf die Schaltfläche OK.  
   
-##  <a name="a-namegotodlgctrla--cdialoggotodlgctrl"></a><a name="gotodlgctrl"></a>CDialog::GotoDlgCtrl  
+##  <a name="gotodlgctrl"></a>CDialog::GotoDlgCtrl  
  Verschiebt den Fokus auf das angegebene Steuerelement im Dialogfeld.  
   
 ```  
@@ -327,7 +345,7 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem).  
   
-##  <a name="a-nameinitmodalindirecta--cdialoginitmodalindirect"></a><a name="initmodalindirect"></a>DLGTEMPL  
+##  <a name="initmodalindirect"></a>DLGTEMPL  
  Rufen Sie diese Memberfunktion zum Initialisieren Sie ein modales Dialogfeld-Objekt, das mit einer im Dialogfeld Vorlage, die Sie im Speicher erstellen.  
   
 ```  
@@ -363,7 +381,7 @@ BOOL InitModalIndirect(
   
  Dialogfelder, die ActiveX-Steuerelemente enthalten, erfordern zusätzliche Informationen einer **DLGINIT** Ressource. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage einen MFC-ActiveX-Steuerelemente erstellen." Knowledge Base-Artikeln finden Sie in der MSDN Library Visual Studio-Dokumentation oder unter [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="a-namemapdialogrecta--cdialogmapdialogrect"></a><a name="mapdialogrect"></a>CDialog::MapDialogRect  
+##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
  Rufen Sie die im Dialogfeld Einheiten eines Rechtecks Bildschirm Einheiten zu konvertieren.  
   
 ```  
@@ -381,7 +399,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  Die `MapDialogRect` Memberfunktion ersetzt die Dialogfeld-Einheiten im `lpRect` mit Bildschirm Einheiten (Pixel), damit das Rechteck zum Erstellen eines Dialogfelds oder Positionieren Sie ein Steuerelement in einem Feld verwendet werden kann.  
   
-##  <a name="a-namenextdlgctrla--cdialognextdlgctrl"></a><a name="nextdlgctrl"></a>CDialog::NextDlgCtrl  
+##  <a name="nextdlgctrl"></a>CDialog::NextDlgCtrl  
  Bewegt den Fokus zum nächsten Steuerelement im Dialogfeld.  
   
 ```  
@@ -391,7 +409,7 @@ void NextDlgCtrl() const;
 ### <a name="remarks"></a>Hinweise  
  Wenn der Fokus auf das letzte Steuerelement im Dialogfeld befindet, wird er auf das erste Steuerelement verschoben.  
   
-##  <a name="a-nameoncancela--cdialogoncancel"></a><a name="oncancel"></a>CDialog::OnCancel  
+##  <a name="oncancel"></a>CDialog::OnCancel  
  Das Framework ruft diese Methode auf, wenn der Benutzer klickt **Abbrechen** oder Drücken von ESC in einem Dialogfeld mit oder ohne Modus.  
   
 ```  
@@ -409,7 +427,7 @@ virtual void OnCancel();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog&#66;](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]  
   
-##  <a name="a-nameoninitdialoga--cdialogoninitdialog"></a><a name="oninitdialog"></a>CDialog::  
+##  <a name="oninitdialog"></a>CDialog::  
  Diese Methode wird aufgerufen, als Antwort auf die `WM_INITDIALOG` Nachricht.  
   
 ```  
@@ -432,7 +450,7 @@ virtual BOOL OnInitDialog();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog&#67;](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]  
   
-##  <a name="a-nameonoka--cdialogonok"></a><a name="onok"></a>CDialog::OnOK  
+##  <a name="onok"></a>CDialog::OnOK  
  Wird aufgerufen, wenn der Benutzer klickt auf die **OK** Schaltfläche (die Schaltfläche mit einer ID IDOK).  
   
 ```  
@@ -450,7 +468,7 @@ virtual void OnOK();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog&#68;](../../mfc/codesnippet/cpp/cdialog-class_7.cpp)]  
   
-##  <a name="a-nameonsetfonta--cdialogonsetfont"></a><a name="onsetfont"></a>CDialog::OnSetFont  
+##  <a name="onsetfont"></a>CDialog::OnSetFont  
  Gibt die Schriftart, die ein Steuerelement im Dialogfeld beim Zeichnen von Text verwendet.  
   
 ```  
@@ -469,7 +487,7 @@ Virtual void OnSetFont(CFont* pFont);
 > [!NOTE]
 >  Wenn Sie verwenden, überschreiben Sie diese Methode kann kein `CFileDialog` Objekt in einem Programm, das unter kompiliert wird [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Weitere Informationen zur Änderung der `CFileDialog` unter [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
   
-##  <a name="a-nameprevdlgctrla--cdialogprevdlgctrl"></a><a name="prevdlgctrl"></a>CDialog::PrevDlgCtrl  
+##  <a name="prevdlgctrl"></a>CDialog::PrevDlgCtrl  
  Setzt den Fokus in das vorherige Steuerelement in das Dialogfeld.  
   
 ```  
@@ -479,7 +497,7 @@ void PrevDlgCtrl() const;
 ### <a name="remarks"></a>Hinweise  
  Wenn der Fokus auf das erste Steuerelement im Dialogfeld befindet, verschiebt er bis zum letzten Steuerelement im Feld an.  
   
-##  <a name="a-namesetdefida--cdialogsetdefid"></a><a name="setdefid"></a>CDialog::SetDefID  
+##  <a name="setdefid"></a>CDialog::SetDefID  
  Ändert das pushbutton Standardsteuerelement für ein Dialogfeld an.  
   
 ```  
@@ -490,7 +508,7 @@ void SetDefID(UINT nID);
  `nID`  
  Gibt die ID des Steuerelements pushbutton, die standardmäßig verwendet wird.  
   
-##  <a name="a-namesethelpida--cdialogsethelpid"></a><a name="sethelpid"></a>CDialog::SetHelpID  
+##  <a name="sethelpid"></a>CDialog::SetHelpID  
  Legt eine kontextbezogene Hilfe-ID für das Dialogfeld.  
   
 ```  

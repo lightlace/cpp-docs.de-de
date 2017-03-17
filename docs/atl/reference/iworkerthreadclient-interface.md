@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.IWorkerThreadClient
-- ATL::IWorkerThreadClient
 - IWorkerThreadClient
+- ATLUTIL/ATL::IWorkerThreadClient
+- ATLUTIL/ATL::CloseHandle
+- ATLUTIL/ATL::Execute
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -68,7 +69,7 @@ __interface IWorkerThreadClient
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlutil.h  
   
-##  <a name="a-nameclosehandlea--iworkerthreadclientclosehandle"></a><a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
+##  <a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
  Implementieren Sie diese Methode, um das diesem Objekt zugeordnete Handle zu schließen.  
   
 ```
@@ -90,7 +91,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
   
  [!code-cpp[NVC_ATL_Utilities&#135;](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]  
   
-##  <a name="a-nameexecutea--iworkerthreadclientexecute"></a><a name="execute"></a>IWorkerThreadClient::Execute  
+##  <a name="execute"></a>IWorkerThreadClient::Execute  
  Implementieren Sie diese Methode, um Code auszuführen, wenn das Handle, das diesem Objekt zugeordnete signalisiert wird.  
   
 ```

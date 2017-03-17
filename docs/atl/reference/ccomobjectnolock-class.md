@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObjectNoLock
-- ATL::CComObjectNoLock
-- ATL.CComObjectNoLock<Base>
 - CComObjectNoLock
-- ATL::CComObjectNoLock<Base>
+- ATLCOM/ATL::CComObjectNoLock
+- ATLCOM/ATL::CComObjectNoLock::CComObjectNoLock
+- ATLCOM/ATL::CComObjectNoLock::AddRef
+- ATLCOM/ATL::CComObjectNoLock::QueryInterface
+- ATLCOM/ATL::CComObjectNoLock::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +88,7 @@ class CComObjectNoLock : public Base
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
   
-##  <a name="a-nameaddrefa--ccomobjectnolockaddref"></a><a name="addref"></a>CComObjectNoLock::AddRef  
+##  <a name="addref"></a>CComObjectNoLock::AddRef  
  Inkrementiert den Verweiszähler für das Objekt.  
   
 ```
@@ -97,7 +98,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der möglicherweise hilfreich für die Diagnose oder testen.  
   
-##  <a name="a-nameccomobjectnolocka--ccomobjectnolockccomobjectnolock"></a><a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
+##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
  Der Konstruktor. Im Gegensatz zu [CComObject](../../atl/reference/ccomobject-class.md), erhöht sich die Anzahl der Sperren Modul nicht.  
   
 ```
@@ -108,7 +109,7 @@ CComObjectNoLock(void* = NULL);
  **"void"\***  
  [in] Dieses unbenannte Parameter wird nicht verwendet. Für die Symmetrie mit anderen vorhanden **CCom***XXX*`Object`*XXX* Konstruktoren.  
   
-##  <a name="a-namedtora--ccomobjectnolockccomobjectnolock"></a><a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
+##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
  Der Destruktor.  
   
 ```
@@ -119,7 +120,7 @@ CComObjectNoLock(void* = NULL);
  Alle zugeordneten Ressourcen und ruft frei [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
 
   
-##  <a name="a-namequeryinterfacea--ccomobjectnolockqueryinterface"></a><a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
+##  <a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
   
 ```
@@ -136,7 +137,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="a-namereleasea--ccomobjectnolockrelease"></a><a name="release"></a>CComObjectNoLock::Release  
+##  <a name="release"></a>CComObjectNoLock::Release  
  Dekrementiert den Verweiszähler für das Objekt.  
   
 ```

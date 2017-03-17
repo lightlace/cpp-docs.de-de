@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CConnectionPoint
+- AFXDISP/CConnectionPoint
+- AFXDISP/CConnectionPoint::CConnectionPoint
+- AFXDISP/CConnectionPoint::GetConnections
+- AFXDISP/CConnectionPoint::GetContainer
+- AFXDISP/CConnectionPoint::GetIID
+- AFXDISP/CConnectionPoint::GetMaxConnections
+- AFXDISP/CConnectionPoint::GetNextConnection
+- AFXDISP/CConnectionPoint::GetStartPosition
+- AFXDISP/CConnectionPoint::OnAdvise
+- AFXDISP/CConnectionPoint::QuerySinkInterface
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,14 +116,14 @@ class CConnectionPoint : public CCmdTarget
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h  
   
-##  <a name="a-namecconnectionpointa--cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
+##  <a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
  Erstellt ein `CConnectionPoint`-Objekt.  
   
 ```  
 CConnectionPoint();
 ```  
   
-##  <a name="a-namegetconnectionsa--cconnectionpointgetconnections"></a><a name="getconnections"></a>CConnectionPoint:: GetConnections  
+##  <a name="getconnections"></a>CConnectionPoint:: GetConnections  
  Rufen Sie diese Funktion, um alle aktiven Verbindungen für einen Verbindungspunkt abzurufen.  
   
 ```  
@@ -123,7 +133,7 @@ const CPtrArray* GetConnections();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein Array der aktiven Verbindungen (senken). Einige der Zeiger in das Array kann NULL sein. Jeder nicht-NULL-Zeiger in diesem Array kann gefahrlos in einen Zeiger auf die Ereignissenken-Schnittstelle mit einem Umwandlungsoperator konvertiert werden.  
   
-##  <a name="a-namegetcontainera--cconnectionpointgetcontainer"></a><a name="getcontainer"></a>CConnectionPoint::GetContainer  
+##  <a name="getcontainer"></a>CConnectionPoint::GetContainer  
  Aufgerufen, zum Abrufen der **IConnectionPointContainer** für den Verbindungspunkt.  
   
 ```  
@@ -136,7 +146,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ist in der Regel implementiert, durch die `BEGIN_CONNECTION_PART` Makro.  
   
-##  <a name="a-namegetiida--cconnectionpointgetiid"></a><a name="getiid"></a>CConnectionPoint:: GetIID  
+##  <a name="getiid"></a>CConnectionPoint:: GetIID  
  Aufgerufen, um die Schnittstellen-ID eines Verbindungspunkts abzurufen.  
   
 ```  
@@ -149,7 +159,7 @@ virtual REFIID GetIID() = 0;
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um die Schnittstellen-ID für den Verbindungspunkt zurück.  
   
-##  <a name="a-namegetmaxconnectionsa--cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
+##  <a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
  Aufgerufen, um die maximale Anzahl von Verbindungen, die von den Verbindungspunkt unterstützt abzurufen.  
   
 ```  
@@ -164,7 +174,7 @@ virtual int GetMaxConnections();
   
  Überschreiben Sie diese Funktion, wenn Sie möchten die Anzahl der senken zu beschränken, die mit dem Steuerelement verbunden werden kann.  
   
-##  <a name="a-namegetnextconnectiona--cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a>CConnectionPoint:: GetNextConnection  
+##  <a name="getnextconnection"></a>CConnectionPoint:: GetNextConnection  
  Ruft einen Zeiger auf das Verbindungselement am `pos`.  
   
 ```  
@@ -184,7 +194,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCConnectionPoints&4;](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cconnectionpointgetstartposition"></a><a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
+##  <a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
  Startet eine Zuordnung Iteration durch die Rückgabe einer **POSITION** -Wert, der an übergeben werden kann ein [GetNextConnection](#getnextconnection) aufrufen.  
   
 ```  
@@ -200,7 +210,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CConnectionPoint:: GetNextConnection](#getnextconnection).  
   
-##  <a name="a-nameonadvisea--cconnectionpointonadvise"></a><a name="onadvise"></a>CConnectionPoint::OnAdvise  
+##  <a name="onadvise"></a>CConnectionPoint::OnAdvise  
  Aufgerufen, wenn eine Verbindung wird aufgebaut oder unterbrochen.  
   
 ```  
@@ -216,7 +226,7 @@ virtual void OnAdvise(BOOL bAdvise);
   
  Überschreiben Sie diese Funktion, wenn senken anschließen oder Trennen der Verbindungspunkt Benachrichtigung werden soll.  
   
-##  <a name="a-namequerysinkinterfacea--cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
+##  <a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
   
 ```  

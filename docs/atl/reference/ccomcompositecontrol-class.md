@@ -10,10 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComCompositeControl
-- ATL::CComCompositeControl
-- ATL.CComCompositeControl<T>
-- ATL.CComCompositeControl
-- ATL::CComCompositeControl<T>
+- ATLCTL/ATL::CComCompositeControl
+- ATLCTL/ATL::CComCompositeControl::CComCompositeControl
+- ATLCTL/ATL::CComCompositeControl::AdviseSinkMap
+- ATLCTL/ATL::CComCompositeControl::CalcExtent
+- ATLCTL/ATL::CComCompositeControl::Create
+- ATLCTL/ATL::CComCompositeControl::CreateControlWindow
+- ATLCTL/ATL::CComCompositeControl::SetBackgroundColorFromAmbient
+- ATLCTL/ATL::CComCompositeControl::m_hbrBackground
+- ATLCTL/ATL::CComCompositeControl::m_hWndFocus
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -117,7 +122,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlctl.h  
   
-##  <a name="a-nameadvisesinkmapa--ccomcompositecontroladvisesinkmap"></a><a name="advisesinkmap"></a>:: AdviseSinkMap  
+##  <a name="advisesinkmap"></a>:: AdviseSinkMap  
  Rufen Sie diese Methode, um senkereigniszuordnung oder alle Steuerelemente, die durch das zusammengesetzte Steuerelement gehostet.  
   
 ```
@@ -150,7 +155,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="remarks"></a>Hinweise  
  Die basisimplementierung dieser Methode durchsucht die Einträge im Sink-Zuordnung. Anschließend Member- oder unadvises zeigt die Verbindung auf die COM-Objekte, die von dem Ereignis Sink-Zuordnung Senke Einträge beschrieben. Diese Membermethode verwendet auch die Tatsache, die eine Instanz die abgeleitete Klasse erbt `IDispEventImpl` für jedes Steuerelement in der Sink-Zuordnung, die empfohlen oder unadvised sein.  
   
-##  <a name="a-namecalcextenta--ccomcompositecontrolcalcextent"></a><a name="calcextent"></a>CComCompositeControl::CalcExtent  
+##  <a name="calcextent"></a>CComCompositeControl::CalcExtent  
  Rufen Sie diese Methode zum Berechnen der in **HIMETRIC** Einheiten der Ressource, die das zusammengesetzte Steuerelement zu hosten.  
   
 ```
@@ -167,7 +172,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="remarks"></a>Hinweise  
  Die Größe wird zurückgegeben, der `size` Parameter.  
   
-##  <a name="a-namecreatea--ccomcompositecontrolcreate"></a><a name="create"></a>CComCompositeControl::Create  
+##  <a name="create"></a>CComCompositeControl::Create  
  Diese Methode wird aufgerufen, um das Steuerelementfenster für das zusammengesetzte Steuerelement zu erstellen.  
   
 ```
@@ -193,7 +198,7 @@ HWND Create(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird in der Regel während der direkten Aktivierung des Steuerelements aufgerufen.  
   
-##  <a name="a-nameccomcompositecontrola--ccomcompositecontrolccomcompositecontrol"></a><a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
+##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
  Der Konstruktor.  
   
 ```
@@ -203,7 +208,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Hinweise  
  Initialisiert die [CComCompositeControl::m_hbrBackground](#m_hbrbackground) und [CComCompositeControl::m_hWndFocus](#m_hwndfocus) -Datenmember auf NULL.  
   
-##  <a name="a-namedtora--ccomcompositecontrolccomcompositecontrol"></a><a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
+##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
  Der Destruktor.  
   
 ```
@@ -213,7 +218,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Hinweise  
  Löscht das Hintergrund-Objekt, falls vorhanden.  
   
-##  <a name="a-namecreatecontrolwindowa--ccomcompositecontrolcreatecontrolwindow"></a><a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
  Rufen Sie diese Methode, um das Steuerelementfenster zu erstellen und alle gehosteten Steuerelemente empfehlen.  
   
 ```
@@ -235,21 +240,21 @@ virtual HWND CreateControlWindow(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft [CComCompositeControl::Create](#create) und [:: AdviseSinkMap](#advisesinkmap).  
   
-##  <a name="a-namemhbrbackgrounda--ccomcompositecontrolmhbrbackground"></a><a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
+##  <a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
  Der Hintergrundpinsel.  
   
 ```
 HBRUSH m_hbrBackground;
 ```  
   
-##  <a name="a-namemhwndfocusa--ccomcompositecontrolmhwndfocus"></a><a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
+##  <a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
  Das Handle des Fensters, das gegenwärtig den Fokus besitzt.  
   
 ```
 HWND m_hWndFocus;
 ```  
   
-##  <a name="a-namesetbackgroundcolorfromambienta--ccomcompositecontrolsetbackgroundcolorfromambient"></a><a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
+##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
  Rufen Sie diese Methode, um die Hintergrundfarbe des zusammengesetzten Steuerelements mit der Container-Hintergrundfarbe festzulegen.  
   
 ```

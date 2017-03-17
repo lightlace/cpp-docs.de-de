@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
+- AFXWINFORMS/CWinFormsDialog
+- AFXWINFORMS/CWinFormsDialog::CWinFormsDialog
+- AFXWINFORMS/CWinFormsDialog::GetControl
+- AFXWINFORMS/CWinFormsDialog::GetControlHandle
+- AFXWINFORMS/CWinFormsDialog::OnInitDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +92,7 @@ class CWinFormsDialog :
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwinforms.h  
   
-##  <a name="a-namecwinformsdialoga--cwinformsdialogcwinformsdialog"></a><a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
+##  <a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
  Erstellt ein `CWinFormsDialog`-Objekt.  
   
 ```  
@@ -98,7 +103,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
  `nIDTemplate`  
  Enthält die ID der Dialogfeldvorlagen-Ressource ein Feld. Verwenden Sie den Dialog-Editor die Dialogfeldvorlage erstellen und speichern es in der Anwendung Ressourcenskriptdatei. Weitere Informationen zu Dialogfeldvorlagen finden Sie unter [CDialog-Klasse](../../mfc/reference/cdialog-class.md).  
   
-##  <a name="a-namegetcontrola--cwinformsdialoggetcontrol"></a><a name="getcontrol"></a>CWinFormsDialog::GetControl  
+##  <a name="getcontrol"></a>CWinFormsDialog::GetControl  
  Ruft einen Verweis auf das Windows Forms-Benutzersteuerelement ab.  
   
 ```  
@@ -108,7 +113,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Verweis auf das Windows Forms-Steuerelement in der MFC-Dialogfeld.  
   
-##  <a name="a-namegetcontrolhandlea--cwinformsdialoggetcontrolhandle"></a><a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
+##  <a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
  Ruft ein Fensterhandle für das Windows Forms-Benutzersteuerelement ab.  
   
 ```  
@@ -118,7 +123,7 @@ inline HWND GetControlHandle() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Fenster-Handle, das Windows Forms-Benutzersteuerelement zurück.  
   
-##  <a name="a-nameoninitdialoga--cwinformsdialogoninitdialog"></a><a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
  Initialisiert die MFC-Dialogfeld erstellen und Hosten eines Windows Forms-Benutzersteuerelements auf.  
   
 ```  
@@ -133,7 +138,7 @@ virtual BOOL OnInitDialog();
   
  Überschreiben Sie diese Memberfunktion auf, wenn zur speziellen Verarbeitung bei der Initialisierung des Dialogfelds müssen. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [CDialog::](../../mfc/reference/cdialog-class.md#oninitdialog).  
   
-##  <a name="a-nameoperator-gta--cwinformsdialogoperator--gt"></a><a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
+##  <a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
  Ersetzt [CWinFormsDialog::GetControl](#getcontrol) in Ausdrücken.  
   
 ```  
@@ -145,7 +150,7 @@ inline TManagedControl^  operator->() const throw();
   
  Informationen zur Verwendung von Windows Forms finden Sie unter [mithilfe eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="a-nameoperatortmanagedcontrolxora--cwinformsdialogoperator-tmanagedcontrol"></a><a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
  Wandelt ein als Verweis auf ein Windows Forms-Benutzersteuerelement.  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockState
+- AFXADV/CDockState
+- AFXADV/CDockState::Clear
+- AFXADV/CDockState::GetVersion
+- AFXADV/CDockState::LoadState
+- AFXADV/CDockState::SaveState
+- AFXADV/CDockState::m_arrBarInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +95,7 @@ class CDockState : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxadv.h  
   
-##  <a name="a-namecleara--cdockstateclear"></a><a name="clear"></a>CDockState::Clear  
+##  <a name="clear"></a>CDockState::Clear  
  Rufen Sie diese Funktion deaktivieren Sie alle andockbaren Informationen aus der `CDockState` Objekt.  
   
 ```  
@@ -99,7 +105,7 @@ void Clear();
 ### <a name="remarks"></a>Hinweise  
  Dies schließt nicht nur, ob die Leiste oder nicht, aber die Größe und Position des Balkens angedockt ist und ob es angezeigt wird.  
   
-##  <a name="a-namegetversiona--cdockstategetversion"></a><a name="getversion"></a>CDockState::GetVersion  
+##  <a name="getversion"></a>CDockState::GetVersion  
  Rufen Sie diese Funktion zum Abrufen der Versionsnummer des gespeicherten Status Leiste.  
   
 ```  
@@ -112,7 +118,7 @@ DWORD GetVersion();
 ### <a name="remarks"></a>Hinweise  
  Versionsunterstützung ermöglicht eine überarbeitete angezeigt, die noch in der Lage zu erkennen und Laden des persistenten Status erstellt, die von einer früheren Version des Balkens und neue persistente Eigenschaften hinzufügen.  
   
-##  <a name="a-nameloadstatea--cdockstateloadstate"></a><a name="loadstate"></a>CDockState::LoadState  
+##  <a name="loadstate"></a>CDockState::LoadState  
  Rufen Sie diese Funktion zum Abrufen von Informationen aus der Registrierung oder. INI-Datei.  
   
 ```  
@@ -126,14 +132,14 @@ void LoadState(LPCTSTR lpszProfileName);
 ### <a name="remarks"></a>Hinweise  
  Der Profilname ist der Teil der Anwendungsverzeichnis ist. INI-Datei oder der Registrierung, die die Balken Zustandsinformationen enthält. Sie können die Steuerleiste Zustandsinformationen speichern, in der Registrierung oder. INI-Datei mit `SaveState`.  
   
-##  <a name="a-namemarrbarinfoa--cdockstatemarrbarinfo"></a><a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
+##  <a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
  Ein `CPtrArray` -Objekt, das ein Array von Zeigern auf die gespeicherten Informationen zum Balken für jede Steuerleiste handelt, die Statusinformationen im gespeichert hat die `CDockState` Objekt.  
   
 ```  
 CPtrArray m_arrBarInfo;  
 ```  
   
-##  <a name="a-namesavestatea--cdockstatesavestate"></a><a name="savestate"></a>CDockState::SaveState  
+##  <a name="savestate"></a>CDockState::SaveState  
  Mit dieser Funktion können Sie die Statusinformationen in der Registrierung speichern oder. INI-Datei.  
   
 ```  

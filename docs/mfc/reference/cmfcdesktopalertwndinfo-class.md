@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndInfo
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_hIcon
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_nURLCmdID
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_strText
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_strURL
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +98,7 @@ class CMFCDesktopAlertWndInfo
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxDesktopAlertDialog.h  
   
-##  <a name="a-nameoperatoreqa--cmfcdesktopalertwndinfooperator"></a><a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
+##  <a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -107,7 +112,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namemhicona--cmfcdesktopalertwndinfomhicon"></a><a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
+##  <a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
  Ein Handle für das Symbol, das angezeigt wird.  
   
 ```  
@@ -116,7 +121,7 @@ HICON m_hIcon;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namemnurlcmdida--cmfcdesktopalertwndinfomnurlcmdid"></a><a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
+##  <a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
  Die Befehls-ID, die einen Link auf der desktop-Benachrichtigungsfenster zugeordnet.  
   
 ```  
@@ -126,7 +131,7 @@ UINT m_nURLCmdID;
 ### <a name="remarks"></a>Hinweise  
  Die Befehls-ID wird an den Besitzer der Popup-Fenster gesendet, klickt der Benutzer auf den angegebenen Link [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl).  
   
-##  <a name="a-namemstrtexta--cmfcdesktopalertwndinfomstrtext"></a><a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
+##  <a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
  Der Text, der auf dem desktop-Benachrichtigungsfenster angezeigt wird.  
   
 ```  
@@ -135,7 +140,7 @@ CString m_strText;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namemstrurla--cmfcdesktopalertwndinfomstrurl"></a><a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
+##  <a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
  Der Link, der auf dem desktop-Benachrichtigungsfenster angezeigt wird.  
   
 ```  

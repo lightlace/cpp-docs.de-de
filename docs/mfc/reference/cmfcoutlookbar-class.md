@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCOutlookBar
+- AFXOUTLOOKBAR/CMFCOutlookBar
+- AFXOUTLOOKBAR/CMFCOutlookBar::AllowDestroyEmptyTabbedPane
+- AFXOUTLOOKBAR/CMFCOutlookBar::CanAcceptPane
+- AFXOUTLOOKBAR/CMFCOutlookBar::CanSetCaptionTextToTabName
+- AFXOUTLOOKBAR/CMFCOutlookBar::Create
+- AFXOUTLOOKBAR/CMFCOutlookBar::CreateCustomPage
+- AFXOUTLOOKBAR/CMFCOutlookBar::DoesAllowDynInsertBefore
+- AFXOUTLOOKBAR/CMFCOutlookBar::FloatTab
+- AFXOUTLOOKBAR/CMFCOutlookBar::GetButtonsFont
+- AFXOUTLOOKBAR/CMFCOutlookBar::GetTabArea
+- AFXOUTLOOKBAR/CMFCOutlookBar::IsMode2003
+- AFXOUTLOOKBAR/CMFCOutlookBar::OnAfterAnimation
+- AFXOUTLOOKBAR/CMFCOutlookBar::OnBeforeAnimation
+- AFXOUTLOOKBAR/CMFCOutlookBar::OnScroll
+- AFXOUTLOOKBAR/CMFCOutlookBar::RemoveCustomPage
+- AFXOUTLOOKBAR/CMFCOutlookBar::SetButtonsFont
+- AFXOUTLOOKBAR/CMFCOutlookBar::SetMode2003
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -171,7 +188,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxoutlookbar.h  
   
-##  <a name="a-nameallowdestroyemptytabbedpanea--cmfcoutlookbarallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a>CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
  Gibt an, ob eine leere Seite im Registerformat gelöscht werden kann.  
   
 ```  
@@ -184,7 +201,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ### <a name="remarks"></a>Hinweise  
  Wenn eine leere Seite im Registerformat gelöscht werden kann, wird Sie in das Framework stattdessen ausgeblendet.  
   
-##  <a name="a-namecanacceptpanea--cmfcoutlookbarcanacceptpane"></a><a name="canacceptpane"></a>CMFCOutlookBar::CanAcceptPane  
+##  <a name="canacceptpane"></a>CMFCOutlookBar::CanAcceptPane  
  Bestimmt, ob ein weiterer Bereich, der Outlook-Leistenbereich angedockt werden kann.  
   
 ```  
@@ -205,7 +222,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  Diese Methode verhält sich anderenfalls als Basismethode [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane), außer dass selbst wenn die Zuordnung nicht aktiviert ist, eine Outlook-Leiste immer noch ein anderes Outlook-Leiste darüber angedockt werden aktivieren kann.  
   
-##  <a name="a-namecansetcaptiontexttotabnamea--cmfcoutlookbarcansetcaptiontexttotabname"></a><a name="cansetcaptiontexttotabname"></a>CMFCOutlookBar::CanSetCaptionTextToTabName  
+##  <a name="cansetcaptiontexttotabname"></a>CMFCOutlookBar::CanSetCaptionTextToTabName  
  Bestimmt, ob die Beschriftung für die Seite im Registerformat den gleichen Text als der aktiven Registerkarte angezeigt wird.  
   
 ```  
@@ -220,7 +237,7 @@ virtual BOOL CanSetCaptionTextToTabName() const;
   
  Im Modus für Outlook 2003 ist diese Einstellung immer aktiviert.  
   
-##  <a name="a-namecreatea--cmfcoutlookbarcreate"></a><a name="create"></a>CMFCOutlookBar::Create  
+##  <a name="create"></a>CMFCOutlookBar::Create  
  Das Outlook-Leistensteuerelement wird erstellt.  
   
 ```  
@@ -270,7 +287,7 @@ virtual BOOL Create(
  [!code-cpp[NVC_MFC_OutlookMultiViews&#1;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]  
 [!code-cpp[NVC_MFC_OutlookMultiViews&#2;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]  
   
-##  <a name="a-namecreatecustompagea--cmfcoutlookbarcreatecustompage"></a><a name="createcustompage"></a>CMFCOutlookBar::CreateCustomPage  
+##  <a name="createcustompage"></a>CMFCOutlookBar::CreateCustomPage  
  Erstellt eine benutzerdefinierte Registerkarte der Outlook-Leiste.  
   
 ```  
@@ -302,7 +319,7 @@ CMFCOutlookBarPane* CreateCustomPage(
   
  Verwendung [CMFCOutlookBar::RemoveCustomPage](#removecustompage) So löschen Sie benutzerdefinierte Seiten.  
   
-##  <a name="a-namedoesallowdyninsertbeforea--cmfcoutlookbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CMFCOutlookBar::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>CMFCOutlookBar::DoesAllowDynInsertBefore  
  Gibt an, ob ein Benutzer einen Bereich am äußeren Rand der Outlook-Leiste angedockt werden kann.  
   
 ```  
@@ -320,7 +337,7 @@ DECLARE_MESSAGE_MAP virtual BOOL DoesAllowDynInsertBefore() const;
 > [!NOTE]
 >  Da dynamische Bereiche den Status des angedockten statische Bereiche angedockt überprüfen, sollten Sie nach statischen Bereiche möglichst dynamische Bereiche andocken.  
   
-##  <a name="a-namefloattaba--cmfcoutlookbarfloattab"></a><a name="floattab"></a>CMFCOutlookBar::FloatTab  
+##  <a name="floattab"></a>CMFCOutlookBar::FloatTab  
  Befindet sich einen Bereich.  
   
 ```  
@@ -350,7 +367,7 @@ virtual BOOL FloatTab(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ist mit [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab) außer dass es nicht die letzte verbleibende Registerkarte auf eine Outlook-Leistensteuerelement float aktiviert wird.  
   
-##  <a name="a-namegetbuttonsfonta--cmfcoutlookbargetbuttonsfont"></a><a name="getbuttonsfont"></a>CMFCOutlookBar::GetButtonsFont  
+##  <a name="getbuttonsfont"></a>CMFCOutlookBar::GetButtonsFont  
  Gibt die Schriftart des Texts auf der Seite Schaltfläche Registerkarten der Outlook-Leiste zurück.  
   
 ```  
@@ -363,7 +380,7 @@ CFont* GetButtonsFont() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um die Schriftart abzurufen, die verwendet wird, um den Text auf Outlook-Schaltfläche Registerkarten anzuzeigen. Sie können die Schriftart festlegen, durch Aufrufen von für [CMFCOutlookBar::SetButtonsFont](#setbuttonsfont).  
   
-##  <a name="a-namegettabareaa--cmfcoutlookbargettabarea"></a><a name="gettabarea"></a>CMFCOutlookBar::GetTabArea  
+##  <a name="gettabarea"></a>CMFCOutlookBar::GetTabArea  
  Bestimmt die Größe und Position der Registerkarte Bereiche auf der Outlook-Leiste.  
   
 ```  
@@ -386,7 +403,7 @@ virtual void GetTabArea(
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse `CMFCOutlookBar` dieses Verhalten zu ändern.  
   
-##  <a name="a-nameismode2003a--cmfcoutlookbarismode2003"></a><a name="ismode2003"></a>CMFCOutlookBar::IsMode2003  
+##  <a name="ismode2003"></a>CMFCOutlookBar::IsMode2003  
  Gibt an, ob das Verhalten der Outlook-Leiste, die von Microsoft Office Outlook 2003 imitiert.  
   
 ```  
@@ -399,7 +416,7 @@ BOOL IsMode2003() const;
 ### <a name="remarks"></a>Hinweise  
  Sie können diesen Modus aktivieren, mit [CMFCOutlookBar::SetMode2003](#setmode2003).  
   
-##  <a name="a-nameonafteranimationa--cmfcoutlookbaronafteranimation"></a><a name="onafteranimation"></a>CMFCOutlookBar::OnAfterAnimation  
+##  <a name="onafteranimation"></a>CMFCOutlookBar::OnAfterAnimation  
  Aufgerufen von [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) nach die aktive Registerkarte mit der Animation festgelegt wurde.  
   
 ```  
@@ -413,7 +430,7 @@ virtual void OnAfterAnimation(int nPage);
 ### <a name="remarks"></a>Hinweise  
  Der visuelle Effekt der aktive Registerkarte festlegen, hängt davon ab, ob Sie die Animation aktiviert haben. Weitere Informationen finden Sie unter [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
   
-##  <a name="a-nameonbeforeanimationa--cmfcoutlookbaronbeforeanimation"></a><a name="onbeforeanimation"></a>CMFCOutlookBar::OnBeforeAnimation  
+##  <a name="onbeforeanimation"></a>CMFCOutlookBar::OnBeforeAnimation  
  Aufgerufen von [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) vor einer Registerkarte Seite als die aktive Registerkarte mit der Animation festgelegt ist.  
   
 ```  
@@ -429,7 +446,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonscrolla--cmfcoutlookbaronscroll"></a><a name="onscroll"></a>CMFCOutlookBar::OnScroll  
+##  <a name="onscroll"></a>CMFCOutlookBar::OnScroll  
  Vom Framework aufgerufen, wenn die Outlook-Leiste einen nach oben oder unten Bildlauf.  
   
 ```  
@@ -442,7 +459,7 @@ virtual void OnScroll(BOOL bDown);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameremovecustompagea--cmfcoutlookbarremovecustompage"></a><a name="removecustompage"></a>CMFCOutlookBar::RemoveCustomPage  
+##  <a name="removecustompage"></a>CMFCOutlookBar::RemoveCustomPage  
  Entfernt eine benutzerdefinierte Registerkarte der Outlook-Leiste.  
   
 ```  
@@ -468,7 +485,7 @@ BOOL RemoveCustomPage(
   
  Verwendung [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow) um einen Zeiger auf das Outlook-Fenster zu erhalten.  
   
-##  <a name="a-namesetbuttonsfonta--cmfcoutlookbarsetbuttonsfont"></a><a name="setbuttonsfont"></a>CMFCOutlookBar::SetButtonsFont  
+##  <a name="setbuttonsfont"></a>CMFCOutlookBar::SetButtonsFont  
  Legt die Schriftart des Texts auf den Schaltflächen der Outlook-Leiste.  
   
 ```  
@@ -487,7 +504,7 @@ void SetButtonsFont(
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode eine Schriftart für den Text in Outlook Registerkartenschaltflächen festlegen.  
   
-##  <a name="a-namesetmode2003a--cmfcoutlookbarsetmode2003"></a><a name="setmode2003"></a>CMFCOutlookBar::SetMode2003  
+##  <a name="setmode2003"></a>CMFCOutlookBar::SetMode2003  
  Gibt an, ob das Verhalten der Outlook-Leiste, die von Outlook 2003 imitiert.  
   
 ```  

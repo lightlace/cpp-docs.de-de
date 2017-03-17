@@ -10,6 +10,32 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager::CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager::CreateBitmap_32
+- AFXDRAWMANAGER/CDrawingManager::DrawAlpha
+- AFXDRAWMANAGER/CDrawingManager::DrawRotated
+- AFXDRAWMANAGER/CDrawingManager::DrawEllipse
+- AFXDRAWMANAGER/CDrawingManager::DrawGradientRing
+- AFXDRAWMANAGER/CDrawingManager::DrawRect
+- AFXDRAWMANAGER/CDrawingManager::DrawShadow
+- AFXDRAWMANAGER/CDrawingManager::Fill4ColorsGradient
+- AFXDRAWMANAGER/CDrawingManager::FillGradient
+- AFXDRAWMANAGER/CDrawingManager::FillGradient2
+- AFXDRAWMANAGER/CDrawingManager::GrayRect
+- AFXDRAWMANAGER/CDrawingManager::HighlightRect
+- AFXDRAWMANAGER/CDrawingManager::HLStoRGB_ONE
+- AFXDRAWMANAGER/CDrawingManager::HLStoRGB_TWO
+- AFXDRAWMANAGER/CDrawingManager::HSVtoRGB
+- AFXDRAWMANAGER/CDrawingManager::HuetoRGB
+- AFXDRAWMANAGER/CDrawingManager::MirrorRect
+- AFXDRAWMANAGER/CDrawingManager::PixelAlpha
+- AFXDRAWMANAGER/CDrawingManager::PrepareShadowMask
+- AFXDRAWMANAGER/CDrawingManager::RGBtoHSL
+- AFXDRAWMANAGER/CDrawingManager::RGBtoHSV
+- AFXDRAWMANAGER/CDrawingManager::SetAlphaPixel
+- AFXDRAWMANAGER/CDrawingManager::SetPixel
+- AFXDRAWMANAGER/CDrawingManager::SmartMixColors
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +123,7 @@ class CDrawingManager : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdrawmanager.h  
   
-##  <a name="a-namecdrawingmanagera--cdrawingmanagercdrawingmanager"></a><a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
+##  <a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
  Erstellt eine [CDrawingManager](../../mfc/reference/cdrawingmanager-class.md) Objekt.  
   
 ```  
@@ -108,7 +134,7 @@ CDrawingManager(CDC& dc);
  [in] `dc`  
  Ein Verweis zu einem Gerätekontext. Die `CDrawingManager` dieser Kontext zum Zeichnen verwendet.  
   
-##  <a name="a-namecreatebitmap32a--cdrawingmanagercreatebitmap32"></a><a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
+##  <a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
  Erstellt eine 32-Bit-geräteunabhängige Bitmap (DIB), der Anwendung direkt in schreiben können.  
   
 ```  
@@ -137,7 +163,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zum Erstellen einer Bitmap DIB finden Sie unter [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491).  
   
-##  <a name="a-namedrawalphaa--cdrawingmanagerdrawalpha"></a><a name="drawalpha"></a>CDrawingManager::DrawAlpha  
+##  <a name="drawalpha"></a>CDrawingManager::DrawAlpha  
  Zeigt die Bitmaps, die transparent oder halbtransparent Pixel haben.  
   
 ```  
@@ -164,7 +190,7 @@ void DrawAlpha(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode führt Alpha-blending für zwei Bitmaps. Weitere Informationen zu Alpha-Blending überlagern, finden Sie unter [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) im Windows SDK.  
   
-##  <a name="a-namedrawellipsea--cdrawingmanagerdrawellipse"></a><a name="drawellipse"></a>CDrawingManager::DrawEllipse  
+##  <a name="drawellipse"></a>CDrawingManager::DrawEllipse  
  Zeichnet eine Ellipse mit den angegebenen Farben für Füllung und Rahmen.  
   
 ```  
@@ -187,7 +213,7 @@ void DrawEllipse(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird ohne eine Ellipse zeichnen, wenn entweder Farbe auf-1 festgelegt ist. Es gibt auch ohne eine Ellipse zeichnen, wenn eine Dimension des umschließenden Rechtecks 0 ist.  
   
-##  <a name="a-namedrawgradientringa--cdrawingmanagerdrawgradientring"></a><a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
+##  <a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
  Zeichnet einen Ring und füllt sie mit einem Farbverlauf.  
   
 ```  
@@ -229,7 +255,7 @@ BOOL DrawGradientRing(
 ### <a name="remarks"></a>Hinweise  
  Durch definierten Rechtecks `rect` müssen mindestens 5 Pixel breit und 5 Pixel hoch sein.  
   
-##  <a name="a-namedrawlinecdrawingmanagerdrawlineaa--cdrawingmanagerdrawline-cdrawingmanagerdrawlinea"></a><a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine CDrawingManager::DrawLineA  
+##  <a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine CDrawingManager::DrawLineA  
  Zeichnet eine Linie.  
   
 ```  
@@ -262,7 +288,7 @@ void DrawLineA(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode schlägt fehl, wenn `clrLine` gleich-1 ist.  
   
-##  <a name="a-namedrawrecta--cdrawingmanagerdrawrect"></a><a name="drawrect"></a>CDrawingManager::DrawRect  
+##  <a name="drawrect"></a>CDrawingManager::DrawRect  
  Zeichnet ein Rechteck mit den angegebenen Farben für Füllung und Rahmen.  
   
 ```  
@@ -285,7 +311,7 @@ void DrawRect(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode gibt zurück, ohne ein Rechteck zeichnen, wenn entweder Farbe auf-1 festgelegt ist. Außerdem wird zurückgegeben, wenn eine Dimension des Rechtecks 0 ist.  
   
-##  <a name="a-namedrawshadowa--cdrawingmanagerdrawshadow"></a><a name="drawshadow"></a>CDrawingManager::DrawShadow  
+##  <a name="drawshadow"></a>CDrawingManager::DrawShadow  
  Zeichnet einen Schatten für einen rechteckigen Bereich.  
   
 ```  
@@ -340,7 +366,7 @@ BOOL DrawShadow(
   
  [!code-cpp[NVC_MFC_PropSheetDemo&#1;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]  
   
-##  <a name="a-namefill4colorsgradienta--cdrawingmanagerfill4colorsgradient"></a><a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
+##  <a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
  Füllt einen rechteckigen Bereich mit zwei Farbverläufe aus.  
   
 ```  
@@ -381,7 +407,7 @@ void Fill4ColorsGradient(
   
  Diese Methode generiert eine Assertionsfehler ausgelöst, wenn `nPercentage` kleiner als 0 oder größer als 100 ist.  
   
-##  <a name="a-namefillgradienta--cdrawingmanagerfillgradient"></a><a name="fillgradient"></a>CDrawingManager::FillGradient  
+##  <a name="fillgradient"></a>CDrawingManager::FillGradient  
  Füllt einen rechteckigen Bereich mit den angegebenen Farbverlauf aus.  
   
 ```  
@@ -418,7 +444,7 @@ void FillGradient(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo&#12;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]  
   
-##  <a name="a-namefillgradient2a--cdrawingmanagerfillgradient2"></a><a name="fillgradient2"></a>CDrawingManager::FillGradient2  
+##  <a name="fillgradient2"></a>CDrawingManager::FillGradient2  
  Füllt ein Rechteck mit einem angegebenen Farbverlauf.  
   
 ```  
@@ -450,7 +476,7 @@ void FillGradient2 (
   
  [!code-cpp[NVC_MFC_NewControls&#37;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]  
   
-##  <a name="a-namegrayrecta--cdrawingmanagergrayrect"></a><a name="grayrect"></a>CDrawingManager::GrayRect  
+##  <a name="grayrect"></a>CDrawingManager::GrayRect  
  Füllt ein Rechteck mit einem angegebenen grau angezeigt.  
   
 ```  
@@ -482,7 +508,7 @@ BOOL GrayRect(
   
  Der maximale Wert für `nPercentage` ist 200. Ein Wert größer als 200 ändert nicht die Darstellung des Rechtecks. Diese Methode wird verwendet, wenn der Wert-1 ist, `clrDisabled` die Sättigung des Rechtecks zu beschränken.  
   
-##  <a name="a-namehighlightrecta--cdrawingmanagerhighlightrect"></a><a name="highlightrect"></a>CDrawingManager::HighlightRect  
+##  <a name="highlightrect"></a>CDrawingManager::HighlightRect  
  Markiert einen rechteckigen Bereich.  
   
 ```  
@@ -518,7 +544,7 @@ BOOL HighlightRect(
   
  Die Methode verwendet den Parameter `nTolerance` zu bestimmen, ob den rechteckigen Bereich markieren. Markieren Sie das Rechteck, das die Differenz zwischen der Hintergrundfarbe der Anwendung und `clrTransparent` muss kleiner als `nTolerance` in jeder Farbkomponente (Rot, Grün und Blau).  
   
-##  <a name="a-namehlstorgbonea--cdrawingmanagerhlstorgbone"></a><a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
+##  <a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
  Konvertiert eine Farbe aus einer Darstellung HLS in eine RGB-Darstellung.  
   
 ```  
@@ -546,7 +572,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
   
  Diese Methode und die `CDrawingManager::HLStoRGB_TWO` Methode führen den gleichen Vorgang aus, sondern erfordern andere Werte für die `H` Parameter. Bei dieser Methode `H` ist ein Prozentsatz des Kreises. In der `CDrawingManager::HLStoRGB_TWO` -Methode `H` ein Wert zwischen 0 und 360 liegen, die rot dargestellt wird. Z. B. mit `HLStoRGB_ONE`, 0,25 für `H` entspricht dem Wert von 90 mit `HLStoRGB_TWO`.  
   
-##  <a name="a-namehlstorgbtwoa--cdrawingmanagerhlstorgbtwo"></a><a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
+##  <a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
  Konvertiert eine Farbe aus einer Darstellung HLS in eine RGB-Darstellung.  
   
 ```  
@@ -574,7 +600,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
   
  Diese Methode und die [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) Methode führen den gleichen Vorgang aus, sondern erfordern andere Werte für die `H` Parameter. Bei dieser Methode `H` ein Wert zwischen 0 und 360 liegen, die rot dargestellt wird. In der [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) -Methode `H` ist ein Prozentsatz des Kreises. Z. B. mit `HLStoRGB_ONE`, 0,25 für `H` entspricht dem Wert von 90 mit `HLStoRGB_TWO`.  
   
-##  <a name="a-namehsvtorgba--cdrawingmanagerhsvtorgb"></a><a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
+##  <a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
  Konvertiert eine Farbe aus einer Darstellung HSV in eine RGB-Darstellung.  
   
 ```  
@@ -599,7 +625,7 @@ static COLORREF __stdcall HSVtoRGB(
 ### <a name="remarks"></a>Hinweise  
  Eine Farbe kann als FSH (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](http://go.microsoft.com/fwlink/linkid=119126).  
   
-##  <a name="a-namehuetorgba--cdrawingmanagerhuetorgb"></a><a name="huetorgb"></a>CDrawingManager::HuetoRGB  
+##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB  
  Konvertiert einen Farbtonwert für eine Komponente Rot, Grün oder Blau.  
   
 ```  
@@ -648,7 +674,7 @@ static BYTE __stdcall HueToRGB(
   
 - [CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)  
   
-##  <a name="a-namemirrorrecta--cdrawingmanagermirrorrect"></a><a name="mirrorrect"></a>CDrawingManager::MirrorRect  
+##  <a name="mirrorrect"></a>CDrawingManager::MirrorRect  
  Kippt ein Rechteck.  
   
 ```  
@@ -667,7 +693,7 @@ void MirrorRect(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kann einen beliebigen Bereich auf den Gerätekontext, der im Besitz von spiegeln die `CDrawingManager` Klasse. Wenn `bHorz` Wert `TRUE`, diese Methode den Bereich horizontal gekippt. Andernfalls Bereich vertikal gedreht.  
   
-##  <a name="a-namepixelalphaa--cdrawingmanagerpixelalpha"></a><a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
+##  <a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
  Berechnet die endgültige Farbe für einen halbtransparenten Pixel.  
   
 ```  
@@ -714,7 +740,7 @@ static COLORREF __stdcall PixelAlpha(
   
  Bei Verwendung der Version der Methode, die `dstPixel`, die endgültige Farbe ist eine Kombination aus `dstPixel` und `srcPixel`. Die `srcPixel` Farbe ist die teilweise transparente Farbe über die Basisfarbe des `dstPixel`.  
   
-##  <a name="a-nameprepareshadowmaska--cdrawingmanagerprepareshadowmask"></a><a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
+##  <a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
  Erstellt eine Bitmap, die als Schatten verwendet werden kann.  
   
 ```  
@@ -744,7 +770,7 @@ static HBITMAP __stdcall PrepareShadowMask (
 ### <a name="remarks"></a>Hinweise  
  Wenn `nDepth` ist auf 0 festgelegt, diese Methode beendet und kehrt zurück `NULL`. Wenn `nDepth` kleiner als 3 ist, werden die Breite und Höhe des Schattens auf 3 Pixel festgelegt.  
   
-##  <a name="a-namergbtohsla--cdrawingmanagerrgbtohsl"></a><a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
+##  <a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
  Konvertiert eine Farbe aus einer Darstellung des Rot-, Grün- und Blau (RGB), einem Farbton, Sättigung und Helligkeit (HSL) Darstellung.  
   
 ```  
@@ -770,7 +796,7 @@ static void __stdcall RGBtoHSL(
   
  Der zurückgegebene Wert für `H` wird dargestellt, als Bruchzahl zwischen 0 und 1, wobei 0 und 1 rot darstellen. Die zurückgegebenen Werte für `S` und `L` sind Zahlen zwischen 0 und 1.  
   
-##  <a name="a-namergbtohsva--cdrawingmanagerrgbtohsv"></a><a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
+##  <a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
  Konvertiert eine Farbe aus einer RGB-Darstellung in eine HSV.  
   
 ```  
@@ -799,7 +825,7 @@ static void __stdcall RGBtoHSV(
   
  Der zurückgegebene Wert für `H` ist eine Zahl zwischen 0 und 360, in denen 0 und 360 Rot angeben. Das zurückgegebene Werte für `S` und `V` sind Zahlen zwischen 0 und 1.  
   
-##  <a name="a-namesetalphapixela--cdrawingmanagersetalphapixel"></a><a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
+##  <a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
  Farben eine transparente Pixel in einer Bitmap.  
   
 ```  
@@ -844,7 +870,7 @@ static void __stdcall SetAlphaPixel(
   
  Wenn `bIsRight` Wert `TRUE`, Pixels Farbe wird gemessen, `x` Pixel zwischen dem rechten Rand des `rect`. Ist dies `FALSE`, wird das Pixel Farbe gemessen `x` Pixel vom linken Rand des `rect`.  
   
-##  <a name="a-namesetpixela--cdrawingmanagersetpixel"></a><a name="setpixel"></a>CDrawingManager::SetPixel  
+##  <a name="setpixel"></a>CDrawingManager::SetPixel  
  Ein einzelnes Pixel in einer Bitmap in der angegebenen Farbe geändert.  
   
 ```  
@@ -869,7 +895,7 @@ static void __stdcall SetPixel(
 |[in] `y`|Die y-Koordinate der Pixel in der Bitmap ändern.|  
 |[in] `color`|Die neue Farbe des Pixels durch die angegebenen Koordinaten gekennzeichnet.|  
   
-##  <a name="a-namesmartmixcolorsa--cdrawingmanagersmartmixcolors"></a><a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
+##  <a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
  Kombiniert zwei Farben basierend auf einem gewichteten Verhältnis.  
   
 ```  
@@ -900,7 +926,7 @@ static COLORREF __stdcall SmartMixColors(
   
  Die gewichtete Verhältnis wird anhand der folgenden Formel berechnet: (color1 * k1 + color2 \* K2) /(k1 + k2). Nachdem die gewichtete Verhältnis bestimmt wurde, wird die Methode die Helligkeit für die Farbe von gemischten berechnet. Dann multipliziert es die Helligkeit durch `dblLumRatio`. Wenn der Wert größer als 1,0 ist, legt die-Methode die Helligkeit für die gemischte Farbe auf den neuen Wert. Andernfalls wird die Helligkeit auf 1.0 festgelegt.  
   
-##  <a name="a-namedrawrotateda--cdrawingmanagerdrawrotated"></a><a name="drawrotated"></a>CDrawingManager::DrawRotated  
+##  <a name="drawrotated"></a>CDrawingManager::DrawRotated  
  Wird ein Quell-DC-Inhalt in das angegebene Rechteck um 90 Grad gedreht.  
   
 ```  

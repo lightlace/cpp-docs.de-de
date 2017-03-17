@@ -9,10 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- IProvideClassInfo2
-- ATL.IProvideClassInfo2Impl
 - IProvideClassInfo2Impl
-- ATL::IProvideClassInfo2Impl
+- ATLCOM/ATL::IProvideClassInfo2Impl
+- ATLCOM/ATL::IProvideClassInfo2Impl::IProvideClassInfo2Impl
+- ATLCOM/ATL::IProvideClassInfo2Impl::GetClassInfo
+- ATLCOM/ATL::IProvideClassInfo2Impl::GetGUID
+- ATLCOM/ATL::IProvideClassInfo2Impl::_tih
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +113,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
   
-##  <a name="a-namegetclassinfoa--iprovideclassinfo2implgetclassinfo"></a><a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo  
+##  <a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo  
  Ruft eine `ITypeInfo` Zeiger auf die Co-Klasse Typinformationen.  
   
 ```
@@ -121,7 +123,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [Schnittstellenaufruf](http://msdn.microsoft.com/library/windows/desktop/ms690192) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetguida--iprovideclassinfo2implgetguid"></a><a name="getguid"></a>IProvideClassInfo2Impl::GetGUID  
+##  <a name="getguid"></a>IProvideClassInfo2Impl::GetGUID  
  Ruft die GUID für das Objekt ausgehenden Dispinterface ab.  
   
 ```
@@ -133,7 +135,7 @@ STDMETHOD(GetGUID)(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameiprovideclassinfo2impla--iprovideclassinfo2impliprovideclassinfo2impl"></a><a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl  
+##  <a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  Der Konstruktor.  
   
 ```
@@ -143,7 +145,7 @@ IProvideClassInfo2Impl();
 ### <a name="remarks"></a>Hinweise  
  Aufrufe `AddRef` auf der [_tih](#_tih) Element. Der Destruktor ruft **Version**.  
   
-##  <a name="a-nametiha--iprovideclassinfo2impltih"></a><a name="_tih"></a>IProvideClassInfo2Impl::_tih  
+##  <a name="_tih"></a>IProvideClassInfo2Impl::_tih  
  Statische Datenmember ist eine Instanz des Vorlagenparameters Klasse `tihclass`, d. h. `CComTypeInfoHolder`.  
   
 ```

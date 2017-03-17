@@ -9,11 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlExeModuleT<T>
 - CAtlExeModuleT
-- ATL.CAtlExeModuleT<T>
-- ATL::CAtlExeModuleT
-- ATL.CAtlExeModuleT
+- ATLBASE/ATL::CAtlExeModuleT
+- ATLBASE/ATL::CAtlExeModuleT::CAtlExeModuleT
+- ATLBASE/ATL::CAtlExeModuleT::InitializeCom
+- ATLBASE/ATL::CAtlExeModuleT::ParseCommandLine
+- ATLBASE/ATL::CAtlExeModuleT::PostMessageLoop
+- ATLBASE/ATL::CAtlExeModuleT::PreMessageLoop
+- ATLBASE/ATL::CAtlExeModuleT::RegisterClassObjects
+- ATLBASE/ATL::CAtlExeModuleT::RevokeClassObjects
+- ATLBASE/ATL::CAtlExeModuleT::Run
+- ATLBASE/ATL::CAtlExeModuleT::RunMessageLoop
+- ATLBASE/ATL::CAtlExeModuleT::UninitializeCom
+- ATLBASE/ATL::CAtlExeModuleT::Unlock
+- ATLBASE/ATL::CAtlExeModuleT::WinMain
+- ATLBASE/ATL::CAtlExeModuleT::m_bDelayShutdown
+- ATLBASE/ATL::CAtlExeModuleT::m_dwPause
+- ATLBASE/ATL::CAtlExeModuleT::m_dwTimeOut
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,7 +124,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="a-namecatlexemoduleta--catlexemoduletcatlexemodulet"></a><a name="catlexemodulet"></a>CAtlExeModuleT::CAtlExeModuleT  
+##  <a name="catlexemodulet"></a>CAtlExeModuleT::CAtlExeModuleT  
  Der Konstruktor.  
   
 ```
@@ -122,7 +134,7 @@ CAtlExeModuleT() throw();
 ### <a name="remarks"></a>Hinweise  
  Wenn die EXE-Modul nicht initialisiert werden konnte, wird WinMain sofort beendet, ohne weitere Verarbeitung.  
   
-##  <a name="a-namedtora--catlexemoduletcatlexemodulet"></a><a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT  
+##  <a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT  
  Der Destruktor.  
   
 ```
@@ -132,7 +144,7 @@ CAtlExeModuleT() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle zugeordnete Ressourcen frei.  
   
-##  <a name="a-nameinitializecoma--catlexemoduletinitializecom"></a><a name="initializecom"></a>CAtlExeModuleT  
+##  <a name="initializecom"></a>CAtlExeModuleT  
  Initialisiert die COM.  
   
 ```
@@ -147,7 +159,7 @@ static HRESULT InitializeCom() throw();
   
  Überschreiben diese Methode normalerweise erfordert überschreiben [CAtlExeModuleT::UninitializeCom](#uninitializecom).  
   
-##  <a name="a-namembdelayshutdowna--catlexemoduletmbdelayshutdown"></a><a name="m_bdelayshutdown"></a>CAtlExeModuleT::m_bDelayShutdown  
+##  <a name="m_bdelayshutdown"></a>CAtlExeModuleT::m_bDelayShutdown  
  Ein Flag, das angibt, dass es sollte eine Verzögerung, die das Modul heruntergefahren werden.  
   
 ```
@@ -157,7 +169,7 @@ bool m_bDelayShutdown;
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter der [CAtlExeModuleT-Übersicht über](../../atl/reference/catlexemodulet-class.md) Informationen.  
   
-##  <a name="a-namemdwpausea--catlexemoduletmdwpause"></a><a name="m_dwpause"></a>CAtlExeModuleT::m_dwPause  
+##  <a name="m_dwpause"></a>CAtlExeModuleT::m_dwPause  
  Eine Pause-Wert verwendet, um sicherzustellen, dass alle Objekte vor dem Herunterfahren aufgetreten sind.  
   
 ```
@@ -167,7 +179,7 @@ DWORD m_dwPause;
 ### <a name="remarks"></a>Hinweise  
  Ändern Sie diesen Wert nach dem Aufruf von [CAtlExeModuleT](#initializecom) festlegen die Anzahl der Millisekunden, die als der Verzögerungswert für das Herunterfahren des Servers verwendet. Der Standardwert beträgt 1.000 Millisekunden.  
   
-##  <a name="a-namemdwtimeouta--catlexemoduletmdwtimeout"></a><a name="m_dwtimeout"></a>CAtlExeModuleT::m_dwTimeOut  
+##  <a name="m_dwtimeout"></a>CAtlExeModuleT::m_dwTimeOut  
  Ein Timeoutwert verwendet, um das Entfernen des Moduls zu verzögern.  
   
 ```
@@ -177,7 +189,7 @@ DWORD m_dwTimeOut;
 ### <a name="remarks"></a>Hinweise  
  Ändern Sie diesen Wert nach dem Aufruf von [CAtlExeModuleT](#initializecom) definiert die Anzahl der Millisekunden, die als der Timeoutwert für das Herunterfahren des Servers verwendet. Der Standardwert ist 5000 Millisekunden. Finden Sie unter der [CAtlExeModuleT-Übersicht über](../../atl/reference/catlexemodulet-class.md) für weitere Details.  
   
-##  <a name="a-nameparsecommandlinea--catlexemoduletparsecommandline"></a><a name="parsecommandline"></a>CAtlExeModuleT::ParseCommandLine  
+##  <a name="parsecommandline"></a>CAtlExeModuleT::ParseCommandLine  
  Analysiert die Befehlszeile, und führt die Registrierung bei Bedarf.  
   
 ```
@@ -197,7 +209,7 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird aufgerufen, von [CAtlExeModuleT::WinMain](#winmain) und kann überschrieben werden, um Befehlszeilenoptionen zu behandeln. Die standardmäßige Implementierung überprüft **/RegServer** und **/Unregserver** Befehlszeilenargumente und führt die Registrierung bzw. Aufhebung der Registrierung durch.  
   
-##  <a name="a-namepostmessageloopa--catlexemoduletpostmessageloop"></a><a name="postmessageloop"></a>CAtlExeModuleT::PostMessageLoop  
+##  <a name="postmessageloop"></a>CAtlExeModuleT::PostMessageLoop  
  Diese Methode wird aufgerufen, sobald die Schleife beendet wird.  
   
 ```
@@ -210,7 +222,7 @@ HRESULT PostMessageLoop() throw();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um die benutzerdefinierte Anwendung Bereinigung auszuführen. Die standardmäßige Implementierung ruft [CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects).  
   
-##  <a name="a-namepremessageloopa--catlexemoduletpremessageloop"></a><a name="premessageloop"></a>CAtlExeModuleT::PreMessageLoop  
+##  <a name="premessageloop"></a>CAtlExeModuleT::PreMessageLoop  
  Diese Methode wird aufgerufen, unmittelbar vor die Nachrichtenschleife eingeben.  
   
 ```
@@ -227,7 +239,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um die benutzerdefinierten Initialisierungscode für die Anwendung hinzuzufügen. Die standardmäßige Implementierung registriert die Objekte der Klasse.  
   
-##  <a name="a-nameregisterclassobjectsa--catlexemoduletregisterclassobjects"></a><a name="registerclassobjects"></a>CAtlExeModuleT::RegisterClassObjects  
+##  <a name="registerclassobjects"></a>CAtlExeModuleT::RegisterClassObjects  
  Das Klassenobjekt registriert mit OLE, damit andere Programme hergestellt werden können.  
   
 ```
@@ -244,7 +256,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück auf Erfolg, S_FALSE zurück, wenn es wurden keine Klassen registriert oder ein HRESULT-Fehler bei einem Fehler.  
   
-##  <a name="a-namerevokeclassobjectsa--catlexemoduletrevokeclassobjects"></a><a name="revokeclassobjects"></a>CAtlExeModuleT::RevokeClassObjects  
+##  <a name="revokeclassobjects"></a>CAtlExeModuleT::RevokeClassObjects  
  Entfernt das Klassenobjekt.  
   
 ```
@@ -254,7 +266,7 @@ HRESULT RevokeClassObjects() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück auf Erfolg, S_FALSE zurück, wenn es wurden keine Klassen registriert oder ein HRESULT-Fehler bei einem Fehler.  
   
-##  <a name="a-nameruna--catlexemoduletrun"></a><a name="run"></a>CAtlExeModuleT::Run  
+##  <a name="run"></a>CAtlExeModuleT::Run  
  Diese Methode führt Code in der EXE-Modul zu initialisieren, führen Sie die Nachrichtenschleife und bereinigen.  
   
 ```
@@ -271,7 +283,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kann überschrieben werden. Allerdings in der Praxis ist es besser, überschreiben [CAtlExeModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::RunMessageLoop](#runmessageloop), oder [CAtlExeModuleT::PostMessageLoop](#postmessageloop) stattdessen.  
   
-##  <a name="a-namerunmessageloopa--catlexemoduletrunmessageloop"></a><a name="runmessageloop"></a>CAtlExeModuleT::RunMessageLoop  
+##  <a name="runmessageloop"></a>CAtlExeModuleT::RunMessageLoop  
  Diese Methode wird die Schleife ausgeführt.  
   
 ```
@@ -281,7 +293,7 @@ void RunMessageLoop() throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kann überschrieben werden, um das Verhalten der Meldungsschleife ändern.  
   
-##  <a name="a-nameuninitializecoma--catlexemoduletuninitializecom"></a><a name="uninitializecom"></a>CAtlExeModuleT::UninitializeCom  
+##  <a name="uninitializecom"></a>CAtlExeModuleT::UninitializeCom  
  Hebt die Initialisierung COM.  
   
 ```
@@ -291,7 +303,7 @@ static void UninitializeCom() throw();
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig ruft diese Methode einfach [CoUninitialize](http://msdn.microsoft.com/library/windows/desktop/ms688715) und der Destruktor aufgerufen wird. Überschreiben Sie diese Methode, wenn Sie außer Kraft setzen [CAtlExeModuleT](#initializecom).  
   
-##  <a name="a-nameunlocka--catlexemoduletunlock"></a><a name="unlock"></a>CAtlExeModuleT::Unlock  
+##  <a name="unlock"></a>CAtlExeModuleT::Unlock  
  Verringert die Sperrenanzahl des Moduls.  
   
 ```
@@ -301,7 +313,7 @@ LONG Unlock() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Wert, der möglicherweise hilfreich für die Diagnose oder testen.  
   
-##  <a name="a-namewinmaina--catlexemoduletwinmain"></a><a name="winmain"></a>CAtlExeModuleT::WinMain  
+##  <a name="winmain"></a>CAtlExeModuleT::WinMain  
  Diese Methode implementiert den Code zum Ausführen einer EXE-Datei erforderlich.  
   
 ```

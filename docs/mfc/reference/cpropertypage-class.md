@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPropertyPage
+- AFXDLGS/CPropertyPage
+- AFXDLGS/CPropertyPage::CPropertyPage
+- AFXDLGS/CPropertyPage::CancelToClose
+- AFXDLGS/CPropertyPage::Construct
+- AFXDLGS/CPropertyPage::GetPSP
+- AFXDLGS/CPropertyPage::OnApply
+- AFXDLGS/CPropertyPage::OnCancel
+- AFXDLGS/CPropertyPage::OnKillActive
+- AFXDLGS/CPropertyPage::OnOK
+- AFXDLGS/CPropertyPage::OnQueryCancel
+- AFXDLGS/CPropertyPage::OnReset
+- AFXDLGS/CPropertyPage::OnSetActive
+- AFXDLGS/CPropertyPage::OnWizardBack
+- AFXDLGS/CPropertyPage::OnWizardFinish
+- AFXDLGS/CPropertyPage::OnWizardNext
+- AFXDLGS/CPropertyPage::QuerySiblings
+- AFXDLGS/CPropertyPage::SetModified
+- AFXDLGS/CPropertyPage::m_psp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +124,7 @@ class CPropertyPage : public CDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdlgs.h  
   
-##  <a name="a-namecanceltoclosea--cpropertypagecanceltoclose"></a><a name="canceltoclose"></a>CPropertyPage::CancelToClose  
+##  <a name="canceltoclose"></a>CPropertyPage::CancelToClose  
  Rufen Sie diese Funktion aus, nachdem die Daten in eine Seite mit einem modalen Eigenschaftenblatt eine nicht behebbare Änderung vorgenommen wurde.  
   
 ```  
@@ -121,7 +139,7 @@ void CancelToClose();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertyPage::QuerySiblings](#querysiblings).  
   
-##  <a name="a-nameconstructa--cpropertypageconstruct"></a><a name="construct"></a>CPropertyPage::Construct  
+##  <a name="construct"></a>CPropertyPage::Construct  
  Rufen Sie diese Memberfunktion zum Erstellen einer `CPropertyPage` Objekt.  
   
 ```  
@@ -181,7 +199,7 @@ void Construct(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#112;](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
   
-##  <a name="a-namecpropertypagea--cpropertypagecpropertypage"></a><a name="cpropertypage"></a>CPropertyPage::CPropertyPage  
+##  <a name="cpropertypage"></a>CPropertyPage::CPropertyPage  
  Erstellt ein `CPropertyPage`-Objekt.  
   
 ```  
@@ -247,7 +265,7 @@ CPropertyPage(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#113;](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
-##  <a name="a-namegetpspa--cpropertypagegetpsp"></a><a name="getpsp"></a>CPropertyPage::GetPSP  
+##  <a name="getpsp"></a>CPropertyPage::GetPSP  
  Ruft den Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) Struktur zugeordnet ist die `CPropertyPage` Objekt.  
   
 ```  
@@ -259,7 +277,7 @@ PROPSHEETPAGE& GetPSP();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf die **PROPSHEETPAGE** Struktur.  
   
-##  <a name="a-namempspa--cpropertypagempsp"></a><a name="m_psp"></a>CPropertyPage::m_psp  
+##  <a name="m_psp"></a>CPropertyPage::m_psp  
  `m_psp`ist eine Struktur, deren Mitglieder die Merkmale des speichern [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548).  
   
 ```  
@@ -274,7 +292,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#128;](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]  
   
-##  <a name="a-nameonapplya--cpropertypageonapply"></a><a name="onapply"></a>CPropertyPage::OnApply  
+##  <a name="onapply"></a>CPropertyPage::OnApply  
  Diese Member-Funktion wird vom Framework aufgerufen, wenn der Betätigung OK oder auf die Schaltfläche jetzt anwenden.  
   
 ```  
@@ -296,7 +314,7 @@ virtual BOOL OnApply();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertyPage::OnOK](#onok).  
   
-##  <a name="a-nameoncancela--cpropertypageoncancel"></a><a name="oncancel"></a>CPropertyPage::OnCancel  
+##  <a name="oncancel"></a>CPropertyPage::OnCancel  
  Diese Member-Funktion wird vom Framework aufgerufen, wenn die Schaltfläche "Abbrechen" aktiviert ist.  
   
 ```  
@@ -309,7 +327,7 @@ virtual void OnCancel();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#114;](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]  
   
-##  <a name="a-nameonkillactivea--cpropertypageonkillactive"></a><a name="onkillactive"></a>CPropertyPage:: OnKillActive  
+##  <a name="onkillactive"></a>CPropertyPage:: OnKillActive  
  Diese Member-Funktion wird vom Framework aufgerufen, wenn die Seite nicht mehr die aktive Seite ist.  
   
 ```  
@@ -329,7 +347,7 @@ virtual BOOL OnKillActive();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#115;](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]  
   
-##  <a name="a-nameonoka--cpropertypageonok"></a><a name="onok"></a>CPropertyPage::OnOK  
+##  <a name="onok"></a>CPropertyPage::OnOK  
  Diese Member-Funktion wird vom Framework aufgerufen, wenn der Benutzer entweder auf OK oder auf die Schaltfläche jetzt unmittelbar auf das Framework ruft [OnKillActive](#onkillactive).  
   
 ```  
@@ -346,7 +364,7 @@ virtual void OnOK();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView Nr.&116;](../../mfc/codesnippet/cpp/cpropertypage-class_6.cpp)]  
   
-##  <a name="a-nameonquerycancela--cpropertypageonquerycancel"></a><a name="onquerycancel"></a>CPropertyPage::OnQueryCancel  
+##  <a name="onquerycancel"></a>CPropertyPage::OnQueryCancel  
  Diese Member-Funktion wird vom Framework aufgerufen, wenn der Benutzer auf die Schaltfläche "Abbrechen" klickt, und bevor der Abbruchvorgang Aktion stattgefunden hat.  
   
 ```  
@@ -364,7 +382,7 @@ virtual BOOL OnQueryCancel();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#117;](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]  
   
-##  <a name="a-nameonreseta--cpropertypageonreset"></a><a name="onreset"></a>CPropertyPage::OnReset  
+##  <a name="onreset"></a>CPropertyPage::OnReset  
  Diese Member-Funktion wird vom Framework aufgerufen, wenn die Betätigung der Schaltfläche "Abbrechen".  
   
 ```  
@@ -381,7 +399,7 @@ virtual void OnReset();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertyPage::OnCancel](#oncancel).  
   
-##  <a name="a-nameonsetactivea--cpropertypageonsetactive"></a><a name="onsetactive"></a>CPropertyPage::OnSetActive  
+##  <a name="onsetactive"></a>CPropertyPage::OnSetActive  
  Diese Member-Funktion wird vom Framework aufgerufen, wenn die Seite vom Benutzer ausgewählt und wird die aktive Seite.  
   
 ```  
@@ -399,7 +417,7 @@ virtual BOOL OnSetActive();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertySheet::SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext).  
   
-##  <a name="a-nameonwizardbacka--cpropertypageonwizardback"></a><a name="onwizardback"></a>CPropertyPage::OnWizardBack  
+##  <a name="onwizardback"></a>CPropertyPage::OnWizardBack  
  Diese Memberfunktion wird vom Framework aufgerufen, klickt der Benutzer auf die Schaltfläche zurück in einen Assistenten.  
   
 ```  
@@ -417,7 +435,7 @@ virtual LRESULT OnWizardBack();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#118;](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]  
   
-##  <a name="a-nameonwizardfinisha--cpropertypageonwizardfinish"></a><a name="onwizardfinish"></a>CPropertyPage::OnWizardFinish  
+##  <a name="onwizardfinish"></a>CPropertyPage::OnWizardFinish  
  Diese Memberfunktion wird vom Framework aufgerufen, klickt der Benutzer auf die Schaltfläche "Fertig stellen" im Assistenten.  
   
 ```  
@@ -445,7 +463,7 @@ virtual BOOL OnWizardFinish();
   
  [!code-cpp[NVC_MFCDocView&#122;](../../mfc/codesnippet/cpp/cpropertypage-class_12.cpp)]  
   
-##  <a name="a-nameonwizardnexta--cpropertypageonwizardnext"></a><a name="onwizardnext"></a>CPropertyPage::OnWizardNext  
+##  <a name="onwizardnext"></a>CPropertyPage::OnWizardNext  
  Diese Memberfunktion wird vom Framework aufgerufen, klickt der Benutzer auf die Schaltfläche Weiter in einem Assistenten.  
   
 ```  
@@ -463,7 +481,7 @@ virtual LRESULT OnWizardNext();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#123;](../../mfc/codesnippet/cpp/cpropertypage-class_13.cpp)]  
   
-##  <a name="a-namequerysiblingsa--cpropertypagequerysiblings"></a><a name="querysiblings"></a>CPropertyPage::QuerySiblings  
+##  <a name="querysiblings"></a>CPropertyPage::QuerySiblings  
  Rufen Sie diese Memberfunktion zum Weiterleiten einer Nachricht auf jeder Seite im Eigenschaftenblatt.  
   
 ```  
@@ -492,7 +510,7 @@ LRESULT QuerySiblings(
   
  [!code-cpp[NVC_MFCDocView&#126;](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]  
   
-##  <a name="a-namesetmodifieda--cpropertypagesetmodified"></a><a name="setmodified"></a>CPropertyPage::SetModified  
+##  <a name="setmodified"></a>CPropertyPage::SetModified  
  Rufen Sie diese Memberfunktion zum Aktivieren oder deaktivieren die Schaltfläche Jetzt übernehmen, basierend auf, ob die Einstellungen auf der Eigenschaftenseite auf die entsprechenden externen Objekt angewendet werden soll.  
   
 ```  

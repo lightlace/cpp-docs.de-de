@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: 
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 caps.latest.revision: 9
 author: mikeblome
@@ -24,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a> operator==   
+##  <a name="operator_eq_eq"></a> operator==   
  Bestimmt, ob die angegebenen Argumente gleich sind.  
   
 ```  
@@ -50,7 +53,7 @@ bool operator== (
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die Tupel gleich sind, andernfalls `false`.  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a> operator!=   
+##  <a name="operator_neq"></a> operator!=   
  Bestimmt, ob die angegebenen Argumente ungleich sind.  
   
 ```  
@@ -76,7 +79,7 @@ bool operator!= (
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die Tupel nicht gleich sind, andernfalls `false`.  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a> operator+   
+##  <a name="operator_add"></a> operator+   
 
  Berechnet die komponentenbezogene Summe der angegebenen Argumente.  
   
@@ -121,7 +124,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="return-value"></a>Rückgabewert  
  Die komponentenbezogene Summe der angegebenen Argumente.  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a> operator-   
+##  <a name="operator-"></a> operator-   
 
  Berechnet die Differenz zwischen den angegebenen Argumenten pro Komponente.  
   
@@ -166,7 +169,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="return-value"></a>Rückgabewert  
  Die Differenz zwischen den angegebenen Argumenten pro Komponente.  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a> operator*   
+##  <a name="operator_star"></a> operator*   
 
  Berechnet das komponentenbezogene Produkt der angegebenen Argumente.  
   
@@ -203,7 +206,7 @@ _Tuple_type<_Rank>   operator*(
  Das komponentenbezogene Produkt der angegebenen Argumente.  
   
 
-##  <a name="a-nameoperatordiva--operator"></a><a name="operator_div"></a> operator/   
+##  <a name="operator_div"></a> operator/   
  Berechnet den komponentenbezogenen Quotienten der angegebenen Argumente.  
   
 ```  
@@ -238,7 +241,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="return-value"></a>Rückgabewert  
  Der komponentenbezogene Quotient der angegebenen Argumente.  
   
-##  <a name="a-nameoperatormoda--operator"></a><a name="operator_mod"></a> operator%   
+##  <a name="operator_mod"></a> operator%   
 
  Berechnet den Modul des angegebenen ersten Arguments dividiert durch das zweite angegebene Argument.  
   

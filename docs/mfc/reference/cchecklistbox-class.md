@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCheckListBox
+- AFXWIN/CCheckListBox
+- AFXWIN/CCheckListBox::CCheckListBox
+- AFXWIN/CCheckListBox::Create
+- AFXWIN/CCheckListBox::DrawItem
+- AFXWIN/CCheckListBox::Enable
+- AFXWIN/CCheckListBox::GetCheck
+- AFXWIN/CCheckListBox::GetCheckStyle
+- AFXWIN/CCheckListBox::IsEnabled
+- AFXWIN/CCheckListBox::MeasureItem
+- AFXWIN/CCheckListBox::OnGetCheckPosition
+- AFXWIN/CCheckListBox::SetCheck
+- AFXWIN/CCheckListBox::SetCheckStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +125,7 @@ class CCheckListBox : public CListBox
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-namecchecklistboxa--cchecklistboxcchecklistbox"></a><a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
+##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
  Erstellt ein `CCheckListBox`-Objekt.  
   
 ```  
@@ -126,7 +138,7 @@ CCheckListBox();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog&60;](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="a-namecreatea--cchecklistboxcreate"></a><a name="create"></a>CCheckListBox::Create  
+##  <a name="create"></a>CCheckListBox::Create  
  Erstellt die Windows-kontrolllistenfelds und fügt es der `CCheckListBox` Objekt.  
   
 ```  
@@ -176,7 +188,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** , können die TAB-Taste zu diesem Steuerelement  
   
-##  <a name="a-namedrawitema--cchecklistboxdrawitem"></a><a name="drawitem"></a>CCheckListBox::DrawItem  
+##  <a name="drawitem"></a>CCheckListBox::DrawItem  
  Aufgerufen, wenn sich ein Darstellungsaspekt einer Ownerdrawn-Checkliste ändert sich.  
   
 ```  
@@ -196,7 +208,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Wenn Prüfliste Elemente nicht alle dieselbe Höhe sind, die Checkliste Knotenart (im angegebenen **erstellen**) muss **LBS_OWNERVARIABLE**, und müssen Sie überschreiben die [MeasureItem](#measureitem) Funktion.  
   
-##  <a name="a-nameenablea--cchecklistboxenable"></a><a name="enable"></a>CCheckListBox::Enable  
+##  <a name="enable"></a>CCheckListBox::Enable  
  Rufen Sie diese Funktion aktivieren oder deaktivieren eine Prüflistenelement.  
   
 ```  
@@ -212,7 +224,7 @@ void Enable(
  `bEnabled`  
  Gibt an, ob das Element aktiviert oder deaktiviert ist.  
   
-##  <a name="a-namegetchecka--cchecklistboxgetcheck"></a><a name="getcheck"></a>CCheckListBox::GetCheck  
+##  <a name="getcheck"></a>CCheckListBox::GetCheck  
  Ruft den Zustand des angegebenen Kontrollkästchens.  
   
 ```  
@@ -232,7 +244,7 @@ int GetCheck(int nIndex);
 |`BST_UNCHECKED`|Das Kontrollkästchen ist nicht aktiviert.|  
 |`BST_INDETERMINATE`|Status des Kontrollkästchens ist unbestimmt.|  
   
-##  <a name="a-namegetcheckstylea--cchecklistboxgetcheckstyle"></a><a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
+##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
  Rufen Sie diese Funktion, um den Stil der Checkliste zu erhalten.  
   
 ```  
@@ -245,7 +257,7 @@ UINT GetCheckStyle();
 ### <a name="remarks"></a>Hinweise  
  Informationen zu möglichen Formaten finden Sie unter [SetCheckStyle](#setcheckstyle).  
   
-##  <a name="a-nameisenableda--cchecklistboxisenabled"></a><a name="isenabled"></a>CCheckListBox::IsEnabled  
+##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
  Rufen Sie diese Funktion, um zu bestimmen, ob ein Element aktiviert ist.  
   
 ```  
@@ -259,7 +271,7 @@ BOOL IsEnabled(int nIndex);
 ### <a name="return-value"></a>Rückgabewert  
  Der Wert ist ungleich NULL, wenn das Element aktiviert ist; andernfalls 0.  
   
-##  <a name="a-namemeasureitema--cchecklistboxmeasureitem"></a><a name="measureitem"></a>CCheckListBox::MeasureItem  
+##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
  Wird vom Framework aufgerufen, wenn eine Prüfliste mit einem nicht standardmäßigen Format erstellt wird.  
   
 ```  
@@ -273,7 +285,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig wird dieser Member-Funktion keine Aktion ausgeführt. Überschreiben Sie diese Memberfunktion auf, und füllen Sie die `MEASUREITEMSTRUCT` Struktur, informiert Windows Dimensionen des Prüfliste-Elemente. Wenn das Checkliste erstellt wird, mit der [LBS_OWNERDRAWVARIABLE](../../mfc/reference/list-box-styles.md) Stil das Framework ruft diese Member-Funktion für jedes Element im Listenfeld. Andernfalls wird dieser Member nur einmal aufgerufen.  
   
-##  <a name="a-nameongetcheckpositiona--cchecklistboxongetcheckposition"></a><a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
+##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
  Das Framework ruft diese Funktion, um die Position und Größe des Kontrollkästchens in einem Element abzurufen.  
   
 ```  
@@ -295,7 +307,7 @@ virtual CRect OnGetCheckPosition(
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung gibt nur die Standardposition und Größe des Kontrollkästchens ( `rectCheckBox`). Standardmäßig wird ein Kontrollkästchen in der oberen linken Ecke eines Elements ausgerichtet ist, und Sie ist die standardmäßige Größe. Es gibt möglicherweise Fälle, in denen die Kontrollkästchen auf der rechten Seite, oder soll ein Kontrollkästchen vergrößern oder verkleinern. Überschreiben Sie in diesen Fällen `OnGetCheckPosition` Kontrollkästchen Position und Größe innerhalb des Elements ändern.  
   
-##  <a name="a-namesetchecka--cchecklistboxsetcheck"></a><a name="setcheck"></a>CCheckListBox::SetCheck  
+##  <a name="setcheck"></a>CCheckListBox::SetCheck  
  Legt den Zustand des angegebenen Kontrollkästchens.  
   
 ```  
@@ -320,7 +332,7 @@ void SetCheck(
 |**BST_UNCHECKED**|Deaktivieren Sie das Kontrollkästchen angegebenen.|  
 |**BST_INDETERMINATE**|Legen Sie den Zustand der angegebenen Kontrollkästchen einem unbestimmten Zustand.<br /><br /> Dieser Status ist nur verfügbar, wenn das Kontrollkästchen Format `BS_AUTO3STATE` oder `BS_3STATE`. Weitere Informationen finden Sie unter [Schaltflächenstile](../../mfc/reference/button-styles.md).|  
   
-##  <a name="a-namesetcheckstylea--cchecklistboxsetcheckstyle"></a><a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
+##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
  Rufen Sie diese Funktion, um das Kontrollkästchen im Feld Prüfliste festzulegen.  
   
 ```  

@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWordArray
+- AFXCOLL/CWordArray
+- AFXCOLL/CObArray::CObArray
+- AFXCOLL/CObArray::Add
+- AFXCOLL/CObArray::Append
+- AFXCOLL/CObArray::Copy
+- AFXCOLL/CObArray::ElementAt
+- AFXCOLL/CObArray::FreeExtra
+- AFXCOLL/CObArray::GetAt
+- AFXCOLL/CObArray::GetCount
+- AFXCOLL/CObArray::GetData
+- AFXCOLL/CObArray::GetSize
+- AFXCOLL/CObArray::GetUpperBound
+- AFXCOLL/CObArray::InsertAt
+- AFXCOLL/CObArray::IsEmpty
+- AFXCOLL/CObArray::RemoveAll
+- AFXCOLL/CObArray::RemoveAt
+- AFXCOLL/CObArray::SetAt
+- AFXCOLL/CObArray::SetAtGrow
+- AFXCOLL/CObArray::SetSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +133,7 @@ class CWordArray : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcoll.h  
   
-##  <a name="a-nameicommandsourceinterfacea--icommandsource-interface"></a><a name="icommandsource_interface"></a>ICommandSource-Schnittstelle  
+##  <a name="icommandsource_interface"></a>ICommandSource-Schnittstelle  
  Verwaltet die Befehle, die von einem Befehlsquellobjekt zu einem Benutzersteuerelement gesendet.  
   
 ```  
@@ -128,7 +147,7 @@ interface class ICommandSource
   
  Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [mithilfe eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="a-nameaddcommandhandlera--icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
+##  <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
  Fügt einen Befehlshandler zu einem Befehlsobjekt für die Quelle an.  
   
 ```  
@@ -149,7 +168,7 @@ void AddCommandHandler(
   
  Finden Sie unter [Gewusst wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zum Verwenden von `AddCommandHandler`.  
   
-##  <a name="a-nameaddcommandrangehandlera--icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
+##  <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
  Ein Befehlsquellobjekt wird eine Gruppe von Befehlshandler hinzugefügt.  
   
 ```  
@@ -172,7 +191,7 @@ void AddCommandRangeHandler(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ordnet einen zusammenhängenden Bereich von Befehls-IDs einem einzelnen Meldungshandler und das Befehlsquellobjekt hinzugefügt. Dies wird für die Behandlung einer Gruppenstatus von verwandten Schaltflächen mit einer Methode verwendet.  
   
-##  <a name="a-nameaddcommandrangeuihandlera--icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
+##  <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
  Ein Befehlsquellobjekt hinzugefügt eine Gruppe von Benutzer-Schnittstelle Befehl Meldungshandler.  
   
 ```  
@@ -195,7 +214,7 @@ void AddCommandRangeUIHandler(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ordnet einen zusammenhängenden Bereich von Befehls-IDs einen einzelnen Benutzer Schnittstelle Befehl Message-Handler und das Befehlsquellobjekt hinzugefügt. Dies wird für die Behandlung einer Gruppenstatus von verwandten Schaltflächen mit einer Methode verwendet.  
   
-##  <a name="a-nameaddcommanduihandlera--icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
+##  <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
  Ein Befehlsquellobjekt hinzugefügt einen Benutzer Schnittstelle Befehl Message-Handler.  
   
 ```  
@@ -214,7 +233,7 @@ void AddCommandUIHandler(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode fügt den Benutzer Schnittstelle Befehl Message-Handler `cmdHandler` auf das Befehlsquellobjekt und ordnet Sie den Ereignishandler `cmdID`.  
   
-##  <a name="a-namepostcommanda--icommandsourcepostcommand"></a><a name="postcommand"></a>ICommandSource::PostCommand  
+##  <a name="postcommand"></a>ICommandSource::PostCommand  
  Sendet eine Nachricht ohne zu warten, bis sie verarbeitet werden.  
   
 ```  
@@ -228,7 +247,7 @@ void PostCommand(unsigned int command);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode asynchron sendet die Nachricht an die angegebene ID zugeordnet `command`. Sie ruft [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) um die Nachricht in der Warteschlange und gibt dann des Fensters zu platzieren, ohne zu warten, für das entsprechende Fenster zum Verarbeiten der Nachricht.  
   
-##  <a name="a-nameremovecommandhandlera--icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
+##  <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
  Entfernt einen Befehlshandler von einem Befehl-Quellobjekt.  
   
 ```  
@@ -242,7 +261,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode entfernt die Befehlshandler zugeordnet `cmdID` aus dem Befehlsquellobjekt.  
   
-##  <a name="a-nameremovecommandrangehandlera--icommandsourceremovecommandrangehandler"></a><a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
+##  <a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
  Entfernt eine Gruppe von Befehlshandler von einem Befehl-Quellobjekt.  
   
 ```  
@@ -261,7 +280,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode entfernt eine Gruppe von Message-Handler zugeordnet, durch die Befehls-IDs angegeben `cmdIDMin` und `cmdIDMax`, aus dem Befehlsquellobjekt.  
   
-##  <a name="a-nameremovecommandrangeuihandlera--icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
+##  <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
  Entfernt eine Gruppe von Benutzer Schnittstelle Befehlshandler Nachricht von einem Befehl-Quellobjekt.  
   
 ```  
@@ -280,7 +299,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode entfernt eine Gruppe von Benutzer-Schnittstelle Befehl Message Handler zugeordnet, durch die Befehls-IDs angegeben `cmdIDMin` und `cmdIDMax`, aus dem Befehlsquellobjekt.  
   
-##  <a name="a-nameremovecommanduihandlera--icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
+##  <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
  Entfernt einen Benutzer Schnittstelle Befehlshandler Nachricht von einem Befehl-Quellobjekt.  
   
 ```  
@@ -294,7 +313,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode entfernt den Benutzer Schnittstelle Befehl-Meldungshandler zugeordnet `cmdID` aus dem Befehlsquellobjekt.  
   
-##  <a name="a-namesendcommanda--icommandsourcesendcommand"></a><a name="sendcommand"></a>ICommandSource::SendCommand  
+##  <a name="sendcommand"></a>ICommandSource::SendCommand  
  Sendet eine Nachricht und wartet vor der Rückgabe verarbeitet werden.  
   
 ```  
@@ -308,7 +327,7 @@ void SendCommand(unsigned int command);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die Nachricht an die angegebene ID zugeordnet synchron `command`. Sie ruft [Funktion CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) , platzieren Sie die Nachricht in des Fensters Meldungswarteschlange und wartet, bis diese Fensterprozedur die Nachricht vor der Rückgabe verarbeitet hat.  
   
-##  <a name="a-nameicommandtargetinterfacea--icommandtarget-interface"></a><a name="icommandtarget_interface"></a>ICommandTarget-Schnittstelle  
+##  <a name="icommandtarget_interface"></a>ICommandTarget-Schnittstelle  
  Stellt ein Benutzersteuerelement mit einer Schnittstelle zum Empfangen von Befehlen aus einem Befehlsquellobjekt bereit.  
   
 ```  
@@ -322,7 +341,7 @@ interface class ICommandTarget
   
  Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [mithilfe eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="a-nameinitializea--icommandtargetinitialize"></a><a name="initialize"></a>ICommandTarget:: Initialize  
+##  <a name="initialize"></a>ICommandTarget:: Initialize  
  Initialisiert das Zielobjekt für den Befehl.  
   
 ```  
@@ -338,7 +357,7 @@ void Initialize(ICommandSource^ cmdSource);
   
  Diese Methode initialisiert die Ziel-Befehlsobjekt und das Quellobjekt für den angegebenen Befehl ordnet `cmdSource`. Es sollte in die Implementierung des Benutzersteuerelements Klasse aufgerufen werden. Bei der Initialisierung, sollten Sie registrieren Befehlshandler das Befehlsquellobjekt durch Aufrufen von [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) in der `Initialize` Implementierung. Finden Sie unter [Gewusst wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zum Verwenden von `Initialize` dazu.  
   
-##  <a name="a-nameicommanduiinterfacea--icommandui-interface"></a><a name="icommandui_interface"></a>ICommandUI-Schnittstelle  
+##  <a name="icommandui_interface"></a>ICommandUI-Schnittstelle  
  Verwaltet von Befehlen der Benutzeroberfläche.  
   
 ```  
@@ -356,7 +375,7 @@ interface class ICommandUI
   
  Weitere Informationen dazu, wie Benutzeroberflächenbefehlen in MFC verwaltet werden, finden Sie unter [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md).  
   
-##  <a name="a-namechecka--icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+##  <a name="check"></a>ICommandUI::Check  
  Legt die Benutzer-Interface-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.  
   
 ```  
@@ -372,7 +391,7 @@ property UICheckState Check;
 |1|Aktivieren|  
 |2|Legen Sie unbestimmt|  
   
-##  <a name="a-namecontinueroutinga--icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting  
+##  <a name="continuerouting"></a>ICommandUI::ContinueRouting  
  Weist den Befehl Weiterleitungsmechanismus routing der aktuellen Nachricht der Vererbungskette Handler fortgesetzt.  
   
 ```  
@@ -382,7 +401,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>Hinweise  
  Dies ist eine erweiterte Memberfunktion, die in Verbindung mit verwendet werden, sollte ein [ON_COMMAND_EX](http://msdn.microsoft.com/library/0bb49090-aee8-4203-87c8-dd001d3dd26e) Handler, der zurückgibt `FALSE`. Weitere Informationen finden Sie unter Technische Hinweis [TN006: Meldungszuordnungen](../../mfc/tn006-message-maps.md).  
   
-##  <a name="a-nameenableda--icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled  
+##  <a name="enabled"></a>ICommandUI::Enabled  
  Aktiviert oder deaktiviert die Benutzer-Interface-Element für diesen Befehl.  
   
 ```  
@@ -392,7 +411,7 @@ property bool Enabled;
 ### <a name="remarks"></a>Hinweise  
  Diese Eigenschaft aktiviert bzw. deaktiviert das User Interface-Element für diesen Befehl. Legen Sie `Enabled` auf `TRUE` aktivieren Sie das Element `FALSE` deaktivieren.  
   
-##  <a name="a-nameida--icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+##  <a name="id"></a>ICommandUI::ID  
  Ruft die ID des das Benutzeroberflächenobjekt, dargestellt durch die `ICommandUI` Objekt.  
   
 ```  
@@ -402,7 +421,7 @@ property unsigned int ID;
 ### <a name="remarks"></a>Hinweise  
  Diese Eigenschaft ruft die ID (ein Handle) des Menüelements, Symbolleisten-Schaltfläche oder andere Benutzeroberflächen-Objekt dargestellt wird, indem die `ICommandUI` Objekt.  
   
-##  <a name="a-nameindexa--icommanduiindex"></a><a name="index"></a>ICommandUI::Index  
+##  <a name="index"></a>ICommandUI::Index  
  Ruft den Index des das Benutzeroberflächenobjekt, dargestellt durch die `ICommandUI` Objekt.  
   
 ```  
@@ -412,7 +431,7 @@ property unsigned int Index;
 ### <a name="remarks"></a>Hinweise  
  Diese Eigenschaft ruft den Index (ein Handle) des Menüelements, Symbolleisten-Schaltfläche oder andere Benutzeroberflächen-Objekt dargestellt wird, indem die `ICommandUI` Objekt.  
   
-##  <a name="a-nameradioa--icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio  
+##  <a name="radio"></a>ICommandUI::Radio  
  Legt die Benutzer-Interface-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.  
   
 ```  
@@ -422,7 +441,7 @@ property bool Radio;
 ### <a name="remarks"></a>Hinweise  
  Diese Eigenschaft legt die Benutzer-Interface-Element für diesen Befehl an den entsprechenden Aktivierungszustand. Legen Sie `Radio` auf `TRUE` So aktivieren Sie den Artikel andernfalls `FALSE`.  
   
-##  <a name="a-nametexta--icommanduitext"></a><a name="text"></a>ICommandUI::Text  
+##  <a name="text"></a>ICommandUI::Text  
  Legt den Text des Elements Schnittstelle Benutzer für diesen Befehl.  
   
 ```  
@@ -432,7 +451,7 @@ property String^ Text;
 ### <a name="remarks"></a>Hinweise  
  Diese Eigenschaft legt den Text des Elements Schnittstelle Benutzer für diesen Befehl. Legen Sie `Text` mit einem Text-Zeichenfolge-Handle.  
   
-##  <a name="a-nameiviewinterfacea--iview-interface"></a><a name="iview_interface"></a>IView--Schnittstelle  
+##  <a name="iview_interface"></a>IView--Schnittstelle  
  Implementiert mehrere Möglichkeiten, [CWinFormsView](../../mfc/reference/cwinformsview-class.md) zum Senden von Benachrichtigungen anzeigen an einem verwalteten Steuerelement verwendet.  
   
 ```  
@@ -446,7 +465,7 @@ interface class IView
   
  Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [mithilfe eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="a-nameonactivateviewa--iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+##  <a name="onactivateview"></a>IView::OnActivateView  
  Von MFC aufgerufen, wenn eine Ansicht aktiviert oder deaktiviert wird.  
   
 ```  
@@ -457,14 +476,14 @@ void OnActivateView(bool activate);
  `activate`  
  Gibt an, ob die Sicht wird aktiviert oder deaktiviert.  
   
-##  <a name="a-nameoninitialupdatea--iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView:: OnInitialUpdate  
+##  <a name="oninitialupdate"></a>IView:: OnInitialUpdate  
  Vom Framework aufgerufen, nachdem die Ansicht zuerst an das Dokument angefügt ist, aber vor dem Beginn der Ansicht angezeigt wird.  
   
 ```  
 void OnInitialUpdate();
 ```  
   
-##  <a name="a-nameonupdatea--iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate  
+##  <a name="onupdate"></a>IView::OnUpdate  
  Vom MFC aufgerufen, nachdem die Ansicht Dokument geändert wurde.  
   
 ```  

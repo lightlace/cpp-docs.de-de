@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAutoPtrElementTraits
 - CAutoPtrElementTraits
-- ATL::CAutoPtrElementTraits<T>
-- ATL.CAutoPtrElementTraits<T>
-- ATL::CAutoPtrElementTraits
+- ATLCOLL/ATL::CAutoPtrElementTraits
+- ATLCOLL/ATL::CAutoPtrElementTraits::INARGTYPE
+- ATLCOLL/ATL::CAutoPtrElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,14 +86,14 @@ class CAutoPtrElementTraits
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cautoptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE  
  Der Datentyp für das Klassenobjekt Auflistung Elemente hinzugefügt.  
   
 ```
 typedef CAutoPtr<T>& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cautoptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE  
  Der Datentyp für das Abrufen von Elementen aus der-Auflistung-Klasse.  
   
 ```

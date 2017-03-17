@@ -10,6 +10,171 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleControl
+- AFXCTL/COleControl
+- AFXCTL/COleControl::COleControl
+- AFXCTL/COleControl::AmbientAppearance
+- AFXCTL/COleControl::AmbientBackColor
+- AFXCTL/COleControl::AmbientDisplayName
+- AFXCTL/COleControl::AmbientFont
+- AFXCTL/COleControl::AmbientForeColor
+- AFXCTL/COleControl::AmbientLocaleID
+- AFXCTL/COleControl::AmbientScaleUnits
+- AFXCTL/COleControl::AmbientShowGrabHandles
+- AFXCTL/COleControl::AmbientShowHatching
+- AFXCTL/COleControl::AmbientTextAlign
+- AFXCTL/COleControl::AmbientUIDead
+- AFXCTL/COleControl::AmbientUserMode
+- AFXCTL/COleControl::BoundPropertyChanged
+- AFXCTL/COleControl::BoundPropertyRequestEdit
+- AFXCTL/COleControl::ClientToParent
+- AFXCTL/COleControl::ClipCaretRect
+- AFXCTL/COleControl::ControlInfoChanged
+- AFXCTL/COleControl::DisplayError
+- AFXCTL/COleControl::DoClick
+- AFXCTL/COleControl::DoPropExchange
+- AFXCTL/COleControl::DoSuperclassPaint
+- AFXCTL/COleControl::EnableSimpleFrame
+- AFXCTL/COleControl::ExchangeExtent
+- AFXCTL/COleControl::ExchangeStockProps
+- AFXCTL/COleControl::ExchangeVersion
+- AFXCTL/COleControl::FireClick
+- AFXCTL/COleControl::FireDblClick
+- AFXCTL/COleControl::FireError
+- AFXCTL/COleControl::FireEvent
+- AFXCTL/COleControl::FireKeyDown
+- AFXCTL/COleControl::FireKeyPress
+- AFXCTL/COleControl::FireKeyUp
+- AFXCTL/COleControl::FireMouseDown
+- AFXCTL/COleControl::FireMouseMove
+- AFXCTL/COleControl::FireMouseUp
+- AFXCTL/COleControl::FireReadyStateChange
+- AFXCTL/COleControl::GetActivationPolicy
+- AFXCTL/COleControl::GetAmbientProperty
+- AFXCTL/COleControl::GetAppearance
+- AFXCTL/COleControl::GetBackColor
+- AFXCTL/COleControl::GetBorderStyle
+- AFXCTL/COleControl::GetCapture
+- AFXCTL/COleControl::GetClassID
+- AFXCTL/COleControl::GetClientOffset
+- AFXCTL/COleControl::GetClientRect
+- AFXCTL/COleControl::GetClientSite
+- AFXCTL/COleControl::GetControlFlags
+- AFXCTL/COleControl::GetControlSize
+- AFXCTL/COleControl::GetDC
+- AFXCTL/COleControl::GetEnabled
+- AFXCTL/COleControl::GetExtendedControl
+- AFXCTL/COleControl::GetFocus
+- AFXCTL/COleControl::GetFont
+- AFXCTL/COleControl::GetFontTextMetrics
+- AFXCTL/COleControl::GetForeColor
+- AFXCTL/COleControl::GetHwnd
+- AFXCTL/COleControl::GetMessageString
+- AFXCTL/COleControl::GetNotSupported
+- AFXCTL/COleControl::GetReadyState
+- AFXCTL/COleControl::GetRectInContainer
+- AFXCTL/COleControl::GetStockTextMetrics
+- AFXCTL/COleControl::GetText
+- AFXCTL/COleControl::GetWindowlessDropTarget
+- AFXCTL/COleControl::InitializeIIDs
+- AFXCTL/COleControl::InternalGetFont
+- AFXCTL/COleControl::InternalGetText
+- AFXCTL/COleControl::InternalSetReadyState
+- AFXCTL/COleControl::InvalidateControl
+- AFXCTL/COleControl::InvalidateRgn
+- AFXCTL/COleControl::IsConvertingVBX
+- AFXCTL/COleControl::IsModified
+- AFXCTL/COleControl::IsOptimizedDraw
+- AFXCTL/COleControl::IsSubclassedControl
+- AFXCTL/COleControl::Load
+- AFXCTL/COleControl::LockInPlaceActive
+- AFXCTL/COleControl::OnAmbientPropertyChange
+- AFXCTL/COleControl::OnAppearanceChanged
+- AFXCTL/COleControl::OnBackColorChanged
+- AFXCTL/COleControl::OnBorderStyleChanged
+- AFXCTL/COleControl::OnClick
+- AFXCTL/COleControl::OnClose
+- AFXCTL/COleControl::OnDoVerb
+- AFXCTL/COleControl::OnDraw
+- AFXCTL/COleControl::OnDrawMetafile
+- AFXCTL/COleControl::OnEdit
+- AFXCTL/COleControl::OnEnabledChanged
+- AFXCTL/COleControl::OnEnumVerbs
+- AFXCTL/COleControl::OnEventAdvise
+- AFXCTL/COleControl::OnFontChanged
+- AFXCTL/COleControl::OnForeColorChanged
+- AFXCTL/COleControl::OnFreezeEvents
+- AFXCTL/COleControl::OnGetColorSet
+- AFXCTL/COleControl::OnGetControlInfo
+- AFXCTL/COleControl::OnGetDisplayString
+- AFXCTL/COleControl::OnGetInPlaceMenu
+- AFXCTL/COleControl::OnGetNaturalExtent
+- AFXCTL/COleControl::OnGetPredefinedStrings
+- AFXCTL/COleControl::OnGetPredefinedValue
+- AFXCTL/COleControl::OnGetViewExtent
+- AFXCTL/COleControl::OnGetViewRect
+- AFXCTL/COleControl::OnGetViewStatus
+- AFXCTL/COleControl::OnHideToolBars
+- AFXCTL/COleControl::OnInactiveMouseMove
+- AFXCTL/COleControl::OnInactiveSetCursor
+- AFXCTL/COleControl::OnKeyDownEvent
+- AFXCTL/COleControl::OnKeyPressEvent
+- AFXCTL/COleControl::OnKeyUpEvent
+- AFXCTL/COleControl::OnMapPropertyToPage
+- AFXCTL/COleControl::OnMnemonic
+- AFXCTL/COleControl::OnProperties
+- AFXCTL/COleControl::OnQueryHitPoint
+- AFXCTL/COleControl::OnQueryHitRect
+- AFXCTL/COleControl::OnRenderData
+- AFXCTL/COleControl::OnRenderFileData
+- AFXCTL/COleControl::OnRenderGlobalData
+- AFXCTL/COleControl::OnResetState
+- AFXCTL/COleControl::OnSetClientSite
+- AFXCTL/COleControl::OnSetData
+- AFXCTL/COleControl::OnSetExtent
+- AFXCTL/COleControl::OnSetObjectRects
+- AFXCTL/COleControl::OnShowToolBars
+- AFXCTL/COleControl::OnTextChanged
+- AFXCTL/COleControl::OnWindowlessMessage
+- AFXCTL/COleControl::ParentToClient
+- AFXCTL/COleControl::PostModalDialog
+- AFXCTL/COleControl::PreModalDialog
+- AFXCTL/COleControl::RecreateControlWindow
+- AFXCTL/COleControl::Refresh
+- AFXCTL/COleControl::ReleaseCapture
+- AFXCTL/COleControl::ReleaseDC
+- AFXCTL/COleControl::ReparentControlWindow
+- AFXCTL/COleControl::ResetStockProps
+- AFXCTL/COleControl::ResetVersion
+- AFXCTL/COleControl::ScrollWindow
+- AFXCTL/COleControl::SelectFontObject
+- AFXCTL/COleControl::SelectStockFont
+- AFXCTL/COleControl::SerializeExtent
+- AFXCTL/COleControl::SerializeStockProps
+- AFXCTL/COleControl::SerializeVersion
+- AFXCTL/COleControl::SetAppearance
+- AFXCTL/COleControl::SetBackColor
+- AFXCTL/COleControl::SetBorderStyle
+- AFXCTL/COleControl::SetCapture
+- AFXCTL/COleControl::SetControlSize
+- AFXCTL/COleControl::SetEnabled
+- AFXCTL/COleControl::SetFocus
+- AFXCTL/COleControl::SetFont
+- AFXCTL/COleControl::SetForeColor
+- AFXCTL/COleControl::SetInitialSize
+- AFXCTL/COleControl::SetModifiedFlag
+- AFXCTL/COleControl::SetNotPermitted
+- AFXCTL/COleControl::SetNotSupported
+- AFXCTL/COleControl::SetRectInContainer
+- AFXCTL/COleControl::SetText
+- AFXCTL/COleControl::ThrowError
+- AFXCTL/COleControl::TransformCoords
+- AFXCTL/COleControl::TranslateColor
+- AFXCTL/COleControl::WillAmbientsBeValidDuringLoad
+- AFXCTL/COleControl::WindowProc
+- AFXCTL/COleControl::DrawContent
+- AFXCTL/COleControl::DrawMetafile
+- AFXCTL/COleControl::IsInvokeAllowed
+- AFXCTL/COleControl::SetInitialDataFormats
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -270,7 +435,7 @@ class COleControl : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxctl.h  
   
-##  <a name="a-nameambientbackcolora--colecontrolambientbackcolor"></a><a name="ambientbackcolor"></a>COleControl::AmbientBackColor  
+##  <a name="ambientbackcolor"></a>COleControl::AmbientBackColor  
  Gibt den Wert der ambient-BackColor-Eigenschaft.  
   
 ```  
@@ -283,7 +448,7 @@ OLE_COLOR AmbientBackColor();
 ### <a name="remarks"></a>Hinweise  
  Die Ambiente-BackColor-Eigenschaft ist für alle Steuerelemente verfügbar und wird durch den Container definiert. Beachten Sie, dass der Container ist nicht erforderlich, diese Eigenschaft unterstützt.  
   
-##  <a name="a-nameambientdisplaynamea--colecontrolambientdisplayname"></a><a name="ambientdisplayname"></a>COleControl::AmbientDisplayName  
+##  <a name="ambientdisplayname"></a>COleControl::AmbientDisplayName  
  Der Name, der der Container des Steuerelements zugewiesen hat kann in dem Benutzer angezeigten Fehlermeldungen verwendet werden.  
   
 ```  
@@ -296,7 +461,7 @@ CString AmbientDisplayName();
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass der Container ist nicht erforderlich, diese Eigenschaft unterstützt.  
   
-##  <a name="a-nameambientfonta--colecontrolambientfont"></a><a name="ambientfont"></a>COleControl::AmbientFont  
+##  <a name="ambientfont"></a>COleControl::AmbientFont  
  Gibt den Wert der ambient-Font-Eigenschaft.  
   
 ```  
@@ -309,7 +474,7 @@ LPFONTDISP AmbientFont();
 ### <a name="remarks"></a>Hinweise  
  Die Ambiente-Font-Eigenschaft ist der Container definiert und für alle Steuerelemente verfügbar. Beachten Sie, dass der Container ist nicht erforderlich, diese Eigenschaft unterstützt.  
   
-##  <a name="a-nameambientforecolora--colecontrolambientforecolor"></a><a name="ambientforecolor"></a>COleControl::AmbientForeColor  
+##  <a name="ambientforecolor"></a>COleControl::AmbientForeColor  
  Gibt den Wert der ambient-ForeColor-Eigenschaft.  
   
 ```  
@@ -322,7 +487,7 @@ OLE_COLOR AmbientForeColor();
 ### <a name="remarks"></a>Hinweise  
  Die Ambiente-ForeColor-Eigenschaft ist für alle Steuerelemente verfügbar und wird durch den Container definiert. Beachten Sie, dass der Container ist nicht erforderlich, diese Eigenschaft unterstützt.  
   
-##  <a name="a-nameambientlocaleida--colecontrolambientlocaleid"></a><a name="ambientlocaleid"></a>COleControl:: AmbientLocaleID  
+##  <a name="ambientlocaleid"></a>COleControl:: AmbientLocaleID  
  Gibt den Container Gebietsschema-ID.  
   
 ```  
@@ -335,7 +500,7 @@ LCID AmbientLocaleID();
 ### <a name="remarks"></a>Hinweise  
  Der LocaleID-Wert können das Steuerelement die Benutzeroberfläche für bestimmte Gebietsschemas angepasst werden kann. Beachten Sie, dass der Container ist nicht erforderlich, diese Eigenschaft unterstützt.  
   
-##  <a name="a-nameambientappearancea--colecontrolambientappearance"></a><a name="ambientappearance"></a>COleControl::AmbientAppearance  
+##  <a name="ambientappearance"></a>COleControl::AmbientAppearance  
  Ruft die aktuelle Einstellung der Darstellung für das Steuerelementobjekt ab.  
   
 ```  
@@ -352,7 +517,7 @@ short AmbientAppearance();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion zum Abrufen des aktuellen Werts der **DISPID_AMBIENT_APPEARANCE** -Eigenschaft für das Steuerelement.  
   
-##  <a name="a-nameambientscaleunitsa--colecontrolambientscaleunits"></a><a name="ambientscaleunits"></a>COleControl::AmbientScaleUnits  
+##  <a name="ambientscaleunits"></a>COleControl::AmbientScaleUnits  
  Gibt den Typ der vom Container verwendeten Einheiten.  
   
 ```  
@@ -365,7 +530,7 @@ CString AmbientScaleUnits();
 ### <a name="remarks"></a>Hinweise  
  Die-Eigenschaft des Containers Ambiente "ScaleUnits" kann verwendet werden, zum Anzeigen von Positionen oder Dimensionen, die mit der ausgewählten Einheit, wie z. B. Twips oder Zentimeter bezeichnet. Beachten Sie, dass der Container ist nicht erforderlich, diese Eigenschaft unterstützt.  
   
-##  <a name="a-nameambientshowgrabhandlesa--colecontrolambientshowgrabhandles"></a><a name="ambientshowgrabhandles"></a>COleControl::AmbientShowGrabHandles  
+##  <a name="ambientshowgrabhandles"></a>COleControl::AmbientShowGrabHandles  
  Bestimmt, ob der Container des Steuerelements anzuzeigenden Ziehpunkte für sich selbst beim active zulässt.  
   
 ```  
@@ -378,7 +543,7 @@ BOOL AmbientShowGrabHandles();
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass der Container ist nicht erforderlich, diese Eigenschaft unterstützt.  
   
-##  <a name="a-nameambientshowhatchinga--colecontrolambientshowhatching"></a><a name="ambientshowhatching"></a>COleControl::AmbientShowHatching  
+##  <a name="ambientshowhatching"></a>COleControl::AmbientShowHatching  
  Bestimmt, ob der Container ermöglicht, dass das Steuerelement selbst mit einem schraffierten an Muster, wenn UI aktiv.  
   
 ```  
@@ -391,7 +556,7 @@ BOOL AmbientShowHatching();
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass der Container ist nicht erforderlich, diese Eigenschaft unterstützt.  
   
-##  <a name="a-nameambienttextaligna--colecontrolambienttextalign"></a><a name="ambienttextalign"></a>COleControl::AmbientTextAlign  
+##  <a name="ambienttextalign"></a>COleControl::AmbientTextAlign  
  Bestimmt den Steuerelementcontainer bevorzugte der Ausrichtung.  
   
 ```  
@@ -413,7 +578,7 @@ short AmbientTextAlign();
 ### <a name="remarks"></a>Hinweise  
  Diese Eigenschaft ist für alle eingebetteten Steuerelementen verfügbar und wird durch den Container definiert. Beachten Sie, dass der Container ist nicht erforderlich, diese Eigenschaft unterstützt.  
   
-##  <a name="a-nameambientuideada--colecontrolambientuidead"></a><a name="ambientuidead"></a>COleControl::AmbientUIDead  
+##  <a name="ambientuidead"></a>COleControl::AmbientUIDead  
  Bestimmt, ob der Container des Steuerelements auf der Benutzeroberfläche Aktionen reagieren möchte.  
   
 ```  
@@ -426,7 +591,7 @@ BOOL AmbientUIDead();
 ### <a name="remarks"></a>Hinweise  
  Z. B. ein Container kann diese Eigenschaft auf festlegen **TRUE** im Entwurfsmodus.  
   
-##  <a name="a-nameambientusermodea--colecontrolambientusermode"></a><a name="ambientusermode"></a>COleControl::AmbientUserMode  
+##  <a name="ambientusermode"></a>COleControl::AmbientUserMode  
  Bestimmt, ob der Container in den Entwurfsmodus oder im Benutzermodus ist.  
   
 ```  
@@ -439,7 +604,7 @@ BOOL AmbientUserMode();
 ### <a name="remarks"></a>Hinweise  
  Z. B. ein Container kann diese Eigenschaft auf festlegen **FALSE** im Entwurfsmodus.  
   
-##  <a name="a-nameboundpropertychangeda--colecontrolboundpropertychanged"></a><a name="boundpropertychanged"></a>COleControl::BoundPropertyChanged  
+##  <a name="boundpropertychanged"></a>COleControl::BoundPropertyChanged  
  Signalisiert, die den Wert der gebundenen Eigenschaft geändert wurde.  
   
 ```  
@@ -453,7 +618,7 @@ void BoundPropertyChanged(DISPID dispid);
 ### <a name="remarks"></a>Hinweise  
  Dies muss aufgerufen werden, jedes Mal, wenn der Wert der Eigenschaft ändert, sogar in Fällen, in dem die Änderung nicht durch die Eigenschaft vorgenommen wurde, Methode festgelegt. Achten Sie besonders gebundene Eigenschaften, die Member-Variablen zugeordnet sind. Solche ein Variablen ändert, jederzeit `BoundPropertyChanged` muss aufgerufen werden.  
   
-##  <a name="a-nameboundpropertyrequestedita--colecontrolboundpropertyrequestedit"></a><a name="boundpropertyrequestedit"></a>COleControl::BoundPropertyRequestEdit  
+##  <a name="boundpropertyrequestedit"></a>COleControl::BoundPropertyRequestEdit  
  Fordert die Berechtigung für die `IPropertyNotifySink` Schnittstelle vom Steuerelement bereitgestellte gebundene Eigenschaftswert zu ändern.  
   
 ```  
@@ -470,7 +635,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 ### <a name="remarks"></a>Hinweise  
  Wenn die Berechtigung verweigert wird, muss das Steuerelement den Wert der Eigenschaftenänderung nicht zulassen. Dies kann erfolgen, von ignoriert, oder wenn die Aktion, die versucht, den Wert der Eigenschaft zu ändern.  
   
-##  <a name="a-nameclienttoparenta--colecontrolclienttoparent"></a><a name="clienttoparent"></a>COleControl::ClientToParent  
+##  <a name="clienttoparent"></a>COleControl::ClientToParent  
  Übersetzt die Koordinaten der `pPoint` in übergeordneten Koordinaten.  
   
 ```  
@@ -489,7 +654,7 @@ virtual void ClientToParent(
 ### <a name="remarks"></a>Hinweise  
  Bei der Eingabe `pPoint` ist relativ zum Ursprung des Clientbereichs des OLE-Steuerelements (obere linke Ecke des Clientbereichs des Steuerelements). Bei der Ausgabe `pPoint` ist relativ zum Ursprung des übergeordneten Elements (obere linke Ecke des Containers).  
   
-##  <a name="a-nameclipcaretrecta--colecontrolclipcaretrect"></a><a name="clipcaretrect"></a>COleControl::ClipCaretRect  
+##  <a name="clipcaretrect"></a>COleControl::ClipCaretRect  
  Ein Caretzeichen Rechteck passt, wenn es ganz oder teilweise von überlappenden, nicht transparenten Objekte verdeckt wird.  
   
 ```  
@@ -510,7 +675,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
   
  Objekte erstellen ein Caretzeichen das Caretzeichen Rechteck senden soll `ClipCaretRect` und verwenden Sie für die Einfügemarke des neuen Rechtecks angepasst. Diese Methode gibt zurück, wenn die Einfügemarke vollständig ausgeblendet ist, **FALSE** und die Einfügemarke nicht angezeigt werden soll auf allen in diesem Fall.  
   
-##  <a name="a-namecolecontrola--colecontrolcolecontrol"></a><a name="colecontrol"></a>COleControl::COleControl  
+##  <a name="colecontrol"></a>COleControl::COleControl  
  Erstellt ein `COleControl`-Objekt.  
   
 ```  
@@ -520,7 +685,7 @@ COleControl();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird normalerweise nicht direkt aufgerufen. Stattdessen wird das OLE-Steuerelement in der Regel durch die Klassenfactory erstellt.  
   
-##  <a name="a-namecontrolinfochangeda--colecontrolcontrolinfochanged"></a><a name="controlinfochanged"></a>COleControl::ControlInfoChanged  
+##  <a name="controlinfochanged"></a>COleControl::ControlInfoChanged  
  Rufen Sie diese Funktion, wenn das mnemonische Zeichen vom Steuerelement unterstützten geändert wurden.  
   
 ```  
@@ -530,7 +695,7 @@ void ControlInfoChanged();
 ### <a name="remarks"></a>Hinweise  
  Nach Erhalt dieser Benachrichtigung, erhält der Container des Steuerelements den neuen Satz von Zugriffstasten durch einen Aufruf an [IOleControl::GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730). Beachten Sie, dass der Container ist nicht erforderlich, diese Benachrichtigung zu reagieren.  
   
-##  <a name="a-namedisplayerrora--colecontroldisplayerror"></a><a name="displayerror"></a>COleControl::DisplayError  
+##  <a name="displayerror"></a>COleControl::DisplayError  
  Wird vom Framework aufgerufen, nachdem die vordefinierte Error-Ereignis behandelt wurde (es sei denn, der Ereignishandler die Anzeige des Fehlers unterdrückt wurde).  
   
 ```  
@@ -563,7 +728,7 @@ virtual void DisplayError(
   
  Überschreiben Sie diese Funktion, um anzupassen, wie Fehler angezeigt werden.  
   
-##  <a name="a-namedoclicka--colecontroldoclick"></a><a name="doclick"></a>COleControl::DoClick  
+##  <a name="doclick"></a>COleControl::DoClick  
  Simuliert die Maus auf das Steuerelement.  
   
 ```  
@@ -575,7 +740,7 @@ void DoClick();
   
  Diese Funktion wird von unterstützt die `COleControl` -Basisklasse als eine vordefinierte Methode namens DoClick. Weitere Informationen finden Sie im Artikel [ActiveX-Steuerelemente: Methoden](../../mfc/mfc-activex-controls-methods.md).  
   
-##  <a name="a-namedopropexchangea--colecontroldopropexchange"></a><a name="dopropexchange"></a>COleControl:: DoPropExchange  
+##  <a name="dopropexchange"></a>COleControl:: DoPropExchange  
  Vom Framework aufgerufen, wenn beim Laden oder speichern ein Steuerelement aus einer Darstellung permanenten Speicher wie z. B. einen Stream oder eine Eigenschaft festlegen.  
   
 ```  
@@ -591,7 +756,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
   
  Wenn Steuerelement-Assistent verwendet wurde, um das OLE-Steuerelementbibliothek-Projekt zu erstellen, wird die überschriebene Version dieser Funktion die Basiseigenschaften, die von unterstützten Serialisieren `COleControl` mit einem Aufruf der Funktion der Basisklasse `COleControl::DoPropExchange`. Hinzufügen von benutzerdefinierten Eigenschaften an das OLE-Steuerelement müssen Sie diese Funktion zum Serialisieren der neuen Eigenschaften zu ändern. Weitere Informationen zur Serialisierung finden Sie im Artikel [ActiveX-Steuerelemente: Serialisierung](../../mfc/mfc-activex-controls-serializing.md).  
   
-##  <a name="a-namedosuperclasspainta--colecontroldosuperclasspaint"></a><a name="dosuperclasspaint"></a>COleControl::DoSuperclassPaint  
+##  <a name="dosuperclasspaint"></a>COleControl::DoSuperclassPaint  
  Zeichnet ein OLE-Steuerelement, das von einem Windows-Steuerelement erstellt wurde.  
   
 ```  
@@ -612,7 +777,7 @@ void DoSuperclassPaint(
   
  Weitere Informationen zu dieser Funktion und einer Fenstersteuerelement, finden Sie im Artikel [ActiveX-Steuerelemente: Erstellen von Unterklassen eines Windows-Steuerelements](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
-##  <a name="a-namedrawcontenta--colecontroldrawcontent"></a><a name="drawcontent"></a>COleControl::DrawContent  
+##  <a name="drawcontent"></a>COleControl::DrawContent  
  Wird vom Framework aufgerufen, wenn die Darstellung des Steuerelements muss aktualisiert werden.  
   
 ```  
@@ -631,7 +796,7 @@ void DrawContent(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ruft direkt die überschreibbare `OnDraw` Funktion.  
   
-##  <a name="a-namedrawmetafilea--colecontroldrawmetafile"></a><a name="drawmetafile"></a>COleControl::DrawMetafile  
+##  <a name="drawmetafile"></a>COleControl::DrawMetafile  
  Wird vom Framework aufgerufen, wenn der Metadatei-Gerätekontext verwendet wird.  
   
 ```  
@@ -647,7 +812,7 @@ void DrawMetafile(
  `rc`  
  Rechteckige Bereich, gezeichnet werden soll.  
   
-##  <a name="a-nameenablesimpleframea--colecontrolenablesimpleframe"></a><a name="enablesimpleframe"></a>COleControl::EnableSimpleFrame  
+##  <a name="enablesimpleframe"></a>COleControl::EnableSimpleFrame  
  Ermöglicht das einfache Frame-Merkmal für die OLE-Steuerelement.  
   
 ```  
@@ -657,7 +822,7 @@ void EnableSimpleFrame();
 ### <a name="remarks"></a>Hinweise  
  Dieses Merkmal kann eine-Steuerelement visuellen Kapselung von anderen Steuerelementen, aber nicht "true" OLE-Container unterstützen. Ein Beispiel wäre ein Gruppenfeld in mehrere Steuerelemente. Diese Steuerelemente sind nicht enthaltenen OLE, aber sie sind im gleichen Gruppe.  
   
-##  <a name="a-nameexchangeextenta--colecontrolexchangeextent"></a><a name="exchangeextent"></a>COleControl::ExchangeExtent  
+##  <a name="exchangeextent"></a>COleControl::ExchangeExtent  
  Serialisiert bzw. initialisiert den Zustand des Steuerelements Ausmaß (seiner Dimensionen in **HIMETRIC** Einheiten).  
   
 ```  
@@ -674,7 +839,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird normalerweise aufgerufen, durch die standardmäßige Implementierung des `COleControl::DoPropExchange`.  
   
-##  <a name="a-nameexchangestockpropsa--colecontrolexchangestockprops"></a><a name="exchangestockprops"></a>COleControl::ExchangeStockProps  
+##  <a name="exchangestockprops"></a>COleControl::ExchangeStockProps  
  Serialisiert bzw. initialisiert den Zustand des vordefinierten Eigenschaften des Steuerelements.  
   
 ```  
@@ -688,7 +853,7 @@ void ExchangeStockProps(CPropExchange* pPX);
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird normalerweise aufgerufen, durch die standardmäßige Implementierung des `COleControl::DoPropExchange`.  
   
-##  <a name="a-nameexchangeversiona--colecontrolexchangeversion"></a><a name="exchangeversion"></a>COleControl:: ExchangeVersion  
+##  <a name="exchangeversion"></a>COleControl:: ExchangeVersion  
  Serialisiert bzw. initialisiert den Zustand des Steuerelements Versionsinformationen.  
   
 ```  
@@ -716,7 +881,7 @@ BOOL ExchangeVersion(
   
  Weitere Informationen zur Persistenz und Versionskontrolle finden Sie im Artikel [ActiveX-Steuerelemente: Serialisierung](../../mfc/mfc-activex-controls-serializing.md).  
   
-##  <a name="a-namefireclicka--colecontrolfireclick"></a><a name="fireclick"></a>COleControl::FireClick  
+##  <a name="fireclick"></a>COleControl::FireClick  
  Wird vom Framework aufgerufen, wenn die Maus über ein aktives Steuerelement geklickt wird.  
   
 ```  
@@ -728,7 +893,7 @@ void FireClick();
   
  Für die automatische Auslösung von ein Click-Ereignis auftritt, müssen Event-Zuordnung das Steuerelement eine Aktie auf Ereignis definiert.  
   
-##  <a name="a-namefiredblclicka--colecontrolfiredblclick"></a><a name="firedblclick"></a>COleControl::FireDblClick  
+##  <a name="firedblclick"></a>COleControl::FireDblClick  
  Wird vom Framework aufgerufen, wenn die Maus über ein aktives Steuerelement doppelgeklickt wird.  
   
 ```  
@@ -740,7 +905,7 @@ void FireDblClick();
   
  Automatische Auslösen einer DblClick-Ereignis eintritt, müssen das Steuerelement Event-Zuordnung ein vordefiniertes DblClick-Ereignis definiert.  
   
-##  <a name="a-namefireerrora--colecontrolfireerror"></a><a name="fireerror"></a>COleControl:: FireError  
+##  <a name="fireerror"></a>COleControl:: FireError  
  Wird die vordefinierte Error-Ereignis ausgelöst.  
   
 ```  
@@ -769,7 +934,7 @@ void FireError(
   
  Um dieses Problem zu beheben, ändern Sie manuell den `SCODE` -Parameter in des Steuerelements. ODL-Datei eine **lang**. Darüber hinaus jede benutzerdefinierte Ereignis, eine Methode oder eine Eigenschaft, die mithilfe einer `SCODE` Parameter bewirkt auch, dass das gleiche Problem.  
   
-##  <a name="a-namefireeventa--colecontrolfireevent"></a><a name="fireevent"></a>COleControl::  
+##  <a name="fireevent"></a>COleControl::  
  Löst ein benutzerdefiniertes Ereignis über das Steuerelement mit einer beliebigen Anzahl von optionalen Argumenten.  
   
 ```  
@@ -811,7 +976,7 @@ void AFX_CDECL FireEvent(
 > [!NOTE]
 >  Zusätzliche Variante Konstanten für alle variant-Typen, mit Ausnahme von definiert wurden **VTS_FONT** und **VTS_PICTURE**, die einen Zeiger auf die variant-Daten bereitstellen. Diese Konstanten werden mit dem Namen mit dem **VTS_P** `constantname` Konvention. Beispielsweise **VTS_PCOLOR** ist ein Zeiger auf eine **VTS_COLOR** konstant.  
   
-##  <a name="a-namefirekeydowna--colecontrolfirekeydown"></a><a name="firekeydown"></a>COleControl::FireKeyDown  
+##  <a name="firekeydown"></a>COleControl::FireKeyDown  
  Wird vom Framework aufgerufen, wenn eine Taste gedrückt wird, während das Steuerelement UI aktiv ist.  
   
 ```  
@@ -838,7 +1003,7 @@ void FireKeyDown(
   
  Automatische Auslösen einer KeyDown-Ereignis eintritt, müssen das Steuerelement Event-Zuordnung ein vordefiniertes KeyDown-Ereignis definiert.  
   
-##  <a name="a-namefirekeypressa--colecontrolfirekeypress"></a><a name="firekeypress"></a>COleControl::FireKeyPress  
+##  <a name="firekeypress"></a>COleControl::FireKeyPress  
  Wird vom Framework aufgerufen, wenn eine Taste gedrückt und losgelassen wird, während das benutzerdefinierte Steuerelement im Container UI aktiv ist.  
   
 ```  
@@ -856,7 +1021,7 @@ void FireKeyPress(USHORT* pnChar);
   
  Automatische Auslösen einer KeyPress-Ereignis eintritt, müssen das Steuerelement Event-Zuordnung ein vordefiniertes KeyPress-Ereignis definiert.  
   
-##  <a name="a-namefirekeyupa--colecontrolfirekeyup"></a><a name="firekeyup"></a>COleControl::FireKeyUp  
+##  <a name="firekeyup"></a>COleControl::FireKeyUp  
  Wird vom Framework aufgerufen, wenn eine Taste losgelassen wird, während das benutzerdefinierte Steuerelement im Container UI aktiv ist.  
   
 ```  
@@ -883,7 +1048,7 @@ void FireKeyUp(
   
  Automatische Auslösen einer KeyUp-Ereignis eintritt, müssen das Steuerelement Event-Zuordnung ein vordefiniertes KeyUp-Ereignis definiert.  
   
-##  <a name="a-namefiremousedowna--colecontrolfiremousedown"></a><a name="firemousedown"></a>COleControl::FireMouseDown  
+##  <a name="firemousedown"></a>COleControl::FireMouseDown  
  Wird vom Framework aufgerufen, wenn eine Maustaste, über ein aktives benutzerdefinierte Steuerelement gedrückt wird.  
   
 ```  
@@ -924,7 +1089,7 @@ void FireMouseDown(
   
  Automatische Auslösen einer MouseDown-Ereignis eintritt, müssen das Steuerelement Event-Zuordnung ein vordefiniertes MouseDown-Ereignis definiert.  
   
-##  <a name="a-namefiremousemovea--colecontrolfiremousemove"></a><a name="firemousemove"></a>COleControl::FireMouseMove  
+##  <a name="firemousemove"></a>COleControl::FireMouseMove  
  Wird vom Framework aufgerufen, wenn der Mauszeiger über ein aktives benutzerdefinierte Steuerelement bewegt wird.  
   
 ```  
@@ -965,7 +1130,7 @@ void FireMouseMove(
   
  Automatische Auslösen einer MouseMove-Ereignis eintritt, müssen das Steuerelement Event-Zuordnung ein vordefiniertes MouseMove-Ereignis definiert.  
   
-##  <a name="a-namefiremouseupa--colecontrolfiremouseup"></a><a name="firemouseup"></a>COleControl::FireMouseUp  
+##  <a name="firemouseup"></a>COleControl::FireMouseUp  
  Vom Framework aufgerufen, wenn eine Maustaste, über ein aktives benutzerdefinierte Steuerelement losgelassen wird.  
   
 ```  
@@ -1006,7 +1171,7 @@ void FireMouseUp(
   
  Automatische Auslösen einer MouseUp-Ereignis eintritt, müssen das Steuerelement Event-Zuordnung ein vordefiniertes MouseUp-Ereignis definiert.  
   
-##  <a name="a-namefirereadystatechangea--colecontrolfirereadystatechange"></a><a name="firereadystatechange"></a>COleControl::FireReadyStateChange  
+##  <a name="firereadystatechange"></a>COleControl::FireReadyStateChange  
  Löst ein Ereignis mit dem aktuellen Wert, der den Zustand des Steuerelements.  
   
 ```  
@@ -1035,7 +1200,7 @@ void FireReadyStateChange();
   
  [InternalSetReadyState beispielsweise](#internalsetreadystate) ändert den Status "bereit" mit dem angegebenen Wert und ruft dann `FireReadyStateChange`.  
   
-##  <a name="a-namegetactivationpolicya--colecontrolgetactivationpolicy"></a><a name="getactivationpolicy"></a>COleControl:: GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>COleControl:: GetActivationPolicy  
  Ändert das Standardverhalten für die Aktivierung von einem Steuerelement, unterstützt die `IPointerInactive` Schnittstelle.  
   
 ```  
@@ -1077,7 +1242,7 @@ virtual DWORD GetActivationPolicy();
   
  [!code-cpp[NVC_MFCAxCtl&#10;](../../mfc/reference/codesnippet/cpp/colecontrol-class_2.cpp)]  
   
-##  <a name="a-namegetambientpropertya--colecontrolgetambientproperty"></a><a name="getambientproperty"></a>COleControl:: GetAmbientProperty  
+##  <a name="getambientproperty"></a>COleControl:: GetAmbientProperty  
  Ruft den Wert der ambient-Eigenschaft des Containers.  
   
 ```  
@@ -1118,7 +1283,7 @@ BOOL GetAmbientProperty(
   
  Beachten Sie, dass Funktionen wie z. B. bereits allgemeine Umgebungseigenschaften, bereitgestellt worden sind [AmbientBackColor](#ambientbackcolor) und [AmbientFont](#ambientfont).  
   
-##  <a name="a-namegetappearancea--colecontrolgetappearance"></a><a name="getappearance"></a>COleControl::GetAppearance  
+##  <a name="getappearance"></a>COleControl::GetAppearance  
  Implementiert die Get-Funktion der vordefinierten Appearance-Eigenschaft des Steuerelements.  
   
 ```  
@@ -1128,7 +1293,7 @@ short GetAppearance ();
 ### <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert gibt die aktuelle Einstellung der Darstellung einer **kurze** ( `VT_I2`) Wert, wenn erfolgreich. Dieser Wert ist 0 (null), wenn die Darstellung des Steuerelements flach und 1 ist, ist die Darstellung des Steuerelements 3D.  
   
-##  <a name="a-namegetbackcolora--colecontrolgetbackcolor"></a><a name="getbackcolor"></a>COleControl::GetBackColor  
+##  <a name="getbackcolor"></a>COleControl::GetBackColor  
  Implementiert die Get-Funktion der vordefinierten BackColor-Eigenschaft des Steuerelements.  
   
 ```  
@@ -1138,7 +1303,7 @@ OLE_COLOR GetBackColor();
 ### <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert gibt die aktuelle Hintergrundfarbe als ein **OLE_COLOR** Wert, wenn erfolgreich. Dieser Wert übersetzt werden kann, um eine **COLORREF** Wert mit einem Aufruf von `TranslateColor`.  
   
-##  <a name="a-namegetborderstylea--colecontrolgetborderstyle"></a><a name="getborderstyle"></a>COleControl::GetBorderStyle  
+##  <a name="getborderstyle"></a>COleControl::GetBorderStyle  
  Implementiert die Get-Funktion der vordefinierten BorderStyle-Eigenschaft des Steuerelements.  
   
 ```  
@@ -1148,7 +1313,7 @@ short GetBorderStyle();
 ### <a name="return-value"></a>Rückgabewert  
  1, wenn das Steuerelement einen normalen Rahmen hat. 0, wenn das Steuerelement kein Rahmen hat.  
   
-##  <a name="a-namegetcapturea--colecontrolgetcapture"></a><a name="getcapture"></a>COleControl::GetCapture  
+##  <a name="getcapture"></a>COleControl::GetCapture  
  Bestimmt, ob die `COleControl` Objekt verfügt über das Erfassen von Mauseingaben.  
   
 ```  
@@ -1163,7 +1328,7 @@ CWnd* GetCapture();
 ### <a name="remarks"></a>Hinweise  
  Ein aktiviertes fensterloses Steuerelement empfängt die Maus erfassen, wenn [SetCapture](#setcapture) aufgerufen wird.  
   
-##  <a name="a-namegetclassida--colecontrolgetclassid"></a><a name="getclassid"></a>COleControl::GetClassID  
+##  <a name="getclassid"></a>COleControl::GetClassID  
  Aufgerufen, um die OLE-Klassen-ID des Steuerelements abzurufen.  
   
 ```  
@@ -1180,7 +1345,7 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 ### <a name="remarks"></a>Hinweise  
  In der Regel implementiert, indem die [IMPLEMENT_OLECREATE_EX](class-factories-and-licensing.md#implement_olecreate_ex).  
   
-##  <a name="a-namegetclientoffseta--colecontrolgetclientoffset"></a><a name="getclientoffset"></a>COleControl::GetClientOffset  
+##  <a name="getclientoffset"></a>COleControl::GetClientOffset  
  Ruft die Differenz zwischen der oberen linken Ecke des rechteckigen Bereichs des Steuerelements und der linken Ecke des Clientbereichs ab.  
   
 ```  
@@ -1197,7 +1362,7 @@ virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
 ### <a name="remarks"></a>Hinweise  
  OLE-Steuerelement verfügt über einen rechteckigen Bereich innerhalb des Containers. Der Clientbereich des Steuerelements ist ohne Rahmen und Bildlaufleisten Steuerelementbereich. Der Offset von abgerufenen `GetClientOffset` ist der Unterschied zwischen der oberen linken Ecke des rechteckigen Bereichs des Steuerelements und der linken Ecke des Clientbereichs. Wenn das Steuerelement nicht-Client-Elemente als die standardmäßige Rahmen und Bildlaufleisten verfügt, überschreiben Sie diese Memberfunktion, um den Offset angeben.  
   
-##  <a name="a-namegetclientrecta--colecontrolgetclientrect"></a><a name="getclientrect"></a>COleControl::GetClientRect  
+##  <a name="getclientrect"></a>COleControl::GetClientRect  
  Ruft die Größe des Clientbereichs des Steuerelements ab.  
   
 ```  
@@ -1208,7 +1373,7 @@ virtual void GetClientRect(LPRECT lpRect) const;
  `lpRect`  
  Zeiger auf eine `RECT` -Struktur, die die Dimensionen des Clientbereichs der fensterloses Steuerelement enthält, d. h. die Größe des Steuerelements minus Fensterrahmen, Frames, Bildlaufleisten und So weiter. Die `lpRect` Parameter gibt die Größe des Steuerelements Clientrechteck, nicht seine Position an.  
   
-##  <a name="a-namegetclientsitea--colecontrolgetclientsite"></a><a name="getclientsite"></a>COleControl::GetClientSite  
+##  <a name="getclientsite"></a>COleControl::GetClientSite  
  Abfragen ein Objekts für den Zeiger auf die aktuelle Site in dessen Container.  
   
 ```  
@@ -1221,7 +1386,7 @@ LPOLECLIENTSITE GetClientSite();
 ### <a name="remarks"></a>Hinweise  
  Der zurückgegebene Zeiger zeigt auf eine Instanz von `IOleClientSite`. Die `IOleClientSite` Schnittstelle von Containern implementiert ist das Objekt anzeigen seines Kontexts:, wo er im Dokument, in den Speicher, Benutzeroberfläche und andere Ressourcen abgerufen verankert ist.  
   
-##  <a name="a-namegetcontrolflagsa--colecontrolgetcontrolflags"></a><a name="getcontrolflags"></a>COleControl:: GetControlFlags  
+##  <a name="getcontrolflags"></a>COleControl:: GetControlFlags  
  Ruft die Steuerelement-Flageinstellungen ab.  
   
 ```  
@@ -1270,7 +1435,7 @@ virtual DWORD GetControlFlags();
   
  Weitere Informationen zu `GetControlFlags` und andere Optimierungen der OLE-Steuerelemente finden Sie unter [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).  
   
-##  <a name="a-namegetcontrolsizea--colecontrolgetcontrolsize"></a><a name="getcontrolsize"></a>COleControl::GetControlSize  
+##  <a name="getcontrolsize"></a>COleControl::GetControlSize  
  Ruft die Größe des Fensters OLE-Steuerelements ab.  
   
 ```  
@@ -1289,7 +1454,7 @@ void GetControlSize(
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass alle Koordinaten für Windows Steuerelement relativ zu der oberen linken Ecke des Steuerelements.  
   
-##  <a name="a-namegetdca--colecontrolgetdc"></a><a name="getdc"></a>COleControl::GetDC  
+##  <a name="getdc"></a>COleControl::GetDC  
  Stellt Sie bereit für ein Objekt fensterlose Gerätekontext Get einen Bildschirm (oder einen kompatiblen) von seinem Container.  
   
 ```  
@@ -1317,7 +1482,7 @@ CDC* GetDC(
 ### <a name="remarks"></a>Hinweise  
  Die [ReleaseDC](#releasedc) -Memberfunktion aufgerufen werden, um den Kontext freigeben, nachdem das Zeichnen. Beim Aufrufen von `GetDC`, Objekte übergeben, das Rechteck, das sie in in ihre eigenen Clientkoordinaten zeichnen möchten. `GetDC`übersetzt diese Koordinaten des Clientbereichs Container. Das Objekt sollten nicht anfordern einer gewünschten zeichnen Rechteck größer ist als seine eigenen Bereich Clientrechteck, dessen Größe abgerufen werden kann, mit [GetClientRect](#getclientrect). Dadurch wird verhindert, dass Objekte versehentlich zeichnen, in denen nicht auf für Sie bestimmt sind.  
   
-##  <a name="a-namegetenableda--colecontrolgetenabled"></a><a name="getenabled"></a>COleControl::GetEnabled  
+##  <a name="getenabled"></a>COleControl::GetEnabled  
  Implementiert die Funktion Get an Bestands-Enabled-Eigenschaft des Steuerelements.  
   
 ```  
@@ -1327,7 +1492,7 @@ BOOL GetEnabled();
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn das Steuerelement aktiviert ist; andernfalls 0.  
   
-##  <a name="a-namegetextendedcontrola--colecontrolgetextendedcontrol"></a><a name="getextendedcontrol"></a>COleControl::GetExtendedControl  
+##  <a name="getextendedcontrol"></a>COleControl::GetExtendedControl  
  Erhält einen Zeiger auf ein Objekt, das Beibehalten von der Container, der das Steuerelement über einen erweiterten Satz von Eigenschaften darstellt.  
   
 ```  
@@ -1342,7 +1507,7 @@ LPDISPATCH GetExtendedControl();
 ### <a name="remarks"></a>Hinweise  
  Die Funktion, die diese Funktion ruft ist verantwortlich für die Freigabe des Zeigers, wenn das Objekt nicht mehr benötigen. Beachten Sie, dass der Container ist nicht erforderlich, dieses Objekt unterstützt.  
   
-##  <a name="a-namegetfocusa--colecontrolgetfocus"></a><a name="getfocus"></a>COleControl::GetFocus  
+##  <a name="getfocus"></a>COleControl::GetFocus  
  Bestimmt, ob die `COleControl` Objekt den Fokus besitzt.  
   
 ```  
@@ -1357,7 +1522,7 @@ CWnd* GetFocus();
 ### <a name="remarks"></a>Hinweise  
  Ein aktiviertes fensterloses Steuerelement den Fokus erhält, wenn [SetFocus](#setfocus) aufgerufen wird.  
   
-##  <a name="a-namegetfonta--colecontrolgetfont"></a><a name="getfont"></a>COleControl::GetFont  
+##  <a name="getfont"></a>COleControl::GetFont  
  Implementiert die Get-Funktion der vordefinierten Font-Eigenschaft.  
   
 ```  
@@ -1370,7 +1535,7 @@ LPFONTDISP GetFont();
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass das Objekt nach Abschluss des Aufrufers freigegeben werden muss. Verwenden Sie in der Implementierung des Steuerelements, `InternalGetFont` Zugriff auf das Steuerelement stock Font-Objekt. Weitere Informationen zur Verwendung von Schriftarten in Ihrem Steuerelement finden Sie im Artikel [ActiveX-Steuerelemente: Verwenden von Schriftarten in einem ActiveX-Steuerelement](../../mfc/mfc-activex-controls-using-fonts.md).  
   
-##  <a name="a-namegetfonttextmetricsa--colecontrolgetfonttextmetrics"></a><a name="getfonttextmetrics"></a>COleControl::GetFontTextMetrics  
+##  <a name="getfonttextmetrics"></a>COleControl::GetFontTextMetrics  
  Misst die Text-Metriken für alle `CFontHolder` Objekt im Besitz des Steuerelements.  
   
 ```  
@@ -1391,7 +1556,7 @@ void GetFontTextMetrics(
   
  Die `TEXTMETRIC` -Struktur für die Standardschriftart ist aktualisiert, wenn die [SelectFontObject](#selectfontobject) -Funktion aufgerufen wird. Rufen Sie `GetFontTextMetrics` nur nach der Auswahl der vordefinierten Schriftarteigenschaft, um die Informationen zu gewährleisten, es bietet, gültig ist.  
   
-##  <a name="a-namegetforecolora--colecontrolgetforecolor"></a><a name="getforecolor"></a>COleControl::GetForeColor  
+##  <a name="getforecolor"></a>COleControl::GetForeColor  
  Implementiert die Get-Funktion der vordefinierten ForeColor-Eigenschaft.  
   
 ```  
@@ -1401,7 +1566,7 @@ OLE_COLOR GetForeColor();
 ### <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert gibt die aktuelle Vordergrundfarbe als ein **OLE_COLOR** Wert, wenn erfolgreich. Dieser Wert übersetzt werden kann, um eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert mit einem Aufruf von `TranslateColor`.  
   
-##  <a name="a-namegethwnda--colecontrolgethwnd"></a><a name="gethwnd"></a>COleControl::GetHwnd  
+##  <a name="gethwnd"></a>COleControl::GetHwnd  
  Implementiert die Get-Funktion der vordefinierten hWnd-Eigenschaft.  
   
 ```  
@@ -1411,7 +1576,7 @@ OLE_HANDLE GetHwnd();
 ### <a name="return-value"></a>Rückgabewert  
  Das OLE-Steuerelement-Fensterhandle, falls vorhanden; andernfalls **NULL**.  
   
-##  <a name="a-namegetmessagestringa--colecontrolgetmessagestring"></a><a name="getmessagestring"></a>COleControl::GetMessageString  
+##  <a name="getmessagestring"></a>COleControl::GetMessageString  
  Aufgerufen, um eine kurze Zeichenfolge abzurufen, die den Zweck des Menüelements identifizierten beschreibt `nID`.  
   
 ```  
@@ -1430,7 +1595,7 @@ virtual void GetMessageString(
 ### <a name="remarks"></a>Hinweise  
  Dies kann verwendet werden, um eine Nachricht für die Anzeige in einer Statusleiste zu erhalten, während das Menüelement hervorgehoben ist. Die standardmäßige Implementierung versucht, beim Laden einer Zeichenfolgenressource identifizierten `nID`.  
   
-##  <a name="a-namegetnotsupporteda--colecontrolgetnotsupported"></a><a name="getnotsupported"></a>COleControl::GetNotSupported  
+##  <a name="getnotsupported"></a>COleControl::GetNotSupported  
  Verhindert den Zugriff auf den Eigenschaftswert eines Steuerelements, durch den Benutzer.  
   
 ```  
@@ -1440,7 +1605,7 @@ void GetNotSupported();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion anstelle einer Eigenschaft die Get-Funktion, in dem Abrufen der Eigenschaft vom Benutzer des Steuerelements nicht unterstützt. Ein Beispiel wäre eine Eigenschaft, die nur Schreibzugriff ist.  
   
-##  <a name="a-namegetreadystatea--colecontrolgetreadystate"></a><a name="getreadystate"></a>COleControl::GetReadyState  
+##  <a name="getreadystate"></a>COleControl::GetReadyState  
  Gibt den Status der Bereitschaft des Steuerelements zurück.  
   
 ```  
@@ -1468,7 +1633,7 @@ long GetReadyState();
 ### <a name="remarks"></a>Hinweise  
  Die meisten einfachen Steuerelemente müssen nie zur Unterscheidung **LOADED** und `INTERACTIVE`. Allerdings Steuerelemente, die Daten Pfadeigenschaften unterstützen möglicherweise nicht interaktive werden, bis mindestens einige Daten asynchron empfangen werden. Ein Steuerelement sollten so bald wie möglich interaktiv.  
   
-##  <a name="a-namegetrectincontainera--colecontrolgetrectincontainer"></a><a name="getrectincontainer"></a>COleControl::GetRectInContainer  
+##  <a name="getrectincontainer"></a>COleControl::GetRectInContainer  
  Ruft die Koordinaten der das Rechteck des Steuerelements relativ zu dem Container, ausgedrückt in Geräteeinheiten ab.  
   
 ```  
@@ -1485,7 +1650,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 ### <a name="remarks"></a>Hinweise  
  Das Rechteck ist nur gültig, wenn das Steuerelement direkt aktiv ist.  
   
-##  <a name="a-namegetstocktextmetricsa--colecontrolgetstocktextmetrics"></a><a name="getstocktextmetrics"></a>COleControl::GetStockTextMetrics  
+##  <a name="getstocktextmetrics"></a>COleControl::GetStockTextMetrics  
  Misst die Text-Metriken für das Steuerelement stock Font-Eigenschaft, die mit ausgewählt werden können die [SelectStockFont](#selectstockfont) Funktion.  
   
 ```  
@@ -1501,7 +1666,7 @@ void GetStockTextMetrics(LPTEXTMETRIC lptm);
   
  Die `TEXTMETRIC` -Struktur für die Standardschriftart ist aktualisiert, wenn die `SelectStockFont` -Funktion aufgerufen wird. Sie sollten diese Funktion aufrufen, erst nach dem Auswählen der vordefinierten Schriftart, die Informationen zu gewährleisten, die es bietet, gültig ist.  
   
-##  <a name="a-namegettexta--colecontrolgettext"></a><a name="gettext"></a>COleControl::GetText  
+##  <a name="gettext"></a>COleControl::GetText  
  Implementiert die Get-Funktion der vordefinierten Text oder Caption-Eigenschaft.  
   
 ```  
@@ -1517,7 +1682,7 @@ BSTR GetText();
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, die der Aufrufer dieser Funktion aufrufen muss `SysFreeString` auf die Zeichenfolge zurückgegeben, kostenlose Ressource. Verwenden Sie in der Implementierung des Steuerelements, `InternalGetText` auf vordefinierte Text oder Caption-Eigenschaft des Steuerelements zugreifen.  
   
-##  <a name="a-namegetwindowlessdroptargeta--colecontrolgetwindowlessdroptarget"></a><a name="getwindowlessdroptarget"></a>COleControl:: GetWindowlessDropTarget  
+##  <a name="getwindowlessdroptarget"></a>COleControl:: GetWindowlessDropTarget  
  Überschreiben Sie `GetWindowlessDropTarget` soll ein fensterloses Steuerelement ist das Ziel ein OLE Drag & drop-Vorgangs.  
   
 ```  
@@ -1532,7 +1697,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
   
  [!code-cpp[NVC_MFCAxCtl&#2;](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]  
   
-##  <a name="a-nameinitializeiidsa--colecontrolinitializeiids"></a><a name="initializeiids"></a>COleControl::InitializeIIDs  
+##  <a name="initializeiids"></a>COleControl::InitializeIIDs  
  Benachrichtigt die Basisklasse den IIDs, die das Steuerelement verwendet.  
   
 ```  
@@ -1551,7 +1716,7 @@ void InitializeIIDs(
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion im Konstruktor des Steuerelements, um die Basisklasse für die Schnittstellen-IDs zu informieren, die das Steuerelement verwenden werden.  
   
-##  <a name="a-nameinternalgetfonta--colecontrolinternalgetfont"></a><a name="internalgetfont"></a>COleControl::InternalGetFont  
+##  <a name="internalgetfont"></a>COleControl::InternalGetFont  
  Greift auf die vordefinierte Schriftarteigenschaft des Steuerelements  
   
 ```  
@@ -1561,7 +1726,7 @@ CFontHolder& InternalGetFont();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf eine [CFontHolder](../../mfc/reference/cfontholder-class.md) -Objekt, das vordefinierte Font-Objekt enthält.  
   
-##  <a name="a-nameinternalgettexta--colecontrolinternalgettext"></a><a name="internalgettext"></a>COleControl::InternalGetText  
+##  <a name="internalgettext"></a>COleControl::InternalGetText  
  Greift auf die vordefinierte Text oder Caption-Eigenschaft des Steuerelements.  
   
 ```  
@@ -1571,7 +1736,7 @@ const CString& InternalGetText();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf die Text-Zeichenfolge.  
   
-##  <a name="a-nameinternalsetreadystatea--colecontrolinternalsetreadystate"></a><a name="internalsetreadystate"></a>COleControl::InternalSetReadyState  
+##  <a name="internalsetreadystate"></a>COleControl::InternalSetReadyState  
  Legt die Bereitschaft Zustand des Steuerelements fest.  
   
 ```  
@@ -1600,7 +1765,7 @@ void InternalSetReadyState(long lNewReadyState);
 ### <a name="remarks"></a>Hinweise  
  Die meisten einfachen Steuerelemente müssen nie zur Unterscheidung **LOADED** und `INTERACTIVE`. Allerdings Steuerelemente, die Daten Pfadeigenschaften unterstützen möglicherweise nicht interaktive werden, bis mindestens einige Daten asynchron empfangen werden. Ein Steuerelement sollten so bald wie möglich interaktiv.  
   
-##  <a name="a-nameinvalidatecontrola--colecontrolinvalidatecontrol"></a><a name="invalidatecontrol"></a>COleControl::InvalidateControl  
+##  <a name="invalidatecontrol"></a>COleControl::InvalidateControl  
  Zwingt das Steuerelement neu gezeichnet werden muss.  
   
 ```  
@@ -1619,7 +1784,7 @@ void InvalidateControl(
 ### <a name="remarks"></a>Hinweise  
  Wenn `lpRect` hat ein **NULL** Wert, wird das gesamte Steuerelement neu gezeichnet werden. Wenn `lpRect` nicht **NULL**, dies weist darauf hin, der Teil des Steuerelements Rechteck, das für ungültig erklärt werden. In Fällen, in dem das Steuerelement verfügt über kein Fenster oder ist nicht aktiviert, das Rechteck wird ignoriert, und ein Aufruf erfolgt der Clientstandort [IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337) Member-Funktion. Verwenden Sie diese Funktion anstelle von `CWnd::InvalidateRect` oder `InvalidateRect`.  
   
-##  <a name="a-nameinvalidatergna--colecontrolinvalidatergn"></a><a name="invalidatergn"></a>COleControl::InvalidateRgn  
+##  <a name="invalidatergn"></a>COleControl::InvalidateRgn  
  Erklärt die Container Clientbereich innerhalb dieser Region.  
   
 ```  
@@ -1638,7 +1803,7 @@ void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
   
  Wenn `bErase` ist **TRUE** für jeden Teil der Aktualisierungsbereich, den gesamten Bereich nicht nur im angegebenen Teil der Hintergrund wird gelöscht.  
   
-##  <a name="a-nameisconvertingvbxa--colecontrolisconvertingvbx"></a><a name="isconvertingvbx"></a>COleControl::IsConvertingVBX  
+##  <a name="isconvertingvbx"></a>COleControl::IsConvertingVBX  
  Können spezielle Laden eines OLE-Steuerelements.  
   
 ```  
@@ -1661,7 +1826,7 @@ BOOL IsConvertingVBX();
   
  In Ihrem Steuerelements `DoPropExchange` -Funktion können Sie für diese Bedingung überprüfen und führen Sie bei "true" Load-Code für diese Konvertierung (z. B. den vorherigen Beispielen). Wenn das Steuerelement nicht konvertiert wird, können Sie normale Auslastung Code ausführen. Diese Funktion gilt nur für Steuerelemente, die von VBX-Entsprechungen konvertiert wird.  
   
-##  <a name="a-nameisinvokealloweda--colecontrolisinvokeallowed"></a><a name="isinvokeallowed"></a>COleControl::IsInvokeAllowed  
+##  <a name="isinvokeallowed"></a>COleControl::IsInvokeAllowed  
  Ermöglicht die Automatisierung-Methodenaufruf.  
   
 ```  
@@ -1674,7 +1839,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
 ### <a name="remarks"></a>Hinweise  
  Implementierung des Frameworks **IDispatch:: Invoke** Aufrufe **Sie IsInvokeAllowed** bestimmen, ob eine bestimmte Funktion (identifiziert durch `dispid`) aufgerufen werden kann. Das Standardverhalten für ein OLE-Steuerelement ist, ermöglichen die Automatisierungsmethoden aufgerufen werden, nur, wenn das Steuerelement initialisiert wurde. allerdings **Sie IsInvokeAllowed** ist eine virtuelle Funktion und kann überschrieben werden, falls erforderlich (beispielsweise, wenn das Steuerelement als Automatisierungsserver verwendet wird). Weitere Informationen finden Sie im Knowledge Base-Artikel Q166472, "So wird's gemacht: verwenden ein OLE-Steuerelements als Automatisierungsserver." Knowledge Base-Artikeln finden Sie in der MSDN Library Visual Studio-Dokumentation oder unter [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="a-nameismodifieda--colecontrolismodified"></a><a name="ismodified"></a>COleControl::IsModified  
+##  <a name="ismodified"></a>COleControl::IsModified  
  Bestimmt, ob der Zustand des Steuerelements geändert wurde.  
   
 ```  
@@ -1687,7 +1852,7 @@ BOOL IsModified();
 ### <a name="remarks"></a>Hinweise  
  Der Zustand eines Steuerelements wird geändert, wenn der Wert eine Eigenschaft geändert wird.  
   
-##  <a name="a-nameisoptimizeddrawa--colecontrolisoptimizeddraw"></a><a name="isoptimizeddraw"></a>COleControl::IsOptimizedDraw  
+##  <a name="isoptimizeddraw"></a>COleControl::IsOptimizedDraw  
  Bestimmt, ob der Container für den aktuellen Vorgang optimierte Zeichnung unterstützt.  
   
 ```  
@@ -1700,7 +1865,7 @@ BOOL IsOptimizedDraw();
 ### <a name="remarks"></a>Hinweise  
  Wenn optimiertes Zeichnen unterstützt wird, muss das Steuerelement nicht wählen alten Objekte (Stifte, Pinsel, Schriftarten, usw.) im Gerätekontext nach Abschluss der Zeichnung.  
   
-##  <a name="a-nameissubclassedcontrola--colecontrolissubclassedcontrol"></a><a name="issubclassedcontrol"></a>COleControl::IsSubclassedControl  
+##  <a name="issubclassedcontrol"></a>COleControl::IsSubclassedControl  
  Aufgerufen, um festzustellen, ob steuern, die Unterklassen der Steuerelemente einer Windows.  
   
 ```  
@@ -1713,7 +1878,7 @@ virtual BOOL IsSubclassedControl();
 ### <a name="remarks"></a>Hinweise  
  Sie überschreiben diese Funktion und zurückgeben müssen **TRUE** Wenn Ihre OLE Unterklassen eines Windows-Steuerelements.  
   
-##  <a name="a-nameloada--colecontrolload"></a><a name="load"></a>COleControl::Load  
+##  <a name="load"></a>COleControl::Load  
  Setzt alle vorherigen Daten asynchron geladen und initialisiert ein neues Laden der asynchronen Eigenschaften des Steuerelements.  
   
 ```  
@@ -1727,7 +1892,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
  *Prop*  
  Ein [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) Objekt implementiert eine asynchrone Steuerelementeigenschaft.  
   
-##  <a name="a-namelockinplaceactivea--colecontrollockinplaceactive"></a><a name="lockinplaceactive"></a>COleControl::LockInPlaceActive  
+##  <a name="lockinplaceactive"></a>COleControl::LockInPlaceActive  
  Verhindert, dass den Container das Steuerelement deaktivieren.  
   
 ```  
@@ -1744,7 +1909,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass alle Sperren des Steuerelements kombiniert werden muss mit einer Entsperren des Steuerelements Beendigung. Sie sollten nur das Steuerelement für kurze Zeit beim Auslösen eines Ereignisses, z. B. sperren.  
   
-##  <a name="a-nameonambientpropertychangea--colecontrolonambientpropertychange"></a><a name="onambientpropertychange"></a>COleControl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>COleControl::OnAmbientPropertyChange  
  Wird vom Framework aufgerufen, wenn eine Ambiente-Eigenschaft des Containers Wert geändert wurde.  
   
 ```  
@@ -1755,7 +1920,7 @@ virtual void OnAmbientPropertyChange(DISPID dispid);
  *dispID*  
  Die Dispatch-ID der ambient-Eigenschaft, die geändert, oder **u. DISPID_UNKNOWN lauten** Wenn mehrere Eigenschaften geändert haben.  
   
-##  <a name="a-nameonappearancechangeda--colecontrolonappearancechanged"></a><a name="onappearancechanged"></a>COleControl::OnAppearanceChanged  
+##  <a name="onappearancechanged"></a>COleControl::OnAppearanceChanged  
  Wird vom Framework aufgerufen, wenn die vordefinierte Darstellung-Eigenschaftswert geändert hat.  
   
 ```  
@@ -1765,7 +1930,7 @@ virtual void OnAppearanceChanged ();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn die Benachrichtigung, nachdem diese Eigenschaft geändert werden soll. Die standardmäßige Implementierung ruft `InvalidateControl`.  
   
-##  <a name="a-nameonbackcolorchangeda--colecontrolonbackcolorchanged"></a><a name="onbackcolorchanged"></a>COleControl::OnBackColorChanged  
+##  <a name="onbackcolorchanged"></a>COleControl::OnBackColorChanged  
  Wird vom Framework aufgerufen, wenn die vordefinierte BackColor-Eigenschaftswert geändert hat.  
   
 ```  
@@ -1775,7 +1940,7 @@ virtual void OnBackColorChanged();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn die Benachrichtigung, nachdem diese Eigenschaft geändert werden soll. Die standardmäßige Implementierung ruft `InvalidateControl`.  
   
-##  <a name="a-nameonborderstylechangeda--colecontrolonborderstylechanged"></a><a name="onborderstylechanged"></a>COleControl::OnBorderStyleChanged  
+##  <a name="onborderstylechanged"></a>COleControl::OnBorderStyleChanged  
  Wird vom Framework aufgerufen, wenn die vordefinierte BorderStyle-Eigenschaftswert geändert hat.  
   
 ```  
@@ -1787,7 +1952,7 @@ virtual void OnBorderStyleChanged();
   
  Überschreiben Sie diese Funktion, wenn die Benachrichtigung, nachdem diese Eigenschaft geändert werden soll.  
   
-##  <a name="a-nameonclicka--colecontrolonclick"></a><a name="onclick"></a>COleControl::OnClick  
+##  <a name="onclick"></a>COleControl::OnClick  
  Wird vom Framework aufgerufen, wenn eine Maustaste geklickt hat, oder die vordefinierte DoClick-Methode aufgerufen wurde.  
   
 ```  
@@ -1809,7 +1974,7 @@ virtual void OnClick(USHORT iButton);
   
  Überschreiben Sie diese Memberfunktion zum Ändern oder erweitern die Standardbehandlung.  
   
-##  <a name="a-nameonclosea--colecontrolonclose"></a><a name="onclose"></a>COleControl::OnClose  
+##  <a name="onclose"></a>COleControl::OnClose  
  Vom Framework aufgerufen, wenn der Container des Steuerelements aufgerufen hat **IOleControl:: Close** Funktion.  
   
 ```  
@@ -1829,7 +1994,7 @@ virtual void OnClose(DWORD dwSaveOption);
 ### <a name="remarks"></a>Hinweise  
  In der Standardeinstellung `OnClose` speichert das Control-Objekt, wenn es geändert wurde und `dwSaveOption` ist entweder `OLECLOSE_SAVEIFDIRTY` oder `OLECLOSE_PROMPTSAVE`.  
   
-##  <a name="a-nameondoverba--colecontrolondoverb"></a><a name="ondoverb"></a>COleControl::OnDoVerb  
+##  <a name="ondoverb"></a>COleControl::OnDoVerb  
  Vom Framework aufgerufen, wenn der Container aufruft der **IOleObject** Member-Funktion.  
   
 ```  
@@ -1861,7 +2026,7 @@ virtual BOOL OnDoVerb(
   
  Überschreiben Sie diese Funktion, um die Standardbehandlung des Verbs ändern.  
   
-##  <a name="a-nameondrawa--colecontrolondraw"></a><a name="ondraw"></a>COleControl:: OnDraw aufgerufen  
+##  <a name="ondraw"></a>COleControl:: OnDraw aufgerufen  
  Vom Framework aufgerufen wird, das OLE-Steuerelement in das angegebene umgebende Rechteck mit den angegebenen Gerätekontext zu zeichnen.  
   
 ```  
@@ -1884,7 +2049,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Hinweise  
  `OnDraw`wird normalerweise aufgerufen, für die Bildschirmanzeige, übergeben einen Bildschirm-Gerätekontext als `pDC`. Die `rcBounds` Parameter identifiziert das Rechteck in der Ziel-Gerätekontext (relativ zum aktuellen Zuordnungsmodus). Die `rcInvalid` Parameter ist das aktuelle Rechteck, das ungültig ist. In einigen Fällen ist dies einen kleineren Bereich als `rcBounds`.  
   
-##  <a name="a-nameondrawmetafilea--colecontrolondrawmetafile"></a><a name="ondrawmetafile"></a>OnDrawMetafile  
+##  <a name="ondrawmetafile"></a>OnDrawMetafile  
  Vom Framework aufgerufen, die das OLE-Steuerelement in das angegebene umgebende Rechteck mit der angegebenen Metadatei-Gerätekontext zu zeichnen.  
   
 ```  
@@ -1903,7 +2068,7 @@ virtual void OnDrawMetafile(
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung ruft die [OnDraw](#ondraw) Funktion.  
   
-##  <a name="a-nameonedita--colecontrolonedit"></a><a name="onedit"></a>COleControl::OnEdit  
+##  <a name="onedit"></a>COleControl::OnEdit  
  Bewirkt, dass das Steuerelement die UI aktiviert werden.  
   
 ```  
@@ -1933,7 +2098,7 @@ virtual BOOL OnEdit(
   
  [!code-cpp[NVC_MFCAxCtl&5;](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]  
   
-##  <a name="a-nameonenabledchangeda--colecontrolonenabledchanged"></a><a name="onenabledchanged"></a>COleControl::OnEnabledChanged  
+##  <a name="onenabledchanged"></a>COleControl::OnEnabledChanged  
  Wird vom Framework aufgerufen, wenn der Bestand aktiviert-Eigenschaftswert geändert wurde.  
   
 ```  
@@ -1943,7 +2108,7 @@ virtual void OnEnabledChanged();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn die Benachrichtigung, nachdem diese Eigenschaft geändert werden soll. Die standardmäßige Implementierung ruft [InvalidateControl](#invalidatecontrol).  
   
-##  <a name="a-nameonenumverbsa--colecontrolonenumverbs"></a><a name="onenumverbs"></a>COleControl::OnEnumVerbs  
+##  <a name="onenumverbs"></a>COleControl::OnEnumVerbs  
  Vom Framework aufgerufen, wenn der Container aufruft der **IOleObject:: EnumVerbs** Member-Funktion.  
   
 ```  
@@ -1962,7 +2127,7 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
  Überschreiben Sie diese Funktion, um die Standardmethode für das Auflisten von Verben zu ändern.  
   
-##  <a name="a-nameoneventadvisea--colecontroloneventadvise"></a><a name="oneventadvise"></a>COleControl::OnEventAdvise  
+##  <a name="oneventadvise"></a>COleControl::OnEventAdvise  
  Wird vom Framework aufgerufen, wenn ein Ereignishandler verbunden oder von OLE-Steuerelement getrennt.  
   
 ```  
@@ -1973,7 +2138,7 @@ virtual void OnEventAdvise(BOOL bAdvise);
  `bAdvise`  
  **TRUE** gibt an, dass ein Ereignishandler für das Steuerelement verbunden wurde. **FALSE** gibt an, dass das Steuerelement ein Ereignishandler getrennt wurde.  
   
-##  <a name="a-nameonfontchangeda--colecontrolonfontchanged"></a><a name="onfontchanged"></a>COleControl::OnFontChanged  
+##  <a name="onfontchanged"></a>COleControl::OnFontChanged  
  Wird vom Framework aufgerufen, wenn die vordefinierte Schriftart-Eigenschaftswert geändert wurde.  
   
 ```  
@@ -1988,7 +2153,7 @@ virtual void OnFontChanged();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCAxCtl&6;](../../mfc/reference/codesnippet/cpp/colecontrol-class_7.cpp)]  
   
-##  <a name="a-nameonforecolorchangeda--colecontrolonforecolorchanged"></a><a name="onforecolorchanged"></a>COleControl::OnForeColorChanged  
+##  <a name="onforecolorchanged"></a>COleControl::OnForeColorChanged  
  Wird vom Framework aufgerufen, wenn die vordefinierte ForeColor-Eigenschaftswert geändert hat.  
   
 ```  
@@ -2000,7 +2165,7 @@ virtual void OnForeColorChanged();
   
  Überschreiben Sie diese Funktion, wenn die Benachrichtigung, nachdem diese Eigenschaft geändert werden soll.  
   
-##  <a name="a-nameonfreezeeventsa--colecontrolonfreezeevents"></a><a name="onfreezeevents"></a>COleControl::OnFreezeEvents  
+##  <a name="onfreezeevents"></a>COleControl::OnFreezeEvents  
  Nach dem Aufrufen der Container vom Framework aufgerufen **IOleControl:: FreezeEvents**.  
   
 ```  
@@ -2016,7 +2181,7 @@ virtual void OnFreezeEvents(BOOL bFreeze);
   
  Überschreiben Sie diese Funktion, wenn Sie zusätzliches Verhalten soll, bei der Behandlung von Ereignissen nicht fixiert ist oder fixiert ist.  
   
-##  <a name="a-nameongetcolorseta--colecontrolongetcolorset"></a><a name="ongetcolorset"></a>COleControl::OnGetColorSet  
+##  <a name="ongetcolorset"></a>COleControl::OnGetColorSet  
  Vom Framework aufgerufen, wenn der Container aufruft der **IViewObject::GetColorSet** Member-Funktion.  
   
 ```  
@@ -2044,7 +2209,7 @@ virtual BOOL OnGetColorSet(
   
  Überschreiben Sie diese Funktion, um spezielle Verarbeitungsschritte Ausführen dieser Anforderung.  
   
-##  <a name="a-nameongetcontrolinfoa--colecontrolongetcontrolinfo"></a><a name="ongetcontrolinfo"></a>COleControl::OnGetControlInfo  
+##  <a name="ongetcontrolinfo"></a>COleControl::OnGetControlInfo  
  Vom Framework aufgerufen, wenn der Container des Steuerelements Informationen über das Steuerelement angefordert hat.  
   
 ```  
@@ -2060,7 +2225,7 @@ virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
   
  Überschreiben Sie diese Funktion, wenn das Steuerelement mnemonische Tasten verarbeiten muss.  
   
-##  <a name="a-nameongetdisplaystringa--colecontrolongetdisplaystring"></a><a name="ongetdisplaystring"></a>COleControl::OnGetDisplayString  
+##  <a name="ongetdisplaystring"></a>COleControl::OnGetDisplayString  
  Aufgerufen, um eine Zeichenfolge zu erhalten, die den aktuellen Wert der Eigenschaft identifizierten darstellt `dispid`.  
   
 ```  
@@ -2082,7 +2247,7 @@ virtual BOOL OnGetDisplayString(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn das Steuerelement verfügt über eine Eigenschaft, deren Wert direkt in eine Zeichenfolge konvertiert werden kann, und den Wert der Eigenschaft in einem Container bereitgestellten Eigenschaftenbrowser angezeigt werden soll.  
   
-##  <a name="a-nameongetinplacemenua--colecontrolongetinplacemenu"></a><a name="ongetinplacemenu"></a>COleControl::OnGetInPlaceMenu  
+##  <a name="ongetinplacemenu"></a>COleControl::OnGetInPlaceMenu  
  Vom Framework aufgerufen, wenn das Steuerelement Benutzeroberfläche aktiviert, erhalten Sie im Menü des Containers vorhandenen Menüs zusammengeführt werden sollen.  
   
 ```  
@@ -2095,7 +2260,7 @@ virtual HMENU OnGetInPlaceMenu();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen über das Zusammenführen von OLE-Ressourcen finden Sie im Artikel [Menüs und Ressourcen (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="a-nameongetnaturalextenta--colecontrolongetnaturalextent"></a><a name="ongetnaturalextent"></a>COleControl::OnGetNaturalExtent  
+##  <a name="ongetnaturalextent"></a>COleControl::OnGetNaturalExtent  
  Wird vom Framework als Reaktion auf eines Containers aufgerufen **IViewObjectEx::GetNaturalExtent** Anforderung.  
   
 ```  
@@ -2151,7 +2316,7 @@ virtual BOOL OnGetNaturalExtent(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um die Größe des Objekts anzeigen, die die vorgeschlagene Größe und Umfang der Modus in am nächsten Zurückgeben der **DVEXTENTINFO** Struktur. Die standardmäßige Implementierung gibt **FALSE** und macht keine Anpassung der Größe.  
   
-##  <a name="a-nameongetpredefinedstringsa--colecontrolongetpredefinedstrings"></a><a name="ongetpredefinedstrings"></a>COleControl::OnGetPredefinedStrings  
+##  <a name="ongetpredefinedstrings"></a>COleControl::OnGetPredefinedStrings  
  Vom Framework aufgerufen wird, erhalten eine Reihe von vordefinierten Zeichenfolgen, die die möglichen Werte für eine Eigenschaft darstellt.  
   
 ```  
@@ -2177,7 +2342,7 @@ virtual BOOL OnGetPredefinedStrings(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn das Steuerelement über eine Eigenschaft mit einem Satz möglicher Werte verfügt, die durch Zeichenfolgen dargestellt werden können. Für jede hinzugefügte Element `pStringArray`, sollten Sie ein entsprechende "Cookie" Element hinzufügen *pCookieArray.* Diese "Cookie" Werte können später übergeben werden, indem das Framework die `COleControl::OnGetPredefinedValue` Funktion.  
   
-##  <a name="a-nameongetpredefinedvaluea--colecontrolongetpredefinedvalue"></a><a name="ongetpredefinedvalue"></a>COleControl::OnGetPredefinedValue  
+##  <a name="ongetpredefinedvalue"></a>COleControl::OnGetPredefinedValue  
  Aufgerufen, zum Abrufen des Wertes für eine der vordefinierten Zeichenfolgen, die zuvor von einer Überschreibung der zurückgegebenen `COleControl::OnGetPredefinedStrings`.  
   
 ```  
@@ -2200,7 +2365,7 @@ virtual BOOL OnGetPredefinedValue(
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn ein Wert zurückgegeben wurden `lpvarOut`; andernfalls 0.  
   
-##  <a name="a-nameongetviewextenta--colecontrolongetviewextent"></a><a name="ongetviewextent"></a>COleControl::OnGetViewExtent  
+##  <a name="ongetviewextent"></a>COleControl::OnGetViewExtent  
  Wird vom Framework als Reaktion auf eines Containers aufgerufen [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) Anforderung.  
   
 ```  
@@ -2230,7 +2395,7 @@ virtual BOOL OnGetViewExtent(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn das Steuerelement zwei Durchläufen Zeichnen verwendet und die deckenden und transparenten Teile unterschiedliche Dimensionen weisen.  
   
-##  <a name="a-nameongetviewrecta--colecontrolongetviewrect"></a><a name="ongetviewrect"></a>COleControl::OnGetViewRect  
+##  <a name="ongetviewrect"></a>COleControl::OnGetViewRect  
  Wird vom Framework als Reaktion auf eines Containers aufgerufen **IViewObjectEx::GetRect** Anforderung.  
   
 ```  
@@ -2256,7 +2421,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 ### <a name="remarks"></a>Hinweise  
  Die Größe des Objekts wird konvertiert, indem `OnGetViewRect` in ein Rechteck, beginnend an einer bestimmten Position (der Standardwert ist der oberen linken Ecke der Anzeige). Überschreiben Sie diese Funktion, wenn das Steuerelement zwei Durchläufen Zeichnen verwendet und die deckenden und transparenten Teile unterschiedliche Dimensionen weisen.  
   
-##  <a name="a-nameongetviewstatusa--colecontrolongetviewstatus"></a><a name="ongetviewstatus"></a>COleControl::OnGetViewStatus  
+##  <a name="ongetviewstatus"></a>COleControl::OnGetViewStatus  
  Wird vom Framework als Reaktion auf eines Containers aufgerufen **IViewObjectEx::GetViewStatus** Anforderung.  
   
 ```  
@@ -2281,7 +2446,7 @@ virtual DWORD OnGetViewStatus();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn das Steuerelement zweistufige Zeichnung verwendet. Die standardmäßige Implementierung gibt **VIEWSTATUS_OPAQUE**.  
   
-##  <a name="a-nameonhidetoolbarsa--colecontrolonhidetoolbars"></a><a name="onhidetoolbars"></a>COleControl::OnHideToolBars  
+##  <a name="onhidetoolbars"></a>COleControl::OnHideToolBars  
  Wird vom Framework aufgerufen, wenn das Steuerelement der Benutzeroberfläche deaktiviert wird.  
   
 ```  
@@ -2291,7 +2456,7 @@ virtual void OnHideToolBars();
 ### <a name="remarks"></a>Hinweise  
  Verbergen der Implementierung alle Symbolleisten angezeigt, wenn `OnShowToolbars`.  
   
-##  <a name="a-nameoninactivemousemovea--colecontroloninactivemousemove"></a><a name="oninactivemousemove"></a>COleControl::OnInactiveMouseMove  
+##  <a name="oninactivemousemove"></a>COleControl::OnInactiveMouseMove  
  Vom Container für die inaktiven Objekt unter dem Mauszeiger auf den Eingang des Namens einer `WM_MOUSEMOVE` Nachricht.  
   
 ```  
@@ -2318,7 +2483,7 @@ virtual void OnInactiveMouseMove(
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass Fenster Clientkoordinaten (Pixel) verwendet werden, um die Position des Mauszeigers zu übergeben. Dies wird ermöglicht auch das umschließende Rechteck des Objekts in der gleichen Koordinatensystem übergeben.  
   
-##  <a name="a-nameoninactivesetcursora--colecontroloninactivesetcursor"></a><a name="oninactivesetcursor"></a>COleControl::OnInactiveSetCursor  
+##  <a name="oninactivesetcursor"></a>COleControl::OnInactiveSetCursor  
  Vom Container für die inaktiven Objekt unter dem Mauszeiger auf den Eingang des Namens einer `WM_SETCURSOR` Nachricht.  
   
 ```  
@@ -2352,7 +2517,7 @@ virtual BOOL OnInactiveSetCursor(
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass Fenster Clientkoordinaten (Pixel) verwendet werden, um die Position des Mauszeigers zu übergeben. Dies wird ermöglicht auch das umschließende Rechteck des Objekts in der gleichen Koordinatensystem übergeben.  
   
-##  <a name="a-nameonkeydowneventa--colecontrolonkeydownevent"></a><a name="onkeydownevent"></a>COleControl::OnKeyDownEvent  
+##  <a name="onkeydownevent"></a>COleControl::OnKeyDownEvent  
  Wird vom Framework aufgerufen, nachdem ein vordefiniertes KeyDown-Ereignis verarbeitet wurde.  
   
 ```  
@@ -2377,7 +2542,7 @@ virtual void OnKeyDownEvent(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn das Steuerelement benötigt Zugriff auf die wichtigsten Informationen, nachdem das Ereignis ausgelöst wurde.  
   
-##  <a name="a-nameonkeypresseventa--colecontrolonkeypressevent"></a><a name="onkeypressevent"></a>COleControl::OnKeyPressEvent  
+##  <a name="onkeypressevent"></a>COleControl::OnKeyPressEvent  
  Vom Framework aufgerufen, nachdem die Stock, KeyPress-Ereignis ausgelöst wurde.  
   
 ```  
@@ -2393,7 +2558,7 @@ virtual void OnKeyPressEvent(USHORT nChar);
   
  Überschreiben Sie diese Funktion, wenn nach Eintreten des Ereignisses Benachrichtigung werden soll.  
   
-##  <a name="a-nameonkeyupeventa--colecontrolonkeyupevent"></a><a name="onkeyupevent"></a>COleControl::OnKeyUpEvent  
+##  <a name="onkeyupevent"></a>COleControl::OnKeyUpEvent  
  Wird vom Framework aufgerufen, nachdem ein vordefiniertes KeyDown-Ereignis verarbeitet wurde.  
   
 ```  
@@ -2418,7 +2583,7 @@ virtual void OnKeyUpEvent(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn das Steuerelement benötigt Zugriff auf die wichtigsten Informationen, nachdem das Ereignis ausgelöst wurde.  
   
-##  <a name="a-nameonmappropertytopagea--colecontrolonmappropertytopage"></a><a name="onmappropertytopage"></a>COleControl::OnMapPropertyToPage  
+##  <a name="onmappropertytopage"></a>COleControl::OnMapPropertyToPage  
  Aufgerufen, um die Klassen-ID einer Eigenschaftenseite zu erhalten, die Bearbeitung der angegebenen Eigenschaft implementiert.  
   
 ```  
@@ -2444,7 +2609,7 @@ virtual BOOL OnMapPropertyToPage(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um die Möglichkeit zum Aufrufen der Eigenschaftenseiten aus Eigenschaftenbrowser des Containers des Steuerelements.  
   
-##  <a name="a-nameonmnemonica--colecontrolonmnemonic"></a><a name="onmnemonic"></a>COleControl::OnMnemonic  
+##  <a name="onmnemonic"></a>COleControl::OnMnemonic  
  Wird vom Framework aufgerufen, wenn der Container erkannt hat, dass eine mnemonische Taste des OLE-Steuerelements gedrückt wurde.  
   
 ```  
@@ -2455,7 +2620,7 @@ virtual void OnMnemonic(LPMSG pMsg);
  `pMsg`  
  Ein Zeiger auf die durch Drücken einer mnemonischen Taste generierte Windows-Meldung.  
   
-##  <a name="a-nameonpropertiesa--colecontrolonproperties"></a><a name="onproperties"></a>COleControl::OnProperties  
+##  <a name="onproperties"></a>COleControl::OnProperties  
  Vom Framework aufgerufen, wenn das Steuerelement Eigenschaftenverb vom Container aufgerufen wurde.  
   
 ```  
@@ -2483,7 +2648,7 @@ virtual BOOL OnProperties(
   
  Diese Funktion können auch dazu führen, dass die Anzeige der Eigenschaftenseiten des Steuerelements. Rufen Sie die `OnProperties` -Funktion übergeben das Handle des Steuerelements übergeordnete Element in der `hWndParent` Parameter. In diesem Fall die Werte der `lpMsg` und `lpRect` Parameter werden ignoriert.  
   
-##  <a name="a-nameonqueryhitpointa--colecontrolonqueryhitpoint"></a><a name="onqueryhitpoint"></a>COleControl::OnQueryHitPoint  
+##  <a name="onqueryhitpoint"></a>COleControl::OnQueryHitPoint  
  Wird vom Framework als Reaktion auf eines Containers aufgerufen **IViewObjectEx::QueryHitPoint** Anforderung.  
   
 ```  
@@ -2525,7 +2690,7 @@ virtual BOOL OnQueryHitPoint(
 ### <a name="remarks"></a>Hinweise  
  Fragt ab, ob ein Objekt Anzeigerechteck angegebenen Punkt überschneidet (den Punkt erreicht). `QueryHitPoint`kann überschrieben werden, um Zugriffe für nicht rechteckige Objekte zu testen.  
   
-##  <a name="a-nameonqueryhitrecta--colecontrolonqueryhitrect"></a><a name="onqueryhitrect"></a>COleControl::OnQueryHitRect  
+##  <a name="onqueryhitrect"></a>COleControl::OnQueryHitRect  
  Wird vom Framework als Reaktion auf eines Containers aufgerufen **IViewObjectEx::QueryHitRect** Anforderung.  
   
 ```  
@@ -2563,7 +2728,7 @@ virtual BOOL OnQueryHitRect(
 ### <a name="remarks"></a>Hinweise  
  Fragt ab, ob ein Objekt Anzeigerechteck überschneidet sich mit einem beliebigen Zeitpunkt im angegebenen Rechteck (das Rechteck erreicht). `QueryHitRect`kann überschrieben werden, um Zugriffe für nicht rechteckige Objekte zu testen.  
   
-##  <a name="a-nameonrenderdataa--colecontrolonrenderdata"></a><a name="onrenderdata"></a>COleControl::OnRenderData  
+##  <a name="onrenderdata"></a>COleControl::OnRenderData  
  Vom Framework aufgerufen wird zum Abrufen von Daten im angegebenen Format.  
   
 ```  
@@ -2591,7 +2756,7 @@ virtual BOOL OnRenderData(
   
  Weitere Informationen finden Sie unter der **FORMATETC** und **STGMEDIUM** Strukturen in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonrenderfiledataa--colecontrolonrenderfiledata"></a><a name="onrenderfiledata"></a>COleControl::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>COleControl::OnRenderFileData  
  Aufgerufen, um die Daten im angegebenen Format abgerufen, wenn das Speichermedium eine Datei ist.  
   
 ```  
@@ -2617,7 +2782,7 @@ virtual BOOL OnRenderFileData(
   
  Weitere Informationen finden Sie unter der **FORMATETC** -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonrenderglobaldataa--colecontrolonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleControl::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>COleControl::OnRenderGlobalData  
  Aufgerufen, um Daten im angegebenen Format abzurufen, wird das angegebene Speichermedium globalen Arbeitsspeicher.  
   
 ```  
@@ -2645,7 +2810,7 @@ virtual BOOL OnRenderGlobalData(
   
  Weitere Informationen finden Sie unter der **FORMATETC** -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonresetstatea--colecontrolonresetstate"></a><a name="onresetstate"></a>COleControl:: OnResetState ein  
+##  <a name="onresetstate"></a>COleControl:: OnResetState ein  
  Wird vom Framework aufgerufen, wenn die Eigenschaften des Steuerelements auf ihre Standardwerte festgelegt werden soll.  
   
 ```  
@@ -2657,7 +2822,7 @@ virtual void OnResetState();
   
  Der Steuerelement-Writer kann Initialisierungscode für das OLE-Steuerelement einfügen, in diesem überschrieben. Diese Funktion wird aufgerufen, wenn [IPersistStream:: Load](http://msdn.microsoft.com/library/windows/desktop/ms680568) oder [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms680557) ein Fehler auftritt, oder [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms690234) oder [IPersistStorage::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) aufgerufen wird, ohne zuerst eine **IPersistStream:: Load** oder **IPersistStorage**.  
   
-##  <a name="a-nameonsetclientsitea--colecontrolonsetclientsite"></a><a name="onsetclientsite"></a>COleControl:: OnSetClientSite  
+##  <a name="onsetclientsite"></a>COleControl:: OnSetClientSite  
  Vom Framework aufgerufen, wenn der Container des Steuerelements aufgerufen hat **IOleControl::SetClientSite** Funktion.  
   
 ```  
@@ -2669,7 +2834,7 @@ virtual void OnSetClientSite();
   
  Überschreiben Sie diese Funktion, um spezielle Verarbeitungsschritte Ausführen dieser Benachrichtigung. Insbesondere sollten Außerkraftsetzungen für diese Funktion die Basisklasse aufrufen.  
   
-##  <a name="a-nameonsetdataa--colecontrolonsetdata"></a><a name="onsetdata"></a>COleControl::OnSetData  
+##  <a name="onsetdata"></a>COleControl::OnSetData  
  Aufgerufen, um die Daten des Steuerelements mit den angegebenen Daten zu ersetzen.  
   
 ```  
@@ -2699,7 +2864,7 @@ virtual BOOL OnSetData(
   
  Weitere Informationen finden Sie unter der **FORMATETC** und **STGMEDIUM** Strukturen in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonsetextenta--colecontrolonsetextent"></a><a name="onsetextent"></a>COleControl::OnSetExtent  
+##  <a name="onsetextent"></a>COleControl::OnSetExtent  
  Vom Framework aufgerufen, wenn die Daten des Steuerelements werden, aufgrund eines Aufrufs von geändert muss [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330).  
   
 ```  
@@ -2718,7 +2883,7 @@ virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
   
  Überschreiben Sie diese Funktion, um die standardmäßige Größe des Steuerelements zu ändern.  
   
-##  <a name="a-nameonsetobjectrectsa--colecontrolonsetobjectrects"></a><a name="onsetobjectrects"></a>COleControl::OnSetObjectRects  
+##  <a name="onsetobjectrects"></a>COleControl::OnSetObjectRects  
  Aufgerufen, um einen Aufruf zu implementieren [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767).  
   
 ```  
@@ -2742,7 +2907,7 @@ virtual BOOL OnSetObjectRects(
   
  Überschreiben Sie diese Funktion, um das Standardverhalten dieser Funktion ändern.  
   
-##  <a name="a-nameonshowtoolbarsa--colecontrolonshowtoolbars"></a><a name="onshowtoolbars"></a>COleControl::OnShowToolBars  
+##  <a name="onshowtoolbars"></a>COleControl::OnShowToolBars  
  Wird vom Framework aufgerufen, wenn das Steuerelement Benutzeroberfläche aktiviert wurde.  
   
 ```  
@@ -2752,7 +2917,7 @@ virtual void OnShowToolBars();
 ### <a name="remarks"></a>Hinweise  
  Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
-##  <a name="a-nameontextchangeda--colecontrolontextchanged"></a><a name="ontextchanged"></a>COleControl::OnTextChanged  
+##  <a name="ontextchanged"></a>COleControl::OnTextChanged  
  Wird vom Framework aufgerufen, wenn die vordefinierte Beschriftung oder Text-Eigenschaftswert geändert wurde.  
   
 ```  
@@ -2764,7 +2929,7 @@ virtual void OnTextChanged();
   
  Überschreiben Sie diese Funktion, wenn die Benachrichtigung, nachdem diese Eigenschaft geändert werden soll.  
   
-##  <a name="a-nameonwindowlessmessagea--colecontrolonwindowlessmessage"></a><a name="onwindowlessmessage"></a>COleControl::OnWindowlessMessage  
+##  <a name="onwindowlessmessage"></a>COleControl::OnWindowlessMessage  
  Wird vom Framework als Reaktion auf eines Containers aufgerufen **IOleInPlaceObjectWindowless::OnWindowMessage** Anforderung.  
   
 ```  
@@ -2796,7 +2961,7 @@ virtual BOOL OnWindowlessMessage(
   
  Da fensterlose Objekte nicht über ein Fenster verfügen, benötigen sie einen Mechanismus, um die Container-Dispatchmeldungen werden können. Fensterlose OLE-Objekt ruft Nachrichten aus dem zugehörigen Container über die `OnWindowMessage` Methode für die `IOleInPlaceObjectWindowless` Schnittstelle (eine Erweiterung der [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) fensterlose Support). `OnWindowMessage`nimmt nicht an einer `HWND` Parameter.  
   
-##  <a name="a-nameparenttoclienta--colecontrolparenttoclient"></a><a name="parenttoclient"></a>COleControl::ParentToClient  
+##  <a name="parenttoclient"></a>COleControl::ParentToClient  
  Übersetzt die Koordinaten der `pPoint` in Clientkoordinaten.  
   
 ```  
@@ -2870,7 +3035,7 @@ virtual UINT ParentToClient(
 ### <a name="remarks"></a>Hinweise  
  Bei der Eingabe `pPoint` ist relativ zum Ursprung des übergeordneten Elements (obere linke Ecke des Containers). Bei der Ausgabe `pPoint` ist relativ zum Ursprung des Clientbereichs des OLE-Steuerelements (obere linke Ecke des Clientbereichs des Steuerelements).  
   
-##  <a name="a-namepostmodaldialoga--colecontrolpostmodaldialog"></a><a name="postmodaldialog"></a>COleControl::PostModalDialog  
+##  <a name="postmodaldialog"></a>COleControl::PostModalDialog  
  Zeigt dem Container an, dass ein modales Dialogfeld geschlossen wurde.  
   
 ```  
@@ -2884,7 +3049,7 @@ void PostModalDialog(HWND hWndParent = NULL);
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion wird nach jeder modales Dialogfeld angezeigt. Sie müssen diese Funktion aufrufen, sodass der Container alle Fenster der obersten Ebene deaktiviert, kann `PreModalDialog`. Diese Funktion sollte kombiniert werden, mit einem Aufruf von `PreModalDialog`.  
   
-##  <a name="a-namepremodaldialoga--colecontrolpremodaldialog"></a><a name="premodaldialog"></a>COleControl::PreModalDialog  
+##  <a name="premodaldialog"></a>COleControl::PreModalDialog  
  Benachrichtigt den Container, der ein modales Dialogfeld angezeigt werden.  
   
 ```  
@@ -2898,7 +3063,7 @@ void PreModalDialog(HWND hWndParent = NULL);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion vor jedem modales Dialogfeld angezeigt. Der Container kann alle übergeordneten Fenster deaktivieren, müssen Sie diese Funktion aufrufen. Nachdem das modale Dialogfeld angezeigt wird, müssen Sie Sie aufrufen `PostModalDialog`.  
   
-##  <a name="a-namerecreatecontrolwindowa--colecontrolrecreatecontrolwindow"></a><a name="recreatecontrolwindow"></a>COleControl::RecreateControlWindow  
+##  <a name="recreatecontrolwindow"></a>COleControl::RecreateControlWindow  
  Zerstört und neu erstellt das Fenster des Steuerelements.  
   
 ```  
@@ -2908,7 +3073,7 @@ void RecreateControlWindow();
 ### <a name="remarks"></a>Hinweise  
  Dies ist möglicherweise erforderlich, wenn Sie das Fenster Stilbits ändern müssen.  
   
-##  <a name="a-namerefresha--colecontrolrefresh"></a><a name="refresh"></a>COleControl::Refresh  
+##  <a name="refresh"></a>COleControl::Refresh  
  Erzwingt das Neuzeichnen des OLE-Steuerelements.  
   
 ```  
@@ -2918,7 +3083,7 @@ void Refresh();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird von unterstützt die `COleControl` -Basisklasse als eine vordefinierte Methode namens aktualisieren. Dadurch können Benutzer Ihre OLE-Steuerelements das Steuerelement zu einem bestimmten Zeitpunkt neu aufgebaut werden kann. Weitere Informationen zu dieser Methode finden Sie im Artikel [ActiveX-Steuerelemente: Methoden](../../mfc/mfc-activex-controls-methods.md).  
   
-##  <a name="a-namereleasecapturea--colecontrolreleasecapture"></a><a name="releasecapture"></a>COleControl::ReleaseCapture  
+##  <a name="releasecapture"></a>COleControl::ReleaseCapture  
  Versionen von Mauseingaben.  
   
 ```  
@@ -2931,7 +3096,7 @@ BOOL ReleaseCapture();
 ### <a name="remarks"></a>Hinweise  
  Wenn das Steuerelement gerade das Erfassen von Mauseingaben verfügt, wird die Erfassung freigegeben. Andernfalls hat diese Funktion keine Auswirkung.  
   
-##  <a name="a-namereleasedca--colecontrolreleasedc"></a><a name="releasedc"></a>COleControl::ReleaseDC  
+##  <a name="releasedc"></a>COleControl::ReleaseDC  
  Gibt den Anzeigegerätekontext eines Containers ein fensterloses Steuerelement, das den Gerätekontext für die Verwendung durch andere Programme freigegeben.  
   
 ```  
@@ -2948,7 +3113,7 @@ int ReleaseDC(CDC* pDC);
 ### <a name="remarks"></a>Hinweise  
  Muss die Anwendung aufrufen `ReleaseDC` für jeden Aufruf von [GetDC](#getdc).  
   
-##  <a name="a-namereparentcontrolwindowa--colecontrolreparentcontrolwindow"></a><a name="reparentcontrolwindow"></a>COleControl::ReparentControlWindow  
+##  <a name="reparentcontrolwindow"></a>COleControl::ReparentControlWindow  
  Legt das übergeordnete Element des Steuerelements fest.  
   
 ```  
@@ -2967,7 +3132,7 @@ virtual void ReparentControlWindow(
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um das übergeordnete Element des Steuerelementfensters zurückzusetzen.  
   
-##  <a name="a-nameresetstockpropsa--colecontrolresetstockprops"></a><a name="resetstockprops"></a>COleControl::ResetStockProps  
+##  <a name="resetstockprops"></a>COleControl::ResetStockProps  
  Initialisiert den Zustand des der `COleControl` vordefinierte Eigenschaften mit ihren Standardwerten.  
   
 ```  
@@ -2982,7 +3147,7 @@ void ResetStockProps();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCAxCtl&#7;](../../mfc/reference/codesnippet/cpp/colecontrol-class_8.cpp)]  
   
-##  <a name="a-nameresetversiona--colecontrolresetversion"></a><a name="resetversion"></a>COleControl::ResetVersion  
+##  <a name="resetversion"></a>COleControl::ResetVersion  
  Initialisiert die Versionsnummer an den angegebenen Wert.  
   
 ```  
@@ -2996,7 +3161,7 @@ void ResetVersion(DWORD dwVersionDefault);
 ### <a name="remarks"></a>Hinweise  
  Können Sie ein Steuerelement binäre Initialisierung Leistung verbessern, mithilfe von `ResetVersion` und `ResetStockProps` überschreiben `COleControl::OnResetState`. Beispiel finden Sie unter [ResetStockProps](#resetstockprops). Weitere Informationen zum Optimieren der Initialisierung finden Sie unter [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).  
   
-##  <a name="a-namescrollwindowa--colecontrolscrollwindow"></a><a name="scrollwindow"></a>COleControl::ScrollWindow  
+##  <a name="scrollwindow"></a>COleControl::ScrollWindow  
  Ermöglicht eine fensterlose OLE-Objekt in seine direkten aktiven Bild auf dem Bildschirm einen Bereich einen Bildlauf durchführen.  
   
 ```  
@@ -3020,7 +3185,7 @@ void ScrollWindow(
  `lpClipRect`  
  Verweist auf eine `CRect` Objekt oder `RECT` Struktur, die das Rechteck auf Clip angibt. Nur Pixel innerhalb des Rechtecks werden durchgeführt. Bits außerhalb des Rechtecks sind nicht betroffen, auch wenn sie in sind die `lpRect` Rechteck. Wenn `lpClipRect` ist **NULL**, ohne Clipping für das Bildlaufrechteck ausgeführt wird.  
   
-##  <a name="a-nameselectfontobjecta--colecontrolselectfontobject"></a><a name="selectfontobject"></a>COleControl::SelectFontObject  
+##  <a name="selectfontobject"></a>COleControl::SelectFontObject  
  Wählt eine Schriftart in einem Gerätekontext.  
   
 ```  
@@ -3039,7 +3204,7 @@ CFont* SelectFontObject(
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die zuvor ausgewählte Schriftart. Wenn der Aufrufer alle Zeichenoperationen, mit denen abgeschlossen hat *FontHolder,* sollten sie die zuvor ausgewählte Schriftart erneut aktivieren, indem sie als Parameter übergeben [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject).  
   
-##  <a name="a-nameselectstockfonta--colecontrolselectstockfont"></a><a name="selectstockfont"></a>COleControl:: SelectStockFont  
+##  <a name="selectstockfont"></a>COleControl:: SelectStockFont  
  Wählt die vordefinierte Schriftarteigenschaft einen Gerätekontext.  
   
 ```  
@@ -3053,7 +3218,7 @@ CFont* SelectStockFont(CDC* pDC);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die zuvor ausgewählte `CFont` Objekt. Verwenden Sie [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) diese Schriftart zurück in den Gerätekontext auswählen, wenn Sie fertig sind.  
   
-##  <a name="a-nameserializeextenta--colecontrolserializeextent"></a><a name="serializeextent"></a>COleControl::SerializeExtent  
+##  <a name="serializeextent"></a>COleControl::SerializeExtent  
  Serialisiert bzw. initialisiert den Zustand, der dem Steuerelement zugewiesenen Speicherplatz.  
   
 ```  
@@ -3070,7 +3235,7 @@ void SerializeExtent(CArchive& ar);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCAxCtl&#8;](../../mfc/reference/codesnippet/cpp/colecontrol-class_9.cpp)]  
   
-##  <a name="a-nameserializestockpropsa--colecontrolserializestockprops"></a><a name="serializestockprops"></a>COleControl::SerializeStockProps  
+##  <a name="serializestockprops"></a>COleControl::SerializeStockProps  
  Serialisiert bzw. initialisiert den Zustand des der `COleControl` Basiseigenschaften: Darstellung, BackColor, BorderStyle, Beschriftung, aktiviert, Schriftart, ForeColor und Text.  
   
 ```  
@@ -3086,7 +3251,7 @@ void SerializeStockProps(CArchive& ar);
   
  Sie können eines Steuerelements binäre Dauerhaftigkeit Leistung verbessern, indem `SerializeStockProps`, `SerializeExtent`, und `SerializeVersion` überschreiben **COleControl::Serialize**. Ein Beispiel finden Sie den Code am [SerializeExtent](#serializeextent). Weitere Informationen zum Optimieren der Initialisierung finden Sie unter [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).  
   
-##  <a name="a-nameserializeversiona--colecontrolserializeversion"></a><a name="serializeversion"></a>COleControl::SerializeVersion  
+##  <a name="serializeversion"></a>COleControl::SerializeVersion  
  Serialisiert bzw. initialisiert den Zustand des Steuerelements Versionsinformationen.  
   
 ```  
@@ -3112,7 +3277,7 @@ DWORD SerializeVersion(
 ### <a name="remarks"></a>Hinweise  
  Sie können eines Steuerelements binäre Dauerhaftigkeit Leistung verbessern, indem `SerializeVersion`, `SerializeExtent`, und `SerializeStockProps` überschreiben **COleControl::Serialize**. Ein Beispiel finden Sie den Code am [SerializeExtent](#serializeextent). Weitere Informationen zum Optimieren der Initialisierung finden Sie unter [ActiveX-Steuerelemente: Optimierung](../../mfc/mfc-activex-controls-optimization.md).  
   
-##  <a name="a-namesetappearancea--colecontrolsetappearance"></a><a name="setappearance"></a>COleControl::SetAppearance  
+##  <a name="setappearance"></a>COleControl::SetAppearance  
  Legt den vordefinierten Darstellung-Eigenschaftswert des Steuerelements fest.  
   
 ```  
@@ -3126,7 +3291,7 @@ void SetAppearance (short sAppearance);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen über Basiseigenschaften finden Sie unter [ActiveX-Steuerelemente: Eigenschaften](../../mfc/mfc-activex-controls-properties.md).  
   
-##  <a name="a-namesetbackcolora--colecontrolsetbackcolor"></a><a name="setbackcolor"></a>COleControl::SetBackColor  
+##  <a name="setbackcolor"></a>COleControl::SetBackColor  
  Legt den vordefinierten BackColor-Eigenschaftswert des Steuerelements fest.  
   
 ```  
@@ -3140,7 +3305,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zur Verwendung dieser Eigenschaft und andere verwandte Eigenschaften finden Sie im Artikel [ActiveX-Steuerelemente: Eigenschaften](../../mfc/mfc-activex-controls-properties.md).  
   
-##  <a name="a-namesetborderstylea--colecontrolsetborderstyle"></a><a name="setborderstyle"></a>COleControl::SetBorderStyle  
+##  <a name="setborderstyle"></a>COleControl::SetBorderStyle  
  Legt den vordefinierten BorderStyle-Eigenschaftswert des Steuerelements fest.  
   
 ```  
@@ -3154,7 +3319,7 @@ void SetBorderStyle(short sBorderStyle);
 ### <a name="remarks"></a>Hinweise  
  Das Steuerelementfenster anschließend neu erstellt wird und `OnBorderStyleChanged` aufgerufen.  
   
-##  <a name="a-namesetcapturea--colecontrolsetcapture"></a><a name="setcapture"></a>COleControl::SetCapture  
+##  <a name="setcapture"></a>COleControl::SetCapture  
  Bewirkt, dass das Fenster des Steuerelements Container besitzt das Erfassen von Mauseingaben im Auftrag des Steuerelements ausführen.  
   
 ```  
@@ -3167,7 +3332,7 @@ CWnd* SetCapture();
 ### <a name="remarks"></a>Hinweise  
  Wenn das Steuerelement aktiviert und das fensterlose ist, wird diese Funktion Containerfenster besitzt das Erfassen von Mauseingaben im Auftrag des Steuerelements wird das Steuerelement. Andernfalls wird diese Funktion für das Steuerelement selbst besitzt das Erfassen von Mauseingaben wird (wie `CWnd::SetCapture`).  
   
-##  <a name="a-namesetcontrolsizea--colecontrolsetcontrolsize"></a><a name="setcontrolsize"></a>COleControl::SetControlSize  
+##  <a name="setcontrolsize"></a>COleControl::SetControlSize  
  Legt die Größe des Steuerelementfensters OLE und benachrichtigt den Container, den die Website des Steuerelements geändert wird.  
   
 ```  
@@ -3189,7 +3354,7 @@ BOOL SetControlSize(int cx, int cy);
   
  Beachten Sie, dass alle Koordinaten für Windows Steuerelement relativ zu der oberen linken Ecke des Steuerelements.  
   
-##  <a name="a-namesetenableda--colecontrolsetenabled"></a><a name="setenabled"></a>COleControl::SetEnabled  
+##  <a name="setenabled"></a>COleControl::SetEnabled  
  Legt die Stock Enabled-Eigenschaft auf den Wert des Steuerelements fest.  
   
 ```  
@@ -3203,7 +3368,7 @@ void SetEnabled(BOOL bEnabled);
 ### <a name="remarks"></a>Hinweise  
  Nach dem Festlegen dieser Eigenschaft **OnEnabledChange** aufgerufen wird.  
   
-##  <a name="a-namesetfocusa--colecontrolsetfocus"></a><a name="setfocus"></a>COleControl::SetFocus  
+##  <a name="setfocus"></a>COleControl::SetFocus  
  Bewirkt, dass das Fenster des Steuerelements Container, schalten Sie Namen für das Steuerelement den Eingabefokus besitzt.  
   
 ```  
@@ -3218,7 +3383,7 @@ CWnd* SetFocus();
   
  Wenn das Steuerelement nicht fensterlos ist, diese Funktion bewirkt, dass das Steuerelement selbst wird von den Eingabefokus besitzt (wie `CWnd::SetFocus`).  
   
-##  <a name="a-namesetfonta--colecontrolsetfont"></a><a name="setfont"></a>COleControl::SetFont  
+##  <a name="setfont"></a>COleControl::SetFont  
  Legt die vordefinierte Schriftarteigenschaft des Steuerelements fest.  
   
 ```  
@@ -3229,7 +3394,7 @@ void SetFont(LPFONTDISP pFontDisp);
  *pFontDisp*  
  Ein Zeiger auf eine Schriftart Dispatch-Schnittstelle.  
   
-##  <a name="a-namesetforecolora--colecontrolsetforecolor"></a><a name="setforecolor"></a>COleControl::SetForeColor  
+##  <a name="setforecolor"></a>COleControl::SetForeColor  
  Legt den vordefinierten ForeColor-Eigenschaftswert des Steuerelements fest.  
   
 ```  
@@ -3243,7 +3408,7 @@ void SetForeColor(OLE_COLOR dwForeColor);
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zur Verwendung dieser Eigenschaft und andere verwandte Eigenschaften finden Sie im Artikel [ActiveX-Steuerelemente: Eigenschaften](../../mfc/mfc-activex-controls-properties.md).  
   
-##  <a name="a-namesetinitialdataformatsa--colecontrolsetinitialdataformats"></a><a name="setinitialdataformats"></a>COleControl::SetInitialDataFormats  
+##  <a name="setinitialdataformats"></a>COleControl::SetInitialDataFormats  
  Aufgerufen, um die Liste der von dem Steuerelement unterstützten Datenformate zu initialisieren.  
   
 ```  
@@ -3253,7 +3418,7 @@ virtual void SetInitialDataFormats();
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung gibt zwei Formate: `CF_METAFILEPICT` und die persistenten Eigenschaft festgelegt.  
   
-##  <a name="a-namesetinitialsizea--colecontrolsetinitialsize"></a><a name="setinitialsize"></a>COleControl::SetInitialSize  
+##  <a name="setinitialsize"></a>COleControl::SetInitialSize  
  Legt die Größe eines OLE-Steuerelements, wenn erstmals in einem Container angezeigt.  
   
 ```  
@@ -3272,7 +3437,7 @@ void SetInitialSize(
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion im Konstruktor die Anfangsgröße des Steuerelements fest. Die anfängliche Größe wird in Geräteeinheiten oder Pixel gemessen. Es wird empfohlen, dass dieser Aufruf im Konstruktor des Steuerelements vorgenommen werden.  
   
-##  <a name="a-namesetmodifiedflaga--colecontrolsetmodifiedflag"></a><a name="setmodifiedflag"></a>COleControl::SetModifiedFlag  
+##  <a name="setmodifiedflag"></a>COleControl::SetModifiedFlag  
  Ändert den Status eines Steuerelements geänderten.  
   
 ```  
@@ -3286,7 +3451,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Aufruf dieser Funktion, wenn eine Änderung auftritt, persistenten Status des Steuerelements auswirken würde. Beispielsweise, wenn der Wert einer permanenten Eigenschaft ändert, rufen Sie diese Funktion mit `bModified` **TRUE**.  
   
-##  <a name="a-namesetnotpermitteda--colecontrolsetnotpermitted"></a><a name="setnotpermitted"></a>COleControl::SetNotPermitted  
+##  <a name="setnotpermitted"></a>COleControl::SetNotPermitted  
  Gibt an, dass eine Bearbeiten-Anforderung fehlgeschlagen ist.  
   
 ```  
@@ -3296,7 +3461,7 @@ void SetNotPermitted();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion beim `BoundPropertyRequestEdit` ein Fehler auftritt. Diese Funktion löst eine Ausnahme vom Typ **COleDispScodeException** an, dass die Set-Operation nicht zugelassen wurde.  
   
-##  <a name="a-namesetnotsupporteda--colecontrolsetnotsupported"></a><a name="setnotsupported"></a>COleControl::SetNotSupported  
+##  <a name="setnotsupported"></a>COleControl::SetNotSupported  
  Verhindert die Änderung an den Eigenschaftswert eines Steuerelements, durch den Benutzer.  
   
 ```  
@@ -3306,7 +3471,7 @@ void SetNotSupported();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion anstelle der Set-Funktion einer beliebigen Eigenschaft, die Änderung des Eigenschaftswerts von dem Benutzer des Steuerelements nicht unterstützen. Ein Beispiel wäre eine Eigenschaft, die schreibgeschützt ist.  
   
-##  <a name="a-namesetrectincontainera--colecontrolsetrectincontainer"></a><a name="setrectincontainer"></a>COleControl::SetRectInContainer  
+##  <a name="setrectincontainer"></a>COleControl::SetRectInContainer  
  Legt die Koordinaten für das Rechteck des Steuerelements relativ zu dem Container, ausgedrückt in Geräteeinheiten.  
   
 ```  
@@ -3323,7 +3488,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 ### <a name="remarks"></a>Hinweise  
  Wenn das Steuerelement geöffnet ist, wird es angepasst. andernfalls des Containers **OnPosRectChanged** -Funktion aufgerufen wird.  
   
-##  <a name="a-namesettexta--colecontrolsettext"></a><a name="settext"></a>COleControl::SetText  
+##  <a name="settext"></a>COleControl::SetText  
  Legt den Wert der vordefinierten Beschriftung oder Text-Eigenschaft des Steuerelements.  
   
 ```  
@@ -3337,7 +3502,7 @@ void SetText(LPCTSTR pszText);
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass die Beschriftung und Textfeld Basiseigenschaften beide denselben Wert zugeordnet sind. Dies bedeutet, dass alle Änderungen an einer der Eigenschaften automatisch beide Eigenschaften geändert werden. Im Allgemeinen sollte ein Steuerelement Aktie Beschriftung oder Text-Eigenschaft verwenden, aber nicht beide unterstützen.  
   
-##  <a name="a-namethrowerrora--colecontrolthrowerror"></a><a name="throwerror"></a>ThrowError  
+##  <a name="throwerror"></a>ThrowError  
  Signalisiert das Auftreten eines Fehlers im Steuerelement.  
   
 ```  
@@ -3369,7 +3534,7 @@ void ThrowError(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion sollte nur von innerhalb einer Get- oder Set-Funktion für eine OLE-Eigenschaft oder die Implementierung einer OLE-Automatisierung-Methode aufgerufen werden. Wenn Sie Fehler darauf hinweisen, die zu anderen Zeiten auftreten müssen, sollten Sie die vordefinierte Error-Ereignis auslösen.  
   
-##  <a name="a-nametransformcoordsa--colecontroltransformcoords"></a><a name="transformcoords"></a>COleControl::TransformCoords  
+##  <a name="transformcoords"></a>COleControl::TransformCoords  
  Transformationen Koordinatenwerte zwischen **HIMETRIC** Einheiten und systemeigene Einheiten des Containers.  
   
 ```  
@@ -3400,7 +3565,7 @@ void TransformCoords(
 ### <a name="remarks"></a>Hinweise  
  Die ersten zwei Flags **XFORMCOORDS_POSITION** und **XFORMCOORDS_SIZE**, anzugeben, ob die Koordinaten als eine Position oder eine Größe behandelt werden sollen. Die übrigen zwei Flags geben die Richtung der Transformation.  
   
-##  <a name="a-nametranslatecolora--colecontroltranslatecolor"></a><a name="translatecolor"></a>Memberfunktion COleControl:: TranslateColor  
+##  <a name="translatecolor"></a>Memberfunktion COleControl:: TranslateColor  
  Konvertiert einen Farbwert aus der **OLE_COLOR** -Datentyp in der [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Datentyp.  
   
 ```  
@@ -3422,7 +3587,7 @@ COLORREF TranslateColor(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ist nützlich, um die Vordergrundfarbe und Hintergrundfarbe Basiseigenschaften zu übersetzen **COLORREF** von verwendeten [CDC](../../mfc/reference/cdc-class.md) Memberfunktionen.  
   
-##  <a name="a-namewillambientsbevalidduringloada--colecontrolwillambientsbevalidduringload"></a><a name="willambientsbevalidduringload"></a>COleControl::WillAmbientsBeValidDuringLoad  
+##  <a name="willambientsbevalidduringload"></a>COleControl::WillAmbientsBeValidDuringLoad  
  Bestimmt, ob das Steuerelement die Werte der Eigenschaften als Standardwerte verwenden soll, wenn sie später in den persistenten Zustand geladen wird.  
   
 ```  
@@ -3435,7 +3600,7 @@ BOOL WillAmbientsBeValidDuringLoad();
 ### <a name="remarks"></a>Hinweise  
  In einige Container des Steuerelements möglicherweise keinen Zugriff auf die ambient-Eigenschaften während des ersten Aufrufs Überschreiben von `COleControl::DoPropExchange`. Dies ist der Fall, wenn der Container ruft [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) oder [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms680557) vor dem Aufruf [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) (d. h., wenn er nicht berücksichtigt die **OLEMISC_SETCLIENTSITEFIRST** Statusbit).  
   
-##  <a name="a-namewindowproca--colecontrolwindowproc"></a><a name="windowproc"></a>COleControl::WindowProc  
+##  <a name="windowproc"></a>COleControl::WindowProc  
  Stellt ein Windows-Verfahren für ein `COleControl` Objekt.  
   
 ```  

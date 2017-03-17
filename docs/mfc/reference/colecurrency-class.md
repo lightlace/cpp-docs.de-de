@@ -9,8 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CURRENCY
 - COleCurrency
+- AFXDISP/COleCurrency
+- AFXDISP/COleCurrency::COleCurrency
+- AFXDISP/COleCurrency::Format
+- AFXDISP/COleCurrency::GetStatus
+- AFXDISP/COleCurrency::ParseCurrency
+- AFXDISP/COleCurrency::SetCurrency
+- AFXDISP/COleCurrency::SetStatus
+- AFXDISP/COleCurrency::m_cur
+- AFXDISP/COleCurrency::m_status
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +112,7 @@ class COleCurrency
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h  
   
-##  <a name="a-namecolecurrencya--colecurrencycolecurrency"></a><a name="colecurrency"></a>COleCurrency::COleCurrency  
+##  <a name="colecurrency"></a>COleCurrency::COleCurrency  
  Erstellt eine **COleCurrency** Objekt.  
   
 ```  
@@ -152,7 +160,7 @@ COleCurrency(
   
  [!code-cpp[NVC_MFCOleContainer&#10;](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]  
   
-##  <a name="a-nameformata--colecurrencyformat"></a><a name="format"></a>COleCurrency::Format  
+##  <a name="format"></a>COleCurrency::Format  
  Rufen Sie diese Memberfunktion, um eine formatierte Darstellung des Werts Währung zu erstellen.  
   
 ```  
@@ -177,7 +185,7 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer&#11;](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]  
   
-##  <a name="a-namegetstatusa--colecurrencygetstatus"></a><a name="getstatus"></a>COleCurrency::GetStatus  
+##  <a name="getstatus"></a>COleCurrency::GetStatus  
  Rufen Sie diese Memberfunktion zum Abrufen des Status (Gültigkeit) einer bestimmten **COleCurrency** Objekt.  
   
 ```  
@@ -235,7 +243,7 @@ CurrencyStatus GetStatus() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer&#12;](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
-##  <a name="a-namemcura--colecurrencymcur"></a><a name="m_cur"></a>COleCurrency::m_cur  
+##  <a name="m_cur"></a>COleCurrency::m_cur  
  Die zugrunde liegende [Währung](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) Struktur für dieses **COleCurrency** Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -245,7 +253,7 @@ CurrencyStatus GetStatus() const;
   
  Weitere Informationen finden Sie unter der [Währung](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) Eintrag in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemstatusa--colecurrencymstatus"></a><a name="m_status"></a>COleCurrency::m_status  
+##  <a name="m_status"></a>COleCurrency::m_status  
  Der Typ der Datenmember ist der Enumerationstyp `CurrencyStatus`, definiert in der **COleCurrency** Klasse.  
   
 ```  
@@ -292,7 +300,7 @@ enum CurrencyStatus{
     > [!CAUTION]
     >  Dieses Datenelement ist für die Erweiterte Programmierung Situationen. Verwenden Sie die Inline-Memberfunktionen [GetStatus](#getstatus) und [SetStatus](#setstatus). Finden Sie unter `SetStatus` Weitere Warnhinweise in Bezug auf dieses Datenelement explizit festlegen.  
   
-##  <a name="a-nameoperatoreqa--colecurrencyoperator-"></a><a name="operator_eq"></a>COleCurrency::operator =  
+##  <a name="operator_eq"></a>COleCurrency::operator =  
  Diese überladenen Zuweisungsoperatoren kopieren Currency-Wert für die Quelle in dieser **COleCurrency** Objekt.  
   
 ```  
@@ -315,7 +323,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer&#15;](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
   
-##  <a name="a-nameoperatorplusminusa--colecurrencyoperator---"></a><a name="operator_plus_minus"></a>COleCurrency::operator +, -  
+##  <a name="operator_plus_minus"></a>COleCurrency::operator +, -  
  Diese Operatoren können Sie addieren und subtrahieren zwei **COleCurrency** Werte an und ändern Sie die Vorzeichen des ein **COleCurrency** Wert.  
   
 ```  
@@ -336,7 +344,7 @@ COleCurrency operator-() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer Nr.&16;](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]  
   
-##  <a name="a-nameoperatorplusminuseqa--colecurrencyoperator---"></a><a name="operator_plus_minus_eq"></a>COleCurrency::operator +=, =  
+##  <a name="operator_plus_minus_eq"></a>COleCurrency::operator +=, =  
  Ermöglichen es Ihnen, Addition und Subtraktion ein **COleCurrency** Wert aus diesem **COleCurrency** Objekt.  
   
 ```  
@@ -356,7 +364,7 @@ const COleCurrency& operator-=(const COleCurrency& cur);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer&17;](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
   
-##  <a name="a-nameoperatorstara--colecurrencyoperator--and-"></a><a name="operator_star"></a>COleCurrency::operator * und /  
+##  <a name="operator_star"></a>COleCurrency::operator * und /  
  Ermöglichen Sie skalieren eine **COleCurrency** Wert durch einen ganzzahligen Wert.  
   
 ```  
@@ -376,7 +384,7 @@ COleCurrency operator/(long nOperand) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer&18;](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
   
-##  <a name="a-nameoperatorstardiveqa--colecurrencyoperator--"></a><a name="operator_star_div_eq"></a>COleCurrency::operator * =, / =  
+##  <a name="operator_star_div_eq"></a>COleCurrency::operator * =, / =  
  Ermöglichen es Ihnen, die Skalierung dieser **COleCurrency** Wert durch einen ganzzahligen Wert.  
   
 ```  
@@ -396,7 +404,7 @@ const COleCurrency& operator/=(long nOperand);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer Nr.&19;](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]  
   
-##  <a name="a-nameoperatorstreama--colecurrencyoperator-ltlt-gtgt"></a><a name="operator_stream"></a>COleCurrency::operator &lt; &lt;,&gt;&gt;  
+##  <a name="operator_stream"></a>COleCurrency::operator &lt; &lt;,&gt;&gt;  
  Sichern von Diagnose und in ein Archiv speichern unterstützt.  
   
 ```  
@@ -416,7 +424,7 @@ friend CArchive& operator>>(
 ### <a name="remarks"></a>Hinweise  
  Die Extraktion ( ** >> **) Operator unterstützt das Laden aus einem Archiv.  
   
-##  <a name="a-nameoperatorcurrencya--colecurrencyoperator-currency"></a><a name="operator_currency"></a>COleCurrency::operator Währung  
+##  <a name="operator_currency"></a>COleCurrency::operator Währung  
  Gibt eine `CURRENCY` , deren Wert aus dieser kopiert Struktur **COleCurrency** Objekt.  
   
 ```  
@@ -425,7 +433,7 @@ operator CURRENCY() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameparsecurrencya--colecurrencyparsecurrency"></a><a name="parsecurrency"></a>COleCurrency::ParseCurrency  
+##  <a name="parsecurrency"></a>COleCurrency::ParseCurrency  
  Rufen Sie diese Memberfunktion zum Analysieren einer Zeichenfolge um einen Währungswert zu lesen.  
   
 ```  
@@ -467,7 +475,7 @@ throw(COleException*);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer&#13;](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]  
   
-##  <a name="a-namecolecurrencyrelationaloperatorsa--colecurrency-relational-operators"></a><a name="colecurrency_relational_operators"></a>COleCurrency relationale Operatoren  
+##  <a name="colecurrency_relational_operators"></a>COleCurrency relationale Operatoren  
  Vergleichen von zwei Währungswerten, und geben einen Wert ungleich NULL, wenn die Bedingung true ist; andernfalls 0.  
   
 ```  
@@ -487,7 +495,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer&20;](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]  
   
-##  <a name="a-namesetcurrencya--colecurrencysetcurrency"></a><a name="setcurrency"></a>COleCurrency::SetCurrency  
+##  <a name="setcurrency"></a>COleCurrency::SetCurrency  
  Rufen Sie diese Memberfunktion zum Festlegen von Einheiten und Bruchteil dieser **COleCurrency** Objekt.  
   
 ```  
@@ -508,7 +516,7 @@ void SetCurrency(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer&14;](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]  
   
-##  <a name="a-namesetstatusa--colecurrencysetstatus"></a><a name="setstatus"></a>COleCurrency::SetStatus  
+##  <a name="setstatus"></a>COleCurrency::SetStatus  
  Rufen Sie diese Memberfunktion zum Festlegen des Status (Gültigkeit) **COleCurrency** Objekt.  
   
 ```  

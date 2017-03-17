@@ -10,6 +10,35 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDataRecoveryHandler
+- AFXDATARECOVERY/CDataRecoveryHandler
+- AFXDATARECOVERY/CDataRecoveryHandler::CDataRecoveryHandler
+- AFXDATARECOVERY/CDataRecoveryHandler::AutosaveAllDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::AutosaveDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::CreateDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::DeleteAllAutosavedFiles
+- AFXDATARECOVERY/CDataRecoveryHandler::DeleteAutosavedFile
+- AFXDATARECOVERY/CDataRecoveryHandler::GenerateAutosaveFileName
+- AFXDATARECOVERY/CDataRecoveryHandler::GetAutosaveInterval
+- AFXDATARECOVERY/CDataRecoveryHandler::GetAutosavePath
+- AFXDATARECOVERY/CDataRecoveryHandler::GetDocumentListName
+- AFXDATARECOVERY/CDataRecoveryHandler::GetNormalDocumentTitle
+- AFXDATARECOVERY/CDataRecoveryHandler::GetRecoveredDocumentTitle
+- AFXDATARECOVERY/CDataRecoveryHandler::GetRestartIdentifier
+- AFXDATARECOVERY/CDataRecoveryHandler::GetSaveDocumentInfoOnIdle
+- AFXDATARECOVERY/CDataRecoveryHandler::GetShutdownByRestartManager
+- AFXDATARECOVERY/CDataRecoveryHandler::Initialize
+- AFXDATARECOVERY/CDataRecoveryHandler::QueryRestoreAutosavedDocuments
+- AFXDATARECOVERY/CDataRecoveryHandler::ReadOpenDocumentList
+- AFXDATARECOVERY/CDataRecoveryHandler::RemoveDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::ReopenPreviousDocuments
+- AFXDATARECOVERY/CDataRecoveryHandler::RestoreAutosavedDocuments
+- AFXDATARECOVERY/CDataRecoveryHandler::SaveOpenDocumentList
+- AFXDATARECOVERY/CDataRecoveryHandler::SetAutosaveInterval
+- AFXDATARECOVERY/CDataRecoveryHandler::SetAutosavePath
+- AFXDATARECOVERY/CDataRecoveryHandler::SetRestartIdentifier
+- AFXDATARECOVERY/CDataRecoveryHandler::SetSaveDocumentInfoOnIdle
+- AFXDATARECOVERY/CDataRecoveryHandler::SetShutdownByRestartManager
+- AFXDATARECOVERY/CDataRecoveryHandler::UpdateDocumentInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -119,7 +148,7 @@ class CDataRecoveryHandler : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdatarecovery.h  
   
-##  <a name="a-nameautosavealldocumentinfoa--cdatarecoveryhandlerautosavealldocumentinfo"></a><a name="autosavealldocumentinfo"></a>CDataRecoveryHandler::AutosaveAllDocumentInfo  
+##  <a name="autosavealldocumentinfo"></a>CDataRecoveryHandler::AutosaveAllDocumentInfo  
  Speichert jede Datei registriert die `CDataRecoveryHandler` Klasse.  
   
 ```  
@@ -134,7 +163,7 @@ virtual BOOL AutosaveAllDocumentInfo();
   
  Verwenden Sie diese Methode entweder `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` oder `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL` muss festgelegt werden, `m_dwRestartManagerSupportFlags`. Finden Sie unter [M_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags) Weitere Informationen.  
   
-##  <a name="a-nameautosavedocumentinfoa--cdatarecoveryhandlerautosavedocumentinfo"></a><a name="autosavedocumentinfo"></a>CDataRecoveryHandler::AutosaveDocumentInfo  
+##  <a name="autosavedocumentinfo"></a>CDataRecoveryHandler::AutosaveDocumentInfo  
  Speichert das angegebene Dokument.  
   
 ```  
@@ -164,7 +193,7 @@ virtual BOOL AutosaveDocumentInfo(
   
  Verwenden Sie diese Methode entweder `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` oder `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` muss festgelegt werden, `m_dwRestartManagerSupportFlags`.   
   
-##  <a name="a-namecdatarecoveryhandlera--cdatarecoveryhandlercdatarecoveryhandler"></a><a name="cdatarecoveryhandler"></a>CDataRecoveryHandler::CDataRecoveryHandler  
+##  <a name="cdatarecoveryhandler"></a>CDataRecoveryHandler::CDataRecoveryHandler  
  Erstellt ein `CDataRecoveryHandler`-Objekt.  
   
 ```  
@@ -185,7 +214,7 @@ CDataRecoveryHandler(
  Das MFC-Framework erstellt automatisch eine `CDataRecoveryHandler` -Objekt für die Anwendung bei Verwendung der **neues Projekt** Assistenten. Wenn Sie das Wiederherstellungsverhalten Daten oder der Neustart-Manager anpassen, erstellen Sie keine `CDataRecoveryHandler` Objekt.  
   
   
-##  <a name="a-namecreatedocumentinfoa--cdatarecoveryhandlercreatedocumentinfo"></a><a name="createdocumentinfo"></a>CDataRecoveryHandler::CreateDocumentInfo  
+##  <a name="createdocumentinfo"></a>CDataRecoveryHandler::CreateDocumentInfo  
  Die Liste der geöffneten Dokumente hinzugefügt ein Dokument.  
   
 ```  
@@ -207,7 +236,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
   
  Verwenden Sie diese Methode entweder `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` oder `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` muss festgelegt werden, `m_dwRestartManagerSupportFlags`. 
   
-##  <a name="a-namedeleteallautosavedfilesa--cdatarecoveryhandlerdeleteallautosavedfiles"></a><a name="deleteallautosavedfiles"></a>CDataRecoveryHandler::DeleteAllAutosavedFiles  
+##  <a name="deleteallautosavedfiles"></a>CDataRecoveryHandler::DeleteAllAutosavedFiles  
  Löscht die aktuellen automatisch gespeicherte Dateien.  
   
 ```  
@@ -217,7 +246,7 @@ virtual BOOL DeleteAllAutosavedFiles();
 ### <a name="return-value"></a>Rückgabewert  
  Die standardmäßige Implementierung gibt immer `TRUE`.  
   
-##  <a name="a-namedeleteautosavedfilea--cdatarecoveryhandlerdeleteautosavedfile"></a><a name="deleteautosavedfile"></a>CDataRecoveryHandler::DeleteAutosavedFile  
+##  <a name="deleteautosavedfile"></a>CDataRecoveryHandler::DeleteAutosavedFile  
  Löscht die angegebene automatisch gespeicherte Datei.  
   
 ```  
@@ -237,7 +266,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 ### <a name="remarks"></a>Hinweise  
  Wenn diese Methode die Datei automatisch gelöscht werden kann, wird der Name der Datei in einer Liste gespeichert. Der Destruktor für die `CDataRecoveryHandler` versucht, jede automatisch gespeicherte Datei angegeben, die in der Liste zu löschen.  
   
-##  <a name="a-namegenerateautosavefilenamea--cdatarecoveryhandlergenerateautosavefilename"></a><a name="generateautosavefilename"></a>CDataRecoveryHandler::GenerateAutosaveFileName  
+##  <a name="generateautosavefilename"></a>CDataRecoveryHandler::GenerateAutosaveFileName  
  Generiert den Namen für eine Sicherungsdatei mit dem angegebenen Dateinamen verknüpft ist.  
   
 ```  
@@ -254,7 +283,7 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ### <a name="remarks"></a>Hinweise  
  Jedes der Dokumentname hat eine Zuordnung mit einem Dateinamen autosave  
   
-##  <a name="a-namegetautosaveintervala--cdatarecoveryhandlergetautosaveinterval"></a><a name="getautosaveinterval"></a>CDataRecoveryHandler::GetAutosaveInterval  
+##  <a name="getautosaveinterval"></a>CDataRecoveryHandler::GetAutosaveInterval  
  Gibt das Intervall zwischen Autosave versucht zurück.  
   
 ```  
@@ -264,7 +293,7 @@ virtual int GetAutosaveInterval() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Millisekunden zwischen Autosave versucht.  
   
-##  <a name="a-namegetautosavepatha--cdatarecoveryhandlergetautosavepath"></a><a name="getautosavepath"></a>CDataRecoveryHandler::GetAutosavePath  
+##  <a name="getautosavepath"></a>CDataRecoveryHandler::GetAutosavePath  
  Gibt den Pfad der Dateien automatisch gespeichert.  
   
 ```  
@@ -274,7 +303,7 @@ virtual CString GetAutosavePath() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Speicherort, wo die automatisch gespeicherte Dokumente gespeichert werden.  
   
-##  <a name="a-namegetdocumentlistnamea--cdatarecoveryhandlergetdocumentlistname"></a><a name="getdocumentlistname"></a>CDataRecoveryHandler::GetDocumentListName  
+##  <a name="getdocumentlistname"></a>CDataRecoveryHandler::GetDocumentListName  
  Ruft den Namen des Dokuments aus einem `CDocument` Objekt.  
   
 ```  
@@ -294,7 +323,7 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 ### <a name="remarks"></a>Hinweise  
  Die `CDataRecoveryHandler` verwendet den Namen des Dokuments als Schlüssel in `m_mapDocNameToAutosaveName`, `m_mapDocNameToDocumentPtr`, und `m_mapDocNameToRestoreBool`. Aktivieren Sie diese Parameter der `CDataRecoveryHandler` Überwachen `CDocument` Objekte, die Autosave-Dateinamen und die Einstellungen für die automatische Speicherung.  
   
-##  <a name="a-namegetnormaldocumenttitlea--cdatarecoveryhandlergetnormaldocumenttitle"></a><a name="getnormaldocumenttitle"></a>CDataRecoveryHandler::GetNormalDocumentTitle  
+##  <a name="getnormaldocumenttitle"></a>CDataRecoveryHandler::GetNormalDocumentTitle  
  Ruft den normalen Titel für das angegebene Dokument ab.  
   
 ```  
@@ -314,7 +343,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 ### <a name="remarks"></a>Hinweise  
  Die normalen Titel eines Dokuments wird in der Regel den Dateinamen des Dokuments ohne Pfad. Dies ist der Titel in der **Dateinamen** Feld der **speichern** Dialogfeld.  
   
-##  <a name="a-namegetrecovereddocumenttitlea--cdatarecoveryhandlergetrecovereddocumenttitle"></a><a name="getrecovereddocumenttitle"></a>CDataRecoveryHandler::GetRecoveredDocumentTitle  
+##  <a name="getrecovereddocumenttitle"></a>CDataRecoveryHandler::GetRecoveredDocumentTitle  
  Erstellt und gibt den Titel für das wiederhergestellte Dokument.  
   
 ```  
@@ -331,7 +360,7 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig ist der wiederhergestellten Titel eines Dokuments den normalen Titel **[wiederhergestellt]** angefügt ist. Der wiederhergestellten Titel wird angezeigt, die dem Benutzer bei der `CDataRecoveryHandler` fragt den Benutzer automatisch gespeicherte Dokumente wiederherstellen.  
   
-##  <a name="a-namegetrestartidentifiera--cdatarecoveryhandlergetrestartidentifier"></a><a name="getrestartidentifier"></a>CDataRecoveryHandler::GetRestartIdentifier  
+##  <a name="getrestartidentifier"></a>CDataRecoveryHandler::GetRestartIdentifier  
  Ruft den eindeutigen Neustart für die Anwendung.  
   
 ```  
@@ -346,7 +375,7 @@ virtual CString GetRestartIdentifier() const;
   
  Der `CDataRecoveryHandler` speichert Informationen in der Registrierung über die derzeit geöffneten Dokumente. Wenn der Neustart-Manager eine Anwendung beendet und startet ihn neu, stellt den Neustart-Bezeichner, der die `CDataRecoveryHandler`. Die `CDataRecoveryHandler` verwendet die Neustart-ID zum Abrufen der Liste der zuvor geöffneten Dokumente. Auf diese Weise können die `CDataRecoveryHandler` , zu suchen und automatisch gespeicherte Dateien wiederherstellen.  
   
-##  <a name="a-namegetsavedocumentinfoonidlea--cdatarecoveryhandlergetsavedocumentinfoonidle"></a><a name="getsavedocumentinfoonidle"></a>CDataRecoveryHandler::GetSaveDocumentInfoOnIdle  
+##  <a name="getsavedocumentinfoonidle"></a>CDataRecoveryHandler::GetSaveDocumentInfoOnIdle  
  Gibt an, ob die `CDataRecoveryHandler` führt eine automatische Speicherung auf der aktuellen Leerlaufschleife.  
   
 ```  
@@ -356,7 +385,7 @@ virtual BOOL GetSaveDocumentInfoOnIdle() const;
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Gibt die `CDataRecoveryHandler` automatisch auf der aktuellen Leerlaufschleife; `FALSE` gibt es nicht.  
   
-##  <a name="a-namegetshutdownbyrestartmanagera--cdatarecoveryhandlergetshutdownbyrestartmanager"></a><a name="getshutdownbyrestartmanager"></a>CDataRecoveryHandler::GetShutdownByRestartManager  
+##  <a name="getshutdownbyrestartmanager"></a>CDataRecoveryHandler::GetShutdownByRestartManager  
  Gibt an, ob der Neustart-Manager die zum Beenden der Anwendung verursacht.  
   
 ```  
@@ -366,7 +395,7 @@ virtual BOOL GetShutdownByRestartManager() const;
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Gibt an, dass der Neustart-Manager die Anwendung beendet hat. `FALSE` gibt es nicht.  
   
-##  <a name="a-nameinitializea--cdatarecoveryhandlerinitialize"></a><a name="initialize"></a>CDataRecoveryHandler::Initialize  
+##  <a name="initialize"></a>CDataRecoveryHandler::Initialize  
  Initialisiert das `CDataRecoveryHandler`.  
   
 ```  
@@ -383,7 +412,7 @@ virtual BOOL Initialize();
   
  Die `Initialize` Methode startet einen Zeitgeber zu überwachen, wenn die nächste Autosave auftritt. Verwendung [CDataRecoveryHandler::SetAutosaveInterval](#setautosaveinterval) das Intervall für die automatische Speicherung zu ändern, nachdem die Anwendung initialisiert das `CDataRecoveryHandler`.  
   
-##  <a name="a-namequeryrestoreautosaveddocumentsa--cdatarecoveryhandlerqueryrestoreautosaveddocuments"></a><a name="queryrestoreautosaveddocuments"></a>CDataRecoveryHandler::QueryRestoreAutosavedDocuments  
+##  <a name="queryrestoreautosaveddocuments"></a>CDataRecoveryHandler::QueryRestoreAutosavedDocuments  
  Zeigt ein Dialogfeld für den Benutzer an, für jedes Dokument, das die `CDataRecoveryHandler` automatisch gespeichert. Das Dialogfeld bestimmt, ob der Benutzer das Dokument automatisch wiederherstellen möchte.  
   
 ```  
@@ -395,7 +424,7 @@ virtual void QueryRestoreAutosavedDocuments();
   
  Nach dem `QueryRestoreAutosavedDocuments` sammelt alle Antworten des Benutzers, speichert er die Informationen in der Membervariablen `m_mapDocNameToRestoreBool`. Diese Methode wird die automatisch gespeicherte Dokumente nicht wiederhergestellt.  
   
-##  <a name="a-namereadopendocumentlista--cdatarecoveryhandlerreadopendocumentlist"></a><a name="readopendocumentlist"></a>CDataRecoveryHandler::ReadOpenDocumentList  
+##  <a name="readopendocumentlist"></a>CDataRecoveryHandler::ReadOpenDocumentList  
  Lädt die Liste der geöffneten Dokument aus der Registrierung.  
   
 ```  
@@ -410,7 +439,7 @@ virtual BOOL ReadOpenDocumentList();
   
  Nach dem `ReadOpenDocumentList` lädt alle Daten, die Informationen aus der Registrierung gelöscht.  
   
-##  <a name="a-nameremovedocumentinfoa--cdatarecoveryhandlerremovedocumentinfo"></a><a name="removedocumentinfo"></a>CDataRecoveryHandler::RemoveDocumentInfo  
+##  <a name="removedocumentinfo"></a>CDataRecoveryHandler::RemoveDocumentInfo  
  Entfernt das angegebene Dokument aus der Liste der geöffneten Dokument.  
   
 ```  
@@ -434,7 +463,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
   
  Mithilfe dieser Methode `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` muss festgelegt werden, `m_dwRestartManagerSupportFlags`.   
   
-##  <a name="a-namereopenpreviousdocumentsa--cdatarecoveryhandlerreopenpreviousdocuments"></a><a name="reopenpreviousdocuments"></a>CDataRecoveryHandler::ReopenPreviousDocuments  
+##  <a name="reopenpreviousdocuments"></a>CDataRecoveryHandler::ReopenPreviousDocuments  
  Öffnet die vorher geöffnete Dokumente.  
   
 ```  
@@ -451,7 +480,7 @@ virtual BOOL ReopenPreviousDocuments();
   
  Wenn keine in der Liste der zuvor geöffneten Dokumente gespeichert Dokumente `ReopenPreviousDocuments` gibt `FALSE`.  
   
-##  <a name="a-namerestoreautosaveddocumentsa--cdatarecoveryhandlerrestoreautosaveddocuments"></a><a name="restoreautosaveddocuments"></a>CDataRecoveryHandler::RestoreAutosavedDocuments  
+##  <a name="restoreautosaveddocuments"></a>CDataRecoveryHandler::RestoreAutosavedDocuments  
  Stellt die automatisch gespeicherte Dokumente auf Grundlage der Benutzereingabe.  
   
 ```  
@@ -466,7 +495,7 @@ virtual BOOL RestoreAutosavedDocuments();
   
  Verwenden Sie diese Methode entweder `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` oder `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES` muss festgelegt werden, `m_dwRestartManagerSupportFlags`.   
   
-##  <a name="a-namesaveopendocumentlista--cdatarecoveryhandlersaveopendocumentlist"></a><a name="saveopendocumentlist"></a>CDataRecoveryHandler::SaveOpenDocumentList  
+##  <a name="saveopendocumentlist"></a>CDataRecoveryHandler::SaveOpenDocumentList  
  Die aktuelle Liste der geöffneten Dokumente in der Windows-Registrierung gespeichert.  
   
 ```  
@@ -481,7 +510,7 @@ virtual BOOL SaveOpenDocumentList();
   
  Diese Methode speichert nur die Liste der geöffneten Dokumente. Die Methode [CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo) ist zum Speichern der Dokumente selbst verantwortlich.  
   
-##  <a name="a-namesetautosaveintervala--cdatarecoveryhandlersetautosaveinterval"></a><a name="setautosaveinterval"></a>CDataRecoveryHandler::SetAutosaveInterval  
+##  <a name="setautosaveinterval"></a>CDataRecoveryHandler::SetAutosaveInterval  
  Legt die Zeit zwischen Autosave Zyklen in Millisekunden fest.  
   
 ```  
@@ -492,7 +521,7 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
  [in] `nAutosaveInterval`  
  Das neue Autosave-Intervall in Millisekunden.  
   
-##  <a name="a-namesetautosavepatha--cdatarecoveryhandlersetautosavepath"></a><a name="setautosavepath"></a>CDataRecoveryHandler::SetAutosavePath  
+##  <a name="setautosavepath"></a>CDataRecoveryHandler::SetAutosavePath  
  Legt fest, dass das Verzeichnis, in dem Dateien automatisch gespeichert werden.  
   
 ```  
@@ -509,7 +538,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 ### <a name="remarks"></a>Hinweise  
  Ändern der AutoSpeichern-Verzeichnis verschoben nicht aktuell automatisch gespeicherte Dateien.  
   
-##  <a name="a-namesetrestartidentifiera--cdatarecoveryhandlersetrestartidentifier"></a><a name="setrestartidentifier"></a>CDataRecoveryHandler::SetRestartIdentifier  
+##  <a name="setrestartidentifier"></a>CDataRecoveryHandler::SetRestartIdentifier  
  Den Neustart des eindeutigen Bezeichner für diese Instanz von legt die `CDataRecoveryHandler`.  
   
 ```  
@@ -526,7 +555,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 ### <a name="remarks"></a>Hinweise  
  Der Neustart-Manager zeichnet Informationen über die offenen Dokumente in der Registrierung. Diese Informationen werden mit dem Neustart des eindeutigen Bezeichner als Schlüssel gespeichert. Da die Neustart-Bezeichner für jede Instanz einer Anwendung eindeutig ist, mehrere Instanzen einer Anwendung möglicherweise unerwartet beendet und der Neustart-Manager kann diese wiederhergestellt werden.  
   
-##  <a name="a-namesetsavedocumentinfoonidlea--cdatarecoveryhandlersetsavedocumentinfoonidle"></a><a name="setsavedocumentinfoonidle"></a>CDataRecoveryHandler::SetSaveDocumentInfoOnIdle  
+##  <a name="setsavedocumentinfoonidle"></a>CDataRecoveryHandler::SetSaveDocumentInfoOnIdle  
  Legt fest, ob die `CDataRecoveryHandler` speichert die geöffnete Dokument-Informationen zur Windows-Registrierung während des Zyklus der aktuelle im Leerlauf.  
   
 ```  
@@ -540,7 +569,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |Parameter|Beschreibung|  
 |[in] `bSaveOnIdle`|`TRUE`Um Dokumentinformationen während des Zyklus der aktuelle im Leerlauf zu speichern. `FALSE to not perform a save`.|  
   
-##  <a name="a-namesetshutdownbyrestartmanagera--cdatarecoveryhandlersetshutdownbyrestartmanager"></a><a name="setshutdownbyrestartmanager"></a>CDataRecoveryHandler::SetShutdownByRestartManager  
+##  <a name="setshutdownbyrestartmanager"></a>CDataRecoveryHandler::SetShutdownByRestartManager  
  Legt fest, ob es sich bei der vorherige Beenden der Anwendung durch den Neustart-Manager verursacht wurde.  
   
 ```  
@@ -557,7 +586,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 ### <a name="remarks"></a>Hinweise  
  Das Framework verhält sich anders basierend auf, ob das vorherige verlassen wurde oder ob er durch den Neustart-Manager initiiert wurde.  
   
-##  <a name="a-nameupdatedocumentinfoa--cdatarecoveryhandlerupdatedocumentinfo"></a><a name="updatedocumentinfo"></a>CDataRecoveryHandler::UpdateDocumentInfo  
+##  <a name="updatedocumentinfo"></a>CDataRecoveryHandler::UpdateDocumentInfo  
  Die Informationen für ein Dokument aktualisiert, da der Benutzer dieses gespeichert.  
   
 ```  

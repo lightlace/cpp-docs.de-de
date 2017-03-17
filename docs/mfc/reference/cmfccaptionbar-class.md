@@ -10,6 +10,37 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCCaptionBar
+- AFXCAPTIONBAR/CMFCCaptionBar
+- AFXCAPTIONBAR/CMFCCaptionBar::Create
+- AFXCAPTIONBAR/CMFCCaptionBar::DoesAllowDynInsertBefore
+- AFXCAPTIONBAR/CMFCCaptionBar::EnableButton
+- AFXCAPTIONBAR/CMFCCaptionBar::GetAlignment
+- AFXCAPTIONBAR/CMFCCaptionBar::GetBorderSize
+- AFXCAPTIONBAR/CMFCCaptionBar::GetButtonRect
+- AFXCAPTIONBAR/CMFCCaptionBar::GetMargin
+- AFXCAPTIONBAR/CMFCCaptionBar::IsMessageBarMode
+- AFXCAPTIONBAR/CMFCCaptionBar::RemoveBitmap
+- AFXCAPTIONBAR/CMFCCaptionBar::RemoveButton
+- AFXCAPTIONBAR/CMFCCaptionBar::RemoveIcon
+- AFXCAPTIONBAR/CMFCCaptionBar::RemoveText
+- AFXCAPTIONBAR/CMFCCaptionBar::SetBitmap
+- AFXCAPTIONBAR/CMFCCaptionBar::SetBorderSize
+- AFXCAPTIONBAR/CMFCCaptionBar::SetButton
+- AFXCAPTIONBAR/CMFCCaptionBar::SetButtonPressed
+- AFXCAPTIONBAR/CMFCCaptionBar::SetButtonToolTip
+- AFXCAPTIONBAR/CMFCCaptionBar::SetFlatBorder
+- AFXCAPTIONBAR/CMFCCaptionBar::SetIcon
+- AFXCAPTIONBAR/CMFCCaptionBar::SetImageToolTip
+- AFXCAPTIONBAR/CMFCCaptionBar::SetMargin
+- AFXCAPTIONBAR/CMFCCaptionBar::SetText
+- AFXCAPTIONBAR/CMFCCaptionBar::OnDrawBackground
+- AFXCAPTIONBAR/CMFCCaptionBar::OnDrawBorder
+- AFXCAPTIONBAR/CMFCCaptionBar::OnDrawButton
+- AFXCAPTIONBAR/CMFCCaptionBar::OnDrawImage
+- AFXCAPTIONBAR/CMFCCaptionBar::OnDrawText
+- AFXCAPTIONBAR/CMFCCaptionBar::m_clrBarBackground
+- AFXCAPTIONBAR/CMFCCaptionBar::m_clrBarBorder
+- AFXCAPTIONBAR/CMFCCaptionBar::m_clrBarText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -133,7 +164,7 @@ class CMFCCaptionBar : public CPane
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcaptionbar.h  
   
-##  <a name="a-namecreatea--cmfccaptionbarcreate"></a><a name="create"></a>CMFCCaptionBar::Create  
+##  <a name="create"></a>CMFCCaptionBar::Create  
  Erstellt das Steuerelement Beschriftung und fügt es der `CMFCCaptionBar` Objekt.  
   
 ```  
@@ -167,7 +198,7 @@ BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  Sie erstellen ein `CMFCCaptionBar` Objekt in zwei Schritten. Zuerst rufen Sie den Konstruktor aus, und rufen dann die `Create` -Methode, die das Windows-Steuerelement erstellt, und fügt es der `CMFCCaptionBar` Objekt.  
   
-##  <a name="a-namedoesallowdyninsertbeforea--cmfccaptionbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CMFCCaptionBar::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>CMFCCaptionBar::DoesAllowDynInsertBefore  
  Gibt an, ob ein weiterer Bereich dynamisch zwischen der Titelleiste und seiner übergeordneten Frame eingefügt werden kann.  
   
 ```  
@@ -179,7 +210,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameenablebuttona--cmfccaptionbarenablebutton"></a><a name="enablebutton"></a>CMFCCaptionBar::EnableButton  
+##  <a name="enablebutton"></a>CMFCCaptionBar::EnableButton  
  Aktiviert oder deaktiviert die Schaltfläche in der Titelleiste.  
   
 ```  
@@ -190,7 +221,7 @@ void EnableButton(BOOL bEnable=TRUE);
  [in] `bEnable`  
  `TRUE`So aktivieren Sie die Schaltfläche `FALSE` auf die Schaltfläche deaktiviert.  
   
-##  <a name="a-namegetalignmenta--cmfccaptionbargetalignment"></a><a name="getalignment"></a>CMFCCaptionBar::GetAlignment  
+##  <a name="getalignment"></a>CMFCCaptionBar::GetAlignment  
  Gibt die Ausrichtung des angegebenen Elements zurück.  
   
 ```  
@@ -215,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
   
 -   ALIGN_CENTER  
   
-##  <a name="a-namegetbordersizea--cmfccaptionbargetbordersize"></a><a name="getbordersize"></a>CMFCCaptionBar::GetBorderSize  
+##  <a name="getbordersize"></a>CMFCCaptionBar::GetBorderSize  
  Gibt die Randgröße der Titelleiste.  
   
 ```  
@@ -225,7 +256,7 @@ int GetBorderSize() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe des Rahmens in Pixel.  
   
-##  <a name="a-namegetbuttonrecta--cmfccaptionbargetbuttonrect"></a><a name="getbuttonrect"></a>CMFCCaptionBar::GetButtonRect  
+##  <a name="getbuttonrect"></a>CMFCCaptionBar::GetButtonRect  
  Ruft das umschließende Rechteck der Schaltfläche in der Titelleiste an.  
   
 ```  
@@ -235,7 +266,7 @@ CRect GetButtonRect() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CRect` -Objekt, das die Koordinaten des umschließenden Rechtecks der Schaltfläche auf der Titelleiste enthält.  
   
-##  <a name="a-namegetmargina--cmfccaptionbargetmargin"></a><a name="getmargin"></a>CMFCCaptionBar::GetMargin  
+##  <a name="getmargin"></a>CMFCCaptionBar::GetMargin  
  Gibt den Abstand zwischen dem Rand der Elemente der Beschriftung und dem Rand des Steuerelements Beschriftung.  
   
 ```  
@@ -245,7 +276,7 @@ int GetMargin() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Abstand zwischen dem Rand der Elemente der Beschriftung und dem Rand des Steuerelements Beschriftung in Pixel.  
   
-##  <a name="a-nameismessagebarmodea--cmfccaptionbarismessagebarmode"></a><a name="ismessagebarmode"></a>CMFCCaptionBar::IsMessageBarMode  
+##  <a name="ismessagebarmode"></a>CMFCCaptionBar::IsMessageBarMode  
  Gibt an, ob die Titelleiste in der Leiste Nachrichtenmodus.  
   
 ```  
@@ -258,28 +289,28 @@ BOOL IsMessageBarMode() const;
 ### <a name="remarks"></a>Hinweise  
  In der Leiste Nachrichtenmodus zeigt die Titelleiste ein Bild mit einer QuickInfo, einen Nachrichtentext und eine Schaltfläche.  
   
-##  <a name="a-namemclrbarbackgrounda--cmfccaptionbarmclrbarbackground"></a><a name="m_clrbarbackground"></a>CMFCCaptionBar::m_clrBarBackground  
+##  <a name="m_clrbarbackground"></a>CMFCCaptionBar::m_clrBarBackground  
  Die Hintergrundfarbe der Titelleiste.  
   
 ```  
 COLORREF m_clrBarBackground  
 ```  
   
-##  <a name="a-namemclrbarbordera--cmfccaptionbarmclrbarborder"></a><a name="m_clrbarborder"></a>CMFCCaptionBar::m_clrBarBorder  
+##  <a name="m_clrbarborder"></a>CMFCCaptionBar::m_clrBarBorder  
  Die Farbe des Rahmens der Titelleiste.  
   
 ```  
 COLORREF m_clrBarBorder  
 ```  
   
-##  <a name="a-namemclrbartexta--cmfccaptionbarmclrbartext"></a><a name="m_clrbartext"></a>CMFCCaptionBar::m_clrBarText  
+##  <a name="m_clrbartext"></a>CMFCCaptionBar::m_clrBarText  
  Die Farbe des Textes der Titelleiste.  
   
 ```  
 COLORREF m_clrBarText  
 ```  
   
-##  <a name="a-nameondrawbackgrounda--cmfccaptionbarondrawbackground"></a><a name="ondrawbackground"></a>CMFCCaptionBar::OnDrawBackground  
+##  <a name="ondrawbackground"></a>CMFCCaptionBar::OnDrawBackground  
  Vom Framework zum Ausfüllen der Titelleiste aufgerufen.  
   
 ```  
@@ -300,7 +331,7 @@ virtual void OnDrawBackground(
   
  Überschreiben Sie diese Methode in einer `CMFCCaptionBar` abgeleitete Klasse, um die Darstellung der Titelleiste anzupassen.  
   
-##  <a name="a-nameondrawbordera--cmfccaptionbarondrawborder"></a><a name="ondrawborder"></a>CMFCCaptionBar::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCCaptionBar::OnDrawBorder  
  Vom Framework aufgerufen wird zum Zeichnen des Rahmens, der Titelleiste.  
   
 ```  
@@ -321,7 +352,7 @@ virtual void OnDrawBorder(
   
  Überschreiben Sie diese Methode in einer `CMFCCaptionBar` abgeleitete Klasse, um die Darstellung der Titelleiste Rahmen anpassen.  
   
-##  <a name="a-nameondrawbuttona--cmfccaptionbarondrawbutton"></a><a name="ondrawbutton"></a>CMFCCaptionBar::OnDrawButton  
+##  <a name="ondrawbutton"></a>CMFCCaptionBar::OnDrawButton  
  Aufgerufen, die Beschriftung Leiste Schaltfläche gezeichnet werden soll.  
   
 ```  
@@ -348,7 +379,7 @@ virtual void OnDrawButton(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer `CMFCCaptionBar` abgeleitete Klasse, um die Darstellung der Titelleiste Schaltfläche anzupassen.  
   
-##  <a name="a-nameondrawimagea--cmfccaptionbarondrawimage"></a><a name="ondrawimage"></a>CMFCCaptionBar::OnDrawImage  
+##  <a name="ondrawimage"></a>CMFCCaptionBar::OnDrawImage  
  Aufgerufen, die Beschriftung Leiste Bild gezeichnet werden soll.  
   
 ```  
@@ -367,7 +398,7 @@ virtual void OnDrawImage(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer `CMFCCaptionBar` abgeleitete Klasse, um die Darstellung des Bilds anzupassen.  
   
-##  <a name="a-nameondrawtexta--cmfccaptionbarondrawtext"></a><a name="ondrawtext"></a>CMFCCaptionBar::OnDrawText  
+##  <a name="ondrawtext"></a>CMFCCaptionBar::OnDrawText  
  Aufgerufen, um den Text der Beschriftung zu zeichnen.  
   
 ```  
@@ -392,14 +423,14 @@ virtual void OnDrawText(
   
  Überschreiben Sie diese Methode in einer `CMFCCaptionBar` abgeleitete Klasse, um die Darstellung des Texts der Titelleiste anzupassen.  
   
-##  <a name="a-nameremovebitmapa--cmfccaptionbarremovebitmap"></a><a name="removebitmap"></a>CMFCCaptionBar::RemoveBitmap  
+##  <a name="removebitmap"></a>CMFCCaptionBar::RemoveBitmap  
  Entfernt das Bitmap-Bild von der Titelleiste an.  
   
 ```  
 void RemoveBitmap();
 ```  
   
-##  <a name="a-nameremovebuttona--cmfccaptionbarremovebutton"></a><a name="removebutton"></a>CMFCCaptionBar::RemoveButton  
+##  <a name="removebutton"></a>CMFCCaptionBar::RemoveButton  
  Entfernt die Schaltfläche in der Titelleiste an.  
   
 ```  
@@ -409,21 +440,21 @@ void RemoveButton();
 ### <a name="remarks"></a>Hinweise  
  Das Layout der Elemente der Beschriftung werden automatisch angepasst.  
   
-##  <a name="a-nameremoveicona--cmfccaptionbarremoveicon"></a><a name="removeicon"></a>CMFCCaptionBar::RemoveIcon  
+##  <a name="removeicon"></a>CMFCCaptionBar::RemoveIcon  
  Entfernt das Symbol in der Titelleiste an.  
   
 ```  
 void RemoveIcon();
 ```  
   
-##  <a name="a-nameremovetexta--cmfccaptionbarremovetext"></a><a name="removetext"></a>CMFCCaptionBar::RemoveText  
+##  <a name="removetext"></a>CMFCCaptionBar::RemoveText  
  Entfernt die Beschriftung in der Titelleiste an.  
   
 ```  
 void RemoveText();
 ```  
   
-##  <a name="a-namesetbitmapa--cmfccaptionbarsetbitmap"></a><a name="setbitmap"></a>CMFCCaptionBar::SetBitmap  
+##  <a name="setbitmap"></a>CMFCCaptionBar::SetBitmap  
  Legt das Bitmapbild der Titelleiste an.  
   
 ```  
@@ -469,7 +500,7 @@ void SetBitmap(
   
 -   ALIGN_CENTER  
   
-##  <a name="a-namesetbordersizea--cmfccaptionbarsetbordersize"></a><a name="setbordersize"></a>CMFCCaptionBar::SetBorderSize  
+##  <a name="setbordersize"></a>CMFCCaptionBar::SetBorderSize  
  Legt die Randgröße der Titelleiste.  
   
 ```  
@@ -480,7 +511,7 @@ void SetBorderSize(int nSize);
  [in] `nSize`  
  Die neue Größe des Rahmens Leiste Beschriftung in Pixel.  
   
-##  <a name="a-namesetbuttona--cmfccaptionbarsetbutton"></a><a name="setbutton"></a>CMFCCaptionBar::SetButton  
+##  <a name="setbutton"></a>CMFCCaptionBar::SetButton  
  Legt die Schaltfläche für die Titelleiste an.  
   
 ```  
@@ -504,7 +535,7 @@ void SetButton(
  `bHasDropDownArrow`  
  `TRUE`Wenn die Schaltfläche eine Dropdown-Pfeil zeigt `FALSE` andernfalls.  
   
-##  <a name="a-namesetbuttonpresseda--cmfccaptionbarsetbuttonpressed"></a><a name="setbuttonpressed"></a>CMFCCaptionBar::SetButtonPressed  
+##  <a name="setbuttonpressed"></a>CMFCCaptionBar::SetButtonPressed  
  Gibt an, ob die Schaltfläche gedrückt bleibt.  
   
 ```  
@@ -515,7 +546,7 @@ void SetButtonPressed(BOOL bPresed=TRUE);
  `bPresed`  
  `TRUE`Wenn die Schaltfläche seine gedrückt hält `FALSE` andernfalls.  
   
-##  <a name="a-namesetbuttontooltipa--cmfccaptionbarsetbuttontooltip"></a><a name="setbuttontooltip"></a>CMFCCaptionBar::SetButtonToolTip  
+##  <a name="setbuttontooltip"></a>CMFCCaptionBar::SetButtonToolTip  
  Legt die QuickInfo für die Schaltfläche fest.  
   
 ```  
@@ -531,7 +562,7 @@ void SetButtonToolTip(
  [in] `lpszDescription`  
  Die QuickInfo-Beschreibung.  
   
-##  <a name="a-namesetflatbordera--cmfccaptionbarsetflatborder"></a><a name="setflatborder"></a>CMFCCaptionBar::SetFlatBorder  
+##  <a name="setflatborder"></a>CMFCCaptionBar::SetFlatBorder  
  Legt die Rahmenart der Titelleiste an.  
   
 ```  
@@ -542,7 +573,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
  [in] `bFlat`  
  `TRUE`Wenn der Rand der Titelleiste flach ist. `FALSE`Wenn der Rahmen 3D ist.  
   
-##  <a name="a-nameseticona--cmfccaptionbarseticon"></a><a name="seticon"></a>CMFCCaptionBar::SetIcon  
+##  <a name="seticon"></a>CMFCCaptionBar::SetIcon  
  Wird das Symbol für eine Titelleiste.  
   
 ```  
@@ -571,7 +602,7 @@ void SetIcon(
   
 -   ALIGN_CENTER  
   
-##  <a name="a-namesetimagetooltipa--cmfccaptionbarsetimagetooltip"></a><a name="setimagetooltip"></a>CMFCCaptionBar::SetImageToolTip  
+##  <a name="setimagetooltip"></a>CMFCCaptionBar::SetImageToolTip  
  Legt die QuickInfo für das Bild in der Titelleiste an.  
   
 ```  
@@ -587,7 +618,7 @@ void SetImageToolTip(
  [in] `lpszDescription`  
  Die QuickInfo-Beschreibung.  
   
-##  <a name="a-namesetmargina--cmfccaptionbarsetmargin"></a><a name="setmargin"></a>CMFCCaptionBar::SetMargin  
+##  <a name="setmargin"></a>CMFCCaptionBar::SetMargin  
  Legt den Abstand zwischen dem Rand das Caption-Element und dem Rand des Steuerelements Beschriftung fest.  
   
 ```  
@@ -598,7 +629,7 @@ void SetMargin(int nMargin);
  [in] `nMargin`  
  Der Abstand zwischen dem Rand der Elemente der Beschriftung und dem Rand des Steuerelements Beschriftung in Pixel.  
   
-##  <a name="a-namesettexta--cmfccaptionbarsettext"></a><a name="settext"></a>CMFCCaptionBar::SetText  
+##  <a name="settext"></a>CMFCCaptionBar::SetText  
  Legt die Beschriftung für die Titelleiste an.  
   
 ```  

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherLocator
+- AFXINET/CGopherLocator
+- AFXINET/CGopherLocator::CGopherLocator
+- AFXINET/CGopherLocator::GetLocatorType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +93,7 @@ class CGopherLocator : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxinet.h  
   
-##  <a name="a-namecgopherlocatora--cgopherlocatorcgopherlocator"></a><a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
+##  <a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
  Diese Member-Funktion wird aufgerufen, um das Erstellen einer `CGopherLocator` Objekt.  
   
 ```  
@@ -104,7 +107,7 @@ CGopherLocator(const CGopherLocator& ref);
 ### <a name="remarks"></a>Hinweise  
  Erstellen Sie nie eine `CGopherLocator` direkt. Rufen Sie stattdessen [CGopherConnection:: CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) erstellen und Zurückgeben der einen Zeiger auf die `CGopherLocator` Objekt.  
   
-##  <a name="a-namegetlocatortypea--cgopherlocatorgetlocatortype"></a><a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
+##  <a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
  Rufen Sie diese Memberfunktion zum Abrufen des URL-Typs.  
   
 ```  
@@ -148,7 +151,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 |GOPHER_TYPE_ASK|Ein Ask-Element.|  
 |GOPHER_TYPE_GOPHER_PLUS|Ein Gopher-Element.|  
   
-##  <a name="a-nameoperatorlpctstra--cgopherlocatoroperator-lpctstr"></a><a name="operator_lpctstr"></a>CGopherLocator::operator LPCTSTR  
+##  <a name="operator_lpctstr"></a>CGopherLocator::operator LPCTSTR  
  Dieser nützliche Umwandlungsoperator bietet eine effiziente Methode für den Zugriff auf die Null-terminierte C-Zeichenfolge enthalten, die einem `CGopherLocator` Objekt.  
   
 ```  

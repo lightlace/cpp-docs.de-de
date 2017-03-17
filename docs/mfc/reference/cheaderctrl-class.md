@@ -10,6 +10,36 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHeaderCtrl
+- AFXCMN/CHeaderCtrl
+- AFXCMN/CHeaderCtrl::CHeaderCtrl
+- AFXCMN/CHeaderCtrl::ClearAllFilters
+- AFXCMN/CHeaderCtrl::ClearFilter
+- AFXCMN/CHeaderCtrl::Create
+- AFXCMN/CHeaderCtrl::CreateDragImage
+- AFXCMN/CHeaderCtrl::CreateEx
+- AFXCMN/CHeaderCtrl::DeleteItem
+- AFXCMN/CHeaderCtrl::DrawItem
+- AFXCMN/CHeaderCtrl::EditFilter
+- AFXCMN/CHeaderCtrl::GetBitmapMargin
+- AFXCMN/CHeaderCtrl::GetFocusedItem
+- AFXCMN/CHeaderCtrl::GetImageList
+- AFXCMN/CHeaderCtrl::GetItem
+- AFXCMN/CHeaderCtrl::GetItemCount
+- AFXCMN/CHeaderCtrl::GetItemDropDownRect
+- AFXCMN/CHeaderCtrl::GetItemRect
+- AFXCMN/CHeaderCtrl::GetOrderArray
+- AFXCMN/CHeaderCtrl::GetOverflowRect
+- AFXCMN/CHeaderCtrl::HitTest
+- AFXCMN/CHeaderCtrl::InsertItem
+- AFXCMN/CHeaderCtrl::Layout
+- AFXCMN/CHeaderCtrl::OrderToIndex
+- AFXCMN/CHeaderCtrl::SetBitmapMargin
+- AFXCMN/CHeaderCtrl::SetFilterChangeTimeout
+- AFXCMN/CHeaderCtrl::SetFocusedItem
+- AFXCMN/CHeaderCtrl::SetHotDivider
+- AFXCMN/CHeaderCtrl::SetImageList
+- AFXCMN/CHeaderCtrl::SetItem
+- AFXCMN/CHeaderCtrl::SetOrderArray
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +152,7 @@ class CHeaderCtrl : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcmn.h  
   
-##  <a name="a-namecheaderctrla--cheaderctrlcheaderctrl"></a><a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
+##  <a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
  Erstellt ein `CHeaderCtrl`-Objekt.  
   
 ```  
@@ -132,7 +162,7 @@ CHeaderCtrl();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#1;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]  
   
-##  <a name="a-nameclearallfiltersa--cheaderctrlclearallfilters"></a><a name="clearallfilters"></a>CHeaderCtrl::ClearAllFilters  
+##  <a name="clearallfilters"></a>CHeaderCtrl::ClearAllFilters  
  Löscht alle Filter für ein Steuerelement.  
   
 ```  
@@ -148,7 +178,7 @@ BOOL ClearAllFilters();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#2;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
   
-##  <a name="a-nameclearfiltera--cheaderctrlclearfilter"></a><a name="clearfilter"></a>CHeaderCtrl::ClearFilter  
+##  <a name="clearfilter"></a>CHeaderCtrl::ClearFilter  
  Löscht den Filter für ein Steuerelement.  
   
 ```  
@@ -168,7 +198,7 @@ BOOL ClearFilter(int nColumn);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&3;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
   
-##  <a name="a-namecreatea--cheaderctrlcreate"></a><a name="create"></a>CHeaderCtrl  
+##  <a name="create"></a>CHeaderCtrl  
  Erstellt ein Steuerelement und fügt es ein `CHeaderCtrl` Objekt.  
   
 ```  
@@ -229,7 +259,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&4;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
   
-##  <a name="a-namecreateexa--cheaderctrlcreateex"></a><a name="createex"></a>CHeaderCtrl::CreateEx  
+##  <a name="createex"></a>CHeaderCtrl::CreateEx  
  Erstellt ein Steuerelement (ein untergeordnetes Fenster), und ordnen sie die `CHeaderCtrl` Objekt.  
   
 ```  
@@ -263,7 +293,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Hinweise  
  Verwendung `CreateEx` anstelle von **erstellen** erweiterten Fensterstile, angegeben durch den Wert der Windows-erweiterten Stil anwenden **WS_EX_**.  
   
-##  <a name="a-namecreatedragimagea--cheaderctrlcreatedragimage"></a><a name="createdragimage"></a>CHeaderCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>CHeaderCtrl::CreateDragImage  
  Erstellt eine transparente Version eines Elements Bild in einem Headersteuerelement.  
   
 ```  
@@ -282,7 +312,7 @@ CImageList* CreateDragImage(int nIndex);
   
  Das `CImageList` Objekt, dem der zurückgegebene Zeiger ist ein temporäres Objekt und wird in der nächsten Zeit im Leerlauf Verarbeitung gelöscht.  
   
-##  <a name="a-namedeleteitema--cheaderctrldeleteitem"></a><a name="deleteitem"></a>CHeaderCtrl::DeleteItem  
+##  <a name="deleteitem"></a>CHeaderCtrl::DeleteItem  
  Löscht ein Element aus einem Kopfzeilen-Steuerelement.  
   
 ```  
@@ -299,7 +329,7 @@ BOOL DeleteItem(int nPos);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&5;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
   
-##  <a name="a-namedrawitema--cheaderctrldrawitem"></a><a name="drawitem"></a>CHeaderCtrl::DrawItem  
+##  <a name="drawitem"></a>CHeaderCtrl::DrawItem  
  Aufgerufen, wenn sich ein Darstellungsaspekt eines Ownerdrawn-Header-Steuerelements ändert.  
   
 ```  
@@ -320,7 +350,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&6;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
   
-##  <a name="a-nameeditfiltera--cheaderctrleditfilter"></a><a name="editfilter"></a>CHeaderCtrl::EditFilter  
+##  <a name="editfilter"></a>CHeaderCtrl::EditFilter  
  Startet den angegebenen Filter von einem Kopfzeilen-Steuerelement bearbeiten.  
   
 ```  
@@ -347,7 +377,7 @@ BOOL EditFilter(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#7;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
   
-##  <a name="a-namegetbitmapmargina--cheaderctrlgetbitmapmargin"></a><a name="getbitmapmargin"></a>CHeaderCtrl::GetBitmapMargin  
+##  <a name="getbitmapmargin"></a>CHeaderCtrl::GetBitmapMargin  
  Ruft die Breite des Rands einer Bitmap in einem Headersteuerelement ab.  
   
 ```  
@@ -363,7 +393,7 @@ int GetBitmapMargin() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#8;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
   
-##  <a name="a-namegetfocuseditema--cheaderctrlgetfocuseditem"></a><a name="getfocuseditem"></a>CHeaderCtrl::GetFocusedItem  
+##  <a name="getfocuseditem"></a>CHeaderCtrl::GetFocusedItem  
  Ruft den Index des Elements, das in der aktuellen Kopfzeilen-Steuerelement den Fokus besitzt.  
   
 ```  
@@ -386,7 +416,7 @@ int GetFocusedItem() const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4&4;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="a-namegetimagelista--cheaderctrlgetimagelist"></a><a name="getimagelist"></a>CHeaderCtrl::GetImageList  
+##  <a name="getimagelist"></a>CHeaderCtrl::GetImageList  
  Ruft das Handle einer Bildliste zum Zeichnen Headerelemente in einem Headersteuerelement ab.  
   
 ```  
@@ -402,7 +432,7 @@ CImageList* GetImageList() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#9;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
   
-##  <a name="a-namegetitema--cheaderctrlgetitem"></a><a name="getitem"></a>CHeaderCtrl:: GetItem  
+##  <a name="getitem"></a>CHeaderCtrl:: GetItem  
  Ruft Informationen über ein Steuerelement-Headerelement.  
   
 ```  
@@ -424,7 +454,7 @@ BOOL GetItem(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#10;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
   
-##  <a name="a-namegetitemcounta--cheaderctrlgetitemcount"></a><a name="getitemcount"></a>CHeaderCtrl::GetItemCount  
+##  <a name="getitemcount"></a>CHeaderCtrl::GetItemCount  
  Ruft die Anzahl der Elemente in einem Headersteuerelement ab.  
   
 ```  
@@ -437,7 +467,7 @@ int GetItemCount() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CHeaderCtrl::DeleteItem](#deleteitem).  
   
-##  <a name="a-namegetitemdropdownrecta--cheaderctrlgetitemdropdownrect"></a><a name="getitemdropdownrect"></a>CHeaderCtrl::GetItemDropDownRect  
+##  <a name="getitemdropdownrect"></a>CHeaderCtrl::GetItemDropDownRect  
  Ruft das umschließende Rechteck der Dropdown-Schaltfläche für ein Headerelement im aktuellen Kopfzeilen-Steuerelement ab.  
   
 ```  
@@ -469,7 +499,7 @@ BOOL GetItemDropDownRect(
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4;2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
   
-##  <a name="a-namegetitemrecta--cheaderctrlgetitemrect"></a><a name="getitemrect"></a>CHeaderCtrl::GetItemRect  
+##  <a name="getitemrect"></a>CHeaderCtrl::GetItemRect  
  Ruft das umschließende Rechteck für ein bestimmtes Element in einem Headersteuerelement ab.  
   
 ```  
@@ -491,7 +521,7 @@ BOOL GetItemRect(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode implementiert das Verhalten der Win32-Nachricht [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetorderarraya--cheaderctrlgetorderarray"></a><a name="getorderarray"></a>CHeaderCtrl:: GetOrderArray  
+##  <a name="getorderarray"></a>CHeaderCtrl:: GetOrderArray  
  Ruft die links-nach-rechts-Reihenfolge der Elemente in einem Headersteuerelement ab.  
   
 ```  
@@ -516,7 +546,7 @@ BOOL GetOrderArray(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#11;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
   
-##  <a name="a-namegetoverflowrecta--cheaderctrlgetoverflowrect"></a><a name="getoverflowrect"></a>CHeaderCtrl::GetOverflowRect  
+##  <a name="getoverflowrect"></a>CHeaderCtrl::GetOverflowRect  
  Ruft das umschließende Rechteck der Überlaufschaltfläche des aktuellen Headersteuerelements ab.  
   
 ```  
@@ -547,7 +577,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4&3;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
   
-##  <a name="a-namehittesta--cheaderctrlhittest"></a><a name="hittest"></a>CHeaderCtrl::HitTest  
+##  <a name="hittest"></a>CHeaderCtrl::HitTest  
  Bestimmt, welches Headerelement ggf. an einem angegebenen Punkt befindet.  
   
 ```  
@@ -576,7 +606,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4;1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
   
-##  <a name="a-nameinsertitema--cheaderctrlinsertitem"></a><a name="insertitem"></a>InsertItem  
+##  <a name="insertitem"></a>InsertItem  
  Fügt ein neues Element in einem Header-Steuerelement am angegebenen Index.  
   
 ```  
@@ -598,7 +628,7 @@ int InsertItem(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#12;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
   
-##  <a name="a-namelayouta--cheaderctrllayout"></a><a name="layout"></a>CHeaderCtrl:: Layout  
+##  <a name="layout"></a>CHeaderCtrl:: Layout  
  Ruft die Größe und Position von einem Kopfzeilen-Steuerelement in einem bestimmten Rechteck.  
   
 ```  
@@ -618,7 +648,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#13;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
   
-##  <a name="a-nameordertoindexa--cheaderctrlordertoindex"></a><a name="ordertoindex"></a>CHeaderCtrl::OrderToIndex  
+##  <a name="ordertoindex"></a>CHeaderCtrl::OrderToIndex  
  Ruft den Indexwert für ein Element basierend auf der Reihenfolge, in dem Kopfzeilen-Steuerelement ab.  
   
 ```  
@@ -635,7 +665,7 @@ int OrderToIndex(int nOrder) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion implementiert das Verhalten des Makros Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Es wird zur Unterstützung Header Elementreihenfolge bereitgestellt.  
   
-##  <a name="a-namesetbitmapmargina--cheaderctrlsetbitmapmargin"></a><a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
+##  <a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
  Legt die Breite des Rands einer Bitmap in einem Header-Steuerelement fest.  
   
 ```  
@@ -655,7 +685,7 @@ int SetBitmapMargin(int nWidth);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&14;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
-##  <a name="a-namesetfilterchangetimeouta--cheaderctrlsetfilterchangetimeout"></a><a name="setfilterchangetimeout"></a>CHeaderCtrl::SetFilterChangeTimeout  
+##  <a name="setfilterchangetimeout"></a>CHeaderCtrl::SetFilterChangeTimeout  
  Legt das Timeout-Intervall zwischen dem Zeitpunkt, der eine Änderung in die FilterAttribute erfolgt und die Buchung von einer [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) Benachrichtigung.  
   
 ```  
@@ -675,7 +705,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl&#15;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
   
-##  <a name="a-namesetfocuseditema--cheaderctrlsetfocuseditem"></a><a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem  
+##  <a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem  
  Setzt den Fokus auf ein Element der angegebenen Header im aktuellen Kopfzeilen-Steuerelement.  
   
 ```  
@@ -704,7 +734,7 @@ BOOL SetFocusedItem(int iItem);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4&4;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="a-namesethotdividera--cheaderctrlsethotdivider"></a><a name="sethotdivider"></a>CHeaderCtrl::SetHotDivider  
+##  <a name="sethotdivider"></a>CHeaderCtrl::SetHotDivider  
  Ändert den Unterteiler zwischen Header-Elemente an, dass eine manuelle Ziehen und Ablegen des Headerelements.  
   
 ```  
@@ -728,7 +758,7 @@ int SetHotDivider(int nIndex);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl Nr.&16;](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
   
-##  <a name="a-namesetimagelista--cheaderctrlsetimagelist"></a><a name="setimagelist"></a>:: SetImageList  
+##  <a name="setimagelist"></a>:: SetImageList  
  Weist eine Bildliste einem Kopfzeilen-Steuerelement.  
   
 ```  
@@ -748,7 +778,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CHeaderCtrl::GetImageList](#getimagelist).  
   
-##  <a name="a-namesetitema--cheaderctrlsetitem"></a><a name="setitem"></a>CHeaderCtrl::SetItem  
+##  <a name="setitem"></a>CHeaderCtrl::SetItem  
  Legt die Attribute des angegebenen Elements in einem Header-Steuerelement fest.  
   
 ```  
@@ -770,7 +800,7 @@ BOOL SetItem(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CHeaderCtrl:: GetItem](#getitem).  
   
-##  <a name="a-namesetorderarraya--cheaderctrlsetorderarray"></a><a name="setorderarray"></a>CHeaderCtrl::SetOrderArray  
+##  <a name="setorderarray"></a>CHeaderCtrl::SetOrderArray  
  Legt die links-nach-rechts-Reihenfolge der Elemente in einem Kopfzeilen-Steuerelement fest.  
   
 ```  

@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IServiceProviderImpl<T>
-- ATL.IServiceProviderImpl<T>
-- ATL.IServiceProviderImpl
-- ATL::IServiceProviderImpl
 - IServiceProviderImpl
+- ATLCOM/ATL::IServiceProviderImpl
+- ATLCOM/ATL::IServiceProviderImpl::QueryService
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +81,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
   
-##  <a name="a-namequeryservicea--iserviceproviderimplqueryservice"></a><a name="queryservice"></a>IServiceProviderImpl:: QueryService  
+##  <a name="queryservice"></a>IServiceProviderImpl:: QueryService  
  Erstellt oder den angegebenen Dienst zugreift, und gibt einen Schnittstellenzeiger auf die angegebene Schnittstelle für den Dienst zurück.  
   
 ```

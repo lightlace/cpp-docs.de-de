@@ -10,6 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CArchive
+- AFX/CArchive
+- AFX/CArchive::CArchive
+- AFX/CArchive::Abort
+- AFX/CArchive::Close
+- AFX/CArchive::Flush
+- AFX/CArchive::GetFile
+- AFX/CArchive::GetObjectSchema
+- AFX/CArchive::IsBufferEmpty
+- AFX/CArchive::IsLoading
+- AFX/CArchive::IsStoring
+- AFX/CArchive::MapObject
+- AFX/CArchive::Read
+- AFX/CArchive::ReadClass
+- AFX/CArchive::ReadObject
+- AFX/CArchive::ReadString
+- AFX/CArchive::SerializeClass
+- AFX/CArchive::SetLoadParams
+- AFX/CArchive::SetObjectSchema
+- AFX/CArchive::SetStoreParams
+- AFX/CArchive::Write
+- AFX/CArchive::WriteClass
+- AFX/CArchive::WriteObject
+- AFX/CArchive::WriteString
+- AFX/CArchive::m_pDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +146,7 @@ class CArchive
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
   
-##  <a name="a-nameaborta--carchiveabort"></a><a name="abort"></a>CArchive::Abort  
+##  <a name="abort"></a>CArchive::Abort  
  Rufen Sie diese Funktion, um das Archiv zu schließen, ohne eine Ausnahme auszulösen.  
   
 ```  
@@ -139,7 +163,7 @@ void Abort ();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CArchive::WriteClass](#writeclass).  
   
-##  <a name="a-namecarchivea--carchivecarchive"></a><a name="carchive"></a>CArchive::CArchive  
+##  <a name="carchive"></a>CArchive::CArchive  
  Erstellt ein `CArchive` -Objekt und gibt an, ob er zum Laden oder Speichern von Objekten verwendet wird.  
   
 ```  
@@ -177,7 +201,7 @@ CArchive(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&#12;](../../mfc/codesnippet/cpp/carchive-class_1.cpp)]  
   
-##  <a name="a-nameclosea--carchiveclose"></a><a name="close"></a>CArchive::Close  
+##  <a name="close"></a>CArchive::Close  
  Löscht alle Daten im Puffer bleibt, schließt das Archiv, und trennt das Archiv aus der Datei.  
   
 ```  
@@ -192,7 +216,7 @@ void Close();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CArchive::WriteString](#writestring).  
   
-##  <a name="a-nameflusha--carchiveflush"></a><a name="flush"></a>CArchive::Flush  
+##  <a name="flush"></a>CArchive::Flush  
  Erzwingt, dass alle verbleibenden im Archiv Puffer in die Datei geschrieben werden.  
   
 ```  
@@ -205,7 +229,7 @@ void Flush();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&#13;](../../mfc/codesnippet/cpp/carchive-class_2.cpp)]  
   
-##  <a name="a-namegetfilea--carchivegetfile"></a><a name="getfile"></a>CArchive::GetFile  
+##  <a name="getfile"></a>CArchive::GetFile  
  Ruft die `CFile` Objektzeiger für dieses Archiv.  
   
 ```  
@@ -221,7 +245,7 @@ CFile* GetFile() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&14;](../../mfc/codesnippet/cpp/carchive-class_3.cpp)]  
   
-##  <a name="a-namegetobjectschemaa--carchivegetobjectschema"></a><a name="getobjectschema"></a>CArchive::GetObjectSchema  
+##  <a name="getobjectschema"></a>CArchive::GetObjectSchema  
  Mit dieser Funktion wird von der `Serialize` Funktion, um die Version des Objekts zu bestimmen, die gerade deserialisiert wird.  
   
 ```  
@@ -239,7 +263,7 @@ UINT GetObjectSchema();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&#15;](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]  
   
-##  <a name="a-nameisbufferemptya--carchiveisbufferempty"></a><a name="isbufferempty"></a>CArchive::IsBufferEmpty  
+##  <a name="isbufferempty"></a>CArchive::IsBufferEmpty  
  Rufen Sie diese Memberfunktion, um festzustellen, ob das Archivobjekt internen Puffer leer ist.  
   
 ```  
@@ -256,7 +280,7 @@ BOOL IsBufferEmpty() const;
   
  Weitere Informationen finden Sie unter [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="a-nameisloadinga--carchiveisloading"></a><a name="isloading"></a>CArchive::IsLoading  
+##  <a name="isloading"></a>CArchive::IsLoading  
  Bestimmt, ob das Archiv Daten lädt.  
   
 ```  
@@ -272,7 +296,7 @@ BOOL IsLoading() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization Nr.&16;](../../mfc/codesnippet/cpp/carchive-class_5.cpp)]  
   
-##  <a name="a-nameisstoringa--carchiveisstoring"></a><a name="isstoring"></a>CArchive::IsStoring  
+##  <a name="isstoring"></a>CArchive::IsStoring  
  Bestimmt, ob das Archiv Daten gespeichert werden.  
   
 ```  
@@ -290,7 +314,7 @@ BOOL IsStoring() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&17;](../../mfc/codesnippet/cpp/carchive-class_6.cpp)]  
   
-##  <a name="a-namemapobjecta--carchivemapobject"></a><a name="mapobject"></a>CArchive::MapObject  
+##  <a name="mapobject"></a>CArchive::MapObject  
  Rufen Sie diese Memberfunktion zum Platzieren von Objekten in der Zuordnung, die nicht wirklich auf die Datei serialisiert werden, jedoch werden Unterobjekte zu verweisen.  
   
 ```  
@@ -315,7 +339,7 @@ void MapObject(const CObject* pOb);
   
  [!code-cpp[NVC_MFCSerialization&21;](../../mfc/codesnippet/cpp/carchive-class_10.cpp)]  
   
-##  <a name="a-namempdocumenta--carchivempdocument"></a><a name="m_pdocument"></a>CArchive::m_pDocument  
+##  <a name="m_pdocument"></a>CArchive::m_pDocument  
  Legen Sie auf **NULL** standardmäßig ist dieser Zeiger auf eine **CDocument** kann festgelegt werden auf den Benutzer die `CArchive` -Instanz möchte.  
   
 ```  
@@ -330,7 +354,7 @@ CDocument* m_pDocument;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&#35;](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]  
   
-##  <a name="a-nameoperatorltlta--carchiveoperator-ltlt"></a><a name="operator_lt_lt"></a>CArchive::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>CArchive::operator&lt;&lt;  
  Speichert das angegebene Objekt oder die primitiven Typs in das Archiv.  
   
 ```  
@@ -400,7 +424,7 @@ CArchive& operator<<(LONGLONG dwdw);
   
  [!code-cpp[NVC_MFCSerialization&#32;](../../mfc/codesnippet/cpp/carchive-class_13.cpp)]  
   
-##  <a name="a-nameoperatorgtgta--carchiveoperator-gtgt"></a><a name="operator_gt_gt"></a>CArchive::operator&gt;&gt;  
+##  <a name="operator_gt_gt"></a>CArchive::operator&gt;&gt;  
  Lädt die angegebenen primitiven Typ aus dem Archiv.  
   
 ```  
@@ -482,7 +506,7 @@ CArchive& operator>>(LONGLONG& dwdw);
   
  [!code-cpp[NVC_MFCSerialization&#34;](../../mfc/codesnippet/cpp/carchive-class_15.cpp)]  
   
-##  <a name="a-namereada--carchiveread"></a><a name="read"></a>CArchive:: Read  
+##  <a name="read"></a>CArchive:: Read  
  Liest eine angegebene Anzahl von Bytes aus dem Archiv.  
   
 ```  
@@ -507,7 +531,7 @@ UINT Read(void* lpBuf, UINT nMax);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&#24;](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]  
   
-##  <a name="a-namereadclassa--carchivereadclass"></a><a name="readclass"></a>CArchive::ReadClass  
+##  <a name="readclass"></a>CArchive::ReadClass  
  Rufen Sie diese Memberfunktion, um einen Verweis auf eine Klasse, die zuvor mit gespeicherten lesen [WriteClass](#writeclass).  
   
 ```  
@@ -542,7 +566,7 @@ CRuntimeClass* ReadClass(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CArchive::WriteClass](#writeclass).  
   
-##  <a name="a-namereadobjecta--carchivereadobject"></a><a name="readobject"></a>CArchive::ReadObject  
+##  <a name="readobject"></a>CArchive::ReadObject  
  Liest Daten aus dem Archiv, und erstellt ein Objekt des entsprechenden Typs.  
   
 ```  
@@ -564,7 +588,7 @@ CObject* ReadObject(const CRuntimeClass* pClass);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CArchive::WriteObject](#writeobject).  
   
-##  <a name="a-namereadstringa--carchivereadstring"></a><a name="readstring"></a>CArchive::ReadString  
+##  <a name="readstring"></a>CArchive::ReadString  
  Rufen Sie diese Memberfunktion zum Lesen von Textdaten in einen Puffer aus der Datei zugeordneten der `CArchive` Objekt.  
   
 ```  
@@ -595,7 +619,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CArchive::WriteString](#writestring).  
   
-##  <a name="a-nameserializeclassa--carchiveserializeclass"></a><a name="serializeclass"></a>CArchive::SerializeClass  
+##  <a name="serializeclass"></a>CArchive::SerializeClass  
  Rufen Sie diese Memberfunktion auf, wenn Sie verwenden möchten, speichern und laden die Versionsinformationen für eine Basisklasse.  
   
 ```  
@@ -618,7 +642,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&#25;](../../mfc/codesnippet/cpp/carchive-class_17.h)]  
   
-##  <a name="a-namesetloadparamsa--carchivesetloadparams"></a><a name="setloadparams"></a>CArchive::SetLoadParams  
+##  <a name="setloadparams"></a>CArchive::SetLoadParams  
  Rufen Sie `SetLoadParams` Wenn man eine große Anzahl von lesen `CObject`-abgeleitete Objekte aus dem Archiv.  
   
 ```  
@@ -637,7 +661,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&#26;](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="a-namesetobjectschemaa--carchivesetobjectschema"></a><a name="setobjectschema"></a>CArchive::SetObjectSchema  
+##  <a name="setobjectschema"></a>CArchive::SetObjectSchema  
  Rufen Sie diese Memberfunktion zum Festlegen der Objektschema in das Archiv zu gespeicherten `nSchema`.  
   
 ```  
@@ -656,7 +680,7 @@ void SetObjectSchema(UINT nSchema);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&#27;](../../mfc/codesnippet/cpp/carchive-class_19.cpp)]  
   
-##  <a name="a-namesetstoreparamsa--carchivesetstoreparams"></a><a name="setstoreparams"></a>CArchive::SetStoreParams  
+##  <a name="setstoreparams"></a>CArchive::SetStoreParams  
  Verwendung `SetStoreParams` beim Speichern eine große Anzahl von `CObject`-abgeleiteten Objekte in ein Archiv.  
   
 ```  
@@ -678,7 +702,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&#26;](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="a-namewritea--carchivewrite"></a><a name="write"></a>CArchive::Write  
+##  <a name="write"></a>CArchive::Write  
  Schreibt eine angegebene Anzahl von Bytes in das Archiv.  
   
 ```  
@@ -700,7 +724,7 @@ void Write(const void* lpBuf, INT nMax);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&23;](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]  
   
-##  <a name="a-namewriteclassa--carchivewriteclass"></a><a name="writeclass"></a>CArchive::WriteClass  
+##  <a name="writeclass"></a>CArchive::WriteClass  
  Verwendung `WriteClass` zum Speichern der Klasse Informationen zu Version und einer Basisklasse während der Serialisierung der abgeleiteten Klasse.  
   
 ```  
@@ -723,7 +747,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCSerialization&#28;](../../mfc/codesnippet/cpp/carchive-class_21.cpp)]  
   
-##  <a name="a-namewriteobjecta--carchivewriteobject"></a><a name="writeobject"></a>CArchive::WriteObject  
+##  <a name="writeobject"></a>CArchive::WriteObject  
  Speichert den angegebenen `CObject` in das Archiv.  
   
 ```  
@@ -749,7 +773,7 @@ void WriteObject(const CObject* pOb);
   
  [!code-cpp[NVC_MFCSerialization&#29;](../../mfc/codesnippet/cpp/carchive-class_22.cpp)]  
   
-##  <a name="a-namewritestringa--carchivewritestring"></a><a name="writestring"></a>CArchive::WriteString  
+##  <a name="writestring"></a>CArchive::WriteString  
  Verwenden Sie diese Memberfunktion zum Schreiben von Daten aus einem Puffer auf die Datei mit den `CArchive` Objekt.  
   
 ```  

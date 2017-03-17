@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherFileFind
+- AFXINET/CGopherFileFind
+- AFXINET/CGopherFileFind::CGopherFileFind
+- AFXINET/CGopherFileFind::FindFile
+- AFXINET/CGopherFileFind::FindNextFile
+- AFXINET/CGopherFileFind::GetCreationTime
+- AFXINET/CGopherFileFind::GetLastAccessTime
+- AFXINET/CGopherFileFind::GetLastWriteTime
+- AFXINET/CGopherFileFind::GetLength
+- AFXINET/CGopherFileFind::GetLocator
+- AFXINET/CGopherFileFind::GetScreenName
+- AFXINET/CGopherFileFind::IsDots
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +117,7 @@ class CGopherFileFind : public CFileFind
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxinet.h  
   
-##  <a name="a-namecgopherfilefinda--cgopherfilefindcgopherfilefind"></a><a name="cgopherfilefind"></a>CGopherFileFind::CGopherFileFind  
+##  <a name="cgopherfilefind"></a>CGopherFileFind::CGopherFileFind  
  Diese Member-Funktion wird aufgerufen, um das Erstellen einer `CGopherFileFind` Objekt.  
   
 ```  
@@ -125,7 +136,7 @@ explicit CGopherFileFind(
 ### <a name="remarks"></a>Hinweise  
  Der Standardwert für `dwContext` von MFC gesendet wird die `CGopherFileFind` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellten Objekt der `CGopherFileFind` Objekt. Bei der Erstellung einer `CGopherFileFind` -Objekt, Sie können die Standardeinstellung auf einen Wert Ihrer Wahl die Kontext-ID festgelegt. Die Kontext-ID wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) um den Status des Objekts bereitzustellen, mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) Weitere Informationen über den Kontextbezeichner.  
   
-##  <a name="a-namefindfilea--cgopherfilefindfindfile"></a><a name="findfile"></a>CGopherFileFind:: FindFile  
+##  <a name="findfile"></a>CGopherFileFind:: FindFile  
  Rufen Sie diese Memberfunktion, um einen Gopherdatei zu suchen.  
   
 ```  
@@ -164,7 +175,7 @@ virtual BOOL FindFile(
 ### <a name="remarks"></a>Hinweise  
  Nach dem Aufruf von **FindFile** um das erste Gopher-Objekt abzurufen, rufen Sie [FindNextFile](#findnextfile) nachfolgende Gopher-Dateien abzurufen.  
   
-##  <a name="a-namefindnextfilea--cgopherfilefindfindnextfile"></a><a name="findnextfile"></a>CGopherFileFind:: FindNextFile  
+##  <a name="findnextfile"></a>CGopherFileFind:: FindNextFile  
  Rufen Sie diese Memberfunktion zum Fortsetzen des Vorgangs einer Dateisuche begann mit einem Aufruf von [CGopherFileFind:: FindFile](#findfile).  
   
 ```  
@@ -174,7 +185,7 @@ virtual BOOL FindNextFile();
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn mehrere Dateien vorhanden sind;&0; (null), wenn die Datei im Verzeichnis der letzte ist oder ein Fehler aufgetreten ist. Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Wenn die Datei die letzte Datei im Verzeichnis ist, oder wenn keine übereinstimmenden Dateien gefunden werden können, die `GetLastError` Funktion gibt ERROR_NO_MORE_FILES zurück.  
   
-##  <a name="a-namegetcreationtimea--cgopherfilefindgetcreationtime"></a><a name="getcreationtime"></a>CGopherFileFind::GetCreationTime  
+##  <a name="getcreationtime"></a>CGopherFileFind::GetCreationTime  
  Ruft die Erstellungszeit für die aktuelle Datei ab.  
   
 ```  
@@ -198,7 +209,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 > [!NOTE]
 >  Nicht alle Dateisysteme verwenden die gleiche Semantik den Zeitstempel, der von dieser Funktion zurückgegebenen implementieren. Diese Funktion kann von anderen Stempel Zeitfunktionen zurückgegeben, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das Attribut Zeit beibehalten denselben Wert zurückgeben. Finden Sie unter der [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur Informationen über Zeitformate. Bei einigen Betriebssystemen ist die zurückgegebene Zeit in der Zone lokal auf dem Computer wurden, dass sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
   
-##  <a name="a-namegetlastaccesstimea--cgopherfilefindgetlastaccesstime"></a><a name="getlastaccesstime"></a>CGopherFileFind::GetLastAccessTime  
+##  <a name="getlastaccesstime"></a>CGopherFileFind::GetLastAccessTime  
  Ruft den Zeitpunkt des letzten Zugriffs auf die angegebene Datei.  
   
 ```  
@@ -222,7 +233,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 > [!NOTE]
 >  Nicht alle Dateisysteme verwenden die gleiche Semantik den Zeitstempel, der von dieser Funktion zurückgegebenen implementieren. Diese Funktion kann von anderen Stempel Zeitfunktionen zurückgegeben, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das Attribut Zeit beibehalten denselben Wert zurückgeben. Finden Sie unter der [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur Informationen über Zeitformate. Bei einigen Betriebssystemen ist die zurückgegebene Zeit in der Zone lokal auf dem Computer wurden, dass sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
   
-##  <a name="a-namegetlastwritetimea--cgopherfilefindgetlastwritetime"></a><a name="getlastwritetime"></a>CGopherFileFind::GetLastWriteTime  
+##  <a name="getlastwritetime"></a>CGopherFileFind::GetLastWriteTime  
  Ruft ab der letzten Ausführung der Datei geändert wurde.  
   
 ```  
@@ -246,7 +257,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 > [!NOTE]
 >  Nicht alle Dateisysteme verwenden die gleiche Semantik den Zeitstempel, der von dieser Funktion zurückgegebenen implementieren. Diese Funktion kann von anderen Stempel Zeitfunktionen zurückgegeben, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das Attribut Zeit beibehalten denselben Wert zurückgeben. Finden Sie unter der [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur Informationen über Zeitformate. Bei einigen Betriebssystemen ist die zurückgegebene Zeit in der Zone lokal auf dem Computer wurden, dass sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
   
-##  <a name="a-namegetlengtha--cgopherfilefindgetlength"></a><a name="getlength"></a>CGopherFileFind::GetLength  
+##  <a name="getlength"></a>CGopherFileFind::GetLength  
  Rufen Sie diese Memberfunktion, um die Länge in Bytes, die gefundene Datei abrufen.  
   
 ```  
@@ -265,7 +276,7 @@ virtual ULONGLONG GetLength() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) (Implementierung der Basisklasse).  
   
-##  <a name="a-namegetlocatora--cgopherfilefindgetlocator"></a><a name="getlocator"></a>CGopherFileFind:: GetLocator  
+##  <a name="getlocator"></a>CGopherFileFind:: GetLocator  
  Rufen Sie diese Memberfunktion zum Abrufen der [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) Objekt, [FindFile](#findfile) verwendet, um die Gopherdatei zu suchen.  
   
 ```  
@@ -275,7 +286,7 @@ CGopherLocator GetLocator() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CGopherLocator`-Objekt.  
   
-##  <a name="a-namegetscreennamea--cgopherfilefindgetscreenname"></a><a name="getscreenname"></a>CGopherFileFind::GetScreenName  
+##  <a name="getscreenname"></a>CGopherFileFind::GetScreenName  
  Rufen Sie diese Memberfunktion zum Abrufen des Namens des Bildschirms Gopher.  
   
 ```  
@@ -285,7 +296,7 @@ CString GetScreenName() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Name des Bildschirms Gopher.  
   
-##  <a name="a-nameisdotsa--cgopherfilefindisdots"></a><a name="isdots"></a>CGopherFileFind::IsDots  
+##  <a name="isdots"></a>CGopherFileFind::IsDots  
  Tests für die aktuellen Verzeichnis und übergeordneten Verzeichnis-Marker, beim Durchlaufen von Dateien.  
   
 ```  

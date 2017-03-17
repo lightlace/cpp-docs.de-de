@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
+- AFXODLGS/COleBusyDialog
+- AFXODLGS/COleBusyDialog::COleBusyDialog
+- AFXODLGS/COleBusyDialog::DoModal
+- AFXODLGS/COleBusyDialog::GetSelectionType
+- AFXODLGS/COleBusyDialog::m_bz
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +104,7 @@ class COleBusyDialog : public COleDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxodlgs.h  
   
-##  <a name="a-namecolebusydialoga--colebusydialogcolebusydialog"></a><a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
  Nur diese Funktion erstellt ein `COleBusyDialog` Objekt.  
   
 ```  
@@ -134,7 +139,7 @@ explicit COleBusyDialog(
   
  Weitere Informationen finden Sie unter der [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedomodala--colebusydialogdomodal"></a><a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>COleBusyDialog::DoModal  
  Rufen Sie diese Funktion, um das Dialogfeld OLE-Server ausgelastet "oder" Server antwortet nicht anzeigen.  
   
 ```  
@@ -155,7 +160,7 @@ virtual INT_PTR DoModal();
   
  Wenn `DoModal` gibt **IDOK**, Sie können andere Memberfunktionen aufrufen zum Abrufen der Einstellungen oder Informationen, die in das Dialogfeld vom Benutzer eingegeben wurde.  
   
-##  <a name="a-namegetselectiontypea--colebusydialoggetselectiontype"></a><a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
  Rufen Sie diese Funktion, um den Typ der Auswahl der Benutzer im Dialogfeld "Server ausgelastet" zu erhalten.  
   
 ```  
@@ -188,7 +193,7 @@ UINT GetSelectionType() const;
   
 - **COleBusyDialog::callUnblocked** Aufruf an den Server zu aktivieren, ist jetzt aufgehoben.  
   
-##  <a name="a-namembza--colebusydialogmbz"></a><a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>COleBusyDialog::m_bz  
  Struktur des Typs **OLEUIBUSY** zum Steuern des Verhaltens im Dialogfeld "Server ausgelastet" verwendet.  
   
 ```  

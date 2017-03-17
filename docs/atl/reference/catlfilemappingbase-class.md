@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlFileMappingBase
-- ATL::CAtlFileMappingBase
 - CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase::CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase::CopyFrom
+- ATLFILE/ATL::CAtlFileMappingBase::GetData
+- ATLFILE/ATL::CAtlFileMappingBase::GetHandle
+- ATLFILE/ATL::CAtlFileMappingBase::GetMappingSize
+- ATLFILE/ATL::CAtlFileMappingBase::MapFile
+- ATLFILE/ATL::CAtlFileMappingBase::MapSharedMem
+- ATLFILE/ATL::CAtlFileMappingBase::OpenMapping
+- ATLFILE/ATL::CAtlFileMappingBase::Unmap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +97,7 @@ class CAtlFileMappingBase
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlfile.h  
   
-##  <a name="a-namecatlfilemappingbasea--catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
+##  <a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
  Der Konstruktor.  
   
 ```
@@ -107,7 +115,7 @@ CAtlFileMappingBase() throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities&#71;](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
-##  <a name="a-namedtora--catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
+##  <a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
  Der Destruktor.  
   
 ```
@@ -117,7 +125,7 @@ CAtlFileMappingBase() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle von der-Klasse und Aufrufe reservierten Ressourcen frei der [CAtlFileMappingBase::Unmap](#unmap) Methode.  
   
-##  <a name="a-namecopyfroma--catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
+##  <a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
  Rufen Sie diese Methode zum Kopieren aus einem Dateizuordnungsobjekt.  
   
 ```
@@ -131,7 +139,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
   
-##  <a name="a-namegetdataa--catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFileMappingBase::GetData  
+##  <a name="getdata"></a>CAtlFileMappingBase::GetData  
  Rufen Sie diese Methode zum Abrufen der Daten aus einem Objekt Zuordnung.  
   
 ```
@@ -141,7 +149,7 @@ void* GetData() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Zeiger auf die Daten.  
   
-##  <a name="a-namegethandlea--catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
+##  <a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
  Rufen Sie diese Methode, um ein Handle für das Dateizuordnungsobjekt zurückzugeben.  
   
 ```
@@ -151,7 +159,7 @@ HANDLE GetHandle() throw ();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt ein Handle für das Dateizuordnungsobjekt zurück.  
   
-##  <a name="a-namegetmappingsizea--catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
+##  <a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
  Rufen Sie diese Methode, um die Zuordnung von einem Dateizuordnungsobjekt abzurufen.  
   
 ```
@@ -164,7 +172,7 @@ SIZE_T GetMappingSize() throw();
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="a-namemapfilea--catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFileMappingBase::MapFile  
+##  <a name="mapfile"></a>CAtlFileMappingBase::MapFile  
  Rufen Sie diese Methode zum Öffnen oder erstellen Sie eine Dateizuordnungsobjekt für die angegebene Datei.  
   
 ```
@@ -201,7 +209,7 @@ HRESULT MapFile(
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="a-namemapsharedmema--catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
+##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
  Rufen Sie diese Methode, um eine Dateizuordnungsobjekt erstellen, die Vollzugriff auf alle Prozesse ermöglicht.  
   
 ```
@@ -239,7 +247,7 @@ HRESULT MapSharedMem(
 ### <a name="remarks"></a>Hinweise  
  **MapShareMem** können Sie ein vorhandenes Dateizuordnungstyp Objekt erstellt, indem [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), um zwischen Prozessen gemeinsam genutzt werden.  
   
-##  <a name="a-nameopenmappinga--catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
+##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
  Rufen Sie diese Methode, um eine benannte Dateizuordnungsobjekt für die angegebene Datei zu öffnen.  
   
 ```
@@ -269,7 +277,7 @@ HRESULT OpenMapping(
 ### <a name="remarks"></a>Hinweise  
  In Debugbuilds wird ein Assertionsfehler auftreten, wenn Eingabeparameter ungültig sind.  
   
-##  <a name="a-nameoperatoreqa--catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFileMappingBase::operator =  
+##  <a name="operator_eq"></a>CAtlFileMappingBase::operator =  
  Legt den aktuellen Dateizuordnungsobjekt auf ein anderes Dateizuordnungsobjekts fest.  
   
 ```
@@ -283,7 +291,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Verweis auf das aktuelle Objekt zurück.  
   
-##  <a name="a-nameunmapa--catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFileMappingBase::Unmap  
+##  <a name="unmap"></a>CAtlFileMappingBase::Unmap  
  Rufen Sie diese Methode, um eine Dateizuordnungsobjekt aufheben.  
   
 ```

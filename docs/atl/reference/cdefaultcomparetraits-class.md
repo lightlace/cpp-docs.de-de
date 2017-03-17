@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CDefaultCompareTraits<T>
-- ATL::CDefaultCompareTraits
-- ATL.CDefaultCompareTraits
-- ATL::CDefaultCompareTraits<T>
 - CDefaultCompareTraits
+- ATLCOLL/ATL::CDefaultCompareTraits
+- ATLCOLL/ATL::CDefaultCompareTraits::CompareElements
+- ATLCOLL/ATL::CDefaultCompareTraits::CompareElementsOrdered
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +73,7 @@ class CDefaultCompareTraits
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cdefaultcomparetraitscompareelements"></a><a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
+##  <a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
  Rufen Sie diese Funktion, um zwei Elemente auf Gleichheit verglichen werden soll.  
   
 ```
@@ -94,7 +93,7 @@ static bool CompareElements(const T& element1, const T& element2);
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung dieser Funktion wird die Gleichheit ( `==`) Operator. Für Objekte als einfache Datentypen kann diese Funktion außer Kraft gesetzt werden müssen.  
   
-##  <a name="a-namecompareelementsordereda--cdefaultcomparetraitscompareelementsordered"></a><a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
  Rufen Sie diese Funktion, um das Element größer und kleiner zu bestimmen.  
   
 ```

@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPrintDialogEx
+- AFXDLGS/CPrintDialogEx
+- AFXDLGS/CPrintDialogEx::CPrintDialogEx
+- AFXDLGS/CPrintDialogEx::CreatePrinterDC
+- AFXDLGS/CPrintDialogEx::DoModal
+- AFXDLGS/CPrintDialogEx::GetCopies
+- AFXDLGS/CPrintDialogEx::GetDefaults
+- AFXDLGS/CPrintDialogEx::GetDeviceName
+- AFXDLGS/CPrintDialogEx::GetDevMode
+- AFXDLGS/CPrintDialogEx::GetDriverName
+- AFXDLGS/CPrintDialogEx::GetPortName
+- AFXDLGS/CPrintDialogEx::GetPrinterDC
+- AFXDLGS/CPrintDialogEx::PrintAll
+- AFXDLGS/CPrintDialogEx::PrintCollate
+- AFXDLGS/CPrintDialogEx::PrintCurrentPage
+- AFXDLGS/CPrintDialogEx::PrintRange
+- AFXDLGS/CPrintDialogEx::PrintSelection
+- AFXDLGS/CPrintDialogEx::m_pdex
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +139,7 @@ class CPrintDialogEx : public CCommonDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdlgs.h  
   
-##  <a name="a-namecprintdialogexa--cprintdialogexcprintdialogex"></a><a name="cprintdialogex"></a>CPrintDialogEx::CPrintDialogEx  
+##  <a name="cprintdialogex"></a>CPrintDialogEx::CPrintDialogEx  
  Erstellt eine Windows 2000-druckeigenschaftenblatt.  
   
 ```  
@@ -141,7 +158,7 @@ CPrintDialogEx(
 ### <a name="remarks"></a>Hinweise  
  Diese Member-Funktion erstellt nur das Objekt. Verwenden der `DoModal` Member-Funktion, um das Dialogfeld anzuzeigen.  
   
-##  <a name="a-namecreateprinterdca--cprintdialogexcreateprinterdc"></a><a name="createprinterdc"></a>CPrintDialogEx::CreatePrinterDC  
+##  <a name="createprinterdc"></a>CPrintDialogEx::CreatePrinterDC  
  Erstellt einen Drucker-Gerätekontext (DC) aus der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen.  
   
 ```  
@@ -156,7 +173,7 @@ HDC CreatePrinterDC();
   
  Dieser Domänencontroller wird als der aktuelle Drucker DC und andere zuvor abgerufene Drucker DCs müssen gelöscht werden. Diese Funktion kann aufgerufen werden, und der resultierende DC verwendet, ohne jemals das Dialogfeld Drucken.  
   
-##  <a name="a-namedomodala--cprintdialogexdomodal"></a><a name="domodal"></a>CPrintDialogEx::DoModal  
+##  <a name="domodal"></a>CPrintDialogEx::DoModal  
  Mit dieser Funktion können Sie das Eigenschaftenfenster von Windows 2000 für allgemeine Drucken anzuzeigen und dem Benutzer ermöglichen, wählen Sie verschiedene Druckoptionen wie z. B. die Anzahl der Kopien, Bereich, und gibt an, ob die Kopien sortiert werden sollen.  
   
 ```  
@@ -173,7 +190,7 @@ virtual INT_PTR DoModal();
   
  Wenn die **PD_RETURNDC** Flag wird verwendet, beim Aufrufen von `DoModal`, ein Drucker-Gerätekontext zurückgegeben werden die **hDC** Mitglied [M_pdex](#m_pdex). Dieser Domänencontroller muss mit einem Aufruf von freigegeben werden [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) durch den Aufrufer der `CPrintDialogEx`.  
   
-##  <a name="a-namegetcopiesa--cprintdialogexgetcopies"></a><a name="getcopies"></a>CPrintDialogEx::GetCopies  
+##  <a name="getcopies"></a>CPrintDialogEx::GetCopies  
  Mit dieser Funktion wird nach dem Aufruf von `DoModal` zum Abrufen der Anzahl der Kopien, die angefordert.  
   
 ```  
@@ -183,7 +200,7 @@ int GetCopies() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Kopien, die angefordert.  
   
-##  <a name="a-namegetdefaultsa--cprintdialogexgetdefaults"></a><a name="getdefaults"></a>CPrintDialogEx::GetDefaults  
+##  <a name="getdefaults"></a>CPrintDialogEx::GetDefaults  
  Rufen Sie diese Funktion, um die Standardeinstellungen des des Standarddruckers abzurufen, ohne dass ein Dialogfeld angezeigt.  
   
 ```  
@@ -200,7 +217,7 @@ BOOL GetDefaults();
   
  Wenn die **PD_RETURNDC** Flag festgelegt ist, diese Funktion nicht nur zurück **hDevNames** und **hDevMode-Feld** (befindet sich im **m_pdex.hDevNames** und **m_pdex.hDevMode**) an den Aufrufer zurück und auch einen Drucker-DC in **m_pdex.hDC**. Es liegt in der Verantwortung des Aufrufers, löschen den Drucker DC und rufen Sie die Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) Funktion auf die Handles Sie abschließend mit der `CPrintDialogEx` Objekt.  
   
-##  <a name="a-namegetdevicenamea--cprintdialogexgetdevicename"></a><a name="getdevicename"></a>CPrintDialogEx::GetDeviceName  
+##  <a name="getdevicename"></a>CPrintDialogEx::GetDeviceName  
  Mit dieser Funktion wird nach dem Aufruf von [DoModal](#domodal) zum Abrufen des Namens des ausgewählten Druckers oder nach dem Aufruf von [GetDefaults](#getdefaults) zum Abrufen des Namens des Standarddruckers.  
   
 ```  
@@ -213,7 +230,7 @@ CString GetDeviceName() const;
 ### <a name="remarks"></a>Hinweise  
  Ein Zeiger auf die `CString` zurückgegebenes Objekt `GetDeviceName` als Wert des `lpszDeviceName` in einem Aufruf von [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
-##  <a name="a-namegetdevmodea--cprintdialogexgetdevmode"></a><a name="getdevmode"></a>CPrintDialogEx::GetDevMode  
+##  <a name="getdevmode"></a>CPrintDialogEx::GetDevMode  
  Mit dieser Funktion wird nach dem Aufruf von [DoModal](#domodal) oder [GetDefaults](#getdefaults) zum Abrufen von Informationen über das Druckgerät.  
   
 ```  
@@ -223,7 +240,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Datenstruktur, die Informationen über die Initialisierung für Grafikgeräte und ein Druckertreiber-Umgebung enthält. Entsperren Sie den Arbeitsspeicher, die von dieser Struktur mit dem Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) -Funktion, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdrivernamea--cprintdialogexgetdrivername"></a><a name="getdrivername"></a>CPrintDialogEx::GetDriverName  
+##  <a name="getdrivername"></a>CPrintDialogEx::GetDriverName  
  Mit dieser Funktion wird nach dem Aufruf von [DoModal](#domodal) oder [GetDefaults](#getdefaults) zum Abrufen des Namens des Gerätetreibers systemdefinierte Drucker.  
   
 ```  
@@ -236,7 +253,7 @@ CString GetDriverName() const;
 ### <a name="remarks"></a>Hinweise  
  Ein Zeiger auf die `CString` zurückgegebenes Objekt `GetDriverName` als Wert des `lpszDriverName` in einem Aufruf von [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
-##  <a name="a-namegetportnamea--cprintdialogexgetportname"></a><a name="getportname"></a>CPrintDialogEx::GetPortName  
+##  <a name="getportname"></a>CPrintDialogEx::GetPortName  
  Mit dieser Funktion wird nach dem Aufruf von [DoModal](#domodal) oder [GetDefaults](#getdefaults) zum Abrufen des Namens des derzeit ausgewählten Ports.  
   
 ```  
@@ -246,7 +263,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Name des aktuell ausgewählten Ports.  
   
-##  <a name="a-namegetprinterdca--cprintdialogexgetprinterdc"></a><a name="getprinterdc"></a>CPrintDialogEx::GetPrinterDC  
+##  <a name="getprinterdc"></a>CPrintDialogEx::GetPrinterDC  
  Gibt ein Handle für den Drucker-Gerätekontext zurück.  
   
 ```  
@@ -259,7 +276,7 @@ HDC GetPrinterDC() const;
 ### <a name="remarks"></a>Hinweise  
  Müssen Sie die Fenster aufrufen [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) Funktion, um den Gerätekontext zu löschen, wenn Sie fertig sind verwendet wird.  
   
-##  <a name="a-namempdexa--cprintdialogexmpdex"></a><a name="m_pdex"></a>CPrintDialogEx::m_pdex  
+##  <a name="m_pdex"></a>CPrintDialogEx::m_pdex  
  Eine PRINTDLGEX-Struktur, deren Mitglieder die Merkmale des Dialog-Objekts gespeichert.  
   
 ```  
@@ -271,7 +288,7 @@ PRINTDLGEX m_pdex;
   
  Wenn Sie ändern die `m_pdex` Datenmember direkt Standardverhalten überschreiben.  
   
-##  <a name="a-nameprintalla--cprintdialogexprintall"></a><a name="printall"></a>CPrintDialogEx::PrintAll  
+##  <a name="printall"></a>CPrintDialogEx::PrintAll  
  Mit dieser Funktion wird nach dem Aufruf von `DoModal` zu bestimmen, ob alle Seiten im Dokument zu drucken.  
   
 ```  
@@ -281,7 +298,7 @@ BOOL PrintAll() const;
 ### <a name="return-value"></a>Rückgabewert  
  **True,** Wenn alle Seiten im Dokument gedruckt, andernfalls **FALSE**.  
   
-##  <a name="a-nameprintcollatea--cprintdialogexprintcollate"></a><a name="printcollate"></a>CPrintDialogEx::PrintCollate  
+##  <a name="printcollate"></a>CPrintDialogEx::PrintCollate  
  Mit dieser Funktion wird nach dem Aufruf von `DoModal` zu bestimmen, ob der Drucker alle gedruckte Exemplare des Dokuments zu sortieren soll.  
   
 ```  
@@ -291,7 +308,7 @@ BOOL PrintCollate() const;
 ### <a name="return-value"></a>Rückgabewert  
  **True,** klickt der Benutzer dieses Kontrollkästchen im Dialogfeld; andernfalls **FALSE**.  
   
-##  <a name="a-nameprintcurrentpagea--cprintdialogexprintcurrentpage"></a><a name="printcurrentpage"></a>CPrintDialogEx::PrintCurrentPage  
+##  <a name="printcurrentpage"></a>CPrintDialogEx::PrintCurrentPage  
  Mit dieser Funktion wird nach dem Aufruf von `DoModal` zu bestimmen, ob die aktuelle Seite im Dokument zu drucken.  
   
 ```  
@@ -301,7 +318,7 @@ BOOL PrintCurrentPage() const;
 ### <a name="return-value"></a>Rückgabewert  
  **True,** Wenn **aktuelle Seite drucken** im Dialogfeld ausgewählt ist andernfalls **FALSE**.  
   
-##  <a name="a-nameprintrangea--cprintdialogexprintrange"></a><a name="printrange"></a>CPrintDialogEx::PrintRange  
+##  <a name="printrange"></a>CPrintDialogEx::PrintRange  
  Mit dieser Funktion wird nach dem Aufruf von `DoModal` zu bestimmen, ob nur einen Bereich von Seiten im Dokument zu drucken.  
   
 ```  
@@ -314,7 +331,7 @@ BOOL PrintRange() const;
 ### <a name="remarks"></a>Hinweise  
  Der angegebenen Seitenbereiche können bestimmt werden, von [M_pdex](#m_pdex) (finden Sie unter **nPageRanges**, **nMaxPageRanges**, und **LpPageRanges** in der [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]).  
   
-##  <a name="a-nameprintselectiona--cprintdialogexprintselection"></a><a name="printselection"></a>CPrintDialogEx::PrintSelection  
+##  <a name="printselection"></a>CPrintDialogEx::PrintSelection  
  Mit dieser Funktion wird nach dem Aufruf von `DoModal` zu bestimmen, ob nur die ausgewählten Elemente zu drucken.  
   
 ```  

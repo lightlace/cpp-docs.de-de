@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COlePropertiesDialog
+- AFXODLGS/COlePropertiesDialog
+- AFXODLGS/COlePropertiesDialog::COlePropertiesDialog
+- AFXODLGS/COlePropertiesDialog::DoModal
+- AFXODLGS/COlePropertiesDialog::OnApplyScale
+- AFXODLGS/COlePropertiesDialog::m_gp
+- AFXODLGS/COlePropertiesDialog::m_lp
+- AFXODLGS/COlePropertiesDialog::m_op
+- AFXODLGS/COlePropertiesDialog::m_psh
+- AFXODLGS/COlePropertiesDialog::m_vp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +114,7 @@ class COlePropertiesDialog : public COleDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxodlgs.h  
   
-##  <a name="a-namecolepropertiesdialoga--colepropertiesdialogcolepropertiesdialog"></a><a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog  
+##  <a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog  
  Erstellt ein `COlePropertiesDialog`-Objekt.  
   
 ```  
@@ -148,7 +157,7 @@ COlePropertiesDialog(
   
  Neben den standardmäßig bereitgestellten Seiten hinzufügen, ändern die [M_psh](#m_psh) Membervariable vor dem Beenden des Konstruktors der Ihre `COlePropertiesDialog`-abgeleiteten Klasse. Dies ist eine erweiterte Implementierung von der `COlePropertiesDialog` Konstruktor.  
   
-##  <a name="a-namedomodala--colepropertiesdialogdomodal"></a><a name="domodal"></a>COlePropertiesDialog::DoModal  
+##  <a name="domodal"></a>COlePropertiesDialog::DoModal  
  Rufen Sie diese Memberfunktion zum Windows-das Dialogfeld Allgemeine Eigenschaften für das OLE-Objekts anzuzeigen und dem Benutzer ermöglichen, anzeigen und/oder ändern die verschiedenen Eigenschaften des Dokumentelements.  
   
 ```  
@@ -160,7 +169,7 @@ virtual INT_PTR DoModal();
   
  Wenn **IDCANCEL** zurückgegeben wird, rufen Sie die Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) Funktion, um zu bestimmen, ob ein Fehler aufgetreten ist.  
   
-##  <a name="a-namemgpa--colepropertiesdialogmgp"></a><a name="m_gp"></a>COlePropertiesDialog::m_gp  
+##  <a name="m_gp"></a>COlePropertiesDialog::m_gp  
  Eine Struktur vom Typ [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), mit die Seite Allgemein im Dialogfeld Eigenschaften für das OLE-Objekt zu initialisieren.  
   
 ```  
@@ -172,7 +181,7 @@ OLEUIGNRLPROPS m_gp;
   
  Weitere Informationen zu den **OLEUIGNRLPROPS** -Struktur, finden Sie unter der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemlpa--colepropertiesdialogmlp"></a><a name="m_lp"></a>COlePropertiesDialog::m_lp  
+##  <a name="m_lp"></a>COlePropertiesDialog::m_lp  
  Eine Struktur vom Typ [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), mit denen die Link-Seite des Dialogfelds Eigenschaften für das OLE-Objekt zu initialisieren.  
   
 ```  
@@ -184,7 +193,7 @@ OLEUILINKPROPS m_lp;
   
  Weitere Informationen zu den **OLEUILINKPROPS** -Struktur, finden Sie unter der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemopa--colepropertiesdialogmop"></a><a name="m_op"></a>COlePropertiesDialog::m_op  
+##  <a name="m_op"></a>COlePropertiesDialog::m_op  
  Eine Struktur vom Typ [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199)verwendet, um das Dialogfeld Allgemeine Eigenschaften für das OLE-Objekts initialisieren.  
   
 ```  
@@ -196,7 +205,7 @@ OLEUIOBJECTPROPS m_op;
   
  Weitere Informationen finden Sie unter der **OLEUIOBJECTPROPS** und [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) Strukturen in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namempsha--colepropertiesdialogmpsh"></a><a name="m_psh"></a>COlePropertiesDialog::m_psh  
+##  <a name="m_psh"></a>COlePropertiesDialog::m_psh  
  Eine Struktur vom Typ [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), zu speichern, deren Mitglieder die Merkmale des Dialog-Objekts.  
   
 ```  
@@ -210,7 +219,7 @@ PROPSHEETHEADER m_psh;
   
  Weitere Informationen zu den **PROPSHEETHEADER** -Struktur, finden Sie unter der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemvpa--colepropertiesdialogmvp"></a><a name="m_vp"></a>COlePropertiesDialog::m_vp  
+##  <a name="m_vp"></a>COlePropertiesDialog::m_vp  
  Eine Struktur vom Typ [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751)verwendet, um die Seite Sicht im Dialogfeld Eigenschaften für das OLE-Objekt zu initialisieren.  
   
 ```  
@@ -222,7 +231,7 @@ OLEUIVIEWPROPS m_vp;
   
  Weitere Informationen zu den **OLEUIVIEWPROPS** -Struktur, finden Sie unter der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonapplyscalea--colepropertiesdialogonapplyscale"></a><a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale  
+##  <a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale  
  Wird vom Framework aufgerufen, wenn der Skalierungswert geändert hat und OK oder übernehmen ausgewählt wurde.  
   
 ```  

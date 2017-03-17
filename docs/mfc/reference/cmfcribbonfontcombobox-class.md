@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonFontComboBox
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::CMFCRibbonFontComboBox
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::BuildFonts
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetCharSet
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetFontDesc
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetFontType
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetPitchAndFamily
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::RebuildFonts
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::SetFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +104,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxRibbonComboBox.h  
   
-##  <a name="a-namebuildfontsa--cmfcribbonfontcomboboxbuildfonts"></a><a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
+##  <a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
  Füllt das Kombinationsfeld auf der Multifunktionsleiste mit Schriftarten.  
   
 ```  
@@ -115,7 +124,7 @@ void BuildFonts(
  [in] `nPitchAndFamily`  
  Gibt die Zeichenbreite und Familie Schriftarten hinzufügen.  
   
-##  <a name="a-namecmfcribbonfontcomboboxa--cmfcribbonfontcomboboxcmfcribbonfontcombobox"></a><a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
+##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Erstellt und initialisiert ein [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) Objekt.  
   
 ```  
@@ -148,7 +157,7 @@ CMFCRibbonFontComboBox(
   
  Weitere Informationen zu gültigen Zeichensätzen, die zugewiesen werden können `nCharSet,` und gültigen Werten, die zugewiesen werden können `nPitchAndFamily`, finden Sie unter ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) in der Windows SDK-Dokumentation.  
   
-##  <a name="a-namegetfontdesca--cmfcribbonfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -162,7 +171,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namerebuildfontsa--cmfcribbonfontcomboboxrebuildfonts"></a><a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
+##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
  Füllt das Kombinationsfeld auf der Multifunktionsleiste mit Schriftarten eines zuvor angegebenen Schriftart, Zeichensatz und Tonhöhe und Familie.  
   
 ```  
@@ -172,7 +181,7 @@ void RebuildFonts();
 ### <a name="remarks"></a>Hinweise  
  Sie können die Schriftart, den Zeichensatz angeben und die Zeichenbreite und Familie Schriftarten hinzufügen in das Menüband-Kombinationsfeld Schriftart im Dialogfeld die [Konstruktor](#cmfcribbonfontcombobox) für diese Klasse oder durch Aufrufen von [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
   
-##  <a name="a-namesetfonta--cmfcribbonfontcomboboxsetfont"></a><a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
+##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
  Wählt die angegebene Schriftart im Kombinationsfeld aus.  
   
 ```  
@@ -197,7 +206,7 @@ BOOL SetFont(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetcharseta--cmfcribbonfontcomboboxgetcharset"></a><a name="getcharset"></a>CMFCRibbonFontComboBox::GetCharSet  
+##  <a name="getcharset"></a>CMFCRibbonFontComboBox::GetCharSet  
  Gibt den angegebenen Zeichensatz zurück.  
   
 ```  
@@ -209,7 +218,7 @@ BYTE GetCharSet() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetfonttypea--cmfcribbonfontcomboboxgetfonttype"></a><a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType  
+##  <a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType  
  Gibt zurück, welche Schriftarttypen im Kombinationsfeld angezeigt werden. Gültige Optionen sind DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE oder jede bitweise Kombination davon.  
   
 ```  
@@ -221,7 +230,7 @@ int GetFontType() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetpitchandfamilya--cmfcribbonfontcomboboxgetpitchandfamily"></a><a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily  
+##  <a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily  
  Gibt die Schriftbreite und Schriftfamilie der Schriftarten zurück, die im Kombinationsfeld angezeigt werden.  
   
 ```  

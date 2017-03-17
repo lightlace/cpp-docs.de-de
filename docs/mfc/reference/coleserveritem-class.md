@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleServerItem
+- AFXOLE/COleServerItem
+- AFXOLE/COleServerItem::COleServerItem
+- AFXOLE/COleServerItem::AddOtherClipboardData
+- AFXOLE/COleServerItem::CopyToClipboard
+- AFXOLE/COleServerItem::DoDragDrop
+- AFXOLE/COleServerItem::GetClipboardData
+- AFXOLE/COleServerItem::GetDocument
+- AFXOLE/COleServerItem::GetEmbedSourceData
+- AFXOLE/COleServerItem::GetItemName
+- AFXOLE/COleServerItem::GetLinkSourceData
+- AFXOLE/COleServerItem::GetObjectDescriptorData
+- AFXOLE/COleServerItem::IsConnected
+- AFXOLE/COleServerItem::IsLinkedItem
+- AFXOLE/COleServerItem::NotifyChanged
+- AFXOLE/COleServerItem::OnDoVerb
+- AFXOLE/COleServerItem::OnDraw
+- AFXOLE/COleServerItem::OnDrawEx
+- AFXOLE/COleServerItem::OnGetClipboardData
+- AFXOLE/COleServerItem::OnGetExtent
+- AFXOLE/COleServerItem::OnInitFromData
+- AFXOLE/COleServerItem::OnQueryUpdateItems
+- AFXOLE/COleServerItem::OnRenderData
+- AFXOLE/COleServerItem::OnRenderFileData
+- AFXOLE/COleServerItem::OnRenderGlobalData
+- AFXOLE/COleServerItem::OnSetColorScheme
+- AFXOLE/COleServerItem::OnSetData
+- AFXOLE/COleServerItem::OnSetExtent
+- AFXOLE/COleServerItem::OnUpdate
+- AFXOLE/COleServerItem::OnUpdateItems
+- AFXOLE/COleServerItem::SetItemName
+- AFXOLE/COleServerItem::GetDataSource
+- AFXOLE/COleServerItem::OnHide
+- AFXOLE/COleServerItem::OnOpen
+- AFXOLE/COleServerItem::OnShow
+- AFXOLE/COleServerItem::m_sizeExtent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -129,7 +164,7 @@ class COleServerItem : public CDocItem
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="a-nameaddotherclipboarddataa--coleserveritemaddotherclipboarddata"></a><a name="addotherclipboarddata"></a>COleServerItem::AddOtherClipboardData  
+##  <a name="addotherclipboarddata"></a>COleServerItem::AddOtherClipboardData  
  Mit dieser Funktion können Sie die Präsentation und Konvertierung Formate für das OLE-Element in der angegebenen platzieren `COleDataSource` Objekt.  
   
 ```  
@@ -143,7 +178,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ### <a name="remarks"></a>Hinweise  
  Sie implementiert haben müssen die [OnDraw](#ondraw) Memberfunktion, die das Presentation-Format (ein Metadateibild) für das Element bereitzustellen. Unterstützung von anderen Konvertierungsformaten, registrieren Sie sie mithilfe der [COleDataSource](../../mfc/reference/coledatasource-class.md) zurückgegebene Objekt [GetDataSource](#getdatasource) und überschreiben die [OnRenderData](#onrenderdata) Memberfunktion, die Daten in den Formaten bereitstellen, unterstützen soll.  
   
-##  <a name="a-namecoleserveritema--coleserveritemcoleserveritem"></a><a name="coleserveritem"></a>COleServerItem::COleServerItem  
+##  <a name="coleserveritem"></a>COleServerItem::COleServerItem  
  Erstellt ein `COleServerItem` -Objekt und fügt dieses der Serverdokument Auflistung von Dokumentelementen.  
   
 ```  
@@ -159,7 +194,7 @@ COleServerItem(
  `bAutoDelete`  
  Ein Flag, der angibt, ob das Objekt gelöscht werden kann, wenn ein Link freigegeben wird. Legen Sie den **FALSE** Wenn das `COleServerItem` Objekt ist ein wesentlicher Bestandteil Ihres Dokuments-Daten, die Sie löschen müssen. Legen Sie den **TRUE** Wenn das Objekt eine sekundäre Struktur verwendet, um einen Bereich in die Daten des Dokuments zu identifizieren, die vom Framework gelöscht werden können.  
   
-##  <a name="a-namecopytoclipboarda--coleserveritemcopytoclipboard"></a><a name="copytoclipboard"></a>COleServerItem::CopyToClipboard  
+##  <a name="copytoclipboard"></a>COleServerItem::CopyToClipboard  
  Rufen Sie diese Funktion, um das OLE-Element in die Zwischenablage zu kopieren.  
   
 ```  
@@ -173,7 +208,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ### <a name="remarks"></a>Hinweise  
  Verwendet die Funktion die [OnGetClipboardData](#ongetclipboarddata) Member-Funktion zum Erstellen einer [COleDataSource](../../mfc/reference/coledatasource-class.md) Objekt, das das OLE-Element-Daten in unterstützten Formaten enthält. Die Funktion setzt dann die `COleDataSource` Objekt in der Zwischenablage mit der [COleDataSource](../../mfc/reference/coledatasource-class.md#setclipboard) Funktion. Die `COleDataSource` Objekt enthält die Daten des systemeigenen und seine Darstellung im `CF_METAFILEPICT` -Format als auch Daten in alle Konvertierungsformaten, die Sie unterstützen möchten. Sie müssen implementiert haben [Serialize](../../mfc/reference/cobject-class.md#serialize) und [OnDraw](#ondraw) für diese Memberfunktion funktioniert.  
   
-##  <a name="a-namedodragdropa--coleserveritemdodragdrop"></a><a name="dodragdrop"></a>COleServerItem:: DoDragDrop  
+##  <a name="dodragdrop"></a>COleServerItem:: DoDragDrop  
  Rufen Sie die `DoDragDrop` Memberfunktion zum Ausführen einer Drag & Drop-Operation.  
   
 ```  
@@ -217,7 +252,7 @@ DROPEFFECT DoDragDrop(
   
  Für Weitere Informationen ziehen ist Verzögerung Informationen in der Registrierung gespeicherten oder. INI-Datei finden Sie unter [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetclipboarddataa--coleserveritemgetclipboarddata"></a><a name="getclipboarddata"></a>COleServerItem::GetClipboardData  
+##  <a name="getclipboarddata"></a>COleServerItem::GetClipboardData  
  Mit dieser Funktion können Sie den angegebenen füllen [COleDataSource](../../mfc/reference/coledatasource-class.md) -Objekt mit allen Daten, die in die Zwischenablage kopiert werden würde, wenn Sie aufgerufen [CopyToClipboard](#copytoclipboard) (die gleichen Daten würden auch übertragen werden, wenn Sie aufgerufen [DoDragDrop](#dodragdrop)).  
   
 ```  
@@ -246,7 +281,7 @@ void GetClipboardData(
   
  Überschreiben Sie diese Funktion, wenn Formaten sollen eine `COleDataSource` Objekt vor oder nach diesen Formaten, die vom `CopyToClipboard`.  
   
-##  <a name="a-namegetdatasourcea--coleserveritemgetdatasource"></a><a name="getdatasource"></a>COleServerItem::GetDataSource  
+##  <a name="getdatasource"></a>COleServerItem::GetDataSource  
  Rufen Sie diese Funktion zum Abrufen der [COleDataSource](../../mfc/reference/coledatasource-class.md) Objekt verwendet, um die konvertierungsformate zu speichern, die die Server-Anwendung unterstützt.  
   
 ```  
@@ -259,7 +294,7 @@ COleDataSource* GetDataSource();
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie die Server-Anwendung Daten in einer Vielzahl von Formaten während der Datenübertragung Vorgänge anbieten möchten, registrieren Sie diesen Formaten mit den `COleDataSource` von dieser Funktion zurückgegebene Objekt. Angenommen, Sie möchten eine **CF_TEXT** Darstellung des OLE-Elements für die Zwischenablage oder Drag & Drop-Vorgänge, registrieren Sie das Format mit der `COleDataSource` Objekt diese Funktion gibt zurück, und klicken Sie dann überschreiben die **OnRenderXxxData** Memberfunktion, die die Daten.  
   
-##  <a name="a-namegetdocumenta--coleserveritemgetdocument"></a><a name="getdocument"></a>COleServerItem::GetDocument  
+##  <a name="getdocument"></a>COleServerItem::GetDocument  
  Rufen Sie diese Funktion, um einen Zeiger auf das Dokument, das das Element enthält.  
   
 ```  
@@ -272,7 +307,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>Hinweise  
  Dies ermöglicht den Zugriff auf die Server-Dokument, das Sie als Argument übergeben der `COleServerItem` Konstruktor.  
   
-##  <a name="a-namegetembedsourcedataa--coleserveritemgetembedsourcedata"></a><a name="getembedsourcedata"></a>COleServerItem::GetEmbedSourceData  
+##  <a name="getembedsourcedata"></a>COleServerItem::GetEmbedSourceData  
  Rufen Sie diese Funktion zum Abrufen der **CF_EMBEDSOURCE** Daten für ein OLE-Element.  
   
 ```  
@@ -290,7 +325,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
   
  Weitere Informationen finden Sie unter [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetitemnamea--coleserveritemgetitemname"></a><a name="getitemname"></a>COleServerItem::GetItemName  
+##  <a name="getitemname"></a>COleServerItem::GetItemName  
  Rufen Sie diese Funktion zum Abrufen des Namens des Elements.  
   
 ```  
@@ -303,7 +338,7 @@ const CString& GetItemName() const;
 ### <a name="remarks"></a>Hinweise  
  In der Regel rufen Sie diese Funktion nur für verknüpfte Elemente.  
   
-##  <a name="a-namegetlinksourcedataa--coleserveritemgetlinksourcedata"></a><a name="getlinksourcedata"></a>COleServerItem::GetLinkSourceData  
+##  <a name="getlinksourcedata"></a>COleServerItem::GetLinkSourceData  
  Rufen Sie diese Funktion zum Abrufen der `CF_LINKSOURCE` Daten für ein OLE-Element.  
   
 ```  
@@ -324,7 +359,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
  Weitere Informationen finden Sie unter [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetobjectdescriptordataa--coleserveritemgetobjectdescriptordata"></a><a name="getobjectdescriptordata"></a>COleServerItem::GetObjectDescriptorData  
+##  <a name="getobjectdescriptordata"></a>COleServerItem::GetObjectDescriptorData  
  Rufen Sie diese Funktion zum Abrufen der **CF_OBJECTDESCRIPTOR** Daten für ein OLE-Element.  
   
 ```  
@@ -349,7 +384,7 @@ void GetObjectDescriptorData(
   
  Weitere Informationen finden Sie unter [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisconnecteda--coleserveritemisconnected"></a><a name="isconnected"></a>COleServerItem::IsConnected  
+##  <a name="isconnected"></a>COleServerItem::IsConnected  
  Rufen Sie diese Funktion, um festzustellen, ob das OLE-Element verbunden ist.  
   
 ```  
@@ -362,7 +397,7 @@ BOOL IsConnected() const;
 ### <a name="remarks"></a>Hinweise  
  Ein OLE-Element gilt als verbunden, wenn eine oder mehrere Container Verweise auf das Element. Ein Element verbunden ist, wenn der Verweiszähler größer als 0 ist oder ein eingebettetes Element ist.  
   
-##  <a name="a-nameislinkeditema--coleserveritemislinkeditem"></a><a name="islinkeditem"></a>COleServerItem::IsLinkedItem  
+##  <a name="islinkeditem"></a>COleServerItem::IsLinkedItem  
  Rufen Sie diese Funktion, um festzustellen, ob das OLE-Element ein verknüpftes Element ist.  
   
 ```  
@@ -377,7 +412,7 @@ BOOL IsLinkedItem() const;
   
  Es ist üblich, die gleiche Klasse für verknüpfte und eingebettete Elemente verwenden. `IsLinkedItem`können Sie verknüpfte Elemente verhalten sich anders als eingebettete Elemente stellen zwar oft der Code.  
   
-##  <a name="a-namemsizeextenta--coleserveritemmsizeextent"></a><a name="m_sizeextent"></a>COleServerItem::m_sizeExtent  
+##  <a name="m_sizeextent"></a>COleServerItem::m_sizeExtent  
  Dieses Element weist den Server wie viel des Objekts im Containerdokument sichtbar ist.  
   
 ```  
@@ -387,7 +422,7 @@ CSize m_sizeExtent;
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung des [OnSetExtent](#onsetextent) legt dieses Element fest.  
   
-##  <a name="a-namenotifychangeda--coleserveritemnotifychanged"></a><a name="notifychanged"></a>COleServerItem::NotifyChanged  
+##  <a name="notifychanged"></a>COleServerItem::NotifyChanged  
  Rufen Sie diese Funktion aus, nachdem das verknüpfte Element geändert wurde.  
   
 ```  
@@ -409,7 +444,7 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Containerelement mit automatischen Verknüpfung mit dem Dokument verknüpft ist, wird das Element die Änderungen entsprechend aktualisiert. In Container-Anwendung mithilfe der Microsoft Foundation Class-Bibliothek geschrieben [COleClientItem:: OnChange](../../mfc/reference/coleclientitem-class.md#onchange) Reaktion aufgerufen wird.  
   
-##  <a name="a-nameondoverba--coleserveritemondoverb"></a><a name="ondoverb"></a>COleServerItem::OnDoVerb  
+##  <a name="ondoverb"></a>COleServerItem::OnDoVerb  
  Aufgerufen, um das angegebene Verb aufzurufen.  
   
 ```  
@@ -437,7 +472,7 @@ virtual void OnDoVerb(LONG iVerb);
   
  Weitere Informationen finden Sie unter [IOleObject](http://msdn.microsoft.com/library/windows/desktop/ms694508) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameondrawa--coleserveritemondraw"></a><a name="ondraw"></a>COleServerItem:: OnDraw  
+##  <a name="ondraw"></a>COleServerItem:: OnDraw  
  Wird von Framework aufgerufen, um das OLE-Element in einer Metadatei zu rendern.  
   
 ```  
@@ -459,7 +494,7 @@ virtual BOOL OnDraw(
 ### <a name="remarks"></a>Hinweise  
  Die Metadateidarstellung des OLE-Elements wird verwendet, um das Element in der Container-Anwendung anzuzeigen. Wenn die Container-Anwendung mit der Microsoft Foundation Class-Bibliothek geschrieben wurde, wird von die Metadatei verwendet die [zeichnen](../../mfc/reference/coleclientitem-class.md#draw) -Memberfunktion des entsprechenden [COleClientItem](../../mfc/reference/coleclientitem-class.md) Objekt. Es ist keine Standardimplementierung vorhanden. Sie müssen diese Funktion zum Zeichnen des Elements den angegebenen Gerätekontext überschreiben.  
   
-##  <a name="a-nameondrawexa--coleserveritemondrawex"></a><a name="ondrawex"></a>COleServerItem::OnDrawEx  
+##  <a name="ondrawex"></a>COleServerItem::OnDrawEx  
  Vom Framework aufgerufen wird für alle zeichnen.  
   
 ```  
@@ -495,7 +530,7 @@ virtual BOOL OnDrawEx(
   
  Überschreiben Sie diese Funktion zum Bereitstellen von Präsentationsdaten für Aspekte außer `DVASPECT_CONTENT`, wie z. B. `DVASPECT_ICON` oder `DVASPECT_THUMBNAIL`.  
   
-##  <a name="a-nameongetclipboarddataa--coleserveritemongetclipboarddata"></a><a name="ongetclipboarddata"></a>COleServerItem::OnGetClipboardData  
+##  <a name="ongetclipboarddata"></a>COleServerItem::OnGetClipboardData  
  Aufgerufen, zum Abrufen einer `COleDataSource` Objekt mit allen Daten, die durch einen Aufruf in der Zwischenablage platziert werden würde die [CopyToClipboard](#copytoclipboard) Member-Funktion.  
   
 ```  
@@ -521,7 +556,7 @@ virtual COleDataSource* OnGetClipboardData(
 ### <a name="remarks"></a>Hinweise  
  Ruft die standardmäßige Implementierung dieser Funktion [GetClipboardData](#getclipboarddata).  
   
-##  <a name="a-nameongetextenta--coleserveritemongetextent"></a><a name="ongetextent"></a>COleServerItem::OnGetExtent  
+##  <a name="ongetextent"></a>COleServerItem::OnGetExtent  
  Aufgerufen, zum Abrufen der Größe in **HIMETRIC** Einheiten des OLE-Elements.  
   
 ```  
@@ -551,7 +586,7 @@ virtual BOOL OnGetExtent(
 ### <a name="remarks"></a>Hinweise  
  Wenn die Container-Anwendung mit der Microsoft Foundation Class-Bibliothek geschrieben wurde, diese Funktion wird aufgerufen, wenn die [GetExtent](../../mfc/reference/coleclientitem-class.md#getextent) -Memberfunktion des entsprechenden `COleClientItem` -Objekts aufgerufen wird. Bei der Standardimplementierung wird keine Aktion ausgeführt. Sie müssen es selbst implementieren. Überschreiben Sie diese Funktion, wenn speziellen Verarbeitung ausführen, wenn eine Anforderung für die Größe des OLE-Elements verwendet werden soll.  
   
-##  <a name="a-nameonhidea--coleserveritemonhide"></a><a name="onhide"></a>COleServerItem::OnHide  
+##  <a name="onhide"></a>COleServerItem::OnHide  
  Aufgerufen, um das OLE-Element auszublenden.  
   
 ```  
@@ -561,7 +596,7 @@ virtual void OnHide();
 ### <a name="remarks"></a>Hinweise  
  Die Standard-Aufrufe **COleServerDoc::OnShowDocument (FALSE)**. Die Funktion benachrichtigt, dass das OLE-Element ausgeblendet wurde auch die Container. Überschreiben Sie diese Funktion, wenn speziellen Verarbeitung auszuführen, wenn ein OLE-Element ausgeblendet werden soll.  
   
-##  <a name="a-nameoninitfromdataa--coleserveritemoninitfromdata"></a><a name="oninitfromdata"></a>COleServerItem::OnInitFromData  
+##  <a name="oninitfromdata"></a>COleServerItem::OnInitFromData  
  Aufgerufen, um ein OLE-Element mit dem Inhalt des initialisieren `pDataObject`.  
   
 ```  
@@ -585,7 +620,7 @@ virtual BOOL OnInitFromData(
   
  Weitere Informationen finden Sie unter [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonopena--coleserveritemonopen"></a><a name="onopen"></a>COleServerItem::OnOpen  
+##  <a name="onopen"></a>COleServerItem::OnOpen  
  Aufgerufen, um das OLE-Element in eine separate Instanz der Server-Anwendung und nicht an Ort anzuzeigen.  
   
 ```  
@@ -599,7 +634,7 @@ virtual void OnOpen();
   
  Weitere Informationen finden Sie unter [IOleClientSite::OnShowWindow](http://msdn.microsoft.com/library/windows/desktop/ms688658) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonqueryupdateitemsa--coleserveritemonqueryupdateitems"></a><a name="onqueryupdateitems"></a>COleServerItem::OnQueryUpdateItems  
+##  <a name="onqueryupdateitems"></a>COleServerItem::OnQueryUpdateItems  
  Aufgerufen, um festzustellen, ob verknüpfte Elemente im aktuellen Dokument nicht mehr aktuell sind.  
   
 ```  
@@ -612,7 +647,7 @@ virtual BOOL OnQueryUpdateItems();
 ### <a name="remarks"></a>Hinweise  
  Ein Element ist veraltet, wenn dem Quelldokument geändert wurde, aber das verknüpfte Element entsprechend die Änderungen im Dokument nicht aktualisiert wurde.  
   
-##  <a name="a-nameonrenderdataa--coleserveritemonrenderdata"></a><a name="onrenderdata"></a>COleServerItem::OnRenderData  
+##  <a name="onrenderdata"></a>COleServerItem::OnRenderData  
  Vom Framework aufgerufen wird zum Abrufen von Daten im angegebenen Format.  
   
 ```  
@@ -640,7 +675,7 @@ virtual BOOL OnRenderData(
   
  Weitere Informationen finden Sie unter [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), und [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonrenderfiledataa--coleserveritemonrenderfiledata"></a><a name="onrenderfiledata"></a>COleServerItem::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>COleServerItem::OnRenderFileData  
  Aufgerufen, um die Daten im angegebenen Format abgerufen, wenn das Speichermedium eine Datei ist.  
   
 ```  
@@ -666,7 +701,7 @@ virtual BOOL OnRenderFileData(
   
  Weitere Informationen finden Sie unter [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) und [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonrenderglobaldataa--coleserveritemonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleServerItem::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>COleServerItem::OnRenderGlobalData  
  Aufgerufen, um Daten im angegebenen Format abzurufen, wird das angegebene Speichermedium globalen Arbeitsspeicher.  
   
 ```  
@@ -694,7 +729,7 @@ virtual BOOL OnRenderGlobalData(
   
  Weitere Informationen finden Sie unter [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) und [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonsetcolorschemea--coleserveritemonsetcolorscheme"></a><a name="onsetcolorscheme"></a>COleServerItem::OnSetColorScheme  
+##  <a name="onsetcolorscheme"></a>COleServerItem::OnSetColorScheme  
  Vom Framework aufgerufen wird, geben Sie eine Farbpalette verwendet werden, wenn das OLE-Element zu bearbeiten.  
   
 ```  
@@ -713,7 +748,7 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
   
  Weitere Informationen finden Sie unter [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonsetdataa--coleserveritemonsetdata"></a><a name="onsetdata"></a>COleServerItem::OnSetData  
+##  <a name="onsetdata"></a>COleServerItem::OnSetData  
  Aufgerufen, um das OLE-Element-Daten mit den angegebenen Daten zu ersetzen.  
   
 ```  
@@ -743,7 +778,7 @@ virtual BOOL OnSetData(
   
  Weitere Informationen finden Sie unter [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), und [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonsetextenta--coleserveritemonsetextent"></a><a name="onsetextent"></a>COleServerItem::OnSetExtent  
+##  <a name="onsetextent"></a>COleServerItem::OnSetExtent  
  Aufgerufen, um dem OLE-Element mitzuteilen, wie viel Speicherplatz im Containerdokument verfügbar ist.  
   
 ```  
@@ -773,7 +808,7 @@ virtual BOOL OnSetExtent(
 ### <a name="remarks"></a>Hinweise  
  Wenn die Container-Anwendung mit der Microsoft Foundation Class-Bibliothek geschrieben wurde, diese Funktion wird aufgerufen, wenn die [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) -Memberfunktion des entsprechenden `COleClientItem` -Objekts aufgerufen wird. Die standardmäßige Implementierung legt die [M_sizeExtent](#m_sizeextent) Element in die angegebene Größe Wenn `nDrawAspect` ist `DVASPECT_CONTENT`; andernfalls wird 0 zurückgegeben. Überschreiben Sie diese Funktion zum Ausführen der besonderen Verarbeitung, wenn Sie die Größe des Elements ändern.  
   
-##  <a name="a-nameonshowa--coleserveritemonshow"></a><a name="onshow"></a>COleServerItem::OnShow  
+##  <a name="onshow"></a>COleServerItem::OnShow  
  Vom Framework aufgerufen wird, weisen Sie die Server-Anwendung zum Anzeigen des OLE-Elements an.  
   
 ```  
@@ -785,7 +820,7 @@ virtual void OnShow();
   
  Überschreiben Sie diese Funktion ggf. spezielle Verarbeitungsschritte gleichzeitig ausführen, wenn ein OLE-Element angezeigt wird.  
   
-##  <a name="a-nameonupdatea--coleserveritemonupdate"></a><a name="onupdate"></a>COleServerItem::OnUpdate  
+##  <a name="onupdate"></a>COleServerItem::OnUpdate  
  Wird vom Framework aufgerufen, wenn ein Element geändert wurde.  
   
 ```  
@@ -820,7 +855,7 @@ virtual void OnUpdate(
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung ruft [NotifyChanged](#notifychanged), unabhängig von den Hinweis oder die Absender.  
   
-##  <a name="a-nameonupdateitemsa--coleserveritemonupdateitems"></a><a name="onupdateitems"></a>COleServerItem::OnUpdateItems  
+##  <a name="onupdateitems"></a>COleServerItem::OnUpdateItems  
  Aufgerufen, um alle Elemente im Serverdokument zu aktualisieren.  
   
 ```  
@@ -830,7 +865,7 @@ virtual void OnUpdateItems();
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung ruft [UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink) für alle `COleClientItem` Objekte im Dokument.  
   
-##  <a name="a-namesetitemnamea--coleserveritemsetitemname"></a><a name="setitemname"></a>COleServerItem::SetItemName  
+##  <a name="setitemname"></a>COleServerItem::SetItemName  
  Rufen Sie diese Funktion, wenn Sie ein verknüpftes Element, legen Sie seinen Namen erstellen.  
   
 ```  

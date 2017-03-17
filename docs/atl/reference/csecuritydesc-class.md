@@ -9,9 +9,35 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CSecurityDesc
-- ATL.CSecurityDesc
 - CSecurityDesc
+- ATLSECURITY/ATL::CSecurityDesc
+- ATLSECURITY/ATL::CSecurityDesc::CSecurityDesc
+- ATLSECURITY/ATL::CSecurityDesc::FromString
+- ATLSECURITY/ATL::CSecurityDesc::GetControl
+- ATLSECURITY/ATL::CSecurityDesc::GetDacl
+- ATLSECURITY/ATL::CSecurityDesc::GetGroup
+- ATLSECURITY/ATL::CSecurityDesc::GetOwner
+- ATLSECURITY/ATL::CSecurityDesc::GetPSECURITY_DESCRIPTOR
+- ATLSECURITY/ATL::CSecurityDesc::GetSacl
+- ATLSECURITY/ATL::CSecurityDesc::IsDaclAutoInherited
+- ATLSECURITY/ATL::CSecurityDesc::IsDaclDefaulted
+- ATLSECURITY/ATL::CSecurityDesc::IsDaclPresent
+- ATLSECURITY/ATL::CSecurityDesc::IsDaclProtected
+- ATLSECURITY/ATL::CSecurityDesc::IsGroupDefaulted
+- ATLSECURITY/ATL::CSecurityDesc::IsOwnerDefaulted
+- ATLSECURITY/ATL::CSecurityDesc::IsSaclAutoInherited
+- ATLSECURITY/ATL::CSecurityDesc::IsSaclDefaulted
+- ATLSECURITY/ATL::CSecurityDesc::IsSaclPresent
+- ATLSECURITY/ATL::CSecurityDesc::IsSaclProtected
+- ATLSECURITY/ATL::CSecurityDesc::IsSelfRelative
+- ATLSECURITY/ATL::CSecurityDesc::MakeAbsolute
+- ATLSECURITY/ATL::CSecurityDesc::MakeSelfRelative
+- ATLSECURITY/ATL::CSecurityDesc::SetControl
+- ATLSECURITY/ATL::CSecurityDesc::SetDacl
+- ATLSECURITY/ATL::CSecurityDesc::SetGroup
+- ATLSECURITY/ATL::CSecurityDesc::SetOwner
+- ATLSECURITY/ATL::CSecurityDesc::SetSacl
+- ATLSECURITY/ATL::CSecurityDesc::ToString
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +136,7 @@ class CSecurityDesc
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
   
-##  <a name="a-namecsecuritydesca--csecuritydesccsecuritydesc"></a><a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc  
+##  <a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc  
  Der Konstruktor.  
   
 ```
@@ -126,7 +152,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Die `CSecurityDesc` -Objekt kann optional mit erstellt werden ein **SECURITY_DESCRIPTOR** Struktur oder eine zuvor definierte `CSecurityDesc` Objekt.  
   
-##  <a name="a-namedtora--csecuritydesccsecuritydesc"></a><a name="dtor"></a>CSecurityDesc:: ~ CSecurityDesc  
+##  <a name="dtor"></a>CSecurityDesc:: ~ CSecurityDesc  
  Der Destruktor.  
   
 ```
@@ -136,7 +162,7 @@ virtual ~CSecurityDesc() throw();
 ### <a name="remarks"></a>Hinweise  
  Der Destruktor gibt alle zugeordnete Ressourcen frei.  
   
-##  <a name="a-namefromstringa--csecuritydescfromstring"></a><a name="fromstring"></a>CSecurityDesc::FromString  
+##  <a name="fromstring"></a>CSecurityDesc::FromString  
  Konvertiert einen Sicherheitsdeskriptor Zeichenfolge-Format in eine gültige, funktionale Sicherheitsbeschreibung.  
   
 ```
@@ -155,7 +181,7 @@ bool FromString(LPCTSTR pstr) throw(...);
   
  Diese Methode ist nur verfügbar in Windows 2000 und höher da aufgerufen [wurde von ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
-##  <a name="a-namegetcontrola--csecuritydescgetcontrol"></a><a name="getcontrol"></a>CSecurityDesc::GetControl  
+##  <a name="getcontrol"></a>CSecurityDesc::GetControl  
  Ruft steuern, Informationen aus den Sicherheitsdeskriptor.  
   
 ```
@@ -172,7 +198,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ist nur sinnvoll, wenn unter Windows 2000 oder höher, wie er ruft [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
   
-##  <a name="a-namegetdacla--csecuritydescgetdacl"></a><a name="getdacl"></a>CSecurityDesc::GetDacl  
+##  <a name="getdacl"></a>CSecurityDesc::GetDacl  
  Ruft discretionary Access Control List (DACL) Informationen aus den Sicherheitsdeskriptor.  
   
 ```
@@ -195,7 +221,7 @@ bool GetDacl(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn die Methode erfolgreich ist, False, wenn ein Fehler auftritt.  
   
-##  <a name="a-namegetgroupa--csecuritydescgetgroup"></a><a name="getgroup"></a>CSecurityDesc::GetGroup  
+##  <a name="getgroup"></a>CSecurityDesc::GetGroup  
  Ruft die primäre Gruppeninformationen aus den Sicherheitsdeskriptor.  
   
 ```
@@ -214,7 +240,7 @@ bool GetGroup(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn die Methode erfolgreich ist, False, wenn ein Fehler auftritt.  
   
-##  <a name="a-namegetownera--csecuritydescgetowner"></a><a name="getowner"></a>CSecurityDesc::GetOwner  
+##  <a name="getowner"></a>CSecurityDesc::GetOwner  
  Besitzer-Informationen aus der Sicherheitsdeskriptor abgerufen.  
   
 ```
@@ -233,7 +259,7 @@ bool GetOwner(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn die Methode erfolgreich ist, False, wenn ein Fehler auftritt.  
   
-##  <a name="a-namegetpsecuritydescriptora--csecuritydescgetpsecuritydescriptor"></a><a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR  
+##  <a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR  
  Gibt einen Zeiger auf die **SECURITY_DESCRIPTOR** Struktur.  
   
 ```
@@ -243,7 +269,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Zeiger auf die [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) Struktur.  
   
-##  <a name="a-namegetsacla--csecuritydescgetsacl"></a><a name="getsacl"></a>CSecurityDesc::GetSacl  
+##  <a name="getsacl"></a>CSecurityDesc::GetSacl  
  Ruft Informationen zu System Access Control List (SACL) aus den Sicherheitsdeskriptor ab.  
   
 ```
@@ -266,7 +292,7 @@ bool GetSacl(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn die Methode erfolgreich ist, False, wenn ein Fehler auftritt.  
   
-##  <a name="a-nameisdaclautoinheriteda--csecuritydescisdaclautoinherited"></a><a name="isdaclautoinherited"></a>CSecurityDesc::IsDaclAutoInherited  
+##  <a name="isdaclautoinherited"></a>CSecurityDesc::IsDaclAutoInherited  
  Bestimmt, ob die DACL (discretionary Access Control List) konfiguriert ist, um automatische Weitergabe zu unterstützen.  
   
 ```
@@ -279,7 +305,7 @@ bool IsDaclAutoInherited() const throw();
 ### <a name="remarks"></a>Hinweise  
  Wenn sie die automatische Vererbung Algorithmus für das Objekt und seine untergeordneten Objekte ausführt, setzt das System dieses Bit.  
   
-##  <a name="a-nameisdacldefaulteda--csecuritydescisdacldefaulted"></a><a name="isdacldefaulted"></a>CSecurityDesc::IsDaclDefaulted  
+##  <a name="isdacldefaulted"></a>CSecurityDesc::IsDaclDefaulted  
  Bestimmt, ob die Sicherheits-ID mit einer Standardliste Zugriffssteuerungsliste (DACL) konfiguriert ist.  
   
 ```
@@ -296,7 +322,7 @@ bool IsDaclDefaulted() const throw();
   
  Verwenden Sie zum Festlegen dieses Flags der [CSecurityDesc::SetDacl](#setdacl) Methode.  
   
-##  <a name="a-nameisdaclpresenta--csecuritydescisdaclpresent"></a><a name="isdaclpresent"></a>CSecurityDesc::IsDaclPresent  
+##  <a name="isdaclpresent"></a>CSecurityDesc::IsDaclPresent  
  Bestimmt, ob die Sicherheitsbeschreibung eine DACL (discretionary Access Control List) enthält.  
   
 ```
@@ -313,7 +339,7 @@ bool IsDaclPresent() const throw();
   
  Verwenden Sie zum Festlegen dieses Flags der [CSecurityDesc::SetDacl](#setdacl) Methode.  
   
-##  <a name="a-nameisdaclprotecteda--csecuritydescisdaclprotected"></a><a name="isdaclprotected"></a>CSecurityDesc::IsDaclProtected  
+##  <a name="isdaclprotected"></a>CSecurityDesc::IsDaclProtected  
  Bestimmt, ob die DACL (discretionary Access Control List) konfiguriert ist, um die Änderungen zu verhindern.  
   
 ```
@@ -328,7 +354,7 @@ bool IsDaclProtected() const throw();
   
  Diese Methode ist nur sinnvoll, für Windows 2000 oder höher, als nur Windows 2000 unterstützt die automatische Übertragung von vererbbare ACEs.  
   
-##  <a name="a-nameisgroupdefaulteda--csecuritydescisgroupdefaulted"></a><a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted  
+##  <a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted  
  Bestimmt, ob die Sicherheits-ID-Gruppe Sicherheits-ID (SID) in der Standardeinstellung festgelegt wurde.  
   
 ```
@@ -341,7 +367,7 @@ bool IsGroupDefaulted() const throw();
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie zum Festlegen dieses Flags der [CSecurityDesc::SetGroup](#setgroup) Methode.  
   
-##  <a name="a-nameisownerdefaulteda--csecuritydescisownerdefaulted"></a><a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted  
+##  <a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted  
  Bestimmt, ob der Sicherheitsdeskriptor Besitzer-Sicherheits-ID (SID) in der Standardeinstellung festgelegt wurde.  
   
 ```
@@ -354,7 +380,7 @@ bool IsOwnerDefaulted() const throw();
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie zum Festlegen dieses Flags der [CSecurityDesc::SetOwner](#setowner) Methode.  
   
-##  <a name="a-nameissaclautoinheriteda--csecuritydescissaclautoinherited"></a><a name="issaclautoinherited"></a>CSecurityDesc::IsSaclAutoInherited  
+##  <a name="issaclautoinherited"></a>CSecurityDesc::IsSaclAutoInherited  
  Bestimmt, ob die System Access Control List (SACL) konfiguriert ist, um automatische Weitergabe zu unterstützen.  
   
 ```
@@ -367,7 +393,7 @@ bool IsSaclAutoInherited() const throw();
 ### <a name="remarks"></a>Hinweise  
  Wenn sie die automatische Vererbung Algorithmus für das Objekt und seine untergeordneten Objekte ausführt, setzt das System dieses Bit.  
   
-##  <a name="a-nameissacldefaulteda--csecuritydescissacldefaulted"></a><a name="issacldefaulted"></a>CSecurityDesc::IsSaclDefaulted  
+##  <a name="issacldefaulted"></a>CSecurityDesc::IsSaclDefaulted  
  Bestimmt, ob die Sicherheits-ID mit einer Standard-System Access Control List (SACL) konfiguriert ist.  
   
 ```
@@ -382,7 +408,7 @@ bool IsSaclDefaulted() const throw();
   
  Verwenden Sie zum Festlegen dieses Flags der [CSecurityDesc::SetSacl](#setsacl) Methode.  
   
-##  <a name="a-nameissaclpresenta--csecuritydescissaclpresent"></a><a name="issaclpresent"></a>CSecurityDesc::IsSaclPresent  
+##  <a name="issaclpresent"></a>CSecurityDesc::IsSaclPresent  
  Bestimmt, ob die Sicherheits-ID eine System Access Control List (SACL) enthält.  
   
 ```
@@ -395,7 +421,7 @@ bool IsSaclPresent() const throw();
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie zum Festlegen dieses Flags der [CSecurityDesc::SetSacl](#setsacl) Methode.  
   
-##  <a name="a-nameissaclprotecteda--csecuritydescissaclprotected"></a><a name="issaclprotected"></a>CSecurityDesc::IsSaclProtected  
+##  <a name="issaclprotected"></a>CSecurityDesc::IsSaclProtected  
  Bestimmt, ob die System Access Control List (SACL) konfiguriert ist, um die Änderungen zu verhindern.  
   
 ```
@@ -410,7 +436,7 @@ bool IsSaclProtected() const throw();
   
  Diese Methode ist nur sinnvoll, für Windows 2000 oder höher, als nur Windows 2000 unterstützt die automatische Übertragung von vererbbare ACEs.  
   
-##  <a name="a-nameisselfrelativea--csecuritydescisselfrelative"></a><a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative  
+##  <a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative  
  Bestimmt, ob die Sicherheitsbeschreibung im selbstbezogenen Format ist.  
   
 ```
@@ -420,7 +446,7 @@ bool IsSelfRelative() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn die Sicherheitsbeschreibung im selbstbezogenen Format mit alle Sicherheitsinformationen in einem zusammenhängenden Speicherblock. Gibt False zurück, wenn die Sicherheitsbeschreibung im absoluten Format ist. Weitere Informationen finden Sie unter [Absolute und Sicherheitsdeskriptoren Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="a-namemakeabsolutea--csecuritydescmakeabsolute"></a><a name="makeabsolute"></a>CSecurityDesc::MakeAbsolute  
+##  <a name="makeabsolute"></a>CSecurityDesc::MakeAbsolute  
  Rufen Sie diese Methode, um die Sicherheits-ID in das absolute Format zu konvertieren.  
   
 ```
@@ -433,7 +459,7 @@ bool MakeAbsolute() throw(...);
 ### <a name="remarks"></a>Hinweise  
  Eine Sicherheitsbeschreibung im absoluten Format enthält Zeiger auf die darin enthaltenen Informationen, die anstatt die Informationen selbst. Eine Sicherheitsbeschreibung im selbstbezogenen Format enthält die Informationen in einem zusammenhängenden Speicherblock. In einer selbstbezogenen Sicherheitsbeschreibung eine **SECURITY_DESCRIPTOR** Struktur beginnt immer die Informationen, aber der Sicherheitsdeskriptor zu den anderen Komponenten die Struktur in einer beliebigen Reihenfolge folgen können. Statt Speicheradressen zu verwenden, werden die Komponenten des Sicherheitsdeskriptors selbstbezogenen durch Offsets vom Anfang des Sicherheitsdeskriptors identifiziert. Dieses Format ist nützlich, wenn ein Sicherheitsdeskriptor muss auf einem Datenträger gespeichert oder über ein Kommunikationsprotokoll übertragen. Weitere Informationen finden Sie unter [Absolute und Sicherheitsdeskriptoren Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="a-namemakeselfrelativea--csecuritydescmakeselfrelative"></a><a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative  
+##  <a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative  
  Rufen Sie diese Methode, um den Sicherheitsdeskriptor in relativen Format zu konvertieren.  
   
 ```
@@ -446,7 +472,7 @@ bool MakeSelfRelative() throw(...);
 ### <a name="remarks"></a>Hinweise  
  Eine Sicherheitsbeschreibung im absoluten Format enthält Zeiger auf die darin enthaltenen Informationen, sondern mit den Daten selbst. Eine Sicherheitsbeschreibung im selbstbezogenen Format enthält die Informationen in einem zusammenhängenden Speicherblock. In einer selbstbezogenen Sicherheitsbeschreibung eine **SECURITY_DESCRIPTOR** Struktur beginnt immer die Informationen, aber der Sicherheitsdeskriptor zu den anderen Komponenten die Struktur in einer beliebigen Reihenfolge folgen können. Statt Speicheradressen zu verwenden, werden die Komponenten des Sicherheitsdeskriptors durch Offsets vom Anfang des Sicherheitsdeskriptors identifiziert. Dieses Format ist nützlich, wenn ein Sicherheitsdeskriptor muss auf einem Datenträger gespeichert oder über ein Kommunikationsprotokoll übertragen. Weitere Informationen finden Sie unter [Absolute und Sicherheitsdeskriptoren Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="a-nameoperatoreqa--csecuritydescoperator-"></a><a name="operator_eq"></a>CSecurityDesc::operator =  
+##  <a name="operator_eq"></a>CSecurityDesc::operator =  
  Zuweisungsoperator.  
   
 ```
@@ -461,14 +487,14 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den aktualisierten `CSecurityDesc` Objekt.  
   
-##  <a name="a-nameoperatorconstsecuritydescriptorstara--csecuritydescoperator-const-securitydescriptor-"></a><a name="operator_const_security_descriptor__star"></a>Const SECURITY_DESCRIPTOR CSecurityDesc::operator *  
+##  <a name="operator_const_security_descriptor__star"></a>Const SECURITY_DESCRIPTOR CSecurityDesc::operator *  
  Wandelt einen Wert in einen Zeiger auf die **SECURITY_DESCRIPTOR** Struktur.  
   
 ```  
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```  
   
-##  <a name="a-namesetcontrola--csecuritydescsetcontrol"></a><a name="setcontrol"></a>CSecurityDesc::SetControl  
+##  <a name="setcontrol"></a>CSecurityDesc::SetControl  
  Legt die Steuerungsbits einer Sicherheitsbeschreibung fest.  
   
 ```
@@ -490,7 +516,7 @@ bool SetControl(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ist verfügbar nur unter Windows 2000 und höher, wie er ruft [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
-##  <a name="a-namesetdacla--csecuritydescsetdacl"></a><a name="setdacl"></a>CSecurityDesc::SetDacl  
+##  <a name="setdacl"></a>CSecurityDesc::SetDacl  
  Legt die Informationen in eine DACL (discretionary Access Control List) fest. Wenn eine DACL bereits in die Sicherheits-ID vorhanden ist, wird es ersetzt.  
   
 ```
@@ -519,7 +545,7 @@ inline void SetDacl(
 ### <a name="remarks"></a>Hinweise  
  Es ist ein wichtiger Unterschied zwischen einer leeren und einer nicht vorhandenen DACL. Wenn eine DACL leer ist, wird keine Access-Control-Einträge enthält, und keine Zugriffsrechte explizit erteilt wurde. Daher ist der Zugriff auf das Objekt implizit verweigert. Wenn ein Objekt keine DACL besitzt, auf der anderen Seite ist kein Schutz auf das Objekt zugewiesen, und jede zugriffsanforderung gewährt wird.  
   
-##  <a name="a-namesetgroupa--csecuritydescsetgroup"></a><a name="setgroup"></a>CSecurityDesc::SetGroup  
+##  <a name="setgroup"></a>CSecurityDesc::SetGroup  
  Legt die primären Informationen ein absolutes Format Sicherheitsbeschreibung, Austauschen von Informationen primäre Gruppe bereits vorhanden.  
   
 ```
@@ -536,7 +562,7 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namesetownera--csecuritydescsetowner"></a><a name="setowner"></a>CSecurityDesc::SetOwner  
+##  <a name="setowner"></a>CSecurityDesc::SetOwner  
  Die Besitzerinformationen von einem Sicherheitsdeskriptor absolute Format fest. Alle bereits vorhandenen Besitzerinformationen ersetzt.  
   
 ```
@@ -553,7 +579,7 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namesetsacla--csecuritydescsetsacl"></a><a name="setsacl"></a>CSecurityDesc::SetSacl  
+##  <a name="setsacl"></a>CSecurityDesc::SetSacl  
  Legt die Informationen in einem System Access Control List (SACL) fest. Wenn eine SACL bereits in die Sicherheits-ID vorhanden ist, wird es ersetzt.  
   
 ```
@@ -570,7 +596,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-nametostringa--csecuritydesctostring"></a><a name="tostring"></a>CSecurityDesc::ToString  
+##  <a name="tostring"></a>CSecurityDesc::ToString  
  Konvertiert einen Sicherheitsdeskriptor in einer Zeichenfolge.  
   
 ```

@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
+- AFXWIN/CCommandLineInfo
+- AFXWIN/CCommandLineInfo::CCommandLineInfo
+- AFXWIN/CCommandLineInfo::ParseParam
+- AFXWIN/CCommandLineInfo::m_bRunAutomated
+- AFXWIN/CCommandLineInfo::m_bRunEmbedded
+- AFXWIN/CCommandLineInfo::m_bShowSplash
+- AFXWIN/CCommandLineInfo::m_nShellCommand
+- AFXWIN/CCommandLineInfo::m_strDriverName
+- AFXWIN/CCommandLineInfo::m_strFileName
+- AFXWIN/CCommandLineInfo::m_strPortName
+- AFXWIN/CCommandLineInfo::m_strPrinterName
+- AFXWIN/CCommandLineInfo::m_strRestartIdentifier
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +120,7 @@ class CCommandLineInfo : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-nameccommandlineinfoa--ccommandlineinfoccommandlineinfo"></a><a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
+##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
  Dieser Konstruktor erstellt ein `CCommandLineInfo` -Objekt mit Standardwerten.  
   
 ```  
@@ -123,7 +135,7 @@ CCommandLineInfo();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#54;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="a-namembrunautomateda--ccommandlineinfombrunautomated"></a><a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
+##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
  Gibt an, dass die **/Automation** Flag wurde in der Befehlszeile gefunden.  
   
 ```  
@@ -133,7 +145,7 @@ BOOL m_bRunAutomated;
 ### <a name="remarks"></a>Hinweise  
  Wenn **TRUE**, bedeutet das, dass als OLE-Automatisierungsserver gestartet.  
   
-##  <a name="a-namembrunembeddeda--ccommandlineinfombrunembedded"></a><a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
+##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
  Gibt an, dass die **/einbetten** Flag wurde in der Befehlszeile gefunden.  
   
 ```  
@@ -143,7 +155,7 @@ BOOL m_bRunEmbedded;
 ### <a name="remarks"></a>Hinweise  
  Wenn **TRUE**, dies bedeutet, dass Sie für die Bearbeitung von eines eingebetteten OLE-Elements starten.  
   
-##  <a name="a-namembshowsplasha--ccommandlineinfombshowsplash"></a><a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
+##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
  Gibt an, dass der Begrüßungsbildschirm angezeigt werden soll.  
   
 ```  
@@ -153,7 +165,7 @@ BOOL m_bShowSplash;
 ### <a name="remarks"></a>Hinweise  
  Wenn **TRUE**, dies bedeutet, dass den Begrüßungsbildschirm für diese Anwendung beim Start angezeigt werden soll. Die standardmäßige Implementierung des [ParseParam](#parseparam) wird dieses Datenelement auf **TRUE** Wenn [M_nShellCommand](#m_nshellcommand) gleich **CCommandLineInfo::FileNew**.  
   
-##  <a name="a-namemnshellcommanda--ccommandlineinfomnshellcommand"></a><a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
+##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
  Gibt den Befehl "Shell" für diese Instanz der Anwendung an.  
   
 ```  
@@ -208,7 +220,7 @@ m_nShellCommand;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#55;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="a-namemstrdrivernamea--ccommandlineinfomstrdrivername"></a><a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
+##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
  Speichert den Wert des dritten Parameters nicht-Flag in der Befehlszeile.  
   
 ```  
@@ -218,7 +230,7 @@ CString m_strDriverName;
 ### <a name="remarks"></a>Hinweise  
  Dieser Parameter ist in der Regel den Namen des Druckertreibers für einen Druckserver, Shell-Befehl. Die standardmäßige Implementierung des [ParseParam](#parseparam) legt diese Datenmember nur, wenn die **/pt** Flag wurde in der Befehlszeile gefunden.  
   
-##  <a name="a-namemstrfilenamea--ccommandlineinfomstrfilename"></a><a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
+##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
  Speichert den Wert des ersten Parameters nicht-Flag in der Befehlszeile.  
   
 ```  
@@ -228,7 +240,7 @@ CString m_strFileName;
 ### <a name="remarks"></a>Hinweise  
  Dieser Parameter ist in der Regel der Name der zu öffnenden Datei.  
   
-##  <a name="a-namemstrportnamea--ccommandlineinfomstrportname"></a><a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
+##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
  Speichert den Wert der vierten Parameter von nicht-Flag in der Befehlszeile an.  
   
 ```  
@@ -238,7 +250,7 @@ CString m_strPortName;
 ### <a name="remarks"></a>Hinweise  
  Dieser Parameter ist in der Regel den Namen des Ports für einen Druckserver, Shell-Befehl. Die standardmäßige Implementierung des [ParseParam](#parseparam) legt diese Datenmember nur, wenn die **/pt** Flag wurde in der Befehlszeile gefunden.  
   
-##  <a name="a-namemstrprinternamea--ccommandlineinfomstrprintername"></a><a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
+##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
  Speichert den Wert des zweiten Parameters nicht-Flag in der Befehlszeile.  
   
 ```  
@@ -248,7 +260,7 @@ CString m_strPrinterName;
 ### <a name="remarks"></a>Hinweise  
  Dieser Parameter ist in der Regel der Name des Druckers für einen Druckserver, Shell-Befehl. Die standardmäßige Implementierung des [ParseParam](#parseparam) legt diese Datenmember nur, wenn die **/pt** Flag wurde in der Befehlszeile gefunden.  
   
-##  <a name="a-namemstrrestartidentifiera--ccommandlineinfomstrrestartidentifier"></a><a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
+##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
  Der eindeutige neu Bezeichner in der Befehlszeile starten.  
   
 ```  
@@ -260,7 +272,7 @@ CString m_strRestartIdentifier;
   
  Wenn der Neustart-Manager die Anwendung beendet und so konfiguriert ist, dass es neu starten, führt der Neustart-Manager die Anwendung über die Befehlszeile mit dem Neustart Bezeichner als optionalen Parameter an. Wenn der Neustart-Manager den Neustart-Bezeichner verwendet wird, kann die Anwendung zuvor geöffneten Dokumente öffnen und automatisch gespeicherte Dateien wiederherstellen.  
   
-##  <a name="a-nameparseparama--ccommandlineinfoparseparam"></a><a name="parseparam"></a>CCommandLineInfo::ParseParam  
+##  <a name="parseparam"></a>CCommandLineInfo::ParseParam  
  Das Framework ruft diese Funktion, um die Analyse/interpretieren einzelne Parameter von der Befehlszeile aus. Die zweite Version unterscheidet sich von der ersten nur in Unicode-Projekten.  
   
 ```  

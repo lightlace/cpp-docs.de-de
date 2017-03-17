@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBrush
+- AFXWIN/CBrush
+- AFXWIN/CBrush::CBrush
+- AFXWIN/CBrush::CreateBrushIndirect
+- AFXWIN/CBrush::CreateDIBPatternBrush
+- AFXWIN/CBrush::CreateHatchBrush
+- AFXWIN/CBrush::CreatePatternBrush
+- AFXWIN/CBrush::CreateSolidBrush
+- AFXWIN/CBrush::CreateSysColorBrush
+- AFXWIN/CBrush::FromHandle
+- AFXWIN/CBrush::GetLogBrush
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +103,7 @@ class CBrush : public CGdiObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-namecbrusha--cbrushcbrush"></a><a name="cbrush"></a>CBrush::CBrush  
+##  <a name="cbrush"></a>CBrush::CBrush  
  Erstellt ein `CBrush`-Objekt.  
   
 ```  
@@ -139,7 +149,7 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&21;](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="a-namecreatebrushindirecta--cbrushcreatebrushindirect"></a><a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
+##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
  Initialisiert einen Pinsel mit einer Formatvorlage, Farbe und Muster im angegebenen ein [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) Struktur.  
   
 ```  
@@ -161,7 +171,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#22;](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="a-namecreatedibpatternbrusha--cbrushcreatedibpatternbrush"></a><a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
+##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
  Initialisiert einen Pinsel mit dem Muster durch eine geräteunabhängige Bitmap (DIB) angegeben.  
   
 ```  
@@ -216,7 +226,7 @@ BOOL CreateDIBPatternBrush(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&23;](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="a-namecreatehatchbrusha--cbrushcreatehatchbrush"></a><a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
+##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
  Initialisiert einen Pinsel mit der angegebenen Schraffur und Farbe.  
   
 ```  
@@ -253,7 +263,7 @@ BOOL CreateHatchBrush(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#24;](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="a-namecreatepatternbrusha--cbrushcreatepatternbrush"></a><a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
+##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
  Initialisiert einen Pinsel mit einem Muster, die durch eine Bitmap angegeben.  
   
 ```  
@@ -281,7 +291,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#25;](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="a-namecreatesolidbrusha--cbrushcreatesolidbrush"></a><a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
+##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
  Initialisiert einen Pinsel mit Volltonfarbe angegebenen.  
   
 ```  
@@ -303,7 +313,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CBrush::CBrush](#cbrush).  
   
-##  <a name="a-namecreatesyscolorbrusha--cbrushcreatesyscolorbrush"></a><a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
+##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
  Initialisiert eine Pinselfarbe.  
   
 ```  
@@ -325,7 +335,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#26;](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="a-namefromhandlea--cbrushfromhandle"></a><a name="fromhandle"></a>CBrush::FromHandle  
+##  <a name="fromhandle"></a>CBrush::FromHandle  
  Gibt einen Zeiger auf eine `CBrush` Objekt, wenn ein Handle zu einem Windows angegebenen [HBRUSH](#operator_hbrush) Objekt.  
   
 ```  
@@ -347,7 +357,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CBrush::CBrush](#cbrush).  
   
-##  <a name="a-namegetlogbrusha--cbrushgetlogbrush"></a><a name="getlogbrush"></a>CBrush::GetLogBrush  
+##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
  Rufen Sie diese Memberfunktion zum Abrufen der `LOGBRUSH` Struktur.  
   
 ```  
@@ -373,7 +383,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#27;](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="a-nameoperatorhbrusha--cbrushoperator-hbrush"></a><a name="operator_hbrush"></a>CBrush::operator HBRUSH  
+##  <a name="operator_hbrush"></a>CBrush::operator HBRUSH  
  Verwenden Sie diesen Operator zum Abrufen der angefügten Windows GDI-Handle für die `CBrush` Objekt.  
   
 ```  

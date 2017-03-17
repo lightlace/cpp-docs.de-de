@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CWinTraitsOR
-- ATL::CWinTraitsOR
 - CWinTraitsOR
+- ATLWIN/ATL::CWinTraitsOR
+- ATLWIN/ATL::CWinTraitsOR::GetWndExStyle
+- ATLWIN/ATL::CWinTraitsOR::GetWndStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +84,7 @@ class CWinTraitsOR
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h  
   
-##  <a name="a-namegetwndstylea--cwintraitsorgetwndstyle"></a><a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
+##  <a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
  Mit dieser Funktion können Sie eine Kombination aus (mit logischen OR-Operators) den Standardformaten der Abrufen der `CWinTraits` -Objekt und die Standardstile angegebenen `t_dwStyle`.  
   
 ```
@@ -97,7 +98,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>Rückgabewert  
  Eine Kombination von Formatvorlagen, die übergeben werden `dwStyle` und die Einsen durch angegebene `t_dwStyle`, mit dem logischen OR-Operator.  
   
-##  <a name="a-namegetwndexstylea--cwintraitsorgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
+##  <a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
  Mit dieser Funktion können Sie eine Kombination aus (mit logischen OR-Operators) die erweiterten Stile der Abrufen der `CWinTraits` -Objekt und die Standardstile angegebenen `t_dwStyle`.  
   
 ```

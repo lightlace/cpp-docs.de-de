@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBarPane
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::GetAlmostLargeText
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::GetTextAlign
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::IsAnimation
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::IsExtended
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::OnDrawBorder
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::OnFillBackground
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::SetAlmostLargeText
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::SetAnimationList
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::SetTextAlign
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::StartAnimation
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::StopAnimation
+- AFXRIBBONSTATUSBARPANE/CMFCRibbonStatusBarPane::OnFinishAnimation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +109,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxribbonstatusbarpane.h  
   
-##  <a name="a-namecmfcribbonstatusbarpanea--cmfcribbonstatusbarpanecmfcribbonstatusbarpane"></a><a name="cmfcribbonstatusbarpane"></a>CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
+##  <a name="cmfcribbonstatusbarpane"></a>CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
  Erstellen Sie ein Objekt im Bereich in der Statusleiste angezeigt.  
   
 ```  
@@ -153,7 +167,7 @@ CMFCRibbonStatusBarPane(
  [in] `uiAnimationListResID`  
  Gibt die Ressourcen-ID einer Bildliste, die für eine Animation verwendet wird.  
   
-##  <a name="a-namegetalmostlargetexta--cmfcribbonstatusbarpanegetalmostlargetext"></a><a name="getalmostlargetext"></a>CMFCRibbonStatusBarPane::GetAlmostLargeText  
+##  <a name="getalmostlargetext"></a>CMFCRibbonStatusBarPane::GetAlmostLargeText  
  Ruft die längste Zeichenfolge, die im Bereich der Status Leiste anzeigen können.  
   
 ```  
@@ -163,7 +177,7 @@ LPCTSTR GetAlmostLargeText() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die längste Zeichenfolge, die im Bereich der Status Leiste anzeigen können.  
   
-##  <a name="a-namegettextaligna--cmfcribbonstatusbarpanegettextalign"></a><a name="gettextalign"></a>CMFCRibbonStatusBarPane::GetTextAlign  
+##  <a name="gettextalign"></a>CMFCRibbonStatusBarPane::GetTextAlign  
  Ruft die aktuelle Einstellung der Ausrichtung des Texts der Bezeichnung des im Bereich der Status angezeigt.  
   
 ```  
@@ -179,7 +193,7 @@ int GetTextAlign() const;
   
 -   TA_RIGHT.  
   
-##  <a name="a-nameisanimationa--cmfcribbonstatusbarpaneisanimation"></a><a name="isanimation"></a>CMFCRibbonStatusBarPane::IsAnimation  
+##  <a name="isanimation"></a>CMFCRibbonStatusBarPane::IsAnimation  
  Bestimmt, ob die Animation ausgeführt wird.  
   
 ```  
@@ -189,7 +203,7 @@ BOOL IsAnimation() const;
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn die Animation ausgeführt wird; `FALSE` andernfalls.  
   
-##  <a name="a-nameisextendeda--cmfcribbonstatusbarpaneisextended"></a><a name="isextended"></a>CMFCRibbonStatusBarPane::IsExtended  
+##  <a name="isextended"></a>CMFCRibbonStatusBarPane::IsExtended  
  Bestimmen Sie, ob der Bereich im erweiterten Bereich des Status-Menübands befindet.  
   
 ```  
@@ -199,7 +213,7 @@ BOOL IsExtended() const;
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn der Bereich auf der Statusleiste der erweiterte Bereich befindet. Andernfalls `FALSE`.  
   
-##  <a name="a-nameondrawbordera--cmfcribbonstatusbarpaneondrawborder"></a><a name="ondrawborder"></a>CMFCRibbonStatusBarPane::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCRibbonStatusBarPane::OnDrawBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -211,7 +225,7 @@ virtual void OnDrawBorder(CDC*);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonfillbackgrounda--cmfcribbonstatusbarpaneonfillbackground"></a><a name="onfillbackground"></a>CMFCRibbonStatusBarPane::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCRibbonStatusBarPane::OnFillBackground  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -225,7 +239,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonfinishanimationa--cmfcribbonstatusbarpaneonfinishanimation"></a><a name="onfinishanimation"></a>CMFCRibbonStatusBarPane::OnFinishAnimation  
+##  <a name="onfinishanimation"></a>CMFCRibbonStatusBarPane::OnFinishAnimation  
  Framework ruft diese Methode am Ende die Animation, die dem Bereich zugeordnet ist.  
   
 ```  
@@ -235,7 +249,7 @@ virtual void OnFinishAnimation();
 ### <a name="remarks"></a>Hinweise  
  `StopAnimation`Methodenaufrufe der `OnFinishAnimation` -Methode, die Sie verwenden können, Daten bereinigen, wenn die Animation endet.  
   
-##  <a name="a-namesetalmostlargetexta--cmfcribbonstatusbarpanesetalmostlargetext"></a><a name="setalmostlargetext"></a>CMFCRibbonStatusBarPane::SetAlmostLargeText  
+##  <a name="setalmostlargetext"></a>CMFCRibbonStatusBarPane::SetAlmostLargeText  
  Definieren Sie den längsten Text, der in der Status-Leistenbereich ungekürzt angezeigt werden kann.  
   
 ```  
@@ -249,7 +263,7 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ### <a name="remarks"></a>Hinweise  
  Die Bibliothek berechnet die Größe des Texts, `lpszAlmostLargeText` gibt und Bereich entsprechend ändert. Der Text wird abgeschnitten, wenn es noch nicht in den Bereich passt.  
   
-##  <a name="a-namesetanimationlista--cmfcribbonstatusbarpanesetanimationlist"></a><a name="setanimationlist"></a>CMFCRibbonStatusBarPane::SetAnimationList  
+##  <a name="setanimationlist"></a>CMFCRibbonStatusBarPane::SetAnimationList  
  Fügt an der Status-Leistenbereich eine Bildliste, die für eine Animation verwendet werden kann.  
   
 ```  
@@ -280,7 +294,7 @@ BOOL SetAnimationList(
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn der Status-Leistenbereich erfolgreich die Bildliste zugeordnet ist; `FALSE` andernfalls.  
   
-##  <a name="a-namesettextaligna--cmfcribbonstatusbarpanesettextalign"></a><a name="settextalign"></a>CMFCRibbonStatusBarPane::SetTextAlign  
+##  <a name="settextalign"></a>CMFCRibbonStatusBarPane::SetTextAlign  
  Legt die Ausrichtung des Texts der Bezeichnung des im Bereich der Status angezeigt.  
   
 ```  
@@ -300,7 +314,7 @@ void SetTextAlign(int nAlign);
   
 - `TA_RIGHT:`Rechtsbündig  
   
-##  <a name="a-namestartanimationa--cmfcribbonstatusbarpanestartanimation"></a><a name="startanimation"></a>CMFCRibbonStatusBarPane::StartAnimation  
+##  <a name="startanimation"></a>CMFCRibbonStatusBarPane::StartAnimation  
  Startet die Animation, die Sie in den Bereich zuweisen.  
   
 ```  
@@ -319,7 +333,7 @@ void StartAnimation(
 ### <a name="remarks"></a>Hinweise  
  Geben Sie ein Handle für eine Bildliste vor dem Aufruf von `StartAnimation` mit `SetAnimationList`.  
   
-##  <a name="a-namestopanimationa--cmfcribbonstatusbarpanestopanimation"></a><a name="stopanimation"></a>CMFCRibbonStatusBarPane::StopAnimation  
+##  <a name="stopanimation"></a>CMFCRibbonStatusBarPane::StopAnimation  
  Beendet die Animation, die Sie im Bereich der Leiste Status zugewiesen.  
   
 ```  

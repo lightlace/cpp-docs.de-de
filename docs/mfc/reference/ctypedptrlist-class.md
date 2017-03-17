@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
+- AFXTEMPL/CTypedPtrList
+- AFXTEMPL/CTypedPtrList::AddHead
+- AFXTEMPL/CTypedPtrList::AddTail
+- AFXTEMPL/CTypedPtrList::GetAt
+- AFXTEMPL/CTypedPtrList::GetHead
+- AFXTEMPL/CTypedPtrList::GetNext
+- AFXTEMPL/CTypedPtrList::GetPrev
+- AFXTEMPL/CTypedPtrList::GetTail
+- AFXTEMPL/CTypedPtrList::RemoveHead
+- AFXTEMPL/CTypedPtrList::RemoveTail
+- AFXTEMPL/CTypedPtrList::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +119,7 @@ class CTypedPtrList : public BASE_CLASS
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtempl.h  
   
-##  <a name="a-nameaddheada--ctypedptrlistaddhead"></a><a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>CTypedPtrList::AddHead  
  Diese Memberfunktion ruft `BASE_CLASS` **:: AddHead**.  
   
 ```  
@@ -135,7 +146,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Hinweise  
  Die erste Version fügt vor den Anfang der Liste ein neues Element hinzu. Die zweite Version Fügt eine andere Liste von Elementen vor dem.  
   
-##  <a name="a-nameaddtaila--ctypedptrlistaddtail"></a><a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>CTypedPtrList::AddTail  
  Diese Memberfunktion ruft `BASE_CLASS` **:: AddTail**.  
   
 ```  
@@ -162,7 +173,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Hinweise  
  Die erste Version fügt nach dem Ende der Liste ein neues Element hinzu. Die zweite Version Fügt eine andere Liste von Elementen nach dem Ende der Liste hinzu.  
   
-##  <a name="a-namegetata--ctypedptrlistgetat"></a><a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>CTypedPtrList::GetAt  
  Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste.  
   
 ```  
@@ -189,7 +200,7 @@ TYPE GetAt(POSITION position) const;
   
  Diese Inline-Funktionsaufrufe `BASE_CLASS` **:: GetAt**.  
   
-##  <a name="a-namegetheada--ctypedptrlistgethead"></a><a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>CTypedPtrList::GetHead  
  Ruft die Zeiger, der das Head-Element der Liste darstellt.  
   
 ```  
@@ -209,7 +220,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>Hinweise  
  Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf von `GetHead`. Wenn die Liste leer ist, überprüft dann die Version der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](../../mfc/reference/coblist-class.md#isempty) zu überprüfen, ob die Liste Elemente enthält.  
   
-##  <a name="a-namegetnexta--ctypedptrlistgetnext"></a><a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>CTypedPtrList::GetNext  
  Ruft das Listenelement identifizierten `rPosition`, dann wird `rPosition` an der **POSITION** Wert des nächsten Eintrag in der Liste.  
   
 ```  
@@ -238,7 +249,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  Es ist möglich, ein Element während einer Iteration zu entfernen. Siehe das Beispiel für [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
   
-##  <a name="a-namegetpreva--ctypedptrlistgetprev"></a><a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>CTypedPtrList::GetPrev  
  Ruft das Listenelement identifizierten `rPosition`, dann wird `rPosition` an der **POSITION** Wert des vorherigen Eintrags in der Liste.  
   
 ```  
@@ -265,7 +276,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  Wenn das abgerufene Element der erste in der Liste dann den neuen Wert der `rPosition` Wert **NULL**.  
   
-##  <a name="a-namegettaila--ctypedptrlistgettail"></a><a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>CTypedPtrList::GetTail  
  Ruft die Zeiger, der das Head-Element der Liste darstellt.  
   
 ```  
@@ -285,7 +296,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>Hinweise  
  Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf von `GetTail`. Wenn die Liste leer ist, überprüft dann die Version der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](../../mfc/reference/coblist-class.md#isempty) zu überprüfen, ob die Liste Elemente enthält.  
   
-##  <a name="a-nameremoveheada--ctypedptrlistremovehead"></a><a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
  Entfernt das Element am Anfang der Liste, und gibt es zurück.  
   
 ```  
@@ -302,7 +313,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>Hinweise  
  Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf von `RemoveHead`. Wenn die Liste leer ist, überprüft dann die Version der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](../../mfc/reference/coblist-class.md#isempty) zu überprüfen, ob die Liste Elemente enthält.  
   
-##  <a name="a-nameremovetaila--ctypedptrlistremovetail"></a><a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
  Entfernt das Element, das Ende der Liste aus, und gibt es zurück.  
   
 ```  
@@ -319,7 +330,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>Hinweise  
  Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf von `RemoveTail`. Wenn die Liste leer ist, überprüft dann die Version der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](../../mfc/reference/coblist-class.md#isempty) zu überprüfen, ob die Liste Elemente enthält.  
   
-##  <a name="a-namesetata--ctypedptrlistsetat"></a><a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>CTypedPtrList::SetAt  
  Diese Memberfunktion ruft `BASE_CLASS` **:: SetAt**.  
   
 ```  

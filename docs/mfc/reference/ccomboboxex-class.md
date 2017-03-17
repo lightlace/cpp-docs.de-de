@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComboBoxEx
+- AFXCMN/CComboBoxEx
+- AFXCMN/CComboBoxEx::CComboBoxEx
+- AFXCMN/CComboBoxEx::Create
+- AFXCMN/CComboBoxEx::CreateEx
+- AFXCMN/CComboBoxEx::DeleteItem
+- AFXCMN/CComboBoxEx::GetComboBoxCtrl
+- AFXCMN/CComboBoxEx::GetEditCtrl
+- AFXCMN/CComboBoxEx::GetExtendedStyle
+- AFXCMN/CComboBoxEx::GetImageList
+- AFXCMN/CComboBoxEx::GetItem
+- AFXCMN/CComboBoxEx::HasEditChanged
+- AFXCMN/CComboBoxEx::InsertItem
+- AFXCMN/CComboBoxEx::SetExtendedStyle
+- AFXCMN/CComboBoxEx::SetImageList
+- AFXCMN/CComboBoxEx::SetItem
+- AFXCMN/CComboBoxEx::SetWindowTheme
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,14 +134,14 @@ class CComboBoxEx : public CComboBox
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcmn.h  
   
-##  <a name="a-nameccomboboxexa--ccomboboxexccomboboxex"></a><a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
+##  <a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
  Rufen Sie diese Memberfunktion zum Erstellen einer `CComboBoxEx` Objekt.  
   
 ```  
 CComboBoxEx();
 ```  
   
-##  <a name="a-namecreatea--ccomboboxexcreate"></a><a name="create"></a>CComboBoxEx::Create  
+##  <a name="create"></a>CComboBoxEx::Create  
  Das Kombinationsfeld erstellt, und fügt es der `CComboBoxEx` Objekt.  
   
 ```  
@@ -177,7 +193,7 @@ virtual BOOL Create(
   
  Wenn Sie erweiterte Fensterstile mit dem Steuerelement verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von **erstellen**.  
   
-##  <a name="a-namecreateexa--ccomboboxexcreateex"></a><a name="createex"></a>CComboBoxEx::CreateEx  
+##  <a name="createex"></a>CComboBoxEx::CreateEx  
  Rufen Sie diese Funktion zum Erstellen eines erweiterten Kombinationsfeld-Steuerelements (ein untergeordnetes Fenster), und ordnen sie die `CComboBoxEx` Objekt.  
   
 ```  
@@ -213,7 +229,7 @@ virtual BOOL CreateEx(
   
  `CreateEx`das Steuerelement erstellt, mit der erweiterten Fensterstile angegebenen `dwExStyle`. Sie müssen Erweiterte Stile bestimmten festlegen, auf einem erweiterten Kombinationsfeld ein Steuerelement [SetExtendedStyle](#setextendedstyle). Verwenden Sie z. B. `CreateEx` solche Stile als festlegen **WS_EX_CONTEXTHELP**, jedoch verwenden `SetExtendedStyle` solche Stile als festlegen **CBES_EX_CASESENSITIVE**. Weitere Informationen finden Sie die Stile, die in diesem Thema beschriebenen [ComboBoxEx Steuerelementtypen erweiterte](http://msdn.microsoft.com/library/windows/desktop/bb775742) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedeleteitema--ccomboboxexdeleteitem"></a><a name="deleteitem"></a>CComboBoxEx::DeleteItem  
+##  <a name="deleteitem"></a>CComboBoxEx::DeleteItem  
  Entfernt ein Element aus einer **ComboBoxEx** Steuerelement.  
   
 ```  
@@ -230,7 +246,7 @@ int DeleteItem(int iIndex);
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion implementiert die Funktionalität der Nachricht [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Beim Aufruf von DeleteItem, ein [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) message mit **CBEN_DELETEITEM wird** Benachrichtigung wird an das übergeordnete Fenster gesendet werden.  
   
-##  <a name="a-namegetcomboboxctrla--ccomboboxexgetcomboboxctrl"></a><a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
+##  <a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
  Rufen Sie diese Memberfunktion zum Abrufen eines Zeigers auf ein Kombinationsfeld-Steuerelement in ein `CComboBoxEx` Objekt.  
   
 ```  
@@ -245,7 +261,7 @@ CComboBox* GetComboBoxCtrl();
   
  Das `CComboBox` Objekt, auf das durch den Rückgabewert ist ein temporäres Objekt und wird während der nächsten Verarbeitung Leerlaufzeit zerstört.  
   
-##  <a name="a-namegeteditctrla--ccomboboxexgeteditctrl"></a><a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
+##  <a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
  Rufen Sie diese Memberfunktion zum Abrufen eines Zeigers auf das Steuerelement zum Bearbeiten für ein Kombinationsfeld.  
   
 ```  
@@ -260,7 +276,7 @@ CEdit* GetEditCtrl();
   
  Das `CEdit` Objekt, auf das durch den Rückgabewert ist ein temporäres Objekt und wird während der nächsten Verarbeitung Leerlaufzeit zerstört.  
   
-##  <a name="a-namegetextendedstylea--ccomboboxexgetextendedstyle"></a><a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
  Rufen Sie diese Memberfunktion, um die erweiterten Stile, die zum Abrufen einer `CComboBoxEx` Steuerelement.  
   
 ```  
@@ -273,7 +289,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [ComboBoxEx Steuerelementtypen erweiterte](http://msdn.microsoft.com/library/windows/desktop/bb775742) in den [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Weitere Informationen zu diesen Formaten.  
   
-##  <a name="a-namegetimagelista--ccomboboxexgetimagelist"></a><a name="getimagelist"></a>CComboBoxEx::GetImageList  
+##  <a name="getimagelist"></a>CComboBoxEx::GetImageList  
  Rufen Sie diese Memberfunktion zum Abrufen eines Zeigers auf die Bildliste durch ein `CComboBoxEx` Steuerelement.  
   
 ```  
@@ -286,7 +302,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>Hinweise  
  Das `CImageList` Objekt, auf das durch den Rückgabewert ist ein temporäres Objekt und wird während der nächsten Verarbeitung Leerlaufzeit zerstört.  
   
-##  <a name="a-namegetitema--ccomboboxexgetitem"></a><a name="getitem"></a>:: GetItem  
+##  <a name="getitem"></a>:: GetItem  
  Ruft die Elementinformationen für einen bestimmten **ComboBoxEx** Element.  
   
 ```  
@@ -303,7 +319,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion implementiert die Funktionalität der Nachricht [CBEM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775779), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namehaseditchangeda--ccomboboxexhaseditchanged"></a><a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
+##  <a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
  Bestimmt, ob der Benutzer den Inhalt des geänderten der **ComboBoxEx** edit-Steuerelement eingeben.  
   
 ```  
@@ -316,7 +332,7 @@ BOOL HasEditChanged();
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion implementiert die Funktionalität der Nachricht [CBEM_HASEDITCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb775782), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinsertitema--ccomboboxexinsertitem"></a><a name="insertitem"></a>CComboBoxEx:: InsertItem  
+##  <a name="insertitem"></a>CComboBoxEx:: InsertItem  
  Fügt ein neues Element in einem **ComboBoxEx** Steuerelement.  
   
 ```  
@@ -333,7 +349,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Hinweise  
  Beim Aufruf von `InsertItem`, [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) message mit [CBEN_INSERTITEM wird](http://msdn.microsoft.com/library/windows/desktop/bb775764) Benachrichtigung wird an das übergeordnete Fenster gesendet werden.  
   
-##  <a name="a-namesetextendedstylea--ccomboboxexsetextendedstyle"></a><a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
  Rufen Sie diese Memberfunktion zum legen Sie die erweiterten Stile, die für ein Kombinationsfeld, das erweiterte Steuerelement verwendet.  
   
 ```  
@@ -357,7 +373,7 @@ DWORD SetExtendedStyle(
   
  Verwenden Sie zum Erstellen ein Kombinationsfeld-Steuerelement mit erweiterten Fensterstile erweiterte [CreateEx](#createex).  
   
-##  <a name="a-namesetimagelista--ccomboboxexsetimagelist"></a><a name="setimagelist"></a>CComboBoxEx:: SetImageList  
+##  <a name="setimagelist"></a>CComboBoxEx:: SetImageList  
  Eine Bildliste für eine **ComboBoxEx** Steuerelement.  
   
 ```  
@@ -376,7 +392,7 @@ CImageList* SetImageList(CImageList* pImageList);
   
  Das `CImageList` Objekt, auf das durch den Rückgabewert ist ein temporäres Objekt und wird während der nächsten Verarbeitung Leerlaufzeit zerstört.  
   
-##  <a name="a-namesetitema--ccomboboxexsetitem"></a><a name="setitem"></a>CComboBoxEx::SetItem  
+##  <a name="setitem"></a>CComboBoxEx::SetItem  
  Legt die Attribute für ein Element in einem **ComboBoxEx** Steuerelement.  
   
 ```  
@@ -393,7 +409,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion implementiert die Funktionalität der Nachricht [CBEM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775788), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetwindowthemea--ccomboboxexsetwindowtheme"></a><a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
+##  <a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
  Legt den visuellen Stil der erweiterten Kombinationsfeld-Steuerelement fest.  
   
 ```  

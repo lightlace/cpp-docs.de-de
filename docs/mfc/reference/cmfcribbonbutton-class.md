@@ -10,6 +10,61 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonButton
+- AFXRIBBONBUTTON/CMFCRibbonButton
+- AFXRIBBONBUTTON/CMFCRibbonButton::CMFCRibbonButton
+- AFXRIBBONBUTTON/CMFCRibbonButton::AddSubItem
+- AFXRIBBONBUTTON/CMFCRibbonButton::CanBeStretched
+- AFXRIBBONBUTTON/CMFCRibbonButton::CleanUpSizes
+- AFXRIBBONBUTTON/CMFCRibbonButton::ClosePopupMenu
+- AFXRIBBONBUTTON/CMFCRibbonButton::DrawBottomText
+- AFXRIBBONBUTTON/CMFCRibbonButton::DrawImage
+- AFXRIBBONBUTTON/CMFCRibbonButton::DrawRibbonText
+- AFXRIBBONBUTTON/CMFCRibbonButton::FindSubItemIndexByID
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetCommandRect
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetCompactSize
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetIcon
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetImageIndex
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetImageSize
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetIntermediateSize
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetMenu
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetMenuRect
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetRegularSize
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetSubItems
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetTextRowHeight
+- AFXRIBBONBUTTON/CMFCRibbonButton::GetToolTipText
+- AFXRIBBONBUTTON/CMFCRibbonButton::HasCompactMode
+- AFXRIBBONBUTTON/CMFCRibbonButton::HasIntermediateMode
+- AFXRIBBONBUTTON/CMFCRibbonButton::HasLargeMode
+- AFXRIBBONBUTTON/CMFCRibbonButton::HasMenu
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsAlwaysDrawBorder
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsAlwaysLargeImage
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsApplicationButton
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsCommandAreaHighlighted
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsDefaultCommand
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsDefaultPanelButton
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsDrawTooltipImage
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsLargeImage
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsMenuAreaHighlighted
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsMenuOnBottom
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsPopupDefaultMenuLook
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsRightAlignMenu
+- AFXRIBBONBUTTON/CMFCRibbonButton::IsSingleLineText
+- AFXRIBBONBUTTON/CMFCRibbonButton::OnCalcTextSize
+- AFXRIBBONBUTTON/CMFCRibbonButton::OnDrawBorder
+- AFXRIBBONBUTTON/CMFCRibbonButton::OnDraw
+- AFXRIBBONBUTTON/CMFCRibbonButton::OnFillBackground
+- AFXRIBBONBUTTON/CMFCRibbonButton::RemoveAllSubItems
+- AFXRIBBONBUTTON/CMFCRibbonButton::RemoveSubItem
+- AFXRIBBONBUTTON/CMFCRibbonButton::SetACCData
+- AFXRIBBONBUTTON/CMFCRibbonButton::SetAlwaysLargeImage
+- AFXRIBBONBUTTON/CMFCRibbonButton::SetDefaultCommand
+- AFXRIBBONBUTTON/CMFCRibbonButton::SetDescription
+- AFXRIBBONBUTTON/CMFCRibbonButton::SetImageIndex
+- AFXRIBBONBUTTON/CMFCRibbonButton::SetMenu
+- AFXRIBBONBUTTON/CMFCRibbonButton::SetParentCategory
+- AFXRIBBONBUTTON/CMFCRibbonButton::SetRightAlignMenu
+- AFXRIBBONBUTTON/CMFCRibbonButton::SetText
+- AFXRIBBONBUTTON/CMFCRibbonButton::OnClick
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -157,7 +212,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxribbonbutton.h  
   
-##  <a name="a-nameaddsubitema--cmfcribbonbuttonaddsubitem"></a><a name="addsubitem"></a>CMFCRibbonButton::AddSubItem  
+##  <a name="addsubitem"></a>CMFCRibbonButton::AddSubItem  
  Fügt ein Menüelement zu dem Popup-Menü hinzu, dem die Schaltfläche zugeordnet ist.  
   
 ```  
@@ -173,7 +228,7 @@ void AddSubItem(
  [in] `nIndex`  
  Gibt den Index, an dem das Element in das Array von Menüelementen der Schaltfläche hinzugefügt.&1;, um das Element am Ende des Arrays der Menüelemente hinzufügen.  
   
-##  <a name="a-namecanbestretcheda--cmfcribbonbuttoncanbestretched"></a><a name="canbestretched"></a>CMFCRibbonButton::CanBeStretched  
+##  <a name="canbestretched"></a>CMFCRibbonButton::CanBeStretched  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -184,7 +239,7 @@ virtual BOOL CanBeStretched();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namecleanupsizesa--cmfcribbonbuttoncleanupsizes"></a><a name="cleanupsizes"></a>CMFCRibbonButton::CleanUpSizes  
+##  <a name="cleanupsizes"></a>CMFCRibbonButton::CleanUpSizes  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -193,7 +248,7 @@ virtual void CleanUpSizes();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameclosepopupmenua--cmfcribbonbuttonclosepopupmenu"></a><a name="closepopupmenu"></a>CMFCRibbonButton::ClosePopupMenu  
+##  <a name="closepopupmenu"></a>CMFCRibbonButton::ClosePopupMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -202,7 +257,7 @@ virtual void ClosePopupMenu();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namecmfcribbonbuttona--cmfcribbonbuttoncmfcribbonbutton"></a><a name="cmfcribbonbutton"></a>CMFCRibbonButton::CMFCRibbonButton  
+##  <a name="cmfcribbonbutton"></a>CMFCRibbonButton::CMFCRibbonButton  
  Erstellt ein Menüband-Schaltflächenobjekt.  
   
 ```  
@@ -244,7 +299,7 @@ CMFCRibbonButton(
   
  [!code-cpp[NVC_MFC_RibbonApp&6;](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]  
   
-##  <a name="a-namedrawbottomtexta--cmfcribbonbuttondrawbottomtext"></a><a name="drawbottomtext"></a>CMFCRibbonButton::DrawBottomText  
+##  <a name="drawbottomtext"></a>CMFCRibbonButton::DrawBottomText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -261,7 +316,7 @@ CSize DrawBottomText(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedrawimagea--cmfcribbonbuttondrawimage"></a><a name="drawimage"></a>CMFCRibbonButton::DrawImage  
+##  <a name="drawimage"></a>CMFCRibbonButton::DrawImage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -278,7 +333,7 @@ virtual void DrawImage(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedrawribbontexta--cmfcribbonbuttondrawribbontext"></a><a name="drawribbontext"></a>CMFCRibbonButton::DrawRibbonText  
+##  <a name="drawribbontext"></a>CMFCRibbonButton::DrawRibbonText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -301,7 +356,7 @@ virtual int DrawRibbonText(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namefindsubitemindexbyida--cmfcribbonbuttonfindsubitemindexbyid"></a><a name="findsubitemindexbyid"></a>CMFCRibbonButton::FindSubItemIndexByID  
+##  <a name="findsubitemindexbyid"></a>CMFCRibbonButton::FindSubItemIndexByID  
  Gibt den Index eines Popupmenü-Elements zurück, das der angegebenen Befehls-ID zugeordnet ist.  
   
 ```  
@@ -315,7 +370,7 @@ int FindSubItemIndexByID(UINT uiID) const;
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index des untergeordneten Elements, das zugeordnet ist die `uiID`. 1, wenn kein solcher untergeordnete Element vorhanden ist.  
   
-##  <a name="a-namegetcommandrecta--cmfcribbonbuttongetcommandrect"></a><a name="getcommandrect"></a>CMFCRibbonButton::GetCommandRect  
+##  <a name="getcommandrect"></a>CMFCRibbonButton::GetCommandRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -326,7 +381,7 @@ CRect GetCommandRect() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetcompactsizea--cmfcribbonbuttongetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonButton::GetCompactSize  
+##  <a name="getcompactsize"></a>CMFCRibbonButton::GetCompactSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -340,7 +395,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegeticona--cmfcribbonbuttongeticon"></a><a name="geticon"></a>CMFCRibbonButton::GetIcon  
+##  <a name="geticon"></a>CMFCRibbonButton::GetIcon  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -354,7 +409,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetimageindexa--cmfcribbonbuttongetimageindex"></a><a name="getimageindex"></a>CMFCRibbonButton::GetImageIndex  
+##  <a name="getimageindex"></a>CMFCRibbonButton::GetImageIndex  
  Gibt den Index des Bilds zurück, das der Schaltfläche zugeordnet ist.  
   
 ```  
@@ -368,7 +423,7 @@ int GetImageIndex(BOOL bLargeImage) const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Index, der das Bild der Schaltfläche in der Liste zugeordnete Bild.  
   
-##  <a name="a-namegetimagesizea--cmfcribbonbuttongetimagesize"></a><a name="getimagesize"></a>CMFCRibbonButton::GetImageSize  
+##  <a name="getimagesize"></a>CMFCRibbonButton::GetImageSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -382,7 +437,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetintermediatesizea--cmfcribbonbuttongetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonButton::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>CMFCRibbonButton::GetIntermediateSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -396,7 +451,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetmenua--cmfcribbonbuttongetmenu"></a><a name="getmenu"></a>CMFCRibbonButton::GetMenu  
+##  <a name="getmenu"></a>CMFCRibbonButton::GetMenu  
  Gibt ein Handle für ein Windows-Menü zurück, das der Menüband-Schaltfläche zugewiesen ist.  
   
 ```  
@@ -406,7 +461,7 @@ HMENU GetMenu() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle für ein Windows-Menü auf die Schaltfläche zugewiesen werden soll; `NULL` befindet sich kein Menü zugewiesen.  
   
-##  <a name="a-namegetmenurecta--cmfcribbonbuttongetmenurect"></a><a name="getmenurect"></a>CMFCRibbonButton::GetMenuRect  
+##  <a name="getmenurect"></a>CMFCRibbonButton::GetMenuRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -417,7 +472,7 @@ CRect GetMenuRect() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetregularsizea--cmfcribbonbuttongetregularsize"></a><a name="getregularsize"></a>CMFCRibbonButton::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonButton::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -431,7 +486,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetsubitemsa--cmfcribbonbuttongetsubitems"></a><a name="getsubitems"></a>CMFCRibbonButton::GetSubItems  
+##  <a name="getsubitems"></a>CMFCRibbonButton::GetSubItems  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -442,7 +497,7 @@ const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() cons
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettextrowheighta--cmfcribbonbuttongettextrowheight"></a><a name="gettextrowheight"></a>CMFCRibbonButton::GetTextRowHeight  
+##  <a name="gettextrowheight"></a>CMFCRibbonButton::GetTextRowHeight  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -453,7 +508,7 @@ int GetTextRowHeight() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettooltiptexta--cmfcribbonbuttongettooltiptext"></a><a name="gettooltiptext"></a>CMFCRibbonButton::GetToolTipText  
+##  <a name="gettooltiptext"></a>CMFCRibbonButton::GetToolTipText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -464,7 +519,7 @@ virtual CString GetToolTipText() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namehascompactmodea--cmfcribbonbuttonhascompactmode"></a><a name="hascompactmode"></a>CMFCRibbonButton::HasCompactMode  
+##  <a name="hascompactmode"></a>CMFCRibbonButton::HasCompactMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -475,7 +530,7 @@ virtual BOOL HasCompactMode() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namehasintermediatemodea--cmfcribbonbuttonhasintermediatemode"></a><a name="hasintermediatemode"></a>CMFCRibbonButton::HasIntermediateMode  
+##  <a name="hasintermediatemode"></a>CMFCRibbonButton::HasIntermediateMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -486,7 +541,7 @@ virtual BOOL HasIntermediateMode() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namehaslargemodea--cmfcribbonbuttonhaslargemode"></a><a name="haslargemode"></a>CMFCRibbonButton::HasLargeMode  
+##  <a name="haslargemode"></a>CMFCRibbonButton::HasLargeMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -497,7 +552,7 @@ virtual BOOL HasLargeMode() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namehasmenua--cmfcribbonbuttonhasmenu"></a><a name="hasmenu"></a>CMFCRibbonButton::HasMenu  
+##  <a name="hasmenu"></a>CMFCRibbonButton::HasMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -508,7 +563,7 @@ virtual BOOL HasMenu() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisalwaysdrawbordera--cmfcribbonbuttonisalwaysdrawborder"></a><a name="isalwaysdrawborder"></a>CMFCRibbonButton::IsAlwaysDrawBorder  
+##  <a name="isalwaysdrawborder"></a>CMFCRibbonButton::IsAlwaysDrawBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -519,7 +574,7 @@ virtual BOOL IsAlwaysDrawBorder() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisalwayslargeimagea--cmfcribbonbuttonisalwayslargeimage"></a><a name="isalwayslargeimage"></a>CMFCRibbonButton::IsAlwaysLargeImage  
+##  <a name="isalwayslargeimage"></a>CMFCRibbonButton::IsAlwaysLargeImage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -530,7 +585,7 @@ virtual BOOL IsAlwaysLargeImage() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisapplicationbuttona--cmfcribbonbuttonisapplicationbutton"></a><a name="isapplicationbutton"></a>CMFCRibbonButton::IsApplicationButton  
+##  <a name="isapplicationbutton"></a>CMFCRibbonButton::IsApplicationButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -541,7 +596,7 @@ virtual BOOL IsApplicationButton() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameiscommandareahighlighteda--cmfcribbonbuttoniscommandareahighlighted"></a><a name="iscommandareahighlighted"></a>CMFCRibbonButton::IsCommandAreaHighlighted  
+##  <a name="iscommandareahighlighted"></a>CMFCRibbonButton::IsCommandAreaHighlighted  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -552,7 +607,7 @@ virtual BOOL IsCommandAreaHighlighted() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisdefaultcommanda--cmfcribbonbuttonisdefaultcommand"></a><a name="isdefaultcommand"></a>CMFCRibbonButton::IsDefaultCommand  
+##  <a name="isdefaultcommand"></a>CMFCRibbonButton::IsDefaultCommand  
  Gibt an, ob es sich bei der Standardbefehl für eine Schaltfläche der Multifunktionsleiste aktiviert ist.  
   
 ```  
@@ -562,7 +617,7 @@ BOOL IsDefaultCommand() const;
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn Sie den Standardbefehl für eine Schaltfläche der Multifunktionsleiste aktiviert haben. `FALSE` andernfalls.  
   
-##  <a name="a-nameisdefaultpanelbuttona--cmfcribbonbuttonisdefaultpanelbutton"></a><a name="isdefaultpanelbutton"></a>CMFCRibbonButton::IsDefaultPanelButton  
+##  <a name="isdefaultpanelbutton"></a>CMFCRibbonButton::IsDefaultPanelButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -573,7 +628,7 @@ virtual BOOL IsDefaultPanelButton() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisdrawtooltipimagea--cmfcribbonbuttonisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>CMFCRibbonButton::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>CMFCRibbonButton::IsDrawTooltipImage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -584,7 +639,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameislargeimagea--cmfcribbonbuttonislargeimage"></a><a name="islargeimage"></a>CMFCRibbonButton::IsLargeImage  
+##  <a name="islargeimage"></a>CMFCRibbonButton::IsLargeImage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -595,7 +650,7 @@ BOOL IsLargeImage() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameismenuareahighlighteda--cmfcribbonbuttonismenuareahighlighted"></a><a name="ismenuareahighlighted"></a>CMFCRibbonButton::IsMenuAreaHighlighted  
+##  <a name="ismenuareahighlighted"></a>CMFCRibbonButton::IsMenuAreaHighlighted  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -606,7 +661,7 @@ virtual BOOL IsMenuAreaHighlighted() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameismenuonbottoma--cmfcribbonbuttonismenuonbottom"></a><a name="ismenuonbottom"></a>CMFCRibbonButton::IsMenuOnBottom  
+##  <a name="ismenuonbottom"></a>CMFCRibbonButton::IsMenuOnBottom  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -617,7 +672,7 @@ BOOL IsMenuOnBottom() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameispopupdefaultmenulooka--cmfcribbonbuttonispopupdefaultmenulook"></a><a name="ispopupdefaultmenulook"></a>CMFCRibbonButton::IsPopupDefaultMenuLook  
+##  <a name="ispopupdefaultmenulook"></a>CMFCRibbonButton::IsPopupDefaultMenuLook  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -628,7 +683,7 @@ virtual BOOL IsPopupDefaultMenuLook() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisrightalignmenua--cmfcribbonbuttonisrightalignmenu"></a><a name="isrightalignmenu"></a>CMFCRibbonButton::IsRightAlignMenu  
+##  <a name="isrightalignmenu"></a>CMFCRibbonButton::IsRightAlignMenu  
  Gibt an, ob das Menü rechts ausgerichtet ist.  
   
 ```  
@@ -638,7 +693,7 @@ BOOL IsRightAlignMenu() const;
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn Sie im Menü rechts ausgerichtet ist. andernfalls `FALSE`.  
   
-##  <a name="a-nameissinglelinetexta--cmfcribbonbuttonissinglelinetext"></a><a name="issinglelinetext"></a>CMFCRibbonButton::IsSingleLineText  
+##  <a name="issinglelinetext"></a>CMFCRibbonButton::IsSingleLineText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -649,7 +704,7 @@ BOOL IsSingleLineText() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameoncalctextsizea--cmfcribbonbuttononcalctextsize"></a><a name="oncalctextsize"></a>CMFCRibbonButton::OnCalcTextSize  
+##  <a name="oncalctextsize"></a>CMFCRibbonButton::OnCalcTextSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -661,7 +716,7 @@ virtual void OnCalcTextSize(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonclicka--cmfcribbonbuttononclick"></a><a name="onclick"></a>CMFCRibbonButton::OnClick  
+##  <a name="onclick"></a>CMFCRibbonButton::OnClick  
  Wird vom Framework aufgerufen, wenn der Benutzer auf die Schaltfläche klickt.  
   
 ```  
@@ -675,7 +730,7 @@ virtual void OnClick(CPoint point);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie dieses Ereignis behandeln möchten.  
   
-##  <a name="a-nameondrawa--cmfcribbonbuttonondraw"></a><a name="ondraw"></a>CMFCRibbonButton::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonButton::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -687,7 +742,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawbordera--cmfcribbonbuttonondrawborder"></a><a name="ondrawborder"></a>CMFCRibbonButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCRibbonButton::OnDrawBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -699,7 +754,7 @@ virtual void OnDrawBorder(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonfillbackgrounda--cmfcribbonbuttononfillbackground"></a><a name="onfillbackground"></a>CMFCRibbonButton::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCRibbonButton::OnFillBackground  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -713,14 +768,14 @@ virtual COLORREF OnFillBackground(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameremoveallsubitemsa--cmfcribbonbuttonremoveallsubitems"></a><a name="removeallsubitems"></a>CMFCRibbonButton::RemoveAllSubItems  
+##  <a name="removeallsubitems"></a>CMFCRibbonButton::RemoveAllSubItems  
  Entfernt alle Menüelemente aus dem Popupmenü.  
   
 ```  
 void RemoveAllSubItems();
 ```  
   
-##  <a name="a-nameremovesubitema--cmfcribbonbuttonremovesubitem"></a><a name="removesubitem"></a>CMFCRibbonButton::RemoveSubItem  
+##  <a name="removesubitem"></a>CMFCRibbonButton::RemoveSubItem  
  Entfernt ein Menüelement aus dem Popupmenü.  
   
 ```  
@@ -734,7 +789,7 @@ BOOL RemoveSubItem(int nIndex);
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn das angegebene Element erfolgreich entfernt wurde; andernfalls `FALSE` Wenn `nIndex` ist negativ oder größer als die Anzahl der Menüelemente im Popup-Menü.  
   
-##  <a name="a-namesetaccdataa--cmfcribbonbuttonsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonButton::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonButton::SetACCData  
  Legt die Barrierefreiheitsdaten für die Menübandschaltfläche fest.  
   
 ```  
@@ -755,7 +810,7 @@ virtual BOOL SetACCData(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetalwayslargeimagea--cmfcribbonbuttonsetalwayslargeimage"></a><a name="setalwayslargeimage"></a>CMFCRibbonButton::SetAlwaysLargeImage  
+##  <a name="setalwayslargeimage"></a>CMFCRibbonButton::SetAlwaysLargeImage  
  Gibt an, ob für die Schaltfläche ein großes oder ein kleines Bild angezeigt wird, wenn die Schaltfläche vom Benutzer reduziert wird.  
   
 ```  
@@ -766,7 +821,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
  [in] `bSet`  
  Wenn `TRUE`, die Schaltfläche ein großes Bild anzeigt. Andernfalls wird die Schaltfläche ein kleines Bild angezeigt.  
   
-##  <a name="a-namesetdefaultcommanda--cmfcribbonbuttonsetdefaultcommand"></a><a name="setdefaultcommand"></a>CMFCRibbonButton::SetDefaultCommand  
+##  <a name="setdefaultcommand"></a>CMFCRibbonButton::SetDefaultCommand  
  Aktiviert den Standardbefehl für die Menübandschaltfläche.  
   
 ```  
@@ -780,7 +835,7 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ### <a name="remarks"></a>Hinweise  
  `bSet`trifft nur, wenn die Schaltfläche ein Menü aufweist. Wenn `bSet` ist `TRUE`, die Schaltfläche kann den Standardbefehl ausführen und im Popupmenü zugewiesenen erscheint nur, wenn ein Benutzer den Pfeil am rechten Rand der Schaltfläche klickt. Andernfalls die Schaltfläche den Standardbefehl kann nicht ausgeführt werden, und im Popupmenü angezeigt wird, unabhängig davon, welcher Bereich der Schaltfläche der Benutzer klickt.  
   
-##  <a name="a-namesetdescriptiona--cmfcribbonbuttonsetdescription"></a><a name="setdescription"></a>CMFCRibbonButton::SetDescription  
+##  <a name="setdescription"></a>CMFCRibbonButton::SetDescription  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -792,7 +847,7 @@ virtual void SetDescription(LPCTSTR lpszText);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetimageindexa--cmfcribbonbuttonsetimageindex"></a><a name="setimageindex"></a>CMFCRibbonButton::SetImageIndex  
+##  <a name="setimageindex"></a>CMFCRibbonButton::SetImageIndex  
  Weist dem Schaltflächenbild einen Index zu.  
   
 ```  
@@ -808,7 +863,7 @@ void SetImageIndex(
  [in] `bLargeImage`  
  Wenn `TRUE`, der angegebene Index bezieht sich auf die Liste von Bildern. Andernfalls verweist der Index der Liste der kleine Bilder.  
   
-##  <a name="a-namesetmenua--cmfcribbonbuttonsetmenu"></a><a name="setmenu"></a>CMFCRibbonButton::SetMenu  
+##  <a name="setmenu"></a>CMFCRibbonButton::SetMenu  
  Weist der Menüband-Schaltfläche ein Popupmenü zu.  
   
 ```  
@@ -839,7 +894,7 @@ void SetMenu(
 ### <a name="remarks"></a>Hinweise  
  Wenn die Anwendung im Menü die Schaltfläche zugewiesen wurde, zeigt die Schaltfläche einen Pfeil nach rechts. Wenn `bIsDefaultCommand` ist `TRUE`, klicken Sie im Menü erscheint nur, wenn der Benutzer die Taste klickt. Wenn der Benutzer auf die Schaltfläche klickt, wird der standardmäßige Befehl ausgeführt. Wenn `bIsDefaultCommand` ist `FALSE`, klicken Sie im Menü angezeigt wird, indem Sie auf die Schaltfläche klicken.  
   
-##  <a name="a-namesetparentcategorya--cmfcribbonbuttonsetparentcategory"></a><a name="setparentcategory"></a>CMFCRibbonButton::SetParentCategory  
+##  <a name="setparentcategory"></a>CMFCRibbonButton::SetParentCategory  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -851,7 +906,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetrightalignmenua--cmfcribbonbuttonsetrightalignmenu"></a><a name="setrightalignmenu"></a>CMFCRibbonButton::SetRightAlignMenu  
+##  <a name="setrightalignmenu"></a>CMFCRibbonButton::SetRightAlignMenu  
  Richtet das Popupmenü an den Rand der Schaltfläche.  
   
 ```  
@@ -862,7 +917,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
  [in] `bSet`  
  Wenn `TRUE`, klicken Sie im Menü wird rechts ausgerichtet. Andernfalls ist das Menü links ausgerichtete  
   
-##  <a name="a-namesettexta--cmfcribbonbuttonsettext"></a><a name="settext"></a>CMFCRibbonButton::SetText  
+##  <a name="settext"></a>CMFCRibbonButton::SetText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

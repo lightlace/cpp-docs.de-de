@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogBar
+- AFXEXT/CDialogBar
+- AFXEXT/CDialogBar::CDialogBar
+- AFXEXT/CDialogBar::Create
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +91,14 @@ class CDialogBar : public CControlBar
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxext.h  
   
-##  <a name="a-namecdialogbara--cdialogbarcdialogbar"></a><a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
  Erstellt ein `CDialogBar`-Objekt.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="a-namecreatea--cdialogbarcreate"></a><a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>CDialogBar::Create  
  Lädt die Dialogfeld-Ressourcenvorlage angegebenen `lpszTemplateName` oder `nIDTemplate`, erstellt die Dialogleiste Fenster, legt den Stil und ordnet sie der `CDialogBar` Objekt.  
   
 ```  

@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStatusBar
+- AFXEXT/CStatusBar
+- AFXEXT/CStatusBar::CStatusBar
+- AFXEXT/CStatusBar::CommandToIndex
+- AFXEXT/CStatusBar::Create
+- AFXEXT/CStatusBar::CreateEx
+- AFXEXT/CStatusBar::DrawItem
+- AFXEXT/CStatusBar::GetItemID
+- AFXEXT/CStatusBar::GetItemRect
+- AFXEXT/CStatusBar::GetPaneInfo
+- AFXEXT/CStatusBar::GetPaneStyle
+- AFXEXT/CStatusBar::GetPaneText
+- AFXEXT/CStatusBar::GetStatusBarCtrl
+- AFXEXT/CStatusBar::SetIndicators
+- AFXEXT/CStatusBar::SetPaneInfo
+- AFXEXT/CStatusBar::SetPaneStyle
+- AFXEXT/CStatusBar::SetPaneText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +138,7 @@ class CStatusBar : public CControlBar
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxext.h  
   
-##  <a name="a-namecommandtoindexa--cstatusbarcommandtoindex"></a><a name="commandtoindex"></a>CStatusBar::CommandToIndex  
+##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
  Ruft den Indikator Index für eine angegebene-ID.  
   
 ```  
@@ -139,7 +155,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>Hinweise  
  Der Index des ersten Indikators ist 0.  
   
-##  <a name="a-namecreatea--cstatusbarcreate"></a><a name="create"></a>CStatusBar::Create  
+##  <a name="create"></a>CStatusBar::Create  
  Erstellt eine Statusleiste (ein untergeordnetes Fenster), und ordnet sie der `CStatusBar` Objekt.  
   
 ```  
@@ -171,7 +187,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  Außerdem legt die ursprüngliche Schriftart und den Status des Balkens Höhe auf einen Standardwert.  
   
-##  <a name="a-namecreateexa--cstatusbarcreateex"></a><a name="createex"></a>CStatusBar:: CreateEx  
+##  <a name="createex"></a>CStatusBar:: CreateEx  
  Rufen Sie diese Funktion zum Erstellen einer Statusleiste (ein untergeordnetes Fenster), und ordnen sie die `CStatusBar` Objekt.  
   
 ```  
@@ -209,14 +225,14 @@ virtual BOOL CreateEx(
   
  Verwendung `CreateEx`, anstelle von [erstellen](#create), wenn bestimmte Formatvorlagen während der Erstellung der eingebetteten Statusleiste-Steuerelement vorhanden sein müssen. Legen Sie z. B. `dwCtrlStyle` auf **SBT_TOOLTIPS** zum Anzeigen von QuickInfos in einem Status Bar-Objekt.  
   
-##  <a name="a-namecstatusbara--cstatusbarcstatusbar"></a><a name="cstatusbar"></a>CStatusBar::CStatusBar  
+##  <a name="cstatusbar"></a>CStatusBar::CStatusBar  
  Erstellt ein `CStatusBar` -Objekt, eine Statusleiste Standardschriftart bei Bedarf erstellt und Eigenschaften der Schriftart auf Standardwerte festgelegt.  
   
 ```  
 CStatusBar();
 ```  
   
-##  <a name="a-namedrawitema--cstatusbardrawitem"></a><a name="drawitem"></a>CStatusBar::DrawItem  
+##  <a name="drawitem"></a>CStatusBar::DrawItem  
  Diese Memberfunktion wird von dem Framework, wenn sich ein Darstellungsaspekt eines ownerdrawn Statusleisten ändert aufgerufen.  
   
 ```  
@@ -230,7 +246,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>Hinweise  
  Die **ItemAction** Mitglied der `DRAWITEMSTRUCT` Struktur definiert die Zeichnen-Aktion, die ausgeführt werden soll. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für eine Ownerdrawn- `CStatusBar` Objekt. Die Anwendung sollte alle Grafiken Device Interface (GDI) Objekte ausgewählt, für der Anzeigekontext im angegebenen wiederherstellen `lpDrawItemStruct` vor dem Beenden von dieser Memberfunktion.  
   
-##  <a name="a-namegetitemida--cstatusbargetitemid"></a><a name="getitemid"></a>CStatusBar::GetItemID  
+##  <a name="getitemid"></a>CStatusBar::GetItemID  
  Gibt die ID des Indikators für den angegebenen `nIndex`.  
   
 ```  
@@ -244,7 +260,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>Rückgabewert  
  Die ID des Indikators für den angegebenen `nIndex`.  
   
-##  <a name="a-namegetitemrecta--cstatusbargetitemrect"></a><a name="getitemrect"></a>CStatusBar::GetItemRect  
+##  <a name="getitemrect"></a>CStatusBar::GetItemRect  
  Kopiert die Koordinaten des Indikators für den angegebenen `nIndex` in die Struktur, die auf den `lpRect`.  
   
 ```  
@@ -263,7 +279,7 @@ void GetItemRect(
 ### <a name="remarks"></a>Hinweise  
  Koordinaten werden in Pixel relativ zu der oberen linken Ecke der Statusleiste.  
   
-##  <a name="a-namegetpaneinfoa--cstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
+##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
  Legt `nID`, `nStyle`, und `cxWidth` -ID, Stil und Breite des Bereichs Indikator am angegebenen Speicherort `nIndex`.  
   
 ```  
@@ -287,7 +303,7 @@ void GetPaneInfo(
  `cxWidth`  
  Verweis auf eine ganze Zahl, die die Breite des Bereichs festgelegt wird.  
   
-##  <a name="a-namegetpanestylea--cstatusbargetpanestyle"></a><a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
+##  <a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
  Rufen Sie diese Memberfunktion, um den Stil der Statusleiste Bereich abzurufen.  
   
 ```  
@@ -306,7 +322,7 @@ UINT GetPaneStyle(int nIndex) const;
   
  Eine Liste der verfügbaren Statusleisten, finden Sie unter [erstellen](#create).  
   
-##  <a name="a-namegetpanetexta--cstatusbargetpanetext"></a><a name="getpanetext"></a>CStatusBar::GetPaneText  
+##  <a name="getpanetext"></a>CStatusBar::GetPaneText  
  Rufen Sie diese Memberfunktion zum Abrufen des Texts, der in einer Statusleiste angezeigt wird.  
   
 ```  
