@@ -9,7 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros.data
+- AFXDISP/DDX_OCBool
+- AFXDISP/DDX_OCBoolRO
+- AFXDISP/DDX_OCColor
+- AFXDISP/DDX_OCColorRO
+- AFXDISP/DDX_OCFloat
+- AFXDISP/DDX_OCFloatRO
+- AFXDISP/DDX_OCInt
+- AFXDISP/DDX_OCIntRO
+- AFXDISP/DDX_OCShort
+- AFXDISP/DDX_OCShortRO
+- AFXDISP/DDX_OCText
+- AFXDISP/DDX_OCTextRO
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +46,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 0f8821051cd790d26d190c23db333ccebc9dc9d6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 5c50690c1652c4136b7f52f852ddf201c9dd6c9b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Dialogdatenaustausch-Funktionen für OLE-Steuerelemente
@@ -60,7 +71,7 @@ Dieses Thema enthält die DDX_OC-Funktionen verwendet, um den Datenaustausch zwi
 |[DDX_OCText](#ddx_octext)|Verwaltet die Übertragung von **CString** Daten zwischen einer Eigenschaft ein OLE-Steuerelement und ein **CString** -Datenmember.|  
 |[DDX_OCTextRO](#ddx_octextro)|Verwaltet die Übertragung von **CString** Daten zwischen einer schreibgeschützten Eigenschaft ein OLE-Steuerelement und ein **CString** -Datenmember.|  
   
-##  <a name="a-nameddxocboola--ddxocbool"></a><a name="ddx_ocbool"></a>DDX_OCBool  
+##  <a name="ddx_ocbool"></a>DDX_OCBool  
  Die `DDX_OCBool` Funktion verwaltet die Übertragung von **BOOL** Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld bilden, Sicht oder Control-Objekt und ein **BOOL** -Datenmember des Dialogfelds, Formularansicht oder Control-Objekt.  
   
 ```   
@@ -88,9 +99,9 @@ void AFXAPI DDX_OCBool(
  Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und-Validierung](../../mfc/dialog-data-exchange-and-validation.md).  
   
 ### <a name="requirements"></a>Anforderungen  
-  **Header** afxdisp.h  
+  **Header:** afxdisp.h  
   
-##  <a name="a-nameddxocboolroa--ddxocboolro"></a><a name="ddx_ocboolro"></a>DDX_OCBoolRO  
+##  <a name="ddx_ocboolro"></a>DDX_OCBoolRO  
  Die `DDX_OCBoolRO` Funktion verwaltet die Übertragung von **BOOL** Daten zwischen einer nur-Lese Eigenschaft eines OLE-Steuerelements in einem Dialogfeld bilden, Sicht oder Control-Objekt und ein **BOOL** -Datenmember des Dialogfelds, Formularansicht oder Control-Objekt.  
   
 ```   
@@ -120,7 +131,7 @@ void AFXAPI DDX_OCBoolRO(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameddxoccolora--ddxoccolor"></a><a name="ddx_occolor"></a>DDX_OCColor  
+##  <a name="ddx_occolor"></a>DDX_OCColor  
  Die `DDX_OCColor` Funktion verwaltet die Übertragung von **OLE_COLOR** Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld bilden, Sicht oder Control-Objekt und ein **OLE_COLOR** -Datenmember des Dialogfelds, Formularansicht oder Control-Objekt.  
   
 ```   
@@ -150,7 +161,7 @@ void AFXAPI DDX_OCColor(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameddxoccolorroa--ddxoccolorro"></a><a name="ddx_occolorro"></a>DDX_OCColorRO  
+##  <a name="ddx_occolorro"></a>DDX_OCColorRO  
  Die `DDX_OCColorRO` Funktion verwaltet die Übertragung von **OLE_COLOR** Daten zwischen einer nur-Lese Eigenschaft eines OLE-Steuerelements in einem Dialogfeld bilden, Sicht oder Control-Objekt und ein **OLE_COLOR** -Datenmember des Dialogfelds, Formularansicht oder Control-Objekt.  
   
 ```   
@@ -180,7 +191,7 @@ void AFXAPI DDX_OCColorRO(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameddxocfloata--ddxocfloat"></a><a name="ddx_ocfloat"></a>DDX_OCFloat  
+##  <a name="ddx_ocfloat"></a>DDX_OCFloat  
  Die `DDX_OCFloat` Funktion verwaltet die Übertragung von **Float** (oder **doppelte**) von Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld bilden, Sicht oder Control-Objekt und ein **Float** (oder **doppelte**) Datenmember des Dialogfelds, Formularansicht oder Control-Objekt.  
   
 ```   
@@ -216,7 +227,7 @@ void AFXAPI DDX_OCFloat(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameddxocfloatroa--ddxocfloatro"></a><a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
+##  <a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
  Die `DDX_OCFloatRO` Funktion verwaltet die Übertragung von **Float** (oder **doppelte**) von Daten zwischen einer nur-Lese Eigenschaft eines OLE-Steuerelements in einem Dialogfeld bilden, Sicht oder Control-Objekt und ein **Float** (oder **doppelte**) Datenmember des Dialogfelds, Formularansicht oder Control-Objekt.  
   
 ```   
@@ -252,7 +263,7 @@ void AFXAPI DDX_OCFloatRO(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameddxocinta--ddxocint"></a><a name="ddx_ocint"></a>DDX_OCInt  
+##  <a name="ddx_ocint"></a>DDX_OCInt  
  Die `DDX_OCInt` Funktion verwaltet die Übertragung von `int` (oder **lang**) Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld bilden, Sicht oder Control-Objekt und ein `int` (oder **lang**)-Datenmember des Dialogfelds, Formularansicht oder Control-Objekt.  
   
 ```   
@@ -288,7 +299,7 @@ void AFXAPI DDX_OCInt(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameddxocintroa--ddxocintro"></a><a name="ddx_ocintro"></a>DDX_OCIntRO  
+##  <a name="ddx_ocintro"></a>DDX_OCIntRO  
  Die `DDX_OCIntRO` Funktion verwaltet die Übertragung von `int` (oder **lang**) Daten zwischen einer nur-Lese Eigenschaft eines OLE-Steuerelements in einem Dialogfeld bilden, Sicht oder Control-Objekt und ein `int` (oder **lang**)-Datenmember des Dialogfelds, Formularansicht oder Control-Objekt.  
   
 ```   
@@ -324,7 +335,7 @@ void AFXAPI DDX_OCIntRO(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameddxocshorta--ddxocshort"></a><a name="ddx_ocshort"></a>DDX_OCShort  
+##  <a name="ddx_ocshort"></a>DDX_OCShort  
  Die `DDX_OCShort` -Funktion verwaltet die Datenübertragung kurze zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld Formularansicht oder Control-Objekt und einen kurzen Datenmember im Dialogfeld Formularansicht oder Objekt zu steuern.  
   
 ```   
@@ -354,7 +365,7 @@ void AFXAPI DDX_OCShort(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameddxocshortroa--ddxocshortro"></a><a name="ddx_ocshortro"></a>DDX_OCShortRO  
+##  <a name="ddx_ocshortro"></a>DDX_OCShortRO  
  Die `DDX_OCShortRO` -Funktion verwaltet die Übertragung von kurzen Daten zwischen einer nur-Lese Eigenschaft eines OLE-Steuerelements in einem Dialogfeld Formularansicht oder Control-Objekt und einen kurzen Datenmember im Dialogfeld Formularansicht oder Objekt zu steuern.  
   
 ```   
@@ -384,7 +395,7 @@ void AFXAPI DDX_OCShortRO(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameddxoctexta--ddxoctext"></a><a name="ddx_octext"></a>DDX_OCText  
+##  <a name="ddx_octext"></a>DDX_OCText  
  Die **DDX_OCText** Funktion verwaltet die Übertragung von **CString** Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld bilden, Sicht oder Control-Objekt und ein **CString** -Datenmember des Dialogfelds, Formularansicht oder Control-Objekt.  
   
 ```   
@@ -414,7 +425,7 @@ void AFXAPI DDX_OCText(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameddxoctextroa--ddxoctextro"></a><a name="ddx_octextro"></a>DDX_OCTextRO  
+##  <a name="ddx_octextro"></a>DDX_OCTextRO  
  Die `DDX_OCTextRO` -Funktion verwaltet die Übertragung von `CString` -Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder Steuerungsansichtsobjekts und einem `CString` -Datenelement des Dialogfelds, des Formularansichts- oder Steuerungsansichtsobjekts.  
   
 ```  

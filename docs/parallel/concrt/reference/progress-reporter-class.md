@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::progress_reporter
+- progress_reporter
+- PPLTASKS/concurrency::progress_reporter
+- PPLTASKS/concurrency::progress_reporter::progress_reporter
+- PPLTASKS/concurrency::progress_reporter::report
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c6b4dfee5b5f9df98a36fcdac116182ced4cbe30
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 98856e26c82d01433e6f8eb0d76110aff1535936
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="progressreporter-class"></a>progress_reporter-Klasse
@@ -59,13 +62,13 @@ class progress_reporter;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Progress_reporter-Konstruktor](#ctor)||  
+|[progress_reporter](#ctor)||  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Bericht-Methode](#report)|Sendet einen Statusbericht an die asynchrone Aktion oder den asynchronen Vorgang, an die bzw. an den dieser Status-Reporter gebunden ist.|  
+|[Bericht](#report)|Sendet einen Statusbericht an die asynchrone Aktion oder den asynchronen Vorgang, an die bzw. an den dieser Status-Reporter gebunden ist.|  
   
 ## <a name="remarks"></a>Hinweise  
  Dieser Typ ist nur für Windows Store-Apps verfügbar.  
@@ -78,13 +81,13 @@ class progress_reporter;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namectora-progressreporter"></a><a name="ctor"></a>progress_reporter 
+##  <a name="ctor"></a>progress_reporter 
 
 ```
 progress_reporter();
 ```  
   
-##  <a name="a-namereporta-report"></a><a name="report"></a>Bericht 
+##  <a name="report"></a>Bericht 
 
  Sendet einen Statusbericht an die asynchrone Aktion oder den asynchronen Vorgang, an die bzw. an den dieser Status-Reporter gebunden ist.  
   

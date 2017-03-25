@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amprt/Concurrency::completion_future
+- completion_future
+- AMPRT/completion_future
+- AMPRT/Concurrency::completion_future::completion_future
+- AMPRT/Concurrency::completion_future::get
+- AMPRT/Concurrency::completion_future::then
+- AMPRT/Concurrency::completion_future::to_task
+- AMPRT/Concurrency::completion_future::valid
+- AMPRT/Concurrency::completion_future::wait
+- AMPRT/Concurrency::completion_future::wait_for
+- AMPRT/Concurrency::completion_future::wait_until
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
@@ -32,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a9a77c3cf3c183021b70789b0e17a6b8ad8d786c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1c6d8e880fbdb784b22b1e9c879473efa7bc9802
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="completionfuture-class"></a>completion_future-Klasse
@@ -59,20 +68,20 @@ class completion_future;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Get-Methode](#get)|Wartet, bis der zugeordnete asynchrone Vorgang beendet ist.|  
-|[Then-Methode](#then)|Verkettet ein Rückruffunktionsobjekt mit dem `completion_future`-Objekt, das ausgeführt werden soll, wenn der zugeordnete asynchrone Vorgang beendet wird.|  
-|[To_task-Methode](#to_task)|Gibt ein `task`-Objekt zurück, das dem zugeordneten asynchronen Vorgang entspricht.|  
-|[gültige-Methode](#valid)|Ruft einen booleschen Wert ab, der angibt, ob das Objekt einem asynchronen Vorgang zugeordnet ist.|  
-|[Wait-Methode](#wait)|Blockiert, bis der zugeordnete asynchrone Vorgang beendet ist.|  
-|[Wait_for-Methode](#wait_for)|Blockiert, bis der zugeordnete asynchrone Vorgang beendet oder die Zeit, die von `_Rel_time` angegeben wird, abgelaufen ist.|  
-|[Wait_until-Methode](#wait_until)|Blockiert, bis der zugeordnete asynchrone Vorgang beendet ist oder die aktuelle Uhrzeit den von `_Abs_time` angegebenen Wert überschreitet.|  
+|[get](#get)|Wartet, bis der zugeordnete asynchrone Vorgang beendet ist.|  
+|[Klicken Sie dann](#then)|Verkettet ein Rückruffunktionsobjekt mit dem `completion_future`-Objekt, das ausgeführt werden soll, wenn der zugeordnete asynchrone Vorgang beendet wird.|  
+|[to_task](#to_task)|Gibt ein `task`-Objekt zurück, das dem zugeordneten asynchronen Vorgang entspricht.|  
+|[gültige](#valid)|Ruft einen booleschen Wert ab, der angibt, ob das Objekt einem asynchronen Vorgang zugeordnet ist.|  
+|[Warte](#wait)|Blockiert, bis der zugeordnete asynchrone Vorgang beendet ist.|  
+|[wait_for](#wait_for)|Blockiert, bis der zugeordnete asynchrone Vorgang beendet oder die Zeit, die von `_Rel_time` angegeben wird, abgelaufen ist.|  
+|[wait_until](#wait_until)|Blockiert, bis der zugeordnete asynchrone Vorgang beendet ist oder die aktuelle Uhrzeit den von `_Abs_time` angegebenen Wert überschreitet.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Operator Std:: shared_future\<void > Operator](#operator_shared_future)|Konvertiert implizit das `completion_future`-Objekt zu einem `std::shared_future`-Objekt.|  
-|[Operator =-Operator](#operator_eq)|Kopiert den Inhalt des angegebenen `completion_future`-Objekts in dieses Objekt.|  
+|[Operator Std:: shared_future\<void >](#operator_shared_future)|Konvertiert implizit das `completion_future`-Objekt zu einem `std::shared_future`-Objekt.|  
+|[operator=](#operator_eq)|Kopiert den Inhalt des angegebenen `completion_future`-Objekts in dieses Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `completion_future`  
@@ -83,7 +92,7 @@ class completion_future;
  **Namespace:** Parallelität  
 
 
-## <a name="a-namectora-completionfuture"></a><a name="ctor"></a>completion_future 
+## <a name="ctor"></a>completion_future 
 
 Initialisiert eine neue Instanz der `completion_future`-Klasse.  
   
@@ -111,7 +120,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|Initialisiert eine neue Instanz der `completion_future` -Klasse durch Kopieren eines Konstruktors.|  
 |`completion_future(completion_future&& _Other);`|Initialisiert eine neue Instanz der der `completion_future` Klasse durch einen Konstruktor verschieben.|  
   
-## <a name="a-namegeta-get"></a><a name="get"></a>Erhalten 
+## <a name="get"></a>Erhalten 
 
 Wartet, bis der zugeordnete asynchrone Vorgang beendet ist. Die gespeicherte Ausnahme auslöst, wenn es sich bei einer während des asynchronen Vorgangs aufgetreten ist.  
   
@@ -121,7 +130,7 @@ Wartet, bis der zugeordnete asynchrone Vorgang beendet ist. Die gespeicherte Aus
 void get() const;  
 ```  
   
-## <a name="a-nameoperatorsharedfuturea-operator-stdsharedfuturevoid"></a><a name="operator_shared_future"></a>Operator Std:: shared_future<void> 
+## <a name="operator_shared_future"></a>Operator Std:: shared_future<void> 
 
 Konvertiert implizit das `completion_future`-Objekt zu einem `std::shared_future`-Objekt.  
   
@@ -134,7 +143,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein `std::shared_future`-Objekt.  
   
-## <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>Operator = 
+## <a name="operator_eq"></a>Operator = 
 
 Kopiert den Inhalt des angegebenen `completion_future`-Objekts in dieses Objekt.  
   
@@ -159,7 +168,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|Kopiert den Inhalt des angegebenen `completion_future` -Objekts in dieses Objekt, das mithilfe einer tiefen Kopie.|  
 |`completion_future& operator=(completion_future&& _Other);`|Kopiert den Inhalt des angegebenen `completion_future` -Objekts in dieses Objekt, das mit einer bewegungszuweisung.|  
   
-## <a name="a-namethena-then"></a><a name="then"></a>Klicken Sie dann 
+## <a name="then"></a>Klicken Sie dann 
 
 Verkettet ein Rückruffunktionsobjekt mit dem `completion_future`-Objekt, das ausgeführt werden soll, wenn der zugeordnete asynchrone Vorgang beendet wird.  
   
@@ -177,7 +186,7 @@ void then(const _Functor & _Func ) const;
  `_Func`  
  Das Rückrufobjekt-Funktion.  
   
-## <a name="a-nametotaska-totask"></a><a name="to_task"></a>to_task 
+## <a name="to_task"></a>to_task 
 
 Gibt ein `task`-Objekt zurück, das dem zugeordneten asynchronen Vorgang entspricht.  
   
@@ -190,7 +199,7 @@ concurrency::task<void> to_task() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein `task` Objekt entspricht, der auf den zugeordneten asynchronen Vorgang.  
   
-## <a name="a-namevalida-valid"></a><a name="valid"></a>gültige 
+## <a name="valid"></a>gültige 
 
 Ruft einen booleschen Wert, der angibt, ob das Objekt mit einem asynchronen Vorgang zugeordnet ist.  
   
@@ -203,7 +212,7 @@ bool valid() const;
 ### <a name="return-value"></a>Rückgabewert  
  `true`Wenn das Objekt einem asynchronen Vorgang zugeordnet ist. andernfalls `false`.  
   
-## <a name="a-namewaita-wait"></a><a name="wait"></a>Warte 
+## <a name="wait"></a>Warte 
 
 Blockiert, bis der zugeordnete asynchrone Vorgang beendet ist.  
   
@@ -213,7 +222,7 @@ Blockiert, bis der zugeordnete asynchrone Vorgang beendet ist.
 void wait() const;  
 ```  
   
-## <a name="a-namewaitfora-waitfor"></a><a name="wait_for"></a>wait_for 
+## <a name="wait_for"></a>wait_for 
 
 Blockiert, bis der zugeordnete asynchrone Vorgang beendet oder die Zeit, die von `_Rel_time` angegeben wird, abgelaufen ist.  
   
@@ -247,7 +256,7 @@ std::future_status::future_status wait_for(
   
 -   `std::future_status::timeout`, wenn der angegebene Zeitraum verstrichen ist.  
   
-## <a name="a-namewaituntila-waituntil"></a><a name="wait_until"></a>wait_until 
+## <a name="wait_until"></a>wait_until 
 
 Blockiert, bis der zugeordnete asynchrone Vorgang beendet ist oder die aktuelle Uhrzeit den von `_Abs_time` angegebenen Wert überschreitet.  
   
@@ -281,7 +290,7 @@ std::future_status::future_status wait_until(
   
 3.  `std::future_status::timeout`, wenn der angegebene Zeitraum verstrichen ist.  
   
-## <a name="a-namedtora-completionfuture"></a><a name="dtor"></a>~ Completion_future 
+## <a name="dtor"></a>~ Completion_future 
 
 Zerstört das `completion_future`-Objekt.  
   
@@ -292,5 +301,5 @@ Zerstört das `completion_future`-Objekt.
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace (C++-AMP)](concurrency-namespace-cpp-amp.md)
+ [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

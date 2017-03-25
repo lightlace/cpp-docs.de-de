@@ -6,31 +6,53 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::direct3d::abs
+- amp/Concurrency::direct3d::countbits
+- amp/Concurrency::direct3d::create_accelerator_view
+- amp/Concurrency::direct3d::d3d_access_lock
+- amp/Concurrency::direct3d::d3d_access_unlock
+- amp/Concurrency::direct3d::firstbithigh
+- amp/Concurrency::direct3d::get_buffer
+- amp/Concurrency::direct3d::imax
+- amp/Concurrency::direct3d::is_timeout_disabled
+- amp/Concurrency::direct3d::mad
+- amp/Concurrency::direct3d::noise
+- amp/Concurrency::direct3d::radians
+- amp/Concurrency::direct3d::reversebits
+- amp/Concurrency::direct3d::saturate
+- amp/Concurrency::direct3d::smoothstep
+- amp/Concurrency::direct3d::step
+- amp/Concurrency::direct3d::umin
+dev_langs: C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 46cafc3c6d6f21eaf147ef0edfeca7f2c81d64e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ad00006c9ab4f25887cf28ed5b977551c35bda9e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: Direct3D-Namespace-Funktionen (AMP)
 ||||  
 |-|-|-|  
-|[ABS-Funktion](#abs)|[Clamp-Funktion](#clamp)|[Countbits-Funktion](#countbits)|
-|[Create_accelerator_view-Funktion](#create_accelerator_view)|||
-|[d3d_access_lock-Funktion](#d3d_access_lock)|[d3d_access_try_lock-Funktion](#d3d_access_try_lock)|[d3d_access_unlock-Funktion](#d3d_access_unlock)|  
-|[Firstbithigh-Funktion](#firstbithigh)|[Firstbitlow-Funktion](#firstbitlow)|[Get_buffer-Funktion](#get_buffer)|  
-|[Imax-Funktion](#imax)|[Imin-Funktion](#imin)|[Is_timeout_disabled-Funktion](#is_timeout_disabled)|  
-|[MAD-Funktion](#mad)|[Make_array-Funktion](#make_array)|[Noise-Funktion](#noise)|  
-|[RADIANS-Funktion](#radians)|[Rcp-Funktion](#rcp)|[Reversebits-Funktion](#reversebits)|  
-|[sättigungsfunktion](#saturate)|[Sign-Funktion](#sign)|[Smoothstep-Funktion](#smoothstep)|  
-|[Schrittfunktion](#step)|[UMAX-Funktion](#umax)|[Umin-Funktion](#umin)|  
+|[abs](#abs)|[Clamp](#clamp)|[countbits](#countbits)|
+|[create_accelerator_view](#create_accelerator_view)|||
+|[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
+|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
+|[Imax](#imax)|[Imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
+|[MAD](#mad)|[make_array](#make_array)|[Rauschen](#noise)|  
+|[Bogenmaß (Radiant)](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[auslasten](#saturate)|[Anmelden](#sign)|[smoothstep](#smoothstep)|  
+|[Schritt](#step)|[UMAX](#umax)|[umin](#umin)|  
+
+## <a name="requirements"></a>Anforderungen
+**Header:** amp.h **Namespace:** Parallelität
   
-##  <a name="a-nameabsa--abs-function"></a><a name="abs"></a>ABS-Funktion  
+##  <a name="abs"></a> abs  
  Gibt den absoluten Wert des Arguments zurück.  
   
 ```  
@@ -44,7 +66,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den absoluten Wert des Arguments zurück.  
   
-##  <a name="a-nameclampa--clamp-function"></a><a name="clamp"></a>Clamp-Funktion  
+##  <a name="clamp"></a>Clamp  
  Berechnet den Wert des angegebenen ersten Arguments, das an einen Bereich gebunden ist, der vom zweiten und dritten angegebenen Argument definiert wird.  
   
 ```  
@@ -73,7 +95,7 @@ inline int clamp(
 ### <a name="return-value"></a>Rückgabewert  
  Der gebundene Wert von `_X`.  
   
-##  <a name="a-namecountbitsa--countbits-function"></a><a name="countbits"></a>Countbits-Funktion  
+##  <a name="countbits"></a>countbits  
  Zählt die Anzahl der festgelegten Bits in _X  
   
 ```  
@@ -87,7 +109,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Anzahl der festgelegten Bits in _X  
 
-## <a name="a-namecreateacceleratorviewa-createacceleratorview-function"></a><a name="create_accelerator_view"></a>Create_accelerator_view-Funktion
+## <a name="create_accelerator_view"></a>create_accelerator_view  
 Erstellt ein [Accelerator_view](accelerator-view-class.md) Objekt von einem Zeiger auf eine Direct3D-Geräteschnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
@@ -127,7 +149,7 @@ accelerator_view create_accelerator_view(
  Die C++-AMP-Laufzeit stellt detaillierte Fehlerinformationen im Debugmodus mithilfe der D3D-Debugebene bereit, wenn Sie das `D3D11_CREATE_DEVICE_DEBUG`-Flag verwenden.  
   
   
-##  <a name="a-named3daccesslocka--d3daccesslock-function"></a><a name="d3d_access_lock"></a>d3d_access_lock-Funktion  
+##  <a name="d3d_access_lock"></a>d3d_access_lock  
  Ruft eine Sperre für eine "accelerator_view" ab, um D3D-Vorgänge in Ressourcen, die gemeinsam mit der "accelerator_view" genutzt werden, sicher ausführen zu können. Die "accelerator_view" und alle C++ AMP-Ressourcen, die dieser "accelerator_view" intern zugeordnet sind, werden gesperrt, wenn Vorgänge ausgeführt werden, und blockieren, während ein anderer Thread die D3D-Zugriffssperre inne hat. Diese Sperre ist nicht rekursiv: Es ist nicht definiertes Verhalten, diese Funktion von einem Thread aufzurufen, der bereits die Sperre besitzt. Es ist nicht definiertes Verhalten, Vorgänge für die "accelerator_view" oder Datencontainer auszuführen, die der "accelerator_view" vom Thread zugeordnet sind, der die D3D-Zugriffssperre besitzt. Siehe auch: "scoped_d3d_access_lock", eine RAII-Formatklasse für eine bereichsbasierte D3D-Zugriffssperre.  
   
 ```  
@@ -138,7 +160,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
  `_Av`  
  Die zu sperrende "accelerator_view".  
   
-##  <a name="a-named3daccesstrylocka--d3daccesstrylock-function"></a><a name="d3d_access_try_lock"></a>d3d_access_try_lock-Funktion  
+##  <a name="d3d_access_try_lock"></a>d3d_access_try_lock  
  Versuch, ohne Blockierung die D3D-Zugriffssperre für eine accelerator_view abzurufen.  
   
 ```  
@@ -152,7 +174,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ### <a name="return-value"></a>Rückgabewert  
  "true", wenn die Sperre abgerufen wurde, oder "false", wenn sie durch einen anderen Thread verwendet wird.  
   
-##  <a name="a-named3daccessunlocka--d3daccessunlock-function"></a><a name="d3d_access_unlock"></a>d3d_access_unlock-Funktion  
+##  <a name="d3d_access_unlock"></a>d3d_access_unlock  
  Gibt die D3D-Zugriffssperre für die angegebene accelerator_view frei. Wenn der aufrufende Thread nicht die Sperre für "accelerator_view" hat, sind die Ergebnisse nicht definiert.  
   
 ```  
@@ -163,7 +185,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
  `_Av`  
  Die „accelerator_view“, für die die Sperre aufgehoben werden soll.  
   
-##  <a name="a-namefirstbithigha--firstbithigh-function"></a><a name="firstbithigh"></a>Firstbithigh-Funktion  
+##  <a name="firstbithigh"></a>firstbithigh  
  Ruft den Speicherort des ersten festgelegten Bits in _X ab, beginnend mit dem höchsten Bit und arbeitet sich weiter bis zum niedrigsten Bit.  
   
 ```  
@@ -177,7 +199,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Der Speicherort des ersten festgelegten Bits  
   
-##  <a name="a-namefirstbitlowa--firstbitlow-function"></a><a name="firstbitlow"></a>Firstbitlow-Funktion  
+##  <a name="firstbitlow"></a>firstbitlow  
  Ruft den Speicherort des ersten festgelegten Bits in _X ab, beginnend mit dem niederwertigsten Bit und arbeitet sich weiter bis zum höchsten Bit.  
   
 ```  
@@ -191,7 +213,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Speicherort des ersten festgelegten Bits zurück  
   
-##  <a name="a-namegetbuffera--getbuffer-function"></a><a name="get_buffer"></a>Get_buffer-Funktion  
+##  <a name="get_buffer"></a>get_buffer  
  Rufen Sie die Direct3D-Pufferschnittstelle ab, die dem angegebenen Array zugrunde liegt.  
   
 ```  
@@ -216,7 +238,7 @@ IUnknown *get_buffer(
 ### <a name="return-value"></a>Rückgabewert  
  Der IUnknown-Schnittstellenzeiger entspricht dem Direct3D-Puffer, der dem Array zugrunde liegt.  
   
-##  <a name="a-nameimaxa--imax-function"></a><a name="imax"></a>Imax-Funktion  
+##  <a name="imax"></a>Imax  
  Festlegung des höchsten numerischen Werts der Argumente  
   
 ```  
@@ -235,7 +257,7 @@ inline int imax(
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe des höchsten numerischen Werts der Argumente  
   
-##  <a name="a-nameimina--imin-function"></a><a name="imin"></a>Imin-Funktion  
+##  <a name="imin"></a>Imin  
  Festlegung des niedrigsten numerischen Werts der Argumente  
   
 ```  
@@ -254,7 +276,7 @@ inline int imin(
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe des niedrigsten numerischen Werts der Argumente  
   
-##  <a name="a-nameistimeoutdisableda--istimeoutdisabled-function"></a><a name="is_timeout_disabled"></a>Is_timeout_disabled-Funktion  
+##  <a name="is_timeout_disabled"></a>is_timeout_disabled  
  Gibt ein boolesches Flag zurück, das angibt, ob Timeout für die angegebene "accelerator_view" deaktiviert ist. Dies entspricht dem D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT-Flag für Direct3D-Geräteerstellung.  
   
 ```  
@@ -268,7 +290,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ### <a name="return-value"></a>Rückgabewert  
  Ein boolesches Flag, das angibt, ob Timeout für die angegebene "accelerator_view" deaktiviert ist.  
   
-##  <a name="a-namemada--mad-function"></a><a name="mad"></a>MAD-Funktion  
+##  <a name="mad"></a>MAD  
  Berechnet das Produkt des ersten und zweiten angegebenen Arguments und fügt dann das dritte angegebene Argument hinzu.  
   
 ```  
@@ -309,7 +331,7 @@ inline unsigned int mad(
 ### <a name="return-value"></a>Rückgabewert  
  The result of `_X` * `_Y` + `_Z`.  
   
-##  <a name="a-namemakearraya--makearray-function"></a><a name="make_array"></a>Make_array-Funktion  
+##  <a name="make_array"></a>make_array  
  Erstellt ein Array aus dem Schnittstellenzeiger eines Direct3D-Puffers.  
   
 ```  
@@ -342,7 +364,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>Rückgabewert  
  Ein mithilfe des angegebenen Direct3D-Puffers erstelltes Array.  
   
-##  <a name="a-namenoisea--noise-function"></a><a name="noise"></a>Noise-Funktion  
+##  <a name="noise"></a>Rauschen  
  Generiert einen zufälligen Wert mithilfe des Perlin-Noise-Algorithmus  
   
 ```  
@@ -356,7 +378,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Perlin-Noise-Wert innerhalb eines Bereichs zwischen-1 und 1  
   
-##  <a name="a-nameradiansa--radians-function"></a><a name="radians"></a>RADIANS-Funktion  
+##  <a name="radians"></a>Bogenmaß (Radiant)  
  Konvertiert _X von Grad in Bogenmaß  
   
 ```  
@@ -370,7 +392,7 @@ inline float radians(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt _X von Grad in Bogenmaß konvertiert.  
   
-##  <a name="a-namercpa--rcp-function"></a><a name="rcp"></a>Rcp-Funktion  
+##  <a name="rcp"></a>rcp  
  Berechnet den Kehrwert des angegebenen Arguments mithilfe einer schnellen Näherung.  
   
 ```  
@@ -387,7 +409,7 @@ inline double rcp(double _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Der Kehrwert des angegebenen Arguments.  
   
-##  <a name="a-namereversebitsa--reversebits-function"></a><a name="reversebits"></a>Reversebits-Funktion  
+##  <a name="reversebits"></a>reversebits  
  Kehrt die Reihenfolge der Bits in _X um  
   
 ```  
@@ -401,7 +423,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Wert in der Reihenfolge der Bit vertauscht _X  
   
-##  <a name="a-namesaturatea--saturate-function"></a><a name="saturate"></a>sättigungsfunktion  
+##  <a name="saturate"></a>auslasten  
  Bindet _X im Bereich zwischen 0 und 1  
   
 ```  
@@ -415,7 +437,7 @@ inline float saturate(float _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt _X gebunden ist, der innerhalb des Bereichs von 0 bis 1  
   
-##  <a name="a-namesigna--sign-function"></a><a name="sign"></a>Sign-Funktion  
+##  <a name="sign"></a>Anmelden  
  Bestimmt das Vorzeichen des angegebenen Arguments.  
   
 ```  
@@ -429,7 +451,7 @@ inline int sign(int _X) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Das Vorzeichen des Arguments.  
   
-##  <a name="a-namesmoothstepa--smoothstep-function"></a><a name="smoothstep"></a>Smoothstep-Funktion  
+##  <a name="smoothstep"></a>smoothstep  
  Gibt eine glatte Hermite-Interpolation zwischen 0 und 1 zurück, wenn _X im Bereich [_Min, _Max] liegt.  
   
 ```  
@@ -452,7 +474,7 @@ inline float smoothstep(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt 0 zurück, wenn _X _Min unterschreitet. 1, wenn _X _Max größer ist. andernfalls ein Wert zwischen 0 und 1, wenn _X im Bereich [_Min, _Max] liegt.  
   
-##  <a name="a-namestepa--step-function"></a><a name="step"></a>Schrittfunktion  
+##  <a name="step"></a>Schritt  
  Vergleicht zwei Werte und gibt, je nachdem welcher Wert größer ist, 0 oder 1 zurück  
   
 ```  
@@ -471,7 +493,7 @@ inline float step(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt 1 zurück, wenn die _X größer als oder gleich _Y ist. andernfalls 0  
   
-##  <a name="a-nameumaxa--umax-function"></a><a name="umax"></a>UMAX-Funktion  
+##  <a name="umax"></a>UMAX  
  Festlegung des höchsten numerischen Werts der Argumente  
   
 ```  
@@ -490,7 +512,7 @@ inline unsigned int umax(
 ### <a name="return-value"></a>Rückgabewert  
  Rückgabe des höchsten numerischen Werts der Argumente  
   
-##  <a name="a-nameumina--umin-function"></a><a name="umin"></a>Umin-Funktion  
+##  <a name="umin"></a>umin  
  Festlegung des niedrigsten numerischen Werts der Argumente  
   
 ```  
@@ -510,5 +532,5 @@ inline unsigned int umin(
  Rückgabe des niedrigsten numerischen Werts der Argumente  
   
 ## <a name="see-also"></a>Siehe auch  
- [Concurrency:: Direct3D-Namespace](concurrency-direct3d-namespace.md)
+ [Concurrency::direct3d Namespace](concurrency-direct3d-namespace.md)
 

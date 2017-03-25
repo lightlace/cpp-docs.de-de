@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task_continuation_context
+- task_continuation_context
+- PPLTASKS/concurrency::task_continuation_context
+- PPLTASKS/concurrency::task_continuation_context::get_current_winrt_context
+- PPLTASKS/concurrency::task_continuation_context::use_arbitrary
+- PPLTASKS/concurrency::task_continuation_context::use_current
+- PPLTASKS/concurrency::task_continuation_context::use_default
+- PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +41,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 627c2adc60c143ef7cd9be62f71a4365eed5aed5
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 8afd599e5ee489500d7f8c498d03c91ace6b99ed
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context-Klasse
@@ -55,11 +61,11 @@ class task_continuation_context : public details::_ContextCallback;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Get_current_winrt_context-Methode](#get_current_winrt_context)|Gibt ein Kontextobjekt für Fortsetzung, die den aktuellen Kontext des Threads Winrt darstellt.|  
-|[Use_arbitrary-Methode](#use_arbitrary)|Erstellt einen Aufgabenfortsetzungskontext, der er es der Laufzeit ermöglicht, den Ausführungskontext für eine Fortsetzung auszuwählen.|  
-|[Use_current-Methode](#use_current)|Gibt ein Kontextobjekt für die Aufgabenfortsetzung zurück, das den aktuellen Ausführungskontext darstellt.|  
-|[Use_default-Methode](#use_default)|Erstellt den standardmäßigen Aufgabenfortsetzungskontext.|  
-|[Use_synchronous_execution-Methode](#use_synchronous_execution)|Gibt ein Kontextobjekt für Fortsetzung, die den synchronen Ausführungskontext darstellt.|  
+|[get_current_winrt_context](#get_current_winrt_context)|Gibt ein Kontextobjekt für Fortsetzung, die den aktuellen Kontext des Threads Winrt darstellt.|  
+|[use_arbitrary](#use_arbitrary)|Erstellt einen Aufgabenfortsetzungskontext, der er es der Laufzeit ermöglicht, den Ausführungskontext für eine Fortsetzung auszuwählen.|  
+|[use_current](#use_current)|Gibt ein Kontextobjekt für die Aufgabenfortsetzung zurück, das den aktuellen Ausführungskontext darstellt.|  
+|[Standardeinstellung verwenden](#use_default)|Erstellt den standardmäßigen Aufgabenfortsetzungskontext.|  
+|[use_synchronous_execution](#use_synchronous_execution)|Gibt ein Kontextobjekt für Fortsetzung, die den synchronen Ausführungskontext darstellt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `_ContextCallback`  
@@ -71,7 +77,7 @@ class task_continuation_context : public details::_ContextCallback;
   
  **Namespace:** Parallelität  
 
-## <a name="a-namegetcurrentwinrtcontexta-getcurrentwinrtcontext"></a><a name="get_current_winrt_context"></a>get_current_winrt_context
+## <a name="get_current_winrt_context"></a>get_current_winrt_context
  Gibt ein Kontextobjekt für Fortsetzung, die den aktuellen Kontext des Threads WinRT darstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -91,7 +97,7 @@ static task_continuation_context get_current_winrt_context();
  Diese Methode ähnelt der `use_current` Methode, allerdings steht auch für systemeigenen C++-Code ohne C++ / CX-Unterstützung. Sie dient der Verwendung durch Benutzer das Schreiben von C++ zu erweiterten c++ / CX-agnostischen Bibliothekscode für den einheitlichen und den Windows-Runtime-Aufrufer. Wenn Sie diese Funktion benötigen, empfehlen wir die `use_current` -Methode, die nur für C++ verfügbar ist c++ / CX-Clients.  
   
   
-##  <a name="a-nameusearbitrarya-usearbitrary"></a><a name="use_arbitrary"></a>use_arbitrary 
+##  <a name="use_arbitrary"></a>use_arbitrary 
 
  Erstellt einen Aufgabenfortsetzungskontext, der er es der Laufzeit ermöglicht, den Ausführungskontext für eine Fortsetzung auszuwählen.  
   
@@ -109,7 +115,7 @@ static task_continuation_context use_arbitrary();
   
  Diese Methode ist nur für Windows Store-Apps verfügbar.  
   
-##  <a name="a-nameusecurrenta-usecurrent"></a><a name="use_current"></a>use_current 
+##  <a name="use_current"></a>use_current 
 
  Gibt ein Kontextobjekt für die Aufgabenfortsetzung zurück, das den aktuellen Ausführungskontext darstellt.  
   
@@ -127,7 +133,7 @@ static task_continuation_context use_current();
   
  Diese Methode ist nur für Windows Store-Apps verfügbar.  
   
-##  <a name="a-nameusedefaulta-usedefault"></a><a name="use_default"></a>Standardeinstellung verwenden 
+##  <a name="use_default"></a>Standardeinstellung verwenden 
 
  Erstellt den standardmäßigen Aufgabenfortsetzungskontext.  
   
@@ -145,7 +151,7 @@ static task_continuation_context use_default();
   
  Eine Fortsetzung einer nicht apartmentfähigen Aufgabe wird in einem Kontext ausgeführt, den die Laufzeit auswählt.  
 
-## <a name="a-nameusesynchronousexecutiona-taskcontinuationcontextusesynchronousexecution"></a><a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
+## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
 Gibt ein Kontextobjekt für Fortsetzung, die den synchronen Ausführungskontext darstellt.  
   
 ## <a name="syntax"></a>Syntax  

@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::combinable
+- combinable
+- PPL/concurrency::combinable
+- PPL/concurrency::combinable::combinable
+- PPL/concurrency::combinable::clear
+- PPL/concurrency::combinable::combine
+- PPL/concurrency::combinable::combine_each
+- PPL/concurrency::combinable::local
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 4ed3ce3d441566a0fb301d01123335846d86a8af
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a491f8eef59978808608917531a5237cceacdb21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="combinable-class"></a>combinable-Klasse
@@ -59,23 +65,23 @@ class combinable;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[combinable-Konstruktor](#ctor)|Überladen. Erstellt ein neues `combinable`-Objekt.|  
+|[combinable](#ctor)|Überladen. Erstellt ein neues `combinable`-Objekt.|  
 |[~ combinable-Destruktor](#dtor)|Zerstört ein `combinable`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Clear-Methode](#clear)|Löscht alle berechneten Zwischenergebnisse aus einer vorherigen Verwendung.|  
-|[Combine-Methode](#combine)|Berechnet einen endgültigen Wert aus dem Satz von threadlokale unterberechnungen durch Aufrufen der Funktionselement bereitgestellten kombinieren.|  
-|[Combine_each-Methode](#combine_each)|Berechnet einen endgültigen Wert aus dem Satz von threadlokale unterberechnungen durch Aufrufen der angegebenen kombinieren Funktionselement einmal pro Thread-lokalen untergeordnete Berechnung. Das Endergebnis wird vom Funktionsobjekt akkumuliert.|  
-|[Local-Methode](#local)|Überladen. Gibt einen Verweis auf die untergeordnete threadprivate-Berechnung.|  
+|[clear](#clear)|Löscht alle berechneten Zwischenergebnisse aus einer vorherigen Verwendung.|  
+|[combine](#combine)|Berechnet einen endgültigen Wert aus dem Satz von threadlokale unterberechnungen durch Aufrufen der Funktionselement bereitgestellten kombinieren.|  
+|[combine_each](#combine_each)|Berechnet einen endgültigen Wert aus dem Satz von threadlokale unterberechnungen durch Aufrufen der angegebenen kombinieren Funktionselement einmal pro Thread-lokalen untergeordnete Berechnung. Das Endergebnis wird vom Funktionsobjekt akkumuliert.|  
+|[lokale](#local)|Überladen. Gibt einen Verweis auf die untergeordnete threadprivate-Berechnung.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Operator =-Operator](#operator_eq)|Weist eine `combinable` -Objekt von einem anderen `combinable` Objekt.|  
+|[operator=](#operator_eq)|Weist eine `combinable` -Objekt von einem anderen `combinable` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -88,7 +94,7 @@ class combinable;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Deaktivieren 
+##  <a name="clear"></a>Deaktivieren 
 
  Löscht alle berechneten Zwischenergebnisse aus einer vorherigen Verwendung.  
   
@@ -96,7 +102,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="a-namectora-combinable"></a><a name="ctor"></a>combinable 
+##  <a name="ctor"></a>combinable 
 
  Erstellt ein neues `combinable`-Objekt.  
   
@@ -126,7 +132,7 @@ combinable(const combinable& _Copy);
   
  Der dritte Konstruktor ist der Kopierkonstruktor.  
   
-##  <a name="a-namedtora-combinable"></a><a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a>~ combinable 
 
  Zerstört ein `combinable`-Objekt.  
   
@@ -134,7 +140,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="a-namecombinea-combine"></a><a name="combine"></a>Kombinieren 
+##  <a name="combine"></a>Kombinieren 
 
  Berechnet einen endgültigen Wert aus dem Satz von threadlokale unterberechnungen durch Aufrufen der Funktionselement bereitgestellten kombinieren.  
   
@@ -153,7 +159,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>Rückgabewert  
  Das endgültige Ergebnis der Kombination aller privaten unterberechnungen.  
   
-##  <a name="a-namecombineeacha-combineeach"></a><a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a>combine_each 
 
  Berechnet einen endgültigen Wert aus dem Satz von threadlokale unterberechnungen durch Aufrufen der angegebenen kombinieren Funktionselement einmal pro Thread-lokalen untergeordnete Berechnung. Das Endergebnis wird vom Funktionsobjekt akkumuliert.  
   
@@ -169,7 +175,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  Das Funktionselement, das verwendet wird, um eine untergeordnete Berechnung zu kombinieren. Die Signatur ist `void (T)` oder `void (const T&)`, und Sie muss assoziativ und kommutativ sein.  
   
-##  <a name="a-namelocala-local"></a><a name="local"></a>lokale 
+##  <a name="local"></a>lokale 
 
  Gibt einen Verweis auf die untergeordnete threadprivate-Berechnung.  
   
@@ -186,7 +192,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf die untergeordnete threadprivate-Berechnung.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a>Operator = 
 
  Weist eine `combinable` -Objekt von einem anderen `combinable` Objekt.  
   

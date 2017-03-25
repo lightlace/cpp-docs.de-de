@@ -9,7 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::transformer
+- transformer
+- AGENTS/concurrency::transformer
+- AGENTS/concurrency::transformer::transformer
+- AGENTS/concurrency::transformer::accept_message
+- AGENTS/concurrency::transformer::consume_message
+- AGENTS/concurrency::transformer::link_target_notification
+- AGENTS/concurrency::transformer::propagate_message
+- AGENTS/concurrency::transformer::propagate_to_any_targets
+- AGENTS/concurrency::transformer::release_message
+- AGENTS/concurrency::transformer::reserve_message
+- AGENTS/concurrency::transformer::resume_propagation
+- AGENTS/concurrency::transformer::send_message
+- AGENTS/concurrency::transformer::supports_anonymous_source
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +46,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a857a88e33c023ee10db338b658b6652ae0e1a0c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 994cfbaa79594389d8d3b8390bfc46a5aa75a525
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="transformer-class"></a>transformer-Klasse
@@ -63,23 +75,23 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Transformer-Konstruktor](#ctor)|Überladen. Erstellt eine `transformer` Meldungsblocks.|  
+|[Transformer](#ctor)|Überladen. Erstellt eine `transformer` Meldungsblocks.|  
 |[~ Transformer-Destruktor](#dtor)|Zerstört die `transformer` Meldungsblocks.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Accept_message-Methode](#accept_message)|Akzeptiert eine Meldung, die von diesem angeboten wurde `transformer` -Meldungsblock überträgt den Besitz an den Aufrufer.|  
-|[Consume_message-Methode](#consume_message)|Nimmt eine Meldung, die zuvor von Angeboten der `transformer` und vom Ziel überträgt den Besitz an den Aufrufer reserviert.|  
-|[Link_target_notification-Methode](#link_target_notification)|Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `transformer` Meldungsblocks.|  
-|[Propagate_message-Methode](#propagate_message)|Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `transformer` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.|  
-|[Propagate_to_any_targets-Methode](#propagate_to_any_targets)|Führt die Transformer-Funktion für eingehende Nachrichten.|  
-|[Release_message-Methode](#release_message)|Gibt die Reservierung einer vorherigen Meldung frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|  
-|[Reserve_message-Methode](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `transformer` Meldungsblocks. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
-|[Resume_propagation-Methode](#resume_propagation)|Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
-|[Send_message-Methode](#send_message)|Übergibt synchron eine Meldung von einer `ISource` -Block an diesen `transformer` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.|  
-|[Supports_anonymous_source-Methode](#supports_anonymous_source)|Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block akzeptieren kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist. (Überschreibt [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[accept_message](#accept_message)|Akzeptiert eine Meldung, die von diesem angeboten wurde `transformer` -Meldungsblock überträgt den Besitz an den Aufrufer.|  
+|[consume_message](#consume_message)|Nimmt eine Meldung, die zuvor von Angeboten der `transformer` und vom Ziel überträgt den Besitz an den Aufrufer reserviert.|  
+|[link_target_notification](#link_target_notification)|Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `transformer` Meldungsblocks.|  
+|[propagate_message](#propagate_message)|Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `transformer` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Führt die Transformer-Funktion für eingehende Nachrichten.|  
+|[release_message](#release_message)|Gibt die Reservierung einer vorherigen Meldung frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `transformer` Meldungsblocks. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
+|[send_message](#send_message)|Übergibt eine Nachricht synchron ein `ISource` -Block an diesen `transformer` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.|  
+|[supports_anonymous_source](#supports_anonymous_source)|Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block akzeptieren kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist. (Überschreibt [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -100,7 +112,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
  **Namespace:** Parallelität  
   
-##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a>accept_message 
 
  Akzeptiert eine Meldung, die von diesem angeboten wurde `transformer` -Meldungsblock überträgt den Besitz an den Aufrufer.  
   
@@ -115,7 +127,7 @@ virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die `message` Objekt, das der Aufrufer nun Eigentümer ist.  
   
-##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a>consume_message 
 
  Nimmt eine Meldung, die zuvor von Angeboten der `transformer` und vom Ziel überträgt den Besitz an den Aufrufer reserviert.  
   
@@ -133,7 +145,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Hinweise  
  Ähnlich wie `accept`, steht aber immer nach einem Aufruf von ist `reserve`.  
   
-##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a>link_target_notification 
 
  Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `transformer` Meldungsblocks.  
   
@@ -141,7 +153,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
  Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `transformer` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.  
   
@@ -161,7 +173,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Rückgabewert  
  Ein [Message_status](concurrency-namespace-enums.md) Anzeichen, was das Ziel entschieden, mit der Meldung zu tun.  
   
-##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
  Führt die Transformer-Funktion für eingehende Nachrichten.  
   
@@ -169,7 +181,7 @@ virtual message_status propagate_message(
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```  
   
-##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+##  <a name="release_message"></a>release_message 
 
  Gibt die Reservierung einer vorherigen Meldung frei.  
   
@@ -181,7 +193,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  Die `runtime_object_identity` von der `message` Objekt freigegeben wird.  
   
-##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a>reserve_message 
 
  Reserviert eine Meldung, die zuvor von diesem angebotenen `transformer` Meldungsblocks.  
   
@@ -199,7 +211,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Hinweise  
  Nach dem `reserve` wird aufgerufen, wenn die Rückgabe `true`, `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.  
   
-##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a>resume_propagation 
 
  Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde.  
   
@@ -207,9 +219,9 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+##  <a name="send_message"></a>send_message 
 
- Übergibt synchron eine Meldung von einer `ISource` -Block an diesen `transformer` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.  
+ Übergibt eine Nachricht synchron ein `ISource` -Block an diesen `transformer` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.  
   
 ```
 virtual message_status send_message(
@@ -227,7 +239,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Rückgabewert  
  Ein [Message_status](concurrency-namespace-enums.md) Anzeichen, was das Ziel entschieden, mit der Meldung zu tun.  
   
-##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
  Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block akzeptieren kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist.  
   
@@ -238,7 +250,7 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>Rückgabewert  
  `true`Da der Block nicht angebotene Nachrichten nicht verschieben.  
   
-##  <a name="a-namectora-transformer"></a><a name="ctor"></a>Transformer 
+##  <a name="ctor"></a>Transformer 
 
  Erstellt eine `transformer` Meldungsblocks.  
   
@@ -298,7 +310,7 @@ transformer(
   
  Der Typ `filter_method` ist ein Funktionselement mit der Signatur `bool (_Input const &)` die aufgerufen wird, von diesem `transformer` -Meldungsblock zu bestimmen, ob eine bereitgestellte Meldung akzeptiert werden sollen.  
   
-##  <a name="a-namedtora-transformer"></a><a name="dtor"></a>~ Transformer 
+##  <a name="dtor"></a>~ Transformer 
 
  Zerstört die `transformer` Meldungsblocks.  
   
@@ -308,5 +320,5 @@ transformer(
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
- [Call-Klasse](call-class.md)
+ [call-Klasse](call-class.md)
 

@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::ITarget
+- ITarget
+- AGENTS/concurrency::ITarget
+- AGENTS/concurrency::ITarget::propagate
+- AGENTS/concurrency::ITarget::send
+- AGENTS/concurrency::ITarget::supports_anonymous_source
+- AGENTS/concurrency::ITarget::link_source
+- AGENTS/concurrency::ITarget::unlink_source
+- AGENTS/concurrency::ITarget::unlink_sources
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: aa9001de9ec35f20cd76f701d6b8acc5de7ffde0
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4bd6b21e274431449c8fac452995dd66fc1aef1b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="itarget-class"></a>ITarget-Klasse
@@ -72,17 +79,17 @@ class ITarget;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Propagate-Methode](#propagate)|Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt asynchron eine Meldung von einem Quellblock an diesen Zielblock.|  
-|[Send-Methode](#send)|Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt eine Nachricht synchron an den Zielblock.|  
-|[Supports_anonymous_source-Methode](#supports_anonymous_source)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt True oder False, abhängig davon, ob die Nachrichtenblock akzeptiert Nachrichten Angeboten von einer Quelle, die nicht verknüpft ist. Wenn die überschriebene Methode gibt `true`, das Ziel kann eine Nachricht angebotene nicht verschieben, wie die Nutzung des eine zurückgestellte Nachricht zu einem späteren Zeitpunkt die Quelle in seiner Sourse Link Registrierung identifiziert werden muss.|  
+|[weitergeben](#propagate)|Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt asynchron eine Meldung von einem Quellblock an diesen Zielblock.|  
+|[Senden](#send)|Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt eine Nachricht synchron an den Zielblock.|  
+|[supports_anonymous_source](#supports_anonymous_source)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt True oder False, abhängig davon, ob die Nachrichtenblock akzeptiert Nachrichten Angeboten von einer Quelle, die nicht verknüpft ist. Wenn die überschriebene Methode gibt `true`, das Ziel kann eine Nachricht angebotene nicht verschieben, wie die Nutzung des eine zurückgestellte Nachricht zu einem späteren Zeitpunkt die Quelle in seiner Sourse Link Registrierung identifiziert werden muss.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Link_source-Methode](#link_source)|Ruft beim Überschreiben in einer abgeleiteten Klasse verknüpft einen angegebenen Quellblock mit diesem `ITarget` Block.|  
-|[Unlink_source-Methode](#unlink_source)|Ruft beim Überschreiben in einer abgeleiteten Klasse Quellblocks einer angegebenen dies `ITarget` Block.|  
-|[Unlink_sources-Methode](#unlink_sources)|Hebt beim Überschreiben in einer abgeleiteten Klasse die Verknüpfung aller Quellblöcke dies `ITarget` Block.|  
+|[link_source](#link_source)|Ruft beim Überschreiben in einer abgeleiteten Klasse verknüpft einen angegebenen Quellblock mit diesem `ITarget` Block.|  
+|[unlink_source](#unlink_source)|Ruft beim Überschreiben in einer abgeleiteten Klasse Quellblocks einer angegebenen dies `ITarget` Block.|  
+|[unlink_sources](#unlink_sources)|Hebt beim Überschreiben in einer abgeleiteten Klasse die Verknüpfung aller Quellblöcke dies `ITarget` Block.|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -95,7 +102,7 @@ class ITarget;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namedtora-itarget"></a><a name="dtor"></a>~ ITarget 
+##  <a name="dtor"></a>~ ITarget 
 
  Zerstört das `ITarget`-Objekt.  
   
@@ -103,7 +110,7 @@ class ITarget;
 virtual ~ITarget();
 ```  
   
-##  <a name="a-namelinksourcea-linksource"></a><a name="link_source"></a>link_source 
+##  <a name="link_source"></a>link_source 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse verknüpft einen angegebenen Quellblock mit diesem `ITarget` Block.  
   
@@ -118,7 +125,7 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion sollte nicht aufgerufen werden, direkt auf eine `ITarget` Block. Blöcke über miteinander verbunden werden sollen die `link_target` Methode `ISource` Blöcke, die aufruft die `link_source` Methode auf dem entsprechenden Ziel.  
   
-##  <a name="a-namepropagatea-propagate"></a><a name="propagate"></a>weitergeben 
+##  <a name="propagate"></a>weitergeben 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt asynchron eine Meldung von einem Quellblock an diesen Zielblock.  
   
@@ -141,7 +148,7 @@ virtual message_status propagate(
 ### <a name="remarks"></a>Hinweise  
  Die Methode löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) -Ausnahme aus, wenn entweder der `_PMessage` oder `_PSource` Parameter ist `NULL`.  
   
-##  <a name="a-namesenda-send"></a><a name="send"></a>Senden 
+##  <a name="send"></a>Senden 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse übergibt eine Nachricht synchron an den Zielblock.  
   
@@ -168,7 +175,7 @@ virtual message_status send(
   
  Wenn `send` zurückgibt, wurde die Meldung entweder bereits akzeptiert und in den Zielblock übertragen, oder es wurde vom Ziel abgelehnt.  
   
-##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse gibt True oder False, abhängig davon, ob die Nachrichtenblock akzeptiert Nachrichten Angeboten von einer Quelle, die nicht verknüpft ist. Wenn die überschriebene Methode gibt `true`, das Ziel kann eine Nachricht angebotene nicht verschieben, wie die Nutzung des eine zurückgestellte Nachricht zu einem späteren Zeitpunkt die Quelle in seiner Sourse Link Registrierung identifiziert werden muss.  
   
@@ -179,7 +186,7 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>Rückgabewert  
  `true`Wenn der Block die Nachricht von einer Quelle annehmen kann, die nicht verknüpft ist `false` andernfalls.  
   
-##  <a name="a-nameunlinksourcea-unlinksource"></a><a name="unlink_source"></a>unlink_source 
+##  <a name="unlink_source"></a>unlink_source 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse Quellblocks einer angegebenen dies `ITarget` Block.  
   
@@ -194,7 +201,7 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion sollte nicht aufgerufen werden, direkt auf eine `ITarget` Block. Blöcke sollten getrennt werden, mithilfe der `unlink_target` oder `unlink_targets` Methoden `ISource` Blöcke, die aufruft die `unlink_source` Methode auf dem entsprechenden Ziel.  
   
-##  <a name="a-nameunlinksourcesa-unlinksources"></a><a name="unlink_sources"></a>unlink_sources 
+##  <a name="unlink_sources"></a>unlink_sources 
 
  Hebt beim Überschreiben in einer abgeleiteten Klasse die Verknüpfung aller Quellblöcke dies `ITarget` Block.  
   

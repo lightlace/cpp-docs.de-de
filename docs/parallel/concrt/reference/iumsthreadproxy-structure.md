@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSThreadProxy
+- IUMSThreadProxy
+- CONCRTRM/concurrency::IUMSThreadProxy
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::EnterCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::EnterHyperCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::ExitCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::ExitHyperCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::GetCriticalRegionType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 55ed05f137775e819c81ce231cf8c8ad3a9974f3
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 46d486ddccce6f3c54627f3ea96f001e8e3bfcf7
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy-Struktur
@@ -54,11 +60,11 @@ struct IUMSThreadProxy : public IThreadProxy;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IUMSThreadProxy:: EnterCriticalRegion-Methode](#entercriticalregion)|Wird aufgerufen, um einen kritischen Bereich einzutreten. In einem kritischen Bereich, wird der Planer keine asynchrone blockierende Operationen berücksichtigt, die während des Bereichs auftreten. Dies bedeutet, dass der Planer für Seitenfehler, Threadunterbrechungen, asynchrone Kernelprozeduraufrufe (APCs) usw., für ein UMS-Thread nicht erneut eingegeben werden kann.|  
-|[IUMSThreadProxy:: EnterHyperCriticalRegion-Methode](#enterhypercriticalregion)|Wird aufgerufen, um einen äußerst wichtigen Bereich eingeben. In einem äußerst wichtigen Bereich, wird der Planer keine blockierenden Operationen berücksichtigt, die während des Bereichs auftreten. Dies bedeutet, dass der Planer nicht erneut geöffnet wird für Funktionsaufrufe, Sperre Übernahme Versuche, welcher Block, Seitenfehler, thread-Unterbrechungen, Kernel asynchrone Prozeduraufrufe (APCs), und usw., für die ein UMS-Thread, blockiert.|  
-|[IUMSThreadProxy:: ExitCriticalRegion-Methode](#exitcriticalregion)|Wird aufgerufen, um einen kritischen Bereich zu verlassen.|  
-|[IUMSThreadProxy:: ExitHyperCriticalRegion-Methode](#exithypercriticalregion)|Wird aufgerufen, um einen extrem kritischen Bereich zu verlassen.|  
-|[IUMSThreadProxy:: GetCriticalRegionType-Methode](#getcriticalregiontype)|Gibt die Art des kritischen Bereichs, in der Threadproxy befindet. Da besonders wichtige Bereiche eine Obermenge wichtiger Bereiche sind, wenn der Code eingegeben hat einen kritischen Bereich und dann einem äußerst wichtigen Bereich `InsideHyperCriticalRegion` zurückgegeben werden.|  
+|[IUMSThreadProxy:: EnterCriticalRegion](#entercriticalregion)|Wird aufgerufen, um einen kritischen Bereich einzutreten. In einem kritischen Bereich, wird der Planer keine asynchrone blockierende Operationen berücksichtigt, die während des Bereichs auftreten. Dies bedeutet, dass der Planer für Seitenfehler, Threadunterbrechungen, asynchrone Kernelprozeduraufrufe (APCs) usw., für ein UMS-Thread nicht erneut eingegeben werden kann.|  
+|[IUMSThreadProxy:: EnterHyperCriticalRegion](#enterhypercriticalregion)|Wird aufgerufen, um einen äußerst wichtigen Bereich eingeben. In einem äußerst wichtigen Bereich, wird der Planer keine blockierenden Operationen berücksichtigt, die während des Bereichs auftreten. Dies bedeutet, dass der Planer nicht erneut geöffnet wird für Funktionsaufrufe, Sperre Übernahme Versuche, welcher Block, Seitenfehler, thread-Unterbrechungen, Kernel asynchrone Prozeduraufrufe (APCs), und usw., für die ein UMS-Thread, blockiert.|  
+|[IUMSThreadProxy:: ExitCriticalRegion](#exitcriticalregion)|Wird aufgerufen, um einen kritischen Bereich zu verlassen.|  
+|[IUMSThreadProxy:: ExitHyperCriticalRegion](#exithypercriticalregion)|Wird aufgerufen, um einen extrem kritischen Bereich zu verlassen.|  
+|[IUMSThreadProxy:: GetCriticalRegionType](#getcriticalregiontype)|Gibt die Art des kritischen Bereichs, in der Threadproxy befindet. Da besonders wichtige Bereiche eine Obermenge wichtiger Bereiche sind, wenn der Code eingegeben hat einen kritischen Bereich und dann einem äußerst wichtigen Bereich `InsideHyperCriticalRegion` zurückgegeben werden.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [IThreadProxy](ithreadproxy-structure.md)  
@@ -70,7 +76,7 @@ struct IUMSThreadProxy : public IThreadProxy;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-nameentercriticalregiona--iumsthreadproxyentercriticalregion-method"></a><a name="entercriticalregion"></a>IUMSThreadProxy:: EnterCriticalRegion-Methode  
+##  <a name="entercriticalregion"></a>IUMSThreadProxy:: EnterCriticalRegion-Methode  
  Wird aufgerufen, um einen kritischen Bereich einzutreten. In einem kritischen Bereich, wird der Planer keine asynchrone blockierende Operationen berücksichtigt, die während des Bereichs auftreten. Dies bedeutet, dass der Planer für Seitenfehler, Threadunterbrechungen, asynchrone Kernelprozeduraufrufe (APCs) usw., für ein UMS-Thread nicht erneut eingegeben werden kann.  
   
 ```
@@ -80,7 +86,7 @@ virtual int EnterCriticalRegion() = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Die neue Tiefe eines kritischen Bereichs. Kritische Bereiche sind wiedereintretend.  
   
-##  <a name="a-nameenterhypercriticalregiona--iumsthreadproxyenterhypercriticalregion-method"></a><a name="enterhypercriticalregion"></a>IUMSThreadProxy:: EnterHyperCriticalRegion-Methode  
+##  <a name="enterhypercriticalregion"></a>IUMSThreadProxy:: EnterHyperCriticalRegion-Methode  
  Wird aufgerufen, um einen äußerst wichtigen Bereich eingeben. In einem äußerst wichtigen Bereich, wird der Planer keine blockierenden Operationen berücksichtigt, die während des Bereichs auftreten. Dies bedeutet, dass der Planer nicht erneut geöffnet wird für Funktionsaufrufe, Sperre Übernahme Versuche, welcher Block, Seitenfehler, thread-Unterbrechungen, Kernel asynchrone Prozeduraufrufe (APCs), und usw., für die ein UMS-Thread, blockiert.  
   
 ```
@@ -93,7 +99,7 @@ virtual int EnterHyperCriticalRegion() = 0;
 ### <a name="remarks"></a>Hinweise  
  Der Planer muss besonders vorsichtig, welche Methoden und Sperren in solchen Bereichen abgerufenen sein. Wenn Code in so einem Bereich eine Sperre, die von einem Element gehalten wird, dass der Planer zum Planen von verantwortlich ist blockiert, möglicherweise Deadlock folgen.  
   
-##  <a name="a-nameexitcriticalregiona--iumsthreadproxyexitcriticalregion-method"></a><a name="exitcriticalregion"></a>IUMSThreadProxy:: ExitCriticalRegion-Methode  
+##  <a name="exitcriticalregion"></a>IUMSThreadProxy:: ExitCriticalRegion-Methode  
  Wird aufgerufen, um einen kritischen Bereich zu verlassen.  
   
 ```
@@ -103,7 +109,7 @@ virtual int ExitCriticalRegion() = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Die neue Tiefe eines kritischen Bereichs. Kritische Bereiche sind wiedereintretend.  
   
-##  <a name="a-nameexithypercriticalregiona--iumsthreadproxyexithypercriticalregion-method"></a><a name="exithypercriticalregion"></a>IUMSThreadProxy:: ExitHyperCriticalRegion-Methode  
+##  <a name="exithypercriticalregion"></a>IUMSThreadProxy:: ExitHyperCriticalRegion-Methode  
  Wird aufgerufen, um einen extrem kritischen Bereich zu verlassen.  
   
 ```
@@ -113,7 +119,7 @@ virtual int ExitHyperCriticalRegion() = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Die neue Tiefe des äußerst wichtigen Bereichs. Extrem kritische Bereiche sind wiedereintretend.  
   
-##  <a name="a-namegetcriticalregiontypea--iumsthreadproxygetcriticalregiontype-method"></a><a name="getcriticalregiontype"></a>IUMSThreadProxy:: GetCriticalRegionType-Methode  
+##  <a name="getcriticalregiontype"></a>IUMSThreadProxy:: GetCriticalRegionType-Methode  
  Gibt die Art des kritischen Bereichs, in der Threadproxy befindet. Da besonders wichtige Bereiche eine Obermenge wichtiger Bereiche sind, wenn der Code eingegeben hat einen kritischen Bereich und dann einem äußerst wichtigen Bereich `InsideHyperCriticalRegion` zurückgegeben werden.  
   
 ```

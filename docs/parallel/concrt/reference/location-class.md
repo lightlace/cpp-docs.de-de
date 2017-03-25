@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::location
+- location
+- CONCRT/concurrency::location
+- CONCRT/concurrency::location::location
+- CONCRT/concurrency::location::current
+- CONCRT/concurrency::location::from_numa_node
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1a404f44600addcbf332fabcfc19a7b48dab0c81
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="location-class"></a>location-Klasse
@@ -54,23 +58,23 @@ class location;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Speicherort-Konstruktor](#ctor)|Überladen. Erstellt ein `location`-Objekt.|  
+|[Speicherort](#ctor)|Überladen. Erstellt ein `location`-Objekt.|  
 |[~ Location-Destruktor](#dtor)|Zerstört ein `location`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[aktuelle Methode](#current)|Gibt ein `location` Objekt, das die spezifische Stelle den aufrufenden Thread ausgeführt wird, darstellt.|  
-|[From_numa_node-Methode](#from_numa_node)|Gibt ein `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.|  
+|[aktuelle](#current)|Gibt ein `location` Objekt, das die spezifische Stelle den aufrufenden Thread ausgeführt wird, darstellt.|  
+|[from_numa_node](#from_numa_node)|Gibt ein `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Operator! =-Operator](#operator_neq)|Bestimmt, ob zwei `location` Objekte unterschiedliche Position darstellt.|  
-|[Operator =-Operator](#operator_eq)|Weist den Inhalt eines anderen `location` -Objekts diesem Objekt zu.|  
-|[Operator ==-Operator](#operator_eq_eq)|Bestimmt, ob zwei `location` Objekte am gleichen Speicherort darstellen.|  
+|[operator!=](#operator_neq)|Bestimmt, ob zwei `location` Objekte unterschiedliche Position darstellt.|  
+|[operator=](#operator_eq)|Weist den Inhalt eines anderen `location` -Objekts diesem Objekt zu.|  
+|[operator==](#operator_eq_eq)|Bestimmt, ob zwei `location` Objekte am gleichen Speicherort darstellen.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `location`  
@@ -80,7 +84,7 @@ class location;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namedtora-location"></a><a name="dtor"></a>~ Speicherort 
+##  <a name="dtor"></a>~ Speicherort 
 
  Zerstört ein `location`-Objekt.  
   
@@ -88,7 +92,7 @@ class location;
 ~location();
 ```  
   
-##  <a name="a-namecurrenta-current"></a><a name="current"></a>aktuelle 
+##  <a name="current"></a>aktuelle 
 
  Gibt ein `location` Objekt, das die spezifische Stelle den aufrufenden Thread ausgeführt wird, darstellt.  
   
@@ -99,7 +103,7 @@ static location __cdecl current();
 ### <a name="return-value"></a>Rückgabewert  
  Einen Speicherort, der spezifischen Ort darstellt, wird der aufrufende Thread ausgeführt.  
   
-##  <a name="a-namefromnumanodea-fromnumanode"></a><a name="from_numa_node"></a>from_numa_node 
+##  <a name="from_numa_node"></a>from_numa_node 
 
  Gibt ein `location` Objekt, das einen bestimmten NUMA-Knoten darstellt.  
   
@@ -114,7 +118,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ### <a name="return-value"></a>Rückgabewert  
  Eine Position, die vom angegebenen NUMA-Knoten darstellt der `_NumaNodeNumber` Parameter.  
   
-##  <a name="a-namectora-location"></a><a name="ctor"></a>Speicherort 
+##  <a name="ctor"></a>Speicherort 
 
  Erstellt ein `location`-Objekt.  
   
@@ -141,7 +145,7 @@ location(
 ### <a name="remarks"></a>Hinweise  
  Ein Standardspeicherort für erstellt stellt das System als Ganzes dar.  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>Operator! = 
+##  <a name="operator_neq"></a>Operator! = 
 
  Bestimmt, ob zwei `location` Objekte unterschiedliche Position darstellt.  
   
@@ -155,7 +159,7 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="return-value"></a>Rückgabewert  
  `true`Wenn die beiden Speicherorten unterschiedlich sind, `false` andernfalls.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a>Operator = 
 
  Weist den Inhalt eines anderen `location` -Objekts diesem Objekt zu.  
   
@@ -169,7 +173,7 @@ location& operator= (const location& _Rhs);
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>Operator == 
+##  <a name="operator_eq_eq"></a>Operator == 
 
  Bestimmt, ob zwei `location` Objekte am gleichen Speicherort darstellen.  
   

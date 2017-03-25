@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::nested_scheduler_missing_detach
+- nested_scheduler_missing_detach
+- CONCRT/concurrency::nested_scheduler_missing_detach
+- CONCRT/concurrency::nested_scheduler_missing_detach::nested_scheduler_missing_detach
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 0079fea0b157e194947931f88d1cb500167cb6e2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 7ab8dc3761c6f11529b70ec4d71bbaebdfea0493
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach-Klasse
@@ -54,7 +56,7 @@ class nested_scheduler_missing_detach : public std::exception;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Nested_scheduler_missing_detach-Konstruktor](#ctor)|Überladen. Erstellt ein `nested_scheduler_missing_detach`-Objekt.|  
+|[nested_scheduler_missing_detach](#ctor)|Überladen. Erstellt ein `nested_scheduler_missing_detach`-Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Ausnahme wird ausgelöst, nur, wenn Sie einen Planer in einem anderen, durch Aufrufen Schachteln der `Attach` Methode ein `Scheduler` Objekt in einem Kontext, der bereits im Besitz von oder an einen anderen Planer angefügt ist. Die Concurrency Runtime löst diese Ausnahme opportunistisch aus, wenn sie das Szenario als Hilfe beim Auffinden des Problems erkennen kann. Nicht jede Instanz fehlenden rufen Sie die `CurrentScheduler::Detach` Methode ist sichergestellt, dass diese Ausnahme auslöst.  
@@ -69,7 +71,7 @@ class nested_scheduler_missing_detach : public std::exception;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namectora-nestedschedulermissingdetach"></a><a name="ctor"></a>nested_scheduler_missing_detach 
+##  <a name="ctor"></a>nested_scheduler_missing_detach 
 
  Erstellt ein `nested_scheduler_missing_detach`-Objekt.  
   

@@ -9,8 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_graphics/Concurrency::graphics
-- amp_short_vectors/Concurrency::graphics
+- AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
@@ -33,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fd29b427307e336d560a2caf42e4fc5228e8071f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e08a9bc52b7ce519508bb1682287e75070d341a1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics-Namespace
@@ -53,7 +52,7 @@ namespace graphics;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Concurrency::Graphics::Direct3D-Namespace](concurrency-graphics-direct3d-namespace.md)|Stellt Funktionen für Direct3D-Interop bereit.|  
+|[Concurrency::graphics::direct3d Namespace](concurrency-graphics-direct3d-namespace.md)|Stellt Funktionen für Direct3D-Interop bereit.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -72,8 +71,8 @@ namespace graphics;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Texture-Klasse](texture-class.md)|Eine Textur ist ein Datenaggregat in einer "accelerator_view" in der extent-Domäne. Es ist eine Auflistung von Variablen, eine für jedes Element in einer extent-Domäne. Jede Variable enthält einen Wert gemäß primitivem C++-Typ ohne Vorzeichen (int, int, Float, Double) oder skalarer Typnorm bzw. unorm (definiert in concurrency::graphics) oder zulässige kurze Vektortypen, die in concurrency::graphics definiert werden.|  
-|[Writeonly_texture_view-Klasse](writeonly-texture-view-class.md)|Eine "writeonly_texture_view" bietet Nur-Schreib-Zugriff auf eine Textur.|  
+|[texture-Klasse](texture-class.md)|Eine Textur ist ein Datenaggregat in einer "accelerator_view" in der extent-Domäne. Es ist eine Auflistung von Variablen, eine für jedes Element in einer extent-Domäne. Jede Variable enthält einen Wert gemäß primitivem C++-Typ ohne Vorzeichen (int, int, Float, Double) oder skalarer Typnorm bzw. unorm (definiert in concurrency::graphics) oder zulässige kurze Vektortypen, die in concurrency::graphics definiert werden.|  
+|[writeonly_texture_view-Klasse](writeonly-texture-view-class.md)|Eine "writeonly_texture_view" bietet Nur-Schreib-Zugriff auf eine Textur.|  
 |[double_2-Klasse](double-2-class.md)|Stellt einen kurzen Vektor von 2 `double`-Werten dar.|  
 |[double_3-Klasse](double-3-class.md)|Stellt einen kurzen Vektor von 3 `double` Werte.|  
 |[double_4-Klasse](double-4-class.md)|Stellt einen kurzen Vektor von 4 `double` Werte.|  
@@ -92,17 +91,17 @@ namespace graphics;
 |[unorm_2-Klasse](unorm-2-class.md)|Stellt einen kurzen Vektor von 2 `unorm`-Werten dar.|  
 |[unorm_3-Klasse](unorm-3-class.md)|Stellt einen kurzen Vektor von 3 `unorm` Werte.|  
 |[unorm_4-Klasse](unorm-4-class.md)|Stellt einen kurzen Vektor von 4 `unorm` Werte.|  
-|[samplerklasse](sampler-class.md)|Stellt die Samplerkonfiguration dar, die für Textursampling verwendet wird.|  
-|[Short_vector-Struktur](short-vector-structure.md)|Stellt eine grundlegende Implementierung eines kurzen Vektors von Werten.|  
-|[Short_vector_traits-Struktur](short-vector-traits-structure.md)|Stellt das Abrufen der Länge und des Typs eines kurzen Vektors bereit.|  
-|[Texture_view-Klasse](texture-view-class.md)|Stellt einer Textur Lese- und Schreibzugriff zur Verfügung.|  
+|[sampler-Klasse](sampler-class.md)|Stellt die Samplerkonfiguration dar, die für Textursampling verwendet wird.|  
+|[short_vector-Struktur](short-vector-structure.md)|Stellt eine grundlegende Implementierung eines kurzen Vektors von Werten.|  
+|[short_vector_traits-Struktur](short-vector-traits-structure.md)|Stellt das Abrufen der Länge und des Typs eines kurzen Vektors bereit.|  
+|[texture_view-Klasse](texture-view-class.md)|Stellt einer Textur Lese- und Schreibzugriff zur Verfügung.|  
   
 ### <a name="functions"></a>Funktionen  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Copy-Funktion](concurrency-graphics-namespace-functions.md#copy)|Überladen. Kopiert den Inhalt der Quelltextur in den Zielhostpuffer.|  
-|[Copy_async-Funktion](concurrency-graphics-namespace-functions.md#copy_async)|Überladen. Kopiert den Inhalt der Quelltextur asynchron in den Zielhostpuffer.|  
+|[copy](concurrency-graphics-namespace-functions.md#copy)|Überladen. Kopiert den Inhalt der Quelltextur in den Zielhostpuffer.|  
+|[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Überladen. Kopiert den Inhalt der Quelltextur asynchron in den Zielhostpuffer.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** amp_graphics.h  
@@ -110,5 +109,5 @@ namespace graphics;
  **Namespace:** Parallelität  
   
 ## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace (C++-AMP)](concurrency-namespace-cpp-amp.md)
+ [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

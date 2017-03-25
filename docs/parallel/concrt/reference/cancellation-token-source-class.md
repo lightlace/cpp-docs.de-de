@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplcancellation_token/concurrency::cancellation_token_source
+- cancellation_token_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancellation_token_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancel
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::create_linked_source
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::get_token
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 5c80977656308d3174f4141b131c27fd3c162bbe
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f41a4a21af5bc37ab612221152b8311a5a91d914
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source-Klasse
@@ -54,24 +59,24 @@ class cancellation_token_source;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Cancellation_token_source-Konstruktor](#ctor)|Überladen. Erstellt eine neue `cancellation_token_source`. Die Quelle kann verwendet werden, um den Abbruch eines abbrechbaren Vorgangs zu kennzeichnen.|  
+|[cancellation_token_source](#ctor)|Überladen. Erstellt eine neue `cancellation_token_source`. Die Quelle kann verwendet werden, um den Abbruch eines abbrechbaren Vorgangs zu kennzeichnen.|  
 |[~ Cancellation_token_source-Destruktor](#dtor)||  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Cancel-Methode](#cancel)|Bricht das Token ab. Jede `task_group`, `structured_task_group` oder jeder `task`, der das Token nutzt, wird bei diesem Aufruf abgebrochen und löst eine Ausnahme am nächsten Unterbrechungspunkt aus.|  
-|[Create_linked_source-Methode](#create_linked_source)|Überladen. Erstellt eine `cancellation_token_source`, die abgebrochen wird, wenn das bereitgestellte Token abgebrochen wird.|  
-|[Get_token-Methode](#get_token)|Gibt ein Abbruchtoken zurück, das dieser Quelle zugeordnet ist. Das zurückgegebene Token kann für einen Abbruch abgerufen werden oder einen Rückruf bereitstellen, wenn ein Abbruch auftritt.|  
+|[Abbrechen](#cancel)|Bricht das Token ab. Jede `task_group`, `structured_task_group` oder jeder `task`, der das Token nutzt, wird bei diesem Aufruf abgebrochen und löst eine Ausnahme am nächsten Unterbrechungspunkt aus.|  
+|[create_linked_source](#create_linked_source)|Überladen. Erstellt eine `cancellation_token_source`, die abgebrochen wird, wenn das bereitgestellte Token abgebrochen wird.|  
+|[get_token](#get_token)|Gibt ein Abbruchtoken zurück, das dieser Quelle zugeordnet ist. Das zurückgegebene Token kann für einen Abbruch abgerufen werden oder einen Rückruf bereitstellen, wenn ein Abbruch auftritt.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Operator! =-Operator](#operator_neq)||  
-|[Operator =-Operator](#operator_eq)||  
-|[Operator ==-Operator](#operator_eq_eq)||  
+|[operator!=](#operator_neq)||  
+|[operator=](#operator_eq)||  
+|[operator==](#operator_eq_eq)||  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `cancellation_token_source`  
@@ -81,13 +86,13 @@ class cancellation_token_source;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namedtora-cancellationtokensource"></a><a name="dtor"></a>~ Cancellation_token_source 
+##  <a name="dtor"></a>~ Cancellation_token_source 
 
 ```
 ~cancellation_token_source();
 ```  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>Abbrechen 
+##  <a name="cancel"></a>Abbrechen 
 
  Bricht das Token ab. Jede `task_group`, `structured_task_group` oder jeder `task`, der das Token nutzt, wird bei diesem Aufruf abgebrochen und löst eine Ausnahme am nächsten Unterbrechungspunkt aus.  
   
@@ -95,7 +100,7 @@ class cancellation_token_source;
 void cancel() const;
 ```  
   
-##  <a name="a-namectora-cancellationtokensource"></a><a name="ctor"></a>cancellation_token_source 
+##  <a name="ctor"></a>cancellation_token_source 
 
  Erstellt eine neue `cancellation_token_source`. Die Quelle kann verwendet werden, um den Abbruch eines abbrechbaren Vorgangs zu kennzeichnen.  
   
@@ -110,7 +115,7 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ### <a name="parameters"></a>Parameter  
  `_Src`  
   
-##  <a name="a-namecreatelinkedsourcea-createlinkedsource"></a><a name="create_linked_source"></a>create_linked_source 
+##  <a name="create_linked_source"></a>create_linked_source 
 
  Erstellt eine `cancellation_token_source`, die abgebrochen wird, wenn das bereitgestellte Token abgebrochen wird.  
   
@@ -136,7 +141,7 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ### <a name="return-value"></a>Rückgabewert  
  Eine `cancellation_token_source`, die abgebrochen wird, wenn das vom `_Src`-Parameter bereitgestellte Token abgebrochen wird.  
   
-##  <a name="a-namegettokena-gettoken"></a><a name="get_token"></a>get_token 
+##  <a name="get_token"></a>get_token 
 
  Gibt ein Abbruchtoken zurück, das dieser Quelle zugeordnet ist. Das zurückgegebene Token kann für einen Abbruch abgerufen werden oder einen Rückruf bereitstellen, wenn ein Abbruch auftritt.  
   
@@ -147,7 +152,7 @@ cancellation_token get_token() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Abbruchtoken, der dieser Quelle zugeordnet ist.  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>Operator! = 
+##  <a name="operator_neq"></a>Operator! = 
 
 ```
 bool operator!= (const cancellation_token_source& _Src) const;
@@ -158,7 +163,7 @@ bool operator!= (const cancellation_token_source& _Src) const;
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a>Operator = 
 
 ```
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
@@ -171,7 +176,7 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>Operator == 
+##  <a name="operator_eq_eq"></a>Operator == 
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;

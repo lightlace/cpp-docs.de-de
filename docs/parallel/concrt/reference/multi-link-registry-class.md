@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::multi_link_registry
+- multi_link_registry
+- AGENTS/concurrency::multi_link_registry
+- AGENTS/concurrency::multi_link_registry::multi_link_registry
+- AGENTS/concurrency::multi_link_registry::add
+- AGENTS/concurrency::multi_link_registry::begin
+- AGENTS/concurrency::multi_link_registry::contains
+- AGENTS/concurrency::multi_link_registry::count
+- AGENTS/concurrency::multi_link_registry::remove
+- AGENTS/concurrency::multi_link_registry::set_bound
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1548d2f920cf5566cced499e189cdcc19bf757ee
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: b52ee20ed16a4ce8d0b9f11b6acf25112464b49b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry-Klasse
@@ -59,19 +67,19 @@ class multi_link_registry : public network_link_registry<_Block>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Multi_link_registry-Konstruktor](#ctor)|Erstellt ein `multi_link_registry`-Objekt.|  
+|[multi_link_registry](#ctor)|Erstellt ein `multi_link_registry`-Objekt.|  
 |[~ Multi_link_registry-Destruktor](#dtor)|Zerstört das `multi_link_registry`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Add-Methode](#add)|Fügt einen Link zu der `multi_link_registry` Objekt. (Überschreibt [network_link_registry:: Add](network-link-registry-class.md#add).)|  
-|[Begin-Methode](#begin)|Gibt einen Iterator zurück, auf das erste Element in der `multi_link_registry` Objekt. (Überschreibt [network_link_registry:: Begin](network-link-registry-class.md#begin).)|  
-|[Contains-Methode](#contains)|Sucht die `multi_link_registry` -Objekt für einen angegebenen Block. (Überschreibt [network_link_registry:: Contains](network-link-registry-class.md#contains).)|  
-|[Count-Methode](#count)|Zählt die Anzahl der Elemente in der `multi_link_registry` Objekt. (Überschreibt [network_link_registry:: Count](network-link-registry-class.md#count).)|  
-|[Remove-Methode](#remove)|Entfernt ein Link aus der `multi_link_registry` Objekt. (Überschreibt [network_link_registry:: Remove](network-link-registry-class.md#remove).)|  
-|[Set_bound-Methode](#set_bound)|Legt eine Obergrenze für die Anzahl der Links, die die `multi_link_registry` -Objekt enthalten kann.|  
+|[add](#add)|Fügt einen Link zu der `multi_link_registry` Objekt. (Überschreibt [network_link_registry:: Add](network-link-registry-class.md#add).)|  
+|[begin](#begin)|Gibt einen Iterator zurück, auf das erste Element in der `multi_link_registry` Objekt. (Überschreibt [network_link_registry:: Begin](network-link-registry-class.md#begin).)|  
+|[enthält](#contains)|Sucht die `multi_link_registry` -Objekt für einen angegebenen Block. (Überschreibt [network_link_registry:: Contains](network-link-registry-class.md#contains).)|  
+|[count](#count)|Zählt die Anzahl der Elemente in der `multi_link_registry` Objekt. (Überschreibt [network_link_registry:: Count](network-link-registry-class.md#count).)|  
+|[remove](#remove)|Entfernt ein Link aus der `multi_link_registry` Objekt. (Überschreibt [network_link_registry:: Remove](network-link-registry-class.md#remove).)|  
+|[set_bound](#set_bound)|Legt eine Obergrenze für die Anzahl der Links, die die `multi_link_registry` -Objekt enthalten kann.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [network_link_registry](network-link-registry-class.md)  
@@ -83,7 +91,7 @@ class multi_link_registry : public network_link_registry<_Block>;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-nameadda-add"></a><a name="add"></a>Hinzufügen 
+##  <a name="add"></a>Hinzufügen 
 
  Fügt einen Link zu der `multi_link_registry` Objekt.  
   
@@ -98,7 +106,7 @@ virtual void add(_EType _Link);
 ### <a name="remarks"></a>Hinweise  
  Die Methode löst eine [Invalid_link_target](invalid-link-target-class.md) Ausnahme, wenn der Link bereits in der Registrierung vorhanden ist oder eine gebundene bereits festgelegt wurde die `set_bound` -Funktion und ein Link inzwischen entfernt wurde.  
   
-##  <a name="a-namebegina-begin"></a><a name="begin"></a>beginnen 
+##  <a name="begin"></a>beginnen 
 
  Gibt einen Iterator zurück, auf das erste Element in der `multi_link_registry` Objekt.  
   
@@ -112,7 +120,7 @@ virtual iterator begin();
 ### <a name="remarks"></a>Hinweise  
  Der Endzustand wird angegeben, indem eine `NULL` Link.  
   
-##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>enthält 
+##  <a name="contains"></a>enthält 
 
  Sucht die `multi_link_registry` -Objekt für einen angegebenen Block.  
   
@@ -127,7 +135,7 @@ virtual bool contains(_EType _Link);
 ### <a name="return-value"></a>Rückgabewert  
  `true`Wenn der angegebene Block gefunden wurde, `false` andernfalls.  
   
-##  <a name="a-namecounta-count"></a><a name="count"></a>Anzahl 
+##  <a name="count"></a>Anzahl 
 
  Zählt die Anzahl der Elemente in der `multi_link_registry` Objekt.  
   
@@ -138,7 +146,7 @@ virtual size_t count();
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Elemente in der `multi_link_registry` Objekt.  
   
-##  <a name="a-namectora-multilinkregistry"></a><a name="ctor"></a>multi_link_registry 
+##  <a name="ctor"></a>multi_link_registry 
 
  Erstellt ein `multi_link_registry`-Objekt.  
   
@@ -146,7 +154,7 @@ virtual size_t count();
 multi_link_registry();
 ```  
   
-##  <a name="a-namedtora-multilinkregistry"></a><a name="dtor"></a>~ Multi_link_registry 
+##  <a name="dtor"></a>~ Multi_link_registry 
 
  Zerstört das `multi_link_registry`-Objekt.  
   
@@ -157,7 +165,7 @@ virtual ~multi_link_registry();
 ### <a name="remarks"></a>Hinweise  
  Die Methode löst eine [Invalid_operation](invalid-operation-class.md) -Ausnahme aus, wenn Sie aufgerufen wird, bevor alle Links entfernt werden.  
   
-##  <a name="a-nameremovea-remove"></a><a name="remove"></a>Entfernen 
+##  <a name="remove"></a>Entfernen 
 
  Entfernt ein Link aus der `multi_link_registry` Objekt.  
   
@@ -172,7 +180,7 @@ virtual bool remove(_EType _Link);
 ### <a name="return-value"></a>Rückgabewert  
  `true`Wenn der Link gefunden und entfernt wurde, `false` andernfalls.  
   
-##  <a name="a-namesetbounda-setbound"></a><a name="set_bound"></a>set_bound 
+##  <a name="set_bound"></a>set_bound 
 
  Legt eine Obergrenze für die Anzahl der Links, die die `multi_link_registry` -Objekt enthalten kann.  
   
@@ -189,5 +197,5 @@ void set_bound(size_t _MaxLinks);
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
- [Single_link_registry-Klasse](single-link-registry-class.md)
+ [single_link_registry-Klasse](single-link-registry-class.md)
 

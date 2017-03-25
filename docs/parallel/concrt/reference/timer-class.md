@@ -9,7 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::timer
+- timer
+- AGENTS/concurrency::timer
+- AGENTS/concurrency::timer::timer
+- AGENTS/concurrency::timer::pause
+- AGENTS/concurrency::timer::start
+- AGENTS/concurrency::timer::stop
+- AGENTS/concurrency::timer::accept_message
+- AGENTS/concurrency::timer::consume_message
+- AGENTS/concurrency::timer::link_target_notification
+- AGENTS/concurrency::timer::propagate_to_any_targets
+- AGENTS/concurrency::timer::release_message
+- AGENTS/concurrency::timer::reserve_message
+- AGENTS/concurrency::timer::resume_propagation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +46,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 769ccd051c68f0a4d74511392f0f1a811e36e3e7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d6dfdc1b03ac2d15aa575c16cbe86968f565c1c1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="timer-class"></a>Timer-Klasse
@@ -59,28 +71,28 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Timer-Konstruktor](#ctor)|Überladen. Erstellt eine `timer` Block, der eine bestimmte Nachricht nach einem angegebenen Intervall ausgelöst wird.|  
+|[Zeitgeber](#ctor)|Überladen. Erstellt eine `timer` Block, der eine bestimmte Nachricht nach einem angegebenen Intervall ausgelöst wird.|  
 |[~ Timer-Destruktor](#dtor)|Zerstört ein `timer` Meldungsblocks.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Pause-Methode](#pause)|Beendet die `timer` Meldungsblocks. Wenn sie wiederholte ist `timer` -Meldungsblock, es kann neu gestartet werden mit einer nachfolgenden `start()` aufrufen. Für nicht wiederholendes Timer, hat dies denselben Effekt wie ein `stop` aufrufen.|  
-|[Start-Methode](#start)|Startet die `timer` Meldungsblocks. Die angegebene Anzahl von Millisekunden nach dem aufgerufen wird, wird der angegebene Wert weitergegeben downstream als ein `message`.|  
-|[Stop-Methode](#stop)|Beendet die `timer` Meldungsblocks.|  
+|[Anhalten](#pause)|Beendet die `timer` Meldungsblocks. Wenn sie wiederholte ist `timer` -Meldungsblock, es kann neu gestartet werden mit einer nachfolgenden `start()` aufrufen. Für nicht wiederholendes Timer, hat dies denselben Effekt wie ein `stop` aufrufen.|  
+|[start](#start)|Startet die `timer` Meldungsblocks. Die angegebene Anzahl von Millisekunden nach dem aufgerufen wird, wird der angegebene Wert weitergegeben downstream als ein `message`.|  
+|[Beenden](#stop)|Beendet die `timer` Meldungsblocks.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Accept_message-Methode](#accept_message)|Akzeptiert eine Meldung, die von diesem angeboten wurde `timer` -Meldungsblock überträgt den Besitz an den Aufrufer.|  
-|[Consume_message-Methode](#consume_message)|Nimmt eine Meldung, die zuvor von Angeboten der `timer` und vom Ziel überträgt den Besitz an den Aufrufer reserviert.|  
-|[Link_target_notification-Methode](#link_target_notification)|Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `timer` Meldungsblocks.|  
-|[Propagate_to_any_targets-Methode](#propagate_to_any_targets)|Versucht, die Nachricht von erzeugten bieten die `timer` Block, um alle verknüpften Zielen.|  
-|[Release_message-Methode](#release_message)|Gibt die Reservierung einer vorherigen Meldung frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|  
-|[Reserve_message-Methode](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `timer` Meldungsblocks. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
-|[Resume_propagation-Methode](#resume_propagation)|Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
+|[accept_message](#accept_message)|Akzeptiert eine Meldung, die von diesem angeboten wurde `timer` -Meldungsblock überträgt den Besitz an den Aufrufer.|  
+|[consume_message](#consume_message)|Nimmt eine Meldung, die zuvor von Angeboten der `timer` und vom Ziel überträgt den Besitz an den Aufrufer reserviert.|  
+|[link_target_notification](#link_target_notification)|Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `timer` Meldungsblocks.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Versucht, die Nachricht von erzeugten bieten die `timer` Block, um alle verknüpften Zielen.|  
+|[release_message](#release_message)|Gibt die Reservierung einer vorherigen Meldung frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `timer` Meldungsblocks. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -97,7 +109,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
  **Namespace:** Parallelität  
   
-##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a>accept_message 
 
  Akzeptiert eine Meldung, die von diesem angeboten wurde `timer` -Meldungsblock überträgt den Besitz an den Aufrufer.  
   
@@ -112,7 +124,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die `message` Objekt, das der Aufrufer nun Eigentümer ist.  
   
-##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a>consume_message 
 
  Nimmt eine Meldung, die zuvor von Angeboten der `timer` und vom Ziel überträgt den Besitz an den Aufrufer reserviert.  
   
@@ -130,7 +142,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Hinweise  
  Ähnlich wie `accept`, steht aber immer nach einem Aufruf von ist `reserve`.  
   
-##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a>link_target_notification 
 
  Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `timer` Meldungsblocks.  
   
@@ -142,7 +154,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Ein Zeiger auf das neu verknüpfte Ziel.  
   
-##  <a name="a-namepausea-pause"></a><a name="pause"></a>Anhalten 
+##  <a name="pause"></a>Anhalten 
 
  Beendet die `timer` Meldungsblocks. Wenn sie wiederholte ist `timer` -Meldungsblock, es kann neu gestartet werden mit einer nachfolgenden `start()` aufrufen. Für nicht wiederholendes Timer, hat dies denselben Effekt wie ein `stop` aufrufen.  
   
@@ -150,7 +162,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 void pause();
 ```  
   
-##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
  Versucht, die Nachricht von erzeugten bieten die `timer` Block, um alle verknüpften Zielen.  
   
@@ -158,7 +170,7 @@ void pause();
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
 ```  
   
-##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+##  <a name="release_message"></a>release_message 
 
  Gibt die Reservierung einer vorherigen Meldung frei.  
   
@@ -170,7 +182,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  Die `runtime_object_identity` von der `message` Objekt freigegeben wird.  
   
-##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a>reserve_message 
 
  Reserviert eine Meldung, die zuvor von diesem angebotenen `timer` Meldungsblocks.  
   
@@ -188,7 +200,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Hinweise  
  Nach dem `reserve` wird aufgerufen, wenn die Rückgabe `true`, `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.  
   
-##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a>resume_propagation 
 
  Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde.  
   
@@ -196,7 +208,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="a-namestarta-start"></a><a name="start"></a>Starten 
+##  <a name="start"></a>Starten 
 
  Startet die `timer` Meldungsblocks. Die angegebene Anzahl von Millisekunden nach dem aufgerufen wird, wird der angegebene Wert weitergegeben downstream als ein `message`.  
   
@@ -204,7 +216,7 @@ virtual void resume_propagation();
 void start();
 ```  
   
-##  <a name="a-namestopa-stop"></a><a name="stop"></a>Beenden 
+##  <a name="stop"></a>Beenden 
 
  Beendet die `timer` Meldungsblocks.  
   
@@ -212,7 +224,7 @@ void start();
 void stop();
 ```  
   
-##  <a name="a-namectora-timer"></a><a name="ctor"></a>Zeitgeber 
+##  <a name="ctor"></a>Zeitgeber 
 
  Erstellt eine `timer` Block, der eine bestimmte Nachricht nach einem angegebenen Intervall ausgelöst wird.  
   
@@ -260,7 +272,7 @@ timer(
 ### <a name="remarks"></a>Hinweise  
  Die Laufzeit verwendet den Standardplaner, wenn Sie keinen angeben der `_Scheduler` oder `_ScheduleGroup` Parameter.  
   
-##  <a name="a-namedtora-timer"></a><a name="dtor"></a>~ Timer 
+##  <a name="dtor"></a>~ Timer 
 
  Zerstört ein `timer` Meldungsblocks.  
   

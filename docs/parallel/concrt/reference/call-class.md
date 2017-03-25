@@ -9,8 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrency::call
-- agents/concurrency::call
+- call
+- AGENTS/concurrency::call
+- AGENTS/concurrency::call::call
+- AGENTS/concurrency::call::process_input_messages
+- AGENTS/concurrency::call::process_message
+- AGENTS/concurrency::call::propagate_message
+- AGENTS/concurrency::call::send_message
+- AGENTS/concurrency::call::supports_anonymous_source
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 19244e5527207f852256e646abd18ad298fb28cd
-ms.openlocfilehash: b3cfec104346b212217a6854af2390c412c9e015
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 894540410e2768be1cb679b5108fc8c694ca02d3
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="call-class"></a>call-Klasse
@@ -63,18 +69,18 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Rufen Sie den Konstruktor](#ctor)|Überladen. Erstellt eine `call` Meldungsblocks.|  
+|[Rufen Sie](#ctor)|Überladen. Erstellt eine `call` Meldungsblocks.|  
 |[~ call-Destruktor](#dtor)|Zerstört die `call` Meldungsblocks.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Process_input_messages-Methode](#process_input_messages)|Führt die Aufruf-Funktion für eingehende Nachrichten.|  
-|[Process_message-Methode](#process_message)|Verarbeitet eine Meldung, die von diesem akzeptiert wurde `call` Meldungsblocks.|  
-|[Propagate_message-Methode](#propagate_message)|Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `call` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.|  
-|[Send_message-Methode](#send_message)|Übergibt synchron eine Meldung von einer `ISource` -Block an diesen `call` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.|  
-|[Supports_anonymous_source-Methode](#supports_anonymous_source)|Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block akzeptieren kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist. (Überschreibt [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[process_input_messages](#process_input_messages)|Führt die Aufruf-Funktion für eingehende Nachrichten.|  
+|[process_message](#process_message)|Verarbeitet eine Meldung, die von diesem akzeptiert wurde `call` Meldungsblocks.|  
+|[propagate_message](#propagate_message)|Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `call` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.|  
+|[send_message](#send_message)|Übergibt synchron eine Meldung von einer `ISource` -Block an diesen `call` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.|  
+|[supports_anonymous_source](#supports_anonymous_source)|Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block akzeptieren kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist. (Überschreibt [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -91,7 +97,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namectora-call"></a><a name="ctor"></a>Rufen Sie 
+##  <a name="ctor"></a>Rufen Sie 
 
  Erstellt eine `call` Meldungsblocks.  
   
@@ -142,7 +148,7 @@ call(
   
  Der Typ `filter_method` ist ein Funktionselement mit der Signatur `bool (T const &)` die aufgerufen wird, von diesem `call` -Meldungsblock zu bestimmen, ob eine bereitgestellte Meldung akzeptiert werden sollen.  
   
-##  <a name="a-namedtora-call"></a><a name="dtor"></a>~ Aufrufen 
+##  <a name="dtor"></a>~ Aufrufen 
 
  Zerstört die `call` Meldungsblocks.  
   
@@ -150,7 +156,7 @@ call(
 ~call();
 ```  
   
-##  <a name="a-nameprocessinputmessagesa-processinputmessages"></a><a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a>process_input_messages 
 
  Führt die Aufruf-Funktion für eingehende Nachrichten.  
   
@@ -161,7 +167,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ### <a name="parameters"></a>Parameter  
  `_PMessage`  
   
-##  <a name="a-nameprocessmessagea-processmessage"></a><a name="process_message"></a>process_message 
+##  <a name="process_message"></a>process_message 
 
  Verarbeitet eine Meldung, die von diesem akzeptiert wurde `call` Meldungsblocks.  
   
@@ -173,7 +179,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
  `_PMessage`  
  Ein Zeiger auf die Meldung, die behandelt werden sollen.  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
  Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `call` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.  
   
@@ -193,7 +199,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Rückgabewert  
  Ein [Message_status](concurrency-namespace-enums.md) Anzeichen, was das Ziel entschieden, mit der Meldung zu tun.  
   
-##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+##  <a name="send_message"></a>send_message 
 
  Übergibt synchron eine Meldung von einer `ISource` -Block an diesen `call` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.  
   
@@ -213,7 +219,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Rückgabewert  
  Ein [Message_status](concurrency-namespace-enums.md) Anzeichen, was das Ziel entschieden, mit der Meldung zu tun.  
   
-##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
  Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block akzeptieren kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist.  
   
@@ -226,5 +232,5 @@ virtual bool supports_anonymous_source();
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
- [Transformer-Klasse](transformer-class.md)
+ [transformer-Klasse](transformer-class.md)
 

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::context_unblock_unbalanced
+- context_unblock_unbalanced
+- CONCRT/concurrency::context_unblock_unbalanced
+- CONCRT/concurrency::context_unblock_unbalanced::context_unblock_unbalanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7341ff5d10b7f7752c49f18ea9b810824e347b1c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 21c26658e347fa35209677e15ddcb48bbe8d1235
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced-Klasse
@@ -54,7 +56,7 @@ class context_unblock_unbalanced : public std::exception;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Context_unblock_unbalanced-Konstruktor](#ctor)|Überladen. Erstellt ein `context_unblock_unbalanced`-Objekt.|  
+|[context_unblock_unbalanced](#ctor)|Überladen. Erstellt ein `context_unblock_unbalanced`-Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Aufrufe von der `Block` und `Unblock` Methoden eine `Context` -Objekts muss immer ordnungsgemäß zugeordnet. Die Concurrency Runtime ermöglicht die Vorgänge in beliebiger Reihenfolge auftreten. Z. B. einen Aufruf von `Block` kann durch einen Aufruf von folgen `Unblock`, oder umgekehrt. Würde diese Ausnahme ausgelöst werden, wenn z. B. zwei Aufrufe der `Unblock` Methode wurden in einer Zeile für ein `Context` Objekt, das nicht blockiert wurde.  
@@ -69,7 +71,7 @@ class context_unblock_unbalanced : public std::exception;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namectora-contextunblockunbalanced"></a><a name="ctor"></a>context_unblock_unbalanced 
+##  <a name="ctor"></a>context_unblock_unbalanced 
 
  Erstellt ein `context_unblock_unbalanced`-Objekt.  
   

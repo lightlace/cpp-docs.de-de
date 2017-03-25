@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message_processor
+- message_processor
+- AGENTS/concurrency::message_processor
+- AGENTS/concurrency::message_processor::async_send
+- AGENTS/concurrency::message_processor::sync_send
+- AGENTS/concurrency::message_processor::wait
+- AGENTS/concurrency::message_processor::process_incoming_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 98f1c1072916c4cf3670e40ce0c6ddd1a17f1b63
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dff934584179cc58d884be65fdb96cb6c646a4ac
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="messageprocessor-class"></a>message_processor-Klasse
@@ -65,15 +70,15 @@ class message_processor;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Async_send-Methode](#async_send)|Ruft beim Überschreiben in einer abgeleiteten Klasse legt Nachrichten asynchron in den Block.|  
-|[Sync_send-Methode](#sync_send)|Ruft beim Überschreiben in einer abgeleiteten Klasse legt Nachrichten synchron in den Block.|  
-|[Wait-Methode](#wait)|Ruft beim Überschreiben in einer abgeleiteten Klasse wartet, bis alle asynchronen Vorgänge abgeschlossen.|  
+|[async_send](#async_send)|Ruft beim Überschreiben in einer abgeleiteten Klasse legt Nachrichten asynchron in den Block.|  
+|[sync_send](#sync_send)|Ruft beim Überschreiben in einer abgeleiteten Klasse legt Nachrichten synchron in den Block.|  
+|[Warte](#wait)|Ruft beim Überschreiben in einer abgeleiteten Klasse wartet, bis alle asynchronen Vorgänge abgeschlossen.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Process_incoming_message-Methode](#process_incoming_message)|Ruft beim Überschreiben in einer abgeleiteten Klasse führt die forward-Verarbeitung von Nachrichten in den Block. Jedes Mal, wenn eine neue Nachricht hinzugefügt wird und die Warteschlange leer gefunden wird einmal aufgerufen.|  
+|[process_incoming_message](#process_incoming_message)|Ruft beim Überschreiben in einer abgeleiteten Klasse führt die forward-Verarbeitung von Nachrichten in den Block. Jedes Mal, wenn eine neue Nachricht hinzugefügt wird und die Warteschlange leer gefunden wird einmal aufgerufen.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `message_processor`  
@@ -83,7 +88,7 @@ class message_processor;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+##  <a name="async_send"></a>async_send 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse legt Nachrichten asynchron in den Block.  
   
@@ -98,7 +103,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Hinweise  
  Prozessor-Implementierungen sollten diese Methode überschreiben.  
   
-##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a>process_incoming_message 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse führt die forward-Verarbeitung von Nachrichten in den Block. Jedes Mal, wenn eine neue Nachricht hinzugefügt wird und die Warteschlange leer gefunden wird einmal aufgerufen.  
   
@@ -109,7 +114,7 @@ virtual void process_incoming_message() = 0;
 ### <a name="remarks"></a>Hinweise  
  Message Block-Implementierungen sollten diese Methode überschreiben.  
   
-##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a>sync_send 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse legt Nachrichten synchron in den Block.  
   
@@ -124,7 +129,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Hinweise  
  Prozessor-Implementierungen sollten diese Methode überschreiben.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Warte 
+##  <a name="wait"></a>Warte 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse wartet, bis alle asynchronen Vorgänge abgeschlossen.  
   
@@ -137,5 +142,5 @@ virtual void wait() = 0;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
- [Ordered_message_processor-Klasse](ordered-message-processor-class.md)
+ [ordered_message_processor-Klasse](ordered-message-processor-class.md)
 

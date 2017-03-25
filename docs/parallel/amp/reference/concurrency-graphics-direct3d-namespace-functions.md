@@ -6,24 +6,31 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics::direct3d::get_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_texture
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: aa7e91237eaa9ced297e2c5748359c23bb436df8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 63cf872bd5ade28115a0eac92304554f125c8dd5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::Graphics::Direct3D Namespace-Funktionen
 ||||  
 |-|-|-|  
-|[Get_sampler-Funktion](#get_sampler)|[Get_texture-Funktion](#get_texture)|[Make_sampler-Funktion](#make_sampler)|  
-|[Make_texture-Funktion](#make_texture)|[msad4-Funktion](#msad4)|  
-  
-##  <a name="a-namegetsamplera--getsampler-function"></a><a name="get_sampler"></a>Get_sampler-Funktion  
+|[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|  
+|[make_texture](#make_texture)|[msad4](#msad4)|  
+
+ 
+##  <a name="get_sampler"></a>get_sampler  
  Rufen Sie die D3D-Samplerstatus-Schnittstelle für die angegebene Zugriffstastenansicht ab, die das angegebene Samplerobjekt darstellt.  
   
 ```  
@@ -42,7 +49,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>Rückgabewert  
  Der IUnknown-Schnittstellenzeiger, der dem D3D-Samplerstatus entspricht, der den angegebenen Sampler darstellt.  
   
-##  <a name="a-namegettexturea--gettexture-function"></a><a name="get_texture"></a>Get_texture-Funktion  
+##  <a name="get_texture"></a>get_texture  
  Ruft die Direct3D-texturschnittstelle zugrunde liegenden angegebenen [Textur](texture-class.md) Objekt.  
   
 ```  
@@ -85,7 +92,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>Rückgabewert  
  Der IUnknown-Schnittstellenzeiger, der der Direct3D-Textur entspricht, die der Textur zugrunde liegt.  
   
-##  <a name="a-namemakesamplera--makesampler-function"></a><a name="make_sampler"></a>Make_sampler-Funktion  
+##  <a name="make_sampler"></a>make_sampler  
  Erstellen Sie einen Sampler aus einem D3D-Samplerstatusschnittstellenzeiger.  
   
 ```  
@@ -99,7 +106,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Sampler stellt den bereitgestellten D3D-Samplerstatus dar.  
   
-##  <a name="a-namemaketexturea--maketexture-function"></a><a name="make_texture"></a>Make_texture-Funktion  
+##  <a name="make_texture"></a>make_texture  
  Erstellt eine [Textur](texture-class.md) Objekt mit den angegebenen Parametern.  
   
 ```  
@@ -132,7 +139,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>Rückgabewert  
  Eine Textur, die die bereitgestellte D3D-Textur verwendet.  
   
-##  <a name="a-namemsad4a--msad4-function"></a><a name="msad4"></a>msad4-Funktion  
+##  <a name="msad4"></a>msad4  
  Vergleicht einen 4-Byte-Verweiswert und einen 8-Byte-Quellwert und sammelt einen Vektor von 4 Summen. Jede Summe entspricht der maskierten Summe von absoluten Differenzen von verschiedenen Byteausrichtungen zwischen Verweiswert und Quellwert.  
   
 ```  
@@ -154,7 +161,12 @@ inline uint4 msad4(
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Vektor von 4 Summen zurück. Jede Summe entspricht der maskierten Summe von absoluten Differenzen von verschiedenen Byteausrichtungen zwischen Verweiswert und Quellwert.  
+
+## <a name="requirements"></a>Anforderungen  
+ **Header:** amp_graphics.h  
   
+ **Namespace:** Concurrency::graphics::direct3d 
+
 ## <a name="see-also"></a>Siehe auch  
- [Concurrency::Graphics::Direct3D-Namespace](concurrency-graphics-direct3d-namespace.md)
+ [Concurrency::graphics::direct3d Namespace](concurrency-graphics-direct3d-namespace.md)
 

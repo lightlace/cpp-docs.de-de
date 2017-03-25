@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrent_priority_queue/concurrency::concurrent_priority_queue
+- concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::clear
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::empty
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::get_allocator
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::push
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 59bbd25f78294e1363b8acb49e45f364a9ae026e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 95b52911135513b0b1e4d84509c80ed3262c1765
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue-Klasse
@@ -78,25 +87,25 @@ template <typename T,
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Concurrent_priority_queue-Konstruktor](#ctor)|Überladen. Erstellt eine gleichzeitige Prioritätswarteschlange.|  
+|[concurrent_priority_queue](#ctor)|Überladen. Erstellt eine gleichzeitige Prioritätswarteschlange.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Clear-Methode](#clear)|Löscht alle Elemente in der gleichzeitigen Priorität. Diese Methode ist nicht nebenläufigkeitssicher.|  
-|[Empty-Methode](#empty)|Testet, ob die gleichzeitige Prioritätswarteschlange Zeitpunkt leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.|  
-|[Get_allocator-Methode](#get_allocator)|Gibt eine Kopie der Zuweisung verwendet, um die gleichzeitige Prioritätswarteschlange zu erstellen. Diese Methode ist nebenläufigkeitssicher.|  
-|[Push-Methode](#push)|Überladen. Fügt ein Element in die Prioritätswarteschlange für gleichzeitige. Diese Methode ist nebenläufigkeitssicher.|  
-|[Size-Methode](#size)|Gibt die Anzahl der Elemente in der Warteschlange gleichzeitig Priorität zurück. Diese Methode ist nebenläufigkeitssicher.|  
-|[Swap-Methode](#swap)|Vertauscht den Inhalt von zwei gleichzeitige Priorität Warteschlangen. Diese Methode ist nicht nebenläufigkeitssicher.|  
-|[Try_pop-Methode](#try_pop)|Entfernt, und gibt das Element der höchsten Priorität aus der Warteschlange zurück, wenn die Warteschlange nicht leer ist. Diese Methode ist nebenläufigkeitssicher.|  
+|[clear](#clear)|Löscht alle Elemente in der gleichzeitigen Priorität. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[empty](#empty)|Testet, ob die gleichzeitige Prioritätswarteschlange Zeitpunkt leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.|  
+|[get_allocator](#get_allocator)|Gibt eine Kopie der Zuweisung verwendet, um die gleichzeitige Prioritätswarteschlange zu erstellen. Diese Methode ist nebenläufigkeitssicher.|  
+|[push](#push)|Überladen. Fügt ein Element in die Prioritätswarteschlange für gleichzeitige. Diese Methode ist nebenläufigkeitssicher.|  
+|[size](#size)|Gibt die Anzahl der Elemente in der Warteschlange gleichzeitig Priorität zurück. Diese Methode ist nebenläufigkeitssicher.|  
+|[swap](#swap)|Vertauscht den Inhalt von zwei gleichzeitige Priorität Warteschlangen. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[try_pop](#try_pop)|Entfernt, und gibt das Element der höchsten Priorität aus der Warteschlange zurück, wenn die Warteschlange nicht leer ist. Diese Methode ist nebenläufigkeitssicher.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Operator =-Operator](#operator_eq)|Überladen. Weist den Inhalt eines anderen `concurrent_priority_queue`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[operator=](#operator_eq)|Überladen. Weist den Inhalt eines anderen `concurrent_priority_queue`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ausführliche Informationen zu den `concurrent_priority_queue` Klasse, finden Sie unter [parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -109,7 +118,7 @@ template <typename T,
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Deaktivieren 
+##  <a name="clear"></a>Deaktivieren 
 
  Löscht alle Elemente in der gleichzeitigen Priorität. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -120,7 +129,7 @@ void clear();
 ### <a name="remarks"></a>Hinweise  
  `clear`ist nicht parallelitätssicher ist. Sie müssen sicherstellen, dass keine anderen Threads Methoden für die gleichzeitige Prioritätswarteschlange aufrufen, wenn Sie diese Methode aufrufen. `clear`wird kein Speicher freigegeben werden.  
   
-##  <a name="a-namectora-concurrentpriorityqueue"></a><a name="ctor"></a>concurrent_priority_queue 
+##  <a name="ctor"></a>concurrent_priority_queue 
 
  Erstellt eine gleichzeitige Prioritätswarteschlange.  
   
@@ -184,7 +193,7 @@ concurrent_priority_queue(
   
  Die sechsten und siebten Konstruktoren geben eine Verschiebung der Prioritätswarteschlange `_Src`.  
   
-##  <a name="a-nameemptya-empty"></a><a name="empty"></a>leere 
+##  <a name="empty"></a>leere 
 
  Testet, ob die gleichzeitige Prioritätswarteschlange Zeitpunkt leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -195,7 +204,7 @@ bool empty() const;
 ### <a name="return-value"></a>Rückgabewert  
  `true`Wenn zum Zeitpunkt die Prioritätswarteschlange leer die Funktion aufgerufen wurde war, `false` andernfalls.  
   
-##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a>get_allocator 
 
  Gibt eine Kopie der Zuweisung verwendet, um die gleichzeitige Prioritätswarteschlange zu erstellen. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -206,7 +215,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Zuweisung erstellt eine Kopie der `concurrent_priority_queue` Objekt.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a>Operator = 
 
  Weist den Inhalt eines anderen `concurrent_priority_queue`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -223,7 +232,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das `concurrent_priority_queue`-Objekt.  
   
-##  <a name="a-namepusha-push"></a><a name="push"></a>Push 
+##  <a name="push"></a>Push 
 
  Fügt ein Element in die Prioritätswarteschlange für gleichzeitige. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -237,7 +246,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  Das Element, das die gleichzeitige Prioritätswarteschlange hinzugefügt werden.  
   
-##  <a name="a-namesizea-size"></a><a name="size"></a>Größe 
+##  <a name="size"></a>Größe 
 
  Gibt die Anzahl der Elemente in der Warteschlange gleichzeitig Priorität zurück. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -251,7 +260,7 @@ size_type size() const;
 ### <a name="remarks"></a>Hinweise  
  Die zurückgegebene Größe ist immer gehören alle Elemente, die durch Aufrufe der Funktion hinzugefügt `push`. Er kann jedoch nicht Ergebnisse ausstehende gleichzeitige Vorgänge wiedergeben.  
   
-##  <a name="a-nameswapa-swap"></a><a name="swap"></a>Swap 
+##  <a name="swap"></a>Swap 
 
  Vertauscht den Inhalt von zwei gleichzeitige Priorität Warteschlangen. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -263,7 +272,7 @@ void swap(concurrent_priority_queue& _Queue);
  `_Queue`  
  Die `concurrent_priority_queue` -Objekt, das Inhalt getauscht.  
   
-##  <a name="a-nametrypopa-trypop"></a><a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a>try_pop 
 
  Entfernt, und gibt das Element der höchsten Priorität aus der Warteschlange zurück, wenn die Warteschlange nicht leer ist. Diese Methode ist nebenläufigkeitssicher.  
   

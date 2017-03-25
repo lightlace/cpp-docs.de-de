@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::missing_wait
+- missing_wait
+- CONCRT/concurrency::missing_wait
+- CONCRT/concurrency::missing_wait::missing_wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7d29294f4ddce571451a72bf637526e5af283cff
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 70b1c77660992b33de2204fd4f4221ed6e957e21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="missingwait-class"></a>missing_wait-Klasse
@@ -54,7 +56,7 @@ class missing_wait : public std::exception;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Missing_wait-Konstruktor](#ctor)|Überladen. Erstellt ein `missing_wait`-Objekt.|  
+|[missing_wait](#ctor)|Überladen. Erstellt ein `missing_wait`-Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Fehlender ausnahmeverlauf, Sie sind verantwortlich für den Aufruf von der `wait` oder `run_and_wait` Methode eine `task_group` oder `structured_task_group` Objekt vor, dass dieses Objekt zerstört. Die Laufzeit löst diese Ausnahme als Hinweis darauf, die Sie vergessen haben, rufen Sie die `wait` oder `run_and_wait` Methode.  
@@ -69,7 +71,7 @@ class missing_wait : public std::exception;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namectora-missingwait"></a><a name="ctor"></a>missing_wait 
+##  <a name="ctor"></a>missing_wait 
 
  Erstellt ein `missing_wait`-Objekt.  
   
@@ -86,7 +88,7 @@ missing_wait() throw();
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
  [Task_group-Klasse](task-group-class.md)   
- [Wait-Methode](task-group-class.md)   
- [Run_and_wait-Methode](task-group-class.md)   
- [Structured_task_group-Klasse](structured-task-group-class.md)
+ [Warte](task-group-class.md)   
+ [run_and_wait](task-group-class.md)   
+ [structured_task_group-Klasse](structured-task-group-class.md)
 

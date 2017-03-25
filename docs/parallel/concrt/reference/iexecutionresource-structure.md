@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionResource
+- IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::CurrentSubscriptionLevel
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 530fd40409a08be6ae13ad604deb5b85989b2964
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fa3c65780ac9e001e6f6b8a015dc7f70df47181f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource-Struktur
@@ -54,10 +59,10 @@ struct IExecutionResource;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IExecutionResource:: CurrentSubscriptionLevel-Methode](#currentsubscriptionlevel)|Gibt die Anzahl der aktivierten virtuellen Prozessorstämme und abonnierten externen Threads, die derzeit zugeordnete der zugrunde liegenden Hardwarethread, den diese Ausführungsressource darstellt.|  
-|[IExecutionResource:: GetExecutionResourceId-Methode](#getexecutionresourceid)|Gibt einen eindeutigen Bezeichner für den Hardwarethread, den dieser Ausführungsressource darstellt.|  
-|[IExecutionResource:: GetNodeId-Methode](#getnodeid)|Gibt einen eindeutigen Bezeichner für den Prozessorknoten, zu dem diese Ausführungsressource gehört.|  
-|[IExecutionResource:: Remove-Methode](#remove)|Gibt diese Ausführungsressource an den Ressourcen-Manager zurück.|  
+|[IExecutionResource:: CurrentSubscriptionLevel](#currentsubscriptionlevel)|Gibt die Anzahl der aktivierten virtuellen Prozessorstämme und abonnierten externen Threads, die derzeit zugeordnete der zugrunde liegenden Hardwarethread, den diese Ausführungsressource darstellt.|  
+|[IExecutionResource:: GetExecutionResourceId](#getexecutionresourceid)|Gibt einen eindeutigen Bezeichner für den Hardwarethread, den dieser Ausführungsressource darstellt.|  
+|[IExecutionResource:: GetNodeId](#getnodeid)|Gibt einen eindeutigen Bezeichner für den Prozessorknoten, zu dem diese Ausführungsressource gehört.|  
+|[IExecutionResource:: Remove](#remove)|Gibt diese Ausführungsressource an den Ressourcen-Manager zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ressourcen zur Ausführung können eigenständig oder Stämme virtueller Prozessoren zugeordnet. Eine eigenständige Ausführungsressource wird erstellt, wenn ein Thread in der Anwendung ein Threadabonnement erstellt. Die Methoden [ISchedulerProxy:: SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) und [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) Threadabonnements erstellen und Zurückgeben einer `IExecutionResource` Schnittstelle, die das Abonnement darstellt. Erstellen eines Abonnements Thread ist eine Möglichkeit, dem Ressourcen-Manager zu informieren, die ein bestimmter Thread in die Arbeit einbezogen werden an einen Planer, zusammen mit der Stämme virtueller Prozessoren in der Warteschlange, die Ressourcen-Manager dem Planer zugewiesen. Der Ressourcen-Manager verwendet die Informationen zur Vermeidung von Hardwarethreads zu überzeichnen, wo er kann.  
@@ -70,7 +75,7 @@ struct IExecutionResource;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namecurrentsubscriptionlevela--iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>IExecutionResource:: CurrentSubscriptionLevel-Methode  
+##  <a name="currentsubscriptionlevel"></a>IExecutionResource:: CurrentSubscriptionLevel-Methode  
  Gibt die Anzahl der aktivierten virtuellen Prozessorstämme und abonnierten externen Threads, die derzeit zugeordnete der zugrunde liegenden Hardwarethread, den diese Ausführungsressource darstellt.  
   
 ```
@@ -89,7 +94,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  Der Ressourcen-Manager verwendet Ebene Abonnementinformationen als eine der Methoden zum bestimmen, wann Ressourcen zwischen Planern zu verschieben.  
   
-##  <a name="a-namegetexecutionresourceida--iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>IExecutionResource:: GetExecutionResourceId-Methode  
+##  <a name="getexecutionresourceid"></a>IExecutionResource:: GetExecutionResourceId-Methode  
  Gibt einen eindeutigen Bezeichner für den Hardwarethread, den dieser Ausführungsressource darstellt.  
   
 ```
@@ -102,7 +107,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>Hinweise  
  Jedem Hardwarethread wird von der Concurrency Runtime einen eindeutigen Bezeichner zugewiesen. Wenn mehrere Ausführungsressourcen einem Hardwarethread zugeordnet sind Thread, sie haben alle denselben Ausführungsressourcenbezeichner.  
   
-##  <a name="a-namegetnodeida--iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>IExecutionResource:: GetNodeId-Methode  
+##  <a name="getnodeid"></a>IExecutionResource:: GetNodeId-Methode  
  Gibt einen eindeutigen Bezeichner für den Prozessorknoten, zu dem diese Ausführungsressource gehört.  
   
 ```
@@ -117,7 +122,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  Die Anzahl der Knoten abgerufen werden kann, von der Funktion [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="a-nameremovea--iexecutionresourceremove-method"></a><a name="remove"></a>IExecutionResource:: Remove-Methode  
+##  <a name="remove"></a>IExecutionResource:: Remove-Methode  
  Gibt diese Ausführungsressource an den Ressourcen-Manager zurück.  
   
 ```
