@@ -24,6 +24,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
@@ -44,7 +45,7 @@ In Visual C++ 2015 und höher können fortlaufende Verbesserungen der Übereinst
   
 -   [Verbesserungen bei der Übereinstimmung mit Standards in Update 3](#VS_Update3)  
   
-##  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Verbesserungen bei der Übereinstimmung mit Standards in Visual C++ 2015  
+##  <a name="VS_RTM"></a> Verbesserungen bei der Übereinstimmung mit Standards in Visual C++ 2015  
   
 -   /Zc:forScope-Option  
   
@@ -527,7 +528,7 @@ In Visual C++ 2015 und höher können fortlaufende Verbesserungen der Übereinst
   
      In [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] und [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] generiert der Compiler einen Kopierkonstruktor für eine Klasse, die über einen benutzerdefinierten Bewegungskonstruktor, jedoch über keinen benutzerdefinierten Kopierkonstruktor verfügt. In Dev14 wird dieser implizit generierte Kopierkonstruktor ebenfalls als „= delete“ gekennzeichnet.  
   
-##  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Verbesserungen bei der Übereinstimmung mit Standards in Update 1  
+##  <a name="VS_Update1"></a> Verbesserungen bei der Übereinstimmung mit Standards in Update 1  
   
 -   **Private virtuelle Basisklassen und indirekte Vererbung**  
   
@@ -605,7 +606,7 @@ In Visual C++ 2015 und höher können fortlaufende Verbesserungen der Übereinst
   
      Außerdem, auch wenn dazu keine spezifische Diagnose ausgegeben wird, wird ein Inlineoperator „new“ als nicht wohlgeformt angesehen.  
   
--   **Aufrufen von 'operator *type*()' (benutzerdefinierte Konversion) für Nichtklassentypen**  
+-   **Aufrufen von 'operator*type*()' (benutzerdefinierte Konversion) für Nichtklassentypen**  
   
      Frühere Versionen ließen den Aufruf von 'operator *type*()' für Nichtklassentypen zu und ignorierten den Aufruf stumm. Durch dieses alte Verhalten entstand die Gefahr der stummen Erzeugung von ungültigem Code, was zu unvorhersehbarem Laufzeitverhalten führt. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2228 als Ergebnis aus.  
   
@@ -1038,7 +1039,7 @@ In Visual C++ 2015 und höher können fortlaufende Verbesserungen der Übereinst
     }  
     ```  
   
-##  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Verbesserungen bei der Übereinstimmung mit Standards in Update 2  
+##  <a name="VS_Update2"></a> Verbesserungen bei der Übereinstimmung mit Standards in Update 2  
   
 -   **Zusätzliche Warnungen und Fehler können als Ergebnis der Teilunterstützung für den Ausdruck SFINAE ausgegeben werden**  
   
@@ -1303,7 +1304,7 @@ In Visual C++ 2015 und höher können fortlaufende Verbesserungen der Übereinst
   
      Ein Korrigieren von Code, der in dieser Weise geschrieben ist, kann erfordern, dass die Operatordefinitionen aus einer Headerdatei in eine entsprechende Quelldatei verschoben werden.  
   
-##  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Verbesserungen bei der Übereinstimmung mit Standards in Update 3  
+##  <a name="VS_Update3"></a> Verbesserungen bei der Übereinstimmung mit Standards in Update 3  
   
 -   **std::is_convertable erkennt jetzt Selbstzuweisung** (Standardbibliothek)  
   
@@ -1542,8 +1543,3 @@ In Visual C++ 2015 und höher können fortlaufende Verbesserungen der Übereinst
     cl /c /Wall /Ycc.h -I.. X.cpp  
     cl /c /Wall /Yuc.h -I.. Z.cpp  
     ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-
