@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5ba605d61ddcf1ae6bd2adc24c41737536fa2ce9
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: d3eb356b47c29c4d81361cf87e94d7a5722f7108
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="searching-and-sorting"></a>Suchen und Sortieren
@@ -47,16 +47,16 @@ Verwenden Sie die folgenden Funktionen zum Suchen und Sortieren.
   
 ### <a name="searching-and-sorting-functions"></a>Funktionen zum Suchen und Sortieren  
   
-|Funktion|Suche oder Sortierung|.NET Framework-Entsprechung|  
-|--------------|--------------------|-------------------------------|  
-|[bsearch](../c-runtime-library/reference/bsearch.md)|Binärsuche|[System::Collections::ArrayList::BinarySearch](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
-|[bsearch_s](../c-runtime-library/reference/bsearch-s.md)|Eine sicherere Version von `bsearch`|[System::Collections::ArrayList::BinarySearch](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
-|[_lfind](../c-runtime-library/reference/lfind.md)|Lineare Suche nach einem angegebenen Wert|[System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
-|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|Eine sicherere Version von `_lfind`|[System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
-|[_lsearch](../c-runtime-library/reference/lsearch.md)|Lineare Suche nach einem angegebenen Wert, der zum Array hinzugefügt wird, wenn er nicht gefunden wurde|Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_lsearch_s](../c-runtime-library/reference/lsearch-s.md)|Eine sicherere Version von `_lsearch`|Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[qsort](../c-runtime-library/reference/qsort.md)|Schnellsortierung|[System::Collections::ArrayList::Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
-|[qsort_s](../c-runtime-library/reference/qsort-s.md)|Eine sicherere Version von `qsort`|[System::Collections::ArrayList::Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
+|Funktion|Suche oder Sortierung|  
+|--------------|--------------------|  
+|[bsearch](../c-runtime-library/reference/bsearch.md)|Binärsuche|  
+|[bsearch_s](../c-runtime-library/reference/bsearch-s.md)|Eine sicherere Version von `bsearch`|  
+|[_lfind](../c-runtime-library/reference/lfind.md)|Lineare Suche nach einem angegebenen Wert|  
+|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|Eine sicherere Version von `_lfind`|  
+|[_lsearch](../c-runtime-library/reference/lsearch.md)|Lineare Suche nach einem angegebenen Wert, der zum Array hinzugefügt wird, wenn er nicht gefunden wurde|  
+|[_lsearch_s](../c-runtime-library/reference/lsearch-s.md)|Eine sicherere Version von `_lsearch`|  
+|[qsort](../c-runtime-library/reference/qsort.md)|Schnellsortierung|  
+|[qsort_s](../c-runtime-library/reference/qsort-s.md)|Eine sicherere Version von `qsort`|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)
