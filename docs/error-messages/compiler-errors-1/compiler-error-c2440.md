@@ -1,7 +1,7 @@
 ---
-title: Compiler-Fehler C2440 | Microsoft-Dokumentation
+title: Compilerfehler C2440 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5f0472f7d318de24c38898388906a264cf56db7b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: d2855f44e05e095f8e1e5cf992eacaafcbe8464d
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="compiler-error-c2440"></a>Compilerfehler C2440
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/24/2017
 Der Compiler kann nicht aus umgewandelt `type1` auf `type2`.  
   
 ## <a name="example"></a>Beispiel  
-C2440 kann verursacht werden, wenn Sie versuchen, eine nicht-const `char*` (oder `wchar_t*`) mithilfe eines Zeichenfolgenliterals in C++-Code, wenn die compilerübereinstimmungsoption [/Zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) festgelegt ist. In C ist der Typ eines Zeichenfolgenliterals Array von `char`, aber in C++ ist der Array von `const char`. Dieses Beispiel generiert C2440:  
+C2440 kann verursacht werden, wenn Sie versuchen, ein nicht konstantes initialisieren `char*` (oder `wchar_t*`) mithilfe einen Zeichenfolgenliterals in C++-Code, wenn die compilerübereinstimmungsoption [/Zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) festgelegt ist. In C ist der Typ eines Zeichenfolgenliterals Array von `char`, aber in C++ ist der Array von `const char`. Dieses Beispiel generiert C2440:  
   
 ```cpp  
 // C2440s.cpp  
@@ -149,7 +149,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Beispiel  
- C2440 kann auch auftreten, wenn Sie einem inneren Zeiger&0; (null) zuweisen:  
+ C2440 kann auch auftreten, wenn Sie einem inneren Zeiger 0 (null) zuweisen:  
   
 ```cpp  
 // C2440c.cpp  
@@ -163,7 +163,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Beispiel  
- C2440 kann auch bei nicht ordnungsgemäßer Verwendung einer benutzerdefinierten Konvertierung auftreten. Z. B. wenn ein Konvertierungsoperator definiert wurde als `explicit`, der Compiler kann nicht in eine implizite Konvertierung verwenden. Weitere Informationen über benutzerdefinierte Konvertierungen finden Sie unter [User-Defined Conversions (C++ / CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Dieses Beispiel generiert C2440:  
+ C2440 kann auch bei nicht ordnungsgemäßer Verwendung einer benutzerdefinierten Konvertierung auftreten. Z. B. wenn ein Konvertierungsoperator definiert wurde als `explicit`, der Compiler kann nicht in eine implizite Konvertierung verwenden. Weitere Informationen zu benutzerdefinierten Konvertierungen finden Sie unter [benutzerdefinierten Konvertierungen (C + c++ / CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Dieses Beispiel generiert C2440:  
   
 ```cpp  
 // C2440d.cpp  
@@ -211,9 +211,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>Beispiel  
- Visual C++-Compiler lässt die [Const_cast-Operator](../../cpp/const-cast-operator.md) zur Abwärtsumwandlung beim Quellcode mit **/CLR** Programmierung kompiliert wird.  
+ Visual C++-Compiler nicht mehr ermöglicht die [Const_cast-Operator](../../cpp/const-cast-operator.md) unten beim Umwandeln-Quellcode an, die verwendet **"/ CLR"** Programmierung kompiliert wird.  
   
- Um den Fehler C2440 zu beheben, verwenden Sie den richtigen Umwandlungsoperator. Weitere Informationen finden Sie unter [Operatoren Umwandlung](../../cpp/casting-operators.md).  
+ Um den Fehler C2440 zu beheben, verwenden Sie den richtigen Umwandlungsoperator. Weitere Informationen finden Sie unter [Umwandlungsoperatoren](../../cpp/casting-operators.md).  
   
  Dieses Beispiel generiert C2440:  
   
@@ -231,7 +231,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Beispiel  
-C2440 kann aufgrund der Übereinstimmung Änderungen an den Compiler in Visual Studio 2015 Update 3 auftreten. Zuvor der Compiler fälschlicherweise behandelt bestimmte unterschiedliche Ausdrücke als gleicher Typ beim Identifizieren der Vorlage einer Übereinstimmung mit einem `static_cast` Vorgang. Der Compiler Threadtypen ordnungsgemäß, und code verlassen, die im vorherigen `static_cast` Verhalten ist unterbrochen. Um dieses Problem zu beheben, ändern Sie die Template-Argument, um den Typ des Vorlagenparameters entsprechen, oder verwenden Sie eine `reinterpret_cast` oder Umwandlung im C-Stil.
+C2440 kann aufgrund der Übereinstimmung Änderungen an den Compiler in Visual Studio 2015 Update 3 auftreten. Zuvor der Compiler nicht ordnungsgemäß behandelt bestimmte unterschiedlichen Ausdrücke als gleicher Typ identifizieren der Vorlage eine Übereinstimmung mit einem `static_cast` Vorgang. Nachdem der Compiler ordnungsgemäß Threadtypen und code basieren, die auf der vorherigen `static_cast` Verhalten ist unterbrochen. Um dieses Problem zu beheben, ändern Sie das Vorlagenargument aus, um den Typ des Vorlagenparameters übereinstimmt, oder verwenden Sie eine `reinterpret_cast` oder Umwandlung im C-Stil.
   
 Dieses Beispiel generiert C2440:  
   
@@ -256,4 +256,49 @@ int main()
 This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in <atlcom.h>.
 
 ```
+
+## <a name="example"></a>Beispiel  
+### <a name="copy-list-initialization"></a>copy-list-Initialisierung
+
+Visual Studio 2017 und höher auslösen ordnungsgemäß Compiler-Fehler im Zusammenhang mit der Erstellung des Objekts mithilfe von Initialisiererlisten, die nicht in Visual Studio 2015 abgefangen wurden und zur abstürzen führen oder ein nicht definiertes Laufzeitverhalten. Laut N4594 13.3.1.7p1 in der copy-list-Initialisierung, muss der Compiler einen expliziten Konstruktor für die Überladungsauflösung berücksichtigen, aber er muss einen Fehler auslösen, wenn diese Überladung tatsächlich ausgewählt wird.
+Die folgenden beiden Beispiele kompilieren in Visual Studio 2015, aber nicht in Visual Studio 2017.
+
+```
+struct A
+{
+    explicit A(int) {} 
+    A(double) {}
+};
+
+int main()
+{
+    A a1 = { 1 }; // error C3445: copy-list-initialization of 'A' cannot use an explicit constructor
+    const A& a2 = { 1 }; // error C2440: 'initializing': cannot convert from 'int' to 'const A &'
+
+}
+```
+
+Verwenden Sie direkte Initialisierung, um den Fehler zu korrigieren:
+
+```
+A a1{ 1 };
+const A& a2{ 1 };
+```
+
+## <a name="example"></a>Beispiel
+### <a name="cv-qualifiers-in-class-construction"></a>CV-Qualifizierer in der Klassenkonstruktion
+
+In Visual Studio 2015 ignoriert der Compiler beim Generieren eines Klassenobjekts über einen Konstruktoraufruf manchmal fälschlicherweise die CV-Qualifizierer. Dies kann potenziell zu einem Absturz oder zu unerwartetem Laufzeitverhalten führen. Im folgende Beispiel in Visual Studio 2015 kompiliert wird, aber löst einen Compilerfehler in Visual Studio 2017 und höher:
+
+```
+struct S 
+{
+    S(int);
+    operator int();
+};
+
+int i = (const S)0; // error C2440
+```
+
+Deklarieren Sie den Operator int() als konstant, um den Fehler zu korrigieren.
 

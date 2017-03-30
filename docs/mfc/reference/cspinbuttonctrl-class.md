@@ -1,5 +1,5 @@
 ---
-title: CSpinButtonCtrl-Klasse | Microsoft-Dokumentation
+title: CSpinButtonCtrl-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -52,9 +52,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 486a0842ed04f0e760bbb332986a97a35ce9851f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 4cb2a10982ce42f94925b18f1b20ef72f3c3f83a
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl-Klasse
@@ -78,34 +78,34 @@ class CSpinButtonCtrl : public CWnd
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CSpinButtonCtrl::Create](#create)|Erstellt ein Drehfeld-Steuerelement und fügt es ein `CSpinButtonCtrl` Objekt.|  
-|[CSpinButtonCtrl::CreateEx](#createex)|Erstellt ein Drehfeld-Steuerelement mit dem angegebenen erweiterten Fensterstile und fügt es ein `CSpinButtonCtrl` Objekt.|  
-|[CSpinButtonCtrl::GetAccel](#getaccel)|Ruft die Beschleunigung Informationen für ein Drehfeld-Steuerelement ab.|  
-|[CSpinButtonCtrl::GetBase](#getbase)|Ruft die aktuelle Basis für ein Drehfeld-Steuerelement ab.|  
-|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Ruft einen Zeiger auf das aktuelle Buddyfenster.|  
-|[CSpinButtonCtrl::GetPos](#getpos)|Ruft die aktuelle Position des Drehfeld-Steuerelements ab.|  
-|[CSpinButtonCtrl::GetRange](#getrange)|Ruft die obere und untere Grenzwerte (Bereich) für ein Drehfeld-Steuerelement ab.|  
+|[CSpinButtonCtrl::Create](#create)|Erstellt ein Drehfeld-Steuerelement, und fügt es einer `CSpinButtonCtrl` Objekt.|  
+|[CSpinButtonCtrl::CreateEx](#createex)|Erstellt ein Drehfeld-Steuerelement mit der angegebenen erweiterten Fensterstile und fügt es einer `CSpinButtonCtrl` Objekt.|  
+|[CSpinButtonCtrl::GetAccel](#getaccel)|Acceleration-Informationen für ein Drehfeld-Steuerelement abgerufen.|  
+|[CSpinButtonCtrl::GetBase](#getbase)|Ruft den aktuellen Basis für ein Drehfeld-Steuerelement ab.|  
+|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Ruft einen Zeiger auf das aktuelle Buddyfenster ab.|  
+|[CSpinButtonCtrl::GetPos](#getpos)|Ruft die aktuelle Position ein Drehfeld-Steuerelement ab.|  
+|[CSpinButtonCtrl::GetRange](#getrange)|Ruft die oberen und unteren Grenzen (Bereich) für ein Drehfeld-Steuerelement ab.|  
 |[CSpinButtonCtrl::SetAccel](#setaccel)|Legt die Beschleunigung für ein Drehfeld-Steuerelement fest.|  
 |[CSpinButtonCtrl::SetBase](#setbase)|Legt die Basis für ein Drehfeld-Steuerelement fest.|  
 |[CSpinButtonCtrl::SetBuddy](#setbuddy)|Legt das Buddyfenster für ein Drehfeld-Steuerelement fest.|  
 |[CSpinButtonCtrl::SetPos](#setpos)|Legt die aktuelle Position für das Steuerelement fest.|  
-|[CSpinButtonCtrl:: SetRange](#setrange)|Legt die obere und untere Grenzwerte (Bereich) für ein Drehfeld-Steuerelement fest.|  
+|[CSpinButtonCtrl:: SetRange](#setrange)|Legt den oberen und unteren Grenzen (Bereich) für ein Drehfeld-Steuerelement fest.|  
   
 ## <a name="remarks"></a>Hinweise  
- "Drehfeld-Steuerelements" (auch als auf-ab-Steuerelement bezeichnet) ist ein Paar von Pfeilschaltflächen, die der Benutzer klicken kann, um inkrementiert oder dekrementiert einen Wert ein, z. B. eine Bildlaufposition oder eine Zahl, die in einem separaten Steuerelement angezeigt. Ein Drehfeld-Steuerelement zugeordnete Wert wird die aktuelle Position aufgerufen. Ein Drehfeld-Steuerelement wird am häufigsten mit einem Begleit-Steuerelement aufgerufen, als "Buddy-Fenster" verwendet.  
+ Ein "Drehfeldsteuerelement" (auch als auf-ab-Steuerelement bezeichnet) ist ein Paar von Pfeilschaltflächen, die der Benutzer klicken kann, um einen Wert, z. B. eine Bildlaufposition oder eine Zahl, die in einem Steuerelement Companion angezeigt inkrementiert oder dekrementiert. Ein Drehfeld-Steuerelement zugeordnete Wert heißt seiner derzeitigen Position. Ein Drehfeld-Steuerelement wird am häufigsten mit einem Begleit-Steuerelement aufgerufen, als "Buddy-Fenster" verwendet.  
   
- Dieses Steuerelement (und somit die `CSpinButtonCtrl` Klasse) ist nur für Programme, die unter Windows 95/98 und Windows NT, Version 3.51 und höher.  
+ Dieses Steuerelement (und somit die `CSpinButtonCtrl` Klasse) und höher verfügbar nur für Programme, die unter Windows 95-und Windows 98 und Windows NT, Version 3.51 ausgeführt wird.  
   
- Sehen für den Benutzer ein Drehfeldsteuerelement oft das Buddyfenster wie ein einzelnes Steuerelement ein. Sie können angeben, dass ein Drehfeld-Steuerelement selbst automatisch neben der Buddyfenster, positionieren und sie automatisch die Beschriftung des Buddy-Fensters auf der aktuellen Position festgelegt. Ein Drehfeld-Steuerelement können mit einem Bearbeitungssteuerelement die Benutzer für numerische Eingabe aufzufordern.  
+ Suchen Sie für den Benutzer ein Drehfeldsteuerelement häufig seinem Buddyfenster wie ein einzelnes Steuerelement ein. Sie können angeben, dass ein Drehfeld-Steuerelement selbst automatisch neben seinem Buddyfenster positionieren und dieser automatisch die Beschriftung des Fensters Buddy seiner aktuellen Position festgelegt. Sie können ein Drehfeld-Steuerelement mit einem Bearbeitungssteuerelement verwenden, um den Benutzer für numerische Eingabe aufzufordern.  
   
- Auf den Pfeil nach oben verschiebt die aktuelle Position für die maximale Anzahl, und klicken auf den Pfeil nach unten Verschiebt die aktuelle Position in Richtung Minimum. Standardmäßig beträgt 100 und der maximale Wert ist 0. Jedes Mal, wenn der niedrigste Wert ist größer als die maximale Einstellung (z. B. wenn die Standardeinstellungen verwendet werden), klicken oben Pfeil reduziert erhöht den Positionswert und auf den Pfeil nach unten.  
+ Klicken auf den Pfeil nach oben bewegt sich die aktuelle Position für die maximale Anzahl und klicken auf den Pfeil nach unten der aktuellen Position in Richtung der Mindestwert. Standardmäßig beträgt 100 und der Höchstwert beträgt 0. Jedes Mal, wenn der niedrigste Wert ist größer als das Maximum festlegen (z. B. wenn die Standardeinstellungen verwendet werden), klicken Sie auf den Stand Pfeil verringert erhöht der Positionswert und klicken Sie auf den Pfeil nach unten.  
   
- Ein Drehfeld-Steuerelement ohne als Buddy-Fenster fungiert als eine Art vereinfachte Bildlaufleiste. Beispielsweise zeigt ein Registerkarten-Steuerelement manchmal ein Drehfeldsteuerelement, um dem Benutzer ermöglichen, zusätzliche Registerkarten Bildlauf.  
+ Ein Drehfeld-Steuerelement ein Fenster des Buddy fungiert als eine Art vereinfachte Bildlaufleiste angezeigt. Beispielsweise zeigt ein Registerkarten-Steuerelement in einigen Fällen ein Drehfeldsteuerelement, damit der Benutzer zusätzliche Registerkarten Bildlauf anzuzeigende kann.  
   
  Weitere Informationen zur Verwendung von `CSpinButtonCtrl`, finden Sie unter [Steuerelemente](../../mfc/controls-mfc.md) und [Verwenden von CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -117,7 +117,7 @@ class CSpinButtonCtrl : public CWnd
  **Header:** afxcmn.h  
   
 ##  <a name="create"></a>CSpinButtonCtrl::Create  
- Erstellt ein Drehfeld-Steuerelement und fügt es ein `CSpinButtonCtrl` Objekt...  
+ Erstellt ein Drehfeld-Steuerelement, und fügt es einer `CSpinButtonCtrl` Objekt...  
   
 ```  
 virtual BOOL Create(
@@ -129,27 +129,27 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  `dwStyle`  
- Gibt das Drehfeldsteuerelement-Stil. Eine beliebige Kombination von Drehfeld-Schaltflächenstile Steuerelement auf das Steuerelement anzuwenden. Diese Stile werden im Abschnitt [auf-ab-Steuerelementstile](http://msdn.microsoft.com/library/windows/desktop/bb759885) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Gibt das Drehfeldsteuerelement-Stil. Eine beliebige Kombination von Drehfeld-Schaltflächenstile Steuerelement auf das Steuerelement anzuwenden. Diese Formate werden in beschrieben [auf-ab-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb759885) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `rect`  
- Gibt des Drehfeld-Steuerelements die Größe und Position. Es kann entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur  
+ Gibt das Drehfeldsteuerelement Größe und Position. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur  
   
  `pParentWnd`  
- Ein Zeiger auf das Drehfeld-Steuerelement des übergeordneten Fensters, in der Regel eine `CDialog`. Er darf nicht sein **NULL.**  
+ Ein Zeiger auf das Drehfeldsteuerelement übergeordnetes Fenster, in der Regel eine `CDialog`. Es muss nicht **NULL.**  
   
  `nID`  
- Gibt das Drehfeld-Steuerelement ID an.  
+ Gibt das Drehfeldsteuerelement-ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Initialisierung erfolgreich war; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CSpinButtonCtrl` Objekt in zwei Schritten zuerst, rufen Sie den Konstruktor, und rufen Sie dann **erstellen**, der das Drehfeld-Steuerelement erstellt, und fügt es der `CSpinButtonCtrl` Objekt.  
+ Sie erstellen eine `CSpinButtonCtrl` zunächst in zwei Schritten Objekt, rufen Sie den Konstruktor und rufen dann **erstellen**, das das Drehfeld-Steuerelement erstellt, und fügt es der `CSpinButtonCtrl` Objekt.  
   
  Rufen Sie zum Erstellen einer Drehfeld-Steuerelement mit erweiterten Fensterstile [CSpinButtonCtrl::CreateEx](#createex) anstelle von **erstellen**.  
   
 ##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
- Erstellt ein Steuerelement (ein untergeordnetes Fenster), und ordnet sie der `CSpinButtonCtrl` Objekt.  
+ Erstellt ein Steuerelement (ein untergeordnetes Fenster) und ordnet sie der `CSpinButtonCtrl` Objekt.  
   
 ```  
 virtual BOOL CreateEx(
@@ -165,22 +165,22 @@ virtual BOOL CreateEx(
  Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `dwStyle`  
- Gibt das Drehfeldsteuerelement-Stil. Eine beliebige Kombination von Drehfeld-Schaltflächenstile Steuerelement auf das Steuerelement anzuwenden. Diese Stile werden im Abschnitt [auf-ab-Steuerelementstile](http://msdn.microsoft.com/library/windows/desktop/bb759885) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Gibt das Drehfeldsteuerelement-Stil. Eine beliebige Kombination von Drehfeld-Schaltflächenstile Steuerelement auf das Steuerelement anzuwenden. Diese Formate werden in beschrieben [auf-ab-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb759885) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt `pParentWnd`.  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der `pParentWnd`.  
   
  `pParentWnd`  
- Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.  
+ Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
   
  `nID`  
- Der ID des Steuerelements untergeordnete Fenster  
+ Das Steuerelement untergeordnete Fenster-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendung `CreateEx` anstelle von [erstellen](#create) erweiterten Fensterstile, angegeben durch den Wert der Windows-erweiterten Stil anwenden **WS_EX_**.  
+ Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende erweiterten Fensterstile, angegeben durch die Windows-erweiterten Stil ihm etwas voranzustellen **WS_EX_**.  
   
 ##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
  Erstellt ein `CSpinButtonCtrl`-Objekt.  
@@ -190,7 +190,7 @@ CSpinButtonCtrl();
 ```  
   
 ##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
- Ruft die Beschleunigung Informationen für ein Drehfeld-Steuerelement ab.  
+ Acceleration-Informationen für ein Drehfeld-Steuerelement abgerufen.  
   
 ```  
 UINT GetAccel(
@@ -200,26 +200,26 @@ UINT GetAccel(
   
 ### <a name="parameters"></a>Parameter  
  `nAccel`  
- Anzahl der Elemente im angegebenen Array `pAccel`.  
+ Anzahl der Elemente im Array vom angegebenen `pAccel`.  
   
  `pAccel`  
- Zeiger auf ein Array von [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) -Strukturen, die Beschleunigung Informationen erhält.  
+ Zeiger auf ein Array von [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) Strukturen, die Beschleunigung-Informationen erhält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Anzahl der Zugriffstaste Strukturen abgerufen.  
   
 ##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
- Ruft die aktuelle Basis für ein Drehfeld-Steuerelement ab.  
+ Ruft den aktuellen Basis für ein Drehfeld-Steuerelement ab.  
   
 ```  
 UINT GetBase() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der aktuelle Basiswert.  
+ Die aktuellen Preis.  
   
 ##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
- Ruft einen Zeiger auf das aktuelle Buddyfenster.  
+ Ruft einen Zeiger auf das aktuelle Buddyfenster ab.  
   
 ```  
 CWnd* GetBuddy() const;  
@@ -229,144 +229,150 @@ CWnd* GetBuddy() const;
  Ein Zeiger auf das aktuelle Buddyfenster.  
   
 ##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
- Ruft die aktuelle Position des Drehfeld-Steuerelements ab.  
+ Ruft die aktuelle Position ein Drehfeld-Steuerelement ab.  
   
 ```  
-int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;  ```  
+int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;  
+```  
   
-### Parameters  
+### <a name="parameters"></a>Parameter  
  *lpbError*  
- A pointer to a boolean value that is set to zero if the value is successfully retrieved or non-zero if an error occurs. If this parameter is set to **NULL**, errors are not reported.  
+ Ein Zeiger auf ein boolescher Wert, der auf NULL, wenn den Wert festgelegt ist, ist erfolgreich abgerufen oder ungleich NULL, wenn ein Fehler auftritt. Wenn dieser Parameter, um festgelegt wird **NULL**, Fehler werden nicht gemeldet.  
   
-### Return Value  
- The first version returns the 16-bit current position in the low-order word. The high-order word is nonzero if an error occurred.  
+### <a name="return-value"></a>Rückgabewert  
+ Die erste Version gibt die 16-Bit für die aktuelle Position in das niederwertige Wort. Das höherwertige Wort ist ungleich NULL, wenn ein Fehler aufgetreten.  
   
- The second version returns the 32-bit position.  
+ Die zweite Version gibt die 32-Bit-Position zurück.  
   
-### Remarks  
- When it processes the value returned, the control updates its current position based on the caption of the buddy window. The control returns an error if there is no buddy window or if the caption specifies an invalid or out-of-range value.  
+### <a name="remarks"></a>Hinweise  
+ Bei der Verarbeitung des zurückgegebene Werts aktualisiert das Steuerelement seiner derzeitigen Position basierend auf die Beschriftung des Buddy-Fensters. Das Steuerelement gibt einen Fehler zurück, wenn kein Buddyfenster vorhanden ist oder die Beschriftung einen ungültigen oder außerhalb des gültigen Bereichs Wert angibt.  
   
-##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
- Retrieves the upper and lower limits (range) for a spin button control.  
+##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
+ Ruft die oberen und unteren Grenzen (Bereich) für ein Drehfeld-Steuerelement ab.  
   
 ```  
 DWORD GetRange() const;  
   
-void GetRange (Int & verringern  
-    Int & oben) const;  
+void GetRange(
+    int& lower,  
+    int& upper) const;  
   
-void GetRange32 (Int & niedriger  
-    Int & oben) const;  
+void GetRange32(
+    int& lower,  
+    int &upper) const;  
 ```  
   
-### Parameters  
- *lower*  
- Reference to an integer that receives the lower limit for the control.  
+### <a name="parameters"></a>Parameter  
+ *niedrigere*  
+ Verweis auf eine ganze Zahl, die die Untergrenze für das Steuerelement empfängt.  
   
- *upper*  
- Reference to an integer that receives the upper limit for the control.  
+ *obere*  
+ Verweis auf eine ganze Zahl, die die Obergrenze für das Steuerelement empfängt.  
   
-### Return Value  
- The first version returns a 32-bit value containing the upper and lower limits. The low-order word is the upper limit for the control, and the high-order word is the lower limit.  
+### <a name="return-value"></a>Rückgabewert  
+ Die erste Version gibt einen 32-Bit-Wert, der mit den oberen und unteren Grenzen. Das niederwertige Wort ist der obere Grenzwert für das Steuerelement, und das höherwertige Wort ist die untere Grenze.  
   
-### Remarks  
- The member function `GetRange32` retrieves the spin button control's range as a 32-bit integer.  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion `GetRange32` Ruft das Drehfeldsteuerelement Bereich als 32-Bit-Ganzzahl ab.  
   
-##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
- Sets the acceleration for a spin button control.  
+##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
+ Legt die Beschleunigung für ein Drehfeld-Steuerelement fest.  
   
 ```  
-BOOL Memberfunktionen SetAccel (Int nAccel,  
+BOOL SetAccel(
+    int nAccel,  
     UDACCEL* pAccel);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parameter  
  `nAccel`  
- Number of [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures specified by `pAccel`.  
+ Anzahl der [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) Strukturen gemäß `pAccel`.  
   
  `pAccel`  
- Pointer to an array of `UDACCEL` structures, which contain acceleration information. Elements should be sorted in ascending order based on the **nSec** member.  
+ Zeiger auf ein Array von `UDACCEL` -Strukturen, die Beschleunigung Informationen enthalten. Elemente sortiert werden soll, in aufsteigender Reihenfolge auf Grundlage der **nSec** Member.  
   
-### Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
-##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
- Sets the base for a spin button control.  
+##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
+ Legt die Basis für ein Drehfeld-Steuerelement fest.  
   
 ```  
-Int SetBase (Int nBase);
+int SetBase(int nBase);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parameter  
  `nBase`  
- New base value for the control. It can be 10 for decimal or 16 for hexadecimal.  
+ Neue Basiswert für das Steuerelement. Sie können für Dezimalpunkt 10 oder 16 für hexadezimal sein.  
   
-### Return Value  
- The previous base value if successful, or zero if an invalid base is given.  
+### <a name="return-value"></a>Rückgabewert  
+ Der vorherige Basiswert im Erfolgsfall, oder 0 (null) ist eine ungültige Basis angegeben.  
   
-### Remarks  
- The base value determines whether the buddy window displays numbers in decimal or hexadecimal digits. Hexadecimal numbers are always unsigned; decimal numbers are signed.  
+### <a name="remarks"></a>Hinweise  
+ Der Basiswert bestimmt, ob Buddy-Fensters Zahlen im dezimalen oder hexadezimalen Ziffern anzeigt. Hexadezimalzahlen sind immer ohne Vorzeichen. Dezimalzahlen werden signiert.  
   
-##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
- Sets the buddy window for a spin button control.  
+##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
+ Legt das Buddyfenster für ein Drehfeld-Steuerelement fest.  
   
 ```  
-CWnd* SetBuddy (CWnd* pWndBuddy);
+CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parameter  
  `pWndBuddy`  
- Pointer to the new buddy window.  
+ Ein Zeiger auf das neue Buddyfenster.  
   
-### Return Value  
- A pointer to the previous buddy window.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf das vorherige Buddyfenster.  
   
-### Remarks  
- A spin control is almost always associated with another window, such as an edit control, that displays some content. This other window is called the "buddy" of the spin control.  
+### <a name="remarks"></a>Hinweise  
+ Ein Drehfeld-Steuerelement ist fast immer ein anderes Fenster, z. B. ein Bearbeitungssteuerelement, der einige Inhalte anzeigt zugeordnet. Diese anderen Fenster heißt "Kontakt" Drehfeld-Steuerelements.  
   
-##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
- Sets the current position for a spin button control.  
+##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
+ Legt die aktuelle Position für ein Drehfeld-Steuerelement fest.  
   
 ```  
-Int-Memberfunktion SetPos (Int nPos);  
-Int SetPos32(int nPos).
+int SetPos(int nPos);  
+int SetPos32(int nPos);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parameter  
  `nPos`  
- New position for the control. This value must be in the range specified by the upper and lower limits for the control.  
+ Neue Position für das Steuerelement. Dieser Wert muss im Bereich durch den oberen und unteren Grenzen für das Steuerelement angegeben sein.  
   
-### Return Value  
- The previous position (16-bit precision for `SetPos`, 32-bit precision for `SetPos32`).  
+### <a name="return-value"></a>Rückgabewert  
+ Die vorherigen Position (16-Bit-Genauigkeit für `SetPos`, 32-Bit-Genauigkeit für `SetPos32`).  
   
-### Remarks  
- `SetPos32` sets the 32-bit position.  
+### <a name="remarks"></a>Hinweise  
+ `SetPos32`die 32-Bit-Position festgelegt.  
   
-##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange  
- Sets the upper and lower limits (range) for a spin button control.  
+##  <a name="setrange"></a>CSpinButtonCtrl:: SetRange  
+ Legt den oberen und unteren Grenzen (Bereich) für ein Drehfeld-Steuerelement fest.  
   
 ```  
-void SetRange (kurze nLower,  
-    kurze nUpper);
+void SetRange(
+    short nLower,  
+    short nUpper);
 
  
-void SetRange32 (Int nLower,  
-    Int nUpper);
+void SetRange32(
+    int nLower,  
+    int nUpper);
 ```  
   
-### Parameters  
- `nLower`and `nUpper`  
- Upper and lower limits for the control. For `SetRange`, neither limit can be greater than **UD_MAXVAL** or less than **UD_MINVAL**; in addition, the difference between the two limits cannot exceed **UD_MAXVAL**. `SetRange32` places no restrictions on the limits; use any integers.  
+### <a name="parameters"></a>Parameter  
+ `nLower`und`nUpper`  
+ Obere und untere Grenzwerte für das Steuerelement. Für `SetRange`, weder Limit kann größer sein als **UD_MAXVAL** oder kleiner als **UD_MINVAL**; darüber hinaus nicht der Unterschied zwischen beiden Grenzwerte überschreiten **UD_MAXVAL**. `SetRange32`Schränkt die Grenzwerte; Verwenden Sie ganzen Zahlen.  
   
-### Remarks  
- The member function `SetRange32` sets the 32-bit range for the spin button control.  
+### <a name="remarks"></a>Hinweise  
+ Die Memberfunktion `SetRange32` legt die 32-Bit-Bereich für das Drehfeld-Steuerelement fest.  
   
 > [!NOTE]
->  The default range for the spin button has the maximum set to zero (0) and the minimum set to 100. Because the maximum value is less than the minimum value, clicking the up arrow will decrease the position and clicking the down arrow will increase it. Use `CSpinButtonCtrl::SetRange` to adjust these values.  
+>  Der Standardbereich für das Drehfeld hat das Maximum auf 0 (null) und das Minimum auf 100 festgelegt. Da der maximale Wert kleiner als der minimale Wert ist, auf den Pfeil nach oben verringert die Position, und klicken auf den Pfeil nach unten, erhöhen sie. Verwendung `CSpinButtonCtrl::SetRange` diese Werte anpassen.  
   
-## See Also  
- [MFC Sample CMNCTRL2](../../visual-cpp-samples.md)   
- [CWnd Class](../../mfc/reference/cwnd-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CSliderCtrl Class](../../mfc/reference/csliderctrl-class.md)
+## <a name="see-also"></a>Siehe auch  
+ [MFC-Beispiel CMNCTRL2](../../visual-cpp-samples.md)   
+ [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
+ [CSliderCtrl-Klasse](../../mfc/reference/csliderctrl-class.md)
 

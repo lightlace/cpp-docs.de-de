@@ -1,5 +1,5 @@
 ---
-title: Compiler (Stufe 3) C4996 | Microsoft-Dokumentation
+title: Compilerwarnung (Stufe 3) C4996 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,43 +35,45 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: bf7b4ccd6309f08098416f4bdb6777b8eafd2e7f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: aa9586bd0abed0b1fa1d24c777eea8c82c5cedc0
+ms.lasthandoff: 03/29/2017
 
 ---
-# <a name="compiler-warning-level-3-c4996"></a>C4996 für Compiler-Warnung (Stufe 3)
+# <a name="compiler-warning-level-3-c4996"></a>Compilerwarnung (Stufe 3) C4996
 Der Compiler hat eine veraltete Deklaration gefunden.  
   
  Diese Warnung/dieser Fehler hat mehrere Bedeutungen.  
   
- `C4996`Tritt auf, wenn der Compiler erkennt, eine Funktion oder Variable, die als gekennzeichnete [veraltet](../../cpp/deprecated-cpp.md). Verschiedene Funktionen, Memberfunktionen, Vorlagenfunktionen und globale Variablen in den in Visual Studio enthaltenen Bibliotheken sind als veraltet gekennzeichnet. Möglicherweise besteht für diese Funktionen ein anderer, bevorzugter Name, sie sind unsicher oder in einer sichereren Variante verfügbar oder schlicht veraltet. Die Fehlermeldung gibt möglicherweise eine Ersatzvorschlag für die veraltete Funktion oder globale Variable an. Sie können diese Warnung deaktivieren, mit der [Warnung](../../preprocessor/warning.md) Pragma oder **/wd4996** -Befehlszeilenoption. Bestimmte Klassen von Veraltungswarnungen können auch mithilfe von Präprozessormakros deaktiviert werden.  
+ `C4996`Tritt auf, wenn der Compiler erkennt, eine Funktion oder Variable mit der Kennzeichnung [veraltet](../../cpp/deprecated-cpp.md). Verschiedene Funktionen, Memberfunktionen, Vorlagenfunktionen und globale Variablen in den in Visual Studio enthaltenen Bibliotheken sind als veraltet gekennzeichnet. Möglicherweise besteht für diese Funktionen ein anderer, bevorzugter Name, sie sind unsicher oder in einer sichereren Variante verfügbar oder schlicht veraltet. Die Fehlermeldung gibt möglicherweise eine Ersatzvorschlag für die veraltete Funktion oder globale Variable an. Sie können diese Warnung deaktivieren, mit der [Warnung](../../preprocessor/warning.md) Pragmas oder der **/wd4996** -Befehlszeilenoption. Bestimmte Klassen von Veraltungswarnungen können auch mithilfe von Präprozessormakros deaktiviert werden. 
+
+Diese Warnung wird auch ausgegeben, wenn Sie versuchen, Zugriff auf eine Funktion, die Klassenmember oder Typedef, die die C ++ 14 `[[deprecated]]` Attribut. Weitere Informationen finden Sie unter [Standard C++-Attribute](../../cpp/attributes2.md). 
   
- **Die POSIX-Namen für dieses Element ist veraltet. Verwenden Sie stattdessen die ISO-C und C++-konforme Name:** New_name**. Details finden Sie in der Onlinehilfe.**  
+ **Der POSIX-Name für dieses Element ist veraltet. Verwenden Sie stattdessen die ISO C- und C++-konformen Namen:** New_name**. Details finden Sie in der Onlinehilfe.**  
   
  Einige POSIX-Funktionen in der CRT wurden umbenannt, um sie mit den in C99 und C++03 festgelegten Regeln für Namen von implementierungsdefinierten globalen Funktionen konform zu machen. In den meisten Fällen wurde dem POSIX-Funktionsnamen ein führender Unterstrich hinzugefügt, um einen mit dem Standard konformen Namen zu erzielen. Der Compiler gibt für die ursprünglichen Funktionsnamen eine Veraltungswarnung aus und schlägt den bevorzugten Namen vor. Nur die ursprünglichen Namen sind veraltet, nicht die Funktionen selbst. Um die Veraltungswarnungen für diese Funktionen zu deaktivieren, definieren Sie das Präprozessor-Makro **_CRT_NONSTDC_NO_WARNINGS**. Sie können dies auf der Befehlszeile durch Einschließen der Option `/D_CRT_NONSTDC_NO_WARNINGS`definieren. Um dieses Makro in Visual Studio zu definieren, öffnen Sie das **Eigenschaftenseiten** -Dialogfeld für Ihr Projekt. Erweitern Sie **Konfigurationseigenschaften**, **C/C++**, **Präprozessor**. Fügen Sie in den **Präprozessordefinitionen** `_CRT_NONSTDC_NO_WARNINGS`hinzu. Wählen Sie **OK** aus, um Ihre Änderung zu speichern, und erstellen Sie das Projekt anschließend neu. Um dieses Makro nur in bestimmten Quelldateien zu definieren, fügen Sie die Zeile `#define _CRT_NONSTDC_NO_WARNINGS` vor jeder Zeile hinzu, die eine Headerdatei einbindet.  
   
- **Diese Funktion oder Variable möglicherweise nicht sicher. In Betracht** Safe_version **stattdessen. Zum Deaktivieren der Veraltungswarnung verwenden Sie „_CRT_SECURE_NO_WARNINGS“.  Details finden Sie in der Onlinehilfe.**  
+ **Diese Funktion oder Variable möglicherweise unsicher. Erwägen Sie** sichere_version **stattdessen. Zum Deaktivieren der Veraltungswarnung verwenden Sie „_CRT_SECURE_NO_WARNINGS“.  Details finden Sie in der Onlinehilfe.**  
   
- Einige CRT und C++-Standardbibliothek Funktionen und globale Variablen wurden zugunsten von neuen, sichereren Funktionen als veraltet eingestuft. Der Compiler gibt für diese Funktionen eine Veraltungswarnung aus und schlägt die bevorzugte Funktion vor. Um die Veraltungswarnungen für diese Funktionen in der CRT zu deaktivieren, definieren Sie **_CRT_SECURE_NO_WARNINGS**. Zum Deaktivieren der Warnungen zu veralteten globalen Variablen definieren Sie **_CRT_SECURE_NO_WARNINGS_GLOBALS**. Weitere Informationen zu diesen veralteten Funktionen und globale Variablen finden Sie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) und [sichere Bibliotheken: C++-Standardbibliothek](../../standard-library/safe-libraries-cpp-standard-library.md).  
+ Einige CRT- und C++-Standardbibliothek Funktionen und globale Variablen wurden zugunsten von neuen, sichereren Funktionen als veraltet markiert. Der Compiler gibt für diese Funktionen eine Veraltungswarnung aus und schlägt die bevorzugte Funktion vor. Um die Veraltungswarnungen für diese Funktionen in der CRT zu deaktivieren, definieren Sie **_CRT_SECURE_NO_WARNINGS**. Zum Deaktivieren der Warnungen zu veralteten globalen Variablen definieren Sie **_CRT_SECURE_NO_WARNINGS_GLOBALS**. Weitere Informationen zu diesen Funktionen als veraltet markierte Funktionen und globale Variablen finden Sie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) und [sichere Bibliotheken: C++-Standardbibliothek](../../standard-library/safe-libraries-cpp-standard-library.md).  
   
- **Funktionsaufruf mit Parametern, die möglicherweise unsicheren - verwendet diesen Aufruf der Aufrufer sicherstellen, dass die übergebenen Werte richtig sind. Sie können diese Warnung mit D_SCL_SECURE_NO_WARNINGS deaktivieren. Finden Sie Dokumentation zur Verwendung von Visual C++ 'Überprüften Iteratoren'**  
+ **Funktionsaufruf mit Parametern, die ggf. unsicher - verwendet diesen Aufruf der Aufrufer sicherstellen, dass die übergebenen Werte richtig sind. Sie können diese Warnung mit D_SCL_SECURE_NO_WARNINGS deaktivieren. Dokumentation zum Verwenden von Visual C++ "Überprüfte Iteratoren" finden Sie unter**  
   
  Bestimmte Vorlagenfunktionen der C++-Standardbibliothek überprüfen Parameter nicht auf Richtigkeit. Diese Warnung hilft Ihnen, die Verwendung dieser Funktionen zu erkennen. Um die Warnungen für diese Funktionen zu deaktivieren, definieren Sie **_SCL_SECURE_NO_WARNINGS**. Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../../standard-library/checked-iterators.md).  
   
- **Diese Funktion oder Variable wurde durch neuere Bibliothek oder Betriebssystem-Funktionalität ersetzt. In Betracht** New_item **stattdessen. Details finden Sie in der Onlinehilfe.**  
+ **Diese Funktion oder Variable wurde durch neuere Bibliothek oder einem Betriebssystem-Funktionalität ersetzt. Erwägen Sie** neues_element **stattdessen. Details finden Sie in der Onlinehilfe.**  
   
  Einige Bibliotheksfunktionen und globale Variablen wurden als veraltet gekennzeichnet. Diese Funktionen und Variablen werden möglicherweise in einer zukünftigen Version der Bibliothek entfernt. Der Compiler gibt für diese Elemente eine Veraltungswarnung aus und schlägt die bevorzugte Alternative vor. Um die Veraltungswarnungen für diese Elemente zu deaktivieren, definieren Sie **_CRT_OBSOLETE_NO_WARNINGS**. Weitere Informationen finden Sie in der Dokumentation für die veraltete Funktion oder Variable.  
   
- **Verschiedene Meldungen in MFC oder ATL-code**  
+ **Verschiedene Nachrichten in MFC- oder ATL-code**  
   
- `C4996` kann auch bei der Verwendung von MFC-Funktionen oder ATL-Funktionen auftreten, die aus Sicherheitsgründen nicht mehr implementiert wurden. Um diese Warnung zu unterdrücken, finden Sie unter [_AFX_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/97dcfd41-1e56-41d5-bf7e-d240b950134b) und [_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73).  
+ `C4996` kann auch bei der Verwendung von MFC-Funktionen oder ATL-Funktionen auftreten, die aus Sicherheitsgründen nicht mehr implementiert wurden. Um diese Warnungen zu unterdrücken, finden Sie unter [_AFX_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/97dcfd41-1e56-41d5-bf7e-d240b950134b) und [_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73).  
   
  **Marshalling von Fehlern in CLR-code**  
   
- `C4996` kann auch auftreten, wenn Sie die Marshallingbibliothek verwenden. In diesem Fall ist C4996 ein Fehler, keine Warnung. Dieser Fehler tritt bei der Verwendung [Marshal_as](../../dotnet/marshal-as.md) zwischen zwei Datentypen zu konvertieren, die erfordern eine [Marshal_context-Klasse](../../dotnet/marshal-context-class.md). Der Fehler wird auch angezeigt, wenn die Marshallingbibliothek keine Konvertierung unterstützt. Weitere Informationen über die Marshallingbibliothek finden Sie unter [Overview of Marshaling in C++](../../dotnet/overview-of-marshaling-in-cpp.md).  
+ `C4996` kann auch auftreten, wenn Sie die Marshallingbibliothek verwenden. In diesem Fall ist C4996 ein Fehler, keine Warnung. Dieser Fehler tritt bei der Verwendung [Marshal_as](../../dotnet/marshal-as.md) zum Konvertieren zwischen zwei Datentypen, die erfordern einen [Marshal_context-Klasse](../../dotnet/marshal-context-class.md). Der Fehler wird auch angezeigt, wenn die Marshallingbibliothek keine Konvertierung unterstützt. Weitere Informationen über die Marshallingbibliothek finden Sie unter [Overview of Marshaling in C++](../../dotnet/overview-of-marshaling-in-cpp.md).  
   
- **Beispiele, in denen C4996 generieren**  
+ **Beispiele, die C4996 generieren**  
   
  Im ersten Beispiel wird `C4996` für die Zeile generiert, in der die Funktion deklariert wird, sowie für die Zeile, in der die Funktion verwendet wird.  
   
@@ -102,7 +104,7 @@ int main() {
 ## <a name="example"></a>Beispiel  
  C4996 kann auch auftreten, wenn Sie beim Kompilieren mit `_ITERATOR_DEBUG_LEVEL` keinen überprüften Iterator definieren (dieser ist beim Buildvorgang im Debugmodus standardmäßig auf 1 festgelegt).  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../../standard-library/checked-iterators.md) .  
   
- Im folgenden Codebeispiel wird für C++-Standardbibliothek wird C4996 erzeugt.  
+ Im folgenden Codebeispiel wird von C++-Standardbibliothek wird C4996 erzeugt.  
   
 ```cpp  
 // C4996_b.cpp  
@@ -127,7 +129,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird für C++-Standardbibliothek wird C4996 als Warnung. Das Beispiel enthält Inlinekommentare.  
+ Im folgenden Codebeispiel wird von C++-Standardbibliothek wird C4996 als Warnung generiert. Das Beispiel enthält Inlinekommentare.  
   
 ```cpp  
 #include <algorithm>  
