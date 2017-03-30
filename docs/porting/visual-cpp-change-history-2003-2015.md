@@ -949,7 +949,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
   
      Außerdem, auch wenn dazu keine spezifische Diagnose ausgegeben wird, wird ein Inlineoperator „new“ als nicht wohlgeformt angesehen.  
   
--   **Aufrufen von 'operator *type*()' (benutzerdefinierte Konversion) für Nichtklassentypen**  
+-   **Aufrufen von 'operator*type*()' (benutzerdefinierte Konversion) für Nichtklassentypen**  
   
      Frühere Versionen ließen den Aufruf von 'operator *type*()' für Nichtklassentypen zu und ignorierten den Aufruf stumm. Durch dieses alte Verhalten entstand die Gefahr der stummen Erzeugung von ungültigem Code, was zu unvorhersehbarem Laufzeitverhalten führt. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2228 als Ergebnis aus.  
   
