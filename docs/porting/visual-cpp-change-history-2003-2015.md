@@ -1388,11 +1388,10 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // ok  
     }  
-  
     ```  
   
      Beispiel (nachher)  
@@ -1402,11 +1401,10 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // warning C4702: unreachable code  
     }  
-  
     ```  
   
 ###  <a name="VS_Update2"></a> Verbesserungen bei der Übereinstimmung mit Standards in Update 2  
