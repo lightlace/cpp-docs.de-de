@@ -175,27 +175,19 @@ m_nShellCommand;
 ### <a name="remarks"></a>Hinweise  
  Der Typ für dieses Datenelement ist den folgenden Aufzählungstyp, definiert in der `CCommandLineInfo` Klasse.  
   
- `enum{`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `AppRegister,`  
-  
- `AppUnregister,`  
-  
- `RestartByRestartManager,`  
-  
- `FileNothing = -1`  
-  
- `};`  
+```  
+enum {  
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE,
+    AppRegister,
+    AppUnregister,
+    RestartByRestartManager,
+    FileNothing = -1  
+    };  
+```  
   
  Eine kurze Beschreibung dieser Werte finden Sie in der folgenden Liste.  
   

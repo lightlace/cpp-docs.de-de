@@ -198,15 +198,13 @@ CurrencyStatus GetStatus() const;
 ### <a name="remarks"></a>Hinweise  
  Der Rückgabewert wird definiert, indem die `CurrencyStatus` Enumerationstyps, der definiert ist die **COleCurrency** Klasse.  
   
- `enum CurrencyStatus{`  
-  
- `valid = 0,`  
-  
- `invalid = 1,`  
-  
- `null = 2,`  
-  
- `};`  
+```  
+enum CurrencyStatus {
+    valid = 0,
+    invalid = 1,
+    null = 2
+    };  
+```  
   
  Eine kurze Beschreibung dieser Status-Werte finden Sie in der folgenden Liste:  
   
@@ -530,15 +528,13 @@ void SetStatus(CurrencyStatus  status  );
 ### <a name="remarks"></a>Hinweise  
  Die *Status* Parameterwert wird definiert, indem die `CurrencyStatus` -Enumerationstyp definiert ist die **COleCurrency** Klasse.  
   
- `enum CurrencyStatus{`  
-  
- `valid = 0,`  
-  
- `invalid = 1,`  
-  
- `null = 2,`  
-  
- `};`  
+```  
+enum CurrencyStatus {
+    valid = 0,
+    invalid = 1,
+    null = 2
+    };  
+```  
   
  Eine kurze Beschreibung dieser Status-Werte finden Sie in der folgenden Liste:  
   

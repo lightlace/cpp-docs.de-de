@@ -395,23 +395,17 @@ virtual Confidence MatchDocType(
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert aus der **vertrauen** -Enumeration, die wie folgt definiert ist:  
   
- `enum Confidence`  
-  
- `{`  
-  
- `noAttempt,`  
-  
- `maybeAttemptForeign,`  
-  
- `maybeAttemptNative,`  
-  
- `yesAttemptForeign,`  
-  
- `yesAttemptNative,`  
-  
- `yesAlreadyOpen`  
-  
- `};`  
+```  
+enum Confidence  
+    {  
+    noAttempt,
+    maybeAttemptForeign,
+    maybeAttemptNative,
+    yesAttemptForeign,
+    yesAttemptNative,
+    yesAlreadyOpen
+    };  
+```  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um den Typ der Dokumentvorlage, verwenden Sie zum Öffnen einer Datei zu bestimmen. Wenn Ihre Anwendung mehrere Dateitypen unterstützt, z. B. können diese Funktion zum Ermitteln der verfügbaren Vorlagen für eine bestimmte Datei durch Aufrufen von `MatchDocType` für die einzelnen Vorlagen in und Auswählen einer Vorlage entsprechend dem Wert zurückgegeben.  

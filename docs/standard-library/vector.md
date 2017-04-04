@@ -105,10 +105,10 @@ void swap (
  Zuweisung  
  Der Vorlagenparameter für das gespeicherte Zuweisungsobjekt, das für die Speicherbelegung und -freigabe verantwortlich ist.  
   
- ` left`  
+ `left`  
  Der erste (linke) Vektor in einem Vergleichsvorgang.  
   
- ` right`  
+ `right`  
  Der zweite (rechte) Vektor in einem Vergleichsvorgang.  
   
 ### <a name="operators"></a>Operatoren  

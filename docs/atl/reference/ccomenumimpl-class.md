@@ -172,17 +172,14 @@ HRESULT Init(
   
  Die `flags` Parameter können Sie angeben, wie der Enumerator die Elemente des Arrays übergeben werden soll. `flags`akzeptiert einen der Werte aus den **CComEnumFlags** Enumeration unten:  
   
- `enum CComEnumFlags`  
-  
- `{`  
-  
- `AtlFlagNoCopy = 0,`  
-  
- `AtlFlagTakeOwnership = 2, // BitOwn`  
-  
- `AtlFlagCopy = 3           // BitOwn | BitCopy`  
-  
- `};`  
+```  
+enum CComEnumFlags  
+   {  
+   AtlFlagNoCopy = 0,  
+   AtlFlagTakeOwnership = 2, // BitOwn  
+   AtlFlagCopy = 3           // BitOwn | BitCopy  
+   };  
+```  
   
  **AtlFlagNoCopy** bedeutet, dass das Array Lebensdauer nicht vom Enumerator gesteuert wird. In diesem Fall entweder das Array werden statische oder identifizierte Objekt *pUnk* ist zuständig für das Array freigeben, wenn er nicht mehr benötigt wird.  
   
