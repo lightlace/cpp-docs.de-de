@@ -43,7 +43,7 @@ Der Compiler ist jetzt zusammen mit dem Support für generalisierte contextpr un
 
 
 ### <a name="c-14"></a>C++ 14:
-**NSDMI für Aggregate** Ein Aggregat ist ein Array oder eine Klasse mit keinem vom Benutzer bereitgestellten Konstruktor, keinen privaten oder geschützten nicht statischen Datenmembern, keinen Basisklassen und keinen virtuellen Funktionen. Ab C++&14; können Aggregate Memberinitialisierer enthalten. Weitere Informationen finden Sie unter [Member initializers and aggregates (Memberinitialisierer und Aggregate)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html).
+**NSDMI für Aggregate** Ein Aggregat ist ein Array oder eine Klasse mit keinem vom Benutzer bereitgestellten Konstruktor, keinen privaten oder geschützten nicht statischen Datenmembern, keinen Basisklassen und keinen virtuellen Funktionen. Ab C++ 14 können Aggregate Memberinitialisierer enthalten. Weitere Informationen finden Sie unter [Member initializers and aggregates (Memberinitialisierer und Aggregate)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html).
 
 **Erweiterte constexpr** Ausdrücke, die als „constexpr“ deklariert sind, dürfen jetzt bestimmte Arten von Deklarationen, if- und switch-Anweisungen, Schleifenanweisungen und Mutation der Objekte enthalten, deren Lebensdauer in der Auswertung von constexpr-Ausdrücken begann. Darüber hinaus ist es nicht mehr erforderlich, dass eine nicht statische Memberfunktion von constexpr implizit const ist. Weitere Informationen finden Sie unter [Relaxing constraints on constexpr functions (Lockerung der Einschränkungen auf constexpr-Funktionen)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html). 
 
