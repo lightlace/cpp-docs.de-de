@@ -1,5 +1,5 @@
 ---
-title: Klasse COleMessageFilter | Microsoft-Dokumentation
+title: COleMessageFilter Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -52,9 +52,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: d91ed300bb6cade5d804fe4a74dfe6cc2e4384fe
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0cbc95bc492c69549a15bba3f4594e293be1c9f7
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter-Klasse
@@ -78,30 +78,30 @@ class COleMessageFilter : public CCmdTarget
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[COleMessageFilter::BeginBusyState](#beginbusystate)|Wird die Anwendung im Status "beschäftigt".|  
-|[COleMessageFilter::EnableBusyDialog](#enablebusydialog)|Aktiviert und deaktiviert das Dialogfeld, das angezeigt wird, wenn eine aufgerufene Anwendung ausgelastet ist.|  
+|[COleMessageFilter::BeginBusyState](#beginbusystate)|Setzt die Anwendung im Status "ausgelastet".|  
+|[COleMessageFilter::EnableBusyDialog](#enablebusydialog)|Aktiviert und deaktiviert das Dialogfeld wird angezeigt, wenn eine aufgerufene Anwendung ausgelastet ist.|  
 |[COleMessageFilter::EnableNotRespondingDialog](#enablenotrespondingdialog)|Aktiviert und deaktiviert das Dialogfeld wird angezeigt, wenn eine aufgerufene Anwendung nicht reagiert.|  
-|[COleMessageFilter::EndBusyState](#endbusystate)|Beendet den Zustand der Anwendung ausgelastet.|  
+|[COleMessageFilter::EndBusyState](#endbusystate)|Beendet die Anwendung ausgelastet.|  
 |[COleMessageFilter::OnMessagePending](#onmessagepending)|Vom Framework zum Verarbeiten von Nachrichten aufgerufen, während ein OLE-Aufruf ausgeführt wird.|  
-|[COleMessageFilter::Register](#register)|Den Nachrichtenfilter registriert die OLE-System-DLLs.|  
-|[COleMessageFilter::Revoke](#revoke)|Hebt die Registrierung des Nachrichtenfilters die OLE-System-DLLs.|  
-|[COleMessageFilter::SetBusyReply](#setbusyreply)|Bestimmt, die andere Anwendung Antwort auf einen OLE-Aufruf.|  
+|[COleMessageFilter::Register](#register)|Den Nachrichtenfilter registriert OLE-System-DLLs.|  
+|[COleMessageFilter::Revoke](#revoke)|Hebt die Nachrichtenfilter Registrierung mit OLE-System-DLLs an.|  
+|[COleMessageFilter::SetBusyReply](#setbusyreply)|Bestimmt die ausgelastete Anwendung Antworten zu einem OLE-Aufruf.|  
 |[COleMessageFilter::SetMessagePendingDelay](#setmessagependingdelay)|Bestimmt, wie lange die Anwendung auf eine Antwort auf einen OLE-Aufruf wartet.|  
-|[COleMessageFilter::SetRetryReply](#setretryreply)|Bestimmt die aufrufende Anwendung Antwort auf eine andere Anwendung.|  
+|[COleMessageFilter::SetRetryReply](#setretryreply)|Bestimmt die aufrufende Anwendung Antworten Sie auf eine ausgelastete Anwendung an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `COleMessageFilter` -Klasse ist hilfreich, Server und-Container Anwendungen für visuelle Bearbeitung sowie OLE Automation-Programme. Für serveranwendungen, die aufgerufen werden, kann diese Klasse verwendet werden, um die Anwendung "ausgelastet", damit eingehende Anrufe von anderen Programmen Container abgebrochen oder später wiederholt werden. Diese Klasse kann auch verwendet werden, bestimmt die Aktion, die von einer aufrufenden Anwendung ausgeführt werden, wenn die aufgerufene Anwendung ausgelastet ist.  
+ Die `COleMessageFilter` -Klasse eignet sich für Server und-Container Anwendungen für visuelle Bearbeitung sowie Anwendungen von OLE-Automatisierung. Für serveranwendungen, die aufgerufen werden, kann diese Klasse verwendet werden, um die Anwendung "ausgelastet" vornehmen, damit eingehende Aufrufe von anderen containeranwendungen abgebrochen oder später erneut ausgeführt werden. Diese Klasse kann auch verwendet werden, um zu bestimmen, die Aktion, die von einer aufrufenden Anwendung ausgeführt wird, wenn die aufgerufene Anwendung ausgelastet ist.  
   
- Meist wird für eine Server-Anwendung aufrufen, [BeginBusyState](#beginbusystate) und [EndBusyState](#endbusystate) Wenn wäre es gefährlich für ein Dokument oder ein anderes zugänglich OLE-Objekt zerstört werden. Diese Aufrufe [OnIdle](../../mfc/reference/cwinapp-class.md#onidle) während der Aktualisierung der Benutzeroberfläche.  
+ Allgemeine Verwendung ist für eine Serveranwendung aufrufen, [BeginBusyState](#beginbusystate) und [EndBusyState](#endbusystate) Wenn ist es wäre gefährlich für ein Dokument oder eine andere OLE-Objekts zugegriffen werden kann, die gelöscht werden. Diese Aufrufe [OnIdle](../../mfc/reference/cwinapp-class.md#onidle) während eines Updates der Benutzeroberfläche.  
   
- In der Standardeinstellung ein `COleMessageFilter` Objekt beim Initialisieren der Anwendung zugewiesen wird. Es kann abgerufen werden, mit [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).  
+ Wird standardmäßig ein `COleMessageFilter` Objekt zugewiesen wird, wenn die Anwendung initialisiert wird. Sie können abgerufen werden, mit [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).  
   
- Dies ist eine erweiterte Klasse. Sie müssen nur selten direkt mit der sie arbeiten.  
+ Hierbei handelt es sich um eine erweiterte Klasse; Sie müssen nur selten direkt mit der sie arbeiten.  
   
  Weitere Informationen finden Sie im Artikel [Server: Implementieren eines Servers](../../mfc/servers-implementing-a-server.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -111,18 +111,18 @@ class COleMessageFilter : public CCmdTarget
  **Header:** afxole.h  
   
 ##  <a name="beginbusystate"></a>COleMessageFilter::BeginBusyState  
- Rufen Sie diese Funktion, um den Status "beschäftigt" beginnen.  
+ Mit dieser Funktion können ausgelasteten Zustand zu starten.  
   
 ```  
 virtual void BeginBusyState();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Funktioniert in Kombination mit [EndBusyState](#endbusystate) zum Steuern der Anwendung ausgelastet. Die Funktion [SetBusyReply](#setbusyreply) Applikationen aufrufen, wird die Anwendung Antworten bestimmt.  
+ Funktioniert in Kombination mit [EndBusyState](#endbusystate) ausgelastet Anwendungsstatus zu steuern. Die Funktion [SetBusyReply](#setbusyreply) bestimmt die Anwendung Antworten an aufrufende Anwendungen aus, wenn sie stark ausgelastet ist.  
   
- Die `BeginBusyState` und `EndBusyState` Aufrufe Inkrementieren und Dekrementieren, jeweils einen Zähler, der bestimmt, ob die Anwendung ausgelastet ist. Zum Beispiel zwei Aufrufe von `BeginBusyState` und durch einen Aufruf von `EndBusyState` dennoch in einem ausgelasteten Zustand. Ausgelasteten Status Abbrechen erforderlich ist, aufzurufen `EndBusyState` die gleiche Anzahl `BeginBusyState` aufgerufen wurde.  
+ Die `BeginBusyState` und `EndBusyState` Aufrufe Inkrementieren und Dekrementieren, bzw. einen Leistungsindikator, der bestimmt, ob die Anwendung ausgelastet ist. Beispielsweise die beiden Aufrufe von `BeginBusyState` und ein Aufruf von `EndBusyState` bleibt in einem ausgelasteten Zustand. Ausgelasteten Zustand Abbrechen, es erforderlich ist, rufen Sie `EndBusyState` die gleiche Anzahl von Zeiten `BeginBusyState` aufgerufen wurde.  
   
- Standardmäßig trägt das Framework Status "beschäftigt" während der Verarbeitung im Leerlauf: durch erfolgt [OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Während die Anwendung verarbeitet **ON_COMMANDUPDATEUI** Benachrichtigungen, eingehende Anrufe werden nach Abschluss der Verarbeitung im Leerlauf später behandelt.  
+ Wird standardmäßig das Framework wechselt in den ausgelastet Status während der leerlaufverarbeitung von ausgeführt wird [OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Während die Anwendung verarbeitet **ON_COMMANDUPDATEUI** Benachrichtigungen, eingehende Aufrufe werden später verarbeitet, nachdem leerlaufverarbeitung abgeschlossen ist.  
   
 ##  <a name="colemessagefilter"></a>COleMessageFilter::COleMessageFilter  
  Erstellt ein `COleMessageFilter`-Objekt.  
@@ -132,7 +132,7 @@ COleMessageFilter();
 ```  
   
 ##  <a name="enablebusydialog"></a>COleMessageFilter::EnableBusyDialog  
- Aktiviert und deaktiviert die ausgelastet Dialogfeld angezeigt wird, wenn die Verzögerung ausstehende Nachricht läuft ab (siehe [SetRetryReply](#setretryreply)) während eines Aufrufs OLE.  
+ Aktiviert und deaktiviert die ausgelastet Dialogfeld angezeigt wird, wenn die Nachricht ausstehende Verzögerung abläuft (finden Sie unter [SetRetryReply](#setretryreply)) während eines OLE-Aufrufs.  
   
 ```  
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
@@ -143,7 +143,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
  Gibt an, ob das Dialogfeld "ausgelastet" aktiviert oder deaktiviert ist.  
   
 ##  <a name="enablenotrespondingdialog"></a>COleMessageFilter::EnableNotRespondingDialog  
- Aktiviert und deaktiviert das Dialogfeld "nicht reagiert", der angezeigt wird, wenn eine Tastatur oder Maus Meldung ausstehend ist bei einer OLE-Aufruf und der Aufruf wurde überschritten.  
+ Aktiviert und deaktiviert das Dialogfeld "nicht aktiv", der angezeigt wird, wenn eine Nachricht Tastatur- oder Maustastenzustand ausstehend ist bei einer OLE Aufruf und durch das Timeout.  
   
 ```  
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
@@ -151,21 +151,21 @@ void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  *bEnableNotResponding*  
- Gibt an, ob das Dialogfeld "nicht reagiert" aktiviert oder deaktiviert ist.  
+ Gibt an, ob das Dialogfeld "nicht aktiv" aktiviert oder deaktiviert ist.  
   
 ##  <a name="endbusystate"></a>COleMessageFilter::EndBusyState  
- Rufen Sie diese Funktion, um den Status "beschäftigt" enden.  
+ Mit dieser Funktion können ausgelasteten Zustand zu beenden.  
   
 ```  
 virtual void EndBusyState();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Funktioniert in Kombination mit [BeginBusyState](#beginbusystate) zum Steuern der Anwendung ausgelastet. Die Funktion [SetBusyReply](#setbusyreply) Applikationen aufrufen, wird die Anwendung Antworten bestimmt.  
+ Funktioniert in Kombination mit [BeginBusyState](#beginbusystate) ausgelastet Anwendungsstatus zu steuern. Die Funktion [SetBusyReply](#setbusyreply) bestimmt die Anwendung Antworten an aufrufende Anwendungen aus, wenn sie stark ausgelastet ist.  
   
- Die `BeginBusyState` und `EndBusyState` Aufrufe Inkrementieren und Dekrementieren, jeweils einen Zähler, der bestimmt, ob die Anwendung ausgelastet ist. Zum Beispiel zwei Aufrufe von `BeginBusyState` und durch einen Aufruf von `EndBusyState` dennoch in einem ausgelasteten Zustand. Ausgelasteten Status Abbrechen erforderlich ist, aufzurufen `EndBusyState` die gleiche Anzahl `BeginBusyState` aufgerufen wurde.  
+ Die `BeginBusyState` und `EndBusyState` Aufrufe Inkrementieren und Dekrementieren, bzw. einen Leistungsindikator, der bestimmt, ob die Anwendung ausgelastet ist. Beispielsweise die beiden Aufrufe von `BeginBusyState` und ein Aufruf von `EndBusyState` bleibt in einem ausgelasteten Zustand. Ausgelasteten Zustand Abbrechen, es erforderlich ist, rufen Sie `EndBusyState` die gleiche Anzahl von Zeiten `BeginBusyState` aufgerufen wurde.  
   
- Standardmäßig trägt das Framework Status "beschäftigt" während der Verarbeitung im Leerlauf: durch erfolgt [OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Während die Anwendung verarbeitet `ON_UPDATE_COMMAND_UI` Benachrichtigungen, eingehende Anrufe werden nach Abschluss der Verarbeitung im Leerlauf behandelt.  
+ Wird standardmäßig das Framework wechselt in den ausgelastet Status während der leerlaufverarbeitung von ausgeführt wird [OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Während die Anwendung verarbeitet `ON_UPDATE_COMMAND_UI` Benachrichtigungen, eingehende Aufrufe werden verarbeitet, nachdem die leerlaufverarbeitung abgeschlossen ist.  
   
 ##  <a name="onmessagepending"></a>COleMessageFilter::OnMessagePending  
  Vom Framework zum Verarbeiten von Nachrichten aufgerufen, während ein OLE-Aufruf ausgeführt wird.  
@@ -182,12 +182,12 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
  Bei Erfolg ein Wert ungleich 0 (null), andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Bei einem Aufruf abgeschlossen werden, während eine aufrufende Anwendung gewartet wird, ruft das Framework `OnMessagePending` mit einem Zeiger auf die ausstehende Nachricht. Standardmäßig sendet das Framework `WM_PAINT` Nachrichten, sodass aktualisiert während eines Aufrufs auftreten können, die einen längeren Zeitraum benötigt wird.  
+ Wenn eine aufrufende Anwendung für einen Aufruf abgeschlossen werden, wartet das Framework ruft `OnMessagePending` mit einem Zeiger auf die ausstehende Nachricht. Standardmäßig sendet das Framework `WM_PAINT` Nachrichten verwenden, sodass Fenster Updates während eines Aufrufs auftreten können, die einen längeren Zeitraum benötigt wird.  
   
- Registrieren Sie Ihre Nachrichtenfilter durch einen Aufruf von [registrieren](#register) , bevor es aktiviert werden kann.  
+ Sie müssen Ihre Nachrichtenfilter registrieren, durch einen Aufruf von [registrieren](#register) , bevor es aktiviert werden kann.  
   
 ##  <a name="register"></a>COleMessageFilter::Register  
- Den Nachrichtenfilter registriert die OLE-System-DLLs.  
+ Den Nachrichtenfilter registriert OLE-System-DLLs.  
   
 ```  
 BOOL Register();
@@ -197,24 +197,24 @@ BOOL Register();
  Bei Erfolg ein Wert ungleich 0 (null), andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Meldungsfilter hat keine Auswirkung, es sei denn, sie für die System-DLLs registriert wurde. Initialisierungscode für Ihre Anwendung wird in der Regel Nachrichtenfilter für die Anwendung registriert. Alle anderen von der Anwendung registriert Nachrichtenfilter aufgehoben werden soll, bevor das Programm beendet, durch einen Aufruf von wird [Sperren](#revoke).  
+ Ein Nachrichtenfilter hat keine Auswirkungen, es sei denn, sie mit der System-DLLs registriert ist. Initialisierungscode für Ihre Anwendung wird in der Regel Nachrichtenfilter für die Anwendung registriert. Alle anderen von der Anwendung registriert Nachrichtenfilter aufgehoben werden soll, bevor das Programm beendet, durch den Aufruf von wird [widerrufen](#revoke).  
   
- Das Framework Standardfilter Nachricht wird automatisch während der Initialisierung registriert und bei Beendigung gesperrt.  
+ Das Framework standardmäßig Nachrichtenfilter wird automatisch während der Initialisierung registriert und bei Beendigung aufgehoben.  
   
 ##  <a name="revoke"></a>COleMessageFilter::Revoke  
- Widerruft eine vorherige Registrierung ausgeführt wird, durch einen Aufruf von [registrieren](#register).  
+ Hebt eine vorherige Registrierung durchgeführt, die durch einen Aufruf von [registrieren](#register).  
   
 ```  
 void Revoke();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Meldungsfilter sollte aufgehoben werden, bevor das Programm beendet wird.  
+ Ein Nachrichtenfilter sollte aufgehoben werden, bevor das Programm beendet wird.  
   
- Der Standardfilter für die Nachricht, die erstellt und automatisch vom Framework registriert, wird ebenfalls automatisch gesperrt.  
+ Der Standardfilter für die Nachricht, die erstellt und automatisch vom Framework registriert, wird außerdem automatisch gesperrt.  
   
 ##  <a name="setbusyreply"></a>COleMessageFilter::SetBusyReply  
- Diese Funktion legt die Anwendung "ausgelastet Antwort."  
+ Diese Funktion setzt die Anwendung "ausgelastet Reply."  
   
 ```  
 void SetBusyReply(SERVERCALL nBusyReply);
@@ -222,23 +222,23 @@ void SetBusyReply(SERVERCALL nBusyReply);
   
 ### <a name="parameters"></a>Parameter  
  *nBusyReply*  
- Ein Wert aus der `SERVERCALL` -Enumeration, die in der Datei COMPOBJ definiert ist. H. Einer der folgenden Werte sind möglich:  
+ Ein Wert aus der `SERVERCALL` -Enumeration, die in der Datei COMPOBJ definiert ist. H. Es kann eine der folgenden Werte aufweisen:  
   
-- **SERVERCALL_ISHANDLED** die Anwendung können Anrufe annehmen, aber bei der Verarbeitung eines bestimmten Aufrufs fehlschlagen.  
+- **SERVERCALL_ISHANDLED** die Anwendung können Aufrufe annehmen, aber möglicherweise ein Fehler bei der Verarbeitung eines bestimmten Aufrufs.  
   
-- **SERVERCALL_REJECTED** die Anwendung wahrscheinlich werden nie einen Aufruf zu verarbeiten.  
+- **SERVERCALL_REJECTED** die Anwendung wahrscheinlich werden nie einen Aufruf verarbeitet.  
   
-- **IOleMessageFilter.HandleIncomingCall** die Anwendung ist vorübergehend in einem Zustand in der sie einen Aufruf verarbeiten kann.  
+- **IOleMessageFilter.HandleIncomingCall** die Anwendung ist vorübergehend in einem Zustand in der sie einen Aufruf nicht verarbeiten kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Die [BeginBusyState](#beginbusystate) und [EndBusyState](#endbusystate) Funktionen steuern den Zustand der Anwendung ausgelastet.  
+ Die [BeginBusyState](#beginbusystate) und [EndBusyState](#endbusystate) Funktionen steuern die Anwendung ausgelastet.  
   
- Wenn eine Anwendung wurde mit einem Aufruf von ausgelasteten `BeginBusyState`, es reagiert auf Aufrufe von OLE-System-DLLs mit einem Wert, der durch die letzte Einstellung der `SetBusyReply`. Die aufrufende Anwendung verwendet diese ausgelastet Antwort, um welche Aktion zu bestimmen.  
+ Wenn eine Anwendung wurde mit einem Aufruf von ausgelasteten `BeginBusyState`, es reagiert auf Aufrufe von OLE-System-DLLs mit einem Wert, der bestimmt, indem die letzte Einstellung des `SetBusyReply`. Die aufrufende Anwendung verwendet diese Antwort ausgelastet, um zu bestimmen, welche Aktion.  
   
- Die Antwort ausgelastet ist standardmäßig **IOleMessageFilter.HandleIncomingCall**. Diese Antwort führt dazu, dass die aufrufende Anwendung den Aufruf so bald wie möglich zu wiederholen.  
+ Wird standardmäßig die ausgelastet Antwort **IOleMessageFilter.HandleIncomingCall**. Diese Antwort führt dazu, dass die aufrufende Anwendung den Aufruf so bald wie möglich erneut zu versuchen.  
   
 ##  <a name="setmessagependingdelay"></a>COleMessageFilter::SetMessagePendingDelay  
- Bestimmt, wie lange die aufrufende Anwendung auf eine Antwort von der Anwendung aufgerufen, bevor eine weitere Aktion wartet.  
+ Bestimmt, wie lange die aufrufende Anwendung auf eine Antwort aus der Anwendung aufgerufen, bevor eine weitere Aktion wartet.  
   
 ```  
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
@@ -246,13 +246,13 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
   
 ### <a name="parameters"></a>Parameter  
  `nTimeout`  
- Anzahl der Millisekunden für die Verzögerung Nachricht steht.  
+ Anzahl der Millisekunden für die Verzögerung Nachricht aussteht.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion arbeitet gemeinsam mit [SetRetryReply](#setretryreply).  
+ Diese Funktion funktioniert in Verbindung mit [SetRetryReply](#setretryreply).  
   
 ##  <a name="setretryreply"></a>COleMessageFilter::SetRetryReply  
- Bestimmt, die aufrufende Anwendung Aktion beim Empfang einer Antwort ausgelasteten aus einer Anwendung aufgerufen.  
+ Bestimmt, die aufrufende Anwendung-Aktion beim Empfang einer Antwort ausgelasteten aus einer Anwendung aufgerufen.  
   
 ```  
 void SetRetryReply(DWORD nRetryReply = 0);
@@ -263,17 +263,17 @@ void SetRetryReply(DWORD nRetryReply = 0);
  Anzahl der Millisekunden zwischen den Wiederholungsversuchen.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn eine sogenannte anwendungsbasierte gibt an, dass sie beschäftigt ist, kann die aufrufende Anwendung entscheiden, warten, bis der Server nicht mehr ausgelastet, um sofort zu wiederholen oder nach einem angegebenen Intervall wiederholt wird. Sie können auch den Aufruf abgebrochen.  
+ Wenn eine aufgerufene Anwendung gibt an, dass es ausgelastet ist, kann die aufrufende Anwendung entscheiden, zu warten, bis der Server nicht mehr ausgelastet, um einen Wiederholungsversuch sofort oder nach einem angegebenen Intervall wiederholt werden. Sie haben auch die Möglichkeit, den Aufruf vollständig abzubrechen.  
   
  Der Aufrufer Antwort wird gesteuert, indem die Funktionen `SetRetryReply` und [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply`Bestimmt, wie lange die aufrufende Anwendung zwischen den Wiederholungsversuchen für einen bestimmten Aufruf warten soll. `SetMessagePendingDelay`Bestimmt, wie lange die aufrufende Anwendung auf eine Antwort vom Server wartet, bevor eine weitere Aktion ausgeführt.  
   
- In der Regel die Standardwerte sind zulässig und müssen nicht geändert werden. Das Framework versucht, den Aufruf alle `nRetryReply` Millisekunden, bis der Aufruf über erfolgt oder die Nachricht ausstehende Verzögerung ist abgelaufen. Der Wert 0 für `nRetryReply` gibt eine sofortige Wiederholung und – 1 gibt Abbruch des Anrufs.  
+ In der Regel werden die Standardwerte sind zulässig und müssen nicht geändert werden. Das Framework versucht, den Aufruf jeder `nRetryReply` Millisekunden, bis der Aufruf durchläuft oder die Nachricht ausstehenden Verzögerung ist abgelaufen. Der Wert 0 für `nRetryReply` eine sofortige Wiederholung und -1 gibt an, Abbruch des Aufrufs angibt.  
   
- Wenn die Nachricht ausstehende Verzögerung abgelaufen ist, das OLE "ausgelastet Dialogfeld" (finden Sie unter [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) wird angezeigt, damit der Benutzer den Vorgang abbrechen oder wiederholen den Aufruf auswählen kann. Rufen Sie [EnableBusyDialog](#enablebusydialog) aktivieren oder deaktivieren das Dialogfeld zu öffnen.  
+ Wenn die Nachricht ausstehenden Verzögerung abgelaufen ist, das OLE "ausgelastet Dialogfeld" (finden Sie unter [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) wird angezeigt, sodass der Benutzer auswählen kann, auf "Abbrechen", oder wiederholen den Aufruf. Rufen Sie [EnableBusyDialog](#enablebusydialog) aktivieren oder deaktivieren das Dialogfeld zu öffnen.  
   
- Wenn eine Tastatur oder Maus Nachricht steht während eines Aufrufs und der Aufruf wurde überschritten (überschritten die Nachricht ausstehende Verzögerung), wird das Dialogfeld "nicht aktiv" angezeigt. Rufen Sie [EnableNotRespondingDialog](#enablenotrespondingdialog) aktivieren oder deaktivieren das Dialogfeld zu öffnen. Dieser Status Informationsquelle gibt normalerweise an, dass etwas schiefgelaufen ist der Benutzer ungeduldig abrufen.  
+ Wenn eine Nachricht Tastatur- oder Maustastenzustand steht während eines Aufrufs und der Aufruf wurde überschritten (überschritten die Nachricht ausstehende Verzögerung), wird das Dialogfeld "nicht aktiv" angezeigt. Rufen Sie [EnableNotRespondingDialog](#enablenotrespondingdialog) aktivieren oder deaktivieren das Dialogfeld zu öffnen. Dieser Status Informationsquelle gibt normalerweise an, dass etwas schiefgelaufen und ist der Benutzer ungeduldig abrufen.  
   
- Wenn die Dialogfelder deaktiviert sind, werden die aktuellen "erneut versuchen Antwort" immer für Aufrufe von ausgelasteten Applications verwendet.  
+ Wenn die Dialogfelder deaktiviert sind, werden die aktuelle "erneut versuchen, Antwort" immer für Aufrufe von ausgelasteten Anwendungen verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CCmdTarget-Klasse](../../mfc/reference/ccmdtarget-class.md)   
