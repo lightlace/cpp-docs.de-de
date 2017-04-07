@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTooltipManager
+- AFXTOOLTIPMANAGER/CTooltipManager
+- AFXTOOLTIPMANAGER/CTooltipManager::CreateToolTip
+- AFXTOOLTIPMANAGER/CTooltipManager::DeleteToolTip
+- AFXTOOLTIPMANAGER/CTooltipManager::SetTooltipParams
+- AFXTOOLTIPMANAGER/CTooltipManager::SetTooltipText
+- AFXTOOLTIPMANAGER/CTooltipManager::UpdateTooltips
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +77,7 @@ class CTooltipManager : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtooltipmanager.h  
   
-##  <a name="a-namecreatetooltipa--ctooltipmanagercreatetooltip"></a><a name="createtooltip"></a>CTooltipManager::CreateToolTip  
+##  <a name="createtooltip"></a>CTooltipManager::CreateToolTip  
  Erstellt ein QuickInfo-Steuerelement.  
   
 ```  
@@ -115,7 +121,7 @@ static BOOL CreateToolTip(
 |AFX_TOOLTIP_TYPE_TOOLBAR|Eine Symbolleiste.|CMFCToolBar CMFCPopupMenuBar|  
 |AFX_TOOLTIP_TYPE_TOOLBOX|Eine Toolbox.|Keine|  
   
-##  <a name="a-namedeletetooltipa--ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
+##  <a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
  Löscht ein QuickInfo-Steuerelement.  
   
 ```  
@@ -129,7 +135,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode für jede [CToolTipCtrl-Klasse](../../mfc/reference/ctooltipctrl-class.md) erstellte [CTooltipManager::CreateToolTip](#createtooltip). Das übergeordnete Steuerelement sollten diese Methode von Aufrufen der `OnDestroy` Handler. Dies ist erforderlich, die QuickInfo vom Framework ordnungsgemäß zu entfernen. Diese Methode legt `pToolTip` an `NULL` vor der Rückgabe.  
   
-##  <a name="a-namesettooltipparamsa--ctooltipmanagersettooltipparams"></a><a name="settooltipparams"></a>CTooltipManager::SetTooltipParams  
+##  <a name="settooltipparams"></a>CTooltipManager::SetTooltipParams  
  Passt die Darstellung des QuickInfo-Steuerelements für die angegebene Windows-Steuerelementtypen.  
   
 ```  
@@ -161,7 +167,7 @@ void SetTooltipParams(
   
  [!code-cpp[NVC_MFC_DrawClient&#11;](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]  
   
-##  <a name="a-namesettooltiptexta--ctooltipmanagersettooltiptext"></a><a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
+##  <a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
  Legt den Text und die Beschreibung für die QuickInfo.  
   
 ```  
@@ -192,7 +198,7 @@ static void SetTooltipText(
 ### <a name="remarks"></a>Hinweise  
  Der Wert der `nType` muss der gleiche Wert wie die `nType` Parameter der [CTooltipManager::CreateToolTip](#createtooltip) beim Erstellen der QuickInfos.  
   
-##  <a name="a-nameupdatetooltipsa--ctooltipmanagerupdatetooltips"></a><a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
+##  <a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CReversalTransition
 - CReversalTransition
+- AFXANIMATIONCONTROLLER/CReversalTransition
+- AFXANIMATIONCONTROLLER/CReversalTransition::CReversalTransition
+- AFXANIMATIONCONTROLLER/CReversalTransition::Create
+- AFXANIMATIONCONTROLLER/CReversalTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CReversalTransition : public CBaseTransition;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxanimationcontroller.h  
   
-##  <a name="a-namecreatea--creversaltransitioncreate"></a><a name="create"></a>CReversalTransition::Create  
+##  <a name="create"></a>CReversalTransition::Create  
  Ruft die Übergangsbibliothek um gekapselte COM-Übergangsobjekt zu erstellen.  
   
 ```  
@@ -98,7 +101,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Übergang erfolgreich erstellt wird. andernfalls FALSE.  
   
-##  <a name="a-namecreversaltransitiona--creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
+##  <a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
  Erstellt ein Objekt der Umkehrung Übergang und initialisiert seine Dauer.  
   
 ```  
@@ -109,7 +112,7 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
  `duration`  
  Die Dauer des Übergangs.  
   
-##  <a name="a-namemdurationa--creversaltransitionmduration"></a><a name="m_duration"></a>CReversalTransition::m_duration  
+##  <a name="m_duration"></a>CReversalTransition::m_duration  
  Die Dauer des Übergangs.  
   
 ```  

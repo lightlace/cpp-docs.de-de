@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CUserToolsManager
+- AFXUSERTOOLSMANAGER/CUserToolsManager
+- AFXUSERTOOLSMANAGER/CUserToolsManager::CUserToolsManager
+- AFXUSERTOOLSMANAGER/CUserToolsManager::CreateNewTool
+- AFXUSERTOOLSMANAGER/CUserToolsManager::FindTool
+- AFXUSERTOOLSMANAGER/CUserToolsManager::GetArgumentsMenuID
+- AFXUSERTOOLSMANAGER/CUserToolsManager::GetDefExt
+- AFXUSERTOOLSMANAGER/CUserToolsManager::GetFilter
+- AFXUSERTOOLSMANAGER/CUserToolsManager::GetInitialDirMenuID
+- AFXUSERTOOLSMANAGER/CUserToolsManager::GetMaxTools
+- AFXUSERTOOLSMANAGER/CUserToolsManager::GetToolsEntryCmd
+- AFXUSERTOOLSMANAGER/CUserToolsManager::GetUserTools
+- AFXUSERTOOLSMANAGER/CUserToolsManager::InvokeTool
+- AFXUSERTOOLSMANAGER/CUserToolsManager::IsUserToolCmd
+- AFXUSERTOOLSMANAGER/CUserToolsManager::LoadState
+- AFXUSERTOOLSMANAGER/CUserToolsManager::MoveToolDown
+- AFXUSERTOOLSMANAGER/CUserToolsManager::MoveToolUp
+- AFXUSERTOOLSMANAGER/CUserToolsManager::RemoveTool
+- AFXUSERTOOLSMANAGER/CUserToolsManager::SaveState
+- AFXUSERTOOLSMANAGER/CUserToolsManager::SetDefExt
+- AFXUSERTOOLSMANAGER/CUserToolsManager::SetFilter
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +125,7 @@ class CUserToolsManager : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxusertoolsmanager.h  
   
-##  <a name="a-namecreatenewtoola--cusertoolsmanagercreatenewtool"></a><a name="createnewtool"></a>CUserToolsManager::CreateNewTool  
+##  <a name="createnewtool"></a>CUserToolsManager::CreateNewTool  
  Erstellt ein neues Tool.  
   
 ```  
@@ -120,7 +140,7 @@ CUserTool* CreateNewTool();
   
  Die Methode schlägt fehl, wenn die Anzahl der Tools das Maximum erreicht hat. Dies tritt auf, wenn alle Befehls-IDs innerhalb des Bereichs Benutzertools zugeordnet sind. Sie können die maximale Anzahl von Tools abrufen, durch Aufrufen von [CUserToolsManager::GetMaxTools](#getmaxtools). Sie erhalten Zugriff auf die Liste der Tools durch Aufrufen der [CUserToolsManager::GetUserTools](#getusertools) Methode.  
   
-##  <a name="a-namecusertoolsmanagera--cusertoolsmanagercusertoolsmanager"></a><a name="cusertoolsmanager"></a>CUserToolsManager::CUserToolsManager  
+##  <a name="cusertoolsmanager"></a>CUserToolsManager::CUserToolsManager  
  Erstellt ein Objekt vom Typ `CUserToolsManager`. Jede Anwendung muss höchstens einen Benutzer Tools Manager haben.  
   
 ```  
@@ -158,7 +178,7 @@ CUserToolsManager(
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diesen Konstruktor nicht. Rufen Sie stattdessen [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) , Benutzertools aktivieren, und rufen [CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager) ein Zeiger auf die `CUserToolsManager`. Weitere Informationen finden Sie unter [benutzerdefinierte Tools](../../mfc/user-defined-tools.md).  
   
-##  <a name="a-namefindtoola--cusertoolsmanagerfindtool"></a><a name="findtool"></a>CUserToolsManager::FindTool  
+##  <a name="findtool"></a>CUserToolsManager::FindTool  
  Gibt den Zeiger auf die [CUserTool Klasse](../../mfc/reference/cusertool-class.md) -Objekt, das eine angegebene Befehls-ID zugeordnet ist  
   
 ```  
@@ -175,7 +195,7 @@ CUserTool* FindTool(UINT uiCmdId) const;
 ### <a name="remarks"></a>Hinweise  
  Wenn `FindTool` ist erfolgreich, der zurückgegebene Typ entspricht der Typ des der `pToolRTC` Parameter [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
-##  <a name="a-namegetargumentsmenuida--cusertoolsmanagergetargumentsmenuid"></a><a name="getargumentsmenuid"></a>CUserToolsManager::GetArgumentsMenuID  
+##  <a name="getargumentsmenuid"></a>CUserToolsManager::GetArgumentsMenuID  
  Gibt die Ressourcen-ID, die zugeordnet ist die **Argumente** Menü auf die **Tools** auf der Registerkarte der **anpassen** Dialogfeld.  
   
 ```  
@@ -188,7 +208,7 @@ UINT GetArgumentsMenuID() const;
 ### <a name="remarks"></a>Hinweise  
  Die `uArgMenuID` Parameter der [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) gibt die ID der Ressource.  
   
-##  <a name="a-namegetdefexta--cusertoolsmanagergetdefext"></a><a name="getdefext"></a>CUserToolsManager::GetDefExt  
+##  <a name="getdefext"></a>CUserToolsManager::GetDefExt  
  Gibt die standarderweiterung, die die **Datei öffnen** (Dialogfeld) ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) verwendet die **Befehl** Feld der **Tools** auf der Registerkarte der **anpassen** (Dialogfeld).  
   
 ```  
@@ -198,7 +218,7 @@ const CString& GetDefExt() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf die `CString` -Objekt, das die Erweiterung enthält.  
   
-##  <a name="a-namegetfiltera--cusertoolsmanagergetfilter"></a><a name="getfilter"></a>CUserToolsManager::GetFilter  
+##  <a name="getfilter"></a>CUserToolsManager::GetFilter  
  Gibt den Dateifilter zurück, die die **Datei öffnen** (Dialogfeld) ( [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md)) verwendet in der **Befehl** Feld der **Tools** auf der Registerkarte der **anpassen** (Dialogfeld).  
   
 ```  
@@ -208,7 +228,7 @@ const CString& GetFilter() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf die `CString` -Objekt, das den Filter enthält.  
   
-##  <a name="a-namegetinitialdirmenuida--cusertoolsmanagergetinitialdirmenuid"></a><a name="getinitialdirmenuid"></a>CUserToolsManager::GetInitialDirMenuID  
+##  <a name="getinitialdirmenuid"></a>CUserToolsManager::GetInitialDirMenuID  
  Gibt die Ressourcen-ID, die zugeordnet ist die **Ausgangsverzeichnis** Menü auf die **Tools** auf der Registerkarte der **anpassen** Dialogfeld.  
   
 ```  
@@ -221,7 +241,7 @@ UINT GetInitialDirMenuID() const;
 ### <a name="remarks"></a>Hinweise  
  Die zurückgegebene ID wird angegeben, der `uInitDirMenuID` Parameter der [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
-##  <a name="a-namegetmaxtoolsa--cusertoolsmanagergetmaxtools"></a><a name="getmaxtools"></a>CUserToolsManager::GetMaxTools  
+##  <a name="getmaxtools"></a>CUserToolsManager::GetMaxTools  
  Gibt die maximale Anzahl von Benutzertools, die zugeordnet werden können in der Anwendung zurück.  
   
 ```  
@@ -234,7 +254,7 @@ int GetMaxTools() const;
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die maximale Anzahl von Tools abrufen, die in der Anwendung zugeordnet werden kann. Diese Zahl ist die Anzahl von IDs im Bereich von der `uiCmdFirst` über die `uiCmdLast` Parameter, die an übergeben [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
-##  <a name="a-namegettoolsentrycmda--cusertoolsmanagergettoolsentrycmd"></a><a name="gettoolsentrycmd"></a>CUserToolsManager::GetToolsEntryCmd  
+##  <a name="gettoolsentrycmd"></a>CUserToolsManager::GetToolsEntryCmd  
  Gibt die Befehls-ID des Menü Elementplatzhalters für Benutzertools zurück.  
   
 ```  
@@ -247,7 +267,7 @@ UINT GetToolsEntryCmd() const;
 ### <a name="remarks"></a>Hinweise  
  Um Benutzertools, rufen Sie [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). Die `uiCmdToolsDummy` Parameter gibt die Befehls-ID des Befehls Eintrag Tools. Diese Methode gibt die Tools Eintrag Befehls-ID. Wo diese ID in einem Menü verwendet wird, wird sie durch die Liste der Benutzertools ersetzt, wenn das Menü angezeigt wird.  
   
-##  <a name="a-namegetusertoolsa--cusertoolsmanagergetusertools"></a><a name="getusertools"></a>CUserToolsManager::GetUserTools  
+##  <a name="getusertools"></a>CUserToolsManager::GetUserTools  
  Gibt einen Verweis auf die Liste der Benutzertools zurück.  
   
 ```  
@@ -260,7 +280,7 @@ const CObList& GetUserTools() const;
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Abrufen einer Liste von tools, die [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) -Objekt verwaltet. Jedes Tool, das durch ein Objekt des Typs dargestellt wird [CUserTool Klasse](../../mfc/reference/cusertool-class.md) oder einen abgeleiteten Typ von `CUserTool`. Der Typ wird angegeben, indem die `pToolRTC` -Parameter beim Aufrufen [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) Benutzertools aktivieren.  
   
-##  <a name="a-nameinvoketoola--cusertoolsmanagerinvoketool"></a><a name="invoketool"></a>CUserToolsManager::InvokeTool  
+##  <a name="invoketool"></a>CUserToolsManager::InvokeTool  
  Führt eine Anwendung gehörenden Benutzer, die eine angegebene ID verfügt.  
   
 ```  
@@ -277,7 +297,7 @@ BOOL InvokeTool(UINT uiCmdId);
 ### <a name="remarks"></a>Hinweise  
  Aufruf dieser Methode ausführen eine Anwendung, die dem Benutzer zugeordneten tool, hat die Befehls-ID, die durch angegebene `uiCmdId`.  
   
-##  <a name="a-nameisusertoolcmda--cusertoolsmanagerisusertoolcmd"></a><a name="isusertoolcmd"></a>CUserToolsManager::IsUserToolCmd  
+##  <a name="isusertoolcmd"></a>CUserToolsManager::IsUserToolCmd  
  Bestimmt, ob eine Befehls-ID ein Tool zugeordnet ist.  
   
 ```  
@@ -294,7 +314,7 @@ BOOL IsUserToolCmd(UINT uiCmdId) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode überprüft, ob die angegebene Befehls-ID in der Befehls-ID-Bereich. Wenn Sie aufrufen, geben Sie den Bereich [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) Benutzertools aktivieren.  
   
-##  <a name="a-nameloadstatea--cusertoolsmanagerloadstate"></a><a name="loadstate"></a>CUserToolsManager::LoadState  
+##  <a name="loadstate"></a>CUserToolsManager::LoadState  
  Lädt Informationen über Benutzertools in der Windows-Registrierung.  
   
 ```  
@@ -313,7 +333,7 @@ BOOL LoadState(LPCTSTR lpszProfileName=NULL);
   
  In der Regel wird diese Methode nicht direkt aufrufen. [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) wird als Teil des Arbeitsbereichs Initialisierungsprozess aufgerufen.  
   
-##  <a name="a-namemovetooldowna--cusertoolsmanagermovetooldown"></a><a name="movetooldown"></a>CUserToolsManager::MoveToolDown  
+##  <a name="movetooldown"></a>CUserToolsManager::MoveToolDown  
  Verschiebt die angegebene Benutzer-Tool in der Liste der Benutzer.  
   
 ```  
@@ -330,7 +350,7 @@ BOOL MoveToolDown(CUserTool* pTool);
 ### <a name="remarks"></a>Hinweise  
  Die Methode schlägt fehl, wenn das Tool, das `pTool` gibt ist nicht in der internen Liste oder das Tool in der Liste an letzter Stelle ist.  
   
-##  <a name="a-namemovetoolupa--cusertoolsmanagermovetoolup"></a><a name="movetoolup"></a>CUserToolsManager::MoveToolUp  
+##  <a name="movetoolup"></a>CUserToolsManager::MoveToolUp  
  Verschiebt die angegebene Benutzer-Tool in der Liste der Benutzer.  
   
 ```  
@@ -347,7 +367,7 @@ BOOL MoveToolUp(CUserTool* pTool);
 ### <a name="remarks"></a>Hinweise  
  Die Methode schlägt fehl, wenn das Tool, das `pTool` Parameter gibt, ist nicht in der internen Liste oder das Tool das erste Tool-Element in der Liste ist.  
   
-##  <a name="a-nameremovetoola--cusertoolsmanagerremovetool"></a><a name="removetool"></a>CUserToolsManager::RemoveTool  
+##  <a name="removetool"></a>CUserToolsManager::RemoveTool  
  Entfernt das Tool für die angegebenen Benutzer aus der Anwendung.  
   
 ```  
@@ -364,7 +384,7 @@ BOOL RemoveTool(CUserTool* pTool);
 ### <a name="remarks"></a>Hinweise  
  Wenn das Tool erfolgreich entfernt wurde, wird diese Methode löscht `pTool`.  
   
-##  <a name="a-namesavestatea--cusertoolsmanagersavestate"></a><a name="savestate"></a>CUserToolsManager::SaveState  
+##  <a name="savestate"></a>CUserToolsManager::SaveState  
  Informationen über Benutzertools in der Windows-Registrierung gespeichert.  
   
 ```  
@@ -383,7 +403,7 @@ BOOL SaveState(LPCTSTR lpszProfileName=NULL);
   
  In der Regel, Sie müssen nicht direkt aufrufen dieser Methode [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate) wird automatisch als Teil des Serialisierungsprozesses Arbeitsbereich der Anwendung aufgerufen.  
   
-##  <a name="a-namesetdefexta--cusertoolsmanagersetdefext"></a><a name="setdefext"></a>CUserToolsManager::SetDefExt  
+##  <a name="setdefext"></a>CUserToolsManager::SetDefExt  
  Gibt die standarderweiterung, die **Datei öffnen** (Dialogfeld) ( [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md)) verwendet in der **Befehl** Feld der **Tools** auf der Registerkarte der **anpassen** Dialogfeld.  
   
 ```  
@@ -397,7 +417,7 @@ void SetDefExt(const CString& strDefExt);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Angeben der standardmäßige Erweiterung in der **Datei öffnen** im Dialogfeld angezeigt wird, bei der Auswahl einer Anwendung, die mit dem benutzertool zugeordnet. Der Standardwert ist "Exe".  
   
-##  <a name="a-namesetfiltera--cusertoolsmanagersetfilter"></a><a name="setfilter"></a>CUserToolsManager::SetFilter  
+##  <a name="setfilter"></a>CUserToolsManager::SetFilter  
  Gibt an, die Datei zu filtern, die die **Datei öffnen** (Dialogfeld) ( [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md)) verwendet in der **Befehl** Feld der **Tools** auf der Registerkarte der **anpassen** Dialogfeld.  
   
 ```  

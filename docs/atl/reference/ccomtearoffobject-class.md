@@ -9,11 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComTearOffObject<Base>
-- ATL::CComTearOffObject
-- ATL.CComTearOffObject
-- ATL.CComTearOffObject<Base>
 - CComTearOffObject
+- ATLCOM/ATL::CComTearOffObject
+- ATLCOM/ATL::CComTearOffObject::CComTearOffObject
+- ATLCOM/ATL::CComTearOffObject::AddRef
+- ATLCOM/ATL::CComTearOffObject::QueryInterface
+- ATLCOM/ATL::CComTearOffObject::Release
+- ATLCOM/ATL::CComTearOffObjectBase
+- ATLCOM/ATL::m_pOwner
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +112,7 @@ class CComTearOffObject : public Base
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
   
-##  <a name="a-nameaddrefa--ccomtearoffobjectaddref"></a><a name="addref"></a>CComTearOffObject::AddRef  
+##  <a name="addref"></a>CComTearOffObject::AddRef  
  Inkrementiert den Verweiszähler des dem `CComTearOffObject` von einem Objekt.  
   
 ```
@@ -119,7 +122,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der möglicherweise hilfreich für die Diagnose und testen.  
   
-##  <a name="a-nameccomtearoffobjecta--ccomtearoffobjectccomtearoffobject"></a><a name="ccomtearoffobject"></a>CComTearOffObject::CComTearOffObject  
+##  <a name="ccomtearoffobject"></a>CComTearOffObject::CComTearOffObject  
  Der Konstruktor.  
   
 ```
@@ -133,7 +136,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>Hinweise  
  Der Besitzer Verweiszähler inkrementiert um eins.  
   
-##  <a name="a-namedtora--ccomtearoffobjectccomtearoffobject"></a><a name="dtor"></a>CComTearOffObject:: ~ CComTearOffObject  
+##  <a name="dtor"></a>CComTearOffObject:: ~ CComTearOffObject  
  Der Destruktor.  
   
 ```
@@ -143,7 +146,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>Hinweise  
  Gibt alle zugeordnete Ressourcen frei, ruft FinalRelease und verringert das Modul lock-Anzahl.  
   
-##  <a name="a-nameccomtearoffobjectbasea--ccomtearoffobjectccomtearoffobjectbase"></a><a name="ccomtearoffobjectbase"></a>CComTearOffObject::CComTearOffObjectBase  
+##  <a name="ccomtearoffobjectbase"></a>CComTearOffObject::CComTearOffObjectBase  
  Der Konstruktor.  
   
 ```
@@ -153,7 +156,7 @@ CComTearOffObjectBase();
 ### <a name="remarks"></a>Hinweise  
  Initialisiert die [M_pOwner](#m_powner) Element **NULL**.  
   
-##  <a name="a-namempownera--ccomtearoffobjectmpowner"></a><a name="m_powner"></a>CComTearOffObject::m_pOwner  
+##  <a name="m_powner"></a>CComTearOffObject::m_pOwner  
  Ein Zeiger auf eine [CComObject](../../atl/reference/ccomobject-class.md) von abgeleitetes Objekt *Besitzer*.  
   
 ```
@@ -167,7 +170,7 @@ CComObject<Owner>* m_pOwner;
 ### <a name="remarks"></a>Hinweise  
  Der Zeiger wird initialisiert, um **NULL** während der Erstellung.  
   
-##  <a name="a-namequeryinterfacea--ccomtearoffobjectqueryinterface"></a><a name="queryinterface"></a>CComTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>CComTearOffObject::QueryInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
   
 ```
@@ -187,7 +190,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>Hinweise  
  Abfragen für Ihre Klasse abtrennbare Schnittstellen. Wenn die Schnittstelle nicht vorhanden ist, Abfragen für die Schnittstelle in dem Objekt. Wenn die angeforderte Schnittstelle wird **IUnknown**, gibt der **IUnknown** des Besitzers.  
   
-##  <a name="a-namereleasea--ccomtearoffobjectrelease"></a><a name="release"></a>CComTearOffObject::Release  
+##  <a name="release"></a>CComTearOffObject::Release  
  Dekrementiert den Verweiszähler um eins und, wenn der Verweiszähler&0; (null) ist, löscht die `CComTearOffObject`.  
   
 ```

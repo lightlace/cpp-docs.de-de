@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CCustomTransition
 - CCustomTransition
+- AFXANIMATIONCONTROLLER/CCustomTransition
+- AFXANIMATIONCONTROLLER/CCustomTransition::CCustomTransition
+- AFXANIMATIONCONTROLLER/CCustomTransition::Create
+- AFXANIMATIONCONTROLLER/CCustomTransition::SetInitialValue
+- AFXANIMATIONCONTROLLER/CCustomTransition::SetInitialVelocity
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_bInitialValueSpecified
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_bInitialVelocitySpecified
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_initialValue
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_initialVelocity
+- AFXANIMATIONCONTROLLER/CCustomTransition::m_pInterpolator
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +97,7 @@ class CCustomTransition : public CBaseTransition;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxanimationcontroller.h  
   
-##  <a name="a-nameccustomtransitiona--ccustomtransitionccustomtransition"></a><a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
+##  <a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
  Erstellt einen benutzerdefinierten Übergang-Objekt.  
   
 ```  
@@ -99,7 +108,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  Ein Zeiger auf benutzerdefinierten Interpolator.  
   
-##  <a name="a-namecreatea--ccustomtransitioncreate"></a><a name="create"></a>CCustomTransition::Create  
+##  <a name="create"></a>CCustomTransition::Create  
  Ruft die Übergangsbibliothek um gekapselte COM-Übergangsobjekt zu erstellen.  
   
 ```  
@@ -117,42 +126,42 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kann auch festgelegt werden, Anfangswert und die ursprüngliche Geschwindigkeit auf eine Animationsvariable angewendet werden, die diesem Übergang zugeordnet ist. Zu diesem Zweck müssen Sie SetInitialValue und SetInitialVelocity aufrufen, bevor das Framework das gekapselte Übergang COM-Objekt erstellt (es erfolgt, wenn Sie CAnimationController:: AnimateGroup aufrufen).  
   
-##  <a name="a-namembinitialvaluespecifieda--ccustomtransitionmbinitialvaluespecified"></a><a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
+##  <a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
  Gibt an, ob der Anfangswert mit SetInitialValue angegeben wurde.  
   
 ```  
 BOOL m_bInitialValueSpecified;  
 ```  
   
-##  <a name="a-namembinitialvelocityspecifieda--ccustomtransitionmbinitialvelocityspecified"></a><a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified  
+##  <a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified  
  Gibt an, ob die ursprüngliche Geschwindigkeit mit SetInitialVelocity angegeben wurde.  
   
 ```  
 BOOL m_bInitialVelocitySpecified;  
 ```  
   
-##  <a name="a-nameminitialvaluea--ccustomtransitionminitialvalue"></a><a name="m_initialvalue"></a>CCustomTransition::m_initialValue  
+##  <a name="m_initialvalue"></a>CCustomTransition::m_initialValue  
  Speichert den ursprünglichen Wert.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="a-nameminitialvelocitya--ccustomtransitionminitialvelocity"></a><a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity  
+##  <a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity  
  Speichert die ursprüngliche Geschwindigkeit.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="a-namempinterpolatora--ccustomtransitionmpinterpolator"></a><a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator  
+##  <a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator  
  Speichert einen Zeiger auf einen benutzerdefinierten Interpolator.  
   
 ```  
 CCustomInterpolator* m_pInterpolator;  
 ```  
   
-##  <a name="a-namesetinitialvaluea--ccustomtransitionsetinitialvalue"></a><a name="setinitialvalue"></a>CCustomTransition::SetInitialValue  
+##  <a name="setinitialvalue"></a>CCustomTransition::SetInitialValue  
  Legt einen anfänglichen Wert, die auf eine diesem Übergang zugeordnete Animationsvariable angewendet werden.  
   
 ```  
@@ -162,7 +171,7 @@ void SetInitialValue(DOUBLE initialValue);
 ### <a name="parameters"></a>Parameter  
  `initialValue`  
   
-##  <a name="a-namesetinitialvelocitya--ccustomtransitionsetinitialvelocity"></a><a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity  
+##  <a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity  
  Legt eine ursprüngliche Geschwindigkeit, die auf eine diesem Übergang zugeordnete Animationsvariable angewendet werden.  
   
 ```  

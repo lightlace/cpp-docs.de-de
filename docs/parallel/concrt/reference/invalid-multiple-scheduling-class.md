@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_multiple_scheduling
+- invalid_multiple_scheduling
+- CONCRT/concurrency::invalid_multiple_scheduling
+- CONCRT/concurrency::invalid_multiple_scheduling::invalid_multiple_scheduling
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 762648e65a7fcbda29daf31412e42bbd0e63f3d6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 82f1046173ba1f2eebfc74e1121b01ba0ed46b04
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling-Klasse
@@ -54,7 +56,7 @@ class invalid_multiple_scheduling : public std::exception;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Invalid_multiple_scheduling-Konstruktor](#ctor)|Überladen. Erstellt ein `invalid_multiple_scheduling`-Objekt.|  
+|[invalid_multiple_scheduling](#ctor)|Überladen. Erstellt ein `invalid_multiple_scheduling`-Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `exception`  
@@ -66,7 +68,7 @@ class invalid_multiple_scheduling : public std::exception;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namectora-invalidmultiplescheduling"></a><a name="ctor"></a>invalid_multiple_scheduling 
+##  <a name="ctor"></a>invalid_multiple_scheduling 
 
  Erstellt ein `invalid_multiple_scheduling`-Objekt.  
   
@@ -84,8 +86,8 @@ invalid_multiple_scheduling() throw();
  [Concurrency-Namespace](concurrency-namespace.md)   
  [Task_handle-Klasse](task-handle-class.md)   
  [Task_group-Klasse](task-group-class.md)   
- [Run-Methode](task-group-class.md)   
- [Wait-Methode](task-group-class.md)   
- [Run_and_wait-Methode](task-group-class.md)   
- [Structured_task_group-Klasse](structured-task-group-class.md)
+ [Ausführen](task-group-class.md)   
+ [Warte](task-group-class.md)   
+ [run_and_wait](task-group-class.md)   
+ [structured_task_group-Klasse](structured-task-group-class.md)
 

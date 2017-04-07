@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoRevertImpersonation
 - CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation::CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation::Attach
+- ATLSECURITY/ATL::CAutoRevertImpersonation::Detach
+- ATLSECURITY/ATL::CAutoRevertImpersonation::GetAccessToken
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +80,7 @@ class CAutoRevertImpersonation
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
   
-##  <a name="a-nameattacha--cautorevertimpersonationattach"></a><a name="attach"></a>CAutoRevertImpersonation::Attach  
+##  <a name="attach"></a>CAutoRevertImpersonation::Attach  
  Automatisiert den Identitätswechsel Zurücksetzen eines Zugriffstokens.  
   
 ```
@@ -90,7 +94,7 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sollte nur verwendet werden, wenn die [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) Objekt erstellt wurde, mit einer NULL- `CAccessToken` -Zeiger ist, oder wenn [trennen](#detach) zuvor aufgerufen wurde. In einfachen Fällen ist es nicht erforderlich, diese Methode zu verwenden.  
   
-##  <a name="a-namecautorevertimpersonationa--cautorevertimpersonationcautorevertimpersonation"></a><a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
+##  <a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
  Erstellt ein `CAutoRevertImpersonation`-Objekt.  
   
 ```
@@ -104,7 +108,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Hinweise  
  Der aktuelle Identitätswechsel des Zugriffstokens sollten separat ausgeführt werden, von und vorzugsweise vor dem Erstellen des ein `CAutoRevertImpersonation` Objekt. Dieser Identitätswechsel wird zurückgesetzt werden automatisch bei der `CAutoRevertImpersonation` -Objekt den Gültigkeitsbereich verlässt.  
   
-##  <a name="a-namedtora--cautorevertimpersonationcautorevertimpersonation"></a><a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
+##  <a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
  Das Objekt zerstört und Access token Identitätswechsel zurückgesetzt.  
   
 ```
@@ -114,7 +118,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Hinweise  
  Zurückgesetzt jeder Identitätswechsel, der derzeit für die [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt bei der Konstruktion oder über die [Anfügen](#attach) Methode. Wenn kein `CAccessToken` ist verknüpft, der Destruktor hat keine Auswirkung.  
   
-##  <a name="a-namedetacha--cautorevertimpersonationdetach"></a><a name="detach"></a>CAutoRevertImpersonation::Detach  
+##  <a name="detach"></a>CAutoRevertImpersonation::Detach  
  Bricht den automatischen Identitätswechsel zurücksetzen.  
   
 ```
@@ -127,7 +131,7 @@ const CAccessToken* Detach() throw();
 ### <a name="remarks"></a>Hinweise  
  Aufrufen **trennen** verhindert, dass die `CAutoRevertImpersonation` Objekt aus Wiederherstellen jeder Identitätswechsel, der derzeit für die [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt, das mit diesem Objekt zugeordnet. `CAutoRevertImpersonation`keine Auswirkung zerstört oder auf demselben oder einem anderen neu zugeordnet werden können `CAccessToken` -Objekt unter Verwendung der [Anfügen](#attach).  
   
-##  <a name="a-namegetaccesstokena--cautorevertimpersonationgetaccesstoken"></a><a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
+##  <a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
  Ruft die diesem Objekt zugeordneten aktuellen Access token ab.  
   
 ```

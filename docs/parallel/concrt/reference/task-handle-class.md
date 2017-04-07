@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::task_handle
+- task_handle
+- PPL/concurrency::task_handle
+- PPL/concurrency::task_handle::task_handle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b113cf519f4326650dc1ed4d20dd2ed00921eda9
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 0fef1ef7b1c02287a0113eb80be413e4a17dc1a4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskhandle-class"></a>task_handle-Klasse
@@ -61,14 +63,14 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Task_handle-Konstruktor](#ctor)|Erstellt ein neues `task_handle`-Objekt. Die Arbeit der Aufgabe wird ausgeführt, durch den Aufruf der Funktion, die als Parameter an den Konstruktor angegeben.|  
+|[task_handle](#ctor)|Erstellt ein neues `task_handle`-Objekt. Die Arbeit der Aufgabe wird ausgeführt, durch den Aufruf der Funktion, die als Parameter an den Konstruktor angegeben.|  
 |[~ Task_handle-Destruktor](#dtor)|Zerstört das `task_handle`-Objekt.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Operator()-Operator](#task_handle__operator_call)|Der Funktionsaufrufoperator, den von der Laufzeit aufgerufen, um die Arbeit des Aufgabenhandles auszuführen.|  
+|[Operator()](#task_handle__operator_call)|Der Funktionsaufrufoperator, den von der Laufzeit aufgerufen, um die Arbeit des Aufgabenhandles auszuführen.|  
   
 ## <a name="remarks"></a>Hinweise  
  `task_handle`Objekte können verwendet werden, zusammen mit einem `structured_task_group` oder eine allgemeinere `task_group` -Objekt, um die Arbeit in Parallele Aufgaben aufzuteilen. Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
@@ -87,7 +89,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-nametaskhandleoperatorcalla-operator"></a><a name="task_handle__operator_call"></a>Operator() 
+##  <a name="task_handle__operator_call"></a>Operator() 
 
  Der Funktionsaufrufoperator, den von der Laufzeit aufgerufen, um die Arbeit des Aufgabenhandles auszuführen.  
   
@@ -97,7 +99,7 @@ void operator()() const;
  
 ```  
   
-##  <a name="a-nametaskhandlectora-taskhandle"></a><a name="task_handle__ctor"></a>task_handle 
+##  <a name="task_handle__ctor"></a>task_handle 
 
  Erstellt ein neues `task_handle`-Objekt. Die Arbeit der Aufgabe wird ausgeführt, durch den Aufruf der Funktion, die als Parameter an den Konstruktor angegeben.  
   
@@ -112,7 +114,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>Hinweise  
  Die Common Language Runtime erstellt eine Kopie der Arbeitsfunktion, die an den Konstruktor übergeben. Übergeben Sie daher alle Zustandsänderungen, die in einer Funktion auftreten Objekt ein `task_handle` Objekt wird nicht in der Kopie dieses Funktionsobjekts angezeigt.  
   
-##  <a name="a-namedtora-taskhandle"></a><a name="dtor"></a>~ Task_handle 
+##  <a name="dtor"></a>~ Task_handle 
 
  Zerstört das `task_handle`-Objekt.  
   
@@ -123,5 +125,5 @@ task_handle(const _Function& _Func);
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
  [Task_group-Klasse](task-group-class.md)   
- [Structured_task_group-Klasse](structured-task-group-class.md)
+ [structured_task_group-Klasse](structured-task-group-class.md)
 

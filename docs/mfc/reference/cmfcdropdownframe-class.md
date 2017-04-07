@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::Create
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentMenuBar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentPopupMenu
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::RecalcLayout
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::SetAutoDestroy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +103,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdropdowntoolbar.h  
   
-##  <a name="a-namecreatea--cmfcdropdownframecreate"></a><a name="create"></a>CMFCDropDownFrame::Create  
+##  <a name="create"></a>CMFCDropDownFrame::Create  
  Erstellt ein `CMFCDropDownFrame`-Objekt.  
   
 ```  
@@ -126,7 +132,7 @@ virtual BOOL Create(
   
  Die `CMFCDropDownFrame` Klasse erstellt eine Kopie des bereitgestellten `CMFCDropDownToolBar` Parameter. Diese Methode kopiert die Bilder und der Schaltflächenstatus aus der `pWndOriginToolbar` Parameter, um den `m_pWndOriginToolbar` -Datenmember.  
   
-##  <a name="a-namegetparentmenubara--cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
  Ruft die übergeordnete Menüleiste des Dropdown-Frames ab.  
   
 ```  
@@ -139,7 +145,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft die übergeordnete Menüleiste in der übergeordneten Schaltfläche. Diese Methode gibt `NULL` Wenn der Dropdown-Rahmen keine übergeordnete Schaltfläche enthält oder die übergeordnete Schaltfläche keine übergeordnete Menüleiste besitzt.  
   
-##  <a name="a-namegetparentpopupmenua--cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
  Ruft die übergeordnete im Popupmenü des Dropdown-Frames ab.  
   
 ```  
@@ -152,7 +158,7 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft im übergeordneten Menü ab, in der übergeordneten-Schaltfläche. Diese Methode gibt `NULL` Dropdown-Frames verfügt über keine übergeordneten Schaltfläche oder die Schaltfläche "übergeordnete" verfügt über keine übergeordneten Menü.  
   
-##  <a name="a-namerecalclayouta--cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
  Verschiebt den Dropdown-Frame.  
   
 ```  
@@ -169,7 +175,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode auf, wenn der Dropdown-Frame erstellt wird, oder wird die Größe des übergeordneten Fensters geändert. Diese Methode berechnet die Position und Größe des Dropdown-Frames, indem Sie die Position und Größe des übergeordneten Fensters.  
   
-##  <a name="a-namesetautodestroya--cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
  Legt fest, ob das untergeordnete Dropdown-Symbolleisten-Fenster automatisch zerstört wird.  
   
 ```  

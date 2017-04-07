@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CObList
+- AFXCOLL/CObList
+- AFXCOLL/CObList::CObList
+- AFXCOLL/CObList::AddHead
+- AFXCOLL/CObList::AddTail
+- AFXCOLL/CObList::Find
+- AFXCOLL/CObList::FindIndex
+- AFXCOLL/CObList::GetAt
+- AFXCOLL/CObList::GetCount
+- AFXCOLL/CObList::GetHead
+- AFXCOLL/CObList::GetHeadPosition
+- AFXCOLL/CObList::GetNext
+- AFXCOLL/CObList::GetPrev
+- AFXCOLL/CObList::GetSize
+- AFXCOLL/CObList::GetTail
+- AFXCOLL/CObList::GetTailPosition
+- AFXCOLL/CObList::InsertAfter
+- AFXCOLL/CObList::InsertBefore
+- AFXCOLL/CObList::IsEmpty
+- AFXCOLL/CObList::RemoveAll
+- AFXCOLL/CObList::RemoveAt
+- AFXCOLL/CObList::RemoveHead
+- AFXCOLL/CObList::RemoveTail
+- AFXCOLL/CObList::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,7 +135,7 @@ class CObList : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcoll.h  
   
-##  <a name="a-nameaddheada--coblistaddhead"></a><a name="addhead"></a>CObList::AddHead  
+##  <a name="addhead"></a>CObList::AddHead  
  Fügt ein neues Element oder eine Liste von Elementen an den Anfang der Liste.  
   
 ```  
@@ -153,7 +176,7 @@ void AddHead(CObList* pNewList);
   
  `a CAge at $442A 21`  
   
-##  <a name="a-nameaddtaila--coblistaddtail"></a><a name="addtail"></a>CObList::AddTail  
+##  <a name="addtail"></a>CObList::AddTail  
  Fügt ein neues Element oder eine Liste von Elementen an das Ende der Liste.  
   
 ```  
@@ -194,7 +217,7 @@ void AddTail(CObList* pNewList);
   
  `a CAge at $4526 40`  
   
-##  <a name="a-namecoblista--coblistcoblist"></a><a name="coblist"></a>CObList::CObList  
+##  <a name="coblist"></a>CObList::CObList  
  Erstellt ein leeres `CObject` Zeiger Liste.  
   
 ```  
@@ -224,7 +247,7 @@ CObList(INT_PTR nBlockSize = 10);
   
  [!code-cpp[NVC_MFCCollections&#92;](../../mfc/codesnippet/cpp/coblist-class_4.cpp)]  
   
-##  <a name="a-namefinda--coblistfind"></a><a name="find"></a>CObList::Find  
+##  <a name="find"></a>CObList::Find  
  Sucht die Liste sequenziell nach der ersten `CObject` Zeiger, die mit dem angegebenen `CObject` Zeiger.  
   
 ```  
@@ -258,7 +281,7 @@ POSITION Find(
   
  [!code-cpp[NVC_MFCCollections&#93;](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
-##  <a name="a-namefindindexa--coblistfindindex"></a><a name="findindex"></a>CObList::FindIndex  
+##  <a name="findindex"></a>CObList::FindIndex  
  Verwendet den Wert der `nIndex` als Index in der Liste.  
   
 ```  
@@ -287,7 +310,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections&#94;](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]  
   
-##  <a name="a-namegetata--coblistgetat"></a><a name="getat"></a>CObList::GetAt  
+##  <a name="getat"></a>CObList::GetAt  
  Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste.  
   
 ```  
@@ -317,7 +340,7 @@ const CObject*& GetAt(POSITION position) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [FindIndex](#findindex).  
   
-##  <a name="a-namegetcounta--coblistgetcount"></a><a name="getcount"></a>CObList::GetCount  
+##  <a name="getcount"></a>CObList::GetCount  
  Ruft die Anzahl der Elemente in dieser Liste.  
   
 ```  
@@ -339,7 +362,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections&#95;](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]  
   
-##  <a name="a-namegetheada--coblistgethead"></a><a name="gethead"></a>CObList::GetHead  
+##  <a name="gethead"></a>CObList::GetHead  
  Ruft die `CObject` Zeiger, der das Head-Element der Liste darstellt.  
   
 ```  
@@ -369,7 +392,7 @@ const CObject*& GetHead() const;
   
  [!code-cpp[NVC_MFCCollections&#96;](../../mfc/codesnippet/cpp/coblist-class_8.cpp)]  
   
-##  <a name="a-namegetheadpositiona--coblistgetheadposition"></a><a name="getheadposition"></a>CObList::GetHeadPosition  
+##  <a name="getheadposition"></a>CObList::GetHeadPosition  
  Ruft die Position des Head-Element der Liste ab.  
   
 ```  
@@ -391,7 +414,7 @@ POSITION GetHeadPosition() const;
   
  [!code-cpp[NVC_MFCCollections&#97;](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
-##  <a name="a-namegetnexta--coblistgetnext"></a><a name="getnext"></a>CObList::GetNext  
+##  <a name="getnext"></a>CObList::GetNext  
  Ruft das Listenelement identifizierten `rPosition`, legt dann `rPosition` auf dem `POSITION` Wert des nächsten Eintrag in der Liste.  
   
 ```  
@@ -436,7 +459,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  `a CAge at $46C0 21`  
   
-##  <a name="a-namegetpreva--coblistgetprev"></a><a name="getprev"></a>CObList::GetPrev  
+##  <a name="getprev"></a>CObList::GetPrev  
  Ruft das Listenelement identifizierten `rPosition`, legt dann `rPosition` auf dem `POSITION` Wert des vorherigen Eintrags in der Liste.  
   
 ```  
@@ -479,7 +502,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
   
  `a CAge at $421C 40`  
   
-##  <a name="a-namegetsizea--coblistgetsize"></a><a name="getsize"></a>CObList::GetSize  
+##  <a name="getsize"></a>CObList::GetSize  
  Gibt die Anzahl der Elemente zurück.  
   
 ```  
@@ -504,7 +527,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections&#100;](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]  
   
-##  <a name="a-namegettaila--coblistgettail"></a><a name="gettail"></a>CObList::GetTail  
+##  <a name="gettail"></a>CObList::GetTail  
  Ruft die `CObject` Zeiger, der das Ende Element dieser Liste darstellt.  
   
 ```  
@@ -530,7 +553,7 @@ const CObject*& GetTail() const;
   
  [!code-cpp[NVC_MFCCollections&#101;](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]  
   
-##  <a name="a-namegettailpositiona--coblistgettailposition"></a><a name="gettailposition"></a>CObList::GetTailPosition  
+##  <a name="gettailposition"></a>CObList::GetTailPosition  
  Ruft die Position des Elements Ende dieser Liste. **NULL** , wenn die Liste leer ist.  
   
 ```  
@@ -552,7 +575,7 @@ POSITION GetTailPosition() const;
   
  [!code-cpp[NVC_MFCCollections&#102;](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]  
   
-##  <a name="a-nameinsertaftera--coblistinsertafter"></a><a name="insertafter"></a>CObList::InsertAfter  
+##  <a name="insertafter"></a>CObList::InsertAfter  
  Fügt ein Element dieser Liste nach dem Element an der angegebenen Position.  
   
 ```  
@@ -593,7 +616,7 @@ POSITION InsertAfter(
   
  `a CAge at $4968 21`  
   
-##  <a name="a-nameinsertbeforea--coblistinsertbefore"></a><a name="insertbefore"></a>CObList::InsertBefore  
+##  <a name="insertbefore"></a>CObList::InsertBefore  
  Fügt dieser Liste ein Element vor dem Element an der angegebenen Position hinzu.  
   
 ```  
@@ -634,7 +657,7 @@ POSITION InsertBefore(
   
  `a CAge at $49E6 21`  
   
-##  <a name="a-nameisemptya--coblistisempty"></a><a name="isempty"></a>CObList::IsEmpty  
+##  <a name="isempty"></a>CObList::IsEmpty  
  Gibt an, ob die Liste keine Elemente enthält.  
   
 ```  
@@ -654,7 +677,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [RemoveAll](#removeall).  
   
-##  <a name="a-nameremovealla--coblistremoveall"></a><a name="removeall"></a>CObList::RemoveAll  
+##  <a name="removeall"></a>CObList::RemoveAll  
  Entfernt alle Elemente aus dieser Liste, und die zugeordnete freigegeben `CObList` Speicher.  
   
 ```  
@@ -678,7 +701,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections&#105;](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]  
   
-##  <a name="a-nameremoveata--coblistremoveat"></a><a name="removeat"></a>CObList::RemoveAt  
+##  <a name="removeat"></a>CObList::RemoveAt  
  Entfernt das angegebene Element aus dieser Liste.  
   
 ```  
@@ -716,7 +739,7 @@ void RemoveAt(POSITION position);
   
  `a CAge at $4B22 21`  
   
-##  <a name="a-nameremoveheada--coblistremovehead"></a><a name="removehead"></a>CObList::RemoveHead  
+##  <a name="removehead"></a>CObList::RemoveHead  
  Entfernt das Element am Anfang der Liste, und gibt einen Zeiger darauf zurück.  
   
 ```  
@@ -741,7 +764,7 @@ CObject* RemoveHead();
   
  [!code-cpp[NVC_MFCCollections&#107;](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]  
   
-##  <a name="a-nameremovetaila--coblistremovetail"></a><a name="removetail"></a>CObList::RemoveTail  
+##  <a name="removetail"></a>CObList::RemoveTail  
  Entfernt das Element, das Ende der Liste aus, und gibt einen Zeiger darauf zurück.  
   
 ```  
@@ -766,7 +789,7 @@ CObject* RemoveTail();
   
  [!code-cpp[NVC_MFCCollections&#108;](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]  
   
-##  <a name="a-namesetata--coblistsetat"></a><a name="setat"></a>CObList::SetAt  
+##  <a name="setat"></a>CObList::SetAt  
  Legt das Element an einer bestimmten Position fest.  
   
 ```  

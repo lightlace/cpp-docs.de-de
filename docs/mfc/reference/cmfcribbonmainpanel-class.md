@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMainPanel
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::Add
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddRecentFilesList
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddToBottom
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddToRight
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::GetCommandsFrame
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +94,7 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxRibbonMainPanel.h  
   
-##  <a name="a-nameadda--cmfcribbonmainpaneladd"></a><a name="add"></a>CMFCRibbonMainPanel::Add  
+##  <a name="add"></a>CMFCRibbonMainPanel::Add  
  Im linken Bereich des Schaltflächenbereich Anwendung hinzugefügt ein Menübandelement.  
   
 ```  
@@ -102,7 +108,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ### <a name="remarks"></a>Hinweise  
  Im Bereich hinzugefügt ein Menübandelement. Mit dieser Methode hinzugefügte Elemente werden in der linken Spalte der Hauptbereich befinden.  
   
-##  <a name="a-nameaddrecentfileslista--cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList  
+##  <a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList  
  Fügt eine Zeichenfolge zum Listenmenü zuletzt verwendete Dateien hinzu.  
   
 ```  
@@ -120,7 +126,7 @@ void AddRecentFilesList(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameaddtobottoma--cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom  
+##  <a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom  
  Unteren Bereich des Bereichs Anwendung Menüband hinzugefügt ein Menübandelement.  
   
 ```  
@@ -133,7 +139,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameaddtorighta--cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight  
+##  <a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight  
  Rechten Bereich der Anwendung Schaltflächenbereich hinzugefügt ein Menübandelement.  
   
 ```  
@@ -152,7 +158,7 @@ void AddToRight(
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion im rechten Bereich ein Menübandelement hinzu. Im rechte Bereich in der Regel zeigt die Liste der zuletzt geöffneten Dateien, aber Sie können eine beliebige andere Menübandelement hier hinzufügen.  
   
-##  <a name="a-namegetcommandsframea--cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame  
+##  <a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame  
  Gibt ein Rechteck, das den Clientbereich der Menüband-Hauptbereich darstellt.  
   
 ```  

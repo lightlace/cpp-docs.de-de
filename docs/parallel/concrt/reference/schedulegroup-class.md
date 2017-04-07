@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::ScheduleGroup
+- ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup::Id
+- CONCRT/concurrency::ScheduleGroup::Reference
+- CONCRT/concurrency::ScheduleGroup::Release
+- CONCRT/concurrency::ScheduleGroup::ScheduleTask
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 424b2f53f39bce57c85e44f0df54928acdac399a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dc7a78fd135d56e1243c43672172e433652e34e2
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup-Klasse
@@ -60,10 +65,10 @@ class ScheduleGroup;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ID-Methode](#id)|Gibt einen Bezeichner für die Planungsgruppe zurück, der innerhalb des Planers eindeutig ist, zu dem die Gruppe gehört.|  
-|[Reference-Methode](#reference)|Inkrementiert den Verweiszähler dieser Planergruppe.|  
-|[Release-Methode](#release)|Dekrementiert den Verweiszähler dieser Planergruppe.|  
-|[ScheduleTask-Methode](#scheduletask)|Plant eine einfache Aufgabe innerhalb der Planungsgruppe.|  
+|[ID](#id)|Gibt einen Bezeichner für die Planungsgruppe zurück, der innerhalb des Planers eindeutig ist, zu dem die Gruppe gehört.|  
+|[Referenz](#reference)|Inkrementiert den Verweiszähler dieser Planergruppe.|  
+|[Version](#release)|Dekrementiert den Verweiszähler dieser Planergruppe.|  
+|[ScheduleTask](#scheduletask)|Plant eine einfache Aufgabe innerhalb der Planungsgruppe.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `ScheduleGroup`  
@@ -73,7 +78,7 @@ class ScheduleGroup;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>ID 
+##  <a name="id"></a>ID 
 
  Gibt einen Bezeichner für die Planungsgruppe zurück, der innerhalb des Planers eindeutig ist, zu dem die Gruppe gehört.  
   
@@ -84,7 +89,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Bezeichner für die Planungsgruppe, die innerhalb des Planers eindeutig ist, zu dem die Gruppe gehört.  
   
-##  <a name="a-nameoperatordeletea-operator-delete"></a><a name="operator_delete"></a>Delete-Operator 
+##  <a name="operator_delete"></a>Delete-Operator 
 
  Ein `ScheduleGroup` -Objekt wird intern von der Laufzeit zerstört, wenn alle externen Verweise darauf freigegeben werden. Es kann nicht explizit gelöscht werden.  
   
@@ -103,7 +108,7 @@ void operator delete(
  `_PObject`  
  Ein Zeiger auf das Objekt gelöscht werden soll.  
   
-##  <a name="a-namereferencea-reference"></a><a name="reference"></a>Referenz 
+##  <a name="reference"></a>Referenz 
 
  Inkrementiert den Verweiszähler dieser Planergruppe.  
   
@@ -117,7 +122,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="remarks"></a>Hinweise  
  Dies wird normalerweise verwendet, um die Lebensdauer der Planungsgruppe für die Erstellung zu verwalten. Wenn der Verweiszähler einer Planungsgruppe auf&0; (null) fällt, wird die Planungsgruppe von der Laufzeit gelöscht. Eine Planungsgruppe erstellt haben, verwenden entweder die [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) -Methode oder die [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) Methode beginnt mit einer Verweisanzahl von&1;.  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>Version 
+##  <a name="release"></a>Version 
 
  Dekrementiert den Verweiszähler dieser Planergruppe.  
   
@@ -133,13 +138,13 @@ virtual unsigned int Release() = 0;
   
  Eine Planungsgruppe ist einer bestimmten Planerinstanz zugeordnet. Sie müssen sicherstellen, dass alle Verweise auf die Planungsgruppe freigegeben werden, bevor alle Verweise auf den Planer freigegeben werden, da in der Planer zerstört führen können. Andernfalls kann dies in einem nicht definierten Verhalten.  
   
-##  <a name="a-namedtora-schedulegroup"></a><a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a>~ ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  Plant eine einfache Aufgabe innerhalb der Planungsgruppe.  
   

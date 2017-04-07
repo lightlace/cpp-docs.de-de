@@ -10,8 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComSafeDeleteCriticalSection
-- ATL::CComSafeDeleteCriticalSection
-- ATL.CComSafeDeleteCriticalSection
+- ATLCORE/ATL::CComSafeDeleteCriticalSection
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::Init
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::Lock
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::Term
+- ATLCORE/ATL::m_bInitialized
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +92,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcore.h  
   
-##  <a name="a-nameccomsafedeletecriticalsectiona--ccomsafedeletecriticalsectionccomsafedeletecriticalsection"></a><a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
+##  <a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
  Der Konstruktor.  
   
 ```
@@ -98,7 +102,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>Hinweise  
  Legt die [M_bInitialized](#m_binitialized) -Datenmember auf **false**.  
   
-##  <a name="a-namedtora--ccomsafedeletecriticalsectionccomsafedeletecriticalsection"></a><a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
+##  <a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
  Der Destruktor.  
   
 ```
@@ -108,7 +112,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>Hinweise  
  Gibt die interne **CRITICAL_SECTION** Objekt aus dem Speicher, wenn der [M_bInitialized](#m_binitialized) -Datenmember festgelegt ist, um **true**.  
   
-##  <a name="a-nameinita--ccomsafedeletecriticalsectioninit"></a><a name="init"></a>CComSafeDeleteCriticalSection::Init  
+##  <a name="init"></a>CComSafeDeleteCriticalSection::Init  
  Ruft die Implementierung der Basisklasse der [Init](/visualstudio/debugger/init) und [M_bInitialized](#m_binitialized) auf **true** bei Erfolg.  
   
 ```
@@ -118,7 +122,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt das Ergebnis der [CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init).  
   
-##  <a name="a-namelocka--ccomsafedeletecriticalsectionlock"></a><a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
+##  <a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
 Ruft die Implementierung der Basisklasse der [Sperren](ccomcriticalsection-class.md#lock).  
 
   
@@ -134,7 +138,7 @@ HRESULT Lock();
   
  Weitere Informationen zum Verhalten der Funktion finden Sie unter [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock).  
   
-##  <a name="a-namembinitializeda--ccomsafedeletecriticalsectionmbinitialized"></a><a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
+##  <a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
  Flags, ob die interne **CRITICAL_SECTION** Objekt initialisiert wurde.  
   
 ```
@@ -144,7 +148,7 @@ bool m_bInitialized;
 ### <a name="remarks"></a>Hinweise  
  Die **M_bInitialized** -Datenmember wird verwendet, um die Gültigkeit des zugrunde liegenden nachverfolgen **CRITICAL_SECTION** zugeordnete Objekt der [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) Klasse. Die zugrunde liegende **CRITICAL_SECTION** Objekt wird nicht aus dem Speicher freigegeben werden, wenn dieses Flag nicht festgelegt ist versucht **true**.  
   
-##  <a name="a-nameterma--ccomsafedeletecriticalsectionterm"></a><a name="term"></a>CComSafeDeleteCriticalSection::Term  
+##  <a name="term"></a>CComSafeDeleteCriticalSection::Term  
  Ruft die Implementierung der Basisklasse der [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term) Wenn das interne **CRITICAL_SECTION** -Objekt gültig ist.  
   
 ```

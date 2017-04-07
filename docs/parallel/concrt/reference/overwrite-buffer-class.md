@@ -9,7 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::overwrite_buffer
+- overwrite_buffer
+- AGENTS/concurrency::overwrite_buffer
+- AGENTS/concurrency::overwrite_buffer::overwrite_buffer
+- AGENTS/concurrency::overwrite_buffer::has_value
+- AGENTS/concurrency::overwrite_buffer::value
+- AGENTS/concurrency::overwrite_buffer::accept_message
+- AGENTS/concurrency::overwrite_buffer::consume_message
+- AGENTS/concurrency::overwrite_buffer::link_target_notification
+- AGENTS/concurrency::overwrite_buffer::propagate_message
+- AGENTS/concurrency::overwrite_buffer::propagate_to_any_targets
+- AGENTS/concurrency::overwrite_buffer::release_message
+- AGENTS/concurrency::overwrite_buffer::reserve_message
+- AGENTS/concurrency::overwrite_buffer::resume_propagation
+- AGENTS/concurrency::overwrite_buffer::send_message
+- AGENTS/concurrency::overwrite_buffer::supports_anonymous_source
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +48,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 02a4968ef88d8a6181a4d5412f894dce100ba7b3
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 256c9d8a4d4bcf81f97ffbc8282bab59a169b24e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer-Klasse
@@ -59,30 +73,30 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Overwrite_buffer-Konstruktor](#ctor)|Überladen. Erstellt ein `overwrite_buffer` Meldungsblocks.|  
+|[overwrite_buffer](#ctor)|Überladen. Erstellt ein `overwrite_buffer` Meldungsblocks.|  
 |[~ Overwrite_buffer-Destruktor](#dtor)|Zerstört die `overwrite_buffer` Meldungsblocks.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Has_value-Methode](#has_value)|Überprüft, ob diese `overwrite_buffer` -Meldungsblock ist einen Wert noch nicht.|  
-|[Wert-Methode](#value)|Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `overwrite_buffer` Meldungsblocks.|  
+|[has_value](#has_value)|Überprüft, ob diese `overwrite_buffer` -Meldungsblock ist einen Wert noch nicht.|  
+|[value](#value)|Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `overwrite_buffer` Meldungsblocks.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Accept_message-Methode](#accept_message)|Akzeptiert eine Meldung, die von diesem angeboten wurde `overwrite_buffer` -Meldungsblock, eine Kopie der Nachricht an den Aufrufer zurückgegeben.|  
-|[Consume_message-Methode](#consume_message)|Nimmt eine Meldung, die zuvor von Angeboten der `overwrite_buffer` -Meldungsblock und reserviert durch das Ziel, eine Kopie der Nachricht an den Aufrufer zurückgegeben.|  
-|[Link_target_notification-Methode](#link_target_notification)|Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `overwrite_buffer` Meldungsblocks.|  
-|[Propagate_message-Methode](#propagate_message)|Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `overwrite_buffer` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.|  
-|[Propagate_to_any_targets-Methode](#propagate_to_any_targets)|Stellen die `message``_PMessage` in diesem `overwrite_buffer` -Meldungsblock ein und bietet sie allen verknüpften Zielen.|  
-|[Release_message-Methode](#release_message)|Gibt die Reservierung einer vorherigen Meldung frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|  
-|[Reserve_message-Methode](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `overwrite_buffer` Meldungsblocks. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
-|[Resume_propagation-Methode](#resume_propagation)|Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
-|[Send_message-Methode](#send_message)|Übergibt synchron eine Meldung von einer `ISource` -Block an diesen `overwrite_buffer` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.|  
-|[Supports_anonymous_source-Methode](#supports_anonymous_source)|Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block akzeptieren kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist. (Überschreibt [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[accept_message](#accept_message)|Akzeptiert eine Meldung, die von diesem angeboten wurde `overwrite_buffer` -Meldungsblock, eine Kopie der Nachricht an den Aufrufer zurückgegeben.|  
+|[consume_message](#consume_message)|Nimmt eine Meldung, die zuvor von Angeboten der `overwrite_buffer` -Meldungsblock und reserviert durch das Ziel, eine Kopie der Nachricht an den Aufrufer zurückgegeben.|  
+|[link_target_notification](#link_target_notification)|Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `overwrite_buffer` Meldungsblocks.|  
+|[propagate_message](#propagate_message)|Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `overwrite_buffer` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Stellen die `message``_PMessage` in diesem `overwrite_buffer` -Meldungsblock ein und bietet sie allen verknüpften Zielen.|  
+|[release_message](#release_message)|Gibt die Reservierung einer vorherigen Meldung frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `overwrite_buffer` Meldungsblocks. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
+|[send_message](#send_message)|Übergibt synchron eine Meldung von einer `ISource` -Block an diesen `overwrite_buffer` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.|  
+|[supports_anonymous_source](#supports_anonymous_source)|Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block akzeptieren kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist. (Überschreibt [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Hinweise  
  Ein `overwrite_buffer` -Meldungsblock gibt Kopien der gespeicherten Nachricht an die einzelnen Ziele weiter.  
@@ -105,7 +119,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
  **Namespace:** Parallelität  
   
-##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a>accept_message 
 
  Akzeptiert eine Meldung, die von diesem angeboten wurde `overwrite_buffer` -Meldungsblock, eine Kopie der Nachricht an den Aufrufer zurückgegeben.  
   
@@ -123,7 +137,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Hinweise  
  Die `overwrite_buffer` -Meldungsblock gibt Kopien der Meldung an ihre Ziele, statt den Besitz der gerade vorliegenden Meldung zu übertragen.  
   
-##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a>consume_message 
 
  Nimmt eine Meldung, die zuvor von Angeboten der `overwrite_buffer` -Meldungsblock und reserviert durch das Ziel, eine Kopie der Nachricht an den Aufrufer zurückgegeben.  
   
@@ -141,7 +155,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Hinweise  
  Ähnlich wie `accept`, steht aber immer nach einem Aufruf von ist `reserve`.  
   
-##  <a name="a-namehasvaluea-hasvalue"></a><a name="has_value"></a>has_value 
+##  <a name="has_value"></a>has_value 
 
  Überprüft, ob diese `overwrite_buffer` -Meldungsblock ist einen Wert noch nicht.  
   
@@ -152,7 +166,7 @@ bool has_value() const;
 ### <a name="return-value"></a>Rückgabewert  
  `true`Wenn der Block einen Wert empfangen hat `false` andernfalls.  
   
-##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a>link_target_notification 
 
  Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `overwrite_buffer` Meldungsblocks.  
   
@@ -164,7 +178,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Ein Zeiger auf das neu verknüpfte Ziel.  
   
-##  <a name="a-namedtora-overwritebuffer"></a><a name="dtor"></a>~ Overwrite_buffer 
+##  <a name="dtor"></a>~ Overwrite_buffer 
 
  Zerstört die `overwrite_buffer` Meldungsblocks.  
   
@@ -172,7 +186,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ~overwrite_buffer();
 ```  
   
-##  <a name="a-namectora-overwritebuffer"></a><a name="ctor"></a>overwrite_buffer 
+##  <a name="ctor"></a>overwrite_buffer 
 
  Erstellt ein `overwrite_buffer` Meldungsblocks.  
   
@@ -212,7 +226,7 @@ overwrite_buffer(
   
  Der Typ `filter_method` ist ein Funktionselement mit der Signatur `bool (T const &)` die aufgerufen wird, von diesem `overwrite_buffer` -Meldungsblock zu bestimmen, ob eine bereitgestellte Meldung akzeptiert werden sollen.  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
  Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `overwrite_buffer` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.  
   
@@ -232,7 +246,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Rückgabewert  
  Ein [Message_status](concurrency-namespace-enums.md) Anzeichen, was das Ziel entschieden, mit der Meldung zu tun.  
   
-##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
  Stellen die `message``_PMessage` in diesem `overwrite_buffer` -Meldungsblock ein und bietet sie allen verknüpften Zielen.  
   
@@ -247,7 +261,7 @@ virtual void propagate_to_any_targets(_Inout_ message<T>* _PMessage);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode überschreibt die aktuelle Meldung in der `overwrite_buffer` mit der neu akzeptierten Meldung `_PMessage`.  
   
-##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+##  <a name="send_message"></a>send_message 
 
  Übergibt synchron eine Meldung von einer `ISource` -Block an diesen `overwrite_buffer` Meldungsblocks. Wird aufgerufen, indem die `send` -Methode beim Aufruf durch einen Quellblock.  
   
@@ -267,7 +281,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Rückgabewert  
  Ein [Message_status](concurrency-namespace-enums.md) Anzeichen, was das Ziel entschieden, mit der Meldung zu tun.  
   
-##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
  Überschreibt die `supports_anonymous_source` Methode, um anzugeben, dass dieser Block akzeptieren kann Nachrichten angeboten, von einer Quelle, die nicht verknüpft ist.  
   
@@ -278,7 +292,7 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>Rückgabewert  
  `true`Da der Block nicht angebotene Nachrichten nicht verschieben.  
   
-##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+##  <a name="release_message"></a>release_message 
 
  Gibt die Reservierung einer vorherigen Meldung frei.  
   
@@ -290,7 +304,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  Die `runtime_object_identity` von der `message` Objekt freigegeben wird.  
   
-##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a>reserve_message 
 
  Reserviert eine Meldung, die zuvor von diesem angebotenen `overwrite_buffer` Meldungsblocks.  
   
@@ -308,7 +322,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Hinweise  
  Nach dem `reserve` wird aufgerufen, wenn die Rückgabe `true`, `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.  
   
-##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a>resume_propagation 
 
  Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde.  
   
@@ -316,7 +330,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="a-namevaluea-value"></a><a name="value"></a>Wert 
+##  <a name="value"></a>Wert 
 
  Ruft einen Verweis auf die aktuelle Nutzlast der Nachricht gespeichert werden, der `overwrite_buffer` Meldungsblocks.  
   
@@ -333,5 +347,5 @@ T value();
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
  [Unbounded_buffer-Klasse](unbounded-buffer-class.md)   
- [Single_assignment-Klasse](single-assignment-class.md)
+ [single_assignment-Klasse](single-assignment-class.md)
 

@@ -41,8 +41,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 014391806f47e7d39ffe09e30feecaabe26f6a36
+ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
+ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
+ms.lasthandoff: 03/15/2017
 
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
@@ -65,6 +66,9 @@ Mit der Programmiersprache und den Entwicklungstools von Visual Studio 2017 kön
  [Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](cpp-conformance-improvements-2017.md) 
  Erfahren Sie mehr über die Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017. 
 
+ [Visual C++-Sprachkonformität](visual-cpp-language-conformance.md)  
+ Eine Liste der Konformitätsstatus nach Feature in Visual C++.
+
  [Änderungsverlauf von Visual C++ von 2003 bis 2015](porting/visual-cpp-change-history-2003-2015.md)  
  Machen Sie sich mit den bedeutenden Änderungen in Vorversionen vertraut.  
   
@@ -76,9 +80,6 @@ Mit der Programmiersprache und den Entwicklungstools von Visual Studio 2017 kön
   
  [Visual C++-Handbuch: Portieren und Aktualisieren](porting/visual-cpp-porting-and-upgrading-guide.md)  
  Leitfaden für das Portieren von Code und das Aktualisieren von Projekten auf Visual C++ in Visual Studio 2017, einschließlich der Portierung von C++-Code zu Windows 10 und der universellen Windows-Plattform.  
-  
- [Unterstützung für C++11/14/17-Funktionen (Modernes C++)](cpp/support-for-cpp11-14-17-features-modern-cpp.md)  
- Weitere Informationen über die Unterstützung für C++11- und C++14-Funktionen in Visual C++.  
   
  [Blog des Visual C++-Teams](http://blogs.msdn.com/b/vcblog/)  
  Weitere Informationen über neue Funktionen und die neuesten Informationen von den Entwicklern von [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)].  
@@ -183,9 +184,4 @@ Mit der Programmiersprache und den Entwicklungstools von Visual Studio 2017 kön
  [C-Sprachreferenz](c-language/c-language-reference.md)   
  [C-Laufzeitbibliotheksreferenz](c-runtime-library/c-run-time-library-reference.md)   
  [Intrinsische Compilerfunktionen und Assemblysprache](intrinsics/compiler-intrinsics-and-assembly-language.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

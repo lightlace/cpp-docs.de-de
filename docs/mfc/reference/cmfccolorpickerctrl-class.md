@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCColorPickerCtrl
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::CMFCColorPickerCtrl
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetColor
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetHLS
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetHue
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetLuminance
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetSaturation
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SelectCellHexagon
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetColor
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetHLS
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetHue
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetLuminance
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetLuminanceBarWidth
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetOriginalColor
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetPalette
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetSaturation
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetType
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::DrawCursor
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -119,7 +137,7 @@ class CMFCColorPickerCtrl : public CButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcolorpickerctrl.h  
   
-##  <a name="a-namecmfccolorpickerctrla--cmfccolorpickerctrlcmfccolorpickerctrl"></a><a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl  
+##  <a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl  
  Erstellt ein `CMFCColorPickerCtrl`-Objekt.  
   
 ```  
@@ -130,7 +148,7 @@ CMFCColorPickerCtrl();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedrawcursora--cmfccolorpickerctrldrawcursor"></a><a name="drawcursor"></a>CMFCColorPickerCtrl::DrawCursor  
+##  <a name="drawcursor"></a>CMFCColorPickerCtrl::DrawCursor  
  Vom Framework aufgerufen, bevor ein Cursor, der auf der ausgewählten Farbe angezeigt wird.  
   
 ```  
@@ -149,7 +167,7 @@ virtual void DrawCursor(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, wenn Sie die Form des Cursors zu ändern, die auf die ausgewählte Farbe zeigt müssen.  
   
-##  <a name="a-namegetcolora--cmfccolorpickerctrlgetcolor"></a><a name="getcolor"></a>CMFCColorPickerCtrl::GetColor  
+##  <a name="getcolor"></a>CMFCColorPickerCtrl::GetColor  
  Ruft die Farbe, die der Benutzer auswählt.  
   
 ```  
@@ -161,7 +179,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegethlsa--cmfccolorpickerctrlgethls"></a><a name="gethls"></a>CMFCColorPickerCtrl::GetHLS  
+##  <a name="gethls"></a>CMFCColorPickerCtrl::GetHLS  
  Ruft die Werte für Farbton, Helligkeit und die Sättigung der Farbe, die der Benutzer auswählt.  
   
 ```  
@@ -183,7 +201,7 @@ void GetHLS(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegethuea--cmfccolorpickerctrlgethue"></a><a name="gethue"></a>CMFCColorPickerCtrl::GetHue  
+##  <a name="gethue"></a>CMFCColorPickerCtrl::GetHue  
  Ruft den Farbtonkomponente der Farbe, die der Benutzer auswählt.  
   
 ```  
@@ -195,7 +213,7 @@ double GetHue() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetluminancea--cmfccolorpickerctrlgetluminance"></a><a name="getluminance"></a>CMFCColorPickerCtrl::GetLuminance  
+##  <a name="getluminance"></a>CMFCColorPickerCtrl::GetLuminance  
  Ruft die Komponente Intensität der Farbe, die der Benutzer auswählt.  
   
 ```  
@@ -207,7 +225,7 @@ double GetLuminance() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetsaturationa--cmfccolorpickerctrlgetsaturation"></a><a name="getsaturation"></a>CMFCColorPickerCtrl::GetSaturation  
+##  <a name="getsaturation"></a>CMFCColorPickerCtrl::GetSaturation  
  Ruft den Sättigungswert der Farbe, die der Benutzer auswählt.  
   
 ```  
@@ -219,7 +237,7 @@ double GetSaturation() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameselectcellhexagona--cmfccolorpickerctrlselectcellhexagon"></a><a name="selectcellhexagon"></a>CMFCColorPickerCtrl::SelectCellHexagon  
+##  <a name="selectcellhexagon"></a>CMFCColorPickerCtrl::SelectCellHexagon  
  Legt die aktuelle Farbe die Farbe, die durch den angegebenen Komponenten der RGB-Farbe oder die angegebene Zelle Sechseck definiert.  
   
 ```  
@@ -258,7 +276,7 @@ BOOL SelectCellHexagon(
   
  Die zweite Überladung dieser Methode wird die aktuelle Farbe die Farbe von der Zelle Sechseck, auf den durch die Position des angegebenen Cursors.  
   
-##  <a name="a-namesetcolora--cmfccolorpickerctrlsetcolor"></a><a name="setcolor"></a>CMFCColorPickerCtrl::SetColor  
+##  <a name="setcolor"></a>CMFCColorPickerCtrl::SetColor  
  Legt die aktuelle Farbe auf den angegebenen RGB-Farbwert fest.  
   
 ```  
@@ -271,7 +289,7 @@ void SetColor(COLORREF Color);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesethlsa--cmfccolorpickerctrlsethls"></a><a name="sethls"></a>CMFCColorPickerCtrl::SetHLS  
+##  <a name="sethls"></a>CMFCColorPickerCtrl::SetHLS  
  Legt die aktuelle Farbe auf den angegebenen Wert der HLS-Farbe fest.  
   
 ```  
@@ -297,7 +315,7 @@ void SetHLS(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesethuea--cmfccolorpickerctrlsethue"></a><a name="sethue"></a>CMFCColorPickerCtrl::SetHue  
+##  <a name="sethue"></a>CMFCColorPickerCtrl::SetHue  
  Ändert den Farbton der ausgewählten Farbe.  
   
 ```  
@@ -310,7 +328,7 @@ void SetHue(double Hue);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetluminancea--cmfccolorpickerctrlsetluminance"></a><a name="setluminance"></a>CMFCColorPickerCtrl::SetLuminance  
+##  <a name="setluminance"></a>CMFCColorPickerCtrl::SetLuminance  
  Ändert die Intensität der ausgewählten Farbe.  
   
 ```  
@@ -323,7 +341,7 @@ void SetLuminance(double Luminance);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetluminancebarwidtha--cmfccolorpickerctrlsetluminancebarwidth"></a><a name="setluminancebarwidth"></a>CMFCColorPickerCtrl::SetLuminanceBarWidth  
+##  <a name="setluminancebarwidth"></a>CMFCColorPickerCtrl::SetLuminanceBarWidth  
  Legt die Breite des Balkens Intensität im Auswahlsteuerelement Farbe fest.  
   
 ```  
@@ -337,7 +355,7 @@ void SetLuminanceBarWidth(int w);
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode zum Ändern der Größe der Intensität-Leiste auf die **benutzerdefinierte** auf der Registerkarte Farben-Auswahlsteuerelement. Die `w` Parameter gibt die neue Breite des Balkens Intensität. Der Width-Wert wird ignoriert, wenn sie drei Viertel der die Breite des Clientbereichs überschreitet.  
   
-##  <a name="a-namesetoriginalcolora--cmfccolorpickerctrlsetoriginalcolor"></a><a name="setoriginalcolor"></a>CMFCColorPickerCtrl::SetOriginalColor  
+##  <a name="setoriginalcolor"></a>CMFCColorPickerCtrl::SetOriginalColor  
  Die erste ausgewählte Farbe festgelegt.  
   
 ```  
@@ -351,7 +369,7 @@ void SetOriginalColor(COLORREF ref);
 ### <a name="remarks"></a>Hinweise  
  Aufgerufen Sie diese Methode wird, wenn die Farben-Auswahlsteuerelement initialisiert wird.  
   
-##  <a name="a-namesetpalettea--cmfccolorpickerctrlsetpalette"></a><a name="setpalette"></a>CMFCColorPickerCtrl::SetPalette  
+##  <a name="setpalette"></a>CMFCColorPickerCtrl::SetPalette  
  Legt die aktuelle Farbpalette.  
   
 ```  
@@ -365,7 +383,7 @@ void SetPalette(CPalette* pPalette);
 ### <a name="remarks"></a>Hinweise  
  Die Farbpalette definiert das Array der Farben, das angezeigt werden in den Farben-Auswahlsteuerelement an.  
   
-##  <a name="a-namesetsaturationa--cmfccolorpickerctrlsetsaturation"></a><a name="setsaturation"></a>CMFCColorPickerCtrl::SetSaturation  
+##  <a name="setsaturation"></a>CMFCColorPickerCtrl::SetSaturation  
  Ändert die Sättigung der ausgewählten Farbe.  
   
 ```  
@@ -378,7 +396,7 @@ void SetSaturation(double Saturation);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesettypea--cmfccolorpickerctrlsettype"></a><a name="settype"></a>CMFCColorPickerCtrl::SetType  
+##  <a name="settype"></a>CMFCColorPickerCtrl::SetType  
  Legt den Typ der Farben-Auswahlsteuerelement angezeigt.  
   
 ```  

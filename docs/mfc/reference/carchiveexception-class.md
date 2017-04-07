@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CArchiveException
+- AFX/CArchiveException
+- AFX/CArchiveException::CArchiveException
+- AFX/CArchiveException::m_cause
+- AFX/CArchiveException::m_strFileName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +86,7 @@ class CArchiveException : public CException
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
   
-##  <a name="a-namecarchiveexceptiona--carchiveexceptioncarchiveexception"></a><a name="carchiveexception"></a>CArchiveException::CArchiveException  
+##  <a name="carchiveexception"></a>CArchiveException::CArchiveException  
  Erstellt eine `CArchiveException` -Objekt, Speichern des Werts `cause` im Objekt.  
   
 ```  
@@ -103,7 +107,7 @@ CArchiveException(
   
  Verwenden Sie diesen Konstruktor nicht direkt. Rufen Sie stattdessen die globale Funktion `AfxThrowArchiveException`.  
   
-##  <a name="a-namemcausea--carchiveexceptionmcause"></a><a name="m_cause"></a>CArchiveException::m_cause  
+##  <a name="m_cause"></a>CArchiveException::m_cause  
  Gibt die Ursache der Ausnahme.  
   
 ```  
@@ -135,7 +139,7 @@ int m_cause;
     > [!NOTE]
     > **CArchiveException::generic** ist veraltet. Verwendung **GenericException** stattdessen. Wenn **generischen** in einer Anwendung verwendet und erstellt mit/CLR, werden Syntaxfehler, die nicht leicht entschlüsselt werden.  
   
-##  <a name="a-namemstrfilenamea--carchiveexceptionmstrfilename"></a><a name="m_strfilename"></a>CArchiveException::m_strFileName  
+##  <a name="m_strfilename"></a>CArchiveException::m_strFileName  
  Gibt den Namen der Datei für diese Ausnahmebedingung.  
   
 ```  

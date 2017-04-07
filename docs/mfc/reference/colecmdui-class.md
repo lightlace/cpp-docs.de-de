@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleCmdUI
+- AFXDOCOBJ/COleCmdUI
+- AFXDOCOBJ/COleCmdUI::COleCmdUI
+- AFXDOCOBJ/COleCmdUI::Enable
+- AFXDOCOBJ/COleCmdUI::SetCheck
+- AFXDOCOBJ/COleCmdUI::SetText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class COleCmdUI : public CCmdUI
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdocobj.h  
   
-##  <a name="a-namecolecmduia--colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI  
+##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
  Erstellt ein `COleCmdUI` Objekt, das mit einem bestimmten Benutzeroberflächen-Befehl zugeordnet.  
   
 ```  
@@ -107,7 +112,7 @@ COleCmdUI(
 ### <a name="remarks"></a>Hinweise  
  Das `COleCmdUI` Objekt bietet eine programmgesteuerte Schnittstelle für die Aktualisierung DocObject Benutzeroberflächen-Objekten wie z. B. Menüeinträge oder Control-Schaltflächen. Die Benutzeroberflächen-Objekte können werden aktiviert, deaktiviert, überprüft und/oder deaktiviert, bis die `COleCmdUI` Objekt.  
   
-##  <a name="a-nameenablea--colecmduienable"></a><a name="enable"></a>COleCmdUI::Enable  
+##  <a name="enable"></a>COleCmdUI::Enable  
  Mit dieser Funktion können Sie den Befehl gesetzt, der die `COleCmdUI` -Objekt **OLECOMDF_ENABLED**, der Schnittstelle mit dem Befehl angewiesen ist, verfügbar und aktiviert, oder die Kennzeichnung des Befehls zu löschen.  
   
 ```  
@@ -118,7 +123,7 @@ virtual void Enable(BOOL bOn);
  `bOn`  
  Gibt an, ob mit dem Befehl verknüpft die `COleCmdUI` Objekt aktiviert oder deaktiviert werden soll. Nonzero kann mit dem Befehl. 0 wird der Befehl deaktiviert.  
   
-##  <a name="a-namesetchecka--colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::SetCheck  
+##  <a name="setcheck"></a>COleCmdUI::SetCheck  
  Mit dieser Funktion können Sie den Status einer Umschaltfläche ein-/ausschalten Befehl.  
   
 ```  
@@ -135,7 +140,7 @@ virtual void SetCheck(int nCheck);
 |**2**|Legt den Befehl einem unbestimmten Zustand fest. der Status kann nicht bestimmt werden, da das Attribut mit diesem Befehl sowohl ein und aus Status in die entsprechende Auswahl wird.|  
 |Jeder andere Wert|Legt den Befehl auf off fest.|  
   
-##  <a name="a-namesettexta--colecmduisettext"></a><a name="settext"></a>COleCmdUI::SetText  
+##  <a name="settext"></a>COleCmdUI::SetText  
  Rufen Sie diese Funktion, um eine Textzeichenfolge Name oder Status für einen Befehl zurück.  
   
 ```  

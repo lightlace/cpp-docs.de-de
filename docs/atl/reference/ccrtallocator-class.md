@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCRTAllocator
+- ATLCORE/ATL::CCRTAllocator
+- ATLCORE/ATL::CCRTAllocator::Allocate
+- ATLCORE/ATL::CCRTAllocator::Free
+- ATLCORE/ATL::CCRTAllocator::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -64,7 +68,7 @@ class ATL::CCRTAllocator
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcore.h  
   
-##  <a name="a-nameallocatea--ccrtallocatorallocate"></a><a name="allocate"></a>Ccrtallocator:: Allocate  
+##  <a name="allocate"></a>Ccrtallocator:: Allocate  
  Rufen Sie diese statische Funktion auf, um Arbeitsspeicher zu belegen.  
   
 ```
@@ -81,7 +85,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Hinweise  
  Belegt Arbeitsspeicher. Finden Sie unter [Malloc](../../c-runtime-library/reference/malloc.md) für weitere Details.  
   
-##  <a name="a-namefreea--ccrtallocatorfree"></a><a name="free"></a>Ccrtallocator:: Free  
+##  <a name="free"></a>Ccrtallocator:: Free  
  Rufen Sie diese statischen Funktion um Arbeitsspeicher freizugeben.  
   
 ```
@@ -95,7 +99,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt den Arbeitsspeicher frei. Finden Sie unter [kostenlose](../../c-runtime-library/reference/free.md) für weitere Details.  
   
-##  <a name="a-namereallocatea--ccrtallocatorreallocate"></a><a name="reallocate"></a>CCRTAllocator::Reallocate  
+##  <a name="reallocate"></a>CCRTAllocator::Reallocate  
  Rufen Sie diese statischen Funktion auf, um Arbeitsspeicher neu zuzuordnen.  
   
 ```

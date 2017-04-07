@@ -150,7 +150,7 @@ public:
   
  **Namespace:** std  
   
-##  <a name="a-namefunctionassigna--functionassign"></a><a name="function__assign"></a> function::assign  
+##  <a name="function__assign"></a> function::assign  
  Weist ein aufrufbares Objekt diesem Funktionsobjekt zu.  
   
 ```  
@@ -178,7 +178,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>Hinweise  
  Die Memberfunktionen ersetzen jeweils das von `*this` gehaltene `callable object` durch ein aufrufbares Objekt, das als `operand` übergeben wurde. Beide weisen Speicher mit dem Zuweisungsobjekt `Ax` zu.  
   
-##  <a name="a-namefunctionfunctiona--functionfunction"></a><a name="function__function"></a> function::function  
+##  <a name="function__function"></a> function::function  
  Konstruiert einen Wrapper, der entweder leer ist oder ein aufrufbares Objekt eines willkürlichen Typs mit einer festen Signatur speichert.  
   
 ```  
@@ -201,7 +201,7 @@ template <class Fx, class Alloc>
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` right`  
+ `right`  
  Das zu kopierende Funktionsobjekt.  
   
  `Fx`  
@@ -292,7 +292,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="a-namefunctionoperatorunspecifieda--functionoperator-unspecified"></a><a name="function__operator_unspecified"></a> function::operator unspecified  
+##  <a name="function__operator_unspecified"></a> function::operator unspecified  
  Prüft, ob ein gespeichertes aufrufbares Objekt existiert.  
   
 ```  
@@ -332,7 +332,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="a-namefunctionoperatora--functionoperator"></a><a name="function__operator__"></a> function::operator()  
+##  <a name="function__operator__"></a> function::operator()  
  Ruf ein aufrufbares Objekt auf.  
   
 ```  
@@ -380,7 +380,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionoperatoreqa--functionoperator"></a><a name="function__operator_eq"></a> function::operator=  
+##  <a name="function__operator_eq"></a> function::operator=  
  Ersetzt das gespeicherte aufrufbare Objekt.  
   
 ```  
@@ -459,7 +459,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionresulttypea--functionresulttype"></a><a name="function__result_type"></a> function::result_type  
+##  <a name="function__result_type"></a> function::result_type  
  Der Rückgabetyp des gespeicherten aufrufbaren Objekts.  
   
 ```  
@@ -499,7 +499,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionswapa--functionswap"></a><a name="function__swap"></a> function::swap  
+##  <a name="function__swap"></a> function::swap  
  Tauscht zwei aufrufbare Objekte miteinander.  
   
 ```  
@@ -555,7 +555,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctiontargeta--functiontarget"></a><a name="function__target"></a> function::target  
+##  <a name="function__target"></a> function::target  
  Prüft, ob das gespeicherte aufrufbare Objekt wie festgelegt aufrufbar ist.  
   
 ```  
@@ -614,7 +614,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="a-namefunctiontargettypea--functiontargettype"></a><a name="function__target_type"></a> function::target_type  
+##  <a name="function__target_type"></a> function::target_type  
  Ruft Typinformationen für das aufrufbare Objekt ab.  
   
 ```  

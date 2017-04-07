@@ -10,8 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAtlFile
-- ATL::CAtlFile
-- ATL.CAtlFile
+- ATLFILE/ATL::CAtlFile
+- ATLFILE/ATL::CAtlFile::CAtlFile
+- ATLFILE/ATL::CAtlFile::Create
+- ATLFILE/ATL::CAtlFile::Flush
+- ATLFILE/ATL::CAtlFile::GetOverlappedResult
+- ATLFILE/ATL::CAtlFile::GetPosition
+- ATLFILE/ATL::CAtlFile::GetSize
+- ATLFILE/ATL::CAtlFile::LockRange
+- ATLFILE/ATL::CAtlFile::Read
+- ATLFILE/ATL::CAtlFile::Seek
+- ATLFILE/ATL::CAtlFile::SetSize
+- ATLFILE/ATL::CAtlFile::UnlockRange
+- ATLFILE/ATL::CAtlFile::Write
+- ATLFILE/ATL::CAtlFile::m_pTM
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +106,7 @@ class CAtlFile : public CHandle
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlfile.h  
   
-##  <a name="a-namecatlfilea--catlfilecatlfile"></a><a name="catlfile"></a>CAtlFile::CAtlFile  
+##  <a name="catlfile"></a>CAtlFile::CAtlFile  
  Der Konstruktor.  
   
 ```
@@ -117,7 +129,7 @@ explicit CAtlFile(HANDLE hFile) throw();
 ### <a name="remarks"></a>Hinweise  
  Der Kopierkonstruktor überträgt den Besitz des Dateihandles aus dem ursprünglichen `CAtlFile` Objekt, das das neu erstellte Objekt.  
   
-##  <a name="a-namecreatea--catlfilecreate"></a><a name="create"></a>CAtlFile::Create  
+##  <a name="create"></a>CAtlFile::Create  
  Rufen Sie diese Methode zum Erstellen oder Öffnen einer Datei.  
   
 ```
@@ -159,7 +171,7 @@ HRESULT Create(
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) erstellen oder öffnen die Datei.  
   
-##  <a name="a-nameflusha--catlfileflush"></a><a name="flush"></a>CAtlFile::Flush  
+##  <a name="flush"></a>CAtlFile::Flush  
  Rufen Sie diese Methode, um den Puffer für die Datei löschen und dazu führen, dass alle gepufferte Daten in die Datei geschrieben werden.  
   
 ```
@@ -172,7 +184,7 @@ HRESULT Flush() throw();
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) gepufferte Daten auf die Datei zu speichern.  
   
-##  <a name="a-namegetoverlappedresulta--catlfilegetoverlappedresult"></a><a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
  Rufen Sie diese Methode zum Abrufen der Ergebnisse eines überlappenden Vorgangs für die Datei.  
   
 ```
@@ -198,7 +210,7 @@ HRESULT GetOverlappedResult(
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) zum Abrufen der Ergebnisse eines überlappenden Vorgangs für die Datei.  
   
-##  <a name="a-namegetpositiona--catlfilegetposition"></a><a name="getposition"></a>CAtlFile::GetPosition  
+##  <a name="getposition"></a>CAtlFile::GetPosition  
  Rufen Sie diese Methode, um die aktuelle Dateiposition Zeiger zu erhalten.  
   
 ```
@@ -215,7 +227,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) die aktuelle Dateiposition Zeiger abgerufen.  
   
-##  <a name="a-namegetsizea--catlfilegetsize"></a><a name="getsize"></a>CAtlFile::GetSize  
+##  <a name="getsize"></a>CAtlFile::GetSize  
  Rufen Sie diese Methode, um die Größe in Bytes der Datei abrufen.  
   
 ```
@@ -232,7 +244,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) die Größe der Datei in Bytes ab.  
   
-##  <a name="a-namelockrangea--catlfilelockrange"></a><a name="lockrange"></a>CAtlFile::LockRange  
+##  <a name="lockrange"></a>CAtlFile::LockRange  
  Rufen Sie diese Methode, um einen Bereich in der Datei, um zu verhindern, dass andere Prozesse Zugriff zu sperren.  
   
 ```
@@ -252,7 +264,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [Sperrdatei](http://msdn.microsoft.com/library/windows/desktop/aa365202) , einen Bereich in der Datei zu sperren. Das Sperren von Bytes in einer Datei verhindert den Zugriff auf diese Bytes durch andere Prozesse. Sie können mehrere Bereiche einer Datei sperren, jedoch keine überlappenden Bereiche sind zulässig. Wenn Sie eine Region entsperren, [CAtlFile::UnlockRange](#unlockrange), der Bytebereich muss entspricht exakt der Region, die zuvor gesperrt war. `LockRange`nicht zusammen benachbarte Bereiche; Wenn zwei gesperrte Bereiche nebeneinander angeordnet sind, müssen Sie jeweils einzeln entsperren.  
   
-##  <a name="a-namemptma--catlfilemptm"></a><a name="m_ptm"></a>CAtlFile::m_pTM  
+##  <a name="m_ptm"></a>CAtlFile::m_pTM  
  Zeiger auf ein `CAtlTransactionManager` Objekt.  
   
 ```
@@ -261,7 +273,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namereada--catlfileread"></a><a name="read"></a>CAtlFile::Read  
+##  <a name="read"></a>CAtlFile::Read  
  Rufen Sie diese Methode zum Lesen von Daten aus einer Datei, die an der Position des Zeigers Datei ab.  
   
 ```
@@ -308,7 +320,7 @@ HRESULT Read(
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie die ersten drei Formen [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), das letzte [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) zum Lesen von Daten aus der Datei. Verwendung [CAtlFile::Seek](#seek) den Dateizeiger verschoben.  
   
-##  <a name="a-nameseeka--catlfileseek"></a><a name="seek"></a>CAtlFile::Seek  
+##  <a name="seek"></a>CAtlFile::Seek  
  Rufen Sie diese Methode, um den Dateizeiger der Datei zu verschieben.  
   
 ```
@@ -330,7 +342,7 @@ HRESULT Seek(
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) den Dateizeiger verschoben.  
   
-##  <a name="a-namesetsizea--catlfilesetsize"></a><a name="setsize"></a>CAtlFile::SetSize  
+##  <a name="setsize"></a>CAtlFile::SetSize  
  Rufen Sie diese Methode, um die Größe der Datei festgelegt.  
   
 ```
@@ -347,7 +359,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) und [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) die Größe der Datei festlegen. Bei der Rückgabe wird der Dateizeiger am Ende der Datei positioniert.  
   
-##  <a name="a-nameunlockrangea--catlfileunlockrange"></a><a name="unlockrange"></a>CAtlFile::UnlockRange  
+##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
  Rufen Sie diese Methode, um einen Bereich der Datei zu entsperren.  
   
 ```
@@ -367,7 +379,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>Hinweise  
  Aufrufe [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) um einen Bereich der Datei zu entsperren.  
   
-##  <a name="a-namewritea--catlfilewrite"></a><a name="write"></a>CAtlFile::Write  
+##  <a name="write"></a>CAtlFile::Write  
  Rufen Sie diese Methode, um Daten in der Datei, ab der Position des Zeigers Datei zu schreiben.  
   
 ```

@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSharedFile
+- AFXADV/CSharedFile
+- AFXADV/CSharedFile::CSharedFile
+- AFXADV/CSharedFile::Detach
+- AFXADV/CSharedFile::SetHandle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class CSharedFile : public CMemFile
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxadv.h  
   
-##  <a name="a-namecsharedfilea--csharedfilecsharedfile"></a><a name="csharedfile"></a>CSharedFile::CSharedFile  
+##  <a name="csharedfile"></a>CSharedFile::CSharedFile  
  Erstellt ein `CSharedFile` -Objekt und belegt Speicherplatz.  
   
 ```  
@@ -106,7 +110,7 @@ CSharedFile(
  `nGrowBytes`  
  Die Schrittweite Zuordnung für Arbeitsspeicher in Bytes.  
   
-##  <a name="a-namedetacha--csharedfiledetach"></a><a name="detach"></a>CSharedFile::Detach  
+##  <a name="detach"></a>CSharedFile::Detach  
  Rufen Sie diese Funktion zum Schließen der Speicherdatei und der Speicherblock trennen.  
   
 ```  
@@ -119,7 +123,7 @@ HGLOBAL Detach();
 ### <a name="remarks"></a>Hinweise  
  Sie können es erneut öffnen, wenn Sie aufrufen [SetHandle](#sethandle), verwenden das zurückgegebene Handle **trennen**.  
   
-##  <a name="a-namesethandlea--csharedfilesethandle"></a><a name="sethandle"></a>CSharedFile::SetHandle  
+##  <a name="sethandle"></a>CSharedFile::SetHandle  
  Mit dieser Funktion können Sie einen Block von globalen Arbeitsspeicher zum Anfügen der `CSharedFile` Objekt.  
   
 ```  

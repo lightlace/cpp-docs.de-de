@@ -10,7 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DSizeU
-- afxrendertarget/CD2DSizeU
+- AFXRENDERTARGET/CD2DSizeU
+- AFXRENDERTARGET/CD2DSizeU::CD2DSizeU
+- AFXRENDERTARGET/CD2DSizeU::IsNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="a-namecd2dsizeua--cd2dsizeucd2dsizeu"></a><a name="cd2dsizeu"></a>CD2DSizeU::CD2DSizeU  
+##  <a name="cd2dsizeu"></a>CD2DSizeU::CD2DSizeU  
  Erstellt ein CD2DSizeU-Objekt aus CSize-Objekt.  
   
 ```  
@@ -101,7 +103,7 @@ CD2DSizeU(
  `cy`  
  Quelle Höhe  
   
-##  <a name="a-nameisnulla--cd2dsizeuisnull"></a><a name="isnull"></a>CD2DSizeU::IsNull  
+##  <a name="isnull"></a>CD2DSizeU::IsNull  
  Gibt einen booleschen Wert, der angibt, ob ein Ausdruck keine gültigen Daten (Null) enthält.  
   
 ```  
@@ -111,7 +113,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn die Breite und Höhe leer sind. andernfalls FALSE.  
   
-##  <a name="a-nameoperatorcsizea--cd2dsizeuoperator-csize"></a><a name="operator_csize"></a>CD2DSizeU::Operator CSize  
+##  <a name="operator_csize"></a>CD2DSizeU::Operator CSize  
  Konvertiert CD2DSizeU in CSize-Objekt.  
   
 ```  

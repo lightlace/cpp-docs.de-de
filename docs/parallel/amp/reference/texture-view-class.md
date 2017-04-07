@@ -8,6 +8,18 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- texture_view
+- AMP_GRAPHICS/texture_view
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::texture_view
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_alpha
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_blue
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_green
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_red
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::get
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::sample
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::set
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
@@ -30,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7d3206aea6a6f1e3033e157b3b99a6b3486cb2ac
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4896b3ee55a5955c33e1c2652eb73851e4ec5a64
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="textureview-class"></a>texture_view-Klasse
@@ -41,23 +53,16 @@ Stellt einer Textur Lese- und Schreibzugriff zur Verfügung. `texture_view` kann
 ## <a name="syntax"></a>Syntax  
   
 ```  
-template <
-    typename value_type,  
-    int _Rank  
->  
+template<typename value_type,int _Rank>  
 class texture_view;  
  
-template <
-    typename value_type,  
-    int _Rank  
->  
-class texture_view : public details::_Texture_base<value_type, _Rank>;  
+template<typename value_type, int _Rank>  
+class texture_view 
+   : public details::_Texture_base<value_type, _Rank>;  
  
-template <
-    typename value_type,  
-    int _Rank  
->  
-class texture_view<const value_type, _Rank> : public details::_Texture_base<value_type, _Rank>;  
+template<typename value_type, int _Rank>  
+class texture_view<const value_type, _Rank> 
+   : public details::_Texture_base<value_type, _Rank>;  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -88,27 +93,27 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Gather_alpha-Methode](#gather_alpha)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (w)-Komponenten der vier geprüften Texel zurück.|  
-|[Gather_blue-Methode](#gather_blue)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (z)-Komponenten der vier geprüften Texel zurück.|  
-|[Gather_green-Methode](#gather_green)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die grünen (y)-Komponenten der vier geprüften Texel zurück.|  
-|[Gather_red-Methode](#gather_red)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die roten (x)-Komponenten der vier geprüften Texel zurück.|  
-|[Get-Methode](#get)|Überladen. Ruft den Elementwert durch Index ab.|  
-|[Beispiel-Methode](#sample)|Überladen. Prüft die Textur an den festgelegten Koordinaten und den Detailgrad mithilfe der angegebenen Samplingkonfiguration.|  
-|[Set-Methode](#set)|Legt den Wert eines Elements mithilfe des Index fest.|  
+|[gather_alpha](#gather_alpha)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (w)-Komponenten der vier geprüften Texel zurück.|  
+|[gather_blue](#gather_blue)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (z)-Komponenten der vier geprüften Texel zurück.|  
+|[gather_green](#gather_green)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die grünen (y)-Komponenten der vier geprüften Texel zurück.|  
+|[gather_red](#gather_red)|Überladen. Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die roten (x)-Komponenten der vier geprüften Texel zurück.|  
+|[get](#get)|Überladen. Ruft den Elementwert durch Index ab.|  
+|[Beispiel](#sample)|Überladen. Prüft die Textur an den festgelegten Koordinaten und den Detailgrad mithilfe der angegebenen Samplingkonfiguration.|  
+|[set](#set)|Legt den Wert eines Elements mithilfe des Index fest.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Operator()-Operator](#operator__)|Überladen. Ruft den Elementwert durch Index ab.|  
-|[Operator []-Operator](#operator_at)|Überladen. Ruft den Elementwert durch Index ab.|  
-|[Operator =-Operator](#operator_eq)|Überladen. Zuweisungsoperator.|  
+|[Operator()](#operator_call)|Überladen. Ruft den Elementwert durch Index ab.|  
+|[Operator]](#operator_at)|Überladen. Ruft den Elementwert durch Index ab.|  
+|[operator=](#operator_eq)|Überladen. Zuweisungsoperator.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Value_type-Datenmember](#value_type)|Der Werttyp der Elemente des `texture_view`-Objekts.|  
+|[value_type](#value_type)|Der Werttyp der Elemente des `texture_view`-Objekts.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `_Texture_base`  
@@ -120,7 +125,7 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="a-namedtora-textureview"></a><a name="dtor"></a>~ texture_view-Objekts 
+##  <a name="dtor"></a>~ texture_view-Objekts 
 
  Zerstört die `texture_view`-Instanz.  
   
@@ -128,7 +133,7 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
 ~texture_view() restrict(amp, cpu);
 ```  
   
-##  <a name="a-namectora-textureview"></a><a name="ctor"></a>texture_view-Objekts 
+##  <a name="ctor"></a>texture_view-Objekts 
 
  Erstellt eine `texture_view`-Instanz.  
   
@@ -190,7 +195,7 @@ texture_view(// [7] copy constructor
  `_Mip_levels`  
  Die Anzahl von MipMap-Ebenen, die über das `texture_view`-Objekt verfügbar sind.  
   
-##  <a name="a-namegatherreda-gatherred"></a><a name="gather_red"></a>gather_red 
+##  <a name="gather_red"></a>gather_red 
 
  Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die roten (x)-Komponenten der vier geprüften Texel zurück.  
   
@@ -220,7 +225,7 @@ const gather_return_type gather_red(
 ### <a name="return-value"></a>Rückgabewert  
  Ein kurzer Vektor des Rangs 4, der die rote (x)-Komponente der 4 geprüften Texelwerte enthält.  
   
-##  <a name="a-namegathergreena-gathergreen"></a><a name="gather_green"></a>gather_green 
+##  <a name="gather_green"></a>gather_green 
 
  Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die grünen (y)-Komponenten der vier geprüften Texel zurück.  
   
@@ -250,7 +255,7 @@ const gather_return_type gather_green(
 ### <a name="return-value"></a>Rückgabewert  
  Ein kurzer Vektor des Rangs 4, der die grüne (y)-Komponente der 4 geprüften Texelwerte enthält.  
   
-##  <a name="a-namegatherbluea-gatherblue"></a><a name="gather_blue"></a>gather_blue 
+##  <a name="gather_blue"></a>gather_blue 
 
  Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (z)-Komponenten der vier geprüften Texel zurück.  
   
@@ -280,7 +285,7 @@ const gather_return_type gather_blue(
 ### <a name="return-value"></a>Rückgabewert  
  Ein kurzer Vektor des Rangs 4, der die rote (x)-Komponente der 4 geprüften Texelwerte enthält.  
   
-##  <a name="a-namegatheralphaa-gatheralpha"></a><a name="gather_alpha"></a>gather_alpha 
+##  <a name="gather_alpha"></a>gather_alpha 
 
  Prüft die Textur an den angegebenen Koordinaten mithilfe der angegebenen Samplingkonfiguration und gibt die blauen (w)-Komponenten der vier geprüften Texel zurück.  
   
@@ -310,7 +315,7 @@ const gather_return_type gather_alpha(
 ### <a name="return-value"></a>Rückgabewert  
  Ein kurzer Vektor des Rangs 4, der die Alpha-(w)-Komponente der 4 geprüften Texelwerte enthält.  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>Erhalten 
+##  <a name="get"></a>Erhalten 
 
  Ruft den Wert des Elements am angegebenen Index ab.  
   
@@ -334,7 +339,7 @@ value_type get(
 ### <a name="return-value"></a>Rückgabewert  
  Der Wert des Elements.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a>Operator = 
 
  Weist dieser `texture_view`-Instanz eine Ansicht der gleichen Textur wie die angegebene `texture_view` zu.  
   
@@ -362,7 +367,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf diese `texture_view`-Instanz.  
   
-##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>Operator] 
+##  <a name="operator_at"></a>Operator] 
 
  Gibt den Elementwert durch Index zurück.  
   
@@ -389,7 +394,7 @@ value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>Rückgabewert  
  Der durch `_Index` indizierte Elementwert.  
   
-##  <a name="a-nameoperatora-operator"></a><a name="operator__"></a>Operator() 
+##  <a name="operator_call"></a>Operator() 
 
  Gibt den Elementwert durch Index zurück.  
   
@@ -447,7 +452,7 @@ value_type operator() (
 ### <a name="return-value"></a>Rückgabewert  
  Der durch `_Index` indizierte Elementwert.  
   
-##  <a name="a-namesamplea-sample"></a><a name="sample"></a>Beispiel 
+##  <a name="sample"></a>Beispiel 
 
  Prüft die Textur an den festgelegten Koordinaten und den Detailgrad mithilfe der angegebenen Samplingkonfiguration.  
   
@@ -486,7 +491,7 @@ value_type sample(
 ### <a name="return-value"></a>Rückgabewert  
  Der interpolierte Beispielwert.  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>Festlegen 
+##  <a name="set"></a>Festlegen 
 
  Legt den Wert des Elements am angegebenen Index auf den angegebenen Wert fest.  
   
@@ -503,7 +508,7 @@ void set(
  `value`  
  Der Wert, auf den das Element festgelegt werden soll.  
   
-##  <a name="a-namevaluetypea-valuetype"></a><a name="value_type"></a>Werttyp 
+##  <a name="value_type"></a>Werttyp 
 
  Der Werttyp der Elemente des texture_view-Objekts.  
   
@@ -512,5 +517,5 @@ typedef typename const value_type value_type;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Concurrency:: Graphics-Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
 

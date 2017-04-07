@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDataPathProperty
+- AFXCTL/CDataPathProperty
+- AFXCTL/CDataPathProperty::CDataPathProperty
+- AFXCTL/CDataPathProperty::GetControl
+- AFXCTL/CDataPathProperty::GetPath
+- AFXCTL/CDataPathProperty::Open
+- AFXCTL/CDataPathProperty::ResetData
+- AFXCTL/CDataPathProperty::SetControl
+- AFXCTL/CDataPathProperty::SetPath
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +105,7 @@ class CDataPathProperty : public CAsyncMonikerFile
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxctl.h  
   
-##  <a name="a-namecdatapathpropertya--cdatapathpropertycdatapathproperty"></a><a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
+##  <a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
  Erstellt ein `CDataPathProperty`-Objekt.  
   
 ```  
@@ -115,7 +123,7 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ### <a name="remarks"></a>Hinweise  
  Die `COleControl` Objekt verweist `pControl` werden **öffnen** und von abgeleiteten Klassen abgerufen. Wenn `pControl` ist **NULL**, das Steuerelement mit **öffnen** sollte festgelegt werden, mit `SetControl`. Wenn `lpszPath` ist **NULL**, können Sie den Pfad durch übergeben **öffnen** oder legen Sie sie mit `SetPath`.  
   
-##  <a name="a-namegetcontrola--cdatapathpropertygetcontrol"></a><a name="getcontrol"></a>CDataPathProperty::GetControl  
+##  <a name="getcontrol"></a>CDataPathProperty::GetControl  
  Rufen Sie diese Memberfunktion zum Abrufen der `COleControl` zugeordnete Objekt der `CDataPathProperty` Objekt.  
   
 ```  
@@ -125,7 +133,7 @@ COleControl* GetControl();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt ein Zeiger auf das OLE-Steuerelement zugeordnete der `CDataPathProperty` Objekt. **NULL** , wenn kein Steuerelement zugeordnet wird.  
   
-##  <a name="a-namegetpatha--cdatapathpropertygetpath"></a><a name="getpath"></a>CDataPathProperty::GetPath  
+##  <a name="getpath"></a>CDataPathProperty::GetPath  
  Rufen Sie diese Memberfunktion zum Abrufen des Pfads festgelegt, wenn die `CDataPathProperty` Objekt erstellt wurde, oder im angegebenen **öffnen**, oder in einem vorherigen Aufruf angegebenen der `SetPath` Member-Funktion.  
   
 ```  
@@ -135,7 +143,7 @@ CString GetPath() const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Pfadnamen für die Eigenschaft selbst zurück. Kann leer sein, wenn kein Pfad angegeben wurde.  
   
-##  <a name="a-nameopena--cdatapathpropertyopen"></a><a name="open"></a>CDataPathProperty::Open  
+##  <a name="open"></a>CDataPathProperty::Open  
  Rufen Sie diese Memberfunktion zum Laden der asynchronen-Eigenschaft für das zugeordnete Steuerelement zu initiieren.  
   
 ```  
@@ -179,7 +187,7 @@ virtual BOOL Open(CFileException* pError = NULL);
   
  Alle Überladungen der [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) können auch von `CDataPathProperty`.  
   
-##  <a name="a-nameresetdataa--cdatapathpropertyresetdata"></a><a name="resetdata"></a>CDataPathProperty::ResetData  
+##  <a name="resetdata"></a>CDataPathProperty::ResetData  
  Rufen Sie diese Funktion zum Abrufen des `CAsyncMonikerFile::OnDataAvailable` auf dem Container zu benachrichtigen, dass die Steuerelementeigenschaften geändert haben, und alle Informationen, die asynchron geladen nicht mehr nützlich ist.  
   
 ```  
@@ -189,7 +197,7 @@ virtual void ResetData();
 ### <a name="remarks"></a>Hinweise  
  Öffnen sollte neu gestartet werden. Abgeleitete Klassen können diese Funktion für unterschiedliche Standardwerte überschreiben.  
   
-##  <a name="a-namesetcontrola--cdatapathpropertysetcontrol"></a><a name="setcontrol"></a>CDataPathProperty::SetControl  
+##  <a name="setcontrol"></a>CDataPathProperty::SetControl  
  Rufen Sie diese Memberfunktion zum Zuordnen eines asynchronen OLE-Steuerelements mit der `CDataPathProperty` Objekt.  
   
 ```  
@@ -200,7 +208,7 @@ void SetControl(COleControl* pControl);
  `pControl`  
  Ein Zeiger auf die asynchrone OLE-Steuerelement die Eigenschaft zugeordnet werden soll.  
   
-##  <a name="a-namesetpatha--cdatapathpropertysetpath"></a><a name="setpath"></a>CDataPathProperty::SetPath  
+##  <a name="setpath"></a>CDataPathProperty::SetPath  
  Rufen Sie diese Memberfunktion um den Pfadnamen der Eigenschaft festzulegen.  
   
 ```  

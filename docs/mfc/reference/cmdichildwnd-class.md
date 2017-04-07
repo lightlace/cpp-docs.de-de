@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDIChildWnd
+- AFXWIN/CMDIChildWnd
+- AFXWIN/CMDIChildWnd::CMDIChildWnd
+- AFXWIN/CMDIChildWnd::Create
+- AFXWIN/CMDIChildWnd::GetMDIFrame
+- AFXWIN/CMDIChildWnd::MDIActivate
+- AFXWIN/CMDIChildWnd::MDIDestroy
+- AFXWIN/CMDIChildWnd::MDIMaximize
+- AFXWIN/CMDIChildWnd::MDIRestore
+- AFXWIN/CMDIChildWnd::SetHandles
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,7 +127,7 @@ class CMDIChildWnd : public CFrameWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-namecmdichildwnda--cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd  
+##  <a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd  
  Aufruf zum Erstellen einer `CMDIChildWnd` Objekt.  
   
 ```  
@@ -131,7 +140,7 @@ CMDIChildWnd();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CMDIChildWnd::Create](#create).  
   
-##  <a name="a-namecreatea--cmdichildwndcreate"></a><a name="create"></a>CMDIChildWnd::Create  
+##  <a name="create"></a>CMDIChildWnd::Create  
  Rufen Sie diese Memberfunktion zum untergeordneten Windows-MDI-Fenster erstellen, und fügen Sie es auf die `CMDIChildWnd` Objekt.  
   
 ```  
@@ -183,7 +192,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFCWindowing&#9;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]  
   
-##  <a name="a-namegetmdiframea--cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a>CMDIChildWnd::GetMDIFrame  
+##  <a name="getmdiframe"></a>CMDIChildWnd::GetMDIFrame  
  Rufen Sie diese Funktion, um den übergeordneten MDI-Frame zurück.  
   
 ```  
@@ -199,7 +208,7 @@ CMDIFrameWnd* GetMDIFrame();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).  
   
-##  <a name="a-namemdiactivatea--cmdichildwndmdiactivate"></a><a name="mdiactivate"></a>CMDIChildWnd::MDIActivate  
+##  <a name="mdiactivate"></a>CMDIChildWnd::MDIActivate  
  Rufen Sie diese Memberfunktion, um ein untergeordnetes MDI-Fenster unabhängig von der MDI-Rahmenfenster zu aktivieren.  
   
 ```  
@@ -212,7 +221,7 @@ void MDIActivate();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).  
   
-##  <a name="a-namemdidestroya--cmdichildwndmdidestroy"></a><a name="mdidestroy"></a>CMDIChildWnd::MDIDestroy  
+##  <a name="mdidestroy"></a>CMDIChildWnd::MDIDestroy  
  Rufen Sie diese Memberfunktion, um ein untergeordnetes MDI-Fenster zu zerstören.  
   
 ```  
@@ -225,7 +234,7 @@ void MDIDestroy();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing&#10;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]  
   
-##  <a name="a-namemdimaximizea--cmdichildwndmdimaximize"></a><a name="mdimaximize"></a>CMDIChildWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>CMDIChildWnd::MDIMaximize  
  Rufen Sie diese Memberfunktion, um ein untergeordnetes MDI-Fenster zu maximieren.  
   
 ```  
@@ -238,7 +247,7 @@ void MDIMaximize();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing&#11;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]  
   
-##  <a name="a-namemdirestorea--cmdichildwndmdirestore"></a><a name="mdirestore"></a>CMDIChildWnd::MDIRestore  
+##  <a name="mdirestore"></a>CMDIChildWnd::MDIRestore  
  Rufen Sie diese Memberfunktion, um ein untergeordnetes MDI-Fenster von maximierten oder minimierten Größe wiederherzustellen.  
   
 ```  
@@ -248,7 +257,7 @@ void MDIRestore();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing&#12;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]  
   
-##  <a name="a-namesethandlesa--cmdichildwndsethandles"></a><a name="sethandles"></a>CMDIChildWnd::SetHandles  
+##  <a name="sethandles"></a>CMDIChildWnd::SetHandles  
  Legt die Handles für Menüs und Accelerator Ressourcen fest.  
   
 ```  

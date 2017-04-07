@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
+- AFXEXT/CBitmapButton
+- AFXEXT/CBitmapButton::CBitmapButton
+- AFXEXT/CBitmapButton::AutoLoad
+- AFXEXT/CBitmapButton::LoadBitmaps
+- AFXEXT/CBitmapButton::SizeToContent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +133,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxext.h  
   
-##  <a name="a-nameautoloada--cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmapButton:: AutoLoad  
+##  <a name="autoload"></a>CBitmapButton:: AutoLoad  
  Ordnet eine Schaltfläche in einem Dialogfeld mit einem Objekt der `CBitmapButton` -Klasse lädt die Bitmap(s) nach Namen und passt die Größe der Schaltfläche, um die Bitmap anpassen.  
   
 ```  
@@ -153,7 +158,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog&#75;](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="a-namecbitmapbuttona--cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
  Erstellt ein `CBitmapButton`-Objekt.  
   
 ```  
@@ -166,7 +171,7 @@ CBitmapButton();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog&#57;](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="a-nameloadbitmapsa--cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
  Wenn Sie laden Bitmapbilder identifiziert, deren Namen oder die ID-Nummern, oder wenn Sie nicht verwenden möchten, verwenden Sie diese Funktion der `AutoLoad` Funktion, da z. B. eine Bitmapschaltfläche erstellen, die nicht Teil eines Dialogfelds.  
   
 ```  
@@ -215,7 +220,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog&#58;](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="a-namesizetocontenta--cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
  Rufen Sie diese Funktion, um eine Bitmapschaltfläche, um die Größe der Bitmap für die Größe zu ändern.  
   
 ```  

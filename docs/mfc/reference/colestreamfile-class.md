@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
+- AFXOLE/COleStreamFile
+- AFXOLE/COleStreamFile::COleStreamFile
+- AFXOLE/COleStreamFile::Attach
+- AFXOLE/COleStreamFile::CreateMemoryStream
+- AFXOLE/COleStreamFile::CreateStream
+- AFXOLE/COleStreamFile::Detach
+- AFXOLE/COleStreamFile::GetStream
+- AFXOLE/COleStreamFile::OpenStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +100,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="a-nameattacha--colestreamfileattach"></a><a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>COleStreamFile::Attach  
  Ordnet den angegebenen OLE-Stream mit der `COleStreamFile` Objekt.  
   
 ```  
@@ -108,7 +116,7 @@ void Attach(LPSTREAM lpStream);
   
  Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecolestreamfilea--colestreamfilecolestreamfile"></a><a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
  Erstellt ein `COleStreamFile`-Objekt.  
   
 ```  
@@ -124,7 +132,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatememorystreama--colestreamfilecreatememorystream"></a><a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
  Sichere erstellt einen neuen Stream nicht genügend globale, gemeinsam genutzte Arbeitsspeicher, in dem ein Fehler für eine normale, erwartete Bedingung ist.  
   
 ```  
@@ -143,7 +151,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  Weitere Informationen finden Sie unter [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatestreama--colestreamfilecreatestream"></a><a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>COleStreamFile::CreateStream  
  Sichere erstellt einen neuen Stream im angegebenen Speicherobjekt, in dem ein Fehler für eine normale, erwartete Bedingung ist.  
   
 ```  
@@ -175,7 +183,7 @@ BOOL CreateStream(
   
  Weitere Informationen finden Sie unter [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedetacha--colestreamfiledetach"></a><a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>COleStreamFile::Detach  
  Hebt die Zuordnung des Streams, aus das Objekt ohne diesen zu schließen.  
   
 ```  
@@ -190,7 +198,7 @@ LPSTREAM Detach();
   
  Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetstreama--colestreamfilegetstream"></a><a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>COleStreamFile::GetStream  
  Rufen Sie diese Funktion, um einen Zeiger auf den aktuellen Stream zurückzugeben.  
   
 ```  
@@ -200,7 +208,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den aktuellen Stream-Schnittstelle ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="a-nameopenstreama--colestreamfileopenstream"></a><a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>COleStreamFile::OpenStream  
  Öffnet einen vorhandenen Stream.  
   
 ```  

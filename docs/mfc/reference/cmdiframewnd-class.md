@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd::CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd::CreateClient
+- AFXWIN/CMDIFrameWnd::CreateNewChild
+- AFXWIN/CMDIFrameWnd::GetWindowMenuPopup
+- AFXWIN/CMDIFrameWnd::MDIActivate
+- AFXWIN/CMDIFrameWnd::MDICascade
+- AFXWIN/CMDIFrameWnd::MDIGetActive
+- AFXWIN/CMDIFrameWnd::MDIIconArrange
+- AFXWIN/CMDIFrameWnd::MDIMaximize
+- AFXWIN/CMDIFrameWnd::MDINext
+- AFXWIN/CMDIFrameWnd::MDIPrev
+- AFXWIN/CMDIFrameWnd::MDIRestore
+- AFXWIN/CMDIFrameWnd::MDISetMenu
+- AFXWIN/CMDIFrameWnd::MDITile
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -126,7 +141,7 @@ class CMDIFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-namecmdiframewnda--cmdiframewndcmdiframewnd"></a><a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
+##  <a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
  Erstellt ein `CMDIFrameWnd`-Objekt.  
   
 ```  
@@ -139,7 +154,7 @@ CMDIFrameWnd();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing&#13;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
   
-##  <a name="a-namecreateclienta--cmdiframewndcreateclient"></a><a name="createclient"></a>CMDIFrameWnd::CreateClient  
+##  <a name="createclient"></a>CMDIFrameWnd::CreateClient  
  Erstellt das MDI-Client, der verwaltet die `CMDIChildWnd` Objekte.  
   
 ```  
@@ -164,7 +179,7 @@ virtual BOOL CreateClient(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing&14;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]  
   
-##  <a name="a-namecreatenewchilda--cmdiframewndcreatenewchild"></a><a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
+##  <a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
  Erstellt ein neues untergeordnetes Fenster.  
   
 ```  
@@ -196,7 +211,7 @@ CMDIChildWnd* CreateNewChild(
   
  In diesem Beispiel ist ein Auszug aus dem Knowledge Base-Artikel Q201045, "So wird's gemacht: eine nicht-Dokument/Ansicht-MDI-Anwendung mehrere Fenstertypen hinzugefügt." Knowledge Base-Artikeln finden Sie in der MSDN Library Visual Studio-Dokumentation oder unter [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="a-namegetwindowmenupopupa--cmdiframewndgetwindowmenupopup"></a><a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup  
+##  <a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup  
  Rufen Sie diese Memberfunktion zum Abrufen eines Handles für den aktuellen Popup-Menü mit dem Namen "Window" (dem Popup-Menü mit Menüelementen für MDI-Fenster-Management).  
   
 ```  
@@ -218,7 +233,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing Nr.&16;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_4.cpp)]  
   
-##  <a name="a-namemdiactivatea--cmdiframewndmdiactivate"></a><a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
+##  <a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
  Aktiviert einen anderen untergeordneten MDI-Fensters.  
   
 ```  
@@ -240,7 +255,7 @@ void MDIActivate(CWnd* pWndActivate);
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).  
   
-##  <a name="a-namemdicascadea--cmdiframewndmdicascade"></a><a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
+##  <a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
  Ordnet alle MDI-untergeordneten Fenster überlappend Format.  
   
 ```  
@@ -258,7 +273,7 @@ void MDICascade(int nType);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing&17;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]  
   
-##  <a name="a-namemdigetactivea--cmdiframewndmdigetactive"></a><a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
+##  <a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
  Ruft den aktuellen aktiven untergeordneten MDI-Fensters, zusammen mit einem Flag zur Angabe, ob das untergeordnete Fenster maximiert ist.  
   
 ```  
@@ -275,7 +290,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
   
-##  <a name="a-namemdiiconarrangea--cmdiframewndmdiiconarrange"></a><a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
+##  <a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
  Ordnet alle minimierten Dokument untergeordnete Fenster.  
   
 ```  
@@ -288,7 +303,7 @@ void MDIIconArrange();
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMDIFrameWnd::MDICascade](#mdicascade).  
   
-##  <a name="a-namemdimaximizea--cmdiframewndmdimaximize"></a><a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
  Maximiert die angegebenen untergeordneten MDI-Fensters.  
   
 ```  
@@ -307,7 +322,7 @@ void MDIMaximize(CWnd* pWnd);
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
   
-##  <a name="a-namemdinexta--cmdiframewndmdinext"></a><a name="mdinext"></a>CMDIFrameWnd::MDINext  
+##  <a name="mdinext"></a>CMDIFrameWnd::MDINext  
  Aktiviert das untergeordnete Fenster unmittelbar hinter dem derzeit aktiven untergeordneten Fenster, und fügt das derzeit aktiven untergeordneten Fenster hinter alle anderen untergeordneten Fenster.  
   
 ```  
@@ -320,7 +335,7 @@ void MDINext();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing&18;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]  
   
-##  <a name="a-namemdipreva--cmdiframewndmdiprev"></a><a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
+##  <a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
  Aktiviert das vorherige untergeordnete Fenster, und der derzeit aktiven untergeordneten Fenster unmittelbar hinter ihm platziert.  
   
 ```  
@@ -330,7 +345,7 @@ void MDIPrev();
 ### <a name="remarks"></a>Hinweise  
  Wenn das momentan aktive untergeordnete MDI-Fenster maximiert wird, wird die Memberfunktion stellt den untergeordneten und maximiert die neu aktivierte untergeordneten.  
   
-##  <a name="a-namemdirestorea--cmdiframewndmdirestore"></a><a name="mdirestore"></a>CMDIFrameWnd::MDIRestore  
+##  <a name="mdirestore"></a>CMDIFrameWnd::MDIRestore  
  Ein untergeordnetes MDI-Fenster wiederhergestellt von maximierten oder minimierten Größe.  
   
 ```  
@@ -344,7 +359,7 @@ void MDIRestore(CWnd* pWnd);
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMDIChildWnd::MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore).  
   
-##  <a name="a-namemdisetmenua--cmdiframewndmdisetmenu"></a><a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
+##  <a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
  Ersetzt das Menü ein MDI-Rahmenfenster und/oder im Popup-Menü "Fenster".  
   
 ```  
@@ -377,7 +392,7 @@ CMenu* MDISetMenu(
   
  [!code-cpp[NVC_MFCWindowing&20;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_8.cpp)]  
   
-##  <a name="a-namemditilea--cmdiframewndmditile"></a><a name="mditile"></a>CMDIFrameWnd::MDITile  
+##  <a name="mditile"></a>CMDIFrameWnd::MDITile  
  Ordnet alle untergeordneten Fenster in einem gekachelten Format.  
   
 ```  

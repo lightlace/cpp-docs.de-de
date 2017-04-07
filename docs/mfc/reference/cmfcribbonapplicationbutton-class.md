@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton::SetImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxRibbonBar.h  
   
-##  <a name="a-namecmfcribbonapplicationbuttona--cmfcribbonapplicationbuttoncmfcribbonapplicationbutton"></a><a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
+##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
  Erstellt und initialisiert ein [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) Objekt.  
   
 ```  
@@ -101,7 +104,7 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
 ### <a name="remarks"></a>Hinweise  
  Die Anwendungsschaltfläche Menüband ist eine spezielle Schaltfläche, die in der oberen linken Ecke des Anwendungsfensters befindet. Wenn ein Benutzer auf diese Schaltfläche klickt, wird die Anwendung öffnet ein Menü, das normalerweise allgemeine **Datei** Befehle, wie z. B. **öffnen**, **speichern**, und **beenden**.  
   
-##  <a name="a-namesetimagea--cmfcribbonapplicationbuttonsetimage"></a><a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
+##  <a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
  Die Schaltfläche ein Bild zugewiesen.  
   
 ```  

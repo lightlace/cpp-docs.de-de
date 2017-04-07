@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::network_link_registry
+- network_link_registry
+- AGENTS/concurrency::network_link_registry
+- AGENTS/concurrency::network_link_registry::add
+- AGENTS/concurrency::network_link_registry::begin
+- AGENTS/concurrency::network_link_registry::contains
+- AGENTS/concurrency::network_link_registry::count
+- AGENTS/concurrency::network_link_registry::remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8b39ab676db0072d279ee4058693769ef6f7eb3f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 28c13f1e2bf80624da3a7aba441944c051790d27
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry-Klasse
@@ -68,11 +74,11 @@ class network_link_registry;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Add-Methode](#add)|Ruft beim Überschreiben in einer abgeleiteten Klasse fügt einen Link zu der `network_link_registry` Objekt.|  
-|[Begin-Methode](#begin)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt einen Iterator auf das erste Element in der `network_link_registry` Objekt.|  
-|[Contains-Methode](#contains)|Sucht beim Überschreiben in einer abgeleiteten Klasse die `network_link_registry` -Objekt für einen angegebenen Block.|  
-|[Count-Methode](#count)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Anzahl der Elemente in der `network_link_registry` Objekt.|  
-|[Remove-Methode](#remove)|Ruft beim Überschreiben in einer abgeleiteten Klasse entfernt einen angegebenen Block aus der `network_link_registry` Objekt.|  
+|[add](#add)|Ruft beim Überschreiben in einer abgeleiteten Klasse fügt einen Link zu der `network_link_registry` Objekt.|  
+|[begin](#begin)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt einen Iterator auf das erste Element in der `network_link_registry` Objekt.|  
+|[enthält](#contains)|Sucht beim Überschreiben in einer abgeleiteten Klasse die `network_link_registry` -Objekt für einen angegebenen Block.|  
+|[count](#count)|Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Anzahl der Elemente in der `network_link_registry` Objekt.|  
+|[remove](#remove)|Ruft beim Überschreiben in einer abgeleiteten Klasse entfernt einen angegebenen Block aus der `network_link_registry` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `network link registry` ist für gleichzeitigen Zugriff nicht sicher.  
@@ -85,7 +91,7 @@ class network_link_registry;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-nameadda-add"></a><a name="add"></a>Hinzufügen 
+##  <a name="add"></a>Hinzufügen 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse fügt einen Link zu der `network_link_registry` Objekt.  
   
@@ -97,7 +103,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  Ein Zeiger auf einen Block, der hinzugefügt werden soll.  
   
-##  <a name="a-namebegina-begin"></a><a name="begin"></a>beginnen 
+##  <a name="begin"></a>beginnen 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse gibt einen Iterator auf das erste Element in der `network_link_registry` Objekt.  
   
@@ -111,7 +117,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>Hinweise  
  Der Endzustand des Iterators sind durch ein `NULL` Link.  
   
-##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>enthält 
+##  <a name="contains"></a>enthält 
 
  Sucht beim Überschreiben in einer abgeleiteten Klasse die `network_link_registry` -Objekt für einen angegebenen Block.  
   
@@ -126,7 +132,7 @@ virtual bool contains(_EType _Link) = 0;
 ### <a name="return-value"></a>Rückgabewert  
  `true`Wenn der Block gefunden wurde, `false` andernfalls.  
   
-##  <a name="a-namecounta-count"></a><a name="count"></a>Anzahl 
+##  <a name="count"></a>Anzahl 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die Anzahl der Elemente in der `network_link_registry` Objekt.  
   
@@ -137,7 +143,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Elemente in der `network_link_registry` Objekt.  
   
-##  <a name="a-nameremovea-remove"></a><a name="remove"></a>Entfernen 
+##  <a name="remove"></a>Entfernen 
 
  Ruft beim Überschreiben in einer abgeleiteten Klasse entfernt einen angegebenen Block aus der `network_link_registry` Objekt.  
   
@@ -155,5 +161,5 @@ virtual bool remove(_EType _Link) = 0;
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
  [Single_link_registry-Klasse](single-link-registry-class.md)   
- [Multi_link_registry-Klasse](multi-link-registry-class.md)
+ [multi_link_registry-Klasse](multi-link-registry-class.md)
 

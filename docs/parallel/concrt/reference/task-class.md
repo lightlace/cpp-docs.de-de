@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task
+- task
+- PPLTASKS/concurrency::task
+- PPLTASKS/concurrency::task::task
+- PPLTASKS/concurrency::task::get
+- PPLTASKS/concurrency::task::is_apartment_aware
+- PPLTASKS/concurrency::task::is_done
+- PPLTASKS/concurrency::task::scheduler
+- PPLTASKS/concurrency::task::then
+- PPLTASKS/concurrency::task::wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7bbe0445c59279423665cd7df4eb5972f23ecf78
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e6c568b0b6a5f07df51980e1e440f31482f45846
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="task-class-concurrency-runtime"></a>Aufgabenklasse (Concurrency Runtime)
@@ -73,26 +81,26 @@ class task;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Task-Konstruktor](#ctor)|Überladen. Erstellt ein `task`-Objekt.|  
+|[Aufgabe](#ctor)|Überladen. Erstellt ein `task`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Get-Methode](#get)|Überladen. Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf eines Tasks mit einem `result_type` von `void` keinen Wert zurück.|  
-|[Is_apartment_aware-Methode](#is_apartment_aware)|Bestimmt, ob der Task eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einem solchen Task abgeleitet wurde.|  
-|[Is_done-Methode](#is_done)|Bestimmt, ob die Aufgabe abgeschlossen wurde.|  
-|[Scheduler-Methode](#scheduler)|Gibt den Planer für diese Aufgabe zurück.|  
-|[Then-Methode](#then)|Überladen. Fügt dieser Aufgabe eine Fortsetzungsaufgabe hinzu.|  
-|[Wait-Methode](#wait)|Erwartet, dass diese Aufgabe einen Terminalzustand erreicht. Es ist möglich, dass das `wait`-Element den Task inline ausführt, wenn alle Taskabhängigkeiten erfüllt sind und er nicht bereits zur Ausführung durch einen Hintergrundworker aufgehoben wurde.|  
+|[get](#get)|Überladen. Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf eines Tasks mit einem `result_type` von `void` keinen Wert zurück.|  
+|[is_apartment_aware](#is_apartment_aware)|Bestimmt, ob der Task eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einem solchen Task abgeleitet wurde.|  
+|[is_done](#is_done)|Bestimmt, ob die Aufgabe abgeschlossen wurde.|  
+|[Scheduler](#scheduler)|Gibt den Planer für diese Aufgabe zurück.|  
+|[Klicken Sie dann](#then)|Überladen. Fügt dieser Aufgabe eine Fortsetzungsaufgabe hinzu.|  
+|[Warte](#wait)|Erwartet, dass diese Aufgabe einen Terminalzustand erreicht. Es ist möglich, dass das `wait`-Element den Task inline ausführt, wenn alle Taskabhängigkeiten erfüllt sind und er nicht bereits zur Ausführung durch einen Hintergrundworker aufgehoben wurde.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Operator! =-Operator](#operator_neq)|Überladen. Bestimmt, ob zwei `task`-Objekte unterschiedliche interne Prozesse darstellen.|  
-|[Operator =-Operator](#operator_eq)|Überladen. Ersetzt den Inhalt eines `task`-Objekts durch einen anderen.|  
-|[Operator ==-Operator](#operator_eq_eq)|Überladen. Bestimmt, ob zwei `task`-Objekte den gleichen internen Task darstellen.|  
+|[operator!=](#operator_neq)|Überladen. Bestimmt, ob zwei `task`-Objekte unterschiedliche interne Prozesse darstellen.|  
+|[operator=](#operator_eq)|Überladen. Ersetzt den Inhalt eines `task`-Objekts durch einen anderen.|  
+|[operator==](#operator_eq_eq)|Überladen. Bestimmt, ob zwei `task`-Objekte den gleichen internen Task darstellen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
@@ -105,7 +113,7 @@ class task;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>Erhalten 
+##  <a name="get"></a>Erhalten 
 
  Gibt das von dieser Aufgabe erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf eines Tasks mit einem `result_type` von `void` keinen Wert zurück.  
   
@@ -124,7 +132,7 @@ void get() const;
 > [!IMPORTANT]
 >  In einem [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] app, rufen Sie [Concurrency::task::wait](#wait) oder `get` ( `wait` Aufrufe `get`) im Code, der auf dem STA ausgeführt wird Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) , da diese Methoden den aktuellen Thread blockieren und die App reagiert. Sie können jedoch die `get`-Methode aufrufen, um das Ergebnis der vorangegangenen Aufgabe in einer aufgabenbasierten Fortsetzung zu erhalten, da das Ergebnis sofort verfügbar ist.  
   
-##  <a name="a-nameisapartmentawarea-isapartmentaware"></a><a name="is_apartment_aware"></a>is_apartment_aware 
+##  <a name="is_apartment_aware"></a>is_apartment_aware 
 
  Bestimmt, ob der Task eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einem solchen Task abgeleitet wurde.  
   
@@ -135,7 +143,7 @@ bool is_apartment_aware() const;
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die Aufgabe eine `IAsyncInfo`-Schnittstelle entpackt oder von einer solchen Aufgabe abgeleitet wird, andernfalls `false`.  
   
-##  <a name="a-nameisdonea--taskisdone-method-concurrency-runtime"></a><a name="is_done"></a>Task:: is_done Methode (Concurrency Runtime)  
+##  <a name="is_done"></a>Task:: is_done Methode (Concurrency Runtime)  
  Bestimmt, ob die Aufgabe abgeschlossen wurde.  
   
 ```
@@ -148,7 +156,7 @@ bool is_done() const;
 ### <a name="remarks"></a>Hinweise  
  Die Funktion gibt TRUE zurück, wenn die Aufgabe abgeschlossen oder abgebrochen wurde (mit oder ohne Benutzerausnahme).  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>Operator! = 
+##  <a name="operator_neq"></a>Operator! = 
 
  Bestimmt, ob zwei `task`-Objekte unterschiedliche interne Prozesse darstellen.  
   
@@ -164,7 +172,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die Objekte sich auf unterschiedliche zugrunde liegenden Aufgaben beziehen, und andernfalls `false`.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a>Operator = 
 
  Ersetzt den Inhalt eines `task`-Objekts durch einen anderen.  
   
@@ -183,7 +191,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>Hinweise  
  Da sich `task` wie ein intelligenter Zeiger verhält, stellt dieses `task`-Objekt nach einer Kopierzuweisung die gleiche Aufgabe dar wie `_Other`.  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>Operator == 
+##  <a name="operator_eq_eq"></a>Operator == 
 
  Bestimmt, ob zwei `task`-Objekte den gleichen internen Task darstellen.  
   
@@ -199,7 +207,7 @@ bool operator== (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die Objekte auf die gleiche zugrunde liegende Aufgabe verweisen, andernfalls `false`.  
   
-##  <a name="a-nameschedulera--taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a>Task:: Scheduler-Methode (Concurrency Runtime)  
+##  <a name="scheduler"></a>Task:: Scheduler-Methode (Concurrency Runtime)  
  Gibt den Planer für diese Aufgabe zurück.  
   
 ```
@@ -209,7 +217,7 @@ scheduler_ptr scheduler() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den Planer.  
   
-##  <a name="a-namectora-task"></a><a name="ctor"></a>Aufgabe 
+##  <a name="ctor"></a>Aufgabe 
 
  Erstellt ein `task`-Objekt.  
   
@@ -259,7 +267,7 @@ task(
   
  Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="a-namethena-then"></a><a name="then"></a>Klicken Sie dann 
+##  <a name="then"></a>Klicken Sie dann 
 
  Fügt dieser Aufgabe eine Fortsetzungsaufgabe hinzu.  
   
@@ -320,7 +328,7 @@ __declspec(
   
  Weitere Informationen zur Verwendung von aufgabenfortsetzungen für asynchrone Aufgaben finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>Warte 
+##  <a name="wait"></a>Warte 
 
  Erwartet, dass diese Aufgabe einen Terminalzustand erreicht. Es ist möglich, dass das `wait`-Element den Task inline ausführt, wenn alle Taskabhängigkeiten erfüllt sind und er nicht bereits zur Ausführung durch einen Hintergrundworker aufgehoben wurde.  
   

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
+- AFXEXT/CMetaFileDC
+- AFXEXT/CMetaFileDC::CMetaFileDC
+- AFXEXT/CMetaFileDC::Close
+- AFXEXT/CMetaFileDC::CloseEnhanced
+- AFXEXT/CMetaFileDC::Create
+- AFXEXT/CMetaFileDC::CreateEnhanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +100,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxext.h  
   
-##  <a name="a-nameclosea--cmetafiledcclose"></a><a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>CMetaFileDC::Close  
  Schließt den Gerätekontext Metadatei und erstellt ein Windows-Metadatei-Handle, die verwendet werden kann, mithilfe die Metadatei spielen die [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) Member-Funktion.  
   
 ```  
@@ -109,7 +115,7 @@ HMETAFILE Close();
   
  Löschen Sie die Metadatei nach der Verwendung durch Aufruf der Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) Funktion.  
   
-##  <a name="a-namecloseenhanceda--cmetafiledccloseenhanced"></a><a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
  Schließt eine EMF-Gerätekontext, und gibt ein Handle, das eine EMF-Datei identifiziert.  
   
 ```  
@@ -140,7 +146,7 @@ HENHMETAFILE CloseEnhanced();
   
  Wenn die Anwendung das EMF-Handle nicht mehr erforderlich ist, sollten sie das Handle freigeben, durch Aufruf der Win32 **DeleteEnhMetaFile** Funktion.  
   
-##  <a name="a-namecmetafiledca--cmetafiledccmetafiledc"></a><a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
  Erstellen einer `CMetaFileDC` Objekt in zwei Schritten.  
   
 ```  
@@ -150,7 +156,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>Hinweise  
  Zunächst rufen `CMetaFileDC`, rufen Sie dann **erstellen**, die den Windows-Metadatei-Gerätekontext erstellt und fügt es der `CMetaFileDC` Objekt.  
   
-##  <a name="a-namecreatea--cmetafiledccreate"></a><a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>CMetaFileDC::Create  
  Erstellen einer `CMetaFileDC` Objekt in zwei Schritten.  
   
 ```  
@@ -167,7 +173,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>Hinweise  
  Zunächst rufen Sie den Konstruktor `CMetaFileDC`, rufen Sie dann **erstellen**, die den Windows-Metadatei-Gerätekontext erstellt und fügt es der `CMetaFileDC` Objekt.  
   
-##  <a name="a-namecreateenhanceda--cmetafiledccreateenhanced"></a><a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
  Erstellt einen Gerätekontext für eine EMF-Datei.  
   
 ```  

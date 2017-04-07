@@ -10,6 +10,69 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRecordset
+- AFXDB/CRecordset
+- AFXDB/CRecordset::CRecordset
+- AFXDB/CRecordset::AddNew
+- AFXDB/CRecordset::CanAppend
+- AFXDB/CRecordset::CanBookmark
+- AFXDB/CRecordset::Cancel
+- AFXDB/CRecordset::CancelUpdate
+- AFXDB/CRecordset::CanRestart
+- AFXDB/CRecordset::CanScroll
+- AFXDB/CRecordset::CanTransact
+- AFXDB/CRecordset::CanUpdate
+- AFXDB/CRecordset::CheckRowsetError
+- AFXDB/CRecordset::Close
+- AFXDB/CRecordset::Delete
+- AFXDB/CRecordset::DoBulkFieldExchange
+- AFXDB/CRecordset::DoFieldExchange
+- AFXDB/CRecordset::Edit
+- AFXDB/CRecordset::FlushResultSet
+- AFXDB/CRecordset::GetBookmark
+- AFXDB/CRecordset::GetDefaultConnect
+- AFXDB/CRecordset::GetDefaultSQL
+- AFXDB/CRecordset::GetFieldValue
+- AFXDB/CRecordset::GetODBCFieldCount
+- AFXDB/CRecordset::GetODBCFieldInfo
+- AFXDB/CRecordset::GetRecordCount
+- AFXDB/CRecordset::GetRowsetSize
+- AFXDB/CRecordset::GetRowsFetched
+- AFXDB/CRecordset::GetRowStatus
+- AFXDB/CRecordset::GetSQL
+- AFXDB/CRecordset::GetStatus
+- AFXDB/CRecordset::GetTableName
+- AFXDB/CRecordset::IsBOF
+- AFXDB/CRecordset::IsDeleted
+- AFXDB/CRecordset::IsEOF
+- AFXDB/CRecordset::IsFieldDirty
+- AFXDB/CRecordset::IsFieldNull
+- AFXDB/CRecordset::IsFieldNullable
+- AFXDB/CRecordset::IsOpen
+- AFXDB/CRecordset::Move
+- AFXDB/CRecordset::MoveFirst
+- AFXDB/CRecordset::MoveLast
+- AFXDB/CRecordset::MoveNext
+- AFXDB/CRecordset::MovePrev
+- AFXDB/CRecordset::OnSetOptions
+- AFXDB/CRecordset::OnSetUpdateOptions
+- AFXDB/CRecordset::Open
+- AFXDB/CRecordset::RefreshRowset
+- AFXDB/CRecordset::Requery
+- AFXDB/CRecordset::SetAbsolutePosition
+- AFXDB/CRecordset::SetBookmark
+- AFXDB/CRecordset::SetFieldDirty
+- AFXDB/CRecordset::SetFieldNull
+- AFXDB/CRecordset::SetLockingMode
+- AFXDB/CRecordset::SetParamNull
+- AFXDB/CRecordset::SetRowsetCursorPosition
+- AFXDB/CRecordset::SetRowsetSize
+- AFXDB/CRecordset::Update
+- AFXDB/CRecordset::m_hstmt
+- AFXDB/CRecordset::m_nFields
+- AFXDB/CRecordset::m_nParams
+- AFXDB/CRecordset::m_pDatabase
+- AFXDB/CRecordset::m_strFilter
+- AFXDB/CRecordset::m_strSort
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -162,7 +225,7 @@ class CRecordset : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdb.h  
   
-##  <a name="a-nameaddnewa--crecordsetaddnew"></a><a name="addnew"></a>CRecordset::AddNew  
+##  <a name="addnew"></a>CRecordset::AddNew  
  Vorbereitet für einen neuen Datensatz in der Tabelle hinzufügen.  
   
 ```  
@@ -192,7 +255,7 @@ virtual void AddNew();
 ### <a name="example"></a>Beispiel  
  Finden Sie im Artikel [Transaktion: Ausführen einer Transaktion in einem Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="a-namecanappenda--crecordsetcanappend"></a><a name="canappend"></a>CRecordset::CanAppend  
+##  <a name="canappend"></a>CRecordset::CanAppend  
  Bestimmt, ob das zuvor geöffnete Recordset Sie neue Datensätze hinzufügen können.  
   
 ```  
@@ -202,7 +265,7 @@ BOOL CanAppend() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn das Recordset ermöglicht das Hinzufügen von neuen Datensätzen; andernfalls 0. `CanAppend`Gibt 0 zurück, wenn Sie das Recordset als schreibgeschützt geöffnet.  
   
-##  <a name="a-namecanbookmarka--crecordsetcanbookmark"></a><a name="canbookmark"></a>CRecordset:: CanBookmark  
+##  <a name="canbookmark"></a>CRecordset:: CanBookmark  
  Bestimmt, ob das Recordset Datensätze mithilfe von Lesezeichen markieren kann.  
   
 ```  
@@ -220,7 +283,7 @@ BOOL CanBookmark() const;
   
  Weitere Informationen zu Lesezeichen und Recordsetnavigation, finden Sie in den Artikeln [Recordset: Lesezeichen und Absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) und [Recordset: Scrollen (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="a-namecancela--crecordsetcancel"></a><a name="cancel"></a>CRecordset::Cancel  
+##  <a name="cancel"></a>CRecordset::Cancel  
  Fordert an, dass die Datenquelle ein asynchroner Vorgang ausgeführt wird oder ein Prozess von einem zweiten Thread abzubrechen.  
   
 ```  
@@ -230,7 +293,7 @@ void Cancel();
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass die MFC-ODBC-Klassen die asynchronen Verarbeitung nicht mehr verwenden. Um eine asynchrone Operation auszuführen, müssen Sie direkt die ODBC-API-Funktion aufrufen **SQLSetConnectOption**. Weitere Informationen finden Sie im Thema "Funktionen asynchron ausführen" in der *ODBC SDK Programmer's Guide*.  
   
-##  <a name="a-namecancelupdatea--crecordsetcancelupdate"></a><a name="cancelupdate"></a>CRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>CRecordset::CancelUpdate  
  Bricht alle ausstehenden Updates zurückzuführen, dass ein [bearbeiten](#edit) oder [AddNew](#addnew) Vorgang vor dem [Update](#update) aufgerufen wird.  
   
 ```  
@@ -246,7 +309,7 @@ void CancelUpdate();
   
  Weitere Informationen zum Aktualisieren von Daten finden Sie im Artikel [Recordset: hinzufügen, aktualisieren und Löschen von Datensätzen (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).  
   
-##  <a name="a-namecanrestarta--crecordsetcanrestart"></a><a name="canrestart"></a>CRecordset::CanRestart  
+##  <a name="canrestart"></a>CRecordset::CanRestart  
  Bestimmt, ob das Recordset ermöglicht das Neustarten der Abfrage (Wenn Sie die Datensätze zu aktualisieren) durch Aufrufen der **Requery** Member-Funktion.  
   
 ```  
@@ -256,7 +319,7 @@ BOOL CanRestart() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn Requery zulässig ist; andernfalls 0.  
   
-##  <a name="a-namecanscrolla--crecordsetcanscroll"></a><a name="canscroll"></a>CRecordset::CanScroll  
+##  <a name="canscroll"></a>CRecordset::CanScroll  
  Bestimmt, ob das Recordset Bildlauf ermöglicht.  
   
 ```  
@@ -269,7 +332,7 @@ BOOL CanScroll() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zum Durchführen eines Bildlaufs finden Sie im Artikel [Recordset: Scrollen (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="a-namecantransacta--crecordsetcantransact"></a><a name="cantransact"></a>CRecordset::CanTransact  
+##  <a name="cantransact"></a>CRecordset::CanTransact  
  Bestimmt, ob das Recordset Transaktionen ermöglicht.  
   
 ```  
@@ -282,7 +345,7 @@ BOOL CanTransact() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie im Artikel [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="a-namecanupdatea--crecordsetcanupdate"></a><a name="canupdate"></a>CRecordset::CanUpdate  
+##  <a name="canupdate"></a>CRecordset::CanUpdate  
  Bestimmt, ob das Recordset aktualisiert werden kann.  
   
 ```  
@@ -295,7 +358,7 @@ BOOL CanUpdate() const;
 ### <a name="remarks"></a>Hinweise  
  Ein Recordset kann schreibgeschützt sein, wenn die zugrunde liegenden Datenquelle schreibgeschützt ist oder wenn Sie angegeben **CRecordset:: ReadOnly** in der `dwOptions` Parameter beim Öffnen des Recordsets.  
   
-##  <a name="a-namecheckrowseterrora--crecordsetcheckrowseterror"></a><a name="checkrowseterror"></a>CRecordset::CheckRowsetError  
+##  <a name="checkrowseterror"></a>CRecordset::CheckRowsetError  
  Wird aufgerufen, zum Behandeln von Fehlern, die beim Abrufen der Datensatz generiert.  
   
 ```  
@@ -322,7 +385,7 @@ virtual void CheckRowsetError(RETCODE nRetCode);
   
  Weitere Informationen zu **SQLError**, finden Sie unter der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Weitere Informationen über das gesammelte finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="a-nameclosea--crecordsetclose"></a><a name="close"></a>CRecordset::Close  
+##  <a name="close"></a>CRecordset::Close  
  Schließt das Recordset.  
   
 ```  
@@ -337,7 +400,7 @@ virtual void Close();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDatabase&17;](../../mfc/codesnippet/cpp/crecordset-class_1.cpp)]  
   
-##  <a name="a-namecrecordseta--crecordsetcrecordset"></a><a name="crecordset"></a>CRecordset::CRecordset  
+##  <a name="crecordset"></a>CRecordset::CRecordset  
  Erstellt ein `CRecordset`-Objekt.  
   
 ```  
@@ -359,7 +422,7 @@ CRecordset(CDatabase* pDatabase = NULL);
 ### <a name="example"></a>Beispiel  
  Weitere Informationen finden Sie im Artikel [Recordset: Deklarieren einer Klasse für eine Tabelle (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).  
   
-##  <a name="a-namedeletea--crecordsetdelete"></a><a name="delete"></a>CRecordset::Delete  
+##  <a name="delete"></a>CRecordset::Delete  
  Löscht den aktuellen Datensatz.  
   
 ```  
@@ -382,7 +445,7 @@ virtual void Delete();
   
  [!code-cpp[NVC_MFCDatabase&18;](../../mfc/codesnippet/cpp/crecordset-class_2.cpp)]  
   
-##  <a name="a-namedobulkfieldexchangea--crecordsetdobulkfieldexchange"></a><a name="dobulkfieldexchange"></a>CRecordset::DoBulkFieldExchange  
+##  <a name="dobulkfieldexchange"></a>CRecordset::DoBulkFieldExchange  
  Wird aufgerufen, um exchange von Datenzeilen aus der Datenquelle in das Recordset. Implementiert den Sammel-Datensatzfeldaustausch (Bulk-RFX).  
   
 ```  
@@ -407,7 +470,7 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
   
  Weitere Informationen über das gesammelte finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Weitere Informationen finden Sie im Artikel [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="a-namedofieldexchangea--crecordsetdofieldexchange"></a><a name="dofieldexchange"></a>CRecordset:: DoFieldExchange  
+##  <a name="dofieldexchange"></a>CRecordset:: DoFieldExchange  
  Wird aufgerufen, um die exchange-Daten (in beide Richtungen) zwischen den Felddatenmembern des Recordsets und der entsprechende Datensatz in der Datenquelle. Implementiert Datensatzfeldaustausch (RFX).  
   
 ```  
@@ -438,7 +501,7 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
   
  Weitere Beispiele und Informationen zu `DoFieldExchange`, finden Sie im Artikel [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Allgemeine Informationen über RFX finden Sie im Artikel [Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="a-nameedita--crecordsetedit"></a><a name="edit"></a>CRecordset::Edit  
+##  <a name="edit"></a>CRecordset::Edit  
  Ermöglicht Änderungen an den aktuellen Datensatz.  
   
 ```  
@@ -466,7 +529,7 @@ virtual void Edit();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDatabase&20;](../../mfc/codesnippet/cpp/crecordset-class_4.cpp)]  
   
-##  <a name="a-nameflushresultseta--crecordsetflushresultset"></a><a name="flushresultset"></a>CRecordset::FlushResultSet  
+##  <a name="flushresultset"></a>CRecordset::FlushResultSet  
  Ruft das nächste Resultset einer vordefinierten Abfrage (gespeicherten Prozedur) ab, wenn mehrere Resultsets vorhanden sind.  
   
 ```  
@@ -492,7 +555,7 @@ BOOL FlushResultSet();
   
  [!code-cpp[NVC_MFCDatabase&#22;](../../mfc/codesnippet/cpp/crecordset-class_6.cpp)]  
   
-##  <a name="a-namegetbookmarka--crecordsetgetbookmark"></a><a name="getbookmark"></a>CRecordset::GetBookmark  
+##  <a name="getbookmark"></a>CRecordset::GetBookmark  
  Ruft den Lesezeichenwert für den aktuellen Datensatz.  
   
 ```  
@@ -516,7 +579,7 @@ void GetBookmark(CDBVariant& varBookmark);
   
  Weitere Informationen zu Lesezeichen und Recordsetnavigation, finden Sie in den Artikeln [Recordset: Lesezeichen und Absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) und [Recordset: Scrollen (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="a-namegetdefaultconnecta--crecordsetgetdefaultconnect"></a><a name="getdefaultconnect"></a>GetDefaultConnect  
+##  <a name="getdefaultconnect"></a>GetDefaultConnect  
  Wird aufgerufen, um die Standard-Verbindungszeichenfolge abzurufen.  
   
 ```  
@@ -529,7 +592,7 @@ virtual CString GetDefaultConnect();
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Member-Funktion, um die Standard-Verbindungszeichenfolge für die Datenquelle zu erhalten, auf dem das Recordset basiert. Klassen-Assistent implementiert diese Funktion für Sie durch Identifizieren der gleichen Datenquelle, die Sie zum Abrufen von Informationen zu Tabellen und Spalten im Klassen-Assistenten zu verwenden. Wahrscheinlich werden finden Sie es sinnvoll, diese Standardeinstellung Verbindung bei der Entwicklung Ihrer Anwendung abhängig. Aber die standardmäßige Verbindung für Benutzer der Anwendung möglicherweise nicht. Wenn dies der Fall ist, sollten Sie diese Funktion implementieren, verwirft der Klassen-Assistent-Version. Weitere Informationen zu Verbindungszeichenfolgen finden Sie im Artikel [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md).  
   
-##  <a name="a-namegetdefaultsqla--crecordsetgetdefaultsql"></a><a name="getdefaultsql"></a>CRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>CRecordset::GetDefaultSQL  
  Wird aufgerufen, um die Standard-SQL-Zeichenfolge ausführen abzurufen.  
   
 ```  
@@ -551,7 +614,7 @@ virtual CString GetDefaultSQL();
 > [!CAUTION]
 >  Der Tabellenname ist leer, wenn das Framework einen Tabellennamen ein, wenn mehrere Tabellennamen angegeben wurden, oder wenn nicht identifizieren ein **Aufrufen** Anweisung konnte nicht interpretiert werden. Beachten Sie, dass bei Verwendung einer **Aufrufen** -Anweisung darf kein Leerzeichen zwischen der geschweiften Klammer eingefügt und die **Aufrufen** -Schlüsselwort, noch sollten Sie Leerzeichen vor der geschweiften Klammer oder Einfügen der **auswählen** -Schlüsselwort in eine **wählen** Anweisung.  
   
-##  <a name="a-namegetfieldvaluea--crecordsetgetfieldvalue"></a><a name="getfieldvalue"></a>CRecordset:: GetFieldValue  
+##  <a name="getfieldvalue"></a>CRecordset:: GetFieldValue  
  Ruft die Daten im aktuellen Datensatz ab.  
   
 ```  
@@ -629,7 +692,7 @@ void GetFieldValue(
   
  Weitere Informationen über das gesammelte finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="a-namegetodbcfieldcounta--crecordsetgetodbcfieldcount"></a><a name="getodbcfieldcount"></a>CRecordset::GetODBCFieldCount  
+##  <a name="getodbcfieldcount"></a>CRecordset::GetODBCFieldCount  
  Ruft die Gesamtanzahl der Felder in das Recordset-Objekt.  
   
 ```  
@@ -642,7 +705,7 @@ short GetODBCFieldCount() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zum Erstellen von Datensatzgruppen, finden Sie im Artikel [Recordset: Erstellen und Schließen von Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="a-namegetodbcfieldinfoa--crecordsetgetodbcfieldinfo"></a><a name="getodbcfieldinfo"></a>CRecordset::GetODBCFieldInfo  
+##  <a name="getodbcfieldinfo"></a>CRecordset::GetODBCFieldInfo  
  Ruft Informationen über die Felder im Recordset.  
   
 ```  
@@ -673,7 +736,7 @@ void GetODBCFieldInfo(
   
  Weitere Informationen zum Erstellen von Datensatzgruppen, finden Sie im Artikel [Recordset: Erstellen und Schließen von Recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="a-namegetrecordcounta--crecordsetgetrecordcount"></a><a name="getrecordcount"></a>CRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>CRecordset::GetRecordCount  
  Bestimmt die Größe des Recordset-Objekts.  
   
 ```  
@@ -688,7 +751,7 @@ long GetRecordCount() const;
 > [!CAUTION]
 >  Die Anzahl der Datensätze wird als eine "oberem," den höchsten Datensatz beibehalten noch angezeigt, wenn der Benutzer durch die Datensätze bewegt. Die Gesamtzahl der Datensätze wird nur bezeichnet werden, nachdem der Benutzer über den letzten Datensatz gewechselt hat. Aus Gründen der Leistung die Anzahl wird nicht aktualisiert, beim Aufruf von `MoveLast`. Aufrufen, um die Datensätze selbst zählen, `MoveNext` solange wiederholt, bis `IsEOF` gibt einen Wert ungleich NULL zurück. Hinzufügen eines Datensatzes über **CRecordset:AddNew** und **Update** erhöht die Anzahl, Löschen eines Datensatzes über `CRecordset::Delete` verringert die Anzahl.  
   
-##  <a name="a-namegetrowsetsizea--crecordsetgetrowsetsize"></a><a name="getrowsetsize"></a>CRecordset::GetRowsetSize  
+##  <a name="getrowsetsize"></a>CRecordset::GetRowsetSize  
  Ruft die aktuelle Einstellung für die Anzahl der Zeilen, die Sie während einer bestimmten Fetch abrufen möchten.  
   
 ```  
@@ -705,7 +768,7 @@ DWORD GetRowsetSize() const;
   
  Weitere Informationen über das gesammelte finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="a-namegetrowsfetcheda--crecordsetgetrowsfetched"></a><a name="getrowsfetched"></a>CRecordset::GetRowsFetched  
+##  <a name="getrowsfetched"></a>CRecordset::GetRowsFetched  
  Bestimmt, wie viele Datensätze nach einem Abrufvorgang tatsächlich abgerufen wurden.  
   
 ```  
@@ -725,7 +788,7 @@ DWORD GetRowsFetched() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDatabase&#24;](../../mfc/codesnippet/cpp/crecordset-class_8.cpp)]  
   
-##  <a name="a-namegetrowstatusa--crecordsetgetrowstatus"></a><a name="getrowstatus"></a>CRecordset::GetRowStatus  
+##  <a name="getrowstatus"></a>CRecordset::GetRowStatus  
  Der Status für eine Zeile im aktuellen Rowset abgerufen.  
   
 ```  
@@ -753,7 +816,7 @@ WORD GetRowStatus(WORD wRow) const;
   
  Weitere Informationen finden Sie in der ODBC-API-Funktion **SQLExtendedFetch** in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetstatusa--crecordsetgetstatus"></a><a name="getstatus"></a>CRecordset::GetStatus  
+##  <a name="getstatus"></a>CRecordset::GetStatus  
  Bestimmt den Index des aktuellen Datensatzes in das Recordset und gibt an, ob der letzte Datensatz verarbeitet wurde.  
   
 ```  
@@ -785,7 +848,7 @@ void GetStatus(CRecordsetStatus& rStatus) const;
   
 - **M_bRecordCountFinal** Nonzero aus, wenn die Gesamtzahl der Datensätze im Recordset festgelegt wurde. Dies muss in der Regel erreicht werden, wobei am Anfang des Recordset-Objekts und Aufrufen von `MoveNext` bis `IsEOF` gibt einen Wert ungleich NULL zurück. Wenn dieses Element NULL ist, der Datensatz zählen zurückgegebene `GetRecordCount`, wenn keine –&1; ist, ist nur eine "oberem" Anzahl der Datensätze.  
   
-##  <a name="a-namegetsqla--crecordsetgetsql"></a><a name="getsql"></a>CRecordset::GetSQL  
+##  <a name="getsql"></a>CRecordset::GetSQL  
  Rufen Sie diese Memberfunktion, um die SQL-Anweisung zu erhalten, die verwendet wurde, um die Datensätze des Recordsets auswählen, wenn sie geöffnet wurde.  
   
 ```  
@@ -803,7 +866,7 @@ const CString& GetSQL() const;
 > [!NOTE]
 >  Rufen Sie diese Memberfunktion nur nach dem Aufruf von [öffnen](#open).  
   
-##  <a name="a-namegettablenamea--crecordsetgettablename"></a><a name="gettablename"></a>CRecordset::GetTableName  
+##  <a name="gettablename"></a>CRecordset::GetTableName  
  Ruft den Namen der SQL-Tabelle auf der die Abfrage des Recordsets basiert.  
   
 ```  
@@ -819,7 +882,7 @@ const CString& GetTableName() const;
 > [!NOTE]
 >  Rufen Sie diese Memberfunktion nur nach dem Aufruf von [öffnen](#open).  
   
-##  <a name="a-nameisbofa--crecordsetisbof"></a><a name="isbof"></a>CRecordset::IsBOF  
+##  <a name="isbof"></a>CRecordset::IsBOF  
  Gibt einen Wert ungleich NULL, wenn das Recordset wurde vor dem ersten Datensatz positioniert wurde. Es gibt keinen aktuellen Datensatz.  
   
 ```  
@@ -839,7 +902,7 @@ BOOL IsBOF() const;
   
  [!code-cpp[NVC_MFCDatabase&#25;](../../mfc/codesnippet/cpp/crecordset-class_9.cpp)]  
   
-##  <a name="a-nameisdeleteda--crecordsetisdeleted"></a><a name="isdeleted"></a>CRecordset::IsDeleted  
+##  <a name="isdeleted"></a>CRecordset::IsDeleted  
  Bestimmt, ob der aktuelle Datensatz gelöscht wurde.  
   
 ```  
@@ -859,7 +922,7 @@ BOOL IsDeleted() const;
 > [!NOTE]
 >  Wenn Sie das gesammelte Abrufen von Zeilen implementiert haben, rufen Sie nicht `IsDeleted`. Rufen Sie stattdessen die [GetRowStatus](#getrowstatus) Member-Funktion. Weitere Informationen über das gesammelte finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="a-nameiseofa--crecordsetiseof"></a><a name="iseof"></a>CRecordset::IsEOF  
+##  <a name="iseof"></a>CRecordset::IsEOF  
  Gibt einen Wert ungleich NULL, wenn das Recordset wurde nach dem letzten Datensatz positioniert wurde. Es gibt keinen aktuellen Datensatz.  
   
 ```  
@@ -877,7 +940,7 @@ BOOL IsEOF() const;
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [IsBOF](#isbof).  
   
-##  <a name="a-nameisfielddirtya--crecordsetisfielddirty"></a><a name="isfielddirty"></a>CRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>CRecordset::IsFieldDirty  
  Bestimmt, ob das angegebene Feld Datenelement seit geändert wurde [bearbeiten](#edit) oder [AddNew](#addnew) aufgerufen wurde.  
   
 ```  
@@ -903,7 +966,7 @@ BOOL IsFieldDirty(void* pv);
   
  Weitere Informationen auf das Änderungsflag finden Sie im Artikel [Recordset: wie Recordsets auswählen von Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
   
-##  <a name="a-nameisfieldnulla--crecordsetisfieldnull"></a><a name="isfieldnull"></a>CRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>CRecordset::IsFieldNull  
  Gibt einen Wert ungleich NULL, wenn das angegebene Feld im aktuellen Datensatz Null ist (keinen Wert enthält).  
   
 ```  
@@ -925,7 +988,7 @@ BOOL IsFieldNull(void* pv);
   
  `IsFieldNull`wird über implementiert [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="a-nameisfieldnullablea--crecordsetisfieldnullable"></a><a name="isfieldnullable"></a>CRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>CRecordset::IsFieldNullable  
  Gibt einen Wert ungleich NULL, wenn das angegebene Feld des aktuellen Datensatzes auf Null festgelegt werden kann (mit kein Wert) zurück.  
   
 ```  
@@ -958,7 +1021,7 @@ BOOL IsFieldNullable(void* pv);
   
  `IsFieldNullable`wird über implementiert [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="a-nameisopena--crecordsetisopen"></a><a name="isopen"></a>CRecordset::IsOpen  
+##  <a name="isopen"></a>CRecordset::IsOpen  
  Bestimmt, ob das Recordset bereits geöffnet ist.  
   
 ```  
@@ -968,7 +1031,7 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>Rückgabewert  
  Einen Wert ungleich Null des Recordset-Objekts [öffnen](#open) oder [Requery](#requery) Memberfunktion zuvor aufgerufen wurde und das Recordset nicht geschlossen wurde, andernfalls 0.  
   
-##  <a name="a-namemhstmta--crecordsetmhstmt"></a><a name="m_hstmt"></a>M_hstmt  
+##  <a name="m_hstmt"></a>M_hstmt  
  Enthält einen Handle für die ODBC-Anweisung-Datenstruktur des Typs **Befehls beschäftigt**, die das Recordset zugeordnet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -979,7 +1042,7 @@ BOOL IsOpen() const;
   
  Sie ist normalerweise nicht erforderlich für den Zugriff auf die **Befehls beschäftigt** direkt, es für die direkte Ausführung von SQL-Anweisungen notwendig. Die `ExecuteSQL` -Memberfunktion der Klasse `CDatabase` enthält ein Beispiel mit **M_hstmt**.  
   
-##  <a name="a-namemnfieldsa--crecordsetmnfields"></a><a name="m_nfields"></a>CRecordset::m_nFields  
+##  <a name="m_nfields"></a>CRecordset::m_nFields  
  Enthält die Anzahl der Felddatenmember der Recordset-Klasse. d. h. die Anzahl der Spalten, die durch das Recordset aus der Datenquelle ausgewählt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -997,7 +1060,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Beispiel  
  Finden Sie im Artikel [Datensatzfeldaustausch: Verwenden von RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
   
-##  <a name="a-namemnparamsa--crecordsetmnparams"></a><a name="m_nparams"></a>CRecordset::m_nParams  
+##  <a name="m_nparams"></a>CRecordset::m_nParams  
  Enthält die Anzahl der Parameterdatenmember in der Recordset-Klasse. d. h., übergeben die Anzahl von Parametern mit Abfrage des Recordsets.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1011,7 +1074,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Beispiel  
   Finden Sie in den Artikeln [Recordset: Parametrisieren eines Recordsets (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) und [Datensatzfeldaustausch: Verwenden von RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
   
-##  <a name="a-namempdatabasea--crecordsetmpdatabase"></a><a name="m_pdatabase"></a>CRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>CRecordset::m_pDatabase  
  Enthält einen Zeiger auf die `CDatabase` Objekt über die das Recordset mit einer Datenquelle verbunden ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1019,7 +1082,7 @@ BOOL IsOpen() const;
   
  Normalerweise wird nicht direkt müssen mit den gespeicherten Zeiger **M_pDatabase**. Wenn Sie Ihre eigenen Erweiterungen schreiben `CRecordset`, jedoch möglicherweise den Zeiger zu verwenden. Beispielsweise benötigen Sie möglicherweise den Mauszeiger Wenn Sie lösen eigene `CDBException`s. Oder vielleicht benötigen Sie es ggf. etwas mit dem gleichen `CDatabase` Objekt, z. B. Transaktionen, Festlegen von Timeouts, ausgeführt oder das Aufrufen der `ExecuteSQL` -Memberfunktion der Klasse `CDatabase` SQL-Anweisungen direkt ausgeführt.  
   
-##  <a name="a-namemstrfiltera--crecordsetmstrfilter"></a><a name="m_strfilter"></a>CRecordset:: M_strfilter  
+##  <a name="m_strfilter"></a>CRecordset:: M_strfilter  
  Nach der Konstruktion des Recordset-Objekts, jedoch vor dem Aufruf der **öffnen** Member funktioniert, verwenden Sie dieses Datenelement zum Speichern ein `CString` mit einer SQL **wobei** Klausel.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1036,7 +1099,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDatabase&#30;](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]  
   
-##  <a name="a-namemstrsorta--crecordsetmstrsort"></a><a name="m_strsort"></a>CRecordset::m_strSort  
+##  <a name="m_strsort"></a>CRecordset::m_strSort  
  Nach der Konstruktion des Recordset-Objekts, jedoch vor dem Aufruf der **öffnen** Member funktioniert, verwenden Sie dieses Datenelement zum Speichern ein `CString` mit einer SQL **ORDER BY** Klausel.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1053,7 +1116,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDatabase&#31;](../../mfc/codesnippet/cpp/crecordset-class_13.cpp)]  
   
-##  <a name="a-namemovea--crecordsetmove"></a><a name="move"></a>CRecordset  
+##  <a name="move"></a>CRecordset  
  Verschiebt die Zeiger für den aktuellen Datensatz im Recordset entweder vorwärts oder rückwärts.  
   
 ```  
@@ -1108,7 +1171,7 @@ virtual void Move(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDatabase&#28;](../../mfc/codesnippet/cpp/crecordset-class_14.cpp)]  
   
-##  <a name="a-namemovefirsta--crecordsetmovefirst"></a><a name="movefirst"></a>CRecordset::MoveFirst  
+##  <a name="movefirst"></a>CRecordset::MoveFirst  
  Macht dem ersten Datensatz in das erste Rowset zum aktuellen Datensatz.  
   
 ```  
@@ -1137,7 +1200,7 @@ void MoveFirst();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [IsBOF](#isbof).  
   
-##  <a name="a-namemovelasta--crecordsetmovelast"></a><a name="movelast"></a>CRecordset::MoveLast  
+##  <a name="movelast"></a>CRecordset::MoveLast  
  Wird der erste Datensatz im Rowset letzten Abschluss des aktuellen Datensatzes.  
   
 ```  
@@ -1164,7 +1227,7 @@ void MoveLast();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [IsBOF](#isbof).  
   
-##  <a name="a-namemovenexta--crecordsetmovenext"></a><a name="movenext"></a>CRecordset::MoveNext  
+##  <a name="movenext"></a>CRecordset::MoveNext  
  Wird der erste Datensatz in den nächsten Rowsets des aktuellen Datensatzes.  
   
 ```  
@@ -1191,7 +1254,7 @@ void MoveNext();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [IsBOF](#isbof).  
   
-##  <a name="a-namemovepreva--crecordsetmoveprev"></a><a name="moveprev"></a>CRecordset::MovePrev  
+##  <a name="moveprev"></a>CRecordset::MovePrev  
  Wird der erste Datensatz im Rowset vorherigen zum aktuellen Datensatz.  
   
 ```  
@@ -1221,7 +1284,7 @@ void MovePrev();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [IsBOF](#isbof).  
   
-##  <a name="a-nameonsetoptionsa--crecordsetonsetoptions"></a><a name="onsetoptions"></a>CRecordset::OnSetOptions  
+##  <a name="onsetoptions"></a>CRecordset::OnSetOptions  
  Zum Festlegen von Optionen (in der Auswahl verwendete) aufgerufen, für die angegebene ODBC-Anweisung.  
   
 ```  
@@ -1239,7 +1302,7 @@ virtual void OnSetOptions(HSTMT hstmt);
   
  Weitere Informationen zu Cursorn finden Sie im Artikel [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="a-nameonsetupdateoptionsa--crecordsetonsetupdateoptions"></a><a name="onsetupdateoptions"></a>CRecordset::OnSetUpdateOptions  
+##  <a name="onsetupdateoptions"></a>CRecordset::OnSetUpdateOptions  
  Zum Festlegen von Optionen (Update) für die angegebene ODBC-Anweisung aufgerufen.  
   
 ```  
@@ -1257,7 +1320,7 @@ virtual void OnSetUpdateOptions(HSTMT hstmt);
   
  Weitere Informationen zu Cursorn finden Sie im Artikel [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="a-nameopena--crecordsetopen"></a><a name="open"></a>CRecordset:: Open  
+##  <a name="open"></a>CRecordset:: Open  
  Öffnet das Recordset, indem die Tabelle abgerufen oder die vom Recordset darstellte Abfrage durchgeführt wird.  
   
 ```  
@@ -1365,7 +1428,7 @@ virtual BOOL Open(
   
  [!code-cpp[NVC_MFCDatabase Nr.&16;](../../mfc/codesnippet/cpp/crecordset-class_15.cpp)]  
   
-##  <a name="a-namerefreshrowseta--crecordsetrefreshrowset"></a><a name="refreshrowset"></a>CRecordset::RefreshRowset  
+##  <a name="refreshrowset"></a>CRecordset::RefreshRowset  
  Aktualisiert die Daten und den Status für eine Zeile im aktuellen Rowset.  
   
 ```  
@@ -1396,7 +1459,7 @@ void RefreshRowset(
   
  Weitere Informationen zu **SQLSetPos**, finden Sie unter der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Weitere Informationen über das gesammelte finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="a-namerequerya--crecordsetrequery"></a><a name="requery"></a>CRecordset  
+##  <a name="requery"></a>CRecordset  
  Neu (aktualisiert) einem Recordset.  
   
 ```  
@@ -1423,7 +1486,7 @@ virtual BOOL Requery();
   
  [!code-cpp[NVC_MFCDatabase&#29;](../../mfc/codesnippet/cpp/crecordset-class_16.cpp)]  
   
-##  <a name="a-namesetabsolutepositiona--crecordsetsetabsoluteposition"></a><a name="setabsoluteposition"></a>CRecordset:: SetAbsolutePosition auf  
+##  <a name="setabsoluteposition"></a>CRecordset:: SetAbsolutePosition auf  
  Positioniert das Recordset für den Datensatz, der angegebene Datensatz entspricht.  
   
 ```  
@@ -1449,7 +1512,7 @@ void SetAbsolutePosition(long nRows);
   
  Weitere Informationen zu Recordsetnavigation und Lesezeichen, finden Sie in den Artikeln [Recordset: Scrollen (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) und [Recordset: Lesezeichen und Absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="a-namesetbookmarka--crecordsetsetbookmark"></a><a name="setbookmark"></a>CRecordset::SetBookmark  
+##  <a name="setbookmark"></a>CRecordset::SetBookmark  
  Positioniert das Recordset für den Datensatz mit dem angegebenen Lesezeichen.  
   
 ```  
@@ -1473,7 +1536,7 @@ void SetBookmark(const CDBVariant& varBookmark);
   
  Weitere Informationen zu Lesezeichen und Recordsetnavigation, finden Sie in den Artikeln [Recordset: Lesezeichen und Absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) und [Recordset: Scrollen (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="a-namesetfielddirtya--crecordsetsetfielddirty"></a><a name="setfielddirty"></a>CRecordset::SetFieldDirty  
+##  <a name="setfielddirty"></a>CRecordset::SetFieldDirty  
  Kennzeichnet einen Felddatenmember des Recordset-Objekts als geändert oder unverändert.  
   
 ```  
@@ -1510,7 +1573,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
   
  Dies bedeutet, Sie können nicht festgelegt, werden alle **Param** Felder **NULL**, wie **OutputColumn** Felder.  
   
-##  <a name="a-namesetfieldnulla--crecordsetsetfieldnull"></a><a name="setfieldnull"></a>CRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>CRecordset::SetFieldNull  
  Felddatenmember der Recordset als Null (insbesondere mit kein Wert) oder als nicht-Null-Flags.  
   
 ```  
@@ -1552,7 +1615,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
   
  `SetFieldNull`wird über implementiert [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="a-namesetlockingmodea--crecordsetsetlockingmode"></a><a name="setlockingmode"></a>CRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>CRecordset::SetLockingMode  
  Wird das Sperrverhalten "optimistische" Sperren (Standard) oder "vollständiges" Sperren. Bestimmt, wie Datensätze gesperrt werden, nach Updates.  
   
 ```  
@@ -1570,7 +1633,7 @@ void SetLockingMode(UINT nMode);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Memberfunktion auf, wenn Sie müssen angeben, welche der beiden Datensatzsperren Strategien, die das Recordset für Updates verwendet. Standardmäßig wird das Sperrverhalten von einem Recordset **optimistische**. Sie können ändern, um eine größere Vorsicht walten **pessimistische** Strategie sperren. Rufen Sie `SetLockingMode` nach dem Erstellen und öffnen Sie das Recordsetobjekt, aber vor dem Aufruf von **bearbeiten**.  
   
-##  <a name="a-namesetparamnulla--crecordsetsetparamnull"></a><a name="setparamnull"></a>CRecordset::SetParamNull  
+##  <a name="setparamnull"></a>CRecordset::SetParamNull  
  Flags-Parameter als Null (insbesondere mit kein Wert) oder als nicht-Null.  
   
 ```  
@@ -1591,7 +1654,7 @@ void SetParamNull(
   
  `SetParamNull`wird i. d. r. mit vordefinierten Abfragen (gespeicherte Prozeduren) verwendet.  
   
-##  <a name="a-namesetrowsetcursorpositiona--crecordsetsetrowsetcursorposition"></a><a name="setrowsetcursorposition"></a>CRecordset::SetRowsetCursorPosition  
+##  <a name="setrowsetcursorposition"></a>CRecordset::SetRowsetCursorPosition  
  Verschiebt den Cursor auf eine Zeile im aktuellen Rowset.  
   
 ```  
@@ -1620,7 +1683,7 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
   
  Weitere Informationen zu **SQLSetPos**, finden Sie unter der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Weitere Informationen über das gesammelte finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="a-namesetrowsetsizea--crecordsetsetrowsetsize"></a><a name="setrowsetsize"></a>CRecordset::SetRowsetSize  
+##  <a name="setrowsetsize"></a>CRecordset::SetRowsetSize  
  Gibt die Anzahl der Datensätze, während ein Abrufvorgang abgerufen werden soll.  
   
 ```  
@@ -1646,7 +1709,7 @@ virtual void SetRowsetSize(DWORD dwNewRowsetSize);
   
  Weitere Informationen über das gesammelte finden Sie im Artikel [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="a-nameupdatea--crecordsetupdate"></a><a name="update"></a>CRecordset:: Update  
+##  <a name="update"></a>CRecordset:: Update  
  Schließt eine `AddNew` oder **bearbeiten** Vorgang durch, indem die neuen oder bearbeiteten Daten für die Datenquelle zu speichern.  
   
 ```  

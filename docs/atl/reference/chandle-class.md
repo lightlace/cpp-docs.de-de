@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHandle
-- ATL::CHandle
 - CHandle
+- ATLBASE/ATL::CHandle
+- ATLBASE/ATL::CHandle::CHandle
+- ATLBASE/ATL::CHandle::Attach
+- ATLBASE/ATL::CHandle::Close
+- ATLBASE/ATL::CHandle::Detach
+- ATLBASE/ATL::CHandle::m_h
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +93,7 @@ class CHandle
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="a-nameattacha--chandleattach"></a><a name="attach"></a>CHandle::Attach  
+##  <a name="attach"></a>CHandle::Attach  
  Rufen Sie diese Methode zum Anfügen der `CHandle` Objekt für ein vorhandenes Handle.  
   
 ```
@@ -103,7 +107,7 @@ void Attach(HANDLE h) throw();
 ### <a name="remarks"></a>Hinweise  
  Weist die `CHandle` -Objekt an die `h` zu behandeln. Debugger-Builds ein ATLASSERT wird ausgelöst, wenn `h` NULL ist. Keine anderen Hinblick auf die Gültigkeit des Handles wird überprüft.  
   
-##  <a name="a-namechandlea--chandlechandle"></a><a name="chandle"></a>CHandle::CHandle  
+##  <a name="chandle"></a>CHandle::CHandle  
  Der Konstruktor.  
   
 ```
@@ -119,7 +123,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Hinweise  
  Erstellt ein neues `CHandle` -Objekt optional mithilfe eines vorhandenen Handles oder `CHandle` Objekt.  
   
-##  <a name="a-namedtora--chandlechandle"></a><a name="dtor"></a>CHandle:: ~ CHandle  
+##  <a name="dtor"></a>CHandle:: ~ CHandle  
  Der Destruktor.  
   
 ```
@@ -129,7 +133,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Hinweise  
  Frei der `CHandle` -Objekt durch Aufrufen von [CHandle::Close](#close).  
   
-##  <a name="a-nameclosea--chandleclose"></a><a name="close"></a>CHandle::Close  
+##  <a name="close"></a>CHandle::Close  
  Rufen Sie diese Methode zum Schließen einer `CHandle` Objekt.  
   
 ```
@@ -139,7 +143,7 @@ void Close() throw();
 ### <a name="remarks"></a>Hinweise  
  Schließt ein offenes Objekthandle. Wenn das Handle NULL ist, ist der Fall, wenn sich **schließen** wurde bereits aufgerufen wird, eine ATLASSERT ausgelöst in Debug-Builds.  
   
-##  <a name="a-namedetacha--chandledetach"></a><a name="detach"></a>CHandle::Detach  
+##  <a name="detach"></a>CHandle::Detach  
  Rufen Sie diese Methode, um ein Handle von Trennen einer `CHandle` Objekt.  
   
 ```
@@ -152,14 +156,14 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt den Besitz des Handles frei.  
   
-##  <a name="a-namemha--chandlemh"></a><a name="m_h"></a>CHandle::m_h  
+##  <a name="m_h"></a>CHandle::m_h  
  Membervariable, die das Handle gespeichert.  
   
 ```
 HANDLE m_h;
 ```  
   
-##  <a name="a-nameoperatoreqa--chandleoperator-"></a><a name="operator_eq"></a>CHandle::operator =  
+##  <a name="operator_eq"></a>CHandle::operator =  
  Der Zuweisungsoperator.  
   
 ```
@@ -176,7 +180,7 @@ CHandle& operator=(CHandle& h) throw();
 ### <a name="remarks"></a>Hinweise  
  Wenn die `CHandle` Objekt zurzeit ein Handle enthält, wird geschlossen. Das `CHandle` -Objekt übergebene müssen den Handle-Verweis auf NULL festgelegt. Dadurch wird sichergestellt, dass zwei `CHandle` Objekte nie active dasselbe Handle enthält.  
   
-##  <a name="a-nameoperatorhandlea--chandleoperator-handle"></a><a name="operator_handle"></a>CHandle::operator HANDLE  
+##  <a name="operator_handle"></a>CHandle::operator HANDLE  
  Gibt den Wert des gespeicherten Handles.  
   
 ```  

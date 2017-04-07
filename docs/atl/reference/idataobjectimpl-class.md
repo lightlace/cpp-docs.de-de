@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDataObjectImpl
+- ATLCTL/ATL::IDataObjectImpl
+- ATLCTL/ATL::IDataObjectImpl::DAdvise
+- ATLCTL/ATL::IDataObjectImpl::DUnadvise
+- ATLCTL/ATL::IDataObjectImpl::EnumDAdvise
+- ATLCTL/ATL::IDataObjectImpl::EnumFormatEtc
+- ATLCTL/ATL::IDataObjectImpl::FireDataChange
+- ATLCTL/ATL::IDataObjectImpl::GetCanonicalFormatEtc
+- ATLCTL/ATL::IDataObjectImpl::GetData
+- ATLCTL/ATL::IDataObjectImpl::GetDataHere
+- ATLCTL/ATL::IDataObjectImpl::QueryGetData
+- ATLCTL/ATL::IDataObjectImpl::SetData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +104,7 @@ class IDataObjectImpl
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlctl.h  
   
-##  <a name="a-namedadvisea--idataobjectimpldadvise"></a><a name="dadvise"></a>IDataObjectImpl::DAdvise  
+##  <a name="dadvise"></a>IDataObjectImpl::DAdvise  
  Stellt eine Verbindung zwischen einem Datenobjekt und einer Advise-Senke.  
   
 ```
@@ -111,7 +122,7 @@ HRESULT DAdvise(
   
  Finden Sie unter [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedunadvisea--idataobjectimpldunadvise"></a><a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
+##  <a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
  Beendet eine Verbindung zuvor mit [DAdvise](#dadvise).  
   
 ```
@@ -121,7 +132,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameenumdadvisea--idataobjectimplenumdadvise"></a><a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
+##  <a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
  Erstellt einen Enumerator zum Durchlaufen der aktuellen Advise-Verbindungen.  
   
 ```
@@ -135,7 +146,7 @@ HRESULT DAdvise(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameenumformatetca--idataobjectimplenumformatetc"></a><a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
+##  <a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
  Erstellt einen Enumerator zum Durchlaufen der **FORMATETC** Strukturen vom Datenobjekt unterstützt.  
   
 ```
@@ -150,7 +161,7 @@ HRESULT EnumFormatEtc(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **E_NOTIMPL**.  
   
-##  <a name="a-namefiredatachangea--idataobjectimplfiredatachange"></a><a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
+##  <a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
  Sendet eine Benachrichtigung an jeden Advise-Empfänger, der gerade verwaltet wird.  
   
 ```
@@ -160,7 +171,7 @@ HRESULT FireDataChange();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="a-namegetcanonicalformatetca--idataobjectimplgetcanonicalformatetc"></a><a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
+##  <a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
  Ruft eine logisch äquivalente **FORMATETC** in eine komplexere Struktur.  
   
 ```
@@ -173,7 +184,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdataa--idataobjectimplgetdata"></a><a name="getdata"></a>IDataObjectImpl::GetData  
+##  <a name="getdata"></a>IDataObjectImpl::GetData  
  Überträgt Daten aus dem Datenobjekt an den Client.  
   
 ```
@@ -187,7 +198,7 @@ HRESULT GetData(
   
  Finden Sie unter [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdataherea--idataobjectimplgetdatahere"></a><a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
+##  <a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
  Ähnlich wie `GetData`, außer dass der Client zugewiesen werden, muss die **STGMEDIUM** Struktur.  
   
 ```
@@ -202,7 +213,7 @@ HRESULT GetDataHere(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namequerygetdataa--idataobjectimplquerygetdata"></a><a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
+##  <a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
  Bestimmt, ob das Datenobjekt eine bestimmte unterstützt **FORMATETC** Struktur zum Übertragen von Daten.  
   
 ```
@@ -215,7 +226,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetdataa--idataobjectimplsetdata"></a><a name="setdata"></a>IDataObjectImpl::SetData  
+##  <a name="setdata"></a>IDataObjectImpl::SetData  
  Überträgt Daten vom Client auf das Datenobjekt.  
   
 ```

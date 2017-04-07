@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSocket
+- AFXSOCK/CSocket
+- AFXSOCK/CSocket::CSocket
+- AFXSOCK/CSocket::Attach
+- AFXSOCK/CSocket::CancelBlockingCall
+- AFXSOCK/CSocket::Create
+- AFXSOCK/CSocket::FromHandle
+- AFXSOCK/CSocket::IsBlocking
+- AFXSOCK/CSocket::OnMessagePending
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +113,7 @@ class CSocket : public CAsyncSocket
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Datei afxsock.h  
   
-##  <a name="a-nameattacha--csocketattach"></a><a name="attach"></a>CSocket:: Attach  
+##  <a name="attach"></a>CSocket:: Attach  
  Rufen Sie diese Memberfunktion Anfügen der `hSocket` handle für ein `CSocket` Objekt.  
   
 ```  
@@ -131,7 +139,7 @@ BOOL Attach(SOCKET hSocket);
   
  [!code-cpp[NVC_MFCSocketThread&3;](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="a-namecancelblockingcalla--csocketcancelblockingcall"></a><a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
+##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
  Rufen Sie diese Memberfunktion, um einen blockierenden Aufruf derzeit in Bearbeitung abbrechen.  
   
 ```  
@@ -147,7 +155,7 @@ void CancelBlockingCall();
   
  Weitere Informationen finden Sie unter [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="a-namecreatea--csocketcreate"></a><a name="create"></a>CSocket::Create  
+##  <a name="create"></a>CSocket::Create  
  Rufen Sie die **erstellen** Member-Funktion nach dem Konstruieren ein Socketobjekt, um den Windows-Socket erstellen und anfügen.  
   
 ```  
@@ -182,7 +190,7 @@ BOOL Create(
   
  Weitere Informationen zu Stream und Datagram Sockets, finden Sie in den Artikeln [Windows Sockets: Hintergrund](../../mfc/windows-sockets-background.md), [Windows Sockets: Ports und Socketadressen](../../mfc/windows-sockets-ports-and-socket-addresses.md), und [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="a-namecsocketa--csocketcsocket"></a><a name="csocket"></a>CSocket::CSocket  
+##  <a name="csocket"></a>CSocket::CSocket  
  Erstellt ein `CSocket`-Objekt.  
   
 ```  
@@ -194,7 +202,7 @@ CSocket();
   
  Weitere Informationen finden Sie unter [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="a-namefromhandlea--csocketfromhandle"></a><a name="fromhandle"></a>CSocket::FromHandle  
+##  <a name="fromhandle"></a>CSocket::FromHandle  
  Gibt einen Zeiger auf ein `CSocket` Objekt.  
   
 ```  
@@ -213,7 +221,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
   
  Weitere Informationen finden Sie unter [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="a-nameisblockinga--csocketisblocking"></a><a name="isblocking"></a>CSocket::IsBlocking  
+##  <a name="isblocking"></a>CSocket::IsBlocking  
  Rufen Sie diese Memberfunktion, um festzustellen, ob ein blockierender Aufruf ausgeführt wird.  
   
 ```  
@@ -226,7 +234,7 @@ BOOL IsBlocking();
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [Windows Sockets: Verwenden von Sockets mit Archiven](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="a-nameonmessagependinga--csocketonmessagepending"></a><a name="onmessagepending"></a>CSocket::OnMessagePending  
+##  <a name="onmessagepending"></a>CSocket::OnMessagePending  
  Überschreiben Sie diese Memberfunktion zum Suchen nach bestimmten Nachrichten von Windows und reagieren darauf in der Socket.  
   
 ```  

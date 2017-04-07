@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFontHolder
+- AFXCTL/CFontHolder
+- AFXCTL/CFontHolder::CFontHolder
+- AFXCTL/CFontHolder::GetDisplayString
+- AFXCTL/CFontHolder::GetFontDispatch
+- AFXCTL/CFontHolder::GetFontHandle
+- AFXCTL/CFontHolder::InitializeFont
+- AFXCTL/CFontHolder::QueryTextMetrics
+- AFXCTL/CFontHolder::ReleaseFont
+- AFXCTL/CFontHolder::Select
+- AFXCTL/CFontHolder::SetFont
+- AFXCTL/CFontHolder::m_pFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +99,7 @@ class CFontHolder
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxctl.h  
   
-##  <a name="a-namecfontholdera--cfontholdercfontholder"></a><a name="cfontholder"></a>CFontHolder::CFontHolder  
+##  <a name="cfontholder"></a>CFontHolder::CFontHolder  
  Erstellt ein `CFontHolder`-Objekt.  
   
 ```  
@@ -102,7 +113,7 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 ### <a name="remarks"></a>Hinweise  
  Sie müssen Aufrufen `InitializeFont` das resultierende Objekt vor der Verwendung initialisiert werden.  
   
-##  <a name="a-namegetdisplaystringa--cfontholdergetdisplaystring"></a><a name="getdisplaystring"></a>CFontHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>CFontHolder::GetDisplayString  
  Ruft eine Zeichenfolge, die in einen Container Eigenschaftenbrowser angezeigt werden kann.  
   
 ```  
@@ -116,7 +127,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>Rückgabewert  
  Der Wert ist ungleich NULL, wenn die Zeichenfolge erfolgreich abgerufen wird; andernfalls 0.  
   
-##  <a name="a-namegetfontdispatcha--cfontholdergetfontdispatch"></a><a name="getfontdispatch"></a>CFontHolder::GetFontDispatch  
+##  <a name="getfontdispatch"></a>CFontHolder::GetFontDispatch  
  Rufen Sie diese Funktion, um einen Zeiger auf die Schriftart Dispatch-Schnittstelle abzurufen.  
   
 ```  
@@ -129,7 +140,7 @@ LPFONTDISP GetFontDispatch();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie `InitializeFont` vor dem Aufruf von `GetFontDispatch`.  
   
-##  <a name="a-namegetfonthandlea--cfontholdergetfonthandle"></a><a name="getfonthandle"></a>CFontHolder::GetFontHandle  
+##  <a name="getfonthandle"></a>CFontHolder::GetFontHandle  
  Rufen Sie diese Funktion, um ein Handle für einer Windows-Schriftart zu erhalten.  
   
 ```  
@@ -158,7 +169,7 @@ HFONT GetFontHandle(
   
  Die Version ohne Parameter gibt ein Handle für eine Schriftart für den Bildschirm ordnungsgemäß dimensioniert.  
   
-##  <a name="a-nameinitializefonta--cfontholderinitializefont"></a><a name="initializefont"></a>CFontHolder::InitializeFont  
+##  <a name="initializefont"></a>CFontHolder::InitializeFont  
  Initialisiert ein `CFontHolder` Objekt.  
   
 ```  
@@ -181,14 +192,14 @@ void InitializeFont(
   
  Mit dieser Funktion wird nach dem Erstellen einer `CFontHolder` Objekt.  
   
-##  <a name="a-namempfonta--cfontholdermpfont"></a><a name="m_pfont"></a>CFontHolder::m_pFont  
+##  <a name="m_pfont"></a>CFontHolder::m_pFont  
  Ein Zeiger auf die `CFontHolder` des Objekts `IFont` Schnittstelle.  
   
 ```  
 LPFONT m_pFont;  
 ```  
   
-##  <a name="a-namequerytextmetricsa--cfontholderquerytextmetrics"></a><a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics  
+##  <a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics  
  Ruft Informationen zu der physischen Schriftart, dargestellt durch die `CFontHolder` Objekt.  
   
 ```  
@@ -199,14 +210,14 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
  `lptm`  
  Ein Zeiger auf eine [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) -Struktur, die die Informationen zu erhalten.  
   
-##  <a name="a-namereleasefonta--cfontholderreleasefont"></a><a name="releasefont"></a>CFontHolder::ReleaseFont  
+##  <a name="releasefont"></a>CFontHolder::ReleaseFont  
  Diese Funktion trennt die `CFontHolder` -Objekt aus seiner `IFont` Schnittstelle.  
   
 ```  
 void ReleaseFont();
 ```  
   
-##  <a name="a-nameselecta--cfontholderselect"></a><a name="select"></a>CFontHolder::Select  
+##  <a name="select"></a>CFontHolder::Select  
  Rufen Sie diese Funktion, um die Schriftart des Steuerelements in den angegebenen Gerätekontext auswählen.  
   
 ```  
@@ -232,7 +243,7 @@ CFont* Select(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [GetFontHandle](#getfonthandle) eine Erläuterung der `cyLogical` und `cyHimetric` Parameter.  
   
-##  <a name="a-namesetfonta--cfontholdersetfont"></a><a name="setfont"></a>CFontHolder::SetFont  
+##  <a name="setfont"></a>CFontHolder::SetFont  
  Eine beliebige vorhandene Schriftart freigegeben und eine Verbindung der `CFontHolder` -Objekt an eine `IFont` Schnittstelle.  
   
 ```  

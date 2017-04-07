@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem::CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem::GetDocument
+- AFXDOCOB/CDocObjectServerItem::OnHide
+- AFXDOCOB/CDocObjectServerItem::OnShow
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CDocObjectServerItem : public COleServerItem
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdocob.h  
   
-##  <a name="a-namecdocobjectserveritema--cdocobjectserveritemcdocobjectserveritem"></a><a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
+##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
  Erstellt ein `CDocObjectServerItem`-Objekt.  
   
 ```  
@@ -109,7 +114,7 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
  `bAutoDelete`  
  Gibt an, ob das Objekt gelöscht werden kann, wenn ein Link freigegeben wird. Das Argument **FALSE** Wenn das `CDocObjectServerItem` Objekt ist ein integraler Bestandteil der Daten des Dokuments. Legen Sie es auf **TRUE** Wenn das Objekt eine sekundäre Struktur verwendet, um einen Bereich in die Daten des Dokuments zu identifizieren, die vom Framework gelöscht werden können.  
   
-##  <a name="a-namegetdocumenta--cdocobjectserveritemgetdocument"></a><a name="getdocument"></a>CDocObjectServerItem::GetDocument  
+##  <a name="getdocument"></a>CDocObjectServerItem::GetDocument  
  Ruft einen Zeiger auf das Dokument, das das Element enthält.  
   
 ```  
@@ -122,7 +127,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>Hinweise  
  Dies ermöglicht den Zugriff auf die Server-Dokument, das Sie als Argument übergeben der [CDocObjectServerItem](#cdocobjectserveritem) Konstruktor.  
   
-##  <a name="a-nameonhidea--cdocobjectserveritemonhide"></a><a name="onhide"></a>CDocObjectServerItem::OnHide  
+##  <a name="onhide"></a>CDocObjectServerItem::OnHide  
  Aufgerufen, um das Element auszublenden.  
   
 ```  
@@ -132,7 +137,7 @@ virtual void OnHide();
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung löst eine Ausnahme aus, wenn das Element ein DocObject ist. Ein aktives DocObject-Element kann nicht ausgeblendet werden, da es die ganze Sicht akzeptiert. Sie müssen das DocObject-Element, um auszublenden, deaktivieren. Wenn das Element nicht DocObject ist, ruft die Implementierung der [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).  
   
-##  <a name="a-nameonshowa--cdocobjectserveritemonshow"></a><a name="onshow"></a>CDocObjectServerItem::OnShow  
+##  <a name="onshow"></a>CDocObjectServerItem::OnShow  
  Aufgerufen, um anzuweisen, die Serveranwendung, um die DocObject Element direktes, aktiv.  
   
 ```  

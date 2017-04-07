@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComCachedTearOffObject
-- ATL.CComCachedTearOffObject
-- ATL.CComCachedTearOffObject<contained>
 - CComCachedTearOffObject
-- ATL::CComCachedTearOffObject<contained>
+- ATLCOM/ATL::CComCachedTearOffObject
+- ATLCOM/ATL::CComCachedTearOffObject::CComCachedTearOffObject
+- ATLCOM/ATL::CComCachedTearOffObject::AddRef
+- ATLCOM/ATL::CComCachedTearOffObject::FinalConstruct
+- ATLCOM/ATL::CComCachedTearOffObject::FinalRelease
+- ATLCOM/ATL::CComCachedTearOffObject::QueryInterface
+- ATLCOM/ATL::CComCachedTearOffObject::Release
+- ATLCOM/ATL::CComCachedTearOffObject::m_contained
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +110,7 @@ public CComObjectRootEx<contained
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
   
-##  <a name="a-nameaddrefa--ccomcachedtearoffobjectaddref"></a><a name="addref"></a>CComCachedTearOffObject::AddRef  
+##  <a name="addref"></a>CComCachedTearOffObject::AddRef  
  Inkrementiert den Verweiszähler des dem `CComCachedTearOffObject` Objekts um 1.  
   
 ```
@@ -116,7 +120,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der möglicherweise hilfreich für die Diagnose und testen.  
   
-##  <a name="a-nameccomcachedtearoffobjecta--ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject  
+##  <a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject  
  Der Konstruktor.  
   
 ```
@@ -130,7 +134,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>Hinweise  
  Initialisiert die `CComContainedObject` Element [M_contained](#m_contained).  
   
-##  <a name="a-namedtora--ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="dtor"></a>CComCachedTearOffObject:: ~ CComCachedTearOffObject  
+##  <a name="dtor"></a>CComCachedTearOffObject:: ~ CComCachedTearOffObject  
  Der Destruktor.  
   
 ```
@@ -140,7 +144,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>Hinweise  
  Alle zugeordneten Ressourcen und ruft frei [FinalRelease](#finalrelease).  
   
-##  <a name="a-namefinalconstructa--ccomcachedtearoffobjectfinalconstruct"></a><a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct  
+##  <a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct  
  Aufrufe **m_contained::FinalConstruct** erstellen `m_contained`, `CComContainedObject` <  `contained`> Objekt verwendet, um die von der Klasse abtrennbare implementierten Schnittstelle zugreifen.  
   
 ```
@@ -150,14 +154,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="a-namefinalreleasea--ccomcachedtearoffobjectfinalrelease"></a><a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease  
+##  <a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease  
  Aufrufe **m_contained::FinalRelease** freigeben `m_contained`, `CComContainedObject` <  `contained`> Objekt.  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="a-namemcontaineda--ccomcachedtearoffobjectmcontained"></a><a name="m_contained"></a>CComCachedTearOffObject::m_contained  
+##  <a name="m_contained"></a>CComCachedTearOffObject::m_contained  
  Ein [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) von Ihrem abtrennbare-Klasse abgeleitetes Objekt.  
   
 ```
@@ -171,7 +175,7 @@ CcomContainedObject <contained> m_contained;
 ### <a name="remarks"></a>Hinweise  
  Die Methoden `m_contained` erbt werden verwendet, um die Tearoff Schnittstelle in Ihrer Klasse abtrennbare über zwischengespeicherte abtrennbare des Objekts zugreifen `QueryInterface`, `FinalConstruct`, und `FinalRelease`.  
   
-##  <a name="a-namequeryinterfacea--ccomcachedtearoffobjectqueryinterface"></a><a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
   
 ```
@@ -192,7 +196,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  Wenn die angeforderte Schnittstelle wird **IUnknown**, gibt einen Zeiger auf die `CComCachedTearOffObject`des eigenen **IUnknown** und den Verweiszähler erhöht. Anderenfalls fragt die-Schnittstelle abtrennbare Klasse unter Verwendung der [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) Methode geerbt von `CComObjectRootEx`.  
 
   
-##  <a name="a-namereleasea--ccomcachedtearoffobjectrelease"></a><a name="release"></a>CComCachedTearOffObject::Release  
+##  <a name="release"></a>CComCachedTearOffObject::Release  
  Dekrementiert den Verweiszähler um 1 und, wenn der Verweiszähler 0 ist, löscht der `CComCachedTearOffObject` Objekt.  
   
 ```

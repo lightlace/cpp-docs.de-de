@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CW2AEX<t_nBufferLength>
 - CW2AEX
-- ATL.CW2AEX<t_nBufferLength>
-- ATL::CW2AEX
-- ATL.CW2AEX
+- ATLCONV/ATL::CW2AEX
+- ATLCONV/ATL::CW2AEX::CW2AEX
+- ATLCONV/ATL::CW2AEX::m_psz
+- ATLCONV/ATL::CW2AEX::m_szBuffer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +113,7 @@ class CW2AEX
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlconv.h  
   
-##  <a name="a-namecw2aexa--cw2aexcw2aex"></a><a name="cw2aex"></a>CW2AEX::CW2AEX  
+##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
  Der Konstruktor.  
   
 ```
@@ -131,7 +131,7 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Weist den Puffer im Übersetzungsprozess verwendet.  
   
-##  <a name="a-namedtora--cw2aexcw2aex"></a><a name="dtor"></a>CW2AEX:: ~ CW2AEX  
+##  <a name="dtor"></a>CW2AEX:: ~ CW2AEX  
  Der Destruktor.  
   
 ```
@@ -141,21 +141,21 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Gibt den zugeordneten Puffer frei.  
   
-##  <a name="a-namempsza--cw2aexmpsz"></a><a name="m_psz"></a>CW2AEX::m_psz  
+##  <a name="m_psz"></a>CW2AEX::m_psz  
  Der Datenmember, die die Quellzeichenfolge speichert.  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="a-namemszbuffera--cw2aexmszbuffer"></a><a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
  Den statischen Puffer zum Speichern der konvertierten Zeichenfolge verwendet.  
   
 ```
 char m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="a-nameoperatorlpstra--cw2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CW2AEX::Operator LPSTR  
+##  <a name="operator_lpstr"></a>CW2AEX::Operator LPSTR  
  Operator für die Konvertierung.  
   
 ```  

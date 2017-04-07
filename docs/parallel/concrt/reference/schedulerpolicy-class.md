@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- SchedulerPolicy
 - concrt/concurrency::SchedulerPolicy
-- concrtrm/concurrency::SchedulerPolicy
+- concrt/concurrency::SchedulerPolicy::SchedulerPolicy
+- concrt/concurrency::SchedulerPolicy::GetPolicyValue
+- concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits
+- concrt/concurrency::SchedulerPolicy::SetPolicyValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 68707be387590cf04745d5a53872558d7af8da8c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a00f7d9cafbd84fc3bbf6b10f322fad6166110cd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy-Klasse
@@ -55,25 +59,25 @@ class SchedulerPolicy;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[SchedulerPolicy-Konstruktor](#ctor)|Überladen. Erstellt eine neue Planerrichtlinie und füllt sie mit Werten für [Richtlinienschlüssel](concurrency-namespace-enums.md) von Concurrency Runtime-Planern und dem Ressourcen-Manager unterstützt werden.|  
+|[SchedulerPolicy](#ctor)|Überladen. Erstellt eine neue Planerrichtlinie und füllt sie mit Werten für [Richtlinienschlüssel](concurrency-namespace-enums.md) von Concurrency Runtime-Planern und dem Ressourcen-Manager unterstützt werden.|  
 |[~ SchedulerPolicy-Destruktor](#dtor)|Zerstört eine Planerrichtlinie.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[GetPolicyValue-Methode](#getpolicyvalue)|Ruft den Wert des als `key`-Parameter angegebenen Richtlinienschlüssels ab.|  
-|[SetConcurrencyLimits-Methode](#setconcurrencylimits)|Legt gleichzeitig die `MinConcurrency`-Richtlinie und die `MaxConcurrency`-Richtlinie des `SchedulerPolicy`-Objekts fest.|  
-|[SetPolicyValue-Methode](#setpolicyvalue)|Legt den Wert des Richtlinienschlüssels fest, der als `key`-Parameter angegeben wurde, und gibt den alten Wert zurück.|  
+|[GetPolicyValue](#getpolicyvalue)|Ruft den Wert des als `key`-Parameter angegebenen Richtlinienschlüssels ab.|  
+|[SetConcurrencyLimits](#setconcurrencylimits)|Legt gleichzeitig die `MinConcurrency`-Richtlinie und die `MaxConcurrency`-Richtlinie des `SchedulerPolicy`-Objekts fest.|  
+|[SetPolicyValue](#setpolicyvalue)|Legt den Wert des Richtlinienschlüssels fest, der als `key`-Parameter angegeben wurde, und gibt den alten Wert zurück.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Operator =-Operator](#operator_eq)|Weist die Planerrichtlinie von einer anderen Planerrichtlinie zu.|  
+|[operator=](#operator_eq)|Weist die Planerrichtlinie von einer anderen Planerrichtlinie zu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den Richtlinien, die mit gesteuert werden können die `SchedulerPolicy` Klasse, finden Sie unter [PolicyElementKey-Enumeration](concurrency-namespace-enums.md).  
+ Weitere Informationen zu den Richtlinien, die mit gesteuert werden können die `SchedulerPolicy` Klasse, finden Sie unter [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `SchedulerPolicy`  
@@ -83,7 +87,7 @@ class SchedulerPolicy;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namegetpolicyvaluea-getpolicyvalue"></a><a name="getpolicyvalue"></a>GetPolicyValue 
+##  <a name="getpolicyvalue"></a>GetPolicyValue 
 
  Ruft den Wert des als `key`-Parameter angegebenen Richtlinienschlüssels ab.  
   
@@ -101,7 +105,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ### <a name="remarks"></a>Hinweise  
  Die Methode löst [Invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) für einen ungültigen Richtlinienschlüssel.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a>Operator = 
 
  Weist die Planerrichtlinie von einer anderen Planerrichtlinie zu.  
   
@@ -119,7 +123,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ### <a name="remarks"></a>Hinweise  
  Oft ist die zweckmäßigste Art, eine neue Planerrichtlinie zu definieren, das Kopieren einer vorhandenen Richtlinie und das anschließende Bearbeiten mit der `SetPolicyValue`-Methode oder der `SetConcurrencyLimits`-Methode.  
   
-##  <a name="a-namectora-schedulerpolicy"></a><a name="ctor"></a>SchedulerPolicy 
+##  <a name="ctor"></a>SchedulerPolicy 
 
  Erstellt eine neue Planerrichtlinie und füllt sie mit Werten für [Richtlinienschlüssel](concurrency-namespace-enums.md) von Concurrency Runtime-Planern und dem Ressourcen-Manager unterstützt werden.  
   
@@ -148,7 +152,7 @@ SchedulerPolicy(
   
  Der dritte Konstruktor ist ein Kopierkonstruktor. Oft ist die zweckmäßigste Art, eine neue Planerrichtlinie zu definieren, das Kopieren einer vorhandenen Richtlinie und das anschließende Bearbeiten mit der `SetPolicyValue`-Methode oder der `SetConcurrencyLimits`-Methode.  
   
-##  <a name="a-namedtora-schedulerpolicy"></a><a name="dtor"></a>~ SchedulerPolicy 
+##  <a name="dtor"></a>~ SchedulerPolicy 
 
  Zerstört eine Planerrichtlinie.  
   
@@ -156,7 +160,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```  
   
-##  <a name="a-namesetconcurrencylimitsa-setconcurrencylimits"></a><a name="setconcurrencylimits"></a>SetConcurrencyLimits 
+##  <a name="setconcurrencylimits"></a>SetConcurrencyLimits 
 
  Legt gleichzeitig die `MinConcurrency`-Richtlinie und die `MaxConcurrency`-Richtlinie des `SchedulerPolicy`-Objekts fest.  
   
@@ -178,7 +182,7 @@ void SetConcurrencyLimits(
   
  Die Methode kann auch Auslösen [Invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) für andere ungültige Werte.  
   
-##  <a name="a-namesetpolicyvaluea-setpolicyvalue"></a><a name="setpolicyvalue"></a>SetPolicyValue 
+##  <a name="setpolicyvalue"></a>SetPolicyValue 
 
  Legt den Wert des Richtlinienschlüssels fest, der als `key`-Parameter angegeben wurde, und gibt den alten Wert zurück.  
   
@@ -207,7 +211,7 @@ unsigned int SetPolicyValue(
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
- [PolicyElementKey-Enumeration](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [CurrentScheduler-Klasse](currentscheduler-class.md)   
  [Scheduler-Klasse](scheduler-class.md)   
  [Taskplaner](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrent_queue/concurrency::concurrent_queue
-- concurrent_queue/Concurrency::concurrent_queue
+- concurrent_queue
+- CONCURRENT_QUEUE/concurrency::concurrent_queue
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::concurrent_queue
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::clear
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::empty
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::get_allocator
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::push
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::try_pop
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_begin
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_end
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_size
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: aac7b15db82fbd2ceb801f45ff1b70c293014080
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d2af8483f38a14454e3aa1aecf28864bab1c6a1a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue-Klasse
@@ -76,21 +85,21 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Concurrent_queue-Konstruktor](#ctor)|Überladen. Erstellt eine gleichzeitige Warteschlange.|  
+|[concurrent_queue](#ctor)|Überladen. Erstellt eine gleichzeitige Warteschlange.|  
 |[~ Concurrent_queue-Destruktor](#dtor)|Zerstört die gleichzeitige Warteschlange.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Clear-Methode](#clear)|Löscht die gleichzeitige Warteschlange und zerstört alle derzeit zur Warteschlange hinzugefügten Elemente. Diese Methode ist nicht nebenläufigkeitssicher.|  
-|[Empty-Methode](#empty)|Testet, ob zum Zeitpunkt die gleichzeitige Warteschlange leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.|  
-|[Get_allocator-Methode](#get_allocator)|Gibt eine Kopie der Zuweisung verwendet, um die parallele Warteschlange zu erstellen. Diese Methode ist nebenläufigkeitssicher.|  
-|[Push-Methode](#push)|Überladen. Fügt ein Element am Ende der gleichzeitigen Warteschlange. Diese Methode ist nebenläufigkeitssicher.|  
-|[Try_pop-Methode](#try_pop)|Entfernt ein Element aus der Warteschlange, sofern verfügbar. Diese Methode ist nebenläufigkeitssicher.|  
-|[Unsafe_begin-Methode](#unsafe_begin)|Überladen. Gibt einen Iterator vom Typ `iterator` oder `const_iterator` an den Anfang der gleichzeitigen Warteschlange. Diese Methode ist nicht nebenläufigkeitssicher.|  
-|[Unsafe_end-Methode](#unsafe_end)|Überladen. Gibt einen Iterator vom Typ `iterator` oder `const_iterator` bis zum Ende der gleichzeitigen Warteschlange. Diese Methode ist nicht nebenläufigkeitssicher.|  
-|[Unsafe_size-Methode](#unsafe_size)|Gibt die Anzahl der Elemente in der Warteschlange. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[clear](#clear)|Löscht die gleichzeitige Warteschlange und zerstört alle derzeit zur Warteschlange hinzugefügten Elemente. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[empty](#empty)|Testet, ob zum Zeitpunkt die gleichzeitige Warteschlange leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.|  
+|[get_allocator](#get_allocator)|Gibt eine Kopie der Zuweisung verwendet, um die parallele Warteschlange zu erstellen. Diese Methode ist nebenläufigkeitssicher.|  
+|[push](#push)|Überladen. Fügt ein Element am Ende der gleichzeitigen Warteschlange. Diese Methode ist nebenläufigkeitssicher.|  
+|[try_pop](#try_pop)|Entfernt ein Element aus der Warteschlange, sofern verfügbar. Diese Methode ist nebenläufigkeitssicher.|  
+|[unsafe_begin](#unsafe_begin)|Überladen. Gibt einen Iterator vom Typ `iterator` oder `const_iterator` an den Anfang der gleichzeitigen Warteschlange. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[unsafe_end](#unsafe_end)|Überladen. Gibt einen Iterator vom Typ `iterator` oder `const_iterator` bis zum Ende der gleichzeitigen Warteschlange. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[unsafe_size](#unsafe_size)|Gibt die Anzahl der Elemente in der Warteschlange. Diese Methode ist nicht nebenläufigkeitssicher.|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -103,7 +112,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Deaktivieren 
+##  <a name="clear"></a>Deaktivieren 
 
  Löscht die gleichzeitige Warteschlange und zerstört alle derzeit zur Warteschlange hinzugefügten Elemente. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -111,7 +120,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 void clear();
 ```  
   
-##  <a name="a-namectora-concurrentqueue"></a><a name="ctor"></a>concurrent_queue 
+##  <a name="ctor"></a>concurrent_queue 
 
  Erstellt eine gleichzeitige Warteschlange.  
   
@@ -159,7 +168,7 @@ concurrent_queue(_InputIterator _Begin,
   
  Der vierte Konstruktor gibt vom Iteratorbereich bereitgestellte Werte an [ `_Begin`, `_End`).  
   
-##  <a name="a-namedtora-concurrentqueue"></a><a name="dtor"></a>~ Concurrent_queue 
+##  <a name="dtor"></a>~ Concurrent_queue 
 
  Zerstört die gleichzeitige Warteschlange.  
   
@@ -167,7 +176,7 @@ concurrent_queue(_InputIterator _Begin,
 ~concurrent_queue();
 ```  
   
-##  <a name="a-nameemptya-empty"></a><a name="empty"></a>leere 
+##  <a name="empty"></a>leere 
 
  Testet, ob zum Zeitpunkt die gleichzeitige Warteschlange leer ist, wird diese Methode aufgerufen. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -181,7 +190,7 @@ bool empty() const;
 ### <a name="remarks"></a>Hinweise  
  Während dieser Methode parallelitätssicher ist in Bezug auf Aufrufe der Methoden `push`, `try_pop`, und `empty`, der zurückgegebene Wert möglicherweise falsch sein, die Zeit, die er vom aufrufenden Thread überprüft wird.  
   
-##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a>get_allocator 
 
  Gibt eine Kopie der Zuweisung verwendet, um die parallele Warteschlange zu erstellen. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -192,7 +201,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Rückgabewert  
  Eine Kopie der Zuweisung verwendet, um die parallele Warteschlange zu erstellen.  
   
-##  <a name="a-namepusha-push"></a><a name="push"></a>Push 
+##  <a name="push"></a>Push 
 
  Fügt ein Element am Ende der gleichzeitigen Warteschlange. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -209,7 +218,7 @@ void push(T&& _Src);
 ### <a name="remarks"></a>Hinweise  
  `push`parallelitätssicher ist in Bezug auf Aufrufe der Methoden `push`, `try_pop`, und `empty`.  
   
-##  <a name="a-nametrypopa-trypop"></a><a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a>try_pop 
 
  Entfernt ein Element aus der Warteschlange, sofern verfügbar. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -229,7 +238,7 @@ bool try_pop(T& _Dest);
   
  `try_pop`parallelitätssicher ist in Bezug auf Aufrufe der Methoden `push`, `try_pop`, und `empty`.  
   
-##  <a name="a-nameunsafebegina-unsafebegin"></a><a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a>unsafe_begin 
 
  Gibt einen Iterator vom Typ `iterator` oder `const_iterator` an den Anfang der gleichzeitigen Warteschlange. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -245,7 +254,7 @@ const_iterator unsafe_begin() const;
 ### <a name="remarks"></a>Hinweise  
  Die Iteratoren für die `concurrent_queue` Klasse dienen in erster Linie für das Debuggen, wie sie langsam sind, und die Iteration ist nicht parallelitätssicher ist in Bezug auf andere Warteschlangenoperationen.  
   
-##  <a name="a-nameunsafeenda-unsafeend"></a><a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a>unsafe_end 
 
  Gibt einen Iterator vom Typ `iterator` oder `const_iterator` bis zum Ende der gleichzeitigen Warteschlange. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -261,7 +270,7 @@ const_iterator unsafe_end() const;
 ### <a name="remarks"></a>Hinweise  
  Die Iteratoren für die `concurrent_queue` Klasse dienen in erster Linie für das Debuggen, wie sie langsam sind, und die Iteration ist nicht parallelitätssicher ist in Bezug auf andere Warteschlangenoperationen.  
   
-##  <a name="a-nameunsafesizea-unsafesize"></a><a name="unsafe_size"></a>unsafe_size 
+##  <a name="unsafe_size"></a>unsafe_size 
 
  Gibt die Anzahl der Elemente in der Warteschlange. Diese Methode ist nicht nebenläufigkeitssicher.  
   

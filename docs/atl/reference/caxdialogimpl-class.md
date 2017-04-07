@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAxDialogImpl
-- ATL.CAxDialogImpl
 - CAxDialogImpl
+- ATLWIN/ATL::CAxDialogImpl
+- ATLWIN/ATL::CAxDialogImpl::AdviseSinkMap
+- ATLWIN/ATL::CAxDialogImpl::Create
+- ATLWIN/ATL::CAxDialogImpl::DestroyWindow
+- ATLWIN/ATL::CAxDialogImpl::DoModal
+- ATLWIN/ATL::CAxDialogImpl::EndDialog
+- ATLWIN/ATL::CAxDialogImpl::GetDialogProc
+- ATLWIN/ATL::CAxDialogImpl::GetIDD
+- ATLWIN/ATL::CAxDialogImpl::IsDialogMessage
+- ATLWIN/ATL::CAxDialogImpl::m_bModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +122,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h  
   
-##  <a name="a-nameadvisesinkmapa--caxdialogimpladvisesinkmap"></a><a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap  
  Rufen Sie diese Methode senkereigniszuordnung oder alle Einträge in das Objekt Senke zuordnen.  
   
 ```
@@ -128,7 +136,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="a-namecreatea--caxdialogimplcreate"></a><a name="create"></a>CAxDialogImpl::Create  
+##  <a name="create"></a>CAxDialogImpl::Create  
  Rufen Sie diese Methode zum Erstellen eines nicht modalen Dialogfelds.  
   
 ```
@@ -154,7 +162,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
   
  Die zweite Außerkraftsetzung bereitgestellt wurde, nur mit Dialogfeldern verwendet werden können [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="a-namedestroywindowa--caxdialogimpldestroywindow"></a><a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
  Rufen Sie diese Methode, um ein nicht modales Dialogfeld löschen.  
   
 ```
@@ -167,7 +175,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie `DestroyWindow` zerstört ein modales Dialogfeld. Rufen Sie [EndDialog](#enddialog) stattdessen.  
   
-##  <a name="a-namedomodala--caxdialogimpldomodal"></a><a name="domodal"></a>CAxDialogImpl::DoModal  
+##  <a name="domodal"></a>CAxDialogImpl::DoModal  
  Rufen Sie diese Methode, um ein modales Dialogfeld zu erstellen.  
   
 ```
@@ -191,7 +199,7 @@ INT_PTR DoModal(
   
  Rufen Sie zum Erstellen eines nicht modalen Dialogfelds [erstellen](#create).  
   
-##  <a name="a-nameenddialoga--caxdialogimplenddialog"></a><a name="enddialog"></a>CAxDialogImpl::EndDialog  
+##  <a name="enddialog"></a>CAxDialogImpl::EndDialog  
  Rufen Sie diese Methode, um ein modales Dialogfeld löschen.  
   
 ```
@@ -211,7 +219,7 @@ BOOL EndDialog(int nRetCode);
 > [!NOTE]
 >  Rufen Sie nicht `EndDialog` , ein nicht modales Dialogfeld zu zerstören. Rufen Sie [DestroyWindow](#destroywindow) stattdessen.  
   
-##  <a name="a-namegetdialogproca--caxdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
  Rufen Sie diese Methode, um einen Zeiger auf die `DialogProc` Callback-Funktion.  
   
 ```
@@ -224,7 +232,7 @@ virtual DLGPROC GetDialogProc();
 ### <a name="remarks"></a>Hinweise  
  Die `DialogProc` Funktion ist eine anwendungsdefinierte Rückruffunktion ausgeführt.  
   
-##  <a name="a-namegetidda--caxdialogimplgetidd"></a><a name="getidd"></a>CAxDialogImpl::GetIDD  
+##  <a name="getidd"></a>CAxDialogImpl::GetIDD  
  Rufen Sie diese Methode, um das Dialogfeld Vorlage die Ressourcen-ID abrufen  
   
 ```
@@ -234,7 +242,7 @@ int GetIDD();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Dialogfeld Vorlage die Ressourcen-ID  
   
-##  <a name="a-nameisdialogmessagea--caxdialogimplisdialogmessage"></a><a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
+##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
  Rufen Sie diese Methode, um zu bestimmen, ob eine Nachricht für das Dialogfeld vorgesehen ist, und ist es, verarbeiten Sie die Nachricht zu.  
   
 ```
@@ -251,7 +259,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode soll eine Meldungsschleife aus aufgerufen werden.  
   
-##  <a name="a-namembmodala--caxdialogimplmbmodal"></a><a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
+##  <a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
  Eine Variable, die nur im Debugbuild vorhanden erstellt und ist festgelegt auf WAHR, wenn das Dialogfeld modal ist.  
   
 ```

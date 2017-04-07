@@ -10,6 +10,28 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComSafeArray
+- ATLSAFE/ATL::CComSafeArray
+- ATLSAFE/ATL::CComSafeArray::CComSafeArray
+- ATLSAFE/ATL::CComSafeArray::Add
+- ATLSAFE/ATL::CComSafeArray::Attach
+- ATLSAFE/ATL::CComSafeArray::CopyFrom
+- ATLSAFE/ATL::CComSafeArray::CopyTo
+- ATLSAFE/ATL::CComSafeArray::Create
+- ATLSAFE/ATL::CComSafeArray::Destroy
+- ATLSAFE/ATL::CComSafeArray::Detach
+- ATLSAFE/ATL::CComSafeArray::GetAt
+- ATLSAFE/ATL::CComSafeArray::GetCount
+- ATLSAFE/ATL::CComSafeArray::GetDimensions
+- ATLSAFE/ATL::CComSafeArray::GetLowerBound
+- ATLSAFE/ATL::CComSafeArray::GetSafeArrayPtr
+- ATLSAFE/ATL::CComSafeArray::GetType
+- ATLSAFE/ATL::CComSafeArray::GetUpperBound
+- ATLSAFE/ATL::CComSafeArray::IsSizable
+- ATLSAFE/ATL::CComSafeArray::MultiDimGetAt
+- ATLSAFE/ATL::CComSafeArray::MultiDimSetAt
+- ATLSAFE/ATL::CComSafeArray::Resize
+- ATLSAFE/ATL::CComSafeArray::SetAt
+- ATLSAFE/ATL::CComSafeArray::m_psa
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -137,7 +159,7 @@ class CComSafeArray
 ## <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities&#75;](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
-##  <a name="a-nameadda--ccomsafearrayadd"></a><a name="add"></a>CComSafeArray::Add  
+##  <a name="add"></a>CComSafeArray::Add  
  Fügt dem **eine oder mehrere Elemente oder eine** SAFEARRAY `CComSafeArray`-Struktur hinzu.  
   
 ```
@@ -170,7 +192,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
   
  Die `bCopy` Flag berücksichtigt wird bei der Elemente des Typs `BSTR` oder **VARIANT** zu einem Array hinzugefügt werden. Der Standardwert von **TRUE** wird sichergestellt, dass eine neue Kopie der Daten erfolgt, wenn das Element in das Array hinzugefügt wird.  
   
-##  <a name="a-nameattacha--ccomsafearrayattach"></a><a name="attach"></a>CComSafeArray::Attach  
+##  <a name="attach"></a>CComSafeArray::Attach  
  Hängt einem **-Objekt eine** SAFEARRAY `CComSafeArray` -Struktur an.  
   
 ```
@@ -187,7 +209,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>Hinweise  
  Fügt eine **SAFEARRAY** -Struktur in eine `CComSafeArray` -Objekts, indem die vorhandene `CComSafeArray` Methoden zur Verfügung.  
   
-##  <a name="a-nameccomsafearraya--ccomsafearrayccomsafearray"></a><a name="ccomsafearray"></a>CComSafeArray::CComSafeArray  
+##  <a name="ccomsafearray"></a>CComSafeArray::CComSafeArray  
  Der Konstruktor.  
   
 ```
@@ -225,7 +247,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>Hinweise  
  Erstellt ein `CComSafeArray`-Objekt.  
   
-##  <a name="a-namedtora--ccomsafearrayccomsafearray"></a><a name="dtor"></a>CComSafeArray:: ~ CComSafeArray  
+##  <a name="dtor"></a>CComSafeArray:: ~ CComSafeArray  
  Der Destruktor.  
   
 ```
@@ -235,7 +257,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>Hinweise  
  Gibt alle zugeordnete Ressourcen frei.  
   
-##  <a name="a-namecopyfroma--ccomsafearraycopyfrom"></a><a name="copyfrom"></a>CComSafeArray::CopyFrom  
+##  <a name="copyfrom"></a>CComSafeArray::CopyFrom  
  Kopiert den Inhalt einer **SAFEARRAY** -Struktur in das `CComSafeArray` -Objekt.  
   
 ```
@@ -252,7 +274,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kopiert den Inhalt einer **SAFEARRAY** in das aktuelle `CComSafeArray` Objekt. Ersetzt den vorhandenen Inhalt des Arrays.  
   
-##  <a name="a-namecopytoa--ccomsafearraycopyto"></a><a name="copyto"></a>CComSafeArray::CopyTo  
+##  <a name="copyto"></a>CComSafeArray::CopyTo  
  Erstellt eine Kopie des `CComSafeArray`-Objekts.  
   
 ```
@@ -269,7 +291,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kopiert den Inhalt einer `CComSafeArray` -Objekt in ein **SAFEARRAY** Struktur.  
   
-##  <a name="a-namecreatea--ccomsafearraycreate"></a><a name="create"></a>CComSafeArray::Create  
+##  <a name="create"></a>CComSafeArray::Create  
  Erstellt eine `CComSafeArray`.  
   
 ```
@@ -296,7 +318,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="remarks"></a>Hinweise  
  Ein `CComSafeArray` Objekt erstellt werden kann, aus einer vorhandenen **SAFEARRAYBOUND** Struktur und die Anzahl der Dimensionen oder durch die Anzahl der Elemente im Array und die untere Grenze angeben. Wenn das Array von Visual C++ aus zugegriffen werden, muss die untere Grenze 0 sein. Andere Sprachen können andere Werte für die untere Grenze (z. B. Visual Basic unterstützt Arrays mit Elementen mit einem Bereich, z. B. zwischen-10 und 10).  
   
-##  <a name="a-namedestroya--ccomsafearraydestroy"></a><a name="destroy"></a>CComSafeArray::Destroy  
+##  <a name="destroy"></a>CComSafeArray::Destroy  
  Zerstört ein `CComSafeArray`-Objekt.  
   
 ```
@@ -309,7 +331,7 @@ HRESULT Destroy();
 ### <a name="remarks"></a>Hinweise  
  Löscht eine vorhandene `CComSafeArray` Objekt und alle darin enthaltenen Daten.  
   
-##  <a name="a-namedetacha--ccomsafearraydetach"></a><a name="detach"></a>CComSafeArray::Detach  
+##  <a name="detach"></a>CComSafeArray::Detach  
  Trennt ein **SAFEARRAY** von einem `CComSafeArray` -Objekt.  
   
 ```
@@ -322,7 +344,7 @@ LPSAFEARRAY Detach();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode löst die **SAFEARRAY** -Objekt aus der `CComSafeArray` Objekt.  
   
-##  <a name="a-namegetata--ccomsafearraygetat"></a><a name="getat"></a>CComSafeArray::GetAt  
+##  <a name="getat"></a>CComSafeArray::GetAt  
  Ruft ein einzelnes Element aus einem eindimensionalen Array ab.  
   
 ```
@@ -336,7 +358,7 @@ T& GetAt(LONG lIndex) const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Verweis auf das Arrayelement erforderlich.  
   
-##  <a name="a-namegetcounta--ccomsafearraygetcount"></a><a name="getcount"></a>CComSafeArray::GetCount  
+##  <a name="getcount"></a>CComSafeArray::GetCount  
  Gibt die Anzahl der Elemente des Arrays zurück.  
   
 ```
@@ -353,7 +375,7 @@ ULONG GetCount(UINT uDim = 0) const;
 ### <a name="remarks"></a>Hinweise  
  Bei Verwendung mit einem mehrdimensionalen Array gibt diese Methode die Anzahl der Elemente in einer bestimmten Dimension nur zurück.  
   
-##  <a name="a-namegetdimensionsa--ccomsafearraygetdimensions"></a><a name="getdimensions"></a>CComSafeArray::GetDimensions  
+##  <a name="getdimensions"></a>CComSafeArray::GetDimensions  
  Gibt die Anzahl der Dimensionen des Arrays zurück.  
   
 ```
@@ -363,7 +385,7 @@ UINT GetDimensions() const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Anzahl der Dimensionen des Arrays zurück.  
   
-##  <a name="a-namegetlowerbounda--ccomsafearraygetlowerbound"></a><a name="getlowerbound"></a>CComSafeArray::GetLowerBound  
+##  <a name="getlowerbound"></a>CComSafeArray::GetLowerBound  
  Gibt die untere Grenze für eine bestimmte Dimension des Arrays zurück.  
   
 ```
@@ -380,7 +402,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>Hinweise  
  Wenn die Untergrenze 0 ist, bedeutet dies eine C-ähnlichen-Array, dessen erste Element Elementnummer 0 ist. Falls ein Fehler auftritt, z. B. ungültige Dimensionsargument, diese Methode ruft `AtlThrow` mit dem HRESULT, das den Fehler beschreibt.  
   
-##  <a name="a-namegetsafearrayptra--ccomsafearraygetsafearrayptr"></a><a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
+##  <a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
  Gibt die Adresse des `m_psa` -Datenelements zurück.  
   
 ```
@@ -390,7 +412,7 @@ LPSAFEARRAY* GetSafeArrayPtr() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Zeiger auf die [CComSafeArray::m_psa](#m_psa) -Datenmember.  
   
-##  <a name="a-namegettypea--ccomsafearraygettype"></a><a name="gettype"></a>CComSafeArray::GetType  
+##  <a name="gettype"></a>CComSafeArray::GetType  
  Gibt den Typ der im Array gespeicherten Daten zurück.  
   
 ```
@@ -418,7 +440,7 @@ VARTYPE GetType() const;
 |VT_VARIANT|Variant-Zeiger|  
 |VT_CY|Currency-Datentyp|  
   
-##  <a name="a-namegetupperbounda--ccomsafearraygetupperbound"></a><a name="getupperbound"></a>CComSafeArray::GetUpperBound  
+##  <a name="getupperbound"></a>CComSafeArray::GetUpperBound  
  Gibt die obere Grenze für eine bestimmte Dimension des Arrays zurück.  
   
 ```
@@ -435,7 +457,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>Hinweise  
  Falls ein Fehler auftritt, z. B. ungültige Dimensionsargument, diese Methode ruft `AtlThrow` mit dem HRESULT, das den Fehler beschreibt.  
   
-##  <a name="a-nameissizablea--ccomsafearrayissizable"></a><a name="issizable"></a>CComSafeArray::IsSizable  
+##  <a name="issizable"></a>CComSafeArray::IsSizable  
  Testet, ob die Größe eines `CComSafeArray` -Objekts geändert werden kann.  
   
 ```
@@ -445,14 +467,14 @@ bool IsSizable() const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **true** Wenn das `CComSafeArray` geändert werden kann, **false** können.  
   
-##  <a name="a-namempsaa--ccomsafearraympsa"></a><a name="m_psa"></a>CComSafeArray::m_psa  
+##  <a name="m_psa"></a>CComSafeArray::m_psa  
  Enthält die Adresse der **SAFEARRAY** Struktur zugreifen.  
   
 ```
 LPSAFEARRAY m_psa;
 ```  
   
-##  <a name="a-namemultidimgetata--ccomsafearraymultidimgetat"></a><a name="multidimgetat"></a>CComSafeArray::MultiDimGetAt  
+##  <a name="multidimgetat"></a>CComSafeArray::MultiDimGetAt  
  Ruft ein einzelnes Element aus einem mehrdimensionalen Array ab.  
   
 ```
@@ -469,7 +491,7 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="a-namemultidimsetata--ccomsafearraymultidimsetat"></a><a name="multidimsetat"></a>CComSafeArray::MultiDimSetAt  
+##  <a name="multidimsetat"></a>CComSafeArray::MultiDimSetAt  
  Legt den Wert eines Elements in einem mehrdimensionalen Array fest.  
   
 ```
@@ -489,7 +511,7 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 ### <a name="remarks"></a>Hinweise  
  Dies ist eine mehrdimensionale Version des [CComSafeArray::SetAt](#setat).  
   
-##  <a name="a-nameoperatorata--ccomsafearrayoperator-"></a><a name="operator_at"></a>CComSafeArray::operator\[\]  
+##  <a name="operator_at"></a>CComSafeArray::operator\[\]  
  Ruft ein Element aus dem Array ab.  
   
 ```
@@ -507,7 +529,7 @@ T& operator[]int nindex) const;
 ### <a name="remarks"></a>Hinweise  
  Führt eine ähnliche Funktion [CComSafeArray::GetAt](#getat), aber dieser Operator nur mit eindimensionalen Arrays funktioniert.  
   
-##  <a name="a-nameoperatoreqa--ccomsafearrayoperator-"></a><a name="operator_eq"></a>CComSafeArray::operator =  
+##  <a name="operator_eq"></a>CComSafeArray::operator =  
  Zuweisungsoperator.  
   
 ```
@@ -525,7 +547,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den Typ der im Array gespeicherten Daten zurück.  
   
-##  <a name="a-nameoperatorlpsafearraya--ccomsafearrayoperator-lpsafearray"></a><a name="operator_lpsafearray"></a>CComSafeArray::operator LPSAFEARRAY  
+##  <a name="operator_lpsafearray"></a>CComSafeArray::operator LPSAFEARRAY  
  Wandelt einen Wert in einen **SAFEARRAY** -Zeiger um.  
   
 ```
@@ -535,7 +557,7 @@ operator LPSAFEARRAY() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wandelt einen Wert in einen **SAFEARRAY** -Zeiger um.  
   
-##  <a name="a-nameresizea--ccomsafearrayresize"></a><a name="resize"></a>CComSafeArray::Resize  
+##  <a name="resize"></a>CComSafeArray::Resize  
  Ändert die Größe eines `CComSafeArray` -Objekts.  
   
 ```
@@ -559,7 +581,7 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ändert nur die Dimension ganz rechts. Arrays, die zurückgegeben wird die Größe **IsResizable** als **false**.  
   
-##  <a name="a-namesetata--ccomsafearraysetat"></a><a name="setat"></a>CComSafeArray::SetAt  
+##  <a name="setat"></a>CComSafeArray::SetAt  
  Legt den Wert eines Elements in einem eindimensionalen Array fest.  
   
 ```

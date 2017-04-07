@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComClassFactory
 - CComClassFactory
-- ATL::CComClassFactory
+- ATLCOM/ATL::CComClassFactory
+- ATLCOM/ATL::CComClassFactory::CreateInstance
+- ATLCOM/ATL::CComClassFactory::LockServer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class CComClassFactory
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
   
-##  <a name="a-namecreateinstancea--ccomclassfactorycreateinstance"></a><a name="createinstance"></a>CComClassFactory::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
  Erstellt ein Objekt der angegebenen CLSID und ruft einen Schnittstellenzeiger für dieses Objekt ab.  
   
 ```
@@ -101,7 +102,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="a-namelockservera--ccomclassfactorylockserver"></a><a name="lockserver"></a>CComClassFactory::LockServer  
+##  <a name="lockserver"></a>CComClassFactory::LockServer  
  Inkrementiert und dekrementiert die Sperrenanzahl Modul durch Aufrufen von **_Module::Lock** und **_Module::Unlock**bzw..  
   
 ```

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSScheduler
+- IUMSScheduler
+- CONCRTRM/concurrency::IUMSScheduler
+- CONCRTRM/concurrency::IUMSScheduler::IUMSScheduler::SetCompletionList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 658c0d0c9ddb9bbe51134f0a7ea0211be9c39815
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 58ca59224b5d9cdeb282562349642736a1b22c74
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler-Struktur
@@ -54,7 +56,7 @@ struct IUMSScheduler : public IScheduler;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IUMSScheduler:: SetCompletionList-Methode](#setcompletionlist)|Weist eine `IUMSCompletionList` Schnittstelle, um ein UMS-Thread-Scheduler.|  
+|[IUMSScheduler:: SetCompletionList](#setcompletionlist)|Weist eine `IUMSCompletionList` Schnittstelle, um ein UMS-Thread-Scheduler.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie einen benutzerdefinierten Planer, der mit dem Ressourcen-Manager kommuniziert implementieren und UMS-Threads an Ihren Planer anstelle gewöhnlicher Win32-Threads übergeben werden sollen, sollten Sie eine Implementierung bereitstellen der `IUMSScheduler` Schnittstelle. Darüber hinaus sollten Sie festlegen, den Richtlinienwert für den Planerrichtlinienschlüssel `SchedulerKind` werden `UmsThreadDefault`. Wenn die Richtlinie UMS-Thread, gibt die `IScheduler` -Schnittstelle, die als Parameter übergeben wird die [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) Methode muss ein `IUMSScheduler` Schnittstelle.  
@@ -73,7 +75,7 @@ struct IUMSScheduler : public IScheduler;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namesetcompletionlista--iumsschedulersetcompletionlist-method"></a><a name="setcompletionlist"></a>IUMSScheduler:: SetCompletionList-Methode  
+##  <a name="setcompletionlist"></a>IUMSScheduler:: SetCompletionList-Methode  
  Weist eine `IUMSCompletionList` Schnittstelle, um ein UMS-Thread-Scheduler.  
   
 ```
@@ -89,7 +91,7 @@ virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
   
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
- [PolicyElementKey-Enumeration](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [IScheduler-Struktur](ischeduler-structure.md)   
  [IUMSCompletionList-Struktur](iumscompletionlist-structure.md)   
  [IResourceManager-Struktur](iresourcemanager-structure.md)

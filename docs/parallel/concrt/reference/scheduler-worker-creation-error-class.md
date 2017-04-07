@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::scheduler_worker_creation_error
+- scheduler_worker_creation_error
+- CONCRT/concurrency::scheduler_worker_creation_error
+- CONCRT/concurrency::scheduler_worker_creation_error::scheduler_worker_creation_error
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c880ed65ef9e01c7eebdd2de45598a41763da57c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: aee9d72447aca692fa25d675bdc5f727fa5b5c15
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error-Klasse
@@ -54,7 +56,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Scheduler_worker_creation_error-Konstruktor](#ctor)|Überladen. Erstellt ein `scheduler_worker_creation_error`-Objekt.|  
+|[scheduler_worker_creation_error](#ctor)|Überladen. Erstellt ein `scheduler_worker_creation_error`-Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Ausnahme wird normalerweise ausgelöst, wenn ein Aufruf an das Betriebssystem zum Erstellen von Ausführungskontexte von innerhalb der Concurrency Runtime fehlschlägt. Ausführungskontexte sind Threads, die Aufgaben in der Concurrency Runtime ausführen. Der Fehlercode, die normalerweise von einem Aufruf der Win32-Methode zurückgegeben werden würde `GetLastError` ist ein Wert vom Typ konvertiert `HRESULT` und können mit der Methode der Basisklasse abgerufen werden `get_error_code`.  
@@ -71,7 +73,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namectora-schedulerworkercreationerror"></a><a name="ctor"></a>scheduler_worker_creation_error 
+##  <a name="ctor"></a>scheduler_worker_creation_error 
 
  Erstellt ein `scheduler_worker_creation_error`-Objekt.  
   

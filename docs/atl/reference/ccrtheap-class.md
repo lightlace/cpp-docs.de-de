@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CCRTHeap
-- ATL.CCRTHeap
 - CCRTHeap
+- ATLMEM/ATL::CCRTHeap
+- ATLMEM/ATL::CCRTHeap::Allocate
+- ATLMEM/ATL::CCRTHeap::Free
+- ATLMEM/ATL::CCRTHeap::GetSize
+- ATLMEM/ATL::CCRTHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +78,7 @@ class CCRTHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlmem.h  
   
-##  <a name="a-nameallocatea--ccrtheapallocate"></a><a name="allocate"></a>CCRTHeap::Allocate  
+##  <a name="allocate"></a>CCRTHeap::Allocate  
  Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.  
   
 ```
@@ -94,7 +97,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementiert mit [Malloc](../../c-runtime-library/reference/malloc.md).  
   
-##  <a name="a-namefreea--ccrtheapfree"></a><a name="free"></a>CCRTHeap::Free  
+##  <a name="free"></a>CCRTHeap::Free  
  Rufen Sie diese Methode, um einen Speicherblock, der von dieser Speicher-Manager frei.  
   
 ```
@@ -108,7 +111,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Hinweise  
  Implementiert mit [kostenlose](../../c-runtime-library/reference/free.md).  
   
-##  <a name="a-namegetsizea--ccrtheapgetsize"></a><a name="getsize"></a>CCRTHeap::GetSize  
+##  <a name="getsize"></a>CCRTHeap::GetSize  
  Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von dieser Speicher-Manager.  
   
 ```
@@ -125,7 +128,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Hinweise  
  Implementiert mit [_msize](../../c-runtime-library/reference/msize.md).  
   
-##  <a name="a-namereallocatea--ccrtheapreallocate"></a><a name="reallocate"></a>CCRTHeap::Reallocate  
+##  <a name="reallocate"></a>CCRTHeap::Reallocate  
  Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.  
   
 ```

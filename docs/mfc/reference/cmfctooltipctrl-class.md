@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipCtrl
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::GetIconSize
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::GetParams
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawBorder
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawDescription
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawIcon
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawLabel
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawSeparator
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnFillBackground
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetDescription
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetFixedWidth
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetHotRibbonButton
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetLocation
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetParams
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -149,7 +163,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtooltipctrl.h  
   
-##  <a name="a-namecmfctooltipctrla--cmfctooltipctrlcmfctooltipctrl"></a><a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
+##  <a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -161,7 +175,7 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegeticonsizea--cmfctooltipctrlgeticonsize"></a><a name="geticonsize"></a>CMFCToolTipCtrl::GetIconSize  
+##  <a name="geticonsize"></a>CMFCToolTipCtrl::GetIconSize  
  Gibt die Größe eines QuickInfo-Symbols zurück.  
   
 ```  
@@ -171,7 +185,7 @@ virtual CSize GetIconSize();
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe des Symbols, in Pixel.  
   
-##  <a name="a-namegetparamsa--cmfctooltipctrlgetparams"></a><a name="getparams"></a>CMFCToolTipCtrl::GetParams  
+##  <a name="getparams"></a>CMFCToolTipCtrl::GetParams  
  Gibt die Anzeigeeinstellungen für QuickInfo zurück.  
   
 ```  
@@ -181,7 +195,7 @@ const CMFCToolTipInfo& GetParams() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die aktuelle QuickInfo-Anzeigeoptionen, die in gespeichert sind ein [CMFCToolTipInfo Klasse](../../mfc/reference/cmfctooltipinfo-class.md) Objekt.  
   
-##  <a name="a-nameondrawbordera--cmfctooltipctrlondrawborder"></a><a name="ondrawborder"></a>CMFCToolTipCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCToolTipCtrl::OnDrawBorder  
  Zeichnet den QuickInfo-Rahmen.  
   
 ```  
@@ -204,7 +218,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um die Darstellung des Rahmens QuickInfo anzupassen.  
   
-##  <a name="a-nameondrawdescriptiona--cmfctooltipctrlondrawdescription"></a><a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -223,7 +237,7 @@ virtual CSize OnDrawDescription(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawicona--cmfctooltipctrlondrawicon"></a><a name="ondrawicon"></a>CMFCToolTipCtrl::OnDrawIcon  
+##  <a name="ondrawicon"></a>CMFCToolTipCtrl::OnDrawIcon  
  Zeigt ein QuickInfo-Symbol an.  
   
 ```  
@@ -245,7 +259,7 @@ virtual BOOL OnDrawIcon(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse ein benutzerdefiniertes Symbol angezeigt. Sie müssen auch überschreiben, [CMFCToolTipCtrl::GetIconSize](#geticonsize) So aktivieren Sie die QuickInfo ein, die das Layout von Text und Beschreibung korrekt berechnet.  
   
-##  <a name="a-nameondrawlabela--cmfctooltipctrlondrawlabel"></a><a name="ondrawlabel"></a>CMFCToolTipCtrl::OnDrawLabel  
+##  <a name="ondrawlabel"></a>CMFCToolTipCtrl::OnDrawLabel  
  Gibt die QuickInfo-Bezeichnung an oder berechnet die Bezeichnungsgröße.  
   
 ```  
@@ -271,7 +285,7 @@ virtual CSize OnDrawLabel(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie die Darstellung der QuickInfo-Bezeichnung anpassen möchten.  
   
-##  <a name="a-nameondrawseparatora--cmfctooltipctrlondrawseparator"></a><a name="ondrawseparator"></a>CMFCToolTipCtrl::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>CMFCToolTipCtrl::OnDrawSeparator  
  Zeichnet die Trennlinie zwischen der QuickInfo-Bezeichnung und -Beschreibung.  
   
 ```  
@@ -300,7 +314,7 @@ virtual void OnDrawSeparator(
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um die Darstellung des Strichs anzupassen.  
   
-##  <a name="a-nameonfillbackgrounda--cmfctooltipctrlonfillbackground"></a><a name="onfillbackground"></a>CMFCToolTipCtrl::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCToolTipCtrl::OnFillBackground  
  Füllt den QuickInfo-Hintergrund.  
   
 ```  
@@ -329,7 +343,7 @@ virtual void OnFillBackground(
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie die Darstellung der QuickInfo anpassen möchten.  
   
-##  <a name="a-namesetdescriptiona--cmfctooltipctrlsetdescription"></a><a name="setdescription"></a>CMFCToolTipCtrl::SetDescription  
+##  <a name="setdescription"></a>CMFCToolTipCtrl::SetDescription  
  Legt die von der QuickInfo angezeigte Beschreibung fest.  
   
 ```  
@@ -343,7 +357,7 @@ virtual void SetDescription(const CString strDesrciption);
 ### <a name="remarks"></a>Hinweise  
  Der Beschreibungstext wird auf die QuickInfo unter dem Trennzeichen angezeigt.  
   
-##  <a name="a-namesetfixedwidtha--cmfctooltipctrlsetfixedwidth"></a><a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
+##  <a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -358,7 +372,7 @@ void SetFixedWidth(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesethotribbonbuttona--cmfctooltipctrlsethotribbonbutton"></a><a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
+##  <a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -370,7 +384,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetlocationa--cmfctooltipctrlsetlocation"></a><a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
+##  <a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -382,7 +396,7 @@ void SetLocation(CPoint pt);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetparamsa--cmfctooltipctrlsetparams"></a><a name="setparams"></a>CMFCToolTipCtrl::SetParams  
+##  <a name="setparams"></a>CMFCToolTipCtrl::SetParams  
  Gibt die visuelle Darstellung der QuickInfo mit einer [CMFCToolTipInfo Klasse](../../mfc/reference/cmfctooltipinfo-class.md) Objekt.  
   
 ```  

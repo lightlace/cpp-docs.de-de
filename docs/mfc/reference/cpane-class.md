@@ -10,6 +10,71 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPane
+- AFXPANE/CPane
+- AFXPANE/CPane::AdjustSizeImmediate
+- AFXPANE/CPane::AllocElements
+- AFXPANE/CPane::AllowShowOnPaneMenu
+- AFXPANE/CPane::CalcAvailableSize
+- AFXPANE/CPane::CalcInsideRect
+- AFXPANE/CPane::CalcRecentDockedRect
+- AFXPANE/CPane::CalcSize
+- AFXPANE/CPane::CanBeDocked
+- AFXPANE/CPane::CanBeTabbedDocument
+- AFXPANE/CPane::ConvertToTabbedDocument
+- AFXPANE/CPane::CopyState
+- AFXPANE/CPane::Create
+- AFXPANE/CPane::CreateDefaultMiniframe
+- AFXPANE/CPane::CreateEx
+- AFXPANE/CPane::DockByMouse
+- AFXPANE/CPane::DockPane
+- AFXPANE/CPane::DockPaneStandard
+- AFXPANE/CPane::DockToFrameWindow
+- AFXPANE/CPane::DoesAllowSiblingBars
+- AFXPANE/CPane::FloatPane
+- AFXPANE/CPane::GetAvailableExpandSize
+- AFXPANE/CPane::GetAvailableStretchSize
+- AFXPANE/CPane::GetBorders
+- AFXPANE/CPane::GetClientHotSpot
+- AFXPANE/CPane::GetDockSiteRow
+- AFXPANE/CPane::GetExclusiveRowMode
+- AFXPANE/CPane::GetHotSpot
+- AFXPANE/CPane::GetMinSize
+- AFXPANE/CPane::GetPaneName
+- AFXPANE/CPane::GetVirtualRect
+- AFXPANE/CPane::IsChangeState
+- AFXPANE/CPane::IsDragMode
+- AFXPANE/CPane::IsInFloatingMultiPaneFrameWnd
+- AFXPANE/CPane::IsLeftOf
+- AFXPANE/CPane::IsResizable
+- AFXPANE/CPane::IsTabbed
+- AFXPANE/CPane::LoadState
+- AFXPANE/CPane::MoveByAlignment
+- AFXPANE/CPane::MovePane
+- AFXPANE/CPane::OnAfterChangeParent
+- AFXPANE/CPane::OnBeforeChangeParent
+- AFXPANE/CPane::OnPressCloseButton
+- AFXPANE/CPane::OnShowControlBarMenu
+- AFXPANE/CPane::OnShowControlBarMenu
+- AFXPANE/CPane::RecalcLayout
+- AFXPANE/CPane::SaveState
+- AFXPANE/CPane::SetActiveInGroup
+- AFXPANE/CPane::SetBorders
+- AFXPANE/CPane::SetClientHotSpot
+- AFXPANE/CPane::SetDockState
+- AFXPANE/CPane::SetExclusiveRowMode
+- AFXPANE/CPane::SetMiniFrameRTC
+- AFXPANE/CPane::SetMinSize
+- AFXPANE/CPane::SetVirtualRect
+- AFXPANE/CPane::StretchPaneDeferWndPos
+- AFXPANE/CPane::ToggleAutoHide
+- AFXPANE/CPane::UndockPane
+- AFXPANE/CPane::UpdateVirtualRect
+- AFXPANE/CPane::OnAfterDock
+- AFXPANE/CPane::OnAfterFloat
+- AFXPANE/CPane::OnBeforeDock
+- AFXPANE/CPane::OnBeforeFloat
+- AFXPANE/CPane::m_bHandleMinSize
+- AFXPANE/CPane::m_recentDockInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -159,7 +224,7 @@ class CPane : public CBasePane
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxPane.h  
   
-##  <a name="a-nameadjustsizeimmediatea--cpaneadjustsizeimmediate"></a><a name="adjustsizeimmediate"></a>CPane::AdjustSizeImmediate  
+##  <a name="adjustsizeimmediate"></a>CPane::AdjustSizeImmediate  
  Sofort neu berechnet das Layout eines Bereichs ein.  
   
 ```  
@@ -173,7 +238,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Aufgerufen Sie diese Methode wird, wenn Sie dynamisch das Layout eines Bereichs ändern. Zum Beispiel: Sie möchten diese Methode aufrufen, wenn Sie aus- oder Einblenden von Symbolleisten-Schaltflächen.  
   
-##  <a name="a-nameallocelementsa--cpaneallocelements"></a><a name="allocelements"></a>CPane::AllocElements  
+##  <a name="allocelements"></a>CPane::AllocElements  
  Belegt Speicher für die interne Verwendung.  
   
 ```  
@@ -192,7 +257,7 @@ BOOL AllocElements(
 ### <a name="return-value"></a>Rückgabewert  
  `FALSE`Wenn die speicherbelegung fehlschlägt. andernfalls `TRUE`.  
   
-##  <a name="a-nameallowshowonpanemenua--cpaneallowshowonpanemenu"></a><a name="allowshowonpanemenu"></a>CPane::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>CPane::AllowShowOnPaneMenu  
  Gibt an, ob der Bereich in der Laufzeit generierte Liste von Bereichen für die Anwendung aufgelistet ist.  
   
 ```  
@@ -205,7 +270,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 ### <a name="remarks"></a>Hinweise  
  Der AppWizard generierte Anwendung enthält eine Menüoption, die Bereiche aufgeführt, die es enthält. Diese Methode bestimmt, ob der Bereich in der Liste angezeigt wird.  
   
-##  <a name="a-namecalcavailablesizea--cpanecalcavailablesize"></a><a name="calcavailablesize"></a>CPane::CalcAvailableSize  
+##  <a name="calcavailablesize"></a>CPane::CalcAvailableSize  
  Berechnet den Unterschied zwischen einem angegebenen Rechteck und das aktuelle Fenster Rechteck in der Größe.  
   
 ```  
@@ -219,7 +284,7 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 ### <a name="return-value"></a>Rückgabewert  
  Der Unterschied in der Breite und Höhe zwischen `rectRequired` und das aktuelle Fenster Rechteck.  
   
-##  <a name="a-namecalcinsiderecta--cpanecalcinsiderect"></a><a name="calcinsiderect"></a>CPane::CalcInsideRect  
+##  <a name="calcinsiderect"></a>CPane::CalcInsideRect  
  Berechnet die innere Rechteck eines Bereichs, einschließlich der Rahmen und ziehelemente.  
   
 ```  
@@ -238,7 +303,7 @@ void CalcInsideRect(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Framework aufgerufen, wenn das Layout für einen Bereich neu berechnet werden kann. Die `rect` Parameter mit der Größe und den Offset des Clientbereichs des Bereichs gefüllt ist. Dies schließt die Rahmen und ziehelemente.  
   
-##  <a name="a-namecalcrecentdockedrecta--cpanecalcrecentdockedrect"></a><a name="calcrecentdockedrect"></a>CPane::CalcRecentDockedRect  
+##  <a name="calcrecentdockedrect"></a>CPane::CalcRecentDockedRect  
  Berechnet das vor kurzem angedockte Rechteck.  
   
 ```  
@@ -248,7 +313,7 @@ void CalcRecentDockedRect();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode aktualisiert [CPane::m_recentDockInfo](#m_recentdockinfo).  
   
-##  <a name="a-namecalcsizea--cpanecalcsize"></a><a name="calcsize"></a>CPane::CalcSize  
+##  <a name="calcsize"></a>CPane::CalcSize  
  Berechnet die Größe des Bereichs.  
   
 ```  
@@ -265,7 +330,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="remarks"></a>Hinweise  
  Abgeleitete Klassen sollten diese Methode überschreiben.  
   
-##  <a name="a-namecanbedockeda--cpanecanbedocked"></a><a name="canbedocked"></a>CPane::CanBeDocked  
+##  <a name="canbedocked"></a>CPane::CanBeDocked  
  Bestimmt, ob der Bereich der angegebenen Basis Bereich angedockt werden kann.  
   
 ```  
@@ -284,7 +349,7 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
   
  Sie aktivieren Sie das Andocken an die verschiedenen Seiten des Rahmenfensters durch Aufrufen von [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
   
-##  <a name="a-namecanbetabbeddocumenta--cpanecanbetabbeddocument"></a><a name="canbetabbeddocument"></a>CPane::CanBeTabbedDocument  
+##  <a name="canbetabbeddocument"></a>CPane::CanBeTabbedDocument  
  Bestimmt, ob der Bereich in ein Dokument im Registerkartenformat konvertiert werden kann.  
   
 ```  
@@ -297,7 +362,7 @@ virtual BOOL CanBeTabbedDocument() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode in einer abgeleiteten Klasse überschreiben und zurückgeben `FALSE` , wenn Sie verhindern möchten, einen Bereich in ein Dokument im Registerkartenformat konvertiert wird. Ein Dokument im Registerkartenformat werden in die Position des Fensters im Menü nicht angezeigt werden.  
   
-##  <a name="a-nameconverttotabbeddocumenta--cpaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CPane::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>CPane::ConvertToTabbedDocument  
  Konvertiert einen andockbaren Bereich, ein Dokument im Registerkartenformat.  
   
 ```  
@@ -311,7 +376,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Nur andockbare Bereiche können auf Dokumente im Registerformat konvertiert werden. Weitere Informationen finden Sie unter [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).  
   
-##  <a name="a-namecopystatea--cpanecopystate"></a><a name="copystate"></a>CPane::CopyState  
+##  <a name="copystate"></a>CPane::CopyState  
  Kopiert den Status eines Bereichs an.  
   
 ```  
@@ -325,7 +390,7 @@ virtual void CopyState(CPane* pOrgBar);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kopiert den Zustand des `pOrgBar` in den aktuellen Bereich.  
   
-##  <a name="a-namecreatea--cpanecreate"></a><a name="create"></a>CPane::Create  
+##  <a name="create"></a>CPane::Create  
  Erstellt eine Steuerleiste und fügt es der [CPane](../../mfc/reference/cpane-class.md) Objekt.  
   
 ```  
@@ -369,7 +434,7 @@ virtual BOOL Create(
   
  Wenn Sie nicht explizit initialisiert haben [CPane::m_recentDockInfo](#m_recentdockinfo) vor dem Aufruf von `Create`, den Parameter `rect` verwendet werden, wie das Rechteck beim Gleitkommazahl oder Bereich andocken.  
   
-##  <a name="a-namecreatedefaultminiframea--cpanecreatedefaultminiframe"></a><a name="createdefaultminiframe"></a>Cpane:: Createdefaultminiframe  
+##  <a name="createdefaultminiframe"></a>Cpane:: Createdefaultminiframe  
  Erstellt ein Minirahmenfenster für ein nicht verankertes Fenster.  
   
 ```  
@@ -388,7 +453,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
   
  Die Laufzeit-Klasseninformationen für das Minirahmenfenster befindet sich in der `CPane::m_pMiniFrameRTC` Member. Eine abgeleitete Klasse können Sie dieses Element festlegen, wenn Sie benutzerdefinierte Minirahmenfenster erstellen möchten.  
   
-##  <a name="a-namecreateexa--cpanecreateex"></a><a name="createex"></a>Cpane:: CreateEx  
+##  <a name="createex"></a>Cpane:: CreateEx  
  Erstellt eine Steuerleiste und fügt es der [CPane](../../mfc/reference/cpane-class.md) Objekt.  
   
 ```  
@@ -436,7 +501,7 @@ virtual BOOL CreateEx(
   
  Wenn Sie nicht explizit initialisiert haben [CPane::m_recentDockInfo](#m_recentdockinfo) vor dem Aufruf von `CreateEx`, den Parameter `rect` verwendet werden, wie das Rechteck beim Gleitkommazahl oder Bereich andocken.  
   
-##  <a name="a-namedockbymousea--cpanedockbymouse"></a><a name="dockbymouse"></a>CPane::DockByMouse  
+##  <a name="dockbymouse"></a>CPane::DockByMouse  
  Dockt einen Bereich mit der Maus.  
   
 ```  
@@ -450,7 +515,7 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn der Bereich erfolgreich angedockt wurde andernfalls `FALSE`.  
   
-##  <a name="a-namedockpanea--cpanedockpane"></a><a name="dockpane"></a>CPane::DockPane  
+##  <a name="dockpane"></a>CPane::DockPane  
  Die Gleitkommazahlen im Bereich einer Basis Bereich angedockt.  
   
 ```  
@@ -485,7 +550,7 @@ virtual BOOL DockPane(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode Dockt den Bereich an, in den Basis-Bereich, der durch angegeben ist die `pDockBar` Parameter. Sie müssen zuerst aktivieren, durch Aufrufen von Andocken [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
   
-##  <a name="a-namedockpanestandarda--cpanedockpanestandard"></a><a name="dockpanestandard"></a>CPane::DockPaneStandard  
+##  <a name="dockpanestandard"></a>CPane::DockPaneStandard  
  Dockt einen Bereich mithilfe der Gliederung (standard) andocken.  
   
 ```  
@@ -502,7 +567,7 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird nur für Bereiche, die von abgeleitet sind verwendet die [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md). Weitere Informationen finden Sie unter [CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).  
   
-##  <a name="a-namedocktoframewindowa--cpanedocktoframewindow"></a><a name="docktoframewindow"></a>CPane::DockToFrameWindow  
+##  <a name="docktoframewindow"></a>CPane::DockToFrameWindow  
  Ein Frame ein andockbares Fenster angedockt.  
   
 ```  
@@ -539,7 +604,7 @@ virtual BOOL DockToFrameWindow(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedoesallowsiblingbarsa--cpanedoesallowsiblingbars"></a><a name="doesallowsiblingbars"></a>CPane::DoesAllowSiblingBars  
+##  <a name="doesallowsiblingbars"></a>CPane::DoesAllowSiblingBars  
  Gibt an, ob Sie einen anderen Bereich in der gleichen Zeile angedockt werden können, wo der aktuelle Bereich angedockt wird.  
   
 ```  
@@ -554,7 +619,7 @@ virtual BOOL DoesAllowSiblingBars() const;
   
  Standardmäßig Symbolleisten exklusiven Modus deaktiviert haben, und die Menüleiste exklusiven Modus aktiviert ist.  
   
-##  <a name="a-namefloatpanea--cpanefloatpane"></a><a name="floatpane"></a>CPane::FloatPane  
+##  <a name="floatpane"></a>CPane::FloatPane  
  Befindet sich im Bereich.  
   
 ```  
@@ -580,7 +645,7 @@ virtual BOOL FloatPane(
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um den Bereich an der Position float, der durch angegeben ist die `rectFloat` Parameter. Diese Methode erstellt automatisch eine übergeordnete Minirahmenfenster für den Bereich.  
   
-##  <a name="a-namegetavailableexpandsizea--cpanegetavailableexpandsize"></a><a name="getavailableexpandsize"></a>CPane::GetAvailableExpandSize  
+##  <a name="getavailableexpandsize"></a>CPane::GetAvailableExpandSize  
  Gibt die Menge in Pixel an, die den Bereich zu erweitern.  
   
 ```  
@@ -592,7 +657,7 @@ virtual int GetAvailableExpandSize() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetavailablestretchsizea--cpanegetavailablestretchsize"></a><a name="getavailablestretchsize"></a>CPane::GetAvailableStretchSize  
+##  <a name="getavailablestretchsize"></a>CPane::GetAvailableStretchSize  
  Gibt die Menge in Pixel an, die im Bereich Größe verkleinert werden kann.  
   
 ```  
@@ -605,7 +670,7 @@ virtual int GetAvailableStretchSize() const;
 ### <a name="remarks"></a>Hinweise  
  Die Stretch verfügbare Größe wird berechnet, indem den minimal zulässigen Größe für den Bereich ( [CPane::GetMinSize](#getminsize)) von der aktuellen Größe ( [CWnd::GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).  
   
-##  <a name="a-namegetbordersa--cpanegetborders"></a><a name="getborders"></a>CPane::GetBorders  
+##  <a name="getborders"></a>CPane::GetBorders  
  Gibt die Breite des Rahmens des Bereichs zurück.  
   
 ```  
@@ -618,7 +683,7 @@ CRect GetBorders() const;
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie zum Festlegen der Größe der Rahmen [CPane::SetBorders](#setborders).  
   
-##  <a name="a-namegetclienthotspota--cpanegetclienthotspot"></a><a name="getclienthotspot"></a>CPane::GetClientHotSpot  
+##  <a name="getclienthotspot"></a>CPane::GetClientHotSpot  
  Gibt die *Hotspot* für den Bereich.  
   
 ```  
@@ -630,7 +695,7 @@ CPoint GetClientHotSpot() const;
 ### <a name="remarks"></a>Hinweise  
  Die *Hotspot* ist der Punkt auf den Bereich, den der Benutzer auswählt, und verschieben Sie den Bereich enthält. Ein Hotspot wird für flüssige Animation verwendet, wenn im Bereich von einer verankerten Position verschoben wird.  
   
-##  <a name="a-namegetdocksiterowa--cpanegetdocksiterow"></a><a name="getdocksiterow"></a>CPane::GetDockSiteRow  
+##  <a name="getdocksiterow"></a>CPane::GetDockSiteRow  
  Gibt die Zeile andocken ( [CDockingPanesRow Klasse](../../mfc/reference/cdockingpanesrow-class.md)) in dem Bereich angedockt ist.  
   
 ```  
@@ -640,7 +705,7 @@ CDockingPanesRow* GetDockSiteRow() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CDockingPanesRow`*, verweist auf die Dock-Zeile in dem Bereich angedockt ist, oder `NULL` , wenn der Bereich nicht angedockt ist.  
   
-##  <a name="a-namegetexclusiverowmodea--cpanegetexclusiverowmode"></a><a name="getexclusiverowmode"></a>CPane::GetExclusiveRowMode  
+##  <a name="getexclusiverowmode"></a>CPane::GetExclusiveRowMode  
  Bestimmt, ob der Bereich im exklusiven Modus ist.  
   
 ```  
@@ -653,7 +718,7 @@ virtual BOOL GetExclusiveRowMode() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zu exklusiven Modus, finden Sie unter [CPane::SetExclusiveRowMode](#setexclusiverowmode).  
   
-##  <a name="a-namegethotspota--cpanegethotspot"></a><a name="gethotspot"></a>CPane::GetHotSpot  
+##  <a name="gethotspot"></a>CPane::GetHotSpot  
  Gibt den Hotspot, die in einer zugrunde liegenden gespeichert ist `CMFCDragFrameImpl` Objekt.  
   
 ```  
@@ -665,7 +730,7 @@ CPoint GetHotSpot() const;
 ### <a name="remarks"></a>Hinweise  
  Die `CPane` -Klasse enthält eine `CMFCDragFrameImpl` Objekt `m_dragFrameImpl`, d. h. dafür verantwortlich, zeichnen das Rechteck, das angezeigt wird, wenn der Benutzer einen Bereich in der standardmäßigen Andockmodus bewegt. Der Hotspot dient zum Zeichnen des Rechtecks relativ zu der aktuellen Position, wenn der Benutzer im Bereich bewegt.  
   
-##  <a name="a-namegetminsizea--cpanegetminsize"></a><a name="getminsize"></a>CPane::GetMinSize  
+##  <a name="getminsize"></a>CPane::GetMinSize  
  Ruft den minimal zulässigen Größe für den Bereich ab.  
   
 ```  
@@ -678,7 +743,7 @@ virtual void GetMinSize(CSize& size) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetpanenamea--cpanegetpanename"></a><a name="getpanename"></a>CPane::GetPaneName  
+##  <a name="getpanename"></a>CPane::GetPaneName  
  Ruft den Titel für den Bereich ab.  
   
 ```  
@@ -692,7 +757,7 @@ virtual void GetPaneName(CString& strName) const;
 ### <a name="remarks"></a>Hinweise  
  Der Bereich Titel wird im Headerbereich angezeigt, wenn der Bereich angedockt oder unverankert ist. Wenn der Bereich einer Gruppe im Registerkartenformat gehört, wird der Titel in der Registerkarte angezeigt. Wenn der Bereich automatisch ausgeblendet wird, wird der Titel angezeigt, auf eine `CMFCAutoHideButton`.  
   
-##  <a name="a-namegetvirtualrecta--cpanegetvirtualrect"></a><a name="getvirtualrect"></a>CPane::GetVirtualRect  
+##  <a name="getvirtualrect"></a>CPane::GetVirtualRect  
  Ruft die *virtuellen Rechteck* des Bereichs.  
   
 ```  
@@ -708,7 +773,7 @@ void GetVirtualRect(CRect& rectVirtual) const;
   
  Rufen Sie Methoden, die mit virtuellen Rechtecke verknüpft sind, es sei denn, Sie Bereiche programmgesteuert verschieben.  
   
-##  <a name="a-nameischangestatea--cpaneischangestate"></a><a name="ischangestate"></a>CPane::IsChangeState  
+##  <a name="ischangestate"></a>CPane::IsChangeState  
  Während der Bereich verschoben wird, diese Methode analysiert seine Position relativ zu anderen Bereichen, Dock Zeilen und Minirahmenfenster und gibt den entsprechenden `AFX_CS_STATUS` Wert.  
   
 ```  
@@ -734,7 +799,7 @@ virtual AFX_CS_STATUS IsChangeState(
 |`CS_DELAY_DOCK`|Der Bereich wird über eine docksite, die eine andere andockbaren Bereich oder eine Kante der Hauptframe ist. Das Framework Dockt den Bereich an, wenn der Benutzer die Verschiebung loslässt.|  
 |`CS_DELAY_DOCK_TO_TAB`|Der Bereich wird über eine docksite, bei dem der Bereich in einem Fenster im Registerkartenformat angedockt werden. Dies tritt auf, wenn der Bereich über die Beschriftung des anderen andockbaren Bereich oder über den Registerkartenbereich für ein Fenster mit Registerkarten. Das Framework Dockt den Bereich an, wenn der Benutzer die Verschiebung loslässt.|  
   
-##  <a name="a-nameisdragmodea--cpaneisdragmode"></a><a name="isdragmode"></a>CPane::IsDragMode  
+##  <a name="isdragmode"></a>CPane::IsDragMode  
  Gibt an, ob der Bereich verschoben wird.  
   
 ```  
@@ -746,7 +811,7 @@ virtual BOOL IsDragMode() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisinfloatingmultipaneframewnda--cpaneisinfloatingmultipaneframewnd"></a><a name="isinfloatingmultipaneframewnd"></a>CPane::IsInFloatingMultiPaneFrameWnd  
+##  <a name="isinfloatingmultipaneframewnd"></a>CPane::IsInFloatingMultiPaneFrameWnd  
  Gibt an, ob der Bereich in einem Rahmenfenster mit mehreren Bereichen ist ( [CMultiPaneFrameWnd Klasse](../../mfc/reference/cmultipaneframewnd-class.md)).  
   
 ```  
@@ -759,7 +824,7 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 ### <a name="remarks"></a>Hinweise  
  Nur andockbare Bereiche können in einem Rahmenfenster mit mehreren Bereichen float. Aus diesem Grund `CPane::IsInFloatingMultiPaneFrameWnd` gibt immer `FALSE`.  
   
-##  <a name="a-nameisleftofa--cpaneisleftof"></a><a name="isleftof"></a>CPane::IsLeftOf  
+##  <a name="isleftof"></a>CPane::IsLeftOf  
  Bestimmt, ob der Bereich nach links (oder höher) des angegebenen Rechtecks.  
   
 ```  
@@ -780,7 +845,7 @@ bool IsLeftOf(
 ### <a name="remarks"></a>Hinweise  
  Ist der Bereich horizontal angedockt, diese Methode überprüft, ob die Position links ist `rect`. Andernfalls diese Methode überprüft, ob der Speicherort über `rect`.  
   
-##  <a name="a-nameisresizablea--cpaneisresizable"></a><a name="isresizable"></a>CPane::IsResizable  
+##  <a name="isresizable"></a>CPane::IsResizable  
  Gibt an, ob der Bereich geändert werden.  
   
 ```  
@@ -797,7 +862,7 @@ virtual BOOL IsResizable() const;
   
  Bereiche mit veränderbarer Größe nicht können nicht in Container andocken befinden.  
   
-##  <a name="a-nameistabbeda--cpaneistabbed"></a><a name="istabbed"></a>CPane::IsTabbed  
+##  <a name="istabbed"></a>CPane::IsTabbed  
  Bestimmt, ob das Registerkarten-Steuerelement ein Fenster im Registerkartenformat Bereich eingefügt wurden.  
   
 ```  
@@ -810,7 +875,7 @@ virtual BOOL IsTabbed() const;
 ### <a name="remarks"></a>Hinweise  
  Der Status im Registerformat wird separat von der Gleitkommatyp behandelt angedockt und automatisch im Hintergrund Zustände.  
   
-##  <a name="a-nameloadstatea--cpaneloadstate"></a><a name="loadstate"></a>CPane::LoadState  
+##  <a name="loadstate"></a>CPane::LoadState  
  Lädt den Zustand des Bereichs aus der Registrierung.  
   
 ```  
@@ -838,7 +903,7 @@ virtual BOOL LoadState(
   
  Wenn Sie diese Methode überschreiben, auch die Basismethode aufrufen und zurückgeben `FALSE` Wenn der Basismethode zurückgegeben `FALSE`.  
   
-##  <a name="a-namembhandleminsizea--cpanembhandleminsize"></a><a name="m_bhandleminsize"></a>CPane::m_bHandleMinSize  
+##  <a name="m_bhandleminsize"></a>CPane::m_bHandleMinSize  
  Ermöglicht die konsistente Behandlung von minimalen Bereich Größen.  
   
 ```  
@@ -850,7 +915,7 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
   
  Wenn dieser Wert, um festgelegt wird `TRUE`, alle Bereiche, deren Größe unter die minimale Größe reduziert werden sollte, werden abgeschnitten, nicht gestreckt. Da das Framework Fensterbereiche für Bereich Größe verwendet, Ändern der Größe der Fensterbereich für andockbare Bereiche aus, wenn dieser Wert, um festgelegt wird nicht `TRUE`.  
   
-##  <a name="a-namemrecentdockinfoa--cpanemrecentdockinfo"></a><a name="m_recentdockinfo"></a>CPane::m_recentDockInfo  
+##  <a name="m_recentdockinfo"></a>CPane::m_recentDockInfo  
  Enthält aktuellen docking Informationen.  
   
 ```  
@@ -860,7 +925,7 @@ CRecentDockSiteInfo m_recentDockInfo;
 ### <a name="remarks"></a>Hinweise  
  Das Framework speichert die neuesten andockbaren Statusinformationen für den Bereich in dieser Member.  
   
-##  <a name="a-namemovebyalignmenta--cpanemovebyalignment"></a><a name="movebyalignment"></a>CPane::MoveByAlignment  
+##  <a name="movebyalignment"></a>CPane::MoveByAlignment  
  Verschiebt den Bereich und das virtuelle Rechteck um den angegebenen Betrag.  
   
 ```  
@@ -891,7 +956,7 @@ BOOL MoveByAlignment(
   
  Wenn `dwAlignment` enthält die `CBRS_ALIGN_LEFT` oder `CBRS_ALIGN_RIGHT` Flag, das im Bereich und virtuellen Rechteck verschoben horizontal ist, andernfalls ist `dwAlignment` enthält die `CBRS_ALIGN_TOP` oder `CBRS_ALIGN_BOTTOM` Flag, das im Bereich und virtuellen Rechteck vertikal verschoben werden.  
   
-##  <a name="a-namemovepanea--cpanemovepane"></a><a name="movepane"></a>CPane::MovePane  
+##  <a name="movepane"></a>CPane::MovePane  
  Verschiebt den Bereich im angegebenen Rechteck.  
   
 ```  
@@ -917,7 +982,7 @@ virtual CSize MovePane(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ist nur für andockbare Bereiche verwendet.  
   
-##  <a name="a-nameonafterchangeparenta--cpaneonafterchangeparent"></a><a name="onafterchangeparent"></a>CPane::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>CPane::OnAfterChangeParent  
  Wird vom Framework aufgerufen, wenn das übergeordnete Element eines Bereichs geändert hat.  
   
 ```  
@@ -931,7 +996,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Framework aufgerufen, wenn das übergeordnete Element eines Bereichs aufgrund eines Vorgangs andocken oder nicht geändert wurde.  
   
-##  <a name="a-nameonafterdocka--cpaneonafterdock"></a><a name="onafterdock"></a>CPane::OnAfterDock  
+##  <a name="onafterdock"></a>CPane::OnAfterDock  
  Wird vom Framework aufgerufen, wenn ein Bereich angedockt wurden.  
   
 ```  
@@ -951,7 +1016,7 @@ virtual void OnAfterDock(
  [in] `dockMethod`  
  Dieser Parameter wird nicht verwendet.  
   
-##  <a name="a-nameonafterfloata--cpaneonafterfloat"></a><a name="onafterfloat"></a>CPane::OnAfterFloat  
+##  <a name="onafterfloat"></a>CPane::OnAfterFloat  
  Wird vom Framework aufgerufen, nachdem ein Bereich befindet.  
   
 ```  
@@ -961,7 +1026,7 @@ virtual void OnAfterFloat();
 ### <a name="remarks"></a>Hinweise  
  Sie können diese Methode in einer abgeleiteten Klasse überschreiben, wenn die Verarbeitung auszuführen, nachdem ein Fenster gleitet werden soll.  
   
-##  <a name="a-nameonbeforechangeparenta--cpaneonbeforechangeparent"></a><a name="onbeforechangeparent"></a>CPane::OnBeforeChangeParent  
+##  <a name="onbeforechangeparent"></a>CPane::OnBeforeChangeParent  
  Wird vom Framework aufgerufen, wenn das übergeordnete Element des Bereichs geändert wird.  
   
 ```  
@@ -982,7 +1047,7 @@ virtual void OnBeforeChangeParent(
   
  Im Bereich wird standardmäßig die andockbaren deregistriert durch Aufrufen von `CDockSite::RemovePane`.  
   
-##  <a name="a-nameonbeforedocka--cpaneonbeforedock"></a><a name="onbeforedock"></a>CPane::OnBeforeDock  
+##  <a name="onbeforedock"></a>CPane::OnBeforeDock  
  Wird vom Framework aufgerufen, wenn der Bereich zum Andocken wird.  
   
 ```  
@@ -1008,7 +1073,7 @@ virtual BOOL OnBeforeDock(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Framework aufgerufen, wenn ein Fenster ist angedockt werden. Sie können diese Methode in einer abgeleiteten Klasse überschreiben, sollten Sie Verarbeitungsschritte auszuführen, bevor Sie schließlich ein Bereich angedockt ist.  
   
-##  <a name="a-nameonbeforefloata--cpaneonbeforefloat"></a><a name="onbeforefloat"></a>CPane::OnBeforeFloat  
+##  <a name="onbeforefloat"></a>CPane::OnBeforeFloat  
  Wird vom Framework aufgerufen, wenn ein Bereich in einen Gleitkommawert ist.  
   
 ```  
@@ -1030,7 +1095,7 @@ virtual BOOL OnBeforeFloat(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Framework aufgerufen, wenn ein Bereich in einen Gleitkommawert ist. Sie können diese Methode in einer abgeleiteten Klasse überschreiben, wenn Verarbeitungsschritte auszuführen, bevor schließlich Bereich gleitet werden soll.  
   
-##  <a name="a-nameonpressclosebuttona--cpaneonpressclosebutton"></a><a name="onpressclosebutton"></a>CPane::OnPressCloseButton  
+##  <a name="onpressclosebutton"></a>CPane::OnPressCloseButton  
  Wird vom Framework aufgerufen, wenn der Benutzer die Schaltfläche "Schließen" auf die Beschriftung für den Bereich drückt.  
   
 ```  
@@ -1040,7 +1105,7 @@ virtual void OnPressCloseButton();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Framework aufgerufen, wenn ein Benutzer drückt die **schließen** auf den Titel des Bereichs. Empfangen von Benachrichtigungen über die **schließen** Ereignis, können Sie diese Methode in einer abgeleiteten Klasse überschreiben.  
   
-##  <a name="a-nameonshowcontrolbarmenua--cpaneonshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CPane::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>CPane::OnShowControlBarMenu  
  Wird von Framework aufgerufen, kurz bevor ein spezielles Bereichsmenü angezeigt wird.  
   
 ```  
@@ -1057,7 +1122,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 ### <a name="remarks"></a>Hinweise  
  Das Menü enthält mehrere Elemente, die Sie im Bereich Verhalten, nämlich angeben können: **Unverankert**, **Andocken**, **automatisch im Hintergrund**, und **ausblenden**. Sie können dieses Menü für alle Bereiche durch Aufrufen von [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).  
   
-##  <a name="a-namerecalclayouta--cpanerecalclayout"></a><a name="recalclayout"></a>Cpane:: RecalcLayout  
+##  <a name="recalclayout"></a>Cpane:: RecalcLayout  
  Berechnet die Layoutinformationen für den Bereich.  
   
 ```  
@@ -1069,7 +1134,7 @@ virtual void RecalcLayout();
   
  Wenn der Bereich verankert ist, benachrichtigt diese Methode den übergeordneten Mini-Frame zum Anpassen der Größe des Bereichs auf die Größe des Mini-Frames. Das Framework stellt sicher, dass die Minirahmenfensters mindestens den minimal zulässigen Größe für den Bereich ( [CPane::GetMinSize](#getminsize)) und ändert die Größe der Minirahmenfensters bei Bedarf.  
   
-##  <a name="a-namesavestatea--cpanesavestate"></a><a name="savestate"></a>CPane::SaveState  
+##  <a name="savestate"></a>CPane::SaveState  
  Speichert den Zustand des Bereichs in der Registrierung.  
   
 ```  
@@ -1097,7 +1162,7 @@ virtual BOOL SaveState(
   
  Wenn Sie diese Methode überschreiben, auch die Basismethode aufrufen und zurückgeben `FALSE` Wenn der Basismethode zurückgegeben `FALSE`.  
   
-##  <a name="a-namesetactiveingroupa--cpanesetactiveingroup"></a><a name="setactiveingroup"></a>CPane::SetActiveInGroup  
+##  <a name="setactiveingroup"></a>CPane::SetActiveInGroup  
  Kennzeichnet einen Bereich als aktiv.  
   
 ```  
@@ -1115,7 +1180,7 @@ virtual void SetActiveInGroup(BOOL bActive);
   
  Wenn `CMFCAutoHideButton::m_bOverlappingTabs` ist `FALSE`, oder wenn der Bereich nicht in einer Gruppe befindet, zeigt das Framework die zugeordneten automatisch im Hintergrund-Schaltfläche als ein Symbol und eine Bezeichnung.  
   
-##  <a name="a-namesetbordersa--cpanesetborders"></a><a name="setborders"></a>CPane::SetBorders  
+##  <a name="setborders"></a>CPane::SetBorders  
  Legt die rahmenwerte der Bereich fest.  
   
 ```  
@@ -1147,7 +1212,7 @@ void SetBorders(LPCRECT lpRect);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um die Größe der Rahmen des Bereichs fest.  
   
-##  <a name="a-namesetclienthotspota--cpanesetclienthotspot"></a><a name="setclienthotspot"></a>CPane::SetClientHotSpot  
+##  <a name="setclienthotspot"></a>CPane::SetClientHotSpot  
  Legt die *Hotspot* für den Bereich.  
   
 ```  
@@ -1161,7 +1226,7 @@ void SetClientHotSpot(const CPoint& ptNew);
 ### <a name="remarks"></a>Hinweise  
  Die *Hotspot* ist der Punkt auf den Bereich, den der Benutzer auswählt, und verschieben Sie den Bereich enthält. Ein Hotspot wird für flüssige Animation verwendet, wenn der Bereich aus einer verankerten Position gezogen wird.  
   
-##  <a name="a-namesetdockstatea--cpanesetdockstate"></a><a name="setdockstate"></a>CPane::SetDockState  
+##  <a name="setdockstate"></a>CPane::SetDockState  
  Stellt Statusinformationen für den Bereich andocken.  
   
 ```  
@@ -1177,7 +1242,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
   
  Sie können auch diese Methode, um der Andockstatus festgelegt, wenn Sie im Bereich Informationen aus einer externen Quelle laden aufrufen.  
   
-##  <a name="a-namesetexclusiverowmodea--cpanesetexclusiverowmode"></a><a name="setexclusiverowmode"></a>CPane::SetExclusiveRowMode  
+##  <a name="setexclusiverowmode"></a>CPane::SetExclusiveRowMode  
  Aktiviert oder deaktiviert die exklusiven Modus.  
   
 ```  
@@ -1193,7 +1258,7 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
   
  Standardmäßig alle Symbolleisten exklusiven Modus deaktiviert haben, und die Menüleiste exklusiven Modus aktiviert ist.  
   
-##  <a name="a-namesetminsizea--cpanesetminsize"></a><a name="setminsize"></a>CPane::SetMinSize  
+##  <a name="setminsize"></a>CPane::SetMinSize  
  Legt den minimal zulässigen Größe für den Bereich fest.  
   
 ```  
@@ -1206,7 +1271,7 @@ void SetMinSize(const CSize& size);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetvirtualrecta--cpanesetvirtualrect"></a><a name="setvirtualrect"></a>CPane::SetVirtualRect  
+##  <a name="setvirtualrect"></a>CPane::SetVirtualRect  
  Legt die *virtuellen Rechteck* des Bereichs.  
   
 ```  
@@ -1227,7 +1292,7 @@ void SetVirtualRect(
   
  Rufen Sie Methoden, die mit virtuellen Rechtecke verknüpft sind, es sei denn, Sie Bereiche programmgesteuert verschieben.  
   
-##  <a name="a-namesetminiframertca--cpanesetminiframertc"></a><a name="setminiframertc"></a>CPane::SetMiniFrameRTC  
+##  <a name="setminiframertc"></a>CPane::SetMiniFrameRTC  
  Legt die Laufzeit-Klasseninformationen für das Standard-Minirahmenfenster fest.  
   
 ```  
@@ -1241,7 +1306,7 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 ### <a name="remarks"></a>Hinweise  
  Ein Bereich umfließt ist, stellen sie ist auf eine [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (Minirahmenfenster). Sie können ein benutzerdefiniertes bereitstellen `CPaneFrameWnd`-abgeleitete Klasse, die verwendet werden, wenn [cpane:: Createdefaultminiframe](#createdefaultminiframe) aufgerufen wird.  
   
-##  <a name="a-namestretchpanedeferwndposa--cpanestretchpanedeferwndpos"></a><a name="stretchpanedeferwndpos"></a>CPane::StretchPaneDeferWndPos  
+##  <a name="stretchpanedeferwndpos"></a>CPane::StretchPaneDeferWndPos  
  Streckt Bereich vertikal oder horizontal anhand Stil andocken.  
   
 ```  
@@ -1263,7 +1328,7 @@ virtual int StretchPaneDeferWndPos(
 ### <a name="remarks"></a>Hinweise  
  Wenn erforderlich, diese Methode ändert `nStretchSize` um sicherzustellen, dass der Bereich nicht Größenlimits überschritten wird. Diese Grenzwerte werden erhalten, indem [CPane::GetAvailableStretchSize](#getavailablestretchsize) und [CPane::GetAvailableExpandSize](#getavailableexpandsize).  
   
-##  <a name="a-nametoggleautohidea--cpanetoggleautohide"></a><a name="toggleautohide"></a>CPane::ToggleAutoHide  
+##  <a name="toggleautohide"></a>CPane::ToggleAutoHide  
  Schaltet das automatische Ausblenden Modus.  
   
 ```  
@@ -1273,7 +1338,7 @@ virtual void ToggleAutoHide();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um automatisch im Hintergrund-Modus zu wechseln. Ein Bereich muss ein Hauptrahmenfenster um Switch automatisch ausgeblendet werden angedockt werden.  
   
-##  <a name="a-nameundockpanea--cpaneundockpane"></a><a name="undockpane"></a>CPane::UndockPane  
+##  <a name="undockpane"></a>CPane::UndockPane  
  Entfernt im Bereich von docksite, Standard-Schieberegler oder Minirahmenfenster, in denen es derzeit angedockt ist.  
   
 ```  
@@ -1287,7 +1352,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um programmgesteuert einen Bereich abdocken.  
   
-##  <a name="a-nameupdatevirtualrecta--cpaneupdatevirtualrect"></a><a name="updatevirtualrect"></a>CPane::UpdateVirtualRect  
+##  <a name="updatevirtualrect"></a>CPane::UpdateVirtualRect  
  Aktualisiert das virtuelle Rechteck.  
   
 ```  

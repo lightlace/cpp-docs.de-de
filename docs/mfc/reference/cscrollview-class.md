@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CScrollView
+- AFXWIN/CScrollView
+- AFXWIN/CScrollView::CScrollView
+- AFXWIN/CScrollView::CheckScrollBars
+- AFXWIN/CScrollView::FillOutsideRect
+- AFXWIN/CScrollView::GetDeviceScrollPosition
+- AFXWIN/CScrollView::GetDeviceScrollSizes
+- AFXWIN/CScrollView::GetScrollPosition
+- AFXWIN/CScrollView::GetTotalSize
+- AFXWIN/CScrollView::ResizeParentToFit
+- AFXWIN/CScrollView::ScrollToPosition
+- AFXWIN/CScrollView::SetScaleToFitSize
+- AFXWIN/CScrollView::SetScrollSizes
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +134,7 @@ class CScrollView : public CView
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-namecheckscrollbarsa--cscrollviewcheckscrollbars"></a><a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
+##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
  Rufen Sie diese Memberfunktion, um festzustellen, ob die Bildlaufansicht horizontale und vertikale Balken enthält.  
   
 ```  
@@ -138,7 +150,7 @@ void CheckScrollBars(
  *bHasVertBar*  
  Gibt an, dass die Anwendung eine vertikale Bildlaufleiste hat.  
   
-##  <a name="a-namecscrollviewa--cscrollviewcscrollview"></a><a name="cscrollview"></a>CScrollView::CScrollView  
+##  <a name="cscrollview"></a>CScrollView::CScrollView  
  Erstellt ein `CScrollView`-Objekt.  
   
 ```  
@@ -148,7 +160,7 @@ CScrollView();
 ### <a name="remarks"></a>Hinweise  
  Sie müssen entweder Aufrufen `SetScrollSizes` oder `SetScaleToFitSize` vor der Bildlaufleiste Sicht kann verwendet werden.  
   
-##  <a name="a-namefilloutsiderecta--cscrollviewfilloutsiderect"></a><a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
+##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
  Rufen Sie `FillOutsideRect` um den Bereich der Ansicht zu füllen, die außerhalb des Bereichs der Bildlaufleiste angezeigt wird.  
   
 ```  
@@ -170,7 +182,7 @@ void FillOutsideRect(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#164;](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="a-namegetdevicescrollpositiona--cscrollviewgetdevicescrollposition"></a><a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
+##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
  Rufen Sie `GetDeviceScrollPosition` Wenn Sie die aktuelle horizontalen und vertikalen Position der Bildlaufleiste Felder in den Bildlaufleisten benötigen.  
   
 ```  
@@ -185,7 +197,7 @@ CPoint GetDeviceScrollPosition() const;
   
  `GetDeviceScrollPosition`Gibt Werte in Geräteeinheiten zurück. Verwenden Sie ggf. eine logische Einheit `GetScrollPosition` stattdessen.  
   
-##  <a name="a-namegetdevicescrollsizesa--cscrollviewgetdevicescrollsizes"></a><a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
+##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
  `GetDeviceScrollSizes`Ruft den aktuellen Zuordnungsmodus, die Gesamtgröße und die Zeilen- und Größen der bildlauffähige Ansicht ab.  
   
 ```  
@@ -212,7 +224,7 @@ void GetDeviceScrollSizes(
 ### <a name="remarks"></a>Hinweise  
  In Geräteeinheiten sind. Diese Member-Funktion wird nur selten aufgerufen.  
   
-##  <a name="a-namegetscrollpositiona--cscrollviewgetscrollposition"></a><a name="getscrollposition"></a>CScrollView::GetScrollPosition  
+##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
  Rufen Sie `GetScrollPosition` Wenn Sie die aktuelle horizontalen und vertikalen Position der Bildlaufleiste Felder in den Bildlaufleisten benötigen.  
   
 ```  
@@ -227,7 +239,7 @@ CPoint GetScrollPosition() const;
   
  `GetScrollPosition`Gibt Werte in logischen Einheiten zurück. Verwenden Sie ggf. Geräteeinheiten `GetDeviceScrollPosition` stattdessen.  
   
-##  <a name="a-namegettotalsizea--cscrollviewgettotalsize"></a><a name="gettotalsize"></a>CScrollView::GetTotalSize  
+##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
  Rufen Sie `GetTotalSize` zum Abrufen der aktuellen horizontalen und vertikalen Größen der Bildlaufansicht.  
   
 ```  
@@ -237,7 +249,7 @@ CSize GetTotalSize() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Gesamtgröße der Bildlaufansicht in logischen Einheiten. Die horizontale Größe wird in der **Cx** Mitglied der `CSize` Wert zurückgeben. Die vertikale Größe wird in der **cy** Member.  
   
-##  <a name="a-nameresizeparenttofita--cscrollviewresizeparenttofit"></a><a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
+##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
  Rufen Sie `ResizeParentToFit` auf die Größe der Ansicht der Größe ihres Rahmenfensters diktieren lassen.  
   
 ```  
@@ -255,7 +267,7 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
   
  [!code-cpp[NVC_MFCDocView&#165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="a-namescrolltopositiona--cscrollviewscrolltoposition"></a><a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
+##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
  Rufen Sie `ScrollToPosition` Bildlauf zu einem bestimmten Zeitpunkt in der Ansicht.  
   
 ```  
@@ -269,7 +281,7 @@ void ScrollToPosition(POINT pt);
 ### <a name="remarks"></a>Hinweise  
  Die Ansicht wird ein Bildlauf durchgeführt werden, sodass dieser Punkt an der oberen linken Ecke des Fensters ist. Diese Memberfunktion muss nicht aufgerufen werden, wenn die Ansicht skaliert wird.  
   
-##  <a name="a-namesetscaletofitsizea--cscrollviewsetscaletofitsize"></a><a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
+##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
  Rufen Sie `SetScaleToFitSize` der Viewport-Größe auf die aktuelle Fenstergröße automatisch skalieren möchten.  
   
 ```  
@@ -291,7 +303,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
  [!code-cpp[NVC_MFCDocView&#165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="a-namesetscrollsizesa--cscrollviewsetscrollsizes"></a><a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
+##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
  Rufen Sie `SetScrollSizes` Wenn die Ansicht ist, aktualisiert werden sollen.  
   
 ```  

@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrent_unordered_set/concurrency::concurrent_unordered_multiset
+- concurrent_unordered_multiset
+- CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset
+- CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::concurrent_unordered_multiset
+- CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::hash_function
+- CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::insert
+- CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::key_eq
+- CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::swap
+- CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::unsafe_erase
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 19244e5527207f852256e646abd18ad298fb28cd
-ms.openlocfilehash: 7a4b5edab0fdf1fcc18e223c859ca2859173154f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 06c098d2ad38fbf4a7664f9046ac4f1e12b1044d
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset-Klasse
@@ -98,23 +105,23 @@ template <typename K,
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Concurrent_unordered_multiset-Konstruktor](#ctor)|Überladen. Erstellt eine gleichzeitige ungeordnete Multimenge.|  
+|[concurrent_unordered_multiset](#ctor)|Überladen. Erstellt eine gleichzeitige ungeordnete Multimenge.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Hash_function-Methode](#hash_function)|Gibt das gespeicherte Hashfunktionsobjekt zurück.|  
-|[Insert-Methode](#insert)|Überladen. Fügt dem `concurrent_unordered_multiset`-Objekt Elemente hinzu.|  
-|[Key_eq-Methode](#key_eq)|Das gespeicherte Gleichheitsvergleichsfunktionsobjekt.|  
-|[Swap-Methode](#swap)|Vertauscht den Inhalt von zwei `concurrent_unordered_multiset`-Objekten. Diese Methode ist nicht nebenläufigkeitssicher.|  
-|[Unsafe_erase-Methode](#unsafe_erase)|Überladen. Entfernt Elemente aus der `concurrent_unordered_multiset` an angegebenen Positionen. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[hash_function](#hash_function)|Gibt das gespeicherte Hashfunktionsobjekt zurück.|  
+|[insert](#insert)|Überladen. Fügt dem `concurrent_unordered_multiset`-Objekt Elemente hinzu.|  
+|[key_eq](#key_eq)|Das gespeicherte Gleichheitsvergleichsfunktionsobjekt.|  
+|[swap](#swap)|Vertauscht den Inhalt von zwei `concurrent_unordered_multiset`-Objekten. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[unsafe_erase](#unsafe_erase)|Überladen. Entfernt Elemente aus der `concurrent_unordered_multiset` an angegebenen Positionen. Diese Methode ist nicht nebenläufigkeitssicher.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Operator =-Operator](#operator_eq)|Überladen. Weist den Inhalt eines anderen `concurrent_unordered_multiset`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.|  
+|[operator=](#operator_eq)|Überladen. Weist den Inhalt eines anderen `concurrent_unordered_multiset`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ausführliche Informationen zu den `concurrent_unordered_multiset` Klasse, finden Sie unter [parallele Container und Objekte](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -131,7 +138,7 @@ template <typename K,
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namebegina-begin"></a><a name="begin"></a>beginnen 
+##  <a name="begin"></a>beginnen 
 
  Gibt einen Iterator, der auf das erste Element im gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -144,7 +151,7 @@ const_iterator begin() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Iterator auf das erste Element im gleichzeitigen Container.  
   
-##  <a name="a-namecbegina-cbegin"></a><a name="cbegin"></a>cbegin 
+##  <a name="cbegin"></a>cbegin 
 
  Gibt einen const-Iterator auf das erste Element im gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -155,7 +162,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein const-Iterator auf das erste Element im gleichzeitigen Container.  
   
-##  <a name="a-namecenda-cend"></a><a name="cend"></a>cend 
+##  <a name="cend"></a>cend 
 
  Gibt einen Konstanten Iterator, der auf den Speicherort adressiert, das letzte Element im gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -166,7 +173,7 @@ const_iterator cend() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein const-Iterator für den Speicherort adressiert, das letzte Element im gleichzeitigen Container.  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Deaktivieren 
+##  <a name="clear"></a>Deaktivieren 
 
  Löscht alle Elemente im gleichzeitigen Container. Diese Funktion ist nicht nebenläufigkeitssicher.  
   
@@ -174,7 +181,7 @@ const_iterator cend() const;
 void clear();
 ```  
   
-##  <a name="a-namectora-concurrentunorderedmultiset"></a><a name="ctor"></a>concurrent_unordered_multiset 
+##  <a name="ctor"></a>concurrent_unordered_multiset 
 
  Erstellt eine gleichzeitige ungeordnete Multimenge.  
   
@@ -241,7 +248,7 @@ concurrent_unordered_multiset(
   
  Der letzte Konstruktor gibt eine Verschiebung der gleichzeitige ungeordnete Multimenge `_Uset`.  
   
-##  <a name="a-namecounta-count"></a><a name="count"></a>Anzahl 
+##  <a name="count"></a>Anzahl 
 
  Zählt die Anzahl der Elemente, die einem angegebenen Schlüssel entsprechen. Diese Funktion ist nebenläufigkeitssicher.  
   
@@ -256,7 +263,7 @@ size_type count(const key_type& KVal) const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl von versuchen, wie oft der Schlüssel im Container angezeigt wird.  
   
-##  <a name="a-nameemptya-empty"></a><a name="empty"></a>leere 
+##  <a name="empty"></a>leere 
 
  Testet, ob keine Elemente vorhanden sind. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -268,9 +275,9 @@ bool empty() const;
  `true`Wenn die parallele Container leer ist, `false` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
- Bei gleichzeitiger fügt davon, ob die parallele Container leer ist das kann unmittelbar nach dem Aufrufen dieser Funktion vor dem Lesen des Rückgabewerts ist sogar ändern.  
+ Bei gleichzeitiger Einfüge-davon, ob die parallele Container leer ist das kann unmittelbar nach dem Aufrufen dieser Funktion vor dem Lesen des Rückgabewerts ist sogar ändern.  
   
-##  <a name="a-nameenda-end"></a><a name="end"></a>Ende 
+##  <a name="end"></a>Ende 
 
  Gibt einen Iterator, der auf den Speicherort adressiert, das letzte Element im gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -283,7 +290,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Iterator für den Speicherort adressiert, das letzte Element im gleichzeitigen Container.  
   
-##  <a name="a-nameequalrangea-equalrange"></a><a name="equal_range"></a>equal_range 
+##  <a name="equal_range"></a>equal_range 
 
  Sucht nach einem Bereich, der einem angegebenen Schlüssel entspricht. Diese Funktion ist nebenläufigkeitssicher.  
   
@@ -307,7 +314,7 @@ std::pair<const_iterator,
 ### <a name="remarks"></a>Hinweise  
  Es ist möglich für gleichzeitige INSERT-Vorgänge, die dazu führen, dass zusätzliche Schlüssel nach der Begin-Iterator und vor den End-Iterator eingefügt werden.  
   
-##  <a name="a-namefinda-find"></a><a name="find"></a>Suchen 
+##  <a name="find"></a>Suchen 
 
  Sucht ein Element, das einem angegebenen Schlüssel entspricht. Diese Funktion ist nebenläufigkeitssicher.  
   
@@ -324,7 +331,7 @@ const_iterator find(const key_type& KVal) const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Iterator, der auf den Speicherort der das erste Element, das den angegebenen Schlüssel zugeordnet oder der Iterator `end()` Wenn kein solches Element vorhanden ist.  
   
-##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a>get_allocator 
 
  Gibt das gespeicherte Zuweisungsobjekt für diesen gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -335,7 +342,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Rückgabewert  
  Das gespeicherte Zuweisungsobjekt für diesen gleichzeitigen Container.  
   
-##  <a name="a-namehashfunctiona-hashfunction"></a><a name="hash_function"></a>hash_function 
+##  <a name="hash_function"></a>hash_function 
 
  Gibt das gespeicherte Hashfunktionsobjekt zurück.  
   
@@ -346,7 +353,7 @@ hasher hash_function() const;
 ### <a name="return-value"></a>Rückgabewert  
  Das gespeicherte hashfunktionsobjekt.  
   
-##  <a name="a-nameinserta-insert"></a><a name="insert"></a>Einfügen 
+##  <a name="insert"></a>Einfügen 
 
  Fügt dem `concurrent_unordered_multiset`-Objekt Elemente hinzu.  
   
@@ -405,7 +412,7 @@ typename std::enable_if<!std::is_same<const_iterator,
   
  Die letzten beiden Memberfunktionen Verhalten sich wie die ersten beiden, außer dass `value` wird zum Erstellen des eingefügten Wert.  
   
-##  <a name="a-namekeyeqa-keyeq"></a><a name="key_eq"></a>key_eq 
+##  <a name="key_eq"></a>key_eq 
 
  Das gespeicherte Gleichheitsvergleichsfunktionsobjekt.  
   
@@ -416,18 +423,18 @@ key_equal key_eq() const;
 ### <a name="return-value"></a>Rückgabewert  
  Das gespeicherte Gleichheitsvergleichsfunktionsobjekt.  
   
-##  <a name="a-nameloadfactora-loadfactor"></a><a name="load_factor"></a>load_factor 
+##  <a name="load_factor"></a>load_factor 
 
- Berechnet, und gibt den aktuellen Lastfaktor des Containers. Der Lastfaktor ist die Anzahl der Elemente im Container dividiert durch die Anzahl der Buckets.  
+ Berechnet, und gibt den aktuellen Lastfaktor des Containers. Der Ladefaktor ist die Anzahl der Elemente im Container dividiert durch die Anzahl der Buckets.  
   
 ```
 float load_factor() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Lastfaktor für den Container.  
+ Der Ladefaktor für den Container.  
   
-##  <a name="a-namemaxloadfactora-maxloadfactor"></a><a name="max_load_factor"></a>max_load_factor 
+##  <a name="max_load_factor"></a>max_load_factor 
 
  Ruft ab oder legt den Höchstlastfaktor des Containers. Die Höchstlastfaktor liegt die größte Anzahl von Elementen in jeder Bucket sein kann, bevor der Container seiner internen Tabelle wächst.  
   
@@ -443,7 +450,7 @@ void max_load_factor(float _Newmax);
 ### <a name="return-value"></a>Rückgabewert  
  Die erste Memberfunktion gibt den gespeicherten maximalen Lastfaktor zurück. Die zweite Memberfunktion gibt keinen Wert zurück, aber löst ein [Out_of_range](../../../standard-library/out-of-range-class.md) -Ausnahme aus, wenn Sie der angegebenen Lastfaktor ungültig ist...  
   
-##  <a name="a-namemaxsizea-maxsize"></a><a name="max_size"></a>max_size 
+##  <a name="max_size"></a>max_size 
 
  Gibt die maximale Größe des gleichzeitigen Container durch die Zuweisung bestimmt. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -457,7 +464,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Obergrenze Wert tatsächlich ist möglicherweise größer, was der Container tatsächlich enthalten kann.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>Operator = 
+##  <a name="operator_eq"></a>Operator = 
 
  Weist den Inhalt eines anderen `concurrent_unordered_multiset`-Objekts diesem Objekt zu. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -477,7 +484,7 @@ concurrent_unordered_multiset& operator= (concurrent_unordered_multiset&& _Uset)
 ### <a name="remarks"></a>Hinweise  
  Nach dem Löschen der vorhandenen Elemente in eine gleichzeitige ungeordnete Multimenge `operator=` kopiert oder verschiebt den Inhalt des `_Uset` in der gleichzeitige ungeordnete Multimenge.  
   
-##  <a name="a-namerehasha-rehash"></a><a name="rehash"></a>Rehash 
+##  <a name="rehash"></a>Rehash 
 
  Erstellt die Hashtabelle neu.  
   
@@ -494,7 +501,7 @@ void rehash(size_type _Buckets);
   
  Löst ein [Out_of_range](../../../standard-library/out-of-range-class.md) -Ausnahme aus, wenn die Anzahl der Buckets ungültig ist (0 oder größer als die maximale Anzahl von Buckets).  
   
-##  <a name="a-namesizea-size"></a><a name="size"></a>Größe 
+##  <a name="size"></a>Größe 
 
  Gibt die Anzahl der Elemente in diesen gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -508,7 +515,7 @@ size_type size() const;
 ### <a name="remarks"></a>Hinweise  
  Bei gleichzeitiger einfügt kann die Anzahl der Elemente in dem parallele Container unmittelbar nach dem Aufrufen dieser Funktion vor dem Lesen des Rückgabewerts ist sogar ändern.  
   
-##  <a name="a-nameswapa-swap"></a><a name="swap"></a>Swap 
+##  <a name="swap"></a>Swap 
 
  Vertauscht den Inhalt von zwei `concurrent_unordered_multiset`-Objekten. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -520,7 +527,7 @@ void swap(concurrent_unordered_multiset& _Uset);
  `_Uset`  
  Das `concurrent_unordered_multiset` Objekt zum austauschen.  
   
-##  <a name="a-nameunsafebegina-unsafebegin"></a><a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a>unsafe_begin 
 
  Gibt einen Iterator zurück, auf das erste Element in diesem Container für einen bestimmten Bucket.  
   
@@ -537,7 +544,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Iterator, der auf den Anfang des Buckets zeigt.  
   
-##  <a name="a-nameunsafebucketa-unsafebucket"></a><a name="unsafe_bucket"></a>unsafe_bucket 
+##  <a name="unsafe_bucket"></a>unsafe_bucket 
 
  Gibt den Bucket-Index, den ein bestimmten Schlüssel in diesem Container zugeordnet ist.  
   
@@ -552,7 +559,7 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Bucket-Index für den Schlüssel in diesem Container.  
   
-##  <a name="a-nameunsafebucketcounta-unsafebucketcount"></a><a name="unsafe_bucket_count"></a>unsafe_bucket_count 
+##  <a name="unsafe_bucket_count"></a>unsafe_bucket_count 
 
  Gibt die aktuelle Anzahl der Buckets in diesem Container zurück.  
   
@@ -563,7 +570,7 @@ size_type unsafe_bucket_count() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die aktuelle Anzahl der Buckets in diesem Container.  
   
-##  <a name="a-nameunsafebucketsizea-unsafebucketsize"></a><a name="unsafe_bucket_size"></a>unsafe_bucket_size 
+##  <a name="unsafe_bucket_size"></a>unsafe_bucket_size 
 
  Gibt die Anzahl der Elemente in einem bestimmten Bucket dieses Containers zurück.  
   
@@ -578,7 +585,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ### <a name="return-value"></a>Rückgabewert  
  Die aktuelle Anzahl der Buckets in diesem Container.  
   
-##  <a name="a-nameunsafecbegina-unsafecbegin"></a><a name="unsafe_cbegin"></a>unsafe_cbegin 
+##  <a name="unsafe_cbegin"></a>unsafe_cbegin 
 
  Gibt einen Iterator zurück, auf das erste Element in diesem Container für einen bestimmten Bucket.  
   
@@ -593,7 +600,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Iterator, der auf den Anfang des Buckets zeigt.  
   
-##  <a name="a-nameunsafecenda-unsafecend"></a><a name="unsafe_cend"></a>unsafe_cend 
+##  <a name="unsafe_cend"></a>unsafe_cend 
 
  Gibt einen Iterator zurück, um den Speicherort adressiert, das letzte Element in einem bestimmten Bucket.  
   
@@ -608,7 +615,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Iterator, der auf den Anfang des Buckets zeigt.  
   
-##  <a name="a-nameunsafeenda-unsafeend"></a><a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a>unsafe_end 
 
  Gibt einen Iterator zurück, auf das letzte Element in diesem Container für einen bestimmten Bucket.  
   
@@ -625,7 +632,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein Iterator, der auf das Ende des Buckets.  
   
-##  <a name="a-nameunsafeerasea-unsafeerase"></a><a name="unsafe_erase"></a>unsafe_erase 
+##  <a name="unsafe_erase"></a>unsafe_erase 
 
  Entfernt Elemente aus der `concurrent_unordered_multiset` an angegebenen Positionen. Diese Methode ist nicht nebenläufigkeitssicher.  
   
@@ -651,14 +658,14 @@ size_type unsafe_erase(
  Der Schlüsselwert, der gelöscht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die ersten beiden Memberfunktionen geben einen Iterator, der das erste Element verbleibt, nachdem alle Elemente entfernt wurden, zurück oder [Beenden der Methode](#end)(), wenn kein solches Element vorhanden ist. Die dritte Memberfunktion gibt die Anzahl von Elementen zurück, die sie entfernt.  
+ Die ersten beiden Memberfunktionen geben einen Iterator, der das erste Element verbleibt, nachdem alle Elemente entfernt wurden, zurück oder [End](#end)(), wenn kein solches Element vorhanden ist. Die dritte Memberfunktion gibt die Anzahl von Elementen zurück, die sie entfernt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die erste Memberfunktion entfernt das Element, auf das durch `_Where` gezeigt wird. Die zweite Memberfunktion entfernt die Elemente im Bereich [ `_Begin`, `_End`).  
   
- Die dritte Memberfunktion entfernt die Elemente im Bereich von [Equal_range-Methode](#equal_range)(KVal).  
+ Die dritte Memberfunktion entfernt die Elemente im Bereich von [Equal_range](#equal_range)(KVal).  
   
-##  <a name="a-nameunsafemaxbucketcounta-unsafemaxbucketcount"></a><a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count 
+##  <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count 
 
  Gibt die maximale Anzahl der Buckets in diesem Container zurück.  
   

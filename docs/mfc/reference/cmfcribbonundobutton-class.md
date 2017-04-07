@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonUndoButton
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::CMFCRibbonUndoButton
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::AddUndoAction
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::CleanUpUndoList
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::GetActionNumber
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::HasMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +93,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxribbonundobutton.h  
   
-##  <a name="a-nameaddundoactiona--cmfcribbonundobuttonaddundoaction"></a><a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
+##  <a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
  Die Liste der Aktionen wird eine neue Aktion hinzugefügt.  
   
 ```  
@@ -98,14 +104,14 @@ void AddUndoAction(LPCTSTR lpszLabel);
  [in] `lpszLabel`  
  Die Bezeichnung der Aktion, die in der Dropdown-Liste angezeigt werden.  
   
-##  <a name="a-namecleanupundolista--cmfcribbonundobuttoncleanupundolist"></a><a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
+##  <a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
  Löscht die Aktionsliste also die Dropdown-Liste.  
   
 ```  
 void CleanUpUndoList();
 ```  
   
-##  <a name="a-namecmfcribbonundobuttona--cmfcribbonundobuttoncmfcribbonundobutton"></a><a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
+##  <a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
  Erstellt ein neues `CMFCRibbonUndoButton` Objekt mithilfe des Befehls-ID, die Sie angeben, Beschriftung und Bilder aus der Bildliste des übergeordneten Objekts.  
   
 ```  
@@ -138,7 +144,7 @@ CMFCRibbonUndoButton(
  [in] `hIcon`  
  Ein Handle für ein Symbol, das Sie als Bild einer Schaltfläche verwenden können.  
   
-##  <a name="a-namegetactionnumbera--cmfcribbonundobuttongetactionnumber"></a><a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
+##  <a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
  Bestimmt die Anzahl der Elemente, die ein Benutzer aus der Dropdown Liste ausgewählt.  
   
 ```  
@@ -148,7 +154,7 @@ int GetActionNumber() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Elemente, die ein Benutzer ausgewählt.  
   
-##  <a name="a-namehasmenua--cmfcribbonundobuttonhasmenu"></a><a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
+##  <a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
  Gibt an, ob das Objekt ein Menü enthält.  
   
 ```  

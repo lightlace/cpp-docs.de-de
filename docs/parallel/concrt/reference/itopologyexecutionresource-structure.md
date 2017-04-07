@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::ITopologyExecutionResource
+- ITopologyExecutionResource
+- CONCRTRM/concurrency::ITopologyExecutionResource
+- CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetId
+- CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetNext
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: cc54beb4790c9d2ea5bfcb2c8ffd4bca7dca399e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d9671dbf84a1104bc3b6f3a6f9d383aac167759c
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource-Struktur
@@ -54,8 +57,8 @@ struct ITopologyExecutionResource;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Itopologyexecutionresource:: GetID-Methode](#getid)|Gibt die Ressourcen-Manager eindeutige Bezeichner für diese Ausführungsressource.|  
-|[Itopologyexecutionresource:: GetNext-Methode](#getnext)|Gibt eine Schnittstelle zur nächsten Ausführungsressource Reihenfolge zurück.|  
+|[Itopologyexecutionresource:: GetID](#getid)|Gibt die Ressourcen-Manager eindeutige Bezeichner für diese Ausführungsressource.|  
+|[Itopologyexecutionresource:: GetNext](#getnext)|Gibt eine Schnittstelle zur nächsten Ausführungsressource Reihenfolge zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Schnittstelle wird in der Regel verwendet, um die Topologie des Systems zu durchlaufen, als vom Ressourcen-Manager überwacht.  
@@ -68,7 +71,7 @@ struct ITopologyExecutionResource;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namegetida--itopologyexecutionresourcegetid-method"></a><a name="getid"></a>Itopologyexecutionresource:: GetID-Methode  
+##  <a name="getid"></a>Itopologyexecutionresource:: GetID-Methode  
  Gibt die Ressourcen-Manager eindeutige Bezeichner für diese Ausführungsressource.  
   
 ```
@@ -78,7 +81,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Der Ressourcen-Manager eindeutige Bezeichner für diese Ausführungsressource.  
   
-##  <a name="a-namegetnexta--itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>Itopologyexecutionresource:: GetNext-Methode  
+##  <a name="getnext"></a>Itopologyexecutionresource:: GetNext-Methode  
  Gibt eine Schnittstelle zur nächsten Ausführungsressource Reihenfolge zurück.  
   
 ```

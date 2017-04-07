@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IThreadProxy
+- IThreadProxy
+- CONCRTRM/concurrency::IThreadProxy
+- CONCRTRM/concurrency::IThreadProxy::IThreadProxy::GetId
+- CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchOut
+- CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchTo
+- CONCRTRM/concurrency::IThreadProxy::IThreadProxy::YieldToSystem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: baa3266d1068672df96595fa8b9bcc974d52e7fa
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 0a002dc4440b4784dee7f808a9e3be8dd4f89124
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy-Struktur
@@ -54,10 +59,10 @@ struct IThreadProxy;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IThreadProxy:: GetID-Methode](#getid)|Gibt einen eindeutigen Bezeichner für den Threadproxy zurück.|  
-|[IThreadProxy:: SwitchOut-Methode](#switchout)|Hebt die Zuordnung des Kontexts vom zugrunde liegenden virtuellen Prozessorstamm auf.|  
-|[IThreadProxy:: SwitchTo-Methode](#switchto)|Führt einen kooperativen Kontextwechsel vom derzeit ausgeführten Kontext zu einer anderen.|  
-|[IThreadProxy:: YieldToSystem-Methode](#yieldtosystem)|Bewirkt, dass der aufrufende Thread die Ausführung an einen anderen Thread übergibt, der auf dem aktuellen Prozessor ausgeführt werden kann. Das Betriebssystem wählt den nächsten Thread ausgeführt werden.|  
+|[IThreadProxy:: GetID](#getid)|Gibt einen eindeutigen Bezeichner für den Threadproxy zurück.|  
+|[IThreadProxy:: SwitchOut](#switchout)|Hebt die Zuordnung des Kontexts vom zugrunde liegenden virtuellen Prozessorstamm auf.|  
+|[IThreadProxy:: SwitchTo](#switchto)|Führt einen kooperativen Kontextwechsel vom derzeit ausgeführten Kontext zu einer anderen.|  
+|[IThreadProxy:: YieldToSystem](#yieldtosystem)|Bewirkt, dass der aufrufende Thread die Ausführung an einen anderen Thread übergibt, der auf dem aktuellen Prozessor ausgeführt werden kann. Das Betriebssystem wählt den nächsten Thread ausgeführt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
  Threadproxys werden mit Ausführungskontexten verbunden, dargestellt durch die Schnittstelle `IExecutionContext` als Mittel zur Arbeit verteilt.  
@@ -70,7 +75,7 @@ struct IThreadProxy;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namegetida--ithreadproxygetid-method"></a><a name="getid"></a>IThreadProxy:: GetID-Methode  
+##  <a name="getid"></a>IThreadProxy:: GetID-Methode  
  Gibt einen eindeutigen Bezeichner für den Threadproxy zurück.  
   
 ```
@@ -80,7 +85,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Rückgabewert  
  Eine eindeutige ganzzahlige Bezeichner.  
   
-##  <a name="a-nameswitchouta--ithreadproxyswitchout-method"></a><a name="switchout"></a>IThreadProxy:: SwitchOut-Methode  
+##  <a name="switchout"></a>IThreadProxy:: SwitchOut-Methode  
  Hebt die Zuordnung des Kontexts vom zugrunde liegenden virtuellen Prozessorstamm auf.  
   
 ```
@@ -94,7 +99,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie `SwitchOut`, wenn Sie aus irgendeinem Grund die Zuordnung eines Kontexts zu einem virtuellen Prozessorstamm aufheben müssen, in dem dieser ausgeführt wird. Je nachdem, welchen Wert Sie an den `switchState`-Parameter übergeben, und abhängig von dessen Ausführung auf einem virtuellen Prozessorstamm, wird der Aufruf entweder sofort zurückgegeben oder der dem Kontext zugeordnete Threadproxy wird blockiert. Es ist nicht zulässig, `SwitchOut` aufzurufen, wenn der Parameter auf `Idle` festgelegt ist. Dies führt zu einer [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme.  
   
- `SwitchOut` ist nützlich, wenn Sie die Anzahl der Stämme virtueller Prozessoren für den Planer verringern möchten, da der Ressourcen-Manager Sie angewiesen hat, dies zu tun oder Sie den Stamm eines überzeichneten temporären virtuellen Prozessors angefordert haben und diesen nicht mehr benötigen. In diesem Fall sollten Sie die Methode aufrufen [IVirtualProcessorRoot::Remove Methode](http://msdn.microsoft.com/en-us/ad699b4a-1972-4390-97ee-9c083ba7d9e4) auf dem virtuellen Prozessorstamm vor einem Aufruf von `SwitchOut` mit dem Parameter `switchState` festgelegt `Blocking`. Auf diese Weise wird der Threadproxy blockiert. Die Ausführung wird fortgesetzt, wenn im Planer ein anderer virtueller Prozessorstamm für die Ausführung verfügbar ist. Die Ausführung des blockierten Threadproxys kann fortgesetzt werden, indem die `SwitchTo`-Funktion aufgerufen wird, um zum Ausführungskontext dieses Threadproxys zu wechseln. Sie können den Threadproxy auch fortsetzen, indem Sie dessen zugeordneten Kontext verwenden, um den Stamm eines virtuellen Prozessors zu aktivieren. Weitere Informationen hierzu finden Sie unter [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate).  
+ `SwitchOut` ist nützlich, wenn Sie die Anzahl der Stämme virtueller Prozessoren für den Planer verringern möchten, da der Ressourcen-Manager Sie angewiesen hat, dies zu tun oder Sie den Stamm eines überzeichneten temporären virtuellen Prozessors angefordert haben und diesen nicht mehr benötigen. In diesem Fall sollten Sie die Methode aufrufen [IVirtualProcessorRoot::Remove](http://msdn.microsoft.com/en-us/ad699b4a-1972-4390-97ee-9c083ba7d9e4) auf dem virtuellen Prozessorstamm vor einem Aufruf von `SwitchOut` mit dem Parameter `switchState` festgelegt `Blocking`. Auf diese Weise wird der Threadproxy blockiert. Die Ausführung wird fortgesetzt, wenn im Planer ein anderer virtueller Prozessorstamm für die Ausführung verfügbar ist. Die Ausführung des blockierten Threadproxys kann fortgesetzt werden, indem die `SwitchTo`-Funktion aufgerufen wird, um zum Ausführungskontext dieses Threadproxys zu wechseln. Sie können den Threadproxy auch fortsetzen, indem Sie dessen zugeordneten Kontext verwenden, um den Stamm eines virtuellen Prozessors zu aktivieren. Weitere Informationen hierzu finden Sie unter [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate).  
   
  Sie können `SwitchOut` zudem verwenden, um den virtuellen Prozessor erneut zu initialisieren, damit dieser zukünftig aktiviert werden kann, wenn Sie den Threadproxy blockieren oder vorübergehend vom Stamm des virtuellen Prozessors, für den dieser ausgeführt wird, und vom Planer, für den er Arbeit verteilt, trennen möchten. Verwenden Sie `SwitchOut` mit dem auf `switchState` festgelegten `Blocking`-Parameter, wenn Sie den Threadproxy blockieren möchten. Wie oben beschrieben, kann er zu einem späteren Zeitpunkt mithilfe von `SwitchTo` oder `IVirtualProcessorRoot::Activate` fortgesetzt werden. Verwenden Sie `SwitchOut` mit dem auf `Nesting` festgelegten Parameter, wenn Sie diesen Threadproxy vorübergehend vom Stamm des virtuellen Prozessors, auf dem er ausgeführt wird, und vom Planer, dem der virtuelle Prozessor zugeordnet ist, trennen möchten. Das Aufrufen von `SwitchOut` mit dem auf `switchState` festgelegten `Nesting`-Parameter führt während dessen Ausführung auf einem virtuellen Prozessorstamm zu einer erneuten Initialisierung des Stamms und zur Fortsetzung des aktuellen Threadproxys, obwohl dieser nicht erforderlich ist. Der Threadproxy den Planer verlassen hat, bis er aufruft der [IThreadProxy:: SwitchOut](#switchout) -Methode mit `Blocking` zu einem späteren Zeitpunkt. Der zweite Aufruf von `SwitchOut` mit dem auf `Blocking` festgelegten Parameter soll den Kontext in einen blockierten Zustand zurückversetzen, damit er im Planer, von dem er getrennt ist, mit `SwitchTo` oder `IVirtualProcessorRoot::Activate` fortgesetzt werden kann. Da die Ausführung nicht auf einem virtuellen Prozessorstamm erfolgt, findet keine erneute Initialisierung statt.  
   
@@ -104,7 +109,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  In den Bibliotheken und Headern, die mit Visual Studio 2010 geliefert wurden, weist diese Methode keinen Parameter auf, und der virtuelle Prozessorstamm wurde nicht initialisiert. Um altes Verhalten beizubehalten, wird der Standardparameterwert von `Blocking` angegeben.  
   
-##  <a name="a-nameswitchtoa--ithreadproxyswitchto-method"></a><a name="switchto"></a>IThreadProxy:: SwitchTo-Methode  
+##  <a name="switchto"></a>IThreadProxy:: SwitchTo-Methode  
  Führt einen kooperativen Kontextwechsel vom derzeit ausgeführten Kontext zu einer anderen.  
   
 ```
@@ -127,11 +132,11 @@ virtual void SwitchTo(
   
  Verwenden Sie den Wert `Blocking` soll dieser Threadproxy in einen blockierten Zustand übergeht. Aufrufen von `SwitchTo` mit dem Parameter `switchState` festgelegt `Blocking` bewirkt, dass den Ausführungskontext `pContext` ausführen und den aktuellen Threadproxy blockiert, bis er fortgesetzt wird. Der Planer behält den Besitz des Threadproxys an, wenn der Threadproxy ist der `Blocking` Zustand. Die Ausführung des blockierten Threadproxys kann fortgesetzt werden, indem die `SwitchTo`-Funktion aufgerufen wird, um zum Ausführungskontext dieses Threadproxys zu wechseln. Sie können den Threadproxy auch fortsetzen, indem Sie dessen zugeordneten Kontext verwenden, um den Stamm eines virtuellen Prozessors zu aktivieren. Weitere Informationen hierzu finden Sie unter [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate).  
   
- Verwenden Sie den Wert `Nesting` Wenn Sie vorübergehend diesen Threadproxy vom Stamm virtuellen Prozessors Trennen dieser ausgeführt wird, und der Planer er Arbeit verteilt. Aufrufen von `SwitchTo` mit dem Parameter `switchState` festgelegt `Nesting` bewirkt, dass den Ausführungskontext `pContext` starten ausführen und die aktuelle Threadproxy ebenfalls weiter ausgeführt wird, ohne dass ein virtueller Prozessorstamm. Der Threadproxy den Planer verlassen hat, bis er aufruft der [IThreadProxy:: SwitchOut](#switchout) Methode zu einem späteren Zeitpunkt. Die `IThreadProxy::SwitchOut` Methode konnte der Threadproxy blockiert, bis ein virtueller Prozessorstamm ist, um neu zu planen.  
+ Verwenden Sie den Wert `Nesting` Wenn vorübergehend diesen Threadproxy vom Stamm virtuellen Prozessors trennen Computer werden sollen, und der Planer er Arbeit verteilt. Aufrufen von `SwitchTo` mit dem Parameter `switchState` festgelegt `Nesting` bewirkt, dass den Ausführungskontext `pContext` starten ausführen und die aktuelle Threadproxy ebenfalls weiter ausgeführt wird, ohne dass ein virtueller Prozessorstamm. Der Threadproxy den Planer verlassen hat, bis er aufruft der [IThreadProxy:: SwitchOut](#switchout) Methode zu einem späteren Zeitpunkt. Die `IThreadProxy::SwitchOut` Methode konnte der Threadproxy blockiert, bis ein virtueller Prozessorstamm ist, um neu zu planen.  
   
  `SwitchTo` muss für die `IThreadProxy`-Schnittstelle aufgerufen werden, die den gerade ausgeführten Thread darstellt, oder die Ergebnisse sind nicht definiert. Löst die Funktion `invalid_argument` Wenn der Parameter `pContext` Wert `NULL`.  
   
-##  <a name="a-nameyieldtosystema--ithreadproxyyieldtosystem-method"></a><a name="yieldtosystem"></a>IThreadProxy:: YieldToSystem-Methode  
+##  <a name="yieldtosystem"></a>IThreadProxy:: YieldToSystem-Methode  
  Bewirkt, dass der aufrufende Thread die Ausführung an einen anderen Thread übergibt, der auf dem aktuellen Prozessor ausgeführt werden kann. Das Betriebssystem wählt den nächsten Thread ausgeführt werden.  
   
 ```

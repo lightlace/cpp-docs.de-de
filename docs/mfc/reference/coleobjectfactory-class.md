@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleObjectFactory
+- AFXDISP/COleObjectFactory
+- AFXDISP/COleObjectFactory::COleObjectFactory
+- AFXDISP/COleObjectFactory::GetClassID
+- AFXDISP/COleObjectFactory::IsLicenseValid
+- AFXDISP/COleObjectFactory::IsRegistered
+- AFXDISP/COleObjectFactory::Register
+- AFXDISP/COleObjectFactory::RegisterAll
+- AFXDISP/COleObjectFactory::Revoke
+- AFXDISP/COleObjectFactory::RevokeAll
+- AFXDISP/COleObjectFactory::UnregisterAll
+- AFXDISP/COleObjectFactory::UpdateRegistry
+- AFXDISP/COleObjectFactory::UpdateRegistryAll
+- AFXDISP/COleObjectFactory::GetLicenseKey
+- AFXDISP/COleObjectFactory::OnCreateObject
+- AFXDISP/COleObjectFactory::VerifyLicenseKey
+- AFXDISP/COleObjectFactory::VerifyUserLicense
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +126,7 @@ class COleObjectFactory : public CCmdTarget
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h  
   
-##  <a name="a-namecoleobjectfactorya--coleobjectfactorycoleobjectfactory"></a><a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory  
+##  <a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory  
  Erstellt ein `COleObjectFactory` -Objekt, initialisiert es als eine Objektfactory aufgehoben, und die Liste der Factorys hinzugefügt.  
   
 ```  
@@ -160,7 +176,7 @@ COleObjectFactory(
   
  Weitere Informationen finden Sie unter [CLSID-Schlüssel](http://msdn.microsoft.com/library/windows/desktop/ms691424) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetclassida--coleobjectfactorygetclassid"></a><a name="getclassid"></a>COleObjectFactory::GetClassID  
+##  <a name="getclassid"></a>COleObjectFactory::GetClassID  
  Gibt einen Verweis auf die OLE-Klassen-ID, die diese Factory darstellt.  
   
 ```  
@@ -173,7 +189,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [CLSID-Schlüssel](http://msdn.microsoft.com/library/windows/desktop/ms691424) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetlicensekeya--coleobjectfactorygetlicensekey"></a><a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey  
+##  <a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey  
  Fordert einen eindeutigen Lizenzschlüssel in die DLL und speichert ihn in der `BSTR` auf den `pbstrKey`.  
   
 ```  
@@ -195,7 +211,7 @@ virtual BOOL GetLicenseKey(
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung dieser Funktion gibt 0 zurück und speichert Sie in der `BSTR`. Wenn Sie MFC-ActiveX-Steuerelement verwenden, um das Projekt zu erstellen, stellt Steuerelement eine Außerkraftsetzung, die das Steuerelement Lizenzschlüssel abruft.  
   
-##  <a name="a-nameislicensevalida--coleobjectfactoryislicensevalid"></a><a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid  
+##  <a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid  
  Bestimmt, ob die Lizenz des Steuerelements gültig ist.  
   
 ```  
@@ -205,7 +221,7 @@ BOOL IsLicenseValid();
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn erfolgreich; andernfalls False.  
   
-##  <a name="a-nameisregistereda--coleobjectfactoryisregistered"></a><a name="isregistered"></a>COleObjectFactory::IsRegistered  
+##  <a name="isregistered"></a>COleObjectFactory::IsRegistered  
  Gibt einen Wert ungleich NULL zurück, wenn die Factory für die OLE-System-DLLs registriert ist.  
   
 ```  
@@ -215,7 +231,7 @@ virtual BOOL IsRegistered() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Factory registriert ist; andernfalls 0.  
   
-##  <a name="a-nameoncreateobjecta--coleobjectfactoryoncreateobject"></a><a name="oncreateobject"></a>COleObjectFactory::OnCreateObject  
+##  <a name="oncreateobject"></a>COleObjectFactory::OnCreateObject  
  Aufgerufen, um ein neues Objekt zu erstellen.  
   
 ```  
@@ -228,7 +244,7 @@ virtual CCmdTarget* OnCreateObject();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion zum Erstellen des Objekts von einer anderen als der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) an den Konstruktor übergeben.  
   
-##  <a name="a-nameregistera--coleobjectfactoryregister"></a><a name="register"></a>COleObjectFactory:: Register  
+##  <a name="register"></a>COleObjectFactory:: Register  
  Dieses Objekt-Factory registriert die OLE-System-DLLs.  
   
 ```  
@@ -241,7 +257,7 @@ virtual BOOL Register();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird in der Regel aufgerufen, indem [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) beim Start der Anwendung.  
   
-##  <a name="a-nameregisteralla--coleobjectfactoryregisterall"></a><a name="registerall"></a>COleObjectFactory::RegisterAll  
+##  <a name="registerall"></a>COleObjectFactory::RegisterAll  
  Registriert alle Objektfactory für die Anwendung mit der OLE-System-DLLs.  
   
 ```  
@@ -254,7 +270,7 @@ static BOOL PASCAL RegisterAll();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird in der Regel aufgerufen, indem [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) beim Start der Anwendung.  
   
-##  <a name="a-namerevokea--coleobjectfactoryrevoke"></a><a name="revoke"></a>COleObjectFactory:: Revoke  
+##  <a name="revoke"></a>COleObjectFactory:: Revoke  
  Widerruft dieses Objekt-Factory-Registrierung mit OLE-System-DLLs.  
   
 ```  
@@ -264,7 +280,7 @@ void Revoke();
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Funktion automatisch, bevor die Anwendung beendet wird. Rufen Sie es ggf. von einer Überschreibung von [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).  
   
-##  <a name="a-namerevokealla--coleobjectfactoryrevokeall"></a><a name="revokeall"></a>COleObjectFactory::RevokeAll  
+##  <a name="revokeall"></a>COleObjectFactory::RevokeAll  
  Hebt alle von der Anwendung Objekt Factorys Registrierungen mit der OLE-System-DLLs.  
   
 ```  
@@ -274,7 +290,7 @@ static void PASCAL RevokeAll();
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Funktion automatisch, bevor die Anwendung beendet wird. Rufen Sie es ggf. von einer Überschreibung von [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).  
   
-##  <a name="a-nameunregisteralla--coleobjectfactoryunregisterall"></a><a name="unregisterall"></a>UnregisterAll  
+##  <a name="unregisterall"></a>UnregisterAll  
  Hebt die Registrierung aller Objektfactory für eine Anwendung.  
   
 ```  
@@ -284,7 +300,7 @@ static BOOL PASCAL UnregisterAll();
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn erfolgreich, andernfalls FALSE.  
   
-##  <a name="a-nameupdateregistrya--coleobjectfactoryupdateregistry"></a><a name="updateregistry"></a>COleObjectFactory::UpdateRegistry  
+##  <a name="updateregistry"></a>COleObjectFactory::UpdateRegistry  
  Registriert alle Objektfactory für die Anwendung mit der OLE-System-Registrierung.  
   
 ```  
@@ -308,7 +324,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
      Wenn Sie MFC-ActiveX-Steuerelement verwenden, um das Projekt zu erstellen, stellt Assistent überschreibt diese rein virtuelle Funktion.  
   
-##  <a name="a-nameupdateregistryalla--coleobjectfactoryupdateregistryall"></a><a name="updateregistryall"></a>COleObjectFactory:: UpdateRegistryAll  
+##  <a name="updateregistryall"></a>COleObjectFactory:: UpdateRegistryAll  
  Registriert alle Objektfactory für die Anwendung mit der OLE-System-Registrierung.  
   
 ```  
@@ -325,7 +341,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird in der Regel aufgerufen, indem [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) beim Start der Anwendung.  
   
-##  <a name="a-nameverifylicensekeya--coleobjectfactoryverifylicensekey"></a><a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey  
+##  <a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey  
  Stellt sicher, dass der Container zum Verwenden des OLE-Steuerelements lizenziert ist.  
   
 ```  
@@ -346,7 +362,7 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
   
  Die Funktion [VerifyUserLicense](#verifyuserlicense) überprüft die Entwurfszeit-Lizenz.  
   
-##  <a name="a-nameverifyuserlicensea--coleobjectfactoryverifyuserlicense"></a><a name="verifyuserlicense"></a>COleObjectFactory::VerifyUserLicense  
+##  <a name="verifyuserlicense"></a>COleObjectFactory::VerifyUserLicense  
  Überprüft die Entwurfszeit-Lizenz für das OLE-Steuerelement.  
   
 ```  

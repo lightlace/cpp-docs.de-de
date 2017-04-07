@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFtpConnection
+- AFXINET/CFtpConnection
+- AFXINET/CFtpConnection::CFtpConnection
+- AFXINET/CFtpConnection::Command
+- AFXINET/CFtpConnection::CreateDirectory
+- AFXINET/CFtpConnection::GetCurrentDirectory
+- AFXINET/CFtpConnection::GetCurrentDirectoryAsURL
+- AFXINET/CFtpConnection::GetFile
+- AFXINET/CFtpConnection::OpenFile
+- AFXINET/CFtpConnection::PutFile
+- AFXINET/CFtpConnection::Remove
+- AFXINET/CFtpConnection::RemoveDirectory
+- AFXINET/CFtpConnection::Rename
+- AFXINET/CFtpConnection::SetCurrentDirectory
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +108,7 @@ class CFtpConnection : public CInternetConnection
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxinet.h  
   
-##  <a name="a-namecftpconnectiona--cftpconnectioncftpconnection"></a><a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
+##  <a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
  Diese Member-Funktion wird aufgerufen, um das Erstellen einer `CFtpConnection` Objekt.  
   
 ```  
@@ -151,7 +164,7 @@ CFtpConnection(
 ### <a name="remarks"></a>Hinweise  
  Erstellen Sie nie eine `CFtpConnection` direkt. Rufen Sie stattdessen [CInternetSession:: GetFTPConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), erstellt die **CFptConnection** Objekt.  
   
-##  <a name="a-namecommanda--cftpconnectioncommand"></a><a name="command"></a>CFtpConnection::Command  
+##  <a name="command"></a>CFtpConnection::Command  
  Sendet einen Befehl direkt an einen FTP-Server.  
   
 ```  
@@ -187,7 +200,7 @@ CInternetFile* Command(
   
  Wenn ein Fehler auftritt, löst MFC eine Ausnahme vom Typ [CInternetException](../../mfc/reference/cinternetexception-class.md).  
   
-##  <a name="a-namecreatedirectorya--cftpconnectioncreatedirectory"></a><a name="createdirectory"></a>CFtpConnection::CreateDirectory  
+##  <a name="createdirectory"></a>CFtpConnection::CreateDirectory  
  Rufen Sie diese Memberfunktion zum Erstellen eines Verzeichnisses auf dem verbundenen Server.  
   
 ```  
@@ -206,7 +219,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
   
  Die `pstrDirName` Parameter kann entweder eine teilweise oder vollständig qualifizierte Dateiname relativ zum aktuellen Verzeichnis. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als Verzeichnistrennzeichen entweder ein verwendet werden kann. `CreateDirectory`Verzeichnistrennzeichen Namen auf die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.  
   
-##  <a name="a-namegetcurrentdirectorya--cftpconnectiongetcurrentdirectory"></a><a name="getcurrentdirectory"></a>CFtpConnection:: GetCurrentDirectory  
+##  <a name="getcurrentdirectory"></a>CFtpConnection:: GetCurrentDirectory  
  Rufen Sie diese Memberfunktion zum Abrufen des Namens des aktuellen Verzeichnisses.  
   
 ```  
@@ -240,7 +253,7 @@ BOOL GetCurrentDirectory(
   
  Die Parameter `pstrDirName` oder `strDirName` kann entweder teilweise qualifizierten Dateinamen relativ zum aktuellen Verzeichnis oder voll qualifiziert. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als Verzeichnistrennzeichen entweder ein verwendet werden kann. `GetCurrentDirectory`Verzeichnistrennzeichen Namen auf die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.  
   
-##  <a name="a-namegetcurrentdirectoryasurla--cftpconnectiongetcurrentdirectoryasurl"></a><a name="getcurrentdirectoryasurl"></a>CFtpConnection::GetCurrentDirectoryAsURL  
+##  <a name="getcurrentdirectoryasurl"></a>CFtpConnection::GetCurrentDirectoryAsURL  
  Rufen Sie diese Memberfunktion zum Abrufen des aktuellen Verzeichnisses namens als URL.  
   
 ```  
@@ -274,7 +287,7 @@ BOOL GetCurrentDirectoryAsURL(
   
  Der Parameter `strDirName` kann entweder teilweise qualifizierten Dateinamen relativ zum aktuellen Verzeichnis oder voll qualifiziert. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als Verzeichnistrennzeichen entweder ein verwendet werden kann. `GetCurrentDirectoryAsURL`Verzeichnistrennzeichen Namen auf die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.  
   
-##  <a name="a-namegetfilea--cftpconnectiongetfile"></a><a name="getfile"></a>CFtpConnection::GetFile  
+##  <a name="getfile"></a>CFtpConnection::GetFile  
  Rufen Sie diese Memberfunktion zum Abrufen einer Datei von einem FTP-Server und auf dem lokalen Computer speichern.  
   
 ```  
@@ -334,7 +347,7 @@ BOOL GetFile(
   
  Überschreiben Sie den `dwContext`-Standard, um den Kontextbezeichner auf einen ausgewählten Wert festzulegen. Der Kontextbezeichner wird diesem bestimmten Vorgang des zugeordneten der `CFtpConnection` Objekt erstellt, indem die [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt. Der Wert wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) um den Status des Vorgangs bereitzustellen, mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) Weitere Informationen über den Kontextbezeichner.  
   
-##  <a name="a-nameopenfilea--cftpconnectionopenfile"></a><a name="openfile"></a>CFtpConnection:: OpenFile  
+##  <a name="openfile"></a>CFtpConnection:: OpenFile  
  Rufen Sie diese Memberfunktion zum Öffnen einer Datei auf einem FTP-Server zum Lesen oder schreiben.  
   
 ```  
@@ -380,7 +393,7 @@ CInternetFile* OpenFile(
   
  Überschreiben Sie den `dwContext`-Standard, um den Kontextbezeichner auf einen ausgewählten Wert festzulegen. Der Kontextbezeichner wird diesem bestimmten Vorgang des zugeordneten der `CFtpConnection` Objekt erstellt, indem die [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt. Der Wert wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) um den Status des Vorgangs bereitzustellen, mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) Weitere Informationen über den Kontextbezeichner.  
   
-##  <a name="a-nameputfilea--cftpconnectionputfile"></a><a name="putfile"></a>CFtpConnection::PutFile  
+##  <a name="putfile"></a>CFtpConnection::PutFile  
  Rufen Sie diese Memberfunktion zum Speichern einer Datei auf einem FTP-Server.  
   
 ```  
@@ -412,7 +425,7 @@ BOOL PutFile(
   
  Überschreiben Sie den `dwContext`-Standard, um den Kontextbezeichner auf einen ausgewählten Wert festzulegen. Der Kontextbezeichner wird diesem bestimmten Vorgang des zugeordneten der `CFtpConnection` Objekt erstellt, indem die [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt. Der Wert wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) um den Status des Vorgangs bereitzustellen, mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) Weitere Informationen über den Kontextbezeichner.  
   
-##  <a name="a-nameremovea--cftpconnectionremove"></a><a name="remove"></a>CFtpConnection:: Remove  
+##  <a name="remove"></a>CFtpConnection:: Remove  
  Rufen Sie diese Memberfunktion zum Löschen der angegebenen Datei aus dem verbundenen Server.  
   
 ```  
@@ -429,7 +442,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 ### <a name="remarks"></a>Hinweise  
  Die `pstrFileName` Parameter kann entweder einen teilweise qualifizierten Dateinamen relativ zum aktuellen Verzeichnis oder vollständig qualifiziert sein. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als Verzeichnistrennzeichen entweder ein verwendet werden kann. Die **entfernen** Funktion Verzeichnistrennzeichen Namen auf die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.  
   
-##  <a name="a-nameremovedirectorya--cftpconnectionremovedirectory"></a><a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
+##  <a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
  Rufen Sie diese Memberfunktion, um das angegebene Verzeichnis aus dem verbundenen Server zu entfernen.  
   
 ```  
@@ -448,7 +461,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
   
  Die `pstrDirName` Parameter kann entweder eine teilweise oder vollständig qualifizierte Dateiname relativ zum aktuellen Verzeichnis. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als Verzeichnistrennzeichen entweder ein verwendet werden kann. `RemoveDirectory`Verzeichnistrennzeichen Namen auf die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.  
   
-##  <a name="a-namerenamea--cftpconnectionrename"></a><a name="rename"></a>CFtpConnection::Rename  
+##  <a name="rename"></a>CFtpConnection::Rename  
  Rufen Sie diese Memberfunktion zum Umbenennen der angegebenen Datei auf dem verbundenen Server.  
   
 ```  
@@ -470,7 +483,7 @@ BOOL Rename(
 ### <a name="remarks"></a>Hinweise  
  Die `pstrExisting` und `pstrNew` Parameter können entweder einen teilweise qualifizierten Dateinamen relativ zum aktuellen Verzeichnis oder vollständig qualifiziert sein. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als Verzeichnistrennzeichen entweder ein verwendet werden kann. **Benennen Sie** Verzeichnistrennzeichen Namen auf die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.  
   
-##  <a name="a-namesetcurrentdirectorya--cftpconnectionsetcurrentdirectory"></a><a name="setcurrentdirectory"></a>CFtpConnection:: SetCurrentDirectory  
+##  <a name="setcurrentdirectory"></a>CFtpConnection:: SetCurrentDirectory  
  Rufen Sie diese Memberfunktion, in einem anderen Verzeichnis auf dem FTP-Server zu ändern.  
   
 ```  

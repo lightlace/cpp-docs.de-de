@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IPointerInactiveImpl
+- ATLCTL/ATL::IPointerInactiveImpl
+- ATLCTL/ATL::IPointerInactiveImpl::GetActivationPolicy
+- ATLCTL/ATL::IPointerInactiveImpl::OnInactiveMouseMove
+- ATLCTL/ATL::IPointerInactiveImpl::OnInactiveSetCursor
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class IPointerInactiveImpl
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlctl.h  
   
-##  <a name="a-namegetactivationpolicya--ipointerinactiveimplgetactivationpolicy"></a><a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
  Ruft den aktuellen Activation-Richtlinie für das Objekt ab.  
   
 ```
@@ -98,7 +102,7 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameoninactivemousemovea--ipointerinactiveimploninactivemousemove"></a><a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
+##  <a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
  Benachrichtigt das Objekt, das der Mauszeiger darüber bewegt hat Objekt Mausereignisse ausgelöst werden kann.  
   
 ```
@@ -115,7 +119,7 @@ HRESULT OnInactiveMouseMove(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameoninactivesetcursora--ipointerinactiveimploninactivesetcursor"></a><a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
+##  <a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
  Legt den Mauszeiger für die inaktiven Objekt fest.  
   
 ```

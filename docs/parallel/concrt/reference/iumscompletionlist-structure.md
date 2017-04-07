@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSCompletionList
+- IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 25023c27244669092e0f57fe59bdb190fd2f2afb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 65655e4e03a7b187e0bbadbd576bc088bb57f7c8
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList-Struktur
@@ -54,7 +56,7 @@ struct IUMSCompletionList;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IUMSCompletionList:: GetUnblockNotifications-Methode](#getunblocknotifications)|Ruft eine Kette von `IUMSUnblockNotification` Schnittstellen, deren zugeordnete Threadproxys seit dem letzten Aufruf dieser Methode aufgerufen wurde, Ausführungskontexte darstellen.|  
+|[IUMSCompletionList:: GetUnblockNotifications](#getunblocknotifications)|Ruft eine Kette von `IUMSUnblockNotification` Schnittstellen, deren zugeordnete Threadproxys seit dem letzten Aufruf dieser Methode aufgerufen wurde, Ausführungskontexte darstellen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ein Planer muss besonders vorsichtig, welche Aktionen durchgeführt werden, nachdem diese Schnittstelle zum Entfernen von Elementen aus der Vervollständigungsliste sein. Die Elemente sollten auf der Liste ausführbarer Kontexte des Planers platziert werden und so bald wie möglich im Allgemeinen zugegriffen werden. Es ist durchaus möglich, dass eines der Elemente aus der Warteschlange entfernt den Besitz einer beliebigen Sperre zugewiesen wurde. Der Planer kann keine beliebigen Funktionsaufrufe ausführen, die eine Blockierung kann zwischen dem Aufruf von Elementen aus der Warteschlange entfernt und die Platzierung dieser Elemente in einer Liste, die im Allgemeinen von innerhalb des Planers zugegriffen werden kann.  
@@ -67,7 +69,7 @@ struct IUMSCompletionList;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namegetunblocknotificationsa--iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>IUMSCompletionList:: GetUnblockNotifications-Methode  
+##  <a name="getunblocknotifications"></a>IUMSCompletionList:: GetUnblockNotifications-Methode  
  Ruft eine Kette von `IUMSUnblockNotification` Schnittstellen, deren zugeordnete Threadproxys seit dem letzten Aufruf dieser Methode aufgerufen wurde, Ausführungskontexte darstellen.  
   
 ```

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPoint
+- ATLTYPES/ATL::CPoint
+- ATLTYPES/ATL::CPoint::CPoint
+- ATLTYPES/ATL::CPoint::Offset
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +97,7 @@ class CPoint : public tagPOINT
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atltypes.h  
   
-##  <a name="a-namecpointa--cpointcpoint"></a><a name="cpoint"></a>CPoint::CPoint
+##  <a name="cpoint"></a>CPoint::CPoint
  Erstellt ein `CPoint`-Objekt.  
   
 ```  
@@ -151,7 +154,7 @@ CPoint ptFromDouble(dwSize);
 ASSERT(ptFromDouble == ptMFCHere);
 ```  
   
-##  <a name="a-nameoffseta--cpointoffset"></a><a name="offset"></a>CPoint::Offset  
+##  <a name="offset"></a>CPoint::Offset  
  Fügt Werte für die **x** und **y** Mitglieder der `CPoint`.  
   
 ```  
@@ -176,7 +179,7 @@ void Offset(SIZE size) throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities&#28;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
   
-##  <a name="a-nameoperatoreqeqa--cpointoperator-"></a><a name="operator_eq_eq"></a>CPoint::operator ==  
+##  <a name="operator_eq_eq"></a>CPoint::operator ==  
  Überprüft die Gleichheit zwischen zwei Punkten.  
   
 ```  
@@ -193,7 +196,7 @@ BOOL operator==(POINT point) const throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities&#29;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]  
   
-##  <a name="a-nameoperatorneqa--cpointoperator-"></a><a name="operator_neq"></a>CPoint::operator! =  
+##  <a name="operator_neq"></a>CPoint::operator! =  
  Prüft auf Ungleichheit zwischen zwei Punkten.  
   
 ```  
@@ -210,7 +213,7 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities&#30;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]  
   
-##  <a name="a-nameoperatoraddeqa--cpointoperator-"></a><a name="operator_add_eq"></a>CPoint::operator +=  
+##  <a name="operator_add_eq"></a>CPoint::operator +=  
  Die erste Überladung fügt eine Größe der `CPoint`.  
   
 ```  
@@ -235,7 +238,7 @@ void operator+=(POINT point) throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities&#31;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]  
   
-##  <a name="a-nameoperator-eqa--cpointoperator--"></a><a name="operator_-_eq"></a>CPoint::operator =  
+##  <a name="operator_-_eq"></a>CPoint::operator =  
  Die erste Überladung subtrahiert einen Schriftgrad aus den `CPoint`.  
   
 ```  
@@ -260,7 +263,7 @@ void operator-=(POINT point) throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities&#32;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]  
   
-##  <a name="a-nameoperatoradda--cpointoperator-"></a><a name="operator_add"></a>CPoint::operator +  
+##  <a name="operator_add"></a>CPoint::operator +  
  Verwenden Sie diesen Operator für den offset `CPoint` durch eine `CPoint` oder `CSize` -Objekt, oder versetzt ein `CRect` durch eine `CPoint`.  
   
 ```  
@@ -290,7 +293,7 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities&33;](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]  
   
-##  <a name="a-nameoperator-a--cpointoperator--"></a><a name="operator_-"></a>CPoint::operator-  
+##  <a name="operator_-"></a>CPoint::operator-  
  Verwenden Sie eine der ersten beiden Überladungen subtrahiert einen `CPoint` oder `CSize` -Objekt aus `CPoint`.  
   
 ```  

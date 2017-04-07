@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMultiPageDHtmlDialog
+- AFXDHTML/CMultiPageDHtmlDialog
+- AFXDHTML/CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +97,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdhtml.h  
   
-##  <a name="a-namecmultipagedhtmldialoga--cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
+##  <a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
  Erstellt ein mehrseitiges (assistentenartige) DHTML-Dialogfeld-Objekt.  
   
 ```  
@@ -129,7 +131,7 @@ CMultiPageDHtmlDialog();
  `nHtmlResID`  
  Enthält die ID-Nummer, der eine HTML-Ressource.  
   
-##  <a name="a-namedtorcmultipagedhtmldialoga--cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
+##  <a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
  Zerstört ein mehrseitiges DHTML Dialog-Objekt.  
   
 ```  

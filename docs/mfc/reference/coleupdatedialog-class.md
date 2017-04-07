@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleUpdateDialog
+- AFXODLGS/COleUpdateDialog
+- AFXODLGS/COleUpdateDialog::COleUpdateDialog
+- AFXODLGS/COleUpdateDialog::DoModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +93,7 @@ class COleUpdateDialog : public COleLinksDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxodlgs.h  
   
-##  <a name="a-namecoleupdatedialoga--coleupdatedialogcoleupdatedialog"></a><a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
+##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
  Erstellt ein `COleUpdateDialog`-Objekt.  
   
 ```  
@@ -117,7 +120,7 @@ explicit COleUpdateDialog(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion erstellt nur eine `COleUpdateDialog` Objekt. Um das Dialogfeld anzuzeigen, rufen Sie [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Diese Klasse sollte verwendet werden, sondern `COleLinksDialog` verknüpfte oder eingebettete Elemente Wenn Sie nur vorhandene aktualisieren möchten.  
   
-##  <a name="a-namedomodala--coleupdatedialogdomodal"></a><a name="domodal"></a>COleUpdateDialog::DoModal  
+##  <a name="domodal"></a>COleUpdateDialog::DoModal  
  Zeigt das Dialogfeld Verknüpfungen bearbeiten im Aktualisierungsmodus.  
   
 ```  

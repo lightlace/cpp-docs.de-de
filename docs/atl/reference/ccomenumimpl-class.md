@@ -9,9 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComEnumImpl
-- ATL::CComEnumImpl
 - CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl::CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl::Clone
+- ATLCOM/ATL::CComEnumImpl::Init
+- ATLCOM/ATL::CComEnumImpl::Next
+- ATLCOM/ATL::CComEnumImpl::Reset
+- ATLCOM/ATL::CComEnumImpl::Skip
+- ATLCOM/ATL::CComEnumImpl::m_begin
+- ATLCOM/ATL::CComEnumImpl::m_dwFlags
+- ATLCOM/ATL::CComEnumImpl::m_end
+- ATLCOM/ATL::CComEnumImpl::m_iter
+- ATLCOM/ATL::CComEnumImpl::m_spUnk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,21 +124,21 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
   
-##  <a name="a-nameccomenumimpla--ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
  Der Konstruktor.  
   
 ```
 CComEnumImpl();
 ```  
   
-##  <a name="a-namedtora--ccomenumimplccomenumimpl"></a><a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
+##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
  Der Destruktor.  
   
 ```
 ~CComEnumImpl();
 ```  
   
-##  <a name="a-nameinita--ccomenumimplinit"></a><a name="init"></a>CComEnumImpl::Init  
+##  <a name="init"></a>CComEnumImpl::Init  
  Sie müssen diese Methode aufrufen, bevor Sie einen Zeiger auf die Enumeratorschnittstelle für den zurück auf Clients übergeben.  
   
 ```
@@ -162,17 +172,14 @@ HRESULT Init(
   
  Die `flags` Parameter können Sie angeben, wie der Enumerator die Elemente des Arrays übergeben werden soll. `flags`akzeptiert einen der Werte aus den **CComEnumFlags** Enumeration unten:  
   
- `enum CComEnumFlags`  
-  
- `{`  
-  
- `AtlFlagNoCopy = 0,`  
-  
- `AtlFlagTakeOwnership = 2, // BitOwn`  
-  
- `AtlFlagCopy = 3           // BitOwn | BitCopy`  
-  
- `};`  
+```  
+enum CComEnumFlags  
+   {  
+   AtlFlagNoCopy = 0,  
+   AtlFlagTakeOwnership = 2, // BitOwn  
+   AtlFlagCopy = 3           // BitOwn | BitCopy  
+   };  
+```  
   
  **AtlFlagNoCopy** bedeutet, dass das Array Lebensdauer nicht vom Enumerator gesteuert wird. In diesem Fall entweder das Array werden statische oder identifizierte Objekt *pUnk* ist zuständig für das Array freigeben, wenn er nicht mehr benötigt wird.  
   
@@ -183,7 +190,7 @@ HRESULT Init(
 > [!NOTE]
 >  Der Prototyp dieser Methode gibt die Elemente des Arrays als Typ **T**, wobei **T** als einen Vorlagenparameter an die Klasse definiert wurde. Dies ist die desselben Typs, die durch die COM-Schnittstelle-Methode verfügbar gemacht wird [CComEnumImpl::Next](#next). Dies besteht darin, dass im Gegensatz zu [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), diese Klasse unterstützt keine anderen Speicher und Datentypen verfügbar. Der Datentyp der Elemente im Array muss identisch mit dem Datentyp, der mithilfe der COM-Schnittstelle verfügbar gemacht werden.  
   
-##  <a name="a-nameclonea--ccomenumimplclone"></a><a name="clone"></a>CComEnumImpl::Clone  
+##  <a name="clone"></a>CComEnumImpl::Clone  
  Diese Methode stellt die Implementierung der [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) Methode erstellen Sie ein Objekt vom Typ `CComEnum`, initialisieren es mit dem gleichen Array und Iterator vom aktuellen Objekt verwendet, und die Schnittstelle für das neu erstellte Objekt zurückgibt.  
   
 ```
@@ -200,42 +207,42 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, dass die geklonte Enumeratoren nicht ihre eigenen, kopieren (oder Besitz übernehmen) der Daten vom ursprünglichen Enumerator verwendet. Bei Bedarf werden geklonte Enumeratoren den ursprünglichen Enumerator (mithilfe eines COM-Verweis) aufrechtzuerhalten um sicherzustellen, dass die Daten für verfügbar ist, solange sie sie benötigen.  
   
-##  <a name="a-namemspunka--ccomenumimplmspunk"></a><a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
  Diese intelligente Zeiger unterhält einen Verweis auf das Objekt übergeben [CComEnumImpl::Init](#init), sicherstellen, dass während der Lebensdauer des Enumerators aktiv bleibt.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-##  <a name="a-namembegina--ccomenumimplmbegin"></a><a name="m_begin"></a>CComEnumImpl::m_begin  
+##  <a name="m_begin"></a>CComEnumImpl::m_begin  
  Ein Zeiger auf die Position direkt hinter dem letzten Element des Arrays mit den Elementen aufgelistet werden sollen.  
   
 ```
 T* m_begin;
 ```  
   
-##  <a name="a-namemenda--ccomenumimplmend"></a><a name="m_end"></a>CComEnumImpl::m_end  
+##  <a name="m_end"></a>CComEnumImpl::m_end  
  Ein Zeiger auf das erste Element des Arrays mit den Elementen aufgelistet werden sollen.  
   
 ```
 T* m_end;
 ```  
   
-##  <a name="a-namemitera--ccomenumimplmiter"></a><a name="m_iter"></a>CComEnumImpl::m_iter  
+##  <a name="m_iter"></a>CComEnumImpl::m_iter  
  Ein Zeiger auf das aktuelle Element des Arrays mit den Elementen aufgelistet werden sollen.  
   
 ```
 T* m_iter;
 ```  
   
-##  <a name="a-namemdwflagsa--ccomenumimplmdwflags"></a><a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
  Die Flags übergeben [CComEnumImpl::Init](#init).  
   
 ```
 DWORD m_dwFlags;
 ```  
   
-##  <a name="a-namenexta--ccomenumimplnext"></a><a name="next"></a>CComEnumImpl::Next  
+##  <a name="next"></a>CComEnumImpl::Next  
  Diese Methode stellt die Implementierung der [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) Methode.  
   
 ```
@@ -255,7 +262,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="a-namereseta--ccomenumimplreset"></a><a name="reset"></a>CComEnumImpl::Reset  
+##  <a name="reset"></a>CComEnumImpl::Reset  
  Diese Methode stellt die Implementierung der [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) Methode.  
   
 ```
@@ -265,7 +272,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
-##  <a name="a-nameskipa--ccomenumimplskip"></a><a name="skip"></a>CComEnumImpl:: Skip  
+##  <a name="skip"></a>CComEnumImpl:: Skip  
  Diese Methode stellt die Implementierung der [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) Methode.  
   
 ```

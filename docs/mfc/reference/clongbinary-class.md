@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- BLOB
 - CLongBinary
+- AFXDB_/CLongBinary
+- AFXDB_/CLongBinary::CLongBinary
+- AFXDB_/CLongBinary::m_dwDataLength
+- AFXDB_/CLongBinary::m_hData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +89,14 @@ class CLongBinary : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdb_.h  
   
-##  <a name="a-nameclongbinarya--clongbinaryclongbinary"></a><a name="clongbinary"></a>CLongBinary::CLongBinary  
+##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
  Erstellt ein `CLongBinary`-Objekt.  
   
 ```  
 CLongBinary();
 ```  
   
-##  <a name="a-namemdwdatalengtha--clongbinarymdwdatalength"></a><a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
+##  <a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
  Speichert die tatsächliche Größe in Bytes der Daten in der `HGLOBAL` in behandelt `m_hData`.  
   
 ```  
@@ -103,7 +106,7 @@ SQLULEN m_dwDataLength;
 ### <a name="remarks"></a>Hinweise  
  Diese Größe möglicherweise kleiner als die Größe des Speicherblocks, für die Daten zugeordnet. Rufen Sie die Win32 [GlobalSize ist](http://msdn.microsoft.com/library/windows/desktop/aa366593) Funktion, um die zugeordnete Größe abzurufen.  
   
-##  <a name="a-namemhdataa--clongbinarymhdata"></a><a name="m_hdata"></a>CLongBinary::m_hData  
+##  <a name="m_hdata"></a>CLongBinary::m_hData  
  Speichert eine Windows `HGLOBAL` an den tatsächlichen BLOB-Daten behandelt.  
   
 ```  

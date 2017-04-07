@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCColorBar
+- AFXCOLORBAR/CMFCColorBar
+- AFXCOLORBAR/CMFCColorBar::CMFCColorBar
+- AFXCOLORBAR/CMFCColorBar::ContextToSize
+- AFXCOLORBAR/CMFCColorBar::CreateControl
+- AFXCOLORBAR/CMFCColorBar::Create
+- AFXCOLORBAR/CMFCColorBar::EnableAutomaticButton
+- AFXCOLORBAR/CMFCColorBar::EnableOtherButton
+- AFXCOLORBAR/CMFCColorBar::GetColor
+- AFXCOLORBAR/CMFCColorBar::GetCommandID
+- AFXCOLORBAR/CMFCColorBar::GetHighlightedColor
+- AFXCOLORBAR/CMFCColorBar::GetHorzMargin
+- AFXCOLORBAR/CMFCColorBar::GetVertMargin
+- AFXCOLORBAR/CMFCColorBar::IsTearOff
+- AFXCOLORBAR/CMFCColorBar::SetColor
+- AFXCOLORBAR/CMFCColorBar::SetColorName
+- AFXCOLORBAR/CMFCColorBar::SetCommandID
+- AFXCOLORBAR/CMFCColorBar::SetDocumentColors
+- AFXCOLORBAR/CMFCColorBar::SetHorzMargin
+- AFXCOLORBAR/CMFCColorBar::SetVertMargin
+- AFXCOLORBAR/CMFCColorBar::AdjustLocations
+- AFXCOLORBAR/CMFCColorBar::AllowChangeTextLabels
+- AFXCOLORBAR/CMFCColorBar::AllowShowOnList
+- AFXCOLORBAR/CMFCColorBar::CalcSize
+- AFXCOLORBAR/CMFCColorBar::CreatePalette
+- AFXCOLORBAR/CMFCColorBar::GetColorGridSize
+- AFXCOLORBAR/CMFCColorBar::GetExtraHeight
+- AFXCOLORBAR/CMFCColorBar::InitColors
+- AFXCOLORBAR/CMFCColorBar::OnKey
+- AFXCOLORBAR/CMFCColorBar::OnSendCommand
+- AFXCOLORBAR/CMFCColorBar::OnUpdateCmdUI
+- AFXCOLORBAR/CMFCColorBar::OpenColorDialog
+- AFXCOLORBAR/CMFCColorBar::Rebuild
+- AFXCOLORBAR/CMFCColorBar::SelectPalette
+- AFXCOLORBAR/CMFCColorBar::SetPropList
+- AFXCOLORBAR/CMFCColorBar::ShowCommandMessageString
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -211,7 +246,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcolorbar.h  
   
-##  <a name="a-nameadjustlocationsa--cmfccolorbaradjustlocations"></a><a name="adjustlocations"></a>CMFCColorBar::AdjustLocations  
+##  <a name="adjustlocations"></a>CMFCColorBar::AdjustLocations  
  Passt die Positionen der Farbe Schaltflächen-Steuerelement die Farbe.  
   
 ```  
@@ -221,7 +256,7 @@ virtual void AdjustLocations();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Framework während aufgerufen `WM_SIZE` Verarbeitung von Nachrichten.  
   
-##  <a name="a-nameallowchangetextlabelsa--cmfccolorbarallowchangetextlabels"></a><a name="allowchangetextlabels"></a>CMFCColorBar::AllowChangeTextLabels  
+##  <a name="allowchangetextlabels"></a>CMFCColorBar::AllowChangeTextLabels  
  Gibt an, ob die Beschriftung der Schaltflächen ändern kann.  
   
 ```  
@@ -234,7 +269,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `FALSE`, was bedeutet, dass die Beschriftungen kann nicht geändert werden. Überschreiben Sie diese Methode zum Ändern von Beschriftungen zu aktivieren.  
   
-##  <a name="a-nameallowshowonlista--cmfccolorbarallowshowonlist"></a><a name="allowshowonlist"></a>CMFCColorBar::AllowShowOnList  
+##  <a name="allowshowonlist"></a>CMFCColorBar::AllowShowOnList  
  Gibt an, ob die Farbleiste Control-Objekt in der Liste eine Symbolleiste während des Anpassungsvorgangs angezeigt werden kann.  
   
 ```  
@@ -247,7 +282,7 @@ virtual BOOL AllowShowOnList() const;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `TRUE`, was bedeutet, dass das Framework während des Anpassungsvorgangs-Steuerelement die Farbe anzeigen kann. Überschreiben Sie diese Methode, um ein anderes Verhalten zu implementieren.  
   
-##  <a name="a-namecalcsizea--cmfccolorbarcalcsize"></a><a name="calcsize"></a>CMFCColorBar::CalcSize  
+##  <a name="calcsize"></a>CMFCColorBar::CalcSize  
  Vom Framework als Teil der Berechnungsprozess Layout aufgerufen.  
   
 ```  
@@ -261,7 +296,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe des Arrays der Color-Schaltflächen in einem Steuerelement Farbleiste.  
   
-##  <a name="a-namecmfccolorbara--cmfccolorbarcmfccolorbar"></a><a name="cmfccolorbar"></a>CMFCColorBar::CMFCColorBar  
+##  <a name="cmfccolorbar"></a>CMFCColorBar::CMFCColorBar  
  Erstellt ein `CMFCColorBar`-Objekt.  
   
 ```  
@@ -345,7 +380,7 @@ CMFCColorBar(
  [in] `uiCommandID`  
  Die Befehls-ID.  
   
-##  <a name="a-namecontexttosizea--cmfccolorbarcontexttosize"></a><a name="contexttosize"></a>CMFCColorBar::ContextToSize  
+##  <a name="contexttosize"></a>CMFCColorBar::ContextToSize  
  Berechnet die vertikalen und horizontalen Ränder, die sind erforderlich, um die Schaltflächen auf dem Steuerelement Farbe enthalten, und passt die Position dieser Schaltflächen.  
   
 ```  
@@ -363,7 +398,7 @@ void ContextToSize(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namecreatea--cmfccolorbarcreate"></a><a name="create"></a>CMFCColorBar::Create  
+##  <a name="create"></a>CMFCColorBar::Create  
  Erstellt ein Fenster der Farbleiste-Steuerelement und fügt es der `CMFCColorBar` Objekt.  
   
 ```  
@@ -405,7 +440,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  Erstellt ein `CMFCColorBar` Objekt, das den Klassenkonstruktor diese Methode aufrufen. Die `Create` Methode des Steuerelements in Windows erstellt und initialisiert eine Liste von Farben.  
   
-##  <a name="a-namecreatecontrola--cmfccolorbarcreatecontrol"></a><a name="createcontrol"></a>CMFCColorBar::CreateControl  
+##  <a name="createcontrol"></a>CMFCColorBar::CreateControl  
  Erstellt ein Fenster der Farbleiste-Steuerelement, fügt es die `CMFCColorBar` Objekt, und ändert das Steuerelementfenster, um die angegebenen Farbpalette enthalten.  
   
 ```  
@@ -439,7 +474,7 @@ virtual BOOL CreateControl(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode verwendet die `rect`, `nColumns`, und `pPalette` Parameter berechnet die geeignete Anzahl oder Zeilen und Spalten in die Farbleiste-Steuerelement, und ruft dann die [CMFCColorBar::Create](#create) Methode.  
   
-##  <a name="a-namecreatepalettea--cmfccolorbarcreatepalette"></a><a name="createpalette"></a>CMFCColorBar::CreatePalette  
+##  <a name="createpalette"></a>CMFCColorBar::CreatePalette  
  Initialisiert eine Palette mit Farben in einem angegebenen Array von Farben an.  
   
 ```  
@@ -458,7 +493,7 @@ static BOOL CreatePalette(
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
-##  <a name="a-nameenableautomaticbuttona--cmfccolorbarenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCColorBar::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>CMFCColorBar::EnableAutomaticButton  
  Anzeigen oder ausblenden "Automatische".  
   
 ```  
@@ -483,7 +518,7 @@ void EnableAutomaticButton(
 ### <a name="remarks"></a>Hinweise  
  Die Beschriftung für "automatisch" wird gelöscht, wenn die `lpszLabel` Parameter ist `NULL` oder `bEnable` Parameter ist `FALSE`.  
   
-##  <a name="a-nameenableotherbuttona--cmfccolorbarenableotherbutton"></a><a name="enableotherbutton"></a>CMFCColorBar::EnableOtherButton  
+##  <a name="enableotherbutton"></a>CMFCColorBar::EnableOtherButton  
  Aktiviert oder deaktiviert die Anzeige eines Dialogfelds, in dem den Benutzer weitere Farben auswählen können.  
   
 ```  
@@ -505,7 +540,7 @@ void EnableOtherButton(
  [in] `bEnable`  
  `TRUE`um die Schaltfläche zu aktivieren; `FALSE` auf die Schaltfläche deaktiviert. Der Standardwert ist `TRUE`.  
   
-##  <a name="a-namegetcolora--cmfccolorbargetcolor"></a><a name="getcolor"></a>CMFCColorBar::GetColor  
+##  <a name="getcolor"></a>CMFCColorBar::GetColor  
  Ruft die derzeit ausgewählte Farbe ab.  
   
 ```  
@@ -515,7 +550,7 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die ausgewählte Farbe.  
   
-##  <a name="a-namegetcolorgridsizea--cmfccolorbargetcolorgridsize"></a><a name="getcolorgridsize"></a>CMFCColorBar::GetColorGridSize  
+##  <a name="getcolorgridsize"></a>CMFCColorBar::GetColorGridSize  
  Berechnet die Anzahl von Zeilen und Spalten im Raster eines Steuerelements Farbleiste.  
   
 ```  
@@ -531,7 +566,7 @@ CSize GetColorGridSize(BOOL bVertDock) const;
 ### <a name="return-value"></a>Rückgabewert  
  Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt, dessen `cx` Komponente enthält die Anzahl der Spalten und deren `cy` Komponente enthält die Anzahl der Zeilen.  
   
-##  <a name="a-namegetcommandida--cmfccolorbargetcommandid"></a><a name="getcommandid"></a>CMFCColorBar::GetCommandID  
+##  <a name="getcommandid"></a>CMFCColorBar::GetCommandID  
  Ruft die Befehls-ID des aktuellen Steuerelements Farbleiste ab.  
   
 ```  
@@ -544,7 +579,7 @@ UINT GetCommandID() const;
 ### <a name="remarks"></a>Hinweise  
  Wenn der Benutzer eine neue Farbe auswählt, sendet das Framework die Befehls-ID in einer `WM_COMMAND` Nachricht, um das übergeordnete Element des informieren die `CMFCColorBar` Objekt.  
   
-##  <a name="a-namegetextraheighta--cmfccolorbargetextraheight"></a><a name="getextraheight"></a>CMFCColorBar::GetExtraHeight  
+##  <a name="getextraheight"></a>CMFCColorBar::GetExtraHeight  
  Berechnet die zusätzliche Höhe, die der aktuellen Farbleiste angezeigt verschiedene Elemente der Benutzeroberfläche, wie z. B. erfordert der **andere** Schaltfläche oder ein Dokument Farben.  
   
 ```  
@@ -560,7 +595,7 @@ int GetExtraHeight(int nNumColumns) const;
 ### <a name="return-value"></a>Rückgabewert  
  Die berechnete zusätzliche Höhe, die erforderlich ist.  
   
-##  <a name="a-namegethighlightedcolora--cmfccolorbargethighlightedcolor"></a><a name="gethighlightedcolor"></a>CMFCColorBar::GetHighlightedColor  
+##  <a name="gethighlightedcolor"></a>CMFCColorBar::GetHighlightedColor  
  Ruft die Farbe, die gibt an, dass eine Farbe den Fokus besitzt; die Schaltfläche ist *hot*.  
   
 ```  
@@ -572,7 +607,7 @@ COLORREF GetHighlightedColor() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegethorzmargina--cmfccolorbargethorzmargin"></a><a name="gethorzmargin"></a>CMFCColorBar::GetHorzMargin  
+##  <a name="gethorzmargin"></a>CMFCColorBar::GetHorzMargin  
  Ruft den horizontalen Rand, der den Abstand zwischen der linken Seite oder Zelle richtige Farbe und die Client-Bereich-Grenze ist.  
   
 ```  
@@ -582,7 +617,7 @@ int GetHorzMargin();
 ### <a name="return-value"></a>Rückgabewert  
  Der horizontale Rand.  
   
-##  <a name="a-namegetvertmargina--cmfccolorbargetvertmargin"></a><a name="getvertmargin"></a>CMFCColorBar::GetVertMargin  
+##  <a name="getvertmargin"></a>CMFCColorBar::GetVertMargin  
  Ruft den vertikalen Rand, der den Abstand zwischen dem oberen oder unteren Zelle "Color" und die Client-Bereich-Grenze ist.  
   
 ```  
@@ -592,7 +627,7 @@ int GetVertMargin() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der vertikalen Rand.  
   
-##  <a name="a-nameinitcolorsa--cmfccolorbarinitcolors"></a><a name="initcolors"></a>CMFCColorBar::InitColors  
+##  <a name="initcolors"></a>CMFCColorBar::InitColors  
  Initialisiert ein Array von Farben in einer Palette angegebenen Farben oder mit der Standardpalette System.  
   
 ```  
@@ -611,7 +646,7 @@ static int InitColors(
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Elemente im Array der Farben.  
   
-##  <a name="a-nameistearoffa--cmfccolorbaristearoff"></a><a name="istearoff"></a>CMFCColorBar::IsTearOff  
+##  <a name="istearoff"></a>CMFCColorBar::IsTearOff  
  Gibt an, ob der aktuelle Farbleiste angedockt werden kann.  
   
 ```  
@@ -624,7 +659,7 @@ BOOL IsTearOff() const;
 ### <a name="remarks"></a>Hinweise  
  Wenn die Farbleiste Steuerelement angedockt werden kann, können Sie aus einer Steuerleiste abgebrochen und an einer anderen Position angedockt werden.  
   
-##  <a name="a-nameonkeya--cmfccolorbaronkey"></a><a name="onkey"></a>CMFCColorBar::OnKey  
+##  <a name="onkey"></a>CMFCColorBar::OnKey  
  Vom Framework aufgerufen, wenn ein Benutzer eine Taste drückt.  
   
 ```  
@@ -638,7 +673,7 @@ virtual BOOL OnKey(UINT nChar);
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn diese Methode mit den angegebenen Schlüssel verarbeitet andernfalls `FALSE`.  
   
-##  <a name="a-nameonsendcommanda--cmfccolorbaronsendcommand"></a><a name="onsendcommand"></a>CMFCColorBar::OnSendCommand  
+##  <a name="onsendcommand"></a>CMFCColorBar::OnSendCommand  
  Aufgerufen, um eine Hierarchie von Popup-Steuerelemente zu schließen.  
   
 ```  
@@ -654,7 +689,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
   
-##  <a name="a-nameonupdatecmduia--cmfccolorbaronupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCColorBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>CMFCColorBar::OnUpdateCmdUI  
  Vom Framework aufgerufen wird, aktivieren oder deaktivieren ein Element der Benutzeroberfläche eines Steuerelements Farbleiste, bevor das Element angezeigt wird.  
   
 ```  
@@ -673,7 +708,7 @@ virtual void OnUpdateCmdUI(
 ### <a name="remarks"></a>Hinweise  
  Klickt ein Benutzer der Anwendung ein Element der Benutzeroberfläche, muss das Element wissen, ob es als aktiviert angezeigt werden soll oder deaktiviert. Das Ziel der Befehlsnachricht bietet diese Informationen durch die Implementierung einer `ON_UPDATE_COMMAND_UI` Befehlshandler. Verwenden Sie diese Methode, um die Verarbeitung des Befehls. Weitere Informationen finden Sie unter [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md).  
   
-##  <a name="a-nameopencolordialoga--cmfccolorbaropencolordialog"></a><a name="opencolordialog"></a>CMFCColorBar::OpenColorDialog  
+##  <a name="opencolordialog"></a>CMFCColorBar::OpenColorDialog  
  Öffnet das Dialogfeld Farbe an.  
   
 ```  
@@ -694,14 +729,14 @@ virtual BOOL OpenColorDialog(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namerebuilda--cmfccolorbarrebuild"></a><a name="rebuild"></a>CMFCColorBar::Rebuild  
+##  <a name="rebuild"></a>CMFCColorBar::Rebuild  
  Zeichnet die Farbleiste-Steuerelement vollständig neu.  
   
 ```  
 virtual void Rebuild();
 ```  
   
-##  <a name="a-nameselectpalettea--cmfccolorbarselectpalette"></a><a name="selectpalette"></a>CMFCColorBar::SelectPalette  
+##  <a name="selectpalette"></a>CMFCColorBar::SelectPalette  
  Die logische Palette von den angegebenen Gerätekontext festgelegt auf der Palette der Schaltfläche übergeordneten des aktuellen Steuerelements Farbleiste.  
   
 ```  
@@ -717,7 +752,7 @@ CPalette* SelectPalette(CDC* pDC);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Palette, die von der Palette der Schaltfläche übergeordneten des aktuellen Steuerelements Farbleiste ersetzt wird.  
   
-##  <a name="a-namesetcolora--cmfccolorbarsetcolor"></a><a name="setcolor"></a>CMFCColorBar::SetColor  
+##  <a name="setcolor"></a>CMFCColorBar::SetColor  
  Legt die Farbe, die derzeit ausgewählt ist.  
   
 ```  
@@ -728,7 +763,7 @@ void SetColor(COLORREF color);
  [in] `color`  
  Ein Wert für den RGB-Farbe.  
   
-##  <a name="a-namesetcolornamea--cmfccolorbarsetcolorname"></a><a name="setcolorname"></a>CMFCColorBar::SetColorName  
+##  <a name="setcolorname"></a>CMFCColorBar::SetColorName  
  Legt einen neuen Namen für eine angegebene Farbe fest.  
   
 ```  
@@ -747,7 +782,7 @@ static void SetColorName(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ändert den Namen der angegebenen Farbe in allen `CMFCColorBar` Objekte in der Anwendung.  
   
-##  <a name="a-namesetcommandida--cmfccolorbarsetcommandid"></a><a name="setcommandid"></a>CMFCColorBar::SetCommandID  
+##  <a name="setcommandid"></a>CMFCColorBar::SetCommandID  
  Legt eine neue Befehls-ID für ein Steuerelement Farbe fest.  
   
 ```  
@@ -761,7 +796,7 @@ void SetCommandID(UINT nCommandID);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die Befehls-ID eines Steuerelements Farbe zu ändern und das übergeordnete Fenster des Steuerelements zu benachrichtigen, dass die ID geändert hat.  
   
-##  <a name="a-namesetdocumentcolorsa--cmfccolorbarsetdocumentcolors"></a><a name="setdocumentcolors"></a>CMFCColorBar::SetDocumentColors  
+##  <a name="setdocumentcolors"></a>CMFCColorBar::SetDocumentColors  
  Legt die Liste der Farben, mit denen im aktuellen Dokument fest.  
   
 ```  
@@ -784,7 +819,7 @@ void SetDocumentColors(
 ### <a name="remarks"></a>Hinweise  
  *Dokumentieren Sie Farben* sind die Farben, die derzeit in einem Dokument verwendet werden. Das Framework verwaltet automatisch eine Liste der Dokumentfarben, aber Sie können diese Methode verwenden, um die Liste zu ändern.  
   
-##  <a name="a-namesethorzmargina--cmfccolorbarsethorzmargin"></a><a name="sethorzmargin"></a>CMFCColorBar::SetHorzMargin  
+##  <a name="sethorzmargin"></a>CMFCColorBar::SetHorzMargin  
  Legt den horizontalen Rand, der den Abstand zwischen der linken Seite oder richtige Farbe Zelle und dem Rand des Clientbereichs ist.  
   
 ```  
@@ -798,7 +833,7 @@ void SetHorzMargin(int nHorzMargin);
 ### <a name="remarks"></a>Hinweise  
  In der Standardeinstellung die [CMFCColorBar::CMFCColorBar](#cmfccolorbar) Konstruktor legt den horizontalen Rand auf 4 Pixel.  
   
-##  <a name="a-namesetproplista--cmfccolorbarsetproplist"></a><a name="setproplist"></a>CMFCColorBar::SetPropList  
+##  <a name="setproplist"></a>CMFCColorBar::SetPropList  
  Legt die `m_pWndPropList` geschützte Datenmember des angegebenen Zeigers auf ein Eigenschaftenraster-Steuerelement.  
   
 ```  
@@ -811,7 +846,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 |---------------|-----------------|  
 |[in] `pWndList`|Ein Zeiger auf die Eigenschaft Grid Control-Objekt.|  
   
-##  <a name="a-namesetvertmargina--cmfccolorbarsetvertmargin"></a><a name="setvertmargin"></a>CMFCColorBar::SetVertMargin  
+##  <a name="setvertmargin"></a>CMFCColorBar::SetVertMargin  
  Legt den vertikalen Rand, der den Abstand zwischen den obersten oder untersten Zelle Farbe und die Client-Bereich-Grenze ist.  
   
 ```  
@@ -825,7 +860,7 @@ void SetVertMargin(int nVertMargin);
 ### <a name="remarks"></a>Hinweise  
  In der Standardeinstellung die [CMFCColorBar::CMFCColorBar](#cmfccolorbar) Konstruktor legt den vertikalen Rand auf 4 Pixel.  
   
-##  <a name="a-nameshowcommandmessagestringa--cmfccolorbarshowcommandmessagestring"></a><a name="showcommandmessagestring"></a>CMFCColorBar::ShowCommandMessageString  
+##  <a name="showcommandmessagestring"></a>CMFCColorBar::ShowCommandMessageString  
  Fordert das Rahmenfenster, das die Farbleiste Steuerelement zum Aktualisieren der Position der Meldung in der Statusleiste besitzt.  
   
 ```  

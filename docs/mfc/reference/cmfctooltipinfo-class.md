@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipInfo
+- AFXTOOLTIPCTRL/CMFCToolTipInfo
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bBalloonTooltip
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bBoldLabel
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bDrawDescription
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bDrawIcon
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bDrawSeparator
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bRoundedCorners
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bVislManagerTheme
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrBorder
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrFill
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrFillGradient
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrText
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_nGradientAngle
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_nMaxDescrWidth
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +102,7 @@ class CMFCToolTipInfo
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtooltipctrl.h  
   
-##  <a name="a-namembballoontooltipa--cmfctooltipinfombballoontooltip"></a><a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
+##  <a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
  Gibt die Art der Anzeige aller QuickInfos.  
   
 ```  
@@ -98,7 +112,7 @@ BOOL m_bBalloonTooltip;
 ### <a name="remarks"></a>Hinweise  
  `TRUE`Gibt an, dass QuickInfos der sprechblasenformat `FALSE` gibt an, dass QuickInfos den rechteckigen Stil verwenden.  
   
-##  <a name="a-namembboldlabela--cmfctooltipinfombboldlabel"></a><a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
+##  <a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
  Gibt an, ob die Schriftart des QuickInfo-Text fett formatiert ist.  
   
 ```  
@@ -108,7 +122,7 @@ BOOL m_bBoldLabel;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie dieses Element auf `TRUE` anzuzeigende QuickInfo-Text und fett, oder `FALSE` QuickInfo Bezeichnungen mit Schriftart nicht fett angezeigt.  
   
-##  <a name="a-namembdrawdescriptiona--cmfctooltipinfombdrawdescription"></a><a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
+##  <a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
  Gibt an, ob jede QuickInfo Beschreibungstext angezeigt.  
   
 ```  
@@ -118,7 +132,7 @@ BOOL m_bDrawDescription;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie dieses Element auf `TRUE` zur Anzeige der Beschreibung oder `FALSE` Beschreibung ausblenden. Sie können die Beschreibung als QuickInfo angeben, durch Aufrufen von [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
-##  <a name="a-namembdrawicona--cmfctooltipinfombdrawicon"></a><a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
+##  <a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
  Gibt an, ob alle QuickInfos Symbole anzuzeigen.  
   
 ```  
@@ -128,7 +142,7 @@ BOOL m_bDrawIcon;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie dieses Element auf `TRUE` ein Symbol für jede QuickInfo angezeigt oder `FALSE` QuickInfos ohne Symbole angezeigt.  
   
-##  <a name="a-namembdrawseparatora--cmfctooltipinfombdrawseparator"></a><a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
+##  <a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
  Gibt an, ob es sich bei jeder QuickInfo Trennzeichen zwischen der Beschriftung und die Beschreibung enthält.  
   
 ```  
@@ -138,7 +152,7 @@ BOOL m_bDrawSeparator;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie dieses Element auf `TRUE` Trennzeichen zwischen den QuickInfo-Bezeichnung und Beschreibung angezeigt oder `FALSE` ohne Trennzeichen QuickInfo.  
   
-##  <a name="a-namembroundedcornersa--cmfctooltipinfombroundedcorners"></a><a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
+##  <a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
  Gibt an, ob alle QuickInfos abgerundete Ecken besitzen.  
   
 ```  
@@ -148,14 +162,14 @@ BOOL m_bRoundedCorners;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie dieses Element auf `TRUE` abgerundete Ecken auf QuickInfos anzeigen oder `FALSE` rechteckige Ecken auf QuickInfos angezeigt.  
   
-##  <a name="a-namemclrbordera--cmfctooltipinfomclrborder"></a><a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
+##  <a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
  Gibt die Farbe des Rahmens für alle QuickInfos an.  
   
 ```  
 COLORREF m_clrBorder;  
 ```  
   
-##  <a name="a-namemclrfilla--cmfctooltipinfomclrfill"></a><a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
+##  <a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
  Gibt die Farbe des QuickInfo-Hintergrund an.  
   
 ```  
@@ -165,7 +179,7 @@ COLORREF m_clrFill;
 ### <a name="remarks"></a>Hinweise  
  Wenn [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) ist-1, wird die Hintergrundfarbe für QuickInfo `m_clrFill`. Andernfalls `m_clrFill` gibt die Farbe für den Anfang des Farbverlaufs und `m_clrFillGradient` gibt die Farbe am Ende des Farbverlaufs an. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) bestimmt die Richtung des Farbverlaufs.  
   
-##  <a name="a-namemclrfillgradienta--cmfctooltipinfomclrfillgradient"></a><a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
+##  <a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
  Gibt die Endfarbe für einen Farbverlauf als Hintergrund für QuickInfos.  
   
 ```  
@@ -175,14 +189,14 @@ COLORREF m_clrFillGradient;
 ### <a name="remarks"></a>Hinweise  
  Wenn `m_clrFillGradient` ist-1, es wird kein Farbverlauf. Andernfalls wird die anfängliche Farbverlauf angegeben, indem [CMFCToolTipInfo::m_clrFill](#m_clrfill) und die Farbe graduell "Fertig stellen" wird angegeben, indem `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) bestimmt die Richtung des Farbverlaufs.  
   
-##  <a name="a-namemclrtexta--cmfctooltipinfomclrtext"></a><a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
+##  <a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
  Gibt die Textfarbe aller QuickInfos.  
   
 ```  
 COLORREF m_clrText;  
 ```  
   
-##  <a name="a-namemngradientanglea--cmfctooltipinfomngradientangle"></a><a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
+##  <a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
  Gibt den Winkel, in dem ein Farbverlauf für den Hintergrund von QuickInfos gezeichnet wird.  
   
 ```  
@@ -194,14 +208,14 @@ int m_nGradientAngle;
   
  [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` gibt die Farbe für den Anfang des Farbverlaufs und [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` gibt die Farbe am Ende des Farbverlaufs an. Wenn `m_clrFillGradient` ist-1, es wird kein Farbverlauf.  
   
-##  <a name="a-namemnmaxdescrwidtha--cmfctooltipinfomnmaxdescrwidth"></a><a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
+##  <a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
  Gibt die maximale Breite der Beschreibung, die sie in jede QuickInfo angezeigt. Wenn die Breite Beschreibung den angegebenen Wert überschreitet, wird der Text umbrochen.  
   
 ```  
 int m_nMaxDescrWidth;  
 ```  
   
-##  <a name="a-namembvislmanagerthemea--cmfctooltipinfombvislmanagertheme"></a><a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
+##  <a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
  Gibt an, ob es sich bei den visuelle Manager der Anwendung das Erscheinungsbild aller QuickInfos gesteuert.  
   
 ```  
@@ -211,7 +225,7 @@ BOOL m_bVislManagerTheme;
 ### <a name="remarks"></a>Hinweise  
  Wenn `m_bVislManagerTheme` ist `TRUE`, jede QuickInfo fordert ein neues [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) aus visuellen Manager von der Anwendung, bevor sie auf dem Bildschirm angezeigt, und die Werte in diesem Objekt verwendet, um ihre Darstellung zu bestimmen. Die weiteren Mitglieder Ihrer [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) werden ignoriert.  
   
-##  <a name="a-nameoperatoreqa--cmfctooltipinfooperator"></a><a name="operator_eq"></a>CMFCToolTipInfo::operator =  
+##  <a name="operator_eq"></a>CMFCToolTipInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

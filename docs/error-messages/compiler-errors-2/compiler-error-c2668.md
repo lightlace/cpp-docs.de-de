@@ -1,40 +1,56 @@
 ---
-title: "Compilerfehler C2668 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2668"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2668"
+title: Compilerfehler Fehler C2668 | Microsoft Docs
+ms.custom: 
+ms.date: 03/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2668
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Compilerfehler C2668
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 6bb1dc7c1dbf26a4ff8ec25a46fe7128e0fb6aa8
+ms.lasthandoff: 03/29/2017
 
-'Funktion' : Mehrdeutiger Aufruf einer überladenen Funktion  
+---
+# <a name="compiler-error-c2668"></a>Compilerfehler Fehler C2668
+'Funktion': Mehrdeutiger Aufruf einer überladenen Funktion  
   
- Der angegebene Aufruf der überladenen Funktion lässt sich nicht auflösen.  Sie können eine explizite Typumwandlung für einen oder mehrere der übergebenen Parameter durchführen.  
+ Der Aufruf angegebenen überladenen Funktion konnte nicht aufgelöst werden. Sie möchten möglicherweise eine oder mehrere der tatsächliche Parameter explizit umgewandelt.  
   
- Dieser Fehler kann auch durch die Verwendung von Vorlagen hervorgerufen werden.  Wenn in einer Klasse eine reguläre Memberfunktion und eine aus einer Vorlage gebildete Memberfunktion mit derselben Signatur enthalten ist, muss letztere zuerst genannt werden.  Diese Beschränkung gilt für die aktuelle Implementierung von Visual C\+\+.  
+ Sie erhalten diesen Fehler auch mithilfe der Vorlage. Wenn Sie in der gleichen Klasse Sie eine reguläre Memberfunktion und eine aus einer Vorlage gebildete Memberfunktion mit der gleichen Signatur verfügen, muss aus einer Vorlage gebildete eine erste stammen. Dies ist eine Einschränkung des die aktuelle Implementierung von Visual C++.  
   
- Weitere Informationen zur teilweisen Anordnung von Funktionsvorlagen finden Sie im Knowledge Base\-Artikel Q240869.  
+ Finden Sie für partielle Reihenfolge von Funktionsvorlagen in der Knowledge Base-Artikel Q240869 für Weitere Informationen.  
   
- Informationen zum Erstellen eines ATL\-Projekts mit einem COM\-Objekt, das `ISupportErrorInfo` unterstützt, finden Sie im Knowledge Base\-Artikel Q243298 \(nur auf Englisch verfügbar\).  
+ Wenn Sie eine ATL-Projekt, das ein COM-Objekt unterstützender enthält erstellen `ISupportErrorInfo`, finden Sie im Knowledge Base-Artikel Q243298.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C2668 generiert:  
   
 ```  
@@ -53,8 +69,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Eine weitere Möglichkeit zur Behebung dieses Fehlers besteht in der Verwendung einer [using\-Deklaration](../../cpp/using-declaration.md):  
+## <a name="example"></a>Beispiel  
+ Eine weitere Möglichkeit zum Beheben dieses Fehlers ist mit einem [using-Deklaration](../../cpp/using-declaration.md):  
   
 ```  
 // C2668b.cpp  
@@ -95,10 +111,10 @@ class MyTestCase : public AppTestCase {
 };  
 ```  
   
-## Beispiel  
- Dieser Fehler kann auch aufgrund einer Verbesserung der Compilerkonformität in Visual Studio .NET 2003 ausgegeben werden: mehrdeutige Konvertierung bei Typumwandlung der Konstanten 0.  
+## <a name="example"></a>Beispiel  
+ Dieser Fehler kann außerdem infolge einer konformitätsverbesserung für Visual Studio .NET 2003 durchgeführt wurde, die generiert werden: Mehrdeutige Konvertierung bei der Umwandlung von Konstanten 0.  
   
- Die Konvertierung für eine Typumwandlung mittels der Konstanten 0 ist mehrdeutig, da `int` eine Konvertierung sowohl in **long** als auch in **void\*** erfordert.  Um diesen Fehler zu beheben, wandeln Sie 0 in den exakten Typ des Funktionsparameters um, für den die Konstante verwendet wird. Folglich müssen keine Konvertierungen erfolgen \(dieser Code ist in der Visual Studio .NET 2003\-Version und der Visual Studio .NET\-Version von Visual C\+\+ zulässig\).  
+ Konvertierung in eine Umwandlung, die mit dem konstanten Wert 0 ist mehrdeutig, da Int eine Konvertierung sowohl in lang und Void * erfordert. Um diesen Fehler zu beheben, wandeln Sie 0, der genaue Typ des der Funktionsparameter, dem sie für die verwendet wird, damit keine Konvertierungen müssen ausgeführt werden (in diesem Code wird in der Visual Studio .NET 2003 und Visual Studio .NET Versionen von Visual C++ gültig sein).  
   
 ```  
 // C2668c.cpp  
@@ -118,8 +134,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Dieser Fehler auch auftreten, weil die CRT jetzt für alle mathematischen Funktionen die Varianten "float" und "double" bereitstellt.  
+## <a name="example"></a>Beispiel  
+ Dieser Fehler kann auftreten, da die CRT jetzt "float" und doppelte Forms alle mathematischen Funktionen verfügt.  
   
 ```  
 // C2668d.cpp  
@@ -132,8 +148,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Dieser Fehler kann auftreten, da pow\(int, int\) in der CRT aus "math.h" entfernt wurde.  
+## <a name="example"></a>Beispiel  
+ Dieser Fehler kann auftreten, da die pow (Int, Int) aus math.h in der CRT entfernt wurde.  
   
 ```  
 // C2668e.cpp  
@@ -142,4 +158,26 @@ int main() {
    pow(9,9);   // C2668  
    pow((double)9,9);   // OK  
 }  
+```
+
+## <a name="example"></a>Beispiel  
+Dieser Code in Visual Studio 2015 ist erfolgreich, jedoch wird in Visual Studio 2017 und höher mit C2668 schlägt fehl. In Visual Studio 2015 behandelt der Compiler fälschlicherweise eine copy-list-Initialisierung auf die gleiche Weise wie eine Kopierinitialisierung. Er konvertiert nur die Konstruktoren für die Überladungsauflösung. 
+
+```
+C++
+struct A {
+    explicit A(int) {}
+};
+
+struct B {
+    B(int) {}
+};
+
+void f(const A&) {}
+void f(const B&) {}
+
+int main()
+{
+    f({ 1 }); // error C2668: 'f': ambiguous call to overloaded function
+}
 ```

@@ -1,20 +1,35 @@
 ---
-title: Concurrency-Namespace constants1 | Microsoft-Dokumentation
+title: Concurrency-namespacekonstanten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- concrt/concurrency::AgentEventGuid
+- concrt/concurrency::COOPERATIVE_TIMEOUT_INFINITE
+- concrt/concurrency::COOPERATIVE_WAIT_TIMEOUT
+- concrt/concurrency::ConcRTEventGuid
+- concrt/concurrency::ConcRT_ProviderGuid
+- concrt/concurrency::INHERIT_THREAD_PRIORITY
+- concrt/concurrency::LockEventGuid
+- concrt/concurrency::PPLParallelForEventGuid
+- concrt/concurrency::PPLParallelForeachEventGuid
+- concrt/concurrency::ResourceManagerEventGuid
+- concrt/concurrency::ScheduleGroupEventGuid
+- concrt/concurrency::VirtualProcessorEventGuid
+dev_langs:
+- C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
 caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 783ab9a70eac58b28cef387a5a3493c4fec827ac
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 807579ee48ec543a050d9e96bf0672fc91b1f2f5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace-constants"></a>Concurrency-Namespace-Konstanten
@@ -27,14 +42,14 @@ ms.lasthandoff: 02/24/2017
 |[PPLParallelForeachEventGuid](#pplparallelforeacheventguid)|[PPLParallelInvokeEventGuid](#pplparallelinvokeeventguid)|[ResourceManagerEventGuid](#resourcemanagereventguid)|  
 |[ScheduleGroupEventGuid](#schedulegroupeventguid)|[SchedulerEventGuid](#schedulereventguid)|[VirtualProcessorEventGuid](#virtualprocessoreventguid)|  
   
-##  <a name="a-nameagenteventguida--agenteventguid"></a><a name="agenteventguid"></a>AgentEventGuid  
+##  <a name="agenteventguid"></a>AgentEventGuid  
  Ein Kategorie-GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07}), die von der Agents Library in der Concurrency Runtime ausgelöste ETW-Ereignisse beschreibt.  
   
 ```
 const __declspec(selectany) GUID AgentEventGuid = {0xb9b5b78c, 0x713, 0x4898, { 0xa2, 0x1a, 0xc6, 0x79, 0x49, 0xdc, 0xed, 0x7 } };
 ```  
   
-##  <a name="a-namechoreeventguida--choreeventguid"></a><a name="choreeventguid"></a>ChoreEventGuid  
+##  <a name="choreeventguid"></a>ChoreEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf Arbeiten oder Aufgaben beziehen.  
   
 ```
@@ -45,7 +60,7 @@ const __declspec(selectany) GUID ChoreEventGuid =
 ### <a name="remarks"></a>Hinweise  
  Diese Kategorie von Ereignissen wird derzeit nicht von der Concurrency Runtime ausgelöst.  
   
-##  <a name="a-nameconcrtproviderguida--concrtproviderguid"></a><a name="concrt_providerguid"></a>ConcRT_ProviderGuid  
+##  <a name="concrt_providerguid"></a>ConcRT_ProviderGuid  
  Der ETW-Anbieter-GUID für die Concurrency Runtime.  
   
 ```
@@ -53,14 +68,14 @@ const __declspec(selectany) GUID ConcRT_ProviderGuid =
     { 0xF7B697A3, 0x4DB5, 0x4d3b, { 0xBE, 0x71, 0xC4, 0xD2, 0x84, 0xE6, 0x59, 0x2F } };
 ```  
   
-##  <a name="a-nameconcrtrmversion1a--concrtrmversion1"></a><a name="concrt_rm_version_1"></a>CONCRT_RM_VERSION_1  
+##  <a name="concrt_rm_version_1"></a>CONCRT_RM_VERSION_1  
  Gibt die Unterstützung der in Visual Studio 2010 definierten Ressourcen-Manager-Schnittstelle an.  
   
 ```
 const unsigned int CONCRT_RM_VERSION_1 = 0x00010000;
 ```  
   
-##  <a name="a-nameconcrteventguida--concrteventguid"></a><a name="concrteventguid"></a>ConcRTEventGuid  
+##  <a name="concrteventguid"></a>ConcRTEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und nicht in eine der anderen Kategorien fallen.  
   
 ```
@@ -71,21 +86,21 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 ### <a name="remarks"></a>Hinweise  
  Diese Kategorie von Ereignissen wird derzeit nicht von der Concurrency Runtime ausgelöst.  
   
-##  <a name="a-namecooperativetimeoutinfinitea--cooperativetimeoutinfinite"></a><a name="cooperative_timeout_infinite"></a>COOPERATIVE_TIMEOUT_INFINITE  
+##  <a name="cooperative_timeout_infinite"></a>COOPERATIVE_TIMEOUT_INFINITE  
  Ein Wert, der angibt, dass ein Wartevorgang nie durch einen Timeout beendet werden sollte.  
   
 ```
 const unsigned int COOPERATIVE_TIMEOUT_INFINITE = (unsigned int)-1;
 ```  
   
-##  <a name="a-namecooperativewaittimeouta--cooperativewaittimeout"></a><a name="cooperative_wait_timeout"></a>COOPERATIVE_WAIT_TIMEOUT  
+##  <a name="cooperative_wait_timeout"></a>COOPERATIVE_WAIT_TIMEOUT  
  Ein Wert, der angibt, dass ein Wartevorgang durch einen Timeout beendet wurde.  
   
 ```
 const size_t COOPERATIVE_WAIT_TIMEOUT = SIZE_MAX;
 ```  
   
-##  <a name="a-namecontexteventguida--contexteventguid"></a><a name="contexteventguid"></a>ContextEventGuid  
+##  <a name="contexteventguid"></a>ContextEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf Kontexte beziehen.  
   
 ```
@@ -93,14 +108,14 @@ const __declspec(selectany) GUID ContextEventGuid =
     { 0x5727A00F, 0x50BE, 0x4519, { 0x82, 0x56, 0xF7, 0x69, 0x98, 0x71, 0xFE, 0xCB } };
 ```  
   
-##  <a name="a-nameinheritthreadprioritya--inheritthreadpriority"></a><a name="inherit_thread_priority"></a>INHERIT_THREAD_PRIORITY  
+##  <a name="inherit_thread_priority"></a>INHERIT_THREAD_PRIORITY  
  Ein besonderer Wert für den Richtlinienschlüssel `ContextPriority`, der angibt, dass die Threadpriorität aller Kontexte im Planer die gleiche wie die des Threads sein sollte, der den Planer erstellt hat.  
   
 ```
 const unsigned int INHERIT_THREAD_PRIORITY = 0x0000F000;
 ```  
   
-##  <a name="a-namelockeventguida--lockeventguid"></a><a name="lockeventguid"></a>LockEventGuid  
+##  <a name="lockeventguid"></a>LockEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf Sperren beziehen.  
   
 ```
@@ -111,14 +126,14 @@ const __declspec(selectany) GUID LockEventGuid =
 ### <a name="remarks"></a>Hinweise  
  Diese Kategorie von Ereignissen wird derzeit nicht von der Concurrency Runtime ausgelöst.  
   
-##  <a name="a-namemaxexecutionresourcesa--maxexecutionresources"></a><a name="maxexecutionresources"></a>MaxExecutionResources  
+##  <a name="maxexecutionresources"></a>MaxExecutionResources  
  Ein besonderer Wert für die Richtlinienschlüssel `MinConcurrency` und `MaxConcurrency`. Wird, falls keine anderen Einschränkungen vorliegen, standardmäßig auf die Anzahl von Hardwarethreads auf dem Computer festgelegt.  
   
 ```
 const unsigned int MaxExecutionResources = 0xFFFFFFFF;
 ```  
   
-##  <a name="a-namepplparallelforeventguida--pplparallelforeventguid"></a><a name="pplparallelforeventguid"></a>PPLParallelForEventGuid  
+##  <a name="pplparallelforeventguid"></a>PPLParallelForEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf die Verwendung der `parallel_for`-Funktion beziehen.  
   
 ```
@@ -126,7 +141,7 @@ const __declspec(selectany) GUID PPLParallelForEventGuid =
     { 0x31c8da6b, 0x6165, 0x4042, { 0x8b, 0x92, 0x94, 0x9e, 0x31, 0x5f, 0x4d, 0x84 } };
 ```  
   
-##  <a name="a-namepplparallelforeacheventguida--pplparallelforeacheventguid"></a><a name="pplparallelforeacheventguid"></a>PPLParallelForeachEventGuid  
+##  <a name="pplparallelforeacheventguid"></a>PPLParallelForeachEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf die Verwendung der `parallel_for_each`-Funktion beziehen.  
   
 ```
@@ -134,7 +149,7 @@ const __declspec(selectany) GUID PPLParallelForeachEventGuid =
     { 0x5cb7d785, 0x9d66, 0x465d, { 0xba, 0xe1, 0x46, 0x11, 0x6, 0x1b, 0x54, 0x34 } };
 ```  
   
-##  <a name="a-namepplparallelinvokeeventguida--pplparallelinvokeeventguid"></a><a name="pplparallelinvokeeventguid"></a>PPLParallelInvokeEventGuid  
+##  <a name="pplparallelinvokeeventguid"></a>PPLParallelInvokeEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf die Verwendung der `parallel_invoke`-Funktion beziehen.  
   
 ```
@@ -142,7 +157,7 @@ const __declspec(selectany) GUID PPLParallelInvokeEventGuid =
     { 0xd1b5b133, 0xec3d, 0x49f4, { 0x98, 0xa3, 0x46, 0x4d, 0x1a, 0x9e, 0x46, 0x82 } };
 ```  
   
-##  <a name="a-nameresourcemanagereventguida--resourcemanagereventguid"></a><a name="resourcemanagereventguid"></a>ResourceManagerEventGuid  
+##  <a name="resourcemanagereventguid"></a>ResourceManagerEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf den Ressourcen-Manager beziehen.  
   
 ```
@@ -153,7 +168,7 @@ const __declspec(selectany) GUID ResourceManagerEventGuid =
 ### <a name="remarks"></a>Hinweise  
  Diese Kategorie von Ereignissen wird derzeit nicht von der Concurrency Runtime ausgelöst.  
   
-##  <a name="a-nameschedulegroupeventguida--schedulegroupeventguid"></a><a name="schedulegroupeventguid"></a>ScheduleGroupEventGuid  
+##  <a name="schedulegroupeventguid"></a>ScheduleGroupEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf Planungsgruppen beziehen.  
   
 ```
@@ -164,7 +179,7 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
 ### <a name="remarks"></a>Hinweise  
  Diese Kategorie von Ereignissen wird derzeit nicht von der Concurrency Runtime ausgelöst.  
   
-##  <a name="a-nameschedulereventguida--schedulereventguid"></a><a name="schedulereventguid"></a>SchedulerEventGuid  
+##  <a name="schedulereventguid"></a>SchedulerEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf Planeraktivitäten beziehen.  
   
 ```
@@ -172,7 +187,7 @@ const __declspec(selectany) GUID SchedulerEventGuid =
     { 0xE2091F8A, 0x1E0A, 0x4731, { 0x84, 0xA2, 0x0D, 0xD5, 0x7C, 0x8A, 0x52, 0x61 } };
 ```  
   
-##  <a name="a-namevirtualprocessoreventguida--virtualprocessoreventguid"></a><a name="virtualprocessoreventguid"></a>VirtualProcessorEventGuid  
+##  <a name="virtualprocessoreventguid"></a>VirtualProcessorEventGuid  
  Ein Kategorie-GUID, die ETW-Ereignisse beschreibt, die von der Concurrency Runtime ausgelöst werden und sich direkt auf virtuelle Prozessoren beziehen.  
   
 ```

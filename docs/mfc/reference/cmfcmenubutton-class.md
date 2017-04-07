@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::PreTranslateMessage
+- AFXMENUBUTTON/CMFCMenuButton::SizeToContent
+- AFXMENUBUTTON/CMFCMenuButton::m_bOSMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_bRightArrow
+- AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
+- AFXMENUBUTTON/CMFCMenuButton::m_hMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,14 +110,14 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxmenubutton.h  
   
-##  <a name="a-namecmfcmenubuttona--cmfcmenubuttoncmfcmenubutton"></a><a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
+##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
  Erstellt ein neues [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) Objekt.  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="a-namembosmenua--cmfcmenubuttonmbosmenu"></a><a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
+##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
  Ein booleschen Member-Variable, die Popup-Menü angibt, zeigt das Framework.  
   
 ```  
@@ -118,7 +127,7 @@ BOOL m_bOSMenu;
 ### <a name="remarks"></a>Hinweise  
  Wenn `m_bOSMenu` ist `TRUE`, ruft das Framework die geerbte `TrackPopupMenu` Methode für dieses Objekt. Andernfalls ruft das Framework [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).  
   
-##  <a name="a-namembrightarrowa--cmfcmenubuttonmbrightarrow"></a><a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
+##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
  Eine boolesche Membervariable, die die Position des Popupmenüs angibt.  
   
 ```  
@@ -128,7 +137,7 @@ BOOL m_bRightArrow;
 ### <a name="remarks"></a>Hinweise  
  Wenn der Benutzer die Schaltfläche klickt, zeigt die Anwendung ein Popup-Menü. Das Framework wird das Popup-Menü unter der Schaltfläche oder rechts neben der Schaltfläche angezeigt. Die Schaltfläche verfügt auch über einen kleinen Pfeil, der angibt, in dem das Kontextmenü angezeigt wird. Wenn `m_bRightArrow` ist `TRUE`, vom Framework das Popupmenü rechts neben der Schaltfläche angezeigt. Andernfalls wird das Popup-Menü unter der Schaltfläche angezeigt.  
   
-##  <a name="a-namembstaypresseda--cmfcmenubuttonmbstaypressed"></a><a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
+##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
  Eine boolesche Membervariable, die angibt, ob die Schaltfläche angezeigt wird gedrückt, während der Benutzer eine Auswahl aus dem Popupmenü trifft.  
   
 ```  
@@ -140,7 +149,7 @@ BOOL m_bStayPressed;
   
  Wenn die `m_bStayPressed` gehört `TRUE`, die Schaltfläche wird gedrückt, wenn der Benutzer auf die Schaltfläche klickt. Nachdem der Benutzer die Popup-Menü, indem Sie eine Auswahl treffen oder stornieren schließt bleibt bis gedrückt.  
   
-##  <a name="a-namemhmenua--cmfcmenubuttonmhmenu"></a><a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
+##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
  Das Handle für das angefügte Menü.  
   
 ```  
@@ -150,7 +159,7 @@ HMENU m_hMenu;
 ### <a name="remarks"></a>Hinweise  
  Das Framework zeigt das Menü, das durch diese Membervariable angegeben werden, wenn der Benutzer auf die Schaltfläche klickt.  
   
-##  <a name="a-namemnmenuresulta--cmfcmenubuttonmnmenuresult"></a><a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
+##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
  Eine ganze Zahl, die gibt an, welches Element wählt der Benutzer aus dem Popupmenü.  
   
 ```  
@@ -160,7 +169,7 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Hinweise  
  Der Wert dieser Membervariablen ist&0; (null), wenn der Benutzer im Menü abbricht, ohne eine Auswahl zu treffen, oder wenn ein Fehler auftritt.  
   
-##  <a name="a-namepretranslatemessagea--cmfcmenubuttonpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
  Aufgerufen, um fenstermeldungen zu übersetzen, bevor sie verteilt wurden.  
   
 ```  
@@ -176,7 +185,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesizetocontenta--cmfcmenubuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
  Ändert die Größe der Schaltfläche entsprechend seiner Text und Imagegröße.  
   
 ```  

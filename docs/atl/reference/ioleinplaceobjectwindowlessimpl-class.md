@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::GetDropTarget
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::GetWindow
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::OnWindowMessage
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::SetObjectRects
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::UIDeactivate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +98,7 @@ class IOleInPlaceObjectWindowlessImpl
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlctl.h  
   
-##  <a name="a-namecontextsensitivehelpa--ioleinplaceobjectwindowlessimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
  Gibt **E_NOTIMPL**.  
   
 ```
@@ -99,7 +108,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdroptargeta--ioleinplaceobjectwindowlessimplgetdroptarget"></a><a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl::GetDropTarget  
+##  <a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl::GetDropTarget  
  Gibt **E_NOTIMPL**.  
   
 ```
@@ -109,7 +118,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleInPlaceObjectWindowless::GetDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms678535) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetwindowa--ioleinplaceobjectwindowlessimplgetwindow"></a><a name="getwindow"></a>IOleInPlaceObjectWindowlessImpl::GetWindow  
+##  <a name="getwindow"></a>IOleInPlaceObjectWindowlessImpl::GetWindow  
  Der Container ruft diese Funktion, um das Fensterhandle des Steuerelements abzurufen.  
   
 ```
@@ -121,7 +130,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  Finden Sie unter [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinplacedeactivatea--ioleinplaceobjectwindowlessimplinplacedeactivate"></a><a name="inplacedeactivate"></a>IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
+##  <a name="inplacedeactivate"></a>IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
  Wird von der Container So deaktivieren Sie ein aktives in-Place-Steuerelement aufgerufen.  
   
 ```
@@ -133,7 +142,7 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
   
  Finden Sie unter [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonwindowmessagea--ioleinplaceobjectwindowlessimplonwindowmessage"></a><a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
+##  <a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
  Sendet eine Nachricht von einem Container für ein fensterloses Steuerelement, das in-Place aktiv ist.  
   
 ```
@@ -147,7 +156,7 @@ HRESULT OnWindowMessage(
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleInPlaceObjectWindowless::OnWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms693783) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namereactivateandundoa--ioleinplaceobjectwindowlessimplreactivateandundo"></a><a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
+##  <a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
  Gibt **E_NOTIMPL**.  
   
 ```
@@ -157,7 +166,7 @@ HRESULT ReactivateAndUndo();
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetobjectrectsa--ioleinplaceobjectwindowlessimplsetobjectrects"></a><a name="setobjectrects"></a>IOleInPlaceObjectWindowlessImpl::SetObjectRects  
+##  <a name="setobjectrects"></a>IOleInPlaceObjectWindowlessImpl::SetObjectRects  
  Wird von der Container informiert das Steuerelement, das die Größe und/oder die Position geändert hat.  
   
 ```
@@ -169,7 +178,7 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
   
  Finden Sie unter [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameuideactivatea--ioleinplaceobjectwindowlessimpluideactivate"></a><a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl::UIDeactivate  
+##  <a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl::UIDeactivate  
  Deaktiviert und entfernt die Steuerelement-Benutzeroberfläche, die direkte Aktivierung unterstützt.  
   
 ```

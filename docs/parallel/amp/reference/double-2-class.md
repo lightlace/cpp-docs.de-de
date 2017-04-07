@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 003cf8a4e1803154b4224c30524f8a302f10ea8f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: cb780d4164099b9b2b609a0d430054af8cd8aa25
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="double2-class"></a>double_2-Klasse
@@ -88,31 +88,31 @@ class double_2;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|double_2::get_x-Methode||  
-|double_2::get_xy-Methode||  
-|double_2::get_y-Methode||  
-|double_2::get_yx-Methode||  
-|double_2::ref_g-Methode||  
-|double_2::ref_r-Methode||  
-|double_2::ref_x-Methode||  
-|double_2::ref_y-Methode||  
-|double_2::set_x-Methode||  
-|double_2::set_xy-Methode||  
-|double_2::set_y-Methode||  
-|double_2::set_yx-Methode||  
+|double_2:: get_X||  
+|double_2:: get_xy||  
+|double_2:: get_Y||  
+|double_2:: get_yx||  
+|double_2:: ref_g||  
+|double_2:: ref_r||  
+|double_2:: ref_x||  
+|double_2:: ref_y||  
+|double_2:: set_X||  
+|double_2:: set_xy||  
+|double_2:: set_y||  
+|double_2:: set_yx||  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|double_2::operator- Operator||  
-|double_2::operator--–Operator||  
-|double_2::operator*=-Operator||  
-|double_2::operator/=-Operator||  
-|double_2::operator++-Operator||  
-|double_2::operator+=-Operator||  
-|double_2::operator=-Operator||  
-|double_2::operator-=-Operator||  
+|double_2-||  
+|double_2::--||  
+|double_2:: * =||  
+|double_2:: Operator / =||  
+|double_2:: Operator++||  
+|double_2:: Operator +=||  
+|double_2:: =||  
+|double_2:: Operator-=||  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   
@@ -124,14 +124,14 @@ class double_2;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|double_2::g-Datenmember||  
-|double_2::gr-Datenmember||  
-|double_2::r-Datenmember||  
-|double_2::rg-Datenmember||  
-|double_2::x-Datenmember||  
-|double_2::xy-Datenmember||  
-|double_2::y-Datenmember||  
-|double_2::yx-Datenmember||  
+|double_2:: g||  
+|double_2:: Gr||  
+|double_2:: r||  
+|double_2:: RG||  
+|double_2:: x||  
+|double_2:: XY||  
+|double_2:: y||  
+|double_2:: YX||  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `double_2`  
@@ -141,7 +141,7 @@ class double_2;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="a-namectora-double2"></a><a name="ctor"></a>double_2 
+##  <a name="ctor"></a>double_2 
 
  Standardkonstruktor, initialisiert alle Elemente mit 0.  
   
@@ -204,12 +204,12 @@ explicit inline double_2(
  `_Other`  
  Das Objekt, das zum Initialisieren verwendet.  
   
-##  <a name="a-namedouble2sizea-size"></a><a name="double_2__size"></a>Größe 
+##  <a name="double_2__size"></a>Größe 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Concurrency:: Graphics-Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
 

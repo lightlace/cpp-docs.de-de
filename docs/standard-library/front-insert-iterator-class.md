@@ -85,7 +85,7 @@ class front_insert_iterator;
   
  **Namespace:** std  
   
-##  <a name="a-namefrontinsertiteratorcontainertypea--frontinsertiteratorcontainertype"></a><a name="front_insert_iterator__container_type"></a> front_insert_iterator::container_type  
+##  <a name="front_insert_iterator__container_type"></a> front_insert_iterator::container_type  
  Ein Typ, der den Container darstellt, in dem eine Einfügung am Anfang vorgenommen werden soll.  
   
 ```  
@@ -125,7 +125,7 @@ The list L2 is: ( 40 10 20 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratorfrontinsertiteratora--frontinsertiteratorfrontinsertiterator"></a><a name="front_insert_iterator__front_insert_iterator"></a> front_insert_iterator::front_insert_iterator  
+##  <a name="front_insert_iterator__front_insert_iterator"></a> front_insert_iterator::front_insert_iterator  
  Damit wird ein Iterator erstellt, mit dem Elemente an den Anfang eines bestimmten Containerobjekts eingefügt werden können.  
   
 ```  
@@ -185,7 +185,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatorstara--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_star"></a> front_insert_iterator::operator*  
+##  <a name="front_insert_iterator__operator_star"></a> front_insert_iterator::operator*  
  Dereferenziert den Iterator zum Einfügen und gibt das Element zurück, das es adressiert  
   
 ```  
@@ -243,7 +243,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatoraddadda--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_add_add"></a> front_insert_iterator::operator++  
+##  <a name="front_insert_iterator__operator_add_add"></a> front_insert_iterator::operator++  
  Inkrementiert `back_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.  
   
 ```  
@@ -291,7 +291,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatoreqa--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_eq"></a> front_insert_iterator::operator=  
+##  <a name="front_insert_iterator__operator_eq"></a> front_insert_iterator::operator=  
  Fügt einen Wert (per Push) am Anfang des Containers an  
   
 ```  
@@ -301,7 +301,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` val`  
+ `val`  
  Der Wert, der dem Container zugewiesen werden soll  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -349,7 +349,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratorreferencea--frontinsertiteratorreference"></a><a name="front_insert_iterator__reference"></a> front_insert_iterator::reference  
+##  <a name="front_insert_iterator__reference"></a> front_insert_iterator::reference  
  Ein Typ, der einen Verweis auf ein Element in einer Sequenz enthält, die durch den zugehörigen Container gesteuert wird.  
   
 ```  

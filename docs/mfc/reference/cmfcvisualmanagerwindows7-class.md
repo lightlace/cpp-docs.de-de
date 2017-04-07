@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxvisualmanagerwindows7/CMFCVisualManagerWindows7
 - CMFCVisualManagerWindows7
+- AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7
+- AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7::CMFCVisualManagerWindows7
+- AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor
+- AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7::OnFillMenuImageRect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -136,21 +139,21 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxvisualmanagerwindows7.h  
   
-##  <a name="a-namedtorcmfcvisualmanagerwindows7a--cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="_dtorcmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  
+##  <a name="_dtorcmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  
  Standarddestruktor.  
   
 ```  
 virtual ~CMFCVisualManagerWindows7();
 ```  
   
-##  <a name="a-namecmfcvisualmanagerwindows7a--cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="cmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7::CMFCVisualManagerWindows7  
+##  <a name="cmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7::CMFCVisualManagerWindows7  
  Standardkonstruktor  
   
 ```  
 CMFCVisualManagerWindows7();
 ```  
   
-##  <a name="a-namegetribboneditbackgroundcolora--cmfcvisualmanagerwindows7getribboneditbackgroundcolor"></a><a name="getribboneditbackgroundcolor"></a>CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
+##  <a name="getribboneditbackgroundcolor"></a>CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
  Ruft die Farbe des Hintergrunds für ein Menüband-Eingabefeld.  
   
 ```  
@@ -179,7 +182,7 @@ virtual COLORREF GetRibbonEditBackgroundColor (
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonfillmenuimagerecta--cmfcvisualmanagerwindows7onfillmenuimagerect"></a><a name="onfillmenuimagerect"></a>CMFCVisualManagerWindows7::OnFillMenuImageRect  
+##  <a name="onfillmenuimagerect"></a>CMFCVisualManagerWindows7::OnFillMenuImageRect  
  Das Framework ruft diese Methode auf, wenn es um ein Menü Elementbild herum ausfüllt.  
   
 ```  

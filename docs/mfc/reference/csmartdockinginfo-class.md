@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSmartDockingInfo
+- AFXDOCKINGMANAGER/CSmartDockingInfo
+- AFXDOCKINGMANAGER/CSmartDockingInfo::CopyTo
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_bUseThemeColorInShading
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_clrBaseBackground
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_clrToneDest
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_clrToneSrc
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_clrTransparent
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_nCentralGroupOffset
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_sizeTotal
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_uiMarkerBmpResID
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_uiMarkerLightBmpResID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +118,7 @@ class CSmartDockingInfo : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxDockingManager.h  
   
-##  <a name="a-namecopytoa--csmartdockinginfocopyto"></a><a name="copyto"></a>CSmartDockingInfo::CopyTo  
+##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
  Kopiert die aktuellen smart-docking-Parameter in der bereitgestellten [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) Objekt.  
   
 ```  
@@ -118,7 +129,7 @@ void CopyTo(CSmartDockingInfo& params);
  [out] `params`  
  Ein Objekt vom Typ `CSmartDockingInfo` , die mit der aktuellen smart-docking-Parameter aufgefüllt.  
   
-##  <a name="a-namembusethemecolorinshadinga--csmartdockinginfombusethemecolorinshading"></a><a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
+##  <a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
  Gibt an, ob die aktuelle Designfarbe verwenden, wenn vom Framework intelligente andockmarkern angezeigt wird.  
   
 ```  
@@ -130,14 +141,14 @@ BOOL m_bUseThemeColorInShading;
   
  Der Standardwert ist `FALSE`.  
   
-##  <a name="a-namemclrbasebackgrounda--csmartdockinginfomclrbasebackground"></a><a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
+##  <a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
  Gibt die Basis Hintergrundfarbe von intelligenten andockmarkern.  
   
 ```  
 COLORREF m_clrBaseBackground;  
 ```  
   
-##  <a name="a-namemclrtonedesta--csmartdockinginfomclrtonedest"></a><a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
+##  <a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
  Gibt die Farbe, die ersetzt werden `m_clrToneSrc` in smart docking Marke Bitmaps.  
   
 ```  
@@ -149,7 +160,7 @@ COLORREF m_clrToneDest;
   
  Um die Farbe des benutzerdefinierten Marker zu ändern, müssen Sie beide angeben `m_clrToneDest` und `m_clrToneSrc`.  
   
-##  <a name="a-namemclrtonesrca--csmartdockinginfomclrtonesrc"></a><a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
+##  <a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
  Gibt die Farbe des intelligenten docking Marke Bitmaps.  
   
 ```  
@@ -161,7 +172,7 @@ COLORREF m_clrToneSrc;
   
  Verwendung `(COLORREF)-1` , ein Mitglied der intelligenten andockbaren Gruppe leer lassen.  
   
-##  <a name="a-namemclrtransparenta--csmartdockinginfomclrtransparent"></a><a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
+##  <a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
  Gibt die Farbe des intelligenten docking Marke Bitmaps, werden transparent.  
   
 ```  
@@ -171,7 +182,7 @@ COLORREF m_clrTransparent;
 ### <a name="remarks"></a>Hinweise  
  Dieser Wert muss festgelegt werden, wenn Sie benutzerdefinierte Marker und benutzerdefinierte Bitmaps in der Dockingstation Gruppe anzeigen.  
   
-##  <a name="a-namemncentralgroupoffseta--csmartdockinginfomncentralgroupoffset"></a><a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
+##  <a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
  Gibt den Offset zwischen der zentrale Gruppe von intelligenten andockmarkern und die Grenzen des Rechtecks zentrale Gruppe.  
   
 ```  
@@ -181,7 +192,7 @@ int m_nCentralGroupOffset;
 ### <a name="remarks"></a>Hinweise  
  Geben Sie diesen Wert, wenn Sie die Standard-Abweichung zwischen benutzerdefinierte Marker und die Grenzen für die zentrale Gruppe von intelligenten andockmarkern ändern möchten. Der Standardwert beträgt 5 Pixel.  
   
-##  <a name="a-namemsizetotala--csmartdockinginfomsizetotal"></a><a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
+##  <a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
  Gibt die Gesamtgröße des ein umschließendes Rechteck, das alle intelligente andockmarkern in der zentralen Gruppe einschließt.  
   
 ```  
@@ -191,7 +202,7 @@ CSize m_sizeTotal;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie `m_sizeTotal` auf die Größe des umschließenden Rechtecks des Balkens zentrale Gruppe. Sie müssen diesen Wert angeben, wenn Sie benutzerdefinierte Bitmaps für Marker verwenden.  
   
-##  <a name="a-namemuimarkerbmpresida--csmartdockinginfomuimarkerbmpresid"></a><a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
+##  <a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
  Definiert die Ressourcen-IDs für die Bitmap, die für nicht hervorgehobenen benutzerdefinierte intelligenten andockmarkern verwendet werden.  
   
 ```  
@@ -211,7 +222,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
-##  <a name="a-namemuimarkerlightbmpresida--csmartdockinginfomuimarkerlightbmpresid"></a><a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
+##  <a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
  Definiert die Ressourcen-IDs für die Bitmap, die für hervorgehobene benutzerdefinierte intelligenten andockmarkern verwendet werden.  
   
 ```  

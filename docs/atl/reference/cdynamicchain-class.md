@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CDynamicChain
-- ATL.CDynamicChain
 - CDynamicChain
+- ATLWIN/ATL::CDynamicChain
+- ATLWIN/ATL::CDynamicChain::CDynamicChain
+- ATLWIN/ATL::CDynamicChain::CallChain
+- ATLWIN/ATL::CDynamicChain::RemoveChainEntry
+- ATLWIN/ATL::CDynamicChain::SetChainEntry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +101,7 @@ class CDynamicChain
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h  
   
-##  <a name="a-namecallchaina--cdynamicchaincallchain"></a><a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>CDynamicChain::CallChain  
  Weist die Windows-Meldung zu einem anderen Objekt Nachricht Zuordnung.  
   
 ```
@@ -138,14 +141,14 @@ BOOL CallChain(
   
  `CallChain`erfordert einen vorherigen Aufruf [SetChainEntry](#setchainentry) Zuordnen der `dwChainID` Wert mit einem Objekt und seiner Nachricht Zuordnung.  
   
-##  <a name="a-namecdynamicchaina--cdynamicchaincdynamicchain"></a><a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
  Der Konstruktor.  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="a-namedtora--cdynamicchaincdynamicchain"></a><a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
  Der Destruktor.  
   
 ```
@@ -155,7 +158,7 @@ CDynamicChain();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle zugeordnete Ressourcen frei.  
   
-##  <a name="a-nameremovechainentrya--cdynamicchainremovechainentry"></a><a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
  Entfernt die Zuordnung der angegebenen Nachricht aus der Auflistung.  
   
 ```
@@ -169,7 +172,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="return-value"></a>Rückgabewert  
  **True,** , wenn die Zuordnung für die Nachricht erfolgreich aus der Auflistung entfernt wird. Andernfalls **FALSE**.  
   
-##  <a name="a-namesetchainentrya--cdynamicchainsetchainentry"></a><a name="setchainentry"></a>CDynamicChain:: SetChainEntry  
+##  <a name="setchainentry"></a>CDynamicChain:: SetChainEntry  
  Die Zuordnung der angegebenen Meldung und der Auflistung hinzugefügt.  
   
 ```

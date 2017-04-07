@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWnd
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::Create
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetAnimationSpeed
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetAnimationType
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetAutoCloseTime
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetCaptionHeight
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetDialogSize
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetLastPos
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetTransparency
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::HasSmallCaption
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnBeforeShow
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnClickLinkButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnCommand
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnDraw
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::ProcessCommand
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetAnimationSpeed
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetAnimationType
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetAutoCloseTime
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetSmallCaption
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetTransparency
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -120,7 +140,7 @@ class CMFCDesktopAlertWnd : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxDesktopAlertWnd.h  
   
-##  <a name="a-namecreatea--cmfcdesktopalertwndcreate"></a><a name="create"></a>CMFCDesktopAlertWnd::Create  
+##  <a name="create"></a>CMFCDesktopAlertWnd::Create  
  Erstellt und initialisiert die desktop-Benachrichtigungsfenster.  
   
 ```  
@@ -168,7 +188,7 @@ virtual BOOL Create(
   
  Die zweite methodenüberladung erstellt ein Benachrichtigungsfenster, die standardmäßig alle Steuerelemente enthält. Sie können angeben, welche Steuerelemente anzeigen, indem Sie ändern die [CMFCDesktopAlertWndInfo Klasse](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).  
   
-##  <a name="a-namegetanimationspeeda--cmfcdesktopalertwndgetanimationspeed"></a><a name="getanimationspeed"></a>CMFCDesktopAlertWnd::GetAnimationSpeed  
+##  <a name="getanimationspeed"></a>CMFCDesktopAlertWnd::GetAnimationSpeed  
  Gibt die Geschwindigkeit der Animation.  
   
 ```  
@@ -181,7 +201,7 @@ UINT GetAnimationSpeed() const;
 ### <a name="remarks"></a>Hinweise  
  Geschwindigkeit der Animation wird beschrieben, wie schnell die Warnung im Fenster öffnet und schließt.  
   
-##  <a name="a-namegetanimationtypea--cmfcdesktopalertwndgetanimationtype"></a><a name="getanimationtype"></a>CMFCDesktopAlertWnd::GetAnimationType  
+##  <a name="getanimationtype"></a>CMFCDesktopAlertWnd::GetAnimationType  
  Gibt den Animationstyp.  
   
 ```  
@@ -201,7 +221,7 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="a-namegetautoclosetimea--cmfcdesktopalertwndgetautoclosetime"></a><a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime  
+##  <a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime  
  Gibt das Timeout automatisch geschlossen.  
   
 ```  
@@ -214,7 +234,7 @@ int GetAutoCloseTime() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um zu bestimmen, wie viel Zeit vergehen soll, bevor die Warnung Fenster automatisch geschlossen wird.  
   
-##  <a name="a-namegetcaptionheighta--cmfcdesktopalertwndgetcaptionheight"></a><a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight  
  Gibt die Höhe der Beschriftung.  
   
 ```  
@@ -227,7 +247,7 @@ virtual int GetCaptionHeight();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode kann in einer abgeleiteten Klasse überschrieben werden. Die Implementierung der beiden: Wert für die Höhe der kleinen Überschrift (7 Pixel) zurückgibt, wenn das Popupfenster angezeigt werden soll der kleinen Überschrift für oder den Wert der Windows-API-Funktion `GetSystemMetrics(SM_CYSMCAPTION)`.  
   
-##  <a name="a-namegetlastposa--cmfcdesktopalertwndgetlastpos"></a><a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos  
+##  <a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos  
  Gibt die letzte Position der desktop-Benachrichtigungsfenster auf dem Bildschirm zurück.  
   
 ```  
@@ -240,7 +260,7 @@ CPoint GetLastPos() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode gibt die letzte gültige Position des Fensters Warnung auf dem Bildschirm.  
   
-##  <a name="a-namegettransparencya--cmfcdesktopalertwndgettransparency"></a><a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency  
+##  <a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency  
  Gibt die der Transparenzebene zurück.  
   
 ```  
@@ -253,7 +273,7 @@ BYTE GetTransparency() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um die aktuelle Transparenzebene des Fensters Warnung abzurufen.  
   
-##  <a name="a-namehassmallcaptiona--cmfcdesktopalertwndhassmallcaption"></a><a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption  
+##  <a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption  
  Bestimmt, ob die desktop-Benachrichtigungsfenster einer kleinen Beschriftung oder eine Beschriftung, die reguläre Größe hat.  
   
 ```  
@@ -266,7 +286,7 @@ BOOL HasSmallCaption() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um festzustellen, ob das Popupfenster einer kleinen Beschriftung oder eine Beschriftung, die reguläre Größe hat. Standardmäßig ist der kleinen Überschrift 7 Pixel hoch. Sie erhalten die Höhe der Beschriftung reguläre Größe durch Aufrufen der Windows-API-Funktion `GetSystemMetrics(SM_CYCAPTION)`.  
   
-##  <a name="a-nameonbeforeshowa--cmfcdesktopalertwndonbeforeshow"></a><a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
+##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -280,7 +300,7 @@ virtual BOOL OnBeforeShow(CPoint&);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonclicklinkbuttona--cmfcdesktopalertwndonclicklinkbutton"></a><a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd::OnClickLinkButton  
+##  <a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd::OnClickLinkButton  
  Vom Framework aufgerufen, wenn der Benutzer eine Linkschaltfläche desktop Warnung im Menü klickt.  
   
 ```  
@@ -297,7 +317,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie möchten benachrichtigt werden, wenn ein Benutzer auf die Warnung im Fenster den Link klickt.  
   
-##  <a name="a-nameoncommanda--cmfcdesktopalertwndoncommand"></a><a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
+##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -314,7 +334,7 @@ virtual BOOL OnCommand(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawa--cmfcdesktopalertwndondraw"></a><a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
+##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -326,7 +346,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameprocesscommanda--cmfcdesktopalertwndprocesscommand"></a><a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
+##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -340,7 +360,7 @@ BOOL ProcessCommand(HWND hwnd);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetanimationspeeda--cmfcdesktopalertwndsetanimationspeed"></a><a name="setanimationspeed"></a>CMFCDesktopAlertWnd::SetAnimationSpeed  
+##  <a name="setanimationspeed"></a>CMFCDesktopAlertWnd::SetAnimationSpeed  
  Geschwindigkeit der neuen Animation.  
   
 ```  
@@ -354,7 +374,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die Geschwindigkeit der Animation für die Warnung Fenster festgelegt. Die Geschwindigkeit der Standardwert ist 30 Millisekunden.  
   
-##  <a name="a-namesetanimationtypea--cmfcdesktopalertwndsetanimationtype"></a><a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType  
+##  <a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType  
  Legt den Animationstyp fest.  
   
 ```  
@@ -378,7 +398,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="a-namesetautoclosetimea--cmfcdesktopalertwndsetautoclosetime"></a><a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime  
+##  <a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime  
  Legt das Zeitlimit automatisch geschlossen.  
   
 ```  
@@ -392,7 +412,7 @@ void SetAutoCloseTime(int nTime);
 ### <a name="remarks"></a>Hinweise  
  Die Warnung im Fenster wird nach der angegebenen Zeit automatisch geschlossen, wenn der Benutzer keine Interaktion mit dem Fenster bietet.  
   
-##  <a name="a-namesetsmallcaptiona--cmfcdesktopalertwndsetsmallcaption"></a><a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption  
+##  <a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption  
  Wechselt zwischen kleinen und reguläre Größe Beschriftungen.  
   
 ```  
@@ -406,7 +426,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode, um die Beschriftung für kleine oder reguläre Größe angezeigt. Standardmäßig ist der kleinen Überschrift 7 Pixel hoch. Sie können die Größe der regulären Beschriftung abrufen, durch Aufrufen der Windows-API-Funktion `GetSystemMetrics(SM_CYCAPTION)`.  
   
-##  <a name="a-namesettransparencya--cmfcdesktopalertwndsettransparency"></a><a name="settransparency"></a>CMFCDesktopAlertWnd::SetTransparency  
+##  <a name="settransparency"></a>CMFCDesktopAlertWnd::SetTransparency  
  Legt fest, der die Transparenz der Popup-Fenster.  
   
 ```  
@@ -420,7 +440,7 @@ void SetTransparency(BYTE nTransparency);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um die Transparenzebene eines Popup-Fenster festzulegen.  
   
-##  <a name="a-namegetdialogsizea--cmfcdesktopalertwndgetdialogsize"></a><a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
+##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

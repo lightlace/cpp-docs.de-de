@@ -10,7 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCFilterChunkValueImpl
-- afxwin/CMFCFilterChunkValueImpl
+- AFXWIN/CMFCFilterChunkValueImpl
+- AFXWIN/CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl
+- AFXWIN/CMFCFilterChunkValueImpl::Clear
+- AFXWIN/CMFCFilterChunkValueImpl::CopyChunk
+- AFXWIN/CMFCFilterChunkValueImpl::CopyFrom
+- AFXWIN/CMFCFilterChunkValueImpl::GetChunkGUID
+- AFXWIN/CMFCFilterChunkValueImpl::GetChunkPID
+- AFXWIN/CMFCFilterChunkValueImpl::GetChunkType
+- AFXWIN/CMFCFilterChunkValueImpl::GetString
+- AFXWIN/CMFCFilterChunkValueImpl::GetValue
+- AFXWIN/CMFCFilterChunkValueImpl::GetValueNoAlloc
+- AFXWIN/CMFCFilterChunkValueImpl::IsValid
+- AFXWIN/CMFCFilterChunkValueImpl::SetBoolValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetDwordValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetFileTimeValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetInt64Value
+- AFXWIN/CMFCFilterChunkValueImpl::SetIntValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetLongValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetSystemTimeValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetTextValue
+- AFXWIN/CMFCFilterChunkValueImpl::SetChunk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +128,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-namecleara--cmfcfilterchunkvalueimplclear"></a><a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
+##  <a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
  Löscht die ChunkValue.  
   
 ```  
@@ -117,7 +137,7 @@ void Clear();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namecmfcfilterchunkvalueimpla--cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
+##  <a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
  Erstellt das Objekt.  
   
 ```  
@@ -126,7 +146,7 @@ CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedtorcmfcfilterchunkvalueimpla--cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
  Destructs des Objekts.  
   
 ```  
@@ -135,7 +155,7 @@ virtual ~CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namecopychunka--cmfcfilterchunkvalueimplcopychunk"></a><a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
+##  <a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
  Dieses Segment kopiert in eine Struktur, beschreibt die Merkmale eines.  
   
 ```  
@@ -151,7 +171,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namecopyfroma--cmfcfilterchunkvalueimplcopyfrom"></a><a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
+##  <a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
  Dieser Block-Wert aus der andere Wert initialisiert.  
   
 ```  
@@ -164,7 +184,7 @@ void CopyFrom (IFilterChunkValue* pValue);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetchunkguida--cmfcfilterchunkvalueimplgetchunkguid"></a><a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
+##  <a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
  Ruft das Segment GUID ab.  
   
 ```  
@@ -176,7 +196,7 @@ REFGUID GetChunkGUID() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetchunkpida--cmfcfilterchunkvalueimplgetchunkpid"></a><a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
+##  <a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
  Ruft das Segment PID (ID der Eigenschaft) ab.  
   
 ```  
@@ -188,7 +208,7 @@ DWORD GetChunkPID() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetchunktypea--cmfcfilterchunkvalueimplgetchunktype"></a><a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
+##  <a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
  Ruft den Segment-Typ ab.  
   
 ```  
@@ -200,7 +220,7 @@ CHUNKSTATE GetChunkType() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetstringa--cmfcfilterchunkvalueimplgetstring"></a><a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
+##  <a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
  Ruft den Zeichenfolgenwert ab.  
   
 ```  
@@ -212,7 +232,7 @@ CString &GetString();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetvaluea--cmfcfilterchunkvalueimplgetvalue"></a><a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
+##  <a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
  Ruft den Wert als einen zugeordneten Propvariant ab.  
   
 ```  
@@ -228,7 +248,7 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetvaluenoalloca--cmfcfilterchunkvalueimplgetvaluenoalloc"></a><a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
+##  <a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
  Gibt den Wert nicht reserviert (interne Wert).  
   
 ```  
@@ -240,7 +260,7 @@ PROPVARIANT GetValueNoAlloc ();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisvalida--cmfcfilterchunkvalueimplisvalid"></a><a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
+##  <a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
  Überprüft, ob der Wert dieser Eigenschaft gültig ist.  
   
 ```  
@@ -252,7 +272,7 @@ BOOL IsValid() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetboolvaluea--cmfcfilterchunkvalueimplsetboolvalue"></a><a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
+##  <a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
  Überladen. Legt die Eigenschaft durch Schlüssel in einen booleschen Wert fest.  
   
 ```  
@@ -303,7 +323,7 @@ HRESULT SetBoolValue(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetchunka--cmfcfilterchunkvalueimplsetchunk"></a><a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
+##  <a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
  Eine Hilfsfunktion, mit der das Segment allgemeine Eigenschaften festgelegt.  
   
 ```  
@@ -340,7 +360,7 @@ HRESULT SetChunk(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetdwordvaluea--cmfcfilterchunkvalueimplsetdwordvalue"></a><a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
+##  <a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
  -Taste, um einen DWORD-Wert festlegen Sie die Eigenschaft.  
   
 ```  
@@ -381,7 +401,7 @@ HRESULT SetDwordValue(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetfiletimevaluea--cmfcfilterchunkvalueimplsetfiletimevalue"></a><a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
+##  <a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
  Legen Sie die Eigenschaft durch Schlüssel zu einer Filetime an.  
   
 ```  
@@ -422,7 +442,7 @@ HRESULT SetFileTimeValue(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetint64valuea--cmfcfilterchunkvalueimplsetint64value"></a><a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
+##  <a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
  Legen Sie die Eigenschaft durch Schlüssel zu einem Int64-Typ.  
   
 ```  
@@ -463,7 +483,7 @@ HRESULT SetInt64Value(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetintvaluea--cmfcfilterchunkvalueimplsetintvalue"></a><a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
+##  <a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
  Legen Sie die Eigenschaft durch Schlüssel in int  
   
 ```  
@@ -504,7 +524,7 @@ HRESULT SetIntValue(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetlongvaluea--cmfcfilterchunkvalueimplsetlongvalue"></a><a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
+##  <a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
  -Taste, um einen Long-Wert festlegen Sie die Eigenschaft.  
   
 ```  
@@ -545,7 +565,7 @@ HRESULT SetLongValue(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetsystemtimevaluea--cmfcfilterchunkvalueimplsetsystemtimevalue"></a><a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
+##  <a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
  Legt die Eigenschaft durch den Schlüssel für die SystemTime.  
   
 ```  
@@ -586,7 +606,7 @@ HRESULT SetSystemTimeValue(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesettextvaluea--cmfcfilterchunkvalueimplsettextvalue"></a><a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
+##  <a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
  Legt die Eigenschaft durch Schlüssel in eine Unicode-Zeichenfolge.  
   
 ```  

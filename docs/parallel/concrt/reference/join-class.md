@@ -9,7 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::join
+- join
+- AGENTS/concurrency::join
+- AGENTS/concurrency::join::join
+- AGENTS/concurrency::join::accept_message
+- AGENTS/concurrency::join::consume_message
+- AGENTS/concurrency::join::link_target_notification
+- AGENTS/concurrency::join::propagate_message
+- AGENTS/concurrency::join::propagate_to_any_targets
+- AGENTS/concurrency::join::release_message
+- AGENTS/concurrency::join::reserve_message
+- AGENTS/concurrency::join::resume_propagation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b9671e6c9d29fb5f93977fe080e90dd087429460
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 7847f1d8611c65e698ed5d47c3c20ef02ce048ff
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="join-class"></a>join-Klasse
@@ -64,21 +74,21 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Join-Konstruktor](#ctor)|Überladen. Erstellt eine `join` Meldungsblocks.|  
+|[Join](#ctor)|Überladen. Erstellt eine `join` Meldungsblocks.|  
 |[~ join-Destruktor](#dtor)|Zerstört die `join` blockieren.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Accept_message-Methode](#accept_message)|Akzeptiert eine Meldung, die von diesem angeboten wurde `join` -Meldungsblock überträgt den Besitz an den Aufrufer.|  
-|[Consume_message-Methode](#consume_message)|Nimmt eine Meldung, die zuvor von Angeboten der `join` -Meldungsblock und vom Ziel überträgt den Besitz an den Aufrufer reserviert.|  
-|[Link_target_notification-Methode](#link_target_notification)|Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `join` Meldungsblocks.|  
-|[Propagate_message-Methode](#propagate_message)|Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `join` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.|  
-|[Propagate_to_any_targets-Methode](#propagate_to_any_targets)|Erstellt eine Meldung angezeigt, die eine Eingabenachricht aus den einzelnen Quellen enthält, wenn sie alle eine Nachricht weitergegeben wurden. Sendet diese Ausgabenachricht an alle diesbezüglichen Ziele.|  
-|[Release_message-Methode](#release_message)|Gibt die Reservierung einer vorherigen Meldung frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|  
-|[Reserve_message-Methode](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `join` Meldungsblocks. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
-|[Resume_propagation-Methode](#resume_propagation)|Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
+|[accept_message](#accept_message)|Akzeptiert eine Meldung, die von diesem angeboten wurde `join` -Meldungsblock überträgt den Besitz an den Aufrufer.|  
+|[consume_message](#consume_message)|Nimmt eine Meldung, die zuvor von Angeboten der `join` -Meldungsblock und vom Ziel überträgt den Besitz an den Aufrufer reserviert.|  
+|[link_target_notification](#link_target_notification)|Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `join` Meldungsblocks.|  
+|[propagate_message](#propagate_message)|Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `join` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Erstellt eine Meldung angezeigt, die eine Eingabenachricht aus den einzelnen Quellen enthält, wenn sie alle eine Nachricht weitergegeben wurden. Sendet diese Ausgabenachricht an alle diesbezüglichen Ziele.|  
+|[release_message](#release_message)|Gibt die Reservierung einer vorherigen Meldung frei. (Überschreibt [source_block:: release_message](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|Reserviert eine Meldung, die zuvor von diesem angebotenen `join` Meldungsblocks. (Überschreibt [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde. (Überschreibt [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [asynchrone Meldungsblöcke](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -99,7 +109,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
  **Namespace:** Parallelität  
   
-##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a>accept_message 
 
  Akzeptiert eine Meldung, die von diesem angeboten wurde `join` -Meldungsblock überträgt den Besitz an den Aufrufer.  
   
@@ -114,7 +124,7 @@ virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die `message` Objekt, das der Aufrufer nun Eigentümer ist.  
   
-##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a>consume_message 
 
  Nimmt eine Meldung, die zuvor von Angeboten der `join` -Meldungsblock und vom Ziel überträgt den Besitz an den Aufrufer reserviert.  
   
@@ -132,7 +142,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Hinweise  
  Ähnlich wie `accept`, steht aber immer nach einem Aufruf von ist `reserve`.  
   
-##  <a name="a-namectora-join"></a><a name="ctor"></a>Join 
+##  <a name="ctor"></a>Join 
 
  Erstellt eine `join` Meldungsblocks.  
   
@@ -181,7 +191,7 @@ join(
   
  Der Typ `filter_method` ist ein Funktionselement mit der Signatur `bool (T const &)` die aufgerufen wird, von diesem `join` -Meldungsblock zu bestimmen, ob eine bereitgestellte Meldung akzeptiert werden sollen.  
   
-##  <a name="a-namedtora-join"></a><a name="dtor"></a>~ Join 
+##  <a name="dtor"></a>~ Join 
 
  Zerstört die `join` blockieren.  
   
@@ -189,7 +199,7 @@ join(
 ~join();
 ```  
   
-##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a>link_target_notification 
 
  Ein Rückruf, der benachrichtigt, dass ein neues Ziel mit diesem verknüpft wurde `join` Meldungsblocks.  
   
@@ -197,7 +207,7 @@ join(
 virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
 ```  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
  Übergibt eine Nachricht asynchron eine `ISource` -Block an diesen `join` Meldungsblocks. Wird aufgerufen, indem die `propagate` -Methode beim Aufruf durch einen Quellblock.  
   
@@ -217,7 +227,7 @@ message_status propagate_message(
 ### <a name="return-value"></a>Rückgabewert  
  Ein [Message_status](concurrency-namespace-enums.md) Anzeichen, was das Ziel entschieden, mit der Meldung zu tun.  
   
-##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
  Erstellt eine Meldung angezeigt, die eine Eingabenachricht aus den einzelnen Quellen enthält, wenn sie alle eine Nachricht weitergegeben wurden. Sendet diese Ausgabenachricht an alle diesbezüglichen Ziele.  
   
@@ -225,7 +235,7 @@ message_status propagate_message(
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
 ```  
   
-##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+##  <a name="release_message"></a>release_message 
 
  Gibt die Reservierung einer vorherigen Meldung frei.  
   
@@ -237,7 +247,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  Die `runtime_object_identity` von der `message` Objekt freigegeben wird.  
   
-##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a>reserve_message 
 
  Reserviert eine Meldung, die zuvor von diesem angebotenen `join` Meldungsblocks.  
   
@@ -255,7 +265,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Hinweise  
  Nach dem `reserve` wird aufgerufen, wenn die Rückgabe `true`, `consume` oder `release` aufgerufen werden, um zu übernehmen oder den Besitz der Nachricht.  
   
-##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a>resume_propagation 
 
  Setzt die Weitergabe fort, nachdem eine Reservierung freigegeben wurde.  
   
@@ -266,5 +276,5 @@ virtual void resume_propagation();
 ## <a name="see-also"></a>Siehe auch  
  [Concurrency-Namespace](concurrency-namespace.md)   
  [Choice-Klasse](choice-class.md)   
- [Multitype_join-Klasse](multitype-join-class.md)
+ [multitype_join-Klasse](multitype-join-class.md)
 

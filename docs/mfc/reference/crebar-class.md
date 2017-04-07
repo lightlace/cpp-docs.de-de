@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CReBar
+- AFXEXT/CReBar
+- AFXEXT/CReBar::AddBar
+- AFXEXT/CReBar::Create
+- AFXEXT/CReBar::GetReBarCtrl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CReBar : public CControlBar
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxext.h  
   
-##  <a name="a-nameaddbara--crebaraddbar"></a><a name="addbar"></a>CReBar::AddBar  
+##  <a name="addbar"></a>CReBar::AddBar  
  Rufen Sie diese Memberfunktion Infoleiste ein Band hinzugefügt.  
   
 ```  
@@ -131,7 +135,7 @@ BOOL AddBar(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CReBarCtrl&#1;](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
   
-##  <a name="a-namecreatea--crebarcreate"></a><a name="create"></a>CReBar::Create  
+##  <a name="create"></a>CReBar::Create  
  Rufen Sie diese Memberfunktion zum Erstellen einer Infoleiste.  
   
 ```  
@@ -161,7 +165,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CReBar::AddBar](#addbar).  
   
-##  <a name="a-namegetrebarctrla--crebargetrebarctrl"></a><a name="getrebarctrl"></a>CReBar:: GetReBarCtrl  
+##  <a name="getrebarctrl"></a>CReBar:: GetReBarCtrl  
  Diese Memberfunktion ermöglicht den direkten Zugriff auf das zugrunde liegende Standardsteuerelement.  
   
 ```  

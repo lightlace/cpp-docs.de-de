@@ -1,5 +1,5 @@
 ---
-title: CMap Klasse | Microsoft-Dokumentation
+title: CMap-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMap
+- AFXTEMPL/CMap
+- AFXTEMPL/CMap::CPair
+- AFXTEMPL/CMap::CMap
+- AFXTEMPL/CMap::GetCount
+- AFXTEMPL/CMap::GetHashTableSize
+- AFXTEMPL/CMap::GetNextAssoc
+- AFXTEMPL/CMap::GetSize
+- AFXTEMPL/CMap::GetStartPosition
+- AFXTEMPL/CMap::InitHashTable
+- AFXTEMPL/CMap::IsEmpty
+- AFXTEMPL/CMap::Lookup
+- AFXTEMPL/CMap::PGetFirstAssoc
+- AFXTEMPL/CMap::PGetNextAssoc
+- AFXTEMPL/CMap::PLookup
+- AFXTEMPL/CMap::RemoveAll
+- AFXTEMPL/CMap::RemoveKey
+- AFXTEMPL/CMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,9 +53,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 680d44fe6154861d2c638697cfc9d3fbeab36cc4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
+ms.openlocfilehash: c567d97c613ad517372b454456535165fadbd3ae
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="cmap-class"></a>CMap-Klasse
@@ -55,13 +72,13 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  Die Klasse des Objekts, das als Schlüssel für die Zuordnung verwendet.  
   
  `ARG` *_* `KEY`  
- Datentyp für `KEY` Argumente, in der Regel einen Verweis auf `KEY`.  
+ Für verwendeten Datentyp `KEY` Argumente, in der Regel einen Verweis auf `KEY`.  
   
  `VALUE`  
  Die Klasse des Objekts in der Zuordnung gespeichert.  
   
  `ARG` *_* `VALUE`  
- Datentyp für `VALUE` Argumente, in der Regel einen Verweis auf `VALUE`.  
+ Für verwendeten Datentyp `VALUE` Argumente, in der Regel einen Verweis auf `VALUE`.  
   
 ## <a name="members"></a>Mitglieder  
   
@@ -69,7 +86,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMap::CPair](#cpair)|Eine geschachtelte Struktur, die einen Schlüsselwert und der Wert des zugeordneten Objekts enthält.|  
+|[CMap::CPair](#cpair)|Eine geschachtelte Struktur mit einem Schlüssel-Wert und den Wert des zugeordneten Objekts.|  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -83,49 +100,49 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 |----------|-----------------|  
 |[CMap::GetCount](#getcount)|Gibt die Anzahl der Elemente in dieser Zuordnung zurück.|  
 |[CMap::GetHashTableSize](#gethashtablesize)|Gibt die Anzahl der Elemente in der Hashtabelle zurück.|  
-|[CMap::GetNextAssoc](#getnextassoc)|Ruft das nächste Element durchlaufen werden können.|  
+|[CMap::GetNextAssoc](#getnextassoc)|Ruft das nächste Element für die Iteration an.|  
 |[CMap::GetSize](#getsize)|Gibt die Anzahl der Elemente in dieser Zuordnung zurück.|  
 |[CMap::GetStartPosition](#getstartposition)|Gibt die Position des ersten Elements zurück.|  
-|[CMap::InitHashTable](#inithashtable)|Initialisiert die Hash-Tabelle und eine Größe angegeben.|  
-|[CMap::IsEmpty](#isempty)|Tests für die leere Zuordnung Bedingung (keine Elemente).|  
-|[CMap::Lookup](#lookup)|Sucht nach einem bestimmten Schlüssel zugeordnete Wert.|  
+|[CMap::InitHashTable](#inithashtable)|Die Hashtabelle initialisiert, und gibt seine Größe an.|  
+|[CMap::IsEmpty](#isempty)|Testet, ob die Bedingung leere Zuordnung (keine Elemente).|  
+|[CMap::Lookup](#lookup)|Sucht einen bestimmten Schlüssel zugeordnete Wert.|  
 |[CMap::PGetFirstAssoc](#pgetfirstassoc)|Gibt einen Zeiger auf das erste Element zurück.|  
-|[CMap::PGetNextAssoc](#pgetnextassoc)|Ruft einen Zeiger auf das nächste Element durchlaufen werden können.|  
+|[CMap::PGetNextAssoc](#pgetnextassoc)|Ruft einen Zeiger auf das nächste Element für die Iteration an.|  
 |[CMap::PLookup](#plookup)|Gibt einen Zeiger auf einen Schlüssel, dessen Wert dem angegebenen Wert übereinstimmt.|  
 |[CMap::RemoveAll](#removeall)|Entfernt alle Elemente aus dieser Zuordnung.|  
 |[CMap::RemoveKey](#removekey)|Entfernt ein Element mit einem Schlüssel angegeben.|  
-|[CMap::SetAt](#setat)|Fügt ein Element in der Zuordnung. ersetzt ein vorhandenes Element, wenn ein übereinstimmender Schlüssel gefunden wird.|  
+|[CMap::SetAt](#setat)|Fügt ein Element in der Zuordnung; ersetzt ein vorhandenes Element, wenn ein übereinstimmender Schlüssel gefunden wird.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMap::operator]](#operator_at)|Fügt ein Element in der Zuordnung Â €"Operator Ersetzung für `SetAt`.|  
+|[CMap::operator]](#operator_at)|Fügt ein Element in der Zuordnung \u2012 Operator Ersatz für `SetAt`.|  
   
 ## <a name="remarks"></a>Hinweise  
- Nachdem Sie ein Schlüssel-Wert-Paar (Element) in die Zuordnung eingefügt haben, können effizient abrufen oder löschen das Paar mit dem Schlüssel darauf zugreifen. Sie können auch alle Elemente in der Zuordnung durchlaufen.  
+ Nachdem Sie ein Schlüssel-Wert-Paar (Element) in die Zuordnung eingefügt haben, können Sie effizient abrufen oder löschen das Paar mit dem Schlüssel für den Zugriff darauf. Sie können auch alle Elemente in der Zuordnung durchlaufen.  
   
- Eine Variable vom Typ **POSITION** wird für den alternativen Zugriff auf Einträge verwendet. Sie können eine **POSITION** einen Eintrag "merken" und die Zuordnung durchlaufen. Glauben, dass diese Iteration sequenziell Schlüsselwert ist; Es ist nicht. Die Reihenfolge der abgerufenen Elemente ist unbestimmt.  
+ Eine Variable vom Typ **POSITION** für den alternativen Zugriff auf Einträge verwendet wird. Sie können eine **POSITION** einen Eintrag "merken" sowie das Durchlaufen der Zuordnung. Sie können sich vorstellen, dass diese Iteration sequenzielle von Schlüssel-Wert ist; Es ist nicht. Die Sequenz von abgerufenen Elementen ist unbestimmt.  
   
- Bestimmte Memberfunktionen dieser Klasse rufen globale Hilfsfunktionen, die angepasst werden müssen, für die meisten Verwendungen von der `CMap` Klasse. Finden Sie unter [Auflistungsklasse](../../mfc/reference/collection-class-helpers.md) im Abschnitt Makros und globale Variablen für die `MFC``Reference`.  
+ Bestimmte Memberfunktionen der Klasse Aufruf globale Hilfsfunktionen, die angepasst werden müssen, für die meisten Verwendungen von der `CMap` Klasse. Finden Sie unter [Auflistungsklasse](../../mfc/reference/collection-class-helpers.md) in Abschnitt Makros und Globals der `MFC``Reference`.  
   
- `CMap`überschreibt [Einfügeoperatoren](../../mfc/reference/cobject-class.md#serialize) zur Unterstützung der Serialisierung und Sicherung der Elemente. Wenn eine Zuordnung mit einem Archiv gespeichert ist `Serialize`, jedes kartenelement wiederum serialisiert wird. Die standardmäßige Implementierung der von der `SerializeElements` Hilfsfunktion wird eine bitweise schreiben. Informationen über die Serialisierung der Auflistungselemente Zeiger aus abgeleiteten `CObject` oder andere benutzerdefinierte Typen finden Sie unter [Gewusst wie: Erstellen einer typsicheren Auflistung](../../mfc/how-to-make-a-type-safe-collection.md).  
+ `CMap`überschreibt [Einfügeoperatoren](../../mfc/reference/cobject-class.md#serialize) zur Unterstützung der Serialisierung laufzeittypenzugriff und zum Sichern der Elemente. Wenn eine Zuordnung mit einem Archiv gespeichert ist `Serialize`, jedes kartenelement wiederum serialisiert wird. Die standardmäßige Implementierung des der `SerializeElements` Hilfsfunktion wird eine bitweise schreiben. Für Informationen zur Serialisierung von sammelelementen Zeiger abgeleitet `CObject` oder andere benutzerdefinierte Typen finden Sie unter [Vorgehensweise: Erstellen einer typsicheren Auflistung](../../mfc/how-to-make-a-type-safe-collection.md).  
   
- Wenn Sie einen Diagnose Dump der einzelnen Elemente in der Zuordnung (Schlüssel und Werte) benötigen, müssen Sie die Tiefe des sicherungskontexts auf 1 oder größer festlegen.  
+ Wenn Sie eine Diagnose Sicherung der einzelnen Elemente in der Zuordnung (die Schlüssel und Werte) benötigen, müssen Sie die Tiefe des sicherungskontexts auf 1 oder größer festlegen.  
   
- Wenn ein `CMap` Objekt gelöscht wird oder wenn dessen Elemente entfernt werden, die Schlüssel und Werte werden entfernt.  
+ Wenn ein `CMap` Objekt gelöscht wird oder dessen Elemente entfernt werden, die Schlüssel und Werte werden entfernt.  
   
- Map-klassenableitung ist ähnlich wie die Liste Ableitung. Finden Sie im Artikel [Sammlungen](../../mfc/collections.md) für die Ableitung einer Klasse spezielle Liste veranschaulicht.  
+ Map-klassenableitung ähnelt Liste Ableitung. Finden Sie im Artikel [Sammlungen](../../mfc/collections.md) veranschaulicht die Ableitung von einem bestimmten Zweck ausgerichteter List-Klasse.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMap`  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtempl.h  
   
-##  <a name="a-namecmapa--cmapcmap"></a><a name="cmap"></a>CMap::CMap  
+##  <a name="cmap"></a>CMap::CMap  
  Erstellt eine leere Zuordnung.  
   
 ```  
@@ -134,32 +151,32 @@ CMap(INT_PTR nBlockSize = 10);
   
 ### <a name="parameters"></a>Parameter  
  `nBlockSize`  
- Gibt die Granularität der Reservierung von Speicher für die Erweiterung der Zuordnungs an.  
+ Gibt die Granularität der speicherbelegung zum Erweitern der Zuordnung an.  
   
 ### <a name="remarks"></a>Hinweise  
- Mit zunehmender die Zuordnung in Einheiten von Arbeitsspeicher belegt `nBlockSize` Einträge.  
+ Wächst die Zuordnung wird Speicherplatz belegt in der Einheit `nBlockSize` Einträge.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCCollections&#56;](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
+ [!code-cpp[NVC_MFCCollections #56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="a-namecpaira--cmapcpair"></a><a name="cpair"></a>CMap::CPair  
- Enthält einen Schlüsselwert und der Wert des zugeordneten Objekts.  
+##  <a name="cpair"></a>CMap::CPair  
+ Enthält ein Schlüssel-Wert und den Wert des zugeordneten Objekts.  
   
 ### <a name="remarks"></a>Hinweise  
- Dies ist eine geschachtelte Struktur in der Klasse [CMap](../../mfc/reference/cmap-class.md).  
+ Dies ist eine geschachtelte Struktur innerhalb der Klasse [CMap](../../mfc/reference/cmap-class.md).  
   
- Die Struktur besteht aus zwei Feldern:  
+ Die Struktur besteht aus zwei Felder:  
   
-- **KeyÂ Â Â** der tatsächliche Wert, der den Typ des Schlüssels.  
+- **Schlüssel** der tatsächliche Wert, der den Typ des Schlüssels.  
   
-- **ValueÂ Â Â** der Wert des zugeordneten Objekts.  
+- **Wert** den Wert des zugeordneten Objekts.  
   
- Es wird verwendet, um die Rückgabewerte zu speichern [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc), und [CMap::PGetNextAssoc](#pgetnextassoc).  
+ Es wird verwendet, um die Rückgabewerte aus speichern [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc), und [CMap::PGetNextAssoc](#pgetnextassoc).  
   
 ### <a name="example"></a>Beispiel  
- Ein Beispiel für die Verwendung, finden Sie im Beispiel für [CMap::PLookup](#plookup).  
+ Ein Beispiel der Verwendung finden Sie im Beispiel für [CMap::PLookup](#plookup).  
   
-##  <a name="a-namegetcounta--cmapgetcount"></a><a name="getcount"></a>CMap::GetCount  
+##  <a name="getcount"></a>CMap::GetCount  
  Ruft die Anzahl der Elemente in der Zuordnung ab.  
   
 ```  
@@ -172,8 +189,8 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMap::Lookup](#lookup).  
   
-##  <a name="a-namegethashtablesizea--cmapgethashtablesize"></a><a name="gethashtablesize"></a>CMap::GetHashTableSize  
- Bestimmt die Anzahl der Elemente in der Hashtabelle für die Karte.  
+##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
+ Bestimmt die Anzahl der Elemente in der Hashtabelle für die Karte an.  
   
 ```  
 UINT GetHashTableSize() const;  
@@ -183,10 +200,10 @@ UINT GetHashTableSize() const;
  Die Anzahl der Elemente in der Hashtabelle.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCCollections&#57;](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
+ [!code-cpp[NVC_MFCCollections #57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="a-namegetnextassoca--cmapgetnextassoc"></a><a name="getnextassoc"></a>CMap::GetNextAssoc  
- Ruft das Map-Element in `rNextPosition`, dann werden die `rNextPosition` zum Verweisen auf das nächste Element in der Zuordnung.  
+##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
+ Ruft das kartenelement auf `rNextPosition`, aktualisiert dann `rNextPosition` zum Verweisen auf das nächste Element in der Zuordnung.  
   
 ```  
 void GetNextAssoc(
@@ -200,26 +217,26 @@ void GetNextAssoc(
  Gibt einen Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetNextAssoc` oder `GetStartPosition` aufrufen.  
   
  *SCHLÜSSEL*  
- Der Vorlagenparameter, der den Schlüssel der Zuordnung angibt.  
+ Vorlagenparameter, den Typ des Schlüssels der Zuordnung angibt.  
   
  `rKey`  
- Gibt den zurückgegebenen Schlüssel des Elements abgerufen.  
+ Gibt an, der zurückgegebene Schlüssel des Elements abgerufen.  
   
  *WERT*  
- Der Vorlagenparameter, der den Wert der Zuordnung angibt.  
+ Der Vorlagenparameter, den Typ des Werts der Zuordnung angibt.  
   
  `rValue`  
- Gibt den zurückgegebenen Wert des Elements abgerufen.  
+ Gibt den zurückgegebenen Wert des abgerufenen Elements.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion ist besonders hilfreich für die Iteration durch alle Elemente in der Zuordnung. Beachten Sie, dass die Sequenz Position nicht unbedingt die Sequenz von Schlüssel-Wert identisch ist.  
+ Diese Funktion ist besonders hilfreich für die Iteration durch alle Elemente in der Zuordnung. Beachten Sie, dass die Sequenz Position nicht notwendigerweise die Sequenz von Schlüssel-Wert identisch ist.  
   
- Wenn das abgerufene Element das letzte Element in der Zuordnung und dann der neue Wert der `rNextPosition` Wert **NULL**.  
+ Wenn das abgerufene Element das letzte Element in der Zuordnung klicken Sie dann der neue Wert des `rNextPosition` festgelegt ist, um **NULL**.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMap::SetAt](#setat).  
   
-##  <a name="a-namegetsizea--cmapgetsize"></a><a name="getsize"></a>CMap::GetSize  
+##  <a name="getsize"></a>CMap::GetSize  
  Gibt die Anzahl der Elemente zurück.  
   
 ```  
@@ -230,48 +247,48 @@ INT_PTR GetSize() const;
  Die Anzahl der Elemente in der Zuordnung.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um die Anzahl der Elemente in der Zuordnung ab.  
+ Rufen Sie diese Methode zum Abrufen der Anzahl von Elementen in der Zuordnung.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCCollections&#58;](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
+ [!code-cpp[NVC_MFCCollections #58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cmapgetstartposition"></a><a name="getstartposition"></a>CMap::GetStartPosition  
- Startet eine Zuordnung Iteration durch die Rückgabe einer **POSITION** -Wert, der an übergeben werden kann ein `GetNextAssoc` aufrufen.  
+##  <a name="getstartposition"></a>CMap::GetStartPosition  
+ Startet eine Iteration Zuordnung wird durch Zurückgeben einer **POSITION** -Wert, der übergeben werden kann eine `GetNextAssoc` aufrufen.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **POSITION** Wert an der Position des ersten Durchlaufen der Karte; oder **NULL** , wenn die Zuordnung leer ist.  
+ Ein **POSITION** Wert, der eine Startposition für die Karte; durchlaufen angibt oder **NULL** , wenn die Zuordnung leer ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Reihenfolge der Iteration ist nicht vorhersagbar. "erste Element in der Zuordnung" hat daher keine besondere Bedeutung.  
+ Die Sequenz Iteration ist nicht vorhersagbar; Daher muss der "ersten Element in der Zuordnung" keine andere besonderen Bedeutung.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMap::SetAt](#setat).  
   
-##  <a name="a-nameinithashtablea--cmapinithashtable"></a><a name="inithashtable"></a>CMap::InitHashTable  
- Initialisiert die Hash-Tabelle.  
+##  <a name="inithashtable"></a>CMap::InitHashTable  
+ Initialisiert die Hashtabelle.  
   
 ```  
-void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUEÂ);  
+void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);  
 ```  
   
 ### <a name="parameters"></a>Parameter  
  `hashSize`  
- Anzahl der Einträge in der Hashtabelle.  
+ Anzahl von Einträgen in der Hashtabelle.  
   
  `bAllocNow`  
- Wenn **TRUE**, ordnet die Hashtabelle, bei der Initialisierung; andernfalls wird die Tabelle zugeordnet, wenn benötigt.  
+ Wenn **"true"**, ordnet Sie die Hashtabelle, bei der Initialisierung; andernfalls wird die Tabelle zugeordnet, wenn erforderlich.  
   
 ### <a name="remarks"></a>Hinweise  
- Für eine optimale Leistung sollte die Größe des Hash-Tabelle eine Primzahl. Um Konflikte zu minimieren, sollte die Größe ungefähr 20 Prozent größer als der größte erwartete DataSet.  
+ Für optimale Leistung sollte die Hashtabellengröße eine Primzahl. Um Konflikte zu minimieren, sollten die Größe ungefähr 20 Prozent, die größer als das größte erwartete Dataset entsprechen.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMap::Lookup](#lookup).  
   
-##  <a name="a-nameisemptya--cmapisempty"></a><a name="isempty"></a>CMap::IsEmpty  
+##  <a name="isempty"></a>CMap::IsEmpty  
  Bestimmt, ob die Zuordnung leer ist.  
   
 ```  
@@ -284,8 +301,8 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMap::RemoveAll](#removeall).  
   
-##  <a name="a-namelookupa--cmaplookup"></a><a name="lookup"></a>CMap::Lookup  
- Sucht nach einem bestimmten Schlüssel zugeordnete Wert.  
+##  <a name="lookup"></a>CMap::Lookup  
+ Sucht einen bestimmten Schlüssel zugeordnete Wert.  
   
 ```  
 BOOL Lookup(ARG_KEY key, VALUE& rValue) const;  
@@ -299,7 +316,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
  Gibt den Schlüssel, der identifiziert das Element gesucht werden soll.  
   
  *WERT*  
- Gibt den Typ des Werts, der gesucht werden sollen.  
+ Gibt den Typ des Werts gesucht werden soll.  
   
  `rValue`  
  Empfängt der gebundene Wert.  
@@ -308,13 +325,13 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
  Wert ungleich NULL, wenn das Element gefunden wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- `Lookup`verwendet einen Hashalgorithmus schnell das Map-Element mit einem Schlüssel finden, die mit den angegebenen Schlüssel übereinstimmt.  
+ `Lookup`verwendet einen Hashalgorithmus auf um das kartenelement schnell mit einem Schlüssel zu suchen, die genau mit den angegebenen Schlüssel übereinstimmt.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCCollections&#58;](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
+ [!code-cpp[NVC_MFCCollections #58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="a-nameoperatorata--cmapoperator--"></a><a name="operator_at"></a>CMap::operator]  
- Praktische Ersatz für die `SetAt` -Memberfunktion.  
+##  <a name="operator_at"></a>CMap::operator]  
+ Praktische Ersatz für die `SetAt` Memberfunktion.  
   
 ```  
 VALUE& operator[](arg_key key);
@@ -322,40 +339,41 @@ VALUE& operator[](arg_key key);
   
 ### <a name="parameters"></a>Parameter  
  *WERT*  
- Der Vorlagenparameter, die den Typ des Werts zuordnen.  
+ Angeben des Datentyps für den Zuordnungswert Vorlagenparameter.  
   
  `ARG_KEY`  
- Der Vorlagenparameter, der den Wert des Schlüssels angibt.  
+ Der Vorlagenparameter, der Typ des Schlüsselwerts angibt.  
   
  `key`  
- Der Schlüssel zum Abrufen des Werts aus der Zuordnung verwendet wird.  
+ Der Schlüssel, der zum Abrufen des Werts aus der Zuordnung verwendet wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Daher kann es nur auf der linken Seite einer zuweisungsanweisung (ein l-Wert) verwendet werden. Wenn kein Map-Element mit dem angegebenen Schlüssel vorhanden ist, wird ein neues Element erstellt.  
+ Daher kann er nur auf der linken Seite einer zuweisungsanweisung (ein l-Wert) verwendet werden. Wenn kein Map-Element mit dem angegebenen Schlüssel vorhanden ist, wird ein neues Element erstellt.  
   
- Es gibt keine "rechts" (r) dieser Operator entspricht, da es besteht die Möglichkeit, die ein Schlüssel nicht in der Zuordnung gefunden werden kann. Verwenden der `Lookup` Member-Funktion für das Element abrufen.  
+ Es gibt keine "rechts" (r), die dieser Operator entspricht, da es besteht die Möglichkeit, die ein Schlüssel in der Zuordnung nicht gefunden werden kann. Verwenden der `Lookup` Member-Funktion für den Abruf von Listenelementen.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMap::Lookup](#lookup).  
   
-##  <a name="a-namepgetfirstassoca--cmappgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
  Gibt den ersten Eintrag der Map-Objekt zurück.  
   
 ```  
-const CPair* PGetFirstAssoc() const;Â CPair* PGetFirstAssoc();  
+const CPair* PGetFirstAssoc() const; 
+CPair* PGetFirstAssoc();  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den ersten Eintrag in der Karte; finden Sie unter [CMap::CPair](#cpair). Wenn die Zuordnung keine Einträge enthält, ist der Wert **NULL**.  
+ Ein Zeiger auf den ersten Eintrag in der Karte; finden Sie unter [CMap::CPair](#cpair). Wenn die Zuordnung wurden keine Einträge enthält, ist der Wert **NULL**.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Funktion, um einen Zeiger das erste Element in der Map-Objekt zurückgeben.  
+ Rufen Sie diese Funktion, um einen Zeiger das erste Element in der Map-Objekt zurückzugeben.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCCollections&#59;](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
+ [!code-cpp[NVC_MFCCollections #59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="a-namepgetnextassoca--cmappgetnextassoc"></a><a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
- Ruft das Map-Element, das auf den `pAssocRec`.  
+##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
+ Ruft das kartenelement verweist `pAssocRec`.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -371,95 +389,96 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
  Ein Zeiger auf den nächsten Eintrag in der Karte; finden Sie unter [CMap::CPair](#cpair). Wenn das Element das letzte Element in der Zuordnung ist, ist der Wert **NULL**.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode zum Durchlaufen aller Elemente in der Zuordnung. Das erste Element mit einem Aufruf abgerufen `PGetFirstAssoc` und durchlaufen Sie dann auf die Karte mit aufeinander folgenden Aufrufen von `PGetNextAssoc`.  
+ Rufen Sie diese Methode zum iterieren durch alle Elemente in der Zuordnung. Rufen Sie das erste Element mit einem Aufruf von `PGetFirstAssoc` und durchlaufen Sie dann auf der Karte mit aufeinander folgenden Aufrufen `PGetNextAssoc`.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CMap::PGetFirstAssoc](#pgetfirstassoc).  
   
-##  <a name="a-nameplookupa--cmapplookup"></a><a name="plookup"></a>CMap::PLookup  
- Sucht nach einem bestimmten Schlüssel zugeordnete Wert.  
+##  <a name="plookup"></a>CMap::PLookup  
+ Sucht den Wert, der einen angegebenen Schlüssel zugeordnet ist.  
   
 ```  
-const CPair* PLookup(ARG_KEY  key) const;
-CPair* PLookup(Â    ARG_KEY  keyÂ);  ```  
+const CPair* PLookup(ARG_KEY key) const;
+CPair* PLookup(ARG_KEY key);  
+```  
   
-### Parameters  
+### <a name="parameters"></a>Parameter  
  `key`  
- Key for the element to be searched for.  
+ Schlüssel für das Element, nach dem gesucht werden.  
   
-### Return Value  
- A pointer to a key structure; see [CMap::CPair](#cpair). If no match is found, `CMap::PLookup` returns `NULL`.  
+### <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf einen Schlüssel Struktur; finden Sie unter [CMap::CPair](#cpair). Wenn keine Übereinstimmung gefunden wird, `CMap::PLookup` gibt `NULL`.  
   
-### Remarks  
- Call this method to search for a map element with a key that exactly matches the given key.  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie diese Methode für ein kartenelement mit einem Schlüssel zu suchen, die genau mit den angegebenen Schlüssel übereinstimmt.  
   
-### Example  
- [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCCollections #60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
-##  <a name="removeall"></a>  CMap::RemoveAll  
- Removes all the values from this map by calling the global helper function **DestructElements**.  
+##  <a name="removeall"></a>CMap::RemoveAll  
+ Entfernt alle Werte aus dieser Zuordnung durch Aufrufen der globalen Hilfsfunktion **DestructElements**.  
   
 ```  
 void RemoveAll();
 ```  
   
-### Remarks  
- The function works correctly if the map is already empty.  
+### <a name="remarks"></a>Hinweise  
+ Die Funktion funktioniert ordnungsgemäß, wenn die Zuordnung bereits leer ist.  
   
-### Example  
- [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCCollections #61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
   
-##  <a name="removekey"></a>  CMap::RemoveKey  
- Looks up the map entry corresponding to the supplied key; then, if the key is found, removes the entry.  
+##  <a name="removekey"></a>CMap::RemoveKey  
+ Sucht nach den Eintrag für die Zuordnung, die den bereitgestellten Schlüssel entspricht; Klicken Sie dann, wenn der Schlüssel gefunden wird, entfernt der Eintrag.  
   
 ```  
 BOOL RemoveKey(ARG_KEY key);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parameter  
  `ARG_KEY`  
- Template parameter specifying the type of the key.  
+ Der Vorlagenparameter, der der Typ des Schlüssels angibt.  
   
  `key`  
- Key for the element to be removed.  
+ Schlüssel für das Element entfernt werden soll.  
   
-### Return Value  
- Nonzero if the entry was found and successfully removed; otherwise 0.  
+### <a name="return-value"></a>Rückgabewert  
+ Wert ungleich NULL, wenn der Eintrag gefunden und erfolgreich entfernt wurde; andernfalls 0.  
   
-### Remarks  
- The **DestructElements** helper function is used to remove the entry.  
+### <a name="remarks"></a>Hinweise  
+ Die **DestructElements** Hilfsfunktion wird verwendet, um den Eintrag zu entfernen.  
   
-### Example  
- See the example for [CMap::SetAt](#setat).  
+### <a name="example"></a>Beispiel  
+ Siehe das Beispiel für [CMap::SetAt](#setat).  
   
-##  <a name="setat"></a>  CMap::SetAt  
- The primary means to insert an element in a map.  
+##  <a name="setat"></a>CMap::SetAt  
+ Das primäre Mittel zum Einfügen eines Elements in einer Zuordnung.  
   
 ```  
-void SetAt (ARG_KEY Schlüssel ARG_VALUE NewValue;)
+void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parameter  
  `ARG_KEY`  
- Template parameter specifying the type of the `key` parameter.  
+ Angabe des Typs der Vorlagenparameter der `key` Parameter.  
   
  `key`  
- Specifies the key of the new element.  
+ Gibt den Schlüssel des neuen Elements.  
   
  `ARG_VALUE`  
- Template parameter specifying the type of the `newValue` parameter.  
+ Angabe des Typs der Vorlagenparameter der `newValue` Parameter.  
   
  `newValue`  
- Specifies the value of the new element.  
+ Gibt den Wert des neuen Elements.  
   
-### Remarks  
- First, the key is looked up. If the key is found, then the corresponding value is changed; otherwise a new key-value pair is created.  
+### <a name="remarks"></a>Hinweise  
+ Zunächst wird der Schlüssel gesucht. Wenn der Schlüssel, gefunden wird und klicken Sie dann der entsprechende Wert geändert wird, Andernfalls wird ein neues Schlüssel-Wert-Paar erstellt.  
   
-### Example  
- [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
+### <a name="example"></a>Beispiel  
+ [!code-cpp[NVC_MFCCollections #62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
   
-## See Also  
- [MFC Sample COLLECT](../../visual-cpp-samples.md)   
- [CObject Class](../../mfc/reference/cobject-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)  
+## <a name="see-also"></a>Siehe auch  
+ [MFC-Beispiel erfassen](../../visual-cpp-samples.md)   
+ [CObject-Klasse](../../mfc/reference/cobject-class.md)   
+ [Hierarchiediagramm](../../mfc/hierarchy-chart.md)  
 

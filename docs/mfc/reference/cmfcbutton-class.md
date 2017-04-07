@@ -10,6 +10,44 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCButton
+- AFXBUTTON/CMFCButton
+- AFXBUTTON/CMFCButton::CleanUp
+- AFXBUTTON/CMFCButton::EnableFullTextTooltip
+- AFXBUTTON/CMFCButton::EnableMenuFont
+- AFXBUTTON/CMFCButton::EnableWindowsTheming
+- AFXBUTTON/CMFCButton::GetToolTipCtrl
+- AFXBUTTON/CMFCButton::IsAutoCheck
+- AFXBUTTON/CMFCButton::IsAutorepeatCommandMode
+- AFXBUTTON/CMFCButton::IsCheckBox
+- AFXBUTTON/CMFCButton::IsChecked
+- AFXBUTTON/CMFCButton::IsHighlighted
+- AFXBUTTON/CMFCButton::IsPressed
+- AFXBUTTON/CMFCButton::IsPushed
+- AFXBUTTON/CMFCButton::IsRadioButton
+- AFXBUTTON/CMFCButton::IsWindowsThemingEnabled
+- AFXBUTTON/CMFCButton::SetAutorepeatMode
+- AFXBUTTON/CMFCButton::SetCheckedImage
+- AFXBUTTON/CMFCButton::SetFaceColor
+- AFXBUTTON/CMFCButton::SetImage
+- AFXBUTTON/CMFCButton::SetMouseCursor
+- AFXBUTTON/CMFCButton::SetMouseCursorHand
+- AFXBUTTON/CMFCButton::SetStdImage
+- AFXBUTTON/CMFCButton::SetTextColor
+- AFXBUTTON/CMFCButton::SetTextHotColor
+- AFXBUTTON/CMFCButton::SetTooltip
+- AFXBUTTON/CMFCButton::SizeToContent
+- AFXBUTTON/CMFCButton::OnDraw
+- AFXBUTTON/CMFCButton::OnDrawBorder
+- AFXBUTTON/CMFCButton::OnDrawFocusRect
+- AFXBUTTON/CMFCButton::OnDrawText
+- AFXBUTTON/CMFCButton::OnFillBackground
+- AFXBUTTON/CMFCButton::SelectFont
+- AFXBUTTON/CMFCButton::m_bDrawFocus
+- AFXBUTTON/CMFCButton::m_bHighlightChecked
+- AFXBUTTON/CMFCButton::m_bRightImage
+- AFXBUTTON/CMFCButton::m_bTransparent
+- AFXBUTTON/CMFCButton::m_nAlignStyle
+- AFXBUTTON/CMFCButton::m_nFlatStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -150,14 +188,14 @@ class CMFCButton : public CButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxbutton.h  
   
-##  <a name="a-namecleanupa--cmfcbuttoncleanup"></a><a name="cleanup"></a>CMFCButton::CleanUp  
+##  <a name="cleanup"></a>CMFCButton::CleanUp  
  Setzt die internen Variablen zurück und frei von zugeordneten Ressourcen wie Bilder, Bitmaps und Symbole.  
   
 ```  
 virtual void CleanUp();
 ```  
   
-##  <a name="a-nameenablefulltexttooltipa--cmfcbuttonenablefulltexttooltip"></a><a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
+##  <a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
  Gibt an, ob den vollständigen Text der QuickInfo in einem großen QuickInfo-Fenster oder eine abgeschnittene Version des Texts in einem kleinen QuickInfo-Fenster angezeigt.  
   
 ```  
@@ -170,7 +208,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameenablemenufonta--cmfcbuttonenablemenufont"></a><a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
+##  <a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
  Gibt an, ob die Schaltfläche Schriftart die Schriftart der Anwendung im Menü identisch ist.  
   
 ```  
@@ -189,7 +227,7 @@ void EnableMenuFont(
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie diese Methode an, dass die Schaltfläche Schriftart nicht verwenden, können Sie angeben, dass die Schriftart mit der [CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont) Methode. Wenn Sie eine Schriftart nicht auf allen angeben, legt das Framework eine Standardschriftart fest.  
   
-##  <a name="a-nameenablewindowstheminga--cmfcbuttonenablewindowstheming"></a><a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
+##  <a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
  Gibt an, ob die Schaltfläche Rahmenart für das aktuelle Windows-Design entspricht.  
   
 ```  
@@ -203,7 +241,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wirkt sich auf alle Schaltflächen in der Anwendung, die von abgeleitet sind die `CMFCButton` Klasse.  
   
-##  <a name="a-namegettooltipctrla--cmfcbuttongettooltipctrl"></a><a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
+##  <a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
  Gibt einen Verweis auf das zugrunde liegende QuickInfo-Steuerelement zurück.  
   
 ```  
@@ -215,7 +253,7 @@ CToolTipCtrl& GetToolTipCtrl();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisautochecka--cmfcbuttonisautocheck"></a><a name="isautocheck"></a>CMFCButton::IsAutoCheck  
+##  <a name="isautocheck"></a>CMFCButton::IsAutoCheck  
  Gibt an, ob ein Kontrollkästchen oder ein Optionsfeld eine automatische Schaltfläche ist.  
   
 ```  
@@ -227,7 +265,7 @@ BOOL IsAutoCheck() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisautorepeatcommandmodea--cmfcbuttonisautorepeatcommandmode"></a><a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
+##  <a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
  Gibt an, ob eine Schaltfläche auf Automatisches Wiederholen-Modus festgelegt ist.  
   
 ```  
@@ -240,7 +278,7 @@ BOOL IsAutorepeatCommandMode() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [CMFCButton::SetAutorepeatMode](#setautorepeatmode) Methode, um eine Schaltfläche auf Automatisches Wiederholen-Modus festgelegt.  
   
-##  <a name="a-nameischeckboxa--cmfcbuttonischeckbox"></a><a name="ischeckbox"></a>CMFCButton::IsCheckBox  
+##  <a name="ischeckbox"></a>CMFCButton::IsCheckBox  
  Gibt an, ob eine Schaltfläche ein Kontrollkästchen-Schaltfläche ist.  
   
 ```  
@@ -252,7 +290,7 @@ BOOL IsCheckBox() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameischeckeda--cmfcbuttonischecked"></a><a name="ischecked"></a>CMFCButton::IsChecked  
+##  <a name="ischecked"></a>CMFCButton::IsChecked  
  Gibt an, ob die aktuelle Schaltfläche aktiviert ist.  
   
 ```  
@@ -265,7 +303,7 @@ BOOL IsChecked() const;
 ### <a name="remarks"></a>Hinweise  
  Das Framework verwendet verschiedene Arten, um anzugeben, dass verschiedene Arten von Schaltflächen aktiviert sind. Z. B. ist ein Optionsfeld aktiviert, wenn es einen Punkt enthält. ein Kontrollkästchen aktiviert ist, wenn es enthält ein **X**.  
   
-##  <a name="a-nameishighlighteda--cmfcbuttonishighlighted"></a><a name="ishighlighted"></a>CMFCButton::IsHighlighted  
+##  <a name="ishighlighted"></a>CMFCButton::IsHighlighted  
  Gibt an, ob eine Schaltfläche hervorgehoben wird.  
   
 ```  
@@ -278,7 +316,7 @@ BOOL IsHighlighted() const;
 ### <a name="remarks"></a>Hinweise  
  Eine Schaltfläche wird hervorgehoben, wenn die Maus über die Schaltfläche bewegt wird.  
   
-##  <a name="a-nameispresseda--cmfcbuttonispressed"></a><a name="ispressed"></a>CMFCButton::IsPressed  
+##  <a name="ispressed"></a>CMFCButton::IsPressed  
  Gibt an, ob eine Schaltfläche gedrückt und hervorgehoben wird.  
   
 ```  
@@ -290,7 +328,7 @@ BOOL IsPressed() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameispusheda--cmfcbuttonispushed"></a><a name="ispushed"></a>CMFCButton::IsPushed  
+##  <a name="ispushed"></a>CMFCButton::IsPushed  
  Gibt an, ob eine Schaltfläche gedrückt ist.  
   
 ```  
@@ -302,7 +340,7 @@ BOOL IsPushed() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisradiobuttona--cmfcbuttonisradiobutton"></a><a name="isradiobutton"></a>CMFCButton::IsRadioButton  
+##  <a name="isradiobutton"></a>CMFCButton::IsRadioButton  
  Gibt an, ob eine Schaltfläche ein Optionsfeld ist.  
   
 ```  
@@ -314,7 +352,7 @@ BOOL IsRadioButton() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameiswindowsthemingenableda--cmfcbuttoniswindowsthemingenabled"></a><a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
+##  <a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
  Gibt an, ob die Schaltfläche Rahmenart für das aktuelle Windows-Design entspricht.  
   
 ```  
@@ -324,7 +362,7 @@ static BOOL IsWindowsThemingEnabled();
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn die Schaltfläche Rahmenart für das aktuelle Windows-Design entspricht. andernfalls `FALSE`.  
   
-##  <a name="a-namembdrawfocusa--cmfcbuttonmbdrawfocus"></a><a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
+##  <a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
  Gibt an, ob ein Fokusrechteck um eine Schaltfläche zu zeichnen.  
   
 ```  
@@ -336,7 +374,7 @@ BOOL m_bDrawFocus;
   
  Die `CMFCButton` Konstruktor initialisiert das Mitglied `TRUE`.  
   
-##  <a name="a-namembhighlightcheckeda--cmfcbuttonmbhighlightchecked"></a><a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
+##  <a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
  Gibt an, ob eine BS_CHECKBOX-Schaltfläche markieren, wenn der Cursor darüber bewegt wird.  
   
 ```  
@@ -346,7 +384,7 @@ BOOL m_bHighlightChecked;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie die `m_bHighlightChecked` Element `TRUE` angeben, dass das Framework eine BS_CHECKBOX-Schaltfläche hervorgehoben wird, wenn die Maus darüber bewegt wird.  
   
-##  <a name="a-namembrightimagea--cmfcbuttonmbrightimage"></a><a name="m_brightimage"></a>CMFCButton::m_bRightImage  
+##  <a name="m_brightimage"></a>CMFCButton::m_bRightImage  
  Gibt an, ob ein Bild auf der rechten Seite der Schaltfläche angezeigt werden soll.  
   
 ```  
@@ -356,7 +394,7 @@ BOOL m_bRightImage;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie die `m_bRightImage` Element `TRUE` angeben, dass das Framework das Bild der Schaltfläche rechts neben der Schaltfläche die Bezeichnung angezeigt wird.  
   
-##  <a name="a-namembtransparenta--cmfcbuttonmbtransparent"></a><a name="m_btransparent"></a>CMFCButton::m_bTransparent  
+##  <a name="m_btransparent"></a>CMFCButton::m_bTransparent  
  Gibt an, ob die Schaltfläche transparent ist.  
   
 ```  
@@ -366,7 +404,7 @@ BOOL m_bTransparent;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie die `m_bTransparent` Element `TRUE` angeben, dass das Framework die Schaltfläche transparent machen. Die `CMFCButton` Konstruktor initialisiert das Mitglied `FALSE`.  
   
-##  <a name="a-namemnalignstylea--cmfcbuttonmnalignstyle"></a><a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
+##  <a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
  Gibt die Ausrichtung des Schaltflächentexts.  
   
 ```  
@@ -384,7 +422,7 @@ AlignStyle m_nAlignStyle;
   
  Die `CMFCButton` -Konstruktor initialisiert das Mitglied ALIGN_CENTER.  
   
-##  <a name="a-namemnflatstylea--cmfcbuttonmnflatstyle"></a><a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
+##  <a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
  Gibt den Stil der Schaltfläche, z. B. randlose, Flatfiles, Semikolons flach oder 3D.  
   
 ```  
@@ -409,7 +447,7 @@ FlatStyle  m_nFlatStyle;
  [!code-cpp[NVC_MFC_NewControls&#28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls&#29;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]  
   
-##  <a name="a-nameondrawa--cmfcbuttonondraw"></a><a name="ondraw"></a>CMFCButton::OnDraw  
+##  <a name="ondraw"></a>CMFCButton::OnDraw  
  Aufgerufen, um eine Schaltfläche zu zeichnen.  
   
 ```  
@@ -432,7 +470,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Ihren eigenen Code verwenden, um eine Schaltfläche zu zeichnen.  
   
-##  <a name="a-nameondrawbordera--cmfcbuttonondrawborder"></a><a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
  Vom Framework zum Zeichnen des Rahmens einer Schaltfläche aufgerufen wird.  
   
 ```  
@@ -455,7 +493,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Ihren eigenen Code zum Zeichnen des Rahmens.  
   
-##  <a name="a-nameondrawfocusrecta--cmfcbuttonondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
  Vom Framework zum Zeichnen des Fokusrechtecks für eine Schaltfläche aufgerufen wird.  
   
 ```  
@@ -474,7 +512,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Ihren eigenen Code zum Zeichnen des Fokusrechtecks verwenden.  
   
-##  <a name="a-nameondrawtexta--cmfcbuttonondrawtext"></a><a name="ondrawtext"></a>CMFCButton::OnDrawText  
+##  <a name="ondrawtext"></a>CMFCButton::OnDrawText  
  Aufgerufen, um den Text der Schaltfläche gezeichnet werden soll.  
   
 ```  
@@ -505,7 +543,7 @@ virtual void OnDrawText(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Ihren eigenen Code verwenden, um den Text der Schaltfläche gezeichnet werden soll.  
   
-##  <a name="a-nameonfillbackgrounda--cmfcbuttononfillbackground"></a><a name="onfillbackground"></a>CMFCButton::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCButton::OnFillBackground  
  Vom Framework zum Zeichnen des Hintergrunds des Schaltflächentexts aufgerufen.  
   
 ```  
@@ -524,7 +562,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um Ihren eigenen Code verwenden, um den Hintergrund einer Schaltfläche zu zeichnen.  
   
-##  <a name="a-nameselectfonta--cmfcbuttonselectfont"></a><a name="selectfont"></a>CMFCButton::SelectFont  
+##  <a name="selectfont"></a>CMFCButton::SelectFont  
  Ruft die Schriftart, die den angegebenen Gerätekontext zugeordnet ist.  
   
 ```  
@@ -540,7 +578,7 @@ virtual CFont* SelectFont(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetautorepeatmodea--cmfcbuttonsetautorepeatmode"></a><a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
+##  <a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
  Wird eine Schaltfläche auf Automatisches Wiederholen.  
   
 ```  
@@ -554,7 +592,7 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode bewirkt, dass die Schaltfläche WM_COMMAND-Meldungen an das übergeordnete Fenster ständig senden, bis die Maustaste losgelassen wird, oder der `nTimeDelay` -Parameter auf&0; (null) festgelegt ist.  
   
-##  <a name="a-namesetcheckedimagea--cmfcbuttonsetcheckedimage"></a><a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
+##  <a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
  Legt das Bild für die aktivierte Schaltfläche fest.  
   
 ```  
@@ -619,7 +657,7 @@ void SetCheckedImage(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetfacecolora--cmfcbuttonsetfacecolor"></a><a name="setfacecolor"></a>CMFCButton::SetFaceColor  
+##  <a name="setfacecolor"></a>CMFCButton::SetFaceColor  
  Legt die Hintergrundfarbe für den Text der Schaltfläche fest.  
   
 ```  
@@ -638,7 +676,7 @@ void SetFaceColor(
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um eine neue Farbe des Hintergrunds der Schaltfläche (Schrift) definieren. Beachten Sie, dass der Hintergrund nicht gefüllt, wenn die [CMFCButton::m_bTransparent](#m_btransparent) Membervariable ist `TRUE`.  
   
-##  <a name="a-namesetimagea--cmfcbuttonsetimage"></a><a name="setimage"></a>CMFCButton::SetImage  
+##  <a name="setimage"></a>CMFCButton::SetImage  
  Legt das Bild für die Schaltfläche fest.  
   
 ```  
@@ -709,7 +747,7 @@ void SetImage(
  [!code-cpp[NVC_MFC_NewControls&#28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls&#31;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]  
   
-##  <a name="a-namesetmousecursora--cmfcbuttonsetmousecursor"></a><a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
+##  <a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
  Legt den Cursorbild.  
   
 ```  
@@ -729,7 +767,7 @@ void SetMouseCursor(HCURSOR hcursor);
  [!code-cpp[NVC_MFC_NewControls&#28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls&#30;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]  
   
-##  <a name="a-namesetmousecursorhanda--cmfcbuttonsetmousecursorhand"></a><a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
+##  <a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
  Setzt den Cursor auf das Bild einer Hand.  
   
 ```  
@@ -739,7 +777,7 @@ void SetMouseCursorHand();
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um die Cursorbild einer Hand mit der Schaltfläche zuzuordnen. Der Cursor wird aus den Anwendungsressourcen geladen.  
   
-##  <a name="a-namesetstdimagea--cmfcbuttonsetstdimage"></a><a name="setstdimage"></a>CMFCButton::SetStdImage  
+##  <a name="setstdimage"></a>CMFCButton::SetStdImage  
  Verwendet ein `CMenuImages` Objekt, das das Bild der Schaltfläche festgelegt.  
   
 ```  
@@ -761,7 +799,7 @@ void SetStdImage(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesettextcolora--cmfcbuttonsettextcolor"></a><a name="settextcolor"></a>CMFCButton::SetTextColor  
+##  <a name="settextcolor"></a>CMFCButton::SetTextColor  
  Legt die Farbe des Schaltflächentexts für eine Schaltfläche, die nicht ausgewählt ist.  
   
 ```  
@@ -774,7 +812,7 @@ void SetTextColor(COLORREF clrText);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesettexthotcolora--cmfcbuttonsettexthotcolor"></a><a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
+##  <a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
  Legt die Farbe des Schaltflächentexts für eine Schaltfläche, die ausgewählt wird.  
   
 ```  
@@ -787,7 +825,7 @@ void SetTextHotColor(COLORREF clrTextHot);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesettooltipa--cmfcbuttonsettooltip"></a><a name="settooltip"></a>CMFCButton::SetTooltip  
+##  <a name="settooltip"></a>CMFCButton::SetTooltip  
  Eine Schaltfläche eine QuickInfo zugeordnet.  
   
 ```  
@@ -800,7 +838,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesizetocontenta--cmfcbuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCButton::SizeToContent  
  Ändert die Größe einer Schaltfläche, um die Schaltflächentext und Bild enthalten.  
   
 ```  

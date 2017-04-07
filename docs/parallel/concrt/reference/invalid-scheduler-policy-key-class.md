@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_scheduler_policy_key
+- invalid_scheduler_policy_key
+- CONCRT/concurrency::invalid_scheduler_policy_key
+- CONCRT/concurrency::invalid_scheduler_policy_key::invalid_scheduler_policy_key
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ba23cb216581862ed110cace9b7fff9024df6899
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: bc16ee5aceb8c81c7c745cf535a4cefb5d3b827e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key-Klasse
@@ -54,7 +56,7 @@ class invalid_scheduler_policy_key : public std::exception;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Invalid_scheduler_policy_key-Konstruktor](#ctor)|Überladen. Erstellt ein `invalid_scheduler_policy_key`-Objekt.|  
+|[invalid_scheduler_policy_key](#ctor)|Überladen. Erstellt ein `invalid_scheduler_policy_key`-Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `exception`  
@@ -66,7 +68,7 @@ class invalid_scheduler_policy_key : public std::exception;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namectora-invalidschedulerpolicykey"></a><a name="ctor"></a>invalid_scheduler_policy_key 
+##  <a name="ctor"></a>invalid_scheduler_policy_key 
 
  Erstellt ein `invalid_scheduler_policy_key`-Objekt.  
   

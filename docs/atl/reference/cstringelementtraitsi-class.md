@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CStringElementTraitsI
 - CStringElementTraitsI
-- ATL.CStringElementTraitsI
+- ATLCOLL/ATL::CStringElementTraitsI
+- ATLCOLL/ATL::CStringElementTraitsI::INARGTYPE
+- ATLCOLL/ATL::CStringElementTraitsI::OUTARGTYPE
+- ATLCOLL/ATL::CStringElementTraitsI::CompareElements
+- ATLCOLL/ATL::CStringElementTraitsI::CompareElementsOrdered
+- ATLCOLL/ATL::CStringElementTraitsI::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cstringelementtraitsicompareelements"></a><a name="compareelements"></a>CStringElementTraitsI::CompareElements  
+##  <a name="compareelements"></a>CStringElementTraitsI::CompareElements  
  Rufen Sie die statische Funktion zum Vergleichen von zwei Zeichenfolgenelemente Gleichheit Unterschiede im Fall ignoriert.  
   
 ```
@@ -105,7 +109,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Hinweise  
  Vergleiche werden Groß-und Kleinschreibung beachtet.  
   
-##  <a name="a-namecompareelementsordereda--cstringelementtraitsicompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
  Rufen Sie die statische Funktion zum Vergleichen von zwei String-Elemente, die Unterschiede im Fall ignoriert.  
   
 ```
@@ -126,7 +130,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Hinweise  
  Vergleiche werden Groß-und Kleinschreibung beachtet.  
   
-##  <a name="a-namehasha--cstringelementtraitsihash"></a><a name="hash"></a>CStringElementTraitsI::Hash  
+##  <a name="hash"></a>CStringElementTraitsI::Hash  
  Rufen Sie diese statischen Funktion um einen Hashwert für das Element der angegebenen Zeichenfolge zu berechnen.  
   
 ```
@@ -140,14 +144,14 @@ static ULONG Hash(INARGTYPE str) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Hashwert berechnet wird, verwenden den Inhalt der Zeichenfolge zurück.  
   
-##  <a name="a-nameinargtypea--cstringelementtraitsiinargtype"></a><a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
+##  <a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
  Der Datentyp für das Klassenobjekt Auflistung Elemente hinzugefügt.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cstringelementtraitsioutargtype"></a><a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
+##  <a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
  Der Datentyp für das Abrufen von Elementen aus der-Auflistung-Klasse.  
   
 ```

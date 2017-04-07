@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl::CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl::Create
+- AFXCMN/CHotKeyCtrl::CreateEx
+- AFXCMN/CHotKeyCtrl::GetHotKey
+- AFXCMN/CHotKeyCtrl::GetHotKeyName
+- AFXCMN/CHotKeyCtrl::GetKeyName
+- AFXCMN/CHotKeyCtrl::SetHotKey
+- AFXCMN/CHotKeyCtrl::SetRules
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +102,14 @@ class CHotKeyCtrl : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcmn.h  
   
-##  <a name="a-namechotkeyctrla--chotkeyctrlchotkeyctrl"></a><a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
+##  <a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
  Erstellt ein `CHotKeyCtrl`-Objekt.  
   
 ```  
 CHotKeyCtrl();
 ```  
   
-##  <a name="a-namecreatea--chotkeyctrlcreate"></a><a name="create"></a>CHotKeyCtrl::Create  
+##  <a name="create"></a>CHotKeyCtrl::Create  
  Erstellt ein und fügt es ein `CHotKeyCtrl` Objekt.  
   
 ```  
@@ -132,7 +141,7 @@ virtual BOOL Create(
   
  Wenn Sie erweiterte Fensterstile mit dem Steuerelement verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von **erstellen**.  
   
-##  <a name="a-namecreateexa--chotkeyctrlcreateex"></a><a name="createex"></a>CHotKeyCtrl::CreateEx  
+##  <a name="createex"></a>CHotKeyCtrl::CreateEx  
  Rufen Sie diese Funktion zum Erstellen eines Steuerelements (ein untergeordnetes Fenster), und ordnen sie die `CHotKeyCtrl` Objekt.  
   
 ```  
@@ -166,7 +175,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Hinweise  
  Verwendung `CreateEx` anstelle von [erstellen](#create) erweiterten Fensterstile, angegeben durch den Wert der Windows-erweiterten Stil anwenden **WS_EX_**.  
   
-##  <a name="a-namegethotkeya--chotkeyctrlgethotkey"></a><a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
+##  <a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
  Ruft die virtuellen Schlüssel und Modifiziererflags Flags eine Tastenkombination aus eines Abkürzungstasten-Steuerelements ab.  
   
 ```  
@@ -199,7 +208,7 @@ void GetHotKey(
 ### <a name="remarks"></a>Hinweise  
  Definieren die Tastenkombination virtueller Tastencode und der Zusatztasten zusammen.  
   
-##  <a name="a-namegethotkeynamea--chotkeyctrlgethotkeyname"></a><a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
+##  <a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
  Rufen Sie diese Memberfunktion um den lokalisierten Namen des Tastenkombination zu erhalten.  
   
 ```  
@@ -212,7 +221,7 @@ CString GetHotKeyName() const;
 ### <a name="remarks"></a>Hinweise  
  Der Name, der diese Memberfunktion gibt stammt aus der Tastaturtreiber. Sie können einen Tastaturtreiber nicht lokalisierten in einer lokalisierten Version von Windows installieren und umgekehrt.  
   
-##  <a name="a-namegetkeynamea--chotkeyctrlgetkeyname"></a><a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
+##  <a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
  Rufen Sie diese Memberfunktion zum Abrufen der lokalisierte Name des Schlüssels auf einem angegebenen virtuellen Tastencode zugewiesen.  
   
 ```  
@@ -237,7 +246,7 @@ static CString GetKeyName(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog&#69;](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
-##  <a name="a-namesethotkeya--chotkeyctrlsethotkey"></a><a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
+##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
  Legt die Tastenkombination für einen Abkürzungstasten-Steuerelements fest.  
   
 ```  
@@ -265,7 +274,7 @@ void SetHotKey(
 ### <a name="remarks"></a>Hinweise  
  Definieren die Tastenkombination virtueller Tastencode und der Zusatztasten zusammen.  
   
-##  <a name="a-namesetrulesa--chotkeyctrlsetrules"></a><a name="setrules"></a>CHotKeyCtrl::SetRules  
+##  <a name="setrules"></a>CHotKeyCtrl::SetRules  
  Rufen Sie diese Funktion, um die ungültigen Kombinationen und die Modifizierer Standardkombination für eine Zugriffstaste zu definieren.  
   
 ```  

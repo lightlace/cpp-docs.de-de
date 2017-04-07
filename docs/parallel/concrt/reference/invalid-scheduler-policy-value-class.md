@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ff5b07b62923a289da1b47de08b527da212e4a2d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 85396192c7384cbe7379b675f4a38e5deb322235
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidschedulerpolicyvalue-class"></a>invalid_scheduler_policy_value-Klasse
@@ -54,7 +54,7 @@ class invalid_scheduler_policy_value : public std::exception;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Invalid_scheduler_policy_value-Konstruktor] (invalid-scheduler-policy-thread-specification-class.md#ctor|Überladen. Erstellt ein `invalid_scheduler_policy_value`-Objekt.|  
+|[Invalid_scheduler_policy_value] (invalid-scheduler-policy-thread-specification-class.md#ctor|Überladen. Erstellt ein `invalid_scheduler_policy_value`-Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `exception`  
@@ -67,7 +67,7 @@ class invalid_scheduler_policy_value : public std::exception;
  **Namespace:** Parallelität  
   
     
-##  <a name="a-namectora-invalidschedulerpolicyvalue"></a><a name="ctor"></a>invalid_scheduler_policy_value 
+##  <a name="ctor"></a>invalid_scheduler_policy_value 
 
  Erstellt ein `invalid_scheduler_policy_value`-Objekt.  
   

@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComUnkArray
-- ATL.CComUnkArray<nMaxSize>
-- ATL::CComUnkArray<nMaxSize>
-- ATL::CComUnkArray
 - CComUnkArray
+- ATLCOM/ATL::CComUnkArray
+- ATLCOM/ATL::CComUnkArray::CComUnkArray
+- ATLCOM/ATL::CComUnkArray::Add
+- ATLCOM/ATL::CComUnkArray::begin
+- ATLCOM/ATL::CComUnkArray::end
+- ATLCOM/ATL::CComUnkArray::GetCookie
+- ATLCOM/ATL::CComUnkArray::GetUnknown
+- ATLCOM/ATL::CComUnkArray::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class CComUnkArray
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
   
-##  <a name="a-nameadda--ccomunkarrayadd"></a><a name="add"></a>CComUnkArray::Add  
+##  <a name="add"></a>CComUnkArray::Add  
  Rufen Sie diese Methode zum Hinzufügen einer **IUnknown** Zeiger auf das Array.  
   
 ```
@@ -104,7 +108,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt das Cookie, das den neu hinzugefügten Zeiger oder 0 zugeordnet, wenn das Array nicht groß genug, um den neuen Zeiger enthalten ist.  
   
-##  <a name="a-namebegina--ccomunkarraybegin"></a><a name="begin"></a>CComUnkArray::begin  
+##  <a name="begin"></a>CComUnkArray::begin  
  Gibt einen Zeiger auf den Anfang der Auflistung der **IUnknown** Schnittstellenzeiger.  
   
 ```
@@ -120,7 +124,7 @@ IUnknown**
   
  Vor der Verwendung der **IUnknown** -Schnittstelle, sollten Sie überprüfen, dass es nicht **NULL**.  
   
-##  <a name="a-nameccomunkarraya--ccomunkarrayccomunkarray"></a><a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
+##  <a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
  Der Konstruktor.  
   
 ```
@@ -130,7 +134,7 @@ CComUnkArray();
 ### <a name="remarks"></a>Hinweise  
  Legt die Auflistung zum Speichern `nMaxSize` **IUnknown** -Zeigern und initialisiert die Zeiger auf **NULL**.  
   
-##  <a name="a-nameenda--ccomunkarrayend"></a><a name="end"></a>CComUnkArray::end  
+##  <a name="end"></a>CComUnkArray::end  
  Gibt einen Zeiger auf eine Position hinter dem letzten **IUnknown** Zeiger in der Auflistung.  
   
 ```
@@ -146,7 +150,7 @@ IUnknown**
   
  [!code-cpp[NVC_ATL_COM&#44;](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
-##  <a name="a-namegetcookiea--ccomunkarraygetcookie"></a><a name="getcookie"></a>CComUnkArray::GetCookie  
+##  <a name="getcookie"></a>CComUnkArray::GetCookie  
  Rufen Sie diese Methode, um die zugeordnete Cookie Abrufen einer bestimmten **IUnknown** Zeiger.  
   
 ```
@@ -163,7 +167,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>Hinweise  
  Wenn mehr als eine des gleichen Instanz **IUnknown** -Zeiger ist, gibt diese Funktion das Cookie für das erste Element zurück.  
   
-##  <a name="a-namegetunknowna--ccomunkarraygetunknown"></a><a name="getunknown"></a>CComUnkArray::GetUnknown  
+##  <a name="getunknown"></a>CComUnkArray::GetUnknown  
  Rufen Sie diese Methode zum Abrufen der **IUnknown** Zeiger, die mit einem bestimmten Cookie verknüpft ist.  
   
 ```
@@ -177,7 +181,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die **IUnknown** Zeiger oder NULL, wenn keine übereinstimmende Cookie gefunden wird.  
   
-##  <a name="a-nameremovea--ccomunkarrayremove"></a><a name="remove"></a>CComUnkArray::Remove  
+##  <a name="remove"></a>CComUnkArray::Remove  
  Rufen Sie diese Methode zum Entfernen einer **IUnknown** Zeiger aus dem Array.  
   
 ```

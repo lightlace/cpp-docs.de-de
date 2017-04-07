@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideBar
+- AFXAUTOHIDEBAR/CMFCAutoHideBar
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::CMFCAutoHideBar
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::AddAutoHideWindow
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::AllowShowOnPaneMenu
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::CalcFixedLayout
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::Create
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::GetFirstAHWindow
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::GetVisibleCount
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::OnShowControlBarMenu
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::RemoveAutoHideWindow
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::SetActiveInGroup
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::SetRecentVisibleState
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::ShowAutoHideWindow
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::StretchPane
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::UnSetAutoHideMode
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::UpdateVisibleState
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::m_nShowAHWndDelay
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +126,7 @@ class CMFCAutoHideBar : public CPane
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxautohidebar.h  
   
-##  <a name="a-nameaddautohidewindowa--cmfcautohidebaraddautohidewindow"></a><a name="addautohidewindow"></a>CMFCAutoHideBar::AddAutoHideWindow  
+##  <a name="addautohidewindow"></a>CMFCAutoHideBar::AddAutoHideWindow  
  Fügt einem `CDockablePane` .Fenster Funktionalität hinzu, die ihm automatisches Ausblenden ermöglicht.  
   
 ```  
@@ -138,7 +155,7 @@ CMFCAutoHideButton* AddAutoHideWindow(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="a-nameallowshowonpanemenua--cmfcautohidebarallowshowonpanemenu"></a><a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -149,7 +166,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namecalcfixedlayouta--cmfcautohidebarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -166,7 +183,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namecmfcautohidebara--cmfcautohidebarcmfcautohidebar"></a><a name="cmfcautohidebar"></a>CMFCAutoHideBar::CMFCAutoHideBar  
+##  <a name="cmfcautohidebar"></a>CMFCAutoHideBar::CMFCAutoHideBar  
  Erstellt ein CMFCAutoHideBar-Objekt.  
   
 ```  
@@ -175,7 +192,7 @@ CMFCAutoHideBar();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namecreatea--cmfcautohidebarcreate"></a><a name="create"></a>CMFCAutoHideBar::Create  
+##  <a name="create"></a>CMFCAutoHideBar::Create  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -202,7 +219,7 @@ virtual BOOL Create(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetfirstahwindowa--cmfcautohidebargetfirstahwindow"></a><a name="getfirstahwindow"></a>CMFCAutoHideBar::GetFirstAHWindow  
+##  <a name="getfirstahwindow"></a>CMFCAutoHideBar::GetFirstAHWindow  
  Gibt einen Zeiger auf das erste automatisch ausblendbare Fenster in der Anwendung zurück.  
   
 ```  
@@ -214,7 +231,7 @@ CDockablePane* GetFirstAHWindow();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetvisiblecounta--cmfcautohidebargetvisiblecount"></a><a name="getvisiblecount"></a>CMFCAutoHideBar::GetVisibleCount  
+##  <a name="getvisiblecount"></a>CMFCAutoHideBar::GetVisibleCount  
  Ruft die Anzahl der angezeigten automatisch ausblendbaren Schaltflächen ab.  
   
 ```  
@@ -226,7 +243,7 @@ int GetVisibleCount();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namemnshowahwnddelaya--cmfcautohidebarmnshowahwnddelay"></a><a name="m_nshowahwnddelay"></a>CMFCAutoHideBar::m_nShowAHWndDelay  
+##  <a name="m_nshowahwnddelay"></a>CMFCAutoHideBar::m_nShowAHWndDelay  
  Die Verzögerung zwischen dem Zeitpunkt, wenn der Benutzer den Cursor über platziert, eine [CMFCAutoHideButton Klasse](../../mfc/reference/cmfcautohidebutton-class.md) und dem Zeitpunkt, wenn das Framework das zugeordnete Fenster zeigt.  
   
 ```  
@@ -236,7 +253,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 ### <a name="remarks"></a>Hinweise  
  Wenn der Benutzer platziert den Cursor über eine `CMFCAutoHideButton`, ist eine kurze Verzögerung, bevor das Framework das zugeordnete Fenster angezeigt wird. Dieser Parameter bestimmt die Länge der Verzögerung in Millisekunden.  
   
-##  <a name="a-nameonshowcontrolbarmenua--cmfcautohidebaronshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -250,7 +267,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameremoveautohidewindowa--cmfcautohidebarremoveautohidewindow"></a><a name="removeautohidewindow"></a>CMFCAutoHideBar::RemoveAutoHideWindow  
+##  <a name="removeautohidewindow"></a>CMFCAutoHideBar::RemoveAutoHideWindow  
  Entfernt und zerstört das Automatisch-im-Hintergrund-Fenster.  
   
 ```  
@@ -266,7 +283,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetactiveingroupa--cmfcautohidebarsetactiveingroup"></a><a name="setactiveingroup"></a>CMFCAutoHideBar::SetActiveInGroup  
+##  <a name="setactiveingroup"></a>CMFCAutoHideBar::SetActiveInGroup  
  Kennzeichnet eine Automatisch-im-Hintergrund-Leiste als aktiv.  
   
 ```  
@@ -280,7 +297,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
   
-##  <a name="a-namesetrecentvisiblestatea--cmfcautohidebarsetrecentvisiblestate"></a><a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
+##  <a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -292,7 +309,7 @@ void SetRecentVisibleState(BOOL bState);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameshowautohidewindowa--cmfcautohidebarshowautohidewindow"></a><a name="showautohidewindow"></a>CMFCAutoHideBar::ShowAutoHideWindow  
+##  <a name="showautohidewindow"></a>CMFCAutoHideBar::ShowAutoHideWindow  
  Zeigt das automatisch ausblendbare Fenster an.  
   
 ```  
@@ -315,7 +332,7 @@ BOOL ShowAutoHideWindow(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namestretchpanea--cmfcautohidebarstretchpane"></a><a name="stretchpane"></a>CMFCAutoHideBar::StretchPane  
+##  <a name="stretchpane"></a>CMFCAutoHideBar::StretchPane  
  Ändert die Größe der automatisch ausblendbaren Leiste im reduzierten Zustand, um dem `CMFCAutoHideButton` -Objekt zu entsprechen.  
   
 ```  
@@ -337,7 +354,7 @@ virtual CSize StretchPane(
 ### <a name="remarks"></a>Hinweise  
  Abgeleitete Klassen können diese Methode zum Anpassen des Verhaltens außer Kraft setzen.  
   
-##  <a name="a-nameunsetautohidemodea--cmfcautohidebarunsetautohidemode"></a><a name="unsetautohidemode"></a>CMFCAutoHideBar::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>CMFCAutoHideBar::UnSetAutoHideMode  
  Deaktiviert den automatischen Ausblendemodus für eine Gruppe von automatisch ausblendbaren Leisten.  
   
 ```  
@@ -350,7 +367,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameupdatevisiblestatea--cmfcautohidebarupdatevisiblestate"></a><a name="updatevisiblestate"></a>CMFCAutoHideBar::UpdateVisibleState  
+##  <a name="updatevisiblestate"></a>CMFCAutoHideBar::UpdateVisibleState  
  Wird vom Framework aufgerufen, wenn die automatisch ausblendbare Leiste neu gezeichnet werden muss.  
   
 ```  

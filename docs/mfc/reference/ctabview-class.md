@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTabView
+- AFXTABVIEW/CTabView
+- AFXTABVIEW/CTabView::AddView
+- AFXTABVIEW/CTabView::FindTab
+- AFXTABVIEW/CTabView::GetActiveView
+- AFXTABVIEW/CTabView::GetTabControl
+- AFXTABVIEW/CTabView::RemoveView
+- AFXTABVIEW/CTabView::SetActiveView
+- AFXTABVIEW/CTabView::IsScrollBar
+- AFXTABVIEW/CTabView::OnActivateView
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +92,7 @@ class CTabbedView : public CView
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxTabView.h  
   
-##  <a name="a-nameaddviewa--ctabviewaddview"></a><a name="addview"></a>CTabView::AddView  
+##  <a name="addview"></a>CTabView::AddView  
  Das Registerkarten-Steuerelement hinzugefügt eine Ansicht.  
   
 ```  
@@ -113,7 +122,7 @@ int AddView(
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um das Registerkarten-Steuerelement eine Ansicht hinzuzufügen, die in einem Frame eingebettet ist.  
   
-##  <a name="a-namefindtaba--ctabviewfindtab"></a><a name="findtab"></a>CTabView::FindTab  
+##  <a name="findtab"></a>CTabView::FindTab  
  Gibt den Index der angegebenen Ansicht im Registerkarten-Steuerelement zurück.  
   
 ```  
@@ -130,7 +139,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um den Index einer Sicht abzurufen, die ein angegebenen Handle.  
   
-##  <a name="a-namegetactiveviewa--ctabviewgetactiveview"></a><a name="getactiveview"></a>CTabView::GetActiveView  
+##  <a name="getactiveview"></a>CTabView::GetActiveView  
  Gibt einen Zeiger auf die derzeit aktive Ansicht.  
   
 ```  
@@ -142,7 +151,7 @@ CView* GetActiveView() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettabcontrola--ctabviewgettabcontrol"></a><a name="gettabcontrol"></a>CTabView::GetTabControl  
+##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
  Gibt einen Verweis auf das Registerkarten-Steuerelement, das der Ansicht zugeordnet.  
   
 ```  
@@ -152,7 +161,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das Registerkarten-Steuerelement, das der Ansicht zugeordnet.  
   
-##  <a name="a-nameisscrollbara--ctabviewisscrollbar"></a><a name="isscrollbar"></a>CTabView::IsScrollBar  
+##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
  Wird vom Framework aufgerufen, wenn zum Erstellen einer Registerkartenansicht bestimmt, ob die Registerkartenansicht eine freigegebene horizontale Bildlaufleiste angezeigt.  
   
 ```  
@@ -167,7 +176,7 @@ virtual BOOL IsScrollBar() const;
   
  Überschreiben der `IsScrollBar` -Methode in einer `CTabView`-abgeleiteten Klasse und der Rückgabewert `TRUE` Wenn eine Sicht erstellen, eine freigegebene horizontale Bildlaufleiste angezeigt werden soll.  
   
-##  <a name="a-nameonactivateviewa--ctabviewonactivateview"></a><a name="onactivateview"></a>CTabView::OnActivateView  
+##  <a name="onactivateview"></a>CTabView::OnActivateView  
  Vom Framework aufgerufen, wenn die Registerkartenansicht aktiv oder inaktiv erfolgt.  
   
 ```  
@@ -181,7 +190,7 @@ virtual void OnActivateView(CView* view);
 ### <a name="remarks"></a>Hinweise  
  Bei der Standardimplementierung wird keine Aktion ausgeführt. Überschreiben Sie diese Methode in einer `CTabView`-abgeleitete Klasse, um diese Benachrichtigung zu verarbeiten.  
   
-##  <a name="a-nameremoveviewa--ctabviewremoveview"></a><a name="removeview"></a>CTabView::RemoveView  
+##  <a name="removeview"></a>CTabView::RemoveView  
  Entfernt die Ansicht über das Registerkarten-Steuerelement.  
   
 ```  
@@ -197,7 +206,7 @@ BOOL RemoveView(int iTabNum);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetactiveviewa--ctabviewsetactiveview"></a><a name="setactiveview"></a>CTabView::SetActiveView  
+##  <a name="setactiveview"></a>CTabView::SetActiveView  
  Eine Ansicht wird aktiviert.  
   
 ```  

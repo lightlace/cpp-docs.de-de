@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlDllModuleT
-- ATL::CAtlDllModuleT<T>
-- ATL::CAtlDllModuleT
-- ATL.CAtlDllModuleT<T>
 - CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT::CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT::DllCanUnloadNow
+- ATLBASE/ATL::CAtlDllModuleT::DllGetClassObject
+- ATLBASE/ATL::CAtlDllModuleT::DllMain
+- ATLBASE/ATL::CAtlDllModuleT::DllRegisterServer
+- ATLBASE/ATL::CAtlDllModuleT::DllUnregisterServer
+- ATLBASE/ATL::CAtlDllModuleT::GetClassObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,21 +99,21 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="a-namecatldllmoduleta--catldllmoduletcatldllmodulet"></a><a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT  
+##  <a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT  
  Der Konstruktor.  
   
 ```
 CAtlDllModuleT() throw();
 ```  
   
-##  <a name="a-namedtora--catldllmoduletcatldllmodulet"></a><a name="dtor"></a>CAtlDllModuleT:: ~ CAtlDllModuleT  
+##  <a name="dtor"></a>CAtlDllModuleT:: ~ CAtlDllModuleT  
  Der Destruktor.  
   
 ```
 ~CAtlDllModuleT() throw();
 ```  
   
-##  <a name="a-namedllcanunloadnowa--catldllmoduletdllcanunloadnow"></a><a name="dllcanunloadnow"></a>CAtlDllModuleT::DllCanUnloadNow  
+##  <a name="dllcanunloadnow"></a>CAtlDllModuleT::DllCanUnloadNow  
  Testet, ob die DLL entladen werden kann.  
   
 ```
@@ -119,7 +123,7 @@ HRESULT DllCanUnloadNow() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Wenn das nicht S_OK zurück, wenn die DLL entladen werden kann oder S_FALSE zurückgegeben werden soll.  
   
-##  <a name="a-namedllgetclassobjecta--catldllmoduletdllgetclassobject"></a><a name="dllgetclassobject"></a>CAtlDllModuleT::DllGetClassObject  
+##  <a name="dllgetclassobject"></a>CAtlDllModuleT::DllGetClassObject  
  Gibt die Klassenfactory zurück.  
   
 ```
@@ -142,7 +146,7 @@ HRESULT DllGetClassObject(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="a-namedllmaina--catldllmoduletdllmain"></a><a name="dllmain"></a>CAtlDllModuleT::DllMain  
+##  <a name="dllmain"></a>CAtlDllModuleT::DllMain  
  Optionales Einstiegspunkt in einer Dynamic Link Library (DLL).  
   
 ```
@@ -162,7 +166,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ### <a name="remarks"></a>Hinweise  
  Durch Deaktivieren von DLL_THREAD_ATTACH und DLL_THREAD_DETACH können Benachrichtigungen eine nützliche Optimierung von Multithreadanwendungen sein, die viele DLLs, die häufig erstellen und Löschen von Threads, und diese Benachrichtigungen auf Threadebene Anlage/trennen, dessen DLLs nicht erforderlich.  
   
-##  <a name="a-namedllregisterservera--catldllmoduletdllregisterserver"></a><a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
+##  <a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
  Die Registrierung für Objekte in der DLL hinzugefügt Einträge.  
   
 ```
@@ -176,7 +180,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="a-namedllunregisterservera--catldllmoduletdllunregisterserver"></a><a name="dllunregisterserver"></a>CAtlDllModuleT::DllUnregisterServer  
+##  <a name="dllunregisterserver"></a>CAtlDllModuleT::DllUnregisterServer  
  Einträge entfernt in der Registrierung für Objekte in der DLL.  
   
 ```
@@ -190,7 +194,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg S_OK oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
-##  <a name="a-namegetclassobjecta--catldllmoduletgetclassobject"></a><a name="getclassobject"></a>CAtlDllModuleT::GetClassObject  
+##  <a name="getclassobject"></a>CAtlDllModuleT::GetClassObject  
  Erstellt ein Objekt der angegebenen CLSID.  
   
 ```

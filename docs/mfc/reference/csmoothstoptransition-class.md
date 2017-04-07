@@ -10,7 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSmoothStopTransition
-- afxanimationcontroller/CSmoothStopTransition
+- AFXANIMATIONCONTROLLER/CSmoothStopTransition
+- AFXANIMATIONCONTROLLER/CSmoothStopTransition::CSmoothStopTransition
+- AFXANIMATIONCONTROLLER/CSmoothStopTransition::Create
+- AFXANIMATIONCONTROLLER/CSmoothStopTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CSmoothStopTransition::m_maximumDuration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CSmoothStopTransition : public CBaseTransition;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxanimationcontroller.h  
   
-##  <a name="a-namecreatea--csmoothstoptransitioncreate"></a><a name="create"></a>CSmoothStopTransition::Create  
+##  <a name="create"></a>CSmoothStopTransition::Create  
  Ruft die Übergangsbibliothek um gekapselte COM-Übergangsobjekt zu erstellen.  
   
 ```  
@@ -99,7 +103,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Übergang erfolgreich erstellt wird. andernfalls FALSE.  
   
-##  <a name="a-namecsmoothstoptransitiona--csmoothstoptransitioncsmoothstoptransition"></a><a name="csmoothstoptransition"></a>CSmoothStopTransition::CSmoothStopTransition  
+##  <a name="csmoothstoptransition"></a>CSmoothStopTransition::CSmoothStopTransition  
  Einen Übergang mit weicher Beendigung erstellt und initialisiert seine maximale Dauer und endgültigen Wert.  
   
 ```  
@@ -115,14 +119,14 @@ CSmoothStopTransition(
  `dblFinalValue`  
  Der Wert der Animationsvariablen am Ende des Übergangs.  
   
-##  <a name="a-namemdblfinalvaluea--csmoothstoptransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CSmoothStopTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CSmoothStopTransition::m_dblFinalValue  
  Der Wert der Animationsvariablen am Ende des Übergangs.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemmaximumdurationa--csmoothstoptransitionmmaximumduration"></a><a name="m_maximumduration"></a>CSmoothStopTransition::m_maximumDuration  
+##  <a name="m_maximumduration"></a>CSmoothStopTransition::m_maximumDuration  
  Die maximale Dauer des Übergangs.  
   
 ```  

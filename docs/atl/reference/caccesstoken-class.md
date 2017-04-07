@@ -9,10 +9,53 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATLSECURITY/CAccessToken
-- ATL.CAccessToken
 - CAccessToken
-- ATL::CAccessToken
+- ATLSECURITY/ATL::CAccessToken
+- ATLSECURITY/ATL::CAccessToken::Attach
+- ATLSECURITY/ATL::CAccessToken::CheckTokenMembership
+- ATLSECURITY/ATL::CAccessToken::CreateImpersonationToken
+- ATLSECURITY/ATL::CAccessToken::CreatePrimaryToken
+- ATLSECURITY/ATL::CAccessToken::CreateProcessAsUser
+- ATLSECURITY/ATL::CAccessToken::CreateRestrictedToken
+- ATLSECURITY/ATL::CAccessToken::Detach
+- ATLSECURITY/ATL::CAccessToken::DisablePrivilege
+- ATLSECURITY/ATL::CAccessToken::DisablePrivileges
+- ATLSECURITY/ATL::CAccessToken::EnablePrivilege
+- ATLSECURITY/ATL::CAccessToken::EnablePrivileges
+- ATLSECURITY/ATL::CAccessToken::GetDefaultDacl
+- ATLSECURITY/ATL::CAccessToken::GetEffectiveToken
+- ATLSECURITY/ATL::CAccessToken::GetGroups
+- ATLSECURITY/ATL::CAccessToken::GetHandle
+- ATLSECURITY/ATL::CAccessToken::GetImpersonationLevel
+- ATLSECURITY/ATL::CAccessToken::GetLogonSessionId
+- ATLSECURITY/ATL::CAccessToken::GetLogonSid
+- ATLSECURITY/ATL::CAccessToken::GetOwner
+- ATLSECURITY/ATL::CAccessToken::GetPrimaryGroup
+- ATLSECURITY/ATL::CAccessToken::GetPrivileges
+- ATLSECURITY/ATL::CAccessToken::GetProcessToken
+- ATLSECURITY/ATL::CAccessToken::GetProfile
+- ATLSECURITY/ATL::CAccessToken::GetSource
+- ATLSECURITY/ATL::CAccessToken::GetStatistics
+- ATLSECURITY/ATL::CAccessToken::GetTerminalServicesSessionId
+- ATLSECURITY/ATL::CAccessToken::GetThreadToken
+- ATLSECURITY/ATL::CAccessToken::GetTokenId
+- ATLSECURITY/ATL::CAccessToken::GetType
+- ATLSECURITY/ATL::CAccessToken::GetUser
+- ATLSECURITY/ATL::CAccessToken::HKeyCurrentUser
+- ATLSECURITY/ATL::CAccessToken::Impersonate
+- ATLSECURITY/ATL::CAccessToken::ImpersonateLoggedOnUser
+- ATLSECURITY/ATL::CAccessToken::IsTokenRestricted
+- ATLSECURITY/ATL::CAccessToken::LoadUserProfile
+- ATLSECURITY/ATL::CAccessToken::LogonUser
+- ATLSECURITY/ATL::CAccessToken::OpenCOMClientToken
+- ATLSECURITY/ATL::CAccessToken::OpenNamedPipeClientToken
+- ATLSECURITY/ATL::CAccessToken::OpenRPCClientToken
+- ATLSECURITY/ATL::CAccessToken::OpenThreadToken
+- ATLSECURITY/ATL::CAccessToken::PrivilegeCheck
+- ATLSECURITY/ATL::CAccessToken::Revert
+- ATLSECURITY/ATL::CAccessToken::SetDefaultDacl
+- ATLSECURITY/ATL::CAccessToken::SetOwner
+- ATLSECURITY/ATL::CAccessToken::SetPrimaryGroup
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -120,7 +163,7 @@ class CAccessToken
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
   
-##  <a name="a-nameattacha--caccesstokenattach"></a><a name="attach"></a>CAccessToken::Attach  
+##  <a name="attach"></a>CAccessToken::Attach  
  Rufen Sie diese Methode, um die Besitzrechte für das Tokenhandle Zugriff.  
   
 ```
@@ -134,7 +177,7 @@ void Attach(HANDLE hToken) throw();
 ### <a name="remarks"></a>Hinweise  
  In Debugbuilds wird ein Assertionsfehler auftreten, wenn die `CAccessToken` Objekt besitzt bereits ein Zugriffstoken.  
   
-##  <a name="a-namedtora--caccesstokencaccesstoken"></a><a name="dtor"></a>CAccessToken:: ~ CAccessToken  
+##  <a name="dtor"></a>CAccessToken:: ~ CAccessToken  
  Der Destruktor.  
   
 ```
@@ -144,7 +187,7 @@ virtual ~CAccessToken() throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle zugeordnete Ressourcen frei.  
   
-##  <a name="a-namechecktokenmembershipa--caccesstokenchecktokenmembership"></a><a name="checktokenmembership"></a>CAccessToken::CheckTokenMembership  
+##  <a name="checktokenmembership"></a>CAccessToken::CheckTokenMembership  
  Rufen Sie diese Methode, um zu bestimmen, ob eine angegebene SID, in aktiviert ist der `CAccessToken` Objekt.  
   
 ```
@@ -171,7 +214,7 @@ bool CheckTokenMembership(
 > [!NOTE]
 >  Das `CAccessToken` Objekt muss ein Identitätstoken und nicht um ein primäres Token.  
   
-##  <a name="a-namecreateimpersonationtokena--caccesstokencreateimpersonationtoken"></a><a name="createimpersonationtoken"></a>CAccessToken::CreateImpersonationToken  
+##  <a name="createimpersonationtoken"></a>CAccessToken::CreateImpersonationToken  
  Rufen Sie diese Methode, um ein Zugriffstoken für den Identitätswechsel zu erstellen.  
   
 ```
@@ -193,7 +236,7 @@ bool CreateImpersonationToken(
 ### <a name="remarks"></a>Hinweise  
  `CreateImpersonationToken`Aufrufe [nicht dupliziert werden](http://msdn.microsoft.com/library/windows/desktop/aa446616) ein neues Identitätswechseltoken zu erstellen.  
   
-##  <a name="a-namecreateprimarytokena--caccesstokencreateprimarytoken"></a><a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken  
+##  <a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken  
  Rufen Sie diese Methode zum Erstellen eines neuen primären Tokens.  
   
 ```
@@ -219,7 +262,7 @@ bool CreatePrimaryToken(
 ### <a name="remarks"></a>Hinweise  
  `CreatePrimaryToken`Aufrufe [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) zum Erstellen eines neuen primären Tokens.  
   
-##  <a name="a-namecreateprocessasusera--caccesstokencreateprocessasuser"></a><a name="createprocessasuser"></a>CAccessToken::CreateProcessAsUser  
+##  <a name="createprocessasuser"></a>CAccessToken::CreateProcessAsUser  
  Rufen Sie diese Methode, um einen neuen Prozess ausgeführt wird, im Sicherheitskontext des Benutzers durch dargestellt erstellen die `CAccessToken` Objekt.  
   
 ```
@@ -275,7 +318,7 @@ bool CreateProcessAsUser(
   
  Für diese Methode ist nur erfolgreich die `CAccessToken` Objekt obligatorisch AssignPrimaryToken (sei es ein eingeschränktes Token) und IncreaseQuota-Berechtigungen.  
   
-##  <a name="a-namecreaterestrictedtokena--caccesstokencreaterestrictedtoken"></a><a name="createrestrictedtoken"></a>CAccessToken::CreateRestrictedToken  
+##  <a name="createrestrictedtoken"></a>CAccessToken::CreateRestrictedToken  
  Rufen Sie diese Methode zum Erstellen eines neuen, eingeschränkten `CAccessToken` Objekt.  
   
 ```
@@ -311,7 +354,7 @@ bool CreateRestrictedToken(
 > [!IMPORTANT]
 >  Bei Verwendung `CreateRestrictedToken`, stellen Sie Folgendes sicher: das vorhandene Token gültig ist (und nicht vom Benutzer eingegebenen) und `SidsToDisable` und `PrivilegesToDelete` sind gültige (und nicht vom Benutzer eingegebenen). Wenn die Methode false zurückgibt, verweigern Sie Funktionalität.  
   
-##  <a name="a-namedetacha--caccesstokendetach"></a><a name="detach"></a>CAccessToken::Detach  
+##  <a name="detach"></a>CAccessToken::Detach  
  Rufen Sie diese Methode, um den Besitz des Zugriffstokens aufzuheben.  
   
 ```
@@ -324,7 +367,7 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sperrt die `CAccessToken`den Besitz des Zugriffstokens.  
   
-##  <a name="a-namedisableprivilegea--caccesstokendisableprivilege"></a><a name="disableprivilege"></a>CAccessToken::DisablePrivilege  
+##  <a name="disableprivilege"></a>CAccessToken::DisablePrivilege  
  Rufen Sie diese Methode, um eine Berechtigung in Deaktivieren der `CAccessToken` Objekt.  
   
 ```
@@ -343,7 +386,7 @@ bool DisablePrivilege(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namedisableprivilegesa--caccesstokendisableprivileges"></a><a name="disableprivileges"></a>CAccessToken::DisablePrivileges  
+##  <a name="disableprivileges"></a>CAccessToken::DisablePrivileges  
  Rufen Sie diese Methode, um eine oder mehrere Berechtigungen in Deaktivieren der `CAccessToken` Objekt.  
   
 ```
@@ -362,7 +405,7 @@ bool DisablePrivileges(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-nameenableprivilegea--caccesstokenenableprivilege"></a><a name="enableprivilege"></a>CAccessToken::EnablePrivilege  
+##  <a name="enableprivilege"></a>CAccessToken::EnablePrivilege  
  Rufen Sie diese Methode, um eine Berechtigung in Aktivieren der `CAccessToken` Objekt.  
   
 ```
@@ -381,7 +424,7 @@ bool EnablePrivilege(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-nameenableprivilegesa--caccesstokenenableprivileges"></a><a name="enableprivileges"></a>CAccessToken::EnablePrivileges  
+##  <a name="enableprivileges"></a>CAccessToken::EnablePrivileges  
  Rufen Sie diese Methode, um eine oder mehrere Berechtigungen in Aktivieren der `CAccessToken` Objekt.  
   
 ```
@@ -400,7 +443,7 @@ bool EnablePrivileges(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namegetdefaultdacla--caccesstokengetdefaultdacl"></a><a name="getdefaultdacl"></a>CAccessToken::GetDefaultDacl  
+##  <a name="getdefaultdacl"></a>CAccessToken::GetDefaultDacl  
  Rufen Sie diese Methode zum Zurückgeben der `CAccessToken` Standard-DACL des Objekts.  
   
 ```
@@ -414,7 +457,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt True zurück, wenn die Standard-DACL wiederhergestellten, false wurde.  
   
-##  <a name="a-namegeteffectivetokena--caccesstokengeteffectivetoken"></a><a name="geteffectivetoken"></a>CAccessToken::GetEffectiveToken  
+##  <a name="geteffectivetoken"></a>CAccessToken::GetEffectiveToken  
  Rufen Sie diese Methode zum Abrufen der `CAccessToken` Objekt gleich dem Zugriffstoken für den aktuellen Thread.  
   
 ```
@@ -428,7 +471,7 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namegetgroupsa--caccesstokengetgroups"></a><a name="getgroups"></a>CAccessToken::GetGroups  
+##  <a name="getgroups"></a>CAccessToken::GetGroups  
  Rufen Sie diese Methode zum Zurückgeben der `CAccessToken` token Objektgruppen.  
   
 ```
@@ -442,7 +485,7 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namegethandlea--caccesstokengethandle"></a><a name="gethandle"></a>CAccessToken::GetHandle  
+##  <a name="gethandle"></a>CAccessToken::GetHandle  
  Rufen Sie diese Methode, um ein Handle für das Zugriffstoken abrufen.  
   
 ```
@@ -452,7 +495,7 @@ HANDLE GetHandle() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt ein Handle für die `CAccessToken` Zugriffstoken des Objekts.  
   
-##  <a name="a-namegetimpersonationlevela--caccesstokengetimpersonationlevel"></a><a name="getimpersonationlevel"></a>CAccessToken::GetImpersonationLevel  
+##  <a name="getimpersonationlevel"></a>CAccessToken::GetImpersonationLevel  
  Rufen Sie diese Methode, um die Ebene des Identitätswechsels von Zugriffstoken zu erhalten.  
   
 ```
@@ -467,7 +510,7 @@ bool GetImpersonationLevel(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namegetlogonsessionida--caccesstokengetlogonsessionid"></a><a name="getlogonsessionid"></a>CAccessToken::GetLogonSessionId  
+##  <a name="getlogonsessionid"></a>CAccessToken::GetLogonSessionId  
  Rufen Sie diese Methode zum Abrufen der Sitzung Anmeldenamen zugeordneten der `CAccessToken` Objekt.  
   
 ```
@@ -484,7 +527,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 ### <a name="remarks"></a>Hinweise  
  In Debugbuilds wird ein Assertionsfehler auftreten, wenn `pluid` ist ein ungültiger Wert.  
   
-##  <a name="a-namegetlogonsida--caccesstokengetlogonsid"></a><a name="getlogonsid"></a>CAccessToken::GetLogonSid  
+##  <a name="getlogonsid"></a>CAccessToken::GetLogonSid  
  Rufen Sie diese Methode, um die Anmelde-SID zugeordnet erhalten die `CAccessToken` Objekt.  
   
 ```
@@ -501,7 +544,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>Hinweise  
  In Debugbuilds wird ein Assertionsfehler auftreten, wenn *pSid* ist ein ungültiger Wert.  
   
-##  <a name="a-namegetownera--caccesstokengetowner"></a><a name="getowner"></a>CAccessToken::GetOwner  
+##  <a name="getowner"></a>CAccessToken::GetOwner  
  Rufen Sie diese Methode zum Abrufen der Benutzer mit der `CAccessToken` Objekt.  
   
 ```
@@ -518,7 +561,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>Hinweise  
  Der Besitzer wird festgelegt, wird standardmäßig auf alle Objekte, die erstellt werden, während das Zugriffstoken ausgeführt wird.  
   
-##  <a name="a-namegetprimarygroupa--caccesstokengetprimarygroup"></a><a name="getprimarygroup"></a>CAccessToken::GetPrimaryGroup  
+##  <a name="getprimarygroup"></a>CAccessToken::GetPrimaryGroup  
  Rufen Sie diese Methode, um die primäre Gruppe zugeordnete erhalten die `CAccessToken` Objekt.  
   
 ```
@@ -535,7 +578,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>Hinweise  
  Die Gruppe festgelegt ist, standardmäßig auf alle Objekte, die erstellt werden, während das Zugriffstoken ausgeführt wird.  
   
-##  <a name="a-namegetprivilegesa--caccesstokengetprivileges"></a><a name="getprivileges"></a>CAccessToken::GetPrivileges  
+##  <a name="getprivileges"></a>CAccessToken::GetPrivileges  
  Rufen Sie diese Methode zum Abrufen der zugeordneten Berechtigungen der `CAccessToken` Objekt.  
   
 ```
@@ -549,7 +592,7 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namegetprocesstokena--caccesstokengetprocesstoken"></a><a name="getprocesstoken"></a>CAccessToken::GetProcessToken  
+##  <a name="getprocesstoken"></a>CAccessToken::GetProcessToken  
  Rufen Sie diese Methode auf, um `CAccessToken` mit dem Zugriffstoken aus einem Prozess zu initialisieren.  
   
 ```
@@ -569,7 +612,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 ### <a name="remarks"></a>Hinweise  
  Ruft die [OpenProcessToken](http://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) Win32-Funktion.  
   
-##  <a name="a-namegetprofilea--caccesstokengetprofile"></a><a name="getprofile"></a>CAccessToken::GetProfile  
+##  <a name="getprofile"></a>CAccessToken::GetProfile  
  Rufen Sie diese Methode, um das Handle verweist auf das zugeordnete Benutzerprofil Abrufen der `CAccessToken` Objekt.  
   
 ```
@@ -579,7 +622,7 @@ HANDLE GetProfile() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt ein Handle auf das Benutzerprofil oder NULL, wenn kein Profil vorhanden ist.  
   
-##  <a name="a-namegetsourcea--caccesstokengetsource"></a><a name="getsource"></a>CAccessToken::GetSource  
+##  <a name="getsource"></a>CAccessToken::GetSource  
  Rufen Sie diese Methode, um die Quelle des abzurufen, die `CAccessToken` Objekt.  
   
 ```
@@ -593,7 +636,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namegetstatisticsa--caccesstokengetstatistics"></a><a name="getstatistics"></a>CAccessToken::GetStatistics  
+##  <a name="getstatistics"></a>CAccessToken::GetStatistics  
  Rufen Sie diese Methode zum Abrufen von Informationen über die `CAccessToken` Objekt.  
   
 ```
@@ -607,7 +650,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namegetterminalservicessessionida--caccesstokengetterminalservicessessionid"></a><a name="getterminalservicessessionid"></a>CAccessToken::GetTerminalServicesSessionId  
+##  <a name="getterminalservicessessionid"></a>CAccessToken::GetTerminalServicesSessionId  
  Rufen Sie diese Methode, um die Terminal Services-Sitzung-ID zugeordneten erhalten die `CAccessToken` Objekt.  
   
 ```
@@ -621,7 +664,7 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namegetthreadtokena--caccesstokengetthreadtoken"></a><a name="getthreadtoken"></a>CAccessToken::GetThreadToken  
+##  <a name="getthreadtoken"></a>CAccessToken::GetThreadToken  
  Rufen Sie diese Methode zum Initialisieren der `CAccessToken` mit dem Token aus den angegebenen Thread.  
   
 ```
@@ -646,7 +689,7 @@ bool GetThreadToken(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namegettokenida--caccesstokengettokenid"></a><a name="gettokenid"></a>CAccessToken::GetTokenId  
+##  <a name="gettokenid"></a>CAccessToken::GetTokenId  
  Rufen Sie diese Methode, um die Token-ID zugeordneten erhalten die `CAccessToken` Objekt.  
   
 ```
@@ -660,7 +703,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namegettypea--caccesstokengettype"></a><a name="gettype"></a>CAccessToken::GetType  
+##  <a name="gettype"></a>CAccessToken::GetType  
  Rufen Sie diese Methode zum Abrufen des Tokens Typs der `CAccessToken` Objekt.  
   
 ```
@@ -677,7 +720,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 ### <a name="remarks"></a>Hinweise  
  Die **TOKEN_TYPE** Enumerationstyp enthält Werte, die ein primäres Token und ein Identitätstoken unterscheiden.  
   
-##  <a name="a-namegetusera--caccesstokengetuser"></a><a name="getuser"></a>CAccessToken::GetUser  
+##  <a name="getuser"></a>CAccessToken::GetUser  
  Rufen Sie diese Methode, um den Benutzer identifizieren die `CAccessToken` Objekt.  
   
 ```
@@ -691,7 +734,7 @@ bool GetUser(CSid* pSid) const throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
-##  <a name="a-namehkeycurrentusera--caccesstokenhkeycurrentuser"></a><a name="hkeycurrentuser"></a>CAccessToken::HKeyCurrentUser  
+##  <a name="hkeycurrentuser"></a>CAccessToken::HKeyCurrentUser  
  Rufen Sie diese Methode, um das Handle verweist auf das zugeordnete Benutzerprofil Abrufen der `CAccessToken` Objekt.  
   
 ```
@@ -701,7 +744,7 @@ HKEY HKeyCurrentUser() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt ein Handle auf das Benutzerprofil oder NULL, wenn kein Profil vorhanden ist.  
   
-##  <a name="a-nameimpersonatea--caccesstokenimpersonate"></a><a name="impersonate"></a>CAccessToken::Impersonate  
+##  <a name="impersonate"></a>CAccessToken::Impersonate  
  Rufen Sie diese Methode, um einen Identitätswechsel zuweisen `CAccessToken` an einen Thread.  
   
 ```
@@ -720,7 +763,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
   
  Die [CAutoRevertImpersonation Klasse](../../atl/reference/cautorevertimpersonation-class.md) können verwendet werden, um Identitätswechsel Zugriffstoken automatisch zurückgesetzt.  
   
-##  <a name="a-nameimpersonateloggedonusera--caccesstokenimpersonateloggedonuser"></a><a name="impersonateloggedonuser"></a>CAccessToken::ImpersonateLoggedOnUser  
+##  <a name="impersonateloggedonuser"></a>CAccessToken::ImpersonateLoggedOnUser  
  Rufen Sie diese Methode, damit den aufrufenden Thread den Sicherheitskontext des angemeldeten Benutzers annehmen können.  
   
 ```
@@ -735,7 +778,7 @@ bool ImpersonateLoggedOnUser() const throw(...);
 > [!IMPORTANT]
 >  Wenn ein Aufruf einer Funktion Identitätswechsel aus irgendeinem Grund fehlschlägt, der Client ist nicht die Identität und die Clientanforderung erfolgt im Sicherheitskontext des Prozesses, von dem der Anruf getätigt wurde. Wenn der Prozess als ein Konto mit weit reichenden Berechtigungen ausgeführt wird, oder als Mitglied einer administrativen Gruppe der Benutzer möglicherweise Aktionen würde er andernfalls unzulässig sein. Der Rückgabewert für diese Funktion sollte daher immer bestätigt werden.  
   
-##  <a name="a-nameistokenrestricteda--caccesstokenistokenrestricted"></a><a name="istokenrestricted"></a>CAccessToken::IsTokenRestricted  
+##  <a name="istokenrestricted"></a>CAccessToken::IsTokenRestricted  
  Rufen Sie diese Methode getestet, ob die `CAccessToken` -Objekt enthält eine Liste der eingeschränkten SIDs.  
   
 ```
@@ -745,7 +788,7 @@ bool IsTokenRestricted() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn das Objekt eine Liste enthält der einschränkenden SIDs, False, wenn keine eingeschränkten SIDs vorhanden sind oder wenn die Methode fehlschlägt.  
   
-##  <a name="a-nameloaduserprofilea--caccesstokenloaduserprofile"></a><a name="loaduserprofile"></a>CAccessToken::LoadUserProfile  
+##  <a name="loaduserprofile"></a>CAccessToken::LoadUserProfile  
  Rufen Sie diese Methode, um das zugeordnete Benutzerprofil Laden der `CAccessToken` Objekt.  
   
 ```
@@ -758,7 +801,7 @@ bool LoadUserProfile() throw(...);
 ### <a name="remarks"></a>Hinweise  
  In Debugbuilds wird ein Assertionsfehler auftreten, wenn der `CAccessToken` kein gültiges Token enthält, oder wenn ein bereits Benutzerprofil vorhanden ist.  
   
-##  <a name="a-namelogonusera--caccesstokenlogonuser"></a><a name="logonuser"></a>CAccessToken::LogonUser  
+##  <a name="logonuser"></a>CAccessToken::LogonUser  
  Rufen Sie diese Methode zum Erstellen einer Sitzungs für den Benutzer mit den angegebenen Anmeldeinformationen.  
   
 ```
@@ -792,7 +835,7 @@ bool LogonUser(
 ### <a name="remarks"></a>Hinweise  
  Der Zugriff token infolge der Anmeldung zugeordnet wird die `CAccessToken`. Für diese Methode ist nur erfolgreich die `CAccessToken` Objekt obligatorisch SE_TCB_NAME Berechtigungen, den Inhaber der als Teil der grundlegenden vertrauenswürdige Computer identifiziert werden. Finden Sie unter [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) Weitere Informationen über die erforderlichen Berechtigungen.  
   
-##  <a name="a-nameopencomclienttokena--caccesstokenopencomclienttoken"></a><a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken  
+##  <a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken  
  Rufen Sie diese Methode aus, in einen COM-Server, die Behandlung von einen Aufruf von einem Client zum Initialisieren der `CAccessToken` mit dem Zugriffstoken aus der COM-Client.  
   
 ```
@@ -820,7 +863,7 @@ bool OpenCOMClientToken(
 ### <a name="remarks"></a>Hinweise  
  Die [CAutoRevertImpersonation Klasse](../../atl/reference/cautorevertimpersonation-class.md) können verwendet werden, um Identitätswechsel Zugriffstoken erstellt, indem automatisch zurückgesetzt der `bImpersonate` flag auf *true*.  
   
-##  <a name="a-nameopennamedpipeclienttokena--caccesstokenopennamedpipeclienttoken"></a><a name="opennamedpipeclienttoken"></a>CAccessToken::OpenNamedPipeClientToken  
+##  <a name="opennamedpipeclienttoken"></a>CAccessToken::OpenNamedPipeClientToken  
  Rufen Sie diese Methode aus innerhalb eines Servers übernehmen Anforderungen über eine named Pipe zum Initialisieren der `CAccessToken` mit dem Zugriffstoken aus dem Client.  
   
 ```
@@ -852,7 +895,7 @@ bool OpenNamedPipeClientToken(
 ### <a name="remarks"></a>Hinweise  
  Die [CAutoRevertImpersonation Klasse](../../atl/reference/cautorevertimpersonation-class.md) können verwendet werden, um Identitätswechsel Zugriffstoken erstellt, indem automatisch zurückgesetzt der `bImpersonate` flag auf *true*.  
   
-##  <a name="a-nameopenrpcclienttokena--caccesstokenopenrpcclienttoken"></a><a name="openrpcclienttoken"></a>CAccessToken::OpenRPCClientToken  
+##  <a name="openrpcclienttoken"></a>CAccessToken::OpenRPCClientToken  
  Rufen Sie diese Methode in einem Server, der einen Aufruf aus einem RPC-Client zu initialisieren aus der `CAccessToken` mit dem Zugriffstoken aus dem Client.  
   
 ```
@@ -884,7 +927,7 @@ bool OpenRPCClientToken(
 ### <a name="remarks"></a>Hinweise  
  Die [CAutoRevertImpersonation Klasse](../../atl/reference/cautorevertimpersonation-class.md) können verwendet werden, um Identitätswechsel Zugriffstoken erstellt, indem automatisch zurückgesetzt der `bImpersonate` flag auf *true*.  
   
-##  <a name="a-nameopenthreadtokena--caccesstokenopenthreadtoken"></a><a name="openthreadtoken"></a>CAccessToken::OpenThreadToken  
+##  <a name="openthreadtoken"></a>CAccessToken::OpenThreadToken  
  Rufen Sie diese Methode, um die Identitätswechselebene festgelegt, und initialisieren Sie dann die `CAccessToken` mit dem Token aus den angegebenen Thread.  
   
 ```
@@ -918,7 +961,7 @@ bool OpenThreadToken(
   
  Die [CAutoRevertImpersonation Klasse](../../atl/reference/cautorevertimpersonation-class.md) können verwendet werden, um Identitätswechsel Zugriffstoken erstellt, indem automatisch zurückgesetzt der `bImpersonate` flag auf *true*.  
   
-##  <a name="a-nameprivilegechecka--caccesstokenprivilegecheck"></a><a name="privilegecheck"></a>CAccessToken::PrivilegeCheck  
+##  <a name="privilegecheck"></a>CAccessToken::PrivilegeCheck  
  Rufen Sie diese Methode, um zu bestimmen, ob eine angegebene Gruppe von Berechtigungen im aktiviert sind die **CAccessToken** Objekt.  
   
 ```
@@ -940,7 +983,7 @@ bool PrivilegeCheck(
 ### <a name="remarks"></a>Hinweise  
  Wenn `PrivilegeCheck` zurückgibt, die **Attribute** Mitglied aller ["LUID_AND_ATTRIBUTES"](http://msdn.microsoft.com/library/windows/desktop/aa379263) Struktur auf SE_PRIVILEGE_USED_FOR_ACCESS festgelegt ist, wenn die entsprechende Berechtigung aktiviert ist. Diese Methode ruft die [PrivilegeCheck](http://msdn.microsoft.com/library/windows/desktop/aa379304) Win32-Funktion.  
   
-##  <a name="a-namereverta--caccesstokenrevert"></a><a name="revert"></a>CAccessToken::Revert  
+##  <a name="revert"></a>CAccessToken::Revert  
  Rufen Sie diese Methode, um einen Thread mit einem Identitätswechseltoken zu beenden.  
   
 ```
@@ -957,7 +1000,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 ### <a name="remarks"></a>Hinweise  
  Das Zurücksetzen der Identitätswechseltoken kann automatisch ausgeführt werden, mit der [CAutoRevertImpersonation Klasse](../../atl/reference/cautorevertimpersonation-class.md).  
   
-##  <a name="a-namesetdefaultdacla--caccesstokensetdefaultdacl"></a><a name="setdefaultdacl"></a>CAccessToken::SetDefaultDacl  
+##  <a name="setdefaultdacl"></a>CAccessToken::SetDefaultDacl  
  Rufen Sie diese Methode zum Festlegen der DACL der `CAccessToken` Objekt.  
   
 ```
@@ -974,7 +1017,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Der Standardwert ist die DACL der DACL, die standardmäßig verwendet wird, wenn neue Objekte tatsächlich mit diesem Token erstellt werden.  
   
-##  <a name="a-namesetownera--caccesstokensetowner"></a><a name="setowner"></a>CAccessToken::SetOwner  
+##  <a name="setowner"></a>CAccessToken::SetOwner  
  Rufen Sie diese Methode zum Festlegen des Besitzers der `CAccessToken` Objekt.  
   
 ```
@@ -991,7 +1034,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Der Besitzer ist der standardmäßige Besitzer, der verwendet wird, für neue Objekte erstellt werden, während das Zugriffstoken ausgeführt wird.  
   
-##  <a name="a-namesetprimarygroupa--caccesstokensetprimarygroup"></a><a name="setprimarygroup"></a>CAccessToken::SetPrimaryGroup  
+##  <a name="setprimarygroup"></a>CAccessToken::SetPrimaryGroup  
  Rufen Sie diese Methode, um die primäre Gruppe der `CAccessToken` Objekt.  
   
 ```

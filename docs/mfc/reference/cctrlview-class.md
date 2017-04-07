@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCtrlView
+- AFXWIN/CCtrlView
+- AFXWIN/CCtrlView::CCtrlView
+- AFXWIN/CCtrlView::OnDraw
+- AFXWIN/CCtrlView::PreCreateWindow
+- AFXWIN/CCtrlView::m_dwDefaultStyle
+- AFXWIN/CCtrlView::m_strClass
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +95,7 @@ class CCtrlView : public CView
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-namecctrlviewa--cctrlviewcctrlview"></a><a name="cctrlview"></a>CCtrlView::CCtrlView  
+##  <a name="cctrlview"></a>CCtrlView::CCtrlView  
  Erstellt ein `CCtrlView`-Objekt.  
   
 ```  
@@ -108,14 +114,14 @@ CCtrlView(
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft der Konstruktor auf, wenn ein neues Rahmenfenster erstellt wird, oder Teilen Sie ein Fenster ist. Überschreiben Sie [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) um die Ansicht zu initialisieren, nachdem das Dokument zugeordnet ist. Rufen Sie [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) oder [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) zum Erstellen des Windows-Objekts.  
   
-##  <a name="a-namemstrclassa--cctrlviewmstrclass"></a><a name="m_strclass"></a>CCtrlView::m_strClass  
+##  <a name="m_strclass"></a>CCtrlView::m_strClass  
  Enthält den Namen des Windows-Klasse für die Ansichtsklasse.  
   
 ```  
 CString m_strClass;  
 ```  
   
-##  <a name="a-namemdwdefaultstylea--cctrlviewmdwdefaultstyle"></a><a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
+##  <a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
  Enthält das Standardformat für die Ansichtsklasse.  
   
 ```  
@@ -125,7 +131,7 @@ DWORD m_dwDefaultStyle;
 ### <a name="remarks"></a>Hinweise  
  Dieses Format wird angewendet, wenn ein Fenster erstellt wird.  
   
-##  <a name="a-nameondrawa--cctrlviewondraw"></a><a name="ondraw"></a>CCtrlView::OnDraw  
+##  <a name="ondraw"></a>CCtrlView::OnDraw  
  Aufgerufen, um den Inhalt der Zeichnen die `CCtrlView` -Objekt mit den angegebenen Gerätekontext.  
   
 ```  
@@ -139,7 +145,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>Hinweise  
  `OnDraw`wird normalerweise aufgerufen, für die Bildschirmanzeige, übergeben einen Bildschirm-Gerätekontext, der durch angegebenen `pDC`.  
   
-##  <a name="a-nameprecreatewindowa--cctrlviewprecreatewindow"></a><a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
+##  <a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
  Wird vor der Erstellung des an diesem `CWnd`-Objekt angefügten Windows-Fensters aufgerufen.  
   
 ```  

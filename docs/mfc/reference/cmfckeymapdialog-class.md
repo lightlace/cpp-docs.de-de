@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCKeyMapDialog
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::CMFCKeyMapDialog
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::DoModal
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::FormatItem
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::GetCommandKeys
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::OnInsertItem
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::OnPrintHeader
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::OnPrintItem
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::OnSetColumns
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::PrintKeyMap
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::SetColumnsWidth
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +107,7 @@ class CMFCKeyMapDialog : public CDialogEx
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxkeymapdialog.h  
   
-##  <a name="a-namecmfckeymapdialoga--cmfckeymapdialogcmfckeymapdialog"></a><a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
+##  <a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
  Erstellt ein `CMFCKeyMapDialog`-Objekt.  
   
 ```  
@@ -119,7 +130,7 @@ CMFCKeyMapDialog(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo&21;](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
-##  <a name="a-namedomodala--cmfckeymapdialogdomodal"></a><a name="domodal"></a>CMFCKeyMapDialog::DoModal  
+##  <a name="domodal"></a>CMFCKeyMapDialog::DoModal  
  Zeigt ein Dialogfeld Tastatur Zuordnung.  
   
 ```  
@@ -132,7 +143,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>Hinweise  
  Das Dialogfeld Tastatur Zuordnung können Sie auswählen und verschiedene Kategorien von Befehlen Tastenkombinationen zuweisen. Darüber hinaus können Sie die ausgewählten Zugriffstasten und deren Beschreibung in die Zwischenablage kopieren.  
   
-##  <a name="a-nameformatitema--cmfckeymapdialogformatitem"></a><a name="formatitem"></a>CMFCKeyMapDialog::FormatItem  
+##  <a name="formatitem"></a>CMFCKeyMapDialog::FormatItem  
  Aufgerufen, um eine Zeichenfolge zu erstellen, die eine wichtige Zuordnung beschreibt. Standardmäßig enthält die Zeichenfolge den Namen des Befehls verwendeten Tastenkombinationen und die Beschreibung der Verknüpfung-Schlüssels.  
   
 ```  
@@ -148,7 +159,7 @@ virtual CString FormatItem(int nItem) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetcommandkeysa--cmfckeymapdialoggetcommandkeys"></a><a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys  
+##  <a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys  
  Ruft einen Zeichenfolgenwert ab. Die Zeichenfolge enthält eine Liste der Tastenkombinationen, die mit einem bestimmten Befehl zugeordnet sind.  
   
 ```  
@@ -164,7 +175,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameoninsertitema--cmfckeymapdialogoninsertitem"></a><a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem  
+##  <a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem  
  Vom Framework aufgerufen, bevor ein neues Element in ein Steuerelement für die interne Liste eingefügt wird, die die Tastatur-Mapping-Steuerelement unterstützt.  
   
 ```  
@@ -182,7 +193,7 @@ virtual void OnInsertItem(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonprintheadera--cmfckeymapdialogonprintheader"></a><a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader  
+##  <a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader  
  Aufgerufen, um den Kopf für das Tastaturlayout auf einer neuen Seite auszudrucken.  
   
 ```  
@@ -208,7 +219,7 @@ virtual int OnPrintHeader(
 ### <a name="remarks"></a>Hinweise  
  Das Framework verwendet diese Methode das Tastaturlayout zu drucken. Standardmäßig gibt diese Methode die Seitenzahl, der Anwendungsname und der Titel des Dateidialogfelds.  
   
-##  <a name="a-nameonprintitema--cmfckeymapdialogonprintitem"></a><a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem  
+##  <a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem  
  Aufgerufen, um eine Tastatur Mapping-Element zu drucken.  
   
 ```  
@@ -242,7 +253,7 @@ virtual int OnPrintItem(
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode, um eine Zuordnung-Element im Dialogfeld Drucken. Standardmäßig gibt diese Methode des Elements Befehlsnamen, Tastenkombinationen und Befehl Beschreibung.  
   
-##  <a name="a-nameonsetcolumnsa--cmfckeymapdialogonsetcolumns"></a><a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns  
+##  <a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns  
  Vom Framework aufgerufen Beschriftungen für die Spalten in der internen Listensteuerelement festlegen, die die Tastatur-Mapping-Steuerelement unterstützt.  
   
 ```  
@@ -252,7 +263,7 @@ virtual void OnSetColumns();
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig ruft diese Methode die Beschriftungen für die Spalten aus drei Ressourcen. Die Befehl Spalte Beschriftung von IDS_AFXBARRES_COMMAND ist, die Schlüsselspalte Beschriftung von IDS_AFXBARRES_KEYS ist und die Beschriftung der Description-Spalte wird aus IDS_AFXBARRES_DESCRIPTION.  
   
-##  <a name="a-nameprintkeymapa--cmfckeymapdialogprintkeymap"></a><a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap  
+##  <a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap  
  Vom Framework aufgerufen, wenn ein Benutzer klickt der **Drucken** Schaltfläche.  
   
 ```  
@@ -262,7 +273,7 @@ virtual void PrintKeyMap();
 ### <a name="remarks"></a>Hinweise  
  Die `PrintKeyMap` Methode gibt die Zuordnung. Es wird einen neuen Druckauftrag initiiert und ruft dann wiederholt die [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) und [CMFCKeyMapDialog::OnPrintItem](#onprintitem) Methoden, bis alle Schlüssel Zuordnungen gedruckt werden.  
   
-##  <a name="a-namesetcolumnswidtha--cmfckeymapdialogsetcolumnswidth"></a><a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth  
+##  <a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth  
  Aufgerufen, um die Breite der Spalten in der internen Listensteuerelement festzulegen, die Tastatur-Mapping-Steuerelement unterstützt.  
   
 ```  

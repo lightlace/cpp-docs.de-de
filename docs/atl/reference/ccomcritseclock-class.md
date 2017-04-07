@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComCritSecLock
-- ATL.CComCritSecLock<TLock>
-- ATL::CComCritSecLock<TLock>
-- ATL.CComCritSecLock
 - CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock::CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock::Lock
+- ATLBASE/ATL::CComCritSecLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +78,7 @@ template<class TLock> class CComCritSecLock
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="a-namectora--ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+##  <a name="ctor"></a>CComCritSecLock::CComCritSecLock  
  Der Konstruktor.  
   
 ```
@@ -95,7 +95,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>Hinweise  
  Initialisiert das Objekt des kritischen Abschnitts.  
   
-##  <a name="a-namedtora--ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+##  <a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
  Der Destruktor.  
   
 ```
@@ -105,7 +105,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>Hinweise  
  Hebt die Sperre Objekt des kritischen Abschnitts.  
   
-##  <a name="a-namelocka--ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Lock  
+##  <a name="lock"></a>CComCritSecLock::Lock  
  Rufen Sie diese Methode, um das Objekt des kritischen Abschnitts zu sperren.  
   
 ```
@@ -118,7 +118,7 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>Hinweise  
  Wenn das Objekt bereits gesperrt ist, tritt ein ASSERT-Fehler in Debugbuilds.  
   
-##  <a name="a-nameunlocka--ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Unlock  
+##  <a name="unlock"></a>CComCritSecLock::Unlock  
  Rufen Sie diese Methode, um das Objekt des kritischen Abschnitts zu entsperren.  
   
 ```

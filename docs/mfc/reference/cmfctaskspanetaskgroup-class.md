@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::SetACCData
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsBottom
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsCollapsed
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsSpecial
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_lstTasks
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_rect
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_rectGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_strName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +110,7 @@ class CMFCTasksPaneTaskGroup : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxTasksPane.h  
   
-##  <a name="a-namecmfctaskspanetaskgroupa--cmfctaskspanetaskgroupcmfctaskspanetaskgroup"></a><a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
+##  <a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
  Erstellt ein `CMFCTasksPaneTaskGroup`-Objekt.  
   
 ```  
@@ -134,7 +144,7 @@ CMFCTasksPaneTaskGroup(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namembisbottoma--cmfctaskspanetaskgroupmbisbottom"></a><a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
+##  <a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
  Bestimmt, ob die Aufgabengruppe an das Ende der Aufgabenbereich-Steuerelement ausgerichtet wird.  
   
 ```  
@@ -144,7 +154,7 @@ BOOL m_bIsBottom;
 ### <a name="remarks"></a>Hinweise  
  Am Ende der Aufgabenbereich-Steuerelement kann nur eine Gruppe ausgerichtet werden. Diese Aufgabengruppe muss zuletzt hinzugefügt werden. Weitere Informationen finden Sie unter [cmfctaskspane:: addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="a-namembiscollapseda--cmfctaskspanetaskgroupmbiscollapsed"></a><a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
+##  <a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  Bestimmt, ob die Aufgabengruppe reduziert wird.  
   
 ```  
@@ -154,7 +164,7 @@ BOOL m_bIsCollapsed;
 ### <a name="remarks"></a>Hinweise  
  Sie können aktivieren oder deaktivieren Sie die Möglichkeit zum Reduzieren von Gruppen im Aufgabenbereich durch Aufrufen von [cmfctaskspane:: Enablegroupcollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
   
-##  <a name="a-namembisspeciala--cmfctaskspanetaskgroupmbisspecial"></a><a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
+##  <a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
  Bestimmt, ob die Aufgabengruppe ist *besondere* und gibt an, ob die Beschriftung für eine spezielle Aufgabe mit einer anderen Farbe bestimmt werden soll.  
   
 ```  
@@ -164,7 +174,7 @@ BOOL m_bIsSpecial;
 ### <a name="remarks"></a>Hinweise  
  Wenn Ihre Anwendung das visuelle Design von Windows XP und `m_bIsSpecial` ist `FALSE`, das Framework ruft `DrawThemeBackground` mit der `EBP_NORMALGROUPBACKGROUND` Flag. Wenn `m_bIsSpecial` ist `TRUE`, das Framework ruft `DrawThemeBackground` mit der `EBP_SPECIALGROUPBACKGROUND` Flag.  
   
-##  <a name="a-namemlsttasksa--cmfctaskspanetaskgroupmlsttasks"></a><a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
+##  <a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
  Enthält die interne Liste der Aufgaben.  
   
 ```  
@@ -174,7 +184,7 @@ CObList m_lstTasks;
 ### <a name="remarks"></a>Hinweise  
  Aufrufen, um diese Liste zu füllen, [cmfctaskspane:: Addtask](../../mfc/reference/cmfctaskspane-class.md#addtask).  
   
-##  <a name="a-namemrecta--cmfctaskspanetaskgroupmrect"></a><a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
+##  <a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
  Gibt das umschließende Rechteck der gruppenbeschriftung an.  
   
 ```  
@@ -184,7 +194,7 @@ CRect m_rect;
 ### <a name="remarks"></a>Hinweise  
  Dieser Wert wird vom Framework automatisch berechnet.  
   
-##  <a name="a-namemrectgroupa--cmfctaskspanetaskgroupmrectgroup"></a><a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
+##  <a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
  Gibt das umschließende Rechteck der Gruppe an.  
   
 ```  
@@ -194,7 +204,7 @@ CRect m_rectGroup;
 ### <a name="remarks"></a>Hinweise  
  Dieser Wert wird vom Framework automatisch berechnet.  
   
-##  <a name="a-namemstrnamea--cmfctaskspanetaskgroupmstrname"></a><a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
+##  <a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
  Gibt den Namen der Gruppe an.  
   
 ```  
@@ -204,7 +214,7 @@ CString m_strName;
 ### <a name="remarks"></a>Hinweise  
  Wenn dieser Wert leer ist, die gruppenbeschriftung wird nicht angezeigt, und die Gruppe nicht reduziert werden kann.  
   
-##  <a name="a-namesetaccdataa--cmfctaskspanetaskgroupsetaccdata"></a><a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
+##  <a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
  Bestimmt die Eingabehilfen-Daten für die aktuelle Aufgabengruppe.  
   
 ```  

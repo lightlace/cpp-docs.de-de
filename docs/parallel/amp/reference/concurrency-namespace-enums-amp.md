@@ -6,6 +6,11 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::access_type
+- amp/Concurrency::queuing_mode
+dev_langs:
+- C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 caps.latest.revision: 8
 author: mikeblome
@@ -22,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[Access_type-Enumeration](#access_type)|[Queuing_mode-Enumeration](#queuing_mode)|  
   
-##  <a name="a-nameaccesstypea--accesstype-enumeration"></a><a name="access_type"></a>Access_type-Enumeration  
+##  <a name="access_type"></a>Access_type-Enumeration  
  Enumerationstyp wurde verwendet, um die verschiedenen Datenzugriffstypen anzugeben.  
   
 ```  
@@ -39,7 +44,7 @@ enum access_type;
 |`access_type_write`|Freigegeben. Auf die Speicherbelegung kann auf der Zugriffstaste zugegriffen werden und sie ist auf der CPU les- und schreibbar.|  
 
   
-##  <a name="a-namequeuingmodea--queuingmode-enumeration"></a><a name="queuing_mode"></a>Queuing_mode-Enumeration  
+##  <a name="queuing_mode"></a>Queuing_mode-Enumeration  
  Gibt die Modi für das Hinzufügen zur Warteschlange an, die auf dem Beschleuniger unterstützt werden.  
   
 ```  

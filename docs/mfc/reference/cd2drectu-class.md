@@ -10,7 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DRectU
-- afxrendertarget/CD2DRectU
+- AFXRENDERTARGET/CD2DRectU
+- AFXRENDERTARGET/CD2DRectU::CD2DRectU
+- AFXRENDERTARGET/CD2DRectU::IsNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CD2DRectU : public D2D1_RECT_U;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="a-namecd2drectua--cd2drectucd2drectu"></a><a name="cd2drectu"></a>CD2DRectU::CD2DRectU  
+##  <a name="cd2drectu"></a>CD2DRectU::CD2DRectU  
  Erstellt ein CD2DRectU-Objekt aus CRect-Objekt.  
   
 ```  
@@ -109,7 +111,7 @@ CD2DRectU(
  `uBottom`  
  die untere Koordinate Source  
   
-##  <a name="a-nameisnulla--cd2drectuisnull"></a><a name="isnull"></a>CD2DRectU::IsNull  
+##  <a name="isnull"></a>CD2DRectU::IsNull  
  Gibt einen booleschen Wert, der angibt, ob ein Ausdruck keine gültigen Daten (Null) enthält.  
   
 ```  
@@ -119,7 +121,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn oben, links, unten und rechts Werte des Rechtecks alle gleich 0 sind. andernfalls FALSE.  
   
-##  <a name="a-nameoperatorcrecta--cd2drectuoperator-crect"></a><a name="operator_crect"></a>CD2DRectU::Operator CRect  
+##  <a name="operator_crect"></a>CD2DRectU::Operator CRect  
  Konvertiert CD2DRectU in CRect-Objekt.  
   
 ```  

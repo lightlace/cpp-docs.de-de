@@ -27,23 +27,23 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a769a69a788c2c7ae1fd9854afe89d1feccf9278
-ms.openlocfilehash: bc9ac2892eb9372586f101d706e744e60ebda3ce
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
+ms.openlocfilehash: 2d86588df2b20861dff5b940d2f0c7c3afd857fb
+ms.lasthandoff: 03/21/2017
 
 ---
    
 # <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Verbesserungen an C++ bei der Übereinstimmung in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
 ## <a name="new-language-features"></a>Neue Sprachfunktionen  
-Der Compiler ist jetzt zusammen mit dem Support für generalisierte contextpr und NSDMI für Aggregate für Funktionen, die im C++14-Standard hinzugefügt werden, vollständig. Beachten Sie, dass dem Compiler noch einige Funktionen der C++11- und C++98-Standards fehlen.
+Der Compiler ist jetzt zusammen mit dem Support für generalisierte contextpr und NSDMI für Aggregate für Funktionen, die im C++14-Standard hinzugefügt werden, vollständig. Beachten Sie, dass dem Compiler noch einige Funktionen der C++11- und C++98-Standards fehlen. Eine Tabelle mit dem aktuellen Compilerstatus finden Sie unter [Visual C++-Sprachkonformität](visual-cpp-language-conformance.md).
 
 ### <a name="c11"></a>C++11:
 **SFINAE-Support für Ausdrücke in mehr Bibliotheken** Der Visual C++-Compiler verbessert weiterhin die Unterstützung der SFINAE für Ausdrücke, die für die Vorlagenargumentableitung und Ersetzung erforderlich ist, in dem die Ausdrücke „decltype“ und „constexpr“ möglicherweise als Vorlagenparameter angezeigt werden. Weitere Informationen finden Sie unter [Expression SFINAE improvements in Visual Studio 2017 RC (Verbesserungen der SFINAE für Ausdrücke in Visual Studio 2017)](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3). 
 
 
 ### <a name="c-14"></a>C++ 14:
-**NSDMI für Aggregate** Ein Aggregat ist ein Array oder eine Klasse mit keinem vom Benutzer bereitgestellten Konstruktor, keinen privaten oder geschützten nicht statischen Datenmembern, keinen Basisklassen und keinen virtuellen Funktionen. Ab C++&14; können Aggregate Memberinitialisierer enthalten. Weitere Informationen finden Sie unter [Member initializers and aggregates (Memberinitialisierer und Aggregate)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html).
+**NSDMI für Aggregate** Ein Aggregat ist ein Array oder eine Klasse mit keinem vom Benutzer bereitgestellten Konstruktor, keinen privaten oder geschützten nicht statischen Datenmembern, keinen Basisklassen und keinen virtuellen Funktionen. Ab C++ 14 können Aggregate Memberinitialisierer enthalten. Weitere Informationen finden Sie unter [Member initializers and aggregates (Memberinitialisierer und Aggregate)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html).
 
 **Erweiterte constexpr** Ausdrücke, die als „constexpr“ deklariert sind, dürfen jetzt bestimmte Arten von Deklarationen, if- und switch-Anweisungen, Schleifenanweisungen und Mutation der Objekte enthalten, deren Lebensdauer in der Auswertung von constexpr-Ausdrücken begann. Darüber hinaus ist es nicht mehr erforderlich, dass eine nicht statische Memberfunktion von constexpr implizit const ist. Weitere Informationen finden Sie unter [Relaxing constraints on constexpr functions (Lockerung der Einschränkungen auf constexpr-Funktionen)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html). 
 
@@ -86,7 +86,7 @@ In Visual Studio 2015 behandelt der Compiler fälschlicherweise eine copy-list-I
 
 ```cpp  
 // From http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_closed.html#1228
-struct MyList {
+struct MyStore {
        explicit MyStore(int initialCapacity);
 };
 
@@ -274,6 +274,22 @@ static_assert(test1, "PASS1");
 constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
 ```
+### <a name="classes-declared-in-anonymous-namespaces"></a>In anonymen Namespaces deklarierte Klassen
+Entsprechend dem C++-Standard verfügt eine Klasse, die innerhalb eines anonymen Namespace deklariert wird, über interne Verknüpfungen und kann daher nicht exportiert werden. In Visual Studio 2015 und früheren Versionen wurde diese Regel nicht durchgesetzt. In Visual Studio 2017 wird die Regel teilweise durchgesetzt. Das folgende Beispiel löst in Visual Studio 2017 diesen Fehler aus: „Fehler C2201: 'const `anonymous namespace'::S1::`vftable'': Externe Bindung erforderlich, um Export/Import zu ermöglichen“.
+
+```cpp
+namespace
+{
+    struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
+}
+```
+
+### <a name="classes-declared-in-anonymous-namespaces"></a>In anonymen Namespaces deklarierte Klassen
+Entsprechend dem C++-Standard verfügt eine Klasse, die innerhalb eines anonymen Namespace deklariert wird, über interne Verknüpfungen und kann daher nicht exportiert werden. In Visual Studio 2015 und früheren Versionen wurde diese Regel nicht durchgesetzt. In Visual Studio 2017 wird die Regel teilweise durchgesetzt. Das folgende Beispiel löst in Visual Studio 2017 diesen Fehler aus: „Fehler C2201: 'const `anonymous namespace'::S1::`vftable'': Externe Bindung erforderlich, um Export/Import zu ermöglichen“.
+
+```cpp
+struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
+```
 
 ### <a name="default-initializers-for-value-class-members-ccli"></a>Standardinitialisierer für Wertklassenmember (C++/CLI)
 In Visual Studio 2015 und früher, ließ der Compiler einen Standardmember-Initialisierer für einen Member einer Wertklasse zu, ignorierte diesen aber.  Standardinitialisierung einer Wertklasse initialisiert die Elemente immer auf null; ein Standardkonstruktor ist nicht zulässig.  In Visual Studio 2017 lösen Standardmember-Initialisierer einen Compilerfehler aus, wie im folgenden Beispiel gezeigt:
@@ -343,5 +359,5 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 ```
 
 ## <a name="see-also"></a>Siehe auch  
-[Visual C/C++-Sprachkonformität](c-cpp-language-conformance.md)  
+[Visual C++-Sprachkonformität](visual-cpp-language-conformance.md)  
 

@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSimpleArray
-- ATL::CSimpleArray
 - CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray::CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray::Add
+- ATLSIMPCOLL/ATL::CSimpleArray::Find
+- ATLSIMPCOLL/ATL::CSimpleArray::GetData
+- ATLSIMPCOLL/ATL::CSimpleArray::GetSize
+- ATLSIMPCOLL/ATL::CSimpleArray::Remove
+- ATLSIMPCOLL/ATL::CSimpleArray::RemoveAll
+- ATLSIMPCOLL/ATL::CSimpleArray::RemoveAt
+- ATLSIMPCOLL/ATL::CSimpleArray::SetAtIndex
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +109,7 @@ class CSimpleArray
 ## <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities&#86;](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]  
   
-##  <a name="a-nameadda--csimplearrayadd"></a><a name="add"></a>CSimpleArray::Add  
+##  <a name="add"></a>CSimpleArray::Add  
  Fügt ein neues Element in das Array.  
   
 ```
@@ -118,7 +126,7 @@ BOOL Add(const T& t);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities&#87;](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
-##  <a name="a-namecsimplearraya--csimplearraycsimplearray"></a><a name="csimplearray"></a>CSimpleArray::CSimpleArray  
+##  <a name="csimplearray"></a>CSimpleArray::CSimpleArray  
  Der Konstruktor für das Array-Objekt.  
   
 ```
@@ -133,7 +141,7 @@ CSimpleArray();
 ### <a name="remarks"></a>Hinweise  
  Initialisiert den Datenmember, erstellen ein neues leeres `CSimpleArray` Objekt oder eine Kopie eines vorhandenen `CSimpleArray` Objekt.  
   
-##  <a name="a-namedtora--csimplearraycsimplearray"></a><a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
+##  <a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
  Der Destruktor.  
   
 ```
@@ -143,7 +151,7 @@ CSimpleArray();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle zugeordnete Ressourcen frei.  
   
-##  <a name="a-namefinda--csimplearrayfind"></a><a name="find"></a>CSimpleArray::Find  
+##  <a name="find"></a>CSimpleArray::Find  
  Sucht ein Element im Array an.  
   
 ```
@@ -160,7 +168,7 @@ int Find(const T& t) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities&#88;](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]  
   
-##  <a name="a-namegetdataa--csimplearraygetdata"></a><a name="getdata"></a>CSimpleArray::GetData  
+##  <a name="getdata"></a>CSimpleArray::GetData  
  Gibt einen Zeiger auf die Daten im Array gespeichert.  
   
 ```
@@ -170,7 +178,7 @@ T* GetData() const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Zeiger auf die Daten im Array zurück.  
   
-##  <a name="a-namegetsizea--csimplearraygetsize"></a><a name="getsize"></a>CSimpleArray::GetSize  
+##  <a name="getsize"></a>CSimpleArray::GetSize  
  Gibt die Anzahl der Elemente im Array gespeichert.  
   
 ```
@@ -180,7 +188,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Anzahl der Elemente im Array gespeichert.  
   
-##  <a name="a-nameoperatorata--csimplearrayoperator-"></a><a name="operator_at"></a>CSimpleArray::operator\[\]  
+##  <a name="operator_at"></a>CSimpleArray::operator\[\]  
  Ruft ein Element aus dem Array ab.  
   
 ```
@@ -197,7 +205,7 @@ T& operator[](int nindex);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities&#89;](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
   
-##  <a name="a-nameoperatoreqa--csimplearrayoperator-"></a><a name="operator_eq"></a>CSimpleArray::operator =  
+##  <a name="operator_eq"></a>CSimpleArray::operator =  
  Zuweisungsoperator.  
   
 ```
@@ -219,7 +227,7 @@ CSimpleArray<T, TEqual>
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities&#90;](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
   
-##  <a name="a-nameremovea--csimplearrayremove"></a><a name="remove"></a>CSimpleArray::Remove  
+##  <a name="remove"></a>CSimpleArray::Remove  
  Entfernt ein angegebenes Element aus dem Array.  
   
 ```
@@ -236,7 +244,7 @@ BOOL Remove(const T& t);
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Element entfernt wird, werden die übrigen Elemente im Array neu nummeriert, um Lücken zu füllen.  
   
-##  <a name="a-nameremovealla--csimplearrayremoveall"></a><a name="removeall"></a>CSimpleArray::RemoveAll  
+##  <a name="removeall"></a>CSimpleArray::RemoveAll  
  Entfernt alle Elemente aus dem Array.  
   
 ```
@@ -246,7 +254,7 @@ void RemoveAll();
 ### <a name="remarks"></a>Hinweise  
  Entfernt alle Elemente, die derzeit im Array gespeichert.  
   
-##  <a name="a-nameremoveata--csimplearrayremoveat"></a><a name="removeat"></a>CSimpleArray::RemoveAt  
+##  <a name="removeat"></a>CSimpleArray::RemoveAt  
  Entfernt das angegebene Element aus dem Array.  
   
 ```
@@ -263,7 +271,7 @@ BOOL RemoveAtint nIndex);
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Element entfernt wird, werden die übrigen Elemente im Array neu nummeriert, um Lücken zu füllen.  
   
-##  <a name="a-namesetatindexa--csimplearraysetatindex"></a><a name="setatindex"></a>CSimpleArray::SetAtIndex  
+##  <a name="setatindex"></a>CSimpleArray::SetAtIndex  
  Legen Sie das angegebene Element im Array.  
   
 ```

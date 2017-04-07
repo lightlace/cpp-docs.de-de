@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox::CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox::GetSelFont
+- AFXFONTCOMBOBOX/CMFCFontComboBox::SelectFont
+- AFXFONTCOMBOBOX/CMFCFontComboBox::Setup
+- AFXFONTCOMBOBOX/CMFCFontComboBox::m_bDrawUsingFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +102,7 @@ class CMFCFontComboBox : public CComboBox
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxfontcombobox.h  
   
-##  <a name="a-namecmfcfontcomboboxa--cmfcfontcomboboxcmfcfontcombobox"></a><a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
  Erstellt ein `CMFCFontComboBox`-Objekt.  
   
 ```  
@@ -107,7 +113,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetselfonta--cmfcfontcomboboxgetselfont"></a><a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
  Ruft Informationen zu den derzeit ausgewählten Schriftart.  
   
 ```  
@@ -119,7 +125,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namembdrawusingfonta--cmfcfontcomboboxmbdrawusingfont"></a><a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
  Gibt das Framework die Schriftart zum Zeichnen der Elementnamen in der aktuellen Schriftart-Kombinationsfeld.  
   
 ```  
@@ -129,7 +135,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie dieses Element auf `TRUE` leiten das Framework dieselbe Schriftart verwendet wird, um jedem Elementnamen zu zeichnen. Legen Sie dieses Element auf `FALSE` das Framework jedem Elementnamen mit der Schriftart gezeichnet wird, dessen Name identisch mit der Bezeichnung ist, weiterleiten. Der Standardwert dieses Elements ist `FALSE`.  
   
-##  <a name="a-nameselectfonta--cmfcfontcomboboxselectfont"></a><a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
  Wählt die Schriftart, die den angegebenen Kriterien aus dem Kombinationsfeld Schriftart entspricht.  
   
 ```  
@@ -163,7 +169,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls&#34;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls&#35;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="a-namesetupa--cmfcfontcomboboxsetup"></a><a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>CMFCFontComboBox::Setup  
  Initialisiert die Liste der Elemente im Kombinationsfeld Schriftart an.  
   
 ```  

@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDateTimeCtrl
+- AFXDTCTL/CDateTimeCtrl
+- AFXDTCTL/CDateTimeCtrl::CDateTimeCtrl
+- AFXDTCTL/CDateTimeCtrl::CloseMonthCal
+- AFXDTCTL/CDateTimeCtrl::Create
+- AFXDTCTL/CDateTimeCtrl::GetDateTimePickerInfo
+- AFXDTCTL/CDateTimeCtrl::GetIdealSize
+- AFXDTCTL/CDateTimeCtrl::GetMonthCalColor
+- AFXDTCTL/CDateTimeCtrl::GetMonthCalCtrl
+- AFXDTCTL/CDateTimeCtrl::GetMonthCalFont
+- AFXDTCTL/CDateTimeCtrl::GetMonthCalStyle
+- AFXDTCTL/CDateTimeCtrl::GetRange
+- AFXDTCTL/CDateTimeCtrl::GetTime
+- AFXDTCTL/CDateTimeCtrl::SetFormat
+- AFXDTCTL/CDateTimeCtrl::SetMonthCalColor
+- AFXDTCTL/CDateTimeCtrl::SetMonthCalFont
+- AFXDTCTL/CDateTimeCtrl::SetMonthCalStyle
+- AFXDTCTL/CDateTimeCtrl::SetRange
+- AFXDTCTL/CDateTimeCtrl::SetTime
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,14 +117,14 @@ class CDateTimeCtrl : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdtctl.h  
   
-##  <a name="a-namecdatetimectrla--cdatetimectrlcdatetimectrl"></a><a name="cdatetimectrl"></a>CDateTimeCtrl::CDateTimeCtrl  
+##  <a name="cdatetimectrl"></a>CDateTimeCtrl::CDateTimeCtrl  
  Erstellt ein `CDateTimeCtrl`-Objekt.  
   
 ```  
 CDateTimeCtrl();
 ```  
   
-##  <a name="a-nameclosemonthcala--cdatetimectrlclosemonthcal"></a><a name="closemonthcal"></a>CDateTimeCtrl::CloseMonthCal  
+##  <a name="closemonthcal"></a>CDateTimeCtrl::CloseMonthCal  
  Schließt das aktuelle Datums- / Zeitauswahl-Steuerelement.  
   
 ```  
@@ -126,7 +144,7 @@ void CloseMonthCal() const;
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1&5;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_2.cpp)]  
   
-##  <a name="a-namecreatea--cdatetimectrlcreate"></a><a name="create"></a>CDateTimeCtrl::Create  
+##  <a name="create"></a>CDateTimeCtrl::Create  
  Die Datums- / Zeitauswahl-Steuerelement erstellt, und fügt es der `CDateTimeCtrl` Objekt.  
   
 ```  
@@ -166,7 +184,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl&#1;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_3.cpp)]  
   
-##  <a name="a-namegetdatetimepickerinfoa--cdatetimectrlgetdatetimepickerinfo"></a><a name="getdatetimepickerinfo"></a>CDateTimeCtrl::GetDateTimePickerInfo  
+##  <a name="getdatetimepickerinfo"></a>CDateTimeCtrl::GetDateTimePickerInfo  
  Ruft Informationen über die aktuellen Datums- / Zeitauswahl.  
   
 ```   
@@ -195,7 +213,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1&4;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_4.cpp)]  
   
-##  <a name="a-namegetmonthcalcolora--cdatetimectrlgetmonthcalcolor"></a><a name="getmonthcalcolor"></a>CDateTimeCtrl::GetMonthCalColor  
+##  <a name="getmonthcalcolor"></a>CDateTimeCtrl::GetMonthCalColor  
  Ruft die Farbe für einen bestimmten Teil des Monatskalender innerhalb der Datums- / Zeitauswahl-Steuerelement ab.  
   
 ```  
@@ -215,7 +233,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl&#2;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]  
   
-##  <a name="a-namegetmonthcalctrla--cdatetimectrlgetmonthcalctrl"></a><a name="getmonthcalctrl"></a>CDateTimeCtrl:: GetMonthCalCtrl  
+##  <a name="getmonthcalctrl"></a>CDateTimeCtrl:: GetMonthCalCtrl  
  Ruft die `CMonthCalCtrl` die Datums- / Zeitauswahl-Steuerelement zugeordnete Objekt.  
   
 ```  
@@ -231,7 +249,7 @@ CMonthCalCtrl* GetMonthCalCtrl() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl&3;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_6.cpp)]  
   
-##  <a name="a-namegetmonthcalfonta--cdatetimectrlgetmonthcalfont"></a><a name="getmonthcalfont"></a>CDateTimeCtrl::GetMonthCalFont  
+##  <a name="getmonthcalfont"></a>CDateTimeCtrl::GetMonthCalFont  
  Ruft die derzeit von Datum und Zeit-Auswahlsteuerelement Monatskalender-Steuerelement verwendete Schriftart ab.  
   
 ```  
@@ -244,7 +262,7 @@ CFont* GetMonthCalFont() const;
 ### <a name="remarks"></a>Hinweise  
  Das `CFont` Objekt, auf das durch den Rückgabewert ist ein temporäres Objekt und wird während der nächsten Verarbeitung Leerlaufzeit zerstört.  
   
-##  <a name="a-namegetmonthcalstylea--cdatetimectrlgetmonthcalstyle"></a><a name="getmonthcalstyle"></a>CDateTimeCtrl::GetMonthCalStyle  
+##  <a name="getmonthcalstyle"></a>CDateTimeCtrl::GetMonthCalStyle  
  Ruft den Stil der Dropdown-Monatskalender-Steuerelement, das das aktuelle Datums- / Zeitauswahl-Steuerelement zugeordnet ist.  
   
 ```  
@@ -257,7 +275,7 @@ DWORD GetMonthCalStyle() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [DTM_GETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761763) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetrangea--cdatetimectrlgetrange"></a><a name="getrange"></a>CDateTimeCtrl::GetRange  
+##  <a name="getrange"></a>CDateTimeCtrl::GetRange  
  Ruft die aktuellen Minimal- und Maximalwerte Systemzeiten für einen Datums- / Zeitauswahl-Steuerelement zulässig.  
   
 ```  
@@ -294,7 +312,7 @@ DWORD GetRange(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl&4;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]  
   
-##  <a name="a-namegettimea--cdatetimectrlgettime"></a><a name="gettime"></a>CDateTimeCtrl::GetTime  
+##  <a name="gettime"></a>CDateTimeCtrl::GetTime  
  Ruft die derzeit ausgewählten Uhrzeit aus einem Datums- / Zeitauswahl-Steuerelement ab und fügt es in einem angegebenen `SYSTEMTIME` Struktur.  
   
 ```  
@@ -321,7 +339,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl&5;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]  
   
-##  <a name="a-namegetidealsizea--cdatetimectrlgetidealsize"></a><a name="getidealsize"></a>CDateTimeCtrl::GetIdealSize  
+##  <a name="getidealsize"></a>CDateTimeCtrl::GetIdealSize  
  Gibt die ideale Größe der Datums- / Zeitauswahl, die erforderlich sind, um das aktuelle Datum oder die Uhrzeit anzuzeigen.  
   
 ```  
@@ -350,7 +368,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]  
   
-##  <a name="a-namesetformata--cdatetimectrlsetformat"></a><a name="setformat"></a>CDateTimeCtrl:: setFormat initialisiert  
+##  <a name="setformat"></a>CDateTimeCtrl:: setFormat initialisiert  
  Legt die Anzeige eines Steuerelements in Übereinstimmung mit einer angegebenen Formatzeichenfolge für Datums- und Zeitauswahl.  
   
 ```  
@@ -373,7 +391,7 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CDateTimeCtrl&6;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_10.cpp)]  
   
-##  <a name="a-namesetmonthcalcolora--cdatetimectrlsetmonthcalcolor"></a><a name="setmonthcalcolor"></a>CDateTimeCtrl::SetMonthCalColor  
+##  <a name="setmonthcalcolor"></a>CDateTimeCtrl::SetMonthCalColor  
  Legt die Farbe für einen bestimmten Teil des Monatskalender in einem Datums- / Zeitauswahl-Steuerelement fest.  
   
 ```  
@@ -407,7 +425,7 @@ COLORREF SetMonthCalColor(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor).  
   
-##  <a name="a-namesetmonthcalfonta--cdatetimectrlsetmonthcalfont"></a><a name="setmonthcalfont"></a>CDateTimeCtrl:: SetMonthCalFont  
+##  <a name="setmonthcalfont"></a>CDateTimeCtrl:: SetMonthCalFont  
  Legt die Schriftart, die die Datums- / Zeitauswahl-Steuerelements untergeordneten Monatskalender-Steuerelement verwenden.  
   
 ```  
@@ -432,7 +450,7 @@ void SetMonthCalFont(
 > [!NOTE]
 >  Wenn Sie diesen Code verwenden, sollten Sie ein Mitglied zu Ihrem `CDialog`-abgeleitete Klasse mit dem Namen `m_MonthFont` des Typs **CFont**.  
   
-##  <a name="a-namesetmonthcalstylea--cdatetimectrlsetmonthcalstyle"></a><a name="setmonthcalstyle"></a>CDateTimeCtrl::SetMonthCalStyle  
+##  <a name="setmonthcalstyle"></a>CDateTimeCtrl::SetMonthCalStyle  
  Legt das Format des im Dropdown-Monatskalender-Steuerelement, das das aktuelle Datums- / Zeitauswahl-Steuerelement zugeordnet ist.  
   
 ```  
@@ -461,7 +479,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1&3;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_12.cpp)]  
   
-##  <a name="a-namesetrangea--cdatetimectrlsetrange"></a><a name="setrange"></a>CDateTimeCtrl::SetRange  
+##  <a name="setrange"></a>CDateTimeCtrl::SetRange  
  Legt die minimale und maximale zulässige Systemzeiten für einen Datums- / Zeitauswahl-Steuerelement fest.  
   
 ```  
@@ -491,7 +509,7 @@ BOOL SetRange(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CDateTimeCtrl::GetRange](#getrange).  
   
-##  <a name="a-namesettimea--cdatetimectrlsettime"></a><a name="settime"></a>CDateTimeCtrl::SetTime  
+##  <a name="settime"></a>CDateTimeCtrl::SetTime  
  Legt die Zeit in einem Datums- / Zeitauswahl-Steuerelement fest.  
   
 ```  

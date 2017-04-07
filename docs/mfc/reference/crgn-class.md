@@ -10,6 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRgn
+- AFXWIN/CRgn
+- AFXWIN/CRgn::CRgn
+- AFXWIN/CRgn::CombineRgn
+- AFXWIN/CRgn::CopyRgn
+- AFXWIN/CRgn::CreateEllipticRgn
+- AFXWIN/CRgn::CreateEllipticRgnIndirect
+- AFXWIN/CRgn::CreateFromData
+- AFXWIN/CRgn::CreateFromPath
+- AFXWIN/CRgn::CreatePolygonRgn
+- AFXWIN/CRgn::CreatePolyPolygonRgn
+- AFXWIN/CRgn::CreateRectRgn
+- AFXWIN/CRgn::CreateRectRgnIndirect
+- AFXWIN/CRgn::CreateRoundRectRgn
+- AFXWIN/CRgn::EqualRgn
+- AFXWIN/CRgn::FromHandle
+- AFXWIN/CRgn::GetRegionData
+- AFXWIN/CRgn::GetRgnBox
+- AFXWIN/CRgn::OffsetRgn
+- AFXWIN/CRgn::PtInRegion
+- AFXWIN/CRgn::RectInRegion
+- AFXWIN/CRgn::SetRectRgn
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +126,7 @@ class CRgn : public CGdiObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-namecombinergna--crgncombinergn"></a><a name="combinergn"></a>CRgn::CombineRgn  
+##  <a name="combinergn"></a>CRgn::CombineRgn  
  Erstellt eine neue GDI-Region durch Kombinieren von zwei vorhandenen Bereichen.  
   
 ```  
@@ -158,7 +179,7 @@ int CombineRgn(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#144;](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
-##  <a name="a-namecopyrgna--crgncopyrgn"></a><a name="copyrgn"></a>CRgn::CopyRgn  
+##  <a name="copyrgn"></a>CRgn::CopyRgn  
  Kopiert den Bereich definiert `pRgnSrc` in den `CRgn` Objekt.  
   
 ```  
@@ -186,7 +207,7 @@ int CopyRgn(CRgn* pRgnSrc);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
-##  <a name="a-namecreateellipticrgna--crgncreateellipticrgn"></a><a name="createellipticrgn"></a>CRgn::CreateEllipticRgn  
+##  <a name="createellipticrgn"></a>CRgn::CreateEllipticRgn  
  Erstellt einen elliptischen Bereich.  
   
 ```  
@@ -223,7 +244,7 @@ BOOL CreateEllipticRgn(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#145;](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
   
-##  <a name="a-namecreateellipticrgnindirecta--crgncreateellipticrgnindirect"></a><a name="createellipticrgnindirect"></a>CRgn::CreateEllipticRgnIndirect  
+##  <a name="createellipticrgnindirect"></a>CRgn::CreateEllipticRgnIndirect  
  Erstellt einen elliptischen Bereich.  
   
 ```  
@@ -247,7 +268,7 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).  
   
-##  <a name="a-namecreatefromdataa--crgncreatefromdata"></a><a name="createfromdata"></a>CRgn::CreateFromData  
+##  <a name="createfromdata"></a>CRgn::CreateFromData  
  Erstellt einen Bereich aus der angegebenen Region und die Transformation Daten.  
   
 ```  
@@ -273,7 +294,7 @@ BOOL CreateFromData(
 ### <a name="remarks"></a>Hinweise  
  Eine Anwendung kann Daten für eine Region abrufen, durch Aufrufen der `CRgn::GetRegionData` Funktion.  
   
-##  <a name="a-namecreatefrompatha--crgncreatefrompath"></a><a name="createfrompath"></a>CRgn::CreateFromPath  
+##  <a name="createfrompath"></a>CRgn::CreateFromPath  
  Erstellt einen Bereich aus dem Pfad, der den angegebenen Gerätekontext ausgewählt ist.  
   
 ```  
@@ -290,7 +311,7 @@ BOOL CreateFromPath(CDC* pDC);
 ### <a name="remarks"></a>Hinweise  
  Der Gerätekontext, der durch identifiziert die `pDC` Parameter muss einen geschlossenen Pfad enthalten. Nach dem `CreateFromPath` konvertiert einen Pfad in einen Bereich, Windows verwirft den geschlossenen Pfad aus dem Gerätekontext.  
   
-##  <a name="a-namecreatepolygonrgna--crgncreatepolygonrgn"></a><a name="createpolygonrgn"></a>CRgn::CreatePolygonRgn  
+##  <a name="createpolygonrgn"></a>CRgn::CreatePolygonRgn  
  Erstellt einen polygonalen Bereich.  
   
 ```  
@@ -335,7 +356,7 @@ BOOL CreatePolygonRgn(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#146;](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
   
-##  <a name="a-namecreatepolypolygonrgna--crgncreatepolypolygonrgn"></a><a name="createpolypolygonrgn"></a>CRgn::CreatePolyPolygonRgn  
+##  <a name="createpolypolygonrgn"></a>CRgn::CreatePolyPolygonRgn  
  Erstellt einen Bereich mit einer Reihe von geschlossenen Polygonen.  
   
 ```  
@@ -383,7 +404,7 @@ BOOL CreatePolyPolygonRgn(
   
  Wenn eine Anwendung nicht mehr verwendet eine Region erstellt, mit der `CreatePolyPolygonRgn` -Funktion sollten sie die Region, der den Gerätekontext und die Verwendung auswählen die [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) Member-Funktion, um ihn zu entfernen.  
   
-##  <a name="a-namecreaterectrgna--crgncreaterectrgn"></a><a name="createrectrgn"></a>CRgn::CreateRectRgn  
+##  <a name="createrectrgn"></a>CRgn::CreateRectRgn  
  Erstellt einen rechteckigen Bereich, die in gespeichert ist die `CRgn` Objekt.  
   
 ```  
@@ -420,7 +441,7 @@ BOOL CreateRectRgn(
   
  Ein zusätzliches Beispiel finden Sie unter [CRgn::CombineRgn](#combinergn).  
   
-##  <a name="a-namecreaterectrgnindirecta--crgncreaterectrgnindirect"></a><a name="createrectrgnindirect"></a>CRgn::CreateRectRgnIndirect  
+##  <a name="createrectrgnindirect"></a>CRgn::CreateRectRgnIndirect  
  Erstellt einen rechteckigen Bereich, die in gespeichert ist die `CRgn` Objekt.  
   
 ```  
@@ -454,7 +475,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#148;](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
   
-##  <a name="a-namecreateroundrectrgna--crgncreateroundrectrgn"></a><a name="createroundrectrgn"></a>CRgn::CreateRoundRectRgn  
+##  <a name="createroundrectrgn"></a>CRgn::CreateRoundRectRgn  
  Erstellt einen rechteckigen Bereich mit abgerundeten Ecken, die in gespeichert ist die `CRgn` Objekt.  
   
 ```  
@@ -497,7 +518,7 @@ BOOL CreateRoundRectRgn(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#149;](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
   
-##  <a name="a-namecrgna--crgncrgn"></a><a name="crgn"></a>CRgn::CRgn  
+##  <a name="crgn"></a>CRgn::CRgn  
  Erstellt ein `CRgn`-Objekt.  
   
 ```  
@@ -510,7 +531,7 @@ CRgn();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CRgn::CreateRoundRectRgn](#createroundrectrgn).  
   
-##  <a name="a-nameequalrgna--crgnequalrgn"></a><a name="equalrgn"></a>CRgn::EqualRgn  
+##  <a name="equalrgn"></a>CRgn::EqualRgn  
  Bestimmt, ob die angegebene Region in der Region in gespeicherten entspricht der `CRgn` Objekt.  
   
 ```  
@@ -527,7 +548,7 @@ BOOL EqualRgn(CRgn* pRgn) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#150;](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
   
-##  <a name="a-namefromhandlea--crgnfromhandle"></a><a name="fromhandle"></a>CRgn::FromHandle  
+##  <a name="fromhandle"></a>CRgn::FromHandle  
  Gibt einen Zeiger auf ein `CRgn` Objekt, wenn ein Handle auf einen Windows-Bereich angegeben.  
   
 ```  
@@ -544,7 +565,7 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 ### <a name="remarks"></a>Hinweise  
  Wenn ein `CRgn` Objekt noch nicht angefügt, das Handle zu einem temporären `CRgn` Objekt erstellt und angefügt wird. Dieser temporäre `CRgn` Objekt ist nur dann gültig, bis das nächste Mal die Anwendung Leerlaufzeit in seiner Ereignisschleife aufweist, zu der Zeit, dass alle temporären Grafik Objekte gelöscht werden. Anders ausgedrückt: Dies ist, dass das temporäre Objekt nur während der Verarbeitung der Nachricht ein Fenster gültig ist.  
   
-##  <a name="a-namegetregiondataa--crgngetregiondata"></a><a name="getregiondata"></a>CRgn::GetRegionData  
+##  <a name="getregiondata"></a>CRgn::GetRegionData  
  Füllt den angegebenen Puffer mit Daten, die den Bereich beschreibt.  
   
 ```  
@@ -566,7 +587,7 @@ int GetRegionData(
 ### <a name="remarks"></a>Hinweise  
  Diese Daten umfassen die Dimensionen der Rechtecke, die den Bereich bilden. Diese Funktion dient in Verbindung mit der `CRgn::CreateFromData` Funktion.  
   
-##  <a name="a-namegetrgnboxa--crgngetrgnbox"></a><a name="getrgnbox"></a>CRgn::GetRgnBox  
+##  <a name="getrgnbox"></a>CRgn::GetRgnBox  
  Ruft die Koordinaten des umschließenden Rechtecks der ab dem `CRgn` Objekt.  
   
 ```  
@@ -603,7 +624,7 @@ int GetRgnBox(LPRECT lpRect) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CRgn::CreatePolygonRgn](#createpolygonrgn).  
   
-##  <a name="a-nameoffsetrgna--crgnoffsetrgn"></a><a name="offsetrgn"></a>CRgn::OffsetRgn  
+##  <a name="offsetrgn"></a>CRgn::OffsetRgn  
  Verschiebt die Region, die in gespeicherten der `CRgn` -Objekt mit den angegebenen Offsets.  
   
 ```  
@@ -643,7 +664,7 @@ int OffsetRgn(POINT point);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
-##  <a name="a-nameoperatorhrgna--crgnoperator-hrgn"></a><a name="operator_hrgn"></a>CRgn::operator HRGN  
+##  <a name="operator_hrgn"></a>CRgn::operator HRGN  
  Verwenden Sie diesen Operator zum Abrufen der angefügten Windows GDI-Handle für die `CRgn` Objekt.  
   
 ```  
@@ -658,7 +679,7 @@ operator HRGN() const;
   
  Weitere Informationen zur Verwendung von Grafikobjekten, finden Sie im Artikel [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameptinregiona--crgnptinregion"></a><a name="ptinregion"></a>CRgn::PtInRegion  
+##  <a name="ptinregion"></a>CRgn::PtInRegion  
  Überprüft, ob der Punkt, der durch *x* und *y* in der Region in gespeichert ist die `CRgn` Objekt.  
   
 ```  
@@ -682,7 +703,7 @@ BOOL PtInRegion(POINT point) const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Punkt in der Region ist; andernfalls 0.  
   
-##  <a name="a-namerectinregiona--crgnrectinregion"></a><a name="rectinregion"></a>CRgn::RectInRegion  
+##  <a name="rectinregion"></a>CRgn::RectInRegion  
  Bestimmt, ob alle Teile des Rechtecks durch angegebene `lpRect` innerhalb der Grenzen des Bereichs gespeichert, der `CRgn` Objekt.  
   
 ```  
@@ -708,7 +729,7 @@ BOOL RectInRegion(LPCRECT lpRect) const;
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn alle Teil des angegebenen Rechtecks liegt innerhalb der Grenzen des Bereichs; andernfalls 0.  
   
-##  <a name="a-namesetrectrgna--crgnsetrectrgn"></a><a name="setrectrgn"></a>CRgn::SetRectRgn  
+##  <a name="setrectrgn"></a>CRgn::SetRectRgn  
  Erstellt einen rechteckigen Bereich.  
   
 ```  

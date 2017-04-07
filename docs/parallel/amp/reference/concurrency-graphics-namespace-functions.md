@@ -6,23 +6,28 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::fast_math::copy_async
+- amp_graphics/Concurrency::fast_math::copy
+dev_langs:
+- C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1c17becb6bc3fb9b243a65652bf019b7fad1b8cd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a9def518f951e6fbae788b69893cc7205053b411
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency:: Graphics-Namespace-Funktionen
 |||  
 |-|-|  
-|[Copy-Funktion (Concurrency:: Graphics-Namespace)](#copy)|[Copy_async-Funktion (Concurrency:: Graphics-Namespace)](#copy_async)|  
+|[copy](#copy)|[copy_async](#copy_async)|  
   
-##  <a name="a-namecopya--copy-function-concurrencygraphics-namespace"></a><a name="copy"></a>Copy-Funktion (Concurrency:: Graphics-Namespace)  
+##  <a name="copy"></a>Copy-Funktion (Concurrency:: Graphics-Namespace)  
  Kopiert eine Quelltextur in einen Zielpuffer oder kopiert einen Quellpuffer in einen Zielpuffer. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.  
   
 ```  
@@ -168,7 +173,7 @@ void copy (
  `last`  
  Ein Endeiterator in den Quellcontainer.  
   
-##  <a name="a-namecopyasynca--copyasync-function-concurrencygraphics-namespace"></a><a name="copy_async"></a>Copy_async-Funktion (Concurrency:: Graphics-Namespace)  
+##  <a name="copy_async"></a>Copy_async-Funktion (Concurrency:: Graphics-Namespace)  
  Kopiert asynchron eine Quelltextur in einen Zielpuffer oder kopiert einen Quellpuffer in einen Zielpuffer und gibt eine [Completion_future](completion-future-class.md) -Objekt, das auf das gewartet werden kann. Es können keine Daten kopiert werden, wenn auf einer Zugriffstaste Code ausgeführt wird. Das allgemeine Format dieser Funktion ist `copy(src, dest)`.  
   
 ```  
@@ -309,7 +314,12 @@ concurrency::completion_future copy_async(_Src_type& _Src,
   
  `last`  
  Ein Endeiterator in den Quellcontainer.  
+
+## <a name="requirements"></a>Anforderungen  
+ **Header:** amp_graphics.h  
   
+ **Namespace:** Concurrency:: Graphics 
+
 ## <a name="see-also"></a>Siehe auch  
- [Concurrency:: Graphics-Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
 

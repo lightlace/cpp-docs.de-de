@@ -10,6 +10,51 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEdit
+- AFXWIN/CEdit
+- AFXWIN/CEdit::CEdit
+- AFXWIN/CEdit::CanUndo
+- AFXWIN/CEdit::CharFromPos
+- AFXWIN/CEdit::Clear
+- AFXWIN/CEdit::Copy
+- AFXWIN/CEdit::Create
+- AFXWIN/CEdit::Cut
+- AFXWIN/CEdit::EmptyUndoBuffer
+- AFXWIN/CEdit::FmtLines
+- AFXWIN/CEdit::GetCueBanner
+- AFXWIN/CEdit::GetFirstVisibleLine
+- AFXWIN/CEdit::GetHandle
+- AFXWIN/CEdit::GetHighlight
+- AFXWIN/CEdit::GetLimitText
+- AFXWIN/CEdit::GetLine
+- AFXWIN/CEdit::GetLineCount
+- AFXWIN/CEdit::GetMargins
+- AFXWIN/CEdit::GetModify
+- AFXWIN/CEdit::GetPasswordChar
+- AFXWIN/CEdit::GetRect
+- AFXWIN/CEdit::GetSel
+- AFXWIN/CEdit::HideBalloonTip
+- AFXWIN/CEdit::LimitText
+- AFXWIN/CEdit::LineFromChar
+- AFXWIN/CEdit::LineIndex
+- AFXWIN/CEdit::LineLength
+- AFXWIN/CEdit::LineScroll
+- AFXWIN/CEdit::Paste
+- AFXWIN/CEdit::PosFromChar
+- AFXWIN/CEdit::ReplaceSel
+- AFXWIN/CEdit::SetCueBanner
+- AFXWIN/CEdit::SetHandle
+- AFXWIN/CEdit::SetHighlight
+- AFXWIN/CEdit::SetLimitText
+- AFXWIN/CEdit::SetMargins
+- AFXWIN/CEdit::SetModify
+- AFXWIN/CEdit::SetPasswordChar
+- AFXWIN/CEdit::SetReadOnly
+- AFXWIN/CEdit::SetRect
+- AFXWIN/CEdit::SetRectNP
+- AFXWIN/CEdit::SetSel
+- AFXWIN/CEdit::SetTabStops
+- AFXWIN/CEdit::ShowBalloonTip
+- AFXWIN/CEdit::Undo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -177,7 +222,7 @@ class CEdit : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h  
   
-##  <a name="a-namecanundoa--ceditcanundo"></a><a name="canundo"></a>CEdit::CanUndo  
+##  <a name="canundo"></a>CEdit::CanUndo  
  Rufen Sie diese Funktion, um zu bestimmen, ob die letzte Bearbeitung rückgängig gemacht werden kann.  
   
 ```  
@@ -193,7 +238,7 @@ BOOL CanUndo() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::Undo](#undo).  
   
-##  <a name="a-namecedita--ceditcedit"></a><a name="cedit"></a>CEdit::CEdit  
+##  <a name="cedit"></a>CEdit::CEdit  
  Erstellt ein `CEdit`-Objekt.  
   
 ```  
@@ -206,7 +251,7 @@ CEdit();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#1;](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]  
   
-##  <a name="a-namecharfromposa--ceditcharfrompos"></a><a name="charfrompos"></a>CEdit::CharFromPos  
+##  <a name="charfrompos"></a>CEdit::CharFromPos  
  Rufen Sie diese Funktion zum Abrufen von nullbasierte Position und Zeichen Indizes des Zeichens am angegebenen Punkt in dieser nächsten `CEdit` Steuerelement  
   
 ```  
@@ -230,7 +275,7 @@ int CharFromPos(CPoint pt) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&3;](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]  
   
-##  <a name="a-namecleara--ceditclear"></a><a name="clear"></a>CEdit::Clear  
+##  <a name="clear"></a>CEdit::Clear  
  Mit dieser Funktion können (clear) die aktuelle Auswahl im Bearbeitungssteuerelement (sofern vorhanden) löschen.  
   
 ```  
@@ -247,7 +292,7 @@ void Clear();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&4;](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]  
   
-##  <a name="a-namecopya--ceditcopy"></a><a name="copy"></a>CEdit::Copy  
+##  <a name="copy"></a>CEdit::Copy  
  Rufen Sie diese Funktion zum Kopieren der aktuellen Auswahl (sofern vorhanden) in der Edit-Steuerelement in die Zwischenablage **CF_TEXT** Format.  
   
 ```  
@@ -260,7 +305,7 @@ void Copy();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&5;](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]  
   
-##  <a name="a-namecreatea--ceditcreate"></a><a name="create"></a>CEdit::Create  
+##  <a name="create"></a>CEdit::Create  
  Erstellt die Windows-Edit-Steuerelement und fügt es der `CEdit` Objekt.  
   
 ```  
@@ -309,7 +354,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#2;](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]  
   
-##  <a name="a-namecuta--ceditcut"></a><a name="cut"></a>CEdit::Cut  
+##  <a name="cut"></a>CEdit::Cut  
  Rufen Sie diese Funktion zum Löschen (Ausschneiden) die aktuelle Auswahl (sofern vorhanden) in das Steuerelement zum Bearbeiten und den gelöschten Text in die Zwischenablage kopieren **CF_TEXT** Format.  
   
 ```  
@@ -326,7 +371,7 @@ void Cut();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&6;](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]  
   
-##  <a name="a-nameemptyundobuffera--ceditemptyundobuffer"></a><a name="emptyundobuffer"></a>CEdit::EmptyUndoBuffer  
+##  <a name="emptyundobuffer"></a>CEdit::EmptyUndoBuffer  
  Rufen Sie diese Funktion zum Zurücksetzen (löschen) das Flag zum Rückgängigmachen des ein Edit-Steuerelement.  
   
 ```  
@@ -343,7 +388,7 @@ void EmptyUndoBuffer();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#7;](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]  
   
-##  <a name="a-namefmtlinesa--ceditfmtlines"></a><a name="fmtlines"></a>CEdit::FmtLines  
+##  <a name="fmtlines"></a>CEdit::FmtLines  
  Rufen Sie diese Funktion, um die Aufnahme der vorläufigen Zeilenumbruchzeichen in einem mehrzeiligen Bearbeitungssteuerelement on oder off festgelegt.  
   
 ```  
@@ -369,7 +414,7 @@ BOOL FmtLines(BOOL bAddEOL);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#8;](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]  
   
-##  <a name="a-namegetcuebannera--ceditgetcuebanner"></a><a name="getcuebanner"></a>CEdit::GetCueBanner  
+##  <a name="getcuebanner"></a>CEdit::GetCueBanner  
  Ruft den Text ab, der angezeigt wird, als Text Cue oder Tipp, in einem Bearbeitungssteuerelement, wenn das Steuerelement leer ist.  
   
 ```  
@@ -395,7 +440,7 @@ CString GetCueBanner() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [EM_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761572) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Weitere Informationen finden Sie unter der [Edit_GetCueBannerText](http://msdn.microsoft.com/library/windows/desktop/bb761695) Makro.  
   
-##  <a name="a-namegetfirstvisiblelinea--ceditgetfirstvisibleline"></a><a name="getfirstvisibleline"></a>CEdit::GetFirstVisibleLine  
+##  <a name="getfirstvisibleline"></a>CEdit::GetFirstVisibleLine  
  Rufen Sie diese Funktion, um zu bestimmen, die oberste sichtbare Zeile in einem Bearbeitungssteuerelement.  
   
 ```  
@@ -411,7 +456,7 @@ int GetFirstVisibleLine() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#9;](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]  
   
-##  <a name="a-namegethandlea--ceditgethandle"></a><a name="gethandle"></a>CEdit::GetHandle  
+##  <a name="gethandle"></a>CEdit::GetHandle  
  Rufen Sie diese Funktion, um ein Handle für ein mehrzeiliges Bearbeitungssteuerelement derzeit belegte Speicherplatz.  
   
 ```  
@@ -436,7 +481,7 @@ HLOCAL GetHandle() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#10;](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]  
   
-##  <a name="a-namegethighlighta--ceditgethighlight"></a><a name="gethighlight"></a>CEdit::GetHighlight  
+##  <a name="gethighlight"></a>CEdit::GetHighlight  
  Ruft die Indizes der ersten und letzten Zeichen in einem Bereich von Text, der in der aktuellen Edit-Steuerelement hervorgehoben ist.  
   
 ```  
@@ -458,7 +503,7 @@ BOOL GetHighlight(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [EM_GETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761578) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetlimittexta--ceditgetlimittext"></a><a name="getlimittext"></a>CEdit::GetLimitText  
+##  <a name="getlimittext"></a>CEdit::GetLimitText  
  Rufen Sie diese Memberfunktion zum Abrufen des Text-Grenzwert für diesen `CEdit` Objekt.  
   
 ```  
@@ -479,7 +524,7 @@ UINT GetLimitText() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#11;](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
-##  <a name="a-namegetlinea--ceditgetline"></a><a name="getline"></a>CEdit::GetLine  
+##  <a name="getline"></a>CEdit::GetLine  
  Mit dieser Funktion können Sie eine Textzeile aus einem Edit-Steuerelement abzurufen, und platziert es in `lpszBuffer`.  
   
 ```  
@@ -514,7 +559,7 @@ int GetLine(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::GetLineCount](#getlinecount).  
   
-##  <a name="a-namegetlinecounta--ceditgetlinecount"></a><a name="getlinecount"></a>CEdit::GetLineCount  
+##  <a name="getlinecount"></a>CEdit::GetLineCount  
  Rufen Sie diese Funktion, um die Anzahl der Zeilen in einem mehrzeiligen Bearbeitungssteuerelement ab.  
   
 ```  
@@ -532,7 +577,7 @@ int GetLineCount() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#12;](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]  
   
-##  <a name="a-namegetmarginsa--ceditgetmargins"></a><a name="getmargins"></a>CEdit::GetMargins  
+##  <a name="getmargins"></a>CEdit::GetMargins  
  Rufen Sie diese Memberfunktion zum Abrufen der linken und rechten Rand des Bearbeitungssteuerelements.  
   
 ```  
@@ -553,7 +598,7 @@ DWORD GetMargins() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="a-namegetmodifya--ceditgetmodify"></a><a name="getmodify"></a>CEdit::GetModify  
+##  <a name="getmodify"></a>CEdit::GetModify  
  Rufen Sie diese Funktion, um zu bestimmen, ob der Inhalt des Edit-Steuerelements geändert wurde.  
   
 ```  
@@ -571,7 +616,7 @@ BOOL GetModify() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#13;](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]  
   
-##  <a name="a-namegetpasswordchara--ceditgetpasswordchar"></a><a name="getpasswordchar"></a>CEdit::GetPasswordChar  
+##  <a name="getpasswordchar"></a>CEdit::GetPasswordChar  
  Rufen Sie diese Funktion, um das Kennwortzeichen abzurufen, das in einem Bearbeitungssteuerelement angezeigt wird, wenn der Benutzer Text eingibt.  
   
 ```  
@@ -589,7 +634,7 @@ TCHAR GetPasswordChar() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&14;](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]  
   
-##  <a name="a-namegetrecta--ceditgetrect"></a><a name="getrect"></a>CEdit::GetRect  
+##  <a name="getrect"></a>CEdit::GetRect  
  Rufen Sie diese Funktion, um die Formatierung Rechteck der Edit-Steuerelement abzurufen.  
   
 ```  
@@ -610,7 +655,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::LimitText](#limittext).  
   
-##  <a name="a-namegetsela--ceditgetsel"></a><a name="getsel"></a>CEdit::GetSel  
+##  <a name="getsel"></a>CEdit::GetSel  
  Rufen Sie diese Funktion, um die Start- und Endzeichen der aktuellen Auswahl (sofern vorhanden) in ein Bearbeitungssteuerelement, das über den Rückgabewert oder Parameter zu erhalten.  
   
 ```  
@@ -637,7 +682,7 @@ void GetSel(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#15;](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]  
   
-##  <a name="a-namehideballoontipa--cedithideballoontip"></a><a name="hideballoontip"></a>CEdit::HideBalloonTip  
+##  <a name="hideballoontip"></a>CEdit::HideBalloonTip  
  Blendet alle SprechblasenInfo aktuelle Bearbeitungssteuerelement zugeordnet.  
   
 ```  
@@ -650,7 +695,7 @@ BOOL HideBalloonTip();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion sendet die [EM_HIDEBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761604) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namelimittexta--ceditlimittext"></a><a name="limittext"></a>CEdit::LimitText  
+##  <a name="limittext"></a>CEdit::LimitText  
  Rufen Sie diese Funktion, um die Länge des Texts zu beschränken, die der Benutzer in ein Bearbeitungssteuerelement eingeben kann.  
   
 ```  
@@ -672,7 +717,7 @@ void LimitText(int nChars = 0);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&17;](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]  
   
-##  <a name="a-namelinefromchara--ceditlinefromchar"></a><a name="linefromchar"></a>CEdit::LineFromChar  
+##  <a name="linefromchar"></a>CEdit::LineFromChar  
  Rufen Sie diese Funktion, um die Zeilennummer der Zeile abzurufen, die den angegebenen Zeichenindex enthält.  
   
 ```  
@@ -696,7 +741,7 @@ int LineFromChar(int nIndex = -1) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&18;](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]  
   
-##  <a name="a-namelineindexa--ceditlineindex"></a><a name="lineindex"></a>CEdit::LineIndex  
+##  <a name="lineindex"></a>CEdit::LineIndex  
  Rufen Sie diese Funktion zum Abrufen des Zeichenindex einer Zeile in einem mehrzeiligen Edit-Steuerelement.  
   
 ```  
@@ -720,7 +765,7 @@ int LineIndex(int nLine = -1) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit Nr.&19;](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]  
   
-##  <a name="a-namelinelengtha--ceditlinelength"></a><a name="linelength"></a>CEdit::LineLength  
+##  <a name="linelength"></a>CEdit::LineLength  
  Ruft die Länge einer Zeile in einem Bearbeitungssteuerelement ab.  
   
 ```  
@@ -748,7 +793,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::LineIndex](#lineindex).  
   
-##  <a name="a-namelinescrolla--ceditlinescroll"></a><a name="linescroll"></a>CEdit::LineScroll  
+##  <a name="linescroll"></a>CEdit::LineScroll  
  Mit dieser Funktion wird den Text eines mehrzeiligen Bearbeitungssteuerelements einen Bildlauf durchführen.  
   
 ```  
@@ -776,7 +821,7 @@ void LineScroll(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::GetFirstVisibleLine](#getfirstvisibleline).  
   
-##  <a name="a-namepastea--ceditpaste"></a><a name="paste"></a>CEdit::Paste  
+##  <a name="paste"></a>CEdit::Paste  
  Rufen Sie diese Funktion zum Einfügen von Daten aus der Zwischenablage in die `CEdit` an der Einfügemarke.  
   
 ```  
@@ -791,7 +836,7 @@ void Paste();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&20;](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]  
   
-##  <a name="a-nameposfromchara--ceditposfromchar"></a><a name="posfromchar"></a>CEdit::PosFromChar  
+##  <a name="posfromchar"></a>CEdit::PosFromChar  
  Rufen Sie diese Funktion zum Abrufen der Position (obere linke Ecke) eines bestimmten Zeichens in dieser `CEdit` Objekt.  
   
 ```  
@@ -816,7 +861,7 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::LineFromChar](#linefromchar).  
   
-##  <a name="a-namereplacesela--ceditreplacesel"></a><a name="replacesel"></a>CEdit::ReplaceSel  
+##  <a name="replacesel"></a>CEdit::ReplaceSel  
  Mit dieser Funktion können Sie die aktuelle Auswahl in einem Bearbeitungssteuerelement mit den angegebenen Text ersetzt `lpszNewText`.  
   
 ```  
@@ -840,7 +885,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::LineIndex](#lineindex).  
   
-##  <a name="a-namesetcuebannera--ceditsetcuebanner"></a><a name="setcuebanner"></a>CEdit::SetCueBanner  
+##  <a name="setcuebanner"></a>CEdit::SetCueBanner  
  Legt den Text fest, der als das Stichwort Text angezeigt wird oder Tipp, in Bearbeitung steuern, wenn das Steuerelement leer ist.  
   
 ```  
@@ -874,7 +919,7 @@ BOOL SetCueBanner(
   
  [!code-cpp[NVC_MFC_CEdit_s&#1;2](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]  
   
-##  <a name="a-namesethandlea--ceditsethandle"></a><a name="sethandle"></a>CEdit::SetHandle  
+##  <a name="sethandle"></a>CEdit::SetHandle  
  Rufen Sie diese Funktion, um das Handle zu dem lokalen Speicher festzulegen, die von einem mehrzeilige Edit-Steuerelement verwendet wird.  
   
 ```  
@@ -904,7 +949,7 @@ void SetHandle(HLOCAL hBuffer);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#22;](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]  
   
-##  <a name="a-namesethighlighta--ceditsethighlight"></a><a name="sethighlight"></a>CEdit::SetHighlight  
+##  <a name="sethighlight"></a>CEdit::SetHighlight  
  Bearbeitungssteuerelement für Highlights ein Textbereich, der in der aktuellen angezeigt wird.  
   
 ```  
@@ -923,7 +968,7 @@ void SetHighlight(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetlimittexta--ceditsetlimittext"></a><a name="setlimittext"></a>CEdit::SetLimitText  
+##  <a name="setlimittext"></a>CEdit::SetLimitText  
  Rufen Sie diese Memberfunktion zum Festlegen des Text-Grenzwert für diesen `CEdit` Objekt.  
   
 ```  
@@ -946,7 +991,7 @@ void SetLimitText(UINT nMax);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="a-namesetmarginsa--ceditsetmargins"></a><a name="setmargins"></a>CEdit::SetMargins  
+##  <a name="setmargins"></a>CEdit::SetMargins  
  Rufen Sie diese Methode zum Festlegen der linken und rechten Rand des Bearbeitungssteuerelements.  
   
 ```  
@@ -972,7 +1017,7 @@ void SetMargins(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl).  
   
-##  <a name="a-namesetmodifya--ceditsetmodify"></a><a name="setmodify"></a>CEdit::SetModify  
+##  <a name="setmodify"></a>CEdit::SetModify  
  Rufen Sie diese Funktion zum Aktivieren bzw. deaktivieren Sie das geänderte Flag für ein Bearbeitungssteuerelement.  
   
 ```  
@@ -991,7 +1036,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::GetModify](#getmodify).  
   
-##  <a name="a-namesetpasswordchara--ceditsetpasswordchar"></a><a name="setpasswordchar"></a>CEdit::SetPasswordChar  
+##  <a name="setpasswordchar"></a>CEdit::SetPasswordChar  
  Rufen Sie diese Funktion zum Festlegen oder entfernen ein Kennwortzeichen in einem Bearbeitungssteuerelement angezeigt wird, wenn der Benutzer Text eingibt.  
   
 ```  
@@ -1016,7 +1061,7 @@ void SetPasswordChar(TCHAR ch);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit Nr.&16;](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]  
   
-##  <a name="a-namesetreadonlya--ceditsetreadonly"></a><a name="setreadonly"></a>CEdit::SetReadOnly  
+##  <a name="setreadonly"></a>CEdit::SetReadOnly  
  Ruft diese Funktion zum Festlegen des schreibgeschützten Status eines Steuerelements bearbeiten.  
   
 ```  
@@ -1038,7 +1083,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&23;](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]  
   
-##  <a name="a-namesetrecta--ceditsetrect"></a><a name="setrect"></a>CEdit::SetRect  
+##  <a name="setrect"></a>CEdit::SetRect  
  Rufen Sie diese Funktion, um die Dimensionen eines Rechtecks mit den angegebenen Koordinaten festgelegt.  
   
 ```  
@@ -1063,7 +1108,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CEdit&#24;](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]  
   
-##  <a name="a-namesetrectnpa--ceditsetrectnp"></a><a name="setrectnp"></a>CEdit::SetRectNP  
+##  <a name="setrectnp"></a>CEdit::SetRectNP  
  Rufen Sie diese Funktion, um die Formatierung Rechteck eines mehrzeiligen Edit-Steuerelements festzulegen.  
   
 ```  
@@ -1090,7 +1135,7 @@ void SetRectNP(LPCRECT lpRect);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::SetRect](#setrect).  
   
-##  <a name="a-namesetsela--ceditsetsel"></a><a name="setsel"></a>CEdit::SetSel  
+##  <a name="setsel"></a>CEdit::SetSel  
  Rufen Sie diese Funktion, um einen Bereich von Zeichen in einem Bearbeitungssteuerelement auszuwählen.  
   
 ```  
@@ -1124,7 +1169,7 @@ void SetSel(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEdit::GetSel](#getsel).  
   
-##  <a name="a-namesettabstopsa--ceditsettabstops"></a><a name="settabstops"></a>CEdit::SetTabStops  
+##  <a name="settabstops"></a>CEdit::SetTabStops  
  Rufen Sie diese Funktion zum Festlegen von Tabstopps in einem mehrzeiligen Edit-Steuerelement.  
   
 ```  
@@ -1164,7 +1209,7 @@ BOOL SetTabStops(
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CEditView::SetTabStops](ceditview-class.md#settabstops).  
   
-##  <a name="a-nameshowballoontipa--ceditshowballoontip"></a><a name="showballoontip"></a>CEdit::ShowBalloonTip  
+##  <a name="showballoontip"></a>CEdit::ShowBalloonTip  
  Zeigt eine SprechblasenInfo, die das aktuelle Edit-Steuerelement zugeordnet ist.  
   
 ```  
@@ -1202,7 +1247,7 @@ BOOL ShowBalloonTip(
   
  [!code-cpp[NVC_MFC_CEdit_s1&3;](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]  
   
-##  <a name="a-nameundoa--ceditundo"></a><a name="undo"></a>CEdit::Undo  
+##  <a name="undo"></a>CEdit::Undo  
  Rufen Sie diese Funktion zum Rückgängigmachen des letzten Bearbeitungssteuerelement Vorgangs.  
   
 ```  

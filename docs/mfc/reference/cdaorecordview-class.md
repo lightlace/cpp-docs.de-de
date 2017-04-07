@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoRecordView
+- AFXDAO/CDaoRecordView
+- AFXDAO/CDaoRecordView::CDaoRecordView
+- AFXDAO/CDaoRecordView::IsOnFirstRecord
+- AFXDAO/CDaoRecordView::IsOnLastRecord
+- AFXDAO/CDaoRecordView::OnGetRecordset
+- AFXDAO/CDaoRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +112,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdao.h  
   
-##  <a name="a-namecdaorecordviewa--cdaorecordviewcdaorecordview"></a><a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
+##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
  Wenn Sie ein Objekt eines Typs erstellen von abgeleiteten `CDaoRecordView`, rufen Sie eine Form des Konstruktors initialisieren das Ansichtsobjekt und identifizieren die Dialogfeldressource, auf denen die Sicht basiert.  
   
 ```  
@@ -134,7 +140,7 @@ explicit CDaoRecordView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDatabase&#35;](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--cdaorecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
  Rufen Sie diese Memberfunktion, um festzustellen, ob der aktuelle Datensatz des ersten Datensatzes im Recordset-Objekt, das dieser Eintrag Ansicht zugeordnet ist.  
   
 ```  
@@ -149,7 +155,7 @@ BOOL IsOnFirstRecord();
   
  Wenn der Benutzer auf den ersten Datensatz verschoben werden, müssen die Objekte der Benutzeroberfläche (z. B. Menüelemente oder Symbolleisten-Schaltflächen) Framework deaktiviert Sie für die Umstellung auf die erste oder vorherigen Datensatz.  
   
-##  <a name="a-nameisonlastrecorda--cdaorecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
  Rufen Sie diese Memberfunktion, um festzustellen, ob der aktuelle Datensatz der letzte Datensatz im Recordset-Objekt, das dieser Eintrag Ansicht zugeordnet ist.  
   
 ```  
@@ -165,7 +171,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  Das Ergebnis dieser Funktion ist zuverlässig, mit dem Unterschied, dass die Ansicht möglicherweise nicht erkennen Sie das Ende des Recordset-Objekts, bis der Benutzer, fügen Sie sie gewechselt hat. Der Benutzer muss hinter dem letzten Datensatz verschoben werden soll, bevor die Datensatzansicht erkennen kann, müssen sie alle Benutzeroberflächenobjekte für das Verschieben in den nächsten oder letzten Datensatz deaktivieren. Wenn der Benutzer hinter dem letzten Datensatz bewegt und dann wieder mit dem letzten Datensatz (oder davor), kann die Datensatzansicht Verfolgen der Position des Benutzers im Recordset und Benutzeroberflächenobjekte ordnungsgemäß deaktiviert.  
   
-##  <a name="a-nameongetrecordseta--cdaorecordviewongetrecordset"></a><a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
  Gibt einen Zeiger auf die `CDaoRecordset`-abgeleitete Objekt, das mit der Datensatzansicht zugeordnet.  
   
 ```  
@@ -180,7 +186,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
   
  Weitere Informationen und Beispiele finden Sie im Artikel [Datensatzansichten: Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="a-nameonmovea--cdaorecordviewonmove"></a><a name="onmove"></a>CDaoRecordView::OnMove  
+##  <a name="onmove"></a>CDaoRecordView::OnMove  
  Rufen Sie diese Memberfunktion zum Wechseln zu einem anderen Datensatz im Recordset, und ihre Felder den Steuerelementen der Datensatzansicht angezeigt.  
   
 ```  

@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e5ffb6d3321637b662790a32cce65e6908b4778d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: eb9db9ea42d50faa6e7a693c95795036e650a760
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="run-time-error-checking"></a>Laufzeitfehlerüberprüfung
@@ -47,12 +47,12 @@ Die C-Laufzeitbibliothek enthält die Funktionen, die Laufzeitfehlerüberprüfun
   
 ### <a name="run-time-error-checking-functions"></a>Funktionen der Laufzeitfehlerüberprüfung  
   
-|Funktion|Verwendung|.NET Framework-Entsprechung|  
-|--------------|---------|-------------------------------|  
-|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Gibt eine kurze Beschreibung des Typs einer Laufzeitfehlerüberprüfung zurück.||  
-|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Gibt die Gesamtzahl der Fehler zurück, die durch die Laufzeitfehlerüberprüfungen erkannt werden können.||  
-|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|Legt eine Funktion als Handler für das Melden von Laufzeitfehlerüberprüfungen fest.||  
-|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|Ordnet einen Fehler, der von den Laufzeitfehlerüberprüfungen erkannt wurde, einem Typ zu.||  
+|Funktion|Verwendung|  
+|--------------|---------|  
+|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Gibt eine kurze Beschreibung des Typs einer Laufzeitfehlerüberprüfung zurück.|  
+|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Gibt die Gesamtzahl der Fehler zurück, die durch die Laufzeitfehlerüberprüfungen erkannt werden können.|  
+|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|Legt eine Funktion als Handler für das Melden von Laufzeitfehlerüberprüfungen fest.|  
+|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|Ordnet einen Fehler, der von den Laufzeitfehlerüberprüfungen erkannt wurde, einem Typ zu.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)   

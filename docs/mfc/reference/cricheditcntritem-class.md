@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem::CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem::SyncToRichEditObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +91,7 @@ class CRichEditCntrItem : public COleClientItem
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxrich.h  
   
-##  <a name="a-namecricheditcntritema--cricheditcntritemcricheditcntritem"></a><a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem  
+##  <a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem  
  Rufen Sie diese Funktion zum Erstellen einer `CRichEditCntrItem` -Objekt und das Containerdokument hinzuzufügen.  
   
 ```  
@@ -109,7 +112,7 @@ CRichEditCntrItem(
   
  Weitere Informationen finden Sie unter der [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesynctoricheditobjecta--cricheditcntritemsynctoricheditobject"></a><a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject  
+##  <a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject  
  Rufen Sie diese Funktion zum Synchronisieren des Aspekts Gerät [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), dieses **CRichEditCntrltem** , angegeben durch *Reo*.  
   
 ```  

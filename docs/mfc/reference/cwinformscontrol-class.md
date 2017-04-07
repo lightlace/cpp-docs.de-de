@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinFormsControl
+- AFXWINFORMS/CWinFormsControl
+- AFXWINFORMS/CWinFormsControl::CWinFormsControl
+- AFXWINFORMS/CWinFormsControl::CreateManagedControl
+- AFXWINFORMS/CWinFormsControl::GetControl
+- AFXWINFORMS/CWinFormsControl::GetControlHandle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +96,7 @@ class CWinFormsControl : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwinforms.h  
   
-##  <a name="a-namecreatemanagedcontrola--cwinformscontrolcreatemanagedcontrol"></a><a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl  
+##  <a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl  
  Erstellt eine Windows Forms-Steuerelements in einem MFC-Container.  
   
 ```  
@@ -160,7 +165,7 @@ inline BOOL CreateManagedControl(
   
  Finden Sie unter [mithilfe eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) Beispiele zur Verwendung von Windows Forms steuert.  
   
-##  <a name="a-namecwinformscontrola--cwinformscontrolcwinformscontrol"></a><a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
+##  <a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
  Erstellt ein MFC-Windows Forms-Steuerelement-Wrapper-Objekt.  
   
 ```  
@@ -170,7 +175,7 @@ CWinFormsControl();
 ### <a name="remarks"></a>Hinweise  
  Windows Forms-Steuerelement instanziiert wird, beim Aufruf von [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="a-namegetcontrola--cwinformscontrolgetcontrol"></a><a name="getcontrol"></a>CWinFormsControl::GetControl  
+##  <a name="getcontrol"></a>CWinFormsControl::GetControl  
  Ruft einen Zeiger auf das Windows Forms-Steuerelement.  
   
 ```  
@@ -183,7 +188,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="example"></a>Beispiel  
   Finden Sie unter [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="a-namegetcontrolhandlea--cwinformscontrolgetcontrolhandle"></a><a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
+##  <a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
  Ruft ein Handle für das Windows Forms-Steuerelement ab.  
   
 ```  
@@ -196,7 +201,7 @@ inline HWND GetControlHandle() const;
 ### <a name="remarks"></a>Hinweise  
  `GetControlHandle`ist eine Hilfsmethode, die das Handle des Fensters in den .NET Framework-Steuerelement-Eigenschaften gespeichert zurückgibt. Kopiert der Fensterhandlewert zu [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) während des Aufrufs von [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
   
-##  <a name="a-nameoperator-gta--cwinformscontroloperator--gt"></a><a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
+##  <a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
  Ersetzt [CWinFormsControl::GetControl](#getcontrol) in Ausdrücken.  
   
 ```  
@@ -208,7 +213,7 @@ inline TManagedControl^  operator->() const;
   
  Weitere Informationen zu Windows Forms finden Sie unter [mithilfe eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="a-nameoperatortmanagedcontrola--cwinformscontroloperator-tmanagedcontrol"></a><a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
  Wandelt einen Typ ein Zeiger auf ein Windows Forms-Steuerelement.  
   
 ```  

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSimpleException
+- AFX/CSimpleException
+- AFX/CSimpleException::CSimpleException
+- AFX/CSimpleException::GetErrorMessage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +90,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
   
-##  <a name="a-namecsimpleexceptiona--csimpleexceptioncsimpleexception"></a><a name="csimpleexception"></a>CSimpleException::CSimpleException  
+##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
  Der Konstruktor.  
   
 ```  
@@ -102,7 +105,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="remarks"></a>Hinweise  
  Sie müssen normalerweise nicht direkt aufrufen dieses Konstruktors. Eine Funktion, die eine Ausnahme auslöst, sollte eine Instanz von Erstellen einer `CException`-abgeleitete Klasse, und rufen Sie dessen Konstruktor verwenden, oder es auslösen soll, verwenden Sie eine der MFC-Funktionen, wie z. B. [AfxThrowFileException](exception-processing.md#afxthrowfileexception), um einen vordefinierten Typ auslösen.  
   
-##  <a name="a-namegeterrormessagea--csimpleexceptiongeterrormessage"></a><a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
  Rufen Sie diese Memberfunktion, um Text zu einem Fehler bereitstellen, der aufgetreten ist.  
   
 ```  

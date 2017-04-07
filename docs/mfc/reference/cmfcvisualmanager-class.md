@@ -10,6 +10,176 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCVisualManager
+- AFXVISUALMANAGER/CMFCVisualManager
+- AFXVISUALMANAGER/CMFCVisualManager::AdjustFrames
+- AFXVISUALMANAGER/CMFCVisualManager::AdjustToolbars
+- AFXVISUALMANAGER/CMFCVisualManager::AlwaysHighlight3DTabs
+- AFXVISUALMANAGER/CMFCVisualManager::DestroyInstance
+- AFXVISUALMANAGER/CMFCVisualManager::DoDrawHeaderSortArrow
+- AFXVISUALMANAGER/CMFCVisualManager::DrawComboDropButtonWinXP
+- AFXVISUALMANAGER/CMFCVisualManager::DrawPushButtonWinXP
+- AFXVISUALMANAGER/CMFCVisualManager::DrawTextOnGlass
+- AFXVISUALMANAGER/CMFCVisualManager::GetAutoHideButtonTextColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetButtonExtraBorder
+- AFXVISUALMANAGER/CMFCVisualManager::GetCaptionBarTextColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetDockingTabsBordersSize
+- AFXVISUALMANAGER/CMFCVisualManager::GetHighlightedMenuItemTextColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetInstance
+- AFXVISUALMANAGER/CMFCVisualManager::GetMDITabsBordersSize
+- AFXVISUALMANAGER/CMFCVisualManager::GetMenuItemTextColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetMenuShadowDepth
+- AFXVISUALMANAGER/CMFCVisualManager::GetNcBtnSize
+- AFXVISUALMANAGER/CMFCVisualManager::GetPopupMenuBorderSize
+- AFXVISUALMANAGER/CMFCVisualManager::GetPropertyGridGroupColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetPropertyGridGroupTextColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetRibbonHyperlinkTextColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetRibbonPopupBorderSize
+- AFXVISUALMANAGER/CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetRibbonSliderColors
+- AFXVISUALMANAGER/CMFCVisualManager::GetShowAllMenuItemsHeight
+- AFXVISUALMANAGER/CMFCVisualManager::GetSmartDockingBaseGuideColors
+- AFXVISUALMANAGER/CMFCVisualManager::GetSmartDockingHighlightToneColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetSmartDockingTheme
+- AFXVISUALMANAGER/CMFCVisualManager::GetStatusBarPaneTextColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetTabFrameColors
+- AFXVISUALMANAGER/CMFCVisualManager::GetTabTextColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetToolbarButtonTextColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetToolbarDisabledTextColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetToolbarHighlightColor
+- AFXVISUALMANAGER/CMFCVisualManager::GetToolTipInfo
+- AFXVISUALMANAGER/CMFCVisualManager::HasOverlappedAutoHideButtons
+- AFXVISUALMANAGER/CMFCVisualManager::IsDockingTabHasBorder
+- AFXVISUALMANAGER/CMFCVisualManager::IsEmbossDisabledImage
+- AFXVISUALMANAGER/CMFCVisualManager::IsFadeInactiveImage
+- AFXVISUALMANAGER/CMFCVisualManager::IsMenuFlatLook
+- AFXVISUALMANAGER/CMFCVisualManager::IsOfficeXPStyleMenus
+- AFXVISUALMANAGER/CMFCVisualManager::IsOwnerDrawCaption
+- AFXVISUALMANAGER/CMFCVisualManager::IsShadowHighlightedImage
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawAutoHideButtonBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawBarGripper
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawBrowseButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawButtonBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawButtonSeparator
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawCaptionBarBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawCaptionBarButtonBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawCaptionBarInfoArea
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawCaptionButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawCheckBox
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawCheckBoxEx
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawComboBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawComboDropButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawControlBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawDefaultRibbonImage
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawEditBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawExpandingBox
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawFloatingToolbarBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawHeaderCtrlBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawHeaderCtrlSortArrow
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawMenuArrowOnCustomizeList
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawMenuBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawMenuCheck
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawMenuItemButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawMenuLabel
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawMenuResizeBar
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawMenuScrollButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawMenuShadow
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawMenuSystemButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawMiniFrameBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawOutlookBarSplitter
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawOutlookPageButtonBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawPaneBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawPaneCaption
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawPaneDivider
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawPopupWindowBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawPopupWindowButtonBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawPopupWindowCaption
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonApplicationButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonButtonBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonButtonsGroup
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonCaption
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonCaptionButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonCategory
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonCategoryCaption
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonCategoryScroll
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonCategoryTab
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonCheckBoxOnList
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonColorPaletteBox
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonDefaultPaneButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonGalleryBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonGalleryButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonKeyTip
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonLabel
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonMainPanelFrame
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonMenuCheckFrame
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonPanel
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonPanelCaption
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonProgressBar
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonRecentFilesFrame
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonSliderChannel
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonSliderThumb
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonSliderZoomButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonStatusBarPane
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawRibbonTabsFrame
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawScrollButtons
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawSeparator
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawShowAllMenuItems
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawSpinButtons
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawSplitterBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawSplitterBox
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawStatusBarPaneBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawStatusBarProgress
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawStatusBarSizeBox
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawTab
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawTabCloseButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawTabContent
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawTabsButtonBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawTask
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawTasksGroupAreaBorder
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawTasksGroupCaption
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawTasksGroupIcon
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawTearOffCaption
+- AFXVISUALMANAGER/CMFCVisualManager::OnDrawToolBoxFrame
+- AFXVISUALMANAGER/CMFCVisualManager::OnEraseMDIClientArea
+- AFXVISUALMANAGER/CMFCVisualManager::OnErasePopupWindowButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnEraseTabsArea
+- AFXVISUALMANAGER/CMFCVisualManager::OnEraseTabsButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnEraseTabsFrame
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillAutoHideButtonBackground
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillBarBackground
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillButtonInterior
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillCaptionBarButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillCommandsListBackground
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillHeaderCtrlBackground
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillMiniFrameCaption
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillOutlookBarCaption
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillOutlookPageButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillPopupWindowBackground
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillRibbonButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillRibbonEdit
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillRibbonMainPanelButton
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillRibbonMenuFrame
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillSplitterBackground
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillTab
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillTasksGroupInterior
+- AFXVISUALMANAGER/CMFCVisualManager::OnFillTasksPaneBackground
+- AFXVISUALMANAGER/CMFCVisualManager::OnHighlightMenuItem
+- AFXVISUALMANAGER/CMFCVisualManager::OnHighlightRarelyUsedMenuItems
+- AFXVISUALMANAGER/CMFCVisualManager::OnNcPaint
+- AFXVISUALMANAGER/CMFCVisualManager::OnSetWindowRegion
+- AFXVISUALMANAGER/CMFCVisualManager::OnUpdateSystemColors
+- AFXVISUALMANAGER/CMFCVisualManager::RedrawAll
+- AFXVISUALMANAGER/CMFCVisualManager::RibbonCategoryColorToRGB
+- AFXVISUALMANAGER/CMFCVisualManager::SetDefaultManager
+- AFXVISUALMANAGER/CMFCVisualManager::SetEmbossDisabledImage
+- AFXVISUALMANAGER/CMFCVisualManager::SetFadeInactiveImage
+- AFXVISUALMANAGER/CMFCVisualManager::SetMenuFlatLook
+- AFXVISUALMANAGER/CMFCVisualManager::SetMenuShadowDepth
+- AFXVISUALMANAGER/CMFCVisualManager::SetShadowHighlightedImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -287,7 +457,7 @@ CMFCVisualManager::GetInstance ()->RedrawAll ();
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxvisualmanager.h  
   
-##  <a name="a-nameadjustframesa--cmfcvisualmanageradjustframes"></a><a name="adjustframes"></a>CMFCVisualManager::AdjustFrames  
+##  <a name="adjustframes"></a>CMFCVisualManager::AdjustFrames  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -296,7 +466,7 @@ static void __stdcall AdjustFrames();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameadjusttoolbarsa--cmfcvisualmanageradjusttoolbars"></a><a name="adjusttoolbars"></a>CMFCVisualManager::AdjustToolbars  
+##  <a name="adjusttoolbars"></a>CMFCVisualManager::AdjustToolbars  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -305,7 +475,7 @@ static void __stdcall AdjustToolbars();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namealwayshighlight3dtabsa--cmfcvisualmanageralwayshighlight3dtabs"></a><a name="alwayshighlight3dtabs"></a>CMFCVisualManager::AlwaysHighlight3DTabs  
+##  <a name="alwayshighlight3dtabs"></a>CMFCVisualManager::AlwaysHighlight3DTabs  
  Das Framework ruft diese Methode, um zu bestimmen, ob 3D Registerkarten in der Anwendung immer markiert werden sollte.  
   
 ```  
@@ -318,7 +488,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion in einer abgeleiteten visuellen Manager und zurück `TRUE` Wenn 3D Registerkarten immer markiert werden sollte. Gibt die standardmäßige Implementierung dieser Methode `FALSE`.  
   
-##  <a name="a-namecmfcvisualmanagera--cmfcvisualmanagercmfcvisualmanager"></a><a name="cmfcvisualmanager"></a>CMFCVisualManager::CMFCVisualManager  
+##  <a name="cmfcvisualmanager"></a>CMFCVisualManager::CMFCVisualManager  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -330,7 +500,7 @@ CMFCVisualManager(BOOL bTemporary = FALSE);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedestroyinstancea--cmfcvisualmanagerdestroyinstance"></a><a name="destroyinstance"></a>CMFCVisualManager::DestroyInstance  
+##  <a name="destroyinstance"></a>CMFCVisualManager::DestroyInstance  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -342,7 +512,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedodrawheadersortarrowa--cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>CMFCVisualManager::DoDrawHeaderSortArrow  
+##  <a name="dodrawheadersortarrow"></a>CMFCVisualManager::DoDrawHeaderSortArrow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -361,7 +531,7 @@ void DoDrawHeaderSortArrow(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedrawcomboborderwinxpa--cmfcvisualmanagerdrawcomboborderwinxp"></a><a name="drawcomboborderwinxp"></a>CMFCVisualManager::DrawComboBorderWinXP  
+##  <a name="drawcomboborderwinxp"></a>CMFCVisualManager::DrawComboBorderWinXP  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -381,7 +551,7 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedrawcombodropbuttonwinxpa--cmfcvisualmanagerdrawcombodropbuttonwinxp"></a><a name="drawcombodropbuttonwinxp"></a>CMFCVisualManager::DrawComboDropButtonWinXP  
+##  <a name="drawcombodropbuttonwinxp"></a>CMFCVisualManager::DrawComboDropButtonWinXP  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -401,7 +571,7 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedrawpushbuttonwinxpa--cmfcvisualmanagerdrawpushbuttonwinxp"></a><a name="drawpushbuttonwinxp"></a>CMFCVisualManager::DrawPushButtonWinXP  
+##  <a name="drawpushbuttonwinxp"></a>CMFCVisualManager::DrawPushButtonWinXP  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -421,7 +591,7 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedrawtextonglassa--cmfcvisualmanagerdrawtextonglass"></a><a name="drawtextonglass"></a>CMFCVisualManager::DrawTextOnGlass  
+##  <a name="drawtextonglass"></a>CMFCVisualManager::DrawTextOnGlass  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -446,7 +616,7 @@ virtual BOOL DrawTextOnGlass(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameenabletoolbarbuttonfilla--cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>CMFCVisualManager::EnableToolbarButtonFill  
+##  <a name="enabletoolbarbuttonfill"></a>CMFCVisualManager::EnableToolbarButtonFill  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -458,7 +628,7 @@ void EnableToolbarButtonFill(BOOL bEnable = TRUE);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetautohidebuttontextcolora--cmfcvisualmanagergetautohidebuttontextcolor"></a><a name="getautohidebuttontextcolor"></a>CMFCVisualManager::GetAutoHideButtonTextColor  
+##  <a name="getautohidebuttontextcolor"></a>CMFCVisualManager::GetAutoHideButtonTextColor  
  Das Framework ruft diese Methode, um die Textfarbe einer Schaltfläche automatisch im Hintergrund abgerufen.  
   
 ```  
@@ -475,7 +645,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Textfarbe einer Schaltfläche automatisch im Hintergrund in der Anwendung anpassen. Zu diesem Zweck geben Sie die gewünschte Farbe, Ihrer Anwendung zur Verwendung als Farbe des Texts zurück.  
   
-##  <a name="a-namegetbuttonextrabordera--cmfcvisualmanagergetbuttonextraborder"></a><a name="getbuttonextraborder"></a>CMFCVisualManager::GetButtonExtraBorder  
+##  <a name="getbuttonextraborder"></a>CMFCVisualManager::GetButtonExtraBorder  
  Das Framework ruft diese Methode auf, wenn sie eine Symbolleisten-Schaltfläche zeichnet.  
   
 ```  
@@ -488,7 +658,7 @@ virtual CSize GetButtonExtraBorder() const;
 ### <a name="remarks"></a>Hinweise  
  Einige Designs müssen die Rahmen von Symbolleisten-Schaltflächen erweitern. Überschreiben Sie diese Methode in einen benutzerdefinierten visuellen Manager die Rahmen von Symbolleisten-Schaltflächen in der Anwendung zu erweitern. Die standardmäßige Implementierung dieser Methode gibt eine leere Größe zurück.  
   
-##  <a name="a-namegetcaptionbartextcolora--cmfcvisualmanagergetcaptionbartextcolor"></a><a name="getcaptionbartextcolor"></a>CMFCVisualManager::GetCaptionBarTextColor  
+##  <a name="getcaptionbartextcolor"></a>CMFCVisualManager::GetCaptionBarTextColor  
  Das Framework ruft diese Methode, um die Farbe des Texts in der Titelleiste abzurufen.  
   
 ```  
@@ -505,7 +675,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in der abgeleiteten Klasse die Textfarbe für eine Titelleiste anpassen. Geben Sie in der überschriebenen-Methode die gewünschte Farbe zurück.  
   
-##  <a name="a-namegetcaptionbuttonextrabordera--cmfcvisualmanagergetcaptionbuttonextraborder"></a><a name="getcaptionbuttonextraborder"></a>CMFCVisualManager::GetCaptionButtonExtraBorder  
+##  <a name="getcaptionbuttonextraborder"></a>CMFCVisualManager::GetCaptionButtonExtraBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -516,7 +686,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetdockingpanecaptionextraheighta--cmfcvisualmanagergetdockingpanecaptionextraheight"></a><a name="getdockingpanecaptionextraheight"></a>CMFCVisualManager::GetDockingPaneCaptionExtraHeight  
+##  <a name="getdockingpanecaptionextraheight"></a>CMFCVisualManager::GetDockingPaneCaptionExtraHeight  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -527,7 +697,7 @@ virtual int GetDockingPaneCaptionExtraHeight() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetdockingtabsborderssizea--cmfcvisualmanagergetdockingtabsborderssize"></a><a name="getdockingtabsborderssize"></a>CMFCVisualManager::GetDockingTabsBordersSize  
+##  <a name="getdockingtabsborderssize"></a>CMFCVisualManager::GetDockingTabsBordersSize  
  Das Framework ruft diese Methode auf, wenn sie einen Bereich zeichnet, der im Registerkartenformat und angedockt ist.  
   
 ```  
@@ -542,7 +712,7 @@ virtual int GetDockingTabsBordersSize();
   
  Überschreiben Sie diese Methode in einen benutzerdefinierten visuellen Manager der Border Size angedockten im Registerkartenformat Steuerleisten zu ändern. Die Standardimplementierung gibt -1 zurück.  
   
-##  <a name="a-namegethighlightedmenuitemtextcolora--cmfcvisualmanagergethighlightedmenuitemtextcolor"></a><a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManager::GetHighlightedMenuItemTextColor  
+##  <a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManager::GetHighlightedMenuItemTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -556,7 +726,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetinstancea--cmfcvisualmanagergetinstance"></a><a name="getinstance"></a>CMFCVisualManager::GetInstance  
+##  <a name="getinstance"></a>CMFCVisualManager::GetInstance  
  Gibt einen Zeiger auf die aktuelle [CMFCVisualManager Klasse](../../mfc/reference/cmfcvisualmanager-class.md) -Objekt für die Anwendung.  
   
 ```  
@@ -569,7 +739,7 @@ static CMFCVisualManager* GetInstance();
 ### <a name="remarks"></a>Hinweise  
  Eine Anwendung kann nur einen haben `CMFCVisualManager` -Objekt zugeordnet. Dies schließt alle von abgeleitetes Objekt der `CMFCVisualManager` Klasse. Diese Methode gibt einen Zeiger auf den zugehörigen `CMFCVisualManager` Objekt. Wenn die Anwendung eine zugeordnete keinen `CMFCVisualManager` Objekt, diese Methode erstellen, und ordnen es der Anwendung.  
   
-##  <a name="a-namegetmditabsborderssizea--cmfcvisualmanagergetmditabsborderssize"></a><a name="getmditabsborderssize"></a>CMFCVisualManager::GetMDITabsBordersSize  
+##  <a name="getmditabsborderssize"></a>CMFCVisualManager::GetMDITabsBordersSize  
  Das Framework ruft diese Methode zum Bestimmen der Border Size eines Fensters MDITabs, bevor sie das Fenster zeichnet.  
   
 ```  
@@ -582,7 +752,7 @@ virtual int GetMDITabsBordersSize();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion in einer abgeleiteten Klasse die Rahmenstärke des Fensters MDITabs anpassen.  
   
-##  <a name="a-namegetmenuimagemargina--cmfcvisualmanagergetmenuimagemargin"></a><a name="getmenuimagemargin"></a>CMFCVisualManager::GetMenuImageMargin  
+##  <a name="getmenuimagemargin"></a>CMFCVisualManager::GetMenuImageMargin  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -593,7 +763,7 @@ virtual int GetMenuImageMargin() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetmenuitemtextcolora--cmfcvisualmanagergetmenuitemtextcolor"></a><a name="getmenuitemtextcolor"></a>CMFCVisualManager::GetMenuItemTextColor  
+##  <a name="getmenuitemtextcolor"></a>CMFCVisualManager::GetMenuItemTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -612,7 +782,7 @@ virtual COLORREF GetMenuItemTextColor(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetmenushadowdeptha--cmfcvisualmanagergetmenushadowdepth"></a><a name="getmenushadowdepth"></a>CMFCVisualManager::GetMenuShadowDepth  
+##  <a name="getmenushadowdepth"></a>CMFCVisualManager::GetMenuShadowDepth  
  Ruft die Breite und Höhe des Schattens Menü.  
   
 ```  
@@ -625,7 +795,7 @@ int GetMenuShadowDepth() const;
 ### <a name="remarks"></a>Hinweise  
  Die Breite und Höhe des Schattens Menü entsprechen. Der Standardwert ist 7 Pixel.  
   
-##  <a name="a-namegetncbtnsizea--cmfcvisualmanagergetncbtnsize"></a><a name="getncbtnsize"></a>CMFCVisualManager::GetNcBtnSize  
+##  <a name="getncbtnsize"></a>CMFCVisualManager::GetNcBtnSize  
  Vom Framework aufgerufen, wenn die Größe der Systemschaltflächen abgerufen.  
   
 ```  
@@ -642,7 +812,7 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ### <a name="remarks"></a>Hinweise  
  Das System befinden sich die Schaltflächen in der Beschriftung des Rahmenfensters, die die Befehle zuordnen **schließen**, **Minimieren**, **Maximieren**, und **Wiederherstellung**. Die Größe dieser Schaltflächen hängt von der aktuellen visuellen Manager ab. Überschreiben Sie diese Methode, wenn Sie die Größe der Systemschaltflächen in Ihrer Anwendung anpassen möchten.  
   
-##  <a name="a-namegetpopupmenubordersizea--cmfcvisualmanagergetpopupmenubordersize"></a><a name="getpopupmenubordersize"></a>CMFCVisualManager::GetPopupMenuBorderSize  
+##  <a name="getpopupmenubordersize"></a>CMFCVisualManager::GetPopupMenuBorderSize  
  Das Framework ruft diese Methode zum Abrufen der Rahmengröße von Popupmenüs.  
   
 ```  
@@ -655,7 +825,7 @@ virtual int GetPopupMenuBorderSize() const;
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um die Rahmengröße von Popupmenüs in Ihrer Anwendung anpassen.  
   
-##  <a name="a-namegetpopupmenugapa--cmfcvisualmanagergetpopupmenugap"></a><a name="getpopupmenugap"></a>CMFCVisualManager::GetPopupMenuGap  
+##  <a name="getpopupmenugap"></a>CMFCVisualManager::GetPopupMenuGap  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -666,7 +836,7 @@ virtual int GetPopupMenuGap() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetpropertygridgroupcolora--cmfcvisualmanagergetpropertygridgroupcolor"></a><a name="getpropertygridgroupcolor"></a>CMFCVisualManager::GetPropertyGridGroupColor  
+##  <a name="getpropertygridgroupcolor"></a>CMFCVisualManager::GetPropertyGridGroupColor  
  Das Framework ruft diese Methode, um die Hintergrundfarbe einer Eigenschaftenliste abgerufen.  
   
 ```  
@@ -683,7 +853,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um die Hintergrundfarbe der Eigenschaftenliste in Ihrer Anwendung anpassen.  
   
-##  <a name="a-namegetpropertygridgrouptextcolora--cmfcvisualmanagergetpropertygridgrouptextcolor"></a><a name="getpropertygridgrouptextcolor"></a>CMFCVisualManager::GetPropertyGridGroupTextColor  
+##  <a name="getpropertygridgrouptextcolor"></a>CMFCVisualManager::GetPropertyGridGroupTextColor  
  Das Framework ruft diese Methode, um die Textfarbe der Eigenschaftenliste abzurufen.  
   
 ```  
@@ -700,7 +870,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um die Textfarbe der Eigenschaftenliste in Ihrer Anwendung anpassen.  
   
-##  <a name="a-namegetribbonhyperlinktextcolora--cmfcvisualmanagergetribbonhyperlinktextcolor"></a><a name="getribbonhyperlinktextcolor"></a>CMFCVisualManager::GetRibbonHyperlinkTextColor  
+##  <a name="getribbonhyperlinktextcolor"></a>CMFCVisualManager::GetRibbonHyperlinkTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -714,7 +884,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetribbonpopupbordersizea--cmfcvisualmanagergetribbonpopupbordersize"></a><a name="getribbonpopupbordersize"></a>CMFCVisualManager::GetRibbonPopupBorderSize  
+##  <a name="getribbonpopupbordersize"></a>CMFCVisualManager::GetRibbonPopupBorderSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -728,7 +898,7 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetribbonquickaccesstoolbarchevronoffseta--cmfcvisualmanagergetribbonquickaccesstoolbarchevronoffset"></a><a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset  
+##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -739,7 +909,7 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetribbonquickaccesstoolbarrightmargina--cmfcvisualmanagergetribbonquickaccesstoolbarrightmargin"></a><a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin  
+##  <a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -750,7 +920,7 @@ virtual int GetRibbonQuickAccessToolBarRightMargin();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetribbonquickaccesstoolbartextcolora--cmfcvisualmanagergetribbonquickaccesstoolbartextcolor"></a><a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor  
+##  <a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -764,7 +934,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetribbonslidercolorsa--cmfcvisualmanagergetribbonslidercolors"></a><a name="getribbonslidercolors"></a>CMFCVisualManager::GetRibbonSliderColors  
+##  <a name="getribbonslidercolors"></a>CMFCVisualManager::GetRibbonSliderColors  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -787,7 +957,7 @@ virtual void GetRibbonSliderColors(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetribbonstatusbartextcolora--cmfcvisualmanagergetribbonstatusbartextcolor"></a><a name="getribbonstatusbartextcolor"></a>CMFCVisualManager::GetRibbonStatusBarTextColor  
+##  <a name="getribbonstatusbartextcolor"></a>CMFCVisualManager::GetRibbonStatusBarTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -801,7 +971,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetshowallmenuitemsheighta--cmfcvisualmanagergetshowallmenuitemsheight"></a><a name="getshowallmenuitemsheight"></a>CMFCVisualManager::GetShowAllMenuItemsHeight  
+##  <a name="getshowallmenuitemsheight"></a>CMFCVisualManager::GetShowAllMenuItemsHeight  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -818,7 +988,7 @@ virtual int GetShowAllMenuItemsHeight(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetsmartdockingbaseguidecolorsa--cmfcvisualmanagergetsmartdockingbaseguidecolors"></a><a name="getsmartdockingbaseguidecolors"></a>CMFCVisualManager::GetSmartDockingBaseGuideColors  
+##  <a name="getsmartdockingbaseguidecolors"></a>CMFCVisualManager::GetSmartDockingBaseGuideColors  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -833,7 +1003,7 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetsmartdockinghighlighttonecolora--cmfcvisualmanagergetsmartdockinghighlighttonecolor"></a><a name="getsmartdockinghighlighttonecolor"></a>CMFCVisualManager::GetSmartDockingHighlightToneColor  
+##  <a name="getsmartdockinghighlighttonecolor"></a>CMFCVisualManager::GetSmartDockingHighlightToneColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -844,7 +1014,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetsmartdockingthemea--cmfcvisualmanagergetsmartdockingtheme"></a><a name="getsmartdockingtheme"></a>CMFCVisualManager::GetSmartDockingTheme  
+##  <a name="getsmartdockingtheme"></a>CMFCVisualManager::GetSmartDockingTheme  
  Gibt ein Design zur Anzeige von intelligenter andockmarkern.  
   
 ```  
@@ -856,7 +1026,7 @@ virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetstatusbarpanetextcolora--cmfcvisualmanagergetstatusbarpanetextcolor"></a><a name="getstatusbarpanetextcolor"></a>CMFCVisualManager::GetStatusBarPaneTextColor  
+##  <a name="getstatusbarpanetextcolor"></a>CMFCVisualManager::GetStatusBarPaneTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -873,7 +1043,7 @@ virtual COLORREF GetStatusBarPaneTextColor(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettabframecolorsa--cmfcvisualmanagergettabframecolors"></a><a name="gettabframecolors"></a>CMFCVisualManager::GetTabFrameColors  
+##  <a name="gettabframecolors"></a>CMFCVisualManager::GetTabFrameColors  
  Das Framework ruft diese Funktion bei der Satz von Farben für das Zeichnen einer im Registerkartenfenster abzurufen.  
   
 ```  
@@ -920,7 +1090,7 @@ virtual void GetTabFrameColors(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion in einer abgeleiteten Klasse, wenn der Satz von Farben anpassen, die das Framework verwendet wird, wenn eine im Registerkartenfenster gezeichnet werden soll.  
   
-##  <a name="a-namegettabhorzmargina--cmfcvisualmanagergettabhorzmargin"></a><a name="gettabhorzmargin"></a>CMFCVisualManager::GetTabHorzMargin  
+##  <a name="gettabhorzmargin"></a>CMFCVisualManager::GetTabHorzMargin  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -934,7 +1104,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettabtextcolora--cmfcvisualmanagergettabtextcolor"></a><a name="gettabtextcolor"></a>CMFCVisualManager::GetTabTextColor  
+##  <a name="gettabtextcolor"></a>CMFCVisualManager::GetTabTextColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -953,7 +1123,7 @@ virtual COLORREF GetTabTextColor(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettaskspanegroupcaptionheighta--cmfcvisualmanagergettaskspanegroupcaptionheight"></a><a name="gettaskspanegroupcaptionheight"></a>CMFCVisualManager::GetTasksPaneGroupCaptionHeight  
+##  <a name="gettaskspanegroupcaptionheight"></a>CMFCVisualManager::GetTasksPaneGroupCaptionHeight  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -964,7 +1134,7 @@ int GetTasksPaneGroupCaptionHeight() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettaskspanegroupcaptionhorzoffseta--cmfcvisualmanagergettaskspanegroupcaptionhorzoffset"></a><a name="gettaskspanegroupcaptionhorzoffset"></a>CMFCVisualManager::GetTasksPaneGroupCaptionHorzOffset  
+##  <a name="gettaskspanegroupcaptionhorzoffset"></a>CMFCVisualManager::GetTasksPaneGroupCaptionHorzOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -975,7 +1145,7 @@ int GetTasksPaneGroupCaptionHorzOffset() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettaskspanegroupcaptionvertoffseta--cmfcvisualmanagergettaskspanegroupcaptionvertoffset"></a><a name="gettaskspanegroupcaptionvertoffset"></a>CMFCVisualManager::GetTasksPaneGroupCaptionVertOffset  
+##  <a name="gettaskspanegroupcaptionvertoffset"></a>CMFCVisualManager::GetTasksPaneGroupCaptionVertOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -986,7 +1156,7 @@ int GetTasksPaneGroupCaptionVertOffset() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettaskspanegroupvertoffseta--cmfcvisualmanagergettaskspanegroupvertoffset"></a><a name="gettaskspanegroupvertoffset"></a>CMFCVisualManager::GetTasksPaneGroupVertOffset  
+##  <a name="gettaskspanegroupvertoffset"></a>CMFCVisualManager::GetTasksPaneGroupVertOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -997,7 +1167,7 @@ int GetTasksPaneGroupVertOffset() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettaskspanehorzmargina--cmfcvisualmanagergettaskspanehorzmargin"></a><a name="gettaskspanehorzmargin"></a>CMFCVisualManager::GetTasksPaneHorzMargin  
+##  <a name="gettaskspanehorzmargin"></a>CMFCVisualManager::GetTasksPaneHorzMargin  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1008,7 +1178,7 @@ int GetTasksPaneHorzMargin() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettaskspaneiconhorzoffseta--cmfcvisualmanagergettaskspaneiconhorzoffset"></a><a name="gettaskspaneiconhorzoffset"></a>CMFCVisualManager::GetTasksPaneIconHorzOffset  
+##  <a name="gettaskspaneiconhorzoffset"></a>CMFCVisualManager::GetTasksPaneIconHorzOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1019,7 +1189,7 @@ int GetTasksPaneIconHorzOffset() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettaskspaneiconvertoffseta--cmfcvisualmanagergettaskspaneiconvertoffset"></a><a name="gettaskspaneiconvertoffset"></a>CMFCVisualManager::GetTasksPaneIconVertOffset  
+##  <a name="gettaskspaneiconvertoffset"></a>CMFCVisualManager::GetTasksPaneIconVertOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1030,7 +1200,7 @@ int GetTasksPaneIconVertOffset() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettaskspanetaskhorzoffseta--cmfcvisualmanagergettaskspanetaskhorzoffset"></a><a name="gettaskspanetaskhorzoffset"></a>CMFCVisualManager::GetTasksPaneTaskHorzOffset  
+##  <a name="gettaskspanetaskhorzoffset"></a>CMFCVisualManager::GetTasksPaneTaskHorzOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1041,7 +1211,7 @@ int GetTasksPaneTaskHorzOffset() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettaskspanevertmargina--cmfcvisualmanagergettaskspanevertmargin"></a><a name="gettaskspanevertmargin"></a>CMFCVisualManager::GetTasksPaneVertMargin  
+##  <a name="gettaskspanevertmargin"></a>CMFCVisualManager::GetTasksPaneVertMargin  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1052,7 +1222,7 @@ int GetTasksPaneVertMargin() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettoolbarbuttontextcolora--cmfcvisualmanagergettoolbarbuttontextcolor"></a><a name="gettoolbarbuttontextcolor"></a>CMFCVisualManager::GetToolbarButtonTextColor  
+##  <a name="gettoolbarbuttontextcolor"></a>CMFCVisualManager::GetToolbarButtonTextColor  
  Das Framework ruft diese Methode, um die Textfarbe für eine Symbolleisten-Schaltfläche zu bestimmen.  
   
 ```  
@@ -1076,7 +1246,7 @@ virtual COLORREF GetToolbarButtonTextColor(
   
  Überschreiben Sie diese Funktion, um die Textfarbe für eine Symbolleisten-Schaltfläche in der Anwendung anpassen.  
   
-##  <a name="a-namegettoolbarcustomizebuttonmargina--cmfcvisualmanagergettoolbarcustomizebuttonmargin"></a><a name="gettoolbarcustomizebuttonmargin"></a>CMFCVisualManager::GetToolBarCustomizeButtonMargin  
+##  <a name="gettoolbarcustomizebuttonmargin"></a>CMFCVisualManager::GetToolBarCustomizeButtonMargin  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1087,7 +1257,7 @@ virtual int GetToolBarCustomizeButtonMargin() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettoolbardisabledcolora--cmfcvisualmanagergettoolbardisabledcolor"></a><a name="gettoolbardisabledcolor"></a>CMFCVisualManager::GetToolbarDisabledColor  
+##  <a name="gettoolbardisabledcolor"></a>CMFCVisualManager::GetToolbarDisabledColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1098,7 +1268,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettoolbardisabledtextcolora--cmfcvisualmanagergettoolbardisabledtextcolor"></a><a name="gettoolbardisabledtextcolor"></a>CMFCVisualManager::GetToolbarDisabledTextColor  
+##  <a name="gettoolbardisabledtextcolor"></a>CMFCVisualManager::GetToolbarDisabledTextColor  
  Das Framework ruft diese Funktion, um die Textfarbe der Symbolleisten-Schaltflächen zu ermitteln, die nicht verfügbar sind.  
   
 ```  
@@ -1111,7 +1281,7 @@ virtual COLORREF GetToolbarDisabledTextColor();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen benutzerdefinierten visuellen Manager die Textfarbe der Symbolleisten-Schaltflächen festlegen, die nicht verfügbar sind.  
   
-##  <a name="a-namegettoolbarhighlightcolora--cmfcvisualmanagergettoolbarhighlightcolor"></a><a name="gettoolbarhighlightcolor"></a>CMFCVisualManager::GetToolbarHighlightColor  
+##  <a name="gettoolbarhighlightcolor"></a>CMFCVisualManager::GetToolbarHighlightColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1122,7 +1292,7 @@ virtual COLORREF GetToolbarHighlightColor();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettooltipinfoa--cmfcvisualmanagergettooltipinfo"></a><a name="gettooltipinfo"></a>CMFCVisualManager::GetToolTipInfo  
+##  <a name="gettooltipinfo"></a>CMFCVisualManager::GetToolTipInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1139,7 +1309,7 @@ virtual BOOL GetToolTipInfo(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namehasoverlappedautohidebuttonsa--cmfcvisualmanagerhasoverlappedautohidebuttons"></a><a name="hasoverlappedautohidebuttons"></a>CMFCVisualManager::HasOverlappedAutoHideButtons  
+##  <a name="hasoverlappedautohidebuttons"></a>CMFCVisualManager::HasOverlappedAutoHideButtons  
  Gibt zurück, ob automatisch ausblenden-Schaltflächen in der aktuellen visuellen Manager überlappen.  
   
 ```  
@@ -1149,7 +1319,7 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn Automatisches Ausblenden-Schaltflächen überlappen; `FALSE` ist dies nicht der Fall.  
   
-##  <a name="a-nameisautodestroya--cmfcvisualmanagerisautodestroy"></a><a name="isautodestroy"></a>CMFCVisualManager::IsAutoDestroy  
+##  <a name="isautodestroy"></a>CMFCVisualManager::IsAutoDestroy  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1160,7 +1330,7 @@ BOOL IsAutoDestroy() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisdefaultwinxppopupbuttona--cmfcvisualmanagerisdefaultwinxppopupbutton"></a><a name="isdefaultwinxppopupbutton"></a>CMFCVisualManager::IsDefaultWinXPPopupButton  
+##  <a name="isdefaultwinxppopupbutton"></a>CMFCVisualManager::IsDefaultWinXPPopupButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1174,7 +1344,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisdockingtabhasbordera--cmfcvisualmanagerisdockingtabhasborder"></a><a name="isdockingtabhasborder"></a>CMFCVisualManager::IsDockingTabHasBorder  
+##  <a name="isdockingtabhasborder"></a>CMFCVisualManager::IsDockingTabHasBorder  
  Gibt zurück, ob die aktuelle visuelle Manager Rahmen um Bereiche zeichnet, die im Registerkartenformat und angedockt sind.  
   
 ```  
@@ -1187,7 +1357,7 @@ virtual BOOL IsDockingTabHasBorder();
 ### <a name="remarks"></a>Hinweise  
  Angedockten Bereiche werden im Registerkartenformat, wenn mehrere Bereiche an derselben Position angedockt sind.  
   
-##  <a name="a-nameisembossdisabledimagea--cmfcvisualmanagerisembossdisabledimage"></a><a name="isembossdisabledimage"></a>CMFCVisualManager::IsEmbossDisabledImage  
+##  <a name="isembossdisabledimage"></a>CMFCVisualManager::IsEmbossDisabledImage  
  Gibt an, ob das Framework Abbilder wird als Relief formatiert, die nicht verfügbar sind.  
   
 ```  
@@ -1200,7 +1370,7 @@ BOOL IsEmbossDisabledImage() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird aufgerufen, indem [CMFCToolBarImages::Draw](../../mfc/reference/cmfctoolbarimages-class.md#draw) Wenn zeichnet ein Bild auf der Symbolleiste, die nicht verfügbar ist.  
   
-##  <a name="a-nameisfadeinactiveimagea--cmfcvisualmanagerisfadeinactiveimage"></a><a name="isfadeinactiveimage"></a>CMFCVisualManager::IsFadeInactiveImage  
+##  <a name="isfadeinactiveimage"></a>CMFCVisualManager::IsFadeInactiveImage  
  Das Framework ruft diese Methode auf, wenn sie inaktive Bilder auf der Symbolleiste oder in einem Menü zeichnet.  
   
 ```  
@@ -1213,7 +1383,7 @@ BOOL IsFadeInactiveImage() const;
 ### <a name="remarks"></a>Hinweise  
  Aktivieren oder deaktivieren Sie den Effekt durch Aufrufen können [CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage). Der Effekt ist, macht nicht verfügbar Bilder verblasst angezeigt werden.  
   
-##  <a name="a-nameisframemenucheckeditemsa--cmfcvisualmanagerisframemenucheckeditems"></a><a name="isframemenucheckeditems"></a>CMFCVisualManager::IsFrameMenuCheckedItems  
+##  <a name="isframemenucheckeditems"></a>CMFCVisualManager::IsFrameMenuCheckedItems  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1224,7 +1394,7 @@ BOOL IsFrameMenuCheckedItems() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameishighlightonenotetabsa--cmfcvisualmanagerishighlightonenotetabs"></a><a name="ishighlightonenotetabs"></a>CMFCVisualManager::IsHighlightOneNoteTabs  
+##  <a name="ishighlightonenotetabs"></a>CMFCVisualManager::IsHighlightOneNoteTabs  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1235,7 +1405,7 @@ virtual BOOL IsHighlightOneNoteTabs() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameishighlightwholemenuitema--cmfcvisualmanagerishighlightwholemenuitem"></a><a name="ishighlightwholemenuitem"></a>CMFCVisualManager::IsHighlightWholeMenuItem  
+##  <a name="ishighlightwholemenuitem"></a>CMFCVisualManager::IsHighlightWholeMenuItem  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1246,7 +1416,7 @@ virtual BOOL IsHighlightWholeMenuItem();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameislayeredribbonkeytipa--cmfcvisualmanagerislayeredribbonkeytip"></a><a name="islayeredribbonkeytip"></a>CMFCVisualManager::IsLayeredRibbonKeyTip  
+##  <a name="islayeredribbonkeytip"></a>CMFCVisualManager::IsLayeredRibbonKeyTip  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1257,7 +1427,7 @@ virtual BOOL IsLayeredRibbonKeyTip() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameismenuflatlooka--cmfcvisualmanagerismenuflatlook"></a><a name="ismenuflatlook"></a>CMFCVisualManager::IsMenuFlatLook  
+##  <a name="ismenuflatlook"></a>CMFCVisualManager::IsMenuFlatLook  
  Gibt an, ob die Schaltflächen flach dargestellt.  
   
 ```  
@@ -1270,7 +1440,7 @@ BOOL IsMenuFlatLook() const;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig werden nicht Menüschaltflächen flach angezeigt. Verwenden der [CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook) Methode, um dieses Verhalten zu ändern. Wenn Menüschaltflächen flach dargestellt, ändern sie Darstellung nicht wenn der Benutzer darauf klickt.  
   
-##  <a name="a-nameisofficexpstylemenusa--cmfcvisualmanagerisofficexpstylemenus"></a><a name="isofficexpstylemenus"></a>CMFCVisualManager::IsOfficeXPStyleMenus  
+##  <a name="isofficexpstylemenus"></a>CMFCVisualManager::IsOfficeXPStyleMenus  
  Gibt an, ob die visuelle Manager Office XP-Stil Menüs implementiert.  
   
 ```  
@@ -1283,7 +1453,7 @@ virtual BOOL IsOfficeXPStyleMenus() const;
 ### <a name="remarks"></a>Hinweise  
  Die [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) ruft diese Methode, wenn das Menü und Schatten gezeichnet wird. Standardmäßig gibt diese Methode `FALSE`. Wenn Sie Popupmenüs ähnelt den Popup-Menüs in Office verwenden möchten, überschreiben Sie diese Methode in einen benutzerdefinierten visuellen Manager und zurückgeben `TRUE`.  
   
-##  <a name="a-nameisoffsetpressedbuttona--cmfcvisualmanagerisoffsetpressedbutton"></a><a name="isoffsetpressedbutton"></a>CMFCVisualManager::IsOffsetPressedButton  
+##  <a name="isoffsetpressedbutton"></a>CMFCVisualManager::IsOffsetPressedButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1294,7 +1464,7 @@ virtual BOOL IsOffsetPressedButton() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisownerdrawcaptiona--cmfcvisualmanagerisownerdrawcaption"></a><a name="isownerdrawcaption"></a>CMFCVisualManager::IsOwnerDrawCaption  
+##  <a name="isownerdrawcaption"></a>CMFCVisualManager::IsOwnerDrawCaption  
  Gibt an, ob die aktuelle visuelle Manager Beschriftungen Ownerdrawn-implementiert.  
   
 ```  
@@ -1304,7 +1474,7 @@ virtual BOOL IsOwnerDrawCaption();
 ### <a name="return-value"></a>Rückgabewert  
  `TRUE`Wenn das Rahmenfenster in der Anwendung Ownerdrawn-Beschriftungen vorhanden. `FALSE` andernfalls.  
   
-##  <a name="a-nameisownerdrawmenuchecka--cmfcvisualmanagerisownerdrawmenucheck"></a><a name="isownerdrawmenucheck"></a>CMFCVisualManager::IsOwnerDrawMenuCheck  
+##  <a name="isownerdrawmenucheck"></a>CMFCVisualManager::IsOwnerDrawMenuCheck  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1315,7 +1485,7 @@ virtual BOOL IsOwnerDrawMenuCheck();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameisshadowhighlightedimagea--cmfcvisualmanagerisshadowhighlightedimage"></a><a name="isshadowhighlightedimage"></a>CMFCVisualManager::IsShadowHighlightedImage  
+##  <a name="isshadowhighlightedimage"></a>CMFCVisualManager::IsShadowHighlightedImage  
  Gibt an, ob visuelle Manager Schatten angezeigt wird, beim hervorgehobenen Bilder zu rendern.  
   
 ```  
@@ -1325,7 +1495,7 @@ BOOL IsShadowHighlightedImage() const;
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn visuelle Manager Schatten unter hervorgehobenen Bilder angezeigt; andernfalls 0.  
   
-##  <a name="a-nameistoolbarbuttonfillenableda--cmfcvisualmanageristoolbarbuttonfillenabled"></a><a name="istoolbarbuttonfillenabled"></a>CMFCVisualManager::IsToolbarButtonFillEnabled  
+##  <a name="istoolbarbuttonfillenabled"></a>CMFCVisualManager::IsToolbarButtonFillEnabled  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1336,7 +1506,7 @@ BOOL IsToolbarButtonFillEnabled() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameistoolbarroundshapea--cmfcvisualmanageristoolbarroundshape"></a><a name="istoolbarroundshape"></a>CMFCVisualManager::IsToolbarRoundShape  
+##  <a name="istoolbarroundshape"></a>CMFCVisualManager::IsToolbarRoundShape  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1350,7 +1520,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameiswindowsthemingsupporteda--cmfcvisualmanageriswindowsthemingsupported"></a><a name="iswindowsthemingsupported"></a>CMFCVisualManager::IsWindowsThemingSupported  
+##  <a name="iswindowsthemingsupported"></a>CMFCVisualManager::IsWindowsThemingSupported  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1361,7 +1531,7 @@ virtual BOOL IsWindowsThemingSupported() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonactivateappa--cmfcvisualmanageronactivateapp"></a><a name="onactivateapp"></a>CMFCVisualManager::OnActivateApp  
+##  <a name="onactivateapp"></a>CMFCVisualManager::OnActivateApp  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1376,7 +1546,7 @@ virtual void OnActivateApp(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawautohidebuttonbordera--cmfcvisualmanagerondrawautohidebuttonborder"></a><a name="ondrawautohidebuttonborder"></a>CMFCVisualManager::OnDrawAutoHideButtonBorder  
+##  <a name="ondrawautohidebuttonborder"></a>CMFCVisualManager::OnDrawAutoHideButtonBorder  
  Das Framework ruft diese Methode auf, wenn es den Rahmen einer Schaltfläche zum automatischen Ausblenden zeichnet.  
   
 ```  
@@ -1405,7 +1575,7 @@ virtual void OnDrawAutoHideButtonBorder(
   
  Die `rectBorderSize` Parameter enthält nicht die Koordinaten des Rahmens. Es enthält die Größe des Rahmens in der `top`, `bottom`, `left`, und `right` -Datenmember. Ein Wert kleiner oder gleich 0 gibt kein Rahmen auf dieser Seite der Schaltfläche automatisch im Hintergrund an.  
   
-##  <a name="a-nameondrawbargrippera--cmfcvisualmanagerondrawbargripper"></a><a name="ondrawbargripper"></a>CMFCVisualManager::OnDrawBarGripper  
+##  <a name="ondrawbargripper"></a>CMFCVisualManager::OnDrawBarGripper  
  Vom Framework aufgerufen, wenn sie den Ziehpunkt für eine Steuerleiste zeichnet.  
   
 ```  
@@ -1432,7 +1602,7 @@ virtual void OnDrawBarGripper(
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung dieser Methode wird die standardmäßige Ziehpunkte angezeigt. Um die Darstellung des ziehelements anzupassen, überschreiben Sie diese Methode in einer benutzerdefinierten Klasse aus der `CMFCVisualManager` Klasse.  
   
-##  <a name="a-nameondrawbrowsebuttona--cmfcvisualmanagerondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFCVisualManager::OnDrawBrowseButton  
+##  <a name="ondrawbrowsebutton"></a>CMFCVisualManager::OnDrawBrowseButton  
  Das Framework ruft diese Methode auf, wenn sie die Schaltfläche zum Durchsuchen für ein Bearbeitungssteuerelement zeichnet.  
   
 ```  
@@ -1466,7 +1636,7 @@ virtual BOOL OnDrawBrowseButton(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion in einer abgeleiteten Klasse überschreiben, wenn Sie die Darstellung der Schaltflächen zum Durchsuchen in Instanzen von anpassen möchten die [CMFCEditBrowseCtrl Klasse](../../mfc/reference/cmfceditbrowsectrl-class.md). Die möglichen Werte für den Status der Schaltfläche sind `ButtonsIsRegular`, `ButtonsIsPressed`, und `ButtonsIsHighlighted`.  
   
-##  <a name="a-nameondrawbuttonbordera--cmfcvisualmanagerondrawbuttonborder"></a><a name="ondrawbuttonborder"></a>CMFCVisualManager::OnDrawButtonBorder  
+##  <a name="ondrawbuttonborder"></a>CMFCVisualManager::OnDrawButtonBorder  
  Das Framework ruft diese Methode auf, wenn sie den Rahmen einer Symbolleisten-Schaltfläche zeichnet.  
   
 ```  
@@ -1495,7 +1665,7 @@ virtual void OnDrawButtonBorder(
   
  Sind die möglichen Zustände einer Symbolleisten-Schaltfläche `ButtonsIsRegular`, `ButtonsIsPressed`, oder `ButtonsIsHighlighted`.  
   
-##  <a name="a-nameondrawbuttonseparatora--cmfcvisualmanagerondrawbuttonseparator"></a><a name="ondrawbuttonseparator"></a>CMFCVisualManager::OnDrawButtonSeparator  
+##  <a name="ondrawbuttonseparator"></a>CMFCVisualManager::OnDrawButtonSeparator  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1516,7 +1686,7 @@ virtual void OnDrawButtonSeparator(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawcaptionbarbordera--cmfcvisualmanagerondrawcaptionbarborder"></a><a name="ondrawcaptionbarborder"></a>CMFCVisualManager::OnDrawCaptionBarBorder  
+##  <a name="ondrawcaptionbarborder"></a>CMFCVisualManager::OnDrawCaptionBarBorder  
  Das Framework ruft diese Methode, wenn der Rahmen gezeichnet ein [CMFCCaptionBar Class](../../mfc/reference/cmfccaptionbar-class.md) Objekt.  
   
 ```  
@@ -1547,7 +1717,7 @@ virtual void OnDrawCaptionBarBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Darstellung des Rahmens der Titelleiste anpassen.  
   
-##  <a name="a-nameondrawcaptionbarbuttonbordera--cmfcvisualmanagerondrawcaptionbarbuttonborder"></a><a name="ondrawcaptionbarbuttonborder"></a>CMFCVisualManager::OnDrawCaptionBarButtonBorder  
+##  <a name="ondrawcaptionbarbuttonborder"></a>CMFCVisualManager::OnDrawCaptionBarButtonBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1574,7 +1744,7 @@ virtual void OnDrawCaptionBarButtonBorder(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawcaptionbarinfoareaa--cmfcvisualmanagerondrawcaptionbarinfoarea"></a><a name="ondrawcaptionbarinfoarea"></a>CMFCVisualManager::OnDrawCaptionBarInfoArea  
+##  <a name="ondrawcaptionbarinfoarea"></a>CMFCVisualManager::OnDrawCaptionBarInfoArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1591,7 +1761,7 @@ virtual void OnDrawCaptionBarInfoArea(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawcaptionbuttona--cmfcvisualmanagerondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a>CMFCVisualManager::OnDrawCaptionButton  
+##  <a name="ondrawcaptionbutton"></a>CMFCVisualManager::OnDrawCaptionButton  
  Das Framework ruft diese Methode auf, wenn er zeichnet einen [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md) Objekt.  
   
 ```  
@@ -1632,7 +1802,7 @@ virtual void OnDrawCaptionButton (
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Anpassen der Darstellung von Schaltflächen mit Beschriftung.  
   
-##  <a name="a-nameondrawcheckboxa--cmfcvisualmanagerondrawcheckbox"></a><a name="ondrawcheckbox"></a>CMFCVisualManager::OnDrawCheckBox  
+##  <a name="ondrawcheckbox"></a>CMFCVisualManager::OnDrawCheckBox  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1653,7 +1823,7 @@ virtual void OnDrawCheckBox(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawcheckboxexa--cmfcvisualmanagerondrawcheckboxex"></a><a name="ondrawcheckboxex"></a>CMFCVisualManager::OnDrawCheckBoxEx  
+##  <a name="ondrawcheckboxex"></a>CMFCVisualManager::OnDrawCheckBoxEx  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1676,7 +1846,7 @@ virtual void OnDrawCheckBoxEx(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawcombobordera--cmfcvisualmanagerondrawcomboborder"></a><a name="ondrawcomboborder"></a>CMFCVisualManager::OnDrawComboBorder  
+##  <a name="ondrawcomboborder"></a>CMFCVisualManager::OnDrawComboBorder  
  Das Framework ruft diese Methode, wenn es den Rahmen um eine Instanz der zeichnet die [CMFCToolBarComboBoxButton Klasse](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
   
 ```  
@@ -1711,7 +1881,7 @@ virtual void OnDrawComboBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in der abgeleiteten visuellen Manager anpassen die Darstellung des Rahmens des Kombinationsfelds.  
   
-##  <a name="a-nameondrawcombodropbuttona--cmfcvisualmanagerondrawcombodropbutton"></a><a name="ondrawcombodropbutton"></a>CMFCVisualManager::OnDrawComboDropButton  
+##  <a name="ondrawcombodropbutton"></a>CMFCVisualManager::OnDrawComboDropButton  
  Das Framework ruft diese Methode auf, wenn sie die Dropdownschaltfläche des zeichnet einen [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
   
 ```  
@@ -1746,7 +1916,7 @@ virtual void OnDrawComboDropButton(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in der abgeleiteten visuellen Manager zum Anpassen der Darstellung der Dropdown-Schaltfläche des Kombinationsfelds-Schaltfläche.  
   
-##  <a name="a-nameondrawcontrolbordera--cmfcvisualmanagerondrawcontrolborder"></a><a name="ondrawcontrolborder"></a>CMFCVisualManager::OnDrawControlBorder  
+##  <a name="ondrawcontrolborder"></a>CMFCVisualManager::OnDrawControlBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1758,7 +1928,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawdefaultribbonimagea--cmfcvisualmanagerondrawdefaultribbonimage"></a><a name="ondrawdefaultribbonimage"></a>CMFCVisualManager::OnDrawDefaultRibbonImage  
+##  <a name="ondrawdefaultribbonimage"></a>CMFCVisualManager::OnDrawDefaultRibbonImage  
  Das Framework ruft diese Methode auf, wenn es das Standardbild zeichnet, das für die Schaltfläche der Multifunktionsleiste verwendet wird.  
   
 ```  
@@ -1789,7 +1959,7 @@ virtual void OnDrawDefaultRibbonImage(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager, wenn Sie möchten das Abbild anpassen, das für die Schaltfläche der Multifunktionsleiste verwendet wird.  
   
-##  <a name="a-nameondraweditbordera--cmfcvisualmanagerondraweditborder"></a><a name="ondraweditborder"></a>CMFCVisualManager::OnDrawEditBorder  
+##  <a name="ondraweditborder"></a>CMFCVisualManager::OnDrawEditBorder  
  Das Framework ruft diese Methode, wenn es den Rahmen um eine Instanz der zeichnet die [CMFCToolBarEditBoxButton Klasse](../../mfc/reference/cmfctoolbareditboxbutton-class.md).  
   
 ```  
@@ -1820,7 +1990,7 @@ virtual void OnDrawEditBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager den Rahmen anpassen einer `CMFCToolBarEditBoxButton` Objekt.  
   
-##  <a name="a-nameondrawexpandingboxa--cmfcvisualmanagerondrawexpandingbox"></a><a name="ondrawexpandingbox"></a>CMFCVisualManager::OnDrawExpandingBox  
+##  <a name="ondrawexpandingbox"></a>CMFCVisualManager::OnDrawExpandingBox  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1839,7 +2009,7 @@ virtual void OnDrawExpandingBox(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawfloatingtoolbarbordera--cmfcvisualmanagerondrawfloatingtoolbarborder"></a><a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManager::OnDrawFloatingToolbarBorder  
+##  <a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManager::OnDrawFloatingToolbarBorder  
  Das Framework ruft diese Methode auf, wenn sie den Rahmen einer beweglichen Symbolleiste zeichnet.  
   
 ```  
@@ -1870,7 +2040,7 @@ virtual void OnDrawFloatingToolbarBorder(
   
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Darstellung des Rahmens der beweglichen Symbolleiste anzupassen.  
   
-##  <a name="a-nameondrawheaderctrlbordera--cmfcvisualmanagerondrawheaderctrlborder"></a><a name="ondrawheaderctrlborder"></a>CMFCVisualManager::OnDrawHeaderCtrlBorder  
+##  <a name="ondrawheaderctrlborder"></a>CMFCVisualManager::OnDrawHeaderCtrlBorder  
  Das Framework ruft diese Methode, wenn es den Rahmen um eine Instanz der zeichnet die [CMFCHeaderCtrl Klasse](../../mfc/reference/cmfcheaderctrl-class.md).  
   
 ```  
@@ -1901,7 +2071,7 @@ virtual void OnDrawHeaderCtrlBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager auf den Rahmen des Headersteuerelements anpassen.  
   
-##  <a name="a-nameondrawheaderctrlsortarrowa--cmfcvisualmanagerondrawheaderctrlsortarrow"></a><a name="ondrawheaderctrlsortarrow"></a>CMFCVisualManager::OnDrawHeaderCtrlSortArrow  
+##  <a name="ondrawheaderctrlsortarrow"></a>CMFCVisualManager::OnDrawHeaderCtrlSortArrow  
  Das Framework ruft diese Funktion auf, wenn sie die Sortierpfeil mit einem Kopfzeilen-Steuerelement zeichnet.  
   
 ```  
@@ -1928,7 +2098,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ### <a name="remarks"></a>Hinweise  
  Wenn `bIsUp` ist `TRUE`, visuelle Manager zeichnet einen Sortierpfeil. Ist dies `FALSE`, visuelle Manager zeichnet einen Pfeil nach unten sortieren. Überschreiben Sie `OnDrawHeaderCtrlSortArrow` in einer abgeleiteten Klasse zum Anpassen der Darstellung der Schaltfläche zum Sortieren.  
   
-##  <a name="a-nameondrawmenuarrowoncustomizelista--cmfcvisualmanagerondrawmenuarrowoncustomizelist"></a><a name="ondrawmenuarrowoncustomizelist"></a>CMFCVisualManager::OnDrawMenuArrowOnCustomizeList  
+##  <a name="ondrawmenuarrowoncustomizelist"></a>CMFCVisualManager::OnDrawMenuArrowOnCustomizeList  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1945,7 +2115,7 @@ virtual void OnDrawMenuArrowOnCustomizeList(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawmenubordera--cmfcvisualmanagerondrawmenuborder"></a><a name="ondrawmenuborder"></a>CMFCVisualManager::OnDrawMenuBorder  
+##  <a name="ondrawmenuborder"></a>CMFCVisualManager::OnDrawMenuBorder  
  Das Framework ruft diese Methode, wenn der Rahmen gezeichnet ein [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ```  
@@ -1968,7 +2138,7 @@ virtual void OnDrawMenuBorder(
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung dieser Methode wird der Standardmenü Rahmen angezeigt. Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung des Rahmens im Menü.  
   
-##  <a name="a-nameondrawmenuchecka--cmfcvisualmanagerondrawmenucheck"></a><a name="ondrawmenucheck"></a>CMFCVisualManager::OnDrawMenuCheck  
+##  <a name="ondrawmenucheck"></a>CMFCVisualManager::OnDrawMenuCheck  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1989,7 +2159,7 @@ virtual void OnDrawMenuCheck(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawmenuitembuttona--cmfcvisualmanagerondrawmenuitembutton"></a><a name="ondrawmenuitembutton"></a>CMFCVisualManager::OnDrawMenuItemButton  
+##  <a name="ondrawmenuitembutton"></a>CMFCVisualManager::OnDrawMenuItemButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2010,7 +2180,7 @@ virtual void OnDrawMenuItemButton(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawmenulabela--cmfcvisualmanagerondrawmenulabel"></a><a name="ondrawmenulabel"></a>CMFCVisualManager::OnDrawMenuLabel  
+##  <a name="ondrawmenulabel"></a>CMFCVisualManager::OnDrawMenuLabel  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2027,7 +2197,7 @@ virtual COLORREF OnDrawMenuLabel(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawmenuresizebara--cmfcvisualmanagerondrawmenuresizebar"></a><a name="ondrawmenuresizebar"></a>CMFCVisualManager::OnDrawMenuResizeBar  
+##  <a name="ondrawmenuresizebar"></a>CMFCVisualManager::OnDrawMenuResizeBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2044,7 +2214,7 @@ virtual void OnDrawMenuResizeBar(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawmenuscrollbuttona--cmfcvisualmanagerondrawmenuscrollbutton"></a><a name="ondrawmenuscrollbutton"></a>CMFCVisualManager::OnDrawMenuScrollButton  
+##  <a name="ondrawmenuscrollbutton"></a>CMFCVisualManager::OnDrawMenuScrollButton  
  Das Framework ruft diese Methode auf, wenn sie einen Bildlaufschaltfläche zeichnet.  
   
 ```  
@@ -2079,7 +2249,7 @@ virtual void OnDrawMenuScrollButton(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung der Scroll Menüschaltflächen. Scroll Menüschaltflächen am Rand des Popupmenüs angezeigt, wenn die gesamte Höhe der Menüelemente die Höhe des Popupmenüs überschreitet.  
   
-##  <a name="a-nameondrawmenushadowa--cmfcvisualmanagerondrawmenushadow"></a><a name="ondrawmenushadow"></a>CMFCVisualManager::OnDrawMenuShadow  
+##  <a name="ondrawmenushadow"></a>CMFCVisualManager::OnDrawMenuShadow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2108,7 +2278,7 @@ virtual void OnDrawMenuShadow(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawmenusystembuttona--cmfcvisualmanagerondrawmenusystembutton"></a><a name="ondrawmenusystembutton"></a>CMFCVisualManager::OnDrawMenuSystemButton  
+##  <a name="ondrawmenusystembutton"></a>CMFCVisualManager::OnDrawMenuSystemButton  
  Das Framework ruft diese Methode auf, wenn sie eine System-Schaltfläche für die Anwendung zeichnet.  
   
 ```  
@@ -2141,7 +2311,7 @@ virtual void OnDrawMenuSystemButton(
   
  Die standardmäßige Implementierung für diese Methode ruft [CDC::DrawFrameControl](../../mfc/reference/cdc-class.md#drawframecontrol) mit den `DFC_CAPTION` Typ. Überschreiben Sie diese Methode in der Klasse abgeleiteten visuellen Manager zum Anpassen der Darstellung der Systemschaltflächen.  
   
-##  <a name="a-nameondrawminiframebordera--cmfcvisualmanagerondrawminiframeborder"></a><a name="ondrawminiframeborder"></a>CMFCVisualManager::OnDrawMiniFrameBorder  
+##  <a name="ondrawminiframeborder"></a>CMFCVisualManager::OnDrawMiniFrameBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2160,7 +2330,7 @@ virtual void OnDrawMiniFrameBorder(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawoutlookbarsplittera--cmfcvisualmanagerondrawoutlookbarsplitter"></a><a name="ondrawoutlookbarsplitter"></a>CMFCVisualManager::OnDrawOutlookBarSplitter  
+##  <a name="ondrawoutlookbarsplitter"></a>CMFCVisualManager::OnDrawOutlookBarSplitter  
  Das Framework ruft diese Methode auf, wenn den Splitter für eine Outlook-Leiste gezeichnet.  
   
 ```  
@@ -2179,7 +2349,7 @@ virtual void OnDrawOutlookBarSplitter(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Darstellung von Bereichen auf eine Outlook-Leiste anzupassen.  
   
-##  <a name="a-nameondrawoutlookpagebuttonbordera--cmfcvisualmanagerondrawoutlookpagebuttonborder"></a><a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManager::OnDrawOutlookPageButtonBorder  
+##  <a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManager::OnDrawOutlookPageButtonBorder  
  Wird vom Framework aufgerufen, wenn es den Rahmen einer Outlook-Seite-Schaltfläche zeichnet.  
   
 ```  
@@ -2206,7 +2376,7 @@ virtual void OnDrawOutlookPageButtonBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einen benutzerdefinierten visuellen Manager, ändern Sie die Darstellung der Schaltfläche Seite Outlook.  
   
-##  <a name="a-nameondrawpanebordera--cmfcvisualmanagerondrawpaneborder"></a><a name="ondrawpaneborder"></a>CMFCVisualManager::OnDrawPaneBorder  
+##  <a name="ondrawpaneborder"></a>CMFCVisualManager::OnDrawPaneBorder  
  Das Framework ruft diese Methode, wenn der Rahmen gezeichnet ein [CPane-Klasse](../../mfc/reference/cpane-class.md) Objekt.  
   
 ```  
@@ -2229,7 +2399,7 @@ virtual void OnDrawPaneBorder(
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung dieser Methode wird der standardmäßigen Rahmen angezeigt. Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Darstellung des Rahmens anpassen.  
   
-##  <a name="a-nameondrawpanecaptiona--cmfcvisualmanagerondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFCVisualManager::OnDrawPaneCaption  
+##  <a name="ondrawpanecaption"></a>CMFCVisualManager::OnDrawPaneCaption  
  Das Framework ruft diese Methode auf, wenn sie eine Beschriftung für eine Instanz von zeichnet die [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
@@ -2263,7 +2433,7 @@ virtual COLORREF OnDrawPaneCaption(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung der Bereich Beschriftungen.  
   
-##  <a name="a-nameondrawpanedividera--cmfcvisualmanagerondrawpanedivider"></a><a name="ondrawpanedivider"></a>CMFCVisualManager::OnDrawPaneDivider  
+##  <a name="ondrawpanedivider"></a>CMFCVisualManager::OnDrawPaneDivider  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2282,7 +2452,7 @@ virtual void OnDrawPaneDivider(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawpopupwindowbordera--cmfcvisualmanagerondrawpopupwindowborder"></a><a name="ondrawpopupwindowborder"></a>CMFCVisualManager::OnDrawPopupWindowBorder  
+##  <a name="ondrawpopupwindowborder"></a>CMFCVisualManager::OnDrawPopupWindowBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2297,7 +2467,7 @@ virtual void OnDrawPopupWindowBorder(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawpopupwindowbuttonbordera--cmfcvisualmanagerondrawpopupwindowbuttonborder"></a><a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManager::OnDrawPopupWindowButtonBorder  
+##  <a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManager::OnDrawPopupWindowButtonBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2314,7 +2484,7 @@ virtual void OnDrawPopupWindowButtonBorder(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawpopupwindowcaptiona--cmfcvisualmanagerondrawpopupwindowcaption"></a><a name="ondrawpopupwindowcaption"></a>CMFCVisualManager::OnDrawPopupWindowCaption  
+##  <a name="ondrawpopupwindowcaption"></a>CMFCVisualManager::OnDrawPopupWindowCaption  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2333,7 +2503,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawribbonapplicationbuttona--cmfcvisualmanagerondrawribbonapplicationbutton"></a><a name="ondrawribbonapplicationbutton"></a>CMFCVisualManager::OnDrawRibbonApplicationButton  
+##  <a name="ondrawribbonapplicationbutton"></a>CMFCVisualManager::OnDrawRibbonApplicationButton  
  Das Framework ruft diese Methode auf, wenn es zeichnet die **Main Schaltfläche** auf dem Menüband.  
   
 ```  
@@ -2352,7 +2522,7 @@ virtual void OnDrawRibbonApplicationButton(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager, wenn Sie die Darstellung anpassen möchten die **Main Schaltfläche**.  
   
-##  <a name="a-nameondrawribbonbuttonbordera--cmfcvisualmanagerondrawribbonbuttonborder"></a><a name="ondrawribbonbuttonborder"></a>CMFCVisualManager::OnDrawRibbonButtonBorder  
+##  <a name="ondrawribbonbuttonborder"></a>CMFCVisualManager::OnDrawRibbonButtonBorder  
  Das Framework ruft diese Methode auf, wenn sie den Rahmen einer Schaltfläche auf dem Menüband zeichnet.  
   
 ```  
@@ -2371,7 +2541,7 @@ virtual void OnDrawRibbonButtonBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung von einem `CMFCRibbonButton`.  
   
-##  <a name="a-nameondrawribbonbuttonsgroupa--cmfcvisualmanagerondrawribbonbuttonsgroup"></a><a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManager::OnDrawRibbonButtonsGroup  
+##  <a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManager::OnDrawRibbonButtonsGroup  
  Das Framework ruft diese Methode auf, wenn sie eine Gruppe von Schaltflächen auf der Multifunktionsleiste zeichnet.  
   
 ```  
@@ -2397,7 +2567,7 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Darstellung einer Gruppe von Schaltflächen auf der Multifunktionsleiste anzupassen.  
   
-##  <a name="a-nameondrawribboncaptiona--cmfcvisualmanagerondrawribboncaption"></a><a name="ondrawribboncaption"></a>CMFCVisualManager::OnDrawRibbonCaption  
+##  <a name="ondrawribboncaption"></a>CMFCVisualManager::OnDrawRibbonCaption  
  Das Framework ruft diese Methode auf, wenn es auf die Titelleiste des Hauptrahmenfenster zeichnet. Das Framework ruft diese Methode nur dann, wenn das Menüband in den Hauptframe integriert ist.  
   
 ```  
@@ -2424,7 +2594,7 @@ virtual void OnDrawRibbonCaption(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung der Titelleiste an. Diese Methode wirkt sich auf die Titelleiste, nur dann, wenn die Multifunktionsleiste das Hauptrahmenfenster integriert ist.  
   
-##  <a name="a-nameondrawribboncaptionbuttona--cmfcvisualmanagerondrawribboncaptionbutton"></a><a name="ondrawribboncaptionbutton"></a>CMFCVisualManager::OnDrawRibbonCaptionButton  
+##  <a name="ondrawribboncaptionbutton"></a>CMFCVisualManager::OnDrawRibbonCaptionButton  
  Das Framework ruft diese Methode auf, wenn es eine Titelleistenschaltfläche befindet sich auf der menübandleiste zeichnet.  
   
 ```  
@@ -2443,7 +2613,7 @@ virtual void OnDrawRibbonCaptionButton(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visuellen Manager anpassen die Darstellung auf dem Menüband einer Titelleistenschaltfläche.  
   
-##  <a name="a-nameondrawribboncategorya--cmfcvisualmanagerondrawribboncategory"></a><a name="ondrawribboncategory"></a>CMFCVisualManager::OnDrawRibbonCategory  
+##  <a name="ondrawribboncategory"></a>CMFCVisualManager::OnDrawRibbonCategory  
  Das Framework ruft diese Methode auf, wenn er zeichnet einen [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) Objekt.  
   
 ```  
@@ -2468,7 +2638,7 @@ virtual void OnDrawRibbonCategory(
   
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung einer Menübandkategorie.  
   
-##  <a name="a-nameondrawribboncategorycaptiona--cmfcvisualmanagerondrawribboncategorycaption"></a><a name="ondrawribboncategorycaption"></a>CMFCVisualManager::OnDrawRibbonCategoryCaption  
+##  <a name="ondrawribboncategorycaption"></a>CMFCVisualManager::OnDrawRibbonCategoryCaption  
  Das Framework ruft diese Methode auf, wenn sie auf die Titelleiste für eine Menübandkategorie zeichnet.  
   
 ```  
@@ -2490,7 +2660,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um die Darstellung der Titelleiste für eine Menübandkategorie anzupassen. Weitere Informationen zu der Titelleiste, finden Sie unter [CMFCRibbonContextCaption Klasse](../../mfc/reference/cmfcribboncontextcaption-class.md).  
   
-##  <a name="a-nameondrawribboncategoryscrolla--cmfcvisualmanagerondrawribboncategoryscroll"></a><a name="ondrawribboncategoryscroll"></a>CMFCVisualManager::OnDrawRibbonCategoryScroll  
+##  <a name="ondrawribboncategoryscroll"></a>CMFCVisualManager::OnDrawRibbonCategoryScroll  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2505,7 +2675,7 @@ virtual void OnDrawRibbonCategoryScroll(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawribboncategorytaba--cmfcvisualmanagerondrawribboncategorytab"></a><a name="ondrawribboncategorytab"></a>CMFCVisualManager::OnDrawRibbonCategoryTab  
+##  <a name="ondrawribboncategorytab"></a>CMFCVisualManager::OnDrawRibbonCategoryTab  
  Das Framework ruft diese Methode auf, wenn sie die Registerkarte für eine Menübandkategorie zeichnet.  
   
 ```  
@@ -2531,7 +2701,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung einer Registerkarte des Menübands Kategorie. Weitere Informationen zu menübandkategorien, finden Sie unter [CMFCRibbonCategory Klasse](../../mfc/reference/cmfcribboncategory-class.md).  
   
-##  <a name="a-nameondrawribboncheckboxonlista--cmfcvisualmanagerondrawribboncheckboxonlist"></a><a name="ondrawribboncheckboxonlist"></a>CMFCVisualManager::OnDrawRibbonCheckBoxOnList  
+##  <a name="ondrawribboncheckboxonlist"></a>CMFCVisualManager::OnDrawRibbonCheckBoxOnList  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2552,7 +2722,7 @@ virtual void OnDrawRibbonCheckBoxOnList(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawribboncolorpaletteboxa--cmfcvisualmanagerondrawribboncolorpalettebox"></a><a name="ondrawribboncolorpalettebox"></a>CMFCVisualManager::OnDrawRibbonColorPaletteBox  
+##  <a name="ondrawribboncolorpalettebox"></a>CMFCVisualManager::OnDrawRibbonColorPaletteBox  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2583,7 +2753,7 @@ virtual void OnDrawRibbonColorPaletteBox(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawribbondefaultpanebuttona--cmfcvisualmanagerondrawribbondefaultpanebutton"></a><a name="ondrawribbondefaultpanebutton"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButton  
+##  <a name="ondrawribbondefaultpanebutton"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButton  
  Das Framework ruft diese Methode auf, wenn es die Standardschaltfläche für den Bereich der Multifunktionsleiste zeichnet.  
   
 ```  
@@ -2604,7 +2774,7 @@ virtual void OnDrawRibbonDefaultPaneButton(
   
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung der Standardschaltfläche an.  
   
-##  <a name="a-nameondrawribbondefaultpanebuttoncontexta--cmfcvisualmanagerondrawribbondefaultpanebuttoncontext"></a><a name="ondrawribbondefaultpanebuttoncontext"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext  
+##  <a name="ondrawribbondefaultpanebuttoncontext"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2619,7 +2789,7 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawribbondefaultpanebuttonindicatora--cmfcvisualmanagerondrawribbondefaultpanebuttonindicator"></a><a name="ondrawribbondefaultpanebuttonindicator"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator  
+##  <a name="ondrawribbondefaultpanebuttonindicator"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2640,7 +2810,7 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawribbongallerybordera--cmfcvisualmanagerondrawribbongalleryborder"></a><a name="ondrawribbongalleryborder"></a>CMFCVisualManager::OnDrawRibbonGalleryBorder  
+##  <a name="ondrawribbongalleryborder"></a>CMFCVisualManager::OnDrawRibbonGalleryBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2657,7 +2827,7 @@ virtual void OnDrawRibbonGalleryBorder(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawribbongallerybuttona--cmfcvisualmanagerondrawribbongallerybutton"></a><a name="ondrawribbongallerybutton"></a>CMFCVisualManager::OnDrawRibbonGalleryButton  
+##  <a name="ondrawribbongallerybutton"></a>CMFCVisualManager::OnDrawRibbonGalleryButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2672,7 +2842,7 @@ virtual void OnDrawRibbonGalleryButton(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawribbonkeytipa--cmfcvisualmanagerondrawribbonkeytip"></a><a name="ondrawribbonkeytip"></a>CMFCVisualManager::OnDrawRibbonKeyTip  
+##  <a name="ondrawribbonkeytip"></a>CMFCVisualManager::OnDrawRibbonKeyTip  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2691,7 +2861,7 @@ virtual void OnDrawRibbonKeyTip(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawribbonlabela--cmfcvisualmanagerondrawribbonlabel"></a><a name="ondrawribbonlabel"></a>CMFCVisualManager::OnDrawRibbonLabel  
+##  <a name="ondrawribbonlabel"></a>CMFCVisualManager::OnDrawRibbonLabel  
  Das Framework ruft diese Methode auf, wenn sie die Bezeichnung des Menübands zeichnet.  
   
 ```  
@@ -2714,7 +2884,7 @@ virtual void OnDrawRibbonLabel(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Bezeichnung Menüband anpassen.  
   
-##  <a name="a-nameondrawribbonmainpanelbuttonbordera--cmfcvisualmanagerondrawribbonmainpanelbuttonborder"></a><a name="ondrawribbonmainpanelbuttonborder"></a>CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder  
+##  <a name="ondrawribbonmainpanelbuttonborder"></a>CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder  
  Das Framework ruft diese Methode, wenn der Rahmen gezeichnet ein [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) , befindet sich auf der **Main** Bereich.  
   
 ```  
@@ -2733,7 +2903,7 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung des Rahmens für ein `CMFCRibbonButton` auf der **Main** Bereich.  
   
-##  <a name="a-nameondrawribbonmainpanelframea--cmfcvisualmanagerondrawribbonmainpanelframe"></a><a name="ondrawribbonmainpanelframe"></a>CMFCVisualManager::OnDrawRibbonMainPanelFrame  
+##  <a name="ondrawribbonmainpanelframe"></a>CMFCVisualManager::OnDrawRibbonMainPanelFrame  
  Das Framework ruft diese Methode auf, wenn sie den Rahmen um zeichnet die [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md).  
   
 ```  
@@ -2756,7 +2926,7 @@ virtual void OnDrawRibbonMainPanelFrame(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung des Rahmens für die `CMFCRibbonMainPanel`.  
   
-##  <a name="a-nameondrawribbonmenucheckframea--cmfcvisualmanagerondrawribbonmenucheckframe"></a><a name="ondrawribbonmenucheckframe"></a>CMFCVisualManager::OnDrawRibbonMenuCheckFrame  
+##  <a name="ondrawribbonmenucheckframe"></a>CMFCVisualManager::OnDrawRibbonMenuCheckFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -2773,7 +2943,7 @@ virtual void OnDrawRibbonMenuCheckFrame(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawribbonpanela--cmfcvisualmanagerondrawribbonpanel"></a><a name="ondrawribbonpanel"></a>CMFCVisualManager::OnDrawRibbonPanel  
+##  <a name="ondrawribbonpanel"></a>CMFCVisualManager::OnDrawRibbonPanel  
  Das Framework ruft diese Methode auf, wenn er zeichnet einen [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) Objekt.  
   
 ```  
@@ -2803,7 +2973,7 @@ virtual COLORREF OnDrawRibbonPanel(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Darstellung eines Bereichs Menüband anpassen.  
   
-##  <a name="a-nameondrawribbonpanelcaptiona--cmfcvisualmanagerondrawribbonpanelcaption"></a><a name="ondrawribbonpanelcaption"></a>CMFCVisualManager::OnDrawRibbonPanelCaption  
+##  <a name="ondrawribbonpanelcaption"></a>CMFCVisualManager::OnDrawRibbonPanelCaption  
  Das Framework ruft diese Methode auf, wenn sie die Beschriftung des zeichnet einen [CMFCRibbonPanel Klasse](../../mfc/reference/cmfcribbonpanel-class.md).  
   
 ```  
@@ -2826,7 +2996,7 @@ virtual void OnDrawRibbonPanelCaption(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Anpassen der Darstellung von Beschriftungen für ein Menübandbereich enthalten.  
   
-##  <a name="a-nameondrawribbonprogressbara--cmfcvisualmanagerondrawribbonprogressbar"></a><a name="ondrawribbonprogressbar"></a>CMFCVisualManager::OnDrawRibbonProgressBar  
+##  <a name="ondrawribbonprogressbar"></a>CMFCVisualManager::OnDrawRibbonProgressBar  
  Das Framework ruft diese Methode auf, wenn er zeichnet einen [CMFCRibbonProgressBar Klasse](../../mfc/reference/cmfcribbonprogressbar-class.md).  
   
 ```  
@@ -2857,7 +3027,7 @@ virtual void OnDrawRibbonProgressBar(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Anpassen der Darstellung einer Statusanzeige.  
   
-##  <a name="a-nameondrawribbonquickaccesstoolbarseparatora--cmfcvisualmanagerondrawribbonquickaccesstoolbarseparator"></a><a name="ondrawribbonquickaccesstoolbarseparator"></a>CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator  
+##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator  
  Das Framework ruft diese Methode auf, wenn es eine Trennzeichen zeichnet, auf die **für den Schnellzugriff** eines Menübands.  
   
 ```  
@@ -2880,7 +3050,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse auf der Multifunktionsleiste Trennzeichen auf Gestaltung der **für den Schnellzugriff**.  
   
-##  <a name="a-nameondrawribbonrecentfilesframea--cmfcvisualmanagerondrawribbonrecentfilesframe"></a><a name="ondrawribbonrecentfilesframe"></a>CMFCVisualManager::OnDrawRibbonRecentFilesFrame  
+##  <a name="ondrawribbonrecentfilesframe"></a>CMFCVisualManager::OnDrawRibbonRecentFilesFrame  
  Das Framework ruft diese Methode auf, wenn sie einen Rahmen um eine Liste der zuletzt verwendeten Dateien zeichnet.  
   
 ```  
@@ -2903,7 +3073,7 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung der Liste der zuletzt verwendeten Dateien.  
   
-##  <a name="a-nameondrawribbonsliderchannela--cmfcvisualmanagerondrawribbonsliderchannel"></a><a name="ondrawribbonsliderchannel"></a>CMFCVisualManager::OnDrawRibbonSliderChannel  
+##  <a name="ondrawribbonsliderchannel"></a>CMFCVisualManager::OnDrawRibbonSliderChannel  
  Das Framework ruft diese Methode auf, wenn sie den Kanal des zeichnet einen [CMFCRibbonSlider Klasse](../../mfc/reference/cmfcribbonslider-class.md).  
   
 ```  
@@ -2926,7 +3096,7 @@ virtual void OnDrawRibbonSliderChannel(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse die Darstellung des Kanals des Schiebereglers Menüband anpassen.  
   
-##  <a name="a-nameondrawribbonsliderthumba--cmfcvisualmanagerondrawribbonsliderthumb"></a><a name="ondrawribbonsliderthumb"></a>CMFCVisualManager::OnDrawRibbonSliderThumb  
+##  <a name="ondrawribbonsliderthumb"></a>CMFCVisualManager::OnDrawRibbonSliderThumb  
  Das Framework ruft diese Methode auf, wenn sie den Ziehpunkt des zeichnet einen [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) Objekt.  
   
 ```  
@@ -2961,7 +3131,7 @@ virtual void OnDrawRibbonSliderThumb(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung des Ziehpunkts für eine `CMFCRibbonSlider`.  
   
-##  <a name="a-nameondrawribbonsliderzoombuttona--cmfcvisualmanagerondrawribbonsliderzoombutton"></a><a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManager::OnDrawRibbonSliderZoomButton  
+##  <a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManager::OnDrawRibbonSliderZoomButton  
  Das Framework ruft diese Methode auf, wenn sie den Zoom-Schaltflächen für zeichnet einen [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) Objekt.  
   
 ```  
@@ -3000,7 +3170,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig sind die Zoom-Schaltflächen auf dem Menüband-Schieberegler ein Kreis mit einem + oder – melden Sie sich in der Mitte. Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Darstellung des Zoom-Schaltflächen.  
   
-##  <a name="a-nameondrawribbonstatusbarpanea--cmfcvisualmanagerondrawribbonstatusbarpane"></a><a name="ondrawribbonstatusbarpane"></a>CMFCVisualManager::OnDrawRibbonStatusBarPane  
+##  <a name="ondrawribbonstatusbarpane"></a>CMFCVisualManager::OnDrawRibbonStatusBarPane  
  Das Framework ruft diese Methode auf, wenn sie einen Bereich auf der Statusleiste zeichnet.  
   
 ```  
@@ -3026,7 +3196,7 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung eines Bereichs in der Statusleiste angezeigt.  
   
-##  <a name="a-nameondrawribbontabsframea--cmfcvisualmanagerondrawribbontabsframe"></a><a name="ondrawribbontabsframe"></a>CMFCVisualManager::OnDrawRibbonTabsFrame  
+##  <a name="ondrawribbontabsframe"></a>CMFCVisualManager::OnDrawRibbonTabsFrame  
  Das Framework ruft diese Methode auf, wenn sie den Rahmen um eine Reihe von Registerkarten des Menübands zeichnet.  
   
 ```  
@@ -3052,7 +3222,7 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um den Rahmen um eine Reihe von Registerkarten auf der Multifunktionsleiste anzupassen.  
   
-##  <a name="a-nameondrawscrollbuttonsa--cmfcvisualmanagerondrawscrollbuttons"></a><a name="ondrawscrollbuttons"></a>CMFCVisualManager::OnDrawScrollButtons  
+##  <a name="ondrawscrollbuttons"></a>CMFCVisualManager::OnDrawScrollButtons  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -3073,7 +3243,7 @@ virtual void OnDrawScrollButtons(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawseparatora--cmfcvisualmanagerondrawseparator"></a><a name="ondrawseparator"></a>CMFCVisualManager::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>CMFCVisualManager::OnDrawSeparator  
  Das Framework ruft diese Methode auf, wenn es eine Trennzeichen zeichnet.  
   
 ```  
@@ -3100,7 +3270,7 @@ virtual void OnDrawSeparator(
 ### <a name="remarks"></a>Hinweise  
  Trennzeichen werden auf Steuerleisten verwendet, um Gruppen von verwandten Symbole trennen. Die standardmäßige Implementierung für diese Methode zeigt den standardmäßigen an. Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Darstellung des Strichs anzupassen.  
   
-##  <a name="a-nameondrawshowallmenuitemsa--cmfcvisualmanagerondrawshowallmenuitems"></a><a name="ondrawshowallmenuitems"></a>CMFCVisualManager::OnDrawShowAllMenuItems  
+##  <a name="ondrawshowallmenuitems"></a>CMFCVisualManager::OnDrawShowAllMenuItems  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -3117,7 +3287,7 @@ virtual void OnDrawShowAllMenuItems(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawspinbuttonsa--cmfcvisualmanagerondrawspinbuttons"></a><a name="ondrawspinbuttons"></a>CMFCVisualManager::OnDrawSpinButtons  
+##  <a name="ondrawspinbuttons"></a>CMFCVisualManager::OnDrawSpinButtons  
  Das Framework ruft diese Methode auf, wenn sie eine Instanz der zeichnet die [CMFCSpinButtonCtrl Klasse](../../mfc/reference/cmfcspinbuttonctrl-class.md).  
   
 ```  
@@ -3160,7 +3330,7 @@ virtual void OnDrawSpinButtons(
   
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung eines Drehfeld-Steuerelements.  
   
-##  <a name="a-nameondrawsplitterbordera--cmfcvisualmanagerondrawsplitterborder"></a><a name="ondrawsplitterborder"></a>CMFCVisualManager::OnDrawSplitterBorder  
+##  <a name="ondrawsplitterborder"></a>CMFCVisualManager::OnDrawSplitterBorder  
  Das Framework ruft diese Methode, wenn es den Rahmen um eine Instanz der zeichnet die [CSplitterWndEx Klasse](csplitterwndex-class.md).  
   
 ```  
@@ -3183,7 +3353,7 @@ virtual void OnDrawSplitterBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung des Rahmens für ein unterteiltes Fenster.  
   
-##  <a name="a-nameondrawsplitterboxa--cmfcvisualmanagerondrawsplitterbox"></a><a name="ondrawsplitterbox"></a>CMFCVisualManager::OnDrawSplitterBox  
+##  <a name="ondrawsplitterbox"></a>CMFCVisualManager::OnDrawSplitterBox  
  Das Framework ruft diese Methode auf, wenn sie das Feld ziehen Sie für eine Instanz von zeichnet die [CSplitterWndEx Klasse](csplitterwndex-class.md). Das Ziehen wird angezeigt, wenn der Benutzer die Teilerleiste wählt und die Dimensionen der untergeordneten Fenster ändert.  
   
 ```  
@@ -3206,7 +3376,7 @@ virtual void OnDrawSplitterBox(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung des Dialogfelds ziehen Sie für ein unterteiltes Fenster.  
   
-##  <a name="a-nameondrawstatusbarpanebordera--cmfcvisualmanagerondrawstatusbarpaneborder"></a><a name="ondrawstatusbarpaneborder"></a>CMFCVisualManager::OnDrawStatusBarPaneBorder  
+##  <a name="ondrawstatusbarpaneborder"></a>CMFCVisualManager::OnDrawStatusBarPaneBorder  
  Das Framework ruft diese Methode, wenn es den Rahmen für zeichnet einen [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) Objekt.  
   
 ```  
@@ -3237,7 +3407,7 @@ virtual void OnDrawStatusBarPaneBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung des Rahmens für ein `CMFCStatusBar` Objekt.  
   
-##  <a name="a-nameondrawstatusbarprogressa--cmfcvisualmanagerondrawstatusbarprogress"></a><a name="ondrawstatusbarprogress"></a>CMFCVisualManager::OnDrawStatusBarProgress  
+##  <a name="ondrawstatusbarprogress"></a>CMFCVisualManager::OnDrawStatusBarProgress  
  Das Framework ruft diese Methode, wenn die Statusanzeige gezeichnet wird, auf die [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) Objekt.  
   
 ```  
@@ -3284,7 +3454,7 @@ virtual void OnDrawStatusBarProgress(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager an der Gestaltung der `CMFCStatusBar` Objekt.  
   
-##  <a name="a-nameondrawstatusbarsizeboxa--cmfcvisualmanagerondrawstatusbarsizebox"></a><a name="ondrawstatusbarsizebox"></a>CMFCVisualManager::OnDrawStatusBarSizeBox  
+##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManager::OnDrawStatusBarSizeBox  
  Das Framework ruft diese Methode auf, wenn es für das Größeneinstellungsfeld zeichnet einen [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md).  
   
 ```  
@@ -3307,7 +3477,7 @@ virtual void OnDrawStatusBarSizeBox(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung des Dialogfelds Größe auf einen `CMFCStatusBar`.  
   
-##  <a name="a-nameondrawtaba--cmfcvisualmanagerondrawtab"></a><a name="ondrawtab"></a>CMFCVisualManager::OnDrawTab  
+##  <a name="ondrawtab"></a>CMFCVisualManager::OnDrawTab  
  Das Framework ruft diese Methode auf, wenn sie die Registerkarten zeichnet einen [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) Objekt.  
   
 ```  
@@ -3340,7 +3510,7 @@ virtual void OnDrawTab(
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Anpassen der Darstellung der Registerkarten.  
   
-##  <a name="a-nameondrawtabclosebuttona--cmfcvisualmanagerondrawtabclosebutton"></a><a name="ondrawtabclosebutton"></a>CMFCVisualManager::OnDrawTabCloseButton  
+##  <a name="ondrawtabclosebutton"></a>CMFCVisualManager::OnDrawTabCloseButton  
  Das Framework ruft diese Methode auf, wenn es zeichnet die **schließen** Schaltfläche auf der aktiven Registerkarte.  
   
 ```  
@@ -3375,7 +3545,7 @@ virtual void OnDrawTabCloseButton(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung von der **schließen** Schaltfläche auf der aktiven Registerkarte der `pTabWnd`.  
   
-##  <a name="a-nameondrawtabcontenta--cmfcvisualmanagerondrawtabcontent"></a><a name="ondrawtabcontent"></a>CMFCVisualManager::OnDrawTabContent  
+##  <a name="ondrawtabcontent"></a>CMFCVisualManager::OnDrawTabContent  
  Das Framework ruft diese Methode auf, wenn sie den Inhalt befindet sich auf das Innere einer Instanz von zeichnet die [CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
 ```  
@@ -3410,7 +3580,7 @@ virtual void OnDrawTabContent(
 ### <a name="remarks"></a>Hinweise  
  Das Innere einer Registerkarte enthält den Text und Symbole der Registerkarte. Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung der Registerkarten.  
   
-##  <a name="a-nameondrawtabsbuttonbordera--cmfcvisualmanagerondrawtabsbuttonborder"></a><a name="ondrawtabsbuttonborder"></a>CMFCVisualManager::OnDrawTabsButtonBorder  
+##  <a name="ondrawtabsbuttonborder"></a>CMFCVisualManager::OnDrawTabsButtonBorder  
  Das Framework ruft diese Methode auf, wenn sie den Rahmen einer Registerkarte Schaltfläche zeichnet.  
   
 ```  
@@ -3441,7 +3611,7 @@ virtual void OnDrawTabsButtonBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager die Darstellung des Rahmens der Schaltfläche Registerkarte anpassen.  
   
-##  <a name="a-nameondrawtaska--cmfcvisualmanagerondrawtask"></a><a name="ondrawtask"></a>CMFCVisualManager::OnDrawTask  
+##  <a name="ondrawtask"></a>CMFCVisualManager::OnDrawTask  
  Das Framework ruft diese Methode auf, wenn er zeichnet einen [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) Objekt.  
   
 ```  
@@ -3474,7 +3644,7 @@ virtual void OnDrawTask(
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Anpassen der Darstellung der Aufgaben in der Taskleiste.  
   
-##  <a name="a-nameondrawtasksgroupareabordera--cmfcvisualmanagerondrawtasksgroupareaborder"></a><a name="ondrawtasksgroupareaborder"></a>CMFCVisualManager::OnDrawTasksGroupAreaBorder  
+##  <a name="ondrawtasksgroupareaborder"></a>CMFCVisualManager::OnDrawTasksGroupAreaBorder  
  Das Framework ruft diese Methode, wenn er zeichnet einen Rahmen um eine Gruppe, auf einem [CMFCTasksPane Klasse](../../mfc/reference/cmfctaskspane-class.md).  
   
 ```  
@@ -3501,7 +3671,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion in einer abgeleiteten Klasse den Rahmen um einen Bereich im Aufgabenbereich anpassen.  
   
-##  <a name="a-nameondrawtasksgroupcaptiona--cmfcvisualmanagerondrawtasksgroupcaption"></a><a name="ondrawtasksgroupcaption"></a>CMFCVisualManager::OnDrawTasksGroupCaption  
+##  <a name="ondrawtasksgroupcaption"></a>CMFCVisualManager::OnDrawTasksGroupCaption  
  Das Framework ruft diese Methode auf, wenn sie die Beschriftung für zeichnet einen [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) Objekt.  
   
 ```  
@@ -3534,7 +3704,7 @@ virtual void OnDrawTasksGroupCaption(
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Anpassen der Beschriftung für ein `CMFCTasksPaneTaskGroup`.  
   
-##  <a name="a-nameondrawtasksgroupicona--cmfcvisualmanagerondrawtasksgroupicon"></a><a name="ondrawtasksgroupicon"></a>CMFCVisualManager::OnDrawTasksGroupIcon  
+##  <a name="ondrawtasksgroupicon"></a>CMFCVisualManager::OnDrawTasksGroupIcon  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -3557,7 +3727,7 @@ virtual void OnDrawTasksGroupIcon(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawtearoffcaptiona--cmfcvisualmanagerondrawtearoffcaption"></a><a name="ondrawtearoffcaption"></a>CMFCVisualManager::OnDrawTearOffCaption  
+##  <a name="ondrawtearoffcaption"></a>CMFCVisualManager::OnDrawTearOffCaption  
  Das Framework ruft diese Methode auf, wenn sie die Beschriftung für zeichnet einen [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ```  
@@ -3582,7 +3752,7 @@ virtual void OnDrawTearOffCaption(
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Anpassen der Darstellung von Beschriftungen für abtrennbare Balken.  
   
-##  <a name="a-nameondrawtoolboxframea--cmfcvisualmanagerondrawtoolboxframe"></a><a name="ondrawtoolboxframe"></a>CMFCVisualManager::OnDrawToolBoxFrame  
+##  <a name="ondrawtoolboxframe"></a>CMFCVisualManager::OnDrawToolBoxFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -3597,7 +3767,7 @@ virtual void OnDrawToolBoxFrame(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonerasemdiclientareaa--cmfcvisualmanageronerasemdiclientarea"></a><a name="onerasemdiclientarea"></a>CMFCVisualManager::OnEraseMDIClientArea  
+##  <a name="onerasemdiclientarea"></a>CMFCVisualManager::OnEraseMDIClientArea  
  Das Framework ruft diese Methode auf, wenn des MDI-Clientbereichs gelöscht.  
   
 ```  
@@ -3619,7 +3789,7 @@ virtual BOOL OnEraseMDIClientArea(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um benutzerdefinierten Code auszuführen, wenn die visuelle Manager des MDI-Clientbereichs löscht.  
   
-##  <a name="a-nameonerasepopupwindowbuttona--cmfcvisualmanageronerasepopupwindowbutton"></a><a name="onerasepopupwindowbutton"></a>CMFCVisualManager::OnErasePopupWindowButton  
+##  <a name="onerasepopupwindowbutton"></a>CMFCVisualManager::OnErasePopupWindowButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -3636,7 +3806,7 @@ virtual void OnErasePopupWindowButton(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonerasetabsareaa--cmfcvisualmanageronerasetabsarea"></a><a name="onerasetabsarea"></a>CMFCVisualManager::OnEraseTabsArea  
+##  <a name="onerasetabsarea"></a>CMFCVisualManager::OnEraseTabsArea  
  Das Framework ruft diese Methode, wenn die Registerkarte Clientbereich eines Fensters Registerkarte gelöscht.  
   
 ```  
@@ -3661,7 +3831,7 @@ virtual void OnEraseTabsArea(
   
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung der Registerkarten.  
   
-##  <a name="a-nameonerasetabsbuttona--cmfcvisualmanageronerasetabsbutton"></a><a name="onerasetabsbutton"></a>CMFCVisualManager::OnEraseTabsButton  
+##  <a name="onerasetabsbutton"></a>CMFCVisualManager::OnEraseTabsButton  
  Das Framework ruft diese Methode auf, wenn sie den Text und das Symbol einer Schaltfläche Registerkarte löscht.  
   
 ```  
@@ -3690,7 +3860,7 @@ virtual void OnEraseTabsButton(
   
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager die Darstellung der Registerkartenschaltflächen anpassen.  
   
-##  <a name="a-nameonerasetabsframea--cmfcvisualmanageronerasetabsframe"></a><a name="onerasetabsframe"></a>CMFCVisualManager::OnEraseTabsFrame  
+##  <a name="onerasetabsframe"></a>CMFCVisualManager::OnEraseTabsFrame  
  Das Framework ruft diese Methode auf, wenn sie einen Frame auf Löscht eine [CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
 ```  
@@ -3716,7 +3886,7 @@ virtual BOOL OnEraseTabsFrame(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode füllt den Bereich, der durch angegebenen `rect` mit der Hintergrundfarbe der aktiven Registerkarte. Wird aufgerufen, wenn ein `CMFCBaseTabCtrl` -Objekt Prozesse eine `WM_PAINT` Nachricht und löscht einen Registerkarte Frame.  
   
-##  <a name="a-nameonfillautohidebuttonbackgrounda--cmfcvisualmanageronfillautohidebuttonbackground"></a><a name="onfillautohidebuttonbackground"></a>CMFCVisualManager::OnFillAutoHideButtonBackground  
+##  <a name="onfillautohidebuttonbackground"></a>CMFCVisualManager::OnFillAutoHideButtonBackground  
  Das Framework ruft diese Methode auf, wenn es den Hintergrund einer Schaltfläche zum automatischen Ausblenden füllt.  
   
 ```  
@@ -3739,7 +3909,7 @@ virtual void OnFillAutoHideButtonBackground(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung einer Schaltfläche automatisch im Hintergrund.  
   
-##  <a name="a-nameonfillbarbackgrounda--cmfcvisualmanageronfillbarbackground"></a><a name="onfillbarbackground"></a>CMFCVisualManager::OnFillBarBackground  
+##  <a name="onfillbarbackground"></a>CMFCVisualManager::OnFillBarBackground  
  Das Framework ruft diese Methode auf, wenn sie den Hintergrund des füllt eine [CBasePane](../../mfc/reference/cbasepane-class.md) Objekt.  
   
 ```  
@@ -3775,7 +3945,7 @@ virtual void OnFillBarBackground(
   
  [!code-cpp[NVC_MFC_OutlookDemo&4;](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]  
   
-##  <a name="a-nameonfillbuttoninteriora--cmfcvisualmanageronfillbuttoninterior"></a><a name="onfillbuttoninterior"></a>CMFCVisualManager::OnFillButtonInterior  
+##  <a name="onfillbuttoninterior"></a>CMFCVisualManager::OnFillButtonInterior  
  Das Framework ruft diese Methode auf, wenn sie den Hintergrund einer Symbolleisten-Schaltfläche ausfüllt.  
   
 ```  
@@ -3804,7 +3974,7 @@ virtual void OnFillButtonInterior(
   
  Sind die möglichen Zustände einer Symbolleisten-Schaltfläche `ButtonsIsRegular`, `ButtonsIsPressed`, oder `ButtonsIsHighlighted`.  
   
-##  <a name="a-nameonfillcaptionbarbuttona--cmfcvisualmanageronfillcaptionbarbutton"></a><a name="onfillcaptionbarbutton"></a>CMFCVisualManager::OnFillCaptionBarButton  
+##  <a name="onfillcaptionbarbutton"></a>CMFCVisualManager::OnFillCaptionBarButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -3833,7 +4003,7 @@ virtual COLORREF OnFillCaptionBarButton(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonfillcommandslistbackgrounda--cmfcvisualmanageronfillcommandslistbackground"></a><a name="onfillcommandslistbackground"></a>CMFCVisualManager::OnFillCommandsListBackground  
+##  <a name="onfillcommandslistbackground"></a>CMFCVisualManager::OnFillCommandsListBackground  
  Das Framework ruft diese Methode auf, wenn sie den Hintergrund einer Symbolleisten-Schaltfläche ausfüllt, der eine Befehlsliste gehört. Dieser Befehlsliste ist Teil des im Dialogfeld Anpassen.  
   
 ```  
@@ -3859,7 +4029,7 @@ virtual COLORREF OnFillCommandsListBackground(
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen zu der Liste Anpassung, finden Sie unter [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist). Die standardmäßige Implementierung für diese Methode füllt den Hintergrund basierend auf das Farbschema des aktuell ausgewählten Designs.  
   
-##  <a name="a-nameonfillheaderctrlbackgrounda--cmfcvisualmanageronfillheaderctrlbackground"></a><a name="onfillheaderctrlbackground"></a>CMFCVisualManager::OnFillHeaderCtrlBackground  
+##  <a name="onfillheaderctrlbackground"></a>CMFCVisualManager::OnFillHeaderCtrlBackground  
  Das Framework ruft diese Methode auf, wenn sie den Hintergrund eines Steuerelements Header ausfüllt.  
   
 ```  
@@ -3882,7 +4052,7 @@ virtual void OnFillHeaderCtrlBackground(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung von einem Kopfzeilen-Steuerelement.  
   
-##  <a name="a-nameonfillminiframecaptiona--cmfcvisualmanageronfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFCVisualManager::OnFillMiniFrameCaption  
+##  <a name="onfillminiframecaption"></a>CMFCVisualManager::OnFillMiniFrameCaption  
  Das Framework ruft diese Methode auf, wenn sie auf die Titelleiste eines Fensters Mini-Frame ausfüllt.  
   
 ```  
@@ -3912,7 +4082,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung für diese Methode füllt die Titelleiste in der aktuellen Beschriftung für das aktive Design.  
   
-##  <a name="a-nameonfilloutlookbarcaptiona--cmfcvisualmanageronfilloutlookbarcaption"></a><a name="onfilloutlookbarcaption"></a>CMFCVisualManager::OnFillOutlookBarCaption  
+##  <a name="onfilloutlookbarcaption"></a>CMFCVisualManager::OnFillOutlookBarCaption  
  Das Framework ruft diese Methode auf, wenn sie den Hintergrund einer Outlook-Titelleiste ausfüllt.  
   
 ```  
@@ -3935,7 +4105,7 @@ virtual void OnFillOutlookBarCaption(
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung dieser Methode füllt die Titelleiste mit der Farbe für Schatten basierend auf das aktuelle Design. Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager, um die Farbe von der Outlook-Titelleiste anpassen.  
   
-##  <a name="a-nameonfilloutlookpagebuttona--cmfcvisualmanageronfilloutlookpagebutton"></a><a name="onfilloutlookpagebutton"></a>CMFCVisualManager::OnFillOutlookPageButton  
+##  <a name="onfilloutlookpagebutton"></a>CMFCVisualManager::OnFillOutlookPageButton  
  Das Framework ruft diese Methode auf, wenn sie das Innere einer Outlook-Schaltfläche Seite ausfüllt.  
   
 ```  
@@ -3966,7 +4136,7 @@ virtual void OnFillOutlookPageButton(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion in einem abgeleiteten visuellen Manager zum Anpassen der Darstellung der Schaltflächen der Outlook-Seite.  
   
-##  <a name="a-nameonfillpopupwindowbackgrounda--cmfcvisualmanageronfillpopupwindowbackground"></a><a name="onfillpopupwindowbackground"></a>CMFCVisualManager::OnFillPopupWindowBackground  
+##  <a name="onfillpopupwindowbackground"></a>CMFCVisualManager::OnFillPopupWindowBackground  
  Das Framework ruft diese Methode auf, wenn sie den Hintergrund eines Popupfensters ausfüllt.  
   
 ```  
@@ -3985,7 +4155,7 @@ virtual void OnFillPopupWindowBackground(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung von Popup-Fenstern.  
   
-##  <a name="a-nameonfillribbonbuttona--cmfcvisualmanageronfillribbonbutton"></a><a name="onfillribbonbutton"></a>CMFCVisualManager::OnFillRibbonButton  
+##  <a name="onfillribbonbutton"></a>CMFCVisualManager::OnFillRibbonButton  
  Das Framework ruft diese Methode auf, wenn sie das Innere einer Menübandschaltfläche ausfüllt.  
   
 ```  
@@ -4007,7 +4177,7 @@ virtual COLORREF OnFillRibbonButton(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung der Multifunktionsleisten-Schaltflächen.  
   
-##  <a name="a-nameonfillribbonedita--cmfcvisualmanageronfillribbonedit"></a><a name="onfillribbonedit"></a>CMFCVisualManager::OnFillRibbonEdit  
+##  <a name="onfillribbonedit"></a>CMFCVisualManager::OnFillRibbonEdit  
  Das Framework ruft diese Methode auf, wenn sie das Innere einer Instanz von füllt die `CMFCRibbonRichEditCtrl` Klasse.  
   
 ```  
@@ -4056,7 +4226,7 @@ virtual void OnFillRibbonEdit(
   
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung von einem `CMFCRibbonRichEditCtrl`.  
   
-##  <a name="a-nameonfillribbonmainpanelbuttona--cmfcvisualmanageronfillribbonmainpanelbutton"></a><a name="onfillribbonmainpanelbutton"></a>CMFCVisualManager::OnFillRibbonMainPanelButton  
+##  <a name="onfillribbonmainpanelbutton"></a>CMFCVisualManager::OnFillRibbonMainPanelButton  
  Das Framework ruft diese Methode auf, wenn es eine Schaltfläche der Multifunktionsleiste befindet sich auf das innere füllt die **Main** Bereich.  
   
 ```  
@@ -4078,7 +4248,7 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einem abgeleiteten visual-Manager auf die Darstellung der Schaltflächen der Multifunktionsleiste Anpassen der **Main** Bereich.  
   
-##  <a name="a-nameonfillribbonmenuframea--cmfcvisualmanageronfillribbonmenuframe"></a><a name="onfillribbonmenuframe"></a>CMFCVisualManager::OnFillRibbonMenuFrame  
+##  <a name="onfillribbonmenuframe"></a>CMFCVisualManager::OnFillRibbonMenuFrame  
  Das Framework ruft diese Methode auf, wenn es sich um den Menüframe im im Menübandbereich ausfüllt.  
   
 ```  
@@ -4101,7 +4271,7 @@ virtual void OnFillRibbonMenuFrame(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung der Menüleiste für die `CMFCRibbonMainPanel`.  
   
-##  <a name="a-nameonfillribbonquickaccesstoolbarpopupa--cmfcvisualmanageronfillribbonquickaccesstoolbarpopup"></a><a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup  
+##  <a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -4118,7 +4288,7 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonfillsplitterbackgrounda--cmfcvisualmanageronfillsplitterbackground"></a><a name="onfillsplitterbackground"></a>CMFCVisualManager::OnFillSplitterBackground  
+##  <a name="onfillsplitterbackground"></a>CMFCVisualManager::OnFillSplitterBackground  
  Das Framework ruft diese Methode auf, wenn sie den Hintergrund eines unterteilten Fensters ausfüllt.  
   
 ```  
@@ -4141,7 +4311,7 @@ virtual void OnFillSplitterBackground(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung eines unterteilten Fensters.  
   
-##  <a name="a-nameonfilltaba--cmfcvisualmanageronfilltab"></a><a name="onfilltab"></a>CMFCVisualManager::OnFillTab  
+##  <a name="onfilltab"></a>CMFCVisualManager::OnFillTab  
  Das Framework ruft diese Methode auf, wenn sie den Hintergrund eines Fensters Registerkarte ausfüllt.  
   
 ```  
@@ -4176,7 +4346,7 @@ virtual void OnFillTab(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung der Registerkarten.  
   
-##  <a name="a-nameonfilltasksgroupinteriora--cmfcvisualmanageronfilltasksgroupinterior"></a><a name="onfilltasksgroupinterior"></a>CMFCVisualManager::OnFillTasksGroupInterior  
+##  <a name="onfilltasksgroupinterior"></a>CMFCVisualManager::OnFillTasksGroupInterior  
  Das Framework ruft diese Methode auf, wenn es das innere füllt eine [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) Objekt.  
   
 ```  
@@ -4199,7 +4369,7 @@ virtual void OnFillTasksGroupInterior(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung von einer Aufgabengruppe.  
   
-##  <a name="a-nameonfilltaskspanebackgrounda--cmfcvisualmanageronfilltaskspanebackground"></a><a name="onfilltaskspanebackground"></a>CMFCVisualManager::OnFillTasksPaneBackground  
+##  <a name="onfilltaskspanebackground"></a>CMFCVisualManager::OnFillTasksPaneBackground  
  Das Framework ruft diese Methode auf, wenn sie den Hintergrund des füllt eine [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) Steuerelement.  
   
 ```  
@@ -4218,7 +4388,7 @@ virtual void OnFillTasksPaneBackground(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung von einem `CMFCTasksPane` Objekt.  
   
-##  <a name="a-nameonhighlightmenuitema--cmfcvisualmanageronhighlightmenuitem"></a><a name="onhighlightmenuitem"></a>CMFCVisualManager::OnHighlightMenuItem  
+##  <a name="onhighlightmenuitem"></a>CMFCVisualManager::OnHighlightMenuItem  
  Das Framework ruft diese Methode auf, wenn es ein markiertes Menüelement zeichnet.  
   
 ```  
@@ -4247,7 +4417,7 @@ virtual void OnHighlightMenuItem(
   
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung der markierten Menüelemente. Verwenden der `clrText` Parameter, um die Textfarbe der ein markiertes Menüelement zu ändern.  
   
-##  <a name="a-nameonhighlightrarelyusedmenuitemsa--cmfcvisualmanageronhighlightrarelyusedmenuitems"></a><a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManager::OnHighlightRarelyUsedMenuItems  
+##  <a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManager::OnHighlightRarelyUsedMenuItems  
  Das Framework ruft diese Methode auf, wenn es einen hervorgehobenen Befehl zeichnet.  
   
 ```  
@@ -4266,7 +4436,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager zum Anpassen der Darstellung der markierten Menübefehle.  
   
-##  <a name="a-nameonncactivatea--cmfcvisualmanageronncactivate"></a><a name="onncactivate"></a>CMFCVisualManager::OnNcActivate  
+##  <a name="onncactivate"></a>CMFCVisualManager::OnNcActivate  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -4283,7 +4453,7 @@ virtual BOOL OnNcActivate(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonncpainta--cmfcvisualmanageronncpaint"></a><a name="onncpaint"></a>CMFCVisualManager::OnNcPaint  
+##  <a name="onncpaint"></a>CMFCVisualManager::OnNcPaint  
  Das Framework ruft diese Methode auf, wenn es den nicht-Clientbereich zeichnet.  
   
 ```  
@@ -4309,7 +4479,7 @@ virtual BOOL OnNcPaint(
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager anpassen die Darstellung der Schaltflächen im Fenster Frame und Beschriftung.  
   
-##  <a name="a-nameonsetwindowregiona--cmfcvisualmanageronsetwindowregion"></a><a name="onsetwindowregion"></a>CMFCVisualManager::OnSetWindowRegion  
+##  <a name="onsetwindowregion"></a>CMFCVisualManager::OnSetWindowRegion  
  Das Framework ruft diese Methode nach einer Region festgelegt, die Frames und Popupmenüs enthält.  
   
 ```  
@@ -4331,7 +4501,7 @@ virtual BOOL OnSetWindowRegion(
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode, um den visuellen Manager zu informieren, den ein Bereich für Frames und Popupmenüs festgelegt wurde. Weitere Informationen finden Sie unter [CWindow::SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn).  
   
-##  <a name="a-nameonupdatesystemcolorsa--cmfcvisualmanageronupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFCVisualManager::OnUpdateSystemColors  
+##  <a name="onupdatesystemcolors"></a>CMFCVisualManager::OnUpdateSystemColors  
  Das Framework ruft diese Funktion ändert sich die Systemfarben.  
   
 ```  
@@ -4341,14 +4511,14 @@ virtual void OnUpdateSystemColors();
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode als Teil der Verarbeitung der `WM_SYSCOLORCHANGE` Nachricht. Bei der Standardimplementierung wird keine Aktion ausgeführt. Überschreiben Sie diese Methode in einer abgeleiteten visuellen Manager, wenn Sie benutzerdefinierten Code auszuführen, wenn die Farben in Ihrer Anwendung ändern möchten.  
   
-##  <a name="a-nameredrawalla--cmfcvisualmanagerredrawall"></a><a name="redrawall"></a>CMFCVisualManager::RedrawAll  
+##  <a name="redrawall"></a>CMFCVisualManager::RedrawAll  
  Sofort zeichnet alle Steuerleisten in der Anwendung.  
   
 ```  
 static void RedrawAll();
 ```  
   
-##  <a name="a-nameribboncategorycolortorgba--cmfcvisualmanagerribboncategorycolortorgb"></a><a name="ribboncategorycolortorgb"></a>CMFCVisualManager::RibbonCategoryColorToRGB  
+##  <a name="ribboncategorycolortorgb"></a>CMFCVisualManager::RibbonCategoryColorToRGB  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -4362,7 +4532,7 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetdefaultmanagera--cmfcvisualmanagersetdefaultmanager"></a><a name="setdefaultmanager"></a>CMFCVisualManager::SetDefaultManager  
+##  <a name="setdefaultmanager"></a>CMFCVisualManager::SetDefaultManager  
  Legt den Standard-Manager fest.  
   
 ```  
@@ -4378,7 +4548,7 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
   
  Verwenden Sie diese Methode zum visuellen Manager ändern, den Ihre Anwendung verwendet.  
   
-##  <a name="a-namesetembossdisabledimagea--cmfcvisualmanagersetembossdisabledimage"></a><a name="setembossdisabledimage"></a>CMFCVisualManager::SetEmbossDisabledImage  
+##  <a name="setembossdisabledimage"></a>CMFCVisualManager::SetEmbossDisabledImage  
  Aktiviert oder deaktiviert den geprägten Modus für Symbolleistenbilder, die deaktiviert.  
   
 ```  
@@ -4392,7 +4562,7 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie die Funktion [CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage) zu bestimmen, ob Geprägte Modus aktiviert ist.  
   
-##  <a name="a-namesetfadeinactiveimagea--cmfcvisualmanagersetfadeinactiveimage"></a><a name="setfadeinactiveimage"></a>CMFCVisualManager::SetFadeInactiveImage  
+##  <a name="setfadeinactiveimage"></a>CMFCVisualManager::SetFadeInactiveImage  
  Aktiviert oder deaktiviert die Beleuchtung Auswirkung für inaktive Bilder in einem Menü oder Symbolleiste.  
   
 ```  
@@ -4406,7 +4576,7 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion legt fest, ob inaktive Bilder angezeigt werden, die in einem Menü oder Symbolleiste Fehler bei. Verwenden Sie die Methode [CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage) zu bestimmen, ob dieses Feature aktiviert ist.  
   
-##  <a name="a-namesetmenuflatlooka--cmfcvisualmanagersetmenuflatlook"></a><a name="setmenuflatlook"></a>CMFCVisualManager::SetMenuFlatLook  
+##  <a name="setmenuflatlook"></a>CMFCVisualManager::SetMenuFlatLook  
  Legt ein Flag, das angibt, ob die Schaltflächen flach dargestellt. Andernfalls werden sie dreidimensionale angezeigt.  
   
 ```  
@@ -4420,7 +4590,7 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ### <a name="remarks"></a>Hinweise  
  Dieses Feature ist standardmäßig nicht aktiviert.  
   
-##  <a name="a-namesetmenushadowdeptha--cmfcvisualmanagersetmenushadowdepth"></a><a name="setmenushadowdepth"></a>CMFCVisualManager::SetMenuShadowDepth  
+##  <a name="setmenushadowdepth"></a>CMFCVisualManager::SetMenuShadowDepth  
  Legt die Breite und Höhe des Schattens Menü.  
   
 ```  
@@ -4434,7 +4604,7 @@ void SetMenuShadowDepth(int nDepth);
 ### <a name="remarks"></a>Hinweise  
  Die Höhe und Breite des Schattens Menü müssen identisch sein. Der Standardwert ist 7 Pixel.  
   
-##  <a name="a-namesetshadowhighlightedimagea--cmfcvisualmanagersetshadowhighlightedimage"></a><a name="setshadowhighlightedimage"></a>CMFCVisualManager::SetShadowHighlightedImage  
+##  <a name="setshadowhighlightedimage"></a>CMFCVisualManager::SetShadowHighlightedImage  
  Legt ein Flag fest, der angibt, ob die [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md) Schatten für markierte Bilder angezeigt.  
   
 ```  

@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonEdit
+- AFXRIBBONEDIT/CMFCRibbonEdit
+- AFXRIBBONEDIT/CMFCRibbonEdit::CMFCRibbonEdit
+- AFXRIBBONEDIT/CMFCRibbonEdit::CanBeStretched
+- AFXRIBBONEDIT/CMFCRibbonEdit::CMFCRibbonEdit
+- AFXRIBBONEDIT/CMFCRibbonEdit::CopyFrom
+- AFXRIBBONEDIT/CMFCRibbonEdit::CreateEdit
+- AFXRIBBONEDIT/CMFCRibbonEdit::DestroyCtrl
+- AFXRIBBONEDIT/CMFCRibbonEdit::DropDownList
+- AFXRIBBONEDIT/CMFCRibbonEdit::EnableSpinButtons
+- AFXRIBBONEDIT/CMFCRibbonEdit::GetCompactSize
+- AFXRIBBONEDIT/CMFCRibbonEdit::GetEditText
+- AFXRIBBONEDIT/CMFCRibbonEdit::GetIntermediateSize
+- AFXRIBBONEDIT/CMFCRibbonEdit::GetTextAlign
+- AFXRIBBONEDIT/CMFCRibbonEdit::GetWidth
+- AFXRIBBONEDIT/CMFCRibbonEdit::HasCompactMode
+- AFXRIBBONEDIT/CMFCRibbonEdit::HasFocus
+- AFXRIBBONEDIT/CMFCRibbonEdit::HasLargeMode
+- AFXRIBBONEDIT/CMFCRibbonEdit::HasSpinButtons
+- AFXRIBBONEDIT/CMFCRibbonEdit::IsHighlighted
+- AFXRIBBONEDIT/CMFCRibbonEdit::OnAfterChangeRect
+- AFXRIBBONEDIT/CMFCRibbonEdit::OnDraw
+- AFXRIBBONEDIT/CMFCRibbonEdit::OnDrawLabelAndImage
+- AFXRIBBONEDIT/CMFCRibbonEdit::OnDrawOnList
+- AFXRIBBONEDIT/CMFCRibbonEdit::OnEnable
+- AFXRIBBONEDIT/CMFCRibbonEdit::OnHighlight
+- AFXRIBBONEDIT/CMFCRibbonEdit::OnKey
+- AFXRIBBONEDIT/CMFCRibbonEdit::OnLButtonDown
+- AFXRIBBONEDIT/CMFCRibbonEdit::OnLButtonUp
+- AFXRIBBONEDIT/CMFCRibbonEdit::OnRTLChanged
+- AFXRIBBONEDIT/CMFCRibbonEdit::OnShow
+- AFXRIBBONEDIT/CMFCRibbonEdit::Redraw
+- AFXRIBBONEDIT/CMFCRibbonEdit::SetACCData
+- AFXRIBBONEDIT/CMFCRibbonEdit::SetEditText
+- AFXRIBBONEDIT/CMFCRibbonEdit::SetTextAlign
+- AFXRIBBONEDIT/CMFCRibbonEdit::SetWidth
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +139,7 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxRibbonEdit.h  
   
-##  <a name="a-namecanbestretcheda--cmfcribboneditcanbestretched"></a><a name="canbestretched"></a>CMFCRibbonEdit::CanBeStretched  
+##  <a name="canbestretched"></a>CMFCRibbonEdit::CanBeStretched  
  Gibt an, ob die Höhe der [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement vertikal auf die Höhe einer Zeile Menüband erhöhen kann.  
   
 ```  
@@ -116,7 +151,7 @@ virtual BOOL CanBeStretched();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namecmfcribbonedita--cmfcribboneditcmfcribbonedit"></a><a name="cmfcribbonedit"></a>CMFCRibbonEdit::CMFCRibbonEdit  
+##  <a name="cmfcribbonedit"></a>CMFCRibbonEdit::CMFCRibbonEdit  
  Erstellt eine [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Objekt.  
   
 ```  
@@ -145,7 +180,7 @@ CMFCRibbonEdit();
 ### <a name="remarks"></a>Hinweise  
  Die `CMFCRibbonEdit` -Steuerelement verwendet kein großes Bild.  
   
-##  <a name="a-namecopyfroma--cmfcribboneditcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonEdit::CopyFrom  
+##  <a name="copyfrom"></a>CMFCRibbonEdit::CopyFrom  
  Kopiert den Zustand des angegebenen [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Objekt mit dem aktuellen [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Objekt.  
   
 ```  
@@ -159,7 +194,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ### <a name="remarks"></a>Hinweise  
  Die `src` Parameter muss vom Typ `CMFCRibbonEdit`.  
   
-##  <a name="a-namecreateedita--cmfcribboneditcreateedit"></a><a name="createedit"></a>CMFCRibbonEdit::CreateEdit  
+##  <a name="createedit"></a>CMFCRibbonEdit::CreateEdit  
  Erstellt ein neues Textfeld für den [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Objekt.  
   
 ```  
@@ -193,7 +228,7 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
   
 - **WS_TABSTOP**  
   
-##  <a name="a-namedestroyctrla--cmfcribboneditdestroyctrl"></a><a name="destroyctrl"></a>CMFCRibbonEdit::DestroyCtrl  
+##  <a name="destroyctrl"></a>CMFCRibbonEdit::DestroyCtrl  
  Zerstört die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Objekt.  
   
 ```  
@@ -202,7 +237,7 @@ virtual void DestroyCtrl();
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namedropdownlista--cmfcribboneditdropdownlist"></a><a name="dropdownlist"></a>CMFCRibbonEdit::DropDownList  
+##  <a name="dropdownlist"></a>CMFCRibbonEdit::DropDownList  
  Löscht ein Listenfeld.  
   
 ```  
@@ -212,7 +247,7 @@ virtual void DropDownList();
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig bewirkt diese Methode nichts. Überschreiben Sie diese Methode, um ein Listenfeld zu löschen.  
   
-##  <a name="a-nameenablespinbuttonsa--cmfcribboneditenablespinbuttons"></a><a name="enablespinbuttons"></a>CMFCRibbonEdit::EnableSpinButtons  
+##  <a name="enablespinbuttons"></a>CMFCRibbonEdit::EnableSpinButtons  
  Aktiviert, und der Bereich festgelegt, der das Drehfeld für das Textfeld.  
   
 ```  
@@ -231,7 +266,7 @@ void EnableSpinButtons(
 ### <a name="remarks"></a>Hinweise  
  Drehfeld Schaltflächen zeigt eine nach-oben und Pfeil nach unten und ermöglichen Benutzern, über einen festen Satz von Werten zu verschieben.  
   
-##  <a name="a-namegetcompactsizea--cmfcribboneditgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonEdit::GetCompactSize  
+##  <a name="getcompactsize"></a>CMFCRibbonEdit::GetCompactSize  
  Ruft die komprimierte Größe des der [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Objekt.  
   
 ```  
@@ -247,7 +282,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetedittexta--cmfcribboneditgetedittext"></a><a name="getedittext"></a>CMFCRibbonEdit::GetEditText  
+##  <a name="getedittext"></a>CMFCRibbonEdit::GetEditText  
  Ruft den Text im Textfeld.  
   
 ```  
@@ -259,7 +294,7 @@ CString GetEditText() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegetintermediatesizea--cmfcribboneditgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonEdit::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>CMFCRibbonEdit::GetIntermediateSize  
  Ruft die intermediate Größe ab, die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Objekt.  
   
 ```  
@@ -275,7 +310,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namegettextaligna--cmfcribboneditgettextalign"></a><a name="gettextalign"></a>CMFCRibbonEdit::GetTextAlign  
+##  <a name="gettextalign"></a>CMFCRibbonEdit::GetTextAlign  
  Ruft die Ausrichtung des Texts im Textfeld ab.  
   
 ```  
@@ -296,7 +331,7 @@ int GetTextAlign() const;
   
  Weitere Informationen über diese Formate finden Sie unter [Steuerelementtypen bearbeiten](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
-##  <a name="a-namegetwidtha--cmfcribboneditgetwidth"></a><a name="getwidth"></a>CMFCRibbonEdit::GetWidth  
+##  <a name="getwidth"></a>CMFCRibbonEdit::GetWidth  
  Ruft die Breite in Pixel ab, der die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement.  
   
 ```  
@@ -312,7 +347,7 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namehascompactmodea--cmfcribbonedithascompactmode"></a><a name="hascompactmode"></a>CMFCRibbonEdit::HasCompactMode  
+##  <a name="hascompactmode"></a>CMFCRibbonEdit::HasCompactMode  
  Gibt an, ob die Anzeige für die Größe der [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement compact sein kann.  
   
 ```  
@@ -325,7 +360,7 @@ virtual BOOL HasCompactMode() const;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `TRUE`. Überschreiben Sie diese Methode, um anzugeben, ob die Größe der Anzeige kompakt sein kann.  
   
-##  <a name="a-namehasfocusa--cmfcribbonedithasfocus"></a><a name="hasfocus"></a>CMFCRibbonEdit::HasFocus  
+##  <a name="hasfocus"></a>CMFCRibbonEdit::HasFocus  
  Gibt an, ob die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement den Fokus hat.  
   
 ```  
@@ -337,7 +372,7 @@ virtual BOOL HasFocus() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namehaslargemodea--cmfcribbonedithaslargemode"></a><a name="haslargemode"></a>CMFCRibbonEdit::HasLargeMode  
+##  <a name="haslargemode"></a>CMFCRibbonEdit::HasLargeMode  
  Gibt an, ob die Anzeige für die Größe der [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement groß sein kann.  
   
 ```  
@@ -350,7 +385,7 @@ virtual BOOL HasLargeMode() const;
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig gibt diese Methode immer `FALSE`. Überschreiben Sie diese Methode, um anzugeben, ob die Größe der Anzeige groß sein kann.  
   
-##  <a name="a-namehasspinbuttonsa--cmfcribbonedithasspinbuttons"></a><a name="hasspinbuttons"></a>CMFCRibbonEdit::HasSpinButtons  
+##  <a name="hasspinbuttons"></a>CMFCRibbonEdit::HasSpinButtons  
  Gibt an, ob das Textfeld ein Drehfeld verfügt.  
   
 ```  
@@ -362,7 +397,7 @@ virtual BOOL HasSpinButtons() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameishighlighteda--cmfcribboneditishighlighted"></a><a name="ishighlighted"></a>CMFCRibbonEdit::IsHighlighted  
+##  <a name="ishighlighted"></a>CMFCRibbonEdit::IsHighlighted  
  Gibt an, ob die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement hervorgehoben ist.  
   
 ```  
@@ -374,7 +409,7 @@ virtual BOOL IsHighlighted() const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonafterchangerecta--cmfcribboneditonafterchangerect"></a><a name="onafterchangerect"></a>CMFCRibbonEdit::OnAfterChangeRect  
+##  <a name="onafterchangerect"></a>CMFCRibbonEdit::OnAfterChangeRect  
  Aufgerufen, wenn die Dimensionen des Rechtecks Anzeige für die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) steuern möchten.  
   
 ```  
@@ -387,7 +422,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawa--cmfcribboneditondraw"></a><a name="ondraw"></a>CMFCRibbonEdit::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonEdit::OnDraw  
  Aufgerufen, zum Zeichnen der [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement.  
   
 ```  
@@ -400,7 +435,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawlabelandimagea--cmfcribboneditondrawlabelandimage"></a><a name="ondrawlabelandimage"></a>CMFCRibbonEdit::OnDrawLabelAndImage  
+##  <a name="ondrawlabelandimage"></a>CMFCRibbonEdit::OnDrawLabelAndImage  
  Aufgerufen, zeichnen die Bezeichnung und das Abbild für die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement.  
   
 ```  
@@ -413,7 +448,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameondrawonlista--cmfcribboneditondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonEdit::OnDrawOnList  
+##  <a name="ondrawonlist"></a>CMFCRibbonEdit::OnDrawOnList  
  Aufgerufen, zum Zeichnen der [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) -Steuerelement in einem Listenfeld Befehle.  
   
 ```  
@@ -448,7 +483,7 @@ virtual void OnDrawOnList(
 ### <a name="remarks"></a>Hinweise  
  Im Listenfeld Befehle zeigt Menübandsteuerelemente, damit Benutzer die Symbolleiste für den Schnellzugriff anpassen können.  
   
-##  <a name="a-nameonenablea--cmfcribboneditonenable"></a><a name="onenable"></a>CMFCRibbonEdit::OnEnable  
+##  <a name="onenable"></a>CMFCRibbonEdit::OnEnable  
  Aufgerufen, aktivieren oder Deaktivieren der [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement.  
   
 ```  
@@ -461,7 +496,7 @@ virtual void OnEnable(BOOL bEnable);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonhighlighta--cmfcribboneditonhighlight"></a><a name="onhighlight"></a>CMFCRibbonEdit::OnHighlight  
+##  <a name="onhighlight"></a>CMFCRibbonEdit::OnHighlight  
  Vom Framework aufgerufen, wenn der Zeiger eingibt oder die Begrenzung des verlässt die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement.  
   
 ```  
@@ -474,7 +509,7 @@ virtual void OnHighlight(BOOL bHighlight);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonkeya--cmfcribboneditonkey"></a><a name="onkey"></a>CMFCRibbonEdit::OnKey  
+##  <a name="onkey"></a>CMFCRibbonEdit::OnKey  
  Vom Framework aufgerufen, wenn der Benutzer eine Zugriffstasteninfo drückt und die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement den Fokus hat.  
   
 ```  
@@ -490,7 +525,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonlbuttondowna--cmfcribboneditonlbuttondown"></a><a name="onlbuttondown"></a>CMFCRibbonEdit::OnLButtonDown  
+##  <a name="onlbuttondown"></a>CMFCRibbonEdit::OnLButtonDown  
  Aufgerufen, zum Aktualisieren der [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) steuern, wenn der Benutzer die linke Maustaste auf das Steuerelement drückt.  
   
 ```  
@@ -503,7 +538,7 @@ virtual void OnLButtonDown(CPoint point);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonlbuttonupa--cmfcribboneditonlbuttonup"></a><a name="onlbuttonup"></a>CMFCRibbonEdit::OnLButtonUp  
+##  <a name="onlbuttonup"></a>CMFCRibbonEdit::OnLButtonUp  
  Vom Framework aufgerufen, wenn der Benutzer die linke Maustaste loslässt.  
   
 ```  
@@ -516,7 +551,7 @@ virtual void OnLButtonUp(CPoint point);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonrtlchangeda--cmfcribboneditonrtlchanged"></a><a name="onrtlchanged"></a>CMFCRibbonEdit::OnRTLChanged  
+##  <a name="onrtlchanged"></a>CMFCRibbonEdit::OnRTLChanged  
  Aufgerufen, zum Aktualisieren der [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) steuern, wenn das Layout Richtung ändert.  
   
 ```  
@@ -529,7 +564,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameonshowa--cmfcribboneditonshow"></a><a name="onshow"></a>CMFCRibbonEdit::OnShow  
+##  <a name="onshow"></a>CMFCRibbonEdit::OnShow  
  Aufgerufen, um ein- oder Ausblenden der [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement.  
   
 ```  
@@ -542,7 +577,7 @@ virtual void OnShow(BOOL bShow);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameredrawa--cmfcribboneditredraw"></a><a name="redraw"></a>CMFCRibbonEdit::Redraw  
+##  <a name="redraw"></a>CMFCRibbonEdit::Redraw  
  Aktualisiert die Anzeige der [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement.  
   
 ```  
@@ -552,7 +587,7 @@ virtual void Redraw();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode zeichnet das Anzeigerechteck für die `CMFCRibbonEdit` durch indirekt aufrufen [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) mit der `RDW_INVALIDATE`, `RDW_ERASE`, und `RDW_UPDATENOW` flags festlegen.  
   
-##  <a name="a-namesetaccdataa--cmfcribboneditsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonEdit::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonEdit::SetACCData  
  Legt den Zugriff auf Daten für die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Objekt.  
   
 ```  
@@ -573,7 +608,7 @@ virtual BOOL SetACCData(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetedittexta--cmfcribboneditsetedittext"></a><a name="setedittext"></a>CMFCRibbonEdit::SetEditText  
+##  <a name="setedittext"></a>CMFCRibbonEdit::SetEditText  
  Legt den Text im Textfeld.  
   
 ```  
@@ -584,7 +619,7 @@ void SetEditText(CString strText);
  [in] `strText`  
  Der Text für das Textfeld.  
   
-##  <a name="a-namesettextaligna--cmfcribboneditsettextalign"></a><a name="settextalign"></a>CMFCRibbonEdit::SetTextAlign  
+##  <a name="settextalign"></a>CMFCRibbonEdit::SetTextAlign  
  Legt die Ausrichtung des Texts im Textfeld fest.  
   
 ```  
@@ -606,7 +641,7 @@ void SetTextAlign(int nAlign);
   
  Weitere Informationen über diese Formate finden Sie unter [Steuerelementtypen bearbeiten](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
-##  <a name="a-namesetwidtha--cmfcribboneditsetwidth"></a><a name="setwidth"></a>CMFCRibbonEdit::SetWidth  
+##  <a name="setwidth"></a>CMFCRibbonEdit::SetWidth  
  Legt die Breite des Textfelds für die [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) Steuerelement.  
   
 ```  

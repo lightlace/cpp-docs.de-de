@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CNonStatelessWorker<Worker>
-- ATL::CNonStatelessWorker
-- ATL.CNonStatelessWorker
 - CNonStatelessWorker
-- ATL::CNonStatelessWorker<Worker>
+- ATLUTIL/ATL::CNonStatelessWorker
+- ATLUTIL/ATL::CNonStatelessWorker::RequestType
+- ATLUTIL/ATL::CNonStatelessWorker::Execute
+- ATLUTIL/ATL::CNonStatelessWorker::Initialize
+- ATLUTIL/ATL::CNonStatelessWorker::Terminate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +85,7 @@ class CNonStatelessWorker
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlutil.h  
   
-##  <a name="a-nameexecutea--cnonstatelessworkerexecute"></a><a name="execute"></a>CNonStatelessWorker::Execute  
+##  <a name="execute"></a>CNonStatelessWorker::Execute  
  Implementierung von [WorkerArchetype::Execute](worker-archetype.md#execute).  
 
   
@@ -99,7 +100,7 @@ void Execute(
  Diese Methode erstellt eine Instanz der *Worker* Klasse auf dem Stapel und die Aufrufe [initialisieren](worker-archetype.md#initialize) für dieses Objekt. Wenn die Initialisierung erfolgreich ist, ruft diese Methode auch [ausführen](worker-archetype.md#execute) und [Terminate](worker-archetype.md#terminate) auf dasselbe Objekt.  
 
   
-##  <a name="a-nameinitializea--cnonstatelessworkerinitialize"></a><a name="initialize"></a>CNonStatelessWorker::Initialize  
+##  <a name="initialize"></a>CNonStatelessWorker::Initialize  
  Implementierung von [WorkerArchetype::Initialize](worker-archetype.md#initialize).  
   
 ```
@@ -112,7 +113,7 @@ BOOL Initialize(void* /* pvParam */) throw();
 ### <a name="remarks"></a>Hinweise  
  Diese Klasse führt keine Initialisierung `Initialize`.  
   
-##  <a name="a-namerequesttypea--cnonstatelessworkerrequesttype"></a><a name="requesttype"></a>CNonStatelessWorker::RequestType  
+##  <a name="requesttype"></a>CNonStatelessWorker::RequestType  
  Implementierung von [WorkerArchetype::RequestType](worker-archetype.md#requesttype).  
   
 ```
@@ -122,7 +123,7 @@ typedef Worker::RequestType RequestType;
 ### <a name="remarks"></a>Hinweise  
  Diese Klasse behandelt denselben Typ von Arbeitsaufgabe wie die Klasse für die *Worker* Template-Parameter. Finden Sie unter [CNonStatelessWorker Übersicht über](../../atl/reference/cnonstatelessworker-class.md) Informationen.  
   
-##  <a name="a-nameterminatea--cnonstatelessworkerterminate"></a><a name="terminate"></a>CNonStatelessWorker::Terminate  
+##  <a name="terminate"></a>CNonStatelessWorker::Terminate  
  Implementierung von [WorkerArchetype::Terminate](worker-archetype.md#terminate).  
   
 ```

@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFixedStringT
+- CSTRINGT/ATL::CFixedStringT
+- CSTRINGT/ATL::CFixedStringT::CFixedStringT
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +96,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ## <a name="requirements"></a>Anforderungen  
  **Header:** cstringt.h  
   
-##  <a name="a-namecfixedstringta--cfixedstringtcfixedstringt"></a><a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
+##  <a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
  Erstellt ein `CFixedStringT`-Objekt.  
   
 ```
@@ -120,7 +122,7 @@ explicit CFixedStringT(const unsigned char* psz);
 ### <a name="remarks"></a>Hinweise  
  Da die Konstruktoren die Eingabedaten in neuen reservierten Speicher kopieren, sollten Sie bedenken, dass der Speicher Ausnahmen führen können. Beachten Sie, dass einige dieser Konstruktoren als Funktionen fungieren.  
   
-##  <a name="a-nameoperatoreqa--cfixedstringtoperator-"></a><a name="operator__eq"></a>CFixedStringT::operator =  
+##  <a name="operator__eq"></a>CFixedStringT::operator =  
  Initialisiert eine vorhandene `CFixedStringT` Objekt mit neuen Daten.  
   
 ```

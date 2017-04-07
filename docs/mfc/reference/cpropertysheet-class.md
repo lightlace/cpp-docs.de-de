@@ -10,6 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPropertySheet
+- AFXDLGS/CPropertySheet
+- AFXDLGS/CPropertySheet::CPropertySheet
+- AFXDLGS/CPropertySheet::AddPage
+- AFXDLGS/CPropertySheet::Construct
+- AFXDLGS/CPropertySheet::Create
+- AFXDLGS/CPropertySheet::DoModal
+- AFXDLGS/CPropertySheet::EnableStackedTabs
+- AFXDLGS/CPropertySheet::EndDialog
+- AFXDLGS/CPropertySheet::GetActiveIndex
+- AFXDLGS/CPropertySheet::GetActivePage
+- AFXDLGS/CPropertySheet::GetPage
+- AFXDLGS/CPropertySheet::GetPageCount
+- AFXDLGS/CPropertySheet::GetPageIndex
+- AFXDLGS/CPropertySheet::GetTabControl
+- AFXDLGS/CPropertySheet::MapDialogRect
+- AFXDLGS/CPropertySheet::OnInitDialog
+- AFXDLGS/CPropertySheet::PressButton
+- AFXDLGS/CPropertySheet::RemovePage
+- AFXDLGS/CPropertySheet::SetActivePage
+- AFXDLGS/CPropertySheet::SetFinishText
+- AFXDLGS/CPropertySheet::SetTitle
+- AFXDLGS/CPropertySheet::SetWizardButtons
+- AFXDLGS/CPropertySheet::SetWizardMode
+- AFXDLGS/CPropertySheet::m_psh
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -140,7 +164,7 @@ class CPropertySheet : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdlgs.h  
   
-##  <a name="a-nameaddpagea--cpropertysheetaddpage"></a><a name="addpage"></a>CPropertySheet::AddPage  
+##  <a name="addpage"></a>CPropertySheet::AddPage  
  Fügt die angegebene Seite mit der Registerkarte ganz rechts im Eigenschaftenfenster an.  
   
 ```  
@@ -165,7 +189,7 @@ void AddPage(CPropertyPage* pPage);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#129;](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]  
   
-##  <a name="a-nameconstructa--cpropertysheetconstruct"></a><a name="construct"></a>CPropertySheet::Construct  
+##  <a name="construct"></a>CPropertySheet::Construct  
  Erstellt ein `CPropertySheet`-Objekt.  
   
 ```  
@@ -233,7 +257,7 @@ void Construct(
   
  [!code-cpp[NVC_MFCDocView&#130;](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]  
   
-##  <a name="a-namecpropertysheeta--cpropertysheetcpropertysheet"></a><a name="cpropertysheet"></a>CPropertySheet::CPropertySheet  
+##  <a name="cpropertysheet"></a>CPropertySheet::CPropertySheet  
  Erstellt ein `CPropertySheet`-Objekt.  
   
 ```  
@@ -302,7 +326,7 @@ CPropertySheet(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#131;](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
   
-##  <a name="a-namecreatea--cpropertysheetcreate"></a><a name="create"></a>CPropertySheet::Create  
+##  <a name="create"></a>CPropertySheet::Create  
  Zeigt ein nicht modales Eigenschaftenblatt.  
   
 ```  
@@ -340,7 +364,7 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
   
  [!code-cpp[NVC_MFCDocView&#133;](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]  
   
-##  <a name="a-namedomodala--cpropertysheetdomodal"></a><a name="domodal"></a>CPropertySheet:: DoModal  
+##  <a name="domodal"></a>CPropertySheet:: DoModal  
  Zeigt ein modales Eigenschaftenblatt.  
   
 ```  
@@ -383,7 +407,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertySheet::AddPage](#addpage).  
   
-##  <a name="a-nameenablestackedtabsa--cpropertysheetenablestackedtabs"></a><a name="enablestackedtabs"></a>CPropertySheet::EnableStackedTabs  
+##  <a name="enablestackedtabs"></a>CPropertySheet::EnableStackedTabs  
  Gibt an, ob Zeilen mit Registerkarten in einem Eigenschaftenblatt Stapeln.  
   
 ```  
@@ -402,7 +426,7 @@ void EnableStackedTabs(BOOL bStacked);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#134;](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
   
-##  <a name="a-nameenddialoga--cpropertysheetenddialog"></a><a name="enddialog"></a>CPropertySheet::EndDialog  
+##  <a name="enddialog"></a>CPropertySheet::EndDialog  
  Das Eigenschaftenblatt wird beendet.  
   
 ```  
@@ -421,7 +445,7 @@ void EndDialog(int nEndID);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertySheet::PressButton](#pressbutton).  
   
-##  <a name="a-namegetactiveindexa--cpropertysheetgetactiveindex"></a><a name="getactiveindex"></a>CPropertySheet::GetActiveIndex  
+##  <a name="getactiveindex"></a>CPropertySheet::GetActiveIndex  
  Ruft die Indexnummer des Blatt Eigenschaftenfenster die aktive Seite ab und verwendet dann die zurückgegebenen Indexnummer als Parameter für `GetPage`.  
   
 ```  
@@ -434,7 +458,7 @@ int GetActiveIndex() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertySheet::GetActivePage](#getactivepage).  
   
-##  <a name="a-namegetactivepagea--cpropertysheetgetactivepage"></a><a name="getactivepage"></a>CPropertySheet::GetActivePage  
+##  <a name="getactivepage"></a>CPropertySheet::GetActivePage  
  Ruft die Eigenschaftenblatt Fenster aktive Seite ab.  
   
 ```  
@@ -450,7 +474,7 @@ CPropertyPage* GetActivePage() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#135;](../../mfc/codesnippet/cpp/cpropertysheet-class_7.cpp)]  
   
-##  <a name="a-namegetpagea--cpropertysheetgetpage"></a><a name="getpage"></a>CPropertySheet::GetPage  
+##  <a name="getpage"></a>CPropertySheet::GetPage  
  Gibt einen Zeiger auf die angegebene Seite in diesem Eigenschaftenblatt.  
   
 ```  
@@ -467,7 +491,7 @@ CPropertyPage* GetPage(int nPage) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).  
   
-##  <a name="a-namegetpagecounta--cpropertysheetgetpagecount"></a><a name="getpagecount"></a>CPropertySheet::GetPageCount  
+##  <a name="getpagecount"></a>CPropertySheet::GetPageCount  
  Bestimmt die Anzahl der Seiten, die derzeit im Eigenschaftenblatt.  
   
 ```  
@@ -480,7 +504,7 @@ int GetPageCount() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).  
   
-##  <a name="a-namegetpageindexa--cpropertysheetgetpageindex"></a><a name="getpageindex"></a>CPropertySheet::GetPageIndex  
+##  <a name="getpageindex"></a>CPropertySheet::GetPageIndex  
  Ruft die Indexnummer der angegebenen Seite im Eigenschaftenfenster an.  
   
 ```  
@@ -500,7 +524,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertySheet::GetActivePage](#getactivepage).  
   
-##  <a name="a-namegettabcontrola--cpropertysheetgettabcontrol"></a><a name="gettabcontrol"></a>CPropertySheet::GetTabControl  
+##  <a name="gettabcontrol"></a>CPropertySheet::GetTabControl  
  Ruft einen Zeiger auf ein Registerkarten-Steuerelement zu einer Aktion für das Registerkarten-Steuerelement (d. h. keine der APIs im [CTabCtrl](../../mfc/reference/ctabctrl-class.md)).  
   
 ```  
@@ -516,7 +540,7 @@ CTabCtrl* GetTabControl() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#136;](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]  
   
-##  <a name="a-namempsha--cpropertysheetmpsh"></a><a name="m_psh"></a>CPropertySheet::m_psh  
+##  <a name="m_psh"></a>CPropertySheet::m_psh  
  Eine Struktur, deren Mitglieder die Merkmale des speichern [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -527,7 +551,7 @@ CTabCtrl* GetTabControl() const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#143;](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]  
   
-##  <a name="a-namemapdialogrecta--cpropertysheetmapdialogrect"></a><a name="mapdialogrect"></a>CPropertySheet::MapDialogRect  
+##  <a name="mapdialogrect"></a>CPropertySheet::MapDialogRect  
  Konvertiert die Dialogfeld-Einheiten eines Rechtecks Bildschirm Einheiten.  
   
 ```  
@@ -545,7 +569,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  Die `MapDialogRect` Memberfunktion ersetzt die Dialogfeld-Einheiten im `lpRect` mit Bildschirm Einheiten (Pixel), damit das Rechteck zum Erstellen eines Dialogfelds oder Positionieren Sie ein Steuerelement in einem Feld verwendet werden kann.  
   
-##  <a name="a-nameoninitdialoga--cpropertysheetoninitdialog"></a><a name="oninitdialog"></a>CPropertySheet::OnInitDialog  
+##  <a name="oninitdialog"></a>CPropertySheet::OnInitDialog  
  Außerkraftsetzungen, um die Initialisierung einer Eigenschaftenblatt zu erweitern.  
   
 ```  
@@ -562,7 +586,7 @@ virtual BOOL OnInitDialog();
   
  Sie benötigen keine Meldungszuordnungseintrags für diese Member-Funktion.  
   
-##  <a name="a-namepressbuttona--cpropertysheetpressbutton"></a><a name="pressbutton"></a>CPropertySheet::PressButton  
+##  <a name="pressbutton"></a>CPropertySheet::PressButton  
  Simuliert die Auswahl der angegebenen Schaltfläche in einem Eigenschaftenblatt.  
   
 ```  
@@ -595,7 +619,7 @@ void PressButton(int nButton);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#137;](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]  
   
-##  <a name="a-nameremovepagea--cpropertysheetremovepage"></a><a name="removepage"></a>CPropertySheet::RemovePage  
+##  <a name="removepage"></a>CPropertySheet::RemovePage  
  Entfernt eine Seite aus dem Eigenschaftenblatt, und das zugeordnete Fenster zerstört.  
   
 ```  
@@ -613,7 +637,7 @@ void RemovePage(int nPage);
 ### <a name="remarks"></a>Hinweise  
  Die [CPropertyPage](../../mfc/reference/cpropertypage-class.md) Objekt selbst wird nicht zerstört, bis der Besitzer der `CPropertySheet` Fenster wird geschlossen.  
   
-##  <a name="a-namesetactivepagea--cpropertysheetsetactivepage"></a><a name="setactivepage"></a>CPropertySheet::SetActivePage  
+##  <a name="setactivepage"></a>CPropertySheet::SetActivePage  
  Ändert die aktive Seite.  
   
 ```  
@@ -637,7 +661,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertySheet::GetActivePage](#getactivepage).  
   
-##  <a name="a-namesetfinishtexta--cpropertysheetsetfinishtext"></a><a name="setfinishtext"></a>CPropertySheet::SetFinishText  
+##  <a name="setfinishtext"></a>CPropertySheet::SetFinishText  
  Legt den Text in die Schaltfläche "Fertig stellen".  
   
 ```  
@@ -654,7 +678,7 @@ void SetFinishText(LPCTSTR lpszText);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#138;](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
   
-##  <a name="a-namesettitlea--cpropertysheetsettitle"></a><a name="settitle"></a>CPropertySheet::SetTitle  
+##  <a name="settitle"></a>CPropertySheet::SetTitle  
  Gibt das Eigenschaftenblatt Beschriftung (der Text, der in der Titelleiste eines Rahmenfensters angezeigt wird).  
   
 ```  
@@ -676,7 +700,7 @@ void SetTitle(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView&#139;](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]  
   
-##  <a name="a-namesetwizardbuttonsa--cpropertysheetsetwizardbuttons"></a><a name="setwizardbuttons"></a>CPropertySheet::SetWizardButtons  
+##  <a name="setwizardbuttons"></a>CPropertySheet::SetWizardButtons  
  Aktiviert oder deaktiviert die Schaltfläche zurück, weiter oder Fertig stellen in einem Eigenschaftenblatt Assistenten.  
   
 ```  
@@ -709,7 +733,7 @@ void SetWizardButtons(DWORD dwFlags);
   
  [!code-cpp[NVC_MFCDocView&#138;](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
   
-##  <a name="a-namesetwizardmodea--cpropertysheetsetwizardmode"></a><a name="setwizardmode"></a>CPropertySheet::SetWizardMode  
+##  <a name="setwizardmode"></a>CPropertySheet::SetWizardMode  
  Stellt eine Eigenschaftenseite als Assistent her.  
   
 ```  

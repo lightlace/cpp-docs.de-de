@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDumpContext
+- AFX/CDumpContext
+- AFX/CDumpContext::CDumpContext
+- AFX/CDumpContext::DumpAsHex
+- AFX/CDumpContext::Flush
+- AFX/CDumpContext::GetDepth
+- AFX/CDumpContext::HexDump
+- AFX/CDumpContext::SetDepth
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +112,7 @@ class CDumpContext
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
   
-##  <a name="a-namecdumpcontexta--cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext::CDumpContext  
+##  <a name="cdumpcontext"></a>CDumpContext::CDumpContext  
  Erstellt ein Objekt der Klasse `CDumpContext`.  
   
 ```  
@@ -124,7 +131,7 @@ CDumpContext(CFile* pFile = NULL);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_Utilities&#12;](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
-##  <a name="a-namedumpashexa--cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::DumpAsHex  
+##  <a name="dumpashex"></a>CDumpContext::DumpAsHex  
  Gibt den angegebenen Typ, der als Hexadezimalzeichenfolge formatiert.  
   
 ```  
@@ -147,7 +154,7 @@ CDumpContext& DumpAsHex(WORD w);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_Utilities&#13;](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
-##  <a name="a-nameflusha--cdumpcontextflush"></a><a name="flush"></a>CDumpContext::Flush  
+##  <a name="flush"></a>CDumpContext::Flush  
  Erzwingt, dass alle Daten im Puffer in die Datei geschrieben werden an der Dumpkontext angefügt ist.  
   
 ```  
@@ -157,7 +164,7 @@ void Flush();
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_Utilities&14;](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
-##  <a name="a-namegetdeptha--cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext::GetDepth  
+##  <a name="getdepth"></a>CDumpContext::GetDepth  
  Bestimmt, ob ein Speicherabbild tief oder flach verarbeitet wird.  
   
 ```  
@@ -170,7 +177,7 @@ int GetDepth() const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [SetDepth](#setdepth).  
   
-##  <a name="a-namehexdumpa--cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext::HexDump  
+##  <a name="hexdump"></a>CDumpContext::HexDump  
  Gibt ein Array von Bytes, die als hexadezimale Zahlen formatiert.  
   
 ```  
@@ -200,7 +207,7 @@ void HexDump(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_Utilities&#15;](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
   
-##  <a name="a-nameoperatorltlta--cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
  Gibt die angegebenen Daten in der Dumpkontext.  
   
 ```  
@@ -238,7 +245,7 @@ CDumpContext& operator<<(HFONT h);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_Utilities&17;](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
-##  <a name="a-namesetdeptha--cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext::SetDepth  
+##  <a name="setdepth"></a>CDumpContext::SetDepth  
  Legt die Tiefe für das Abbild.  
   
 ```  

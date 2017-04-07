@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDropSource
+- AFXOLE/COleDropSource
+- AFXOLE/COleDropSource::COleDropSource
+- AFXOLE/COleDropSource::GiveFeedback
+- AFXOLE/COleDropSource::OnBeginDrag
+- AFXOLE/COleDropSource::QueryContinueDrag
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +91,14 @@ class COleDropSource : public CCmdTarget
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="a-namecoledropsourcea--coledropsourcecoledropsource"></a><a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
  Erstellt ein `COleDropSource`-Objekt.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="a-namegivefeedbacka--coledropsourcegivefeedback"></a><a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
  Vom Framework aufgerufen wird, nach dem Aufruf von [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) oder [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
@@ -122,7 +127,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  Weitere Informationen finden Sie unter [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget:: DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), und [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonbegindraga--coledropsourceonbegindrag"></a><a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
  Aufgerufen durch das Framework beim Eintreten eines Ereignisses ein Ziehvorgangs, z. B. durch Drücken der linken Maustaste beginnen kann.  
   
 ```  
@@ -139,7 +144,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion ggf. ändern, wenn die Drag & Drop-Vorgang gestartet wird. Die standardmäßige Implementierung die Maus erfasst und in den Dragmodus bleibt, bis der Benutzer die linke oder rechte Maustaste klickt oder Treffer ESC, wobei sie die Maustaste loslässt.  
   
-##  <a name="a-namequerycontinuedraga--coledropsourcequerycontinuedrag"></a><a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
  Nach dem Ziehen begonnen hat, wird diese Funktion vom Framework wiederholt aufgerufen, bis der Ziehvorgang abgebrochen oder beendet wird.  
   
 ```  

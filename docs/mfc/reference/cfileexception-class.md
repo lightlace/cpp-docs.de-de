@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFileException
+- AFX/CFileException
+- AFX/CFileException::CFileException
+- AFX/CFileException::ErrnoToException
+- AFX/CFileException::GetErrorMessage
+- AFX/CFileException::OsErrorToException
+- AFX/CFileException::ThrowErrno
+- AFX/CFileException::ThrowOsError
+- AFX/CFileException::m_cause
+- AFX/CFileException::m_lOsError
+- AFX/CFileException::m_strFileName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +101,7 @@ class CFileException : public CException
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
   
-##  <a name="a-namecfileexceptiona--cfileexceptioncfileexception"></a><a name="cfileexception"></a>CFileException::CFileException  
+##  <a name="cfileexception"></a>CFileException::CFileException  
  Erstellt ein `CFileException` -Objekt, das die Ursache und die Betriebssystem-Code in das Objekt speichert.  
   
 ```  
@@ -117,7 +127,7 @@ CFileException(
 > [!NOTE]
 >  Die Variable `lOsError` gilt nur für `CFile` und `CStdioFile` Objekte. Die `CMemFile` -Klasse behandelt keine dieser Fehlercode.  
   
-##  <a name="a-nameerrnotoexceptiona--cfileexceptionerrnotoexception"></a><a name="errnotoexception"></a>CFileException::ErrnoToException  
+##  <a name="errnotoexception"></a>CFileException::ErrnoToException  
  Konvertiert einen angegebenen Laufzeitbibliothek Fehlerwert in einem `CFileException` Fehler-Enumerationswert.  
   
 ```  
@@ -137,7 +147,7 @@ static int PASCAL ErrnoToException(int nErrno);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCFiles&#26;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_1.cpp)]  
   
-##  <a name="a-namegeterrormessagea--cfileexceptiongeterrormessage"></a><a name="geterrormessage"></a>CFileException::GetErrorMessage  
+##  <a name="geterrormessage"></a>CFileException::GetErrorMessage  
  Ruft Text zur Beschreibung der Ausnahme ab.  
   
 ```  
@@ -168,7 +178,7 @@ virtual BOOL GetErrorMessage(
   
  [!code-cpp[NVC_MFCExceptions&#22;](../../mfc/codesnippet/cpp/cfileexception-class_2.cpp)]  
   
-##  <a name="a-namemcausea--cfileexceptionmcause"></a><a name="m_cause"></a>CFileException::m_cause  
+##  <a name="m_cause"></a>CFileException::m_cause  
  Enthält Werte, die von einem `CFileException`-Enumerationstyp definiert wurden.  
   
 ```  
@@ -217,7 +227,7 @@ int m_cause;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCFiles&#30;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_3.cpp)]  
   
-##  <a name="a-namemloserrora--cfileexceptionmloserror"></a><a name="m_loserror"></a>CFileException::m_lOsError  
+##  <a name="m_loserror"></a>CFileException::m_lOsError  
  Enthält den Betriebssystem-Fehlercode für diese Ausnahme.  
   
 ```  
@@ -227,14 +237,14 @@ LONG m_lOsError;
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter Ihrem Betriebssystem Technisches Handbuch eine Liste der Fehlercodes. Datenmember ist eine öffentliche Variable des Typs **lang**.  
   
-##  <a name="a-namemstrfilenamea--cfileexceptionmstrfilename"></a><a name="m_strfilename"></a>CFileException::m_strFileName  
+##  <a name="m_strfilename"></a>CFileException::m_strFileName  
  Enthält den Namen der Datei für diese Ausnahmebedingung.  
   
 ```  
 CString m_strFileName;  
 ```  
   
-##  <a name="a-nameoserrortoexceptiona--cfileexceptionoserrortoexception"></a><a name="oserrortoexception"></a>CFileException::OsErrorToException  
+##  <a name="oserrortoexception"></a>CFileException::OsErrorToException  
  Gibt einen Enumerator, der entspricht einem bestimmten `lOsError` Wert. Wenn der Fehlercode ist unbekannt, gibt die Funktion **CFileException::generic**.  
   
 ```  
@@ -251,7 +261,7 @@ static int PASCAL OsErrorToException(LONG lOsError);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCFiles&#27;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
   
-##  <a name="a-namethrowerrnoa--cfileexceptionthrowerrno"></a><a name="throwerrno"></a>CFileException::ThrowErrno  
+##  <a name="throwerrno"></a>CFileException::ThrowErrno  
  Erstellt eine `CFileException` Objekt entspricht einer bestimmten `nErrno` und dann wird die Ausnahme ausgelöst.  
   
 ```  
@@ -268,7 +278,7 @@ static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCFiles&#28;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
   
-##  <a name="a-namethrowoserrora--cfileexceptionthrowoserror"></a><a name="throwoserror"></a>CFileException::ThrowOsError  
+##  <a name="throwoserror"></a>CFileException::ThrowOsError  
  Löst ein `CFileException` entspricht einer bestimmten `lOsError` Wert. Wenn der Fehlercode ist unbekannt, löst die Funktion eine Ausnahme, die als **CFileException::generic**.  
   
 ```  

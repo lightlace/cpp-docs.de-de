@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CStrBufT<TCharType>
-- ATL.CStrBufT
 - CStrBufT
-- ATL::CStrBufT
-- ATL.CStrBufT<TCharType>
+- ATLSIMPSTR/ATL::CStrBufT
+- ATLSIMPSTR/ATL::CStrBufT::CStrBufT
+- ATLSIMPSTR/ATL::CStrBufT::SetLength
+- ATLSIMPSTR/ATL::CStrBufT::AUTO_LENGTH
+- ATLSIMPSTR/ATL::CStrBufT::SET_LENGTH
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +110,7 @@ class CStrBufT
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsimpstr.h  
   
-##  <a name="a-nameautolengtha--cstrbuftautolength"></a><a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
+##  <a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
  Bestimmt automatisch die neue Länge der Zeichenfolge in der Version.  
   
 ```
@@ -119,7 +120,7 @@ static const DWORD AUTO_LENGTH = 0x01;
 ### <a name="remarks"></a>Hinweise  
  Bestimmt automatisch die neue Länge der Zeichenfolge in der Version. Die Zeichenfolge muss Null-terminiert sein.  
   
-##  <a name="a-namecstrbufta--cstrbuftcstrbuft"></a><a name="cstrbuft"></a>CStrBufT::CStrBufT  
+##  <a name="cstrbuft"></a>CStrBufT::CStrBufT  
  Erstellt einen Pufferobjekt.  
   
 ```
@@ -146,7 +147,7 @@ explicit CStrBufT(StringType& str) throw(...);
   
  Beachten Sie, dass der Kopierkonstruktor `private`.  
   
-##  <a name="a-nameoperatorpcxstra--cstrbuftoperator-pcxstr"></a><a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR  
  Direkt greift auf Zeichen in dem Objekt zugeordnete Zeichenfolge als Zeichenfolge im C-Format gespeichert.  
   
 ```  
@@ -159,7 +160,7 @@ operator PCXSTR() const throw();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um einen Zeiger auf den Zeichenpuffer ein String-Objekt zurückzugeben. Mit diesem Zeiger können den Inhalt der String-Objekt geändert werden.  
   
-##  <a name="a-nameoperatorpxstra--cstrbuftoperator-pxstr"></a><a name="operator_pxstr"></a>CStrBufT::operator PXSTR  
+##  <a name="operator_pxstr"></a>CStrBufT::operator PXSTR  
  Direkt greift auf Zeichen in dem Objekt zugeordnete Zeichenfolge als Zeichenfolge im C-Format gespeichert.  
   
 ```
@@ -172,21 +173,21 @@ operator PXSTR() throw();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um einen Zeiger auf den Zeichenpuffer ein String-Objekt zurückzugeben. Der Entwickler kann den Inhalt der String-Objekt mit dieser Zeiger ändern.  
   
-##  <a name="a-namepcxstra--cstrbuftpcxstr"></a><a name="pcxstr"></a>CStrBufT::PCXSTR  
+##  <a name="pcxstr"></a>CStrBufT::PCXSTR  
  Ein Zeiger auf eine Konstante Zeichenfolge.  
   
 ```
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```  
   
-##  <a name="a-namepxstra--cstrbuftpxstr"></a><a name="pxstr"></a>CStrBufT::PXSTR  
+##  <a name="pxstr"></a>CStrBufT::PXSTR  
  Ein Zeiger auf eine Zeichenfolge.  
   
 ```
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```  
   
-##  <a name="a-namesetlengtha--cstrbuftsetlength"></a><a name="set_length"></a>CStrBufT::SET_LENGTH  
+##  <a name="set_length"></a>CStrBufT::SET_LENGTH  
  Legen Sie das String-Objekt am `GetBuffer` Zeit.  
   
 ```
@@ -198,7 +199,7 @@ static const DWORD SET_LENGTH = 0x02;
   
  Bestimmt, ob [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) und [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) werden aufgerufen, wenn die Zeichenfolge TextBuffer-Objekt erstellt wird.  
   
-##  <a name="a-namesetlengtha--cstrbuftsetlength"></a><a name="setlength"></a>CStrBufT::SetLength  
+##  <a name="setlength"></a>CStrBufT::SetLength  
  Legt die Länge des Zeichenpuffers fest.  
   
 ```
@@ -215,7 +216,7 @@ void SetLength(int nLength);
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Funktion, um die Länge der Zeichenfolge, die vom Pufferobjekt dargestellt.  
   
-##  <a name="a-namestringtypea--cstrbuftstringtype"></a><a name="stringtype"></a>CStrBufT::StringType  
+##  <a name="stringtype"></a>CStrBufT::StringType  
  Die Zeichenfolgentyp, dessen Puffer von spezialisierungen dieser Klasse Vorlage bearbeitet werden.  
   
 ```

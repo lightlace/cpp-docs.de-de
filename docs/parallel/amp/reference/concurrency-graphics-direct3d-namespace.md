@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a17faa4f0d6bcc29c9d249fd99dd3a5df3b29884
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f842080ce65d4c7a378a9c16ff91b24ae4f17a07
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d-Namespace
@@ -53,11 +53,11 @@ namespace direct3d;
   
 |Name<br /><br /> Beschreibung|  
 |--------------------------|  
-|[Get_sampler-Funktion](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Rufen Sie die Direct3D-Samplerstatus-Schnittstelle für die angegebene Zugriffstastenansicht ab, die das angegebene Samplerobjekt darstellt.|  
-|[Get_texture-Funktion](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Ruft die Direct3D-texturschnittstelle zugrunde liegenden angegebenen [Textur](texture-class.md) Objekt.|  
-|[Make_sampler-Funktion](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Erstellen Sie einen Sampler aus einem Direct3D-Samplerstatusschnittstellenzeiger.|  
-|[Make_texture-Funktion](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Erstellt eine [Textur](texture-class.md) Objekt mit den angegebenen Parametern.|  
-|[msad4-Funktion](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Vergleicht einen 4-Byte-Verweiswert und einen 8-Byte-Quellwert und sammelt einen Vektor von 4 Summen.|  
+|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Rufen Sie die Direct3D-Samplerstatus-Schnittstelle für die angegebene Zugriffstastenansicht ab, die das angegebene Samplerobjekt darstellt.|  
+|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Ruft die Direct3D-texturschnittstelle zugrunde liegenden angegebenen [Textur](texture-class.md) Objekt.|  
+|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Erstellen Sie einen Sampler aus einem Direct3D-Samplerstatusschnittstellenzeiger.|  
+|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Erstellt eine [Textur](texture-class.md) Objekt mit den angegebenen Parametern.|  
+|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Vergleicht einen 4-Byte-Verweiswert und einen 8-Byte-Quellwert und sammelt einen Vektor von 4 Summen.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** amp_graphics.h  
@@ -65,5 +65,5 @@ namespace direct3d;
  **Namespace:** Concurrency:: Graphics  
   
 ## <a name="see-also"></a>Siehe auch  
- [Concurrency:: Graphics-Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics Namespace](concurrency-graphics-namespace.md)
 

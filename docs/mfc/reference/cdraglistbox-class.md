@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDragListBox
+- AFXCMN/CDragListBox
+- AFXCMN/CDragListBox::CDragListBox
+- AFXCMN/CDragListBox::BeginDrag
+- AFXCMN/CDragListBox::CancelDrag
+- AFXCMN/CDragListBox::Dragging
+- AFXCMN/CDragListBox::DrawInsert
+- AFXCMN/CDragListBox::Dropped
+- AFXCMN/CDragListBox::ItemFromPt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +102,7 @@ class CDragListBox : public CListBox
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcmn.h  
   
-##  <a name="a-namebegindraga--cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>CDragListBox::BeginDrag  
  Aufgerufen durch das Framework beim Eintreten eines Ereignisses ein Ziehvorgangs, z. B. durch Drücken der linken Maustaste beginnen kann.  
   
 ```  
@@ -111,7 +119,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, wenn Sie steuern, was geschieht, wenn ein Ziehvorgang begonnen werden soll. Die standardmäßige Implementierung die Maus erfasst und in den Dragmodus bleibt, bis der Benutzer auf die linke oder rechte Maustaste oder drücken ESC, woraufhin der Ziehvorgang abgebrochen wird.  
   
-##  <a name="a-namecanceldraga--cdraglistboxcanceldrag"></a><a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
  Wird vom Framework aufgerufen, wenn ein Ziehvorgang abgebrochen wurde.  
   
 ```  
@@ -125,14 +133,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Funktion, um eine spezielle Verarbeitung für Ihre Listenfeld-Steuerelement zu behandeln.  
   
-##  <a name="a-namecdraglistboxa--cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
  Erstellt ein `CDragListBox`-Objekt.  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="a-namedragginga--cdraglistboxdragging"></a><a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>CDragListBox::Dragging  
  Vom Framework aufgerufen, wenn ein Listenfeldelement, innerhalb gezogen wird der `CDragListBox` Objekt.  
   
 ```  
@@ -155,7 +163,7 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="remarks"></a>Hinweise  
  Gibt das Standardverhalten `DL_MOVECURSOR`. Überschreiben Sie diese Funktion, wenn Sie zusätzliche Funktionen bereitstellen möchten.  
   
-##  <a name="a-namedrawinserta--cdraglistboxdrawinsert"></a><a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
  Aufgerufen, um den Einfügepunkt vor dem Element mit dem angegebenen Index zu zeichnen.  
   
 ```  
@@ -169,7 +177,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>Hinweise  
  Ein Wert von – 1 Löscht den Einfügepunkt. Überschreiben Sie diese Funktion, um die Darstellung oder das Verhalten von der Einfügemarke ändern.  
   
-##  <a name="a-namedroppeda--cdraglistboxdropped"></a><a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>CDragListBox::Dropped  
  Vom Framework aufgerufen, wenn ein Element, innerhalb gelöscht wird einer `CDragListBox` Objekt.  
   
 ```  
@@ -188,7 +196,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>Hinweise  
  Das Standardverhalten des Listenfelds und seine Daten an den neuen Speicherort kopiert und löscht dann das ursprüngliche Element. Überschreiben Sie diese Funktion, um das Standardverhalten, z. B. das Aktivieren von Kopien der Listenfeldelemente an anderen Speicherorten in der Liste gezogen werden anzupassen.  
   
-##  <a name="a-nameitemfrompta--cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
  Rufen Sie diese Funktion zum Abrufen des nullbasierten Indexes des Listenelements Feld befindet sich unter `pt`.  
   
 ```  

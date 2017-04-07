@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task_completion_event
+- task_completion_event
+- PPLTASKS/concurrency::task_completion_event
+- PPLTASKS/concurrency::task_completion_event::task_completion_event
+- PPLTASKS/concurrency::task_completion_event::set
+- PPLTASKS/concurrency::task_completion_event::set_exception
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 2cd3e7381402cc65f3220010a71c969cda1c7e2d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: b37ecb250c0794370fc586f0463f93023ca47603
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event-Klasse
@@ -64,14 +68,14 @@ class task_completion_event<void>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Task_completion_event-Konstruktor](#ctor)|Erstellt ein `task_completion_event`-Objekt.|  
+|[task_completion_event](#ctor)|Erstellt ein `task_completion_event`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Set-Methode](#set)|Überladen. Legt das Aufgabenabschlussereignis fest.|  
-|[Set_exception-Methode](#set_exception)|Überladen. Gibt eine Ausnahme an alle Aufgaben weiter, die dem Ereignis zugeordnet sind.|  
+|[set](#set)|Überladen. Legt das Aufgabenabschlussereignis fest.|  
+|[set_exception](#set_exception)|Überladen. Gibt eine Ausnahme an alle Aufgaben weiter, die dem Ereignis zugeordnet sind.|  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie eine Aufgabe, die aus einem Aufgabenabschlussereignis erstellt wird, wenn Ihr Szenario die Erstellung einer Aufgabe erfordert, die abgeschlossen wird, und planen Sie die Ausführung ihrer Fortsetzungen für einen späteren Zeitpunkt. `task_completion_event` muss den gleichen Typ haben, wie die Aufgabe, die Sie erstellen, und das Aufrufen der set-Methode für das Aufgabenabschlussereignis mit einem Wert dieses Typs führt zu einem Abschluss der zugeordneten Aufgabe und liefert diesen Wert als Ergebnis ihrer Fortsetzungen.  
@@ -88,7 +92,7 @@ class task_completion_event<void>;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>Festlegen 
+##  <a name="set"></a>Festlegen 
 
  Legt das Aufgabenabschlussereignis fest.  
   
@@ -108,7 +112,7 @@ bool set() const ;
 ### <a name="remarks"></a>Hinweise  
  Bei mehrfachen oder gleichzeitigen Aufrufen von `set` ist nur der erste Aufruf erfolgreich, und sein Ergebnis (falls vorhanden) wird im Aufgabenabschlussereignis gespeichert. Die verbleibenden Sätze werden ignoriert, und die Methode gibt "false" zurück. Wenn Sie ein Aufgabenabschlussereignis festlegen, werden alle Aufgaben, die aus diesem Ereignis erstellt wurden, abgeschlossen, und ihre Fortsetzungen, falls vorhanden, werden geplant. Aufgabenabschlussobjekte, die über eine `_ResultType` als `void` übergeben den Wert an ihre Fortsetzungen.  
   
-##  <a name="a-namesetexceptiona-setexception"></a><a name="set_exception"></a>set_exception 
+##  <a name="set_exception"></a>set_exception 
 
  Gibt eine Ausnahme an alle Aufgaben weiter, die dem Ereignis zugeordnet sind.  
   
@@ -126,7 +130,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
   
 ### <a name="return-value"></a>Rückgabewert  
   
-##  <a name="a-namectora-taskcompletionevent"></a><a name="ctor"></a>task_completion_event 
+##  <a name="ctor"></a>task_completion_event 
 
  Erstellt ein `task_completion_event`-Objekt.  
   

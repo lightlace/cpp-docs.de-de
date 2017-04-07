@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::Close
+- AFXSETTINGSSTORE/CSettingsStore::CreateKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteValue
+- AFXSETTINGSSTORE/CSettingsStore::Open
+- AFXSETTINGSSTORE/CSettingsStore::Read
+- AFXSETTINGSSTORE/CSettingsStore::Write
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +93,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxsettingsstore.h  
   
-##  <a name="a-nameclosea--csettingsstoreclose"></a><a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>CSettingsStore::Close  
  Schließt das Öffnen des Registrierungsschlüssels.  
   
 ```  
@@ -94,7 +103,7 @@ virtual void Close();
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird aufgerufen werden standardmäßig aus der Destruktor der [CSettingsStore Klasse](../../mfc/reference/csettingsstore-class.md).  
   
-##  <a name="a-namecreatekeya--csettingsstorecreatekey"></a><a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>CSettingsStore::CreateKey  
  Öffnet einen Registrierungsschlüssel, bzw. erstellt, sofern sie nicht vorhanden ist.  
   
 ```  
@@ -111,7 +120,7 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ### <a name="remarks"></a>Hinweise  
  `CreateKey`verwendet `m_hKey` als Stamm der Registrierung Abfragen. Sucht nach `pszPath` als Unterschlüssel von `m_hKey`. Wenn der Schlüssel nicht vorhanden ist, `CreateKey` wird erstellt. Andernfalls wird den Schlüssel geöffnet. `CreateKey`legt dann `m_hKey` auf den Schlüssel geöffnet oder erstellt wurden.  
   
-##  <a name="a-namecsettingsstorea--csettingsstorecsettingsstore"></a><a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
  Erstellt ein `CSettngsStore`-Objekt.  
   
 ```  
@@ -134,7 +143,7 @@ CSettingsStore(
   
  Der Destruktor für `CSettingsStore` frei `m_hKey` automatisch.  
   
-##  <a name="a-namedeletekeya--csettingsstoredeletekey"></a><a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
  Löscht einen Schlüssel und alle untergeordneten Elemente aus der Registrierung.  
   
 ```  
@@ -158,7 +167,7 @@ virtual BOOL DeleteKey(
   
  Wenn der Parameter `bAdmin` NULL ist, `DeleteKey` sucht nach den Schlüssel löschen unter `HKEY_CURRENT_USER`. Wenn `bAdmin` ungleich NULL ist, `DeleteKey` sucht nach den Schlüssel löschen unter `HKEY_LOCAL_MACHINE`.  
   
-##  <a name="a-namedeletevaluea--csettingsstoredeletevalue"></a><a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
  Löscht einen Wert von `m_hKey`.  
   
 ```  
@@ -172,7 +181,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
-##  <a name="a-nameopena--csettingsstoreopen"></a><a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>CSettingsStore::Open  
  Öffnet einen Registrierungsschlüssel.  
   
 ```  
@@ -189,7 +198,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>Hinweise  
  Wenn diese Methode den angegebenen Schlüssel erfolgreich geöffnet wurde, wird `m_hKey` auf das Handle des Schlüssels.  
   
-##  <a name="a-namereada--csettingsstoreread"></a><a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>CSettingsStore::Read  
  Liest einen Wert aus einem Schlüssel in der Registrierung.  
   
 ```  
@@ -319,7 +328,7 @@ virtual BOOL Read(
 ### <a name="remarks"></a>Hinweise  
  `Read`überprüft, ob `pszKey` als Unterschlüssel von `m_hKey`.  
   
-##  <a name="a-namewritea--csettingsstorewrite"></a><a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>CSettingsStore::Write  
  Schreibt einen Wert in der Registrierung unter dem Schlüssel geöffnet.  
   
 ```  

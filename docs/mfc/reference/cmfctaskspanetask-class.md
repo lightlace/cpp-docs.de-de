@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask::CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask::SetACCData
+- AFXTASKSPANE/CMFCTasksPaneTask::m_bAutoDestroyWindow
+- AFXTASKSPANE/CMFCTasksPaneTask::m_bIsBold
+- AFXTASKSPANE/CMFCTasksPaneTask::m_dwUserData
+- AFXTASKSPANE/CMFCTasksPaneTask::m_hwndTask
+- AFXTASKSPANE/CMFCTasksPaneTask::m_nIcon
+- AFXTASKSPANE/CMFCTasksPaneTask::m_nWindowHeight
+- AFXTASKSPANE/CMFCTasksPaneTask::m_pGroup
+- AFXTASKSPANE/CMFCTasksPaneTask::m_rect
+- AFXTASKSPANE/CMFCTasksPaneTask::m_strName
+- AFXTASKSPANE/CMFCTasksPaneTask::m_uiCommandID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +107,7 @@ class CMFCTasksPaneTask : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxTasksPane.h  
   
-##  <a name="a-namecmfctaskspanetaska--cmfctaskspanetaskcmfctaskspanetask"></a><a name="cmfctaskspanetask"></a>CMFCTasksPaneTask::CMFCTasksPaneTask  
+##  <a name="cmfctaskspanetask"></a>CMFCTasksPaneTask::CMFCTasksPaneTask  
  Erstellt und initialisiert ein `CMFCTasksPaneTask` Objekt.  
   
 ```  
@@ -136,7 +149,7 @@ CMFCTasksPaneTask(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namembautodestroywindowa--cmfctaskspanetaskmbautodestroywindow"></a><a name="m_bautodestroywindow"></a>CMFCTasksPaneTask::m_bAutoDestroyWindow  
+##  <a name="m_bautodestroywindow"></a>CMFCTasksPaneTask::m_bAutoDestroyWindow  
  Bestimmt, ob das Aufgabenfenster automatisch zerstört wird.  
   
 ```  
@@ -146,7 +159,7 @@ BOOL m_bAutoDestroyWindow;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie auf `TRUE` angeben, dass das Aufgabenfenster ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) gelöscht werden soll, automatisch, andernfalls `FALSE`.  
   
-##  <a name="a-namembisbolda--cmfctaskspanetaskmbisbold"></a><a name="m_bisbold"></a>CMFCTasksPaneTask::m_bIsBold  
+##  <a name="m_bisbold"></a>CMFCTasksPaneTask::m_bIsBold  
  Bestimmt, ob eine Task-Bezeichnung in fett formatiertem Text gezeichnet wird.  
   
 ```  
@@ -156,7 +169,7 @@ BOOL m_bIsBold;
 ### <a name="remarks"></a>Hinweise  
  Legen Sie dieses Element auf `TRUE` fett formatierten Text für die Task-Bezeichnung angezeigt.  
   
-##  <a name="a-namemdwuserdataa--cmfctaskspanetaskmdwuserdata"></a><a name="m_dwuserdata"></a>CMFCTasksPaneTask::m_dwUserData  
+##  <a name="m_dwuserdata"></a>CMFCTasksPaneTask::m_dwUserData  
  Benutzerdefinierte Daten enthält, die der Aufgabe zugeordnet ist. Auf NULL festgelegt, wenn keine Daten der Aufgabe zugeordnet ist.  
   
 ```  
@@ -165,7 +178,7 @@ DWORD m_dwUserData;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namemhwndtaska--cmfctaskspanetaskmhwndtask"></a><a name="m_hwndtask"></a>CMFCTasksPaneTask::m_hwndTask  
+##  <a name="m_hwndtask"></a>CMFCTasksPaneTask::m_hwndTask  
  Ein Handle für das Fenster "Task".  
   
 ```  
@@ -175,7 +188,7 @@ HWND m_hwndTask;
 ### <a name="remarks"></a>Hinweise  
  Um ein Taskfenster hinzuzufügen, rufen Sie [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
   
-##  <a name="a-namemnicona--cmfctaskspanetaskmnicon"></a><a name="m_nicon"></a>CMFCTasksPaneTask::m_nIcon  
+##  <a name="m_nicon"></a>CMFCTasksPaneTask::m_nIcon  
  Die Indexposition in einer Bildliste, die ein Abbild identifiziert, der neben dem angegebenen Task angezeigt wird.  
   
 ```  
@@ -187,7 +200,7 @@ int m_nIcon;
   
  Legen Sie `m_nIcon` auf-1 festgelegt, wenn die Aufgabe ohne Bild angezeigt werden soll.  
   
-##  <a name="a-namemnwindowheighta--cmfctaskspanetaskmnwindowheight"></a><a name="m_nwindowheight"></a>CMFCTasksPaneTask::m_nWindowHeight  
+##  <a name="m_nwindowheight"></a>CMFCTasksPaneTask::m_nWindowHeight  
  Die Höhe des Fensters Aufgabe. Wenn der Vorgang keine Aufgabenfenster hat, ist dieser Wert&0; (null).  
   
 ```  
@@ -196,7 +209,7 @@ int m_nWindowHeight;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namempgroupa--cmfctaskspanetaskmpgroup"></a><a name="m_pgroup"></a>CMFCTasksPaneTask::m_pGroup  
+##  <a name="m_pgroup"></a>CMFCTasksPaneTask::m_pGroup  
  Zeiger auf die [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) zu der diese Aufgabe gehört.  
   
 ```  
@@ -206,7 +219,7 @@ CMFCTasksPaneTaskGroup* m_pGroup;
 ### <a name="remarks"></a>Hinweise  
  Jeder Vorgang muss eine übergeordnete Gruppe besitzen. Hinzufügen von Gruppen zu einem Aufgabenbereich durch den Aufruf [cmfctaskspane:: addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="a-namemrecta--cmfctaskspanetaskmrect"></a><a name="m_rect"></a>CMFCTasksPaneTask::m_rect  
+##  <a name="m_rect"></a>CMFCTasksPaneTask::m_rect  
  Gibt das umschließende Rechteck des Tasks an.  
   
 ```  
@@ -216,7 +229,7 @@ CRect m_rect;
 ### <a name="remarks"></a>Hinweise  
  Dieser Wert wird vom Framework berechnet, wenn die Aufgabe gezeichnet wird.  
   
-##  <a name="a-namemstrnamea--cmfctaskspanetaskmstrname"></a><a name="m_strname"></a>CMFCTasksPaneTask::m_strName  
+##  <a name="m_strname"></a>CMFCTasksPaneTask::m_strName  
  Der Name des Vorgangs.  
   
 ```  
@@ -225,7 +238,7 @@ CString m_strName;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namemuicommandida--cmfctaskspanetaskmuicommandid"></a><a name="m_uicommandid"></a>CMFCTasksPaneTask::m_uiCommandID  
+##  <a name="m_uicommandid"></a>CMFCTasksPaneTask::m_uiCommandID  
  Gibt die Befehls-ID des Befehls, der ausgeführt wird, wenn der Benutzer klickt. Wenn dieser Wert nicht um eine gültige Befehls-ID ist, wird die Aufgabe als ein einfacher Bezeichner behandelt.  
   
 ```  
@@ -234,7 +247,7 @@ UINT m_uiCommandID;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetaccdataa--cmfctaskspanetasksetaccdata"></a><a name="setaccdata"></a>CMFCTasksPaneTask::SetACCData  
+##  <a name="setaccdata"></a>CMFCTasksPaneTask::SetACCData  
  Bestimmt die Eingabehilfen-Daten für den aktuellen Vorgang.  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTabDropTarget
+- AFXBASETABCTRL/CMFCTabDropTarget
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragEnter
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragLeave
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragOver
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDropEx
+- AFXBASETABCTRL/CMFCTabDropTarget::Register
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +96,7 @@ class CMFCTabDropTarget : public COleDropTarget
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxbasetabctrl.h  
   
-##  <a name="a-nameondragentera--cmfctabdroptargetondragenter"></a><a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter  
  Wird vom Framework aufgerufen, wenn der Benutzer ein Objekt in einem Registerkartenfenster zieht.  
   
 ```  
@@ -129,7 +135,7 @@ virtual DROPEFFECT OnDragEnter(
   
  Weitere Informationen zu den Anpassungsmodus, finden Sie unter [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Weitere Informationen zu zwischenablagedatenformate, finden Sie unter [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="a-nameondragleavea--cmfctabdroptargetondragleave"></a><a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave  
  Wird vom Framework aufgerufen, wenn der Benutzer ein Objekt außerhalb des Fensters Registerkarte zieht, den Fokus besitzt.  
   
 ```  
@@ -146,7 +152,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft die `CMFCBaseTabCtrl::OnDragLeave` Methode, um den Ziehvorgang durchzuführen.  
   
-##  <a name="a-nameondragovera--cmfctabdroptargetondragover"></a><a name="ondragover"></a>CMFCTabDropTarget::OnDragOver  
+##  <a name="ondragover"></a>CMFCTabDropTarget::OnDragOver  
  Wird vom Framework aufgerufen, wenn der Benutzer ein Objekt auf der Registerkartenfenster zieht, den Fokus besitzt.  
   
 ```  
@@ -185,7 +191,7 @@ virtual DROPEFFECT OnDragOver(
   
  Weitere Informationen zu den Anpassungsmodus, finden Sie unter [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Weitere Informationen zu zwischenablagedatenformate, finden Sie unter [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="a-nameondropexa--cmfctabdroptargetondropex"></a><a name="ondropex"></a>CMFCTabDropTarget::OnDropEx  
+##  <a name="ondropex"></a>CMFCTabDropTarget::OnDropEx  
  Wird vom Framework aufgerufen, wenn der Benutzer die Maustaste loslässt, die am Ende eines Ziehvorgangs ein.  
   
 ```  
@@ -226,7 +232,7 @@ virtual DROPEFFECT OnDropEx(
   
  Weitere Informationen zu den Anpassungsmodus, finden Sie unter [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Weitere Informationen zu zwischenablagedatenformate, finden Sie unter [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="a-nameregistera--cmfctabdroptargetregister"></a><a name="register"></a>CMFCTabDropTarget::Register  
+##  <a name="register"></a>CMFCTabDropTarget::Register  
  Registriert das Steuerelement als eines, das das Ziel einer OLE-Drag & Drop-Operation sein kann.  
   
 ```  

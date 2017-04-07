@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl::CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl::Create
+- AFXHTML/CHtmlEditCtrl::GetDHtmlDocument
+- AFXHTML/CHtmlEditCtrl::GetStartDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,14 +87,14 @@ class CHtmlEditCtrl: public CWnd,
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxhtml.h  
   
-##  <a name="a-namechtmleditctrla--chtmleditctrlchtmleditctrl"></a><a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
+##  <a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
  Erstellt ein `CHtmlEditCtrl`-Objekt.  
   
 ```  
 CHtmlEditCtrl();
 ```  
   
-##  <a name="a-namecreatea--chtmleditctrlcreate"></a><a name="create"></a>CHtmlEditCtrl::Create  
+##  <a name="create"></a>CHtmlEditCtrl::Create  
  Erstellt ein WebBrowser ActiveX-Steuerelement und fügt es der `CHtmlEditCtrl` Objekt. Der WebBrowser ActiveX Steuerelement navigiert automatisch zu einem Standarddokument und wird dann platziert den Bearbeitungsmodus von dieser Funktion.  
   
 ```  
@@ -124,7 +129,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **TRUE** bei Erfolg **FALSE** bei einem Fehler.  
   
-##  <a name="a-namegetdhtmldocumenta--chtmleditctrlgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
  Ruft die [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) Schnittstelle für das Dokument in das WebBrowser-Steuerelement enthaltenen geladenen  
   
 ```  
@@ -135,7 +140,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  Die Dokumentschnittstelle.  
   
-##  <a name="a-namegetstartdocumenta--chtmleditctrlgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
+##  <a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
  Ruft die URL zu einem Standarddokument und in das enthaltene WebBrowser-Steuerelement geladen.  
   
 ```  

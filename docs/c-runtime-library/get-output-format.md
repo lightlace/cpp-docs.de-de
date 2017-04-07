@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e923c8f4dcfbf2a2392c6b70fee2c5dc423c34c6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 389704142fe6d6f5806542cd2bdf6cdd4482172b
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="getoutputformat"></a>_get_output_format
@@ -70,7 +70,7 @@ unsigned int _get_output_format();
  Der aktuelle Wert des Ausgabeformatkennzeichens.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Ausgabeformatkennzeichen steuert Funktionen von formatierter E/A. Derzeit hat das Kennzeichen zwei mögliche Werte: 0 und `_TWO_DIGIT_EXPONENT`. Wenn `_TWO_DIGIT_EXPONENT` festgelegt ist, werden Gleitkommazahlen mit nur zwei Stellen im Exponenten gedruckt, es sei denn, eine dritte Stelle ist aufgrund der Größe des Exponenten erforderlich. Wenn das Kennzeichen den Wert&0; hat, wird in der Gleitkommadarstellung ein dreistelliger Exponent angezeigt, der ggf. mit Nullen aufgefüllt wird.  
+ Das Ausgabeformatkennzeichen steuert Funktionen von formatierter E/A. Derzeit hat das Kennzeichen zwei mögliche Werte: 0 und `_TWO_DIGIT_EXPONENT`. Wenn `_TWO_DIGIT_EXPONENT` festgelegt ist, werden Gleitkommazahlen mit nur zwei Stellen im Exponenten gedruckt, es sei denn, eine dritte Stelle ist aufgrund der Größe des Exponenten erforderlich. Wenn das Kennzeichen den Wert 0 hat, wird in der Gleitkommadarstellung ein dreistelliger Exponent angezeigt, der ggf. mit Nullen aufgefüllt wird.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -80,11 +80,9 @@ unsigned int _get_output_format();
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../c-runtime-library/compatibility.md) in der Einführung.  
   
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
-  
 ## <a name="see-also"></a>Siehe auch  
+[Syntax der Formatangabe: printf- und wprintf-Funktionen](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)  
  [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
- [printf-Typenfeldzeichen](../c-runtime-library/printf-type-field-characters.md)   
- [_set_output_format](../c-runtime-library/set-output-format.md)
+ [_set_output_format](../c-runtime-library/set-output-format.md)  
+

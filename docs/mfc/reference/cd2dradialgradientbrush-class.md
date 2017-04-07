@@ -10,7 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DRadialGradientBrush
-- afxrendertarget/CD2DRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush::CD2DRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Attach
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Create
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Destroy
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Detach
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Get
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetCenter
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetGradientOriginOffset
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetRadiusX
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetRadiusY
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetCenter
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetGradientOriginOffset
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetRadiusX
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetRadiusY
+- AFXRENDERTARGET/CD2DRadialGradientBrush::m_pRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush::m_RadialGradientBrushProperties
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,14 +119,14 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dradialgradientbrusha--cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
+##  <a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
  Der Destruktor. Wird aufgerufen, wenn ein D2D-Radialer Farbverlauf-Objekt zerstört wird.  
   
 ```  
 virtual ~CD2DRadialGradientBrush();
 ```  
   
-##  <a name="a-nameattacha--cd2dradialgradientbrushattach"></a><a name="attach"></a>CD2DRadialGradientBrush::Attach  
+##  <a name="attach"></a>CD2DRadialGradientBrush::Attach  
  Hängt die vorhandene Ressourcenschnittstelle für das Objekt  
   
 ```  
@@ -121,7 +137,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
  `pResource`  
  Vorhandene Ressourcenschnittstelle. NULL darf nicht sein  
   
-##  <a name="a-namecd2dradialgradientbrusha--cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush  
+##  <a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush  
  Erstellt ein CD2DLinearGradientBrush-Objekt.  
   
 ```  
@@ -161,7 +177,7 @@ CD2DRadialGradientBrush(
  `bAutoDestroy`  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
-##  <a name="a-namecreatea--cd2dradialgradientbrushcreate"></a><a name="create"></a>CD2DRadialGradientBrush::Create  
+##  <a name="create"></a>CD2DRadialGradientBrush::Create  
  Erstellt einen CD2DRadialGradientBrush.  
   
 ```  
@@ -175,14 +191,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Methode erfolgreich ist, wird S_OK zurückgegeben. Andernfalls wird einen HRESULT-Fehlercode zurückgegeben.  
   
-##  <a name="a-namedestroya--cd2dradialgradientbrushdestroy"></a><a name="destroy"></a>CD2DRadialGradientBrush::Destroy  
+##  <a name="destroy"></a>CD2DRadialGradientBrush::Destroy  
  Zerstört ein CD2DRadialGradientBrush-Objekt.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dradialgradientbrushdetach"></a><a name="detach"></a>CD2DRadialGradientBrush::Detach  
+##  <a name="detach"></a>CD2DRadialGradientBrush::Detach  
  Ressourcenschnittstelle aus dem Objekt getrennt  
   
 ```  
@@ -192,7 +208,7 @@ ID2D1RadialGradientBrush* Detach();
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf getrennte Ressourcenschnittstelle.  
   
-##  <a name="a-namegeta--cd2dradialgradientbrushget"></a><a name="get"></a>CD2DRadialGradientBrush::Get  
+##  <a name="get"></a>CD2DRadialGradientBrush::Get  
  Gibt die ID2D1RadialGradientBrush-Schnittstelle  
   
 ```  
@@ -202,7 +218,7 @@ ID2D1RadialGradientBrush* Get();
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf eine ID2D1RadialGradientBrush-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
   
-##  <a name="a-namegetcentera--cd2dradialgradientbrushgetcenter"></a><a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter  
+##  <a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter  
  Ruft den Mittelpunkt der Ellipse Farbverlauf  
   
 ```  
@@ -212,7 +228,7 @@ CD2DPointF GetCenter() const;
 ### <a name="return-value"></a>Rückgabewert  
  Die Mitte des Farbverlaufs Ellipse. Dieser Wert wird im Koordinatenraum des Pinsels ausgedrückt.  
   
-##  <a name="a-namegetgradientoriginoffseta--cd2dradialgradientbrushgetgradientoriginoffset"></a><a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset  
+##  <a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset  
  Ruft den Offset des Farbverlaufs Ursprungs relativ zur Mitte der Farbverlauf ellipse  
   
 ```  
@@ -222,7 +238,7 @@ CD2DPointF GetGradientOriginOffset() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Offset vom Ursprung Farbverlauf vom Mittelpunkt der Farbverlauf Ellipse. Dieser Wert wird im Koordinatenraum des Pinsels ausgedrückt.  
   
-##  <a name="a-namegetradiusxa--cd2dradialgradientbrushgetradiusx"></a><a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX  
+##  <a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX  
  Ruft den X-Radius der Ellipse Farbverlauf  
   
 ```  
@@ -232,7 +248,7 @@ FLOAT GetRadiusX() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der X-Radius der Ellipse Farbverlauf. Dieser Wert wird im Koordinatenraum des Pinsels ausgedrückt.  
   
-##  <a name="a-namegetradiusya--cd2dradialgradientbrushgetradiusy"></a><a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY  
+##  <a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY  
  Ruft den y-Radius der Ellipse Farbverlauf  
   
 ```  
@@ -242,21 +258,21 @@ FLOAT GetRadiusY() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der y-Radius der Ellipse Farbverlauf. Dieser Wert wird im Koordinatenraum des Pinsels ausgedrückt.  
   
-##  <a name="a-namempradialgradientbrusha--cd2dradialgradientbrushmpradialgradientbrush"></a><a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush  
+##  <a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush  
  Ein Zeiger auf eine ID2D1RadialGradientBrush.  
   
 ```  
 ID2D1RadialGradientBrush* m_pRadialGradientBrush;  
 ```  
   
-##  <a name="a-namemradialgradientbrushpropertiesa--cd2dradialgradientbrushmradialgradientbrushproperties"></a><a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
+##  <a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
  Das Center, Farbverlaufsursprungsoffset und X-Radius und y-Radius des Pinsels Farbverlauf des.  
   
 ```  
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;  
 ```  
   
-##  <a name="a-nameoperatorid2d1radialgradientbrushstara--cd2dradialgradientbrushoperator-id2d1radialgradientbrush"></a><a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::Operator ID2D1RadialGradientBrush *  
+##  <a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::Operator ID2D1RadialGradientBrush *  
  Gibt die ID2D1RadialGradientBrush-Schnittstelle  
   
 ```  
@@ -266,7 +282,7 @@ operator ID2D1RadialGradientBrush*();
 ### <a name="return-value"></a>Rückgabewert  
  Zeiger auf eine ID2D1RadialGradientBrush-Schnittstelle oder NULL, wenn das Objekt noch nicht initialisiert ist.  
   
-##  <a name="a-namesetcentera--cd2dradialgradientbrushsetcenter"></a><a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter  
+##  <a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter  
  Gibt den Mittelpunkt der Farbverlaufsellipse im Koordinatenraum des Pinsels  
   
 ```  
@@ -277,7 +293,7 @@ void SetCenter(CD2DPointF point);
  `point`  
  Die Mitte der Farbverlaufsellipse im Koordinatenraum des Pinsels  
   
-##  <a name="a-namesetgradientoriginoffseta--cd2dradialgradientbrushsetgradientoriginoffset"></a><a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset  
+##  <a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset  
  Gibt den Offset des Farbverlaufs Ursprungs relativ zur Mitte der Farbverlauf ellipse  
   
 ```  
@@ -288,7 +304,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
  `gradientOriginOffset`  
  Der Offset vom Ursprung Farbverlauf vom Mittelpunkt der Ellipse Farbverlauf  
   
-##  <a name="a-namesetradiusxa--cd2dradialgradientbrushsetradiusx"></a><a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX  
+##  <a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX  
  Gibt den X-Radius der Farbverlaufsellipse im Koordinatenraum des Pinsels  
   
 ```  
@@ -299,7 +315,7 @@ void SetRadiusX(FLOAT radiusX);
  `radiusX`  
  Der X-Radius der Ellipse Farbverlauf. Dieser Wert liegt im Koordinatenraum des Pinsels  
   
-##  <a name="a-namesetradiusya--cd2dradialgradientbrushsetradiusy"></a><a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY  
+##  <a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY  
  Gibt den y-Radius der Farbverlaufsellipse im Koordinatenraum des Pinsels  
   
 ```  

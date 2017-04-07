@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::tile_barrier
+- tile_barrier
+- AMP/tile_barrier
+- AMP/Concurrency::tile_barrier::tile_barrier::tile_barrier
+- AMP/Concurrency::tile_barrier::tile_barrier::wait
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_all_memory_fence
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_global_memory_fence
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_tile_static_memory_fence
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7ace6bb366881f9e5a9678b3a005f3079542c9cd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 247828a6de3a5820d75623ee438810b563f04519
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="tilebarrier-class"></a>tile_barrier-Klasse
@@ -60,10 +66,10 @@ class tile_barrier;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Wait-Methode](#wait)|Weist alle Threads in der Threadgruppe (Kachel) an, die Ausführung zu beenden, bis alle Threads in der Kachel den Wartevorgang beendet haben.|  
-|[Wait_with_all_memory_fence-Methode](#wait_with_all_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle Speicherzugriffe abgeschlossen sind und alle Threads in der Kachel diesen Aufruf erreicht haben.|  
-|[Wait_with_global_memory_fence-Methode](#wait_with_global_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle globalen Speicherzugriffe abgeschlossen sind und alle Threads in der Kachel diesen Aufruf erreicht haben.|  
-|[Wait_with_tile_static_memory_fence-Methode](#wait_with_tile_static_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle `tile_static`-Speicherzugriffe abgeschlossen sind und alle Threads in der Kachel diesen Aufruf erreicht haben.|  
+|[Warte](#wait)|Weist alle Threads in der Threadgruppe (Kachel) an, die Ausführung zu beenden, bis alle Threads in der Kachel den Wartevorgang beendet haben.|  
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle Speicherzugriffe abgeschlossen sind und alle Threads in der Kachel diesen Aufruf erreicht haben.|  
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle globalen Speicherzugriffe abgeschlossen sind und alle Threads in der Kachel diesen Aufruf erreicht haben.|  
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle `tile_static`-Speicherzugriffe abgeschlossen sind und alle Threads in der Kachel diesen Aufruf erreicht haben.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `tile_barrier`  
@@ -73,7 +79,7 @@ class tile_barrier;
   
  **Namespace:** Parallelität  
 
-## <a name="a-nametilebarrierctora--tilebarrier-constructor"></a><a name="tile_barrier__ctor"></a>Tile_barrier-Konstruktor  
+## <a name="tile_barrier__ctor"></a>Tile_barrier-Konstruktor  
  Initialisiert eine neue Instanz der Klasse durch Kopieren einer vorhandenen Instanz.  
   
 ### <a name="syntax"></a>Syntax 
@@ -87,7 +93,7 @@ tile_barrier(
  `_Other`  
  Das zu kopierende `tile_barrier`-Objekt.  
 
-## <a name="a-namewaita--wait"></a><a name="wait"></a>Warte 
+## <a name="wait"></a>Warte 
 Weist alle Threads in der Threadgruppe (Kachel), um die Ausführung zu beenden, bis alle Threads in der Kachel den Wartevorgang beendet haben.  
   
 ### <a name="syntax"></a>Syntax 
@@ -96,7 +102,7 @@ Weist alle Threads in der Threadgruppe (Kachel), um die Ausführung zu beenden, 
 void wait() const restrict(amp);  
 ```    
 
-## <a name="a-namewaitwithallmemoryfencea--waitwithallmemoryfence"></a><a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence   
+## <a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence   
 Blockiert die Ausführung aller Threads in einer Kachel, bis alle Threads in einer Kachel diesen Aufruf erreicht haben. Dadurch wird sichergestellt, dass alle Speicherzugriffe für andere Threads in der Threadkachel sichtbar sind und in der Programmreihenfolge ausgeführt wurden.  
   
 ### <a name="syntax"></a>Syntax 
@@ -106,7 +112,7 @@ void wait_with_all_memory_fence() const restrict(amp);
 ```  
   
 
-## <a name="a-namewaitwithglobalmemoryfencea--waitwithglobalmemoryfence"></a><a name="wait_with_global_memory_fence"></a>wait_with_global_memory_fence   
+## <a name="wait_with_global_memory_fence"></a>wait_with_global_memory_fence   
 Blockiert die Ausführung aller Threads in einer Kachel, bis alle Threads in einer Kachel diesen Aufruf erreicht haben. Dadurch wird sichergestellt, dass alle globalen Speicherzugriffe für andere Threads in der Threadkachel sichtbar sind und in der Programmreihenfolge ausgeführt wurden.  
   
 ### <a name="syntax"></a>Syntax 
@@ -115,7 +121,7 @@ Blockiert die Ausführung aller Threads in einer Kachel, bis alle Threads in ein
 void wait_with_global_memory_fence() const  restrict(amp);  
 ```
 
-## <a name="a-namewaitwithtilestaticmemoryfencea--waitwithtilestaticmemoryfence"></a><a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
+## <a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
 Blockiert die Ausführung aller Threads in einer Kachel, bis alle Threads in einer Kachel diesen Aufruf erreicht haben. Dadurch wird sichergestellt, dass `tile_static`-Speicherzugriffe für andere Threads in der Threadkachel sichtbar sind und in der Programmreihenfolge ausgeführt wurden.  
   
 ### <a name="syntax"></a>Syntax 
@@ -125,5 +131,5 @@ void wait_with_tile_static_memory_fence() const restrict(amp);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Concurrency-Namespace (C++-AMP)](concurrency-namespace-cpp-amp.md)
+ [Concurrency-Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

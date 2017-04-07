@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlEditView
+- AFXHTML/CHtmlEditView
+- AFXHTML/CHtmlEditView::CHtmlEditView
+- AFXHTML/CHtmlEditView::Create
+- AFXHTML/CHtmlEditView::GetDHtmlDocument
+- AFXHTML/CHtmlEditView::GetStartDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +91,14 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxhtml.h  
   
-##  <a name="a-namechtmleditviewa--chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
+##  <a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
  Erstellt ein `CHtmlEditView`-Objekt.  
   
 ```  
 CHtmlEditView();
 ```  
   
-##  <a name="a-namecreatea--chtmleditviewcreate"></a><a name="create"></a>CHtmlEditView::Create  
+##  <a name="create"></a>CHtmlEditView::Create  
  Erstellt ein neues Fensterobjekt.  
   
 ```  
@@ -132,7 +137,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft auch die enthaltenen WebBrowser **navigieren** Methode, um ein Standarddokument laden (finden Sie unter [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
-##  <a name="a-namegetdhtmldocumenta--chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
  Gibt die **IHTMLDocument2** Schnittstelle auf das aktuelle Dokument.  
   
 ```  
@@ -143,7 +148,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  Die [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) Schnittstelle.  
   
-##  <a name="a-namegetstartdocumenta--chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
+##  <a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
  Ruft den Namen des Dokuments Standard für diese Ansicht.  
   
 ```  

@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherConnection
+- AFXINET/CGopherConnection
+- AFXINET/CGopherConnection::CGopherConnection
+- AFXINET/CGopherConnection::CreateLocator
+- AFXINET/CGopherConnection::GetAttribute
+- AFXINET/CGopherConnection::OpenFile
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CGopherConnection : public CInternetConnection
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxinet.h  
   
-##  <a name="a-namecgopherconnectiona--cgopherconnectioncgopherconnection"></a><a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
+##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
  Diese Member-Funktion wird aufgerufen, um das Erstellen einer `CGopherConnection` Objekt.  
   
 ```  
@@ -147,7 +152,7 @@ CGopherConnection(
 ### <a name="remarks"></a>Hinweise  
  Erstellen Sie nie eine `CGopherConnection` direkt. Rufen Sie stattdessen [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), erstellt ein `CGopherConnection` -Objekt und gibt einen Zeiger darauf zurück.  
   
-##  <a name="a-namecreatelocatora--cgopherconnectioncreatelocator"></a><a name="createlocator"></a>CGopherConnection:: CreateLocator  
+##  <a name="createlocator"></a>CGopherConnection:: CreateLocator  
  Rufen Sie diese Memberfunktion zum Erstellen oder eine Datei auf einem Gopherserver zu identifizieren.  
   
 ```  
@@ -194,7 +199,7 @@ static CGopherLocator CreateLocator(
   
  Zum Abrufen von Informationen aus einem Gopher-Server muss eine Anwendung zunächst einen Gopher-Locator abrufen. Die Anwendung muss den Locator als nicht transparente Token behandeln (, die Anwendung kann den Locator verwenden jedoch nicht direkt bearbeiten oder vergleichen). In der Regel verwendet die Anwendung den Locator für Aufrufe an die [CGopherFileFind:: FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) Member-Funktion, um eine bestimmte Information abzurufen.  
   
-##  <a name="a-namegetattributea--cgopherconnectiongetattribute"></a><a name="getattribute"></a>CGopherConnection::GetAttribute  
+##  <a name="getattribute"></a>CGopherConnection::GetAttribute  
  Rufen Sie diese Memberfunktion, um spezifische Informationen über ein Element vom Gopher-Server abzurufen.  
   
 ```  
@@ -216,7 +221,7 @@ BOOL GetAttribute(
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
-##  <a name="a-nameopenfilea--cgopherconnectionopenfile"></a><a name="openfile"></a>CGopherConnection:: OpenFile  
+##  <a name="openfile"></a>CGopherConnection:: OpenFile  
  Rufen Sie diese Memberfunktion zum Öffnen einer Datei auf einem Gopherserver.  
   
 ```  

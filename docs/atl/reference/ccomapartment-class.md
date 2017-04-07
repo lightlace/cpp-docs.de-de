@@ -9,9 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComApartment
 - CComApartment
-- ATL.CComApartment
+- ATLBASE/ATL::CComApartment
+- ATLBASE/ATL::CComApartment::CComApartment
+- ATLBASE/ATL::CComApartment::Apartment
+- ATLBASE/ATL::CComApartment::GetLockCount
+- ATLBASE/ATL::CComApartment::Lock
+- ATLBASE/ATL::CComApartment::Unlock
+- ATLBASE/ATL::CComApartment::m_dwThreadID
+- ATLBASE/ATL::CComApartment::m_hThread
+- ATLBASE/ATL::CComApartment::m_nLockCnt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +92,7 @@ class CComApartment
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="a-nameapartmenta--ccomapartmentapartment"></a><a name="apartment"></a>CComApartment::Apartment  
+##  <a name="apartment"></a>CComApartment::Apartment  
  Markiert die Startadresse des Threads.  
   
 ```
@@ -98,7 +105,7 @@ DWORD Apartment();
 ### <a name="remarks"></a>Hinweise  
  Automatisch festgelegt, während der [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init).  
   
-##  <a name="a-nameccomapartmenta--ccomapartmentccomapartment"></a><a name="ccomapartment"></a>CComApartment::CComApartment  
+##  <a name="ccomapartment"></a>CComApartment::CComApartment  
  Der Konstruktor.  
   
 ```
@@ -108,7 +115,7 @@ CComApartment();
 ### <a name="remarks"></a>Hinweise  
  Initialisiert die `CComApartment` Datenmember [M_nLockCnt](#m_nlockcnt) und [M_hThread](#m_hthread).  
   
-##  <a name="a-namegetlockcounta--ccomapartmentgetlockcount"></a><a name="getlockcount"></a>CComApartment::GetLockCount  
+##  <a name="getlockcount"></a>CComApartment::GetLockCount  
  Gibt die aktuellen Sperren Threadanzahl zurück.  
   
 ```
@@ -118,7 +125,7 @@ LONG GetLockCount();
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der Sperren für den Thread.  
   
-##  <a name="a-namelocka--ccomapartmentlock"></a><a name="lock"></a>CComApartment::Lock  
+##  <a name="lock"></a>CComApartment::Lock  
  Erhöht die Anzahl der Sperren des Threads.  
   
 ```
@@ -133,28 +140,28 @@ LONG Lock();
   
  Die Anzahl der Sperren für den Thread wird für statistische Zwecke verwendet.  
   
-##  <a name="a-namemdwthreadida--ccomapartmentmdwthreadid"></a><a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
+##  <a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
  Der Thread-ID enthält.  
   
 ```
 DWORD m_dwThreadID;
 ```  
   
-##  <a name="a-namemhthreada--ccomapartmentmhthread"></a><a name="m_hthread"></a>CComApartment::m_hThread  
+##  <a name="m_hthread"></a>CComApartment::m_hThread  
  Enthält das Handle des Threads.  
   
 ```
 HANDLE m_hThread;
 ```  
   
-##  <a name="a-namemnlockcnta--ccomapartmentmnlockcnt"></a><a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
+##  <a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
  Enthält die aktuellen Sperren Threadanzahl.  
   
 ```
 LONG m_nLockCnt;
 ```  
   
-##  <a name="a-nameunlocka--ccomapartmentunlock"></a><a name="unlock"></a>CComApartment::Unlock  
+##  <a name="unlock"></a>CComApartment::Unlock  
  Verringert die Sperrenanzahl des Threads.  
   
 ```

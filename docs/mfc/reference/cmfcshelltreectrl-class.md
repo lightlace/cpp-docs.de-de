@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCShellTreeCtrl
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::EnableShellContextMenu
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::GetFlags
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::GetItemPath
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::GetRelatedList
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::OnChildNotify
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::OnGetItemIcon
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::OnGetItemText
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::Refresh
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::SelectPath
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::SetFlags
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::SetRelatedList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +101,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
  [!code-cpp[NVC_MFC_Explorer&4;](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_1.h)]  
 [!code-cpp[NVC_MFC_Explorer&5;](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_2.cpp)]  
   
-##  <a name="a-nameenableshellcontextmenua--cmfcshelltreectrlenableshellcontextmenu"></a><a name="enableshellcontextmenu"></a>CMFCShellTreeCtrl::EnableShellContextMenu  
+##  <a name="enableshellcontextmenu"></a>CMFCShellTreeCtrl::EnableShellContextMenu  
  Können das Kontextmenü.  
   
 ```  
@@ -100,7 +112,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
  [in] `bEnable`  
  Ein boolescher Wert, der angibt, ob das Kontextmenü zu aktivieren.  
   
-##  <a name="a-namegetflagsa--cmfcshelltreectrlgetflags"></a><a name="getflags"></a>CMFCShellTreeCtrl::GetFlags  
+##  <a name="getflags"></a>CMFCShellTreeCtrl::GetFlags  
  Gibt die Flags legen Sie für die [CMFCShellTreeCtrl Klasse](../../mfc/reference/cmfcshelltreectrl-class.md) Objekt.  
   
 ```  
@@ -113,7 +125,7 @@ DWORD GetFlags() const;
 ### <a name="remarks"></a>Hinweise  
  Die Flags festgelegt, der `CMFCShellTreeCtrl` gesendet werden, an die Methode [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066) jedes Mal, wenn das Objekt aktualisiert wird. Sie können ändern, dass die Flags, mit der [CMFCShellTreeCtrl::SetFlags](#setflags) Methode.  
   
-##  <a name="a-namegetitempatha--cmfcshelltreectrlgetitempath"></a><a name="getitempath"></a>CMFCShellTreeCtrl::GetItemPath  
+##  <a name="getitempath"></a>CMFCShellTreeCtrl::GetItemPath  
  Ruft den Pfad eines Elements in der [CMFCShellTreeCtrl Klasse](../../mfc/reference/cmfcshelltreectrl-class.md) Objekt.  
   
 ```  
@@ -137,7 +149,7 @@ BOOL GetItemPath(
   
  Wenn Sie keinen angeben `hTreeItem`, versucht diese Methode, die die Zeichenfolge für das aktuell ausgewählte Element abzurufen. Wenn kein Element ausgewählt ist und `hTreeItem` ist `NULL`, diese Methode schlägt fehl.  
   
-##  <a name="a-namegetrelatedlista--cmfcshelltreectrlgetrelatedlist"></a><a name="getrelatedlist"></a>CMFCShellTreeCtrl::GetRelatedList  
+##  <a name="getrelatedlist"></a>CMFCShellTreeCtrl::GetRelatedList  
  Gibt einen Zeiger auf die [CMFCShellListCtrl Klasse](../../mfc/reference/cmfcshelllistctrl-class.md) -Objekt, das zugeordnet ist [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) Objekt.  
   
 ```  
@@ -150,7 +162,7 @@ CMFCShellListCtrl* GetRelatedList() const;
 ### <a name="remarks"></a>Hinweise  
  Mithilfe einer `CMFCShellListCtrl` -Objekt zusammen mit einer `CMFCShellTreeCtrl` -Objekt, können Sie ein Fenster ähnlich wie in Explorer erstellen. Verwenden Sie die Methode [CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist) die beiden Klassen zuordnen. Nachdem sie zugeordnet sind, aktualisiert das Framework automatisch die `CMFCShellListCtrl` Wenn die Auswahl in der `CMFCShellTreeCtrl` ändert.  
   
-##  <a name="a-nameonchildnotifya--cmfcshelltreectrlonchildnotify"></a><a name="onchildnotify"></a>CMFCShellTreeCtrl::OnChildNotify  
+##  <a name="onchildnotify"></a>CMFCShellTreeCtrl::OnChildNotify  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -171,7 +183,7 @@ virtual BOOL OnChildNotify(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameongetitemicona--cmfcshelltreectrlongetitemicon"></a><a name="ongetitemicon"></a>CMFCShellTreeCtrl::OnGetItemIcon  
+##  <a name="ongetitemicon"></a>CMFCShellTreeCtrl::OnGetItemIcon  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -188,7 +200,7 @@ virtual int OnGetItemIcon(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameongetitemtexta--cmfcshelltreectrlongetitemtext"></a><a name="ongetitemtext"></a>CMFCShellTreeCtrl::OnGetItemText  
+##  <a name="ongetitemtext"></a>CMFCShellTreeCtrl::OnGetItemText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -202,7 +214,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namerefresha--cmfcshelltreectrlrefresh"></a><a name="refresh"></a>CMFCShellTreeCtrl::Refresh  
+##  <a name="refresh"></a>CMFCShellTreeCtrl::Refresh  
  Wird aktualisiert, und aktualisiert die [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md).  
   
 ```  
@@ -212,7 +224,7 @@ void Refresh();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Methode zum Aktualisieren der Hierarchie der Elemente der `CMFCShellTreeCtrl`.  
   
-##  <a name="a-nameselectpatha--cmfcshelltreectrlselectpath"></a><a name="selectpath"></a>CMFCShellTreeCtrl::SelectPath  
+##  <a name="selectpath"></a>CMFCShellTreeCtrl::SelectPath  
  Wählt ein Element in der [CMFCShellTreeCtrl Klasse](../../mfc/reference/cmfcshelltreectrl-class.md) basierend auf dem angegebenen Pfad.  
   
 ```  
@@ -230,7 +242,7 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ### <a name="return-value"></a>Rückgabewert  
  `S_OK`Bei Erfolg; `E_FAIL` andernfalls.  
   
-##  <a name="a-namesetflagsa--cmfcshelltreectrlsetflags"></a><a name="setflags"></a>CMFCShellTreeCtrl::SetFlags  
+##  <a name="setflags"></a>CMFCShellTreeCtrl::SetFlags  
  Legt die Flags an, die den Kontext der Struktur zu filtern.  
   
 ```  
@@ -249,7 +261,7 @@ void SetFlags(
 ### <a name="remarks"></a>Hinweise  
  Die `CMFCShellTreeCtrl` übergibt alle Flags auf [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066). Weitere Informationen zu den Werten der anderen Flags finden Sie unter [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).  
   
-##  <a name="a-namesetrelatedlista--cmfcshelltreectrlsetrelatedlist"></a><a name="setrelatedlist"></a>CMFCShellTreeCtrl::SetRelatedList  
+##  <a name="setrelatedlist"></a>CMFCShellTreeCtrl::SetRelatedList  
  Ordnet eine [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) -Objekt mit einem [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) Objekt.  
   
 ```  

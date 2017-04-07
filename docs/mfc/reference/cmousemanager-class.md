@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMouseManager
+- AFXMOUSEMANAGER/CMouseManager
+- AFXMOUSEMANAGER/CMouseManager::AddView
+- AFXMOUSEMANAGER/CMouseManager::GetViewDblClickCommand
+- AFXMOUSEMANAGER/CMouseManager::GetViewIconId
+- AFXMOUSEMANAGER/CMouseManager::GetViewIdByName
+- AFXMOUSEMANAGER/CMouseManager::GetViewNames
+- AFXMOUSEMANAGER/CMouseManager::LoadState
+- AFXMOUSEMANAGER/CMouseManager::SaveState
+- AFXMOUSEMANAGER/CMouseManager::SetCommandForDblClk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +85,7 @@ class CMouseManager : public CObject
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxmousemanager.h  
   
-##  <a name="a-nameaddviewa--cmousemanageraddview"></a><a name="addview"></a>CMouseManager::AddView  
+##  <a name="addview"></a>CMouseManager::AddView  
  Registriert eine [CView](../../mfc/reference/cview-class.md) -Objekt mit den [CMouseManager Klasse](../../mfc/reference/cmousemanager-class.md) benutzerdefinierten Verhalten zu unterstützen.  
   
 ```  
@@ -123,7 +132,7 @@ BOOL AddView(
   
  [!code-cpp[NVC_MFC_StateCollection&4;](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]  
   
-##  <a name="a-namegetviewdblclickcommanda--cmousemanagergetviewdblclickcommand"></a><a name="getviewdblclickcommand"></a>CMouseManager::GetViewDblClickCommand  
+##  <a name="getviewdblclickcommand"></a>CMouseManager::GetViewDblClickCommand  
  Gibt den Befehl, der ausgeführt wird, wenn der Benutzer in der angegebenen Ansicht doppelklickt.  
   
 ```  
@@ -137,7 +146,7 @@ UINT GetViewDblClickCommand(int iId) const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Befehlsbezeichner, wenn die Ansicht mit einem Befehl zugeordnet ist; andernfalls 0.  
   
-##  <a name="a-namegetviewiconida--cmousemanagergetviewiconid"></a><a name="getviewiconid"></a>CMouseManager::GetViewIconId  
+##  <a name="getviewiconid"></a>CMouseManager::GetViewIconId  
  Ruft das Symbol einer Sicht-ID zugeordnet ist  
   
 ```  
@@ -154,7 +163,7 @@ UINT GetViewIconId(int iViewId) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode schlägt fehl, wenn die Ansicht nicht zuerst registriert ist [CMouseManager::AddView](#addview).  
   
-##  <a name="a-namegetviewidbynamea--cmousemanagergetviewidbyname"></a><a name="getviewidbyname"></a>CMouseManager::GetViewIdByName  
+##  <a name="getviewidbyname"></a>CMouseManager::GetViewIdByName  
  Ruft die zugeordnete Name einer Sicht-ID ab.  
   
 ```  
@@ -171,7 +180,7 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sucht mithilfe von Ansichten mit registriert [CMouseManager::AddView](#addview).  
   
-##  <a name="a-namegetviewnamesa--cmousemanagergetviewnames"></a><a name="getviewnames"></a>CMouseManager::GetViewNames  
+##  <a name="getviewnames"></a>CMouseManager::GetViewNames  
  Ruft eine Liste aller registrierten Ansicht Namen.  
   
 ```  
@@ -185,7 +194,7 @@ void GetViewNames(CStringList& listOfNames) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Methode füllt den Parameter `listOfNames` mit den Namen aller Ansichten, die mit registriert [CMouseManager::AddView](#addview).  
   
-##  <a name="a-nameloadstatea--cmousemanagerloadstate"></a><a name="loadstate"></a>CMouseManager::LoadState  
+##  <a name="loadstate"></a>CMouseManager::LoadState  
  Lädt den Zustand der [CMouseManager Klasse](../../mfc/reference/cmousemanager-class.md) aus der Registrierung.  
   
 ```  
@@ -204,7 +213,7 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
   
  In den meisten Fällen müssen Sie keinen dieser Funktion nicht direkt aufrufen. Sie wird als Teil der Initialisierungsprozess Arbeitsbereich aufgerufen. Weitere Informationen zu den Arbeitsbereich Initialisierungsvorgang, finden Sie unter [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
-##  <a name="a-namesavestatea--cmousemanagersavestate"></a><a name="savestate"></a>CMouseManager::SaveState  
+##  <a name="savestate"></a>CMouseManager::SaveState  
  Schreibt den Status der [CMouseManager Klasse](../../mfc/reference/cmousemanager-class.md) in der Registrierung.  
   
 ```  
@@ -223,7 +232,7 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
   
  In den meisten Fällen müssen Sie keinen dieser Funktion nicht direkt aufrufen. Sie wird als Teil des Serialisierungsprozesses Arbeitsbereich aufgerufen. Weitere Informationen zu den Serialisierungsprozess Arbeitsbereich, finden Sie unter [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
-##  <a name="a-namesetcommandfordblclka--cmousemanagersetcommandfordblclk"></a><a name="setcommandfordblclk"></a>CMouseManager::SetCommandForDblClk  
+##  <a name="setcommandfordblclk"></a>CMouseManager::SetCommandForDblClk  
  Ordnet einen benutzerdefinierten Befehl eine Ansicht, die zuerst mit der Maus-Manager registriert ist.  
   
 ```  

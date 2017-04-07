@@ -10,8 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogImpl
-- ATL.CDialogImpl
-- ATL::CDialogImpl
+- ATLWIN/ATL::CDialogImpl
+- ATLWIN/ATL::Create
+- ATLWIN/ATL::DestroyWindow
+- ATLWIN/ATL::DoModal
+- ATLWIN/ATL::EndDialog
+- ATLWIN/ATL::GetDialogProc
+- ATLWIN/ATL::MapDialogRect
+- ATLWIN/ATL::OnFinalMessage
+- ATLWIN/ATL::DialogProc
+- ATLWIN/ATL::StartDialogProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +123,7 @@ template <class T,
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h  
   
-##  <a name="a-namecreatea--cdialogimplcreate"></a><a name="create"></a>CDialogImpl::Create  
+##  <a name="create"></a>CDialogImpl::Create  
  Erstellt ein modales Dialogfeld.  
   
 ```  
@@ -145,7 +153,7 @@ HWND Create(
 ### <a name="remarks"></a>Hinweise  
  Dieses Dialogfeld wird automatisch angefügt, um die `CDialogImpl` Objekt. Rufen Sie zum Erstellen eines modalen Dialogfelds [DoModal](#domodal). Die zweite Außerkraftsetzung wird verwendet, nur mit [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="a-namedestroywindowa--cdialogimpldestroywindow"></a><a name="destroywindow"></a>CDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
  Zerstört ein nicht modales Dialogfeld.  
   
 ```  
@@ -161,7 +169,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Hinweise  
  Gibt **TRUE** , wenn das Dialogfeld erfolgreich getrennt wurde; andernfalls wurde **FALSE**.  
   
-##  <a name="a-namedialogproca--cdialogimpldialogproc"></a><a name="dialogproc"></a>CDialogImpl::DialogProc  
+##  <a name="dialogproc"></a>CDialogImpl::DialogProc  
  Die statische Funktion implementiert die Prozedur.  
   
 ```  
@@ -196,7 +204,7 @@ static LRESULT CALLBACK DialogProc(
   
  Sie können außer Kraft setzen `DialogProc` unterschiedliche Mechanismen für die Verarbeitung von Nachrichten angeben.  
   
-##  <a name="a-namedomodala--cdialogimpldomodal"></a><a name="domodal"></a>CDialogImpl::DoModal  
+##  <a name="domodal"></a>CDialogImpl::DoModal  
  Erstellt ein modales Dialogfeld an.  
   
 ```   
@@ -220,7 +228,7 @@ INT_PTR DoModal(
   
  Rufen Sie zum Erstellen eines nicht modalen Dialogfelds [erstellen](#create).  
   
-##  <a name="a-nameenddialoga--cdialogimplenddialog"></a><a name="enddialog"></a>CDialogImpl::EndDialog  
+##  <a name="enddialog"></a>CDialogImpl::EndDialog  
  Zerstört ein modales Dialogfeld an.  
   
 ```   
@@ -240,7 +248,7 @@ BOOL EndDialog(int nRetCode);
 > [!NOTE]
 >  Rufen Sie nicht `EndDialog` , ein nicht modales Dialogfeld zu zerstören. Rufen Sie [CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow) stattdessen.  
   
-##  <a name="a-namegetdialogproca--cdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
  Gibt `DialogProc`, der aktuellen Prozedur.  
   
 ```   
@@ -253,7 +261,7 @@ virtual WNDPROC GetDialogProc();
 ### <a name="remarks"></a>Hinweise  
  Überschreiben Sie diese Methode, um das Dialogfeld Verfahren durch Ihren eigenen ersetzen.  
   
-##  <a name="a-namemapdialogrecta--cdialogimplmapdialogrect"></a><a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
+##  <a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
  Konvertiert (Maps), die im Dialogfeld Einheiten des angegebenen Rechtecks Bildschirm Einheiten (Pixel).  
   
 ```   
@@ -270,7 +278,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="remarks"></a>Hinweise  
  Die Funktion ersetzt die Koordinaten in der angegebenen `RECT` Struktur mit den Koordinaten konvertierten, sodass die Struktur, die zum Erstellen eines Dialogfelds oder Positionieren Sie ein Steuerelement in einem Dialogfeld verwendet werden.  
   
-##  <a name="a-nameonfinalmessagea--cdialogimplonfinalmessage"></a><a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
  Nach dem Empfang der letzten Nachricht aufgerufen (in der Regel `WM_NCDESTROY`).  
   
 ```   
@@ -284,7 +292,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>Hinweise  
  Beachten Sie, wenn das Objekt nach dem Zerstören automatisch gelöscht werden sollen, können Sie aufrufen `delete this;` hier.  
   
-##  <a name="a-namestartdialogproca--cdialogimplstartdialogproc"></a><a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
+##  <a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
  Wenn die erste Nachricht, zum Verarbeiten von Nachrichten an das Dialogfeld gesendet empfangen wird, nur einmal aufgerufen.  
   
 ```   

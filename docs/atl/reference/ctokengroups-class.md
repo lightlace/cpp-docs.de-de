@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CTokenGroups
-- ATL.CTokenGroups
 - CTokenGroups
+- ATLSECURITY/ATL::CTokenGroups
+- ATLSECURITY/ATL::CTokenGroups::CTokenGroups
+- ATLSECURITY/ATL::CTokenGroups::Add
+- ATLSECURITY/ATL::CTokenGroups::Delete
+- ATLSECURITY/ATL::CTokenGroups::DeleteAll
+- ATLSECURITY/ATL::CTokenGroups::GetCount
+- ATLSECURITY/ATL::CTokenGroups::GetLength
+- ATLSECURITY/ATL::CTokenGroups::GetPTOKEN_GROUPS
+- ATLSECURITY/ATL::CTokenGroups::GetSidsAndAttributes
+- ATLSECURITY/ATL::CTokenGroups::LookupSid
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +100,7 @@ class CTokenGroups
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
   
-##  <a name="a-nameadda--ctokengroupsadd"></a><a name="add"></a>CTokenGroups::Add  
+##  <a name="add"></a>CTokenGroups::Add  
  Fügt eine `CSid` oder vorhandene **TOKEN_GROUPS** Struktur auf der `CTokenGroups` Objekt.  
   
 ```
@@ -113,7 +121,7 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Diese Methoden fügen Sie ein oder mehr `CSid` Objekte und die zugehörigen Attribute, die `CTokenGroups` Objekt.  
   
-##  <a name="a-namectokengroupsa--ctokengroupsctokengroups"></a><a name="ctokengroups"></a>CTokenGroups::CTokenGroups  
+##  <a name="ctokengroups"></a>CTokenGroups::CTokenGroups  
  Der Konstruktor.  
   
 ```
@@ -129,7 +137,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Die `CTokenGroups` -Objekt kann optional mit erstellt werden ein **TOKEN_GROUPS** Struktur oder eine zuvor definierte `CTokenGroups` Objekt.  
   
-##  <a name="a-namedtora--ctokengroupsctokengroups"></a><a name="dtor"></a>CTokenGroups:: ~ CTokenGroups  
+##  <a name="dtor"></a>CTokenGroups:: ~ CTokenGroups  
  Der Destruktor.  
   
 ```
@@ -139,7 +147,7 @@ virtual ~CTokenGroups() throw();
 ### <a name="remarks"></a>Hinweise  
  Der Destruktor gibt alle zugeordnete Ressourcen frei.  
   
-##  <a name="a-namedeletea--ctokengroupsdelete"></a><a name="delete"></a>CTokenGroups::Delete  
+##  <a name="delete"></a>CTokenGroups::Delete  
  Löscht eine `CSid` und die zugehörigen Attribute aus der `CTokenGroups` Objekt.  
   
 ```
@@ -153,14 +161,14 @@ bool Delete(const CSid& rSid) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn der `CSid` entfernt wurde, false andernfalls.  
   
-##  <a name="a-namedeletealla--ctokengroupsdeleteall"></a><a name="deleteall"></a>CTokenGroups::DeleteAll  
+##  <a name="deleteall"></a>CTokenGroups::DeleteAll  
  Löscht alle `CSid` Objekte und die zugehörigen Attribute aus der `CTokenGroups` Objekt.  
   
 ```
 void DeleteAll() throw();
 ```  
   
-##  <a name="a-namegetcounta--ctokengroupsgetcount"></a><a name="getcount"></a>CTokenGroups::GetCount  
+##  <a name="getcount"></a>CTokenGroups::GetCount  
  Gibt die Anzahl der `CSid` Objekte in `CTokenGroups`.  
   
 ```
@@ -170,7 +178,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Anzahl der [CSid](../../atl/reference/csid-class.md) Objekte und die zugehörigen Attribute, die Bestandteil der `CTokenGroups` Objekt.  
   
-##  <a name="a-namegetlengtha--ctokengroupsgetlength"></a><a name="getlength"></a>CTokenGroups::GetLength  
+##  <a name="getlength"></a>CTokenGroups::GetLength  
  Gibt die Größe der **CTokenGroup** Objekt.  
   
 ```
@@ -180,7 +188,7 @@ UINT GetLength() const throw();
 ### <a name="remarks"></a>Hinweise  
  Gibt die Gesamtgröße der **CTokenGroup** -Objekts in Bytes.  
   
-##  <a name="a-namegetptokengroupsa--ctokengroupsgetptokengroups"></a><a name="getptoken_groups"></a>CTokenGroups::GetPTOKEN_GROUPS  
+##  <a name="getptoken_groups"></a>CTokenGroups::GetPTOKEN_GROUPS  
  Ruft einen Zeiger auf die **TOKEN_GROUPS** Struktur.  
   
 ```
@@ -190,7 +198,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Ruft einen Zeiger auf die [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) zur Struktur der `CTokenGroups` Access token-Objekt.  
   
-##  <a name="a-namegetsidsandattributesa--ctokengroupsgetsidsandattributes"></a><a name="getsidsandattributes"></a>CTokenGroups::GetSidsAndAttributes  
+##  <a name="getsidsandattributes"></a>CTokenGroups::GetSidsAndAttributes  
  Ruft die `CSid` Objekte und (optional) die Attribute für die `CTokenGroups` Objekt.  
   
 ```
@@ -209,7 +217,7 @@ void GetSidsAndAttributes(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode werden alle aufgelistet der `CSid` Objekte in der `CTokenGroups` Objekt, und platzieren sie und (optional) die Attributflags in Arrayobjekte.  
   
-##  <a name="a-namelookupsida--ctokengroupslookupsid"></a><a name="lookupsid"></a>CTokenGroups::LookupSid  
+##  <a name="lookupsid"></a>CTokenGroups::LookupSid  
  Ruft die zugeordneten Attribute ein `CSid` Objekt.  
   
 ```
@@ -231,7 +239,7 @@ bool LookupSid(
 ### <a name="remarks"></a>Hinweise  
  Festlegen von `pdwAttributes` auf NULL bietet eine Möglichkeit, bestätigen das Vorhandensein der `CSid` ohne Zugriff auf das Attribut. Beachten Sie, dass diese Methode nicht verwendet werden soll, um Zugriffsrechte zu überprüfen, wie unter Windows 2000 falsche Ergebnisse auftreten können. Anwendungen sollte stattdessen verwendet die [CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) Methode.  
   
-##  <a name="a-nameoperatoreqa--ctokengroupsoperator-"></a><a name="operator_eq"></a>CTokenGroups::operator =  
+##  <a name="operator_eq"></a>CTokenGroups::operator =  
  Zuweisungsoperator.  
   
 ```
@@ -246,7 +254,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="return-value"></a>Rückgabewert  
  Gibt den aktualisierten `CTokenGroups` Objekt.  
   
-##  <a name="a-nameoperatorconsttokengroupsstara--ctokengroupsoperator-const-tokengroups-"></a><a name="operator_const_token_groups__star"></a>Const TOKEN_GROUPS CTokenGroups::operator *  
+##  <a name="operator_const_token_groups__star"></a>Const TOKEN_GROUPS CTokenGroups::operator *  
  Wandelt einen Wert in einen Zeiger auf die **TOKEN_GROUPS** Struktur.  
   
 ```  

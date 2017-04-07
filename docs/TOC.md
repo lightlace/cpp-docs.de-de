@@ -13,7 +13,7 @@
 # [.NET-Entwicklung mit C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [Cloud- und Webprogrammierung in Visual C++](cloud/cloud-and-web-programming-in-visual-cpp.md)
 # [Parallele Programmierung](parallel/parallel-programming-in-visual-cpp.md)
-# [Datenzugriff](data/index.md)
+# [Datenzugriff](data/data-access-in-cpp.md)
 # [Text und Zeichenfolgen](text/text-and-strings-in-visual-cpp.md)
 # [Verwenden der Visual Studio-IDE für C++](ide/ide-and-tools-for-visual-cpp-development.md)
 # [Compiler und Buildtools](build/building-c-cpp-programs.md)

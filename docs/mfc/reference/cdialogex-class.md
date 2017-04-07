@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogEx
+- AFXDIALOGEX/CDialogEx
+- AFXDIALOGEX/CDialogEx::CDialogEx
+- AFXDIALOGEX/CDialogEx::SetBackgroundColor
+- AFXDIALOGEX/CDialogEx::SetBackgroundImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +90,7 @@ class CDialogEx : public CDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxdialogex.h  
   
-##  <a name="a-namecdialogexa--cdialogexcdialogex"></a><a name="cdialogex"></a>CDialogEx::CDialogEx  
+##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
  Erstellt ein `CDialogEx`-Objekt.  
   
 ```  
@@ -117,7 +121,7 @@ CDialogEx(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetbackgroundcolora--cdialogexsetbackgroundcolor"></a><a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
  Legt die Hintergrundfarbe des Dialogfelds fest.  
   
 ```  
@@ -135,7 +139,7 @@ void SetBackgroundColor(
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-namesetbackgroundimagea--cdialogexsetbackgroundimage"></a><a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
+##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
  Legt das Hintergrundbild des Dialogfelds fest.  
   
 ```  

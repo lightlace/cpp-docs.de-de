@@ -9,8 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CCustomInterpolator
 - CCustomInterpolator
+- AFXANIMATIONCONTROLLER/CCustomInterpolator
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::CCustomInterpolator
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::GetDependencies
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::GetDuration
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::GetFinalValue
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::Init
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::InterpolateValue
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::InterpolateVelocity
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::SetDuration
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::SetInitialValueAndVelocity
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_currentValue
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_currentVelocity
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_duration
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_finalValue
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_initialValue
+- AFXANIMATIONCONTROLLER/CCustomInterpolator::m_initialVelocity
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +105,7 @@ class CCustomInterpolator;
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxanimationcontroller.h  
   
-##  <a name="a-nameccustominterpolatora--ccustominterpolatorccustominterpolator"></a><a name="ccustominterpolator"></a>CCustomInterpolator::CCustomInterpolator  
+##  <a name="ccustominterpolator"></a>CCustomInterpolator::CCustomInterpolator  
  Erstellt einen benutzerdefinierten Interpolator-Objekt und legt alle Werte auf den Standardwert 0.  
   
 ```  
@@ -111,7 +126,7 @@ CCustomInterpolator(
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie CCustomInterpolator:: init, um die Dauer und den Endwert später im Code zu initialisieren.  
   
-##  <a name="a-namegetdependenciesa--ccustominterpolatorgetdependencies"></a><a name="getdependencies"></a>CCustomInterpolator::GetDependencies  
+##  <a name="getdependencies"></a>CCustomInterpolator::GetDependencies  
  Ruft die Interpolator Abhängigkeiten ab.  
   
 ```  
@@ -134,7 +149,7 @@ virtual BOOL GetDependencies(
 ### <a name="return-value"></a>Rückgabewert  
  Grundlegende Implementierung gibt immer "true". Gibt FALSE in der überschriebenen Implementierung zurück, wenn das Ereignis fehlschlagen soll.  
   
-##  <a name="a-namegetdurationa--ccustominterpolatorgetduration"></a><a name="getduration"></a>CCustomInterpolator::GetDuration  
+##  <a name="getduration"></a>CCustomInterpolator::GetDuration  
  Ruft die Dauer des Interpolators ab.  
   
 ```  
@@ -148,7 +163,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ### <a name="return-value"></a>Rückgabewert  
  Grundlegende Implementierung gibt immer "true". Gibt FALSE in der überschriebenen Implementierung zurück, wenn das Ereignis fehlschlagen soll.  
   
-##  <a name="a-namegetfinalvaluea--ccustominterpolatorgetfinalvalue"></a><a name="getfinalvalue"></a>CCustomInterpolator::GetFinalValue  
+##  <a name="getfinalvalue"></a>CCustomInterpolator::GetFinalValue  
  Ruft den endgültigen Wert zu dem der Interpolator führt.  
   
 ```  
@@ -162,7 +177,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ### <a name="return-value"></a>Rückgabewert  
  Grundlegende Implementierung gibt immer "true". Gibt FALSE in der überschriebenen Implementierung zurück, wenn das Ereignis fehlschlagen soll.  
   
-##  <a name="a-nameinita--ccustominterpolatorinit"></a><a name="init"></a>CCustomInterpolator:: Init  
+##  <a name="init"></a>CCustomInterpolator:: Init  
  Initialisiert Dauer und endgültigen Wert.  
   
 ```  
@@ -178,7 +193,7 @@ void Init(
  `finalValue`  
  Der Endwert einer Variablen am Ende des Übergangs.  
   
-##  <a name="a-nameinterpolatevaluea--ccustominterpolatorinterpolatevalue"></a><a name="interpolatevalue"></a>CCustomInterpolator::InterpolateValue  
+##  <a name="interpolatevalue"></a>CCustomInterpolator::InterpolateValue  
  Interpoliert den Wert an einem angegebenen Offset.  
   
 ```  
@@ -194,7 +209,7 @@ virtual BOOL InterpolateValue(
 ### <a name="return-value"></a>Rückgabewert  
  Grundlegende Implementierung gibt immer "true". Gibt FALSE in der überschriebenen Implementierung zurück, wenn das Ereignis fehlschlagen soll.  
   
-##  <a name="a-nameinterpolatevelocitya--ccustominterpolatorinterpolatevelocity"></a><a name="interpolatevelocity"></a>CCustomInterpolator::InterpolateVelocity  
+##  <a name="interpolatevelocity"></a>CCustomInterpolator::InterpolateVelocity  
  Interpoliert die Geschwindigkeit bei einem angegebenen offset  
   
 ```  
@@ -210,49 +225,49 @@ virtual BOOL InterpolateVelocity(
 ### <a name="return-value"></a>Rückgabewert  
  Grundlegende Implementierung gibt immer "true". Gibt FALSE in der überschriebenen Implementierung zurück, wenn das Ereignis fehlschlagen soll.  
   
-##  <a name="a-namemcurrentvaluea--ccustominterpolatormcurrentvalue"></a><a name="m_currentvalue"></a>CCustomInterpolator::m_currentValue  
+##  <a name="m_currentvalue"></a>CCustomInterpolator::m_currentValue  
  Der interpolierten Wert.  
   
 ```  
 DOUBLE m_currentValue;  
 ```  
   
-##  <a name="a-namemcurrentvelocitya--ccustominterpolatormcurrentvelocity"></a><a name="m_currentvelocity"></a>CCustomInterpolator::m_currentVelocity  
+##  <a name="m_currentvelocity"></a>CCustomInterpolator::m_currentVelocity  
  Die interpolierte Geschwindigkeit.  
   
 ```  
 DOUBLE m_currentVelocity;  
 ```  
   
-##  <a name="a-namemdurationa--ccustominterpolatormduration"></a><a name="m_duration"></a>CCustomInterpolator::m_duration  
+##  <a name="m_duration"></a>CCustomInterpolator::m_duration  
  Die Dauer des Übergangs.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="a-namemfinalvaluea--ccustominterpolatormfinalvalue"></a><a name="m_finalvalue"></a>CCustomInterpolator::m_finalValue  
+##  <a name="m_finalvalue"></a>CCustomInterpolator::m_finalValue  
  Der Endwert einer Variablen am Ende des Übergangs.  
   
 ```  
 DOUBLE m_finalValue;  
 ```  
   
-##  <a name="a-nameminitialvaluea--ccustominterpolatorminitialvalue"></a><a name="m_initialvalue"></a>CCustomInterpolator::m_initialValue  
+##  <a name="m_initialvalue"></a>CCustomInterpolator::m_initialValue  
  Der Wert der Variablen am Anfang des Übergangs.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="a-nameminitialvelocitya--ccustominterpolatorminitialvelocity"></a><a name="m_initialvelocity"></a>CCustomInterpolator::m_initialVelocity  
+##  <a name="m_initialvelocity"></a>CCustomInterpolator::m_initialVelocity  
  Die Geschwindigkeit der Variablen am Anfang des Übergangs.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="a-namesetdurationa--ccustominterpolatorsetduration"></a><a name="setduration"></a>CCustomInterpolator::SetDuration  
+##  <a name="setduration"></a>CCustomInterpolator::SetDuration  
  Legt die Dauer des Interpolators fest.  
   
 ```  
@@ -266,7 +281,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ### <a name="return-value"></a>Rückgabewert  
  Grundlegende Implementierung gibt immer "true". Gibt FALSE in der überschriebenen Implementierung zurück, wenn das Ereignis fehlschlagen soll.  
   
-##  <a name="a-namesetinitialvalueandvelocitya--ccustominterpolatorsetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>CCustomInterpolator::SetInitialValueAndVelocity  
+##  <a name="setinitialvalueandvelocity"></a>CCustomInterpolator::SetInitialValueAndVelocity  
  Anfangswert und die Geschwindigkeit des Interpolators festgelegt.  
   
 ```  

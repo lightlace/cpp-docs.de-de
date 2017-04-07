@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CLinkCtrl
+- AFXCMN/CLinkCtrl
+- AFXCMN/CLinkCtrl::CLinkCtrl
+- AFXCMN/CLinkCtrl::Create
+- AFXCMN/CLinkCtrl::CreateEx
+- AFXCMN/CLinkCtrl::GetIdealHeight
+- AFXCMN/CLinkCtrl::GetIdealSize
+- AFXCMN/CLinkCtrl::GetItem
+- AFXCMN/CLinkCtrl::GetItemID
+- AFXCMN/CLinkCtrl::GetItemState
+- AFXCMN/CLinkCtrl::GetItemUrl
+- AFXCMN/CLinkCtrl::HitTest
+- AFXCMN/CLinkCtrl::SetItem
+- AFXCMN/CLinkCtrl::SetItemID
+- AFXCMN/CLinkCtrl::SetItemState
+- AFXCMN/CLinkCtrl::SetItemUrl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,14 +112,14 @@ class CLinkCtrl : public CWnd
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcmn.h  
   
-##  <a name="a-nameclinkctrla--clinkctrlclinkctrl"></a><a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl  
+##  <a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl  
  Erstellt ein `CLinkCtrl`-Objekt.  
   
 ```  
 CLinkCtrl();
 ```  
   
-##  <a name="a-namecreatea--clinkctrlcreate"></a><a name="create"></a>CLinkCtrl::Create  
+##  <a name="create"></a>CLinkCtrl::Create  
  Erstellt ein Linksteuerelement und fügt es ein `CLinkCtrl` Objekt.  
   
 ```  
@@ -156,7 +171,7 @@ virtual BOOL Create(DWORD dwStyle,
   
  [!code-cpp[NVC_MFC_CLinkCtrl_s&#1;1](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]  
   
-##  <a name="a-namecreateexa--clinkctrlcreateex"></a><a name="createex"></a>CLinkCtrl::CreateEx  
+##  <a name="createex"></a>CLinkCtrl::CreateEx  
  Erstellt ein Linksteuerelement mit erweiterten Stile und fügt es ein `CLinkCtrl` Objekt.  
   
 ```  
@@ -203,7 +218,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
  Die zweite Form der `CreateEx` Methode ist veraltet. Die erste Form, der angibt, die `lpszLinkMarkup` Parameter.  
   
-##  <a name="a-namegetidealheighta--clinkctrlgetidealheight"></a><a name="getidealheight"></a>CLinkCtrl::GetIdealHeight  
+##  <a name="getidealheight"></a>CLinkCtrl::GetIdealHeight  
  Ruft die optimale Höhe der Link-Steuerelement ab.  
   
 ```  
@@ -216,7 +231,7 @@ int GetIdealHeight() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetidealsizea--clinkctrlgetidealsize"></a><a name="getidealsize"></a>CLinkCtrl::GetIdealSize  
+##  <a name="getidealsize"></a>CLinkCtrl::GetIdealSize  
  Berechnet die bevorzugte Höhe der Text des Links für das aktuelle Linksteuerelement, je nach der angegebenen Breite des Links.  
   
 ```  
@@ -240,7 +255,7 @@ int GetIdealSize(
   
  Diese Methode sendet die [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetitema--clinkctrlgetitem"></a><a name="getitem"></a>CLinkCtrl::GetItem  
+##  <a name="getitem"></a>CLinkCtrl::GetItem  
  Ruft die Zustände und die Attribute eines Elements der Link-Steuerelement.  
   
 ```  
@@ -257,7 +272,7 @@ BOOL GetItem(PLITEM pItem) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetitemida--clinkctrlgetitemid"></a><a name="getitemid"></a>CLinkCtrl::GetItemID  
+##  <a name="getitemid"></a>CLinkCtrl::GetItemID  
  Ruft die ID des Elements ein Link-Steuerelement ab.  
   
 ```  
@@ -293,7 +308,7 @@ BOOL GetItemID(
 ### <a name="remarks"></a>Hinweise  
  Ruft die ID des Elements einen bestimmten Link-Steuerelement ab. Weitere Informationen finden Sie unter Win32-Meldung [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetitemstatea--clinkctrlgetitemstate"></a><a name="getitemstate"></a>CLinkCtrl::GetItemState  
+##  <a name="getitemstate"></a>CLinkCtrl::GetItemState  
  Ruft den Zustand des Elements Link-Steuerelement.  
   
 ```  
@@ -319,7 +334,7 @@ BOOL GetItemState(
 ### <a name="remarks"></a>Hinweise  
  Ruft den Wert des angegebenen Elements in der einen bestimmten Link-Steuerelement ein Element ab. Weitere Informationen finden Sie unter Win32-Meldung [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetitemurla--clinkctrlgetitemurl"></a><a name="getitemurl"></a>CLinkCtrl::GetItemUrl  
+##  <a name="getitemurl"></a>CLinkCtrl::GetItemUrl  
  Ruft die URL durch die Link-Steuerelement ein Element dargestellt wird.  
   
 ```  
@@ -355,7 +370,7 @@ BOOL GetItemUrl(
 ### <a name="remarks"></a>Hinweise  
  Ruft die URL, die durch den angegebenen Link-Steuerelement ein Element dargestellt wird. Weitere Informationen finden Sie unter Win32-Meldung [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namehittesta--clinkctrlhittest"></a><a name="hittest"></a>CLinkCtrl::HitTest  
+##  <a name="hittest"></a>CLinkCtrl::HitTest  
  Bestimmt, ob der Benutzer den angegebenen Link geklickt hat.  
   
 ```  
@@ -372,7 +387,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetitema--clinkctrlsetitem"></a><a name="setitem"></a>CLinkCtrl::SetItem  
+##  <a name="setitem"></a>CLinkCtrl::SetItem  
  Legt fest, die Zustände und die Attribute eines Elements der Link-Steuerelement.  
   
 ```  
@@ -389,7 +404,7 @@ BOOL SetItem(PLITEM pItem);
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetitemida--clinkctrlsetitemid"></a><a name="setitemid"></a>CLinkCtrl::SetItemID  
+##  <a name="setitemid"></a>CLinkCtrl::SetItemID  
  Ruft die ID des Elements ein Link-Steuerelement ab.  
   
 ```  
@@ -411,7 +426,7 @@ BOOL SetItemID(
 ### <a name="remarks"></a>Hinweise  
  Legt die ID des Elements einen bestimmten Link-Steuerelement fest. Weitere Informationen finden Sie unter Win32-Meldung [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetitemstatea--clinkctrlsetitemstate"></a><a name="setitemstate"></a>CLinkCtrl::SetItemState  
+##  <a name="setitemstate"></a>CLinkCtrl::SetItemState  
  Ruft den Zustand des Elements Link-Steuerelement.  
   
 ```  
@@ -437,7 +452,7 @@ BOOL SetItemState(
 ### <a name="remarks"></a>Hinweise  
  Legt den Wert des angegebenen Elements in der einen bestimmten Link-Steuerelement ein Element. Weitere Informationen finden Sie unter Win32-Meldung [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetitemurla--clinkctrlsetitemurl"></a><a name="setitemurl"></a>CLinkCtrl::SetItemUrl  
+##  <a name="setitemurl"></a>CLinkCtrl::SetItemUrl  
  Legt die URL durch die Link-Steuerelement ein Element dargestellt wird.  
   
 ```  

@@ -21,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
 |[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a> operator!=  
+##  <a name="operator_neq"></a> operator!=  
  Testet, ob das Stack-Objekt links vom Operator ungleich dem Stack-Objekt rechts vom Operator ist.  
   
 ```  
@@ -29,10 +29,10 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Ein Objekt vom Typ **stack**.  
   
- ` right`  
+ `right`  
  Ein Objekt vom Typ **stack**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -82,7 +82,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a> operator&lt;  
+##  <a name="operator_lt_"></a> operator&lt;  
  Testet, ob das Stapelobjekt links vom Operator kleiner als das Stapelobjekt rechts vom Operator ist.  
   
 ```  
@@ -90,10 +90,10 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Ein Objekt vom Typ **stack**.  
   
- ` right`  
+ `right`  
  Ein Objekt vom Typ **stack**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -162,7 +162,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a> operator&lt;=  
+##  <a name="operator_lt__eq"></a> operator&lt;=  
  Testet, ob das Stapelobjekt links vom Operator kleiner gleich dem Stapelobjekt rechts vom Operator ist.  
   
 ```  
@@ -170,10 +170,10 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Ein Objekt vom Typ **stack**.  
   
- ` right`  
+ `right`  
  Ein Objekt vom Typ **stack**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -225,7 +225,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a> operator==  
+##  <a name="operator_eq_eq"></a> operator==  
  Testet, ob das Stack-Objekt links vom Operator gleich dem Stack-Objekt rechts vom Operator ist.  
   
 ```  
@@ -233,10 +233,10 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Ein Objekt vom Typ **stack**.  
   
- ` right`  
+ `right`  
  Ein Objekt vom Typ **stack**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -286,7 +286,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a> operator&gt;  
+##  <a name="operator_gt_"></a> operator&gt;  
  Testet, ob das Stapelobjekt links vom Operator größer als das Stapelobjekt rechts vom Operator ist.  
   
 ```  
@@ -294,10 +294,10 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Ein Objekt vom Typ **stack**.  
   
- ` right`  
+ `right`  
  Ein Objekt vom Typ **stack**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -351,7 +351,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a> operator&gt;=  
+##  <a name="operator_gt__eq"></a> operator&gt;=  
  Testet, ob das Stapelobjekt links vom Operator größer gleich dem Stapelobjekt rechts vom Operator ist.  
   
 ```  
@@ -359,10 +359,10 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Ein Objekt vom Typ **stack**.  
   
- ` right`  
+ `right`  
  Ein Objekt vom Typ **stack**.  
   
 ### <a name="return-value"></a>Rückgabewert  

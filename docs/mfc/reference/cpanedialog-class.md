@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPaneDialog
+- AFXPANEDIALOG/CPaneDialog
+- AFXPANEDIALOG/CPaneDialog::Create
+- AFXPANEDIALOG/CPaneDialog::HandleInitDialog
+- AFXPANEDIALOG/CPaneDialog::SetOccDialogInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +104,7 @@ class CPaneDialog : public CDockablePane
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxpanedialog.h  
   
-##  <a name="a-namecreatea--cpanedialogcreate"></a><a name="create"></a>CPaneDialog::Create  
+##  <a name="create"></a>CPaneDialog::Create  
  Erstellt einen andockbaren Dialogfeld und fügt es ein `CPaneDialog` Objekt.  
   
 ```  
@@ -177,7 +181,7 @@ BOOL Create(
  [!code-cpp[NVC_MFC_SetPaneSize&#2;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize&3;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
-##  <a name="a-namehandleinitdialoga--cpanedialoghandleinitdialog"></a><a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
+##  <a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
  Behandelt das [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) Nachricht.  
   
 ```  
@@ -199,7 +203,7 @@ afx_msg LRESULT HandleInitDialog(
 ### <a name="remarks"></a>Hinweise  
  Das Framework verwendet diese Methode, um Steuerelemente und die Darstellung eines Dialogfelds zu initialisieren. Das Framework ruft diese Methode auf, bevor das Dialogfeld angezeigt.  
   
-##  <a name="a-namesetoccdialoginfoa--cpanedialogsetoccdialoginfo"></a><a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
+##  <a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
  Gibt die Vorlage für ein Dialogfeld, das ein OLE-Container-Steuerelement ist.  
   
 ```  

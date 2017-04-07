@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel::CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel::SetACCData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxRibbonLabel.h  
   
-##  <a name="a-namecmfcribbonlabela--cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
  Erstellt und initialisiert ein [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) -Objekt, das die angegebene Zeichenfolge angezeigt.  
   
 ```  
@@ -98,7 +101,7 @@ CMFCRibbonLabel(
  [in] `bIsMultiLine`  
  `TRUE`um anzugeben, dass die Bezeichnung eine mehrzeilige Bezeichnung ist; andernfalls `FALSE`.  
   
-##  <a name="a-namesetaccdataa--cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
  Bestimmt die Eingabehilfen-Daten für das aktuelle Element der Menüband-Bezeichnung.  
   
 ```  

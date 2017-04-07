@@ -9,9 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlWinModule
-- ATL.CAtlWinModule
 - CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule::CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule::AddCreateWndData
+- ATLBASE/ATL::CAtlWinModule::ExtractCreateWndData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +82,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
   
-##  <a name="a-nameaddcreatewnddataa--catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
+##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
  Diese Methode initialisiert und fügt eine `_AtlCreateWndData` Struktur.  
   
 ```
@@ -97,7 +99,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft [AtlWinModuleAddCreateWndData](http://msdn.microsoft.com/library/8463a6ed-07ea-4aad-92ec-ded681601b32) welche Initialisiert ein [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) Struktur. Diese Struktur speichert die **dies** Zeiger verwendet, um die Klasseninstanz in Fensterprozeduren zu erhalten.  
   
-##  <a name="a-namecatlwinmodulea--catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
+##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
  Der Konstruktor.  
   
 ```
@@ -107,7 +109,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>Hinweise  
  Wenn die Initialisierung fehlschlägt, eine **EXCEPTION_NONCONTINUABLE** Ausnahme ausgelöst.  
   
-##  <a name="a-namedtora--catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
+##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
  Der Destruktor.  
   
 ```
@@ -117,7 +119,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>Hinweise  
  Gibt alle zugeordnete Ressourcen frei.  
   
-##  <a name="a-nameextractcreatewnddataa--catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
+##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
  Diese Methode gibt einen Zeiger auf eine `_AtlCreateWndData` Struktur.  
   
 ```

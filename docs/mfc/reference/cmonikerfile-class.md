@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMonikerFile
+- AFXOLE/CMonikerFile
+- AFXOLE/CMonikerFile::CMonikerFile
+- AFXOLE/CMonikerFile::Close
+- AFXOLE/CMonikerFile::Detach
+- AFXOLE/CMonikerFile::GetMoniker
+- AFXOLE/CMonikerFile::Open
+- AFXOLE/CMonikerFile::CreateBindContext
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +102,7 @@ class CMonikerFile : public COleStreamFile
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="a-nameclosea--cmonikerfileclose"></a><a name="close"></a>CMonikerFile::Close  
+##  <a name="close"></a>CMonikerFile::Close  
  Rufen Sie diese Funktion zu trennen, und lassen Sie den Stream und den Moniker freizugeben.  
   
 ```  
@@ -105,14 +112,14 @@ virtual void Close();
 ### <a name="remarks"></a>Hinweise  
  Kann auf geöffnete oder bereits geschlossene Streams aufgerufen werden.  
   
-##  <a name="a-namecmonikerfilea--cmonikerfilecmonikerfile"></a><a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
+##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
  Erstellt ein `CMonikerFile`-Objekt.  
   
 ```  
 CMonikerFile();
 ```  
   
-##  <a name="a-namecreatebindcontexta--cmonikerfilecreatebindcontext"></a><a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
+##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
  Rufen Sie diese Funktion zum Erstellen einer Bindungskontext standardmäßig initialisiert.  
   
 ```  
@@ -129,7 +136,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="remarks"></a>Hinweise  
  Eine Bindungskontext ist ein Objekt, das Informationen zu einem bestimmten Monikerbindungsvorgang gespeichert. Sie können diese Funktion, um einen benutzerdefinierten Kontext bereitzustellen, überschreiben.  
   
-##  <a name="a-namedetacha--cmonikerfiledetach"></a><a name="detach"></a>CMonikerFile::Detach  
+##  <a name="detach"></a>CMonikerFile::Detach  
  Rufen Sie diese Funktion, um den Stream zu schließen.  
   
 ```  
@@ -143,7 +150,7 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
-##  <a name="a-namegetmonikera--cmonikerfilegetmoniker"></a><a name="getmoniker"></a>CMonikerFile::GetMoniker  
+##  <a name="getmoniker"></a>CMonikerFile::GetMoniker  
  Rufen Sie diese Funktion, um einen Zeiger auf den aktuellen Moniker abzurufen.  
   
 ```  
@@ -156,7 +163,7 @@ IMoniker* GetMoniker() const;
 ### <a name="remarks"></a>Hinweise  
  Da `CMonikerFile` ist keine Schnittstelle, erhöht sich der zurückgegebene Zeiger nicht den Verweiszähler (über [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), und der Moniker freigegeben wird bei der `CMonikerFile` Objekt freigegeben. Wenn Sie auf den Moniker enthalten ist, oder selbst freigeben möchten, müssen Sie `AddRef` es.  
   
-##  <a name="a-nameopena--cmonikerfileopen"></a><a name="open"></a>CMonikerFile::Open  
+##  <a name="open"></a>CMonikerFile::Open  
  Rufen Sie diese Memberfunktion zum Öffnen einer Datei oder Moniker-Objekts.  
   
 ```  

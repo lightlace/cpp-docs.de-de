@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocItem
+- AFXOLE/CDocItem
+- AFXOLE/CDocItem::GetDocument
+- AFXOLE/CDocItem::IsBlank
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +82,7 @@ class CDocItem : public CCmdTarget
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxole.h  
   
-##  <a name="a-namegetdocumenta--cdocitemgetdocument"></a><a name="getdocument"></a>CDocItem::GetDocument  
+##  <a name="getdocument"></a>CDocItem::GetDocument  
  Rufen Sie diese Funktion, um das Dokument abzurufen, das das Element enthält.  
   
 ```  
@@ -92,7 +95,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ist in den abgeleiteten Klassen überschrieben [COleClientItem](../../mfc/reference/coleclientitem-class.md) und [COleServerItem](../../mfc/reference/coleserveritem-class.md), die Rückgabe eines Zeigers auf eine [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), oder ein [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) Objekt.  
   
-##  <a name="a-nameisblanka--cdocitemisblank"></a><a name="isblank"></a>CDocItem::IsBlank  
+##  <a name="isblank"></a>CDocItem::IsBlank  
  Vom Framework aufgerufen, wenn Standardserialisierung auftritt.  
   
 ```  

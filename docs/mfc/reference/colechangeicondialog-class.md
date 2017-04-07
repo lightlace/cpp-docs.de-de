@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog::COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog::DoChangeIcon
+- AFXODLGS/COleChangeIconDialog::DoModal
+- AFXODLGS/COleChangeIconDialog::GetIconicMetafile
+- AFXODLGS/COleChangeIconDialog::m_ci
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +105,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxodlgs.h  
   
-##  <a name="a-namecolechangeicondialoga--colechangeicondialogcolechangeicondialog"></a><a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
  Diese Funktion erstellt nur eine `COleChangeIconDialog` Objekt.  
   
 ```  
@@ -134,7 +140,7 @@ explicit COleChangeIconDialog(
   
  Weitere Informationen finden Sie unter der [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedochangeicona--colechangeicondialogdochangeicon"></a><a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
  Mit dieser Funktion können Sie das Symbol für das Element, nach dem im Dialogfeld ausgewählten ändern [DoModal](#domodal) gibt **IDOK**.  
   
 ```  
@@ -148,7 +154,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Änderung erfolgreich ist; andernfalls 0.  
   
-##  <a name="a-namedomodala--colechangeicondialogdomodal"></a><a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
  Rufen Sie diese Funktion, um das Dialogfeld OLE "Symbol ändern" anzuzeigen.  
   
 ```  
@@ -169,7 +175,7 @@ virtual INT_PTR DoModal();
   
  Wenn `DoModal` gibt **IDOK**, Sie können andere Memberfunktionen aufrufen zum Abrufen der Einstellungen oder Informationen, die in das Dialogfeld vom Benutzer eingegeben wurde.  
   
-##  <a name="a-namegeticonicmetafilea--colechangeicondialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
  Rufen Sie diese Funktion, um ein Handle für die Metadatei abzurufen, die den iconic Aspekt des ausgewählten Elements enthält.  
   
 ```  
@@ -179,7 +185,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Rückgabewert  
  Das Handle der Metadatei mit den iconic Aspekt des neuen Symbols, wird das Dialogfeld, durch Auswahl geschlossen wurde **OK**ist, andernfalls das Symbol an, wie sie war, bevor das Dialogfeld angezeigt wurde.  
   
-##  <a name="a-namemcia--colechangeicondialogmci"></a><a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
  Struktur des Typs **OLEUICHANGEICON** zum Steuern des Verhaltens des Dialogfelds "Symbol ändern" verwendet.  
   
 ```  

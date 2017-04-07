@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::DispatchState
+- DispatchState
+- CONCRTRM/concurrency::DispatchState
+- CONCRTRM/concurrency::DispatchState::DispatchState::DispatchState
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_dispatchStateSize
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_fIsPreviousContextAsynchronouslyBlocked
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_reserved
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 46c2219464e57da4931596e970199549405d02ec
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a617d1f1d7f68c00c7011daffc6ba59f08c43a1e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="dispatchstate-structure"></a>DispatchState-Struktur
@@ -54,15 +59,15 @@ struct DispatchState;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[DispatchState:: DispatchState-Konstruktor](#ctor)|Erstellt ein neues `DispatchState`-Objekt.|  
+|[DispatchState:: DispatchState](#ctor)|Erstellt ein neues `DispatchState`-Objekt.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[DispatchState:: M_dispatchstatesize-Datenmember](#m_dispatchstatesize)|Die Größe dieser Struktur, die für die Versionskontrolle verwendet wird.|  
-|[DispatchState:: M_fispreviouscontextasynchronouslyblocked-Datenmember](#m_fispreviouscontextasynchronouslyblocked)|Gibt an, ob dieser Kontext eingegeben hat die `Dispatch` Methode, da der vorherige Kontext asynchron blockiert hat. Dies wird nur im UMS-Planungskontext verwendet und ist auf den Wert festgelegt `0` für alle anderen Ausführungskontexte.|  
-|[DispatchState:: M_reserved-Datenmember](#m_reserved)|Bits für zukünftige Informationen reserviert.|  
+|[DispatchState:: M_dispatchstatesize](#m_dispatchstatesize)|Die Größe dieser Struktur, die für die Versionskontrolle verwendet wird.|  
+|[DispatchState:: M_fispreviouscontextasynchronouslyblocked](#m_fispreviouscontextasynchronouslyblocked)|Gibt an, ob dieser Kontext eingegeben hat die `Dispatch` Methode, da der vorherige Kontext asynchron blockiert hat. Dies wird nur im UMS-Planungskontext verwendet und ist auf den Wert festgelegt `0` für alle anderen Ausführungskontexte.|  
+|[DispatchState:: M_reserved](#m_reserved)|Bits für zukünftige Informationen reserviert.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `DispatchState`  
@@ -72,28 +77,28 @@ struct DispatchState;
   
  **Namespace:** Parallelität  
   
-##  <a name="a-namectora--dispatchstatedispatchstate-constructor"></a><a name="ctor"></a>DispatchState:: DispatchState-Konstruktor  
+##  <a name="ctor"></a>DispatchState:: DispatchState-Konstruktor  
  Erstellt ein neues `DispatchState`-Objekt.  
   
 ```
 DispatchState();
 ```  
   
-##  <a name="a-namemdispatchstatesizea--dispatchstatemdispatchstatesize-data-member"></a><a name="m_dispatchstatesize"></a>DispatchState:: M_dispatchstatesize-Datenmember  
+##  <a name="m_dispatchstatesize"></a>DispatchState:: M_dispatchstatesize-Datenmember  
  Die Größe dieser Struktur, die für die Versionskontrolle verwendet wird.  
   
 ```
 unsigned long m_dispatchStateSize;
 ```  
   
-##  <a name="a-namemfispreviouscontextasynchronouslyblockeda--dispatchstatemfispreviouscontextasynchronouslyblocked-data-member"></a><a name="m_fispreviouscontextasynchronouslyblocked"></a>DispatchState:: M_fispreviouscontextasynchronouslyblocked-Datenmember  
+##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>DispatchState:: M_fispreviouscontextasynchronouslyblocked-Datenmember  
  Gibt an, ob dieser Kontext eingegeben hat die `Dispatch` Methode, da der vorherige Kontext asynchron blockiert hat. Dies wird nur im UMS-Planungskontext verwendet und ist auf den Wert festgelegt `0` für alle anderen Ausführungskontexte.  
   
 ```
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```  
   
-##  <a name="a-namemreserveda--dispatchstatemreserved-data-member"></a><a name="m_reserved"></a>DispatchState:: M_reserved-Datenmember  
+##  <a name="m_reserved"></a>DispatchState:: M_reserved-Datenmember  
  Bits für zukünftige Informationen reserviert.  
   
 ```
