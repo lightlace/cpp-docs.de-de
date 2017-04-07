@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: e86ca806e5e6f19fa36b3ab33ba7a518da80e86b
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: 0e83114e2e6f062b9cb2164cf71bb25792304de0
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="diagnostic-services"></a>Diagnosedienste
@@ -79,9 +79,11 @@ Die Microsoft Foundation Class-Bibliothek bietet viele Diagnosedienste, die das 
 |-|-|  
 |[BESTÄTIGEN](#assert)|Eine Meldung ausgibt, und klicken Sie dann bricht das Programm ab, wenn der angegebene Ausdruck ergibt **"false"** in der Debugversion der Bibliothek.|  
 |[ASSERT_KINDOF](#assert_kindof)|Prüft, ob ein Objekt ein Objekt der angegebenen Klasse oder einer aus der angegebenen Klasse abgeleiteten Klasse ist.|  
-|[ASSERT_VALID](#assert_valid)|Testet die interne Gültigkeit eines Objekts durch Aufrufen seiner `AssertValid` Memberfunktion; in der Regel außer Kraft gesetzte aus `CObject`.|  
+|[ASSERT_VALID](#assert_valid)|Testet die interne Gültigkeit eines Objekts durch Aufrufen seiner `AssertValid` Memberfunktion; in der Regel außer Kraft gesetzte aus `CObject`.|
 |[DEBUG_NEW](#debug_new)|Gibt einen Dateinamen und eine Zeilennummer für alle Objektzuweisungen im Debugmodus an, um die Suche nach Speicherlecks zu unterstützen.|  
 |[DEBUG_ONLY](#debug_only)|Ähnlich wie **ASSERT** jedoch keine Tests den Wert des Ausdrucks; nützlich für Code, der nur im Debugmodus ausgeführt werden soll.|  
+|[Stellen Sie sicher und ENSURE_VALID](#ensure)|So überprüfen Sie die Richtigkeit der Daten verwenden.|
+|[THIS_FILE](#this_file)|Wird erweitert, um den Namen der Datei, die kompiliert wird.|
 |[TRACE](#trace)|Bietet `printf`--ähnliche Funktionalität in der Debugversion der Bibliothek.|  
 |[VERGEWISSERN SIE SICH](#verify)|Ähnlich wie **ASSERT** jedoch wertet den Ausdruck in der Releaseversion der Bibliothek als auch in der Debugversion.|  
   
@@ -93,7 +95,9 @@ Die Microsoft Foundation Class-Bibliothek bietet viele Diagnosedienste, die das 
 |[afxMemDF](#afxmemdf)|Globale Variable, die das Verhalten der Debugspeicherzuweisung steuert.|  
 |[AfxCheckError](#afxcheckerror)|Globale Variable, die zum Prüfen des übergebenen **SCODE** um festzustellen, ob es ein Fehler ist, und wenn dies der Fall ist, den entsprechenden Fehler löst.|  
 |[AfxCheckMemory](#afxcheckmemory)|Überprüft die Integrität des gesamten derzeit zugewiesenen Speichers.|  
-|[AfxDump](#cdumpcontext_in_mfc_)|Sichert bei einem Aufruf im Debugger den Status eines Objekts während des Debuggens.|  
+|[AfxDebugBreak](#afxdebugbreak)|Bewirkt, dass eine Unterbrechung in der Ausführung.|
+|[AfxDump](#cdumpcontext_in_mfc)|Sichert bei einem Aufruf im Debugger den Status eines Objekts während des Debuggens.|  
+|[AfxDump](#afxdump)|Interne Funktion, der den Zustand eines Objekts während des Debuggens einen Dump erstellt.|
 |[AfxDumpStack](#afxdumpstack)|Generiert ein Image des aktuellen Stapels. Diese Funktion wird immer statisch gelinkt.|  
 |[AfxEnableMemoryLeakDump](#afxenablememoryleakdump)|Ermöglicht das Sichern von Speicherlecks.|  
 |[AfxEnableMemoryTracking](#afxenablememorytracking)|Aktiviert und deaktiviert die Arbeitsspeicher-Nachverfolgung.|  
@@ -108,7 +112,49 @@ Die Microsoft Foundation Class-Bibliothek bietet viele Diagnosedienste, die das 
 |-|-|  
 |[AfxDoForAllClasses](#afxdoforallclasses)|Führt eine bestimmte Funktion für alle `CObject`-abgeleitete Klassen, die typüberprüfung zur Laufzeit unterstützen.|  
 |[AfxDoForAllObjects](#afxdoforallobjects)|Führt eine angegebene Funktion auf allen `CObject`-abgeleitete Objekte, die mit zugewiesen wurden **neue**.|  
+
+### <a name="mfc-compilation-macros"></a>Kompilierung von MFC-Makros
+|||
+|-|-|
+|[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Unterdrückt die Compiler-Warnungen für die Verwendung von MFC-Funktionen, die als veraltet markierte.|  
+
+
+## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS
+Unterdrückt die Compiler-Warnungen für die Verwendung von MFC-Funktionen, die als veraltet markierte.  
+   
+### <a name="syntax"></a>Syntax   
+```  
+_AFX_SECURE_NO_WARNINGS  
+```     
+### <a name="example"></a>Beispiel  
+ In diesem Codebeispiel würde eine compilerwarnung aus, wenn _AFX_SECURE_NO_WARNINGS nicht definiert wurden.  
   
+ ```cpp
+// define this before including any afx files in stdafx.h
+#define _AFX_SECURE_NO_WARNINGS
+```
+```cpp
+CRichEditCtrl* pRichEdit = new CRichEditCtrl;
+pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
+   CRect(10,10,100,200), pParentWnd, 1);
+char sz[256];
+pRichEdit->GetSelText(sz);
+```
+
+## <a name="afxdebugbreak"></a>AfxDebugBreak
+Mit dieser Funktion können dazu führen, dass eine Unterbrechung (an der Position des Aufrufs von `AfxDebugBreak`) bei der Ausführung der Debugversion des MFC-Anwendung.  
+
+### <a name="syntax"></a>Syntax    
+```
+void AfxDebugBreak( );    
+```  
+   
+### <a name="remarks"></a>Hinweise  
+ `AfxDebugBreak`wirkt sich nicht in Releaseversionen von MFC-Anwendung, und sollte entfernt werden. Diese Funktion sollte nur in MFC-Anwendungen verwendet werden. Verwenden Sie die Win32-API-Version **"DebugBreak"**, um eine Unterbrechung in MFC-fremden Anwendungen verursachen.  
+   
+### <a name="requirements"></a>Anforderungen  
+ **Header:** afxver_.h   
+
 ##  <a name="assert"></a>BESTÄTIGEN
  Wertet das Argument.  
   
@@ -240,6 +286,67 @@ DEBUG_ONLY(expression)
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afx.h
 
+ ### <a name="ensure"></a>Stellen Sie sicher und ENSURE_VALID
+So überprüfen Sie die Richtigkeit der Daten verwenden.  
+   
+### <a name="syntax"></a>Syntax    
+```
+ENSURE(  booleanExpression )  
+ENSURE_VALID( booleanExpression  )  
+```
+### <a name="parameters"></a>Parameter  
+ `booleanExpression`  
+ Gibt einen booleschen Ausdruck, der darauf getestet werden.  
+   
+### <a name="remarks"></a>Hinweise  
+ Diese Makros dient die Überprüfung von Parametern zu verbessern. Die Makros zu verhindern, dass die weitere Verarbeitung der falsche Parameter im Code. Im Gegensatz zu den **ASSERT** Makros, die **stellen Sie sicher** Makros löst eine Ausnahme neben dem Generieren einer Assertion.  
+  
+ Die Makros Verhalten auf zwei Arten entsprechend der Projektkonfiguration. Der Aufruf Makros **ASSERT** , und klicken Sie dann eine Ausnahme auslösen, wenn die Assertion fehlschlägt. Folglich in Debugkonfigurationen (d. h. **_DEBUG** definiert ist) die Makros erzeugen eine Assertion und die Ausnahme in der Release-Konfigurationen, die Makros zu erzeugen, nur die Ausnahme (**ASSERT** wertet den Ausdruck im Releasekonfigurationen nicht).  
+  
+ Das Makro **ENSURE_ARG** verhält sich wie die **sicherstellen, dass** Makro.  
+  
+ **ENSURE_VALID** Aufrufe der `ASSERT_VALID` Makro (die Auswirkungen nur in Debug-Builds aufweist). Darüber hinaus **ENSURE_VALID** löst eine Ausnahme aus, wenn der Zeiger NULL ist. Der NULL-Test wird im sowohl Debug- und Releasekonfigurationen ausgeführt.  
+  
+ Wenn eines dieser tests fehlschlägt, wird eine Warnmeldung angezeigt, auf die gleiche Weise wie **ASSERT**. Das Makro löst eine Ausnahme für ungültiges Argument aus, bei Bedarf.  
+### <a name="requirements"></a>Anforderungen  
+ **Header:** afx.h  
+   
+### <a name="see-also"></a>Siehe auch  
+ [Makros und globale Variablen](mfc-macros-and-globals.md)   
+ [VERGEWISSERN SIE SICH](#verify)   
+ [ATLENSURE](#altensure)
+
+## <a name="this_file"></a>THIS_FILE
+Wird erweitert, um den Namen der Datei, die kompiliert wird.  
+   
+### <a name="syntax"></a>Syntax    
+```
+THIS_FILE    
+```  
+   
+### <a name="remarks"></a>Hinweise  
+ Die Informationen werden verwendet, indem Sie die **ASSERT** und **überprüfen** Makros. Die Anwendungs-Assistent und der Code-Assistenten platzieren Sie das Makro in Quellcodedateien, die sie erstellen.  
+   
+### <a name="example"></a>Beispiel  
+```cpp
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+// __FILE__ is one of the six predefined ANSI C macros that the 
+// compiler recognizes. 
+```
+   
+### <a name="requirements"></a>Anforderungen  
+ **Header:** afx.h  
+   
+### <a name="see-also"></a>Siehe auch  
+ [Makros und globale Variablen](mfc-macros-and-globals.md)   
+ [BESTÄTIGEN](#assert)   
+ [VERGEWISSERN SIE SICH](#verify)
+
+
 ##  <a name="trace"></a>TRACE  
  Sendet die angegebene Zeichenfolge an den Debugger von der aktuellen Anwendung.  
   
@@ -286,7 +393,7 @@ VERIFY(booleanExpression)
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afx.h
 
-##  <a name="cdumpcontext_in_mfc_"></a>AfxDump (CDumpContext in MFC)  
+##  <a name="cdumpcontext_in_mfc"></a>AfxDump (CDumpContext in MFC)  
  Stellt grundlegende Objektdumps Funktion in Ihrer Anwendung bereit.  
   
 ```   
@@ -305,6 +412,31 @@ CDumpContext  afxDump;
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afx.h
+
+
+## <a name="afxdump"></a>AfxDump (intern)
+Interne Funktion, den MFC verwendet, um den Status eines Objekts während des Debuggens zu speichern.  
+
+### <a name="syntax"></a>Syntax    
+```
+void AfxDump(const CObject* pOb);   
+```
+### <a name="parameters"></a>Parameter  
+ `pOb`  
+ Ein Zeiger auf ein Objekt einer Klasse abgeleitet `CObject`.  
+   
+### <a name="remarks"></a>Hinweise  
+ **AfxDump** Ruft ein Objekt `Dump` Memberfunktion und sendet die Informationen zum Speicherort, durch angegeben die `afxDump` Variable. **AfxDump** steht nur in der Debugversion von MFC.  
+  
+ Programmcode sollte nicht aufrufen **AfxDump**, sondern rufen stattdessen sollte die `Dump` Memberfunktion des entsprechenden Objekts.  
+   
+### <a name="requirements"></a>Anforderungen  
+ **Header:** afx.h  
+   
+### <a name="see-also"></a>Siehe auch  
+ [CObject::Dump](cobject-class.md#dump)   
+
+
 
 ##  <a name="afxmemdf"></a>afxMemDF  
  Diese Variable wird der Zugriff über einen Debugger oder das Programm und Ihnen Allocation-Diagnose zu optimieren.  
@@ -383,7 +515,7 @@ BOOL  AfxCheckMemory();
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
  
-##  <a name="mfc_"></a>AfxDump (MFC)  
+##  <a name="afxdump"></a>AfxDump (MFC)  
  Mit dieser Funktion wird im Debugger, um den Status eines Objekts während des Debuggens zu speichern.  
   
 ```   
@@ -398,6 +530,14 @@ void AfxDump(const CObject* pOb);
  **AfxDump** Ruft ein Objekt `Dump` Memberfunktion und sendet die Informationen zum Speicherort, durch angegeben die `afxDump` Variable. **AfxDump** steht nur in der Debugversion von MFC.  
   
  Programmcode sollte nicht aufrufen **AfxDump**, sondern rufen stattdessen sollte die `Dump` Memberfunktion des entsprechenden Objekts.  
+
+### <a name="requirements"></a>Anforderungen  
+ **Header:** afx.h  
+
+### <a name="see-also"></a>Siehe auch  
+ [CObject::Dump](cobject-class.md#dump)   
+
+
   
 ##  <a name="afxdumpstack"></a>AfxDumpStack  
  Dieser globale Funktion kann verwendet werden, um ein Bild des aktuellen Stapels zu generieren.  
