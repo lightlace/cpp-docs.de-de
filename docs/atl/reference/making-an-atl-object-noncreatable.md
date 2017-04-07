@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines ATL-Objekts als nicht erstellbares | Microsoft-Dokumentation
+title: Machen eine ATL-Objekt nicht erstellbare | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,17 +35,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: b812c2d4bfeb0663d62051c05829f25dc7139faf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 9ee276d86478bb4a7b6c9839378183bfd49533d6
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="making-an-atl-object-noncreatable"></a>Erstellen eines ATL-Objekts als nicht erstellbares
-Sie können die Attribute eines ATL-basierten COM-Objekts ändern, sodass das Objekt nicht direkt von ein Client erstellt werden kann. In diesem Fall wird das Objekt durch einen Methodenaufruf zurückgegeben wird, auf einem anderen Objekt anstatt direkt erstellt.  
+# <a name="making-an-atl-object-noncreatable"></a>Erstellen eine nicht erstellbare ATL-Objekt
+Sie können die Attribute eines ATL-basierten COM-Objekts ändern, sodass ein Client das Objekt direkt erstellt werden kann. In diesem Fall würde das Objekt werden durch einen Methodenaufruf zurückgegeben wird, auf einem anderen Objekt anstatt direkt erstellt.  
   
-### <a name="to-make-an-object-noncreatable"></a>Ein Objekt vornehmen.  
+### <a name="to-make-an-object-noncreatable"></a>Ein Objekt Noncreatable vornehmen.  
   
-1.  Entfernen Sie die [OBJECT_ENTRY_AUTO](http://msdn.microsoft.com/library/5a0f4fa5-0905-43d2-b337-e22f979c9e4c) für das Objekt. Wenn Sie das Objekt, das das Steuerelement jedoch registriert werden soll, ersetzen Sie mit [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](http://msdn.microsoft.com/library/abdc093c-6502-42de-8419-b7ebf45299d1).  
+1.  Entfernen Sie die [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) für das Objekt. Wenn Sie das Objekt nicht erstellbare das Steuerelement jedoch registriert werden soll, ersetzen Sie mit [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto).  
   
 2.  Hinzufügen der [Noncreatable](../../windows/noncreatable.md) -Attribut auf die Co-Klasse in der IDL-Datei. Zum Beispiel:  
   

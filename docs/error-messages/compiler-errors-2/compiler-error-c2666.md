@@ -1,32 +1,49 @@
 ---
-title: "Compilerfehler C2666 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2666"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2666"
+title: Compilerfehler Fehler C2666 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2666
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compilerfehler C2666
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0aa7af12e49f152256c2efe7d16d02e1f1c45f68
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="compiler-error-c2666"></a>Compilerfehler Fehler C2666
 'Bezeichner': Anzahl Überladungen haben ähnliche Konvertierungen  
   
- Eine überladene Funktion oder ein Operator ist mehrdeutig.   Die formalen Parameterlisten sind für den Compiler möglicherweise zu ähnlich, um die Mehrdeutigkeit auflösen zu können.  Um den Fehler zu beheben, führen Sie für einen oder mehrere der übergebenen Parameter eine explizite Typumwandlung durch.  
+ Einer überladenen Funktion oder ein Operator ist mehrdeutig.   Formale Parameterlisten möglicherweise zu ähnlichen für den Compiler, um die Mehrdeutigkeit aufzulösen.  Um diesen Fehler zu beheben, müssen Sie explizit eine oder mehrere der tatsächliche Parameter umgewandelt.  
   
  Im folgenden Beispiel wird C2666 generiert:  
   
@@ -44,17 +61,17 @@ int main() {
 }  
 ```  
   
- Dieser Fehler kann auch aufgrund einer Verbesserung der Compilerkonformität in Visual Studio .NET 2003 ausgegeben werden:  
+ Dieser Fehler kann außerdem infolge einer konformitätsverbesserung generiert werden, die für Visual Studio .NET 2003 durchgeführt wurde:  
   
--   Binäre Operatoren und benutzerdefinierte Konvertierungen zu Zeigertypen  
+-   binäre Operatoren und benutzerdefinierten Konvertierungen zu Zeigertypen  
   
--   Qualifikationskonvertierung und Identitätskonvertierung weichen voneinander ab  
+-   Qualifizierung eine Konvertierung ist nicht identisch mit der Identity-Konvertierung  
   
- Bei den binären Operatoren \<, \>, \<\=, and \>\= wird ein übergebener Parameter jetzt implizit in den Typ des Operanden konvertiert, wenn der Typ des Parameters ein benutzerdefinierter Konvertierungsoperator definiert, der in den Typ des Operanden konvertiert.  Dies kann jetzt zu Mehrdeutigkeiten führen.  
+ Für die binären Operatoren \<, >, \<=, und > = wird ein übergebener Parameter ist jetzt implizit konvertiert, auf den Typ des Operanden den Typ des Parameters einen benutzerdefinierte Konvertierung-Operator, um in den Typ des Operanden konvertiert definiert. Es ist jetzt Mehrdeutigkeiten führen.  
   
- In Code, der sowohl in der Visual Studio .NET 2003\-Version als auch in der Visual Studio .NET\-Version von Visual C\+\+ gültig ist, rufen Sie den Klassenoperator mithilfe der Funktionssyntax explizit auf.  
+ Rufen Sie für Code, der im Visual Studio .NET 2003 und Visual Studio .NET Versionen von Visual C++ gültig ist Operators Klasse Funktionssyntax explizit zu verwenden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // C2666b.cpp  
@@ -94,7 +111,7 @@ int main()
     T str1( "ABCD" );  
     const char* str2 = "DEFG";  
   
-    // Error – Ambiguous call to operator<()  
+    // Error - Ambiguous call to operator<()  
     // Trying to convert str1 to char* and then call   
     // operator<( const char*, const char* )?  
     //  OR  
@@ -111,8 +128,8 @@ int main()
 }  
 ```  
   
-## Beispiel  
- Im folgenden Beispiel wird C2666 generiert:  
+## <a name="example"></a>Beispiel  
+ Im folgende Beispiel wird C2666 generiert.  
   
 ```  
 // C2666c.cpp  

@@ -110,9 +110,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 9e79a6728471acd08052d87b97645407d1f7cc47
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 262b2b8548f203a210b1aabbe149fe25cf6ad655
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl-Klasse
@@ -514,7 +514,7 @@ long FindText(
  Zeiger auf die [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) strukturieren, erteilen die Parameter für die Suche und Rückgabe des Bereichs, in dem die Übereinstimmung gefunden wurde.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Nullbasierte Zeichenposition mit der nächsten Übereinstimmung; – 1, wenn keine Übereinstimmungen vorhanden sind.  
+ Nullbasierte Zeichenposition mit der nächsten Übereinstimmung; -1, wenn keine Übereinstimmungen vorhanden sind.  
   
 ### <a name="remarks"></a>Hinweise  
  Suche können Sie entweder nach oben oder unten im richtigen Bereich parametereinstellung der [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) Struktur innerhalb der **FINDTEXTEX** Struktur.  
@@ -782,7 +782,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ### <a name="remarks"></a>Hinweise  
  Wenn mehr als ein Absatz ausgewählt ist, `pf` empfängt die Attribute aus dem ersten ausgewählten Absatz. Der Rückgabewert gibt an, welche Attribute in der gesamten die Auswahl konsistent sind.  
   
- Weitere Informationen finden Sie unter der [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) Nachricht und die **PARAFORMAT** und **PARAFORMAT2** -Strukturen in den [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Weitere Informationen finden Sie unter der [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) Nachricht und die **PARAFORMAT** und **PARAFORMAT2** Strukturen in den [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CRichEditCtrl::SetParaFormat](#setparaformat).  
@@ -869,7 +869,7 @@ void GetSel(
   
 - **Memberfunktion GetSel (** `nStartChar` **,** `nEndChar` **)** dieses Formular gibt die Grenzen in den Parametern `nStartChar` und `nEndChar`.  
   
- Die Auswahl enthält alles, was, wenn der Anfang ( **CpMin** oder `nStartChar`) ist 0 und das Ende ( **CpMax** oder `nEndChar`) – 1 ist.  
+ Die Auswahl enthält alles, was, wenn der Anfang ( **CpMin** oder `nStartChar`) ist 0 und das Ende ( **CpMax** oder `nEndChar`) ist - 1.  
   
  Weitere Informationen finden Sie unter [EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001) Nachricht und [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -1109,10 +1109,10 @@ long LineFromChar(long nIndex) const;
   
 ### <a name="parameters"></a>Parameter  
  `nIndex`  
- Den nullbasierte Indexwert für das gewünschte Zeichen im Text des Bearbeitungssteuerelements enthält, oder – 1 enthält. Wenn `nIndex` wird – 1 ist, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
+ Den nullbasierte Indexwert für das gewünschte Zeichen im Text des Bearbeitungssteuerelements enthält, oder-1 enthält. Wenn `nIndex` ist-1, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die nullbasierte Zeilennummer der Zeile mit der Zeichenindex gemäß `nIndex`. Wenn `nIndex` – 1 ist, wird die Zahl der Zeile, die das erste Zeichen der Auswahl zurückgegeben. Wenn keine Auswahl vorhanden ist, wird die aktuelle Zeilennummer zurückgegeben.  
+ Die nullbasierte Zeilennummer der Zeile mit der Zeichenindex gemäß `nIndex`. Wenn `nIndex` ist-1. die Zahl der Zeile, die das erste Zeichen der Auswahl zurückgegeben. Wenn keine Auswahl vorhanden ist, wird die aktuelle Zeilennummer zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein Zeichenindex ist die Anzahl der Zeichen vom Anfang des rich-Edit-Steuerelements. Ein OLE-Element ist für das Zählen von Zeichen als ein einzelnes Zeichen gezählt.  
@@ -1131,10 +1131,10 @@ int LineIndex(int nLine = -1) const;
   
 ### <a name="parameters"></a>Parameter  
  `nLine`  
- Enthält den Indexwert für die gewünschte Position im Text des Bearbeitungssteuerelements, oder – 1. Wenn `nLine` wird – 1 ist, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
+ Den Indexwert für die gewünschte Position im Text des Bearbeitungssteuerelements enthält, oder-1 enthält. Wenn `nLine` ist-1, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Zeichenindex der Zeile im angegebenen `nLine` , oder – 1, wenn die angegebene Zeilennummer größer ist und die Anzahl der Zeilen im Bearbeitungssteuerelement.  
+ Der Zeichenindex der Zeile im angegebenen `nLine` oder-1 zurück, wenn die angegebene Zeilennummer größer wird und dann die Anzahl der Zeilen im Bearbeitungssteuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Zeichenindex ist die Anzahl der Zeichen vom Anfang des rich-Edit-Steuerelements in die angegebene Zeile.  
@@ -1153,7 +1153,7 @@ int LineLength(int nLine = -1) const;
   
 ### <a name="parameters"></a>Parameter  
  `nLine`  
- Gibt an, der Zeichenindex eines Zeichens in der Zeile, deren Länge abgerufen werden sollen. Wenn dieser Parameter – 1 ist, die Länge der aktuellen Zeile (die Zeile, die den Textcursor enthält) wird zurückgegeben, ausgenommen die Länge eines beliebigen Text in die Zeile ausgewählt. Wenn `LineLength` wird aufgerufen, für ein Bearbeitungssteuerelement einzeilige dieser Parameter wird ignoriert.  
+ Gibt an, der Zeichenindex eines Zeichens in der Zeile, deren Länge abgerufen werden sollen. Wenn dieser Parameter auf-1 festgelegt, die Länge der aktuellen Zeile (die Zeile, die den Textcursor enthält) wird zurückgegeben, ausgenommen die Länge eines beliebigen Text in die Zeile ausgewählt. Wenn `LineLength` wird aufgerufen, für ein Bearbeitungssteuerelement einzeilige dieser Parameter wird ignoriert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn `LineLength` wird aufgerufen, für ein Bearbeitungssteuerelement für mehrzeiligen ist der Rückgabewert der Länge (in Bytes) der angegebene Zeile `nLine`. Wenn `LineLength` wird aufgerufen, für eine einzeilige Edit-Steuerelement, ist der Rückgabewert die Länge (in Bytes) des Texts im Bearbeitungssteuerelement.  
@@ -1603,7 +1603,7 @@ void SetSel(CHARRANGE& cr);
   
  Die Einfügemarke befindet sich am Ende der Auswahl des Beginns größer erkennbar ( **CpMin** oder `nStartChar`) und Ende ( **CpMax** oder `nEndChar`) Indizes. Diese Funktion führt einen Bildlauf durch den Inhalt der `CRichEditCtrl` , damit der Textcursor angezeigt wird.  
   
- Wählen Sie sämtlichen Text in dieser `CRichEditCtrl` -Objekt, rufen Sie `SetSel` mit einem startIndex von 0 und ein endIndex von – 1.  
+ Wählen Sie sämtlichen Text in dieser `CRichEditCtrl` -Objekt, rufen Sie `SetSel` mit einem startIndex von 0 und ein endIndex von - 1.  
   
  Weitere Informationen finden Sie unter [EM_EXSETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788007) Nachricht und [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   

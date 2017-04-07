@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk2022 | Microsoft-Dokumentation
+title: Linkertoolfehler Lnk2022 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,23 +34,23 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 91fb85679fd6c66bc97974912a2de688f494d5e9
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6f12c53d7dd1383ad8f994a713c7226ab038cb19
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="linker-tools-error-lnk2022"></a>Linkertoolfehler LNK2022
-Fehler bei der Metadatenoperation (HRESULT): Error_message  
+Metadatenvorgang ist fehlgeschlagen (HRESULT): Error_message  
   
- Der Linker hat einen Fehler beim Zusammenführen von Metadaten. Die Metadatenfehler müssen behoben werden, um erfolgreich zu verknüpfen.  
+ Der Linker hat einen Fehler beim Zusammenführen von Metadaten festgestellt. Die Metadatenfehler müssen behoben werden, um erfolgreich zu verknüpfen.  
   
- Eine Möglichkeit zur diagnose dieses Problems ist die Ausführung **Ildasm – Tokens** auf die Objektdateien welche haben die Token aufgeführt, `error_message`, und suchen Sie nach unterschieden.  In den Metadaten zwei verschiedene Typen mit demselben Namen ist ungültig, auch wenn nur Layouttyp-Attribut unterscheidet.  
+ Eine Möglichkeit, dieses Problem zu diagnostizieren ist zum Ausführen **"Ildasm"-Token** auf die Objektdateien zu ermitteln, welche Typen haben die Token in aufgeführten `error_message`, und suchen Sie nach unterschieden.  In den Metadaten zwei verschiedene Arten mit dem gleichen Namen ist ungültig, auch wenn nur LayoutType-Attribut unterscheidet.  
   
- Eine Ursache für LNK2022 ist, wenn ein Typ (z. B. eine Struktur) in mehrere Kompiliereinheit mit dem gleichen Namen, jedoch mit in Konflikt stehende Definitionen vorhanden ist und beim Kompilieren mit [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  In diesem Fall stellen Sie sicher, dass der Typ in jeder Kompiliereinheit identisch ist.  Der Typname steht in `error_message`.  
+ Eine Ursache für LNK2022 ist, wenn ein Typ (z. B. eine Struktur) in mehrere Compilands, mit dem gleichen Namen, jedoch mit in Konflikt stehende Definitionen vorhanden ist, und bei der Kompilierung ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md).  In diesem Fall stellen Sie sicher, dass der Typ eine identische Definition in jeder Kompiliereinheit aufweist.  Der Typname abgelesen werden `error_message`.  
   
- Eine weitere mögliche Ursache für LNK2022 wird der Linker eine Metadatendatei an einem anderen Speicherort für den Compiler angegeben wurde (mit [#using](../../preprocessor/hash-using-directive-cpp.md) ). Stellen Sie sicher, dass die Metadatendatei (.dll oder .netmodule) am gleichen Speicherort, an den Linker übergeben wird, wie bei der Übergabe an den Compiler.  
+ Eine weitere mögliche Ursache für LNK2022 der Linker wird eine Metadatendatei an einem anderen Speicherort als dem Compiler angegeben wurde (mit [#using](../../preprocessor/hash-using-directive-cpp.md) ). Stellen Sie sicher, dass die Metadatendatei (DLL oder NETMODULE-Datei) ist am gleichen Speicherort, wenn an den Linker übergeben wurde, die zuvor für den Compiler übergeben wurde.  
   
- Beim Erstellen einer ATL-Anwendung, die Verwendung von [_ATL_MIXED](http://msdn.microsoft.com/Library/11b59a83-7098-43e2-9f7b-408299930966) ist in jeder Kompiliereinheit erforderlich, wenn er in mindestens einer verwendet wird.  
+ Beim Erstellen einer Anwendung die Verwendung von ATL- [_ATL_MIXED](http://msdn.microsoft.com/Library/11b59a83-7098-43e2-9f7b-408299930966) ist in jeder Kompiliereinheit erforderlich, wenn er in mindestens einer verwendet wird.  
   
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird einen leeren Typ definiert.  
@@ -64,7 +64,7 @@ public ref class Test {};
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, dass zwei Quellcodedateien verknüpft werden können, die den gleichen Namen, aber unterschiedliche Definitionen enthalten.  
   
- Im folgende Beispiel wird LNK2022 generiert.  
+ Im folgenden Beispiel wird LNK2022 generiert.  
   
 ```  
 // LNK2022_b.cpp  

@@ -443,9 +443,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 77be7b572bd5fa6d90d52d14a40706f251176a2b
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 8888bd1296b5397daf288fa81f00a8783d9cde46
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
@@ -806,7 +806,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnNcMButtonDblClk](#onncmbuttondblclk)|Wird aufgerufen, wenn der Benutzer mit der mittleren Maustaste doppelklickt, während sich der Cursor in einem clientfremden Bereich von `CWnd` befindet.|  
 |[CWnd::OnNcMButtonDown](#onncmbuttondown)|Wird aufgerufen, wenn der Benutzer die mittlere Maustaste drückt, während sich der Cursor in einem clientfremden Bereich von `CWnd` befindet.|  
 |[CWnd::OnNcMButtonUp](#onncmbuttonup)|Wird aufgerufen, wenn der Benutzer die mittlere Maustaste loslässt, während sich der Cursor in einem clientfremden Bereich von `CWnd` befindet.|  
-|[CWnd::OnNcMouseHover](#onncmousehover)|Wird aufgerufen, wenn der Cursor über dem nicht-Clientbereich des Fensters für den Zeitraum in einem vorherigen Aufruf für [TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265).|  
+|[CWnd::OnNcMouseHover](#onncmousehover)|Wird aufgerufen, wenn der Cursor über den clientfremden Bereich des Fensters für den Zeitraum in einem vorherigen Aufruf für [TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265).|  
 |[CWnd::OnNcMouseLeave](#onncmouseleave)|Das Framework ruft diese Memberfunktion auf, wenn der Cursor den clientfremden Bereich des angegebenen Fensters in einem vorherigen Aufruf für verlässt [TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265).|  
 |[CWnd::OnNcMouseMove](#onncmousemove)|Wird aufgerufen, wenn der Cursor innerhalb eines clientfremden Bereichs von `CWnd` bewegt wird.|  
 |[CWnd::OnNcPaint](#onncpaint)|Wird aufgerufen, wenn für den clientfremden Bereich eine Zeichnung erforderlich ist.|  
@@ -1678,7 +1678,7 @@ virtual BOOL CreateEx(
  Der ursprüngliche horizontalen Abstand des Fensters aus der linken Seite des Bildschirms oder das übergeordnete Fenster.  
   
  `y`  
- Der erste vertikale Abstand des Fensters vom oberen Rand des Bildschirms oder das übergeordnete Fenster.  
+ Der ursprüngliche vertikalen Abstand des Fensters vom oberen Rand des Bildschirms oder das übergeordnete Fenster.  
   
  `nWidth`  
  Die Breite des Fensters in Pixel.  
@@ -1748,7 +1748,7 @@ void CreateGrayCaret(
   
  Das System-Fensterrahmens Breite oder Höhe kann abgerufen werden die [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) Windows-Funktion mit der **SM_CXBORDER zugeordnet** und **SM_CYBORDER zugeordnet** Indizes. Mithilfe des Fensterrahmens Breite oder Höhe wird sichergestellt, dass das Caretzeichen auf einem hochauflösenden angezeigt werden.  
   
- Die `CreateGrayCaret` Memberfunktion zerstört die vorherigen Form Caretzeichen automatisch, wenn vorhanden, unabhängig davon, welches Fenster besitzt die Einfügemarke. Nach der Erstellung ist das Caretzeichen anfänglich ausgeblendet. Zum Anzeigen der Einfügemarke die [ShowCaret](#showcaret) Memberfunktion aufgerufen werden muss.  
+ Die `CreateGrayCaret` Memberfunktion automatisch die vorherigen Caretzeichen Form zerstört, wenn vorhanden, unabhängig davon, welches Fenster besitzt die Einfügemarke. Nach der Erstellung ist das Caretzeichen anfänglich ausgeblendet. Zum Anzeigen der Einfügemarke die [ShowCaret](#showcaret) Memberfunktion aufgerufen werden muss.  
   
  Der Systemzeiger handelt es sich um eine freigegebene Ressource. `CWnd`ein Caretzeichen zu erstellende nur, wenn er über den Eingabefokus verfügt oder aktiv ist. Sie sollten die Einfügemarke zu zerstören, bevor es den Eingabefokus verliert oder inaktiv.  
   
@@ -1778,7 +1778,7 @@ void CreateSolidCaret(
   
  Das System-Fensterrahmens Breite oder Höhe kann abgerufen werden die [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) Windows-Funktion mit der **SM_CXBORDER zugeordnet** und **SM_CYBORDER zugeordnet** Indizes. Mithilfe des Fensterrahmens Breite oder Höhe wird sichergestellt, dass das Caretzeichen auf einem hochauflösenden angezeigt werden.  
   
- Die `CreateSolidCaret` Memberfunktion zerstört die vorherigen Form Caretzeichen automatisch, wenn vorhanden, unabhängig davon, welches Fenster besitzt die Einfügemarke. Nach der Erstellung ist das Caretzeichen anfänglich ausgeblendet. Zum Anzeigen der Einfügemarke die [ShowCaret](#showcaret) Memberfunktion aufgerufen werden muss.  
+ Die `CreateSolidCaret` Memberfunktion automatisch die vorherigen Caretzeichen Form zerstört, wenn vorhanden, unabhängig davon, welches Fenster besitzt die Einfügemarke. Nach der Erstellung ist das Caretzeichen anfänglich ausgeblendet. Zum Anzeigen der Einfügemarke die [ShowCaret](#showcaret) Memberfunktion aufgerufen werden muss.  
   
  Der Systemzeiger handelt es sich um eine freigegebene Ressource. `CWnd`ein Caretzeichen zu erstellende nur, wenn er über den Eingabefokus verfügt oder aktiv ist. Sie sollten die Einfügemarke zu zerstören, bevor es den Eingabefokus verliert oder inaktiv.  
   
@@ -2309,7 +2309,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
   
  Finden Sie unter [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] für Weitere Informationen zu dieser Struktur.  
   
- Aufrufen von einfach `EnableToolTips` reicht nicht aus, um QuickInfos anzuzeigen, für Ihr Kind gesteuert, es sei denn, das übergeordnete Fenster abgeleitet ist `CFrameWnd`. Grund hierfür ist, `CFrameWnd` bietet einen Standard-Handler für das **TTN_NEEDTEXT** Benachrichtigung. Wenn das übergeordnete Fenster nicht abgeleitet ist `CFrameWnd`, also, wenn sie ein Dialogfeld oder eine Formularansicht ist, QuickInfo für die untergeordneten Steuerelemente nicht richtig angezeigt werden, es sei denn, Sie geben Sie einen Handler für das **TTN_NEEDTEXT** tool Tipp-Benachrichtigung. Finden Sie unter [QuickInfo](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
+ Aufrufen von einfach `EnableToolTips` ist nicht genug, um QuickInfos anzuzeigen, für Ihr Kind gesteuert, es sei denn, das übergeordnete Fenster abgeleitet ist `CFrameWnd`. Grund hierfür ist, `CFrameWnd` bietet einen Standard-Handler für das **TTN_NEEDTEXT** Benachrichtigung. Wenn das übergeordnete Fenster nicht abgeleitet ist `CFrameWnd`, also, wenn sie ein Dialogfeld oder eine Formularansicht ist, QuickInfo für die untergeordneten Steuerelemente nicht richtig angezeigt werden, es sei denn, Sie geben Sie einen Handler für das **TTN_NEEDTEXT** tool Tipp-Benachrichtigung. Finden Sie unter [QuickInfo](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
   
  Die standardmäßigen QuickInfos für Ihre Windows von `EnableToolTips` keinen Text zugeordnet. Zum Abrufen von Text für die QuickInfo angezeigt, die **TTN_NEEDTEXT** Benachrichtigung wird an das QuickInfo-Steuerelement des übergeordneten Fensters gesendet, kurz bevor das QuickInfo-Fenster angezeigt wird. Wenn kein Handler für diese Nachricht einige Wert zuzuweisen der `pszText` Mitglied der **TOOLTIPTEXT** -Struktur, die kein Text für die QuickInfo angezeigt werden.  
   
@@ -2424,7 +2424,7 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
  **"True"** ist eine Dialogfeldressource ausgeführt wird; andernfalls **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
- `ExecuteDlgInit`Ressourcen für das ausgeführte Modul gebunden, oder aus anderen Quellen verwendet. Um dies zu erreichen `ExecuteDlgInit` sucht nach einer Ressourcenhandle durch Aufrufen `AfxFindResourceHandle`. Wenn die MFC-Anwendung die gemeinsam genutzten DLL nicht verwendet (MFCx0 [U] [D]. (DLL), **AfxFindResourceHandle** Aufrufe [AfxGetResourceHandle](http://msdn.microsoft.com/library/d0eff6c4-f566-471a-96b7-a5a70a751a92), womit das aktuelle Ressourcenhandle für die ausführbare Datei. Wenn der MFC-Anwendung, die MFCx0 verwendet [U] [D]. DLL `AfxFindResourceHandle` durchläuft die **CDynLinkLibrary** Objektliste von freigegebenen und Erweiterung DLLs, die für die richtige Ressourcen suchen verarbeiten.  
+ `ExecuteDlgInit`Ressourcen für das ausgeführte Modul gebunden, oder aus anderen Quellen verwendet. Um dies zu erreichen `ExecuteDlgInit` sucht nach einer Ressourcenhandle durch Aufrufen `AfxFindResourceHandle`. Wenn die MFC-Anwendung die gemeinsam genutzten DLL nicht verwendet (MFCx0 [U] [D]. (DLL), **AfxFindResourceHandle** Aufrufe [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle), womit das aktuelle Ressourcenhandle für die ausführbare Datei. Wenn der MFC-Anwendung, die MFCx0 verwendet [U] [D]. DLL `AfxFindResourceHandle` durchläuft die **CDynLinkLibrary** Objektliste von freigegebenen und Erweiterung DLLs, die für die richtige Ressourcen suchen verarbeiten.  
   
 ##  <a name="filtertooltipmessage"></a>CWnd:: FilterToolTipMessage  
  Wird aufgerufen, durch das Framework um Tool Tipp Meldungen anzuzeigen.  
@@ -2443,7 +2443,7 @@ void FilterToolTipMessage(MSG* pMsg);
  Allerdings in bestimmten Anwendungen, z. B. einiger ActiveX-Steuerelemente, diese Methoden können nicht vom Framework aufgerufen, und müssen Sie FilterToolTipMessage selbst aufrufen. Weitere Informationen finden Sie unter [Methoden des Erstellen von QuickInfos](../../mfc/methods-of-creating-tool-tips.md).  
   
 ##  <a name="findwindow"></a>CWnd::FindWindow  
- Gibt zurück, der obersten Ebene `CWnd` , deren Fensterklasse erhält vom `lpszClassName` , dessen Fenstername, oder klicken Sie auf Titel, angegeben durch `lpszWindowName`.  
+ Gibt zurück, der obersten Ebene `CWnd` , deren Fensterklasse erhält vom `lpszClassName` , deren Namen oder Titel, angegeben durch `lpszWindowName`.  
   
 ```  
 static CWnd* PASCAL FindWindow(
@@ -4119,7 +4119,7 @@ CDC* GetWindowDC();
  Der zurückgegebene Zeiger kann temporär sein und sollte nicht zur späteren Verwendung gespeichert werden. [ReleaseDC](#releasedc) aufgerufen werden einmal für jeden erfolgreichen Aufruf von `GetWindowDC`.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Anzeigekontext Fenster ermöglicht zeichnen eine beliebige Stelle im `CWnd`, da der linken oberen Ecke der Aktivität der Ursprung des Kontexts ist `CWnd` anstelle des Clientbereichs.  
+ Ein Anzeigekontext Fenster ermöglicht, zeichnen eine beliebige Stelle im `CWnd`, da der linken oberen Ecke der Aktivität der Ursprung des Kontexts ist `CWnd` anstelle des Clientbereichs.  
   
  Standardattribute werden den Anzeigekontext jedes Mal zugewiesen Ruft den Kontext ab. Vorherige Attribute gehen verloren.  
   
@@ -5113,7 +5113,7 @@ afx_msg void OnChar(
   
 |Wert|Bedeutung|  
 |-----------|-------------|  
-|0-15|Gibt die Wiederholungsanzahl. Der Wert ist die Anzahl der Häufigkeit, mit der die Tastatureingabe wiederholt wird, weil der Benutzer die Taste gedrückt.|  
+|0-15|Gibt die Wiederholungsanzahl. Der Wert ist die Anzahl der Häufigkeit, mit die der Tastatureingabe aufgrund der Benutzer die Taste gedrückt wiederholt wird.|  
 |16-23|Gibt den Code für die Überprüfung. Der Wert hängt von den Originalgerätehersteller (OEM)|  
 |24|Gibt an, ob der Schlüssel einen erweiterten Schlüssel, z. B. die rechte ALT und STRG-Taste ist, die auf eine verbesserte 101 oder 102-Tasten-Tastatur angezeigt werden. Der Wert ist 1, wenn es sich um eine erweiterte Schlüssel handelt; Andernfalls ist er 0.|  
 |25-28|Wird intern von Windows verwendet.|  
@@ -5126,7 +5126,7 @@ afx_msg void OnChar(
   
  Da es nicht unbedingt eine 1: 1-Entsprechung zwischen-Taste gedrückt ist und `OnChar` Aufrufe generiert, die Informationen in `nFlags` ist in der Regel nicht nützlich für Anwendungen. Die Informationen in `nFlags` gilt nur für den letzten Aufruf der `OnKeyUp` Memberfunktion oder die `OnKeyDown` Memberfunktion, die vor dem Aufruf von `OnChar`.  
   
- Für IBM Enhanced 101 und 102-Tasten-Tastaturen sind erweiterte Schlüssel Rechte ALT-Taste und die rechte STRG-Tasten auf den Hauptteil der Tastatur. die INS DEL, Startseite, Ende, Bild-auf, Bild-ab und Pfeiltasten im Cluster auf der linken Seite der die Zehnertastatur; und der Schrägstrich (/), und geben Sie die Schlüssel in die Zehnertastatur. Einige andere Tastaturen unterstützen möglicherweise das erweiterte Schlüssel Bit in `nFlags`.  
+ Für IBM Enhanced 101 und 102-Tasten-Tastaturen sind verbesserte Schlüssel Rechte ALT-Taste und die rechte STRG-Tasten auf den Hauptteil der Tastatur. die INS DEL, Startseite, Ende, Bild-auf, Bild-ab und Pfeiltasten im Cluster auf der linken Seite der die Zehnertastatur; und der Schrägstrich (/), und geben Sie die Schlüssel in die Zehnertastatur. Einige andere Tastaturen unterstützen möglicherweise das erweiterte Schlüssel Bit in `nFlags`.  
   
 > [!NOTE]
 >  Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.  
@@ -5152,7 +5152,7 @@ afx_msg int OnCharToItem(
  Gibt die aktuelle Position der Einfügemarke an.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Framework ruft diese Memberfunktion zum Angeben der Aktion, die die Anwendung als Reaktion auf den Aufruf ausgeführt wird. Ein Rückgabewert von – 2 Gibt an, dass die Anwendung alle Aspekte behandelt der Auswahl des Elements und keine weitere Aktion vom Listenfeld möchte. Ein Rückgabewert von – 1 gibt an, dass im Listenfeld die Default-Aktion als Antwort auf die Tastatureingabe durchführen soll. Ein Rückgabewert von 0 oder größer gibt den nullbasierten Index eines Elements im Listenfeld an und gibt an, dass im Listenfeld die Standardaktion für die Tastatureingabe auf das angegebene Element durchführen soll.  
+ Das Framework ruft diese Memberfunktion zum Angeben der Aktion, die die Anwendung als Reaktion auf den Aufruf ausgeführt wird. Ein Rückgabewert von-2 Gibt an, dass die Anwendung alle Aspekte behandelt der Auswahl des Elements und keine weitere Aktion vom Listenfeld möchte. Ein Rückgabewert-1 gibt an, dass im Listenfeld die Default-Aktion als Antwort auf die Tastatureingabe durchführen soll. Ein Rückgabewert von 0 oder größer gibt den nullbasierten Index eines Elements im Listenfeld an und gibt an, dass im Listenfeld die Standardaktion für die Tastatureingabe auf das angegebene Element durchführen soll.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -5267,7 +5267,7 @@ virtual BOOL OnCommand(
 >  Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.  
   
 ##  <a name="oncompacting"></a>CWnd::OnCompacting  
- Das Framework ruft diese Memberfunktion für alle Fenster auf oberster Ebene, wenn Windows erkennt, dass mehr als 12,5 Prozent der Systemzeit über einen Zeitraum von 30 - 60 Sekunden aufgewendet wird Arbeitsspeicher zu komprimieren.  
+ Das Framework ruft diese Memberfunktion für alle Fenster auf oberster Ebene, wenn Windows erkennt, dass mehr als 12,5 Prozent der Systemzeit, die über einen Zeitraum von 30 - 60 Sekunden aufgewendet wird Arbeitsspeicher zu komprimieren.  
   
 ```  
 afx_msg void OnCompacting(UINT nCpuTime);
@@ -5306,7 +5306,7 @@ afx_msg int OnCompareItem(
   
 |Wert|Bedeutung|  
 |-----------|-------------|  
-|–1|Element 1 wird vor Element 2 sortiert.|  
+|-1|Element 1 wird vor Element 2 sortiert.|  
 |0|Artikel 1 und Artikel 2 sortieren identisch.|  
 |1|Element 1 sortiert nach dem Element 2.|  
   
@@ -5397,7 +5397,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
  Verweist auf eine [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) -Struktur, die Informationen der `CWnd` -Objekt erstellt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `OnCreate`muss 0, um die Erstellung zu fortfahren Zurückgeben der `CWnd` Objekt. Wenn die Anwendung – 1 zurückgibt, wird das Fenster zerstört.  
+ `OnCreate`muss 0, um die Erstellung zu fortfahren Zurückgeben der `CWnd` Objekt. Wenn die Anwendung-1 zurückgibt, wird das Fenster zerstört.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `CWnd` Objekt dieser Aufruf empfängt, nachdem das Fenster erstellt wurde und bevor sie angezeigt wird. `OnCreate`wird aufgerufen, bevor die **erstellen** oder `CreateEx` Memberfunktion gibt.  
@@ -5483,10 +5483,10 @@ afx_msg void OnDeadChar(
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|0–7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertige Wort.|  
+|0-7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertige Wort.|  
 |8|Erweiterte Schlüssel, z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel ist, andernfalls 0).|  
-|9–10|Nicht verwendet.|  
-|11–12|Wird intern von Windows verwendet.|  
+|9-10|Nicht verwendet.|  
+|11-12|Wird intern von Windows verwendet.|  
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird, andernfalls 0).|  
 |14|Vorherige Schlüssel Status (1, wenn der Schlüssel vor dem Aufruf, 0, wenn der Schlüssel wird nicht ausgeführt wird).|  
 |15|Übergangsstatus (1, wenn die Taste losgelassen wird, ist, 0, wenn die Taste gedrückt wird, wird).|  
@@ -5498,7 +5498,7 @@ afx_msg void OnDeadChar(
   
  Da es nicht unbedingt eine 1: 1-Entsprechung zwischen-Taste gedrückt ist und `OnDeadChar` aufruft, die Informationen `nFlags` ist in der Regel nicht nützlich für Anwendungen. Die Informationen in `nFlags` gilt nur für den letzten Aufruf der [OnKeyUp](#onkeyup) Memberfunktion oder die [OnKeyDown](#onkeydown) Memberfunktion, die vor der `OnDeadChar` aufrufen.  
   
- Für IBM Enhanced 101 und 102-Tasten-Tastaturen sind erweiterte Schlüssel Rechte ALT-Taste und die rechte STRG-Tasten auf den Hauptteil der Tastatur. die INS DEL, Startseite, Ende, Bild-auf, Bild-ab und Pfeiltasten im Cluster auf der linken Seite der die Zehnertastatur; und der Schrägstrich (/), und geben Sie die Schlüssel in die Zehnertastatur. Einige andere Tastaturen unterstützen möglicherweise das erweiterte Schlüssel Bit in `nFlags`.  
+ Für IBM Enhanced 101 und 102-Tasten-Tastaturen sind verbesserte Schlüssel Rechte ALT-Taste und die rechte STRG-Tasten auf den Hauptteil der Tastatur. die INS DEL, Startseite, Ende, Bild-auf, Bild-ab und Pfeiltasten im Cluster auf der linken Seite der die Zehnertastatur; und der Schrägstrich (/), und geben Sie die Schlüssel in die Zehnertastatur. Einige andere Tastaturen unterstützen möglicherweise das erweiterte Schlüssel Bit in `nFlags`.  
   
 > [!NOTE]
 >  Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.  
@@ -5571,7 +5571,7 @@ afx_msg BOOL OnDeviceChange(
   
 - [DBT_DEVICEARRIVAL](http://msdn.microsoft.com/library/windows/desktop/aa363205) ein Geräts wurde eingefügt und ist jetzt verfügbar.  
   
-- [DBT_DEVICEQUERYREMOVE](http://msdn.microsoft.com/library/windows/desktop/aa363206) über die Berechtigung zum Entfernen eines Geräts angefordert wird. Jede Anwendung kann diese Anforderung verweigern und Abbrechen das Entfernen.  
+- [DBT_DEVICEQUERYREMOVE](http://msdn.microsoft.com/library/windows/desktop/aa363206) Berechtigung zum Entfernen eines Geräts angefordert wird. Jede Anwendung kann diese Anforderung verweigern und Abbrechen das Entfernen.  
   
 - [DBT_DEVICEQUERYREMOVEFAILED](http://msdn.microsoft.com/library/windows/desktop/aa363207) Anforderung zum Entfernen eines Geräts wurde abgebrochen.  
   
@@ -5897,7 +5897,7 @@ afx_msg UINT OnGetDlgCode();
  Die Standardeinstellung `OnGetDlgCode` Funktionen für die vordefinierten Steuerelementklassen einen Code für jede Klasse zurück.  
   
 ##  <a name="ongetminmaxinfo"></a>CWnd::OnGetMinMaxInfo  
- Das Framework ruft diese Memberfunktion auf, wenn Windows die maximierte Position oder Dimensionen, oder die minimale oder maximale nachverfolgungsgröße bekannt sein muss.  
+ Das Framework ruft diese Memberfunktion auf, wenn Windows die maximierte Position oder Dimensionen oder die minimale oder maximale nachverfolgungsgröße bekannt sein muss.  
   
 ```  
 afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
@@ -5905,7 +5905,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
   
 ### <a name="parameters"></a>Parameter  
  *lpMMI*  
- Verweist auf eine `MINMAXINFO` -Struktur, die Informationen über ein Fenster enthält die Größe und Position und die minimalen und maximalen Tracking Größe maximiert. Weitere Informationen zu dieser Struktur finden Sie unter der [MINMAXINFO](../../mfc/reference/minmaxinfo-structure.md) Struktur.  
+ Verweist auf eine `MINMAXINFO` -Struktur, die Informationen über ein Fenster enthält die maximiert, Größe und Position und seine Größe Minimal- und Maximalwerte nachverfolgen. Weitere Informationen zu dieser Struktur finden Sie unter der [MINMAXINFO](../../mfc/reference/minmaxinfo-structure.md) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Größe des maximierte ist die Größe des Fensters Rahmen vollständig erweitert werden. Die maximale Größe des Fensters tracking ist die größte Fenstergröße, die erreicht werden kann, indem Sie im Rahmen der Fenstergröße. Die minimale Größe des Fensters tracking ist die kleinste Fenstergröße, die erreicht werden kann, indem Sie im Rahmen der Fenstergröße.  
@@ -6012,7 +6012,7 @@ afx_msg void OnHScroll(
   
 - **SB_LEFT** einen Bildlauf zum ganz links.  
   
-- **SB_ENDSCROLL** End-Rollen.  
+- **SB_ENDSCROLL** End Bildlauf.  
   
 - **SB_LINELEFT** führen Sie einen Bildlauf nach links.  
   
@@ -6029,7 +6029,7 @@ afx_msg void OnHScroll(
 - **SB_THUMBTRACK** Bildlauffeld auf die angegebene Position ziehen. Die aktuelle Position wird angegeben, indem die `nPos` Parameter.  
   
  `nPos`  
- Gibt die Position das Bildlauffeld an, ob es sich bei der Bildlaufleisten-Code ist **SB_THUMBPOSITION** oder **SB_THUMBTRACK**nicht verwendet, andernfalls. Je nach der anfänglichen Scroll Bereich `nPos` kann negativ sein und sollte in umgewandelt werden ein `int` bei Bedarf.  
+ Gibt die Position das Bildlauffeld an, ob es sich bei der Bildlaufleisten-Code ist **SB_THUMBPOSITION** oder **SB_THUMBTRACK**nicht verwendet, andernfalls. Je nach der anfänglichen Scroll-Bereich `nPos` kann negativ sein und sollte in umgewandelt werden ein `int` bei Bedarf.  
   
  `pScrollBar`  
  Wenn ein Bildlaufleisten-Steuerelement das Scroll-Meldung stammt, enthält einen Zeiger auf das Steuerelement. Wenn der Benutzer ein Fenster Bildlaufleiste geklickt haben, wird dieser Parameter ist **NULL**. Der Zeiger kann temporär sein und sollte nicht für eine spätere Verwendung gespeichert werden.  
@@ -6062,9 +6062,9 @@ afx_msg void OnHScrollClipboard(
  `nSBCode`  
  Gibt einen der folgenden Bildlaufleisten-Codes in das niederwertige Wort:  
   
-- **SB_BOTTOM** einen Bildlauf zum unteren rechten Ecke.  
+- **SB_BOTTOM** Bildlauf nach unten rechts.  
   
-- **SB_ENDSCROLL** End-Rollen.  
+- **SB_ENDSCROLL** End Bildlauf.  
   
 - **SB_LINEDOWN** einen Bildlauf eine Zeile nach unten.  
   
@@ -6236,10 +6236,10 @@ afx_msg void OnKeyDown(
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|0–7|Scannen Sie Code (OEM-abhängige Wert).|  
+|0-7|Scannen Sie Code (OEM-abhängige Wert).|  
 |8|Erweiterte Schlüssel, z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel handelt).|  
-|9–10|Nicht verwendet.|  
-|11–12|Wird intern von Windows verwendet.|  
+|9-10|Nicht verwendet.|  
+|11-12|Wird intern von Windows verwendet.|  
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird, andernfalls 0).|  
 |14|Vorherige Schlüssel Status (1, wenn der Schlüssel vor dem Aufruf, 0, wenn der Schlüssel wird nicht ausgeführt wird).|  
 |15|Übergangsstatus (1, wenn die Taste losgelassen wird, ist, 0, wenn die Taste gedrückt wird, wird).|  
@@ -6251,7 +6251,7 @@ afx_msg void OnKeyDown(
   
  Aufgrund der Auto-Repeat, mehr als ein `OnKeyDown` Aufruf kann auftreten, bevor ein [OnKeyUp](#onkeyup) memberfunktionsaufruf erfolgt. Das Bit, das den vorherigen Status Gibt an, kann verwendet werden, um zu bestimmen, ob die `OnKeyDown` aufgerufen wird, den Übergang aus der ersten oder den wiederholten nach unten Übergang.  
   
- Für IBM Enhanced 101 und 102-Tasten-Tastaturen sind erweiterte Schlüssel Rechte ALT-Taste und die rechte STRG-Tasten auf den Hauptteil der Tastatur. die INS DEL, Startseite, Ende, Bild-auf, Bild-ab und Pfeiltasten im Cluster auf der linken Seite der die Zehnertastatur; und der Schrägstrich (/), und geben Sie die Schlüssel in die Zehnertastatur. Einige andere Tastaturen unterstützen möglicherweise das erweiterte Schlüssel Bit in `nFlags`.  
+ Für IBM Enhanced 101 und 102-Tasten-Tastaturen sind verbesserte Schlüssel Rechte ALT-Taste und die rechte STRG-Tasten auf den Hauptteil der Tastatur. die INS DEL, Startseite, Ende, Bild-auf, Bild-ab und Pfeiltasten im Cluster auf der linken Seite der die Zehnertastatur; und der Schrägstrich (/), und geben Sie die Schlüssel in die Zehnertastatur. Einige andere Tastaturen unterstützen möglicherweise das erweiterte Schlüssel Bit in `nFlags`.  
   
 > [!NOTE]
 >  Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.  
@@ -6278,10 +6278,10 @@ afx_msg void OnKeyUp(
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|0–7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertige Wort.|  
+|0-7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertige Wort.|  
 |8|Erweiterte Schlüssel, z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel ist, andernfalls 0).|  
-|9–10|Nicht verwendet.|  
-|11–12|Wird intern von Windows verwendet.|  
+|9-10|Nicht verwendet.|  
+|11-12|Wird intern von Windows verwendet.|  
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird, andernfalls 0).|  
 |14|Vorherige Schlüssel Status (1, wenn der Schlüssel vor dem Aufruf, 0, wenn der Schlüssel wird nicht ausgeführt wird).|  
 |15|Übergangsstatus (1, wenn die Taste losgelassen wird, ist, 0, wenn die Taste gedrückt wird, wird).|  
@@ -6291,7 +6291,7 @@ afx_msg void OnKeyUp(
 ### <a name="remarks"></a>Hinweise  
  Eine systemfremde Taste ist, eine Taste auf der Tastatur, die gedrückt wird, während die ALT-Taste, das keine gedrückt wird oder eine Taste auf der Tastatur, die beim gedrückt wird die `CWnd` über den Eingabefokus verfügt.  
   
- Für IBM Enhanced 101 und 102-Tasten-Tastaturen sind erweiterte Schlüssel Rechte ALT-Taste und die rechte STRG-Tasten auf den Hauptteil der Tastatur. die INS DEL, Startseite, Ende, Bild-auf, Bild-ab und Pfeiltasten im Cluster auf der linken Seite der die Zehnertastatur; und der Schrägstrich (/), und geben Sie die Schlüssel in die Zehnertastatur. Einige andere Tastaturen unterstützen möglicherweise das erweiterte Schlüssel Bit in `nFlags`.  
+ Für IBM Enhanced 101 und 102-Tasten-Tastaturen sind verbesserte Schlüssel Rechte ALT-Taste und die rechte STRG-Tasten auf den Hauptteil der Tastatur. die INS DEL, Startseite, Ende, Bild-auf, Bild-ab und Pfeiltasten im Cluster auf der linken Seite der die Zehnertastatur; und der Schrägstrich (/), und geben Sie die Schlüssel in die Zehnertastatur. Einige andere Tastaturen unterstützen möglicherweise das erweiterte Schlüssel Bit in `nFlags`.  
   
 > [!NOTE]
 >  Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.  
@@ -6678,7 +6678,7 @@ afx_msg void OnMenuSelect(
   
 ### <a name="parameters"></a>Parameter  
  `nItemID`  
- Identifiziert das ausgewählte Element. Das ausgewählte Element ist ein Menüelement `nItemID` enthält das Menüelement ID. Wenn das ausgewählte Element ein Popupmenü enthält `nItemID` enthält den Index Popupmenü und *hSysMenu* enthält das Handle des (geklickt Sign-On) im Hauptmenü.  
+ Identifiziert das ausgewählte Element. Das ausgewählte Element ist ein Menüelement `nItemID` enthält das Menüelement ID. Wenn das ausgewählte Element ein Popupmenü enthält `nItemID` enthält den Index im Popupmenü und *hSysMenu* enthält das Handle des (geklickt Sign-On) im Hauptmenü.  
   
  `nFlags`  
  Enthält eine Kombination der Flags, die folgenden Menüs:  
@@ -7002,7 +7002,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
  Verweist auf die [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) Datenstruktur für `CWnd`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn der Clientbereich erstellt wird. Es ist 0, wenn ein Fehler auftritt. die **erstellen** Funktion zurück **Fehler** in diesem Fall.  
+ Wert ungleich NULL, wenn nicht-Clientbereichs erstellt wird. Es ist 0, wenn ein Fehler auftritt. die **erstellen** Funktion zurück **Fehler** in diesem Fall.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -7359,7 +7359,7 @@ afx_msg void OnNcXButtonDown(
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
 |[in] `nHitTest`|Den Treffertest-Rückgabewert von der [CWnd::DefWindowProc](#defwindowproc) -Funktion als Ergebnis der Verarbeitung der [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) Nachricht.|  
-|[in] `nButton`|Der Wert `XBUTTON1` , wenn die erste Maus X-Schaltfläche gedrückt wird, oder `XBUTTON2` Wenn die zweite X gedrückt wird.|  
+|[in] `nButton`|Der Wert `XBUTTON1` Wenn erste X Maustaste gedrückt wird, oder `XBUTTON2` Wenn die zweite X gedrückt wird.|  
 |[in] `point`|Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt, der angibt, die *x* und *y* Koordinaten des Cursors relativ zu der oberen linken Ecke des Bildschirms.|  
   
 ### <a name="remarks"></a>Hinweise  
@@ -7409,7 +7409,7 @@ afx_msg void OnNextMenu(
 |[in] `lpMdiNextMenu`|Zeiger auf eine [MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561) -Struktur, die Informationen über das Menü zu aktivierenden enthält.|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode empfängt die [WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614) Benachrichtigung, die in beschriebenen der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Reaktion auf diese Meldung kann Ihre Anwendung festgelegt die `hmenuNext` Mitglied der [MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561) Struktur an, das Menü zu wechseln und die `hwndNext` Member an das Fenster, um den Empfang von Benachrichtigungsnachrichten Menü.  
+ Diese Methode empfängt die [WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614) Benachrichtigung, die in beschriebenen der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Reaktion auf diese Meldung kann Ihre Anwendung festgelegt die `hmenuNext` Mitglied der [MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561) Struktur an, das Menü zu wechseln und die `hwndNext` Element an das Fenster, um den Empfang von Benachrichtigungsnachrichten Menü.  
   
 > [!NOTE]
 >  Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.  
@@ -7488,7 +7488,7 @@ afx_msg void OnPaint();
   
  Es ist eine Anwendung Aufgabe überprüfen Sie für alle erforderlichen internen Neuzeichnen oder aktualisieren, indem Sie die internen Datenstrukturen für die einzelnen ansehen `WM_PAINT` Nachricht, da ein `WM_PAINT` Nachricht möglicherweise durch einen ungültigen Bereich und einem Aufruf von verursacht worden sein der `RedrawWindow` Memberfunktion mit der **RDW_INTERNALPAINT** flag festgelegt.  
   
- Eine interne `WM_PAINT` Nachricht nur einmal von Windows. Nach einer internen `WM_PAINT` Nachricht wird gesendet, um ein Fenster von der `UpdateWindow` Memberfunktion, keine weiteren `WM_PAINT` Nachrichten senden oder gebucht, bis das Fenster ungültig ist oder bis die `RedrawWindow` Memberfunktion erneut aufgerufen, wobei die **RDW_INTERNALPAINT** flag festgelegt.  
+ Eine interne `WM_PAINT` Nachricht nur einmal von Windows. Nach einer internen `WM_PAINT` Nachricht wird gesendet, um ein Fenster von der `UpdateWindow` Memberfunktion, keine weiteren `WM_PAINT` Nachrichten senden oder veröffentlicht werden, bis das Fenster ungültig ist oder bis die `RedrawWindow` Memberfunktion erneut aufgerufen, wobei die **RDW_INTERNALPAINT** flag festgelegt.  
   
  Informationen zum Rendern eines Bilds in Dokument-/ansichtsanwendungen, finden Sie unter [CView:: OnDraw](../../mfc/reference/cview-class.md#ondraw).  
   
@@ -7536,7 +7536,7 @@ afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
 ### <a name="remarks"></a>Hinweise  
  Dieser Aufruf gestattet ein Fenster, ohne den Eingabefokus besitzt, mit denen eine Farbpalette ihre logischen Paletten zu realisieren und seines Clientbereichs zu aktualisieren.  
   
- Die `OnPaletteChanged` Memberfunktion aufgerufen wird, für alle auf der obersten Ebene und überlappende Fenster, einschließlich derjenigen, die die Systempalette geändert und verursacht den `WM_PALETTECHANGED` zu sendende Nachricht. Wenn beliebige untergeordnete Fenster eine Farbpalette verwendet wird, müssen sie auf diese Nachricht übergeben werden.  
+ Die `OnPaletteChanged` Memberfunktion aufgerufen wird, für alle auf der obersten Ebene und überlappende Fenster, einschließlich derjenigen, die die Systempalette geändert und verursacht den `WM_PALETTECHANGED` zu sendende Nachricht. Wenn beliebige untergeordnete Fenster eine Farbpalette verwendet, müssen sie auf diese Nachricht übergeben werden.  
   
  Um eine Endlosschleife zu vermeiden, sollte nicht das Fenster ihre Palette Beachten Sie, sofern es nicht, die ermittelt `pFocusWnd` enthält einen Zeiger auf sich selbst nicht.  
   
@@ -8250,7 +8250,7 @@ afx_msg void OnSysCommand(
   
  In `WM_SYSCOMMAND` Nachrichten, die vier niederwertigen Bits von der `nID` Parameter intern von Windows verwendet werden. Wenn eine Anwendung testet den Wert der `nID`, müssen sie den Wert 0xFFF0 mit Kombinieren der `nID` Wert mit dem bitweisen- und Operator, um das richtige Ergebnis zu erhalten.  
   
- Die Menüelemente in einem Steuerelementmenü können geändert werden, mit der `GetSystemMenu`, `AppendMenu`, `InsertMenu`, und `ModifyMenu` Memberfunktionen. Anwendungen, die das Steuerelementmenü ändern müssen verarbeiten `WM_SYSCOMMAND` Nachrichten und alle `WM_SYSCOMMAND` durch die Anwendung nicht verarbeitete Nachrichten übergeben werden müssen, auf `OnSysCommand`. Befehlswerte hinzugefügt, die von einer Anwendung von der Anwendung verarbeitet werden müssen und nicht um übergeben `OnSysCommand`.  
+ Die Menüelemente in einem Steuerelementmenü können geändert werden, mit der `GetSystemMenu`, `AppendMenu`, `InsertMenu`, und `ModifyMenu` Memberfunktionen. Anwendungen, die das Steuerelementmenü ändern müssen verarbeiten `WM_SYSCOMMAND` Nachrichten und alle `WM_SYSCOMMAND` durch die Anwendung nicht verarbeitete Nachrichten übergeben werden müssen, auf `OnSysCommand`. Jeder Befehlswerte, die von einer Anwendung hinzugefügt muss von der Anwendung verarbeitet werden und kann nicht übergeben werden, um `OnSysCommand`.  
   
  Eine Anwendung kann jederzeit alle System-Befehl ausführen, durch das Übergeben einer `WM_SYSCOMMAND` -Meldung an `OnSysCommand`.  
   
@@ -8281,10 +8281,10 @@ afx_msg void OnSysDeadChar(
   
 |Wert|Bedeutung|  
 |-----------|-------------|  
-|0–7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertige Wort.|  
+|0-7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertige Wort.|  
 |8|Erweiterte Schlüssel, z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel ist, andernfalls 0).|  
-|9–10|Nicht verwendet.|  
-|11–12|Wird intern von Windows verwendet.|  
+|9-10|Nicht verwendet.|  
+|11-12|Wird intern von Windows verwendet.|  
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird, andernfalls 0).|  
 |14|Vorherige Schlüssel Status (1, wenn der Schlüssel vor dem Aufruf, 0, wenn der Schlüssel wird nicht ausgeführt wird).|  
 |15|Übergangsstatus (1, wenn die Taste losgelassen wird, ist, 0, wenn die Taste gedrückt wird, wird).|  
@@ -8317,10 +8317,10 @@ afx_msg void OnSysKeyDown(
   
 |Wert|Bedeutung|  
 |-----------|-------------|  
-|0–7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertige Wort.|  
+|0-7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertige Wort.|  
 |8|Erweiterte Schlüssel, z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel ist, andernfalls 0).|  
-|9–10|Nicht verwendet.|  
-|11–12|Wird intern von Windows verwendet.|  
+|9-10|Nicht verwendet.|  
+|11-12|Wird intern von Windows verwendet.|  
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird, 0 andernfalls).|  
 |14|Vorherige Schlüssel Status (1, wenn der Schlüssel ausgefallen ist, bevor die Nachricht gesendet wird, 0, wenn der Schlüssel aktiviert ist).|  
 |15|Übergangsstatus (1, wenn die Taste losgelassen wird, ist, 0, wenn die Taste gedrückt wird, wird).|  
@@ -8361,10 +8361,10 @@ afx_msg void OnSysKeyUp(
   
 |Wert|Bedeutung|  
 |-----------|-------------|  
-|0–7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertige Wort.|  
+|0-7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertige Wort.|  
 |8|Erweiterte Schlüssel, z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel ist, andernfalls 0).|  
-|9–10|Nicht verwendet.|  
-|11–12|Wird intern von Windows verwendet.|  
+|9-10|Nicht verwendet.|  
+|11-12|Wird intern von Windows verwendet.|  
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird, 0 andernfalls).|  
 |14|Vorherige Schlüssel Status (1, wenn der Schlüssel ausgefallen ist, bevor die Nachricht gesendet wird, 0, wenn der Schlüssel aktiviert ist).|  
 |15|Übergangsstatus (1, wenn die Taste losgelassen wird, ist, 0, wenn die Taste gedrückt wird, wird).|  
@@ -8409,7 +8409,7 @@ afx_msg void OnTCard(
   
 - **IDCLOSE** die Karte Training durch den Benutzer geschlossen.  
   
-- **IDHELP** eine bearbeitbare Windows-Hilfe-Schaltfläche geklickt.  
+- **IDHELP** der Benutzer geklickt hat, eine bearbeitbare Schaltfläche für Windows-Hilfe.  
   
 - **IDIGNORE** eine bearbeitbare ignorieren Schaltfläche geklickt.  
   
@@ -8660,7 +8660,7 @@ afx_msg int OnVKeyToItem(
  Gibt die aktuelle Position der Einfügemarke an.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Aktion, die die Anwendung als Antwort auf die Nachricht ausgeführt. Ein Rückgabewert von – 2 Gibt an, dass die Anwendung alle Aspekte behandelt der Auswahl des Elements und keine weitere Aktion vom Listenfeld erfordert. Ein Rückgabewert von – 1 gibt an, dass im Listenfeld die Default-Aktion als Antwort auf die Tastatureingabe durchführen soll. Ein Rückgabewert von 0 oder größer gibt den nullbasierten Index eines Elements im Listenfeld an und gibt an, dass im Listenfeld die Standardaktion für die Tastatureingabe auf das angegebene Element durchführen soll.  
+ Gibt die Aktion, die die Anwendung als Antwort auf die Nachricht ausgeführt. Ein Rückgabewert von-2 Gibt an, dass die Anwendung alle Aspekte behandelt der Auswahl des Elements und keine weitere Aktion vom Listenfeld erfordert. Ein Rückgabewert-1 gibt an, dass im Listenfeld die Default-Aktion als Antwort auf die Tastatureingabe durchführen soll. Ein Rückgabewert von 0 oder größer gibt den nullbasierten Index eines Elements im Listenfeld an und gibt an, dass im Listenfeld die Standardaktion für die Tastatureingabe auf das angegebene Element durchführen soll.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion aufgerufen wird, durch das Framework nur für Listenfelder, denen die [LBS_HASSTRINGS](../../mfc/reference/list-box-styles.md) Stil.  
@@ -8729,7 +8729,7 @@ afx_msg void OnVScrollClipboard(
  Gibt einen Zeiger auf eine zwischenablageanzeigefensters an. Der Zeiger kann temporär sein und sollte nicht für eine spätere Verwendung gespeichert werden.  
   
  `nSBCode`  
- Gibt einen der folgenden Bildlaufleisten-Werte an:  
+ Gibt einen der folgenden scrollleistenwerte:  
   
 - **SB_BOTTOM** führen Sie einen Bildlauf nach unten.  
   
@@ -8751,7 +8751,7 @@ afx_msg void OnVScrollClipboard(
  Enthält die Position, das Bildlauffeld, wenn der Bildlaufleisten-Code ist **SB_THUMBPOSITION**andernfalls `nPos` wird nicht verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Besitzer sollte das zwischenablagebild scrollen, den entsprechenden Abschnitt ungültig machen und die scrollleistenwerte aktualisieren.  
+ Der Besitzer muss das zwischenablagebild scrollen, den entsprechenden Abschnitt ungültig machen und die scrollleistenwerte aktualisieren.  
   
 > [!NOTE]
 >  Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.  
@@ -8867,7 +8867,7 @@ virtual BOOL OnWndMsg(
  Weitere Informationen zu Meldungsreflektion, finden Sie unter [reflektiert Nachrichten behandeln](../../mfc/handling-reflected-messages.md).  
   
 ##  <a name="onxbuttondblclk"></a>CWnd::OnXButtonDblClk  
- Das Framework ruft diese Memberfunktion auf, wenn der Benutzer XBUTTON1 oder XBUTTON2 doppelklickt, während der Cursor im Clientbereich eines Fensters befindet.  
+ Das Framework ruft diese Memberfunktion auf, wenn der Benutzer XBUTTON1 oder XBUTTON2 doppelklickt, während sich der Cursor im Clientbereich eines Fensters befindet.  
   
 ```  
 afx_msg void OnXButtonDblClk(
@@ -9056,10 +9056,10 @@ BOOL PostMessage(
  Gibt die Meldung gesendet werden.  
   
  `wParam`  
- Gibt zusätzliche Informationen. Der Inhalt dieses Parameters hängt von der Nachricht zurückgesendet wird.  
+ Gibt zusätzliche Meldungsinformationen an. Der Inhalt dieses Parameters hängt von der Nachricht zurückgesendet wird.  
   
  `lParam`  
- Gibt zusätzliche Informationen. Der Inhalt dieses Parameters hängt von der Nachricht zurückgesendet wird.  
+ Gibt zusätzliche Meldungsinformationen an. Der Inhalt dieses Parameters hängt von der Nachricht zurückgesendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Nachricht gesendet wird; andernfalls 0.  
@@ -9394,7 +9394,7 @@ void RepositionBars(UINT nIDFirst,
   
 - **CWnd::reposQuery** das Layout der Steuerleisten wurde nicht abgeschlossen werden; stattdessen `lpRectParam` wird initialisiert, indem die Größe des Clientbereichs, als ob das Layout bereits abgeschlossen wurde.  
   
-- **CWnd::reposExtra** fügt die Werte der `lpRectParam` , das den Clientbereich des `nIDLast` und führt Sie außerdem das Layout *.*  
+- **CWnd::reposExtra** fügt die Werte der `lpRectParam` , das den Clientbereich des `nIDLast` und führt Sie außerdem das Layout.  
   
  `lpRectParam`  
  Verweist auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md); die Verwendung der hängt vom Wert des `nFlag`.  
@@ -9470,13 +9470,13 @@ void ScrollWindow(
  Gibt die Menge in der Einheit Gerät, einen vertikalen Bildlauf ausführen. Dieser Parameter muss einen negativen Wert nach oben zu scrollen.  
   
  `lpRect`  
- Verweist auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](../../mfc/reference/rect-structure1.md) , den Teil des Clientbereichs angezeigt werden, angibt. Wenn `lpRect` ist **NULL**, wird der gesamte Clientbereich ein Bildlauf durchgeführt. Die Einfügemarke wird neu angeordnet, wenn der Cursor Rechteck das Scroll-Rechteck überschneidet.  
+ Verweist auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT-Struktur](../../mfc/reference/rect-structure1.md) , angibt, den Teil des Clientbereichs Bildlauf angezeigt werden. Wenn `lpRect` ist **NULL**, wird der gesamte Clientbereich ein Bildlauf durchgeführt. Die Einfügemarke wird neu angeordnet, wenn der Cursor Rechteck das Scroll-Rechteck überschneidet.  
   
  `lpClipRect`  
  Verweist auf eine `CRect` Objekt oder `RECT` Struktur, der angibt, das Clippingrechteck an, um einen Bildlauf durchzuführen. Nur die Bits in dieses Rechteck werden durchgeführt. Bits außerhalb dieses Rechteck sind nicht betroffen, selbst wenn werden die `lpRect` Rechteck. Wenn `lpClipRect` ist **NULL**, ohne Clipping für das Bildlaufrechteck ausgeführt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Einfügemarke in die `CWnd` kein Bildlauf durchgeführt wird, `ScrollWindow` automatisch Blendet das Caretzeichen aus, um zu verhindern, dass es gelöscht wird und die Einfügemarke wiederhergestellt werden nach Abschluss des Bildlaufs. Die Position des Textcursors wird entsprechend angepasst.  
+ Wenn die Einfügemarke in die `CWnd` Bildlauf ausgeführt, `ScrollWindow` automatisch Blendet das Caretzeichen aus, um zu verhindern, dass es gelöscht wird und die Einfügemarke wiederhergestellt werden nach Abschluss des Bildlaufs. Die Position des Textcursors wird entsprechend angepasst.  
   
  Der Bereich aufgedeckt werden, indem die `ScrollWindow` Memberfunktion nicht neu gezeichnet wird, aber in der aktuellen kombiniert `CWnd` Aktualisierungsbereich des Objekts. Schließlich empfängt die Anwendung eine [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) Warnmeldung benachrichtigt sie, dass die Region Neuzeichnen benötigt. Rufen Sie zum Bereich bei gleichzeitig Zeichnen der Bildlauf durchgeführt wird, die [UpdateWindow](#updatewindow) Memberfunktion sofort nach dem Aufruf `ScrollWindow`.  
   
@@ -9506,7 +9506,7 @@ int ScrollWindowEx(
  Gibt die Menge in der Einheit Gerät, einen vertikalen Bildlauf ausführen. Dieser Parameter muss einen negativen Wert nach oben zu scrollen aufweisen.  
   
  `lpRectScroll`  
- Verweist auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md) , den Teil des Clientbereichs angezeigt werden, angibt. Wenn dieser Parameter ist **NULL**, wird der gesamte Clientbereich ein Bildlauf durchgeführt.  
+ Verweist auf eine [RECT-Struktur](../../mfc/reference/rect-structure1.md) , angibt, den Teil des Clientbereichs Bildlauf angezeigt werden. Wenn dieser Parameter ist **NULL**, wird der gesamte Clientbereich ein Bildlauf durchgeführt.  
   
  `lpRectClip`  
  Verweist auf eine `RECT` Struktur, der angibt, das Clippingrechteck an, um einen Bildlauf durchzuführen. Diese Struktur hat Vorrang vor dem Rechteck verweist `lpRectScroll`. Nur die Bits in dieses Rechteck werden durchgeführt. Bits außerhalb dieses Rechteck sind nicht betroffen, selbst wenn werden die `lpRectScroll` Rechteck. Wenn dieser Parameter ist **NULL**, ohne Clipping für das Bildlaufrechteck ausgeführt wird.  
@@ -9522,7 +9522,7 @@ int ScrollWindowEx(
   
 - **SW_ERASE** bei Angabe der **SW_INVALIDATE**, löscht den neu für ungültig erklärten Bereich durch Senden einer [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) Meldung im Fenster.  
   
-- **SW_INVALIDATE** erklärt die Region identifizierten *PrgnUpdate* nach dem Durchführen eines Bildlaufs.  
+- **SW_INVALIDATE** erklärt die Region identifizierten *PrgnUpdate* Bildlauf nach unten.  
   
 - **SW_SCROLLCHILDREN** verschiebt alle untergeordneten Fenster, die das Rechteck verweist schneiden `lpRectScroll` durch die Anzahl der Pixel, die im angegebenen `dx` und *dy*. Sendet Windows eine [WM_MOVE](http://msdn.microsoft.com/library/windows/desktop/ms632631) Nachricht an alle untergeordneten Fenster, die sich überschneiden `lpRectScroll`, selbst wenn sie nicht verschoben werden. Die Einfügemarke wird neu positioniert werden, wenn ein untergeordnetes Fenster wird ein Bildlauf durchgeführt, und der Cursor Rechteck eine Schnittmenge das Scroll-Rechteck bilden.  
   
@@ -9536,7 +9536,7 @@ int ScrollWindowEx(
   
  Wenn das Fenster verfügt über die [WS_CLIPCHILDREN](http://msdn.microsoft.com/library/windows/desktop/ms632679) Formatvorlage, die zurückgegebene Bereiche gemäß *PrgnUpdate* und `lpRectUpdate` den gesamten Bereich des Fensters ein Bildlauf ausgeführt wird, die aktualisiert werden muss, z. B. alle Bereiche in untergeordnete Fenster, die die zu aktualisierenden darstellen.  
   
- Wenn die [SW_SCROLLCHILDREN](http://msdn.microsoft.com/library/windows/desktop/bb787593) -Flag angegeben ist, wird Windows nicht ordnungsgemäß aktualisiert den Bildschirm Wenn Teil eines untergeordneten Fensters Bildlauf durchgeführt wird. Der Teil der Bildlauf untergeordnetes Fenster, das außerhalb der Quellrechteck liegt werden nicht gelöscht und wird nicht neu gezeichnet werden ordnungsgemäß in das neue Ziel. Verwenden der [DeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632681) Windows-Funktion zum Verschieben untergeordnete Fenster, die nicht vollständig in liegen die `lpRectScroll` Rechteck. Der Cursor positioniert ist, wenn die **SW_SCROLLCHILDREN** Flag festgelegt ist und die Einfügemarke Rechteck eine Schnittmenge bilden das Scroll-Rechteck.  
+ Wenn die [SW_SCROLLCHILDREN](http://msdn.microsoft.com/library/windows/desktop/bb787593) -Flag angegeben ist, wird Windows nicht ordnungsgemäß aktualisiert den Bildschirm Wenn Teil eines untergeordneten Fensters Bildlauf durchgeführt wird. Der Teil des gescrollten untergeordneten Fensters, der außerhalb der Quellrechteck liegt werden nicht gelöscht und wird nicht neu gezeichnet werden ordnungsgemäß in das neue Ziel. Verwenden der [DeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632681) Windows-Funktion zum Verschieben untergeordnete Fenster, die nicht vollständig in liegen die `lpRectScroll` Rechteck. Der Cursor positioniert ist, wenn die **SW_SCROLLCHILDREN** Flag festgelegt ist und die Einfügemarke Rechteck eine Schnittmenge bilden das Scroll-Rechteck.  
   
  Alle Eingabe- und Ausgabespalten Koordinaten (für `lpRectScroll`, `lpRectClip`, `lpRectUpdate`, und *PrgnUpdate*) wird angenommen, dass in Clientkoordinaten, unabhängig davon, ob das Fenster der **CS_OWNDC** oder **CS_CLASSDC** -Klassenstil. Verwenden der [LPtoDP](http://msdn.microsoft.com/library/windows/desktop/dd145042) und [DPtoLP](http://msdn.microsoft.com/library/windows/desktop/dd162474) Windows-Funktionen zum Konvertieren in und aus den logischen Koordinaten bei Bedarf.  
   
@@ -10216,7 +10216,7 @@ BOOL SetWindowPos(
   
 ### <a name="parameters"></a>Parameter  
  `pWndInsertAfter`  
- Identifiziert die `CWnd` -Objekt, das vorangestellt wird (größer sein als der) dies `CWnd` Objekt in der Z-Reihenfolge. Dieser Parameter kann ein Zeiger auf eine `CWnd` oder **Zeiger** auf einen der folgenden Werte:  
+ Identifiziert die `CWnd` -Objekt, das vorangestellt wird (größer sein als der) dies `CWnd` Objekt in der Z-Reihenfolge. Dieser Parameter kann ein Zeiger auf eine `CWnd` oder ein **Zeiger** auf einen der folgenden Werte:  
   
 - **WndBottom** schaltet das Fenster am unteren Rand der Z-Reihenfolge. Wenn diese `CWnd` ist ein oberstes Fenster, das Fenster verliert den obersten Status; das System schaltet das Fenster am unteren Rand der alle anderen Fenster.  
   
@@ -10496,7 +10496,7 @@ BOOL SubclassWindow(HWND hWnd);
  [!code-cpp[NVC_MFCWindowing #123](../../mfc/reference/codesnippet/cpp/cwnd-class_64.cpp)]  
   
 ##  <a name="unlockwindowupdate"></a>CWnd::UnlockWindowUpdate  
- Rufen Sie diese Memberfunktion um ein Fenster zu entsperren, die gesperrt wurde `CWnd::LockWindowUpdate`.  
+ Rufen Sie diese Memberfunktion um ein Fenster zu entsperren, die mit gesperrt war `CWnd::LockWindowUpdate`.  
   
 ```  
 void UnlockWindowUpdate();
@@ -10536,7 +10536,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
  Ruft das Framework automatisch `UpdateData` mit `bSaveAndValidate` festgelegt **"false"** Wenn ein modales Dialogfeld erstellt wird, in die standardmäßige Implementierung des [CDialog::](../../mfc/reference/cdialog-class.md#oninitdialog). Der Aufruf erfolgt, bevor Sie das Dialogfeld angezeigt wird. Die standardmäßige Implementierung des [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) ruft diese Memberfunktion mit `bSaveAndValidate` festgelegt **"true"** zum Abrufen der Daten und bei Erfolg wird das Dialogfeld zu schließen. (Wenn im Dialogfeld die Schaltfläche "Abbrechen" geklickt wird, wird das Dialogfeld ohne die abgerufenen Daten geschlossen.)  
   
 ##  <a name="updatedialogcontrols"></a>CWnd::UpdateDialogControls  
- Rufen Sie diese Memberfunktion zum Aktualisieren des Status der Dialogfelder und anderen Steuerelementen in einem Dialogfeld oder Fenster, das verwendet die [ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4) Rückrufmechanismus bereit.  
+ Rufen Sie diese Memberfunktion zum Aktualisieren des Status der Dialogfelder und anderen Steuerelementen in einem Dialogfeld oder Fenster, das verwendet die [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) Rückrufmechanismus bereit.  
   
 ```  
 void UpdateDialogControls(
@@ -10546,7 +10546,7 @@ void UpdateDialogControls(
   
 ### <a name="parameters"></a>Parameter  
  `pTarget`  
- Verweist auf das Hauptrahmenfenster der Anwendung und dient zum Weiterleiten von Nachrichten Update *.*  
+ Verweist auf das Hauptrahmenfenster der Anwendung, und zum Weiterleiten von Nachrichten Update verwendet wird.  
   
  `bDisableIfNoHndler`  
  Flag, die angibt, ob ein Steuerelement, das kein der updatehandler weist automatisch als deaktiviert angezeigt werden soll.  

@@ -1,5 +1,5 @@
 ---
-title: ATL-Makros | Microsoft-Dokumentation
+title: ATL-Makros | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,74 +33,74 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 04df63d36c1ac8dbcb93c3f9503d97decad994f8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 0e04a53a0ea8919c793614d7e3037d10ce01a03c
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="atl-macros"></a>ATL-Makros
-Ein ATL-Makros nach Kategorie finden Sie unter den folgenden Themen.  
+Eines ATL-Makros nach Kategorie finden Sie unter den folgenden Themen.  
   
- [Aggregation und Factory-Makros](../../atl/reference/aggregation-and-class-factory-macros.md)  
- Ermöglichen Sie das Steuern der Aggregation und Klassenfactorys zu deklarieren.  
+ [Aggregation und Klassenfactory-Makros](../../atl/reference/aggregation-and-class-factory-macros.md)  
+ Bieten Sie Möglichkeiten zum Steuern der Aggregation und Klassenfactorys deklarieren.  
   
  [Kategorie-Makros](../../atl/reference/category-macros.md)  
  Definieren Sie die Kategorie zugeordnet.  
   
- [Makros für COM-Zuordnung](../../atl/reference/com-map-macros.md)  
- Definieren Sie die COM-Schnittstelle zugeordnet.  
+ [COM-Zuordnungs-Makros](../../atl/reference/com-map-macros.md)  
+ COM-schnittstellenzuordnungen zu definieren.  
   
- [Compileroptionen Makros](../../atl/reference/compiler-options-macros.md)  
- Bestimmten Compiler-Funktionen zu steuern.  
+ [Compileroptionen-Makros](../../atl/reference/compiler-options-macros.md)  
+ Steuern Sie bestimmte Compilerfunktionen an.  
   
  [Makros zusammengesetzter Steuerelemente](../../atl/reference/composite-control-macros.md)  
- Definieren Sie ereignissenkenzuordnungen und Einträge.  
+ Ereignissenkenzuordnungen und Einträge zu definieren.  
   
- [Connection Point-Makros](../../atl/reference/connection-point-macros.md)  
- Connection Point-Karten und Einträge zu definieren.  
+ [Verbindungspunkt-Makros](../../atl/reference/connection-point-macros.md)  
+ Punkt verbindungszuordnungen und Einträge zu definieren.  
   
- [Debuggen und die Fehlerberichterstattung Makros](../../atl/reference/debugging-and-error-reporting-macros.md)  
- Geben Sie nützlich, Debuggen und Trace-Funktionen.  
+ [Debuggen und Fehlerberichterstattungs-Makros](../../atl/reference/debugging-and-error-reporting-macros.md)  
+ Geben Sie nützlich, Debuggen und Ablaufverfolgung Einrichtungen.  
   
- [Behandlung von Ausnahmemakros](../../atl/reference/exception-handling-macros.md)  
- Bieten Sie Unterstützung für Ausnahmebehandlung.  
+ [Ausnahmebehandlungs-Makros](../../atl/reference/exception-handling-macros.md)  
+ Bieten Sie Unterstützung für die Ausnahmebehandlung.  
   
  [Meldungszuordnungsmakros](../../atl/reference/message-map-macros-atl.md)  
- Definieren Sie meldungszuordnungen und Einträge.  
+ Nachrichtenzuordnungen und Einträge zu definieren.  
   
- [Map-Makros](../../atl/reference/object-map-macros.md)  
- Definieren Sie Objekt-Zuordnungen und Einträge.  
+ [Objektzuordnungs-Makros](../../atl/reference/object-map-macros.md)  
+ Objekt-Zuordnungen und Einträge zu definieren.  
   
- [Status-Makros](../../atl/reference/object-status-macros.md)  
- ActiveX-Steuerelemente zur Flags festgelegt.  
+ [Objektstatus-Makros](../../atl/reference/object-status-macros.md)  
+ Flags, die für ActiveX-Steuerelemente gehören festgelegt.  
   
- [Eigenschaftenmakros](../../atl/reference/property-map-macros.md)  
- Definieren Sie eigenschaftenzuordnungen und Einträge.  
+ [Eigenschaftenzuordnungs-Makros](../../atl/reference/property-map-macros.md)  
+ Eigenschaftenzuordnungen und Einträge zu definieren.  
   
- [Registrierung Data Exchange-Makros](../../atl/reference/registry-data-exchange-macros.md)  
+ [Registrierungsdatenaustausch-Makros](../../atl/reference/registry-data-exchange-macros.md)  
  Registrierung Datenaustausch Vorgänge ausführen.  
   
- [Registrierung von Makros](../../atl/reference/registry-macros.md)  
- Definieren Sie nützliche Art Bibliothek und Registrierung Funktionen.  
+ [Registrierungsmakros](../../atl/reference/registry-macros.md)  
+ Definieren Sie nützlicher Bibliothek und die Registrierung Einrichtungen.  
   
- [Dienst-Map-Makros](../../atl/reference/service-map-macros.md)  
- Definieren Sie dienstzuordnungen und Einträge.  
+ [Servicezuordnungs-Makros](../../atl/reference/service-map-macros.md)  
+ Definieren von dienstzuordnungen und Einträge.  
   
- [Snap-in-Makros](../../atl/reference/snap-in-object-macros.md)  
+ [Snap-In-Objektmakros](../../atl/reference/snap-in-object-macros.md)  
  Snap-in-Erweiterungen unterstützen.  
   
- [Zeichenfolgenkonvertierungsmakros](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)  
- Stellen Sie Zeichenfolge Funktionen für die Konvertierung.  
+ [Zeichenfolgenkonvertierungs-Makros](string-conversion-macros.md)  
+ Geben Sie die sprachkonvertierungsfunktionen Zeichenfolge.  
   
- [Fenster-Makros](../../atl/reference/window-class-macros.md)  
- Dienstprogramme für Fenster-Klasse zu definieren.  
+ [Fensterklassen-Makros](../../atl/reference/window-class-macros.md)  
+ Definieren Sie die Hilfsprogramme für Fenster-Klasse.  
   
- [Windows-Nachrichten Makros](../../atl/reference/windows-messages-macros.md)  
+ [Windows-Meldungen-Makros](../../atl/reference/windows-messages-macros.md)  
  Weiterleiten Sie Fensternachrichten.  
   
 ## <a name="see-also"></a>Siehe auch  
 
- [ATL-COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)   
+ [ATL COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md)   
  [Funktionen](../../atl/reference/atl-functions.md)   
  [Globale Variablen](../../atl/reference/atl-global-variables.md)   
  [Strukturen](../../atl/reference/atl-structures.md)   

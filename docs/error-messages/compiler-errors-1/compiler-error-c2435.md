@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C2435 generiert | Microsoft-Dokumentation
+title: Compilerfehler C2435 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,17 +34,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: dbc2045eae70cacd42e13ddb7cc8ecb3d60b8596
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53a3144fe8e87f36a1a5149d292130a9913b646a
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-error-c2435"></a>Compilerfehler C2435
-'Var': dynamische Initialisierung ist eine verwaltete CRT erforderlich ist, kann nicht mit/clr: safe kompiliert  
+"Var": dynamische Initialisierung verwalteten CRT erfordert, kann nicht mit/clr: safe kompiliert werden  
   
- Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 veraltet sind.  
+ Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
   
- Initialisierung einer globalen pro-AppDomain-Variablen erfordert eine kompilierte die CRT mit `/clr:pure`, die erzeugt kein überprüfbaren Abbilds.  
+ Initialisierung des globalen pro-AppDomain-Variablen erfordert kompilierte die CRT mit `/clr:pure`, die ein überprüfbares Image erstellt.  
   
  Weitere Informationen finden Sie unter [Appdomain](../../cpp/appdomain.md) und [Prozess](../../cpp/process.md).  
   

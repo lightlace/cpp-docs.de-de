@@ -1,5 +1,5 @@
 ---
-title: COleDataSource-Klasse | Microsoft-Dokumentation
+title: COleDataSource-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -60,9 +60,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: cd8f30c3edd7d26b254e7f4a6f153ab0b2fc96da
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3839ebe5f278d71f933b6e76f2ad50dc8e62a165
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="coledatasource-class"></a>COleDataSource-Klasse
@@ -86,30 +86,30 @@ class COleDataSource : public CCmdTarget
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CacheData](#cachedata)|Stellt Daten in einem angegebenen Format mithilfe einer **STGMEDIUM** Struktur.|  
-|[COleDataSource:: CacheGlobalData](#cacheglobaldata)|Stellt Daten in einem angegebenen Format mithilfe einer `HGLOBAL`.|  
-|[:: DelayRenderData](#delayrenderdata)|Stellt Daten in einem angegebenen Format verzögerte Rendering verwenden.|  
-|[DelayRenderFileData](#delayrenderfiledata)|Stellt Daten in einem angegebenen Format in eine `CFile` Zeiger.|  
-|[COleDataSource::DelaySetData](#delaysetdata)|Für jedes Format, das unterstützt wird aufgerufen, `OnSetData`.|  
-|[Ablagequellenobjekt](#dodragdrop)|Führt Drag & Drop-Operationen mit einer Datenquelle.|  
-|[COleDataSource::Empty](#empty)|Leert den `COleDataSource` Daten.|  
+|[CacheData](#cachedata)|Bietet die Daten in einem angegebenen Format mithilfe einer **STGMEDIUM** Struktur.|  
+|[COleDataSource:: CacheGlobalData](#cacheglobaldata)|Bietet die Daten in einem angegebenen Format mithilfe einer `HGLOBAL`.|  
+|[:: DelayRenderData](#delayrenderdata)|Stellt Daten in einem angegebenen Format mit verzögertem Rendering.|  
+|[DelayRenderFileData](#delayrenderfiledata)|Bietet die Daten in einem angegebenen Format in eine `CFile` Zeiger.|  
+|[COleDataSource::DelaySetData](#delaysetdata)|Wird aufgerufen, für jedes Format, das unterstützt wird `OnSetData`.|  
+|[Oledatasource](#dodragdrop)|Führt Drag-and-Drop-Vorgänge mit einer Datenquelle.|  
+|[COleDataSource::Empty](#empty)|Leert die `COleDataSource` Objekt der Daten.|  
 |[COleDataSource::FlushClipboard](#flushclipboard)|Rendert alle Daten in der Zwischenablage.|  
 |[COleDataSource::GetClipboardOwner](#getclipboardowner)|Überprüft, ob die Daten in der Zwischenablage platziert noch vorhanden ist.|  
-|[COleDataSource::OnRenderData](#onrenderdata)|Ruft die Daten als Teil der verzögerte Rendering.|  
-|[COleDataSource::OnRenderFileData](#onrenderfiledata)|Abrufen von Daten in einem `CFile` als Teil der verzögerte Rendering.|  
-|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|Abrufen von Daten in eine `HGLOBAL` als Teil der verzögerte Rendering.|  
+|[COleDataSource::OnRenderData](#onrenderdata)|Ruft die Daten als Teil der verzögerte Rendering ab.|  
+|[COleDataSource::OnRenderFileData](#onrenderfiledata)|Abrufen von Daten in eine `CFile` im Rahmen des verzögerte Rendering.|  
+|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|Abrufen von Daten in eine `HGLOBAL` im Rahmen des verzögerte Rendering.|  
 |[COleDataSource::OnSetData](#onsetdata)|Wird aufgerufen, um die Daten im Ersetzen der `COleDataSource` Objekt.|  
 |[COleDataSource](#setclipboard)|Stellen ein `COleDataSource` Objekt in die Zwischenablage.|  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können OLE-Datenquellen direkt erstellen. Auch die [COleClientItem](../../mfc/reference/coleclientitem-class.md) und [COleServerItem](../../mfc/reference/coleserveritem-class.md) Klassen erstellen OLE-Datenquellen als Antwort auf ihre `CopyToClipboard` und `DoDragDrop` Memberfunktionen. Finden Sie unter [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) eine kurze Beschreibung. Überschreiben der `OnGetClipboardData` Memberfunktion Ihrer Client-Element oder Server-Element-Klasse zusätzliche Zwischenablageformate auf die Daten in der OLE-Datenquelle hinzufügen erstellt wird, für die `CopyToClipboard` oder `DoDragDrop` -Memberfunktion.  
+ Sie können die OLE-Datenquellen direkt erstellen. Klicken Sie alternativ die [COleClientItem](../../mfc/reference/coleclientitem-class.md) und [COleServerItem](../../mfc/reference/coleserveritem-class.md) Klassen erstellen OLE-Datenquellen als Antwort auf ihre `CopyToClipboard` und `DoDragDrop` Memberfunktionen. Finden Sie unter [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) für eine kurze Beschreibung. Überschreiben Sie die `OnGetClipboardData` Memberfunktion Ihrer Client-Element oder Server-Element-Klasse hinzufügen Weitere Zwischenablageformate auf die Daten in der OLE-Datenquelle erstellt wird, für die `CopyToClipboard` oder `DoDragDrop` Memberfunktion.  
   
- Daten für die Übertragung vorbereiten möchten, sollten Sie ein Objekt dieser Klasse erstellen und füllen Sie es mit Ihren Daten mithilfe der am besten geeigneten Methode für Ihre Daten. Die Möglichkeit, die in einer Datenquelle eingefügt wird direkt betroffen, ob die Daten sofort bereitgestellt werden (unmittelbares Rendern) oder nach Bedarf (verzögertes Rendern). Für jedes Format der Zwischenablage in die Geben Sie Daten durch das Zwischenablageformat zu verwendende übergeben (und eine optionale [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur), rufen Sie [DelayRenderData](#delayrenderdata).  
+ Wenn Sie Daten für eine Übertragung vorbereiten möchten, sollten Sie ein Objekt dieser Klasse erstellen und füllen Sie es mit Ihren Daten, die am besten geeignete Methode für Ihre Daten mit. Die Möglichkeit, die in einer Datenquelle eingefügt wird direkt betroffen, ob die Daten sofort bereitgestellt werden (sofortige Rendering) oder bei Bedarf (verzögertes rendering). Für jedes Format der Zwischenablage in die Daten durch übergeben das Format der Zwischenablage zu verwendende bereitgestellt (und optional [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur), rufen Sie [DelayRenderData](#delayrenderdata).  
   
- Weitere Informationen über Datenquellen und Übertragung von Daten finden Sie im Artikel [Datenobjekte und Datenquellen (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Darüber hinaus Artikel [Zwischenablage](../../mfc/clipboard.md) des OLE-zwischenablagemechanismus beschrieben.  
+ Weitere Informationen zu Datenquellen und die Datenübertragung, finden Sie im Artikel [Datenobjekte und Datenquellen (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Darüber hinaus den Artikel [Zwischenablage Themen](../../mfc/clipboard.md) des OLE-zwischenablagemechanismus beschreibt.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -119,7 +119,7 @@ class COleDataSource : public CCmdTarget
  **Header:** afxole.h  
   
 ##  <a name="cachedata"></a>CacheData  
- Rufen Sie diese Funktion, um ein Format anzugeben, in dem Daten während Daten übertragen angeboten werden.  
+ Mit dieser Funktion wird zum Festlegen eines Formats, in dem Daten während der Daten Vorgänge angeboten werden.  
   
 ```  
 void CacheData(
@@ -130,29 +130,29 @@ void CacheData(
   
 ### <a name="parameters"></a>Parameter  
  `cfFormat`  
- Das Zwischenablageformat, in dem die Daten angeboten werden. Dieser Parameter kann eine der vordefinierten Formate der Zwischenablage oder den Rückgabewert von systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
+ Das Zwischenablage-Format, in dem die Daten zur Verfügung gestellt werden. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
  `lpStgMedium`  
- Verweist auf eine [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) -Struktur, die Daten im angegebenen Format enthält.  
+ Verweist auf eine [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Struktur, die die Daten im angegebenen Format enthält.  
   
  `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur beschreibt das Format, in dem die Daten angeboten werden. Wenn Sie weitere Informationen über das Format der Zwischenablage durch angegebene angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist dies **NULL**, Standardwerte werden verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
- Da diese Funktion bietet mithilfe von unmittelbares rendern, müssen Sie die Daten angeben. Die Daten werden zwischengespeichert, bis Sie benötigt.  
+ Sie müssen die Daten angeben, da diese Funktion bietet sofortigen Rendering mit. Die Daten werden zwischengespeichert, bis Sie benötigt.  
   
- Geben Sie die Daten mithilfe einer [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Struktur. Sie können auch die `CacheGlobalData` Member-Funktion, wenn die Menge der Daten, die Sie bereitstellen, ist klein genug, um effizient mit übertragen werden eine `HGLOBAL`.  
+ Geben Sie die Daten mithilfe einer [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Struktur. Sie können auch die `CacheGlobalData` Memberfunktion, wenn die Menge der Daten, die Sie angegeben haben, ist klein genug für effizient übertragen werden eine `HGLOBAL`.  
   
- Nach dem Aufruf von `CacheData` der **Ptd** Mitglied `lpFormatEtc` und den Inhalt der `lpStgMedium` das Datenobjekt nicht vom Aufrufer gehören.  
+ Nach dem Aufruf von `CacheData` der **Ptd** Mitglied `lpFormatEtc` und den Inhalt der `lpStgMedium` werden, gehören das Datenobjekt, nicht durch den Aufrufer.  
   
- Rufen Sie zum Verwenden der verzögerten Rendering der [DelayRenderData](#delayrenderdata) oder [DelayRenderFileData](#delayrenderfiledata) Member-Funktion. Weitere Informationen zum verzögerten Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Rufen Sie zum Verwenden von verzögertem Rendering der [DelayRenderData](#delayrenderdata) oder [DelayRenderFileData](#delayrenderfiledata) Memberfunktion. Weitere Informationen für das verzögerte Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Weitere Informationen finden Sie unter der [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) und [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Strukturen in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
+ Weitere Informationen finden Sie unter der [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) und [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Strukturen in den [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  Weitere Informationen finden Sie unter [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="cacheglobaldata"></a>COleDataSource:: CacheGlobalData  
- Rufen Sie diese Funktion, um ein Format anzugeben, in dem Daten während Daten übertragen angeboten werden.  
+ Mit dieser Funktion wird zum Festlegen eines Formats, in dem Daten während der Daten Vorgänge angeboten werden.  
   
 ```  
 void CacheGlobalData(
@@ -163,20 +163,20 @@ void CacheGlobalData(
   
 ### <a name="parameters"></a>Parameter  
  `cfFormat`  
- Das Zwischenablageformat, in dem die Daten angeboten werden. Dieser Parameter kann eine der vordefinierten Formate der Zwischenablage oder den Rückgabewert von systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
+ Das Zwischenablage-Format, in dem die Daten zur Verfügung gestellt werden. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
  *hGlobal*  
  Handle für den globalen Speicherblock, der Daten im angegebenen Format enthält.  
   
  `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur beschreibt das Format, in dem die Daten angeboten werden. Wenn Sie weitere Informationen über das Format der Zwischenablage durch angegebene angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist dies **NULL**, Standardwerte werden verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion bereit, die Daten mit sofort gerendert wird, damit Sie die Daten angeben müssen, wenn die Funktion aufgerufen wird; die Daten werden zwischengespeichert, bis Sie benötigt. Verwenden der `CacheData` Member-Funktion, wenn Sie eine große Menge von Daten oder wenn Sie eine strukturierte Speichermedium bereitstellen.  
+ Diese Funktion bietet, die Daten mit sofortige rendern, sodass Sie die Daten angeben müssen, wenn die Funktion aufgerufen wird; die Daten werden zwischengespeichert, bis Sie benötigt. Verwenden der `CacheData` Memberfunktion, wenn Sie eine große Menge an Daten oder wenn Sie eine strukturierte Speichermedium benötigen angegeben haben.  
   
- Rufen Sie zum Verwenden der verzögerten Rendering der [DelayRenderData](#delayrenderdata) oder [DelayRenderFileData](#delayrenderfiledata) Member-Funktion. Weitere Informationen zum verzögerten Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Rufen Sie zum Verwenden von verzögertem Rendering der [DelayRenderData](#delayrenderdata) oder [DelayRenderFileData](#delayrenderfiledata) Memberfunktion. Weitere Informationen für das verzögerte Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
+ Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  Weitere Informationen finden Sie unter [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -188,7 +188,7 @@ COleDataSource();
 ```  
   
 ##  <a name="delayrenderdata"></a>:: DelayRenderData  
- Rufen Sie diese Funktion, um ein Format anzugeben, in dem Daten während Daten übertragen angeboten werden.  
+ Mit dieser Funktion wird zum Festlegen eines Formats, in dem Daten während der Daten Vorgänge angeboten werden.  
   
 ```  
 void DelayRenderData(
@@ -198,24 +198,24 @@ void DelayRenderData(
   
 ### <a name="parameters"></a>Parameter  
  `cfFormat`  
- Das Zwischenablageformat, in dem die Daten angeboten werden. Dieser Parameter kann eine der vordefinierten Formate der Zwischenablage oder den Rückgabewert von systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
+ Das Zwischenablage-Format, in dem die Daten zur Verfügung gestellt werden. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
  `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur beschreibt das Format, in dem die Daten angeboten werden. Wenn Sie weitere Informationen über das Format der Zwischenablage durch angegebene angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist dies **NULL**, Standardwerte werden verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion bereit, die Daten mit verzögerte rendering, sodass die Daten nicht sofort bereitgestellt werden. Die [OnRenderData](#onrenderdata) oder [OnRenderGlobalData](#onrenderglobaldata) Member-Funktion wird aufgerufen, um die Daten anfordern.  
+ Diese Funktion bietet die Daten mit verzögerte rendering, damit die Daten nicht direkt bereitgestellt werden. Die [OnRenderData](#onrenderdata) oder [OnRenderGlobalData](#onrenderglobaldata) Memberfunktion aufgerufen, um die Daten anfordern.  
   
- Verwenden Sie diese Funktion, wenn Sie nicht beabsichtigen, Ihre Daten durch Angeben einer `CFile` Objekt. Wenn Sie beabsichtigen, geben Sie die Daten über eine `CFile` -Objekt, rufen Sie die [DelayRenderFileData](#delayrenderfiledata) Member-Funktion. Weitere Informationen zum verzögerten Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Verwenden Sie diese Funktion, wenn Sie nicht beabsichtigen, Ihre Daten durch Angeben einer `CFile` Objekt. Wenn Sie beabsichtigen, die Daten durch Angeben einer `CFile` -Objekt, rufen Sie die [DelayRenderFileData](#delayrenderfiledata) Memberfunktion. Weitere Informationen für das verzögerte Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Rufen Sie zum sofortigen Rendering verwenden die [CacheData](#cachedata) oder [CacheGlobalData](#cacheglobaldata) Member-Funktion.  
+ Rufen Sie zum sofortigen Rendering verwenden die [CacheData](#cachedata) oder [CacheGlobalData](#cacheglobaldata) Memberfunktion.  
   
- Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
+ Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  Weitere Informationen finden Sie unter [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="delayrenderfiledata"></a>DelayRenderFileData  
- Rufen Sie diese Funktion, um ein Format anzugeben, in dem Daten während Daten übertragen angeboten werden.  
+ Mit dieser Funktion wird zum Festlegen eines Formats, in dem Daten während der Daten Vorgänge angeboten werden.  
   
 ```  
 void DelayRenderFileData(
@@ -225,24 +225,24 @@ void DelayRenderFileData(
   
 ### <a name="parameters"></a>Parameter  
  `cfFormat`  
- Das Zwischenablageformat, in dem die Daten angeboten werden. Dieser Parameter kann eine der vordefinierten Formate der Zwischenablage oder den Rückgabewert von systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
+ Das Zwischenablage-Format, in dem die Daten zur Verfügung gestellt werden. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
  `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur beschreibt das Format, in dem die Daten angeboten werden. Wenn Sie weitere Informationen über das Format der Zwischenablage durch angegebene angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist dies **NULL**, Standardwerte werden verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten zur Verfügung gestellt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion bereit, die Daten mit verzögerte rendering, sodass die Daten nicht sofort bereitgestellt werden. Die [OnRenderFileData](#onrenderfiledata) Member-Funktion wird aufgerufen, um die Daten anfordern.  
+ Diese Funktion bietet die Daten mit verzögerte rendering, damit die Daten nicht direkt bereitgestellt werden. Die [OnRenderFileData](#onrenderfiledata) Member-Funktion wird aufgerufen, um die Daten anfordern.  
   
- Verwenden Sie diese Funktion, wenn Sie beabsichtigen, verwenden Sie ein `CFile` -Objekt, der die Daten bereitstellt. Wenn Sie nicht beabsichtigen, verwenden Sie eine `CFile` Objekt, rufen Sie die [DelayRenderData](#delayrenderdata) Member-Funktion. Weitere Informationen zum verzögerten Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Verwenden Sie diese Funktion, wenn Sie beabsichtigen, mit einem `CFile` die Daten zu verwendendes Objekt. Wenn Sie nicht vorhaben, verwenden Sie eine `CFile` -Objekt, rufen Sie die [DelayRenderData](#delayrenderdata) Memberfunktion. Weitere Informationen für das verzögerte Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Rufen Sie zum sofortigen Rendering verwenden die [CacheData](#cachedata) oder [CacheGlobalData](#cacheglobaldata) Member-Funktion.  
+ Rufen Sie zum sofortigen Rendering verwenden die [CacheData](#cachedata) oder [CacheGlobalData](#cacheglobaldata) Memberfunktion.  
   
- Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
+ Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  Weitere Informationen finden Sie unter [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
- Rufen Sie diese Funktion, um den Inhalt der Datenquelle ändern zu unterstützen.  
+ Mit dieser Funktion können Sie ändern den Inhalt der Datenquelle unterstützt.  
   
 ```  
 void DelaySetData(
@@ -252,20 +252,20 @@ void DelaySetData(
   
 ### <a name="parameters"></a>Parameter  
  `cfFormat`  
- Das Zwischenablageformat, in dem die Daten platziert werden. Dieser Parameter kann eine der vordefinierten Formate der Zwischenablage oder den Rückgabewert von systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
+ Das Format der Zwischenablage, in dem die Daten abgelegt werden soll. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von der systemeigenen Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion.  
   
  `lpFormatEtc`  
- Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur beschreibt das Format, in dem die Daten ersetzt werden. Wenn Sie weitere Informationen über das Format der Zwischenablage durch angegebene angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist dies **NULL**, Standardwerte werden verwendet, für die anderen Felder in der **FORMATETC** Struktur.  
+ Verweist auf eine [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die beschreibt des Format, in dem die Daten ersetzt werden. Wenn Sie zusätzliche Informationen über das Format der Zwischenablage durch angegeben angeben möchten, geben Sie einen Wert für diesen Parameter `cfFormat`. Ist er **NULL**, Standardwerte für die anderen Felder dienen der **FORMATETC** Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
- [OnSetData](#onsetdata) wird vom Framework aufgerufen, wenn dies geschieht. Wird nur verwendet, wenn das Framework die Datenquelle gibt [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Wenn `DelaySetData` nicht aufgerufen wird, die `OnSetData` Funktion wird nie aufgerufen werden. `DelaySetData`für jede Zwischenablage aufgerufen werden soll oder **FORMATETC** Format, die Sie unterstützen.  
+ [OnSetData](#onsetdata) wird vom Framework aufgerufen, wenn dies geschieht. Dies wird nur verwendet, wenn das Framework gibt die Datenquelle aus [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Wenn `DelaySetData` nicht aufgerufen wird, Ihre `OnSetData` Funktion wird nie aufgerufen werden. `DelaySetData`sollte für jede Zwischenablage aufgerufen werden oder **FORMATETC** Format, die Sie unterstützen.  
   
- Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) -Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
+ Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  Weitere Informationen finden Sie unter [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="dodragdrop"></a>Ablagequellenobjekt  
- Rufen Sie die `DoDragDrop` Memberfunktion, um einen Drag & Drop-Vorgang für diese Datenquelle führen in der Regel in einer [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) Handler.  
+##  <a name="dodragdrop"></a>Oledatasource  
+ Rufen Sie die `DoDragDrop` Memberfunktion versucht, in der Regel führen Sie einen Drag-and-Drop-Vorgang für diese Datenquelle in eine [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) Handler.  
   
 ```  
 DROPEFFECT DoDragDrop(
@@ -278,11 +278,11 @@ DROPEFFECT DoDragDrop(
  `dwEffects`  
  Drag & Drop-Vorgänge, die zulässig sind für diese Datenquelle. Hierbei kann es sich um eine oder mehrere der folgenden sein:  
   
-- `DROPEFFECT_COPY`Es konnte ein Kopiervorgang ausgeführt werden.  
+- `DROPEFFECT_COPY`Ein Vorgang zum Kopieren konnte ausgeführt werden.  
   
 - `DROPEFFECT_MOVE`Es konnte ein Verschiebevorgang ausgeführt werden.  
   
-- `DROPEFFECT_LINK`Eine Verknüpfung zwischen der abgelegten Daten und die ursprünglichen Daten konnte hergestellt werden.  
+- `DROPEFFECT_LINK`Eine Verknüpfung aus dem gelöschten Daten auf die ursprünglichen Daten konnte hergestellt werden.  
   
 - `DROPEFFECT_SCROLL`Gibt an, dass es sich bei Auftreten ein Ziehvorgangs ein Bildlauf.  
   
@@ -290,60 +290,60 @@ DROPEFFECT DoDragDrop(
  Ein Zeiger auf das Rechteck, das definiert, in dem der Ziehvorgang beginnt. Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".  
   
  *pDropSource*  
- Verweist auf ein Drop-Quelle. Wenn **NULL** dann eine Standardimplementierung der [COleDropSource](../../mfc/reference/coledropsource-class.md) verwendet werden.  
+ Verweist auf eine Drop-Quelle. Wenn **NULL** klicken Sie dann eine Standardimplementierung von [COleDropSource](../../mfc/reference/coledropsource-class.md) verwendet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Löschen Sie wirksam, die von der Drag & Drop-Vorgang generiert. andernfalls `DROPEFFECT_NONE` , wenn der Vorgang nie gestartet werden, da der Benutzer die Maustaste losgelassen, vor dem Verlassen des angegebenen Rechtecks.  
+ Löschen Sie die Auswirkungen von dem Drag-and-Drop-Vorgang generierte; andernfalls `DROPEFFECT_NONE` , wenn der Vorgang nie gestartet werden, da der Benutzer die Maustaste losgelassen, vor dem Verlassen des angegebenen Rechtecks.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Drag & Drop-Vorgang wird nicht sofort gestartet. Es wartet, bis der Cursor die durch angegebene Rechteck verlässt `lpRectStartDrag` oder eine angegebene Anzahl an Millisekunden verstrichen sind. Wenn `lpRectStartDrag` ist **NULL**, die Größe des Rechtecks beträgt ein Pixel.  
+ Die Drag-and-Drop-Vorgang wird nicht sofort gestartet. Es wartet, bis der Cursor auf das Rechteck, angegeben durch verlässt `lpRectStartDrag` oder bis eine angegebene Anzahl von Millisekunden erfolgreich abgeschlossen wurden. Wenn `lpRectStartDrag` ist **NULL**, die Größe des Rechtecks beträgt ein Pixel.  
   
- Die Verzögerungszeit wird durch eine Einstellung des Registrierungsschlüssels angegeben. Sie können die Verzögerung ändern, durch Aufrufen von [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) oder [CWinApp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint). Wenn Sie nicht die Verzögerung angeben, wird ein Standardwert von 200 Millisekunden verwendet. Ziehen Sie Verzögerungszeit wird wie folgt gespeichert:  
+ Die Verzögerung wird durch eine Einstellung des Registrierungsschlüssels angegeben. Sie können die Verzögerungszeit ändern, durch den Aufruf [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) oder [CWinApp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint). Wenn Sie die Verzögerung nicht angeben, wird ein Standardwert von 200 Millisekunden verwendet. Ziehen Sie Verzögerungszeit werden wie folgt gespeichert:  
   
 -   Ziehen Sie die Windows NT-Verzögerungszeit wird in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay gespeichert.  
   
 -   Windows 3.x Drag-Verzögerungszeit wird in der WIN gespeichert. INI-Datei im Abschnitt [Windows}.  
   
--   Windows 95/98 Drag-Verzögerungszeit wird in eine zwischengespeicherte Version der Windows-Taste gespeichert. INI.  
+-   Ziehen Sie die Windows 95-und Windows 98-Verzögerungszeit wird in eine zwischengespeicherte Version der WIN gespeichert. INI.  
   
- Für Weitere Informationen ziehen ist Verzögerung Informationen in der Registrierung gespeicherten oder. INI-Datei finden Sie unter [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Für Weitere Informationen ziehen wird Verzögerung Informationen gespeichert, in der Registrierung oder der. INI-Datei finden Sie unter [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- Weitere Informationen finden Sie im Artikel [per Drag & Drop: Implementieren einer Drop-Quelle](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
+ Weitere Informationen finden Sie im Artikel [Drag & Drop: Implementieren einer Drag & Drop Quelle](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
 ##  <a name="empty"></a>COleDataSource::Empty  
- Rufen Sie diese Funktion zum Leeren der `COleDataSource` Daten.  
+ Rufen Sie diese Funktion einen leeren der `COleDataSource` Objekt der Daten.  
   
 ```  
 void Empty();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Beide zwischengespeichert und Verzögerung Render-Formate werden geleert, sodass sie wiederverwendet werden können.  
+ Beide zwischengespeichert und Verzögerung renderingformate werden geleert, sodass sie wiederverwendet werden können.  
   
  Weitere Informationen finden Sie unter [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
- Werden Daten, die in die Zwischenablage kopieren und dann können Sie die Daten aus der Zwischenablage einfügen, nachdem die Anwendung beendet.  
+ Rendert die Daten, die in die Zwischenablage, und dann können Sie die Daten aus der Zwischenablage einfügen, nachdem die Anwendung beendet wird.  
   
 ```  
 static void PASCAL FlushClipboard();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendung [SetClipboard](#setclipboard) zum Einfügen von Daten in die Zwischenablage.  
+ Verwendung [SetClipboard](#setclipboard) , die Daten in die Zwischenablage zu speichern.  
   
 ##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
- Bestimmt, ob die Daten in die Zwischenablage, seit geändert hat [SetClipboard](#setclipboard) zuletzt aufgerufen wurde, und wenn dies der Fall ist, identifiziert den aktuellen Besitzer.  
+ Bestimmt, ob die Daten in der Zwischenablage, seit geändert hat [SetClipboard](#setclipboard) zuletzt aufgerufen wurde, und wenn dies der Fall ist, identifiziert den aktuellen Besitzer.  
   
 ```  
 static COleDataSource* PASCAL GetClipboardOwner();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Datenquelle, die derzeit in der Zwischenablage oder **NULL** Wenn nichts in die Zwischenablage kopieren oder die Zwischenablage nicht von der aufrufenden Anwendung gehört.  
+ Die Datenquelle derzeit in der Zwischenablage oder **NULL** Wenn nichts in die Zwischenablage, oder wenn die Zwischenablage nicht von der aufrufenden Anwendung gehört.  
   
 ##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
- Vom Framework aufgerufen wird zum Abrufen von Daten im angegebenen Format.  
+ Wird aufgerufen, durch das Framework zum Abrufen von Daten im angegebenen Format.  
   
 ```  
 virtual BOOL OnRenderData(
@@ -353,25 +353,25 @@ virtual BOOL OnRenderData(
   
 ### <a name="parameters"></a>Parameter  
  `lpFormatEtc`  
- Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die Angabe des Formats, in dem Informationen angefordert.  
+ Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die das Format, in dem Informationen angefordert, angibt.  
   
  `lpStgMedium`  
- Verweist auf eine [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Struktur, in der die Daten zurückgegeben werden.  
+ Verweist auf eine [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Struktur, in dem die Daten zurückgegeben werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Das angegebene Format ist eines der zuvor platziert die `COleDataSource` -Objekt unter Verwendung der [DelayRenderData](#delayrenderdata) oder [DelayRenderFileData](#delayrenderfiledata) Member-Funktion für das verzögerte Rendering. Ruft die standardmäßige Implementierung dieser Funktion [OnRenderFileData](#onrenderfiledata) oder [OnRenderGlobalData](#onrenderglobaldata) Wenn das angegebene Speichermedium eine Datei oder einen Speicher ist. Wenn keines dieser Formate angegeben werden, wird die standardmäßige Implementierung gibt 0 zurück, und nichts. Weitere Informationen zum verzögerten Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Das angegebene Format ist eines der zuvor platziert die `COleDataSource` -Objekt unter Verwendung der [DelayRenderData](#delayrenderdata) oder [DelayRenderFileData](#delayrenderfiledata) Memberfunktion für das verzögerte Rendering. Die standardmäßige Implementierung dieser Funktion rufen [OnRenderFileData](#onrenderfiledata) oder [OnRenderGlobalData](#onrenderglobaldata) Wenn das angegebene Speichermedium eine Datei oder einen Arbeitsspeicher ist. Wenn keines dieser Formate angegeben werden, wird die standardmäßige Implementierung gibt 0 zurück und Unternehmen Sie nichts. Weitere Informationen für das verzögerte Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Wenn `lpStgMedium` ->  *Tymed* ist **TYMED_NULL**, **STGMEDIUM** zugeordnet und entsprechend den Angaben von gefüllt werden *LpFormatEtc-> Tymed*. Ist er nicht **TYMED_NULL**, **STGMEDIUM** mit Daten ausgefüllt werden.  
+ Wenn `lpStgMedium` ->  *Tymed* ist **TYMED_NULL**, **STGMEDIUM** reserviert und entsprechend den Angaben von gefüllt werden soll *LpFormatEtc-> Tymed*. Ist er nicht **TYMED_NULL**, **STGMEDIUM** direkt mit den Daten ausgefüllt werden soll.  
   
- Dies ist eine erweiterte überschrieben. Überschreiben Sie diese Funktion, um Ihre Daten in das angeforderte Format und das Medium angeben. Abhängig von Ihrer Daten sollten Sie stattdessen eine der anderen Versionen dieser Funktion zu überschreiben. Wenn Ihre Daten klein und feste Größe ist, überschreiben `OnRenderGlobalData`. Wenn Ihre Daten in einer Datei oder variabler Größe ist, überschreiben `OnRenderFileData`.  
+ Dies ist eine erweiterte überschrieben. Überschreiben Sie diese Funktion, um Ihre Daten in das angeforderte Format und das Medium angeben. Abhängig von Ihrer Daten können Sie eine der anderen Versionen dieser Funktion stattdessen überschreiben möchten. Wenn Ihre Daten klein und fester Größe ist, überschreiben `OnRenderGlobalData`. Wenn Ihre Daten in einer Datei ist oder variabler Größe ist, überschreiben `OnRenderFileData`.  
   
- Weitere Informationen finden Sie unter der [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) und [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) -Strukturen, die [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) Enumerationstyp und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
+ Weitere Informationen finden Sie unter der [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) und [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Strukturen, die [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) Enumerationstyp, und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
- Aufgerufen, um Daten im angegebenen Format abzurufen, wenn das angegebene Speichermedium eine Datei ist.  
+ Wird aufgerufen, durch das Framework zum Abrufen von Daten im angegebenen Format, wenn das Speichermedium für die angegebene Datei ist.  
   
 ```  
 virtual BOOL OnRenderFileData(
@@ -381,7 +381,7 @@ virtual BOOL OnRenderFileData(
   
 ### <a name="parameters"></a>Parameter  
  `lpFormatEtc`  
- Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die Angabe des Formats, in dem Informationen angefordert.  
+ Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die das Format, in dem Informationen angefordert, angibt.  
   
  `pFile`  
  Verweist auf eine [CFile](../../mfc/reference/cfile-class.md) Objekt, in dem die Daten gerendert werden.  
@@ -390,14 +390,14 @@ virtual BOOL OnRenderFileData(
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Das angegebene Format ist eines der zuvor platziert die `COleDataSource` -Objekt unter Verwendung der [DelayRenderData](#delayrenderdata) Member-Funktion für das verzögerte Rendering. Die standardmäßige Implementierung dieser Funktion einfach gibt **FALSE**.  
+ Das angegebene Format ist eines der zuvor platziert die `COleDataSource` -Objekt unter Verwendung der [DelayRenderData](#delayrenderdata) Memberfunktion für das verzögerte Rendering. Die standardmäßige Implementierung dieser Funktion gibt einfach auftragsantwortnachrichten zurück **"false"**.  
   
- Dies ist eine erweiterte überschrieben. Überschreiben Sie diese Funktion, um Ihre Daten in das angeforderte Format und das Medium angeben. Abhängig von Ihrer Daten empfiehlt es sich, eine der anderen Versionen dieser Funktion stattdessen überschreiben. Wenn Sie mehrere Medien behandeln möchten, überschreiben [OnRenderData](#onrenderdata). Wenn Ihre Daten in einer Datei oder variabler Größe ist, überschreiben `OnRenderFileData`. Weitere Informationen zum verzögerten Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Dies ist eine erweiterte überschrieben. Überschreiben Sie diese Funktion, um Ihre Daten in das angeforderte Format und das Medium angeben. Je nach Ihrer Daten empfiehlt es sich um eine der anderen Versionen dieser Funktion stattdessen zu überschreiben. Wenn Sie mehrere Speichermedien behandeln möchten, überschreiben [OnRenderData](#onrenderdata). Wenn Ihre Daten in einer Datei ist oder variabler Größe ist, überschreiben `OnRenderFileData`. Weitere Informationen für das verzögerte Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
+ Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
- Aufgerufen, um Daten im angegebenen Format abzurufen, wird das angegebene Speichermedium globalen Arbeitsspeicher.  
+ Wird aufgerufen, durch das Framework zum Abrufen von Daten im angegebenen Format, wenn das angegebene Speichermedium globaler Speicher ist.  
   
 ```  
 virtual BOOL OnRenderGlobalData(
@@ -407,25 +407,25 @@ virtual BOOL OnRenderGlobalData(
   
 ### <a name="parameters"></a>Parameter  
  `lpFormatEtc`  
- Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die Angabe des Formats, in dem Informationen angefordert.  
+ Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die das Format, in dem Informationen angefordert, angibt.  
   
  `phGlobal`  
- Verweist auf ein Handle für den globalen Arbeitsspeicher, in dem die Daten zurückgegeben werden. Wenn Sie eine noch nicht belegt wurde, kann dieser Parameter **NULL**.  
+ Verweist auf ein Handle für den globalen Arbeitsspeicher, in dem die Daten zurückgegeben werden. Dieser Parameter kann sein, wenn eine noch nicht belegt wurde, **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Das angegebene Format ist eines der zuvor platziert die `COleDataSource` -Objekt unter Verwendung der [DelayRenderData](#delayrenderdata) Member-Funktion für das verzögerte Rendering. Die standardmäßige Implementierung dieser Funktion einfach gibt **FALSE**.  
+ Das angegebene Format ist eines der zuvor platziert die `COleDataSource` -Objekt unter Verwendung der [DelayRenderData](#delayrenderdata) Memberfunktion für das verzögerte Rendering. Die standardmäßige Implementierung dieser Funktion gibt einfach auftragsantwortnachrichten zurück **"false"**.  
   
- Wenn `phGlobal` ist **NULL**, ein neues `HGLOBAL` zugeordnet und in zurückgegeben werden sollte `phGlobal`. Andernfalls die `HGLOBAL` angegebene `phGlobal` mit Daten gefüllt werden soll. Die Datenmenge der `HGLOBAL` darf sich nicht auf die aktuelle Größe des Speicherblocks. Der Block kann nicht darüber hinaus auf eine größere Größe neu zugewiesen werden.  
+ Wenn `phGlobal` ist **NULL**, klicken Sie dann ein neues `HGLOBAL` reserviert und in zurückgegeben werden soll `phGlobal`. Andernfalls die `HGLOBAL` gemäß `phGlobal` mit Daten gefüllt werden soll. Die Menge der Daten platziert werden, der `HGLOBAL` darf sich nicht auf die aktuelle Größe des Speicherblocks. Darüber hinaus kann nicht der Block auf eine Größe neu zugeordnet werden.  
   
- Dies ist eine erweiterte überschrieben. Überschreiben Sie diese Funktion, um Ihre Daten in das angeforderte Format und das Medium angeben. Abhängig von Ihrer Daten sollten Sie stattdessen eine der anderen Versionen dieser Funktion zu überschreiben. Wenn Sie mehrere Medien behandeln möchten, überschreiben [OnRenderData](#onrenderdata). Wenn Ihre Daten in einer Datei oder variabler Größe ist, überschreiben [OnRenderFileData](#onrenderfiledata). Weitere Informationen zum verzögerten Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Dies ist eine erweiterte überschrieben. Überschreiben Sie diese Funktion, um Ihre Daten in das angeforderte Format und das Medium angeben. Abhängig von Ihrer Daten können Sie eine der anderen Versionen dieser Funktion stattdessen überschreiben möchten. Wenn Sie mehrere Speichermedien behandeln möchten, überschreiben [OnRenderData](#onrenderdata). Wenn Ihre Daten in einer Datei ist oder variabler Größe ist, überschreiben [OnRenderFileData](#onrenderfiledata). Weitere Informationen für das verzögerte Rendering von MFC als behandelt, finden Sie im Artikel [Datenobjekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
+ Weitere Informationen finden Sie unter der [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="onsetdata"></a>COleDataSource::OnSetData  
- Aufgerufen, um festzulegen, oder Ersetzen Sie die Daten in der `COleDataSource` Objekt im angegebenen Format.  
+ Wird aufgerufen, durch das Framework festlegen oder Ersetzen Sie die Daten in der `COleDataSource` Objekt im angegebenen Format.  
   
 ```  
 virtual BOOL OnSetData(
@@ -436,23 +436,23 @@ virtual BOOL OnSetData(
   
 ### <a name="parameters"></a>Parameter  
  `lpFormatEtc`  
- Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die Angabe des Formats, in dem Daten ersetzt werden.  
+ Verweist auf die [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Struktur, die das Format, in dem Daten ausgetauscht werden, angibt.  
   
  `lpStgMedium`  
- Verweist auf die [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Struktur mit den Daten, die den aktuellen Inhalt des ersetzt, die `COleDataSource` Objekt.  
+ Verweist auf die [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Struktur mit den Daten, die dem aktuellen Inhalt zu ersetzen, werden die `COleDataSource` Objekt.  
   
  `bRelease`  
- Gibt an, wer das Speichermedium nach Abschluss des Funktionsaufrufs hat. Der Aufrufer entscheidet, die verantwortlich für die Freigabe der Ressourcen für das Speichermedium zugewiesen ist. Der Aufrufer wird `bRelease`. Wenn `bRelease` ist ungleich NULL ist, die Datenquelle übernimmt den Besitz, das Medium freigeben, wenn Verwendung er beendet wurde. Wenn `bRelease` ist 0, der Aufrufer besitzt und die Datenquelle kann das Speichermedium nur für die Dauer des Aufrufs verwendet.  
+ Gibt an, wer das Speichermedium nach Abschluss des Funktionsaufrufs hat. Der Aufrufer entscheidet, die für die Freigabe der Ressourcen für das Speichermedium zuständig ist. Der Aufrufer geschieht durch Festlegen von `bRelease`. Wenn `bRelease` ist ungleich NULL ist, die Datenquelle übernimmt den Besitz, das Medium freigeben, wenn er abgeschlossen ist, verwenden. Wenn `bRelease` ist 0, der Aufrufer besitzt und die Datenquelle kann das Speichermedium nur für die Dauer des Aufrufs verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Die Datenquelle nimmt keine Besitzer der Daten, bis er erfolgreich abgerufen hat. D. h., es übernimmt keinen Besitz Wenn `OnSetData` gibt 0 zurück. Wenn die Datenquelle den Besitz übernimmt, werden durch Aufrufen von Speichermedium freigibt der [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) Funktion.  
+ Die Datenquelle nimmt nicht die Daten, bis er erfolgreich abgerufen hat. D. h. es ist nicht den Besitz übernehmen Wenn `OnSetData` gibt 0 zurück. Wenn Sie den Besitz die Datenquelle ausgeführt wird, werden durch Aufrufen von Speichermedium freigibt der [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) Funktion.  
   
- Bei der Standardimplementierung wird keine Aktion ausgeführt. Überschreiben Sie diese Funktion, um die Daten im angegebenen Format zu ersetzen. Dies ist eine erweiterte überschrieben.  
+ Bei der Standardimplementierung wird keine Aktion ausgeführt. Überschreiben Sie diese Funktion zum Ersetzen der Daten im angegebenen Format. Dies ist eine erweiterte überschrieben.  
   
- Weitere Informationen finden Sie unter der [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) und [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Strukturen und [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) -Funktionen in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
+ Weitere Informationen finden Sie unter der [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) und [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Strukturen und die [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) und [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) -Funktionen in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="setclipboard"></a>COleDataSource  
  Legt die Daten in der `COleDataSource` Objekt in der Zwischenablage nach dem Aufrufen einer der folgenden Funktionen: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), oder [DelayRenderFileData](#delayrenderfiledata).  

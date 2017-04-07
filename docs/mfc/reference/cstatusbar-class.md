@@ -54,9 +54,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: a2358d31bd87b2cc540dd9a5ce182b9340764522
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7f394d6519bcf86a4de3966bb958923aab8dd0c6
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cstatusbar-class"></a>CStatusBar-Klasse
@@ -150,7 +150,7 @@ int CommandToIndex(UINT nIDFind) const;
  Zeichenfolgen-ID des Indikators, dessen Index ist, abgerufen werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index des Indikators, wenn erfolgreich; – 1, wenn nicht erfolgreich war.  
+ Der Index des Indikators, wenn erfolgreich; 1, wenn nicht erfolgreich war.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Index des ersten Indikators ist 0.  

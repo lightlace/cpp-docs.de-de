@@ -62,9 +62,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: afcf1f37dbf0f55dc26c7258d130043bffc8c1a8
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e7b151d83f4229586ad8787a326e332abb9fc79d
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cdatabase-class"></a>CDatabase-Klasse
@@ -88,7 +88,7 @@ class CDatabase : public CObject
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CDatabase::BeginTrans](#begintrans)|Startet eine \u2012 "Transaction" eine Reihe von umkehrbare Aufrufe an die `AddNew`, **bearbeiten**, **löschen**, und **Update** Memberfunktionen der Klasse `CRecordset` \u2012 auf der verbundenen Datenquelle. Die Datenquelle muss die Unterstützung von Transaktionen für **BeginTrans** wirkt sich nur.|  
+|[CDatabase::BeginTrans](#begintrans)|Startet eine "Transaktion" – eine Reihe von umkehrbare Aufrufe an die `AddNew`, **bearbeiten**, **löschen**, und **Update** Memberfunktionen der Klasse `CRecordset` – auf der verbundenen Datenquelle. Die Datenquelle muss die Unterstützung von Transaktionen für **BeginTrans** wirkt sich nur.|  
 |[CDatabase::BindParameters](#bindparameters)|Ermöglicht Ihnen, Binden von Parametern vor dem Aufruf `CDatabase::ExecuteSQL`.|  
 |[CDatabase::Cancel](#cancel)|Bricht einen asynchronen Vorgang oder einen Prozess aus ein zweiter Thread ab.|  
 |[CDatabase::CanTransact](#cantransact)|Gibt einen Wert ungleich NULL, wenn die Datenquelle Transaktionen unterstützt.|  
@@ -385,7 +385,7 @@ CString GetDatabaseName() const;
 ### <a name="remarks"></a>Hinweise  
  Dies ist nicht identisch mit der Datenquellenname (DSN), angegeben der `OpenEx` oder **öffnen** aufrufen. Was `GetDatabaseName` gibt hängt von ODBC. Im Allgemeinen ist eine Datenbank, eine Auflistung von Tabellen. Wenn diese Entität einen Namen besitzt, `GetDatabaseName` wird zurückgegeben.  
   
- Sie sollten z. B. diesen Namen in einer Überschrift anzuzeigen. Bei einem beim Abrufen des Namens von ODBC Fehler, `GetDatabaseName` gibt ein leeres **Cstring**.  
+ Sie sollten z. B. diesen Namen in einer Überschrift angezeigt. Bei einem beim Abrufen des Namens von ODBC Fehler, `GetDatabaseName` gibt ein leeres **Cstring**.  
   
 ##  <a name="isopen"></a>CDatabase::IsOpen  
  Rufen Sie diese Memberfunktion, um zu bestimmen, ob die `CDatabase` -Objekt aktuell mit einer Datenquelle verbunden ist.  
@@ -398,7 +398,7 @@ BOOL IsOpen() const;
  Einen Wert ungleich null der `CDatabase` Objekt ist momentan verbunden; andernfalls 0.  
   
 ##  <a name="m_hdbc"></a>CDatabase:: M_hdbc  
- Enthält eine öffentliche Handle für eine ODBC Data Source Verbindung \u2012 ein "Verbindungshandle".  
+ Ein öffentlicher Handle für eine ODBC-datenquellenverbindung enthält – ein "Verbindungshandle".  
   
 ### <a name="remarks"></a>Hinweise  
  Normalerweise müssen Sie keine auf diese Membervariable direkt zugegriffen werden muss. Stattdessen das Framework das Anweisungshandle zugeordnet, beim Aufrufen von `OpenEx` oder **öffnen**. Das Framework das Handle freigegeben, beim Aufrufen der **löschen** Operator auf die `CDatabase` Objekt. Beachten Sie, dass die **schließen** Memberfunktion das Handle nicht freigeben.  
@@ -445,7 +445,7 @@ virtual BOOL Open(
   
 ### <a name="parameters"></a>Parameter  
  `lpszDSN`  
- Gibt eine Data Source Name \u2012 ein Namen mit ODBC über das Programm für die ODBC-Administrator registriert. Wenn in ein DSN-Wert angegeben ist `lpszConnect` (im Format "DSN =\<Data Source->"), müssen nicht erneut angegeben werden `lpszDSN`. In diesem Fall `lpszDSN` muss **NULL**. Andernfalls können Sie übergeben **NULL** gegebenenfalls die Benutzer mit einer Datenquelle (Dialogfeld) dar, in dem der Benutzer eine Datenquelle auswählen kann. Weitere Informationen finden Sie unter "Hinweise".  
+ Gibt einen Datenquellennamen – ein Namen, die mit ODBC mithilfe der ODBC-Administratorprogramm registriert. Wenn in ein DSN-Wert angegeben ist `lpszConnect` (im Format "DSN =\<Data Source->"), müssen nicht erneut angegeben werden `lpszDSN`. In diesem Fall `lpszDSN` muss **NULL**. Andernfalls können Sie übergeben **NULL** gegebenenfalls die Benutzer mit einer Datenquelle (Dialogfeld) dar, in dem der Benutzer eine Datenquelle auswählen kann. Weitere Informationen finden Sie unter "Hinweise".  
   
  `bExclusive`  
  In dieser Version der Klassenbibliothek unterstützt nicht. Derzeit ist eine Assertion fehlschlägt, wenn dieser Parameter ist **"true"**. Die Datenquelle ist immer geöffnet, wie freigegebene (nicht exklusiv).  
@@ -537,13 +537,13 @@ BOOL Rollback();
   
  Nach einem Aufruf von **Rollback**, übersteigt die Transaktion, und rufen Sie **BeginTrans** für eine andere Transaktion erneut aus. Der Datensatz, der vor dem Aufrufen aktuell waren, **BeginTrans** wird zum aktuellen Datensatz erneut nach **Rollback**.  
   
- Nach einem Rollback bleibt der Datensatz, der vor dem Rollback aktuell war aktuelle. Weitere Informationen über den Status des Recordsets und der Datenquelle nach einem Rollback, finden Sie im Artikel [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
+ Nach einem Rollback bleibt der Datensatz, der vor dem Rollback aktuell war aktuelle. Weitere Informationen zu den Status des Recordsets und der Datenquelle nach einem Rollback, finden Sie im Artikel [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md).  
   
 ### <a name="example"></a>Beispiel  
   Finden Sie im Artikel [Transaktion: Ausführen einer Transaktion in einem Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
 ##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
- Rufen Sie vor dem Aufrufen dieser Member-Funktion \u2012 `OpenEx` oder **öffnen** \u2012 überschreiben die Standardanzahl von Sekunden, die zulässig sind, bevor Daten in einem versuchten-Verbindung ein Timeout eintritt.  
+ Rufen Sie diese Memberfunktion – vor dem Aufruf `OpenEx` oder **öffnen** – die Standardanzahl von Sekunden, die zulässig sind, bevor ein versuchten Daten überschreiben-Verbindung ein Timeout eintritt.  
   
 ```  
 void SetLoginTimeout(DWORD dwSeconds);

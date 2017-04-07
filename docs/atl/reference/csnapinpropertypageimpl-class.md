@@ -1,5 +1,5 @@
 ---
-title: Klasse CSnapInPropertyPageImpl | Microsoft-Dokumentation
+title: CSnapInPropertyPageImpl Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -53,16 +53,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: f5db4d0742a423e9574db2a4268a9376491b2ed2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 57f43a1ab82c2441d271ac88ef712309bb1315dd
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl-Klasse
 Diese Klasse stellt Methoden zum Implementieren einer Snap-in-Eigenschaft Page-Objekt.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -82,28 +82,28 @@ CSnapInPropertyPageImpl : public CDialogImplBase
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|Ändert den Status der **OK** und **Abbrechen** Schaltflächen.|  
+|[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|Ändert den Status der **OK** und **"Abbrechen"** Schaltflächen.|  
 |[CSnapInPropertyPageImpl::Create](#create)|Initialisiert eine neu erstellte `CSnapInPropertyPageImpl` Objekt.|  
-|[CSnapInPropertyPageImpl::OnApply](#onapply)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **jetzt** Schaltfläche beim Verwenden des Eigenschaftenfensters Assistent-Typ.|  
-|[CSnapInPropertyPageImpl::OnHelp](#onhelp)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **Hilfe** Schaltfläche beim Verwenden des Eigenschaftenfensters Assistent-Typ.|  
-|[CSnapInPropertyPageImpl::OnKillActive](#onkillactive)|Wird vom Framework aufgerufen, wenn die aktuelle Seite nicht mehr aktiv ist.|  
-|[CSnapInPropertyPageImpl::OnQueryCancel](#onquerycancel)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **Abbrechen** Schaltfläche und bevor der Abbruchvorgang stattgefunden hat.|  
-|[CSnapInPropertyPageImpl::OnReset](#onreset)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **zurücksetzen** Schaltfläche beim Verwenden des Eigenschaftenfensters Assistent-Typ.|  
+|[CSnapInPropertyPageImpl::OnApply](#onapply)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **jetzt anwenden** Schaltfläche bei der Verwendung von Eigenschaftenblätter Assistenten-Typ.|  
+|[CSnapInPropertyPageImpl::OnHelp](#onhelp)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **Hilfe** Schaltfläche bei der Verwendung von Eigenschaftenblätter Assistenten-Typ.|  
+|[CSnapInPropertyPageImpl::OnKillActive](#onkillactive)|Vom Framework aufgerufen, wenn die aktuelle Seite nicht mehr aktiv ist.|  
+|[CSnapInPropertyPageImpl::OnQueryCancel](#onquerycancel)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **"Abbrechen"** Schaltfläche und bevor der Abbruchvorgang stattgefunden hat.|  
+|[CSnapInPropertyPageImpl::OnReset](#onreset)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **zurücksetzen** Schaltfläche bei der Verwendung von Eigenschaftenblätter Assistenten-Typ.|  
 |[CSnapInPropertyPageImpl::OnSetActive](#onsetactive)|Vom Framework aufgerufen, wenn die aktuelle Seite aktiv ist.|  
-|[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **wieder** beim Verwenden des Eigenschaftenfensters Assistententyp Schaltfläche.|  
-|[CSnapInPropertyPageImpl::OnWizardFinish](#onwizardfinish)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **Fertig stellen** Schaltfläche beim Verwenden des Eigenschaftenfensters Assistent-Typ.|  
-|[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die `Next` Schaltfläche beim Verwenden des Eigenschaftenfensters Assistent-Typ.|  
-|[CSnapInPropertyPageImpl::QuerySiblings](#querysiblings)|Leitet die aktuelle Nachricht für alle Seiten im Eigenschaftenblatt.|  
-|[CSnapInPropertyPageImpl::SetModified](#setmodified)|Aufruf von aktivieren oder Deaktivieren der **jetzt** Schaltfläche.|  
+|[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **wieder** Schaltfläche bei der Verwendung von Eigenschaftenblätter Assistenten-Typ.|  
+|[CSnapInPropertyPageImpl::OnWizardFinish](#onwizardfinish)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die **Fertig stellen** Schaltfläche bei der Verwendung von Eigenschaftenblätter Assistenten-Typ.|  
+|[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|Vom Framework aufgerufen, wenn der Benutzer klickt auf die `Next` Schaltfläche bei der Verwendung von Eigenschaftenblätter Assistenten-Typ.|  
+|[CSnapInPropertyPageImpl::QuerySiblings](#querysiblings)|Leitet die aktuelle Nachricht für alle Seiten des Eigenschaftsblatts an.|  
+|[CSnapInPropertyPageImpl::SetModified](#setmodified)|Aufruf zu aktivieren oder Deaktivieren der **jetzt anwenden** Schaltfläche.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CSnapInPropertyPageImpl::m_psp](#m_psp)|Windows **PROPSHEETPAGE** Struktur anhand der `CSnapInPropertyPageImpl` Objekt.|  
+|[CSnapInPropertyPageImpl::m_psp](#m_psp)|Die Windows **PROPSHEETPAGE** Struktur verwendet werden, indem die `CSnapInPropertyPageImpl` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CSnapInPropertyPageImpl`Stellt eine grundlegende Implementierung für ein Snap-in-Eigenschaft Page-Objekt. Die grundlegenden Funktionen einer Eigenschaftenseite-Snap-in werden mithilfe von mehrere Schnittstellen implementiert und Zuordnen von Typen.  
+ `CSnapInPropertyPageImpl`Stellt eine grundlegende Implementierung für ein Snap-in-Eigenschaft Page-Objekt. Die grundlegenden Funktionen einer Eigenschaftenseite-Snap-in werden mit mehrere Schnittstellen implementiert, und ordnen Typen.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `CDialogImplBase`  
@@ -114,16 +114,16 @@ CSnapInPropertyPageImpl : public CDialogImplBase
  **Header:** atlsnap.h  
   
 ##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
- Rufen Sie diese Funktion aus, nachdem die Daten in eine Seite mit einem modalen Eigenschaftenblatt eine nicht behebbare Änderung vorgenommen wurde.  
+ Mit dieser Funktion werden, nachdem die Daten in einer Seite eines modalen Eigenschaftenblatts eine nicht behebbare Änderung vorgenommen wurde.  
   
 ```
 void CancelToClose();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion ändert die **OK** -Schaltfläche, um **schließen** und Deaktivieren der **Abbrechen** Schaltfläche. So ändern Sie Warnungen, die der Benutzer, dass eine Änderung dauerhaft und die Änderungen rückgängig gemacht werden kann.  
+ Diese Funktion ändert sich die **OK** -Schaltfläche, um **schließen** und Deaktivieren der **"Abbrechen"** Schaltfläche. So ändern Sie Warnungen, die der Benutzer, dass eine Änderung dauerhaft und die Änderungen wird nicht abgebrochen werden kann.  
   
- Die `CancelToClose` Memberfunktion "nothing" in einem nicht modalen Eigenschaftenblatts, da kein nicht modalen Eigenschaftenblatts kein **Abbrechen** Schaltfläche standardmäßig.  
+ Die `CancelToClose` Memberfunktion ist "nothing" in einem nicht modalen Eigenschaftenblatts, da ein nicht modalen Eigenschaftenblatts keinen hat eine **"Abbrechen"** Schaltfläche standardmäßig.  
   
 ##  <a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
  Erstellt ein `CSnapInPropertyPageImpl`-Objekt.  
@@ -137,20 +137,20 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
  [in] Der Titel der Eigenschaftenseite.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufen, um die zugrunde liegende Struktur zu initialisieren, [CSnapInPropertyPageImpl::Create](#create).  
+ Um die zugrunde liegende Struktur zu initialisieren, rufen [CSnapInPropertyPageImpl::Create](#create).  
   
 ##  <a name="create"></a>CSnapInPropertyPageImpl::Create  
- Rufen Sie diese Funktion, um die zugrunde liegende Struktur der Seite zu initialisieren.  
+ Rufen Sie diese Funktion, um die zugrunde liegende Struktur der Eigenschaftenseite zu initialisieren.  
   
 ```
 HPROPSHEETPAGE Create();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Handle für ein **PROPSHEETPAGE** -Struktur, die die Attribute der neu erstellte Eigenschaftenseite enthält.  
+ Ein Handle für ein **PROPSHEETPAGE** Struktur, die die Attribute der neu erstellte Eigenschaftenseite enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie zuerst [CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl) vor dem Aufruf dieser Funktion.  
+ Sie sollten zuerst Aufrufen [CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl) vor dem Aufrufen dieser Funktion.  
   
 ##  <a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
  `m_psp`ist eine Struktur, deren Mitglieder die Merkmale des speichern **PROPSHEETPAGE**.  
@@ -160,39 +160,39 @@ PROPSHEETPAGE m_psp;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Struktur, um die Darstellung einer Eigenschaftenseite zu initialisieren, sobald es erstellt wurde.  
+ Verwenden Sie diese Struktur, um die Darstellung einer Eigenschaftenseite initialisiert werden, nachdem es erstellt wurde.  
   
- Weitere Informationen zu dieser Struktur, die eine Auflistung von Membern, einschließlich finden Sie unter [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Weitere Informationen zu dieser Struktur, einschließlich einer Liste der Member, finden Sie unter [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
- Diese Member-Funktion wird aufgerufen, wenn der Benutzer klickt auf die **OK** oder **jetzt** Schaltfläche.  
+ Diese Memberfunktion wird aufgerufen, wenn der Benutzer klickt auf die **OK** oder **jetzt anwenden** Schaltfläche.  
   
 ```
 BOOL OnApply();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Änderungen akzeptiert werden; andernfalls 0.  
+ Wert ungleich NULL, wenn die Änderungen zulässig sind; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Vor dem `OnApply` kann aufgerufen werden, durch das Framework Sie aufgerufen hat, `SetModified` und legen Sie den Parameter auf **TRUE**. Dies aktiviert die **jetzt** Schaltfläche, sobald der Benutzer eine Änderung auf der Eigenschaftenseite vornimmt.  
+ Vor dem `OnApply` kann aufgerufen werden, durch das Framework Sie aufgerufen hat, `SetModified` und legen Sie die Parameter auf **"true"**. Dies aktiviert die **jetzt anwenden** Schaltfläche werden, sobald der Benutzer eine Änderung auf der Eigenschaftenseite vornimmt.  
   
- Überschreiben Sie diese Memberfunktion, um das Programm gibt, klickt der Benutzer angeben, welche Aktion der **jetzt** Schaltfläche. Beim Überschreiben von die Funktion zurückgeben sollte **TRUE** um Änderungen zu übernehmen und **FALSE** verhindern, dass die Änderungen wirksam.  
+ Überschreiben Sie diese Memberfunktion zum angeben, welche Aktion das Programm wird, wenn der Benutzer klickt auf die **jetzt anwenden** Schaltfläche. Zum Überschreiben, sollte die Funktion zurückgeben **"true"** zum Übernehmen der Änderungen und **"false"** um zu verhindern, dass die Änderungen wirksam.  
   
- Die standardmäßige Implementierung des `OnApply` gibt **TRUE**.  
+ Die standardmäßige Implementierung des `OnApply` gibt **"true"**.  
   
 ##  <a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
- Diese Member-Funktion wird aufgerufen, wenn der Benutzer klickt auf die **Hilfe** Schaltfläche für die Eigenschaftenseite.  
+ Diese Memberfunktion wird aufgerufen, wenn der Benutzer klickt auf die **Hilfe** Schaltfläche für die Eigenschaftsseite ".  
   
 ```
 void OnHelp();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Memberfunktion zum Anzeigen der Hilfe für die Eigenschaftenseite.  
+ Überschreiben Sie diese Memberfunktion zum Anzeigen der Hilfe für die Eigenschaftsseite ".  
   
 ##  <a name="onkillactive"></a>CSnapInPropertyPageImpl::OnKillActive  
- Diese Member-Funktion wird aufgerufen, wenn die Seite nicht mehr die aktive Seite ist.  
+ Diese Memberfunktion wird aufgerufen, wenn die Seite nicht mehr die aktive Seite ist.  
   
 ```
 BOOL OnKillActive();
@@ -202,52 +202,52 @@ BOOL OnKillActive();
  Wert ungleich NULL, wenn die Daten erfolgreich aktualisiert wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Memberfunktion Objektdaten Validierung Aufgaben.  
+ Überschreiben Sie diese Memberfunktion, um spezielle Data Validation Aufgaben auszuführen.  
   
 ##  <a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
- Diese Member-Funktion wird aufgerufen, wenn der Benutzer klickt auf die **Abbrechen** Schaltfläche und vor dem Abbrechen Aktion stattgefunden hat.  
+ Diese Memberfunktion wird aufgerufen, wenn der Benutzer klickt auf die **"Abbrechen"** Schaltfläche und bevor der Abbruchvorgang Aktion stattgefunden hat.  
   
 ```
 BOOL OnQueryCancel();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL an den Vorgang abbrechen können; andernfalls 0.  
+ Ungleich, wenn der Vorgang "Abbrechen" zugelassen; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Member-Funktion, um eine Aktion anzugeben, das Programm akzeptiert, klickt der Benutzer, die **Abbrechen** Schaltfläche.  
+ Überschreiben Sie diese Memberfunktion, um eine Aktion anzugeben, das Programm akzeptiert, wenn der Benutzer klickt auf, die **"Abbrechen"** Schaltfläche.  
   
- Die standardmäßige Implementierung des `OnQueryCancel` gibt **TRUE**.  
+ Die standardmäßige Implementierung des `OnQueryCancel` gibt **"true"**.  
   
 ##  <a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
- Diese Member-Funktion wird aufgerufen, wenn der Benutzer klickt auf die **Abbrechen** Schaltfläche.  
+ Diese Memberfunktion wird aufgerufen, wenn der Benutzer klickt auf die **"Abbrechen"** Schaltfläche.  
   
 ```
 void OnReset();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn diese Funktion aufgerufen wird, ändert sich in alle Eigenschaftenseiten, die vorgenommen wurden, durch den Benutzer, die Sie zuvor auf die **jetzt** Schaltfläche werden verworfen, und das Eigenschaftenfenster behält den Fokus.  
+ Wenn diese Funktion aufgerufen wird, ändert sich in allen Eigenschaftenseiten, die durch den Benutzer, die Sie zuvor auf vorgenommen wurden die **jetzt anwenden** Schaltfläche werden verworfen, und das Eigenschaftenblatt behält den Fokus.  
   
- Überschreiben Sie diese Memberfunktion zum angeben, welche Aktion das Programm akzeptiert, klickt der Benutzer die **Abbrechen** Schaltfläche.  
+ Überschreiben Sie diese Memberfunktion zum angeben, welche Aktion das Programm akzeptiert, wenn der Benutzer klickt auf die **"Abbrechen"** Schaltfläche.  
   
 ##  <a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
- Diese Member-Funktion wird aufgerufen, wenn die Seite vom Benutzer ausgewählt und wird die aktive Seite.  
+ Diese Memberfunktion wird aufgerufen, wenn die Seite vom Benutzer ausgewählt wird und als aktive Seite.  
   
 ```
 BOOL OnSetActive();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Seite erfolgreich aktiviert wurde; andernfalls 0.  
+ Der Wert ist ungleich NULL, wenn die Seite active festgelegt wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Memberfunktion, um Aufgaben auszuführen, wenn eine Seite aktiviert wird. Die Überschreibung von dieser Memberfunktion sollten die Standardversion aufrufen, bevor eine andere Verarbeitung erfolgt.  
+ Überschreiben Sie diese Memberfunktion, um Aufgaben auszuführen, wenn eine Seite aktiviert wird. Die Außerkraftsetzung von dieser Memberfunktion sollten die Standardversion aufrufen, bevor weitere Verarbeitungsschritte ausgeführt wird.  
   
- Die standardmäßige Implementierung gibt **TRUE**.  
+ Gibt die standardmäßige Implementierung **"true"**.  
   
 ##  <a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
- Diese Member-Funktion wird aufgerufen, wenn der Benutzer klickt auf die **wieder** Schaltfläche in einem Assistenten.  
+ Diese Memberfunktion wird aufgerufen, wenn der Benutzer klickt auf die **wieder** Schaltfläche in einem Assistenten.  
   
 ```
 BOOL OnWizardBack();
@@ -259,26 +259,26 @@ BOOL OnWizardBack();
   
 -   1, um zu verhindern, dass die Seite ändern.  
   
- Geben Sie zum Anzeigen einer Seite als nächste zurück des Bezeichners des Dialogfelds angezeigt werden.  
+ Geben Sie zum Springen zu einer Seite als der nächste zurück den Bezeichner des Dialogfelds angezeigt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Member-Funktion, um eine Aktion anzugeben, der Benutzer muss beim Ausführen, der **wieder** geklickt wird.  
+ Überschreiben Sie diese Memberfunktion, um eine Aktion anzugeben, der Benutzer muss beim Ausführen, der **wieder** geklickt wird.  
   
 ##  <a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
- Diese Member-Funktion wird aufgerufen, wenn der Benutzer klickt auf die **Fertig stellen** Schaltfläche in einem Assistenten.  
+ Diese Memberfunktion wird aufgerufen, wenn der Benutzer klickt auf die **Fertig stellen** Schaltfläche in einem Assistenten.  
   
 ```
 BOOL OnWizardFinish();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Eigenschaftenfenster zerstört wird, wenn der Assistent abgeschlossen ist; andernfalls&0; (null).  
+ Wert ungleich NULL, wenn das Eigenschaftenfenster zerstört wird, nach Abschluss des Assistenten; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Member-Funktion, um eine Aktion anzugeben, der Benutzer muss beim Ausführen, der **Fertig stellen** geklickt wird.  
+ Überschreiben Sie diese Memberfunktion, um eine Aktion anzugeben, der Benutzer muss beim Ausführen, der **Fertig stellen** geklickt wird.  
   
 ##  <a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
- Diese Member-Funktion wird aufgerufen, wenn der Benutzer klickt auf die `Next` Schaltfläche in einem Assistenten.  
+ Diese Memberfunktion wird aufgerufen, wenn der Benutzer klickt auf die `Next` Schaltfläche in einem Assistenten.  
   
 ```
 BOOL OnWizardNext();
@@ -290,10 +290,10 @@ BOOL OnWizardNext();
   
 -   1, um zu verhindern, dass die Seite ändern.  
   
- Geben Sie zum Anzeigen einer Seite als nächste zurück des Bezeichners des Dialogfelds angezeigt werden.  
+ Geben Sie zum Springen zu einer Seite als der nächste zurück den Bezeichner des Dialogfelds angezeigt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Member-Funktion, um eine Aktion anzugeben, der Benutzer muss beim Ausführen, der `Next` geklickt wird.  
+ Überschreiben Sie diese Memberfunktion, um eine Aktion anzugeben, der Benutzer muss beim Ausführen, der `Next` Schaltfläche geklickt wird.  
   
 ##  <a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
  Rufen Sie diese Memberfunktion zum Weiterleiten einer Nachricht auf jeder Seite im Eigenschaftenblatt.  
@@ -310,13 +310,13 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
  [in] Gibt zusätzliche Nachricht abhängige Informationen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Nachricht nicht soll, können Sie die nächste Seite der Eigenschaft weitergeleitet werden; andernfalls&0; (null).  
+ Wert ungleich NULL, wenn die Nachricht an die nächste Eigenschaftenseite nicht weitergeleitet werden soll; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn eine Seite einen Wert ungleich NULL zurückgibt, sendet das Eigenschaftenblatt die Nachricht keine nachfolgenden Seiten.  
+ Wenn eine Seite einen Wert ungleich NULL zurückgibt, sendet Eigenschaftenblatt die Nachricht keine nachfolgenden Seiten.  
   
 ##  <a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
- Rufen Sie diese Memberfunktion zum Aktivieren oder Deaktivieren der **jetzt** Schaltfläche, ob die Einstellungen auf der Eigenschaftenseite auf die entsprechenden externen Objekt angewendet werden soll.  
+ Rufen Sie diese Memberfunktion zum Aktivieren oder Deaktivieren der **jetzt anwenden** Schaltfläche basierend auf, ob die Einstellungen auf der Eigenschaftenseite auf die entsprechenden externen Objekt angewendet werden soll.  
   
 ```
 void SetModified(BOOL bChanged = TRUE);
@@ -324,11 +324,11 @@ void SetModified(BOOL bChanged = TRUE);
   
 ### <a name="parameters"></a>Parameter  
  `bChanged`  
- [in] **TRUE** an, dass die Einstellungen für die Eigenschaft sie angewendet wurden, seit der letzten geändert wurden **FALSE** angeben, dass die Einstellungen für die Eigenschaft angewendet wurden oder ignoriert werden sollen.  
+ [in] **"True"** , um anzugeben, dass die eigenschafteneinstellungen für die Seite sie angewendet wurden, seit der letzten Ausführung geändert wurde **"False"** angeben, dass die eigenschafteneinstellungen angewendet wurden, oder ignoriert werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Eigenschaftenblatt verfolgt, Nachverfolgen der Seiten sind "fehlerhaft" anzeigt, d. h., die Eigenschaftenseiten für die Sie aufgerufen haben **SetModified (TRUE)**. Die **jetzt** Schaltfläche ist immer aktiviert, wenn Sie aufrufen **SetModified (TRUE)** für eine der Seiten. Die **jetzt** Schaltfläche wird deaktiviert, wenn Sie aufrufen **SetModified (FALSE)** für eine der Seiten, aber nur, wenn ist keine der anderen Seiten "unsaubere".  
+ Eigenschaftenblatt beibehält, Nachverfolgen der Seiten werden "unsaubere", d. h., die Eigenschaftenseiten für das Sie aufgerufen haben **SetModified (TRUE)**. Die **jetzt anwenden** Schaltfläche wird immer aktiviert, wenn Sie rufen **SetModified (TRUE)** für eine der Seiten. Die **jetzt anwenden** Schaltfläche wird deaktiviert, wenn Sie aufrufen **SetModified (FALSE)** für eine der Seiten, aber nur wenn Sie keines der anderen Seiten "unsaubere".  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 
