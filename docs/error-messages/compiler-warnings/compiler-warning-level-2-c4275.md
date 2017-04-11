@@ -1,5 +1,5 @@
 ---
-title: Compiler &quot;C4275 (Stufe 2)&quot; | Microsoft-Dokumentation
+title: Compilerwarnung (Stufe 2) C4275 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,33 +34,33 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 873a96d4595b75ff6b9567500723c32d7ba5bd2b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f9ecbe931c14cfde1d48438bdb76f70452e324d3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-warning-level-2-c4275"></a>Compilerwarnung (Stufe 2) C4275
-nicht-DLL-Schnittstelle Classkey 'Bezeichner' als Basisklasse verwendet für die DLL-Schnittstelle Klassenschlüssel "Bezeichner"  
+nicht - DLL-Schnittstelle LocalizedText 'Bezeichner' als Basisklasse verwendet für DLL-Schnittstelle LocalizedText "Bezeichner"  
   
  Eine exportierte Klasse wurde von einer Klasse abgeleitet, die nicht exportiert wurde.  
   
- Um die Gefahr der Beschädigung von Daten zu minimieren, exportieren Sie eine Klasse mit [__declspec(dllexport)](../../cpp/dllexport-dllimport.md), sicher, dass:  
+ Die Möglichkeit der Beschädigung von Daten zu minimieren, wenn eine Klasse mit exportieren [__declspec(dllexport)](../../cpp/dllexport-dllimport.md), sicherstellen, dass:  
   
--   Alle statischen Daten erfolgt über Funktionen, die aus der DLL exportiert werden.  
+-   Alle statischen Daten erfolgt über Funktionen, die von der DLL exportiert werden.  
   
--   Inlinemethoden der Klasse dürfen statische Daten ändern.  
+-   Inlinemethoden der Klasse können statische Daten ändern.  
   
--   Inlinemethoden der Klasse verwenden CRT-Funktionen oder andere Bibliotheksfunktionen verwenden statische Daten.  
+-   Inlinemethoden Ihrer Klasse verwenden CRT-Funktionen oder andere Bibliotheksfunktionen statische Daten.  
   
--   Keine Funktionen Inlinemethoden der Klasse verwenden CRT-Funktionen oder andere Bibliotheksfunktionen, z. B. Sie statische auf Daten zugreifen.  
+-   Keine Inline-Klassenfunktionen verwenden CRT-Funktionen oder andere Bibliotheksfunktionen, z. B. greifen Sie auf statische Daten.  
   
--   Keine Methoden der Klasse (unabhängig von inlining) können Typen verwenden, da die Instanziierung in der EXE und DLL statische Daten verfügen.  
+-   Keine Methoden der Klasse (unabhängig von inlining) können auch Typen, für die Instanziierung in der EXE und DLL statische Datenunterschiede haben.  
   
- Sie können vermeiden, Exportieren von Klassen definieren, die eine DLL, die definiert eine Klasse mit virtuellen Funktionen sowie Funktionen aufrufen kann, instanziieren und Löschen von Objekten des Typs.  Sie können dann einfach virtuelle Funktionen für den Typ aufrufen.  
+ Sie können vermeiden, Exportieren von Klassen definieren, die eine DLL, die definiert eine Klasse mit virtuellen Funktionen und Funktionen aufrufen kann, instanziieren und Löschen von Objekten des Typs.  Sie können dann virtuelle Funktionen nur für den Typ aufrufen.  
   
- Weitere Informationen zum Exportieren von Vorlagen finden Sie unter [Http://support.microsoft.com/default.aspx?scid=KB; EN-US;&16895;8](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).  
+ Weitere Informationen zum Exportieren von Vorlagen finden Sie unter [Http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).  
   
- C4275 kann in Visual C++ ignoriert werden, wenn Sie von einem Typ in der C++-Standardbibliothek, die eine Debugversion kompilieren (**/MTd**) und, in dem die Fehlermeldung des Compilers auf _Container_base bezieht.  
+ C4275 kann in Visual C++ ignoriert werden, wenn Sie aus einem Typ in der C++-Standardbibliothek, die eine Debugversion kompilieren abgeleitet werden (**/MTd**) und, in dem die Fehlermeldung des Compilers auf _Container_base bezieht.  
   
 ```  
 // C4275.cpp  

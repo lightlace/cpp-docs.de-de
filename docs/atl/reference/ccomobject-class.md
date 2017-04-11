@@ -1,5 +1,5 @@
 ---
-title: CComObject Klasse | Microsoft-Dokumentation
+title: CComObject Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,13 +40,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5f752b96d4a722fbddfcc9e5be3a82b8b12a86a1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 1fbf6a09b4085df4ac6918d261e2b9d625c98c08
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomobject-class"></a>CComObject-Klasse
-Diese Klasse implementiert **IUnknown** für ein nicht zusammengesetztes Objekt.  
+Diese Klasse implementiert **IUnknown** für eine aggregierte Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +57,7 @@ class CComObject : public Base
   
 #### <a name="parameters"></a>Parameter  
  `Base`  
- Die Klasse abgeleitet [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das Objekt unterstützt werden sollen.  
+ Die Klasse abgeleitet [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie gut ebenso andere Schnittstellen für das Objekt unterstützt werden sollen.  
   
 ## <a name="members"></a>Mitglieder  
   
@@ -72,13 +72,13 @@ class CComObject : public Base
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CComObject::AddRef](#addref)|Inkrementiert den Verweiszähler für das Objekt.|  
+|[CComObject::AddRef](#addref)|Inkrementiert den Verweiszähler für das Objekt an.|  
 |[CComObject::CreateInstance](#createinstance)|(Statisch) Erstellt ein neues `CComObject` Objekt.|  
 |[CComObject::QueryInterface](#queryinterface)|Ruft einen Zeiger auf die angeforderte Schnittstelle ab.|  
 |[CComObject::Release](#release)|Dekrementiert den Verweiszähler für das Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComObject`implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für ein nicht zusammengesetztes Objekt. Ruft jedoch zu `QueryInterface`, `AddRef`, und **Version** an delegiert werden `CComObjectRootEx`.  
+ `CComObject`implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für eine aggregierte Objekt. Allerdings Aufrufe von `QueryInterface`, `AddRef`, und **Release** werden an delegiert `CComObjectRootEx`.  
   
  Weitere Informationen zur Verwendung von `CComObject`, finden Sie im Artikel [Grundlagen von ATL-COM-Objekte](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -88,20 +88,20 @@ class CComObject : public Base
  `CComObject`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** Standardschnittstellen  
+ **Header:** atlcom.h  
   
 ##  <a name="addref"></a>CComObject::AddRef  
- Inkrementiert den Verweiszähler für das Objekt.  
+ Inkrementiert den Verweiszähler für das Objekt an.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Diese Funktion gibt den neuen inkrementiert Verweiszähler für das Objekt. Dieser Wert möglicherweise hilfreich bei der Diagnose oder testen.  
+ Diese Funktion gibt den neuen inkrementierte Verweiszähler für das Objekt zurück. Dieser Wert kann für die Diagnose oder testen hilfreich sein.  
   
 ##  <a name="ccomobject"></a>CComObject::CComObject  
- Der Konstruktor inkrementiert die Sperrenanzahl des Moduls.  
+ Der Konstruktor inkrementiert die Anzahl der Module Sperre.  
   
 ```
 CComObject(void* = NULL);
@@ -109,12 +109,12 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>Parameter  
  **"void"\***  
- [in] Dieses unbenannte Parameter wird nicht verwendet. Für die Symmetrie mit anderen vorhanden **CCom***XXX*`Object`*XXX* Konstruktoren.  
+ [in] Dieses unbenannte Parameter wird nicht verwendet. Es vorhanden ist, für die Symmetrie mit anderen **CCom***XXX*`Object`*XXX* Konstruktoren.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Destruktor verringert es.  
   
- Wenn ein `CComObject`-abgeleitetes Objekt wird erfolgreich erstellt mithilfe der **neue** Operatoren und der Verweiszähler ist 0. Um den Verweiszähler auf den korrekten Wert (1) festzulegen, stellen Sie einen Aufruf der [AddRef](#addref) Funktion.  
+ Wenn eine `CComObject`-abgeleitete Objekt wird erfolgreich erstellt mithilfe der **neue** -Operator, der der Verweiszähler ist 0. Um den Verweiszähler dieser Planergruppe den richtigen Wert (1) festzulegen, nehmen Sie einen Aufruf der [AddRef](#addref) Funktion.  
   
 ##  <a name="dtor"></a>CComObject:: ~ CComObject  
  Der Destruktor.  
@@ -124,11 +124,11 @@ CComObject();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Alle zugeordnete Ressourcen freigegeben, Aufrufe [FinalRelease](ccomobjectrootex-class.md#finalrelease), und verringert das Modul Sperrenanzahl.  
+ Alle zugeordnete Ressourcen freigegeben, Aufrufe [FinalRelease](ccomobjectrootex-class.md#finalrelease), und verringert die Modul Sperrenanzahl.  
 
   
 ##  <a name="createinstance"></a>CComObject::CreateInstance  
- Die statische Funktion können Sie zum Erstellen eines neuen **CComObject** `Base` ** > ** -Objekts, ohne den Aufwand für das [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Diese statische Funktion können Sie zum Erstellen eines neuen **CComObject** `Base` **>** Objekt, ohne den Aufwand für [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -136,20 +136,20 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>Parameter  
  `pp`  
- [out] Ein Zeiger auf eine **CComObject** `Base` ** > ** Zeiger. Wenn `CreateInstance` ist fehlgeschlagen, `pp` Wert **NULL**.  
+ [out] Ein Zeiger auf eine **CComObject** `Base` **>** Zeiger. Wenn `CreateInstance` ist fehlgeschlagen, `pp` festgelegt ist, um **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Das zurückgegebene Objekt besitzt einen Verweiszähler&0; (null), rufen Sie also `AddRef` verwenden Sie dann sofort **Version** den Verweis auf den Objektzeiger freizugeben, wenn Sie fertig sind.  
+ Das zurückgegebene Objekt weist einer Verweisanzahl von 0 (null), weshalb `AddRef` verwenden Sie dann sofort **Version** um den Verweis auf die Objektzeiger freizugeben, wenn Sie fertig sind.  
   
- Wenn Sie nicht den Zugriff auf das Objekt weisen müssen, aber dennoch, erstellen Sie ein neues Objekt der Mehraufwand für möchten `CoCreateInstance`, verwenden Sie [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) stattdessen.  
+ Wenn Sie nicht den Zugriff auf das Objekt weisen müssen, aber trotzdem zum Erstellen eines neuen Objekts ohne den Aufwand für `CoCreateInstance`, verwenden Sie [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) stattdessen.  
   
 ### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_ATL_COM&#38;](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM #38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
   
- [!code-cpp[NVC_ATL_COM NR.&39;](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM #39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
 ##  <a name="queryinterface"></a>CComObject::QueryInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
@@ -165,10 +165,10 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
  [in] Der Bezeichner der angeforderten Schnittstelle.  
   
  `ppvObject`  
- [out] Ein Zeiger auf den Schnittstellenzeiger vom `iid`. Wenn das Objekt diese Schnittstelle nicht unterstützt `ppvObject` Wert **NULL**.  
+ [out] Ein Zeiger auf den Schnittstellenzeiger, der durch `iid`. Wenn das Objekt nicht über diese Schnittstelle unterstützt `ppvObject` festgelegt ist, um **NULL**.  
   
  `pp`  
- [out] Ein Zeiger auf den Schnittstellenzeiger vom Typ `Q`. Wenn das Objekt diese Schnittstelle nicht unterstützt `pp` Wert **NULL**.  
+ [out] Ein Zeiger auf den Schnittstellenzeiger vom Typ `Q`. Wenn das Objekt nicht über diese Schnittstelle unterstützt `pp` festgelegt ist, um **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
@@ -181,12 +181,12 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Diese Funktion gibt den neuen dekrementiert Verweiszähler für das Objekt. In Debugbuilds möglicherweise der Rückgabewert hilfreich für die Diagnose oder testen. In nicht-Debugbuilds **Version** gibt immer 0 zurück.  
+ Diese Funktion gibt den neuen wieder um eins erniedrigt Verweiszähler für das Objekt zurück. Debug-Builds möglicherweise der Rückgabewert bei der Diagnose hilfreich oder testen. In nicht-Debugbuilds **Version** gibt immer 0 zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CComAggObject-Klasse](../../atl/reference/ccomaggobject-class.md)   
  [CComPolyObject-Klasse](../../atl/reference/ccompolyobject-class.md)   
- [DECLARE_AGGREGATABLE](http://msdn.microsoft.com/library/e7e568d7-04e0-4226-b5dc-224deed229ab)   
- [DECLARE_NOT_AGGREGATABLE](http://msdn.microsoft.com/library/2a116c7c-bab8-4f2a-a9ad-03d7aba0f762)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
+ [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 

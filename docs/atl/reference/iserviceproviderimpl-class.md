@@ -1,5 +1,5 @@
 ---
-title: Klasse IServiceProviderImpl | Microsoft-Dokumentation
+title: IServiceProviderImpl Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,13 +37,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 69a59fe23b3ca787dee86b1bbdc6775a44903f91
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 1742929a31e244e853b426324894e5c8666ebf99
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl-Klasse
-Diese Klasse enthält die standardmäßige Implementierung der `IServiceProvider` Schnittstelle.  
+Diese Klasse stellt eine Standardimplementierung von der `IServiceProvider` Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,7 +54,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
 #### <a name="parameters"></a>Parameter  
  `T`  
- Abgeleitet von die Klasse `IServiceProviderImpl`.  
+ Die Klasse abgeleitet `IServiceProviderImpl`.  
   
 ## <a name="members"></a>Mitglieder  
   
@@ -62,16 +62,16 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IServiceProviderImpl:: QueryService](#queryservice)|Erstellt oder den angegebenen Dienst zugreift, und gibt einen Schnittstellenzeiger auf die angegebene Schnittstelle für den Dienst zurück.|  
+|[IServiceProviderImpl:: QueryService](#queryservice)|Erstellt oder greift auf den angegebenen Dienst aus, und gibt einen Schnittstellenzeiger auf die angegebene Schnittstelle für den Dienst zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `IServiceProvider` Schnittstelle sucht nach einem Dienst anhand seiner GUID angegeben ist, und gibt den Schnittstellenzeiger für die angeforderte Schnittstelle für den Dienst. Klasse `IServiceProviderImpl` stellt eine Standardimplementierung dieser Schnittstelle.  
+ Die `IServiceProvider` Schnittstelle sucht nach einem Dienst, angegeben durch ihre GUID Schnittstellenzeiger und gibt die für die angeforderte Schnittstelle für den Dienst. Klasse `IServiceProviderImpl` stellt eine Standardimplementierung dieser Schnittstelle.  
   
- **IServiceProviderImpl** gibt eine Methode an: [QueryService](#queryservice), die erstellt oder den angegebenen Dienst zugreift und gibt einen Schnittstellenzeiger auf die angegebene Schnittstelle für den Dienst zurück.  
+ **IServiceProviderImpl** gibt eine Methode: ["QueryService"](#queryservice), das erstellt wird, oder greift auf den angegebenen Dienst und gibt einen Schnittstellenzeiger auf die angegebene Schnittstelle für den Dienst zurück.  
   
- `IServiceProviderImpl`verwendet eine dienstzuordnung, beginnend mit [BEGIN_SERVICE_MAP](http://msdn.microsoft.com/library/3c6ae156-8776-4588-8227-2d234daec236) und endend mit [END_SERVICE_MAP](http://msdn.microsoft.com/library/9a35d02a-014c-413a-bb0b-bcca11ab45a6).  
+ `IServiceProviderImpl`Mithilfe eine dienstzuordnung, beginnend mit [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) und endend mit [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
   
- Die dienstzuordnung enthält zwei Einträge: [SERVICE_ENTRY](http://msdn.microsoft.com/library/e65ff9cc-15e8-41cf-b686-f99eb6686ca9), gibt einen angegebenen Dienst-Id (SID), die vom Objekt unterstützten an und [SERVICE_ENTRY_CHAIN](http://msdn.microsoft.com/library/09be4ce4-3ccd-4ff2-a95e-a9d5275354c1), welche `QueryService` Kette zu einem anderen Objekt.  
+ Die Dienst-Karte enthält zwei Einträge angezeigt werden: [SERVICE_ENTRY](service-map-macros.md#service_entry), gibt eine angegebene Dienst-Id (SID) unterstützt, von dem Objekt an und [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), welche Aufrufe `QueryService` zu verketten, in ein anderes Objekt.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `IServiceProvider`  
@@ -79,10 +79,10 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
  `IServiceProviderImpl`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** Standardschnittstellen  
+ **Header:** atlcom.h  
   
 ##  <a name="queryservice"></a>IServiceProviderImpl:: QueryService  
- Erstellt oder den angegebenen Dienst zugreift, und gibt einen Schnittstellenzeiger auf die angegebene Schnittstelle für den Dienst zurück.  
+ Erstellt oder greift auf den angegebenen Dienst aus, und gibt einen Schnittstellenzeiger auf die angegebene Schnittstelle für den Dienst zurück.  
   
 ```
 STDMETHOD(QueryService)(
@@ -96,37 +96,37 @@ STDMETHOD(QueryService)(
  Ein Zeiger auf eine Dienst-ID (SID).  
   
  [IN]`riid`  
- Bezeichner der Schnittstelle, auf die der Aufrufer zugreifen.  
+ Der Bezeichner der Schnittstelle, auf die der Aufrufer Zugriff zu erhalten.  
   
  [OUT]`ppvObj`  
  Indirekter Zeiger auf die angeforderte Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das zurückgegebene `HRESULT` Wert ist einer der folgenden:  
+ Das zurückgegebene `HRESULT` Wert ist eine der folgenden:  
   
 |Rückgabewert|Bedeutung|  
 |------------------|-------------|  
-|S_OK|Der Dienst wurde erfolgreich erstellt oder abgerufen.|  
+|S_OK|Der Dienst wurde erfolgreich erstellt oder abgerufen werden.|  
 |E_INVALIDARG|Mindestens eines der Argumente ist ungültig.|  
 |E_OUTOFMEMORY|Speicher ist nicht ausreichend, um den Dienst zu erstellen.|  
 |E_UNEXPECTED|Es ist ein unbekannter Fehler aufgetreten.|  
 |E_NOINTERFACE|Die angeforderte Schnittstelle ist nicht Teil des Diensts oder der Dienst ist unbekannt.|  
   
 ### <a name="remarks"></a>Hinweise  
- `QueryService`Gibt einen indirekten Zeiger auf die angeforderte Schnittstelle im angegebenen Dienst. Der Aufrufer ist verantwortlich für die Freigabe this-Zeiger, wenn er nicht mehr benötigt wird.  
+ `QueryService`Gibt einen indirekten Zeiger auf die angeforderte Schnittstelle in den angegebenen Dienst. Der Aufrufer ist verantwortlich für die Freigabe dieser Zeiger, wenn er nicht mehr benötigt wird.  
   
- Beim Aufruf von `QueryService`, übergeben Sie einen Service-Bezeichner ( `guidService`) und einen Schnittstellenbezeichner ( `riid`). Die `guidService` gibt den Dienst zugreifen, werden soll und die `riid` identifiziert eine Schnittstelle, die Teil des Diensts. Im Gegenzug erhalten Sie einen indirekten Zeiger auf die Schnittstelle.  
+ Beim Aufruf `QueryService`, übergeben Sie einen Service-Bezeichner ( `guidService`) und einen Schnittstellenbezeichner ( `riid`). Die `guidService` gibt den Dienst zugreifen, werden sollen und die `riid` identifiziert eine Schnittstelle, die Teil des Diensts ist. Im Gegenzug erhalten Sie einen indirekten Zeiger auf die Schnittstelle an.  
   
  Das Objekt, das die Schnittstelle implementiert, kann auch Schnittstellen implementieren, die von anderen Diensten gehören. Nehmen wir einmal die folgende Situation:  
   
--   Einige dieser Schnittstellen können optional sein. Nicht alle Schnittstellen, die in der Dienstdefinition definiert sind unbedingt auf jede Implementierung des Diensts oder für jedes zurückgegebene Objekt vorhanden.  
+-   Einige dieser Schnittstellen können optional sein. Nicht alle Schnittstellen, die gemäß der Beschreibung des Diensts sind unbedingt vorhanden, auf jede Implementierung des Diensts oder für jedes zurückgegebene Objekt.  
   
--   Im Gegensatz zu Aufrufen von `QueryInterface`, eine anderen Dienst-ID übergeben bedeutet nicht unbedingt, dass ein anderes Component Object Model (COM)-Objekt zurückgegeben wird.  
+-   Im Gegensatz zu Aufrufen `QueryInterface`, übergeben einen anderen Dienstbezeichner bedeutet nicht unbedingt, dass ein anderes Component Object Model (COM)-Objekt zurückgegeben wird.  
   
 -   Das zurückgegebene Objekt möglicherweise weitere Schnittstellen, die nicht Teil der Definition des Diensts sind.  
   
- Zwei verschiedene Dienste, wie z. B. SID_SMyService und SID_SYourService, können beide die gleiche Schnittstelle verwenden, obwohl die Implementierung der Schnittstelle keine gemeinsame zwischen den beiden Diensten möglicherweise. Dies funktioniert, weil ein Aufruf von `QueryService` (SID_SMyService, IID_IDispatch) kann ein anderes Objekt als zurückgeben `QueryService` (SID_SYourService, IID_IDispatch). Identität des Objekts ist nicht angenommen werden, wenn Sie einen anderen Dienstbezeichner angeben.  
+ Zwei verschiedene Dienste, z. B. SID_SMyService und SID_SYourService, können sowohl die Verwendung derselben Schnittstelle angeben, auch wenn die Implementierung der Schnittstelle keine Gemeinsamkeit zwischen den beiden Diensten verfügen. Dies funktioniert, weil ein Aufruf von `QueryService` (SID_SMyService, IID_IDispatch) kann ein anderes Objekt als zurückgeben `QueryService` (SID_SYourService, IID_IDispatch). Objektidentität wird nicht angenommen werden, wenn Sie eine anderen Dienst-ID angeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 

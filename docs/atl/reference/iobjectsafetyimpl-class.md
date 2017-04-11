@@ -1,5 +1,5 @@
 ---
-title: "Fügen Sie IObjectSafetyImpl Klasse | Microsoft-Dokumentation"
+title: "Fügen Sie IObjectSafetyImpl Klasse | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,13 +41,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: cff5995555cd069855f9d7becb9eb8367e80c920
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: cdcc008797e94988fb42fd6239603fa300a84233
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="iobjectsafetyimpl-class"></a>Fügen Sie IObjectSafetyImpl-Klasse
-Diese Klasse enthält die standardmäßige Implementierung der `IObjectSafety` Schnittstelle, damit einen Client zum Abrufen und Festlegen von Sicherheitsstufen für ein Objekt kann.  
+Diese Klasse stellt eine Standardimplementierung von der `IObjectSafety` Schnittstelle, damit einen Client zum Abrufen und Festlegen eines Objekts Sicherheitsstufen kann.  
   
 > [!IMPORTANT]
 >  Diese Klasse und ihre Member können in Anwendungen, die in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden, nicht verwendet werden.  
@@ -61,14 +61,14 @@ class IObjectSafetyImpl
   
 #### <a name="parameters"></a>Parameter  
  `T`  
- Abgeleitet von die Klasse `IObjectSafetyImpl`.  
+ Die Klasse abgeleitet `IObjectSafetyImpl`.  
   
  *dwSupportedSafety*  
- Gibt die unterstützten Sicherheitsoptionen für das Steuerelement. Kann einer der folgenden Werte sein:  
+ Gibt die unterstützten Safety-Optionen für das Steuerelement. Kann einer der folgenden Werte sein:  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_CALLER** die Schnittstelle, die anhand der [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) Parameter `riid` sicher für Skripting gemacht werden sollen.  
+- **INTERFACESAFE_FOR_UNTRUSTED_CALLER** die Schnittstelle, die durch identifiziert die [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) Parameter `riid` sicher für Skripting gemacht werden sollen.  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_DATA** die Schnittstelle, die anhand der `SetInterfaceSafetyOptions` Parameter `riid` sollte während der Initialisierung für nicht vertrauenswürdige Daten vorgenommen werden.  
+- **INTERFACESAFE_FOR_UNTRUSTED_DATA** die Schnittstelle, die durch identifiziert die `SetInterfaceSafetyOptions` Parameter `riid` müssen während der Initialisierung für nicht vertrauenswürdige Daten sicher vorgenommen werden.  
   
 ## <a name="members"></a>Mitglieder  
   
@@ -76,21 +76,21 @@ class IObjectSafetyImpl
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Ruft die Sicherheitsoptionen, die vom Objekt unterstützten sowie die Sicherheitsoptionen, die derzeit für das Objekt festgelegt.|  
-|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Wird das Objekt für die Initialisierung oder scripting sicher.|  
+|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Ruft ab, die vom Objekt unterstützten Sicherheitsoptionen als auch die Safety-Optionen, die derzeit für das Objekt festgelegt.|  
+|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Wird das Objekt für die Initialisierung oder Skripting sicher.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Speichert aktuelle Sicherheitsstufe des Objekts.|  
+|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Speichert aktuelle Sicherheitsstufe des Objekts an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Klasse `IObjectSafetyImpl` bietet eine Standardimplementierung von `IObjectSafety`. Die `IObjectSafety` Schnittstelle ermöglicht einem Client abrufen und Festlegen von Sicherheitsstufen für ein Objekt. Z. B. ein Webbrowser aufrufen kann **IObjectSafety::SetInterfaceSafetyOptions** an ein Steuerelement sicher für die Initialisierung oder sicher für Skripting zu erstellen.  
+ Klasse `IObjectSafetyImpl` stellt eine Standardimplementierung von `IObjectSafety`. Die `IObjectSafety` Schnittstelle ermöglicht es einen Client zum Abrufen und Festlegen eines Objekts Sicherheitsstufen. Beispielsweise kann ein Webbrowser aufrufen **IObjectSafety::SetInterfaceSafetyOptions** ein Steuerelement für die Initialisierung sicheren oder sicher für Skripting vornehmen.  
   
- Beachten Sie, dass die Verwendung der [IMPLEMENTED_CATEGORY](http://msdn.microsoft.com/library/d898ef34-5684-4709-beb9-7114ddd96674) Makro mit dem **CATID_SafeForScripting** und **CATID_SafeForInitializing** Komponentenkategorien bietet eine alternative Möglichkeit, anzugeben, dass eine Komponente sicher ist.  
+ Beachten Sie, dass die Verwendung der [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) Makro mit dem **CATID_SafeForScripting** und **CATID_SafeForInitializing** Komponentenkategorien bietet eine alternative Möglichkeit der Angabe, dass eine Komponente ist.  
   
- **Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
+ **Verwandte Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `IObjectSafety`  
@@ -101,7 +101,7 @@ class IObjectSafetyImpl
  **Header:** atlctl.h  
   
 ##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
- Ruft die Sicherheitsoptionen, die vom Objekt unterstützten sowie die Sicherheitsoptionen, die derzeit für das Objekt festgelegt.  
+ Ruft ab, die vom Objekt unterstützten Sicherheitsoptionen als auch die Safety-Optionen, die derzeit für das Objekt festgelegt.  
   
 ```
 HRESULT GetInterfaceSafetyOptions(  
@@ -114,12 +114,12 @@ HRESULT GetInterfaceSafetyOptions(
  Die Implementierung gibt die entsprechenden Werte für jede Schnittstelle, die von der Implementierung des Objekts unterstützt **IUnknown:: QueryInterface**.  
   
 > [!IMPORTANT]
->  Jedes Objekt, das unterstützt `IObjectSafety` ist dafür verantwortlich, seine eigene Sicherheit und, die für ein beliebiges Objekt delegiert. Der Programmierer muss in Konto Problemen mit dem Code im Kontext des Benutzers ausgeführt, siteübergreifende Skripts und die geeignete Zone Überprüfung durchgeführt.  
+>  Jedes Objekt, das unterstützt `IObjectSafety` ist verantwortlich für seiner eigenen Sicherheitsberechtigungen und, eines beliebigen Objekts delegiert. Der Programmierer muss in Konto Probleme, die durch die Ausführung von Code im Kontext des Benutzers, siteübergreifende Skripterstellung und geeignete Zone wird die Überprüfung durchgeführt.  
   
  Finden Sie unter [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
- Speichert aktuelle Sicherheitsstufe des Objekts.  
+ Speichert aktuelle Sicherheitsstufe des Objekts an.  
   
 ```
 DWORD m_dwCurrentSafety;
@@ -136,14 +136,14 @@ HRESULT SetInterfaceSafetyOptions(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Implementierung gibt **E_NOINTERFACE** für jede Schnittstelle, die von der Implementierung des Objekts nicht unterstützt **IUnknown:: QueryInterface**.  
+ Die Implementierung gibt **E_NOINTERFACE** für jede Schnittstelle nicht unterstützt, durch die Objekt-Implementierung von **IUnknown:: QueryInterface**.  
   
 > [!IMPORTANT]
->  Jedes Objekt, das unterstützt `IObjectSafety` ist dafür verantwortlich, seine eigene Sicherheit und, die für ein beliebiges Objekt delegiert. Der Programmierer muss in Konto Problemen mit dem Code im Kontext des Benutzers ausgeführt, siteübergreifende Skripts und die geeignete Zone Überprüfung durchgeführt.  
+>  Jedes Objekt, das unterstützt `IObjectSafety` ist verantwortlich für seiner eigenen Sicherheitsberechtigungen und, eines beliebigen Objekts delegiert. Der Programmierer muss in Konto Probleme, die durch die Ausführung von Code im Kontext des Benutzers, siteübergreifende Skripterstellung und geeignete Zone wird die Überprüfung durchgeführt.  
   
  Finden Sie unter [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="see-also"></a>Siehe auch  
  [IObjectSafety-Schnittstelle](https://msdn.microsoft.com/library/aa768224.aspx)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 

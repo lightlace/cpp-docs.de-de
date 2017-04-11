@@ -1,5 +1,5 @@
 ---
-title: Klasse CAtlWinModule | Microsoft-Dokumentation
+title: CAtlWinModule Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,16 +38,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 6db3ae9e610605524683e984f2aba602b1daf0d4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: f2d5e28f39159b097c4e00e11518295b2872a84b
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule-Klasse
-Diese Klasse bietet Unterstützung für ATL-Windowing-Komponenten.  
+Diese Klasse bietet Unterstützung für ATL Windowing-Komponenten.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,11 +68,11 @@ class CAtlWinModule : public _ATL_WIN_MODULE
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|Fügt ein Objekt hinzu.|  
-|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Gibt einen Zeiger auf das Modul Daten.|  
+|[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|Fügt ein Datenobjekt hinzu.|  
+|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Gibt einen Zeiger auf das Fenster Module-Datenobjekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse bietet Unterstützung für alle ATL-Klassen die Windowing-Funktionen erforderlich ist.  
+ Diese Klasse bietet Unterstützung für alle ATL-Klassen die Fensterfunktionen erfordern.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)  
@@ -91,13 +91,13 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
   
 ### <a name="parameters"></a>Parameter  
  `pData`  
- Zeiger auf die `_AtlCreateWndData` Struktur initialisiert und das aktuelle Modul hinzugefügt werden soll.  
+ Zeiger auf die `_AtlCreateWndData` Struktur initialisiert und das aktuelle Modul hinzugefügt werden.  
   
  `pObject`  
  Zeiger auf ein Objekt **dies** Zeiger.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft [AtlWinModuleAddCreateWndData](http://msdn.microsoft.com/library/8463a6ed-07ea-4aad-92ec-ded681601b32) welche Initialisiert ein [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) Struktur. Diese Struktur speichert die **dies** Zeiger verwendet, um die Klasseninstanz in Fensterprozeduren zu erhalten.  
+ Diese Methode ruft [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) welche Initialisiert ein [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) Struktur. Diese Struktur speichert die **dies** -Zeiger ist, verwendet, um die Klasseninstanz in Fensterprozeduren abzurufen.  
   
 ##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
  Der Konstruktor.  
@@ -131,6 +131,6 @@ void* ExtractCreateWndData();
   
 ## <a name="see-also"></a>Siehe auch  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
+ [Klassenübersicht](../../atl/atl-class-overview.md)   
  [Modulklassen](../../atl/atl-module-classes.md)
 

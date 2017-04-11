@@ -1,5 +1,5 @@
 ---
-title: Tile_barrier-Klasse | Microsoft-Dokumentation
+title: Tile_barrier-Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 247828a6de3a5820d75623ee438810b563f04519
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4bacc84c4e267ffca14290186750ae1d3bdf899f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tilebarrier-class"></a>tile_barrier-Klasse
@@ -80,7 +80,7 @@ class tile_barrier;
  **Namespace:** Parallelität  
 
 ## <a name="tile_barrier__ctor"></a>Tile_barrier-Konstruktor  
- Initialisiert eine neue Instanz der Klasse durch Kopieren einer vorhandenen Instanz.  
+ Initialisiert eine neue Instanz der Klasse durch Kopieren einer vorhandenen Arbeitsaufgabe an.  
   
 ### <a name="syntax"></a>Syntax 
   
@@ -122,7 +122,7 @@ void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
 ## <a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
-Blockiert die Ausführung aller Threads in einer Kachel, bis alle Threads in einer Kachel diesen Aufruf erreicht haben. Dadurch wird sichergestellt, dass `tile_static`-Speicherzugriffe für andere Threads in der Threadkachel sichtbar sind und in der Programmreihenfolge ausgeführt wurden.  
+Blockiert die Ausführung aller Threads in einer Kachel, bis alle Threads in einer Kachel diesen Aufruf erreicht haben. Dadurch wird sichergestellt, dass `tile_static` -Speicherzugriffe für andere Threads in der threadkachel sichtbar sind und in der programmreihenfolge ausgeführt wurden.  
   
 ### <a name="syntax"></a>Syntax 
   

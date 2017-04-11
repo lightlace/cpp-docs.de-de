@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 8269a71e9528da5c3468b5eb37f5dce3a16b14fd
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6129ad49f58cecb099927fe3d422fe215d143b67
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView-Klasse
@@ -76,7 +76,7 @@ class COleDBRecordView : public CFormView
 > [!NOTE]
 >  Wenn Sie die Klassen Datenzugriffsobjekte (DAO) anstelle der OLE DB-Consumervorlagen Klassen arbeiten, verwenden Sie die Klasse [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) stattdessen. Weitere Informationen finden Sie im Artikel [Overview: Datenbank-Programmierung](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView`Hält den Überblick über die Position des Benutzers im Rowset, damit die Datensatzansicht die Benutzeroberfläche aktualisieren kann. Wenn der Benutzer wechselt zu einem Ende des Rowsets, die Datensatzansicht deaktiviert Benutzer Schnittstelle Objekte \u2012 z. B. Menüelemente oder Symbolleiste Schaltflächen \u2012 zum Verschieben in die gleiche Richtung weiter.  
+ `COleDBRecordView`Hält den Überblick über die Position des Benutzers im Rowset, damit die Datensatzansicht die Benutzeroberfläche aktualisieren kann. Wenn der Benutzer an einem Ende des Rowsets verschoben wird, deaktiviert die Datensatzansicht Benutzeroberflächenobjekte – z. B. Menüelemente und Symbolleisten-Schaltflächen – zum Verschieben in die gleiche Richtung weiter.  
   
  Weitere Informationen zum Schemarowset-Klassen finden Sie unter der [mithilfe von OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md) Artikel.  
   
@@ -152,13 +152,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Einer der folgenden Werte Standardbefehls-ID:  
   
-- `ID_RECORD_FIRST`\u2012 verschieben auf den ersten Eintrag in das Recordset.  
+- `ID_RECORD_FIRST`– Wechseln Sie zu den ersten Datensatz des Recordsets.  
   
-- `ID_RECORD_LAST`\u2012 wechselt zur letzten Datensatz des Recordsets.  
+- `ID_RECORD_LAST`– Wechselt zur letzten Datensatz des Recordsets.  
   
-- `ID_RECORD_NEXT`\u2012 verschieben auf den nächsten Datensatz im Recordset.  
+- `ID_RECORD_NEXT`– Verschieben Sie auf den nächsten Datensatz im Recordset.  
   
-- `ID_RECORD_PREV`\u2012 verschieben in den vorherigen Datensatz im Recordset.  
+- `ID_RECORD_PREV`– Wechseln Sie zum vorherigen Datensatz im Recordset.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Verschiebung erfolgreich war; andernfalls 0, wenn die Anforderung zum Verschieben von verweigert wurde.  

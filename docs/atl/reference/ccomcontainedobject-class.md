@@ -1,5 +1,5 @@
 ---
-title: Klasse CComContainedObject | Microsoft-Dokumentation
+title: CComContainedObject Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -42,16 +42,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 60958f328d78205c3432f35ed4e3e3c4b652ebfe
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: ac817cedb4c7ed67e698969b14645f5659aab2ad
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject-Klasse
-Diese Klasse implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) durch die Delegierung an den des Besitzerobjekts **IUnknown**.  
+Diese Klasse implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegiert Vorgänge an den Besitzer des Objekts **IUnknown**.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,20 +70,20 @@ class CComContainedObject : public Base
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Der Konstruktor. Den Member Zeiger auf den des Besitzerobjekts initialisiert `IUnknown`.|  
+|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Der Konstruktor. Initialisiert die Member-Zeiger auf des Besitzerobjekt `IUnknown`.|  
 |[CComContainedObject:: ~ CComContainedObject](#dtor)|Der Destruktor.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CComContainedObject::AddRef](#addref)|Inkrementiert den Verweiszähler für das Objekt.|  
-|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Ruft den des Besitzerobjekts `IUnknown`.|  
-|[CComContainedObject::QueryInterface](#queryinterface)|Ruft einen Zeiger auf die Schnittstelle, die in dem Objekt angefordert.|  
-|[CComContainedObject::Release](#release)|Dekrementiert den Verweiszähler für das Objekt.|  
+|[CComContainedObject::AddRef](#addref)|Inkrementiert den Verweiszähler für das Besitzerobjekt an.|  
+|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Ruft des Besitzerobjekt `IUnknown`.|  
+|[CComContainedObject::QueryInterface](#queryinterface)|Ruft einen Zeiger auf die Schnittstelle für das Besitzerobjekt angefordert.|  
+|[CComContainedObject::Release](#release)|Dekrementiert den Verweiszähler für das Besitzerobjekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- ATL verwendet `CComContainedObject` in Klassen [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), und [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) durch die Delegierung an den des Besitzerobjekts **IUnknown**. (Der Besitzer ist das äußere Objekt einer Aggregation oder das Objekt, für das eine Tearoff Schnittstelle erstellt wird.) `CComContainedObject` Aufrufe `CComObjectRootEx`des `OuterQueryInterface`, `OuterAddRef`, und `OuterRelease`, bis alle geerbten `Base`.  
+ ATL verwendet `CComContainedObject` in Klassen [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), und [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegiert Vorgänge an den Besitzer des Objekts **IUnknown**. (Der Besitzer ist das äußere Objekt einer Aggregation oder das Objekt, für das eine Schnittstelle abtrennbare erstellt wird.) `CComContainedObject` Aufrufe `CComObjectRootEx`des `OuterQueryInterface`, `OuterAddRef`, und `OuterRelease`, bis alle geerbten `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `Base`  
@@ -91,17 +91,17 @@ class CComContainedObject : public Base
  `CComContainedObject`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** Standardschnittstellen  
+ **Header:** atlcom.h  
   
 ##  <a name="addref"></a>CComContainedObject::AddRef  
- Inkrementiert den Verweiszähler für das Objekt.  
+ Inkrementiert den Verweiszähler für das Besitzerobjekt an.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Wert, der möglicherweise hilfreich für die Diagnose oder testen.  
+ Ein Wert, der möglicherweise bei der Diagnose hilfreich oder testen.  
   
 ##  <a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject  
  Der Konstruktor.  
@@ -112,7 +112,7 @@ CComContainedObject(void* pv);
   
 ### <a name="parameters"></a>Parameter  
  `pv`  
- [in] Der des Besitzerobjekts **IUnknown**.  
+ [in] Des Besitzerobjekt **IUnknown**.  
   
 ### <a name="remarks"></a>Hinweise  
  Legt die `m_pOuterUnknown` Member Zeiger (vererbt, bis die `Base` Klasse) auf `pv`.  
@@ -128,20 +128,20 @@ CComContainedObject(void* pv);
  Gibt alle zugeordnete Ressourcen frei.  
   
 ##  <a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
- Gibt die `m_pOuterUnknown` Member Zeiger (über vererbt der *Base* Klasse), enthält des Besitzerobjekts **IUnknown**.  
+ Gibt die `m_pOuterUnknown` Member Zeiger (vererbt, bis die *Base* Klasse), enthält des Besitzerobjekt **IUnknown**.  
   
 ```
 IUnknown* GetControllingUnknown();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der des Besitzerobjekts **IUnknown**.  
+ Des Besitzerobjekt **IUnknown**.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ist möglicherweise virtuellen Wenn `Base` deklariert hat, die [DECLARE_GET_CONTROLLING_UNKNOWN](http://msdn.microsoft.com/library/82b0199a-a9d5-4f95-a711-fa1ae18e1f77) Makro.  
+ Diese Methode ist möglicherweise virtuelle Wenn `Base` wurde deklariert die [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) Makro.  
   
 ##  <a name="queryinterface"></a>CComContainedObject::QueryInterface  
- Ruft einen Zeiger auf die Schnittstelle, die in dem Objekt angefordert.  
+ Ruft einen Zeiger auf die Schnittstelle für das Besitzerobjekt angefordert.  
   
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
@@ -154,24 +154,24 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
  [in] Der Bezeichner der angeforderten Schnittstelle.  
   
  `ppvObject`  
- [out] Ein Zeiger auf den Schnittstellenzeiger vom `iid`. Wenn das Objekt diese Schnittstelle nicht unterstützt `ppvObject` Wert **NULL**.  
+ [out] Ein Zeiger auf den Schnittstellenzeiger, der durch `iid`. Wenn das Objekt nicht über diese Schnittstelle unterstützt `ppvObject` festgelegt ist, um **NULL**.  
   
  `pp`  
- [out] Ein Zeiger auf den Schnittstellenzeiger vom Typ `Q`. Wenn das Objekt diese Schnittstelle nicht unterstützt `pp` Wert **NULL**.  
+ [out] Ein Zeiger auf den Schnittstellenzeiger vom Typ `Q`. Wenn das Objekt nicht über diese Schnittstelle unterstützt `pp` festgelegt ist, um **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ##  <a name="release"></a>CComContainedObject::Release  
- Dekrementiert den Verweiszähler für das Objekt.  
+ Dekrementiert den Verweiszähler für das Besitzerobjekt.  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- In Debugbuilds **Version** gibt einen Wert an, die hilfreich für die Diagnose oder testen. In nicht-Debugbuilds **Version** gibt immer 0 zurück.  
+ Debug-Builds **Version** gibt einen Wert an, die möglicherweise bei der Diagnose hilfreich oder testen. In nicht-Debugbuilds **Version** gibt immer 0 zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 

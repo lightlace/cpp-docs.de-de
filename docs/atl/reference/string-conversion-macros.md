@@ -1,5 +1,5 @@
 ---
-title: Konvertierungsmakros Zeichenfolge | Microsoft-Dokumentation
+title: String-Makros zur Zeichenfolgenkonvertierung | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,24 +30,24 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 89790d1a56f64e6479ae32d72c529142ba8df1de
-ms.openlocfilehash: 0dce243b0f7db087db908d603e6cd1cfc4b02db8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 634e33f4989046767f17fce15377fe6f4959bd8d
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="string-conversion-macros"></a>Zeichenfolgenkonvertierungsmakros
+# <a name="string-conversion-macros"></a>Zeichenfolgen-Konvertierungsmakros
 Diese Makros stellen Zeichenfolge Konvertierung-Funktionen.  
   
 |||  
 |-|-|  
-|[ATL- und MFC-Makros zur Zeichenfolgenkonvertierung](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)|Satz von Makros, die zwischen Zeichenfolgentypen konvertiert werden.|  
-|[DEVMODE und TEXTMETRIC Zeichenfolgenkonvertierungsmakros](http://msdn.microsoft.com/library/85cebec0-2a18-48e5-9c1c-99d5b7f15425)|Satz von Makros, die in Zeichenfolgen konvertieren `DEVMODE` und `TEXTMETRIC` Strukturen.|  
+|[ATL und MFC-Makros zur Zeichenfolgenkonvertierung](string-conversion-macros.md)|Der Satz von Makros, die zwischen Zeichenfolgentypen konvertiert werden.|  
+|[DEVMODE und TEXTMETRIC Zeichenfolgen-Konvertierungsmakros](http://msdn.microsoft.com/library/85cebec0-2a18-48e5-9c1c-99d5b7f15425)|Satz von Makros, die in Zeichenfolgen konvertieren `DEVMODE` und `TEXTMETRIC` Strukturen.|  
   
-##  <a name="a-nameatlandmfcstringconversionmacrosa--atl-and-mfc-string-conversion-macros"></a><a name="atl_and_mfc_string_conversion_macros"></a>ATL- und MFC-Makros zur Zeichenfolgenkonvertierung  
- Die hier besprochenen Zeichenfolgenkonvertierungsmakros sind sowohl für ATL als auch für MFC gültig. Weitere Informationen auf der MFC-zeichenfolgenkonvertierung finden Sie unter [TN059: Verwenden von MFC MBCS/Unicode-Konvertierungsmakros](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) und [MFC-Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md).  
+##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL und MFC-Makros zur Zeichenfolgenkonvertierung  
+ Die hier besprochenen Zeichenfolgenkonvertierungsmakros sind sowohl für ATL als auch für MFC gültig. Weitere Informationen zu MFC-zeichenfolgenkonvertierung, finden Sie unter [TN059: Verwenden von MFC MBCS/Unicode-Umwandlungsmakros](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) und [MFC-Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md).  
   
-##  <a name="a-namedevmodeandtextmetricstringconversionmacrosa--devmode-and-textmetric-string-conversion-macros"></a><a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE und TEXTMETRIC Zeichenfolgenkonvertierungsmakros  
- Diese Makros Erstellen einer Kopie einer [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) oder [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) Struktur und die Zeichenfolgen in die neue Struktur in eine neue String-Datentyp konvertieren. Die Makros Speicher auf dem Stapel für die neue Struktur und einen Zeiger auf die neue Struktur zurück.  
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE und TEXTMETRIC Zeichenfolgen-Konvertierungsmakros  
+ Diese Makros erstellen Sie eine Kopie einer [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) oder [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) Struktur und die Zeichenfolgen in der neuen Struktur in einen neuen Zeichenfolgen-Datentyp zu konvertieren. Die Makros Zuordnen von Speicher auf dem Stapel für die neue Struktur und einen Zeiger auf die neue Struktur zurück.  
   
 ```
 MACRONAME( address_of_structure )
@@ -56,21 +56,21 @@ MACRONAME( address_of_structure )
 ### <a name="remarks"></a>Hinweise  
  Zum Beispiel:  
   
- [!code-cpp[NVC_ATL_Utilities&#128;](../../atl/codesnippet/cpp/string-conversion-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities #128](../../atl/codesnippet/cpp/string-conversion-macros_1.cpp)]  
   
  und:  
   
- [!code-cpp[NVC_ATL_Utilities&#129;](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities #129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]  
   
- In den Makronamen der String-Datentyp in der Quellstruktur, die auf der linken Seite ist (z. B. **ein**) und der String-Datentyp in der Zielstruktur auf der rechten Seite ist (z. B. **W**). **A** stands for **LPSTR**, **OLE** stands for `LPOLESTR`, **T** stands for `LPTSTR`, and **W** stands for `LPWSTR`.  
+ In den Makronamen der String-Datentyp in der Quellstruktur befindet sich auf der linken Seite (z. B. **ein**) und der String-Datentyp in der Zielstruktur auf der rechten Seite ist (z. B. **W**). **A** stands for **LPSTR**, **OLE** stands for `LPOLESTR`, **T** stands for `LPTSTR`, and **W** stands for `LPWSTR`.  
   
- Folglich `DEVMODEA2W` Kopien einer `DEVMODE` Struktur mit **LPSTR** Textzeichenfolgen in eine `DEVMODE` Struktur mit `LPWSTR` Zeichenfolgen `TEXTMETRICOLE2T` Kopien eine `TEXTMETRIC` Struktur mit `LPOLESTR` Textzeichenfolgen in eine `TEXTMETRIC` Struktur mit `LPTSTR` Zeichenfolgen usw..  
+ Daher `DEVMODEA2W` Kopien einer `DEVMODE` Struktur mit **LPSTR** Zeichenfolgen in ein `DEVMODE` Struktur mit `LPWSTR` Zeichenfolgen, `TEXTMETRICOLE2T` Kopien eine `TEXTMETRIC` Struktur mit `LPOLESTR` Zeichenfolgen, die in eine `TEXTMETRIC` Struktur mit `LPTSTR` Zeichenfolgen usw..  
   
- Die beiden Zeichenfolgen konvertiert, die der `DEVMODE` Struktur werden der Gerätename ( **DmDeviceName**) und den Namen des Formulars ( **DmFormName**). Die `DEVMODE` zeichenfolgenkonvertierungsmakros aktualisiert auch die Größe der Struktur ( **DmSize**).  
+ Die beiden Zeichenfolgen konvertiert, die der `DEVMODE` Struktur werden der Name des Laufwerks ( **DmDeviceName**) und den Namen des Formulars ( **DmFormName**). Die `DEVMODE` zeichenfolgenkonvertierungsmakros auch aktualisieren, die Größe der Struktur ( **DmSize**).  
   
- Die vier Zeichenfolgen konvertiert, die der `TEXTMETRIC` Struktur werden das erste Zeichen ( **TmFirstChar**), das letzte Zeichen ( **TmLastChar**), das Standardzeichen ( **TmDefaultChar**), und die Umbruchzeichen ( **TmBreakChar**).  
+ Die vier Zeichenfolgen konvertiert, die der `TEXTMETRIC` Struktur werden das erste Zeichen ( **TmFirstChar**), das letzte Zeichen ( **TmLastChar**), des Standardzeichensatzes ( **TmDefaultChar**), und die Umbruchzeichen ( **TmBreakChar**).  
   
- Das Verhalten der `DEVMODE` und `TEXTMETRIC` zeichenfolgenkonvertierungsmakros hängt die Compilerdirektive wirksam, sofern vorhanden. Wenn die Quell- und Zieltypen gleich sind, findet keine Konvertierung statt. Ändern Sie die Compiler-Direktiven **T** und **OLE** wie folgt:  
+ Das Verhalten der `DEVMODE` und `TEXTMETRIC` Makros zur zeichenfolgenkonvertierung hängt die Compiler-diretive, sofern vorhanden. Wenn die Quell- und Zieltypen gleich sind, findet keine Konvertierung statt. Ändern Sie die Compilerdirektiven **T** und **OLE** wie folgt:  
   
 |Geltende Compiler-Anweisung|T wird zu|OLE wird zu|  
 |----------------------------------|---------------|-----------------|  
@@ -81,7 +81,7 @@ MACRONAME( address_of_structure )
   
  Die folgende Tabelle enthält die `DEVMODE` und `TEXTMETRIC` konvertierungsmakros Zeichenfolge.  
   
-### <a name="devmode-and-textmetric-string-conversion-macros"></a>DEVMODE und TEXTMETRIC Zeichenfolgenkonvertierungsmakros  
+### <a name="devmode-and-textmetric-string-conversion-macros"></a>DEVMODE und TEXTMETRIC Zeichenfolgen-Konvertierungsmakros  
   
 |||  
 |-|-|  

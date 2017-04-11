@@ -1,5 +1,5 @@
 ---
-title: MFC-Makros und globale Variablen | Microsoft-Dokumentation
+title: MFC-Makros und Globals | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d26b374e233326ac5acc97486edc8d38e6bf5d81
-ms.openlocfilehash: 75db28c7be1ab497ba9656136d22b114b488c4ae
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: 7dc1f904d1c3f76635a49db1747578e2ce0b0b3b
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mfc-macros-and-globals"></a>MFC-Makros, globale Funktionen und globale Variablen
@@ -55,92 +55,96 @@ Die Microsoft Foundation Class-Bibliothek kann in zwei Hauptabschnitte unterteil
   
 ## <a name="general-mfc"></a>MFC allgemein  
   
--   [Datentypen](../../mfc/reference/data-types-mfc.md)  
+-   [Datentypen](data-types-mfc.md)  
   
--   [Typumwandlung von MFC-Klassenobjekten](../../mfc/reference/type-casting-of-mfc-class-objects.md)  
+-   [Typumwandlung von MFC-Klassenobjekten](type-casting-of-mfc-class-objects.md)  
   
--   [Laufzeit-Dienste für laufzeitobjektmodelle](../../mfc/reference/run-time-object-model-services.md)  
+-   [Laufzeit-Modell Objektdienste](run-time-object-model-services.md)  
   
--   [Diagnosedienste](../../mfc/reference/diagnostic-services.md)  
+-   [Diagnosedienste](diagnostic-services.md)  
   
--   [Ausnahmeverarbeitung](../../mfc/reference/exception-processing.md)  
+-   [Ausnahmeverarbeitung](exception-processing.md)  
   
--   [CString-Formatierung und meldungsfeldanzeige](../../mfc/reference/cstring-formatting-and-message-box-display.md)  
+-   [CString-Formatierung und meldungsfeldanzeige](cstring-formatting-and-message-box-display.md)  
   
--   [Meldungszuordnungen](../../mfc/reference/message-map-macros-mfc.md)  
+-   [Meldungszuordnungen](message-map-macros-mfc.md)  
+
+-   [Delegaten und Schnittstellenzuordnungen](delegate-and-interface-maps.md)
+
+-   [Module und DLLs](extension-dll-macros.md)
   
--   [Anwendungsinformationen und Verwaltung](../../mfc/reference/application-information-and-management.md)  
+-   [Anwendungsinformationen und anwendungsverwaltung](application-information-and-management.md)  
   
--   [Standardbefehls- und Fenster-IDs](../../mfc/reference/standard-command-and-window-ids.md)  
+-   [Standard Standardbefehls- und Fenster-IDs](standard-command-and-window-ids.md)  
   
--   [Die Auflistungsklasse](../../mfc/reference/collection-class-helpers.md)  
+-   [Die Auflistungsklasse](collection-class-helpers.md)  
   
--   [Grau dargestellte und gerasterte bitmapfunktionen](../../mfc/reference/gray-and-dithered-bitmap-functions.md)  
+-   [Zu ausgrauen und Dithern Bitmap-Funktionen](gray-and-dithered-bitmap-functions.md)  
   
--   [Standardroutinen Dialogdatenaustausch (DDX) für Dialogfelddaten](../../mfc/reference/standard-dialog-data-exchange-routines.md)  
+-   [Standard für Dialogdatenaustausch (DDX)-Routinen](standard-dialog-data-exchange-routines.md)  
   
--   [Standardroutinen Überprüfung (DDV) für Dialogfelddaten](../../mfc/reference/standard-dialog-data-validation-routines.md)  
+-   [Standardroutinen für Dialog Data Validation, (DDV)](standard-dialog-data-validation-routines.md)  
   
--   [AFX-Meldungen](../../mfc/reference/afx-messages.md)  
+-   [AFX-Meldungen](afx-messages.md)  
   
--   [Steuerelementtypen für die Symbolleiste](../../mfc/reference/toolbar-control-styles.md)  
+-   [Steuerelementstile für die Symbolleiste](toolbar-control-styles.md)  
   
 -   [CMFCImagePaintArea::IMAGE_EDIT_MODE-Enumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md)  
 
   
 ## <a name="database"></a>Datenbank  
   
--   [Datensatzfeldaustausch (RFX) Funktionen](../../mfc/reference/record-field-exchange-functions.md) und [Massen-Datensatzfeldaustausch (Bulk-RFX) Funktionen](../../mfc/reference/record-field-exchange-functions.md) für die MFC-ODBC-Klassen  
+-   [Datensatzfeldaustausch (RFX)-Funktionen erfassen](record-field-exchange-functions.md) und [Massen-Datensatzfeldaustausch (Bulk-RFX) Funktionen](record-field-exchange-functions.md) für die MFC-ODBC-Klassen  
   
--   [Datensatzfeldaustausch (DFX) Funktionen](../../mfc/reference/record-field-exchange-functions.md) für die MFC-DAO-Klassen  
+-   [Datensatzfeldaustausch (DFX)-Funktionen erfassen](record-field-exchange-functions.md) für die MFC-DAO-Klassen  
   
--   [Funktionen für den Dialogdatenaustausch (DDX) für CRecordView und CDaoRecordView](../../mfc/reference/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md) (MFC-ODBC und DAO-Klassen)  
+-   [Dialogdatenaustausch (DDX)-Funktionen für CRecordView und CDaoRecordView](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md) (MFC-ODBC und DAO-Klassen)  
   
--   [Dialogdatenaustausch (DDX)-Funktionen für OLE-Steuerelemente](../../mfc/reference/dialog-data-exchange-functions-for-ole-controls.md)  
+-   [Dialogdatenaustausch (DDX)-Funktionen für OLE-Steuerelemente](dialog-data-exchange-functions-for-ole-controls.md)  
   
--   [Makros und Globals, die das direkte Aufrufen von Open Database Connectivity (ODBC)-API-Funktionen unterstützen](../../mfc/reference/database-macros-and-globals.md)  
+-   [Makros und Globals, die direktes Aufrufen von Open Database Connectivity (ODBC)-API-Funktionen](database-macros-and-globals.md)  
   
--   [DAO-Datenbank-Engine-Initialisierung und Beendigung](../../mfc/reference/dao-database-engine-initialization-and-termination.md)  
+-   [DAO-Datenbank-Engine initialisieren und beenden](dao-database-engine-initialization-and-termination.md)  
   
 ## <a name="internet"></a>Internet  
   
--   [Globals für das Analysieren von Internet-URL](../../mfc/reference/internet-url-parsing-globals.md)  
+-   [Globals für das Analysieren der Internet-URL](internet-url-parsing-globals.md)  
   
 ## <a name="dhtml--dhtml-event-maps"></a>DHTML-/DHTML-Ereigniszuordnungen  
   
--   [DHTML-Dialogdatenaustausch (DDX) Hilfsmakros](../../mfc/reference/ddx-dhtml-helper-macros.md)  
+-   [DHTML-Dialogdatenaustausch (DDX) Hilfsmakros](ddx-dhtml-helper-macros.md)  
   
--   [DHTML-ereigniszuordnungen](../../mfc/reference/dhtml-event-maps.md)  
+-   [DHTML-ereigniszuordnungen](dhtml-event-maps.md)  
   
 ## <a name="ole"></a>OLE  
   
--   [OLE-Initialisierung](../../mfc/reference/ole-initialization.md)  
+-   [OLE-Initialisierung](ole-initialization.md)  
   
--   [Anwendungssteuerelement](../../mfc/reference/application-control.md)  
+-   [Anwendungssteuerelement](application-control.md)  
   
--   [Dispatchzuordnungen](../../mfc/reference/dispatch-maps.md)  
+-   [Dispatchzuordnungen](dispatch-maps.md)  
   
- Darüber hinaus bietet MFC eine Funktion namens [AfxEnableControlContainer](http://msdn.microsoft.com/library/7aa0b9d2-5329-4bc3-9d41-856e30fe2c2b) , ermöglicht, alle OLE-Container entwickelt, mit MFC 4.0 wurden mit vollständiger Unterstützung OLE-Steuerelemente eingebetteter.  
+ Darüber hinaus bietet MFC eine Funktion namens [AfxEnableControlContainer](http://msdn.microsoft.com/library/7aa0b9d2-5329-4bc3-9d41-856e30fe2c2b) , ermöglicht, die alle OLE-Container mit MFC 4.0 entwickelt für die vollständige Unterstützung OLE-Steuerelemente eingebetteter.  
   
 ## <a name="ole-controls"></a>OLE-Steuerelemente  
   
--   [Variante parametertypkonstanten](../../mfc/reference/variant-parameter-type-constants.md)  
+-   [Variant-parametertypkonstanten](variant-parameter-type-constants.md)  
   
--   [Zugreifen auf die Typbibliothek](../../mfc/reference/type-library-access.md)  
+-   [Zugreifen auf die Typbibliothek](type-library-access.md)  
   
--   [Eigenschaftenseiten](../../mfc/reference/property-pages-mfc.md)  
+-   [Eigenschaftenseiten](property-pages-mfc.md)  
   
--   [Ereigniszuordnungen](../../mfc/reference/event-maps.md)  
+-   [Ereigniszuordnungen](event-maps.md)  
   
--   [Ereignissenkenzuordnungen](../../mfc/reference/event-sink-maps.md)  
+-   [Ereignissenkenzuordnungen](event-sink-maps.md)  
   
--   [Verbindungszuordnungen](../../mfc/reference/connection-maps.md)  
+-   [Verbindungszuordnungen](connection-maps.md)  
   
--   [Registrieren von OLE-Steuerelementen](../../mfc/reference/registering-ole-controls.md)  
+-   [Registrieren von OLE-Steuerelementen](registering-ole-controls.md)  
   
--   [Klassenfactorys und Lizenzierung](../../mfc/reference/class-factories-and-licensing.md)  
+-   [Klassenfabriken und Lizenzierung](class-factories-and-licensing.md)  
   
--   [Persistenz der OLE-Steuerelemente](../../mfc/reference/persistence-of-ole-controls.md)  
+-   [Persistenz der OLE-Steuerelemente](persistence-of-ole-controls.md)  
   
  Im ersten Teil dieses Abschnitts wird kurz auf die einzelnen der oben genannten Kategorien eingegangen. Darüber hinaus werden die Globals und Makros in der Kategorie zusammen mit einer kurzen Beschreibung der Funktionen aufgeführt. Anschließend folgt eine Beschreibung der globalen Funktionen, der globalen Variablen und der Makros in der MFC-Bibliothek.  
   
@@ -148,7 +152,7 @@ Die Microsoft Foundation Class-Bibliothek kann in zwei Hauptabschnitte unterteil
 >  Viele globale Funktionen beginnen mit dem Präfix "Afx". Einige Funktionen, beispielsweise die Funktionen für den Dialogdatenaustausch (DDX) sowie viele Datenbankfunktionen, entsprechen dieser Konvention jedoch nicht. Alle globalen Variablen beginnen mit "afx" als Präfix. Makros beginnen nicht mit einem bestimmten Präfix, werden aber in Großbuchstaben geschrieben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../mfc/class-library-overview.md)
+ [Klassenübersicht](../../mfc/class-library-overview.md)
 
 
 

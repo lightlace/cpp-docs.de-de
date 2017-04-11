@@ -131,9 +131,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: ec5969edb26f4dbc2c249f16a8c39498bd01ca44
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 099e027e778090d14dd7dbe24d6732f7eb06b9d9
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cwinapp-class"></a>CWinApp-Klasse
@@ -478,7 +478,7 @@ virtual void DoWaitCursor(int nCode);
   
 ### <a name="parameters"></a>Parameter  
  `nCode`  
- Wenn dieser Parameter 1 ist, wird ein Wartecursor angezeigt. Bei 0 wird der Wartecursor wiederhergestellt, ohne den Verweiszähler zu inkrementieren. Wenn – 1 ist, endet der Wartecursor.  
+ Wenn dieser Parameter 1 ist, wird ein Wartecursor angezeigt. Bei 0 wird der Wartecursor wiederhergestellt, ohne den Verweiszähler zu inkrementieren. Wenn-1 ist, endet der Wartecursor.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardeinstellung wird ein Sanduhrcursor implementiert. `DoWaitCursor`verwaltet einen Verweiszähler dieser Planergruppe. Wenn positiv ist, wird die Sanduhrcursor angezeigt.  
@@ -815,7 +815,7 @@ CString GetProfileString(
  Zeigt auf eine auf Null endende Zeichenfolge, die den Eintrag, deren Zeichenfolge enthält abgerufen werden sollen. Dieser Wert darf nicht sein **NULL**.  
   
  `lpszDefault`  
- Verweist auf den Standard-Zeichenfolgenwert für den angegebenen Eintrag, wenn der Eintrag in der Initialisierungsdatei nicht gefunden werden kann.  
+ Verweist auf den Standard-Zeichenfolgenwert für den angegebenen Eintrag, wenn der Eintrag in der Initialisierungsdatei gefunden werden kann.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert ist die Zeichenfolge aus der Anwendungsverzeichnis. INI-Datei oder `lpszDefault` , wenn die Zeichenfolge nicht gefunden werden kann. Ist die maximale Zeichenfolgenlänge von Framework unterstützten `_MAX_PATH`. Wenn `lpszDefault` ist **NULL**, wird eine leere Zeichenfolge zurückgegeben.  
@@ -947,7 +947,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
   
 ### <a name="parameters"></a>Parameter  
  `lpszResourceName`  
- Zeigt auf eine auf Null endende Zeichenfolge, die den Namen der die Symbolressource enthält. Sie können auch eine `CString` für dieses Argument.  
+ Zeigt auf eine auf Null endende Zeichenfolge, die den Namen der Symbolressource enthält. Sie können auch eine `CString` für dieses Argument.  
   
  `nIDResource`  
  ID-Nummer, der die Symbolressource.  
@@ -1019,7 +1019,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
   
 - **IDC_WAIT** Sanduhr Cursor verwendet, wenn Windows eine zeitintensive Aufgabe ausführt  
   
-- **IDC_CROSS** Fadenkreuztool Cursor für die Auswahl  
+- **IDC_CROSS** Fadenkreuz-Cursor für die Auswahl  
   
 - **IDC_UPARROW** Pfeil nach oben  
   
@@ -1121,15 +1121,12 @@ AFX_HELP_TYPE m_eHelpType;
 ### <a name="remarks"></a>Hinweise  
  Die **AFX_HELP_TYPE** Enumeration ist wie folgt definiert:  
   
- `enum AFX_HELP_TYPE`  
-  
- `{`  
-  
- `afxWinHelp = 0,`  
-  
- `afxHTMLHelp = 1`  
-  
- `};`  
+```  
+enum AFX_HELP_TYPE {  
+    afxWinHelp = 0,
+    afxHTMLHelp = 1
+    };  
+```  
   
 -   Rufen Sie zum Festlegen der Anwendung dienen dem HTML-Hilfe [SetHelpMode](#sethelpmode) , und geben Sie **AfxHTMLHelp**.  
   
@@ -1215,7 +1212,7 @@ LPCTSTR m_pszAppName;
  Die globale Funktion zurückgegebene [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName`ist eine öffentliche Variable des Typs **const Char\***.  
   
 > [!NOTE]
->  Wenn Sie einen Wert zuzuweisen `m_pszAppName`, müssen dynamisch auf dem Heap zugeordnet. Die `CWinApp` Destruktoraufrufe **freien**() mit dem this-Zeiger. Viele verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion die zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger auf den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Beispiel:  
+>  Wenn Sie einen Wert zuzuweisen `m_pszAppName`, müssen dynamisch auf dem Heap zugeordnet. Die `CWinApp` Destruktoraufrufe **freien**() mit dem this-Zeiger. Viele verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion die zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger auf den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCWindowing #57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]  
   
@@ -1263,7 +1260,7 @@ LPCTSTR m_pszProfileName;
  `m_pszProfileName`ist eine öffentliche Variable des Typs **const Char\***.  
   
 > [!NOTE]
->  Wenn Sie einen Wert zuzuweisen `m_pszProfileName`, müssen dynamisch auf dem Heap zugeordnet. Die `CWinApp` Destruktoraufrufe **freien**() mit dem this-Zeiger. Viele verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion die zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger auf den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Beispiel:  
+>  Wenn Sie einen Wert zuzuweisen `m_pszProfileName`, müssen dynamisch auf dem Heap zugeordnet. Die `CWinApp` Destruktoraufrufe **freien**() mit dem this-Zeiger. Viele verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion die zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger auf den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCWindowing #60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]  
   
@@ -1279,7 +1276,7 @@ LPCTSTR m_pszRegistryKey;
   
 -   Der Wert wird an einem Registrierungsschlüssel gespeichert. Der Name für die anwendungseinstellung für das Profil wird angefügt, auf den folgenden Registrierungsschlüssel: HKEY_CURRENT_USER/Software/LocalAppWizard-generierten /.  
   
- Wenn Sie einen Wert zuzuweisen `m_pszRegistryKey`, müssen dynamisch auf dem Heap zugeordnet. Die `CWinApp` Destruktoraufrufe **freien**() mit dem this-Zeiger. Viele verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion die zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger auf den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Beispiel:  
+ Wenn Sie einen Wert zuzuweisen `m_pszRegistryKey`, müssen dynamisch auf dem Heap zugeordnet. Die `CWinApp` Destruktoraufrufe **freien**() mit dem this-Zeiger. Viele verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion die zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger auf den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCWindowing #61](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]  
   
@@ -1399,7 +1396,7 @@ afx_msg void OnHelpFinder();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Müssen Sie hinzufügen, eine `ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )` Anweisung, um Ihre `CWinApp` Klasse meldungszuordnung So aktivieren Sie diese Memberfunktion auf. Wenn aktiviert, das Framework ruft diese Meldungshandler Funktion, wenn der Benutzer der Anwendung den Befehl Hilfe Finder aufzurufenden auswählt `WinHelp` mit dem Standard **HELP_FINDER** Thema.  
+ Müssen Sie hinzufügen, eine `ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )` Anweisung, um Ihre `CWinApp` Klasse meldungszuordnung So aktivieren Sie diese Memberfunktion auf. Wenn aktiviert, das Framework ruft diese Meldungshandler Funktion, wenn der Benutzer der Anwendung mit dem Hilfe Finder-Befehl aufgerufen wird `WinHelp` mit dem Standard **HELP_FINDER** Thema.  
   
 ##  <a name="onhelpindex"></a>CWinApp::OnHelpIndex  
  Behandelt die **ID_HELP_INDEX** Befehls- und stellt ein standardmäßiges Hilfethema bereit.  
@@ -1422,7 +1419,7 @@ afx_msg void OnHelpUsing();
  Müssen Sie hinzufügen, eine `ON_COMMAND( ID_HELP_USING, OnHelpUsing )` Anweisung, um Ihre `CWinApp` Klasse meldungszuordnung So aktivieren Sie diese Memberfunktion auf. Das Framework ruft diese Meldungshandler Funktion aus, wenn der Benutzer der Anwendung mit dem Befehl Hilfe verwenden, zum Aufrufen wird die `WinHelp` eine Anwendung mit dem Standard **HELP_HELPONHELP** Thema.  
   
 ##  <a name="onidle"></a>OnIdle  
- Überschreiben Sie diese Memberfunktion zum leerlaufzeitverarbeitung ausführen.  
+ Überschreiben Sie diese Memberfunktion, um die Zeit im Leerlauf Verarbeitung durchzuführen.  
   
 ```  
 virtual BOOL OnIdle(LONG lCount);
@@ -1578,19 +1575,15 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
   
  Die Datenmember von der `CCommandLineInfo` von identifizierten Objekts [CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand), sind die folgenden Enumerationstyps, der in definiert ist die `CCommandLineInfo` Klasse.  
   
- `enum {`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `};`  
+```  
+enum {
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE
+    };  
+```
   
  Eine kurze Beschreibung jedes dieser Werte finden Sie unter `CCommandLineInfo::m_nShellCommand`.  
   

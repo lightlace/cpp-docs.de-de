@@ -1,5 +1,5 @@
 ---
-title: CSimpleDialog Klasse | Microsoft-Dokumentation
+title: CSimpleDialog Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,13 +39,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: a4c17a1da8d1be00ebff171af09bc6c8eb81ed44
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2448f2fcd0547e2344dde51392873e3276f2bd09
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog-Klasse
-Diese Klasse implementiert die grundlegende modales Dialogfeld.  
+Diese Klasse implementiert grundlegende modales Dialogfeld an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ class CSimpleDialog : public CDialogImplBase
  Die Ressourcen-ID der Dialogfeldvorlagen-Ressource.  
   
  *t_bCenter*  
- **True,** ist das Dialogfeldobjekt im übergeordneten Fenster zentriertes andernfalls **FALSE**.  
+ **"True"** Wenn das Dialogfeldobjekt werden soll, andernfalls auf das besitzende Fenster zentriertes **"false"**.  
   
 ## <a name="members"></a>Mitglieder  
   
@@ -71,11 +71,11 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|Erstellt ein modales Dialogfeld an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Implementiert ein modales Dialogfeld mit der grundlegenden Funktionalität. `CSimpleDialog`bietet Unterstützung für allgemeine Windows-Steuerelemente nur. Zum Erstellen und ein modales Dialogfeld anzeigen, erstellen Sie eine Instanz dieser Klasse, die den Namen einer vorhandenen Vorlage für die Ressource für das Dialogfeld bereitstellen. Die Dialogfeldobjekt wird geschlossen, wenn der Benutzer auf jedem Steuerelement mit einem vordefinierten Wert (z. B. IDOK oder IDCANCEL) klickt.  
+ Ein modales Dialogfeld implementiert mit grundlegenden Funktionen. `CSimpleDialog`bietet Unterstützung für Windows-Standardsteuerelemente nur. Erstellen und ein modales Dialogfeld anzeigen, erstellen Sie eine Instanz dieser Klasse, die den Namen einer vorhandenen Vorlage für die Ressource für das Dialogfeld bereitstellen. Die Dialogfeldobjekt schließt klickt der Benutzer jedes Steuerelement mit vordefinierten Werten (z. B. IDOK oder IDCANCEL).  
   
- `CSimpleDialog`können Sie nur modale Dialogfelder zu erstellen. `CSimpleDialog`Stellt die Prozedur für Standarddialogfelder, die die Standardkurve für die Nachricht verwendet wird, um Nachrichten an die entsprechenden Handler zu leiten.  
+ `CSimpleDialog`können Sie nur modale Dialogfelder zu erstellen. `CSimpleDialog`Stellt die für Standarddialogfelder, die die Standard-meldungszuordnung zur Weiterleitung von Nachrichten an die entsprechenden Handler verwendet.  
   
- Finden Sie unter [Implementieren eines Dialogfelds](../../atl/implementing-a-dialog-box.md) Weitere Informationen.  
+ Finden Sie unter [Implementieren eines Dialogfelds](../../atl/implementing-a-dialog-box.md) für Weitere Informationen.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `CDialogImplBase`  
@@ -83,10 +83,10 @@ class CSimpleDialog : public CDialogImplBase
  `CSimpleDialog`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atlwin.h  
+ **Header:** atlwin.h vorhanden  
   
 ##  <a name="domodal"></a>CSimpleDialog::DoModal  
- Ruft ein modales Dialogfeld aus, und gibt das Ergebnis im Dialogfeld nach Abschluss.  
+ Ruft ein modales Dialogfeld auf und gibt das Ergebnis im Dialogfeld nach Abschluss zurück.  
   
 ```
 INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
@@ -94,16 +94,16 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
   
 ### <a name="parameters"></a>Parameter  
  `hWndParent`  
- Ein Handle für das übergeordnete Element des Dialogfelds. Wenn kein Wert angegeben ist, wird das übergeordnete Element, das momentan aktive Fenster festgelegt.  
+ Ein Handle für das übergeordnete Element des Dialogfelds. Wenn kein Wert angegeben ist, wird das übergeordnete Element auf der aktuellen aktiven Fensters festgelegt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn erfolgreich, ist der Rückgabewert die Ressourcen-ID des Steuerelements, das das Dialogfeld geschlossen.  
+ Im Erfolgsfall wird der Rückgabewert die Ressourcen-ID des Steuerelements, das das Dialogfeld geschlossen.  
   
- Wenn die Funktion fehlschlägt, ist der Rückgabewert –&1;. Um erweiterte Fehlerinformationen abzurufen, rufen Sie `GetLastError` auf.  
+ Wenn die Funktion fehlschlägt, ist der Rückgabewert-1 zurück. Um erweiterte Fehlerinformationen abzurufen, rufen Sie `GetLastError` auf.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode verarbeitet alle Interaktionen mit dem Benutzer, während das Dialogfeld aktiv ist. Dies ist, was die modales Dialogfeld. der Benutzer kann nicht, also mit anderen Fenstern interagieren, bis das Dialogfeld geschlossen wird.  
+ Diese Methode behandelt alle Interaktionen mit dem Benutzer, während das Dialogfeld aktiv ist. Dies ist, was die modales Dialogfeld. d. h. kann nicht der Benutzer mit anderen Fenstern interagieren, bis das Dialogfeld geschlossen wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 

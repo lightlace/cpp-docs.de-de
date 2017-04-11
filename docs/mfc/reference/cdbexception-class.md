@@ -42,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 66b5e6cbfaadd4b57d301de74fc2e0b815956952
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 4a82f66f0b6f6535de8e9707c2d68b94b7eb69c5
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdbexception-class"></a>CDBException-Klasse
@@ -98,11 +98,11 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_CONNECT_FAIL** Fehler bei Verbindung mit der Datenquelle. Sie übergeben ein **NULL** `CDatabase` Zeiger auf das Recordset-Konstruktor und dem anschließenden Versuch, eine Verbindung zu erstellen, die auf Basis `GetDefaultConnect` ist fehlgeschlagen.  
   
-- **AFX_SQL_ERROR_DATA_TRUNCATED** angeforderte mehr Daten, als Sie Speicher für eingegeben haben. Informationen zum Erhöhen des bereitgestellten Datenspeicher für `CString` oder `CByteArray` Datentypen finden Sie in der `nMaxLength` Argument für [RFX_Text](http://msdn.microsoft.com/library/de3c7581-d26c-40cb-81f3-c492ef4809f6) und [RFX_Binary](http://msdn.microsoft.com/library/908ff945-3ad0-43a1-9932-cdcdc8b14915) unter "Makros und Globals."  
+- **AFX_SQL_ERROR_DATA_TRUNCATED** angeforderte mehr Daten, als Sie Speicher für eingegeben haben. Informationen zum Erhöhen des bereitgestellten Datenspeicher für `CString` oder `CByteArray` Datentypen finden Sie in der `nMaxLength` Argument für [RFX_Text](record-field-exchange-functions.md#rfx_text) und [RFX_Binary](record-field-exchange-functions.md#rfx_binary) unter "Makros und Globals."  
   
 - **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED ausgelöst** einen Aufruf von `CRecordset::Open` Fehler bei einem Dynaset anfordern. Dynasets werden vom Treiber nicht unterstützt.  
   
-- **AFX_SQL_ERROR_EMPTY_COLUMN_LIST** Sie haben versucht, eine Tabelle zu öffnen (bzw. welche Sie gegeben haben konnte nicht als Aufruf einer Prozedur identifiziert oder **wählen** Anweisung), aber es keine Spalten identifiziert Datensatzfeldaustausch Datensatzfeldaustausch (RFX) Funktionsaufrufen in sind Ihre `DoFieldExchange` außer Kraft setzen.  
+- **AFX_SQL_ERROR_EMPTY_COLUMN_LIST** Sie haben versucht, eine Tabelle zu öffnen (oder Sie gegeben haben nicht gefunden, als Aufruf einer Prozedur oder **wählen** Anweisung), aber es keine Spalten identifiziert Datensatzfeldaustausch Datensatzfeldaustausch (RFX) Funktionsaufrufen in sind Ihre `DoFieldExchange` außer Kraft setzen.  
   
 - **AFX_SQL_ERROR_FIELD_SCHEMA_MISMATCH** den Typ einer RFX-Funktion in Ihrer `DoFieldExchange` Außerkraftsetzung ist nicht kompatibel mit dem Datentyp der Spalte im Recordset.  
   

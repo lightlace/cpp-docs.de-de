@@ -1,5 +1,5 @@
 ---
-title: "Globale Funktionen für Sicherheit | Microsoft-Dokumentation"
+title: Globale Sicherheitsfunktionen | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,16 +34,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 368da76305910a0948eb386990a4bcdb84e61396
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ff5afaaf2746d9e07eb9e06a079d34adb2f67109
+ms.lasthandoff: 04/04/2017
 
 ---
-# <a name="security-global-functions"></a>Globale Funktionen für Sicherheit
-Diese Funktionen bieten Unterstützung für Sicherheits-ID und ACL-Objekte ändern.  
+# <a name="security-global-functions"></a>Sicherheit, globale Funktionen
+Diese Funktionen bieten Unterstützung für die SID und ACL-Objekte ändern.  
   
 > [!IMPORTANT]
->  In der folgenden Tabelle aufgeführten Funktionen können nicht verwendet werden, in Anwendungen, die in Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  In der folgenden Tabelle aufgeführten Funktionen können nicht verwendet werden, in Anwendungen, die im Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 |||  
 |-|-|  
@@ -60,11 +60,11 @@ Diese Funktionen bieten Unterstützung für Sicherheits-ID und ACL-Objekte ände
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h 
 
-##  <a name="a-nameatlgetdacla--atlgetdacl"></a><a name="atlgetdacl"></a>AtlGetDacl  
+##  <a name="atlgetdacl"></a>AtlGetDacl  
  Mit dieser Funktion werden die Informationen zur freigegebenen Zugriffssteuerungsliste (DACL, Discretionary Access Control List) eines bestimmten Objekts abgerufen.  
   
 > [!IMPORTANT]
->  Diese Funktion kann nicht verwendet werden, in Anwendungen, die in Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Diese Funktion kann nicht verwendet werden, in Anwendungen, die im Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 ```
 inline bool AtlGetDacl(
@@ -75,27 +75,25 @@ inline bool AtlGetDacl(
   
 ### <a name="parameters"></a>Parameter  
  `hObject`  
- Handle für das Objekt für die Sicherheitsinformationen abzurufen.  
+ Handle für das Objekt für das Abrufen der Sicherheitsinformationen.  
   
  `ObjectType`  
- Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, die den Typ des-Objekts gibt an, die `hObject` Parameter.  
+ Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, der den Typ des Objekts identifizierte gibt an die `hObject` Parameter.  
   
  `pDacl`  
- Zeiger auf eine DACL-Objekt, das die abgerufenen Sicherheitsinformationen enthält.  
+ Zeiger auf eine DACL-Objekt, das die abgerufene Sicherheitsinformationen enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
 ### <a name="remarks"></a>Hinweise  
- Debug-Builds wird ein Assertionsfehler angezeigt, wenn entweder `hObject` oder `pDacl` ist ungültig. *.*  
-
-f
-
-##  <a name="a-nameatlsetdacla--atlsetdacl"></a><a name="atlsetdacl"></a>AtlSetDacl  
+ Debug-Builds wird ein Assertionsfehler auftreten, wenn entweder `hObject` oder `pDacl` ist ungültig.  
+  
+##  <a name="atlsetdacl"></a>AtlSetDacl  
  Mit dieser Funktion werden die Informationen zur freigegebenen Zugriffssteuerungsliste (DACL, Discretionary Access Control List) eines bestimmten Objekts festgelegt.  
   
 > [!IMPORTANT]
->  Diese Funktion kann nicht verwendet werden, in Anwendungen, die in Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Diese Funktion kann nicht verwendet werden, in Anwendungen, die im Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 ```
 inline bool AtlSetDacl(
@@ -107,30 +105,30 @@ inline bool AtlSetDacl(
   
 ### <a name="parameters"></a>Parameter  
  `hObject`  
- Handle für das Objekt festgelegt werden soll.  
+ Handle für das Objekt für das Festlegen der Sicherheitsinformationen.  
   
  `ObjectType`  
- Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, die den Typ des-Objekts gibt an, die `hObject` Parameter.  
+ Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, der den Typ des Objekts identifizierte gibt an die `hObject` Parameter.  
   
  `rDacl`  
  Die DACL, die die neue Sicherheitsinformationen enthält.  
   
  `dwInheritanceFlowControl`  
- Steuerung der Vererbung. Dieser Wert kann 0 (Standard), PROTECTED_DACL_SECURITY_INFORMATION oder UNPROTECTED_DACL_SECURITY_INFORMATION sein.  
+ Die flusssteuerung Vererbung. Dieser Wert kann 0 (Standard), PROTECTED_DACL_SECURITY_INFORMATION oder UNPROTECTED_DACL_SECURITY_INFORMATION sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
 ### <a name="remarks"></a>Hinweise  
- In Debugbuilds wird ein Assertionsfehler auftreten, wenn `hObject` ungültig ist, oder wenn `dwInheritanceFlowControl` ist keiner der drei zulässigen Werte.  
+ Debug-Builds wird ein Assertionsfehler auftreten, wenn `hObject` ist ungültig, oder wenn `dwInheritanceFlowControl` ist nicht mit einer der drei zulässigen Werte.  
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h 
 
-##  <a name="a-nameatlgetgroupsida--atlgetgroupsid"></a><a name="atlgetgroupsid"></a>AtlGetGroupSid  
+##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
  Mit dieser Funktion wird die Gruppensicherheits-ID (SID) eines Objekts abgerufen.  
   
 > [!IMPORTANT]
->  Diese Funktion kann nicht verwendet werden, in Anwendungen, die in Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Diese Funktion kann nicht verwendet werden, in Anwendungen, die im Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 ```
 inline bool AtlGetGroupSid(
@@ -144,7 +142,7 @@ inline bool AtlGetGroupSid(
  Handle für das Objekt, um Sicherheitsinformationen abzurufen.  
   
  `ObjectType`  
- Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, die den Typ des-Objekts gibt an, die `hObject` Parameter.  
+ Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, der den Typ des Objekts identifizierte gibt an die `hObject` Parameter.  
   
  `pSid`  
  Zeiger auf ein `CSid` Objekt, das die neue Sicherheitsinformationen enthält.  
@@ -155,11 +153,11 @@ inline bool AtlGetGroupSid(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h 
 
-##  <a name="a-nameatlsetgroupsida--atlsetgroupsid"></a><a name="atlsetgroupsid"></a>AtlSetGroupSid  
+##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
  Mit dieser Funktion wird die Gruppensicherheits-ID (SID) eines Objekts festgelegt.  
   
 > [!IMPORTANT]
->  Diese Funktion kann nicht verwendet werden, in Anwendungen, die in Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Diese Funktion kann nicht verwendet werden, in Anwendungen, die im Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 ```
 inline bool AtlSetGroupSid(
@@ -170,13 +168,13 @@ inline bool AtlSetGroupSid(
   
 ### <a name="parameters"></a>Parameter  
  `hObject`  
- Handle für das Objekt festgelegt werden soll.  
+ Handle für das Objekt für das Festlegen der Sicherheitsinformationen.  
   
  `ObjectType`  
- Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, die den Typ des-Objekts gibt an, die `hObject` Parameter.  
+ Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, der den Typ des Objekts identifizierte gibt an die `hObject` Parameter.  
   
  `rSid`  
- Die `CSid` -Objekt, das die neue Sicherheitsinformationen enthält.  
+ Die `CSid` Objekt, das die neue Sicherheitsinformationen enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
@@ -184,11 +182,11 @@ inline bool AtlSetGroupSid(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h 
 
-##  <a name="a-nameatlgetownersida--atlgetownersid"></a><a name="atlgetownersid"></a>AtlGetOwnerSid  
+##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
  Mit dieser Funktion wird die Sicherheits-ID (SID) des Besitzers eines Objekts abgerufen.  
   
 > [!IMPORTANT]
->  Diese Funktion kann nicht verwendet werden, in Anwendungen, die in Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Diese Funktion kann nicht verwendet werden, in Anwendungen, die im Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 ```
 inline bool AtlGetOwnerSid(
@@ -202,7 +200,7 @@ inline bool AtlGetOwnerSid(
  Handle für das Objekt, um Sicherheitsinformationen abzurufen.  
   
  `ObjectType`  
- Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, die den Typ des-Objekts gibt an, die `hObject` Parameter.  
+ Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, der den Typ des Objekts identifizierte gibt an die `hObject` Parameter.  
   
  `pSid`  
  Zeiger auf ein `CSid` Objekt, das die neue Sicherheitsinformationen enthält.  
@@ -213,11 +211,11 @@ inline bool AtlGetOwnerSid(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h 
 
-##  <a name="a-nameatlsetownersida--atlsetownersid"></a><a name="atlsetownersid"></a>AtlSetOwnerSid  
+##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
  Mit dieser Funktion wird die Sicherheits-ID (SID) des Besitzers eines Objekts festgelegt.  
   
 > [!IMPORTANT]
->  Diese Funktion kann nicht verwendet werden, in Anwendungen, die in Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Diese Funktion kann nicht verwendet werden, in Anwendungen, die im Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 ```
 inline bool AtlSetOwnerSid(
@@ -228,13 +226,13 @@ inline bool AtlSetOwnerSid(
   
 ### <a name="parameters"></a>Parameter  
  `hObject`  
- Handle für das Objekt festgelegt werden soll.  
+ Handle für das Objekt für das Festlegen der Sicherheitsinformationen.  
   
  `ObjectType`  
- Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, die den Typ des-Objekts gibt an, die `hObject` Parameter.  
+ Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, der den Typ des Objekts identifizierte gibt an die `hObject` Parameter.  
   
  `rSid`  
- Die `CSid` -Objekt, das die neue Sicherheitsinformationen enthält.  
+ Die `CSid` Objekt, das die neue Sicherheitsinformationen enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
@@ -242,11 +240,11 @@ inline bool AtlSetOwnerSid(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h 
 
-##  <a name="a-nameatlgetsacla--atlgetsacl"></a><a name="atlgetsacl"></a>AtlGetSacl  
+##  <a name="atlgetsacl"></a>AtlGetSacl  
  Mit dieser Funktion werden die Informationen zur Systemzugriffssteuerungsliste (SACL, System Access Control List) eines bestimmten Objekts abgerufen.  
   
 > [!IMPORTANT]
->  Diese Funktion kann nicht verwendet werden, in Anwendungen, die in Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Diese Funktion kann nicht verwendet werden, in Anwendungen, die im Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 ```
 inline bool AtlGetSacl(
@@ -258,31 +256,31 @@ inline bool AtlGetSacl(
   
 ### <a name="parameters"></a>Parameter  
  `hObject`  
- Handle für das Objekt, um die Sicherheitsinformationen abzurufen.  
+ Handle für das Objekt aus, das Abrufen der Sicherheitsinformationen.  
   
  `ObjectType`  
- Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, die den Typ des-Objekts gibt an, die `hObject` Parameter.  
+ Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, der den Typ des Objekts identifizierte gibt an die `hObject` Parameter.  
   
  `pSacl`  
- Zeiger auf eine SACL-Objekt, das die abgerufenen Sicherheitsinformationen enthält.  
+ Zeiger auf eine SACL-Objekt, das die abgerufene Sicherheitsinformationen enthält.  
   
  `bRequestNeededPrivileges`  
- Bei "true", versucht die Funktion die SE_SECURITY_NAME-Berechtigung aktivieren und auf den Abschluss des Vorgangs wiederhergestellt werden kann.  
+ Bei "true", versucht die Funktion, die SE_SECURITY_NAME Berechtigung zu aktivieren, und bei Abschluss wiederherzustellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `AtlGetSacl` oft auf viele verschiedene Objekte aufgerufen werden effizienter, die SE_SECURITY_NAME-Berechtigung aktivieren, bevor die Funktion aufgerufen, mit `bRequestNeededPrivileges` auf False festgelegt.  
+ Wenn `AtlGetSacl` oft aufgerufen werden soll, auf viele andere Objekte, werden effizienter, die SE_SECURITY_NAME Berechtigung zu aktivieren, einmal vor dem Aufrufen der Funktion mit `bRequestNeededPrivileges` auf "false" festgelegt.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h 
 
-##  <a name="a-nameatlsetsacla--atlsetsacl"></a><a name="atlsetsacl"></a>AtlSetSacl  
+##  <a name="atlsetsacl"></a>AtlSetSacl  
  Mit dieser Funktion werden die Informationen zur Systemzugriffssteuerungsliste (SACL, System Access Control List) eines bestimmten Objekts festgelegt.  
   
 > [!IMPORTANT]
->  Diese Funktion kann nicht verwendet werden, in Anwendungen, die in Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Diese Funktion kann nicht verwendet werden, in Anwendungen, die im Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 ```
 inline bool AtlSetSacl(
@@ -295,36 +293,36 @@ inline bool AtlSetSacl(
   
 ### <a name="parameters"></a>Parameter  
  `hObject`  
- Handle für das Objekt festgelegt werden soll.  
+ Handle für das Objekt für das Festlegen der Sicherheitsinformationen.  
   
  `ObjectType`  
- Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, die den Typ des-Objekts gibt an, die `hObject` Parameter.  
+ Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, der den Typ des Objekts identifizierte gibt an die `hObject` Parameter.  
   
  *rSacl*  
- Die SACL, das die neue Sicherheitsinformationen enthält.  
+ Die SACL, die die neue Sicherheitsinformationen enthält.  
   
  `dwInheritanceFlowControl`  
- Steuerung der Vererbung. Dieser Wert kann 0 (Standard), PROTECTED_SACL_SECURITY_INFORMATION oder UNPROTECTED_SACL_SECURITY_INFORMATION sein.  
+ Die flusssteuerung Vererbung. Dieser Wert kann 0 (Standard), PROTECTED_SACL_SECURITY_INFORMATION oder UNPROTECTED_SACL_SECURITY_INFORMATION sein.  
   
  `bRequestNeededPrivileges`  
- Bei "true", versucht die Funktion die SE_SECURITY_NAME-Berechtigung aktivieren und auf den Abschluss des Vorgangs wiederhergestellt werden kann.  
+ Bei "true", versucht die Funktion, die SE_SECURITY_NAME Berechtigung zu aktivieren, und bei Abschluss wiederherzustellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
 ### <a name="remarks"></a>Hinweise  
- In Debugbuilds wird ein Assertionsfehler auftreten, wenn `hObject` ungültig ist, oder wenn `dwInheritanceFlowControl` ist keiner der drei zulässigen Werte.  
+ Debug-Builds wird ein Assertionsfehler auftreten, wenn `hObject` ist ungültig, oder wenn `dwInheritanceFlowControl` ist nicht mit einer der drei zulässigen Werte.  
   
- Wenn `AtlSetSacl` oft auf viele verschiedene Objekte aufgerufen werden effizienter, die SE_SECURITY_NAME-Berechtigung aktivieren, bevor die Funktion aufgerufen, mit `bRequestNeededPrivileges` auf False festgelegt.  
+ Wenn `AtlSetSacl` oft aufgerufen werden soll, auf viele andere Objekte, werden effizienter, die SE_SECURITY_NAME Berechtigung zu aktivieren, einmal vor dem Aufrufen der Funktion mit `bRequestNeededPrivileges` auf "false" festgelegt.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h 
 
-##  <a name="a-nameatlgetsecuritydescriptora--atlgetsecuritydescriptor"></a><a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
+##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
  Mit dieser Funktion wird die Sicherheitsbeschreibung eines angegebenen Objekts abgerufen.  
   
 > [!IMPORTANT]
->  Diese Funktion kann nicht verwendet werden, in Anwendungen, die in Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Diese Funktion kann nicht verwendet werden, in Anwendungen, die im Ausführen der [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
 ```
 inline bool AtlGetSecurityDescriptor(
@@ -342,22 +340,22 @@ inline bool AtlGetSecurityDescriptor(
  Ein Zeiger auf eine auf Null endende Zeichenfolge, die den Namen des Objekts aus der abzurufenden Sicherheitsinformationen angibt.  
   
  `ObjectType`  
- Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, die den Typ des-Objekts gibt an, die *PszObjectName* Parameter.  
+ Gibt einen Wert aus der [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) -Enumeration, der den Typ des Objekts identifizierte gibt an die *PszObjectName* Parameter.  
   
  *pSecurityDescriptor*  
- Das Objekt, das den angeforderten Sicherheitsdeskriptor empfängt.  
+ Das Objekt, das die angeforderte Sicherheitsbeschreibung empfängt.  
   
  *requestedInfo*  
- Eine Reihe von [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) Bitflags, die den Typ der abzurufenden Sicherheitsinformationen angeben. Dieser Parameter kann eine Kombination der folgenden Werte sein.  
+ Eine Reihe von [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) Bitflags, die Typ der abzurufenden Sicherheitsinformationen angeben. Dieser Parameter kann eine Kombination der folgenden Werte sein.  
   
  `bRequestNeededPrivileges`  
- Bei "true", versucht die Funktion die SE_SECURITY_NAME-Berechtigung aktivieren und auf den Abschluss des Vorgangs wiederhergestellt werden kann.  
+ Bei "true", versucht die Funktion, die SE_SECURITY_NAME Berechtigung zu aktivieren, und bei Abschluss wiederherzustellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `AtlGetSecurityDescriptor` oft auf viele verschiedene Objekte aufgerufen werden effizienter, die SE_SECURITY_NAME-Berechtigung aktivieren, bevor die Funktion aufgerufen, mit `bRequestNeededPrivileges` auf False festgelegt.  
+ Wenn `AtlGetSecurityDescriptor` oft aufgerufen werden soll, auf viele andere Objekte, werden effizienter, die SE_SECURITY_NAME Berechtigung zu aktivieren, einmal vor dem Aufrufen der Funktion mit `bRequestNeededPrivileges` auf "false" festgelegt.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h 

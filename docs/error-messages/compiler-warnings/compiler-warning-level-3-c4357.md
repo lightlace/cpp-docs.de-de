@@ -1,32 +1,48 @@
 ---
-title: "Compilerwarnung (Stufe 3) C4357 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4357"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4357"
+title: Compilerwarnung (Stufe 3) C4357 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4357
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4357
 ms.assetid: 9259c633-3c02-4900-b94a-2d8d366d61cd
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Compilerwarnung (Stufe 3) C4357
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: dd055c5798b71fb68eec23d00b23a5682230b988
+ms.lasthandoff: 04/04/2017
 
-"param array"\-Argument in formaler Argumentliste für Delegaten 'del' wurde beim Erzeugen von 'Funktion' ignoriert  
+---
+# <a name="compiler-warning-level-3-c4357"></a>Compilerwarnung (Stufe 3) C4357
+ParamArray-Argument in der Argumentliste der formalen für Delegat 'del' ignoriert, wenn 'Function' generieren  
   
- Das `ParamArray`\-Attribut wurde ignoriert. `function`kann nicht mit variablen Argumenten aufgerufen werden.  
+ Die `ParamArray` Attribut wurde ignoriert, und `function` kann nicht mit Variablen Argumenten aufgerufen werden.  
   
  Im folgenden Beispiel wird C4357 generiert:  
   

@@ -1,46 +1,63 @@
 ---
-title: "__getmainargs, __wgetmainargs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__wgetmainargs"
-  - "__getmainargs"
-apilocation: 
-  - "msvcr100.dll"
-  - "msvcrt.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr80.dll"
-  - "msvcr110.dll"
-  - "msvcr90.dll"
-  - "msvcr120.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__wgetmainargs"
-  - "__getmainargs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__wgetmainargs"
-  - "__getmainargs"
+title: __getmainargs, __wgetmainargs | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __wgetmainargs
+- __getmainargs
+apilocation:
+- msvcr100.dll
+- msvcrt.dll
+- msvcr110_clr0400.dll
+- msvcr80.dll
+- msvcr110.dll
+- msvcr90.dll
+- msvcr120.dll
+apitype: DLLExport
+f1_keywords:
+- __wgetmainargs
+- __getmainargs
+dev_langs:
+- C++
+helpviewer_keywords:
+- __wgetmainargs
+- __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# __getmainargs, __wgetmainargs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7580d75e24f9291a3cb6943785b387a5ae67254f
+ms.lasthandoff: 04/01/2017
 
-Ruft Befehlszeilenanalyse auf und kopiert die Argumente für `main()` zurück durch die übergebenen Zeiger.  
+---
+# <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
+Ruft die Befehlszeilenanalyse auf und kopiert die Argumente für `main()` zurück durch die übergebenen Zeiger.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 int __getmainargs(  
@@ -59,31 +76,31 @@ _startupinfo * _StartInfo);
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `_Argc`  
- Eine ganze Zahl, die die Anzahl der Argumente enthält, die in `argv` auf.  Der Parameter `argc` ist immer mindestens 1 sein.  
+ Eine Ganzzahl, die die Anzahl von Argumenten enthält, die in `argv` folgen. Der `argc`-Parameter ist immer größer als oder gleich 1.  
   
  `_Argv`  
- Ein Array auf NULL endende Zeichenfolge, die die Befehlszeilenargumente vom Benutzer eingegeben des Programms darstellen.  Üblicherweise ist `argv[0]` der Befehl, mit dem das Programm aufgerufen wird, argv \[1\] befindet erstes Befehlszeilenargument usw. bis argv \[argc\], das immer NULL ist.  Das erste Befehlszeilenargument ist immer `argv[1]` und der letzte Suchvorgang ist `argv[argc – 1]`.  
+ Ein Array von Zeigern auf Zeichenfolgen, die auf NULL enden und von den Benutzern des Programms eingegebene Befehlszeilenargumente darstellen. Gemäß Konvention ist `argv[0]` der Befehl, mit dem das Programm aufgerufen wird, argv[1] ist das erste Befehlszeilenargument, und so geht es weiter bis zu argv[argc], das immer NULL ist. Das erste Befehlszeilenargument ist immer `argv[1]`, und das letzte ist `argv[argc - 1]`.  
   
  `_Env`  
- Ein Array von Zeichenfolgen, das die Variablen darstellen, die in die Anwenderkonfiguration festgelegt werden.  Das Array wird durch einen NULL\- Eintrag beendet.  
+ Ein Zeichenfolgenarray, das die Variablen darstellt, die in der Benutzerumgebung festgelegt werden. Das Array wird mit einem NULL-Eintrag beendet.  
   
  `_DoWildCard`  
- Eine ganze Zahl, wenn die Gruppe bis 1 die Platzhalter in den Befehlszeilenargumenten erweitert oder wenn dieser Wert auf 0 keine Aktion ausführt.  
+ Eine ganze Zahl, die, wenn sie auf 1 festgelegt wird, die Platzhalter in den Befehlszeilenargumenten erweitert, oder keine Aktion ausführt, wenn sie auf 0 festgelegt wird.  
   
  `_StartInfo`  
- Andere der CRT\-DLL übergeben werden, Informationen.  
+ Andere Informationen, die an die CRT-DLL übergeben werden.  
   
-## Rückgabewert  
- 0 Wenn erfolgreich; ein negativer Wert, wenn fehlgeschlagen.  
+## <a name="return-value"></a>Rückgabewert  
+ 0, wenn erfolgreich; ein negativer Wert, wenn fehlgeschlagen.  
   
-## Hinweise  
- Verwenden Sie `__getmainargs` für nicht\-weiten Zeichenplattformen und `__wgetmainargs` auf Plattformen des Breitzeichens \(Unicode\).  
+## <a name="remarks"></a>Hinweise  
+ Verwenden Sie `__getmainargs` für nicht-Breitzeichen-Plattformen und `__wgetmainargs` für Breitzeichen (Unicode)-Plattformen.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|\_\_getmainargs|internal.h|  
-|\_\_wgetmainargs|internal.h|
+|-------------|---------------------|  
+|__getmainargs|internal.h|  
+|__wgetmainargs|internal.h|

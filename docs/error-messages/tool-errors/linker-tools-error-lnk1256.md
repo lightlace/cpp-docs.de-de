@@ -1,5 +1,5 @@
 ---
-title: Linkertoolfehler Lnk1256 | Microsoft-Dokumentation
+title: Linkertoolfehler Lnk1256 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 02231366d7b20be51e7b918fe7932fc80a38b169
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5e29e6100b57531c7a29f84e7c0feac53f20cec9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="linker-tools-error-lnk1256"></a>Linkertoolfehler LNK1256
@@ -45,9 +45,9 @@ Fehler bei ALINK-Operation: Ursache
   
  Ein häufiger Grund für LNK1256 ist eine falsche Versionsnummer für eine Assembly. Der Wert 65535 ist für keinen Teil der Assemblyversionsnummer zulässig. Der gültige Bereich für Assemblyversionen ist 0 – 65534.  
   
- LNK1256 kann auch entstehen, wenn ALINK den benannten Schlüsselcontainer nicht finden konnte. Den Schlüsselcontainer löschen und erneut hinzufügen, CSP für starke Namen mit [Sn.exe (Strong Name-Tool)](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6).  
+ LNK1256 kann auch entstehen, wenn ALINK den benannten Schlüsselcontainer nicht finden konnte. Container für den Schlüssel löschen und erneut hinzufügen zum CSP für starke Namen mit [Sn.exe (Strong Name-Tool)](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6).  
   
- Ein weiterer Grund für LNK1256 ist ein Versionskonflikt zwischen dem Linker und Alink.dll. Dies kann durch eine fehlerhafte Installation von Visual Studio verursacht werden. Verwendung **Programme und Funktionen** in der Windows-Systemsteuerung zu reparieren oder installieren Sie Visual Studio.  
+ Ein weiterer Grund für LNK1256 ist ein Versionskonflikt zwischen dem Linker und Alink.dll. Dies kann durch eine fehlerhafte Installation von Visual Studio verursacht werden. Verwendung **Programme und Funktionen** in der Windows-Systemsteuerung reparieren oder neu installieren von Visual Studio.  
   
  Im folgende Beispiel wird LNK1256 generiert:  
   

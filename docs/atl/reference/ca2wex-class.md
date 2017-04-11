@@ -1,5 +1,5 @@
 ---
-title: Klasse CA2WEX | Microsoft-Dokumentation
+title: CA2WEX Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,16 +39,16 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 7c1029d0d9cb1abb1980f97c9541e2c1ce40b539
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 93f3fdbd9c728dcaea0262cb774fe5891e6a9838
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ca2wex-class"></a>CA2WEX-Klasse
-Diese Klasse wird verwendet, indem die zeichenfolgenkonvertierungsmakros `CA2TEX`, `CA2CTEX`, `CT2WEX`, und `CT2CWEX`, und die Typedef **CA2W**.  
+Diese Klasse wird verwendet, indem die Makros zur zeichenfolgenkonvertierung `CA2TEX`, `CA2CTEX`, `CT2WEX`, und `CT2CWEX`, und die Typedef **CA2W**.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,7 +59,7 @@ class CA2WEX
   
 #### <a name="parameters"></a>Parameter  
  `t_nBufferLength`  
- Die Größe des Puffers im Übersetzungsprozess. Die Standardlänge beträgt 128 Byte.  
+ Die Größe des Puffers, der bei der Übersetzung verwendet werden soll. Die Standardlänge beträgt 128 Bytes.  
   
 ## <a name="members"></a>Mitglieder  
   
@@ -74,25 +74,25 @@ class CA2WEX
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CA2WEX::Operator LPWSTR](#operator_lpwstr)|Operator für die Konvertierung.|  
+|[CA2WEX::Operator LPWSTR](#operator_lpwstr)|Konvertierungsoperator.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CA2WEX::m_psz](#m_psz)|Der Datenmember, die die Quellzeichenfolge speichert.|  
+|[CA2WEX::m_psz](#m_psz)|Das Datenelement, das die Quellzeichenfolge speichert.|  
 |[CA2WEX::m_szBuffer](#m_szbuffer)|Den statischen Puffer zum Speichern der konvertierten Zeichenfolge verwendet.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn zusätzlicher Funktionalität erforderlich ist, verwenden Sie `CA2TEX`, `CA2CTEX`, `CT2WEX`, `CT2CWEX`, oder **CA2W** in Ihrem Code.  
+ Wenn zusätzlicher Funktionalität erforderlich ist, verwenden Sie `CA2TEX`, `CA2CTEX`, `CT2WEX`, `CT2CWEX`, oder **CA2W** im Code.  
   
- Diese Klasse enthält einen statische Puffer mit fester Größe die verwendet wird, um das Ergebnis der Konvertierung zu speichern. Wenn das Ergebnis zu groß ist, um in den statischen Puffer zu passen, weist die Klasse mittels `malloc` Arbeitsspeicher zu und gibt den Speicher wieder frei, wenn das Objekt sich nicht mehr im Gültigkeitsbereich befindet. Dadurch wird sichergestellt, dass im Gegensatz zu Text konvertierungsmakros, die in früheren Versionen von ATL, diese Klasse sicher in Schleifen verwendet werden kann und dass es die Stapelüberlauf wird nicht verfügbar.  
+ Diese Klasse enthält einen statischen Puffer mit fester Größe, mit der das Ergebnis der Konvertierung zu speichern. Wenn das Ergebnis zu groß ist, um in den statischen Puffer zu passen, weist die Klasse mittels `malloc` Arbeitsspeicher zu und gibt den Speicher wieder frei, wenn das Objekt sich nicht mehr im Gültigkeitsbereich befindet. Dadurch wird sichergestellt, dass im Gegensatz zu Text konvertierungsmakros, die in früheren Versionen von ATL, diese Klasse sicher in Schleifen verwendet werden kann, sodass er den Stapel "Überlauf" wird nicht verfügbar.  
   
- Wenn die Klasse versucht, Speicher auf dem Heap und ein Fehler auftritt, ruft er `AtlThrow` mit dem Argument **E_OUTOFMEMORY**.  
+ Wenn die Klasse versucht, Zuweisen von Arbeitsspeicher auf dem Heap und ein Fehler auftritt, er ruft `AtlThrow` mit dem Argument **E_OUTOFMEMORY**.  
   
- Standardmäßig verwenden die ATL-konvertierungsklassen und-Makros ANSI-Codepage des aktuellen Threads für die Konvertierung. Wenn Sie dieses Verhalten für eine bestimmte Konvertierung überschreiben möchten, geben Sie die Codepage als zweiten Parameter an den Konstruktor für die Klasse.  
+ Standardmäßig verwenden die ATL-konvertierungsklassen und-Makros ANSI-Codepage für den aktuellen Thread für die Konvertierung. Wenn Sie dieses Verhalten für eine spezifische Konvertierung überschreiben möchten, geben Sie die Codepage als zweiten Parameter an den Konstruktor für die Klasse.  
   
- Die folgenden Makros basieren auf diese Klasse:  
+ Die folgenden Makros hängen von dieser Klasse:  
   
 - `CA2TEX`  
   
@@ -102,14 +102,14 @@ class CA2WEX
   
 - `CT2CWEX`  
   
- Die folgende Typedef basiert auf diese Klasse:  
+ Die folgenden Typedef basiert auf diese Klasse:  
   
 - **CA2W**  
   
- Eine Beschreibung dieser textkonvertierungsmakros, finden Sie unter [ATL und MFC-Makros zur Zeichenfolgenkonvertierung](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Eine Erläuterung der diese textkonvertierungsmakros, finden Sie unter [ATL- und MFC-Makros zur Zeichenfolgenkonvertierung](string-conversion-macros.md).  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter [ATL und MFC-Makros zur Zeichenfolgenkonvertierung](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) ein Beispiel für die Verwendung dieser Makros für die Konvertierung.  
+ Finden Sie unter [ATL- und MFC-Makros zur Zeichenfolgenkonvertierung](string-conversion-macros.md) für ein Beispiel zur Verwendung dieser Makros zur zeichenfolgenkonvertierung.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlconv.h  
@@ -124,13 +124,13 @@ CA2WEX(LPCSTR psz) throw(...);
   
 ### <a name="parameters"></a>Parameter  
  `psz`  
- Die Textzeichenfolge konvertiert werden.  
+ Die Textzeichenfolge, die konvertiert werden.  
   
  `nCodePage`  
- Die Codepage verwendet, um die Konvertierung auszuführen. Lesen Sie die Code-Seite Parameter Beiträge für die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Funktion [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) für weitere Details.  
+ Die Codepage, die zum Durchführen der Konvertierung verwendet wird. Finden Sie in den Ausführungen Code Seite Parameter, für die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Funktion [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) Weitere Details.  
   
 ### <a name="remarks"></a>Hinweise  
- Weist den Puffer im Übersetzungsprozess verwendet.  
+ Ordnet den Puffer, der bei der Übersetzung verwendet.  
   
 ##  <a name="dtor"></a>CA2WEX:: ~ CA2WEX  
  Der Destruktor.  
@@ -143,7 +143,7 @@ CA2WEX(LPCSTR psz) throw(...);
  Gibt den zugeordneten Puffer frei.  
   
 ##  <a name="m_psz"></a>CA2WEX::m_psz  
- Der Datenmember, die die Quellzeichenfolge speichert.  
+ Das Datenelement, das die Quellzeichenfolge speichert.  
   
 ```
 LPWSTR m_psz;
@@ -157,7 +157,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 ```  
   
 ##  <a name="operator_lpwstr"></a>CA2WEX::Operator LPWSTR  
- Operator für die Konvertierung.  
+ Konvertierungsoperator.  
   
 ```  
 operator LPWSTR() const throw();
@@ -172,5 +172,5 @@ operator LPWSTR() const throw();
  [CW2AEX-Klasse](../../atl/reference/cw2aex-class.md)   
  [CW2CWEX-Klasse](../../atl/reference/cw2cwex-class.md)   
  [CW2WEX-Klasse](../../atl/reference/cw2wex-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 

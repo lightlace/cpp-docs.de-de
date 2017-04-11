@@ -1,5 +1,5 @@
 ---
-title: Klasse CComSimpleThreadAllocator | Microsoft-Dokumentation
+title: CComSimpleThreadAllocator Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 377e7f2fa6d8377d46e98b52e9c8f075b10956a8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 04946d07bea39eb739c31a3254355d3527d2e9c3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator-Klasse
@@ -62,7 +62,7 @@ class CComSimpleThreadAllocator
 |[CComSimpleThreadAllocator::GetThread](#getthread)|Wählt einen Thread.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComSimpleThreadAllocator`verwaltet die Thread-Auswahl für [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread`einfach durch jeden Thread und gibt das nächste in der Sequenz zurück.  
+ `CComSimpleThreadAllocator`verwaltet die Auswahl der Thread [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread`einfach durchläuft jeden Thread, und gibt den nächsten in der Sequenz zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
@@ -76,20 +76,20 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
   
 ### <a name="parameters"></a>Parameter  
  `pApt`  
- In ATL Standard-Implementierung verwendet nicht.  
+ In der Standardimplementierung von ATL verwendet nicht.  
   
  `nThreads`  
  Die maximale Anzahl von Threads in der EXE-Modul.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine ganze Zahl zwischen 0 (null) und ( `nThreads` – 1). Identifiziert einen der Threads in der EXE-Modul.  
+ Eine ganze Zahl zwischen 0 (null) und ( `nThreads` - 1). Identifiziert einen Threads in der EXE-Modul.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie überschreiben können `GetThread` eine andere Methode der Auswahl oder stellen verwenden die `pApt` Parameter.  
+ Sie überschreiben können `GetThread` , geben Sie eine andere Methode der Auswahl sowie zum vornehmen von verwenden die `pApt` Parameter.  
   
  `GetThread`wird aufgerufen, indem [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
   
 ## <a name="see-also"></a>Siehe auch  
  [CComApartment-Klasse](../../atl/reference/ccomapartment-class.md)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 

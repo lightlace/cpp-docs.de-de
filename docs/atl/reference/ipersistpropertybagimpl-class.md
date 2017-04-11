@@ -1,5 +1,5 @@
 ---
-title: Klasse IPersistPropertyBagImpl | Microsoft-Dokumentation
+title: IPersistPropertyBagImpl Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,13 +39,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 901a6a6bf4097b6aa78a898254766f122bb2f959
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: abef2ffa759cf74ee2316c7e0c9dd84f5c76b1d7
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl-Klasse
-Diese Klasse implementiert **IUnknown** und ermöglicht es einem Objekt, dessen Eigenschaften in einer vom Client bereitgestellte Eigenschaftensammlung speichern.  
+Diese Klasse implementiert **IUnknown** und einem Objekt Gelegenheit zu seiner Eigenschaften auf einem Client bereitgestellte Eigenschaftensammlung zu speichern.  
   
 > [!IMPORTANT]
 >  Diese Klasse und ihre Member können in Anwendungen, die in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden, nicht verwendet werden.  
@@ -59,7 +59,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
   
 #### <a name="parameters"></a>Parameter  
  `T`  
- Abgeleitet von die Klasse `IPersistPropertyBagImpl`.  
+ Die Klasse abgeleitet `IPersistPropertyBagImpl`.  
   
 ## <a name="members"></a>Mitglieder  
   
@@ -68,16 +68,16 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|Ruft die CLSID des Objekts ab.|  
-|[IPersistPropertyBagImpl::InitNew](#initnew)|Initialisiert ein neu erstelltes Objekt. Der ATL-Implementierung zurückgegeben `S_OK`.|  
-|[IPersistPropertyBagImpl::Load](#load)|Lädt die Eigenschaften des Objekts in einem Client bereitgestellte Eigenschaftensammlung.|  
+|[IPersistPropertyBagImpl::InitNew](#initnew)|Initialisiert ein neu erstelltes Objekt. Gibt die ATL-Implementierung `S_OK`.|  
+|[IPersistPropertyBagImpl::Load](#load)|Lädt die Eigenschaften des Objekts aus einem Client bereitgestellte Eigenschaftenbehälter.|  
 |[IPersistPropertyBagImpl::Save](#save)|Die Eigenschaften des Objekts in einem Client bereitgestellte Eigenschaftenbehälter gespeichert.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) Schnittstelle ermöglicht es, ein Objekt, dessen Eigenschaften in einer vom Client bereitgestellte Eigenschaftensammlung speichern. Klasse `IPersistPropertyBagImpl` bietet eine Standardimplementierung dieser Schnittstelle und implementiert **IUnknown** durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus erstellt.  
+ Die [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) Schnittstelle ermöglicht es, ein Objekt, dessen Eigenschaften auf einem Client bereitgestellte Eigenschaftensammlung zu speichern. Klasse `IPersistPropertyBagImpl` stellt eine Standardimplementierung dieser Schnittstelle und implementiert **IUnknown** durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus erstellt.  
   
- **IPersistPropertyBag** zusammen mit [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) und [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Diese letzten beiden Schnittstellen müssen vom Client implementiert werden. Über `IPropertyBag`, der Client speichert und lädt die einzelnen Eigenschaften des Objekts. Durch **IErrorLog**, das Objekt und der Client können gefundene Fehler melden.  
+ **IPersistPropertyBag** funktioniert in Verbindung mit [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) und [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Diese zweiten zwei Schnittstellen müssen vom Client implementiert werden. Über `IPropertyBag`, der Client speichert und lädt die einzelnen Eigenschaften des Objekts. Über **IErrorLog**, können das Objekt und der Client alle aufgetretenen melden.  
   
- **Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
+ **Verwandte Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `IPersistPropertyBag`  
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
  `IPersistPropertyBagImpl`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** Standardschnittstellen  
+ **Header:** atlcom.h  
   
 ##  <a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
  Ruft die CLSID des Objekts ab.  
@@ -111,14 +111,14 @@ STDMETHOD(InitNew)();
  Finden Sie unter [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="load"></a>IPersistPropertyBagImpl::Load  
- Lädt die Eigenschaften des Objekts in einem Client bereitgestellte Eigenschaftensammlung.  
+ Lädt die Eigenschaften des Objekts aus einem Client bereitgestellte Eigenschaftenbehälter.  
   
 ```
 STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- ATL verwendet die Objekttabelle Eigenschaft zum Abrufen dieser Informationen.  
+ ATL verwendet eigenschaftenzuordnung für das Objekt, um diese Informationen abzurufen.  
   
  Finden Sie unter [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -133,11 +133,11 @@ STDMETHOD(Save)(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- ATL verwendet die Objekttabelle Eigenschaft zum Speichern dieser Informationen. Diese Methode speichert standardmäßig alle Eigenschaften, unabhängig vom Wert der *fSaveAllProperties*.  
+ ATL verwendet der objektzuordnung-Eigenschaft, um diese Informationen speichern. Diese Methode speichert standardmäßig alle Eigenschaften, unabhängig vom Wert der *fSaveAllProperties*.  
   
  Finden Sie unter [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="see-also"></a>Siehe auch  
- [BEGIN_PROP_MAP](http://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 

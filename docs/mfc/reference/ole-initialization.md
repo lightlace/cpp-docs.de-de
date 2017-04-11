@@ -1,5 +1,5 @@
 ---
-title: OLE-Initialisierung | Microsoft-Dokumentation
+title: OLE-Initialisierung | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,21 +34,38 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 5c2d8a1552b8cd546b7e22683fe9f73bbc54df5c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: c598a2c78e92725e656de82397418f1635d4f92d
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ole-initialization"></a>OLE-Initialisierung
-Bevor eine Anwendung OLE-System-Dienste verwenden kann, müssen sie die OLE-System-DLLs initialisieren und stellen Sie sicher, dass die DLLs der richtigen Version vorliegen. Die **AfxOleInit** Funktion initialisiert die OLE-System-DLLs.  
+Bevor eine Anwendung OLE-Systemdienste verwenden kann, muss er die OLE-System-DLLs initialisieren und stellen Sie sicher, dass die DLLs der richtigen Version vorliegen. Die **AfxOleInit** Funktion initialisiert die OLE-System-DLLs.  
   
 ### <a name="ole-initialization"></a>OLE-Initialisierung  
   
 |||  
 |-|-|  
-|[AfxOleInit](#afxoleinit)|Initialisiert die OLE-Bibliotheken.|  
+|[AfxOleInit](#afxoleinit)|Initialisiert die OLE-Bibliotheken.| 
+|[AfxEnableControlContainer](#afxenablecontrolcontainer)|Mit dieser Funktion wird in des Anwendungsobjekts `InitInstance` Funktion zum Aktivieren der Unterstützung für die Kapselung der OLE-Steuerelemente.| 
+
+
+## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer
+Mit dieser Funktion wird in des Anwendungsobjekts `InitInstance` Funktion zum Aktivieren der Unterstützung für die Kapselung der OLE-Steuerelemente.  
+   
+### <a name="syntax"></a>Syntax    
+```
+void AfxEnableControlContainer( );  
+```  
+   
+### <a name="remarks"></a>Hinweise  
+ Weitere Informationen zu OLE-Steuerelemente (jetzt als ActiveX-Steuerelemente bezeichnet), finden Sie unter [Themen zu ActiveX-Steuerelementen](../mfc-activex-controls.md).  
+   
+### <a name="requirements"></a>Anforderungen  
+ **Header:** afxdisp.h  
+
   
-##  <a name="a-nameafxoleinita--afxoleinit"></a><a name="afxoleinit"></a>AfxOleInit  
+##  <a name="afxoleinit"></a>AfxOleInit  
  Initialisiert die OLE-Unterstützung für die Anwendung.  
   
 ``` 
@@ -63,13 +80,13 @@ BOOL AFXAPI AfxOleInit();
   
 -   Initialisiert die COM-Bibliothek für das aktuelle Apartment des aufrufenden Anwendung. Weitere Informationen finden Sie unter [OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134).  
   
--   Erstellt ein nachrichtenfilterobjekt und implementiert die [IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740) Schnittstelle. Dieser Nachrichtenfilter zugegriffen werden kann, mit einem Aufruf von [AfxOleGetMessageFilter](http://msdn.microsoft.com/library/36cca011-4775-4086-b471-5557a87b266c).  
+-   Erstellt ein nachrichtenfilterobjekt implementieren die [IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740) Schnittstelle. Dieser Nachrichtenfilter möglich, die mit einem Aufruf von [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).  
   
 > [!NOTE]
 >  Wenn **AfxOleInit** heißt aus einer MFC-DLL der Aufruf fehl. Der Fehler tritt auf, weil die Funktion davon ausgeht, dass das OLE-System zuvor von der aufrufenden Anwendung initialisiert wurde, wenn sie von einer DLL aufgerufen wird.  
   
 > [!NOTE]
->  MFC-Anwendungen müssen als Singlethread-Apartment (STA) initialisiert werden. Wenn Sie aufrufen [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) in Ihrer `InitInstance` außer Kraft setzen, geben Sie `COINIT_APARTMENTTHREADED` (statt `COINIT_MULTITHREADED`). Weitere Informationen finden Sie unter PRB: MFC-Anwendung reagiert nicht mehr, wenn Sie die Anwendung als eine Multithread-Apartment initialisieren (828643) am initialisieren [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  MFC-Anwendungen müssen als Singlethread-Apartment (STA) initialisiert werden. Beim Aufrufen [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) in Ihrer `InitInstance` außer Kraft setzen, geben Sie `COINIT_APARTMENTTHREADED` (statt `COINIT_MULTITHREADED`). Weitere Informationen finden Sie unter PRB: MFC-Anwendung nicht mehr reagiert, wenn Sie die Anwendung als eine Multithread-Apartment (828643) am initialisieren [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h

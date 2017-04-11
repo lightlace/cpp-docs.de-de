@@ -1,5 +1,5 @@
 ---
-title: IAxWinHostWindow Schnittstelle | Microsoft-Dokumentation
+title: IAxWinHostWindow Schnittstelle | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,13 +41,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6e366e7e30e7b4080462fbc21c29b4ecdf0214ae
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: ecf88a3a6b115088dd605fff2b633bff86fb086a
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow-Schnittstelle
-Diese Schnittstelle stellt Methoden zum Bearbeiten eines Steuerelements und seiner Host-Objekt.  
+Diese Schnittstelle bietet Methoden zum Bearbeiten von einem Steuerelement und seine Hostobjekt.  
   
 > [!IMPORTANT]
 >  Diese Klasse und ihre Member können in Anwendungen, die in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] ausgeführt werden, nicht verwendet werden.  
@@ -64,26 +64,26 @@ interface IAxWinHostWindow : IUnknown
   
 |||  
 |-|-|  
-|[AttachControl](#attachcontrol)|Fügt ein vorhandenes Steuerelement an das Hostobjekt an.|  
-|[CreateControl](#createcontrol)|Erstellt ein Steuerelement, und fügt es dem Host-Objekt.|  
-|[CreateControlEx](#createcontrolex)|Erstellt ein Steuerelement, fügt es auf das Hostobjekt und optional einen Ereignishandler eingerichtet.|  
+|[AttachControl](#attachcontrol)|Fügt ein vorhandenes Steuerelement an das Hostobjekt, das an.|  
+|[CreateControl](#createcontrol)|Erstellt ein Steuerelement, und fügt ihn das Hostobjekt.|  
+|[CreateControlEx](#createcontrolex)|Erstellt ein Steuerelement, das Hostobjekt fügt ihn und optional einen Ereignishandler eingerichtet.|  
 |[QueryControl](#querycontrol)|Gibt einen Schnittstellenzeiger auf das gehostete Steuerelement zurück.|  
-|[SetExternalDispatch](#setexternaldispatch)|Legt die externen `IDispatch` Schnittstelle.|  
-|[SetExternalUIHandler](#setexternaluihandler)|Legt die externen `IDocHostUIHandlerDispatch` Schnittstelle.|  
+|[SetExternalDispatch](#setexternaldispatch)|Legt den externen `IDispatch` Schnittstelle.|  
+|[SetExternalUIHandler](#setexternaluihandler)|Legt den externen `IDocHostUIHandlerDispatch` Schnittstelle.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle wird von ATL ActiveX-Steuerelement hosten von Objekten verfügbar gemacht. Rufen Sie die Methoden dieser Schnittstelle zum Erstellen bzw. Fügen Sie ein Steuerelement an die Hostobjekt, um eine Schnittstelle von einem gehosteten Steuerelement abzurufen oder zum Festlegen von externen Dispinterface oder UI-Handler für die Verwendung beim Hosten von einem Webbrowser aus.  
+ Diese Schnittstelle wird von ATL ActiveX-Steuerelement hosten von Objekten verfügbar gemacht. Rufen Sie die Methoden für diese Schnittstelle zum Erstellen und/oder fügen Sie ein Steuerelement an das Hostobjekt, können Sie eine Schnittstelle von einem gehosteten Steuerelement abzurufen und zum Festlegen von externen Dispinterface oder UI-Handler für die Verwendung beim Hosten des Webbrowsers.  
   
 ## <a name="requirements"></a>Anforderungen  
- Die Definition dieser Schnittstelle ist als IDL oder C++ verfügbar, wie unten dargestellt.  
+ Die Definition dieser Schnittstelle ist als IDL oder C++ zur Verfügung, wie unten dargestellt.  
   
-|Definitionstyp|Datei|  
+|Der Definitionstyp|Datei|  
 |---------------------|----------|  
 |IDL|ATLIFace.idl|  
 |C++|Konnte IRegistrar (auch in ATLBase.h enthalten)|  
   
 ##  <a name="attachcontrol"></a>IAxWinHostWindow:: AttachControl  
- Fügt eine vorhandene (und zuvor initialisierten)-Steuerelement an das Hostobjekt, das mit dem Fenster identifizierten `hWnd`.  
+ Fügt eine vorhandene (und zuvor initialisierten)-Steuerelement an das Hostobjekt, das im Fenster "" identifizierte `hWnd`.  
   
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -91,10 +91,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
   
 ### <a name="parameters"></a>Parameter  
  *pUnkControl*  
- [in] Ein Zeiger auf die **IUnknown** Schnittstelle des Hostobjekts zugeordnet werden soll.  
+ [in] Ein Zeiger auf die **IUnknown** Schnittstelle des Steuerelements das Hostobjekt zugeordnet werden soll.  
   
  `hWnd`  
- [in] Ein Handle für das Fenster, für das Hosten von verwendet werden.  
+ [in] Ein Handle für das Fenster für das hosting verwendet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
@@ -111,26 +111,26 @@ STDMETHOD(CreateControl)(
   
 ### <a name="parameters"></a>Parameter  
  `lpTricsData`  
- [in] Eine Zeichenfolge, die das zu erstellende Steuerelement identifiziert. Kann (müssen, einschließlich der geschweiften Klammern) CLSID, ProgID, URL oder unformatierten HTML (mit dem Präfix **MSHTML:**).  
+ [in] Eine Zeichenfolge, die das zu erstellende Steuerelement identifiziert wird. Kann eine (müssen auch die geschweiften Klammern) CLSID, ProgID, URL oder unformatierten HTML (mit dem Präfix **MSHTML:**).  
   
  `hWnd`  
- [in] Ein Handle für das Fenster, für das Hosten von verwendet werden.  
+ [in] Ein Handle für das Fenster für das hosting verwendet werden soll.  
   
  `pStream`  
- [in] Ein Schnittstellenzeiger für einen Stream, der Daten für das Steuerelement enthält. Kann **NULL**.  
+ [in] Ein Schnittstellenzeiger für einen Datenstrom, die Initialisierungsdaten für das Steuerelement enthält. Kann **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieses Fenster wird durch das Hostobjekt, das diese Schnittstelle verfügbar macht, damit Nachrichten an das Steuerelement wiedergegeben werden können und andere Container Features funktionieren als Unterklasse definiert werden.  
+ Dieses Fenster wird als Unterklasse werden, indem Sie das Hostobjekt, das diese Schnittstelle verfügbar macht, sodass Nachrichten an das Steuerelement gespiegelt werden können, und andere Container-Funktionen verwendet werden können.  
   
- Das Aufrufen dieser Methode entspricht dem Aufruf [IAxWinHostWindow::CreateControlEx](#createcontrolex).  
+ Beim Aufrufen dieser Methode entspricht dem Aufruf [IAxWinHostWindow::CreateControlEx](#createcontrolex).  
   
  Um ein lizenziertes ActiveX-Steuerelement zu erstellen, finden Sie unter [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
 ##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
- Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster ähnelt [IAxWinHostWindow::CreateControl](#createcontrol).  
+ Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster, ähnlich wie [IAxWinHostWindow::CreateControl](#createcontrol).  
   
 ```
 STDMETHOD(CreateControlEx)(
@@ -144,33 +144,33 @@ STDMETHOD(CreateControlEx)(
   
 ### <a name="parameters"></a>Parameter  
  `lpTricsData`  
- [in] Eine Zeichenfolge, die das zu erstellende Steuerelement identifiziert. Kann (müssen, einschließlich der geschweiften Klammern) CLSID, ProgID, URL oder unformatierten HTML (mit dem Präfix **MSHTML:**).  
+ [in] Eine Zeichenfolge, die das zu erstellende Steuerelement identifiziert wird. Kann eine (müssen auch die geschweiften Klammern) CLSID, ProgID, URL oder unformatierten HTML (mit dem Präfix **MSHTML:**).  
   
  `hWnd`  
- [in] Ein Handle für das Fenster, für das Hosten von verwendet werden.  
+ [in] Ein Handle für das Fenster für das hosting verwendet werden soll.  
   
  `pStream`  
- [in] Ein Schnittstellenzeiger für einen Stream, der Daten für das Steuerelement enthält. Kann **NULL**.  
+ [in] Ein Schnittstellenzeiger für einen Datenstrom, die Initialisierungsdaten für das Steuerelement enthält. Kann **NULL**.  
   
  `ppUnk`  
- [out] Die Adresse eines Zeigers, die erhalten die **IUnknown** Schnittstelle erstellt. Kann **NULL**.  
+ [out] Die Adresse eines Zeigers, die erhalten die **IUnknown** Schnittstelle des erstellten Steuerelements. Kann **NULL**.  
   
  *riidAdvise*  
- [in] Der Schnittstellenbezeichner des Ausgangsschnittstelle enthaltenen Objekts. Kann **IID_NULL**.  
+ [in] Der Schnittstellenbezeichner einer ausgehenden Schnittstelle auf die darin enthaltenen Objekte. Kann **IID_NULL**.  
   
  *punkAdvise*  
- [in] Ein Zeiger auf die **IUnknown** Schnittstelle des Senkenobjekts zum Verbindungspunkt anhand des enthaltenen Objekts verbunden sein `iidSink`.  
+ [in] Ein Zeiger auf die **IUnknown** -Schnittstelle des Senkenobjekts Verbindung mit dem Verbindungspunkt am der darin enthaltenen Objekte angegeben werden `iidSink`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Im Gegensatz zu den `CreateControl` -Methode `CreateControlEx` darüber hinaus können Sie erhalten einen Schnittstellenzeiger auf das neu erstellte Steuerelement und eine Ereignissenke zum Empfangen von Ereignissen, die vom Steuerelement ausgelöst.  
+ Im Gegensatz zu den `CreateControl` Methode `CreateControlEx` können außerdem erhalten einen Schnittstellenzeiger auf das neu erstellte Steuerelement, und richten Sie eine Ereignissenke zum Empfangen von Ereignissen, die vom Steuerelement ausgelöst.  
   
  Um ein lizenziertes ActiveX-Steuerelement zu erstellen, finden Sie unter [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
 ##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
- Gibt den angegebenen Schnittstellenzeiger vom gehosteten Steuerelement bereitgestellt werden.  
+ Gibt den angegebenen Schnittstellenzeiger vom gehosteten Steuerelement bereitgestellte zurück.  
   
 ```
 STDMETHOD(QueryControl)(
@@ -180,16 +180,16 @@ STDMETHOD(QueryControl)(
   
 ### <a name="parameters"></a>Parameter  
  `riid`  
- [in] Die ID einer Schnittstelle für das Steuerelement angefordert wird.  
+ [in] Die ID einer Schnittstelle für das Steuerelement, das angefordert wird.  
   
  `ppvObject`  
- [out] Die Adresse eines Zeigers, der die angegebene Schnittstelle für das erstellte Steuerelement erhält.  
+ [out] Die Adresse eines Zeigers, die die angegebene Schnittstelle des erstellten Steuerelements empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
- Legt die externen Disp-Schnittstelle, die enthaltenen Steuerelemente über zur Verfügung steht die [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) Methode.  
+ Legt die externen Disp-Schnittstelle, die darin enthaltenen Steuerelemente bis hin zur Verfügung steht die [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) Methode.  
   
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
@@ -203,7 +203,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
  Ein Standard `HRESULT` -Wert.  
   
 ##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
- Rufen Sie diese Funktion zum Festlegen der externen [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) Schnittstelle für die `CAxWindow` Objekt.  
+ Mit dieser Funktion wird zum Festlegen von externen [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) eine Schnittstelle für die `CAxWindow` Objekt.  
   
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -211,18 +211,18 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
   
 ### <a name="parameters"></a>Parameter  
  `pDisp`  
- [in] Ein Zeiger auf eine **IDocHostUIHandlerDispatch** Schnittstelle.  
+ [in] Ein Zeiger auf ein **IDocHostUIHandlerDispatch** Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Standard `HRESULT` -Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird von Steuerelementen (z. B. das Webbrowser-Steuerelement), die die Hostwebsite für Abfragen verwendet die `IDocHostUIHandlerDispatch` Schnittstelle.  
+ Diese Funktion wird von allen Steuerelementen (z. B. das Webbrowser-Steuerelement), die dem Host der Website für Abfragen verwendet die `IDocHostUIHandlerDispatch` Schnittstelle.  
   
 ## <a name="see-also"></a>Siehe auch  
  [IAxWinAmbientDispatch-Schnittstelle](../../atl/reference/iaxwinambientdispatch-interface.md)   
  [CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
- [AtlAxGetHost](http://msdn.microsoft.com/library/ad1f4f16-608d-4e96-8d30-04d4ca906a7b)
+ [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 
 
 

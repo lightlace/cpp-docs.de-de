@@ -1,5 +1,5 @@
 ---
-title: CMessageMap Klasse | Microsoft-Dokumentation
+title: CMessageMap Klasse | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,16 +38,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: f0b40c73101463b934e3fcf299171bea142fe838
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 2726e73d35d01c942ac3d251579fe350be549800
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cmessagemap-class"></a>CMessageMap-Klasse
-Diese Klasse ermöglicht, dass ein Objekt Nachricht Zugriff von einem anderen Objekt zugeordnet.  
+Diese Klasse ermöglicht es, dass ein Objekt meldungszuordnungen, um den Zugriff durch ein anderes Objekt sein.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member werden nicht in Anwendungen verwendet, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,24 +61,24 @@ class ATL_NO_VTABLE CMessageMap
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Greift auf eine Zuordnung der Nachricht in der `CMessageMap`-Klasse.|  
+|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Greift auf eine meldungszuordnung in der `CMessageMap`-Klasse.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CMessageMap`ist eine abstrakte Basisklasse, die ein Objekt Nachricht ermöglicht wird, um von einem anderen Objekt zugegriffen werden. In der Reihenfolge für ein Objekt, dessen Meldungszuordnungstabellen verfügbar zu machen, muss von die Klasse abgeleitet `CMessageMap`.  
+ `CMessageMap`ist eine abstrakte Basisklasse, die ein Objekt Nachricht ermöglicht Zuordnungen enthalten, die von einem anderen Objekt zugegriffen werden. Damit kann für ein Objekt, dessen meldungszuordnungen verfügbar zu machen, muss von die Klasse abgeleitet `CMessageMap`.  
   
- ATL verwendet `CMessageMap` eigenständiger Windows und dynamische Meldung Zuordnung verketten. Z. B. jede Klasse mit einer [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) Objekt durch Ableiten von `CMessageMap`. Der folgende Code stammt aus der [SUBEDIT](../../visual-cpp-samples.md) Beispiel. Durch [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` Klasse automatisch abgeleitet `CMessageMap`.  
+ ATL verwendet `CMessageMap` eigenständiger Windows und dynamische Nachricht Zuordnung verketten. Z. B. eine Klasse mit einem [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) Objekt leiten von `CMessageMap`. Der folgende Code stammt aus dem [SUBEDIT](../../visual-cpp-samples.md) Beispiel. Über [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` Klasse automatisch abgeleitet `CMessageMap`.  
   
- [!code-cpp[NVC_ATL_Windowing&#90;](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing #90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   
- Da Fenster enthaltenen `m_EditCtrl`, verwendet eine Zuordnung für die Nachricht in der enthaltenden Klasse `CAtlEdit` leitet sich von `CMessageMap`.  
+ Da Fenster enthaltenen `m_EditCtrl`, verwendet eine meldungszuordnung in der enthaltenden Klasse `CAtlEdit` leitet sich von `CMessageMap`.  
   
- Weitere Informationen über meldungszuordnungen finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md) im Artikel "ATL-Fensterklassen".  
+ Weitere Informationen zu den meldungszuordnungen, finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md) im Artikel "ATL-Fensterklassen".  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atlwin.h  
+ **Header:** atlwin.h vorhanden  
   
 ##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
- Greift auf den identifizierten meldungszuordnung `dwMsgMapID` in einem `CMessageMap`-abgeleiteten Klasse.  
+ Greift auf die identifizierte meldungszuordnung `dwMsgMapID` in eine `CMessageMap`-Klasse.  
   
 ```
 virtual BOOL ProcessWindowMessage(  
@@ -92,32 +92,32 @@ virtual BOOL ProcessWindowMessage(
   
 ### <a name="parameters"></a>Parameter  
  `hWnd`  
- [in] Das Handle für das Fenster, das die Nachricht empfängt.  
+ [in] Das Handle für das Empfangen der Nachricht ein.  
   
  `uMsg`  
  [in] Die Nachricht an das Fenster gesendet.  
   
  `wParam`  
- [in] Zusätzliche Message-spezifische Informationen.  
+ [in] Zusätzliche Meldung-spezifische Informationen.  
   
  `lParam`  
- [in] Zusätzliche Message-spezifische Informationen.  
+ [in] Zusätzliche Meldung-spezifische Informationen.  
   
  `lResult`  
- [out] Das Ergebnis der Verarbeitung der Nachricht.  
+ [out] Das Ergebnis der Nachrichtenverarbeitung.  
   
  `dwMsgMapID`  
- [in] Der Bezeichner der Nachricht Zuordnung, die die Nachricht verarbeitet. Die Standard-meldungszuordnung, die mit [BEGIN_MSG_MAP](http://msdn.microsoft.com/library/8bbb5af9-18b1-48c6-880e-166f599ee554), durch 0 identifiziert. Eine Zuordnung alternative Nachricht, die mit [ALT_MSG_MAP(msgMapID)](http://msdn.microsoft.com/library/2c8871bf-abc0-4d52-bcf7-6b2ab9eb5af8), wird durch identifiziert `msgMapID`.  
+ [in] Der Bezeichner für die meldungszuordnung, die die Nachricht verarbeitet. Die Standard-meldungszuordnung deklariert mit [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), von 0 bezeichnet wird. Eine alternative meldungszuordnung deklariert mit [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), wird durch identifiziert `msgMapID`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- **True,** ist die Nachricht vollständig verarbeitet, andernfalls **FALSE**.  
+ **"True"** ist die Nachricht vollständig verarbeitet, andernfalls **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
- Durch die Fensterprozedur des Namens einer [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) -Objekts oder eines Objekts ist, die dynamisch an die Nachricht Map verketten.  
+ Wird aufgerufen, indem die Fensterprozedur der eine [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) -Objekts oder eines Objekts ist, die dynamisch an die meldungszuordnung verketten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CDynamicChain-Klasse](../../atl/reference/cdynamicchain-class.md)   
- [BEGIN_MSG_MAP](http://msdn.microsoft.com/library/8bbb5af9-18b1-48c6-880e-166f599ee554)   
- [ALT_MSG_MAP](http://msdn.microsoft.com/library/2c8871bf-abc0-4d52-bcf7-6b2ab9eb5af8)   
- [Übersicht über die Klasse](../../atl/atl-class-overview.md)
+ [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
+ [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+ [Klassenübersicht](../../atl/atl-class-overview.md)
 
