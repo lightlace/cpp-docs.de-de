@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2900 bis C3499 | Microsoft-Dokumentation
+title: Compilerfehler C2900 bis C3499 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: be14b38a2d4220436c4dd2fc62355a438a0c7b6e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: a5521f4d0bc1c4bb4458ed532af067132b3f6047
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-errors-c2900-through-c3499"></a>Compilerfehler C2900 bis C3499
@@ -70,7 +70,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
   
  [Compilerfehler C2959](../../error-messages/compiler-errors-2/compiler-error-c2959.md)  
   
- [Compiler-Fehler C2962](../../error-messages/compiler-errors-2/compiler-error-c2962.md)  
+ [Compilerfehler C2962](../../error-messages/compiler-errors-2/compiler-error-c2962.md)  
   
  [Compilerfehler C2970](../../error-messages/compiler-errors-2/compiler-error-c2970.md)  
   
@@ -217,6 +217,8 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
  [Compilerfehler C3414](../../error-messages/compiler-errors-2/compiler-error-c3414.md)  
   
  [Compilerfehler C3417](../../error-messages/compiler-errors-2/compiler-error-c3417.md)  
+  
+ [Compilerfehler Fehler C3445](../../error-messages/compiler-errors-2/compiler-error-c3445.md)  
   
  [Compilerfehler C3450](../../error-messages/compiler-errors-2/compiler-error-c3450.md)  
   

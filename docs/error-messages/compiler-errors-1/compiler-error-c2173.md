@@ -1,29 +1,46 @@
 ---
-title: "Compilerfehler C2173 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C2173"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2173"
+title: Compilerfehler C2173 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C2173
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2173
 ms.assetid: 4df592b8-609b-41a5-b4fc-966eb5bb2d1a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerfehler C2173
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 69fec4e2812c80259708b1c5a08b9c46d3bd9c24
+ms.lasthandoff: 04/12/2017
 
+---
+# <a name="compiler-error-c2173"></a>Compilerfehler C2173
 „function“: übergebener Parameter ist kein Zeiger: Parameter „number1“, Parameterliste „number2“.  
   
- Der an die Parameterliste `number2` übergebene Parameter `number1` ist kein Zeiger. Die Funktion erwartet einen Zeiger.
+ Der an die Parameterliste `number1` übergebene Parameter `number2` ist kein Zeiger. Die Funktion erwartet einen Zeiger.
