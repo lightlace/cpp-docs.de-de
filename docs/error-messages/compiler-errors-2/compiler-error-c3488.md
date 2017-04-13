@@ -1,34 +1,51 @@
 ---
-title: "Compilerfehler C3488 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C3488"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3488"
+title: Compilerfehler C3488 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C3488
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3488
 ms.assetid: 0a6fcd76-dd3b-48d7-abb3-22eccda96034
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compilerfehler C3488
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 6c7f36a63d5922672e89faf0c7d73c95100b256d
+ms.lasthandoff: 04/12/2017
 
+---
+# <a name="compiler-error-c3488"></a>Compilerfehler C3488
 "Var" ist nicht zulässig, wenn der Standarderfassungsmodus ein Modus nach Verweis ist.  
   
- Wenn Sie angeben, dass der Standarderfassungsmodus für einen Lambda\-Ausdruck ein Modus nach Verweis ist, können Sie keine Variable nach Verweis an die Erfassungsklausel dieses Ausdrucks übergeben.  
+ Wenn Sie angeben, dass der Standarderfassungsmodus für einen Lambda-Ausdruck ein Modus nach Verweis ist, können Sie keine Variable nach Verweis an die Erfassungsklausel dieses Ausdrucks übergeben.  
   
-### So beheben Sie diesen Fehler  
+### <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
 -   Übergeben Sie die Variable nicht explizit an die Erfassungsklausel, oder  
   
@@ -36,21 +53,48 @@ caps.handback.revision: 8
   
 -   geben Sie "nach Wert" als Standarderfassungsmodus an, oder  
   
--   übergeben Sie die Variable nach Wert an die Erfassungsklausel. \(Dies kann das Verhalten des Lambda\-Ausdrucks ändern.\)  
+-   übergeben Sie die Variable nach Wert an die Erfassungsklausel. (Dies kann das Verhalten des lambda-Ausdrucks ändern.)  
   
-## Beispiel  
- Im folgenden Beispiel wird C3488 generiert, weil ein Verweis auf die Variable `n` in der Erfassungsklausel eines Lambda\-Ausdrucks angezeigt wird, dessen Standarderfassungsmodus der Modus nach Verweis ist:  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird C3488 generiert, weil ein Verweis auf die Variable `n` in der Erfassungsklausel eines Lambda-Ausdrucks angezeigt wird, dessen Standarderfassungsmodus der Modus nach Verweis ist:  
   
 ```  
-// C3488a.cpp int main() { int n = 5; [&, &n]() { return n; } (); // C3488 }  
+// C3488a.cpp  
+  
+int main()  
+{  
+   int n = 5;  
+   [&, &n]() { return n; } (); // C3488  
+}  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden vier mögliche Lösungen für den Fehler C3488 gezeigt:  
   
 ```  
-// C3488b.cpp int main() { int n = 5; // Possible resolution 1: // Do not explicitly pass &n to the capture clause. [&]() { return n; } (); // Possible resolution 2: // Do not specify by-reference as the default capture mode. [&n]() { return n; } (); // Possible resolution 3: // Specify by-value as the default capture mode. [=, &n]() { return n; } (); // Possible resolution 4: // Pass n by value to the capture clause. [n]() { return n; } (); }  
+// C3488b.cpp  
+  
+int main()  
+{  
+   int n = 5;  
+  
+   // Possible resolution 1:  
+   // Do not explicitly pass &n to the capture clause.  
+   [&]() { return n; } ();  
+  
+   // Possible resolution 2:  
+   // Do not specify by-reference as the default capture mode.  
+   [&n]() { return n; } ();  
+  
+   // Possible resolution 3:  
+   // Specify by-value as the default capture mode.  
+   [=, &n]() { return n; } ();  
+  
+   // Possible resolution 4:  
+   // Pass n by value to the capture clause.  
+   [n]() { return n; } ();  
+}  
 ```  
   
-## Siehe auch  
- [Lambda\-Ausdrücke](../../cpp/lambda-expressions-in-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [Lambda-Ausdrücke](../../cpp/lambda-expressions-in-cpp.md)

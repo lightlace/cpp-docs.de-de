@@ -1,31 +1,48 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4122 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C4122"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4122"
+title: Compilerwarnung (Stufe 1) C4122 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C4122
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4122
 ms.assetid: 9a83eb0d-8708-42f7-988a-b0b6f2f646a0
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerwarnung (Stufe 1) C4122
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 7f051717657f709e8863346552fa4eedc35ef244
+ms.lasthandoff: 04/12/2017
 
-"Funktion": alloc\_text ist nur für Funktionen mit C\-Bindung anwendbar.  
+---
+# <a name="compiler-warning-level-1-c4122"></a>Compilerwarnung (Stufe 1) C4122
+"Funktion": alloc_text ist nur für Funktionen mit C-Bindung anwendbar.  
   
- Das Pragma **alloc\_text** gilt nur für mit **extern c** deklarierte Funktionen. Es kann nicht mit externen C\+\+\-Funktionen verwendet werden.  
+ Das Pragma **alloc_text** gilt nur für mit **extern c**deklarierte Funktionen. Es kann nicht mit externen C++-Funktionen verwendet werden.  
   
  Das Pragma wird ignoriert.

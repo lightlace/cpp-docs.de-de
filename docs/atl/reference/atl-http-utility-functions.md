@@ -11,9 +11,9 @@ caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0f55ad2529ac32647d72336b426e0790f5617561
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="atl-http-utility-functions"></a>ATL-HTTP-Hilfsfunktionen
@@ -101,7 +101,7 @@ inline BOOL AtlCombineUrl(
  Zeiger auf eine Variable, die die Länge in Zeichen von enthält `szBuffer`. Wenn die Funktion erfolgreich ausgeführt wird, erhält die Variable die Anzahl der Zeichen, die in den Puffer nicht einschließlich des abschließenden Null-Zeichens geschrieben. Wenn die Funktion fehlschlägt, empfängt die Variable die erforderliche Länge in Byte des Puffers, einschließlich Platz für das abschließende Nullzeichen.  
   
  `dwFlags`  
- Flags, die Steuerung des Verhaltens dieser Funktion. Finden Sie unter [ATL_URL Flags](http://msdn.microsoft.com/library/76e8cc5c-4e17-4eb1-ac29-a94d5256c4a7).  
+ Flags, die Steuerung des Verhaltens dieser Funktion. Finden Sie unter [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **"true"** bei Erfolg **"false"** bei einem Fehler.  

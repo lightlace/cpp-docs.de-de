@@ -1,36 +1,58 @@
 ---
-title: "Compilerfehler C3234 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C3234"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3234"
+title: Compilerfehler C3234 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C3234
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3234
 ms.assetid: ebefc15a-e40d-424b-a3dd-d7e185d0ed7b
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Compilerfehler C3234
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 319b673e4c798425e75da746ca59930210e8da79
+ms.lasthandoff: 04/12/2017
 
+---
+# <a name="compiler-error-c3234"></a>Compilerfehler C3234
 Eine generische Klasse kann nicht von einem generischen Typparameter abgeleitet werden.  
   
  Eine generische Klasse kann nicht von einem generischen Typparameter erben.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3234 generiert:  
   
 ```  
-// C3234.cpp // compile with: /clr /c generic <class T> public ref class C : T {};   // C3234 // try the following line instead // public ref class C {};  
+// C3234.cpp  
+// compile with: /clr /c  
+generic <class T>  
+public ref class C : T {};   // C3234  
+// try the following line instead  
+// public ref class C {};  
 ```

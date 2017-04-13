@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 73def19ecc0577d35054a7384d57c88fd2760499
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ca7c5b1e5042ab134ad72a80986435448f5bec20
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="message-map-macros-mfc"></a>Meldungszuordnungsmakros (MFC)
@@ -55,6 +55,7 @@ Um den meldungszuordnungen zu unterstützen, stellt MFC die folgenden Makros ber
 |-|-|  
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Deklariert, dass eine meldungszuordnung in einer Klasse verwendet werden soll, Nachrichten Funktionen zuordnen (muss in der Klassendeklaration verwendet werden).|  
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Beginn der Definition einer meldungszuordnung (muss in der klassenimplementierung verwendet werden).|  
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Beginn der Definition einer meldungszuordnung für ein Klassentyp mit einem einzelnen Vorlagenargument an. |
 |[END_MESSAGE_MAP](#end_message_map)|Beendet die Definition einer meldungszuordnung (muss in der klassenimplementierung verwendet werden).|  
   
 ### <a name="message-mapping-macros"></a>Nachrichtenzuordnung Makros  
@@ -76,39 +77,11 @@ Um den meldungszuordnungen zu unterstützen, stellt MFC die folgenden Makros ber
 |||  
 |-|-|  
 |[ON_COMMAND_RANGE](#on_command_range)|Gibt an, welche Funktion den Bereich der Befehls-IDs, die in die ersten beiden Parameter für das Makro behandelt.|  
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Gibt an, welche updatehandler behandelt den Bereich der Befehls-IDs, die in der ersten beiden Pa] rameter an das Makro.|  
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Gibt an, welche updatehandler den Bereich der Befehls-IDs, die in der ersten beiden Pa angegebenen behandelt] rameter an das Makro.|  
 |[ON_CONTROL_RANGE](#on_control_range)|Gibt an, welche Funktion Benachrichtigungen aus dem Bereich von Steuerelement-IDs angegeben wird, in der zweiten und dritten Parameter an das Makro behandelt. Der erste Parameter ist eine Steuerelement-Benachrichtigung, z. B. **BN_CLICKED**.|  
   
  Weitere Informationen zu meldungszuordnungen, die meldungszuordnung Deklaration und demarkation Makros und die nachrichtenzuordnung Makros, finden Sie unter [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md) und [Nachrichtenbehandlung und Zuordnung Themen](../../mfc/message-handling-and-mapping.md). Weitere Informationen zu Meldungszuordnungsbereiche, finden Sie unter [Handler für Meldungszuordnungsbereiche](../../mfc/handlers-for-message-map-ranges.md).  
 
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
- Deklariert, dass die Klasse eine meldungszuordnung definiert. Jede `CCmdTarget`-abgeleiteten Klasse in Ihrem Programm muss bieten eine meldungszuordnung, um Nachrichten zu verarbeiten.  
-  
-### <a name="syntax"></a>Syntax  
-  
-```    
-DECLARE_MESSAGE_MAP( )  
-```  
-  
-### <a name="remarks"></a>Hinweise  
- Verwenden der `DECLARE_MESSAGE_MAP` Makro am Ende der Klassendeklaration. Verwenden Sie dann in der CPP-Datei, die die Memberfunktionen für die Klasse definiert die `BEGIN_MESSAGE_MAP` -Makro, Makroeinträge für jede der Nachrichtenhandler Funktionen, und die `END_MESSAGE_MAP` Makro.  
-  
-> [!NOTE]
->  Wenn Sie einen beliebigen Member nach dem deklarieren `DECLARE_MESSAGE_MAP`, müssen Sie einen neuen Zugriffstyp angeben (**öffentlichen**, `private`, oder `protected`) für sie.  
-  
- Weitere Informationen zu Nachricht zuordnet und die `DECLARE_MESSAGE_MAP` -Makro, finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md).  
-  
-### <a name="example"></a>Beispiel  
-```cpp  
-class CMainFrame : public CMDIFrameWnd
-{
-   DECLARE_MESSAGE_MAP()
-
-   // Remainder of class declaration omitted.
-``` 
-  
-### <a name="requirements"></a>Anforderungen  
- **Header:** afxwin.h  
 
 ## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
 Beginn der Definition der meldungszuordnung.  
@@ -140,6 +113,61 @@ END_MESSAGE_MAP()
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxwin.h 
+
+##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+Beginn der Definition einer meldungszuordnung für ein Klassentyp mit einem einzelnen Vorlagenargument an.  
+   
+### <a name="syntax"></a>Syntax  
+  ```
+BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )  
+```
+### <a name="parameters"></a>Parameter  
+ `theClass`  
+ Gibt an, dass der Name der Klasse, dessen Meldung ordnen.    
+ `type_name`  
+ Der Name des Vorlagenparameters für die Klasse angegeben.    
+ `baseClass`  
+ Gibt den Namen der Basisklasse der `theClass`.  
+   
+### <a name="remarks"></a>Hinweise  
+ Dieses Makro ähnelt der [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) Makro; dieses Makro ist jedoch für Klassen mit einer einzelnen Vorlagenargument vorgesehen.  
+  
+ Starten Sie im Umsetzungsabschnitt Methode einer Klasse, die meldungszuordnung mit der **BEGIN_TEMPLATE_MESSAGE_MAP** Makro; fügen Sie Makroeinträge für jede Ihrer Meldungshandler Methoden, wie bei einer standard-meldungszuordnung. Wie bei der **BEGIN_MESSAGE_MAP** -Makro, führen Sie die Vorlage meldungszuordnung mit der [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) Makro.  
+  
+ Weitere Informationen zum Implementieren von meldungszuordnungen für Vorlagenklassen finden Sie unter [Vorgehensweise: Erstellen einer Meldungszuordnung für eine Vorlagenklasse](../how-to-create-a-message-map-for-a-template-class.md).  
+   
+### <a name="requirements"></a>Anforderungen  
+ **Header:** afxwin.h  
+ 
+## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+ Deklariert, dass die Klasse eine meldungszuordnung definiert. Jede `CCmdTarget`-abgeleiteten Klasse in Ihrem Programm muss bieten eine meldungszuordnung, um Nachrichten zu verarbeiten.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```    
+DECLARE_MESSAGE_MAP( )  
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Verwenden der `DECLARE_MESSAGE_MAP` Makro am Ende der Klassendeklaration. Verwenden Sie dann in der CPP-Datei, die die Memberfunktionen für die Klasse definiert die `BEGIN_MESSAGE_MAP` -Makro, Makroeinträge für jede der Nachrichtenhandler Funktionen, und die `END_MESSAGE_MAP` Makro.  
+  
+> [!NOTE]
+>  Wenn Sie einen beliebigen Member nach dem deklarieren `DECLARE_MESSAGE_MAP`, müssen Sie einen neuen Zugriffstyp angeben (**öffentlichen**, `private`, oder `protected`) für sie.  
+  
+ Weitere Informationen zu Nachricht zuordnet und die `DECLARE_MESSAGE_MAP` -Makro, finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md).  
+  
+### <a name="example"></a>Beispiel  
+```cpp  
+class CMainFrame : public CMDIFrameWnd
+{
+   DECLARE_MESSAGE_MAP()
+
+   // Remainder of class declaration omitted.
+``` 
+  
+### <a name="requirements"></a>Anforderungen  
+ **Header:** afxwin.h  
+
 
 ## <a name="end_message_map"></a>END_MESSAGE_MAP
 Beendet die Definition der meldungszuordnung.  
@@ -342,13 +370,13 @@ ON_OLECMD( pguid, olecmdid, id )
   
  **ON_OLECMD_CLEARSELECTION)**  
   
- Sendet den Befehl Löschen zu bearbeiten. Als implementiert:  
+ Sendet den Befehl Löschen bearbeiten. Als implementiert:  
   
  `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`  
   
  **ON_OLECMD_COPY)**  
   
- Sendet die bearbeiten Copy-Befehl. Als implementiert:  
+ Sendet den Befehl Kopieren bearbeiten. Als implementiert:  
   
  `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`  
   
@@ -384,7 +412,7 @@ ON_OLECMD( pguid, olecmdid, id )
   
  **ON_OLECMD_PASTESPECIAL)**  
   
- Sendet den Befehl Einfügen Inhalte bearbeiten. Als implementiert:  
+ Sendet den Befehl Inhalte einfügen bearbeiten. Als implementiert:  
   
  `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`  
   
