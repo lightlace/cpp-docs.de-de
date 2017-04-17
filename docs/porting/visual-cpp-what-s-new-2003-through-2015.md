@@ -1425,7 +1425,7 @@ In Visual C++ 2015 und höher können fortlaufende Verbesserungen der Übereinst
     };  
     ```  
   
-     Erstellen Sie zunächst die IDL-Datei. Die generierte Datei „vc140.idl“ kann zum Abrufen einer „\*.idl“-Datei verwendet werden, die die Schnittstellen und Anmerkungen enthält.  
+     Erstellen Sie zunächst die IDL-Datei. Die generierte Datei „vc140.idl “ *kann zum Abrufen einer\* .idl“-Datei verwendet werden, die die Schnittstellen und Anmerkungen enthält.  
   
      Fügen Sie als Nächstes Ihrem Build einen MIDL-Schritt hinzu, um sicherzustellen, dass die C++-Schnittstellendefinitionen generiert werden.  
   
