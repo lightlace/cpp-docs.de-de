@@ -1,5 +1,5 @@
 ---
-title: Schwerwiegender Fehler C1083 | Microsoft-Dokumentation
+title: Schwerwiegender Fehler C1083 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6cc89e4278c03f0dc24c4358cf6a53ec25f3b327
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: bbc5e1f78ca1ea15e65fdd76b7ecd2ea0e195b00
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="fatal-error-c1083"></a>Schwerwiegender Fehler C1083
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/24/2017
 #include <algorithms.h>  
 ```  
   
- Die von Ihnen gewünschte Datei wird möglicherweise nicht gefunden. Es ist eine C++-Standardbibliothek-Headerdatei mit dem Namen Algorithmen, die Erweiterung .h-Datei nicht. Diese Datei würde mit dieser `include`-Direktive nicht gefunden werden. Überprüfen Sie zur Behebung dieses Problems, ob Sie den richtigen Dateinamen eingegeben haben.  
+ Die von Ihnen gewünschte Datei wird möglicherweise nicht gefunden. Es gibt eine C++-Standardbibliothek-Headerdatei mit dem Namen Algorithmen, die keine Erweiterung .h-Datei. Diese Datei würde mit dieser `include`-Direktive nicht gefunden werden. Überprüfen Sie zur Behebung dieses Problems, ob Sie den richtigen Dateinamen eingegeben haben.  
   
  Bestimmte Header der C-Laufzeitbibliothek befinden sich in einem Unterverzeichnis des Standardincludeverzeichnisses. Wenn Sie beispielsweise "sys\types.h" einbeziehen möchten, müssen Sie den Namen des sys-Unterverzeichnisses in die Includeanweisung einschließen:  
   
@@ -68,13 +68,13 @@ ms.lasthandoff: 02/24/2017
   
  `#include <stdio.h>`  
   
- folgt der Compiler einen Suchpfad, der durch die Buildumgebung definiert ist die **/i** -Compileroption, die **/x** (Compileroption), und die **EINSCHLIEßEN** -Umgebungsvariable. Weitere Informationen einschließlich genauerer Details über die Suchreihenfolge verwendet, um eine Datei zu suchen finden Sie unter [#include-Direktive (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) und [#import-Direktive](../../preprocessor/hash-import-directive-cpp.md).  
+ der Compiler folgt einen Suchpfad, der durch die Buildumgebung definiert ist die **/i** -Compileroption verwenden, die **/x** (Compileroption), und die **INCLUDE** -Umgebungsvariablen angegeben. Weitere Informationen, einschließlich spezifische Details über die Suchreihenfolge verwendet, um eine Datei zu suchen, finden Sie unter [#include-Direktive (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) und [#import-Direktive](../../preprocessor/hash-import-directive-cpp.md).  
   
- Auch wenn Headerdateien im aufgelistet **Projektmappen-Explorer** als Teil des Projekts, die Dateien nur gefunden, vom Compiler Wenn sie von bezeichnet sind ein `include` oder `import` Richtlinie und Sie sich an einem Verzeichnissuchpfad befinden. Für unterschiedliche Buildtypen können unterschiedliche Suchpfade verwendet werden. Die **/x** (Compileroption) kann verwendet werden, um Verzeichnisse aus dem Suchpfad für die Includedatei auszuschließen. Dadurch können für verschiedene Builds unterschiedliche Includedateien verwendet werden, die denselben Namen besitzen, sich aber in unterschiedlichen Verzeichnissen befinden. Dies ist eine Alternative zur bedingten Kompilierung mithilfe von Präprozessorbefehlen. Weitere Informationen zu den **/x** -Compileroption verwenden, finden Sie unter [/x (Ignore Standard Include Paths)](../../build/reference/x-ignore-standard-include-paths.md).  
+ Auch wenn Headerdateien im aufgeführt sind **Projektmappen-Explorer** als Teil eines Projekts, die Dateien nur gefunden, durch den Compiler, wenn sie von bezeichnet sind ein `include` oder `import` Richtlinie und sind befindet sich auf einen Verzeichnispfad für die Suche. Für unterschiedliche Buildtypen können unterschiedliche Suchpfade verwendet werden. Die **/x** -Compileroption kann verwendet werden, um Verzeichnisse aus dem Suchpfad für die Includedatei auszuschließen. Dadurch können für verschiedene Builds unterschiedliche Includedateien verwendet werden, die denselben Namen besitzen, sich aber in unterschiedlichen Verzeichnissen befinden. Dies ist eine Alternative zur bedingten Kompilierung mithilfe von Präprozessorbefehlen. Weitere Informationen zu den **/x** -Compileroption verwenden, finden Sie unter [/x (ignorieren Standard Standardincludepfad)](../../build/reference/x-ignore-standard-include-paths.md).  
   
- Beim Aufrufen des Compilers über die Befehlszeile werden Suchpfade oft mithilfe von Umgebungsvariablen angegeben. Wenn von der Suchpfad beschrieben die **EINSCHLIEßEN** -Umgebungsvariable nicht ordnungsgemäß festgelegt ist, wird ein Fehler C1083 generiert. Weitere Informationen zur Verwendung von Umgebungsvariablen finden Sie unter [Gewusst wie: Verwenden von Umgebungsvariablen in einem Build](http://msdn.microsoft.com/Library/7f9e4469-8865-4b59-aab3-3ff26bd36e77).  
+ Beim Aufrufen des Compilers über die Befehlszeile werden Suchpfade oft mithilfe von Umgebungsvariablen angegeben. Wenn von der Suchpfad beschrieben die **INCLUDE** -Umgebungsvariable nicht ordnungsgemäß festgelegt ist, wird ein Fehler C1083 generiert. Weitere Informationen zur Verwendung von Umgebungsvariablen finden Sie unter [wie: Verwenden von Umgebungsvariablen in einem Build](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).  
   
- Korrigieren Sie zur Behebung dieses Problems den Pfad, den der Compiler für die Suche nach der eingeschlossenen oder importierten Datei verwendet. Für ein neues Projekt werden Standardsuchpfade verwendet. Möglicherweise müssen Sie den Pfad ändern, um ein Verzeichnis für das Projekt hinzuzufügen. Wenn Sie über die Befehlszeile kompilieren, legen Sie die **EINSCHLIEßEN** Umgebungsvariable oder **/i** -Compileroption verwenden, um den Pfad der Datei angeben. Öffnen Sie zum Festlegen des includeverzeichnispfads in Visual Studio des Projekts **Eigenschaftenseiten** Dialogfeld erweitern Sie **Konfigurationseigenschaften** und **VC++-Verzeichnisse**, und bearbeiten Sie dann die **Includeverzeichnisse** Wert. Weitere Informationen über die pro Benutzer und pro Projekt Verzeichnisse durchsucht, die der Compiler in Visual Studio finden Sie unter [VC++-Verzeichnisse auf der Seite](../../ide/vcpp-directories-property-page.md). Weitere Informationen zu den **/i** -Compileroption verwenden, finden Sie unter [/i (Zusätzliche Includeverzeichnisse)](../../build/reference/i-additional-include-directories.md).  
+ Korrigieren Sie zur Behebung dieses Problems den Pfad, den der Compiler für die Suche nach der eingeschlossenen oder importierten Datei verwendet. Für ein neues Projekt werden Standardsuchpfade verwendet. Möglicherweise müssen Sie den Pfad ändern, um ein Verzeichnis für das Projekt hinzuzufügen. Wenn Sie über die Befehlszeile kompilieren, legen Sie die **INCLUDE** -Umgebungsvariablen angegeben oder die **/i** Compileroption, um den Pfad der Datei angeben. Öffnen Sie zur Festlegung des includeverzeichnispfads in Visual Studio des Projekts **Eigenschaftenseiten** Dialogfeld erweitern Sie **Konfigurationseigenschaften** und **VC++-Verzeichnisse**, und bearbeiten Sie dann die **Includeverzeichnisse** Wert. Weitere Informationen zu den Erweiterungen pro Benutzer und pro Projekt Verzeichnisse, die vom Compiler in Visual Studio durchsucht, finden Sie unter [VC++-Verzeichnisse Eigenschaftenseite](../../ide/vcpp-directories-property-page.md). Weitere Informationen zu den **/i** -Compileroption verwenden, finden Sie unter [/i (Zusätzliche Includeverzeichnisse)](../../build/reference/i-additional-include-directories.md).  
   
  **Die falsche Version eines Dateinamens ist enthalten.**  
   
@@ -86,9 +86,9 @@ ms.lasthandoff: 02/24/2017
   
  **Weitere Ursachen**  
   
--   Die Datei verwendet verwalteten Code, aber die Compileroption **/CLR** nicht angegeben ist. Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).  
+-   Die Datei verwendet verwalteten Code, aber die Compileroption " **" / CLR "** nicht angegeben wird. Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
--   Die Datei wird mit einer anderen kompiliert **/ analyze** compilereinstellung als die Header vorkompiliert verwendet wird. (Wenn der Header für ein Projekt vorkompiliert werden, sollten alle verwenden die gleiche **/ analyze** Einstellungen.) Weitere Informationen finden Sie unter [/analyze (Codeanalyse)](../../build/reference/analyze-code-analysis.md).  
+-   Die Datei wird mit einer anderen kompiliert **/ analyze** Einstellung als zum Vorkompilieren der Header verwendet wird. (Wenn die Header für ein Projekt vorkompiliert werden, sollten alle verwenden die gleiche **/ analyze** Einstellungen.) Weitere Informationen finden Sie unter [/analyze (Codeanalyse)](../../build/reference/analyze-code-analysis.md).  
   
 -   Die Datei, das Verzeichnis oder der Datenträger ist schreibgeschützt.  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/24/2017
 #include "stdio.h"   // OK  
 ```  
   
- Informationen zum Erstellen von C/C++-Projekten in der IDE oder in der Befehlszeile und Informationen zum Festlegen von Umgebungsvariablen finden Sie unter [Erstellen von C/C++-Programmen](../../build/building-c-cpp-programs.md).
+ Informationen zum Erstellen von C/C++-Projekten in der IDE oder in der Befehlszeile und Informationen zum Festlegen von Umgebungsvariablen finden Sie [Erstellen eines C/C++-Programms](../../build/building-c-cpp-programs.md).
  
  ## <a name="see-also"></a>Siehe auch
  [MSBuild-Eigenschaften](/visualstudio/msbuild/msbuild-properties)

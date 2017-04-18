@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 59d41497bafd9782c0849a03e0354e338b7f8467
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 6d58bdd55887962bac4644df0ab93f8f5dfe9835
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="dhtml-event-maps"></a>DHTML-Ereigniszuordnungen
@@ -140,7 +140,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 ### <a name="remarks"></a>Hinweise  
  Die Klasse, um Informationen zum Bereitstellen einer DHTML-ereigniszuordnung hinzufügen **CDHtmlDialog** , die verwendet werden kann, um Ereignisse weiterzuleiten, die von HTML-Elementen oder ActiveX-Steuerelemente auf einer Webseite mit Handlerfunktionen in Ihrer Klasse ausgelöst werden.  
   
- Ort der `BEGIN_DHTML_EVENT_MAP` Makros in der Klasse-Definitionsdatei (. h), gefolgt von `DHTML_EVENT` Makros für die Ereignisse die Klasse behandelt wird (z. B. `DHTML_EVENT_ONMOUSEOVER` für Mouseover-Ereignisse). Verwenden der [END_DHTML_EVENT_MAP_INLINE](http://msdn.microsoft.com/library/0cfec092-20ee-49f3-bc38-56d6a5572db2) Makro auf das Ende der ereigniszuordnung zu markieren. Diese Makros implementieren Sie die folgende Funktion:  
+ Ort der `BEGIN_DHTML_EVENT_MAP` Makros in der Klasse-Definitionsdatei (. h), gefolgt von `DHTML_EVENT` Makros für die Ereignisse die Klasse behandelt wird (z. B. `DHTML_EVENT_ONMOUSEOVER` für Mouseover-Ereignisse). Verwenden der [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline) Makro auf das Ende der ereigniszuordnung zu markieren. Diese Makros implementieren Sie die folgende Funktion:  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   

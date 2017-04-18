@@ -1,42 +1,58 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4342 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4342"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4342"
+title: Compilerwarnung (Stufe 1) C4342 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4342
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compilerwarnung (Stufe 1) C4342
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: c4a2afbc3ced186b0db63b22b3cc5c2b27204c71
+ms.lasthandoff: 04/12/2017
 
-Verhaltensänderung: 'Funktion' wird aufgerufen, in früheren Versionen wurde jedoch ein Memberoperator aufgerufen.  
+---
+# <a name="compiler-warning-level-1-c4342"></a>Compilerwarnung (Stufe 1) C4342
+verhaltensänderung: '*Funktion*"aufgerufen wird, jedoch ein Memberoperator aufgerufen wurde, in früheren Versionen  
   
- In früheren Versionen von Visual C\+\+ wurde ein Member aufgerufen. Dieses Verhalten wurde jedoch geändert, und der Compiler sucht im Gültigkeitsbereich des Namespaces nach dem Operator mit der besten Übereinstimmung.  
+ In Versionen von Visual C++ vor Visual Studio 2002 ein Element aufgerufen wurde, aber dieses Verhalten wurde geändert, und der Compiler findet die beste Übereinstimmung jetzt im Namespacebereich.  
   
- Wenn ein Memberoperator gefunden wurde, wurden vom Compiler bislang Operatoren im Gültigkeitsbereich des Namespaces ignoriert.  Wenn vom aktuellen Compiler ein Operator mit besserer Übereinstimmung im Gültigkeitsbereich des Namespaces gefunden wird, wird dieser ordnungsgemäß aufgerufen. Frühere Versionen des Compilers zeigen dieses Verhalten nicht.  
+ Wenn ein Memberoperator gefunden wurde, würde der Compiler zuvor keinen Namespaces Bereich Operatoren berücksichtigt. Ist eine bessere Übereinstimmung im Namespacebereich, ruft der aktuellen Compiler ordnungsgemäß, während der vorherige Compilern wäre nicht beachtet.  
   
- Diese Warnung sollte deaktiviert werden, nachdem Sie den Code erfolgreich in die aktuelle Version portiert haben.  Unter Umständen wird diese Warnung durch den Compiler fälschlicherweise für Code ausgegeben, für den keine Verhaltensänderung vorliegt.  
+ Diese Warnung sollte deaktiviert werden, nachdem erfolgreich Portieren von Code auf die aktuelle Version.  Der Compiler erzielen möglicherweise falsch positive Ergebnisse generiert diese Warnung für Code, keine verhaltensänderung erfolgt.  
   
- Diese Warnung ist standardmäßig deaktiviert.  Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Compiler deaktivierte Compilerwarnungen standardmäßig](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
  Im folgenden Beispiel wird C4342 generiert:  
   
-```  
+```cpp  
 // C4342.cpp  
 // compile with: /EHsc /W1  
 #include <fstream>  

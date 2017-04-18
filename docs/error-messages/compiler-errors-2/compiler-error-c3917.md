@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3917 | Microsoft-Dokumentation
+title: Compilerfehler C3917 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,21 +34,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: d7ce6fbec9278893fd4f3f6b75c74ef91718646b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 5f6719ade94bdbca9659405995fe09bfade57230
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c3917"></a>Compilerfehler C3917
-"Eigenschaft": veralteter Konstrukt  
+"*Eigenschaft*": Veralteter Deklarationsstil Konstrukt  
   
-Die Definition einer Eigenschaft oder Ereignis verwendet die Syntax von einer früheren Version.  
+Die Definition einer Eigenschaft oder Ereignis verwendet die Syntax von einer Version vor Visual Studio 2005.  
   
 Weitere Informationen finden Sie unter [Eigenschaft](../../windows/property-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // C3917.cpp  
 // compile with: /clr /c  
 public ref class  C {  

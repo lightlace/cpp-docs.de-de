@@ -1,29 +1,46 @@
 ---
-title: "Compilerwarnung (Stufe 1) C4158 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C4158"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4158"
+title: Compilerwarnung (Stufe 1) C4158 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C4158
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4158
 ms.assetid: 6513c6b9-6772-4849-b96c-5bb093d54de6
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Compilerwarnung (Stufe 1) C4158
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 050b5b3cbdcd6a3a5192464acc120cdcbe332ba9
+ms.lasthandoff: 04/12/2017
 
-Annahme von \#pragma pointers\_to\_members\(full\_generality, inheritance\)  
+---
+# <a name="compiler-warning-level-1-c4158"></a>Compilerwarnung (Stufe 1) C4158
+Annahme von #pragma pointers_to_members(full_generality, inheritance)  
   
- **\#pragma pointers\_to\_members\(** *single&#124;multiple&#124;virtual* **\)** wurde ohne begleitendes **\#pragma pointers\_to\_members\(full\_generality\)** ausgegeben.
+ Ein **#pragma Pointers_to_members (***einzelne | mehrere | virtual***)** wurde ohne begleitendes ausgestellt **#pragma pointers_to_members(full_generality)**.

@@ -1,36 +1,59 @@
 ---
-title: "Compilerwarnung C4693 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C4693"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4693"
+title: Compilerwarnung C4693 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C4693
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compilerwarnung C4693
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 85a0e3e4a5e6df7dee5d0d69a1a6b486a8eb1283
+ms.lasthandoff: 04/12/2017
 
-"class": Eine versiegelte abstrakte Klasse kann keine Test\-Instanzmember aufweisen  
+---
+# <a name="compiler-warning-c4693"></a>Compilerwarnung C4693
+"class": Eine versiegelte abstrakte Klasse kann keine Test-Instanzmember aufweisen  
   
- Wenn ein Typ als [sealed](../../windows/sealed-cpp-component-extensions.md) und [abstract](../../windows/abstract-cpp-component-extensions.md) gekennzeichnet ist, kann er nur statische Member aufweisen.  
+ Wenn ein Typ gekennzeichnet ist [versiegelten](../../windows/sealed-cpp-component-extensions.md) und [abstrakte](../../windows/abstract-cpp-component-extensions.md), es kann nur statische Member aufweisen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C4693 generiert:  
   
 ```  
-// C4693.cpp // compile with: /clr /c public ref class Public_Ref_Class sealed abstract { public: void Test() {}   // C4693 static void Test2() {}   // OK };  
+// C4693.cpp  
+// compile with: /clr /c  
+public ref class Public_Ref_Class sealed abstract {  
+public:  
+   void Test() {}   // C4693  
+   static void Test2() {}   // OK  
+};  
 ```

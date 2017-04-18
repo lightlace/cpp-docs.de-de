@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: c11d9a2d56f17d814873d36868b8fb6cf3deac43
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 2ac30fa747b13c469846c51e9826242fdf54f8c1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="run-time-object-model-services"></a>Objektmodelldienste zur Laufzeit
@@ -50,7 +50,7 @@ Die Klassen [CObject](../../mfc/reference/cobject-class.md) und [CRuntimeClass](
   
  Die folgende Tabelle enthält die MFC-Makros, die zur Laufzeit-Klasseninformationen, Serialisierung und die dynamische Erstellung unterstützen.  
   
- Weitere Informationen zu diesen Laufzeitobjekt Dienste sowie die Serialisierung finden Sie im Artikel [CObject-Klasse: Zugreifen auf Laufzeit-Klasseninformationen](../../mfc/accessing-run-time-class-information.md).  
+ Weitere Informationen zu diesen Laufzeitobjekt Services sowie die Serialisierung finden Sie im Artikel [CObject-Klasse: Zugreifen auf Laufzeit-Klasseninformationen](../../mfc/accessing-run-time-class-information.md).  
   
 ### <a name="run-time-object-model-services-macros"></a>Run-Time-Objektmodelldienste Makros  
   
@@ -147,7 +147,7 @@ DECLARE_DYNAMIC(class_name)
  Der tatsächliche Name der Klasse.  
   
 ### <a name="remarks"></a>Hinweise  
- Hinzufügen der `DECLARE_DYNAMIC` Makro an das Modul Headerdateien (. h) für die Klasse und fügen Sie, dass das Modul in allen CPP-Modulen, die Zugriff auf Objekte dieser Klasse benötigt.  
+ Hinzufügen der `DECLARE_DYNAMIC` -Makro die Headerdateien (. h)-Modul für die Klasse und fügen Sie, dass das Modul in allen CPP-Modulen, die Zugriff auf Objekte dieser Klasse benötigt.  
   
  Bei Verwendung der **DECLARE**_ **dynamische** und `IMPLEMENT_DYNAMIC` Makros wie beschrieben, können Sie dann die `RUNTIME_CLASS` Makros und die `CObject::IsKindOf` -Funktion können Sie die Klasse der Objekte zur Laufzeit zu ermitteln.  
   
@@ -478,7 +478,7 @@ DECLARE_OLECREATE(class_name)
  **Header**: afxdisp.h  
 
 ##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
- Entweder dieses Makro oder [IMPLEMENT_OLECREATE_FLAGS](http://msdn.microsoft.com/library/d1589f6a-5a69-4742-b07c-4c621cfd040d) muss in der Implementierungsdatei für jede Klasse, die verwendet werden `DECLARE_OLECREATE`.  
+ Entweder dieses Makro oder [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) muss in der Implementierungsdatei für jede Klasse, die verwendet werden `DECLARE_OLECREATE`.  
   
 ```
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
