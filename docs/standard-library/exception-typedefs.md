@@ -6,6 +6,10 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- exception/std::exception_ptr
+- exception/std::terminate_handler
+- exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 caps.latest.revision: 7
 manager: ghogen
@@ -20,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|-|  
 |[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|  
   
-##  <a name="a-nameexceptionptra--exceptionptr"></a><a name="exception_ptr"></a> exception_ptr  
+##  <a name="exception_ptr"></a> exception_ptr  
  Ein Typ, der einen Zeiger auf eine Ausnahme beschreibt.  
   
 ```cpp  
@@ -42,7 +46,7 @@ typedef unspecified exception_ptr;
   
  Sie können den Gleichheitsoperator (`==`) und den Ungleichheitsoperator (`!=`) verwenden, um zwei `exception_ptr`-Objekte zu vergleichen. Die Operatoren vergleichen nicht den Binärwert (Bitmuster) der `EXCEPTION_RECORD`-Strukturen, die die Ausnahmen darstellen. Stattdessen vergleichen die Operatoren die Adressen im Ausnahmeverweisfeld der `exception_ptr`-Objekte. Folglich sind ein NULL-`exception_ptr` und der NULL-Wert gleichwertig.  
   
-##  <a name="a-nameterminatehandlera--terminatehandler"></a><a name="terminate_handler"></a> terminate_handler  
+##  <a name="terminate_handler"></a> terminate_handler  
  Der Typ beschreibt einen Zeiger auf eine Funktion, die zur Verwendung als `terminate_handler` geeignet ist.  
   
 ```
@@ -55,7 +59,7 @@ typedef void (*terminate_handler)();
 ### <a name="example"></a>Beispiel  
   Ein Beispiel zur Verwendung von `terminate_handler` finden Sie unter [set_terminate](../standard-library/exception-functions.md#set_terminate).  
   
-##  <a name="a-nameunexpectedhandlera--unexpectedhandler"></a><a name="unexpected_handler"></a> unexpected_handler  
+##  <a name="unexpected_handler"></a> unexpected_handler  
  Der Typ beschreibt einen Zeiger auf eine Funktion, die zur Verwendung als `unexpected_handler` geeignet ist.  
   
 ```

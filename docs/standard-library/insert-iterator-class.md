@@ -9,10 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::insert_iterator
 - iterator/std::insert_iterator
-- std.insert_iterator
 - insert_iterator
+- iterator/std::insert_iterator::container_type
+- iterator/std::insert_iterator::reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +86,7 @@ class insert_iterator;
   
  **Namespace:** std  
   
-##  <a name="a-nameinsertiteratorcontainertypea--insertiteratorcontainertype"></a><a name="insert_iterator__container_type"></a> insert_iterator::container_type  
+##  <a name="insert_iterator__container_type"></a> insert_iterator::container_type  
  Ein Typ, der den Container darstellt, in dem eine allgemeine Einfügung vorgenommen werden soll.  
   
 ```
@@ -126,7 +126,7 @@ The list L2 is: ( 40 20 10 ).
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratorinsertiteratora--insertiteratorinsertiterator"></a><a name="insert_iterator__insert_iterator"></a> insert_iterator::insert_iterator  
+##  <a name="insert_iterator__insert_iterator"></a> insert_iterator::insert_iterator  
  Erstellt einen `insert_iterator`, der ein Element an einer bestimmten Position in einen Container einfügt.  
   
 ```
@@ -189,7 +189,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatorstara--insertiteratoroperator"></a><a name="insert_iterator__operator_star"></a> insert_iterator::operator*  
+##  <a name="insert_iterator__operator_star"></a> insert_iterator::operator*  
  Dereferenziert den Iterator zum Einfügen, und gibt das Element zurück, das es adressiert.  
   
 ```
@@ -246,7 +246,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatoraddadda--insertiteratoroperator"></a><a name="insert_iterator__operator_add_add"></a> insert_iterator::operator++  
+##  <a name="insert_iterator__operator_add_add"></a> insert_iterator::operator++  
  Inkrementiert **insert_iterator** zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.  
   
 ```
@@ -307,7 +307,7 @@ After the insertions, the vector vec becomes:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatoreqa--insertiteratoroperator"></a><a name="insert_iterator__operator_eq"></a> insert_iterator::operator=  
+##  <a name="insert_iterator__operator_eq"></a> insert_iterator::operator=  
  Fügt einen Wert in einen Container ein, und gibt den Iterator, der aktualisiert wurde, um auf das neue Element zu verweisen.  
   
 ```
@@ -386,7 +386,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratorreferencea--insertiteratorreference"></a><a name="insert_iterator__reference"></a> insert_iterator::reference  
+##  <a name="insert_iterator__reference"></a> insert_iterator::reference  
  Ein Typ, der einen Verweis auf ein Element in einer Sequenz enthält, die durch den zugehörigen Container gesteuert wird.  
   
 ```

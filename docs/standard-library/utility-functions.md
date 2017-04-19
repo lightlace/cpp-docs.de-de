@@ -6,6 +6,12 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- utility/std::exchange
+- utility/std::forward
+- utility/std::make_pair
+- utility/std::move
+- utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
 caps.latest.revision: 7
 manager: ghogen
@@ -21,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[exchange](#exchange)|[forward](#forward)|[get-Funktion &lt;utility&gt;](#get)|  
 |[make_pair](#make_pair)|[move](#move)|[swap](#swap)|  
   
-##  <a name="a-nameexchangea--exchange"></a><a name="exchange"></a> exchange  
+##  <a name="exchange"></a> exchange  
  **(C++14)** weist einem Objekt einen neuen Wert zu und gibt den alten Wert zurück.  
   
 ```cpp  
@@ -70,7 +76,7 @@ The new value of c1 after exchange is: 2
 */  
 ```  
   
-##  <a name="a-nameforwarda--forward"></a><a name="forward"></a> forward  
+##  <a name="forward"></a> forward  
  Wandelt bedingt sein Argument in einen rvalue-Verweis um, wenn das Argument ein rvalue-Wert oder ein rvalue-Verweis ist. Dadurch wird die rvalue-Funktion eines Arguments auf die Weiterleitungsfunktion zur Unterstützung einer perfekten Weiterleitung zurückgesetzt.  
   
 ```
@@ -98,7 +104,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
   
  Das Wiederherstellen der rvalue-Funktion des ursprünglichen Werts eines Arguments zum Ausführen einer Überladungsauflösung wird als *perfekte Weiterleitung* bezeichnet. Mit der perfekten Weiterleitung wird eine Vorlagenfunktion aktiviert, um ein Argument eines Referenztyps zu akzeptieren und die rvalue-Funktion wiederherzustellen, falls es für eine korrekte Überladungsauflösung erforderlich ist. Mithilfe der perfekten Weiterleitung können Sie die Verschiebesemantik für rvalues beibehalten und brauchen keine Überladungen für Funktionen bereitzustellen, die sich nur durch den Referenztyp ihrer Argumente unterscheiden.  
   
-##  <a name="a-namegeta--get"></a><a name="get"></a> get  
+##  <a name="get"></a> get  
  Ruft ein Element aus einem `pair` -Objekt über den Index oder den Typ ab.  
   
 ```
@@ -193,7 +199,7 @@ int main()
 }
 ```  
   
-##  <a name="a-namemakepaira--makepair"></a><a name="make_pair"></a> make_pair  
+##  <a name="make_pair"></a> make_pair  
  Eine Vorlagenfunktion, die Sie verwenden können, um Objekte vom Typ `pair` zu erstellen, wobei die Komponententypen automatisch auf Grundlage der Datentypen ausgewählt werden, die als Parameter übergeben werden.  
   
 ```
@@ -238,7 +244,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 ### <a name="example"></a>Beispiel  
   Ein Beispiel für die Verwendung der Hilfsfunktion `make_pair` beim Deklarieren und Initialisieren eines Paares finden Sie unter [pair Structure (pair-Struktur)](../standard-library/pair-structure.md).  
   
-##  <a name="a-namemovea--move"></a><a name="move"></a> move  
+##  <a name="move"></a> move  
  Wandelt unbedingt das Argument in einen rvalue-Verweis um und signalisiert dadurch, dass es verschoben werden kann, wenn das Verschieben für den zugehörigen Typ aktiviert ist.  
   
 ```
@@ -263,7 +269,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
   
  Wenn der in `Arg` übergebene Wert ein lvalue ist – d. h., er besitzt einen Namen oder seine Adresse kann akzeptiert werden – wird er ungültig, wenn die Verschiebung erfolgt. Verweisen Sie nicht auf den in `Arg` übergebenen Wert mit seinem Namen oder seiner Adresse, nachdem er verschoben wurde.  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a> swap  
+##  <a name="swap"></a> swap  
  Tauscht die Elemente zweier Objekte einer [pair-Struktur](../standard-library/pair-structure.md).  
   
 ```

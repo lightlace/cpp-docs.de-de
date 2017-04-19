@@ -10,9 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - istreambuf_iterator
-- std.istreambuf_iterator
-- std::istreambuf_iterator
 - streambuf/std::istreambuf_iterator
+- iterator/std::istreambuf_iterator::char_type
+- iterator/std::istreambuf_iterator::int_type
+- iterator/std::istreambuf_iterator::istream_type
+- iterator/std::istreambuf_iterator::streambuf_type
+- iterator/std::istreambuf_iterator::traits_type
+- iterator/std::istreambuf_iterator::equal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +104,7 @@ class istreambuf_iterator
   
  **Namespace:** std  
   
-##  <a name="a-nameistreambufiteratorchartypea--istreambufiteratorchartype"></a><a name="istreambuf_iterator__char_type"></a> istreambuf_iterator::char_type  
+##  <a name="istreambuf_iterator__char_type"></a> istreambuf_iterator::char_type  
  Ein Typ, der für den Zeichentyp von `ostreambuf_iterator` bereitgestellt wird.  
   
 ```
@@ -143,7 +147,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreambufiteratorequala--istreambufiteratorequal"></a><a name="istreambuf_iterator__equal"></a> istreambuf_iterator::equal  
+##  <a name="istreambuf_iterator__equal"></a> istreambuf_iterator::equal  
  Testet zwei Eingabestream-Pufferiteratoren auf Äquivalenz.  
   
 ```
@@ -188,7 +192,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreambufiteratorinttypea--istreambufiteratorinttype"></a><a name="istreambuf_iterator__int_type"></a> istreambuf_iterator::int_type  
+##  <a name="istreambuf_iterator__int_type"></a> istreambuf_iterator::int_type  
  Ein Typ, der einen Ganzzahltyp für ein `istreambuf_iterator`-Objekt bereitstellt.  
   
 ```
@@ -217,7 +221,7 @@ The inttype1 = 100.
 *\  
 ```  
   
-##  <a name="a-nameistreambufiteratoristreamtypea--istreambufiteratoristreamtype"></a><a name="istreambuf_iterator__istream_type"></a> istreambuf_iterator::istream_type  
+##  <a name="istreambuf_iterator__istream_type"></a> istreambuf_iterator::istream_type  
  Ein Typ, der für den Streamtyp von `istreambuf_iterator` bereitgestellt wird.  
   
 ```
@@ -230,7 +234,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 ### <a name="example"></a>Beispiel  
   Unter [istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator) finden Sie ein Beispiel für das Deklarieren und Verwenden von `istream_type`.  
   
-##  <a name="a-nameistreambufiteratoristreambufiteratora--istreambufiteratoristreambufiterator"></a><a name="istreambuf_iterator__istreambuf_iterator"></a> istreambuf_iterator::istreambuf_iterator  
+##  <a name="istreambuf_iterator__istreambuf_iterator"></a> istreambuf_iterator::istreambuf_iterator  
  Erstellt einen istreambuf_iterator, der initialisiert wird, um Zeichen aus dem Eingabestream zu lesen.  
   
 ```
@@ -280,7 +284,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreambufiteratoroperatorstara--istreambufiteratoroperator"></a><a name="istreambuf_iterator__operator_star"></a> istreambuf_iterator::operator*  
+##  <a name="istreambuf_iterator__operator_star"></a> istreambuf_iterator::operator*  
  Der Dereferenzierungsoperator gibt das folgende Zeichen im Stream zurück.  
   
 ```
@@ -318,7 +322,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreambufiteratoroperatoraddadda--istreambufiteratoroperator"></a><a name="istreambuf_iterator__operator_add_add"></a> istreambuf_iterator::operator++  
+##  <a name="istreambuf_iterator__operator_add_add"></a> istreambuf_iterator::operator++  
  Gibt entweder das folgende Zeichen im Eingabestream zurück oder kopiert das Objekt vor dem Inkrementieren und gibt die Kopie zurück.  
   
 ```
@@ -360,7 +364,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreambufiteratoroperator-gta--istreambufiteratoroperator-gt"></a><a name="istreambuf_iterator__operator-_gt_"></a> istreambuf_iterator::operator-&gt;  
+##  <a name="istreambuf_iterator__operator-_gt_"></a> istreambuf_iterator::operator-&gt;  
  Gibt den Wert eines Members zurück, falls vorhanden.  
   
 ```
@@ -370,7 +374,7 @@ const Elem* operator->() const;
 ### <a name="return-value"></a>Rückgabewert  
  Der Operator gibt **&\*\*this** zurück.  
   
-##  <a name="a-nameistreambufiteratorstreambuftypea--istreambufiteratorstreambuftype"></a><a name="istreambuf_iterator__streambuf_type"></a> istreambuf_iterator::streambuf_type  
+##  <a name="istreambuf_iterator__streambuf_type"></a> istreambuf_iterator::streambuf_type  
  Ein Typ, der für den Streamtyp von „istreambuf_iterator“ bereitgestellt wird.  
   
 ```
@@ -383,7 +387,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 ### <a name="example"></a>Beispiel  
   Unter [istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator) finden Sie ein Beispiel für das Deklarieren und Verwenden von **istreambuf_type**.  
   
-##  <a name="a-nameistreambufiteratortraitstypea--istreambufiteratortraitstype"></a><a name="istreambuf_iterator__traits_type"></a> istreambuf_iterator::traits_type  
+##  <a name="istreambuf_iterator__traits_type"></a> istreambuf_iterator::traits_type  
  Ein Typ, der für den Merkmaltyp von `istream_iterator` bereitgestellt wird.  
   
 ```

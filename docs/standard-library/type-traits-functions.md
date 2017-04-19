@@ -6,6 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- type_traits/std::is_assignable
+- type_traits/std::is_copy_assignable
+- type_traits/std::is_copy_constructible
+- type_traits/std::is_default_constructible
+- type_traits/std::is_move_assignable
+- type_traits/std::is_move_constructible
+- type_traits/std::is_nothrow_move_assignable
+- type_traits/std::is_trivially_copy_assignable
+- type_traits/std::is_trivially_move_assignable
+- type_traits/std::is_trivially_move_constructible
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
 caps.latest.revision: 13
 manager: ghogen
@@ -23,7 +34,7 @@ ms.lasthandoff: 02/24/2017
 |[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|[is_trivially_move_assignable](#is_trivially_move_assignable)|  
 |[is_trivially_move_constructible](#is_trivially_move_constructible)|  
   
-##  <a name="a-nameisassignablea--isassignable"></a><a name="is_assignable"></a> is_assignable  
+##  <a name="is_assignable"></a> is_assignable  
  Testet, ob ein Wert des `From`-Typs einem `To`-Typ zugewiesen werden kann.  
   
 ```  
@@ -41,7 +52,7 @@ struct is_assignable;
 ### <a name="remarks"></a>Hinweise  
  Der ausgewertete Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein. `From` und `To` müssen beide vollständige Typen sein, `void`, oder Arrays mit unbekannter Grenze.  
   
-##  <a name="a-nameiscopyassignablea--iscopyassignable"></a><a name="is_copy_assignable"></a> is_copy_assignable  
+##  <a name="is_copy_assignable"></a> is_copy_assignable  
  Testet, ob der Typ durch Zuweisung kopiert werden kann.  
   
 ```  
@@ -56,7 +67,7 @@ struct is_copy_assignable;
 ### <a name="remarks"></a>Hinweise  
  Eine Instanz des Typprädikats ist „true“, wenn der `Ty`-Typ eine Klasse ist, die einen Kopierzuweisungsoperator aufweist; andernfalls „false“. Entsprechung zu is_assignable\<Ty&, const Ty&>.  
   
-##  <a name="a-nameiscopyconstructiblea--iscopyconstructible"></a><a name="is_copy_constructible"></a> is_copy_constructible  
+##  <a name="is_copy_constructible"></a> is_copy_constructible  
  Testet, ob der Typ einen Kopierkonstruktor aufweist.  
   
 ```  
@@ -106,7 +117,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false  
 ```  
   
-##  <a name="a-nameisdefaultconstructiblea--isdefaultconstructible"></a><a name="is_default_constructible"></a> is_default_constructible  
+##  <a name="is_default_constructible"></a> is_default_constructible  
  Testet, ob ein Typ einen Standardkonstruktor besitzt.  
   
 ```  
@@ -156,7 +167,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false  
 ```  
   
-##  <a name="a-nameismoveassignablea--ismoveassignable"></a><a name="is_move_assignable"></a> is_move_assignable  
+##  <a name="is_move_assignable"></a> is_move_assignable  
  Prüft, ob dem Typ eine Verschiebung zugewiesen werden kann.  
   
 ```  
@@ -171,7 +182,7 @@ struct is_move_assignable;
 ### <a name="remarks"></a>Hinweise  
  Einem Typ kann eine Verschiebung zugewiesen werden, wenn ein rvalue-Verweis auf den Typ einem Verweis auf den Typ zugewiesen werden kann. Das Typprädikat entspricht `is_assignable<T&, T&&>`. Zu den Typen, denen eine Verschiebung zugewiesen werden kann, gehören verweisbare skalare Typen und Klassentypen, die entweder über vom Compiler generierte oder benutzerdefinierte Verschiebungszuweisungsoperatoren verfügen.  
   
-##  <a name="a-nameismoveconstructiblea--ismoveconstructible"></a><a name="is_move_constructible"></a> is_move_constructible  
+##  <a name="is_move_constructible"></a> is_move_constructible  
  Testet, ob der Typ über einen Verschiebekonstruktor verfügt.  
   
 ```  
@@ -186,7 +197,7 @@ struct is_move_constructible;
 ### <a name="remarks"></a>Hinweise  
  Ein Typprädikat, das TRUE ausgewertet wird, wenn der Typ `T` mithilfe eines Verschiebevorgangs konstruiert werden kann. Dieses Prädikat entspricht `is_constructible<T, T&&>`.  
   
-##  <a name="a-nameisnothrowmoveassignablea--isnothrowmoveassignable"></a><a name="is_nothrow_move_assignable"></a> is_nothrow_move_assignable  
+##  <a name="is_nothrow_move_assignable"></a> is_nothrow_move_assignable  
  Testet, ob der Typ über einen **nothrow**-Verschiebungszuweisungsoperator verfügt.  
   
 ```  
@@ -201,7 +212,7 @@ struct is_nothrow_move_assignable;
 ### <a name="remarks"></a>Hinweise  
  Eine Instanz des Typprädikats ist „true“, wenn der `Ty`-Typ einen nothrow-Verschiebungszuweisungsoperator aufweist; andernfalls „false“.  
   
-##  <a name="a-nameistriviallycopyassignablea--istriviallycopyassignable"></a><a name="is_trivially_copy_assignable"></a> is_trivially_copy_assignable  
+##  <a name="is_trivially_copy_assignable"></a> is_trivially_copy_assignable  
  Testet, ob der Typ einen trivialen Kopierzuweisungsoperator aufweist.  
   
 ```  
@@ -218,7 +229,7 @@ struct is_trivially_copy_assignable;
   
  Ein Zuweisungskonstruktor für eine Klasse `T` ist trivial, wenn er implizit angegeben ist. Die Klasse `T` verfügt über keine virtuellen Funktionen und die Klasse `T` hat keine virtuellen Basen. Die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Zuweisungsoperatoren und die Klassen aller nicht statischen Datenmember vom Typarray der Klasse haben triviale Zuweisungsoperatoren.  
   
-##  <a name="a-nameistriviallymoveassignablea--istriviallymoveassignable"></a><a name="is_trivially_move_assignable"></a> is_trivially_move_assignable  
+##  <a name="is_trivially_move_assignable"></a> is_trivially_move_assignable  
  Testet, ob der Typ einen trivialen Verschiebezuweisungsoperator aufweist.  
   
 ```  
@@ -245,7 +256,7 @@ struct is_trivially_move_assignable;
   
  Die Klassen aller nicht statischen Datenmember des Typarrays der Klasse haben triviale Verschiebungszuweisungsoperatoren  
   
-##  <a name="a-nameistriviallymoveconstructiblea--istriviallymoveconstructible"></a><a name="is_trivially_move_constructible"></a> is_trivially_move_constructible  
+##  <a name="is_trivially_move_constructible"></a> is_trivially_move_constructible  
  Testet, ob der Typ einen trivialen Bewegungskonstruktor aufweist.  
   
 ```  

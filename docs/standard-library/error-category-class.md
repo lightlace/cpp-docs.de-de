@@ -9,10 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::error_category
 - system_error/std::error_category
 - error_category
-- std.error_category
+- system_error/std::error_category::value_type
+- system_error/std::error_category::default_error_condition
+- system_error/std::error_category::equivalent
+- system_error/std::error_category::message
+- system_error/std::error_category::name
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class error_category;
   
  **Namespace:** std  
   
-##  <a name="a-nameerrorcategorydefaulterrorconditiona--errorcategorydefaulterrorcondition"></a><a name="error_category__default_error_condition"></a> error_category::default_error_condition  
+##  <a name="error_category__default_error_condition"></a> error_category::default_error_condition  
  Speichert den Fehlercodewert für ein Fehlerbedingungsobjekt.  
   
 ```
@@ -100,7 +103,7 @@ virtual error_condition default_error_condition(int _Errval) const;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameerrorcategoryequivalenta--errorcategoryequivalent"></a><a name="error_category__equivalent"></a> error_category::equivalent  
+##  <a name="error_category__equivalent"></a> error_category::equivalent  
  Gibt einen Wert zurück, der angibt, ob Fehlerobjekte gleichwertig sind.  
   
 ```
@@ -127,7 +130,7 @@ virtual bool equivalent(const error_code& _Code,
   
  Die zweite Memberfunktion gibt `*this == _Code.category() && _Code.value() == _Errval` zurück.  
   
-##  <a name="a-nameerrorcategorymessagea--errorcategorymessage"></a><a name="error_category__message"></a> error_category::message  
+##  <a name="error_category__message"></a> error_category::message  
  Gibt den Namen des angegebenen Fehlercodes zurück.  
   
 ```
@@ -145,7 +148,7 @@ virtual string message(error_code::value_type val) const = 0;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameerrorcategorynamea--errorcategoryname"></a><a name="error_category__name"></a> error_category::name  
+##  <a name="error_category__name"></a> error_category::name  
  Gibt den Namen der Kategorie zurück.  
   
 ```
@@ -157,7 +160,7 @@ virtual const char *name() const = 0;
   
 ### <a name="remarks"></a>Hinweise  
   
-##  <a name="a-nameerrorcategoryoperatoreqeqa--errorcategoryoperator"></a><a name="error_category__operator_eq_eq"></a> error_category::operator==  
+##  <a name="error_category__operator_eq_eq"></a> error_category::operator==  
  Prüft auf Gleichheit zwischen `error_category`-Objekten.  
   
 ```
@@ -176,7 +179,7 @@ bool operator==(const error_category& right) const;
 ### <a name="remarks"></a>Hinweise  
  Dieser Memberoperator gibt `this == &right` zurück.  
   
-##  <a name="a-nameerrorcategoryoperatorneqa--errorcategoryoperator"></a><a name="error_category__operator_neq"></a> error_category::operator!=  
+##  <a name="error_category__operator_neq"></a> error_category::operator!=  
  Prüft auf Ungleichheit zwischen `error_category`-Objekten.  
   
 ```
@@ -195,7 +198,7 @@ bool operator!=(const error_category& right) const;
 ### <a name="remarks"></a>Hinweise  
  Der Memberoperator gibt `(!*this == right)` zurück.  
   
-##  <a name="a-nameerrorcategoryoperatorlta--errorcategoryoperatorlt"></a><a name="error_category__operator_lt_"></a> error_category::operator&lt;  
+##  <a name="error_category__operator_lt_"></a> error_category::operator&lt;  
  Testet, ob das [error_category](../standard-library/error-category-class.md)-Objekt kleiner ist als das `error_category`-Objekt, das für den Vergleich übergeben wurde.  
   
 ```
@@ -214,7 +217,7 @@ bool operator<(const error_category& right) const;
 ### <a name="remarks"></a>Hinweise  
  Der Memberoperator gibt `this < &right` zurück.  
   
-##  <a name="a-nameerrorcategoryvaluetypea--errorcategoryvaluetype"></a><a name="error_category__value_type"></a> error_category::value_type  
+##  <a name="error_category__value_type"></a> error_category::value_type  
  Ein Typ, der den gespeicherten Fehlercodewert darstellt.  
   
 ```
