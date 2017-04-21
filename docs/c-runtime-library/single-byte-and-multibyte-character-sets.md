@@ -1,39 +1,55 @@
 ---
-title: "Einzelbyte- und Mehrbyte-Zeichens&#228;tze | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.character.multibyte"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zeichensätze [C++], Mehrbyte"
-  - "Zeichensätze [C++], Einzelbyte"
-  - "MBCS [C++], Informationen über MBCS"
-  - "SBCS (Einzelbyte-Zeichensatz)"
+title: "Einzelbyte- und Multibyte-Zeichensätze| Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.character.multibyte
+dev_langs:
+- C++
+helpviewer_keywords:
+- SBCS (single byte character set)
+- MBCS [C++], about MBCS
+- character sets [C++], multibyte
+- character sets [C++], single byte
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Einzelbyte- und Mehrbyte-Zeichens&#228;tze
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c7d9a62c2b6dc69f9fcd86c8f498e42ce31cae84
+ms.lasthandoff: 04/01/2017
 
-Der ASCII\-Zeichensatz werden Zeichen im Bereich 0x00 \- 0x7F.  Es gibt mehrere andere Zeichensätze, hauptsächlich europäisch, die die Zeichen im Bereich 0x00 \- 0x7F identisch dem ASCII\-Zeichensatz und definieren Sie auch ein erweiterter Zeichensatz von 0x80 \- 0xFF definieren.  Daher ist ein äußerst, Einzelbyte\-Zeichensatz \(`SBCS`\) aus, um den ASCII\-Zeichensatz sowie die Zeichensätze für viele europäischen Sprachen darzustellen.  Einige außereuropäische Zeichensätze, z das japanische Kanji, viel mehr Zeichen als in einem Einzelbytecodierungsschema dargestellt werden kann, und benötigen daher Codierung \(Mehrbyte\-Zeichensätze `MBCS`\).  
+---
+# <a name="single-byte-and-multibyte-character-sets"></a>Einzelbyte- und Mehrbyte-Zeichensätze
+Mit dem ASCII-Zeichensatz werden Zeichen im Bereich von 0x00 bis 0x7F definiert. Von einigen anderen Zeichensätzen (hauptsächlich europäischer Herkunft) werden wie beim ASCII-Zeichensatz die Zeichen im Bereich von 0x00 bis 0x7F definiert; zusätzlich wird ein erweiterter Zeichensatz im Bereich von 0x80 bis 0xFF definiert. Daher ist ein Einzelbyte-Zeichensatz (Single-Byte Character Set, `SBCS`) mit 8 Bit ausreichend, um den ASCII-Zeichensatz sowie viele andere Zeichensätze für europäische Sprachen darzustellen. Einige außereuropäische Zeichensätze, z.B. das japanische Kanji, enthalten jedoch so viele Zeichen, dass sie nicht mehr in Einzelbytecodierung dargestellt werden können. Sie müssen daher mit einem Multibyte-Zeichensatz (Multibyte Character Set, `MBCS`) codiert werden.  
   
 > [!NOTE]
->  Viele `SBCS` Routinen in der Microsoft\-Laufzeitbibliothek behandeln Mehrbyte\-Bytes, \- Zeichen und \- Zeichenfolgen je nach Bedarf.  Viele Mehrbyte\-Zeichensätze definieren den ASCII\-Zeichensatz als Teilmenge.  In vielen Mehrbyte\-Zeichensätzen sind die Zeichen im Bereich 0x00 – 0x7F mit den entsprechenden Zeichen des ASCII\-Zeichensatzes identisch.  In `ASCII` und `MBCS` Zeichenfolgen, hat das EinByte\- `NULL` Zeichen \("\\ 0 "\) den Wert 0x00 und NULL an.  
+>  Viele `SBCS`-Routinen in der Microsoft-Laufzeitbibliothek behandeln Multibyte-Bytes, Zeichen und Zeichenfolgen entsprechend. Viele Multibyte-Zeichensätze definieren den ASCII-Zeichensatz als Teilmenge. In vielen Multibyte-Zeichensätzen sind die Zeichen im Bereich von 0x00 bis 0x7F mit den gleichwertigen Zeichen des ASCII-Zeichensatzes identisch. Das ein Byte lange `NULL`-Zeichen ('\0') in `ASCII`- und `MBCS`-Zeichenfolgen hat z.B. den Wert 0x00 und steht für das abschließende NULL-Zeichen.  
   
- Ein Mehrbyte\-Zeichensatz besteht möglicherweise aus EinByte\- und 2\-Byte\-Zeichen.  Daher enthält möglicherweise einer Mehrbyte\-Zeichenfolge eine Mischung von Einzelbyte\- und Doppelbytezeichen.  Ein zwei\-Bytemehrbytezeichen hat ein führendes Byte und ein nachfolgendes Byte.  In einem bestimmten Mehrbyte\-Zeichensatz liegen die führenden Bytes ebenso wie die nachfolgenden Bytes innerhalb eines bestimmten Bereichs.  Wenn diese Bereiche überschneiden, ist möglicherweise notwendig, die bestimmten Kontext auszuwerten, um zu bestimmen, ob ein bestimmtes Byte als führendes oder als nachfolgendes Byte verwendet wird.  
+ Ein Multibyte-Zeichensatz kann aus 1-Byte- und 2-Byte-Zeichen bestehen. Daher kann eine Multibyte-Zeichenfolge eine Mischung aus Einzelbyte- und Doppelbytezeichen enthalten. Ein 2-Byte-Multibytezeichen verfügt über ein führendes Byte und ein nachfolgendes Byte. In einem bestimmten Mehrbyte-Zeichensatz liegen die führenden Bytes ebenso wie die nachfolgenden Bytes innerhalb eines bestimmten Bereichs. Wenn sich diese Bereiche überschneiden, muss unter Umständen anhand des Kontexts ermittelt werden, ob ein bestimmtes Byte als führendes oder als nachfolgendes Byte verwendet wird.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Internationalisierung](../c-runtime-library/internationalization.md)   
  [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)

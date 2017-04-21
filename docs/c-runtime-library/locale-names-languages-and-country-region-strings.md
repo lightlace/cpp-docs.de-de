@@ -1,37 +1,53 @@
 ---
-title: "Gebietsschema-Namen, Sprachen und Zeichenfolgen f&#252;r L&#228;nder und Regionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.strings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Sprache/Land-Zeichenfolgen"
-  - "Lokalisierung, Gebietsschema"
-  - "Gebietsschemas"
-  - "setlocale-Funktion"
-  - "Sprachezeichenfolgen"
+title: "Gebietsschemanamen, Sprachen und Zeichenfolgen für Länder und Regionen | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.strings
+dev_langs:
+- C++
+helpviewer_keywords:
+- country/region strings
+- localization, locale
+- locales
+- setlocale function
+- language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Gebietsschema-Namen, Sprachen und Zeichenfolgen f&#252;r L&#228;nder und Regionen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6f90a6a39d2f9a729d07d25e9f80d1ea9e26e1ee
+ms.lasthandoff: 04/04/2017
 
-Das `locale`\-Argument für die Funktionen `setlocale` und `_create_locale` kann mithilfe der Gebietsschemanamen, Sprachen, Länder\-\/Regionscodes und Codepages festgelegt werden, die von der Windows NLS API unterstützt werden. Das `locale`\-Argument weist folgende Form auf:  
+---
+# <a name="locale-names-languages-and-countryregion-strings"></a>Gebietsschema-Namen, Sprachen und Zeichenfolgen für Länder und Regionen
+Das `locale` -Argument für die Funktionen `setlocale` und `_create_locale` kann mithilfe der Gebietsschemanamen, Sprachen, Länder-/Regionscodes und Codepages festgelegt werden, die von der Windows NLS API unterstützt werden. Das `locale` -Argument weist folgende Form auf:  
   
 ```  
-  
 locale :: "locale_name"  
         | "language[_country_region[.code_page]]"  
         | ".code_page"  
@@ -40,17 +56,17 @@ locale :: "locale_name"
         | NULL  
 ```  
   
- Die Form des Gebietsschemanamens – z. B. `en-US` für Englisch \(USA\) oder `bs-Cyrl-BA` für Bosnisch \(Kyrillisch, Bosnien und Herzegowina\) – wird bevorzugt. Der Satz von Gebietsschemanamen wird in [Gebietsschemanamen](http://msdn.microsoft.com/library/windows/desktop/dd373814.aspx) beschrieben. Eine Auflistung aller von der Version des Windows\-Betriebssystems unterstützten Gebietsschemanamen enthält die Spalte des **Kulturnamens** unter der [Referenz zur NLS\(National Language Support\)\-API](http://msdn.microsoft.com/goglobal/bb896001.aspx). Unter dieser Ressource finden Sie die unterstützte Sprache, das Skript und die regionalen Teile der Gebietsschemanamen. Informationen zu den unterstützten Gebietsschemanamen ohne standardmäßige Sortierreihenfolge finden Sie in der Spalte des **Gebietsschemanamens** unter den [Sortierreihenfolgen\-IDs](http://msdn.microsoft.com/library/windows/desktop/dd374060.aspx).  
+ Die Form des Gebietsschemanamens – z. B. `en-US` für Englisch (USA) oder `bs-Cyrl-BA` für Bosnisch (Kyrillisch, Bosnien und Herzegowina) – wird bevorzugt. Der Satz von Gebietsschemanamen wird in [Gebietsschemanamen](http://msdn.microsoft.com/library/windows/desktop/dd373814.aspx)beschrieben. Eine Auflistung aller von der Version des Windows-Betriebssystems unterstützten Gebietsschemanamen enthält die Spalte des **Kulturnamens** unter der [Referenz zur NLS(National Language Support)-API](http://msdn.microsoft.com/goglobal/bb896001.aspx). Unter dieser Ressource finden Sie die unterstützte Sprache, das Skript und die regionalen Teile der Gebietsschemanamen. Informationen zu den unterstützten Gebietsschemanamen ohne standardmäßige Sortierreihenfolge finden Sie in der Spalte des **Gebietsschemanamens** unter den [Sortierreihenfolgen-IDs](http://msdn.microsoft.com/library/windows/desktop/dd374060.aspx).  
   
- Die Form *language*\[\_*country\_region*\[.*code\_page*\]\] wird in den lokalen Einstellungen für eine Kategorie gespeichert, wenn eine Sprachenzeichenfolge oder Sprachenzeichenfolge und Land\-\/Regionszeichenfolge verwendet wird, um das Gebietsschema zu erstellen. Der Satz von unterstützten Sprachenzeichenfolgen wird in [Sprachzeichenfolgen](../c-runtime-library/language-strings.md) beschrieben, und die Liste der unterstützten Länder\-\/Regionszeichenfolgen wird in [Länder\-\/Regionszeichenfolgen](../c-runtime-library/country-region-strings.md) aufgeführt. Wenn die angegebene Sprache nicht zu dem angegebenen Land bzw. der angegebenen Region zugeordnet ist, wird in den lokalen Einstellungen die Standardsprache für das angegebene Land bzw. die angegebene Region gespeichert. Für Gebietsschema\-Zeichenfolgen, die in Code eingebettet sind oder für den Speicher serialisiert sind, empfehlen wir diese Form nicht. Bei diesen Zeichenfolgen ist nämlich die Wahrscheinlichkeit größer, dass sie durch eine Betriebssystemaktualisierung geändert werden, als die Gebietsschema\-Namensform.  
+ Die Form *language*[_*country_region*[.*code_page*]] wird in den lokalen Einstellungen für eine Kategorie gespeichert, wenn eine Sprachzeichenfolge oder Sprachzeichenfolge und Länder-/Regionszeichenfolge verwendet wird, um das Gebietsschema zu erstellen. Der Satz von unterstützten Sprachzeichenfolgen wird in [Sprachzeichenfolgen](../c-runtime-library/language-strings.md) beschrieben, und die Liste der unterstützten Länder-/Regionszeichenfolgen wird in [Länder-/Regionszeichenfolgen](../c-runtime-library/country-region-strings.md) aufgeführt. Wenn die angegebene Sprache nicht zu dem angegebenen Land bzw. der angegebenen Region zugeordnet ist, wird in den lokalen Einstellungen die Standardsprache für das angegebene Land bzw. die angegebene Region gespeichert. Für Gebietsschema-Zeichenfolgen, die in Code eingebettet sind oder für den Speicher serialisiert sind, empfehlen wir diese Form nicht. Bei diesen Zeichenfolgen ist nämlich die Wahrscheinlichkeit größer, dass sie durch eine Betriebssystemaktualisierung geändert werden, als die Gebietsschema-Namensform.  
   
- Die dem Gebietsschema zugeordnete Codepage ist die ANSI\/OEM\-Codepage. Die Codepage wird für Sie festgelegt, wenn Sie ein Gebietsschema nur nach Sprache oder nach Sprache und Land\/Region angeben. Der spezielle Wert `.ACP` gibt die ANSI\-Codepage für das Land bzw. die Region an. Der spezielle Wert `.OCP` gibt die OEM\-Codepage für das Land bzw. die Region an. Wenn Sie beispielsweise `"Greek_Greece.ACP"` als das Gebietsschema angeben, wird das Gebietsschema als `Greek_Greece.1253` \(die ANSI\-Codepage für Griechisch\) gespeichert, und wenn Sie `"Greek_Greece.OCP"` als das Gebietsschema angegeben, wird es als `Greek_Greece.737` \(die OEM\-Codepage für Griechisch\) gespeichert. Weitere Informationen zu Codepages finden Sie unter [Codepages](../c-runtime-library/code-pages.md). Eine Liste der unter Windows unterstützten Codepages finden Sie unter den [Codepage\-IDs](http://msdn.microsoft.com/library/windows/desktop/dd317756.aspx).  
+ Die dem Gebietsschema zugeordnete Codepage ist die ANSI/OEM-Codepage. Die Codepage wird für Sie festgelegt, wenn Sie ein Gebietsschema nur nach Sprache oder nach Sprache und Land/Region angeben. Der spezielle Wert `.ACP` gibt die ANSI-Codepage für das Land bzw. die Region an. Der spezielle Wert `.OCP` gibt die OEM-Codepage für das Land bzw. die Region an. Wenn Sie beispielsweise `"Greek_Greece.ACP"` als das Gebietsschema angeben, wird das Gebietsschema als `Greek_Greece.1253` (die ANSI-Codepage für Griechisch) gespeichert, und wenn Sie `"Greek_Greece.OCP"` als das Gebietsschema angegeben, wird es als `Greek_Greece.737` (die OEM-Codepage für Griechisch) gespeichert. Weitere Informationen zu Codepages finden Sie unter [Codepages](../c-runtime-library/code-pages.md). Eine Liste der unter Windows unterstützten Codepages finden Sie unter den [Codepage-IDs](http://msdn.microsoft.com/library/windows/desktop/dd317756.aspx).  
   
- Wenn Sie nur die Codepage zum Angeben des Gebietsschemas verwenden, werden Standardsprache und Standardland\/\-region des Systems verwendet. Wenn Sie beispielsweise `".1254"` \(ANSI\-Code für Türkisch\) als Gebietsschema in einem für Englisch \(USA\) konfigurierten System angeben, wird `English_United States.1254` als Gebietsschema gespeichert. Die Verwendung dieser Form wird nicht empfohlen, da sie zu inkonsistentem Verhalten führen kann.  
+ Wenn Sie nur die Codepage zum Angeben des Gebietsschemas verwenden, werden Standardsprache und Standardland/-region des Systems verwendet. Wenn Sie beispielsweise `".1254"` (ANSI-Code für Türkisch) als Gebietsschema in einem für Englisch (USA) konfigurierten System angeben, wird `English_United States.1254`als Gebietsschema gespeichert. Die Verwendung dieser Form wird nicht empfohlen, da sie zu inkonsistentem Verhalten führen kann.  
   
- Ein `locale`\-Wert von `C` gibt die Umgebung mit minimaler ANSI\-Konformität für die C\-Übersetzung an. Das `C`\-Gebietsschema geht davon aus, dass jeder `char`\-Datentyp 1 Byte und sein Wert immer kleiner als 256 ist. Wenn `locale` auf eine leere Zeichenfolge zeigt, ist das Gebietsschema die durch die Implementierung definierte systemeigene Umgebung.  
+ Ein `locale` -Wert von `C` gibt die Umgebung mit minimaler ANSI-Konformität für die C-Übersetzung an. Das `C` -Gebietsschema geht davon aus, dass jeder `char` -Datentyp 1 Byte und sein Wert immer kleiner als 256 ist. Wenn `locale` auf eine leere Zeichenfolge zeigt, ist das Gebietsschema die durch die Implementierung definierte systemeigene Umgebung.  
   
- Sie können für die Funktionen `setlocale` und `_wsetlocale` alle Gebietsschemakategorien gleichzeitig mithilfe der `LC_ALL`\-Kategorie angeben. Die Kategorien können alle auf das gleiche Gebietsschema festgelegt werden, oder Sie können jede Kategorie einzeln festlegen, indem Sie ein Gebietsschemaargument mit dieser Form verwenden:  
+ Sie können für die Funktionen `setlocale` und `_wsetlocale` alle Gebietsschemakategorien gleichzeitig mithilfe der `LC_ALL` -Kategorie angeben. Die Kategorien können alle auf das gleiche Gebietsschema festgelegt werden, oder Sie können jede Kategorie einzeln festlegen, indem Sie ein Gebietsschemaargument mit dieser Form verwenden:  
   
 ```  
 LC_ALL_specifier :: locale  
@@ -58,16 +74,16 @@ LC_ALL_specifier :: locale
   
 ```  
   
- Sie können mehrere Kategorientypen angeben, durch Semikolons getrennt. Bei nicht angegebenen Kategorientypen werden die aktuellen Gebietsschemaeinstellungen verwendet. Dieser Code legt beispielsweise das aktuelle Gebietsschema für alle Kategorien auf `de-DE` fest und legt dann die Kategorien `LC_MONETARY` auf `en-GB` und `LC_TIME` auf `es-ES` fest:  
+ Sie können mehrere Kategorientypen angeben, durch Semikolons getrennt. Bei nicht angegebenen Kategorientypen werden die aktuellen Gebietsschemaeinstellungen verwendet. Dieser Code legt beispielsweise das aktuelle Gebietsschema für alle Kategorien auf `de-DE`fest und legt dann die Kategorien `LC_MONETARY` auf `en-GB` und `LC_TIME` auf `es-ES`fest:  
   
  `_wsetlocale(LC_ALL, L"de-DE");`  
   
  `_wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");`  
   
-## Siehe auch  
- [C\-Laufzeitbibliotheksverweis](../c-runtime-library/c-run-time-library-reference.md)   
- [\_get\_current\_locale](../c-runtime-library/reference/get-current-locale.md)   
- [setlocale, \_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_create\_locale, \_wcreate\_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)   
+## <a name="see-also"></a>Siehe auch  
+ [C-Laufzeitbibliotheksreferenz](../c-runtime-library/c-run-time-library-reference.md)   
+ [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)   
+ [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)   
  [Sprachzeichenfolgen](../c-runtime-library/language-strings.md)   
- [Länder\-\/Regionszeichenfolgen](../c-runtime-library/country-region-strings.md)
+ [Länder-/Regionszeichenfolgen](../c-runtime-library/country-region-strings.md)

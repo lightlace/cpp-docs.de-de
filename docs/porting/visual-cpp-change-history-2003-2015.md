@@ -33,12 +33,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 4e419ebbdd1a5fcc178436f2ec6151a3d02c1a21
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
+In diesem Artikel werden alle bedeutenden Änderungen von Visual Studio 2015 zurück bis Visual Studio 2003 beschrieben. Die in diesem Artikel verwendeten Begriffe „neues Verhalten“ und „jetzt“ beziehen sich auf Visual Studio 2015 und höher. Die Begriffe „altes Verhalten“ und „davor“ beziehen sich auf Visual Studio 2013 und frühere Versionen. 
+ 
+ Informationen zu Visual Studio 2017 finden Sie unter [Neuerungen bei Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) und [Verbesserungen bei der Übereinstimmung mit Standards in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
+ > [!NOTE]
+ > Es gibt keine binären Änderungen von Visual Studio 2015 auf Visual Studio 2017.
+
 Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten unter Umständen Kompilierungs- und/oder Laufzeitfehler im Code auf, der zuvor ordnungsgemäß kompiliert und ausgeführt wurde. Änderungen in der neuen Version, die solche Probleme verursachen, werden als *bedeutende Änderungen* bezeichnet und werden in der Regel durch Änderungen im C++-Sprachenstandard, in den Funktionssignaturen oder im Layout von Objekten im Arbeitsspeicher erforderlich.  
   
  Um Laufzeitfehler zu vermeiden, die schwer zu erkennen und zu diagnostizieren sind, wird empfohlen, keine statischen Links mit den Binärdateien zu erstellen, die mit verschiedenen Versionen des Compilers kompiliert wurden. Stellen Sie beim Aktualisieren eines EXE- oder DLL-Projekts außerdem sicher, die Bibliotheken zu aktualisieren, mit denen es verknüpft ist. Wenn Sie die Typen CRT (C Runtime) oder C++-Standardbibliothek verwenden, übergeben Sie sie nicht zwischen Binärdateien (einschließlich DLLs), die mit verschiedenen Versionen des Compilers kompiliert wurden. Weitere Informationen finden Sie unter [Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
@@ -47,9 +53,6 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
   
  Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Compilers mit Standards mitunter ändern, wie der Compiler den vorhandenen Quellcode versteht. In diesem Fall treten während Ihres Builds ggf. neue oder andere Fehler oder sogar Verhaltensunterschiede im Code auf, für den zuvor Builds erstellt wurden und die Ausführung ordnungsgemäß schien. Wenngleich dies keine bedeutenden Änderungen wie diejenigen sind, die in diesem Dokument behandelt werden, sind u.U. Quellcodeänderungen erforderlich, um diese Probleme zu beheben.  
   
- In diesem Artikel werden alle bedeutenden Änderungen von Visual Studio 2015 zurück bis Visual Studio 2003 beschrieben. Die in diesem Artikel verwendeten Begriffe „neues Verhalten“ und „jetzt“ beziehen sich auf Visual Studio 2015 und höher. Die Begriffe „altes Verhalten“ und „davor“ beziehen sich auf Visual Studio 2013 und frühere Versionen. 
- 
- Informationen zu Visual Studio 2017 finden Sie unter [Neuerungen bei Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) und [Verbesserungen bei der Übereinstimmung mit Standards in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md).
   
 1.  [C-Laufzeitbibliothek (CRT): Bedeutende Änderungen](#BK_CRT)  
   
@@ -162,7 +165,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
   
 -   **Formatierung von Gleitkommawerten und Analyse** Neue Formatierung von Gleitkommawerten und Analysealgorithmen wurden zur Verbesserung der Genauigkeit eingeführt. Diese Änderung wirkt sich auf die [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)- und [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)-Funktionsreihen sowie auf Funktionen wie [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md) aus.  
   
-     Mit den alten Formatierungsalgorithmen wurde nur eine begrenzte Zifferanzahl erzeugt und die übrigen Dezimalstellen wurden mit&0; dargestellt. Dies ist in der Regel zum Generieren von Zeichenfolgen ausreichend, für die ein Roundtrip zum ursprünglichen Gleitkommawert durchgeführt wird. Es ist jedoch nicht zufriedenstellend, wenn Sie den exakten Wert (oder einen angenäherten Dezimalwert hiervon) benötigen. Mit den neuen Formatierungsalgorithmen werden beliebig viele Ziffern zur Darstellung des Werts (oder der angegeben Genauigkeit) generiert. Schauen Sie sich als Beispiel für die Verbesserung die Ergebnisse bei der Ausgabe einer hohen Potenz von zwei an:  
+     Mit den alten Formatierungsalgorithmen wurde nur eine begrenzte Zifferanzahl erzeugt und die übrigen Dezimalstellen wurden mit 0 dargestellt. Dies ist in der Regel zum Generieren von Zeichenfolgen ausreichend, für die ein Roundtrip zum ursprünglichen Gleitkommawert durchgeführt wird. Es ist jedoch nicht zufriedenstellend, wenn Sie den exakten Wert (oder einen angenäherten Dezimalwert hiervon) benötigen. Mit den neuen Formatierungsalgorithmen werden beliebig viele Ziffern zur Darstellung des Werts (oder der angegeben Genauigkeit) generiert. Schauen Sie sich als Beispiel für die Verbesserung die Ergebnisse bei der Ausgabe einer hohen Potenz von zwei an:  
   
     ```cpp  
     printf("%.0f\n", pow(2.0, 80))  
@@ -181,7 +184,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
   
 -   **Genauigkeit von %A und %a** Die Standardgenauigkeit der %A- und %a-Formatspezifizierer lag in früheren Bibliotheksversionen bei 6. Die Standardgenauigkeit liegt jetzt bei 13 und entspricht somit dem C-Standard.  
   
-     Dies ist eine Laufzeitverhaltensänderung in der Ausgabe von jeder Funktion, die eine Zeichenfolge mit %A oder % verwendet. Beim alten Verhalten lautete die Ausgabe bei Verwendung des %A-Spezifizierers möglicherweise „1.1A2B3Cp+111“. Die Ausgabe für den gleichen Wert lautet nun „1.1A2B3C4D5E6F7p +&111;“. Zum Wiederherstellen des alten Verhaltens können Sie die Genauigkeit angeben, z. B. %.6A. Siehe [Genauigkeitsangabe](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
+     Dies ist eine Laufzeitverhaltensänderung in der Ausgabe von jeder Funktion, die eine Zeichenfolge mit %A oder % verwendet. Beim alten Verhalten lautete die Ausgabe bei Verwendung des %A-Spezifizierers möglicherweise „1.1A2B3Cp+111“. Die Ausgabe für den gleichen Wert lautet nun „1.1A2B3C4D5E6F7p + 111“. Zum Wiederherstellen des alten Verhaltens können Sie die Genauigkeit angeben, z. B. %.6A. Siehe [Genauigkeitsangabe](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
   
 -   **%F-Spezifizierer** Der %F-Format-/Konvertierungsspezifizierer wird nun unterstützt. Er weist die gleiche Funktionalität auf, wie der Formatspezifizierer „%f“ auf, außer dass unendliche und NaN-Werte mithilfe von Großbuchstaben formatiert werden.  
   
@@ -217,7 +220,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
   
 -   **strtof und wcstof** The strtof und wcstof functions failed to set errno to ERANGE when the value was not representable as a float. Dies wurde korrigiert. (Beachten Sie, dass dieser Fehler für diese beiden Funktionen spezifisch ist. Die strtod-, wcstod-, strtold- und wcstold-Funktionen sind davon nicht betroffen sind.) Dies ist eine wichtige Laufzeitänderung.  
   
--   **Ausgerichtete Zuordnungsfunktionen** In früheren Versionen haben die ausgerichteten Zuordnungsfunktionen (_aligned_malloc, _aligned_offset_malloc usw.) automatisch Anforderungen für einen Block mit einer Ausrichtung von 0 akzeptiert. Die angeforderte Ausrichtung muss eine Potenz von zwei sein, was bei&0; nicht der Fall ist. Dieser Fehler wurde behoben. Eine angeforderte Ausrichtung von 0 wird als ungültiger Parameter behandelt. Dies ist eine wichtige Laufzeitänderung.  
+-   **Ausgerichtete Zuordnungsfunktionen** In früheren Versionen haben die ausgerichteten Zuordnungsfunktionen (_aligned_malloc, _aligned_offset_malloc usw.) automatisch Anforderungen für einen Block mit einer Ausrichtung von 0 akzeptiert. Die angeforderte Ausrichtung muss eine Potenz von zwei sein, was bei 0 nicht der Fall ist. Dieser Fehler wurde behoben. Eine angeforderte Ausrichtung von 0 wird als ungültiger Parameter behandelt. Dies ist eine wichtige Laufzeitänderung.  
   
 -   **Heapfunktionen** Die _heapadd-, _heapset- und _heapused-Funktionen wurden entfernt. Diese Funktionen waren nicht funktionsfähig, seit die CRT für die Verwendung des Windows-Heaps aktualisiert wurde.  
   
@@ -949,7 +952,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
   
      Außerdem, auch wenn dazu keine spezifische Diagnose ausgegeben wird, wird ein Inlineoperator „new“ als nicht wohlgeformt angesehen.  
   
--   **Aufrufen von 'operator*type*()' (benutzerdefinierte Konversion) für Nichtklassentypen**  
+-   **Aufrufen von „operator *type*()“ (benutzerdefinierte Konversion) für Nichtklassentypen**  
   
      Frühere Versionen ließen den Aufruf von 'operator *type*()' für Nichtklassentypen zu und ignorierten den Aufruf stumm. Durch dieses alte Verhalten entstand die Gefahr der stummen Erzeugung von ungültigem Code, was zu unvorhersehbarem Laufzeitverhalten führt. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2228 als Ergebnis aus.  
   

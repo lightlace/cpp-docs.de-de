@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
-ms.openlocfilehash: 2d86588df2b20861dff5b940d2f0c7c3afd857fb
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9b35cb78e482ad9441939f1d7eae5d214d13ab4f
+ms.lasthandoff: 04/01/2017
 
 ---
    
@@ -198,12 +198,12 @@ oder Sie führen eine statische Umwandlung aus, um das Objekt zu konvertieren, b
     struct S {/* as before */} s(0);
     printf("%i\n", static_cast<int>(s))
 ```
-Für mit CStringW erstellte und verwaltete Zeichenfolgen sollte der bereitgestellte „Operator LPCWSTR()“ verwendet werden, um ein CStringW-Objekt in einen C-Zeiger umzuwandeln, der von der Formatzeichenfolge erwartet wird.
+Für mit CStringW erstellte und verwaltete Zeichenfolgen sollte der bereitgestellte `operator LPCWSTR()` verwendet werden, um ein CStringW-Objekt in einen C-Zeiger umzuwandeln, der von der Formatzeichenfolge erwartet wird.
 
 ```cpp  
 CStringW str1;
 CStringW str2;
-str1.Format(… , static_cast<LPCWSTR>(str2));
+str1.Format(L"%s", static_cast<LPCWSTR>(str2));
 ```
 
 ### <a name="cv-qualifiers-in-class-construction"></a>CV-Qualifizierer in der Klassenkonstruktion

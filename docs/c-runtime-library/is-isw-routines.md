@@ -1,78 +1,94 @@
 ---
-title: "is- und isw-Routinen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-  - "msvcr120.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "isw"
-  - "is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is-Routinen"
-  - "isw-Routinen"
+title: Die Routinen is und isw| Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr110_clr0400.dll
+- msvcr90.dll
+- msvcr80.dll
+- msvcr100.dll
+- msvcr110.dll
+- msvcr120.dll
+apitype: DLLExport
+f1_keywords:
+- isw
+- is
+dev_langs:
+- C++
+helpviewer_keywords:
+- is routines
+- isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# is- und isw-Routinen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: d4f4902c29b64be4c2e032571face5f583c62734
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="is-isw-routines"></a>is- und isw-Routinen
 |||  
 |-|-|  
-|[isalnum, iswalnum, \_isalnum\_l, \_iswalnum\_l](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md)|[isgraph, iswgraph, \_isgraph\_l, \_iswgraph\_l](../c-runtime-library/reference/isgraph-iswgraph-isgraph-l-iswgraph-l.md)|  
-|[isalpha, iswalpha, \_isalpha\_l, \_iswalpha\_l](../c-runtime-library/reference/isalpha-iswalpha-isalpha-l-iswalpha-l.md)|[isleadbyte, \_isleadbyte\_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|  
-|[Isascii, \_\_isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, \_islower\_l, \_iswlower\_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|  
-|[isblank, iswblank, \_isblank\_l, \_iswblank\_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, \_isprint\_l, \_iswprint\_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|  
-|[iscntrl, iswcntrl, \_iscntrl\_l, \_iswcntrl\_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, \_ispunct\_l, \_iswpunct\_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|  
-|[Iscsym, Iscsymf, \_\_iscsym, \_\_iswcsym, \_\_iscsymf, \_\_iswcsymf, \_iscsym\_l, \_iswcsym\_l, \_iscsymf\_l, \_iswcsymf\_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, \_isspace\_l, \_iswspace\_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|  
-|[\_isctype, iswctype, \_isctype\_l, \_iswctype\_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, \_isupper\_l, iswupper, \_iswupper\_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|  
-|[isdigit, iswdigit, \_isdigit\_l, \_iswdigit\_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, \_isxdigit\_l, \_iswxdigit\_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|  
+|[isalnum, iswalnum, _isalnum_l, _iswalnum_l](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md)|[isgraph, iswgraph, _isgraph_l, _iswgraph_l](../c-runtime-library/reference/isgraph-iswgraph-isgraph-l-iswgraph-l.md)|  
+|[isalpha, iswalpha, _isalpha_l, _iswalpha_l](../c-runtime-library/reference/isalpha-iswalpha-isalpha-l-iswalpha-l.md)|[isleadbyte, _isleadbyte_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|  
+|[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, _islower_l, _iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|  
+|[isblank, iswblank, _isblank_l, _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, _isprint_l, _iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|  
+|[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, _ispunct_l, _iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|  
+|[iscsym, iscsymf, __iscsym, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|  
+|[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|  
+|[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Diese Routinen überprüfen Zeichen für bestimmte Bedingungen.  
   
- Die **is**\-Routinen liefern aussagekräftige Ergebnisse für alle Ganzzahlargumente von – 1 \(`EOF`\) bis einschließlich **UCHAR\_MAX** \(0xFF\).  Der erwartete Argumenttyp ist `int`.  
+ Die **is**-Routinen liefern aussagekräftige Ergebnisse für alle Ganzzahlargumente von -1 (`EOF`) bis einschließlich **UCHAR_MAX** (0xFF). Der erwartete Argumenttyp ist `int`.  
   
 > [!CAUTION]
->  Bei **is**\-Routinen kann die Übergabe eines Arguments vom Typ `char` zu unvorhergesehenen Ergebnissen führen.  Ein SBCS\- oder MBCS\-Einzelbytezeichen vom Typ `char` mit einem Wert größer als 0x7F ist negativ.  Wenn `char` übergeben wird, wandelt der Compiler den Wert möglicherweise in `int` mit Vorzeichen oder **long** mit Vorzeichen um.  Wenn der Compiler diesen Wert mit einem Vorzeichen versieht, kann dies zu unerwarteten Ergebnissen führen.  
+>  Bei **is**-Routinen kann die Übergabe eines Arguments vom Typ `char` zu unvorhergesehenen Ergebnissen führen. Ein SBCS- oder MBCS-Einzelbytezeichen vom Typ `char` mit einem Wert größer als 0x7F ist negativ. Wenn `char` übergeben wird, wandelt der Compiler den Wert möglicherweise in `int` mit Vorzeichen oder **long** mit Vorzeichen um. Wenn der Compiler diesen Wert mit einem Vorzeichen versieht, kann dies zu unerwarteten Ergebnissen führen.  
   
- Die **isw**\-Routinen erzeugen aussagekräftige Ergebnisse für Ganzzahlwerte von – 1 \(**WEOF**\) bis einschließlich 0xFFFF.  Der **wint\_t**\-Datentyp ist in WCHAR.H als **kurz ohne Vorzeichen** definiert; er kann jedes Breitzeichen oder den Breitzeichen\-Dateiende \(**WEOF**\)\-Wert enthalten.  
+ Die **isw**-Routinen erzeugen aussagekräftige Ergebnisse für Ganzzahlwerte von -1 (**WEOF**) bis einschließlich 0xFFFF. Der **wint_t**-Datentyp ist in „wchar.h“ als **unsigned short** definiert; er kann jedes Breitzeichen oder den Breitzeichenwert für das Ende der Datei (**WEOF**) enthalten.  
   
- Der Ausgabewert ist von der `LC_CTYPE`\-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  Die Versionen dieser Funktionen ohne das **\_l**\-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **\_l**\-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter.  
+ Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter.  
   
- Im "C"\-Gebietsschema sind die Testbedingungen für die **is** Routinen wie folgt:  
+ Im „C“-Gebietsschema sind die Testbedingungen für die **is** Routinen wie folgt:  
   
  `isalnum`  
- Alphanumerisch \(A \- Z, a \- z oder 0 \- 9\).  
+ Alphanumerisch (A-Z, a-z oder 0-9)  
   
  `isalpha`  
- Alphabetisch \(A \- Z oder a \- z\).  
+ Alphabetisch (A-Z oder a-z)  
   
  `__isascii`  
- ASCII\-Zeichen \(0x00 \- 0x7F\).  
+ Ein ASCII-Zeichen (0x00-0x7F)  
   
  `isblank`  
- Horizontaler Tabulator oder Leerzeichen \(0x09 oder 0x20\).  
+ Horizontaler Tabulator oder Leerzeichen (0x09 oder 0x20).  
   
  `iscntrl`  
- Steuerzeichen \(0x00 \- 0x1F oder 0x7F\).  
+ Ein Steuerzeichen (0x00-0x1F oder 0x7F)  
   
  `__iscsym`  
  Buchstabe, Unterstrich oder Ziffer.  
@@ -81,99 +97,99 @@ caps.handback.revision: 13
  Buchstabe oder Unterstrich.  
   
  **isdigit**  
- Dezimalstelle \(0 \- 9\).  
+ Eine Dezimalstelle (0-9)  
   
  `isgraph`  
- Druckbares Zeichen außer Leerzeichen \( \).  
+ Druckbares Zeichen außer Leerzeichen ( ).  
   
  `islower`  
- Kleinbuchstabe \(a \- z\).  
+ Ein Kleinbuchstabe (a-z)  
   
  `isprint`  
- Druckbares Zeichen einschließlich Leerzeichen \(0x20 \- 0x7E\).  
+ Ein druckbares Zeichen einschließlich Leerzeichen (0x20-0x7E)  
   
  `ispunct`  
  Interpunktionszeichen.  
   
  `isspace`  
- Leerzeichen \(0x09 \- 0x0D oder 0x20\).  
+ Ein Leerzeichen (0x09-0x0D oder 0x20)  
   
  `isupper`  
- Großbuchstabe \(A \- Z\).  
+ Ein Großbuchstabe (A-Z)  
   
  `isxdigit`  
- Hexadezimalziffer \(A \- F, a \- f oder 0 \- 9\).  
+ Eine Hexadezimalziffer (A-F, a-f oder 0-9)  
   
- Bei den **isw**\-Routinen ist das Ergebnis des Tests für die angegebene Bedingung vom Gebietsschema unabhängig.  Die Testbedingungen für die **isw**\-Funktionen sind wie folgt:  
+ Bei den **isw**-Routinen ist das Ergebnis des Tests für die angegebene Bedingung vom Gebietsschema unabhängig. Die Testbedingungen für die **isw**-Funktionen sind wie folgt:  
   
  `iswalnum`  
  `iswalpha` oder `iswdigit`.  
   
  `iswalpha`  
- Beliebiges Breitzeichen, das einen von der Implementierung abhängigen Satz darstellt, für den `iswcntrl`, `iswdigit`, `iswpunct` oder `iswspace` nicht 0 sind.  `iswalpha` liefert einen Rückgabewert ungleich 0 \(null\) nur für Breitzeichen, für die `iswupper` oder `iswlower` ungleich 0 \(null\) ist.  
+ Beliebiges Breitzeichen, das einen von der Implementierung abhängigen Satz darstellt, für den `iswcntrl`, `iswdigit`, `iswpunct` oder `iswspace` nicht 0 sind. `iswalpha` liefert einen Rückgabewert ungleich 0 (null) nur für Breitzeichen, für die `iswupper` oder `iswlower` ungleich 0 (null) ist.  
   
  `iswascii`  
- Breitzeichendarstellung von ASCII\-Zeichen \(0x0000 \- 0x007F\).  
+ Eine Breitzeichendarstellung von ASCII-Zeichen (0x0000 - 0x007F)  
   
  `iswblank`  
- Breitzeichen, das dem Standardleerzeichen entspricht oder ein von der Implementierung abhängiger Breitzeichensatz, für den `iswalnum` "false" ist.  Standardleerzeichen sind das Leerzeichen \(L' '\) und der horizontale Tabulator \(L'\\t'\).  
+ Breitzeichen, das dem Standardleerzeichen entspricht oder ein von der Implementierung abhängiger Breitzeichensatz, für den `iswalnum` "false" ist. Standardleerzeichen sind das Leerzeichen (L' ') und der horizontale Tabulator (L'\t').  
   
  `iswcntrl`  
  Steuerbreitzeichen.  
   
- **\_\_iswcsym**  
- Beliebiges Breitzeichen, für das **isalnum** "true" ist oder das '\_'\-Zeichen.  
+ **__iswcsym**  
+ Ein beliebiges Breitzeichen, für das **isalnum** „TRUE“ oder das „_“-Zeichen ist.  
   
- **\_\_iswcsymf**  
- Beliebiges Breitzeichen, für das `iswalpha` "true" ist oder das '\_'\-Zeichen.  
+ **__iswcsymf**  
+ Beliebiges Breitzeichen, für das `iswalpha` "true" ist oder das '_'-Zeichen.  
   
  `iswctype`  
- Das Zeichen hat die Eigenschaft, die vom `desc`\-Argument angegeben wird.  Für jeden gültigen Wert des `desc`\-Arguments von `iswctype` gibt es eine entsprechende Breitzeichenklassifizierungs\-Routine, wie in der folgenden Tabelle dargestellt:  
+ Das Zeichen hat die Eigenschaft, die vom `desc`-Argument angegeben wird. Für jeden gültigen Wert des `desc`-Arguments von `iswctype` gibt es eine entsprechende Breitzeichenklassifizierungs-Routine, wie in der folgenden Tabelle dargestellt:  
   
- **Äquivalent von iswctype\(**   
- ***c, desc* \) zu anderen isw\-Testroutinen**  
+ **Äquivalent von iswctype(**   
+ ***c, desc*) in anderen isw-Testroutinen**  
   
-|Wert des *desc* \-Arguments|iswctype\( *c, desc* \)\-Äquivalent|  
-|---------------------------------|-----------------------------------------|  
-|**\_ALPHA**|**iswalpha\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_DIGIT**|**iswalnum\(** `c` **\)**|  
-|**\_BLANK**|**iswblank\(** `c` **\)**|  
-|**\_CONTROL**|**iswcntrl\(** `c` **\)**|  
-|**\_DIGIT**|**iswdigit\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_DIGIT** &#124; **\_PUNCT**|**iswgraph\(** `c` **\)**|  
-|**\_LOWER**|**iswlower\(** `c` **\)**|  
-|**\_ALPHA** &#124; **\_BLANK** &#124; **\_DIGIT** &#124; **\_PUNCT**|**iswprint\(** `c` **\)**|  
-|**\_PUNCT**|**iswpunct\(** `c` **\)**|  
-|**\_BLANK**|**iswblank\(** `c` **\)**|  
-|**\_SPACE**|**iswspace\(** `c` **\)**|  
-|**\_UPPER**|**iswupper\(** `c` **\)**|  
-|**\_HEX**|**iswxdigit\(** `c` **\)**|  
+|Der Wert des *desc*-Arguments|iswctype(*c, desc*)-Äquivalent|  
+|------------------------------|----------------------------------------|  
+|**_ALPHA**|**iswalpha(** `c` **)**|  
+|**_ALPHA** &#124; **_DIGIT**|**iswalnum(** `c` **)**|  
+|**_BLANK**|**iswblank(** `c` **)**|  
+|**_CONTROL**|**iswcntrl(** `c` **)**|  
+|**_DIGIT**|**iswdigit(** `c` **)**|  
+|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph(** `c` **)**|  
+|**_LOWER**|**iswlower(** `c` **)**|  
+|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint(** `c` **)**|  
+|**_PUNCT**|**iswpunct(** `c` **)**|  
+|**_BLANK**|**iswblank(** `c` **)**|  
+|**_SPACE**|**iswspace(** `c` **)**|  
+|**_UPPER**|**iswupper(** `c` **)**|  
+|**_HEX**|**iswxdigit(** `c` **)**|  
   
  `iswdigit`  
  Breitzeichen, das einem Dezimalstellenzeichen entspricht.  
   
  `iswgraph`  
- Druckbares Breitzeichen außer Leerzeichen\-Breitzeichen \(L' '\).  
+ Druckbares Breitzeichen außer Leerzeichen-Breitzeichen (L' ').  
   
  `iswlower`  
- Kleinbuchstabe oder ein von der Implementierung abhängiger Breitzeichensatz für den `iswcntrl`, `iswdigit`, `iswpunct` oder `iswspace` nicht 0 sind.  `iswlower` gibt einen Wert ungleich 0 \(null\) nur für Breitzeichen zurück, die den Kleinbuchstaben entsprechen.  
+ Kleinbuchstabe oder ein von der Implementierung abhängiger Breitzeichensatz für den `iswcntrl`, `iswdigit`, `iswpunct` oder `iswspace` nicht 0 sind. `iswlower` gibt einen Wert ungleich 0 (null) nur für Breitzeichen zurück, die den Kleinbuchstaben entsprechen.  
   
  `iswprint`  
- Druckbares Breitzeichen, einschließlich Leerzeichen\-Breitzeichen \(L' '\).  
+ Druckbares Breitzeichen, einschließlich Leerzeichen-Breitzeichen (L' ').  
   
  `iswpunct`  
- Druckbares Breitzeichen, das weder ein Leerzeichen\-Breitzeichen \(L' '\) noch ein Breitzeichen ist, für das `iswalnum` ungleich Null ist.  
+ Druckbares Breitzeichen, das weder ein Leerzeichen-Breitzeichen (L' ') noch ein Breitzeichen ist, für das `iswalnum` ungleich Null ist.  
   
  `iswspace`  
- Breitzeichen, das dem Standardleerzeichen entspricht oder ein von der Implementierung abhängiger Breitzeichensatz ist, für den `iswalnum` "false" ist.  Standardleerstellenzeichen sind: Leerzeichen \(L' '\), Seitenvorschub \(L'\\f'\), Zeilenumbruch \(L'\\n'\), Wagenrücklaufzeichen \(L'\\r'\), Horizontaler Tabulator \(L'\\t'\) und vertikaler Tabulator \(L'\\v'\).  
+ Breitzeichen, das dem Standardleerzeichen entspricht oder ein von der Implementierung abhängiger Breitzeichensatz ist, für den `iswalnum` "false" ist. Standardleerstellenzeichen sind: Leerzeichen (L' '), Seitenvorschub (L'\f'), Zeilenumbruch (L'\n'), Wagenrücklaufzeichen (L'\r'), Horizontaler Tabulator (L'\t') und vertikaler Tabulator (L'\v').  
   
  `iswupper`  
- Ein Breitzeichen ist ein Großbuchstabe oder ein von der Implementierung abhängiger Breitzeichensatz, für den `iswcntrl`, `iswdigit`, `iswpunct` oder `iswspace` nicht 0 sind.  `iswupper` gibt einen Rückgabewert ungleich 0 \(null\) nur für Breitzeichen zurück, die den Großbuchstaben entsprechen.  
+ Ein Breitzeichen ist ein Großbuchstabe oder ein von der Implementierung abhängiger Breitzeichensatz, für den `iswcntrl`, `iswdigit`, `iswpunct` oder `iswspace` nicht 0 sind. `iswupper` gibt einen Rückgabewert ungleich 0 (null) nur für Breitzeichen zurück, die den Großbuchstaben entsprechen.  
   
  `iswxdigit`  
  Breitzeichen, das einem Hexadezimalziffernzeichen entspricht.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_isfam.c  
@@ -211,7 +227,7 @@ int main( void )
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 00            AS  C                              .  
@@ -344,9 +360,9 @@ int main( void )
 7f            AS  C                              .  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Zeichenklassifizierung](../c-runtime-library/character-classification.md)   
  [Locale](../c-runtime-library/locale.md)   
- [setlocale, \_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [Interpretation von Mehrbytezeichensequenzen](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [to\-Funktionen](../c-runtime-library/to-functions.md)
+ [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [Interpretation von Multibyte-Zeichensequenzen](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [to-Funktionen](../c-runtime-library/to-functions.md)
