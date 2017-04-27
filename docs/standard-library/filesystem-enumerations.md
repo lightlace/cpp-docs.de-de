@@ -11,32 +11,26 @@ ms.topic: article
 f1_keywords:
 - copy_options
 - filesystem::copy_options
-- std::filesystem::copy_options
 - filesystem/std::filesystem::copy_options
 - experimental::filesystem::copy_options
-- std::experimental::filesystem::copy_options
 - filesystem/std::experimental::filesystem::copy_options
 - directory_options
 - filesystem::directory_options
-- std::filesystem::directory_options
 - filesystem/std::filesystem::directory_options
 - experimental::filesystem::directory_options
-- std::experimental::filesystem::directory_options
 - filesystem/std::experimental::filesystem::directory_options
 - file_type
 - filesystem::file_type
-- std::filesystem::file_type
 - filesystem/std::filesystem::file_type
 - experimental::filesystem::file_type
-- std::experimental::filesystem::file_type
 - filesystem/std::experimental::filesystem::file_type
 - perms
 - filesystem::perms
-- std::filesystem::perms
 - filesystem/std::filesystem::perms
 - experimental::filesystem::perms
-- std::experimental::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
+dev_langs:
+- C++
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 caps.latest.revision: 3
 author: corob-msft
@@ -56,7 +50,7 @@ In diesem Thema werden die Enumerationen filesystem-Header beschrieben.
   
  **Namespace:** std::experimental::filesystem  
 
-##  <a name="a-namefilesystemcopyoptionsa--copyoptions"></a><a name="filesystem__copy_options"></a> copy_options
+##  <a name="filesystem__copy_options"></a> copy_options
 Eine Enumeration von Bitmaskenwerten, die mit den Funktionen [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) und [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) verwendet wird, um Verhalten anzugeben.  
   
 ### <a name="syntax"></a>Syntax  
@@ -91,7 +85,7 @@ enum class copy_options {
 |`create_hard_links`|Erstellen Sie feste Links, anstatt Dateien zu kopieren.|  
   
 
-##  <a name="a-namefilesystemdirectoryoptionsa-directoryoptions"></a><a name="filesystem__directory_options"></a> directory_options
+##  <a name="filesystem__directory_options"></a> directory_options
 Gibt an, ob symbolischen Verknüpfungen zu Verzeichnissen gefolgt oder ob diese ignoriert werden sollen.  
   
 ### <a name="syntax"></a>Syntax  
@@ -109,7 +103,7 @@ enum class directory_options {
 |`none`|Standardverhalten: symbolische Verknüpfungen auf Verzeichnisse ignorieren. „Berechtigung verweigert“ ist ein Fehler.|  
 |`follow_directory_symlink`|Symbolische Verknüpfungen zu Verzeichnissen als tatsächliche Verzeichnisse behandeln.|  
   
-##  <a name="a-namefilesystemfiletypea--filetype"></a><a name="filesystem__file_type"></a> file_type
+##  <a name="filesystem__file_type"></a> file_type
 Eine Enumeration für Dateitypen. Die unterstützten Werte sind regulär, Verzeichnis, not_found und unbekannt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -143,7 +137,7 @@ enum class file_type {
 |`socket`|7|Stellt ein Socket auf UNIX-basierten Systemen dar. (Nicht unterstützt.)|  
 |`unknown`|8|Stellt eine Datei dar, deren Status nicht ermittelt werden kann.|  
   
-##  <a name="a-namefilesystempermsa--perms"></a><a name="filesystem__perms"></a> perms
+##  <a name="filesystem__perms"></a> perms
 Flags für Dateiberechtigungen. Die unterstützten Werte sind im Wesentlichen „readonly“ und „all“. Bei einer schreibgeschützten Datei sind keine *_write-Bits festgelegt. Andernfalls wird das `all` -Bit (0x0777) festgelegt.  
   
 ### <a name="syntax"></a>Syntax  

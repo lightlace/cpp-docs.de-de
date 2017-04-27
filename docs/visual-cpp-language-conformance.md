@@ -30,15 +30,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: a13be4d4d32ab0f0bc3cc7b5972e90c4493d06ff
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 8e21a77e42a90571c73ff0f207f5d799ff722bd3
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++-Sprachkonformität 
 Dieses Thema fasst die ISO C++03, C++11, C++14 und die Entwurf C++17-Sprachstandardkonformität von Compiler- und Standardbibliotheksfunktionen (STL) für Visual C++ in Visual Studio 2017 und früheren Versionen zusammen. Jeder Compiler und STL-Funktionsname verweist auf das ISO C++-Standardvorschlag-Dokument, das die Funktion beschreibt, sobald einer zum Veröffentlichungsdatum erschienen ist. Die Spalte „Supported“ (Unterstützt) listet die Visual Studio-Version auf, in der die Unterstützung für die Funktion zum ersten Mal aufgetreten ist.  
   
 Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visual Studio 2017 finden Sie unter [Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](cpp-conformance-improvements-2017.md) und [Neuerungen bei Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Kompatibilitätsänderungen in früheren Versionen finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](porting/visual-cpp-change-history-2003-2015.md) und [Visual C++ What's New 2003 through 2015](porting/visual-cpp-what-s-new-2003-through-2015.md) (Visual C++ – Neuerungen von 2003 bis 2015). Aktuelle Nachrichten vom C++-Team finden Sie im [Visual C++-Teamblog](http://blogs.msdn.microsoft.com/vcblog/).  
+
+ > [!NOTE]
+ > Es gibt keine binären Änderungen von Visual Studio 2015 auf Visual Studio 2017.
   
 ## <a name="compiler-features"></a>Compilerfunktionen  
   
@@ -199,7 +202,7 @@ Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visua
 |&nbsp;&nbsp;P0518R1 Kopieren von trivialen, über eine Kopie erstellbaren Elementen in parallelen Algorithmen|Nicht zutreffend|
 |&nbsp;&nbsp;P0523R1 Abschwächen der Komplexitätsanforderungen paralleler Algorithmen (allgemein)|Nicht zutreffend|
 |&nbsp;&nbsp;P0574R1 Abschwächen der Komplexitätsanforderungen paralleler Algorithmen (spezifisch)|Nicht zutreffend|
-|&nbsp;&nbsp;P0623R0 Letzte Korrekturen an parallelen C++&17;-Algorithmen|Nicht zutreffend|
+|&nbsp;&nbsp;P0623R0 Letzte Korrekturen an parallelen C++ 17-Algorithmen|Nicht zutreffend|
 |__C++14 Standardbibliotheksfunktionen__|__Unterstützt__|
 |&nbsp;&nbsp;[N3462 SFINAE-freundliche result_of](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3462.html)|VS 2015.2|
 |&nbsp;&nbsp;[N3302 constexpr für \<complex>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3302.html)|VS 2015|

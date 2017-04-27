@@ -12,9 +12,9 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Human Translation
-ms.sourcegitcommit: fb1f9f25be6d32f15324c8d3a7bd5069ca869a35
-ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Überblick über potenzielle Aktualisierungsprobleme (Visual C++)
@@ -67,13 +67,13 @@ Im Laufe der Jahre wurde der Visual C++-Compiler vielen Änderungen unterzogen, 
 ### <a name="lnk2019-unresolved-external"></a>LNK2019: Nicht aufgelöste Externe  
  Für nicht aufgelöste Symbole müssen Sie die Projekteinstellungen möglicherweise korrigieren.  
   
--   • Wenn die Quelldatei sich an einem nicht standardmäßigen Speicherort befindet: Haben Sie den Pfad zu den „include“-Verzeichnissen des Projekts hinzugefügt?  
+-   Wenn die Quelldatei sich an einem nicht standardmäßigen Speicherort befindet: Haben Sie den Pfad in den „include“-Verzeichnissen des Projekts hinzugefügt?  
   
--   • Wenn die externe in einer LIB-Datei definiert ist: Haben Sie den LIB-Pfad in den Projekteigenschaften angegeben und befindet sich dort tatsächlich die richtige Version der LIB-Datei?  
+-   Wenn das externe Symbol in einer LIB-Datei definiert ist: Haben Sie den LIB-Pfad in den Projekteigenschaften angegeben und befindet sich dort tatsächlich die richtige Version der LIB-Datei?  
   
--   • Versuchen Sie, eine Verknüpfung zu einer LIB-Datei herzustellen, die mit einer anderen Version von Visual Studio kompiliert wurde? Wenn dies der Fall ist, lesen Sie den vorherigen Abschnitt über Abhängigkeiten zwischen Bibliothek und Toolset.  
+-   Versuchen Sie, eine Verknüpfung zu einer LIB-Datei herzustellen, die mit einer anderen Version von Visual Studio kompiliert wurde? Wenn dies der Fall ist, lesen Sie den vorherigen Abschnitt über Abhängigkeiten zwischen Bibliothek und Toolset.  
   
--   • Stimmen die Typen der Argumente an der Aufrufsite tatsächlich einer vorhandenen Funktionsüberladung? Stellen Sie sicher, dass die zugrunde liegenden Typen für alle Typdefinitionen in der Signatur der Funktion und im Code, der die Funktion aufruft, Ihren Erwartungen entsprechen.  
+-   Stimmen die Typen der Argumente an der Aufrufsite tatsächlich mit einer vorhandenen Funktionsüberladung überein? Stellen Sie sicher, dass die zugrunde liegenden Typen für alle Typdefinitionen in der Signatur der Funktion und im Code, der die Funktion aufruft, Ihren Erwartungen entsprechen.  
   
  Um nicht aufgelöste Symbolfehler zu beheben, können Sie mit „dumpbin.exe“ versuchen, die in einer Binärdatei definierten Symbole zu überprüfen. Verwenden Sie zum Anzeigen der in einer Bibliothek definierten Symbole die folgende Befehlszeile:  
   
@@ -108,16 +108,16 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
   
  Ein Beispiel für einen bei der Aktualisierung häufig auftretenden Compilerfehler ist die Übergabe eines nicht konstanten Arguments an einen konstanten Parameter. Ältere Versionen von Visual C++ haben dies nicht immer als Fehler gekennzeichnet. Weitere Informationen finden Sie unter [Strikte Compilerkonvertierungen](porting-guide-spy-increment.md#stricter_conversions).  
   
- Weitere Informationen zu bestimmten Verbesserungen an der Übereinstimmung mit Standards finden Sie unter [Wichtige Änderungen in Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md) und [Verbesserungen an der Übereinstimmung mit Standards in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md).  
+ Weitere Informationen zu bestimmten Verbesserungen an der Übereinstimmung mit Standards finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](visual-cpp-change-history-2003-2015.md) und [Verbesserungen an C++ bei der Übereinstimmung in Visual Studio 2017](../cpp-conformance-improvements-2017.md).  
   
 ## <a name="errors-involving-stdinth-integral-types"></a>Fehler im Zusammenhang mit ganzzahligen \<stdint.h>-Typen  
  Der Header \<stdint.h> definiert Typdefinitionen und Makros, die im Gegensatz zu integrierten ganzzahligen Typen auf allen Plattformen garantiert über eine festgelegte Länge verfügen. Beispiele hierfür sind „uint32_t“ und „int64_t“. Visual C++ hat \<stdint.h> in Visual Studio 2010 hinzugefügt. Code, der vor 2010 geschrieben wurde, stellte möglicherweise private Definitionen für diese Typen bereit, und diese Definitionen sind nicht immer mit den \<stdint.h>-Definitionen konsistent.  
   
  Wenn der Fehler C2371 generiert wird, und ein „stdint“-Typ beteiligt ist, bedeutet dies wahrscheinlich, dass der Typ in einem Header entweder im Code oder in der LIB-Datei eines Drittanbieters definiert ist.  Bei der Aktualisierung sollten Sie alle benutzerdefinierten Definitionen des Typs \<stdint.h> vermeiden. Vergleichen Sie jedoch zuerst die benutzerdefinierten Definitionen mit den Definitionen des aktuellen Standards, um sicherzustellen, dass keine neuen Probleme entstehen.  
   
- Mit F12 („Gehe zu Definition“) können Sie anzeigen, wo der betreffende Typ definiert ist.  
+ Mit F12 **Gehe zu Definition** können Sie anzeigen, wo der betreffende Typ definiert ist.  
   
- Die Compileroption [/showIncludes](../build/reference/showincludes-list-include-files.md) kann hier hilfreich sein. Öffnen Sie im Dialogfeld „Eigenschaftenseiten“ für Ihr Projekt die Seite **C/C++-**, **Erweitert**, und legen Sie **Includes anzeigen** auf „Ja“ fest. Erstellen Sie das Projekt anschließend neu, und schauen Sie sich die Liste der #includes im Ausgabefenster an.  Jeder Header wird unterhalb des Headers, der ihn enthält, eingerückt.  
+ Die Compileroption [/showIncludes](../build/reference/showincludes-list-include-files.md) kann hier hilfreich sein. Öffnen Sie im Dialogfeld „Eigenschaftenseiten“ für Ihr Projekt die Seite **C/C++**, **Erweitert**, und legen Sie **Includes anzeigen** auf **Ja** fest. Erstellen Sie das Projekt anschließend neu, und schauen Sie sich die Liste der #includes im Ausgabefenster an.  Jeder Header wird unterhalb des Headers, der ihn enthält, eingerückt.  
   
 ## <a name="errors-involving-crt-functions"></a>Fehler im Zusammenhang mit CRT-Funktionen  
  Im Laufe der Jahre wurden viele Änderungen an der C-Laufzeit vorgenommen. Viele sichere Versionen von Funktionen wurden hinzugefügt, und einige Funktionen wurden entfernt. Darüber hinaus wurde, wie oben in diesem Artikel beschrieben, die Microsoft-Implementierung der CRT in Visual Studio 2015 in neue Binärdateien und zugehörigen LIB-Dateien umgestaltet.  
@@ -150,7 +150,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
  Weitere Informationen finden Sie unter [Aktualisieren der Windows-Zielversion](porting-guide-spy-increment.md#updating_winver) und [Weitere veraltete Headerdateien](porting-guide-spy-increment.md#outdated_header_files).  
   
 ## <a name="atl--mfc"></a>ATL/MFC  
- ATL und MFC sind relativ stabile APIs, allerdings werden auch hier gelegentlich Änderungen vorgenommen. Weitere Informationen finden Sie unter [Wichtige Änderungen in Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md) sowie [Neuerungen bei Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) und [Verbesserungen an der Übereinstimmung mit Standards in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md).  
+ ATL und MFC sind relativ stabile APIs, allerdings werden auch hier gelegentlich Änderungen vorgenommen. Weitere Informationen finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](visual-cpp-change-history-2003-2015.md) sowie [Neues bei Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) und [Verbesserungen an C++ bei der Übereinstimmung in Visual Studio 2017](../cpp-conformance-improvements-2017.md).  
   
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 wurde bereits in „MSVCRTD.lib“ definiert  
  Dieser Fehler kann in MFC-Anwendungen auftreten. Er weist auf ein Sortierungsproblem zwischen der CRT- und der MFC-Bibliothek hin. MFC muss zuerst so verknüpft werden, dass die Operatoren „new“ und „delete“ bereitgestellt werden. Um den Fehler zu beheben, verwenden Sie den Schalter/NODEFAULTLIB, um diese Standardbibliotheken zu ignorieren: „MSVCRTD.lib“ und „mfcs140d.lib“. Fügen Sie diese Bibliotheken dann als zusätzliche Abhängigkeiten hinzu.  

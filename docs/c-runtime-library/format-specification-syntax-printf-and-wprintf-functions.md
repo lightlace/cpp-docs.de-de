@@ -49,13 +49,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 985fde9eacbdb8e0953aa576c45dfa0a9e173d95
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c57231375c662134fb1f9bd0252fd3b70f051ba2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntax der Formatangabe: printf- und wprintf-Funktionen
-Die verschiedenen `printf`-Funktionen nehmen eine Formatzeichenfolge sowie optionale Argumente und erstellen eine formatierte Zeichenfolge für die Ausgabe. Die Formatzeichenfolge enthält&0; oder mehr *Anweisungen*, die entweder literale Zeichen für die Ausgabe oder codierte *Konvertierungsangaben* sind, die beschreiben, wie ein Argument in der Ausgabe formatiert wird. Dieses Thema beschreibt die Syntax, die zum Codieren von Konvertierungsangaben in der Formatzeichenfolge verwendet wird. Eine Auflistung dieser Funktionen finden Sie unter [Stream E/A](../c-runtime-library/stream-i-o.md).  
+Die verschiedenen `printf`-Funktionen nehmen eine Formatzeichenfolge sowie optionale Argumente und erstellen eine formatierte Zeichenfolge für die Ausgabe. Die Formatzeichenfolge enthält 0 oder mehr *Anweisungen*, die entweder literale Zeichen für die Ausgabe oder codierte *Konvertierungsangaben* sind, die beschreiben, wie ein Argument in der Ausgabe formatiert wird. Dieses Thema beschreibt die Syntax, die zum Codieren von Konvertierungsangaben in der Formatzeichenfolge verwendet wird. Eine Auflistung dieser Funktionen finden Sie unter [Stream E/A](../c-runtime-library/stream-i-o.md).  
   
 Eine Konvertierungsangabe besteht aus optionalen Feldern und Pflichtfeldern in folgender Form:  
   
@@ -96,14 +96,14 @@ Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und ihre `unsigned`-Va
 |**u**|Ganze Zahl|Ganze Dezimalzahl ohne Vorzeichen|  
 |**x**|Ganze Zahl|Ganze Hexadezimalzahl ohne Vorzeichen; verwendet „abcdef“.|  
 |**X**|Ganze Zahl|Ganze Hexadezimalzahl ohne Vorzeichen; verwendet „ABCDEF“.|  
-|**e**|Gleitkomma|Wert mit Vorzeichen im Format [–]*d.dddd*__e±__*dd*[*d*] , wobei *d* eine Dezimalzahl ist, *dddd* eine oder mehrere Dezimalstellen sind, je nach angegebener Präzision, oder standardmäßig sechs. *dd*[*d*] stellt zwei oder drei Dezimalstellen dar, je nach [Ausgabeformat](../c-runtime-library/set-output-format.md) und Exponentengröße.|  
+|**e**|Gleitkomma|Ein Wert mit Vorzeichen im Format [–]*d.dddd*__e±__*dd*[*d*], wobei *d* eine Dezimalzahl ist, *dddd* eine oder mehrere Dezimalstellen sind, je nach angegebener Präzision, oder standardmäßig sechs. *dd*[*d*] stellt zwei oder drei Dezimalstellen dar, je nach [Ausgabeformat](../c-runtime-library/set-output-format.md) und Exponentengröße|  
 |**E**|Gleitkomma|Identisch mit dem **e**-Format mit der Ausnahme, dass **E** anstelle von **e** den Exponenten einführt.|  
-|**f**|Gleitkomma|Wert mit Vorzeichen im Format [–]*dddd*__.__*dddd*, wobei *dddd* eine oder mehrere Dezimalstellen sind. Die Anzahl der Ziffern vor dem Dezimaltrennzeichen ist abhängig von der Größe der Zahl, und die Anzahl der Ziffern nach dem Dezimaltrennzeichen ist abhängig von der angeforderten Genauigkeit oder standardmäßig sechs.|  
+|**f**|Gleitkomma|Ein Wert mit Vorzeichen im Format [–]*dddd*__.__*dddd*, wobei *dddd* eine oder mehrere Dezimalstellen sind. Die Anzahl der Ziffern vor dem Dezimaltrennzeichen ist abhängig von der Größe der Zahl, und die Anzahl der Ziffern nach dem Dezimaltrennzeichen ist abhängig von der angeforderten Genauigkeit oder standardmäßig sechs.|  
 |**F**|Gleitkomma|Identisch mit dem Format **f**, außer dass die infinity- und die NaN-Ausgabe groß geschrieben werden.|  
 |**g**|Gleitkomma|Werte mit Vorzeichen werden im **f**- oder **e**-Format angezeigt, je nachdem, was für den angegebenen Wert und die Genauigkeit kompakter ist. Das **e**-Format wird nur verwendet, wenn der Exponent des Werts kleiner als -4 oder größer als oder gleich dem *precision*-Argument ist. Nachfolgende Nullen werden abgeschnitten, und das Dezimaltrennzeichen wird nur angezeigt, wenn eine oder mehrere Ziffern darauf folgen.|  
 |**G**|Gleitkomma|Identisch mit dem **g**-Format mit der Ausnahme, dass **E** anstelle von **e** den Exponenten einführt (falls zutreffend).|  
-|**a**|Gleitkomma|Signierter hexadezimaler Gleitkommawert mit doppelter Genauigkeit mit der Form [−]0x*h.hhhh*__p±__*dd*, wobei *h.hhhh* die hexadezimalen Ziffern (aus Kleinbuchstaben) der Mantisse sind und *dd* eine oder mehrere Ziffern für den Exponenten darstellt. Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|  
-|**A**|Gleitkomma|Signierter hexadezimale Gleitkommawert mit doppelter Genauigkeit mit der Form [−]0X*h.hhhh*__P±__*dd*, wobei *h.hhhh* die hexadezimalen Ziffern (aus Großbuchstaben) der Mantisse sind und *dd* eine oder mehrere Ziffern für den Exponenten darstellt. Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|  
+|**a**|Gleitkomma|Ein hexadezimaler Gleitkommawert mit Vorzeichen mit doppelter Genauigkeit mit der Form [−]0x*h.hhhh*__p±__*dd*, wobei *h.hhhh* die hexadezimalen Ziffern (aus Kleinbuchstaben) der Mantisse sind und *dd* eine oder mehrere Ziffern für den Exponenten darstellt. Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|  
+|**A**|Gleitkomma|Ein hexadezimaler Gleitkommawert mit Vorzeichen mit doppelter Genauigkeit mit der Form [−]0X*h.hhhh*__P±__*dd*, wobei *h.hhhh* die hexadezimalen Ziffern (aus Großbuchstaben) der Mantisse sind und *dd* eine oder mehrere Ziffern für den Exponenten darstellt. Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|  
 |**n**|Zeiger auf eine ganze Zahl|Anzahl der Zeichen, die bisher erfolgreich in den Stream oder Puffer geschrieben wurden. Dieser Wert wird in der ganzen Zahl gespeichert, deren Adresse als Argument angegeben ist. Die Größe des Integers, auf den gezeigt wird, kann durch ein Präfix mit Argumentengrößenangabe gesteuert werden. Der **n**-Bezeichner ist standardmäßig deaktiviert. Weitere Informationen finden Sie im wichtigen Sicherheitshinweis.|  
 |**p**|Zeigertyp|Zeigt das Argument als Adresse in Hexadezimalziffern an.|  
 |**s**|Zeichenfolge|Gibt bei Verwendung mit `printf`-Funktionen eine Einzelbyte- oder Multibyte-Zeichenfolge und bei Verwendung mit `wprintf`-Funktionen eine Breitzeichenfolge an. Zeichen werden bis zum ersten NULL-Zeichen oder bis zum *precision*-Wert angezeigt.|  
@@ -126,7 +126,7 @@ Vor Visual Studio 2015 verwendete die CRT ein anderes, Nicht-Standard-Format fü
 |Wert|Ausgabe|  
 |-----------|------------|  
 |+unendlich|`1.#INF` *random-digits*|  
-|-unendlich|`–1.#INF` *random-digits*|  
+|- infinity|`-1.#INF` *random-digits*|  
 |unbestimmt (mit stillem NaN identisch)|*digit* `.#IND` *random-digits*|  
 |NaN|*digit* `.#NAN` *random-digits*|  
   
@@ -142,14 +142,14 @@ Allen diesen Werte konnte ein Vorzeichen vorangestellt werden und sie wurden mö
 >  Da das `%n`-Format grundsätzlich unsicher ist, ist es standardmäßig deaktiviert. Wenn `%n` in einer Formatzeichenfolge festgestellt wird, wird der ungültige Parameterhandler wie in [Parametervalidierung](../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Informationen zum Aktivieren der `%n`-Unterstützung finden Sie unter [_set_printf_count_output](../c-runtime-library/reference/set-printf-count-output.md).  
   
 ## <a name="flags"></a> Flag-Anweisungen
-Das erste optionale Feld in einer Konvertierungsangabe enthält *Flag-Anweisungen*,&0; oder mehr Flag-Zeichen, die die Ausgaberechtfertigung angeben und die Ausgabe von Zeichen steuern: Leerzeichen, führende Nullen, Dezimalstellen sowie oktale und hexadezimale Präfixe. In einer Konvertierungsangabe können mehr als eine Flag-Anweisung erscheinen, und die Flag-Zeichen können in beliebiger Reihenfolge dargestellt werden.  
+Das erste optionale Feld in einer Konvertierungsangabe enthält *Flag-Anweisungen*, 0 oder mehr Flag-Zeichen, die die Ausgaberechtfertigung angeben und die Ausgabe von Zeichen steuern: Leerzeichen, führende Nullen, Dezimalstellen sowie oktale und hexadezimale Präfixe. In einer Konvertierungsangabe können mehr als eine Flag-Anweisung erscheinen, und die Flag-Zeichen können in beliebiger Reihenfolge dargestellt werden.  
   
 ### <a name="flag-characters"></a>Flag-Zeichen  
   
 |Flag|Bedeutung|Standard|  
 |----------|-------------|-------------|  
 |**-**|Das Ergebnis mit der angegebenen Feldweite ist linksbündig.|Rechtsbündig.|  
-|**+**|Verwenden Sie ein Zeichen (+ or –), um ein Präfix dem Ausgabewert hinzuzufügen, wenn dieser einem signierten Typ entspricht.|Das Vorzeichen taucht nur für negative signierte Werte (–) auf.|  
+|**+**|Verwenden Sie ein Zeichen (+ der -), um dem Ausgabewert ein Präfix hinzuzufügen, wenn dieser einem signed-Typ entspricht.|Das Vorzeichen taucht nur für negative Werte mit Vorzeichen (-) auf.|  
 |**0**|Wenn *width* das Vorzeichen **0** hat, werden führende Nullen hinzugefügt, bis die minimale Breite erreicht ist. Wenn **0** und **-** jeweils erscheinen, wird **0** ignoriert. Wenn **0** für ein Integerformat angegeben wird (**i**, **u**, **x**, **X**, **o**, **d**) und auch eine Genauigkeitsangabe vorhanden ist, z.B. `%04.d`, wird **0** ignoriert. Wird **0** für das Gleitkommaformat **a** oder **A** angegeben, werden führende Nullen der Mantisse nach dem Präfix `0x` oder `0X` vorangestellt.|Keine Auffüllung.|  
 |**Leerzeichen** („ “)|Verwenden Sie ein Leerzeichen, um dem Ausgabewert ein Präfix hinzuzufügen, wenn er signiert und positiv ist. Das Leerzeichen wird ignoriert, wenn jeweils das Leerzeichen- und das „+“-Flag erscheinen.|Es wird kein Leerzeichen angezeigt.|  
 |**#**|Bei Verwendung mit dem Format **o**, **x** oder **X** verwendet das Flag **#** jeweils 0, 0x oder 0X, um jeden Ausgabewert ungleich null ein Präfix hinzuzufügen.|Es wird kein Leerzeichen angezeigt.|  

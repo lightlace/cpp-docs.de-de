@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1e4b047307bb1153c136b0485b0d141086907525
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6eab29bde1fe9b08e0883960ed7a160101d56d1a
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-operators"></a>C-Operatoren
@@ -51,18 +51,18 @@ Die C-Operatoren sind eine Teilmenge der [integrierten C++-Operatoren](../cpp/cp
   
 |Symbol|Name|  
 |------------|----------|  
-|**– ~ !**|Negations- und Ergänzungsoperatoren|  
+|**- ~ !**|Negations- und Ergänzungsoperatoren|  
 |**\* &**|Dereferenzierungs- und Address-of-Operatoren|  
 |`sizeof`|Größenoperator|  
 |**+**|Unärer Plus-Operator|  
-|**++ ––**|Unäre Inkrement- und Dekrementoperatoren|  
+|**++ --**|Unäre Inkrement- und Dekrementoperatoren|  
   
  Binäre Operatoren sind von links nach rechts angeordnet. C stellt die folgenden binären Operatoren bereit:  
   
 |Symbol|Name|  
 |------------|----------|  
 |**\* / %**|Multiplikative Operatoren|  
-|**+ –**|Additive Operatoren|  
+|**+ -**|Additive Operatoren|  
 |**<\< >>**|Schiebeoperatoren|  
 |**\<   >   \<=   >=   ==   !=**|Relationale Operatoren|  
 |**&   &#124; ^**|Bitweise Operatoren|  
@@ -73,7 +73,7 @@ Die C-Operatoren sind eine Teilmenge der [integrierten C++-Operatoren](../cpp/cp
   
  Der bedingte Ausdrucksoperator hat einen niedrigeren Rang als binäre Ausdrücke und unterscheidet sich von ihnen darin, dass er rechtsassoziativ ist.  
   
- Zu Ausdrücken mit Operatoren zählen auch Zuweisungsausdrücke, die die unären oder binären Zuweisungsoperatoren verwenden. Die unären Zuweisungsoperatoren sind die Operatoren für Inkrement (`++`) und Dekrement (**–**). Die binären Zuweisungsoperatoren sind die Einfachzuweisungsoperatoren (**=**) und die Verbundzuweisungsoperatoren. Jeder Verbundzuweisungsoperator ist eine Kombination aus einem anderen binären Operators mit dem Einfachzuweisungsoperator.  
+ Zu Ausdrücken mit Operatoren zählen auch Zuweisungsausdrücke, die die unären oder binären Zuweisungsoperatoren verwenden. Die unären Zuweisungsoperatoren sind die Operatoren für Inkrement (`++`) und Dekrement (**--**). Die binären Zuweisungsoperatoren sind die Einfachzuweisungsoperatoren (**=**) und die Verbundzuweisungsoperatoren. Jeder Verbundzuweisungsoperator ist eine Kombination aus einem anderen binären Operators mit dem Einfachzuweisungsoperator.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke und Zuweisungen](../c-language/expressions-and-assignments.md)

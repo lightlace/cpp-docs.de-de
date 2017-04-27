@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 7a9d13924a14b51ed78256825dee6d9a59475c51
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 93dafafddd271eb7e068a0e822be6dd8535fc721
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="scanf-type-field-characters"></a>scanf-Typenfeldzeichen
@@ -57,8 +57,8 @@ Die folgenden Informationen gelten für die `scanf` -Funktionsreihe, einschließ
   
 |Zeichen|Erwarteter Typ der Eingabe|Typ des Arguments|Größenargument in der sicheren Version?|  
 |---------------|----------------------------|----------------------|--------------------------------------|  
-|`c`|Zeichen Gibt bei Verwendung mit `scanf` -Funktionen ein Einzelbytezeichen und bei Verwendung mit `wscanf` -Funktionen ein Breitzeichen an. In der Regel übersprungene Leerzeichen werden gelesen, wenn `c` angegeben ist. Verwenden Sie `%1s`zum Lesen des nächsten Einzelbytezeichens, das kein Leerzeichen ist, und `%1ws`zum Lesen des nächsten Breitzeichens, das kein Leerzeichen ist.|Zeiger auf `char` bei Verwendung mit `scanf` -Funktionen, Zeiger auf `wchar_t` bei Verwendung mit `wscanf` -Funktionen.|Erforderlich. Größe enthält keinen Platz für ein Null-Abschlusszeichen.|  
-|`C`|Umgekehrtes Größenzeichen Gibt bei Verwendung mit `scanf` -Funktionen Breitzeichen und bei Verwendung mit `wscanf` -Funktionen Einzelbytezeichen an. In der Regel übersprungene Leerzeichen werden gelesen, wenn `C` angegeben ist. Verwenden Sie `%1s`zum Lesen des nächsten Einzelbytezeichens, das kein Leerzeichen ist, und `%1ws`zum Lesen des nächsten Breitzeichens, das kein Leerzeichen ist.|Zeiger auf `wchar_t` bei Verwendung mit `scanf` -Funktionen, Zeiger auf `char` bei Verwendung mit `wscanf` -Funktionen.|Erforderlich. Größenargument enthält keinen Platz für ein Null-Abschlusszeichen.|  
+|`c`|Zeichen Gibt bei Verwendung mit `scanf` -Funktionen ein Einzelbytezeichen und bei Verwendung mit `wscanf` -Funktionen ein Breitzeichen an. In der Regel übersprungene Leerzeichen werden gelesen, wenn `c` angegeben ist. Verwenden Sie `%1s` zum Lesen des nächsten Einzelbytezeichens, das kein Leerzeichen ist, und `%1ws` zum Lesen des nächsten Breitzeichens, das kein Leerzeichen ist.|Zeiger auf `char` bei Verwendung mit `scanf` -Funktionen, Zeiger auf `wchar_t` bei Verwendung mit `wscanf` -Funktionen.|Erforderlich. Größe enthält keinen Platz für ein Null-Abschlusszeichen.|  
+|`C`|Umgekehrtes Größenzeichen Gibt bei Verwendung mit `scanf` -Funktionen Breitzeichen und bei Verwendung mit `wscanf` -Funktionen Einzelbytezeichen an. In der Regel übersprungene Leerzeichen werden gelesen, wenn `C` angegeben ist. Verwenden Sie `%1s` zum Lesen des nächsten Einzelbytezeichens, das kein Leerzeichen ist, und `%1ws` zum Lesen des nächsten Breitzeichens, das kein Leerzeichen ist.|Zeiger auf `wchar_t` bei Verwendung mit `scanf` -Funktionen, Zeiger auf `char` bei Verwendung mit `wscanf` -Funktionen.|Erforderlich. Größenargument enthält keinen Platz für ein Null-Abschlusszeichen.|  
 |`d`|Ganze Dezimalzahl|Zeiger auf `int`|Nein.|  
 |`i`|Eine ganze Zahl. Hexadezimal, wenn die Eingabezeichenfolge mit "0x" oder "0X" beginnt, oktal, wenn die Zeichenfolge mit "0" beginnt, andernfalls dezimal.|Zeiger auf `int`|Nein.|  
 |`o`|Oktale ganze Zahl|Zeiger auf `int`|Nein.|  
@@ -69,7 +69,7 @@ Die folgenden Informationen gelten für die `scanf` -Funktionsreihe, einschließ
 |`a`, `A`|Ein Gleitkommawert, der aus einer Reihe von einer oder mehreren hexadezimalen Ziffern besteht, die ein optionales Dezimaltrennzeichen und einen Exponenten („p“ oder „P“) enthalten, gefolgt von einem Dezimalwert.|Zeiger auf `float`|Nein.|  
 |`n`|Kein Eingabe aus dem Stream oder Puffer gelesen.|Zeiger auf `int`, in dem die Anzahl der aus dem Stream oder Puffer erfolgreich gelesenen Zeichen bis zu diesem Zeitpunkt im aktuellen Aufruf von `scanf` -Funktionen oder `wscanf` -Funktionen gespeichert ist.|Nein.|  
 |`s`|Zeichenfolge bis zum ersten Leerzeichen (Leerzeichen, Tabstopps oder Zeilenumbruch) Um Zeichenfolgen zu lesen, die nicht durch Leerzeichen getrennt sind, verwenden Sie eckige Klammern (`[ ]`), wie in [scanf-Breitenangabe](../c-runtime-library/scanf-width-specification.md) erörtert.|Steht bei Verwendung mit `scanf` -Funktionen für ein Einzelbyte-Zeichenarray und bei Verwendung mit `wscanf` -Funktionen für ein Breitzeichenarray. In jedem Fall muss das Zeichenarray groß genug für das Eingabefeld und einen automatisch angefügten abschließenden NULL-Wert sein.|Erforderlich. Größe einschließlich Platz für einen Nullterminator.|  
-|`S`|Umgekehrte Größenzeichenfolge bis zum ersten Leerzeichen (Leerzeichen, Tabstopps oder Zeilenumbruch) Um Zeichenfolgen zu lesen, die nicht durch Leerzeichen getrennt sind, verwenden Sie eckige Klammern (`[ ]`), wie in [scanf-Breitenangabe](../c-runtime-library/scanf-width-specification.md) erörtert.|Steht bei Verwendung mit `scanf` -Funktionen für ein Breitzeichenarray und bei Verwendung mit `wscanf` -Funktionen für ein Einzelbyte-Zeichenarray. In jedem Fall muss das Zeichenarray groß genug für das Eingabefeld und einen automatisch angefügten abschließenden NULL-Wert sein.|Erforderlich. Größe einschließlich Platz für einen Nullterminator.|  
+|`S`|Umgekehrte Größenzeichenfolge bis zum ersten Leerzeichen (Leerzeichen, Tabstopps oder Zeilenumbruch) Um Zeichenfolgen zu lesen, die nicht durch Leerzeichen getrennt sind, verwenden Sie eckige Klammern (`[ ]`), wie in [scanf-Breitenangabe](../c-runtime-library/scanf-width-specification.md) erörtert.|Steht bei Verwendung mit `scanf`-Funktionen für ein Einzelbyte-Zeichenarray und bei Verwendung mit `wscanf`-Funktionen für ein Breitzeichenarray. In jedem Fall muss das Zeichenarray groß genug für das Eingabefeld und einen automatisch angefügten abschließenden NULL-Wert sein.|Erforderlich. Größe einschließlich Platz für einen Nullterminator.|  
   
   
  Die Größenargumente müssen ggf. in der Parameterliste unmittelbar nach dem Argument übergeben werden, für das sie gelten. Beispielsweise folgender Code:  

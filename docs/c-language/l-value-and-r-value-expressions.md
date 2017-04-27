@@ -1,55 +1,71 @@
 ---
-title: "L-Wert- und R-Wert-Ausdr&#252;cke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "L-Werte"
-  - "Memberauswahlausdrücke"
-  - "R-Wertausdrücke"
-  - "Indexausdrücke"
+title: "L-Wert- und R-Wert-Ausdrücke | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- L-values
+- member-selection expressions
+- R-value expressions
+- subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# L-Wert- und R-Wert-Ausdr&#252;cke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4cc967b4f1e5fbcbd1d9261b4dbb2d71dfcd536e
+ms.lasthandoff: 04/01/2017
 
-Ausdrücke, die auf Speicheradressen verweisen, werden als "L\-Wertausdrücke" bezeichnet.  Ein L\-Wert stellt einen "Lokatorwert" des Speicherbereichs bzw. einen "linken" Wert dar, der besagt, dass der Wert links neben dem Gleichzeichen \(**\=**\) stehen kann.  Häufig sind L\-Werte Bezeichner.  
+---
+# <a name="l-value-and-r-value-expressions"></a>L-Wert- und R-Wert-Ausdrücke
+Ausdrücke, die auf Speicheradressen verweisen, werden als "L-Wertausdrücke" bezeichnet. Ein L-Wert stellt einen "Lokatorwert" des Speicherbereichs bzw. einen "linken" Wert dar, der besagt, dass der Wert links neben dem Gleichzeichen (**=**) stehen kann. Häufig sind L-Werte Bezeichner.  
   
- Ausdrücke, die auf änderbare Speicherorte verweisen, werden als "änderbare L\-Werte" bezeichnet. Ein änderbarer L\-Wert darf weder einen Arraytyp noch einen unvollständigen Typ oder einen Typ mit dem Attribut **const** aufweisen.  Damit Strukturen und Unions änderbare L\-Werte sein können, dürfen sie keine Member mit dem Attribut **const** enthalten.  Der Name des Bezeichners gibt einen Speicherort an, und der Wert der Variable ist der an diesem Speicherort gespeicherte Wert.  
+ Ausdrücke, die auf änderbare Speicherorte verweisen, werden als "änderbare L-Werte" bezeichnet. Ein änderbarer L-Wert darf weder einen Arraytyp noch einen unvollständigen Typ oder einen Typ mit dem Attribut **const** aufweisen. Damit Strukturen und Unions änderbare L-Werte sein können, dürfen sie keine Member mit dem Attribut **const** enthalten. Der Name des Bezeichners gibt einen Speicherort an, und der Wert der Variable ist der an diesem Speicherort gespeicherte Wert.  
   
- Ein Bezeichner ist ein änderbarer L\-Wert, wenn er auf einen Speicherbereich verweist und einen arithmetischen Typ oder einen Struktur\-, Union\- oder Zeigertyp aufweist.  Wenn beispielsweise `ptr` ein Zeiger auf einen Speicherbereich ist, dann ist `*ptr` ein änderbarer L\-Wert, der den Speicherbereich angibt, auf den `ptr` zeigt.  
+ Ein Bezeichner ist ein änderbarer L-Wert, wenn er auf einen Speicherbereich verweist und einen arithmetischen Typ oder einen Struktur-, Union- oder Zeigertyp aufweist. Wenn beispielsweise `ptr` ein Zeiger auf einen Speicherbereich ist, dann ist `*ptr` ein änderbarer L-Wert, der den Speicherbereich angibt, auf den `ptr` zeigt.  
   
- Jeder der folgenden C\-Ausdrücke kann ein L\-Wertausdruck sein:  
+ Jeder der folgenden C-Ausdrücke kann ein L-Wertausdruck sein:  
   
--   Ein Bezeichner des Ganzzahl\-, Gleitkomma\-, Zeiger\-, Struktur\- oder Union\-Typs  
+-   Ein Bezeichner des Ganzzahl-, Gleitkomma-, Zeiger-, Struktur- oder Union-Typs  
   
--   Ein Subscriptausdruck \(**\[ \]**\), der nicht als Array ausgewertet wird  
+-   Ein Subscriptausdruck (**[ ]**), der nicht als Array ausgewertet wird  
   
--   Ein Memberauswahlausdruck \(**–\>** oder **.**\)  
+-   Ein Memberauswahlausdruck (**->** oder **.**)  
   
--   Ein unärer Dereferenzierungsausdruck \(**\***\), der nicht auf ein Array verweist  
+-   Ein unärer Dereferenzierungsausdruck (**\***), der nicht auf ein Array verweist  
   
--   Ein L\-Wertausdruck in Klammern  
+-   Ein L-Wertausdruck in Klammern  
   
--   Ein **const**\-Objekt \(ein nicht änderbarer L\-Wert\)  
+-   Ein **const**-Objekt (ein nicht änderbarer L-Wert)  
   
- Gelegentlich wird der Begriff "R\-Wert" verwendet, um den Wert eines Ausdrucks zu beschreiben und ihn von einem L\-Wert zu unterscheiden.  Alle L\-Werte sind R\-Werte, aber nicht alle R\-Werte sind L\-Werte.  
+ Gelegentlich wird der Begriff "R-Wert" verwendet, um den Wert eines Ausdrucks zu beschreiben und ihn von einem L-Wert zu unterscheiden. Alle L-Werte sind R-Werte, aber nicht alle R-Werte sind L-Werte.  
   
- **Microsoft\-spezifisch**  
+ **Microsoft-spezifisch**  
   
- Microsoft C enthält eine Erweiterung für den ANSI C\-Standard, mit dem umgewandelte L\-Werte als L\-Werte genutzt werden können, sofern die Objektgröße durch die Umwandlung nicht verlängert wird. \(Weitere Informationen erhalten Sie unter [Typumwandlungskonvertierungen](../c-language/type-cast-conversions.md).\) Diese Funktion wird anhand des folgenden Beispiels veranschaulicht:  
+ Microsoft C enthält eine Erweiterung für den ANSI C-Standard, mit dem umgewandelte L-Werte als L-Werte genutzt werden können, sofern die Objektgröße durch die Umwandlung nicht verlängert wird. (Weitere Informationen finden Sie unter [Typumwandlungskonvertierungen](../c-language/type-cast-conversions.md).) Diese Funktion wird anhand des folgenden Beispiels veranschaulicht:  
   
 ```  
 char *p ;  
@@ -60,9 +76,9 @@ long l;
 (long) i = l ;          /* Illegal cast */  
 ```  
   
- Bei Microsoft C sind die Microsoft\-Erweiterungen standardmäßig aktiviert.  Verwenden Sie die \/Za\-Compileroption, um diese Erweiterungen zu deaktivieren.  
+ Bei Microsoft C sind die Microsoft-Erweiterungen standardmäßig aktiviert. Verwenden Sie die /Za-Compileroption, um diese Erweiterungen zu deaktivieren.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Operanden und Ausdrücke](../c-language/operands-and-expressions.md)

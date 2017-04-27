@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: 1088f17c1d758589fba146f82b2544ae17090a22
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ba1dd940e6dfe9bb749de1473850a245fa8073a9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Verwenden von nativen Zielversionen in Visual Studio, um alte Projekte zu erstellen  
@@ -54,7 +54,7 @@ Sie können auch auf Visual Studio 2008-Projekte abzielen, doch diese können ni
   
 Die neuesten Versionen von Visual Studio unterstützen die native Festlegung von Zielversionen und Roundtripping für Projekte. Die native Festlegung von Zielversionen ist Möglichkeit der neuesten IDE für die Entwicklung mithilfe von Toolsets, die von vorherigen Versionen von Visual Studio installiert wurden. Die Roundtrip-Funktion ist die Fähigkeit der neuesten IDE, ohne jede Änderung an dem Projekt eine frühere Version der IDE erstellte Projekte zu laden. Wenn Sie die neueste Version von Visual Studio zusammen mit Ihrer aktuellen Version installieren, können Sie die neue Version der IDE mit dem Compiler und den Tools aus der aktuellen Version verwenden, um Ihre Projekte zu erstellen. Andere Mitglieder Ihres Teams können weiterhin die Projekte in der älteren Version von Visual Studio verwenden.  
   
-Wenn Sie ein älteres Toolset verwenden, können Sie von vielen der neuesten IDE-Features profitieren, jedoch nicht von den neuesten Fortschritten im C++-Compiler, in den Bibliotheken und Buildtools. Sie können z.B. nicht die neuen verbesserten Sprachübereinstimmungen sowie die neuen Features für das Debuggen und zur Codeanalyse. Ebenso erhalten Sie nicht den schnelleren Builddurchsatz des neuesten Toolsets. Es gibt auch einige IDE-Funktionen, die mit älteren Toolsets nicht kompatibel sind. Es können z.B. Typinformationen im neuen Memory Profiler fehlen, und der Umgestaltungsvorgang „Convert to Raw string literals“ (In unformatierte Zeichenfolgenliterale konvertieren) generiert C++11-konformen Code, der sich nicht kompilieren lassen kann, wenn Sie Toolsets aus Visual Studio 2012 oder älter verwenden.
+Wenn Sie ein älteres Toolset verwenden, können Sie von vielen der neuesten IDE-Features profitieren, jedoch nicht von den neuesten Fortschritten im C++-Compiler, in den Bibliotheken und Buildtools. Sie können z.B. nicht die neuen verbesserten Sprachübereinstimmungen sowie die neuen Features für das Debuggen und zur Codeanalyse. Ebenso erhalten Sie nicht den schnelleren Builddurchsatz des neuesten Toolsets. Es gibt auch einige IDE-Funktionen, die mit älteren Toolsets nicht kompatibel sind. Es können z.B. Typinformationen im neuen Memory Profiler fehlen, und der Umgestaltungsvorgang **Convert to Raw string literals** (In unformatierte Zeichenfolgenliterale konvertieren) generiert C++11-konformen Code, der nicht kompiliert werden kann, wenn Sie Toolsets aus Visual Studio 2012 oder älter verwenden.
 
 ## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>So verwenden Sie die native Festlegung von Zielversionen in Visual Studio
 Nachdem Sie Visual Studio parallel mit Ihrer älteren Version installiert haben, öffnen Sie Ihr vorhandenes Projekt in der neuen Visual Studio-Version. Wenn das Projekt geladen wird, fragt Visual Studio Sie, ob sie die Version für die Verwendung des neuesten C++-Compilers und der C++-Bibliotheken upgraden möchten. Da Sie möchten, dass das Projekt den alten Compiler und die alten Bibliotheken behält, klicken Sie auf die Schaltfläche **Abbrechen**.  

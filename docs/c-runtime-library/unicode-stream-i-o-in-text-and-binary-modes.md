@@ -1,40 +1,57 @@
 ---
-title: "Unicodestream-E/A im Text- und Bin&#228;rmodus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.io"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "E/A [CRT], Unicode-Stream"
-  - "Stream-E/A-Routinen"
-  - "Unicodestream-E/A"
-  - "Unicode, Stream-E/A-Routinen"
+title: "Unicodestream-E/A im Text- und Binärmodus | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.io
+dev_langs:
+- C++
+helpviewer_keywords:
+- stream I/O routines
+- I/O [CRT], unicode stream
+- Unicode, stream I/O routines
+- Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Unicodestream-E/A im Text- und Bin&#228;rmodus
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6a4658396f5045df17fbf75daac5bbf8263ed60c
+ms.lasthandoff: 04/01/2017
 
-Wenn eine Unicode\-Stream E\/A\-Routine \(wie `fwprintf`, `fwscanf`, `fgetwc`, `fputwc`, `fgetws` oder `fputws`\) zu einer Datei, wendet die im Textmodus \(Standard\) geöffnet ist, werden zwei Arten Zeichenumsetzungen statt:  
+---
+# <a name="unicode-stream-io-in-text-and-binary-modes"></a>Unicodestream-E/A im Text- und Binärmodus
+Wenn eine Unicodestream-E/A-Routine (z.B. `fwprintf`, `fwscanf`, `fgetwc`, `fputwc`, `fgetws` oder `fputws`) mit einer im Textmodus (Standard) geöffneten Datei arbeitet, finden zwei Arten von Zeichenkonvertierungen statt:  
   
--   Unicode\-zu\-MBCS\- oder MBCS\-zu\-Unicode\-Konvertierung.  Wenn eine Funktion von Unicode im stream\-I\/O Textmodus funktioniert, wird der Quell\- oder Zielstream angenommen, um eine Sequenz von Mehrbytezeichen zu sein.  Daher konvertieren die Unicode Streameingabefunktionen Multibytezeichen in Breitzeichen \(wie bei einem Aufruf der `mbtowc`\-Funktion\).  Aus demselben Grund konvertieren die Unicode\-Streamausgabefunktionen Breitzeichen in Multibytezeichen \(wie bei einem Aufruf der `wctomb`\-Funktion\).  
+-   Konvertierung von Unicode zu MBCS oder von MBCS zu Unicode. Wenn eine Unicodestream-E/A-Funktion im Textmodus arbeitet, wird angenommen, dass es sich bei Quell- oder Zielstream um eine Sequenz von Multibytezeichen handelt. Daher konvertieren die Unicode Streameingabefunktionen Multibytezeichen in Breitzeichen (wie bei einem Aufruf der `mbtowc`-Funktion). Aus demselben Grund konvertieren die Unicode-Streamausgabefunktionen Breitzeichen in Multibytezeichen (wie bei einem Aufruf der `wctomb`-Funktion).  
   
--   Übersetzung des Wagenrücklauf\/Zeilenvorschubs \(CR\-LF\).  Diese Übersetzung tritt vor dem MBCS auf \- Unicode\-Konvertierung \(für Unicode\-Stream geben Sie Funktionen\) und nach dem \- Unicode MBCS\-Konvertierung \(für Unicode\-Streamausgabefunktionen\).  Während der Eingabe wird jede Wagenrücklauf\/Zeilenvorschub\-Kombination in ein einzelnes Zeilenvorschubzeichen übersetzt.  Während der Ausgabe wird jedes Zeilenvorschubzeichen in eine Wagenrücklauf\/Zeilenvorschub\-Kombination übersetzt.  
+-   Übersetzung von Wagenrücklauf-Zeilenvorschub (CR-LF). Diese Übersetzung findet vor der MBCS-Unicode-Konvertierung (für Unicode-Streameingabefunktionen) und nach der Unicode-MBCS-Konvertierung (für Unicode-Streamausgabefunktionen) statt. Bei der Eingabe wird jede Wagenrücklauf-Zeilenvorschub-Kombination in ein einzelnes Zeilenvorschubzeichen übersetzt. Bei der Ausgabe wird jedes Zeilenvorschubzeichen in eine Wagenrücklauf-Zeilenvorschub-Kombination übersetzt.  
   
- Wenn eine Funktion von Unicode stream\-I\/O im binären Modus ausgeführt wird, die Datei angenommen, um Unicode ist, und keine CR\-LF Übersetzung oder Zeichenkonvertierung tritt während der Eingabe oder die Ausgabe auf.  Verwenden Sie das \_setmode \(\_fileno \(stdin\), \_O\_BINARY\); Anweisung zum wcin auf einer UNICODE\-Textdatei ordnungsgemäß verwenden.  
+ Wenn jedoch eine Unicodestream-E/A-Funktion im binären Modus arbeitet, wir von einer Unicode-Datei ausgegangen und es erfolgt keine CR-LF-Übersetzung oder Zeichenkonvertierung während der Ein- und Ausgabe. Verwenden Sie die Anweisung _setmode( _fileno( stdin ), _O_BINARY );, um wcin ordnungsgemäß auf einer UNICODE-Textdatei zu verwenden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)   
  [Eingabe und Ausgabe](../c-runtime-library/input-and-output.md)

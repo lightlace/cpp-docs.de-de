@@ -1,31 +1,47 @@
 ---
-title: "Ganzzahltypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ganzzahlkonstanten"
-  - "integer-Datentyp, Ganzzahltypen in C++"
-  - "Ganzzahltypen"
-  - "Ganze Zahlen, Typen"
+title: Ganzzahltypen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- integer data type, integer types in C++
+- integer constants
+- integer types
+- integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ganzzahltypen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7b03bfad7912aa74c5520f6dfc23f70856188f0e
+ms.lasthandoff: 04/01/2017
 
-Allen Integerkonstanten wird ein Typ anhand ihres Werts und der Ausdrucksmethode zugewiesen.  Sie können eine Integerkonstante auf den Typ **long** erzwingen, indem Sie den Buchstaben **l** oder **L** am Ende der Konstante anfügen. Sie können die Integerkonstante auf den Typ `unsigned` erzwingen, indem Sie **u** oder **U** an den Wert anfügen.  Der Kleinbuchstabe **l** kann mit der Ziffer 1 verwechselt werden und sollte daher nicht angefügt werden.  Einige Formen der **long**\-Integerkonstanten folgen:  
+---
+# <a name="integer-types"></a>Ganzzahltypen
+Allen Integerkonstanten wird ein Typ anhand ihres Werts und der Ausdrucksmethode zugewiesen. Sie können erzwingen, dass eine Integerkonstante den Typ **long** aufweist, indem Sie den Buchstaben **l** oder **L** am Ende der Konstante anfügen; ebenso können Sie erzwingen, dass die Integerkonstante den Typ `unsigned` aufweist, indem Sie **u** oder **U** an den Wert anfügen. Der Kleinbuchstabe **l** kann mit der Ziffer 1 verwechselt werden und sollte daher nicht angefügt werden. Dies sind einige Formen der **long**-Integerkonstanten:  
   
 ```  
 /* Long decimal constants */  
@@ -45,17 +61,17 @@ Allen Integerkonstanten wird ein Typ anhand ihres Werts und der Ausdrucksmethode
 778866LU  
 ```  
   
- Der Typ, den Sie einer Konstanten zuweisen, hängt von dem Wert ab, den die Konstante darstellt.  Der Wert einer Konstante muss im Bereich der darstellbaren Werte für ihren Typ liegen.  Ein Konstantentyp bestimmt, welche Konvertierungen ausgeführt werden, wenn die Konstante in einem Ausdruck verwendet oder das Minuszeichen \(**–**\) angewendet wird.  In dieser Liste werden die Konvertierungsregeln für Integerkonstanten zusammengefasst.  
+ Der Typ, den Sie einer Konstanten zuweisen, hängt von dem Wert ab, den die Konstante darstellt. Der Wert einer Konstante muss im Bereich der darstellbaren Werte für ihren Typ liegen. Ein Konstantentyp bestimmt, welche Konvertierungen ausgeführt werden, wenn die Konstante in einem Ausdruck verwendet oder das Minuszeichen (**-**) angewendet wird. In dieser Liste werden die Konvertierungsregeln für Integerkonstanten zusammengefasst.  
   
--   Eine Dezimalkonstante ohne Suffix ist vom Typ `int`, **long int** oder **unsigned long int**.  Der erste dieser drei Typen, in der der Wert der Konstante dargestellt werden kann, ist der Typ, der der Konstante zugewiesen wird.  
+-   Eine Dezimalkonstante ohne Suffix ist vom Typ `int`, **long int** oder **unsigned long int**. Der erste dieser drei Typen, in der der Wert der Konstante dargestellt werden kann, ist der Typ, der der Konstante zugewiesen wird.  
   
--   Je nach Größe der Konstanten wird der Typ `int`, `unsigned int`, **long int** oder **unsigned long int** den Oktal\- und Hexadezimalkonstanten ohne Suffixe zugewiesen.  
+-   Je nach Größe der Konstanten wird der Typ `int`, `unsigned int`, **long int** oder **unsigned long int** den Oktal- und Hexadezimalkonstanten ohne Suffixe zugewiesen.  
   
--   Je nach Größe der Konstanten wird der Typ **unsigned int** oder **unsigned long int** den Konstanten mit einem **u**\- oder **U**\-Suffix zugewiesen.  
+-   Je nach Größe der Konstanten wird der Typ **unsigned int** oder **unsigned long int** den Konstanten mit einem **u**- oder **U**-Suffix zugewiesen.  
   
--   Je nach Größe der Konstanten wird der Typ **long int** oder **unsigned long int** den Konstanten mit dem **l**\- oder **L**\-Suffix zugewiesen.  
+-   Je nach Größe der Konstanten wird der Typ **long int** oder **unsigned long int** den Konstanten mit dem **l**- oder **L**-Suffix zugewiesen.  
   
--   Konstanten mit einem **u**\- oder **U**\- und einem **l**\- oder **L**\-Suffix wird der Typ **unsigned long int** zugewiesen.  
+-   Konstanten mit einem **u**- oder **U**- und einem **l**- oder **L**-Suffix wird der Typ **unsigned long int** zugewiesen.  
   
-## Siehe auch  
- [C\-Ganzzahlkonstanten](../c-language/c-integer-constants.md)
+## <a name="see-also"></a>Siehe auch  
+ [C-Ganzzahlkonstanten](../c-language/c-integer-constants.md)

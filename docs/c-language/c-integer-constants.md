@@ -1,84 +1,100 @@
 ---
-title: "C-Ganzzahlkonstanten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ganzzahlkonstanten"
+title: C-Ganzzahlkonstanten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# C-Ganzzahlkonstanten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: dab1cb72b5914901808dc51f3a173a62a8924cfb
+ms.lasthandoff: 04/01/2017
 
-Eine "Ganzzahlkonstante" ist eine dezimale \(Basis 10\), oktale \(Basis 8\) oder hexadezimale Zahl \(Basis 16\), die einen ganzzahligen Wert darstellt.  Verwenden Sie ganzzahlige Konstanten, um ganzzahlige Werte darzustellen, die nicht geändert werden können.  
+---
+# <a name="c-integer-constants"></a>C-Ganzzahlkonstanten
+Eine "Ganzzahlkonstante" ist eine dezimale (Basis 10), oktale (Basis 8) oder hexadezimale Zahl (Basis 16), die einen ganzzahligen Wert darstellt. Verwenden Sie ganzzahlige Konstanten, um ganzzahlige Werte darzustellen, die nicht geändert werden können.  
   
-## Syntax  
- *integer\-constant*:  
- *decimal\-constant integer\-suffix*  opt  
+## <a name="syntax"></a>Syntax  
+ *integer-constant*:  
+ *decimal-constant integer-suffix*-Opt  
   
- *octal\-constant integer\-suffix*  opt  
+ *octal-constant integer-suffix*-Opt  
   
- *hexadecimal\-constant integer\-suffix*  opt  
+ *hexadecimal-constant integer-suffix*-Opt  
   
- *decimal\-constant*:  
- *nonzero\-digit*  
+ *decimal-constant*:  
+ *nonzero-digit*  
   
- *decimal\-constant digit*  
+ *decimal-constant digit*  
   
- *octal\-constant*:  
+ *octal-constant*:  
  **0**  
   
- *octal\-constant octal\-digit*  
+ *octal-constant octal-digit*  
   
- *hexadecimal\-constant*:  
- **0x**  *hexadecimal\-digit*  
+ *hexadecimal-constant*:  
+ **0x** *hexadecimal-digit*  
   
- **0X**  *hexadecimal\-digit*  
+ **0X** *hexadecimal-digit*  
   
- *hexadecimal\-constant hexadecimal\-digit*  
+ *hexadecimal-constant hexadecimal-digit*  
   
- *nonzero\-digit*: one of  
+ *nonzero-digit*: eines der folgenden Zeichen  
  **1 2 3 4 5 6 7 8 9**  
   
- *octal\-digit*: one of  
+ *octal-digit*: eines der folgenden Zeichen  
  **0 1 2 3 4 5 6 7**  
   
- *hexadecimal\-digit*: one of  
+ *hexadecimal-digit*: eines der folgenden Zeichen  
  **0 1 2 3 4 5 6 7 8 9**  
   
  **a b c d e f**  
   
  **A B C D E F**  
   
- *integer\-suffix*:  
- *unsigned\-suffix long\-suffix*  opt  
+ *integer-suffix*:  
+ *unsigned-suffix long-suffix*-Opt  
   
- *long\-suffix unsigned\-suffix*  opt  
+ *long-suffix unsigned-suffix*-Opt  
   
- *unsigned\-suffix*: one of  
+ *unsigned-suffix*: eines der folgenden Zeichen  
  **u U**  
   
- *long\-suffix*: one of  
+ *long-suffix*: eines der folgenden Zeichen  
  **l L**  
   
- *64\-bit integer\-suffix*:  
+ *64-bit integer-suffix*:  
  **i64**  
   
- Ganzzahlige Konstanten sind positiv, es sei denn, ihnen wird ein Minuszeichen \(**–**\) vorangestellt.  Das Minuszeichen wird als unärer arithmetischer Negationsoperator interpretiert. \(Weitere Informationen über diesen Operator finden Sie auf der Seite über [unäre arithmetische Operatoren](../c-language/unary-arithmetic-operators.md).\)  
+ Ganzzahlige Konstanten sind positiv, es sei denn, ihnen wird ein Minuszeichen (**-**) vorangestellt. Das Minuszeichen wird als unärer arithmetischer Negationsoperator interpretiert. (Weitere Informationen zu diesen Operator finden Sie auf der Seite [Unäre arithmetische Operatoren](../c-language/unary-arithmetic-operators.md).)  
   
- Wenn eine ganzzahlige Konstante mit **0x** oder **0X** beginnt, ist sie hexadezimal.  Wenn sie mit der Ziffer **0** beginnt, ist sie oktal.  Andernfalls wird davon ausgegangen, dass es sich hierbei um ein Dezimal handelt.  
+ Wenn eine ganzzahlige Konstante mit **0x** oder **0X** beginnt, ist sie hexadezimal. Wenn sie mit der Ziffer **0** beginnt, ist sie oktal. Andernfalls wird davon ausgegangen, dass es sich hierbei um ein Dezimal handelt.  
   
  Die nachfolgenden Zeilen sind identisch:  
   
@@ -87,7 +103,7 @@ Eine "Ganzzahlkonstante" ist eine dezimale \(Basis 10\), oktale \(Basis 8\) oder
 034    /* = Octal representation for decimal 28 */  
 ```  
   
- Die Ziffern einer ganzzahligen Konstante können nicht durch Leerzeichen getrennt werden.  In diesen Beispielen werden gültige dezimale, oktale und hexadezimale Konstanten veranschaulicht.  
+ Die Ziffern einer ganzzahligen Konstante können nicht durch Leerzeichen getrennt werden. In diesen Beispielen werden gültige dezimale, oktale und hexadezimale Konstanten veranschaulicht.  
   
 ```  
 /* Decimal Constants */  
@@ -106,5 +122,5 @@ Eine "Ganzzahlkonstante" ist eine dezimale \(Basis 10\), oktale \(Basis 8\) oder
 0x7dB3 or 0X7DB3  
 ```  
   
-## Siehe auch  
- [C\-Konstanten](../c-language/c-constants.md)
+## <a name="see-also"></a>Siehe auch  
+ [C-Konstanten](../c-language/c-constants.md)

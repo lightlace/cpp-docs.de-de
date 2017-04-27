@@ -1,5 +1,5 @@
 ---
-title: Neuerungen bei Visual C++ in Visual Studio&2015; | Microsoft-Dokumentation
+title: Neuerungen bei Visual C++ in Visual Studio 2015 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 3/7/2017
 ms.reviewer: 
@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: d3ac5f5e54334e42ad48304d26a4f32b1b598459
-ms.openlocfilehash: dbed9eaf443d7392373d1eeba81bc0095c5bd1b4
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
+ms.lasthandoff: 04/01/2017
 
 ---
 
@@ -127,7 +127,7 @@ Das C++ REST SDK, eine plattformübergreifende Web-API für C++, wurde auf Versi
 
   ![Filterung der Memberliste](media/mlfiltering.png "Filterung der Memberliste")
 
-* Eine neue experimentelle, vorhersehbare IntelliSense-Funktion, die das kontextbewusste Filtern in der Memberliste bereitstellt, wurde hinzugefügt. Siehe den Blogbeitrag [C++ IntelliSense Improvements – Predictive IntelliSense & Filtering](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/).
+* Eine neue experimentelle, vorhersehbare IntelliSense-Funktion, die das kontextbewusste Filtern in der Memberliste bereitstellt, wurde hinzugefügt. Weitere Informationen finden Sie im Blogpost [C++ IntelliSense Improvements – Predictive IntelliSense & Filtering (Verbesserungen in C++-IntelliSense: Predictive IntelliSense und Filtern)](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/)
 
 * „Alle Verweise suchen (UMSCHALT+F12)“ ermöglicht nun eine einfachere Navigation, auch in komplexen Codebasen. Das Feature bietet eine erweiterte Gruppierung, Filterung, Sortierung, Suche in Ergebnissen und (für einige Sprachen) eine Einfärbung, damit Sie Ihre Verweise umfassend verstehen können. Für C++ enthält die neue Benutzeroberfläche Informationen dazu, ob Informationen aus einer Variablen gelesen oder in eine Variable geschrieben werden.
 
@@ -148,7 +148,7 @@ In Visual Studio 2017 wurde das Feature „Ordner öffnen“ eingeführt, das Ih
   -    Launch.json zum Anpassen des Debugvorgangs.
 
 ### <a name="cmake-support-via-open-folder"></a>Unterstützung von CMake über „Ordner öffnen“
-Visual Studio 2017 führt die Unterstützung für die Verwendung von CMake-Projekten ohne Konvertierung in MSBuild-Projektdateien (.vcxproj) ein. Weitere Informationen finden Sie unter [CMake-Unterstützung in Visual Studio 2017](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) und [CMake support in Visual Studio 2017 – what’s new in the RC.2 update (CMake-Support in Visual Studio 2017 – Neues im RC.2-Update)](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/). Durch Öffnen von CMake-Projekten mit „Ordner öffnen“ wird die Umgebung für die Bearbeitung, Erstellung und das Debuggen von C++ automatisch konfiguriert.
+Visual Studio 2017 führt die Unterstützung für die Verwendung von CMake-Projekten ohne Konvertierung in MSBuild-Projektdateien (.vcxproj) ein. Weitere Informationen finden Sie im Blogpost [CMake support in Visual Studio (CMake-Unterstützung in Visual Studio)](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) und [CMake support in Visual Studio 2017 – what’s new in the RC.2 update (CMake-Support in Visual Studio 2017: Neues im RC.2-Update)](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/). Durch Öffnen von CMake-Projekten mit „Ordner öffnen“ wird die Umgebung für die Bearbeitung, Erstellung und das Debuggen von C++ automatisch konfiguriert.
 
 * C++ IntelliSense funktioniert, ohne dass Sie eine Datei „CppProperties.json“ im Stammordner erstellen müssen. Darüber hinaus haben wir ein neues Dropdownmenü hinzugefügt, sodass Benutzer einfach zwischen von CMake - und CppProperties.json-Dateien bereitgestellten Konfigurationen wechseln können.
 

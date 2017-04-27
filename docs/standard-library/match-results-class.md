@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - match_results
-- std::match_results
 - regex/std::match_results
 dev_langs:
 - C++
@@ -97,7 +96,7 @@ class match_results {
   
  **Namespace:** std  
   
-##  <a name="a-namematchresultsallocatortypea--matchresultsallocatortype"></a><a name="match_results__allocator_type"></a> match_results::allocator_type  
+##  <a name="match_results__allocator_type"></a> match_results::allocator_type  
  Der Typ einer Zuweisung für die Speicherverwaltung.  
   
 ```  
@@ -216,7 +215,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsbegina--matchresultsbegin"></a><a name="match_results__begin"></a> match_results::begin  
+##  <a name="match_results__begin"></a> match_results::begin  
  Kennzeichnet den Anfang einer Teilübereinstimmungssequenz.  
   
 ```  
@@ -335,7 +334,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultschartypea--matchresultschartype"></a><a name="match_results__char_type"></a> match_results::char_type  
+##  <a name="match_results__char_type"></a> match_results::char_type  
  Der Typ eines Elements.  
   
 ```  
@@ -454,7 +453,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsconstiteratora--matchresultsconstiterator"></a><a name="match_results__const_iterator"></a> match_results::const_iterator  
+##  <a name="match_results__const_iterator"></a> match_results::const_iterator  
  Der Itertatortyp „const“ für Teilübereinstimmungen.  
   
 ```  
@@ -573,7 +572,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsconstreferencea--matchresultsconstreference"></a><a name="match_results__const_reference"></a> match_results::const_reference  
+##  <a name="match_results__const_reference"></a> match_results::const_reference  
  Der Typ eines Konstantenverweises auf ein Element.  
   
 ```  
@@ -692,7 +691,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsdifferencetypea--matchresultsdifferencetype"></a><a name="match_results__difference_type"></a> match_results::difference_type  
+##  <a name="match_results__difference_type"></a> match_results::difference_type  
  Der Typ einer Iteratordifferenz.  
   
 ```  
@@ -811,7 +810,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsemptya--matchresultsempty"></a><a name="match_results__empty"></a> match_results::empty  
+##  <a name="match_results__empty"></a> match_results::empty  
  Testet, ob keine Teilübereinstimmungen vorliegen.  
   
 ```  
@@ -930,7 +929,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsenda--matchresultsend"></a><a name="match_results__end"></a> match_results::end  
+##  <a name="match_results__end"></a> match_results::end  
  Designates end of submatch sequence.  
   
 ```  
@@ -1049,7 +1048,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsformata--matchresultsformat"></a><a name="match_results__format"></a> match_results::format  
+##  <a name="match_results__format"></a> match_results::format  
  Formatiert Teilübereinstimmungen.  
   
 ```  
@@ -1188,7 +1187,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsgetallocatora--matchresultsgetallocator"></a><a name="match_results__get_allocator"></a> match_results::get_allocator  
+##  <a name="match_results__get_allocator"></a> match_results::get_allocator  
  Gibt die gespeicherte Zuweisung zurück.  
   
 ```  
@@ -1307,7 +1306,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsiteratora--matchresultsiterator"></a><a name="match_results__iterator"></a> match_results::iterator  
+##  <a name="match_results__iterator"></a> match_results::iterator  
  Der Itertatortyp für Teilübereinstimmungen.  
   
 ```  
@@ -1426,7 +1425,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultslengtha--matchresultslength"></a><a name="match_results__length"></a> match_results::length  
+##  <a name="match_results__length"></a> match_results::length  
  Gibt die Länge einer Teilübereinstimmung zurück.  
   
 ```  
@@ -1549,7 +1548,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsmatchresultsa--matchresultsmatchresults"></a><a name="match_results__match_results"></a> match_results::match_results  
+##  <a name="match_results__match_results"></a> match_results::match_results  
  Erstellt das Objekt.  
   
 ```  
@@ -1677,7 +1676,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsmaxsizea--matchresultsmaxsize"></a><a name="match_results__max_size"></a> match_results::max_size  
+##  <a name="match_results__max_size"></a> match_results::max_size  
  Ruft die größte Anzahl von Teilübereinstimmungen ab.  
   
 ```  
@@ -1796,7 +1795,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsoperatoreqa--matchresultsoperator"></a><a name="match_results__operator_eq"></a> match_results::operator=  
+##  <a name="match_results__operator_eq"></a> match_results::operator=  
  Kopieren Sie ein match_results-Objekt.  
   
 ```  
@@ -1919,7 +1918,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsoperatorata--matchresultsoperator"></a><a name="match_results__operator_at"></a> match_results::operator  
+##  <a name="match_results__operator_at"></a> match_results::operator  
  Zugriff auf ein Unterobjekt.  
   
 ```  
@@ -2042,7 +2041,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultspositiona--matchresultsposition"></a><a name="match_results__position"></a> match_results::position  
+##  <a name="match_results__position"></a> match_results::position  
  Ruft das Startoffset einer Untergruppe ab.  
   
 ```  
@@ -2165,7 +2164,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsprefixa--matchresultsprefix"></a><a name="match_results__prefix"></a> match_results::prefix  
+##  <a name="match_results__prefix"></a> match_results::prefix  
  Ruft die Sequenz vor der ersten Teilübereinstimmung ab.  
   
 ```  
@@ -2284,7 +2283,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsreferencea--matchresultsreference"></a><a name="match_results__reference"></a> match_results::reference  
+##  <a name="match_results__reference"></a> match_results::reference  
  Der Typ eines Elementverweises.  
   
 ```  
@@ -2403,7 +2402,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultssizea--matchresultssize"></a><a name="match_results__size"></a> match_results::size  
+##  <a name="match_results__size"></a> match_results::size  
  Zählt, wie viele Teilübereinstimmungen es gibt.  
   
 ```  
@@ -2522,7 +2521,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultssizetypea--matchresultssizetype"></a><a name="match_results__size_type"></a> match_results::size_type  
+##  <a name="match_results__size_type"></a> match_results::size_type  
  Der Typ einer Teilübereinstimmungszählers.  
   
 ```  
@@ -2641,7 +2640,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsstra--matchresultsstr"></a><a name="match_results__str"></a> match_results::str  
+##  <a name="match_results__str"></a> match_results::str  
  Gibt eine Teilübereinstimmung zurück.  
   
 ```  
@@ -2764,7 +2763,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsstringtypea--matchresultsstringtype"></a><a name="match_results__string_type"></a> match_results::string_type  
+##  <a name="match_results__string_type"></a> match_results::string_type  
  Der Typ einer Zeichenfolge.  
   
 ```  
@@ -2883,7 +2882,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultssuffixa--matchresultssuffix"></a><a name="match_results__suffix"></a> match_results::suffix  
+##  <a name="match_results__suffix"></a> match_results::suffix  
  Ruft die Sequenz nach der letzten Teilübereinstimmung ab.  
   
 ```  
@@ -3002,7 +3001,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsswapa--matchresultsswap"></a><a name="match_results__swap"></a> match_results::swap  
+##  <a name="match_results__swap"></a> match_results::swap  
  Tauscht zwei match_results-Objekte.  
   
 ```  
@@ -3125,7 +3124,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="a-namematchresultsvaluetypea--matchresultsvaluetype"></a><a name="match_results__value_type"></a> match_results::value_type  
+##  <a name="match_results__value_type"></a> match_results::value_type  
  Der Typ einer Teilübereinstimmung.  
   
 ```  

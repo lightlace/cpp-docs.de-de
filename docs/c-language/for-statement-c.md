@@ -1,55 +1,72 @@
 ---
-title: "for-Anweisung (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for-Schlüsselwort [C]"
+title: for-Anweisung (C) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# for-Anweisung (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 20afe269d057d8ce856be1e1cccb32e6ca451c0f
+ms.lasthandoff: 04/04/2017
 
-Mit der `for`\-Anweisung können Sie eine Anweisung oder eine Verbundanweisung so häufig wie angegeben wiederholen.  Der Text einer `for`\-Anweisung wird nicht oder mehrmals ausgeführt, bis eine optionale Bedingung falsch ist.  Sie können optionale Ausdrücke in der `for`\-Anweisung verwenden, um Werte während der Ausführung der `for`\-Anweisung zu initialisieren und zu ändern.  
+---
+# <a name="for-statement-c"></a>for-Anweisung (C)
+Mit der **for**-Anweisung können Sie eine Anweisung oder eine Verbundanweisung so häufig wie angegeben wiederholen. Der Text einer **for**-Anweisung wird nicht oder mehrmals ausgeführt, bis eine optionale Bedingung falsch ist. Sie können optionale Ausdrücke in der **for**-Anweisung verwenden, um Werte während der Ausführung der **for**-Anweisung zu initialisieren und zu ändern.  
   
-## Syntax  
- *iteration\-statement*:  
- `for` \( `init-expression` opt ; `cond-expression`opt ; `loop-expression` opt \)`statement`  
+## <a name="syntax"></a>Syntax  
+ *iteration-statement*:  
+ &nbsp;&nbsp;**for** **(** *init-expression*<sub>-Opt</sub> **;** *cond-expression*<sub>-Opt</sub> **;** *loop-expression*<sub>-Opt</sub> **)** *statement*  
   
- Eine `for`\-Anweisung wird wie folgt ausgeführt:  
+ Eine **for**-Anweisung wird wie folgt ausgeführt:  
   
-1.  `init-expression` wird ausgewertet, sofern vorhanden.  Dadurch wird die Initialisierung für die Schleife angegeben.  Für den Typ `init-expression` besteht keine Einschränkung.  
+1.  *init-expression* wird ausgewertet, falls vorhanden. Dadurch wird die Initialisierung für die Schleife angegeben. Für den Typ *init-expression* besteht keine Einschränkung.  
   
-2.  `cond-expression` wird ausgewertet, sofern vorhanden.  Dieser Ausdruck muss einen arithmetischen Typ oder einen Zeigertyp aufweisen.  Er wird vor jeder Iteration ausgewertet.  Drei Ergebnisse sind möglich:  
+2.  *cond-expression* wird ausgewertet, falls vorhanden. Dieser Ausdruck muss einen arithmetischen Typ oder einen Zeigertyp aufweisen. Er wird vor jeder Iteration ausgewertet. Drei Ergebnisse sind möglich:  
   
-    -   Wenn `cond-expression` "true" \(ungleich 0 \(null\)\) ist, wird `statement` ausgeführt; `loop-expression` wird ggf. ausgewertet.  `loop-expression` wird nach jeder Iterationen ausgewertet.  Für den zugehörigen Typ besteht keine Einschränkung.  Nebeneffekte werden in der Reihenfolge ausgeführt.  Der Prozess beginnt anschließend erneut mit der Auswertung von `cond-expression`.  
+    -   Wenn *cond-expression* **TRUE** ist (ungleich 0), wird *statement* ausgeführt; anschließend wird *loop-expression* ausgeführt, falls vorhanden. *loop-expression* wird nach dem Abschluss jeder Iteration ausgewertet. Für den zugehörigen Typ besteht keine Einschränkung. Nebeneffekte werden in der Reihenfolge ausgeführt. Der Prozess beginnt anschließend erneut mit der Auswertung von *cond-expression*.  
   
-    -   Wenn `cond-expression` weggelassen wird, gilt `cond-expression` dennoch als "true" und die Ausführung wird genau wie im vorherigen Absatz beschrieben fortgesetzt.  Eine `for`\-Anweisung ohne ein `cond-expression`\-Argument wird nur beendet, wenn eine `break`\- oder `return`\-Anweisung innerhalb des Anweisungstexts ausgeführt wird, oder wenn `goto` \(eine Anweisung mit Bezeichnung außerhalb des `for`\-Anweisungstexts\) ausgeführt wird.  
+    -   Wenn *cond-expression* weggelassen wird, gilt *cond-expression* dennoch als „TRUE“, und die Ausführung wird genau wie im vorherigen Absatz beschrieben fortgesetzt. Eine **for**-Anweisung ohne ein *cond-expression*-Argument wird nur beendet, wenn eine **break**- oder **return**-Anweisung innerhalb des Anweisungstexts ausgeführt wird, oder wenn **goto** (eine Anweisung mit Bezeichnung außerhalb des **for**-Anweisungstexts) ausgeführt wird.  
   
-    -   Wenn `cond-expression` `false` \(0\) ist, wird die `for`\-Anweisung beendet und das Steuerelement an die nächste Anweisung im Programm weitergegeben.  
+    -   Wenn *cond-expression* **FALSE** ist (0), wird die **for**-Anweisung beendet und das Steuerelement an die nächste Anweisung im Programm weitergegeben.  
   
- Eine `for`\-Anweisung wird auch dann beendet, wenn eine `break`\-, `goto`\- oder `return`\-Anweisung innerhalb des Anweisungstexts ausgeführt wird.  Eine `continue`\-Anweisung in einer `for`\-Schleife führt zur Auswertung von `loop-expression`.  Wenn eine `break`\-Anweisung innerhalb einer `for`\-Schleife ausgeführt wird, wird `loop-expression` weder ausgewertet noch ausgeführt.  Diese Anweisung  
+ Die **for**-Anweisung kann auch beendet werden, wenn eine **break**-, eine **goto**- oder eine **return**-Anweisung innerhalb des Anweisungstexts ausgeführt wird. Eine **continue**-Anweisung in einer **for**-Schleife führt zur Auswertung von *loop-expression*. Wenn eine **break**-Anweisung innerhalb einer **for**-Schleife ausgeführt wird, wird *loop-expression* weder ausgewertet noch ausgeführt. Diese Anweisung  
   
 ```  
 for( ;; )  
 ```  
   
- ist die übliche Methode zum Erstellen einer Endlosschleife, die nur mit einer `break`\-, `goto`\- oder `return`\-Anweisung beendet werden kann.  
+ ist die übliche Methode zum Erstellen einer Endlosschleife, die nur mit einer **break**-, **goto**- oder **return**-Anweisung beendet werden kann.  
   
-## Code  
- In diesem Beispiel wird die `for`\-Anweisung veranschaulicht.  
+## <a name="code"></a>Code  
+ In diesem Beispiel wird die **for**-Anweisung veranschaulicht:  
   
 ```  
 // c_for.c  
@@ -78,12 +95,12 @@ int main()
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 Number of spaces: 4  
 Number of tabs: 2  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Anweisungen](../c-language/statements-c.md)

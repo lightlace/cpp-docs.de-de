@@ -1,67 +1,83 @@
 ---
-title: "C-Schl&#252;sselw&#246;rter | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Schlüsselwörter [C]"
-  - "Microsoft-spezifische Schlüsselwörter"
-  - "Neudefinieren von Schlüsselwörtern"
+title: "C-Schlüsselwörter | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- keywords [C]
+- redefining keywords
+- Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# C-Schl&#252;sselw&#246;rter
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a6c8ae256b6c73e36bfc33f8496cf6e899d1c27e
+ms.lasthandoff: 04/04/2017
 
-"Schlüsselwörter" sind Wörter, die eine besondere Bedeutung für den C\-Compiler haben.  In den Übersetzungsphasen 7 und 8 kann ein Bezeichner nicht dieselbe Schreibweise und Groß\-\/Kleinschreibung haben wie ein C\-Schlüsselwort. \(Eine Beschreibung der [Übersetzungsphasen](../preprocessor/phases-of-translation.md) finden Sie in der *Präprozessorreferenz*. Informationen zu Bezeichnern finden Sie unter [Bezeichner](../c-language/c-identifiers.md).\) Die Programmiersprache C verwendet die folgenden Schlüsselwörter:  
+---
+# <a name="c-keywords"></a>C-Schlüsselwörter
+"Schlüsselwörter" sind Wörter, die eine besondere Bedeutung für den C-Compiler haben. In den Übersetzungsphasen 7 und 8 kann ein Bezeichner nicht dieselbe Schreibweise und Groß-/Kleinschreibung haben wie ein C-Schlüsselwort. (Eine Beschreibung der [Übersetzungsphasen](../preprocessor/phases-of-translation.md) finden Sie in der *Präprozessorreferenz*. Informationen zu Bezeichnern finden Sie unter [Bezeichner](../c-language/c-identifiers.md).) Die Programmiersprache C verwendet die folgenden Schlüsselwörter:  
   
 |||||  
 |-|-|-|-|  
-|**auto**|**double**|`int`|`struct`|  
-|**break**|**else**|**long**|`switch`|  
-|**case**|`enum`|**register**|`typedef`|  
-|`char`|`extern`|`return`|**union**|  
-|**const**|**float**|**short**|`unsigned`|  
-|**continue**|**for**|**signed**|`void`|  
-|**default**|`goto`|`sizeof`|`volatile`|  
-|**do**|**if**|**static**|`while`|  
+|**auto**|**double**|**int**|**struct**|  
+|**break**|**else**|**long**|**switch**|  
+|**case**|**enum**|**register**|**typedef**|  
+|**char**|**extern**|**return**|**union**|  
+|**const**|**float**|**short**|**unsigned**|  
+|**continue**|**for**|**signed**|**void**|  
+|**default**|**goto**|**sizeof**|**volatile**|  
+|**do**|**if**|**static**|**while**|  
   
- Sie können Schlüsselwörter nicht neu definieren.  Sie können jedoch, bevor Sie mit C [preprocessor directives](../preprocessor/preprocessor-directives.md) kompilieren, Ersatztext für Schlüsselwörter angeben.  
+ Sie können Schlüsselwörter nicht neu definieren. Bevor Sie mit [C-Präprozessoranweisungen](../preprocessor/preprocessor-directives.md) kompilieren, können Sie jedoch Ersatztext für Schlüsselwörter angeben.  
   
- **Microsoft\-spezifisch**  
+ **Microsoft-spezifisch**  
   
- Der ANSI C\-Standard ermöglicht, dass Bezeichner mit zwei vorangestellten Unterstrichen für Compilerimplementierungen reserviert werden können.  Daher werden gemäß Microsoft\-Konvention Microsoft\-spezifischen Schlüsselwortnamen doppelte Unterstriche vorangestellt.  Diese Wörter können nicht als Bezeichnernamen verwendet werden.  Eine Beschreibung der ANSI\-Regeln für die Benennung von Bezeichnern, einschließlich der Verwendung von doppelten Unterstrichen, finden Sie unter [Bezeichner](../c-language/c-identifiers.md).  
+ Der ANSI C-Standard ermöglicht, dass Bezeichner mit zwei vorangestellten Unterstrichen für Compilerimplementierungen reserviert werden können. Daher werden gemäß Microsoft-Konvention Microsoft-spezifischen Schlüsselwortnamen doppelte Unterstriche vorangestellt. Diese Wörter können nicht als Bezeichnernamen verwendet werden. Eine Beschreibung der ANSI-Regeln für die Benennung von Bezeichnern, einschließlich der Verwendung von doppelten Unterstrichen, finden Sie unter [Bezeichner](../c-language/c-identifiers.md).  
   
- Die folgenden Schlüsselwörter und speziellen Bezeichner werden vom Microsoft C\-Compiler erkannt:  
+ Die folgenden Schlüsselwörter und speziellen Bezeichner werden vom Microsoft C-Compiler erkannt:  
   
 |||||  
 |-|-|-|-|  
-|`__asm`|**dllimport**2|`__int8`|`naked`2|  
-|`__based`1|`__except`|`__int16`|`__stdcall`|  
-|`__cdecl`|`__fastcall`|`__int32`|**thread**2|  
-|`__declspec`|`__finally`|`__int64`|`__try`|  
-|`dllexport`2|`__inline`|`__leave`||  
+|**__asm**|**dllimport**2|**__int8**|**naked**2|  
+|**__based**1|**__except**|**__int16**|**__stdcall**|  
+|**__cdecl**|**__fastcall**|**__int32**|**thread**2|  
+|**__declspec**|**__finally**|**__int64**|**__try**|  
+|**dllexport**2|**__inline**|**__leave**||  
   
- 1.  Das `__based`\-Schlüsselwort weist eingeschränkte Verwendung für 32\-Bit\- und 64\-Bit\-Zielkompilierungen auf.  
+ 1. Das **__based**-Schlüsselwort weist eingeschränkte Verwendung für 32-Bit- und 64-Bit-Zielkompilierungen auf.  
   
- 2.  Dies sind spezielle Bezeichner, wenn sie mit `__declspec` verwendet werden. Ihre Verwendung in anderen Kontexten ist nicht eingeschränkt.  
+ 2. Dies sind spezielle Bezeichner, wenn sie mit **__declspec** verwendet werden. Ihre Verwendung in anderen Kontexten ist nicht eingeschränkt.  
   
- Standardmäßig sind Microsoft\-Erweiterungen aktiviert.  Um sicherzustellen, dass die Programme vollständig übertragbar sind, können Sie Microsoft\-Erweiterungen durch Angeben der Option "\/Za" \(Kompilieren für ANSI\-Kompatibilität\) während der Kompilierung deaktivieren.  Dabei werden Microsoft\-spezifische Schlüsselwörter deaktiviert.  
+ Standardmäßig sind Microsoft-Erweiterungen aktiviert. Um sicherzustellen, dass die Programme vollständig übertragbar sind, können Sie Microsoft-Erweiterungen durch Angeben der Option "/Za" (Kompilieren für ANSI-Kompatibilität) während der Kompilierung deaktivieren. Dabei werden Microsoft-spezifische Schlüsselwörter deaktiviert.  
   
- Wenn Microsoft\-Erweiterungen aktiviert sind, können Sie in den Programmen die oben aufgeführten Schlüsselwörter verwenden.  Bei Einhaltung der ANSI\-Kompatibilität werden den meisten dieser Schlüsselwörter ein doppelten Unterstrich vorangestellt.  Die vier Ausnahmen `dllexport`, **dllimport**, `naked` und **thread** werden nur mit `__declspec` verwendet und erfordern deshalb keinen vorangestellten doppelten Unterstrich.  Für die Abwärtskompatibilität werden die restlichen Schlüsselwörter mit Versionen mit einem Unterstrich unterstützt.  
+ Wenn Microsoft-Erweiterungen aktiviert sind, können Sie in den Programmen die oben aufgeführten Schlüsselwörter verwenden. Bei Einhaltung der ANSI-Kompatibilität werden den meisten dieser Schlüsselwörter ein doppelten Unterstrich vorangestellt. Die vier Ausnahmen – **dllimport**, **dllimport**, **naked** und **thread** werden nur mit **__declspec** verwendet und erfordern deshalb keinen vorangestellten doppelten Unterstrich. Für die Abwärtskompatibilität werden die restlichen Schlüsselwörter mit Versionen mit einem Unterstrich unterstützt.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Elemente von C](../c-language/elements-of-c.md)
+## <a name="see-also"></a>Siehe auch  
+ [C-Elemente](../c-language/elements-of-c.md)
