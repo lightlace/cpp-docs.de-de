@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2400 bis C2499 | Microsoft-Dokumentation
+title: Compilerfehler C2400 bis C2499 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,6 +8,32 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: error-reference
+f1_keywords:
+- C2416
+- C2429
+- C2442
+- C2453
+- C2454
+- C2455
+- C2456
+- C2468
+- C2475
+- C2478
+- C2481
+- C2497
+helpviewer_keywords:
+- C2416
+- C2429
+- C2442
+- C2453
+- C2454
+- C2455
+- C2456
+- C2468
+- C2475
+- C2478
+- C2481
+- C2497
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
@@ -30,142 +56,114 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: eb0c1bf407d1478451c246cf615d031ef6c45bf9
-ms.openlocfilehash: dafd64aff08c48b4a0c3d56bced4bfa7f7bc923c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: bd3572d2941f911f10c067a24dd4e7323c3c3f8c
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Compilerfehler C2400 bis C2499
 In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen Unterabschnitt der Visual C++-Compilerfehler enthalten. Sie können hier auf die Informationen zugreifen oder im Fenster **Ausgabe** in Visual Studio eine Fehlernummer auswählen und dann die F1-TASTE drücken.  
   
- [Compiler-Fehler C2400](../../error-messages/compiler-errors-1/compiler-error-c2400.md)  
-  
- [Compiler-Fehler C2405](../../error-messages/compiler-errors-1/compiler-error-c2405.md)  
-  
- [Compiler-Fehler C2410](../../error-messages/compiler-errors-1/compiler-error-c2410.md)  
-  
- [Compiler-Fehler C2411](../../error-messages/compiler-errors-1/compiler-error-c2411.md)  
-  
- [Compiler-Fehler C2412](../../error-messages/compiler-errors-1/compiler-error-c2412.md)  
-  
- [Compiler-Fehler C2413](../../error-messages/compiler-errors-1/compiler-error-c2413.md)  
-  
- [Compiler-Fehler C2414](../../error-messages/compiler-errors-1/compiler-error-c2414.md)  
-  
- [Compiler-Fehler C2415](../../error-messages/compiler-errors-1/compiler-error-c2415.md)  
-  
- [Compilerfehler C2418](../../error-messages/compiler-errors-1/compiler-error-c2418.md)  
-  
- [Compiler-Fehler C2421](../../error-messages/compiler-errors-1/compiler-error-c2421.md)  
-  
- [Compiler-Fehler C2422 generiert](../../error-messages/compiler-errors-1/compiler-error-c2422.md)  
-  
- [Compiler-Fehler C2423 generiert](../../error-messages/compiler-errors-1/compiler-error-c2423.md)  
-  
- [Compiler-Fehler C2425 generiert](../../error-messages/compiler-errors-1/compiler-error-c2425.md)  
-  
- [Compiler-Fehler C2426](../../error-messages/compiler-errors-1/compiler-error-c2426.md)  
-  
- [Compiler-Fehler C2427 generiert](../../error-messages/compiler-errors-1/compiler-error-c2427.md)  
-  
- [Compiler-Fehler C2428 generiert](../../error-messages/compiler-errors-1/compiler-error-c2428.md)  
-  
- [Compiler-Fehler C2429](../../error-messages/compiler-errors-1/compiler-error-c2429.md)  
-  
- [Compiler-Fehler C2430 generiert](../../error-messages/compiler-errors-1/compiler-error-c2430.md)  
-  
- [Compiler-Fehler C2431 generiert](../../error-messages/compiler-errors-1/compiler-error-c2431.md)  
-  
- [Compiler-Fehler C2432 generiert](../../error-messages/compiler-errors-1/compiler-error-c2432.md)  
-  
- [Compiler-Fehler C2433](../../error-messages/compiler-errors-1/compiler-error-c2433.md)  
-  
- [Compiler-Fehler C2434 generiert](../../error-messages/compiler-errors-1/compiler-error-c2434.md)  
-  
- [Compiler-Fehler C2435 generiert](../../error-messages/compiler-errors-1/compiler-error-c2435.md)  
-  
- [Compiler-Fehler C2436 generiert](../../error-messages/compiler-errors-1/compiler-error-c2436.md)  
-  
- [Compiler-Fehler C2437 generiert](../../error-messages/compiler-errors-1/compiler-error-c2437.md)  
-  
- [Compiler-Fehler C2438 generiert](../../error-messages/compiler-errors-1/compiler-error-c2438.md)  
-  
- [Compiler-Fehler C2439](../../error-messages/compiler-errors-1/compiler-error-c2439.md)  
-  
- [Compiler-Fehler C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md)  
-  
- [Compiler-Fehler C2441 generiert](../../error-messages/compiler-errors-1/compiler-error-c2441.md)  
-  
- [Compiler-Fehler C2443 generiert](../../error-messages/compiler-errors-1/compiler-error-c2443.md)  
-  
- [Compiler-Fehler C2446](../../error-messages/compiler-errors-1/compiler-error-c2446.md)  
-  
- [Compiler-Fehler C2447 generiert](../../error-messages/compiler-errors-1/compiler-error-c2447.md)  
-  
- [Compiler-Fehler C2448 generiert](../../error-messages/compiler-errors-1/compiler-error-c2448.md)  
-  
- [Compiler-Fehler C2449](../../error-messages/compiler-errors-1/compiler-error-c2449.md)  
-  
- [Compiler-Fehler C2450 generiert](../../error-messages/compiler-errors-1/compiler-error-c2450.md)  
-  
- [Compiler-Fehler C2451 generiert](../../error-messages/compiler-errors-1/compiler-error-c2451.md)  
-  
- [Compiler-Fehler C2452 generiert](../../error-messages/compiler-errors-1/compiler-error-c2452.md)  
-  
- [Compiler-Fehler C2457 generiert](../../error-messages/compiler-errors-1/compiler-error-c2457.md)  
-  
- [Compiler-Fehler C2458 generiert](../../error-messages/compiler-errors-1/compiler-error-c2458.md)  
-  
- [Compiler-Fehler C2459 generiert](../../error-messages/compiler-errors-1/compiler-error-c2459.md)  
-  
- [Compiler-Fehler C2460 generiert](../../error-messages/compiler-errors-1/compiler-error-c2460.md)  
-  
- [Compiler-Fehler C2461 generiert](../../error-messages/compiler-errors-1/compiler-error-c2461.md)  
-  
- [Compiler-Fehler C2462 generiert](../../error-messages/compiler-errors-1/compiler-error-c2462.md)  
-  
- [Compiler-Fehler C2464 generiert](../../error-messages/compiler-errors-1/compiler-error-c2464.md)  
-  
- [Compiler-Fehler C2466 generiert](../../error-messages/compiler-errors-1/compiler-error-c2466.md)  
-  
- [Compiler-Fehler C2467 generiert](../../error-messages/compiler-errors-1/compiler-error-c2467.md)  
-  
- [Compiler-Fehler C2470 generiert](../../error-messages/compiler-errors-1/compiler-error-c2470.md)  
-  
- [Compiler-Fehler C2471](../../error-messages/compiler-errors-1/compiler-error-c2471.md)  
-  
- [Compiler-Fehler C2477 generiert](../../error-messages/compiler-errors-1/compiler-error-c2477.md)  
-  
- [Compiler-Fehler C2479 generiert](../../error-messages/compiler-errors-1/compiler-error-c2479.md)  
-  
- [Compiler-Fehler C2480 generiert](../../error-messages/compiler-errors-1/compiler-error-c2480.md)  
-  
- [Compiler-Fehler C2482 generiert](../../error-messages/compiler-errors-1/compiler-error-c2482.md)  
-  
- [Compiler-Fehler C2483 generiert](../../error-messages/compiler-errors-1/compiler-error-c2483.md)  
-  
- [Compiler-Fehler C2486 generiert](../../error-messages/compiler-errors-1/compiler-error-c2486.md)  
-  
- [Compiler-Fehler C2487](../../error-messages/compiler-errors-1/compiler-error-c2487.md)  
-  
- [Compiler-Fehler C2488 generiert](../../error-messages/compiler-errors-1/compiler-error-c2488.md)  
-  
- [Compiler-Fehler C2489 generiert](../../error-messages/compiler-errors-1/compiler-error-c2489.md)  
-  
- [Compiler-Fehler C2490 generiert](../../error-messages/compiler-errors-1/compiler-error-c2490.md)  
-  
- [Compiler-Fehler C2491 generiert](../../error-messages/compiler-errors-1/compiler-error-c2491.md)  
-  
- [Compiler-Fehler C2492 generiert](../../error-messages/compiler-errors-1/compiler-error-c2492.md)  
-  
- [Compiler-Fehler C2493 generiert](../../error-messages/compiler-errors-1/compiler-error-c2493.md)  
-  
- [Compiler-Fehler C2494](../../error-messages/compiler-errors-1/compiler-error-c2494.md)  
-  
- [Compiler-Fehler C2495 generiert](../../error-messages/compiler-errors-1/compiler-error-c2495.md)  
-  
- [Compiler-Fehler C2496 generiert](../../error-messages/compiler-errors-1/compiler-error-c2496.md)  
-  
- [Compiler-Fehler C2498 generiert](../../error-messages/compiler-errors-1/compiler-error-c2498.md)  
-  
- [Compiler-Fehler C2499](../../error-messages/compiler-errors-1/compiler-error-c2499.md)
+> [!NOTE]
+>  Nicht jeder [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Fehler in MSDN dokumentiert ist. In vielen Fällen enthält die diagnosemeldung alle Informationen, die verfügbar ist. Wenn Sie der Meinung sind, dass eine Fehlermeldung einer zusätzlichen Erklärung bedarf, informieren Sie uns bitte. Verwenden Sie die Feedback-Formular auf dieser Seite, oder wechseln Sie auf der Menüleiste in Visual Studio und wählen Sie **Hilfe**, **Melden eines Fehlers**, oder Sie können einen Bericht Vorschlag oder Fehler senden, auf [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+ Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für den öffentlichen Foren von MSDN. Die [Visual C++-Sprache](http://go.microsoft.com/fwlink/?LinkId=158195) Forum eignet sich für Fragen und Diskussionen zu den [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Sprachsyntax und -Compiler. Die [Visual C++ Allgemein](http://go.microsoft.com/fwlink/?LinkId=158194) Forum eignet sich für Fragen zum [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , die in anderen Foren nicht diskutiert werden. Sie können auch Hilfe zu Fehlern und Warnungen finden, auf [Stack Overflow](http://stackoverflow.com/).  
+  
+|Fehler|Meldung|  
+|-----------|-------------|  
+|[Compilerfehler C2400](compiler-error-c2400.md)|Inlineassembler: Syntaxfehler in "*Kontext*"; gefunden"*token*"|  
+|[Compilerfehler C2401](compiler-error-c2401.md)|"*Bezeichner*": Register muss in ein Basisregister sein "*Kontext*"|  
+|[Compilerfehler C2402](compiler-error-c2402.md)|"*Bezeichner*": Register muss in Index sein "*Kontext*"|  
+|[Compilerfehler C2403](compiler-error-c2403.md)|"*Bezeichner*": Register muss in die Basis/Index sein "*Kontext*"|  
+|[Compilerfehler C2404](compiler-error-c2404.md)|"*Bezeichner*": Unzulässiges Register in "*Kontext*"|  
+|[Compilerfehler C2405](compiler-error-c2405.md)|unzulässiger kurzer Vorwärtsverweis mit Offset|  
+|[Compilerfehler C2406](compiler-error-c2406.md)|"*Bezeichner*": Name ist nicht definiert '*Kontext*"|  
+|[Compilerfehler C2407](compiler-error-c2407.md)|Registrieren Sie ungültige 'Float' in '*Kontext*"|  
+|[Compilerfehler C2408](compiler-error-c2408.md)|Unzulässiger Typ in dem Operator PTR in "*Kontext*"|  
+|[Compilerfehler C2409](compiler-error-c2409.md)|Unzulässiger Typ als Operand in verwendet "*Kontext*"|  
+|[Compilerfehler C2410](compiler-error-c2410.md)|"*Bezeichner*': mehrdeutige Elementnamen in"*Kontext*"|  
+|[Compilerfehler C2411](compiler-error-c2411.md)|"*Bezeichner*': Unzulässiger Struktur/Union-Member in"*Kontext*"|  
+|[Compilerfehler C2412](compiler-error-c2412.md)|"*Bezeichnung*": Groß-/Kleinschreibung Bezeichnung wurde neu definiert|  
+|[Compilerfehler C2413](compiler-error-c2413.md)|"*Bezeichner*': Unzulässige Größe ausgerichtet.|  
+|[Compilerfehler C2414](compiler-error-c2414.md)|Ungültige Operandenanzahl|  
+|[Compilerfehler C2415](compiler-error-c2415.md)|Ungültiger Operandentyp|  
+|Compilerfehler Fehler C2416|Attribut "*Attribut*" kann nicht in diesem Kontext angewendet werden|  
+|[Compilerfehler C2417](compiler-error-c2417.md)|aufgrund einer Division durch 0 (null) in "*Kontext*"|  
+|[Compilerfehler C2418](compiler-error-c2418.md)|Browserdatei kann nicht gelöscht werden: *Dateiname*|  
+|[Compilerfehler C2419](compiler-error-c2419.md)|MOD durch 0 (null) in "*Kontext*"|  
+|[Compilerfehler C2420](compiler-error-c2420.md)|"*Bezeichner*": Unzulässiges Symbol im *Kontext*|  
+|[Compilerfehler C2421](compiler-error-c2421.md)|Mit dem Operator PTR in mit Register verwendet "*Kontext*"|  
+|[Compilerfehler C2422](compiler-error-c2422.md)|Ungültige Segment Außerkraftsetzung in "*Kontext*"|  
+|[Compilerfehler C2423](compiler-error-c2423.md)|"*Anzahl*': Ungültige Skalierung|  
+|[Compilerfehler C2424](compiler-error-c2424.md)|"*token*": Ungültiger Ausdruck in "*Kontext*"|  
+|[Compilerfehler C2425](compiler-error-c2425.md)|"*token*': nicht konstanter Ausdruck in"*Kontext*"|  
+|[Compilerfehler C2426](compiler-error-c2426.md)|"*token*': Unzulässiger Operator in"*Kontext*"|  
+|[Compilerfehler C2427](compiler-error-c2427.md)|"*Klasse*': in diesem Bereich kann die Klasse nicht definiert|  
+|[Compilerfehler C2428](compiler-error-c2428.md)|"*Vorgang*': für Operanden des Typs"Bool"nicht zulässig.|  
+|Compilerfehler Fehler C2429|*Kontext* "*Kontext*"erfordert compilerkennzeichen"*Option*"|  
+|[Compilerfehler C2430](compiler-error-c2430.md)|mehr als ein Indexregister in "*Kontext*"|  
+|[Compilerfehler C2431](compiler-error-c2431.md)|Ungültige Indexregister in "*Kontext*"|  
+|[Compilerfehler C2432](compiler-error-c2432.md)|illegaler Verweis auf 16-Bit-Daten in "*Kontext*"|  
+|[Compilerfehler C2433](compiler-error-c2433.md)|"*Bezeichner*": "*Modifizierer*" auf Datendeklarationen nicht zulässig.|  
+|[Compilerfehler C2434](compiler-error-c2434.md)|"*Symbol*": ein Symbol mit __declspec(process) deklariertes kann nicht initialisiert werden, dynamisch in/CLR: pure-Modus|  
+|[Compilerfehler C2435](compiler-error-c2435.md)|"Var": dynamische Initialisierung verwalteten CRT erfordert, kann nicht mit/clr: safe kompiliert werden|  
+|[Compilerfehler C2436](compiler-error-c2436.md)|"*Bezeichner*': Memberfunktion oder geschachtelte Klasse in der Initialisierungsliste des Konstruktors|  
+|[Compilerfehler C2437](compiler-error-c2437.md)|"*Bezeichner*": wurde bereits initialisiert wurde|  
+|[Compilerfehler C2438](compiler-error-c2438.md)|"*Bezeichner*": kann nicht initialisiert werden statische Klassendaten über-Konstruktor|  
+|[Compilerfehler C2439](compiler-error-c2439.md)|"*Bezeichner*": Schnittstellenmember konnte nicht initialisiert werden|  
+|[Compilerfehler C2440](compiler-error-c2440.md)|"*Konvertierung*': Konvertierung von '*TYP_1*'to'*TYP_2*"|  
+|[Compilerfehler C2441](compiler-error-c2441.md)|"*Variable*": ein Symbol mit __declspec(process) deklariertes muss const in/CLR: pure-Modus|  
+|Compilerfehler Fehler C2442|"*Bezeichner*': geschachtelte Namespacedefinition nicht Inline oder Attribute aufweisen|  
+|[Compilerfehler C2443](compiler-error-c2443.md)|Operanden unterschiedlicher Größe|  
+|[Compilerfehler C2444](compiler-error-c2444.md)|"*Bezeichner*': verwendet ANSI-Prototypen, 'Typ', erwartet gefunden ' {' oder ';'|  
+|[Compilerfehler C2446](compiler-error-c2446.md)|"*Operator*': keine Konvertierung von '*TYP_1*'to'*TYP_2*"|  
+|[Compilerfehler C2447](compiler-error-c2447.md)|"{": fehlende Funktionsheader (im alten Stil Parameterliste?)|  
+|[Compilerfehler C2448](compiler-error-c2448.md)|"*Bezeichner*": Initialisierer im Funktionsformat anscheinend einer Funktionsdefinition|  
+|[Compilerfehler C2449](compiler-error-c2449.md)|"{" auf Dateiebene gefunden - fehlt der Funktionsheader?|  
+|[Compilerfehler C2450](compiler-error-c2450.md)|Switch-Ausdruck vom Typ "*Typ*" ist nicht zulässig|  
+|[Compilerfehler C2451](compiler-error-c2451.md)|bedingte Ausdruck des Typs "*Typ*" ist nicht zulässig|  
+|[Compilerfehler C2452](compiler-error-c2452.md)|"*Typ*': Ungültige Quell-Typ für" safe_cast "|  
+|Compilerfehler Fehler C2453|"*Typ*": Ungültiger Zieltyp für "safe_cast"|  
+|Compilerfehler Fehler C2454|"*Bezeichner*': Namespace-Alias-Name kann nicht mit einem qualifizierten Namen deklariert werden|  
+|Compilerfehler Fehler C2455|"*Klasse*" eine WinRT-Verweisklasse, die von einer importierten Basisklasse abgeleitet ist, kann nicht abstrakt sein.|  
+|Compilerfehler Fehler C2456|"*Klasse*" eine unversiegelte Verweisklasse sind keine öffentlichen Konstruktor sichtbar. Versiegeln Sie die Klasse, oder geben Sie stattdessen Konstruktor als "intern", "protected Private" oder "private".|  
+|[Compilerfehler C2457](compiler-error-c2457.md)|"*Bezeichner*': das vordefinierte Makro kann nicht außerhalb eines Funktionsrumpfs angezeigt werden|  
+|[Compilerfehler C2458](compiler-error-c2458.md)|"*Bezeichner*': Neudefinition in einer Definition|  
+|[Compilerfehler C2459](compiler-error-c2459.md)|"*Bezeichner*": definiert wird, und kann nicht als anonymen Mitglied hinzufügen|  
+|[Compilerfehler C2460](compiler-error-c2460.md)|"*Bezeichner1*': verwendet*identifier_2*", die definiert wird|  
+|[Compilerfehler C2461](compiler-error-c2461.md)|"*Klasse*': Konstruktor fehlt formalen Parameter|  
+|[Compilerfehler C2462](compiler-error-c2462.md)|"*Bezeichner*": Definieren Sie einen Typ kann nicht in 'new-Ausdruck'|  
+|[Compilerfehler C2464](compiler-error-c2464.md)|"*Typ*": kann nicht "new" verwenden, um einen Verweis zuweisen|  
+|[Compilerfehler C2465](compiler-error-c2465.md)|Definition anonymer Typen innerhalb von Klammern nicht möglich|  
+|[Compilerfehler C2466](compiler-error-c2466.md)|Zuordnung eines Arrays der konstanten Größe 0 nicht möglich.|  
+|[Compilerfehler C2467](compiler-error-c2467.md)|Ungültige Deklaration eines anonymen '*User_defined_type*"|  
+|Compilerfehler Fehler C2468|Konstruktor nicht mit "Constexpr" in einer Klasse oder Struktur mit virtuellen Basisklassen|  
+|[Compilerfehler C2469](compiler-error-c2469.md)|"new": Zuordnung von "void"-Objekten nicht möglich|  
+|[Compilerfehler C2470](compiler-error-c2470.md)|"*Funktion*": sieht wie eine Funktionsdefinition, aber es gibt keinen Parameter Liste; offensichtlich Text überspringen|  
+|[Compilerfehler C2471](compiler-error-c2471.md)|kann nicht aktualisiert werden Programmdatenbank '*Filename*"|  
+|[Compilerfehler C2472](compiler-error-c2472.md)|"*Funktion*" kann nicht in verwaltetem Code generiert werden: "*Nachricht*"; Kompilieren Sie mit "/ CLR", um ein gemischtes Image zu generieren.|  
+|[Compilerfehler C2473](compiler-error-c2473.md)|"*Bezeichner*": sieht wie eine Funktionsdefinition, aber es gibt keine Parameterliste.|  
+|[Compilerfehler C2474](compiler-error-c2474.md)|"*Bezeichner*": fehlt ein angrenzendes Semikolon, Schlüsselwort oder Bezeichner werden konnte.|  
+|Compilerfehler Fehler C2475|"*Bezeichner*": Neudefinition; "Constexpr" Spezifizierer Konflikt|  
+|[Compilerfehler C2477](compiler-error-c2477.md)|"*Member*': statische Datenmember kann nicht über eine abgeleitete Klasse initialisiert werden|  
+|Compilerfehler Fehler C2478|Deklaration ist nicht kompatibel mit "*Instanz*"|  
+|[Compilerfehler C2479](compiler-error-c2479.md)|"*Bezeichner*': 'allocate ()' ist nur für statische Datenelemente gültig|  
+|[Compilerfehler C2480](compiler-error-c2480.md)|"*Bezeichner*': 'Thread' ist nur für statische Datenelemente gültig|  
+|Compilerfehler Fehler C2481|"*Bezeichner*": Thread_local gilt nur für statische Member und Variablen im Namespace oder Block Gültigkeitsbereich|  
+|[Compilerfehler C2482](compiler-error-c2482.md)|"*Bezeichner*": der dynamischen Initialisierung von threadlokalen Daten in verwalteten/WINRT-Code nicht zulässig.|  
+|[Compilerfehler C2483](compiler-error-c2483.md)|"*Bezeichner*": Objekt mit Destruktor oder nicht aggregierter Typ kann nicht mit Thread-Speicherdauer deklariert werden, in verwalteten/WINRT-Code|  
+|[Compilerfehler C2485](compiler-error-c2485.md)|"*Bezeichner*': nicht erkanntes erweitertes Attribut|  
+|[Compilerfehler C2486](compiler-error-c2486.md)|"__LOCAL_SIZE" nur in Funktionen mit dem "naked"-Attribut zulässig|  
+|[Compilerfehler C2487](compiler-error-c2487.md)|"*Bezeichner*': Member der Klasse kann nicht mit der Dll-Schnittstelle deklariert werden|  
+|[Compilerfehler C2488](compiler-error-c2488.md)|"*Bezeichner*': 'naked' kann nur auf nicht-memberoperators Funktionsdefinitionen angewendet werden|  
+|[Compilerfehler C2489](compiler-error-c2489.md)|"*Bezeichner*': Initialisierte automatische oder Registervariable im Funktionsbereich in naked-Funktion nicht zulässig|  
+|[Compilerfehler C2490](compiler-error-c2490.md)|"*Schlüsselwort*' in Funktion 'naked'-Attribut nicht zulässig|  
+|[Compilerfehler C2491](compiler-error-c2491.md)|"*Bezeichner*': Definition von Dllimport *Funktion* nicht zulässig|  
+|[Compilerfehler C2492](compiler-error-c2492.md)|"*Variable*": Daten mit Speicherdauer Thread können keine Dll-Schnittstelle|  
+|[Compilerfehler C2493](compiler-error-c2493.md)|Unzulässige Form von "__based"|  
+|[Compilerfehler C2494](compiler-error-c2494.md)|"*Schlüsselwort*" kann nicht innerhalb eines Filterausdrucks aufgerufen werden oder \_ \_schließlich/finally-block|  
+|[Compilerfehler C2495](compiler-error-c2495.md)|"*Bezeichner*": "__declspec(noexcept)" kann nur auf Funktionsdeklarationen oder-Definitionen angewendet werden|  
+|[Compilerfehler C2496](compiler-error-c2496.md)|"*Bezeichner*': 'Selectany' kann nur für Datenelemente mit externer Bindung angewendet werden|  
+|Compilerfehler Fehler C2497|"*Bezeichner*': 'Implementation_key' kann nur auf Funktionsdeklarationen angewendet werden|  
+|[Compilerfehler C2498](compiler-error-c2498.md)|"*Funktion*': 'Novtable' kann nur auf Klassendeklarationen oder-Definitionen angewendet werden|  
+|[Compilerfehler C2499](compiler-error-c2499.md)|"*Klasse*': eine Klasse kann nicht ihre eigene Basisklasse|  

@@ -1,30 +1,53 @@
 ---
-title: "Fehler und Warnungen der Linkertools | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Fehler [C++]"
-  - "Fehler [C++], Linker"
-  - "Linker [C++], Fehler und Warnungen"
+title: Fehler und Warnungen der Linkertools | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- errors [C++]
+- linker [C++], errors and warnings
+- errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Fehler und Warnungen der Linkertools
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 55a178e48f6189a0159943c36a26c5179456343f
+ms.lasthandoff: 04/24/2017
 
-Diese Fehler\- und Warnmeldungen werden von LINK, LIB, DUMPBIN und EDITBIN generiert.  Um Hilfe zu einer bestimmten Fehlermeldung zu erhalten, klicken Sie entweder im Ausgabefenster auf eine Fehlernummer und drücken F1, oder Sie geben die Fehlernummer im Index im Feld **Suchen nach** ein. Sie können auch auf einen der folgenden Links klicken.  
+---
+# <a name="linker-tools-errors-and-warnings"></a>Fehler und Warnungen der Linkertools
+LINK "," LIB "," DUMPBIN "und" EDITBIN generieren diese Fehler und Warnungen. Um Hilfe zu einer bestimmten Fehlermeldung zu erhalten, entweder klicken Sie auf eine Fehlernummer im Ausgabefenster angezeigt, und drücken Sie F1, geben die Fehlernummer in der **suchen Sie nach** im Index ein, oder klicken Sie auf einen der folgenden Links.  
+  
+> [!NOTE]
+>  Nicht jeder [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Fehler oder eine Warnung in MSDN dokumentiert ist. In vielen Fällen enthält die diagnosemeldung alle Informationen, die verfügbar ist. Wenn Sie der Meinung sind, dass eine Fehlermeldung einer zusätzlichen Erklärung bedarf, informieren Sie uns bitte. Verwenden Sie die Feedback-Formular auf dieser Seite, oder wechseln Sie auf der Menüleiste in Visual Studio und wählen Sie **Hilfe**, **Melden eines Fehlers**, oder Sie können einen Bericht Vorschlag oder Fehler senden, auf [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für den öffentlichen Foren von MSDN. Die [Visual C++-Sprache](http://go.microsoft.com/fwlink/?LinkId=158195) Forum eignet sich für Fragen und Diskussionen zu den [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Sprachsyntax und -Compiler. Die [Visual C++ Allgemein](http://go.microsoft.com/fwlink/?LinkId=158194) Forum eignet sich für Fragen zum [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , die in anderen Foren nicht diskutiert werden. Sie können auch Hilfe zu Fehlern und Warnungen finden, auf [Stack Overflow](http://stackoverflow.com/).  
+  
+## <a name="in-this-section"></a>In diesem Abschnitt
   
  [Linkertoolfehler LNK1000](../../error-messages/tool-errors/linker-tools-error-lnk1000.md)  
   
