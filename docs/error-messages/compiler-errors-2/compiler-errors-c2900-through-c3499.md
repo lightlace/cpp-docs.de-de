@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2900 bis C3499 | Microsoft Docs
+title: Compilerfehler C2900 bis C2999 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,6 +8,76 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: error-reference
+f1_keywords:
+- C2900
+- C2901
+- C2905
+- C2907
+- C2915
+- C2916
+- C2922
+- C2924
+- C2925
+- C2926
+- C2938
+- C2949
+- C2950
+- C2954
+- C2956
+- C2960
+- C2961
+- C2963
+- C2964
+- C2965
+- C2966
+- C2967
+- C2968
+- C2972
+- C2980
+- C2981
+- C2982
+- C2983
+- C2984
+- C2985
+- C2986
+- C2987
+- C2997
+- C2999
+helpviewer_keywords:
+- C2900
+- C2901
+- C2905
+- C2907
+- C2915
+- C2916
+- C2922
+- C2924
+- C2925
+- C2926
+- C2938
+- C2949
+- C2950
+- C2954
+- C2956
+- C2960
+- C2961
+- C2963
+- C2964
+- C2965
+- C2966
+- C2967
+- C2968
+- C2972
+- C2980
+- C2981
+- C2982
+- C2983
+- C2984
+- C2985
+- C2986
+- C2987
+- C2997
+- C2999
 dev_langs:
 - C++
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
@@ -30,204 +100,119 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: a5521f4d0bc1c4bb4458ed532af067132b3f6047
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 6ef55aa655692e6ecbd1550bb1ace2eca01bdbad
+ms.lasthandoff: 04/24/2017
 
 ---
-# <a name="compiler-errors-c2900-through-c3499"></a>Compilerfehler C2900 bis C3499
+# <a name="compiler-errors-c2900-through-c2999"></a>Compilerfehler C2900 bis C2999
 In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen Unterabschnitt der Visual C++-Compilerfehler enthalten. Sie können hier auf die Informationen zugreifen oder im Fenster **Ausgabe** in Visual Studio eine Fehlernummer auswählen und dann die F1-TASTE drücken.  
   
- [Compilerfehler C2906](../../error-messages/compiler-errors-2/compiler-error-c2906.md)  
-  
- [Compilerfehler C2908](../../error-messages/compiler-errors-2/compiler-error-c2908.md)  
-  
- [Compilerfehler C2910](../../error-messages/compiler-errors-2/compiler-error-c2910.md)  
-  
- [Compilerfehler C2912](../../error-messages/compiler-errors-2/compiler-error-c2912.md)  
-  
- [Compilerfehler C2913](../../error-messages/compiler-errors-2/compiler-error-c2913.md)  
-  
- [Compilerfehler C2914](../../error-messages/compiler-errors-2/compiler-error-c2914.md)  
-  
- [Compilerfehler C2918](../../error-messages/compiler-errors-2/compiler-error-c2918.md)  
-  
- [Compilerfehler C2919](../../error-messages/compiler-errors-2/compiler-error-c2919.md)  
-  
- [Compilerfehler C2920](../../error-messages/compiler-errors-2/compiler-error-c2920.md)  
-  
- [Compilerfehler C2921](../../error-messages/compiler-errors-2/compiler-error-c2921.md)  
-  
- [Compilerfehler C2947](../../error-messages/compiler-errors-2/compiler-error-c2947.md)  
-  
- [Compilerfehler C2948](../../error-messages/compiler-errors-2/compiler-error-c2948.md)  
-  
- [Compilerfehler C2951](../../error-messages/compiler-errors-2/compiler-error-c2951.md)  
-  
- [Compilerfehler C2955](../../error-messages/compiler-errors-2/compiler-error-c2955.md)  
-  
- [Compilerfehler C2958](../../error-messages/compiler-errors-2/compiler-error-c2958.md)  
-  
- [Compilerfehler C2959](../../error-messages/compiler-errors-2/compiler-error-c2959.md)  
-  
- [Compilerfehler C2962](../../error-messages/compiler-errors-2/compiler-error-c2962.md)  
-  
- [Compilerfehler C2970](../../error-messages/compiler-errors-2/compiler-error-c2970.md)  
-  
- [Compilerfehler C2971](../../error-messages/compiler-errors-2/compiler-error-c2971.md)  
-  
- [Compilerfehler C2974](../../error-messages/compiler-errors-2/compiler-error-c2974.md)  
-  
- [Compilerfehler C2975](../../error-messages/compiler-errors-2/compiler-error-c2975.md)  
-  
- [Compilerfehler C2976](../../error-messages/compiler-errors-2/compiler-error-c2976.md)  
-  
- [Compilerfehler C2988](../../error-messages/compiler-errors-2/compiler-error-c2988.md)  
-  
- [Compilerfehler C2989](../../error-messages/compiler-errors-2/compiler-error-c2989.md)  
-  
- [Compilerfehler C2990](../../error-messages/compiler-errors-2/compiler-error-c2990.md)  
-  
- [Compilerfehler C2993](../../error-messages/compiler-errors-2/compiler-error-c2993.md)  
-  
- [Compilerfehler C3019](../../error-messages/compiler-errors-2/compiler-error-c3019.md)  
-  
- [Compilerfehler C3020](../../error-messages/compiler-errors-2/compiler-error-c3020.md)  
-  
- [Compilerfehler C3062](../../error-messages/compiler-errors-2/compiler-error-c3062.md)  
-  
- [Compilerfehler C3063](../../error-messages/compiler-errors-2/compiler-error-c3063.md)  
-  
- [Compilerfehler C3066](../../error-messages/compiler-errors-2/compiler-error-c3066.md)  
-  
- [Compilerfehler C3068](../../error-messages/compiler-errors-2/compiler-error-c3068.md)  
-  
- [Compilerfehler C3071](../../error-messages/compiler-errors-2/compiler-error-c3071.md)  
-  
- [Compilerfehler C3072](../../error-messages/compiler-errors-2/compiler-error-c3072.md)  
-  
- [Compilerfehler C3073](../../error-messages/compiler-errors-2/compiler-error-c3073.md)  
-  
- [Compilerfehler C3076](../../error-messages/compiler-errors-2/compiler-error-c3076.md)  
-  
- [Compilerfehler C3083](../../error-messages/compiler-errors-2/compiler-error-c3083.md)  
-  
- [Compilerfehler C3099](../../error-messages/compiler-errors-2/compiler-error-c3099.md)  
-  
- [Compilerfehler C3101](../../error-messages/compiler-errors-2/compiler-error-c3101.md)  
-  
- [Compilerfehler C3104](../../error-messages/compiler-errors-2/compiler-error-c3104.md)  
-  
- [Compilerfehler C3115](../../error-messages/compiler-errors-2/compiler-error-c3115.md)  
-  
- [Compilerfehler C3116](../../error-messages/compiler-errors-2/compiler-error-c3116.md)  
-  
- [Compilerfehler C3121](../../error-messages/compiler-errors-2/compiler-error-c3121.md)  
-  
- [Compilerfehler C3141](../../error-messages/compiler-errors-2/compiler-error-c3141.md)  
-  
- [Compilerfehler C3145](../../error-messages/compiler-errors-2/compiler-error-c3145.md)  
-  
- [Compilerfehler C3149](../../error-messages/compiler-errors-2/compiler-error-c3149.md)  
-  
- [Compilerfehler C3153](../../error-messages/compiler-errors-2/compiler-error-c3153.md)  
-  
- [Compilerfehler C3160](../../error-messages/compiler-errors-2/compiler-error-c3160.md)  
-  
- [Compilerfehler C3162](../../error-messages/compiler-errors-2/compiler-error-c3162.md)  
-  
- [Compilerfehler C3163](../../error-messages/compiler-errors-2/compiler-error-c3163.md)  
-  
- [Compilerfehler C3174](../../error-messages/compiler-errors-2/compiler-error-c3174.md)  
-  
- [Compilerfehler C3187](../../error-messages/compiler-errors-2/compiler-error-c3187.md)  
-  
- [Compilerfehler C3200](../../error-messages/compiler-errors-2/compiler-error-c3200.md)  
-  
- [Compilerfehler C3201](../../error-messages/compiler-errors-2/compiler-error-c3201.md)  
-  
- [Compilerfehler C3203](../../error-messages/compiler-errors-2/compiler-error-c3203.md)  
-  
- [Compilerfehler C3209](../../error-messages/compiler-errors-2/compiler-error-c3209.md)  
-  
- [Compilerfehler C3210](../../error-messages/compiler-errors-2/compiler-error-c3210.md)  
-  
- [Compilerfehler C3218](../../error-messages/compiler-errors-2/compiler-error-c3218.md)  
-  
- [Compilerfehler C3222](../../error-messages/compiler-errors-2/compiler-error-c3222.md)  
-  
- [Compilerfehler C3225](../../error-messages/compiler-errors-2/compiler-error-c3225.md)  
-  
- [Compilerfehler C3227](../../error-messages/compiler-errors-2/compiler-error-c3227.md)  
-  
- [Compilerfehler C3231](../../error-messages/compiler-errors-2/compiler-error-c3231.md)  
-  
- [Compilerfehler C3240](../../error-messages/compiler-errors-2/compiler-error-c3240.md)  
-  
- [Compilerfehler C3241](../../error-messages/compiler-errors-2/compiler-error-c3241.md)  
-  
- [Compilerfehler C3252](../../error-messages/compiler-errors-2/compiler-error-c3252.md)  
-  
- [Compilerfehler C3253](../../error-messages/compiler-errors-2/compiler-error-c3253.md)  
-  
- [Compilerfehler C3254](../../error-messages/compiler-errors-2/compiler-error-c3254.md)  
-  
- [Compilerfehler C3255](../../error-messages/compiler-errors-2/compiler-error-c3255.md)  
-  
- [Compilerfehler C3265](../../error-messages/compiler-errors-2/compiler-error-c3265.md)  
-  
- [Compilerfehler C3269](../../error-messages/compiler-errors-2/compiler-error-c3269.md)  
-  
- [Compilerfehler C3276](../../error-messages/compiler-errors-2/compiler-error-c3276.md)  
-  
- [Compilerfehler C3277](../../error-messages/compiler-errors-2/compiler-error-c3277.md)  
-  
- [Compilerfehler C3278](../../error-messages/compiler-errors-2/compiler-error-c3278.md)  
-  
- [Compilerfehler C3282](../../error-messages/compiler-errors-2/compiler-error-c3282.md)  
-  
- [Compilerfehler C3288](../../error-messages/compiler-errors-2/compiler-error-c3288.md)  
-  
- [Compilerfehler C3352](../../error-messages/compiler-errors-2/compiler-error-c3352.md)  
-  
- [Compilerfehler C3353](../../error-messages/compiler-errors-2/compiler-error-c3353.md)  
-  
- [Compilerfehler C3364](../../error-messages/compiler-errors-2/compiler-error-c3364.md)  
-  
- [Compilerfehler C3366](../../error-messages/compiler-errors-2/compiler-error-c3366.md)  
-  
- [Compilerfehler C3374](../../error-messages/compiler-errors-2/compiler-error-c3374.md)  
-  
- [Compilerfehler C3379](../../error-messages/compiler-errors-2/compiler-error-c3379.md)  
-  
- [Compilerfehler C3381](../../error-messages/compiler-errors-2/compiler-error-c3381.md)  
-  
- [Compilerfehler C3386](../../error-messages/compiler-errors-2/compiler-error-c3386.md)  
-  
- [Compilerfehler C3387](../../error-messages/compiler-errors-2/compiler-error-c3387.md)  
-  
- [Compilerfehler C3389](../../error-messages/compiler-errors-2/compiler-error-c3389.md)  
-  
- [Compilerfehler C3395](../../error-messages/compiler-errors-2/compiler-error-c3395.md)  
-  
- [Compilerfehler C3409](../../error-messages/compiler-errors-2/compiler-error-c3409.md)  
-  
- [Compilerfehler C3412](../../error-messages/compiler-errors-2/compiler-error-c3412.md)  
-  
- [Compilerfehler C3414](../../error-messages/compiler-errors-2/compiler-error-c3414.md)  
-  
- [Compilerfehler C3417](../../error-messages/compiler-errors-2/compiler-error-c3417.md)  
-  
- [Compilerfehler Fehler C3445](../../error-messages/compiler-errors-2/compiler-error-c3445.md)  
-  
- [Compilerfehler C3450](../../error-messages/compiler-errors-2/compiler-error-c3450.md)  
-  
- [Compilerfehler C3451](../../error-messages/compiler-errors-2/compiler-error-c3451.md)  
-  
- [Compilerfehler C3456](../../error-messages/compiler-errors-2/compiler-error-c3456.md)  
-  
- [Compilerfehler C3466](../../error-messages/compiler-errors-2/compiler-error-c3466.md)  
-  
- [Compilerfehler C3487](../../error-messages/compiler-errors-2/compiler-error-c3487.md)  
-  
- [Compilerfehler C3498](../../error-messages/compiler-errors-2/compiler-error-c3498.md)
+> [!NOTE]
+>  Nicht jeder [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Fehler in MSDN dokumentiert ist. In vielen Fällen enthält die diagnosemeldung alle Informationen, die verfügbar ist. Wenn Sie der Meinung sind, dass eine Fehlermeldung einer zusätzlichen Erklärung bedarf, informieren Sie uns bitte. Verwenden Sie die Feedback-Formular auf dieser Seite, oder wechseln Sie auf der Menüleiste in Visual Studio und wählen Sie **Hilfe**, **Melden eines Fehlers**, oder Sie können einen Bericht Vorschlag oder Fehler senden, auf [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+ Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für den öffentlichen Foren von MSDN. Die [Visual C++-Sprache](http://go.microsoft.com/fwlink/?LinkId=158195) Forum eignet sich für Fragen und Diskussionen zu den [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Sprachsyntax und -Compiler. Die [Visual C++ Allgemein](http://go.microsoft.com/fwlink/?LinkId=158194) Forum eignet sich für Fragen zum [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , die in anderen Foren nicht diskutiert werden. Sie können auch Hilfe zu Fehlern und Warnungen finden, auf [Stack Overflow](http://stackoverflow.com/).  
+  
+|Fehler|Meldung|  
+|-----------|-------------|  
+|Compilerfehler Fehler C2900|"*Deklarator*": memberfunktionsvorlagen in WinRT-Klassen muss 'private', "internal" oder "protected private"|  
+|Compilerfehler Fehler C2901|"*Bezeichner*': eine generische Schnittstelle oder ein Delegat kann nicht öffentlich sein|  
+|[Compilerfehler C2902](compiler-error-c2902.md)|"*token*": Unerwartetes token folgenden "Vorlagen-/generische", Bezeichner erwartet.|  
+|[Compilerfehler C2903](compiler-error-c2903.md)|"*Bezeichner*": Symbol ist weder eine Klasse Vorlagen-/generische noch eine Vorlagen-/generische-Funktion|  
+|[Compilerfehler C2904](compiler-error-c2904.md)|"*Bezeichner*': Name wird bereits für eine Vorlage im aktuellen Bereich verwendet.|  
+|Compilerfehler Fehler C2905|Veraltet.|  
+|[Compilerfehler C2906](compiler-error-c2906.md)|"*Vorlage*": explizite Spezialisierung erfordert "Vorlage <>"|  
+|Compilerfehler Fehler C2907|Registrieren von Argument "*Anzahl*" gibt keine gültige Anzahl registrieren|  
+|[Compilerfehler C2908](compiler-error-c2908.md)|explizite Spezialisierung; "*Vorlage*' wurde bereits instanziiert|  
+|[Compilerfehler C2909](compiler-error-c2909.md)|"*Bezeichner*": Explizite Instanziierung einer Funktionsvorlage ist ein Rückgabetyp erforderlich.|  
+|[Compilerfehler C2910](compiler-error-c2910.md)|"*Funktion*": kann nicht explizit spezialisiert werden kann|  
+|[Compilerfehler C2911](compiler-error-c2911.md)|"*Member*": kann nicht deklariert oder im aktuellen Bereich definiert|  
+|[Compilerfehler C2912](compiler-error-c2912.md)|explizite Spezialisierung '*Deklaration*' ist keine Spezialisierung einer Funktionsvorlage|  
+|[Compilerfehler C2913](compiler-error-c2913.md)|explizite Spezialisierung; "*Deklaration*' ist keine Spezialisierung einer Klassenvorlage|  
+|[Compilerfehler C2914](compiler-error-c2914.md)|"*Bezeichner*": Vorlagen-/generische Argument kann nicht hergeleitet werden, als Funktionsargument mehrdeutig ist.|  
+|Compilerfehler Fehler C2915|"*Bezeichner*": "*Typ*" kann nicht direkt auf der veröffentlichten Oberfläche eines WinRT-Typs verwendet werden. Mit "Platform:: Object ^' stattdessen dieses Typs übergeben.|  
+|Compilerfehler Fehler C2916|"*Bezeichner*': [FlagsAttribute] muss mit einem 'unsigned Int' zugrunde liegender Typ (nur) auf eine öffentliche Enumeration angegeben werden|  
+|[Compilerfehler C2917](compiler-error-c2917.md)|"*Bezeichner*": Ungültiger Vorlagenparameter|  
+|[Compilerfehler C2918](compiler-error-c2918.md)|"*Bezeichner*': indizierte Eigenschaften können nicht verwendet werden, auf der veröffentlichten Oberfläche eines WinRT-Typs|  
+|[Compilerfehler C2919](compiler-error-c2919.md)|"*Typ*': Operatoren können nicht auf der veröffentlichten Oberfläche eines WinRT-Typs verwendet werden|  
+|[Compilerfehler C2920](compiler-error-c2920.md)|Neudefinition: '*Typ*': Klasse Vorlagen-/generische wurde bereits deklariert als*Deklaration*"|  
+|[Compilerfehler C2921](compiler-error-c2921.md)|Neudefinition: '*Typ*': Klasse Vorlagen-/generische neu deklariert wird als*Deklaration*"|  
+|Compilerfehler Fehler C2922|"*Schnittstelle*": ein WinRT-Schnittstelle kann nicht statische Member enthalten|  
+|[Compilerfehler C2923](compiler-error-c2923.md)|"*Typ*": "*Bezeichner*"ist kein gültiger Vorlagen-/generische Typargument für Parameter"*Parameter*"|  
+|Compilerfehler Fehler C2924|Das Argument der __declspec(interrupt)-Routine befindet sich nicht in R2.|  
+|Compilerfehler Fehler C2925|Die __declspec(interrupt)-Routine kann kein Gleitkomma verwenden.|  
+|Compiler-Fehler C2926 generiert|"*Bezeichner*': eine Standard-Memberinitialisierer ist für einen Member einer anonymen Struktur innerhalb einer Union nicht zulässig.|  
+|[Compilerfehler C2927](compiler-error-c2927.md)|"*Bezeichner*': eine Funktionsvorlage muss mit mindestens einem Argument aufgerufen werden|  
+|[Compilerfehler C2928](compiler-error-c2928.md)|Explizite Instanziierung; "*Bezeichner*"ist kein statisches Datenmember der Vorlagenklasse oder Funktion"*Klasse*"|  
+|[Compilerfehler C2929](compiler-error-c2929.md)|"*Deklarator*": Explizite Instanziierung; explizit erzwungen und unterdrückt die Instanziierung der Vorlagenklasse Element kann nicht|  
+|[Compilerfehler C2930](compiler-error-c2930.md)|"*Klasse*": Template-Id/generische-Id neu definiert als Enumerator von ' Enum *Bezeichner*"|  
+|[Compilerfehler C2931](compiler-error-c2931.md)|"*class1*": Template-Id/generische-Id neu definiert als Memberfunktion von "*Klasse2*"|  
+|[Compilerfehler C2932](compiler-error-c2932.md)|"*Typ*": Template-Id/generische-Id neu definiert als Datenmember von '*Bezeichner*"|  
+|[Compilerfehler C2933](compiler-error-c2933.md)|"*Typ*": Template-Id/generische-Id neu definiert als Typedef-Element von "*Bezeichner*"|  
+|[Compilerfehler C2934](compiler-error-c2934.md)|"*Typ*": Template-Id/generische-Id neu definiert als eine geschachtelte "*Element*"of"*Bezeichner*"|  
+|[Compilerfehler C2935](compiler-error-c2935.md)|"*Typ*': Vorlagen-Id-/ generische-Id, die als globale Funktion neu definiert|  
+|[Compilerfehler C2936](compiler-error-c2936.md)|"*Typ*': Vorlagen-Id-/ generische-Id wird als globale Datenvariable neu definiert.|  
+|[Compilerfehler C2937](compiler-error-c2937.md)|"*Typ*': Vorlagen-Id-/ generische-Id wird als globale Typedef neu definiert.|  
+|Compilerfehler Fehler C2938|"*Bezeichner*": Fehler beim spezialisieren der Alias-Vorlage|  
+|[Compilerfehler C2939](compiler-error-c2939.md)|"*Typ*": Template-Id/generische-Id, die als lokale Datenvariable neu definiert|  
+|[Compilerfehler C2940](compiler-error-c2940.md)|"*Typ*': Vorlagen-Id-/ generische-Id wird als lokale Typedef neu definiert.|  
+|[Compilerfehler C2941](compiler-error-c2941.md)|"*Typ*": Template-Id/generische-Id neu definiert als lokales '*Element*"|  
+|[Compilerfehler C2942](compiler-error-c2942.md)|"*Typ*": Template-Id/generische-Id neu definiert als formales Argument einer Funktion|  
+|[Compilerfehler C2943](compiler-error-c2943.md)|"*Typ*": Template-Id/generische-Id neu definiert als Typargument einer Vorlage|  
+|[Compilerfehler C2944](compiler-error-c2944.md)|"*Typ*": Template-Id/generische-Id neu definiert als Wertargument einer Vorlage|  
+|[Compilerfehler C2945](compiler-error-c2945.md)|Explizite Instanziierung verweist nicht auf die Spezialisierung einer Vorlagenklasse|  
+|[Compilerfehler C2946](compiler-error-c2946.md)|Explizite Instanziierung; "*Typ*' ist keine Spezialisierung einer Vorlagenklasse|  
+|[Compilerfehler C2947](compiler-error-c2947.md)|erwartet wurde ">" Beenden der Vorlagenargumente gefunden "*token*"|  
+|[Compilerfehler C2948](compiler-error-c2948.md)|Explizite Instanziierung; Speicherklassenspezifizierer "*Spezifizierer*" auf die Spezialisierung nicht zulässig|  
+|Compilerfehler Fehler C2949|"thread_local" wird mit "/kernel" nicht unterstützt.|  
+|Compilerfehler C2950|Veraltet.|  
+|[Compilerfehler C2951](compiler-error-c2951.md)|Vorlagen-/generische Deklarationen dürfen nur im globalen, Namespace- oder Klassengültigkeitsbereich|  
+|[Compilerfehler C2952](compiler-error-c2952.md)|"*Deklaration*": Vorlagen-/generische Deklaration Vorlagen-/generische Parameterliste fehlt|  
+|[Compilerfehler C2953](compiler-error-c2953.md)|"*Typ*': Klassenvorlage wurde bereits definiert.|  
+|Compiler-Fehler C2954 generiert|Anweisungswortargument liegt außerhalb des Bereichs.|  
+|[Compilerfehler C2955](compiler-error-c2955.md)|"*Typ*': Klasse Vorlagen-/generische erfordert Vorlagen-/generische Argumentliste|  
+|Compilerfehler Fehler C2956|Größeninformationen-Funktion "Delete-Operator (Void *, Size_t)" würde als Platzierung Aufhebung-Funktion ausgewählt werden.|  
+|[Compilerfehler C2957](compiler-error-c2957.md)|"*token*': Ungültiges linkes Trennzeichen: erwartet" < "|  
+|[Compilerfehler C2958](compiler-error-c2958.md)|Links *Trennzeichen* finden Sie unter "*Datei*(*Line_number*)" wurde nicht ordnungsgemäß zugeordnet.|  
+|[Compilerfehler C2959](compiler-error-c2959.md)|Eine generische Klasse oder Funktion kann kein Member einer Vorlage sein.|  
+|Compilerfehler Fehler C2960|Veraltet.|  
+|Compilerfehler Fehler C2961|"*Funktion*": explizite Instanziierungen inkonsistent, eine vorherigen explizite Instanziierung hat keinen "*Argument*"|  
+|[Compilerfehler C2962](compiler-error-c2962.md)|Syntaxfehler: "*token*': Definition der Vorlagenklasse Memberfunktion endet nicht mit"} "|  
+|Compilerfehler C2963|Veraltet.|  
+|Compilerfehler C2964|Veraltet.|  
+|Compilerfehler Fehler C2965|__declspec (*Spezifizierer*) wird mit/Kernel für den nicht unterstützt|  
+|Compilerfehler Fehler C2966|"*Bezeichner1*": müssen die gleiche __declspec(code_seg(...)) wie seine Basisklasse*Bezeichner2*"|  
+|Compilerfehler Fehler C2967|"*Bezeichner*': eine überschreibende virtuelle Funktion müssen der gleichen __declspec(code_seg(...)) als einer überschriebenen virtuellen Funktion|  
+|Compilerfehler Fehler C2968|"*Bezeichner*': rekursive alias Deklaration|  
+|[Compilerfehler C2969](compiler-error-c2969.md)|Syntaxfehler: "*token*': Definition der Memberfunktion endet nicht mit"} "|  
+|[Compilerfehler C2970](compiler-error-c2970.md)|"*Typ*": Vorlagenparameter "*Parameter*": "*Argument*': ein Ausdruck, der Objekte mit interner Verknüpfung kann nicht als Nichttyp-Argument verwendet werden|  
+|[Compilerfehler C2971](compiler-error-c2971.md)|"*Typ*": Vorlagenparameter "*Parameter*": "*Argument*': eine Variable mit nicht-statische Speicherdauer nicht als Nichttyp-Argument verwendet werden|  
+|Compilerfehler Fehler C2972|"*Typ*": Vorlagenparameter "*Parameter*": der Typ des Nichttyp-Argument ist ungültig|  
+|[Compilerfehler C2973](compiler-error-c2973.md)|"*Vorlage*': Ungültiges Vorlagenargument '*Anzahl*"|  
+|[Compilerfehler C2974](compiler-error-c2974.md)|"*Typ*": Ungültiger Vorlagen-/generische Argument für '*Parameter*", Typ erwartet|  
+|[Compilerfehler C2975](compiler-error-c2975.md)|"*Typ*': Ungültiges Vorlagenargument für '*Parameter*", Kompilierzeit konstanter Ausdruck erwartet|  
+|[Compilerfehler C2976](compiler-error-c2976.md)|"*Typ*': zu wenige Vorlagen-/generische Argumente|  
+|[Compilerfehler C2977](compiler-error-c2977.md)|"*Typ*': zu viele Vorlagen-/generische Argumente|  
+|[Compilerfehler C2978](compiler-error-c2978.md)|Syntaxfehler: erwartet "*Schlüsselwort1*'oder'*Schlüsselwort2*"; gefunden wurde der Typ"*Typ*"; Nichttyp-Parameter werden in Generika nicht unterstützt.|  
+|[Compilerfehler C2979](compiler-error-c2979.md)|Explizite Spezialisierungen werden für Generika nicht unterstützt.|  
+|Compilerfehler Fehler C2980|C++-Ausnahmebehandlung wird mit /kernel nicht unterstützt.|  
+|Compilerfehler Fehler C2981|die dynamische Form "*Schlüsselwort*" ist nicht mit/Kernel für den unterstützt|  
+|Compilerfehler Fehler C2982|"*Deklaration*': unterschiedliche __declspec(code_seg(...)) verwendet: wurde"*Bezeichner1*"jetzt"*Bezeichner2*"|  
+|Compilerfehler Fehler C2983|"*Deklaration*": alle Deklarationen müssen eine identische __declspec(code_seg(...)) aufweisen.|  
+|Compilerfehler Fehler C2984|Veraltet.|  
+|Compilerfehler Fehler C2985|"*Argument*': das Argument für __declspec(code_seg(...)) muss einen Textabschnitt|  
+|Compilerfehler Fehler C2986|"*Bezeichner*': __declspec(code_seg(...)) kann nur auf eine Klasse oder eine Funktion angewendet werden|  
+|Compilerfehler Fehler C2987|eine Deklaration sind keine beide __declspec (Code_seg ("*Bezeichner*")) und __declspec (Code_seg ("*Wert*"))|  
+|[Compilerfehler C2988](compiler-error-c2988.md)|Unerkannte Vorlagendeklaration/-definition|  
+|[Compilerfehler C2989](compiler-error-c2989.md)|"*Klasse*": wurde bereits als ein nicht klassenbasierte Vorlagen-/generische Klasse Vorlagen-/generische deklariert|  
+|[Compilerfehler C2990](compiler-error-c2990.md)|"*Klasse*': nicht klassenbasierte Vorlagen-/generische als eine Klasse Vorlagen-/generische wurde bereits deklariert|  
+|[Compilerfehler C2991](compiler-error-c2991.md)|Neudefinition des Vorlagen-/generische Parameter "*-Parameter*"|  
+|[Compilerfehler C2992](compiler-error-c2992.md)|"*Klasse*": Ungültige oder fehlende Vorlagen-/generische Parameterliste|  
+|[Compilerfehler C2993](compiler-error-c2993.md)|"*Typ*": Ungültiger Typ für den Nichttyp-Vorlagenparameter "*Bezeichner*"|  
+|[Compilerfehler C2994](compiler-error-c2994.md)|Unbenannte Klasse in der Vorlagen-Parameterliste|  
+|[Compilerfehler C2995](compiler-error-c2995.md)|"*Deklaration*": Funktionsvorlage wurde bereits definiert.|  
+|[Compilerfehler C2996](compiler-error-c2996.md)|"*Funktion*': rekursive Definition der Vorlagenfunktion|  
+|Compilerfehler Fehler C2997|"*Funktion*": Arraygrenze kann nicht von einer Standard-Memberinitialisierer abgeleitet werden|  
+|[Compilerfehler C2998](compiler-error-c2998.md)|"*Deklarator*': eine Vorlagendefinition ist nicht möglich|  
+|Compilerfehler C2999|Unbekannte Fehler wählen Sie den technischen Supportbefehl im Visual C++-Hilfemenü, oder öffnen Sie den technischen Support-Hilfedatei für Weitere Informationen|  
+

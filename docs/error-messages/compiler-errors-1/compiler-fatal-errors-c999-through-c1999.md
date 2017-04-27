@@ -88,6 +88,86 @@ f1_keywords:
 - C1901
 - C1903
 - C1904
+helpviewer_keywords:
+- C1012
+- C1013
+- C1014
+- C1016
+- C1018
+- C1019
+- C1020
+- C1021
+- C1022
+- C1023
+- C1034
+- C1035
+- C1036
+- C1037
+- C1038
+- C1041
+- C1045
+- C1047
+- C1048
+- C1049
+- C1053
+- C1063
+- C1068
+- C1069
+- C1070
+- C1074
+- C1077
+- C1082
+- C1086
+- C1087
+- C1088
+- C1089
+- C1090
+- C1091
+- C1098
+- C1099
+- C1100
+- C1101
+- C1102
+- C1103
+- C1104
+- C1105
+- C1108
+- C1109
+- C1110
+- C1111
+- C1112
+- C1114
+- C1190
+- C1193
+- C1195
+- C1196
+- C1201
+- C1202
+- C1205
+- C1206
+- C1207
+- C1208
+- C1209
+- C1210
+- C1211
+- C1300
+- C1301
+- C1302
+- C1306
+- C1310
+- C1312
+- C1352
+- C1353
+- C1383
+- C1384
+- C1451
+- C1505
+- C1508
+- C1510
+- C1852
+- C1901
+- C1903
+- C1904
 dev_langs:
 - C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
@@ -111,13 +191,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: e8d1696e325ac6a005636aa1d874d30b9c296e91
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Schwerwiegende Compilerfehler C999 bis C1999
 In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen Unterabschnitt der Visual C++-Compilerfehler enthalten. Sie können hier auf die Informationen zugreifen oder im Fenster **Ausgabe** in Visual Studio eine Fehlernummer auswählen und dann die F1-TASTE drücken.  
+  
+> [!NOTE]
+>  Nicht jeder [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Fehler in MSDN dokumentiert ist. In vielen Fällen enthält die diagnosemeldung alle Informationen, die verfügbar ist. Wenn Sie der Meinung sind, dass eine Fehlermeldung einer zusätzlichen Erklärung bedarf, informieren Sie uns bitte. Verwenden Sie die Feedback-Formular auf dieser Seite, oder wechseln Sie auf der Menüleiste in Visual Studio und wählen Sie **Hilfe**, **Melden eines Fehlers**, oder Sie können einen Bericht Vorschlag oder Fehler senden, auf [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+ Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für den öffentlichen Foren von MSDN. Die [Visual C++-Sprache](http://go.microsoft.com/fwlink/?LinkId=158195) Forum eignet sich für Fragen und Diskussionen zu den [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Sprachsyntax und -Compiler. Die [Visual C++ Allgemein](http://go.microsoft.com/fwlink/?LinkId=158194) Forum eignet sich für Fragen zum [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , die in anderen Foren nicht diskutiert werden. Sie können auch Hilfe zu Fehlern und Warnungen finden, auf [Stack Overflow](http://stackoverflow.com/).  
   
 |Fehler|Meldung|  
 |-----------|-------------|  
@@ -130,7 +215,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Schwerwiegender Fehler C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|Unbekanntes Flag "*Zeichenfolge*'in'*Option*"|  
 |[Schwerwiegender Fehler C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|Keine Quelldatei angegeben|  
 |[Schwerwiegender Fehler C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|Compilerlimit: zu tiefe Schachtelung von Makros|  
-|[Schwerwiegender Fehler C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie vergessen hinzufügen ' #include *Datei*> ", im Quellcode?|  
+|[Schwerwiegender Fehler C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie vergessen hinzufügen ' #include <*Datei*>', im Quellcode?|  
 |Schwerwiegender Fehler C1012|Fehlende zugehörige Klammer: Fehlendes '*Zeichen*"|  
 |Schwerwiegender Fehler C1013|Compilerlimit: zu viele geöffnete Klammern|  
 |Schwerwiegender Fehler C1014|zu viele Includedateien: Tiefe = *Anzahl*|  
