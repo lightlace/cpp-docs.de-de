@@ -19,9 +19,9 @@ caps.handback.revision: 14
 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] unterstützt das Schlüsselwort `public enum class`, das einem standardmäßigen C\+\+\-`scoped  enum` entspricht. Wenn Sie einen Enumerator verwenden, der durch das Schlüsselwort `public enum class` deklariert ist, müssen Sie den Enumerationsbezeichner dazu benutzen, den Umfang jedes Enumeratorwerts festzulegen.  
   
 ## Hinweise  
- Eine `public enum class`, die keinen Zugriffsspezifizierer hat, z. B. `public`, wird als standardmäßige [Enumeration mit C\+\+\-Bereichseinschränkung](../Topic/Enumerations%20\(C++\).md) behandelt.  
+ Eine `public enum class`, die keinen Zugriffsspezifizierer hat, z. B. `public`, wird als standardmäßige [Enumeration mit C\+\+\-Bereichseinschränkung](~/cpp/enumerations-cpp.md) behandelt.  
   
- Eine `public enum class` oder `public enum struct`\-Deklaration kann einen zugrunde liegenden Typ jedes beliebigen ganzzahligen Typs haben, aber die [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] selbst erfordert, dass der Typ für eine Flags\-Enumeration ein int32\- oder uint32\-Wert ist. Die folgende Syntax beschreibt die Teile einer `public enum class` oder `public enum struct`. Weitere Informationen finden Sie unter [enum class](../Topic/enum%20class%20%20\(C++%20Component%20Extensions\).md).  
+ Eine `public enum class` oder `public enum struct`\-Deklaration kann einen zugrunde liegenden Typ jedes beliebigen ganzzahligen Typs haben, aber die [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] selbst erfordert, dass der Typ für eine Flags\-Enumeration ein int32\- oder uint32\-Wert ist. Die folgende Syntax beschreibt die Teile einer `public enum class` oder `public enum struct`. Weitere Informationen finden Sie unter [enum class](~/windows/enum-class-cpp-component-extensions.md).  
   
  Dieses Beispiel zeigt, wie eine öffentliche Enumerationsklasse definiert wird:  
   

@@ -31,7 +31,7 @@ First();
  Ein Iterator, der das erste Element in der Kartenansicht angibt.  
   
 ## Hinweise  
- Eine einfache Möglichkeit, den von First\(\) zurückgegeben Iterator zu halten, ist, den Rückgabewert einer Variablen zuzuweisen, die mit dem [automatischen](../Topic/auto%20\(C++\).md) Typableitungsschlüsselwort deklariert wird. Beispielsweise `auto x = myMapView->First();`.  
+ Eine einfache Möglichkeit, den von First\(\) zurückgegeben Iterator zu halten, ist, den Rückgabewert einer Variablen zuzuweisen, die mit dem [automatischen](~/cpp/auto-cpp.md) Typableitungsschlüsselwort deklariert wird. Beispielsweise `auto x = myMapView->First();`.  
   
 ## Anforderungen  
  **Header:** collection.h  

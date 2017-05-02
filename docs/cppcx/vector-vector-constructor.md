@@ -94,7 +94,7 @@ Vector(
  Ein Wert, der verwendet wird, um die einzelnen Elemente im aktuellen Vector zu initialisieren.  
   
  `v`  
- Ein [Lvalues und Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) zu einem [::std::vector](../Topic/vector%20Class%201.md), der verwendet wird, um den aktuellen Vector zu initialisieren.  
+ Ein [Lvalues und Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md) zu einem [::std::vector](../Topic/vector%20Class%201.md), der verwendet wird, um den aktuellen Vector zu initialisieren.  
   
  `ptr`  
  Zeiger zu `std::vector`, der verwendet wird, um den aktuellen Vector zu initialisieren.  
@@ -106,10 +106,10 @@ Vector(
  Ein [std::array](../Topic/vector%20Class%201.md)\-Objekt, das verwendet wird, um den aktuellen Vector zu initialisieren.  
   
  `first`  
- Das erste Element in einer Sequenz von Objekten, die verwendet werden, um den aktuellen Vector zu initialisieren. Der Typ von `first` wird mittels *perfekter Weiterleitung* übergeben. Weitere Informationen finden Sie unter [Rvalue\-Verweisdeklarator: &&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md).  
+ Das erste Element in einer Sequenz von Objekten, die verwendet werden, um den aktuellen Vector zu initialisieren. Der Typ von `first` wird mittels *perfekter Weiterleitung* übergeben. Weitere Informationen finden Sie unter [Rvalue\-Verweisdeklarator: &&](~/cpp/rvalue-reference-declarator-amp-amp.md).  
   
  `last`  
- Das letzte Element in einer Sequenz von Objekten, die verwendet werden, um den aktuellen Vector zu initialisieren. Der Typ von `last` wird mittels *perfekter Weiterleitung* übergeben. Weitere Informationen finden Sie unter [Rvalue\-Verweisdeklarator: &&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md).  
+ Das letzte Element in einer Sequenz von Objekten, die verwendet werden, um den aktuellen Vector zu initialisieren. Der Typ von `last` wird mittels *perfekter Weiterleitung* übergeben. Weitere Informationen finden Sie unter [Rvalue\-Verweisdeklarator: &&](~/cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## Anforderungen  
  **Header:** collection.h  

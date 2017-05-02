@@ -57,7 +57,7 @@ MapView(::std::initializer_list<
  Ein Funktionsobjekt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der MapView zu bestimmen.  
   
  `m`  
- Ein Verweis oder [Lvalues und Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) zu [map\-Klasse](../standard-library/map-class.md), der verwendet wird, um die aktuelle MapView zu initialisieren.  
+ Ein Verweis oder [Lvalues und Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md) zu [map\-Klasse](../standard-library/map-class.md), der verwendet wird, um die aktuelle MapView zu initialisieren.  
   
  `first`  
  Der Eingabeiterator des ersten Elements in einem Bereich von Elementen, die verwendet werden, um die aktuelle MapView zu initialisieren.  

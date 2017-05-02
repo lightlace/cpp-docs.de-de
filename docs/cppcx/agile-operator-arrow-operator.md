@@ -33,7 +33,7 @@ const throw();
 ## Rückgabewert  
  Ein Handle auf das Objekt, das vom aktuellen Agile\-Objekt dargestellt wird.  
   
- Dieser Operator gibt tatsächlich einen nicht veröffentlichten internen Typ zurück. Eine einfache Möglichkeit, den Rückgabewert aufzunehmen, besteht darin, ihn einer Variablen zuzuweisen, die mit dem [automatischen](../Topic/auto%20\(C++\).md) Typableitungsschlüsselwort deklariert wird.  
+ Dieser Operator gibt tatsächlich einen nicht veröffentlichten internen Typ zurück. Eine einfache Möglichkeit, den Rückgabewert aufzunehmen, besteht darin, ihn einer Variablen zuzuweisen, die mit dem [automatischen](~/cpp/auto-cpp.md) Typableitungsschlüsselwort deklariert wird.  
   
 ## Anforderungen  
  **Unterstützter Client \(Mindestversion\):** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

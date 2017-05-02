@@ -22,7 +22,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # Platform::Type-Klasse
-Enthält Laufzeitinformationen über einen Typ, insbesondere einen Zeichenfolgennamen und einen Typecode. Wird durch Aufrufen einer [Object::GetType\-Methode](../cppcx/object-gettype-method.md) für ein Objekt oder durch Anwendung des Operators [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) auf einen Klassen\- oder Strukturnamen abgerufen.  
+Enthält Laufzeitinformationen über einen Typ, insbesondere einen Zeichenfolgennamen und einen Typecode. Wird durch Aufrufen einer [Object::GetType\-Methode](../cppcx/object-gettype-method.md) für ein Objekt oder durch Anwendung des Operators [typeid](~/windows/typeid-cpp-component-extensions.md) auf einen Klassen\- oder Strukturnamen abgerufen.  
   
 ## Syntax  
   

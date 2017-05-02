@@ -34,7 +34,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^
  Ein Iterator, der auf das erste Element im Vektor verweist.  
   
 ## Hinweise  
- Eine einfache Möglichkeit, den von First\(\) zurückgegeben Iterator zu halten, ist, den Rückgabewert einer Variablen zuzuweisen, die mit dem [automatischen](../Topic/auto%20\(C++\).md) Typableitungsschlüsselwort deklariert wird. Beispielsweise `auto x = myVector->First();`. Dieser Iterator kennt die Länge der Auflistung.  
+ Eine einfache Möglichkeit, den von First\(\) zurückgegeben Iterator zu halten, ist, den Rückgabewert einer Variablen zuzuweisen, die mit dem [automatischen](~/cpp/auto-cpp.md) Typableitungsschlüsselwort deklariert wird. Beispielsweise `auto x = myVector->First();`. Dieser Iterator kennt die Länge der Auflistung.  
   
  Wenn Sie ein Paar von Iteratoren zur Übergabe an eine STL\-Funktion benötigen, verwenden Sie die free\-Funktionen [Windows::Foundation::Collections::begin](../cppcx/begin-function.md) und [Windows::Foundation::Collections::end](../cppcx/end-function.md)  
   

@@ -102,4 +102,4 @@ ref class Map sealed;
   
 ## Siehe auch  
  [\(NOTINBUILD\) Plattformnamespace](http://msdn.microsoft.com/de-de/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)   
- [Erstellen von Windows\-Runtime\-Komponenten in C\+\+](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)
+ [Erstellen von Windows\-Runtime\-Komponenten in C\+\+](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)

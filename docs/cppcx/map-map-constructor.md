@@ -52,7 +52,7 @@ Map(
  Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Map zu bestimmen.  
   
  `m`  
- Ein Verweis oder [Lvalues und Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) zu [map\-Klasse](../standard-library/map-class.md), der verwendet wird, um die aktuelle Map zu initialisieren.  
+ Ein Verweis oder [Lvalues und Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md) zu [map\-Klasse](../standard-library/map-class.md), der verwendet wird, um die aktuelle Map zu initialisieren.  
   
  `first`  
  Der Eingabeiterator des ersten Elements in einem Bereich von Elementen, die verwendet werden, um die aktuelle Map zu initialisieren.  

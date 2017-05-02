@@ -19,7 +19,7 @@ caps.handback.revision: 9
 Sie können [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\-Code mit [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)] \([!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)]\)\-Code frei kombinieren. In derselben Übersetzungseinheit können Sie Objekte verwenden, die mit [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] Handle\-zu\-Objekt\-Notation \(`^`\) und [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] Intelligente\-Zeiger\-Notation \(`ComPtr<T>`\) deklariert wurden. Sie müssen jedoch Rückgabewerte, [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)]\-HRESULT\-Fehlercodes und [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\-Ausnahmen manuell behandeln.  
   
 ## [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)]\-Entwicklung  
- Weitere Informationen zum Erstellen und Konsumieren von [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] finden Sie unter [Windows Runtime C\+\+ Template Library \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md).  
+ Weitere Informationen zum Erstellen und Konsumieren von [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] finden Sie unter [Windows Runtime C\+\+ Template Library \(WRL\)](~/windows/windows-runtime-cpp-template-library-wrl.md).  
   
 ## Beispiel  
  Der folgende Codeausschnitt zeigt, wie mithilfe von [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] und [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)][!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]\-Klassen konsumiert werden und eine Metadatendatei überprüft wird.  

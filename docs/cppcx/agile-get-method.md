@@ -33,7 +33,7 @@ Gibt den Handle auf das Objekt zurück, das vom aktuellen Agile\-Objekt dargeste
 ## Rückgabewert  
  Ein Handle auf das Objekt, das vom aktuellen Agile\-Objekt dargestellt wird.  
   
- Der Typ des Rückgabewerts ist eigentlich ein nicht genannter interner Typ. Eine einfache Möglichkeit, den Rückgabewert aufzunehmen, besteht darin, in einer Variablen zuzuweisen, die mit dem [automatischen](../Topic/auto%20\(C++\).md) Typableitungsschlüsselwort deklariert wird. Beispielsweise `auto x = myAgileTvariable->Get();`.  
+ Der Typ des Rückgabewerts ist eigentlich ein nicht genannter interner Typ. Eine einfache Möglichkeit, den Rückgabewert aufzunehmen, besteht darin, in einer Variablen zuzuweisen, die mit dem [automatischen](~/cpp/auto-cpp.md) Typableitungsschlüsselwort deklariert wird. Beispielsweise `auto x = myAgileTvariable->Get();`.  
   
 ## Anforderungen  
  **Unterstützter Client \(Min.\):** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

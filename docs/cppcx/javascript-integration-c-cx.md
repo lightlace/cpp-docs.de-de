@@ -16,7 +16,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # JavaScript-Integration (C++/CX)
-Siehe [Erstellen von Windows\-Runtime\-Komponenten](../Topic/Creating%20Windows%20Runtime%20Components.md).  
+Siehe [Erstellen von Windows\-Runtime\-Komponenten](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133).  
   
 ## Siehe auch  
  [Interoperabilität mit anderen Sprachen](../cppcx/interoperating-with-other-languages-c-cx.md)

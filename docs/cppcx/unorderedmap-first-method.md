@@ -30,7 +30,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
  Ein Iterator, der das erste Element in der Zuordnung angibt.  
   
 ## Hinweise  
- Eine einfache Möglichkeit, den von First\(\) zurückgegeben Iterator zu halten, ist, den Rückgabewert einer Variablen zuzuweisen, die mit dem [automatischen](../Topic/auto%20\(C++\).md) Typableitungsschlüsselwort deklariert wird. Beispielsweise `auto x = myUnorderedMap->First();`.  
+ Eine einfache Möglichkeit, den von First\(\) zurückgegeben Iterator zu halten, ist, den Rückgabewert einer Variablen zuzuweisen, die mit dem [automatischen](~/cpp/auto-cpp.md) Typableitungsschlüsselwort deklariert wird. Beispielsweise `auto x = myUnorderedMap->First();`.  
   
 ## Anforderungen  
  **Header:** collection.h  
