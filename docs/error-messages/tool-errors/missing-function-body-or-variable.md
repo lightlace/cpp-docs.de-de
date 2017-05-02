@@ -1,32 +1,48 @@
 ---
-title: "Fehlender Funktionsrumpf oder fehlende Variable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Funktionsrumpf"
-  - "Variablen, Fehlen"
+title: Fehlender Funktionsrumpf oder fehlende Variable | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- function body
+- variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Fehlender Funktionsrumpf oder fehlende Variable
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: c80a5626e7f674ddca7d44e94aa8ab64c735c81e
+ms.lasthandoff: 04/24/2017
 
-Wenn einfach nur ein Funktionsprototyp vorhanden ist, setzt der Compiler die Verarbeitung zwar ohne Fehler fort, der Linker ist jedoch nicht in der Lage, einen Aufruf einer Adresse aufzulösen, da kein Platz für den Funktionscode oder Variablen reserviert ist.  Der Fehler tritt erst auf, wenn Sie einen Aufruf für eine Funktion erstellen, den der Linker auflösen muss.  
+---
+# <a name="missing-function-body-or-variable"></a>Fehlender Funktionsrumpf oder fehlende Variable
+Klicken Sie mit nur einem Funktionsprototyp der Compiler ohne Fehler fortgesetzt, obwohl der Linker kann keinen Aufruf an eine Adresse nicht aufgelöst werden, da keine Funktionscode oder die Variable reservierte Speicherplatz vorhanden ist. Dieser Fehler wird nicht angezeigt werden, bis Sie einen Aufruf der Funktion erstellen, die der Linker auflösen müssen.  
   
-## Beispiel  
- Der Funktionsaufruf in main verursacht LNK2019, da der Prototyp es zulässt, dass der Compiler die Funktion als vorhanden betrachtet.  Der Linker stellt dann fest, dass dies nicht der Fall ist.  
+## <a name="example"></a>Beispiel  
+ Der Funktionsaufruf in Main wird zum Fehler LNK2019 führen, da der Prototyp kann der Compiler glauben, dass die Funktion vorhanden ist.  Der Linker sucht nach, dass dies nicht der Fall.  
   
 ```  
 // LNK2019_MFBV.cpp  
@@ -37,8 +53,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Stellen Sie unter C\+\+ sicher, dass die Implementierung einer spezifischen Funktion für eine Klasse und nicht nur ein Prototyp in der Klassendefinition enthalten ist.  Wenn Sie die Klasse außerhalb der Headerdatei definieren, sollten Sie außerdem darauf achten, dass der Klassenname vor der Funktion \(`Classname``::``memberfunction`\) aufgeführt ist.  
+## <a name="example"></a>Beispiel  
+ Stellen Sie in C++ sicher, dass Sie die Implementierung einer bestimmten Funktion für eine Klasse und nicht nur einen Prototyp in der Klassendefinition einschließen. Wenn Sie die Klasse außerhalb der Headerdatei definieren, werden Sie sicherstellen, dass der Name der Klasse vor der Funktion (`Classname::memberfunction`).  
   
 ```  
 // LNK2019_MFBV_2.cpp  
@@ -56,5 +72,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Linkertoolfehler LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
