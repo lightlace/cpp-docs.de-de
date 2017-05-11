@@ -21,10 +21,11 @@ f1_keywords:
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d54e1d5071414f1e8f6ae96391aa1659397bbcb3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: cc990171c1196a35f0fe90d99ee1cbdbca337c9a
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;-Funktionen
@@ -289,7 +290,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
  Die zu löschenden Flags.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Manipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. [setf](../standard-library/ios-base-class.md#ios_base__setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags), _ *Mask*) und gibt dann **str** zurück.  
+ Der Manipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*) und gibt dann **str** zurück.  
   
 ### <a name="example"></a>Beispiel  
   Unter [setw](../standard-library/iomanip-functions.md#setw) finden Sie ein Beispiel für die Verwendung von `resetiosflags`.  
@@ -306,7 +307,7 @@ T3 setbase(int _Base);
  Die Zahlenbasis.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Manipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#ios_base__fmtflags)), und gibt dann **str** zurück. Die Verwendung von **mask** wird hier wie folgt bestimmt:  
+ Der Manipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags)), und gibt dann **str** zurück. Die Verwendung von **mask** wird hier wie folgt bestimmt:  
   
 -   Wenn _ *Base* gleich 8 ist, dann ist **mask** gleich `ios_base::`[oct](../standard-library/ios-functions.md#oct).  
   
@@ -314,7 +315,7 @@ T3 setbase(int _Base);
   
 -   Wenn _ *Base* gleich 16 ist, dann ist **mask** gleich `ios_base::`[hex](../standard-library/ios-functions.md#hex).  
   
--   Wenn_*Base* irgendein anderer Wert ist, dann ist „mask“ `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags)(0).  
+-   Wenn_*Base* irgendein anderer Wert ist, dann ist „mask“ `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0).  
   
 ### <a name="example"></a>Beispiel  
   Unter [setw](../standard-library/iomanip-functions.md#setw) finden Sie ein Beispiel für die Verwendung von `setbase`.  
@@ -332,7 +333,7 @@ T4 setfill(Elem Ch);
  Das zum Auffüllen in einer rechts ausgerichteten Anzeige verwendete Zeichen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Vorlagenmanipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. [fill](../standard-library/basic-ios-class.md#basic_ios__fill)(`Ch`) und gibt dann **str** zurück. Der Typ **Elem** muss mit dem Elementtyp des Streams **str** übereinstimmen.  
+ Der Vorlagenmanipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. [fill](../standard-library/basic-ios-class.md#fill)(`Ch`) und gibt dann **str** zurück. Der Typ **Elem** muss mit dem Elementtyp des Streams **str** übereinstimmen.  
   
 ### <a name="example"></a>Beispiel  
   Unter [setw](../standard-library/iomanip-functions.md#setw) finden Sie ein Beispiel für die Verwendung von `setfill`.  
@@ -349,7 +350,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
  Die festzulegenden Flags.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Manipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. [setf](../standard-library/ios-base-class.md#ios_base__setf)(_ *Mask*) und gibt dann **str** zurück.  
+ Der Manipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*) und gibt dann **str** zurück.  
   
 ### <a name="example"></a>Beispiel  
   Unter [setw](../standard-library/iomanip-functions.md#setw) finden Sie ein Beispiel für die Verwendung von `setiosflags`.  
@@ -366,7 +367,7 @@ T5 setprecision(streamsize Prec);
  Die Genauigkeit für Gleitkommawerte.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Manipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. [precision](../standard-library/ios-base-class.md#ios_base__precision)(`Prec`) und gibt dann **str** zurück.  
+ Der Manipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. [precision](../standard-library/ios-base-class.md#precision)(`Prec`) und gibt dann **str** zurück.  
   
 ### <a name="example"></a>Beispiel  
   Unter [setw](../standard-library/iomanip-functions.md#setw) finden Sie ein Beispiel für die Verwendung von `setprecision`.  
@@ -383,7 +384,7 @@ T6 setw(streamsize Wide);
  Die Breite des Anzeigefelds.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Manipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. [width](../standard-library/ios-base-class.md#ios_base__width)(_ *Wide*),gibt dann **str** zurück.  
+ Der Manipulator gibt ein Objekt zurück, das beim Extrahieren aus oder Einfügen in den Stream **str** **str** aufruft. [width](../standard-library/ios-base-class.md#width)(_ *Wide*),gibt dann **str** zurück.  
   
 ### <a name="remarks"></a>Hinweise  
  Mit setw wird die Breite nur für das nächste Element im Stream festgelegt. Der Manipulator muss vor jedem Element eingefügt werden, dessen Breite festgelegt werden soll.  

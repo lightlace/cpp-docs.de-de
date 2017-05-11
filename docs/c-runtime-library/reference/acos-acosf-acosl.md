@@ -1,57 +1,74 @@
 ---
-title: "acos, acosf, acosl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "acosf"
-  - "acos"
-  - "acosl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "acos"
-  - "acosl"
-  - "acosf"
-  - "math/acosf"
-  - "math/acosl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "acos-Funktion"
-  - "acosf-Funktion"
-  - "acosl-Funktion"
-  - "arccosine-Funktion"
-  - "Trigonometrische Funktionen"
+title: acos, acosf, acosl | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- acosf
+- acos
+- acosl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- acos
+- acosl
+- acosf
+- math/acosf
+- math/acosl
+dev_langs:
+- C++
+helpviewer_keywords:
+- acos function
+- acosl function
+- acosf function
+- trigonometric functions
+- arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# acos, acosf, acosl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5b5b2e5bca54f65a6fa54d43f92f60a704135110
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 Berechnet den Arkuskosinus.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double acos(   
@@ -71,32 +88,32 @@ long double acosl(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `x`  
- Wert zwischen – 1 und 1, für den der Arkuskosinus berechnet werden soll \(der umgekehrte Kosinus\).  
+ Der Wert zwischen-1 und 1 für die den Arkuskosinus (der umgekehrte Kosinus) berechnet werden soll.  
   
-## Rückgabewert  
- Die `acos`\-Funktion gibt den Arkuskosinus von `x` im Bogenmaß im Bereich 0 bis π zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ Die `acos`-Funktion gibt den Arkuskosinus von `x` im Bogenmaß im Bereich 0 bis π zurück.  
   
- Wenn `x` kleiner als – 1 oder größer als 1 ist, gibt `acos` standardmäßig einen unbestimmten Wert zurück.  
+ In der Standardeinstellung Wenn `x` ist kleiner als-1 oder größer als 1 ist, `acos` einen unbestimmten Wert zurück.  
   
-|Eingabe|SEH\-Ausnahme|Matherr\-Ausnahme|  
-|-------------|-------------------|-----------------------|  
+|Eingabe|SEH-Ausnahme|Matherr-Ausnahme|  
+|-----------|-------------------|-----------------------|  
 |± ∞|`INVALID`|`_DOMAIN`|  
 |± QNAN,IND|Keine|`_DOMAIN`|  
-|&#124;x&#124;\>1|`INVALID`|`_DOMAIN`|  
+|&#124;x&#124;>1|`INVALID`|`_DOMAIN`|  
   
-## Hinweise  
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von `acos` aufrufen, die `float` und `long double`\-Typen verwenden und zurückgeben.  In einem C\-Programm verwendet `acos` immer `double` und gibt diesen Wert zurück.  
+## <a name="remarks"></a>Hinweise  
+ Da C++ das Überladen zulässt, können Sie Überladungen von `acos` aufrufen, die `float` und `long double`-Typen verwenden und zurückgeben. In einem C-Programm verwendet `acos` immer `double` und gibt diesen Wert zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|Optionale Header|  
-|-------------|---------------------------|----------------------|  
-|`acos`, `acosf`, `acosl`|\<math.h\>|\<errno.h\>|  
+|-------------|---------------------|----------------------|  
+|`acos`, `acosf`, `acosl`|\<math.h>|\<errno.h>|  
   
-## Beispiel  
- Dieses Programm fordert zur Eingabe eines Werts im – 1 bis 1 auf.  Eingabewerte außerhalb dieses Bereichs erzeugen `_DOMAIN`\-Fehlermeldungen.  Wenn ein gültiger Wert eingegeben wird, gibt das Programm den Arkussinus und den Arkuskosinus dieses Werts aus.  
+## <a name="example"></a>Beispiel  
+ Dieses Programm fordert zur Eingabe eines Werts im – 1 bis 1 auf. Eingabewerte außerhalb dieses Bereichs erzeugen `_DOMAIN`-Fehlermeldungen. Wenn ein gültiger Wert eingegeben wird, gibt das Programm den Arkussinus und den Arkuskosinus dieses Werts aus.  
   
 ```  
 // crt_asincos.c  
@@ -139,16 +156,16 @@ int main( int ac, char* av[] )
 }  
 ```  
   
-  **Arkussinus von 0,000000 \= 0,000000**  
-**Arkuskosinus von 0,000000 \= 1,570796**   
-## .NET Framework-Entsprechung  
- [System::Math::Acos](https://msdn.microsoft.com/en-us/library/system.math.acos.aspx)  
+```Output  
+Arcsine of 0.000000 = 0.000000  
+Arccosine of 0.000000 = 1.570796  
+```  
   
-## Siehe auch  
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Gleitkomma-Unterstützung](../../c-runtime-library/floating-point-support.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
  [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)

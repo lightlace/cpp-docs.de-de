@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3b0bd528d45bbd3b68da91c14626b3bfadb6695a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3081981cde81b200d5896bab4d362db13742eb42
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="getfmode"></a>_get_fmode
@@ -73,7 +74,7 @@ errno_t _get_fmode(
  Ein Zeiger auf eine ganze Zahl, die durch den aktuellen Standardmodus ersetzt werden soll: `_O_TEXT` oder `_O_BINARY`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt&0; (null) zurück, wenn der Vorgang erfolgreich war. Wenn ein Fehler auftritt, erscheint ein Fehlercode. Wenn `pmode` `NULL` ist, wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `EINVAL` zurück.  
+ Gibt 0 (null) zurück, wenn der Vorgang erfolgreich war. Wenn ein Fehler auftritt, erscheint ein Fehlercode. Wenn `pmode` `NULL` ist, wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `EINVAL` zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Funktion legt die globale Variable [_fmode](../../c-runtime-library/fmode.md) fest. Diese Variable gibt den Standard-Dateiübersetzungsmodus für Datei-E/A-Vorgänge auf niedriger Ebene und Stream-Datei-E/A-Vorgänge an, wie z.B. `_open`, `_pipe`, `fopen` und `freopen`.  
@@ -88,9 +89,6 @@ errno_t _get_fmode(
   
 ## <a name="example"></a>Beispiel  
  Siehe das Beispiel in [_set_fmode](../../c-runtime-library/reference/set-fmode.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [_fmode](../../c-runtime-library/fmode.md)   

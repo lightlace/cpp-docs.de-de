@@ -13,6 +13,7 @@ dev_langs:
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
+f1_keywords: []
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
 caps.latest.revision: 7
 author: corob-msft
@@ -32,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d270a9790f33fe5258108663f9618f0da1ed5b37
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 04820d66b272d284940971d1661b4c41f116aa2f
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="input-stream-member-functions"></a>Eingabestream-Memberfunktionen
@@ -43,20 +45,20 @@ Eingabestream-Memberfunktionen werden für Datenträgereingaben verwendet. Diese
   
 - [Die open-Funktion für die Eingabestreams](#vclrftheopenfunctionforinputstreamsanchor11)  
   
-- [Die get-Funktion](#vclrfthegetfunctionanchor12)  
+- [Die get](#vclrfthegetfunctionanchor12)  
   
-- [Die getline-Funktion](#vclrfthegetlinefunctionanchor13)  
+- [Die getline](#vclrfthegetlinefunctionanchor13)  
   
-- [ Die read-Funktion](#vclrfthereadfunctionanchor14)  
+- [Die schreibgeschützte](#vclrfthereadfunctionanchor14)  
   
 - [Die seekg- und tellg-Funktionen](#vclrftheseekgandtellgfunctionsanchor7)  
   
 - [Die clos-Funktion für Eingabestreams](#vclrftheclosefunctionforinputstreamsanchor15)  
   
-##  <a name="a-namevclrftheopenfunctionforinputstreamsanchor11a-the-open-function-for-input-streams"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a> Die open-Funktion für Eingabestreams  
+##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> Die open-Funktion für Eingabestreams  
  Wenn Sie einen Eingabedateistream (ifstream) verwenden, müssen Sie den Stream einer bestimmten Datenträgerdatei zuordnen. Sie können das im Konstruktor machen, oder die **open**-Funktion verwenden. In beiden Fällen sind die Argumente gleich.  
   
- In der Regel geben Sie ein [ios_base:: openmode](../standard-library/ios-base-class.md#ios_base__openmode)-Flag an, wenn Sie die Datei öffnen, die einem Eingabestream (der Standardmodus ist **ios::in**) zugeordnet ist. Eine Liste der **open_mode**-Flags finden Sie unter [Die open-Funktion](#vclrftheopenfunctionforinputstreamsanchor11). Die Flags können mit dem bitweisen OR-Operator ( &#124; ) kombiniert werden.  
+ In der Regel geben Sie ein [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)-Flag an, wenn Sie die Datei öffnen, die einem Eingabestream (der Standardmodus ist **ios::in**) zugeordnet ist. Eine Liste der **Open_mode** Flags finden Sie unter [öffnen](#vclrftheopenfunctionforinputstreamsanchor11). Die Flags können mit dem bitweisen OR-Operator ( &#124; ) kombiniert werden.  
   
  Um eine Datei zu lesen, verwenden Sie zuerst die **fail**-Memberfunktion, um zu bestimmen, ob sie vorhanden ist:  
   
@@ -67,7 +69,7 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="a-namevclrfthegetfunctionanchor12a-the-get-function"></a><a name="vclrfthegetfunctionanchor12"></a> Die get-Funktion  
+##  <a name="vclrfthegetfunctionanchor12"></a>Die get
  Die unformatierte **get**-Memberfunktion funktioniert wie der **>>**-Operator, mit zwei Ausnahmen. Erstens enthält die **get**-Funktion Leerzeichen, wohingegen der Extraktor Leerzeichen ausschließt, wenn das **skipws**-Flag festgelegt ist (Standardwert). Zweitens wird die **get**-Funktion weniger wahrscheinlich dazu führen, dass ein gebundener Ausgabestream (z.B. `cout`) gelöscht wird.  
   
  Eine Variante der **get**-Funktion gibt eine Pufferadresse und die maximale Anzahl zu lesender Zeichen an. Dies hilft dabei, die Anzahl der Zeichen einzuschränken, die zu einer bestimmten Variable gesendet werden, wie dieses Beispiel zeigt:  
@@ -101,7 +103,7 @@ int main()
 1234  
 ```  
   
-##  <a name="a-namevclrfthegetlinefunctionanchor13a-the-getline-function"></a><a name="vclrfthegetlinefunctionanchor13"></a> Die getline-Funktion  
+##  <a name="vclrfthegetlinefunctionanchor13"></a>Die getline
  Die **getline**-Memberfunktion ähnelt der **get**-Funktion. Beide Funktionen ermöglichen ein drittes Argument, das abschließende Zeichen für die Eingabe angibt. Der Standardwert ist das Zeilenumbruchzeichen. Beide Funktionen reservieren ein Zeichen für das benötigte abschließende Zeichen. Allerdings lässt **get** das abschließende Zeichen im Stream und **getline** entfernt das abschließende Zeichen.  
   
  Im folgenden Beispiel wird ein abschließendes Zeichen für den Eingabestream angegeben:  
@@ -127,7 +129,7 @@ int main( )
 test  
 ```  
   
-##  <a name="a-namevclrfthereadfunctionanchor14a-the-read-function"></a><a name="vclrfthereadfunctionanchor14"></a> Die read-Funktion  
+##  <a name="vclrfthereadfunctionanchor14"></a>Die schreibgeschützte
  Die **read**-Memberfunktion liest Bytes aus einer Datei in einem angegebenen Speicherbereich. Das Längenargument bestimmt die Anzahl gelesener Bytes. Wenn Sie dieses Argument nicht einfügen, wird das Lesen beendet, sobald das physische Ende der Datei erreicht ist, oder, bei einer Textmodusdatei, wenn ein eingebettetes `EOF`-Zeichen gelesen wird.  
   
  Dieses Beispiel liest einen binären Datensatz aus einer Lohnabrechnungsdatei in eine Struktur:  
@@ -158,7 +160,7 @@ int main()
   
  Das Programm setzt voraus, dass die Datensätze formatiert sind, genau wie durch die Struktur ohne abschließendes Wagenrücklauf- oder Zeilenvorschubzeichen angegeben.  
   
-##  <a name="a-namevclrftheseekgandtellgfunctionsanchor7a-the-seekg-and-tellg-functions"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a> Die seekg- und tellg-Funktionen  
+##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> Die seekg- und tellg-Funktionen  
  Eingabedatei-Streams behalten einen internen Zeiger auf der Position in der Datei, in der Daten als Nächstes gelesen werden. Legen Sie diesen Zeiger mit der `seekg`-Funktion fest, wie hier gezeigt:  
   
 ```  
@@ -212,7 +214,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namevclrftheclosefunctionforinputstreamsanchor15a-the-close-function-for-input-streams"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a> Die close-Funktion für Eingabestreams  
+##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> Die close-Funktion für Eingabestreams  
  Die **close**-Memberfunktion schließt die Datenträgerdatei, die einem Eingabedateistream zugeordnet ist, und gibt ein Betriebssystem-Dateihandle frei. Der [ifstream](../standard-library/basic-ifstream-class.md)-Destruktor schließt die Datei für Sie, aber Sie können die **close**-Funktion verwenden, wenn Sie eine andere Datei für das gleiche Streamobjekt öffnen müssen.  
   
 ## <a name="see-also"></a>Siehe auch  

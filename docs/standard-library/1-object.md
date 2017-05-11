@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.contentlocale: de-de
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="1-object"></a>_1-Objekt
@@ -54,7 +55,7 @@ namespace placeholders {
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Bei den Objekten `_1, _2, ... _M` handelt es sich um Platzhalter, die jeweils das erste, zweite, ..., n-te Argument in einem Funktionsaufruf eines Objekts festlegen, das von [bind-Funktion](../standard-library/functional-functions.md#bind_function) zurückgegeben wird. Sie verwenden `_N`, um anzugeben, wo das n-te Argument bei Auswertung des Bindungsausdrucks eingefügt werden soll.  
+ Die Objekte `_1, _2, ... _M` sind Platzhalter Festlegen der ersten, zweiten,..., Monat Argument bzw. in einem Funktionsaufruf in ein zurückgegebenes Objekt [binden](../standard-library/functional-functions.md#bind). Sie verwenden `_N`, um anzugeben, wo das n-te Argument bei Auswertung des Bindungsausdrucks eingefügt werden soll.  
   
  In dieser Implementierung lautet der Wert von `M` 20.  
   
@@ -116,6 +117,6 @@ int main()
  **Namespace:** std  
   
 ## <a name="see-also"></a>Siehe auch  
- [bind-Funktion](../standard-library/functional-functions.md#bind_function)   
+ [Binden](../standard-library/functional-functions.md#bind)   
  [is_placeholder-Klasse](../standard-library/is-placeholder-class.md)
 

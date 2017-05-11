@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 316e062f4953874ce014f8288e86094209760faf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: df96a24b04473099daaca29472f90c9770181e82
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
@@ -70,17 +71,17 @@ void _CrtDoForAllClientObjects(
   
 #### <a name="parameters"></a>Parameter  
  `pfn`  
- Zeiger zu der von der Anwendung bereitgestellten Rückruffunktion. Der erste Parameter für diese Funktion zeigt auf die Daten. Der zweite Parameter ist der Kontextzeiger, der an den Aufruf von `_CrtDoForAllClientObjects` übergeben wird.  
+ Zeiger zu der von der Anwendung bereitgestellten Rückruffunktion. Der erste Parameter für diese Funktion zeigt auf die Daten. Der zweite Parameter ist der Kontextzeiger, der an den Aufruf von `_CrtDoForAllClientObjects`übergeben wird.  
   
  `context`  
  Zeiger zu dem von der Anwendung bereitgestellten Kontext, um die von der Anwendung bereitgestellten Funktion zu übergeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_CrtDoForAllClientObjects` -Funktion sucht die verknüpfte Liste des Heaps für Speicherblöcke im `_CLIENT_BLOCK` -Typ und ruft die von der Anwendung bereitgestellte Funktion auf, wenn ein Block dieses Typs gefunden wird. Der gefundene Block und der `context`-Parameter werden als Argumente an die von der Anwendung bereitgestellte Funktion übergeben. Während des Debuggens kann eine Anwendung eine bestimmte Zuordnungsgruppe nachverfolgen, indem sie die Debugheapfunktionen explizit zum Belegen des Speichers aufruft und angibt, dass den Blöcken der `_CLIENT_BLOCK`-Blocktyp zugewiesen wird. Diese Blöcke können dann einzeln nachverfolgt und während der Erkennung von Speicherverlusten und der Berichterstellung von Speicherzuständen unterschiedlich übermittelt werden.  
+ Die `_CrtDoForAllClientObjects` -Funktion sucht die verknüpfte Liste des Heaps für Speicherblöcke im `_CLIENT_BLOCK` -Typ und ruft die von der Anwendung bereitgestellte Funktion auf, wenn ein Block dieses Typs gefunden wird. Der gefundene Block und der `context` -Parameter werden als Argumente an die von der Anwendung bereitgestellte Funktion übergeben. Während des Debuggens kann eine Anwendung eine bestimmte Zuordnungsgruppe nachverfolgen, indem sie die Debugheapfunktionen explizit zum Belegen des Speichers aufruft und angibt, dass den Blöcken der `_CLIENT_BLOCK` -Blocktyp zugewiesen wird. Diese Blöcke können dann einzeln nachverfolgt und während der Erkennung von Speicherverlusten und der Berichterstellung von Speicherzuständen unterschiedlich übermittelt werden.  
   
- Wenn das `_CRTDBG_ALLOC_MEM_DF`-Bitfeld des [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)-Flags nicht aktiviert ist, wird unmittelbar `_CrtDoForAllClientObjects` zurückgegeben. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von `_CrtDoForAllClientObjects` während der Vorverarbeitung entfernt.  
+ Wenn das `_CRTDBG_ALLOC_MEM_DF` -Bitfeld des [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) -Kennzeichens nicht aktiviert ist, wird unmittelbar `_CrtDoForAllClientObjects` zurückgegeben. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von `_CrtDoForAllClientObjects` während der Vorverarbeitung entfernt.  
   
- Weitere Informationen zum `_CLIENT_BLOCK`-Typ und seiner Verwendung durch andere Debugfunktionen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details). Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [Details zum CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
+ Weitere Informationen zum `_CLIENT_BLOCK` -Typ und zu seiner Verwendung durch andere Debugfunktionen finden Sie unter [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details)übergeben wird. Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
  Wenn `pfn``NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) auf `EINVAL` gesetzt, und die Funktion wird zurückgegeben.  
   
@@ -93,9 +94,6 @@ void _CrtDoForAllClientObjects(
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
  **Bibliotheken:** Nur Debugversionen von C-Laufzeitbibliotheken.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debugroutinen](../../c-runtime-library/debug-routines.md)   

@@ -57,10 +57,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ac8ef965bd904ecfa17f78d6898c2e21ccb1591a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5ff2c3bb0ce0a39e6481e2fbb5d690aa2972a0a0
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
@@ -93,7 +94,7 @@ long double acoshl(
 ## <a name="return-value"></a>Rückgabewert  
  Die `acosh` -Funktionen geben den umgekehrten hyperbolischen Cosinus (hyperbolischen Arcuscosinus) von `x`zurück. Diese Funktionen sind in der Domäne `x` ≥ 1 gültig. Wenn `x` kleiner als 1 ist, wird `errno` auf `EDOM` gesetzt, und das Ergebnis ist ein stilles NaN. Wenn `x` ein stilles NaN, undefiniert oder unendlich ist, wird derselbe Wert zurückgegeben.  
   
-|Eingabe|SEH-Ausnahme|`_matherr`-Ausnahme|  
+|Eingabe|SEH-Ausnahme|`_matherr` -Ausnahme|  
 |-----------|-------------------|--------------------------|  
 |± QNAN, IND, INF|Keine|Keine|  
 |x < 1|Keine|Keine|  
@@ -136,9 +137,6 @@ int main( void )
 cosh( 0.785398 ) = 1.324609  
 acosh( 1.324609 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gleitkomma-Unterstützung](../../c-runtime-library/floating-point-support.md)   

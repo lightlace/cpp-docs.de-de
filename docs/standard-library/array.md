@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 565c3deaa98b4a01d02e5e63767de2beecd5a1bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3458390f8e6dcaee229346c66d569a5486ae74c4
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
@@ -60,19 +61,19 @@ Definiert die Containervorlagenklasse `array` und einige unterstützende Vorlage
   
 |||  
 |-|-|  
-|[operator==](../standard-library/array-operators.md#operator_eq_eq)|Array-Vergleich, gleich|  
-|[operator!=](../standard-library/array-operators.md#operator_neq)|Array-Vergleich, ungleich|  
-|[operator\<](../standard-library/array-operators.md#operator_lt_)|Array-Vergleich, kleiner als|  
-|[operator>=](../standard-library/array-operators.md#operator_gt__eq)|Array-Vergleich, größer als oder gleich|  
-|[operator>](../standard-library/array-operators.md#operator_gt_)|Array-Vergleich, größer als|  
-|[operator<=](../standard-library/array-operators.md#operator_lt__eq)|Array-Vergleich, kleiner als oder gleich|  
+|[operator==](../standard-library/array-operators.md#op_eq_eq)|Array-Vergleich, gleich|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|Array-Vergleich, ungleich|  
+|[operator\<](../standard-library/array-operators.md#op_lt)|Array-Vergleich, kleiner als|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|Array-Vergleich, größer als oder gleich|  
+|[operator>](../standard-library/array-operators.md#op_gt)|Array-Vergleich, größer als|  
+|[operator<=](../standard-library/array-operators.md#op_lt_eq)|Array-Vergleich, kleiner als oder gleich|  
   
 ### <a name="functions"></a>Funktionen  
   
 |||  
 |-|-|  
-|[get](../standard-library/array-functions.md#get_function)|Ruft ein angegebenes Arrayelement ab.|  
-|[swap](../standard-library/array-functions.md#swap_function)|Tauscht die Inhalte zweier Arrays miteinander aus.|  
+|[get](../standard-library/array-functions.md#get)|Ruft ein angegebenes Arrayelement ab.|  
+|[swap](../standard-library/array-functions.md#swap)|Tauscht die Inhalte zweier Arrays miteinander aus.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [\<tuple>](../standard-library/tuple.md)   

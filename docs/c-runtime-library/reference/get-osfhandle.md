@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2e96f911e6784744eb539f6ce2b1961102d9869d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 314f57a38cdabb4257624550f6686075a5b61697
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
@@ -75,7 +76,7 @@ intptr_t _get_osfhandle(
  Eine vorhandener Dateideskriptor.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Betriebssystem-Dateihandle, wenn `fd` gültig ist. Ansonsten wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Wenn die Ausführung weiterhin zugelassen wird, gibt diese Funktion `INVALID_HANDLE_VALUE` (–1) zurück und legt `errno` auf `EBADF` fest, was auf einen ungültigen Dateihandle hinweist.  
+ Ein Betriebssystem-Dateihandle, wenn `fd` gültig ist. Ansonsten wird der ungültige Parameterhandler, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, aufgerufen. Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, `INVALID_HANDLE_VALUE` (-1) und legt `errno` zu `EBADF`, der angibt, eines ungültiges Dateihandle.  
   
 ## <a name="remarks"></a>Hinweise  
  Rufen Sie `_close` auf, um eine geöffnete Datei mit `_get_osfhandle` zu schließen. Durch einen Aufruf von `_close` wird auch das zugrunde liegende Handle geschlossen; daher ist es nicht notwendig die Win32-Funktion `CloseHandle` am ursprünglichen Handle aufzurufen.  
@@ -87,9 +88,6 @@ intptr_t _get_osfhandle(
 |`_get_osfhandle`|\<io.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   

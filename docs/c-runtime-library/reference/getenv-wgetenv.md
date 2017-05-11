@@ -1,59 +1,76 @@
 ---
-title: "getenv, _wgetenv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "getenv"
-  - "_wgetenv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-environment-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wgetenv"
-  - "getenv"
-  - "_tgetenv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tgetenv-Funktion"
-  - "_wgetenv-Funktion"
-  - "Umgebungswerte"
-  - "Umgebungsvariablen"
-  - "getenv-Funktion"
-  - "tgetenv-Funktion"
-  - "wgetenv-Funktion"
+title: getenv, _wgetenv | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- getenv
+- _wgetenv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-environment-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wgetenv
+- getenv
+- _tgetenv
+dev_langs:
+- C++
+helpviewer_keywords:
+- getenv function
+- tgetenv function
+- wgetenv function
+- environment values
+- environment variables
+- _tgetenv function
+- _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
 caps.latest.revision: 31
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 31
----
-# getenv, _wgetenv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2838a1c79ad97bfd665a367b2a597cb20ac70097
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Ruft einen Wert aus der aktuellen Umgebung ab.  Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [getenv\_s, \_wgetenv\_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md).  
+---
+# <a name="getenv-wgetenv"></a>getenv, _wgetenv
+Ruft einen Wert aus der aktuellen Umgebung ab. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md).  
   
 > [!IMPORTANT]
->  Diese API kann nicht in Anwendungen verwendet werden, die in Windows\-Runtime ausgeführt werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Diese API kann nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 char *getenv(   
@@ -64,50 +81,50 @@ wchar_t *_wgetenv(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `varname`  
  Umgebungsvariablenname.  
   
-## Rückgabewert  
- Gibt einen Zeiger auf den Umgebungstabelleneintrag zurück, der `varname` enthält.  Es ist nicht sicher, der Wert der Umgebungsvariablen mit dem zurückgegebenen Zeiger zu ändern.  Verwenden Sie die Funktion `_putenv`, um den Wert einer Umgebungsvariablen zu ändern.  Der Rückgabewert ist `NULL`, wenn `varname` nicht in der Umgebungstabelle gefunden wird.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt einen Zeiger auf den Umgebungstabelleneintrag zurück, der `varname` enthält. Es ist nicht sicher, der Wert der Umgebungsvariablen mit dem zurückgegebenen Zeiger zu ändern. Verwenden Sie die Funktion `_putenv`, um den Wert einer Umgebungsvariablen zu ändern. Der Rückgabewert ist `NULL`, wenn `varname` nicht in der Umgebungstabelle gefunden wird.  
   
-## Hinweise  
- Die `getenv`\-Funktion sucht die Liste von Umgebungsvariablen für `varname`.  Für `getenv` wird im Windows\-Betriebssystem die Groß\-\/Kleinschreibung nicht beachtet.  `getenv` und `_putenv` verwenden die Kopie der Umgebung, auf die die globale Variable `_environ` verweist, um auf die Umgebung zuzugreifen.  `getenv` arbeitet nur auf den Datenstrukturen, auf die die Laufzeitbibliothek zugreifen kann, und nicht auf dem Umgebungssegment, das vom Betriebssystem für den Prozess erstellt wurde.  Programme, die das Argument `envp` für [main](../../cpp/main-program-startup.md) oder [wmain](../../cpp/main-program-startup.md) verwenden, rufen daher möglicherweise ungültige Informationen ab.  
+## <a name="remarks"></a>Hinweise  
+ Die `getenv`-Funktion sucht die Liste von Umgebungsvariablen für `varname`. Für `getenv` wird im Windows-Betriebssystem die Groß-/Kleinschreibung nicht beachtet. `getenv` und `_putenv` verwenden die Kopie der Umgebung, auf die die globale Variable `_environ` verweist, um auf die Umgebung zuzugreifen. `getenv` arbeitet nur auf den Datenstrukturen, auf die die Laufzeitbibliothek zugreifen kann, und nicht auf dem Umgebungssegment, das vom Betriebssystem für den Prozess erstellt wurde. Programme, die das Argument `envp` für [main](../../cpp/main-program-startup.md) oder [wmain](../../cpp/main-program-startup.md) verwenden, rufen daher möglicherweise ungültige Informationen ab.  
   
- Wenn `varname` den Wert `NULL` aufweist, ruft diese Funktion einen Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `NULL` zurück.  
+ Wenn `varname` den Wert `NULL` aufweist, ruft diese Funktion einen ungültigen Parameterhandler auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `NULL` zurück.  
   
- `_wgetenv` ist eine Breitzeichenversion von `getenv`. Das Argument und der Rückgabewert von `_wgetenv` sind Zeichenfolgen mit Breitzeichen.  Die globale `_wenviron`\-Variable ist eine Breitzeichen\-Version von `_environ`.  
+ `_wgetenv` ist eine Breitzeichenversion von `getenv`. Das Argument und der Rückgabewert von `_wgetenv` sind Zeichenfolgen mit Breitzeichen. Die globale `_wenviron`-Variable ist eine Breitzeichen-Version von `_environ`.  
   
- In einem MBCS\-Programm \(z. B. in einem SBCS\-ASCII\-Programm\), ist `_wenviron` zunächst `NULL`, da die Umgebung aus den Multibyte\-Zeichenfolgen besteht.  Beim ersten Aufruf von `_wputenv` oder beim ersten Aufruf von `_wgetenv` \(sofern bereits eine \(MBCS\)\-Umgebung vorhanden ist\), wird dann eine entsprechende Breitzeichenumgebung erstellt, auf die dann `_wenviron` verweist.  
+ In einem MBCS-Programm (z. B. in einem SBCS-ASCII-Programm), ist `_wenviron` zunächst `NULL`, da die Umgebung aus den Multibyte-Zeichenfolgen besteht. Beim ersten Aufruf von `_wputenv` oder beim ersten Aufruf von `_wgetenv` (sofern bereits eine (MBCS)-Umgebung vorhanden ist), wird dann eine entsprechende Breitzeichenumgebung erstellt, auf die dann `_wenviron` verweist.  
   
- In einem Unicodeprogramm \(`_wmain`\) ist `_environ` dementsprechend `NULL`, da die Umgebung aus Zeichenfolgen mit Breitzeichen besteht.  Beim ersten Aufruf von `_putenv` oder beim ersten Aufruf von `getenv` \(sofern bereits eine \(Unicode\)\-Umgebung vorhanden ist\), wird dann eine entsprechende MBCS\-Umgebung erstellt, auf die dann `_environ` verweist.  
+ In einem Unicodeprogramm (`_wmain`) ist `_environ` dementsprechend `NULL`, da die Umgebung aus Zeichenfolgen mit Breitzeichen besteht. Beim ersten Aufruf von `_putenv` oder beim ersten Aufruf von `getenv` (sofern bereits eine (Unicode)-Umgebung vorhanden ist), wird dann eine entsprechende MBCS-Umgebung erstellt, auf die dann `_environ` verweist.  
   
- Wenn in einem Programm zwei Kopien der Umgebung \(MBCS und Unicode\) gleichzeitig vorhanden sind, muss das Laufzeitsystem beide Kopien verwalten, wodurch sich die Ausführungszeit verlangsamt.  Beispielsweise erfolgt bei jedem Aufruf von `_putenv` automatisch auch ein Aufruf von `_wputenv`, damit die beiden Umgebungszeichenfolgen übereinstimmen.  
+ Wenn in einem Programm zwei Kopien der Umgebung (MBCS und Unicode) gleichzeitig vorhanden sind, muss das Laufzeitsystem beide Kopien verwalten, wodurch sich die Ausführungszeit verlangsamt. Beispielsweise erfolgt bei jedem Aufruf von `_putenv` automatisch auch ein Aufruf von `_wputenv`, damit die beiden Umgebungszeichenfolgen übereinstimmen.  
   
 > [!CAUTION]
->  In seltenen Fällen, wenn das Laufzeitsystem sowohl eine Unicodeversion als auch eine Multibyteversion der Umgebung verwaltet, stimmen diese zwei Versionen möglicherweise nicht exakt überein.  Dies liegt daran, dass die Zuordnung von einer eindeutigen Unicodezeichenfolge zu einer Multibyte\-Zeichenfolge nicht unbedingt eindeutig ist, obwohl sich jede eindeutige Multibyte\-Zeichenfolge einer eindeutigen Unicodezeichenfolge zuordnen lässt.  Weitere Informationen finden Sie unter [\_environ, \_wenviron](../../c-runtime-library/environ-wenviron.md).  
+>  In seltenen Fällen, wenn das Laufzeitsystem sowohl eine Unicodeversion als auch eine Multibyteversion der Umgebung verwaltet, stimmen diese zwei Versionen möglicherweise nicht exakt überein. Dies liegt daran, dass die Zuordnung von einer eindeutigen Unicodezeichenfolge zu einer Multibyte-Zeichenfolge nicht unbedingt eindeutig ist, obwohl sich jede eindeutige Multibyte-Zeichenfolge einer eindeutigen Unicodezeichenfolge zuordnen lässt. Weitere Informationen finden Sie unter [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
   
 > [!NOTE]
->  Die Familien `_putenv` und `_getenv` der Funktionen sind nicht threadsicher.  `_getenv` gibt möglicherweise einen Zeichenfolgenzeiger zurück, während `_putenv` die Zeichenfolge ändert, was zu zufälligen Fehlern führen kann.  Stellen Sie sicher, dass Aufrufe dieser Funktionen synchronisiert sind.  
+>  Die Familien `_putenv` und `_getenv` der Funktionen sind nicht threadsicher. `_getenv` gibt möglicherweise einen Zeichenfolgenzeiger zurück, während `_putenv` die Zeichenfolge ändert, was zu zufälligen Fehlern führen kann. Stellen Sie sicher, dass Aufrufe dieser Funktionen synchronisiert sind.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tgetenv`|`getenv`|`getenv`|`_wgetenv`|  
   
- Um den Wert der Umgebungsvariablen `TZ` zu überprüfen oder zu ändern, verwenden Sie je nach Erfordernis `getenv`, `_putenv` und `_tzset`.  Weitere Informationen zu `TZ` finden Sie unter [\_tzset](../../c-runtime-library/reference/tzset.md) und [\_daylight, \_timezone und \_tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).  
+ Um den Wert der Umgebungsvariablen `TZ` zu überprüfen oder zu ändern, verwenden Sie je nach Erfordernis `getenv`, `_putenv` und `_tzset`. Weitere Informationen zu `TZ` finden Sie unter [_tzset](../../c-runtime-library/reference/tzset.md) und [_daylight, _timezone und _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`getenv`|\<stdlib.h\>|  
-|`_wgetenv`|\<stdlib.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`getenv`|\<stdlib.h>|  
+|`_wgetenv`|\<stdlib.h> oder \<wchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_getenv.c  
@@ -144,12 +161,12 @@ int main( void )
 }  
 ```  
   
-  **Ursprüngliche LIB\-Variable ist: C:\\progra ~1 \\ devstu~1 \\ vc \\ lib**  
-**Neue LIB\-Variable ist: c:\\mylib; c:\\yourlib**   
-## .NET Framework-Entsprechung  
- [System::Environment::GetEnvironmentVariable](https://msdn.microsoft.com/en-us/library/system.environment.getenvironmentvariable.aspx)  
+```Output  
+Original LIB variable is: C:\progra~1\devstu~1\vc\lib  
+New LIB variable is: c:\mylib;c:\yourlib  
+```  
   
-## Siehe auch  
- [Prozess\- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
- [\_putenv, \_wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   
+ [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
  [Umgebungskonstanten](../../c-runtime-library/environmental-constants.md)

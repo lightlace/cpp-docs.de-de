@@ -11,10 +11,48 @@ ms.topic: article
 f1_keywords:
 - stdext::hash_map
 - hash_map/stdext::hash_map
-- std.hash_map
-- stdext.hash_map
-- std::hash_map
 - hash_map
+- hash_map/stdext::hash_map::allocator_type
+- hash_map/stdext::hash_map::const_iterator
+- hash_map/stdext::hash_map::const_pointer
+- hash_map/stdext::hash_map::const_reference
+- hash_map/stdext::hash_map::const_reverse_iterator
+- hash_map/stdext::hash_map::difference_type
+- hash_map/stdext::hash_map::iterator
+- hash_map/stdext::hash_map::key_compare
+- hash_map/stdext::hash_map::key_type
+- hash_map/stdext::hash_map::mapped_type
+- hash_map/stdext::hash_map::pointer
+- hash_map/stdext::hash_map::reference
+- hash_map/stdext::hash_map::reverse_iterator
+- hash_map/stdext::hash_map::size_type
+- hash_map/stdext::hash_map::value_type
+- hash_map/stdext::hash_map::at
+- hash_map/stdext::hash_map::begin
+- hash_map/stdext::hash_map::cbegin
+- hash_map/stdext::hash_map::cend
+- hash_map/stdext::hash_map::clear
+- hash_map/stdext::hash_map::count
+- hash_map/stdext::hash_map::crbegin
+- hash_map/stdext::hash_map::crend
+- hash_map/stdext::hash_map::emplace
+- hash_map/stdext::hash_map::emplace_hint
+- hash_map/stdext::hash_map::empty
+- hash_map/stdext::hash_map::end
+- hash_map/stdext::hash_map::equal_range
+- hash_map/stdext::hash_map::erase
+- hash_map/stdext::hash_map::find
+- hash_map/stdext::hash_map::get_allocator
+- hash_map/stdext::hash_map::insert
+- hash_map/stdext::hash_map::key_comp
+- hash_map/stdext::hash_map::lower_bound
+- hash_map/stdext::hash_map::max_size
+- hash_map/stdext::hash_map::rbegin
+- hash_map/stdext::hash_map::rend
+- hash_map/stdext::hash_map::size
+- hash_map/stdext::hash_map::swap
+- hash_map/stdext::hash_map::upper_bound
+- hash_map/stdext::hash_map::value_comp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -38,10 +76,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 21f5925e6b5e7ac3dcaa32262ad2c39eac4d6827
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e16f164014497c2065c0632534d914067b88bb36
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="hashmap-class"></a>hash_map-Klasse
@@ -94,13 +133,13 @@ class hash_map
   
  Das hash_map-Element sollte der ausgewählte assoziative Container sein, wenn die Bedingungen, mit denen die Werte von der Anwendung den Schlüsseln zugeordnet werden, erfüllt werden. Ein Modell für diesen Strukturtyp ist eine geordnete Liste eindeutig auftretender Schlüsselwörter mit zugeordneten Zeichenfolgewerten, die etwa Definitionen bereitstellen. Wenn stattdessen die Wörter mehrere genaue Definition aufweisen, sodass die Schlüssel nicht eindeutig sind, ist ein hash_multimap-Element der ausgewählte Container. Wenn hingegen nur die Wortliste gespeichert wurden, ist ein hash_set-Element der richtige Container. Wenn mehrfaches Vorkommen der Wörter zugelassen wird, ist ein hash_multiset-Element die geeignete Containerstruktur.  
   
- Das hash_map-Element sortiert die gesteuerte Sequenz, indem ein gespeichertes `Traits`-Hashobjekt der Klasse [value_compare](../standard-library/value-compare-class.md) aufgerufen wird. Auf das gespeicherte Objekt kann zugegriffen werden, indem die Memberfunktion [key_comp](#hash_map__key_comp) aufrufen wird. Ein solches Funktionsobjekt muss sich wie ein Objekt der Klasse [hash_compare](../standard-library/hash-compare-class.md)<Key, less\<Key>> verhalten. Insbesondere für alle `Key`-Werte des Typs `Key` erreicht der `Traits`-Aufruf ( `Key` ) eine Verteilung der Werte vom Typ `size_t`.  
+ Das hash_map-Element sortiert die gesteuerte Sequenz, indem ein gespeichertes `Traits`-Hashobjekt der Klasse [value_compare](../standard-library/value-compare-class.md) aufgerufen wird. Auf das gespeicherte Objekt kann zugegriffen werden, indem die Memberfunktion [key_comp](#key_comp) aufrufen wird. Ein solches Funktionsobjekt muss sich wie ein Objekt der Klasse [hash_compare](../standard-library/hash-compare-class.md)<Key, less\<Key>> verhalten. Insbesondere für alle `Key`-Werte des Typs `Key` erreicht der `Traits`-Aufruf ( `Key` ) eine Verteilung der Werte vom Typ `size_t`.  
   
  Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht. Bei einem binären f(x y)--Prädikat handelt es sich um ein Funktionsobjekt, das die zwei Argumentobjekte `x` und `y` aufweist sowie einen Rückgabewert von `true` oder `false`. Eine Sortierung, die auf ein hash_map-Element angewendet wird, ist eine strenge schwache Sortierung, wenn das binäre Prädikat irreflexiv, antisymmetrisch und transitiv ist, und wenn die Äquivalenz transitiv ist, wobei die beiden Objekte x und y als äquivalent definiert werden, wenn sowohl f (x, y) als auch f (x, y) falsch sind. Wenn der stärkere Gleichheitszustand zwischen Schlüsseln die Äquivalenz ersetzt, erfolgt die Sortierung total (d. h., alle Elemente werden zueinander sortiert), und die verglichenen Schlüssel sind von den einander nicht mehr zu unterscheiden.  
   
  Die tatsächliche Reihenfolge der Elemente in der gesteuerten Sequenz hängt von der Hashfunktion, der Sortierfunktion und der aktuellen Größe der Hashtabelle ab, die im Containerobjekt gespeichert wird. Die aktuelle Größe der Hashtabelle kann nicht bestimmt werden. Deshalb kann die Reihenfolge der Elemente in der gesteuerten Sequenz im Allgemeinen nicht vorhergesagt werden. Das Einfügen von Elementen führt nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen von Elementen werden nur solche Iteratoren ungültig, die speziell auf die entfernten Elemente gezeigt haben.  
   
- Der von einer hash_map-Klasse bereitgestellte Iterator ist ein bidirektionaler Iterator. Die Klassenmemberfunktionen [insert](#hash_map__insert) und [hash_map](#hash_map__hash_map) weisen allerdings Versionen auf, die einen abgeschwächten Eingabeiterator als Vorlagenparameter akzeptieren, dessen Funktionalitätsanforderungen weniger umfangreich sind, als die von der Klasse bidirektionaler Iteratoren garantierten. Die verschiedenen Iteratorkonzepte bilden eine Family, die durch Verfeinerungen in ihrer Funktionen verknüpft ist. Jedes Iteratorkonzept weist einen eigenen Satz von Anforderungen auf, und die damit funktionierenden Algorithmen müssen die Annahmen hinsichtlich der von diesem Iteratortyp bereitgestellten Anforderungen begrenzen. Es kann davon ausgegangen werden, dass ein Eingabeiterator möglicherweise so dereferenziert wird, dass er auf ein Objekt verweist und dieses möglicherweise zum folgenden Iterator in der Sequenz erhöht. Das ist ein minimaler Funktionssatz, allerdings genügt er, um sinnvoll über einen Bereich von `[First, Last)`-Iteratoren im Kontext der Klassenmemberfunktionen zu sprechen.  
+ Der von einer hash_map-Klasse bereitgestellte Iterator ist ein bidirektionaler Iterator. Die Klassenmemberfunktionen [insert](#insert) und [hash_map](#hash_map) weisen allerdings Versionen auf, die einen abgeschwächten Eingabeiterator als Vorlagenparameter akzeptieren, dessen Funktionalitätsanforderungen weniger umfangreich sind, als die von der Klasse bidirektionaler Iteratoren garantierten. Die verschiedenen Iteratorkonzepte bilden eine Family, die durch Verfeinerungen in ihrer Funktionen verknüpft ist. Jedes Iteratorkonzept weist einen eigenen Satz von Anforderungen auf, und die damit funktionierenden Algorithmen müssen die Annahmen hinsichtlich der von diesem Iteratortyp bereitgestellten Anforderungen begrenzen. Es kann davon ausgegangen werden, dass ein Eingabeiterator möglicherweise so dereferenziert wird, dass er auf ein Objekt verweist und dieses möglicherweise zum folgenden Iterator in der Sequenz erhöht. Das ist ein minimaler Funktionssatz, allerdings genügt er, um sinnvoll über einen Bereich von `[First, Last)`-Iteratoren im Kontext der Klassenmemberfunktionen zu sprechen.  
   
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md) und [<hash_set>](../standard-library/hash-set.md) Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
@@ -108,72 +147,72 @@ class hash_map
   
 |||  
 |-|-|  
-|[hash_map](#hash_map__hash_map)|Erstellt ein `hash_map`-Element, das leer oder die Kopie eines ganzen anderen `hash_map`-Elements oder eines Teils davon ist.|  
+|[hash_map](#hash_map)|Erstellt ein `hash_map`-Element, das leer oder die Kopie eines ganzen anderen `hash_map`-Elements oder eines Teils davon ist.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[allocator_type](#hash_map__allocator_type)|Ein Typ, der die `allocator`-Klassentyp für das `hash_map`-Objekt darstellt.|  
-|[const_iterator](#hash_map__const_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, der im `const`-Element ein `hash_map`-Element lesen kann.|  
-|[const_pointer](#hash_map__const_pointer)|Ein Typ, der einen Zeiger auf ein `const`-Element in einem `hash_map`-Element bereitstellt.|  
-|[const_reference](#hash_map__const_reference)|Ein Typ, der einen Verweis auf ein `const`-Element bereitstellt, das in einem `hash_map`-Element zum Lesen und Ausführen von `const`-Vorgängen gespeichert ist.|  
-|[const_reverse_iterator](#hash_map__const_reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, der im `const`-Element jedes `hash_map`-Element lesen kann.|  
-|[difference_type](#hash_map__difference_type)|Ein Ganzzahltyp mit Vorzeichen, der dazu verwendet werden kann, die Anzahl von Elementen eines `hash_map`-Elements in einen Bereich zwischen Elementen darzustellen, auf die von Iteratoren gezeigt wird.|  
-|[Iterator](#hash_map__iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem jedes Element in einer `hash_map` gelesen oder geändert werden kann.|  
-|[key_compare](#hash_map__key_compare)|Eine Typ, der ein Funktionsobjekt bereitstellt, das zwei Sortierschlüssel vergleichen kann, um die relative Position von zwei Elementen im `hash_map`-Element zu bestimmen.|  
-|[key_type](#hash_map__key_type)|Ein Typ beschreibt das Sortierschlüsselobjekt, das jedes Element von `hash_map` bildet.|  
-|[mapped_type](#hash_map__mapped_type)|Ein Typ, der den in einer `hash_map` gespeicherten Datentyp darstellt.|  
-|[pointer](#hash_map__pointer)|Ein Typ, der einen Zeiger auf ein Element in einer `hash_map` bereitstellt.|  
-|[reference](#hash_map__reference)|Ein Typ, der einen Verweis auf ein in einer `hash_map` gespeichertes Element bereitstellt.|  
-|[reverse_iterator](#hash_map__reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein Element in einem umgekehrten `hash_map`-Element gelesen oder geändert werden kann.|  
-|[size_type](#hash_map__size_type)|Eine Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in `hash_map` darstellen kann.|  
-|[value_type](#hash_map__value_type)|Eine Typ, der ein Funktionsobjekt bereitstellt, das zwei Elemente als Sortierschlüssel vergleichen kann, um die relative Position im `hash_map`-Element zu bestimmen.|  
+|[allocator_type](#allocator_type)|Ein Typ, der die `allocator`-Klassentyp für das `hash_map`-Objekt darstellt.|  
+|[const_iterator](#const_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, der im `const`-Element ein `hash_map`-Element lesen kann.|  
+|[const_pointer](#const_pointer)|Ein Typ, der einen Zeiger auf ein `const`-Element in einem `hash_map`-Element bereitstellt.|  
+|[const_reference](#const_reference)|Ein Typ, der einen Verweis auf ein `const`-Element bereitstellt, das in einem `hash_map`-Element zum Lesen und Ausführen von `const`-Vorgängen gespeichert ist.|  
+|[const_reverse_iterator](#const_reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, der im `const`-Element jedes `hash_map`-Element lesen kann.|  
+|[difference_type](#difference_type)|Ein Ganzzahltyp mit Vorzeichen, der dazu verwendet werden kann, die Anzahl von Elementen eines `hash_map`-Elements in einen Bereich zwischen Elementen darzustellen, auf die von Iteratoren gezeigt wird.|  
+|[Iterator](#iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem jedes Element in einer `hash_map` gelesen oder geändert werden kann.|  
+|[key_compare](#key_compare)|Eine Typ, der ein Funktionsobjekt bereitstellt, das zwei Sortierschlüssel vergleichen kann, um die relative Position von zwei Elementen im `hash_map`-Element zu bestimmen.|  
+|[key_type](#key_type)|Ein Typ beschreibt das Sortierschlüsselobjekt, das jedes Element von `hash_map` bildet.|  
+|[mapped_type](#mapped_type)|Ein Typ, der den in einer `hash_map` gespeicherten Datentyp darstellt.|  
+|[pointer](#pointer)|Ein Typ, der einen Zeiger auf ein Element in einer `hash_map` bereitstellt.|  
+|[reference](#reference)|Ein Typ, der einen Verweis auf ein in einer `hash_map` gespeichertes Element bereitstellt.|  
+|[reverse_iterator](#reverse_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein Element in einem umgekehrten `hash_map`-Element gelesen oder geändert werden kann.|  
+|[size_type](#size_type)|Eine Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in `hash_map` darstellen kann.|  
+|[value_type](#value_type)|Eine Typ, der ein Funktionsobjekt bereitstellt, das zwei Elemente als Sortierschlüssel vergleichen kann, um die relative Position im `hash_map`-Element zu bestimmen.|  
   
 ### <a name="member-functions"></a>Memberfunktionen  
   
 |||  
 |-|-|  
-|[hash_map::at](#hash_map__at)|Sucht ein Element in der `hash_map` mit einem angegebenen Schlüsselwert.|  
-|[begin](#hash_map__begin)|Gibt ein Iterator zurück, der das erste Element im `hash_map`-Element adressiert.|  
-|[hash_map::cbegin](#hash_map__cbegin)|Gibt einen konstanten Iterator zurück, der das erste Element im `hash_map`-Element adressiert.|  
-|[hash_map::cend](#hash_map__cend)|Gibt einen konstanten Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines `hash_map`-Elements nachfolgt.|  
-|[clear](#hash_map__clear)|Löscht alle Elemente einer `hash_map` auf.|  
-|[count](#hash_map__count)|Gibt die Anzahl von Elementen in einem `hash_map`-Element zurück, dessen Schlüssel dem von einem Parameter angegebenen Schlüssel entspricht.|  
-|[hash_map::crbegin](#hash_map__crbegin)|Gibt einen konstanten Iterator zurück, der das erste Element im umgekehrten `hash_map`-Element adressiert.|  
-|[hash_map::crend](#hash_map__crend)|Gibt einen konstanten Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines umgekehrten `hash_map`-Elements nachfolgt.|  
-|[hash_map::emplace](#hash_map__emplace)|Fügt ein Element ein, das vor Ort in ein `hash_map`-Element erstellt wird.|  
-|[hash_map::emplace_hint](#hash_map__emplace_hint)|Fügt ein Element ein, das vor Ort mit einem Platzierungshinweis in ein `hash_map`-Element erstellt wird.|  
-|[empty](#hash_map__empty)|Testet, ob ein `hash_map`-Element leer ist.|  
-|[end](#hash_map__end)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element einem `hash_map`-Element nachfolgt.|  
-|[equal_range](#hash_map__equal_range)|Gibt ein Iteratorpaar jeweils zum ersten Element in einem `hash_map`-Element mit einem Schlüssel zurück, der größer als ein bestimmter Schlüssel ist, bzw. zum ersten Element im `hash_map`-Element mit einem Schlüssel, der größer oder gleich dem Schlüssel ist.|  
-|[erase](#hash_map__erase)|Entfernt ein Element oder eine Reihe von Elementen in einer `hash_map` aus angegebenen Speicherorten.|  
-|[find](#hash_map__find)|Gibt einen Iterator zurück, der die Position eines Elements in einem `hash_map`-Element adressiert, das einen Schlüssel aufweist, der einen angegebenen Schlüssel entspricht.|  
-|[get_allocator](#hash_map__get_allocator)|Gibt eine Kopie des zum Erstellen von `allocator` verwendeten `hash_map`-Objekts zurück.|  
-|[insert](#hash_map__insert)|Fügt ein Element oder einen Elementbereich in ein `hash_map`-Element ein.|  
-|[key_comp](#hash_map__key_comp)|Gibt einen Iterator zum ersten Element in einem `hash_map`-Element mit einem Schlüsselwert zurück, der gleich oder größer ist, als ein angegebener Schlüssel.|  
-|[lower_bound](#hash_map__lower_bound)|Gibt einen Iterator zum ersten Element in einem `hash_map`-Element mit einem Schlüsselwert zurück, der gleich oder größer ist, als ein angegebener Schlüssel.|  
-|[max_size](#hash_map__max_size)|Gibt die Maximallänge der `hash_map` zurück.|  
-|[rbegin](#hash_map__rbegin)|Gibt einen Iterator zurück, der das erste Element in einem umgekehrten `hash_map`-Element adressiert.|  
-|[rend](#hash_map__rend)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines umgekehrten `hash_map`-Elements nachfolgt.|  
-|[size](#hash_map__size)|Gibt die Anzahl von Elementen in der `hash_map` zurück.|  
-|[swap](#hash_map__swap)|Tauscht die Elemente zweier `hash_map`n.|  
-|[upper_bound](#hash_map__upper_bound)|Gibt einen Iterator zum ersten Element in einem `hash_map`-Element mit einem Schlüsselwert zurück, der größer ist, als ein angegebener Schlüssel.|  
-|[value_comp](#hash_map__value_comp)|Ruft eine Kopie des Vergleichsobjekts ab, das zum Sortieren der Elementwerte in `hash_map` verwendet wird.|  
+|[at](#at)|Sucht ein Element in der `hash_map` mit einem angegebenen Schlüsselwert.|  
+|[begin](#begin)|Gibt ein Iterator zurück, der das erste Element im `hash_map`-Element adressiert.|  
+|[cbegin](#cbegin)|Gibt einen konstanten Iterator zurück, der das erste Element im `hash_map`-Element adressiert.|  
+|[cend](#cend)|Gibt einen konstanten Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines `hash_map`-Elements nachfolgt.|  
+|[clear](#clear)|Löscht alle Elemente einer `hash_map` auf.|  
+|[count](#count)|Gibt die Anzahl von Elementen in einem `hash_map`-Element zurück, dessen Schlüssel dem von einem Parameter angegebenen Schlüssel entspricht.|  
+|[crbegin](#crbegin)|Gibt einen konstanten Iterator zurück, der das erste Element im umgekehrten `hash_map`-Element adressiert.|  
+|[crend](#crend)|Gibt einen konstanten Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines umgekehrten `hash_map`-Elements nachfolgt.|  
+|[emplace](#emplace)|Fügt ein Element ein, das vor Ort in ein `hash_map`-Element erstellt wird.|  
+|[emplace_hint](#emplace_hint)|Fügt ein Element ein, das vor Ort mit einem Platzierungshinweis in ein `hash_map`-Element erstellt wird.|  
+|[empty](#empty)|Testet, ob ein `hash_map`-Element leer ist.|  
+|[end](#end)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element einem `hash_map`-Element nachfolgt.|  
+|[equal_range](#equal_range)|Gibt ein Iteratorpaar jeweils zum ersten Element in einem `hash_map`-Element mit einem Schlüssel zurück, der größer als ein bestimmter Schlüssel ist, bzw. zum ersten Element im `hash_map`-Element mit einem Schlüssel, der größer oder gleich dem Schlüssel ist.|  
+|[erase](#erase)|Entfernt ein Element oder eine Reihe von Elementen in einer `hash_map` aus angegebenen Speicherorten.|  
+|[find](#find)|Gibt einen Iterator zurück, der die Position eines Elements in einem `hash_map`-Element adressiert, das einen Schlüssel aufweist, der einen angegebenen Schlüssel entspricht.|  
+|[get_allocator](#get_allocator)|Gibt eine Kopie des zum Erstellen von `allocator` verwendeten `hash_map`-Objekts zurück.|  
+|[insert](#insert)|Fügt ein Element oder einen Elementbereich in ein `hash_map`-Element ein.|  
+|[key_comp](#key_comp)|Gibt einen Iterator zum ersten Element in einem `hash_map`-Element mit einem Schlüsselwert zurück, der gleich oder größer ist, als ein angegebener Schlüssel.|  
+|[lower_bound](#lower_bound)|Gibt einen Iterator zum ersten Element in einem `hash_map`-Element mit einem Schlüsselwert zurück, der gleich oder größer ist, als ein angegebener Schlüssel.|  
+|[max_size](#max_size)|Gibt die Maximallänge der `hash_map` zurück.|  
+|[rbegin](#rbegin)|Gibt einen Iterator zurück, der das erste Element in einem umgekehrten `hash_map`-Element adressiert.|  
+|[rend](#rend)|Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines umgekehrten `hash_map`-Elements nachfolgt.|  
+|[size](#size)|Gibt die Anzahl von Elementen in der `hash_map` zurück.|  
+|[swap](#swap)|Tauscht die Elemente zweier `hash_map`n.|  
+|[upper_bound](#upper_bound)|Gibt einen Iterator zum ersten Element in einem `hash_map`-Element mit einem Schlüsselwert zurück, der größer ist, als ein angegebener Schlüssel.|  
+|[value_comp](#value_comp)|Ruft eine Kopie des Vergleichsobjekts ab, das zum Sortieren der Elementwerte in `hash_map` verwendet wird.|  
   
 ### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[operator&#91;&#93;](#hash_map__operator_at)|Fügt ein Element in ein `hash_map`-Element mit einem angegebenen Schlüsselwert ein.|  
-|[hash_map::operator=](#hash_map__operator_eq)|Ersetzt die Elemente eines `hash_map`-Elements durch eine Kopie eines anderen `hash_map`-Elements.|  
+|[operator&#91;&#93;](#op_at)|Fügt ein Element in ein `hash_map`-Element mit einem angegebenen Schlüsselwert ein.|  
+|[hash_map::operator=](#op_eq)|Ersetzt die Elemente eines `hash_map`-Elements durch eine Kopie eines anderen `hash_map`-Elements.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<hash_map>  
   
  **Namespace:** stdext  
   
-##  <a name="a-namehashmapallocatortypea--hashmapallocatortype"></a><a name="hash_map__allocator_type"></a> hash_map::allocator_type  
+##  <a name="allocator_type"></a> hash_map::allocator_type  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -185,9 +224,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 ```  
   
 ### <a name="example"></a>Beispiel  
-  In dem Beispiel für [get_allocator](#hash_map__get_allocator) finden Sie ein Beispiel, das `allocator_type` verwendet.  
+  In dem Beispiel für [get_allocator](#get_allocator) finden Sie ein Beispiel, das `allocator_type` verwendet.  
   
-##  <a name="a-namehashmapata--hashmapat"></a><a name="hash_map__at"></a> hash_map::at  
+##  <a name="at"></a> hash_map::at  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -205,7 +244,7 @@ const Type& at(const Key& key) const;
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|` key`|Der Schlüsselwert des zu suchenden Elements.|  
+|`key`|Der Schlüsselwert des zu suchenden Elements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf den Datenwert des gefundenen Elements.  
@@ -242,7 +281,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmapbegina--hashmapbegin"></a><a name="hash_map__begin"></a> hash_map::begin  
+##  <a name="begin"></a> hash_map::begin  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -302,7 +341,7 @@ The first element of hm1 is 0.
 The first element of hm1 is now 1.  
 ```  
   
-##  <a name="a-namehashmapcbegina--hashmapcbegin"></a><a name="hash_map__cbegin"></a> hash_map::cbegin  
+##  <a name="cbegin"></a> hash_map::cbegin  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -345,7 +384,7 @@ int main( )
 The first element of hm1 is 2.  
 ```  
   
-##  <a name="a-namehashmapcenda--hashmapcend"></a><a name="hash_map__cend"></a> hash_map::cend  
+##  <a name="cend"></a> hash_map::cend  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -396,7 +435,7 @@ int main( )
 The value of last element of hm1 is 30.  
 ```  
   
-##  <a name="a-namehashmapcleara--hashmapclear"></a><a name="hash_map__clear"></a> hash_map::clear  
+##  <a name="clear"></a> hash_map::clear  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -446,7 +485,7 @@ The size of the hash_map is initially 2.
 The size of the hash_map after clearing is 0.  
 ```  
   
-##  <a name="a-namehashmapconstiteratora--hashmapconstiterator"></a><a name="hash_map__const_iterator"></a> hash_map::const_iterator  
+##  <a name="const_iterator"></a> hash_map::const_iterator  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -460,7 +499,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>Hinweise  
  Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.  
   
- Der `const_iterator`, der durch hash_map definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#hash_map__value_type) sind, das von Typ `pair`*\<***const Key, Type***>* ist. Dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten wird.  
+ Der `const_iterator`, der durch hash_map definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#value_type) sind, das von Typ `pair`*\<***const Key, Type***>* ist. Dessen erster Member ist der Schlüssel zum Element und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten wird.  
   
  Verwenden Sie den **->**-Operator, um einen `const_iterator``cIter`, der auf ein Element in einer hash_map zeigt, zu dereferenzieren.  
   
@@ -469,9 +508,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [begin](#hash_map__begin) finden Sie ein Beispiel, das `const_iterator` verwendet.  
+  Im Beispiel für [begin](#begin) finden Sie ein Beispiel, das `const_iterator` verwendet.  
   
-##  <a name="a-namehashmapconstpointera--hashmapconstpointer"></a><a name="hash_map__const_pointer"></a> hash_map::const_pointer  
+##  <a name="const_pointer"></a> hash_map::const_pointer  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -485,11 +524,11 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 ### <a name="remarks"></a>Hinweise  
  Ein `const_pointer`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden.  
   
- In den meisten Fällen sollte ein [iterator](#hash_map__iterator) für den Zugriff auf Elemente in einem Listenobjekt verwendet werden.  
+ In den meisten Fällen sollte ein [iterator](#iterator) für den Zugriff auf Elemente in einem Listenobjekt verwendet werden.  
   
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
-##  <a name="a-namehashmapconstreferencea--hashmapconstreference"></a><a name="hash_map__const_reference"></a> hash_map::const_reference  
+##  <a name="const_reference"></a> hash_map::const_reference  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -546,7 +585,7 @@ The key of the first element in the hash_map is 1.
 The data value of the first element in the hash_map is 10.  
 ```  
   
-##  <a name="a-namehashmapconstreverseiteratora--hashmapconstreverseiterator"></a><a name="hash_map__const_reverse_iterator"></a> hash_map::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a> hash_map::const_reverse_iterator  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -560,7 +599,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>Hinweise  
  Ein `const_reverse_iterator`-Typ kann nicht den Wert eines Elements ändern und wird verwendet, um die hash_map in umgekehrter Reihenfolge zu durchlaufen.  
   
- Der `const_reverse_iterator`, der durch hash_map definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#hash_map__value_type) sind, das von Typ `pair`\< **const Key, Type**> ist. Dessen erster Member ist der Schlüssel zum Element, und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten wird.  
+ Der `const_reverse_iterator`, der durch hash_map definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#value_type) sind, das von Typ `pair`\< **const Key, Type**> ist. Dessen erster Member ist der Schlüssel zum Element, und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten wird.  
   
  Verwenden Sie den **->**-Operator, um einen `const_reverse_iterator``crIter`, der auf ein Element in einer hash_map zeigt, zu dereferenzieren.  
   
@@ -569,9 +608,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [rend](#hash_map__rend) wird verdeutlicht, wie ein `const_reverse_iterator` deklariert und verwendet wird.  
+  Im Beispiel für [rend](#rend) wird verdeutlicht, wie ein `const_reverse_iterator` deklariert und verwendet wird.  
   
-##  <a name="a-namehashmapcounta--hashmapcount"></a><a name="hash_map__count"></a> hash_map::count  
+##  <a name="count"></a> hash_map::count  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -583,7 +622,7 @@ size_type count(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` key`  
+ `key`  
  Der Schlüsselwert der aus der hash_map-Klasse zu entfernenden Elemente.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -641,7 +680,7 @@ The number of elements in hm1 with a sort key of 2 is: 1.
 The number of elements in hm1 with a sort key of 3 is: 0.  
 ```  
   
-##  <a name="a-namehashmapcrbegina--hashmapcrbegin"></a><a name="hash_map__crbegin"></a> hash_map::crbegin  
+##  <a name="crbegin"></a> hash_map::crbegin  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -656,7 +695,7 @@ const_reverse_iterator crbegin() const;
  Ein umgekehrter bidirektionaler const-Iterator, mit dem das erste Element in einer umgekehrten [hash_map](../standard-library/hash-map-class.md) adressiert wird (bzw. mit dem das ehemals letzte Element in der nicht umgekehrten `hash_map` adressiert wird).  
   
 ### <a name="remarks"></a>Hinweise  
- `crbegin` wird bei einer umgekehrten hash_map auf die gleiche Weise verwendet, wie [begin](#hash_map__begin) bei einer `hash_map` verwendet wird.  
+ `crbegin` wird bei einer umgekehrten hash_map auf die gleiche Weise verwendet, wie [begin](#begin) bei einer `hash_map` verwendet wird.  
   
  Bei dem Rückgabewert von `crbegin` kann das `hash_map`-Objekt nicht geändert werden.  
   
@@ -693,7 +732,7 @@ int main( )
 The first element of the reversed hash_map hm1 is 3.  
 ```  
   
-##  <a name="a-namehashmapcrenda--hashmapcrend"></a><a name="hash_map__crend"></a> hash_map::crend  
+##  <a name="crend"></a> hash_map::crend  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -708,7 +747,7 @@ const_reverse_iterator crend() const;
  Ein bidirektionaler const_reverse-Iterator, der den Standort anspricht, der dem letzten Element in einer umgekehrten[hash_map](../standard-library/hash-map-class.md) nachfolgt (der Speicherort, der dem ersten Element in der nicht umgekehrten `hash_map` vorangegangen war).  
   
 ### <a name="remarks"></a>Hinweise  
- `crend` wird bei einer umgekehrten `hash_map` auf die gleiche Weise verwendet, wie [hash_map::end](#hash_map__end) bei einer `hash_map` verwendet wird.  
+ `crend` wird bei einer umgekehrten `hash_map` auf die gleiche Weise verwendet, wie [hash_map::end](#end) bei einer `hash_map` verwendet wird.  
   
  Bei dem Rückgabewert von `crend` kann das `hash_map`-Objekt nicht geändert werden.  
   
@@ -748,7 +787,7 @@ int main( )
 The last element of the reversed hash_map hm1 is 3.  
 ```  
   
-##  <a name="a-namehashmapdifferencetypea--hashmapdifferencetype"></a><a name="hash_map__difference_type"></a> hash_map::difference_type  
+##  <a name="difference_type"></a> hash_map::difference_type  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -818,7 +857,7 @@ The keys of the mapped elements are: 1 2 3.
 The values of the mapped elements are: 10 20 20.  
 ```  
   
-##  <a name="a-namehashmapemplacea--hashmapemplace"></a><a name="hash_map__emplace"></a> hash_map::emplace  
+##  <a name="emplace"></a> hash_map::emplace  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -837,7 +876,7 @@ emplace(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|` val`|Der Wert verwendet normalerweise ein Bewegungskonstrukt, um ein Element in eine [hash_map](../standard-library/hash-map-class.md) einzufügen, außer die `hash_map` hat bereits das Element (oder, üblicher, ein Element, dessen Schlüssel gleichwertig sortiert wird).|  
+|`val`|Der Wert verwendet normalerweise ein Bewegungskonstrukt, um ein Element in eine [hash_map](../standard-library/hash-map-class.md) einzufügen, außer die `hash_map` hat bereits das Element (oder, üblicher, ein Element, dessen Schlüssel gleichwertig sortiert wird).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die erste `emplace`-Memberfunktion gibt ein Paar zurück, dessen boolesche Komponente „TRUE“ zurückgibt, wenn eine Einfügung erfolgte und „FALSE“, wenn `hash_map` bereits ein Element enthielt, dessen Schlüssel einen entsprechenden Wert in der Reihenfolge aufwies und dessen Iteratorkomponente die Adresse zurückgibt, an der ein neues Element eingefügt wurde oder an der das Element bereits gefunden wurde.  
@@ -845,7 +884,7 @@ emplace(
  Um auf die Iteratorkomponente eines `pr`-Paares zuzugreifen, das von dieser Memberfunktion zurückgegeben wird, verwenden Sie `pr.first` und `*(pr.first)`, um es zu dereferenzieren. Um auf die `bool`-Komponente eines `pr`-Paares zuzugreifen, das von dieser Memberfunktion zurückgegeben wird, verwenden Sie `pr.second` und `*(pr.second)`, um es zu dereferenzieren.  
   
 ### <a name="remarks"></a>Hinweise  
- Der [hash_map::value_type](#hash_map__value_type) eines Elements wird paarweise angegeben, sodass der Wert eines Elements ein geordnetes Paar ist, bei dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.  
+ Der [hash_map::value_type](#value_type) eines Elements wird paarweise angegeben, sodass der Wert eines Elements ein geordnetes Paar ist, bei dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.  
   
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md) und [<hash_set>](../standard-library/hash-set.md) Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
@@ -878,7 +917,7 @@ After the emplace insertion, hm1 contains:
  1 => a  
 ```  
   
-##  <a name="a-namehashmapemplacehinta--hashmapemplacehint"></a><a name="hash_map__emplace_hint"></a> hash_map::emplace_hint  
+##  <a name="emplace_hint"></a> hash_map::emplace_hint  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -897,14 +936,14 @@ iterator emplace_hint(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|` val`|Der Wert verwendet normalerweise ein Bewegungskonstrukt, um ein Element in eine [hash_map](../standard-library/hash-map-class.md) einzufügen, außer die `hash_map` hat bereits das Element (oder, üblicher, ein Element, dessen Schlüssel gleichwertig sortiert wird).|  
+|`val`|Der Wert verwendet normalerweise ein Bewegungskonstrukt, um ein Element in eine [hash_map](../standard-library/hash-map-class.md) einzufügen, außer die `hash_map` hat bereits das Element (oder, üblicher, ein Element, dessen Schlüssel gleichwertig sortiert wird).|  
 |`_Where`|Ein Hinweis bezüglich des Platzes, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die [hash_multimap::emplace](../standard-library/hash-multimap-class.md#hash_multimap__emplace) Memberfunktion gibt einen Iterator zurück, der auf die Position zeigt, an der das neue Element in die `hash_map` eingefügt wurde, oder, in dem sich das vorhandene Element mit entsprechender Sortierung befindet.  
+ Die [hash_multimap::emplace](../standard-library/hash-multimap-class.md#emplace) Memberfunktion gibt einen Iterator zurück, der auf die Position zeigt, an der das neue Element in die `hash_map` eingefügt wurde, oder, in dem sich das vorhandene Element mit entsprechender Sortierung befindet.  
   
 ### <a name="remarks"></a>Hinweise  
- Der [hash_map::value_type](#hash_map__value_type) eines Elements wird paarweise angegeben, sodass der Wert eines Elements ein geordnetes Paar ist, bei dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.  
+ Der [hash_map::value_type](#value_type) eines Elements wird paarweise angegeben, sodass der Wert eines Elements ein geordnetes Paar ist, bei dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.  
   
  Einfügen kann in amortisierter konstanter Zeit, anstelle von logarithmischer Zeit erfolgen, wenn die Einfügemarke direkt `_Where` folgt.  
   
@@ -939,7 +978,7 @@ After the emplace insertion, hm1 contains:
  1 => a  
 ```  
   
-##  <a name="a-namehashmapemptya--hashmapempty"></a><a name="hash_map__empty"></a> hash_map::empty  
+##  <a name="empty"></a> hash_map::empty  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -990,7 +1029,7 @@ The hash_map hm1 is not empty.
 The hash_map hm2 is empty.  
 ```  
   
-##  <a name="a-namehashmapenda--hashmapend"></a><a name="hash_map__end"></a> hash_map::end  
+##  <a name="end"></a> hash_map::end  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1059,7 +1098,7 @@ The value of last element of hm1 is 30.
 The value of last element of hm1 is now 20.  
 ```  
   
-##  <a name="a-namehashmapequalrangea--hashmapequalrange"></a><a name="hash_map__equal_range"></a> hash_map::equal_range  
+##  <a name="equal_range"></a> hash_map::equal_range  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1073,11 +1112,11 @@ pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` key`  
+ `key`  
  Der Argumentschlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_map verglichen wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iteratorenpaar, bei dem der erste Iterator der [lower_bound](#hash_map__lower_bound) des Schlüssels und der zweite Iterator der [upper_bound](#hash_map__upper_bound) des Schlüssels ist.  
+ Ein Iteratorenpaar, bei dem der erste Iterator der [lower_bound](#lower_bound) des Schlüssels und der zweite Iterator der [upper_bound](#upper_bound) des Schlüssels ist.  
   
  Sie können auf den ersten Iterator eines von einer Memberfunktion zurückgegebenen Paars `pr` zugreifen, indem Sie `pr`. **first** verwenden, und Sie können einen lower_bound-Iterator dereferenzieren, indem Sie \*( `pr`. **first**) verwenden. Sie können auf den zweiten Iterator eines von einer Memberfunktion zurückgegebenen Paars `pr` zugreifen, indem Sie `pr`. **second** verwenden, und Sie können einen upper_bound-Iterator dereferenzieren, indem Sie \*( `pr`. **second**) verwenden.  
   
@@ -1145,7 +1184,7 @@ A direct call of upper_bound( 2 ) gives 30,
 The hash_map hm1 doesn't have an element with a key less than 40.  
 ```  
   
-##  <a name="a-namehashmaperasea--hashmaperase"></a><a name="hash_map__erase"></a> hash_map::erase  
+##  <a name="erase"></a> hash_map::erase  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1164,13 +1203,13 @@ size_type erase(const key_type& key);
  `_Where`  
  Die Position des aus der hash_map zu entfernenden Elements.  
   
- ` first`  
+ `first`  
  Die Position des ersten Elements, das aus der hash_map entfernt werden soll.  
   
- ` last`  
+ `last`  
  Die Position direkt hinter dem letzten aus der hash_map entfernten Element.  
   
- ` key`  
+ `key`  
  Der Schlüsselwert der aus der hash_map zu entfernenden Elemente.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1267,7 +1306,7 @@ After another element with a key equal to that
 of the 2nd element is deleted, the hash_map hm3 is: 0 3.  
 ```  
   
-##  <a name="a-namehashmapfinda--hashmapfind"></a><a name="hash_map__find"></a> hash_map::find  
+##  <a name="find"></a> hash_map::find  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1281,7 +1320,7 @@ const_iterator find(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` key`  
+ `key`  
  Der Schlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_map übereinstimmt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1290,7 +1329,7 @@ const_iterator find(const Key& key) const;
 ### <a name="remarks"></a>Hinweise  
  **find** gibt einen Iterator zurück, der ein Element in der hash_map adressiert, dessen Sortierschlüssel dem Argumentschlüssel unter einem binären Prädikat entspricht, das eine Reihenfolge basierend auf der Beziehung „Less than comparability“ auslöst.  
   
- Wenn der Rückgabewert von**find** [const_iterator](#hash_map__const_iterator) zugewiesen wird, kann das hash_map-Objekt nicht geändert werden. Wenn der Rückgabewert von **find** einem [Iterator](#hash_map__iterator) zugewiesen wird, kann die hash_map geändert werden  
+ Wenn der Rückgabewert von**find** [const_iterator](#const_iterator) zugewiesen wird, kann das hash_map-Objekt nicht geändert werden. Wenn der Rückgabewert von **find** einem [Iterator](#iterator) zugewiesen wird, kann die hash_map geändert werden  
   
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
@@ -1345,7 +1384,7 @@ The hash_map hm1 doesn't have an element with a key of 4.
 The element of hm1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="a-namehashmapgetallocatora--hashmapgetallocator"></a><a name="hash_map__get_allocator"></a> hash_map::get_allocator  
+##  <a name="get_allocator"></a> hash_map::get_allocator  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1421,7 +1460,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmaphashmapa--hashmaphashmap"></a><a name="hash_map__hash_map"></a> hash_map::hash_map  
+##  <a name="hash_map"></a> hash_map::hash_map  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1485,11 +1524,11 @@ hash_map(
 |`IList`|Das initializer_list-Element.|  
   
 ### <a name="remarks"></a>Hinweise  
- In allen Konstruktoren wird ein Zuweisungsobjekttyp gespeichert, mit dem der Arbeitsspeicher für das hash_map-Element verwaltet wird, und das später zurückgegeben werden kann, indem [get_allocator](#hash_map__get_allocator) aufgerufen wird. Der Zuweisungsparameter wird häufig aus den Klassendeklarationen und den Vorverarbeitungsmakros weggelassen, die zum Ersetzen alternativer Zuweisungen verwendet werden.  
+ In allen Konstruktoren wird ein Zuweisungsobjekttyp gespeichert, mit dem der Arbeitsspeicher für das hash_map-Element verwaltet wird, und das später zurückgegeben werden kann, indem [get_allocator](#get_allocator) aufgerufen wird. Der Zuweisungsparameter wird häufig aus den Klassendeklarationen und den Vorverarbeitungsmakros weggelassen, die zum Ersetzen alternativer Zuweisungen verwendet werden.  
   
  Alle Konstruktoren initialisieren das hash_map-Element.  
   
- In allen Konstruktoren wird ein Funktionsobjekt vom Typ `Traits` gespeichert, der verwendet wird, um unter den Schlüsseln des hash_map-Elements eine Sortierung vorzunehmen, und das später zurückgegeben werden kann, indem [key_comp](#hash_map__key_comp) aufgerufen wird.  
+ In allen Konstruktoren wird ein Funktionsobjekt vom Typ `Traits` gespeichert, der verwendet wird, um unter den Schlüsseln des hash_map-Elements eine Sortierung vorzunehmen, und das später zurückgegeben werden kann, indem [key_comp](#key_comp) aufgerufen wird.  
   
  Die ersten drei Konstruktoren legen ein leeres erstes hash_map-Element fest. Zusätzlich gibt der zweite den Typ der Vergleichsfunktion (`Comp`) an, die zum Angeben der Reihenfolge der Elemente verwendet wird, und der Dritte gibt explizit den zu verwendenden Zuweisungstyp (`Al`) an. Mit dem Schlüsselwort `explicit` werden bestimmte Arten automatischer Typumwandlung unterdrückt.  
   
@@ -1499,7 +1538,7 @@ hash_map(
   
  Der letzte Konstruktor verschiebt das `Right`-hash_map-Element.  
   
-##  <a name="a-namehashmapinserta--hashmapinsert"></a><a name="hash_map__insert"></a> hash_map::insert  
+##  <a name="insert"></a> hash_map::insert  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1535,10 +1574,10 @@ iterator insert(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|` val`|Der Wert eines in das hash_map-Element einzufügenden Elements, es sei denn, das hash_map-Element enthält dieses Element bereits (oder, allgemeiner gesagt, enthält ein Element, dessen Schlüssel gleichwertig sortiert wird).|  
+|`val`|Der Wert eines in das hash_map-Element einzufügenden Elements, es sei denn, das hash_map-Element enthält dieses Element bereits (oder, allgemeiner gesagt, enthält ein Element, dessen Schlüssel gleichwertig sortiert wird).|  
 |`_Where`|Ein Hinweis bezüglich des Platzes, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird.|  
-|` first`|Die Position des ersten Elements, das aus einem hash_map-Element kopiert werden soll.|  
-|` last`|Die Position direkt hinter dem letzten Element, das aus einem hash_map-Element kopiert werden soll.|  
+|`first`|Die Position des ersten Elements, das aus einem hash_map-Element kopiert werden soll.|  
+|`last`|Die Position direkt hinter dem letzten Element, das aus einem hash_map-Element kopiert werden soll.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die erste **insert**-Memberfunktion gibt ein Paar zurück, dessen boolesche Komponente „TRUE“ zurückgibt, wenn eine Einfügung vorgenommen wurde, und „FALSE“, wenn die hash_map bereits ein Element enthielt, dessen Schlüssel einen entsprechenden Wert in der Reihenfolge aufweist und dessen Iteratorkomponente die Adresse zurückgibt, an der ein neues Element eingefügt wurde oder an der das Element bereits gefunden wurde.  
@@ -1550,7 +1589,7 @@ iterator insert(
  Die letzten zwei **insert**-Memberfunktionen verhalten sich identisch zu den ersten beiden, außer dass der eingefügte Wert durch Verschiebung erstellt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Der [value_type](../standard-library/map-class.md#map__value_type) eines Elements wird paarweise angegeben, sodass der Wert eines Elements ein geordnetes Paar ist, bei dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.  
+ Der [value_type](../standard-library/map-class.md#value_type) eines Elements wird paarweise angegeben, sodass der Wert eines Elements ein geordnetes Paar ist, bei dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.  
   
  Einfügung kann in amortisierter konstanter Zeit anstelle von logarithmischer Zeit für die Hinweisversion von "insert" erfolgen, wenn die Einfügemarke `_Where` direkt folgt.  
   
@@ -1663,7 +1702,7 @@ After the move insertion, hm4 contains:
  2 => b  
 ```  
   
-##  <a name="a-namehashmapiteratora--hashmapiterator"></a><a name="hash_map__iterator"></a> hash_map::iterator  
+##  <a name="iterator"></a> hash_map::iterator  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1675,7 +1714,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der **Iterator**, der durch hash_map definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#hash_map__value_type) sind, das vom Typ **pair\<const Key, Type> ist, **, dessen erster Member ist der Schlüssel zum Element, und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten wird.  
+ Der **Iterator**, der durch hash_map definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#value_type) sind, das vom Typ **pair\<const Key, Type> ist,** , dessen erster Member ist der Schlüssel zum Element, und dessen zweiter Member ist das zugeordnete Datum, das vom Element gehalten wird.  
   
  Verwenden Sie den Operator **->**, um einen **iterator**`Iter`-Typ zu dereferenzieren, der auf ein Element in einer Mehrfachzuordnung zeigt.  
   
@@ -1686,9 +1725,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [begin](#hash_map__begin) wird verdeutlicht, wie ein **Iterator** deklariert und verwendet wird.  
+  Im Beispiel für [begin](#begin) wird verdeutlicht, wie ein **Iterator** deklariert und verwendet wird.  
   
-##  <a name="a-namehashmapkeycompa--hashmapkeycomp"></a><a name="hash_map__key_comp"></a> hash_map::key_comp  
+##  <a name="key_comp"></a> hash_map::key_comp  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1705,9 +1744,9 @@ key_compare key_comp() const;
 ### <a name="remarks"></a>Hinweise  
  Das gespeicherte Objekt definiert die Memberfunktion  
   
- **bool operator**( **const Key&** ` left`**, const Key&** ` right`);  
+ **bool operator**( **const Key&** `left`**, const Key&** `right`);  
   
- die **TRUE** zurückgibt, wenn ` left` vorangestellt ist und nicht gleich ` right` in der Sortierreihenfolge ist.  
+ die **TRUE** zurückgibt, wenn `left` vorangestellt ist und nicht gleich `right` in der Sortierreihenfolge ist.  
   
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
@@ -1764,7 +1803,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmapkeycomparea--hashmapkeycompare"></a><a name="hash_map__key_compare"></a> hash_map::key_compare  
+##  <a name="key_compare"></a> hash_map::key_compare  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1783,9 +1822,9 @@ typedef Traits key_compare;
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [key_comp](#hash_map__key_comp) wird verdeutlicht, wie ein `key_compare` deklariert und verwendet wird.  
+  Im Beispiel für [key_comp](#key_comp) wird verdeutlicht, wie ein `key_compare` deklariert und verwendet wird.  
   
-##  <a name="a-namehashmapkeytypea--hashmapkeytype"></a><a name="hash_map__key_type"></a> hash_map::key_type  
+##  <a name="key_type"></a> hash_map::key_type  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1804,9 +1843,9 @@ typedef Key key_type;
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [value_type](#hash_map__value_type) wird verdeutlicht, wie ein `key_type` deklariert und verwendet wird.  
+  Im Beispiel für [value_type](#value_type) wird verdeutlicht, wie ein `key_type` deklariert und verwendet wird.  
   
-##  <a name="a-namehashmaplowerbounda--hashmaplowerbound"></a><a name="hash_map__lower_bound"></a> hash_map::lower_bound  
+##  <a name="lower_bound"></a> hash_map::lower_bound  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1820,11 +1859,11 @@ const_iterator lower_bound(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` key`  
+ `key`  
  Der Argumentschlüsselwert, der mit dem Sortierschlüssel eines Elements aus der zu durchsuchenden hash_map verglichen wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [Iterator](#hash_map__iterator) oder [const_iterator](#hash_map__const_iterator), der den Speicherort eines Elements in einem hash_map-Element mit einem Schlüssel adressiert, der gleich oder größer als der Argumentschlüssel ist, oder der den Speicherort des folgenden letzten Elements in der hash_map adressiert, wenn kein Treffer für den Schlüssen gefunden wird.  
+ Ein [Iterator](#iterator) oder [const_iterator](#const_iterator), der den Speicherort eines Elements in einem hash_map-Element mit einem Schlüssel adressiert, der gleich oder größer als der Argumentschlüssel ist, oder der den Speicherort des folgenden letzten Elements in der hash_map adressiert, wenn kein Treffer für den Schlüssen gefunden wird.  
   
  Wenn dem Rückgabewert `lower_bound` `const_iterator` zugewiesen wird, kann das hash_map-Objekt nicht geändert werden. Wenn dem Rückgabewert `lower_bound` einem **iterator** zugewiesen wird, kann das hash_map-Objekt geändert werden.  
   
@@ -1882,7 +1921,7 @@ The hash_map hm1 doesn't have an element with a key of 4.
 The element of hm1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="a-namehashmapmappedtypea--hashmapmappedtype"></a><a name="hash_map__mapped_type"></a> hash_map::mapped_type  
+##  <a name="mapped_type"></a> hash_map::mapped_type  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1901,9 +1940,9 @@ typedef Type mapped_type;
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [value_type](#hash_map__value_type) wird verdeutlicht, wie ein `key_type` deklariert und verwendet wird.  
+  Im Beispiel für [value_type](#value_type) wird verdeutlicht, wie ein `key_type` deklariert und verwendet wird.  
   
-##  <a name="a-namehashmapmaxsizea--hashmapmaxsize"></a><a name="hash_map__max_size"></a> hash_map::max_size  
+##  <a name="max_size"></a> hash_map::max_size  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1942,7 +1981,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmapoperatorata--hashmapoperator"></a><a name="hash_map__operator_at"></a> hash_map::operator[]  
+##  <a name="op_at"></a> hash_map::operator[]  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -1960,7 +1999,7 @@ Type& operator[](Key&& key);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|` key`|Der Schlüsselwert des einzufügenden Elements.|  
+|`key`|Der Schlüsselwert des einzufügenden Elements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf den Datenwert des eingefügten Elements.  
@@ -1972,9 +2011,9 @@ Type& operator[](Key&& key);
   
  `m[ key] = DataValue`;  
   
- dort wo der DataValue der Wert des `mapped_type` des Elements mit einem Schlüsselwert von ` key` ist.  
+ dort wo der DataValue der Wert des `mapped_type` des Elements mit einem Schlüsselwert von `key` ist.  
   
- Wenn `operator[]` zum Einfügen von Elementen verwendet wird, gibt der zurückgegebene Verweis nicht an, ob eine Einfügung ein bereits vorhandenes Element ändert oder ein neues erstellt. Die Memberfunktionen [find](../standard-library/map-class.md#map__find) und [insert](../standard-library/map-class.md#map__insert) können verwendet werden, um zu bestimmen, ob ein Element mit einem bestimmten Schlüssel vor einer Einfügung bereits vorhanden ist.  
+ Wenn `operator[]` zum Einfügen von Elementen verwendet wird, gibt der zurückgegebene Verweis nicht an, ob eine Einfügung ein bereits vorhandenes Element ändert oder ein neues erstellt. Die Memberfunktionen [find](../standard-library/map-class.md#find) und [insert](../standard-library/map-class.md#insert) können verwendet werden, um zu bestimmen, ob ein Element mit einem bestimmten Schlüssel vor einer Einfügung bereits vorhanden ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2038,7 +2077,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmapoperatoreqa--hashmapoperator"></a><a name="hash_map__operator_eq"></a> hash_map::operator=  
+##  <a name="op_eq"></a> hash_map::operator=  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2056,10 +2095,10 @@ hash_map& operator=(hash_map&& right);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|` right`|Die [hash_map-Klasse](../standard-library/hash-map-class.md), die in die `hash_map` kopiert wird.|  
+|`right`|Die [hash_map-Klasse](../standard-library/hash-map-class.md), die in die `hash_map` kopiert wird.|  
   
 ### <a name="remarks"></a>Hinweise  
- Nachdem ein vorhandenes Element in einem `hash_map` gelöscht wurde, kopiert oder verschiebt `operator=` den Inhalt von ` right` in den `hash_map`.  
+ Nachdem ein vorhandenes Element in einem `hash_map` gelöscht wurde, kopiert oder verschiebt `operator=` den Inhalt von `right` in den `hash_map`.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2099,7 +2138,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmappointera--hashmappointer"></a><a name="hash_map__pointer"></a> hash_map::pointer  
+##  <a name="pointer"></a> hash_map::pointer  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2113,11 +2152,11 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 ### <a name="remarks"></a>Hinweise  
  Ein **pointer**-Typ kann zum Ändern des Werts eines Elements verwendet werden.  
   
- In den meisten Fällen sollte ein [iterator](#hash_map__iterator) für den Zugriff auf Elemente in einem Listenobjekt verwendet werden.  
+ In den meisten Fällen sollte ein [iterator](#iterator) für den Zugriff auf Elemente in einem Listenobjekt verwendet werden.  
   
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
-##  <a name="a-namehashmaprbegina--hashmaprbegin"></a><a name="hash_map__rbegin"></a> hash_map::rbegin  
+##  <a name="rbegin"></a> hash_map::rbegin  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2134,9 +2173,9 @@ reverse_iterator rbegin();
  Ein umgekehrter bidirektionaler const-Iterator, mit dem das erste Element in einer umgekehrten hash_map adressiert wird bzw. mit dem das ehemals letzte Element in der nicht umgekehrten hash_map adressiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- `rbegin` wird bei einer umgekehrten hash_map auf die gleiche Weise wie [begin](#hash_map__begin) mit einer hash_map verwendet.  
+ `rbegin` wird bei einer umgekehrten hash_map auf die gleiche Weise wie [begin](#begin) mit einer hash_map verwendet.  
   
- Wenn der Rückgabewert von `rbegin` einem [const_reverse_iterator](#hash_map__const_reverse_iterator) zugewiesen wird, kann das hash_map-Objekt anschließend nicht geändert werden. Wenn der Rückgabewert von `rbegin` einem [reverse_iterator](#hash_map__reverse_iterator) zugewiesen wird, kann das hash_map-Objekt anschließend geändert werden.  
+ Wenn der Rückgabewert von `rbegin` einem [const_reverse_iterator](#const_reverse_iterator) zugewiesen wird, kann das hash_map-Objekt anschließend nicht geändert werden. Wenn der Rückgabewert von `rbegin` einem [reverse_iterator](#reverse_iterator) zugewiesen wird, kann das hash_map-Objekt anschließend geändert werden.  
   
  `rbegin` kann verwendet werden, um eine hash_map rückwärts zu durchlaufen.  
   
@@ -2201,7 +2240,7 @@ The reversed hash_map is: 3 2 1 .
 After the erasure, the first element in the reversed hash_map is 2.  
 ```  
   
-##  <a name="a-namehashmapreferencea--hashmapreference"></a><a name="hash_map__reference"></a> hash_map::reference  
+##  <a name="reference"></a> hash_map::reference  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2265,7 +2304,7 @@ The data value of first element in the hash_map is 10.
 The modified data value of first element is 15.  
 ```  
   
-##  <a name="a-namehashmaprenda--hashmaprend"></a><a name="hash_map__rend"></a> hash_map::rend  
+##  <a name="rend"></a> hash_map::rend  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2282,9 +2321,9 @@ reverse_iterator rend();
  Ein umgekehrter bidirektionaler Iterator, der den Standort anspricht, der dem letzten Element in einer umgekehrten hash_map nachfolgt (der Speicherort, der dem ersten Element in der nicht umgekehrten hash_map vorangegangen war).  
   
 ### <a name="remarks"></a>Hinweise  
- `rend` wird bei einer umgekehrten hash_map auf die gleiche Weise wie [end](#hash_map__end) mit einer hash_map verwendet.  
+ `rend` wird bei einer umgekehrten hash_map auf die gleiche Weise wie [end](#end) mit einer hash_map verwendet.  
   
- Wenn der Rückgabewert von `rend` einem [const_reverse_iterator](#hash_map__const_reverse_iterator) zugewiesen wird, kann das hash_map-Objekt anschließend nicht geändert werden. Wenn der Rückgabewert von `rend` einem [reverse_iterator](#hash_map__reverse_iterator) zugewiesen wird, kann das hash_map-Objekt anschließend geändert werden.  
+ Wenn der Rückgabewert von `rend` einem [const_reverse_iterator](#const_reverse_iterator) zugewiesen wird, kann das hash_map-Objekt anschließend nicht geändert werden. Wenn der Rückgabewert von `rend` einem [reverse_iterator](#reverse_iterator) zugewiesen wird, kann das hash_map-Objekt anschließend geändert werden.  
   
  `rend` kann verwendet werden, um zu testen, ob ein umgekehrter Iterator das Ende seiner hash_map erreicht hat.  
   
@@ -2355,7 +2394,7 @@ The reversed hash_map is: 3 2 1 .
 After the erasure, the last element in the reversed hash_map is 2.  
 ```  
   
-##  <a name="a-namehashmapreverseiteratora--hashmapreverseiterator"></a><a name="hash_map__reverse_iterator"></a> hash_map::reverse_iterator  
+##  <a name="reverse_iterator"></a> hash_map::reverse_iterator  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2369,7 +2408,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 ### <a name="remarks"></a>Hinweise  
  Ein `reverse_iterator`-Typ kann nicht den Wert eines Elements ändern und wird verwendet, um die hash_map in umgekehrter Reihenfolge zu durchlaufen.  
   
- Der `reverse_iterator`, der durch hash_map definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#hash_map__value_type) sind, das von Typ **pair\<const Key, Type>** ist. Dessen erster Member ist der Schlüssel zum Element, und dessen zweiter Member das zugeordnete Datum, das vom Element gehalten wird.  
+ Der `reverse_iterator`, der durch hash_map definiert wird, zeigt auf Elemente, die Objekte eines [value_type](#value_type) sind, das von Typ **pair\<const Key, Type>** ist. Dessen erster Member ist der Schlüssel zum Element, und dessen zweiter Member das zugeordnete Datum, das vom Element gehalten wird.  
   
  Verwenden Sie den -> Operator, um einen `reverse_iterator``rIter`, der auf ein Element in einer hash_map zeigt, zu dereferenzieren.  
   
@@ -2378,9 +2417,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [rbegin](#hash_map__rbegin) wird verdeutlicht, wie ein `reverse_iterator` deklariert und verwendet wird.  
+  Im Beispiel für [rbegin](#rbegin) wird verdeutlicht, wie ein `reverse_iterator` deklariert und verwendet wird.  
   
-##  <a name="a-namehashmapsizea--hashmapsize"></a><a name="hash_map__size"></a> hash_map::size  
+##  <a name="size"></a> hash_map::size  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2429,7 +2468,7 @@ The hash_map length is 1.
 The hash_map length is now 2.  
 ```  
   
-##  <a name="a-namehashmapsizetypea--hashmapsizetype"></a><a name="hash_map__size_type"></a> hash_map::size_type  
+##  <a name="size_type"></a> hash_map::size_type  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2444,9 +2483,9 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [size](#hash_map__size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird  
+  Im Beispiel für [size](#size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird  
   
-##  <a name="a-namehashmapswapa--hashmapswap"></a><a name="hash_map__swap"></a> hash_map::swap  
+##  <a name="swap"></a> hash_map::swap  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2458,7 +2497,7 @@ void swap(hash_map& right);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` right`  
+ `right`  
  Das hash_map-Argument, das die Elemente bereitstellt, mit der die Ziel-hash_map getauscht werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2520,7 +2559,7 @@ After swapping with hm2, hash_map hm1 is: 100 200.
 After swapping with hm3, hash_map hm1 is: 300.  
 ```  
   
-##  <a name="a-namehashmapupperbounda--hashmapupperbound"></a><a name="hash_map__upper_bound"></a> hash_map::upper_bound  
+##  <a name="upper_bound"></a> hash_map::upper_bound  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2534,11 +2573,11 @@ const_iterator upper_bound(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` key`  
+ `key`  
  Der Argumentschlüsselwert, der mit dem Sortierschlüsselwert eines Elements aus der zu durchsuchenden hash_map verglichen wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [Iterator](#hash_map__iterator) oder [const_iterator](#hash_map__const_iterator), der den Speicherort eines Elements in einem hash_map-Element mit einem Schlüssel adressiert, der größer als der Argumentschlüssel ist, oder der den Speicherort des folgenden letzten Elements in der hash_map adressiert, wenn kein Treffer für den Schlüssen gefunden wird.  
+ Ein [Iterator](#iterator) oder [const_iterator](#const_iterator), der den Speicherort eines Elements in einem hash_map-Element mit einem Schlüssel adressiert, der größer als der Argumentschlüssel ist, oder der den Speicherort des folgenden letzten Elements in der hash_map adressiert, wenn kein Treffer für den Schlüssen gefunden wird.  
   
  Wenn der Rückgabewert einem `const_iterator` zugewiesen wird, kann das hash_map-Objekt nicht geändert werden. Wenn der Rückgabewert einem **Iterator** zugewiesen wird, kann das hash_map-Objekt nicht geändert werden.  
   
@@ -2597,7 +2636,7 @@ The 1st element of hm1 with a key greater than that
  of the initial element of hm1 is: 20.  
 ```  
   
-##  <a name="a-namehashmapvaluecompa--hashmapvaluecomp"></a><a name="hash_map__value_comp"></a> hash_map::value_comp  
+##  <a name="value_comp"></a> hash_map::value_comp  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2612,11 +2651,11 @@ value_compare value_comp() const;
  Gibt das Vergleichsfunktionsobjekt zurück, das ein hash_map-Element zum Sortieren seiner Elemente verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn zwei Elemente, *e*1 *(k*1*, d*1 *)* und *e*2 *(k*2 *, d*2 *)*, für eine hash_map *m* Objekte eines [value_type](#hash_map__value_type)-Typs sind, bei dem *k*1 und *k*2 deren Schlüssel des [key_type](#hash_map__key_type)-Typs sind, und `d`1 und`d`2 deren Daten des [mapped_type](#hash_map__mapped_type)-Typs sind, entspricht *m.*`value_comp`*( )(e*1 *, e*2 *)* anschließend *m.*`key_comp`*( ) (k*1 *, k*2 *)*. Ein gespeicherte Objekt definiert die Memberfunktion  
+ Wenn zwei Elemente, *e*1 *(k*1*, d*1 *)* und *e*2 *(k*2 *, d*2 *)*, für eine hash_map *m* Objekte eines [value_type](#value_type)-Typs sind, bei dem *k*1 und *k*2 deren Schlüssel des [key_type](#key_type)-Typs sind, und `d`1 und`d`2 deren Daten des [mapped_type](#mapped_type)-Typs sind, entspricht *m.*`value_comp`*( )(e*1 *, e*2 *)* anschließend *m.*`key_comp`*( ) (k*1 *, k*2 *)*. Ein gespeicherte Objekt definiert die Memberfunktion  
   
- **bool operator**(**value_type&** ` left`, **value_type&** ` right`) **;**,  
+ **bool operator**(**value_type&** `left`, **value_type&** `right`) **;**,  
   
- die **TRUE** zurückgibt, wenn der Schlüsselwert von ` left` vorangestellt ist und nicht dem Schlüsselwert von ` right` in der Sortierreihenfolge entspricht.  
+ die **TRUE** zurückgibt, wenn der Schlüsselwert von `left` vorangestellt ist und nicht dem Schlüsselwert von `right` in der Sortierreihenfolge entspricht.  
   
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
@@ -2665,7 +2704,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmapvaluetypea--hashmapvaluetype"></a><a name="hash_map__value_type"></a> hash_map::value_type  
+##  <a name="value_type"></a> hash_map::value_type  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist die [unordered_map-Klasse](../standard-library/unordered-map-class.md).  
@@ -2677,7 +2716,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `value_type` wird als `pair` *\<***const**[key_type](#hash_map__key_type), [mapped_type](#hash_map__mapped_type)*>* deklariert und nicht als `pair`**\<key_type, mapped_type>**, da die Schlüssel eines assoziativen Containers vielleicht nicht durch das Verwenden eines nonconstant-Iterators oder Verweises geändert werden können.  
+ `value_type` wird als `pair` *\<***const**[key_type](#key_type), [mapped_type](#mapped_type)*>* deklariert und nicht als `pair`**\<key_type, mapped_type>**, da die Schlüssel eines assoziativen Containers vielleicht nicht durch das Verwenden eines nonconstant-Iterators oder Verweises geändert werden können.  
   
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
