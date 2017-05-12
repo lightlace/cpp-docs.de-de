@@ -2,9 +2,10 @@
 layout: HubPage
 title: Visual C++-Dokumentation | Microsoft-Dokumentation
 description: "Erfahren Sie, wie Sie mit C++ Anwendungen, Dienste und Tools für Ihre Plattformen und Geräte entwickeln können."
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fa2cdbf2d54994784bfc8a0bd0e542b3f5de309b
 ms.openlocfilehash: a4623b2ccb2ea1f10b8060afa691c20d22a9c181
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
