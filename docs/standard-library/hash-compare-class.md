@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: e493529a2511d92b9c99f820bd05b8f911ef9280
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 56b02a7bcafebebfb9fbb5569ad28eb2d52cf879
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="hashcompare-class"></a>hash_compare-Klasse
@@ -54,14 +55,14 @@ Klasse hash_compare { Traits comp; public: const size_t bucket_size = 4; const s
   
 -   Für jeden `key1`-Wert des Typs **Key**, der `key2` in der Sequenz vorausgeht und denselben Hashwert hat (der Wert, den die Hashfunktion zurückgegeben hat), ist **hash_compare**(`key2`, `key1`) gleich „FALSE“. Die Funktion muss eine vollständige Ordnung für Werte des Typs **Key** erzwingen. Die von „hash_compare“ bereitgestellte Funktion gibt *comp*(`key2`, `key1`) `,` zurück, wobei *comp* ein gespeichertes Objekt des Typs **Traits** ist, das Sie angeben können, wenn Sie das Objekt „hash_comp“ erstellen. Für den standardmäßigen **Traits**-Parametertyp **less**Key>\< werden die Werte für Sortierschlüssel nie verringert.  
   
--   Die ganzzahlige Konstante **bucket_size** gibt die durchschnittliche Anzahl von Elementen pro „Bucket“ (Hashtabelleneintrag) an, die in den Containern nicht überschritten werden sollte. Der Wert der Konstanten muss größer als&0; sein. „hash_compare“ stellt den Wert „4“ bereit.  
+-   Die ganzzahlige Konstante **bucket_size** gibt die durchschnittliche Anzahl von Elementen pro „Bucket“ (Hashtabelleneintrag) an, die in den Containern nicht überschritten werden sollte. Der Wert der Konstanten muss größer als 0 sein. „hash_compare“ stellt den Wert „4“ bereit.  
   
--   Die ganzzahlige Konstante **min_buckets** gibt die Mindestanzahl von Buckets an, die in der Hashtabelle verwaltet werden sollen. Der Wert der Konstanten muss eine Potenz von zwei und größer als&0; sein. „hash_compare“ stellt den Wert „8“ bereit.  
+-   Die ganzzahlige Konstante **min_buckets** gibt die Mindestanzahl von Buckets an, die in der Hashtabelle verwaltet werden sollen. Der Wert der Konstanten muss eine Potenz von zwei und größer als 0 sein. „hash_compare“ stellt den Wert „8“ bereit.  
   
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md) und [<hash_set>](../standard-library/hash-set.md) Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
 ## <a name="example"></a>Beispiel  
- Beispiele, wie „hash_compare“ deklariert und verwendet wird, finden Sie in den Beispielen zu [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map__hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap__hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set__hash_set) und [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset__hash_multiset).  
+ Beispiele, wie „hash_compare“ deklariert und verwendet wird, finden Sie in den Beispielen zu [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set) und [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<hash_map>  

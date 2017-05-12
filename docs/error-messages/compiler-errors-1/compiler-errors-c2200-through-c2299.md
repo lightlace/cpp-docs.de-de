@@ -28,7 +28,6 @@ f1_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -54,7 +53,6 @@ helpviewer_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -82,9 +80,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8e3f009def24f09cbc8b373a81ea63ed6bd922ed
-ms.lasthandoff: 04/24/2017
+ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
+ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>Compilerfehler C2200 bis C2299
@@ -177,7 +175,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2277](compiler-error-c2277.md)|"*Funktion*': Adresse von dieser Memberfunktion nicht übernehmen|  
 |Compilerfehler Fehler C2278|Veraltet.|  
 |[Compilerfehler C2279](compiler-error-c2279.md)|Ausnahmespezifikation kann nicht in einer typedef-Deklaration enthalten sein|  
-|Compilerfehler Fehler C2280|"*Klasse*::*Funktion*": Es wird versucht, eine gelöschte Funktion zu verweisen|  
+|[Compilerfehler Fehler C2280](compiler-error-c2280.md)|"*Klasse*::*Funktion*": Es wird versucht, eine gelöschte Funktion zu verweisen|  
 |Compilerfehler Fehler C2281|"*Klasse*::*Funktion*': eine Funktion kann nur gelöscht werden, auf die erste Deklaration|  
 |Compilerfehler Fehler C2282|"*Funktion1*"darf nicht außer Kraft setzen"*Funktion2*"|  
 |[Compilerfehler C2283](compiler-error-c2283.md)|"*Bezeichner*": reiner Spezifizierer oder ein abstrakter Überschreibungsspezifizierer ist für unbenannte Klasse/Struktur nicht zulässig|  

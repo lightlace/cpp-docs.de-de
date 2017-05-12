@@ -49,10 +49,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3d5065e62248a89de8dbe0ae38f354e0ead40ba6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 524c875f5cf25eb41d09e0f5dc99c32efcae8661
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
@@ -73,7 +74,7 @@ void _CrtMemDumpStatistics(
 ## <a name="remarks"></a>Hinweise  
  Die `_CrtMemDumpStatistics` -Funktion gibt die Debugheaderinformationen für einen angegebenen Zustand des Heaps in einer für den Benutzer lesbaren Form aus. Die Dumpstatistik kann von der Anwendung zum Nachverfolgen von Zuordnungen und zum Erkennen von Speicherproblemen verwendet werden. Der Speicherzustands kann einen bestimmten Heapzustand oder den Unterschied zwischen zwei Zuständen enthalten. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von `_CrtMemDumpStatistics` während der Vorverarbeitung entfernt.  
   
- Der `state`-Parameter muss ein Zeiger auf eine `_CrtMemState`-Struktur sein, die von [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) gefüllt oder von [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md) zurückgegeben wurden, bevor `_CrtMemDumpStatistics` aufgerufen wird. Wenn `state` `NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt und keine Aktion durchgeführt. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Die `state` -Parameter muss ein Zeiger auf eine `_CrtMemState` -Struktur sein, die von [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) gefüllt oder von [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md) zurückgegeben wurden, bevor `_CrtMemDumpStatistics` aufgerufen wird. Wenn `state` den Wert `NULL`annimmt, wird der ungültige Parameterhandler, wie in [Parameter Validation](../../c-runtime-library/parameter-validation.md)beschrieben, aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt und keine Aktion durchgeführt. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Weitere Informationen über Heapzustandsfunktionen und die `_CrtMemState`-Struktur finden Sie unter [Berichtsfunktionen für den Heapzustand](/visualstudio/debugger/crt-debug-heap-details). Weitere Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [Details zum CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
   
@@ -86,9 +87,6 @@ void _CrtMemDumpStatistics(
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
  **Bibliotheken:** Nur Debugversionen der [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md)  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- <xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName>  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debugroutinen](../../c-runtime-library/debug-routines.md)

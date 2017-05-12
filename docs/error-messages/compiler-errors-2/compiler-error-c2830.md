@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2830 | Microsoft-Dokumentation
+title: Compilerfehler C2830 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: c7547d0df457e9f96676b99fdf4f7808945e206c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1cbaa14c04aac55a09f646bfbe669a475e527add
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2830"></a>Compilerfehler C2830
 Nur die Positionierungsparameter des new-Operators können Standardwerte haben  
   
-Den formalen Standardparametern für [new-Operator](../../standard-library/new-operators.md#operator_new) kann nicht über Standardwerte verfügen. Standardwerte können nur benutzerdefinierte Platzierungsparameter festgelegt werden.
+Die formalen Standardparameter für [new-Operator](../../standard-library/new-operators.md#op_new) dürfen keine Standardwerte besitzen. Nur benutzerdefinierte Platzierungsparameter können Standardwerte angeben.
 

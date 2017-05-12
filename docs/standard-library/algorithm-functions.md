@@ -8,253 +8,171 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
-- std::adjacent_find
 - adjacent_find
 - algorithm/std::all_of
-- std::all_of
 - all_of
 - algorithm/std::any_of
-- std::any_of
 - any_of
 - algorithm/std::binary_search
-- std::binary_search
 - binary_search
 - algorithm/std::copy
-- std::copy
 - copy
 - algorithm/std::copy_backward
-- std::copy_backward
 - copy_backward
 - algorithm/std::copy_if
-- std::copy_if
 - copy_if
 - algorithm/std::copy_n
-- std::copy_n
 - copy_n
 - algorithm/std::equal
-- std::equal
 - equal
 - algorithm/std::equal_range
-- std::equal_range
 - equal_range
 - algorithm/std::fill
-- std::fill
 - fill
 - algorithm/std::fill_n
-- std::fill_n
 - fill_n
 - algorithm/std::find
-- std::find
 - find
 - algorithm/std::find_end
-- std::find_end
 - find_end
 - algorithm/std::find_first_of
-- std::find_first_of
 - find_first_of
 - algorithm/std::find_if
-- std::find_if
 - find_if
 - algorithm/std::find_if_not
-- std::find_if_not
 - find_if_not
 - algorithm/std::for_each
-- std::for_each
 - for_each
 - algorithm/std::generate
-- std::generate
 - generate
 - algorithm/std::generate_n
-- std::generate_n
 - generate_n
 - algorithm/std::includes
-- std::includes
 - includes
 - algorithm/std::inplace_merge
-- std::inplace_merge
 - inplace_merge
 - algorithm/std::is_heap
-- std::is_heap
 - is_heap
 - algorithm/std::is_heap_until
-- std::is_heap_until
 - is_heap_until
 - algorithm/std::is_partitioned
-- std::is_partitioned
 - is_partitioned
 - algorithm/std::is_permutation
-- std::is_permutation
 - is_permutation
 - algorithm/std::is_sorted
-- std::is_sorted
 - is_sorted
 - algorithm/std::is_sorted_until
-- std::is_sorted_until
 - is_sorted_until
 - algorithm/std::iter_swap
-- std::iter_swap
 - iter_swap
 - algorithm/std::lexicographical_compare
-- std::lexicographical_compare
 - lexicographical_compare
 - algorithm/std::lower_bound
-- std::lower_bound
 - lower_bound
 - algorithm/std::make_heap
-- std::make_heap
 - make_heap
 - algorithm/std::max
-- std::max
 - max
 - algorithm/std::max_element
-- std::max_element
 - max_element
 - algorithm/std::merge
-- std::merge
 - merge
 - algorithm/std::min
-- std::min
 - min
 - algorithm/std::minmax
-- std::minmax
 - minmax
 - algorithm/std::minmax_element
-- std::minmax_element
 - minmax_element
 - algorithm/std::min_element
-- std::min_element
 - min_element
 - algorithm/std::mismatch
-- std::mismatch
 - mismatch
 - algorithm/std::move
-- std::move
 - move
 - algorithm/std::move_backward
-- std::move_backward
 - move_backward
 - algorithm/std::next_permutation
-- std::next_permutation
 - next_permutation
 - algorithm/std::none_of
-- std::none_of
 - none_of
 - algorithm/std::nth_element
-- std::nth_element
 - nth_element
 - algorithm/std::partial_sort
-- std::partial_sort
 - partial_sort
 - algorithm/std::partial_sort_copy
-- std::partial_sort_copy
 - partial_sort_copy
 - algorithm/std::partition
-- std::partition
 - partition
 - algorithm/std::partition_point
-- std::partition_point
 - partition_point
 - algorithm/std::pop_heap
-- std::pop_heap
 - pop_heap
 - algorithm/std::prev_permutation
-- std::prev_permutation
 - prev_permutation
 - algorithm/std::push_heap
-- std::push_heap
 - push_heap
 - algorithm/std::random_shuffle
-- std::random_shuffle
 - random_shuffle
 - algorithm/std::remove
-- std::remove
 - remove
 - algorithm/std::remove_copy
-- std::remove_copy
 - remove_copy
 - algorithm/std::remove_copy_if
-- std::remove_copy_if
 - remove_copy_if
 - algorithm/std::remove_if
-- std::remove_if
 - remove_if
 - algorithm/std::replace
-- std::replace
 - replace
 - algorithm/std::replace_copy
-- std::replace_copy
 - replace_copy
 - algorithm/std::replace_copy_if
-- std::replace_copy_if
 - replace_copy_if
 - algorithm/std::replace_if
-- std::replace_if
 - replace_if
 - algorithm/std::reverse
-- std::reverse
 - reverse
 - algorithm/std::reverse_copy
-- std::reverse_copy
 - reverse_copy
 - algorithm/std::rotate
-- std::rotate
 - rotate
 - algorithm/std::rotate_copy
-- std::rotate_copy
 - rotate_copy
 - algorithm/std::search
-- std::search
 - search
 - algorithm/std::search_n
-- std::search_n
 - search_n
 - algorithm/std::set_difference
-- std::set_difference
 - set_difference
 - algorithm/std::set_intersection
-- std::set_intersection
 - set_intersection
 - algorithm/std::set_symmetric_difference
-- std::set_symmetric_difference
 - set_symmetric_difference
 - algorithm/std::set_union
-- std::set_union
 - set_union
 - algorithm/std::shuffle
-- std::shuffle
 - shuffle
 - algorithm/std::sort
-- std::sort
 - sort
 - algorithm/std::sort_heap
-- std::sort_heap
 - sort_heap
 - algorithm/std::stable_partition
-- std::stable_partition
 - stable_partition
 - algorithm/std::stable_sort
-- std::stable_sort
 - stable_sort
 - algorithm/std::swap_ranges
-- std::swap_ranges
 - swap_ranges
 - algorithm/std::transform
-- std::transform
 - transform
 - algorithm/std::unique
-- std::unique
 - unique
 - algorithm/std::unique_copy
-- std::unique_copy
 - unique_copy
 - algorithm/std::upper_bound
-- std::upper_bound
 - upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
-- std::count
 - count
 - xutility/std::equal
 - xutility/std::fill
@@ -266,15 +184,21 @@ f1_keywords:
 - xutility/std::move_backward
 - xutility/std::reverse
 - xutility/std::rotate
+- algorithm/std::count_if
+- algorithm/std::partition_copy
+- algorithm/std::swap
+dev_langs:
+- C++
 ms.assetid: c10b0c65-410c-4c83-abf8-8b7f61bba8d0
 caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9916f5be3319b430104201387d6ab5b9b476e1c8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorithmusfunktionen&gt;
@@ -306,11 +230,11 @@ ms.lasthandoff: 02/24/2017
 |[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|  
 |[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[sort](#sort)|  
 |[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|  
-|[std::shuffle](#std__shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
+|[shuffle](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
 |[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|  
 |[upper_bound](#upper_bound)|  
   
-##  <a name="a-nameadjacentfinda--adjacentfind"></a><a name="adjacent_find"></a> adjacent_find  
+##  <a name="adjacent_find"></a> adjacent_find  
  Sucht zwei benachbarte Elemente, die entweder gleich sind oder eine angegebene Bedingung erfüllen.  
   
 ```  
@@ -406,7 +330,7 @@ There are two adjacent elements where the second is twice the first.
  They have values of 10 & 20.  
 ```  
   
-##  <a name="a-nameallofa--allof"></a><a name="all_of"></a> all_of  
+##  <a name="all_of"></a> all_of  
  Gibt `true` zurück, wenn eine Bedingung bei jedem Element im angegebenen Bereich vorhanden ist.  
   
 ```  
@@ -433,7 +357,7 @@ template<class InputIterator, class Predicate>
 ### <a name="remarks"></a>Hinweise  
  Die Vorlagenfunktion gibt nur dann `true` zurück, wenn für jedes `N` im Bereich `[0,Last - first)` das Prädikat `comp(*(_First + N))``true` ist.  
   
-##  <a name="a-nameanyofa--anyof"></a><a name="any_of"></a> any_of  
+##  <a name="any_of"></a> any_of  
  Gibt `true` zurück, wenn eine Bedingung mindestens einmal im angegebenen Bereich von Elementen vorhanden ist.  
   
 ```  
@@ -460,9 +384,9 @@ template<class InputIterator, class UnaryPredicate>
 ### <a name="remarks"></a>Hinweise  
  Die Vorlagenfunktion gibt `true` nur, wenn, für einige `N` im Bereich  
   
- `[0,`  `last`  `-`   `first``)`, the predicate `comp``(*(` `first` `+ N))` is true.  
+ `[0, last - first)`, das Prädikat `comp(*(first + N))` ist "true".  
   
-##  <a name="a-namebinarysearcha--binarysearch"></a><a name="binary_search"></a> binary_search  
+##  <a name="binary_search"></a> binary_search  
  Testet, ob ein Element in einem sortierten Bereich einem angegebenen Wert entspricht oder ihm auf eine von einem binären Prädikat angegebene Weise gleicht.  
   
 ```  
@@ -506,7 +430,7 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
  Die Werttypen der Forward-Iteratoren müssen weniger als vergleichbar sein, um sortiert zu werden, sodass zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen.  
   
- Die Komplexität dieses Algorithmus ist bei Zufallszugriffsiteratoren logarithmisch und andernfalls linear. Dabei ist die Anzahl von Schritten proportional zu (`last` – `first`).  
+ Die Komplexität dieses Algorithmus ist für zufallszugriffsiteratoren logarithmisch und andernfalls mit der Anzahl von Schritten proportional zu linearen ( `last`  -  `first`).  
   
 ### <a name="example"></a>Beispiel  
   
@@ -590,7 +514,7 @@ int main( )
 }   
 ```  
   
-##  <a name="a-namecopya--copy"></a><a name="copy"></a> copy  
+##  <a name="copy"></a> copy  
  Weist die Werte von Elementen aus einem Quellbereich einem Zielbereich zu, durchläuft die Quellelementsequenz und weist ihnen vorwärts neue Positionen zu.  
   
 ```  
@@ -612,7 +536,7 @@ template<class InputIterator, class OutputIterator>
  Ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich adressiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Ausgabe-Iterator, der die Position direkt hinter dem letzten Element im Zielbereich adressiert, d.h, der Iterator adressiert `result` + (`last` – `first`).  
+ Ein Ausgabeiterator, der die Position hinter dem letzten Element im Zielbereich, d. h., der Iterator adressiert `result` + ( `last`  -   `first` ).  
   
 ### <a name="remarks"></a>Hinweise  
  Der Quellbereich muss gültig sein, und es muss genügend Speicherplatz am Ziel zur Verfügung stehen, um alle kopierten Elemente aufzunehmen.  
@@ -679,7 +603,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )  
 ```  
   
-##  <a name="a-namecopybackwarda--copybackward"></a><a name="copy_backward"></a> copy_backward  
+##  <a name="copy_backward"></a> copy_backward  
  Weist die Werte von Elementen aus einem Quellbereich einem Zielbereich zu, durchläuft die Quellelementsequenz und weist ihnen rückwärts neue Positionen zu.  
   
 ```  
@@ -701,7 +625,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  Ein bidirektionaler Iterator, der die Position hinter dem letzten Element im Zielbereich adressiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Ausgabe-Iterator, der die Position hinter dem letzten Element im Zielbereich adressiert, d.h, der Iterator adressiert `destEnd` – (`last` – `first`).  
+ Ein Ausgabeiterator, der die Position hinter dem letzten Element im Zielbereich, d. h., der Iterator adressiert `destEnd` -( `last`  -   `first` ).  
   
 ### <a name="remarks"></a>Hinweise  
  Der Quellbereich muss gültig sein, und es muss genügend Speicherplatz am Ziel zur Verfügung stehen, um alle kopierten Elemente aufzunehmen.  
@@ -765,7 +689,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namecopyifa--copyif"></a><a name="copy_if"></a> copy_if  
+##  <a name="copy_if"></a> copy_if  
  Kopiert in einem Elementbereich die Elemente, die für die angegebenen Bedingungen `true` sind.  
   
 ```  
@@ -800,7 +724,7 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
   
  einmal für jedes `N` im Bereich `[0, last - first)`, bei strikt ansteigenden Werten von `N` beginnend mit dem niedrigsten Wert. Wenn mit `dest`und `first` Bereiche des Speichers bestimmt werden, darf `dest` nicht im Bereich `[` `first``,` `last``)` liegen.  
   
-##  <a name="a-namecopyna--copyn"></a><a name="copy_n"></a> copy_n  
+##  <a name="copy_n"></a> copy_n  
  Kopiert eine angegebene Anzahl von Elementen.  
   
 ```  
@@ -825,9 +749,9 @@ template<class InputIterator, class Size, class OutputIterator>
  Gibt einen Ausgabeiterator zurück, in den Elemente kopiert wurden. Dies entspricht dem zurückgegebenen Wert des dritten Parameters `dest`.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion wertet `*(dest + N) = *(first + N))` einmal für jedes Element `N` im Bereich `[0,` `count``)` aus – bei strikt ansteigende Werte von `N` beginnend mit dem niedrigsten. Dann gibt es `dest` `+ N` zurück. Wenn mit `dest`und `first` Bereiche des Speichers bestimmt werden, darf `dest` nicht im Bereich `[``first``,` `Last``)` liegen.  
+ Die Vorlagenfunktion wertet `*(dest + N) = *(first + N))` einmal für jedes `N` im Bereich `[0, count)`, bei strikt ansteigenden Werten von `N` beginnend mit dem niedrigsten Wert. Dann wird `dest + N` zurückgegeben. Wenn `dest` und `first` Bereiche des Speichers bestimmt `dest` muss im Bereich `[first, last)`.  
   
-##  <a name="a-namecounta--count"></a><a name="count"></a> count  
+##  <a name="count"></a> count  
  Gibt die Anzahl von Elementen in einem Bereich zurück, dessen Werte mit einem angegebenen Wert übereinstimmen.  
   
 ```  
@@ -893,7 +817,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.  
 ```  
   
-##  <a name="a-namecountifa--countif"></a><a name="count_if"></a> count_if  
+##  <a name="count_if"></a> count_if  
  Gibt die Anzahl von Elementen in einem Bereich zurück, dessen Werte eine angegebene Bedingung erfüllen.  
   
 ```  
@@ -963,7 +887,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.  
 ```  
   
-##  <a name="a-nameequala--equal"></a><a name="equal"></a> equal  
+##  <a name="equal"></a> equal  
  Vergleicht zwei Bereiche elementweise auf Gleichheit oder Äquivalenz in dem durch ein binäres Prädikat angegebenen Sinn.  
   
  Verwenden Sie `std::equal` beim Vergleichen von Elementen in verschiedenen Containertypen (z.B. `vector` und `list`), beim Vergleichen von verschiedenen Elementtypen oder wenn Teilbereiche von Containern verglichen werden sollen. Ansonsten verwenden Sie den Nicht-Member `operator==` beim Vergleichen von Elementen des gleichen Typen im gleichen Containertypen.  
@@ -1060,7 +984,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameequalrangea--equalrange"></a><a name="equal_range"></a> equal_range  
+##  <a name="equal_range"></a> equal_range  
  Bei einem sortierten Bereich wird der Unterbereich gesucht, in dem alle Elemente einem angegebenen Wert entsprechen.  
   
 ```  
@@ -1103,7 +1027,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
   
  Elemente im möglicherweise leeren Unterbereich, der vom Iteratorpaar definiert wird, das von `equal_range` zurückgegeben wird, entspricht `val` in dem vom verwendeten Prädikat definierten Sinn.  
   
- Die Komplexität dieses Algorithmus ist bei Zufallszugriffsiteratoren logarithmisch und andernfalls linear. Dabei ist die Anzahl von Schritten proportional zu (`last` – `first`).  
+ Die Komplexität dieses Algorithmus ist für zufallszugriffsiteratoren logarithmisch und andernfalls mit der Anzahl von Schritten proportional zu linearen ( `last`  -  `first`).  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1223,7 +1147,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefilla--fill"></a><a name="fill"></a> fill  
+##  <a name="fill"></a> fill  
  Weist den gleichen neuen Wert jedem Element in einem angegebenen Bereich zu.  
   
 ```  
@@ -1288,7 +1212,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )  
 ```  
   
-##  <a name="a-namefillna--filln"></a><a name="fill_n"></a> fill_n  
+##  <a name="fill_n"></a> fill_n  
  Weist einer angegebenen Anzahl von Elementen in einem Bereich, der mit einem bestimmten Element beginnt, einen neuen Wert zu.  
   
 ```  
@@ -1364,7 +1288,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefinda--find"></a><a name="find"></a> find  
+##  <a name="find"></a> find  
  Sucht die Position des ersten Vorkommens eines Elements in einem Bereich, der einen angegebenen Wert enthält.  
   
 ```  
@@ -1393,7 +1317,7 @@ InputIterator find(
   
  Ein Codebeispiel mit `find()` finden Sie unter [find_if](../standard-library/algorithm-functions.md#find_if).  
   
-##  <a name="a-namefindenda--findend"></a><a name="find_end"></a> find_end  
+##  <a name="find_end"></a> find_end  
  Sucht in einem Bereich nach der letzten Untersequenz, die mit einer angegebenen Sequenz identisch ist oder die in durch ein binäres Prädikat angegebenen Sinne äquivalent ist.  
   
 ```  
@@ -1533,7 +1457,7 @@ There is a sequence of elements in v1 that are equivalent to those
  in v2 under the binary predicate twice and that begins at position 8.  
 ```  
   
-##  <a name="a-namefindfirstofa--findfirstof"></a><a name="find_first_of"></a> find_first_of  
+##  <a name="find_first_of"></a> find_first_of  
  Sucht das erste Vorkommen mehrerer Werte innerhalb eines Zielbereichs oder das erste Vorkommen mehrerer Elemente, die wie durch ein binäres Prädikat angegeben mit einem angegebenen Satz der Elemente äquivalent sind.  
   
 ```  
@@ -1676,7 +1600,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="a-namefindifa--findif"></a><a name="find_if"></a> find_if  
+##  <a name="find_if"></a> find_if  
  Sucht die Position des ersten Vorkommens eines Elements in einem Bereich, der eine bestimmte Bedingung erfüllt.  
   
 ```  
@@ -1789,7 +1713,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefindifnota--findifnot"></a><a name="find_if_not"></a> find_if_not  
+##  <a name="find_if_not"></a> find_if_not  
  Gibt das erste Element im angegebenen Bereich zurück, der eine Bedingung nicht erfüllt.  
   
 ```  
@@ -1818,7 +1742,7 @@ InputIterator find_if_not(
   
  Ein Codebeispiel, das problemlos für `find_if_not()` angepasst werden kann, finden Sie unter [find_if](../standard-library/algorithm-functions.md#find_if).  
   
-##  <a name="a-nameforeacha--foreach"></a><a name="for_each"></a> for_each  
+##  <a name="for_each"></a> for_each  
  Wendet ein angegebenes Funktionsobjekt auf jedes Element in einer Vorwärtsreihenfolge innerhalb eines Bereichs an und gibt das Funktionsobjekt zurück.  
   
 ```  
@@ -1847,7 +1771,7 @@ Function for_each(
   
  Der Bereich, auf den verwiesen wird, muss gültig sein. Alle Zeiger müssen dereferenzierbar sein, und die letzte Position innerhalb der Sequenz muss von der ersten Position aus durch Zunahme erreichbar sein.  
   
- Die Komplexität ist linear, mit höchstens (`last` – `first`)-Vergleichen.  
+ Die Komplexität ist linear mit höchstens ( `last`  -   `first`) vergleichen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1962,7 +1886,7 @@ The average of the elements of v1 is:
  Average ( v1mod2 ) = 10.  
 ```  
   
-##  <a name="a-namegeneratea--generate"></a><a name="generate"></a> generate  
+##  <a name="generate"></a> generate  
  Weist die Werte, die von einem Funktionsobjekt generiert werden, jedem Element in einem Bereich zu.  
   
 ```  
@@ -1988,7 +1912,7 @@ void generate(
   
  Der Bereich, auf den verwiesen wird, muss gültig sein. Alle Zeiger müssen dereferenzierbar sein, und die letzte Position innerhalb der Sequenz muss von der ersten Position aus durch Zunahme erreichbar sein.  
   
- Die Komplexität ist linear, wobei exakt (`last` – `first`) Aufrufe des Generators erforderlich sind.  
+ Die Komplexität ist linear, wobei exakt ( `last`  -   `first`) Aufrufe des Generators erforderlich sind.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2033,7 +1957,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).  
 ```  
   
-##  <a name="a-namegeneratena--generaten"></a><a name="generate_n"></a> generate_n  
+##  <a name="generate_n"></a> generate_n  
  Weist die Werte, die von einem Funktionsobjekt generiert werden, einer angegebenen Anzahl von Elementen eines Bereichs zu und kehrt zu der Position zurück, die direkt nach dem letzten zugewiesenen Wert liegt.  
   
 ```  
@@ -2105,7 +2029,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameincludesa--includes"></a><a name="includes"></a> includes  
+##  <a name="includes"></a> includes  
  Testet, ob ein sortierter Bereich alle Elemente enthält, die in einem zweiten sortierten Bereich enthalten sind, wobei das Sortier- oder Äquivalenzkriterium für die Elemente durch ein binäres Prädikat angegeben werden kann.  
   
 ```  
@@ -2155,7 +2079,7 @@ bool includes(
   
  Die Werttypen der Eingabeiteratoren müssen mit „kleiner als“ vergleichbar sein, um sortiert zu werden, sodass zwei Elemente möglicherweise als gleichwertig (in dem Sinne, dass keines kleiner als das andere ist) oder eines als kleiner als das andere bestimmt werden können. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Dies bedeutet, dass der Algorithmus überprüft, ob alle Elemente im an erster Stelle aufgelisteten Bereich unter einem angegebenen binären Prädikat genauso wie die Elemente des an zweiter Stelle aufgelisteten Bereichs sortiert sind.  
   
- Die Komplexität des Algorithmus ist linear, mit höchstens 2 \* ( ( *last1 – first1*) – ( * last2 – first2*) ) – 1-Vergleichen für nicht leeren Quellbereichen.  
+ Die Komplexität dieses Algorithmus ist höchstens mit 2 linear \* (( *last1 – first1*) – (* last2 – first2 *)) – 1 Vergleiche für nicht leere Quellbereiche.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2306,7 +2230,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.  
 ```  
   
-##  <a name="a-nameinplacemergea--inplacemerge"></a><a name="inplace_merge"></a> inplace_merge  
+##  <a name="inplace_merge"></a> inplace_merge  
  Kombiniert die Elemente von zwei aufeinander folgenden sortierten Bereichen in einen einzelnen sortierten Bereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.  
   
 ```  
@@ -2342,7 +2266,7 @@ void inplace_merge(
   
  Die sortierten aufeinanderfolgenden Bereiche müssen als Vorbedingung zur Anwendung des `inplace_merge`-Algorithmus entsprechend der gleichen Reihenfolge sortiert werden, die vom Algorithmus für die Sortierung der kombinierten Bereiche verwendet wird. Der Vorgang ist stabil, da die relative Reihenfolge der Elemente innerhalb jedes Bereichs beibehalten wird. Wenn in beiden Quellbereichen äquivalente Elemente vorhanden sind, stehen im kombinierten Bereich das Element aus dem ersten Bereich vor dem Element aus dem zweiten Bereich.  
   
- Die Komplexität hängt davon ab, wie viel Speicher verfügbar ist, während der Algorithmus dem temporären Puffer Speicher zuweist. Wenn genug Speicherplatz verfügbar ist, ist der beste Fall linear mit (*last – first*) – 1-Vergleichen; wenn kein auxiliary-Speicher verfügbar ist, ist der schlimmste Fall *N* log *(N)*, wo *N* = ( * last – first*).  
+ Die Komplexität hängt davon ab, wie viel Speicher verfügbar ist, während der Algorithmus dem temporären Puffer Speicher zuweist. Wenn ausreichend Arbeitsspeicher verfügbar ist, ist der Idealfall mit linear (* zuletzt - zunächst*) - 1 Vergleiche; Wenn keine zusätzlichen Arbeitsspeicher verfügbar ist, wird im schlimmsten Fall *N* Protokoll *(N)*, wobei *N* = (* zuletzt - zuerst*).  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2455,7 +2379,7 @@ Merged inplace with binary predicate mod_lesser specified,
  vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )  
 ```  
   
-##  <a name="a-nameisheapa--isheap"></a><a name="is_heap"></a> is_heap  
+##  <a name="is_heap"></a> is_heap  
  Gibt `true` zurück, wenn die Elemente im angegebenen Bereich ein Heap bilden.  
   
 ```  
@@ -2479,7 +2403,7 @@ bool is_heap(
  Ein zufälliger direkter Iterator, der das Ende des Bereichs angibt.  
   
  `comp`  
- Eine zu prüfende Bedingung, um Elemente zu sortieren. Ein binäres Prädikat akzeptiert ein einzelnes Argument und gibt entweder `true` oder `false` zurück.  
+ Eine zu prüfende Bedingung, um Elemente zu sortieren. Ein binäres Prädikat akzeptiert ein einzelnes Argument und gibt `true` oder `false`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt `true` zurück, wenn die Elemente im angegebenen Bereich ein Heap bilden; gibt `false` zurück, wenn sie keinen Heap bilden.  
@@ -2491,7 +2415,7 @@ bool is_heap(
   
  `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.  
   
-##  <a name="a-nameisheapuntila--isheapuntil"></a><a name="is_heap_until"></a> is_heap_until  
+##  <a name="is_heap_until"></a> is_heap_until  
  Gibt einen Iterator zurück, der sich an dem ersten Element im Bereich befindet (`begin`, `end`), der die Heapsortierbedingung nicht erfüllt, oder `end`, wenn der Bereich einen Heap bildet.  
   
 ```  
@@ -2525,7 +2449,7 @@ RandomAccessIterator is_heap_until(
   
  Die zweite Vorlagenfunktion verhält sich wie die erste, mit der Ausnahme, dass sie das Prädikat `compare` anstelle von `std::less<>` als Heapsortierbedingung verwendet.  
   
-##  <a name="a-nameispartitioneda--ispartitioned"></a><a name="is_partitioned"></a> is_partitioned  
+##  <a name="is_partitioned"></a> is_partitioned  
  Gibt `true` zurück, wenn alle Elemente im angegebenen Bereich, die für eine Bedingung `true` ergeben, vor allen Elementen liegen, die `false` ergeben.  
   
 ```  
@@ -2552,7 +2476,7 @@ bool is_partitioned(
 ### <a name="remarks"></a>Hinweise  
  Die Vorlagenfunktion gibt nur dann `true` zurück, wenn alle Elemente in `[` `first``,` `last``)` durch `comp` partitioniert werden; das heißt, das alle `X`-Elemente in `[` `first``,` `last``)`, für die `comp``(X)` gilt, vor den `Y`-Elementen liegen, für die `comp``(Y)` `false` ist.  
   
-##  <a name="a-nameispermutationa--ispermutation"></a><a name="is_permutation"></a> is_permutation  
+##  <a name="is_permutation"></a> is_permutation  
  Gibt „true“ zurück, wenn beide Bereiche dieselben Elemente enthalten, und zwar unabhängig davon, ob sich die Elemente in derselben Reihenfolge befinden. Verwenden Sie die Überladungen mit zwei Bereichen im C++14-Code, da die Überladungen, die nur einen einzigen Iterator für den zweiten Bereich nutzen, keine Unterschiede erkennen, wenn der zweite Bereich länger als der erste Bereich ist. Darüber hinaus führt dies zu einem nicht definierten Verhalten, wenn der zweite Bereich kürzer als der erste Bereich ist.  
   
 ```  
@@ -2668,7 +2592,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameissorteda--issorted"></a><a name="is_sorted"></a> is-sorted  
+##  <a name="is_sorted"></a> is-sorted  
  Gibt `true` zurück, wenn sich die Elemente im angegebenen Bereich in einer sortierten Reihenfolge befinden.  
   
 ```  
@@ -2699,7 +2623,7 @@ bool is_sorted(
   
  Die zweite Vorlagenfunktion gibt `is_sorted_until``(` `first``,` `last``,` `comp``) ==` `last` zurück. Die Prädikatfunktion `comp` führt den Reihenfolgenvergleich aus.  
   
-##  <a name="a-nameissorteduntila--issorteduntil"></a><a name="is_sorted_until"></a> is_sorted_until  
+##  <a name="is_sorted_until"></a> is_sorted_until  
  Gibt ein `ForwardIterator` zurück, das auf das letzte Element festgelegt ist, das in der Sortierreihenfolge eines angegebenen Bereichs ist.  
   
  In der zweiten Version können Sie eine `BinaryPredicate`-Funktion bereitstellen, die `true` zurückgibt, wenn zwei angegebene Elemente in der Sortierreihenfolge sind; andernfalls `false`.  
@@ -2736,7 +2660,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  Die zweite Vorlagenfunktion verhält sich genauso; der einzige Unterschied ist, dass sie `operator<(X, Y)` durch `comp``(X, Y)` ersetzt.  
   
-##  <a name="a-nameiterswapa--iterswap"></a><a name="iter_swap"></a> iter_swap  
+##  <a name="iter_swap"></a> iter_swap  
  Tauscht zwei Werte aus, auf die durch ein Paar angegebener Iteratoren verwiesen wird.  
   
 ```  
@@ -2890,7 +2814,7 @@ After exchanging first elements,
  & deque deq2 is: deq2 = ( 0 5 ).  
 ```  
   
-##  <a name="a-namelexicographicalcomparea--lexicographicalcompare"></a><a name="lexicographical_compare"></a> lexicographical_compare  
+##  <a name="lexicographical_compare"></a> lexicographical_compare  
  Vergleicht zwei Sequenzen elementweise, um zu bestimmen, welche der beiden kleiner ist.  
   
 ```  
@@ -3034,7 +2958,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.  
 ```  
   
-##  <a name="a-namelowerbounda--lowerbound"></a><a name="lower_bound"></a> lower_bound  
+##  <a name="lower_bound"></a> lower_bound  
  Sucht die Position des ersten Elements in einem sortierten Bereich, der über einen Wert größer als oder gleich einem angegebenen Wert verfügt. Dabei wird das Sortierkriterium möglicherweise von einen binären Prädikat bestimmt.  
   
 ```  
@@ -3078,7 +3002,7 @@ ForwardIterator lower_bound(
   
  Die Werttypen der Forward-Iteratoren müssen weniger als vergleichbar sein, um sortiert zu werden, sodass zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen.  
   
- Die Komplexität dieses Algorithmus ist bei Zufallszugriffsiteratoren logarithmisch und andernfalls linear. Dabei ist die Anzahl von Schritten proportional zu (`last – first`).  
+ Die Komplexität dieses Algorithmus ist bei Zufallszugriffsiteratoren logarithmisch und andernfalls linear. Dabei ist die Anzahl von Schritten proportional zu (`last - first`).  
   
 ### <a name="example"></a>Beispiel  
   
@@ -3171,7 +3095,7 @@ int main( )
   
 ```  
   
-##  <a name="a-namemakeheapa--makeheap"></a><a name="make_heap"></a> make_heap  
+##  <a name="make_heap"></a> make_heap  
  Konvertiert Elemente aus einem angegebenen Bereich in einen Heap, in dem das erste Element das größte ist und für den ein Sortierkriterium durch ein binäres Prädikat angegeben werden kann.  
   
 ```  
@@ -3207,7 +3131,7 @@ void make_heap(
   
  Heaps sind ideal zum Implementieren von Vorrangwarteschlangen. Sie werden beim Implementieren des C++-Standardbibliothekadapters [priority_queue-Klasse](../standard-library/priority-queue-class.md) verwendet.  
   
- Die Komplexität ist linear; sie erfordert 3 \*-Vergleiche (*last – first*).  
+ Die Komplexität ist linear und erfordert 3 \* (* zuletzt - zunächst *) vergleichen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -3251,7 +3175,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemaxa--max"></a><a name="max"></a> max  
+##  <a name="max"></a> max  
  Vergleicht zwei Objekte und gibt das größere der beiden zurück, wobei das Sortierkriterium möglicherweise von einem binären Prädikat angegeben wird.  
   
 ```  
@@ -3464,7 +3388,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).  
 ```  
   
-##  <a name="a-namemaxelementa--maxelement"></a><a name="max_element"></a> max_element  
+##  <a name="max_element"></a> max_element  
  Sucht das erste Vorkommen des größten Elements in einem angegebenen Bereich, in dem das Sortierkriterium möglicherweise von einem binären Prädikat angegeben wird.  
   
 ```  
@@ -3492,7 +3416,7 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>Hinweise  
  Der Bereich, auf den verwiesen wird, muss gültig sein. Alle Zeiger müssen dereferenzierbar sein und die letzte Position innerhalb der Sequenz ist von der ersten Position aus durch Zunahme erreichbar.  
   
- Die Komplexität ist linear: (`last` – `first`) – 1-Vergleiche sind für einen nicht leeren Bereich erforderlich.  
+ Die Komplexität ist linear: ( `last`  -   `first`) – 1 Vergleiche sind für einen nicht leeren Bereich erforderlich.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -3594,7 +3518,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namemergea--merge"></a><a name="merge"></a> merge  
+##  <a name="merge"></a> merge  
  Kombiniert alle Elemente aus zwei sortierten Quellbereichen zu einem einzelnen sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.  
   
 ```  
@@ -3650,7 +3574,7 @@ OutputIterator merge(
   
  Die Werttypen der Eingabeiteratoren müssen mit „kleiner als“ vergleichbar sein, um sortiert zu werden, sodass zwei Elemente möglicherweise als gleichwertig (in dem Sinne, dass keines kleiner als das andere ist) oder eines als kleiner als das andere bestimmt werden können. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Wenn in beiden Quellbereichen äquivalente Elemente vorhanden sind, stehen im Zielbereich die Elemente aus dem ersten Bereich vor den Elementen aus dem zweiten Bereich.  
   
- Die Komplexität dieses Algorithmus ist höchstens mit (*last1 – first1*) – (*last2 – first2*) – 1-Vergleichen linear.  
+ Die Komplexität dieses Algorithmus ist höchstens mit linearen (* last1 – first1*) – (* last2 – first2*) – 1 Vergleiche.  
   
  Die [-list-Klasse](../standard-library/list-class.md) stellt eine Memberfunktion „merge“ bereit, um die Elemente zweier Listen zusammenzuführen.  
   
@@ -3764,7 +3688,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemina--min"></a><a name="min"></a> min  
+##  <a name="min"></a> min  
  Vergleicht zwei Objekte und gibt das kleinere der beiden zurück, wobei das Sortierkriterium möglicherweise von einem binären Prädikat angegeben wird.  
   
 ```  
@@ -3975,7 +3899,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).  
 ```  
   
-##  <a name="a-nameminelementa--minelement"></a><a name="min_element"></a> min_element  
+##  <a name="min_element"></a> min_element  
  Sucht das erste Vorkommen des kleinsten Elements in einem angegebenen Bereich, in dem das Sortierkriterium von einem binären Prädikat angegeben werden kann.  
   
 ```  
@@ -4003,7 +3927,7 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>Hinweise  
  Der Bereich, auf den verwiesen wird, muss gültig sein. Alle Zeiger müssen dereferenzierbar sein und die letzte Position innerhalb der Sequenz ist von der ersten Position aus durch Zunahme erreichbar.  
   
- Die Komplexität ist linear: (`last` – `first`) – 1-Vergleiche sind für einen nicht leeren Bereich erforderlich.  
+ Die Komplexität ist linear: ( `last`  -  `first`) – 1 Vergleiche sind für einen nicht leeren Bereich erforderlich.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -4115,7 +4039,7 @@ The smallest element in v1 under the mod_lesser
  binary predicate is: 0  
 ```  
   
-##  <a name="a-nameminmaxelementa--minmaxelement"></a><a name="minmax_element"></a> minmax_element  
+##  <a name="minmax_element"></a> minmax_element  
  Führt die Aufgaben aus, die von `min_element` und `max_element` in einem Aufruf erledigt werden.  
   
 ```  
@@ -4162,7 +4086,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  Wenn die Sequenz nicht leer ist, führt die Funktion höchstens einen `3 * (``last` `-` `first` `- 1) / 2`-Vergleich aus.  
   
-##  <a name="a-nameminmaxa--minmax"></a><a name="minmax"></a> minmax  
+##  <a name="minmax"></a> minmax  
  Vergleicht zwei Eingabeparameter und gibt diese als Paar, in der Reihenfolge "kleiner zu größer" zurück.  
   
 ```  
@@ -4212,7 +4136,7 @@ template<class Type, class BinaryPredicate>
   
  Die Funktion führt genau einen Vergleich aus.  
   
-##  <a name="a-namemismatcha--mismatch"></a><a name="mismatch"></a> mismatch  
+##  <a name="mismatch"></a> mismatch  
  Vergleicht zwei Bereiche elementweise und findet die e erste Position mit einem Unterschied.  
   
  Verwenden Sie die Überladungen mit zwei Bereichen im C++14-Code, da die Überladungen, die nur einen einzigen Iterator für den zweiten Bereich nutzen, keine Unterschiede erkennen, wenn der zweite Bereich länger als der erste Bereich ist. Darüber hinaus führt dies zu einem nicht definierten Verhalten, wenn der zweite Bereich kürzer als der erste Bereich ist.  
@@ -4277,7 +4201,7 @@ mismatch(
  Das benutzerdefinierte Prädikat ist nicht erforderlich, um eine Äquivalenzbeziehung vorzugeben, die zwischen den dazugehörigen Operanden symmetrisch, reflexiv und transitiv ist.  
   
 ### <a name="example"></a>Beispiel  
-  Im folgenden Beispiel wird dein Konflikt verwendet werden kann. Die C ++&03; Überlastung wird nur zum Veranschaulichen des Erzeugens eines unerwarteten Ergebnisses dargestellt.  
+  Im folgenden Beispiel wird dein Konflikt verwendet werden kann. Die C ++ 03 Überlastung wird nur zum Veranschaulichen des Erzeugens eines unerwarteten Ergebnisses dargestellt.  
   
 ```cpp  
 #include <vector>  
@@ -4372,7 +4296,7 @@ Press a key
   
 ```  
   
-##  <a name="a-namealgmovea--ltalggt-move"></a><a name="alg_move"></a> &lt;alg&gt; move  
+##  <a name="alg_move"></a> &lt;alg&gt; move  
  Verschiebt Elemente, die einem angegebenen Bereich zugeordnet sind.  
   
 ```  
@@ -4395,9 +4319,9 @@ template<class InputIterator, class OutputIterator>
  Der Ausgabeiterator, der die zu verschiebenden Elemente enthalten soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion wertet `*(``dest` `+ N) =` move `(*(` `first` `+ N)))` einmal für jedes Element `N` im Bereich `[0,` `last` `-` `first``)` aus, bei strikt ansteigenden Werten von `N`, beginnend mit dem niedrigsten Wert. Dann gibt es `dest` `+ N` zurück. Wenn mit `dest`und `first` Bereiche des Speichers bestimmt werden, darf `dest` nicht im Bereich `[` `first``,` `last``)` liegen.  
+ Die Vorlagenfunktion wertet `*(dest + N) = move(*(first + N))` einmal für jedes `N` im Bereich `[0, last - first)`, bei strikt ansteigenden Werten von `N` beginnend mit dem niedrigsten Wert. Dann wird `dest + N` zurückgegeben. Wenn `dest` und `first` Bereiche des Speichers bestimmt `dest` muss im Bereich `[first, last)`.  
   
-##  <a name="a-namemovebackwarda--movebackward"></a><a name="move_backward"></a> move_backward  
+##  <a name="move_backward"></a> move_backward  
  Verschiebt die Elemente eines Iterators in einen anderen. Die Verschiebung beginnt mit dem letzten Element in einem angegebenen Bereich und endet mit dem ersten Element in diesem Bereich.  
   
 ```  
@@ -4420,11 +4344,11 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  Ein bidirektionaler Iterator, der die Position hinter dem letzten Element im Zielbereich adressiert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion wertet `*(``destEnd` `- N - 1) =` `move``(*(``last` `- N - 1)))` einmal für jedes Element `N` im Bereich `[0,` `last` `-` `first``)` aus, bei strikt ansteigenden Werten von `N`, beginnend mit dem niedrigsten Wert. Dann gibt es `destEnd` `- (``last` `-` `first``)` zurück. Wenn mit `destEnd`und `first` Bereiche des Speichers bestimmt werden, darf `destEnd` nicht im Bereich `[` `first``,` `last``)` liegen.  
+ Die Vorlagenfunktion wertet `*(destEnd - N - 1) = move(*(last - N - 1))` einmal für jedes `N` im Bereich `[0, last - first)`, bei strikt ansteigenden Werten von `N` beginnend mit dem niedrigsten Wert. Dann wird `destEnd - (last - first)` zurückgegeben. Wenn `destEnd` und `first` Bereiche des Speichers bestimmt `destEnd` muss im Bereich `[first, last)`.  
   
  `move` und `move_backward` entsprechen funktional der Verwendung von `copy` und `copy_backward` mit einem Verschiebeiterator.  
   
-##  <a name="a-namenextpermutationa--nextpermutation"></a><a name="next_permutation"></a> next_permutation  
+##  <a name="next_permutation"></a> next_permutation  
  Ordnet die Elemente in einem Bereich neu, damit die ursprüngliche Reihenfolge von der lexikografisch nächsthöheren Permutation ersetzt wird, falls vorhanden, wobei die Bedeutung von „nächsthöher“ durch ein binäres Prädikat angegeben werden kann.  
   
 ```  
@@ -4454,7 +4378,7 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
  Das standardmäßige binäre Prädikat ist weniger als vergleichbar und die Elemente im Bereich müssen weniger als vergleichbar sein, um sicherzustellen, dass die nächste Permutation gut definiert ist.  
   
- Die Komplexität ist linear, wobei höchstens (*last – first*)/2 getauscht werden.  
+ Die Komplexität ist linear mit höchstens (* zuletzt - zunächst *) / 2 vertauscht.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -4595,7 +4519,7 @@ After another next_permutation of vector v1,
  v1 =   ( -3 -2 -1 1 0 2 3 ).  
 ```  
   
-##  <a name="a-namenthelementa--nthelement"></a><a name="nth_element"></a> nth_element  
+##  <a name="nth_element"></a> nth_element  
  Partitioniert einen Bereich von Elementen und ermittelt das *n*-te-Element der Sequenz im Bereich, sodass alle Elemente davor kleiner oder gleich sind und alle Elemente, die in der Sequenz folgen, größer oder gleich sind.  
   
 ```  
@@ -4627,7 +4551,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
   
  Wenn keins kleiner als das andere ist, sind Elemente äquivalent, aber nicht unbedingt gleich.  
   
- Der Durchschnitt einer Sortierungskomplexität ist bezüglich *last – first* linear.  
+ Der Durchschnitt der eine Sortierung Komplexität ist linear in Bezug auf * zuletzt - zunächst *.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -4695,7 +4619,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namenoneofa--noneof"></a><a name="none_of"></a> none_of  
+##  <a name="none_of"></a> none_of  
  Gibt `true` zurück, wenn eine Bedingung für die Elemente im angegebenen Bereich nie vorhanden ist.  
   
 ```  
@@ -4717,9 +4641,9 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
  Gibt `true` zurück, wenn die Bedingung nicht mindestens einmal im angegebenen Bereich erfüllt wird; gibt `false` zurück, wenn die Bedingung erfüllt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt nur dann `true` zurück, wenn das Prädikat `comp``(*(` `first` `+ N))` für einige `N` im Bereich `[0,` `last` `-` `first``)` immer `false` ist.  
+ Die Vorlagenfunktion gibt `true` nur, wenn, für einige `N` im Bereich `[0, last - first)`, das Prädikat `comp(*(first + N))` ist immer `false`.  
   
-##  <a name="a-namepartialsorta--partialsort"></a><a name="partial_sort"></a> partial_sort  
+##  <a name="partial_sort"></a> partial_sort  
  Ordnet eine bestimmte Anzahl von kleineren Elementen in einem Bereich in einer aufsteigenden Reihenfolge oder gemäß eines Sortierkriteriums an, das von einem binären Prädikat angegeben wird.  
   
 ```  
@@ -4831,7 +4755,7 @@ Partially resorted (UDgreater) vector:
  v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )  
 ```  
   
-##  <a name="a-namepartialsortcopya--partialsortcopy"></a><a name="partial_sort_copy"></a> partial_sort_copy  
+##  <a name="partial_sort_copy"></a> partial_sort_copy  
  Kopiert Elemente aus einem Quellbereich in einen Zielbereich, in dem die Quellelemente entweder durch kleiner als oder durch ein anderes festgelegtes binäres Prädikat sortiert werden.  
   
 ```  
@@ -4952,7 +4876,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namepartitiona--partition"></a><a name="partition"></a> partition  
+##  <a name="partition"></a> partition  
  Klassifiziert Elemente in einem Bereich in zwei zusammenhanglose Sätze, wenn diese Elemente ein unäres Prädikat erfüllen, das denen direkt vorausgeht, die es nicht erfüllen können.  
   
 ```  
@@ -4982,7 +4906,7 @@ template<class BidirectionalIterator, class Predicate>
   
  Die Elemente *a* und *b* sind äquivalent, aber nicht unbedingt gleich, wenn sowohl *Pr* (*a*, *b*) als auch *Pr* (*b*, *a*) dort FALSE sind, wo *Pr* das parameterspezifische Prädikat ist. Der Algorithmus **partition** ist nicht stabil und stellt nicht sicher, dass die relative Sortierung equivalenter Elemente beibehalten wird. Der Algorithmus **stable_partition** behält diese ursprüngliche Sortierung bei.  
   
- Die Komplexität ist linear: es gibt (`last` – `first`)-Anwendungen von `comp` und es werden höchstens (`last` – `first`)/2 getauscht.  
+ Die Komplexität ist linear: vorhanden sind ( `last`  -   `first`) Anwendungen `comp` und höchstens ( `last`  -   `first`) / 2 vertauscht.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -5023,7 +4947,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namepartitioncopya--partitioncopy"></a><a name="partition_copy"></a> partition_copy  
+##  <a name="partition_copy"></a> partition_copy  
  Kopiert Elemente, für die eine Bedingung `true` für ein Ziel ist, und für die die Bedingung `false` für ein anderes Ziel ist. Die Elemente müssen von einem angegebenen Bereich stammen.  
   
 ```  
@@ -5055,9 +4979,9 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
  Eine Bedingung, auf die geprüft werden soll. Diese Bedingung wird von einem benutzerdefinierten Prädikatfunktionsobjekt bereitgestellt, das die zu prüfende Bedingung definiert. Ein Prädikat akzeptiert ein einzelnes Argument und gibt entweder `true` oder `false` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion kopiert jedes Element `X` in `[` `first``,` `last``)` nach `*``dest1``++`, wenn `_Pred``(X)` erfüllt wird, oder nach `*``dest2``++ if not`. Gibt `pair<OutputIterator1, OutputIterator2>(``dest1``,` `dest2``)` zurück.  
+ Die Vorlagenfunktion kopiert jedes Element `X` in `[first,last)` auf `*dest1++` Wenn `_Pred(X)` ist "true" oder auf `*dest2++` Wenn dies nicht. Er gibt `pair<OutputIterator1, OutputIterator2>(dest1, dest2)` zurück.  
   
-##  <a name="a-namepartitionpointa--partitionpoint"></a><a name="partition_point"></a> partition_point  
+##  <a name="partition_point"></a> partition_point  
  Gibt das erste Element im angegebenen Bereich zurück, der die Bedingung nicht erfüllt. Die Elemente werden so sortiert, dass die, die die Bedingung erfüllen, vor denen angeordnet werden, die die Bedingung nicht erfüllen.  
   
 ```  
@@ -5083,9 +5007,9 @@ template<class ForwardIterator, class Predicate>
  Gibt einen `ForwardIterator` zurück, der sich auf das erste Element bezieht, das die Bedingung, auf die von `comp` geprüft wurde, nicht erfüllt; gibt `last` zurück, wenn ein solches Element nicht gefunden werden konnte.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion findet den ersten Iterator `it` in `[` `first``,``last``)`, für den `comp(*it)` `false` ist. Die Sequenz muss von `comp` sortiert werden.  
+ Die Vorlagenfunktion findet den ersten Iterator `it` in `[first, last)` für die `comp(*it)` ist `false`. Die Sequenz muss von `comp` sortiert werden.  
   
-##  <a name="a-namepopheapa--popheap"></a><a name="pop_heap"></a> pop_heap  
+##  <a name="pop_heap"></a> pop_heap  
  Entfernt das größte Element von der Vorderseite eines Heaps und fügt es in die vorletzte Position des Bereichs ein und bildet dann einen neuen Heap aus den übrigen Elementen.  
   
 ```  
@@ -5122,7 +5046,7 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
  Der Bereich, ohne das neu am Ende hinzugefügte Element, muss ein Heap sein.  
   
- Die Komplexität ist logarithmisch; es sind höchstens log (*last – first *)-Vergleiche erforderlich.  
+ Die Komplexität ist logarithmisch ist, dass höchstens Protokoll (* zuletzt - zunächst *) vergleichen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -5186,7 +5110,7 @@ int main( )  {
 }  
 ```  
   
-##  <a name="a-nameprevpermutationa--prevpermutation"></a><a name="prev_permutation"></a> prev_permutation  
+##  <a name="prev_permutation"></a> prev_permutation  
  Ordnet die Elemente in einem Bereich neu, damit die ursprüngliche Reihenfolge von der lexikografisch vorherigen höheren Permutation ersetzt wird, falls vorhanden, wobei die Bedeutung von „vorherige“ durch ein binäres Prädikat angegeben werden kann.  
   
 ```  
@@ -5221,7 +5145,7 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
  Das standardmäßige binäre Prädikat ist weniger und die Elemente des Bereichs müssen weniger als vergleichbar sein, um sicherzustellen, dass die vorherige Permutation gut definiert ist.  
   
- Die Komplexität ist linear, wobei höchstens (`last` – `first`)/2 getauscht werden.  
+ Die Komplexität ist linear, wobei höchstens ( `last`  -   `first`) / 2 vertauscht.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -5357,7 +5281,7 @@ After another prev_permutation of vector v1,
  v1 =   ( -3 -2 0 2 -1 1 3 ).  
 ```  
   
-##  <a name="a-namepushheapa--pushheap"></a><a name="push_heap"></a> push_heap  
+##  <a name="push_heap"></a> push_heap  
  Fügt ein Element hinzu, das sich am Ende eines Bereichs in einem vorhandenen Heap befindet, der aus den vorherigen Elementen im Bereich besteht.  
   
 ```  
@@ -5394,7 +5318,7 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
  Der Bereich, ohne das neu am Ende hinzugefügte Element, muss ein Heap sein.  
   
- Die Komplexität ist logarithmisch; es sind höchstens log (*last – first *)-Vergleiche erforderlich.  
+ Die Komplexität ist logarithmisch ist, dass höchstens Protokoll ( *zuletzt - zunächst*) vergleichen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -5463,10 +5387,10 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namerandomshufflea--randomshuffle"></a><a name="random_shuffle"></a> random_shuffle  
- Die Funktion std::random_shuffle() ist veraltet und wurde durch [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle) ersetzt. Ein Codebeispiel und weitere Informationen finden Sie unter [\<random>](../standard-library/random.md) und im Stackoverflow-Posting [Why are std::random_shuffle methods being deprecated in C++14? (Warum werden std::random_shuffle-Methoden in C++14 nicht länger unterstützt?)](http://go.microsoft.com/fwlink/?LinkId=397954).  
+##  <a name="random_shuffle"></a> random_shuffle  
+ Die Funktion Std::random_shuffle() ist veraltet, ersetzt durch [Std:: Shuffle](../standard-library/algorithm-functions.md#shuffle). Ein Codebeispiel und Weitere Informationen finden Sie unter [ \<random >](../standard-library/random.md) und im Stackoverflow-Posting [Warum sind Std:: random_shuffle Methods veraltet in C ++ 14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
   
-##  <a name="a-nameremovea--remove"></a><a name="remove"></a> remove  
+##  <a name="remove"></a>  remove  
  Eliminiert einen angegebenen Wert von einem angegebenen Bereich, ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen und das Ende eines neuen Bereichs zurückzugeben, der den angegebenen Wert nicht enthält.  
   
 ```  
@@ -5495,7 +5419,7 @@ template<class ForwardIterator, class Type>
   
  Der zur Bestimmung des Gleichheitszustands zwischen Elementen verwendete `operator==` muss eine Äquivalenzrelation zwischen zwei Operanden vorgeben.  
   
- Die Komplexität ist linear; es gibt (`last` – `first`)-Vergleiche auf Gleichheit.  
+ Die Komplexität ist linear; Es gibt ( `last`  -   `first`) Vergleiche auf Gleichheit.  
   
  Die Klasse [list](../standard-library/list-class.md) hat eine effizientere Memberfunktion von **remove**, durch die auch Zeiger neu verlinkt werden.  
   
@@ -5545,7 +5469,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-nameremovecopya--removecopy"></a><a name="remove_copy"></a> remove_copy  
+##  <a name="remove_copy"></a> remove_copy  
  Kopiert Elemente aus einem Quellbereich in einen Zielbereich, ohne dass Elemente eines angegebenen Werts kopiert werden und ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen und das Ende eines neuen Zielbereichs zurückzugeben.  
   
 ```  
@@ -5579,7 +5503,7 @@ template<class InputIterator, class OutputIterator, class Type>
   
  Der zur Bestimmung des Gleichheitszustands zwischen Elementen verwendete `operator==` muss eine Äquivalenzrelation zwischen zwei Operanden vorgeben.  
   
- Die Komplexität ist linear; es gibt (`last` – `first`)-Vergleiche auf Gleichheit und höchstens (`last` – `first`) Zuweisungen.  
+ Die Komplexität ist linear; Es gibt ( `last`  -   `first`) Vergleiche auf Gleichheit und höchstens ( `last`  -   `first`) Zuweisungen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -5624,7 +5548,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameremovecopyifa--removecopyif"></a><a name="remove_copy_if"></a> remove_copy_if  
+##  <a name="remove_copy_if"></a> remove_copy_if  
  Kopiert Elemente aus einem Quellbereich in einen Zielbereich, ohne dass Elemente, die ein Prädikat erfüllen, kopiert werden und ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen und das Ende eines neuen Zielbereichs zurückzugeben.  
   
 ```  
@@ -5658,7 +5582,7 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
  Der zur Bestimmung des Gleichheitszustands zwischen Elementen verwendete `operator==` muss eine Äquivalenzrelation zwischen zwei Operanden vorgeben.  
   
- Die Komplexität ist linear: es gibt (`last` – `first`)-Vergleiche für Gleichheit und höchstens (`last` – `first`) Zuweisungen.  
+ Die Komplexität ist linear: vorhanden sind ( `last`  -   `first`) Vergleiche auf Gleichheit und höchstens ( `last`  -   `first`) Zuweisungen.  
   
  Informationen über das Verhalten dieser Funktionen finden Sie unter [Überprüfte Iteratoren ](../standard-library/checked-iterators.md).  
   
@@ -5712,7 +5636,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameremoveifa--removeif"></a><a name="remove_if"></a> remove_if  
+##  <a name="remove_if"></a> remove_if  
  Eliminiert Elemente, die ein Prädikat aus einem angegebenen Bereich erfüllen, ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen und das Ende eines neuen Bereichs zurückzugeben, der den angegebenen Wert nicht enthält.  
   
 ```  
@@ -5741,7 +5665,7 @@ template<class ForwardIterator, class Predicate>
   
  Der zur Bestimmung des Gleichheitszustands zwischen Elementen verwendete `operator==` muss eine Äquivalenzrelation zwischen zwei Operanden vorgeben.  
   
- Die Komplexität ist linear: es gibt (`last` – `first`)-Vergleiche auf Gleichheit.  
+ Die Komplexität ist linear: vorhanden sind ( `last`  -   `first`) Vergleiche auf Gleichheit.  
   
  List hat eine effizientere Memberfunktion von remove, durch die Zeiger neu verlinkt werden.  
   
@@ -5795,7 +5719,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacea--replace"></a><a name="replace"></a> replace  
+##  <a name="replace"></a> replace  
  Überprüft jedes Element in einem Bereich und ersetzt es, sofern es einem angegebenen Wert entspricht.  
   
 ```  
@@ -5823,7 +5747,7 @@ void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, c
   
  Der zur Bestimmung des Gleichheitszustands zwischen Elementen verwendete `operator==` muss eine Äquivalenzrelation zwischen zwei Operanden vorgeben.  
   
- Die Komplexität ist linear; es gibt (`last` – `first`)-Vergleiche auf Gleichheit und höchstens (`last` – `first`) Zuweisungen von neuen Werten.  
+ Die Komplexität ist linear; Es gibt ( `last`  -   `first`) Vergleiche auf Gleichheit und höchstens ( `last`  -   `first`) Zuweisungen von neuen Werten.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -5863,7 +5787,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacecopya--replacecopy"></a><a name="replace_copy"> </a> replace_copy  
+##  <a name="replace_copy"> </a> replace_copy  
  Überprüft jedes Element in einem Quellbereich und ersetzt es, sofern es einem angegebenen Wert entspricht, während das Ergebnis in einen neuen Zielbereich kopiert wird.  
   
 ```  
@@ -5903,7 +5827,7 @@ int main( ) {
   
  Der zur Bestimmung des Gleichheitszustands zwischen Elementen verwendete `operator==` muss eine Äquivalenzrelation zwischen zwei Operanden vorgeben.  
   
- Die Komplexität ist linear: es gibt (`last` – `first`)-Vergleiche auf Gleichheit und höchstens (`last` – `first`) Zuweisungen von neuen Werten.  
+ Die Komplexität ist linear: vorhanden sind ( `last`  -   `first`) Vergleiche auf Gleichheit und höchstens ( `last`  -   `first`) Zuweisungen von neuen Werten.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -5962,7 +5886,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacecopyifa--replacecopyif"></a><a name="replace_copy_if"></a> replace_copy_if  
+##  <a name="replace_copy_if"></a> replace_copy_if  
  Überprüft jedes Element in einem Quellbereich und ersetzt es, sofern es ein angegebenes Prädikat erfüllt, während das Ergebnis in einen neuen Zielbereich kopiert wird.  
   
 ```  
@@ -6002,7 +5926,7 @@ OutputIterator replace_copy_if(
   
  Der zur Bestimmung des Gleichheitszustands zwischen Elementen verwendete `operator==` muss eine Äquivalenzrelation zwischen zwei Operanden vorgeben.  
   
- Die Komplexität ist linear; es gibt (`last` – `first`)-Vergleiche auf Gleichheit und höchstens (`last` – `first`) Zuweisungen von neuen Werten.  
+ Die Komplexität ist linear; Es gibt ( `last`  -   `first`) Vergleiche auf Gleichheit und höchstens ( `last`  -   `first`) Zuweisungen von neuen Werten.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -6068,7 +5992,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplaceifa--replaceif"></a><a name="replace_if"></a> replace_if  
+##  <a name="replace_if"></a> replace_if  
  Überprüft jedes Element in einem Bereich und ersetzt es, sofern es das angegebene Prädikat erfüllt.  
   
 ```  
@@ -6099,7 +6023,7 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
  Der zur Bestimmung des Gleichheitszustands zwischen Elementen verwendete `operator==` muss eine Äquivalenzrelation zwischen zwei Operanden vorgeben.  
   
- Die Komplexität ist linear: es gibt (`last` – `first`)-Vergleiche auf Gleichheit und höchstens (`last` – `first`) Zuweisungen von neuen Werten.  
+ Die Komplexität ist linear: vorhanden sind ( `last`  -   `first`) Vergleiche auf Gleichheit und höchstens ( `last`  -   `first`) Zuweisungen von neuen Werten.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -6145,7 +6069,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereversea--reverse"></a><a name="reverse"></a> reverse  
+##  <a name="reverse"></a> reverse  
  Kehrt die Reihenfolge der Elemente innerhalb eines Bereichs um.  
   
 ```  
@@ -6206,7 +6130,7 @@ The modified vector v1 with values reversed is:
  ( 9 8 7 6 5 4 3 2 1 0 ).  
 ```  
   
-##  <a name="a-namereversecopya--reversecopy"></a><a name="reverse_copy"> </a> reverse_copy  
+##  <a name="reverse_copy"> </a> reverse_copy  
  Kehrt die Reihenfolge der Elemente in einem Quellbereich beim Kopieren in einen Zielbereich um.  
   
 ```  
@@ -6274,7 +6198,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namerotatea--rotate"></a><a name="rotate"></a> rotate  
+##  <a name="rotate"></a> rotate  
  Vertauscht die Elemente in zwei benachbarten Bereichen.  
   
 ```  
@@ -6296,7 +6220,7 @@ template<class ForwardIterator>
 ### <a name="remarks"></a>Hinweise  
  Die Bereiche, auf die verwiesen wird, müssen gültig sein. Alle Zeiger müssen dereferenzierbar sein und die letzte Position innerhalb der Sequenz ist von der ersten Position aus durch Zunahme erreichbar.  
   
- Die Komplexität ist linear, wobei höchstens (`last` – `first`) getauscht werden.  
+ Die Komplexität ist linear mit höchstens ( `last`  -   `first`) vertauscht.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -6373,7 +6297,7 @@ After the rotation of a single deque element to the back,
  d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="a-namerotatecopya--rotatecopy"></a><a name="rotate_copy"></a> rotate_copy  
+##  <a name="rotate_copy"></a> rotate_copy  
  Vertauscht die Elemente in zwei benachbarten Bereiche innerhalb eines Quellbereichs und kopiert das Ergebnis in einen Zielbereich.  
   
 ```  
@@ -6405,7 +6329,7 @@ OutputIterator rotate_copy(
 ### <a name="remarks"></a>Hinweise  
  Die Bereiche, auf die verwiesen wird, müssen gültig sein. Alle Zeiger müssen dereferenzierbar sein und die letzte Position innerhalb der Sequenz ist von der ersten Position aus durch Zunahme erreichbar.  
   
- Die Komplexität ist linear, wobei höchstens (`last` – `first`) getauscht werden.  
+ Die Komplexität ist linear mit höchstens ( `last`  -   `first`) vertauscht.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -6466,7 +6390,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesearcha--search"></a><a name="search"></a> search  
+##  <a name="search"></a> search  
  Sucht das erste Vorkommen einer Sequenz in einem Zielbereich, dessen Elemente gleich den Elementen in einer bestimmten Elementsequenz sind oder dessen Elemente äquivalent sind mit den Elementen in der angegebenen Sequenz, wie durch ein binäres Prädikat festgelegt.  
   
 ```  
@@ -6611,7 +6535,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="a-namesearchna--searchn"></a><a name="search_n"></a> search_n  
+##  <a name="search_n"></a> search_n  
  Sucht nach der ersten Untersequenz in einem Bereich, der aus einer angegebenen Anzahl von Elementen besteht, die einen bestimmten Wert oder eine Beziehung zu diesem durch ein binäres Prädikat angegebenen Wert haben.  
   
 ```  
@@ -6741,7 +6665,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
  predicate one_half in v1 and the first one begins at position 15.  
 ```  
   
-##  <a name="a-namesetdifferencea--setdifference"></a><a name="set_difference"></a> set_difference  
+##  <a name="set_difference"></a> set_difference  
  Vereinigt alle Elemente, die zu dem einen, jedoch nicht zu einem anderen sortierten Quellbereich gehören, in einen einzelnen, sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.  
   
 ```  
@@ -6797,7 +6721,7 @@ OutputIterator set_difference(
   
  Die Werttypen der Eingabeiteratoren müssen mit „kleiner als“ vergleichbar sein, um sortiert zu werden, sodass zwei Elemente möglicherweise als gleichwertig (in dem Sinne, dass keines kleiner als das andere ist) oder eines als kleiner als das andere bestimmt werden können. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Wenn in beiden Quellbereichen äquivalente Elemente vorhanden sind, stehen im Zielbereich die Elemente aus dem ersten Bereich vor den Elementen aus dem zweiten Bereich. Wenn die Quellbereiche Duplikate eines Elements enthalten, sodass sich im ersten Quellbereich mehr Elemente befinden als im zweiten, enthält der Zielbereich die Zahl, um die die Vorkommen dieser Elemente im ersten Quellbereich die Vorkommen dieser Elemente im zweiten Quellbereich übersteigen.  
   
- Die Komplexität dieses Algorithmus ist höchstens mit 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1-Vergleichen für nicht leere Quellbereiche linear.  
+ Die Komplexität dieses Algorithmus ist höchstens mit 2 linear \* (( *last1 – first1*)-( *last2 – first2*)) – 1 Vergleiche für nicht leere Quellbereiche.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -6918,7 +6842,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetintersectiona--setintersection"></a><a name="set_intersection"></a> set_intersection  
+##  <a name="set_intersection"></a> set_intersection  
  Vereinigt alle Elemente, die zu beiden sortierten Quellbereichen gehören, in einen einzelnen sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.  
   
 ```  
@@ -6974,7 +6898,7 @@ OutputIterator set_intersection(
   
  Die Werttypen der Eingabeiteratoren müssen mit „kleiner als“ vergleichbar sein, um sortiert zu werden, sodass zwei Elemente möglicherweise als gleichwertig (in dem Sinne, dass keines kleiner als das andere ist) oder eines als kleiner als das andere bestimmt werden können. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Wenn in beiden Quellbereichen äquivalente Elemente vorhanden sind, stehen im Zielbereich die Elemente aus dem ersten Bereich vor den Elementen aus dem zweiten Bereich. Wenn die Quellbereiche Duplikate eines Element enthalten, wird der Zielbereich die maximale Anzahl dieser Elemente enthalten, die in beiden Quellbereichen auftreten.  
   
- Die Komplexität dieses Algorithmus ist höchstens mit 2 \* ((*last1 – first1*) + (*last2 – first2*)) – 1-Vergleichen für nicht leere Quellbereiche linear.  
+ Die Komplexität dieses Algorithmus ist höchstens mit 2 linear \* (( *last1 – first1*) + ( *last2 – first2*)) – 1 Vergleiche für nicht leere Quellbereiche.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -7089,7 +7013,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesetsymmetricdifferencea--setsymmetricdifference"></a><a name="set_symmetric_difference"></a> set_symmetric_difference  
+##  <a name="set_symmetric_difference"></a> set_symmetric_difference  
  Vereinigt alle Elemente, die zu einem, jedoch nicht zu beiden sortierten Quellbereichen gehören, in einen einzelnen sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.  
   
 ```  
@@ -7145,7 +7069,7 @@ OutputIterator set_symmetric_difference(
   
  Die Werttypen der Eingabeiteratoren müssen mit „kleiner als“ vergleichbar sein, um sortiert zu werden, sodass zwei Elemente möglicherweise als gleichwertig (in dem Sinne, dass keines kleiner als das andere ist) oder eines als kleiner als das andere bestimmt werden können. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Wenn in beiden Quellbereichen äquivalente Elemente vorhanden sind, stehen im Zielbereich die Elemente aus dem ersten Bereich vor den Elementen aus dem zweiten Bereich. Wenn die Quellbereiche Duplikate eines Elements enthalten, enthält der Zielbereich den absoluten Wert der Zahl, um die die Vorkommen jener Elemente in einem der Quellbereich die Vorkommen dieser Elemente im zweiten Quellbereich übersteigen.  
   
- Die Komplexität dieses Algorithmus ist höchstens mit 2 \* ((*last1 – first1*) + (*last2 – first2*)) – 1-Vergleichen für nicht leere Quellbereiche linear.  
+ Die Komplexität dieses Algorithmus ist höchstens mit 2 linear \* ((*last1 – first1*)-(*last2 – first2*)) – 1 Vergleiche für nicht leere Quellbereiche.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -7266,7 +7190,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetuniona--setunion"></a><a name="set_union"></a> set_union  
+##  <a name="set_union"></a> set_union  
  Vereinigt alle Elemente, die mindestens zu einem der beiden sortierten Quellbereiche gehören, in einen einzelnen sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.  
   
 ```  
@@ -7321,7 +7245,7 @@ OutputIterator set_union(
   
  Die Werttypen der Eingabeiteratoren müssen mit „kleiner als“ vergleichbar sein, um sortiert zu werden, sodass zwei Elemente möglicherweise als gleichwertig (in dem Sinne, dass keines kleiner als das andere ist) oder eines als kleiner als das andere bestimmt werden können. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Wenn in beiden Quellbereichen äquivalente Elemente vorhanden sind, stehen im Zielbereich die Elemente aus dem ersten Bereich vor den Elementen aus dem zweiten Bereich. Wenn die Quellbereiche Duplikate eines Element enthalten, wird der Zielbereich die maximale Anzahl dieser Elemente enthalten, die in beiden Quellbereichen auftreten.  
   
- Die Komplexität dieses Algorithmus ist höchstens mit 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1-Vergleichen linear.  
+ Die Komplexität dieses Algorithmus ist höchstens mit 2 linear \* (( *last1 – first1*)-( *last2 – first2*)) – 1 Vergleiche.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -7442,7 +7366,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namestdshufflea--stdshuffle"></a><a name="std__shuffle"></a> std::shuffle  
+##  <a name="shuffle"></a> std::shuffle  
  Mischt (ordnet) Elemente für einen gegebenen Bereich mithilfe eines Zufallszahlengenerators.  
   
 ```  
@@ -7465,7 +7389,7 @@ void shuffle(RandomAccessIterator first,
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen und ein Codebeispiel mit `shuffle()` finden Sie unter [\<random>](../standard-library/random.md).  
   
-##  <a name="a-namesorta--sort"></a><a name="sort"></a> sort  
+##  <a name="sort"></a> sort  
  Ordnet die Elemente in einem angegebenen Bereich in einer aufsteigenden Reihenfolge oder gemäß eines Sortierkriteriums an, das von einem binären Prädikat angegeben wird.  
   
 ```  
@@ -7497,7 +7421,7 @@ template<class RandomAccessIterator, class Predicate>
   
  Wenn keins kleiner als das andere ist, sind Elemente äquivalent, aber nicht unbedingt gleich. Der Algorithmus `sort` ist nicht stabil und stellt deshalb nicht sicher, dass die relative Sortierung equivalenter Elemente beibehalten wird. Der Algorithmus `stable_sort` behält diese ursprüngliche Sortierung bei.  
   
- Der Durchschnitt einer Sortierungskomplexität ist *O*(*N* log *N*), wo *N* =  *last – first* ist.  
+ Der Durchschnitt der eine Sortierung Komplexität ist *O*( *N* Protokoll *N*), wobei *N* =  *zuletzt - zunächst*.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -7567,7 +7491,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )  
 ```  
   
-##  <a name="a-namesortheapa--sortheap"></a><a name="sort_heap"></a> sort_heap  
+##  <a name="sort_heap"></a> sort_heap  
  Konvertiert einen Heap in einen sortierten Bereich.  
   
 ```  
@@ -7608,7 +7532,7 @@ template<class RandomAccessIterator, class Predicate>
   
  Der Bereich, auf den verwiesen wird, muss gültig sein. Alle Zeiger müssen dereferenzierbar sein und die letzte Position innerhalb der Sequenz ist von der ersten Position aus durch Zunahme erreichbar.  
   
- Die Komplexität ist höchstens *N* log *N*, wo *N* = (*last – first*).  
+ Die Komplexität ist höchstens *N* Protokoll *N*, wobei *N* = ( *zuletzt - zunächst*).  
   
 ### <a name="example"></a>Beispiel  
   
@@ -7660,7 +7584,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namestablepartitiona--stablepartition"></a><a name="stable_partition"></a> stable_partition  
+##  <a name="stable_partition"></a> stable_partition  
  Klassifiziert Elemente in einem Bereich in zwei zusammenhanglose Sätze, wobei die Elemente, die ein unäres Prädikat erfüllen, direkt den Elementen vorausgehen, die es nicht erfüllen können. Die relative Reihenfolge der äquivalenten Elemente wird dabei beibehalten.  
   
 ```  
@@ -7735,7 +7659,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namestablesorta--stablesort"></a><a name="stable_sort"></a> stable_sort  
+##  <a name="stable_sort"></a> stable_sort  
  Ordnet die Elemente in einem angegebenen Bereich in einer aufsteigenden Reihenfolge oder gemäß eines Sortierkriteriums an, das von einem binären Prädikat angegeben wird, und behält die relative Reihenfolge der äquivalenten Elemente bei.  
   
 ```  
@@ -7765,7 +7689,7 @@ void stable_sort(
   
  Wenn keins kleiner als das andere ist, sind Elemente äquivalent, aber nicht unbedingt gleich. Der Algorithmus **sort** ist stabil und stellt sicher, dass die relative Sortierung equivalenter Elemente beibehalten wird.  
   
- Die Laufzeitkomplexität von `stable_sort` ist abhängig vom verfügbaren Speicher; der beste Fall (bei ausreichendem Speicher) ist *O* (*N* log *N*) und der schlechteste *O* (*N* (log *N*)&2;), wo *N* =  *last – first.* Normalerweise ist der Algorithmus **sort** deutlich schneller als `stable_sort`.  
+ Die Laufzeit Komplexität der `stable_sort` hängt von der Menge an Arbeitsspeicher verfügbar ist, der Idealfall (genügend Arbeitsspeicher vorhanden) ist jedoch *O*( *N* Protokoll *N*) und im schlimmsten Fall ist *O*( *N* (Protokoll *N* ) 2), wobei *N* =  *zuletzt - zuerst.* Normalerweise ist der Algorithmus **sort** deutlich schneller als `stable_sort`.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -7834,7 +7758,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )  
 ```  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a> swap  
+##  <a name="swap"></a> swap  
  Das erste Überschreiben tauscht die Werte zweier Objekte aus. Das zweite Überschreiben tauscht die Werte zwischen zwei Arrays von Objekten aus.  
   
 ```  
@@ -7915,7 +7839,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).  
 ```  
   
-##  <a name="a-nameswaprangesa--swapranges"></a><a name="swap_ranges"></a> swap_ranges  
+##  <a name="swap_ranges"></a> swap_ranges  
  Vertauscht die Elemente eines Bereichs mit den Elementen eines anderen gleich großen Bereichs.  
   
 ```  
@@ -7943,7 +7867,7 @@ ForwardIterator2 swap_ranges(
 ### <a name="remarks"></a>Hinweise  
  Die Bereiche, auf die verwiesen wird, müssen gültig sein. Alle Zeiger müssen dereferenzierbar sein und die letzte Position innerhalb der Sequenz ist von der ersten Position aus durch Zunahme erreichbar. Der zweite Bereich muss so groß wie der erste Bereich sein.  
   
- Die Komplexität ist linear mit `last1` – `first1` ausgetauscht. Wenn Elemente von Containern des selben Typen ausgetauscht werden, sollte die `swap`-Memberfunktion dieses Containers verwendet werden, da die Memberfunktion typischerweise eine konstante Komplexität hat.  
+ Die Komplexität ist linear mit `last1`  -   `first1` Swaps ausgeführt. Wenn Elemente von Containern des selben Typen ausgetauscht werden, sollte die `swap`-Memberfunktion dieses Containers verwendet werden, da die Memberfunktion typischerweise eine konstante Komplexität hat.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -8006,7 +7930,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="a-nametransforma--transform"></a><a name="transform"></a> transform  
+##  <a name="transform"></a> transform  
  Wendet ein angegebenes Funktionsobjekt auf jedes Element in einem Quellbereich oder auf ein Elementpaar aus zwei Quellbereichen an und kopiert die Rückgabewerte des Funktionsobjekts in einen Zielbereich.  
   
 ```  
@@ -8049,9 +7973,9 @@ OutputIterator transform(
 ### <a name="remarks"></a>Hinweise  
  Die Bereiche, auf die verwiesen wird, müssen gültig sein. Alle Zeiger müssen dereferenzierbar sein und die letzte Position innerhalb jeder Sequenz muss von der ersten Position aus durch Zunahme erreichbar sein. Der Zielbereich muss groß genug sein, damit er den umgewandelten Quellbereich aufnehmen kann.  
   
- Wenn `result` in der ersten Version des Algorithmus *, * gleich `first1` ist, sind die Quell- und Zielbereiche die gleichen, und die Sequenz wird stattdessen verändert. Möglicherweise adressiert `result` keine Position innerhalb des Bereichs (`first1` +&1;, `last1`).  
+ Wenn `result` gleich festgelegt `first1` in der ersten Version des Algorithmus, klicken Sie dann die Quell- und Zielbereiche, werden die gleiche und Änderung der Sequenz vorhanden. Aber die `result` eine Position innerhalb des Bereichs möglicherweise nicht berücksichtigen [`first1` + 1, `last1`).  
   
- Die Komplexität ist linear, mit höchstens (`last1` – `first1`)-Vergleichen.  
+ Die Komplexität ist linear mit höchstens (`last1` -  `first1`) vergleichen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -8140,7 +8064,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
  v3 = ( 320 180 80 20 0 20 80 ).  
 ```  
   
-##  <a name="a-nameuniquea--unique"></a><a name="unique"></a> unique  
+##  <a name="unique"></a> unique  
  Entfernt doppelte Elemente, die in einem angegebenen Bereich nebeneinander angeordnet sind.  
   
 ```  
@@ -8177,7 +8101,7 @@ template<class ForwardIterator, class Predicate>
   
  Der Bereich, auf den verwiesen wird, muss gültig sein. Alle Zeiger müssen dereferenzierbar sein und die letzte Position innerhalb der Sequenz ist von der ersten Position aus durch Zunahme erreichbar. Die Anzahl von Elemente in der Sequenz wird vom Algorithmus **unique** nicht verändert, und die Elemente hinter dem Ende der veränderten Sequenz sind dereferenzierbar, aber nicht festgelegt.  
   
- Die Komplexität ist linear und erfordert (`last` – `first`) – 1-Vergleiche.  
+ Die Komplexität ist linear und erfordert ( `last`  -   `first`) – 1 Vergleiche.  
   
  List stellt die effizientere Memberfunktion „unique“ bereit, die möglicherweise besser funktioniert.  
   
@@ -8270,7 +8194,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).  
 ```  
   
-##  <a name="a-nameuniquecopya--uniquecopy"></a><a name="unique_copy"></a> nique_copy  
+##  <a name="unique_copy"></a> nique_copy  
  Kopiert Elemente aus einem Quellbereich in einen Zielbereich mit Ausnahmen von doppelten Elementen, die nebeneinander angeordnet sind.  
   
 ```  
@@ -8310,7 +8234,7 @@ OutputIterator unique_copy( InputIterator first,
   
  Die Bereiche, auf die verwiesen wird, müssen gültig sein. Alle Zeiger müssen dereferenzierbar sein, und die letzte Position innerhalb einer Sequenz muss von der ersten Position aus durch Zunahme erreichbar sein.  
   
- Die Komplexität ist linear und erfordert (`last` – `first`)-Vergleiche.  
+ Die Komplexität ist linear und erfordert ( `last`  -   `first`) vergleichen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -8384,7 +8308,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameupperbounda--upperbound"></a><a name="upper_bound"></a> upper_bound  
+##  <a name="upper_bound"></a> upper_bound  
  Sucht die Position des ersten Elements in einem sortierten Bereich, der über einen Wert größer als einen angegebenen Wert verfügt. Dabei wird das Sortierkriterium möglicherweise von einen binären Prädikat bestimmt.  
   
 ```  

@@ -56,10 +56,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6bfbae9b083563f0f9a6b0c30e02fb79f413d52d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f197e4f6341508f05e566f45566f26a18be43bed
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
@@ -106,9 +107,9 @@ int _CrtDbgReportW(
  Von `format` verwendete optionale Ersatzargumente.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Für alle Berichtsziele geben `_CrtDbgReport` und `_CrtDbgReportW` bei einem Fehler – 1 und bei keinem Fehler 0 zurück. Wenn das Berichtsziel jedoch das Fenster einer Debugmeldung ist und der Benutzer auf die Schaltfläche **Wiederholen** klickt, dann geben diese Funktionen 1 zurück. Wenn der Benutzer im Fenster der Debugmeldung auf die Schaltfläche **Abbrechen** klickt, brechen diese Funktionen sofort ab und geben keinen Wert zurück.  
+ Für alle berichtsziele `_CrtDbgReport` und `_CrtDbgReportW` 1, wenn ein Fehler auftritt und 0 zurückgeben, wenn keine Fehler auftreten. Wenn das Berichtsziel jedoch das Fenster einer Debugmeldung ist und der Benutzer auf die Schaltfläche **Wiederholen** klickt, dann geben diese Funktionen 1 zurück. Wenn der Benutzer im Fenster der Debugmeldung auf die Schaltfläche **Abbrechen** klickt, brechen diese Funktionen sofort ab und geben keinen Wert zurück.  
   
- Die Debugmakros [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) rufen `_CrtDbgReport` auf, um ihre Debugberichte zu generieren. Die Breitzeichenversionen dieser Makros sowie [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)`_RPTW``n` und `_RPTFW``n` verwenden `_CrtDbgReportW`, um ihre Debugberichte zu generieren. Wenn `_CrtDbgReport` oder `_CrtDbgReportW` den Wert 1 zurückgeben, starten diese Makros den Debugger, vorausgesetzt, dass Just-In-Time(JIT)-Debugging aktiviert ist.  
+ Die Debugmakros [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) rufen `_CrtDbgReport` auf, um ihre Debugberichte zu generieren. Die Breitzeichenversionen dieser Makros sowie [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)`_RPTW n` und `_RPTFW n` verwenden `_CrtDbgReportW`, um ihre Debugberichte zu generieren. Wenn `_CrtDbgReport` oder `_CrtDbgReportW` den Wert 1 zurückgeben, starten diese Makros den Debugger, vorausgesetzt, dass Just-In-Time(JIT)-Debugging aktiviert ist.  
   
 ## <a name="remarks"></a>Hinweise  
  `_CrtDbgReport` und `_CrtDbgReportW` können den Debugbericht an drei verschiedene Ziele senden: an eine Debugberichtsdatei, einen Debugmonitor (der [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]-Debugger) oder an ein Debugmeldungsfenster. Mit den zwei Konfigurationsfunktionen [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) und [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) werden die Ziele für die einzelnen Berichtstypen angegeben. Mithilfe dieser Funktionen können die Berichtsziele für die einzelnen Berichtstypen separat gesteuert werden. Es kann beispielsweise angegeben werden, dass ein `reportType` von `_CRT_WARN` nur zum Debugmonitor gesendet wird, wohingegen ein `reportType` von `_CRT_ASSERT` zu einem Debugmeldungsfenster und einer benutzerdefinierten Berichtsdatei gesendet wird.  
@@ -157,16 +158,6 @@ int main(int argc, char *argv[]) {
 ```  
   
  Unter [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167) finden Sie ein Beispiel, wie Sie die Berichtsfunktion ändern können.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
-  
--   [System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
-  
--   [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
-  
--   [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
-  
--   [System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debugroutinen](../../c-runtime-library/debug-routines.md)   

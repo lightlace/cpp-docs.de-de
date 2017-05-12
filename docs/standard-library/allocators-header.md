@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: fa76512c47fd7412227a26de3de05190c687c4b3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 536e39fdb795580a770c6bee474d3bc03614879c
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
@@ -158,8 +159,8 @@ Definiert mehrere Vorlagen, die dabei helfen, Speicherblöcke für knotenbasiert
   
 |||  
 |-|-|  
-|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#operator_neq)|Es wird auf Ungleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|  
-|[operator== (\<allocators>)](../standard-library/allocators-operators.md#operator_eq_eq)|Es wird auf Gleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|  
+|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#op_neq)|Es wird auf Ungleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|  
+|[operator== (\<allocators>)](../standard-library/allocators-operators.md#op_eq_eq)|Es wird auf Gleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|  
   
 ### <a name="classes"></a>Klassen  
   

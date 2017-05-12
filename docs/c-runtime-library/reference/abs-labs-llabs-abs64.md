@@ -1,62 +1,79 @@
 ---
-title: "Abs, Labs, Llabs, _abs64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "abs"
-  - "_abs64"
-  - "labs"
-  - "llabs"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "stdlib/_abs64"
-  - "math/abs"
-  - "_abs64"
-  - "abs"
-  - "labs"
-  - "math/labs"
-  - "llabs"
-  - "math/llabs"
-  - "cmath/abs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Absolute Werte"
-  - "abs-Funktion"
-  - "abs64-Funktion"
-  - "_abs64-Funktion"
-  - "Berechnen absoluter Werte"
+title: abs, labs, llabs, _abs64 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- abs
+- _abs64
+- labs
+- llabs
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- stdlib/_abs64
+- math/abs
+- _abs64
+- abs
+- labs
+- math/labs
+- llabs
+- math/llabs
+- cmath/abs
+dev_langs:
+- C++
+helpviewer_keywords:
+- absolute values
+- abs function
+- abs64 function
+- _abs64 function
+- calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
 caps.latest.revision: 29
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# Abs, Labs, Llabs, _abs64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 804ed3ac260097c4eb088058580bf801b3bee9f1
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 Berechnet den absoluten Wert des Arguments.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int abs(   
@@ -88,35 +105,35 @@ __int64 _abs64(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `n`  
- Der numerische Wert.  
+ Ein numerischer Wert.  
   
-## Rückgabewert  
- Die `abs`, `labs`, `llabs` und `_abs64` Funktionen zurück, den absoluten Wert des Parameters `n`. Es gibt keine Fehlerrückgabe.  
+## <a name="return-value"></a>Rückgabewert  
+ Die Funktionen `abs`, `labs`, `llabs` und `_abs64` geben den absoluten Wert des Parameters `n` zurück. Es gibt keine Fehlerrückgabe.  
   
-## Hinweise  
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von `abs`aufrufen, die `long`\-, `long long`\-, `float`\-, `double`\- und `long double`\-Werte verwenden und zurückgeben. Diese Überladungen sind in den Header \< Cmath \> definiert. In einem C\-Programm verwendet `abs` immer "int" und gibt auch "int" zurück.  
+## <a name="remarks"></a>Hinweise  
+ Da C++ das Überladen zulässt, können Sie Überladungen von `abs`aufrufen, die `long`-, `long long`-, `float`-, `double`- und `long double`-Werte verwenden und zurückgeben. Diese Überladungen sind im Header \<cmath> definiert. In einem C-Programm verwendet `abs` immer "int" und gibt auch "int" zurück.  
   
- **Microsoft\-spezifisch**  
+ **Microsoft-spezifisch**  
   
- Da der Bereich von negativen ganzen Zahlen, die mithilfe eines Ganzzahltyps darstellbare größer als der Bereich von positiven ganzen Zahlen, die ist mithilfe dieses Typs dargestellt werden können, ist es möglich, ein Argument für diese Funktionen bereitstellen, die nicht konvertiert werden kann. Wenn der absolute Wert des Arguments nicht über den Rückgabetyp dargestellt werden kann, geben die `abs`\-Funktionen den Argumentwert unverändert zurück. Insbesondere gibt `abs(INT_MIN)``INT_MIN` zurück, `labs(LONG_MIN)` gibt `LONG_MIN` zurück, `llabs(LLONG_MIN)` gibt `LLONG_MIN` zurück und `_abs64(_I64_MIN)` gibt `_I64_MIN` zurück. Dies bedeutet, dass die `abs`\-Funktionen nicht verwendet werden können, um einen positiven Wert sicherzustellen.  
+ Da der mithilfe eines integralen Typs darstellbare Bereich von negativen ganzen Zahlen größer als der entsprechende Bereich von positiven ganzen Zahlen ist, die mithilfe dieses Typs dargestellt werden können, kann für diese Funktionen ein nicht konvertierbares Argument bereitgestellt werden. Wenn der absolute Wert des Arguments nicht über den Rückgabetyp dargestellt werden kann, geben die `abs`-Funktionen den Argumentwert unverändert zurück. Insbesondere gibt `abs(INT_MIN)` `INT_MIN` zurück, `labs(LONG_MIN)` gibt `LONG_MIN` zurück, `llabs(LLONG_MIN)` gibt `LLONG_MIN` zurück und `_abs64(_I64_MIN)` gibt `_I64_MIN` zurück. Dies bedeutet, dass die `abs`-Funktionen nicht verwendet werden können, um einen positiven Wert sicherzustellen.  
   
- **Ende Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Routine|Erforderliche C\-Headerdatei|Erforderlicher C\+\+\-header|  
-|-------------|----------------------------------|----------------------------------|  
-|`abs`, `labs`, `llabs`|\< math.h \> oder \< stdlib.h \>|\< Cmath \>, \< Cstdlib \>, \< stdlib.h \> oder \< math.h \>|  
-|`_abs64`|\<stdlib.h\>|\< Cstdlib \> oder \< stdlib.h \>|  
+|Routine|Erforderlicher C-Header|Erforderlicher C++-Header|  
+|-------------|-----------------------|---------------------------|  
+|`abs`, `labs`, `llabs`|\<math.h> oder\<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> oder \<math.h|  
+|`_abs64`|\<stdlib.h>|\<cstdlib.h> oder\<stdlib.h>|  
   
- Verwenden Sie die überladenen Versionen der `abs` in C\+\+ müssen Sie den Header \< Cmath \> enthalten.  
+ Damit Sie die überladene Version von `abs` in C++ verwenden können, müssen Sie den Header \<cmath> beifügen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Dieses Programm berechnet die absoluten Werte einiger Zahlen und zeigt sie an.  
   
-```c  
+```C  
 // crt_abs.c  
 // Build: cl /W3 /TC crt_abs.c  
 // This program demonstrates the use of the abs function  
@@ -158,16 +175,21 @@ int main( void )
 ```  
   
 ```Output  
-Der Absolute Wert von-4 ist 4, die den absoluten Wert von – 41567 ist 41567 der Absolute Wert von – 9876543210 ist 9876543210 der Absolute Wert von 0xffffffffffffffff ist 0 x 0000000000000001 Microsoft-Implementierung abhängige Ergebnisse: abs(INT_MIN) gibt – 2147483648 labs(LONG_MIN) gibt – 2147483648 llabs gibt-9223372036854775808 _abs64(_I64_MIN) gibt 0 x 8000000000000000 zurück  
+The absolute value of -4 is 4  
+The absolute value of -41567 is 41567  
+The absolute value of -9876543210 is 9876543210  
+The absolute value of 0xffffffffffffffff is 0x0000000000000001  
+Microsoft implementation-specific results:  
+ abs(INT_MIN) returns -2147483648  
+ labs(LONG_MIN) returns -2147483648  
+ llabs(LLONG_MIN) returns -9223372036854775808  
+ _abs64(_I64_MIN) returns 0x8000000000000000  
   
 ```  
   
-## .NET Framework-Entsprechung  
- [System::Math::Abs](https://msdn.microsoft.com/en-us/library/system.math.abs.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [\_cabs](../../c-runtime-library/reference/cabs.md)   
- [Fabs, Fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
+ [Gleitkomma-Unterstützung](../../c-runtime-library/floating-point-support.md)   
+ [_cabs](../../c-runtime-library/reference/cabs.md)   
+ [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
  [imaxabs](../../c-runtime-library/reference/imaxabs.md)

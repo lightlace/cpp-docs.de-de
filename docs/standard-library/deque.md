@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 399ee327dffdd3c223718e9fb2d36bbff0a74f81
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 5d3ff49236c53f484098cdc075a1d0d5379acb5f
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
@@ -55,12 +56,12 @@ Definiert die Containervorlagenklasse "deque" und einige unterstützende Vorlage
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/deque-operators.md#operator_neq)|Überprüft, ob das deque-Objekt links vom Operator ungleich dem deque-Objekt rechts vom Operator ist.|  
-|[operator<](../standard-library/deque-operators.md#operator_lt_)|Überprüft, ob das deque-Objekt links vom Operator kleiner als das deque-Objekt rechts vom Operator ist.|  
-|[operator\<=](../standard-library/deque-operators.md#operator_lt__eq)|Überprüft, ob das deque-Objekt links vom Operator kleiner gleich dem deque-Objekt rechts vom Operator ist.|  
-|[operator==](../standard-library/deque-operators.md#operator_eq_eq)|Überprüft, ob das deque-Objekt links vom Operator gleich dem deque-Objekt rechts vom Operator ist.|  
-|[operator>](../standard-library/deque-operators.md#operator_gt_)|Überprüft, ob das deque-Objekt links vom Operator größer als das deque-Objekt rechts vom Operator ist.|  
-|[operator>=](../standard-library/deque-operators.md#operator_gt__eq)|Überprüft, ob das deque-Objekt links vom Operator größer gleich dem deque-Objekt rechts vom Operator ist.|  
+|[operator!=](../standard-library/deque-operators.md#op_neq)|Überprüft, ob das deque-Objekt links vom Operator ungleich dem deque-Objekt rechts vom Operator ist.|  
+|[operator<](../standard-library/deque-operators.md#op_lt)|Überprüft, ob das deque-Objekt links vom Operator kleiner als das deque-Objekt rechts vom Operator ist.|  
+|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Überprüft, ob das deque-Objekt links vom Operator kleiner gleich dem deque-Objekt rechts vom Operator ist.|  
+|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Überprüft, ob das deque-Objekt links vom Operator gleich dem deque-Objekt rechts vom Operator ist.|  
+|[operator>](../standard-library/deque-operators.md#op_gt)|Überprüft, ob das deque-Objekt links vom Operator größer als das deque-Objekt rechts vom Operator ist.|  
+|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Überprüft, ob das deque-Objekt links vom Operator größer gleich dem deque-Objekt rechts vom Operator ist.|  
   
 ### <a name="functions"></a>Funktionen  
   

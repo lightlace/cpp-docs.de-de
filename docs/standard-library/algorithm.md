@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5d460e3f135015a3eb29f4f3a27a5f4cba615179
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 8deaefffa7afe676a7c8634c4c6c40e784aed982
+ms.contentlocale: de-de
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
@@ -147,7 +148,7 @@ Definiert C++-Standardbibliothek-Containervorlagenfunktionen, die Algorithmen au
 |[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)|Vereinigt alle Elemente, die zu einem, jedoch nicht zu beiden sortierten Quellbereichen gehören, in einen einzelnen sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.|  
 |[set_union](../standard-library/algorithm-functions.md#set_union)|Vereinigt alle Elemente, die mindestens zu einem der beiden sortierten Quellbereiche gehören, in einen einzelnen sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.|  
 |[sort](../standard-library/algorithm-functions.md#sort)|Ordnet die Elemente in einem angegebenen Bereich in einer aufsteigenden Reihenfolge oder gemäß eines Sortierkriteriums an, das von einem binären Prädikat angegeben wird.|  
-|[shuffle](../standard-library/algorithm-functions.md#std__shuffle)|Mischt (sortiert) Elemente für einen gegebenen Bereich mithilfe eines Zufallszahlengenerators.|  
+|[shuffle](../standard-library/algorithm-functions.md#shuffle)|Mischt (sortiert) Elemente für einen gegebenen Bereich mithilfe eines Zufallszahlengenerators.|  
 |[sort_heap](../standard-library/algorithm-functions.md#sort_heap)|Konvertiert einen Heap in einen sortierten Bereich.|  
 |[stable_partition](../standard-library/algorithm-functions.md#stable_partition)|Klassifiziert Elemente in einem Bereich in zwei zusammenhanglose Sätze, wobei die Elemente, die ein unäres Prädikat erfüllen, direkt den Elementen vorausgehen, die es nicht erfüllen können. Die relative Reihenfolge der äquivalenten Elemente wird dabei beibehalten.|  
 |[stable_sort](../standard-library/algorithm-functions.md#stable_sort)|Ordnet die Elemente in einem angegebenen Bereich in einer aufsteigenden Reihenfolge oder gemäß eines Sortierkriteriums an, das von einem binären Prädikat angegeben wird, und behält die relative Reihenfolge der äquivalenten Elemente bei.|  

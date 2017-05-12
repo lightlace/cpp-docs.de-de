@@ -1,58 +1,75 @@
 ---
-title: "getc, getwc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "getwc"
-  - "getc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_gettc"
-  - "getwc"
-  - "_gettchar"
-  - "getc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_gettc-Funktion"
-  - "Zeichen, Lesen"
-  - "getc-Funktion"
-  - "gettc-Funktion"
-  - "getwc-Funktion"
-  - "getwchar-Funktion"
-  - "Lesen von Zeichen aus Streams"
-  - "Streams, Lesen von Zeichen aus"
+title: getc, getwc | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- getwc
+- getc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _gettc
+- getwc
+- _gettchar
+- getc
+dev_langs:
+- C++
+helpviewer_keywords:
+- characters, reading
+- _gettc function
+- getwchar function
+- streams, reading characters from
+- reading characters from streams
+- getc function
+- getwc function
+- gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# getc, getwc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9c49c803ade49a5434599690902856fd1f76d742
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Lesen Sie ein Zeichen von einem Stream.  
+---
+# <a name="getc-getwc"></a>getc, getwc
+Liest ein Zeichen aus einem Stream.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int getc(   
@@ -63,43 +80,43 @@ wint_t getwc(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `stream`  
- Eingabestream.  
+ Eingabestream  
   
-## Rückgabewert  
- Gibt das gelesene Zeichen zurück.  So einem Lesefehler oder eine Dateiende\-Bedingung, `getc` gibt `EOF` und `getwc` gibt `WEOF` angeben.  Verwenden Sie für `getc``ferror` oder `feof` zur Fehler\- oder Dateiendeüberprüfung.  Wenn `stream``NULL` ist, rufen `getc` und `getwc` den ungültigen Parameterhandler auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren, diese Funktionen Rückhol\- `EOF` \(oder `WEOF` für `getwc`\) und `errno` auf `EINVAL` festlegen.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt das gelesene Zeichen zurück. Zum Anzeigen eines Lesefehlers oder einer Dateiendebedingung gibt `getc` `EOF` zurück, und `getwc` gibt `WEOF` zurück. Verwenden Sie für `getc``ferror` oder `feof` zur Fehler- oder Dateiendeüberprüfung. Wenn `stream` `NULL` ist, rufen `getc` und `getwc` den ungültigen Parameterhandler, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, auf. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück `EOF` (oder `WEOF` für `getwc`), und legen `errno` auf `EINVAL`.  
   
- Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Jede Routine liest ein einzelnes Zeichen aus einer Datei an der aktuellen Position und erhöht den Zeiger der zugeordneten Datei \(wenn Sie definiert werden\), um auf dem nächsten Zeichen zu veranschaulichen.  Die Datei wird `stream` zugeordnet.  
+## <a name="remarks"></a>Hinweise  
+ Jede Routine liest ein einzelnes Zeichen aus einer Datei an der aktuellen Position und erhöht den zugeordneten Dateizeiger (wenn definiert), um auf das nächste Zeichen zu zeigen. Die Datei ist `stream` zugeordnet.  
   
- Diese Funktionen sperren den aufrufenden Thread und sind daher threadsicher.  Eine nicht sperrende Version finden Sie unter [\_getc\_nolock, \_getwc\_nolock](../../c-runtime-library/reference/getc-nolock-getwc-nolock.md).  
+ Diese Funktionen sperren den aufrufenden Thread und sind daher threadsicher. Eine nicht sperrende Version finden Sie unter [_getc_nolock _getwc_nolock](../../c-runtime-library/reference/getc-nolock-getwc-nolock.md).  
   
  Es folgen routinespezifische Hinweise.  
   
 |Routine|Hinweise|  
-|-------------|--------------|  
-|`getc`|Identisch mit `fgetc`, implementiert jedoch als Funktion und als Makro.|  
-|`getwc`|Breitzeichenversion von `getc`.  Liest ein Mehrbytezeichen oder ein Breitzeichen, ob `stream` im Textmodus oder im Binärdateimodus geöffnet ist.|  
+|-------------|-------------|  
+|`getc`|Genau so wie `fgetc`, jedoch als Funktion und Makro implementiert.|  
+|`getwc`|Breitzeichenversion von `getc`. Liest ein Multibytezeichen oder Breitzeichen, je nachdem, ob `stream` im Textmodus oder im Binärdateimodus geöffnet ist.|  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_gettc`|`getc`|`getc`|`getwc`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`getc`|\<stdio.h\>|  
-|`getwc`|\<stdio.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`getc`|\<stdio.h>|  
+|`getwc`|\<stdio.h> oder \<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_getc.c  
@@ -136,28 +153,22 @@ int main()
 }  
 ```  
   
-## Eingabe: crt\_getc.txt  
+## <a name="input-crtgetctxt"></a>Eingabe: crt_getc.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Input was: Line one.  
 ```  
   
-## .NET Framework-Entsprechung  
-  
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx)  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
  [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [\_getch, \_getwch](../../c-runtime-library/reference/getch-getwch.md)   
+ [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)   
  [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)   
  [ungetc, ungetwc](../../c-runtime-library/reference/ungetc-ungetwc.md)

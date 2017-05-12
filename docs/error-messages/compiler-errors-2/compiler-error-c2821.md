@@ -1,5 +1,5 @@
 ---
-title: Compilerfehler C2821 | Microsoft-Dokumentation
+title: Compilerfehler C2821 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 5a8000d7867ec7a18730a5d95538f21ffb3a0b2e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 774c191bb3da3c5382c4aff7d48c8d6ae5ca7e68
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="compiler-error-c2821"></a>Compilerfehler C2821
-erste formaler Parameter für den new-Operator muss 'unsigned Int' sein.  
+# <a name="compiler-error-c2821"></a>{1&gt;Compilerfehler C2821&lt;1}
+erster formaler Parameter auf "Operator new" muss 'unsigned Int' sein.  
   
-Der erste formale Parameter des der [new-Operator](../../standard-library/new-operators.md#operator_new) muss eine unsignierte `int`.  
+Erster formaler Parameter von der [new-Operator](../../standard-library/new-operators.md#op_new) muss einen nicht signierten `int`.  
   
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird C2821 generiert:  

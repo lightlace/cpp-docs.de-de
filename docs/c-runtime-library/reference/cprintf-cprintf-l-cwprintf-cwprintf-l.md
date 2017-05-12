@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d761621d23ab97d951199e7790e71f224394f92c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c96743fc777a53f2fe849d5f88f3fd7299054d02
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
@@ -88,22 +89,18 @@ Formatiert und druckt in die Konsole. Sicherere Versionen sind verfügbar. Weite
   
 ```  
 int _cprintf(   
-   const char * format [,   
-   argument] ...   
+   const char * format [, argument_list]  
 );  
-int _cprintf_l(   
+int _cprintf_l(  
    const char * format,  
-   locale_t locale [,  
-   argument] …   
+   locale_t locale [, argument_list]  
 );  
 int _cwprintf(  
-   const wchar * format [,   
-   argument] …  
+   const wchar * format [, argument_list]  
 );  
 int _cwprintf_l(  
    const wchar * format,  
-   locale_t locale [,   
-   argument] …  
+   locale_t locale [, argument_list]  
 );  
 ```  
   
@@ -111,8 +108,8 @@ int _cwprintf_l(
  `format`  
  Formatsteuerzeichenfolge.  
   
- `argument`  
- Optionale Parameter.  
+ `argument_list`  
+ Optionale Parameter für die Formatzeichenfolge.  
   
  `locale`  
  Das zu verwendende Gebietsschema.  
@@ -121,9 +118,9 @@ int _cwprintf_l(
  Die Anzahl der zu gedruckten Zeichen.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese `_putch`-Funktionen formatieren eine Reihe von Zeichen und Werten und geben diese direkt über die Konsole aus. Dabei verwenden sie für die Zeichenausgabe die `_putwch`-Funktion `_cwprintf`. Jedes `argument` (falls vorhanden) wird entsprechend der jeweiligen Formatangabe in `format`konvertiert und ausgegeben. Das Format hat dieselbe Form und Funktion wie der `format`-Parameter für die [printf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)-Funktion. Anders als die `fprintf`-, `printf`- und `sprintf`-Funktionen übersetzen weder `_cprintf` noch `_cwprintf` Zeilenvorschubzeichen bei der Ausgabe in eine Kombination aus Wagenrücklauf und Zeilenvorschub (CR-LF).  
+ Diese Funktionen formatieren eine Reihe von Zeichen und Werten und geben diese direkt über die Konsole aus, indem sie die `_putch`-Funktion (`_putwch` für `_cwprintf`) für die Zeichenausgabe verwenden. Jedes Argument in `argument_list` (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in `format`. Die `format` Argument verwendet den [formatieren Sie die Syntax der Formatangabe für Printf und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Im Gegensatz zu den `fprintf`, `printf`, und `sprintf` -Funktionen übersetzen weder `_cprintf` noch `_cwprintf` übersetzt Zeilenvorschubzeichen in Carriage Return-Zeilenvorschub (CR-LF) Kombinationen bei der Ausgabe.  
   
- Ein wichtiger Unterschied ist, dass `_cwprintf` bei der Verwendung in Windows NT Unicode-Zeichen anzeigt. Anders als `_cprintf` verwendet `_cwprintf` die aktuellen Einstellungen des Konsolengebietsschemas.  
+ Ein wichtiger Unterschied ist, die `_cwprintf` Unicode-Zeichen bei der Verwendung in Windows anzeigt. Anders als `_cprintf` verwendet `_cwprintf` die aktuellen Einstellungen des Konsolengebietsschemas.  
   
  Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas.  
   
@@ -175,9 +172,6 @@ int main( void )
 ```Output  
 -16  001d  62511  A Test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konsole und Port-E/A](../../c-runtime-library/console-and-port-i-o.md)   

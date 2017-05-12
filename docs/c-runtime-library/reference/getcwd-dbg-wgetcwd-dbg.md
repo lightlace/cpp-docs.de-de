@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2218210801bff38094d06d96736a7f05f7be29cf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9814916e32878a1e1a11f534fce64aeaf2f6a57e
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg, _wgetcwd_dbg
@@ -108,9 +109,9 @@ wchar_t *_wgetcwd_dbg(
  Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktionen `_getcwd_dbg` und `_wgetcwd_dbg` sind identisch mit `_getcwd` und `_wgetcwd`, außer dass bei Definition von `DEBUG` diese Funktionen die Debugversion von `malloc`, `_malloc_dbg` verwenden, wenn `NULL` als erster Parameter übergeben wird. Weitere Informationen finden Sie unter [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+ Die `_getcwd_dbg` und `_wgetcwd_dbg` -Funktionen sind identisch mit `_getcwd` und `_wgetcwd` mit dem Unterschied, dass, wenn `_DEBUG` wird definiert, verwenden Sie diese Funktionen die Debugversion des `malloc` und `_malloc_dbg` Arbeitsspeicher belegt werden, wenn `NULL` als erster Parameter übergeben wird. Weitere Informationen finden Sie unter [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
- In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie das Flag `_CRTDBG_MAP_ALLOC` definieren. Wenn `_CRTDBG_MAP_ALLOC` definiert ist, werden Aufrufe von `_getcwd` und `_wgetcwd` zu `_getcwd_dbg` bzw. `_wgetcwd_dbg` neu zugeordnet, wobei `blockType` auf `_NORMAL_BLOCK` festgelegt wird. Daher müssen Sie diese Funktionen nicht explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als `_CLIENT_BLOCK` markieren. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
+ In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie das `_CRTDBG_MAP_ALLOC`-Flag definieren. Wenn `_CRTDBG_MAP_ALLOC` definiert ist, werden Aufrufe von `_getcwd` und `_wgetcwd` zu `_getcwd_dbg` bzw. `_wgetcwd_dbg` neu zugeordnet, wobei `blockType` auf `_NORMAL_BLOCK` festgelegt wird. Daher müssen Sie diese Funktionen nicht explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als `_CLIENT_BLOCK` markieren. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
@@ -126,9 +127,6 @@ wchar_t *_wgetcwd_dbg(
 |`_wgetcwd_dbg`|\<crtdbg.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- <xref:System.Environment.CurrentDirectory%2A>  
   
 ## <a name="see-also"></a>Siehe auch  
  [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
