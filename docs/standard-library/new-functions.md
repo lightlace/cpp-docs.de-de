@@ -12,10 +12,11 @@ f1_keywords:
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: e32c8f5892764d2efc955bbf2d7930e0c8d3f3f0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 53a31f533ee777dbbcc486283034094481ab0c31
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt;-Funktionen
@@ -34,7 +35,7 @@ extern const std::nothrow_t nothrow;
  Das Objekt wird als Funktionsargument verwendet, um auf den Parametertyp [std::nothrow_t](../standard-library/nothrow-t-structure.md) abzustimmen.  
   
 ### <a name="example"></a>Beispiel  
-  Beispiele zur Verwendung von `std::nothrow_t` als Funktionsparameter finden Sie unter [operator new](../standard-library/new-operators.md#operator_new) und [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr).  
+  Beispiele zur Verwendung von `std::nothrow_t` als Funktionsparameter finden Sie unter [operator new](../standard-library/new-operators.md#op_new) und [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr).  
   
 ##  <a name="set_new_handler"></a> set_new_handler  
  Installiert eine Benutzerfunktion, die aufgerufen werden muss, wenn `operator new` nicht in der Lage ist, Arbeitsspeicher zu belegen.  
@@ -51,7 +52,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
  0 (null) beim ersten Aufruf und der vorherige `new_handler` bei nachfolgenden Aufrufen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Funktion speichert `Pnew` in einem von ihr verwalteten statischen [new handler](../standard-library/new-typedefs.md#new_handler)-Zeiger und gibt anschließend den Wert zurück, der zuvor im Zeiger gespeichert war. Der neue Handler wird von [operator new](../standard-library/new-operators.md#operator_new)( **size_t**) verwendet.  
+ Die Funktion speichert `Pnew` in einem von ihr verwalteten statischen [new handler](../standard-library/new-typedefs.md#new_handler)-Zeiger und gibt anschließend den Wert zurück, der zuvor im Zeiger gespeichert war. Der neue Handler wird von [operator new](../standard-library/new-operators.md#op_new)( **size_t**) verwendet.  
   
 ### <a name="example"></a>Beispiel  
   

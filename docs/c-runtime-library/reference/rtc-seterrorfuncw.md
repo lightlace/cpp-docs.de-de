@@ -52,10 +52,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d71962eca033e5d3994c82e666102f44c62e82be
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9c340310feb94ac181049c01d3ab1efaee2002c3
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
@@ -80,13 +81,13 @@ Legt eine Funktion als den Handler für das Melden von Fehlern der Fehlerprüfun
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie in neuem Code ausschließlich `_RTC_SetErrorFuncW`. `_RTC_SetErrorFunc` ist in der Bibliothek nur noch aus Gründen der Abwärtskompatibilität enthalten.  
   
- Der Rückruf `_RTC_SetErrorFuncW` gilt nur für die Komponente, in die er eingebunden wurde, aber nicht global.  
+ Der Rückruf `_RTC_SetErrorFuncW` gilt nur für die Komponente, für die er eingebunden wurde, aber nicht global.  
   
  Stellen Sie sicher, dass die Adresse, die Sie an `_RTC_SetErrorFuncW` übergeben, zu einer gültigen Fehlerbehandlungsfunktion gehört.  
   
- Wenn einem Fehler durch [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md) der Typ –1 zugewiesen wurde, wird die Fehlerbehandlungsfunktion nicht aufgerufen.  
+ Wenn ein Fehler einen Typ "-1" mit zugewiesen wurde [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md), die Fehlerbehandlungsfunktion nicht aufgerufen wird.  
   
- Bevor Sie diese Funktion aufrufen können, müssen Sie zuerst eine der Initialisierungsfunktionen der Laufzeitfehlerüberprüfung aufrufen. Weitere Informationen finden Sie unter [Verwenden von Laufzeitüberprüfungen ohne die C-Laufzeitbibliothek](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).  
+ Bevor Sie diese Funktion aufrufen können, müssen Sie zuerst eine der Initialisierungsfunktionen der Laufzeitfehlerüberprüfung aufrufen. Weitere Informationen finden Sie unter [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).  
   
  **_RTC_error_fnW** ist wie folgt definiert:  
   
@@ -95,13 +96,13 @@ Legt eine Funktion als den Handler für das Melden von Fehlern der Fehlerprüfun
  Dabei gilt:  
   
  `errorType`  
- Die Art des Fehlers, der von [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md) angegeben wird.  
+ Die Art des Fehlers, der von [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md)angegeben wird.  
   
  *filename*  
  Die Quelldatei, in der der Fehler aufgetreten ist oder null, wenn keine Debuginformationen verfügbar sind.  
   
  *linenumber*  
- Die Zeile in *filename*, in der der Fehler aufgetreten ist, oder 0, wenn keine Debuginformationen verfügbar sind.  
+ Die Zeile in *filename* , in der der Fehler aufgetreten ist oder „0“, wenn keine Debuginformationen verfügbar sind.  
   
  `moduleName`  
  Die DLL oder Name des ausführbaren Programms, wo der Fehler aufgetreten ist.  
@@ -121,9 +122,6 @@ Legt eine Funktion als den Handler für das Melden von Fehlern der Fehlerprüfun
   
 ## <a name="libraries"></a>Bibliotheken  
  Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)   

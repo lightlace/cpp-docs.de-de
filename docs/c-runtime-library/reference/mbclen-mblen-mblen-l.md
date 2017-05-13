@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c0a3a001234439314f682984b01496aff960b366
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f8e2a1bf9282298d3d41183c0d335e49e89f1b42
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
@@ -106,7 +107,7 @@ int _mblen_l(
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `_mbclen` gibt 1 oder 2 zurück, je nachdem, ob das Multibytezeichen `c` 1 oder 2 Bytes lang ist. Es gibt keine Fehlerrückgabe für `_mbclen`. Wenn `mbstr` nicht `NULL` ist, gibt `mblen` die Länge des Multibytezeichens in Byte zurück. Wenn `mbstr` gleich `NULL` ist oder auf das NULL-Breitzeichen zeigt, gibt `mblen` 0 zurück. Wenn das Objekt, auf das von `mbstr` gezeigt wird, kein gültiges Multibytezeichen innerhalb der ersten `count` Zeichen bildet, gibt `mblen` –&1; zurück.  
+ `_mbclen` gibt 1 oder 2 zurück, je nachdem, ob das Multibytezeichen `c` 1 oder 2 Bytes lang ist. Es gibt keine Fehlerrückgabe für `_mbclen`. Wenn `mbstr` nicht `NULL` ist, gibt `mblen` die Länge des Multibytezeichens in Byte zurück. Wenn `mbstr` gleich `NULL` ist oder auf das NULL-Breitzeichen zeigt, gibt `mblen` 0 zurück. Wenn das Objekt, das `mbstr` verweist auf bilden kein gültiges Multibytezeichen innerhalb der ersten `count` Zeichen, d. h. `mblen` gibt-1 zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `_mbclen`-Funktion gibt die Länge des Multibytezeichens `c` in Byte zurück. Wenn `c` nicht auf das führende Byte eines Multibytezeichens zeigt, wie durch einen impliziten Aufruf von `_ismbblead` bestimmt wird, ist das Ergebnis von `_mbclen` unvorhersehbar.  
@@ -171,9 +172,6 @@ Convert wide character to multibyte character:
 Length in bytes of multibyte character 61: 1  
 Length in bytes of NULL multibyte character 0: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   

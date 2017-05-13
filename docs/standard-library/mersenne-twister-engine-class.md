@@ -1,75 +1,88 @@
 ---
-title: "mersenne_twister_engine-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "random/std::tr1::mersenne_twister_engine"
-  - "tr1.mersenne_twister_engine"
-  - "std.tr1.mersenne_twister_engine"
-  - "std::tr1::mersenne_twister_engine"
-  - "tr1::mersenne_twister_engine"
-  - "mersenne_twister_engine"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mersenne_twister_engine-Klasse"
+title: mersenne_twister_engine-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mersenne_twister_engine
+- random/std::mersenne_twister_engine
+dev_langs:
+- C++
+helpviewer_keywords:
+- mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# mersenne_twister_engine-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: bc94cb819bbf71893503f91bb3469a5be771f5cd
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
-Generiert mithilfe des Mersenne\-Twisteralgorithmus eine qualitativ hochwertige Zufallssequenz aus Ganzzahlen.  
+---
+# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine-Klasse
+Generiert mithilfe des Mersenne-Twisteralgorithmus eine qualitativ hochwertige Zufallssequenz aus Ganzzahlen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<class UIntType,   
+template <class UIntType,   
     size_t W, size_t N, size_t M, size_t R,  
     UIntType A, size_t U, UIntType D, size_t S,  
     UIntType B, size_t T, UIntType C, size_t L, UIntType F>  
 class mersenne_twister_engine;  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `UIntType`  
- Der unsigned integer\-Ergebnistyp. Mögliche Typen finden Sie unter [\<random\>](../standard-library/random.md).  
+ Der unsigned integer-Ergebnistyp. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
  `W`  
- **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits.**Vorbedingung**: `2u < W ≤ numeric_limits<UIntType>::digits`  
+ **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**: `2u < W ≤ numeric_limits<UIntType>::digits`  
   
  `N`  
- **Zustandsgröße**. Die Anzahl von Elementen \(Werten\) in der Zustandssequenz.  
+ **Zustandsgröße**. Die Anzahl von Elementen (Werten) in der Zustandssequenz.  
   
  `M`  
- **Verschiebungsgröße**. Die Anzahl von Elementen, die während jeder Verzerrung übersprungen werden sollen.**Vorbedingung**: `0 < M ≤ N`  
+ **Verschiebungsgröße**. Die Anzahl von Elementen, die während jeder Verzerrung übersprungen werden sollen. **Vorbedingung**: `0 < M ≤ N`  
   
  `R`  
- **Maskenbits**.**Vorbedingung**: `R ≤ W`  
+ **Maskenbits**. **Vorbedingung**: `R ≤ W`  
   
  `A`  
- **XOR\-Maske**.**Vorbedingung**: `A ≤ (1u<<W) - 1u`  
+ **XOR-Maske**. **Vorbedingung**: `A ≤ (1u<<W) - 1u`  
   
  `U`, `S`, `T`, `L`  
- **Tempering der Verschiebungsparameter**. Werden während der Verschlüsselung \(Tempering\) als Verschiebungswerte verwendet. Vorbedingung: `U,S,T,L ≤ W`  
+ **Tempering der Verschiebungsparameter**. Werden während der Verschlüsselung (Tempering) als Verschiebungswerte verwendet. Vorbedingung: `U,S,T,L ≤ W`  
   
  `D`, `B`, `C`  
- **Tempering von Bitmaskenparametern**. Werden während der Verschlüsselung \(Tempering\) als Maskenwerte verwendet. Vorbedingung: `D,B,C ≤ (1u<<W) - 1u`  
+ **Tempering von Bitmaskenparametern**. Werden während der Verschlüsselung (Tempering) als Maskenwerte verwendet. Vorbedingung: `D,B,C ≤ (1u<<W) - 1u`  
   
  `F`  
  **Initialisierungsmultiplikator**. Wird verwendet, um die Initialisierung der Sequenz zu unterstützen. Vorbedingung: `F ≤ (1u<<W) - 1u`  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
 ||||  
 |-|-|-|  
@@ -78,18 +91,18 @@ class mersenne_twister_engine;
   
  `default_seed` ist eine als `5489u` definierte Memberkonstante, die als Standardparameterwert für `mersenne_twister_engine::seed` und den Einzelwertkonstruktor verwendet wird.  
   
- Weitere Informationen über Modulmember finden Sie unter [\<random\>](../standard-library/random.md).  
+ Weitere Informationen über Modulmember finden Sie unter [\<random>](../standard-library/random.md).  
   
-## Hinweise  
- Diese Vorlagenklasse beschreibt ein zufallszahlenmodul und Zurückgeben von Werten zum geschlossenen Intervall \[`0`, `2`<sup>W</sup> \- `1`\]. Sie enthält einen großen Integralwert mit `W * (N - 1) + R` Bits. Sie extrahiert aus diesem großen Wert `W` Bits auf einmal, und sobald alle Bits verwendet wurden, wird der große Wert verzerrt, indem die Bits verschoben und kombiniert werden, sodass ein neuen Satz von Bits entsteht aus dem extrahiert werden kann. Der Zustand des Moduls ist die letzte `N``W`\-bit\-Werten verwendet, wenn `operator()` mindestens aufgerufen wurde `N` Timeout, andernfalls der `M``W`\-Werte, die verwendet wurden und die letzten `N - M` Werten des Startwerts.  
+## <a name="remarks"></a>Hinweise  
+ Diese Vorlagenklasse beschreibt ein Zufallszahlenmodul und gibt Werte zum geschlossenen Intervall [`0`, `2`<sup>W</sup> - `1`] zurück. Sie enthält einen großen Integralwert mit `W * (N - 1) + R` Bits. Sie extrahiert aus diesem großen Wert `W` Bits auf einmal, und sobald alle Bits verwendet wurden, wird der große Wert verzerrt, indem die Bits verschoben und kombiniert werden, sodass ein neuen Satz von Bits entsteht aus dem extrahiert werden kann. Beim Zustand des Moduls handelt es sich um den letzten verwendeten `N``W`-Bitwert, wenn `operator()` mindestens `N`-mal aufgerufen wurde. Andernfalls sind es die verwendeten `M``W`-Bitwerte und die letzten `N - M`-Werte des Startwerts.  
   
- Der Generator verzerrt den großen Wert, den er enthält, indem er ein verzerrtes generalisiertes Feedback\-Schieberegister verwendet, das durch die Verschiebungswerte `N` und `M`, einen Verzerrungswert `R` und eine bedingte XOR\-Maske `A` definiert wird. Zusätzlich werden die Bits des Schieberegisters verschlüsselt \(getempert\). Dies geschieht entsprechend einer Bit\-Scrambling\-Matrix, die durch die Werte `U`, `D`, `S`, `B`, `T`, `C` und `L` definiert ist.  
+ Der Generator verzerrt den großen Wert, den er enthält, indem er ein verzerrtes generalisiertes Feedback-Schieberegister verwendet, das durch die Verschiebungswerte `N` und `M`, einen Verzerrungswert `R` und eine bedingte XOR-Maske `A` definiert wird. Zusätzlich werden die Bits des Schieberegisters verschlüsselt (getempert). Dies geschieht entsprechend einer Bit-Scrambling-Matrix, die durch die Werte `U`, `D`, `S`, `B`, `T`, `C` und `L` definiert ist.  
   
- Das Vorlagenargument `UIntType` muss groß genug für Werte bis zu `2`<sup>W</sup> \- `1`. Die Werte der anderen Vorlagenargumente müssen die folgenden Anforderungen erfüllen: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.  
+ Das Vorlagenargument `UIntType`muss groß genug sein, um Werte bis zu `2`<sup>W</sup> - `1` zu enthalten. Die Werte der anderen Vorlagenargumente müssen die folgenden Anforderungen erfüllen: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.  
   
- Obwohl Sie direkt aus diesem Modul einen Generator konstruieren können, wird empfohlen, dass Sie eine dieser vordefinierten Typdefinitionen verwenden:  
+ Obwohl Sie direkt aus diesem Modul einen Generator konstruieren können, wird empfohlen, eine dieser voreingestellten Typedefs zu verwenden:  
   
- `mt19937`: 32\-Bit\-Mersenne\-twistermodul \(Matsumoto und Nishimura, 1998\).  
+ `mt19937`: 32-Bit-Mersenne-Twistermodul (Matsumoto und Nishimura, 1998).  
   
 ```  
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,   
@@ -100,7 +113,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;  
 ```  
   
- `mt19937_64`: 64\-Bit\-Mersenne\-twistermodul \(Matsumoto und Nishimura, 2000\).  
+ `mt19937_64`: 64-Bit-Mersenne-Twistermodul (Matsumoto und Nishimura, 2000).  
   
 ```  
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,   
@@ -111,15 +124,17 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;  
 ```  
   
- Detaillierte Informationen über den Mersenne\-Twister\-Algorithmus, finden Sie im Wikipedia\-Artikel [Mersenne\-Twister\-](http://go.microsoft.com/fwlink/?LinkId=402356).  
+ Ausführliche Informationen über den Mersenne-Twisteralgorithmus erhalten Sie im Wikipedia-Artikel [Mersenne twister (Mersenne-Twister)](http://go.microsoft.com/fwlink/LinkId=402356).  
   
-## Beispiel  
- Ein Codebeispiel finden Sie unter [\<random\>](../standard-library/random.md).  
+## <a name="example"></a>Beispiel  
+ Ein Codebeispiel finden Sie unter [\<random>](../standard-library/random.md).  
   
-## Anforderungen  
- **Header:** \<random\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<random>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<random\>](../standard-library/random.md)
+## <a name="see-also"></a>Siehe auch  
+ [\<random>](../standard-library/random.md)
+
+

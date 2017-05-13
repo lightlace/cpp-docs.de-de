@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c8b8418394c4ebcc5ff13d97e2b7b28929982c79
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: aac10cebd0f967944403837283e9008b0b1047fc
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
@@ -205,7 +206,8 @@ Die Flags  `_O_CREAT` und `_O_EXCL` wurden angegeben, `filename` existiert jedoc
  `_SH_DENYNO`  
  Erlaubt Lese- und Schreibzugriff.  
   
- Das Argument `pmode` ist nur erforderlich, wenn `_O_CREAT` angegeben wird. Wenn die Datei nicht existiert, gibt `pmode` die Berechtigungseinstellungen der Datei an, die festgelegt werden, wenn die neue Datei zum ersten Mal geschlossen wird. Andernfalls wird `pmode` ignoriert. `pmode` ist ein ganzzahliger Ausdruck, der eine oder beide der Manifestkonstanten `_S_IWRITE` und `_S_IREAD` enthält, die in \<sys\stat.h> definiert sind. Wenn beide Konstanten verwendet werden, werden sie mithilfe des bitweisen OR-Operators kombiniert. `pmode` hat folgende Bedeutung:  
+ Das Argument `pmode` ist nur erforderlich, wenn `_O_CREAT` angegeben wird. Wenn die Datei nicht existiert, gibt `pmode` die Berechtigungseinstellungen der Datei an, die festgelegt werden, wenn die neue Datei zum ersten Mal geschlossen wird. Andernfalls wird `pmode` ignoriert. `pmode` ist ein ganzzahliger Ausdruck, der eine oder beide der Manifestkonstanten `_S_IWRITE` und `_S_IREAD` enthält, die in \<sys\stat.h> definiert sind. Wenn beide Konstanten verwendet werden, werden sie mithilfe des bitweisen OR-Operators kombiniert. 
+          `pmode` hat folgende Bedeutung:  
   
  `_S_IWRITE`  
  Schreiben erlaubt.  
@@ -231,9 +233,6 @@ Die Flags  `_O_CREAT` und `_O_EXCL` wurden angegeben, `filename` existiert jedoc
   
 ## <a name="example"></a>Beispiel  
  Siehe das Beispiel für [_locking](../../c-runtime-library/reference/locking.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [E/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)   

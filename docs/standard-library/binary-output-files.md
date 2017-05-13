@@ -33,14 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: f566da8ea00f0a52db3539c81bb3d19d6fc9da99
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8968a47f9d957aa0873b5db78909a6b4ad66ea75
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="binary-output-files"></a>Binäre Ausgabedateien
-Streams wurden ursprünglich für Text entwickelt, deswegen ist die Standardmethode für die Ausgabe „text“. Im Textmodus wird das Zeilenumbruchzeichen (hexadezimal 10) auf ein Wagenrücklauf- und Zeilenvorschubzeichen (nur 16-Bit) erweitert. Die Erweiterung kann Probleme verursachen, wie hier gezeigt wird:  
+Streams wurden ursprünglich für Text entwickelt, deswegen ist die Standardmethode für die Ausgabe „text“. Im Textmodus erweitert das neue Zeilenumbruchzeichen (hexadezimal 10) auf einen Zeilenumbruch (nur 16-Bit) aus. Die Erweiterung kann Probleme verursachen, wie hier gezeigt wird:  
   
 ```  
 // binary_output_files.cpp  
@@ -55,7 +56,7 @@ int main( )
 }  
 ```  
   
- Sie erwarten möglicherweise, dass dieses Programm die Bytesequenz { 99, 0, 10, 0 } ausgibt; stattdessen wird { 99, 0, 13, 10, 0 } ausgegeben, wodurch Probleme für ein Programm verursacht werden, das eine binäre Eingabe erwartet. Wenn sie eine echte binäre Ausgabe benötigen, in der die Zeichen nicht übersetzt geschrieben sind, können Sie die binäre Ausgabe mithilfe des openmode-Konstruktorarguments [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream__basic_ofstream) angeben:  
+ Sie erwarten möglicherweise, dass dieses Programm die Bytesequenz { 99, 0, 10, 0 } ausgibt; stattdessen wird { 99, 0, 13, 10, 0 } ausgegeben, wodurch Probleme für ein Programm verursacht werden, das eine binäre Eingabe erwartet. Wenn sie eine echte binäre Ausgabe benötigen, in der die Zeichen nicht übersetzt geschrieben sind, können Sie die binäre Ausgabe mithilfe des openmode-Konstruktorarguments [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) angeben:  
   
 ```  
 // binary_output_files2.cpp  

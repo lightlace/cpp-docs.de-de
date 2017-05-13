@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: b50819686ca10a5676c75fb47375572d39974a1f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3ef742cc4715c419b113e9235bbcc257ba8f1944
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator-Klasse
@@ -63,29 +64,29 @@ class back_insert_iterator;
   
 |||  
 |-|-|  
-|[back_insert_iterator](#back_insert_iterator__back_insert_iterator)|Erstellt einen `back_insert_iterator`, der Elemente nach dem letzten Element in einen Container einfügt.|  
+|[back_insert_iterator](#back_insert_iterator)|Erstellt einen `back_insert_iterator`, der Elemente nach dem letzten Element in einen Container einfügt.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[container_type](#back_insert_iterator__container_type)|Ein Typ, der einen Container für den `back_insert_iterator` bereitstellt.|  
-|[reference](#back_insert_iterator__reference)|Ein Typ, der einen Verweis für den `back_insert_iterator` bereitstellt.|  
+|[container_type](#container_type)|Ein Typ, der einen Container für den `back_insert_iterator` bereitstellt.|  
+|[reference](#reference)|Ein Typ, der einen Verweis für den `back_insert_iterator` bereitstellt.|  
   
 ### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[operator*](#back_insert_iterator__operator_star)|Der Dereferenzierungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck *`i` = `x` für eine Einfügung am Ende zu implementieren.|  
-|[operator++](#back_insert_iterator__operator_add_add)|Inkrementiert `back_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.|  
-|[operator=](#back_insert_iterator__operator_eq)|Der Zuweisungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck *`i` = `x` für eine Einfügung am Ende zu implementieren.|  
+|[operator*](#op_star)|Der Dereferenzierungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck *`i` = `x` für eine Einfügung am Ende zu implementieren.|  
+|[operator++](#op_add_add)|Inkrementiert `back_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.|  
+|[operator=](#op_eq)|Der Zuweisungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck *`i` = `x` für eine Einfügung am Ende zu implementieren.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header**: \<iterator>  
   
  **Namespace:** std  
   
-##  <a name="back_insert_iterator__back_insert_iterator"></a> back_insert_iterator::back_insert_iterator  
+##  <a name="back_insert_iterator"></a> back_insert_iterator::back_insert_iterator  
  Erstellt einen `back_insert_iterator`, der Elemente nach dem letzten Element in einen Container einfügt.  
   
 ```   
@@ -147,7 +148,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).  
 ```  
   
-##  <a name="back_insert_iterator__container_type"></a> back_insert_iterator::container_type  
+##  <a name="container_type"></a> back_insert_iterator::container_type  
  Ein Typ, der einen Container für den `back_insert_iterator` bereitstellt.  
   
 ```   
@@ -199,7 +200,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_star"></a> back_insert_iterator::operator*  
+##  <a name="op_star"></a> back_insert_iterator::operator*  
  Der Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *\* *i* = *x* verwendet wird.  
   
 ```  
@@ -256,7 +257,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_add_add"></a> back_insert_iterator::operator++  
+##  <a name="op_add_add"></a> back_insert_iterator::operator++  
  Inkrementiert `back_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.  
   
 ```  
@@ -314,7 +315,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_eq"></a> back_insert_iterator::operator=  
+##  <a name="op_eq"></a> back_insert_iterator::operator=  
  Fügt einen Wert am Ende eines Containers ein, oder überträgt einen Wert dorthin.  
   
 ```  
@@ -377,7 +378,7 @@ int main( )
 }  
 ```  
   
-##  <a name="back_insert_iterator__reference"></a> back_insert_iterator::reference  
+##  <a name="reference"></a> back_insert_iterator::reference  
  Ein Typ, der einen Verweis für den `back_insert_iterator` bereitstellt.  
   
 ```  

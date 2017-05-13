@@ -12,10 +12,11 @@ f1_keywords:
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: fb2b30dc58b7ba65dd13a07cec8456ea4adeb5e1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6c26128064b2f20a55ab1b9d1c013829e72523e0
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltsetgt-functions"></a>&lt;set&gt;-Funktionen
@@ -39,14 +40,14 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
  Die Menge, deren Elemente mit denen der Menge `right` ausgetauscht werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion ist ein Algorithmus, der auf die Containerklasse „set“ spezialisiert ist, um die Memberfunktion `left``.`[swap](../standard-library/set-class.md#set__swap)( `right`) auszuführen. Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion  
+ Die Vorlagenfunktion ist ein Algorithmus, der auf die Containerklasse „set“ spezialisiert ist, um die Memberfunktion `left``.`[swap](../standard-library/set-class.md#swap)( `right`) auszuführen. Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion  
   
  `template` \< **classT**> **void swap**( **T&**, **T&**)  
   
  in der Algorithmusklasse funktioniert mittels Zuweisung und ist ein langsamer Vorgang. Die spezialisierte Version in jedem Container ist viel schneller, da sie mit der internen Darstellung der Containerklasse verwendet werden kann.  
   
 ### <a name="example"></a>Beispiel  
-  Im Codebeispiel für die Memberklasse [set::swap](../standard-library/set-class.md#set__swap) finden Sie ein Beispiel für die Verwendung der Vorlagenversion `swap`.  
+  Im Codebeispiel für die Memberklasse [set::swap](../standard-library/set-class.md#swap) finden Sie ein Beispiel für die Verwendung der Vorlagenversion `swap`.  
   
 ##  <a name="swap_multiset"></a> swap (multiset)
  Tauscht die Elemente zweier Multisets aus.  
@@ -64,14 +65,14 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
  Ein Multiset, dessen Elemente mit denen des Multisets `right` ausgetauscht werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion ist ein Algorithmus, der auf die Containerklasse „multiset“ spezialisiert ist, um die Memberfunktion `left``.`[swap](../standard-library/multiset-class.md#multiset__swap)( `right`) auszuführen. Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion  
+ Die Vorlagenfunktion ist ein Algorithmus, der auf die Containerklasse „multiset“ spezialisiert ist, um die Memberfunktion `left``.`[swap](../standard-library/multiset-class.md#swap)( `right`) auszuführen. Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion  
   
  `template` \< **classT**> **void swap**( **T&**, **T&**)  
   
  in der Algorithmusklasse funktioniert mittels Zuweisung und ist ein langsamer Vorgang. Die spezialisierte Version in jedem Container ist viel schneller, da sie mit der internen Darstellung der Containerklasse verwendet werden kann.  
   
 ### <a name="example"></a>Beispiel  
-  Im Codebeispiel für die Memberklasse [multiset::swap](../standard-library/multiset-class.md#multiset__swap) finden Sie ein Beispiel für die Verwendung der Vorlagenversion `swap`.  
+  Im Codebeispiel für die Memberklasse [multiset::swap](../standard-library/multiset-class.md#swap) finden Sie ein Beispiel für die Verwendung der Vorlagenversion `swap`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [\<set>](../standard-library/set.md)

@@ -1,48 +1,65 @@
 ---
-title: "_memccpy | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_memccpy"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_memccpy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_memccpy-Funktion"
-  - "memccpy-Funktion"
+title: _memccpy | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _memccpy
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _memccpy
+dev_langs:
+- C++
+helpviewer_keywords:
+- _memccpy function
+- memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _memccpy
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 289043b95095fbff3e25deaf464e9eca23c23457
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Kopiert Zeichen von einem Puffer.  
+---
+# <a name="memccpy"></a>_memccpy
+Kopiert Zeichen aus einem Puffer.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -54,39 +71,39 @@ Kopiert Zeichen von einem Puffer.
 );  
 ```  
   
-#### Parameter  
- *DEST*  
- Zeiger zum Ziel.  
+#### <a name="parameters"></a>Parameter  
+ *dest*  
+ Zeiger auf das Ziel.  
   
  *src*  
- Zeiger zur Quelle.  
+ Zeiger auf die Quelle.  
   
  `c`  
- Letztes Zeichen zu kopieren.  
+ Letztes zu kopierendes Zeichen.  
   
  *count*  
- Anzahl Zeichen.  
+ Anzahl der Zeichen.  
   
-## Rückgabewert  
- Wenn das Zeichen `c` kopiert wird, gibt `_memccpy` einen Zeiger auf Zeichen in *DEST zurück,* das sofort dem Zeichen folgt.  Wenn `c` nicht kopiert wird, wird **NULL** zurückgegeben.  
+## <a name="return-value"></a>Rückgabewert  
+ Wenn das Zeichen `c` kopiert wurde, gibt `_memccpy` einen Zeiger auf „char“ in *dest* zurück, der unmittelbar auf das Zeichen folgt. Wenn `c` nicht kopiert wurde, gibt es **NULL** zurück.  
   
-## Hinweise  
- Die `_memccpy` kopiert Funktion 0 oder mehr Zeichen zu *DEST* *src*, haltend, wenn das Zeichen `c` kopiert wurde, oder wenn *Anzahlzeichen* kopiert wurden an, das zuerst stammt.  
+## <a name="remarks"></a>Hinweise  
+ Die `_memccpy`-Funktion kopiert 0 oder mehr Zeichen von *src* nach *dest* und hält an, wenn das Zeichen `c` kopiert wurde, oder wenn *count*-Zeichen kopiert wurden – je nach dem, was als erstes passiert.  
   
- **Sicherheitshinweis**  Überprüfen, ob der Zielpuffer die gleiche Größe oder das größer als Quellpuffer ist.  Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+ **Sicherheitshinweis** Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_memccpy`|\<memory.h\> oder \<string.h\>|  
+|-------------|---------------------|  
+|`_memccpy`|\<memory.h> oder \<string.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_memccpy.c  
@@ -111,7 +128,7 @@ int main( void )
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 Function: _memccpy 60 characters or to character 's'  
@@ -120,13 +137,7 @@ Result: The quick brown dog jumps
 Length: 25 characters  
 ```  
   
-## .NET Framework-Entsprechung  
-  
--   [System::Buffer::BlockCopy](https://msdn.microsoft.com/en-us/library/system.buffer.blockcopy.aspx)  
-  
--   [System::String::Copy](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Pufferbearbeitung](../../c-runtime-library/buffer-manipulation.md)   
  [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   

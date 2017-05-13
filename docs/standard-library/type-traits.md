@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 76f96a1e0b88e7b43a2d4efa55cc57e84efdb3b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ec13a255f456254f89ca84488d12fbf5ce0440b4
+ms.contentlocale: de-de
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
@@ -52,7 +53,7 @@ Definiert Vorlagen, die Kompilierzeitkonstanten bereitstellen, die Informationen
 ## <a name="remarks"></a>Hinweise  
  Die Klassen und Vorlagen in `<type_traits>` dienen zur Unterstützung von Typrückschluss, Klassifizierung und Transformation zum Zeitpunkt der Kompilierung, um typbezogene Fehler zu erkennen und Ihnen zu helfen, den generischen Code zu optimieren. Diese Klassen und Vorlagen umfassen unäre Typmerkmale, die eine Eigenschaft eines Typs beschreiben, binäre Typmerkmale, die eine Beziehung zwischen Typen beschreiben und Transformationsmerkmale, die eine Eigenschaft eines Typs ändern.  
   
- Zur Unterstützung von Typmerkmalen ist eine Hilfsklasse `integral_constant` definiert. Sie verfügt über die Vorlagenspezialisierungen `true_type` und `false_type`, die die Basisklassen für Typprädikate bilden. Ein *Typprädikat* ist eine Vorlage, die ein oder mehrere Typargumente entgegennimmt. Wenn ein Typprädikat *TRUE* ist, wird es direkt oder indirekt öffentlich aus [true_type](../standard-library/type-traits-typedefs.md#true_type_typedef) abgeleitet. Wenn ein Typprädikat *FALSE* ist, wird es direkt oder indirekt öffentlich aus [false_type](../standard-library/type-traits-typedefs.md#false_type_typedef) abgeleitet.  
+ Zur Unterstützung von Typmerkmalen ist eine Hilfsklasse `integral_constant` definiert. Sie verfügt über die Vorlagenspezialisierungen `true_type` und `false_type`, die die Basisklassen für Typprädikate bilden. Ein *Typprädikat* ist eine Vorlage, die ein oder mehrere Typargumente entgegennimmt. Wenn ein Typprädikat *TRUE* ist, wird es direkt oder indirekt öffentlich aus [true_type](../standard-library/type-traits-typedefs.md#true_type) abgeleitet. Wenn ein Typprädikat *FALSE* ist, wird es direkt oder indirekt öffentlich aus [false_type](../standard-library/type-traits-typedefs.md#false_type) abgeleitet.  
   
  Ein *Typmodifizierer* oder *Transformationsmerkmal* ist eine Vorlage, die ein oder mehrere Vorlagenargumente entgegennimmt und über einen Member `type` verfügt, der ein Synonym für den geänderten Typ ist.  
   
@@ -79,8 +80,8 @@ using add_const_t = typename add_const<T>::type;
 |||  
 |-|-|  
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Wandelt einen Typ und einen Wert in eine Ganzzahlkonstante um.|  
-|[true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)|Enthält eine Ganzzahlkonstante mit einem wahren Wert.|  
-|[false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)|Enthält eine Ganzzahlkonstante mit einem falschen Wert.|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|Enthält eine Ganzzahlkonstante mit einem wahren Wert.|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|Enthält eine Ganzzahlkonstante mit einem falschen Wert.|  
   
  Primäre Typkategorien  
   

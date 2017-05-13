@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2b0922e779adad4492bf23a8d192d43792d0b445
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 83efee54bf81c7159e3d6ce520724d8850f2edfe
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
@@ -90,28 +91,24 @@ Liest formatierte Daten einer angegebenen Länge aus einer Zeichenfolge. Dies si
 int __cdecl _snscanf_s(  
    const char * input,  
    size_t length,  
-   const char * format,  
-   ...  
+   const char * format [, argument_list]  
 );  
 int __cdecl _snscanf_s_l(  
    const char * input,  
    size_t length,  
    const char * format,  
-   locale_t locale,  
-   ...  
+   locale_t locale [, argument_list]
 );  
 int __cdecl _snwscanf_s(  
    const wchar_t * input,  
    size_t length,  
-   const wchar_t * format,  
-   ...  
+   const wchar_t * format [, argument_list]
 );  
 int __cdecl _snwscanf_s_l(  
    const wchar_t * input,  
    size_t length,  
    const wchar_t * format,  
-   locale_t locale,  
-   …  
+   locale_t locale [, argument_list]
 );  
 ```  
   
@@ -130,6 +127,9 @@ int __cdecl _snwscanf_s_l(
   
  `locale`  
  Das zu verwendende Gebietsschema.  
+  
+ `argument_list`  
+ Optionale Argumente, die gemäß der Formatzeichenfolge zugewiesen werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die beiden Funktionen geben die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert bei einem Fehler oder beim Erreichen des Endes der Zeichenfolge vor der ersten Konvertierung lautet `EOF`. Weitere Informationen finden Sie unter [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).  
@@ -159,7 +159,7 @@ int __cdecl _snwscanf_s_l(
   
 |Routine|Erforderlicher Header|  
 |-------------|---------------------|  
-|`_snscanf_s`, _`snscanf_s_l`|\<stdio.h>|  
+|`_snscanf_s`, `_snscanf_s_l`|\<stdio.h>|  
 |`_snwscanf_s`, `_snwscanf_s_l`|\<stdio.h> oder \<wchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
@@ -198,9 +198,6 @@ int main( )
 _snscanf_s converted 2 fields: 15 and 12.000000  
 _snwscanf_s converted 2 fields: 15 and 12.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [scanf-Breitenangabe](../../c-runtime-library/scanf-width-specification.md)

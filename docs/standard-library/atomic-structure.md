@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 03665af409892b087bcc8a0858513f1f96f0c41d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: fd21d2fe59dc7db7670fb94fde6d169603bbf6d1
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="atomic-structure"></a>atomic-Struktur
@@ -53,14 +54,14 @@ struct atomic;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[atomic::atomic-Konstruktor](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|Erstellt ein atomisches Objekt.|  
+|[atomic](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|Erstellt ein atomisches Objekt.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[atomic::operator Ty-Operator](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|Liest und den gespeicherten Wert und gibt ihn zurück. ([atomic::load-Methode](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
-|[atomic::operator=-Operator](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|Verwendet zum Ersetzen des gespeicherten Werts einen angegebenen Wert. ([atomic::store-Methode](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
+|[atomic::operator Ty-Operator](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|Liest und den gespeicherten Wert und gibt ihn zurück. ([Atomic:: Load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
+|[atomic::operator=-Operator](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|Verwendet zum Ersetzen des gespeicherten Werts einen angegebenen Wert. ([Atomic:: Store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
 |[atomic::operator++-Operator](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|Erhöht den gespeicherten Wert. Wird nur von integrale und Zeigerspezialisierungen verwendet.|  
 |[atomic::operator+=-Operator](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|Fügt dem gespeicherten Wert einen angegebenen Wert hinzu. Wird nur von integrale und Zeigerspezialisierungen verwendet.|  
 |[atomic::operator---Operator](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|Verringert den gespeicherten Wert. Wird nur von integrale und Zeigerspezialisierungen verwendet.|  
@@ -73,16 +74,16 @@ struct atomic;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[atomic::compare_exchange_strong-Method](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|Führt einen `atomic_compare_and_exchange`-Vorgang auf `this` aus und gibt das Ergebnis zurück.|  
-|[atomic::compare_exchange_weak-Methode](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|Führt einen `weak_atomic_compare_and_exchange`-Vorgang auf `this` aus und gibt das Ergebnis zurück.|  
-|[atomic::fetch_add-Methode](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|Fügt dem gespeicherten Wert einen angegebenen Wert hinzu.|  
-|[atomic::fetch_and-Methode](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|Führt ein bitweises `and` auf einem angegebenen Wert und dem gespeicherten Wert aus.|  
-|[atomic::fetch_or-Methode](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|Führt ein bitweises `or` auf einem angegebenen Wert und dem gespeicherten Wert aus.|  
-|[atomic::fetch_sub-Methode](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|Subtrahiert einen angegebenen Wert vom gespeicherten Wert.|  
-|[atomic::fetch_xor-Methode](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|Führt ein bitweises `exclusive or` auf einem angegebenen Wert und dem gespeicherten Wert aus.|  
-|[atomic::is_lock_free-Methode](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|Gibt an, ob die atomischen Vorgänge auf `this` *sperrfrei* sind. Ein atomischer Typ ist *sperrfrei*, wenn für keine der atomischen Vorgänge auf diesem Typ Sperren verwendet werden.|  
-|[atomic::load-Methode](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Liest und den gespeicherten Wert und gibt ihn zurück.|  
-|[atomic::store-Methode](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|Verwendet zum Ersetzen des gespeicherten Werts einen angegebenen Wert.|  
+|[compare_exchange_strong](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|Führt einen `atomic_compare_and_exchange`-Vorgang auf `this` aus und gibt das Ergebnis zurück.|  
+|[compare_exchange_weak](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|Führt einen `weak_atomic_compare_and_exchange`-Vorgang auf `this` aus und gibt das Ergebnis zurück.|  
+|[fetch_add](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|Fügt dem gespeicherten Wert einen angegebenen Wert hinzu.|  
+|[fetch_and](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|Führt ein bitweises `and` auf einem angegebenen Wert und dem gespeicherten Wert aus.|  
+|[fetch_or](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|Führt ein bitweises `or` auf einem angegebenen Wert und dem gespeicherten Wert aus.|  
+|[fetch_sub](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|Subtrahiert einen angegebenen Wert vom gespeicherten Wert.|  
+|[fetch_xor](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|Führt ein bitweises `exclusive or` auf einem angegebenen Wert und dem gespeicherten Wert aus.|  
+|[is_lock_free](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|Gibt an, ob die atomischen Vorgänge auf `this` *sperrfrei* sind. Ein atomischer Typ ist *sperrfrei*, wenn für keine der atomischen Vorgänge auf diesem Typ Sperren verwendet werden.|  
+|[Laden](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Liest und den gespeicherten Wert und gibt ihn zurück.|  
+|[Speichern](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|Verwendet zum Ersetzen des gespeicherten Werts einen angegebenen Wert.|  
   
 ## <a name="remarks"></a>Hinweise  
  Der `Ty`-Typ muss *einfach kopierbar* sein. Das heißt, das Kopieren der Bytes mithilfe von [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) muss ein gültiges `Ty`-Objekt erstellen, das im Vergleich dem ursprünglichen Objekt entspricht. Bei den Memberfunktionen `compare_exchange_weak` und `compare_exchange_strong` wird [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) verwendet, um zu bestimmen, ob zwei `Ty`-Werte gleich sind. Bei diesen Funktionen wird kein `Ty`-definiertes `operator==` verwendet. Für die Memberfunktionen von `atomic` wird `memcpy` zum Kopieren der Werte des Typs `Ty` verwendet.  
@@ -102,7 +103,7 @@ struct atomic;
  Integralspezialisierungen werden von den entsprechenden `atomic_``integral`-Typen abgeleitet. So wird `atomic<unsigned int>` z. B. von `atomic_uint` abgeleitet.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atomic  
+ **Header:** \<atomic >  
   
  **Namespace:** std  
   

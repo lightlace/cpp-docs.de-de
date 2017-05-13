@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40fe628e045d8aa8930560ba8ab88a9e203022e3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 78ec6b782a5dd0c78e3e2724fd06258d17fdbe67
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
@@ -91,7 +92,7 @@ int _mbtowc_l(
  Das zu verwendende Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn **mbchar** ungleich **NULL** ist, und wenn das Objekt, auf das `mbchar` verweist, ein gültiges Multibytezeichen ist, gibt `mbtowc` die Länge des Multibytezeichens in Byte zurück. Wenn `mbchar` **NULL** ist oder das Objekt, auf das es verweist, ein Breitzeichen-Zeichen NULL (L'\0') ist, gibt die Funktion 0 zurück. Wenn das Objekt, auf das `mbchar` verweist, kein gültiges Multibytezeichen innerhalb der ersten *count*-Zeichen bildet, gibt es –1 zurück.  
+ Wenn **mbchar** ungleich **NULL** ist, und wenn das Objekt, auf das `mbchar` verweist, ein gültiges Multibytezeichen ist, gibt `mbtowc` die Länge des Multibytezeichens in Byte zurück. Wenn `mbchar` **NULL** ist oder das Objekt, auf das es verweist, ein Breitzeichen-Zeichen NULL (L'\0') ist, gibt die Funktion 0 zurück. Wenn das Objekt, das `mbchar` verweist auf bilden kein gültiges Multibytezeichen innerhalb der ersten *Anzahl* Zeichen d. h., er gibt-1 zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `mbtowc`-Funktion konvertiert *count* oder weniger Bytes, auf die von `mbchar` verwiesen wird, wenn `mbchar` nicht **NULL** ist, in entsprechende Breitzeichen. `mbtowc` speichert das resultierende Breitzeichen in *wchar*, wenn *wchar* nicht **NULL** ist. `mbtowc` untersucht nicht mehr als `MB_CUR_MAX` Bytes. `mbtowc` verwendet das aktuelle Gebietsschema für jedes Verhalten, das vom Gebietsschema abhängig ist; `_mbtowc_l` ist identisch, nur dass sie stattdessen das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Gebietsschema](../../c-runtime-library/locale.md).  
@@ -166,9 +167,6 @@ Attempt to convert when target is NULL
 Attempt to convert a NULL pointer to a wide character:  
   Bytes converted: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   

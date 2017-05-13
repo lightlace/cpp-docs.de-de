@@ -31,17 +31,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7e6aaf9ae1817da4a532b00fe0bf54afc5e9cd17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 241d1ad9b3313337b874d5e9a6d39f86f2c71838
+ms.contentlocale: de-de
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 Verwenden Sie den Standardheader \<mutex> für das Definieren der Klassen `mutex`, `recursive_mutex`, `timed_mutex` und `recursive_timed_mutex`, der Vorlagen `lock_guard` und `unique_lock` sowie der unterstützenden Typen und Funktionen, die Codebereiche für den gegenseitigen Ausschluss definieren.  
   
 > [!WARNING]
->  Die Synchronisierungstypen der C++-Standardbibliothek in Visual Studio 2015 basieren auf Synchronisierungsprimitiven von Windows und verwenden nur noch ConcRT, wenn die Zielplattform Windows XP ist. Die in \<mutex> definierten Typen dürfen nicht mit ConcRT-Typen oder Funktionen verwendet werden.  
+>  Ab Visual Studio 2015, die C++-Standardbibliothek Synchronisierungstypen basieren auf Windows-Synchronisierungsprimitiven und verwenden ConcRT nicht mehr (außer wenn die Zielplattform Windows XP ist). Die in \<mutex> definierten Typen dürfen nicht mit ConcRT-Typen oder Funktionen verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,7 +53,7 @@ Verwenden Sie den Standardheader \<mutex> für das Definieren der Klassen `mutex
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  In Code, der kompiliert wird **/CLR**, dieser Header blockiert.  
+>  In Code, der kompiliert wurde **"/ CLR"**, dieser Header blockiert.  
   
  Die Klassen `mutex` und `recursive_mutex` sind *mutex-Typen*. Ein mutex-Typ verfügt über einen Standardkonstruktor und einen Destruktor, der keine Ausnahmen auslöst. Diese Objekte weisen Methoden auf, die gegenseitigen Ausschluss bereitstellen, wenn mehrere Threads versuchen, das gleiche Objekt zu sperren. Ein mutex-Typ enthält genauer gesagt die `lock`- `try_lock`- und `unlock`-Methoden:  
   
@@ -87,8 +88,8 @@ Verwenden Sie den Standardheader \<mutex> für das Definieren der Klassen `mutex
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[call_once-Funktion](../standard-library/mutex-functions.md#call_once_function)|Stellt einen Mechanismus zum Aufrufen eines angegebenen aufrufbaren Objekts genau einmal während der Ausführung bereit.|  
-|[lock-Funktion](../standard-library/mutex-functions.md#lock_function)|Versucht, alle Argumente ohne Deadlock zu sperren.|  
+|[call_once](../standard-library/mutex-functions.md#call_once)|Stellt einen Mechanismus zum Aufrufen eines angegebenen aufrufbaren Objekts genau einmal während der Ausführung bereit.|  
+|[lock](../standard-library/mutex-functions.md#lock)|Versucht, alle Argumente ohne Deadlock zu sperren.|  
   
 ### <a name="structs"></a>Strukturen  
   
@@ -103,9 +104,9 @@ Verwenden Sie den Standardheader \<mutex> für das Definieren der Klassen `mutex
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[adopt_lock-Variable](../standard-library/mutex-functions.md#adopt_lock_variable)|Stellt ein Objekt dar, das an die Konstruktoren von `lock_guard` und `unique_lock` übergeben werden kann, um anzugeben, dass das auch an den Konstruktor übergebene mutex-Objekt gesperrt ist.|  
-|[defer_lock-Variable](../standard-library/mutex-functions.md#defer_lock_variable)|Stellt ein Objekt dar, das an den Konstruktor für `unique_lock` übergeben werden kann, um anzugeben, dass der Konstruktor das an diesen übergebene mutex-Objekt nicht sperren soll.|  
-|[try_to_lock-Variable](../standard-library/mutex-functions.md#try_to_lock_variable)|Stellt ein Objekt dar, das an den Konstruktor für `unique_lock` übergeben werden kann, um anzugeben, dass der Konstruktor das an diesen übergebene `mutex`-Objekt ohne Blockierung entsperren soll.|  
+|[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Stellt ein Objekt dar, das an die Konstruktoren von `lock_guard` und `unique_lock` übergeben werden kann, um anzugeben, dass das auch an den Konstruktor übergebene mutex-Objekt gesperrt ist.|  
+|[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Stellt ein Objekt dar, das an den Konstruktor für `unique_lock` übergeben werden kann, um anzugeben, dass der Konstruktor das an diesen übergebene mutex-Objekt nicht sperren soll.|  
+|[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Stellt ein Objekt dar, das an den Konstruktor für `unique_lock` übergeben werden kann, um anzugeben, dass der Konstruktor das an diesen übergebene `mutex`-Objekt ohne Blockierung entsperren soll.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)

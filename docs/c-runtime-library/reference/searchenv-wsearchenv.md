@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3370ea3fcad8874fe9bdcd737d2488509f740fd6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 2c71b97e925ab23c893eefd6092efffe57bea3a7
+ms.contentlocale: de-de
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
@@ -121,7 +122,7 @@ void _wsearchenv(
   
  Wenn `filename` eine leere Zeichenfolge ist, geben diese Funktionen `ENOENT` zurück.  
   
- Wenn `filename` oder `pathname` ein `NULL`-Zeiger ist, wird der Handler für ungültige Parameter wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "–&1;" zurück und legen `errno` auf `EINVAL`fest.  
+ Wenn `filename` oder `pathname` ein `NULL`-Zeiger ist, wird der Handler für ungültige Parameter wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "– 1" zurück und legen `errno` auf `EINVAL`fest.  
   
  Weitere Informationen über `errno` und andere Fehlercodes finden Sie unter [errno-Konstanten](../../c-runtime-library/errno-constants.md).  
   
@@ -144,9 +145,8 @@ void _wsearchenv(
   
 ## <a name="example"></a>Beispiel  
   
-```  
-  
-      // crt_searchenv.c  
+```C  
+// crt_searchenv.c  
 // compile with: /W3  
 // This program searches for a file in  
 // a directory that's specified by an environment variable.  
@@ -174,9 +174,6 @@ int main( void )
 Path for CL.EXE:  
 C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verzeichnissteuerung](../../c-runtime-library/directory-control.md)   

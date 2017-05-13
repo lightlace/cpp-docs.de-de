@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - future/std::packaged_task
+- future/std::packaged_task::packaged_task
+- future/std::packaged_task::get_future
+- future/std::packaged_task::make_ready_at_thread_exit
+- future/std::packaged_task::reset
+- future/std::packaged_task::swap
+- future/std::packaged_task::valid
+- future/std::packaged_task::operator()
+- future/std::packaged_task::operator bool
 dev_langs:
 - C++
 ms.assetid: 0a72cbe3-f22a-4bfe-8e50-dcb268c98780
@@ -31,14 +39,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: a54b1c9788ef60f63aafafc9125b09c449fde1b0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3ca8c4c008daa02af2bba0df8468bea3c063c28a
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="packagedtask-class"></a>packaged_task-Klasse
-Beschreibt einen *asynchronen Anbieter*, der ein Aufrufwrapper und dessen Aufrufsignatur `Ty(ArgTypes...)` ist. Der *zugehörige asynchrone Zustand * enthält zusätzlich zum potentiellen Ergebnis eine Kopie des aufrufbaren Objekts.  
+Beschreibt einen *asynchronen Anbieter*, der ein Aufrufwrapper und dessen Aufrufsignatur `Ty(ArgTypes...)` ist. Der *zugehörige asynchrone Zustand*  enthält zusätzlich zum potentiellen Ergebnis eine Kopie des aufrufbaren Objekts.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,33 +62,33 @@ class packaged_task;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[packaged_task::packaged_task-Konstruktor](#packaged_task__packaged_task_constructor)|Erstellt ein `packaged_task`-Objekt.|  
-|[packaged_task::~packaged_task-Destruktor](#packaged_task___dtorpackaged_task_destructor)|Zerstört ein `packaged_task`-Objekt.|  
+|[packaged_task](#packaged_task)|Erstellt ein `packaged_task`-Objekt.|  
+|[packaged_task::~packaged_task-Destruktor](#dtorpackaged_task_destructor)|Zerstört ein `packaged_task`-Objekt.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[packaged_task::get_future](#packaged_task__get_future_method)|Gibt ein [future](../standard-library/future-class.md)-Objekt zurück, das über den gleichen zugeordneten asynchronen Zustand verfügt.|  
-|[packaged_task::make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method)|Ruft das aufrufbare Objekt auf, das im zugeordneten asynchronen Zustand gespeichert ist und speichert automatisch den zurückgegebenen Wert.|  
-|[packaged_task::reset](#packaged_task__reset_method)|Ersetzt den zugeordneten asynchronen Zustand.|  
-|[packaged_task::swap](#packaged_task__swap_method)|Tauscht den zugeordneten asynchronen Zustand dieses Zusageobjekts mit dem eines angegebenen Objekts aus.|  
-|[packaged_task::valid](#packaged_task__valid_method)|Legt fest, ob das Objekt einen zugeordneten asynchronen Zustand hat.|  
+|[get_future](#get_future)|Gibt ein [future](../standard-library/future-class.md)-Objekt zurück, das über den gleichen zugeordneten asynchronen Zustand verfügt.|  
+|[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Ruft das aufrufbare Objekt auf, das im zugeordneten asynchronen Zustand gespeichert ist und speichert automatisch den zurückgegebenen Wert.|  
+|[reset](#reset)|Ersetzt den zugeordneten asynchronen Zustand.|  
+|[swap](#swap)|Tauscht den zugeordneten asynchronen Zustand dieses Zusageobjekts mit dem eines angegebenen Objekts aus.|  
+|[gültige](#valid)|Legt fest, ob das Objekt einen zugeordneten asynchronen Zustand hat.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[packaged_task::operator=](#packaged_task__operator_eq)|Überträgt einen zugeordneten asynchronen Zustand aus einem angegebenen Objekt.|  
-|[packaged_task::operator()](#packaged_task__operator__)|Ruft das aufrufbare Objekt auf, das im zugeordneten asynchronen Zustand gespeichert ist, speichert den zurückgegebenen Wert atomar und legt den Zustand auf *bereit* fest.|  
-|[packaged_task::operator bool](#packaged_task__operator_bool)|Legt fest, ob das Objekt einen zugeordneten asynchronen Zustand hat.|  
+|[packaged_task::operator=](#op_eq)|Überträgt einen zugeordneten asynchronen Zustand aus einem angegebenen Objekt.|  
+|[packaged_task::operator()](#op_call)|Ruft das aufrufbare Objekt auf, das im zugeordneten asynchronen Zustand gespeichert ist, speichert den zurückgegebenen Wert atomar und legt den Zustand auf *bereit* fest.|  
+|[packaged_task::operator bool](#op_bool)|Legt fest, ob das Objekt einen zugeordneten asynchronen Zustand hat.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** future  
+ **Header:** \<zukünftige >  
   
  **Namespace:** std  
   
-##  <a name="a-namepackagedtaskgetfuturemethoda--packagedtaskgetfuture"></a><a name="packaged_task__get_future_method"></a> packaged_task::get_future  
+##  <a name="get_future"></a> packaged_task::get_future  
  Gibt ein `future<Ty>`-Objekt zurück, das über den gleichen *zugeordneten asynchronen Zustand* verfügt.  
   
 ```
@@ -91,7 +100,7 @@ future<Ty> get_future();
   
  Wenn diese Methode bereits für ein `packaged_task`-Objekt mit dem gleichen zugeordneten asynchronen Zustand aufgerufen wurde, löst die Methode ein `future_error` mit einem Fehlercode von `future_already_retrieved` aus.  
   
-##  <a name="a-namepackagedtaskmakereadyatthreadexitmethoda--packagedtaskmakereadyatthreadexit"></a><a name="packaged_task__make_ready_at_thread_exit_method"></a> packaged_task::make_ready_at_thread_exit  
+##  <a name="make_ready_at_thread_exit"></a> packaged_task::make_ready_at_thread_exit  
  Ruft das aufrufbare Objekt auf, das im *zugeordneten asynchronen Zustand* gespeichert ist und den Rückgabewert atomar speichert.  
   
 ```
@@ -101,13 +110,13 @@ void make_ready_at_thread_exit(ArgTypes... args);
 ### <a name="remarks"></a>Hinweise  
  Wenn das `packaged_task`-Objekt über keinen zugeordneten asynchronen Zustand verfügt, löst diese Methode [future_error](../standard-library/future-error-class.md) mit einem Fehlercode von `no_state` aus.  
   
- Wenn diese Methode oder [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method) bereits für ein `packaged_task`-Objekt mit dem gleichen zugeordneten asynchronen Zustand aufgerufen wurde, löst die Methode ein `future_error` mit einem Fehlercode von `promise_already_satisfied` aus.  
+ Wenn diese Methode oder [make_ready_at_thread_exit](#make_ready_at_thread_exit) bereits für ein `packaged_task`-Objekt mit dem gleichen zugeordneten asynchronen Zustand aufgerufen wurde, löst die Methode ein `future_error` mit einem Fehlercode von `promise_already_satisfied` aus.  
   
  Andernfalls ruft dieser Operator `INVOKE(fn, args..., Ty)` auf, in dem *fn* das aufrufbare Objekt ist, das im zugeordneten asynchronen Zustand gespeichert ist. Jeder Rückgabewert wird atomar als das zurückgegebene Ergebnis des assoziierten asynchronen Zustands gespeichert.  
   
- Im Gegensatz zu [packaged_task::operator()](#packaged_task__operator__), wird der zugeordnete asynchrone Zustand erst auf `ready` festgelegt, nachdem alle Objekte eines lokalen Threads im aktuellen Thread zerstört wurden. Normalerweise kann die Blockierung von Threads, die auf dem zugeordneten asynchronen Zustand blockiert werden, nicht aufgehoben werden, bis der aktuelle Thread beendet wird.  
+ Im Gegensatz zu [packaged_task::operator()](#op_call), wird der zugeordnete asynchrone Zustand erst auf `ready` festgelegt, nachdem alle Objekte eines lokalen Threads im aktuellen Thread zerstört wurden. Normalerweise kann die Blockierung von Threads, die auf dem zugeordneten asynchronen Zustand blockiert werden, nicht aufgehoben werden, bis der aktuelle Thread beendet wird.  
   
-##  <a name="a-namepackagedtaskoperatoreqa--packagedtaskoperator"></a><a name="packaged_task__operator_eq"></a> packaged_task::operator=  
+##  <a name="op_eq"></a> packaged_task::operator=  
  Überträgt den *zugeordneten asynchronen Zustand* aus einem angegebenen Objekt.  
   
 ```
@@ -124,7 +133,7 @@ packaged_task& operator=(packaged_task&& Right);
 ### <a name="remarks"></a>Hinweise  
  Nach dem Vorgang verfügt `Right` über keinen asynchron zugeordneten Zustand mehr.  
   
-##  <a name="a-namepackagedtaskoperatora--packagedtaskoperator"></a><a name="packaged_task__operator__"></a> packaged_task::operator()  
+##  <a name="op_call"></a> packaged_task::operator()  
  Ruft das aufrufbare Objekt auf, das im *zugeordneten asynchronen Zustand* gespeichert ist, den Rückgabewert atomar speichert und den Zustand auf *bereit* festlegt.  
   
 ```
@@ -134,11 +143,11 @@ void operator()(ArgTypes... args);
 ### <a name="remarks"></a>Hinweise  
  Wenn das `packaged_task`-Objekt über keinen zugeordneten asynchronen Zustand verfügt, löst diese Methode [future_error](../standard-library/future-error-class.md) mit einem Fehlercode von `no_state` aus.  
   
- Wenn diese Methode oder [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method) bereits für ein `packaged_task`-Objekt mit dem gleichen zugeordneten asynchronen Zustand aufgerufen wurde, löst die Methode ein `future_error` mit einem Fehlercode von `promise_already_satisfied` aus.  
+ Wenn diese Methode oder [make_ready_at_thread_exit](#make_ready_at_thread_exit) bereits für ein `packaged_task`-Objekt mit dem gleichen zugeordneten asynchronen Zustand aufgerufen wurde, löst die Methode ein `future_error` mit einem Fehlercode von `promise_already_satisfied` aus.  
   
  Andernfalls ruft dieser Operator `INVOKE(fn, args..., Ty)` auf, in dem *fn* das aufrufbare Objekt ist, das im zugeordneten asynchronen Zustand gespeichert ist. Alle Rückgabewerte werden als das zurückgegebene Ergebnis des assoziierten asynchronen Zustands atomar gespeichert wird, und der Status wird auf bereit festgelegt. Deshalb wird die Blockierung aller Threads, die auf dem zugeordneten asynchronen Zustand blockiert werden, aufgehoben.  
   
-##  <a name="a-namepackagedtaskoperatorboola--packagedtaskoperator-bool"></a><a name="packaged_task__operator_bool"></a> packaged_task::operator bool  
+##  <a name="op_bool"></a> packaged_task::operator bool  
  Gibt an, ob das Objekt über `associated asynchronous state` verfügt.  
   
 ```
@@ -148,7 +157,7 @@ operator bool() const noexcept;
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn das Objekt einen zugeordneten asynchronen Zustand hat; andernfalls `false`.  
   
-##  <a name="a-namepackagedtaskpackagedtaskconstructora--packagedtaskpackagedtask-constructor"></a><a name="packaged_task__packaged_task_constructor"></a> packaged_task::packaged_task-Konstruktor  
+##  <a name="packaged_task"></a> packaged_task::packaged_task-Konstruktor  
  Erstellt ein `packaged_task`-Objekt.  
   
 ```
@@ -181,7 +190,7 @@ template <class Fn, class Alloc>
   
  Mit dem vierten Konstruktor wird ein `packaged_task`-Objekt erstellt, das über eine Kopie in dessen zugeordnetem asynchronen Zustand gespeicherten `fn` verfügt und `alloc` als Speicherbelegung verwendet.  
   
-##  <a name="a-namepackagedtaskdtorpackagedtaskdestructora--packagedtaskpackagedtask-destructor"></a><a name="packaged_task___dtorpackaged_task_destructor"></a> packaged_task::~packaged_task-Destruktor  
+##  <a name="dtorpackaged_task_destructor"></a> packaged_task::~packaged_task-Destruktor  
  Zerstört ein `packaged_task`-Objekt.  
   
 ```
@@ -191,7 +200,7 @@ template <class Fn, class Alloc>
 ### <a name="remarks"></a>Hinweise  
  Wenn der *zugeordnete asynchrone Zustand* nicht *bereit* ist, speichert der Destruktor eine [future_error](../standard-library/future-error-class.md)-Ausnahme, die über den Fehlercode `broken_promise` als Ergebnis im zugeordneten asynchronen Zustand verfügt, und alle Threads, die auf dem zugeordneten asynchronen Zustand blockiert sind, werden aufgehoben.  
   
-##  <a name="a-namepackagedtaskresetmethoda--packagedtaskreset"></a><a name="packaged_task__reset_method"></a> packaged_task::reset  
+##  <a name="reset"></a> packaged_task::reset  
  Verwendet einen neuen *zugeordneten asynchronen Zustand* zum Ersetzen des vorhandenen zugeordneten asynchronen Zustands.  
   
 ```
@@ -199,9 +208,9 @@ void reset();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode führt tatsächlich `*this = packaged_task(move(fn))` aus, wobei *fn* das Funktionsobjekt ist, das im zugeordneten asynchronen Zustand dieses Objekts gespeichert ist. Daher wird der Zustand des Objekts deaktiviert, und [get_future](#packaged_task__get_future_method), [operator()](#packaged_task__operator__) und [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method) können aufgerufen werden, als ob sie sich auf einem neu erstellten Objekt befinden würden.  
+ Diese Methode führt tatsächlich `*this = packaged_task(move(fn))` aus, wobei *fn* das Funktionsobjekt ist, das im zugeordneten asynchronen Zustand dieses Objekts gespeichert ist. Daher wird der Zustand des Objekts deaktiviert, und [get_future](#get_future), [operator()](#op_call) und [make_ready_at_thread_exit](#make_ready_at_thread_exit) können aufgerufen werden, als ob sie sich auf einem neu erstellten Objekt befinden würden.  
   
-##  <a name="a-namepackagedtaskswapmethoda--packagedtaskswap"></a><a name="packaged_task__swap_method"></a> packaged_task::swap  
+##  <a name="swap"></a> packaged_task::swap  
  Tauscht den zugeordneten asynchronen Zustand dieses Zusageobjekts mit dem eines angegebenen Objekts aus.  
   
 ```
@@ -212,7 +221,7 @@ void swap(packaged_task& Right) noexcept;
  `Right`  
  Ein `packaged_task`-Objekt.  
   
-##  <a name="a-namepackagedtaskvalidmethoda--packagedtaskvalid"></a><a name="packaged_task__valid_method"></a> packaged_task::valid  
+##  <a name="valid"></a> packaged_task::valid  
  Gibt an, ob das Objekt über `associated asynchronous state` verfügt.  
   
 ```

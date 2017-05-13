@@ -1,55 +1,72 @@
 ---
-title: "_gcvt_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_gcvt_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_gcvt_s"
-  - "gcvt_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CVTBUFSIZE"
-  - "_gcvt_s-Funktion"
-  - "Konvertierungen, Gleitkommawerte zu Zeichenfolgen"
-  - "CVTBUFSIZE"
-  - "Gleitkommafunktionen, Konvertieren einer Zahl in eine Zeichenfolge"
-  - "gcvt_s-Funktion"
-  - "Zahlen, Konvertieren in Zeichenfolgen"
-  - "Zeichenfolgen [C++], Konvertieren aus Gleitkommazahl"
+title: _gcvt_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _gcvt_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _gcvt_s
+- gcvt_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _gcvt_s function
+- _CVTBUFSIZE
+- floating-point functions, converting number to string
+- gcvt_s function
+- numbers, converting to strings
+- conversions, floating point to strings
+- strings [C++], converting from floating point
+- CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# _gcvt_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: cc1f34eae067f0d2cc0781c9001af550b291006f
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Konvertiert einen Gleitkommawert in eine Zeichenfolge.  Dies ist eine Version von [\_gcvt](../../c-runtime-library/reference/gcvt.md) mit werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="gcvts"></a>_gcvt_s
+Konvertiert einen Gleitkommawert in eine Zeichenfolge. Dies ist eine sicherere Version von [_gcvt](../../c-runtime-library/reference/gcvt.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t _gcvt_s(   
@@ -66,50 +83,50 @@ errno_t _gcvt_s(
 ); // C++ only  
 ```  
   
-#### Parameter  
- \[out\] `buffer`  
- Puffer, um das Ergebnis der Konvertierung zu speichern.  
+#### <a name="parameters"></a>Parameter  
+ [out] `buffer`  
+ Puffer, um das Ergebnis der Konvertierung zu speichern  
   
- \[in\] `sizeInBytes`  
+ [in] `sizeInBytes`  
  Größe des Puffers.  
   
- \[in\] `value`  
- Der zu konvertierende Wert.  
+ [in] `value`  
+ Zu konvertierender Wert.  
   
- \[in\] `digits`  
- Anzahl der signifikanten Ziffern gespeichert.  
+ [in] `digits`  
+ Anzahl der gespeicherten signifikanten Ziffern.  
   
-## Rückgabewert  
- Null wenn erfolgreich.  Wenn ein Fehler aufgrund eines ungültigen Parameters \(siehe folgende Tabelle für ungültige Werte\), auftritt, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren, wird ein Fehlercode zurückgegeben.  Fehlercodes werden in Errno.h definiert.  Eine Liste dieser Fehler, finden Sie unter [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+## <a name="return-value"></a>Rückgabewert  
+ Null, wenn erfolgreich. Tritt ein Fehler aufgrund eines ungültigen Parameters auf (siehe folgende Tabelle für ungültige Werte), wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md)beschrieben wird. Wenn die weitere Ausführung zugelassen wird, wird ein Fehlercode zurückgegeben. Fehlercodes sind in Errno.h definiert. Eine Liste dieser Fehler finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### Fehlerbedingungen  
+### <a name="error-conditions"></a>Fehlerbedingungen  
   
-|`buffer`|`sizeInBytes`|`value`|`digits`|Return|Wert in `buffer`|  
-|--------------|-------------------|-------------|--------------|------------|----------------------|  
-|`NULL`|any|any|any|`EINVAL`|Nicht geändert.|  
-|Nicht `NULL` \(Punkte zum gültigen Arbeitsspeicher\)|0 \(Null\)|any|any|`EINVAL`|Nicht geändert.|  
-|Nicht `NULL` \(Punkte zum gültigen Arbeitsspeicher\)|any|any|\>\= `sizeInBytes`|`EINVAL`|Nicht geändert.|  
+|`buffer`|`sizeInBytes`|`value`|`digits`|Zurück|Wert in `buffer`.|  
+|--------------|-------------------|-------------|--------------|------------|-----------------------|  
+|`NULL`|alle|alle|alle|`EINVAL`|Nicht geändert.|  
+|Nicht `NULL` (zeigt gültigen Speicher an)|Null|any|alle|`EINVAL`|Nicht geändert.|  
+|Nicht `NULL` (zeigt gültigen Speicher an)|any|alle|>= `sizeInBytes`|`EINVAL`|Nicht geändert.|  
   
  **Sicherheitsprobleme**  
   
- `_gcvt_s` kann eine Zugriffsverletzung generiert, wenn `buffer` nicht auf gültigen Arbeitsspeicher wird und nicht `NULL` ist.  
+ `_gcvt_s` kann eine Zugriffsverletzung erzeugen, wenn `buffer` keinen gültigen Speicher anzeigt und nicht `NULL` ist.  
   
-## Hinweise  
- Die `_gcvt_s`\-Funktion konvertiert ein Gleitkommawert `value` als Zeichenfolge \(die ein Dezimaltrennzeichen und ein beliebiges Zeichenbyte enthält\) und die Zeichenfolge in `buffer`.  `buffer` sollte so groß sein, den konvertierten Wert sowie ein NULL anzupassen, das automatisch angefügt wird.  Ein Puffer der Länge `_CVTBUFSIZE` ist für jeden Gleitkommawert ausreichend.  Wenn eine Puffergröße von `digits` \+ 1 verwendet wird, überschreibt die Funktion nicht das Ende des Puffers, daher ist sicher, einen ausreichenden Puffer für diesen Vorgang bereitzustellen.  `_gcvt_s` versucht, `digits` Ziffern im Dezimalformat zu erzeugen.  Wenn das nicht der Fall ist, erzeugt es `digits` Ziffern im exponentiellen Format.  Nachfolgende Nullen in der Konvertierung können unterdrückt werden.  
+## <a name="remarks"></a>Hinweise  
+ Die `_gcvt_s` Funktion konvertiert ein Gleitkomma `value` in eine Zeichenfolge (mit einem Dezimaltrennzeichen und einem möglichen Zeichen-Byte) und speichert die Zeichenfolge in `buffer`. `buffer` sollte groß genug für den konvertierten Wert und ein abschließendes Zeichen NULL sein, das automatisch angefügt wird. Ein Puffer der Länge `_CVTBUFSIZE` reicht für alle Gleitkommawerte aus. Wenn eine Puffergröße von `digits` + 1 verwendet wird, überschreibt die Funktion nicht das Pufferende. Stellen Sie also sicher, dass Sie genug Puffer für diesen Vorgang bereitstellen. `_gcvt_s` versucht `digits`-Ziffern im Dezimalformat zu erzeugen. Wenn es nicht möglich ist, erzeugt es `digits`-Ziffern im Exponentialformat. Bei der Konvertierung können Nachstellen von Nullen unterdrückt werden.  
   
- In C\+\+ unter Verwendung dieser Funktion wird durch eine Vorlagenüberladung vereinfacht; Überladung kann automatisch die Pufferlänge ableiten und die Anforderung nicht, einen Größenargument anzugeben.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ Die Verwendung dieser Funktion in C++ wird durch eine Überladung (als Vorlagen vorhanden) vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
   
- Die Debugversion dieser Funktion wird zuerst den Puffer mit 0xFD aus.  Mit [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md) deaktivieren Sie dieses Verhalten.  
+ Die Debugversion dieser Funktion füllt zunächst den Puffer mit „0xFD“ auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|Optionaler Header|  
-|-------------|---------------------------|-----------------------|  
-|`_gcvt_s`|\<stdlib.h\>|\<error.h\>|  
+|-------------|---------------------|---------------------|  
+|`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_gcvt_s.c  
@@ -137,14 +154,14 @@ int main()
 }  
 ```  
   
-  **Konvertierter Wert: 1,2**   
-## .NET Framework-Entsprechung  
- <xref:System.Convert.ToString*>  
+```Output  
+Converted value: 1.2  
+```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt\_s](../../c-runtime-library/reference/ecvt-s.md)   
- [\_fcvt\_s](../../c-runtime-library/reference/fcvt-s.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
+ [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)

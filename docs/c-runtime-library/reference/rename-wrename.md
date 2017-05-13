@@ -1,60 +1,77 @@
 ---
-title: "rename, _wrename | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rename"
-  - "_wrename"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wrename"
-  - "_trename"
-  - "Rename"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_trename-Funktion"
-  - "_wrename-Funktion"
-  - "Verzeichnisse [C++], Umbenennen"
-  - "Dateien [C++], Umbenennen"
-  - "Namen [C++], Veränderliches Verzeichnis"
-  - "Namen [C++], Veränderliche Datei"
-  - "rename-Funktion"
-  - "Umbenennen von Verzeichnissen"
-  - "Umbenennen von Dateien"
-  - "trename-Funktion"
-  - "wrename-Funktion"
+title: rename, _wrename | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rename
+- _wrename
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wrename
+- _trename
+- Rename
+dev_langs:
+- C++
+helpviewer_keywords:
+- trename function
+- directories [C++], renaming
+- renaming directories
+- names [C++], changing file
+- _trename function
+- rename function
+- wrename function
+- files [C++], renaming
+- _wrename function
+- names [C++], changing directory
+- renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# rename, _wrename
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5aeb9d9ceac7eabac061f211f48835d07f2ec38e
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Nennen Sie eine Datei oder ein Verzeichnis um.  
+---
+# <a name="rename-wrename"></a>rename, _wrename
+Benennt eine Datei oder ein Verzeichnis um.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -68,51 +85,51 @@ int _wrename(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *oldname*  
- Zeiger dem alten Namen.  
+ Zeiger auf den alten Namen.  
   
- *Neuer Name*  
- Zeiger zum neuen Namen.  
+ *newname*  
+ Zeiger auf den neuen Namen.  
   
-## Rückgabewert  
- Jede dieser Funktionen gibt 0 zurück, wenn es erfolgreich ist.  Auf einem Fehler gibt die Funktion einen Wert ungleich 0 \(null\) zurück und legt `errno` auf einen der folgenden Werte fest:  
+## <a name="return-value"></a>Rückgabewert  
+ Jede dieser Funktionen gibt bei Erfolg 0 zurück. Bei einem Fehler gibt die Funktion einen Wert ungleich null zurück und legt `errno` auf einen der folgenden Werte fest:  
   
  `EACCES`  
- Die Datei oder Verzeichnis, die von *newname* bereits angegeben werden, besteht oder konnte nicht erstellt \(Ungültige Pfad\); oder *oldname* ist ein Verzeichnis und *newname* gibt einem anderen Pfad.  
+ Die Datei oder das Verzeichnis, das von *newname* angegeben wird, ist bereits vorhanden oder konnte nicht erstellt werden (ungültiger Pfad). Möglicherweise ist auch *oldname* ein Verzeichnis, und *newname* gibt einen anderen Pfad an.  
   
  `ENOENT`  
- Datei oder Pfad durch *das oldname* nicht gefunden.  
+ Von *oldname* angegebene Datei oder Pfad wurden nicht gefunden.  
   
  `EINVAL`  
- Name enthält unzulässige Zeichen.  
+ Name enthält ungültige Zeichen.  
   
- Für weitere mögliche Rückgabewerte finden Sie unter [\_doserrno, \_errno, syserrlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere mögliche Rückgabewerte finden Sie unter [_doserrno, _errno, syserrlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die **umbenennen**\-Funktion wird die Datei oder das Verzeichnis, um die von *oldname* den Namen angegeben ist, der von *newname* angegeben wird.  Der alte Name muss der Pfad einer vorhandenen Datei oder des Verzeichnisses befinden.  Der neue Name darf keinen Namen einer vorhandenen Datei oder des Verzeichnisses befinden.  Sie können **umbenennen** verwenden, um eine Datei aus einem Verzeichnis oder Geräten auf eine andere verschieben, indem Sie einen anderen Pfad im *newname*\-Argument geben.  Sie können **umbenennen** nicht verwenden, um ein Verzeichnis zu verschieben.  Verzeichnisse können umbenannt, jedoch nicht verschoben werden.  
+## <a name="remarks"></a>Hinweise  
+ Die **rename**-Funktion benennt die Datei oder das Verzeichnis, die von *oldname* angegeben wurden, auf den von *newname* gegebenen Namen. Der alte Name muss der Pfad einer vorhandenen Datei oder eines vorhandenen Verzeichnisses sein. Der neue Name darf nicht der Name einer vorhandenen Datei oder eines vorhandenen Verzeichnisses sein. Sie können **rename** nutzen, um eine Datei von einem Verzeichnis oder Gerät zu einem anderen zu verschieben, indem Sie einen anderen Pfad im *newname*-Argument angeben. Allerdings können Sie **rename** nicht verwenden, um ein Verzeichnis zu verschieben. Verzeichnisse können umbenannt, aber nicht verschoben werden.  
   
- `_wrename` ist eine Breitzeichen\-Version von **\_rename**; die Argumente für `_wrename` sind Zeichenfolgen mit Breitzeichen.  `_wrename` und **\_rename** identisch verhalten sich andernfalls.  
+ `_wrename` ist eine Breitzeichenversion von **_rename**. Die Argumente für `_wrename` sind Breitzeichenfolgen. `_wrename` und **_rename** verhalten sich andernfalls identisch.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
-|`_trename`|**umbenennen**|**umbenennen**|`_wrename`|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
+|`_trename`|**rename**|**rename**|`_wrename`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|**umbenennen**|\<io.h oder\> stdio.h \<\>|  
-|`_wrename`|\<stdio.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|**rename**|\<io.h> oder \<stdio.h>|  
+|`_wrename`|\<stdio.h> oder \<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_renamer.c  
@@ -138,14 +155,11 @@ int main( void )
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'  
 ```  
   
-## .NET Framework-Entsprechung  
- [System::IO::File::Move](https://msdn.microsoft.com/en-us/library/system.io.file.move.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dateibehandlung](../../c-runtime-library/file-handling.md)

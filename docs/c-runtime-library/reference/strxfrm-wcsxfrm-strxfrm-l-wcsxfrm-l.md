@@ -62,10 +62,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 92144dbdc043d68d9280d2721a0aaeac3a9e3f1a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: b05ec00ae2144670844cd54de0900aa1412128ff
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
@@ -106,7 +107,7 @@ size_t wcsxfrm_l(
  Quellzeichenfolge.  
   
  `count`  
- Maximale Anzahl der in `strDest`* zu platzierenden Zeichen.*  
+ Maximale Anzahl von Zeichen, die in platziert `strDest`.  
   
  `locale`  
  Das zu verwendende Gebietsschema.  
@@ -121,7 +122,7 @@ size_t wcsxfrm_l(
   
  `wcsxfrm` ist eine Breitzeichenversion von `strxfrm`. Die Zeichenfolgenargumente von `wcsxfrm` sind Zeichenfolgen mit Breitzeichen. Für `wcsxfrm` ergibt nach der Transformation ein Aufruf von `wcscmp` mit den beiden transformierten Zeichenfolgen Ergebnisse, die mit den Ergebnissen eines Aufrufs von `wcscoll` identisch sind, der auf die ursprünglichen beiden Zeichenfolgen angewendet wurde. `wcsxfrm` und `strxfrm` verhalten sich andernfalls identisch. `wcsxfrm` verwendet das aktuelle Gebietsschema für das Verhalten, das vom Gebietsschema abhängig ist; `_wcsxfrm_l` verwendet stattdessen das übergebene Gebietsschema.  
   
- Diese Funktionen überprüfen ihre Parameter. Wenn `strSource` ein Null-Zeiger ist oder `strDest` ein NULL-Zeiger (sofern der Zähler nicht&0; ist) ist, oder wenn `count` größer als `INT_MAX` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung) beschrieben](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben `INT_MAX` zurück.  
+ Diese Funktionen überprüfen ihre Parameter. Wenn `strSource` ein Null-Zeiger ist oder `strDest` ein NULL-Zeiger (sofern der Zähler nicht 0 ist) ist, oder wenn `count` größer als `INT_MAX` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung) beschrieben](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben `INT_MAX` zurück.  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
@@ -159,9 +160,6 @@ return( strlen( _string1 ) );
 |`_wcsxfrm_l`|\<string.h> oder \<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   

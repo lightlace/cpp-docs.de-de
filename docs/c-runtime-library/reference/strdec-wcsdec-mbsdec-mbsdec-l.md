@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c372d65ca9d3c49aee32cb51fea67859dc11a7fb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 08ab806a3f2852109dda05d40e7264dbd8571298
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
@@ -103,16 +104,16 @@ unsigned char *_mbsdec_l(
   
 #### <a name="parameters"></a>Parameter  
  `start`  
- Zeiger auf ein beliebiges Zeichen (oder bei `_mbsdec` und _`mbsdec_l` das erste Byte eines Multibytezeichens) in der Quellzeichenfolge. In der Quellzeichenfolge muss `start` vor `current` stehen.  
+ Zeiger auf ein beliebiges Zeichen (oder für `_mbsdec` und `_mbsdec_l`, das erste Byte eines multibytezeichens) in der Quellzeichenfolge; `start` muss vorangehen `current` in der Quellzeichenfolge.  
   
  `current`  
- Zeiger auf ein beliebiges Zeichen (oder bei `_mbsdec` und _`mbsdec_l` das erste Byte eines Multibytezeichens) in der Quellzeichenfolge. In der Quellzeichenfolge muss `current` nach `start` stehen.  
+ Zeiger auf ein beliebiges Zeichen (oder für `_mbsdec` und `_mbsdec_l`, das erste Byte eines multibytezeichens) in der Quellzeichenfolge; `current` folgen `start` in der Quellzeichenfolge.  
   
  `locale`  
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- _`_mbsdec`,`mbsdec_l`, `_strdec` und `_wcsdec` geben jeweils einen Zeiger auf das Zeichen zurück, das unmittelbar vor `current` steht. `_mbsdec` gibt `NULL` zurück, wenn der Wert von `start` größer oder gleich `current` ist. `_tcsdec` wird einer dieser Funktionen zugeordnet und der Rückgabewert hängt von der Zuordnung ab.  
+ `_mbsdec`, `_mbsdec_l`, `_strdec`, und `_wcsdec` jeweils einen Zeiger auf das Zeichen, das unmittelbar vor zurück `current`; `_mbsdec` gibt `NULL` Wenn der Wert der `start` ist größer als oder gleich der `current`. `_tcsdec` wird einer dieser Funktionen zugeordnet und der Rückgabewert hängt von der Zuordnung ab.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Funktionen `_mbsdec` und `_mbsdec_l` geben einen Zeiger auf das erste Byte des Multibytezeichens zurück, das unmittelbar vor `current` in der Zeichenfolge steht, die `start` enthält.  
@@ -197,9 +198,6 @@ int main()
 }  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   

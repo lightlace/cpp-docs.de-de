@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 649c3d34e1ebcfc7af2fa3ef0b500dc1f630a967
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 930ef18229737fee03d03308c45f5ffb3615cdcd
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="cabs"></a>_cabs
@@ -80,7 +81,7 @@ double _cabs(
  `_cabs` gibt im Erfolgsfall den absoluten Wert seines Arguments zurück. Bei einem Überlauf gibt `_cabs` `HUGE_VAL` aus und setzt `errno` auf `ERANGE`. Sie können die Fehlerbehandlung mit [_matherr](../../c-runtime-library/reference/matherr.md) ändern.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_cabs`-Funktion berechnet den absoluten Wert einer komplexen Zahl, die eine Struktur des Typs [_complex](../../c-runtime-library/standard-types.md) aufweisen muss. Die Struktur `z` besteht aus einer reellen Komponente `x` und einer imaginären Komponente `y`. Ein Aufruf von `_cabs` generiert einen Wert, der dem Wert des Ausdrucks `sqrt`( `z.x``*``z.x``+``z.y`*`z.y` ) entspricht.  
+ Die `_cabs`-Funktion berechnet den absoluten Wert einer komplexen Zahl, die eine Struktur des Typs [_complex](../../c-runtime-library/standard-types.md) aufweisen muss. Die Struktur `z` besteht aus einer reellen Komponente `x` und einer imaginären Komponente `y`. Ein Aufruf von `_cabs` erzeugt den Wert des Ausdrucks gleich `sqrt( z.x * z.x + z.y * z.y )`.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -114,9 +115,6 @@ int main( void )
 ```Output  
 The absolute value of 3.000000 + 4.000000i is 5.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
