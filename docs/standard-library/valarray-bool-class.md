@@ -1,45 +1,58 @@
 ---
-title: "valarray&lt;bool&gt;-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "valarray<bool>"
-  - "valarray/std::valarray<bool>"
-  - "std::valarray<bool>"
-  - "std.valarray<bool>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "valarray<bool>-Klasse"
+title: valarray&lt;bool&gt;-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- valarray<bool>
+- valarray/std::valarray<bool>
+dev_langs:
+- C++
+helpviewer_keywords:
+- valarray<bool> class
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# valarray&lt;bool&gt;-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 717f6acf58738643767555f5473a99cb7c3f44c3
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
-Eine spezielle Version der Vorlagenklasse **valarray \<Type\>** auf Elemente des Typs `bool`.  
+---
+# <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt;-Klasse
+Eine spezielle Version der Vorlagenklasse **valarray\<Type>** für Elemente des Typs `bool`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 class valarray<bool>  
-  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // valarray_bool.cpp  
 // compile with: /EHsc  
 #include <valarray>  
@@ -76,17 +89,21 @@ int main( )
       cout << vaBool [ i ] << " ";  
    cout << ")." << endl;  
 }  
+\* Output:   
+The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).  
+The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).  
+The result of the less-than comparison test is the  
+ valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).  
+*\  
 ```  
   
-  **Der ursprüngliche linke Wertarray ist: \(0 1 \-2 3 \-4 5 \-6 7 \-8 9\).**  
-**Der ursprüngliche rechte Wertarray ist: \(0 1 2 3 4 5 6 7 8 9\).**  
-**Das Ergebnis des Kleiner\-als\-Vergleichs\-Tests ist**  
- **valarraybool \<\>: \(0 0 1 0 1 0 1 0 1 0\).**   
-## Anforderungen  
- **Header:** \<valarray\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<valarray>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [valarray\-Klasse](../standard-library/valarray-class.md)   
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [valarray-Klasse](../standard-library/valarray-class.md)   
+ [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
