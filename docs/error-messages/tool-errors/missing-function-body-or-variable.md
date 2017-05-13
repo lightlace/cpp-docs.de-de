@@ -39,10 +39,10 @@ ms.contentlocale: de-de
 ms.lasthandoff: 04/24/2017
 
 ---
-# Fehlender Funktionsrumpf oder fehlende Variable
+# <a name="missing-function-body-or-variable"></a>Fehlender Funktionsrumpf oder fehlende Variable
 Klicken Sie mit nur einem Funktionsprototyp der Compiler ohne Fehler fortgesetzt, obwohl der Linker kann keinen Aufruf an eine Adresse nicht aufgelöst werden, da keine Funktionscode oder die Variable reservierte Speicherplatz vorhanden ist. Dieser Fehler wird nicht angezeigt werden, bis Sie einen Aufruf der Funktion erstellen, die der Linker auflösen müssen.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Der Funktionsaufruf in Main wird zum Fehler LNK2019 führen, da der Prototyp kann der Compiler glauben, dass die Funktion vorhanden ist.  Der Linker sucht nach, dass dies nicht der Fall.  
   
 ```  
@@ -54,7 +54,7 @@ int main() {
 }  
 ```  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Stellen Sie in C++ sicher, dass Sie die Implementierung einer bestimmten Funktion für eine Klasse und nicht nur einen Prototyp in der Klassendefinition einschließen. Wenn Sie die Klasse außerhalb der Headerdatei definieren, werden Sie sicherstellen, dass der Name der Klasse vor der Funktion (`Classname::memberfunction`).  
   
 ```  
@@ -73,5 +73,5 @@ int main() {
 }  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Linkertoolfehler LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
