@@ -39,7 +39,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -101,7 +100,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -144,10 +142,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: 123fea75676708aa557a4b4bb5aced1712ca86e4
-ms.lasthandoff: 04/28/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: ed1f641e226f85aefcebf5ecf127c1345dc0b1b2
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Compilerfehler Warnungen C4400 über C4599
@@ -156,13 +155,13 @@ In die Artikeln in diesem Teil der Dokumentation enthalten Informationen über e
 > [!NOTE]
 >  Nicht jeder [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Fehler oder eine Warnung in MSDN dokumentiert ist. In vielen Fällen enthält die diagnosemeldung alle Informationen, die verfügbar ist. Wenn Sie der Meinung sind, dass eine Fehlermeldung einer zusätzlichen Erklärung bedarf, informieren Sie uns bitte. Verwenden Sie die Feedback-Formular auf dieser Seite, oder wechseln Sie auf der Menüleiste in Visual Studio und wählen Sie **Hilfe**, **Melden eines Fehlers**, oder Sie können einen Bericht Vorschlag oder Fehler senden, auf [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
-Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für den öffentlichen Foren von MSDN. Die [Visual C++-Sprache](http://go.microsoft.com/fwlink/?LinkId=158195) Forum eignet sich für Fragen und Diskussionen zu den [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Sprachsyntax und -Compiler. Die [Visual C++ Allgemein](http://go.microsoft.com/fwlink/?LinkId=158194) Forum eignet sich für Fragen zum [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , die in anderen Foren nicht diskutiert werden. Sie können auch Hilfe zu Fehlern und Warnungen finden, auf [Stack Overflow](http://stackoverflow.com/).  
+Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für den öffentlichen Foren von MSDN. Die [Visual C++-Sprache](http://go.microsoft.com/fwlink/?LinkId=158195) Forum eignet sich für Fragen und Diskussionen zu den [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Sprachsyntax und -Compiler. Die [Visual C++ Allgemein](http://go.microsoft.com/fwlink/?LinkId=158194) Forum eignet sich für Fragen zum [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , die in anderen Foren nicht diskutiert werden. Sie können auch Hilfe zu Fehlern und Warnungen finden, auf [Stapelüberlauf](http://stackoverflow.com/).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 |Warnung|Meldung|  
 |-------------|-------------|  
-|[Compilerwarnung (Ebene 1) C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#Pragma "*Makronamen*': erwartet eine gültige nicht leere Zeichenfolge|  
+|[Compilerwarnung (Ebene 1) C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#pragma "*Makronamen*': erwartet eine gültige nicht leere Zeichenfolge|  
 |[Compilerwarnung (Ebene 4) C4400](../../error-messages/compiler-warnings/compiler-warning-level-4-c4400.md)|"*Typ*": Const/Volatile-Qualifizierer für diesen Typ werden nicht unterstützt.|  
 |[Compilerwarnung (Ebene 1) C4401](../../error-messages/compiler-warnings/compiler-warning-level-1-c4401.md)|"*Bitfeld*": Schnittstellenmember Bitfeld ist.|  
 |[Compilerwarnung (Ebene 1) C4402](../../error-messages/compiler-warnings/compiler-warning-level-1-c4402.md)|PTR-Operator muss verwendet werden|  
@@ -197,7 +196,7 @@ Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für d
 |[Compilerwarnung (Ebene 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|"*Derived_class*': das Objektlayout unter/vd2 ändert sich aufgrund der virtuellen Basis '*basis_klasse*"|  
 |[Compilerwarnung (Ebene 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamische\_Umwandeln einer virtuellen Basisklasse '*basis_klasse*'to'*Derived_class*"im Konstruktor oder Destruktor fehlschlagen mit teilweise erstelltes Objekt|  
 |[Compilerwarnung (Ebene 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamische\_Umwandeln einer virtuellen Basisklasse '*basis_klasse*'to'*Derived_class*' konnte in einigen Kontexten fehl|  
-|Compilerwarnung C4438|"*Funktion*": kann nicht problemlos aufgerufen werden, / "await": Clrcompat-Modus. Wenn "*Funktion*" Aufrufe in die CLR es möglicherweise CLR Head-Beschädigung|  
+|Compilerwarnung C4438|"*Funktion*": kann nicht problemlos aufgerufen werden, / "await": Clrcompat-Modus. Wenn "*Funktion*" Aufrufe in die CLR es möglicherweise CLR Head Beschädigung|  
 |[Compilerwarnung C4439](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|"*Funktion*': Definition der Funktion mit einem verwalteten Typ in der Signatur benötigen eine __clrcall-Aufrufkonvention|  
 |[Compilerwarnung (Ebene 1) C4440](../../error-messages/compiler-warnings/compiler-warning-level-1-c4440.md)|Neudefinition der Aufrufkonvention von "*calling_convention1*'to'*calling_convenction2*" ignoriert|  
 |[Compilerwarnung (Ebene 1) C4441](../../error-messages/compiler-warnings/compiler-warning-level-1-c4441.md)|die Aufrufkonvention der "*calling_convention1*" ignoriert. "*calling_convention2*" stattdessen verwendet|  
@@ -215,14 +214,14 @@ Sie möglicherweise zusätzliche Unterstützung für Fehler und Warnungen für d
 |Compilerwarnung (Stufe 1) C4453|"*Typ*": ein Typ "[WebHostHidden]" sollte nicht verwendet werden, auf der veröffentlichten Oberfläche eines öffentlichen Typs, der nicht [WebHostHidden]|  
 |Compilerwarnung (Stufe 1) C4454|"*Funktion*" ist überladen, um mehr als die Anzahl von Eingabeparametern ohne [DefaultOverload] angegeben. Kommissionieren "*Deklaration*" als die standardmäßige Überladung|  
 |Compilerwarnung (Stufe 1) C4455|' Operator *Operator*": literales Suffix-Bezeichner, die nicht mit einem Unterstrich beginnen, sind reserviert.|  
-|Compilerwarnung (Stufe 3) C4456|Deklaration von "*Bezeichner*" Blendet die frühere lokalen Deklaration|  
-|Compilerwarnung (Stufe 3) C4457|Deklaration von "*Bezeichner*" Blendet Parameter-Funktion|  
-|Compilerwarnung (Stufe 3) C4458|Deklaration von "*Bezeichner*" Blendet den Klassenmember|  
-|Compilerwarnung (Stufe 3) C4459|Deklaration von "*Bezeichner*" Blendet globale Deklaration|  
+|[Compilerwarnung (Stufe 4) C4456](compiler-warning-level-4-c4456.md)|Deklaration von "*Bezeichner*" Blendet die frühere lokalen Deklaration|  
+|[Compilerwarnung (Stufe 4) C4457](compiler-warning-level-4-c4457.md)|Deklaration von "*Bezeichner*" Blendet Parameter-Funktion|  
+|[Compilerwarnung (Stufe 4) C4458](compiler-warning-level-4-c4458.md)|Deklaration von "*Bezeichner*" Blendet den Klassenmember|  
+|[Compilerwarnung (Stufe 4) C4459](compiler-warning-level-4-c4459.md)|Deklaration von "*Bezeichner*" Blendet globale Deklaration|  
 |[Compilerwarnung (Ebene 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|"WinRT &#124; verwaltet" Operator "*Operator*", Parameter als Verweis übergeben. "WinRT &#124; verwaltet" Operator "*Operator*"hat eine andere Semantik als C++-Operator"*Cpp_operator*", wollten Sie als Wert übergeben?|  
 |[Compilerwarnung (Ebene 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|"*Classname*": Diese Klasse verfügt über einen Finalizer '! *Finalizer*", jedoch keinen Destruktor ' ~*Dtor*"|  
 |[Compilerwarnung (Ebene 1) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|"*Typ*": die GUID des Typs kann nicht bestimmt werden. Das Programm kann zur Laufzeit fehlschlagen.|  
-|Compilerwarnung C4463|Überlauf; Zuweisen von "*Wert*'to Bitfeld, das nur Werte aus enthalten kann"*Min_value*'to'*Max_value*"|  
+|[Compilerwarnung (Stufe 4) C4463](compiler-warning-level-4-c4463.md)|Überlauf; Zuweisen von "*Wert*'to Bitfeld, das nur Werte aus enthalten kann"*Min_value*'to'*Max_value*"|  
 |Compilerwarnung C4464|Relative Includepfad enthält '..'|  
 |[Compilerwarnung (Ebene 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|Bei /clr werden Pragmas zur Gleitkommasteuerung ignoriert.|  
 |[Compilerwarnung (Stufe 4) C4471](compiler-warning-level-4-c4471.md)|"*Enumeration*': eine Vorwärtsdeklaration einer Enumeration ohne bereichseinschränkung benötigen einen zugrunde liegenden Typ (Int wird angenommen)|  

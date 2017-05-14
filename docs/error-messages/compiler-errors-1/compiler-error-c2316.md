@@ -34,18 +34,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: fd99248bdfca428b01921e80eb902d482c0e95be
-ms.lasthandoff: 04/12/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 60e5fb2346c92b3005e7cbfe1663d43cc0a12cdc
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-error-c2316"></a>Compilerfehler C2316
-"Ausnahme": Kann nicht aufgefangen werden, da auf den Destruktor und/oder den copy-Konstruktor nicht zugegriffen werden kann.  
+
+> "*Ausnahme*": kann nicht aufgefangen werden, da der Destruktor und/oder den Kopierkonstruktor nicht zugegriffen werden kann  
   
- Eine Ausnahme wurde durch einen Wert oder Verweis abgefangen, aber auf den copy-Konstruktor und/oder den Zuweisungsoperator konnte nicht zugegriffen werden.  
+Eine Ausnahme wurde durch einen Wert oder Verweis abgefangen, aber auf den copy-Konstruktor und/oder den Zuweisungsoperator konnte nicht zugegriffen werden.  
   
- Dieser Code wurde vom Compiler der Vorgängerversion akzeptiert, verursacht jetzt jedoch einen Fehler.  
+Dieser Code wurde von Versionen von Visual C++ vor Visual Studio 2003 akzeptiert, aber jetzt ein Fehler generiert.  
+  
+Konformitätsänderungen in Visual Studio 2015 vorgenommen, diese Fehler zuweisen ungültige Catch-Anweisungen von MFC-Ausnahmen abgeleitet wurde. `CException`. Da `CException` verfügt über eine geerbte privaten Kopierkonstruktor, die Klasse und die Ableitung nicht kopiert werden und nicht anhand des Werts bedeutet auch, dass sie können nicht aufgefangen werden, als Wert übergeben werden. Catch-Anweisungen, die MFC-Ausnahmen vom Wert, der zuvor geführt, die zur Laufzeit nicht abgefangene Ausnahmen abgefangen, aber der Compiler jetzt ordnungsgemäß identifiziert, diese Situation und meldet Fehler C2316. Um dieses Problem zu beheben, wird empfohlen, dass Sie die MFC-TRY/CATCH-Makros verwenden, anstatt eigene Ausnahmehandler schreiben, aber wenn dies nicht für Ihren Code geeignet ist, MFC-Ausnahmen als Verweis stattdessen abfangen.   
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C2316 generiert:  

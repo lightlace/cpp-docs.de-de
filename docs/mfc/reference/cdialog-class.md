@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d06d072dd62eed102c3073cd1cd7a0c112e674bb
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 9ae60a13db0f975aca84c74caed43327e5bd1267
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cdialog-class"></a>CDialog-Klasse
@@ -107,7 +108,7 @@ class CDialog : public CWnd
 ## <a name="remarks"></a>Hinweise  
  Dialogfelder werden zwei Typen: modale und nicht modale. Ein modales Dialogfeld muss vom Benutzer geschlossen werden, bevor die Anwendung fortgesetzt wird. Ein nicht modales Dialogfeld ermöglicht den Benutzer das Dialogfeld anzuzeigen und heraus zu einem anderen Vorgang abbrechen oder entfernen das Dialogfeld.  
   
- Ein `CDialog` Objekt ist eine Kombination einer Dialogfeldvorlage und einem `CDialog`-abgeleitete Klasse. Dialog-Editor zum Erstellen der Dialogfeldvorlage und speichern es in einer Ressource, und verwenden Sie dann das Hinzufügen von Klassen-Assistent zum Erstellen einer Klasse abgeleitet wurde. `CDialog`.  
+ Ein `CDialog` Objekt ist eine Kombination einer Dialogfeldvorlage und einem `CDialog`-abgeleitete Klasse. Dialog-Editor Dialogfeldvorlage erstellen und speichern es in einer Ressource, und verwenden Sie dann das Hinzufügen von Klassen-Assistent zum Erstellen einer Klasse abgeleitet `CDialog`.  
   
  Ein Dialogfeld, z. B. ein anderes Fenster empfängt Nachrichten von Windows. In einem Dialogfeld interessieren Sie insbesondere bei der Verarbeitung von benachrichtigungsmeldungen aus den Dialogfeld-Steuerelemente, da dies ist die Interaktion des Benutzers mit dem Dialogfeld. Verwenden Sie auswählen, welche Nachrichten Sie trotzdem Handle und die entsprechenden Meldungszuordnungseinträge und Meldungshandler Memberfunktionen der Klasse hinzugefügt wird, werden das Eigenschaftenfenster. Sie müssen nur die Handler-Memberfunktionen anwendungsspezifischen Code schreiben.  
   
@@ -269,7 +270,7 @@ virtual BOOL CreateIndirect(
   
  Verwenden der `CWnd::DestroyWindow` Funktion zerstört ein Dialogfeld erstellt, indem die `CreateIndirect` Funktion.  
   
- Dialogfelder, die ActiveX-Steuerelemente enthalten, erfordern zusätzliche Informationen in einem **DLGINIT** Ressource. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln zur Verfügung stehen, in der MSDN Library Visual Studio-Dokumentation oder in [http://support.microsoft.com](http://support.microsoft.com/).  
+ Dialogfelder, die ActiveX-Steuerelemente enthalten, erfordern zusätzliche Informationen in einem **DLGINIT** Ressource. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln finden Sie unter [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="domodal"></a>Methode CDialog:: DoModal  
  Rufen Sie diese Memberfunktion zum Aufrufen des modalen Dialogfelds und die Dialogfeld-Ergebnis zurück.  
@@ -379,7 +380,7 @@ BOOL InitModalIndirect(
 ### <a name="remarks"></a>Hinweise  
  Um ein modales Dialogfeld indirekt zu erstellen, zunächst belegen einen Speicherblock auf dem globalen und mit der Dialogfeldvorlage gefüllt. Rufen Sie dann auf die leere `CDialog` Konstruktor, um das Dialogfeld-Objekt zu erstellen. Rufen Sie als Nächstes `InitModalIndirect` zum Speichern des Handles für die Vorlage in-Memory-Dialogfeld. Das Dialogfeld "Windows" wird erstellt und angezeigt höher, bei der [DoModal](#domodal) Memberfunktion aufgerufen wird.  
   
- Dialogfelder, die ActiveX-Steuerelemente enthalten, erfordern zusätzliche Informationen in einem **DLGINIT** Ressource. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln zur Verfügung stehen, in der MSDN Library Visual Studio-Dokumentation oder in [http://support.microsoft.com](http://support.microsoft.com/).  
+ Dialogfelder, die ActiveX-Steuerelemente enthalten, erfordern zusätzliche Informationen in einem **DLGINIT** Ressource. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln finden Sie unter [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
  Rufen Sie die Einheiten im Dialogfeld eines Rechtecks Bildschirm Einheiten zu konvertieren.  

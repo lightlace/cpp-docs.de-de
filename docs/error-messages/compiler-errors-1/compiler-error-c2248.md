@@ -1,108 +1,127 @@
 ---
-title: "Compilerfehler C2248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2248"
+title: Compilerfehler C2248 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2248
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Compilerfehler C2248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 24977f831d326dab4882a21c70d8dce6da8b1ae9
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
-'Member': Kein Zugriff auf 'Zugriff' 'Member', dessen Deklaration in der 'Klasse'\-Klasse erfolgte  
+---
+# <a name="compiler-error-c2248"></a>Compilerfehler C2248
+"*Member*": kann nicht zugegriffen werden "*Access_level*'Member deklariert in Klasse'*Klasse*"  
   
- Member einer abgeleiteten Klasse können nicht auf `private`\-Member einer Basisklasse zugreifen.  Sie können auf keine `private`\-Member oder `protected`\-Member von Klasseninstanzen zugreifen.  
+Member einer abgeleiteten Klasse können nicht zugegriffen `private` Member einer Basisklasse. Sie können nicht zugegriffen werden `private` oder `protected` Member von Klasseninstanzen.  
   
- Weitere Informationen zu C2248 finden Sie im Knowledge Base\-Artikel KB243351 \(nur auf Englisch verfügbar\).  
+## <a name="example"></a>Beispiel  
   
- Im folgenden Beispiel wird C2248 generiert:  
+Im folgenden Beispiel wird C2248 bei privaten oder geschützten Member einer Klasse von außerhalb der Klasse zugegriffen werden. Um dieses Problem zu beheben, nicht auf diese Member direkt außerhalb der Klasse. Verwenden Sie öffentliche Memberdaten und Memberfunktionen, um mit der Klasse zu interagieren.  
   
-```  
-// C2248.cpp  
+```cpp  
+// C2248_access.cpp 
+// compile with: cl /EHsc /W4 C2248_access.cpp 
 #include <stdio.h>  
+
 class X {  
 public:  
-   int  m_pubMemb;  
-   void setPrivMemb( int i ) {  
-      m_privMemb = i;  
-      printf_s("\n%d", m_privMemb);  
-   }  
+    int  m_publicMember;  
+    void setPrivateMember( int i ) {  
+        m_privateMember = i;  
+        printf_s("\n%d", m_privateMember);  
+    }  
 protected:  
-   int  m_protMemb;  
+    int  m_protectedMember;  
   
 private:  
-   int  m_privMemb;  
+    int  m_privateMember;  
 } x;  
   
 int main() {  
-   x.m_pubMemb = 4;  
-   printf_s("\n%d", x.m_pubMemb);  
-   x.m_protMemb = 2;   // C2248 m_protMemb is protected  
-   x.m_privMemb = 3;   // C2248  m_privMemb is private  
-   x.setPrivMemb(0);   // OK uses public access function  
+    x.m_publicMember = 4;  
+    printf_s("\n%d", x.m_publicMember);  
+    x.m_protectedMember = 2; // C2248 m_protectedMember is protected  
+    x.m_privateMember = 3;   // C2248  m_privMemb is private  
+    x.setPrivateMember(0);   // OK uses public access function  
 }  
 ```  
   
- Ein anderes Konformitätsproblem, bei dem C2248 auftreten kann, entsteht bei der Verwendung von Friend\-Vorlagen und Spezialisierung.  Weitere Informationen finden Sie unter [Linkertoolfehler LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md).  
+Ein anderes Konformitätsproblem, das C2248 verfügbar macht, ist die Verwendung von Friend-Vorlagen und Spezialisierung. Um dieses Problem zu beheben, deklarieren Sie "Friend" Vorlagenfunktionen, indem Sie entweder eine leere Vorlage Parameter Liste <> oder bestimmte Vorlagenparameter.  
   
-```  
-// C2248_b.cpp  
+```cpp  
+// C2248_template.cpp 
+// compile with: cl /EHsc /W4 C2248_template.cpp 
 template<class T>  
 void f(T t) {  
-   t.i;   // C2248  
+    t.i;   // C2248  
 }  
   
 struct S {  
 private:  
-   int i;  
+    int i;  
   
 public:  
-   S() {}  
-   // Delete the following line to resolve.  
-   friend void f(S);   // refer to the non-template function void f(S)  
-  
-   // Uncomment the following line to resolve.  
-   // friend void f<S>(S);  
+    S() {}  
+    friend void f(S);   // refer to the non-template function void f(S)  
+    // To fix, comment out the previous line and
+    // uncomment the following line.  
+    // friend void f<S>(S);  
 };  
   
 int main() {  
-   S s;  
-   f<S>(s);  
+    S s;  
+    f<S>(s);  
 }  
 ```  
   
- Ein weiteres Konformitätsproblem, bei dem C2248 auftritt, entsteht beim Versuch, den Friend einer Klasse zu deklarieren, die für die Friend\-Deklaration im Gültigkeitsbereich der Klasse nicht sichtbar ist.  Gewähren Sie in diesem Fall der übergeordneten Klasse einen Friend\-Status, um den Fehler zu beheben.  
+Ein anderes Konformitätsproblem, das C2248 verfügbar macht, ist beim Versuch, einen "Friend" einer Klasse und die Klasse keine für die Friend-Deklaration im Gültigkeitsbereich der Klasse sichtbar ist. Um dieses Problem zu beheben, gewähren Sie Friendship-Klasse auf die übergeordnete Klasse.  
   
-```  
-// C2248_c.cpp  
-// compile with: /c  
+```cpp  
+// C2248_enclose.cpp  
+// compile with: cl /W4 /c C2248_enclose.cpp  
 class T {  
-   class S {  
-      class E {};  
-   };  
-   friend class S::E;   // C2248  
+    class S {  
+        class E {};  
+    };  
+    friend class S::E;   // C2248  
 };  
   
 class A {  
-   class S {  
-      class E {};  
-      friend class A;   // grant friendship to enclosing class  
-   };  
-   friend class S::E;   // OK  
+    class S {  
+        class E {};  
+        friend class A;  // grant friendship to enclosing class  
+    };  
+    friend class S::E;   // OK  
 };  
 ```

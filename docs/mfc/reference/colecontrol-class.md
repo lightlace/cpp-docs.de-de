@@ -203,10 +203,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 1f6eeb9802636ebf78f7e5d0b20a188e08a903a6
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 7f98ac382549509874bd570307a05ccea5ed657a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="colecontrol-class"></a>COleControl-Klasse
@@ -1360,7 +1361,7 @@ virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
  Ein Zeiger auf den vertikalen Offset des Clientbereichs des OLE-Steuerelements.  
   
 ### <a name="remarks"></a>Hinweise  
- OLE-Steuerelements verfügt über einen rechteckigen Bereich innerhalb des Containers. Das den Clientbereich des Steuerelements ist das Ausschließen von Rahmen und Bildlaufleisten Steuerelementbereich. Der Offset von abgerufenen `GetClientOffset` ist der Unterschied zwischen der oberen linken Ecke des rechteckigen Bereich des Steuerelements und der oberen linken Ecke des Clientbereichs. Wenn das Steuerelement nicht-Client-Elemente als standard Rahmen und Bildlaufleisten verfügt, überschreiben Sie diese Memberfunktion um den Offset anzugeben.  
+ OLE-Steuerelements verfügt über einen rechteckigen Bereich innerhalb des Containers. Das den Clientbereich des Steuerelements ist das Ausschließen von Rahmen und Bildlaufleisten Steuerelementbereich. Der Offset von abgerufenen `GetClientOffset` ist der Unterschied zwischen der oberen linken Ecke des rechteckigen Bereich des Steuerelements und der oberen linken Ecke des Clientbereichs. Wenn das Steuerelement nicht-Client-Elemente als die standardmäßigen Rahmen und Bildlaufleisten verfügt, überschreiben Sie diese Memberfunktion um den Offset anzugeben.  
   
 ##  <a name="getclientrect"></a>COleControl::GetClientRect  
  Ruft die Größe des Clientbereichs des Steuerelements ab.  
@@ -1832,7 +1833,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
  Wert ungleich NULL, wenn das Steuerelement initialisiert wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Implementierung des Frameworks **IDispatch:: Invoke** Aufrufe **Sie IsInvokeAllowed** bestimmen, ob eine bestimmte Funktion (identifizierte `dispid`) aufgerufen werden kann. Das Standardverhalten für OLE-Steuerelements ist zum Zulassen von Automatisierungsmethoden aufgerufen werden, nur, wenn das Steuerelement initialisiert wurde. allerdings **Sie IsInvokeAllowed** ist eine virtuelle Funktion und kann überschrieben werden, falls erforderlich (beispielsweise, wenn das Steuerelement als Automatisierungsserver verwendet wird). Weitere Informationen finden Sie im Knowledge Base-Artikel Q166472, "So wird's gemacht: verwenden ein OLE-Steuerelements als Automatisierungsserver." Knowledge Base-Artikeln zur Verfügung stehen, in der MSDN Library Visual Studio-Dokumentation oder in [http://support.microsoft.com](http://support.microsoft.com/).  
+ Implementierung des Frameworks **IDispatch:: Invoke** Aufrufe **Sie IsInvokeAllowed** bestimmen, ob eine bestimmte Funktion (identifizierte `dispid`) aufgerufen werden kann. Das Standardverhalten für OLE-Steuerelements ist zum Zulassen von Automatisierungsmethoden aufgerufen werden, nur, wenn das Steuerelement initialisiert wurde. allerdings **Sie IsInvokeAllowed** ist eine virtuelle Funktion und kann überschrieben werden, falls erforderlich (beispielsweise, wenn das Steuerelement als Automatisierungsserver verwendet wird). Weitere Informationen finden Sie im Knowledge Base-Artikel Q166472, "So wird's gemacht: verwenden ein OLE-Steuerelements als Automatisierungsserver." Knowledge Base-Artikeln finden Sie unter [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="ismodified"></a>COleControl::IsModified  
  Bestimmt, ob der Zustand des Steuerelements geändert wurde.  
@@ -2123,7 +2124,7 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
  Überschreiben Sie diese Funktion, um die Standardmethode der Aufzählen von Verben zu ändern.  
   
 ##  <a name="oneventadvise"></a>COleControl::OnEventAdvise  
- Vom Framework aufgerufen, wenn ein Ereignishandler mit verbunden oder getrennt von einem OLE-Steuerelement aus.  
+ Vom Framework aufgerufen, wenn ein Ereignishandler ist mit verbunden oder getrennt von einem OLE-Steuerelement aus.  
   
 ```  
 virtual void OnEventAdvise(BOOL bAdvise);
@@ -2200,7 +2201,7 @@ virtual BOOL OnGetColorSet(
  Wert ungleich NULL, wenn Sie eine gültige Farbe zurückgegeben wird; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Container Aufrufe dieser Funktion können Sie die Farben, die zum Zeichnen des OLE-Steuerelements erforderlich sind. Container können Farbpaletten, die abgerufen, die in Verbindung mit den Hintergrundfarben, die er die allgemeine Farben-Palette festgelegt muss, wurde. Gibt die standardmäßige Implementierung **"false"**.  
+ Der Container Aufrufe dieser Funktion können Sie die Farben, die zum Zeichnen des OLE-Steuerelements erforderlich sind. Container können Farbpaletten, die abgerufen werden, zusammen mit den Hintergrundfarben, die er die allgemeine Farben-Palette festgelegt muss. Gibt die standardmäßige Implementierung **"false"**.  
   
  Überschreiben Sie diese Funktion dazu jegliche spezielle Verarbeitung dieser Anforderung.  
   
@@ -2745,7 +2746,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>Hinweise  
  Das angegebene Format ist eines der zuvor in das Steuerelement mit platziert die [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) oder [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) Memberfunktionen für verzögertes rendering. Ruft die standardmäßige Implementierung dieser Funktion `OnRenderFileData` oder `OnRenderGlobalData`bzw. das angegebene Speichermedium ist eine Datei oder einen Speicher. Wenn das angeforderte Format ist `CF_METAFILEPICT` oder die dauerhafte Eigenschaftensatz-Format ist, wird die standardmäßige Implementierung rendert die entsprechenden Daten und ungleich NULL zurückgegeben. Andernfalls wird 0 zurückgegeben, und wird keine Aktion ausgeführt wird.  
   
- Wenn *LpStgMedium-> Tymed* ist **TYMED_NULL**, **STGMEDIUM** reserviert und entsprechend den Angaben von gefüllt werden soll *LpFormatEtc-> Tymed*. Wenn dies nicht der **TYMED_NULL**, **STGMEDIUM** direkt mit den Daten ausgefüllt werden soll.  
+ Wenn *LpStgMedium -> Tymed* ist **TYMED_NULL**, **STGMEDIUM** reserviert und entsprechend den Angaben von gefüllt werden soll *LpFormatEtc -> Tymed*. Wenn dies nicht der **TYMED_NULL**, **STGMEDIUM** sollte direkt mit den Daten ausgefüllt werden.  
   
  Überschreiben Sie diese Funktion, um Ihre Daten in das angeforderte Format und das Medium angeben. Abhängig von Ihrer Daten können Sie eine der anderen Versionen dieser Funktion stattdessen überschreiben möchten. Wenn Ihre Daten klein und fester Größe ist, überschreiben `OnRenderGlobalData`. Wenn Ihre Daten in einer Datei ist oder variabler Größe ist, überschreiben `OnRenderFileData`.  
   
@@ -2799,7 +2800,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>Hinweise  
  Das angegebene Format ist eines der zuvor in das Steuerelement mit platziert die [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) Memberfunktion für das verzögerte Rendering. Die standardmäßige Implementierung dieser Funktion gibt einfach auftragsantwortnachrichten zurück **"false"**.  
   
- Wenn `phGlobal` ist **NULL**, klicken Sie dann ein neues `HGLOBAL` reserviert und in zurückgegeben werden soll `phGlobal`. Andernfalls die `HGLOBAL` gemäß `phGlobal` mit Daten gefüllt werden soll. Die Menge der Daten platziert werden, der `HGLOBAL` darf sich nicht auf die aktuelle Größe des Speicherblocks. Darüber hinaus kann nicht der Block zu einem größeren zugewiesen werden.  
+ Wenn `phGlobal` ist **NULL**, klicken Sie dann ein neues `HGLOBAL` reserviert und in zurückgegeben werden soll `phGlobal`. Andernfalls die `HGLOBAL` gemäß `phGlobal` mit Daten gefüllt werden soll. Die Menge der Daten platziert werden, der `HGLOBAL` darf sich nicht auf die aktuelle Größe des Speicherblocks. Darüber hinaus kann nicht der Block auf eine Größe neu zugeordnet werden.  
   
  Überschreiben Sie diese Funktion, um Ihre Daten in das angeforderte Format und das Medium angeben. Abhängig von Ihrer Daten können Sie eine der anderen Versionen dieser Funktion stattdessen überschreiben möchten. Wenn Sie mehrere Speichermedien behandeln möchten, überschreiben `OnRenderData`. Wenn Ihre Daten in einer Datei ist oder variabler Größe ist, überschreiben `OnRenderFileData`.  
   

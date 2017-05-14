@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c9537755f2147d0ded67ecd887414f317952418d
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 4f5e485611b1a8f38375c9a95a959ddf48e3663c
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT-Klasse
@@ -105,19 +106,19 @@ public CSimpleStringT<BaseType,
  `StringTraits`  
  Bestimmt, ob der Zeichenfolgenklasse benötigt Unterstützung für C-Laufzeit (CRT)-Bibliothek und unter dem Zeichenfolgenressourcen gespeichert werden. Einer der folgenden Werte ist möglich:  
   
-- **StrTraitATL<> </>** | `char` | **TCHAR, ChTraitsCRT<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitATL < Wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < Wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      Die Klasse erfordert, CRT-Unterstützung und sucht nach Ressourcenzeichenfolgen im Modul gemäß `m_hInstResource` (ein Mitglied der Anwendung Module-Klasse).  
   
-- **StrTraitATL<> </>** | `char` | **TCHAR, ChTraitsOS<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitATL < Wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < Wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      Die Klasse ist nicht erforderlich, CRT-Unterstützung und sucht nach Ressourcenzeichenfolgen im Modul gemäß `m_hInstResource` (ein Mitglied der Anwendung Module-Klasse).  
   
-- **StrTraitMFC<> </>** | `char` | **TCHAR, ChTraitsCRT<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitMFC < Wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < Wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      Die Klasse erfordert CRT-Unterstützung und sucht nach Ressourcenzeichenfolgen, die mit den MFC-Suche Standardalgorithmus.  
   
-- **StrTraitMFC<> </>** | `char` | **TCHAR, ChTraitsOS<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitMFC < Wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < Wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      Die Klasse erfordert keine CRT-Unterstützung und sucht nach Ressourcenzeichenfolgen, die mit den MFC-Suche Standardalgorithmus.  
   
@@ -187,7 +188,7 @@ public CSimpleStringT<BaseType,
  `CStringT`erbt von [CSimpleStringT Klasse](../../atl-mfc-shared/reference/csimplestringt-class.md). Erweiterte Funktionen, z. B. Zeichen Manipulation, Sortierung und Suche werden von implementiert `CStringT`.  
   
 > [!NOTE]
-> `CStringT`Objekte werden können Ausnahmen ausgelöst. Dies tritt auf, wenn ein `CStringT` Objekt nicht mehr genügend Arbeitsspeicher aus irgendeinem Grund.  
+> `CStringT`Objekte werden können Ausnahmen ausgelöst. Dies tritt auf, wenn ein `CStringT` -Objekt aus irgendeinem Grund nicht genügend Arbeitsspeicher ausgeführt wird.  
   
  Ein `CStringT` Objekt besteht aus einer Zeichenfolge variabler Länge. `CStringT`enthält Funktionen und Operatoren, die der Basic-ähnliche Syntax verwenden. Verkettung und Vergleichsoperatoren, zusammen mit vereinfachten Speicherverwaltungsfunktionen, stellen `CStringT` Objekte, die einfacher zu verwenden als normales Zeichen-Arrays.  
   
@@ -201,7 +202,7 @@ public CSimpleStringT<BaseType,
  `CString`, `CStringA`, und `CStringW` exportiert werden, über die MFC-DLL (MFC90. (DLL), nie vom Benutzer DLLs. Dies geschieht, um zu verhindern, dass `CStringT` aus mehrfach definiert wird.  
   
 > [!NOTE]
->  Wenn Linkerfehler beim Exportieren aufgetreten einer `CString`-abgeleitete Klasse von einer MFC-Erweiterungs-DLL in Visual C++ .NET 2002 und die problemumgehung angewendet haben wie beschrieben im Knowledge Base-Artikel "Verknüpfen von Fehlern bei der Sie Import CString-Derived Classes" (Q309801), sollten Sie den Code für dieses Problem zu umgehen, entfernen, da dies in Visual C++ .NET 2003 behoben wurde. Sie finden Knowledge Base-Artikeln auf der MSDN Library-CD-ROM oder unter [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+>  Wenn Linkerfehler beim Exportieren aufgetreten einer `CString`-abgeleitete Klasse von einer MFC-Erweiterungs-DLL in Visual C++ .NET 2002 und die problemumgehung angewendet haben wie beschrieben im Knowledge Base-Artikel "Verknüpfen von Fehlern bei der Sie Import CString-Derived Classes" (Q309801), sollten Sie den Code für dieses Problem zu umgehen, entfernen, da dies in Visual C++ .NET 2003 behoben wurde. Sie finden Knowledge Base-Artikel unter [http://support.microsoft.com/support](http://support.microsoft.com/support).  
   
  Die folgenden Zeichenfolgen-Datentypen sind in MFC-basierten Anwendungen zur Verfügung:  
   
@@ -335,7 +336,7 @@ int Collate(PCXSTR psz) const throw();
  Die andere Zeichenfolge für den Vergleich verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- NULL, wenn die Zeichenfolgen identisch sind < 0="" if="" this=""> `CStringT` Objekt ist kleiner als `psz`, oder > 0, wenn diese `CStringT` -Quellobjekt ist größer als `psz`.  
+ NULL, wenn die Zeichenfolgen identisch sind, < 0, wenn diese `CStringT` Objekt ist kleiner als `psz`, oder > 0, wenn diese `CStringT` -Quellobjekt ist größer als `psz`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die generische Textfunktion `_tcscoll`, die in TCHAR definiert ist. H, ordnet entweder `strcoll`, `wcscoll`, oder `_mbscoll`, abhängig von den Zeichensatz an, die zum Zeitpunkt der Kompilierung definiert ist. Jede Funktion führt einen Vergleich Groß-/Kleinschreibung der Zeichenfolgen gemäß der Codepage derzeit verwenden. Weitere Informationen finden Sie unter [Strcoll Wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).  
@@ -352,7 +353,7 @@ int CollateNoCase(PCXSTR psz) const throw();
  Die andere Zeichenfolge für den Vergleich verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- NULL, wenn die Zeichenfolgen identisch sind (Ignorieren der Groß-/Kleinschreibung), < 0="" if="" this=""> `CStringT` Objekt ist kleiner als `psz` (Ignorieren der Groß-/Kleinschreibung), oder > 0, wenn diese `CStringT` -Quellobjekt ist größer als `psz` (Ignorieren der Groß-/Kleinschreibung).  
+ NULL, wenn die Zeichenfolgen sind identisch (Groß-/Kleinschreibung), < 0, wenn diese `CStringT` Objekt ist kleiner als `psz` (Ignorieren der Groß-/Kleinschreibung), oder > 0, wenn diese `CStringT` -Quellobjekt ist größer als `psz` (Ignorieren der Groß-/Kleinschreibung).  
   
 ### <a name="remarks"></a>Hinweise  
  Die generische Textfunktion `_tcscoll`, die in TCHAR definiert ist. H, ordnet entweder `stricoll`, `wcsicoll`, oder `_mbsicoll`, abhängig von den Zeichensatz an, die zum Zeitpunkt der Kompilierung definiert ist. Jede Funktion führt einen Vergleich Groß-/Kleinschreibung der Zeichenfolgen, entsprechend der derzeit verwendeten Codepage. Weitere Informationen finden Sie unter [Strcoll Wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).  
@@ -372,7 +373,7 @@ int Compare(PCXSTR psz) const;
  Die andere Zeichenfolge für den Vergleich verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- NULL, wenn die Zeichenfolgen identisch sind < 0="" if="" this=""> `CStringT` Objekt ist kleiner als `psz`, oder > 0, wenn diese `CStringT` -Quellobjekt ist größer als `psz`.  
+ NULL, wenn die Zeichenfolgen identisch sind, < 0, wenn diese `CStringT` Objekt ist kleiner als `psz`, oder > 0, wenn diese `CStringT` -Quellobjekt ist größer als `psz`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die generische Textfunktion `_tcscmp`, die in TCHAR definiert ist. H, ordnet entweder `strcmp`, `wcscmp`, oder `_mbscmp`, abhängig von den Zeichensatz an, die zum Zeitpunkt der Kompilierung definiert ist. Jede Funktion führt einen Vergleich Groß-/Kleinschreibung der Zeichenfolgen und wird nicht vom Gebietsschema beeinflusst. Weitere Informationen finden Sie unter [Strcmp, Wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md).  
@@ -396,7 +397,7 @@ int CompareNoCase(PCXSTR psz) const throw();
  Die andere Zeichenfolge für den Vergleich verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- NULL, wenn die Zeichenfolgen identisch sind (Ignorieren der Groß-/Kleinschreibung), <0 if="" this=""></0> `CStringT` Objekt ist kleiner als `psz` (Ignorieren der Groß-/Kleinschreibung), oder > 0, wenn diese `CStringT` -Quellobjekt ist größer als `psz` (Ignorieren der Groß-/Kleinschreibung).  
+ NULL, wenn die Zeichenfolgen identisch sind (Ignorieren der Groß-/Kleinschreibung), < 0, wenn diese `CStringT` Objekt ist kleiner als `psz` (Ignorieren der Groß-/Kleinschreibung), oder > 0, wenn diese `CStringT` -Quellobjekt ist größer als `psz` (Ignorieren der Groß-/Kleinschreibung).  
   
 ### <a name="remarks"></a>Hinweise  
  Die generische Textfunktion `_tcsicmp`, die in TCHAR definiert ist. H, ordnet entweder `_stricmp`, `_wcsicmp` oder `_mbsicmp`, abhängig von den Zeichensatz an, die zum Zeitpunkt der Kompilierung definiert ist. Jede Funktion vergleicht Groß-/Kleinschreibung der Zeichenfolgen. Der Vergleich richtet sich nach der `LC_CTYPE` Aspekt des Gebietsschemas, aber nicht `LC_COLLATE`. Weitere Informationen finden Sie unter [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).  
@@ -678,7 +679,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
  Optionale Argumente.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Funktion erfordert als Eingabe eine Nachrichtendefinition. Der Nachrichtendefinition richtet sich nach `pszFormat` oder über eine Zeichenfolgenressource identifizierten `nFormatID`. Kopiert die Funktion Text der Nachricht im Format der `CStringT` einfügen Objekts, verarbeiten eine eingebettete Sequenzen aus, wenn angefordert.  
+ Die Funktion erfordert als Eingabe eine Nachrichtendefinition. Der Nachrichtendefinition richtet sich nach `pszFormat` oder über eine Zeichenfolgenressource identifizierten `nFormatID`. Kopiert die Funktion Text der Nachricht im Format der `CStringT` -Objekt, verarbeiten eine eingebettete Sequenzen einfügen, wenn angefordert.  
   
 > [!NOTE]
 > `FormatMessage`versucht, den Systemspeicher für die neu formatierten Zeichenfolge zuzuordnen. Wenn dieser Versuch fehlschlägt, wird automatisch eine Arbeitsspeicher-Ausnahme ausgelöst.  
@@ -992,7 +993,7 @@ CStringT& operator+=(const VARIANT& var);
  Ein `CStringT` , der mit dieser Zeichenfolge verkettet.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Operator akzeptiert eine andere `CStringT` -Objekt, ein Zeichenzeiger oder ein einzelnes Zeichen. Sie sollten sich bewusst sein, dass der Arbeitsspeicher beim dieser Concatenation-Operator verwenden, da Sie neuer Speicher für Zeichen hinzugefügt, die dieser zugewiesen werden kann, können Ausnahmen auftreten `CStringT` Objekt.  
+ Der Operator akzeptiert eine andere `CStringT` -Objekt, ein Zeichenzeiger oder ein einzelnes Zeichen. Sie sollten sich bewusst sein, dass der Arbeitsspeicher jedes Mal, wenn Sie diese Verkettungsoperator weil Sie neuer Speicher für Zeichen hinzugefügt, die dieser zugewiesen werden kann, können Ausnahmen auftreten `CStringT` Objekt.  
   
  Informationen zu `CThisSimpleString`, finden Sie im Abschnitt "Hinweise" der [CStringT::CStringT](#cstringt).  
   

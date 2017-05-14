@@ -17,7 +17,6 @@ f1_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 helpviewer_keywords:
@@ -29,7 +28,6 @@ helpviewer_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 dev_langs:
@@ -53,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 3716dbf66c2cf1c35c26df6dfd95fb1c0946e68d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c724fd7907f7ec3f0ce8f096faf88d4ec66ae970
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Compilerfehlers C2100 through C2199
@@ -99,7 +98,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Compilerfehler Fehler C2127|"*Bezeichner*': Unzulässiger Initialisierung von"Constexpr"-Entität mit einem nicht konstanten Ausdruck|  
 |[Compilerfehler C2128](compiler-error-c2128.md)|"*Funktion*": Alloc_text/Same_seg gilt nur für Funktionen mit C-Bindung|  
 |[Compilerfehler C2129](compiler-error-c2129.md)|statische Funktion "*Bezeichner*' deklariert, aber nicht definiert.|  
-|[Compilerfehler C2130](compiler-error-c2130.md)|#Zeile erwartet eine Zeichenfolge, enthält der Dateiname gefunden "*token*"|  
+|[Compilerfehler C2130](compiler-error-c2130.md)|#line erwartet eine Zeichenfolge mit dem Dateinamen, gefunden "*token*"|  
 |Compilerfehler Fehler C2131|Ausdruck wurde nicht zu einer Konstanten ausgewertet.|  
 |[Compilerfehler C2132](compiler-error-c2132.md)|Syntaxfehler: Bezeichner nicht erwartet|  
 |[Compilerfehler C2133](compiler-error-c2133.md)|"*Bezeichner*": Unbekannte Größe|  
@@ -147,7 +146,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |[Compilerfehler C2175](compiler-error-c2175.md)|"*Gebietsschema*': Ungültiges Gebietsschema|  
 |Compilerfehler Fehler C2176|Eine Rückgabeanweisung kann nicht im Handler eines Try-Blocks einer Funktion verwendet werden, der einem Konstruktor zugeordnet ist.|  
 |[Compilerfehler C2177](compiler-error-c2177.md)|Konstante zu groß|  
-|Compilerfehler Fehler C2178|"*Bezeichner*"kann nicht mit deklariert werden"*Spezifizierer*' Spezifizierer|  
+|[Compilerfehler Fehler C2178](compiler-error-c2178.md)|"*Bezeichner*"kann nicht mit deklariert werden"*Spezifizierer*' Spezifizierer|  
 |[Compilerfehler C2179](compiler-error-c2179.md)|"*Typ*": Ein Attributargument kann keine Typparameter verwenden|  
 |[Compilerfehler C2180](compiler-error-c2180.md)|steuernder Ausdruck weist den Typ "*Typ*"|  
 |[Compilerfehler C2181](compiler-error-c2181.md)|Ungültiges "else" ohne zugehöriges "if"|  
