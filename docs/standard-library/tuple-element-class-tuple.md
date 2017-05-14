@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 54bfdd8a1f095478282af39354a6e9a91ba32891
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: b5568eb951738b1c0c53321d7430c84db6bac9ec
+ms.contentlocale: de-de
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="tupleelement-class"></a>tuple_element-Klasse
@@ -108,7 +109,7 @@ Die Vorlagenklassenspezialisierung für Arrays bietet eine Schnittstelle zu eine
   
 Die Vorlagenspezialisierungen für `pair`-Typen bieten eine einzelne Member-Typedef `type` an, die ein Synonym für den Typ des Elements an der angegebenen Position im Paar ist, wobei alle const- und/oder volatile-Qualifikationen beibehalten werden. Das Typedef `tuple_element_t` ist ein zweckmäßiger Alias für `tuple_element<N, pair<T1, T2>>::type`.  
   
-Verwenden Sie die [get-Funktion &lt;utility&gt;](../standard-library/utility-functions.md#get), um das Element an einer angegebenen Position oder (in C++14 / Visual Studio 2015) mit einem angegebenen Typ zurückzugeben. 
+Verwenden der [get-Funktion &lt;Hilfsprogramm&gt; ](../standard-library/utility-functions.md#get) das Element an einer angegebenen Position oder eines angegebenen Typs zurückgeben. 
   
 ## <a name="example"></a>Beispiel  
   
