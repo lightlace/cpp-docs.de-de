@@ -10,21 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sub_match
-- std::sub_match
 - regex/std::sub_match
-- std::sub_match::matched
 - regex/std::sub_match::matched
-- std::sub_match::compare
 - regex/std::sub_match::compare
-- std::sub_match::length
 - regex/std::sub_match::length
-- std::sub_match::str
 - regex/std::sub_match::str
-- std::sub_match::difference_type
 - regex/std::sub_match::difference_type
-- std::sub_match::iterator
 - regex/std::sub_match::iterator
-- std::sub_match::value_type
 - regex/std::sub_match::value_type
 dev_langs:
 - C++
@@ -49,10 +41,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: 1a2b0c43fd5942e6f4b9ddd54c50db8bc8e8218f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 12d12497fa96d7cf4185ad3664908a56be1078c9
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="submatch-class"></a>sub_match-Klasse
@@ -85,11 +78,11 @@ public:
  Der Itertatortyp für Teilübereinstimmungen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Vorlagenklasse beschreibt ein Objekt, das eine Folge von Zeichen kennzeichnet, die mit einer Erfassungsgruppe in einem Aufruf von [regex_match-Funktion](../standard-library/regex-functions.md#regex_match_function) oder [regex_search-Funktion](../standard-library/regex-functions.md#regex_search_function) übereinstimmten. Objekte des Typs [match_results Class](../standard-library/match-results-class.md) enthalten ein Array dieser Objekte, eines für jede Erfassungsgruppe im regulären Ausdruck, der in der Suche verwendet wurde.  
+ Die Vorlagenklasse beschreibt ein Objekt, das eine Folge von Zeichen kennzeichnet, die in einem Aufruf eine Erfassungsgruppe abgeglichen [Regex_match](../standard-library/regex-functions.md#regex_match) oder [Regex_search](../standard-library/regex-functions.md#regex_search). Objekte des Typs [match_results Class](../standard-library/match-results-class.md) enthalten ein Array dieser Objekte, eines für jede Erfassungsgruppe im regulären Ausdruck, der in der Suche verwendet wurde.  
   
- Gab es keine Übereinstimmung mit der Erfassungsgruppe, ist das `matched` -Datenmember des Objekts gleich „false“, und die beiden Iteratoren `first` und `second` (geerbt von der Basisklasse `std::pair`) gleich sind. Gab es eine Übereinstimmung mit der Erfassungsgruppe, ist `matched` gleich „true“, der Iterator `first` zeigt auf das erste Zeichen in der Zielsequenz, die mit der Erfassungsgruppe übereinstimmte, und der Iterator `second` zeigt auf die erste Position hinter dem letzten Zeichen in der Zielsequenz, die mit der Erfassungsgruppe übereinstimmte. Für eine Übereinstimmung der Länge&0; (null) gilt Folgendes: Der Member `matched` enthält „true“, die beiden Iteratoren sind gleich, und beide zeigen auf die Position der Übereinstimmung.  
+ Gab es keine Übereinstimmung mit der Erfassungsgruppe, ist das `matched` -Datenmember des Objekts gleich „false“, und die beiden Iteratoren `first` und `second` (geerbt von der Basisklasse `std::pair`) gleich sind. Gab es eine Übereinstimmung mit der Erfassungsgruppe, ist `matched` gleich „true“, der Iterator `first` zeigt auf das erste Zeichen in der Zielsequenz, die mit der Erfassungsgruppe übereinstimmte, und der Iterator `second` zeigt auf die erste Position hinter dem letzten Zeichen in der Zielsequenz, die mit der Erfassungsgruppe übereinstimmte. Für eine Übereinstimmung der Länge 0 (null) gilt Folgendes: Der Member `matched` enthält „true“, die beiden Iteratoren sind gleich, und beide zeigen auf die Position der Übereinstimmung.  
   
- Eine Übereinstimmung der Länge&0; (null) kann auftreten, wenn eine Erfassungsgruppe ausschließlich aus einer Assertion oder aus einer Wiederholung besteht, die&0; (null) Wiederholungen zulässt. Zum Beispiel:  
+ Eine Übereinstimmung der Länge 0 (null) kann auftreten, wenn eine Erfassungsgruppe ausschließlich aus einer Assertion oder aus einer Wiederholung besteht, die 0 (null) Wiederholungen zulässt. Zum Beispiel:  
   
  „^“ stimmt mit der Zielsequenz „a“ überein; das `sub_match` -Objekt, das der Erfassungsgruppe 0 entspricht, enthält Iteratoren, die beide auf das erste Zeichen in der Sequenz zeigen.  
   
@@ -100,7 +93,7 @@ public:
   
  **Namespace:** std  
   
-##  <a name="a-namesubmatchcomparea--submatchcompare"></a><a name="sub_match__compare"></a> sub_match::compare  
+##  <a name="compare"></a> sub_match::compare  
  Vergleichen einer Teilübereinstimmung mit einer Sequenz.  
   
 ```  
@@ -183,7 +176,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchdifferencetypea--submatchdifferencetype"></a><a name="sub_match__difference_type"></a> sub_match::difference_type  
+##  <a name="difference_type"></a> sub_match::difference_type  
  Der Typ einer Iteratordifferenz.  
   
 ```  
@@ -246,7 +239,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchiteratora--submatchiterator"></a><a name="sub_match__iterator"></a> sub_match::iterator  
+##  <a name="iterator"></a> sub_match::iterator  
  Der Typ eines Iterators.  
   
 ```  
@@ -309,7 +302,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchlengtha--submatchlength"></a><a name="sub_match__length"></a> sub_match::length  
+##  <a name="length"></a> sub_match::length  
  Gibt die Länge einer Teilübereinstimmung zurück.  
   
 ```  
@@ -372,7 +365,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchmatcheda--submatchmatched"></a><a name="sub_match__matched"></a> sub_match::matched  
+##  <a name="matched"></a> sub_match::matched  
  Gibt an, ob eine Übereinstimmung erfolgreich war.  
   
 ```  
@@ -435,7 +428,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchoperatorbasicstringltvaluetypegta--submatchoperator-basicstringltvaluetypegt"></a><a name="sub_match__operator_basic_string_lt_value_type_gt_"></a> sub_match::operator basic_string&lt;value_type&gt;  
+##  <a name="op_basic_string_lt_value_type_gt"></a> sub_match::operator basic_string&lt;value_type&gt;  
  Wandelt eine Teilübereinstimmung in eine Zeichenfolge um.  
   
 ```  
@@ -498,7 +491,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchstra--submatchstr"></a><a name="sub_match__str"></a> sub_match::str  
+##  <a name="str"></a> sub_match::str  
  Konvertiert eine Teilübereinstimmung in eine Zeichenfolge.  
   
 ```  
@@ -561,7 +554,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchvaluetypea--submatchvaluetype"></a><a name="sub_match__value_type"></a> sub_match::value_type  
+##  <a name="value_type"></a> sub_match::value_type  
  Der Typ eines Elements.  
   
 ```  

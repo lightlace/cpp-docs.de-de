@@ -9,9 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.priority_queue
 - priority_queue
-- std::priority_queue
+- queue/std::priority_queue::container_type
+- queue/std::priority_queue::size_type
+- queue/std::priority_queue::value_type
+- queue/std::priority_queue::empty
+- queue/std::priority_queue::pop
+- queue/std::priority_queue::push
+- queue/std::priority_queue::size
+- queue/std::priority_queue::top
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 493cc5b28bb4cfa682b06ed904c3b0c0aa46220c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 31191f5109242dc239ac0237a2eab6ff459fe41b
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="priorityqueue-class"></a>priority_queue-Klasse
@@ -62,7 +69,7 @@ class priority_queue
  Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Warteschlange mit hoher Priorität zu bestimmen. Dieses Argument ist optional, und das binäre Prädikat **less***\<***typename** *Container***::value_type***>* ist der Standardwert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente der Klasse **Typ**, die im ersten Vorlagenparameter eines Warteschlangenobjekts festgelegt sind, sind gleichbedeutend mit [value_type](#priority_queue__value_type) und müssen mit dem Elementtyp in der zugrunde liegenden Containerklasse **Container** übereinstimmen, der im zweiten Vorlagenparameter festgelegt ist. Der **Type** muss zuweisbar sein, damit es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.  
+ Die Elemente der Klasse **Typ**, die im ersten Vorlagenparameter eines Warteschlangenobjekts festgelegt sind, sind gleichbedeutend mit [value_type](#value_type) und müssen mit dem Elementtyp in der zugrunde liegenden Containerklasse **Container** übereinstimmen, der im zweiten Vorlagenparameter festgelegt ist. Der **Type** muss zuweisbar sein, damit es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.  
   
  Der Warteschlange mit hoher Priorität sortiert die von ihr gesteuerte Sequenz, indem ein gespeichertes Funktionsobjekt vom Typ **Traits** aufruft. Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht.  
   
@@ -82,32 +89,32 @@ class priority_queue
   
 |||  
 |-|-|  
-|[priority_queue](#priority_queue__priority_queue)|Erstellt ein `priority_queue`-Objekt, das leer oder eine Kopie eines Basiscontainerobjekts oder eines anderen `priority_queue` ist.|  
+|[priority_queue](#priority_queue)|Erstellt ein `priority_queue`-Objekt, das leer oder eine Kopie eines Basiscontainerobjekts oder eines anderen `priority_queue` ist.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[container_type](#priority_queue__container_type)|Ein Typ, der den Basiscontainer bereitstellt, der durch ein `priority_queue`-Objekt übernommen werden soll.|  
-|[size_type](#priority_queue__size_type)|Eine Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in `priority_queue` darstellen kann.|  
-|[value_type](#priority_queue__value_type)|Ein Typ, der den Typ des Objekts angibt, das in einem `priority_queue`-Objekt als Element gespeichert wird.|  
+|[container_type](#container_type)|Ein Typ, der den Basiscontainer bereitstellt, der durch ein `priority_queue`-Objekt übernommen werden soll.|  
+|[size_type](#size_type)|Eine Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in `priority_queue` darstellen kann.|  
+|[value_type](#value_type)|Ein Typ, der den Typ des Objekts angibt, das in einem `priority_queue`-Objekt als Element gespeichert wird.|  
   
 ### <a name="member-functions"></a>Memberfunktionen  
   
 |||  
 |-|-|  
-|[leer](#priority_queue__empty)|Testet, ob das `priority_queue`-Objekt ist leer.|  
-|[pop](#priority_queue__pop)|Entfernt das größte Element der `priority_queue` von der obersten Position.|  
-|[push](#priority_queue__push)|Fügt ein Element zur Warteschlange mit hoher Priorität anhand der Priorität des Elements des operator< hinzu.|  
-|[size](#priority_queue__size)|Gibt die Anzahl von Elementen in der `priority_queue` zurück.|  
-|[top](#priority_queue__top)|Gibt einen konstanten Verweis auf das größte Element am oberen Rand von `priority_queue` zurück.|  
+|[leer](#empty)|Testet, ob das `priority_queue`-Objekt ist leer.|  
+|[pop](#pop)|Entfernt das größte Element der `priority_queue` von der obersten Position.|  
+|[push](#push)|Fügt ein Element zur Warteschlange mit hoher Priorität anhand der Priorität des Elements des operator< hinzu.|  
+|[size](#size)|Gibt die Anzahl von Elementen in der `priority_queue` zurück.|  
+|[top](#top)|Gibt einen konstanten Verweis auf das größte Element am oberen Rand von `priority_queue` zurück.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<queue>  
   
  **Namespace:** std  
   
-##  <a name="a-namepriorityqueuecontainertypea--priorityqueuecontainertype"></a><a name="priority_queue__container_type"></a> priority_queue::container_type  
+##  <a name="container_type"></a> priority_queue::container_type  
  Ein Typ, der den anzupassenden Basiscontainer bereitstellt.  
   
 ```  
@@ -120,9 +127,9 @@ typedef Container container_type;
  Weitere Informationen zu `Container` finden Sie im Abschnitt „Hinweise“ des Themas [priority_queue-Klasse](../standard-library/priority-queue-class.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [priority_queue](#priority_queue__priority_queue) wird verdeutlicht, wie `container_type` deklariert und verwendet wird.  
+  Im Beispiel für [priority_queue](#priority_queue) wird verdeutlicht, wie `container_type` deklariert und verwendet wird.  
   
-##  <a name="a-namepriorityqueueemptya--priorityqueueempty"></a><a name="priority_queue__empty"></a> priority_queue::empty  
+##  <a name="empty"></a> priority_queue::empty  
  Testet, ob eine priority_queue leer ist.  
   
 ```  
@@ -166,7 +173,7 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.  
 ```  
   
-##  <a name="a-namepriorityqueuepopa--priorityqueuepop"></a><a name="priority_queue__pop"></a> priority_queue::pop  
+##  <a name="pop"></a> priority_queue::pop  
  Entfernt das größte Element der priority_queue von der obersten Position.  
   
 ```  
@@ -220,7 +227,7 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.  
 ```  
   
-##  <a name="a-namepriorityqueuepriorityqueuea--priorityqueuepriorityqueue"></a><a name="priority_queue__priority_queue"></a> priority_queue::priority_queue  
+##  <a name="priority_queue"></a> priority_queue::priority_queue  
  Erstellt eine Warteschlange mit hoher Priorität, die leer ist oder eine Kopie eines Bereichs eines Basiscontainerobjekt oder einer anderen Warteschlange mit hoher Priorität ist.  
   
 ```  
@@ -249,21 +256,21 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
  `_Cont`  
  Der Basiscontainer, dessen Kopie die Warteschlange mit hoher Priorität sein soll.  
   
- ` right`  
+ `right`  
  Die Warteschlange mit hoher Priorität, deren Kopie der erstellte Satz sein soll.  
   
- ` first`  
+ `first`  
  Die Position des ersten Elements in dem zu kopierenden Elementbereich.  
   
- ` last`  
+ `last`  
  Die Position des ersten Elements nach dem zu kopierenden Elementbereich.  
   
 ### <a name="remarks"></a>Hinweise  
- Die ersten drei Konstruktoren geben eine ursprünglich leere Warteschlange mit hoher Priorität an. Dabei gibt der zweite Konstruktor auch den Typ der Vergleichsfunktion (` comp`) an, der zum Angeben der Reihenfolge der Elemente verwendet wird, und der dritte Konstruktor gibt explizit den zu verwendenden `container_type` ( `_Cont`) an. Mit dem Schlüsselwort **explicit** werden bestimmte Arten automatischer Typumwandlungen unterdrückt.  
+ Die ersten drei Konstruktoren geben eine ursprünglich leere Warteschlange mit hoher Priorität an. Dabei gibt der zweite Konstruktor auch den Typ der Vergleichsfunktion (`comp`) an, der zum Angeben der Reihenfolge der Elemente verwendet wird, und der dritte Konstruktor gibt explizit den zu verwendenden `container_type` ( `_Cont`) an. Mit dem Schlüsselwort **explicit** werden bestimmte Arten automatischer Typumwandlungen unterdrückt.  
   
- Der vierte Konstruktor gibt eine Kopie de Warteschlange mit hoher Priorität ` right` an.  
+ Der vierte Konstruktor gibt eine Kopie de Warteschlange mit hoher Priorität `right` an.  
   
- Die letzten drei Konstruktoren kopieren den Bereich [ * first,  last*) von einem Container und verwenden die Werte, um eine Warteschlange mit hoher Priorität zu initialisieren, mit steigender Explizitheit bei Angabe des Typs der Vergleichsfunktion der Klasse **Traits** und `container_type`.  
+ Die letzten drei Konstruktoren Kopieren des Bereichs [* ersten, letzten *) einige Container und verwenden Sie die Werte ein Priority_queue mit erhöhen sich die Explizitheit bei Angabe des Typs der Vergleichsfunktion der Klasse initialisieren **Traits** und `container_type`.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -376,7 +383,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namepriorityqueuepusha--priorityqueuepush"></a><a name="priority_queue__push"></a> priority_queue::push  
+##  <a name="push"></a> priority_queue::push  
  Fügt ein Element zur Warteschlange mit hoher Priorität anhand der Priorität des Elements des operator< hinzu.  
   
 ```  
@@ -384,7 +391,7 @@ void push(const Type& val);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` val`  
+ `val`  
  Das am Anfang zur Warteschlange mit hoher Priorität hinzugefügte Element.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -422,7 +429,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="a-namepriorityqueuesizea--priorityqueuesize"></a><a name="priority_queue__size"></a> priority_queue::size  
+##  <a name="size"></a> priority_queue::size  
  Gibt die Anzahl der Elemente in der Warteschlange mit hoher Priorität zurück.  
   
 ```  
@@ -461,7 +468,7 @@ The priority_queue length is 1.
 The priority_queue length is now 2.  
 ```  
   
-##  <a name="a-namepriorityqueuesizetypea--priorityqueuesizetype"></a><a name="priority_queue__size_type"></a> priority_queue::size_type  
+##  <a name="size_type"></a> priority_queue::size_type  
  Ein Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in einer Warteschlange mit hoher Priorität darstellen kann.  
   
 ```  
@@ -472,9 +479,9 @@ typedef typename Container::size_type size_type;
  Der Typ ist ein Synonym für das `size_type` des Basiscontainers, der von der Warteschlange mit hoher Priorität angepasst wurde.  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [size](#priority_queue__size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.  
+  Im Beispiel für [size](#size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.  
   
-##  <a name="a-namepriorityqueuetopa--priorityqueuetop"></a><a name="priority_queue__top"></a> priority_queue::top  
+##  <a name="top"></a> priority_queue::top  
  Gibt einen konstanten Verweis auf das größte Element am oberen Rand von priority_queue.  
   
 ```  
@@ -519,7 +526,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="a-namepriorityqueuevaluetypea--priorityqueuevaluetype"></a><a name="priority_queue__value_type"></a> priority_queue::value_type  
+##  <a name="value_type"></a> priority_queue::value_type  
  Ein Typ, der den Typ des Objekts angibt, das als Element in einer Warteschlange mit hoher Priorität gespeichert wird.  
   
 ```  

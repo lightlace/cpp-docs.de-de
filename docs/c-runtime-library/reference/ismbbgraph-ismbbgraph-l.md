@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 828ca38d754d40729f8d09cb22526fb872605024
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 99ab02233eed70ab92e1aabcf567d9cfc244c101
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
@@ -84,13 +85,13 @@ int _ismbbgraph_l (
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt einen Wert ungleich&0; (null) zurück, wenn diese Bedingung zutrifft. Der Ausdruck:  
+ Gibt einen Wert ungleich 0 (null) zurück, wenn diese Bedingung zutrifft. Der Ausdruck:  
   
 ```  
 ( _PUNCT | _UPPER | _LOWER | _DIGIT ) || _ismbbkprint  
 ```  
   
- ist für `c` ungleich 0, bzw. andernfalls 0. `_ismbbgraph` verwendet das aktuelle Gebietsschema für jedes gebietsschemaabhängige Verhalten. `_ismbbgraph_l` ist identisch, verwendet jedoch stattdessen das übergebene Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ ist für `c`ungleich 0, bzw. andernfalls 0. `_ismbbgraph` verwendet das aktuelle Gebietsschema für jedes gebietsschemaabhängige Verhalten. `_ismbbgraph_l` ist identisch, verwendet jedoch stattdessen das übergebene Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -103,9 +104,6 @@ int _ismbbgraph_l (
   
 ## <a name="libraries"></a>Bibliotheken  
  Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Byteklassifizierung](../../c-runtime-library/byte-classification.md)   

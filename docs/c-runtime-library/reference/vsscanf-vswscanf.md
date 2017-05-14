@@ -1,50 +1,67 @@
 ---
-title: "vsscanf, vswscanf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vsscanf"
-  - "vswscanf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_vstscanf"
-  - "vsscanf"
-  - "vswscanf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vsscanf-Funktion"
-  - "vswscanf-Funktion"
+title: vsscanf, vswscanf | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vsscanf
+- vswscanf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _vstscanf
+- vsscanf
+- vswscanf
+dev_langs:
+- C++
+helpviewer_keywords:
+- vswscanf function
+- vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# vsscanf, vswscanf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 06c26fdeb5d63a446600bc288f99ca9cc903d002
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Liest formatierte Daten aus einer Zeichenfolge.  Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [vsscanf\_s, vswscanf\_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
+---
+# <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
+Liest formatierte Daten aus einer Zeichenfolge. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int vsscanf(  
@@ -59,47 +76,47 @@ int vswscanf(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `buffer`  
  Gespeicherte Daten  
   
  `format`  
- Formatsteuerzeichenfolge.  Weitere Informationen finden Sie unter [Formatangabefelder: scanf\- und wscanf\-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
+ Formatsteuerzeichenfolge. Weitere Informationen finden Sie unter [Formatangabefelder: scanf- und wscanf-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
  `arglist`  
  Variablenargumentenliste.  
   
-## Rückgabewert  
- Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden.  Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden.  Der Rückgabewert bei einem Fehler oder beim Erreichen des Endes der Zeichenfolge vor der ersten Konvertierung lautet `EOF`.  
+## <a name="return-value"></a>Rückgabewert  
+ Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert bei einem Fehler oder beim Erreichen des Endes der Zeichenfolge vor der ersten Konvertierung lautet `EOF`.  
   
- Wenn `buffer` oder `format` ein `NULL`\-Zeiger ist, wird, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, der Handler für ungültige Parameter aufgerufen.  Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "– 1" zurück und legen `errno` auf `EINVAL` fest.  
+ Wenn `buffer` oder `format` ein `NULL`-Zeiger ist, wird der Handler für ungültige Parameter wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "– 1" zurück und legen `errno` auf `EINVAL`fest.  
   
- Informationen zu diesen und anderen Fehlercodes finden Sie unter [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die `vsscanf`\-Funktion liest Daten von `buffer` in die Speicherorte, die in der `arglist`\-Argumentliste von jedem Argument angegeben werden.  Jedes Argument in der Liste muss ein Zeiger auf eine Variable sein, deren Typ einem Typspezifizierer in `format` entspricht.  Das `format`\-Argument steuert die Interpretation der Eingabefelder und hat die gleiche Form und Funktion wie das `format`\-Argument für die `scanf`\-Funktion.  Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  
+## <a name="remarks"></a>Hinweise  
+ Die `vsscanf`-Funktion liest Daten von `buffer` in die Speicherorte, die in der `arglist`-Argumentliste von jedem Argument angegeben werden. Jedes Argument in der Liste muss ein Zeiger auf eine Variable sein, deren Typ einem Typspezifizierer in `format` entspricht. Das `format`-Argument steuert die Interpretation der Eingabefelder und hat die gleiche Form und Funktion wie das `format`-Argument für die `scanf`-Funktion. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  
   
 > [!IMPORTANT]
->  Wenn Sie `vsscanf` verwenden, um eine Zeichenfolge zu lesen, müssen Sie immer einer Breite für das `%s`\-Format angeben \(beispielsweise `"%32s"` anstelle von `"%s"`\). Anderenfalls kann eine falsch formatierte Eingabe zu einem Pufferüberlauf führen.  
+>  Wenn Sie `vsscanf` verwenden, um eine Zeichenfolge zu lesen, müssen Sie immer einer Breite für das `%s`-Format angeben (beispielsweise `"%32s"` anstelle von `"%s"`). Anderenfalls kann eine falsch formatierte Eingabe zu einem Pufferüberlauf führen.  
   
- `vswscanf` ist eine Breitzeichenversion von `vsscanf`. Die Argumente für `vswscanf` sind Zeichenfolgen mit Breitzeichen.  `vsscanf` verarbeitet keine Multibyte\-Hexadezimalzeichen.  `vswscanf` verarbeitet keine Unicode\-Hexadezimalzeichen in voller Breite \(Kompatibilitätszonenzeichen\).  Andernfalls verhalten sich `vswscanf` und `vsscanf` identisch.  
+ `vswscanf` ist eine Breitzeichenversion von `vsscanf`. Die Argumente für `vswscanf` sind Zeichenfolgen mit Breitzeichen. `vsscanf` verarbeitet keine Multibyte-Hexadezimalzeichen. `vswscanf` verarbeitet keine Unicode-Hexadezimalzeichen in voller Breite (Kompatibilitätszonenzeichen). Andernfalls verhalten sich `vswscanf` und `vsscanf` identisch.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstscanf`|`vsscanf`|`vsscanf`|`vswscanf`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`vsscanf`|\<stdio.h\>|  
-|`vswscanf`|\<stdio.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`vsscanf`|\<stdio.h>|  
+|`vswscanf`|\<stdio.h> oder \<wchar.h>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_vsscanf.c  
@@ -143,16 +160,16 @@ int main( void )
 }  
 ```  
   
-  **Zeichenfolge    \= 15**  
-**Zeichen \= 1**  
-**Ganze Zahl:  \= 15**  
-**Real:     \= 15.000000**   
-## .NET Framework-Entsprechung  
- Siehe `Parse`\-Methoden wie [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+```Output  
+String    = 15  
+Character = 1  
+Integer:  = 15  
+Real:     = 15.000000  
+```  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [vsscanf\_s, vswscanf\_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)

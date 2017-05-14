@@ -1,64 +1,87 @@
 ---
-title: "time_base-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.time_base"
-  - "std::time_base"
-  - "time_base"
-  - "locale/std::time_base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "time_base-Klasse"
+title: time_base Class | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- time_base
+- locale/std::time_base
+dev_langs:
+- C++
+helpviewer_keywords:
+- time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# time_base-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 86e27eec232094c1e57120f6f811c96b4e4a4871
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
-Die Klasse dient als Basisklasse für die Aspekte von time\_get Vorlagenklasse und definiert nur den enumerierten **dateorder** und mehrere Konstanten aus dieses Typs.  
+---
+# <a name="timebase-class"></a>time_base-Klasse
+Die Klasse dient als Basisklasse für Facets der Vorlagenklasse time_get und definiert nur den Aufzählungstyp **dateorder** und mehrere Konstanten dieses Typs.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+class time_base : public locale::facet {
+public:
+    enum dateorder {no_order,
+    dmy,
+ mdy,
+    ymd,
+ ydm};
+    time_base(
+ size_t _Refs = 0)
+ ~time_base();
+
+};
 ```  
-class time_base : public locale::facet {  
-public:  
-    enum dateorder {no_order, dmy, mdy, ymd, ydm};  
-    time_base(  
-        size_t _Refs = 0  
-    )  
-    ~time_base();  
-};  
-```  
   
-## Hinweise  
- Jede Konstante kennzeichnet eine andere Weise, die Komponenten eines Datums zu sortieren.  Die Konstanten sind:  
+## <a name="remarks"></a>Hinweise  
+ Jede Konstante kennzeichnet eine andere Möglichkeit, die Komponenten eines Datums zu ordnen. Es gibt folgende Konstanten:  
   
--   **no\_order** gibt keine bestimmten Reihenfolge.  
+- **no_order** kennzeichnet keine bestimmte Reihenfolge.  
   
--   **dmy** gibt den Reihenfolgentag, Monat, Jahr dann, wie in am 2. Dezember 1979 an.  
+- **dmy** kennzeichnet die Reihenfolge Tag, Monat, Jahr wie in 2. Dezember 1979.  
   
--   **mdy** gibt den Reihenfolgenmonat, Tag, dann Jahr, wie in am 2. Dezember 1979 an.  
+- **mdy** kennzeichnet die Reihenfolge Monat, Tag, Jahr wie in Dezember 2, 1979.  
   
--   **ymd** gibt den Reihenfolgenjahr, Monat, Tag, dann als \/2. im Jahre 1979 \/12 an.  
+- **ymd** kennzeichnet die Reihenfolge Jahr, Monat, Tag wie in 1979/12/2.  
   
--   **ydm** gibt den Reihenfolgenjahr, Tag, Monat, dann als im Jahre 1979 an: Am 2. Dezember  
+- **ydm** kennzeichnet die Reihenfolge Jahr, Tag, Monat wie in 1979: 2 Dez.  
   
-## Anforderungen  
- **Header:** \<Gebietsschema\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<locale>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

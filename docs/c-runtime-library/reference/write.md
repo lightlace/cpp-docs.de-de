@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d035a6b0941e7fa916e9306e5ef4f420d4e066d5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9e6e654e043a71cbb6eb75c53077b14400b82d72
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="write"></a>_write
@@ -79,11 +80,11 @@ int _write(
  Anzahl der Bytes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Im Erfolgsfall gibt `_write` die Anzahl der tatsächlich geschriebenen Bytes zurück. Wenn der auf der Festplatte verbleibende Speicherplatz geringer ist als die Größe des Puffers, versucht die Funktion, auf die Festplatte zu schreiben, und `_write` schlägt fehl und leert keine Inhalte des Puffers auf die Festplatte. Ein Rückgabewert von –1 zeigt einen Fehler an. Wenn ungültige Parameter übergeben werden, ruft diese Funktion den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion -1 zurück, und `errno` wird auf einen von drei Werten gesetzt: `EBADF` mit der Bedeutung, dass der Dateideskriptor ungültig ist oder die Datei nicht zum Schreiben geöffnet wird; `ENOSPC` mit der Bedeutung, dass auf dem Gerät nicht mehr genug Speicherplatz für den Vorgang vorhanden ist, oder `EINVAL` mit der Bedeutung, dass `buffer` ein NULL-Zeiger war oder dass im Unicode-Modus eine ungerade `count` von Bytes zum Schreiben in eine Datei übergeben wurde.  
+ Im Erfolgsfall gibt `_write` die Anzahl der tatsächlich geschriebenen Bytes zurück. Wenn der auf der Festplatte verbleibende Speicherplatz geringer ist als die Größe des Puffers, versucht die Funktion, auf die Festplatte zu schreiben, und `_write` schlägt fehl und leert keine Inhalte des Puffers auf die Festplatte. Ein Rückgabewert von – 1 zeigt einen Fehler. Wenn ungültige Parameter übergeben werden, ruft diese Funktion den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion -1 zurück, und `errno` wird auf einen von drei Werten gesetzt: `EBADF` mit der Bedeutung, dass der Dateideskriptor ungültig ist oder die Datei nicht zum Schreiben geöffnet wird; `ENOSPC` mit der Bedeutung, dass auf dem Gerät nicht mehr genug Speicherplatz für den Vorgang vorhanden ist, oder `EINVAL` mit der Bedeutung, dass `buffer` ein NULL-Zeiger war oder dass im Unicode-Modus eine ungerade `count` von Bytes zum Schreiben in eine Datei übergeben wurde.  
   
  Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Wenn eine Datei im Textmodus geöffnet wird, wird jeder Zeilenvorschub in der Ausgabe durch einen Zeilenvorschub plus ein Wagenrücklaufzeichen ersetzt. Diese Ersetzung hat keine Auswirkung auf den Rückgabewert.  
+ Wenn die Datei im Textmodus geöffnet wird, wird jeder Zeilenvorschub durch einen Wagenrücklauf - Zeilenvorschub in der Ausgabe ersetzt. Diese Ersetzung hat keine Auswirkung auf den Rückgabewert.  
   
  Wenn die Datei in einem Unicode-Übersetzungsmodus geöffnet wird – z.B., wenn `fd` durch Verwendung von `_open` oder `_sopen` und eines Modusparameters geöffnet wird, der `_O_WTEXT`, `_O_U16TEXT` oder `_O_U8TEXT` enthält, oder wenn sie durch Verwendung von `fopen` und eines Modusparameters geöffnet wird, der `ccs=UNICODE`, `ccs=UTF-16LE` oder `ccs=UTF-8` enthält, oder wenn der Modus durch Verwendung von `_setmode` in einen Unicode-Übersetzungsmodus geändert wird, wird `buffer` als Zeiger auf ein Array von `wchar_t` interpretiert, das **UTF-16**-Daten enthält. Der Versuch, in diesem Modus eine ungerade Anzahl von Bytes zu schreiben, führt zu einem Parametervalidierungsfehler.  
   

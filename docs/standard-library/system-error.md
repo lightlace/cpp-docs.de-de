@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: ad53550cce165587057910e3cd4c77427fb1cd55
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8f3441306b21ca1111cf2fd2d377a1b233e7ad86
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
@@ -75,15 +76,15 @@ Schließen Sie den `<system_error>` zum Definieren der Ausnahmeklasse `system_er
   
 |||  
 |-|-|  
-|[operator==](../standard-library/system-error-operators.md#operator_eq_eq)|Testet, ob das Objekt links vom Operator gleich dem Objekt rechts vom Operator ist.|  
-|[operator!=](../standard-library/system-error-operators.md#operator_neq)|Testet, ob das Objekt links vom Operator ungleich dem Objekt rechts vom Operator ist.|  
-|[operator<](../standard-library/system-error-operators.md#operator_lt_)|Testet, ob ein Objekt kleiner ist als das Objekt, das für den Vergleich übergeben wurde.|  
+|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Testet, ob das Objekt links vom Operator gleich dem Objekt rechts vom Operator ist.|  
+|[operator!=](../standard-library/system-error-operators.md#op_neq)|Testet, ob das Objekt links vom Operator ungleich dem Objekt rechts vom Operator ist.|  
+|[operator<](../standard-library/system-error-operators.md#op_lt)|Testet, ob ein Objekt kleiner ist als das Objekt, das für den Vergleich übergeben wurde.|  
   
 ### <a name="enumerations"></a>Enumerationen  
   
 |||  
 |-|-|  
-|[errc](../standard-library/system-error-enums.md#errc_enumeration)|Gibt symbolische Namen für alle Fehlercodemakros an, die von Posix in `<errno.h>` definiert sind.|  
+|[errc](../standard-library/system-error-enums.md#errc)|Gibt symbolische Namen für alle Fehlercodemakros an, die von Posix in `<errno.h>` definiert sind.|  
   
 ### <a name="classes-and-structs"></a>Klassen und Strukturen  
   

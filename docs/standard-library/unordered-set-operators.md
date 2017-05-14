@@ -10,18 +10,19 @@ f1_keywords: []
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: da5fe91f5306080ce10c72d8cc1908b6952135c3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 5fbd22c2f21eaa36e75afd051ab3fbaa5858e5a2
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt;-Operatoren
 |||||  
 |-|-|-|-|  
-|[operator!=](#operator_neq)|[operator==](#operator_eq_eq)|[operator!=](#operator_neq_unordered_multiset)|[operator==](#operator_eq_eq_unordered_multiset)|  
+|[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_unordered_multiset)|[operator==](#op_eq_eq_unordered_multiset)|  
   
-##  <a name="operator_neq"></a> operator!=  
+##  <a name="op_neq"></a> operator!=  
  Testet, ob das [unordered_set](../standard-library/unordered-set-class.md)-Objekt links vom Operator ungleich dem unordered_set-Objekt rechts vom Operator ist.  
   
 ```
@@ -86,7 +87,7 @@ int main()
   
  `c2 != c3: true`  
   
-##  <a name="operator_eq_eq"></a> operator==  
+##  <a name="op_eq_eq"></a> operator==  
  Testet, ob das [unordered_set](../standard-library/unordered-set-class.md)-Objekt links vom Operator gleich dem unordered_set-Objekt rechts vom Operator ist.  
   
 ```
@@ -151,7 +152,7 @@ int main()
   
  `c2 == c3: false`  
   
-##  <a name="operator_neq_unordered_multiset"></a> operator!=  
+##  <a name="op_neq_unordered_multiset"></a> operator!=  
  Überprüft, ob das [unordered_multiset](../standard-library/unordered-multiset-class.md)-Objekt links vom Operator ungleich dem unordered_multiset-Objekt rechts vom Operator ist.  
   
 ```
@@ -219,7 +220,7 @@ int main()
   
  `c2 != c3: true`  
   
-##  <a name="operator_eq_eq_unordered_multiset"></a> operator==  
+##  <a name="op_eq_eq_unordered_multiset"></a> operator==  
  Überprüft, ob das [unordered_multiset](../standard-library/unordered-multiset-class.md)-Objekt links vom Operator gleich dem unordered_multiset-Objekt rechts vom Operator ist.  
   
 ```

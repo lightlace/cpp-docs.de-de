@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 78c12c22f85eb9ba50b1ea5a92f6f3bb171e01a0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 48718acb6ad8773f876251962fd4b643993c27e8
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
@@ -110,7 +111,7 @@ long double erfcl(
   
  ![Die Fehlerfunktion von x](../../c-runtime-library/reference/media/crt_erf_formula.PNG "CRT_erf_formula")  
   
- Die komplementäre Gauß-Fehlerfunktion ist als 1 - erf(x) definiert. Die `erf`-Funktionen geben einen Wert im Bereich -1,0 bis 1,0 zurück. Es gibt keine Fehlerrückgabe. Die `erfc`-Funktionen geben einen Wert im Bereich 0 bis 2 zurück. Wenn `x` für `erfc` zu groß ist, wird die `errno`-Variable auf `ERANGE` festgelegt.  
+ Die komplementäre Gauß-Fehlerfunktion ist definiert als 1 - erf(x). Die `erf`-Funktionen geben einen Wert im Bereich -1,0 bis 1,0 zurück. Es gibt keine Fehlerrückgabe. Die `erfc`-Funktionen geben einen Wert im Bereich 0 bis 2 zurück. Wenn `x` für `erfc` zu groß ist, wird die `errno`-Variable auf `ERANGE` festgelegt.  
   
  Da C++ das Überladen zulässt, können Sie Überladungen von `erf` und `erfc` aufrufen, die `float`- und `long double`-Typen verwenden und zurückgeben. In einem C-Programm verwenden `erf` und `erfc` immer `double` und geben dieses auch zurück.  
   
@@ -121,9 +122,6 @@ long double erfcl(
 |`erf`, `erff`, `erfl`, `erfc`, `erfcf`, `erfcl`|\<math.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)

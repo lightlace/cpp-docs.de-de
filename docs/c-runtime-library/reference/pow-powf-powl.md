@@ -1,59 +1,76 @@
 ---
-title: "pow, powf, powl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "powl"
-  - "pow"
-  - "powf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "powl"
-  - "pow"
-  - "_powl"
-  - "powf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_powl-Funktion"
-  - "Berechnen von Exponentialen"
-  - "Exponentielle Berechnungen"
-  - "Potenzierung"
-  - "pow-Funktion"
-  - "Potenzieren, Berechnen"
-  - "powf-Funktion"
-  - "powl-Funktion"
+title: Pow, Powf, Powl | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- powl
+- pow
+- powf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- powl
+- pow
+- _powl
+- powf
+dev_langs:
+- C++
+helpviewer_keywords:
+- exponential calculations
+- powl function
+- _powl function
+- exponentiation
+- powers, calculating
+- calculating exponentials
+- powf function
+- pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# pow, powf, powl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4400582a792644b928c02db346bc7eae1087dc85
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="pow-powf-powl"></a>pow, powf, powl
 Berechnet `x` potenziert mit `y`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double pow(  
@@ -90,43 +107,43 @@ long double powl(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `x`  
  Basis.  
   
  `y`  
  Exponent.  
   
-## Rückgabewert  
- Gibt den Wert von `x`<sup>y</sup> zurück.  Zu Überlauf oder Unterlauf wird keine Fehlermeldung ausgegeben.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt den Wert von `x`<sup>y</sup> zurück. Zu Überlauf oder Unterlauf wird keine Fehlermeldung ausgegeben.  
   
 |Werte von x und y|Rückgabewert von "pow"|  
-|-----------------------|----------------------------|  
-|`x` \< \> 0 und `y` \= 0,0|1|  
-|`x` \= 0,0 und `y` \= 0,0|1|  
-|`x` \= 0,0 und `y` \< 0|INF|  
+|-----------------------|-------------------------|  
+|`x` \< > 0 und `y` = 0,0|1|  
+|`x` = 0,0 und `y` = 0,0|1|  
+|`x` = 0,0 und `y` < 0|INF|  
   
-## Hinweise  
- `pow` erkennt keine ganzzahligen Gleitkommawerte, die größer als 2<sup>64</sup> sind \(z. B. `1.0E100`\).  
+## <a name="remarks"></a>Hinweise  
+ `pow` erkennt keine ganzzahligen Gleitkommawerte, die größer als 2<sup>64</sup> sind (z.B. `1.0E100`).  
   
- `pow` ist eine Implementierung, die SIMD\-Streamingerweiterungen 2 \(SSE2\) verwendet.  Informationen und Einschränkungen zur Verwendung der SSE2\-Implementierung finden Sie unter [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
+ `pow` ist eine Implementierung, die SIMD-Streamingerweiterungen 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
- Da C\+\+ Überladungen zulässt, können Sie jede der verschiedenen Überladungen von `pow` aufrufen.  In einem C\-Programm verwendet `pow` immer zwei double\-Werte und gibt einen double\-Wert zurück.  
+ Da C++ Überladungen zulässt, können Sie jede der verschiedenen Überladungen von `pow` aufrufen. In einem C-Programm verwendet `pow` immer zwei double-Werte und gibt einen double-Wert zurück.  
   
- Die `pow(int, int)`\-Überladung ist nicht mehr verfügbar.  Wenn Sie diese Überladung verwenden, kann der Compiler C2668 ausgeben.  Um dieses Problem zu vermeiden, wandeln Sie den ersten Parameter in `double`, `float` oder `long double` um.  
+ Die `pow(int, int)`-Überladung ist nicht mehr verfügbar. Wenn Sie diese Überladung verwenden, kann der Compiler C2668 ausgeben. Um dieses Problem zu vermeiden, wandeln Sie den ersten Parameter in `double`, `float` oder `long double` um.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`pow`, `powf`, `powl`|\<math.h\>|  
+|-------------|---------------------|  
+|`pow`, `powf`, `powl`|\<math.h>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_pow.c  
@@ -143,18 +160,15 @@ int main( void )
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 2.0 to the power of 3.0 is 8.0  
 ```  
   
-## .NET Framework-Entsprechung  
- [System::Math::Pow](https://msdn.microsoft.com/en-us/library/system.math.pow.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [exp, expf](../../c-runtime-library/reference/exp-expf.md)   
+ [EXP, Expf, expl](../../c-runtime-library/reference/exp-expf.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
  [sqrt, sqrtf, sqrtl](../../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)   
- [\_CIpow](../../c-runtime-library/cipow.md)
+ [_CIpow](../../c-runtime-library/cipow.md)

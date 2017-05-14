@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
-ms.openlocfilehash: 0db56597dd5d5ce8b68a45a5b53ce1af370134ee
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3daf7a48855ef4db50f7ed105cf5785619149a7f
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="queue-class"></a>queue-Klasse
@@ -66,7 +67,7 @@ class queue
  Der Typ des zugrunde liegenden Containers, der verwendet wird, um die Warteschlange zu implementieren.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente der Klasse **Typ**, die im ersten Vorlagenparameter eines Warteschlangenobjekts festgelegt sind, sind gleichbedeutend mit [value_type](#queue__value_type) und müssen mit dem Elementtyp in der zugrunde liegenden Containerklasse **Container** übereinstimmen, der im zweiten Vorlagenparameter festgelegt ist. Der **Typ** muss zuweisbar sein, damit es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.  
+ Die Elemente der Klasse **Typ**, die im ersten Vorlagenparameter eines Warteschlangenobjekts festgelegt sind, sind gleichbedeutend mit [value_type](#value_type) und müssen mit dem Elementtyp in der zugrunde liegenden Containerklasse **Container** übereinstimmen, der im zweiten Vorlagenparameter festgelegt ist. Der **Typ** muss zuweisbar sein, damit es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.  
   
  Geeignete zugrunde liegende Containerklassen für die Warteschlange sind [Doppelschlange](../standard-library/deque-class.md) und [Liste](../standard-library/list-class.md) oder ein beliebiger Sequenzcontainer, der die Vorgänge von `front`, **Rückseite**, `push_back` und `pop_front` unterstützt. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.  
   
@@ -84,33 +85,33 @@ class queue
   
 |||  
 |-|-|  
-|[Warteschlange](#queue__queue)|Erstellt ein `queue`-Objekt, das leer oder eine Kopie eines Basiscontainerobjekts ist.|  
+|[Warteschlange](#queue)|Erstellt ein `queue`-Objekt, das leer oder eine Kopie eines Basiscontainerobjekts ist.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[container_type](#queue__container_type)|Ein Typ, der den Basiscontainer bereitstellt, der durch `queue` angepasst werden soll.|  
-|[size_type](#queue__size_type)|Eine Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in `queue` darstellen kann.|  
-|[value_type](#queue__value_type)|Ein Typ, der den Typ des Objekts angibt, das in einem `queue`-Objekt als Element gespeichert wird.|  
+|[container_type](#container_type)|Ein Typ, der den Basiscontainer bereitstellt, der durch `queue` angepasst werden soll.|  
+|[size_type](#size_type)|Eine Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in `queue` darstellen kann.|  
+|[value_type](#value_type)|Ein Typ, der den Typ des Objekts angibt, das in einem `queue`-Objekt als Element gespeichert wird.|  
   
 ### <a name="member-functions"></a>Memberfunktionen  
   
 |||  
 |-|-|  
-|[Rückseite](#queue__back)|Gibt ein Verweis auf das letzte und das zuletzt hinzugefügte Element auf der Rückseite des `queue` zurück.|  
-|[leer](#queue__empty)|Testet, ob das `queue`-Objekt ist leer.|  
-|[Vorderseite](#queue__front)|Gibt einen Verweis auf das erste Element auf der Vorderseite von `queue` zurück.|  
-|[pop](#queue__pop)|Entfernt ein Element vom Anfang der `queue`.|  
-|[push](#queue__push)|Fügt am Ende der `queue` ein Element hinzu.|  
-|[size](#queue__size)|Gibt die Anzahl von Elementen in der `queue` zurück.|  
+|[Rückseite](#back)|Gibt ein Verweis auf das letzte und das zuletzt hinzugefügte Element auf der Rückseite des `queue` zurück.|  
+|[leer](#empty)|Testet, ob das `queue`-Objekt ist leer.|  
+|[Vorderseite](#front)|Gibt einen Verweis auf das erste Element auf der Vorderseite von `queue` zurück.|  
+|[pop](#pop)|Entfernt ein Element vom Anfang der `queue`.|  
+|[push](#push)|Fügt am Ende der `queue` ein Element hinzu.|  
+|[size](#size)|Gibt die Anzahl von Elementen in der `queue` zurück.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<queue>  
   
  **Namespace:** std  
   
-##  <a name="queue__back"></a> queue::back  
+##  <a name="back"></a> queue::back  
  Gibt einen Verweis auf das letzte und das zuletzt hinzugefügte Element auf der Rückseite der Warteschlange zurück.  
   
 ```  
@@ -153,7 +154,7 @@ int main( )
 }  
 ```  
   
-##  <a name="queue__container_type"></a> queue::container_type  
+##  <a name="container_type"></a> queue::container_type  
  Ein Typ, der den anzupassenden Basiscontainer bereitstellt.  
   
 ```  
@@ -166,9 +167,9 @@ typedef Container container_type;
  Weitere Informationen zu `Container` finden Sie im Abschnitt „Hinweise“ des Themas [Warteschlangenklasse](../standard-library/queue-class.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [Warteschlange](#queue__queue) wird verdeutlicht, wie ein `container_type` deklariert und verwendet wird.  
+  Im Beispiel für [Warteschlange](#queue) wird verdeutlicht, wie ein `container_type` deklariert und verwendet wird.  
   
-##  <a name="queue__empty"></a> queue::empty  
+##  <a name="empty"></a> queue::empty  
  Testet, ob eine Warteschlange leer ist.  
   
 ```  
@@ -212,7 +213,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="queue__front"></a> queue::front  
+##  <a name="front"></a> queue::front  
  Gibt einen Verweis auf das erste Element auf der Vorderseite einer Warteschlange zurück.  
   
 ```  
@@ -261,7 +262,7 @@ int main() {
 }  
 ```  
   
-##  <a name="queue__pop"></a> queue::pop  
+##  <a name="pop"></a> queue::pop  
  Entfernt ein Element von der Vorderseite der Warteschlange.  
   
 ```  
@@ -315,7 +316,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="queue__push"></a> queue::push  
+##  <a name="push"></a> queue::push  
  Fügt am Ende der Warteschlange ein Element hinzu.  
   
 ```  
@@ -361,7 +362,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="queue__queue"></a> queue::queue  
+##  <a name="queue"></a> queue::queue  
  Erstellt eine Warteschlange, die leer oder eine Kopie eines Basiscontainerobjekts ist.  
   
 ```  
@@ -425,7 +426,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="queue__size"></a> queue::size  
+##  <a name="size"></a> queue::size  
  Gibt die Anzahl der Elemente in der Warteschlange zurück.  
   
 ```  
@@ -464,7 +465,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="queue__size_type"></a> queue::size_type  
+##  <a name="size_type"></a> queue::size_type  
  Ein Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in einer Warteschlange darstellen kann.  
   
 ```  
@@ -475,9 +476,9 @@ typedef typename Container::size_type size_type;
  Der Typ ist ein Synonym für das `size_type` des Basiscontainers, der von der Warteschlange angepasst wurde.  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [queue::front](#queue__front) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.  
+  Im Beispiel für [queue::front](#front) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.  
   
-##  <a name="queue__value_type"></a> queue::value_type  
+##  <a name="value_type"></a> queue::value_type  
  Ein Typ, der den Objekttyp angibt, der als Element in einer Warteschlange gespeichert wird.  
   
 ```  

@@ -33,10 +33,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: a817bc264a762d6043b80a68d966a9e8420c72b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 89cbb528d14117feac1f04863f0f4082969f22d9
+ms.contentlocale: de-de
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
@@ -64,7 +65,7 @@ Definiert Funktionen zum Generieren von Zufallszahlen und erlaubt die Erstellung
 ### <a name="quick-tips"></a>Einfache Tipps  
  Hier erhalten Sie einige Tipps, die Sie beachten sollten, wenn Sie `<random>` verwenden:  
   
--   Für die meisten Zwecke produzieren URNGs Rohbits, die durch Verteilungen geformt werden müssen. (Eine wichtige Ausnahme ist [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle), da es einen URNG direkt verwendet.)  
+-   Für die meisten Zwecke produzieren URNGs Rohbits, die durch Verteilungen geformt werden müssen. (Eine wichtige Ausnahme ist [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), da es einen URNG direkt verwendet.)  
   
 -   Eine einzelne Instanziierung eines URNG oder einer Verteilung kann nicht gleichzeitig sicher aufgerufen werden, da die Ausführung eines URNG oder einer Verteilung ein Änderungsvorgang ist. Weitere Informationen finden Sie unter [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md).  
   
@@ -74,7 +75,7 @@ Definiert Funktionen zum Generieren von Zufallszahlen und erlaubt die Erstellung
   
  Der `<random>`-Header enthält mehrere Optionen zur Auswahl, von denen jede der veralteten C-Laufzeitfunktion `rand()` vorzuziehen ist. Informationen über die Nachteile von `rand()` und die Behebung dieser Schwachpunkte durch `<random>` erhalten Sie in [diesem Video](http://go.microsoft.com/fwlink/LinkId=397615).  
   
-##  <a name="a-namecodea-examples"></a><a name="code"></a> Beispiele  
+##  <a name="code"></a> Beispiele  
  Im folgenden Codebeispiel wird veranschaulicht, wie einige Zufallszahlen (in diesem Fall fünf) mit einem Generator erstellt werden, der mit einem nicht-deterministischen Startwert generiert wurde.  
   
 ```cpp  
@@ -228,9 +229,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
 Dieser Code zeigt zwei verschiedene Randomisierungen – Randomisierungen eines Vektors aus Ganzzahlen und Mischung eines Arrays indizierter Daten – mit einer Testvorlagenfunktion. Der erste Aufruf der Testfunktion verwendet den kryptografisch sicheren, nicht-deterministischen, nicht startwert fähigen, nicht wiederholbaren `random_device`-URNG. Für den zweiten Testlauf wird das `mersenne_twister_engine` als URNG mit einem deterministischen konstanten 32-Bit-Startwert verwendet, was bedeutet, dass die Ergebnisse wiederholbar sind. Der dritte Testlauf startet das `mersenne_twister_engine` mit einem nicht-deterministischen 32-Bit-Ergebnis aus `random_device`. Der vierte Testlauf baut darauf auf, indem er eine mit `random_device`-Ergebnissen gefüllte [Startwertsequenz](../standard-library/seed-seq-class.md) verwendet, die mehr als 32-Bit nicht-deterministische Zufallszahlen ausgibt ( die aber immer noch kryptografisch sicher sind). Weitere Informationen dazu erhalten Sie im Folgenden.  
   
-##  <a name="a-namelistinga-categorized-listing"></a><a name="listing"></a> Kategorisierte Auflistung  
+##  <a name="listing"></a> Kategorisierte Auflistung  
   
-###  <a name="a-nameurngsa-uniform-random-number-generators"></a><a name="urngs"></a> Einheitlicher Zufallszahlengenerator  
+###  <a name="urngs"></a> Einheitlicher Zufallszahlengenerator  
  URNGs werden oft anhand folgender Eigenschaften beschrieben:  
   
 1. **Periodenlänge**: Anzahl von Iterationen, die für eine Wiederholung der generierten Zahlensequenz erforderlich sind. Je länger, desto besser.  
@@ -241,13 +242,13 @@ Dieser Code zeigt zwei verschiedene Randomisierungen – Randomisierungen eines 
   
  In den folgenden Abschnitten werden die Uniform Random Number-Generatoren (URNGs) im `<random>`-Header aufgelistet.  
   
-####  <a name="a-namerda-non-deterministic-generator"></a><a name="rd"></a> Nicht-deterministischen Generator  
+####  <a name="rd"></a> Nicht-deterministischen Generator  
   
 |||  
 |-|-|  
 |[random_device-Klasse](../standard-library/random-device-class.md)|Generiert eine nicht-deterministische und kryptografisch sichere Zufallssequenz mithilfe eines externen Geräts. Wird normalerweise zur Ausstattung eines Moduls mit einem Startwert verwendet. Geringe Leistung, sehr hohe Qualität. Weitere Informationen finden Sie in den [Hinweisen](#comments).|  
   
-####  <a name="a-nametypedefsa-engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> Modultypdefinitionen mit voreingestellten Parametern  
+####  <a name="typedefs"></a> Modultypdefinitionen mit voreingestellten Parametern  
  Zur Instanzierung von Modulen und Moduladaptern. Weitere Informationen erhalten Sie im Abschnitt [Module und Verteilungen](#engdist).  
   
 - `default_random_engine` Das Standardmodul.   
@@ -280,7 +281,7 @@ Dieser Code zeigt zwei verschiedene Randomisierungen – Randomisierungen eines 
 - `ranlux48_base` wird als Grundlage für `ranlux48` verwendet.   
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
-####  <a name="a-nameenga-engine-templates"></a><a name="eng"></a> Modulvorlagen  
+####  <a name="eng"></a> Modulvorlagen  
  Modulvorlagen werden als eigenständige URNGs verwendet oder als Basismodule an [Moduladapter](#engadapt) übergeben. Diese werden normalerweise mit einer [vorangestellten Modultypdefinition](#typedefs) instanziert und an eine [Verteilung](#distributions) übergeben. Weitere Informationen erhalten Sie im Abschnitt [Module und Verteilungen](#engdist).  
   
 |||  
@@ -289,7 +290,7 @@ Dieser Code zeigt zwei verschiedene Randomisierungen – Randomisierungen eines 
 |[mersenne_twister_engine-Klasse](../standard-library/mersenne-twister-engine-class.md)|Generiert mithilfe des Mersenne-Twisteralgorithmus eine Zufallssequenz. Am komplexesten und mit der höchsten Qualität, außer für die Klasse random_device. Sehr schnelle Leistung.|  
 |[subtract_with_carry_engine-Klasse](../standard-library/subtract-with-carry-engine-class.md)|Generiert eine zufällige Sequenz mithilfe des Algorithmus "subtract with carry". Eine Verbesserung gegenüber `linear_congruential_engine`, aber von viel geringerer Qualität und Leistung als `mersenne_twister_engine`.|  
   
-####  <a name="a-nameengadapta-engine-adaptor-templates"></a><a name="engadapt"></a>Moduladaptervorlagen  
+####  <a name="engadapt"></a>Moduladaptervorlagen  
  Moduladapter sind Vorlagen, die andere (Basis-)Module anpassen. Diese werden normalerweise mit einer [vorangestellten Modultypdefinition](#typedefs) instanziert und an eine [Verteilung](#distributions) übergeben. Weitere Informationen erhalten Sie im Abschnitt [Module und Verteilungen](#engdist).  
   
 |||  
@@ -300,7 +301,7 @@ Dieser Code zeigt zwei verschiedene Randomisierungen – Randomisierungen eines 
   
  [[Modulvorlagen](#eng)]  
   
-###  <a name="a-namedistributionsa-random-number-distributions"></a><a name="distributions"></a> Zufallszahlverteilungen  
+###  <a name="distributions"></a> Zufallszahlverteilungen  
  In den folgenden Abschnitten werden die Verteilungen im `<random>`-Header aufgelistet. Verteilungen sind ein Nachverarbeitungsmechanismus, der normalerweise URNS-Ausgaben als Eingaben verwendet und die Ausgabe mithilfe einer Funktion mit definierter statistischer Wahrscheinlichkeitsdichte verteilt. Weitere Informationen erhalten Sie im Abschnitt [Module und Verteilungen](#engdist).  
   
 #### <a name="uniform-distributions"></a>Gleichförmige Verteilungen.  
@@ -330,7 +331,7 @@ Dieser Code zeigt zwei verschiedene Randomisierungen – Randomisierungen eines 
 |-|-|  
 |[cauchy_distribution-Klasse](../standard-library/cauchy-distribution-class.md)|Produziert eine Couch-Verteilung von (Gleitkomma-)Echtwerten.|  
 |[chi_squared_distribution-Klasse](../standard-library/chi-squared-distribution-class.md)|Produziert eine Chi-Quadrat-Verteilung von (Gleitkomma-)Echtwerten.|  
-|[fisher_f_distribution-Klasse](../standard-library/fisher-f-distribution-class.md)|Produziert eine F-Verteilung (auch als Sender-F-Verteilung oder Fisher-Snedecor-Verteilung bekannt) von (Gleitkomma-)Echtwerten.|  
+|[fisher_f_distribution-Klasse](../standard-library/fisher-f-distribution-class.md)|Produziert eine F-Verteilung (auch bekannt als Sender-F-Verteilung oder Fisher-Snedecor-Verteilung) von (Gleitkomma-) echtwerten.|  
 |[lognormal_distribution-Klasse](../standard-library/lognormal-distribution-class.md)|Produziert eine Lognormalverteilung von (Gleitkomma-)Echtwerten.|  
 |[normal_distribution-Klasse](../standard-library/normal-distribution-class.md)|Produziert eine (Gaußsche) Normalverteilung von (Gleitkomma-)Echtwerten.|  
 |[student_t_distribution-Klasse](../standard-library/student-t-distribution-class.md)|Produziert die studentische *t*-Verteilung von (Gleitkomma-)Echtwerten.|  
@@ -376,7 +377,7 @@ Dieser Code zeigt zwei verschiedene Randomisierungen – Randomisierungen eines 
 |`operator<<`|Schreibt Zustandsinformationen in einen Stream.|  
 |`operator>>`|Extrahiert Zustandsinformationen aus einem Stream.|  
   
-##  <a name="a-nameengdista-engines-and-distributions"></a><a name="engdist"></a> Module und Verteilungen  
+##  <a name="engdist"></a> Module und Verteilungen  
  Informationen zu jeder dieser in `<random>` definierten Vorlagenklassenkategorien finden Sie in den folgenden Abschnitten: Beide dieser Vorlagenklassenkategorien akzeptieren einen Typ als Argument und verwenden allgemeine Namen eines Vorlagenparameters, um die Eigenschaften des Typs, die als tatsächlicher Argumenttyp zulässig sind, wie folgt zu beschreiben:  
   
 - `IntType` zeigt `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` oder `unsigned long long` an.  
@@ -459,7 +460,7 @@ Dieser Code zeigt zwei verschiedene Randomisierungen – Randomisierungen eines 
   
  Weitere Informationen erhalten Sie in den entsprechenden Unterthemen unter diesem Thema, auf die zuvor in diesem Artikel verlinkt wurde.  
   
-##  <a name="a-namecommentsa-remarks"></a><a name="comments"></a> Hinweise  
+##  <a name="comments"></a> Hinweise  
  Dies sind zwei höchst hilfereiche URNGs in Visual Studio – `mt19937` und `random_device` – wie in der Vergleichstabelle gezeigt:  
   
 |URNG|Fast|Kryptografisch sicher|Startwertfähig|Deterministic|  

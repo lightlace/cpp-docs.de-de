@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dead533ee11db7c40faa7d3611b30c6a6159ee50
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 200337a53155b27b76a944d025c8fb013c29c4e6
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
@@ -108,7 +109,7 @@ size_t _wcstombs_l(
  Das zu verwendende Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn `wcstombs` die Multibyte-Zeichenfolge erfolgreich konvertiert, wird die Anzahl der Bytes zurückgegeben, die in die Multibyte-Ausgabezeichenfolge geschrieben werden, mit Ausnahme des abschließenden Zeichens `NULL` (falls vorhanden). Wenn das `mbstr`-Argument `NULL` ist, gibt `wcstombs` die erforderliche Größe der Zielzeichenfolge in Bytes zurück. Wenn `wcstombs` ein Breitzeichen erkennt, das nicht in ein Multibytezeichen konvertiert werden kann, wird der in den Typ `size_t` umgewandelte Wert -1 zurückgegeben und `errno` auf `EILSEQ` festgelegt.  
+ Wenn `wcstombs` die Multibyte-Zeichenfolge erfolgreich konvertiert, wird die Anzahl der Bytes zurückgegeben, die in die Multibyte-Ausgabezeichenfolge geschrieben werden, mit Ausnahme des abschließenden Zeichens `NULL` (falls vorhanden). Wenn das `mbstr`-Argument `NULL` ist, gibt `wcstombs` die erforderliche Größe der Zielzeichenfolge in Bytes zurück. Wenn `wcstombs` findet ein Breitzeichen, es kann nicht in einem multibyte-Zeichen konvertiert, es gibt-1 zurück, die in den Typ umgewandelt, `size_t` und legt `errno` auf `EILSEQ`.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Funktion `wcstombs` konvertiert die Breitzeichenfolge, auf die von `wcstr` gezeigt wird, in die entsprechenden Multibytezeichen und speichert die Ergebnisse im `mbstr`-Array. Der Parameter `count` zeigt die maximale Anzahl von Bytes an, die in der Multibyte-Ausgabezeichenfolge gespeichert werden können (d.h. die Größe von `mbstr`). Es ist allgemein nicht bekannt, wie viele Bytes bei der Konvertierung einer Breitzeichenfolge benötigt werden. Einige Breitzeichen benötigen nur ein Byte in der Ausgabezeichenfolge; andere erfordern zwei. Wenn für jedes Breitzeichen in der Eingabezeichenfolge (einschließlich des Breitzeichens `NULL`) zwei Bytes in der Multibyte-Ausgabezeichenfolge vorhanden sind, ist das Ergebnis garantiert passend.  
@@ -117,7 +118,7 @@ size_t _wcstombs_l(
   
  Wenn das `mbstr`-Argument `NULL` ist, gibt `wcstombs` die erforderliche Größe der Zielzeichenfolge in Bytes zurück.  
   
- `wcstombs` überprüft die eigenen Parameter. Wenn `wcstr` gleich `NULL` oder `count` größer als `INT_MAX` ist, ruft diese Funktion den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt die Funktion `errno` auf `EINVAL` fest und gibt -1 zurück.  
+ `wcstombs` überprüft die eigenen Parameter. Wenn `wcstr` ist `NULL`, oder wenn `count` ist größer als `INT_MAX`, ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, legt die Funktion `errno` auf `EINVAL` fest und gibt -1 zurück.  
   
  `wcstombs` verwendet das aktuelle Gebietsschema für jedes Verhalten, das vom Gebietsschema abhängig ist; `_wcstombs_l` ist identisch, nur dass sie stattdessen das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
@@ -172,9 +173,6 @@ Convert wide-character string:
    Characters converted: 13  
     Multibyte character: Hello, world.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   

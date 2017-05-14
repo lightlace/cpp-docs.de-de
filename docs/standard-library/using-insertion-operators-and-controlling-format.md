@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: bfab56fe6847015adff4013d075893e982d5d2f4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 96d388b7ddfdf561e016b4e74ffeb9ca072c7cb2
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Verwenden von Einfügeoperatoren und Festlegen des Formats
@@ -50,7 +51,7 @@ In diesem Thema wird veranschaulicht, wie Sie das Format steuern und Einfügeope
   
 - [Basis](#vclrfradixanchor6)  
   
-##  <a name="a-namevclrfoutputwidthanchor3a-output-width"></a><a name="vclrfoutputwidthanchor3"></a> Breite der Ausgabe  
+##  <a name="vclrfoutputwidthanchor3"></a> Breite der Ausgabe  
  Um die Ausgabe auszurichten, geben Sie die Breite der Ausgabe für jedes Element an, indem Sie den `setw`-Manipulator im Stream platzieren oder die Memberfunktion **width** aufrufen. In diesem Beispiel werden die Werte in einer Spalte mit einer Breite von mindestens 10 Zeichen rechtsbündig ausgerichtet:  
   
 ```  
@@ -134,7 +135,7 @@ Jimmy     35.36
   
  Weder durch `setw` noch durch **width** werden Werte abgeschnitten. Wenn eine formatierte Ausgabe die Breite überschreitet, wird je nach der Einstellung der Genauigkeit des Streams der gesamte Wert ausgegeben. Sowohl `setw` als auch **width** betreffen nur das folgende Feld. Die Feldbreite wird auf das Standardverhalten (die erforderliche Breite) zurückgesetzt, nachdem ein Feld ausgegeben wurde. Jedoch behalten die anderen Streamformatoptionen ihre Gültigkeit, bis sie geändert werden.  
   
-##  <a name="a-namevclrfalignmentanchor4a-alignment"></a><a name="vclrfalignmentanchor4"></a> Ausrichtung  
+##  <a name="vclrfalignmentanchor4"></a> Ausrichtung  
  Ausgabestreams werden standardmäßig als rechtsbündiger Text ausgegeben. Um die Namen im vorherigen Beispiel linksbündig und die Zahlen rechtsbündig auszurichten, ersetzen Sie die **for**-Schleife wie folgt:  
   
 ```  
@@ -156,7 +157,7 @@ Stan     4358.24
   
  Das Flag für die linksbündige Ausrichtung wird durch Verwendung des [setiosflags](../standard-library/iomanip-functions.md#setiosflags)-Manipulators mit dem Enumerator `left` festgelegt. Dieser Enumerator wird in der [ios](../standard-library/basic-ios-class.md)-Klasse definiert, sodass dessen Verweis das **ios::**-Präfix enthalten muss. Der [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags)-Manipulator deaktiviert das Flag für die linksbündige Ausrichtung. Im Gegensatz zu **width** und `setw` ist die Wirkung von `setiosflags` und `resetiosflags` permanent.  
   
-##  <a name="a-namevclrfprecisionanchor5a-precision"></a><a name="vclrfprecisionanchor5"></a> Genauigkeit  
+##  <a name="vclrfprecisionanchor5"></a> Genauigkeit  
  Der Standardwert für die Gleitkommagenauigkeit ist sechs. Beispielsweise wird die Zahl 3466.9768 als 3466.98 gedruckt. Die Ausgabeart dieses Werts können Sie mit dem [setprecision](../standard-library/iomanip-functions.md#setprecision)-Manipulator ändern. Der Manipulator hat zwei Flags: [fixed](../standard-library/ios-functions.md#fixed) und [scientific](../standard-library/ios-functions.md#scientific). Wenn [fixed](../standard-library/ios-functions.md#fixed) festgelegt ist, wird die Zahl als 3466,976800 ausgegeben. Wenn **scientific** festgelegt ist, wird sie als 3,4669773+003 ausgegeben.  
   
  Um die unter [Ausrichtung](#vclrfalignmentanchor4) angezeigten Gleitkommazahlen mit einer signifikanten Stelle anzuzeigen, ersetzen Sie die **for**-Schleife wie folgt:  
@@ -208,7 +209,7 @@ Stan    4.4e+003
   
  Auch hier gibt das Programm mit einer Ziffer nach dem Dezimaltrennzeichen aus. Wenn entweder **ios::fixed** oder **ios::scientific** festgelegt ist, bestimmt der Wert für die Genauigkeit die Anzahl der Ziffern nach dem Dezimaltrennzeichen. Wenn keines der beiden Flags festgelegt ist, bestimmt der Wert für die Genauigkeit die Gesamtzahl der signifikanten Stellen. Der `resetiosflags`-Manipulator deaktiviert diese Flags.  
   
-##  <a name="a-namevclrfradixanchor6a-radix"></a><a name="vclrfradixanchor6"></a> Basis  
+##  <a name="vclrfradixanchor6"></a> Basis  
  Die Manipulatoren **dec**, **oct** und **hex** legen die Standardbasis für Ein- und Ausgaben fest. Wenn Sie beispielsweise den **hex**-Manipulator in den Ausgabestream einfügen, übersetzt das Objekt die interne Datendarstellung von Ganzzahlen korrekt in ein hexadezimales Ausgabeformat. Die Zahlen werden mit den Ziffern a bis f in Kleinbuchstaben angezeigt, wenn das Flag [uppercase](../standard-library/ios-functions.md#uppercase) (für Großbuchstaben) deaktiviert ist (Standard). Andernfalls werden sie in Großbuchstaben angezeigt. Die Standardbasis lautet **dec** (dezimal).  
   
 ## <a name="quoted-strings-c14"></a>Zeichenfolge in Anführungszeichen (C++14)  
@@ -227,9 +228,9 @@ std::cout <<inserted;     //  This is a sentence.
 std::cout <<extracted;   //   This  
 ```  
   
- Dieses Verhalten können Sie manuell umgehen, um Zeichenfolgen-Roundtrips aber praktischer zu gestalten, fügt C++&14; den `std::quoted`-Streammanipulator in `<iomanip>` ein. Beim Einfügen umgibt `quoted()` die Zeichenfolge mit einem Trennzeichen (standardmäßig doppelte Anführungszeichen „"“), und bei der Extraktion wird der Stream so manipuliert, dass alle Zeichen extrahiert werden, bis das finale Trennzeichen gefunden wird. Eingebettete Anführungszeichen werden mit Escapezeichen versehen (standardmäßig „\\\\“).  
+ Dieses Verhalten können Sie manuell umgehen, um Zeichenfolgen-Roundtrips aber praktischer zu gestalten, fügt C++ 14 den `std::quoted`-Streammanipulator in `<iomanip>` ein. Beim Einfügen umgibt `quoted()` die Zeichenfolge mit einem Trennzeichen (standardmäßig doppelte Anführungszeichen „"“), und bei der Extraktion wird der Stream so manipuliert, dass alle Zeichen extrahiert werden, bis das finale Trennzeichen gefunden wird. Eingebettete Anführungszeichen werden mit Escapezeichen versehen (standardmäßig „\\\\“).  
   
- Die Trennzeichen sind nur im Streamobjekt vorhanden. Sie sind nicht in der extrahierten Zeichenfolge vorhanden, aber in der von [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#basic_stringstream__str)() zurückgegebenen Zeichenfolge.  
+ Die Trennzeichen sind nur im Streamobjekt vorhanden. Sie sind nicht in der extrahierten Zeichenfolge vorhanden, aber in der von [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str)() zurückgegebenen Zeichenfolge.  
   
  Das Leerzeichenverhalten der Einfüge- und Extraktionsvorgänge ist unabhängig von der Art der Darstellung einer Zeichenfolge im Code, sodass der in Anführungszeichen gesetzte Operator unabhängig davon nützlich ist, ob die Eingabezeichenfolge ein unformatiertes Zeichenfolgenliteral oder eine reguläre Zeichenfolge ist. Die Eingabezeichenfolge kann unabhängig vom Format eingebettete Anführungszeichen, Zeilenumbrüche, Tabulatoren usw. aufweisen, und diese werden vom quoted()-Manipulator beibehalten.  
   

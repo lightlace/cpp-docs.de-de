@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e4f0eff8758694e97bfb310f9cfa650cb28cefa4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0600d44b2b87ed3bb56e7d1c64fffd762e77aff2
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
@@ -106,7 +107,7 @@ wchar_t *_wtmpnam(
  Zeiger, der den generierten Namen enthält und mit dem von der Funktion zurückgegebenen Namen identisch ist. Dies ist eine einfache Möglichkeit, den generierten Namen zu speichern.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Jede Funktion gibt einen Zeiger auf den erzeugten Namen zurück oder `NULL`, falls ein Fehler vorliegt. Fehler können auftreten, wenn Sie mehr als `TMP_MAX`-Aufrufe (siehe STDIO.H) mit `tmpnam` versuchen oder wenn Sie `_tempnam` verwenden und ein ungültiger Verzeichnisname in der TMP-Umgebungsvariablen und im `dir`-Parameter angegeben wurde.  
+ Jede Funktion gibt einen Zeiger auf den erzeugten Namen zurück oder `NULL`, falls ein Fehler vorliegt. Fehler kann auftreten, wenn Sie versuchen, mehr als `TMP_MAX` (Siehe STDIO. H) Aufrufe mit `tmpnam` oder bei Verwendung von `_tempnam` und es ist ein Ungültiger Verzeichnisname angegeben, in der TMP-Umgebungsvariable und die `dir` Parameter.  
   
 > [!NOTE]
 >  Die von `tmpnam` und `_wtmpnam` zurückgegebenen Zeiger zeigen auf die internen statischen Puffer. [free](../../c-runtime-library/reference/free.md) sollte nicht aufgerufen werden, um die Zuordnung dieser Zeiger aufzuheben. `free` muss für von `_tempnam` und `_wtempnam` zugeordnete Zeiger aufgerufen werden.  
@@ -192,9 +193,6 @@ int main( void )
 \s1gk. is safe to use as a temporary file.  
 C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Stream-E/A](../../c-runtime-library/stream-i-o.md)   

@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3d95aae18858582f732459e136c998c15d70189e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3d199cba90dd2440a7a467c95d32e2a5a75f8cbf
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
@@ -86,12 +87,12 @@ int _wctomb_l(
  Ein Breitzeichen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn `wctomb` das Breitzeichen in ein Multibytezeichen konvertiert, wird die Anzahl von Bytes (die nie größer als `MB_CUR_MAX` ist) im Breitzeichen zurückgegeben. Wenn `wchar` das Breitzeichen NULL (L'\0') ist, gibt `wctomb` 1 zurück. Wenn der Zielzeiger `mbchar` NULL ist, gibt `wctomb` 0 zurück. Wenn die Konvertierung im aktuellen Gebietsschema nicht möglich ist, gibt `wctomb` -1 zurück, und `errno` wird auf `EILSEQ` festgelegt.  
+ Wenn `wctomb` das Breitzeichen in ein Multibytezeichen konvertiert, wird die Anzahl von Bytes (die nie größer als `MB_CUR_MAX` ist) im Breitzeichen zurückgegeben. Wenn `wchar` das Breitzeichen NULL (L'\0') ist, gibt `wctomb` 1 zurück. Wenn der Zielzeiger `mbchar` NULL ist, gibt `wctomb` 0 zurück. Wenn die Konvertierung nicht möglich, im aktuellen Gebietsschema ist `wctomb` gibt-1 zurück und `errno` festgelegt ist, um `EILSEQ`.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `wctomb`-Funktion konvertiert das `wchar`-Argument in das entsprechende Multibytezeichen und speichert das Ergebnis in `mbchar`. Sie können die Funktion von einem beliebigen Punkt in einem beliebigen Programm aufrufen. `wctomb` verwendet das aktuelle Gebietsschema für jedes Verhalten, das vom Gebietsschema abhängig ist; `_wctomb_l` ist mit `wctomb` identisch, nur dass sie stattdessen das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
- `wctomb` überprüft die eigenen Parameter. Wenn `mbchar` `NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt –&1; zurück.  
+ `wctomb` überprüft die eigenen Parameter. Wenn `mbchar` `NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt – 1 zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -129,9 +130,6 @@ Convert a wide character:
    Characters converted: 1  
    Multibyte character: a  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   

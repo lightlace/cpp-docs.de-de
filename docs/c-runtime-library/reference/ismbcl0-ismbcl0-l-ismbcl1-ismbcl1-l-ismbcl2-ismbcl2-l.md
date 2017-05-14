@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aa913890892aefc0ff74cbc8f7c66a8f4375e796
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 23ae0c873ef956499c46800abebba62cb656557b
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
@@ -137,7 +138,7 @@ int _ismbcl2_l(
 |`_ismbcl2`|JIS, Ebene 2: 0x989F<=`c`<= 0xEAA4.|  
 |`_ismbcl2_l`|JIS, Ebene 2: 0x989F<=`c`<= 0xEAA4.|  
   
- Die Funktionen überprüfen, ob der angegebene Wert `c` den oben beschriebenen Testbedingungen entspricht. Es wird jedoch nicht überprüft, ob `c` ein gültiges Multibytezeichen ist. Wenn das untere Byte in den Bereichen 0x00–0x3F, 0x7F oder 0xFD–0xFF liegt, geben diese Funktionen einen Wert ungleich 0 (null) zurück. Dies deutet darauf hin, dass das Zeichen die Testbedingung erfüllt. Verwenden Sie [_ismbbtrail](../../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md), um zu prüfen, ob das Multibytezeichen definiert ist.  
+ Die Funktionen überprüfen, ob der angegebene Wert `c` den oben beschriebenen Testbedingungen entspricht. Es wird jedoch nicht überprüft, ob `c` ein gültiges Multibytezeichen ist. Wenn das untere Byte in den Bereichen 0x00–0x3F, 0x7F oder 0xFD–0xFF liegt, geben diese Funktionen einen Wert ungleich 0 (null) zurück. Dies gibt an, dass das Zeichen die Testbedingung erfüllt. Verwenden Sie [_ismbbtrail](../../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md), um zu prüfen, ob das Multibytezeichen definiert ist.  
   
  **Ende der Codepage 932 (spezifisch)**  
   
@@ -153,9 +154,6 @@ int _ismbcl2_l(
 |`_ismbcl2_l`|\<mbstring.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   

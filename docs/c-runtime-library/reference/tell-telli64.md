@@ -1,56 +1,73 @@
 ---
-title: "_tell, _telli64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_telli64"
-  - "_tell"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "tell"
-  - "telli64"
-  - "_telli64"
-  - "_tell"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tell-Funktion"
-  - "_telli64-Funktion"
-  - "Dateizeiger [C++]"
-  - "Dateizeiger [C++], Abrufen"
-  - "tell-Funktion"
-  - "telli64-Funktion"
+title: _tell, _telli64 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _telli64
+- _tell
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- tell
+- telli64
+- _telli64
+- _tell
+dev_langs:
+- C++
+helpviewer_keywords:
+- tell function
+- file pointers [C++], getting
+- _tell function
+- file pointers [C++]
+- telli64 function
+- _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _tell, _telli64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5609e3e192ab01be6acd7bbdb495b7e58fd3acf2
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
-Rufen Sie die Position des Dateizeigers ab.  
+---
+# <a name="tell-telli64"></a>_tell, _telli64
+Aktuelle Position des Dateizeigers  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 long _tell(  
@@ -61,29 +78,29 @@ __int64 _telli64(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `handle`  
- Dateideskriptor, der geöffneten Datei verweist.  
+ Dateideskriptoren, die auf eine geöffnete Datei verweisen.  
   
-## Rückgabewert  
- Die aktuelle Position des Dateizeigers.  Auf den Geräten, die vom Suchen Unable sind, wird der Rückgabewert undefiniert.  
+## <a name="return-value"></a>Rückgabewert  
+ Aktuelle Position des Dateizeigers Auf Geräten, die Suchvorgänge nicht unterstützen, ist der Rückgabewert nicht definiert.  
   
- Ein \- Rückgabewert von 1L gibt einen Fehler an.  Wenn `handle` ein ungültiger Dateideskriptor ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren, dieses Features legen Sie `errno` auf `EBADF` und wieder \-1L.  
+ Ein Rückgabewert von-1 L gibt einen Fehler an. Wenn `handle` ein ungültiger Dateideskriptor ist, ruft diese Funktion den Handler für ungültige Parameter auf, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen `errno` auf `EBADF` fest und geben „-1L“ zurück.  
   
- Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die `_tell`\-Funktion ruft die aktuelle Position des Dateizeigers \(falls vorhanden\) zugeordnet mit dem Argument `handle` ab.  Die Position ist als die Anzahl der Bytes vom Anfang der Datei angegeben.  Für die Funktion `_telli64` wird dieser Wert als 64\-Bit\-Ganzzahl ausgedrückt.  
+## <a name="remarks"></a>Hinweise  
+ Die `_tell`-Funktion ruft die aktuelle Position des Dateizeigers (sofern vorhanden) ab, der mit dem `handle`-Argument verknüpft ist. Die Position wird als Anzahl von Bytes ab dem Anfang der Datei angegeben. Für die `_telli64`-Funktion wird dieser Wert als 64-Bit-Ganzzahl angegeben.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_tell`, `_telli64`|\<io.h\>|  
+|-------------|---------------------|  
+|`_tell`, `_telli64`|\<io.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_tell.c  
@@ -116,20 +133,20 @@ int main( void )
 }  
 ```  
   
-## Eingabe: crt\_tell.txt  
+## <a name="input-crttelltxt"></a>Eingabe: crt_tell.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Current file position is: 20  
 ```  
   
-## Siehe auch  
- [E\/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)   
- [ftell, \_ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
- [\_lseek, \_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)
+## <a name="see-also"></a>Siehe auch  
+ [E/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)   
+ [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
+ [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)

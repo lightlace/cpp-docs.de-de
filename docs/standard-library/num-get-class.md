@@ -1,32 +1,51 @@
 ---
-title: "num_get-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "num_get"
-  - "std::num_get"
-  - "std.num_get"
-  - "xlocnum/std::num_get"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "num_get-Klasse"
+title: num_get-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- num_get
+- xlocnum/std::num_get
+- locale/std::num_get::char_type
+- locale/std::num_get::iter_type
+- locale/std::num_get::do_get
+- locale/std::num_get::get
+dev_langs:
+- C++
+helpviewer_keywords:
+- num_get class
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# num_get-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f8595909a294775034c3e1b725d37bfe0f846a93
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
+---
+# <a name="numget-class"></a>num_get-Klasse
 Eine Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um Konvertierungen von Sequenzen des Typs `CharType` in numerische Werte zu steuern.  
   
 ## <a name="syntax"></a>Syntax  
@@ -44,34 +63,34 @@ class num_get : public locale::facet;
  Der Typ des Iterators, von dem die numerische get-Funktionen ihre Eingabe lesen.  
   
 ## <a name="remarks"></a>Hinweise  
- Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim erste Versuch, den gespeicherten Wert zuzugreifen speichert einen eindeutigen positiven Wert in **Id.**  
+ Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird in **id** ein eindeutiger positiver Wert gespeichert.  
   
 ### <a name="constructors"></a>Konstruktoren  
   
 |||  
 |-|-|  
-|[num_get](#num_get__num_get)|Der Konstruktor für Objekte vom Typ `num_get`, die verwendet werden, um numerische Werte aus Sequenzen zu extrahieren.|  
+|[num_get](#num_get)|Der Konstruktor für Objekte vom Typ `num_get`, die verwendet werden, um numerische Werte aus Sequenzen zu extrahieren.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[char_type](#num_get__char_type)|Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.|  
-|[iter_type](#num_get__iter_type)|Ein Typ, der einen Eingabeiterator beschreibt.|  
+|[char_type](#char_type)|Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.|  
+|[iter_type](#iter_type)|Ein Typ, der einen Eingabeiterator beschreibt.|  
   
 ### <a name="member-functions"></a>Memberfunktionen  
   
 |||  
 |-|-|  
-|[do_get](#num_get__do_get)|Eine virtuelle Funktion, die aufgerufen wird, um einen numerischen oder booleschen Wert aus einer Zeichenfolge aufzurufen.|  
-|[Erhalten](#num_get__get)|Extrahiert einen numerischen oder booleschen Wert aus einer Zeichenfolge.|  
+|[do_get](#do_get)|Eine virtuelle Funktion, die aufgerufen wird, um einen numerischen oder booleschen Wert aus einer Zeichenfolge aufzurufen.|  
+|[get](#get)|Extrahiert einen numerischen oder booleschen Wert aus einer Zeichenfolge.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** \< Gebietsschema>  
+ **Header:** \<locale>  
   
  **Namespace:** std  
   
-##  <a name="a-namenumgetchartypea-numgetchartype"></a><a name="num_get__char_type"></a>  num_get:: char_type  
+##  <a name="char_type"></a> num_get::char_type  
  Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.  
   
 ```
@@ -81,7 +100,7 @@ typedef CharType char_type;
 ### <a name="remarks"></a>Hinweise  
  Der Typ ist ein Synonym für den Vorlagenparameter **CharType**.  
   
-##  <a name="a-namenumgetdogeta-numgetdoget"></a><a name="num_get__do_get"></a>  num_get:: do_get  
+##  <a name="do_get"></a> num_get::do_get  
  Eine virtuelle Funktion, die aufgerufen wird, um einen numerischen oder booleschen Wert aus einer Zeichenfolge aufzurufen.  
   
 ```
@@ -90,7 +109,9 @@ virtual iter_type do_get(
     iter_type last,
     ios_base& _Iosbase,
     ios_base::iostate& _State,
-    long& val) const;virtual iter_type do_get(
+    long& val) const;
+    
+virtual iter_type do_get(
     iter_type first,
     iter_type last,
     ios_base& _Iosbase,
@@ -163,16 +184,16 @@ virtual iter_type do_get(
   
 ### <a name="parameters"></a>Parameter  
  `first`  
- Der Anfang des Bereichs von Zeichen aus dem die Anzahl gelesen.  
+ Der Anfang des Zeichenbereichs, aus dem die Zahl gelesen wird.  
   
  `last`  
- Das Ende des Bereichs von Zeichen aus dem die Anzahl gelesen.  
+ Das Ende des Zeichenbereichs, aus dem die Zahl gelesen wird.  
   
  `_Iosbase`  
- Die [Ios_base](../standard-library/ios-base-class.md) deren Flags werden durch die Konvertierung verwendet.  
+ Die [ios_base](../standard-library/ios-base-class.md), deren Flags durch die Konvertierung verwendet werden.  
   
  `_State`  
- Der Zustand, der die Failbit (finden Sie unter [ios_base:: iostate](../standard-library/ios-base-class.md#ios_base__iostate)), die bei einem Fehler hinzugefügt wird.  
+ Der Zustand, zu dem die Failbit (siehe [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) bei einem Fehler hinzugefügt wird.  
   
  `val`  
  Der gelesene Wert.  
@@ -181,192 +202,147 @@ virtual iter_type do_get(
  Der Iterator, nachdem der Wert gelesen wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste virtuelle geschützter Member-Funktion  
+ Die erste virtuelle geschützte Member-Funktion  
   
- `virtual iter_type do_get(`  
+```  
+virtual iter_type do_get(
+    iter_type first,
+    iter_type last,
+    ios_base& _Iosbase,
+    ios_base::iostate& _State,
+    long& val) const;
+```  
   
- `iter_type first,`  
+ gleicht sequenzielle Elemente, beginnend bei `first` in der Sequenz `[first, last)` bis eine vollständige erkannt hat, nicht leeren Ganzzahl Eingabefeld. Wenn erfolgreich, dieses Feld auf den entsprechenden Wert als Typ konvertiert `long`, und speichert das Ergebnis in `val`. Sie gibt einen Iterator zurück, der das erste Element nach dem numerischen Eingabefeld festlegt. Andernfalls speichert die Funktion eine leere Sequenz in `val` und legt `state` für `ios_base::failbit` fest. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für ganze Zahlen festlegt. In beiden Fällen legt die Funktion `state` für `ios_base::eofbit` fest, wenn der Rückgabewert `last` entspricht.  
   
- `iter_type last,`  
+ Das Eingabefeld für die ganze Zahl wird konvertiert, indem die gleichen Regeln, die von den Überprüfungsfunktionen für den Abgleich und das Konvertieren einer Reihe von `char`-Elemente aus einer Datei genutzt wurden, angewendet werden. (Jedes dieser `char`-Elemente soll einem äquivalenten Element vom Typ `Elem` durch eine einfache 1:1-Zuordnung zugeordnet werden.) Die entsprechende Überprüfungskonvertierungsspezifikation wird wie folgt bestimmt:  
   
- `ios_base& _Iosbase,`  
+ Wenn `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), ist die Konvertierungsspezifikation `lo`.  
   
- `ios_base::iostate& _State,`  
-  
- `long& val`  
-  
- `) const;`  
-  
- gleicht sequenzielle Elemente, beginnend bei `first` in der Sequenz `[``first``,` `last``)` bis er eine vollständige erkannt, Eingabe Integer nicht leeren Feld. Wenn erfolgreich, wird dieses Feld in den entsprechenden-Wert als Typ umgewandelt `long``,` und speichert das Ergebnis in `val`. Es gibt einen Iterator, der das erste Element nach dem numerischen Eingabefeld festlegen. Andernfalls speichert die Funktion "nothing" in `val` und `ios_base::failbit` in `state`. Es gibt einen Iterator, der das erste Element nach einem Präfix von einem Eingabefeld gültige ganze Zahl festlegen. In beiden Fällen, wenn der Rückgabewert gleich `last`, die Funktion legt `ios_base::eofbit` in `state`.  
-  
- Feld für die ganze Zahl konvertiert, indem die gleichen Regeln, die von der Scan-Funktionen für den Abgleich und konvertieren eine Reihe von `char` Elemente aus einer Datei. (Alle diese `char` Element steht für eine entsprechende Element vom Typ zuordnen `Elem` durch eine einfache, 1: 1, zuordnen.) Die entsprechende Überprüfung Konvertierungsspezifikation wird wie folgt bestimmt:  
-  
- Wenn `iosbase.`[ios_base:: Flags](../standard-library/ios-base-class.md#ios_base__flags)`() & ios_base::basefield == ios_base::`[Okt](../Topic/%3Cios%3E%20functions.md#oct), ist die Konvertierungsspezifikation `lo`.  
-  
- Wenn `iosbase.flags() & ios_base::basefield == ios_base::`[hex](../Topic/%3Cios%3E%20functions.md#hex), ist die Konvertierungsspezifikation `lx`.  
+ Wenn `iosbase.flags() & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), ist die Konvertierungsspezifikation `lx`.  
   
  Wenn `iosbase.flags() & ios_base::basefield == 0`, ist die Konvertierungsspezifikation `li`.  
   
  Andernfalls ist die Konvertierungsspezifikation `ld`.  
   
- Das Format eines Eingabefelds ganze Zahl hängt darüber hinaus von der [gebietsschemafacet](../standard-library/locale-class.md#facet_class)`fac` vom Aufruf zurückgegebene [Use_facet](../Topic/%3Clocale%3E%20functions.md#use_facet) `<`[Numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.` [ios_base:: getloc](../standard-library/ios-base-class.md#ios_base__getloc)`())`. Dies gilt insbesondere in folgenden Fällen:  
-  
- `fac.` [numpunct:: GROUPING](../standard-library/numpunct-class.md#numpunct__grouping) `()` Bestimmt, wie Ziffern auf der linken Seite des Dezimaltrennzeichens gruppiert werden  
-  
- `fac.` [numpunct:: thousands_sep](../standard-library/numpunct-class.md#numpunct__thousands_sep) `()` Bestimmt die Reihenfolge, die Zifferngruppen links vom Dezimaltrennzeichen.  
-  
- Wenn keine Instanzen von `fac.thousands_sep()` auftreten in der numerischen Eingabefeld ist keine Gruppierung Einschränkung auferlegt werden. Andernfalls Gruppierung Einschränkungen aufgrund der `fac.grouping()` werden erzwungen und Trennzeichen werden entfernt, bevor die Konvertierung Scan auftritt.  
-  
- Der vierte virtuelle geschützte Member-Funktion:  
-  
- `virtual iter_type do_get(`  
-  
- `iter_type first,`  
-  
- `iter_type last,`  
-  
- `ios_base& _Iosbase,`  
-  
- `ios_base::iostate& _State,`  
-  
- `unsigned long& val`  
-  
- `) const;`  
-  
- verhält sich wie die erste, außer dass es eine Konvertierungsspezifikation von ersetzt `ld` mit `lu`. Wenn erfolgreiche numerische Eingabefeld in einen Wert vom Typ konvertiert `unsigned long` und speichert diesen Wert in `val`.  
-  
- Die fünfte virtuellen geschützte Member-Funktion:  
-  
- `virtual iter_type do_get(`  
-  
- `iter_type first,`  
-  
- `iter_type last,`  
-  
- `ios_base& _Iosbase,`  
-  
- `ios_base::iostate& _State,`  
-  
- `long long& val`  
-  
- `) const;`  
-  
- verhält sich wie die erste, außer dass es eine Konvertierungsspezifikation von ersetzt `ld` mit `lld`. Wenn erfolgreiche numerische Eingabefeld in einen Wert vom Typ konvertiert `long long` und speichert diesen Wert in `val`.  
-  
- Der sechste virtuelle geschützter Member-Funktion:  
-  
- `virtual iter_type do_get(`  
-  
- `iter_type first,`  
-  
- `iter_type last,`  
-  
- `ios_base& _Iosbase,`  
-  
- `ios_base::iostate& _State,`  
-  
- `unsigned long long& val`  
-  
- `) const;`  
-  
- verhält sich wie die erste, außer dass es eine Konvertierungsspezifikation von ersetzt `ld` mit `llu`. Wenn erfolgreiche numerische Eingabefeld in einen Wert vom Typ konvertiert `unsigned long long` und speichert diesen Wert in `val`.  
-  
- Der siebte virtuellen geschützte Member-Funktion:  
-  
- `virtual iter_type do_get(`  
-  
- `iter_type first,`  
-  
- `iter_type last,`  
-  
- `ios_base& _Iosbase,`  
-  
- `ios_base::iostate& _State,`  
-  
- `float& val`  
-  
- `) const;`  
-  
- verhält sich wie die erste, außer dass er versucht, eine vollständige, nicht leeren Gleitkomma Eingabefeld übereinstimmen. `fac.`[numpunct:: decimal_point](../standard-library/numpunct-class.md#numpunct__decimal_point)`()` bestimmt die Reihenfolge, die die ganzzahligen Ziffern von der Bruchziffern trennt. Ist die entsprechende Überprüfung Konvertierungsspezifizierer `lf`.  
-  
- Die achte virtuellen geschützte Member-Funktion:  
-  
- `virtual iter_type do_get(`  
-  
- `iter_type first,`  
-  
- `iter_type last,`  
-  
- `ios_base& _Iosbase,`  
-  
- `ios_base::iostate& _State,`  
-  
- `double& val`  
-  
- `) const;`  
-  
- verhält sich wie die erste, außer dass er versucht, eine vollständige, nicht leeren Gleitkomma Eingabefeld übereinstimmen. `fac.`[numpunct:: decimal_point](../standard-library/numpunct-class.md#numpunct__decimal_point)`()` bestimmt die Reihenfolge, die die ganzzahligen Ziffern von der Bruchziffern trennt. Ist die entsprechende Überprüfung Konvertierungsspezifizierer `lf`.  
-  
- Der neunte virtuellen geschützte Member-Funktion:  
-  
- `virtual iter_type do_get(`  
-  
- `iter_type first,`  
-  
- `iter_type last,`  
-  
- `ios_base& _Iosbase,`  
-  
- `ios_base::iostate& _State,`  
-  
- `long double& val`  
-  
- `) const;`  
-  
- verhält sich wie das achte, außer dass die entsprechende Überprüfung Konvertierungsspezifizierer ist `Lf`.  
-  
- Der neunte virtuellen geschützte Member-Funktion:  
-  
- `virtual iter_type do_get(`  
-  
- `iter_type first,`  
-  
- `iter_type last,`  
-  
- `ios_base& _Iosbase,`  
-  
- `ios_base::iostate& _State,`  
-  
- `void *& val`  
-  
- `) const;`  
-  
- verhält sich das erste, allerdings wird der entsprechende Scan Konvertierungsspezifizierer `p`.  
-  
- Die letzte (elfte) virtuellen geschützte Member-Funktion:  
-  
- `virtual iter_type do_get(`  
-  
- `iter_type first,`  
-  
- `iter_type last,`  
-  
- `ios_base& _Iosbase,`  
-  
- `ios_base::iostate& _State,`  
-  
- `bool& val`  
-  
- `) const;`  
-  
- verhält sich wie die erste, außer dass er versucht, eine vollständige, nicht leeren booleschen Eingabefeld übereinstimmen. Wenn erfolgreiche booleschen Eingabefeld in einen Wert vom Typ konvertiert `bool` und speichert diesen Wert in `val`.  
-  
- Ein boolescher Eingabefeld akzeptiert einen von zwei Formen. Wenn `iosbase.flags() & ios_base::`[Boolalpha](../Topic/%3Cios%3E%20functions.md#boolalpha) false ist, es ist identisch mit einem Eingabefeld ganze Zahl, mit der Ausnahme, dass der konvertierte Wert entweder 0 (False) oder 1 (True) sein muss. Andernfalls die Sequenz übereinstimmen entweder `fac.`[numpunct:: falsename](../standard-library/numpunct-class.md#numpunct__falsename)`()` (für False), oder `fac.`[numpunct:: TrueName](../standard-library/numpunct-class.md#numpunct__truename)`()` (für True).  
+ Das Format eines Eingabefelds für ganze Zahlen hängt darüber hinaus von [localefacet](../standard-library/locale-class.md#facet_class)`fac` ab, das vom Aufruf [use_facet](../standard-library/locale-functions.md#use_facet)`<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())` zurückgegeben wird. Dies gilt insbesondere in folgenden Fällen:  
+  
+ `fac.` [numpunct::grouping](../standard-library/numpunct-class.md#grouping) `()` bestimmt, wie Ziffern auf der linken Seite des Dezimaltrennzeichens gruppiert werden.  
+  
+ `fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` bestimmt die Sequenz, die Gruppen von Ziffern auf der linken Seite eines Dezimaltrennzeichens trennt.  
+  
+ Wenn keine Instanzen von `fac.thousands_sep()` im numerischen Eingabefeld auftreten, wird keine Gruppierungseinschränkung auferlegt. Andernfalls werden alle von `fac.grouping()` auferlegten Gruppierungseinschränkung erzwungen und Trennzeichen werden entfernt, bevor die Überprüfungskonvertierung auftritt.  
+  
+ Die vierte virtuelle geschützte Member-Funktion:  
+  
+```  
+virtual iter_type do_get(
+    iter_type first,
+    iter_type last,
+    ios_base& _Iosbase,
+    ios_base::iostate& _State,
+    unsigned long& val) const;
+```  
+  
+ verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` mit `lu` ersetzt. Wenn erfolgreich, konvertiert sie das numerische Eingabefeld in einen Wert vom Typ `unsigned long` und speichert diesen Wert in `val`.  
+  
+ Die fünfte virtuelle geschützte Member-Funktion:  
+  
+```
+virtual iter_type do_get(
+    iter_type first,
+    iter_type last,
+    ios_base& _Iosbase,
+    ios_base::iostate& _State,
+    long long& val) const;
+```  
+  
+ verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` mit `lld` ersetzt. Wenn erfolgreich, konvertiert sie das numerische Eingabefeld in einen Wert vom Typ `long long` und speichert diesen Wert in `val`.  
+  
+ Die sechste virtuelle geschützte Member-Funktion:  
+  
+```  
+virtual iter_type do_get(
+    iter_type first,
+    iter_type last,
+    ios_base& _Iosbase,
+    ios_base::iostate& _State,
+    unsigned long long& val) const;
+```  
+
+ verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` mit `llu` ersetzt. Wenn erfolgreich, konvertiert sie das numerische Eingabefeld in einen Wert vom Typ `unsigned long long` und speichert diesen Wert in `val`.  
+  
+ Die siebte virtuelle geschützte Member-Funktion:  
+  
+```
+virtual iter_type do_get(
+    iter_type first,
+    iter_type last,
+    ios_base& _Iosbase,
+    ios_base::iostate& _State,
+    float& val) const;
+```  
+  
+ verhält sich wie die erste, außer dass sie versucht, eine Übereinstimmung für ein vollständiges, nicht leeres Gleitkommaeingabefeld zu finden. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` bestimmt die Sequenz, die ganzzahlige Ziffern von Bruchziffern trennt. Der entsprechende Überprüfungsonvertierungsspezifizierer ist `lf`.  
+  
+ Die achte virtuelle geschützte Member-Funktion:  
+  
+```  
+virtual iter_type do_get(
+    iter_type first,
+    iter_type last,
+    ios_base& _Iosbase,
+    ios_base::iostate& _State,
+    double& val) const;
+```  
+  
+ verhält sich wie die erste, außer dass sie versucht, eine Übereinstimmung für ein vollständiges, nicht leeres Gleitkommaeingabefeld zu finden. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` bestimmt die Sequenz, die ganzzahlige Ziffern von Bruchziffern trennt. Der entsprechende Überprüfungsonvertierungsspezifizierer ist `lf`.  
+  
+ Die neunte virtuelle geschützte Member-Funktion:  
+  
+```  
+virtual iter_type do_get(
+    iter_type first,
+    iter_type last,
+    ios_base& _Iosbase,
+    ios_base::iostate& _State,
+    long double& val) const;
+```  
+  
+ verhält sich wie das achte, außer dass der entsprechende Überprüfungskonvertierungsspezifizierer `Lf` ist.  
+  
+ Der zehnte virtuellen geschützter Member-Funktion:  
+  
+```  
+virtual iter_type do_get(
+    iter_type first,
+    iter_type last,
+    ios_base& _Iosbase,
+    ios_base::iostate& _State,
+    void *& val) const;
+```  
+  
+ verhält sich wie die erste, außer dass der entsprechende Überprüfungskonvertierungsspezifizierer `p` ist.  
+  
+ Die letzte (elfte) virtuelle geschützte Member-Funktion:  
+  
+```  
+virtual iter_type do_get(
+    iter_type first,
+    iter_type last,
+    ios_base& _Iosbase,
+    ios_base::iostate& _State,
+    bool& val) const;
+```  
+  
+ verhält sich wie die erste, außer dass sie versucht, eine Übereinstimmung für ein vollständiges, nicht leeres boolesches Eingabefeld zu finden. Sie konvertiert das boolesche Eingabefeld erfolgreich in einen Wert vom Typ `bool` und speichert diesen Wert in `val`.  
+  
+ Ein boolesches Eingabefeld akzeptiert eine von zwei Formen. Wenn `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) falsch ist, ist es mit einem Eingabefeld für ganze Zahlen identisch, mit der Ausnahme, dass der konvertierte Wert entweder 0 (für FALSE) oder 1 (für TRUE) sein muss. Andernfalls muss die Sequenz entweder mit `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (für FALSE), oder `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (für TRUE) übereinstimmen.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [abrufen](#num_get__get), bei dem die virtuelle Memberfunktion, indem aufgerufen wird `do_get`.  
+  Informationen hierzu finden Sie im Beispiel für [get](#get), bei dem die virtuelle Memberfunktion durch `do_get` aufgerufen wird.  
   
-##  <a name="a-namenumgetgeta-numgetget"></a><a name="num_get__get"></a>  num_get:: Get  
+##  <a name="get"></a> num_get::get  
  Extrahiert einen numerischen oder booleschen Wert aus einer Zeichenfolge.  
   
 ```
@@ -450,16 +426,16 @@ iter_type get(
   
 ### <a name="parameters"></a>Parameter  
  `first`  
- Der Anfang des Bereichs von Zeichen aus dem die Anzahl gelesen.  
+ Der Anfang des Zeichenbereichs, aus dem die Zahl gelesen wird.  
   
  `last`  
- Das Ende des Bereichs von Zeichen aus dem die Anzahl gelesen.  
+ Das Ende des Zeichenbereichs, aus dem die Zahl gelesen wird.  
   
  `_Iosbase`  
- Die [Ios_base](../standard-library/ios-base-class.md) deren Flags werden durch die Konvertierung verwendet.  
+ Die [ios_base](../standard-library/ios-base-class.md), deren Flags durch die Konvertierung verwendet werden.  
   
  `_State`  
- Der Zustand, der die Failbit (finden Sie unter [ios_base:: iostate](../standard-library/ios-base-class.md#ios_base__iostate)), die bei einem Fehler hinzugefügt wird.  
+ Der Zustand, zu dem die Failbit (siehe [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) bei einem Fehler hinzugefügt wird.  
   
  `val`  
  Der gelesene Wert.  
@@ -468,29 +444,29 @@ iter_type get(
  Der Iterator, nachdem der Wert gelesen wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Alle Memberfunktionen geben [Do_get](#num_get__do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`).  
+ Beide Memberfunktionen geben [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`) zurück.  
   
- Die erste als geschützte virtuelle Memberfunktion sequenzielle Elemente ab, die auf den ersten in der Sequenz entsprechen versucht [ `first`, `last`), bis er eine vollständige erkannt, Eingabe Integer nicht leeren Feld. Wenn erfolgreich, wird dieses Feld in den entsprechenden-Wert als Typ umgewandelt **lange** und speichert das Ergebnis in `val`. Es gibt einen Iterator, der das erste Element nach dem numerischen Eingabefeld festlegen. Andernfalls speichert die Funktion "nothing" in `val` und `ios_base::failbit` in _ *Zustand*. Es gibt einen Iterator, der das erste Element nach einem Präfix von einem Eingabefeld gültige ganze Zahl festlegen. In beiden Fällen, wenn der Rückgabewert gleich **letzten**, die Funktion legt `ios_base::eofbit` in `_State`.  
+ Die erste virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen. Sie beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Eingabefeld für ganze Zahlen erkannt hat. Bei Erfolg konvertiert sie dieses Feld in seinen äquivalenten Wert als **long**-Typ und speichert das Ergebnis in `val`. Sie gibt einen Iterator zurück, der das erste Element nach dem numerischen Eingabefeld festlegt. Andernfalls speichert die Funktion eine leere Sequenz in `val` und legt `ios_base::failbit` in _ *State* fest. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für ganze Zahlen festlegt. In beiden Fällen legt die Funktion `_State` für `ios_base::eofbit` fest, wenn der Rückgabewert **last** entspricht.  
   
- Feld für die ganze Zahl konvertiert, indem die gleichen Regeln, die von der Scan-Funktionen für den Abgleich und konvertieren eine Reihe von `char` Elemente aus einer Datei. Alle diese `char` Element steht für eine entsprechende Element vom Typ zugeordnet **CharType** durch eine einfache 1: 1-Zuordnung. Die entsprechende Überprüfung Konvertierungsspezifikation wird wie folgt bestimmt:  
+ Das Eingabefeld für die ganze Zahl wird konvertiert, indem die gleichen Regeln, die von den Überprüfungsfunktionen für den Abgleich und das Konvertieren einer Reihe von `char`-Elemente aus einer Datei genutzt wurden, angewendet werden. Jedes dieser `char`-Elemente soll einem äquivalenten Element vom Typ **CharType** durch eine einfache 1:1-Zuordnung zugeordnet werden. Die entsprechende Überprüfungskonvertierungsspezifikation wird wie folgt bestimmt:  
   
--   Wenn **Iosbase**. [Flags](../standard-library/ios-base-class.md#ios_base__flags) & `ios_base::basefield` == `ios_base::`[Okt](../Topic/%3Cios%3E%20functions.md#oct), ist die Konvertierungsspezifikation **lo**.  
+-   Wenn **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), ist die Konvertierungsangabe **lo**.  
   
--   Wenn **iosbase.flags** & **ios_base** == `ios_base::`[hex](../Topic/%3Cios%3E%20functions.md#hex), ist die Konvertierungsspezifikation **lx**.  
+-   Wenn **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), ist die Konvertierungsspezifikation **lx**.  
   
--   Wenn **iosbase.flags** & **ios_base** == 0 ist, wird die Konvertierungsspezifikation `li`.  
+-   Wenn **iosbase.flags** & **ios_base::basefield** == 0, ist die Konvertierungsspezifikation `li`.  
   
--   Andernfalls ist die Konvertierungsspezifikation **%ld**.  
+-   Andernfalls ist die Konvertierungsspezifikation **ld**.  
   
- Das Format eines Eingabefelds ganze Zahl hängt darüber hinaus von der [gebietsschemafacet](../standard-library/locale-class.md#facet_class)**Fac** vom Aufruf zurückgegebene [Use_facet](../Topic/%3Clocale%3E%20functions.md#use_facet) < [Numpunct](../standard-library/numpunct-class.md)\< **Elem**> ( **Iosbase**. [Getloc](../standard-library/ios-base-class.md#ios_base__getloc)). Dies gilt insbesondere in folgenden Fällen:  
+ Das Format eines Eingabefelds für ganze Zahlen hängt darüber hinaus von der [localefacet](../standard-library/locale-class.md#facet_class)**fac** ab, die vom Aufruf [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase** zurückgegeben wird. [getloc](../standard-library/ios-base-class.md#getloc)). Dies gilt insbesondere in folgenden Fällen:  
   
-- **FAc**. [Gruppieren von](../standard-library/numpunct-class.md#numpunct__grouping) bestimmt, wie Ziffern auf der linken Seite des Dezimaltrennzeichens gruppiert werden.  
+- **fac**. [grouping](../standard-library/numpunct-class.md#grouping) bestimmt, wie Ziffern auf der linken Seite des Dezimaltrennzeichens gruppiert werden.  
   
-- **FAc**. [Thousands_sep](../standard-library/numpunct-class.md#numpunct__thousands_sep) bestimmt die Reihenfolge, die Zifferngruppen links vom Dezimaltrennzeichen.  
+- **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) bestimmt die Sequenz, die Gruppen von Ziffern auf der linken Seite eines Dezimaltrennzeichens trennt.  
   
- Wenn keine Instanzen von **Fac**. `thousands_sep` im numerischen Eingabefeld auftreten, ist keine Gruppierung Einschränkung auferlegt werden. Andernfalls Gruppierung Einschränkungen aufgrund von **Fac**. **Gruppieren von** wird erzwungen und Trennzeichen werden entfernt, bevor die Konvertierung Scan auftritt.  
+ Wenn keine Instanzen von **fac**. `thousands_sep` im numerischen Eingabefeld auftreten, wird keine Gruppierungseinschränkung auferlegt. Andernfalls werden alle durch **fac**. **grouping** auferlegten Gruppierungseinschränkungen erzwungen und Trennzeichen werden entfernt, bevor die Überprüfungskonvertierung auftritt.  
   
- Der zweite virtuelle geschützte Member-Funktion:  
+ Die zweite virtuelle geschützte Member-Funktion:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -500,9 +476,9 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```  
   
- verhält sich wie die erste, außer dass es eine Konvertierungsspezifikation von ersetzt **%ld** mit **Lu**. Wenn erfolgreich, das numerische Feld für die Eingabe in ein Wert vom Typ konvertiert `unsigned long` und speichert diesen Wert in `val`.  
+ verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von **ld** mit **lu** ersetzt. Wenn erfolgreich, wird das numerische Eingabefeld in einen Wert vom Typ `unsigned long` konvertiert und dieser Wert wird in `val` gespeichert.  
   
- Die dritte virtuelle geschützter Member-Funktion:  
+ Die dritte virtuelle geschützte Member-Funktion:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -512,9 +488,9 @@ virtual iter_type do_get(iter_type first,
     double& val) const;
 ```  
   
- verhält sich wie die erste, außer dass er versucht, eine vollständige, nicht leeren Gleitkomma Eingabefeld übereinstimmen. **FAc**. [Decimal_point](../standard-library/numpunct-class.md#numpunct__decimal_point) bestimmt die Reihenfolge, die die ganzzahligen Ziffern von der Bruchziffern trennt. Ist die entsprechende Überprüfung Konvertierungsspezifizierer **lf**.  
+ verhält sich wie die erste, außer dass sie versucht, eine Übereinstimmung für ein vollständiges, nicht leeres Gleitkommaeingabefeld zu finden. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) bestimmt die Sequenz, die ganzzahlige Ziffern von Bruchziffern trennt. Der gleiche Überprüfungskonvertierungsspezifizierer ist **lf**.  
   
- Der vierte virtuelle geschützte Member-Funktion:  
+ Die vierte virtuelle geschützte Member-Funktion:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -524,9 +500,9 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```  
   
- verhält sich die dritte, allerdings wird der entsprechende Scan Konvertierungsspezifizierer **Lf**.  
+ verhält sich wie die dritte, außer dass der entsprechende Überprüfungskonvertierungsspezifizierer **Lf** ist.  
   
- Die fünfte virtuellen geschützte Member-Funktion:  
+ Die fünfte virtuelle geschützte Member-Funktion:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -536,9 +512,9 @@ virtual iter_type do_get(iter_type first,
     void *& val) const;
 ```  
   
- verhält sich das erste, allerdings wird der entsprechende Scan Konvertierungsspezifizierer **p**.  
+ verhält sich wie die erste, außer dass der entsprechende Überprüfungskonvertierungsspezifizierer **p** ist.  
   
- Der sechste virtuelle geschützter Member-Funktion:  
+ Die sechste virtuelle geschützte Member-Funktion:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -548,13 +524,13 @@ virtual iter_type do_get(iter_type first,
     bool& val) const;
 ```  
   
- verhält sich wie die erste, außer dass er versucht, eine vollständige, nicht leeren booleschen Eingabefeld übereinstimmen. Wenn erfolgreiche booleschen Eingabefeld in einen Wert vom Typ konvertiert `bool` und speichert diesen Wert in `val`.  
+ verhält sich wie die erste, außer dass sie versucht, eine Übereinstimmung für ein vollständiges, nicht leeres boolesches Eingabefeld zu finden. Sie konvertiert das boolesche Eingabefeld erfolgreich in einen Wert vom Typ `bool` und speichert diesen Wert in `val`.  
   
- Ein boolescher Eingabefeld akzeptiert einen von zwei Formen. Wenn **Iosbase**. **Flags** & `ios_base::`[Boolalpha](../Topic/%3Cios%3E%20functions.md#boolalpha) ist **false**, es ist identisch mit einem Eingabefeld ganze Zahl, mit der Ausnahme, dass der konvertierte Wert 0 sein muss (für **false**) oder 1 (für **true**). Andernfalls die Sequenz übereinstimmen entweder **Fac**. [Falsename](../standard-library/numpunct-class.md#numpunct__falsename) (für **false**), oder **Fac**. [TrueName](../standard-library/numpunct-class.md#numpunct__truename) (für **true**).  
+ Ein boolesches Eingabefeld nimmt eine von zwei Formen an. Wenn **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) **FALSE** ist, ist es identisch mit einem Eingabefeld für ganze Zahlen, mit der Ausnahme, dass der konvertierte Wert entweder 0 für **FALSE**) oder 1 (für **TRUE**) sein muss. Andernfalls muss die Sequenz entweder mit **fac**. [falsename](../standard-library/numpunct-class.md#falsename) (für **FALSE**), oder **fac**. [truename](../standard-library/numpunct-class.md#truename) (für **TRUE**) übereinstimmen.  
   
 ### <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // num_get_get.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -584,7 +560,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namenumgetitertypea-numgetitertype"></a><a name="num_get__iter_type"></a>  num_get:: iter_type  
+##  <a name="iter_type"></a> num_get::iter_type  
  Ein Typ, der einen Eingabeiterator beschreibt.  
   
 ```
@@ -594,7 +570,7 @@ typedef InputIterator iter_type;
 ### <a name="remarks"></a>Hinweise  
  Der Typ ist ein Synonym für den Vorlagenparameter **InputIterator**.  
   
-##  <a name="a-namenumgetnumgeta-numgetnumget"></a><a name="num_get__num_get"></a>  num_get:: num_get  
+##  <a name="num_get"></a> num_get::num_get  
  Der Konstruktor für Objekte vom Typ `num_get`, die verwendet werden, um numerische Werte aus Sequenzen zu extrahieren.  
   
 ```
@@ -603,25 +579,26 @@ explicit num_get(size_t _Refs = 0);
   
 ### <a name="parameters"></a>Parameter  
  `_Refs`  
- Integer-Wert verwendet, um den Typ der Verwaltung des Arbeitsspeichers für das Objekt angeben.  
+ Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Die möglichen Werte für die `_Refs` Parameter und ihre Bedeutung sind:  
+ Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:  
   
--   0: die Lebensdauer des Objekts wird von der Gebietsschemas, die es enthalten verwaltet.  
+-   0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.  
   
--   1: die Lebensdauer des Objekts manuell verwaltet werden muss.  
+-   1: Die Lebensdauer des Objekts muss manuell verwaltet werden.  
   
--   \> 0: Diese Werte sind nicht definiert.  
+-   \>1: Diese Werte sind nicht definiert.  
   
- Keine direkte Beispiele sind möglich, da der Destruktor geschützt ist.  
+ Direkte Beispiele sind nicht möglich, da der Destruktor geschützt ist.  
   
- Der Konstruktor initialisiert die Basisobjekt mit **Gebietsschema::**[Facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
+ Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
 ## <a name="see-also"></a>Siehe auch  
- [\< Gebietsschema>](../standard-library/locale.md)   
- [Facet-Klasse](../standard-library/locale-class.md#facet_class)   
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [\<locale>](../standard-library/locale.md)   
+ [facet-Klasse](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 
 
 

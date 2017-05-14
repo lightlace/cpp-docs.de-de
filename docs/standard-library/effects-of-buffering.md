@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d888b6d16e0a71168e0615d89bbd1d03c51afad8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e834b5be6b7d31d1f1516799462d57330bf4ceb2
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="effects-of-buffering"></a>Pufferungseffekte
@@ -65,7 +66,7 @@ int main( )
 cout <<"Please wait..." <<flush;  
 ```  
   
- In diesem Schritt wird der Puffer geleert, wodurch sichergestellt wird, dass die Meldung vor dem Wartevorgang ausgegeben wird. Sie können auch den `endl` -Manipulator verwenden, der den Puffer leert und einen Wagenrücklauf und Zeilenvorschub ausgibt, oder Sie können das `cin` Objekt verwenden. Dieses Objekt (mit dem `cerr` - oder dem `clog` -Objekt) ist in der Regel mit dem `cout` -Objekt verknüpft. Daher wird bei jeder Verwendung von `cin` (oder einem der Objekte `cerr` oder `clog` ) das `cout` -Objekt geleert.  
+ In diesem Schritt wird der Puffer geleert, wodurch sichergestellt wird, dass die Meldung vor dem Wartevorgang ausgegeben wird. Sie können auch die `endl` Manipulator, der leert den Puffer und gibt einen Zeilenumbruch, oder Sie können die `cin` Objekt. Dieses Objekt (mit dem `cerr` - oder dem `clog` -Objekt) ist in der Regel mit dem `cout` -Objekt verknüpft. Daher wird bei jeder Verwendung von `cin` (oder einem der Objekte `cerr` oder `clog` ) das `cout` -Objekt geleert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausgabestreams](../standard-library/output-streams.md)

@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4f407dce7825a593273206ada02680d6da99e9a0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 260c5ae7348516683d8e749a2dcb6cdac6ea0943
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
@@ -93,7 +94,7 @@ wchar_t *_wtempnam_dbg(
  Die Zeichenfolge, die den von `_tempnam` zurückgegebenen Namen vorangestellt wird.  
   
  `blockType`  
- Angeforderter Typ des Speicherblocks: `_CLIENT_BLOCK`oder `_NORMAL_BLOCK`.  
+ Angeforderter Typ des Speicherblocks: `_CLIENT_BLOCK` oder `_NORMAL_BLOCK`.  
   
  `filename`  
  Zeiger auf den Namen der Quelldatei, die die Zuordnung angefordert hat, oder `NULL`.  
@@ -108,7 +109,7 @@ wchar_t *_wtempnam_dbg(
 >  `free` (oder `free_dbg`) muss für von `_tempnam_dbg` und `_wtempnam_dbg` belegte Zeiger nicht aufgerufen werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktionen `_tempnam_dbg` und `_wtempnam_dbg` sind identisch mit `_tempnam` und `_wtempnam`, außer dass bei Definition von `_DEBUG` diese Funktionen die Debugversion von `malloc` und `_malloc_dbg` verwenden, um Speicher zuzuweisen, wenn `NULL` als erster Parameter übergeben wird. Weitere Informationen finden Sie unter [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+ Die `_tempnam_dbg` und `_wtempnam_dbg` -Funktionen sind identisch mit `_tempnam` und `_wtempnam` mit dem Unterschied, dass, wenn `_DEBUG` wird definiert, verwenden Sie diese Funktionen die Debugversion des `malloc` und `_malloc_dbg`, um Speicher zuzuordnen `NULL` als erster Parameter übergeben wird. Weitere Informationen finden Sie unter [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
  In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie das `_CRTDBG_MAP_ALLOC`-Flag definieren. Wenn `_CRTDBG_MAP_ALLOC` definiert ist, werden Aufrufe von `_tempnam` und `_wtempnam` zu `_tempnam_dbg` bzw. `_wtempnam_dbg` neu zugeordnet, wobei `blockType` auf `_NORMAL_BLOCK` festgelegt wird. Daher müssen Sie diese Funktionen nicht explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als `_CLIENT_BLOCK` markieren. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
   
@@ -125,9 +126,6 @@ wchar_t *_wtempnam_dbg(
 |`_tempnam_dbg`, `_wtempnam_dbg`|\<crtdbg.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   

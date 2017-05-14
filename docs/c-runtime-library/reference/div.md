@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9e1389e2d8623e7e96ef3ad6af8772ee7026ec76
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e1e92656713a31d3057dfe180bd1cb4e819ceb5b
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="div"></a>div
@@ -89,9 +90,9 @@ lldiv_t div(
  `div`, welches mithilfe von Argumenten des Typs `int` aufgerufen wurde, gibt eine Struktur des Typs `div_t` zurück, die den Quotienten und den Rest enthält. Der Rückgabewert der Überladung mit Argumenten vom Typ `long` ist `ldiv_t`. Sowohl `div_t` als auch `ldiv_t` werden in STDLIB.H. definiert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `div`-Funktion teilt `numer` durch `denom` und berechnet dadurch den Quotienten und den Rest. Die [div_t](../../c-runtime-library/standard-types.md)-Struktur enthält den Quotienten `int``quot` und den Rest `int``rem`. Das Zeichen des Quotienten entspricht dem Zeichen des mathematischen Quotienten. Der absolute Wert ist die größte ganze Zahl, die kleiner ist als der absolute Wert des mathematischen Quotienten. Wenn der Nenner 0 ist, wird das Programm mit einer Fehlermeldung beendet.  
+ Die `div`-Funktion teilt `numer` durch `denom` und berechnet dadurch den Quotienten und den Rest. Die [div_t](../../c-runtime-library/standard-types.md)-Struktur enthält den Quotienten `int quot` und den Rest `int rem`. Das Zeichen des Quotienten entspricht dem Zeichen des mathematischen Quotienten. Der absolute Wert ist die größte ganze Zahl, die kleiner ist als der absolute Wert des mathematischen Quotienten. Wenn der Nenner 0 ist, wird das Programm mit einer Fehlermeldung beendet.  
   
- Die Überladungen, die Argumente des Typs `long` oder `long long` verwenden, sind nur für C++-Code verfügbar. Der Rückgabetyp [ldiv_t](../../c-runtime-library/standard-types.md) enthält die Member `long``quot` und `long``rem`, und der Rückgabetyp [lldiv_t](../../c-runtime-library/standard-types.md) enthält die Member `long long quot` und `long long rem`, die die gleiche Bedeutung wie die Member von `div_t` haben.  
+ Die Überladungen, die Argumente des Typs `long` oder `long long` verwenden, sind nur für C++-Code verfügbar. Der Rückgabetyp [ldiv_t](../../c-runtime-library/standard-types.md) enthält die Member `long quot` und `long rem`, und der Rückgabetyp [lldiv_t](../../c-runtime-library/standard-types.md) enthält die Member `long long quot` und `long long rem`, die die gleiche Bedeutung wie die Member von `div_t` haben.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -138,9 +139,6 @@ int main( int argc, char *argv[] )
 x is 876, y is 13  
 The quotient is 67, and the remainder is 5  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   

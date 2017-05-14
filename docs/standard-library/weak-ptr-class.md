@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: 9e36da6c4f7dde6df281d8ad229373d861ee045a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f7e4ff26f4d98dc677483f8526c17474aecc81dc
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="weakptr-class"></a>weak_ptr-Klasse
@@ -89,11 +90,11 @@ public:
 ## <a name="remarks"></a>Hinweise  
  Die Vorlagenklasse beschreibt ein Objekt, das auf eine Ressource zeigt, die von mindestens einem [shared_ptr-Klassen](../standard-library/shared-ptr-class.md)-Objekt verwaltet wird. Die `weak_ptr`-Objekte, die auf eine Ressource verweisen, wirken sich nicht auf den Verweiszähler der Ressource aus. Daher wird die Ressource, wenn das letzte `shared_ptr`-Objekt, das diese Ressource verwaltet, zerstört wurde, selbst dann freigegeben, wenn es `weak_ptr`-Objekte gibt, die auf diese Ressource verweisen. Dies ist entscheidend für die Vermeidung von Zyklen in Datenstrukturen.  
   
- Ein `weak_ptr`-Objekt verweist auf eine Ressource, wenn es aus einem `shared_ptr`-Objekt erstellt wurde, das diese Ressource besitzt, wenn es aus einem `weak_ptr`-Objekt erstellt wurde, das auf diese Ressource verweist, oder wenn ihm diese Ressource mit [operator=](#weak_ptr__operator_eq) zugewiesen wurde. Ein `weak_ptr`-Objekt stellt keinen direkten Zugriff auf die Ressource bereit, auf die es verweist. Code, der auf die Ressource zugreifen muss, erledigt dies über ein `shared_ptr`-Objekt, das diese Ressource besitzt, die durch Aufrufen der Memberfunktion [lock](#weak_ptr__lock) erstellt wurde. Ein `weak_ptr`-Objekt ist abgelaufen, wenn die Ressource, auf die es verweist, freigegeben wurde, weil alle `shared_ptr`-Objekte zerstört wurden, die die Ressource besitzen. Ein Aufrufen von `lock` für ein `weak_ptr`-Objekt, das abgelaufen ist, erstellt ein leeres shared_ptr-Objekt.  
+ Ein `weak_ptr`-Objekt verweist auf eine Ressource, wenn es aus einem `shared_ptr`-Objekt erstellt wurde, das diese Ressource besitzt, wenn es aus einem `weak_ptr`-Objekt erstellt wurde, das auf diese Ressource verweist, oder wenn ihm diese Ressource mit [operator=](#op_eq) zugewiesen wurde. Ein `weak_ptr`-Objekt stellt keinen direkten Zugriff auf die Ressource bereit, auf die es verweist. Code, der auf die Ressource zugreifen muss, erledigt dies über ein `shared_ptr`-Objekt, das diese Ressource besitzt, die durch Aufrufen der Memberfunktion [lock](#lock) erstellt wurde. Ein `weak_ptr`-Objekt ist abgelaufen, wenn die Ressource, auf die es verweist, freigegeben wurde, weil alle `shared_ptr`-Objekte zerstört wurden, die die Ressource besitzen. Ein Aufrufen von `lock` für ein `weak_ptr`-Objekt, das abgelaufen ist, erstellt ein leeres shared_ptr-Objekt.  
   
  Ein leeres weak_ptr-Objekt verweist auf keine Ressource und hat keinen Kontrollblock. Ihre Memberfunktion `lock` gibt ein leeres shared_ptr-Objekt zurück.  
   
- Ein Zyklus tritt auf, wenn es für zwei oder mehr Ressourcen, die von `shared_ptr`-Objekten gesteuert werden, `shared_ptr`-Objekte gibt, die gegenseitig auf sich verweisen. Angenommen, eine kreisförmig verknüpfte Liste mit drei Elementen hat den Kopfknoten `N0`; dieser Knoten enthält ein `shared_ptr`-Objekt, das den nächsten Knoten, `N1`, besitzt; dieser Knoten enthält ein `shared_ptr`-Objekt, das den nächsten Knoten, `N2`, besitzt; dieser Knoten wiederum enthält ein `shared_ptr`-Objekt, das den Kopfknoten `N0` besitzt, wodurch der Zyklus geschlossen wird. In diesem Fall wird keiner der Verweiszähler je den Wert&0; (null) annehmen, und die Knoten im Zyklus werden nicht freigegeben. Um den Zyklus zu vermeiden, sollte der letzte Knoten, `N2`, anstelle eines `shared_ptr`-Objekts ein `weak_ptr`-Objekt enthalten, das auf `N0` verweist. Da das `weak_ptr`-Objekt kein Besitzer von `N0` ist, hat es keinen Einfluss auf den Verweiszähler von `N0`, und wenn im Programm der letzte Verweis auf den Kopfknoten zerstört wurde, werden auch die Knoten in der Liste zerstört.  
+ Ein Zyklus tritt auf, wenn es für zwei oder mehr Ressourcen, die von `shared_ptr`-Objekten gesteuert werden, `shared_ptr`-Objekte gibt, die gegenseitig auf sich verweisen. Angenommen, eine kreisförmig verknüpfte Liste mit drei Elementen hat den Kopfknoten `N0`; dieser Knoten enthält ein `shared_ptr`-Objekt, das den nächsten Knoten, `N1`, besitzt; dieser Knoten enthält ein `shared_ptr`-Objekt, das den nächsten Knoten, `N2`, besitzt; dieser Knoten wiederum enthält ein `shared_ptr`-Objekt, das den Kopfknoten `N0` besitzt, wodurch der Zyklus geschlossen wird. In diesem Fall wird keiner der Verweiszähler je den Wert 0 (null) annehmen, und die Knoten im Zyklus werden nicht freigegeben. Um den Zyklus zu vermeiden, sollte der letzte Knoten, `N2`, anstelle eines `shared_ptr`-Objekts ein `weak_ptr`-Objekt enthalten, das auf `N0` verweist. Da das `weak_ptr`-Objekt kein Besitzer von `N0` ist, hat es keinen Einfluss auf den Verweiszähler von `N0`, und wenn im Programm der letzte Verweis auf den Kopfknoten zerstört wurde, werden auch die Knoten in der Liste zerstört.  
   
 ## <a name="members"></a>Mitglieder  
   
@@ -101,32 +102,32 @@ public:
   
 |||  
 |-|-|  
-|[weak_ptr](#weak_ptr__weak_ptr)|Erstellt ein Objekt vom Typ `weak_ptr`.|  
+|[weak_ptr](#weak_ptr)|Erstellt ein Objekt vom Typ `weak_ptr`.|  
   
 ### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[element_type](#weak_ptr__element_type)|Der Typ des Elements.|  
-|[expired](#weak_ptr__expired)|Überprüft, ob der Besitz abgelaufen ist.|  
-|[lock](#weak_ptr__lock)|Bedingt exklusiven Besitz einer Ressource.|  
-|[owner_before](#weak_ptr__owner_before)|Gibt `true` zurück, wenn dieses `weak_ptr`-Objekt vor dem bereitgestellten Zeiger angeordnet (oder kleiner als dieser) ist.|  
-|[reset](#weak_ptr__reset)|Gibt eine in Besitz befindliche Ressource frei.|  
-|[swap](#weak_ptr__swap)|Tauscht zwei `weak_ptr`-Objekte.|  
-|[use_count](#weak_ptr__use_count)|Ermittelt die Anzahl von festgelegten `shared_ptr`-Objekten.|  
+|[element_type](#element_type)|Der Typ des Elements.|  
+|[expired](#expired)|Überprüft, ob der Besitz abgelaufen ist.|  
+|[lock](#lock)|Bedingt exklusiven Besitz einer Ressource.|  
+|[owner_before](#owner_before)|Gibt `true` zurück, wenn dieses `weak_ptr`-Objekt vor dem bereitgestellten Zeiger angeordnet (oder kleiner als dieser) ist.|  
+|[reset](#reset)|Gibt eine in Besitz befindliche Ressource frei.|  
+|[swap](#swap)|Tauscht zwei `weak_ptr`-Objekte.|  
+|[use_count](#use_count)|Ermittelt die Anzahl von festgelegten `shared_ptr`-Objekten.|  
   
 ### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[operator=](#weak_ptr__operator_eq)|Ersetzt eine in Besitz befindliche Ressource.|  
+|[operator=](#op_eq)|Ersetzt eine in Besitz befindliche Ressource.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<memory>  
   
  **Namespace:** std  
   
-##  <a name="weak_ptr__element_type"></a> element_type  
+##  <a name="element_type"></a> element_type  
  Der Typ des Elements.  
   
 ```  
@@ -161,7 +162,7 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="weak_ptr__expired"></a> expired  
+##  <a name="expired"></a> expired  
  Überprüft, ob der Besitz abgelaufen ist.  
   
 ```  
@@ -217,7 +218,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__lock"></a> lock  
+##  <a name="lock"></a> lock  
  Bedingt exklusiven Besitz einer Ressource.  
   
 ```  
@@ -273,7 +274,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__operator_eq"></a> operator=  
+##  <a name="op_eq"></a> operator=  
  Ersetzt eine in Besitz befindliche Ressource.  
   
 ```  
@@ -332,7 +333,7 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="weak_ptr__owner_before"></a> owner_before  
+##  <a name="owner_before"></a> owner_before  
  Gibt `true` zurück, wenn dieses `weak_ptr`-Objekt vor dem bereitgestellten Zeiger angeordnet (oder kleiner als dieser) ist.  
   
 ```  
@@ -350,7 +351,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Hinweise  
  Die Vorlagenmemberfunktion gibt `true` zurück, wenn `*this` gleich `ordered before``ptr` ist.  
   
-##  <a name="weak_ptr__reset"></a> reset  
+##  <a name="reset"></a> reset  
  Gibt eine in Besitz befindliche Ressource frei.  
   
 ```  
@@ -391,7 +392,7 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="weak_ptr__swap"></a> swap  
+##  <a name="swap"></a> swap  
  Tauscht zwei `weak_ptr`-Objekte.  
   
 ```  
@@ -459,7 +460,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="weak_ptr__use_count"></a> use_count  
+##  <a name="use_count"></a> use_count  
  Ermittelt die Anzahl von festgelegten `shared_ptr`-Objekten.  
   
 ```  
@@ -498,7 +499,7 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="weak_ptr__weak_ptr"></a> weak_ptr  
+##  <a name="weak_ptr"></a> weak_ptr  
  Erstellt ein Objekt vom Typ `weak_ptr`.  
   
 ```  

@@ -1,32 +1,51 @@
 ---
-title: "num_put-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::num_put"
-  - "xlocnum/std::num_put"
-  - "num_put"
-  - "std.num_put"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "num_put-Klasse"
+title: num_put-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xlocnum/std::num_put
+- num_put
+- locale/std::num_put::char_type
+- locale/std::num_put::iter_type
+- locale/std::num_put::do_put
+- locale/std::num_put::put
+dev_langs:
+- C++
+helpviewer_keywords:
+- num_put class
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# num_put-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a3161373a3a0edec1bf7272e3099432c7282b0cf
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
+---
+# <a name="numput-class"></a>num_put-Klasse
 Eine Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um Konvertierungen von numerischen Werten in Sequenzen vom Typ `CharType` zu steuern.  
   
 ## <a name="syntax"></a>Syntax  
@@ -45,34 +64,34 @@ class num_put : public locale::facet;
  Der Typ des Iterators, in den die numerischen Put-Funktionen ihre Ausgabe schreiben.  
   
 ## <a name="remarks"></a>Hinweise  
- Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim erste Versuch, den gespeicherten Wert zuzugreifen speichert einen eindeutigen positiven Wert in **Id.**  
+ Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird in **id** ein eindeutiger positiver Wert gespeichert.  
   
 ### <a name="constructors"></a>Konstruktoren  
   
 |||  
 |-|-|  
-|[num_put](#num_put__num_put)|Der Konstruktor für Objekte des Typs `num_put`.|  
+|[num_put](#num_put)|Der Konstruktor für Objekte des Typs `num_put`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[char_type](#num_put__char_type)|Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.|  
-|[iter_type](#num_put__iter_type)|Ein Typ, der einen Ausgabeiterator beschreibt.|  
+|[char_type](#char_type)|Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.|  
+|[iter_type](#iter_type)|Ein Typ, der einen Ausgabeiterator beschreibt.|  
   
 ### <a name="member-functions"></a>Memberfunktionen  
   
 |||  
 |-|-|  
-|[do_put](#num_put__do_put)|Eine virtuelle Funktion, die aufgerufen wird, um eine Zahl in eine Sequenz von `CharType`-Objekten zu konvertieren, die die Zahl darstellt, die für ein bestimmtes Gebietsschema formatiert ist.|  
-|[Put](#num_put__put)|Konvertiert eine Zahl in eine Sequenz von `CharType`-Objekten, die die Zahl darstellt, die für ein bestimmtes Gebietsschema formatiert wird.|  
+|[do_put](#do_put)|Eine virtuelle Funktion, die aufgerufen wird, um eine Zahl in eine Sequenz von `CharType`-Objekten zu konvertieren, die die Zahl darstellt, die für ein bestimmtes Gebietsschema formatiert ist.|  
+|[put](#put)|Konvertiert eine Zahl in eine Sequenz von `CharType`-Objekten, die die Zahl darstellt, die für ein bestimmtes Gebietsschema formatiert wird.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** \< Gebietsschema>  
+ **Header:** \<locale>  
   
  **Namespace:** std  
   
-##  <a name="a-namenumputchartypea-numputchartype"></a><a name="num_put__char_type"></a>  num_put:: char_type  
+##  <a name="char_type"></a> num_put::char_type  
  Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.  
   
 ```  
@@ -80,10 +99,10 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für den Vorlagenparameter **CharType**.  
+ Der Typ stellt ein Synonym für den Vorlagenparameter **CharType** dar.  
   
-##  <a name="a-namenumputdoputa-numputdoput"></a><a name="num_put__do_put"></a>  num_put:: do_put  
- Eine virtuelle Funktion, die aufgerufen wird, zum Umwandeln einer Zahl in eine Folge von **CharType**s die Anzahl für ein bestimmtes Gebietsschema formatiert.  
+##  <a name="do_put"></a> num_put::do_put  
+ Eine virtuelle Funktion, die aufgerufen wird, um eine Zahl in eine Sequenz von **CharType**s zu konvertieren, die die Zahl darstellt, die für ein bestimmtes Gebietsschema formatiert ist.  
   
 ```  
 virtual iter_type do_put(
@@ -142,57 +161,57 @@ virtual iter_type do_put(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` next`  
- Ein Iterator, der das erste Element der eingefügten Zeichenfolge adressiert.  
+ `next`  
+ Ein Iterator, der das erste Element in der eingefügten Zeichenfolge adressiert.  
   
  `_Iosbase`  
- Der Datenstrom enthält Gebietsschema mit Numpunct Facets verwendet, um die Ausgabe und die Flags für das Formatieren der Ausgabe Satzzeichen voneinander getrennt wird angegeben.  
+ Gibt den Datenstrom an, der ein Gebietsschema mit numpunct-Facets enthält, die die Satzzeichen für die Ausgabe und die Flags für das Formatieren der Ausgabe erstellen.  
   
  `_Fill`  
- Ein Zeichen, die für den Abstand verwendet wird.  
+ Ein Zeichen, das Leerzeichen einfügt.  
   
- ` val`  
- Die Nummer oder Boolean-Typ, der ausgegeben werden sollen.  
+ `val`  
+ Die Nummer oder der boolesche Typ, der ausgegeben werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Ausgabeiterator die Adressen die Position hinter dem letzten Element erzeugt.  
+ Ein Ausgabeiterator, der auf die erste Position nach dem jeweils letzten Element verweist.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste als geschützte virtuelle Memberfunktion generiert sequenzielle Elemente ab ` next` zu Integer Ausgabe-Felder aus dem Wert des ` val`. Die Funktion gibt einen Iterator Festlegen der nächsten Stelle zum Einfügen eines Elements über das Ausgabefeld generierte ganze Zahl zurück.  
+ Die erste geschützte virtuelle Memberfunktion generiert sequenzielle Elemente ab `next`, um ein Ausgabefeld für eine ganze Zahl für den Wert von `val` zu erzeugen. Die Funktion gibt einen Iterator zurück, der die nächste Stelle zum Einfügen eines Elements nach dem generierten Ausgabefeld für ganze Zahlen festlegt.  
   
- Die Ausgabe Ganzzahlfeld wird generiert, indem die gleichen Regeln, die die Druckfunktionen für das Generieren von `char` Elemente in einer Datei. Jedes solche Char-Element steht für eine entsprechende Element vom Typ zugeordnet **CharType** durch eine einfache 1: 1-Zuordnung. Bei eine Funktion ein Feld mit Leerzeichen oder die Ziffer 0, jedoch werden `do_put` verwendet stattdessen **Füllung**. Die entsprechende drucken Konvertierungsspezifikation wird wie folgt bestimmt:  
+ Die Ausgabefeld für ganze Zahlen wird mit den gleichen Regeln generiert, die von Druckfunktionen für das Generieren einer Serie an `char`-Elementen in einer Datei verwendet wurden. Jedes dieser char-Elemente soll einem äquivalenten Element vom Typ **CharType** durch eine einfache 1:1-Zuordnung zugeordnet werden. Wenn eine Druckfunktion ein Feld mit Leerzeichen oder der Ziffer 0 auffüllt, jedoch wird `do_put` anstatt **fill** verwendet. Die entsprechende Druckkonvertierungsspezifikation wird wie folgt bestimmt:  
   
--   Wenn **Iosbase**. [Flags](../standard-library/ios-base-class.md#ios_base__flags) & `ios_base::basefield` == `ios_base::`[Okt](../Topic/%3Cios%3E%20functions.md#oct), ist die Konvertierungsspezifikation **lo**.  
+-   Wenn **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), ist die Konvertierungsangabe **lo**.  
   
--   Wenn **iosbase.flags** & **ios_base** == `ios_base::`[hex](../Topic/%3Cios%3E%20functions.md#hex), ist die Konvertierungsspezifikation **lx**.  
+-   Wenn **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), ist die Konvertierungsspezifikation **lx**.  
   
--   Andernfalls ist die Konvertierungsspezifikation **%ld**.  
+-   Andernfalls ist die Konvertierungsspezifikation **ld**  
   
- Wenn **Iosbase**. [Breite](../standard-library/ios-base-class.md#ios_base__width) ist ungleich NULL ist, wird eine Feldbreite dieses Werts vorangestellt. Die Funktion ruft dann **Iosbase**. **Breite**(0), um die Breite des Felds auf 0 (null) zurückgesetzt.  
+ Wenn **iosbase**. [width](../standard-library/ios-base-class.md#width) ungleich null ist, wird eine Feldbreite dieses Werts vorangestellt. Die Funktion ruft **iosbase**. **width**(0) auf, um die Feldbreite auf null zurückzusetzen.  
   
- Auffüllung erfolgt nur, wenn die minimale Anzahl von Elementen *N* erforderlich, um anzugeben, das Ausgabefeld ist kleiner als **Iosbase**. [Breite](../standard-library/ios-base-class.md#ios_base__width). Auffüllen von Feldern besteht aus einer Folge von *N* – **Breite** Kopien von **Füllung**. Dann Padding erfolgt folgendermaßen:  
+ Auffüllung erfolgt nur, wenn die minimale Anzahl von Elementen *N*, die zur Angabe des Ausgabefelds erforderlich ist, kleiner als **iosbase**. [width](../standard-library/ios-base-class.md#width) ist. Auffüllen von Feldern besteht aus einer Sequenz von *N* - **Breite** Kopien **Füllung**. Das Auffüllen erfolgt folgendermaßen:  
   
--   Wenn **Iosbase**. **Flags** & `ios_base::adjustfield` == `ios_base::`[linken](../Topic/%3Cios%3E%20functions.md#left), das Flag **–** vorangestellt wird. (Abstand tritt nach dem generierten Text.)  
+-   Wenn **iosbase**. **flags** & `ios_base::adjustfield` == `ios_base::`[left](../standard-library/ios-functions.md#left), the flag **-** is prepended. (Abstand tritt nach dem generierten Text auf.)  
   
--   Wenn **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[interne](../Topic/%3Cios%3E%20functions.md#internal), das Flag **0** vorangestellt wird. (Für ein Ausgabefeld numerische wird Leerraum, in denen die Druckfunktionen mit 0 aufgefüllt.)  
+-   Wenn **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal), dann wird das Flag **0** vorangestellt. (Für ein numerisches Ausgabefeld tritt der Abstand dort auf, wo die Druckfunktionen mit 0 auffüllen.)  
   
--   Andernfalls wird kein zusätzliches Flag vorangestellt. (Abstand tritt auf, bevor der generierten Sequenz.)  
+-   Andernfalls wird kein zusätzliches Flag vorangestellt. (Abstand tritt vor der generierten Sequenz auf.)  
   
  Zum Schluss:  
   
--   Wenn **Iosbase**. **Flags** & `ios_base::`[Showpos](../Topic/%3Cios%3E%20functions.md#showpos) ungleich NULL ist, wird das Flag **+** die Konvertierungsspezifikation vorangestellt wird.  
+-   Wenn **iosbase**. **flags** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) ungleich null ist, wird das Flag **+** der Konvertierungsspezifikation vorangestellt.  
   
--   Wenn **Iosbase**. **Flags** & **Ios_base::**[Showbase](../Topic/%3Cios%3E%20functions.md#showbase) ungleich NULL ist, wird das Flag **#** die Konvertierungsspezifikation vorangestellt wird.  
+-   Wenn **iosbase**. **flags** & **ios_base::**[showbase](../standard-library/ios-functions.md#showbase) ungleich null ist, wird das Flag **#** der Konvertierungsspezifikation vorangestellt.  
   
- Das Format einer ganzen Zahl Ausgabe Feld hängt darüber hinaus von der [gebietsschemafacet](../standard-library/locale-class.md#facet_class)**Fac** vom Aufruf zurückgegebene [Use_facet](../Topic/%3Clocale%3E%20functions.md#use_facet) < [Numpunct](../standard-library/numpunct-class.md)\< **Elem**> ( **Iosbase**. [Getloc](../standard-library/ios-base-class.md#ios_base__getloc)). Dies gilt insbesondere in folgenden Fällen:  
+ Das Format eines Ausgabefelds für ganze Zahlen hängt darüber hinaus von der [localefacet](../standard-library/locale-class.md#facet_class)**fac** ab, die vom Aufruf [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase** zurückgegeben wird. [getloc](../standard-library/ios-base-class.md#getloc)). Dies gilt insbesondere in folgenden Fällen:  
   
-- **FAc**. [Gruppieren von](../standard-library/numpunct-class.md#numpunct__grouping) bestimmt, wie Ziffern auf der linken Seite des Dezimaltrennzeichens gruppiert werden  
+- **fac**. [grouping](../standard-library/numpunct-class.md#grouping) bestimmt, wie Ziffern auf der linken Seite des Dezimaltrennzeichens gruppiert werden.  
   
-- **FAc**. [Thousands_sep](../standard-library/numpunct-class.md#numpunct__thousands_sep) bestimmt die Reihenfolge, die Zifferngruppen links vom Dezimaltrennzeichen  
+- **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) bestimmt die Sequenz, die Gruppen von Ziffern auf der linken Seite eines Dezimaltrennzeichens trennt.  
   
- Wenn keine Gruppierung Einschränkungen vom auferlegt werden **Fac**. **Gruppieren von** (das erste Element hat den Wert CHAR_MAX), dann werden keine Instanzen des **Fac**. `thousands_sep` werden im Ausgabefeld generiert. Andernfalls werden Trennzeichen eingefügt, nachdem die Drucken Konvertierung erfolgt.  
+ Erfolgen keine Gruppierungseinschränkungen durch **fac**. **grouping** (sein erstes Element weist den Wert CHAR_MAX auf), werden keine Instanzen von **fac**. `thousands_sep` im Ausgabefeld generiert. Andernfalls werden Trennzeichen eingefügt, nachdem die Druckkonvertierung erfolgt.  
   
- Der zweite virtuelle geschützte Member-Funktion:  
+ Die zweite virtuelle geschützte Memberfunktion:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -201,9 +220,9 @@ virtual iter_type do_put(iter_type next,
     unsigned long val) const;
 ```  
   
- verhält sich wie die erste, außer dass es eine Konvertierungsspezifikation von ersetzt **%ld** mit **Lu**.  
+ verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von **ld** mit **lu** ersetzt.  
   
- Die dritte virtuelle geschützter Member-Funktion:  
+ Die dritte virtuelle geschützte Memberfunktion:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -212,21 +231,21 @@ virtual iter_type do_put(iter_type next,
     double val) const;
 ```  
   
- verhält sich wie die erste, außer dass es ein Gleitkomma Ausgabefeld aus dem Wert erzeugt **Val**. **FAc**. [Decimal_point](../standard-library/numpunct-class.md#numpunct__decimal_point) bestimmt die Reihenfolge, die die ganzzahligen Ziffern von der Bruchziffern trennt. Die entsprechende drucken Konvertierungsspezifikation wird wie folgt bestimmt:  
+ verhält sich wie die erste, außer dass sie ein Gleitkommaausgabefeld aus dem Wert **val** erzeugt. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) bestimmt die Sequenz, die ganzzahlige Ziffern von Bruchziffern trennt. Die entsprechende Druckkonvertierungsspezifikation wird wie folgt bestimmt:  
   
--   Wenn **Iosbase**. **Flags** & `ios_base::floatfield` == `ios_base::`[festen](../Topic/%3Cios%3E%20functions.md#fixed), ist die Konvertierungsspezifikation **lf**.  
+-   Wenn **iosbase**. **flags** & `ios_base::floatfield` == `ios_base::`[fixed](../standard-library/ios-functions.md#fixed), ist die Konvertierungsangabe **lf**.  
   
--   Wenn **Iosbase**. **Flags** & **ios_base::floatfield** == `ios_base::`[wissenschaftliche](../Topic/%3Cios%3E%20functions.md#scientific), ist die Konvertierungsspezifikation `le`. Wenn **Iosbase**. **Flags** & `ios_base::`[Großbuchstaben](../Topic/%3Cios%3E%20functions.md#uppercase) ungleich NULL ist, **e** durch ersetzt **E**.  
+-   Wenn **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), ist die Konvertierungsspezifikation `le`. Wenn **iosbase**. **flags** & `ios_base::`[uppercase](../standard-library/ios-functions.md#uppercase) ungleich null ist, wird **e** durch **E** ersetzt.  
   
--   Andernfalls ist die Konvertierungsspezifikation **Lg**. Wenn **Iosbase**. **Flags** & **ios_base::uppercase** ist ein Wert ungleich NULL **g** mit ersetzt **G**.  
+-   Andernfalls ist die Konvertierungsspezifikation **lg**. Wenn **iosbase**. **flags** & **ios_base::uppercase** ungleich null ist, wird **g** durch **G** ersetzt.  
   
- Wenn **Iosbase**. **Flags** & **ios_base::fixed** ungleich NULL ist oder wenn **Iosbase**. [Genauigkeit](../standard-library/ios-base-class.md#ios_base__precision) ist größer als 0 (null), eine Genauigkeit mit dem Wert **Iosbase**. **Genauigkeit** Konvertierungsspezifikation vorangestellt wird. Abstände verhält sich genauso wie bei einem Integer-Ausgabe-Feld. Auffüllzeichen ist **Füllung**. Zum Schluss:  
+ Wenn **iosbase**. **flags** & **ios_base::fixed** ungleich null ist oder wenn **iosbase**. [precision](../standard-library/ios-base-class.md#precision) größer als null ist, wird eine Genauigkeit mit dem Wert **iosbase**. **precision** der Konvertierungsspezifikation vorangestellt. Abstände verhalten sich genauso wie bei einem Ausgabefeld für ganze Zahlen. Das Füllzeichen ist **fill**. Zum Schluss:  
   
--   Wenn **Iosbase**. **Flags** & `ios_base::`[Showpos](../Topic/%3Cios%3E%20functions.md#showpos) ungleich NULL ist, wird das Flag **+** die Konvertierungsspezifikation vorangestellt wird.  
+-   Wenn **iosbase**. **flags** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) ungleich null ist, wird das Flag **+** der Konvertierungsspezifikation vorangestellt.  
   
--   Wenn **Iosbase**. **Flags** & `ios_base::`[Showpoint](../Topic/%3Cios%3E%20functions.md#showpoint) ungleich NULL ist, wird das Flag **#** die Konvertierungsspezifikation vorangestellt wird.  
+-   Wenn **iosbase**. **flags** & `ios_base::`[showpoint](../standard-library/ios-functions.md#showpoint) ungleich null ist, wird das Flag **#** der Konvertierungsspezifikation vorangestellt.  
   
- Der vierte virtuelle geschützte Member-Funktion:  
+ Die vierte virtuelle geschützte Memberfunktion:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -235,9 +254,9 @@ virtual iter_type do_put(iter_type next,
     long double val) const;
 ```  
   
- verhält sich die dritte, außer dass die Qualifizierer **l** bei der Konvertierung ersetzt mit **L**.  
+ verhält sich wie die dritte, außer dass der Qualifizierer **l** bei der Konvertierungsspezifikation durch **L** ersetzt wird.  
   
- Die fünfte virtuellen geschützte Member-Funktion:  
+ Die fünfte virtuelle geschützte Memberfunktion:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -246,9 +265,9 @@ virtual iter_type do_put(iter_type next,
     const void* val) const;
 ```  
   
- verhält sich die erste, außer dass die Konvertierungsspezifikation `p`**,** sowie alle Qualifizierer Abstand anzugeben.  
+ verhält sich wie die erste, außer dass die Konvertierungsspezifikation `p`**,** sowie alle Qualifizierer Abstand angeben müssen.  
   
- Der sechste virtuelle geschützter Member-Funktion:  
+ Die sechste virtuelle geschützte Memberfunktion:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -257,11 +276,11 @@ virtual iter_type do_put(iter_type next,
     bool val) const;
 ```  
   
- verhält sich wie die erste, generiert er ein boolescher Ausgabefeld aus ` val`.  
+ verhält sich wie die erste, generiert jedoch ein boolesches Ausgabefeld aus `val`.  
   
- Ein boolescher Ausgabefeld akzeptiert einen von zwei Formen. Wenn **Iosbase**. **Flags** & `ios_base::`[Boolalpha](../Topic/%3Cios%3E%20functions.md#boolalpha) ist **false**, gibt die Memberfunktion `do_put`(_ *Weiter*, \_ *Iosbase*, \_ *Füllen*, ( **lange**) ` val`), erzeugt die in der Regel eine generierte Sequenz entweder 0 (für **false**) oder 1 (für **true**). Andernfalls wird von die generierte Sequenz entweder **Fac**. [Falsename](../standard-library/numpunct-class.md#numpunct__falsename)`)` (für **false**), oder **Fac**. [TrueName](../standard-library/numpunct-class.md#numpunct__truename) (für **true**).  
+ Ein boolesches Ausgabefeld nimmt eine von zwei Formen an. Wenn **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) **falsch** ist, gibt die Memberfunktion `do_put`(_ *Next*, \_ *Iosbase*, \_ *Fill*, ( **long**) `val`) zurück, was in der Regel eine generierte Sequenz von 0 (für **FALSE**) oder 1 (für **TRUE**) erstellt. Andernfalls ist die generierte Sequenz entweder **fac**. [falsename](../standard-library/numpunct-class.md#falsename)`)` (für **FALSE**), oder **fac**. [truename](../standard-library/numpunct-class.md#truename) (für **TRUE**) übereinstimmen.  
   
- Der siebte virtuellen geschützte Member-Funktion:  
+ Die siebte virtuelle geschützte Memberfunktion:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -270,9 +289,9 @@ virtual iter_type do_put(iter_type next,
     long long val) const;
 ```  
   
- verhält sich wie die erste, außer dass es eine Konvertierungsspezifikation von ersetzt **%ld** mit **Lld**.  
+ verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von **ld** durch **lld** ersetzt.  
   
- Die achte virtuellen geschützte Member-Funktion:  
+ Die achte virtuell, geschützte Memberfunktion:  
   
 ```  
 virtual iter_type do_put(iter_type next,
@@ -281,12 +300,12 @@ virtual iter_type do_put(iter_type next,
     unsigned long long val) const;
 ```  
   
- verhält sich wie die erste, außer dass es eine Konvertierungsspezifikation von ersetzt `ld` mit `llu`.  
+ verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` durch `llu` ersetzt.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [put](#num_put__put), welche `do_put`.  
+  Siehe das Beispiel für [put](#put), mit dem `do_put` aufgerufen wird.  
   
-##  <a name="a-namenumputitertypea-numputitertype"></a><a name="num_put__iter_type"></a>  num_put:: iter_type  
+##  <a name="iter_type"></a> num_put::iter_type  
  Ein Typ, der einen Ausgabeiterator beschreibt.  
   
 ```  
@@ -294,9 +313,9 @@ typedef OutputIterator iter_type;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für den Vorlagenparameter **OutputIterator.**  
+ Der Typ ist ein Synonym für den Vorlagenparameter **OutputIterator**.  
   
-##  <a name="a-namenumputnumputa-numputnumput"></a><a name="num_put__num_put"></a>  num_put:: num_put  
+##  <a name="num_put"></a> num_put::num_put  
  Der Konstruktor für Objekte des Typs `num_put`.  
   
 ```  
@@ -305,23 +324,23 @@ explicit num_put(size_t _Refs = 0);
   
 ### <a name="parameters"></a>Parameter  
  `_Refs`  
- Integer-Wert verwendet, um den Typ der Verwaltung des Arbeitsspeichers für das Objekt angeben.  
+ Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Die möglichen Werte für die `_Refs` Parameter und ihre Bedeutung sind:  
+ Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:  
   
--   0: die Lebensdauer des Objekts wird von der Gebietsschemas, die es enthalten verwaltet.  
+-   0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.  
   
--   1: die Lebensdauer des Objekts manuell verwaltet werden muss.  
+-   1: Die Lebensdauer des Objekts muss manuell verwaltet werden.  
   
--   \> 0: Diese Werte sind nicht definiert.  
+-   \>1: Diese Werte sind nicht definiert.  
   
- Keine direkte Beispiele sind möglich, da der Destruktor geschützt ist.  
+ Direkte Beispiele sind nicht möglich, da der Destruktor geschützt ist.  
   
- Der Konstruktor initialisiert die Basisobjekt mit **Gebietsschema::**[Facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).  
+ Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).  
   
-##  <a name="a-namenumputputa-numputput"></a><a name="num_put__put"></a>  num_put:: Put  
- Konvertiert eine Zahl in eine Sequenz von **CharType**s die Anzahl für ein bestimmtes Gebietsschema formatiert.  
+##  <a name="put"></a> num_put::put  
+ Konvertiert eine Zahl in eine Sequenz von **CharType**s, die die Zahl darstellt, die für ein bestimmtes Gebietsschema formatiert wird.  
   
 ```  
 iter_type put(
@@ -382,27 +401,27 @@ iter_type put(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` dest`  
- Ein Iterator, der das erste Element der eingefügten Zeichenfolge adressiert.  
+ `dest`  
+ Ein Iterator, der das erste Element in der eingefügten Zeichenfolge adressiert.  
   
  `_Iosbase`  
- Angegebenen Stream, der mit dem Numpunct-Facet verwendet, um die Ausgabe und die Flags für das Formatieren der Ausgabe Satzzeichen voneinander getrennt Gebietsschema enthält.  
+ Gibt den Datenstrom an, der ein Gebietsschema mit numpunct-Facets enthält, die die Satzzeichen für die Ausgabe und die Flags für das Formatieren der Ausgabe erstellen.  
   
  `_Fill`  
- Ein Zeichen, die für den Abstand verwendet wird.  
+ Ein Zeichen, das Leerzeichen einfügt.  
   
- ` val`  
- Die Nummer oder Boolean-Typ, der ausgegeben werden sollen.  
+ `val`  
+ Die Nummer oder der boolesche Typ, der ausgegeben werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Ausgabeiterator die Adressen die Position hinter dem letzten Element erzeugt.  
+ Ein Ausgabeiterator, der auf die erste Position nach dem jeweils letzten Element verweist.  
   
 ### <a name="remarks"></a>Hinweise  
- Alle Memberfunktionen geben [Do_put](#num_put__do_put)( ` next`, `_Iosbase`, `_Fill`, ` val`).  
+ Beide Memberfunktionen geben [do_put](#do_put)( `next`, `_Iosbase`, `_Fill`, `val`) zurück.  
   
 ### <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // num_put_put.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -437,7 +456,8 @@ num_put( ) = 1.000,67
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [\< Gebietsschema>](../standard-library/locale.md)   
- [Facet-Klasse](../standard-library/locale-class.md#facet_class)   
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [\<locale>](../standard-library/locale.md)   
+ [facet-Klasse](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

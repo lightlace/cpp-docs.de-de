@@ -1,54 +1,71 @@
 ---
-title: "_dup, _dup2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_dup"
-  - "_dup2"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_dup2"
-  - "_dup"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_dup-Funktion"
-  - "_dup2-Funktion"
-  - "dup-Funktion"
-  - "dup2-Funktion"
-  - "Dateihandles [C++], Duplizieren"
-  - "Dateihandles [C++], Neuzuweisen"
+title: _dup, _dup2 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _dup
+- _dup2
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _dup2
+- _dup
+dev_langs:
+- C++
+helpviewer_keywords:
+- _dup2 function
+- dup function
+- file handles [C++], duplicating
+- file handles [C++], reassigning
+- dup2 function
+- _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _dup, _dup2
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: a85a26fbe7ab8417ea9ecd3c43745789117ac856
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
-Erstellt einen zweiten Dateideskriptor für eine geöffnete Datei \(`_dup`\) oder weist einen Dateideskriptor neu zu \(`_dup2`\).  
+---
+# <a name="dup-dup2"></a>_dup, _dup2
+Erstellt einen zweiten Dateideskriptor für eine geöffnete Datei (`_dup`) oder weist einen Dateideskriptor neu zu (`_dup2`).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int _dup(   
@@ -60,37 +77,37 @@ int _dup2(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `fd`, `fd1`  
  Dateideskriptoren, die auf die geöffnete Datei verweisen.  
   
  `fd2`  
  Jeder beliebige Dateideskriptor.  
   
-## Rückgabewert  
- `_dup` gibt einen neuen Dateideskriptor zurück.  `_dup2` gibt bei Erfolg 0 zurück.  Wenn ein Fehler auftritt, gibt jede Funktion – 1 zurück und legt bei einem ungültigen Dateideskriptor `errno` auf `EBADF` fest oder auf `EMFILE`, wenn keine weiteren Dateideskriptoren verfügbar sind.  Bei einem ungültigen Dateideskriptor ruft die Funktion auch den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  
+## <a name="return-value"></a>Rückgabewert  
+ `_dup` gibt einen neuen Dateideskriptor zurück. `_dup2` gibt bei Erfolg 0 zurück. Wenn ein Fehler auftritt, jede Funktion gibt-1 zurück und legt `errno` auf `EBADF` , wenn der Dateideskriptor ungültig ist oder auf `EMFILE` , wenn keine weiteren Dateideskriptoren verfügbar sind. Bei einem ungültigen Dateideskriptor ruft die Funktion auch den Handler für ungültige Parameter auf, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben.  
   
- Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die Funktionen `_dup` und `_dup2` ordnen einen zweiten Dateideskriptor einer momentan geöffneten Datei zu.  Diese Funktionen können verwendet werden, um einen vordefinierten Dateideskriptor – wie z. B. `stdout` – einer anderen Datei zuzuordnen.  Das Durchführen von Operationen an der Datei ist mit jedem der beiden Dateideskriptoren möglich.  Der für die Datei zulässige Zugriffstyp ist von der Erstellung eines neuen Deskriptors nicht betroffen.  `_dup` gibt den nächsten verfügbaren Dateideskriptor für die angegebene Datei zurück.  `_dup2` erzwingt `fd2`, um auf dieselbe Datei wie `fd1` zu verweisen.  Wenn `fd2` zum Zeitpunkt des Aufrufs einer geöffneten Datei zugeordnet ist, wird diese Datei geschlossen.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktionen `_dup` und `_dup2` ordnen einen zweiten Dateideskriptor einer momentan geöffneten Datei zu. Diese Funktionen können verwendet werden, um einen vordefinierten Dateideskriptor – wie z. B. `stdout` – einer anderen Datei zuzuordnen. Das Durchführen von Operationen an der Datei ist mit jedem der beiden Dateideskriptoren möglich. Der für die Datei zulässige Zugriffstyp ist von der Erstellung eines neuen Deskriptors nicht betroffen. `_dup` gibt den nächsten verfügbaren Dateideskriptor für die angegebene Datei zurück. `_dup2` erzwingt `fd2`, um auf dieselbe Datei wie `fd1` zu verweisen. Wenn `fd2` zum Zeitpunkt des Aufrufs einer geöffneten Datei zugeordnet ist, wird diese Datei geschlossen.  
   
- `_dup` und `_dup2` akzeptieren Dateideskriptoren als Parameter.  Um einen Stream `(FILE *)` an jede dieser Funktionen zu übergeben, verwenden Sie [\_fileno](../../c-runtime-library/reference/fileno.md).  Die `fileno`\-Routine gibt den Dateideskriptor zurück, der derzeit dem angegebenen Stream zugeordnet ist.  Das folgende Beispiel zeigt, wie `stderr` \(definiert als `FILE` `*` in Stdio.h\) einem Dateideskriptor zugeordnet wird:  
+ `_dup` und `_dup2` akzeptieren Dateideskriptoren als Parameter. Um einen Stream `(FILE *)` an jede dieser Funktionen zu übergeben, verwenden Sie [_fileno](../../c-runtime-library/reference/fileno.md). Die `fileno`-Routine gibt den Dateideskriptor zurück, der derzeit dem angegebenen Stream zugeordnet ist. Das folgende Beispiel zeigt, wie `stderr` (definiert als `FILE` `*` in Stdio.h) einem Dateideskriptor zugeordnet wird:  
   
 ```  
 int cstderr = _dup( _fileno( stderr ));  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_dup`|\<io.h\>|  
-|`_dup2`|\<io.h\>|  
+|-------------|---------------------|  
+|`_dup`|\<io.h>|  
+|`_dup2`|\<io.h>|  
   
- Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps nicht unterstützt.  Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C\-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps verwendet werden können.  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps nicht unterstützt. Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_dup.c  
@@ -144,12 +161,16 @@ int main( void )
 }  
 ```  
   
-  **This goes to stdout first**  
-**This goes to stdout**  
-**The file 'data' contains:**  
-**This goes to file 'data'**   
-## Siehe auch  
- [E\/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)   
- [\_close](../../c-runtime-library/reference/close.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+```Output  
+This goes to stdout first  
+This goes to stdout  
+  
+The file 'data' contains:  
+This goes to file 'data'  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [E/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)   
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

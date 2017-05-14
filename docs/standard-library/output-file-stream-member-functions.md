@@ -12,6 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - output streams, member functions
+f1_keywords: []
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -31,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="output-file-stream-member-functions"></a>Ausgabedateistream-Memberfunktionen
@@ -43,7 +45,7 @@ Ausgabedateistream-Memberfunktionen verfügen über drei Arten: die, die Manipul
 ## <a name="the-open-function-for-output-streams"></a>Die open-Funktion für Ausgabestreams  
  Um einen Ausgabedateistream ([ofstream](../standard-library/basic-ofstream-class.md)) zu verwenden, müssen Sie diesen Stream einer bestimmten Datenträgerdatei im Konstruktor oder der **open**-Funktion zuweisen. Bei Verwendung der **open**-Funktion können Sie das gleiche Streamobjekt mit einer Reihe von Dateien wiederverwenden. In beiden Fällen sind die Argumente, die die Datei beschreiben identisch.  
   
- Wenn Sie die Datei öffnen, die einem Ausgabestream zugeordnet ist, geben Sie in der Regel ein **open_mode**-Flag an. Sie können diese Flags kombinieren, die in der `ios`-Klasse mit dem bitweisen OR-Operator ( &#124; ) als Enumeratoren definiert werden. Finden Sie unter [ios_base:: openmode](../standard-library/ios-base-class.md#ios_base__openmode) eine Liste der Enumeratoren.  
+ Wenn Sie die Datei öffnen, die einem Ausgabestream zugeordnet ist, geben Sie in der Regel ein **open_mode**-Flag an. Sie können diese Flags kombinieren, die in der `ios`-Klasse mit dem bitweisen OR-Operator ( &#124; ) als Enumeratoren definiert werden. Finden Sie unter [ios_base:: openmode](../standard-library/ios-base-class.md#openmode) eine Liste der Enumeratoren.  
   
  Drei allgemeine Situationen für die Ausgabestreams umfassen Modusoptionen:  
   
@@ -81,7 +83,7 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put-function"></a>Die put-Funktion  
+## <a name="the-put"></a>Der put
  Die **put**-Funktion schreibt ein Zeichen in den Ausgabestream. Die beiden folgenden Anweisungen sind standardmäßig identisch, aber die zweite ist von den Streamformatargumenten betroffen:  
   
 ```  
@@ -91,7 +93,7 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write-function"></a>Die write-Funktion  
+## <a name="the-write"></a>Der Schreibvorgang
  Die **write**-Funktion schreibt einen Speicherblock in einen Ausgabestream für die Datei. Das Längenargument bestimmt die Anzahl geschriebener Bytes. Dieses Beispiel erstellt einen Ausgabestream für die Datei und schreibt den binären Wert der `Date`-Struktur hinein:  
   
 ```  
@@ -123,7 +125,7 @@ int main( )
   
  Der Destruktor der Ausgabestream schließt eine Streamdatei nur automatisch, wenn den Konstruktor oder die **open**-Memberfunktion die Datei geöffnet haben. Wenn Sie einen Dateideskriptor einer bereits geöffneten Datei dem Konstruktor übergeben oder die **attach**-Memberfunktion nutzen, müssen Sie die Datei explizit schließen.  
   
-##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> Fehlerverarbeitende Funktionen  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Fehlerverarbeitende Funktionen  
  Verwenden Sie diese Memberfunktionen, um beim Schreiben in einen Stream auf Fehler zu testen:  
   
 |Funktion|Rückgabewert|  

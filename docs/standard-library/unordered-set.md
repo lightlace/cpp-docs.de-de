@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: a7fcb706317f7185d260daab15ae14f478176768
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ae857750efe2d1f80e703e0c44f9646f7bfd3733
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
@@ -59,12 +60,12 @@ Definiert die Containervorlagenklassen [unordered_multiset](../standard-library/
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-set-operators.md#operator_neq)|Überprüft, ob das unordered_multiset-Objekt links vom Operator ungleich dem unordered_multiset-Objekt rechts vom Operator ist.|  
-|[operator==](../standard-library/unordered-set-operators.md#operator_eq_eq)|Überprüft, ob das unordered_multiset-Objekt links vom Operator gleich dem unordered_multiset-Objekt rechts vom Operator ist.|  
-|[swap-Funktion](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Vertauscht zwei Multimengen.|  
-|[operator!=](../standard-library/unordered-set-operators.md#operator_neq)|Testet, ob das unordered_set-Objekt links vom Operator ungleich dem unordered_set-Objekt rechts vom Operator ist.|  
-|[operator==](../standard-library/unordered-set-operators.md#operator_eq_eq)|Testet, ob das unordered_set-Objekt links vom Operator gleich dem unordered_set-Objekt rechts vom Operator ist.|  
-|[swap-Funktion](../standard-library/unordered-set-functions.md#swap)|Vertauscht zwei Mengen.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Überprüft, ob das unordered_multiset-Objekt links vom Operator ungleich dem unordered_multiset-Objekt rechts vom Operator ist.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Überprüft, ob das unordered_multiset-Objekt links vom Operator gleich dem unordered_multiset-Objekt rechts vom Operator ist.|  
+|[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Vertauscht zwei Multimengen.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Testet, ob das unordered_set-Objekt links vom Operator ungleich dem unordered_set-Objekt rechts vom Operator ist.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Testet, ob das unordered_set-Objekt links vom Operator gleich dem unordered_set-Objekt rechts vom Operator ist.|  
+|[swap](../standard-library/unordered-set-functions.md#swap)|Vertauscht zwei Mengen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [unordered_map-Klasse](../standard-library/unordered-map-class.md)   

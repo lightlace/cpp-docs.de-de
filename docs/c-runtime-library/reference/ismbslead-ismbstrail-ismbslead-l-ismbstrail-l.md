@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e0f3aa666b38966699cbf8a98032318f9eb938e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5c74c39a90896f9c04bfc945b420238795b11b74
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
@@ -113,7 +114,7 @@ int _ismbstrail_l(
  Das zu verwendende Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `_ismbslead` gibt -1 zurück, wenn das Zeichen ein führendes Byte ist, und `_ismbstrail` gibt -1 zurück, wenn das Zeichen ein nachfolgendes Byte ist. Wenn die Eingabezeichenfolgen gültig sind, aber keine führenden oder nachfolgenden Bytes, geben diese Funktionen&0; zurück. Wenn eines der Argumente `NULL` ist, wird der ungültige Parametertyphandler wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `NULL` zurück und stellen `errno` auf `EINVAL`ein.  
+ `_ismbslead`Gibt-1 zurück, wenn das Zeichen ein führendes Byte ist und `_ismbstrail` gibt-1 zurück, wenn das Zeichen ein nachfolgendes Byte ist. Wenn die Eingabezeichenfolgen gültig sind, aber keine führenden oder nachfolgenden Bytes, geben diese Funktionen 0 zurück. Wenn eines der Argumente `NULL` ist, wird der ungültige Parametertyphandler wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `NULL` zurück und stellen `errno` auf `EINVAL`ein.  
   
 ## <a name="remarks"></a>Hinweise  
  `_ismbslead` und `_ismbstrail` sind langsamer als die `_ismbblead`- und `_ismbbtrail`-Versionen, da sie den Zeichenfolgenkontext berücksichtigen.  
@@ -132,9 +133,6 @@ int _ismbstrail_l(
  \* Für Manifestkonstanten für die Testbedingungen.  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   

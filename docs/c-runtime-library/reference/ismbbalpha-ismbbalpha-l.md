@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bbfbad7106e7e5b6fb7a311a8ca1ac4b44c7a1fc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5795c71864a9670334c03cb6722b932a66747047
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha, _ismbbalpha_l
@@ -83,13 +84,13 @@ int _ismbbalpha_l(
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `_ismbbalpha` gibt einen Wert ungleich&0; (null) zurück, wenn diese Bedingung zutrifft. Der Ausdruck:  
+ `_ismbbalpha` gibt einen Wert ungleich 0 (null) zurück, wenn diese Bedingung zutrifft. Der Ausdruck:  
   
 ```  
 isalpha || _ismbbkalnum  
 ```  
   
- ist für `c` ungleich 0, bzw. andernfalls 0. `_ismbbalpha` verwendet das aktuelle Gebietsschema alle gebietsschemaabhängige Zeicheneinstellungen. `_ismbbalpha_l` ist identisch, verwendet jedoch stattdessen das übergebene Gebietsschema.  
+ ist für `c`ungleich 0, bzw. andernfalls 0. `_ismbbalpha` verwendet das aktuelle Gebietsschema alle gebietsschemaabhängige Zeicheneinstellungen. `_ismbbalpha_l` ist identisch, verwendet jedoch stattdessen das übergebene Gebietsschema.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -102,9 +103,6 @@ isalpha || _ismbbkalnum
   
 ## <a name="libraries"></a>Bibliotheken  
  Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Byteklassifizierung](../../c-runtime-library/byte-classification.md)   

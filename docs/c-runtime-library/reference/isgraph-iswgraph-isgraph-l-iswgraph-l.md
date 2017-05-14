@@ -64,10 +64,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a583f0b870f4395c80a384914d6fdd8b39e85a4c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 90f55b90498908ce0c806ae1d253e07d8672df17
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
@@ -97,7 +98,7 @@ int _iswgraph_l(
  Zu testende ganze Zahl.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Jede dieser Routinen gibt einen Wert ungleich&0; (null) zurück, wenn `c` eine bestimmte Darstellung eines druckbaren Zeichens ist, das keine Leerzeichen ist. `isgraph` gibt einen Wert ungleich&0; (null) zurück, wenn `c` ein anderes druckbares Zeichen als ein Leerzeichen ist. `iswgraph` gibt einen Wert ungleich&0; (null) zurück, wenn `c` ein anderes druckbares Breitzeichen als ein Leerzeichen ist. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
+ Jede dieser Routinen gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine bestimmte Darstellung eines druckbaren Zeichens ist, das keine Leerzeichen ist. `isgraph` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein anderes druckbares Zeichen als ein Leerzeichen ist. `iswgraph` gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein anderes druckbares Breitzeichen als ein Leerzeichen ist. Jede dieser Routinen gibt 0 zurück, wenn `c` die Testbedingung nicht erfüllt.  
   
  Die Versionen dieser Funktionen mit dem `_l`-Suffix verwenden das übergebene Gebietsschema anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
@@ -120,9 +121,6 @@ int _iswgraph_l(
 |`_iswgraph_l`|\<ctype.h> oder \<wchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   
