@@ -1,69 +1,86 @@
 ---
-title: "strspn, wcsspn, _mbsspn, _mbsspn_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsspn_l"
-  - "wcsspn"
-  - "strspn"
-  - "_mbsspn"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftcsspn"
-  - "wcsspn"
-  - "_mbsspn"
-  - "_tcsspn"
-  - "strspn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcsspn-Funktion"
-  - "_mbsspn-Funktion"
-  - "_mbsspn_l-Funktion"
-  - "_tcsspn-Funktion"
-  - "ftcsspn-Funktion"
-  - "mbsspn-Funktion"
-  - "mbsspn_l-Funktion"
-  - "Zeichenfolgen [C++], Suchen"
-  - "strspn-Funktion"
-  - "Teilzeichenfolgen, Suchen"
-  - "tcsspn-Funktion"
-  - "wcsspn-Funktion"
+title: strspn, wcsspn, _mbsspn, _mbsspn_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsspn_l
+- wcsspn
+- strspn
+- _mbsspn
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftcsspn
+- wcsspn
+- _mbsspn
+- _tcsspn
+- strspn
+dev_langs:
+- C++
+helpviewer_keywords:
+- wcsspn function
+- strings [C++], searching
+- mbsspn function
+- tcsspn function
+- strspn function
+- substrings, finding
+- _mbsspn_l function
+- ftcsspn function
+- _mbsspn function
+- _ftcsspn function
+- mbsspn_l function
+- _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# strspn, wcsspn, _mbsspn, _mbsspn_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 71c5c3e7d3dd747926a02940c5ef95f9d1ef243f
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 Gibt den Index des ersten Zeichens in einer Zeichenfolge zurück, die keinem Zeichensatz angehört.  
   
 > [!IMPORTANT]
->  `_mbsspn` und `_mbsspn_l` können nicht in Anwendungen verwendet werden, die in Windows\-Runtime ausgeführt werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsspn` und `_mbsspn_l` können nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_t strspn(  
@@ -85,7 +102,7 @@ size_t _mbsspn_l(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `str`  
  Zu suchende mit NULL endende Zeichenfolge.  
   
@@ -95,34 +112,34 @@ size_t _mbsspn_l(
  `locale`  
  Zu verwendendes Gebietsschema.  
   
-## Rückgabewert  
- Gibt einen ganzzahligen Wert zurück, der die Länge der untergeordneten Zeichenfolge in `str` angibt, die vollständig aus Zeichen in `strCharSet`*besteht.* Wenn `str` mit einem Zeichen beginnt, das nicht in `strCharSet` *enthalten ist,* gibt die Funktion 0 \(null\) zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt einen ganzzahligen Wert, die die Länge der Teilzeichenfolge in `str` , die vollständig aus Zeichen aus `strCharSet`. Wenn `str` beginnt mit einem Zeichen, die nicht in `strCharSet`, gibt die Funktion 0 zurück.  
   
-## Hinweise  
- Die `strspn`\-Funktion gibt den Index des ersten Zeichens in `str` zurück, das nicht dem Zeichensatz in `strCharSet` angehört.  Die Suche umfasst keine abschließenden Nullzeichen.  
+## <a name="remarks"></a>Hinweise  
+ Die `strspn`-Funktion gibt den Index des ersten Zeichens in `str` zurück, das nicht dem Zeichensatz in `strCharSet` angehört. Die Suche umfasst keine abschließenden Nullzeichen.  
   
- `wcsspn` und `_mbsspn` sind Breitzeichen\- und Multibytezeichenversionen von `strspn`**.** Die Argumente von `wcsspn` sind Breitzeichen\-Zeichenfolgen, die von `_mbsspn` sind Multibyte\-Zeichenfolgen.  `_mbsspn` überprüft die eigenen Parameter.  Wenn `str` oder `strCharSet``NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, legt `_mbspn``errno` auf `EINVAL` fest und gibt 0 zurück.  `strspn` und `wcsspn` überprüfen ihre Parameter nicht.  Diese drei Funktionen verhalten sich andernfalls identisch.  
+ `wcsspn` und `_mbsspn` sind Breitzeichen- und Multibytezeichenversionen von `strspn`. Die Argumente von `wcsspn` sind Breitzeichen-Zeichenfolgen, die von `_mbsspn` sind Multibyte-Zeichenfolgen. `_mbsspn` überprüft die eigenen Parameter. Wenn `str` oder `strCharSet` `NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt `_mbspn``errno` auf `EINVAL` fest und gibt 0 zurück. `strspn` und `wcsspn` überprüfen ihre Parameter nicht. Diese drei Funktionen verhalten sich andernfalls identisch.  
   
- Der Ausgabewert ist von der `LC_CTYPE`\-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Die Versionen dieser Funktionen ohne das `_l`\-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsspn`|`strspn`|`_mbsspn`|`wcsspn`|  
-|**nicht verfügbar**|**nicht verfügbar**|`_mbsspn_l`|**nicht verfügbar**|  
+|**n/v**|**n/v**|`_mbsspn_l`|**n/v**|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`strspn`|\<string.h\>|  
-|`wcsspn`|\<string.h\> oder \<wchar.h\>|  
-|`_mbsspn`, `_mbsspn_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strspn`|\<string.h>|  
+|`wcsspn`|\<string.h> oder \<wchar.h>|  
+|`_mbsspn`, `_mbsspn_l`|\<mbstring.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_strspn.c  
@@ -145,18 +162,18 @@ int main( void )
 }  
 ```  
   
-  **Der Teil von "cabbage", der nur a, b oder c enthält, ist 5 Bytes lang**   
-## .NET Framework-Entsprechung  
- [System::String::Substring](https://msdn.microsoft.com/en-us/library/system.string.substring.aspx)  
+```Output  
+The portion of 'cabbage' containing only a, b, or c is 5 bytes long  
+```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [Interpretation von Mehrbytezeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_strspnp, \_wcsspnp, \_mbsspnp, \_mbsspnp\_l](../../c-runtime-library/reference/strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)   
- [strcspn, wcscspn, \_mbscspn, \_mbscspn\_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)
+ [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l](../../c-runtime-library/reference/strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)   
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)

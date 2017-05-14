@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9a16b7d6152ce3070eb8e4ea7552ab83200c0910
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 835450387dea050b45dac2e44a12c7df5d5d7023
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
@@ -89,7 +90,7 @@ wint_t _ungetwc_nolock(
  Zeiger zur `FILE` -Struktur.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg gibt jede dieser Funktionen das Zeichenargument `c`** zurück. Wenn `c` nicht zurückgeschoben werden kann oder wenn kein Zeichen gelesen wurde, bleibt der Eingabestream unverändert und `_ungetc_nolock` gibt `EOF` zurück. `_ungetwc_nolock` gibt `WEOF` zurück. Wenn `stream` `NULL` ist, wird `EOF` oder `WEOF` zurückgegeben und `errno` auf `EINVAL` festgelegt.  
+ Wenn erfolgreich, jede dieser Funktionen der Zeichenargument zurückgibt `c`. Wenn `c` nicht zurückgeschoben werden kann oder wenn kein Zeichen gelesen wurde, bleibt der Eingabestream unverändert und `_ungetc_nolock` gibt `EOF` zurück. `_ungetwc_nolock` gibt `WEOF` zurück. Wenn `stream` `NULL` ist, wird `EOF` oder `WEOF` zurückgegeben und `errno` auf `EINVAL` festgelegt.  
   
  Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -110,9 +111,6 @@ wint_t _ungetwc_nolock(
 |`_ungetwc_nolock`|\<stdio.h> oder \<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Stream-E/A](../../c-runtime-library/stream-i-o.md)   

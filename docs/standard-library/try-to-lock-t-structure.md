@@ -1,40 +1,61 @@
 ---
-title: "try_to_lock_t-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mutex/std::try_to_lock_t"
-dev_langs: 
-  - "C++"
+title: try_to_lock_t-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mutex/std::try_to_lock_t
+dev_langs:
+- C++
 ms.assetid: 3e48d632-0387-4871-8257-34efef5d6b83
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# try_to_lock_t-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 1a6427beb2230c437b75e0539c430a7251f5f0ba
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
-Stellt `struct` dar, das ein [try\_to\_lock](../Topic/try_to_lock%20Variable.md)\-Objekt definiert.  Wird verwendet, um einen der überladenen Konstruktoren von [unique\_lock](../standard-library/unique-lock-class.md) auswählen.  
+---
+# <a name="trytolockt-structure"></a>try_to_lock_t-Struktur
+Stellt eine `struct` dar, die ein [try_to_lock](../standard-library/mutex-functions.md#try_to_lock)-Objekt definiert. Wird verwendet, um einen der überladenen Konstruktoren von [unique_lock](../standard-library/unique-lock-class.md) auszuwählen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-struct try_to_lock_t;  
+struct try_to_lock_t;
 ```  
   
-## Anforderungen  
- **Header:** mutex  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Mutex >  
   
  **Namespace:** std  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex\>](../standard-library/mutex.md)
+ [\<mutex>](../standard-library/mutex.md)
+
+
+
+

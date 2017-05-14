@@ -1,73 +1,90 @@
 ---
-title: "strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbspbrk"
-  - "wcspbrk"
-  - "_mbspbrk_l"
-  - "strpbrk"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fstrpbrk"
-  - "_mbspbrk"
-  - "strpbrk"
-  - "_tcspbrk"
-  - "_ftcspbrk"
-  - "wcspbrk"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstrpbrk-Funktion"
-  - "_ftcspbrk-Funktion"
-  - "_mbspbrk-Funktion"
-  - "_mbspbrk_l-Funktion"
-  - "_tcspbrk-Funktion"
-  - "Zeichensätze [C++], Überprüfen der Zeichenfolgen auf Zeichen"
-  - "Zeichen [C++], Überprüfen von Zeichenfolgen"
-  - "fstrpbrk-Funktion"
-  - "ftcspbrk-Funktion"
-  - "mbspbrk-Funktion"
-  - "mbspbrk_l-Funktion"
-  - "Zeichenfolgen [C++], Scannen"
-  - "strpbrk-Funktion"
-  - "tcspbrk-Funktion"
-  - "wcspbrk-Funktion"
+title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbspbrk
+- wcspbrk
+- _mbspbrk_l
+- strpbrk
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fstrpbrk
+- _mbspbrk
+- strpbrk
+- _tcspbrk
+- _ftcspbrk
+- wcspbrk
+dev_langs:
+- C++
+helpviewer_keywords:
+- fstrpbrk function
+- _ftcspbrk function
+- _mbspbrk_l function
+- strpbrk function
+- _fstrpbrk function
+- mbspbrk function
+- characters [C++], scanning strings
+- _tcspbrk function
+- wcspbrk function
+- ftcspbrk function
+- character sets [C++], scanning strings for characters
+- strings [C++], scanning
+- tcspbrk function
+- _mbspbrk function
+- mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9eb1dfc77694c9c1b85aa21fe039058facb98c71
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 Durchsucht Zeichenfolgen nach Zeichen in angegebenen Zeichensätzen.  
   
 > [!IMPORTANT]
->  `_mbspbrk` und `_mbspbrk_l` können nicht in Anwendungen verwendet werden, die in Windows\-Runtime ausgeführt werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbspbrk` und `_mbspbrk_l` können nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 char *strpbrk(  
@@ -123,7 +140,7 @@ const unsigned char *_mbspbrk_l(
 ); // C++ only  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `str`  
  Auf NULL endende gesuchte Zeichenfolge.  
   
@@ -133,40 +150,40 @@ const unsigned char *_mbspbrk_l(
  `locale`  
  Zu verwendendes Gebietsschema.  
   
-## Rückgabewert  
- Gibt einen Zeiger auf das erste Vorkommen eines beliebigen Zeichens von `strCharSet` in `str` zurück oder einen `NULL`\-Zeiger, wenn zwei Zeichenfolgenargumente über kein gemeinsames Zeichen verfügen.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt einen Zeiger auf das erste Vorkommen eines beliebigen Zeichens von `strCharSet` in `str` zurück oder einen `NULL`-Zeiger, wenn zwei Zeichenfolgenargumente über kein gemeinsames Zeichen verfügen.  
   
-## Hinweise  
- Die `strpbrk`\-Funktion gibt einen Zeiger auf das erste Vorkommen eines Zeichens in `str` zurück, das zu dem Zeichensatz in `strCharSet` gehört.  Die Suche umfasst nicht das abschließende Nullzeichen.  
+## <a name="remarks"></a>Hinweise  
+ Die `strpbrk`-Funktion gibt einen Zeiger auf das erste Vorkommen eines Zeichens in `str` zurück, das zu dem Zeichensatz in `strCharSet` gehört. Die Suche umfasst nicht das abschließende Nullzeichen.  
   
- `wcspbrk` und `_mbspbrk` sind Breitzeichen\- und Multibytezeichenversionen von `strpbrk`.  Die Argumente und der Rückgabewert von `wcspbrk` sind Breitzeichen\-Zeichenfolgen; die von `_mbspbrk` sind Mehrbyte\-Zeichenfolgen.  
+ `wcspbrk` und `_mbspbrk` sind Breitzeichen- und Multibytezeichenversionen von `strpbrk`. Die Argumente und der Rückgabewert von `wcspbrk` sind Breitzeichen-Zeichenfolgen; die von `_mbspbrk` sind Mehrbyte-Zeichenfolgen.  
   
- `_mbspbrk` überprüft die eigenen Parameter.  Wenn `str` oder `strCharSet` den Wert `NULL` aufweisen, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, gibt `_mbspbrk``NULL` zurück und setzt `errno` auf `EINVAL`.  `strpbrk` und `wcspbrk` überprüfen ihre Parameter nicht.  Diese drei Funktionen verhalten sich andernfalls identisch.  
+ `_mbspbrk` überprüft die eigenen Parameter. Wenn `str` oder `strCharSet` `NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, gibt `_mbspbrk` `NULL` zurück und setzt `errno` auf `EINVAL`. `strpbrk` und `wcspbrk` überprüfen ihre Parameter nicht. Diese drei Funktionen verhalten sich andernfalls identisch.  
   
- `_mbspbrk` ähnelt `_mbscspn`, außer dass `_mbspbrk` einen Zeiger anstelle eines Werts vom Typ [size\_t](../../c-runtime-library/standard-types.md) zurückgibt.  
+ `_mbspbrk` ähnelt `_mbscspn`, außer dass `_mbspbrk` einen Zeiger anstelle eines Werts vom Typ [size_t](../../c-runtime-library/standard-types.md) zurückgibt.  
   
- In C akzeptieren diese Funktionen einen `const`\-Zeiger als erstes Argument.  In C\+\+ sind zwei Überladungen verfügbar.  Die Überladung, die einen Zeiger zu `const` akzeptiert, gibt einen Zeiger zu `const` zurück; die Version, die einen Zeiger auf Nicht\-`const` akzeptiert, gibt einen Zeiger auf Nicht\-`const` zurück.  Das Makro \_CONST\_CORRECT\_OVERLOADS wird definiert, wenn sowohl die `const`\-Version als auch die Nicht\-`const`\-Version dieser Funktionen verfügbar sind.  Wenn Sie das Nicht\-`const`\-Verhalten für beide C\+\+\-Überladungen benötigen, definieren Sie das Symbol \_CONST\_RETURN.  
+ In C akzeptieren diese Funktionen einen `const`-Zeiger als erstes Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger zu `const` akzeptiert, gibt einen Zeiger zu `const` zurück; die Version, die einen Zeiger auf Nicht-`const` akzeptiert, gibt einen Zeiger auf Nicht-`const` zurück. Das Makro _CONST_CORRECT_OVERLOADS wird definiert, wenn sowohl die `const`-Version als auch die Nicht-`const`-Version dieser Funktionen verfügbar sind. Wenn Sie das Nicht-`const`-Verhalten für beide C++-Überladungen benötigen, definieren Sie das Symbol _CONST_RETURN.  
   
- Die Ausgabewert ist von der Einstellung der `LC_CTYPE`\-Kategorieeinstellung des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Die Versionen dieser Funktionen ohne das `_l`\-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die Version mit dem `_l`\-Suffix ist beinahe identisch, verwendet jedoch stattdessen den ihr übergebenen Gebietsschemaparameter.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ Die Ausgabewert ist von der Einstellung der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die Version mit dem `_l`-Suffix ist beinahe identisch, verwendet jedoch stattdessen den ihr übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|  
-|**nicht verfügbar**|**nicht verfügbar**|`_mbspbrk_l`|**nicht verfügbar**|  
+|**n/v**|**n/v**|`_mbspbrk_l`|**n/v**|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`strpbrk`|\<string.h\>|  
-|`wcspbrk`|\<string.h\> oder \<wchar.h\>|  
-|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strpbrk`|\<string.h>|  
+|`wcspbrk`|\<string.h> oder \<wchar.h>|  
+|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_strpbrk.c  
@@ -190,17 +207,20 @@ int main( void )
 }  
 ```  
   
-  **1: Die 3 Männer und 2 Jungen hatten 5 Schweine gegessen**  
-**2: 3 Männer und 2 Jungen hatten 5 Schweine gegessen**  
-**3: 2 Jungen hatten 5 Schweine gegessen**  
-**4: 5 Schweine**   
-## .NET Framework-Entsprechung  
- [System::String::IndexOfAny](https://msdn.microsoft.com/en-us/library/system.string.indexofany.aspx)  
+```Output  
+1: The 3 men and 2 boys ate 5 pigs  
   
-## Siehe auch  
+2: 3 men and 2 boys ate 5 pigs  
+  
+3: 2 boys ate 5 pigs  
+  
+4: 5 pigs  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [Interpretation von Mehrbytezeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn, wcscspn, \_mbscspn, \_mbscspn\_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strchr, wcschr, \_mbschr, \_mbschr\_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)
+ [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strchr, wcschr, _mbschr, _mbschr_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)

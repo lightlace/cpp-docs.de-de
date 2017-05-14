@@ -1,89 +1,106 @@
 ---
-title: "_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strlwr_s_l"
-  - "_mbslwr_s_l"
-  - "_mbslwr_s"
-  - "_wcslwr_s"
-  - "_strlwr_s"
-  - "_wcslwr_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_strlwr_s_l"
-  - "_strlwr_s"
-  - "mbslwr_s_l"
-  - "strlwr_s_l"
-  - "_wcslwr_s"
-  - "strlwr_s"
-  - "mbslwr_s"
-  - "_wcslwr_s_l"
-  - "wcslwr_s_l"
-  - "_tcslwr_s"
-  - "_tcslwr_s_l"
-  - "_mbslwr_s_l"
-  - "wcslwr_s"
-  - "_mbslwr_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbslwr_s-Funktion"
-  - "_mbslwr_s_l-Funktion"
-  - "_strlwr_s-Funktion"
-  - "_strlwr_s_l-Funktion"
-  - "_tcslwr_s-Funktion"
-  - "_tcslwr_s_l-Funktion"
-  - "_wcslwr_s-Funktion"
-  - "_wcslwr_s_l-Funktion"
-  - "Groß- und Kleinschreibung, Konvertieren"
-  - "Umwandeln von Groß-/Kleinschreibung, CRT-Funktionen"
-  - "mbslwr_s-Funktion"
-  - "mbslwr_s_l-Funktion"
-  - "Zeichenfolgenkonvertierung [C++], Groß- und Kleinschreibung"
-  - "Zeichenfolgen [C++], Groß- und Kleinschreibung"
-  - "Zeichenfolgen [C++], Umwandeln von Groß-/Kleinschreibung"
-  - "strlwr_s-Funktion"
-  - "strlwr_s_l-Funktion"
-  - "tcslwr_s-Funktion"
-  - "tcslwr_s_l-Funktion"
-  - "wcslwr_s-Funktion"
-  - "wcslwr_s_l-Funktion"
+title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strlwr_s_l
+- _mbslwr_s_l
+- _mbslwr_s
+- _wcslwr_s
+- _strlwr_s
+- _wcslwr_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _strlwr_s_l
+- _strlwr_s
+- mbslwr_s_l
+- strlwr_s_l
+- _wcslwr_s
+- strlwr_s
+- mbslwr_s
+- _wcslwr_s_l
+- wcslwr_s_l
+- _tcslwr_s
+- _tcslwr_s_l
+- _mbslwr_s_l
+- wcslwr_s
+- _mbslwr_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tcslwr_s function
+- wcslwr_s function
+- _mbslwr_s function
+- _wcslwr_s function
+- strlwr_s_l function
+- mbslwr_s_l function
+- _strlwr_s function
+- string conversion [C++], case
+- strlwr_s function
+- wcslwr_s_l function
+- _tcslwr_s_l function
+- mbslwr_s function
+- strings [C++], case
+- _wcslwr_s_l function
+- converting case, CRT functions
+- _strlwr_s_l function
+- _mbslwr_s_l function
+- case, converting
+- tcslwr_s function
+- tcslwr_s_l function
+- strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
 caps.latest.revision: 42
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 42
----
-# _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 33fa0536f811bf0fd8ac91d4cd227b6836ac79c6
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Konvertiert eine Zeichenfolge unter Verwendung des aktuellen Gebietsschemas oder des übergebenen Gebietsschemaobjekts in Kleinbuchstaben.  Diese Versionen von [\_strlwr, \_wcslwr, \_mbslwr, \_strlwr\_l, \_wcslwr\_l, \_mbslwr\_l](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) enthalten Sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
+Konvertiert eine Zeichenfolge unter Verwendung des aktuellen Gebietsschemas oder des übergebenen Gebietsschemaobjekts in Kleinbuchstaben. Diese Versionen von [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
 > [!IMPORTANT]
->  `_mbslwr_s` und `_mbslwr_s_l` können nicht in Anwendungen verwendet werden, die in Windows\-Runtime ausgeführt werden.  Weitere Informationen finden Sie unter [CRT\-Funktionen nicht mit \/ZW unterstützt](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbslwr_s` und `_mbslwr_s_l` können nicht in Anwendungen verwendet werden, die in Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie unter [In /ZW nicht unterstützte CRT-Funktionen](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t _strlwr_s(  
@@ -142,7 +159,7 @@ errno_t _wcslwr_s_l(
 ); // C++ only  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `str`  
  In Kleinbuchstaben zu konvertierende auf NULL abschließende Zeichenfolge.  
   
@@ -152,38 +169,38 @@ errno_t _wcslwr_s_l(
  `locale`  
  Das zu verwendende Gebietsschema.  
   
-## Rückgabewert  
- Bei Erfolg Null, ein Fehlercode ungleich 0 \(null\), wenn ein Fehler auftritt.  
+## <a name="return-value"></a>Rückgabewert  
+ Bei Erfolg Null, ein Fehlercode ungleich 0 (null), wenn ein Fehler auftritt.  
   
- Diese Funktionen überprüfen ihre Parameter.  Wenn `str` keine gültige auf NULL abschließende Zeichenfolge ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `EINVAL` zurück und setzt `errno` auf `EINVAL`.  Wenn `numberOfElements` kleiner als die Länge der Zeichenfolge ist, geben die Funktionen ebenfalls `EINVAL` zurück und legen `errno` auf `EINVAL` fest.  
+ Diese Funktionen überprüfen ihre Parameter. Wenn `str` keine gültige auf NULL abschließende Zeichenfolge ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `EINVAL` zurück und setzt `errno` auf `EINVAL`. Wenn `numberOfElements` kleiner als die Länge der Zeichenfolge ist, geben die Funktionen ebenfalls `EINVAL` zurück und legen `errno` auf `EINVAL` fest.  
   
-## Hinweise  
- Die `_strlwr_s`\-Funktion konvertiert an der jeweiligen Stelle jeden Großbuchstaben in `str` in Kleinbuchstaben.  `_mbslwr_s` ist eine Multibytezeichenversion von `_strlwr_s`.`_wcslwr_s` ist die Breitzeichenversion von `_strlwr_s`.  
+## <a name="remarks"></a>Hinweise  
+ Die `_strlwr_s`-Funktion konvertiert an der jeweiligen Stelle jeden Großbuchstaben in `str` in Kleinbuchstaben. `_mbslwr_s` ist die Multibytezeichenversion von `_strlwr_s`.`_wcslwr_s` ist eine Breitzeichenversion von `_strlwr_s`.  
   
- Der Ausgabewert ist von der `LC_CTYPE`\-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Die Versionen dieser Funktionen ohne das `_l`\-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
- In C\+\+ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen \(wodurch kein Größenargument mehr angegeben werden muss\), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
   
- Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf.  Mit [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md) deaktivieren Sie dieses Verhalten.  
+ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcslwr_s`|`_strlwr_s`|`_mbslwr_s`|`_wcslwr_s`|  
 |`_tcslwr_s_l`|`_strlwr_s_l`|`_mbslwr_s_l`|`_wcslwr_s_l`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_strlwr_s`, `_strlwr_s_l`|\<string.h\>|  
-|`_mbslwr_s`, `_mbslwr_s_l`|\<mbstring.h\>|  
-|`_wcslwr_s`, `_wcslwr_s_l`|\<string.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`_strlwr_s`, `_strlwr_s_l`|\<string.h>|  
+|`_mbslwr_s`, `_mbslwr_s_l`|\<mbstring.h>|  
+|`_wcslwr_s`, `_wcslwr_s_l`|\<string.h> oder \<wchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_strlwr_s.cpp  
@@ -215,14 +232,14 @@ int main()
 }  
 ```  
   
-  **Gemischt: Die Zeichenfolge zum Beenden aller Zeichenfolgen\!**  
-**Kleinbuchstaben: die zeichenfolge zum beenden aller zeichenfolgen\!**  
-**Großbuchstaben: DIE ZEICHENFOLGE ZUM BEENDEN ALLER ZEICHENFOLGEN\!**   
-## .NET Framework-Entsprechung  
- [System::String::ToLower](https://msdn.microsoft.com/en-us/library/system.string.tolower.aspx)  
+```Output  
+Mixed: The String to End All Strings!  
+Lower: the string to end all strings!  
+Upper: THE STRING TO END ALL STRINGS!  
+```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [Interpretation von Mehrbytezeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_strupr\_s, \_strupr\_s\_l, \_mbsupr\_s, \_mbsupr\_s\_l, \_wcsupr\_s, \_wcsupr\_s\_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)
+ [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)

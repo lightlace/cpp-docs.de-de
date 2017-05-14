@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 35e456abc1682624b73f75b32ea4ec2fedee1a37
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 459b1a8c80f4131c0e23f7ab92e304e7353290d8
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
@@ -90,7 +91,7 @@ long double asinhl(
 ## <a name="return-value"></a>Rückgabewert  
  Die `asinh`-Funktionen geben den umgekehrten hyperbolischen Sinus (hyperbolischen Arkussinus) von `x` zurück. Diese Funktion ist über der Gleitkommadomäne gültig. Wenn `x` ein stiller NaN, ein unbestimmter oder unendlicher Wert ist, wird derselbe Wert zurückgegeben.  
   
-|Eingabe|SEH-Ausnahme|`_matherr`-Ausnahme|  
+|Eingabe|SEH-Ausnahme|`_matherr` -Ausnahme|  
 |-----------|-------------------|--------------------------|  
 |± QNAN, IND, INF|Keine|Keine|  
   
@@ -132,9 +133,6 @@ int main( void )
 sinh( 0.785398 ) = 0.868671  
 asinh( 0.868671 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gleitkomma-Unterstützung](../../c-runtime-library/floating-point-support.md)   

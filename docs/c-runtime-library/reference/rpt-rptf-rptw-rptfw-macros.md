@@ -114,10 +114,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8611402652268e0a85170a36355619e5c7335ac
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT-, _RPTF-, _RPTW- und _RPTFW-Makros
@@ -162,7 +163,7 @@ _RPTFWn(
  Von `format` verwendete optionale Ersatzargumente.  
   
 ## <a name="remarks"></a>Hinweise  
- Alle diese Makros nehmen die `reportType`- und `format`-Parameter. Darüber hinaus können sie auch bis zu vier zusätzliche Argumente annehmen, gekennzeichnet durch die zum Makronamen angefügte Zahl. Beispielsweise nehmen `_RPT0` und `_RPTF0` keine zusätzlichen Argumente, `_RPT1` und `_RPTF1` nehmen `arg1`, `_RPT2` und `_RPTF2` nehmen `arg1` und `arg2` und so weiter.  
+ Nehmen Sie alle diese Makros den `reportType` und `format` Parameter. Darüber hinaus können sie auch bis zu vier zusätzliche Argumente annehmen, gekennzeichnet durch die zum Makronamen angefügte Zahl. Beispielsweise nehmen `_RPT0` und `_RPTF0` keine zusätzlichen Argumente, `_RPT1` und `_RPTF1` nehmen `arg1`, `_RPT2` und `_RPTF2` nehmen `arg1` und `arg2` und so weiter.  
   
  Die `_RPT`- und `_RPTF`-Makros sind ähnlich wie die [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)-Funktion, da sie während des Debuggens Fortschritt einer Anwendung verwendet werden können. Dies Makros sind flexibler als `printf`, da sie nicht in `#ifdef`-Anweisungen eingeschlossen werden müssen, um ihren Aufruf in der Verkaufsversion einer Anwendung zu verhindern. Diese Flexibilität wird erreicht, indem das [_DEBUG](../../c-runtime-library/debug.md)-Makro verwendet wird; `_RPT`- und `_RPTF`-Makros sind nur verfügbar, wenn das `_DEBUG`-Flag definiert wird. Wenn `_DEBUG` nicht definiert ist, werden die Aufrufe dieser Makros während der Vorabverarbeitung entfernt.  
   
@@ -202,9 +203,6 @@ _RPTFWn(
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel finden Sie im Thema [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Debugroutinen](../../c-runtime-library/debug-routines.md)

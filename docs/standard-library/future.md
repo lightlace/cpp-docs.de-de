@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 4c83adc4b7365518275d5d54ac927012abc29657
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e2ebbb8eb6e6f250376b0ef2b43dae261a642d69
+ms.contentlocale: de-de
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
@@ -52,7 +53,7 @@ Schließen Sie den Standardheader \<future> ein, um Vorlagenklassen und unterst�
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  In Code, der kompiliert wird **/CLR**, dieser Header blockiert.  
+>  In Code, der kompiliert wurde **"/ CLR"**, dieser Header blockiert.  
   
  In einem *asynchronen Anbieter* wird das Ergebnis eines Funktionsaufrufs gespeichert. Ein a*synchrones Rückgabeobjekt* wird zum Abrufen des Ergebnisses eines Funktionsaufrufs verwendet. Ein *asynchroner zugeordneter Zustand* ermöglicht die Kommunikation zwischen einem asynchronen Anbieter und mindestens einem asynchronen Rückgabeobjekt.  
   
@@ -91,19 +92,19 @@ Schließen Sie den Standardheader \<future> ein, um Vorlagenklassen und unterst�
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[async-Funktion](../standard-library/future-functions.md#async_function)|Stellt einen asynchronen Anbieter dar.|  
-|[future_category-Funktion](../standard-library/future-functions.md#future_category_function)|Gibt einen Verweis auf das `error_category`-Objekt zurück, das Fehler bestimmt, die `future`-Objekten zugeordnet werden.|  
-|[make_error_code-Funktion](../standard-library/future-functions.md#make_error_code_function)|Erstellt ein `error_code`-Element, das das `error_category`-Objekt aufweist, das `future` Fehler bestimmt.|  
-|[make_error_condition-Funktion](../standard-library/future-functions.md#make_error_condition_function)|Erstellt ein `error_condition`-Element, das das `error_category`-Objekt aufweist, das `future` Fehler bestimmt.|  
-|[swap-Funktion](../standard-library/future-functions.md#swap_function)|Tauscht den zugeordneten Zustand eines asynchronen `promise`-Objekts mit dem des anderen aus.|  
+|[async](../standard-library/future-functions.md#async)|Stellt einen asynchronen Anbieter dar.|  
+|[future_category](../standard-library/future-functions.md#future_category)|Gibt einen Verweis auf das `error_category`-Objekt zurück, das Fehler bestimmt, die `future`-Objekten zugeordnet werden.|  
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|Erstellt ein `error_code`-Element, das das `error_category`-Objekt aufweist, das `future` Fehler bestimmt.|  
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Erstellt ein `error_condition`-Element, das das `error_category`-Objekt aufweist, das `future` Fehler bestimmt.|  
+|[swap](../standard-library/future-functions.md#swap)|Tauscht den zugeordneten Zustand eines asynchronen `promise`-Objekts mit dem des anderen aus.|  
   
 ### <a name="enumerations"></a>Enumerationen  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[future_errc-Enumeration](../standard-library/future-enums.md#future_errc_enumeration)|Liefert symbolische Namen für die von der `future_error`-Klasse ausgegeben Fehler.|  
-|[future_status-Enumeration](../standard-library/future-enums.md#future_status_enumeration)|Liefert symbolische Namen für die Gründe, aus denen eine zeitgesteuerte Wartefunktion eine Rückgabe ausführen kann.|  
-|[launch-Enumeration](../standard-library/future-enums.md#launch_enumeration)|Stellt einen Bitmaskentyp dar, mit dem die möglichen Modi für die Vorlagenfunktion `async` beschrieben werden.|  
+|[future_errc](../standard-library/future-enums.md#future_errc)|Liefert symbolische Namen für die von der `future_error`-Klasse ausgegeben Fehler.|  
+|[future_status](../standard-library/future-enums.md#future_status)|Liefert symbolische Namen für die Gründe, aus denen eine zeitgesteuerte Wartefunktion eine Rückgabe ausführen kann.|  
+|[Starten Sie](../standard-library/future-enums.md#launch)|Stellt einen Bitmaskentyp dar, mit dem die möglichen Modi für die Vorlagenfunktion `async` beschrieben werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)

@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 60a870b9c0beff704511ab788d621b0f9697ed5d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 514e00148ec34a14a7b229d5b7e226d8be66636d
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
@@ -107,15 +108,15 @@ unsigned int _mbcjmstojis_l(
  Bei einem japanischen Gebietsschema geben diese Funktionen ein konvertiertes Zeichen zurück. Wenn keine Konvertierung möglich ist, wir 0 (null) zurückgegeben. Bei einem nicht japanischen Gebietsschema geben diese Funktionen das Zeichen zurück, das übergeben wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_mbcjistojms`-Funktion konvertiert ein JIS-Zeichen (Japan Industry Standard) in ein Shift JIS-Zeichen (Microsoft Kanji). Das Zeichen wird nur konvertiert, wenn die anführenden und die nachfolgenden Bytes im Bereich 0x21–0x7E liegen. Wenn das anführende oder das nachfolgende Byte außerhalb dieses Bereichs liegt, wird `errno` auf `EILSEQ` festgelegt. Weitere Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Die `_mbcjistojms`-Funktion konvertiert ein JIS-Zeichen (Japan Industry Standard) in ein Shift JIS-Zeichen (Microsoft Kanji). Das Zeichen wird nur konvertiert, wenn die führendes und nachfolgendes Byte im Bereich 0 x 21 – 0x7E sind. Wenn das anführende oder das nachfolgende Byte außerhalb dieses Bereichs liegt, wird `errno` auf `EILSEQ` festgelegt. Weitere Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Die `_mbcjmstojis`-Funktion konvertiert ein Shift JIS-Zeichen in ein JIS-Zeichen. Das Zeichen wird nur konvertiert, wenn das führende Byte im Bereich 0x81–0x9F oder 0xE0–0xFC liegt und das nachfolgende Byte im Bereich 0x40–0x7E oder 0x80–0xFC. Beachten Sie, dass einigen Codepunkten in diesem Bereich kein Zeichen zugewiesen ist und sie daher nicht konvertiert werden können.  
+ Die `_mbcjmstojis` -Funktion konvertiert ein Shift JIS-Zeichen In JIS-Zeichen. Das Zeichen wird nur konvertiert, wenn das führende Byte im Bereich 0 x 81-0x9F oder 0xE0 - 0xFC liegt liegt und das nachfolgende Byte im Bereich 0 x 40-0x7E oder 0 x 80 – 0xFC liegt. Beachten Sie, dass einigen Codepunkten in diesem Bereich kein Zeichen zugewiesen ist und sie daher nicht konvertiert werden können.  
   
  Der Wert `c` muss ein 16-Bit-Wert sein, dessen obere 8 Bits das führende Byte des zu konvertierenden Zeichens darstellen und dessen untere 8 Bits das nachfolgende Byte darstellen.  
   
  Der Ausgabewert ist von der `LC_CTYPE`-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
- In früheren Versionen wurden `_mbcjistojms` und `_mbcjmstojis` noch `jistojms` bzw. `jmstojis` genannt. Stattdessen sollten `_mbcjistojms`, `_mbcjistojms_l`, `_mbcjmstojis` und `_mbcjmstojis_l` verwendet werden.  
+ In früheren Versionen `_mbcjistojms` und `_mbcjmstojis` aufgerufen wurden `jistojms` und `jmstojis`zugeordnet. `_mbcjistojms`, `_mbcjistojms_l`, `_mbcjmstojis` und `_mbcjmstojis_l` sollte stattdessen verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -127,9 +128,6 @@ unsigned int _mbcjmstojis_l(
 |`_mbcjmstojis_l`|\<mbstring.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   

@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f352a9efb06dc0267abcf1d4174c48dcbaae78a2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
@@ -73,15 +74,15 @@ Definiert die Containervorlagenklasse `basic_string` und verschiedene unterstüt
   
 |||  
 |-|-|  
-|[operator+](../standard-library/string-operators.md#operator_add)|Verkettet zwei Zeichenfolgenobjekte.|  
-|[operator!=](../standard-library/string-operators.md#operator_neq)|Testet, ob das Zeichenfolgenobjekt links vom Operator ungleich dem Zeichenfolgenobjekt rechts vom Operator ist.|  
-|[operator==](../standard-library/string-operators.md#operator_eq_eq)|Testet, ob das Zeichenfolgenobjekt links vom Operator gleich dem Zeichenfolgenobjekt rechts vom Operator ist.|  
-|[operator<](../standard-library/string-operators.md#operator_lt_)|Testet, ob das Zeichenfolgenobjekt links vom Operator kleiner als das Zeichenfolgenobjekt rechts vom Operator ist.|  
-|[operator<=](../standard-library/string-operators.md#operator_lt__eq)|Testet, ob das Zeichenfolgenobjekt links vom Operator kleiner als oder gleich dem Zeichenfolgenobjekt rechts vom Operator ist.|  
-|[operator<\<](../standard-library/string-operators.md#operator_lt__lt_)|Eine Vorlagenfunktion, die eine Zeichenfolge in den Ausgabestream einfügt.|  
-|[operator>](../standard-library/string-operators.md#operator_gt_)|Testet, ob das Zeichenfolgenobjekt links vom Operator größer als das Zeichenfolgenobjekt rechts vom Operator ist.|  
-|[operator>=](../standard-library/string-operators.md#operator_gt__eq)|Testet, ob das Zeichenfolgenobjekt links vom Operator größer als oder gleich dem Zeichenfolgenobjekt rechts vom Operator ist.|  
-|[operator>>](../standard-library/string-operators.md#operator_gt__gt_)|Eine Vorlagenfunktion, die eine Zeichenfolge aus dem Eingabestream extrahiert.|  
+|[operator+](../standard-library/string-operators.md#op_add)|Verkettet zwei Zeichenfolgenobjekte.|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|Testet, ob das Zeichenfolgenobjekt links vom Operator ungleich dem Zeichenfolgenobjekt rechts vom Operator ist.|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Testet, ob das Zeichenfolgenobjekt links vom Operator gleich dem Zeichenfolgenobjekt rechts vom Operator ist.|  
+|[operator<](../standard-library/string-operators.md#op_lt)|Testet, ob das Zeichenfolgenobjekt links vom Operator kleiner als das Zeichenfolgenobjekt rechts vom Operator ist.|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|Testet, ob das Zeichenfolgenobjekt links vom Operator kleiner als oder gleich dem Zeichenfolgenobjekt rechts vom Operator ist.|  
+|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|Eine Vorlagenfunktion, die eine Zeichenfolge in den Ausgabestream einfügt.|  
+|[operator>](../standard-library/string-operators.md#op_gt)|Testet, ob das Zeichenfolgenobjekt links vom Operator größer als das Zeichenfolgenobjekt rechts vom Operator ist.|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Testet, ob das Zeichenfolgenobjekt links vom Operator größer als oder gleich dem Zeichenfolgenobjekt rechts vom Operator ist.|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|Eine Vorlagenfunktion, die eine Zeichenfolge aus dem Eingabestream extrahiert.|  
   
 ### <a name="specialized-template-functions"></a>Spezialisierte Vorlagenfunktionen  
   
@@ -102,7 +103,7 @@ Definiert die Containervorlagenklasse `basic_string` und verschiedene unterstüt
   
 |||  
 |-|-|  
-|[getLine-Vorlagenfunktion](../standard-library/string-functions.md#getline)|Extrahiert Zeichenfolgen aus dem Eingabestream zeilenweise.|  
+|[GetLine-Vorlage](../standard-library/string-functions.md#getline)|Extrahiert Zeichenfolgen aus dem Eingabestream zeilenweise.|  
   
 ### <a name="classes"></a>Klassen  
   

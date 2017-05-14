@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 069a7dd22950e7ae9826ff2cf8c542025f14facd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 57a578f8accf7244d71c0d8791a6e898ead7d242
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="setnewmode"></a>_set_new_mode
@@ -73,7 +74,7 @@ int _set_new_mode(
  Neuer Handlermodus für `malloc`; gültiger Wert ist 0 oder 1.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt den vorherigen Handlermodus zurück, der für `malloc` festgelegt wurde. Ein Rückgabewert 1 gibt an, dass `malloc` bei einem Speicherbelegungsproblem zuvor die neue Handlerroutine aufruft. Ein Rückgabewert 0 gibt an, dass dies nicht der Fall ist. Wenn das `newhandlermode`-Argument ungleich 0 oder 1, wird -1 zurückgegeben.  
+ Gibt den vorherigen Handlermodus zurück, der für `malloc` festgelegt wurde. Ein Rückgabewert 1 gibt an, dass `malloc` bei einem Speicherbelegungsproblem zuvor die neue Handlerroutine aufruft. Ein Rückgabewert 0 gibt an, dass dies nicht der Fall ist. Wenn die `newhandlermode` Argument stimmt nicht mit 0 oder 1, wird-1 zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
  Die C++-Funktion `_set_new_mode` legt den neuen Handlermodus für [malloc](../../c-runtime-library/reference/malloc.md) fest. Der neue Handlermodus gibt an, ob bei einem Fehler `malloc` die neue Handlerroutine aufrufen soll, wie dies von [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) festgelegt ist. Standardmäßig ruft `malloc` bei einem Speicherbelegungsfehler nicht die neue Handlerroutine auf. Sie können dieses Standardverhalten überschreiben, sodass, wenn `malloc` Speicher nicht belegen kann,`malloc` die neue Handlerroutine genauso aufruft wie der `new`-Operator, wenn dieser aus demselben Grund fehlschlägt. Weitere Informationen finden Sie unter den Operatoren [new](../../cpp/new-operator-cpp.md) und [delete](../../cpp/delete-operator-cpp.md) in der *C++-Sprachreferenz*. Um den Standardwert zu überschreiben, rufen Sie  
@@ -93,9 +94,6 @@ _set_new_mode(1)
 |`_set_new_mode`|\<new.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Speicherbelegung](../../c-runtime-library/memory-allocation.md)   

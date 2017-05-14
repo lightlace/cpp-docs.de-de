@@ -9,10 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::auto_ptr
-- std.auto_ptr
 - auto_ptr
 - memory/std::auto_ptr
+- memory/std::auto_ptr::element_type
+- memory/std::auto_ptr::get
+- memory/std::auto_ptr::release
+- memory/std::auto_ptr::reset
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 92da9cbca9d7594bcb740d70fb57ce453d769e17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 320dbc4d09bfcc65fce8471ce23e127f28deb6b9
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="autoptr-class"></a>auto_ptr-Klasse
@@ -73,14 +76,14 @@ public:
 };
 ```  
 #### <a name="parameters"></a>Parameter  
- ` right`  
+ `right`  
  Der `auto_ptr`, aus dem eine vorhandene Ressource abgerufen werden soll.  
   
- ` ptr`  
+ `ptr`  
  Der Zeiger, der den gespeicherten Zeiger ersetzen soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Vorlagenklasse beschreibt einen intelligenten Zeiger, der als ein `auto_ptr,` bezeichnet wird, auf ein zugeordnetes Objekt. Der Zeiger muss entweder gleich NULL oder ein Objekt sein, das durch `new` zugeordnet ist. Der `auto_ptr` übergibt den Besitz, wenn sein gespeicherter Wert einem anderen Objekt zugewiesen wird. (Er ersetzt den gespeicherten Wert nach einer Übergabe mit einem NULL-Zeiger.) Der Destruktor für `auto_ptr<Type>` löscht das zugeordnete Objekt. Der `auto_ptr<Type>` stellt sicher, dass ein zugeordnetes Objekt automatisch gelöscht wird, wenn die Steuerung einen Block verlässt, selbst wenn dies über eine ausgelöste Ausnahme erfolgt. Sie sollten nicht zwei `auto_ptr<Type>`-Objekte erstellen, die Eigentümer desselben Objekts sind.  
+ Die Vorlagenklasse beschreibt einen intelligenten Zeiger bezeichnet ein `auto_ptr`, auf ein zugeordnetes Objekt. Der Zeiger muss entweder gleich NULL oder ein Objekt sein, das durch `new` zugeordnet ist. Der `auto_ptr` übergibt den Besitz, wenn sein gespeicherter Wert einem anderen Objekt zugewiesen wird. (Er ersetzt den gespeicherten Wert nach einer Übergabe mit einem NULL-Zeiger.) Der Destruktor für `auto_ptr<Type>` löscht das zugeordnete Objekt. Der `auto_ptr<Type>` stellt sicher, dass ein zugeordnetes Objekt automatisch gelöscht wird, wenn die Steuerung einen Block verlässt, selbst wenn dies über eine ausgelöste Ausnahme erfolgt. Sie sollten nicht zwei `auto_ptr<Type>`-Objekte erstellen, die Eigentümer desselben Objekts sind.  
   
  Sie können ein `auto_ptr<Type>`-Objekt als Wert als ein Argument für einen Funktionsaufruf übergeben. Ein `auto_ptr`-Objekt kann kein Element eines Standardbibliothekcontainers sein. Es ist nicht möglich, eine Sequenz von `auto_ptr<Type>`-Objekten zuverlässig mit einem Container für eine C++-Standardbibliothek zu verwalten.  
   
@@ -90,38 +93,38 @@ public:
   
 |||  
 |-|-|  
-|[auto_ptr](#auto_ptr__auto_ptr)|Der Konstruktor für Objekte des Typs `auto_ptr`.|  
+|[auto_ptr](#auto_ptr)|Der Konstruktor für Objekte des Typs `auto_ptr`.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[element_type](#auto_ptr__element_type)|Der Type stellt ein Synonym für den Vorlagenparameter `Type` dar.|  
+|[element_type](#element_type)|Der Type stellt ein Synonym für den Vorlagenparameter `Type` dar.|  
   
 ### <a name="member-functions"></a>Memberfunktionen  
   
 |||  
 |-|-|  
-|[get](#auto_ptr__get)|Die Memberfunktion gibt den gespeicherten Zeiger `myptr` zurück.|  
-|[release](#auto_ptr__release)|Der Member ersetzt den gespeicherten Zeiger `myptr` durch einen NULL-Zeiger und gibt den zuvor gespeicherten Zeiger zurück.|  
-|[reset](#auto_ptr__reset)|Die Memberfunktion wertet den Ausdruck `deleteÂ myptr` aus, allerdings nur, wenn sich der Wert des gespeicherten Zeigers `myptr` aufgrund eines Funktionsaufrufs ändert. Anschließend ersetzt die Funktion den gespeicherten Zeiger durch `ptr`.|  
+|[get](#get)|Die Memberfunktion gibt den gespeicherten Zeiger `myptr` zurück.|  
+|[release](#release)|Der Member ersetzt den gespeicherten Zeiger `myptr` durch einen NULL-Zeiger und gibt den zuvor gespeicherten Zeiger zurück.|  
+|[reset](#reset)|Die Memberfunktion wertet den Ausdruck `delete myptr` aus, allerdings nur, wenn sich der Wert des gespeicherten Zeigers `myptr` aufgrund eines Funktionsaufrufs ändert. Anschließend ersetzt die Funktion den gespeicherten Zeiger durch `ptr`.|  
   
 ### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[operator=](#auto_ptr__operator_eq)|Ein Zuweisungsoperator, der den Besitz von einem `auto_ptr`-Objekt an ein anderes Objekt übergibt.|  
-|[operator*](#auto_ptr__operator_star)|Der dereferenzierende Operator für Objekte des Typs `auto_ptr`.|  
-|[operator->](#auto_ptr__operator-_gt_)|Der Operator zum Ermöglichen von Memberzugriff.|  
-|[operator auto_ptr\<Other>](#auto_ptr__operator_auto_ptr_lt_other_gt_)|Nimmt eine Umwandlung aus einer Art von `auto_ptr` in eine andere Art von `auto_ptr` vor.|  
-|[operator auto_ptr_ref\<Other>](#auto_ptr__operator_auto_ptr_ref_lt_other_gt_)|Nimmt eine Umwandlung von einem `auto_ptr` zu einem anderen `auto_ptr_ref` vor.|  
+|[operator=](#op_eq)|Ein Zuweisungsoperator, der den Besitz von einem `auto_ptr`-Objekt an ein anderes Objekt übergibt.|  
+|[operator*](#op_star)|Der dereferenzierende Operator für Objekte des Typs `auto_ptr`.|  
+|[operator->](#operator-_gt)|Der Operator zum Ermöglichen von Memberzugriff.|  
+|[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|Nimmt eine Umwandlung aus einer Art von `auto_ptr` in eine andere Art von `auto_ptr` vor.|  
+|[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|Nimmt eine Umwandlung von einem `auto_ptr` zu einem anderen `auto_ptr_ref` vor.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<memory>  
   
  **Namespace:** std  
   
-##  <a name="a-nameautoptrautoptra--autoptrautoptr"></a><a name="auto_ptr__auto_ptr"></a> auto_ptr::auto_ptr  
+##  <a name="auto_ptr"></a> auto_ptr::auto_ptr  
  Der Konstruktor für Objekte des Typs `auto_ptr`.  
   
 ```   
@@ -136,16 +139,16 @@ auto _ptr(auto _ptr<Other>& right) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` ptr`  
+ `ptr`  
  Der Zeiger auf das Objekt, das `auto_ptr` kapselt.  
   
- ` right`  
+ `right`  
  Das `auto_ptr`-Objekt, das vom Konstruktor kopiert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Der erste Konstruktor speichert ` ptr` in **myptr**, den gespeicherten Zeiger auf das zugeordnete Objekt. Der zweite Konstruktor überträgt den Besitz des in ` right` gespeicherten Zeigers durch Speichern von ` right`. [release](#auto_ptr__release) in **myptr**.  
+ Der erste Konstruktor speichert `ptr` in **myptr**, den gespeicherten Zeiger auf das zugeordnete Objekt. Der zweite Konstruktor überträgt den Besitz des in `right` gespeicherten Zeigers durch Speichern von `right`. [release](#release) in **myptr**.  
   
- Der dritte Konstruktor verhält sich wie der zweite, außer dass er **right** speichert. `ref`. **release** in **myptr**, wo `ref` der in ` right` gespeicherte Verweis ist.  
+ Der dritte Konstruktor verhält sich wie der zweite, außer dass er **right** speichert. `ref`. **release** in **myptr**, wo `ref` der in `right` gespeicherte Verweis ist.  
   
  Der Vorlagenkonstruktor verhält sich wie der zweite Konstruktor, wenn ein Zeiger auf **Other** impliziert zu einem Zeiger auf **Type** konvertiert werden kann.  
   
@@ -208,7 +211,7 @@ Constructing 00311AF8
 Destructing 00311AF8  
 ```  
   
-##  <a name="a-nameautoptrelementtypea--autoptrelementtype"></a><a name="auto_ptr__element_type"></a> auto_ptr::element_type  
+##  <a name="element_type"></a> auto_ptr::element_type  
  Der Typ stellt ein Synonym für den Vorlagenparameter **Type** dar.  
   
 ```  
@@ -216,7 +219,7 @@ Destructing 00311AF8
 typedef Type element  _type;  
 ```  
   
-##  <a name="a-nameautoptrgeta--autoptrget"></a><a name="auto_ptr__get"></a> auto_ptr::get  
+##  <a name="get"></a> auto_ptr::get  
  Die Memberfunktion gibt den gespeicherten Zeiger **myptr** zurück.  
   
 ```   
@@ -273,7 +276,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6  
 ```  
   
-##  <a name="a-nameautoptroperatoreqa--autoptroperator"></a><a name="auto_ptr__operator_eq"></a> auto_ptr::operator=  
+##  <a name="op_eq"></a> auto_ptr::operator=  
  Ein Zuweisungsoperator, der den Besitz von einem `auto_ptr`-Objekt an ein anderes Objekt übergibt.  
   
 ```  
@@ -284,19 +287,19 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` right`  
+ `right`  
  Ein Objekt vom Typ `auto_ptr`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf ein Objekt des Typs `auto_ptr`\< **Type**>.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Zuweisung wertet den Ausdruck **delete myptr** aus, allerdings nur, wenn sich der gespeicherte Zeiger **myptr** aufgrund der Zuweisung ändert. Anschließend wird der Besitz des in _ *Right* gespeicherten Zeigers übertragen, indem \_ in *Right* gespeichert wird. [release](#auto_ptr__release) in **myptr**. Die Funktion gibt **\*this** zurück.  
+ Die Zuweisung wertet den Ausdruck **delete myptr** aus, allerdings nur, wenn sich der gespeicherte Zeiger **myptr** aufgrund der Zuweisung ändert. Anschließend wird der Besitz des in _ *Right* gespeicherten Zeigers übertragen, indem \_ in *Right* gespeichert wird. [release](#release) in **myptr**. Die Funktion gibt **\*this** zurück.  
   
 ### <a name="example"></a>Beispiel  
-  Ein Beispiel für die Verwendung des Memberoperators finden Sie unter [auto_ptr::auto_ptr](#auto_ptr__auto_ptr).  
+  Ein Beispiel für die Verwendung des Memberoperators finden Sie unter [auto_ptr::auto_ptr](#auto_ptr).  
   
-##  <a name="a-nameautoptroperatorstara--autoptroperator"></a><a name="auto_ptr__operator_star"></a> auto_ptr::operator*  
+##  <a name="op_star"></a> auto_ptr::operator*  
  Der dereferenzierende Operator für Objekte des Typs `auto_ptr`.  
   
 ```   
@@ -307,12 +310,12 @@ Type& operator*() const throw();
  Ein Verweis auf ein Objekt vom Typ **Type**, das der Zeiger besitzt.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Dereferenzierungsoperator gibt `*`[get](#auto_ptr__get) zurück. Daher darf der gespeicherte Zeiger nicht NULL sein.  
+ Der Dereferenzierungsoperator gibt `*`[get](#get) zurück. Daher darf der gespeicherte Zeiger nicht NULL sein.  
   
 ### <a name="example"></a>Beispiel  
-  Ein Beispiel zur Verwendung der Memberfunktion finden Sie unter [auto_ptr:: auto_ptr](#auto_ptr__auto_ptr).  
+  Ein Beispiel zur Verwendung der Memberfunktion finden Sie unter [auto_ptr:: auto_ptr](#auto_ptr).  
   
-##  <a name="a-nameautoptroperator-gta--autoptroperator-gt"></a><a name="auto_ptr__operator-_gt_"></a> auto_ptr::operator-&gt;  
+##  <a name="auto_ptr__operator-_gt"></a> auto_ptr::operator-&gt;  
  Der Operator zum Ermöglichen von Memberzugriff.  
   
 ```   
@@ -323,12 +326,12 @@ Type * operator->() const throw();
  Ein Member des Objekts,das **auto_ptr** besitzt.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Auswahloperator gibt [get](#auto_ptr__get)`( )` zurück, sodass der Ausdruck *ap*-> **member** sich genauso verhält wie ( *ap*. **get**( ) )-> **member**, wo *ap* ein Objekt der Klasse `auto_ptr`\< **Type**> ist. Daher darf der gespeicherte Zeiger nicht NULL sein, und **Type** muss eine Klasse, Struktur oder ein Union-Typ mit einem **member**-Member sein.  
+ Der Auswahloperator gibt [get](#get)`( )` zurück, sodass der Ausdruck *ap*-> **member** sich genauso verhält wie ( *ap*. **get**( ) )-> **member**, wo *ap* ein Objekt der Klasse `auto_ptr`\< **Type**> ist. Daher darf der gespeicherte Zeiger nicht NULL sein, und **Type** muss eine Klasse, Struktur oder ein Union-Typ mit einem **member**-Member sein.  
   
 ### <a name="example"></a>Beispiel  
-  Ein Beispiel zur Verwendung der Memberfunktion finden Sie unter [auto_ptr:: auto_ptr](#auto_ptr__auto_ptr).  
+  Ein Beispiel zur Verwendung der Memberfunktion finden Sie unter [auto_ptr:: auto_ptr](#auto_ptr).  
   
-##  <a name="a-nameautoptroperatorautoptrltothergta--autoptroperator-autoptrltothergt"></a><a name="auto_ptr__operator_auto_ptr_lt_other_gt_"></a> auto_ptr::operator auto_ptr&lt;Other&gt;  
+##  <a name="op_auto_ptr_lt_other_gt"></a> auto_ptr::operator auto_ptr&lt;Other&gt;  
  Nimmt eine Umwandlung aus einer Art von `auto_ptr` in eine andere Art von `auto_ptr` vor.  
   
 ```   
@@ -356,7 +359,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameautoptroperatorautoptrrefltothergta--autoptroperator-autoptrrefltothergt"></a><a name="auto_ptr__operator_auto_ptr_ref_lt_other_gt_"></a> auto_ptr::operator auto_ptr_ref&lt;Other&gt;  
+##  <a name="op_auto_ptr_ref_lt_other_gt"></a> auto_ptr::operator auto_ptr_ref&lt;Other&gt;  
  Typumwandlungen von einem `auto_ptr` zu einer **auto_ptr_ref**.  
   
 ```   
@@ -415,7 +418,7 @@ main exiting
 ~C:  1  
 ```  
   
-##  <a name="a-nameautoptrreleasea--autoptrrelease"></a><a name="auto_ptr__release"></a> auto_ptr::release  
+##  <a name="release"></a> auto_ptr::release  
  Der Member ersetzt den gespeicherten Zeiger **myptr** durch einen NULL-Zeiger und gibt den zuvor gespeicherten Zeiger zurück.  
   
 ```   
@@ -474,15 +477,15 @@ pi2 == pi3
 Destructing 00311B88 Value: 6  
 ```  
   
-##  <a name="a-nameautoptrreseta--autoptrreset"></a><a name="auto_ptr__reset"></a> auto_ptr::reset  
- Die Memberfunktion wertet den Ausdruck **delete**Â **myptr** aus, allerdings nur, wenn sich der Wert des gespeicherten Zeigers **myptr** aufgrund eines Funktionsaufrufs ändert. Anschließend ersetzt die Funktion den gespeicherten Zeiger durch **ptr**.  
+##  <a name="reset"></a> auto_ptr::reset  
+ Die Memberfunktion wertet den Ausdruck **löschen** **Myptr**, jedoch nur, wenn der Wert des gespeicherten Zeigers **Myptr** Änderungen infolge eines Funktionsaufrufs. Anschließend ersetzt die Funktion den gespeicherten Zeiger durch **ptr**.  
   
 ```   
 void reset(Type* ptr = 0);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` ptr`  
+ `ptr`  
  Der Zeiger, der festgelegt wurde, um den gespeicherten Zeiger **myptr** zu ersetzen.  
   
 ### <a name="example"></a>Beispiel  

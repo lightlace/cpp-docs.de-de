@@ -1,51 +1,68 @@
 ---
-title: "__min | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__min"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__min"
-  - "min"
-  - "_min"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__min-Makro"
-  - "_min-Makro"
-  - "min-Makro"
-  - "minimum-Makro"
+title: __min | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __min
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- __min
+- min
+- _min
+dev_langs:
+- C++
+helpviewer_keywords:
+- __min macro
+- min macro
+- minimum macro
+- _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# __min
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 171ca8b2136e2311a814328989b4dd121416918a
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Gibt die kleinere von zwei Werten zurück.  
+---
+# <a name="min"></a>__min
+Gibt den kleineren der beiden Werte zurück.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 type __min(  
@@ -54,26 +71,26 @@ type __min(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `type`  
- Ein beliebiger numerischer Datentyp.  
+ Jeder beliebige numerische Datentyp.  
   
  `a, b`  
- Werte eines zu vergleichenden numerischen Typs.  
+ Werte von einem numerischen Datentyp, der verglichen werden soll.  
   
-## Rückgabewert  
- Das kleinere der zwei Argumente.  
+## <a name="return-value"></a>Rückgabewert  
+ Das kleinere der beiden Argumente.  
   
-## Hinweise  
- Das Makro `__min` vergleicht zwei Werte und gibt den Wert aus dem kleineren zurück.  Die Argumente können von einem beliebigen numerischen Datentyp sein, mit oder ohne Vorzeichen.  müssen Argumente und der Rückgabewert dem gleichen Datentyp.  
+## <a name="remarks"></a>Hinweise  
+ Das `__min`-Makro vergleicht zwei Werte und gibt den kleineren Wert zurück. Die Argumente können von einen beliebigen Datentyp stammen, signed oder unsigned. Beide Argumente sowie der Rückgabewert müssen demselben Datentyp entsprechen.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`__min`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`__min`|\<stdlib.h>|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_minmax.c  
@@ -91,11 +108,11 @@ int main( void )
 }  
 ```  
   
-  **Das größere von 10 und 21 ist 21**  
-**Das kleinere von 10 und 21 ist 10**   
-## .NET Framework-Entsprechung  
- [System::Math::Min](https://msdn.microsoft.com/en-us/library/system.math.min.aspx)  
+```Output  
+The larger of 10 and 21 is 21  
+The smaller of 10 and 21 is 10  
+```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [\_\_max](../../c-runtime-library/reference/max.md)
+ [__max](../../c-runtime-library/reference/max.md)

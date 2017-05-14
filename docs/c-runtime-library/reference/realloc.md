@@ -60,10 +60,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dd20bf67c0854cf837ff5cf4f22308f977b06734
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a3612dfc9906b23bd3581729fd1de53212fb4b1a
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="realloc"></a>realloc
@@ -90,14 +91,14 @@ void *realloc(
   
  Wenn nicht genügend Arbeitsspeicher verfügbar ist, um den Block auf die vorgegebene Größe auszudehnen, bleibt der ursprüngliche Block unverändert, und `NULL` wird zurückgegeben.  
   
- Wenn `size`&0; ist, wird der Block, auf den durch `memblock` gezeigt wird, freigegeben; der Rückgabewert ist `NULL`, und `memblock` zeigt auf den freigegebenen Block.  
+ Wenn `size` 0 ist, wird der Block, auf den durch `memblock` gezeigt wird, freigegeben; der Rückgabewert ist `NULL`, und `memblock` zeigt auf den freigegebenen Block.  
   
  Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einen anderen Typ als `void` zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `realloc`-Funktion ändert die Größe eines zugeordneten Speicherblocks. Das `memblock`-Argument zeigt auf den Anfang des Speicherblocks. Wenn `memblock` `NULL` ist, dann verhält sich `realloc` genauso wie `malloc` und weist einen neuen Block an `size`-Bytes zu. Wenn `memblock` nicht `NULL` ist, wird ein Zeiger von einem vorherigen Aufruf an `calloc`, `malloc` oder `realloc` zurückgegeben.  
   
- Das `size`-Argument gibt die neue Größe des Blocks in Bytes an. Der Inhalt des Blocks bleibt bis zum Minimum von neuer und alter Größe unverändert, obwohl sich der neue Block an einem anderen Speicherort befinden kann. Da der neue Block an einem neuen Speicherort liegen kann, kann nicht garantiert werden, dass der von `realloc` zurückgegebene Zeiger mit dem durch das `memblock`-Argument übergebenen Zeiger identisch ist. Falls der Puffer vergrößert wird, stellt `realloc` nicht sicher, dass der neu belegte Arbeitsspeicher mit&0; belegt ist.  
+ Das `size`-Argument gibt die neue Größe des Blocks in Bytes an. Der Inhalt des Blocks bleibt bis zum Minimum von neuer und alter Größe unverändert, obwohl sich der neue Block an einem anderen Speicherort befinden kann. Da der neue Block an einem neuen Speicherort liegen kann, kann nicht garantiert werden, dass der von `realloc` zurückgegebene Zeiger mit dem durch das `memblock`-Argument übergebenen Zeiger identisch ist. Falls der Puffer vergrößert wird, stellt `realloc` nicht sicher, dass der neu belegte Arbeitsspeicher mit 0 belegt ist.  
   
  `realloc` setzt `errno` auf `ENOMEM`, wenn eine Speicherbelegung fehlschlägt oder wenn der benötigte Speicherplatz größer als `_HEAP_MAXREQ` ist. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -167,9 +168,6 @@ int main( void )
 Size of block after malloc of 1000 longs: 4000  
 Size of block after realloc of 1000 more longs: 8000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Speicherbelegung](../../c-runtime-library/memory-allocation.md)   

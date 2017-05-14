@@ -1,48 +1,66 @@
 ---
-title: "bsearch | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "bsearch"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "bsearch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arrays [CRT], binäre Suche"
-  - "bsearch-Funktion"
+title: bsearch | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- bsearch
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- bsearch
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [CRT], binary search
+- bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# bsearch
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 431bb94e27397f8a0242c45db83e00250e5c82f3
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Führt eine binäre Suche eines sortierten Arrays aus. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [bsearch\_s](../../c-runtime-library/reference/bsearch-s.md).  
+---
+# <a name="bsearch"></a>bsearch
+Führt eine binäre Suche eines sortierten Arrays aus. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [bsearch_s](../../c-runtime-library/reference/bsearch-s.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void *bsearch(   
@@ -54,7 +72,7 @@ void *bsearch(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `key`  
  Das Objekt, nach dem gesucht werden soll.  
   
@@ -70,29 +88,29 @@ void *bsearch(
  `compare`  
  Rückruffunktion, die zwei Elemente vergleicht. Da erste ist ein Zeiger auf den Schlüssel für die Suche, und das zweite ist ein Zeiger auf das Arrayelement, das mit dem Schlüssel verglichen werden soll.  
   
-## Rückgabewert  
- `bsearch` gibt einen Zeiger auf ein Vorkommen von `key` in dem Array zurück, auf das `base` verweist. Wenn `key` nicht gefunden wird, wird `NULL` zurückgegeben. Wenn das Array nicht in aufsteigender Reihenfolge sortiert ist oder doppelte Datensätze mit identischen Schlüsseln enthält, ist das Ergebnis nicht vorhersehbar.  
+## <a name="return-value"></a>Rückgabewert  
+ `bsearch` gibt einen Zeiger auf ein Vorkommen von `key` in dem Array zurück, auf das `base` verweist. Wenn `key` nicht gefunden wird, gibt die Funktion `NULL`zurück. Wenn das Array nicht in aufsteigender Reihenfolge sortiert ist oder doppelte Datensätze mit identischen Schlüsseln enthält, ist das Ergebnis nicht vorhersehbar.  
   
-## Hinweise  
- Die `bsearch`\-Funktion führt eine binäre Suche eines sortierten Arrays aus `num` Elementen aus, von denen jedes `width` Bytes groß ist. Der `base`\-Wert ist ein Zeiger auf die Basis des zu durchsuchenden Arrays, und `key` ist der gesuchte Wert. Der `compare`\-Parameter ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die den angeforderten Schlüssel mit einem Arrayelement vergleicht und einen der folgenden Werte zur Angabe ihrer Beziehung zurückgibt:  
+## <a name="remarks"></a>Hinweise  
+ Die `bsearch` -Funktion führt eine binäre Suche eines sortierten Arrays aus `num` Elementen aus, von denen jedes `width` Bytes groß ist. Der `base` -Wert ist ein Zeiger auf die Basis des zu durchsuchenden Arrays, und `key` ist der gesuchte Wert. Der `compare` -Parameter ist ein Zeiger auf eine vom Benutzer bereitgestellte Routine, die den angeforderten Schlüssel mit einem Arrayelement vergleicht und einen der folgenden Werte zur Angabe ihrer Beziehung zurückgibt:  
   
-|Von der `compare`\-Routine zurückgegebener Wert|Beschreibung|  
-|-----------------------------------------------------|------------------|  
+|Von der `compare` -Routine zurückgegebener Wert|Beschreibung|  
+|-----------------------------------------|-----------------|  
 |\< 0|Der Schlüssel ist kleiner als das Arrayelement.|  
 |0|Schlüssel und Arrayelement sind gleich.|  
-|\> 0|Der Schlüssel ist größer als das Arrayelement.|  
+|> 0|Der Schlüssel ist größer als das Arrayelement.|  
   
- Diese Funktion überprüft ihre Parameter. Wenn `compare`, `key` oder `num``NULL` ist oder wenn `base``NULL` und \*`num` ungleich null ist oder wenn `width` null ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL` zurück.  
+ Diese Funktion überprüft ihre Parameter. Wenn `compare`, `key` oder `num` `NULL` ist oder wenn `base` `NULL` und *`num` ungleich null ist oder wenn `width` null ist, wird der Handler für ungültige Parameter aufgerufen, wie dies unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL`zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`bsearch`|\<stdlib.h\> und \<search.h\>|  
+|-------------|---------------------|  
+|`bsearch`|\<stdlib.h> und \<search.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Dieses Programm sortiert ein Zeichenfolgenarray mit „qsort“ und verwendet anschließend bsearch, um nach dem Wort „Katze“ zu suchen.  
   
 ```  
@@ -132,14 +150,12 @@ int main( void )
 ```  
   
 ```Output  
-Katze Kuh Hund Ziege Pferd Mensch Schwein Ratte Katze gefunden an 002F0F04  
+cat cow dog goat horse human pig rat  
+cat found at 002F0F04  
 ```  
   
-## .NET Framework-Entsprechung  
- [System::Collections::ArrayList::BinarySearch](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)   
- [\_lfind](../../c-runtime-library/reference/lfind.md)   
- [\_lsearch](../../c-runtime-library/reference/lsearch.md)   
+ [_lfind](../../c-runtime-library/reference/lfind.md)   
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

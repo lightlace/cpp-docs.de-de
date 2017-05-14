@@ -52,10 +52,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 158ce2d16db5a37870ea55c548796d975065f422
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 6dcc32b981c73cda13152f82139a307e4739fe5c
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
@@ -74,7 +75,7 @@ int _set_SSE2_enable(
  1, um die SSE2-Implementierung zu aktivieren; 0, um die SSE2-Implementierung zu deaktivieren. Standardmäßig ist die SSE2-Implementierung auf Prozessoren aktiviert, die sie unterstützen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wert ungleich null, wenn die SSE2-Implementierung aktiviert ist;&0;, wenn die SSE2-Implementierung deaktiviert ist.  
+ Wert ungleich null, wenn die SSE2-Implementierung aktiviert ist; 0, wenn die SSE2-Implementierung deaktiviert ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Die folgenden Funktionen haben SSE2-Implementierungen, die mithilfe von `_set_SSE2_enable` aktiviert werden können:  
@@ -132,9 +133,6 @@ int main()
  **Ausgabe**  
   
  `SSE2 enabled.`  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md)

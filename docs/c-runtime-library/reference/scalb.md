@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ade761d8fa3e37d4e190a05db5b93cd9e5f63cca
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8a8f70dd525a798bd2492270ef95e5e75c5aa36b
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="scalb"></a>_scalb
@@ -77,7 +78,7 @@ double _scalb(
  Ganzzahlexponent.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt bei Erfolg einen Exponentialwert zurück. Bei einem Überlauf und abhängig vom Vorzeichen von `x` gibt `_scalb` +/– `HUGE_VAL` zurück. Die `errno`-Variable wird auf `ERANGE` gesetzt.  
+ Gibt bei Erfolg einen Exponentialwert zurück. Bei einem Überlauf (abhängig vom Vorzeichen des `x`), `_scalb` gibt `HUGE_VAL`; das `errno` Variable wird festgelegt, um `ERANGE`.  
   
  Weitere Informationen zu diesem und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -91,9 +92,6 @@ double _scalb(
 |`_scalb`|\<float.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   

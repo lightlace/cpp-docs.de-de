@@ -1,99 +1,117 @@
 ---
-title: "_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_sprintf_p"
-  - "_swprintf_p_l"
-  - "_swprintf_p"
-  - "_sprintf_p_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_sprintf_p"
-  - "_swprintf_p_l"
-  - "_sprintf_p_l"
-  - "_swprintf_p"
-  - "sprintf_p"
-  - "swprint_p_l"
-  - "swprintf_p"
-  - "swprintf_p_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sprintf_p_l-Funktion"
-  - "swprintf_p-Funktion"
-  - "swprintf_p_l-Funktion"
-  - "_sprintf_p-Funktion"
-  - "_sprintf_p_l-Funktion"
-  - "_swprintf_p-Funktion"
-  - "sprintf_p-Funktion"
-  - "_stprintf_p-Funktion"
-  - "stprintf_p-Funktion"
-  - "_swprintf_p_l-Funktion"
-  - "stprintf_p_l-Funktion"
-  - "Formatierter Text [C++]"
-  - "_stprintf_p_l-Funktion"
+title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _sprintf_p
+- _swprintf_p_l
+- _swprintf_p
+- _sprintf_p_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _sprintf_p
+- _swprintf_p_l
+- _sprintf_p_l
+- _swprintf_p
+- sprintf_p
+- swprint_p_l
+- swprintf_p
+- swprintf_p_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- sprintf_p_l function
+- swprintf_p function
+- swprintf_p_l function
+- _sprintf_p function
+- _sprintf_p_l function
+- _swprintf_p function
+- sprintf_p function
+- _stprintf_p function
+- stprintf_p function
+- _swprintf_p_l function
+- stprintf_p_l function
+- formatted text [C++]
+- _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 35501213c0d9e0ee60472e4082bc03eabe8440e0
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-zum formatierte Daten in eine Zeichenfolge mit der Möglichkeit, die Reihenfolge anzugeben, dass die Parameter in der Formatzeichenfolge verwendet werden.  
+---
+# <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
+Schreiben Sie formatierte Daten in eine Zeichenfolge mit der Möglichkeit, die Reihenfolge anzugeben, in der die Parameter in der Formatzeichenfolge verwendet werden.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int _sprintf_p(  
    char *buffer,  
    size_t sizeOfBuffer,  
    const char *format [,  
-   argument] ...   
+   argument_list]  
 );  
 int _sprintf_p_l(  
    char *buffer,  
    size_t sizeOfBuffer,  
    const char *format,  
    locale_t locale [,  
-   argument] ...   
+   argument_list]  
 );  
 int _swprintf_p(  
    wchar_t *buffer,  
    size_t sizeOfBuffer,  
    const wchar_t *format [,  
-   argument]...  
+   argument_list]  
 );  
 int _swprintf_p_l(  
    wchar_t *buffer,  
    size_t sizeOfBuffer,  
    const wchar_t *format,  
    locale_t locale [,  
-   argument] …   
+   argument_list]   
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `buffer`  
  Speicherort für die Ausgabe  
   
@@ -101,45 +119,45 @@ int _swprintf_p_l(
  Die maximale Anzahl der zu speichernden Zeichen.  
   
  `format`  
- Formatsteuerzeichenfolge  
+ Formatsteuerzeichenfolge.  
   
- `argument`  
- Optionale Argumente  
+ `argument_list`  
+ Optionale Argumente, die der Formatzeichenfolge.  
   
  `locale`  
  Das zu verwendende Gebietsschema.  
   
  Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Rückgabewert  
- Die Anzahl geschriebener Zeichen oder "– 1" bei einem Fehler.  
+## <a name="return-value"></a>Rückgabewert  
+ Die Anzahl geschriebener Zeichen oder -1, wenn ein Fehler aufgetreten.  
   
-## Hinweise  
- Die `_sprintf_p` \- Funktion formatiert und speichert eine Reihe von Zeichen und Werte in `buffer`.  Jedes `argument` \(falls vorhanden\) wird entsprechend der jeweiligen Formatangabe in `format` konvertiert und ausgegeben.  Das Format besteht aus normalen Zeichen und hat die gleiche Form und Funktion wie das Argument `format` für `printf_p`.  Ein `NULL` Zeichen wird nach dem geschriebenen letzten Zeichen angefügt.  Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  Der Unterschied zwischen `_sprintf_p` und `sprintf_s` ist, dass `_sprintf_p` positionelle Parameter unterstützt, wodurch festgelegt werden kann, in welcher Reihenfolge die Argumente in der Formatzeichenfolge verwendet werden.  Weitere Informationen finden Sie unter [printf\_p\-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).  
+## <a name="remarks"></a>Hinweise  
+ Die `_sprintf_p`-Funktion formatiert und speichert eine Reihe von Zeichen und Werte in `buffer`. Jedes Argument in der `argument_list` (sofern vorhanden) konvertiert und ausgegeben wird, entsprechend der jeweiligen Formatangabe in `format`. Die `format` Argument verwendet den [formatieren Sie die Syntax der Formatangabe für Printf und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ein `NULL`-Zeichen wird nach dem letzten geschriebenen Zeichen angefügt. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert. Der Unterschied zwischen `_sprintf_p` und `sprintf_s` ist, dass `_sprintf_p` Positionsparameter unterstützt, wodurch festgelegt werden kann, in welcher Reihenfolge die Argumente in der Formatzeichenfolge verwendet werden. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).  
   
- `_swprintf_p` ist eine Breitzeichen\-Version von `_sprintf_p`. Die Zeigerargumente zu `_swprintf_p` sind Breitzeichen\-Zeichenfolgen.  Die Erkennung von Codierungsfehlern in `_swprintf_p` unterscheidet sich möglicherweise von der in `_sprintf_p`.  `_swprintf_p` und `fwprintf_p` identisch verhalten sich, dass `_swprintf_p` schreibt Ausgabe in eine Zeichenfolge anstatt an ein Silverlight\-Ziel vom Typ `FILE`, und `_swprintf_p` erfordert den `count`\-Parameter, die maximale Anzahl der zu schreibenden Zeichen anzugeben.  Die Versionen dieser Funktionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
+ `_swprintf_p` ist eine Breitzeichen-Version von `_sprintf_p`. Die Zeigerargumente zu `_swprintf_p` sind Breitzeichen-Zeichenfolgen. Die Erkennung von Codierungsfehlern in `_swprintf_p` unterscheidet sich möglicherweise von der in `_sprintf_p`. `_swprintf_p` und `fwprintf_p` verhalten sich identisch, außer dass die Ausgabe von `_swprintf_p` in eine Zeichenfolge anstatt an ein Ziel des `FILE`-Typs schreibt, und dass `_swprintf_p` den `count`-Parameter zur Angabe der maximale Anzahl zu schreibender Zeichen erfordert. Die Versionen dieser Funktionen mit dem `_l` -Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
- `_sprintf_p` gibt die Anzahl von Bytes zurück, die in `buffer` gespeicherten und nicht angerechnet das abschließende Zeichen `NULL`.  `_swprintf_p` gibt die Anzahl der Breitzeichen zurück, die in `buffer` gespeicherten und nicht angerechnet das abschließende `NULL` Breitzeichen.  Wenn `buffer` oder `format` ein NULL\-Zeiger ist oder wenn Formatzeichenfolge die ungültige Formatierungszeichen enthält, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "– 1" zurück und legen `errno` auf `EINVAL` fest.  
+ `_sprintf_p` gibt die in `buffer` gespeicherte Byteanzahl zurück. Das beendende `NULL`-Zeichen wird dabei nicht mitgezählt. `_swprintf_p`Gibt die Anzahl der Breitzeichen, die in gespeicherten `buffer`, wird dabei nicht mitgezählt das abschließende `NULL` Breitzeichen. Wenn `buffer` oder `format` ein NULL-Zeiger ist oder wenn die Formatzeichenfolge ungültige Formatierungszeichen enthält, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "– 1" zurück und legen `errno` auf `EINVAL`fest.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_stprintf_p`|`_sprintf_p`|`_sprintf_p`|`_swprintf_p`|  
 |`_stprintf_p_l`|`_sprintf_p_l`|`_sprintf_p_l`|`_swprintf_p_l`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_sprintf_p`, `_sprintf_p_l`|\<stdio.h\>|  
-|`_swprintf_p`, `_swprintf_p_l`|\<stdio.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`_sprintf_p`, `_sprintf_p_l`|\<stdio.h>|  
+|`_swprintf_p`, `_swprintf_p_l`|\<stdio.h> oder \<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```C  
 // crt_sprintf_p.c  
 // This program uses _sprintf_p to format various  
 // data and place them in the string named buffer.  
@@ -170,15 +188,19 @@ int main( void )
 }  
 ```  
   
-  **Ausgabe:**  
- **Zeichenfolge:    Computer**  
- **Zeichen: l**  
- **Ganze Zahl:   35**  
- **Reelle Zahl:      1.732053**  
-**Zeichenanzahl \= 79**   
-## Beispiel  
+```Output  
+Output:  
+   String:    computer  
+   Character: l  
+   Integer:   35  
+   Real:      1.732053  
   
+character count = 79  
 ```  
+  
+## <a name="example"></a>Beispiel  
+  
+```C  
 // crt_swprintf_p.c  
 // This is the wide character example which  
 // also demonstrates _swprintf_p returning  
@@ -203,19 +225,19 @@ int main( void )
 }  
 ```  
   
-  **Umgeschrieben 24 Zeichen**  
-**Umgeschrieben \-1 Zeichen**   
-## .NET Framework-Entsprechung  
- [System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)  
+```Output  
+Wrote 24 characters  
+Wrote -1 characters  
+```  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [\_fprintf\_p, \_fprintf\_p\_l, \_fwprintf\_p, \_fwprintf\_p\_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [\_printf\_p, \_printf\_p\_l, \_wprintf\_p, \_wprintf\_p\_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sscanf\_s, \_sscanf\_s\_l, swscanf\_s, \_swscanf\_s\_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
- [vprintf\-Funktionen](../../c-runtime-library/vprintf-functions.md)   
- [printf\_p\-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md)
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
+ [vprintf-Funktionen](../../c-runtime-library/vprintf-functions.md)   
+ [printf_p-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md)

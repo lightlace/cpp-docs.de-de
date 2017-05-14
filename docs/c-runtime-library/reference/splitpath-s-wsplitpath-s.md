@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3b4b1a35e2abcbeb128a36443eb4c5e5aa2a15e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c4c6803731deba188a4f4dba118b04f626f58564
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
@@ -159,7 +160,7 @@ errno_t _wsplitpath_s(
  Wenn einer der Puffer zu kurz ist, um das Ergebnis aufzunehmen, löschen diese Funktionen alle Puffer in leere Zeichenfolgen, setzen `errno` auf `ERANGE` und geben `ERANGE` zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_splitpath_s`-Funktion teilt einen Pfad in seine vier Komponenten auf. `_splitpath_s` behandelt Multibyte-Zeichenfolgenargumente automatisch richtig. Die Erkennung von Multibyte-Zeichenfolgen erfolgt auf der Grundlage der aktuell verwendeten Multibyte-Codeseite. `_wsplitpath_s` ist eine Breitzeichenversion von `_splitpath_s`. Die Argumente für `_``wsplitpath_s`sind Zeichenfolgen mit Breitzeichen. Andernfalls verhalten sich diese Funktionen identisch  
+ Die `_splitpath_s`-Funktion teilt einen Pfad in seine vier Komponenten auf. `_splitpath_s` behandelt Multibyte-Zeichenfolgenargumente automatisch richtig. Die Erkennung von Multibyte-Zeichenfolgen erfolgt auf der Grundlage der aktuell verwendeten Multibyte-Codeseite. `_wsplitpath_s` ist eine Breitzeichenversion von `_splitpath_s`. Die Argumente für `_``wsplitpath_s` sind Zeichenfolgen mit Breitzeichen. Andernfalls verhalten sich diese Funktionen identisch  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
@@ -195,9 +196,6 @@ errno_t _wsplitpath_s(
   
 ## <a name="example"></a>Beispiel  
  Siehe das Beispiel für [_makepath_s _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dateibehandlung](../../c-runtime-library/file-handling.md)   
