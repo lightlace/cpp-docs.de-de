@@ -1,54 +1,71 @@
 ---
-title: "fputc, fputwc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fputc"
-  - "fputwc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fputc"
-  - "fputwc"
-  - "_fputtc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fputtc-Funktion"
-  - "fputc-Funktion"
-  - "fputtc-Funktion"
-  - "fputwc-Funktion"
-  - "Streams, Schreiben von Zeichen in"
+title: fputc, fputwc | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fputc
+- fputwc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fputc
+- fputwc
+- _fputtc
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, writing characters to
+- fputtc function
+- _fputtc function
+- fputwc function
+- fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# fputc, fputwc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7eb1bb55bd153f4ef5387b616b72f611e3a50a9f
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="fputc-fputwc"></a>fputc, fputwc
 Schreibt ein Zeichen in einen Stream.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int fputc(  
@@ -61,48 +78,48 @@ wint_t fputwc(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `c`  
  Zu schreibende Zeichen.  
   
  `stream`  
- Zeiger zur `FILE`\-Struktur.  
+ Zeiger zur `FILE` -Struktur.  
   
-## Rückgabewert  
- Jede dieser Funktionen gibt das geschriebene Zeichen zurück.  Bei `fputc` gibt ein Rückgabewert von `EOF` einen Fehler an.  Bei `fputwc` gibt ein Rückgabewert von `WEOF` einen Fehler an.  Wenn `stream``NULL` ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, wird `EOF` zurückgegeben und `errno` auf `EINVAL` festgelegt.  
+## <a name="return-value"></a>Rückgabewert  
+ Jede dieser Funktionen gibt das geschriebene Zeichen zurück. Bei `fputc` gibt ein Rückgabewert von `EOF` einen Fehler an. Bei `fputwc` gibt ein Rückgabewert von `WEOF` einen Fehler an. Wenn `stream` `NULL` ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `EOF` zurückgegeben und `errno` auf `EINVAL` festgelegt.  
   
- Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Jede dieser Funktionen schreibt das einzelne Zeichen `c` an der Position, die durch die dazugehörige Dateipositionsanzeige \(sofern definiert\) angegeben ist, in eine Datei und versetzt die Anzeige entsprechend nach vorn.  Bei `fputc` und `fputwc` wird die Datei `stream` *zugeordnet.* Wenn die Datei keine Positionierungsanforderungen unterstützt oder im Append\-Modus geöffnet wurde, wird das Zeichen am Ende des Streams angefügt.  
+## <a name="remarks"></a>Hinweise  
+ Jede dieser Funktionen schreibt das einzelne Zeichen `c` an der Position, die durch die dazugehörige Dateipositionsanzeige (sofern definiert) angegeben ist, in eine Datei und versetzt die Anzeige entsprechend nach vorn. Im Fall von `fputc` und `fputwc`, die Datei zugeordnet ist `stream`. Wenn die Datei keine Positionierungsanforderungen unterstützt oder im Append-Modus geöffnet wurde, wird das Zeichen am Ende des Streams angefügt.  
   
- Die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI\-Modus geöffnet ist.  `fputc` unterstützt die Ausgabe in einen UNICODE\-Stream augenblicklich nicht.  
+ Die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. `fputc` unterstützt die Ausgabe in einen UNICODE-Stream augenblicklich nicht.  
   
- Die Versionen mit dem `_nolock`\-Suffix sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt.  Weitere Informationen finden Sie unter [\_fputc\_nolock, \_fputwc\_nolock](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md).  
+ Die Versionen mit dem `_nolock`-Suffix sind identisch, allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Weitere Informationen finden Sie unter [_fputc_nolock, _fputwc_nolock](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md).  
   
  Es folgen routinespezifische Hinweise.  
   
 |Routine|Hinweise|  
-|-------------|--------------|  
+|-------------|-------------|  
 |`fputc`|Entspricht `putc`, wird jedoch anstelle einer Funktion und eines Makros nur als Funktion implementiert.|  
-|`fputwc`|Breitzeichenversion von `fputc`.  Schreibt `c` als Multibytezeichen oder Breitzeichen, je nachdem, ob `stream` im Textmodus oder im Binärdateimodus geöffnet ist.|  
+|`fputwc`|Breitzeichenversion von `fputc`. Schreibt `c` als Multibytezeichen oder Breitzeichen, je nachdem, ob `stream` im Textmodus oder im Binärdateimodus geöffnet ist.|  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_fputtc`|`fputc`|`fputc`|`fputwc`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`fputc`|\<stdio.h\>|  
-|`fputwc`|\<stdio.h\> oder \<wchar.h\>|  
+|--------------|---------------------|  
+|`fputc`|\<stdio.h>|  
+|`fputwc`|\<stdio.h> oder \<wchar.h>|  
   
- Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps nicht unterstützt.  Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C\-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps verwendet werden können.  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps nicht unterstützt. Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_fputc.c  
@@ -123,14 +140,11 @@ int main( void )
 }  
 ```  
   
-  **Dies ist ein Test von fputc\!\!**   
-## .NET Framework-Entsprechung  
+```Output  
+This is a test of fputc!!  
+```  
   
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
  [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
  [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)

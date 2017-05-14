@@ -76,10 +76,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b84c039c715c8c7a45a84a37c1a1fd34db988403
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4bf1e3ad35fb03891f9c861255919752d0403d70
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
@@ -122,7 +123,7 @@ int _fstat64i32(
  Zeiger auf die Struktur zum Speichern der Ergebnisse  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt 0 zurück, wenn die Dateistatusinformationen abgerufen werden Ein Rückgabewert von –1 zeigt einen Fehler an. Wenn der Dateideskriptor ungültig oder `buffer` `NULL` ist, ruft diese Funktion den Handler für ungültige Parameter auf, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` im Falle eines ungültigen Dateideskriptors auf `EBADF` festgelegt. Andernfalls wird es auf `EINVAL` festgelegt, wenn `buffer` `NULL` ist.  
+ Gibt 0 zurück, wenn die Dateistatusinformationen abgerufen werden Ein Rückgabewert von – 1 zeigt einen Fehler. Wenn der Dateideskriptor ungültig oder `buffer` `NULL` ist, ruft diese Funktion den Handler für ungültige Parameter auf, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` im Falle eines ungültigen Dateideskriptors auf `EBADF` festgelegt. Andernfalls wird es auf `EINVAL` festgelegt, wenn `buffer` `NULL` ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Funktion `_fstat` ruft Informationen zur offenen Datei ab, die mit `fd` verknüpft ist, und speichert sie in der Struktur, auf die `buffer` verweist. Die in SYS\Stat.h definierte Struktur `_stat` enthält die folgenden Felder.  
@@ -159,7 +160,7 @@ int _fstat64i32(
   
  Varianten dieser Funktionen unterstützen 32-Bit- oder 64-Bit-Zeittypen und 32-Bit- oder 64-Bit-Dateilängen. Das erste numerische Suffix (`32` oder `64`) gibt die Größe des verwendeten Zeittyps an; das zweite Suffix ist entweder `i32` oder `i64`und gibt an, ob die Dateigröße als ganze Zahl mit 32 Bit oder 64 Bit dargestellt ist.  
   
- `_fstat` ist äquivalent zu `_fstat64i32`, und `struct``_stat` enthält einen 64-Bit-Uhrzeitwert. Das trifft zu, sofern nicht `_USE_32BIT_TIME_T` definiert wurde; in diesem Fall ist das alte Verhalten wirksam. `_fstat` verwendet einen 32-Bit-Uhrzeitwert, und `struct``_stat` enthält einen 32-Bit-Uhrzeitwert. Gleiches gilt auch für `_fstati64`.  
+ `_fstat` ist äquivalent zu `_fstat64i32`, und `struct _stat` enthält einen 64-Bit-Uhrzeitwert. Das trifft zu, sofern nicht `_USE_32BIT_TIME_T` definiert wurde; in diesem Fall ist das alte Verhalten wirksam. `_fstat` verwendet einen 32-Bit-Uhrzeitwert, und `struct _stat` enthält einen 32-Bit-Uhrzeitwert. Gleiches gilt auch für `_fstati64`.  
   
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat-Variationen des Uhrzeittyps und Dateilängentyps  
   
@@ -251,9 +252,6 @@ int main( void )
 File size     : 16  
 Time modified : Wed May 07 15:25:11 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dateibehandlung](../../c-runtime-library/file-handling.md)   

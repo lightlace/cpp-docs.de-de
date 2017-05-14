@@ -1,55 +1,72 @@
 ---
-title: "log1p, log1pf, log1pl2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "log1p"
-  - "log1pf"
-  - "log1pl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "log1p"
-  - "log1pf"
-  - "log1pl"
-  - "math/log1p"
-  - "math/log1pf"
-  - "math/log1pl"
-helpviewer_keywords: 
-  - "log1p-Funktion"
-  - "log1pf-Funktion"
-  - "log1pl-Funktion"
+title: log1p, log1pf, log1pl2 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- log1p
+- log1pf
+- log1pl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- log1p
+- log1pf
+- log1pl
+- math/log1p
+- math/log1pf
+- math/log1pl
+helpviewer_keywords:
+- log1p function
+- log1pf function
+- log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# log1p, log1pf, log1pl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 99525c8b711d0774fa2b3132505a2cdbb21d5569
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
-Berechnet den natürlichen Logarithmus von 1 plus dem angegebenen Wert.  
+---
+# <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
+Berechnet den natürlichen Logarithmus von 1 plus den angegebenen Ausdruck.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double log1p(  
@@ -74,44 +91,44 @@ long double log1pl(
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `x`  
  Das Gleitkommaargument.  
   
-## Rückgabewert  
- Bei Erfolg gibt den natürlichen Logarithmus von \(Basis e\) von \(`x`\+ 1\).  
+## <a name="return-value"></a>Rückgabewert  
+ Bei Erfolg wird der natürliche Logarithmus (Basis e) von (`x`+ 1) zurückgegeben.  
   
- Andernfalls kann die folgenden Werte zurück:  
+ Andernfalls wird einer der folgenden Werte zurückgeben:  
   
-|Eingabe|Ergebnis|SEH\-Ausnahme|errno|  
-|-------------|--------------|-------------------|-----------|  
-|\+ inf|\+ inf|||  
-|Abbrüche|Identisch mit der Eingabe|UNTERLAUF||  
+|Eingabe|Ergebnis|SEH-Ausnahme|errno|  
+|-----------|------------|-------------------|-----------|  
+|+inf|+inf|||  
+|Abbrüche|Identisch mit der Eingabe|UNDERFLOW||  
 |±0|Identisch mit der Eingabe|||  
-|\-1|\-INF \-Datei|DIVBYZERO|ERANGE|  
-|\< \-1|NaN|INVALID|EDOM|  
-|\-INF \-Datei|NaN|INVALID|EDOM|  
+|-1|-inf|DIVBYZERO|ERANGE|  
+|< -1|nan|INVALID|EDOM|  
+|-inf|nan|INVALID|EDOM|  
 |±SNaN|Identisch mit der Eingabe|INVALID||  
-|±QNaN unbestimmte|Identisch mit der Eingabe|||  
+|±QNaN, unbestimmt|Identisch mit der Eingabe|||  
   
- Die `errno` Wert auf ERANGE festgelegt, wenn `x` \=\-1. Die `errno` Wert wird auf EDOM festgelegt, wenn `x` \< −1.  
+ Der `errno`-Wert wird auf ERANGE festgelegt, wenn `x`=1. Die `errno` Wert auf EDOM festgelegt wird, wenn `x` <-1 zurück.  
   
-## Hinweise  
- Die `log1p` Funktionen sind möglicherweise genauer als Log \(`x`\+ 1\) Wenn X nahe 0 ist.  
+## <a name="remarks"></a>Hinweise  
+ Die `log1p`-Funktionen sind möglicherweise genauer als log(`x`+ 1) wenn X nahe 0 ist.  
   
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von Aufrufen `log1p` verwenden und Zurückgeben von float\- und long double\-Typen. In einem C\-Programm verwendet `log1p` immer double und gibt auch double zurück.  
+ Da C++ Überladungen zulässt, können Sie Überladungen von `log1p` aufrufen, die float- und long double-Typen annehmen und zurückgeben. In einem C-Programm verwendet `log1p` immer double und gibt auch double zurück.  
   
- Wenn `x` eine natürliche Zahl ist, wird diese Funktion gibt den Logarithmus der Fakultät \(`x`\-1\).  
+ Wenn `x` eine natürliche Zahl ist, gibt diese Funktion den Logarithmus der Fakultät (`x`-1) zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Funktion|C\-Header|C\+\+\-Header|  
-|--------------|---------------|-------------------|  
-|`log1p`, `log1pf`,  `log1pl`|\<math.h\>|\<cmath\>|  
+|Funktion|C-Header|C++-Header|  
+|--------------|--------------|------------------|  
+|`log1p`,                `log1pf`,  `log1pl`|\<math.h>|\<cmath>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)

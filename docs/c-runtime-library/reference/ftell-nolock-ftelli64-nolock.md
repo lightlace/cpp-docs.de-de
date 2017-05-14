@@ -1,55 +1,72 @@
 ---
-title: "_ftell_nolock, _ftelli64_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ftelli64_nolock"
-  - "_ftell_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftelli64_nolock"
-  - "ftelli64_nolock"
-  - "ftell_nolock"
-  - "_ftell_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftell_nolock-Funktion"
-  - "_ftelli64_nolock-Funktion"
-  - "Dateizeiger [C++], Abrufen der aktuellen Position"
-  - "ftell_nolock-Funktion"
-  - "ftelli64_nolock-Funktion"
+title: _ftell_nolock, _ftelli64_nolock | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ftelli64_nolock
+- _ftell_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftelli64_nolock
+- ftelli64_nolock
+- ftell_nolock
+- _ftell_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftelli64_nolock function
+- _ftelli64_nolock function
+- _ftell_nolock function
+- ftell_nolock function
+- file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# _ftell_nolock, _ftelli64_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4d0e042dc3d8bb7a5b956aeb834e51887e1b0138
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Ruft die aktuelle Position eines Dateizeigers ab, ohne den Thread zu sperren.  
+---
+# <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
+Ruft die aktuelle Position eines Dateizeigers ab, ohne den Thread zu sperren  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 long _ftell_nolock(   
@@ -60,31 +77,28 @@ __int64 _ftelli64_nolock(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `stream`  
- Abzielen auf die Struktur `FILE` ab.  
+ Richtet sich an die `FILE`-Struktur  
   
-## Rückgabewert  
- Identisch mit `ftell` und `_ftelli64`.  Weitere Informationen finden Sie unter [ftell, \_ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)**.**  
+## <a name="return-value"></a>Rückgabewert  
+ Mit `ftell` und `_ftelli64` identisch. Weitere Informationen finden Sie unter [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)**.**  
   
-## Hinweise  
- Diese Funktionen sind nicht sperrende Versionen von `ftell` und `_ftelli64`, verwendet.  Sie sind in `ftell` und `_ftelli64` identisch, allerdings werden nicht von der nicht von anderen Threads vor.  Diese Funktionen möglicherweise schneller, weil sie nicht den Mehraufwand durch andere Threads heraus sperren verursachen.  Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktionen sind die jeweils nicht sperrenden Versionen von `ftell` und `_ftelli64`. Sie sind identisch mit `ftell` und `_ftelli64` mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt werden. Diese Funktionen sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|Optionaler Header|  
-|--------------|---------------------------|-----------------------|  
-|`ftell_nolock`|\<stdio.h\>|\<errno.h\>|  
-|`_ftelli64_nolock`|\<stdio.h\>|\<errno.h\>|  
+|--------------|---------------------|---------------------|  
+|`ftell_nolock`|\<stdio.h>|\<errno.h>|  
+|`_ftelli64_nolock`|\<stdio.h>|\<errno.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## .NET Framework-Entsprechung  
- [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
-  
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
  [fgetpos](../../c-runtime-library/reference/fgetpos.md)   
- [fseek, \_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
- [\_lseek, \_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
- [ftell, \_ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)
+ [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
+ [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
+ [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)

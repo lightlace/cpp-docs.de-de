@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 267963b8f9344cef67788726bd2c6f082c7953ac
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: cad572e3b312ad29878486c9f40dafc2e96917f9
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
@@ -113,7 +114,7 @@ errno_t _cgetws_s(
 |--------------|------------------------|-----------------|------------|--------------------------|  
 |`NULL`|any|any|`EINVAL`|nicht verfügbar|  
 |nicht `NULL`|Null|alle|`EINVAL`|nicht geändert|  
-|nicht `NULL`|alle|`NULL`|`EINVAL`|Zeichenfolge mit der Länge&0;|  
+|nicht `NULL`|alle|`NULL`|`EINVAL`|Zeichenfolge mit der Länge 0|  
   
 ## <a name="remarks"></a>Hinweise  
  `_cgets_s` und `_cgetws_s` lesen eine Zeichenfolge aus der Konsole und kopieren die Zeichenfolge (mit einem NULL-Terminator) in `buffer`. `_cgetws_s` ist die Breitzeichenversion der Funktion. Im Gegensatz zur Zeichengröße ist das Verhalten dieser zwei Funktionen identisch. Die maximale Größe der zu lesenden Zeichenfolge wird als `numberOfElements`-Parameter übergeben. Diese Größe sollte ein zusätzliches Zeichen für das abschließende Nullzeichen enthalten. Die tatsächliche Anzahl der gelesenen Zeichen wird in `pSizeRead` platziert.  
@@ -136,9 +137,6 @@ errno_t _cgetws_s(
 |`_cgetws_s`|\<conio.h> oder \<wchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konsole und Port-E/A](../../c-runtime-library/console-and-port-i-o.md)   

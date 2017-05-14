@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40c56f3ebd01ac809b48c48dcda85ef8a3217be4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 210a0a2b353d691916c8f091205518bb67e375df
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="feholdexcept"></a>feholdexcept
@@ -65,7 +66,6 @@ Speichert die aktuelle Gleitkommaumgebung im angegebenen Objekt, löscht die Gle
 int feholdexcept(  
    fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -73,10 +73,10 @@ int feholdexcept(
  Zeiger auf ein `fenv_t`-Objekt, der eine Kopie der Gleitkommaumgebung enthalten soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt null zurück, allerdings nur, wenn die Funktion erfolgreich die ununterbrochene Behandlung von Gleitkommaausnahmen aktivieren kann.  
+ Gibt 0 (null) zurück, wenn die Funktion erfolgreich unterbrechungsfreier Gleitkommaausnahmen behandeln aktivieren kann.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `feholdexcept`-Funktion wird verwendet, um den Status der aktuellen Gleitkommaumgebung in das `fenv_t`-Objekt zu speichern, auf das von `penv` gezeigt wird, und um einzustellen, dass die Ausführung von Gleitkommaausnahmen nicht von der Umgebung unterbrochen wird. Dies wird als ununterbrochener Modus bezeichnet.  Dieser Modus wird fortgesetzt, bis die Umgebung mithilfe von [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183) oder [feupdateenv](../../c-runtime-library/reference/feupdateenv.md) wiederhergestellt wird.  
+ Die `feholdexcept`-Funktion wird verwendet, um den Status der aktuellen Gleitkommaumgebung in das `fenv_t`-Objekt zu speichern, auf das von `penv` gezeigt wird, und um einzustellen, dass die Ausführung von Gleitkommaausnahmen nicht von der Umgebung unterbrochen wird. Dies wird als ununterbrochener Modus bezeichnet.  Dieser Modus wird fortgesetzt, bis die Umgebung mithilfe von [fesetenv](fesetenv1.md) oder [feupdateenv](../../c-runtime-library/reference/feupdateenv.md) wiederhergestellt wird.  
   
  Sie können diese Funktion am Anfang einer Unterroutine verwenden, die eine oder mehrere Gleitkommaausnahmen vor dem Aufrufer verbergen muss. Um eine Ausnahme zu melden, löschen Sie einfach die unerwünschten Ausnahmen mithilfe von [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md), und beenden Sie dann den ununterbrochenen Modus durch Aufruf von `feupdateenv`.  
   
@@ -93,5 +93,5 @@ int feholdexcept(
 ## <a name="see-also"></a>Siehe auch  
  [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183)   
+ [fesetenv](fesetenv1.md)   
  [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)

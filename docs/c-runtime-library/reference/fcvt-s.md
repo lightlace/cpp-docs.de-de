@@ -1,51 +1,68 @@
 ---
-title: "_fcvt_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fcvt_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fcvt_s"
-  - "_fcvt_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fcvt_s-Funktion"
-  - "Konvertieren von Gleitkommazahlen, zu Zeichenfolgen"
-  - "fcvt_s-Funktion"
-  - "Gleitkommafunktionen, Konvertieren einer Zahl in eine Zeichenfolge"
+title: _fcvt_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fcvt_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fcvt_s
+- _fcvt_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- fcvt_s function
+- converting floating point, to strings
+- floating-point functions, converting number to string
+- _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _fcvt_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9c282757ae79367cdc2ee72b3f3ce8d0e50983fa
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Konvertiert eine Gleitkommazahl zu einer Zeichenfolge.  Dies ist eine Version von [\_fcvt](../../c-runtime-library/reference/fcvt.md) mit werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="fcvts"></a>_fcvt_s
+Konvertiert eine Gleitkommazahl in eine Zeichenfolge. Dies ist eine sicherere Version von [_fcvt](../../c-runtime-library/reference/fcvt.md), wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t _fcvt_s(   
@@ -66,67 +83,67 @@ errno_t _fcvt_s(
 ); // C++ only  
 ```  
   
-#### Parameter  
- \[out\] `buffer`  
- Der angegebenen Puffer, der das Ergebnis der Konvertierung enthält.  
+#### <a name="parameters"></a>Parameter  
+ [out] `buffer`  
+ Der angegebene Puffer, der das Ergebnis der Konvertierung enthält.  
   
- \[in\] `sizeInBytes`  
- Die Größe des Puffers in Bytes.  
+ [in] `sizeInBytes`  
+ Die Größe des Puffers in Byte.  
   
- \[in\] `value`  
+ [in] `value`  
  Zu konvertierende Zahl.  
   
- \[in\] `count`  
- Anzahl der Ziffern nach dem Dezimalkomma.  
+ [in] `count`  
+ Anzahl der Ziffern nach dem Dezimaltrennzeichen.  
   
- \[out\] `dec`  
- Zeiger zur gespeicherten Kommastellung.  
+ [out] `dec`  
+ Zeiger auf die gespeicherte Position der Dezimalstelle.  
   
- \[out\] `sign`  
- Zeiger zum gespeicherten Zeichenindikator.  
+ [out] `sign`  
+ Zeiger auf den gespeicherten Zeichen-Indikator.  
   
-## Rückgabewert  
- Null wenn erfolgreich.  Der Rückgabewert ist ein Fehlercode, wenn ein Fehler auftritt.  Fehlercodes werden in Errno.h definiert.  Eine Liste dieser Fehler, finden Sie unter [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+## <a name="return-value"></a>Rückgabewert  
+ Null, wenn erfolgreich. Der Rückgabewert ist ein Fehlercode, wenn ein Fehler auftritt. Fehlercodes sind in Errno.h definiert. Eine Liste dieser Fehler finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Bei einer ungültigen Parameters, wie in der folgenden Tabelle aufgeführt, ruft diese Funktion den ungültigen Parameterhandler auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EINVAL` zurück.  
+ Bei einem in der folgenden Tabelle enthaltenen ungültigen Parameter wird von dieser Funktion der Handler für ungültige Parameter aufgerufen, wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `EINVAL` zurück.  
   
-### Fehlerbedingungen  
+### <a name="error-conditions"></a>Fehlerbedingungen  
   
-|`buffer`|`sizeInBytes`|Wert|count|Dezember|sign|Return|Wert in `buffer`|  
-|--------------|-------------------|----------|-----------|--------------|----------|------------|----------------------|  
-|`NULL`|any|any|any|any|any|`EINVAL`|Nicht geändert.|  
-|Nicht `NULL` \(Punkte zum gültigen Arbeitsspeicher\)|\<\=0|any|any|any|any|`EINVAL`|Nicht geändert.|  
-|any|any|any|any|`NULL`|any|`EINVAL`|Nicht geändert.|  
-|any|any|any|any|any|`NULL`|`EINVAL`|Nicht geändert.|  
+|`buffer`|`sizeInBytes`|Wert|count|dec|sign|Return|Wert in `buffer`.|  
+|--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
+|`NULL`|alle|alle|alle|alle|alle|`EINVAL`|Nicht geändert.|  
+|Nicht `NULL` (zeigt gültigen Speicher an)|<=0|any|alle|alle|alle|`EINVAL`|Nicht geändert.|  
+|any|alle|alle|alle|`NULL`|alle|`EINVAL`|Nicht geändert.|  
+|any|alle|alle|alle|alle|`NULL`|`EINVAL`|Nicht geändert.|  
   
  **Sicherheitsprobleme**  
   
- `_fcvt_s` generierte kann eine Zugriffsverletzung, wenn `buffer` nicht auf gültigen Arbeitsspeicher wird und nicht `NULL` ist.  
+ `_fcvt_s` kann eine Zugriffsverletzung erzeugen, wenn `buffer` nicht auf einen gültigen Speicher zeigt und nicht `NULL` ist.  
   
-## Hinweise  
- Die `_fcvt_s`\-Funktion konvertiert eine Gleitkommazahl zu einer auf NULL endende Zeichenfolge.  Der `value`\-Parameter ist die zu konvertierende, Gleitkommazahl.  `_fcvt_s` speichert die Ziffern von `value` als Zeichenfolge und fügt an ein NULL\-Zeichen \("\\ 0 "\).  Der `count`\-Parameter gibt die Anzahl der nach dem Dezimaltrennzeichen an zu speichernden Ziffern.  Überschüssige Ziffern werden `count` weg zu Stellen gerundet.  Wenn es weniger als `count` Ziffern von Genauigkeit gibt, wird die Zeichenfolge durch Nullen ergänzt.  
+## <a name="remarks"></a>Hinweise  
+ Mit der `_fcvt_s`-Funktion werden Gleitkommazahlen in mit NULL endende Zeichenfolgen konvertiert. Der Parameter `value` ist die zu konvertierende Gleitkommazahl. `_fcvt_s` speichert die Ziffern von `value` als Zeichenfolge, und fügt das Zeichen NULL ('\0') an. Der `count`-Parameter gibt die Anzahl der zu speichernden Ziffern nach dem Dezimaltrennzeichen an. Überschüssige Ziffern werden auf `count` Stellen gerundet. Wenn weniger als `count` Dezimalstellen vorhanden sind, wird die Zeichenfolge mit Nullen aufgefüllt.  
   
- Nur Ziffern sind in der Zeichenfolge gespeichert.  Die Position des Dezimaltrennzeichens und das Zeichen von `value` können von `dec` und `sign` nach dem Aufruf abgerufen werden.  Der `dec`\-Parameter zeigt auf einen ganzzahligen Wert; dieser ganzzahlige Wert gibt die Position des Dezimaltrennzeichens in Bezug auf den Anfang der Zeichenfolge.  Ein null oder negative ganzzahliger Wert gibt an, dass das Dezimaltrennzeichen auf der linken Seite die erste Ziffer liegt.  Der Parameter `sign` zeigt auf eine ganze Zahl, die das Zeichen von `value` angibt.  Die ganze Zahl wird 0 festgelegt, wenn `value` gleich ist und wird auf eine Zahl ungleich 0 \(null\) festgelegt, wenn `value` negativ ist.  
+ In der Zeichenfolge werden nur Ziffern gespeichert. Die Position der Dezimalstelle und das Vorzeichen von `value` können nach dem Aufruf aus `dec` und `sign` abgerufen werden. Der Parameter `dec` zeigt auf einen ganzzahligen Wert; dieser ganzzahlige Wert gibt die Position der Dezimalstelle im Verhältnis zum Anfang der Zeichenfolge an. Der Wert null oder ein negativer ganzzahliger Wert geben an, dass sich die Dezimalstelle links neben der ersten Ziffer befindet. Der Parameter `sign` verweist auf eine ganze Zahl, die das Vorzeichen von `value` angibt. Die ganze Zahl ist auf 0 festgelegt, wenn `value` positiv ist, und ist auf eine Zahl ungleich null festgelegt, wenn `value` negativ ist.  
   
- Ein Puffer der Länge `_CVTBUFSIZE` ist für jeden Gleitkommawert ausreichend.  
+ Ein Puffer der Länge `_CVTBUFSIZE` reicht für alle Gleitkommawerte aus.  
   
- Der Unterschied zwischen `_ecvt_s` und `_fcvt_s` ist in der Interpretation des Parameters `count`.  `_ecvt_s` interpretiert `count`, während die Gesamtzahl der Stellen in der Ausgabezeichenfolge und c `_fcvt_s``ount` als Anzahl von Ziffern nach dem Dezimaltrennzeichen interpretiert.  
+ `_ecvt_s` und `_fcvt_s` unterscheiden sich hinsichtlich der Interpretation des Parameters `count`. `_ecvt_s`interpretiert `count` als die Gesamtzahl der Ziffern in der Ausgabezeichenfolge und `_fcvt_s` interpretiert `count` als die Anzahl der Ziffern nach dem Dezimaltrennzeichen an.  
   
- In C\+\+ unter Verwendung dieser Funktion wird durch eine Vorlagenüberladung vereinfacht; Überladung kann automatisch die Pufferlänge ableiten und die Anforderung nicht, einen Größenargument anzugeben.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ Die Verwendung dieser Funktion in C++ wird durch eine Vorlagenüberladung vereinfacht. Eine Überladung kann automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
   
- Die Debugversion dieser Funktion wird zuerst den Puffer mit 0xFD aus.  Mit [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md) deaktivieren Sie dieses Verhalten.  
+ Die Debugversion dieser Funktion füllt zunächst den Puffer mit „0xFD“ auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|Optionaler Header|  
-|--------------|---------------------------|-----------------------|  
-|`_fcvt_s`|\<stdlib.h\>|\<errno.h\>|  
+|--------------|---------------------|---------------------|  
+|`_fcvt_s`|\<stdlib.h>|\<errno.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
- **Bibliotheken:** Alle Versionen der [CRT\-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).  
+ **Bibliotheken:** Alle Versionen der [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // fcvt_s.c  
@@ -155,14 +172,14 @@ int main()
 }  
 ```  
   
-  **Konvertierter Wert: 120000**   
-## .NET Framework-Entsprechung  
- <xref:System.Convert.ToString*>  
+```Output  
+Converted value: 120000  
+```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt\_s](../../c-runtime-library/reference/ecvt-s.md)   
- [\_gcvt\_s](../../c-runtime-library/reference/gcvt-s.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
+ [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)

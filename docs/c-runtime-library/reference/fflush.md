@@ -1,49 +1,66 @@
 ---
-title: "fflush | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fflush"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fflush"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fflush-Funktion"
-  - "Leeren"
-  - "Streams, Leeren"
+title: fflush | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fflush
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fflush
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, flushing
+- flushing
+- fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# fflush
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f2a11a29ba0eec3c66cf23f72e8fe0e7106d5a5c
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Leert einen Stream.  
+---
+# <a name="fflush"></a>fflush
+Leert einen Stream  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int fflush(   
@@ -51,34 +68,36 @@ int fflush(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `stream`  
- Zeiger zur `FILE`\-Struktur.  
+ Zeiger zur `FILE` -Struktur.  
   
-## Rückgabewert  
- `fflush` gibt 0 zurück, wenn der Puffer erfolgreich geleert wurde.  Der Wert 0 wird auch zurückgegeben in Fällen, in denen der angegebene Stream keinen Puffer hat oder ist nur für Lesezwecke geöffnet.  Bei dem Rückgabewert `EOF` gibt einen Fehler an.  
+## <a name="return-value"></a>Rückgabewert  
+ `fflush` gibt 0 zurück, wenn der Puffer erfolgreich geleert wurde. Der Wert 0 wird auch dann zurückgegeben, wenn der angegebene Stream über keinen Puffer verfügt oder nur zum Lesen geöffnet wird. Der Rückgabewert `EOF` gibt einen Fehler an.  
   
 > [!NOTE]
->  Wenn `fflush``EOF` zurückgibt, verloren gegangen Daten möglicherweise aufgrund eines schreibensfehlers.  Wenn Sie einen Handler des schwer wiegender Fehlers installiert, ist es am sichersten, weg puffern mit der Funktion `setvbuf` zu drehen oder auf niedriger Ebene wie `_open` zu verwenden E\/A\-Routinen, funktioniert `_close` und `_write` anstelle der Stream\-E\/A.  
+>  Wenn `fflush` `EOF` zurückgibt, sind möglicherweise Daten aufgrund eines Schreibfehlers verloren gegangen. Bei der Einrichtung eines wichtigen Fehlerhandlers ist es am sichersten, die Pufferung mit der Funktion `setvbuf` zu deaktivieren oder eine E/A-Routine auf niedriger Ebene wie `_open`, `_close`, und `_write` anstelle der E/A-Streamfunktionen zu verwenden.  
   
-## Hinweise  
- Die `fflush`\-Funktion leert einen Stream.  Wenn die Datei, die `stream` zugeordnet ist, für Ausgabezwecke geöffnet ist, wird `fflush` in der Datei der Inhalt des Puffers, der dem Stream zugeordnet ist.  Wenn der Stream für die Eingabe geöffnet ist, werden `fflush` den Inhalt aus dem Puffer.  `fflush` negiert die Auswirkung jedes früheren Aufrufs von `ungetc` für `stream`.  Auch `fflush(NULL)` löscht alle Streams, die für die Ausgabe geöffnet sind.  Der Stream bleibt nach dem Aufruf geöffnet.  `fflush` hat keine Auswirkungen auf einen nicht zwischengespeicherten Stream.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `fflush` leert den Stream `stream`. Wenn der Stream im Schreibmodus oder im Updatemodus geöffnet wurde und der letzte Vorgang ein Schreibvorgang war, werden die Inhalte des Streampuffers in die zugrunde liegende Datei bzw. das Gerät geschrieben, und der Puffer wird verworfen. Wenn der Stream im Lesemodus geöffnet wurde oder keinen Puffer besitzt, hat der Aufruf von `fflush` keine Auswirkungen, und der Puffer wird beibehalten. Ein Aufruf von `fflush` negiert die Wirkung aller vorherigen Aufrufe von `ungetc` für den Stream. Der Stream bleibt nach dem Aufruf geöffnet.  
   
- Puffer werden normalerweise vom Betriebssystem verwaltet, das die optimale Zeit bestimmt, die Daten auf dem Datenträger automatisch zu schreiben: wenn ein Puffer ist voll, wenn ein Stream geschlossen wird oder wenn ein Programm normalerweise wird beendet, ohne den Stream zu schließen.  Die Datenträgercommitfunktion der Laufzeitbibliothek können Sie sicherstellen, dass wichtige Daten direkt auf dem Datenträger statt zu den Betriebssystempuffern geschrieben werden.  Ohne ein vorhandenes Programm umzuschreiben, können Sie diese Funktion aktivieren, indem Sie die Objektdateien des Programms mit COMMODE.OBJ verknüpfen.  In der resultierenden ausführbaren Datei schreiben Aufrufe von `_flushall` den Inhalt aller Puffer auf den Datenträger.  Nur `_flushall` und `fflush` werden von COMMODE.OBJ beeinflusst.  
+ Wenn `stream` `NULL` ist, entspricht das Verhalten einem Aufruf von `fflush` in allen geöffneten Streams. Alle im Schreibmodus geöffneten Streams und alle Streams im Updatemodus, in denen der letzte Vorgang ein Schreibvorgang war, werden geleert. Der Aufruf hat keine Auswirkungen auf andere Streams.  
   
- Weitere Informationen zum Steuern der Datenträgercommitfunktion finden Sie unter [Stream\-E\/A](../../c-runtime-library/stream-i-o.md), [fopen](../../c-runtime-library/reference/fopen-wfopen.md) und [\_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md).  
+ Puffer werden normalerweise vom Betriebssystem verwaltet, das den optimalen Zeitpunkt bestimmt, zu dem Daten automatisch auf den Datenträger geschrieben werden: wenn ein Puffer voll ist, wenn ein Stream geschlossen wird oder wenn ein Programm normal beendet wird, ohne den Stream zu schließen. Mit der Datenträgercommitfunktion der Laufzeitbibliothek können Sie sicherstellen, dass wichtige Daten direkt auf den Datenträger anstatt in die Betriebssystempuffer geschrieben werden. Sie können diese Funktion aktivieren, ohne ein vorhandenes Programm umzuschreiben. Verknüpfen Sie hierzu die Objektdateien des Programms mit COMMODE.OBJ. In der resultierenden ausführbaren Datei schreiben Aufrufe von `_flushall` den Inhalt aller Puffer auf den Datenträger. COMMODE.OBJ hat nur Auswirkungen auf `_flushall` und `fflush`.  
   
- Diese Funktion sperrt den aufrufenden Thread und daher threadsicher.  Eine nicht sperrende Version finden Sie unter `_fflush_nolock`.  
+ Weitere Informationen zum Steuern der Datenträgercommitfunktion finden Sie unter [Stream-E/A](../../c-runtime-library/stream-i-o.md), [fopen](../../c-runtime-library/reference/fopen-wfopen.md) und [_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md).  
   
-## Anforderungen  
+ Diese Funktion sperrt den aufrufenden Thread und ist threadsicher. Eine nicht sperrende Version finden Sie unter `_fflush_nolock`.  
+  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`fflush`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`fflush`|\<stdio.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_fflush.c  
@@ -107,18 +126,27 @@ int main( void )
 }  
 ```  
   
-  **`Dies ist ein Test Dies ist testThis`  `ist ein Test Dies ist ein testEnter` ein Satz von vier Wörtern mit scanf: Dies ist ein Test**  
-**Dieses \-**  
-**is**  
-**a**  
-**Testen**  
-**Geben Sie denselben Satz mit abruft ein: Dies ist ein Test**  
-**Dies ist ein Test**   
-## .NET Framework-Entsprechung  
- [System::IO::FileStream::Flush](https://msdn.microsoft.com/en-us/library/2bw4h516.aspx)  
+```Output  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [\_flushall](../../c-runtime-library/reference/flushall.md)   
+      This is a test  
+This is a test  
+  
+```  
+  
+```Output  
+  
+      This is a test  
+This is a testEnter a sentence of four words with scanf: This is a test  
+This  
+is  
+a  
+test  
+Enter the same sentence with gets: This is a test  
+This is a test  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+ [_flushall](../../c-runtime-library/reference/flushall.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

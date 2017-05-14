@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bde781215787a1d39a58c69b344eb8d41f7b3c52
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e068c6711630976a2d8b3baea01010bc5e34ed6e
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
@@ -126,10 +127,10 @@ errno_t _localtime64_s(
  Minuten nach Stunde (0 - 59).  
   
  `tm_hour`  
- Stunden nach Mitternacht (0–23)  
+ Stunden nach Mitternacht (0 - 23).  
   
  `tm_mday`  
- Tag im Monat (1 - 31).  
+ Tag des Monats (1-31).  
   
  `tm_mon`  
  Monat (0 - 11; Januar = 0).  
@@ -141,7 +142,7 @@ errno_t _localtime64_s(
  Tag der Woche (0 - 6; Sonntag = 0).  
   
  `tm_yday`  
- Tag des Jahres (0 - 365; Januar 1 = 0).  
+ Tag des Jahres (0 - 365; 1. Januar = 0).  
   
  `tm_isdst`  
  Positiver Wert bei Sommerzeit; 0 bei Winterzeit; negativ bei unbekannter Zeit. Wenn die Umgebungsvariable `TZ` festgelegt ist, setzt die C-Laufzeitbibliothek voraus, dass die Regeln für die USA für die Implementierung der Berechnung der Sommerzeit gelten.  
@@ -211,9 +212,6 @@ int main( void )
 ```  
 Fri Apr 25 01:19:27 PM  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- [System::DateTime::ToLocalTime](https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   

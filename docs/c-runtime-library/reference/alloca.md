@@ -1,5 +1,5 @@
 ---
-title: _alloca | Microsoft-Dokumentation
+title: _alloca | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c7bf8e09b7af4153bae3bfa0f80c002149ff3ee9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5875a26dc5758674665fba2fde5b51c2ff53420e
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="alloca"></a>_alloca
@@ -77,7 +78,7 @@ void *_alloca(
  Eine Stapelüberlaufausnahme wird generiert, wenn der Speicherplatz nicht zugeordnet werden kann. Die Stapelüberlaufausnahme ist keine C++-Ausnahme, sondern eine strukturierte Ausnahme. Sie müssen anstelle der C++-Ausnahmebehandlung die [Strukturierte Ausnahmebehandlung](../../cpp/structured-exception-handling-c-cpp.md) (Structured Exception Handling, SEH) verwenden.  
   
 ## <a name="remarks"></a>Hinweise  
- `_alloca`Ordnet `size` Bytes vom Programmstapel. Der zugewiesene Speicherplatz wird automatisch freigegeben, wenn die aufrufende Funktion beendet wird (jedoch nicht, wenn die Zuordnung lediglich den Gültigkeitsbereich verlässt). Übergeben Sie daher nicht den Wert des Zeigers zurückgegebene `_alloca` als Argument für [kostenlose](../../c-runtime-library/reference/free.md).  
+ `_alloca`Ordnet `size` Bytes aus dem Programmstapel. Der reservierte Platz wird automatisch freigegeben, wenn die aufrufende Funktion beendet wird (nicht, wenn die Zuordnung lediglich außerhalb des gültigen Bereichs übergibt). Übergeben Sie deshalb nicht den Wert des Zeigers zurückgegebenes `_alloca` als Argument an [freien](../../c-runtime-library/reference/free.md).  
   
  Es gelten Einschränkungen beim expliziten Aufruf von `_alloca` in einem Ausnahmehandler (exception handler, EH). EH-Routinen, die auf x86-Klasse-Prozessoren ausgeführt werden, arbeiten in ihrem eigenen Speicherrahmen: Sie führen Ihre Tasks im Speicherplatz aus, der nicht auf der aktuellen Position des Stapelzeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Daher führt das explizite Aufrufen von `_alloca` in jedem der folgenden Szenarios zu einem Programmfehler während der Rückgabe auf die aufrufende EH-Routine.  
   
@@ -92,7 +93,7 @@ void *_alloca(
 > [!IMPORTANT]
 >  Wenn unter Windows XP `_alloca` innerhalb eines try/catch-Blocks aufgerufen wird, müssen Sie [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md) im Catch-Block aufrufen.  
   
- Zusätzlich zu den oben genannten Einschränkungen bei Verwendung der[/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) Option `_alloca` kann nicht verwendet werden, `__except` blockiert. Weitere Informationen finden Sie unter [Einschränkungen für „/clr“](../../build/reference/clr-restrictions.md).  
+ Zusätzlich zu den oben genannten Einschränkungen bei Verwendung der[/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) Option `_alloca` kann nicht verwendet werden, `__except` blockiert. Weitere Informationen finden Sie unter [/clr Restrictions](../../build/reference/clr-restrictions.md).  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -157,9 +158,6 @@ int main()
 ```Output  
 Allocated 1000 bytes of stack at 0x0012FB50  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Speicherbelegung](../../c-runtime-library/memory-allocation.md)   

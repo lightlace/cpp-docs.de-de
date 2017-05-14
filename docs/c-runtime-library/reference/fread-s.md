@@ -1,46 +1,64 @@
 ---
-title: "fread_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fread_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fread_s"
-  - "stdio/fread_s"
-dev_langs: 
-  - "C++"
+title: fread_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fread_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fread_s
+- stdio/fread_s
+dev_langs:
+- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# fread_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6fa9d496bdb5f5d7b4dd4a772778a0f62a484fd8
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
-Liest Daten aus einem Stream.  Diese Version von [fread](../../c-runtime-library/reference/fread.md) verfügt werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="freads"></a>fread_s
+Liest Daten aus einem Stream Diese Version von [fread](../../c-runtime-library/reference/fread.md) enthält Sicherheitserweiterungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_t fread_s(   
@@ -52,44 +70,43 @@ size_t fread_s(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `buffer`  
  Speicherort für Daten.  
   
  `bufferSize`  
- Größe des Zielpuffers in Bytes.  
+ Größe des Zielpuffers in Byte.  
   
  `elementSize`  
- Größe des Elements, um von Bytes in zu lesen.  
+ Größe des zu lesenden Elements in Byte.  
   
  `count`  
- Maximale Anzahl zu lesende Elemente.  
+ Maximale Anzahl der zu lesenden Elemente.  
   
  `stream`  
- Zeiger zur `FILE`\-Struktur.  
+ Zeiger zur `FILE` -Struktur.  
   
-## Rückgabewert  
- `fread_s` gibt die Anzahl der \(ganzen\) Elemente zurück, die in den Puffer gelesen wurden ist, der kleiner als `count` sein, wenn ein Lesefehler oder das Ende der Datei erreicht wird, bevor `count` erreicht wird.  Verwenden Sie die `feof``ferror` oder Funktion, um einen Fehler aus einer Dateiende\-Bedingung zu unterscheiden.  Wenn `size` oder `count` 0 ist, gibt `fread_s` 0 zurück und den Pufferinhalt ist unverändert.  Wenn `stream` oder `buffer` ein NULL\-Zeiger ist, ruft `fread_s` den ungültigen Parameterhandler auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren, Sätze `errno` dieser Funktion zu `EINVAL` und zu gibt 0 zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ `fread_s` gibt die Anzahl der (ganzen) Elemente zurück, die in den Puffer gelesen wurden, die möglicherweise geringer als `count` ist, wenn ein Fehler oder das Ende der Datei vor `count` erreicht wird. Verwenden Sie die Funktionen `feof` oder `ferror`, um einen Fehler von einer Dateiendebedingung zu unterscheiden. Wenn `size` oder `count` 0 ist, gibt `fread_s` 0 zurück, und die Pufferinhalte bleiben unverändert. Wenn `stream` oder `buffer` ein NULL-Zeiger ist, ruft `fread_s` den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, setzt diese Funktion `errno` auf `EINVAL` und gibt "0" zurück.  
   
- Weitere Informationen zu Fehlercodes, finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen zu diesen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die `fread_s`\-Funktion liest bis `count`\-Elemente von `elementSize` Bytes von der Eingabe `stream` und speichert sie in `buffer`.  Der Dateizeiger, der `stream` zugeordnet ist \(sofern eines vorhanden ist\), wird durch die Anzahl von Bytes gelesen tatsächlich verbessert.  Wenn der angegebene im Stream Textmodus geöffnet ist, werden Wagenrücklauf\/Zeilenvorschub\-Paare durch einzelne Zeilenvorschubzeichen ersetzt.  Die Ersetzung hat keine Auswirkungen auf der Dateizeiger oder Rückgabewert.  Die Dateizeigerposition ist unbestimmt, wenn ein Fehler auftritt.  Der Wert eines teilweise Leseelements kann nicht bestimmt werden.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `fread_s` liest bis zu den `count`-Elementen mit `elementSize` Bytes aus dem Eingabe-`stream` und speichert diese im `buffer`.  Der `stream` zugewiesene Dateizeiger (falls vorhanden) wird um die Anzahl tatsächlich gelesener Bytes erhöht. Wenn dem angegebenen Datenstrom im Textmodus geöffnet wird, werden die Carriage Return-Zeilenvorschub-Paare mit einzelnen Zeilenvorschubzeichen ersetzt. Dieser Vorgang hat keine Auswirkung auf den Dateizeiger oder den Rückgabewert. Die Position des Dateizeigers ist unbestimmt, wenn ein Fehler auftritt. Der Wert eines teilweise gelesenen Elements kann nicht bestimmt werden.  
   
- Diese Funktion sperrt out andere Threads.  Wenn Sie eine nicht sperrende Version benötigen, verwenden Sie `_fread_nolock`.  
+ Diese Funktion sperrt alle anderen Threads. Wenn Sie eine nicht sperrende Version benötigen, verwenden Sie `_fread_nolock`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`fread_s`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`fread_s`|\<stdio.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```cpp  
-  
 // crt_fread_s.c  
 // Command line: cl /EHsc /nologo /W4 crt_fread_s.c  
 //  
@@ -142,13 +159,19 @@ int main( void )
 }  
 ```  
   
-  **Inhalt des Puffers vor schreibt\/gelesen:**   
- **zyxwvutsrqponmlkjihgfe**  
- **Umgeschrieben 22 Elemente**   
- **Zahl von 11 Byteelementen Leseberechtigung \= 2**   
- **Inhalt des Puffers nach schreibt\/gelesen:**   
- **zyxwvutsrqponmlkjihgfe**    
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
+```Output  
+Contents of buffer before write/read:   
+        zyxwvutsrqponmlkjihgfe  
+  
+Wrote 22 items  
+  
+Number of 11-byte elements read = 2  
+  
+Contents of buffer after write/read:   
+        zyxwvutsrqponmlkjihgfe  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
  [fwrite](../../c-runtime-library/reference/fwrite.md)   
- [\_read](../../c-runtime-library/reference/read.md)
+ [_read](../../c-runtime-library/reference/read.md)

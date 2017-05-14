@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 75a2b674f392b19bb37f26c977e8b79de7e715bb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: fcd76f8daec9c90374989a82f4b4b2f85b4cb5c7
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findclose"></a>_findclose
@@ -72,7 +73,7 @@ int _findclose(
  Das Suchhandle, das von einem vorherigen Aufruf von `_findfirst` zurückgegeben wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `_findclose` gibt bei Erfolg 0 zurück. Andernfalls gibt es -1 zurück und legt `errno` auf `ENOENT` fest. Das bedeutet, dass keine übereinstimmenden Dateien gefunden werden konnten.  
+ `_findclose` gibt bei Erfolg 0 zurück. Hingegen gibt-1 zurück und legt `errno` zu `ENOENT`, gibt an, dass keine übereinstimmenden Dateien gefunden werden.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -81,9 +82,6 @@ int _findclose(
 |`_findclose`|\<io.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Systemaufrufe](../../c-runtime-library/system-calls.md)   

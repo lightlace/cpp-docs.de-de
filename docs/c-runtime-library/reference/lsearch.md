@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 05248645487edfc46b8adc5754bf99e46ee6911f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 86dd9925775d50a8e1c79f677f3e5b1d9ad3ae37
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="lsearch"></a>_lsearch
@@ -100,7 +101,7 @@ void *_lsearch(
   
  Das `compare`-Argument ist ein Zeiger auf eine benutzerdefinierte Routine, die zwei Elemente des Arrays vergleicht und einen Wert zurückgibt, der die Beziehung angibt. `_lsearch` ruft die `compare`-Routine einmal oder mehrere Male während der Suche auf, wodurch bei jedem Aufruf Zeiger auf zwei Array-Elemente übergeben werden. `compare` muss die Elemente vergleichen und entweder ungleich null (d.h. die Elemente unterscheiden sich) oder 0 (d.h. die Elemente sind identisch) zurückgeben.  
   
- Diese Funktion überprüft ihre Parameter. Wenn `compare`, dann ist `key` oder `num` `NULL` oder wenn `base` NULL ist und *`num` ungleich&0; oder `width` kleiner als&0; ist, wird der Handler für ungültige Parameter aufgerufen, siehe Beschreibung unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL`zurück.  
+ Diese Funktion überprüft ihre Parameter. Wenn `compare`, dann ist `key` oder `num` `NULL` oder wenn `base` NULL ist und *`num` ungleich 0 oder `width` kleiner als 0 ist, wird der Handler für ungültige Parameter aufgerufen, siehe Beschreibung unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL`zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -151,9 +152,6 @@ int compare(const void *arg1, const void *arg2 )
 wordlist before _lsearch: hello thanks bye  
 wordlist after _lsearch: hello thanks bye extra  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)   

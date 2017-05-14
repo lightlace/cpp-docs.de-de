@@ -10,10 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - ctype
-- std::ctype
-- std.ctype
-- CType
 - xlocale/std::ctype
+- locale/std::ctype::char_type
+- locale/std::ctype::do_is
+- locale/std::ctype::do_narrow
+- locale/std::ctype::do_scan_is
+- locale/std::ctype::do_scan_not
+- locale/std::ctype::do_tolower
+- locale/std::ctype::do_toupper
+- locale/std::ctype::do_widen
+- locale/std::ctype::is
+- locale/std::ctype::narrow
+- locale/std::ctype::scan_is
+- locale/std::ctype::scan_not
+- locale/std::ctype::tolower
+- locale/std::ctype::toupper
+- locale/std::ctype::widen
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 08c792c0ab211a5ea8e83d026790322242decb81
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2e99ceb296bd3f620ce1bd58e8b0de6b6132299b
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ctype-class"></a>ctype-Klasse
@@ -78,39 +91,39 @@ class ctype : public ctype_base;
   
 |||  
 |-|-|  
-|[ctype](#ctype__ctype)|Konstruktor für Objekte der Klasse `ctype`, die als Gebietsschemafacets für Zeichen dienen.|  
+|[ctype](#ctype)|Konstruktor für Objekte der Klasse `ctype`, die als Gebietsschemafacets für Zeichen dienen.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[char_type](#ctype__char_type)|Ein Typ, der ein Zeichen beschreibt, das von einem Gebietsschema verwendet wird.|  
+|[char_type](#char_type)|Ein Typ, der ein Zeichen beschreibt, das von einem Gebietsschema verwendet wird.|  
   
 ### <a name="member-functions"></a>Memberfunktionen  
   
 |||  
 |-|-|  
-|[do_is](#ctype__do_is)|Eine virtuelle Funktion, die aufgerufen wird, um zu testen, ob ein einzelnes Zeichen über ein bestimmtes Attribut verfügt, oder die Attribute jedes Zeichens in einem Bereich klassifiziert und in einem Array speichert.|  
-|[do_narrow](#ctype__do_narrow)|Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen vom Typ `CharType`, das von einem Gebietsschema verwendet wird, in das entsprechende Zeichen vom Typ `char` im systemeigenen Zeichensatz zu konvertieren.|  
-|[do_scan_is](#ctype__do_scan_is)|Eine virtuelle Funktion, die aufgerufen wird, um das erste Zeichen in einem Bereich zu suchen, der einer angegebenen Maske entspricht.|  
-|[do_scan_not](#ctype__do_scan_not)|Eine virtuelle Funktion, die aufgerufen wird, um das erste Zeichen in einem Bereich zu suchen, der einer angegebenen Maske nicht entspricht.|  
-|[do_tolower](#ctype__do_tolower)|Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen oder einen Zeichenbereich in Kleinbuchstaben umzuwandeln.|  
-|[do_toupper](#ctype__do_toupper)|Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen oder einen Zeichenbereich in Großbuchstaben umzuwandeln.|  
-|[do_widen](#ctype__do_widen)|Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen vom Typ `char` im systemeigenen Zeichensatz in das entsprechende Zeichen vom Typ `CharType`, das von einem Gebietsschema verwendet wird, zu konvertieren.|  
-|[is](#ctype__is)|Testet, ob ein einzelnes Zeichen über ein bestimmtes Attribut verfügt, oder klassifiziert die Attribute jedes Zeichens in einem Bereich und speichert sie in einem Array.|  
-|[narrow](#ctype__narrow)|Konvertiert ein Zeichen vom Typ `CharType`, das von einem Gebietsschema verwendet wird, in das entsprechende Zeichen vom Typ "char" im systemeigenen Zeichensatz.|  
-|[scan_is](#ctype__scan_is)|Sucht das erste Zeichen in einem Bereich, der einer bestimmten Maske entspricht.|  
-|[scan_not](#ctype__scan_not)|Sucht das erste Zeichen in einem Bereich, der einer bestimmten Maske nicht entspricht.|  
-|[tolower](#ctype__tolower)|Konvertiert ein Zeichen oder einen Zeichenbereich in Kleinbuchstaben.|  
-|[toupper](#ctype__toupper)|Konvertiert ein Zeichen oder einen Zeichenbereich in Großbuchstaben.|  
-|[widen](#ctype__widen)|Konvertiert ein Zeichen vom Typ `char` im systemeigenen Zeichensatz in das entsprechende Zeichen vom Typ `CharType`, das von einem Gebietsschema verwendet wird.|  
+|[do_is](#do_is)|Eine virtuelle Funktion, die aufgerufen wird, um zu testen, ob ein einzelnes Zeichen über ein bestimmtes Attribut verfügt, oder die Attribute jedes Zeichens in einem Bereich klassifiziert und in einem Array speichert.|  
+|[do_narrow](#do_narrow)|Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen vom Typ `CharType`, das von einem Gebietsschema verwendet wird, in das entsprechende Zeichen vom Typ `char` im systemeigenen Zeichensatz zu konvertieren.|  
+|[do_scan_is](#do_scan_is)|Eine virtuelle Funktion, die aufgerufen wird, um das erste Zeichen in einem Bereich zu suchen, der einer angegebenen Maske entspricht.|  
+|[do_scan_not](#do_scan_not)|Eine virtuelle Funktion, die aufgerufen wird, um das erste Zeichen in einem Bereich zu suchen, der einer angegebenen Maske nicht entspricht.|  
+|[do_tolower](#do_tolower)|Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen oder einen Zeichenbereich in Kleinbuchstaben umzuwandeln.|  
+|[do_toupper](#do_toupper)|Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen oder einen Zeichenbereich in Großbuchstaben umzuwandeln.|  
+|[do_widen](#do_widen)|Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen vom Typ `char` im systemeigenen Zeichensatz in das entsprechende Zeichen vom Typ `CharType`, das von einem Gebietsschema verwendet wird, zu konvertieren.|  
+|[is](#is)|Testet, ob ein einzelnes Zeichen über ein bestimmtes Attribut verfügt, oder klassifiziert die Attribute jedes Zeichens in einem Bereich und speichert sie in einem Array.|  
+|[narrow](#narrow)|Konvertiert ein Zeichen vom Typ `CharType`, das von einem Gebietsschema verwendet wird, in das entsprechende Zeichen vom Typ "char" im systemeigenen Zeichensatz.|  
+|[scan_is](#scan_is)|Sucht das erste Zeichen in einem Bereich, der einer bestimmten Maske entspricht.|  
+|[scan_not](#scan_not)|Sucht das erste Zeichen in einem Bereich, der einer bestimmten Maske nicht entspricht.|  
+|[tolower](#tolower)|Konvertiert ein Zeichen oder einen Zeichenbereich in Kleinbuchstaben.|  
+|[toupper](#toupper)|Konvertiert ein Zeichen oder einen Zeichenbereich in Großbuchstaben.|  
+|[widen](#widen)|Konvertiert ein Zeichen vom Typ `char` im systemeigenen Zeichensatz in das entsprechende Zeichen vom Typ `CharType`, das von einem Gebietsschema verwendet wird.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<locale>  
   
  **Namespace:** std  
   
-##  <a name="a-namectypechartypea--ctypechartype"></a><a name="ctype__char_type"></a> ctype::char_type  
+##  <a name="char_type"></a> ctype::char_type  
  Ein Typ, der ein Zeichen beschreibt, das von einem Gebietsschema verwendet wird.  
   
 ```  
@@ -121,9 +134,9 @@ typedef CharType char_type;
  Der Typ stellt ein Synonym für den Vorlagenparameter **CharType** dar.  
   
 ### <a name="example"></a>Beispiel  
-  Ein Beispiel für die Verwendung von `char_type` als Rückgabewert finden Sie unter der Memberfunktion [widen](#ctype__widen).  
+  Ein Beispiel für die Verwendung von `char_type` als Rückgabewert finden Sie unter der Memberfunktion [widen](#widen).  
   
-##  <a name="a-namectypectypea--ctypectype"></a><a name="ctype__ctype"></a> ctype::ctype  
+##  <a name="ctype"></a> ctype::ctype  
  Konstruktor für Objekte der Klasse ctype, die als Gebietsschemafacets für Zeichen dienen.  
   
 ```  
@@ -141,13 +154,13 @@ explicit ctype(size_t _Refs = 0);
   
 -   1: Die Lebensdauer des Objekts muss manuell verwaltet werden.  
   
--   \> 0: Diese Werte sind nicht definiert.  
+-   \>1: Diese Werte sind nicht definiert.  
   
  Direkte Beispiele sind nicht möglich, da der Destruktor geschützt ist.  
   
  Der Konstruktor initialisiert das entsprechende `locale::facet`-Basisobjekt mit **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-##  <a name="a-namectypedoisa--ctypedois"></a><a name="ctype__do_is"></a> ctype::do_is  
+##  <a name="do_is"></a> ctype::do_is  
  Eine virtuelle Funktion, die aufgerufen wird, um zu testen, ob ein einzelnes Zeichen über ein bestimmtes Attribut verfügt, oder die Attribute jedes Zeichens in einem Bereich klassifiziert und in einem Array speichert.  
   
 ```  
@@ -187,9 +200,9 @@ virtual const CharType *do_is(
  Die Maskenwerte, mit denen die Attribute der Zeichen beschrieben werden, werden von der [ctype_base](../standard-library/ctype-base-class.md)-Klasse bereitgestellt, von der ctype abgeleitet wird. Die erste Memberfunktion kann Ausdrücke für den ersten Parameter akzeptieren, die als Bitmasken bezeichnet werden und mit verschiedenen Maskenwerten mithilfe der logischen bitweisen Operatoren (&#124; , & , ^ , ~) gebildet werden.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [is](#ctype__is), mit dem `do_is` aufgerufen wird.  
+  Siehe das Beispiel für [is](#is), mit dem `do_is` aufgerufen wird.  
   
-##  <a name="a-namectypedonarrowa--ctypedonarrow"></a><a name="ctype__do_narrow"></a> ctype::do_narrow  
+##  <a name="do_narrow"></a> ctype::do_narrow  
  Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen vom Typ `CharType`, das von einem Gebietsschema verwendet wird, in das entsprechende Zeichen vom Typ `char` im systemeigenen Zeichensatz zu konvertieren.  
   
 ```  
@@ -227,12 +240,12 @@ virtual const CharType* do_narrow(
  Die zweite geschützte Memberfunktion gibt einen Zeiger auf den Zielbereich mit nativen Zeichen zurück, die aus Zeichen vom Typ `CharType` konvertiert wurden.  
   
 ### <a name="remarks"></a>Hinweise  
- Die zweite geschützte Membervorlagenfunktion speichert in `dest`[ `I`] den Wert `do_narrow`( `first` [ `I`], `default`) wobei `I` im Intervall [0, `last` – `first`] liegen muss.  
+ Die zweite geschützte Memberfunktion speichert Vorlage in `dest`[ `I`] der Wert `do_narrow`( `first` [ `I`], `default`), für die `I` im Intervall [0, `last`  -  `first`).  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [narrow](#ctype__narrow), mit dem `do_narrow` aufgerufen wird.  
+  Siehe das Beispiel für [narrow](#narrow), mit dem `do_narrow` aufgerufen wird.  
   
-##  <a name="a-namectypedoscanisa--ctypedoscanis"></a><a name="ctype__do_scan_is"></a> ctype::do_scan_is  
+##  <a name="do_scan_is"></a> ctype::do_scan_is  
  Eine virtuelle Funktion, die aufgerufen wird, um das erste Zeichen in einem Bereich zu suchen, der einer angegebenen Maske entspricht.  
   
 ```  
@@ -256,12 +269,12 @@ virtual const CharType *do_scan_is(
  Ein Zeiger auf das erste Zeichen in einem Bereich, der einer bestimmten Maske entspricht. Wenn kein solcher Wert vorhanden ist, gibt die Funktion `last.` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die geschützte Memberfunktion gibt den kleinsten Zeiger `ptr` im Bereich [ `first`, `last`) zurück, für den [do_is](#ctype__do_is)( `maskVal`, * `ptr`) wahr ist.  
+ Die geschützte Memberfunktion gibt den kleinsten Zeiger `ptr` im Bereich [ `first`, `last`) zurück, für den [do_is](#do_is)( `maskVal`, * `ptr`) wahr ist.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [scan_is](#ctype__scan_is), mit dem `do_scan_is` aufgerufen wird.  
+  Siehe das Beispiel für [scan_is](#scan_is), mit dem `do_scan_is` aufgerufen wird.  
   
-##  <a name="a-namectypedoscannota--ctypedoscannot"></a><a name="ctype__do_scan_not"></a> ctype::do_scan_not  
+##  <a name="do_scan_not"></a> ctype::do_scan_not  
  Eine virtuelle Funktion, die aufgerufen wird, um das erste Zeichen in einem Bereich zu suchen, der einer angegebenen Maske nicht entspricht.  
   
 ```  
@@ -285,12 +298,12 @@ virtual const CharType *do_scan_not(
  Ein Zeiger auf das erste Zeichen in einem Bereich, der einer bestimmten Maske nicht entspricht. Wenn kein solcher Wert vorhanden ist, gibt die Funktion `last` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die geschützte Memberfunktion gibt den kleinsten Zeiger `ptr` im Bereich [ `first`, `last`) zurück, für den [do_is](#ctype__do_is)( `maskVal`, * `ptr`) falsch ist.  
+ Die geschützte Memberfunktion gibt den kleinsten Zeiger `ptr` im Bereich [ `first`, `last`) zurück, für den [do_is](#do_is)( `maskVal`, * `ptr`) falsch ist.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [scan_not](#ctype__scan_not), mit dem `do_scan_not` aufgerufen wird.  
+  Siehe das Beispiel für [scan_not](#scan_not), mit dem `do_scan_not` aufgerufen wird.  
   
-##  <a name="a-namectypedotolowera--ctypedotolower"></a><a name="ctype__do_tolower"></a> ctype::do_tolower  
+##  <a name="do_tolower"></a> ctype::do_tolower  
  Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen oder einen Zeichenbereich in Kleinbuchstaben umzuwandeln.  
   
 ```  
@@ -316,12 +329,12 @@ virtual const CharType *do_tolower(
  Die erste geschützte Memberfunktion gibt den Parameter `ch` in Form eines Kleinbuchstabens zurück. Wenn kein Kleinbuchstabe vorhanden ist, wird `ch` zurückgegeben. Die zweite geschützte Memberfunktion gibt `last` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die zweite geschützte Membervorlagenfunktion ersetzt jedes Element `first` [ `I`] durch `do_tolower`( `first` [ `I`]), wobei `I` im Intervall [0, `last` – `first`] liegen muss.  
+ Die zweite Vorlagenfunktion geschützter Member ersetzt jedes Element `first` [ `I`], für `I` im Intervall [0, `last`  -  `first`), mit `do_tolower`( `first` [ `I`]).  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [tolower](#ctype__tolower), mit dem `do_tolower` aufgerufen wird.  
+  Siehe das Beispiel für [tolower](#tolower), mit dem `do_tolower` aufgerufen wird.  
   
-##  <a name="a-namectypedotouppera--ctypedotoupper"></a><a name="ctype__do_toupper"></a> ctype::do_toupper  
+##  <a name="do_toupper"></a> ctype::do_toupper  
  Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen oder einen Zeichenbereich in Großbuchstaben umzuwandeln.  
   
 ```  
@@ -347,12 +360,12 @@ virtual const CharType *do_toupper(
  Die erste geschützte Memberfunktion gibt den Parameter `ch` in Form eines Großbuchstabens zurück. Wenn kein Großbuchstabe vorhanden ist, wird `ch` zurückgegeben. Die zweite geschützte Memberfunktion gibt `last` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die zweite geschützte Membervorlagenfunktion ersetzt jedes Element `first` [ `I`] durch `do_toupper`( `first` [ `I`]), wobei `I` im Intervall [0, `last` – `first`] liegen muss.  
+ Die zweite Vorlagenfunktion geschützter Member ersetzt jedes Element `first` [ `I`], für `I` im Intervall [0, `last`  -  `first`), mit `do_toupper`( `first` [ `I`]).  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [toupper](#ctype__toupper), mit dem `do_toupper` aufgerufen wird.  
+  Siehe das Beispiel für [toupper](#toupper), mit dem `do_toupper` aufgerufen wird.  
   
-##  <a name="a-namectypedowidena--ctypedowiden"></a><a name="ctype__do_widen"></a> ctype::do_widen  
+##  <a name="do_widen"></a> ctype::do_widen  
  Eine virtuelle Funktion, die aufgerufen wird, um ein Zeichen vom Typ `char` im systemeigenen Zeichensatz in das entsprechende Zeichen vom Typ `CharType`, das von einem Gebietsschema verwendet wird, zu konvertieren.  
   
 ```  
@@ -387,9 +400,9 @@ virtual const char *do_widen(
  Die zweite geschützte Membervorlagenfunktion speichert in `dest`[ `I`] den Wert `do_widen`( `first`[ `I`]), wobei `I` im Intervall [0, `last` - `first`] liegen muss.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [widen](#ctype__widen), mit dem `do_widen` aufgerufen wird.  
+  Siehe das Beispiel für [widen](#widen), mit dem `do_widen` aufgerufen wird.  
   
-##  <a name="a-namectypeisa--ctypeis"></a><a name="ctype__is"></a> ctype::is  
+##  <a name="is"></a> ctype::is  
  Testet, ob ein einzelnes Zeichen über ein bestimmtes Attribut verfügt, oder klassifiziert die Attribute jedes Zeichens in einem Bereich und speichert sie in einem Array.  
   
 ```  
@@ -465,7 +478,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namectypenarrowa--ctypenarrow"></a><a name="ctype__narrow"></a> ctype::narrow  
+##  <a name="narrow"></a> ctype::narrow  
  Konvertiert von einem Gebietsschema verwendete Zeichen vom Typ `CharType` in die entsprechenden Zeichen vom Typ `char` im nativen Zeichensatz.  
   
 ```  
@@ -501,7 +514,7 @@ const CharType* narrow(
  Die zweite Memberfunktion gibt einen Zeiger auf den Zielbereich mit nativen Zeichen zurück, die aus Zeichen vom Typ `CharType` konvertiert wurden.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste Memberfunktion gibt [do_narrow](#ctype__do_narrow)( `ch`, `default`) zurück. Die zweite Memberfunktion gibt [do_narrow](#ctype__do_narrow) ( `first`, `last`, `default`, `dest`) zurück. Nur für die Basisquellzeichen ist sichergestellt, dass ein eindeutiges inverses `CharType`-Bild unter `narrow` vorhanden ist. Für diese Basisquellzeichen gilt folgende Invariante: `narrow` ( [widen](#ctype__widen) ( **c** ), 0 ) == **c**.  
+ Die erste Memberfunktion gibt [do_narrow](#do_narrow)( `ch`, `default`) zurück. Die zweite Memberfunktion gibt [do_narrow](#do_narrow) ( `first`, `last`, `default`, `dest`) zurück. Nur für die Basisquellzeichen ist sichergestellt, dass ein eindeutiges inverses `CharType`-Bild unter `narrow` vorhanden ist. Für diese Basisquellzeichen gilt folgende Invariante: `narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -529,7 +542,7 @@ int main( )
 Xhello everyone  
 ```  
   
-##  <a name="a-namectypescanisa--ctypescanis"></a><a name="ctype__scan_is"></a> ctype::scan_is  
+##  <a name="scan_is"></a> ctype::scan_is  
  Sucht das erste Zeichen in einem Bereich, der einer bestimmten Maske entspricht.  
   
 ```  
@@ -553,7 +566,7 @@ const CharType *scan_is(
  Ein Zeiger auf das erste Zeichen in einem Bereich, der einer bestimmten Maske entspricht. Wenn kein solcher Wert vorhanden ist, gibt die Funktion `last.` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt [do_scan_is](#ctype__do_scan_is)( `maskVal`, `first`, `last`) zurück.  
+ Die Memberfunktion gibt [do_scan_is](#do_scan_is)( `maskVal`, `first`, `last`) zurück.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -581,7 +594,7 @@ int main( )
 The first punctuation is "," at position: 5  
 ```  
   
-##  <a name="a-namectypescannota--ctypescannot"></a><a name="ctype__scan_not"></a> ctype::scan_not  
+##  <a name="scan_not"></a> ctype::scan_not  
  Sucht das erste Zeichen in einem Bereich, der einer bestimmten Maske nicht entspricht.  
   
 ```  
@@ -605,7 +618,7 @@ const CharType *scan_not(
  Ein Zeiger auf das erste Zeichen in einem Bereich, der einer bestimmten Maske nicht entspricht. Wenn kein solcher Wert vorhanden ist, gibt die Funktion `last` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt [do_scan_not](#ctype__do_scan_not)( `maskVal`, `first`, `last`) zurück.  
+ Die Memberfunktion gibt [do_scan_not](#do_scan_not)( `maskVal`, `first`, `last`) zurück.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -633,7 +646,7 @@ int main( )
 First nonalpha character is "," at position: 5  
 ```  
   
-##  <a name="a-namectypetolowera--ctypetolower"></a><a name="ctype__tolower"></a> ctype::tolower  
+##  <a name="tolower"></a> ctype::tolower  
  Konvertiert ein Zeichen oder einen Zeichenbereich in Kleinbuchstaben.  
   
 ```  
@@ -659,7 +672,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
  Die zweite Memberfunktion gibt `last` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste Memberfunktion gibt [do_tolower](#ctype__do_tolower)( `ch`) zurück. Die zweite Memberfunktion gibt [do_tolower](#ctype__do_tolower)( `first`, `last`) zurück.  
+ Die erste Memberfunktion gibt [do_tolower](#do_tolower)( `ch`) zurück. Die zweite Memberfunktion gibt [do_tolower](#do_tolower)( `first`, `last`) zurück.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -686,7 +699,7 @@ int main( )
 The lowercase string is: hello, my name is john  
 ```  
   
-##  <a name="a-namectypetouppera--ctypetoupper"></a><a name="ctype__toupper"></a> ctype::toupper  
+##  <a name="toupper"></a> ctype::toupper  
  Konvertiert ein Zeichen oder einen Zeichenbereich in Großbuchstaben.  
   
 ```  
@@ -710,7 +723,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
  Die zweite Memberfunktion gibt `last` zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste Memberfunktion gibt [do_toupper](#ctype__do_toupper)( `ch`) zurück. Die zweite Memberfunktion gibt [do_toupper](#ctype__do_toupper)( `first`, `last`) zurück.  
+ Die erste Memberfunktion gibt [do_toupper](#do_toupper)( `ch`) zurück. Die zweite Memberfunktion gibt [do_toupper](#do_toupper)( `first`, `last`) zurück.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -737,7 +750,7 @@ int main( )
 The uppercase string is: HELLO, MY NAME IS JOHN  
 ```  
   
-##  <a name="a-namectypewidena--ctypewiden"></a><a name="ctype__widen"></a> ctype::widen  
+##  <a name="widen"></a> ctype::widen  
  Konvertiert ein Zeichen vom Typ `char` im systemeigenen Zeichensatz in das entsprechende Zeichen vom Typ `CharType`, das von einem Gebietsschema verwendet wird.  
   
 ```  
@@ -764,7 +777,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
  Die zweite Memberfunktion gibt einen Zeiger auf den Zielbereich mit von einem Gebietsschema verwendeten Zeichen vom Typ `CharType` zurück, die aus nativen Zeichen vom Typ `char` konvertiert wurden.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste Memberfunktion gibt [do_widen](#ctype__do_widen)( `byte`) zurück. Die zweite Memberfunktion gibt [do_widen](#ctype__do_widen)( `first`, `last`, `dest`) zurück.  
+ Die erste Memberfunktion gibt [do_widen](#do_widen)( `byte`) zurück. Die zweite Memberfunktion gibt [do_widen](#do_widen)( `first`, `last`, `dest`) zurück.  
   
 ### <a name="example"></a>Beispiel  
   

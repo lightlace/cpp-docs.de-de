@@ -10,8 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - function
-- std::function
 - functional/std::function
+- functional/std::function::result_type
+- functional/std::function::assign
+- functional/std::function::swap
+- functional/std::function::target
+- functional/std::function::target_type
+- functional/std::function::operator unspecified
+- functional/std::function::operator()
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: adc625fe0acd085f2433d5436c535c9ae9fd2455
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c79b2b4d1ac2e9df7f38708ff232d70392cce15
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="function-class"></a>function-Klasse
@@ -120,37 +127,37 @@ public:
   
 |||  
 |-|-|  
-|[function::function](#function__function)|Konstruiert einen Wrapper, der entweder leer ist oder ein aufrufbares Objekt eines willkürlichen Typs mit einer festen Signatur speichert.|  
+|[function](#function)|Konstruiert einen Wrapper, der entweder leer ist oder ein aufrufbares Objekt eines willkürlichen Typs mit einer festen Signatur speichert.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[function::result_type](#function__result_type)|Der Rückgabetyp des gespeicherten aufrufbaren Objekts.|  
+|[RESULT_TYPE](#result_type)|Der Rückgabetyp des gespeicherten aufrufbaren Objekts.|  
   
 ### <a name="member-functions"></a>Memberfunktionen  
   
 |||  
 |-|-|  
-|[function::assign](#function__assign)|Weist ein aufrufbares Objekt diesem Funktionsobjekt zu.|  
-|[function::swap](#function__swap)|Tauscht zwei aufrufbare Objekte miteinander.|  
-|[function::target](#function__target)|Prüft, ob das gespeicherte aufrufbare Objekt wie festgelegt aufrufbar ist.|  
-|[function::target_type](#function__target_type)|Ruft Typinformationen für das aufrufbare Objekt ab.|  
+|[assign](#assign)|Weist ein aufrufbares Objekt diesem Funktionsobjekt zu.|  
+|[swap](#swap)|Tauscht zwei aufrufbare Objekte miteinander.|  
+|[Ziel](#target)|Prüft, ob das gespeicherte aufrufbare Objekt wie festgelegt aufrufbar ist.|  
+|[target_type](#target_type)|Ruft Typinformationen für das aufrufbare Objekt ab.|  
   
 ### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[function::operator unspecified](#function__operator_unspecified)|Prüft, ob ein gespeichertes aufrufbares Objekt existiert.|  
-|[function::operator()](#function__operator__)|Ruf ein aufrufbares Objekt auf.|  
-|[function::operator=](#function__operator_eq)|Ersetzt das gespeicherte aufrufbare Objekt.|  
+|[function::operator unspecified](#op_unspecified)|Prüft, ob ein gespeichertes aufrufbares Objekt existiert.|  
+|[function::operator()](#op_call)|Ruf ein aufrufbares Objekt auf.|  
+|[function::operator=](#op_eq)|Ersetzt das gespeicherte aufrufbare Objekt.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<functional>  
   
  **Namespace:** std  
   
-##  <a name="function__assign"></a> function::assign  
+##  <a name="assign"></a> function::assign  
  Weist ein aufrufbares Objekt diesem Funktionsobjekt zu.  
   
 ```  
@@ -178,7 +185,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>Hinweise  
  Die Memberfunktionen ersetzen jeweils das von `*this` gehaltene `callable object` durch ein aufrufbares Objekt, das als `operand` übergeben wurde. Beide weisen Speicher mit dem Zuweisungsobjekt `Ax` zu.  
   
-##  <a name="function__function"></a> function::function  
+##  <a name="function"></a> function::function  
  Konstruiert einen Wrapper, der entweder leer ist oder ein aufrufbares Objekt eines willkürlichen Typs mit einer festen Signatur speichert.  
   
 ```  
@@ -292,7 +299,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="function__operator_unspecified"></a> function::operator unspecified  
+##  <a name="op_unspecified"></a> function::operator unspecified  
  Prüft, ob ein gespeichertes aufrufbares Objekt existiert.  
   
 ```  
@@ -332,7 +339,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="function__operator__"></a> function::operator()  
+##  <a name="op_call"></a> function::operator()  
  Ruf ein aufrufbares Objekt auf.  
   
 ```  
@@ -380,7 +387,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__operator_eq"></a> function::operator=  
+##  <a name="op_eq"></a> function::operator=  
  Ersetzt das gespeicherte aufrufbare Objekt.  
   
 ```  
@@ -459,7 +466,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__result_type"></a> function::result_type  
+##  <a name="result_type"></a> function::result_type  
  Der Rückgabetyp des gespeicherten aufrufbaren Objekts.  
   
 ```  
@@ -499,7 +506,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__swap"></a> function::swap  
+##  <a name="swap"></a> function::swap  
  Tauscht zwei aufrufbare Objekte miteinander.  
   
 ```  
@@ -555,7 +562,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__target"></a> function::target  
+##  <a name="target"></a> function::target  
  Prüft, ob das gespeicherte aufrufbare Objekt wie festgelegt aufrufbar ist.  
   
 ```  
@@ -614,7 +621,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="function__target_type"></a> function::target_type  
+##  <a name="target_type"></a> function::target_type  
  Ruft Typinformationen für das aufrufbare Objekt ab.  
   
 ```  
@@ -659,6 +666,6 @@ type == void
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [mem_fn-Funktion](../standard-library/functional-functions.md#mem_fn_function)   
+ [mem_fn](../standard-library/functional-functions.md#mem_fn)   
  [reference_wrapper-Klasse](../standard-library/reference-wrapper-class.md)
 

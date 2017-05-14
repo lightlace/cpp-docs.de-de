@@ -1,90 +1,107 @@
 ---
-title: "_fgetchar, _fgetwchar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fgetchar"
-  - "_fgetwchar"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fgetwchar"
-  - "_fgettchar"
-  - "_fgetchar"
-  - "_fgetwchar"
-  - "fgettchar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fgetchar-Funktion"
-  - "_fgettchar-Funktion"
-  - "_fgetwchar-Funktion"
-  - "fgetchar-Funktion"
-  - "fgettchar-Funktion"
-  - "fgetwchar-Funktion"
-  - "Standardeingabe, Lesen aus"
+title: _fgetchar, _fgetwchar | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fgetchar
+- _fgetwchar
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fgetwchar
+- _fgettchar
+- _fgetchar
+- _fgetwchar
+- fgettchar
+dev_langs:
+- C++
+helpviewer_keywords:
+- fgetwchar function
+- _fgetchar function
+- fgettchar function
+- _fgetwchar function
+- _fgettchar function
+- standard input, reading from
+- fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _fgetchar, _fgetwchar
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 194ac613cbb783d0327ce1ce7c53138c5c67bc49
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
 Liest ein Zeichen aus `stdin`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int _fgetchar( void );  
 wint_t _fgetwchar( void );  
 ```  
   
-## Rückgabewert  
- `_fgetchar` gibt das gelesene Zeichen als `int` zurück oder gibt `EOF` zurück, um einen Fehler oder ein Dateiende anzugeben.  **\_**`fgetwchar` gibt als das dem gelesenen Zeichen entsprechende Breitzeichen [wint\_t](../../c-runtime-library/standard-types.md) zurück oder gibt `WEOF` zurück, um einen Fehler oder ein Dateiende anzugeben.  Verwenden Sie für beide Funktionen `feof` oder `ferror`, um zwischen einem Fehler und einer Dateiendebedingung zu unterscheiden.  
+## <a name="return-value"></a>Rückgabewert  
+ `_fgetchar` gibt das gelesene Zeichen als `int` zurück oder gibt `EOF` zurück, um einen Fehler oder ein Dateiende anzugeben. **_**`fgetwchar` gibt das dem gelesenen Zeichen entsprechende Breitzeichen [wint_t](../../c-runtime-library/standard-types.md) oder `WEOF` zurück, um einen Fehler oder ein Dateiende anzugeben. Verwenden Sie für beide Funktionen `feof` oder `ferror`, um zwischen einem Fehler und einer Dateiendebedingung zu unterscheiden.  
   
-## Hinweise  
- Diese Funktionen lesen ein einzelnes Zeichen aus `stdin`.  Die Funktion erhöht dann den zugeordneten Dateizeiger \(sofern definiert\), um auf das nächste Zeichen zu zeigen.  Wenn der Stream am Dateiende ist, wird der Dateiende\-Indikator für den Stream festgelegt.  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktionen lesen ein einzelnes Zeichen aus `stdin`. Die Funktion erhöht dann den zugeordneten Dateizeiger (sofern definiert), um auf das nächste Zeichen zu zeigen. Wenn der Stream am Dateiende ist, wird der Dateiende-Indikator für den Stream festgelegt.  
   
- `_fgetchar` entspricht `fgetc( stdin )`.  Entspricht ebenfalls `getchar`, wird jedoch anstelle einer Funktion und eines Makros nur als Funktion implementiert.  `_fgetwchar` ist die Breitzeichenversion von `_fgetchar`.  
+ `_fgetchar` entspricht `fgetc( stdin )`. Entspricht ebenfalls `getchar`, wird jedoch anstelle einer Funktion und eines Makros nur als Funktion implementiert. `_fgetwchar` ist die Breitzeichenversion von `_fgetchar`.  
   
- Diese Funktionen sind nicht dem ANSI\-Standard kompatibel.  
+ Diese Funktionen sind nicht dem ANSI-Standard kompatibel.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|------------------------------------------|----------------------|-------------------------|  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_fgettchar`|`_fgetchar`|`_fgetchar`|`_fgetwchar`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`_fgetchar`|\<stdio.h\>|  
-|`_fgetwchar`|\<stdio.h\> oder \<wchar.h\>|  
+|--------------|---------------------|  
+|`_fgetchar`|\<stdio.h>|  
+|`_fgetwchar`|\<stdio.h> oder \<wchar.h>|  
   
- Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps nicht unterstützt.  Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C\-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps verwendet werden können.  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps nicht unterstützt. Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_fgetchar.c  
@@ -115,15 +132,14 @@ int main( void )
 }  
 ```  
   
-  **`Zeile eins. Zeile zwei.`Zeile eins.**  
-**Zeile zwei.**   
-## .NET Framework-Entsprechung  
+```Output  
   
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx)  
+      Line one.  
+Line two.Line one.  
+Line two.  
+```  
   
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Siehe auch  
+ [E/A-Stream](../../c-runtime-library/stream-i-o.md)   
  [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)

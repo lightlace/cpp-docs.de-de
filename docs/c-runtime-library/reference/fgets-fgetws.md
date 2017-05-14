@@ -1,55 +1,72 @@
 ---
-title: "fgets, fgetws | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fgets"
-  - "fgetws"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fgetts"
-  - "fgetws"
-  - "fgets"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fgetts-Funktion"
-  - "fgets-Funktion"
-  - "fgetts-Funktion"
-  - "fgetws-Funktion"
-  - "Streams, Abrufen von Zeichenfolgen aus"
-  - "Streams, Lesen aus"
+title: fgets, fgetws | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fgets
+- fgetws
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fgetts
+- fgetws
+- fgets
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fgetts function
+- streams, getting strings from
+- streams, reading from
+- fgets function
+- fgetws function
+- fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# fgets, fgetws
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4012de79c3de0a27837813ddddf8b7e1aec4fac7
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
-Rufen Sie eine Zeichenfolge aus einem Stream ab.  
+---
+# <a name="fgets-fgetws"></a>fgets, fgetws
+Ruft eine Zeichenfolge aus einem Stream ab  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 char *fgets(   
@@ -64,44 +81,44 @@ wchar_t *fgetws(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `str`  
  Speicherort für Daten.  
   
  `n`  
- Maximale Anzahl zu lesenden Zeichen.  
+ Die maximale Anzahl der zu lesenden Zeichen  
   
  `stream`  
- Zeiger zur `FILE`\-Struktur.  
+ Zeiger zur `FILE` -Struktur.  
   
-## Rückgabewert  
- Jede dieser Funktion gibt `str` zurück.  `NULL` zurückgegeben wird, um einen Fehler oder eine Dateiende\-Bedingung anzugeben.  Verwenden Sie `feof` oder `ferror`, um zu bestimmen, ob ein Fehler aufgetreten ist.  Wenn `str` oder `stream` ein NULL\-Zeiger ist oder `n` kleiner oder gleich null ist, Aufrufe dieser Funktion Parameterhandler der ungültige, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL` zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ Jede dieser Funktion gibt `str` zurück. `NULL` wird zurückgegeben, um einen Fehler oder eine Dateiendebedingung anzugeben. Verwenden Sie `feof` oder `ferror`, um zu bestimmen, ob ein Fehler aufgetreten ist. Wenn `str` oder `stream` ein NULL-Zeiger sind oder `n` kleiner gleich null ist, ruft diese Funktion einen Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL`zurück.  
   
- Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die `fgets`\-Funktion liest eine Zeichenfolge vom Argument Eingabe `stream` und speichert sie in `str`.  `fgets` liest Zeichen von der aktuellen Streamposition an und das erste Zeilenumbruchzeichen, am Ende des Streams oder bis die Anzahl der Zeichenlesens einzuschließen entspricht `n` \- 1, das zuerst stammt.  Das Ergebnis, das im `str` gespeichert wird, wird mit einem NULL\-Zeichen angefügt.  Das Zeilenumbruchzeichen, wenn gelesen wird, wird in der Zeichenfolge enthalten.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `fgets` liest eine Zeichenfolge aus dem `stream`-Argument der Eingabe und speichert es in `str`. `fgets`Liest Zeichen aus der aktuellen Streamposition bis einschließlich des ersten Zeilenumbruchzeichens bis zum Ende des Streams oder bis die Anzahl der gelesenen Zeichen entspricht `n` - 1, je nachdem, was zuerst eintritt. Dem in `str` gespeicherte Ergebnis wird ein Zeichen NULL angefügt. Das Zeilenumbruchzeichen wird, wenn es gelesen wird, in die Zeichenfolge aufgenommen.  
   
  `fgetws` ist eine Breitzeichenversion von `fgets`.  
   
- `fgetws` liest die `str` als Breitzeichenargument Mehrbyte\-Zeichenfolge oder Zeichenfolge mit Breitzeichen, ob `stream` im Textmodus oder im Binärdateimodus geöffnet ist, bzw.  Weitere Informationen zur Anwendung von Text\- und Binärmodi in Unicode\- und Multibyte\-Stream\-E\/A finden Sie unter [Text\- und Binärmodus\-Datei\-E\/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md) und [Unicode\-Stream\-E\/A in Text\- und Binärmodi](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
+ `fgetws` liest das Breitzeichenargument `str` als Multibyte-oder Breitzeichen-Zeichenfolge. Die Zeichenfolgenart wird dadurch bestimmt, ob `stream` im Textmodus oder Binärmodus geöffnet ist. Weitere Informationen zur Anwendung von Text- und Binärmodi in Unicode- und Multibyte-Stream-E/A finden Sie unter [Text- und Binärmodus-Datei-E/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md) und [Unicode-Stream-E/A in Text- und Binärmodi](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_fgetts`|`fgets`|`fgets`|`fgetws`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`fgets`|\<stdio.h\>|  
-|`fgetws`|\<stdio.h\> oder \<wchar.h\>|  
+|--------------|---------------------|  
+|`fgets`|\<stdio.h>|  
+|`fgetws`|\<stdio.h> oder \<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_fgets.c  
@@ -127,27 +144,21 @@ int main( void )
 }  
 ```  
   
-## Eingabe: crt\_fgets.txt  
+## <a name="input-crtfgetstxt"></a>Eingabe: crt_fgets.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
 Line one.  
 ```  
   
-## .NET Framework-Entsprechung  
-  
--   [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx)  
-  
--   [System::IO::TextReader::ReadBlock](https://msdn.microsoft.com/en-us/library/system.io.textreader.readblock.aspx)  
-  
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Siehe auch  
+ [E/A-Stream](../../c-runtime-library/stream-i-o.md)   
  [fputs, fputws](../../c-runtime-library/reference/fputs-fputws.md)   
- [gets, \_getws](../../c-runtime-library/gets-getws.md)   
- [puts, \_putws](../../c-runtime-library/reference/puts-putws.md)
+ [gets, _getws](../../c-runtime-library/gets-getws.md)   
+ [puts, _putws](../../c-runtime-library/reference/puts-putws.md)

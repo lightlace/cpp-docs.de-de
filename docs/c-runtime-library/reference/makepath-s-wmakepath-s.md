@@ -1,55 +1,73 @@
 ---
-title: "_makepath_s, _wmakepath_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wmakepath_s"
-  - "_makepath_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wmakepath_s"
-  - "makepath_s"
-  - "_makepath_s"
-  - "wmakepath_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_makepath_s-Funktion"
-  - "wmakepath_s-Funktion"
-  - "Pfade"
-  - "_wmakepath_s-Funktion"
-  - "makepath_s-Funktion"
+title: _makepath_s, _wmakepath_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wmakepath_s
+- _makepath_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wmakepath_s
+- makepath_s
+- _makepath_s
+- wmakepath_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _makepath_s function
+- wmakepath_s function
+- paths
+- _wmakepath_s function
+- makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
 caps.latest.revision: 29
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# _makepath_s, _wmakepath_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0d3ac02a0ac8dfa7f681c8585be7e1b6f41f0f82
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Erstellt einen Pfadnamen aus den Komponenten.  Diese Versionen sind von [\_makepath, \_wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md) mit werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
+Erstellt einen Pfadnamen aus Komponenten Dies sind Versionen von [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md) mit Sicherheitsverbesserungen wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t _makepath_s(  
@@ -86,67 +104,67 @@ errno_t _wmakepath_s(
 ); // C++ only  
 ```  
   
-#### Parameter  
- \[out\] `path`  
- Puffer des vollständigen Pfads.  
+#### <a name="parameters"></a>Parameter  
+ [out] `path`  
+ Vollständiger Pfadpuffer  
   
- \[in\] `sizeInWords`  
- Größe des Puffers in Worten.  
+ [in] `sizeInWords`  
+ Größe des Puffers in Worten  
   
- \[in\] `sizeInBytes`  
- Größe des Puffers in Bytes.  
+ [in] `sizeInBytes`  
+ Größe des Puffers in Byte.  
   
- \[in\] `drive`  
- Enthält einen Buchstaben \(A, B, z.\) nach dem gewünschten Laufwerk und einem optionalen nachfolgenden Doppelpunkt.  `_makepath_s` fügt den Doppelpunkt automatisch im zusammengesetzten Pfad ein, falls es fehlt.  Wenn `drive``NULL` ist oder auf einer leeren Zeichenfolge verweist, wird kein Laufwerkbuchstabe in der zusammengesetzten `path` Zeichenfolge.  
+ [in] `drive`  
+ Enthält einen Buchstaben (A, B usw.) für das gewünschte Laufwerk und einen optionalen nachgestellten Doppelpunkt. `_makepath_s` fügt den Doppelpunkt automatisch in den zusammengesetzten Pfad ein, wenn dieser nicht vorhanden ist. Wenn `drive` `NULL` darstellt oder auf eine leere Zeichenfolge verweist, erscheint kein Laufwerksbuchstabe in der zusammengesetzten `path`-Zeichenfolge.  
   
- \[in\] `dir`  
- Enthält den Pfad von Verzeichnissen, ohne den Laufwerkbezeichner oder den tatsächlichen Dateinamen.  Der Schrägstrich nachgestellte ist optional und entweder ein Schrägstrich \(\/\) oder ein umgekehrter Schrägstrich \(\\\) oder beide können in einem einzelnen `dir`\-Argument verwendet werden.  Wenn kein nachgestellter Schrägstrich \(\\ oder\/\) angegeben wird, wird er automatisch eingefügt.  Wenn `dir``NULL` ist oder auf einer leeren Zeichenfolge verweist, wird kein Verzeichnispfad in der zusammengesetzten `path` Zeichenfolge eingefügt.  
+ [in] `dir`  
+ Enthält den Pfad der Verzeichnisse, ausgenommen die Laufwerkkennzeichner oder den tatsächlichen Dateinamen. Der nachstehende Schrägstrich ist optional, und entweder ein Schrägstrich (/) oder ein umgekehrter Schrägstrich (\\) oder beides kann in einem einzelnen `dir`-Argument verwendet werden. Wenn kein nachstehender Schrägstrich (/ oder \\) angegeben ist, wird er automatisch eingefügt. Wenn `dir` `NULL` ist oder auf eine leere Zeichenfolge verweist, wird kein Verzeichnispfad in die zusammengesetzte `path`-Zeichenfolge eingefügt.  
   
- \[in\] `fname`  
- Enthält den Basisdateinamen ohne Dateinamenerweiterungen.  Wenn `fname``NULL` ist oder auf einer leeren Zeichenfolge verweist, wird kein Dateiname in der zusammengesetzten `path` Zeichenfolge eingefügt.  
+ [in] `fname`  
+ Enthält den Basisdateinamen ohne Dateinamenerweiterungen. Wenn `fname` `NULL` ist oder auf eine leere Zeichenfolge verweist, wird kein Dateiname in die zusammengesetzte `path`-Zeichenfolge eingefügt.  
   
- \[in\] `ext`  
- Enthält die tatsächliche Dateinamenerweiterung, mit oder ohne einen führenden Punkt \(.\).  `_makepath_s` fügt den Punkt automatisch, wenn sie nicht in `ext` angezeigt.  Wenn `ext``NULL` ist oder auf einer leeren Zeichenfolge verweist, wird keine der Erweiterung in zusammengesetzten `path` Zeichenfolge eingefügt.  
+ [in] `ext`  
+ Enthält die eigentliche Dateinamenerweiterung mit oder ohne führenden Punkt (.). `_makepath_s` fügt automatisch den Punkt ein, wenn er nicht in `ext` erscheint. Wenn `ext` `NULL` ist oder auf eine leere Zeichenfolge verweist, wird keine Dateiendung in die zusammengesetzte `path`-Zeichenfolge eingefügt.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt.  
   
-### Fehlerbedingungen  
+### <a name="error-conditions"></a>Fehlerbedingungen  
   
-|`path`|`sizeInWords` \/ `sizeInBytes`|Return|Inhalt von `path`|  
-|------------|------------------------------------|------------|-----------------------|  
-|`NULL`|any|`EINVAL`|nicht geändert|  
-|any|\<\= 0|`EINVAL`|nicht geändert|  
+|`path`|`sizeInWords` / `sizeInBytes`|Zurück|Inhalt von `path`|  
+|------------|------------------------------------|------------|------------------------|  
+|`NULL`|alle|`EINVAL`|nicht geändert|  
+|any|<= 0|`EINVAL`|nicht geändert|  
   
- Wenn eine der oben genannten Fehlerzustände, tritt diese Funktionen aufrufen den ungültigen Parameterhandler auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren, wird `errno` auf `EINVAL` festgelegt und die Funktion gibt `EINVAL` **zurück.** `NULL` ist für die Parameter `drive`, `fname` und `ext` zulässig.  Informationen über das Verhalten, wenn diese Parameter NULL\-Zeiger oder leere Zeichenfolgen sind, finden Sie im Abschnitt Hinweise.  
+ Wenn Fehlerzustände wie die oben genannten auftreten, wird ein Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wird die weitere Ausführung zugelassen, wird `errno` auf `EINVAL` gesetzt, und die Funktionen geben `EINVAL` zurück. `NULL` ist für die Parameter `drive`, `fname` und `ext` zulässig. Weitere Informationen zum Verhalten, wenn diese Parameter NULL-Zeiger oder leere Zeichenfolgen sind, finden Sie im Abschnitt „Hinweise“.  
   
-## Hinweise  
- Die `_makepath_s`\-Funktion erstellt eine zusammengesetzte Pfadzeichenfolge von den einzelnen Komponenten und das Ergebnis in `path`.  `path` könnte einen Laufwerkbuchstaben, einen Verzeichnispfad, einen Dateinamen und die Dateinamenerweiterung ein.  `_wmakepath_s` ist eine Breitzeichenversion von `_makepath_s`. Die Argumente für `_wmakepath_s` sind Zeichenfolgen mit Breitzeichen.  `_wmakepath_s` und `_makepath_s` verhalten sich andernfalls identisch.  
+## <a name="remarks"></a>Hinweise  
+ Die `_makepath_s`-Funktion erstellt eine zusammengesetzte Pfadzeichenfolge aus einzelnen Komponenten. Das Ergebnis wird in `path` gespeichert. Der `path` kann möglicherweise einen Laufwerkbuchstaben, einen Verzeichnispfad, einen Dateinamen sowie Dateinamenerweiterungen enthalten. `_wmakepath_s` ist eine Breitzeichenversion von `_makepath_s`. Die Argumente für `_wmakepath_s` sind Zeichenfolgen mit Breitzeichen. `_wmakepath_s` und `_makepath_s` verhalten sich andernfalls identisch.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|------------------------------------------|----------------------|-------------------------|  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tmakepath_s`|`_makepath_s`|`_makepath_s`|`_wmakepath_s`|  
   
- Das Argument `path` muss sich in einem leeren Puffer zeigen, der ausreicht, um den vollständigen Pfad groß ist.  Zusammengesetzte `path` muss als die `_MAX_PATH` Konstante nicht größer sein, die in Stdlib.h.  
+ Das `path`-Argument muss auf einen leeren Puffer verweisen, der groß genug ist, um den kompletten Pfad zu enthalten. Das kombinierte `path`-Argument darf nicht größer sein als die `_MAX_PATH`-Konstante, die in „Stdlib.h“ definiert ist.  
   
- Wenn path `NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Darüber hinaus wird `errno` auf `EINVAL` festgelegt.  `NULL`\-Werte werden für alle anderen Parameter zulässig.  
+ Wenn der Pfad `NULL` ist, wird der ungültige Parameterhandler wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Darüber hinaus wird `errno` auf `EINVAL` festgelegt. `NULL`-Werte sind für alle anderen Parameter zugelassen.  
   
- In C\+\+ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen \(wodurch kein Größenargument mehr angegeben werden muss\), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen.  Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
   
- Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf.  Mit [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md) deaktivieren Sie dieses Verhalten.  
+ Die Debugversionen dieser Funktionen füllen zunächst den Puffer mit "0xFD" auf. Um dieses Verhalten zu deaktivieren, verwenden Sie [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_makepath_s`|\<stdlib.h\>|  
-|`_wmakepath_s`|\<stdlib.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`_makepath_s`|\<stdlib.h>|  
+|`_wmakepath_s`|\<stdlib.h> oder \<wchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_makepath_s.c  
@@ -186,7 +204,7 @@ int main( void )
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 Path created with _makepath_s: c:\sample\crt\crt_makepath_s.c  
@@ -198,11 +216,8 @@ Path extracted with _splitpath_s:
   Ext: .c  
 ```  
   
-## .NET Framework-Entsprechung  
- [System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dateibehandlung](../../c-runtime-library/file-handling.md)   
- [\_fullpath, \_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [\_splitpath\_s, \_wsplitpath\_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)   
- [\_makepath, \_wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)   
+ [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)

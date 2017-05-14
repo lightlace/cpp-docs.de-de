@@ -1,57 +1,74 @@
 ---
-title: "Fdim, Fdimf, fdiml | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fdim"
-  - "fdimf"
-  - "fdiml"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fdim"
-  - "fdimf"
-  - "fdiml"
-  - "math/fdim"
-  - "math/fdimf"
-  - "math/fdiml"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fdim-Funktion"
-  - "fdimf-Funktion"
-  - "Fdiml-Funktion"
+title: fdim, fdimf, fdiml | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fdim
+- fdimf
+- fdiml
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fdim
+- fdimf
+- fdiml
+- math/fdim
+- math/fdimf
+- math/fdiml
+dev_langs:
+- C++
+helpviewer_keywords:
+- fdim function
+- fdimf function
+- fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Fdim, Fdimf, fdiml
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f13291a00b97c319ebe69bce6939a95e6c022fd8
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Bestimmt den positiven Unterschied zwischen den ersten und zweiten Wert.  
+---
+# <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
+Bestimmt den positiven Unterschied zwischen den ersten und zweiten Werten.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double fdim(  
@@ -81,45 +98,45 @@ long double fdiml(
   
 ```  
   
-#### Parameter  
- \[in\] `x`  
+#### <a name="parameters"></a>Parameter  
+ [in] `x`  
  Der erste Wert.  
   
- \[in\] `y`  
+ [in] `y`  
  Der zweite Wert.  
   
-## Rückgabewert  
- Gibt den positiven Unterschied zwischen `x` und `y`:  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt den positiven Unterschied zwischen `x` und `y` zurück:  
   
 |Rückgabewert|Szenario|  
 |------------------|--------------|  
-|X\-y|Wenn x \> y|  
-|0|Wenn x \< \= y|  
+|x-y|wenn x > y|  
+|0|wenn x <= y|  
   
- Andernfalls kann einer der folgenden Fehler zurückgegeben:  
+ Andernfalls wird einer der folgenden Fehler zurückgeben:  
   
 |Problem|Zurück|  
-|-------------|------------|  
-|Überlauffehler\-Bereich|\+ HUGE\_VAL \+ HUGE\_VALF, oder \+ HUGE\_VALL|  
-|Gleitkommaunterlauf verursachter Fehler|richtige Wert \(nach dem runden\)|  
+|-----------|------------|  
+|Überlaufbereichsfehler|+HUGE_VAL, +HUGE_VALF, oder +HUGE_VALL|  
+|Unterlaufbereichsfehler|Richtiger Wert (nach dem Runden)|  
 |`x` oder `y` ist NaN|NaN|  
   
- Fehler werden gemeldet, gemäß den Angaben in [\_matherr](../../c-runtime-library/reference/matherr.md).  
+ Fehler werden gemäß der Angaben in [_matherr](../../c-runtime-library/reference/matherr.md) gemeldet.  
   
-## Hinweise  
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von Aufrufen `fdim` verwenden und Zurückgeben von float\- und long double\-Typen. In einem C\-Programm verwendet `fdim` immer double und gibt auch double zurück.  
+## <a name="remarks"></a>Hinweise  
+ Da C++ Überladungen zulässt, können Sie Überladungen von `fdim` aufrufen, die float- und long double-Typen annehmen und zurückgeben. In einem C-Programm verwendet `fdim` immer double und gibt auch double zurück.  
   
- Diese Funktion entspricht, mit Ausnahme der Behandlung NaN [Fmax, Fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)\(`x`\-`y,` 0\).  
+ Diese Funktion entspricht, mit Ausnahme der Behandlung "NaN" `fmax(x - y, 0)`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Funktion|C\-Header|C\+\+\-Header|  
-|--------------|---------------|-------------------|  
-|`fdim`, `fdimf`,  `fdiml`|\<math.h\>|\<cmath\>|  
+|Funktion|C-Header|C++-Header|  
+|--------------|--------------|------------------|  
+|`fdim`, `fdimf`, `fdiml`|\<math.h>|\<cmath>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Fmax, Fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)   
- [Abs, Labs, Llabs, \_abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)
+ [fmax, fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)   
+ [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)
