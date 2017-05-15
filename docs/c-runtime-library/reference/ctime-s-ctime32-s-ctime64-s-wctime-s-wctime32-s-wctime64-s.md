@@ -1,77 +1,94 @@
 ---
-title: "ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ctime64_s"
-  - "_wctime32_s"
-  - "ctime_s"
-  - "_wctime64_s"
-  - "_ctime32_s"
-  - "_wctime_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ctime64_s"
-  - "_ctime32_s"
-  - "_tctime32_s"
-  - "_ctime64_s"
-  - "_wctime_s"
-  - "_tctime_s"
-  - "_tctime64_s"
-  - "ctime_s"
-  - "ctime32_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_wctime32_s-Funktion"
-  - "ctime64_s-Funktion"
-  - "_tctime64_s-Funktion"
-  - "_wctime_s-Funktion"
-  - "tctime_s-Funktion"
-  - "_wctime64_s-Funktion"
-  - "ctime_s-Funktion"
-  - "ctime32_s-Funktion"
-  - "_ctime64_s-Funktion"
-  - "tctime64_s-Funktion"
-  - "wctime64_s-Funktion"
-  - "wctime_s-Funktion"
-  - "_tctime_s-Funktion"
-  - "tctime32_s-Funktion"
-  - "wctime32_s-Funktion"
-  - "Uhrzeit, Konvertieren"
-  - "_ctime32_s-Funktion"
-  - "_tctime32_s-Funktion"
+title: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ctime64_s
+- _wctime32_s
+- ctime_s
+- _wctime64_s
+- _ctime32_s
+- _wctime_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ctime64_s
+- _ctime32_s
+- _tctime32_s
+- _ctime64_s
+- _wctime_s
+- _tctime_s
+- _tctime64_s
+- ctime_s
+- ctime32_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wctime32_s function
+- ctime64_s function
+- _tctime64_s function
+- _wctime_s function
+- tctime_s function
+- _wctime64_s function
+- ctime_s function
+- ctime32_s function
+- _ctime64_s function
+- tctime64_s function
+- wctime64_s function
+- wctime_s function
+- _tctime_s function
+- tctime32_s function
+- wctime32_s function
+- time, converting
+- _ctime32_s function
+- _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 371ca59a6002cd5936771f1ac9cea7c39b192cee
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Konvertieren Sie einen Zeitwert in eine Zeichenfolge, und passen Sie für die lokale Zeit Einstellungen. Dies sind die Versionen von [Ctime, \_ctime64, \_wctime, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
+Konvertieren Sie einen Zeitwert in eine Zeichenfolge, und passen Sie sie an die Zeitzoneneinstellungen an. Dies sind Versionen von [ctime, _ctime64, _wctime, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) mit Sicherheitserweiterungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t ctime_s(   
@@ -126,75 +143,75 @@ errno_t _wctime64_s(
 ); // C++ only  
 ```  
   
-#### Parameter  
- \[out\] `buffer`  
- Muss groß genug für 26 Zeichen sein. Ein Zeiger auf das Ergebnis der Zeichenfolge Zeichen oder `NULL`wenn:  
+#### <a name="parameters"></a>Parameter  
+ [out] `buffer`  
+ Muss groß genug für 26 Zeichen sein. Ein Zeiger auf das Zeichenfolgenergebnis Zeichen oder `NULL` wenn:  
   
--   `time` ein Datum vor Mitternacht, 1. Januar 1970 UTC darstellt.  
+-   `time` ein Datum vor dem 1. Januar 1970 um Mitternacht (koordinierte Weltzeit, UTC) darstellt.  
   
--   Bei Verwendung von `_ctime32_s` oder `_wctime32_s` und `time` ein Datum nach 23:59:59 am 18. Januar 2038 UTC darstellt.  
+-   Wenn Sie `_ctime32_s` oder `_wctime32_s` verwenden, und `time` ein Datum nach dem 18. Januar 2038, 23:59:59 Uhr (koordinierte Weltzeit, UTC) darstellt.  
   
--   Bei Verwendung von `_ctime64_s` oder `_wctime64_s` und `time` ein Datum nach 23:59:59, 31. Dezember 3000 UTC darstellt.  
+-   Wenn Sie `_ctime64_s` oder `_wctime64_s` verwenden, und `time` ein Datum nach dem 31. Dezember 3000, 23:59:59 Uhr (koordinierte Weltzeit, UTC) darstellt.  
   
--   Bei Verwendung von `_ctime_s` oder `_wctime_s`, diese Funktionen sind Wrapper für die zuvor genannten Funktionen. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+-   Wenn Sie `_ctime_s` oder `_wctime_s` verwenden; diese Funktionen sind Wrapper für die zuvor genannten Funktionen. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
- \[in\] `numberOfElements`  
+ [in] `numberOfElements`  
  Die Größe des Puffers.  
   
- \[in\] t`ime`  
- Ein Zeiger auf die gespeicherte Zeit.  
+ [in] `time`  
+ Zeiger auf die gespeicherte Zeit  
   
-## Rückgabewert  
- NULL, wenn erfolgreich. Ist ein Fehler aufgrund eines ungültigen Parameters, wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, wird ein Fehlercode zurückgegeben. Fehlercodes sind in ERRNO definiert. H; eine Liste dieser Fehler finden Sie unter [Errno](../../c-runtime-library/errno-constants.md). Die tatsächliche Fehlercodes für jeden Fehler ausgelöst werden in der folgenden Tabelle angezeigt.  
+## <a name="return-value"></a>Rückgabewert  
+ Null, wenn erfolgreich. Wenn ein Fehler aufgrund eines ungültigen Parameters auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird ein Fehlercode zurückgegeben. Fehlercodes sind in „ERRNO.H“ definiert. Eine Liste dieser Fehler finden Sie unter [errno](../../c-runtime-library/errno-constants.md). Die jeweiligen Fehlercodes, die für jede Fehlerbedingung zurückgegeben werden, sind in folgender Tabelle aufgelistet.  
   
-## Fehlerbedingungen  
+## <a name="error-conditions"></a>Fehlerbedingungen  
   
-|`buffer`|`numberOfElements`|`time`|Zurück|Wert in `buffer`|  
-|--------------|------------------------|------------|------------|----------------------|  
-|`NULL`|any|any|`EINVAL`|Nicht geändert|  
-|Nicht `NULL` \(verweist auf gültige Speicher\)|0|any|`EINVAL`|Nicht geändert|  
-|Nicht `NULL`|0 \< \< 26 Größe|any|`EINVAL`|Leere Zeichenfolge|  
-|Nicht `NULL`|\>\= 26|NULL|`EINVAL`|Leere Zeichenfolge|  
-|Nicht `NULL`|\>\= 26|\< 0|`EINVAL`|Leere Zeichenfolge|  
+|`buffer`|`numberOfElements`|`time`|Zurück|Wert in `buffer`.|  
+|--------------|------------------------|------------|------------|-----------------------|  
+|`NULL`|alle|alle|`EINVAL`|Nicht geändert|  
+|Nicht `NULL` (zeigt auf gültigen Speicher)|0|alle|`EINVAL`|Nicht geändert|  
+|Nicht `NULL`|0< Größe < 26|alle|`EINVAL`|Leere Zeichenfolge|  
+|Nicht `NULL`|>= 26|NULL|`EINVAL`|Leere Zeichenfolge|  
+|Nicht `NULL`|>= 26|< 0|`EINVAL`|Leere Zeichenfolge|  
   
-## Hinweise  
- Die `ctime_s` \-Funktion konvertiert einen Zeitwert als ein [Time\_t](../../c-runtime-library/standard-types.md) Struktur in eine Zeichenfolge. Die `time` Wert wird normalerweise von einem Aufruf abgerufen [Zeit](../../c-runtime-library/reference/time-time32-time64.md), welche gibt die Anzahl der Sekunden seit Mitternacht vergangenen \(00: 00:00\), 1. Januar 1970, koordinierte Weltzeit \(UTC\). Die Rückgabewert Zeichenfolge genau 26 Zeichen enthält und weist folgende Form:  
+## <a name="remarks"></a>Hinweise  
+ Die `ctime_s`-Funktion konvertiert einen als [time_t](../../c-runtime-library/standard-types.md)-Struktur gespeicherten Zeitwert in eine Zeichenfolge. Der `time`-Wert ergibt sich normalerweise aus einem Aufruf von [time](../../c-runtime-library/reference/time-time32-time64.md) und gibt die Anzahl der Sekunden zurück, die seit Mitternacht (00:00:00 Uhr, koordinierte Weltzeit, UTC) am 1. Januar 1970 verstrichen sind. Der Rückgabewert der Zeichenfolge enthält genau 26 Zeichen und sieht so aus:  
   
 ```  
 Wed Jan 02 02:03:55 1980\n\0  
 ```  
   
- 24\-Stunden\-Format wird verwendet. Alle Felder weisen eine Konstante Breite. Das Zeilenumbruchzeichen \('\\n'\) und das Null\-Zeichen \('\\0'\) belegen die letzten beiden Stellen der Zeichenfolge.  
+ Eine 24-Stunden-Uhr wird verwendet. Alle Felder haben eine feste Breite. Das Zeichen für neue Zeile ('\n') und das Nullzeichen ('\0') nehmen die letzten beiden Stellen der Zeichenfolge ein.  
   
- Die konvertierte Zeichenfolge wird auch die Ortszeit Einstellungen angepasst. Finden Sie unter der `time`, [\_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md), und [localtime32\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md) Funktionen Informationen zum Konfigurieren der lokalen Zeit und die [\_tzset](../../c-runtime-library/reference/tzset.md) Funktion Informationen zu Zeitzonen\-Umgebung und globale Variablen definiert.  
+ Die konvertierte Zeichenfolge wird auch gemäß den lokalen Zeitzoneneinstellungen angepasst. Informationen zur Konfiguration der lokalen Zeit finden Sie unter den `time`, [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) und [localtime32_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)-Funktionen. Informationen zur Definition der Zeitzonenumgebung und der globalen Variablen finden Sie unter der [_tzset](../../c-runtime-library/reference/tzset.md)-Funktion.  
   
- `_wctime32_s` und `_wctime64_s` sind die Breitzeichen\-Version der `_ctime32_s` und `_ctime64_s`; die Rückgabe eines Zeigers auf Breitzeichen\-Zeichenfolge. Andernfalls `_ctime64_s`, `_wctime32_s`, und `_wctime64_s` Verhalten sich genauso wie `_ctime32_s`.  
+ `_wctime32_s` und `_wctime64_s` sind die Breitzeichenversion von `_ctime32_s` und `_ctime64_s` und geben einen Zeiger auf die Breitzeichen-Zeichenfolge zurück. Andernfalls verhalten sich `_ctime64_s`, `_wctime32_s` und `_wctime64_s` identisch zu `_ctime32_s`.  
   
- `ctime_s` ist eine Inlinefunktion, der ergibt `_ctime64_s` und `time_t` entspricht `__time64_t`. Wenn Sie den Compiler zwingen müssen, `time_t` als das alte 32\-Bit\-`time_t` zu interpretieren, definieren Sie `_USE_32BIT_TIME_T`. Dadurch wird `ctime_s` ergibt `_ctime32_s`. Dies wird nicht empfohlen, da die Anwendung nach dem 18. Januar 2038 fehlschlägt und sie wird auf 64\-Bit\-Plattformen nicht zugelassen.  
+ `ctime_s` ist eine Inlinefunktion, die `_ctime64_s` auswertet, und `time_t` entspricht `__time64_t`. Wenn Sie den Compiler zwingen müssen, `time_t` als das alte 32-Bit-`time_t` zu interpretieren, können Sie `_USE_32BIT_TIME_T` definieren. Dadurch wird `ctime_s` mit `_ctime32_s` ausgewertet. Dies ist nicht zu empfehlen, weil Ihre Anwendung nach dem 18. Januar 2038 fehlschlagen kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.  
   
- Die Verwendung dieser Funktionen in C\+\+ wird durch Überladungen \(als Vorlagen vorhanden\) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Sichere Vorlagenüberladungen](../../c-runtime-library/secure-template-overloads.md).  
+ Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE und \_MBCS nicht definiert.|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|-------------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tctime_s`|`ctime_s`|`ctime_s`|`_wctime_s`|  
 |`_tctime32_s`|`_ctime32_s`|`_ctime32_s`|`_wctime32_s`|  
 |`_tctime64_s`|`_ctime64_s`|`_ctime64_s`|`_wctime64_s`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`ctime_s,`<br /><br /> `_ctime32_s,`<br /><br /> `_ctime64_s`|\<time.h\>|  
-|`_wctime_s,`<br /><br /> `_wctime32_s,`<br /><br /> `_wctime64_s`|\< time.h \> oder \< wchar.h \>|  
+|-------------|---------------------|  
+|`ctime_s`, `_ctime32_s`, `_ctime64_s`|\<time.h>|  
+|`_wctime_s`, `_wctime32_s`, `_wctime64_s`|\<time.h> oder \<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_wctime_s.c  
@@ -225,27 +242,17 @@ int main( void )
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 The time is Fri Apr 25 13:03:39 2003  
 ```  
   
-## .NET Framework-Entsprechung  
-  
--   [System::DateTime::GetDateTimeFormats](https://msdn.microsoft.com/en-us/library/system.datetime.getdatetimeformats.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
- [asctime\_s, \_wasctime\_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [ctime, \_ctime32, \_ctime64, \_wctime, \_wctime32, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [\_ftime, \_ftime32, \_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime\_s, \_gmtime32\_s, \_gmtime64\_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime\_s, \_localtime32\_s, \_localtime64\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [time, \_time32, \_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

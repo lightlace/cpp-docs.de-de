@@ -77,10 +77,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: de740ec295489829d236e2249f92ef98de655ad0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f947080d27efa7794d08db06adef307072739984
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
@@ -194,9 +195,6 @@ int main( void )
 ```  
 The first 10 characters are single-byte.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   

@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 187561adb3c524e12a851e0537859f0be942be17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 08d76a2e7fb30ffcef7e8fb8b96b5bf42a1454c6
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
@@ -88,10 +89,10 @@ int _ismbblead_l(
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt einen Wert ungleich&0; (null) zurück, wenn die ganze Zahl `c` das erste Byte eines Multibytezeichens ist.  
+ Gibt einen Wert ungleich 0 (null) zurück, wenn die ganze Zahl `c` das erste Byte eines Multibytezeichens ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Multibytezeichen bestehen aus einem führenden Byte gefolgt von einem nachfolgendem Byte. Führende Bytes werden anhand ihrer Zugehörigkeit zu einem bestimmten Bereich für einen gegebenen Zeichensatz unterschieden. Auf der Codepage 932 reichen die führenden Bytes von 0x81 - 0x9F und 0xE0 - 0xFC.  
+ Multibytezeichen bestehen aus einem führenden Byte gefolgt von einem nachfolgendem Byte. Führende Bytes werden anhand ihrer Zugehörigkeit zu einem bestimmten Bereich für einen gegebenen Zeichensatz unterschieden. Z. B. in Code Codepage 932 führenden Byte im Bereich von 0 x 81-0x9F und 0xE0 - 0xFC.  
   
  `_ismbblead` verwendet das aktuelle Gebietsschema für ein gebietsschemaabhängiges Verhalten. `_ismbblead_l` ist identisch, verwendet jedoch stattdessen das übergebene Gebietsschema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
@@ -111,9 +112,6 @@ int _ismbblead_l(
  \* Für Manifestkonstanten für die Testbedingungen.  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Byteklassifizierung](../../c-runtime-library/byte-classification.md)   

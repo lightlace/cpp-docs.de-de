@@ -1,61 +1,79 @@
 ---
-title: "_ftime, _ftime32, _ftime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ftime64"
-  - "_ftime"
-  - "_ftime32"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftime32"
-  - "_ftime"
-  - "_ftime64"
-  - "ftime64"
-  - "ftime"
-  - "ftime32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ftime64-Funktion"
-  - "_ftime64-Funktion"
-  - "Aktuelle Uhrzeit"
-  - "_ftime-Funktion"
-  - "ftime-Funktion"
-  - "_ftime32-Funktion"
-  - "ftime32-Funktion"
-  - "Uhrzeit, Abrufen aktueller"
+title: _ftime, _ftime32, _ftime64 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ftime64
+- _ftime
+- _ftime32
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftime32
+- _ftime
+- _ftime64
+- ftime64
+- ftime
+- ftime32
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftime64 function
+- _ftime64 function
+- current time
+- _ftime function
+- ftime function
+- _ftime32 function
+- ftime32 function
+- time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _ftime, _ftime32, _ftime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ed69cd73a42889e56dc258ce66e56db3210dfc95
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Rufen Sie die aktuelle Uhrzeit ab.  Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [\_ftime\_s, \_ftime32\_s, \_ftime64\_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md).  
+---
+# <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
+Ruft die aktuelle Zeit ab Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_ftime_s, _ftime32_s, _ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void _ftime(   
@@ -69,42 +87,42 @@ void _ftime64(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `timeptr`  
- Zeiger auf `_timeb`,`__timeb32` oder `__timeb64`\-Struktur.  
+ Zeiger auf eine `_timeb`-, `__timeb32`- oder `__timeb64`-Struktur.  
   
-## Hinweise  
- Die `_ftime`\-Funktion ruft die aktuelle Ortszeit ab und fängt sie in der Struktur, die auf den durch `timeptr` gezeigt wird *.* `_timeb`, `__timeb32` und `__timeb64` werden in Strukturen SYS\\Timeb.h definiert.  Sie enthalten vier Felder, die in der folgenden Tabelle.  
+## <a name="remarks"></a>Hinweise  
+ Die `_ftime` Funktion ruft die aktuelle lokale Zeit ab und speichert ihn in der Struktur verweist `timeptr`. Die `_timeb`, `__timeb32`, und `__timeb64` Strukturen in SYS\Timeb.h definiert sind. Sie enthalten vier Felder, die in der folgenden Tabelle aufgeführt werden.  
   
  `dstflag`  
- Wert ungleich 0 \(null\), wenn Sommerzeit Momentan aktive für die lokale Zeitzone ist. \(Siehe [\_tzset](../../c-runtime-library/reference/tzset.md) für dazu, wie bestimmt wird Sommerzeit.\)  
+ Ein Wert ungleich null, wenn die Sommerzeit zurzeit für die lokale Zeitzone gültig ist. (Eine Erläuterung dazu, wie die Sommerzeit festgelegt wird, finden Sie unter [_tzset](../../c-runtime-library/reference/tzset.md).)  
   
  `millitm`  
- Sekundenbruchteil in Millisekunden.  
+ Sekundenbruchteile in Millisekunden  
   
  `time`  
- Zeit in Sekunden ab Mitternacht \(00:00: 00\) am 1. Januar 1970 koordinierte Weltzeit \(UTC\).  
+ Die Zeit in Sekunden seit dem 1. Januar 1970, Mitternacht (00: 00: 00) im UTC-Format  
   
  `timezone`  
- Unterschied in Minuten, nach Westen Umstieg, zwischen UTC und Ortszeit.  Der Wert `timezone` wird vom Wert der globalen Variable `_timezone` festgelegt \(siehe `_tzset`\).  
+ Differenz in Minuten, westwärts zwischen UTC und der Ortszeit Der Wert `timezone` wird aus dem Wert der globalen Variablen `_timezone` festgelegt (siehe `_tzset`).  
   
- `_ftime64`, die die `__timeb64`\-Struktur verwendet, unterstützt von 23:59 die oben angegeben werden können, DateiErstellungsdatumsangaben: 59 3000 am 31. Dezember, UTC; während `_ftime32` nur Datumsangaben von 03:14 darstellt: Am 7. Januar 19 2038, UTC.  Mitternacht am 1. Januar 1970 ist die untere Begrenzung des Zeitraums für alle diese Funktionen.  
+ `_ftime64` verwendet die `__timeb64`-Struktur und ermöglicht es, Erstellungsdaten von Dateien bis 23:59:59 am 31. Dezember 3000 (UTC) anzugeben, während `_ftime32` nur Datumsangaben bis 23:59:59 am 18. Januar 2038 darstellt. Der 1. Januar 1970 (Mitternacht) ist der älteste mögliche Datumsbereich für all diese Funktionen.  
   
- `_ftime` entspricht `_ftime64` und `_timeb` enthält eine 64\-Bit\-Zeit.  Dies gilt, es sei denn, `_USE_32BIT_TIME_T` definiert wird, in diesem Fall das alte Verhalten gültig ist; `_ftime` verwendet eine 32\-Bit\-Zeit und `_timeb` enthält eine 32\-Bit\-Zeit.  
+ `_ftime` entspricht `_ftime64`, und `_timeb` enthält einen 64-Bit-Uhrzeitwert. Das trifft zu, sofern `_USE_32BIT_TIME_T` nicht definiert wurde. In diesem Fall ist das alte Verhalten wirksam. `_ftime` verwendet einen 32-Bit-Uhrzeitwert, und `_timeb` enthält einen 32-Bit-Uhrzeitwert.  
   
- `_ftime` überprüft die eigenen Parameter.  Wenn es übergeben wird, ruft ein NULL\-Zeiger als `timeptr`, die den ungültigen Parameterhandler Funktion auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren, legt die Funktion `errno` auf `EINVAL` fest.  
+ `_ftime` überprüft die eigenen Parameter. Wenn ein NULL-Zeiger als `timeptr` übergeben wird, ruft diese Funktion den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt die Funktion `errno` auf `EINVAL` fest.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`_ftime`|\<sys\/types.h und\> sys \<\/timeb.h\>|  
-|`_ftime32`|\<sys\/types.h und\> sys \<\/timeb.h\>|  
-|`_ftime64`|\<sys\/types.h und\> sys \<\/timeb.h\>|  
+|--------------|---------------------|  
+|`_ftime`|\<sys/types.h> und \<sys/timeb.h>|  
+|`_ftime32`|\<sys/types.h> und \<sys/timeb.h>|  
+|`_ftime64`|\<sys/types.h> und \<sys/timeb.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_ftime.c  
@@ -151,18 +169,18 @@ int main( void )
 }  
 ```  
   
-  **Sekunden ab Mitternacht, am 1. Januar 1970 \(UTC\): 1051553334**  
-**Millisekunden: 230**  
-**Minuten zwischen UTC und Ortszeit: 480**  
-**Sommerzeitflag \(1 bedeutet Sommerzeit entsteht wirksam\): 1**  
-**Die Uhrzeit lautet Montag am 28. April 11: 08:54.230 2003**   
-## .NET Framework-Entsprechung  
- [System::DateTime::Now](https://msdn.microsoft.com/en-us/library/system.datetime.now.aspx)  
+```Output  
+Seconds since midnight, January 1, 1970 (UTC): 1051553334  
+Milliseconds: 230  
+Minutes between UTC and local time: 480  
+Daylight savings time flag (1 means Daylight time is in effect): 1  
+The time is Mon Apr 28 11:08:54.230 2003  
+```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
- [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime, \_ctime32, \_ctime64, \_wctime, \_wctime32, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime, \_gmtime32, \_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime, \_localtime32, \_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [time, \_time32, \_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

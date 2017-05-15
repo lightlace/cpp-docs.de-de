@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 61ceb0f31f41e129eb0047ba8c0de1c44c43f1b1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 1828b9316cf29d953a6db8f8a6c11b5a3a08c346
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ferror"></a>ferror
@@ -72,7 +73,7 @@ int ferror(
  Zeiger zur `FILE` -Struktur.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn kein in `stream` Fehler aufgetreten ist, gibt `ferror` 0 zurück. Andernfalls gibt es einen Wert ungleich&0; (null) zurück. Wenn der Stream `NULL` ist, ruft `ferror` den ungültigen Parameterhandler wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben auf. Wenn die weitere Ausführung zugelassen wird, setzt diese Funktion `errno` auf `EINVAL` und gibt "0" zurück.  
+ Wenn kein in `stream` Fehler aufgetreten ist, gibt `ferror` 0 zurück. Andernfalls gibt es einen Wert ungleich 0 (null) zurück. Wenn der Stream `NULL` ist, ruft `ferror` den ungültigen Parameterhandler wie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben auf. Wenn die weitere Ausführung zugelassen wird, setzt diese Funktion `errno` auf `EINVAL` und gibt "0" zurück.  
   
  Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -89,9 +90,6 @@ int ferror(
   
 ## <a name="example"></a>Beispiel  
  Sehen Sie sich das Beispiel für [feof](../../c-runtime-library/reference/feof.md) an.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Error Handling (Fehlerbehandlung)](../../c-runtime-library/error-handling-crt.md)   

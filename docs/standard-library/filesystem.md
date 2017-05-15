@@ -36,10 +36,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 25cfc0cc7c9f22a495b409e6e08d133b0f29ff8e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
@@ -141,10 +142,10 @@ using namespace std::experimental::filesystem::v1;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[copy_options-Enumeration](../standard-library/filesystem-enumerations.md#filesystem__copy_options)|Eine mit [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) verwendete Enumeration, mit der das Verhalten bestimmt wird, wenn eine Datei vorhanden ist.|  
-|[directory_options-Enumeration](../standard-library/filesystem-enumerations.md#filesystem__directory_options)|Eine Enumeration, die Optionen für Verzeichnisiteratoren angibt.|  
-|[file_type Enumeration](../standard-library/filesystem-enumerations.md#filesystem__file_type)|Eine Enumeration für Dateitypen.|  
-|[perms-Enumeration](../standard-library/filesystem-enumerations.md#filesystem__perms)|Ein Bitmaskentyp, mit dem Berechtigungen und Optionen zu Berechtigungen übermittelt werden.|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Eine mit [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) verwendete Enumeration, mit der das Verhalten bestimmt wird, wenn eine Datei vorhanden ist.|  
+|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Eine Enumeration, die Optionen für Verzeichnisiteratoren angibt.|  
+|[file_type](../standard-library/filesystem-enumerations.md#file_type)|Eine Enumeration für Dateitypen.|  
+|[Perms](../standard-library/filesystem-enumerations.md#perms)|Ein Bitmaskentyp, mit dem Berechtigungen und Optionen zu Berechtigungen übermittelt werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)

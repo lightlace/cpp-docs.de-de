@@ -1,51 +1,68 @@
 ---
-title: "_locking | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_locking"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_locking"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_locking-Funktion"
-  - "Bytes [C++], Sperren einer Datei"
-  - "Dateien [C++], Sperren"
-  - "Dateien [C++], Sperren von Bytes"
-  - "locking-Funktion"
+title: _locking | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _locking
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _locking
+dev_langs:
+- C++
+helpviewer_keywords:
+- locking function
+- bytes [C++], locking file
+- files [C++], locking bytes
+- files [C++], locking
+- _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _locking
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7789a1634f5ee87d54d6b9f2aadbc720819f31ef
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
-Sperrt oder verlagert Bytes einer Datei freigegeben.  
+---
+# <a name="locking"></a>_locking
+Sperrt oder entsperrt Bytes einer Datei.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -56,67 +73,67 @@ Sperrt oder verlagert Bytes einer Datei freigegeben.
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `fd`  
  Dateideskriptor.  
   
  *mode*  
- Sperrenaktion auszuführen.  
+ Die auszuführende Sperraktion  
   
  *nbytes*  
- Anzahl Bytes zu sperren.  
+ Die Anzahl der zu sperrenden Bytes.  
   
-## Rückgabewert  
- `_locking` gibt 0 zurück, wenn der Vorgang erfolgreich ist.  Bei dem Rückgabewert von 1 Fehler gibt an, in diesem Fall [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) auf einen der folgenden Werte festgelegt wird.  
+## <a name="return-value"></a>Rückgabewert  
+ `_locking` gibt bei Erfolg 0 zurück. Ein Rückgabewert-1 gibt Fehler auftritt, in diesem Fall an [Errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) auf einen der folgenden Werte festgelegt.  
   
  `EACCES`  
- Sperrenverletzung \(bereits die gesperrte Datei oder nicht verschlossene\).  
+ Sperrverletzung (Datei bereits gesperrt oder entsperrt).  
   
  `EBADF`  
  Ungültiger Dateideskriptor.  
   
  `EDEADLOCK`  
- Sperrenverletzung.  Zurückgekehrt, wenn das `_LK_LOCK` oder `_LK_RLCK`\-Flag angegeben ist und die Datei kann nicht gesperrt werden nach 10 Tests.  
+ Sperrverletzung. Wird zurückgegeben, wenn das Flag `_LK_LOCK` oder `_LK_RLCK` angegeben wird und die Datei nach 10 Versuchen noch immer nicht gesperrt werden kann.  
   
  `EINVAL`  
- `_locking` wurde ein ungültiges Argument angegeben.  
+ Ein ungültiges Argument wurde an `_locking` übergeben.  
   
- Wenn der Fehler aufgrund eines ungültigen Parameters, wie ein ungültiger Dateideskriptor, der ungültige Parameterhandler wird aufgerufen wurde, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  
+ Wenn der Fehler aufgrund eines ungültigen Parameters entstanden ist, wie z.B. ein ungültiger Dateideskriptor, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  
   
-## Hinweise  
- Die `_locking` sperrt Funktion oder setzt *nbytes* Bytes der Datei verwendet, die von `fd` angegeben wird.  Sperrenbytes in einer Datei verhindert den Zugriff auf diese Bytes durch andere Prozesse.  Alle Sperre oder das Entsperren beginnt in der aktuellen Position des Dateizeigers und Fortfahren für die folgenden *nbytes* Bytes fort.  Es ist möglich, die Bytevergangenheit Dateiende zu sperren.  
+## <a name="remarks"></a>Hinweise  
+ Die `_locking`-Funktion sperrt oder entsperrt *nbytes*-Bytes der von `fd` angegebenen Datei. Das Sperren von Bytes in einer Datei verhindert den Zugriff auf diese Bytes durch andere Prozesse. Alle Sperr- oder Entsperraktionen beginnen an der aktuellen Position des Dateizeigers und laufen für die nächsten *nbytes*-Bytes ab. Es ist möglich, Bytes nach dem Ende der Datei zu sperren.  
   
- *Modus* muss eine der folgenden Manifestkonstanten sein, die in Locking.h definiert werden.  
+ Der *Modus* muss eine der folgenden Manifestkonstanten sein, die in „Locking.h“ definiert sind.  
   
  `_LK_LOCK`  
- Sperrt die angegebenen Bytes.  Wenn die Bytes nicht gesperrt werden, versucht das Programm sofort erneut nach 1 Second.  Wenn, nach 10 Versuchen, die Bytes nicht gesperrt werden können, gibt die Konstante einen Fehler zurück.  
+ Sperrt die angegebenen Bytes. Wenn die Bytes nicht gesperrt werden können, führt das Programm nach 1 Sekunde sofort einen neuen Versuch durch. Wenn nach 10 Versuchen die Bytes nicht gesperrt werden können, gibt die Konstante einen Fehler zurück.  
   
  `_LK_NBLCK`  
- Sperrt die angegebenen Bytes.  Wenn die Bytes nicht gesperrt werden können, gibt die Konstante einen Fehler zurück.  
+ Sperrt die angegebenen Bytes. Wenn die Bytes nicht gesperrt werden können, gibt die Konstante einen Fehler zurück.  
   
  `_LK_NBRLCK`  
- Dieselbe Bedeutung wie `_LK_NBLCK`.  
+ Wie in `_LK_NBLCK`.  
   
  `_LK_RLCK`  
- Dieselbe Bedeutung wie `_LK_LOCK`.  
+ Wie in `_LK_LOCK`.  
   
  `_LK_UNLCK`  
- Setzt die angegebenen Bytes frei, die zuvor gesperrt wurden.  
+ Entsperrt die angegebenen Bytes, die zuvor gesperrt sein mussten.  
   
- Mehrere Bereiche einer Datei, die sich nicht überschneiden, können gesperrt werden.  Ein Bereich, der entsperrt wird, muss bereits gesperrt werden.  `_locking` führt nicht aufeinander folgende Bereiche zusammengeführt; wenn zwei gesperrte Bereiche aneinandergrenzen, muss jeder Bereich separat entsperrt werden.  Bereiche dürfen nur kurz gesperrt und sollten entsperrt werden, bevor eine Datei geschlossen oder das Programm beendet.  
+ Mehrere Bereiche einer Datei, die sich nicht überschneiden, können gesperrt werden. Ein Bereich, der entsperrt wird, muss zuvor gesperrt worden sein. `_locking` führt benachbarte Bereiche nicht zusammen. Wenn zwei gesperrte Bereiche aneinandergrenzen, muss jeder Bereich separat entsperrt werden. Bereichen sollten nur über einen kurzen Zeitraum gesperrt sein und sollten entsperrt werden, bevor eine Datei geschlossen oder das Programm beendet wird.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|Optionaler Header|  
-|-------------|---------------------------|-----------------------|  
-|`_locking`|\<io.h und\> sys \<\/locking.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_locking`|\<io.h> und \<sys/locking.h>|\<errno.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_locking.c  
@@ -167,13 +184,13 @@ int main( void )
 }  
 ```  
   
-## Eingabe: crt\_locking.txt  
+## <a name="input-crtlockingtxt"></a>Eingabe: crt_locking.txt  
   
 ```  
 The first thirty bytes of this file will be locked.  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 No one can change these bytes while I'm reading them  
@@ -181,10 +198,7 @@ No one can change these bytes while I'm reading them
 Now I'm done. Do what you will with them  
 ```  
   
-## .NET Framework-Entsprechung  
- [System::IO::FileStream::Lock](https://msdn.microsoft.com/en-us/library/system.io.filestream.lock.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dateibehandlung](../../c-runtime-library/file-handling.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

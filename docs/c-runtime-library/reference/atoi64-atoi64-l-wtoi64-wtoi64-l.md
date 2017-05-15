@@ -1,72 +1,90 @@
 ---
-title: "_atoi64, _atoi64_l, _wtoi64, _wtoi64_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_atoi64_l"
-  - "_wtoi64"
-  - "_atoi64"
-  - "_wtoi64_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_atoi64"
-  - "_tstoi64"
-  - "_ttoi64"
-  - "wtoi64"
-  - "_tstoi64_l"
-  - "atoi64"
-  - "_wtoi64_l"
-  - "_wtoi64"
-  - "wtoi64_l"
-  - "_atoi64_l"
-  - "atoi64_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tstoi64-Funktion"
-  - "wtoi64-Funktion"
-  - "atoi64_l-Funktion"
-  - "_ttoi64-Funktion"
-  - "Zeichenfolgenkonvertierung, in ganze Zahlen"
-  - "wtoi64_l-Funktion"
-  - "atoi64-Funktion"
-  - "_tstoi64-Funktion"
-  - "_atoi64_l-Funktion"
-  - "_wtoi64_l-Funktion"
-  - "ttoi64-Funktion"
-  - "_wtoi64-Funktion"
-  - "_atoi64-Funktion"
+title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _atoi64_l
+- _wtoi64
+- _atoi64
+- _wtoi64_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _atoi64
+- _tstoi64
+- _ttoi64
+- wtoi64
+- _tstoi64_l
+- atoi64
+- _wtoi64_l
+- _wtoi64
+- wtoi64_l
+- _atoi64_l
+- atoi64_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- tstoi64 function
+- wtoi64 function
+- atoi64_l function
+- _ttoi64 function
+- string conversion, to integers
+- wtoi64_l function
+- atoi64 function
+- _tstoi64 function
+- _atoi64_l function
+- _wtoi64_l function
+- ttoi64 function
+- _wtoi64 function
+- _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _atoi64, _atoi64_l, _wtoi64, _wtoi64_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 749ce35fdb4ed530bf301539b13ba3cb0471b996
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
-Konvertiert eine Zeichenfolge in eine 64\-Bit\-Ganzzahl.  
+---
+# <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
+Konvertiert eine Zeichenfolge in eine 64-Bit-Ganzzahl.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 __int64 _atoi64(  
@@ -85,53 +103,53 @@ __int64 _wtoi64_l(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `str`  
  Zu konvertierende Zeichenfolge.  
   
  `locale`  
  Zu verwendendes Gebietsschema.  
   
-## Rückgabewert  
- Jede Funktion gibt den `__int64`\-Wert zurück, der mit die Eingabezeichen als Zahl erzeugt, interpretiert.  Der Rückgabewert ist 0 für `_atoi64`, wenn die Eingabe nicht in einen Wert dieses Typs umgewandelt werden kann.  
+## <a name="return-value"></a>Rückgabewert  
+ Jede Funktion gibt den `__int64`-Wert zurück, der erstellt wird, indem die Eingabezeichen als Zahl interpretiert werden. Der Rückgabewert ist für `_atoi64` 0, wenn die Eingabe nicht in einen Wert dieses Typs umgewandelt werden kann.  
   
- Im Fall des Überlaufs mit großen positiven Ganzzahlwerte, gibt `_atoi64``I64_MAX` und `I64_MIN` in den Ereignisdaten des Überlaufs mit großen negative ganzzahlige Werte zurück.  
+ Im Fall eines Überlaufs mit großen positiven ganzzahligen Werten gibt `_atoi64``I64_MAX` zurück, und im Fall eines Überlaufs mit großen negativen ganzzahligen Werten wird `I64_MIN` zurückgegeben.  
   
- In Fällen, in denen alle Werte außerhalb des Gültigkeitsbereichs liegen, wird `errno` auf `ERANGE` festgelegt.  Wenn der Parameter, der übergeben ist, `NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben 0 zurück.  
+ In Fällen, in denen alle Werte außerhalb des Gültigkeitsbereichs liegen, wird `errno` auf `ERANGE` festgelegt. Wenn der übergebene Parameter `NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben 0 zurück.  
   
-## Hinweise  
- Diese Funktionen konvertieren eine Zeichenfolge in einen 64\-Bit\-Ganzzahlwert.  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktionen konvertieren eine Zeichenfolge in eine 64-Bit-Ganzzahl.  
   
- Die Eingabezeichenfolge ist eine Sequenz von Zeichen, die als numerischer Wert des angegebenen Typs interpretiert werden.  Die Funktion beendet das Lesen der Eingabezeichenfolge am ersten Zeichen, das nicht als Teil einer Zahl erkannt wird.  Dieses Zeichen ist das NULL\-Zeichen \("\\0" oder L"\\0"\) die Zeichenfolge Beenden.  
+ Die Eingabezeichenfolge ist eine Sequenz von Zeichen, die als numerischer Wert des angegebenen Typs interpretiert werden. Die Funktion beendet das Lesen der Eingabezeichenfolge am ersten Zeichen, das nicht als Teil einer Zahl erkannt wird. Möglicherweise ist dies das Zeichen NULL ('\0' oder L'\0'), das am Ende der Zeichenfolge steht.  
   
- Das `str`\-Argument für `_atoi64` weist folgende Form auf:  
+ Das `str`-Argument für `_atoi64` weist folgende Form auf:  
   
 ```  
 [whitespace] [sign] [digits]]  
 ```  
   
- `whitespace` besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden, `sign` ist entweder Pluszeichen \(\+\) oder Minuszeichen \(\-\) und `digits` ist mindestens eine Ziffer.  
+ Ein `whitespace` besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden. `sign` ist entweder Pluszeichen (+) oder Minuszeichen (-) und `digits` sind eine oder mehrere Ziffern.  
   
  `_wtoi64` ist mit `_atoi64` identisch, außer dass es eine Zeichenfolge mit Breitzeichen als Parameter verwendet.  
   
- Die Versionen dieser Funktionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|------------------------------------------|----------------------|-------------------------|  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tstoi64`|`_atoi64`|`_atoi64`|`_wtoi64`|  
 |`_ttoi64`|`_atoi64`|`_atoi64`|`_wtoi64`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routinen|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`_atoi64`, `_atoi64_l`|\<stdlib.h\>|  
-|`_wtoi64`, `_wtoi64_l`|\<stdlib.h\> oder \<wchar.h\>|  
+|--------------|---------------------|  
+|`_atoi64`, `_atoi64_l`|\<stdlib.h>|  
+|`_wtoi64`, `_wtoi64_l`|\<stdlib.h> oder \<wchar.h>|  
   
-## Beispiel  
- Das Programm zeigt an, wie Zahlen, die als Zeichenfolgen gespeichert werden, auf den numerischen Werten mithilfe der Funktionen `_atoi64` konvertiert werden können.  
+## <a name="example"></a>Beispiel  
+ Dieses Programm zeigt, wie die `_atoi64`-Funktion verwendet wird, um als Zeichenfolgen gespeicherte Zahlen in numerische Werte zu konvertieren.  
   
 ```  
 // crt_atoi64.c  
@@ -171,22 +189,19 @@ int main( void )
 }  
 ```  
   
-  **Funktion: \_atoi64 \("\-2309 "\) \= \-2309**  
-**Funktion: \_atoi64 \("314127,64 "\) \= 314127**  
-**Funktion: \_atoi64 \("3336402735171707160320 "\) \= \-1**  
-**Overflow condition occurred.**   
-## .NET Framework-Entsprechung  
+```Output  
+Function: _atoi64( "  -2309 " ) = -2309  
+Function: _atoi64( "314127.64" ) = 314127  
+Function: _atoi64( "3336402735171707160320" ) = -1  
+Overflow condition occurred.  
+```  
   
--   [System::Convert::ToInt64](https://msdn.microsoft.com/en-us/library/system.convert.toint64.aspx)  
-  
--   [System::Convert::ToUInt64](https://msdn.microsoft.com/en-us/library/system.convert.touint64.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Gleitkomma-Unterstützung](../../c-runtime-library/floating-point-support.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_atodbl, \_atodbl\_l, \_atoldbl, \_atoldbl\_l, \_atoflt, \_atoflt\_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

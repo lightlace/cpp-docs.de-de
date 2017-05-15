@@ -1,61 +1,81 @@
 ---
-title: "ctype_byname-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xlocale/std::ctype_byname"
-  - "std::ctype_byname"
-  - "ctype_byname"
-  - "std.ctype_byname"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ctype_byname-Klasse"
+title: ctype_byname-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xlocale/std::ctype_byname
+- ctype_byname
+dev_langs:
+- C++
+helpviewer_keywords:
+- ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# ctype_byname-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 584163c58608f1d30dccf452ce2f68283ecd3ce0
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
-Die abgeleitete Vorlagenklasse beschreibt ein Objekt, das als Cfacet eines angegebenen Gebietsschemas dienen kann und die Klassifizierung von Zeichen aktivieren und Konvertierung von Zeichen zwischen Groß\-\/Kleinschreibung und systemeigene und Gebietsschema angegebene Zeichensätze.  
+---
+# <a name="ctypebyname-class"></a>ctype_byname-Klasse
+Die abgeleitete Vorlagenklasse beschreibt ein Objekt, das als ctype-Facet eines angegebenen Gebietsschemas dienen kann und die Klassifizierung von Zeichen sowie die Konvertierung von Zeichen zwischen Groß-/Kleinschreibung und zwischen nativen und gebietsschemaspezifischen Zeichensätzen ermöglicht.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
+```
+template <class _Elem>
+class ctype_byname : public ctype<_Elem>
+{
+public:
+    explicit ctype_byname(
+    const char* _Locname,
+    size_t _Refs = 0);
+
+    explicit ctype_byname(
+    const string& _Locname,
+    size_t _Refs = 0);
+
+protected:
+    virtual __CLR_OR_THIS_CALL ~ctype_byname();
+
+};
 ```  
-template<class _Elem>  
-class ctype_byname : public ctype<_Elem>  
-{  
-public:  
-    explicit ctype_byname(  
-        const char *_Locname,  
-        size_t _Refs = 0  
-    );  
-    explicit ctype_byname(  
-        const string& _Locname,  
-        size_t _Refs = 0  
-    );  
-protected:  
-    virtual __CLR_OR_THIS_CALL ~ctype_byname();  
-};  
-```  
   
-## Hinweise  
- Das Verhalten wird durch das Gebietsschema benannte `_Locname` bestimmt.  Jeder Konstruktor initialisiert sein Basisobjekt mit [C](../standard-library/ctype-class.md)\<CharType\>\(`_Refs`\) oder die Entsprechung für Basisklasse `ctype<char>`.  
+## <a name="remarks"></a>Hinweise  
+ Das Verhalten wird durch das benannte Gebietsschema `_Locname` bestimmt. Jeder Konstruktor initialisiert sein Basisobjekt mit [ctype](../standard-library/ctype-class.md)\<CharType>( `_Refs`) oder der jeweiligen Entsprechung für die Basisklasse `ctype<char>`.  
   
-## Anforderungen  
- Gebietsschema **Header:** \<\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<locale>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

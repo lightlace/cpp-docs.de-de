@@ -1,66 +1,83 @@
 ---
-title: "scanf, _scanf_l, wscanf, _wscanf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wscanf_l"
-  - "scanf"
-  - "_scanf_l"
-  - "wscanf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tscanf"
-  - "_scanf_l"
-  - "wscanf"
-  - "_wscanf_l"
-  - "scanf"
-  - "_tscanf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_scanf_l-Funktion"
-  - "_tscanf-Funktion"
-  - "_tscanf_l-Funktion"
-  - "_wscanf_l-Funktion"
-  - "Daten [C++], Lesen aus Eingabesteam"
-  - "Formatierte Daten [C++], aus Eingabestreams"
-  - "Lesen von Daten [C++], aus Eingabestreams"
-  - "scanf-Funktion"
-  - "scanf_l-Funktion"
-  - "tscanf-Funktion"
-  - "tscanf_l-Funktion"
-  - "wscanf-Funktion"
-  - "wscanf_l-Funktion"
+title: scanf, _scanf_l, wscanf, _wscanf_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wscanf_l
+- scanf
+- _scanf_l
+- wscanf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _tscanf
+- _scanf_l
+- wscanf
+- _wscanf_l
+- scanf
+- _tscanf_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- tscanf_l function
+- _tscanf_l function
+- reading data [C++], from input streams
+- _tscanf function
+- data [C++], reading from input stream
+- scanf_l function
+- scanf function
+- wscanf function
+- _scanf_l function
+- tscanf function
+- formatted data [C++], from input streams
+- wscanf_l function
+- _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# scanf, _scanf_l, wscanf, _wscanf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3cfa70aa63c32abbc24254e896cdb02412f65fde
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Liest formatierte Daten aus dem Standardeingabestream.  Sicherere Versionen dieser Funktion sind verfügbar. Informationen dazu finden Sie unter [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).  
+---
+# <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
+Liest formatierte Daten aus dem Standardeingabestream. Sicherere Versionen dieser Funktion sind verfügbare; siehe [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int scanf(  
@@ -83,7 +100,7 @@ int _wscanf_l(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `format`  
  Formatsteuerzeichenfolge.  
   
@@ -93,42 +110,42 @@ int _wscanf_l(
  `locale`  
  Das zu verwendende Gebietsschema.  
   
-## Rückgabewert  
- Gibt die Anzahl von Feldern zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden.  Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden.  
+## <a name="return-value"></a>Rückgabewert  
+ Gibt die Anzahl von Feldern zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden.  
   
- Wenn `format` ein `NULL`\-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `EOF` zurück und stellen `errno` auf `EINVAL` ein.  
+ Wenn `format` ein `NULL`-Zeiger ist, wird der Handler für ungültige Parameter wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `EOF` zurück und stellen `errno` auf `EINVAL` ein.  
   
- Weitere Informationen über diese und andere Fehlercodes finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die `scanf`\-Funktion liest Daten aus dem Standardeingabestream `stdin` und schreibt die Daten in den Speicherort, der von `argument` angegeben wird.  Jedes `argument` muss ein Zeiger auf einen Variablentyp sein, der einem Typspezifizierer im `format` entspricht.  Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  
+## <a name="remarks"></a>Hinweise  
+ Die `scanf`-Funktion liest Daten aus dem Standardeingabestream `stdin` und schreibt die Daten in den Speicherort, der von `argument` angegeben wird. Jedes `argument` muss ein Zeiger auf einen Variablentyp sein, der einem Typspezifizierer im `format` entspricht. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  
   
 > [!IMPORTANT]
->  Beim Lesen einer Zeichenfolge mit `scanf` sollten Sie immer einer Breite für das `%s`\-Format angeben \(z. B. `"%32s"` anstelle von `"%s"`\). Anderenfalls kann eine nicht richtig formatierte Eingabe leicht einen Pufferüberlauf verursachen.  Berücksichtigen Sie als Alternative die Verwendung von [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) oder [fgets](../../c-runtime-library/reference/fgets-fgetws.md).  
+>  Beim Lesen einer Zeichenfolge mit `scanf` sollten Sie immer einer Breite für das `%s`-Format angeben (z. B. `"%32s"` anstelle von `"%s"`). Anderenfalls kann eine nicht richtig formatierte Eingabe leicht einen Pufferüberlauf verursachen. Ziehen Sie alternativ die Verwendung von [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) oder [fgets](../../c-runtime-library/reference/fgets-fgetws.md) in Betracht.  
   
- `wscanf` ist eine Breitzeichenversion von `scanf`. Das `format`\-Argument für `wscanf` ist eine Breitzeichenfolge.  `wscanf` und `scanf` verhalten sich identisch, wenn der Stream in ANSI\-Modus geöffnet ist.  `scanf` unterstützt derzeit nicht die Eingabe aus einem UNICODE\-Stream.  
+ `wscanf` ist eine Breitzeichenversion von `scanf`. Das `format`-Argument für `wscanf` ist eine Breitzeichenfolge. `wscanf` und `scanf` verhalten sich identisch, wenn der Stream in ANSI-Modus geöffnet ist. `scanf` unterstützt derzeit nicht die Eingabe aus einem UNICODE-Stream.  
   
- Die Versionen dieser Funktionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
+ Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tscanf`|`scanf`|`scanf`|`wscanf`|  
 |`_tscanf_l`|`_scanf_l`|`_scanf_l`|`_wscanf_l`|  
   
- Weitere Informationen finden Sie unter der Seite mit den [Feldern für die Formatangabe – Funktionen scanf und wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
+ Weitere Informationen finden Sie unter [Formatangabefelder: scanf- und wscanf-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`scanf`, `_scanf_l`|\<stdio.h\>|  
-|`wscanf`, `_wscanf_l`|\<stdio.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`scanf`, `_scanf_l`|\<stdio.h>|  
+|`wscanf`, `_wscanf_l`|\<stdio.h> oder \<wchar.h>|  
   
- Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps nicht unterstützt.  Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C\-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps verwendet werden können.  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps nicht unterstützt. Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_scanf.c  
@@ -155,23 +172,20 @@ int main( void )
 }  
 ```  
   
-  **`Bytezeichen 71 98.6 h z Breitzeichen 36 92.3 y n` Die Anzahl eingegebener Felder ist 6**  
-**Der Inhalt ist: 71 98.599998 h z Byte characters**  
-**Die Anzahl der Feldeingaben ist 6.**  
-**Der Inhalt ist: 36 92.300003 y n Wide characters**   
-## .NET Framework-Entsprechung  
+```Output  
   
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
+      71 98.6 h z Byte characters  
+36 92.3 y n Wide charactersThe number of fields input is 6  
+The contents are: 71 98.599998 h z Byte characters  
+The number of fields input is 6  
+The contents are: 36 92.300003 y n Wide characters  
+```  
   
--   [System::Console::ReadLine](https://msdn.microsoft.com/en-us/library/system.console.readline.aspx)  
-  
--   Siehe auch `Parse`\-Methoden wie [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
-  
-## Siehe auch  
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
+ [Stream I/O (Stream-E/A)](../../c-runtime-library/stream-i-o.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)

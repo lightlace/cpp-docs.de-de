@@ -1,67 +1,84 @@
 ---
-title: "toupper, _toupper, towupper, _toupper_l, _towupper_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_toupper_l"
-  - "towupper"
-  - "toupper"
-  - "_towupper_l"
-  - "_toupper"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "towupper"
-  - "_toupper"
-  - "_totupper"
-  - "toupper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_totupper-Funktion"
-  - "_toupper-Funktion"
-  - "_toupper_l-Funktion"
-  - "_towupper_l-Funktion"
-  - "Groß- und Kleinschreibung, Konvertieren"
-  - "Zeichen, Konvertieren"
-  - "Zeichenfolgenkonvertierung, Groß- und Kleinschreibung"
-  - "Zeichenfolgenkonvertierung, in verschiedene Zeichen"
-  - "totupper-Funktion"
-  - "toupper-Funktion"
-  - "toupper_l-Funktion"
-  - "towupper-Funktion"
-  - "towupper_l-Funktion"
-  - "Großbuchstaben, Konvertieren von Zeichenfolgen in"
+title: toupper, _toupper, towupper, _toupper_l, _towupper_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _toupper_l
+- towupper
+- toupper
+- _towupper_l
+- _toupper
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- towupper
+- _toupper
+- _totupper
+- toupper
+dev_langs:
+- C++
+helpviewer_keywords:
+- _toupper function
+- towupper function
+- uppercase, converting strings to
+- totupper function
+- string conversion, to different characters
+- towupper_l function
+- toupper_l function
+- string conversion, case
+- _toupper_l function
+- _towupper_l function
+- _totupper function
+- case, converting
+- characters, converting
+- toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# toupper, _toupper, towupper, _toupper_l, _towupper_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e782f6168d48ecc1d24b90f2030909de32c9ee26
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Konvertieren Sie Zeichen in Großbuchstaben.  
+---
+# <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
+Zeichen in Großbuchstaben konvertieren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int toupper(  
@@ -83,57 +100,54 @@ int _towupper_l(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `c`  
  Zu konvertierendes Zeichen.  
   
  `locale`  
  Zu verwendendes Gebietsschema.  
   
-## Rückgabewert  
- Jede dieser Routinen konvertiert eine Kopie von `c`, wenn möglich, und gibt das Ergebnis aus.  
+## <a name="return-value"></a>Rückgabewert  
+ Jede dieser Routinen konvertiert eine Kopie von `c`, wenn die Konvertierung möglich ist, und gibt das Ergebnis zurück.  
   
- Wenn `c` für das ein Breitzeichen `iswlower` ist nicht 0 ist und es ist ein entsprechendes Breitzeichen, für das ein `iswupper` ungleich 0 ist, `towupper` den entsprechenden Breitzeichen zurückgibt; andernfalls `towupper` zurückgibt `c` unverändert.  
+ Wenn `c` ein Breitzeichen ist, für das `iswlower` ungleich null ist und es ein entsprechendes Breitzeichen gibt, für das `iswupper` ungleich null ist, gibt `towupper` das entsprechende Breitzeichen zurück, andernfalls gibt `towupper` `c` unverändert zurück.  
   
- Es gibt keinen Rückgabewert, der reserviert wird, um einen Fehler anzugeben.  
+ Es ist kein Rückgabewert zur Fehleranzeige reserviert.  
   
- Damit `toupper` erwarteten Ergebnisse gibt, [\_\_isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) und [islower](../../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md) muss jeweils Rückholwert ungleich 0.  
+ Damit `toupper` die erwarteten Ergebnisse liefert, müssen [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) und [islower](../../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md) beide ungleich null zurückgeben.  
   
-## Hinweise  
- Jede dieser Routinen konvertiert einen angegebenen Kleinbuchstaben zu einem Großbuchstaben, wenn möglich und entsprechend.  Die Unterscheidung der Groß\-\/Kleinschreibung von `towupper` ist gebietsschemaspezifisch.  Nur die Zeichen, die dem aktuellen Gebietsschema relevant sind, werden ggf. geändert.  Die Features ohne das Suffix `_l`  verwenden das gerade angegebene Gebietsschema.  Die Versionen dieser Funktionen mit dem Suffix `_l`  nehmen das Gebietsschema als Parameter verwenden und die aktuell festgelegten anstelle des Gebietsschemas.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+## <a name="remarks"></a>Hinweise  
+ Jede dieser Routinen konvertiert einen vorhandenen Kleinbuchstaben in einen Großbuchstaben, wenn dies möglich und relevant ist. Die Konvertierung von `towupper` ist gebietsschemaspezifisch. Es werden nur die für das aktuelle Gebietsschema relevanten Zeichen geändert. Die Funktionen ohne das Suffix `_l` verwenden das aktuelle Gebietsschema. Die Versionen dieser Funktionen mit dem Suffix `_l` übernehmen das Gebietsschema als Parameter und verwenden diesen anstatt des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
- Damit `toupper` erwarteten Ergebnisse gibt, [\_\_isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) und [isupper](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md) muss jeweils Rückholwert ungleich 0.  
+ Damit `toupper` die erwarteten Ergebnisse liefert, müssen [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) und [isupper](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md) beide ungleich null zurückgeben.  
   
- [Datenkonvertierungs\-Routinen](../../c-runtime-library/data-conversion.md)  
+ [Datenkonvertierungsroutinen](../../c-runtime-library/data-conversion.md)  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_totupper`|`toupper`|`_mbctoupper`|`towupper`|  
 |`_totupper_l`|`_toupper_l`|`_mbctoupper_l`|`_towupper_l`|  
   
 > [!NOTE]
->  `_toupper_l` und `_towupper_l` haben keine Gebietsschemaabhängigkeit und sind nicht für den direkten Aufruf vorgesehen.  Sie werden zur internen Verwendung von `_totupper_l` bereitgestellt.  
+>  `_toupper_l` und `_towupper_l` haben keine Gebietsschemaabhängigkeit und sind nicht für den direkten Aufruf vorgesehen. Sie werden zur internen Verwendung von `_totupper_l` bereitgestellt.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`toupper`|\<ctype.h\>|  
-|`_toupper`|\<ctype.h\>|  
-|`towupper`|\<ctype.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`toupper`|\<ctype.h>|  
+|`_toupper`|\<ctype.h>|  
+|`towupper`|\<ctype.h> oder \<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
- Siehe das Beispiel in [auf Funktionen](../../c-runtime-library/to-functions.md).  
+## <a name="example"></a>Beispiel  
+ Siehe das Beispiel in [to-Funktionen](../../c-runtime-library/to-functions.md).  
   
-## .NET Framework-Entsprechung  
- [System::Char::ToUpper](https://msdn.microsoft.com/en-us/library/system.char.toupper.aspx)  
-  
-## Siehe auch  
- [is\- und isw\-Routinen](../../c-runtime-library/is-isw-routines.md)   
- [to\-Funktionen](../../c-runtime-library/to-functions.md)   
+## <a name="see-also"></a>Siehe auch  
+ [is- und isw-Routinen](../../c-runtime-library/is-isw-routines.md)   
+ [to-Funktionen](../../c-runtime-library/to-functions.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [Interpretation von Mehrbytezeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+ [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

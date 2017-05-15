@@ -1,5 +1,5 @@
 ---
-title: fesetenv1 | Microsoft-Dokumentation
+title: Fesetenv | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40e20a2c6a3f3c22b9206ce078146b44bb841f68
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 96453fb182aa3c14bec8a296899cfcd15d39222c
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="fesetenv"></a>fesetenv
@@ -65,15 +66,14 @@ Legt die aktuelle Gleitkommaausnahme fest
 int fesetenv(  
    const fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
  `penv`  
- Zeiger auf ein `fenv_t`-Objekt, das eine Gleitkommaumgebung enthält, das durch einen Aufruf von [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) oder [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9) festgelegt ist. Sie können auch die standardmäßige Startgleitkommaumgebung mit dem Makro FE_DFL_ENV angeben.  
+ Zeiger auf ein `fenv_t`-Objekt, das eine Gleitkommaumgebung enthält, das durch einen Aufruf von [fegetenv](fegetenv1.md) oder [feholdexcept](feholdexcept2.md) festgelegt ist. Sie können auch die standardmäßige Startgleitkommaumgebung mit dem Makro FE_DFL_ENV angeben.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt 0 zurück, wenn die Umgebung erfolgreich eingerichtet wurde.        Andernfalls wird ein Wert ungleich&0; (null) zurückgegeben.  
+ Gibt 0 zurück, wenn die Umgebung erfolgreich eingerichtet wurde. Andernfalls wird ein Wert ungleich 0 (null) zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Funktion `fesetenv` legt die aktuelle Gleitkommaumgebung aus dem im `fenv_t`-Objekt gespeicherten Wert fest, auf das `penv` verweist. Die Gleitkommaumgebung ist ein Satz von Statusflags und Steuermodi, die Gleitkommaberechnungen beeinflussen. Dies beinhaltet das Rundungsverhalten und die Statusflags für Gleitkommaausnahmen.  Wenn `penv` nicht FE_DFL_ENV ist oder nicht auf ein gültiges `fenv_t`-Objekt verweist, ist das daraus resultierende Verhalten nicht definiert.  

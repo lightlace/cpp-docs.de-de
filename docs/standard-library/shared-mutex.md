@@ -72,10 +72,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 17978f1c6f934783236df5a36464ab44f8254903
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e864aca13c5ae83b3806a95026a05f8f408e9071
+ms.contentlocale: de-de
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltsharedmutexgt"></a>&lt;shared_mutex&gt;
@@ -91,7 +92,7 @@ Der <shared_mutex>-Header bietet Synchronisierungsprimitive für den Schutz von 
   
 |Funktionen|Beschreibung|  
 |---------------|-----------------|  
-|[swap-Funktion](../standard-library/shared-mutex.md#function_swap)|Vertauscht den Inhalt von gemeinsamen Mutex-Objekten, auf die die Funktionsparameter verweisen.|  
+|[swap](../standard-library/shared-mutex.md#function_swap)|Vertauscht den Inhalt von gemeinsamen Mutex-Objekten, auf die die Funktionsparameter verweisen.|  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -128,11 +129,11 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
  Die `shared_lock`-Vorlagenklasse erweitert die Unterstützung für das zeitgesteuerte Sperren und Übertragen des Besitzes an einen gemeinsamen Mutex. Der Besitz des Mutex kann bei oder nach der Erstellung abgerufen und an ein anderes `shared_lock`-Objekt übertragen werden. Objekte vom Typ `shared_lock` können verschoben, aber nicht kopiert werden.  
   
 > [!WARNING]
->  Die Synchronisierungstypen der C++-Standardbibliothek in Visual Studio 2015 basieren auf den Windows-Synchronisierungsprimitiven und verwenden ConcRT nicht mehr (außer wenn Windows XP die Zielplattform ist). Die in <mutex> definierten Typen dürfen nicht mit ConcRT-Typen oder -Funktionen verwendet werden.  
+>  Ab Visual Studio 2015, die C++-Standardbibliothek Synchronisierungstypen basieren auf Windows-Synchronisierungsprimitiven und verwenden ConcRT nicht mehr (außer wenn die Zielplattform Windows XP ist). Die in <mutex> definierten Typen dürfen nicht mit ConcRT-Typen oder -Funktionen verwendet werden.  
   
 ## <a name="classes"></a>Klassen  
   
-###  <a name="a-nameclasssharedmutexa-sharedmutex-class"></a><a name="class_shared_mutex"></a> shared_mutex-Klasse  
+###  <a name="class_shared_mutex"></a> shared_mutex-Klasse  
  Klasse `shared_mutex` implementiert einen nicht rekursiven Mutex mit gemeinsamer Besitzsemantik.  
   
 ```cpp  
@@ -158,7 +159,7 @@ class shared_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedtimedmutexa-sharedtimedmutex-class"></a><a name="class_shared_timed_mutex"></a> shared_timed_mutex-Klasse  
+###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex-Klasse  
  Klasse `shared_timed_mutex` implementiert einen nicht rekursiven Mutex mit gemeinsamer Besitz-Semantik, die den Anforderungen eines zeitgesteuerten Mutex-Typs entspricht.  
   
 ```cpp  
@@ -189,7 +190,7 @@ class shared_timed_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedlocka-sharedlock-class"></a><a name="class_shared_lock"></a> shared_lock-Klasse  
+###  <a name="class_shared_lock"></a> shared_lock-Klasse  
  Vorlagenklasse `shared_lock` steuert den gemeinsamen Besitz eines gemeinsamen Mutex-Objekts innerhalb eines Bereichs. Bei dem Vorlagenparameter muss es sich um einen gemeinsamen Mutex-Typ handeln.  
 
 ```cpp  
@@ -236,7 +237,7 @@ class shared_lock {
 
 ## <a name="functions"></a>Funktionen  
   
-###  <a name="a-namefunctionswapa-swap-function"></a><a name="function_swap"></a>swap-Funktion  
+###  <a name="function_swap"></a>Swap
  Tauscht die `shared_lock`-Objekte.  
   
 ```cpp  

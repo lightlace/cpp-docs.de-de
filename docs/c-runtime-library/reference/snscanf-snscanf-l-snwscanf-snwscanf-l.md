@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 79282200587a8c116bbcd44db68e809f6dcc0d9c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a9bc5007e94aad8cd8ed65f16ba3f0aaf73faabc
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
@@ -134,7 +135,7 @@ int __cdecl _snwscanf_l(
 ## <a name="return-value"></a>Rückgabewert  
  Die beiden Funktionen geben die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert bei einem Fehler oder beim Erreichen des Endes der Zeichenfolge vor der ersten Konvertierung lautet `EOF`. Weitere Informationen finden Sie unter [sscanf](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md).  
   
- Wenn `input` oder `format` ein `NULL`-Zeiger ist oder wenn `length` kleiner oder gleich&0; ist, wird der Handler für ungültige Parameter aufgerufen, siehe Beschreibung unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `EOF` zurück und stellen `errno` auf `EINVAL` ein.  
+ Wenn `input` oder `format` ein `NULL`-Zeiger ist oder wenn `length` kleiner oder gleich 0 ist, wird der Handler für ungültige Parameter aufgerufen, siehe Beschreibung unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `EOF` zurück und stellen `errno` auf `EINVAL` ein.  
   
  Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -191,9 +192,6 @@ int main( )
 _snscanf converted 2 fields: 15 and 12.000000  
 _snwscanf converted 2 fields: 15 and 12.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [scanf-Breitenangabe](../../c-runtime-library/scanf-width-specification.md)

@@ -1,44 +1,61 @@
 ---
-title: "_STATIC_ASSERT-Makro | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_STATIC_ASSERT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_STATIC_ASSERT-Makro"
+title: _STATIC_ASSERT-Makro | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _STATIC_ASSERT
+dev_langs:
+- C++
+helpviewer_keywords:
+- _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _STATIC_ASSERT-Makro
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 265796cdebbed1c0a067c44bbe6b71077be44a2b
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Werten Sie einen Ausdruck zur Kompilierzeit ausgeführt und generieren Sie einen Fehler, wenn das Ergebnis `FALSE` ist.  
+---
+# <a name="staticassert-macro"></a>_STATIC_ASSERT-Makro
+Auswerten eines Ausdrucks zur Kompilierzeit und Generieren eines Fehlers, wenn das Ergebnis `FALSE` ist  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 _STATIC_ASSERT(  
@@ -46,15 +63,15 @@ _STATIC_ASSERT(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `booleanExpression`  
- Ausdruck \(einschließlich Zeiger\) bis der Wert ungleich 0 \(null\) \(`TRUE`\) oder 0 ergibt \(`FALSE`\).  
+ Ausdruck (einschließlich Zeiger) der zu ungleich null (`TRUE`) oder 0 (`FALSE`) ausgewertet wird.  
   
-## Hinweise  
- Dieses Makro entspricht [\_ASSERT und \_ASSERTE Makros](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), außer dass `booleanExpression` wird zur Kompilierzeit statt zur Laufzeit ausgewertet.  Wenn `booleanExpression` auf `FALSE` \(0\) ergibt, wird [Compilerfehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) generiert.  
+## <a name="remarks"></a>Hinweise  
+ Dieses Makro ähnelt den [_ASSERT- und _ASSERTE-Makros](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), außer dass `booleanExpression` zur Kompilierzeit und nicht zur Laufzeit ausgewertet wird. Wenn `booleanExpression` `FALSE` (0) ergibt, wird [Compilerfehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) generiert.  
   
-## Beispiel  
- In diesem Beispiel untersuchen wir, dass `sizeof` größer als `int` ist, oder gleich 2 Bytes und ob `sizeof``long` 1 Byte ist.  Das Programm wird nicht kompiliert und sie generiert [Compilerfehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md), da `long` größer als 1 Byte ist.  
+## <a name="example"></a>Beispiel  
+ In diesem Beispiel wird überprüft, ob das `sizeof` eines `int` größer als oder gleich 2 Bytes und das `sizeof` eines `long` 1 Byte ist. Das Programm wird nicht kompiliert und generiert [Compiler-Fehler C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md), da ein `long` größer als 1 Byte ist.  
   
 ```  
 // crt__static_assert.c  
@@ -74,15 +91,12 @@ int main()
 }  
 ```  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Makro|Erforderlicher Header|  
-|-----------|---------------------------|  
-|`_STATIC_ASSERT`|\<crtdbg.h\>|  
+|-----------|---------------------|  
+|`_STATIC_ASSERT`|\<crtdbg.h>|  
   
-## .NET Framework-Entsprechung  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [\_ASSERT\-, \_ASSERTE\-, \_ASSERT\_EXPR\-Makros](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)
+ [_ASSERT-, _ASSERTE-, _ASSERT_EXPR-Makros](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)

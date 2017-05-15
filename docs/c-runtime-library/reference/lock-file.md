@@ -1,50 +1,67 @@
 ---
-title: "_lock_file | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lock_file"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_lock_file"
-  - "lock_file"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_lock_file-Funktion"
-  - "Dateisperrung [C++]"
-  - "lock_file-Funktion"
+title: _lock_file | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lock_file
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _lock_file
+- lock_file
+dev_langs:
+- C++
+helpviewer_keywords:
+- file locking [C++]
+- _lock_file function
+- lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _lock_file
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 379f0cba0d19133acbe70f7d0e9e186616a817a5
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Sperrt ein `FILE`\-Objekt, um die Konsistenz für die Threads sicherzustellen, die gleichzeitig auf das `FILE`\-Objekt zugreifen.  
+---
+# <a name="lockfile"></a>_lock_file
+Sperrt ein `FILE`-Objekt, um die Konsistenz für Threads sicherzustellen, die gleichzeitig das `FILE`-Objekt aufrufen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void _lock_file(  
@@ -52,22 +69,22 @@ void _lock_file(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `file`  
  Dateihandle.  
   
-## Hinweise  
- Die Funktion `_lock_file` sperrt das `FILE`\-Objekt, das von `file` angegeben wird.  Die zugrunde liegende Datei wird von `_lock_file` nicht gesperrt.  Verwenden Sie [\_unlock\_file](../../c-runtime-library/reference/unlock-file.md), um die Sperre für die Datei freigeben.  Aufrufe von `_lock_file` und `_unlock_file` müssen in einem Thread gefunden werden.  
+## <a name="remarks"></a>Hinweise  
+ Die `_lock_file`-Funktion sperrt das `FILE`-Objekt, das von `file` angegeben ist. Die zugrunde liegende Datei ist nicht durch `_lock_file` gesperrt. Verwenden Sie [_unlock_file](../../c-runtime-library/reference/unlock-file.md), um die Sperre der Datei aufzuheben. Aufrufe von `_lock_file` und `_unlock_file` müssen in einem Thread übereinstimmen.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_lock_file`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_lock_file`|\<stdio.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_lock_file.c  
@@ -119,31 +136,31 @@ int main()
 }  
 ```  
   
-  **...**  
-**Erstens**  
-**Sekunde**  
-**Erstens**  
-**Sekunde**  
-**Drittens**  
-**Sekunde**  
-**Drittens**  
-**Sekunde**  
-**...**  
-**FSiercsotn**  
-**DF**  
-**iSrescto**  
-**nFdi**  
-**rSsetc**  
-**oFnidr**  
-**sSte**  
-**cFoinrds**  
-**TS**  
-**eFciornsdt**   
-## .NET Framework-Entsprechung  
- [System::IO::FileStream::Lock](https://msdn.microsoft.com/en-us/library/system.io.filestream.lock.aspx)  
+```Output  
+...  
+First  
+Second  
+First  
+Second  
+Third  
+Second  
+Third  
+Second  
+...  
+FSiercsotn  
+dF  
+iSrescto  
+nFdi  
+rSsetc  
+oFnidr  
+sSte  
+cFoinrds  
+tS  
+eFciornsdt  
+```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dateibehandlung](../../c-runtime-library/file-handling.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_unlock\_file](../../c-runtime-library/reference/unlock-file.md)
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_unlock_file](../../c-runtime-library/reference/unlock-file.md)

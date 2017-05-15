@@ -1,66 +1,84 @@
 ---
-title: "atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtoi"
-  - "_wtoi_l"
-  - "atoi"
-  - "_atoi_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tstoi"
-  - "_wtoi"
-  - "_ttoi"
-  - "atoi"
-  - "_atoi_l"
-  - "_wtoi_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_atoi_l-Funktion"
-  - "ttoi-Funktion"
-  - "atoi_l-Funktion"
-  - "Zeichenfolgenkonvertierung, in ganze Zahlen"
-  - "_wtoi-Funktion"
-  - "wtoi_l-Funktion"
-  - "tstoi-Funktion"
-  - "_ttoi-Funktion"
-  - "_tstoi-Funktion"
-  - "_wtoi_l-Funktion"
-  - "atoi-Funktion"
-  - "wtoi-Funktion"
+title: atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtoi
+- _wtoi_l
+- atoi
+- _atoi_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tstoi
+- _wtoi
+- _ttoi
+- atoi
+- _atoi_l
+- _wtoi_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _atoi_l function
+- ttoi function
+- atoi_l function
+- string conversion, to integers
+- _wtoi function
+- wtoi_l function
+- tstoi function
+- _ttoi function
+- _tstoi function
+- _wtoi_l function
+- atoi function
+- wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# atoi, _atoi_l, _wtoi, _wtoi_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 5ed38a5d4c5a9ff6d976302cc52cc14672a4d60b
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Konvertiert eine Zeichenfolge die ganze Zahl.  
+---
+# <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
+Konvertieren einer Zeichenfolge in eine Ganzzahl.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int atoi(  
@@ -79,45 +97,45 @@ int _wtoi_l(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `str`  
  Zu konvertierende Zeichenfolge.  
   
  `locale`  
  Zu verwendendes Gebietsschema.  
   
-## Rückgabewert  
- Jede Funktion gibt den `int`\-Wert zurück, der mit die Eingabezeichen als Zahl erzeugt, interpretiert.  Der Rückgabewert ist 0 für `atoi`  und `_wtoi`, wenn die Eingabe nicht in einen Wert dieses Typs umgewandelt werden kann.  
+## <a name="return-value"></a>Rückgabewert  
+ Jede Funktion gibt den `int`-Wert zurück, der erstellt wird, indem die Eingabezeichen als Zahl interpretiert werden. Der Rückgabewert ist für `atoi` und `_wtoi` 0, wenn die Eingabe nicht in einen Wert dieses Typs umgewandelt werden kann.  
   
- Im Fall des Überlaufs mit großen negative ganzzahlige Werte, wird `LONG_MIN` zurückgegeben.  `atoi` und `_wtoi` geben `INT_MAX` und `INT_MIN` auf diesen Bedingungen zurück.  In Fällen, in denen alle Werte außerhalb des Gültigkeitsbereichs liegen, wird `errno` auf `ERANGE` festgelegt.  Wenn der Parameter, der übergeben ist, `NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben 0 zurück.  
+ Im Falle eines Überlaufs mit großen negativen ganzzahligen Werten wird `LONG_MIN` zurückgegeben. Unter diesen Bedingungen geben `atoi` und `_wtoi` `INT_MAX`und`INT_MIN` zurück. In Fällen, in denen alle Werte außerhalb des Gültigkeitsbereichs liegen, wird `errno` auf `ERANGE` festgelegt. Wenn der übergebene Parameter `NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben 0 zurück.  
   
-## Hinweise  
- Diese Funktionen konvertieren eine Zeichenfolge in einen ganzzahligen Wert \(`atoi` und `_wtoi`\).  Die Eingabezeichenfolge ist eine Sequenz von Zeichen, die als numerischer Wert des angegebenen Typs interpretiert werden.  Die Funktion beendet das Lesen der Eingabezeichenfolge am ersten Zeichen, das nicht als Teil einer Zahl erkannt wird.  Dieses Zeichen ist möglicherweise darauf NULL\-Zeichen \("\\0" oder L"\\0"\) die Zeichenfolge Beenden.  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktionen konvertieren eine Zeichenfolge in eine Ganzzahl (`atoi` und`_wtoi`. Die Eingabezeichenfolge ist eine Sequenz von Zeichen, die als numerischer Wert des angegebenen Typs interpretiert werden. Die Funktion beendet das Lesen der Eingabezeichenfolge am ersten Zeichen, das nicht als Teil einer Zahl erkannt wird. Möglicherweise ist dies das Zeichen NULL ('\0' oder L'\0'), das am Ende der Zeichenfolge steht.  
   
- Das `str`\-Argument `atoi` und `_wtoi` weist die folgende Form:  
+ Das `str`-Argument für `atoi` und `_wtoi` weist folgende Form auf:  
   
- \[`whitespace`\] \[`sign`\] \[`digits`\]\]  
+ [`whitespace`] [`sign`] [`digits`]]  
   
- `whitespace` besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden, `sign` ist entweder Pluszeichen \(\+\) oder Minuszeichen \(\-\) und `digits` ist mindestens eine Ziffer.  
+ Ein `whitespace` besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden. `sign` ist entweder Pluszeichen (+) oder Minuszeichen (-) und `digits` sind eine oder mehrere Ziffern.  
   
- Die Versionen dieser Funktionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstoi`|`atoi`|`atoi`|`_wtoi`|  
 |`_ttoi`|`atoi`|`atoi`|`_wtoi`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routinen|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`atoi`|\<stdlib.h\>|  
-|`_atoi_l`, `_wtoi`, `_wtoi_l`|\<stdlib.h\> oder \<wchar.h\>|  
+|--------------|---------------------|  
+|`atoi`|\<stdlib.h>|  
+|`_atoi_l`, `_wtoi`, `_wtoi_l`|\<stdlib.h> oder \<wchar.h>|  
   
-## Beispiel  
- Das Programm zeigt an, wie Zahlen, die als Zeichenfolgen gespeichert werden, auf den numerischen Werten mithilfe der Funktionen `atoi` konvertiert werden können.  
+## <a name="example"></a>Beispiel  
+ Dieses Programm zeigt, wie die `atoi`-Funktion verwendet wird, um als Zeichenfolgen gespeicherte Zahlen in numerische Werte zu konvertieren.  
   
 ```  
 // crt_atoi.c  
@@ -156,22 +174,19 @@ int main( void )
 }  
 ```  
   
-  **Funktion: atoi \("\-2309 "\) \= \-2309**  
-**Funktion: atoi \("31412764 "\) \= 31412764**  
-**Funktion: atoi \("3336402735171707160320 "\) \= 2147483647**  
-**Overflow condition occurred.**   
-## .NET Framework-Entsprechung  
+```Output  
+Function: atoi( "  -2309 " ) = -2309  
+Function: atoi( "31412764" ) = 31412764  
+Function: atoi( "3336402735171707160320" ) = 2147483647  
+Overflow condition occurred.  
+```  
   
--   [System::Convert::ToInt32](https://msdn.microsoft.com/en-us/library/system.convert.toint32.aspx)  
-  
--   [System::Convert::ToUInt32](https://msdn.microsoft.com/en-us/library/system.convert.touint32.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Gleitkomma-Unterstützung](../../c-runtime-library/floating-point-support.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_atodbl, \_atodbl\_l, \_atoldbl, \_atoldbl\_l, \_atoflt, \_atoflt\_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

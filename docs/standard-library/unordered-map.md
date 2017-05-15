@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: 4a90e1c2db038980309e98aed5fb0802dcb5a594
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 662bbde9b4fc43321bd1435d17d6b7110e7ac31c
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
@@ -59,12 +60,12 @@ Definiert die Containervorlagenklassen [unordered_map](../standard-library/unord
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-map-operators.md#operator_neq)|Testet, ob das unordered_map-Objekt links vom Operator ungleich dem unordered_map-Objekt rechts vom Operator ist.|  
-|[operator==](../standard-library/unordered-map-operators.md#operator_eq_eq)|Überprüft, ob das unordered_map-Objekt links vom Operator gleich dem unordered_map-Objekt rechts vom Operator ist.|  
-|[swap-Funktion (unordered_map)](../standard-library/unordered-map-functions.md#swap_function)|Vertauscht zwei Zuordnungen.|  
-|[operator!=](../standard-library/unordered-map-operators.md#operator_neq)|Überprüft, ob das unordered_multimap-Objekt links vom Operator ungleich dem unordered_multimap-Objekt rechts vom Operator ist.|  
-|[operator==](../standard-library/unordered-map-operators.md#operator_eq_eq)|Überprüft, ob das unordered_multimap-Objekt links vom Operator gleich dem unordered_multimap-Objekt rechts vom Operator ist.|  
-|[swap-Funktion (unordered_map)](../standard-library/unordered-map-functions.md#swap_function)|Vertauscht zwei Mehrfachzuordnungen.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Testet, ob das unordered_map-Objekt links vom Operator ungleich dem unordered_map-Objekt rechts vom Operator ist.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Überprüft, ob das unordered_map-Objekt links vom Operator gleich dem unordered_map-Objekt rechts vom Operator ist.|  
+|[swap-Funktion (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Vertauscht zwei Zuordnungen.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Überprüft, ob das unordered_multimap-Objekt links vom Operator ungleich dem unordered_multimap-Objekt rechts vom Operator ist.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Überprüft, ob das unordered_multimap-Objekt links vom Operator gleich dem unordered_multimap-Objekt rechts vom Operator ist.|  
+|[swap-Funktion (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Vertauscht zwei Mehrfachzuordnungen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [unordered_multiset-Klasse](../standard-library/unordered-multiset-class.md)   

@@ -35,54 +35,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: c1753b0f4f017c6d02fc41c427285e6adae6521b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 02d651b3e3ca4dc643b01463a85762a6427b8e83
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
-Definiert die Containervorlagenklasse „complex“ und deren unterstützende Vorlagen.  
+Definiert die containervorlagenklasse **komplexe** und deren unterstützende Vorlagen.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
 #include <complex>  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Eine komplexe Zahl ist ein geordnetes Paar aus reellen Zahlen. Rein geometrisch ausgedrückt ist die komplexe Ebene die reelle zweidimensionale Ebene. Die speziellen Merkmale der komplexen Ebene, durch die sie sich von der reellen Ebene unterscheidet, sind darin begründet, dass sie eine zusätzliche algebraische Struktur hat. Diese algebraische Struktur hat zwei grundlegende Vorgänge:  
   
--   Addition, die als (*a, b*) + (*c, d*) = (*a + c, b + d)* definiert ist  
+-   Addition defined as (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)  
   
--   Multiplikation, die als (*a, b*) \* (*c, d*) = *ac - bd, ad + bc*) definiert ist  
+-   Multiplication defined as (*a*, *b*) \* (*c*, *d*) = (*ac* - *bd*, *ad* + *bc*)  
   
  Die Menge der komplexen Zahlen mit den Operationen für komplexe Addition und komplexe Multiplikation ist im standardmäßigen algebraischen Sinn ein Körper:  
   
 -   Die Operationen Addition und Multiplikation sind kommutativ und assoziativ, und Multiplikation erfolgt vor Addition, genau so, wie dies für reelle Addition und Multiplikation für den Körper der reellen Zahlen der Fall ist.  
   
--   Die komplexe Zahl (*0, 0*) ist die additive Identität, und (*1, 0*) ist die multiplikative Identität.  
+-   Die komplexe Zahl (0, 0) ist die Additive Identität und (1, 0) ist die multiplikative Identität.  
   
--   Die Gegenzahl für eine komplexe Zahl (*a, b*) ist (*- a -b*), und der Kehrwert für alle komplexen Zahlen außer (*0, 0*) ist  
+-   Die gegenzahl für eine komplexe Zahl (*eine*, *b*) ist (-*eine*, -*b*), und de Kehrwert für alle komplexe Zahlen außer (0, 0) ist  
   
-     (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>)  
+     (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))  
   
- Indem eine komplexe Zahl *z = (a, b)* in der Form*z = a + bi* dargestellt wird, wobei *i*<sup>2</sup> *=* -1 ist, können die algebraischen Regeln für die Menge der reellen Zahlen auf die Menge der komplexen Zahlen und deren Komponenten angewendet werden. Beispiel:  
+ Durch die Darstellung einer komplexen Zahl *z* = (*eine*, *b*) in der Form *z* = *eine* + *Bi*, wobei *ich*<sup>2</sup> =-1, die Regeln für die Algebra der Menge der reellen Zahlen, die an die Menge der komplexen Zahlen und deren Komponenten angewendet werden kann. Zum Beispiel:  
   
- (1 + 2*i*) \* (2 + 3*i*)    = 1\*(2 + 3*i*) + 2*i*\*(2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
+  (1 + 2*i*) \* (2 + 3*i*)  
+  = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
+  = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
+  = (2 - 6) + (3 + 4)*i*  
+  = -4 + 7*i*  
   
- = (2 –6) + (3 + 4)*i* = -4 + 7*i*  
-  
- Das System der komplexen Zahlen ist ein Körper, jedoch kein geordneter Körper. Es gibt keine Reihenfolge der komplexen Zahlen, wie es sie für den Körper oder die reellen Zahlen und deren Teilmengen gibt. Daher können Ungleichheiten nicht auf komplexe Zahlen angewendet werden, wie sie auf reelle Zahlen angewendet werden, die ein geordneter Körper sind.  
+ Das System der komplexen Zahlen ist ein Körper, jedoch kein geordneter Körper. Es gibt keine Reihenfolge der komplexen Zahlen ist für das Feld der reellen Zahlen und deren Teilmengen vorhanden. daher können ungleichheiten nicht auf komplexe Zahlen angewendet werden können, wie sie in reelle Zahlen sind.  
   
  Es gibt drei allgemeine Formen der Darstellung einer komplexen Zahl *z*:  
   
--   Kartesisch: *z = a + bi*  
+-   Cartesian: *z* = *a* + *bi*  
   
--   Polarform: *z = r* (cos *+ i*sin)  
+-   Polar: *z* = *r* (cos *p* + *i* sin *p*)  
   
--   Exponentiell: *z = r \** exp()  
+-   Exponential: *z* = *r* \* *e*<sup>*ip*</sup>  
   
  Die Ausdrücke, die in diesen Standarddarstellungen einer komplexen Zahl verwendet werden, werden wie folgt bezeichnet:  
   
@@ -90,11 +92,11 @@ Definiert die Containervorlagenklasse „complex“ und deren unterstützende Vo
   
 -   Die imaginäre kartesische Komponente oder der Imaginärteil *b*  
   
--   Der Betrag oder absolute Wert einer komplexen Zahl P  
+-   Der Betrag oder Absolute Wert einer komplexen Zahl *r*.  
   
--   Der Argument- oder Phasenwinkel.  
+-   Der Argument- oder Phasenwinkel *p* im Bogenmaß.  
   
- Sofern nicht anders angegeben, müssen Funktionen, die mehrere Werte zurückgeben können, einen Hauptwert für ihre Argumente zurückgeben, der größer als -pi und kleiner gleich +pi ist, damit sie einwertig bleiben. Alle Winkel müssen in Radiant angegeben werden, wobei ein Kreis 2 pi Radiant (360 Grad) umfasst.  
+ Sofern nicht anders angegeben, sind Funktionen, die mehrere Werte zurückgeben können, einen Hauptwert für ihre Argumente zurückgeben,-π größer oder kleiner als oder gleich + π, um sie einwertig bleiben. Alle Winkel im Bogenmaß ausgedrückt werden müssen, wobei 2π Radiant (360 Grad) in einem Kreis.  
   
 ### <a name="functions"></a>Funktionen  
   
@@ -123,30 +125,30 @@ Definiert die Containervorlagenklasse „complex“ und deren unterstützende Vo
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/complex-operators.md#operator_neq)|Testet zwei komplexe Zahlen auf Ungleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
-|[operator*](../standard-library/complex-operators.md#operator_star)|Multipliziert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
-|[operator+](../standard-library/complex-operators.md#operator_add)|Addiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
+|[operator!=](../standard-library/complex-operators.md#op_neq)|Testet zwei komplexe Zahlen auf Ungleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
+|[operator*](../standard-library/complex-operators.md#op_star)|Multipliziert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
+|[operator+](../standard-library/complex-operators.md#op_add)|Addiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
 |[operator-](../standard-library/complex-operators.md#operator-)|Subtrahiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
-|[operator/](../standard-library/complex-operators.md#operator_)|Dividiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
-|[operator<\<](../standard-library/complex-operators.md#operator_lt__lt_)|Eine Vorlagenfunktion, die eine komplexe Zahl in den Ausgabestream einfügt.|  
-|[operator==](../standard-library/complex-operators.md#operator_eq_eq)|Testet zwei komplexe Zahlen auf Gleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
-|[operator >>](../standard-library/complex-operators.md#operator_gt__gt_)|Eine Vorlagenfunktion, die einen komplexen Wert aus dem Eingabestream extrahiert.|  
+|[operator/](../standard-library/complex-operators.md#op_div)|Dividiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
+|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|Eine Vorlagenfunktion, die eine komplexe Zahl in den Ausgabestream einfügt.|  
+|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Testet zwei komplexe Zahlen auf Gleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|  
+|[operator >>](../standard-library/complex-operators.md#op_gt_gt)|Eine Vorlagenfunktion, die einen komplexen Wert aus dem Eingabestream extrahiert.|  
   
 ### <a name="classes"></a>Klassen  
   
 |||  
 |-|-|  
-|[complex\<double>](../standard-library/complex-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten speichert, die beide den Typ **double** haben*,* wobei das erste Objekt dem Realteil einer komplexen Zahl und das zweite Objekt dem Imaginärteil entspricht.|  
-|[complex\<float>](../standard-library/complex-float.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten speichert, die beide den Typ **float** haben*,* wobei das erste Objekt dem Realteil einer komplexen Zahl und das zweite Objekt dem Imaginärteil entspricht.|  
-|[complex\<long double>](../standard-library/complex-long-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten speichert, die beide den Typ `long double`* haben,* wobei das erste Objekt dem Realteil einer komplexen Zahl und das zweite Objekt dem Imaginärteil entspricht.|  
+|[complex\<double>](../standard-library/complex-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **doppelte**, wobei das erste den reellen Teil einer komplexen Zahl und die Sekunde, den imaginären Teil entspricht darstellt.|  
+|[complex\<float>](../standard-library/complex-float.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **"float"**, wobei das erste den reellen Teil einer komplexen Zahl und die Sekunde, den imaginären Teil entspricht darstellt.|  
+|[complex\<long double>](../standard-library/complex-long-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **long double**, wobei das erste den reellen Teil einer komplexen Zahl und die Sekunde, den imaginären Teil entspricht darstellt.|  
 |[complex](../standard-library/complex-class.md)|Die Vorlagenklasse beschreibt ein Objekt, mit dem das System komplexer Zahlen dargestellt wird und komplexe arithmetische Operationen ausgeführt werden.|  
   
 ### <a name="literals"></a>Literale  
- Der Header \<complex> definiert die folgenden [benutzerdefinierten Literale](../cpp/user-defined-literals-cpp.md), mit denen eine komplexe Zahl erstellt wird, deren Realteil&0; (null) und deren Imaginärteil der Wert des Eingabeparameters ist.  
+ Der Header \<complex> definiert die folgenden [benutzerdefinierten Literale](../cpp/user-defined-literals-cpp.md), mit denen eine komplexe Zahl erstellt wird, deren Realteil 0 (null) und deren Imaginärteil der Wert des Eingabeparameters ist.  
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Gibt `complex<long double>{0.0L, static_cast<long double>(d)}` zurück.|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Gibt:`complex<long double>{0.0L, static_cast<long double>(d)}`|  
 |`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Gibt `complex<double>{0.0, static_cast<double>(d)}` zurück.|  
 |`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Gibt `complex<float>{0.0f, static_cast<float>(d)}` zurück.|  
   

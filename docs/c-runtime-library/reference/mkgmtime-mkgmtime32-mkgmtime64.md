@@ -1,107 +1,120 @@
 ---
-title: "_mkgmtime, _mkgmtime32, _mkgmtime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mkgmtime32"
-  - "_mkgmtime64"
-  - "_mkgmtime"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mkgmtime64"
-  - "mkgmtime32"
-  - "_mkgmtime32"
-  - "mkgmtime"
-  - "mkgmtime64"
-  - "_mkgmtime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mkgmtime32-Funktion"
-  - "time-Funktionen"
-  - "mkgmtime-Funktion"
-  - "_mkgmtime-Funktion"
-  - "Konvertieren von Zeiten"
-  - "mkgmtime64-Funktion"
-  - "_mkgmtime64-Funktion"
-  - "_mkgmtime32-Funktion"
-  - "Uhrzeit, Konvertieren"
+title: _mkgmtime, _mkgmtime32, _mkgmtime64 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mkgmtime32
+- _mkgmtime64
+- _mkgmtime
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mkgmtime64
+- mkgmtime32
+- _mkgmtime32
+- mkgmtime
+- mkgmtime64
+- _mkgmtime
+dev_langs:
+- C++
+helpviewer_keywords:
+- mkgmtime32 function
+- time functions
+- mkgmtime function
+- _mkgmtime function
+- converting times
+- mkgmtime64 function
+- _mkgmtime64 function
+- _mkgmtime32 function
+- time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _mkgmtime, _mkgmtime32, _mkgmtime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7f73bffc2971b535f393cef7e0e2f957b01eee42
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Konvertiert eine UTC\-Zeit, dargestellt durch eine `tm``struct` zu UTC\-Zeit dargestellt, durch eine `time_t` Typ.  
+---
+# <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
+Konvertiert eine UTC-Zeit des Typs `tm``struct` in eine UTC-Zeit des Typs `time_t`.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
-time_t _mkgmtime(  
-   struct tm*   
-timeptr  
+      time_t _mkgmtime(  
+   struct tm* timeptr  
 );  
 __time32_t _mkgmtime32(  
-   struct tm*   
-timeptr  
+   struct tm* timeptr  
 );  
 __time64_t _mkgmtime64(  
-   struct tm*   
-timeptr  
+   struct tm* timeptr  
 );  
-  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `timeptr`  
- Ein Zeiger auf die UTC\-Zeit als einen `struct``tm` zu konvertieren.  
+ Ein Zeiger auf die UTC-Zeit als `struct``tm` für die Konvertierung.  
   
-## Rückgabewert  
- Eine Menge von Typ `__time32_t` oder `__time64_t` der die Anzahl der Sekunden seit Mitternacht des 1. Januar 1970, in der Coordinated Universal Time \(UTC\) verstrichen. Wenn das Datum außerhalb des zulässigen Bereichs \(siehe Abschnitt "Hinweise"\) oder die Eingabe nicht als gültige Uhrzeit interpretiert werden kann, wird – 1 zurückgegeben.  
+## <a name="return-value"></a>Rückgabewert  
+ Eine Menge von Typ `__time32_t` oder `__time64_t`, die die seit Mitternacht (UTC) des 1. Januar 1970 verstrichenen Sekunden darstellt. Wenn das Datum außerhalb des gültigen Bereichs liegt (siehe Abschnitt "Hinweise") oder die Eingabe kann nicht als gültig interpretiert werden kann, wird-1 zurückgegeben.  
   
-## Hinweise  
- Die `_mkgmtime32` und `_mkgmtime64` Funktionen konvertieren eine UTC\-Zeit, um eine `__time32_t` oder `__time64_t` Typ, der die Uhrzeit in UTC darstellt. Um eine Ortszeit in UTC\-Zeit zu konvertieren, verwenden Sie `mktime`, `_mktime32`, und `_mktime64` stattdessen.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktionen `_mkgmtime32` und `_mkgmtime64` konvertieren eine UTC-Zeit in eine durch Typ `__time32_t` oder `__time64_t` dargestellte Zeit in UTC. Verwenden Sie stattdessen `mktime`, `_mktime32` und `_mktime64`, um eine Ortszeit in eine UTC-Zeit zu konvertieren.  
   
- `_mkgmtime` ist eine Inlinefunktion, der ergibt `_mkgmtime64`, und `time_t` entspricht `__time64_t`. Möchten Sie den Compiler, interpretieren erzwingen `time_t`als das alte 32\-Bit `time_t`, können `_USE_32BIT_TIME_T`. Dies wird nicht empfohlen, da die Anwendung nach dem 18. Januar 2038 fehlschlägt \(den maximalen Bereich der 32\-Bit\- `time_t`\), und es darf nicht auf allen auf 64\-Bit\-Plattformen.  
+ `_mkgmtime` ist eine Inlinefunktion, die `_mkgmtime64` auswertet, und `time_t` entspricht `__time64_t`. Wenn Sie den Compiler zwingen müssen, `time_t` als das alte 32-Bit- `time_t`zu interpretieren, definieren Sie `_USE_32BIT_TIME_T`. Dies ist nicht zu empfehlen, da es nach dem 18. Januar 2038 (Maximalbereich für einen 32-Bit-`time_t`) zu Anwendungsfehlern kommen kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.  
   
- Die Zeit in Struktur übergebenen wird wie folgt auf die gleiche Weise geändert werden, wie sie geändert wurden, mit der `_mktime` Funktionen: die `tm_wday` und `tm_yday` \-Feld festgelegt werden, um neue Werte anhand der Werte der `tm_mday` und `tm_year`. Wenn Sie eine `tm`\-Strukturzeit angeben, legen Sie das Feld `tm_isdst` auf Folgendes fest:  
+ Die jeweilige Zeitstruktur wird genau wie mit den Funktionen von `_mktime` geändert: Für die Felder `tm_wday` und `tm_yday` werden anhand der Werte für `tm_mday` und `tm_year` neue Werte festgelegt. Wenn Sie eine `tm`-Strukturzeit angeben, legen Sie das Feld `tm_isdst` auf Folgendes fest:  
   
--   Null \(0\) weist darauf hin, dass die Normalzeit gilt.  
+-   Null (0) weist darauf hin, dass die Normalzeit gilt.  
   
 -   Ein Wert größer als 0 weist darauf hin, dass die Sommerzeit gilt.  
   
--   Ein Wert kleiner als null gibt an, dass der C\-Laufzeitbibliothekscode berechnet, ob Normalzeit oder Sommerzeit gilt.  
+-   Ein Wert kleiner als null gibt an, dass der C-Laufzeitbibliothekscode berechnet, ob Normalzeit oder Sommerzeit gilt.  
   
- Der C\-Laufzeitbibliothek verwendet die TZ\-Umgebungsvariable um den richtigen Sommerzeit zu bestimmen. Wenn TZ nicht festgelegt ist, wird das Betriebssystem abgefragt, um die richtige regionale Sommerzeit Verhalten abzurufen.`tm_isdst` ist ein Pflichtfeld. Wenn nicht festgelegt ist, dessen Wert nicht definiert ist und der Rückgabewert `mktime` ist unvorhersehbar.  
+ Die C-Laufzeitbibliothek verwendet die ZZ-Umgebungsvariable, um die richtige Sommerzeit zu bestimmen. Wurde keine ZZ festgelegt, wird das Betriebssystem abgefragt, um das richtige regionale Sommerzeitverhalten abzurufen. `tm_isdst` ist ein Pflichtfeld. Wird es nicht festgelegt, wird sein Wert nicht definiert und der Rückgabewert von `mktime` ist unvorhersehbar.  
   
- Das Spektrum der `_mkgmtime32` Funktion ist Mitternacht, 1. Januar 1970 UTC bis 23:59:59 am 18. Januar 2038 UTC. Den Bereich der `_mkgmtime64` von Mitternacht, 1. Januar 1970 UTC bis 23:59:59, 31. Dezember 3000, UTC ist. Ein Datum außerhalb des gültigen Bereichs führt ein Rückgabewert von – 1. Den Bereich der `_mkgmtime` davon abhängig, ob `_USE_32BIT_TIME_T` definiert ist. \(Standard\) nicht definiert, der Bereich ist der `_mkgmtime64`ist, andernfalls der Bereich ist beschränkt auf den 32\-Bit\-Adressbereich von `_mkgmtime32`.  
+ Der Bereich der Funktion `_mkgmtime32` liegt zwischen Mitternacht (UTC) des 1. Januar 1970 und 23:59:59 (UTC) des 18. Januar 2038. Der Bereich der Funktion `_mkgmtime64` liegt zwischen Mitternacht (UTC) des 1. Januar 1970 und 23:59:59 (UTC) des 31. Dezember 3000. Ein Datum außerhalb des gültigen Bereichs führt ein Rückgabewert von – 1. Der Bereich von `_mkgmtime` hängt davon, ob `_USE_32BIT_TIME_T` definiert wurde. Wurde der Bereich nicht definiert (Standard), gilt der Bereich von `_mkgmtime64`. Ansonsten ist er auf den 32-Bit-Bereich von `_mkgmtime32` beschränkt.  
   
- Beachten Sie, dass `gmtime` und `localtime` verwenden einen einzelnen statisch zugewiesenen Puffer für die Konvertierung. Wenn Sie diesen Puffer für angeben `mkgmtime`, der vorherige Inhalt zerstört.  
+ Bitte beachten Sie, dass `gmtime` und `localtime` für die Konvertierung einen einzelnen, statisch zugewiesenen Puffer verwenden. Wenn Sie diesen Puffer für `mkgmtime` bereitstellen, werden alle vorherigen Inhalte zerstört.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_mkgmtime.c  
@@ -138,7 +151,7 @@ int main()
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 Seconds since midnight, January 1, 1970  
@@ -150,7 +163,7 @@ Local Time: Thu Feb 15 17:14:52 2007
 Greenwich Mean Time: Fri Feb 16 01:14:52 2007  
 ```  
   
- Das folgende Beispiel zeigt, wie die Struktur nicht vollständig mit der berechneten Werte der Tag der Woche und Tag des Jahres ausgefüllt ist.  
+ Das folgende Beispiel zeigt, wie die unvollständige Struktur mit den für den Tag der Woche und den Tag des Jahres berechneten Werten ausgefüllt wird.  
   
 ```  
 // crt_mkgmtime2.c  
@@ -187,7 +200,7 @@ int main()
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 Before calling _mkgmtime, t1 = Sun Feb 12 00:00:00 2003  
@@ -196,12 +209,12 @@ After calling _mkgmtime, t1 = Wed Feb 12 00:00:00 2003
  t.tm_yday = 42  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
- [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [asctime\_s, \_wasctime\_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [gmtime, \_gmtime32, \_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [gmtime\_s, \_gmtime32\_s, \_gmtime64\_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime\_s, \_localtime32\_s, \_localtime64\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [mktime, \_mktime32, \_mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
- [time, \_time32, \_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [mktime, _mktime32, _mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

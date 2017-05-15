@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6c72cc32c5bd48bc6b7fc9c9187797f056ec7712
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8eee02245359e71f32944f1a1f5c7180223553e3
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctob"></a>wctob
@@ -72,7 +73,7 @@ int wctob(
  Zu übersetzender Wert.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn `wctob` ein Breitzeichen erfolgreich konvertiert, wird dessen Multibytezeichen-Darstellung nur dann zurückgegeben, wenn das Multibytezeichen genau ein Byte lang ist. Wenn `wctob` ein Breitzeichen erkennt, das nicht in ein Multibytezeichen konvertiert werden kann, oder wenn das Multibytezeichen nicht genau ein Byte lang ist, wird -1 zurückgegeben.  
+ Wenn `wctob` ein Breitzeichen erfolgreich konvertiert, wird dessen Multibytezeichen-Darstellung nur dann zurückgegeben, wenn das Multibytezeichen genau ein Byte lang ist. Wenn `wctob` entdeckt ein Breitzeichen, es kann nicht in einem multibyte-Zeichen oder multibyte-Zeichen konvertiert, ist nicht genau ein Byte lang ist, wird-1 zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Funktion `wctob` konvertiert ein in `wchar` enthaltenes Breitzeichen in das entsprechende Multibytezeichen, das vom Rückgabewert `int` übergeben wird, wenn das Multibytezeichen genau ein Byte lang ist.  
@@ -120,9 +121,6 @@ int main( void )
 ```Output  
 Determined the corresponding multibyte character to be "A".  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   

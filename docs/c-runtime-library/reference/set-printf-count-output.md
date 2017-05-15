@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dfb86b7d6e52168fda5ec28bd66edc29b24432e4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 11f0dbe2a4bb67992dd307aea62f79ca8f6b5f73
+ms.contentlocale: de-de
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
@@ -76,7 +77,7 @@ int _set_printf_count_output(
  Der Status der `%n`-Unterstützung vor dem Aufrufen dieser Funktion: ungleich null, wenn die `%n`-Unterstützung aktiviert wurde, 0, wenn sie deaktiviert wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Aus Sicherheitsgründen ist die Unterstützung für den `%n`-Formatbezeichner standardmäßig in `printf` und dessen Varianten deaktiviert. Wenn `%n` in einer `printf`-Formatzeichenfolge festgestellt wird, wird gemäß Standardverhalten der Handler für ungültige Parameter wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn `_set_printf_count_output` mit einem Argument ungleich NULL aufgerufen wird, interpretieren die Funktionen der `printf`-Familie `%n` so, wie unter [printf-Typenfeldzeichen](../../c-runtime-library/printf-type-field-characters.md) beschrieben.  
+ Aus Sicherheitsgründen ist die Unterstützung für den `%n`-Formatbezeichner standardmäßig in `printf` und dessen Varianten deaktiviert. Wenn `%n` in einer `printf`-Formatzeichenfolge festgestellt wird, wird gemäß Standardverhalten der Handler für ungültige Parameter wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Aufrufen `_set_printf_count_output` mit einem Argument ungleich 0 führt dazu, dass `printf`-Produktfamilie Funktionen zum Interpretieren `%n` wie beschrieben in [Syntax der Formatangabe: printf- und Wprintf-Funktionen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -88,7 +89,7 @@ int _set_printf_count_output(
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```C  
 // crt_set_printf_count_output.c  
 #include <stdio.h>  
   
@@ -106,17 +107,12 @@ int main()
 }  
 ```  
   
-## <a name="output"></a>Ausgabe  
-  
-```  
+```Output  
 %n support was disabled.  
 %n support is now enabled.  
 123456789  
 i = 5  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [_get_printf_count_output](../../c-runtime-library/reference/get-printf-count-output.md)

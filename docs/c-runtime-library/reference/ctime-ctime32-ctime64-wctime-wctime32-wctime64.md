@@ -1,76 +1,93 @@
 ---
-title: "ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ctime64"
-  - "_wctime32"
-  - "ctime"
-  - "_wctime64"
-  - "_ctime32"
-  - "_wctime"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wctime64"
-  - "_ctime32"
-  - "_tctime"
-  - "_wctime"
-  - "_wctime32"
-  - "_tctime64"
-  - "_ctime64"
-  - "ctime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tctime64-Funktion"
-  - "_ctime32-Funktion"
-  - "ctime32-Funktion"
-  - "_wctime-Funktion"
-  - "wctime64-Funktion"
-  - "_tctime64-Funktion"
-  - "_tctime32-Funktion"
-  - "_ctime64-Funktion"
-  - "_wctime64-Funktion"
-  - "ctime-Funktion"
-  - "wctime32-Funktion"
-  - "ctime64-Funktion"
-  - "_wctime32-Funktion"
-  - "_tctime-Funktion"
-  - "tctime32-Funktion"
-  - "tctime-Funktion"
-  - "wctime-Funktion"
-  - "Uhrzeit, Konvertieren"
+title: ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64 | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ctime64
+- _wctime32
+- ctime
+- _wctime64
+- _ctime32
+- _wctime
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wctime64
+- _ctime32
+- _tctime
+- _wctime
+- _wctime32
+- _tctime64
+- _ctime64
+- ctime
+dev_langs:
+- C++
+helpviewer_keywords:
+- tctime64 function
+- _ctime32 function
+- ctime32 function
+- _wctime function
+- wctime64 function
+- _tctime64 function
+- _tctime32 function
+- _ctime64 function
+- _wctime64 function
+- ctime function
+- wctime32 function
+- ctime64 function
+- _wctime32 function
+- _tctime function
+- tctime32 function
+- tctime function
+- wctime function
+- time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f3d756cec6d9482cfabcbc2a336cbf5d6381a97a
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Konvertieren Sie einen Zeitwert in eine Zeichenfolge, und passen Sie für die lokale Zeit Einstellungen. Sicherere Versionen dieser Funktionen sind verfügbar. finden Sie unter [ctime\_s, \_ctime32\_s, \_ctime64\_s, \_wctime\_s, \_wctime32\_s, \_wctime64\_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md).  
+---
+# <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
+Konvertieren Sie einen Zeitwert in eine Zeichenfolge, und passen Sie sie an die Zeitzoneneinstellungen an. Sicherere Versionen dieser Funktionen sind verfügbar. Sie finden sie unter [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 char *ctime(   
@@ -93,60 +110,60 @@ wchar_t *_wctime64(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `timer`  
- Ein Zeiger auf die gespeicherte Zeit.  
+ Zeiger auf die gespeicherte Zeit  
   
-## Rückgabewert  
- Ein Zeiger auf das Ergebnis die Zeichen der Zeichenfolge.`NULL` Wenn zurückgegeben:  
+## <a name="return-value"></a>Rückgabewert  
+ Ein Zeiger auf das Zeichenfolgenergebnis `NULL` wird in folgenden Fällen zurückgegeben:  
   
--   `time` ein Datum vor Mitternacht, 1. Januar 1970 UTC darstellt.  
+-   `time` ein Datum vor dem 1. Januar 1970 um Mitternacht (koordinierte Weltzeit, UTC) darstellt.  
   
--   Bei Verwendung von `_ctime32` oder `_wctime32` und `time` ein Datum nach 23:59:59 am 18. Januar 2038 UTC darstellt.  
+-   Wenn Sie `_ctime32` oder `_wctime32` verwenden, und `time` ein Datum nach dem 18. Januar 2038, 23:59:59 Uhr (koordinierte Weltzeit, UTC) darstellt.  
   
--   Bei Verwendung von `_ctime64` oder `_wctime64` und `time` ein Datum nach 23:59:59, 31. Dezember 3000 UTC darstellt.  
+-   Wenn Sie `_ctime64` oder `_wctime64` verwenden, und `time` ein Datum nach dem 31. Dezember 3000, 23:59:59 Uhr (koordinierte Weltzeit, UTC) darstellt.  
   
- `ctime` ist eine Inlinefunktion bewertet, um `_ctime64` und `time_t` entspricht `__time64_t`. Möchten Sie den Compiler, interpretieren erzwingen `time_t` als das alte 32\-Bit `time_t`, können `_USE_32BIT_TIME_T`. Dadurch wird `ctime` ergibt `_ctime32`. Dies wird nicht empfohlen, da die Anwendung nach dem 18. Januar 2038 fehlschlägt und sie wird auf 64\-Bit\-Plattformen nicht zugelassen.  
+ `ctime` ist eine Inlinefunktion, die `_ctime64` auswertet, und `time_t` entspricht `__time64_t`. Wenn Sie den Compiler zwingen müssen, `time_t` als das alte 32-Bit-`time_t` zu interpretieren, können Sie `_USE_32BIT_TIME_T` definieren. Dadurch wird `ctime` mit `_ctime32` ausgewertet. Dies ist nicht zu empfehlen, weil Ihre Anwendung nach dem 18. Januar 2038 fehlschlagen kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.  
   
-## Hinweise  
- Die `ctime` \-Funktion konvertiert einen Zeitwert als ein [Time\_t](../../c-runtime-library/standard-types.md) Wert in eine Zeichenfolge. Die `timer` Wert wird normalerweise von einem Aufruf abgerufen [Zeit](../../c-runtime-library/reference/time-time32-time64.md), welche gibt die Anzahl der Sekunden seit Mitternacht vergangenen \(00: 00:00\), 1. Januar 1970, koordinierte Weltzeit \(UTC\). Die Rückgabewert Zeichenfolge genau 26 Zeichen enthält und weist folgende Form:  
+## <a name="remarks"></a>Hinweise  
+ Die `ctime`-Funktion konvertiert einen als [time_t](../../c-runtime-library/standard-types.md)-Wert gespeicherten Zeitwert in eine Zeichenfolge. Der `timer`-Wert ergibt sich normalerweise aus einem Aufruf von [time](../../c-runtime-library/reference/time-time32-time64.md) und gibt die Anzahl der Sekunden zurück, die seit Mitternacht (00:00:00 Uhr, koordinierte Weltzeit, UTC) am 1. Januar 1970 verstrichen sind. Der Rückgabewert der Zeichenfolge enthält genau 26 Zeichen und sieht so aus:  
   
 ```  
 Wed Jan 02 02:03:55 1980\n\0  
 ```  
   
- 24\-Stunden\-Format wird verwendet. Alle Felder weisen eine Konstante Breite. Das Zeilenumbruchzeichen \('\\n'\) und das Null\-Zeichen \('\\0'\) belegen die letzten beiden Stellen der Zeichenfolge.  
+ Eine 24-Stunden-Uhr wird verwendet. Alle Felder haben eine feste Breite. Das Zeichen für neue Zeile ('\n') und das Nullzeichen ('\0') nehmen die letzten beiden Stellen der Zeichenfolge ein.  
   
- Die konvertierte Zeichenfolge wird auch die Ortszeit Einstellungen angepasst. Finden Sie unter der `time`, [\_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md), und [Localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) Funktionen Informationen zum Konfigurieren der lokalen Zeit und die [\_tzset](../../c-runtime-library/reference/tzset.md) Funktion ausführliche Informationen zum Definieren der Zeitzone Umgebung und globale Variablen.  
+ Die konvertierte Zeichenfolge wird auch gemäß den lokalen Zeitzoneneinstellungen angepasst. Informationen zur Konfiguration der lokalen Zeit finden Sie unter den `time`, [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) und [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)-Funktionen. Einzelheiten zur Definition der Zeitzonenumgebung und der globalen Variablen finden Sie unter der [_tzset](../../c-runtime-library/reference/tzset.md)-Funktion.  
   
- Ein Aufruf von `ctime` ändert der einzelnen statisch zugewiesenen Puffer für die `gmtime` und `localtime` Funktionen. Jeder Aufruf dieser Routinen zerstört das Ergebnis des vorherigen Aufrufs.`ctime` Teilt einen statischen Puffer mit der `asctime` Funktion. Folglich einen Aufruf von `ctime` Löscht die Ergebnisse von einem vorherigen Aufruf von `asctime`, `localtime`, oder `gmtime`.  
+ Ein Aufruf von `ctime` ändert die einzelnen statisch zugewiesenen Puffer, die von der `gmtime`- und der `localtime`-Funktion verwendet werden. Jeder Aufruf dieser Routinen zerstört das Ergebnis des vorherigen Aufrufs. `ctime` teilt einen statischen Puffer mit der `asctime`-Funktion. Daher zerstört ein Aufruf von `ctime` die Ergebnisse jedes vorherigen Aufrufs von `asctime`, `localtime` oder `gmtime`.  
   
- `_wctime` und `_wctime64` sind die Breitzeichen\-Version der `ctime` und `_ctime64`; die Rückgabe eines Zeigers auf Breitzeichen\-Zeichenfolge. Andernfalls `_ctime64`, `_wctime`, und `_wctime64` Verhalten sich genauso wie `ctime`.  
+ `_wctime` und `_wctime64` sind die Breitzeichenversion von `ctime` und `_ctime64` und geben einen Zeiger auf die Breitzeichen-Zeichenfolge zurück. Andernfalls verhalten sich `_ctime64`, `_wctime` und `_wctime64` identisch zu `ctime`.  
   
- Diese Funktionen überprüfen ihre Parameter. Wenn `timer` ein null\-Zeiger ist oder wenn der Zeitwert negativ ist, rufen diese Funktionen den Handler für ungültige Parameter an, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `NULL` zurück und setzt `errno` auf `EINVAL`.  
+ Diese Funktionen überprüfen ihre Parameter. Wenn `timer` ein ungültiger NULL-Zeiger oder der Zeitwert negativ ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion `NULL` zurück und setzt `errno` auf `EINVAL`.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE und \_MBCS nicht definiert.|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|-------------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tctime`|`ctime`|`ctime`|`_wctime`|  
 |`_tctime32`|`_ctime32`|`_ctime32`|`_wctime32`|  
 |`_tctime64`|`_ctime64`|`_ctime64`|`_wctime64`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`ctime`|\<time.h\>|  
-|`_ctime32`|\<time.h\>|  
-|`_ctime64`|\<time.h\>|  
-|`_wctime`|\< time.h \> oder \< wchar.h \>|  
-|`_wctime32`|\< time.h \> oder \< wchar.h \>|  
-|`_wctime64`|\< time.h \> oder \< wchar.h \>|  
+|-------------|---------------------|  
+|`ctime`|\<time.h>|  
+|`_ctime32`|\<time.h>|  
+|`_ctime64`|\<time.h>|  
+|`_wctime`|\<time.h> oder \<wchar.h>|  
+|`_wctime32`|\<time.h> oder \<wchar.h>|  
+|`_wctime64`|\<time.h> oder \<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_ctime64.c  
@@ -170,24 +187,14 @@ int main( void )
 ```  
   
 ```Output  
-Die Zeit ist Mi, 13 Feb 16:04:43 2002  
+The time is Wed Feb 13 16:04:43 2002  
 ```  
   
-## .NET Framework-Entsprechung  
-  
--   [System::DateTime::GetDateTimeFormats](https://msdn.microsoft.com/en-us/library/system.datetime.getdatetimeformats.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   
- [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime\_s, \_ctime32\_s, \_ctime64\_s, \_wctime\_s, \_wctime32\_s, \_wctime64\_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
- [\_ftime, \_ftime32, \_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime, \_gmtime32, \_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime, \_localtime32, \_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [time, \_time32, \_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

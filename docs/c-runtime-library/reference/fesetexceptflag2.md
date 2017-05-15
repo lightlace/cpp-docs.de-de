@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e03e1a12b27eb5401a31f7096ae46d8a779d4a70
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2283d258a15fb131367d5d24a921c0a84a31e91d
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
@@ -66,18 +67,17 @@ int fesetexceptflag(
      const fexcept_t *pstatus,  
      int excepts  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
  `pstatus`  
- Zeiger auf ein `fexcept_t`-Objekt, das die Werte enthält, auf die die Ausnahmestatusflags festgelegt werden sollen. Das Objekt kann auf einen früheren Aufruf von [fegetexceptflag](http://msdn.microsoft.com/Library/5031bc1a-9834-4573-9113-160a55eb9654) festgelegt werden .  
+ Zeiger auf ein `fexcept_t`-Objekt, das die Werte enthält, auf die die Ausnahmestatusflags festgelegt werden sollen. Das Objekt kann auf einen früheren Aufruf von [fegetexceptflag](fegetexceptflag2.md) festgelegt werden .  
   
  `excepts`  
  Die festzulegenden Gleitkommaausnahme-Statusflags  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn alle angegebenen Ausnahmestatusflags erfolgreich festgelegt wurden, wird 0 zurückgegeben. Andernfalls wird ein Wert ungleich&0; (null) zurückgegeben.  
+ Wenn alle angegebenen Ausnahmestatusflags erfolgreich festgelegt wurden, wird 0 zurückgegeben. Andernfalls wird ein Wert ungleich 0 (null) zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Funktion `fesetexceptflag` legt den Zustand der von `excepts` angegebenen Gleitkommaausnahme-Statusflags auf die Werten der entsprechenden `fexcept_t`-Objekte fest, auf die `pstatus` verweist.  Es löst die Ausnahmen aber nicht aus. Der `pstatus`-Zeiger muss auf ein gültiges `fexcept_t`-Objekt zeigen. Andernfalls ist das daraus resultierende Verhalten nicht definiert. Die Funktion `fesetexceptflag` unterstützt diese, in \<fenv.h> definierten Werte der Ausnahmemakros in `excepts`:  

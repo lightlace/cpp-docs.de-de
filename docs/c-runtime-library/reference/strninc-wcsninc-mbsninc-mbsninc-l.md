@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a019117da70bc81bcf2ffd79c750f8862bc50c0b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8390fc524393f221f32dd3a4b10080c88055a227
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
@@ -125,7 +126,7 @@ unsigned char *_mbsninc(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsninc`|`_strninc`|`_mbsninc`|`_wcsninc`|  
   
- `_strninc` und `_wcsninc` sind Versionen von Einzelbytezeichenfolgen und Zeichenfolgen mit Breitzeichen von `_mbsninc`. `_wcsninc` und `_strninc` werden nur für diese Zuordnung bereitgestellt und sollten nicht für andere Zwecke verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).  
+ `_strninc`und `_wcsninc` sind Single-Byte-Zeichenfolge und Breitzeichen-Zeichenfolge-Versionen `_mbsninc`. `_wcsninc` und `_strninc` werden nur für diese Zuordnung bereitgestellt und sollten nicht für andere Zwecke verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).  
   
  `_mbsninc_l` ist nahezu identisch, verwendet jedoch stattdessen den übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
@@ -139,9 +140,6 @@ unsigned char *_mbsninc(
 |`_wcsninc`|\<tchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   

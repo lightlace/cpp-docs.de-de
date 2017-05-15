@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aea0adf064d61e0104bc15f9cc3825dd9f7e186f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4cf69d6876ffb96bfd7939eebb4c564f66e98037
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
@@ -90,9 +91,9 @@ unsigned int _mbbtombc_l(
  Wenn `c` erfolgreich von `_mbbtombc` konvertiert wird, wird ein Multibytezeichen zurückgegeben, andernfalls wird `c` zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_mbbtombc`-Funktion konvertiert ein angegebenes Einzelbyte-Multibytezeichen in ein entsprechendes Doppelbyte-Multibytezeichen. Die Zeichen müssen innerhalb des Bereichs 0x20–0x7E oder 0xA1–0xDF liegen, um konvertiert zu werden.  
+ Die `_mbbtombc`-Funktion konvertiert ein angegebenes Einzelbyte-Multibytezeichen in ein entsprechendes Doppelbyte-Multibytezeichen. Zeichen muss innerhalb des Bereichs 0 x 20 – 0x7E oder 0xA1 - 0xDF konvertiert werden.  
   
- Der Ausgabewert ist von der `LC_CTYPE`-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktion sind identisch, außer, dass diese `_mbbtombc`-Version das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten verwendet und die `_mbbtombc_l`-Version stattdessen den ihr übergebenen Gebietsschemaparameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktion sind identisch, außer, dass diese `_mbbtombc`-Version das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten verwendet und die `_mbbtombc_l`-Version stattdessen den ihr übergebenen Gebietsschemaparameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
  In früheren Versionen hieß `_mbbtombc`  `hantozen`. Verwenden Sie bei neuem Code `_mbbtombc`.  
   
@@ -104,9 +105,6 @@ unsigned int _mbbtombc_l(
 |`_mbbtombc_l`|\<mbstring.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   

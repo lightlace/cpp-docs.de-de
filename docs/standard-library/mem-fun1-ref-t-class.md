@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xfunctional/std::mem_fun1_ref_t
-- std::mem_fun1_ref_t
 - mem_fun1_ref_t
-- std.mem_fun1_ref_t
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 32430ca2b66fc9772c01a29451986403c8d1d4b0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 2a16a4ed9133f3d72562053845a99b58cfe2777c
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t-Klasse
@@ -77,7 +76,7 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
  Die Vorlagenklasse speichert eine Kopie von `_Pm`, die ein Zeiger auf eine Memberfunktion der Klasse **Type** in einem privaten Memberobjekt sein muss. Für seine Memberfunktion `operator()` definiert sie als Rückgabewert (**left**.\* `_Pm`)(**right**).  
   
 ## <a name="example"></a>Beispiel  
- Der Konstruktor von `mem_fun1_ref_t` wird in der Regel nicht direkt verwendet; die Hilfsfunktion `mem_fun_ref` wird verwendet, um Memberfunktionen anzupassen. Weitere Beispiele für die Verwendung von Memberfunktionsadaptern finden Sie unter [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function).  
+ Der Konstruktor von `mem_fun1_ref_t` wird in der Regel nicht direkt verwendet; die Hilfsfunktion `mem_fun_ref` wird verwendet, um Memberfunktionen anzupassen. Weitere Beispiele für die Verwendung von Memberfunktionsadaptern finden Sie unter [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<functional>  

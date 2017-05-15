@@ -6,21 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- limits/std::float_denorm_style
+- limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e0f4b6ca5d11207787f9ff4f27b21dbbc78080c0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 519cc2c696b5dcb67fed79fd04c3e7d66e7d0ad9
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt;-Enumerationen
 |||  
 |-|-|  
-|[float_denorm_style Enumeration](#float_denorm_style_enumeration)|[float_round_style Enumeration](#float_round_style_enumeration)|  
+|[float_denorm_style](#float_denorm_style)|[float_round_style](#float_round_style)|  
   
-##  <a name="a-namefloatdenormstyleenumerationa--floatdenormstyle-enumeration"></a><a name="float_denorm_style_enumeration"></a> float_denorm_style Enumeration  
+##  <a name="float_denorm_style"></a> float_denorm_style Enumeration  
  Die Enumeration beschreibt die verschiedenen Methoden, die eine Implementierung für die Darstellung eines denormalisierten Gleitkommawerts auswählen kann – für Werte, die zu klein sind, um als normalisierte Werte dargestellt zu werden:  
   
 ```
@@ -40,9 +44,9 @@ enum float_denorm_style {
 - **denorm_present**, wenn denormalisierte Formulare vorhanden sind.  
   
 ### <a name="example"></a>Beispiel  
-  Unter [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#numeric_limits__has_denorm) finden Sie ein Beispiel, in dem auf die Werte dieser Enumeration zugegriffen werden kann.  
+  Unter [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm) finden Sie ein Beispiel, in dem auf die Werte dieser Enumeration zugegriffen werden kann.  
   
-##  <a name="a-namefloatroundstyleenumerationa--floatroundstyle-enumeration"></a><a name="float_round_style_enumeration"></a> float_round_style Enumeration  
+##  <a name="float_round_style"></a> float_round_style Enumeration  
  Die Enumeration beschreibt die verschiedenen Methoden, die eine Implementierung für die Rundung eines Gleitkommawerts auf einen ganzzahligen Wert auswählen kann.  
   
 ```
@@ -68,7 +72,7 @@ enum float_round_style {
 - **round_toward_neg_infinity**, wenn in Richtung negativerer ganzer Zahl gerundet wird.  
   
 ### <a name="example"></a>Beispiel  
-  Unter [numeric_limits::round_style](../standard-library/numeric-limits-class.md#numeric_limits__round_style) finden Sie ein Beispiel, in dem auf die Werte dieser Enumeration zugegriffen werden kann.  
+  Unter [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style) finden Sie ein Beispiel, in dem auf die Werte dieser Enumeration zugegriffen werden kann.  
   
 ## <a name="see-also"></a>Siehe auch  
  [\<limits>](../standard-library/limits.md)

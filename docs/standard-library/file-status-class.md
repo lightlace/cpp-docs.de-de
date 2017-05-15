@@ -35,14 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: 954da8df11c2382887717baa61070acc0b6070b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1095fbeeceb33fd9dedf0ad1217eab1a052f5ba1
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="filestatus-class"></a>file_status-Klasse
-Umschließt [file_type](../standard-library/filesystem-enumerations.md#filesystem__file_type) und Datei-[perms](../standard-library/filesystem-enumerations.md#filesystem__perms)  
+Umschließt [file_type](../standard-library/filesystem-enumerations.md#file_type) und Datei-[perms](../standard-library/filesystem-enumerations.md#perms)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -82,25 +83,25 @@ void type(file_type ftype) noexcept
   
  Ruft file_type ab oder legt ihn fest.  
   
-## <a name="permissions"></a>permissions  
+## <a name="permissions"></a>Berechtigungen  
   
-``cpp  
+```cpp  
 perms permissions() const noexcept  
 void permissions(perms mask) noexcept   
 ```  
   
- Gets or sets the file permissions.  
+ Ruft die Dateiberechtigungen ab oder legt sie fest.  
   
- Use the setter to make a file readonly or remove the readonly attribute.  
+ Verwenden Sie den Setter, um Datei mit einem Schreibschutz zu versehen oder entfernen Sie das readonly-Attribut.  
   
-## Requirements  
- **Header:** \<filesystem>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Filesystem >  
   
- **Namespace:** std::experimental::filesystem, std::experimental::filesystem::v1  
+ **Namespace:** Std::experimental::filesystem, Std::experimental::filesystem::v1  
   
-## See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [path Class](../standard-library/path-class.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
+ [Path-Klasse](../standard-library/path-class.md)   
  [\<filesystem>](../standard-library/filesystem.md)
 
 

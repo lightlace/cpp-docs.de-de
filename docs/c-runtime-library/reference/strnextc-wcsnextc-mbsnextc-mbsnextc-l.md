@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2a1c5b467ba9f96af0bc8e402715a0a427c73eeb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: cd787e4c18cf947760a31b5ee61f5ce7b83a7a2f
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
@@ -110,7 +111,7 @@ unsigned int _mbsnextc_l(
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Jede dieser Funktionen gibt den ganzzahligen Wert des nächsten Zeichens in `str`* zurück.*  
+ Jede dieser Funktionen gibt den ganzzahligen Wert des nächsten Zeichens im `str`.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `_mbsnextc`-Funktion gibt den ganzzahligen Wert des folgenden Multibytezeichens in `str` zurück, ohne den Zeichenfolgenzeiger weiterzusetzen. `_mbsnextc` erkennt Multibyte-Zeichenfolgen gemäß der aktuellen [Multibyte-Codepage](../../c-runtime-library/code-pages.md).  
@@ -125,7 +126,7 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnextc`|`_strnextc`|`_mbsnextc`|`_wcsnextc`|  
   
- `_strnextc` und `_wcsnextc` sind Versionen von Einzelbytezeichenfolgen und Zeichenfolgen mit Breitzeichen von `_mbsnextc`. `_wcsnextc` gibt den ganzzahligen Wert des folgenden Breitzeichens in `string` zurück. `_strnextc` gibt den ganzzahligen Wert des folgenden Einzelbytezeichens in `string` zurück. `_strnextc` und `_wcsnextc` werden nur für diese Zuordnung bereitgestellt und sollten nicht für andere Zwecke verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).  
+ `_strnextc`und `_wcsnextc` sind Single-Byte-Zeichenfolge und Breitzeichen-Zeichenfolge-Versionen `_mbsnextc`. `_wcsnextc` gibt den ganzzahligen Wert des folgenden Breitzeichens in `string` zurück. `_strnextc` gibt den ganzzahligen Wert des folgenden Einzelbytezeichens in `string` zurück. `_strnextc` und `_wcsnextc` werden nur für diese Zuordnung bereitgestellt und sollten nicht für andere Zwecke verwendet werden. Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).  
   
  `_mbsnextc_l` ist nahezu identisch, verwendet jedoch stattdessen den übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
@@ -139,9 +140,6 @@ unsigned int _mbsnextc_l(
 |`_wcsnextc`|\<tchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   

@@ -10,94 +10,91 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - unordered_multiset
-- std::unordered_multiset
 - unordered_set/std::unordered_multiset
-- std::unordered_multiset::allocator_type
 - unordered_set/std::unordered_multiset::allocator_type
-- std::unordered_multiset::const_iterator
 - unordered_set/std::unordered_multiset::const_iterator
-- std::unordered_multiset::const_local_iterator
 - unordered_set/std::unordered_multiset::const_local_iterator
-- std::unordered_multiset::const_pointer
 - unordered_set/std::unordered_multiset::const_pointer
-- std::unordered_multiset::const_reference
 - unordered_set/std::unordered_multiset::const_reference
-- std::unordered_multiset::difference_type
 - unordered_set/std::unordered_multiset::difference_type
-- std::unordered_multiset::hasher
 - unordered_set/std::unordered_multiset::hasher
-- std::unordered_multiset::iterator
 - unordered_set/std::unordered_multiset::iterator
-- std::unordered_multiset::key_equal
 - unordered_set/std::unordered_multiset::key_equal
-- std::unordered_multiset::key_type
 - unordered_set/std::unordered_multiset::key_type
-- std::unordered_multiset::local_iterator
 - unordered_set/std::unordered_multiset::local_iterator
-- std::unordered_multiset::pointer
 - unordered_set/std::unordered_multiset::pointer
-- std::unordered_multiset::reference
 - unordered_set/std::unordered_multiset::reference
-- std::unordered_multiset::size_type
 - unordered_set/std::unordered_multiset::size_type
-- std::unordered_multiset::value_type
 - unordered_set/std::unordered_multiset::value_type
-- std::unordered_multiset::begin
 - unordered_set/std::unordered_multiset::begin
-- std::unordered_multiset::bucket
 - unordered_set/std::unordered_multiset::bucket
-- std::unordered_multiset::bucket_count
 - unordered_set/std::unordered_multiset::bucket_count
-- std::unordered_multiset::bucket_size
 - unordered_set/std::unordered_multiset::bucket_size
-- std::unordered_multiset::cbegin
 - unordered_set/std::unordered_multiset::cbegin
-- std::unordered_multiset::cend
 - unordered_set/std::unordered_multiset::cend
-- std::unordered_multiset::clear
 - unordered_set/std::unordered_multiset::clear
-- std::unordered_multiset::count
 - unordered_set/std::unordered_multiset::count
-- std::unordered_multiset::emplace
 - unordered_set/std::unordered_multiset::emplace
-- std::unordered_multiset::emplace_hint
 - unordered_set/std::unordered_multiset::emplace_hint
-- std::unordered_multiset::empty
 - unordered_set/std::unordered_multiset::empty
-- std::unordered_multiset::end
 - unordered_set/std::unordered_multiset::end
-- std::unordered_multiset::equal_range
 - unordered_set/std::unordered_multiset::equal_range
-- std::unordered_multiset::erase
 - unordered_set/std::unordered_multiset::erase
-- std::unordered_multiset::find
 - unordered_set/std::unordered_multiset::find
-- std::unordered_multiset::get_allocator
 - unordered_set/std::unordered_multiset::get_allocator
-- std::unordered_multiset::hash_function
-- unordered_set/std::unordered_multiset::hash_function
-- std::unordered_multiset::insert
+- unordered_set/std::unordered_multiset::hash
 - unordered_set/std::unordered_multiset::insert
-- std::unordered_multiset::key_eq
 - unordered_set/std::unordered_multiset::key_eq
-- std::unordered_multiset::load_factor
 - unordered_set/std::unordered_multiset::load_factor
-- std::unordered_multiset::max_bucket_count
 - unordered_set/std::unordered_multiset::max_bucket_count
-- std::unordered_multiset::max_load_factor
 - unordered_set/std::unordered_multiset::max_load_factor
-- std::unordered_multiset::max_size
 - unordered_set/std::unordered_multiset::max_size
-- std::unordered_multiset::rehash
 - unordered_set/std::unordered_multiset::rehash
-- std::unordered_multiset::size
 - unordered_set/std::unordered_multiset::size
-- std::unordered_multiset::swap
 - unordered_set/std::unordered_multiset::swap
-- std::unordered_multiset::unordered_multiset
 - unordered_set/std::unordered_multiset::unordered_multiset
-- std::unordered_multiset::operator=
 - unordered_set/std::unordered_multiset::operator=
+- unordered_set/std::unordered_multiset::allocator_type
+- unordered_set/std::unordered_multiset::const_iterator
+- unordered_set/std::unordered_multiset::const_local_iterator
+- unordered_set/std::unordered_multiset::const_pointer
+- unordered_set/std::unordered_multiset::const_reference
+- unordered_set/std::unordered_multiset::difference_type
+- unordered_set/std::unordered_multiset::hasher
+- unordered_set/std::unordered_multiset::iterator
+- unordered_set/std::unordered_multiset::key_equal
+- unordered_set/std::unordered_multiset::key_type
+- unordered_set/std::unordered_multiset::local_iterator
+- unordered_set/std::unordered_multiset::pointer
+- unordered_set/std::unordered_multiset::reference
+- unordered_set/std::unordered_multiset::size_type
+- unordered_set/std::unordered_multiset::value_type
+- unordered_set/std::unordered_multiset::begin
+- unordered_set/std::unordered_multiset::bucket
+- unordered_set/std::unordered_multiset::bucket_count
+- unordered_set/std::unordered_multiset::bucket_size
+- unordered_set/std::unordered_multiset::cbegin
+- unordered_set/std::unordered_multiset::cend
+- unordered_set/std::unordered_multiset::clear
+- unordered_set/std::unordered_multiset::count
+- unordered_set/std::unordered_multiset::emplace
+- unordered_set/std::unordered_multiset::emplace_hint
+- unordered_set/std::unordered_multiset::empty
+- unordered_set/std::unordered_multiset::end
+- unordered_set/std::unordered_multiset::equal_range
+- unordered_set/std::unordered_multiset::erase
+- unordered_set/std::unordered_multiset::find
+- unordered_set/std::unordered_multiset::get_allocator
+- unordered_set/std::unordered_multiset::hash_function
+- unordered_set/std::unordered_multiset::insert
+- unordered_set/std::unordered_multiset::key_eq
+- unordered_set/std::unordered_multiset::load_factor
+- unordered_set/std::unordered_multiset::max_bucket_count
+- unordered_set/std::unordered_multiset::max_load_factor
+- unordered_set/std::unordered_multiset::max_size
+- unordered_set/std::unordered_multiset::rehash
+- unordered_set/std::unordered_multiset::size
+- unordered_set/std::unordered_multiset::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -121,10 +118,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: cae7184dd2d0e241ee13e6867897e4699d7d56a1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4df02938056e6a49c71de0ce594cf7eeb84208f6
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset-Klasse
@@ -155,73 +153,73 @@ class unordered_multiset;
 |||  
 |-|-|  
 |Typdefinition|Beschreibung|  
-|[unordered_multiset::allocator_type](#unordered_multiset__allocator_type)|Der Typ einer Zuweisung für die Speicherverwaltung.|  
-|[unordered_multiset::const_iterator](#unordered_multiset__const_iterator)|Der Typ eines konstanten Iterators für die gesteuerte Sequenz.|  
-|[unordered_multiset::const_local_iterator](#unordered_multiset__const_local_iterator)|Der Typ eines konstanten Bucketiterators für die gesteuerte Sequenz.|  
-|[unordered_multiset::const_pointer](#unordered_multiset__const_pointer)|Der Typ eines konstanten Zeigers auf ein Element.|  
-|[unordered_multiset::const_reference](#unordered_multiset__const_reference)|Der Typ eines konstanten Verweises auf ein Element.|  
-|[unordered_multiset::difference_type](#unordered_multiset__difference_type)|Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.|  
-|[unordered_multiset::hasher](#unordered_multiset__hasher)|Der Typ der Hashfunktion.|  
-|[unordered_multiset::iterator](#unordered_multiset__iterator)|Der Typ eines Iterators für die gesteuerte Sequenz.|  
-|[unordered_multiset::key_equal](#unordered_multiset__key_equal)|Der Typ der Vergleichsfunktion.|  
-|[unordered_multiset::key_type](#unordered_multiset__key_type)|Der Typ eines Sortierschlüssels.|  
-|[unordered_multiset::local_iterator](#unordered_multiset__local_iterator)|Der Typ eines Bucketiterators für die gesteuerte Sequenz.|  
-|[unordered_multiset::pointer](#unordered_multiset__pointer)|Der Typ eines Zeigers auf ein Element.|  
-|[unordered_multiset::reference](#unordered_multiset__reference)|Der Typ eines Verweises auf ein Element.|  
-|[unordered_multiset::size_type](#unordered_multiset__size_type)|Der Typ eines Abstands ohne Vorzeichen zwischen zwei Elementen.|  
-|[unordered_multiset::value_type](#unordered_multiset__value_type)|Der Typ eines Elements.|  
+|[allocator_type](#allocator_type)|Der Typ einer Zuweisung für die Speicherverwaltung.|  
+|[const_iterator](#const_iterator)|Der Typ eines konstanten Iterators für die gesteuerte Sequenz.|  
+|[const_local_iterator](#const_local_iterator)|Der Typ eines konstanten Bucketiterators für die gesteuerte Sequenz.|  
+|[const_pointer](#const_pointer)|Der Typ eines konstanten Zeigers auf ein Element.|  
+|[const_reference](#const_reference)|Der Typ eines konstanten Verweises auf ein Element.|  
+|[difference_type](#difference_type)|Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.|  
+|[Hasher](#hasher)|Der Typ der Hashfunktion.|  
+|[Iterator](#iterator)|Der Typ eines Iterators für die gesteuerte Sequenz.|  
+|[key_equal](#key_equal)|Der Typ der Vergleichsfunktion.|  
+|[key_type](#key_type)|Der Typ eines Sortierschlüssels.|  
+|[local_iterator](#local_iterator)|Der Typ eines Bucketiterators für die gesteuerte Sequenz.|  
+|[Zeiger](#pointer)|Der Typ eines Zeigers auf ein Element.|  
+|[Verweis](#reference)|Der Typ eines Verweises auf ein Element.|  
+|[size_type](#size_type)|Der Typ eines Abstands ohne Vorzeichen zwischen zwei Elementen.|  
+|[value_type](#value_type)|Der Typ eines Elements.|  
   
 |||  
 |-|-|  
 |Memberfunktion|Beschreibung|  
-|[unordered_multiset::begin](#unordered_multiset__begin)|Legt den Anfang der kontrollierten Sequenz fest.|  
-|[unordered_multiset::bucket](#unordered_multiset__bucket)|Ruft die Bucketnummer für einen Schlüsselwert ab.|  
-|[unordered_multiset::bucket_count](#unordered_multiset__bucket_count)|Ruft die Anzahl von Buckets ab.|  
-|[unordered_multiset::bucket_size](#unordered_multiset__bucket_size)|Ruft die Größe eines Buckets ab.|  
-|[unordered_multiset::cbegin](#unordered_multiset__cbegin)|Legt den Anfang der kontrollierten Sequenz fest.|  
-|[unordered_multiset::cend](#unordered_multiset__cend)|Legt das Ende der kontrollierten Sequenz fest.|  
-|[unordered_multiset::clear](#unordered_multiset__clear)|Entfernt alle Elemente.|  
-|[unordered_multiset::count](#unordered_multiset__count)|Sucht die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen.|  
-|[unordered_multiset::emplace](#unordered_multiset__emplace)|Fügt ein Element hinzu, das direkt erstellt wird.|  
-|[unordered_multiset::emplace_hint](#unordered_multiset__emplace_hint)|Fügt ein Element hinzu, das direkt mit Hinweis erstellt wird.|  
-|[unordered_multiset::empty](#unordered_multiset__empty)|Testet, ob keine Elemente vorhanden sind.|  
-|[unordered_multiset::end](#unordered_multiset__end)|Legt das Ende der kontrollierten Sequenz fest.|  
-|[unordered_multiset::equal_range](#unordered_multiset__equal_range)|Sucht den Bereich, der einem angegebenen Schlüssel entspricht.|  
-|[unordered_multiset::erase](#unordered_multiset__erase)|Entfernt Elemente an den angegebenen Positionen.|  
-|[unordered_multiset::find](#unordered_multiset__find)|Sucht ein Element, das einem angegebenen Schlüssel entspricht.|  
-|[unordered_multiset::get_allocator](#unordered_multiset__get_allocator)|Ruft das gespeicherte Zuweisungsobjekt ab.|  
-|[unordered_multiset::hash_function](#unordered_multiset__hash_function)|Ruft das gespeicherte Hashfunktionsobjekt ab.|  
-|[unordered_multiset::insert](#unordered_multiset__insert)|Fügt Elemente hinzu.|  
-|[unordered_multiset::key_eq](#unordered_multiset__key_eq)|Ruft das gespeicherte Vergleichsfunktionsobjekt ab.|  
-|[unordered_multiset::load_factor](#unordered_multiset__load_factor)|Zählt die durchschnittliche Anzahl von Elementen pro Bucket.|  
-|[unordered_multiset::max_bucket_count](#unordered_multiset__max_bucket_count)|Ruft die maximale Anzahl von Buckets ab.|  
-|[unordered_multiset::max_load_factor](#unordered_multiset__max_load_factor)|Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.|  
-|[unordered_multiset::max_size](#unordered_multiset__max_size)|Ruft die maximale Größe der gesteuerten Sequenz ab.|  
-|[unordered_multiset::rehash](#unordered_multiset__rehash)|Erstellt die Hashtabelle neu.|  
-|[unordered_multiset::size](#unordered_multiset__size)|Ermittelt die Anzahl von Elementen.|  
-|[unordered_multiset::swap](#unordered_multiset__swap)|Vertauscht den Inhalt von zwei Containern.|  
-|[unordered_multiset::unordered_multiset](#unordered_multiset__unordered_multiset)|Erstellt ein container-Objekt.|  
+|[begin](#begin)|Legt den Anfang der kontrollierten Sequenz fest.|  
+|[Bucket](#bucket)|Ruft die Bucketnummer für einen Schlüsselwert ab.|  
+|[bucket_count-Wert](#bucket_count)|Ruft die Anzahl von Buckets ab.|  
+|[bucket_size](#bucket_size)|Ruft die Größe eines Buckets ab.|  
+|[cbegin](#cbegin)|Legt den Anfang der kontrollierten Sequenz fest.|  
+|[cend](#cend)|Legt das Ende der kontrollierten Sequenz fest.|  
+|[clear](#clear)|Entfernt alle Elemente.|  
+|[count](#count)|Sucht die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen.|  
+|[emplace](#emplace)|Fügt ein Element hinzu, das direkt erstellt wird.|  
+|[emplace_hint](#emplace_hint)|Fügt ein Element hinzu, das direkt mit Hinweis erstellt wird.|  
+|[empty](#empty)|Testet, ob keine Elemente vorhanden sind.|  
+|[end](#end)|Legt das Ende der kontrollierten Sequenz fest.|  
+|[equal_range](#equal_range)|Sucht den Bereich, der einem angegebenen Schlüssel entspricht.|  
+|[erase](#erase)|Entfernt Elemente an den angegebenen Positionen.|  
+|[find](#find)|Sucht ein Element, das einem angegebenen Schlüssel entspricht.|  
+|[get_allocator](#get_allocator)|Ruft das gespeicherte Zuweisungsobjekt ab.|  
+|[hash_function](#hash)|Ruft das gespeicherte Hashfunktionsobjekt ab.|  
+|[insert](#insert)|Fügt Elemente hinzu.|  
+|[key_eq](#key_eq)|Ruft das gespeicherte Vergleichsfunktionsobjekt ab.|  
+|[load_factor](#load_factor)|Zählt die durchschnittliche Anzahl von Elementen pro Bucket.|  
+|[max_bucket_count](#max_bucket_count)|Ruft die maximale Anzahl von Buckets ab.|  
+|[max_load_factor](#max_load_factor)|Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.|  
+|[max_size](#max_size)|Ruft die maximale Größe der gesteuerten Sequenz ab.|  
+|[Rehash-](#rehash)|Erstellt die Hashtabelle neu.|  
+|[size](#size)|Ermittelt die Anzahl von Elementen.|  
+|[swap](#swap)|Vertauscht den Inhalt von zwei Containern.|  
+|[unordered_multiset-Element](#unordered_multiset)|Erstellt ein container-Objekt.|  
   
 |||  
 |-|-|  
 |Operator|Beschreibung|  
-|[unordered_multiset::operator=](#unordered_multiset__operator_eq)|Kopiert eine Hashtabelle.|  
+|[unordered_multiset::operator=](#op_eq)|Kopiert eine Hashtabelle.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Objekt sortiert die Sequenz, die es steuert, indem es zwei gespeicherte Objekte aufruft, ein Vergleichsfunktionsobjekt des Typs [unordered_multiset::key_equal](#unordered_multiset__key_equal) und ein Hashfunktionsobjekt des Typs [unordered_multiset::hasher](#unordered_multiset__hasher). Sie greifen auf das zuerst gespeicherte Objekt zu, indem Sie die Memberfunktion [unordered_multiset::key_eq](#unordered_multiset__key_eq)`()` aufrufen. Auf das zweite gespeicherte Objekt greifen Sie zu, indem Sie die Memberfunktion [unordered_multiset::hash_function](#unordered_multiset__hash_function)`()` aufrufen. Insbesondere für alle Werte `X` und `Y` vom Typ `Key` gibt der Aufruf von `key_eq()(X, Y)` nur "true" zurück, wenn die beiden Argumentwerte die entsprechende Reihenfolge aufweisen. Der Aufruf von `hash_function()(keyval)` ergibt eine Verteilung von Werten des Typs `size_t`. Im Gegensatz zur Vorlagenklasse [unordered_set-Klasse](../standard-library/unordered-set-class.md) stellt ein Objekt der Vorlagenklasse `unordered_multiset` nicht sicher, dass `key_eq()(X, Y)` für zwei Elemente der gesteuerten Sequenz immer FALSE ist. (Die Schlüssel müssen nicht eindeutig sein.)  
+ Das Objekt sortiert die Sequenz, die es steuert, indem es zwei gespeicherte Objekte aufruft, ein Vergleichsfunktionsobjekt des Typs [unordered_multiset::key_equal](#key_equal) und ein Hashfunktionsobjekt des Typs [unordered_multiset::hasher](#hasher). Sie greifen auf das zuerst gespeicherte Objekt zu, indem Sie die Memberfunktion [unordered_multiset::key_eq](#key_eq)`()` aufrufen. Auf das zweite gespeicherte Objekt greifen Sie zu, indem Sie die Memberfunktion [unordered_multiset::hash_function](#hash)`()` aufrufen. Insbesondere für alle Werte `X` und `Y` vom Typ `Key` gibt der Aufruf von `key_eq()(X, Y)` nur "true" zurück, wenn die beiden Argumentwerte die entsprechende Reihenfolge aufweisen. Der Aufruf von `hash_function()(keyval)` ergibt eine Verteilung von Werten des Typs `size_t`. Im Gegensatz zur Vorlagenklasse [unordered_set-Klasse](../standard-library/unordered-set-class.md) stellt ein Objekt der Vorlagenklasse `unordered_multiset` nicht sicher, dass `key_eq()(X, Y)` für zwei Elemente der gesteuerten Sequenz immer FALSE ist. (Die Schlüssel müssen nicht eindeutig sein.)  
   
- Das Objekt speichert auch einen Höchstlastfaktor, der die maximal erwünschte durchschnittliche Anzahl von Elementen pro Bucket angibt. Wenn durch Einfügen eines Elements der Wert [unordered_multiset::load_factor](#unordered_multiset__load_factor)`()` den Höchstlastfaktor überschreitet, erhöht der Container die Anzahl von Buckets und erstellt die Hashtabelle nach Bedarf neu.  
+ Das Objekt speichert auch einen Höchstlastfaktor, der die maximal erwünschte durchschnittliche Anzahl von Elementen pro Bucket angibt. Wenn durch Einfügen eines Elements der Wert [unordered_multiset::load_factor](#load_factor)`()` den Höchstlastfaktor überschreitet, erhöht der Container die Anzahl von Buckets und erstellt die Hashtabelle nach Bedarf neu.  
   
  Die tatsächliche Reihenfolge der Elemente in der gesteuerten Sequenz hängt von der Hashfunktion, von der Vergleichsfunktion, von der Einfügereihenfolge, vom Höchstlastfaktor und von der aktuellen Anzahl von Buckets ab. Sie können die Reihenfolge der Elemente in der gesteuerten Sequenz im Allgemeinen nicht vorhersagen. Sie können allerdings sicher sein, dass jede Teilmenge von Elementen, die die entsprechende Reihenfolge aufweisen, in der gesteuerten Sequenz benachbart sind.  
   
- Das Objekt belegt Speicher und gibt Speicher für die gesteuerte Sequenz durch ein gespeichertes Zuweisungsobjekt des Typs [unordered_multiset::allocator_type](#unordered_multiset__allocator_type) frei. Ein solches Zuweisungsobjekt muss die gleiche externe Schnittstelle wie ein Objekt der Vorlagenklasse `allocator` aufweisen. Beachten Sie, dass das gespeicherte Zuweisungsobjekt nicht kopiert wird, wenn das Containerobjekt zugewiesen wird.  
+ Das Objekt belegt Speicher und gibt Speicher für die gesteuerte Sequenz durch ein gespeichertes Zuweisungsobjekt des Typs [unordered_multiset::allocator_type](#allocator_type) frei. Ein solches Zuweisungsobjekt muss die gleiche externe Schnittstelle wie ein Objekt der Vorlagenklasse `allocator` aufweisen. Beachten Sie, dass das gespeicherte Zuweisungsobjekt nicht kopiert wird, wenn das Containerobjekt zugewiesen wird.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<unordered_set>  
   
  **Namespace:** std  
   
-##  <a name="a-nameunorderedmultisetallocatortypea--unorderedmultisetallocatortype"></a><a name="unordered_multiset__allocator_type"></a> unordered_multiset::allocator_type  
+##  <a name="allocator_type"></a> unordered_multiset::allocator_type  
  Der Typ einer Zuweisung für die Speicherverwaltung.  
   
 ```  
@@ -258,7 +256,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmultisetbegina--unorderedmultisetbegin"></a><a name="unordered_multiset__begin"></a> unordered_multiset::begin  
+##  <a name="begin"></a> unordered_multiset::begin  
  Kennzeichnet den Anfang der kontrollierten Sequenz oder eines Buckets.  
   
 ```  
@@ -327,7 +325,7 @@ int main()
 [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetbucketa--unorderedmultisetbucket"></a><a name="unordered_multiset__bucket"></a> unordered_multiset::bucket  
+##  <a name="bucket"></a> unordered_multiset::bucket  
  Ruft die Bucketnummer für einen Schlüsselwert ab.  
   
 ```  
@@ -381,7 +379,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmultisetbucketcounta--unorderedmultisetbucketcount"></a><a name="unordered_multiset__bucket_count"></a> unordered_multiset::bucket_count  
+##  <a name="bucket_count"></a> unordered_multiset::bucket_count  
  Ruft die Anzahl von Buckets ab.  
   
 ```  
@@ -467,7 +465,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultisetbucketsizea--unorderedmultisetbucketsize"></a><a name="unordered_multiset__bucket_size"></a> unordered_multiset::bucket_size  
+##  <a name="bucket_size"></a> unordered_multiset::bucket_size  
  Ruft die Größe eines Buckets ab.  
   
 ```  
@@ -521,7 +519,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmultisetcbegina--unorderedmultisetcbegin"></a><a name="unordered_multiset__cbegin"></a> unordered_multiset::cbegin  
+##  <a name="cbegin"></a> unordered_multiset::cbegin  
  Gibt einen `const`-Iterator zurück, mit dem das erste Element im Bereich behandelt wird.  
   
 ```  
@@ -544,7 +542,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-nameunorderedmultisetcenda--unorderedmultisetcend"></a><a name="unordered_multiset__cend"></a> unordered_multiset::cend  
+##  <a name="cend"></a> unordered_multiset::cend  
  Gibt einen `const`-Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines Bereichs unmittelbar nachfolgt.  
   
 ```  
@@ -569,7 +567,7 @@ auto i2 = Container.cend();
   
  Der von `cend` zurückgegebene Wert darf nicht dereferenziert werden.  
   
-##  <a name="a-nameunorderedmultisetcleara--unorderedmultisetclear"></a><a name="unordered_multiset__clear"></a> unordered_multiset::clear  
+##  <a name="clear"></a> unordered_multiset::clear  
  Entfernt alle Elemente.  
   
 ```  
@@ -577,7 +575,7 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion ruft [unordered_multiset::erase](#unordered_multiset__erase)`(` [unordered_multiset::begin](#unordered_multiset__begin)`(),` [unordered_multiset::end](#unordered_multiset__end)`())` auf.  
+ Die Memberfunktion ruft [unordered_multiset::erase](#erase)`(` [unordered_multiset::begin](#begin)`(),` [unordered_multiset::end](#end)`())` auf.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -635,7 +633,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultisetconstiteratora--unorderedmultisetconstiterator"></a><a name="unordered_multiset__const_iterator"></a> unordered_multiset::const_iterator  
+##  <a name="const_iterator"></a> unordered_multiset::const_iterator  
  Der Typ eines konstanten Iterators für die gesteuerte Sequenz.  
   
 ```  
@@ -677,7 +675,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetconstlocaliteratora--unorderedmultisetconstlocaliterator"></a><a name="unordered_multiset__const_local_iterator"></a> unordered_multiset::const_local_iterator  
+##  <a name="const_local_iterator"></a> unordered_multiset::const_local_iterator  
  Der Typ eines konstanten Bucketiterators für die gesteuerte Sequenz.  
   
 ```  
@@ -724,7 +722,7 @@ int main()
 [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetconstpointera--unorderedmultisetconstpointer"></a><a name="unordered_multiset__const_pointer"></a> unordered_multiset::const_pointer  
+##  <a name="const_pointer"></a> unordered_multiset::const_pointer  
  Der Typ eines konstanten Zeigers auf ein Element.  
   
 ```  
@@ -769,7 +767,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetconstreferencea--unorderedmultisetconstreference"></a><a name="unordered_multiset__const_reference"></a> unordered_multiset::const_reference  
+##  <a name="const_reference"></a> unordered_multiset::const_reference  
  Der Typ eines konstanten Verweises auf ein Element.  
   
 ```  
@@ -814,7 +812,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetcounta--unorderedmultisetcount"></a><a name="unordered_multiset__count"></a> unordered_multiset::count  
+##  <a name="count"></a> unordered_multiset::count  
  Sucht die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen.  
   
 ```  
@@ -826,7 +824,7 @@ size_type count(const Key& keyval) const;
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt die Anzahl von Elementen zurück, die sich in dem Bereich befinden, der durch [unordered_multiset::equal_range](#unordered_multiset__equal_range)`(keyval)` begrenzt ist.  
+ Die Memberfunktion gibt die Anzahl von Elementen zurück, die sich in dem Bereich befinden, der durch [unordered_multiset::equal_range](#equal_range)`(keyval)` begrenzt ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -867,7 +865,7 @@ count('b') == 1
 count('C') == 0  
 ```  
   
-##  <a name="a-nameunorderedmultisetdifferencetypea--unorderedmultisetdifferencetype"></a><a name="unordered_multiset__difference_type"></a> unordered_multiset::difference_type  
+##  <a name="difference_type"></a> unordered_multiset::difference_type  
  Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.  
   
 ```  
@@ -925,7 +923,7 @@ end()-begin() == 3
 begin()-end() == -3  
 ```  
   
-##  <a name="a-nameunorderedmultisetemplacea--unorderedmultisetemplace"></a><a name="unordered_multiset__emplace"></a> unordered_multiset::emplace  
+##  <a name="emplace"></a> unordered_multiset::emplace  
  Es wird ein Element eingefügt, das vor Ort konstruiert wird (keine Kopieren- oder Verschiebevorgänge werden ausgeführt).  
   
 ```  
@@ -948,9 +946,9 @@ iterator emplace(Args&&... args);
   
  Wird bei der Einfügung eine Ausnahme ausgelöst, die aber in der Hashfunktion des Containers nicht auftritt, wird der Container nicht geändert. Wenn die Ausnahme in der Hashfunktion ausgelöst wird, ist das Ergebnis nicht definiert.  
   
- Ein Codebeispiel finden Sie unter [multiset::emplace](../standard-library/multiset-class.md#multiset__emplace).  
+ Ein Codebeispiel finden Sie unter [multiset::emplace](../standard-library/multiset-class.md#emplace).  
   
-##  <a name="a-nameunorderedmultisetemplacehinta--unorderedmultisetemplacehint"></a><a name="unordered_multiset__emplace_hint"></a> unordered_multiset::emplace_hint  
+##  <a name="emplace_hint"></a> unordered_multiset::emplace_hint  
  Fügt ein Element mit einem Platzierungshinweis ein, das vor Ort erstellt wird (Es werden keine Kopier- oder Verschiebevorgänge ausgeführt).  
   
 ```  
@@ -976,9 +974,9 @@ iterator emplace_hint(
   
  Wird bei der Einfügung eine Ausnahme ausgelöst, die aber in der Hashfunktion des Containers nicht auftritt, wird der Container nicht geändert. Wenn die Ausnahme in der Hashfunktion ausgelöst wird, ist das Ergebnis nicht definiert.  
   
- Ein Codebeispiel finden Sie unter [set::emplace_hint](../standard-library/set-class.md#set__emplace_hint).  
+ Ein Codebeispiel finden Sie unter [set::emplace_hint](../standard-library/set-class.md#emplace_hint).  
   
-##  <a name="a-nameunorderedmultisetemptya--unorderedmultisetempty"></a><a name="unordered_multiset__empty"></a> unordered_multiset::empty  
+##  <a name="empty"></a> unordered_multiset::empty  
  Testet, ob keine Elemente vorhanden sind.  
   
 ```  
@@ -1044,7 +1042,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultisetenda--unorderedmultisetend"></a><a name="unordered_multiset__end"></a> unordered_multiset::end  
+##  <a name="end"></a> unordered_multiset::end  
  Legt das Ende der kontrollierten Sequenz fest.  
   
 ```  
@@ -1110,7 +1108,7 @@ int main()
 [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetequalrangea--unorderedmultisetequalrange"></a><a name="unordered_multiset__equal_range"></a> unordered_multiset::equal_range  
+##  <a name="equal_range"></a> unordered_multiset::equal_range  
  Sucht den Bereich, der einem angegebenen Schlüssel entspricht.  
   
 ```  
@@ -1177,7 +1175,7 @@ equal_range('x'):
 equal_range('b'): [b]  
 ```  
   
-##  <a name="a-nameunorderedmultiseterasea--unorderedmultiseterase"></a><a name="unordered_multiset__erase"></a> unordered_multiset::erase  
+##  <a name="erase"></a> unordered_multiset::erase  
  Es wird ein Element oder ein Bereich von Elementen in einem unordered_multiset-Element von angegebenen Speicherorten entfernt oder es werden die einem angegebenen Schlüssel entsprechenden Elemente entfernt.  
   
 ```  
@@ -1211,9 +1209,9 @@ size_type erase(
  Für die dritte Memberfunktion wird die Anzahl der aus dem unordered_multiset-Element entfernten Elemente zurück gegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Codebeispiel finden Sie unter [set::erase](../standard-library/set-class.md#set__erase).  
+ Ein Codebeispiel finden Sie unter [set::erase](../standard-library/set-class.md#erase).  
   
-##  <a name="a-nameunorderedmultisetfinda--unorderedmultisetfind"></a><a name="unordered_multiset__find"></a> unordered_multiset::find  
+##  <a name="find"></a> unordered_multiset::find  
  Sucht ein Element, das einem angegebenen Schlüssel entspricht.  
   
 ```  
@@ -1225,7 +1223,7 @@ const_iterator find(const Key& keyval) const;
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt [unordered_multiset::equal_range](#unordered_multiset__equal_range)`(keyval).first` zurück.  
+ Die Memberfunktion gibt [unordered_multiset::equal_range](#equal_range)`(keyval).first` zurück.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1271,7 +1269,7 @@ find('A') == false
 find('b') == true: [b]  
 ```  
   
-##  <a name="a-nameunorderedmultisetgetallocatora--unorderedmultisetgetallocator"></a><a name="unordered_multiset__get_allocator"></a> unordered_multiset::get_allocator  
+##  <a name="get_allocator"></a> unordered_multiset::get_allocator  
  Ruft das gespeicherte Zuweisungsobjekt ab.  
   
 ```  
@@ -1308,7 +1306,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmultisethashfunctiona--unorderedmultisethashfunction"></a><a name="unordered_multiset__hash_function"></a> unordered_multiset::hash_function  
+##  <a name="hash"></a> unordered_multiset::hash_function  
  Ruft das gespeicherte Hashfunktionsobjekt ab.  
   
 ```  
@@ -1345,7 +1343,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmultisethashera--unorderedmultisethasher"></a><a name="unordered_multiset__hasher"></a> unordered_multiset::hasher  
+##  <a name="hasher"></a> unordered_multiset::hasher  
  Der Typ der Hashfunktion.  
   
 ```  
@@ -1382,7 +1380,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmultisetinserta--unorderedmultisetinsert"></a><a name="unordered_multiset__insert"></a> unordered_multiset::insert  
+##  <a name="insert"></a> unordered_multiset::insert  
  Fügt ein Element oder einen Bereich von Elementen in ein unordered_multiset-Element ein.  
   
 ```  
@@ -1431,10 +1429,10 @@ IList);
 |Parameter|Beschreibung|  
 |`Val`|Der Wert eines in das unordered_multiset-Element einzufügenden Elements.|  
 |`Where`|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird.|  
-|`ValTy`|Der Vorlagenparameter, mit dem der Argumenttyp angegeben wird, der vom unordered_multiset-Element verwendet werden kann, um ein Element von [value_type](../standard-library/map-class.md#map__value_type) zu erstellen und `Val` perfekt als Argument weiterzuleiten.|  
+|`ValTy`|Der Vorlagenparameter, mit dem der Argumenttyp angegeben wird, der vom unordered_multiset-Element verwendet werden kann, um ein Element von [value_type](../standard-library/map-class.md#value_type) zu erstellen und `Val` perfekt als Argument weiterzuleiten.|  
 |`First`|Die Position des ersten zu kopierenden Elements.|  
 |`Last`|Die Position direkt über den letzten zu kopierenden Elements.|  
-|`InputIterator`|Das Vorlagenfunktionsargument, das den Anforderungen eines [Eingabeiterators](../standard-library/input-iterator-tag-struct.md) erfüllt, der auf Elemente eines Typs zeigt, der zum Erstellen von [value_type](../standard-library/map-class.md#map__value_type)-Objekten verwendet werden kann.|  
+|`InputIterator`|Das Vorlagenfunktionsargument, das den Anforderungen eines [Eingabeiterators](../standard-library/input-iterator-tag-struct.md) erfüllt, der auf Elemente eines Typs zeigt, der zum Erstellen von [value_type](../standard-library/map-class.md#value_type)-Objekten verwendet werden kann.|  
 |`IList`|Das [initializer_list](../standard-library/initializer-list.md)-Element, aus dem die Elemente kopiert werden sollen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1447,17 +1445,17 @@ IList);
   
  Wird beim Einfügen von nur einem Element eine Ausnahme ausgelöst, die jedoch nicht in der Hashfunktion des Containers auftritt, wird der Zustand des Containers nicht geändert. Wenn die Ausnahme in der Hashfunktion ausgelöst wird, ist das Ergebnis nicht definiert. Wird beim Einfügen mehrerer Elementen eine Ausnahme ausgelöst, wird der Container in einem nicht angegebenen doch gültigen Zustand belassen.  
   
- Das [value_type](../standard-library/map-class.md#map__value_type)-Element eines Containers ist eine Typedef, die dem Container angehört, und beim Satz ist `unordered_multiset<V>::value_type` vom Typ `const V`.  
+ Das [value_type](../standard-library/map-class.md#value_type)-Element eines Containers ist eine Typedef, die dem Container angehört, und beim Satz ist `unordered_multiset<V>::value_type` vom Typ `const V`.  
   
  Die Bereichsmemberfunktion (5) fügt die Sequenz von Elementwerten in ein unordered_multiset-Element ein, das jedem Element entspricht, das von einem Iterator im Bereich `[First, Last)` adressiert wird. Daher wird `Last` nicht eingefügt. Die Containermemberfunktion `end()` bezieht sich auf die Position direkt hinter dem letzten Element im Container. Z. B fügt die Anweisung `m.insert(v.begin(), v.end());` alle Elemente von `v` in `m` ein.  
   
  Die Memberfunktion für die Initialisiererliste (6) verwendet eine [initializer_list](../standard-library/initializer-list.md), um Elemente in die unordered_multiset zu kopieren.  
   
- Zum Einfügen eines lokal erstellten Elements. Das heißt, es wurden keine Kopier- oder Verschiebevorgänge ausgeführt. Informationen hierzu finden Sie unter [unordered_multiset::emplace](#unordered_multiset__emplace) und [unordered_multiset::emplace_hint](#unordered_multiset__emplace_hint).  
+ Zum Einfügen eines lokal erstellten Elements. Das heißt, es wurden keine Kopier- oder Verschiebevorgänge ausgeführt. Informationen hierzu finden Sie unter [unordered_multiset::emplace](#emplace) und [unordered_multiset::emplace_hint](#emplace_hint).  
   
- Ein Codebeispiel finden Sie unter [multiset::insert](../standard-library/multiset-class.md#multiset__insert).  
+ Ein Codebeispiel finden Sie unter [multiset::insert](../standard-library/multiset-class.md#insert).  
   
-##  <a name="a-nameunorderedmultisetiteratora--unorderedmultisetiterator"></a><a name="unordered_multiset__iterator"></a> unordered_multiset::iterator  
+##  <a name="iterator"></a> unordered_multiset::iterator  
  Ein Typ, der einen konstanten [Forward-Iterator](../standard-library/forward-iterator-tag-struct.md) bereitstellt, der Elemente in einem unordered_multiset-Element lesen kann.  
   
 ```  
@@ -1465,9 +1463,9 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [begin](../standard-library/multiset-class.md#multiset__begin) wird verdeutlicht, wie ein **Iterator** deklariert und verwendet wird.  
+  Im Beispiel für [begin](../standard-library/multiset-class.md#begin) wird verdeutlicht, wie ein **Iterator** deklariert und verwendet wird.  
   
-##  <a name="a-nameunorderedmultisetkeyeqa--unorderedmultisetkeyeq"></a><a name="unordered_multiset__key_eq"></a> unordered_multiset::key_eq  
+##  <a name="key_eq"></a> unordered_multiset::key_eq  
  Ruft das gespeicherte Vergleichsfunktionsobjekt ab.  
   
 ```  
@@ -1506,7 +1504,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmultisetkeyequala--unorderedmultisetkeyequal"></a><a name="unordered_multiset__key_equal"></a> unordered_multiset::key_equal  
+##  <a name="key_equal"></a> unordered_multiset::key_equal  
  Der Typ der Vergleichsfunktion.  
   
 ```  
@@ -1545,7 +1543,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmultisetkeytypea--unorderedmultisetkeytype"></a><a name="unordered_multiset__key_type"></a> unordered_multiset::key_type  
+##  <a name="key_type"></a> unordered_multiset::key_type  
  Der Typ eines Sortierschlüssels.  
   
 ```  
@@ -1598,7 +1596,7 @@ int main()
 [d] [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetloadfactora--unorderedmultisetloadfactor"></a><a name="unordered_multiset__load_factor"></a> unordered_multiset::load_factor  
+##  <a name="load_factor"></a> unordered_multiset::load_factor  
  Zählt die durchschnittliche Anzahl von Elementen pro Bucket.  
   
 ```  
@@ -1606,7 +1604,7 @@ float load_factor() const;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt `(float)`[unordered_multiset::size](#unordered_multiset__size)`() / (float)`[unordered_multiset::bucket_count](#unordered_multiset__bucket_count)`()` zurück, also die durchschnittliche Anzahl von Elementen pro Bucket.  
+ Die Memberfunktion gibt `(float)`[unordered_multiset::size](#size)`() / (float)`[unordered_multiset::bucket_count](#bucket_count)`()` zurück, also die durchschnittliche Anzahl von Elementen pro Bucket.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1665,7 +1663,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameunorderedmultisetlocaliteratora--unorderedmultisetlocaliterator"></a><a name="unordered_multiset__local_iterator"></a> unordered_multiset::local_iterator  
+##  <a name="local_iterator"></a> unordered_multiset::local_iterator  
  Der Typ eines Bucketiterators.  
   
 ```  
@@ -1712,7 +1710,7 @@ int main()
 [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetmaxbucketcounta--unorderedmultisetmaxbucketcount"></a><a name="unordered_multiset__max_bucket_count"></a> unordered_multiset::max_bucket_count  
+##  <a name="max_bucket_count"></a> unordered_multiset::max_bucket_count  
  Ruft die maximale Anzahl von Buckets ab.  
   
 ```  
@@ -1798,7 +1796,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultisetmaxloadfactora--unorderedmultisetmaxloadfactor"></a><a name="unordered_multiset__max_load_factor"></a> unordered_multiset::max_load_factor  
+##  <a name="max_load_factor"></a> unordered_multiset::max_load_factor  
  Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.  
   
 ```  
@@ -1891,7 +1889,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultisetmaxsizea--unorderedmultisetmaxsize"></a><a name="unordered_multiset__max_size"></a> unordered_multiset::max_size  
+##  <a name="max_size"></a> unordered_multiset::max_size  
  Ruft die maximale Größe der gesteuerten Sequenz ab.  
   
 ```  
@@ -1925,7 +1923,7 @@ int main()
 max_size() == 4294967295  
 ```  
   
-##  <a name="a-nameunorderedmultisetoperatoreqa--unorderedmultisetoperator"></a><a name="unordered_multiset__operator_eq"></a> unordered_multiset::operator=  
+##  <a name="op_eq"></a> unordered_multiset::operator=  
  Kopiert eine Hashtabelle.  
   
 ```  
@@ -1939,10 +1937,10 @@ unordered_multiset& operator=(unordered_multiset&& right);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|` right`|Das [unordered_multiset](../standard-library/unordered-multiset-class.md), das in das `unordered_multiset` kopiert wird.|  
+|`right`|Das [unordered_multiset](../standard-library/unordered-multiset-class.md), das in das `unordered_multiset` kopiert wird.|  
   
 ### <a name="remarks"></a>Hinweise  
- Nachdem ein vorhandenes Element in einem `unordered_multiset` gelöscht wurde, kopiert oder verschiebt `operator=` den Inhalt von ` right` in den `unordered_multiset`.  
+ Nachdem ein vorhandenes Element in einem `unordered_multiset` gelöscht wurde, kopiert oder verschiebt `operator=` den Inhalt von `right` in den `unordered_multiset`.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1981,7 +1979,7 @@ int main( )
    }  
 ```  
   
-##  <a name="a-nameunorderedmultisetpointera--unorderedmultisetpointer"></a><a name="unordered_multiset__pointer"></a> unordered_multiset::pointer  
+##  <a name="pointer"></a> unordered_multiset::pointer  
  Der Typ eines Zeigers auf ein Element.  
   
 ```  
@@ -2027,7 +2025,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetreferencea--unorderedmultisetreference"></a><a name="unordered_multiset__reference"></a> unordered_multiset::reference  
+##  <a name="reference"></a> unordered_multiset::reference  
  Der Typ eines Verweises auf ein Element.  
   
 ```  
@@ -2073,7 +2071,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetrehasha--unorderedmultisetrehash"></a><a name="unordered_multiset__rehash"></a> unordered_multiset::rehash  
+##  <a name="rehash"></a> unordered_multiset::rehash  
  Erstellt die Hashtabelle neu.  
   
 ```  
@@ -2149,7 +2147,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1  
 ```  
   
-##  <a name="a-nameunorderedmultisetsizea--unorderedmultisetsize"></a><a name="unordered_multiset__size"></a> unordered_multiset::size  
+##  <a name="size"></a> unordered_multiset::size  
  Ermittelt die Anzahl von Elementen.  
   
 ```  
@@ -2215,7 +2213,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultisetsizetypea--unorderedmultisetsizetype"></a><a name="unordered_multiset__size_type"></a> unordered_multiset::size_type  
+##  <a name="size_type"></a> unordered_multiset::size_type  
  Der Typ eines Abstands ohne Vorzeichen zwischen zwei Elementen.  
   
 ```  
@@ -2250,7 +2248,7 @@ int main()
 size == 0  
 ```  
   
-##  <a name="a-nameunorderedmultisetswapa--unorderedmultisetswap"></a><a name="unordered_multiset__swap"></a> unordered_multiset::swap  
+##  <a name="swap"></a> unordered_multiset::swap  
  Vertauscht den Inhalt von zwei Containern.  
   
 ```  
@@ -2262,7 +2260,7 @@ void swap(unordered_multiset& right);
  Der Container für den Tauschvorgang.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `*this` und `right`aus. Wenn [unordered_multiset::get_allocator](#unordered_multiset__get_allocator)`() == right.get_allocator()` gilt, führt sie dies in einer konstanten Zeit aus, sie löst eine Ausnahme nur als Reaktion auf das Kopieren des gespeicherter Merkmalobjekts vom Typ `Tr` aus, und sie macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in den beiden kontrollierten Sequenzen bestimmen. Andernfalls führt Sie proportional zur Anzahl der Elemente in den beiden kontrollierten Sequenzen eine Reihe von Elementzuweisungen und Konstruktoraufrufe aus.  
+ Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `*this` und `right`aus. Wenn [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()` gilt, führt sie dies in einer konstanten Zeit aus, sie löst eine Ausnahme nur als Reaktion auf das Kopieren des gespeicherter Merkmalobjekts vom Typ `Tr` aus, und sie macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in den beiden kontrollierten Sequenzen bestimmen. Andernfalls führt Sie proportional zur Anzahl der Elemente in den beiden kontrollierten Sequenzen eine Reihe von Elementzuweisungen und Konstruktoraufrufe aus.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2320,7 +2318,7 @@ int main()
 [c] [b] [a]  
 ```  
   
-##  <a name="a-nameunorderedmultisetunorderedmultiseta--unorderedmultisetunorderedmultiset"></a><a name="unordered_multiset__unordered_multiset"></a> unordered_multiset::unordered_multiset  
+##  <a name="unordered_multiset"></a> unordered_multiset::unordered_multiset  
  Erstellt ein container-Objekt.  
   
 ```  
@@ -2397,7 +2395,7 @@ unordered_multiset(
   
  Das Zuweisungsobjekt ist das Argument `Al`, falls es vorhanden ist. Andernfalls ist es `Alloc()`.  
   
-##  <a name="a-nameunorderedmultisetvaluetypea--unorderedmultisetvaluetype"></a><a name="unordered_multiset__value_type"></a> unordered_multiset::value_type  
+##  <a name="value_type"></a> unordered_multiset::value_type  
  Der Typ eines Elements.  
   
 ```  

@@ -46,10 +46,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 55da414f0a743fab278cb47441efe04e82ac3279
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 38a34e2957b3fb4cf2713d61ac3633691b04b03c
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator-Klasse
@@ -114,7 +115,7 @@ private:
   
  **Namespace:** std  
   
-##  <a name="regex_token_iterator__difference_type"></a> regex_token_iterator::difference_type  
+##  <a name="difference_type"></a> regex_token_iterator::difference_type  
  Der Typ einer Iteratordifferenz.  
   
 ```  
@@ -220,7 +221,7 @@ match == aa
 match == z  
 ```  
   
-##  <a name="regex_token_iterator__iterator_category"></a> regex_token_iterator::iterator_category  
+##  <a name="iterator_category"></a> regex_token_iterator::iterator_category  
  Der Typ der Iteratorkategorie.  
   
 ```  
@@ -330,7 +331,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_neq"></a> regex_token_iterator::operator!=  
+##  <a name="op_neq"></a> regex_token_iterator::operator!=  
  Vergleicht Iteratoren auf Ungleichheit.  
   
 ```  
@@ -444,7 +445,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_star"></a> regex_token_iterator::operator*  
+##  <a name="op_star"></a> regex_token_iterator::operator*  
  Greift auf die gekennzeichnete Teilübereinstimmung zu.  
   
 ```  
@@ -554,7 +555,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_add_add"></a> regex_token_iterator::operator++  
+##  <a name="op_add_add"></a> regex_token_iterator::operator++  
  Erhöht den Iterator.  
   
 ```  
@@ -564,7 +565,7 @@ regex_token_iterator& operator++(int);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn der gespeicherte Iterator `it` ein Iterator am Ende der Sequenz ist, legt der erste Operator den gespeicherten Wert `pos` auf den Wert von `subs.size()` fest (wodurch er ein Iterator am Ende der Sequenz wird). Andernfalls erhöht der Operator den gespeicherten Wert `pos`. Wenn das Ergebnis dem Wert `subs.size()` entspricht, wird der gespeicherte Wert `pos` auf&0; (null) festgelegt und der gespeicherte Iterator `it` wird erhöht. Wenn beim Inkrementieren der gespeicherte Iterator keinem Iterator am Ende der Sequenz entspricht, führt der Operator keine weitere Aktion aus. Andernfalls, wenn das Ende der vorherigen Übereinstimmung sich am Ende der Zeichenfolge befand, legt der Operator den gespeicherten Wert von `pos` auf `subs.size()` fest. Andernfalls erhöht der Operator wiederholt den gespeicherten Wert `pos` bis auf `pos == subs.size()` oder `subs[pos] == -1` (wodurch sichergestellt wird, dass die nächste Dereferenzierung des Iterators das Ende der Zeichenfolge zurückgibt, wenn einer der Indexwerte -1 ist). In allen Fällen gibt der Operator das Objekt zurück.  
+ Wenn der gespeicherte Iterator `it` ein Iterator am Ende der Sequenz ist, legt der erste Operator den gespeicherten Wert `pos` auf den Wert von `subs.size()` fest (wodurch er ein Iterator am Ende der Sequenz wird). Andernfalls erhöht der Operator den gespeicherten Wert `pos`. Wenn das Ergebnis dem Wert `subs.size()` entspricht, wird der gespeicherte Wert `pos` auf 0 (null) festgelegt und der gespeicherte Iterator `it` wird erhöht. Wenn beim Inkrementieren der gespeicherte Iterator keinem Iterator am Ende der Sequenz entspricht, führt der Operator keine weitere Aktion aus. Andernfalls, wenn das Ende der vorherigen Übereinstimmung sich am Ende der Zeichenfolge befand, legt der Operator den gespeicherten Wert von `pos` auf `subs.size()` fest. Andernfalls erhöht der Operator wiederholt den gespeicherten Wert `pos` bis auf `pos == subs.size()` oder `subs[pos] == -1` (wodurch sichergestellt wird, dass die nächste Dereferenzierung des Iterators das Ende der Zeichenfolge zurückgibt, wenn einer der Indexwerte -1 ist). In allen Fällen gibt der Operator das Objekt zurück.  
   
  Der zweite Operator erstellt eine Kopie des Objekts, erhöht das Objekt und gibt dann die Kopie zurück.  
   
@@ -668,7 +669,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_eq_eq"></a> regex_token_iterator::operator==  
+##  <a name="op_eq_eq"></a> regex_token_iterator::operator==  
  Vergleicht Iteratoren auf Gleichheit.  
   
 ```  
@@ -782,7 +783,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator-_gt_"></a> regex_token_iterator::operator-&gt;  
+##  <a name="regex_token_iterator__operator-_gt"></a> regex_token_iterator::operator-&gt;  
  Greift auf die gekennzeichnete Teilübereinstimmung zu.  
   
 ```  
@@ -892,7 +893,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__pointer"></a> regex_token_iterator::pointer  
+##  <a name="pointer"></a> regex_token_iterator::pointer  
  Der Typ eines Zeigers auf eine Übereinstimmung.  
   
 ```  
@@ -1002,7 +1003,7 @@ match == z
 ### <a name="remarks"></a>Hinweise  
  Der Typ ist ein Synonym für `sub_match<BidIt>*`, wobei `BidIt` der Vorlagenparameter ist.  
   
-##  <a name="regex_token_iterator__reference"></a> regex_token_iterator::reference  
+##  <a name="reference"></a> regex_token_iterator::reference  
  Der Typ eines Verweises auf eine Teilübereinstimmung.  
   
 ```  
@@ -1112,7 +1113,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__regex_token_iterator"></a> regex_token_iterator::regex_token_iterator  
+##  <a name="regex_token_iterator"></a> regex_token_iterator::regex_token_iterator  
  Erstellt den Iterator.  
   
 ```  
@@ -1148,11 +1149,11 @@ regex_token_iterator(BidIt first, BidIt last,
 ### <a name="remarks"></a>Hinweise  
  Der erste Konstruktor erstellt einen Sequenzende-Iterator.  
   
- Der zweite Konstruktor erstellt ein Objekt, dessen gespeicherter Iterator `it` auf `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`initialisiert wird, dessen gespeicherter Vektor `subs` genau eine ganze Zahl mit dem Wert `submatch`enthält und dessen gespeicherter Wert `pos` gleich&0; (null) ist. Hinweis: Das resultierende Objekt extrahiert für jede erfolgreiche Übereinstimmung des regulären Ausdrucks die Teilübereinstimmung, die durch den Indexwert `submatch` gekennzeichnet ist.  
+ Der zweite Konstruktor erstellt ein Objekt, dessen gespeicherter Iterator `it` auf `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`initialisiert wird, dessen gespeicherter Vektor `subs` genau eine ganze Zahl mit dem Wert `submatch`enthält und dessen gespeicherter Wert `pos` gleich 0 (null) ist. Hinweis: Das resultierende Objekt extrahiert für jede erfolgreiche Übereinstimmung des regulären Ausdrucks die Teilübereinstimmung, die durch den Indexwert `submatch` gekennzeichnet ist.  
   
- Der dritte Konstruktor erstellt ein Objekt, dessen gespeicherter Iterator `it` auf `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`initialisiert wird, dessen gespeicherter Vektor `subs` genau eine Kopie des Konstruktorarguments `submatches`enthält und dessen gespeicherter Wert `pos` gleich&0; (null) ist.  
+ Der dritte Konstruktor erstellt ein Objekt, dessen gespeicherter Iterator `it` auf `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`initialisiert wird, dessen gespeicherter Vektor `subs` genau eine Kopie des Konstruktorarguments `submatches`enthält und dessen gespeicherter Wert `pos` gleich 0 (null) ist.  
   
- Der vierte Konstruktor erstellt ein Objekt, dessen gespeicherter Iterator `it` auf `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`initialisiert wird, dessen gespeicherter Vektor `subs` die `N` Werte enthält, auf die das Konstruktorargument `submatches`zeigt, und dessen gespeicherter Wert `pos` gleich&0; (null) ist.  
+ Der vierte Konstruktor erstellt ein Objekt, dessen gespeicherter Iterator `it` auf `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`initialisiert wird, dessen gespeicherter Vektor `subs` die `N` Werte enthält, auf die das Konstruktorargument `submatches`zeigt, und dessen gespeicherter Wert `pos` gleich 0 (null) ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1254,7 +1255,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__regex_type"></a> regex_token_iterator::regex_type  
+##  <a name="regex_type"></a> regex_token_iterator::regex_type  
  Der Typ des regulären Ausdrucks, der übereinstimmen soll.  
   
 ```  
@@ -1364,7 +1365,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__value_type"></a> regex_token_iterator::value_type  
+##  <a name="value_type"></a> regex_token_iterator::value_type  
  Der Typ einer Teilübereinstimmung.  
   
 ```  

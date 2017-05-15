@@ -10,15 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - random_device
-- std::random_device
 - random/std::random_device
-- std::random_device::min
 - random/std::random_device::min
-- std::random_device::max
 - random/std::random_device::max
-- std::random_device::entropy
 - random/std::random_device::entropy
-- std::random_device::operator()
+- random/std::random_device::operator()
+- random/std::random_device::entropy
 - random/std::random_device::operator()
 dev_langs:
 - C++
@@ -43,10 +40,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: d755f15b9f8dc575eb95d65822adfae3fdb568dd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 842e4f9b53a06373df8e00f64b1ab24a48a5c6b9
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="randomdevice-class"></a>random_device-Klasse
@@ -80,8 +78,8 @@ public:
   
 |||  
 |-|-|  
-|[random_device::random_device](#random_device__random_device)|[random_device::entropy](#random_device__entropy)|  
-|[random_device::operator()](#random_device__operator__)||  
+|[random_device](#random_device)|[Entropie](#entropy)|  
+|[random_device::operator()](#op_call)||  
   
 ## <a name="remarks"></a>Hinweise  
 Die Klasse beschreibt eine Quelle von Zufallszahlen und darf - aber muss nicht - nach dem ISO C++-Standard nicht-deterministisch oder kryptografisch sicher sein. In der Visual Studio-Implementierung sind die produzierten Werte nicht-deterministisch und kryptografisch sicher, aber sie läuft langsamer als aus Modulen und Moduladaptern erstellte Generatoren (wie [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), das hochwertige und schnelle Modul für die meisten Anwendungen).  
@@ -132,7 +130,7 @@ Dieses Beispiel ist vereinfacht und nicht repräsentativ für den generellen Ver
   
  **Namespace:** std  
   
-##  <a name="a-namerandomdevicerandomdevicea--randomdevicerandomdevice"></a><a name="random_device__random_device"></a> random_device::random_device  
+##  <a name="random_device"></a> random_device::random_device  
 Konstruiert den Generator.  
   
 ```  
@@ -142,7 +140,7 @@ random_device(const std::string& = "");
 ### <a name="remarks"></a>Hinweise  
 Der Konstruktor initiiert bei Bedarf den Generator und ignoriert dabei den Zeichenfolgenparameter. Löst einen Wert eines durch die Implementierung definierten Typen aus, der aus [Ausnahme](../standard-library/exception-class.md) abgeleitet wird, wenn `random_device` nicht initialisiert werden konnte.  
   
-##  <a name="a-namerandomdeviceentropya--randomdeviceentropy"></a><a name="random_device__entropy"></a> random_device::entropy  
+##  <a name="entropy"></a> random_device::entropy  
 Schätzt den Zufallscharakter der Quelle ab.  
   
 ```  
@@ -152,7 +150,7 @@ double entropy() const noexcept;
 ### <a name="remarks"></a>Hinweise  
 Die Memberfunktion gibt eine, wie in Bits gemessene, Schätzung des Zufallscharakters der Quelle zurück.  
   
-##  <a name="a-namerandomdeviceoperatora--randomdeviceoperator"></a><a name="random_device__operator__"></a> random_device::operator()  
+##  <a name="op_call"></a> random_device::operator()  
 Gibt einen zufälligen Wert zurück.  
   
 ```  

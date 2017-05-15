@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d203033a5cb07ca4e6888cca7cbf4bba1b1da9da
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 07948b7fc08bbc41e2e899e190842be98746aeab
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
@@ -125,7 +126,7 @@ unsigned char *_mbstok(
 > [!IMPORTANT]
 >  Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- Beim ersten Aufruf von `strtok` überspringt die Funktion vorangestellte Trennzeichen, gibt einen Zeiger auf das erste Token in `strToken` zurück und beendet das Token mit einem NULL-Zeichen. Vom restlichen `strToken` können weitere Token durch mehrere Aufrufe von `strtok` geholt werden. Jeder Aufruf von `strtok` ändert `strToken`, indem ein NULL-Zeichen nach dem von dem Aufruf zurückgegebenen `token` eingefügt wird. Um das folgende Token von `strToken` zu lesen, rufen Sie `strtok` auf, und geben Sie dabei einen `NULL`-Wert für das `strToken`-Argument an. Das `NULL` `strToken`-Argument bewirkt, dass `strtok` im geänderten `strToken` nach dem nächsten Token sucht. Das `strDelimit`-Argument kann zwischen zwei Aufrufen jeden beliebigen Wert annehmen, damit der Satz von Trennzeichen variieren kann.  
+ Beim ersten Aufruf von `strtok` überspringt die Funktion vorangestellte Trennzeichen, gibt einen Zeiger auf das erste Token in `strToken` zurück und beendet das Token mit einem NULL-Zeichen. Vom restlichen `strToken` können weitere Token durch mehrere Aufrufe von `strtok` geholt werden. Jeder Aufruf von `strtok` ändert `strToken` durch ein Null-Zeichen nach dem Einfügen der `token` zurückgegebenen. Um das folgende Token von `strToken` zu lesen, rufen Sie `strtok` auf, und geben Sie dabei einen `NULL`-Wert für das `strToken`-Argument an. Das `NULL` `strToken`-Argument bewirkt, dass `strtok` im geänderten `strToken` nach dem nächsten Token sucht. Das `strDelimit`-Argument kann zwischen zwei Aufrufen jeden beliebigen Wert annehmen, damit der Satz von Trennzeichen variieren kann.  
   
  Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
@@ -194,9 +195,6 @@ Tokens:
  more  
  tokens  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   

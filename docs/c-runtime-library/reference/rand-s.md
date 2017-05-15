@@ -1,83 +1,100 @@
 ---
-title: "rand_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rand_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "rand_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Kryptografisch sichere Zufallszahlen"
-  - "Generieren von pseudozufälligen Zahlen"
-  - "Zahlen, Generieren von pseudozufälligen"
-  - "Zahlen, Pseudozufällig"
-  - "Pseudozufallszahlen"
-  - "rand_s-Funktion"
-  - "Zufallszahlen, Kryptografisch sicher"
-  - "Zufallszahlen, Generieren"
+title: rand_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rand_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- rand_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- generating pseudorandom numbers
+- random numbers, cryptographically secure
+- random numbers, generating
+- rand_s function
+- numbers, pseudorandom
+- cryptographically secure random numbers
+- pseudorandom numbers
+- numbers, generating pseudorandom
 ms.assetid: d6a0be60-997d-4904-8411-8aea6839cc94
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# rand_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5087948c5737f105e9bc694da1e866be659ff18f
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Generiert eine Pseudozufallszahl.  Eine Version von [rand](../../c-runtime-library/reference/rand.md) mit werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="rands"></a>rand_s
+Generiert eine pseudozufällige Zahl. Dies ist eine Version von [rand](../../c-runtime-library/reference/rand.md) mit Sicherheitserweiterungen, wie in den [Sicherheitsfunktionen in CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t rand_s(   unsigned int* randomValue);  
 ```  
   
-## Rückgabewert  
- Null wenn erfolgreich andernfalls ein Fehlercode.  Wenn der eingegebene Zeiger `randomValue` ein NULL\-Zeiger ist, ruft die Funktion einen ungültigen Parameterhandler auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, gibt die Funktion `EINVAL` zurück und setzt `errno` auf `EINVAL`.  Wenn die Funktion für einen anderen Grund fehlschlägt, \*`randomValue` auf 0 festgelegt.  
+## <a name="return-value"></a>Rückgabewert  
+ Null, wenn erfolgreich, andernfalls ein Fehlercode. Wenn der Eingabezeiger `randomValue` ein NULL-Zeiger ist, ruft die Funktion einen ungültigen Parameterhandler auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion `EINVAL` zurück und setzt `errno` auf `EINVAL`. Wenn bei der Funktion aus einem anderen Grund ein Fehler auftritt, wird *`randomValue` auf 0 festgelegt.  
   
-## Hinweise  
- Die Funktion `rand_s``UINT_MAX`\-Attribut eine Pseudo\-Zufallsganze Zahl im Bereich von 0 z Eingabezeiger.  Die Funktion `rand_s` verwendet das Betriebssystem, um kryptografisch Zufallszahlen generieren zu speichern.  Es verwendet nicht den Startwert, der durch die [srand](../../c-runtime-library/reference/srand.md)\-Funktion generiert wird, und wirkt sie sich auf die Zufallszahlensequenz, die von `rand` verwendet wird.  
+## <a name="remarks"></a>Hinweise  
+ Die `rand_s`-Funktion schreibt eine pseudozufällige ganze Zahl im Bereich von 0 bis `UINT_MAX` an die Position des Eingabezeigers. Die `rand_s`-Funktion verwendet das Betriebssystem zur kryptografischen Erstellung sicherer Zufallszahlen. Sie verwendet weder den Startwert, der durch die [srand](../../c-runtime-library/reference/srand.md)-Funktion generiert wird, noch wirkt sie sich auf die Zufallszahlensequenz aus, die von `rand` verwendet wird.  
   
- Die Funktion `rand_s` erfordert, dass konstantes `_CRT_RAND_S` vor der Inklusionsanweisung definiert wurde, sodass die Funktion deklariert werden, wie im folgenden Beispiel:  
+ Die `rand_s`-Funktion erfordert, dass die Konstante `_CRT_RAND_S` vor der Inklusionsanweisung für die zu deklarierende Funktion definiert wurde, wie im folgenden Beispiel:  
   
 ```  
 #define _CRT_RAND_S  
 #include <stdlib.h>  
 ```  
   
- `rand_s` hängt von der API ab [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694), die in Windows XP und höher nur verfügbar ist.  
+ `rand_s` hängt von der API [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) ab, die erst in Windows XP und höher verfügbar ist.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`rand_s`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`rand_s`|\<stdlib.h>|  
   
- Weitere Informationen finden Sie unter[Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_rand_s.c  
@@ -127,7 +144,7 @@ int main( void )
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 10  
@@ -153,9 +170,6 @@ int main( void )
 65.0712  
 ```  
   
-## .NET Framework-Entsprechung  
- [System::Random Class](https://msdn.microsoft.com/en-us/library/system.random.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
  [srand](../../c-runtime-library/reference/srand.md)

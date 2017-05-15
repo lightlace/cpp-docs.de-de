@@ -1,56 +1,73 @@
 ---
-title: "_fullpath, _wfullpath | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fullpath"
-  - "_wfullpath"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wfullpath"
-  - "fullpath"
-  - "_wfullpath"
-  - "_fullpath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fullpath-Funktion"
-  - "_wfullpath-Funktion"
-  - "Absolute Pfade"
-  - "Vollpfadfunktion"
-  - "Relative Dateipfade"
-  - "wfullpath-Funktion"
+title: _fullpath, _wfullpath | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fullpath
+- _wfullpath
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wfullpath
+- fullpath
+- _wfullpath
+- _fullpath
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wfullpath function
+- relative file paths
+- absolute paths
+- wfullpath function
+- _fullpath function
+- fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _fullpath, _wfullpath
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7641c3cdc2a437d2c65f964ca6b1220992d11bca
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Erstellt ein absoluter oder einen vollständigen Pfadnamen für den angegebenen relativen Pfadnamen.  
+---
+# <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
+Erstellt einen absoluten oder vollständigen Pfadnamen für den angegebenen relativen Pfadnamen  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 char *_fullpath(   
@@ -65,58 +82,58 @@ wchar_t *_wfullpath(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `absPath`  
- Zeiger auf einen Puffer, der das Absolute oder der vollständige Pfadname oder NULL enthält.  
+ Zeiger auf einen Puffer, der den absoluten oder vollständigen Pfadnamen oder NULL enthält  
   
  `relPath`  
  Relativer Pfadname.  
   
  `maxLength`  
- Maximale Länge des absoluten Pfadnamenpuffers \(`absPath`\).  Diese Länge ist in Bytes für `_fullpath` in den Breitzeichen \(`wchar_t`\) für `_wfullpath`.  
+ Maximale Länge des Puffers des absoluten Pfadnamens (`absPath`). Die Länge wird für `_fullpath` in Bytes ausgedrückt, aber für `wchar_t` in Breitzeichen (`_wfullpath`).  
   
-## Rückgabewert  
- Jede dieser Funktionen gibt einen Zeiger auf einen Puffer zurück, der den absoluten Pfadnamen \(`absPath`\) enthält.  Wenn es einen Fehler \(beispielsweise, wenn der Wert, der an `relPath` übergeben wird, einen Laufwerkbuchstaben enthält, der NULL ist oder nicht gefunden werden kann, oder wenn die Länge des erstellten absoluten Pfadnamens \(`absPath`\), ist größer als `maxLength`\), gibt die Funktion `NULL` zurückgibt.  
+## <a name="return-value"></a>Rückgabewert  
+ Jede dieser Funktionen gibt einen Zeiger auf einen Puffer zurück, der den absoluten Pfadnamen (`absPath`) enthält. Wenn ein Fehler auftritt (z.B, wenn der in `relPath` übergebene Wert einen Laufwerksbuchstaben enthält, der nicht gültig ist oder nicht gefunden werden kann, oder wenn der erstellte absolute Pfadname (`absPath`) länger ist als `maxLength`), gibt die Funktion `NULL` zurück.  
   
-## Hinweise  
- Die `_fullpath`\-Funktion erweitert den relativen Pfadnamen in `relPath` auf den vollqualifizierten oder absolute Pfad und speichert diesen Namen in `absPath`*.* Wenn `absPath` NULL ist, wird `malloc` verwendet, um einem ausreichenden Puffer der Länge zu, um den Pfadnamen aufzunehmen.  Es liegt in der Verantwortung des Aufrufers, diesem Puffer freizugeben.  Ein relativer Pfadname gibt einen Pfad zu einem anderen Speicherort von der aktuellen Position an \(wie zum aktuellen Arbeitsverzeichnis: "."\).  Ein absoluter Pfadname ist die Erweiterung eines relativen Pfadnamens, der den gesamten Pfad angibt, der erforderlich ist, um den gewünschten Speicherort dem Stamm des Dateisystems zu erreichen.  Anders als `_makepath` kann `_fullpath` verwendet werden, um den absoluten Pfadnamen für relative Pfade \(`relPath`\) erhalten können vorliegen ". \/" oder ". \/" in ihren Namen.  
+## <a name="remarks"></a>Hinweise  
+ Die `_fullpath` Funktion erweitert den relativen Pfadnamen in `relPath` an ihre voll qualifizierten oder absolute Pfad und speichert diese Namen in `absPath`. Wenn `absPath` NULL ist, wird `malloc` verwendet, um einen Puffer zuzuweisen, der lang genug ist, um den Pfadnamen zu enthalten. Der Aufrufer muss diesen Puffer freigeben. Dieser relative Pfadname gibt vom aktuellen Speicherort einen Pfad zu einem anderen Speicherort an (z.B. das aktuelle Arbeitsverzeichnis: "."). Ein absoluter Pfadname ist die Erweiterung eines relativen Pfadnamens, der den gesamten Pfad ausdrückt, der dafür erforderlich ist, um die gewünschte Position aus dem Stammverzeichnis des Dateisystems zu erreichen. Im Gegensatz zu `_makepath` kann `_fullpath` dazu verwendet werden, um den absoluten Pfadnamen für relative Pfade (`relPath`) zu erhalten, die „./“ oder „../“ im Namen enthalten.  
   
- Um beispielsweise C\-Laufzeit\-Routinen zu verwenden, muss die Anwendung die Headerdateien enthalten, die die Deklarationen für die Routinen enthalten.  Jede Headerdateieinschließungsanweisung verweist auf den Speicherort der Datei in einer relativen Weise \(aus dem Arbeitsverzeichnis der Anwendung\):  
+ Um beispielsweise C-Laufzeitroutinen verwenden zu können, muss die Anwendung die Headerdateien enthalten, die die Deklarationen für die Routinen enthalten. Jede Headerdatei enthält Anweisungen, die relativ auf den Speicherort der Datei verweisen (aus dem Arbeitsverzeichnis der Anwendung):  
   
 ```  
 #include <stdlib.h>  
 ```  
   
- als der absolute Pfad kann \(tatsächliche des Dateisystems der Datei ist\):  
+ Wenn der absolute Pfad (der tatsächliche Dateisystem-Speicherort) der Datei z.B. wie folgt lautet:  
   
 ```  
 \\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h  
 ```  
   
- `_fullpath`  behandelt automatisch Mehrbyte\-Zeichenfolgen\-Argumente entsprechend und derzeit erkennt Mehrbytezeichensequenzen entsprechend der Mehrbyte\-Codepage.  `_wfullpath`  ist eine Breitzeichen\-Version von `_fullpath`; die Zeichenfolgenargumente für `_wfullpath`  sind Zeichenfolgen mit Breitzeichen.  `_wfullpath`  und `_fullpath`  identisch verhalten sich, dass `_wfullpath`  nicht behandelt Mehrbyte\-Zeichenfolgen.  
+ `_fullpath` verarbeitet Multibyte-Zeichenfolgenargumente automatisch richtig. Die Erkennung von Multibyte-Zeichensequenzen erfolgt auf der Grundlage der aktuell verwendeten Multibyte-Codeseite. `_wfullpath` ist eine Breitzeichenversion von `_fullpath`. Die Zeichenfolgenargumente für `_wfullpath` sind Zeichenfolgen mit Breitzeichen. `_wfullpath` und `_fullpath` verhalten sich nahezu identisch, allerdings verarbeitet `_wfullpath` keine Multibyte-Zeichenfolgen.  
   
- Wenn `_DEBUG`  und `_CRTDBG_MAP_ALLOC`  beide definiert werden, werden Aufrufe von `_fullpath` und `_wfullpath` durch Aufrufe von `_fullpath_dbg` und `_wfullpath_dbg` ersetzt, um das Debuggen von Speicherbelegungen zuzulassen.  Weitere Informationen finden Sie unter [\_fullpath\_dbg, \_wfullpath\_dbg](../../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md).  
+ Wenn sowohl `_DEBUG` als auch `_CRTDBG_MAP_ALLOC` definiert sind, werden Aufrufe von `_fullpath` und `_wfullpath` durch Aufrufe von `_fullpath_dbg` und `_wfullpath_dbg` ersetzt, um das Debuggen von Speicherbelegungen zuzulassen. Weitere Informationen finden Sie unter [_fullpath_dbg, _wfullpath_dbg](../../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md).  
   
- Diese Funktion ruft den ungültigen Parameterhandler auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, wenn `maxlen` kleiner oder gleich 0 ist.  Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `NULL` zurück.  
+ Diese Funktion ruft den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, wenn `maxlen` weniger gleich 0 ist. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion `errno` auf `EINVAL` fest und gibt `NULL` zurück.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|------------------------------------------|----------------------|-------------------------|  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tfullpath`|`_fullpath`|`_fullpath`|`_wfullpath`|  
   
- Wenn der Puffer `absPath` eine `NULL` ist, wird `_fullpath`[malloc](../../c-runtime-library/reference/malloc.md) auf, um einem Puffer reserviert und ignoriert das `maxLength`\-Argument.  Es liegt in der Verantwortung des Aufrufers, diesem Puffer nach Bedarf freizugeben \(mit [frei](../../c-runtime-library/reference/free.md)\).  Wenn `relPath` das Argument einem Laufwerk angibt, wird das aktuelle Verzeichnis dieses Laufwerks mit dem Pfad kombiniert.  
+ Wenn der `absPath`-Puffer `NULL` ist,ruft `_fullpath` [malloc](../../c-runtime-library/reference/malloc.md) auf, um Puffer zuzuweisen, und ignoriert das `maxLength`-Argument. Es liegt in der Verantwortung des Aufrufers, die Zuordnung für diesen Puffer richtig wieder aufzuheben (mithilfe von [free](../../c-runtime-library/reference/free.md)). Wenn das `relPath`-Argument ein Laufwerk angibt, wird das aktuelle Verzeichnis dieses Laufwerks mit dem Pfad kombiniert.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`_fullpath`|\<stdlib.h\>|  
-|`_wfullpath`|\<stdlib.h\> oder \<wchar.h\>|  
+|--------------|---------------------|  
+|`_fullpath`|\<stdlib.h>|  
+|`_wfullpath`|\<stdlib.h> oder \<wchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_fullpath.c  
@@ -145,15 +162,15 @@ int main( void )
 }  
 ```  
   
-  **Vollständiger Pfad ist: C:\\Dokumente und Einstellungen\\Benutzer\\Eigene Dokumente\\Test**  
-**Vollständiger Pfad ist: C:\\test**  
-**Vollständiger Pfad ist: C:\\Dokumente und Einstellungen\\Benutzer\\Test**   
-## .NET Framework-Entsprechung  
- [System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)  
+```Output  
+Full path is: C:\Documents and Settings\user\My Documents\test  
+Full path is: C:\test  
+Full path is: C:\Documents and Settings\user\test  
+```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dateibehandlung](../../c-runtime-library/file-handling.md)   
- [\_getcwd, \_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [\_getdcwd, \_wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
- [\_makepath, \_wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [\_splitpath, \_wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)
+ [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
+ [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
+ [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
+ [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)

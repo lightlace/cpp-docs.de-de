@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: dcac506c06aac3c29ba2251af4281a713eec7491
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e4c3cbb6d11758ff15909c6062b7430f6679f6de
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
@@ -126,22 +127,22 @@ Definiert C++-Standardbibliotheksfunktionen, die dabei helfen, *Funktionsobjekte
   
 |||  
 |-|-|  
-|[bind](../standard-library/functional-functions.md#bind_function)|Bindet Argumente an ein aufrufbares Objekt.|  
-|[bind1st](../standard-library/functional-functions.md#bind1st_function)|Eine Hilfevorlagenfunktion, mit der ein Adapter erstellt wird, um ein binäres Funktionsobjekt in ein unäres Funktionsobjekt zu konvertieren, indem das erste Argument der binären Funktion an einen angegebenen Wert gebunden wird.|  
-|[bind2nd](../standard-library/functional-functions.md#bind2nd_function)|Eine Hilfevorlagenfunktion, mit der ein Adapter erstellt wird, um ein binäres Funktionsobjekt in ein unäres Funktionsobjekt zu konvertieren, indem das zweite Argument der binären Funktion an einen angegebenen Wert gebunden wird.|  
-|[bit_and](../standard-library/functional-functions.md#bit_and_function)|Gibt das bitweise logische UND (binärer Operator&) der zwei Parameter zurück.|  
-|[bit_not](../standard-library/functional-functions.md#bit_not_function)|Gibt das bitweise logische Komplement (operator~) des Parameters zurück.|  
-|[bit_or](../standard-library/functional-functions.md#bit_or_function)|Gibt das bitweise logische OR (operator&#124;) der zwei Parameter zurück.|  
-|[bit_xor](../standard-library/functional-functions.md#bit_xor_function)|Gibt das bitweise logische XOR (Operator^) der zwei Parameter zurück.|  
-|[cref](../standard-library/functional-functions.md#cref_function)|Erstellt ein konstantes `reference_wrapper`-Element aus einem Argument.|  
-|[mem_fn](../standard-library/functional-functions.md#mem_fn_function)|Generiert einen einfachen Aufrufwrapper.|  
-|[mem_fun](../standard-library/functional-functions.md#mem_fun_function)|Hilfevorlagenfunktionen, die verwendet werden, um Funktionsobjektadapter für Memberfunktionen zu konstruieren, wenn Sie mit Zeigerargumenten initialisiert werden.|  
-|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function)|Eine Hilfevorlagenfunktion, die verwendet wird, um Funktionsobjektadapter für Memberfunktionen zu konstruieren, wenn Sie mit Verweisargumenten initialisiert wird.|  
-|[not1](../standard-library/functional-functions.md#not1_function)|Gibt das Komplement eines unären Prädikats zurück.|  
-|[not2](../standard-library/functional-functions.md#not2_function)|Gibt das Komplement eines binären Prädikats zurück.|  
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun_function)|Eine Hilfevorlagenfunktion, die verwendet wird, um die jeweiligen unären und binären Funktionszeiger in die unären und binären anwendbaren Funktionen zu konvertieren.|  
-|[ref](../standard-library/functional-functions.md#ref_function)|Konstruiert ein `reference_wrapper` aus einem Argument.|  
-|[swap](../standard-library/functional-functions.md#swap_function)|Tauscht zwei `function`-Objekte.|  
+|[bind](../standard-library/functional-functions.md#bind)|Bindet Argumente an ein aufrufbares Objekt.|  
+|[bind1st](../standard-library/functional-functions.md#bind1st)|Eine Hilfevorlagenfunktion, mit der ein Adapter erstellt wird, um ein binäres Funktionsobjekt in ein unäres Funktionsobjekt zu konvertieren, indem das erste Argument der binären Funktion an einen angegebenen Wert gebunden wird.|  
+|[bind2nd](../standard-library/functional-functions.md#bind2nd)|Eine Hilfevorlagenfunktion, mit der ein Adapter erstellt wird, um ein binäres Funktionsobjekt in ein unäres Funktionsobjekt zu konvertieren, indem das zweite Argument der binären Funktion an einen angegebenen Wert gebunden wird.|  
+|[bit_and](../standard-library/functional-functions.md#bit_and)|Gibt das bitweise logische UND (binärer Operator&) der zwei Parameter zurück.|  
+|[bit_not](../standard-library/functional-functions.md#bit_not)|Gibt das bitweise logische Komplement (operator~) des Parameters zurück.|  
+|[bit_or](../standard-library/functional-functions.md#bit_or)|Gibt das bitweise logische OR (operator&#124;) der zwei Parameter zurück.|  
+|[bit_xor](../standard-library/functional-functions.md#bit_xor)|Gibt das bitweise logische XOR (Operator^) der zwei Parameter zurück.|  
+|[cref](../standard-library/functional-functions.md#cref)|Erstellt ein konstantes `reference_wrapper`-Element aus einem Argument.|  
+|[mem_fn](../standard-library/functional-functions.md#mem_fn)|Generiert einen einfachen Aufrufwrapper.|  
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Hilfevorlagenfunktionen, die verwendet werden, um Funktionsobjektadapter für Memberfunktionen zu konstruieren, wenn Sie mit Zeigerargumenten initialisiert werden.|  
+|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Eine Hilfevorlagenfunktion, die verwendet wird, um Funktionsobjektadapter für Memberfunktionen zu konstruieren, wenn Sie mit Verweisargumenten initialisiert wird.|  
+|[not1](../standard-library/functional-functions.md#not1)|Gibt das Komplement eines unären Prädikats zurück.|  
+|[not2](../standard-library/functional-functions.md#not2)|Gibt das Komplement eines binären Prädikats zurück.|  
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|Eine Hilfevorlagenfunktion, die verwendet wird, um die jeweiligen unären und binären Funktionszeiger in die unären und binären anwendbaren Funktionen zu konvertieren.|  
+|[ref](../standard-library/functional-functions.md#ref)|Konstruiert ein `reference_wrapper` aus einem Argument.|  
+|[swap](../standard-library/functional-functions.md#swap)|Tauscht zwei `function`-Objekte.|  
   
 ### <a name="structs"></a>Strukturen  
   
@@ -175,8 +176,8 @@ Definiert C++-Standardbibliotheksfunktionen, die dabei helfen, *Funktionsobjekte
   
 |||  
 |-|-|  
-|[operator==](../standard-library/functional-operators.md#operator_eq_eq)|Lässt den Gleichheitsvergleich von aufrufbaren Objekten nicht zu.|  
-|[operator!=](../standard-library/functional-operators.md#operator_neq)|Lässt den Ungleichheitsvergleich von aufrufbaren Objekten nicht zu.|  
+|[operator==](../standard-library/functional-operators.md#op_eq_eq)|Lässt den Gleichheitsvergleich von aufrufbaren Objekten nicht zu.|  
+|[operator!=](../standard-library/functional-operators.md#op_neq)|Lässt den Ungleichheitsvergleich von aufrufbaren Objekten nicht zu.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   

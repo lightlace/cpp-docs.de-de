@@ -73,10 +73,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8a3e2cd1a9bff5c7cb08e30753e98b1769e0b7fa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5daa64e8a0e96cf00c75f6a797429baec5ac8180
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
@@ -153,9 +154,9 @@ int _snwprintf_s(
 ## <a name="return-value"></a>Rückgabewert  
  `_snprintf_s` gibt die Anzahl der in `buffer` gespeicherten Zeichen zurück. Das abschließende NULL-Zeichen wird dabei nicht mitgezählt. `_snwprintf_s` gibt die Anzahl der in `buffer` gespeicherten Breitzeichen zurück. Das abschließende NULL-Breitzeichen wird dabei nicht mitgezählt.  
   
- Wenn der Speicher, der zum Speichern der Daten und eines abschließenden NULL-Zeichens erforderlich ist, `sizeOfBuffer` überschreitet, wird, wie in [Parameter Validation (Parameterbehandlung)](../../c-runtime-library/parameter-validation.md) beschrieben, der Handler für ungültige Parameter aufgerufen. Wenn die Ausführung nach Aufruf des Handlers für ungültige Parameter fortgesetzt wird, legen diese Funktionen `buffer` auf eine leere Zeichenfolge und `errno` auf `ERANGE` fest und geben "–&1;" zurück.  
+ Wenn der Speicher, der zum Speichern der Daten und eines abschließenden NULL-Zeichens erforderlich ist, `sizeOfBuffer` überschreitet, wird, wie in [Parameter Validation (Parameterbehandlung)](../../c-runtime-library/parameter-validation.md) beschrieben, der Handler für ungültige Parameter aufgerufen. Wenn die Ausführung nach Aufruf des Handlers für ungültige Parameter fortgesetzt wird, legen diese Funktionen `buffer` auf eine leere Zeichenfolge und `errno` auf `ERANGE` fest und geben "– 1" zurück.  
   
- Wenn `buffer` oder `format` ein `NULL`-Zeiger ist oder wenn `count` kleiner oder gleich&0; ist, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben -1 zurück.  
+ Wenn `buffer` oder `format` ein `NULL`-Zeiger ist oder wenn `count` kleiner oder gleich 0 ist, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben -1 zurück.  
   
  Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -316,9 +317,6 @@ Secure template overload example:
 Invalid parameter handler invoked: ("Buffer too small", 0)  
     new contents of dest: ''  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Stream-E/A](../../c-runtime-library/stream-i-o.md)   

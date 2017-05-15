@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 561e0e677200e075b94fce0e354691bcdbce1505
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8a7075b9a86aceda75b4934a74b405fc9e27a908
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
@@ -117,7 +118,7 @@ int _ismbcsymbol_l(
   
 |Routine|Testbedingung|Beispiel für Codepage 932|  
 |-------------|--------------------|---------------------------|  
-|`_ismbclegal`|Gültiges Multibyte|Gibt einen Wert ungleich 0 (null) nur dann zurück, wenn das erste Byte von `c` im Bereich 0x81 - 0x9F oder 0xE0 - 0xFC liegt, während das zweite Byte im Bereich 0x40 - 0x7E oder 0x80 - FC liegt.|  
+|`_ismbclegal`|Gültiges Multibyte|Gibt einen Wert ungleich 0 (null) nur dann zurück, wenn das erste Byte von `c` im Bereich 0x81-0x9F oder 0xE0-0xFC liegt, während das zweite Byte im Bereich 0x40-0x7E oder 0x80-FC liegt.|  
 |`_ismbcsymbol`|Multibytesymbol|Gibt nur dann einen Wert ungleich null zurück, wenn 0x8141<=`c`<=0x81AC ist.|  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
@@ -135,9 +136,6 @@ int _ismbcsymbol_l(
 |`_ismbcsymbol,_ismbcsymbol_l`|\<mbstring.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   

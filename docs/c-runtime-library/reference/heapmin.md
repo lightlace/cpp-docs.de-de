@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c839e372e2385928346693b0a74be0af2781882a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4f980d2b8df9f8eb2f2337e4dd0888e63c2451ed
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="heapmin"></a>_heapmin
@@ -70,12 +71,12 @@ int _heapmin( void );
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt bei Erfolg `_heapmin` „0“ zurück; andernfalls gibt die Funktion „–1“ zurück und legt `errno` auf `ENOSYS`fest.  
+ Bei Erfolg gibt `_heapmin` „0“ (null) zurück; andernfalls gibt die Funktion „-1“ zurück und legt `errno` auf `ENOSYS` fest.  
   
  Weitere Informationen zu diesem und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_heapmin`-Funktion minimiert den Heap durch die Freigabe von nicht verwendetem Heapspeicher an das Betriebssystem. Wenn das Betriebssystem `_heapmin` nicht unterstützt (beispielsweise Windows 98), gibt die Funktion „–1“ zurück und legt `errno` auf `ENOSYS` fest.  
+ Die `_heapmin`-Funktion minimiert den Heap durch die Freigabe von nicht verwendetem Heapspeicher an das Betriebssystem. Wenn das Betriebssystem nicht unterstützt `_heapmin`(z. B. Windows 98), gibt die Funktion-1 zurück und legt `errno` auf `ENOSYS`.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -84,9 +85,6 @@ int _heapmin( void );
 |`_heapmin`|\<malloc.h>|\<errno.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Speicherbelegung](../../c-runtime-library/memory-allocation.md)   

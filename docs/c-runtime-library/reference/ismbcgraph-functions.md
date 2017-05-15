@@ -84,10 +84,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: eeeab09167f3330ab06dc664fd0163206b6b6ff8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 602b5d1f3cd490213f3f849200eb155456627694
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
@@ -153,10 +154,10 @@ int _ismbcspace_l(
   
 |Routine|Testbedingung|Beispiel für Codepage 932|  
 |-------------|--------------------|---------------------------|  
-|`_ismbcgraph`|Grafik|Gibt einen Wert ungleich&0; (null) zurück, wenn `c` eine Einzelbytedarstellung jedes beliebigen ASCII- oder druckbaren Katakana-Zeichens außer eines Leerzeichens ( ) ist.|  
-|`_ismbcprint`|Druckbar|Gibt einen Wert ungleich&0; (null) zurück, wenn `c` eine Einzelbytedarstellung jedes beliebigen ASCII- oder druckbaren Katakana-Zeichens einschließlich eines Leerzeichens ( ) ist.|  
-|`_ismbcpunct`|Interpunktion|Gibt einen Wert ungleich&0; (null) zurück, wenn `c` eine Einzelbytedarstellung jedes beliebigen ASCII- oder Katakana-Interpunktionszeichens ist.|  
-|`_ismbcblank`|Leerzeichen oder horizontaler Tabulator|Gibt einen Wert ungleich&0; (null) zurück, wenn `c` ein Leerzeichen oder ein horizontales Tabstoppzeichen ist: `c`=0x20 oder `c`=0x09.|  
+|`_ismbcgraph`|Grafik|Gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine Einzelbytedarstellung jedes beliebigen ASCII- oder druckbaren Katakana-Zeichens außer eines Leerzeichens ( ) ist.|  
+|`_ismbcprint`|Druckbar|Gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine Einzelbytedarstellung jedes beliebigen ASCII- oder druckbaren Katakana-Zeichens einschließlich eines Leerzeichens ( ) ist.|  
+|`_ismbcpunct`|Interpunktion|Gibt einen Wert ungleich 0 (null) zurück, wenn `c` eine Einzelbytedarstellung jedes beliebigen ASCII- oder Katakana-Interpunktionszeichens ist.|  
+|`_ismbcblank`|Leerzeichen oder horizontaler Tabulator|Gibt einen Wert ungleich 0 (null) zurück, wenn `c` ein Leerzeichen oder ein horizontales Tabstoppzeichen ist: `c`=0x20 oder `c`=0x09.|  
 |`_ismbcspace`|Leerraum|Gibt nur dann einen Wert ungleich null zurück, wenn `c` ein Leerzeichen ist: `c`= 0x20 oder 0x09<=`c`<=0x0D.|  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -178,14 +179,6 @@ int _ismbcspace_l(
   
 ## <a name="libraries"></a>Bibliotheken  
  Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
-  
--   [System::Char::IsPunctuation](https://msdn.microsoft.com/en-us/library/system.char.ispunctuation.aspx)  
-  
--   [System::Char::IsWhiteSpace](https://msdn.microsoft.com/en-us/library/system.char.iswhitespace.aspx)  
-  
--   Bei `_ismbcgraph` und `_ismbcprint` nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenklassifizierung](../../c-runtime-library/character-classification.md)   

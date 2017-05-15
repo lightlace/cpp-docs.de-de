@@ -6,24 +6,26 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2a1f1c21cdcd42e7e8d33eb6405297fc88635d87
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt;-Operatoren
 ||||  
 |-|-|-|  
-|[operator&amp;](#operator_amp_)|[operator&gt;&gt;](#operator_gt__gt_)|[operator&lt;&lt;](#operator_lt__lt_)|  
-|[operator_xor](#operator_xor)|[operator_or](#operator_or)|  
+|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator^](#op_xor)|[operator|](#op_or)|  
   
-##  <a name="a-nameoperatorampa--operatoramp"></a><a name="operator_amp_"></a> operator&amp;  
+##  <a name="op_amp"></a> operator&amp;  
  Führt ein bitweises `AND` zwischen zwei Bitsets aus.  
   
 ```  
@@ -35,14 +37,14 @@ operator&(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Das erste der beiden Bitsets, dessen jeweilige Elemente mit dem bitweisen `AND` kombiniert werden sollen.  
   
- ` right`  
+ `right`  
  Die zweite der beiden valarray-Klassen, deren jeweilige Elemente mit dem bitweisen `AND` kombiniert werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Bitset, dessen Elemente das Ergebnis der Ausführung der `AND`-Operation für die entsprechenden Elemente von ` left` und ` right` sind.  
+ Ein Bitset, dessen Elemente das Ergebnis der Ausführung der `AND`-Operation für die entsprechenden Elemente von `left` und `right` sind.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -72,7 +74,7 @@ bitset 2: 0011
 bitset 3: 0001  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a> operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Fügt eine Textdarstellung der Bitsequenz in den Ausgabestream ein.  
   
 ```  
@@ -80,12 +82,11 @@ bitset 3: 0001
 template <class CharType, class Traits, size_t N>  
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,  
-    const bitset<N>& 
-    right);
+    const bitset<N>& right);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` right`  
+ `right`  
  Ein Objekt vom Typ **bitset\<N>**, das als Zeichenfolge in den Ausgabestream eingefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -127,7 +128,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a> operator&gt;&gt;  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
  Liest eine Folge von Bitzeichen in ein Bitset aus.  
   
 ```  
@@ -144,7 +145,7 @@ _Istr,
  `_Istr`  
  Die in den Eingabestream eingegebene Zeichenfolge, die in das Bitset eingefügt werden soll.  
   
- ` right`  
+ `right`  
  Das Bitset, das die Bits aus dem Eingabestream empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -210,7 +211,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameoperatorxora--operatorxor"></a><a name="operator_xor"></a> operator_xor  
+##  <a name="op_xor"></a> operator^  
  Führt ein bitweises `EXCLUSIVE-OR` zwischen zwei Bitsets aus.  
   
 ```  
@@ -222,14 +223,14 @@ operator^(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Das erste der beiden Bitsets, dessen jeweilige Elemente mit dem bitweisen `EXCLUSIVE-OR` kombiniert werden sollen.  
   
- ` right`  
+ `right`  
  Die zweite der beiden valarray-Klassen, deren jeweilige Elemente mit dem bitweisen `EXCLUSIVE-OR` kombiniert werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Bitset, dessen Elemente das Ergebnis der Ausführung der `EXCLUSIVE-OR`-Operation für die entsprechenden Elemente von ` left` und ` right` sind.  
+ Ein Bitset, dessen Elemente das Ergebnis der Ausführung der `EXCLUSIVE-OR`-Operation für die entsprechenden Elemente von `left` und `right` sind.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -259,7 +260,7 @@ bitset 2: 0011
 bitset 3: 0110  
 ```  
   
-##  <a name="a-nameoperatorora--operatoror"></a><a name="operator_or"></a> operator_or  
+##  <a name="op_or"></a>Operator |  
  Führt ein bitweises `OR` zwischen zwei Bitsets aus.  
   
 ```  
@@ -271,14 +272,14 @@ operator|(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Das erste der beiden Bitsets, dessen jeweilige Elemente mit dem bitweisen `OR` kombiniert werden sollen.  
   
- ` right`  
+ `right`  
  Die zweite der beiden valarray-Klassen, deren jeweilige Elemente mit dem bitweisen `OR` kombiniert werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Bitset, dessen Elemente das Ergebnis der Ausführung der `OR`-Operation für die entsprechenden Elemente von ` left` und ` right` sind.  
+ Ein Bitset, dessen Elemente das Ergebnis der Ausführung der `OR`-Operation für die entsprechenden Elemente von `left` und `right` sind.  
   
 ### <a name="example"></a>Beispiel  
   

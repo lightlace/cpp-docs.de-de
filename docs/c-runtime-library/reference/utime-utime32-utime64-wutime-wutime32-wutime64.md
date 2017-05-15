@@ -85,10 +85,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7d8823bfe5650634d3fb079d2910e98409622ec6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 80836179c63da2f62384abd07fe2a4970d9bce55
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
@@ -131,7 +132,7 @@ int _wutime64(
  Zeiger auf die gespeicherten Zeitwerte.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Jede dieser Funktionen gibt „0“ zurück, wenn die Dateiänderungszeit geändert wurde. Ein Rückgabewert von –1 zeigt einen Fehler an. Wird ein ungültiger Parameter übergeben, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen -1 zurück und setzen `errno` auf einen der folgenden Werte:  
+ Jede dieser Funktionen gibt „0“ zurück, wenn die Dateiänderungszeit geändert wurde. Ein Rückgabewert von – 1 zeigt einen Fehler. Wird ein ungültiger Parameter übergeben, wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen -1 zurück und setzen `errno` auf einen der folgenden Werte:  
   
  `EACCES`  
  Pfad gibt Verzeichnis oder schreibgeschützte Datei an.  
@@ -150,7 +151,7 @@ int _wutime64(
  Wenn das Datum der Änderung nach dem 1. Januar 1970, Mitternacht, und vor dem Enddatum für die Verwendung der Funktion liegt, kann das Datum für eine Datei geändert werden. `_utime` und `_wutime` verwenden einen 64-Bit-Zeitwert, sodass das Enddatum der 31. Dezember 3000, 23:59:59 UTC ist. Wenn `_USE_32BIT_TIME_T` so definiert wurde, dass das alte Verhalten erzwungen wird, ist das Enddatum der 18. Januar 2038, 23:59:59 UTC. `_utime32` und `_wutime32` verwenden einen 32-Bit-Zeittyp, unabhängig davon, ob `_USE_32BIT_TIME_T` definiert wurde, und weisen immer das frühere Enddatum auf. `_utime64` und `_wutime64` verwenden immer den 64-Bit-Zeittyp, sodass von diesen Funktionen immer das spätere Enddatum unterstützt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_utime`-Funktion legt die Änderungszeit für die durch `filename`* angegebene Datei fest.* Damit die Zeit geändert werden kann, benötigt der Prozess Schreibzugriff für die Datei. Im Betriebssystem Windows können Zugriffszeit und Änderungszeit in der `_utimbuf`-Struktur geändert werden. Wenn `times` ein `NULL`-Zeiger ist, wird die Änderungszeit auf die aktuelle Ortszeit festgelegt. Andernfalls muss `times` auf eine Struktur vom Typ `_utimbuf` zeigen, die in SYS\UTIME.H definiert ist.  
+ Die `_utime`-Funktion legt die Änderungszeit für die durch `filename` *angegebene Datei fest.* Damit die Zeit geändert werden kann, benötigt der Prozess Schreibzugriff für die Datei. Im Betriebssystem Windows können Zugriffszeit und Änderungszeit in der `_utimbuf`-Struktur geändert werden. Wenn `times` ein `NULL`-Zeiger ist, wird die Änderungszeit auf die aktuelle Ortszeit festgelegt. Andernfalls muss `times` auf eine Struktur vom Typ `_utimbuf` zeigen, die in SYS\UTIME.H definiert ist.  
   
  Die `_utimbuf`-Struktur speichert die Dateizugriffs- und Änderungszeiten, die von `_utime` verwendet wird, um Datumsangaben zu Dateiänderungen zu ändern. Die Struktur weist die folgenden Felder auf, die beide vom Typ `time_t` sind:  
   
@@ -253,9 +254,6 @@ File time modified
                1 File(s)            935 bytes  
                0 Dir(s)  20,742,955,008 bytes free  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   

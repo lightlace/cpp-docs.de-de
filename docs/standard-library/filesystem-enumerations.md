@@ -36,10 +36,11 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: d9f3bbe8cddea347e1663d8963c4496bcf8d7319
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 23d69fc4ac64b4364c736ee6bb596d8dcfcce54a
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;-Enumerationen
@@ -50,7 +51,7 @@ In diesem Thema werden die Enumerationen filesystem-Header beschrieben.
   
  **Namespace:** std::experimental::filesystem  
 
-##  <a name="filesystem__copy_options"></a> copy_options
+##  <a name="copy_options"></a> copy_options
 Eine Enumeration von Bitmaskenwerten, die mit den Funktionen [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) und [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) verwendet wird, um Verhalten anzugeben.  
   
 ### <a name="syntax"></a>Syntax  
@@ -85,7 +86,7 @@ enum class copy_options {
 |`create_hard_links`|Erstellen Sie feste Links, anstatt Dateien zu kopieren.|  
   
 
-##  <a name="filesystem__directory_options"></a> directory_options
+##  <a name="directory_options"></a> directory_options
 Gibt an, ob symbolischen Verknüpfungen zu Verzeichnissen gefolgt oder ob diese ignoriert werden sollen.  
   
 ### <a name="syntax"></a>Syntax  
@@ -103,7 +104,7 @@ enum class directory_options {
 |`none`|Standardverhalten: symbolische Verknüpfungen auf Verzeichnisse ignorieren. „Berechtigung verweigert“ ist ein Fehler.|  
 |`follow_directory_symlink`|Symbolische Verknüpfungen zu Verzeichnissen als tatsächliche Verzeichnisse behandeln.|  
   
-##  <a name="filesystem__file_type"></a> file_type
+##  <a name="file_type"></a> file_type
 Eine Enumeration für Dateitypen. Die unterstützten Werte sind regulär, Verzeichnis, not_found und unbekannt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -137,7 +138,7 @@ enum class file_type {
 |`socket`|7|Stellt ein Socket auf UNIX-basierten Systemen dar. (Nicht unterstützt.)|  
 |`unknown`|8|Stellt eine Datei dar, deren Status nicht ermittelt werden kann.|  
   
-##  <a name="filesystem__perms"></a> perms
+##  <a name="perms"></a> perms
 Flags für Dateiberechtigungen. Die unterstützten Werte sind im Wesentlichen „readonly“ und „all“. Bei einer schreibgeschützten Datei sind keine *_write-Bits festgelegt. Andernfalls wird das `all` -Bit (0x0777) festgelegt.  
   
 ### <a name="syntax"></a>Syntax  

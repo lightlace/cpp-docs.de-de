@@ -1,79 +1,87 @@
 ---
-title: "linear_congruential_engine-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.linear_congruential_engine"
-  - "random/std::tr1::linear_congruential_engine"
-  - "linear_congruential_engine"
-  - "std::tr1::linear_congruential_engine"
-  - "tr1.linear_congruential_engine"
-  - "tr1::linear_congruential_engine"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "linear_congruential_engine-Klasse"
+title: linear_congruential_engine-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- linear_congruential_engine
+- random/std::linear_congruential_engine
+dev_langs:
+- C++
+helpviewer_keywords:
+- linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# linear_congruential_engine-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: bbb733e102af57627c00006816bb8d955877d0f8
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
+---
+# <a name="linearcongruentialengine-class"></a>linear_congruential_engine-Klasse
 Generiert eine zufällige Sequenz mithilfe des linearen Kongruenzalgorithmus.  
   
-## Syntax  
-  
+## <a name="syntax"></a>Syntax  
 ```  
-template<class UIntType, UIntType A, UIntType C, UIntType M>  
 class linear_congruential_engine{  
-public:  
-    // types  
-    typedef UIntType result_type;  
-  
-    // engine characteristics  
-    static constexpr result_type multiplier = a;  
-    static constexpr result_type increment = c;  
-    static constexpr result_type modulus = m;  
-    static constexpr result_type min() { return c == 0u ? 1u: 0u; }  
-    static constexpr result_type max() { return m - 1u; }  
-    static constexpr result_type default_seed = 1u;  
-  
-    // constructors and seeding functions  
-    explicit linear_congruential_engine(result_type s = default_seed);  
-    template<class Sseq> explicit linear_congruential_engine(Sseq& q);  
-    void seed(result_type s = default_seed);  
-    template<class Sseq> void seed(Sseq& q);  
-  
-    // generating functions  
-    result_type operator()();  
-    void discard(unsigned long long z);  
-};  
+   public:  // types  
+   typedef UIntType result_type;  
+   // engine characteristics  
+   static constexpr result_type multiplier = a;  
+   static constexpr result_type increment = c;  
+   static constexpr result_type modulus = m;  
+   static constexpr result_type min() { return c == 0u  1u: 0u; }  
+   static constexpr result_type max() { return m - 1u; }  
+   static constexpr result_type default_seed = 1u;  
+   // constructors and seeding functions  
+   explicit linear_congruential_engine(result_type s = default_seed);
+   template <class Sseq>  
+   explicit linear_congruential_engine(Sseq& q);
+   void seed(result_type s = default_seed);
+   template <class Sseq>  
+   void seed(Sseq& q);
+   // generating functions  
+   result_type operator()();
+   void discard(unsigned long long z);
+   };  
 ```  
-  
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `UIntType`  
- Der unsigned integer\-Ergebnistyp. Mögliche Typen finden Sie unter [\<random\>](../standard-library/random.md).  
+ Der unsigned integer-Ergebnistyp. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
   
  `A`  
- **Multiplikator**.**Vorbedingung**: Siehe Abschnitt "Hinweise".  
+ **Multiplikator**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.  
   
  `C`  
- **Inkrement**.**Vorbedingung**: Siehe Abschnitt "Hinweise".  
+ **Inkrement**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.  
   
  `M`  
- **Modulooperator**.**Vorbedingung**: Siehe Abschnitt "Hinweise".  
+ **Modulo**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.  
   
-## Mitglieder  
+## <a name="members"></a>Mitglieder  
   
 ||||  
 |-|-|-|  
@@ -82,37 +90,40 @@ public:
   
  `default_seed` ist eine als `1u` definierte Memberkonstante, die als Standardparameterwert für `linear_congruential_engine::seed` und den Einzelwertkonstruktor verwendet wird.  
   
- Weitere Informationen über Modulmember finden Sie unter [\<random\>](../standard-library/random.md).  
+ Weitere Informationen über Modulmember finden Sie unter [\<random>](../standard-library/random.md).  
   
-## Hinweise  
- Die Vorlagenklasse `linear_congruential_engine` ist das einfachste Generatormodul, aber nicht das schnellste oder qualitativ höchstwertige. Eine Verbesserung gegenüber diesem Modul ist das [substract\_with\_carry\_engine](../standard-library/subtract-with-carry-engine-class.md). Keines dieser Module ist so schnell oder gibt so hochqualitative Ergebnisse zurück wie das [mersenne\_twister\_engine](../standard-library/mersenne-twister-engine-class.md).  
+## <a name="remarks"></a>Hinweise  
+ Die Vorlagenklasse `linear_congruential_engine` ist das einfachste Generatormodul, aber nicht das schnellste oder qualitativ höchstwertige. [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) ist gegenüber diesem Modul eine Verbesserung. Keines dieser Module ist so schnell oder gibt so hochqualitative Ergebnisse zurück wie [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).  
   
- Dieses Modul produziert Werte eines benutzerdefinierten Ganzzahltyps ohne Vorzeichen mithilfe der Wiederholungsrelation \(*period*\) `x(i) = (A * x(i-1) + C) mod M`.  
+ Dieses Modul produziert Werte eines benutzerdefinierten Ganzzahltyps ohne Vorzeichen mithilfe der Wiederholungsrelation (*period*) `x(i) = (A * x(i-1) + C) mod M`.  
   
  Wenn `M` gleich Null ist, ist der für diese Modulooperation verwendete Wert `numeric_limits<result_type>::max() + 1`. Der Zustand des Moduls ist der letzte zurückgegebene Wert oder der Startwert, wenn `operator()` nicht aufgerufen wurde.  
   
  Wenn `M` nicht gleich Null ist, müssen die Werte der Vorlagenargumente `A` und `C` niedriger sein als `M`.  
   
- Obwohl Sie direkt aus diesem Modul einen Generator konstruieren können, können Sie auch eine der folgenden vordefinierten Typdefinitionen verwenden.  
+ Obwohl Sie direkt aus diesem Modul einen Generator konstruieren können, können Sie auch eine dieser voreingestellten Typdefinitionen verwenden.  
   
- `minstd_rand0`: minimal standard Engine 1988 \(Lewis, Goodman und Miller 1969\).  
+ `minstd_rand0`: 1988 minimal standard engine (Lewis, Goodman und Miller, 1969).  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;  
 ```  
   
- `minstd_rand`: Aktualisierte minimal standard Engine `minstd_rand0` \(Park, Miller und Stockmeyer 1993\).  
+ `minstd_rand`: Updated minimal standard engine `minstd_rand0` (Park, Miller und Stockmeyer, 1993).  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;  
 ```  
   
- Ausführliche Informationen zu den Algorithmus lineare kongruenzmodul.erhalten, finden Sie im Wikipedia\-Artikel [Linear congruential Generator](http://go.microsoft.com/fwlink/?LinkId=402446).  
+ Ausführliche Informationen über den Algorithmus für das lineare Kongruenzmodul, erhalten Sie im Wikipedia-Artikel [Linearer Kongruenzgenerator](http://go.microsoft.com/fwlink/LinkId=402446).  
   
-## Anforderungen  
- **Header:** \<random\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<random>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [\<random\>](../standard-library/random.md)
+## <a name="see-also"></a>Siehe auch  
+ [\<random>](../standard-library/random.md)
+
+
+

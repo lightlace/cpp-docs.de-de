@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 8346982360dbc6ecfaae296e48da9464b91190b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 0727a9bab67872237ffe6f747bd0be3f538eb01d
+ms.contentlocale: de-de
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
@@ -93,7 +94,7 @@ Definiert Klassen und Vorlagenklassen zum Erstellen von Typen, die atomische Vor
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  In Code, der kompiliert wird **/CLR**, dieser Header blockiert.  
+>  In Code, der kompiliert wurde **"/ CLR"**, dieser Header blockiert.  
   
  Ein atomischer Vorgang hat zwei Schlüsseleigenschaften, die dabei helfen, mehrere Threads zu verwenden, um ein Objekt korrekt zu ändern, ohne Mutexsperren zu verwenden.  
   
@@ -103,7 +104,7 @@ Definiert Klassen und Vorlagenklassen zum Erstellen von Typen, die atomische Vor
   
  Auf manchen Plattformen ist es möglicherweise nicht möglich, atomische Vorgänge für bestimme Typen effizient zu implementieren, ohne `mutex`-Sperren zu verwenden. Ein atomischer Typ ist *sperrfrei*, wenn für keine der atomischen Vorgänge auf diesem Typ Sperren verwendet werden.  
   
- **C ++&11;**: In Signalhandlern können Sie atomische Vorgänge für ein `obj`-Objekt ausführen, wenn `obj.is_lock_free()` oder `atomic_is_lock_free(x)` TRUE sind.  
+ **C ++ 11**: In Signalhandlern können Sie atomische Vorgänge für ein `obj`-Objekt ausführen, wenn `obj.is_lock_free()` oder `atomic_is_lock_free(x)` TRUE sind.  
   
  Die Klasse [atomic_flag](../standard-library/atomic-flag-structure.md) bietet einen minimalen atomischen Typ, der ein `bool`-Flag enthält. Die Vorgänge sind immer sperrfrei.  
   
@@ -191,35 +192,35 @@ Definiert Klassen und Vorlagenklassen zum Erstellen von Typen, die atomische Vor
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[atomic_compare_exchange_strong-Funktion](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_function)|Führt einen *atomischen Vergleichs- und Austauschvorgang* aus.|  
-|[atomic_compare_exchange_strong_explicit-Funktion](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit_function)|Führt einen *atomischen Vergleichs- und Austauschvorgang* aus.|  
-|[atomic_compare_exchange_weak-Funktion](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_function)|Führt einen *schwachen atomischen Vergleichs- und Austauschvorgang* aus.|  
-|[atomic_compare_exchange_weak_explicit-Funktion](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit_function)|Führt einen *schwachen atomischen Vergleichs- und Austauschvorgang* aus.|  
-|[atomic_exchange-Funktion](../standard-library/atomic-functions.md#atomic_exchange_function)|Ersetzt einen gespeicherten Wert.|  
-|[atomic_exchange_explicit-Funktion](../standard-library/atomic-functions.md#atomic_exchange_explicit_function)|Ersetzt einen gespeicherten Wert.|  
-|[atomic_fetch_add-Funktion](../standard-library/atomic-functions.md#atomic_fetch_add_function)|Fügt einem vorhandenen gespeicherten Wert einen angegebenen Wert hinzu.|  
-|[atomic_fetch_add_explicit-Funktion](../standard-library/atomic-functions.md#atomic_fetch_add_explicit_function)|Fügt einem vorhandenen gespeicherten Wert einen angegebenen Wert hinzu.|  
-|[atomic_fetch_and-Funktion](../standard-library/atomic-functions.md#atomic_fetch_and_function)|Führt ein bitweises `and` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
-|[atomic_fetch_and_explicit-Funktion](../standard-library/atomic-functions.md#atomic_fetch_and_explicit_function)|Führt ein bitweises `and` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
-|[atomic_fetch_or-Funktion](../standard-library/atomic-functions.md#atomic_fetch_or_function)|Führt ein bitweises `or` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
-|[atomic_fetch_or_explicit-Funktion](../standard-library/atomic-functions.md#atomic_fetch_or_explicit_function)|Führt ein bitweises `or` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
-|[atomic_fetch_sub-Funktion](../standard-library/atomic-functions.md#atomic_fetch_sub_function)|Subtrahiert einen angegebenen Wert von einem vorhandenen gespeicherten Wert.|  
-|[atomic_fetch_sub_explicit-Funktion](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit_function)|Subtrahiert einen angegebenen Wert von einem vorhandenen gespeicherten Wert.|  
-|[atomic_fetch_xor-Funktion](../standard-library/atomic-functions.md#atomic_fetch_xor_function)|Führt ein bitweises `exclusive or` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
-|[atomic_fetch_xor_explicit-Funktion](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit_function)|Führt ein bitweises `exclusive or` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
-|[atomic_flag_clear-Funktion](../standard-library/atomic-functions.md#atomic_flag_clear_function)|Legt das Flag in einem `atomic_flag`-Objekt auf `false` fest.|  
-|[atomic_flag_clear_explicit-Funktion](../standard-library/atomic-functions.md#atomic_flag_clear_explicit_function)|Legt das Flag in einem `atomic_flag`-Objekt auf `false` fest.|  
-|[atomic_flag_test_and_set-Funktion](../standard-library/atomic-functions.md#atomic_flag_test_and_set_function)|Legt das Flag in einem `atomic_flag`-Objekt auf `true` fest.|  
-|[atomic_flag_test_and_set_explicit-Funktion](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit_function)|Legt das Flag in einem `atomic_flag`-Objekt auf `true` fest.|  
-|[atomic_init-Funktion](../standard-library/atomic-functions.md#atomic_init_function)|Legt den gespeicherten Wert in einem `atomic`-Objekt fest.|  
-|[atomic_is_lock_free-Funktion](../standard-library/atomic-functions.md#atomic_is_lock_free_function)|Gibt an, ob die atomischen Vorgänge auf einem bestimmten Objekt sperrfrei sind.|  
-|[atomic_load-Funktion](../standard-library/atomic-functions.md#atomic_load_function)|Ruft atomisch einen Wert ab.|  
-|[atomic_load_explicit-Funktion](../standard-library/atomic-functions.md#atomic_load_explicit_function)|Ruft atomisch einen Wert ab.|  
-|[atomic_signal_fence-Funktion](../standard-library/atomic-functions.md#atomic_signal_fence_function)|Fungiert als *Umgrenzung*, die Anforderungen für die Speichersortierung zwischen Umgrenzungen in einem aufrufenden Thread einrichtet, in dem gleichzeitig Signalhandler ausgeführt werden.|  
-|[atomic_store-Funktion](../standard-library/atomic-functions.md#atomic_store_function)|Speichert einen Wert atomisch.|  
-|[atomic_store_explicit-Funktion](../standard-library/atomic-functions.md#atomic_store_explicit_function)|Speichert einen Wert atomisch.|  
-|[atomic_thread_fence-Funktion](../standard-library/atomic-functions.md#atomic_thread_fence_function)|Fungiert als *Umgrenzung*, die Anforderungen an die Speichersortierung in Bezug auf andere Umgrenzungen einrichtet.|  
-|[kill_dependency-Funktion](../standard-library/atomic-functions.md#kill_dependency_function)|Unterbricht eine mögliche Abhängigkeitskette.|  
+|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Führt einen *atomischen Vergleichs- und Austauschvorgang* aus.|  
+|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Führt einen *atomischen Vergleichs- und Austauschvorgang* aus.|  
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Führt einen *schwachen atomischen Vergleichs- und Austauschvorgang* aus.|  
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Führt einen *schwachen atomischen Vergleichs- und Austauschvorgang* aus.|  
+|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|Ersetzt einen gespeicherten Wert.|  
+|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Ersetzt einen gespeicherten Wert.|  
+|[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|Fügt einem vorhandenen gespeicherten Wert einen angegebenen Wert hinzu.|  
+|[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Fügt einem vorhandenen gespeicherten Wert einen angegebenen Wert hinzu.|  
+|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|Führt ein bitweises `and` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
+|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Führt ein bitweises `and` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
+|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|Führt ein bitweises `or` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
+|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Führt ein bitweises `or` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
+|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|Subtrahiert einen angegebenen Wert von einem vorhandenen gespeicherten Wert.|  
+|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Subtrahiert einen angegebenen Wert von einem vorhandenen gespeicherten Wert.|  
+|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Führt ein bitweises `exclusive or` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
+|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Führt ein bitweises `exclusive or` auf einem angegebenen Wert und einem vorhandenen gespeicherten Wert aus.|  
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Legt das Flag in einem `atomic_flag`-Objekt auf `false` fest.|  
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Legt das Flag in einem `atomic_flag`-Objekt auf `false` fest.|  
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Legt das Flag in einem `atomic_flag`-Objekt auf `true` fest.|  
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Legt das Flag in einem `atomic_flag`-Objekt auf `true` fest.|  
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Legt den gespeicherten Wert in einem `atomic`-Objekt fest.|  
+|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Gibt an, ob die atomischen Vorgänge auf einem bestimmten Objekt sperrfrei sind.|  
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Ruft atomisch einen Wert ab.|  
+|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Ruft atomisch einen Wert ab.|  
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Fungiert als *Umgrenzung*, die Anforderungen für die Speichersortierung zwischen Umgrenzungen in einem aufrufenden Thread einrichtet, in dem gleichzeitig Signalhandler ausgeführt werden.|  
+|[atomic_store](../standard-library/atomic-functions.md#atomic_store)|Speichert einen Wert atomisch.|  
+|[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|Speichert einen Wert atomisch.|  
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|Fungiert als *Umgrenzung*, die Anforderungen an die Speichersortierung in Bezug auf andere Umgrenzungen einrichtet.|  
+|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|Unterbricht eine mögliche Abhängigkeitskette.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   

@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: b6f1fb2eacdc12857978d03ccbd98ee5da3047e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d1739ef33378358a9d195b79c1ba7ace7bf54acf
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="path-class"></a>path-Klasse
@@ -160,7 +161,7 @@ path extension() const;
 path filename() const;
 ```  
   
- Gibt die Stammverzeichniskomponente von myname zurück, insbesondere `empty()  path() : *--end()`. Die Komponente kann leer sein.  
+ Gibt die Stammverzeichniskomponente von „myname“ zurück, insbesondere `empty()  path() : *--end()`. Die Komponente kann leer sein.  
   
 ## <a name="pathgenericstring"></a>path::generic_string  
   
@@ -612,7 +613,7 @@ wstring wstring() const;
  Konvertiert die in „mypath“ gespeicherte Sequenz in die Codierung, die vom Hostsystem für eine wchar_t-Sequenz bevorzugt wird, und gibt diese in einem Objekt vom Typ „wstring“ gespeichert zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** Dateisystem  
+ **Header:** \<Filesystem >  
   
  **Namespace:** std::experimental::filesystem
   

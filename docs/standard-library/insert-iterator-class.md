@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9ff1d22bafa778db24fb489d33e83b1a553711e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 79e0603aeafe714b891e5564d68cbed6ede89768
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="insertiterator-class"></a>insert_iterator-Klasse
@@ -64,29 +65,29 @@ class insert_iterator;
   
 |||  
 |-|-|  
-|[insert_iterator](#insert_iterator__insert_iterator)|Erstellt einen `insert_iterator`, der ein Element an einer bestimmten Position in einen Container einfügt.|  
+|[insert_iterator](#insert_iterator)|Erstellt einen `insert_iterator`, der ein Element an einer bestimmten Position in einen Container einfügt.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[container_type](#insert_iterator__container_type)|Ein Typ, der den Container darstellt, in dem eine allgemeine Einfügung vorgenommen werden soll.|  
-|[reference](#insert_iterator__reference)|Ein Typ, der einen Verweis auf ein Element in einer Sequenz enthält, die durch den zugehörigen Container gesteuert wird.|  
+|[container_type](#container_type)|Ein Typ, der den Container darstellt, in dem eine allgemeine Einfügung vorgenommen werden soll.|  
+|[reference](#reference)|Ein Typ, der einen Verweis auf ein Element in einer Sequenz enthält, die durch den zugehörigen Container gesteuert wird.|  
   
 ### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[operator*](#insert_iterator__operator_star)|Der Dereferenzierungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck *`i` = `x` für eine allgemeine Einfügung zu implementieren.|  
-|[operator++](#insert_iterator__operator_add_add)|Inkrementiert `insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.|  
-|[operator=](#insert_iterator__operator_eq)|Der Zuweisungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck *`i` = `x` für eine allgemeine Einfügung zu implementieren.|  
+|[operator*](#op_star)|Der Dereferenzierungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck *`i` = `x` für eine allgemeine Einfügung zu implementieren.|  
+|[operator++](#op_add_add)|Inkrementiert `insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.|  
+|[operator=](#op_eq)|Der Zuweisungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck *`i` = `x` für eine allgemeine Einfügung zu implementieren.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header**: \<iterator>  
   
  **Namespace:** std  
   
-##  <a name="insert_iterator__container_type"></a> insert_iterator::container_type  
+##  <a name="container_type"></a> insert_iterator::container_type  
  Ein Typ, der den Container darstellt, in dem eine allgemeine Einfügung vorgenommen werden soll.  
   
 ```
@@ -126,7 +127,7 @@ The list L2 is: ( 40 20 10 ).
 *\  
 ```  
   
-##  <a name="insert_iterator__insert_iterator"></a> insert_iterator::insert_iterator  
+##  <a name="insert_iterator"></a> insert_iterator::insert_iterator  
  Erstellt einen `insert_iterator`, der ein Element an einer bestimmten Position in einen Container einfügt.  
   
 ```
@@ -189,7 +190,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_star"></a> insert_iterator::operator*  
+##  <a name="op_star"></a> insert_iterator::operator*  
  Dereferenziert den Iterator zum Einfügen, und gibt das Element zurück, das es adressiert.  
   
 ```
@@ -246,7 +247,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_add_add"></a> insert_iterator::operator++  
+##  <a name="op_add_add"></a> insert_iterator::operator++  
  Inkrementiert **insert_iterator** zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.  
   
 ```
@@ -307,7 +308,7 @@ After the insertions, the vector vec becomes:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_eq"></a> insert_iterator::operator=  
+##  <a name="op_eq"></a> insert_iterator::operator=  
  Fügt einen Wert in einen Container ein, und gibt den Iterator, der aktualisiert wurde, um auf das neue Element zu verweisen.  
   
 ```
@@ -386,7 +387,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__reference"></a> insert_iterator::reference  
+##  <a name="reference"></a> insert_iterator::reference  
  Ein Typ, der einen Verweis auf ein Element in einer Sequenz enthält, die durch den zugehörigen Container gesteuert wird.  
   
 ```

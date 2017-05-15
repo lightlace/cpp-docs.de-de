@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 81467a48b08fab628da94b217c2925010f3118fe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 57f6d4a94348e8565a8c8e21b248335d9d9c651d
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="stack-class"></a>stack-Klasse
@@ -66,7 +67,7 @@ class stack
  Der Typ des zugrunde liegenden Containers, der verwendet wird, um den Stapel zu implementieren. Der Standardwert ist die Klasse `deque`*\<Type>*.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente der Klasse **Type**, die im ersten Vorlagenparameter eines stack-Objekts festgelegt sind, sind gleichbedeutend mit [value_type](#stack__value_type) und müssen mit dem Typ des Elements in der zugrunde liegenden Containerklasse **Container** übereinstimmen, die im zweiten Vorlagenparameter festgelegt ist. Der in **Type** angegebene Typ muss zuweisbar sein, damit es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.  
+ Die Elemente der Klasse **Type**, die im ersten Vorlagenparameter eines stack-Objekts festgelegt sind, sind gleichbedeutend mit [value_type](#value_type) und müssen mit dem Typ des Elements in der zugrunde liegenden Containerklasse **Container** übereinstimmen, die im zweiten Vorlagenparameter festgelegt ist. Der in **Type** angegebene Typ muss zuweisbar sein, damit es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.  
   
  Geeignete zugrunde liegende Containerklassen für die stack-Klasse sind [deque](../standard-library/deque-class.md), [list class](../standard-library/list-class.md) und [vector class](../standard-library/vector-class.md) oder ein beliebiger Sequenzcontainer, der die Vorgänge von **back**, `push_back` und `pop_back` unterstützt. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.  
   
@@ -82,32 +83,32 @@ class stack
   
 |||  
 |-|-|  
-|[stack](#stack__stack)|Erstellt ein `stack`-Objekt, das leer oder eine Kopie eines Basiscontainerobjekts ist.|  
+|[stack](#stack)|Erstellt ein `stack`-Objekt, das leer oder eine Kopie eines Basiscontainerobjekts ist.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[container_type](#stack__container_type)|Ein Typ, der den Basiscontainer bereitstellt, der durch ein `stack`-Objekt übernommen werden soll.|  
-|[size_type](#stack__size_type)|Eine Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in `stack` darstellen kann.|  
-|[value_type](#stack__value_type)|Ein Typ, der den Typ des Objekts angibt, das in einem `stack`-Objekt als Element gespeichert wird.|  
+|[container_type](#container_type)|Ein Typ, der den Basiscontainer bereitstellt, der durch ein `stack`-Objekt übernommen werden soll.|  
+|[size_type](#size_type)|Eine Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in `stack` darstellen kann.|  
+|[value_type](#value_type)|Ein Typ, der den Typ des Objekts angibt, das in einem `stack`-Objekt als Element gespeichert wird.|  
   
 ### <a name="member-functions"></a>Memberfunktionen  
   
 |||  
 |-|-|  
-|[leer](#stack__empty)|Testet, ob das `stack`-Objekt ist leer.|  
-|[pop](#stack__pop)|Entfernt das Element aus der obersten Position des `stack`-Objekts.|  
-|[push](#stack__push)|Fügt ein Element an der obersten Position des `stack`-Objekts hinzu.|  
-|[size](#stack__size)|Gibt die Anzahl von Elementen in der `stack` zurück.|  
-|[top](#stack__top)|Gibt einen Verweis auf das Element in der obersten Position des `stack`-Objekts zurück.|  
+|[leer](#empty)|Testet, ob das `stack`-Objekt ist leer.|  
+|[pop](#pop)|Entfernt das Element aus der obersten Position des `stack`-Objekts.|  
+|[push](#push)|Fügt ein Element an der obersten Position des `stack`-Objekts hinzu.|  
+|[size](#size)|Gibt die Anzahl von Elementen in der `stack` zurück.|  
+|[top](#top)|Gibt einen Verweis auf das Element in der obersten Position des `stack`-Objekts zurück.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<stack>  
   
  **Namespace:** std  
   
-##  <a name="stack__container_type"></a> stack::container_type  
+##  <a name="container_type"></a> stack::container_type  
  Ein Typ, der den anzupassenden Basiscontainer bereitstellt.  
   
 ```  
@@ -120,9 +121,9 @@ typedef Container container_type;
  Weitere Informationen zu `Container` finden Sie im Abschnitt „Hinweise“ des Themas [stack-Klasse](../standard-library/stack-class.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [stack::stack](#stack__stack) wird verdeutlicht, wie ein `container_type` deklariert und verwendet wird.  
+  Im Beispiel für [stack::stack](#stack) wird verdeutlicht, wie ein `container_type` deklariert und verwendet wird.  
   
-##  <a name="stack__empty"></a> stack::empty  
+##  <a name="empty"></a> stack::empty  
  Testet, ob ein Stack leer ist.  
   
 ```  
@@ -165,7 +166,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="stack__pop"></a> stack::pop  
+##  <a name="pop"></a> stack::pop  
  Entfernt das Element aus der obersten Position des Stacks.  
   
 ```  
@@ -219,7 +220,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="stack__push"></a> stack::push  
+##  <a name="push"></a> stack::push  
  Fügt ein Element am oberen Ende des Stacks hinzu.  
   
 ```  
@@ -265,7 +266,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="stack__size"></a> stack::size  
+##  <a name="size"></a> stack::size  
  Gibt die Anzahl der Elemente im Stack zurück.  
   
 ```  
@@ -304,7 +305,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="stack__size_type"></a> stack::size_type  
+##  <a name="size_type"></a> stack::size_type  
  Ein Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in einem Stack darstellen kann.  
   
 ```  
@@ -315,9 +316,9 @@ typedef typename Container::size_type size_type;
  Der Typ ist ein Synonym für `size_type` des Basiscontainers und vom Stack angepasst.  
   
 ### <a name="example"></a>Beispiel  
-  Im Beispiel für [size](#stack__size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.  
+  Im Beispiel für [size](#size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.  
   
-##  <a name="stack__stack"></a> stack::stack  
+##  <a name="stack"></a> stack::stack  
  Erstellt ein einen Stack, der leer oder eine Kopie eines Basiscontainerobjekts ist.  
   
 ```  
@@ -369,7 +370,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="stack__top"></a> stack::top  
+##  <a name="top"></a> stack::top  
  Gibt einen Verweis auf ein Element am Anfang des Stacks zurück.  
   
 ```  
@@ -417,7 +418,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="stack__value_type"></a> stack::value_type  
+##  <a name="value_type"></a> stack::value_type  
  Ein Typ, der den Typ des Objekts angibt, das in einem Stack als Element gespeichert wird.  
   
 ```  

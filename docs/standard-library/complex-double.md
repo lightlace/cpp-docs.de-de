@@ -1,75 +1,88 @@
 ---
-title: "complex&lt;double&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.complex<double>"
-  - "complex<double>"
-  - "std::complex<double>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "komplexe < Double >-Funktion"
+title: complex&lt;double&gt; | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.complex<double>
+- complex<double>
+- std::complex<double>
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# complex&lt;double&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3b5e57b3bda68995f24a21ffedb9d533e7c65a0f
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Beschreibt ein Objekt, das ein geordnetes Paar von Objekten speichert, die beide den Typ **double** haben*,* wobei das erste Objekt dem reellen Teil einer komplexen Zahl und das zweite Objekt dem imaginären Teil entspricht.  
+---
+# <a name="complexltdoublegt"></a>complex&lt;double&gt;
+Beschreibt ein Objekt, das ein geordnetes Paar von Objekten speichert, die beide den Typ **double** haben*,* wobei das erste Objekt dem Realteil einer komplexen Zahl und das zweite Objekt dem Imaginärteil entspricht.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
-template<>  
-   class complex<double> {  
-public:  
-   constexpr complex(  
-      double _RealVal = 0,   
-      double _ImagVal = 0  
-   );  
-  
-   constexpr complex(  
-      const complex<double>& _ComplexNum  
-   );  
-   constexpr explicit complex(  
-      const complex<long double>& _ComplexNum  
-   );  
-   // rest same as template class complex  
-};  
+```
+template <>
+class complex<double> {
+public:
+    constexpr complex(
+    double RealVal = 0,
+    double ImagVal = 0);
+
+constexpr complex(const complex<double>& complexNum);
+
+constexpr explicit complex(const complex<long double>& complexNum);
+// rest same as template class complex
+};
 ```  
   
-#### Parameter  
- `_RealVal`  
- Der Wert vom Typ **double** für den reellen Teil der zu erstellenden komplexen Zahl.  
+#### <a name="parameters"></a>Parameter  
+ `RealVal`  
+ Der Wert vom Typ **double** für den Realteil der zu erstellenden komplexen Zahl.  
   
- `_ImagVal`  
- Der Wert vom Typ **double** für den imaginären Teil der zu erstellenden komplexen Zahl.  
+ `ImagVal`  
+ Der Wert vom Typ **double** für den Imaginärteil der zu erstellenden komplexen Zahl.  
   
- `_ComplexNum`  
- Die komplexe Zahl vom Typ **float** oder `long double`, deren reeller und imaginärer Teil zum Initialisieren einer zu erstellenden komplexen Zahl vom Typ **double** verwendet werden.  
+ `complexNum`  
+ Die komplexe Zahl vom Typ **float** oder `long double`, deren Real- und Imaginärteil zum Initialisieren einer zu erstellenden komplexen Zahl vom Typ **double** verwendet werden.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Eine komplexe Zahl vom Typ **double**.  
   
-## Hinweise  
- Die explizite Spezialisierung der complex\-Vorlagenklasse in eine komplexe Klasse des Typs **double** unterscheidet sich von der Vorlagenklasse nur in den Konstruktoren, die sie definiert. Die Konvertierung von **float** in **double** darf implizit erfolgen, aber die Konvertierung von `long double` in **double** muss **explizit** erfolgen. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.  
+## <a name="remarks"></a>Hinweise  
+ Die explizite Spezialisierung der complex-Vorlagenklasse in eine komplexe Klasse des Typs **double** unterscheidet sich von der Vorlagenklasse nur in den Konstruktoren, die sie definiert. Die Konvertierung von **float** in **double** darf implizit erfolgen, aber die Konvertierung von `long double` in **double** muss **explizit** erfolgen. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.  
   
- Weitere Informationen zu der Vorlagenklasse `complex`, finden Sie unter [complex\-Klasse](../standard-library/complex-class.md). Eine Liste der Member der `complex`\-Vorlagenklasse finden Sie unter .  
+ Weitere Informationen zur Vorlagenklasse `complex` finden Sie unter [complex-Klasse](../standard-library/complex-class.md). Eine Liste der Member der `complex`-Vorlagenklasse finden Sie unter .  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // complex_comp_dbl.cpp  
 // compile with: /EHsc  
 #include <complex>  
@@ -109,14 +122,28 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi  
         << " degrees." << endl;  
 }  
+\* Output:   
+Specifying initial real & imaginary parts,  
+ as type double gives c1 = (4,5)  
+Implicit conversion from type float to type double,  
+ gives c2double = (4,5)  
+Explicit conversion from type float to type double,  
+ gives c3longdouble = (4,5)  
+The modulus of c3 is recovered from c3 using: abs ( c3 ) = 6.40312  
+Argument of c3 is recovered from c3 using:  
+ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.  
+*\  
 ```  
   
- **Angabe ersten realen und imaginären Teile als Typ double bietet c1 \= \(4,5\) implizite Konvertierung vom Typ Float, double, bietet c2double eingeben \(4,5\) explizite Konvertierung vom Typ Float, double, bietet c3longdouble Eingabe \= \= \(4,5\) der Modulo von c3 mit c3 wiederhergestellt wird: abs \(c3\) \= 6.40312 Argument von c3 mit c3 wiederhergestellt wird: Arg \(c3\) \= 0.896055 Bogenmaß 51.3402 Grad ist.**   
-## Anforderungen  
- **Header**: \<complex\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header**: \<complex>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [complex\-Klasse](../standard-library/complex-class.md)   
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [complex-Klasse](../standard-library/complex-class.md)   
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

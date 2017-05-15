@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - unary_negate
-- std::unary_negate
-- std.unary_negate
 - xfunctional/std::unary_negate
 dev_langs:
 - C++
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 078ee71844b0ac5cd02b182287a7a6db6caa04db
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 314d93badc71760c3b71492991dbe16f11df7686
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="unarynegate-class"></a>unary_negate-Klasse
@@ -71,7 +70,7 @@ public:
 ## <a name="remarks"></a>Hinweise  
  Die Vorlagenklasse speichert eine Kopie eines unären Funktionsobjekts _ *Func*. Für die Memberfunktion `operator()` definiert die Klasse **!**\_ als Rückgabewert. *Func(left).*  
   
- Der Konstruktor von `unary_negate` wird nur selten direkt verwendet. Die Hilfsfunktion [not1](../standard-library/functional-functions.md#not1_function) bietet einen einfacheren Weg, um das Adapterprädikat **unary_negator** zu deklarieren und zu verwenden.  
+ Der Konstruktor von `unary_negate` wird nur selten direkt verwendet. Die Hilfsfunktion [not1](../standard-library/functional-functions.md#not1) bietet einen einfacheren Weg, um das Adapterprädikat **unary_negator** zu deklarieren und zu verwenden.  
   
 ## <a name="example"></a>Beispiel  
   

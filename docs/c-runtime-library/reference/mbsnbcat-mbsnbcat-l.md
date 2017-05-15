@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 412e739b9a336cf98dcf08cba9a477625613cbfc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ad5d71827a69eaf46f5aef05e2c880e4e4eef71f
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
@@ -117,7 +118,7 @@ unsigned char *_mbsnbcat_l(
  `_mbsnbcat` gibt einen Zeiger zur Zielzeichenfolge zurück. Kein Rückgabewert ist zur Fehleranzeige reserviert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktion `_mbsnbcat` fügt höchstens die ersten `count` Bytes von `src` an `dest` an. Wenn das Byte direkt vor dem Nullzeichen in `dest` ein führendes Byte ist, überschreibt das ursprüngliche Byte von `src` dieses führende Byte. Andernfalls überschreibt das ursprüngliche Byte von `src` das abschließende NULL-Zeichen von `dest`. Wenn ein Nullbyte in `src` auftritt, bevor `count` Bytes angefügt werden, fügt _`mbsnbcat` alle Bytes von `src` bis zu dem NULL-Zeichen an. Wenn `count` größer als die Länge von `src` ist, wird die Länge von `src` anstelle von `count` verwendet. Die resultierende Zeichenfolge wird mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  
+ Die Funktion `_mbsnbcat` fügt höchstens die ersten `count` Bytes von `src` an `dest` an. Wenn das Byte direkt vor dem Nullzeichen in `dest` ein führendes Byte ist, überschreibt das ursprüngliche Byte von `src` dieses führende Byte. Andernfalls überschreibt das ursprüngliche Byte von `src` das abschließende NULL-Zeichen von `dest`. Wenn ein Nullbyte in `src` auftritt, bevor `count` Bytes angefügt werden, fügt `_mbsnbcat` alle Bytes von `src` bis zu dem NULL-Zeichen an. Wenn `count` größer als die Länge von `src` ist, wird die Länge von `src` anstelle von `count` verwendet. Die resultierende Zeichenfolge wird mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  
   
  Der Ausgabewert ist von der `LC_CTYPE`-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die `_mbsnbcat`-Version der Funktion verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die `_mbsnbcat_l`-Version ist beinahe identisch, verwendet jedoch stattdessen den ihr übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
@@ -142,9 +143,6 @@ unsigned char *_mbsnbcat_l(
 |`_mbsnbcat_l`|\<mbstring.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   

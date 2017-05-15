@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 454e4870f63d5a66c67f493e065c328bdb72837e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 79e55c9b1496ef7a6050e5f0ed5a5c05b1616b73
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="eof"></a>_eof
@@ -75,7 +76,7 @@ int _eof(
  Dateideskriptor, der auf die geöffnete Datei verweist.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `_eof` gibt 1 zurück, wenn die aktuelle Position das Dateiende ist, 0, wenn nicht. Der Rückgabewert -1 weist auf einen Fehler hin. In diesem Fall wird der Handler für ungültige Parameter aufgerufen, wie unter [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EBADF` festgelegt. Dies ist ein Hinweis auf einen ungültigen Dateideskriptor.  
+ `_eof` gibt 1 zurück, wenn die aktuelle Position das Dateiende ist, 0, wenn nicht. Ein Rückgabewert von – 1 zeigt einen Fehler; In diesem Fall den Handler für ungültige Parameter aufgerufen wird, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EBADF` festgelegt. Dies ist ein Hinweis auf einen ungültigen Dateideskriptor.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Funktion `_eof` bestimmt, ob das mit `fd` verknüpfte Ende der Datei erreicht wurde.  
@@ -139,9 +140,6 @@ This file contains some text.
 ```  
 Number of bytes read = 29  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Error Handling (Fehlerbehandlung)](../../c-runtime-library/error-handling-crt.md)   

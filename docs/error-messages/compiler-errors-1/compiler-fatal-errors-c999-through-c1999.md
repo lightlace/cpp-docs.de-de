@@ -190,10 +190,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 42bd88a29dbefe48c59742ab8fc982355262f66e
+ms.contentlocale: de-de
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Schwerwiegende Compilerfehler C999 bis C1999
@@ -219,7 +220,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Schwerwiegender Fehler C1012|Fehlende zugehörige Klammer: Fehlendes '*Zeichen*"|  
 |Schwerwiegender Fehler C1013|Compilerlimit: zu viele geöffnete Klammern|  
 |Schwerwiegender Fehler C1014|zu viele Includedateien: Tiefe = *Anzahl*|  
-|Schwerwiegender Fehler C1016|##ifdef / #Ifndef erwartet einen Bezeichner|  
+|Schwerwiegender Fehler C1016|#ifdef/#ifndef: Es wurde ein Bezeichner erwartet.|  
 |[Schwerwiegender Fehler C1017](../../error-messages/compiler-errors-1/fatal-error-c1017.md)|Ungültiger Ausdruck für Ganzzahlkonstante|  
 |Schwerwiegender Fehler C1018|Unerwartetes #elif|  
 |Schwerwiegender Fehler C1019|Unerwartetes #else|  
@@ -241,6 +242,7 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Schwerwiegender Fehler C1048|Unbekannte Option "*Zeichenfolge*'in'*Option*"|  
 |Schwerwiegender Fehler C1049|Ungültiges numerisches Argument "*Wert*"|  
 |[Schwerwiegender Fehler C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|Programmdatenbankdatei "*Datei*", hat ein veraltetes Format.|  
+|[Schwerwiegender Fehler C1052](fatal-error-c1052.md)|Programmdatenbankdatei "*Filename*", wurde vom Linker mit Fastlink; generiert Compiler kann nicht solche PDB-Dateien zu aktualisieren; löschen Sie es oder/FD an einem anderen PDB-Dateinamen verwenden|  
 |Schwerwiegender Fehler C1053|"*Funktion*': Funktion ist zu groß|  
 |[Schwerwiegender Fehler C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|Compilerlimit: zu tiefe Schachtelung von Initialisierungen|  
 |[Schwerwiegender Fehler C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|Compilerlimit: keine weiteren Schlüssel|  
@@ -290,16 +292,16 @@ In den Artikeln in diesem Teil der Dokumentation sind Informationen über einen 
 |Schwerwiegender Fehler C1110|Zu viele geschachtelte Vorlagen-/generische Definitionen.|  
 |Schwerwiegender Fehler C1111|Zu viele geschachtelte Vorlagen-/generische Parameter.|  
 |Schwerwiegender Fehler C1112|Compilerlimit: `'number`"Makroargumente zu viel, nur *Anzahl* zulässig|  
-|[Schwerwiegender Fehler C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#Fehler bei "*Datei*"|  
+|[Schwerwiegender Fehler C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using auf Fehler "*Datei*"|  
 |Schwerwiegender Fehler C1114|"*Datei*": WinRT unterstützt nicht #using einer verwalteten Assembly|  
 |[Schwerwiegender Fehler C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|Aufruf von GetProcAddress für Fehler "*Funktion*"|  
 |[Schwerwiegender Fehler C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|Fehler beim Aufruf von CryptoAPI.|  
 |[Schwerwiegender Fehler C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|Automatische speicherbelegung überschreitet *Größe*|  
 |[Schwerwiegender Fehler C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|Die Anzahl von Abschnitten hat das Formatierungslimit der Objektdatei überschritten: Kompilieren mit /bigobj.|  
-|[Schwerwiegender Fehler C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#Fehler: *Nachricht*|  
+|[Schwerwiegender Fehler C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error: *Nachricht*|  
 |Schwerwiegender Fehler C1190|Für verwalteten Zielcode ist eine /clr-Option erforderlich.|  
 |[Schwerwiegender Fehler C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|"*Datei*' können nur im globalen Gültigkeitsbereich importiert werden|  
-|[Schwerwiegender Fehler C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#Fehler bei "*Datei*"|  
+|[Schwerwiegender Fehler C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#using auf Fehler "*Datei*"|  
 |Schwerwiegender Fehler C1193|ein Fehler erwartet *Datei*(*Zeile*) nicht erreicht.|  
 |Schwerwiegender Fehler C1195|Die Verwendung von /Yu und /Yc in der gleichen Befehlszeile ist nicht mit der Option /clr option kompatibel|  
 |Schwerwiegender Fehler C1196|"*Bezeichner*': Bezeichner gefunden wird, in der Typbibliothek"*Typelib*' ist kein gültiger C++-Bezeichner|  

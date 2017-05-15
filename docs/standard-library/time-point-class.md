@@ -1,76 +1,178 @@
 ---
-title: "time_point-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "chrono/std::chrono::time_point"
-dev_langs: 
-  - "C++"
+title: time_point-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- chrono/std::chrono::time_point
+- chrono/std::chrono::time_point::time_point
+- chrono/std::chrono::time_point::max
+- chrono/std::chrono::time_point::min
+- chrono/std::chrono::time_point::time_since_epoch
+dev_langs:
+- C++
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# time_point-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1c4d02cf83401e6a6dce3fa079d43dea0fce6270
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
-Mit `time_point` wird ein Typ beschrieben, der einen bestimmten Zeitpunkt darstellt.  Er enthält ein Objekt des Typs [Dauer](../standard-library/duration-class.md), in dem die verstrichene Zeit seit der vom Vorlagenargument `Clock` dargestellten Epoche enthalten ist.  
+---
+# <a name="timepoint-class"></a>time_point-Klasse
+Mit `time_point` wird ein Typ beschrieben, der einen bestimmten Zeitpunkt darstellt. Er enthält ein Objekt des Typs [duration](../standard-library/duration-class.md), in dem die verstrichene Zeit seit dem vom Vorlagenargument `Clock` dargestellten Zeitraum gespeichert ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-template<  
-   class Clock,  
-   class Duration = typename Clock::duration  
->  
+template <class Clock,  
+    class Duration = typename Clock::duration>  
 class time_point;  
 ```  
   
-## Member  
+## <a name="members"></a>Mitglieder  
   
-### Öffentliche Typedefs  
+### <a name="public-typedefs"></a>Öffentliche Typedefs  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
+|Name|Beschreibung|  
+|----------|-----------------|  
 |`time_point::clock`|Synonym für den Vorlagenparameter `Clock`.|  
 |`time_point::duration`|Synonym für den Vorlagenparameter `Duration`.|  
 |`time_point::period`|Synonym für den Namen `duration::period` des geschachtelten Typ.|  
 |`time_point::rep`|Synonym für den Namen `duration::rep` des geschachtelten Typ.|  
   
-### Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[time\_point::time\_point\-Konstruktor](../Topic/time_point::time_point%20Constructor.md)|Erstellt ein `time_point`\-Objekt.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[time_point](#time_point)|Erstellt ein `time_point`-Objekt.|  
   
-### Öffentliche Methoden  
+### <a name="public-methods"></a>Öffentliche Methoden  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[time\_point::max\-Methode](../Topic/time_point::max%20Method.md)|Gibt die Obergrenze für `time_point::ref` an.|  
-|[time\_point::min\-Methode](../Topic/time_point::min%20Method.md)|Gibt die Untergrenze für `time_point::ref` an.|  
-|[time\_point::time\_since\_epoch\-Methode](../Topic/time_point::time_since_epoch%20Method.md)|Gibt den gespeicherten `duration`\-Wert zurück.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[max](#max)|Gibt die Obergrenze für `time_point::ref` an.|  
+|[min](#min)|Gibt die Untergrenze für `time_point::ref` an.|  
+|[time_since_epoch](#time_since_epoch)|Gibt den gespeicherten `duration`-Wert zurück.|  
   
-### Öffentliche Operatoren  
+### <a name="public-operators"></a>Öffentliche Operatoren  
   
-|Name|**Beschreibung**|  
-|----------|----------------------|  
-|[time\_point::operator\+\= Operator](../Topic/time_point::operator+=%20Operator.md)|Fügt der gespeicherten Dauer einen angegebenen Wert hinzu.|  
-|[time\_point::operator\-\= Operator](../Topic/time_point::operator-=%20Operator.md)|Subtrahiert einen angegebenen Wert von der gespeicherten Dauer.|  
+|Name|Beschreibung|  
+|----------|-----------------|  
+|[time_point::operator+=](#op_add_eq)|Fügt der gespeicherten Dauer einen angegebenen Wert hinzu.|  
+|[time_point::operator-=](#operator-_eq)|Subtrahiert einen angegebenen Wert von der gespeicherten Dauer.|  
   
-## Anforderungen  
- **Header:** chrono  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Chrono >  
   
  **Namespace:** std::chrono  
   
-## Siehe auch  
+##  <a name="max"></a>time_point:: Max
+ Statische Methode, von der die Obergrenze für Werte vom Typ `time_point::ref` zurückgegeben wird.  
+  
+```  
+static constexpr time_point max();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Tatsächlich wird `time_point(duration::max())` zurückgegeben.  
+  
+##  <a name="min"></a>time_point:: Min
+ Statische Methode, von der die Untergrenze für Werte vom Typ `time_point::ref` zurückgegeben wird.  
+  
+```  
+static constexpr time_point min();
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Tatsächlich wird `time_point(duration::min())` zurückgegeben.  
+  
+##  <a name="op_add_eq"></a> time_point::operator+=  
+ Fügt dem gespeicherten [duration](../standard-library/duration-class.md)-Wert einen angegebenen Wert hinzu.  
+  
+```  
+time_point& operator+=(const duration& Dur);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Dur`  
+ Ein `duration`-Objekt.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Das `time_point`-Objekt nach Ausführung der Addition.  
+  
+##  <a name="time_point__operator-_eq"></a> time_point::operator-=  
+ Subtrahiert einen angegebenen Wert vom gespeicherten [duration](../standard-library/duration-class.md)-Wert.  
+  
+```  
+time_point& operator-=(const duration& Dur);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Dur`  
+ Ein `duration`-Objekt.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Das `time_point`-Objekt nach Ausführung der Subtraktion.  
+  
+##  <a name="time_point"></a> time_point::time_point-Konstruktor  
+ Erstellt ein `time_point`-Objekt.  
+  
+```  
+constexpr time_point();
+
+constexpr explicit time_point(const duration& Dur);
+
+template <class Duration2>  
+constexpr time_point(const time_point<clock, Duration2>& Tp);
+```  
+  
+### <a name="parameters"></a>Parameter  
+ `Dur`  
+ Ein [duration](../standard-library/duration-class.md)-Objekt.  
+  
+ `Tp`  
+ Ein `time_point`-Objekt.  
+  
+### <a name="remarks"></a>Hinweise  
+ Mit dem ersten Konstruktor wird ein Objekt erstellt, dessen gespeicherter `duration`-Wert [duration::zero](../standard-library/duration-class.md#zero) entspricht.  
+  
+ Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherter Wert `Dur` entspricht. Sofern `is_convertible<Duration2, duration>` *wahr ist*, wird der zweite Konstruktor nicht an der Überladungsauflösung beteiligt. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).  
+  
+ Mit dem dritten Konstruktor wird der `duration`-Wert initialisiert, indem `Tp.time_since_epoch()` verwendet wird.  
+  
+##  <a name="time_since_epoch"></a>time_point:: time_since_epoch
+ Ruft den gespeicherten [duration](../standard-library/duration-class.md)-Wert ab.  
+  
+```  
+constexpr duration time_since_epoch() const;
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)   
- [\<chrono\>](../standard-library/chrono.md)
+ [\<chrono>](../standard-library/chrono.md)
+
+

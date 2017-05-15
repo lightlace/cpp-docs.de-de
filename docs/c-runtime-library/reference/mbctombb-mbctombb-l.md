@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d1831c28a8aab99478fb362d46db352674a360df
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c659b24b2d8364af4303c0667841224560914cd6
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
@@ -87,14 +88,14 @@ unsigned int _mbctombb_l(
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg geben `_mbctombb` und `_mbctombb_l` das Einzelbytezeichen zurück, das `c` entspricht; andernfalls wird `c` zurückgegeben.  
+ Im Erfolgsfall `_mbctombb` und `_mbctombb_l` gibt die Einzelbyte-Zeichen, das entspricht `c`; Anderfalls wird `c`.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktionen `_mbctombb` und `_mbctombb_l` konvertieren ein angegebenes Multibytezeichen in ein entsprechendes Einzelbyte-Multibytezeichen. Die Zeichen müssen den Einzelbytezeichen innerhalb des Bereichs 0x20–0x7E oder 0xA1–0xDF entsprechen, um konvertiert zu werden.  
+ Die `_mbctombb` und `_mbctombb_l` Funktionen konvertieren ein angegebenes Multibytezeichen in ein entsprechendes Einzelbyte-Multibytezeichen. Zeichen müssen Einzelbyte-Zeichen innerhalb des Bereichs 0 x 20 – 0x7E oder 0xA1 - 0xDF zu konvertierenden entsprechen.  
   
- Der Ausgabewert ist von der `LC_CTYPE`-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Version dieser Funktion ohne das `_l`-Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit dem `_l`-Suffix ist beinahe identisch, verwendet jedoch stattdessen den ihr übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ Der Ausgabewert ist von der `LC_CTYPE`-Kategorieeinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Version dieser Funktion ohne das `_l`-Suffix verwendet das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Version mit dem `_l`-Suffix ist beinahe identisch, verwendet jedoch stattdessen den ihr übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
- In früheren Versionen wurde `_mbctombb` `zentohan` genannt. Verwenden Sie stattdessen _`mbctombb`.  
+ In früheren Versionen wurde `_mbctombb` `zentohan` genannt. Verwenden Sie stattdessen `_mbctombb` .  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -104,9 +105,6 @@ unsigned int _mbctombb_l(
 |`_mbctombb_l`|\<mbstring.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   

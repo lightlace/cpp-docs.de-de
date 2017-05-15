@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9939a9c3586367f048a173fb75e17d5c9f67c387
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c8a3b6e7df9f46ebf299f2fe5472461f1944b055
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="setnewhandler"></a>_set_new_handler
@@ -115,7 +116,7 @@ _set_new_mode(1)
   
  rechtzeitig im Programm auf, oder stellen Sie eine Verknüpfung mit Newmode.obj her.  
   
- Wenn ein benutzerdefinierter Operator `operator new` bereitgestellt wird, werden die neuen Handlerfunktionen nicht automatisch bei einem Fehler aufgerufen.  
+ Wenn Sie eine benutzerdefinierte `operator new` angegeben wird, nicht automatisch die neue Handlerfunktionen bei einem Fehler aufgerufen werden.  
   
  Weitere Informationen finden Sie unter [new](../../cpp/new-operator-cpp.md) und [delete](../../cpp/delete-operator-cpp.md) in der *C++-Sprachreferenz*.  
   
@@ -130,7 +131,7 @@ _set_new_mode(1)
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
 ## <a name="example"></a>Beispiel  
- Wenn – wie in diesem Beispiel – die Zuordnung fehlschlägt, wird die Steuerung an MyNewHandler übergeben. Das an MyNewHandler übergebene Argument ist die Anzahl der angeforderten Bytes. Der von MyNewHandler zurückgegebene Wert ist ein Flag, das angibt, ob die Zuordnung wiederholt werden soll: Ein Wert ungleich null gibt an, dass die Zuordnung wiederholt werden soll, und der Wert&0; gibt an, dass die Verteilung fehlgeschlagen ist.  
+ Wenn – wie in diesem Beispiel – die Zuordnung fehlschlägt, wird die Steuerung an MyNewHandler übergeben. Das an MyNewHandler übergebene Argument ist die Anzahl der angeforderten Bytes. Der von MyNewHandler zurückgegebene Wert ist ein Flag, das angibt, ob die Zuordnung wiederholt werden soll: Ein Wert ungleich null gibt an, dass die Zuordnung wiederholt werden soll, und der Wert 0 gibt an, dass die Verteilung fehlgeschlagen ist.  
   
 ```  
 // crt_set_new_handler.cpp  
@@ -177,9 +178,6 @@ Allocation failed. Coalescing heap.
 This application has requested the Runtime to terminate it in an unusual way.  
 Please contact the application's support team for more information.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Speicherbelegung](../../c-runtime-library/memory-allocation.md)   

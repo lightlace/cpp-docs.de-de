@@ -118,10 +118,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f7d0417e6533124cc49e909687d7bc232523c302
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: baf853db4fe1a23ee726423a052604a0db8764c9
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
@@ -188,7 +189,7 @@ intptr_t _wfindfirst64i32(
  Puffer für Dateiinformationen  
   
 ## <a name="return-value"></a>Rückgabewert  
- Im Erfolgsfall gibt `_findfirst` ein eindeutiges Suchhandle zurück, das die Datei oder Dateigruppe identifiziert, die mit der `filespec`-Spezifikation übereinstimmen, die in einem nachfolgenden Aufruf von [_findnext](../../c-runtime-library/reference/findnext-functions.md) oder `_findclose` verwendet werden kann. Andernfalls gibt `_findfirst` -1 zurück und legt `errno` auf einen der folgenden Werte fest.  
+ Im Erfolgsfall gibt `_findfirst` ein eindeutiges Suchhandle zurück, das die Datei oder Dateigruppe identifiziert, die mit der `filespec`-Spezifikation übereinstimmen, die in einem nachfolgenden Aufruf von [_findnext](../../c-runtime-library/reference/findnext-functions.md) oder `_findclose` verwendet werden kann. Andernfalls `_findfirst` gibt-1 zurück und legt `errno` auf einen der folgenden Werte.  
   
  `EINVAL`  
  Ungültiger Parameter: `filespec` oder `fileinfo` entsprach `NULL`, oder das Betriebssystem hat einen unerwarteten Fehler zurückgegeben.  
@@ -261,9 +262,6 @@ intptr_t _wfindfirst64i32(
 |`_wfindfirst64i32`|\<io.h> oder \<wchar.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- [System::IO::DirectoryInfo::GetFiles](https://msdn.microsoft.com/en-us/library/system.io.directoryinfo.getfiles.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Systemaufrufe](../../c-runtime-library/system-calls.md)   

@@ -60,10 +60,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 377ebdd79e201a2b7a017eb3ce34c6ced0062702
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: bb000bddd8f376587aa7614d135f39e09771ccb7
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
@@ -91,9 +92,9 @@ __time64_t _time64(
  Gibt die Zeit als Sekunden zurück, die seit Mitternacht des 1. Januar 1970 verstrichen sind, oder gibt -1 zurück, wenn ein Fehlers vorliegt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktion `time` gibt die Anzahl von Sekunden zurück, die laut der Systemuhr seit Mitternacht (00: 00:00 Uhr), 1. Januar 1970, koordinierte Weltzeit (UTC) verstrichen sind. Der Rückgabewert wird an dem durch `timer` angegebenen Speicherort gespeichert. Dieser Parameter ist möglicherweise `NULL`. In diesem Fall wird der Rückgabewert nicht gespeichert.  
+ Die Funktion `time` gibt die Anzahl von Sekunden zurück, die laut der Systemuhr seit Mitternacht (00: 00:00 Uhr), 1. Januar 1970, koordinierte Weltzeit (UTC) verstrichen sind. Der Rückgabewert wird in dem Speicherort gespeichert, der durch `timer`angegeben ist. Dieser Parameter kann gleich `NULL`sein. Ist dies der Fall, wird der Rückgabewert nicht gespeichert.  
   
- `time` ist ein Wrapper für `_time64`, und `time_t` ist standardmäßig gleichbedeutend mit `__time64_t`. Wenn Sie den Compiler zwingen müssen, `time_t` als das alte 32-Bit-`time_t` zu interpretieren, können Sie `_USE_32BIT_TIME_T`definieren. Dies ist nicht zu empfehlen, weil die Anwendung nach dem 18. Januar 2038 fehlschlagen kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.  
+ `time` ist ein Wrapper für `_time64` , und `time_t` ist standardmäßig gleichbedeutend mit `__time64_t`. Wenn Sie den Compiler zwingen müssen, `time_t` als das alte 32-Bit- `time_t`zu interpretieren, definieren Sie `_USE_32BIT_TIME_T`. Dies ist nicht zu empfehlen, weil die Anwendung nach dem 18. Januar 2038 fehlschlagen kann. Die Verwendung dieses Makros ist auf 64-Bit-Plattformen nicht zulässig.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -254,9 +255,6 @@ Christmas            Sat Dec 25 12:00:00 1993
   
 Today is Friday, day 25 of April in the year 2003.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Uhrzeitverwaltung](../../c-runtime-library/time-management.md)   

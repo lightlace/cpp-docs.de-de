@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6468f372324cb6f62b5b09524cfbf5386b1502c6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b9ea6370bb55c57fb3713c41acb9281e928496c2
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator-Klasse
@@ -63,29 +64,29 @@ class front_insert_iterator;
   
 |||  
 |-|-|  
-|[front_insert_iterator](#front_insert_iterator__front_insert_iterator)|Damit wird ein Iterator erstellt, mit dem Elemente an den Anfang eines bestimmten Containerobjekts eingefügt werden können.|  
+|[front_insert_iterator](#front_insert_iterator)|Damit wird ein Iterator erstellt, mit dem Elemente an den Anfang eines bestimmten Containerobjekts eingefügt werden können.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[container_type](#front_insert_iterator__container_type)|Ein Typ, der den Container darstellt, in dem eine Einfügung am Anfang vorgenommen werden soll.|  
-|[reference](#front_insert_iterator__reference)|Ein Typ, der einen Verweis auf ein Element in einer Sequenz enthält, die durch den zugehörigen Container gesteuert wird.|  
+|[container_type](#container_type)|Ein Typ, der den Container darstellt, in dem eine Einfügung am Anfang vorgenommen werden soll.|  
+|[reference](#reference)|Ein Typ, der einen Verweis auf ein Element in einer Sequenz enthält, die durch den zugehörigen Container gesteuert wird.|  
   
 ### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[operator*](#front_insert_iterator__operator_star)|Der Dereferenzierungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck * `i` = `x` für eine Einfügung am Anfang zu implementieren|  
-|[operator++](#front_insert_iterator__operator_add_add)|Inkrementiert `front_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.|  
-|[operator=](#front_insert_iterator__operator_eq)|Der Zuweisungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck * `i` = `x` für eine Einfügung am Anfang zu implementieren|  
+|[operator*](#op_star)|Der Dereferenzierungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck * `i` = `x` für eine Einfügung am Anfang zu implementieren|  
+|[operator++](#op_add_add)|Inkrementiert `front_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.|  
+|[operator=](#op_eq)|Der Zuweisungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck * `i` = `x` für eine Einfügung am Anfang zu implementieren|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header**: \<iterator>  
   
  **Namespace:** std  
   
-##  <a name="front_insert_iterator__container_type"></a> front_insert_iterator::container_type  
+##  <a name="container_type"></a> front_insert_iterator::container_type  
  Ein Typ, der den Container darstellt, in dem eine Einfügung am Anfang vorgenommen werden soll.  
   
 ```  
@@ -125,7 +126,7 @@ The list L2 is: ( 40 10 20 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__front_insert_iterator"></a> front_insert_iterator::front_insert_iterator  
+##  <a name="front_insert_iterator"></a> front_insert_iterator::front_insert_iterator  
  Damit wird ein Iterator erstellt, mit dem Elemente an den Anfang eines bestimmten Containerobjekts eingefügt werden können.  
   
 ```  
@@ -185,7 +186,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_star"></a> front_insert_iterator::operator*  
+##  <a name="op_star"></a> front_insert_iterator::operator*  
  Dereferenziert den Iterator zum Einfügen und gibt das Element zurück, das es adressiert  
   
 ```  
@@ -243,7 +244,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_add_add"></a> front_insert_iterator::operator++  
+##  <a name="op_add_add"></a> front_insert_iterator::operator++  
  Inkrementiert `back_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.  
   
 ```  
@@ -291,7 +292,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_eq"></a> front_insert_iterator::operator=  
+##  <a name="op_eq"></a> front_insert_iterator::operator=  
  Fügt einen Wert (per Push) am Anfang des Containers an  
   
 ```  
@@ -349,7 +350,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__reference"></a> front_insert_iterator::reference  
+##  <a name="reference"></a> front_insert_iterator::reference  
  Ein Typ, der einen Verweis auf ein Element in einer Sequenz enthält, die durch den zugehörigen Container gesteuert wird.  
   
 ```  

@@ -1,47 +1,64 @@
 ---
-title: "vfscanf_s, vfwscanf_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vfscanf_s"
-  - "vfwscanf_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vfscanf_s"
-  - "vfwscanf_s"
-  - "_vftscanf_s"
-dev_langs: 
-  - "C++"
+title: vfscanf_s, vfwscanf_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vfscanf_s
+- vfwscanf_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vfscanf_s
+- vfwscanf_s
+- _vftscanf_s
+dev_langs:
+- C++
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# vfscanf_s, vfwscanf_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f9b3c102c1d73eb06868de7c27639af1d8680a8f
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Liest formatierte Daten aus einem Stream.  Diese Versionen von vfscanf und vfwscanf enthalten Sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="vfscanfs-vfwscanfs"></a>vfscanf_s, vfwscanf_s
+Liest formatierte Daten aus einem Stream. Diese Versionen von vfscanf, vfwscanf enthalten Sicherheitserweiterungen, wie unter [Security Features in the CRT (Sicherheitserweiterungen in der CRT)](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int vfscanf_s(   
@@ -57,9 +74,9 @@ int vfwscanf_s(
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `stream`  
- Zeiger zur `FILE`\-Struktur.  
+ Zeiger zur `FILE` -Struktur.  
   
  `format`  
  Formatsteuerzeichenfolge.  
@@ -67,35 +84,35 @@ int vfwscanf_s(
  `arglist`  
  Variablenargumentenliste.  
   
-## Rückgabewert  
- Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden.  Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden.  Wenn ein Fehler auftritt oder das Ende des Dateistreams vor der ersten Konvertierung erreicht wird, ist der Rückgabewert `EOF` für `vfscanf_s` und `vfwscanf_s`.  
+## <a name="return-value"></a>Rückgabewert  
+ Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Wenn ein Fehler auftritt oder das Ende des Dateistreams vor der ersten Konvertierung erreicht wird, ist der Rückgabewert `EOF` für `vfscanf_s` und `vfwscanf_s`.  
   
- Diese Funktionen überprüfen ihre Parameter.  Wenn `stream` ein ungültiger Dateizeiger ist oder `format` ein NULL\-Zeiger ist, rufen diese Funktionen den ungültigen Parameterhandler wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben auf.  Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `EOF` zurück und stellen `errno` auf `EINVAL` ein.  
+ Diese Funktionen überprüfen ihre Parameter. Wenn `stream` ein ungültiger Dateizeiger oder `format` ein NULL-Zeiger ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen `EOF` zurück und stellen `errno` auf `EINVAL` ein.  
   
-## Hinweise  
- Die `vfscanf_s`\-Funktion liest Daten aus der aktuellen Position von `stream` in die Speicherorte, die von der `arglist`\-Argumentliste angegeben werden \(falls vorhanden\).  Jedes Argument in der Liste muss ein Zeiger auf einen Variablentyp sein, der einem Typspezifizierer in `format` entspricht.  `format` steuert die Interpretation der Eingabefelder und hat die gleiche Form und Funktion wie das `format`\-Argument für `scanf_s`. Unter [Formatangabefelder: scanf\- und wscanf\-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) finden Sie eine Beschreibung von `format`.  `vfwscanf_s` ist eine Breitzeichenversion von `vfscanf_s`. Das `vfwscanf_s`\-Formatargument ist eine Breitzeichenfolge.  Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI\-Modus geöffnet ist.  `vfscanf_s` unterstützt derzeit nicht die Eingabe aus einem UNICODE\-Stream.  
+## <a name="remarks"></a>Hinweise  
+ Die `vfscanf_s`-Funktion liest Daten aus der aktuellen Position von `stream` in die Speicherorte, die von der `arglist`-Argumentliste angegeben werden (falls vorhanden). Jedes Argument in der Liste muss ein Zeiger auf einen Variablentyp sein, der einem Typspezifizierer in `format` entspricht. `format` steuert die Interpretation der Eingabefelder und hat die gleiche Form und Funktion wie das `format`-Argument für `scanf_s`. Unter [Format Specification Fields: scanf and wscanf Functions (Formatspezifikationsfelder: Funktionen scanf und wscanf)](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) finden Sie eine Beschreibung von `format`. `vfwscanf_s` ist eine Breitzeichenversion von `vfscanf_s`. Das `vfwscanf_s`-Formatargument ist eine Breitzeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. `vfscanf_s` unterstützt derzeit nicht die Eingabe aus einem UNICODE-Stream.  
   
- Der Hauptunterschied zwischen den sichereren Funktionen \(mit dem `_s`\-Suffix\) und den anderen Versionen ist, dass die sichereren Funktionen es erfordern, dass die Größe in Zeichen von jedem `c`, `C`, `s`, `S` und `[`\-Typfeld als Argument sofort nach der folgenden Variablen übergeben werden muss.  Weitere Informationen finden Sie unter [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf\-Breitenangabe](../../c-runtime-library/scanf-width-specification.md).  
+ Der Hauptunterschied zwischen den sichereren Funktionen (mit dem `_s`-Suffix) und den anderen Versionen ist, dass die sichereren Funktionen es erfordern, dass die Größe in Zeichen von jedem `c`, `C`, `s`, `S` und `[`-Typfeld als Argument sofort nach der folgenden Variablen übergeben werden muss. Weitere Informationen finden Sie unter [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf-Breitenangabe](../../c-runtime-library/scanf-width-specification.md).  
   
 > [!NOTE]
 >  Der Größenparameter ist vom Typ `unsigned` und nicht vom Typ `size_t`.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vftscanf_s`|`vfscanf_s`|`vfscanf_s`|`vfwscanf_s`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`vfscanf_s`|\<stdio.h\>|  
-|`vfwscanf_s`|\<stdio.h\> oder \<wchar.h\>|  
+|--------------|---------------------|  
+|`vfscanf_s`|\<stdio.h>|  
+|`vfwscanf_s`|\<stdio.h> oder \<wchar.h>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_vfscanf_s.c  
@@ -157,18 +174,18 @@ int main(void)
   
 ```  
   
-  **a\-Zeichenfolge**  
-**65000**  
-**3.141590**  
-**x**   
-## .NET Framework-Entsprechung  
- [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx). Siehe auch `Parse`\-Methoden wie [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+```Output  
+a-string  
+65000  
+3.141590  
+x  
+```  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [\_cscanf\_s, \_cscanf\_s\_l, \_cwscanf\_s, \_cwscanf\_s\_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)   
- [fprintf\_s, \_fprintf\_s\_l, fwprintf\_s, \_fwprintf\_s\_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
- [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [sscanf\_s, \_sscanf\_s\_l, swscanf\_s, \_swscanf\_s\_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)   
+ [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
+ [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
+ [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
  [vfscanf, vfwscanf](../../c-runtime-library/reference/vfscanf-vfwscanf.md)

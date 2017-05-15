@@ -10,18 +10,19 @@ f1_keywords: []
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 82f7876aca66524ba50b1e01b74437d8a2117976
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d5d69831f5157fab1914351de06adf050b74cc93
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt;-Operatoren
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&lt;](#operator_lt_)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&lt;](#op_lt)|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_eq_eq"></a> operator==  
+##  <a name="op_eq_eq"></a> operator==  
  Testet, ob das Objekt links vom Operator gleich dem Objekt rechts vom Operator ist.  
   
 ```
@@ -45,7 +46,7 @@ bool operator==(const error_condition& left,
 ### <a name="remarks"></a>Hinweise  
  Die Funktion gibt `left.category() == right.category() && left.value() == right.value()`zurück.  
   
-##  <a name="operator_neq"></a> operator!=  
+##  <a name="op_neq"></a> operator!=  
  Testet, ob das Objekt links vom Operator ungleich dem Objekt rechts vom Operator ist.  
   
 ```
@@ -69,7 +70,7 @@ bool operator!=(const error_condition& left,
 ### <a name="remarks"></a>Hinweise  
  Die Funktion gibt `!(left == right)`zurück.  
   
-##  <a name="operator_lt_"></a> operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Testet, ob ein Objekt kleiner ist als das Objekt, das für den Vergleich übergeben wurde.  
   
 ```

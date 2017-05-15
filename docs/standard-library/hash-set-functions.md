@@ -12,16 +12,17 @@ f1_keywords:
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1238f4a4e75f13ccd660554de8c49646549bc2cc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2743e67d8077cdf75b51a3dce914ced0894a3392
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; Funktionen
 |||  
 |-|-|  
-|[swap](#swap)|[swap (hash_multiset)](#swap__hash_multiset_)|  
+|[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|  
   
 ##  <a name="swap"></a> swap  
   
@@ -44,7 +45,7 @@ void swap(
  Das hash_set, dessen Elemente mit denen des hash_set `right` ausgetauscht werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion `swap` ist ein Algorithmus, der auf die Containerklasse „hash_set“ spezialisiert ist, um die Memberfunktion `left``.`[swap](../standard-library/hash-set-class.md#hash_set__swap)( `right`) auszuführen. Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion  
+ Die Vorlagenfunktion `swap` ist ein Algorithmus, der auf die Containerklasse „hash_set“ spezialisiert ist, um die Memberfunktion `left``.`[swap](../standard-library/hash-set-class.md#swap)( `right`) auszuführen. Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion  
   
  **template \<class T> void swap(T&, T&),**  
   
@@ -53,9 +54,9 @@ void swap(
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Codebeispiel für die Memberklasse [hash_set::swap](../standard-library/hash-set-class.md#hash_set__swap) finden Sie ein Beispiel, das die Vorlagenversion `swap` verwendet.  
+  Im Codebeispiel für die Memberklasse [hash_set::swap](../standard-library/hash-set-class.md#swap) finden Sie ein Beispiel, das die Vorlagenversion `swap` verwendet.  
   
-##  <a name="swap__hash_multiset_"></a> swap (hash_multiset)  
+##  <a name="swap_hash_multiset"></a> swap (hash_multiset)  
   
 > [!NOTE]
 >  Diese API ist veraltet. Die Alternative ist [unordered_set-Klasse](../standard-library/unordered-set-class.md).  
@@ -74,7 +75,7 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
  Das hash_multiset, dessen Elemente mit denen des hash_multiset `right` ausgetauscht werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion `swap` ist ein Algorithmus, der auf die Containerklasse „hash_multiset“ spezialisiert ist, um die Memberfunktion `left``.`[swap](../standard-library/hash-multiset-class.md#hash_multiset__swap)( `right`) auszuführen. Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion  
+ Die Vorlagenfunktion `swap` ist ein Algorithmus, der auf die Containerklasse „hash_multiset“ spezialisiert ist, um die Memberfunktion `left``.`[swap](../standard-library/hash-multiset-class.md#swap)( `right`) auszuführen. Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion  
   
  **template \<class T> void swap(T&, T&),**  
   
@@ -83,7 +84,7 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
  In Visual C++ .NET 2003 sind Member der [<hash_map>](../standard-library/hash-map.md)- und [<hash_set>](../standard-library/hash-set.md)-Headerdateien nicht mehr im STD-Namespace enthalten. Sie wurden stattdessen in den stdext-Namespace verschoben. Weitere Informationen finden Sie unter [Der stdext-Namespace](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Beispiel  
-  Im Codebeispiel für die Memberklasse [hash_multiset::swap](../standard-library/hash-multiset-class.md#hash_multiset__swap) finden Sie ein Beispiel, das die Vorlagenversion `swap` verwendet.  
+  Im Codebeispiel für die Memberklasse [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap) finden Sie ein Beispiel, das die Vorlagenversion `swap` verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [<hash_set>](../standard-library/hash-set.md)

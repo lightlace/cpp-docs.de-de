@@ -1,47 +1,64 @@
 ---
-title: "vsscanf_s, vswscanf_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vswscanf_s"
-  - "vsscanf_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vsscanf_s"
-  - "vswscanf_s"
-  - "_vstscanf_s"
-dev_langs: 
-  - "C++"
+title: vsscanf_s, vswscanf_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vswscanf_s
+- vsscanf_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vsscanf_s
+- vswscanf_s
+- _vstscanf_s
+dev_langs:
+- C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# vsscanf_s, vswscanf_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0c193b05dc7e8b1279343e729aa98ae5ed8bc153
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Liest formatierte Daten aus einer Zeichenfolge.  Diese Versionen von [vsscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md) enthalten Sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
+Liest formatierte Daten aus einer Zeichenfolge. Diese Versionen von [vsscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md) enthalten Sicherheitserweiterungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int vsscanf_s(  
@@ -56,53 +73,53 @@ int vswscanf_s(
 );   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `buffer`  
  Gespeicherte Daten  
   
  `format`  
- Formatsteuerzeichenfolge.  Weitere Informationen finden Sie unter [Formatangabefelder: scanf\- und wscanf\-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
+ Formatsteuerzeichenfolge. Weitere Informationen finden Sie unter [Formatangabefelder: scanf- und wscanf-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
  `arglist`  
  Variablenargumentenliste.  
   
-## Rückgabewert  
- Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden.  Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden.  Der Rückgabewert bei einem Fehler oder beim Erreichen des Endes der Zeichenfolge vor der ersten Konvertierung lautet `EOF`.  
+## <a name="return-value"></a>Rückgabewert  
+ Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert bei einem Fehler oder beim Erreichen des Endes der Zeichenfolge vor der ersten Konvertierung lautet `EOF`.  
   
- Wenn `buffer` oder `format` ein `NULL`\-Zeiger ist, wird, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, der Handler für ungültige Parameter aufgerufen.  Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "– 1" zurück und legen `errno` auf `EINVAL` fest.  
+ Wenn `buffer` oder `format` ein `NULL`-Zeiger ist, wird der Handler für ungültige Parameter wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "– 1" zurück und legen `errno` auf `EINVAL` fest.  
   
- Informationen zu diesen und anderen Fehlercodes finden Sie unter [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Hinweise  
- Die `vsscanf_s`\-Funktion liest Daten von `buffer` in die Speicherorte, die in der `arglist`\-Argumentliste von jedem Argument angegeben werden.  Die Argumente in der Argumentliste geben Zeiger zu den Variablen an, die einen Typ haben, der einem Typspezifizierer in `format` entspricht.  Im Gegensatz zu den weniger sicheren `vsscanf`\-Versionen ist bei der Verwendung der Typfeldzeichen `c`, `C`, `s`, `S` oder von in `[]` enthaltenen Zeichenfolgensteuerungssätzen ein Puffergrößenparameter erforderlich.  Nach jedem Pufferparameter, der dies erfordert, muss die Puffergröße in Zeichen als zusätzlicher Parameter angegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ Die `vsscanf_s`-Funktion liest Daten von `buffer` in die Speicherorte, die in der `arglist`-Argumentliste von jedem Argument angegeben werden. Die Argumente in der Argumentliste geben Zeiger zu den Variablen an, die einen Typ haben, der einem Typspezifizierer in `format` entspricht. Im Gegensatz zu den weniger sicheren `vsscanf`-Versionen ist bei der Verwendung der Typfeldzeichen `c`, `C`, `s`, `S` oder von in `[]` enthaltenen Zeichenfolgensteuerungssätzen ein Puffergrößenparameter erforderlich. Nach jedem Pufferparameter, der dies erfordert, muss die Puffergröße in Zeichen als zusätzlicher Parameter angegeben werden.  
   
- Die Puffergröße enthält das abschließende NULL\-Zeichen.  Ein Feld für die Breitenangabe muss verwendet werden, um sicherzustellen, dass das eingelesene Token in den Puffer passt.  Wenn kein Feld für die Breiteangabe verwendet wird und das eingelesen Token zu groß für den Puffer ist, wird nichts in diesen Puffer geschrieben.  
+ Die Puffergröße enthält das abschließende NULL-Zeichen. Ein Feld für die Breitenangabe muss verwendet werden, um sicherzustellen, dass das eingelesene Token in den Puffer passt. Wenn kein Feld für die Breiteangabe verwendet wird und das eingelesen Token zu groß für den Puffer ist, wird nichts in diesen Puffer geschrieben.  
   
- Weitere Informationen finden Sie unter [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf\-Typenfeldzeichen](../../c-runtime-library/scanf-type-field-characters.md).  
+ Weitere Informationen finden Sie unter [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) und [scanf-Typenfeldzeichen](../../c-runtime-library/scanf-type-field-characters.md).  
   
 > [!NOTE]
 >  Der Größenparameter ist vom Typ `unsigned` und nicht vom Typ `size_t`.  
   
- Das `format`\-Argument steuert die Interpretation der Eingabefelder und hat die gleiche Form und Funktion wie das `format`\-Argument für die `scanf_s`\-Funktion.  Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  
+ Das `format`-Argument steuert die Interpretation der Eingabefelder und hat die gleiche Form und Funktion wie das `format`-Argument für die `scanf_s`-Funktion. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.  
   
- `vswscanf_s` ist eine Breitzeichenversion von `vsscanf_s`. Die Argumente für `vswscanf_s` sind Zeichenfolgen mit Breitzeichen.  `vsscanf_s` verarbeitet keine Multibyte\-Hexadezimalzeichen.  `vswscanf_s` verarbeitet keine Unicode\-Hexadezimalzeichen in voller Breite \(Kompatibilitätszonenzeichen\).  Andernfalls verhalten sich `vswscanf_s` und `vsscanf_s` identisch.  
+ `vswscanf_s` ist eine Breitzeichenversion von `vsscanf_s`. Die Argumente für `vswscanf_s` sind Zeichenfolgen mit Breitzeichen. `vsscanf_s` verarbeitet keine Multibyte-Hexadezimalzeichen. `vswscanf_s` verarbeitet keine Unicode-Hexadezimalzeichen in voller Breite (Kompatibilitätszonenzeichen). Andernfalls verhalten sich `vswscanf_s` und `vsscanf_s` identisch.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstscanf_s`|`vsscanf_s`|`vsscanf_s`|`vswscanf_s`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`vsscanf_s`|\<stdio.h\>|  
-|`vswscanf_s`|\<stdio.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`vsscanf_s`|\<stdio.h>|  
+|`vswscanf_s`|\<stdio.h> oder \<wchar.h>|  
   
- Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_vsscanf_s.c  
@@ -147,17 +164,17 @@ int main( void )
 }  
 ```  
   
-  **Zeichenfolge    \= 15**  
-**Zeichen \= 1**  
-**Ganze Zahl:  \= 15**  
-**Real:     \= 15.000000**   
-## .NET Framework-Entsprechung  
- Siehe `Parse`\-Methoden wie [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+```Output  
+String    = 15  
+Character = 1  
+Integer:  = 15  
+Real:     = 15.000000  
+```  
   
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sscanf\_s, \_sscanf\_s\_l, swscanf\_s, \_swscanf\_s\_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vsscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md)

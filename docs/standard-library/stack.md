@@ -1,5 +1,5 @@
 ---
-title: '&lt;Stapel&gt; | Microsoft-Dokumentation'
+title: '&lt;Stapel&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 02ce6e15184a7ef6acb07218564c9e1d5a7dcddd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a769d1f945c6a79c0941a505e3291ae0f5529bbd
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
@@ -56,12 +57,12 @@ Definiert den Vorlagenklassenstapel und zwei unterstützende Vorlagen.
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/stack-operators.md#operator_neq)|Testet, ob das Stapelobjekt links vom Operator ungleich dem Stapelobjekt rechts vom Operator ist.|  
-|[operator<](../standard-library/stack-operators.md#operator_eq_eq)|Testet, ob das Stapelobjekt links vom Operator kleiner als das Stapelobjekt rechts vom Operator ist.|  
-|[operator\<=](../standard-library/stack-operators.md#operator_lt_)|Testet, ob das Stapelobjekt links vom Operator kleiner gleich dem Stapelobjekt rechts vom Operator ist.|  
-|[operator==](../standard-library/stack-operators.md#operator_lt__eq)|Testet, ob das Stapelobjekt links vom Operator gleich dem Stapelobjekt rechts vom Operator ist.|  
-|[operator>](../standard-library/stack-operators.md#operator_gt_)|Testet, ob das Stapelobjekt links vom Operator größer als das Stapelobjekt rechts vom Operator ist.|  
-|[operator>=](../standard-library/stack-operators.md#operator_gt__eq)|Testet, ob das Stapelobjekt links vom Operator größer gleich dem Stapelobjekt rechts vom Operator ist.|  
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Testet, ob das Stapelobjekt links vom Operator ungleich dem Stapelobjekt rechts vom Operator ist.|  
+|[operator<](../standard-library/stack-operators.md#op_lt)|Testet, ob das Stapelobjekt links vom Operator kleiner als das Stapelobjekt rechts vom Operator ist.|  
+|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Testet, ob das Stapelobjekt links vom Operator kleiner gleich dem Stapelobjekt rechts vom Operator ist.|  
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Testet, ob das Stapelobjekt links vom Operator gleich dem Stapelobjekt rechts vom Operator ist.|  
+|[operator>](../standard-library/stack-operators.md#op_gt)|Testet, ob das Stapelobjekt links vom Operator größer als das Stapelobjekt rechts vom Operator ist.|  
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Testet, ob das Stapelobjekt links vom Operator größer gleich dem Stapelobjekt rechts vom Operator ist.|  
   
 ### <a name="classes"></a>Klassen  
   

@@ -70,10 +70,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0402f647be21541222fe215760715eea1dee39d9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: dee742e53a8ac9243503011b827a008879af6428
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
@@ -149,7 +150,7 @@ const unsigned char *_mbsstr_l(
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt einen Zeiger auf das erste Vorkommen von `strSearch` in `str` zurück, oder `NULL`, wenn `strSearch` in `str` nicht angezeigt wird. Wenn `strSearch` auf eine Zeichenfolge der Länge&0; (Null) zeigt wird, gibt die Funktion `str` zurück.  
+ Gibt einen Zeiger auf das erste Vorkommen von `strSearch` in `str` zurück, oder `NULL`, wenn `strSearch` in `str` nicht angezeigt wird. Wenn `strSearch` auf eine Zeichenfolge der Länge 0 (Null) zeigt wird, gibt die Funktion `str` zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `strstr`-Funktion gibt einen Zeiger auf das erste Vorkommen von `strSearch` in `str` zurück. Die Suche umfasst keine abschließenden Nullzeichen. `wcsstr` ist die Breitzeichenversion von `strstr`, und `_mbsstr` ist die Multibytezeichenversion. Die Argumente und der Rückgabewert von `wcsstr` sind Breitzeichen-Zeichenfolgen; die von `_mbsstr` sind Mehrbyte-Zeichenfolgen. `_mbsstr` überprüft die eigenen Parameter. Wenn `str` oder `strSearch` `NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt `_mbsstr``errno` auf `EINVAL` fest und gibt 0 zurück. `strstr` und `wcsstr` überprüfen ihre Parameter nicht. Diese drei Funktionen verhalten sich andernfalls identisch.  
@@ -180,9 +181,8 @@ const unsigned char *_mbsstr_l(
   
 ## <a name="example"></a>Beispiel  
   
-```  
-  
-      // crt_strstr.c  
+```C  
+// crt_strstr.c  
   
 #include <string.h>  
 #include <stdio.h>  
@@ -216,9 +216,6 @@ String to be searched:
 lazy found at position 36  
 ```  
   
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- [System::String::IndexOf](https://msdn.microsoft.com/en-us/library/system.string.indexof.aspx)  
-  
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
  [Locale](../../c-runtime-library/locale.md)   
@@ -228,4 +225,5 @@ lazy found at position 36
  [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
  [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [basic_string::find](http://msdn.microsoft.com/Library/e8254589-ae65-4414-b28f-54ba8f544656)
+ [basic_string::find](../../standard-library/basic-string-class.md#find)  
+

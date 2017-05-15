@@ -1,53 +1,71 @@
 ---
-title: "remquo, remquof, remquol | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "remquof"
-  - "remquo"
-  - "remquol"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "remquof"
-  - "remquol"
-  - "remquo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remquol-Funktion"
-  - "remquof-Funktion"
-  - "remquo-Funktion"
+title: remquo, remquof, remquol | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- remquof
+- remquo
+- remquol
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- remquof
+- remquol
+- remquo
+dev_langs:
+- C++
+helpviewer_keywords:
+- remquol function
+- remquof function
+- remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# remquo, remquof, remquol
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: fb7cbf4fe2450d574a4418e62c43dca699cde9b8
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 Berechnet den Rest von zwei ganzzahligen Werten und speichert einen ganzzahligen Wert mit dem Zeichen und der ungefähren Größe des Quotienten an einem Speicherort, der in einem Parameter angegeben ist.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 double remquo(   
@@ -78,7 +96,7 @@ long double remquol(
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `numer`  
  Der Zähler.  
   
@@ -88,25 +106,25 @@ long double remquol(
  `quo`  
  Ein Zeiger auf eine ganze Zahl zum Speichern eines Werts, der das Zeichen und die ungefähre Größe des Quotienten hat.  
   
-## Rückgabewert  
- `remquo` gibt den Gleitkommarest von `x` \/ `y` zurück.  Wenn der Wert von `y` 0,0 ist, gibt `remquo` ein stilles NaN zurück.  Informationen über die Darstellung eines stillen NaN durch die `printf`\-Familie finden Sie unter [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+## <a name="return-value"></a>Rückgabewert  
+ `remquo` gibt den Gleitkommarest von `x` / `y` zurück. Wenn der Wert von `y` 0,0 ist, gibt `remquo` ein stilles NaN zurück. Informationen über die Darstellung eines stillen NaN durch die `printf`-Familie finden Sie unter [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
-## Hinweise  
- Die `remquo`\-Funktion berechnet den Gleitkommarest `f` von `x` \/ `y` wie etwa `x` \= `i` `*` `y` \+ `f`, wobei `i` eine ganze Zahl ist, `f` das gleiche Zeichen wie `x` hat und der absolute Wert von `f` kleiner ist als der absolute Wert von `y`.  
+## <a name="remarks"></a>Hinweise  
+ Die `remquo`-Funktion berechnet den Gleitkommarest `f` von `x` / `y` wie etwa `x` = `i` `*` `y` + `f`, wobei `i` eine ganze Zahl ist, `f` das gleiche Zeichen wie `x` hat und der absolute Wert von `f` kleiner ist als der absolute Wert von `y`.  
   
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von `remquo` aufrufen, die `float`\- oder `long double`\-Werte verwenden und zurückgeben.  In einem C\-Programm verwendet `remquo` immer zwei Double und gibt einen Double zurück.  
+ Da C++ das Überladen zulässt, können Sie Überladungen von `remquo` aufrufen, die `float`- oder `long double`-Werte verwenden und zurückgeben. In einem C-Programm verwendet `remquo` immer zwei Double und gibt einen Double zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`remquo`, `remquof`, `remquol`|\<math.h\>|  
+|--------------|---------------------|  
+|`remquo`, `remquof`, `remquol`|\<math.h>|  
   
  Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```c  
+```C  
 // crt_remquo.c  
 // This program displays a floating-point remainder.  
   
@@ -124,12 +142,12 @@ int main( void )
 }  
 ```  
   
-  **Der Rest von – 10.00 \/ 3.00 ist – 1,000000**  
-**Der ungefähre signierte Quotient ist – 3**   
-## .NET Framework-Entsprechung  
- [System::Math::IEEERemainder](https://msdn.microsoft.com/en-us/library/system.math.ieeeremainder.aspx)  
+```Output  
+The remainder of -10.00 / 3.00 is -1.000000  
+Approximate signed quotient is -3  
+```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
  [ldiv, lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)   

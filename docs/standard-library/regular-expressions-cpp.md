@@ -33,17 +33,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 8159bf4e5ebde026fe0d92b7d9d3c73ce1a7b7b9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: ac4dc70360682aff3a28eabeed0e4f05e4c509a8
+ms.contentlocale: de-de
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="regular-expressions-c"></a>Reguläre Ausdrücke (C++)
-In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre Ausdrücke behandelt.  
+Die C++-Standardbibliothek unterstützt mehrere Grammatiken für reguläre Ausdrücke. Dieses Thema erläutert die Grammatik Variationen verfügbar bei Verwendung von regulären Ausdrücken.  
   
-##  <a name="a-nameregexgrammara-regular-expression-grammar"></a><a name="regexgrammar"></a> Grammatik für reguläre Ausdrücke  
+##  <a name="regexgrammar"></a> Grammatik für reguläre Ausdrücke  
+Der Grammatik für reguläre Ausdrücke verwenden wird von angegeben, durch die Verwendung eines der `std::regex_constants::syntax_option_type` Enumerationswerte. Diese Grammatiken für reguläre Ausdrücke sind in std::regex_constants definiert:
+
+-   `ECMAScript`: Diese Methode ist am nächsten gelegenen die Grammatik von JavaScript und .NET Sprachen verwendet wird.
+-   `basic`: Der POSIX grundlegende reguläre Ausdrücke oder Geschäftsregelmodul.
+-   `extended`: Der POSIX erweiterte reguläre Ausdrücke oder ERE.
+-   `awk`: Diese Methode ist `extended`, verfügt aber über zusätzliche Escapezeichen für nicht druckbaren Zeichen.
+-   `grep`: Diese Methode ist `basic`, ermöglicht aber auch neue-Zeile Zeichen ("\n"), um alternierungen zu trennen.
+-   `egrep`: Diese Methode ist `extended`, ermöglicht aber auch neue Zeilenumbruchzeichen Alternatios zu trennen.
+
+Wenn keine Grammatik angegeben wird, standardmäßig `ECMAScript` wird angenommen. Nur eine Grammatik kann angegeben werden.  
   
+Neben der Grammatik können mehrere Flags verwendet werden:  
+-   `icase`: Ignorieren Sie Groß-/Kleinschreibung, beim Ermitteln von Übereinstimmungen.  
+-   `nosubs`: Ignorieren Sie markierte Übereinstimmungen (d. h., Ausdrücke in Klammern); Es werden keine substitutionen gespeichert.  
+-   `optimize`: Stellen Sie schneller auf die möglichen Ausgaben für größer Konstruktionszeit Abgleich.  
+-   `collate`: Verwenden Sie gebietsschemabezogene Sortierreihenfolgen (z. B. Bereiche im Format "[a-Z]").  
+  
+0 (null) oder mehrere Flags können mit der Grammatik zum Festlegen des Verhaltens des regulären Ausdrucks Modul kombiniert werden. Wenn nur Flags angegeben sind, `ECMAScript` wird als die Grammatik ausgegangen.
+
 ### <a name="element"></a>Element  
  Bei einem Element kann es sich um Folgendes handeln:  
   
@@ -67,7 +86,7 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
   
 -   Ein *Anker*. Der Anker "^" entspricht dem Anfang der Zielsequenz, während der Anker "$ " mit dem Ende der Zielsequenz übereinstimmt.  
   
- Eine *Erfassungsgruppe* im Format "( *Teilausdruck* )" oder "\\( *Teilausdruck* \\)" in `BRE` und `grep`, die der Reihenfolge der Zeichen in der Zielsequenz entspricht, die anhand des Musters zwischen den Trennzeichen verglichen wird.  
+ Eine *Erfassungsgruppe* im Format "( *Teilausdruck* )" oder "\\( *Teilausdruck* \\)" in `basic` und `grep`, die der Reihenfolge der Zeichen in der Zielsequenz entspricht, die anhand des Musters zwischen den Trennzeichen verglichen wird.  
   
 -   Ein *Identitätsescapezeichen* im Format "\\`k`", das dem Zeichen `k` in der Zielsequenz entspricht.  
   
@@ -83,7 +102,7 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
   
 -   "(a)" entspricht der Zielsequenz "a" und ordnet die Erfassungsgruppe 1 der Untersequenz "a" zu, stimmt jedoch nicht mit den Zielsequenzen "B", "b" oder "c" überein.  
   
- In `ECMAScript`, `BRE` und `grep` kann ein Element auch ein *Rückverweis* im Format "\\`dd`" sein, wobei `dd` einen Dezimalwert N darstellt, der einer Folge von Zeichen in der Zielsequenz entspricht, die mit der Sequenz von Zeichen identisch ist, welche mit der N-ten *Erfassungsgruppe* übereinstimmt. "(a)\1" entspricht beispielsweise der Zielsequenz "aa", da die erste (und einzige) Erfassungsgruppe mit der ursprünglichen Sequenz "a" übereinstimmt und \1 dann der letzten Sequenz "a" entspricht.  
+ In `ECMAScript`, `basic` und `grep` kann ein Element auch ein *Rückverweis* im Format "\\`dd`" sein, wobei `dd` einen Dezimalwert N darstellt, der einer Folge von Zeichen in der Zielsequenz entspricht, die mit der Sequenz von Zeichen identisch ist, welche mit der N-ten *Erfassungsgruppe* übereinstimmt. "(a)\1" entspricht beispielsweise der Zielsequenz "aa", da die erste (und einzige) Erfassungsgruppe mit der ursprünglichen Sequenz "a" übereinstimmt und \1 dann der letzten Sequenz "a" entspricht.  
   
  In `ECMAScript` kann ein Element auch Folgendes sein:  
   
@@ -126,13 +145,13 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
 -   Eine *oktale Escapesequenz* im Format "\\`ooo`". Entspricht einem Zeichen in der Zielsequenz, dessen Darstellung der Wert ist, der durch die ein, zwei oder drei oktalen Ziffern `ooo` dargestellt wird.  
   
 ### <a name="repetition"></a>Wiederholen  
- Auf jedes Element außer einer *positiven Assertion*, einer *negativen Assertion* oder einem *Anker* kann eine Wiederholungsanzahl folgen. Die häufigste Art der Wiederholungsanzahl hat das Format "{`min`,`max`}" oder "\\{`min`,`max`\\}" in `BRE` und `grep`. Ein Element, auf das dieses Format der Wiederholungsanzahl folgt, entspricht mindestens `min` aufeinander folgenden Vorkommen und nicht mehr als `max` aufeinander folgenden Vorkommen einer Sequenz, die mit dem Element übereinstimmt. Beispiel: "a{2,3}" entspricht der Zielsequenz "aa" und der Zielsequenz "aaa", aber nicht der Zielsequenz "a" oder der Zielsequenz "aaaa".  
+ Auf jedes Element außer einer *positiven Assertion*, einer *negativen Assertion* oder einem *Anker* kann eine Wiederholungsanzahl folgen. Die häufigste Art der Wiederholungsanzahl hat das Format "{`min`,`max`}" oder "\\{`min`,`max`\\}" in `basic` und `grep`. Ein Element, auf das dieses Format der Wiederholungsanzahl folgt, entspricht mindestens `min` aufeinander folgenden Vorkommen und nicht mehr als `max` aufeinander folgenden Vorkommen einer Sequenz, die mit dem Element übereinstimmt. Beispiel: "a{2,3}" entspricht der Zielsequenz "aa" und der Zielsequenz "aaa", aber nicht der Zielsequenz "a" oder der Zielsequenz "aaaa".  
   
  Für eine Wiederholungsanzahl können auch folgende Formate verwendet werden:  
   
--   "{`min`,}" oder "\\{`min`\\}" in `BRE` und `grep`. Entspricht "{`min`,`min`}".  
+-   "{`min`,}" oder "\\{`min`\\}" in `basic` und `grep`. Entspricht "{`min`,`min`}".  
   
--   "{`min`,}" oder "\\{`min`,\\}" in `BRE` und `grep`. Entspricht "{`min`,unbounded}".  
+-   "{`min`,}" oder "\\{`min`,\\}" in `basic` und `grep`. Entspricht "{`min`,unbounded}".  
   
 -   "*". Entspricht "{0,unbounded}".  
   
@@ -144,7 +163,7 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
   
 -   "a*" entspricht der Zielsequenz "", der Zielsequenz "a", der Zielsequenz "aa" usw.  
   
- Für alle Grammatiken außer `BRE` und `grep` können für eine Wiederholungsanzahl folgende Formate verwendet werden:  
+ Für alle Grammatiken außer `basic` und `grep` können für eine Wiederholungsanzahl folgende Formate verwendet werden:  
   
 -   "". Entspricht "{0,1}".  
   
@@ -162,19 +181,19 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
  Elemente des regulären Ausdrucks mit oder ohne *Wiederholungsanzahl* können verkettet werden, um längere reguläre Ausdrücke zu bilden. Der resultierende Ausdruck entspricht einer Zielsequenz, die eine Verkettung der Sequenzen ist, der die einzelnen Elemente entsprechen. Beispiel: "a{2,3}b" entspricht der Zielsequenz "aab" und der Zielsequenz "aaab", jedoch nicht der Zielsequenz "ab" oder der Zielsequenz "aaaab".  
   
 ### <a name="alternation"></a>Alternierung  
- In allen Grammatiken für reguläre Ausdrücke außer `BRE` und `grep` kann ein Zeichen '&#124;' und ein anderer verketteter regulärer Ausdruck einem verketteten regulären Ausdruck folgen. Verkettete reguläre Ausdrücke können auf diese Weise in beliebiger Zahl kombiniert werden. Der resultierende Ausdruck entspricht jeder Zielsequenz, die mit mindestens einem verketteten regulären Ausdruck übereinstimmt.  
+ In allen Grammatiken für reguläre Ausdrücke außer `basic` und `grep` kann ein Zeichen '&#124;' und ein anderer verketteter regulärer Ausdruck einem verketteten regulären Ausdruck folgen. Verkettete reguläre Ausdrücke können auf diese Weise in beliebiger Zahl kombiniert werden. Der resultierende Ausdruck entspricht jeder Zielsequenz, die mit mindestens einem verketteten regulären Ausdruck übereinstimmt.  
   
  Wenn mehrere der verketteten regulären Ausdrücke der Zielsequenz entsprechen, wählt `ECMAScript` den ersten verketteten regulären Ausdruck, der der Sequenz entspricht, als Übereinstimmung (*erste Übereinstimmung*) aus; die anderen Grammatiken für reguläre Ausdrücke wählen den Ausdruck aus, der die *längste Übereinstimmung* erzielt. Beispiel: "ab&#124;cd" entspricht der Zielsequenz "ab" und der Zielsequenz "cd", jedoch nicht der Zielsequenz "abd" oder der Zielsequenz "acd".  
   
  In `grep` und `egrep` kann ein Zeilenumbruchzeichen ("\n") verwendet werden, um Alternierungen zu trennen.  
   
 ### <a name="subexpression"></a>Teilausdruck  
- In `BRE` und `grep` ist ein Teilausdruck eine Verkettung. In den anderen Grammatiken für reguläre Ausdrücke ist ein Teilausdruck eine Alternierung.  
+ In `basic` und `grep` ist ein Teilausdruck eine Verkettung. In den anderen Grammatiken für reguläre Ausdrücke ist ein Teilausdruck eine Alternierung.  
   
-##  <a name="a-namegrammarsummarya-grammar-summary"></a><a name="grammarsummary"></a> Zusammenfassung der Grammatik  
+##  <a name="grammarsummary"></a> Zusammenfassung der Grammatik  
  In der folgenden Tabelle sind die Funktionen zusammengefasst, die in verschiedenen Grammatiken für reguläre Ausdrücke verfügbar sind:  
   
-|Element|BRE|ERE|ECMA|grep|egrep|awk|  
+|Element|Grundlegend|Erweitert|ECMAScript|grep|egrep|awk|  
 |-------------|---------|---------|----------|----------|-----------|---------|  
 |Alternierung mit '&#124;'||+|+||+|+|  
 |Alternierung mit "\n"||||+|+||  
@@ -203,13 +222,13 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
 |Platzhalterzeichen|+|+|+|+|+|+|  
 |Wortgrenzenassertion|||+||||  
   
-##  <a name="a-namesemanticdetailsa-semantic-details"></a><a name="semanticdetails"></a> Semantische Details  
+##  <a name="semanticdetails"></a> Semantische Details  
   
 ### <a name="anchor"></a>Anker  
  Ein Anker entspricht einer Position in der Zielzeichenfolge, keinem Zeichen. Ein "^" entspricht dem Anfang der Zielzeichenfolge, und ein "$" entspricht dem Ende der Zielzeichenfolge.  
   
 ### <a name="back-reference"></a>Rückverweis  
- Ein Rückverweis ist ein umgekehrter Schrägstrich, nach dem ein Dezimalwert n folgt. Er entspricht dem Inhalt der n-ten *Erfassungsgruppe*. Der Wert von N darf nicht mehr als die Anzahl von Erfassungsgruppen sein, die dem Rückverweis vorausgehen. In `BRE` und `grep` wird der Wert N durch die Dezimalstelle bestimmt, die dem umgekehrten Schrägstrich folgt. In `ECMAScript` wird der Wert N von allen Dezimalstellen bestimmt, die dem umgekehrten Schrägstrich unmittelbar folgen. Daher überschreitet der Wert N in `BRE` und `grep` nie den Wert 9, auch wenn der reguläre Ausdruck über mehr als neun Erfassungsgruppen verfügt. In `ECMAScript` ist der Wert N unbegrenzt.  
+ Ein Rückverweis ist ein umgekehrter Schrägstrich, nach dem ein Dezimalwert n folgt. Er entspricht dem Inhalt der n-ten *Erfassungsgruppe*. Der Wert von N darf nicht mehr als die Anzahl von Erfassungsgruppen sein, die dem Rückverweis vorausgehen. In `basic` und `grep` wird der Wert N durch die Dezimalstelle bestimmt, die dem umgekehrten Schrägstrich folgt. In `ECMAScript` wird der Wert N von allen Dezimalstellen bestimmt, die dem umgekehrten Schrägstrich unmittelbar folgen. Daher überschreitet der Wert N in `basic` und `grep` nie den Wert 9, auch wenn der reguläre Ausdruck über mehr als neun Erfassungsgruppen verfügt. In `ECMAScript` ist der Wert N unbegrenzt.  
   
  Beispiele:  
   
@@ -217,7 +236,7 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
   
 -   "(a)\2" ist nicht gültig.  
   
--   "(b(((((((((a))))))))))\10" hat verschiedene Bedeutungen in `BRE` und `ECMAScript`. In `BRE` ist der Rückverweis "\1". Der Rückverweis entspricht dem Inhalt der ersten Erfassungsgruppe (d. h. der Gruppe, die mit "(b" beginnt und mit dem letzten Zeichen ")" endet und vor dem Rückverweis steht). Die letzte "0" entspricht dem normalen Zeichen "0". In `ECMAScript` ist der Rückverweis "\10". Er entspricht der zehnten Erfassungsgruppe, d. h. der innersten.  
+-   "(b(((((((((a))))))))))\10" hat verschiedene Bedeutungen in `basic` und `ECMAScript`. In `basic` ist der Rückverweis "\1". Der Rückverweis entspricht dem Inhalt der ersten Erfassungsgruppe (d. h. der Gruppe, die mit "(b" beginnt und mit dem letzten Zeichen ")" endet und vor dem Rückverweis steht). Die letzte "0" entspricht dem normalen Zeichen "0". In `ECMAScript` ist der Rückverweis "\10". Er entspricht der zehnten Erfassungsgruppe, d. h. der innersten.  
   
 ### <a name="bracket-expression"></a>Klammerausdruck  
  Ein Klammerausdruck definiert einen Satz von Zeichen und *Sortierungselementen*. Wenn der Klammerausdruck mit dem Zeichen "^" beginnt, ist die Übereinstimmung erfolgreich, wenn keine Elemente im Satz dem aktuellen Zeichen in der Zielsequenz entsprechen. Andernfalls ist die Übereinstimmung erfolgreich, wenn eines der Elemente im Satz dem aktuellen Zeichen in der Zielsequenz entspricht.  
@@ -318,9 +337,9 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
   
 |Grammatik|Zulässige Identitätsescapezeichen|  
 |-------------|----------------------------------------|  
-|`BRE`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '*', '^', '$' }|  
-|`ERE`, `egre`|{ '(', ')', '{', '.', '[', '\\', '*', '^', '$', '+', '', '&#124;' }|  
-|`awk`|`ERE` plus { '"', '/' }|  
+|`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '*', '^', '$' }|  
+|`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '*', '^', '$', '+', '', '&#124;' }|  
+|`awk`|`extended` plus { '"', '/' }|  
 |`ECMAScript`|Alle Zeichen außer denjenigen, die Bestandteil eines Bezeichners sein können. In der Regel umfasst dies Buchstaben, Ziffern, "$", "_" und Unicode-Escapesequenzen. Weitere Informationen finden Sie in der ECMAScript-Sprachspezifikation.|  
   
 ### <a name="individual-character"></a>Einzelnes Zeichen  
@@ -374,11 +393,11 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
   
 -   ^  $  \  .  *  +    (  )  [  ]  {  }  &#124;  
   
- In `BRE` und `grep` haben die folgenden Zeichen eine besondere Bedeutung:  
+ In `basic` und `grep` haben die folgenden Zeichen eine besondere Bedeutung:  
   
 -   .   [   \  
   
- In `BRE` und `grep` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:  
+ In `basic` und `grep` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:  
   
 -   "*" hat in jedem Fall eine besondere Bedeutung, außer wenn es sich um das erste Zeichen in einem regulären Ausdruck oder das erste Zeichen handelt, das einem anfänglichen "^" in einem regulären Ausdruck folgt, oder wenn es das erste Zeichen einer Erfassungsgruppe oder das erste Zeichen ist, das dem anfänglichen "^" in einer Erfassungsgruppe folgt.  
   
@@ -386,11 +405,11 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
   
 -   "$" hat eine besondere Bedeutung, wenn es das letzte Zeichen eines regulären Ausdrucks ist.  
   
- In `ERE`, `egrep` und `awk` haben die folgenden Zeichen eine besondere Bedeutung:  
+ In `extended`, `egrep` und `awk` haben die folgenden Zeichen eine besondere Bedeutung:  
   
 -   .   [   \   (   *   +      {   &#124;  
   
- In `ERE`, `egrep` und `awk` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:  
+ In `extended`, `egrep` und `awk` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:  
   
 -   ')' hat eine besondere Bedeutung, wenn es einem vorhergehenden '(' entspricht.  
   
@@ -431,7 +450,7 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
 ### <a name="word-boundary-assert"></a>Wortgrenzenassertion  
  Eine Wortgrenzenassertion stimmt überein, wenn die aktuelle Position in der Zielzeichenfolge nicht unmittelbar hinter einer *Wortgrenze* liegt.  
   
-##  <a name="a-namematchingandsearchinga-matching-and-searching"></a><a name="matchingandsearching"></a> Zuordnen und Suchen  
+##  <a name="matchingandsearching"></a> Zuordnen und Suchen  
  Damit ein regulärer Ausdruck einer Zielsequenz entspricht, muss der gesamte reguläre Ausdruck mit der gesamten Zielsequenz übereinstimmen. Beispielsweise entspricht der reguläre Ausdruck "bcd" der Zielsequenz "bcd", stimmt jedoch weder mit der Zielsequenz "abcd" noch mit der Zielsequenz "bcde" überein.  
   
  Damit eine Suche mit regulärem Ausdruck erfolgt, muss eine Untersequenz in der Zielsequenz vorhanden sein, die dem regulären Ausdruck entspricht. Die Suche ergibt in der Regel die äußerst linke entsprechende Untersequenz.  
@@ -446,7 +465,7 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
   
  Eine partielle Übereinstimmung ist erfolgreich, wenn die Übereinstimmung das Ende der Zielsequenz ohne Fehler erreicht, auch wenn sie das Ende des regulären Ausdruck nicht erreicht hat. Nachdem eine partielle Übereinstimmung erfolgreich ist, kann das Anhängen von Zeichen an die Zielsequenz daher dazu führen, dass bei einer späteren partiellen Übereinstimmung ein Fehler auftritt. Nachdem ein Fehler bei einer partiellen Übereinstimmung aufgetreten ist, kann das Anhängen von Zeichen an die Zielsequenz nicht dazu führen, dass eine spätere partielle Übereinstimmung erfolgreich ist. Beispielsweise entspricht "ab" bei einer partiellen Übereinstimmung der Zielsequenz "a", jedoch nicht "ac".  
   
-##  <a name="a-nameformatflagsa-format-flags"></a><a name="formatflags"></a> Formatflags  
+##  <a name="formatflags"></a> Formatflags  
   
 |ECMAScript-Formatierungsregeln|sed-Formatierungsregeln|Ersetzungstext|  
 |-----------------------------|----------------------|----------------------|  
@@ -455,9 +474,9 @@ In diesem Thema werden die Grammatiken der verschiedenen Module für reguläre A
 ||"\\&"|"&"|  
 |"$`" (Dollarzeichen gefolgt vom Graviszeichen)||Die Zeichensequenz, die der Untersequenz vorausgeht, die dem regulären Ausdruck entspricht (`[match.prefix().first, match.prefix().second)`)|  
 |"$ '" (Dollarzeichen gefolgt vom Vorwärtsanführungszeichen)||Die Zeichensequenz, die der Untersequenz folgt, die dem regulären Ausdruck entspricht (`[match.suffix().first, match.suffix().second)`)|  
-|"$n"|"\n"|Die Zeichensequenz, die der Erfassungsgruppe in Position `n` entspricht, wobei `n` eine Zahl zwischen 0 und 9 ist (`[match[n].first, match[n].second)`|  
+|"$n"|"\n"|Die Zeichensequenz, die der Erfassungsgruppe in Position entspricht `n`, wobei `n` ist eine Zahl zwischen 0 und 9 (`[match[n].first, match[n].second)`)|  
 ||"\\\n"|"\n"|  
-|"$nn"||Die Zeichensequenz, die der Erfassungsgruppe in Position `nn` entspricht, wobei `nn` eine Zahl zwischen 10 und 99 ist (`[match[nn].first, match[nn].second)`|  
+|"$nn"||Die Zeichensequenz, die der Erfassungsgruppe in Position entspricht `nn`, wobei `nn` ist eine Zahl zwischen 10 und 99 (`[match[nn].first, match[nn].second)`)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)

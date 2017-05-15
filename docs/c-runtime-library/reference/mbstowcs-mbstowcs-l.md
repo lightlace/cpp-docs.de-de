@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 436e581907e3b651716e819a9c82a24eed2e4b8e
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
@@ -103,15 +104,15 @@ size_t _mbstowcs_l(
  Das zu verwendende Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn `mbstowcs` die Quellzeichenfolge erfolgreich konvertiert, gibt es die Anzahl von konvertierten Multibytezeichen zurück. Wenn das `wcstr`-Argument `NULL` ist, gibt die Funktion die erforderliche Größe der Zielzeichenfolge (in Breitzeichen) zurück. Wenn `mbstowcs` ein ungültiges Multibytezeichen erkennt, gibt es –1 zurück. Wenn der Rückgabewert `count` ist, endet die Breitzeichenfolge nicht mit NULL.  
+ Wenn `mbstowcs` die Quellzeichenfolge erfolgreich konvertiert, gibt es die Anzahl von konvertierten Multibytezeichen zurück. Wenn das `wcstr`-Argument `NULL` ist, gibt die Funktion die erforderliche Größe der Zielzeichenfolge (in Breitzeichen) zurück. Wenn `mbstowcs` findet ein ungültiges Multibytezeichen wird-1 zurückgegeben. Wenn der Rückgabewert `count` ist, endet die Breitzeichenfolge nicht mit NULL.  
   
 > [!IMPORTANT]
 >  Stellen Sie sicher, dass `wcstr` und `mbstr` nicht überlappen und dass `count` die Anzahl zu konvertierenderMultibytezeichen korrekt darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `mbstowcs`-Funktion konvertiert `count`-Multibytezeichen, bis zu einer maximalen Anzahl, auf die von `mbstr` verwiesen wird, in eine entsprechende Breitzeichenfolge, die vom aktuellen Gebietsschema angegeben werden. Die entstandene Breitzeichenfolge wird unter der von `wcstr`* dargestellten Adresse gespeichert.* Das Ergebnis ähnelt dem einer Reihe von Aufrufen an `mbtowc`. Wenn `mbstowcs` das Singlebyte-Zeichen NULL ('\0') erkennt, entweder bevor oder nachdem `count` aufgetreten ist, konvertiert es das Zeichen NULL in ein Breitzeichen-Zeichen NULL(L'\0') und hält an. Folglich endet die Breitzeichen-Zeichenfolge bei `wcstr` nur dann auf NULL, wenn ein NULL-Zeichen während der Konvertierung erkannt wird. Wenn die Sequenzen, auf die von `wcstr` und `mbstr` verwiesen wird, überlappen, ist das Verhalten nicht definiert.  
+ Die `mbstowcs`-Funktion konvertiert `count`-Multibytezeichen, bis zu einer maximalen Anzahl, auf die von `mbstr` verwiesen wird, in eine entsprechende Breitzeichenfolge, die vom aktuellen Gebietsschema angegeben werden. Er speichert die resultierende Breitzeichen-Zeichenfolge an der Adresse dargestellte `wcstr`. Das Ergebnis ähnelt dem einer Reihe von Aufrufen an `mbtowc`. Wenn `mbstowcs` das Singlebyte-Zeichen NULL ('\0') erkennt, entweder bevor oder nachdem `count` aufgetreten ist, konvertiert es das Zeichen NULL in ein Breitzeichen-Zeichen NULL(L'\0') und hält an. Folglich endet die Breitzeichen-Zeichenfolge bei `wcstr` nur dann auf NULL, wenn ein NULL-Zeichen während der Konvertierung erkannt wird. Wenn die Sequenzen, auf die von `wcstr` und `mbstr` verwiesen wird, überlappen, ist das Verhalten nicht definiert.  
   
- Wenn das `wcstr`-Argument `NULL` ist, gibt `mbstowcs` die Anzahl von Breitzeichen zurück, die bei einer Konvertierung entstehen würden; ein NULL-Terminator wird dabei nicht eingeschlossen. Die Quellzeichenfolge muss auf NULL enden, damit der korrekte Wert zurückgegeben wird. Wenn Sie wollen, dass die resultierende Breitzeichenfolge auf NULL endet, fügen Sie dem Rückgabewert&1; hinzu.  
+ Wenn das `wcstr`-Argument `NULL` ist, gibt `mbstowcs` die Anzahl von Breitzeichen zurück, die bei einer Konvertierung entstehen würden; ein NULL-Terminator wird dabei nicht eingeschlossen. Die Quellzeichenfolge muss auf NULL enden, damit der korrekte Wert zurückgegeben wird. Wenn Sie wollen, dass die resultierende Breitzeichenfolge auf NULL endet, fügen Sie dem Rückgabewert 1 hinzu.  
   
  Wenn das `mbstr`-Argumente `NULL` ist, oder wenn `count` >`INT_MAX` ist, wird der ungültige Parameterhandler wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben aufgerufen. Wenn die weitere Ausführung zugelassen wird, wird errno auf `EINVAL` festgelegt, und die Funktion gibt –1 zurück.  
   
@@ -222,9 +223,6 @@ Convert back to wide-character string:
   Characters converted: 2  
   Hex value of first 2 wide characters: 0x3042 0x3043  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   

@@ -52,10 +52,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ff8b387b81487e0c39ba5018487a1b8045bd0574
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9cfcedc524b94d0aa6c381416c445cf62f9cf2fb
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="raise"></a>raise
@@ -78,7 +79,7 @@ int sig
  Auszulösendes Signal.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg gibt **raise** 0 zurück . Andernfalls gibt es einen Wert ungleich&0; (null) zurück.  
+ Bei Erfolg gibt **raise** 0 zurück . Andernfalls gibt es einen Wert ungleich 0 (null) zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **raise**-Funktion sendet *sig* an das ausführende Programm. Wenn ein vorheriger Aufruf von **signal** eine Signalverarbeitungsfunktion für *sig* installiert hat, führt **raise** diese Funktion aus. Wenn keine Handlerfunktion installiert wurde, wird die dem Signalwert *sig* zugeordnete Standardaktion wie folgt ausgeführt.  
@@ -92,7 +93,7 @@ int sig
 |`SIGSEGV`|Ungültiger Speicherzugriff|Beendet das aufrufende Programm|  
 |`SIGTERM`|An das Programm gesendete Beendigungsanforderung|Ignoriert das Signal|  
   
- Wenn das Argument kein gültiges Signal gemäß den oberen Angaben ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Falls keine Behandlung erfolgt, legt die Funktion `errno` auf `EINVAL` fest und gibt einen Wert ungleich&0; (null) zurück.  
+ Wenn das Argument kein gültiges Signal gemäß den oberen Angaben ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Falls keine Behandlung erfolgt, legt die Funktion `errno` auf `EINVAL` fest und gibt einen Wert ungleich 0 (null) zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -104,9 +105,6 @@ int sig
   
 ## <a name="libraries"></a>Bibliotheken  
  Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   

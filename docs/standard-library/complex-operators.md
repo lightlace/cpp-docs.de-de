@@ -6,23 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b0852cc3fd3531e05791cfce952853265b4458b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ef11e8bca4971b4fb07669907b2234c90a040ef8
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt;-Operatoren
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;&gt;](#operator_gt__gt_)|[operator&lt;&lt;](#operator_lt__lt_)|  
-|[operator*](#operator_star)|[operator+](#operator_add)|[operator-](#operator-)|  
-|[operator/](#operator_)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
+|[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a> operator!=  
+##  <a name="op_neq"></a> operator!=  
  Testet zwei komplexe Zahlen auf Ungleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.  
   
 ```  
@@ -44,10 +46,10 @@ bool operator!=(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.  
   
- ` right`  
+ `right`  
  Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -158,7 +160,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a> operator*  
+##  <a name="op_star"></a> operator*  
  Multipliziert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.  
   
 ```  
@@ -180,10 +182,10 @@ complex<Type> operator*(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem *-Operator multipliziert werden soll  
   
- ` right`  
+ `right`  
  Die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem *-Operator multipliziert werden soll  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -252,7 +254,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a> operator+  
+##  <a name="op_add"></a> operator+  
  Addiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.  
   
 ```  
@@ -277,17 +279,17 @@ complex<Type> operator+(const complex<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem +-Operator hinzugefügt werden soll  
   
- ` right`  
+ `right`  
  Die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem +-Operator hinzugefügt werden soll  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die komplexe Zahl, die sich aus der Addition der beiden Zahlen ergibt, deren Wert und Typ durch die Parametereingaben festgelegt wird  
   
 ### <a name="remarks"></a>Hinweise  
- Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können. Der unäre Operator gibt ` left.` zurück.  
+ Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können. Der unäre Operator gibt `left`.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -389,7 +391,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.  
 ```  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a> operator-  
+##  <a name="operator-"></a> operator-  
  Subtrahiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.  
   
 ```   
@@ -413,14 +415,14 @@ complex<Type> operator-(const complex<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem --Operator subtrahiert werden soll  
   
- ` right`  
+ `right`  
  Die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem --Operator subtrahiert werden soll  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die komplexe Zahl, die sich aus der Subtraktion von ` right` von ` left`. Die Werte dieser beiden Zahlen werden durch die Parametereingaben festgelegt.  
+ Die komplexe Zahl, die sich aus der Subtraktion von `right` von `left`. Die Werte dieser beiden Zahlen werden durch die Parametereingaben festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können.  
@@ -527,7 +529,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.  
 ```  
   
-##  <a name="a-nameoperatora--operator"></a><a name="operator_"></a> operator/  
+##  <a name="op_div"></a> operator/  
  Dividiert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.  
   
 ```   
@@ -548,10 +550,10 @@ complex<Type> operator*(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Eine komplexe Zahl oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die dem Zähler entspricht, der mit dem /-Operator durch den Nenner dividiert werden soll  
   
- ` right`  
+ `right`  
  Eine komplexe Zahl oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die dem Nenner entspricht, der mit dem /-Operator durch den Zähler dividiert werden soll  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -643,7 +645,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a> operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Fügt eine angegebene komplexe Zahl in den Ausgabestream ein  
   
 ```   
@@ -657,7 +659,7 @@ basic_ostream<Elem, Traits>& operator<<(
  `Ostr`  
  Der Ausgabestream, in den die komplexe Zahl eingegeben wird  
   
- ` right`  
+ `right`  
  Die komplexe Zahl, die in den Ausgabestream eingegeben werden soll  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -701,7 +703,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a> operator==  
+##  <a name="op_eq_eq"></a> operator==  
  Testet zwei komplexe Zahlen auf Gleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.  
   
 ```  
@@ -723,10 +725,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- ` left`  
+ `left`  
  Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.  
   
- ` right`  
+ `right`  
  Eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps, die bzw. das auf Ungleichheit getestet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -837,7 +839,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a> operator&gt;&gt;  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
  Extrahiert einen komplexen Wert aus dem Eingabestream  
   
 ```  
@@ -852,11 +854,11 @@ basic_istream<Elem, Traits>& operator>>(
  `Istr`  
  Der Eingabestream, aus dem die komplexe Zahl extrahiert wird  
   
- ` right`  
+ `right`  
  Die komplexe Zahl, die aus dem Eingabestream extrahiert wird  
   
 ### <a name="return-value"></a>Rückgabewert  
- Liest den Wert der angegebenen komplexen Zahl von `Istr` und gibt ihn an ` right.` zurück.  
+ Liest den Wert der angegebenen komplexen Zahl von `Istr` und gibt ihn in `right`.  
   
 ### <a name="remarks"></a>Hinweise  
  Gültige Eingabeformate sind:  

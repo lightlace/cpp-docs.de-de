@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: da5f95812b750da5f337eb459cf136b7eb827c5c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 78f056e65523a39477bf138e6bd1664e0945a899
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
@@ -71,10 +72,10 @@ Ordnet einen Fehler, der von den Fehlerprüfungen zur Laufzeit (RTCs) erkannt wu
   
 #### <a name="parameters"></a>Parameter  
  *errnum*  
- Eine Zahl zwischen null und eins und kleiner als der von [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md) zurückgegebene Wert.  
+ Eine Zahl zwischen null und einem um eins kleineren als dem von [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md)zurückgegebenen Wert.  
   
  *ErrType*  
- Ein Wert, der dieser *errnum*zugewiesen werden soll. Sie können beispielsweise **_CRT_ERROR**verwenden. Wenn Sie `_CrtDbgReport` als Fehlerhandler verwenden, kann *ErrType* nur eins der in [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) definierten Symbole sein. Wenn Sie Ihren eigenen Fehlerhandler ([_RTC_SetErrorFunc](../../c-runtime-library/reference/rtc-seterrorfunc.md)) verwenden, können Sie so viele *ErrType*s definieren, wie es *errnum*s gibt.  
+ Ein Wert, der dieser *errnum*zugewiesen werden soll. Sie können beispielsweise **_CRT_ERROR**verwenden. Wenn Sie `_CrtDbgReport` als Fehlerhandler verwenden, kann *ErrType* nur eins der in [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)definierten Symbole sein. Wenn Sie einen eigenen Fehlerhandler ([_RTC_SetErrorFunc](../../c-runtime-library/reference/rtc-seterrorfunc.md)) verwenden, können Sie so viele *ErrType*s definieren, wie es *errnum*s gibt.  
   
  Ein *ErrType* von _RTC_ERRTYPE_IGNORE hat für `_CrtSetReportMode`eine besondere Bedeutung; der Fehler wird ignoriert.  
   
@@ -96,9 +97,6 @@ Ordnet einen Fehler, der von den Fehlerprüfungen zur Laufzeit (RTCs) erkannt wu
   
 ## <a name="libraries"></a>Bibliotheken  
  Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   

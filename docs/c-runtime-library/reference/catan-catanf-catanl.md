@@ -1,57 +1,74 @@
 ---
-title: "Catan, Catanf, catanl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "catan"
-  - "catanf"
-  - "catanl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "catan"
-  - "catanf"
-  - "catanl"
-  - "complex/catan"
-  - "complex/catanf"
-  - "complex/catanl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Catan-Funktion"
-  - "Catanf-Funktion"
-  - "Catanl-Funktion"
+title: catan, catanf, catanl | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- catan
+- catanf
+- catanl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- catan
+- catanf
+- catanl
+- complex/catan
+- complex/catanf
+- complex/catanl
+dev_langs:
+- C++
+helpviewer_keywords:
+- catan function
+- catanf function
+- catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Catan, Catanf, catanl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 840e4fd2231d9eca61dc508b15a11ed75822bb6b
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
-Ruft den Arkustangens einer komplexen Zahl mit Verzweigung Teilstücke außerhalb des Intervalls \[−1; \+ 1\] auf der imaginären Achse.  
+---
+# <a name="catan-catanf-catanl"></a>catan, catanf, catanl
+Ruft den Arkustangens einer komplexen Zahl mit Branch Schnitte außerhalb des Intervalls [-1; + 1] auf der Achse imaginären ab.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 _Dcomplex catan(   
@@ -71,35 +88,35 @@ _Lcomplex catanl(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `z`  
- Eine komplexe Zahl, die einen Winkel im Bogenmaß darstellt.  
+ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt  
   
-## Rückgabewert  
- Der Arkustangens von `z`, im Bogenmaß. Das Ergebnis ist unbounded imaginäre Achse, und klicken Sie im Intervall \[−π\/2; \+ π\/2\] der realen Achse.  
+## <a name="return-value"></a>Rückgabewert  
+ Der Arkustangens von `z` als Bogenmaß. Das Ergebnis ist unbounded imaginären Achse, und klicken Sie im Intervall [-π/2; + π/2] der echte Achse.  
   
-## Hinweise  
- Da C\+\+ das Überladen zulässt, können Sie Überladungen von `catan` aufrufen, die `_Fcomplex`\- und `_Lcomplex`\-Werte verwenden und zurückgeben. In einem C\-Programm `catan` immer Double und gibt ein `_Dcomplex` Wert.  
+## <a name="remarks"></a>Hinweise  
+ Da C++ das Überladen zulässt, können Sie Überladungen von `catan` aufrufen, die `_Fcomplex`- und `_Lcomplex`-Werte verwenden und zurückgeben. In einem C-Programm nimmt `catan` immer einen `_Dcomplex` -Wert an, und gibt auch einen solchen zurück.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
-|Routine|C\-Header|C\+\+\-Header|  
-|-------------|---------------|-------------------|  
-|`catan`, `catanf`, `catanl`|\<complex.h\>|\< Ccomplex \>|  
+|Routine|C-Header|C++-Header|  
+|-------------|--------------|------------------|  
+|`catan`,               `catanf`, `catanl`|\<complex.h>|\<ccomplex>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Siehe auch  
- [Alphabetische Funktionsreferenz](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [Catanh, Catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [Ctanh, Ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [Csinh, Csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [Casinh, Casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [Ccosh, Ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [Cacosh, Cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [Cacos, Cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [Ctan, Ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [Csin, Csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [Casin, Casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [Ccos, Ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [Csqrt, Csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+## <a name="see-also"></a>Siehe auch  
+ [CRT-Funktionsreferenz (alphabetisch)](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
+ [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
+ [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
+ [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
+ [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
+ [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
+ [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
+ [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
+ [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
+ [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
+ [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
+ [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)

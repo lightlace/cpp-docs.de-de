@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 657cdcf271d894763b5fbdb3a2c75721f5287d73
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c9e64bb96f606504aab48b46177b73e5e1c3bc98
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
@@ -119,7 +120,7 @@ errno_t _mbsnbcpy_s_l(
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg gleich&0; (null); `EINVAL`, wenn ein ungültiger Parameter übergeben wurde.  
+ Bei Erfolg gleich 0 (null); `EINVAL`, wenn ein ungültiger Parameter übergeben wurde.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `_mbsnbcpy_s`-Funktion kopiert `count` Bytes von `strSource` nach `strDest`. Wenn `count` die Größe von `strDest` überschreitet, ist eine der Eingabezeichenfolgen ein NULL-Zeiger, oder wenn `sizeInBytes` oder `count` 0 (null) ist, ruft die Funktion, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, den Handler für ungültige Parameter auf. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion `EINVAL` zurück. Wenn sich Quell- und Zielzeichenfolgen überlappen, ist das Verhalten von `_mbsnbcpy_s` undefiniert.  
@@ -127,7 +128,7 @@ errno_t _mbsnbcpy_s_l(
  Der Ausgabewert ist von der `LC_CTYPE`-Kategorieneinstellung des Gebietsschemas betroffen; weitere Informationen finden Sie unter [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das `_l`-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
 > [!NOTE]
->  Anders als die nicht sichere Version dieser Funktion füllt `_mbsnbcpy_s` nichts mit&0; (null) auf, und die Zeichenfolge wird immer mit NULL beendet.  
+>  Anders als die nicht sichere Version dieser Funktion füllt `_mbsnbcpy_s` nichts mit 0 (null) auf, und die Zeichenfolge wird immer mit NULL beendet.  
   
  In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -148,9 +149,6 @@ errno_t _mbsnbcpy_s_l(
 |`_mbsnbcpy_s_l`|\<mbstring.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   

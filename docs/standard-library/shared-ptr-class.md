@@ -10,30 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - shared_ptr
-- std::shared_ptr
 - memory/std::shared_ptr
-- std::shared_ptr::element_type
 - memory/std::shared_ptr::element_type
-- std::shared_ptr::get
 - memory/std::shared_ptr::get
-- std::shared_ptr::owner_before
 - memory/std::shared_ptr::owner_before
-- std::shared_ptr::reset
 - memory/std::shared_ptr::reset
-- std::shared_ptr::swap
 - memory/std::shared_ptr::swap
-- std::shared_ptr::unique
 - memory/std::shared_ptr::unique
-- std::shared_ptr::use_count
 - memory/std::shared_ptr::use_count
-- std::shared_ptr::operator boolean-type
 - memory/std::shared_ptr::operator boolean-type
-- std::shared_ptr::operator*
 - memory/std::shared_ptr::operator*
-- std::shared_ptr::operator=
 - memory/std::shared_ptr::operator=
-- std::shared_ptr::operator->
 - memory/std::shared_ptr::operator->
+- memory/std::shared_ptr::element_type
+- memory/std::shared_ptr::get
+- memory/std::shared_ptr::owner_before
+- memory/std::shared_ptr::reset
+- memory/std::shared_ptr::swap
+- memory/std::shared_ptr::unique
+- memory/std::shared_ptr::use_count
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -57,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: d3638923d92759e5bbc379b8f1da633931fd7254
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ead4dff36cf75d7a1519cee10aed39a30b6e88b8
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sharedptr-class"></a>shared_ptr-Klasse
@@ -103,9 +99,9 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 -   Es wurde von einem `shared_ptr`-Objekt erstellt, das diese Ressource besitzt.  
   
--   Wenn von der Erstellung einer [Weak_ptr-Klasse](../standard-library/weak-ptr-class.md) -Objekt, das auf die Ressource verweist oder  
+-   Wenn es erstellt wurde, aus einer [Weak_ptr-Klasse](../standard-library/weak-ptr-class.md) Objekt, das auf die Ressource verweist oder  
   
--   Wenn es mit der Besitz dieser Ressource zugewiesen wurde [shared_ptr::operator =](#shared_ptr__operator_eq) oder durch Aufrufen der Memberfunktion [shared_ptr::reset](#shared_ptr__reset).  
+-   Wenn sie entweder mit Besitz dieser Ressource zugewiesen wurde [shared_ptr:: Operator =](#op_eq) oder durch Aufrufen der Memberfunktion [shared_ptr::reset](#reset).  
   
  Von den `shared_ptr`-Objekten, die eine Ressource besitzen, wird ein Kontrollblock gemeinsam verwendet. Der Kontrollblock enthält:  
   
@@ -152,36 +148,36 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 |||  
 |-|-|  
-|[shared_ptr::shared_ptr](#shared_ptr__shared_ptr)|Erstellt ein Objekt vom Typ `shared_ptr`.|  
-|[shared_ptr::~shared_ptr](#shared_ptr___dtorshared_ptr)|Beschädigt ein Objekt vom Typ `shared_ptr`.|  
+|[shared_ptr](#shared_ptr)|Erstellt ein Objekt vom Typ `shared_ptr`.|  
+|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Beschädigt ein Objekt vom Typ `shared_ptr`.|  
   
 ### <a name="methods"></a>Methoden  
   
 |||  
 |-|-|  
-|[shared_ptr::element_type](#shared_ptr__element_type)|Der Typ eines Elements.|  
-|[shared_ptr::get](#shared_ptr__get)|Ruft die Adresse der Ressource ab, die Eigentum ist.|  
-|[shared_ptr::owner_before](#shared_ptr__owner_before)|Gibt True zurück, wenn dieses `shared_ptr` vor dem bereitgestellten Zeiger sortiert wird (Operator "Before" oder "Less than").|  
-|[shared_ptr::reset](#shared_ptr__reset)|Ersetzt die Ressource, die Eigentum ist.|  
-|[shared_ptr::swap](#shared_ptr__swap)|Tauscht zwei `shared_ptr`-Objekte.|  
-|[shared_ptr::unique](#shared_ptr__unique)|Prüft, ob die Ressource eindeutig ist, die Eigentum ist.|  
-|[shared_ptr::use_count](#shared_ptr__use_count)|Zählt Ressourcenbesitzer.|  
+|[element_type](#element_type)|Der Typ eines Elements.|  
+|[get](#get)|Ruft die Adresse der Ressource ab, die Eigentum ist.|  
+|[owner_before](#owner_before)|Gibt True zurück, wenn dieses `shared_ptr` vor dem bereitgestellten Zeiger sortiert wird (Operator "Before" oder "Less than").|  
+|[reset](#reset)|Ersetzt die Ressource, die Eigentum ist.|  
+|[swap](#swap)|Tauscht zwei `shared_ptr`-Objekte.|  
+|[unique](#unique)|Prüft, ob die Ressource eindeutig ist, die Eigentum ist.|  
+|[use_count](#use_count)|Zählt Ressourcenbesitzer.|  
   
 ### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[shared_ptr::operator boolean-type](#shared_ptr__operator_boolean-type)|Prüft, ob eine Ressource vorhanden ist, die Eigentum ist.|  
-|[shared_ptr::operator*](#shared_ptr__operator_star)|Ruft den angegebenen Wert ab.|  
-|[shared_ptr::operator=](#shared_ptr__operator_eq)|Ersetzt die Ressource, die Eigentum ist.|  
-|[shared_ptr::operator-&gt;](#shared_ptr__operator-_gt_)|Ruft einen Zeiger auf den angegebenen Wert ab.|  
+|[shared_ptr::operator boolean-type](#op_boolean-type)|Prüft, ob eine Ressource vorhanden ist, die Eigentum ist.|  
+|[shared_ptr::operator*](#op_star)|Ruft den angegebenen Wert ab.|  
+|[shared_ptr::operator=](#op_eq)|Ersetzt die Ressource, die Eigentum ist.|  
+|[shared_ptr::operator-&gt;](#operator-_gt)|Ruft einen Zeiger auf den angegebenen Wert ab.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<memory>  
   
  **Namespace:** std  
   
-##  <a name="a-namesharedptrelementtypea--sharedptrelementtype"></a><a name="shared_ptr__element_type"></a> shared_ptr::element_type  
+##  <a name="element_type"></a> shared_ptr::element_type  
  Der Typ eines Elements.  
   
 ```  
@@ -215,7 +211,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptrgeta--sharedptrget"></a><a name="shared_ptr__get"></a> shared_ptr::get  
+##  <a name="get"></a> shared_ptr::get  
  Ruft die Adresse der Ressource ab, die Eigentum ist.  
   
 ```  
@@ -252,7 +248,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5  
 ```  
   
-##  <a name="a-namesharedptroperatorboolean-typea--sharedptroperator-boolean-type"></a><a name="shared_ptr__operator_boolean-type"></a> shared_ptr::operator boolean-type  
+##  <a name="shared_ptr__operator_boolean-type"></a> shared_ptr::operator boolean-type  
  Prüft, ob eine Ressource vorhanden ist, die Eigentum ist.  
   
 ```  
@@ -290,7 +286,7 @@ int main()
 (bool)sp1 == true  
 ```  
   
-##  <a name="a-namesharedptroperatorstara--sharedptroperator"></a><a name="shared_ptr__operator_star"></a> shared_ptr::operator*  
+##  <a name="op_star"></a> shared_ptr::operator*  
  Ruft den angegebenen Wert ab.  
   
 ```  
@@ -323,7 +319,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptroperatoreqa--sharedptroperator"></a><a name="shared_ptr__operator_eq"></a> shared_ptr::operator=  
+##  <a name="op_eq"></a> shared_ptr::operator=  
  Ersetzt die Ressource, die Eigentum ist.  
   
 ```  
@@ -353,7 +349,7 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
  Der zu kopierende automatische Zeiger  
   
 ### <a name="remarks"></a>Hinweise  
- Alle Operatoren verringern die Verweisanzahl für die Ressource frei, die derzeit im Besitz von `*this` steht, und weisen den Besitz der Ressource, die von der Operatorsequenz benannt wird, `*this` zu. Wenn die Verweisanzahl auf&0; (null) fällt, wird die Ressource freigegeben. Wenn bei einem Operator ein Fehler auftritt, bleibt `*this` unverändert.  
+ Alle Operatoren verringern die Verweisanzahl für die Ressource frei, die derzeit im Besitz von `*this` steht, und weisen den Besitz der Ressource, die von der Operatorsequenz benannt wird, `*this` zu. Wenn die Verweisanzahl auf 0 (null) fällt, wird die Ressource freigegeben. Wenn bei einem Operator ein Fehler auftritt, bleibt `*this` unverändert.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -385,7 +381,7 @@ int main()
 *sp0 == 10  
 ```  
   
-##  <a name="a-namesharedptroperator-gta--sharedptroperator-gt"></a><a name="shared_ptr__operator-_gt_"></a> shared_ptr::operator-&gt;  
+##  <a name="shared_ptr__operator-_gt"></a> shared_ptr::operator-&gt;  
  Ruft einen Zeiger auf den angegebenen Wert ab.  
   
 ```  
@@ -421,7 +417,7 @@ sp0->first == 1
 sp0->second == 2  
 ```  
   
-##  <a name="a-namesharedptrownerbeforea--sharedptrownerbefore"></a><a name="shared_ptr__owner_before"></a> shared_ptr::owner_before  
+##  <a name="owner_before"></a> shared_ptr::owner_before  
  Gibt True zurück, wenn dieses `shared_ptr` vor dem bereitgestellten Zeiger sortiert wird (Operator "Before" oder "Less than").  
   
 ```  
@@ -439,7 +435,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Hinweise  
  Die Vorlagenmemberfunktion gibt TRUE zurück, wenn `*this` gleich `ordered before``ptr` ist.  
   
-##  <a name="a-namesharedptrreseta--sharedptrreset"></a><a name="shared_ptr__reset"></a> shared_ptr::reset  
+##  <a name="reset"></a> shared_ptr::reset  
  Ersetzt die Ressource, die Eigentum ist.  
   
 ```  
@@ -475,7 +471,7 @@ void reset(Other *ptr, D dtor, A alloc);
  Der zu kopierende Zuweiser.  
   
 ### <a name="remarks"></a>Hinweise  
- Alle Operatoren verringern die Verweisanzahl für die Ressource frei, die derzeit im Besitz von `*this` steht, und weisen den Besitz der Ressource, die von der Operatorsequenz benannt wird, `*this` zu. Wenn die Verweisanzahl auf&0; (null) fällt, wird die Ressource freigegeben. Wenn bei einem Operator ein Fehler auftritt, bleibt `*this` unverändert.  
+ Alle Operatoren verringern die Verweisanzahl für die Ressource frei, die derzeit im Besitz von `*this` steht, und weisen den Besitz der Ressource, die von der Operatorsequenz benannt wird, `*this` zu. Wenn die Verweisanzahl auf 0 (null) fällt, wird die Ressource freigegeben. Wenn bei einem Operator ein Fehler auftritt, bleibt `*this` unverändert.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -524,7 +520,7 @@ int main()
 *sp == 15  
 ```  
   
-##  <a name="a-namesharedptrsharedptra--sharedptrsharedptr"></a><a name="shared_ptr__shared_ptr"></a> shared_ptr::shared_ptr  
+##  <a name="shared_ptr"></a> shared_ptr::shared_ptr  
  Erstellt ein Objekt vom Typ `shared_ptr`.  
   
 ```  
@@ -657,7 +653,7 @@ int main()
 *sp5 == 15  
 ```  
   
-##  <a name="a-namesharedptrdtorsharedptra--sharedptrsharedptr"></a><a name="shared_ptr___dtorshared_ptr"></a> shared_ptr::~shared_ptr  
+##  <a name="dtorshared_ptr"></a> shared_ptr::~shared_ptr  
  Beschädigt ein Objekt vom Typ `shared_ptr`.  
   
 ```  
@@ -665,7 +661,7 @@ int main()
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Destruktor verringert die Verweisanzahl für die Ressource, die derzeit im Besitz von `*this` ist. Wenn die Verweisanzahl auf&0; (null) fällt, wird die Ressource freigegeben.  
+ Der Destruktor verringert die Verweisanzahl für die Ressource, die derzeit im Besitz von `*this` ist. Wenn die Verweisanzahl auf 0 (null) fällt, wird die Ressource freigegeben.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -711,7 +707,7 @@ use count == 2
 use count == 1  
 ```  
   
-##  <a name="a-namesharedptrswapa--sharedptrswap"></a><a name="shared_ptr__swap"></a> shared_ptr::swap  
+##  <a name="swap"></a> shared_ptr::swap  
  Tauscht zwei `shared_ptr`-Objekte.  
   
 ```  
@@ -779,7 +775,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-namesharedptruniquea--sharedptrunique"></a><a name="shared_ptr__unique"></a> shared_ptr::unique  
+##  <a name="unique"></a> shared_ptr::unique  
  Prüft, ob die Ressource eindeutig ist, die Eigentum ist.  
   
 ```  
@@ -825,7 +821,7 @@ sp1.unique() == true
 sp1.unique() == false  
 ```  
   
-##  <a name="a-namesharedptrusecounta--sharedptrusecount"></a><a name="shared_ptr__use_count"></a> shared_ptr::use_count  
+##  <a name="use_count"></a> shared_ptr::use_count  
  Zählt Ressourcenbesitzer.  
   
 ```  

@@ -66,10 +66,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 77f03f71842dda7f56ff81b8cd3e369b21d110e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f54fd258fac9ecf82c80943dc4f531ffe950f80c
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
@@ -155,9 +156,9 @@ int _vsnwprintf_s(
 ## <a name="return-value"></a>Rückgabewert  
  `vsnprintf_s`,`_vsnprintf_s` und `_vsnwprintf_s` geben die Anzahl der geschriebenen Zeichen ohne das abschließende Zeichen NULL zurück, oder einen negativen Wert, wenn ein Ausgabefehler auftritt. `vsnprintf_s` ist identisch mit `_vsnprintf_s`. `vsnprintf_s` ist zwecks Kompatibilität mit dem ANSI-Standard enthalten. `_vnsprintf` wird aus Gründen der Abwärtskompatibilität beibehalten.  
   
- Wenn der Speicher, der zum Speichern der Daten und eines abschließenden Zeichens NULL erforderlich ist, `sizeOfBuffer` überschreitet, wird wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben der Handler für ungültige Parameter aufgerufen, sofern `count` nicht [_TRUNCATE](../../c-runtime-library/truncate.md) entspricht. In diesem Fall wird der Anteil der Zeichenfolge geschrieben, der in `buffer` passt, und es wird „-1“ zurückgegeben. Wenn die Ausführung nach Aufruf des Handlers für ungültige Parameter fortgesetzt wird, legen diese Funktionen `buffer` auf eine leere Zeichenfolge und `errno` auf `ERANGE` fest und geben "–&1;" zurück.  
+ Wenn der Speicher, der zum Speichern der Daten und eines abschließenden Zeichens NULL erforderlich ist, `sizeOfBuffer` überschreitet, wird wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben der Handler für ungültige Parameter aufgerufen, sofern `count` nicht [_TRUNCATE](../../c-runtime-library/truncate.md) entspricht. In diesem Fall wird der Anteil der Zeichenfolge geschrieben, der in `buffer` passt, und es wird „-1“ zurückgegeben. Wenn die Ausführung nach Aufruf des Handlers für ungültige Parameter fortgesetzt wird, legen diese Funktionen `buffer` auf eine leere Zeichenfolge und `errno` auf `ERANGE` fest und geben "– 1" zurück.  
   
- Wenn `buffer` oder `format` ein `NULL`-Zeiger ist oder wenn `count` kleiner oder gleich&0; ist, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben -1 zurück.  
+ Wenn `buffer` oder `format` ein `NULL`-Zeiger ist oder wenn `count` kleiner oder gleich 0 ist, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben -1 zurück.  
   
 ### <a name="error-conditions"></a>Fehlerbedingungen  
   
@@ -166,12 +167,12 @@ int _vsnwprintf_s(
 |`buffer` ist gleich `NULL`.|-1|`EINVAL`|  
 |`format` ist gleich `NULL`.|-1|`EINVAL`|  
 |`count` <= 0|-1|`EINVAL`|  
-|`sizeOfBuffer` zu klein (und `count` != `_TRUNCATE`)|"–&1;" (und `buffer` wird auf eine leere Zeichenfolge festgelegt)|`ERANGE`|  
+|`sizeOfBuffer` zu klein (und `count` != `_TRUNCATE`)|"– 1" (und `buffer` wird auf eine leere Zeichenfolge festgelegt)|`ERANGE`|  
   
 ## <a name="remarks"></a>Hinweise  
  Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt dann bis zu `count` Zeichen der angegebenen Daten in den Arbeitsspeicher, auf den `buffer` verweist, und fügt ein abschließendes Nullzeichen an.  
   
- Wenn `count` [_TRUNCATE](../../c-runtime-library/truncate.md) ist, schreiben diese Funktionen den Anteil der Zeichenfolge, der in `buffer` passt, wobei Platz für das abschließende Zeichen NULL gelassen wird. Wenn die gesamte Zeichenfolge (mit dem abschließenden Nullzeichen) in `buffer` passt, geben diese Funktionen die Anzahl der geschriebenen Zeichen zurück (ohne das abschließende Nullzeichen). Andernfalls geben diese Funktionen "–&1;" zurück, um ein Abschneiden anzugeben.  
+ Wenn `count` [_TRUNCATE](../../c-runtime-library/truncate.md) ist, schreiben diese Funktionen den Anteil der Zeichenfolge, der in `buffer` passt, wobei Platz für das abschließende Zeichen NULL gelassen wird. Wenn die gesamte Zeichenfolge (mit dem abschließenden Nullzeichen) in `buffer` passt, geben diese Funktionen die Anzahl der geschriebenen Zeichen zurück (ohne das abschließende Nullzeichen). Andernfalls geben diese Funktionen "– 1" zurück, um ein Abschneiden anzugeben.  
   
  Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
@@ -189,9 +190,6 @@ int _vsnwprintf_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vsntprintf_s`|`_vsnprintf_s`|`_vsnprintf_s`|`_vsnwprintf_s`|  
 |`_vsntprintf_s_l`|`_vsnprintf_s_l`|`_vsnprintf_s_l`|`_vsnwprintf_s_l`|  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="requirements"></a>Anforderungen  
   

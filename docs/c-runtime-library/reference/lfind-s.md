@@ -1,53 +1,70 @@
 ---
-title: "_lfind_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lfind_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "lfind_s"
-  - "_lfind_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_lfind_s-Funktion"
-  - "Arrays [CRT], Suchen"
-  - "Schlüssel, Suchen in Arrays"
-  - "lfind_s-Funktion"
-  - "Lineares Suchen"
-  - "Suchen, Linear"
+title: _lfind_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lfind_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- lfind_s
+- _lfind_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- linear searching
+- keys, finding in arrays
+- lfind_s function
+- arrays [CRT], searching
+- searching, linear
+- _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# _lfind_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c50893f1dc73db9f928eaea346a381d1bd991d2f
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Führt eine lineare Suche für den angegebenen Schlüssel aus.  Eine Version von [\_lfind](../../c-runtime-library/reference/lfind.md) mit werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="lfinds"></a>_lfind_s
+Führt eine lineare Suche für den angegebenen Schlüssel aus. Dies ist eine Version von [_lfind](../../c-runtime-library/reference/lfind.md) mit Sicherheitserweiterungen, wie in den [Sicherheitsfunktionen in CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void *_lfind_s(  
@@ -60,53 +77,53 @@ void *_lfind_s(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `key`  
- Planen Sie für Suche für ein.  
+ Das Objekt, nach dem gesucht werden soll.  
   
  `base`  
- Zeiger zur Basis von Suchendaten.  
+ Zeiger auf die Basis der Suchdaten.  
   
  `num`  
- Zahl Arrayelemente.  
+ Die Anzahl der Arrayelemente.  
   
  `size`  
- Größe von Arrayelementen in Bytes.  
+ Die Größe der Arrayelemente in Bytes.  
   
  `compare`  
- Zeiger auf die Vergleichsroutine.  Der erste Parameter ist der `context` Zeiger.  Der zweite Parameter ist ein für Such\- zu verschlüsseln, Zeiger.  Der dritte Parameter ist ein Zeiger mit Schlüssel verglichen werden Arrayelement.  
+ Zeiger auf die Vergleichsroutine. Der erste Parameter ist der `context`-Zeiger. Der zweite Parameter ist ein Zeiger auf den Schlüssel für die Suche. Der dritte Parameter ist ein Zeiger auf das Arrayelement, das mit dem Schlüssel verglichen werden soll.  
   
  `context`  
- Ein Zeiger auf ein Objekt, auf das möglicherweise in der Vergleichsfunktion zugegriffen wird.  
+ Ein Zeiger auf ein Objekt, auf das in der Vergleichsfunktion zugegriffen werden kann.  
   
-## Rückgabewert  
- Wenn die Schlüssel gefunden wird, gibt `_lfind_s` einen Zeiger auf das Element des Arrays bei diesem `base` Entspricht `key` zurück.  Wenn der Schlüssel nicht gefunden wird, gibt `_lfind_s``NULL` zurück.  
+## <a name="return-value"></a>Rückgabewert  
+ Wenn der Schlüssel gefunden wird, gibt `_lfind_s` einen Zeiger auf das Arrayelement bei `base` zurück, das `key` entspricht. Wenn der Schlüssel nicht gefunden wird, gibt `_lfind_s` `NULL` zurück.  
   
- Wenn ungültige Parameter an die Funktion übergeben werden, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL` zurück.  
+ Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL`zurück.  
   
-### Fehlerbedingungen  
+### <a name="error-conditions"></a>Fehlerbedingungen  
   
-|Schlüssel|base|compare|num|size|errno|  
-|---------------|----------|-------------|---------|----------|-----------|  
-|`NULL`|any|any|any|any|`EINVAL`|  
-|any|`NULL`|any|\!\= 0|any|`EINVAL`|  
-|any|any|any|any|0 \(Null\)|`EINVAL`|  
-|any|any|`NULL`|an|any|`EINVAL`|  
+|Key|Basis|compare|num|size|errno|  
+|---------|----------|-------------|---------|----------|-----------|  
+|`NULL`|alle|alle|alle|alle|`EINVAL`|  
+|alle|`NULL`|alle|!= 0|alle|`EINVAL`|  
+|alle|alle|alle|any|Null|`EINVAL`|  
+|any|alle|`NULL`|ein|alle|`EINVAL`|  
   
-## Hinweise  
- Die `_lfind_s`\-Funktion führt eine lineare Suche für den Wert `key` in einem `num` \- Array Elemente, jedes von `width` Bytes aus.  Anders als `bsearch_s` erfordert `_lfind_s` das Array nicht sortiert werden.  Das `base`\-Argument ist ein Zeiger zur Basis des zu durchsuchenden Arrays.  Das `compare`\-Argument ist ein Zeiger auf eine vom Benutzer bereitgestellten Routine, die zwei Arrayelemente und vergleicht dann einen Wert zurückgibt, der die Beziehung angibt.  `_lfind_s` ruft die Routine `compare` mindestens einmal während der Suche auf und übergibt den `context` Zeiger und die Zeiger auf zwei Arrayelementen auf jedem Aufruf.  Die Routine `compare` muss die Elemente anschließend den Rückholwert ungleich 0 \(null\) \(Bedeutung, dass die Elemente unterscheiden\) oder das 0 \(vergleichen die Elemente signifikant, befinden\) identisch.  
+## <a name="remarks"></a>Hinweise  
+ Die `_lfind_s`-Funktion führt eine lineare Suche nach dem Wert `key` in einem Array aus `num`-Elementen durch, die jeweils aus `width`-Bytes bestehen. Im Gegensatz zu `bsearch_s` muss bei `_lfind_s` kein Array sortiert werden. Das `base`-Argument ist ein Zeiger auf die Basis des zu suchenden Arrays. Das `compare`-Argument ist ein Zeiger auf eine benutzerdefinierte Routine, die zwei Arrayelemente vergleicht und einen Wert zurückgibt, der die Beziehung angibt. `_lfind_s` ruft die `compare`-Routine einmal oder mehrere Male während der Suche auf, wodurch bei jedem Aufruf der `context`-Zeiger übergeben wird und auf zwei Arrayelemente zeigt. Die `compare`-Routine muss die Elemente vergleichen und entweder ungleich null (d.h. die Elemente unterscheiden sich) oder 0 (d.h. die Elemente sind identisch) zurückgeben.  
   
- `_lfind_s` entspricht `_lfind` außer der Addition des `context` Zeigers für Argumente der Vergleichsfunktion und der Parameterliste der Funktion ähnelt.  Der `context` Zeiger kann nützlich sein, wenn die gesuchte Datenstruktur Teil eines Objekts ist und die `compare`\-Funktion Member des Objekts zugreifen muss.  Die `compare`\-Funktion kann den void\-Zeiger in die entsprechenden Objekttypen aufgelistet umwandeln und Member dieses Objekts zugreifen.  Die Einführung des Parameters `context` macht `_lfind_s` sicherer, da zusätzliche Kontext verwendet werden kann, um die Reentranzfehler zu vermeiden, die mithilfe von statischen Variablen, um Daten zur Verfügung stehen die `compare`\-Funktion zugeordnet sind.  
+ `_lfind_s` ähnelt `_lfind` mit Ausnahme der Hinzufügung des `context`-Zeigers auf den Argumenten der Vergleichsfunktion und der Parameterliste der Funktion. Der `context`-Zeiger kann nützlich sein, wenn die durchsuchte Datenstruktur Teil eines Objekts ist und die `compare`-Funktion auf Member des Objekts zugreifen muss. Mithilfe der `compare`-Funktion kann möglicherweise der void-Zeiger in den passenden Objekttyp umgewandelt und auf Member des Objekts zugegriffen werden. Die Hinzufügung des `context`-Parameters macht `_lfind_s` sicherer, da weiterer Kontext verwendet werden kann, um Probleme beim Wiedereintreten zu vermeiden, die mit der Verwendung statischer Variablen zur Bereitstellung von Daten für die `compare`-Funktion einhergehen können.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_lfind_s`|\<search.h\>|  
+|-------------|---------------------|  
+|`_lfind_s`|\<search.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_lfind_s.cpp  
@@ -182,13 +199,13 @@ int main( )
 }  
 ```  
   
-  **weit gefunden**   
-## .NET Framework-Entsprechung  
- <xref:System.Collections.ArrayList.Contains*>  
+```Output  
+weit found  
+```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch\_s](../../c-runtime-library/reference/bsearch-s.md)   
- [\_lsearch\_s](../../c-runtime-library/reference/lsearch-s.md)   
- [qsort\_s](../../c-runtime-library/reference/qsort-s.md)   
- [\_lfind](../../c-runtime-library/reference/lfind.md)
+ [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   
+ [qsort_s](../../c-runtime-library/reference/qsort-s.md)   
+ [_lfind](../../c-runtime-library/reference/lfind.md)

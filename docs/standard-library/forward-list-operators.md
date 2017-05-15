@@ -10,19 +10,20 @@ f1_keywords: []
 ms.assetid: 57492e09-3836-4dbc-9ae5-78ecf506c190
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a560de0a7587b5552fc663bdd2b44734a66b5f73
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ddf548e760d723bff19b58ac8dfe6ec60acdbbcc
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltforwardlistgt-operators"></a>&lt;forward_list&gt;-Operatoren
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_eq_eq"></a> operator==  
+##  <a name="op_eq_eq"></a> operator==  
  Testet, ob das Listenobjekt links vom Operator gleich dem Listenobjekt rechts vom Operator ist  
   
 ```
@@ -41,7 +42,7 @@ bool operator==(
 ### <a name="remarks"></a>Hinweise  
  Diese Vorlagenfunktion überlädt `operator==`, um zwei Objekte der Vorlagenklasse `forward_list` zu vergleichen. Die Funktion gibt `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())` zurück.  
   
-##  <a name="operator_neq"></a> operator!=  
+##  <a name="op_neq"></a> operator!=  
  Testet, ob das Listenobjekt links vom Operator ungleich dem Listenobjekt rechts vom Operator ist  
   
 ```
@@ -63,7 +64,7 @@ bool operator!=(
 ### <a name="remarks"></a>Hinweise  
  Diese Vorlagenfunktion gibt `!(left == right)` zurück.  
   
-##  <a name="operator_lt_"></a> operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Testet, ob das Listenobjekt links vom Operator kleiner als das Listenobjekt auf der rechten Seite ist  
   
 ```
@@ -85,7 +86,7 @@ bool operator<(
 ### <a name="remarks"></a>Hinweise  
  Diese Vorlagenfunktion überlädt `operator<`, um zwei Objekte der Vorlagenklasse `forward_list` zu vergleichen. Die Funktion gibt `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())` zurück.  
   
-##  <a name="operator_lt__eq"></a> operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Testet, ob das Listenobjekt links vom Operator kleiner als oder gleich dem Listenobjekt rechts vom Operator ist  
   
 ```
@@ -107,7 +108,7 @@ bool operator<=(
 ### <a name="remarks"></a>Hinweise  
  Diese Vorlagenfunktion gibt `!(right < left)` zurück.  
   
-##  <a name="operator_gt_"></a> operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Testet, ob das Listenobjekt links vom Operator größer als das Listenobjekt auf der rechten Seite ist  
   
 ```
@@ -129,7 +130,7 @@ bool operator>(
 ### <a name="remarks"></a>Hinweise  
  Die dritte Vorlagenfunktion gibt `right < left` zurück.  
   
-##  <a name="operator_gt__eq"></a> operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Testet, ob das Listenobjekt links vom Operator größer als oder gleich dem Listenobjekt rechts vom Operator ist  
   
 ```

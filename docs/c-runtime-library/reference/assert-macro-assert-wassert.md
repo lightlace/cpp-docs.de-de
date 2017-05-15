@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ad3410852975757c34220e2de19f696ba3b7c718
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 97bdb002953c07aba3bf7951a6f94a058c977f9d
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="assert-macro-assert-wassert"></a>assert-Makro, _assert, _wassert
@@ -106,7 +107,7 @@ void _wassert(
   
  Wenn die Anwendung mit einer Debugversion der Laufzeitbibliotheken verknüpft ist, erstellt `assert` ein Meldungsfeld mit drei Schaltflächen: **Abbrechen**, **Wiederholen**und **Ignorieren**. Wenn der Benutzer auf **Abbrechen**klickt, wird das Programm sofort beendet. Wenn der Benutzer auf **Wiederholen**klickt, wird der Debugger aufgerufen und der Benutzer kann das Programm debuggen, wenn Just-In-Time (JIT)-Debuggen aktiviert ist. Wenn der Benutzer auf **Ignorieren**klickt, setzt `assert` die normale Ausführung fort und erstellt das Meldungsfeld mit der Schaltfläche **OK** . Wenn ein Fehlerzustand vorliegt, kann das Klicken auf **Ignorieren** zu undefiniertem Verhalten führen.  
   
- Weitere Informationen zum CRT-Debugging finden Sie unter [CRT-Debugverfahren](/visualstudio/debugger/crt-debugging-techniques).  
+ Weitere Informationen zum CRT-Debugging (C Runtime Library) finden Sie unter [CRT-Debugverfahren](/visualstudio/debugger/crt-debugging-techniques).  
   
  Die Funktionen `_assert` und `_wassert` sind interne CRT-Funktionen. Sie helfen dabei, den für die Unterstützung von Assertion in Ihren Objektdateien erforderlichen Code zu minimieren. Wir empfehlen nicht, diese Funktionen direkt aufzurufen.  
   
@@ -169,9 +170,6 @@ A problem caused the program to stop working correctly. Windows will close the p
 ```  
   
  Wenn ein Debugger installiert ist, wählen Sie die Schaltfläche **Debug** aus, um den Debugger zu starten, oder **Programm schließen** zum Beenden.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehlerbehandlung](../../c-runtime-library/error-handling-crt.md)   

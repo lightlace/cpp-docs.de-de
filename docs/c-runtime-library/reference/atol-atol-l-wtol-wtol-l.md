@@ -1,69 +1,87 @@
 ---
-title: "atol, _atol_l, _wtol, _wtol_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "atol"
-  - "_wtol_l"
-  - "_wtol"
-  - "_atol_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_atol_l"
-  - "_ttol_l"
-  - "_tstol_l"
-  - "_tstol"
-  - "_wtol"
-  - "_ttol"
-  - "_wtol_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tstol-Funktion"
-  - "atol-Funktion"
-  - "ttol-Funktion"
-  - "_atol_l-Funktion"
-  - "_tstol_l-Funktion"
-  - "Zeichenfolgenkonvertierung, in ganze Zahlen"
-  - "_tstol-Funktion"
-  - "_ttol-Funktion"
-  - "_ttol_l-Funktion"
-  - "atol_l-Funktion"
-  - "wtol_l-Funktion"
-  - "_wtol_l-Funktion"
-  - "wtol-Funktion"
-  - "_wtol-Funktion"
+title: atol, _atol_l, _wtol, _wtol_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- atol
+- _wtol_l
+- _wtol
+- _atol_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _atol_l
+- _ttol_l
+- _tstol_l
+- _tstol
+- _wtol
+- _ttol
+- _wtol_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- tstol function
+- atol function
+- ttol function
+- _atol_l function
+- _tstol_l function
+- string conversion, to integers
+- _tstol function
+- _ttol function
+- _ttol_l function
+- atol_l function
+- wtol_l function
+- _wtol_l function
+- wtol function
+- _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# atol, _atol_l, _wtol, _wtol_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f97508221ae8056a2a997033c458f0250a678e2b
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
 Konvertiert eine Zeichenfolge in eine lange ganze Zahl.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 long atol(  
@@ -82,49 +100,49 @@ long _wtol_l(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `str`  
  Zu konvertierende Zeichenfolge.  
   
  `locale`  
  Zu verwendendes Gebietsschema.  
   
-## Rückgabewert  
- Jede Funktion gibt den `long`\-Wert zurück, der mit die Eingabezeichen als Zahl erzeugt, interpretiert.  Der Rückgabewert ist 0L für `atol`, wenn die Eingabe nicht in einen Wert dieses Typs umgewandelt werden kann.  
+## <a name="return-value"></a>Rückgabewert  
+ Jede Funktion gibt den `long`-Wert zurück, der erstellt wird, indem die Eingabezeichen als Zahl interpretiert werden. Der Rückgabewert für `atol` ist 0L, wenn die Eingabe nicht in einen Wert dieses Typs umgewandelt werden kann.  
   
- Im Fall des Überlaufs mit großen positiven Ganzzahlwerte, gibt `atol``LONG_MAX` zurück; im Falle des Überlaufs mit großen negative ganzzahlige Werte, wird `LONG_MIN` zurückgegeben.  In Fällen, in denen alle Werte außerhalb des Gültigkeitsbereichs liegen, wird `errno` auf `ERANGE` festgelegt.  Wenn der Parameter, der übergeben ist, `NULL` ist, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben 0 zurück.  
+ Im Fall eines Überlaufs mit großen positiven ganzzahligen Werten gibt `atol` `LONG_MAX` zurück. Im Fall eines Überlaufs mit großen negativen ganzzahligen Werten wird `LONG_MIN` zurückgegeben. In Fällen, in denen alle Werte außerhalb des Gültigkeitsbereichs liegen, wird `errno` auf `ERANGE` festgelegt. Wenn der übergebene Parameter `NULL` ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben 0 zurück.  
   
-## Hinweise  
- Diese Funktionen konvertieren eine Zeichenfolge in einem long ganzzahligen Wert \(`atol`\).  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktionen konvertieren eine Zeichenfolge in eine lange ganze Zahl (`atol`).  
   
- Die Eingabezeichenfolge ist eine Sequenz von Zeichen, die als numerischer Wert des angegebenen Typs interpretiert werden.  Die Funktion beendet das Lesen der Eingabezeichenfolge am ersten Zeichen, das nicht als Teil einer Zahl erkannt wird.  Dieses Zeichen ist möglicherweise das `NULL` Zeichen \("\\0" oder L"\\0"\) die Zeichenfolge beenden.  
+ Die Eingabezeichenfolge ist eine Sequenz von Zeichen, die als numerischer Wert des angegebenen Typs interpretiert werden. Die Funktion beendet das Lesen der Eingabezeichenfolge am ersten Zeichen, das nicht als Teil einer Zahl erkannt wird. Möglicherweise ist dies das Zeichen `NULL` ('\0' oder L'\0'), das am Ende der Zeichenfolge steht.  
   
- Das `str`\-Argument für `atol` weist folgende Form auf:  
+ Das `str`-Argument für `atol` weist folgende Form auf:  
   
- \[`whitespace`\] \[`sign`\] \[`digits`\]\]  
+ [`whitespace`] [`sign`] [`digits`]]  
   
- `whitespace` besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden, `sign` ist entweder Pluszeichen \(\+\) oder Minuszeichen \(\-\) und `digits` ist mindestens eine Ziffer.  
+ Ein `whitespace` besteht aus Leerzeichen oder Tabulatorzeichen, die ignoriert werden. `sign` ist entweder Pluszeichen (+) oder Minuszeichen (-) und `digits` sind eine oder mehrere Ziffern.  
   
- `_wtol` ist mit `atol` identisch, es lässt eine Zeichenfolge mit Breitzeichen.  
+ `_wtol` ist mit `atol` identisch, außer dass es eine Zeichenfolge mit Breitzeichen verwendet.  
   
- Die Versionen dieser Funktionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas.  Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
+ Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstol`|`atol`|`atol`|`_wtol`|  
 |`_ttol`|`atol`|`atol`|`_wtol`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routinen|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`atol`|\<stdlib.h\>|  
-|`_atol_l`, `_wtol`, `_wtol_l`|\<stdlib.h und\> wchar.h \<\>|  
+|--------------|---------------------|  
+|`atol`|\<stdlib.h>|  
+|`_atol_l`, `_wtol`, `_wtol_l`|\<stdlib.h> und \<wchar.h>|  
   
-## Beispiel  
- Das Programm zeigt an, wie Zahlen, die als Zeichenfolgen gespeichert werden, auf den numerischen Werten mit der `atol`\-Funktion konvertiert werden können.  
+## <a name="example"></a>Beispiel  
+ Dieses Programm zeigt, wie die `atol`-Funktion verwendet wird, um als Zeichenfolgen gespeicherte Zahlen in numerische Werte zu konvertieren.  
   
 ```  
 // crt_atol.c  
@@ -164,22 +182,19 @@ int main( void )
 }  
 ```  
   
-  **Funktion: atol \("\-2309 "\) \= \-2309**  
-**Funktion: atol \("314127,64 "\) \= 314127**  
-**Funktion: atol \("3336402735171707160320 "\) \= 2147483647**  
-**Overflow condition occurred.**   
-## .NET Framework-Entsprechung  
+```Output  
+Function: atol( "  -2309 " ) = -2309  
+Function: atol( "314127.64" ) = 314127  
+Function: atol( "3336402735171707160320" ) = 2147483647  
+Overflow condition occurred.  
+```  
   
--   [System::Convert::ToInt32](https://msdn.microsoft.com/en-us/library/system.convert.toint32.aspx)  
-  
--   [System::Convert::ToUInt32](https://msdn.microsoft.com/en-us/library/system.convert.touint32.aspx)  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Datenkonvertierung](../../c-runtime-library/data-conversion.md)   
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
+ [Gleitkomma-Unterstützung](../../c-runtime-library/floating-point-support.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_atodbl, \_atodbl\_l, \_atoldbl, \_atoldbl\_l, \_atoflt, \_atoflt\_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

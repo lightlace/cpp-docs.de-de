@@ -51,10 +51,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 89626019b42a478b2dfe3800e2f732ba6b90d106
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ae78e17f66448de46e36ea7d6dc6e3121b306c68
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="recalloc"></a>_recalloc
@@ -85,18 +86,18 @@ void *_recalloc(
   
  Wenn nicht genügend Arbeitsspeicher verfügbar ist, um den Block auf die vorgegebene Größe auszudehnen, bleibt der ursprüngliche Block unverändert, und `NULL` wird zurückgegeben.  
   
- Wenn die angeforderte Größe&0; beträgt, wird der Block, auf den durch `memblock` gezeigt wird, freigegeben; der Rückgabewert beträgt `NULL` und `memblock` zeigt auf den freigegebenen Block.  
+ Wenn die angeforderte Größe 0 beträgt, wird der Block, auf den durch `memblock` gezeigt wird, freigegeben; der Rückgabewert beträgt `NULL` und `memblock` zeigt auf den freigegebenen Block.  
   
  Der Rückgabewert zeigt auf einen Speicherplatz, der für die Speicherung eines beliebigen Objekttyps geeignet ist. Um einen Zeiger auf einen anderen Typ als `void` zurückzugeben, verwenden Sie eine Typumwandlung für den Rückgabewert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die _`recalloc`-Funktion ändert die Größe eines belegten Speicherblocks. Das `memblock`-Argument zeigt auf den Anfang des Speicherblocks. Wenn `memblock` `NULL` beträgt, dann verhält sich \_`recalloc` genauso wie [calloc](../../c-runtime-library/reference/calloc.md) und weist einen neuen Block an `num` * `size`-Bytes zu. Jedes Element wird auf 0 initialisiert. Wenn `memblock` nicht `NULL` ist, wird ein Zeiger von einem vorherigen Aufruf an `calloc`, [malloc](../../c-runtime-library/reference/malloc.md) oder [realloc](../../c-runtime-library/reference/realloc.md) zurückgegeben.  
+ Die `_recalloc`-Funktion ändert die Größe eines zugeordneten Speicherblocks. Das `memblock`-Argument zeigt auf den Anfang des Speicherblocks. Wenn `memblock` ist `NULL`, `_recalloc` verhält sich genauso wie [Calloc](../../c-runtime-library/reference/calloc.md) und ordnet einen neuen Block `num`  *  `size` Bytes. Jedes Element wird auf 0 initialisiert. Wenn `memblock` nicht `NULL` ist, wird ein Zeiger von einem vorherigen Aufruf an `calloc`, [malloc](../../c-runtime-library/reference/malloc.md) oder [realloc](../../c-runtime-library/reference/realloc.md) zurückgegeben.  
   
- Da der neue Block an einem neuen Speicherort liegen kann, kann nicht garantiert werden, dass der von _`recalloc` zurückgegebene Zeiger mit dem durch das `memblock`-Argument übergebenen Zeiger identisch ist.  
+ Da der neue Block an einem neuen Speicherort liegen kann, kann nicht garantiert werden, dass der von `_recalloc` zurückgegebene Zeiger mit dem durch das `memblock`-Argument übergebenen Zeiger identisch ist.  
   
  `_recalloc` setzt `errno` auf `ENOMEM`, wenn eine Speicherbelegung fehlschlägt oder wenn der benötigte Speicherplatz größer als `_HEAP_MAXREQ` ist. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `recalloc` ruft `realloc` auf, um mithilfe der C++-Funktion [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) den neuen Handlermodus festzulegen. Der neue Handlermodus gibt an, ob bei einem Fehler die neue Handlerroutine von `realloc` aufgerufen werden soll, wie dies von [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) festgelegt ist. Standardmäßig ruft `realloc` bei einem Speicherbelegungsfehler nicht die neue Handlerroutine auf. Sie können dieses Standardverhalten überschreiben, sodass, wenn _`recalloc` den Speicher nicht belegen kann, die neue Handlerroutine genauso von `realloc` aufgerufen wird wie der `new`-Operator, wenn dieser aus demselben Grund fehlschlägt. Um den Standardwert zu überschreiben, rufen Sie  
+ `recalloc` ruft `realloc` auf, um mithilfe der C++-Funktion [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) den neuen Handlermodus festzulegen. Der neue Handlermodus gibt an, ob bei einem Fehler die neue Handlerroutine von `realloc` aufgerufen werden soll, wie dies von [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) festgelegt ist. Standardmäßig ruft `realloc` bei einem Speicherbelegungsfehler nicht die neue Handlerroutine auf. Sie können dieses Standardverhalten überschreiben, sodass, wenn `_recalloc` Speicher nicht belegen kann,`realloc` die neue Handlerroutine genauso aufruft wie der `new`-Operator, wenn dieser aus demselben Grund fehlschlägt. Um den Standardwert zu überschreiben, rufen Sie  
   
 ```  
 _set_new_mode(1)  
@@ -104,7 +105,7 @@ _set_new_mode(1)
   
  rechtzeitig im Programm auf, oder stellen Sie eine Verknüpfung mit NEWMODE.OBJ her.  
   
- Wenn die Anwendung mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist, wird _`recalloc` in [_recalloc_dbg](../../c-runtime-library/reference/recalloc-dbg.md) aufgelöst. Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
+ Wenn die Anwendung mit einer Debugversion der C-Laufzeitbibliotheken verknüpft ist `_recalloc` löst in [_recalloc_dbg](../../c-runtime-library/reference/recalloc-dbg.md). Weitere Informationen dazu, wie der Heap während des Debugprozesses verwaltet wird, finden Sie unter [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
   
  `_recalloc` ist als `__declspec(noalias)` und `__declspec(restrict)` gekennzeichnet, das bedeutet, dass die Funktion globale Variablen definitiv nicht ändert und dass der zurückgegebene Zeiger keinen Alias hat. Weitere Informationen finden Sie unter [noalias](../../cpp/noalias.md) und [restrict](../../cpp/restrict.md).  
   
@@ -115,9 +116,6 @@ _set_new_mode(1)
 |`_recalloc`|\<stdlib.h> und \<malloc.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Speicherbelegung](../../c-runtime-library/memory-allocation.md)   

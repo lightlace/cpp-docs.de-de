@@ -1,101 +1,62 @@
 ---
-title: "mask_array-Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.mask_array"
-  - "mask_array"
-  - "std::mask_array"
-  - "valarray/std::mask_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mask_array-Klasse"
+title: mask_array-Klasse | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mask_array
+- valarray/std::mask_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# mask_array-Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: bdc17f9cd2964cc18895b7fe4063aabd054268a1
+ms.contentlocale: de-de
+ms.lasthandoff: 04/29/2017
 
-Eine interne zusätzliche Vorlagenklasse, die Objekte, die Teilmengen von übergeordneten valarray\-Objekten und mit einem booleschen Ausdruck angegeben sind, dadurch unterstützt, dass sie Vorgänge zwischen den Teilmengenarrays bereitstellt.  
+---
+# <a name="maskarray-class"></a>mask_array-Klasse
+Eine interne zusätzliche Vorlagenklasse, die Objekte, die Teilmengen von übergeordneten valarray-Objekten und mit einem booleschen Ausdruck angegeben sind, dadurch unterstützt, dass sie Vorgänge zwischen den Teilmengenarrays bereitstellt.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
-```  
-template<class Type>  
-   class mask_array {  
-public:  
-   typedef Type value_type;  
-   void operator=(  
-      const valarray<Type>& x  
-   ) const;  
   
-   void operator=(  
-      const Type& x  
-   ) const;  
   
-   void operator*=(  
-      const valarray<Type>& x  
-   ) const;  
+## <a name="remarks"></a>Hinweise  
+ Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt **va** der Klasse [valarray](../standard-library/valarray-class.md)**\<Type>** zusammen mit einem Objekt **ba** der Klasse [valarray\<bool>](../standard-library/valarray-bool-class.md) speichert, das die Reihenfolge der Elemente beschreibt, die im **valarray\<Type>**-Objekt ausgewählt werden sollen.  
   
-   void operator/=(  
-      const valarray<Type>& x  
-   ) const;  
+ Sie erstellen ein **mask_array\<Type>**-Objekt nur, indem Sie einen Ausdruck der Form [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at) schreiben. Die Memberfunktionen der Klasse „mask_array“ verhalten sich dann wie die entsprechenden Funktionssignaturen, die für **valarray\<Type>** definiert sind, mit der Ausnahme, dass nur die Reihenfolge der ausgewählten Elemente betroffen ist.  
   
-   void operator%=(  
-      const valarray<Type>& x  
-   ) const;  
+ Die Reihenfolge besteht aus höchstens **ba.size** -Elementen. Ein Element *J* ist nur enthalten, wenn **ba**[ *J*] gleich „true“ ist. Daher gibt es in der Reihenfolge so viele Elemente, wie es „true“-Elemente in **ba**gibt. Wenn `I` der Index des kleinsten „true“-Elements in **ba**ist, dann ist **va**[ `I`] das Element 0 (null) in der ausgewählten Reihenfolge.  
   
-   void operator+=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator-=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator^=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator&=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator|=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator<<=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator>>=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-// The rest is private or implementation defined  
-}  
-```  
-  
-## Hinweise  
- Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt **va** der Klasse [valarray](../standard-library/valarray-class.md)**\<Type\>** zusammen mit einem Objekt **ba** der Klasse [valarray\< bool\>](../standard-library/valarray-bool-class.md) speichert, das die Reihenfolge der Elemente beschreibt, die im **valarray\<Type\>**\-Objekt ausgewählt werden sollen.  
-  
- Sie erstellen ein **mask\_array\<Type\>**\-Objekt nur, indem Sie einen Ausdruck der Form [va&#91;ba&#93;](../Topic/valarray::operator.md) schreiben. Die Memberfunktionen der Klasse „mask\_array“ verhalten sich dann wie die entsprechenden Funktionssignaturen, die für **valarray\<Type\>** definiert sind, mit der Ausnahme, dass nur die Reihenfolge der ausgewählten Elemente betroffen ist.  
-  
- Die Reihenfolge besteht aus höchstens **ba.size**\-Elementen. Ein Element *J* ist nur enthalten, wenn **ba**\[*J*\] gleich „true“ ist. Daher gibt es in der Reihenfolge so viele Elemente, wie es „true“\-Elemente in **ba** gibt. Wenn `I` der Index des kleinsten „true“\-Elements in **ba** ist, dann ist **va**\[`I`\] das Element 0 \(null\) in der ausgewählten Reihenfolge.  
-  
-## Beispiel:  
+## <a name="example"></a>Beispiel:  
   
 ```  
 // mask_array.cpp  
@@ -129,17 +90,19 @@ int main( )
 }  
 ```  
   
-### Ausgabe  
+### <a name="output"></a>Ausgabe  
   
 ```  
-The initial operand valarray is:  ( 0 -1 2 -1 4 -1 6 -1 8 -1 ).  
-The modified operand valarray is:  ( 0 -1 2 -1 10 -1 10 -1 10 -1 ).  
+The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).  
+The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).  
 ```  
   
-## Anforderungen  
- **Header:** \<valarray\>  
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<valarray>  
   
  **Namespace:** std  
   
-## Siehe auch  
- [Threadsicherheit in der C\+\+\-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Siehe auch  
+ [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

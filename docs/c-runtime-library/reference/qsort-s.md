@@ -1,50 +1,67 @@
 ---
-title: "qsort_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "qsort_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "qsort_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arrays [C++], Sortieren"
-  - "qsort_s-Funktion"
-  - "Schnellsortierungsalgorithmus"
-  - "Sortieren von Arrays"
+title: qsort_s | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- qsort_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- qsort_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++], sorting
+- quick-sort algorithm
+- qsort_s function
+- sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# qsort_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e4ba4fcb5acc8c914cf240e5b858a945bd55cc86
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Führt eine schnelle Sortierung aus.  Eine Version von [qsort](../../c-runtime-library/reference/qsort.md) mit werden, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="qsorts"></a>qsort_s
+Führt eine schnelle Sortierung aus. Dies ist eine Version von [qsort](../../c-runtime-library/reference/qsort.md) mit Sicherheitserweiterungen wie in den [Sicherheitsfunktionen in CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 void qsort_s(  
@@ -56,9 +73,9 @@ void qsort_s(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `base`  
- Anfang des Zielarrays.  
+ Start des Zielarrays.  
   
  `num`  
  Arraygröße in Elementen.  
@@ -67,53 +84,53 @@ void qsort_s(
  Elementgröße in Bytes.  
   
  `compare`  
- Vergleichsfunktion.  Das erste Argument ist der `context` Zeiger.  Das zweite Argument ist ein Zeiger auf `key` für die Suche.  Das dritte Argument ist ein Zeiger mit `key` verglichen werden Arrayelement.  
+ Vergleichsfunktion. Das erste Argument ist der `context` -Zeiger. Das zweite Argument ist ein Zeiger auf den `key` für die Suche. Das dritte Argument ist ein Zeiger auf das Arrayelement, das mit `key`verglichen werden soll.  
   
  `context`  
- Ein Zeiger auf einen Kontext, der auf jedes Objekt sein kann, das die `compare` \- Routine zugreifen muss.  
+ Ein Zeiger auf einen Kontext, d.h. alle möglichen Objekte, auf die die `compare`-Routine zugreifen muss.  
   
-## Hinweise  
- Die `qsort_s`\-Funktion implementiert einen QuickSortierungsalgorithmus, um ein Array, `num`\-Elemente jedes von `width` Bytes zu sortieren.  Das Argument `base` ist ein Zeiger zur Basis des zu sortierende Arrays.  `qsort_s` überschreibt dieses Array mit den sortierten Elemente.  Das Argument `compare` ist ein Zeiger auf eine vom Benutzer bereitgestellten Routine, die zwei Arrayelemente verglichen und einen Wert zurückgibt, der die Beziehung angibt.  `qsort_s` ruft die Routine `compare` mindestens einmal bei der Sortierung auf und übergibt Zeiger zu zwei Arrayelementen auf jedes Aufrufs:  
+## <a name="remarks"></a>Hinweise  
+ Die `qsort_s`-Funktion implementiert einen Schnellsortierungsalgorithmus, um ein Array von `num`-Elementen zu sortieren, die jeweils aus `width`-Bytes bestehen. Das `base`-Argument ist ein Zeiger auf die Basis des Arrays, das sortiert werden soll. `qsort_s` überschreibt dieses Array mit den sortierten Elementen. Das `compare`-Argument ist ein Zeiger auf eine vom Benutzer angegebene Routine, die zwei Elemente des Arrays vergleicht und einen Wert zurückgibt, der ihre Beziehung angibt. `qsort_s` ruft die `compare`-Routine einmal oder mehrere Male während der Sortierung auf, wodurch bei jedem Aufruf Zeiger auf zwei Arrayelemente übergeben werden:  
   
 ```  
 compare( context, (void *) & elem1, (void *) & elem2 );  
 ```  
   
- Die Routine muss die Elemente vergleichen und dann einen der folgenden Werte zurückgeben:  
+ Die Routine muss die Elemente vergleichen und einen der folgenden Werte zurückgeben:  
   
-|Rückgabewert|**Beschreibung**|  
-|------------------|----------------------|  
-|\< 0|`elem1` kleiner als `elem2`|  
-|0|`elem1` entspricht `elem2`|  
-|\> 0|`elem1` größer als `elem2`|  
+|Rückgabewert|Beschreibung|  
+|------------------|-----------------|  
+|< 0|`elem1` kleiner als `elem2`|  
+|0|`elem1` gleich `elem2`|  
+|> 0|`elem1` größer als `elem2`|  
   
- Das Array ist in aufsteigender Reihenfolge sortiert, wie von der Vergleichsfunktion definiert.  Um ein Array in absteigender Reihenfolge zu sortieren, kehren Sie dem Sinne "in größerem als" und "kleiner als" in der Vergleichsfunktion um.  
+ Das Array wird in aufsteigender Reihenfolge sortiert, wie von der Vergleichsfunktion definiert. Kehren Sie die Richtung „größer als“ und „kleiner als“ in der Vergleichsfunktion um, um ein Array in absteigender Reihenfolge zu sortieren.  
   
- Wenn ungültige Parameter an die Funktion übergeben werden, wird der ungültige Parameterhandler aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die Ausführung zulässig ist, um fortzufahren, kehrt die Funktion zurück und `errno` ist auf `EINVAL` festgelegt.  Weitere Informationen finden Sie unter [errno, \_doserrno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Wenn ungültige Parameter an die Funktion übergeben werden, ruft sie den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parametervalidierung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird die Funktion zurückgegeben und `errno` auf `EINVAL` festgesetzt. Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### Fehlerbedingungen  
+### <a name="error-conditions"></a>Fehlerbedingungen  
   
-|Schlüssel|base|compare|num|width|errno|  
-|---------------|----------|-------------|---------|-----------|-----------|  
-|`NULL`|any|any|any|any|`EINVAL`|  
-|any|`NULL`|any|\!\= 0|any|`EINVAL`|  
-|any|any|any|any|\<\= 0|`EINVAL`|  
-|any|any|`NULL`|any|any|`EINVAL`|  
+|Key|Basis|compare|num|Breite|errno|  
+|---------|----------|-------------|---------|-----------|-----------|  
+|`NULL`|alle|alle|alle|alle|`EINVAL`|  
+|alle|`NULL`|alle|!= 0|alle|`EINVAL`|  
+|alle|alle|alle|any|<= 0|`EINVAL`|  
+|alle|alle|`NULL`|alle|alle|`EINVAL`|  
   
- `qsort_s` verfügt, das gleiche Verhalten wie `qsort` hat aber den Parameter `context` und `errno` fest.  Durch einen `context`\-Parameter übergeben, können Vergleichsfunktionen einen Objektzeiger verwenden, um die Objektfunktionalität oder auf andere Informationen zugreifen, die durch einen Elementzeiger nicht zugänglich sind.  Die Einführung des Parameters `context` macht `qsort_s` sicherer, da `context` verwendet werden kann, um die Reentranzfehler zu vermeiden, die mithilfe von statischen Variablen, um freigegebene Informationen zur Funktion `compare` auszuführen eingegeben werden.  
+ `qsort_s` verhält sich identisch wie `qsort`, verfügt jedoch über die `context`-Parameter und legt `errno` fest. Durch Übergeben eines `context`-Parameters können Vergleichsfunktionen einen Objektzeiger verwenden, um auf Objektfunktionalitäten oder andere Informationen zuzugreifen, die nicht über einen Elementzeiger verfügbar sind. Das Hinzufügen der `context` -Parameters macht `qsort_s` sicherer, weil `context` können verwendet werden, um mithilfe von statischen Variablen um Informationen zu gemeinsamen verfügbar zu machen, eingeführt Reentranz-Fehler zu vermeiden der `compare` Funktion.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`qsort_s`|\<stdlib.h und\> search.h \<\>|  
+|-------------|---------------------|  
+|`qsort_s`|\<stdlib.h> und \<search.h>|  
   
- Um zusätzliche Kompatibilitätsinformation finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
+ Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
- **Bibliotheken:** Alle Versionen der [CRT\-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).  
+ **Bibliotheken:** Alle Versionen der [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
- Das folgende Beispiel zeigt, wie der Parameter `context` in der Funktion `qsort_s` verwendet.  Der Parameter `context` vereinfacht, threadsichere Sortierungen auszuführen.  Anstatt, statische Variablen zu verwenden, die synchronisiert werden, müssen Threadsicherheit sicherzustellen, führen Sie einen anderen Parameter `context` in jeder Sortierung.  In diesem Beispiel wird ein `context` Gebietsschemaobjekt als Parameter verwendet.  
+## <a name="example"></a>Beispiel  
+ Im folgenden Beispiel wird veranschaulicht, wie die `context` Parameter in der `qsort_s` Funktion. Der `context`-Parameter erleichtert die Ausführung von threadsicheren Sortiervorgängen. Anstelle von statischen Variablen, die synchronisiert werden müssen, um Threadsicherheit zu gewährleisten, übergeben Sie einen anderen `context`-Parameter in jeder Sortierung. In diesem Beispiel wird ein Gebietsschemaobjekt als `context`-Parameter verwendet.  
   
 ```  
 // crt_qsort_s.cpp  
@@ -254,7 +271,7 @@ int main( )
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 Unsorted input:  
@@ -267,11 +284,8 @@ España Español espantado
 table tablet tableux  
 ```  
   
-## .NET Framework-Entsprechung  
- <xref:System.Collections.ArrayList.Sort*>  
-  
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Suchen und Sortieren](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch\_s](../../c-runtime-library/reference/bsearch-s.md)   
- [\_lsearch\_s](../../c-runtime-library/reference/lsearch-s.md)   
+ [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

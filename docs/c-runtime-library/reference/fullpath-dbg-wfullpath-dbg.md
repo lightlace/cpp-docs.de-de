@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 13dea0e3f4fdaef74d4806373376d5c84904ce8f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6af4d6ba5df2305b5181e47cf0a0557650aa0406
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
@@ -109,9 +110,9 @@ wchar_t *_wfullpath_dbg(
  Jede Funktion gibt einen Zeiger auf einen Puffer zurück, der den absoluten Pfadnamen (`absPath`) enthält. Wenn ein Fehler auftritt (z. B, wenn der in `relPath` übergebene Wert einen Laufwerksbuchstaben enthält, der nicht gültig ist oder nicht gefunden werden kann oder wenn der erstellte absolute Pfadname (`absPath`) länger ist als `maxLength`), gibt die Funktion `NULL` zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktionen `_fullpath_dbg` und `_wfullpath_dbg` sind mit `_fullpath` und `_wfullpath` nahezu identisch, allerdings verwenden diese Funktionen, wenn _`DEBUG` definiert ist, die Debugversion von `malloc`, `_malloc_dbg`, um Speicher zu belegen, wenn NULL als erster Parameter übergeben wird. Weitere Informationen zu den Debugfunktionen von `_malloc_dbg` finden Sie unter [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+ Die `_fullpath_dbg` und `_wfullpath_dbg` -Funktionen sind identisch mit `_fullpath` und `_wfullpath` mit dem Unterschied, dass, wenn `_DEBUG` wird definiert, verwenden Sie diese Funktionen die Debugversion des `malloc`, `_malloc_dbg`, Zuweisen von Arbeitsspeicher, wenn NULL als erster Parameter übergeben wird. Weitere Informationen zu den Debugfunktionen von `_malloc_dbg` finden Sie unter [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
- In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie das Flag `_CRTDBG_MAP_ALLOC` definieren. Wenn `_CRTDBG_MAP_ALLOC` definiert ist, werden Aufrufe von `_fullpath` und `_wfullpath` zu `_fullpath_dbg` bzw. `_wfullpath_dbg` neu zugeordnet, wobei `blockType` auf `_NORMAL_BLOCK` festgelegt wird. Daher müssen Sie diese Funktionen nicht explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als `_CLIENT_BLOCK` markieren. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
+ In den meisten Fällen müssen Sie diese Funktionen nicht explizit aufrufen. Stattdessen können Sie das `_CRTDBG_MAP_ALLOC`-Flag definieren. Wenn `_CRTDBG_MAP_ALLOC` definiert ist, werden Aufrufe von `_fullpath` und `_wfullpath` zu `_fullpath_dbg` bzw. `_wfullpath_dbg` neu zugeordnet, wobei `blockType` auf `_NORMAL_BLOCK` festgelegt wird. Daher müssen Sie diese Funktionen nicht explizit aufrufen, es sei denn, Sie möchten die Heapblöcke als `_CLIENT_BLOCK` markieren. Weitere Informationen finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details).  
   
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
@@ -127,9 +128,6 @@ wchar_t *_wfullpath_dbg(
 |`_wfullpath_dbg`|\<crtdbg.h>|  
   
  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- <xref:System.IO.File.Create%2A>  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dateibehandlung](../../c-runtime-library/file-handling.md)   

@@ -1,58 +1,76 @@
 ---
-title: "_putchar_nolock, _putwchar_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putchar_nolock"
-  - "_putwchar_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "putwchar_nolock"
-  - "_puttchar_nolock"
-  - "_putchar_nolock"
-  - "_putwchar_nolock"
-  - "putchar_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putchar_nolock-Funktion"
-  - "_puttchar_nolock-Funktion"
-  - "_putwchar_nolock-Funktion"
-  - "Zeichen, Schreiben"
-  - "putchar_nolock-Funktion"
-  - "puttchar_nolock-Funktion"
-  - "putwchar_nolock-Funktion"
-  - "Standardausgabe, Schreiben in"
+title: _putchar_nolock, _putwchar_nolock | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putchar_nolock
+- _putwchar_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- putwchar_nolock
+- _puttchar_nolock
+- _putchar_nolock
+- _putwchar_nolock
+- putchar_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- _puttchar_nolock function
+- putchar_nolock function
+- characters, writing
+- standard output, writing to
+- putwchar_nolock function
+- _putchar_nolock function
+- _putwchar_nolock function
+- puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# _putchar_nolock, _putwchar_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e9e1667242d4b569543e0044b85c319b83ff88d9
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock, _putwchar_nolock
 Schreibt ein Zeichen in **stdout**, ohne den Thread zu sperren.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -65,35 +83,35 @@ wint_t _putwchar_nolock(
   
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `c`  
  Zu schreibende Zeichen.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Siehe **putchar, putwchar**.  
   
-## Hinweise  
- **putchar\_nolock** und `_putwchar_nolock` sind identisch mit den Versionen ohne das **\_nolock**\-Suffix; allerdings sind sie nicht vor Störungen durch andere Threads geschützt.  Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist.  Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.  
+## <a name="remarks"></a>Hinweise  
+ **putchar_nolock** und `_putwchar_nolock` sind identisch mit den Versionen ohne das **_nolock**-Suffix; allerdings sind sie nicht vor Störungen durch andere Threads geschützt. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|------------------------------------------|----------------------|-------------------------|  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_puttchar_nolock`|`_putchar_nolock`|`_putchar_nolock`|`_putwchar_nolock`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_putchar_nolock`|\<stdio.h\>|  
-|`_putwchar_nolock`|\<stdio.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`_putchar_nolock`|\<stdio.h>|  
+|`_putwchar_nolock`|\<stdio.h> oder \<wchar.h>|  
   
- Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps nicht unterstützt.  Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C\-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps verwendet werden können.  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps nicht unterstützt. Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_putchar_nolock.c  
@@ -117,19 +135,13 @@ int main( void )
 }  
 ```  
   
-## Ausgabe  
+## <a name="output"></a>Ausgabe  
   
 ```  
 This is the line of output  
 ```  
   
-## .NET Framework-Entsprechung  
-  
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Siehe auch  
+ [E/A-Stream](../../c-runtime-library/stream-i-o.md)   
  [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)

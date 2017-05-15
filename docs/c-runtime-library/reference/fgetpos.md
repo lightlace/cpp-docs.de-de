@@ -1,48 +1,65 @@
 ---
-title: "fgetpos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fgetpos"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fgetpos"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fgetpos-Funktion"
-  - "Streams, Dateipositionsindikator"
+title: fgetpos | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fgetpos
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fgetpos
+dev_langs:
+- C++
+helpviewer_keywords:
+- fgetpos function
+- streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# fgetpos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c53e5742a518934ad0afcfaa06ad4e5905c484e3
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
-Ruft Stellungsanzeiger eines Streams ab.  
+---
+# <a name="fgetpos"></a>fgetpos
+Ruft den Dateipositionsindikator eines Streams ab  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int fgetpos(   
@@ -51,28 +68,28 @@ int fgetpos(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `stream`  
- Zielstream.  
+ Der Zielstream  
   
  `pos`  
- Position\-Indikatorspeicher.  
+ Speicher des Positionsindikators  
   
-## Rückgabewert  
- Wenn erfolgreich, `fgetpos` gibt 0 zurück.  Bei einem Fehler wird ein Wert ungleich 0 \(null\) zurück und legt `errno` auf eine der folgenden Manifestkonstanten fest \(in STDIO.H\): `EBADF`, der den jeweiligen Stream bedeutet, ist kein gültiger Dateizeiger oder ist nicht möglich oder `EINVAL` verwendet, der Folgendes bedeutet, dass der `stream`\-Wert oder der Wert von `pos` ungültig wird, beispielsweise, wenn entweder ein NULL\-Zeiger ist.  Wenn `stream` oder `pos` ein `NULL` Zeiger ist, ruft die Funktion den ungültigen Parameterhandler auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  
+## <a name="return-value"></a>Rückgabewert  
+ `fgetpos` gibt bei Erfolg 0 zurück. Bei einem Fehler wird ein Wert ungleich 0 zurückgegeben und `errno` auf eine der folgenden Manifestkonstanten festgelegt (definiert in STDIO.H): `EBADF`, d.h., der angegebene Stream ist kein gültiger Dateizeiger oder nicht zugreifbar, oder `EINVAL`, d.h., dass die Werte `stream` und `pos` ungültig sind, als wären beide ein NULL-Zeiger. Wenn `stream` oder `pos` ein `NULL`-Zeiger sind, ruft die Funktion, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben, den Handler für ungültige Parameter auf.  
   
-## Hinweise  
- Die Funktion ruft `fgetpos` den aktuellen Wert des `stream` Stellungsanzeigers Arguments ab und speichert ihn im Objekt, das auf den durch `pos` gezeigt wird.  Die `fsetpos`\-Funktion kann Informationen später verwenden, die in `pos` gespeichert werden, um den Zeiger des `stream`\-Arguments an seiner Position zurückzusetzen, wenn `fgetpos` aufgerufen wurde.  Der Wert `pos` wird in einem internen Format gespeichert und ist nur über `fgetpos` und `fsetpos` bestimmt.  
+## <a name="remarks"></a>Hinweise  
+ Die Funktion `fgetpos` ruft den aktuellen Wert des Dateipositionsindikators des `stream`-Arguments ab und speichert es in dem Objekt, auf das `pos` verweist. Die Funktion `fsetpos` kann die in `pos` gespeicherten Informationen später verwenden, um den Zeiger des `stream`-Arguments auf die Position zurückzusetzen, die er zum Zeitpunkt des Aufrufs von `fgetpos` inne hatte. Der Wert `pos` wird in einem internen Format gespeichert und dient nur zur Verwendung durch `fgetpos` und `fsetpos`.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Funktion|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`fgetpos`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`fgetpos`|\<stdio.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_fgetpos.c  
@@ -114,22 +131,19 @@ int main( void )
 }  
 ```  
   
-## Eingabe: crt\_fgetpos.txt  
+## <a name="input-crtfgetpostxt"></a>Eingabe: crt_fgetpos.txt  
   
 ```  
 fgetpos gets a stream's file-position indicator.  
 ```  
   
-### Ausgabe crt\_fgetpos.txt  
+### <a name="output-crtfgetpostxt"></a>Ausgabe: crt_fgetpos.txt  
   
 ```  
 after fgetpos: gets a stream  
 after fsetpos: gets a stream  
 ```  
   
-## .NET Framework-Entsprechung  
- [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
-  
-## Siehe auch  
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../../c-runtime-library/stream-i-o.md)   
  [fsetpos](../../c-runtime-library/reference/fsetpos.md)

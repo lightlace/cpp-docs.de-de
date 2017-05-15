@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 33826176b57dbc26c023e0556993ade7dc3e9cfd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a6163775f7e8592a48a8011e8d72eea008dd5c7
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pclose"></a>_pclose
@@ -77,7 +78,7 @@ FILE *stream
  Gibt den Wert vom vorherigen Aufruf von `_popen` zurück.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt den Beendigungsstatus des beendenden Befehlsprozessors zurück oder –&1;, wenn ein Fehler auftritt. Das Format des Rückgabewerts ist nahezu mit dem von `_cwait` identisch. Der einzige Unterschied ist, dass die niederwertigen und höherwertigen Bytes vertauscht sind. Wenn der Stream **NULL** ist, legt `_pclose` `errno` auf `EINVAL` fest und gibt –1 zurück.  
+ Gibt den Beendigungsstatus des beendenden Befehlsprozessors oder-1 zurück, wenn ein Fehler auftritt. Das Format des Rückgabewerts ist nahezu mit dem von `_cwait` identisch. Der einzige Unterschied ist, dass die niederwertigen und höherwertigen Bytes vertauscht sind. Wenn der Stream **NULL** ist, legt `_pclose` `errno` auf `EINVAL` fest und gibt –1 zurück.  
   
  Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -94,9 +95,6 @@ FILE *stream
   
 ## <a name="libraries"></a>Bibliotheken  
  Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)   

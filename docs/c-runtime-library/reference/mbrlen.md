@@ -1,47 +1,64 @@
 ---
-title: "mbrlen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbrlen"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbrlen"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mbrlen-Funktion"
+title: mbrlen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbrlen
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbrlen
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# mbrlen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: a89b6d426d20d9af3f93bec1ec004ab5d7c70fe0
+ms.contentlocale: de-de
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="mbrlen"></a>mbrlen
 Bestimmen der Anzahl der Bytes, die zum Ausführen eines Multibytezeichens im aktuellen Gebietsschemas erforderlich sind, mit der Möglichkeit des Neustarts in der Mitte eines Multibytezeichens.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 size_t mbrlen(  
@@ -51,7 +68,7 @@ size_t mbrlen(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `str`  
  Zeiger auf das nächste Byte, das in einer Multibytezeichenfolge überprüft werden soll.  
   
@@ -61,47 +78,47 @@ size_t mbrlen(
  `mbstate`  
  Zeiger auf den aktuellen Umschaltzustand des ersten Bytes von `str`.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Einer der folgenden Werte:  
   
  0  
- Die nächsten `count` oder weniger Bytes schließen das Multibytezeichen ab, das Null\-Breitzeichen darstellt.  
+ Die nächsten `count` oder weniger Bytes schließen das Multibytezeichen ab, das Null-Breitzeichen darstellt.  
   
  1 bis `count`, inklusive  
- Die nächsten `count` oder weniger Bytes schließen ein gültiges Multibytezeichen ab.  Der zurückgegebene Wert ist die Anzahl der Bytes, die das Multybytezeichen abschließen.  
+ Die nächsten `count` oder weniger Bytes schließen ein gültiges Multibytezeichen ab. Der zurückgegebene Wert ist die Anzahl der Bytes, die das Multybytezeichen abschließen.  
   
- \(size\_t\)\(\-2\)  
+ (size_t)(-2)  
  Die nächsten `count` Bytes tragen zu einem unvollständigen, jedoch möglicherweise gültigen Multibytezeichen bei und alle `count` Bytes wurden verarbeitet.  
   
- \(size\_t\)\(\-1\)  
- Es ist ein Codierungsfehler aufgetreten.  Die nächsten `count` oder weniger Bytes tragen nicht zu einem vollständigen und gültigen Multibytezeichen bei.  In diesem Fall wird `errno` auf EILSEQ festgelegt, und der Konvertierungszustand in `mbstate` ist nicht angegeben.  
+ (size_t)(-1)  
+ Es ist ein Codierungsfehler aufgetreten. Die nächsten `count` oder weniger Bytes tragen nicht zu einem vollständigen und gültigen Multibytezeichen bei. In diesem Fall wird `errno` auf EILSEQ festgelegt, und der Konvertierungszustand in `mbstate` ist nicht angegeben.  
   
-## Hinweise  
- Die `mbrlen`\-Funktion prüft höchstens `count` Bytes, beginnend mit dem Byte, auf das von `str` gezeigt wird, um die Anzahl von Bytes zu bestimmen, die zum Abschließen des nächsten Multibytezeichens, einschließlich aller Umwandlungssequenzen, erforderlich sind.  Dies entspricht dem Aufruf von `mbrtowc(NULL, str, count, &mbstate)`, wobei `mbstate` entweder ein vom Benutzer bereitgestelltes `mbstate_t`\-Objekt oder ein statisches internes Objekt ist, das von der Bibliothek bereitgestellt wird.  
+## <a name="remarks"></a>Hinweise  
+ Die `mbrlen`-Funktion prüft höchstens `count` Bytes, beginnend mit dem Byte, auf das von `str` gezeigt wird, um die Anzahl von Bytes zu bestimmen, die zum Abschließen des nächsten Multibytezeichens, einschließlich aller Umwandlungssequenzen, erforderlich sind. Dies entspricht dem Aufruf von `mbrtowc(NULL, str, count, &mbstate)`, wobei `mbstate` entweder ein vom Benutzer bereitgestelltes `mbstate_t`-Objekt oder ein statisches internes Objekt ist, das von der Bibliothek bereitgestellt wird.  
   
- Die `mbrlen`\-Funktion speichert und verwendet Umschaltzustand eines unvollständigen Multibytezeichens im `mbstate`\-Parameter.  Dadurch kann `mbrlen` bei Bedarf in der Mitte eines Multibytezeichens neu gestartet werden, wobei höchstens `count` Bytes untersucht werden.  Wenn `mbstate` ein NULL\-Zeiger ist, verwendet `mbrlen` ein internes, statisches `mbstate_t`\-Objekt zum Speichern des Umschaltzustands.  Da das interne `mbstate_t`\-Objekt nicht threadsicher ist, wird empfohlen, immer Ihren eigenen `mbstate`\-Parameter zuzuordnen und zu übergeben.  
+ Die `mbrlen`-Funktion speichert und verwendet Umschaltzustand eines unvollständigen Multibytezeichens im `mbstate`-Parameter. Dadurch kann `mbrlen` bei Bedarf in der Mitte eines Multibytezeichens neu gestartet werden, wobei höchstens `count` Bytes untersucht werden. Wenn `mbstate` ein NULL-Zeiger ist, verwendet `mbrlen` ein internes, statisches `mbstate_t`-Objekt zum Speichern des Umschaltzustands. Da das interne `mbstate_t`-Objekt nicht threadsicher ist, wird empfohlen, immer Ihren eigenen `mbstate`-Parameter zuzuordnen und zu übergeben.  
   
- Die `mbrlen`\-Funktion unterscheidet sich von [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md) durch die Neustartmöglichkeit.  Der Umschaltzustand wird für nachfolgende Aufrufe der gleichen oder anderer Funktionen, die neu gestartet werden können, in `mbstate` gespeichert.  Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Eine Anwendung sollte beispielsweise `wcsrlen` anstelle von `wcslen` verwenden, wenn ein nachfolgender Aufruf von `wcsrtombs` anstelle von `wcstombs.` verwendet wird.  
+ Die `mbrlen`-Funktion unterscheidet sich von [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md) durch die Neustartmöglichkeit. Der Umschaltzustand wird für nachfolgende Aufrufe der gleichen oder anderer Funktionen, die neu gestartet werden können, in `mbstate` gespeichert. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Eine Anwendung sollte beispielsweise `wcsrlen` anstelle von `wcslen` verwenden, wenn ein nachfolgender Aufruf von `wcsrtombs` anstelle von `wcstombs.` verwendet wird.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE und \_MBCS nicht definiert.|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|-------------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_UNICODE definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |Nicht zutreffend|Nicht zutreffend|`mbrlen`|Nicht zutreffend|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`mbrlen`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`mbrlen`|\<wchar.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, inwiefern die Interpretation von Multibytezeichen von der aktuellen Codepage abhängig ist, und demonstriert die Funktion zum Fortsetzen von `mbrlen`.  
   
-```  
- // crt_mbrlen.c  
+```C  
+// crt_mbrlen.c  
 // Compile by using: cl crt_mbrlen.c  
 #include <stdlib.h>  
 #include <stdio.h>  
@@ -147,13 +164,18 @@ int main( void )
 }  
 ```  
   
-  **Codepage: 0**  
-**é╨éτé¬é╚: Shift\-jis hiragana.  Zeichenanzahl: 29**  
-**Codepage: 932**  
-**????: Shift\-jis hiragana.  Zeichenanzahl: 25**    
-## .NET Framework-Entsprechung  
- [System::String::Length](https://msdn.microsoft.com/en-us/library/system.string.length.aspx)  
+```Output  
   
-## Siehe auch  
+Code page: 0  
+é╨éτé¬é╚: Shift-jis hiragana.  
+Character count: 29  
+  
+Code page: 932  
+????: Shift-jis hiragana.  
+Character count: 25  
+  
+```  
+  
+## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   
  [Locale](../../c-runtime-library/locale.md)

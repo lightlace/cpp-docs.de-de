@@ -1,62 +1,79 @@
 ---
-title: "printf_s, _printf_s_l, wprintf_s, _wprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_printf_s_l"
-  - "wprintf_s"
-  - "_wprintf_s_l"
-  - "printf_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wprintf_s"
-  - "printf_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_printf_s_l-Funktion"
-  - "_tprintf_s-Funktion"
-  - "_tprintf_s_l-Funktion"
-  - "_wprintf_s_l-Funktion"
-  - "Formatierter Text [C++]"
-  - "printf-Funktion, Formatangabefelder"
-  - "printf-Funktion, Verwenden"
-  - "printf_s-Funktion"
-  - "printf_s_l-Funktion"
-  - "tprintf_s-Funktion"
-  - "tprintf_s_l-Funktion"
-  - "wprintf_s-Funktion"
-  - "wprintf_s_l-Funktion"
+title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _printf_s_l
+- wprintf_s
+- _wprintf_s_l
+- printf_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- wprintf_s
+- printf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- wprintf_s function
+- tprintf_s function
+- _tprintf_s function
+- printf_s_l function
+- printf_s function
+- _printf_s_l function
+- printf function, format specification fields
+- printf function, using
+- _tprintf_s_l function
+- wprintf_s_l function
+- formatted text [C++]
+- tprintf_s_l function
+- _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 008ecd864959078951a3671a318abfa6e593bd49
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Druckt eine formatierte Ausgabe an den Standardausgabestream.  Diese Versionen von [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) enthalten Sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
+---
+# <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
+Druckt eine formatierte Ausgabe an den Standardausgabestream. Diese Versionen von [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) enthalten Sicherheitserweiterungen, wie unter [Sicherheitserweiterungen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int printf_s(  
@@ -79,7 +96,7 @@ int _wprintf_s_l(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `format`  
  Formatsteuerung  
   
@@ -89,30 +106,30 @@ int _wprintf_s_l(
  `locale`  
  Das zu verwendende Gebietsschema.  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  Gibt die Anzahl gedruckter Zeichen oder einen negativen Wert zurück, wenn ein Fehler auftritt.  
   
-## Hinweise  
- Die `printf_s`\-Funktion formatiert eine Reihe von Zeichen und Werten für den Standardausgabestream `stdout` und gibt sie aus.  Wenn Argumente der *format*\-Zeichenfolge folgen, muss die `format`\-Zeichenfolge Spezifikationen enthalten, die das Ausgabeformat für die Argumente bestimmen.  
+## <a name="remarks"></a>Hinweise  
+ Die `printf_s`-Funktion formatiert eine Reihe von Zeichen und Werten für den Standardausgabestream `stdout` und gibt sie aus. Wenn Argumente der *format*-Zeichenfolge folgen, muss die `format`-Zeichenfolge Spezifikationen enthalten, die das Ausgabeformat für die Argumente bestimmen.  
   
- Der Hauptunterschied zwischen `printf_s` und `printf` besteht darin, dass `printf_s` die Formatzeichenfolge auf gültige Formatierungszeichen überprüft, während `printf` nur überprüft, ob es sich bei der Formatzeichenfolge um einen NULL\-Zeiger handelt.  Wenn bei einer der beiden Überprüfungen ein Fehler auftritt, wird ein Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben.  Wenn die weitere Ausführung zugelassen wird, gibt die Funktion – 1 zurück und stellt `errno` auf `EINVAL` ein.  
+ Der Hauptunterschied zwischen `printf_s` und `printf` besteht darin, dass `printf_s` die Formatzeichenfolge auf gültige Formatierungszeichen überprüft, während `printf` nur überprüft, ob es sich bei der Formatzeichenfolge um einen NULL-Zeiger handelt. Wenn bei einer der beiden Überprüfungen ein Fehler auftritt, wird der ungültige Parameterhandler gerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion -1 zurück und stellt `errno` auf `EINVAL`ein.  
   
- Weitere Informationen zu `errno` und Fehlercodes finden Sie unter [\_doserrno, errno, \_sys\_errlist und \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Weitere Informationen zu `errno` und Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `printf_s` und `fprintf_s` identisch verhalten sich, dass `printf_s` schreibt `stdout` Ausgabe anstatt an ein Silverlight\-Ziel des Typs `FILE`.  Weitere Informationen finden Sie unter [fprintf\_s, \_fprintf\_s\_l, fwprintf\_s, \_fwprintf\_s\_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
+ `printf_s`und `fprintf_s` Verhalten sich identisch, außer dass `printf_s` schreibt die Ausgabe an `stdout` anstelle eines Ziels vom Typ `FILE`. Weitere Informationen finden Sie unter [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
   
- `wprintf_s` ist eine Breitzeichenversion von `printf_s`; `format` ist eine Zeichenfolge mit Breitzeichen.  `wprintf_s` und `printf_s` verhalten sich identisch, wenn der Stream in ANSI\-Modus geöffnet ist.  `printf_s` unterstützt derzeit die Ausgabe in einen UNICODE\-Stream nicht.  
+ `wprintf_s` ist eine Breitzeichen-Version von `printf_s`; `format` ist eine Zeichenfolge mit Breitzeichen. `wprintf_s` und `printf_s` verhalten sich identisch, wenn der Stream in ANSI-Modus geöffnet ist. `printf_s` unterstützt derzeit die Ausgabe in einen UNICODE-Stream nicht.  
   
- Die Versionen dieser Funktionen mit dem `_l`\-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
+ Die Versionen dieser Funktionen mit dem `_l`-Suffix sind beinahe identisch, verwenden jedoch den ihnen übergebenen Gebietsschemaparameter anstelle des aktuellen Threadgebietsschemas.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|TCHAR.H\-Routine|\_UNICODE & \_MBCS nicht definiert|\_MBCS definiert|\_unicode definiert|  
-|----------------------|----------------------------------------|----------------------|-------------------------|  
+|TCHAR.H-Routine|_UNICODE und _MBCS nicht definiert.|_MBCS definiert|_unicode definiert|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tprintf_s`|`printf_s`|`printf_s`|`wprintf_s`|  
 |`_tprintf_s_l`|`_printf_s_l`|`_printf_s_l`|`_wprintf_s_l`|  
   
- Das `format`\-Argument besteht aus normalen Zeichen, Escapesequenzen und \(wenn Argumente `format` folgen\) aus Formatangaben.  Die normalen Zeichen und die Escapesequenzen werden in der Reihenfolge ihrer Darstellung auf `stdout` kopiert.  Beispiel: Die Zeile  
+ Das `format`-Argument besteht aus normalen Zeichen, Escapesequenzen und (wenn Argumente `format` folgen) aus Formatangaben. Die normalen Zeichen und die Escapesequenzen werden in der Reihenfolge ihrer Darstellung auf `stdout` kopiert. Beispiel: Die Zeile  
   
 ```  
 printf_s("Line one\n\t\tLine two\n");   
@@ -125,21 +142,21 @@ Line one
         Line two  
 ```  
   
- [Formatspezifikationen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) beginnen immer mit einem Prozentzeichen \(`%`\) und werden von links nach rechts gelesen.  Wenn `printf_s` auf die erste Formatspezifikation \(falls vorhanden\) trifft, konvertiert sie den Wert des ersten Arguments in `format` und gibt ihn entsprechend aus.  Mit der zweiten Formatspezifikation wird das zweite Argument konvertiert und ausgegeben, usw.  Wenn es mehrere Argumente als Formatspezifikationen gibt, werden die zusätzlichen Argumente ignoriert.  Die Ergebnisse sind nicht definiert, wenn nicht genügend Argumente für alle Formatspezifikationen vorhanden sind.  
+ [Formatspezifikationen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) beginnen immer mit einem Prozentzeichen (`%`) und werden von links nach rechts gelesen. Wenn `printf_s` auf die erste Formatspezifikation (falls vorhanden) trifft, konvertiert sie den Wert des ersten Arguments in `format` und gibt ihn entsprechend aus. Mit der zweiten Formatspezifikation wird das zweite Argument konvertiert und ausgegeben, usw. Wenn es mehrere Argumente als Formatspezifikationen gibt, werden die zusätzlichen Argumente ignoriert. Die Ergebnisse sind nicht definiert, wenn nicht genügend Argumente für alle Formatspezifikationen vorhanden sind.  
   
 > [!IMPORTANT]
 >  Stellen Sie sicher, dass `format` keine benutzerdefinierte Zeichenfolge ist.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`printf_s`, `_printf_s_l`|\<stdio.h\>|  
-|`wprintf_s`, `_wprintf_s_l`|\<stdio.h\> oder \<wchar.h\>|  
+|-------------|---------------------|  
+|`printf_s`, `_printf_s_l`|\<stdio.h>|  
+|`wprintf_s`, `_wprintf_s_l`|\<stdio.h> oder \<wchar.h>|  
   
- Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps nicht unterstützt.  Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C\-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]\-Apps verwendet werden können.  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
+ Die Konsole wird in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps nicht unterstützt. Die mit der Konsole verknüpften Standardstreamhandles, `stdin`, `stdout` und `stderr`, müssen umgeleitet werden, bevor sie von C-Laufzeitfunktionen in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_printf_s.c  
@@ -189,7 +206,7 @@ int main( void )
 }  
 ```  
   
-## Beispielausgabe  
+## <a name="sample-output"></a>Beispielausgabe  
   
 ```  
 Integer formats:  
@@ -217,18 +234,12 @@ Address as:   0012FF78
   
 ```  
   
-## .NET Framework-Entsprechung  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
--   [System::Console::WriteLine](https://msdn.microsoft.com/en-us/library/system.console.writeline.aspx)  
-  
-## Siehe auch  
- [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   
- [Stream\-E\/A](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Floating-Point Support (Gleitkommaunterstützung)](../../c-runtime-library/floating-point-support.md)   
+ [Stream I/O (Stream-E/A)](../../c-runtime-library/stream-i-o.md)   
  [Locale](../../c-runtime-library/locale.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [vprintf\-Funktionen](../../c-runtime-library/vprintf-functions.md)
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [vprintf-Funktionen](../../c-runtime-library/vprintf-functions.md)

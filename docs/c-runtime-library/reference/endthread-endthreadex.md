@@ -57,14 +57,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1e2211a34a7cc146d1ce3b791927ffc206edaef
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e329acaad53c8990f335394bbcb8f0401d71c463
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
-Beendet einen Thread. `_endthread` beendet einen von `_beginthread` erstellten Thread, und  `_endthreadex` beendet einen von`_beginthreadex`erstellten Thread.  
+Beendet einen Thread. `_endthread` beendet einen von `_beginthread` erstellten Thread, und  `_endthreadex` beendet einen von `_beginthreadex`erstellten Thread.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -83,11 +84,11 @@ void _endthreadex(
  Sie können `_endthread` oder `_endthreadex` explizit aufrufen, um einen Thread zu beenden. Allerdings wird `_endthread` oder `_endthreadex` automatisch aufgerufen, wenn der Thread aus der als Parameter an `_beginthread` oder `_beginthreadex`übergebenen Routine zurückgegeben wird. Das Beenden eines Threads durch Aufruf von `endthread` oder `_endthreadex` stellt die ordnungsgemäße Wiederherstellung der dem Thread zugeordneten Ressourcen sicher.  
   
 > [!NOTE]
->  Rufen Sie für eine mit „Libcmt.lib“ verknüpfte ausführbare Datei die [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) -Win32-API nicht auf, damit das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen gehindert wird. `_endthread` und `_endthreadex` geben zugeordnete Threadressourcen frei und rufen dann `ExitThread` auf.  
+>  Rufen Sie für eine mit „Libcmt.lib“ verknüpfte ausführbare Datei die [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) -Win32-API nicht auf, damit das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen gehindert wird. `_endthread` und `_endthreadex` geben zugeordnete Threadressourcen frei und rufen dann `ExitThread`auf.  
   
  `_endthread` schließt das Threadhandle automatisch. (Dieses Verhalten unterscheidet sich von dem der `ExitThread`-Win32-API.) Wenn Sie also `_beginthread` und `_endthread` verwenden, schließen Sie das Threadhandle nicht explizit mit dem Aufruf der [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx)-Win32-API.  
   
- Wie die `ExitThread` -Win32-API schließt `_endthreadex` nicht das Threadhandle. Wenn Sie also `_beginthreadex` und `_endthreadex` verwenden, müssen Sie das Threadhandle durch Aufrufen der `CloseHandle`-Win32-API schließen.  
+ Wie die `ExitThread` -Win32-API schließt `_endthreadex` nicht das Threadhandle. Wenn Sie also `_beginthreadex` und `_endthreadex`verwenden, müssen Sie das Threadhandle durch Aufrufen der `CloseHandle` -Win32-API schließen.  
   
 > [!NOTE]
 >  `_endthread` und `_endthreadex` führen dazu, dass im Thread ausstehende C++-Destruktoren nicht aufgerufen werden.  
@@ -106,9 +107,6 @@ void _endthreadex(
   
 ## <a name="example"></a>Beispiel  
  Weitere Informationen finden Sie im Beispiel für [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md).  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Process and Environment Control (Prozess- und Umgebungssteuerung)](../../c-runtime-library/process-and-environment-control.md)   

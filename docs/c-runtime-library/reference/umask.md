@@ -1,52 +1,69 @@
 ---
-title: "_umask | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_umask"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_umask"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_umask-Funktion"
-  - "Dateiberechtigungen [C++]"
-  - "Dateien [C++], Berechtigungseinstellungen für"
-  - "Masken"
-  - "Masken, Dateiberechtigungseinstellung"
-  - "umask-Funktion"
+title: _umask | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _umask
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _umask
+dev_langs:
+- C++
+helpviewer_keywords:
+- masks, file-permission-setting
+- _umask function
+- masks
+- umask function
+- file permissions [C++]
+- files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _umask
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f2ad9c75caa5f3816ab4791dc4e67cb7937bfad4
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
-Legt die Standarddateiberechtigungsmaske fest.  Eine sicherere Version dieser Funktion ist verfügbar; finden Sie unter [\_umask\_s](../../c-runtime-library/reference/umask-s.md).  
+---
+# <a name="umask"></a>_umask
+Legt die Standard-Dateiberechtigungsmaske fest. Es ist eine sicherere Version dieser Funktion verfügbar. Informationen dazu finden Sie unter [_umask_s](../../c-runtime-library/reference/umask-s.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 int _umask(  
@@ -54,43 +71,43 @@ int _umask(
 );  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `pmode`  
- Standardberechtigungseinstellung.  
+ Standard-Berechtigungseinstellung.  
   
-## Rückgabewert  
- `_umask` gibt dem vorhergehenden Wert von `pmode` zurück.  Es gibt keine Fehlerrückgabe.  
+## <a name="return-value"></a>Rückgabewert  
+ `_umask` gibt den vorherigen Wert von `pmode` zurück. Es gibt keine Fehlerrückgabe.  
   
-## Hinweise  
- Die `_umask`\-Funktion wird die Dateiberechtigungsmaske des aktuellen Prozesses auf den Modus ab, der von `pmode` angegeben wird *.* Die Dateiberechtigungsmaske ändert die Berechtigungseinstellung von neuen Dateien, die von `_creat`, `_open` oder `_sopen` erstellt werden.  Wenn ein Bit in der Maske 1 ist, wird das entsprechende Bit im angeforderten Berechtigungswert der Datei auf 0 festgelegt \(nicht zulässig\).  Wenn ein Bit in der Maske 0 ist, wird das entsprechende Bit unverändert gelassen.  Die Berechtigungseinstellung für eine neue Datei wird nicht festgelegt, bis die Datei zum ersten Mal geschlossen ist.  
+## <a name="remarks"></a>Hinweise  
+ Die `_umask` Funktion legt die dateiberechtigungsmaske des aktuellen Prozesses für den Modus gemäß `pmode`. Die Dateiberechtigungsmaske ändert die Berechtigungseinstellung neuer Dateien, die von `_creat`, `_open` oder `_sopen` erstellt werden. Wenn ein Bit in der Maske 1 ist, wird das entsprechende Bit im angeforderten Berechtigungswert der Datei auf 0 (nicht zulässig) festgelegt. Wenn ein Bit in der Maske 0 ist, bleibt das entsprechende Bit unverändert. Die Berechtigungseinstellung für eine neue Datei wird erst festgelegt, wenn die Datei zum ersten Mal geschlossen wird.  
   
- Der ganzzahlige Ausdruck `pmode` enthält eine oder beide der folgenden Manifestkonstanten, die in SYS\\STAT.H:  
+ Der ganzzahlige Ausdruck `pmode` enthält eine oder beide der folgenden Manifestkonstanten, die in SYS\Stat.h definiert sind:  
   
  `_S_IWRITE`  
- Schreiben zulässig.  
+ Schreiben erlaubt.  
   
  `_S_IREAD`  
- Lesen zulässig.  
+ Lesen erlaubt.  
   
  `_S_IREAD | _S_IWRITE`  
- Lesen und Schreiben zulässig.  
+ Lesen und Schreiben erlaubt.  
   
- Wenn beide Konstanten angegeben werden, sind sie mit dem bitweisen Operator OR verknüpft \(          `|`  \).  Wenn `pmode` das Argument `_S_IREAD`, wird das Lesen nicht zulässig \(die Datei ist lesegeschützt\).  Wenn `pmode` das Argument `_S_IWRITE`, wird das Schreiben nicht zulässig \(die Datei ist schreibgeschützt\).  Wenn das schreibensbit in der Maske gesetzt wird, werden alle neuen Dateien schreibgeschützt.  Beachten Sie das mit MS\-DOS\- und die Windows\-Betriebssysteme, alle Dateien sind lesbar; es ist nicht möglich, lesegeschützte Berechtigung zu geben.  Deshalb hat das Festlegen des Lesebits mit `_umask` keine Auswirkungen auf die Modi der Datei.  
+ Wenn beide Konstanten gegeben sind, werden sie mit dem bitweisen OR-Operator verbunden ( `|` ). Wenn das `pmode`-Argument `_S_IREAD` ist, ist Lesen nicht zulässig (die Datei ist lesegeschützt). Wenn das `pmode`-Argument `_S_IWRITE` ist, ist Schreiben nicht zulässig (die Datei ist schreibgeschützt). Wenn z.B. das Schreib-Bit in der Maske festgelegt ist, sind alle neuen Dateien schreibgeschützt. Beachten Sie, dass in MS-DOS und Windows-Betriebssystemen alle Dateien lesbar sind und es nicht möglich ist, nur Schreibberechtigungen zu vergeben. Deshalb hat es keine Auswirkung auf den Dateimodus, wenn das Lese-Bit mit `_umask` belegt wird.  
   
- Wenn `pmode` keine Kombination einer Manifestkonstanten ist oder einen alternative Konstanten enthält, ignoriert die Funktion einfach die.  
+ Wenn `pmode` keine Kombination aus einer der Manifestkonstanten ist oder eine alternative Gruppe von Konstanten enthält, ignoriert die Funktion diese einfach.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|`_umask`|\<io.h, sys\>\<\/stat.h, sys\/\>types.h \<\>|  
+|-------------|---------------------|  
+|`_umask`|\<io.h>, \<sys/stat.h>, \<sys/types.h>|  
   
  Zusätzliche Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md) in der Einführung.  
   
-## Bibliotheken  
- Alle Versionen [C\-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotheken  
+ Alle Versionen der [C-Laufzeitbibliotheken](../../c-runtime-library/crt-library-features.md).  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
 ```  
 // crt_umask.c  
@@ -115,14 +132,14 @@ int main( void )
 }  
 ```  
   
-  **Oldmask \= 0x0000**   
-## .NET Framework-Entsprechung  
- [System::IO::File::SetAttributes](https://msdn.microsoft.com/en-us/library/system.io.file.setattributes.aspx)  
+```Output  
+Oldmask = 0x0000  
+```  
   
-## Siehe auch  
- [Dateibehandlung](../../c-runtime-library/file-handling.md)   
- [E\/A auf niedriger Ebene](../../c-runtime-library/low-level-i-o.md)   
- [\_chmod, \_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_mkdir, \_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+## <a name="see-also"></a>Siehe auch  
+ [File Handling (Dateibehandlung)](../../c-runtime-library/file-handling.md)   
+ [Low-Level I/O (E/A auf niedriger Ebene)](../../c-runtime-library/low-level-i-o.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

@@ -66,10 +66,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: a42b5d8811e108b727671921322423d186d73afd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 69a19aaa457ffc52c431a9ca1c3597a475a10994
+ms.contentlocale: de-de
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
@@ -100,7 +101,7 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
   
  Es empfiehlt sich eine Verwendung von `_statusfp2` für Chips (wie Pentium IV), die sowohl einen x87- als auch einen SSE2-Gleitkommaprozessor haben. Bei `_statusfp2` werden die Adressen ausgefüllt, indem sowohl für den x87- als auch SSE2-Gleitkommaprozessor das Gleitkommastatuswort verwendet wird. Bei einem Chip, der sowohl x87- als auch SSE2-Gleitkommaprozessoren unterstützt, wird EM_AMBIGUOUS auf 1 festgelegt, wenn `_statusfp` oder `_controlfp` verwendet wird und die Aktion mehrdeutig ist, da sie sich sowohl auf das x87- oder das SSE2-Gleitkommastatuswort beziehen kann. Die `_statusfp2`-Funktion wird nur auf x86-Plattformen unterstützt.  
   
- Diese Funktionen eignen sich nicht für [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) da die common Language Runtime (CLR) nur die standardmäßige gleitkommagenauigkeit unterstützt.  
+ Diese Funktionen sind nicht sinnvoll für [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md) , da die common Language Runtime (CLR) nur die standardmäßige Genauigkeit von Gleitkommawerten unterstützt.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -155,9 +156,6 @@ Status = 0x00000000 - clear
 Status = 0x00000003 - inexact, underflow  
 Status = 0x00080003 - inexact, underflow, denormal  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)   

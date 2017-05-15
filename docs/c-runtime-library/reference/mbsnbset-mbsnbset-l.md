@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a9db88e2797e5828a007c21fd7f7fdde135ff4bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 51b82c6a60eb8024c267e07e1327c8afd7928eea
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
@@ -104,9 +105,9 @@ unsigned char *_mbsnbset_l(
  `_mbsnbset` gibt einen Zeiger auf die geänderte Zeichenfolge zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktionen `_mbsnbset` und `_mbsnbset_l` legen höchstens die ersten `count` Bytes von `str` auf `c` fest. Wenn `count` größer als die Länge von `str` ist, wird die Länge von `str` anstelle von `count` verwendet. Wenn `c` ein Multibytezeichen ist und nicht vollständig auf das von `count` angegebene letzte Byte festgelegt werden kann, dann wird das letzte Byte mit einem Leerzeichen aufgefüllt. `_mbsnbset` und `_mbsnbset_l` platzieren am Ende von `str` kein abschließendes NULL-Zeichen.  
+ Die Funktionen `_mbsnbset` und `_mbsnbset_l` legen höchstens die ersten `count` Bytes von `str` auf `c` fest. Wenn `count` größer als die Länge von `str` ist, wird die Länge von `str` anstelle von `count` verwendet. Wenn `c` ein Multibytezeichen ist und nicht vollständig auf das von `count` angegebene letzte Byte festgelegt werden kann, dann wird das letzte Byte mit einem Leerzeichen aufgefüllt. `_mbsnbset`und `_mbsnbset_l` eine terminierende ist nicht platziert werden, null am Ende der `str`.  
   
- `_mbsnbset` und `_mbsnbset_l` ähneln `_mbsnset`, außer dass sie `count`-Bytes statt `count`-Zeichen von `c` festlegen.  
+ `_mbsnbset`und `_mbsnbset_l` ähnelt `_mbsnset`, Ausnahme, dass `count` Bytes anstatt `count` Zeichen des `c`.  
   
  Wenn `str` gleich `NULL` ist oder`count` null ist, generiert diese Funktion eine Ausnahme wegen eines ungültigen Parameters, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird `errno` auf `EINVAL` gesetzt, und die Funktion gibt `NULL`zurück. Wenn `c` kein gültiges Multibytezeichen ist, wird `errno` auf `EINVAL` festgelegt und ein Leerzeichen wird stattdessen verwendet.  
   
@@ -155,9 +156,6 @@ int main( void )
 Before: This is a test  
 After:  **** is a test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   

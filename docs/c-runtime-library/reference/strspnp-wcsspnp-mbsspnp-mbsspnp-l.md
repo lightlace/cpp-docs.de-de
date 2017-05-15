@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0943a0b30643a6dff3d47508f9a514e3e0d441ff
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f7bf32d7fa725e1f012b2a793a8091674e1c2e9f
+ms.contentlocale: de-de
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
@@ -115,7 +116,7 @@ unsigned char *_mbsspnp_l(
  Zu verwendendes Gebietsschema.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `_strspnp`, `_wcsspnp` und `_mbsspnp` geben einen Zeiger auf das erste Zeichen in `str` zurück, das nicht zum Zeichensatz in `charset`* gehört.* Jede dieser Funktionen gibt `NULL` zurück, wenn `str` vollständig aus Zeichen von `charset`* besteht.* Für diese Routinen ist kein Rückgabewert zur Anzeige eines Fehlers reserviert.  
+ `_strspnp`, `_wcsspnp`, und `_mbsspnp` geben einen Zeiger auf das erste Zeichen in `str` , die gehört nicht zu den Satz von Zeichen in `charset`. Jede dieser Funktionen gibt `NULL` Wenn `str` vollständig besteht aus Zeichen aus `charset`. Für diese Routinen ist kein Rückgabewert zur Anzeige eines Fehlers reserviert.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `_mbsspnp`-Funktion gibt einen Zeiger auf das Multibytezeichen zurück, das das erste Zeichen in `str` ist, das nicht zum Zeichensatz in `charset` gehört. `_mbsspnp` erkennt Multibyte-Zeichenfolgen gemäß der aktuellen [Multibyte-Codepage](../../c-runtime-library/code-pages.md). Die Suche umfasst keine abschließenden Nullzeichen.  
@@ -163,9 +164,6 @@ int main( void ) {
 ```  
 abbage  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework  
- Nicht zutreffend. Mit `PInvoke`rufen Sie die Standard-C-Funktion auf. Weitere Informationen finden Sie unter [Beispiele für Plattformaufrufe](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zeichenfolgenbearbeitung](../../c-runtime-library/string-manipulation-crt.md)   

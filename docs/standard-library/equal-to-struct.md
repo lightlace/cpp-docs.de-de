@@ -1,78 +1,89 @@
 ---
-title: "equal_to-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::equal_to"
-  - "equal_to"
-  - "xfunctional/std::equal_to"
-  - "std.equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_to-Funktion"
-  - "equal_to-Struktur"
+title: equal_to-Struktur | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- equal_to
+- xfunctional/std::equal_to
+dev_langs:
+- C++
+helpviewer_keywords:
+- equal_to function
+- equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# equal_to-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: bac0d0114b10fc4ac7a83a60f21db5218cb3f1c8
+ms.contentlocale: de-de
+ms.lasthandoff: 04/19/2017
 
-Ein binäres Prädikat, mit dem der Gleichheitsvorgang \(`operator==`\) auf den Argumenten ausgeführt wird.  
+---
+# <a name="equalto-struct"></a>equal_to-Struktur
+Ein binäres Prädikat, mit dem der Gleichheitsvorgang (`operator==`) auf den Argumenten ausgeführt wird.  
   
-## Syntax  
-  
-```  
-template<class Type = void>  
-   struct equal_to : public binary_function<Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator==  
-template<>  
-   struct equal_to<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            == std::forward<Type2>(Right));  
-   };  
+## <a name="syntax"></a>Syntax  
   
 ```  
+template <class Type = void>  
+struct equal_to : public binary_function<Type, Type, bool>   
+ {  
+    bool operator()(const Type& Left, const Type& Right) const; 
+ };  
+ 
+// specialized transparent functor for operator== 
+template <>  
+struct equal_to<void>  
+ {  
+    template <class T, class U>  
+    auto operator()(T&& Left, U&& Right) const 
+      ->  decltype(std::forward<T>(Left) == std::forward<U>(Right));
+ };  
+```  
   
-#### Parameter  
- `Type`, `Type1`, `Type2`  
- Jeder Typ, der ein `operator==`\-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.  
+#### <a name="parameters"></a>Parameter  
+ `Type`, `T`, `U`  
+ Jeder Typ, der ein `operator==`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.  
   
  `Left`  
- Der linke Operand des Gleichheitsvorgangs.  Die nicht spezialisierte Vorlage besitzt ein lvalue\-Verweisargument vom Typ `Type`.  Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue\-Verweisargumenten des abgeleiteten Typs `Type1`.  
+ Der linke Operand des Gleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `T`.  
   
  `Right`  
- Der rechte Operand des Gleichheitsvorgangs.  Die nicht spezialisierte Vorlage besitzt ein lvalue\-Verweisargument vom Typ `Type`.  Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue\-Verweisargumenten des abgeleiteten Typs `Type2`.  
+ Der rechte Operand des Gleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.  
   
-## Rückgabewert  
- Das Ergebnis von `Left` `==` `Right`.  Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator==` zurückgegebenen Typs.  
+## <a name="return-value"></a>Rückgabewert  
+ Das Ergebnis von `Left``==``Right`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung des Ergebnisses mit dem von `operator==` zurückgegebenen Typs.  
   
-## Hinweise  
- Die Objekte vom Typ `Type` müssen auf Gleichheit vergleichbar sein.  Das erfordert, dass das mit dem `operator==`\-Element, das im Satz von Objekten definiert wird, die Eigenschaften einer mathematischen Äquivalenzrelation erfüllt werden.  Alle integrierten numerischen Typen und Zeigertypen erfüllen diese Anforderung.  
+## <a name="remarks"></a>Hinweise  
+ Die Objekte vom Typ `Type` müssen auf Gleichheit vergleichbar sein. Das erfordert, dass das mit dem `operator==`-Element, das im Satz von Objekten definiert wird, die Eigenschaften einer mathematischen Äquivalenzrelation erfüllt werden. Alle integrierten numerischen Typen und Zeigertypen erfüllen diese Anforderung.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // functional_equal_to.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -123,7 +134,11 @@ int main( )
 }  
 ```  
   
-  **Der Vektor v1 \= \(0 1 4 5 8 9\)**  
-**Der Vektor v2 \= \(\-0 1 \-4 5 \-8 9\)**  
-**Das Ergebnis des elementweisen equal\_to\-Vergleichs.**  
-**zwischen v1 & v2 ist: \(1 1 0 1 0 1\)**
+```Output  
+The vector v1 = ( 0 1 4 5 8 9 )  
+The vector v2 = ( -0 1 -4 5 -8 9 )  
+The result of the element-wise equal_to comparison  
+between v1 & v2 is: ( 1 1 0 1 0 1 )  
+```
+
+
