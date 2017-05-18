@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 4ace3bb50d824827071260e3f43cec3cda32742f
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ Diese Funktionen bieten Unterstützung für das Registrieren und Aufheben der Re
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
    
-##  <a name="a-nameatlcommoduleregisterservera--atlcommoduleregisterserver"></a><a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
  Diese Funktion wird aufgerufen, um alle Objekte in der Objektzuordnung zu registrieren.  
   
 ```
@@ -80,7 +81,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
   
  Diese Funktion wird aufgerufen, indem [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).  
   
-##  <a name="a-nameatlcommoduleunregisterservera--atlcommoduleunregisterserver"></a><a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
  Diese Funktion wird aufgerufen, um die Registrierung aller Objekte in der Objektzuordnung aufzuheben.  
   
 ```
@@ -108,7 +109,7 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
   
  Diese Funktion wird aufgerufen, indem [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).  
   
-##  <a name="a-nameatlcommoduleregisterclassobjectsa--atlcommoduleregisterclassobjects"></a><a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
  Diese Funktion wird aufgerufen, um Klassenobjekte zu registrieren.  
   
 ```
@@ -134,7 +135,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>Hinweise  
  Diese Hilfsfunktion ist der von verwendete [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (veraltete in ATL 7.0) und [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).  
   
-##  <a name="a-nameatlcommodulerevokeclassobjectsa--atlcommodulerevokeclassobjects"></a><a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
  Diese Funktion wird aufgerufen, um eine oder mehrere Klassenfactorys aus der ROT (Running Object Table) zu entfernen.  
   
 ```
@@ -151,7 +152,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>Hinweise  
  Diese Hilfsfunktion ist der von verwendete [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (veraltete in ATL 7.0) und [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).  
   
-##  <a name="a-nameatlcommodulegetclassobjecta--atlcommodulegetclassobject"></a><a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
  Diese Funktion wird aufgerufen, um die Klassenfactory zurückzugeben.  
   
 ```

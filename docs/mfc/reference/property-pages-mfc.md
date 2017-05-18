@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 50888697fe01d3a84d9aa4c6f5f92926e4681535
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -72,7 +73,7 @@ Eigenschaftenseiten anzeigen die aktuellen Werte der Eigenschaften für bestimmt
 |[END_PROPPAGEIDS](#end_proppageids)|Die Liste der Eigenschaftenseiten-IDs wird beendet.|  
 |[PROPPAGEID](#proppageid)|Deklariert eine Eigenschaftenseite der Control-Klasse.|  
   
-##  <a name="a-nameddpcbindexa--ddpcbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex  
+##  <a name="ddp_cbindex"></a>DDP_CBIndex  
  Mit dieser Funktion wird die Eigenschaftenseite `DoDataExchange` Funktion, um den Wert der Integer-Eigenschaft mit dem Index der aktuellen Auswahl in einem Kombinationsfeld auf der Eigenschaftenseite zu synchronisieren.  
   
 ```   
@@ -102,7 +103,7 @@ void AFXAPI DDP_CBIndex(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameddpcbstringa--ddpcbstring"></a><a name="ddp_cbstring"></a>DDP_CBString  
+##  <a name="ddp_cbstring"></a>DDP_CBString  
  Mit dieser Funktion wird die Eigenschaftenseite `DoDataExchange` Funktion, um den Wert einer Zeichenfolgeneigenschaft mit der aktuellen Auswahl in einem Kombinationsfeld auf der Eigenschaftenseite zu synchronisieren.  
   
 ```  
@@ -132,7 +133,7 @@ void AFXAPI DDP_CBString(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameddpcbstringexacta--ddpcbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact  
+##  <a name="ddp_cbstringexact"></a>DDP_CBStringExact  
  Mit dieser Funktion wird die Eigenschaftenseite `DoDataExchange` Funktion, um den Wert einer Zeichenfolgeneigenschaft zu synchronisieren, die die aktuelle Auswahl in einem Kombinationsfeld auf der Eigenschaftenseite genau übereinstimmt.  
   
 ```  
@@ -162,7 +163,7 @@ void AFXAPI DDP_CBStringExact(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameddpchecka--ddpcheck"></a><a name="ddp_check"></a>DDP_Check  
+##  <a name="ddp_check"></a>DDP_Check  
  Mit dieser Funktion wird die Eigenschaftenseite `DoDataExchange` Funktion, um den Wert der Eigenschaft mit dem zugeordneten Eigenschaft Seite das Kontrollkästchen-Steuerelement zu synchronisieren.  
   
 ```   
@@ -192,7 +193,7 @@ void AFXAPI DDP_Check(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameddplbindexa--ddplbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex  
+##  <a name="ddp_lbindex"></a>DDP_LBIndex  
  Mit dieser Funktion wird die Eigenschaftenseite `DoDataExchange` Funktion, um den Wert der Integer-Eigenschaft mit dem Index der aktuellen Auswahl in einem Listenfeld auf der Eigenschaftenseite zu synchronisieren.  
   
 ```   
@@ -222,7 +223,7 @@ void AFXAPI DDP_LBIndex(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameddplbstringa--ddplbstring"></a><a name="ddp_lbstring"></a>DDP_LBString  
+##  <a name="ddp_lbstring"></a>DDP_LBString  
  Mit dieser Funktion wird die Eigenschaftenseite `DoDataExchange` Funktion, um den Wert einer Zeichenfolgeneigenschaft mit der aktuellen Auswahl in einem Listenfeld auf der Eigenschaftenseite zu synchronisieren.  
   
 ```   
@@ -252,7 +253,7 @@ void AFXAPI DDP_LBString(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameddplbstringexacta--ddplbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact  
+##  <a name="ddp_lbstringexact"></a>DDP_LBStringExact  
  Mit dieser Funktion wird die Eigenschaftenseite `DoDataExchange` Funktion, um den Wert einer Zeichenfolgeneigenschaft zu synchronisieren, die die aktuelle Auswahl in einem Listenfeld auf der Eigenschaftenseite genau übereinstimmt.  
   
 ```   
@@ -282,7 +283,7 @@ void AFXAPI DDP_LBStringExact(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameddppostprocessinga--ddppostprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing  
+##  <a name="ddp_postprocessing"></a>DDP_PostProcessing  
  Mit dieser Funktion wird die Eigenschaftenseite `DoDataExchange` -Funktion verwendet, um die Übertragung von Eigenschaftswerten auf der Eigenschaftenseite an das Steuerelement Fertig stellen, wenn Eigenschaftswerte gespeichert werden.  
   
 ```   
@@ -301,7 +302,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameddpradioa--ddpradio"></a><a name="ddp_radio"></a>DDP_Radio  
+##  <a name="ddp_radio"></a>DDP_Radio  
  Rufen Sie diese Funktion in Ihrem Steuerelements `DoPropExchange` Funktion, um den Wert der Eigenschaft mit der zugehörigen Eigenschaft Seite Optionsfeld-Steuerelement zu synchronisieren.  
   
 ```   
@@ -331,7 +332,7 @@ void AFXAPI DDP_Radio(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameddptexta--ddptext"></a><a name="ddp_text"></a>DDP_Text  
+##  <a name="ddp_text"></a>DDP_Text  
  Rufen Sie diese Funktion in Ihrem Steuerelements `DoDataExchange` Funktion, um den Wert der Eigenschaft mit dem Steuerelement zugeordnete Eigenschaft zu synchronisieren.  
   
 ```   
@@ -403,7 +404,7 @@ void AFXAPI DDP_Text(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-namebeginproppageidsa--beginproppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
+##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
  Beginn der Definition des Steuerelements Liste der Eigenschaftenseiten-IDs.  
   
 ```   
@@ -425,7 +426,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameendproppageidsa--endproppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS  
+##  <a name="end_proppageids"></a>END_PROPPAGEIDS  
  Beendet die Definition der Eigenschaft ID Seitenliste.  
   
 ```   
@@ -439,7 +440,7 @@ END_PROPPAGEIDS(class_name)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameproppageida--proppageid"></a><a name="proppageid"></a>PROPPAGEID  
+##  <a name="proppageid"></a>PROPPAGEID  
  Eine Eigenschaftenseite für die Verwendung hinzugefügt durch das OLE-Steuerelement.  
   
 ```   

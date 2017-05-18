@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 8947930d20cc65075abe442b233e4c086f10f76e
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -67,7 +68,7 @@ OLE-Steuerelemente können Schnittstellen für andere Anwendungen verfügbar zu 
 |[AfxConnectionAdvise](#afxconnectionadvise)|Stellt eine Verbindung zwischen einer Quelle und Senke.|  
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|Unterbricht die Verbindung zwischen einer Quelle und Senke.|  
   
-##  <a name="a-namebeginconnectionparta--beginconnectionpart"></a><a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
+##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
  Verwenden der `BEGIN_CONNECTION_PART` Makro, um die Definition der zusätzliche Verbindungspunkte über die Verbindungspunkte Ereignis- und Benachrichtigung zu beginnen.  
   
 ```   
@@ -87,7 +88,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameendconnectionparta--endconnectionpart"></a><a name="end_connection_part"></a>END_CONNECTION_PART  
+##  <a name="end_connection_part"></a>END_CONNECTION_PART  
  Die Deklaration der Verbindungspunkt wird beendet.  
   
 ```   
@@ -101,7 +102,7 @@ END_CONNECTION_PART(localClass)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameconnectioniida--connectioniid"></a><a name="connection_iid"></a>CONNECTION_IID  
+##  <a name="connection_iid"></a>CONNECTION_IID  
  Verwenden Sie zwischen dem `BEGIN_CONNECTION_PART` und `END_CONNECTION_PART` Makros definieren eine Schnittstellen-ID für einen Verbindungspunkt unterstützt das OLE-Steuerelement.  
   
 ```   
@@ -122,7 +123,7 @@ CONNECTION_IID(iid)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-namedeclareconnectionmapa--declareconnectionmap"></a><a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
+##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
  Jede `COleControl`-abgeleiteten Klasse in Ihrem Programm bieten Verbindungstabelle um zusätzliche anzugeben, die das Steuerelement unterstützt.  
   
 ```   
@@ -135,7 +136,7 @@ DECLARE_CONNECTION_MAP()
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-namebeginconnectionmapa--beginconnectionmap"></a><a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
+##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
  Jede `COleControl`-abgeleiteten Klasse in Ihrem Programm bieten Verbindungstabelle um Verbindungspunkte anzugeben, die vom Steuerelement nicht unterstützt wird.  
   
 ```   
@@ -155,7 +156,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameendconnectionmapa--endconnectionmap"></a><a name="end_connection_map"></a>END_CONNECTION_MAP  
+##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
  Beendet die Definition der Zuordnung Verbindung.  
   
 ```   
@@ -165,7 +166,7 @@ END_CONNECTION_MAP()
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameconnectionparta--connectionpart"></a><a name="connection_part"></a>CONNECTION_PART  
+##  <a name="connection_part"></a>CONNECTION_PART  
  Ordnet einen Verbindungspunkt für das OLE-Steuerelement zu einer bestimmten Schnittstelle-ID.  
   
 ```   
@@ -192,7 +193,7 @@ CONNECTION_PART(theClass, iid, localClass)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameafxconnectionadvisea--afxconnectionadvise"></a><a name="afxconnectionadvise"></a>AfxConnectionAdvise  
+##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
  Rufen Sie diese Funktion, um eine Verbindung zwischen einer Quelle, die durch angegebene `pUnkSrc`, und eine Spüle, angegeben durch `pUnkSink`.  
   
 ```   
@@ -229,7 +230,7 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxctl.h 
 
-##  <a name="a-nameafxconnectionunadvisea--afxconnectionunadvise"></a><a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
+##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
  Mit dieser Funktion können Sie eine Verbindung zwischen einer Quelle, angegeben durch Trennen `pUnkSrc`, und eine Spüle, angegeben durch `pUnkSink`.  
   
 ```   

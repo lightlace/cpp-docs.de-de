@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 26eea5cc8ce8e18af84a9ca89e5ddc94272be44c
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -48,7 +49,7 @@ Diese Makros definieren Kategorie zugeordnet.
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
 
-##  <a name="a-namebegincategorymapa--begincategorymap"></a><a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
+##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
  Markiert den Beginn der Zuordnung Kategorie.  
   
 ```
@@ -74,7 +75,7 @@ BEGIN_CATEGORY_MAP(theClass)
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing&#100;](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="a-nameendcategorymapa--endcategorymap"></a><a name="end_category_map"></a>END_CATEGORY_MAP  
+##  <a name="end_category_map"></a>END_CATEGORY_MAP  
  Markiert das Ende der Zuordnung Kategorie.  
   
 ```
@@ -84,7 +85,7 @@ END_CATEGORY_MAP()
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_CATEGORY_MAP](#begin_category_map).  
   
-##  <a name="a-nameimplementedcategorya--implementedcategory"></a><a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
+##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
  Hinzufügen einer `IMPLEMENTED_CATEGORY` Makro für Ihre Komponentennamens [Kategorie Karte](#begin_category_map) angegeben wird, dass er registriert werden soll, wie die Implementierung der identifizierte Kategorie der `catID` Parameter.  
   
 ```
@@ -117,7 +118,7 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing&#100;](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="a-namerequiredcategorya--requiredcategory"></a><a name="required_category"></a>REQUIRED_CATEGORY  
+##  <a name="required_category"></a>REQUIRED_CATEGORY  
  Hinzufügen einer `REQUIRED_CATEGORY` Makro für Ihre Komponentennamens [Kategorie Karte](#begin_category_map) angeben, dass es erfordern, die Kategorien von registriert werden soll die `catID` Parameter.  
   
 ```

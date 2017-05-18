@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 7e8c664bd6632f480ba53b9dedea914bbc8e4dd7
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ Wenn Sie lediglich das `cin`-Objekt verwenden, müssen Sie keinen Eingabestream 
   
 - [Konstruktoren für Zeichenfolge-Eingabestream](#vclrfinputstringstreamconstructorsanchor9)  
   
-##  <a name="a-namevclrfinputfilestreamconstructorsanchor8a-input-file-stream-constructors"></a><a name="vclrfinputfilestreamconstructorsanchor8"></a>Konstruktoren für Dateieingabestream  
+##  <a name="vclrfinputfilestreamconstructorsanchor8"></a>Konstruktoren für Dateieingabestream  
  Es gibt zwei Möglichkeiten, einen Dateieingabestream zu erstellen:  
   
 -   Verwenden Sie den `void`-Argumentkonstruktor, und rufen Sie anschließend die `open`-Memberfunktion auf:  
@@ -64,7 +65,7 @@ Wenn Sie lediglich das `cin`-Objekt verwenden, müssen Sie keinen Eingabestream 
     ifstream myFile("filename");
 ```  
   
-##  <a name="a-namevclrfinputstringstreamconstructorsanchor9a-input-string-stream-constructors"></a><a name="vclrfinputstringstreamconstructorsanchor9"></a>Konstruktoren für Zeichenfolge-Eingabestream  
+##  <a name="vclrfinputstringstreamconstructorsanchor9"></a>Konstruktoren für Zeichenfolge-Eingabestream  
  Konstruktoren für Zeichenfolge-Eingabestream erfordern die Adresse von vorab zugeordnetem, vorinitialisierten Speicher:  
   
 ```  

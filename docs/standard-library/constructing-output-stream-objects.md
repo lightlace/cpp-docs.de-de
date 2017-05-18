@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: ca8d4e9a44f4550d02e6d224ce0130d15e81da14
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ Wenn Sie lediglich die vordefinierten `cout`, `cerr` oder `clog`-Objekte verwend
   
 - [Konstruktoren für Zeichenfolge-Ausgabestream](#vclrfoutputstringstreamconstructorsanchor2)  
   
-##  <a name="a-namevclrfoutputfilestreamconstructorsanchor1a-output-file-stream-constructors"></a><a name="vclrfoutputfilestreamconstructorsanchor1"></a>Konstruktoren für Dateiausgabestream  
+##  <a name="vclrfoutputfilestreamconstructorsanchor1"></a>Konstruktoren für Dateiausgabestream  
  Sie können einen Dateiausgabestream auf eine der beiden folgenden Arten erstellen:  
   
 -   Verwenden Sie den Standardkonstruktor, und rufen Sie anschließend die `open`-Memberfunktion auf:  
@@ -64,7 +65,7 @@ Wenn Sie lediglich die vordefinierten `cout`, `cerr` oder `clog`-Objekte verwend
     ofstream myFile("filename", ios_base::out);
 ```  
   
-##  <a name="a-namevclrfoutputstringstreamconstructorsanchor2a-output-string-stream-constructors"></a><a name="vclrfoutputstringstreamconstructorsanchor2"></a>Konstruktoren für Zeichenfolge-Ausgabestream  
+##  <a name="vclrfoutputstringstreamconstructorsanchor2"></a>Konstruktoren für Zeichenfolge-Ausgabestream  
  Um einen Zeichenfolge-Ausgabestream zu erstellen, können Sie `ostringstream` auf folgende Art verwenden:  
   
 ```  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 8a3fbcf66036ef3df3bd34b5182dac8af3dfccef
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -51,7 +52,7 @@ Typbibliotheken verfügbar machen, die Schnittstellen eines OLE-Steuerelements a
 |[DECLARE_OLETYPELIB](#declare_oletypelib)|Deklariert einen `GetTypeLib` -Memberfunktion eines OLE-Steuerelements (muss in der Klassendeklaration verwendet werden).|  
 |[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementiert eine `GetTypeLib` -Memberfunktion eines OLE-Steuerelements (muss in der klassenimplementierung verwendet werden).|  
   
-##  <a name="a-namedeclareoletypeliba--declareoletypelib"></a><a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
+##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
  Deklariert die `GetTypeLib` -Memberfunktion der Steuerelementklasse.  
   
 ```   
@@ -68,7 +69,7 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h  
 
-##  <a name="a-nameimplementoletypeliba--implementoletypelib"></a><a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
+##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
  Implementiert das Steuerelement `GetTypeLib` Member-Funktion.  
   
 ```   

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: efb7e7da896aea4e377225f4c1e2c9948e635705
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -46,7 +47,7 @@ Diese Funktionen bieten Unterstützung für die Konvertierung von Pixel und HIME
 |[AtlHiMetricToPixel](#atlhimetrictopixel)|HIMETRIC-Einheiten (à 0,01 Millimeter) konvertiert in Pixel.|  
 |[AtlPixelToHiMetric](#atlpixeltohimetric)|Konvertiert Pixel HIMETRIC-Einheiten (à ist 0,01 Millimeter).|  
   
-##  <a name="a-nameatlhimetrictopixela--atlhimetrictopixel"></a><a name="atlhimetrictopixel"></a>AtlHiMetricToPixel  
+##  <a name="atlhimetrictopixel"></a>AtlHiMetricToPixel  
  Konvertiert die Größe eines Objekts von HIMETRIC-Einheiten (à 0,01 Millimeter) in Pixel auf dem Bildschirmgerät.  
   
  
@@ -69,7 +70,7 @@ extern void AtlHiMetricToPixel(
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h  
   
-##  <a name="a-nameatlpixeltohimetrica--atlpixeltohimetric"></a><a name="atlpixeltohimetric"></a>AtlPixelToHiMetric  
+##  <a name="atlpixeltohimetric"></a>AtlPixelToHiMetric  
  Konvertiert die Größe eines Objekts von Pixeln auf dem Bildschirmgerät in HIMETRIC-Einheiten (à 0,01 Millimeter).  
   
 ```

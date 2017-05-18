@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 9c54fb7dc3802e78c8dc68df02ff55ef4732a36b
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -57,7 +58,7 @@ OLE-Steuerelemente, wie andere OLE-Server-Objekte können von anderen OLE-kompat
   
  `AfxOleRegisterTypeLib`wird normalerweise aufgerufen, in einem Steuerelement-DLL-Implementierung von `DllRegisterServer`. Auf ähnliche Weise `AfxOleUnregisterTypeLib` wird aufgerufen, indem Sie `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, und `AfxOleUnregisterClass` sind in der Regel aufgerufen, durch die `UpdateRegistry` -Memberfunktion des eines Steuerelements Klasse Factory oder der Eigenschaft.  
   
-##  <a name="a-nameafxoleregistercontrolclassa--afxoleregistercontrolclass"></a><a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass  
+##  <a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass  
  Registriert die Control-Klasse mit der Datenbank der Windows-Registrierung.  
   
 ```   
@@ -172,7 +173,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameafxoleregisterpropertypageclassa--afxoleregisterpropertypageclass"></a><a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass  
+##  <a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass  
  Registriert die Eigenschaftenseitenklasse mit der Datenbank der Windows-Registrierung.  
   
 ```  
@@ -210,7 +211,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameafxoleregistertypeliba--afxoleregistertypelib"></a><a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib  
+##  <a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib  
  Die Typbibliothek mit der Datenbank der Windows-Registrierung registriert und können die Typbibliothek von anderen Containern verwendet werden, die OLE-Steuerelements bekannt sind.  
   
 ```   
@@ -248,7 +249,7 @@ BOOL AfxOleRegisterTypeLib(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
-##  <a name="a-nameafxoleunregisterclassa--afxoleunregisterclass"></a><a name="afxoleunregisterclass"></a>AfxOleUnregisterClass  
+##  <a name="afxoleunregisterclass"></a>AfxOleUnregisterClass  
  Entfernt den Eintrag Steuerelements oder einer Eigenschaft Seite Klasse aus der Datenbank der Windows-Registrierung.  
   
 ```   
@@ -268,7 +269,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameafxoleunregistertypeliba--afxoleunregistertypelib"></a><a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib  
+##  <a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib  
  Rufen Sie diese Funktion, um die Art "Bibliothek" aus der Datenbank der Windows-Registrierung zu entfernen.  
   
 ```   

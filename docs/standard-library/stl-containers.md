@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
 ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -45,7 +46,7 @@ Die Standardbibliothek stellt unterschiedliche typsichere Container zum Speicher
   
  Container können in drei Kategorien unterteilt werden: Sequenzcontainer, assoziative Container und Containeradapter.  
   
-##  <a name="a-namesequencecontainersa-sequence-containers"></a><a name="sequence_containers"></a> Sequenzcontainer  
+##  <a name="sequence_containers"></a> Sequenzcontainer  
  Sequenzcontainer wahren die Reihenfolge der von Ihnen angegebenen eingefügten Elemente.  
   
  Ein `vector`-Container verhält sich wie ein Array, kann jedoch nach Bedarf automatisch erweitert werden. Er wird mit direktem Zugriff bzw. zusammenhängend gespeichert, und ist in der Länge hochgradig flexibel. Aus diesen und weiteren Gründen ist `vector` der bevorzugte Sequenzcontainer für die meisten Anwendungen. Verwenden Sie einen Vektor, wenn Sie sich nicht sicher sind, welchen Sequenzcontainertyp Sie verwenden sollen. Weitere Informationen finden Sie unter [vector-Klasse](../standard-library/vector-class.md).  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
 ms.openlocfilehash: f1ae094e7085017f03daab3f73323da13ab1be39
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -55,7 +56,7 @@ Typ umwandeln Makros bieten eine Möglichkeit, einen angegebenen Zeiger auf eine
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|Wandelt einen Zeiger auf einen Zeiger auf ein Objekt der Klasse beim Überprüfen, um festzustellen, ob die Umwandlung zulässig ist.|  
 |[STATIC_DOWNCAST](#static_downcast)|Wandelt einen Zeiger auf ein Objekt aus einer Klasse in einen Zeiger eines zugehörigen Typs. In einem Debugbuild bewirkt, dass ein **ASSERT** ist das Objekt keine "Art von" den Zieltyp.|  
   
-##  <a name="a-namedynamicdowncasta--dynamicdowncast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
  Bietet eine praktische Möglichkeit, einen Zeiger auf einen Zeiger auf ein Objekt der Klasse umgewandelt, beim Überprüfen, um festzustellen, ob die Umwandlung zulässig ist.  
   
 ```   
@@ -74,7 +75,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  Wenn das Objekt auf der Zeiger verweist, ist eine "Art von" bezeichnete Klasse das Makro gibt den entsprechenden Zeiger zurück. Wenn es sich nicht um eine Umwandlung zulässig ist, wird das Makro gibt **NULL**.  
   
-##  <a name="a-namestaticdowncasta--staticdowncast"></a><a name="static_downcast"></a>STATIC_DOWNCAST  
+##  <a name="static_downcast"></a>STATIC_DOWNCAST  
  Umwandlungen *Pobject* in einen Zeiger auf eine *Class_name* Objekt.  
   
 ```   

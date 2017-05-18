@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: f03ca61c6ab3c550c316b380d34eb5fa4f3b61de
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -47,7 +48,7 @@ Diese Makros definieren Objekt Karten und Einträge.
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
    
-##  <a name="a-namedeclareobjectdescriptiona--declareobjectdescription"></a><a name="declare_object_description"></a>DECLARE_OBJECT_DESCRIPTION  
+##  <a name="declare_object_description"></a>DECLARE_OBJECT_DESCRIPTION  
  Können Sie eine Beschreibung für das Klassenobjekt angeben.  
   
 ```
@@ -71,7 +72,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing&#123;](../../atl/codesnippet/cpp/object-map-macros_1.h)]  
   
-##  <a name="a-nameobjectentryautoa--objectentryauto"></a><a name="object_entry_auto"></a>OBJECT_ENTRY_AUTO  
+##  <a name="object_entry_auto"></a>OBJECT_ENTRY_AUTO  
  Ein ATL-Objekt in die Objekttabelle gelangt, wird die Registrierung und erstellt eine Instanz des Objekts.  
   
 ```
@@ -102,7 +103,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 |Auf Klassenebene Initialisierung und Bereinigung|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
 
   
-##  <a name="a-nameobjectentrynoncreateableexautoa--objectentrynoncreateableexauto"></a><a name="object_entry_non_createable_ex_auto"></a>OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO  
+##  <a name="object_entry_non_createable_ex_auto"></a>OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO  
  Ermöglicht es Ihnen, anzugeben, dass das Objekt registriert und initialisiert werden sollte, jedoch nicht extern über `CoCreateInstance` erstellbar sein sollte.  
   
 ```

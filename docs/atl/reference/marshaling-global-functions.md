@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
 ms.openlocfilehash: dd4b8d50ec69974b7b2af29438b1657e1ce592b4
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -47,7 +48,7 @@ Diese Funktionen unterstützen Marshalling und Marshallen von Daten in Schnittst
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Erstellt ein neues Streamobjekt und marshallt den angegebenen Schnittstellenzeiger.|  
 |[AtlUnmarshalPtr](#atlunmarshalptr)|Konvertiert einen Datenstrom Marshallen von Daten in einen Schnittstellenzeiger.|  
   
-##  <a name="a-nameatlfreemarshalstreama--atlfreemarshalstream"></a><a name="atlfreemarshalstream"></a>AtlFreeMarshalStream  
+##  <a name="atlfreemarshalstream"></a>AtlFreeMarshalStream  
  Gibt die Marschalldaten im Stream und anschließend den Streamzeiger frei.  
 
 ```
@@ -61,7 +62,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [AtlMarshalPtrInProc](#atlmarshalptrinproc).  
   
-##  <a name="a-nameatlmarshalptrinproca--atlmarshalptrinproc"></a><a name="atlmarshalptrinproc"></a>AtlMarshalPtrInProc  
+##  <a name="atlmarshalptrinproc"></a>AtlMarshalPtrInProc  
  Erstellt ein neues Streamobjekt, schreibt die CLSID des Proxys in den Stream und marshallt den angegebenen Schnittstellenzeiger durch Schreiben der für die Initialisierung des Proxys erforderlichen Daten in den Stream.  
   
 ```
@@ -94,7 +95,7 @@ HRESULT AtlMarshalPtrInProc(
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM&#50;](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
   
-##  <a name="a-nameatlunmarshalptra--atlunmarshalptr"></a><a name="atlunmarshalptr"></a>AtlUnmarshalPtr  
+##  <a name="atlunmarshalptr"></a>AtlUnmarshalPtr  
  Konvertiert die Marshallingdaten des Streams in einen Schnittstellenzeiger, der vom Client verwendet werden kann.  
    
 ```
