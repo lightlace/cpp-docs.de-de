@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
 ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
+ms.contentlocale: de-de
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portieren auf die universelle Windows-Plattform (C++)
@@ -48,7 +50,7 @@ In diesem Thema finden Sie Informationen zum Portieren von vorhandenem C++-Code 
   
  Wenn Sie über eine klassische Wind32-DLL-Datei für Desktopcomputer verfügen und sie über eine UWP-Anwendung aufrufen möchten, können Sie dies ebenfalls vornehmen. Auf diese Weise können Sie eine UWP-Benutzeroberflächenebene für eine vorhandene klassische Windows C++-Desktopcomputeranwendung oder Ihren plattformübergreifenden C++-Standardcode erstellen. Siehe [Vorgehensweise: Verwenden von vorhandenem C++-Code in einer universelle Windows-Plattform-App](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).  
   
-##  <a name="a-namebk81storeappa-porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a> Portieren einer Windows 8.1 Store-App auf die UWP  
+##  <a name="BK_81StoreApp"></a> Portieren einer Windows 8.1 Store-App auf die UWP  
  Wenn Sie eine Windows 8.1 Store-App haben, können Sie sie mithilfe dieses Verfahrens auf jedem Gerät mit Windows 10 unter UWP ausführen.  Am besten erstellen Sie das Projekt zunächst mit Visual Studio 2017 als Windows 8.1-Projekt, um durch Änderungen im Compiler und Bibliotheken entstandene Fehler zu beheben. Nachdem Sie dies vorgenommen haben, gibt es zwei Möglichkeiten, um dies zu einem Windows 10-UWP-Projekt umzuwandeln. Die einfachste Möglichkeit (wird in der folgenden Vorgehensweise erläutert) besteht darin, indem Sie ein universelles Windows-Projekt erstellen und Ihren vorhandenen Code hineinkopieren. Wenn Sie ein universelles Projekt für Windows 8.1-Desktopcomputer und Windows Phone 8.1 verwendet haben, beginnt das Projekt zwei unterschiedliche Layouts in XAML, endet jedoch mit einem einzelnen dynamischen Layout, das die Größe anpasst.  
   
 #### <a name="to-port-a-windows-81-store-app-to-the-uwp"></a>So portieren Sie einer Windows 8.1 Store-App auf UWP  
@@ -92,7 +94,7 @@ In diesem Thema finden Sie Informationen zum Portieren von vorhandenem C++-Code 
   
 11. Führen Sie die App in einem Emulator oder auf einem physischen Gerät, dessen Gerätetyp von Ihrer App unterstützt wird. Um einen Emulator auszuführen, müssen Sie Visual Studio auf einem physischen Computer ausführen, nicht auf einem virtuellen Computer.  
   
-##  <a name="a-namebk81componenta-porting-a-windows-81-runtime-component-to-the-uwp"></a><a name="BK_81Component"></a> Portieren einer Windows 8.1-Runtime-Komponente auf die UWP  
+##  <a name="BK_81Component"></a> Portieren einer Windows 8.1-Runtime-Komponente auf die UWP  
  Wenn Sie eine DLL oder eine Windows-Runtime-Komponente besitzen, die bereits mit Windows 8.1 Store-Apps funktioniert, können Sie dieses Verfahren verwenden, um die Komponente oder DLL abzurufen, die mit UWP und Windows 10 funktioniert. Das grundlegende Verfahren besteht darin, ein neues Projekt zu erstellen und Ihren Code hinein zu kopieren.  
   
 #### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>So portieren Sie eine Windows 8.1-Runtime-Komponente zur UWP  
@@ -131,9 +133,4 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 ## <a name="see-also"></a>Siehe auch  
  [Visual C++: Portierungsanleitung](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [Entwickeln von Apps für die universelle Windows-Plattform (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

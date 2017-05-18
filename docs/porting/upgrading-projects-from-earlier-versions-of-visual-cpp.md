@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,9 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
 ms.openlocfilehash: 9a08af4a82aa6adcdb9e03899195f5329866eca2
+ms.contentlocale: de-de
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Aktualisieren von Projekten von früheren Versionen von Visual C++
@@ -63,8 +65,3 @@ In den meisten Fällen können Sie ein Projekt öffnen, das in einer früheren V
  [Neuerungen bei Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) 
  [Änderungsverlauf von Visual C++ von 2003 bis 2015](../porting/visual-cpp-change-history-2003-2015.md)   
  [Nicht dem Standard entsprechendes Verhalten](../cpp/nonstandard-behavior.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

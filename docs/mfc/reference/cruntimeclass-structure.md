@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -36,9 +36,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 17994895aec5eee3fbe67bef5f80494988906df9
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -87,7 +88,7 @@ struct CRuntimeClass
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afx.h  
   
-##  <a name="a-namecreateobjecta--cruntimeclasscreateobject"></a><a name="createobject"></a>CRuntimeClass::CreateObject  
+##  <a name="createobject"></a>CRuntimeClass::CreateObject  
  Rufen Sie diese Funktion, um die angegebene Klasse zur Laufzeit dynamisch zu erstellen.  
   
 ```  
@@ -111,7 +112,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="a-namefromnamea--cruntimeclassfromname"></a><a name="fromname"></a>CRuntimeClass  
+##  <a name="fromname"></a>CRuntimeClass  
  Rufen Sie diese Funktion zum Abrufen der `CRuntimeClass` Struktur, die den tatsächlichen Namen zugeordnet.  
   
 ```  
@@ -130,7 +131,7 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCObjectSample&17;](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
   
-##  <a name="a-nameisderivedfroma--cruntimeclassisderivedfrom"></a><a name="isderivedfrom"></a>CRuntimeClass::IsDerivedFrom  
+##  <a name="isderivedfrom"></a>CRuntimeClass::IsDerivedFrom  
  Mit dieser Funktion können Sie bestimmen, ob die Klasse angegeben wird, die aufrufende Klasse abgeleitet ist die *pBaseClass* Parameter.  
   
 ```  
@@ -157,7 +158,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCObjectSample&18;](../../mfc/codesnippet/cpp/cruntimeclass-structure_2.cpp)]  
   
-##  <a name="a-namemlpszclassnamea--cruntimeclassmlpszclassname"></a><a name="m_lpszclassname"></a>CRuntimeClass::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>CRuntimeClass::m_lpszClassName  
  Eine auf Null endende Zeichenfolge mit dem Namen der ASCII-Klasse.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -166,7 +167,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="a-namemnobjectsizea--cruntimeclassmnobjectsize"></a><a name="m_nobjectsize"></a>CRuntimeClass::m_nObjectSize  
+##  <a name="m_nobjectsize"></a>CRuntimeClass::m_nObjectSize  
  Die Größe des Objekts in Bytes.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -175,7 +176,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="a-namempbaseclassa--cruntimeclassmpbaseclass"></a><a name="m_pbaseclass"></a>CRuntimeClass::m_pBaseClass  
+##  <a name="m_pbaseclass"></a>CRuntimeClass::m_pBaseClass  
  Wenn Ihre Anwendung statisch mit MFC verknüpft wird, handelt es sich bei diesen Datenmember enthält einen Zeiger auf die `CRuntimeClass` Struktur der Basisklasse.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -184,13 +185,13 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="a-namempfncreateobjecta--cruntimeclassmpfncreateobject"></a><a name="m_pfncreateobject"></a>CRuntimeClass::m_pfnCreateObject  
+##  <a name="m_pfncreateobject"></a>CRuntimeClass::m_pfnCreateObject  
  Ein Funktionszeiger, mit dem Standardkonstruktor, der ein Objekt der Klasse erstellt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
  This-Zeiger ist nur gültig, wenn die Klasse die dynamische Erstellung unterstützt; die Funktion andernfalls **NULL**.  
   
-##  <a name="a-namempfngetbaseclassa--cruntimeclassmpfngetbaseclass"></a><a name="m_pfngetbaseclass"></a>CRuntimeClass::m_pfnGetBaseClass  
+##  <a name="m_pfngetbaseclass"></a>CRuntimeClass::m_pfnGetBaseClass  
  Wenn Ihre Anwendung die MFC-Bibliothek als gemeinsam genutzte DLL verwendet, zeigt dieses Datenelement an eine Funktion, die zurückgibt die `CRuntimeClass` Struktur der Basisklasse.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -199,7 +200,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="a-namemwschemaa--cruntimeclassmwschema"></a><a name="m_wschema"></a>CRuntimeClass::m_wSchema  
+##  <a name="m_wschema"></a>CRuntimeClass::m_wSchema  
  Die Schema-Anzahl (-1 für nicht serialisierbare Klassen).  
   
 ### <a name="remarks"></a>Hinweise  

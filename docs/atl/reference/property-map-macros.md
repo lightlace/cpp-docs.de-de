@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: fbbed22766f9029456f15c4a554ae91322e6a275
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ Diese Makros definieren eigenschaftenzuordnungen und Einträge.
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
    
-##  <a name="a-namebeginpropmapa--beginpropmap"></a><a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
  Markiert den Anfang des Objekts Eigenschaft Zuordnung.  
   
 ```
@@ -73,7 +74,7 @@ BEGIN_PROP_MAP(theClass)
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing&#103;](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="a-namepropdataentrya--propdataentry"></a><a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
  Gibt den Umfang oder die Dimensionen eines ActiveX-Steuerelements.  
   
 ```
@@ -102,7 +103,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing&#132;](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="a-namepropentrytypea--propentrytype"></a><a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
  Verwenden Sie dieses Makro, eine Beschreibung, die DISPID-Eigenschaft und die Eigenschaft Eigenschaftenseite CLSID in die Objekttabelle Eigenschaft eingeben.  
   
 ```
@@ -130,7 +131,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_PROP_MAP](#begin_prop_map).  
   
-##  <a name="a-namepropentrytypeexa--propentrytypeex"></a><a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX ZU  
+##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX ZU  
  Ähnlich wie [PROP_ENTRY_TYPE](#prop_entry_type), jedoch können Sie eine bestimmte IID angeben, wenn das Objekt mehrere duale Schnittstellen unterstützt.  
   
 ```
@@ -163,7 +164,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing&#133;](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="a-nameproppagea--proppage"></a><a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>PROP_PAGE  
  Verwenden Sie dieses Makro, um eine Eigenschaftenseite CLSID in die Objekttabelle Eigenschaft einzugeben.  
   
 ```
@@ -185,7 +186,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing&#134;](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="a-nameendpropmapa--endpropmap"></a><a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>END_PROP_MAP  
  Markiert das Ende des Objekts eigenschaftszuordnung.  
   
 ```

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
 ms.openlocfilehash: 9fb8a907c8052c9816d6b87247e903a63f34a5be
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -53,7 +54,7 @@ Diese Makros definieren ereignissenkenzuordnungen und Einträge.
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
 
-##  <a name="a-namebeginsinkmapa--beginsinkmap"></a><a name="begin_sink_map"></a>BEGIN_SINK_MAP  
+##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP  
  Deklariert den Beginn der Ereignis-Sink-Zuordnung für das zusammengesetzte Steuerelement.  
   
 ```
@@ -70,7 +71,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="remarks"></a>Hinweise  
  CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt die Rückgabewerte vom Typ HRESULT oder Void Ihre Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und sein Verhalten ist nicht definiert.  
   
-##  <a name="a-nameendsinkmapa--endsinkmap"></a><a name="end_sink_map"></a>END_SINK_MAP  
+##  <a name="end_sink_map"></a>END_SINK_MAP  
  Deklariert das Ende der Ereignis-Sink-Zuordnung für das zusammengesetzte Steuerelement.  
   
 ```
@@ -83,7 +84,7 @@ END_SINK_MAP()
 ### <a name="remarks"></a>Hinweise  
  CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt die Rückgabewerte vom Typ HRESULT oder Void Ihre Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und sein Verhalten ist nicht definiert.  
   
-##  <a name="a-namesinkentrya--sinkentry"></a><a name="sink_entry"></a>SINK_ENTRY  
+##  <a name="sink_entry"></a>SINK_ENTRY  
  Die Handlerfunktion deklariert ( `fn`) für das angegebene Ereignis ( `dispid`), der das angegebene Steuerelement `id`.  
   
 ```
@@ -106,7 +107,7 @@ SINK_ENTRY( id, dispid, fn )
 ### <a name="remarks"></a>Hinweise  
  CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt die Rückgabewerte vom Typ HRESULT oder Void Ihre Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und sein Verhalten ist nicht definiert.  
   
-##  <a name="a-namesinkentryexa--sinkentryex-and-sinkentryexp"></a><a name="sink_entry_ex"></a>SINK_ENTRY_EX und SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX und SINK_ENTRY_EX_P
  Die Handlerfunktion deklariert ( `fn`) für das angegebene Ereignis ( `dispid`), der Dispatchschnittstelle ( *Iid)*, für das angegebene Steuerelement `id`.  
   
 ```
@@ -136,7 +137,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ### <a name="remarks"></a>Hinweise  
  CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt die Rückgabewerte vom Typ HRESULT oder Void Ihre Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und sein Verhalten ist nicht definiert.  
   
-##  <a name="a-namesinkentryinfoa--sinkentryinfo-and-sinkentryinfop"></a><a name="sink_entry_info"></a>SINK_ENTRY_INFO und SINK_ENTRY_INFO_P  
+##  <a name="sink_entry_info"></a>SINK_ENTRY_INFO und SINK_ENTRY_INFO_P  
  Verwenden der `SINK_ENTRY_INFO` Makro in eine Event Sink-Zuordnung, die vom benötigten Informationen bereitzustellen [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) Weiterleiten von Ereignissen an die entsprechenden Handler-Funktion.  
   
 ```

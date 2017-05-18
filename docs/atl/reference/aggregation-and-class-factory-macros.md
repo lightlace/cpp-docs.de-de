@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 4509f7be36e45cf96a938e30ec0f82ec0c9836b5
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -59,7 +60,7 @@ Diese Makros ermöglichen das Steuern der Aggregation und Klassenfactorys zu dek
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Standardschnittstellen  
    
-##  <a name="a-namedeclareaggregatablea--declareaggregatable"></a><a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE  
+##  <a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE  
  Gibt an, dass das Objekt aggregiert werden kann.  
   
 ```
@@ -76,7 +77,7 @@ DECLARE_AGGREGATABLE( x )
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing&#121;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]  
   
-##  <a name="a-namedeclareclassfactorya--declareclassfactory"></a><a name="declare_classfactory"></a>DECLARE_CLASSFACTORY  
+##  <a name="declare_classfactory"></a>DECLARE_CLASSFACTORY  
  Deklariert [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) die Klassenfactory sein.  
   
 ```
@@ -89,7 +90,7 @@ DECLARE_CLASSFACTORY()
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM&#55;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
-##  <a name="a-nameccomclassfactoryclassa--ccomclassfactory-class"></a><a name="ccomclassfactory_class"></a>CComClassFactory-Klasse  
+##  <a name="ccomclassfactory_class"></a>CComClassFactory-Klasse  
  Diese Klasse implementiert die [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) Schnittstelle.  
   
 ```
@@ -114,7 +115,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
   
 - [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) verwendet [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), die ein einzelnes erstellt [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) Objekt.  
   
-##  <a name="a-namedeclareclassfactoryexa--declareclassfactoryex"></a><a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX  
+##  <a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX  
  Deklariert `cf` die Klassenfactory sein.  
   
 ```
@@ -133,7 +134,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM&#8;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]  
   
-##  <a name="a-namedeclareclassfactory2a--declareclassfactory2"></a><a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2  
+##  <a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2  
  Deklariert [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) die Klassenfactory sein.  
   
 ```
@@ -150,7 +151,7 @@ DECLARE_CLASSFACTORY2( lic )
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM&#2;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
-##  <a name="a-nameccomclassfactory2classa--ccomclassfactory2-class"></a><a name="ccomclassfactory2_class"></a>CComClassFactory2-Klasse  
+##  <a name="ccomclassfactory2_class"></a>CComClassFactory2-Klasse  
  Diese Klasse implementiert die [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) Schnittstelle.  
   
 ```
@@ -183,7 +184,7 @@ class  CComClassFactory2 : public IClassFactory2,
   
  `CComClassFactory2`Beide abgeleitet **CComClassFactory2Base** und *Lizenz*. **CComClassFactory2Base**, leitet sich wiederum aus **IClassFactory2** und **CComObjectRootEx\< CComGlobalsThreadModel >**.  
   
-##  <a name="a-namedeclareclassfactoryautothreada--declareclassfactoryautothread"></a><a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD  
+##  <a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD  
  Deklariert [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) die Klassenfactory sein.  
   
 ```
@@ -198,7 +199,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM&#9;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
-##  <a name="a-nameccomclassfactoryautothreadclassa--ccomclassfactoryautothread-class"></a><a name="ccomclassfactoryautothread_class"></a>CComClassFactoryAutoThread-Klasse  
+##  <a name="ccomclassfactoryautothread_class"></a>CComClassFactoryAutoThread-Klasse  
  Diese Klasse implementiert die [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) Schnittstelle und ermöglicht es Objekten, die in mehreren Apartments erstellt werden.  
   
 > [!IMPORTANT]
@@ -216,7 +217,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
   
  [!code-cpp[NVC_ATL_COM&#9;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
-##  <a name="a-namedeclareclassfactorysingletona--declareclassfactorysingleton"></a><a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON  
+##  <a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON  
  Deklariert [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md) die Klassenfactory sein.  
   
 ```
@@ -233,7 +234,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM&#10;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
   
-##  <a name="a-nameccomclassfactorysingletonclassa--ccomclassfactorysingleton-class"></a><a name="ccomclassfactorysingleton_class"></a>CComClassFactorySingleton-Klasse  
+##  <a name="ccomclassfactorysingleton_class"></a>CComClassFactorySingleton-Klasse  
  Diese Klasse wird von [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) und [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) ein einzelnes Objekt zu erstellen.  
   
 > [!IMPORTANT]
@@ -255,7 +256,7 @@ class CComClassFactorySingleton : public CComClassFactory
   
  [!code-cpp[NVC_ATL_COM&#10;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
   
-##  <a name="a-namedeclaregetcontrollingunknowna--declaregetcontrollingunknown"></a><a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN  
+##  <a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN  
  Deklariert eine virtuelle Funktion `GetControllingUnknown`.  
   
 ```
@@ -265,7 +266,7 @@ DECLARE_GET_CONTROLLING_UNKNOWN()
 ### <a name="remarks"></a>Hinweise  
  Dieses Makro für Ihr Objekt hinzufügen, wenn Sie die Fehlermeldung des Compilers erhalten `GetControllingUnknown` ist nicht definiert (z. B. in **CComAggregateCreator**).  
   
-##  <a name="a-namedeclarenotaggregatablea--declarenotaggregatable"></a><a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE  
+##  <a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE  
  Gibt an, dass das Objekt aggregiert werden kann.  
   
 ```
@@ -284,7 +285,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing&#121;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]  
   
-##  <a name="a-namedeclareonlyaggregatablea--declareonlyaggregatable"></a><a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE  
+##  <a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE  
  Gibt an, dass das Objekt aggregiert werden muss.  
   
 ```
@@ -303,7 +304,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing&#125;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_8.h)]  
   
-##  <a name="a-namedeclarepolyaggregatablea--declarepolyaggregatable"></a><a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE  
+##  <a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE  
  Gibt an, dass eine Instanz von **CComPolyObject \< ** *x* ** > ** wird erstellt, wenn das Objekt erstellt wird.  
   
 ```
@@ -321,7 +322,7 @@ DECLARE_POLY_AGGREGATABLE( x )
   
  Die `DECLARE_POLY_AGGREGATABLE` Makro wird automatisch in das Objekt deklariert, wenn Sie den ATL-Steuerelement-Assistenten verwenden, erstellen Sie eine vollständige Kontrolle.  
   
-##  <a name="a-namedeclareprotectfinalconstructa--declareprotectfinalconstruct"></a><a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT  
+##  <a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT  
 
  Verhindert, dass das Objekt gelöscht wird, wenn (während der [FinalConstruct](ccomobjectrootex-class.md#finalconstruct)) der internen zusammengesetzten Objekts den Verweiszähler und verringert erhöht die Anzahl auf 0.  
   
@@ -329,7 +330,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 DECLARE_PROTECT_FINAL_CONSTRUCT()
 ```  
   
-##  <a name="a-namedeclareviewstatusa--declareviewstatus"></a><a name="declare_view_status"></a>DECLARE_VIEW_STATUS  
+##  <a name="declare_view_status"></a>DECLARE_VIEW_STATUS  
  Setzen Sie dieses Makro in ein ATL-ActiveX-Steuerelement-Steuerelementklasse an die **VIEWSTATUS** Flags auf den Container.  
   
 ```

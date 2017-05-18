@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 4c4777496ce609d7c2fa20da726f211264095b6e
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -74,7 +75,7 @@ Wenn möchte, dass ein Steuerelement des Containers zu informieren, die eine Akt
 |[ON_OLEVERB](#on_oleverb)|Gibt ein benutzerdefiniertes Verb vom OLE-Steuerelements behandelt.|  
 |[ON_STDOLEVERB](#on_stdoleverb)|Überschreibt eine standard-Verb Zuordnung des OLE-Steuerelements.|  
   
-##  <a name="a-namedeclareeventmapa--declareeventmap"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP  
+##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
  Jede `COleControl`-abgeleiteten Klasse in Ihrem Programm bieten eine Event-Zuordnung, um die Ereignisse angeben, wird das Steuerelement ausgelöst.  
   
 ```   
@@ -89,7 +90,7 @@ DECLARE_EVENT_MAP()
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-namebegineventmapa--begineventmap"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP  
+##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
  Der Beginn der Definition der ereigniszuordnung.  
   
 ```   
@@ -111,7 +112,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameendeventmapa--endeventmap"></a><a name="end_event_map"></a>END_EVENT_MAP  
+##  <a name="end_event_map"></a>END_EVENT_MAP  
  Verwenden der `END_EVENT_MAP` Makro zum Beenden der Definition der ereigniszuordnung.  
   
 ```   
@@ -121,7 +122,7 @@ END_EVENT_MAP()
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameeventcustoma--eventcustom"></a><a name="event_custom"></a>EVENT_CUSTOM  
+##  <a name="event_custom"></a>EVENT_CUSTOM  
  Definiert einen Ereignis-Eintrag für ein benutzerdefiniertes Ereignis.  
   
 ```   
@@ -183,7 +184,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameeventcustomida--eventcustomid"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID  
+##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
  Definiert ein Ereignis auslösen-Funktion für ein benutzerdefiniertes Ereignis für die Dispatch-ID, die durch angegebene `dispid`.  
   
 ```   
@@ -220,7 +221,7 @@ EVENT_CUSTOM_ID(
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxctl.h  
   
-##  <a name="a-nameonoleverba--onoleverb"></a><a name="on_oleverb"></a>ON_OLEVERB  
+##  <a name="on_oleverb"></a>ON_OLEVERB  
  Dieses Makro definiert einen Zuordnungseintrag für Nachricht, der einen bestimmten Member-Funktion des Steuerelements ein benutzerdefiniertes Verb zuordnet.  
   
 ```   
@@ -249,7 +250,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxole.h  
   
-##  <a name="a-nameonstdoleverba--onstdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB  
+##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
  Verwenden Sie dieses Makro, um das Standardverhalten des standard-Verb außer Kraft setzen.  
   
 ```   

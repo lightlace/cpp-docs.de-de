@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 046160644cca3bd23e4293a3c52692d2b4c94cd5
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -78,7 +79,7 @@ Klassen, die entsprechen, den *Worker* Prototyp Geben Sie der Code zum Verarbeit
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlutil.h  
   
-## <a name="a-nameexecuteaworkerarchetypeexecute"></a><a name="execute"></a>WorkerArchetype::Execute
+## <a name="execute"></a>WorkerArchetype::Execute
 Wird aufgerufen, um eine Arbeitsaufgabe zu verarbeiten.  
   
   
@@ -100,7 +101,7 @@ void Execute(
  `pOverlapped`  
  Ein Zeiger auf die [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) Struktur verwendet, um die Warteschlange zu erstellen, auf welche Elemente eingereiht wurden.  
   
-## <a name="a-nameinitializea-workerarchetypeinitialize"></a><a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a>WorkerArchetype::Initialize
 Wird aufgerufen, um das Worker-Objekt zu initialisieren, bevor Anforderungen an übergeben werden `WorkerArchetype::Execute`.  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -113,7 +114,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>Rückgabewert  
  Zurückgeben **TRUE** bei Erfolg **FALSE** bei einem Fehler.  
   
-## <a name="a-namerequesttypea-workerarchetyperequesttype"></a><a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a>WorkerArchetype::RequestType
 Eine Typedef für den Typ der Arbeitsaufgabe, die durch die Workerklasse verarbeitet werden kann.  
   
 ```  
@@ -123,7 +124,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>Hinweise  
  Dieser Typ muss verwendet werden, als der erste Parameter der `WorkerArchetype::Execute` muss der in und aus einem ULONG_PTR umgewandelt werden kann.  
   
-## <a name="a-nameterminatea-workerarchetypeterminate"></a><a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a>WorkerArchetype::Terminate
 Wird aufgerufen, um das Worker-Objekt zu initialisieren, nachdem alle Anfragen an übergeben wurden `WorkerArchetype::Execute`).  
     
 ``` 

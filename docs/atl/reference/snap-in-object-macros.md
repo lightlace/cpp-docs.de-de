@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 13823feb06e7fecb2e81a01f3c88e3664de01d30
+ms.contentlocale: de-de
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ Diese Makros bieten Unterstützung für Snap-in-Erweiterungen.
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsnap.h 
    
-##  <a name="a-namebeginextensionsnapinnodeinfomapa--beginextensionsnapinnodeinfomap"></a><a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
+##  <a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
  Markiert den Beginn der Snap-In-Erweiterung Daten Klasse Zuordnung.  
   
 ```
@@ -69,7 +70,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing&#105;](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
-##  <a name="a-namebeginsnapintoolbaridmapa--beginsnapintoolbaridmap"></a><a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP  
+##  <a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP  
  Deklariert den Beginn der Symbolleiste-ID-Zuordnung für das Snap-In-Objekt.  
   
 ```
@@ -83,7 +84,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing&#106;](../../atl/codesnippet/cpp/snap-in-object-macros_2.h)]  
   
-##  <a name="a-nameendextensionsnapinnodeinfomapa--endextensionsnapinnodeinfomap"></a><a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP  
+##  <a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP  
  Markiert das Ende der Zuordnung Snap-In-Erweiterung Daten-Klasse.  
   
 ```
@@ -96,7 +97,7 @@ END_EXTENSION_SNAPIN_NODEINFO_MAP()
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).  
   
-##  <a name="a-nameendsnapintoolbaridmapa--endsnapintoolbaridmap"></a><a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP  
+##  <a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP  
  Deklariert das Ende der Symbolleiste-ID-Zuordnung für das Snap-In-Objekt.  
   
 ```
@@ -110,7 +111,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).  
   
-##  <a name="a-nameextensionsnapindataclassa--extensionsnapindataclass"></a><a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS  
+##  <a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS  
  Fügt einen Datenmember auf die Klasse des Snap-In-Erweiterung für eine **ISnapInItemImpl**-abgeleiteten Klasse.  
   
 ```
@@ -127,7 +128,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing&#105;](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
-##  <a name="a-nameextensionsnapinnodeinfoentrya--extensionsnapinnodeinfoentry"></a><a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY  
+##  <a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY  
  Der Snap-In-Erweiterung Klasse Zuordnung hinzugefügt eine Datenklasse Snap-In-Erweiterung.  
   
 ```
@@ -144,7 +145,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).  
   
-##  <a name="a-namesnapinmenuida--snapinmenuid"></a><a name="snapinmenuid"></a>SNAPINMENUID  
+##  <a name="snapinmenuid"></a>SNAPINMENUID  
  Verwenden Sie dieses Makro, um die Menüressource Kontext des Objekts-Snap-In zu deklarieren.  
   
 ```
@@ -155,7 +156,7 @@ SNAPINMENUID( id )
  `id`  
  [in] Identifiziert das Kontextmenü des Objekts-Snap-In.  
   
-##  <a name="a-namesnapintoolbaridentrya--snapintoolbaridentry"></a><a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY  
+##  <a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY  
  Verwenden Sie dieses Makro eine Symbolleisten-ID in der Snap-In-Objekt Symbolleiste ID Zuordnung eingeben.  
   
 ```
