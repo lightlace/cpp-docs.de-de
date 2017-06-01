@@ -75,7 +75,9 @@ ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar-Klasse
-Die `CMFCStatusBar` -Klasse implementiert eine Statusleiste ähnelt der `CStatusBar` Klasse. Die `CMFCStatusBar` -Klasse verfügt jedoch über Funktionen, die von der `CStatusBar` -Klasse nicht bereitgestellt werden. Beispielsweise kann die Klasse Bilder, Animationen und Statusanzeigen anzeigen und auf einen Mausdoppelklick reagieren.  
+Die `CMFCStatusBar` -Klasse implementiert eine Statusleiste ähnelt der `CStatusBar` Klasse. Die `CMFCStatusBar` -Klasse verfügt jedoch über Funktionen, die von der `CStatusBar` -Klasse nicht bereitgestellt werden. Beispielsweise kann die Klasse Bilder, Animationen und Statusanzeigen anzeigen und auf einen Mausdoppelklick reagieren. 
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
   
 ## <a name="syntax"></a>Syntax  
   
@@ -171,7 +173,7 @@ class CMFCStatusBar : public CPane
  **Header:** afxstatusbar.h  
   
 ##  <a name="calcfixedlayout"></a>CMFCStatusBar::CalcFixedLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -188,7 +190,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="commandtoindex"></a>CMFCStatusBar::CommandToIndex  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int CommandToIndex(UINT nIDFind) const;  
@@ -202,7 +204,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="create"></a>CMFCStatusBar::Create  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL Create(
@@ -221,7 +223,7 @@ BOOL Create(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="createex"></a>CMFCStatusBar::CreateEx  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CreateEx(
@@ -242,7 +244,7 @@ BOOL CreateEx(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="doesallowdyninsertbefore"></a>CMFCStatusBar::DoesAllowDynInsertBefore  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DoesAllowDynInsertBefore() const;  
@@ -316,7 +318,7 @@ int GetCount() const;
  Die Anzahl der Bereiche in der Statusleiste angezeigt.  
   
 ##  <a name="getdrawextendedarea"></a>CMFCStatusBar::GetDrawExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetDrawExtendedArea() const;  
@@ -327,7 +329,7 @@ BOOL GetDrawExtendedArea() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getextendedarea"></a>CMFCStatusBar::GetExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL GetExtendedArea(CRect& rect) const;  
@@ -341,7 +343,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getitemid"></a>CMFCStatusBar::GetItemID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 UINT GetItemID(int nIndex) const;  
@@ -355,7 +357,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getitemrect"></a>CMFCStatusBar::GetItemRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetItemRect(
@@ -370,7 +372,7 @@ void GetItemRect(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getpaneinfo"></a>CMFCStatusBar::GetPaneInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetPaneInfo(
@@ -389,7 +391,7 @@ void GetPaneInfo(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getpaneprogress"></a>CMFCStatusBar::GetPaneProgress  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 long GetPaneProgress(int nIndex) const;  
@@ -403,7 +405,7 @@ long GetPaneProgress(int nIndex) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getpanestyle"></a>CMFCStatusBar::GetPaneStyle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 UINT GetPaneStyle(int nIndex) const;  
@@ -417,7 +419,7 @@ UINT GetPaneStyle(int nIndex) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getpanetext"></a>CMFCStatusBar::GetPaneText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetPaneText(
@@ -499,7 +501,7 @@ virtual void OnDrawPane(
  Überschreiben Sie diese Methode in einer `CMFCStatusBar`-abgeleitete Klasse, um die Darstellung eines Bereichs anzupassen.  
   
 ##  <a name="precreatewindow"></a>CMFCStatusBar::PreCreateWindow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
@@ -513,7 +515,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setdrawextendedarea"></a>CMFCStatusBar::SetDrawExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetDrawExtendedArea(BOOL bSet = TRUE);
@@ -525,7 +527,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setindicators"></a>CMFCStatusBar::SetIndicators  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL SetIndicators(
@@ -627,7 +629,7 @@ void SetPaneIcon(
  Es ist Animation ausgeführte, [CMFCStatusBar::SetPaneAnimation](#setpaneanimation) wurde festgelegt, wird die Animation beendet.  
   
 ##  <a name="setpaneinfo"></a>CMFCStatusBar::SetPaneInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetPaneInfo(
@@ -671,7 +673,7 @@ void SetPaneProgress(
  Um diese Funktion für den angegebenen Bereich zu verwenden, müssen Sie aufrufen [CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar) ersten.  
   
 ##  <a name="setpanestyle"></a>CMFCStatusBar::SetPaneStyle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetPaneStyle(
@@ -686,7 +688,7 @@ void SetPaneStyle(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setpanetext"></a>CMFCStatusBar::SetPaneText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL SetPaneText(

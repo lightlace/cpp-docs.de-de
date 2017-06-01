@@ -101,6 +101,9 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx-Klasse
 Die `CMDIChildWndEx` -Klasse stellt die Funktionalität eines Windows untergeordneten Fenster der multiple Document Interface (MDI). Es erweitert die Funktionalität von [CMDIChildWnd-Klasse](../../mfc/reference/cmdichildwnd-class.md). Das Framework benötigt diese Klasse, wenn eine MDI-Anwendung bestimmte MFC-Klassen verwendet.  
+ 
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ## <a name="syntax"></a>Syntax  
   
@@ -238,7 +241,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
  Handle für eine verzögerte Fenster Position-Struktur.  
   
 ##  <a name="canshowonmditabs"></a>CMDIChildWndEx::CanShowOnMDITabs  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanShowOnMDITabs();
@@ -348,7 +351,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
  Rufen Sie diese Methode zum Andocken Ausrichtung an den Hauptframe aktivieren. Sie können eine Kombination von Flags CBRS_ALIGN_ übergeben (Weitere Informationen finden Sie unter [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
 ##  <a name="getdockingmanager"></a>CMDIChildWndEx::GetDockingManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CDockingManager* GetDockingManager();
@@ -427,7 +430,7 @@ CBasePane* GetPane(UINT nID);
  Ein Zeiger auf den Bereich Wenn gefunden, andernfalls `NULL`.  
   
 ##  <a name="getrelatedtabgroup"></a>CMDIChildWndEx::GetRelatedTabGroup  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -661,7 +664,7 @@ void RemovePaneFromDockManager(
  Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.  
   
 ##  <a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetRelatedTabGroup(CMFCTabCtrl* p);
@@ -673,7 +676,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="showpane"></a>CMDIChildWndEx::ShowPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ShowPane(

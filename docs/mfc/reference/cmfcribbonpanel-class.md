@@ -97,6 +97,9 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel-Klasse
 Implementiert einen Bereich, der eine Anzahl von Menübandelementen enthält. Wenn der Bereich gezeichnet wird, werden darin so viele Elemente wie möglich angezeigt.  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 
   
 ## <a name="syntax"></a>Syntax  
   
@@ -450,7 +453,7 @@ LPCTSTR GetName() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getparentbutton"></a>CMFCRibbonPanel::GetParentButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCRibbonBaseElement* GetParentButton() const;  
@@ -471,7 +474,7 @@ CMFCRibbonCategory* GetParentCategory() const;
  Ein Zeiger auf die Menübandkategorie, die dieses Menüband-Steuerelement enthält.  
   
 ##  <a name="getparentmenubar"></a>CMFCRibbonPanel::GetParentMenuBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;  
@@ -696,7 +699,7 @@ virtual BOOL IsMainPanel() const;
  Die Multifunktionsleiste wird eingeblendet, wenn der Benutzer die Schaltfläche auswählt.  
   
 ##  <a name="ismenumode"></a>CMFCRibbonPanel::IsMenuMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsMenuMode() const;  
@@ -707,7 +710,7 @@ BOOL IsMenuMode() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="onkey"></a>CMFCRibbonPanel::OnKey  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnKey(UINT nChar);

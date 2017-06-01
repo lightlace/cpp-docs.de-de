@@ -62,7 +62,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 Die `CMFCDesktopAlertWnd` Klasse implementiert die Funktion ein nicht modales Dialogfeld angezeigt wird, auf dem Bildschirm, um den Benutzer über ein Ereignis informieren.  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Syntax  
   
 ```  
@@ -288,7 +289,7 @@ BOOL HasSmallCaption() const;
  Verwenden Sie diese Methode, um festzustellen, ob das Popupfenster einer kleinen Beschriftung oder eine Beschriftung, die reguläre Größe hat. Standardmäßig ist der kleinen Überschrift 7 Pixel hoch. Sie erhalten die Höhe der Beschriftung reguläre Größe durch Aufrufen der Windows-API-Funktion `GetSystemMetrics(SM_CYCAPTION)`.  
   
 ##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnBeforeShow(CPoint&);
@@ -319,7 +320,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie möchten benachrichtigt werden, wenn ein Benutzer auf die Warnung im Fenster den Link klickt.  
   
 ##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCommand(
@@ -336,7 +337,7 @@ virtual BOOL OnCommand(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -348,7 +349,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL ProcessCommand(HWND hwnd);
@@ -442,7 +443,7 @@ void SetTransparency(BYTE nTransparency);
  Rufen Sie diese Funktion, um die Transparenzebene eines Popup-Fenster festzulegen.  
   
 ##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetDialogSize();
