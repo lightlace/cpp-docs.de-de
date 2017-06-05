@@ -65,7 +65,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton-Klasse
 Eine Schaltfläche, die zum Anzeigen und Ausblenden einer [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md) ausblenden konfiguriert ist.  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Syntax  
   
 ```  
@@ -120,7 +121,7 @@ class CMFCAutoHideButton : public CObject
  **Header:** afxautohidebutton.h  
   
 ##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void BringToTop();
@@ -199,7 +200,7 @@ CDockablePane* GetAutoHideWindow() const;
  Zuordnen eine Schaltfläche automatisch im Hintergrund mit einer `CDockablePane`, übergeben die `CDockablePane` als Parameter an die [CMFCAutoHideButton::Create](#create) Methode.  
   
 ##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCAutoHideBar* GetParentToolBar();
@@ -210,7 +211,7 @@ CMFCAutoHideBar* GetParentToolBar();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRect GetRect() const;  
@@ -270,7 +271,7 @@ BOOL IsHorizontal() const;
  Das Framework legt die Ausrichtung der ein [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) Objekt, wenn Sie ihn erstellen.  Sie können die Ausrichtung steuern, indem die `dwAlignment` -Parameter in der [CMFCAutoHideButton::Create](#create) Methode.  
   
 ##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsTop() const;  
@@ -369,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
  Ein boolescher Wert, der angibt, ob die Schaltfläche automatisch im Hintergrund angezeigt.  
   
 ##  <a name="move"></a>CMFCAutoHideButton::Move  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Move(int nOffset);
@@ -381,7 +382,7 @@ void Move(int nOffset);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ReplacePane(CDockablePane* pNewBar);

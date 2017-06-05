@@ -100,6 +100,7 @@ ms.lasthandoff: 03/31/2017
 # <a name="cwinappex-class"></a>CWinAppEx-Klasse
 `CWinAppEx`behandelt den Anwendungszustand, speichert den Zustand in der Registrierung, lädt den Zustand aus der Registrierung, initialisiert Anwendungsmanager und stellt Links zu diesen anwendungsmanagern bereit.  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>Syntax  
   
 ```  
@@ -321,7 +322,7 @@ BOOL EnableUserTools(
  Weitere Informationen über Benutzertools und wie Sie diese in Ihrer Anwendung finden Sie unter [benutzerdefinierte Tools](../../mfc/user-defined-tools.md).  
   
 ##  <a name="exitinstance"></a>CWinAppEx::ExitInstance  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int ExitInstance();
@@ -373,7 +374,7 @@ CContextMenuManager* GetContextMenuManager();
  Wenn das Objekt CContextMenuManager nicht initialisiert wurde, wird diese Funktion ruft [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) vor der Rückgabe eines Zeigers.  
   
 ##  <a name="getdataversion"></a>CWinAppEx::GetDataVersion  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetDataVersion() const;  
@@ -762,7 +763,7 @@ BOOL InitTooltipManager();
  Wenn die Anwendung bereits einen QuickInfo-Manager und Sie rufen `InitTooltipManager`, die Anwendung muss eine [ASSERT](diagnostic-services.md#assert) Fehler. Aus diesem Grund sollten Sie nicht aufrufen `InitTooltipManager` bei Erstellung einer `CTooltipManager` -Objekts direkt. Wenn Sie ein benutzerdefiniertes nicht verwenden `CTooltipManager`, verwenden Sie `GetTooltipManager` zum Erstellen einer `CTooltipManager` Objekt.  
   
 ##  <a name="isresourcesmartupdate"></a>CWinAppEx::IsResourceSmartUpdate  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsResourceSmartUpdate() const;  
@@ -936,7 +937,7 @@ virtual BOOL OnViewDoubleClick(
  Um das benutzerdefinierte Verhalten zu unterstützen, müssen Sie diese Funktion aufrufen, bei der Verarbeitung der `WM_LBUTTONDBLCLK` Nachricht. Diese Methode führt die zugeordnete Ansicht-ID, die vom Befehl `iViewId`. Weitere Informationen zu benutzerdefinierten Verhalten, finden Sie unter [Anpassen von Tastatur und Maus](../../mfc/keyboard-and-mouse-customization.md).  
   
 ##  <a name="onworkspaceidle"></a>CWinAppEx::OnWorkspaceIdle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnWorkspaceIdle(CWnd*);

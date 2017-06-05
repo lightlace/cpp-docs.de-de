@@ -56,6 +56,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl-Klasse
 Eine erweiterte QuickInfo-Implementierung auf der Grundlage der [CToolTipCtrl-Klasse](../../mfc/reference/ctooltipctrl-class.md). Eine QuickInfo auf Grundlage der `CMFCToolTipCtrl` -Klasse kann ein Symbol, eine Bezeichnung und eine Beschreibung anzeigen. Sie können das Aussehen anpassen, indem Sie einen Farbverlauf, einen benutzerdefinierter Text, Rahmenfarben, fetten Text, abgerundete Ecken oder ein Sprechblasenformat verwenden.  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -165,7 +167,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
  **Header:** afxtooltipctrl.h  
   
 ##  <a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
@@ -220,7 +222,7 @@ virtual void OnDrawBorder(
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um die Darstellung des Rahmens QuickInfo anzupassen.  
   
 ##  <a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize OnDrawDescription(
@@ -359,7 +361,7 @@ virtual void SetDescription(const CString strDesrciption);
  Der Beschreibungstext wird auf die QuickInfo unter dem Trennzeichen angezeigt.  
   
 ##  <a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetFixedWidth(
@@ -374,7 +376,7 @@ void SetFixedWidth(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
@@ -386,7 +388,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetLocation(CPoint pt);

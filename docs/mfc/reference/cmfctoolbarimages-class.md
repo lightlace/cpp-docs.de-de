@@ -110,7 +110,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages-Klasse
 Die Bilder auf einer Symbolleiste. Die `CMFCToolBarImages` Klasse verwaltet die Symbolleistenbilder, die aus Anwendungsressourcen oder aus Dateien geladen.  
-  
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>Syntax  
   
 ```  
@@ -224,7 +224,7 @@ class CMFCToolBarImages : public CObject
  **Header:** afxtoolbarimages.h  
   
 ##  <a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void AdaptColors(
@@ -287,7 +287,7 @@ int AddImage(
  Die Anzahl der Symbolleiste von Bildern, die die `CMFCToolBarImages` -Objekt verwaltet wird, nachdem die neue Bitmap erfolgreich hinzugefügt wurde&1;, wenn der Vorgang fehlgeschlagen ist.  
   
 ##  <a name="cleanup"></a>CMFCToolBarImages::CleanUp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall CleanUp();
@@ -313,7 +313,7 @@ CMFCToolBarImages();
  Erstellt ein `CMFCToolBarImages` Objekt, dessen Renderingmodul initialisiert und legt die Größe des Abbilds auf den Standardwert 16 x 15 Pixel. Verwendung [CMFCToolBarImages::SetImageSize](#setimagesize) die Größe des Abbilds zu ändern, bevor Sie Bilder hinzufügen.  
   
 ##  <a name="copyimagetoclipboard"></a>CMFCToolBarImages::CopyImageToClipboard  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CopyImageToClipboard(int iImage);
@@ -327,7 +327,7 @@ BOOL CopyImageToClipboard(int iImage);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="copyto"></a>CMFCToolBarImages::CopyTo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CopyTo(CMFCToolBarImages& imageList);
@@ -358,7 +358,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
  Verwenden Sie diese Funktion, um der Liste Symbolleiste Bilder aus einer externen Bildliste schnell zu initialisieren.  
   
 ##  <a name="createregionfromimage"></a>CMFCToolBarImages::CreateRegionFromImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static HRGN __stdcall CreateRegionFromImage(
@@ -440,7 +440,7 @@ BOOL Draw(
  `TRUE`Wenn das angegebene Bild erfolgreich angezeigt wurde. `FALSE` Bildindex ist ungültig, oder ein anderer Fehler aufgetreten ist.  
   
 ##  <a name="drawex"></a>CMFCToolBarImages::DrawEx  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL DrawEx(
@@ -472,7 +472,7 @@ BOOL DrawEx(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="enablertl"></a>CMFCToolBarImages::EnableRTL  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
@@ -528,7 +528,7 @@ static void FillDitheredRect(
  Verwenden Sie diese Methode, um ein Rechteck mit einer Farbe zu füllen, die den Durchschnitt der Systemfarben COLOR_BTNFACE und COLOR_BTNHIGHLIGHT haben. Wenn das System maximal 256 Farben verwendet, wird das Rechteck mit einem Dithering Muster aus diesen zwei Farben stattdessen gefüllt.  
   
 ##  <a name="getalwayslight"></a>CMFCToolBarImages::GetAlwaysLight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetAlwaysLight() const;  
@@ -562,7 +562,7 @@ static BYTE GetDisabledImageAlpha();
  Rufen Sie [CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha) , den alpha-Kanal-Wert ändern.  
   
 ##  <a name="getfadedimagealpha"></a>CMFCToolBarImages::GetFadedImageAlpha  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static BYTE __stdcall GetFadedImageAlpha();
@@ -605,7 +605,7 @@ HBITMAP GetImageWell() const;
  Die Symbolleistenbilder befinden sich in einer Zeile in einer einzelnen Bitmap, die als bezeichnet wird ein *Bildquelle*. Um eine Symbolleistenbild in den Image zu suchen, Multiplizieren Sie den Index des Bilds durch die Breite der Symbolleistenbilder (finden Sie unter [CMFCToolBarImages::GetImageSize](#getimagesize)) um den horizontalen Offset des Bilds in der Abbildung gut zu erhalten.  
   
 ##  <a name="getimagewelllight"></a>CMFCToolBarImages::GetImageWellLight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 HBITMAP GetImageWellLight() const;  
@@ -616,7 +616,7 @@ HBITMAP GetImageWellLight() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getlastimagerect"></a>CMFCToolBarImages::GetLastImageRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRect GetLastImageRect() const;  
@@ -627,7 +627,7 @@ CRect GetLastImageRect() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getlightpercentage"></a>CMFCToolBarImages::GetLightPercentage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetLightPercentage() const;  
@@ -638,7 +638,7 @@ int GetLightPercentage() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getmapto3dcolors"></a>CMFCToolBarImages::GetMapTo3DColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetMapTo3DColors() const;  
@@ -649,7 +649,7 @@ BOOL GetMapTo3DColors() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getmask"></a>CMFCToolBarImages::GetMask  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 HBITMAP GetMask(int iImage);
@@ -677,7 +677,7 @@ int GetResourceOffset(UINT uiResId) const;
  Eines Image-Index, wenn die Methode erfolgreich war;&1;, wenn das Bild mit der ID für die angegebene Ressource nicht vorhanden ist.  
   
 ##  <a name="gettransparentcolor"></a>CMFCToolBarImages::GetTransparentColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 COLORREF GetTransparentColor() const;  
@@ -721,7 +721,7 @@ static BOOL Is32BitTransparencySupported();
  Verwenden Sie diese statische Methode, um zur Laufzeit zu bestimmen, ob das Betriebssystem 32-Bit-alpha-blending unterstützt. Diese Funktion wird in unterstützt [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] und höhere Versionen.  
   
 ##  <a name="ispremultiplyautocheck"></a>CMFCToolBarImages::IsPreMultiplyAutoCheck  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsPreMultiplyAutoCheck() const;  
@@ -817,7 +817,7 @@ BOOL Load(
  Wenn die Datei, die nur-Lese Attribut aufweist, ist die Bildliste als schreibgeschützt markiert.  
   
 ##  <a name="loadstr"></a>CMFCToolBarImages::LoadStr  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL LoadStr(
@@ -836,7 +836,7 @@ BOOL LoadStr(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="mapfromsyscolor"></a>CMFCToolBarImages::MapFromSysColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static COLORREF __stdcall MapFromSysColor(
@@ -853,7 +853,7 @@ static COLORREF __stdcall MapFromSysColor(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="mapto3dcolors"></a>CMFCToolBarImages::MapTo3dColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL MapTo3dColors(
@@ -872,7 +872,7 @@ BOOL MapTo3dColors(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="maptosyscolor"></a>CMFCToolBarImages::MapToSysColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static COLORREF __stdcall MapToSysColor(
@@ -889,7 +889,7 @@ static COLORREF __stdcall MapToSysColor(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="maptosyscoloralpha"></a>CMFCToolBarImages::MapToSysColorAlpha  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
@@ -938,7 +938,7 @@ static BOOL MirrorBitmap(
  Diese Funktion dient zur Schreibsysteme von rechts-nach-links-Unterstützung.  
   
 ##  <a name="mirrorbitmapvert"></a>CMFCToolBarImages::MirrorBitmapVert  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static BOOL __stdcall MirrorBitmapVert(
@@ -955,7 +955,7 @@ static BOOL __stdcall MirrorBitmapVert(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="mirrorvert"></a>CMFCToolBarImages::MirrorVert  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL MirrorVert();
@@ -966,7 +966,7 @@ BOOL MirrorVert();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="onsyscolorchange"></a>CMFCToolBarImages::OnSysColorChange  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void OnSysColorChange();
@@ -975,7 +975,7 @@ void OnSysColorChange();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="premultiplyalpha"></a>CMFCToolBarImages::PreMultiplyAlpha  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static BOOL __stdcall PreMultiplyAlpha(
@@ -1050,7 +1050,7 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
  Rufen Sie diese Methode, um die benutzerdefinierte Bilder in eine Datei zu speichern. Wenn `lpszBmpFileName` ist `NULL`, die-Methode speichert die Bitmap in die Datei aus dem Bitmap, durch geladen wurde die [CMFCToolBarImages::Load](#load) Methode.  
   
 ##  <a name="setalwayslight"></a>CMFCToolBarImages::SetAlwaysLight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
@@ -1076,7 +1076,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
  Verwenden Sie diese Methode, um einen benutzerdefinierten Alphawert für deaktivierte Bilder festzulegen. Der Standardwert ist 127, wodurch deaktivierte Schaltflächenbilder halbtransparent sein. Wenn Sie den Wert 0 festlegen, werden deaktiviert Bilder vollständig transparent. Wenn Sie einen Wert von 255 festlegen, werden deaktiviert Bilder transparent.  
   
 ##  <a name="setfadedimagealpha"></a>CMFCToolBarImages::SetFadedImageAlpha  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall SetFadedImageAlpha(BYTE nValue);
@@ -1104,7 +1104,7 @@ void SetImageSize(
  Ist Sie standardmäßig die Größe des Bilds Symbolleiste 16 x 15 Pixel. Aufgerufen Sie diese Methode wird, wenn Sie Symbolleistenbilder, die mit einer anderen Größe verwenden möchten.  
   
 ##  <a name="setlightpercentage"></a>CMFCToolBarImages::SetLightPercentage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetLightPercentage(int nValue);
@@ -1116,7 +1116,7 @@ void SetLightPercentage(int nValue);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setmapto3dcolors"></a>CMFCToolBarImages::SetMapTo3DColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetMapTo3DColors(BOOL bMapTo3DColors);
@@ -1128,7 +1128,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setpremultiplyautocheck"></a>CMFCToolBarImages::SetPreMultiplyAutoCheck  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
@@ -1140,7 +1140,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setsingleimage"></a>CMFCToolBarImages::SetSingleImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetSingleImage();

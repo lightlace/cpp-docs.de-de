@@ -259,7 +259,7 @@ virtual void AdjustLayout();
 ```  
   
 ##  <a name="adjustpaneframes"></a>CPaneFrameWnd::AdjustPaneFrames  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void AdjustPaneFrames();
@@ -337,7 +337,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
  Ungleich NULL, wenn die kleinen Rahmenfenster angedockt werden kann `pDockingBar`; andernfalls 0.  
   
 ##  <a name="checkgrippervisibility"></a>CPaneFrameWnd::CheckGripperVisibility  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void CheckGripperVisibility();
@@ -520,7 +520,7 @@ virtual CString GetCaptionText();
  Diese Methode wird vom Framework aufgerufen, wenn den Beschriftungstext angezeigt.  
   
 ##  <a name="getdockingmanager"></a>CPaneFrameWnd::GetDockingManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CDockingManager* GetDockingManager() const;  
@@ -557,7 +557,7 @@ virtual CWnd* GetFirstVisiblePane() const;
  Der erste Bereich in das Minirahmenfenster oder `NULL` Minirahmenfenster keine Bereiche enthält.  
   
 ##  <a name="gethotpoint"></a>CPaneFrameWnd::GetHotPoint  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CPoint GetHotPoint() const;  
@@ -592,7 +592,7 @@ virtual int GetPaneCount() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getparent"></a>CPaneFrameWnd::GetParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CWnd* GetParent();
@@ -603,7 +603,7 @@ CWnd* GetParent();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getpinstate"></a>CPaneFrameWnd::GetPinState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetPinState() const;  
@@ -614,7 +614,7 @@ BOOL GetPinState() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getrecentfloatingrect"></a>CPaneFrameWnd::GetRecentFloatingRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRect GetRecentFloatingRect() const;  
@@ -670,7 +670,7 @@ virtual LRESULT HitTest(
 |`HTBOTTOMRIGHT`|Der Punkt ist unten rechts.|  
   
 ##  <a name="iscaptured"></a>CPaneFrameWnd::IsCaptured  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsCaptured() const;  
@@ -681,7 +681,7 @@ BOOL IsCaptured() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="isdelayshow"></a>CPaneFrameWnd::IsDelayShow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsDelayShow() const;  
@@ -862,7 +862,7 @@ virtual void OnShowPane(
  Wird vom Framework aufgerufen, wenn ein Bereich im Minirahmenfenster angezeigt oder ausgeblendet wird. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
 ##  <a name="pin"></a>CPaneFrameWnd::Pin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Pin(BOOL bPin = TRUE);
@@ -994,7 +994,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 - `AFX_CAPTION_BTN_CUSTOMIZE`  
   
 ##  <a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetDelayShow(BOOL bDelayShow);
@@ -1006,7 +1006,7 @@ void SetDelayShow(BOOL bDelayShow);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetDockingManager(CDockingManager* pManager);
@@ -1040,7 +1040,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
  Ein Zeiger auf einen andockbaren-Manager.  
   
 ##  <a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetHotPoint(CPoint& ptNew);
@@ -1105,7 +1105,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
  `TRUE`, wenn die Methode erfolgreich ausgeführt wurde, andernfalls `FALSE`.  
   
 ##  <a name="storerecentdocksiteinfo"></a>CPaneFrameWnd::StoreRecentDockSiteInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
@@ -1117,7 +1117,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd::StoreRecentTabRelatedInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void StoreRecentTabRelatedInfo(

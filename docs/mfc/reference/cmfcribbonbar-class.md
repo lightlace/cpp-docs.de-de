@@ -134,7 +134,9 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar-Klasse
 Die `CMFCRibbonBar`-Klasse implementiert eine Menübandleiste, die der in Office 2007 verwendeten ähnlich ist.  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   
 ## <a name="syntax"></a>Syntax  
   
 ```  
@@ -1259,7 +1261,7 @@ virtual void OnClickButton(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="oneditcontextmenu"></a>CMFCRibbonBar::OnEditContextMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnEditContextMenu(
@@ -1304,7 +1306,7 @@ BOOL OnSetAccData(long lVal);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="onshowribboncontextmenu"></a>CMFCRibbonBar::OnShowRibbonContextMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnShowRibbonContextMenu(
@@ -1325,7 +1327,7 @@ virtual BOOL OnShowRibbonContextMenu(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="onshowribbonqatmenu"></a>CMFCRibbonBar::OnShowRibbonQATMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnShowRibbonQATMenu(

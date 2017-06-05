@@ -53,6 +53,8 @@ ms.lasthandoff: 02/24/2017
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager-Klasse
 Verwaltet abtrennbare Menüs. Ein abtrennbares Menü ist ein Menü in der Menüleiste. Der Benutzer kann ein solches Menü von der Menüleiste abtrennen, wodurch das Menü beliebig positionierbar wird.  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   
 ## <a name="syntax"></a>Syntax  
   
 ```  
@@ -97,7 +99,7 @@ class CMenuTearOffManager : public CObject
  **Header:** afxmenutearoffmanager.h  
   
 ##  <a name="build"></a>CMenuTearOffManager::Build  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Build(
@@ -122,7 +124,7 @@ CMenuTearOffManager();
  In den meisten Fällen erstellen Sie keine `CMenuTearOffManager` manuell. Das Framework der Anwendung erstellt die `CMenuTearOffManager` -Objekt beim Aufruf von [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
   
 ##  <a name="getregpath"></a>CMenuTearOffManager::GetRegPath  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 LPCTSTR GetRegPath() const;  
@@ -159,7 +161,7 @@ BOOL Initialize(
  Den Bereich der Menü-IDs aus `uiTearOffMenuFirst` an `uiTearOffMenuLast` muss eine fortlaufende Intervall. Das Zeitintervall definiert die Anzahl der abtrennbare Menüs, die gleichzeitig in der Anwendung angezeigt werden können.  
   
 ##  <a name="isdynamicid"></a>CMenuTearOffManager::IsDynamicID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsDynamicID(UINT uiID) const;  
@@ -173,7 +175,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="parse"></a>CMenuTearOffManager::Parse  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 UINT Parse(CString& str);
@@ -187,7 +189,7 @@ UINT Parse(CString& str);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="reset"></a>CMenuTearOffManager::Reset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Reset(HMENU hmenu);
@@ -199,7 +201,7 @@ void Reset(HMENU hmenu);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setinuse"></a>CMenuTearOffManager::SetInUse  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetInUse(
@@ -214,7 +216,7 @@ void SetInUse(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetupTearOffMenus(HMENU hMenu);
