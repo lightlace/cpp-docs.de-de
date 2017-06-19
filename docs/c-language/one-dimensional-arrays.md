@@ -48,7 +48,7 @@ int main() {
   
  Indexausdrücke werden im Allgemeinen verwendet, um auf Arrayelemente zu verweisen. Sie können einen Index jedoch auf jeden Zeiger anwenden.  Ungeachtet der Reihenfolge der Werte muss *expression* in eckige Klammern \(**\[ \]**\) eingeschlossen werden.  
   
- Der Indexausdruck wird ausgewertet, indem der Zeigerwert zum ganzzahligen Wert hinzugefügt wird, bevor der Dereferenzierungsoperator \(**\***\) auf das Ergebnis angewandt wird. \(Eine Erläuterung des Dereferenzierungsoperators finden Sie unter [Dereferenzierungs\- und Address\-of\-Operatoren \*\*\*](../c-language/indirection-and-address-of-operators.md)\). Für ein eindimensionales Array sind die folgenden vier Ausdrücke gleichwertig, vorausgesetzt, dass `a` ein Zeiger ist und `b` eine ganze Zahl darstellt:  
+ Der Indexausdruck wird ausgewertet, indem der Zeigerwert zum ganzzahligen Wert hinzugefügt wird, bevor der Dereferenzierungsoperator \(**\***\) auf das Ergebnis angewandt wird. \(Eine Erläuterung des Dereferenzierungsoperators finden Sie unter [Dereferenzierungs\- und Address\-of\-Operatoren](../c-language/indirection-and-address-of-operators.md)\). Für ein eindimensionales Array sind die folgenden vier Ausdrücke gleichwertig, vorausgesetzt, dass `a` ein Zeiger ist und `b` eine ganze Zahl darstellt:  
   
 ```  
 a[b]  
