@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "(') - einfaches Anführungszeichen"
   - "? Symbol"
   - "? Symbol, Escapesequenzzeichen"
-  - "\-Symbol in Escapesequenzen"
+  - "\\-Symbol in Escapesequenzen"
   - "\a (Escapesequenz)"
   - "\f (Escapesequenz)"
   - "\n (Escapesequenz)"
