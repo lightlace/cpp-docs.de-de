@@ -12,9 +12,9 @@ dev_langs:
   - "C++"
 helpviewer_keywords: 
   - "int-Datentyp"
-  - "Portabilität [C++], Typ "int""
+  - "Portabilität [C++], Typ \"int\""
   - "Ganzzahlen mit Vorzeichen"
-  - "Typ "int""
+  - "Typ \"int\""
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
 caps.latest.revision: 10
 author: "mikeblome"
