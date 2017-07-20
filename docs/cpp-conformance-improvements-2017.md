@@ -1,7 +1,7 @@
 ---
 title: "Compilerverbesserungen an C++ bei der Übereinstimmung | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 06/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: BrianPeek
-ms.author: brpeek
+author: mikeblome
+ms.author: mblome
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ee7e4f3e09f5b1512182d17fda9033a45ad4aa5b
-ms.openlocfilehash: c4bfe76d3b57962fe10df1d55f6ec5b58f70a38a
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: d00951204a358ec064f69035b7dd6ac5adc08ed9
 ms.contentlocale: de-de
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 06/08/2017
 
 ---
    
@@ -143,7 +143,7 @@ int main()
 ```
 
 ### <a name="constexpr"></a>constexpr
-Visual Studio 2017 löst ordnungsgemäß einen Fehler aus, wenn der linke Operand eines bedingten Auswertungsvorgangs in einem constexpr-Kontext ungültig ist. Der folgende Code wird in Visual Studio 2015 kompiliert, aber nicht in Visual Studio 2017:
+Visual Studio 2017 löst ordnungsgemäß einen Fehler aus, wenn der linke Operand eines bedingten Auswertungsvorgangs in einem constexpr-Kontext ungültig ist. Der folgende Code kompiliert in Visual Studio 2015, jedoch nicht in Visual Studio 2017 (C3615: Die constexpr-Funktion „f“ darf keinen konstanten Ausdruck ergeben):
 
 ```cpp  
 template<int N>
@@ -154,7 +154,7 @@ struct array
 
 constexpr bool f(const array<1> &arr)
 {
-       return arr.size() == 10 || arr.size() == 11; // error starting in Visual Studio 2017
+       return arr.size() == 10 || arr.size() == 11; // C3615    
 }
 ```
 Deklarieren Sie die Funktion array::size() als constexpr, oder entfernen Sie den Qualifizierer constexpr von f, um den Fehler zu beheben. 
@@ -355,12 +355,12 @@ In früheren Versionen von Visual Studio gab der Compiler mitunter keine Fehlerm
 ```cpp
 template<typename T> 
 struct S { 
-template<typename U> static int f() = delete; 
+   template<typename U> static int f() = delete; 
 }; 
  
 void g() 
 { 
-decltype(S<int>::f<int>()) i; // this should fail 
+   decltype(S<int>::f<int>()) i; // this should fail 
 }
 ```
 Um den Fehler zu beheben, deklarieren Sie „i“ als `int`.
@@ -372,28 +372,28 @@ Visual Studio 2017-Updateversion 15.3 verbessert Voraussetzungsprüfungen für T
 struct S; 
 enum E; 
  
-static_assert(!__is_assignable(S, S), "fail"); // this is allowed in VS2017 RTM, but should fail 
-static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 RTM, but should fail
+static_assert(!__is_assignable(S, S), "fail"); // C2139 in 15.3
+static_assert(__is_convertible_to(E, E), "fail"); // C2139 in 15.3
 ```
 
 ### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>Neue Compilerwarnung und CLR-Prüfungen für Marshalling von nativ zu verwaltet
 Aufrufe nativer Funktionen aus verwalteten Funktionen erfordern Marshalling. Die CLR führt das Marshalling aus, versteht aber nicht die C++-Semantik. Wenn Sie ein natives Objekt nach Wert übergeben, ruft die CLR entweder den Kopierkonstruktor des Objekts auf oder verwendet BitBlt, was zu einem nicht definiertem Verhalten zur Laufzeit führt. 
  
-Nun gibt der Compiler eine Warnung aus, wenn er zur Kompilierzeit erkennt, dass ein natives Objekt mit gelöschtem Kopierkonstruktor zwischen der nativen und verwalteten Grenze nach Wert übergeben wird. In den Fällen, in denen dem Compiler zur Kompilierzeit keine Informationen vorliegen, fügt er eine Laufzeitprüfung hinzu, sodass das Programm sofort „std::terminate“ aufruft, sobald ein falsch formatiertes Marshalling erfolgt. Mit dem folgenden Code wird in Updateversion 15.3 C4606 generiert „'A': Die Übergabe eines Arguments nach Wert zwischen einer nativen und verwalteten Grenze erfordert einen gültigen Kopierkonstruktor. Andernfalls ist das Laufzeitverhalten nicht definiert“.
+Nun gibt der Compiler eine Warnung aus, wenn er zur Kompilierzeit erkennt, dass ein natives Objekt mit gelöschtem Kopierkonstruktor zwischen der nativen und verwalteten Grenze nach Wert übergeben wird. In den Fällen, in denen dem Compiler zur Kompilierzeit keine Informationen vorliegen, fügt er eine Laufzeitprüfung hinzu, sodass das Programm sofort „std::terminate“ aufruft, sobald ein falsch formatiertes Marshalling erfolgt. In der Updateversion 15.3 generiert der folgende Code C4606 „A“: Die Übergabe eines Arguments nach Wert zwischen einer nativen und verwalteten Grenze erfordert einen gültigen Kopierkonstruktor. Andernfalls ist das Laufzeitverhalten nicht definiert“.
 ```cpp
 class A 
 { 
 public: 
-A() : p_(new int) {} 
-~A() { delete p_; } 
+   A() : p_(new int) {} 
+   ~A() { delete p_; } 
  
-A(A const &) = delete; 
-A(A &&rhs) { 
-p_ = rhs.p_; 
+   A(A const &) = delete; 
+   A(A &&rhs) { 
+   p_ = rhs.p_; 
 } 
  
 private: 
-int *p_; 
+   int *p_; 
 }; 
  
 #pragma unmanaged 
@@ -413,9 +413,9 @@ Um den Fehler zu beheben, entfernen Sie die Direktive `#pragma managed`, um den 
 
 ### <a name="experimental-api-warning-for-winrt"></a>Warnung zu experimenteller API für WinRT
 WinRT-APIs, die zu Experimentier- und Feedbackzwecken veröffentlicht werden, sind mit `Windows.Foundation.Metadata.ExperimentalAttribute` markiert. In Updateversion 15.3 generiert der Compiler die Warnung C4698, wenn er auf dieses Attribut trifft. Einige APIs in früheren Versionen des Windows SDK wurden bereits mit dem Attribut markiert, sodass Aufrufe dieser APIs das Auslösen dieser Compilerwarnung verursachen. Bei neueren Windows SDKs wurde das Attribut aus allen gelieferten Typen entfernt. Doch wenn Sie ein älteres SDK verwenden, müssen Sie diese Warnungen für alle Aufrufe gelieferter Typen unterdrücken.
-Mit dem folgenden Code wird die Warnung C4698 generiert: „'Windows::Storage::IApplicationDataStatics2::GetForUserAsync' ist nur für Evaluierungszwecke gedacht und kann in künftigen Updates geändert oder entfernt werden“:
+Der folgende Code erzeugt die Warnung C4698: „‘Windows::Storage::IApplicationDataStatics2::GetForUserAsync‘ ist nur für Evaluierungszwecke gedacht und kann in künftigen Updates geändert oder entfernt werden“:
 ```cpp
-Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync() //C4698
 ```
 
 Fügen Sie #pragma hinzu, um die Warnung zu deaktivieren:
@@ -429,13 +429,13 @@ Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
 #pragma warning(pop)
 ```
 ### <a name="out-of-line-definition-of-a-template-member-function"></a>Out-of-Line-Definition einer Vorlagenmemberfunktion 
-Updateversion 15.3 generiert einen Fehler, wenn eine Out-of-Line-Definition einer Vorlagenmemberfunktion gefunden wird , die nicht in der Klasse deklariert wurde. Mit dem folgenden Code wird nun Fehler C2039 generiert: 'f': ist kein Member von 'S':
+Updateversion 15.3 generiert einen Fehler, wenn eine Out-of-Line-Definition einer Vorlagenmemberfunktion gefunden wird , die nicht in der Klasse deklariert wurde. Mit dem folgenden Code wird nun der Fehler C2039 generiert: „f“ ist kein Member von „S“:
 
 ```cpp
 struct S {}; 
  
 template <typename T> 
-void S::f(T t) {}
+void S::f(T t) {} //C2039: 'f': is not a member of 'S'
 ```
 
 Um den Fehler zu beheben, fügen Sie der Klasse eine Deklaration hinzu:
@@ -453,14 +453,14 @@ void S::f(T t) {}
 In C++ ist „this“ ein prvalue des Typzeigers auf X. Sie können nicht die Adresse von „this“ verwenden oder sie an einen „lvalue“-Verweis binden. In früheren Versionen von Visual Studio konnte es Ihnen der Compiler ermöglichen, diese Einschränkung mithilfe einer Umwandlung zu umgehen. In Updateversion 15.3 generiert der Compiler Fehler C2664.
 
 ### <a name="conversion-to-an-inaccessible-base-class"></a>Konvertierung in eine Basisklasse, auf die nicht zugegriffen werden kann
-Updateversion 15.3 generiert einen Fehler, wenn Sie versuchen, einen Typ in eine Basisklasse zu konvertieren, auf die nicht zugegriffen werden kann. Der Compiler löst jetzt   
-Fehler C2243 aus: „'Typumwandlung': Konvertierung von 'D *' in 'B *' vorhanden, aber kein Zugriff möglich“. Der folgende Code ist falsch formatiert und kann möglicherweise einen Absturz während der Laufzeit verursachen. Der Compiler generiert nun C2243, wenn er auf Code wie diesen trifft:
+Updateversion 15.3 generiert einen Fehler, wenn Sie versuchen, einen Typ in eine Basisklasse zu konvertieren, auf die nicht zugegriffen werden kann. Der Compiler löst jetzt Folgendes aus:  
+„Fehler C2243: „Typumwandlung“: Konvertierung von ‚D *‘ in ‚B *‘ vorhanden, aber kein Zugriff möglich“. Der folgende Code ist falsch formatiert und kann möglicherweise einen Absturz während der Laufzeit verursachen. Der Compiler generiert nun C2243, wenn er auf Code wie diesen trifft:
 
 ```cpp
 #include <memory> 
  
 class B { }; 
-class D : B { }; // should be public B { }; 
+class D : B { }; // C2243. should be public B { }; 
  
 void f() 
 { 
@@ -468,7 +468,7 @@ void f()
 }
 ```
 ### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>Standardargumente sind in Out-of-Line-Definitionen von Memberfunktionen nicht zulässig
-Standardargumente sind in Out-of-Line-Definitionen von Memberfunktionen in Vorlagenklassen nicht zulässig.  Der Compiler gibt unter „/permissive“ eine Warnung und unter „/permissive-“ einen schwerwiegenden Fehler aus. In früheren Versionen von Visual Studio konnte der folgende falsch formatierte Code einen Absturz zur Laufzeit verursachen. In Updateversion 15.3 wird die Warnung C5034 generiert: 'A<T>::f': Eine Out-of-Line-Definition eines Members einer Klassenvorlage kann keine Standardargumente haben:
+Standardargumente sind in Out-of-Line-Definitionen von Memberfunktionen in Vorlagenklassen nicht zulässig.  Der Compiler gibt unter „/permissive“ eine Warnung und unter „/permissive-“ einen schwerwiegenden Fehler aus. In früheren Versionen von Visual Studio konnte der folgende falsch formatierte Code einen Absturz zur Laufzeit verursachen. In Updateversion 15.3 wird die Warnung C5034 generiert: „A<T>::f“: Eine Out-of-Line-Definition eines Members einer Klassenvorlage kann keine Standardargumente haben:
 ```cpp
  
 template <typename T> 
@@ -477,7 +477,7 @@ struct A {
 }; 
  
 template <typename T> 
-T A<T>::f(T t, bool b = false) 
+T A<T>::f(T t, bool b = false) // C5034
 { 
 ... 
 }
@@ -506,7 +506,7 @@ constexpr auto off = offsetof(A, arr[2]);
 ```
 
 ### <a name="using-offsetof-with-static-data-member-or-member-function"></a>Verwenden von „offsetof“ mit statischem Datenmember oder mit Memberfunktion
-In Updateversion 15.3 führt das Verwenden von „offsetof(T, m)“, wobei „m“ ein statisches Datenmember oder eine Memberfunktion ist, zu einem Fehler. Mit dem folgenden Code wird Fehler C4597 generiert: „Nicht definiertes Verhalten: offsetof auf Memberfunktion ‚foo‘ angewendet“ und Fehler C4597: „Nicht definiertes Verhalten: offsetof auf statischen Datenmember ‚bar‘ angewendet":
+In Updateversion 15.3 führt das Verwenden von „offsetof(T, m)“, wobei „m“ ein statisches Datenmember oder eine Memberfunktion ist, zu einem Fehler. Mit dem folgenden Code wird der Fehler C4597: „Nicht definiertes Verhalten: offsetof auf Memberfunktion ‚foo‘ angewendet“ und der Fehler C4597: „Nicht definiertes Verhalten: offsetof auf statischen Datenmember ‚bar‘ angewendet" generiert:
 ```cpp
  
 #include <cstddef> 
@@ -527,7 +527,7 @@ In Updateversion 15.3 ignoriert der Compiler Attribute nicht mehr, wenn „__dec
 
 ```cpp
  
-__declspec(noinline) extern "C" HRESULT __stdcall
+__declspec(noinline) extern "C" HRESULT __stdcall //C4768
 ```
 
 Um die Warnung zu korrigieren, fügen Sie zuerst externes „C“ hinzu:
@@ -535,9 +535,10 @@ Um die Warnung zu korrigieren, fügen Sie zuerst externes „C“ hinzu:
 ```cpp
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
+Diese Warnung ist standardmäßig deaktiviert und wirkt sich nur auf den mit `/Wall /WX` kompilierten Code aus.
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype und Aufrufe gelöschter Destruktoren
-In früheren Versionen von Visual Studio erkannte der Compiler nicht, wenn ein Aufruf eines gelöschten Destruktors im Kontext des Ausdrucks erfolgte, der „decltype“ zugeordnet war. Mit dem folgenden Code wird in Updateversion 15.3 Fehler C2280 generiert: „A<T>::~A(void)': Es wurde versucht, auf eine gelöschte Funktion zu verweisen:
+In früheren Versionen von Visual Studio erkannte der Compiler nicht, wenn ein Aufruf eines gelöschten Destruktors im Kontext des Ausdrucks erfolgte, der „decltype“ zugeordnet war. In der Updateversion 15.3 erzeugt der folgende Code „Fehler C2280: ‚A<T>::~A(void)': Es wurde versucht, auf eine gelöschte Funktion zu verweisen“:
 
 ```cpp
 template<typename T> 
@@ -557,11 +558,11 @@ void h()
    g(42); 
 }
 ```
-### <a name="unitialized-const-variables"></a>Nicht initialisierte „const“-Variablen
-Die Visual Studio 2017 RTW-Version wies eine Regression auf, bei der der C++-Compiler keine Diagnose ausgab, wenn eine „const“-Variable nicht initialisiert war. Diese Regression wurde in Visual Studio 2017 Update 1 behoben. Mit dem folgenden Code wird die Warnung C4132 generiert: „Wert: Konstantes Objekt sollte initialisiert werden“:
+### <a name="uninitialized-const-variables"></a>Nicht initialisierte „const“-Variablen
+Die Visual Studio 2017 RTW-Version wies eine Regression auf, bei der der C++-Compiler keine Diagnose ausgab, wenn eine „const“-Variable nicht initialisiert war. Diese Regression wurde in Visual Studio 2017 Update 1 behoben. Der folgende Code erzeugt nun die "Warnung C4132: 'Value': const-Objekt sollte initialisiert werden":
 
 ```cpp
-const int Value;
+const int Value; //C4132
 ```
 Um den Fehler zu beheben, weisen Sie `Value` einen Wert zu.
 
@@ -583,6 +584,108 @@ Um die Warnungen zu entfernen, können Sie die leeren Deklarationen einfach ausk
  
 Die Warnung wird unter „/Wv:18“ ausgeschlossen und ist auf der Warnstufe W2 standardmäßig aktiviert.
 
+
+### <a name="stdisconvertible-for-array-types"></a>std::is_convertible für Arraytypen
+Frühere Versionen des Compilers haben zu falschen Ergebnissen für [std::is_convertible](standard-library/is-convertible-class.md) für Arraytypen geführt. Dadurch mussten Bibliotheksautoren bei der Verwendung der Typeigenschaft `std::is_convertable<…>` besondere Schreibweisen für den Visual C++-Compiler anwenden. Im folgenden Beispiel sind die statischen Assertionen in früheren Versionen von Visual Studio erfolgreich, jedoch nicht in der Updateversion 15.3 von Visual Studio 2017:
+
+```cpp
+#include <type_traits>
+ 
+using Array = char[1];
+ 
+static_assert(std::is_convertible<Array, Array>::value);
+static_assert((std::is_convertible<const Array, const Array>::value), "");
+static_assert((std::is_convertible<Array&, Array>::value), "");
+static_assert((std::is_convertible<Array, Array&>::value), "");
+```
+
+**std::is_convertible<From, To>** wird berechnet, indem überprüft wird, ob eine imaginäre Funktionsdefinition wohlgeformt ist:
+```cpp 
+   To test() { return std::declval<From>(); }
+``` 
+
+### <a name="private-destructors-and-stdisconstructible"></a>Private Destruktoren und std::is_constructible
+Frühere Versionen des Compilers ignorieren, ob ein Destruktor privat war, als über das Ergebnis von [std::is_constructible](standard-library/is-constructible-class.md) entschieden wurde. Dies wird nun berücksichtigt. Im folgenden Beispiel sind die statischen Assertionen in früheren Versionen von Visual Studio erfolgreich, jedoch nicht in der Updateversion 15.3 von Visual Studio 2017:
+
+```cpp
+#include <type_traits>
+ 
+class PrivateDtor {
+   PrivateDtor(int) { }
+private:
+   ~PrivateDtor() { }
+};
+ 
+// This assertion used to succeed. It now correctly fails.
+static_assert(std::is_constructible<PrivateDtor, int>::value);
+```  
+
+Private Destruktoren führen dazu, dass ein Typ nicht konstruierbar ist. **std::is_constructible<T, Args…>** wird berechnet, als würde die folgende Deklaration geschrieben:
+```cpp 
+   T obj(std::declval<Args>()…)
+``` 
+Dieser Aufruf impliziert einen Destruktoraufruf.
+
+### <a name="c2668-ambiguous-overload-resolution"></a>C2668: Mehrdeutige Überladungsauflösung
+Frühere Versionen des Compilers konnten manchmal keine Mehrdeutigkeiten erkennen, wenn durch die Verwendung von sowohl Deklarationen als auch argumentabhängigen Lookups mehrere Kandidaten gefunden wurden. Dies kann zum Auswählen einer falschen Überladung und zu unerwartetem Laufzeitverhalten führen. Im folgenden Beispiel löst die Updateversion 15.3 von Visual Studio 2017 ordnungsgemäß Folgendes aus: C2668 „f“: Mehrdeutiger Aufruf der überladenen Funktion:
+
+```cpp
+namespace N {
+   template<class T>
+   void f(T&, T&);
+ 
+   template<class T>
+   void f();
+}
+ 
+template<class T>
+void f(T&, T&);
+ 
+struct S {};
+void f()
+{
+   using N::f; 
+ 
+   S s1, s2;
+   f(s1, s2); // C2668
+}
+```
+Um den Code zu korrigieren, entfernen Sie die Anweisung „using N::f“, wenn Sie „::f()“ aufrufen wollten.
+
+### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660: Lokale Funktionsdeklarationen und argumentabhängiges Lookup
+Lokale Funktionsdeklarationen verbergen die Funktitonsdeklaration im umschließenden Bereich und deaktivieren das argumentabhängige Lookup.
+Jedoch haben frühere Versionen des Visual C++-Compilers in diesem Fall ein argumentabhängiges Lookup durchgeführt, was zum Auswählen einer falschen Überladung oder zu unerwartetem Laufzeitverhalten führen konnte. Der Fehler liegt in der Regel in einer falschen Signatur der lokalen Funktionsdeklaration. Im folgenden Beispiel löst die Updateversion 15.3 von Visual Studio 2017 ordnungsgemäß Folgendes aus: C2660 „f“: Funktion akzeptiert nicht zwei Argumente:
+
+```cpp
+struct S {}; 
+void f(S, int);
+ 
+void g()
+{
+   void f(S); // C2660 'f': function does not take 2 arguments:
+   // or void f(S, int);
+   S s;
+   f(s, 0);
+}
+```
+
+Um das Problem zu beheben, ändern Sie entweder die Signatur **f(S)**, oder entfernen Sie diese.
+
+### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038: Reihenfolge der Initialisierung in Initialisiererlisten
+Klassenmember werden in der Reihenfolge initialisiert, in der sie deklariert werden, nicht in der Reihenfolge, in der Sie in Initialisiererlisten erscheinen. Frühere Versionen des Compilers haben keine Warnung ausgegeben, wenn sich die Reihenfolge der Initialisiererliste von der Deklarationsreihenfolge unterschied. Dies konnte zu undefiniertem Laufzeitverhalten führen, wenn die Initialisierung eines Members von einem anderen Member in der Liste abhing, der bereits initialisiert wird. Im folgenden Beispiel löst die Updateversion 15.3 von Visual Studio 2017 (mit „/Wall“ oder „/WX“) die folgende Warnung aus: C5038: Datenmember „A::y“ wird nach Datenmember „A::x“ initialisiert:
+
+```cpp
+struct A
+{
+    A(int a) : y(a), x(y) {} // Initialized in reverse, y reused
+    int x;
+    int y;
+};
+
+```
+Um das Problem zu beheben, ordnen Sie die Initialisiererliste so an, dass die Reihenfolge mit der Reihenfolge der Deklarationen übereinstimmt. Eine ähnliche Warnung wird ausgelöst, wenn ein oder beide Initialisierer auf Member der Basisklasse verweisen.
+
+Beachten Sie, dass die Warnung standardmäßig deaktiviert ist und sich nur auf mit „/Wall“ oder „/WX“ kompilierten Code auswirkt.
 
 ## <a name="see-also"></a>Siehe auch  
 [Visual C++-Sprachkonformität](visual-cpp-language-conformance.md)  

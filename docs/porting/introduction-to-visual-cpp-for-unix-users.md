@@ -32,19 +32,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 7c75629d56e6d8e5291b7d1f7cca9995ab9a50da
-ms.openlocfilehash: d8515fc613f95ae5d6395e33b49482488bcc488d
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: 524be35ec1e1db511b7fd4c2ab2b87d83c54325c
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Einführung in Visual C++ für UNIX-Benutzer
-Dieses Thema enthält Informationen für UNIX-Benutzer, die noch keine Erfahrungen mit [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] sammeln konnten und [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] produktiv einsetzen möchten.  
+Dieses Thema enthält Informationen für UNIX-Benutzer, die noch keine Erfahrungen mit Visual C++ sammeln konnten und Visual C++ produktiv einsetzen möchten.  
   
 ## <a name="getting-started-on-the-command-line"></a>Erste Schritte über die Befehlszeile  
- Sie können [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] von der Befehlszeile aus auf ähnliche Weise wie eine Befehlszeilenumgebung unter UNIX verwenden. Die Kompilierung erfolgt über die Eingabeaufforderung mit dem C/C++-Befehlszeilencompiler (CL.EXE) und weiteren Tools, darunter NMAKE.EXE, der Microsoft-Version des UNIX-Dienstprogramms Make.  
+ Sie können Visual C++ von der Befehlszeile aus auf ähnliche Weise wie eine Befehlszeilenumgebung unter UNIX verwenden. Die Kompilierung erfolgt über die Eingabeaufforderung mit dem C/C++-Befehlszeilencompiler (CL.EXE) und weiteren Tools, darunter NMAKE.EXE, der Microsoft-Version des UNIX-Dienstprogramms Make.  
   
- Unter UNIX werden Befehle in einem gemeinsam genutzten Ordner, z. B. /usr/bin, installiert. In [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] werden die Befehlszeilentools im Installationsverzeichnis unter VC\bin installiert (bei einer typischen Installation unter Programme\Microsoft Visual Studio 8\VC\bin). Um die Befehlszeilentools zu verwenden, führen Sie vsvars32.bat aus. Diese Datei befindet sich im Installationsverzeichnis unter Common7\Tools. Dadurch wird das Verzeichnis „bin“ zum Pfad hinzugefügt, und es werden weitere Pfade eingerichtet, die zum Kompilieren von Visual C++-Programmen über die Befehlszeile erforderlich sind. Weitere Informationen finden Sie unter [Erstellen über die Befehlszeile](../build/building-on-the-command-line.md) und unter [Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms in der Befehlszeile](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
+ Unter UNIX werden Befehle in einem gemeinsam genutzten Ordner, z. B. /usr/bin, installiert. In Visual C++ werden die Befehlszeilentools im Installationsverzeichnis unter „VC\bin“ installiert (bei einer typischen Installation unter „Programme\Microsoft Visual Studio 8\VC\bin“). Um die Befehlszeilentools zu verwenden, führen Sie vsvars32.bat aus. Diese Datei befindet sich im Installationsverzeichnis unter Common7\Tools. Dadurch wird das Verzeichnis „bin“ zum Pfad hinzugefügt, und es werden weitere Pfade eingerichtet, die zum Kompilieren von Visual C++-Programmen über die Befehlszeile erforderlich sind. Weitere Informationen finden Sie unter [Erstellen über die Befehlszeile](../build/building-on-the-command-line.md) und unter [Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms in der Befehlszeile](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
 > [!NOTE]
 >  Beim Öffnen einer Eingabeaufforderung über den Menüpunkt **Visual Studio-Eingabeaufforderung** im Menü **Start** wird vsvars32.bat automatisch ausgeführt.  
@@ -60,10 +60,10 @@ Dieses Thema enthält Informationen für UNIX-Benutzer, die noch keine Erfahrung
  Eine Anwendung, die aus mehreren Bibliotheken und ausführbaren Dateien besteht, von denen möglicherweise jede mit einem anderen Satz von Compileroptionen oder sogar in einer anderen Sprache erstellt wurde, wird in mehreren Projekten gespeichert, die Teil einer einzigen *Projektmappe* sind. Eine Projektmappe stellt einen abstrakten Container dar, der zur Gruppierung mehrerer Projekte dient. Informationen über Projektmappen werden in einer Projektmappendatei mit der Erweiterung SLN gespeichert. Weitere Informationen finden Sie unter [Projektmappen und Projekte in Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) und unter [Verwenden der Visual Studio-IDE für C++-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ## <a name="importing-your-existing-code"></a>Importieren von vorhandenem Code  
- In [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] können Sie vorhandenen Code verwenden, der für die Kompilierung mit oder ohne Makefile eingerichtet wurde, und Sie können diesen Code in ein [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]-Projekt einfügen. Weitere Informationen finden Sie unter dem **Create Project From Existing Code Files Wizard** (Assistent für das Erstellen von Projekten aus vorhandenen Codedateien). Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+ In Visual C++ können Sie vorhandenen Code verwenden, der für die Kompilierung mit oder ohne Makefile eingerichtet wurde, und Sie können diesen Code in ein [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]-Projekt einfügen. Weitere Informationen finden Sie unter dem **Create Project From Existing Code Files Wizard** (Assistent für das Erstellen von Projekten aus vorhandenen Codedateien). Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
 ## <a name="creating-a-new-project"></a>Erstellen eines neuen Projekts  
- Sie können in der Entwicklungsumgebung neue Projekte erstellen. [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] bietet eine Vielzahl von Vorlagen, die Standardcode für verschiedene, häufig verwendete Projekte enthalten. Mit Anwendungs-Assistenten können Sie Projekte mit Codegliederungen für verschiedene Anwendungstypen generieren.  
+ Sie können in der Entwicklungsumgebung neue Projekte erstellen. Visual C++ bietet eine Vielzahl von Vorlagen, die Standardcode für verschiedene, häufig verwendete Projekte enthalten. Mit Anwendungs-Assistenten können Sie Projekte mit Codegliederungen für verschiedene Anwendungstypen generieren.  
   
  Sie können mit einem leeren Projekt beginnen, indem Sie den **Assistenten für Konsolenanwendungen (Win32)** verwenden. Aktivieren Sie das Kontrollkästchen **Leeres Projekt**. Sie können dem Projekt dann später neue Dateien und bereits vorhandene Dateien hinzufügen.  
   
@@ -83,4 +83,4 @@ Dieses Thema enthält Informationen für UNIX-Benutzer, die noch keine Erfahrung
  Weitere Informationen finden Sie unter [Portieren von UNIX auf Win32](../porting/porting-from-unix-to-win32.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tour zu Visual C++](http://msdn.microsoft.com/en-us/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)
+ [Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)
