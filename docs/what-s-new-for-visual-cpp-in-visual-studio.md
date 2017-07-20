@@ -26,16 +26,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
+ms.openlocfilehash: 58b5a3f2e5ce491ba7ba185c90bb6b4a2dca3101
+ms.contentlocale: de-de
+ms.lasthandoff: 06/30/2017
 
 ---
 
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Neuerungen bei Visual C++ in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] bietet für die Visual C++-Umgebung zahlreiche Updates und Korrekturen. Wir haben mehr als 250 Fehler und gemeldete Probleme mit dem Compiler und den Tools behoben, von denen viele durch Kunden über [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect") übermittelt wurden. Vielen Dank für das Melden von Fehlern!  Weitere Informationen zu Neuerungen im gesamten Visual Studio finden Sie unter [Neuerungen bei [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]] (https://go.microsoft.com/fwlink/?linkid=834481).
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] bietet für die Visual C++-Umgebung zahlreiche Updates und Korrekturen. Wir haben mehr als 250 Fehler und gemeldete Probleme mit dem Compiler und den Tools behoben, von denen viele durch Kunden über [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect") übermittelt wurden. Vielen Dank für das Melden von Fehlern!  Weitere Informationen zu Neuerungen im gesamten Visual Studio finden Sie unter [Neuerungen in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/?linkid=834481).
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
@@ -94,7 +95,7 @@ Diese Version bietet mehrere Verbesserungen hinsichtlich Optimierung, Codegeneri
 * Eine vollständige Liste der STL-Optimierungen finden Sie im Blog unter [STL Fixes In VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/).
 
 ### <a name="open-source-library-support"></a>Unterstützung für Open-Source-Bibliotheken  
-Vcpkg ist ein Open-Source-Befehlszeilentool, das den Prozess des Beziehens und Erstellens von statischen C++-Open-Source Bibliotheken und DLLs in Visual Studio sehr stark vereinfacht. Weitere Informationen finden Sie im Blogbeitrag [Vcpkg updates: Static linking is now available](https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/).
+Vcpkg ist ein Open-Source-Befehlszeilentool, das den Prozess des Beziehens und Erstellens von statischen C++-Open-Source Bibliotheken und DLLs in Visual Studio sehr stark vereinfacht. Weitere Informationen finden Sie unter [vcpkg: A Package Manager for C++ (vcpkg: Ein Paket-Manager für C++)](vcpkg.md).
 
 ### <a name="cpprest-sdk-290"></a>C++ REST SDK 2.9.0  
 Das C++ REST SDK, eine plattformübergreifende Web-API für C++, wurde auf Version 2.9.0 aktualisiert. Weitere Informationen finden Sie im Blogbeitrag [CppRestSDK 2.9.0 is available on GitHub](https://blogs.msdn.microsoft.com/vcblog/2016/10/21/cpprestsdk-2-9-0-is-available-on-github/).
@@ -143,9 +144,9 @@ Einige dieser Features sind auch in anderen Sprachen gängig, während einige C+
 In Visual Studio 2017 wurde das Feature „Ordner öffnen“ eingeführt, das Ihnen das Programmieren, Erstellen von Builds und Debuggen in einem Ordner mit Quellcode ermöglicht, ohne dass Projektmappen oder Projekte erstellt werden müssen. Dadurch wird der Einstieg in Visual Studio wesentlich einfacher, selbst wenn Ihr Projekt kein auf MSBuild basierendes Projekt ist. Mit „Ordner öffnen“ erhalten Sie Zugang zu den Funktionen zum Verstehen, Bearbeiten, Erstellen und Debuggen von Code, die Visual Studio bereits für MSBuild-Projekte bietet. Weitere Informationen finden Sie im Blogbeitrag [Bring your C++ codebase to Visual Studio with “Open Folder”](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/).
 
 * Verbesserungen in der Benutzeroberfläche „Ordner öffnen“. Sie können die Oberfläche über diese JSON-Dateien anpassen:
-  -    CppProperties.json zum Anpassen des IntelliSense- und Browsererlebnisses.
-  -    Tasks.json zum Anpassen der Buildschritte. 
-  -    Launch.json zum Anpassen des Debugvorgangs.
+  - CppProperties.json zum Anpassen des IntelliSense- und Browsererlebnisses.
+  - Tasks.json zum Anpassen der Buildschritte. 
+  - Launch.json zum Anpassen des Debugvorgangs.
 
 ### <a name="cmake-support-via-open-folder"></a>Unterstützung von CMake über „Ordner öffnen“
 Visual Studio 2017 führt die Unterstützung für die Verwendung von CMake-Projekten ohne Konvertierung in MSBuild-Projektdateien (.vcxproj) ein. Weitere Informationen finden Sie im Blogpost [CMake support in Visual Studio (CMake-Unterstützung in Visual Studio)](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) und [CMake support in Visual Studio 2017 – what’s new in the RC.2 update (CMake-Support in Visual Studio 2017: Neues im RC.2-Update)](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/). Durch Öffnen von CMake-Projekten mit „Ordner öffnen“ wird die Umgebung für die Bearbeitung, Erstellung und das Debuggen von C++ automatisch konfiguriert.
