@@ -1,78 +1,96 @@
 ---
-title: "_daylight, _dstbias, _timezone und _tzname | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tzname"
-  - "_timezone"
-  - "timezone"
-  - "_daylight"
-  - "_tzname"
-  - "daylight"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zeitzonen"
-  - "Anpassungen der Uhrzeit"
-  - "Zeitzonenvariablen"
-  - "_tzname-Funktion"
-  - "_daylight-Funktion"
-  - "_timezone-Funktion"
-  - "daylight-Funktion"
-  - "Anpassungen der lokalen Zeit"
-  - "Zeitzonenfunktion"
-  - "tzname-Funktion"
-  - "Zeitzonenvariablen"
+title: _daylight, _dstbias, _timezone und _tzname | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tzname
+- _timezone
+- timezone
+- _daylight
+- _tzname
+- daylight
+dev_langs:
+- C++
+helpviewer_keywords:
+- time zones
+- time adjustments
+- timezone variables
+- _tzname function
+- _daylight function
+- _timezone function
+- daylight function
+- local time adjustments
+- timezone function
+- tzname function
+- time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _daylight, _dstbias, _timezone und _tzname
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0b2b40db8d478eeb1570022bd1c901c2c28a883b
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-`_daylight`, `_dstbias`, `_timezone` und `_tzname` werden in einigen Zeitraum und Datumsroutinen, Ortszeitanpassungen vorzunehmen verwendet.  Diese globalen Variablen sind für die sichereren funktionalen Versionen veraltet, die anstelle der globalen Variablen verwendet werden sollten.  
+---
+# <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone und _tzname
+`_daylight`, `_dstbias`, `_timezone` und `_tzname` werden in einigen Uhrzeit- und Datumsroutinen zur Anpassung an die jeweilige Ortszeit verwendet. Diese globalen Variablen wurden gegen die sichereren Funktionsversionen ausgetauscht, die anstelle der globalen Variablen verwendet werden sollen.  
   
 |Globale Variable|Funktionale Entsprechung|  
-|----------------------|------------------------------|  
-|`_daylight`|[\_get\_daylight](../c-runtime-library/reference/get-daylight.md)|  
-|`_dstbias`|[\_get\_dstbias](../c-runtime-library/reference/get-dstbias.md)|  
-|`_timezone`|[\_get\_timezone](../c-runtime-library/reference/get-timezone.md)|  
-|`_tzname`|[\_get\_tzname](../c-runtime-library/reference/get-tzname.md)|  
+|---------------------|---------------------------|  
+|`_daylight`|[_get_daylight](../c-runtime-library/reference/get-daylight.md)|  
+|`_dstbias`|[_get_dstbias](../c-runtime-library/reference/get-dstbias.md)|  
+|`_timezone`|[_get_timezone](../c-runtime-library/reference/get-timezone.md)|  
+|`_tzname`|[_get_tzname](../c-runtime-library/reference/get-tzname.md)|  
   
- Sie werden in Time.h folgendermaßen deklariert.  
+ Sie werden in Time.h wie folgt deklariert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-extern int _daylight;   
-extern int _dstbias;   
-extern long _timezone;   
+extern int _daylight;   
+extern int _dstbias;   
+extern long _timezone;   
 extern char *_tzname[2];  
 ```  
   
-## Hinweise  
- Auf einem Aufruf an `_ftime`, werden `localtime` oder `_tzset`, die Werte von `_daylight`, `_dstbias`, `_timezone` und `_tzname` vom Wert der Umgebungsvariablen `TZ` bestimmt.  Wenn Sie nicht explizit den Wert `TZ` festlegen, enthalten `_tzname[0]` und `_tzname[1]` die Standardeinstellungen "von PST" und "PDT" bzw.  Die Zeitmanipulationsfunktionen \([\_tzset](../c-runtime-library/reference/tzset.md), [\_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md) und [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)\) versuchen, die Werte von `_daylight`, `_dstbias` und `_timezone` festlegen, die das Betriebssystem für den Standardwert jeder Variable abfragen.  Die globalen Variablenwerte der Zeitzone werden in der folgenden Tabelle dargestellt.  
+## <a name="remarks"></a>Hinweise  
+ Bei einem Aufruf von `_ftime`, `localtime` oder `_tzset` werden die Werte von `_daylight`, `_dstbias`, `_timezone` und `_tzname` aus dem Wert der Umgebungsvariablen `TZ` ermittelt. Wenn der Wert von `TZ` nicht explizit festgelegt wird, weisen `_tzname[0]` und `_tzname[1]` die Standardeinstellungen „PST“ bzw. „PDT“ auf.  Mit den Funktionen zur Verarbeitung von Zeitangaben ([_tzset](../c-runtime-library/reference/tzset.md), [_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md) und [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)) wird der Wert von `_daylight`, `_dstbias` und `_timezone` festgelegt, indem das Betriebssystem nach dem Standardwert für die einzelnen Variablen abgefragt wird. Die Werte für die globalen Zeitzonenvariablen werden in der folgenden Tabelle aufgeführt.  
   
 |Variable|Wert|  
-|--------------|----------|  
-|`_daylight`|Wert ungleich 0 \(null\), wenn Sommerzeit \(dst\)\- Zone in `TZ` angegeben wird oder vom Betriebssystem ab; andernfalls 0.  Der Standardwert ist 1.|  
-|`_dstbias`|Offset für Sommerzeit.|  
-|`_timezone`|Unterschied in Sekunden zwischen koordinierter Weltzeit und Ortszeit.  Der Standardwert ist 28,800.|  
-|`_tzname[0]`|Zeitzonenname ist von der `TZ` \- Umgebungsvariable.  Der Standardwert ist "PST".|  
-|`_tzname[1]`|DST\-Zonenname berechnete von der Umgebungsvariablen `TZ`.  Der Standardwert ist "PDT" \(pazifische Sommerzeit\).|  
+|--------------|-----------|  
+|`_daylight`|Nicht null, wenn in `TZ` eine Zone mit Sommerzeit angegeben ist oder diese über das Betriebssystem ermittelt wird; andernfalls 0. Der Standardwert ist 1.|  
+|`_dstbias`|Zeitverschiebung durch Sommerzeit.|  
+|`_timezone`|Unterschied in Sekunden zwischen koordinierter Weltzeit (Universal Time Coordinated, UTC) und Ortszeit. Der Standardwert beträgt 28.800.|  
+|`_tzname[0]`|Der von der Umgebungsvariablen `TZ` abgeleitete Name der Zeitzone. Der Standardwert lautet „PST“.|  
+|`_tzname[1]`|Der von der Umgebungsvariablen `TZ` abgeleitete Name der Zone mit Sommerzeit. Der Standardwert lautet „PDT“ (Pacific Daylight Time, Sommerzeit Pazifik).|  
   
-## Siehe auch  
- [Globale Variablen](../c-runtime-library/global-variables.md)   
- [\_get\_daylight](../c-runtime-library/reference/get-daylight.md)   
- [\_get\_dstbias](../c-runtime-library/reference/get-dstbias.md)   
- [\_get\_timezone](../c-runtime-library/reference/get-timezone.md)   
- [\_get\_tzname](../c-runtime-library/reference/get-tzname.md)
+## <a name="see-also"></a>Siehe auch  
+ [Global Variables (Globale Variablen)](../c-runtime-library/global-variables.md)   
+ [_get_daylight](../c-runtime-library/reference/get-daylight.md)   
+ [_get_dstbias](../c-runtime-library/reference/get-dstbias.md)   
+ [_get_timezone](../c-runtime-library/reference/get-timezone.md)   
+ [_get_tzname](../c-runtime-library/reference/get-tzname.md)
