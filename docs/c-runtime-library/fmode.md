@@ -1,52 +1,70 @@
 ---
-title: "_fmode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "fmode"
-  - "_fmode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dateiübersetzung [C++], Standardmodus"
-  - "fmode-Funktion"
-  - "_fmode-Funktion"
+title: _fmode | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- fmode
+- _fmode
+dev_langs:
+- C++
+helpviewer_keywords:
+- file translation [C++], default mode
+- fmode function
+- _fmode function
 ms.assetid: ac6df9eb-e5cc-4c54-aff3-373c21983118
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# _fmode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 3c0946419e1c0a408a7dfad190387f0165d9fba0
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Die Variable `_fmode` wird der Standarddateiübersetzungsmodus für Text\- oder Binärdateiübersetzung fest.  Diese globale Variable ist für die sichereren funktionalen Versionen [\_get\_fmode](../c-runtime-library/reference/get-fmode.md) und [\_set\_fmode](../c-runtime-library/reference/set-fmode.md) veraltet, die anstelle der globalen Variable verwendet werden sollten.  Sie wird in Stdlib.h folgendermaßen deklariert.  
+---
+# <a name="fmode"></a>_fmode
+Die Variable `_fmode` legt den standardmäßigen Dateiübersetzungsmodus für die Text- oder Binärübersetzung fest. Diese globale Variable ist für die sichereren funktionalen Versionen [_get_fmode](../c-runtime-library/reference/get-fmode.md) und [_set_fmode](../c-runtime-library/reference/set-fmode.md) veraltet, die anstelle der globalen Variable verwendet werden sollten. Dies ist in Stdlib.h folgendermaßen deklariert.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 extern int _fmode;  
 ```  
   
-## Hinweise  
- Die Standardeinstellung von `_fmode`  ist `_O_TEXT`  für Textmodusübersetzung.  `_O_BINARY`  ist die Einstellung für binären Modus.  
+## <a name="remarks"></a>Hinweise  
+ Die Standardeinstellung von `_fmode` für die Textmodusübersetzung ist `_O_TEXT`. `_O_BINARY` ist die Einstellung für den Binärmodus.  
   
- Sie können den Wert von `_fmode` auf drei Arten ändern:  
+ Sie können den Wert von `_fmode` wie folgt ändern:  
   
--   Link mit Binmode.obj.  Dadurch ändert die ursprüngliche Einstellung von `_fmode` in `_O_BINARY` und führt alle Dateien mit Ausnahme von `stdin`, `stdout` und im binären Modus geöffnet werden sollen, `stderr`.  
+-   Eine Verknüpfung mit „Binmode.obj“. Dadurch wird die ursprüngliche Einstellung von `_fmode` auf `_O_BINARY` geändert, woraufhin alle Dateien außer `stdin`, `stdout` und `stderr` im Binärmodus geöffnet werden.  
   
--   Lassen Sie `_get_fmode` oder `_set_fmode` \- Aufruf die globale Variable `_fmode` abrufen oder festlegen, bzw.  
+-   Ein Aufruf von `_get_fmode` oder `_set_fmode`, um die globale `_fmode`-Variable abzurufen bzw. festzulegen.  
   
--   Ändern Sie den Wert von `_fmode` direkt, indem Sie sie in Ihrem Programm festlegen.  
+-   Ändern Sie den Wert `_fmode` direkt, indem Sie ihn in Ihrem Programm festlegen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Globale Variablen](../c-runtime-library/global-variables.md)   
- [\_get\_fmode](../c-runtime-library/reference/get-fmode.md)   
- [\_set\_fmode](../c-runtime-library/reference/set-fmode.md)
+ [_get_fmode](../c-runtime-library/reference/get-fmode.md)   
+ [_set_fmode](../c-runtime-library/reference/set-fmode.md)

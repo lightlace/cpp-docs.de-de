@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ef479e2818cb9226830cc34f3fe9f8e59202e89
-ms.openlocfilehash: bb69ad913af2fd4777c5b4e64bde0758beb73822
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
 ms.contentlocale: de-de
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
@@ -109,7 +109,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
   
 -   **Operatoren „new“ und „delete“**In früheren Bibliotheksversionen wurden die in der Implementierung definierten Operatorfunktionen „new“ und „delete“ aus der DLL-Datei der Laufzeitbibliothek (z. B. msvcr120.dll) exportiert. Dieser Operatorfunktionen sind immer statisch mit Ihren Binärdateien verknüpft, selbst wenn DLL-Dateien der Laufzeitbibliothek verwendet werden.  
   
-     Es handelt sich dabei nicht um eine wichtige Änderung für nativen oder gemischten Code (/clr), sondern eher für Code, der als [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)kompiliert wird, denn diese Änderung kann dann zu einem Fehler beim Kompilieren führen. Wenn Sie Code als !/clr:pure kompilieren, müssen Sie möglicherweise #include \<new> oder #include \<new.h> hinzufügen, um Buildfehler aufgrund dieser Änderung zu umgehen. Beachten Sie, dass „/clr:pure“ in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] veraltet ist und in zukünftigen Versionen ggf. entfernt wird.  
+     Es handelt sich dabei nicht um eine wichtige Änderung für nativen oder gemischten Code (/clr), sondern eher für Code, der als [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)kompiliert wird, denn diese Änderung kann dann zu einem Fehler beim Kompilieren führen. Wenn Sie Code als !/clr:pure kompilieren, müssen Sie möglicherweise #include \<new> oder #include \<new.h> hinzufügen, um Buildfehler aufgrund dieser Änderung zu umgehen. Beachten Sie, dass „/clr:pure“ in Visual Studio 2015 veraltet ist und in zukünftigen Releases ggf. entfernt wird.  
   
 #### <a name="processh"></a>\<process.h>  
   
@@ -260,7 +260,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
 ####  <a name="BK_STL"></a> C++-Standardbibliothek  
  Um neue Optimierungen und Debuggingüberprüfungen zu aktivieren, unterbricht die Visual Studio-Implementierung der C++-Standardbibliothek absichtlich die Binärkompatibilität von einer Version zur nächsten. Wenn die C++-Standardbibliothek verwendet wird, können Objektdateien und statische Bibliotheken, die unter Verwendung von verschiedenen Versionen kompiliert werden, nicht in einer Binärdatei (EXE oder DLL) vermischt werden, und C++-Standardbibliotheksobjekte können nicht zwischen Binärdateien übergeben werden, die mit verschiedenen Versionen kompiliert werden. Eine solche Kombination gibt Linkerfehler über _MSC_VER-Konflikte aus. (_MSC_VER ist das Makro, das die Hauptversion des Compilers enthält – z. B. 1800 für Visual Studio 2013.) Diese Überprüfung kann weder eine gemischte DLL-Verwendung noch eine gemischte Verwendung erkennen, die Visual C++ 2008 oder früher betrifft.  
   
--   **C++-Standardbibliothek: Includedateien** Es wurden einige Änderungen an der Includestruktur in den Headern der C++-Standardbibliothek vorgenommen. Header der C++-Standardbibliothek dürfen einander nicht auf unbekannte Weise enthalten. Im Allgemeinen sollten Sie Code schreiben, der sorgfältig alle entsprechend dem C++-Standard benötigten Header enthält, und nicht darauf beruht, welche Header der C++-Standardbibliothek in anderen Headern der C++-Standardbibliothek enthalten sind. Dadurch kann der Code für andere Versionen und Plattformen verwendet werden. Mindestens zwei Headeränderungen in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] wirken sich auf den Benutzercode aus. Erstens ist \<iterator> nicht mehr in \<string> enthalten. Zweitens deklariert \<tuple> jetzt std:: array ohne \<array>, wodurch Code über die folgende Kombination von Codekonstrukten unterbrochen werden kann: der Code hat eine array-Variable und Sie verfügen über eine using-Anweisung „using namespace std;“ und fügen einen Header der C++-Standardbibliothek (z.B. \<functional>) mit \<tuple> hinzu, von dem std::array nun deklariert wird.  
+-   **C++-Standardbibliothek: Includedateien** Es wurden einige Änderungen an der Includestruktur in den Headern der C++-Standardbibliothek vorgenommen. Header der C++-Standardbibliothek dürfen einander nicht auf unbekannte Weise enthalten. Im Allgemeinen sollten Sie Code schreiben, der sorgfältig alle entsprechend dem C++-Standard benötigten Header enthält, und nicht darauf beruht, welche Header der C++-Standardbibliothek in anderen Headern der C++-Standardbibliothek enthalten sind. Dadurch kann der Code für andere Versionen und Plattformen verwendet werden. Mindestens zwei Headeränderungen in Visual Studio 2015 wirken sich auf den Benutzercode aus. Erstens ist \<iterator> nicht mehr in \<string> enthalten. Zweitens deklariert \<tuple> jetzt std:: array ohne \<array>, wodurch Code über die folgende Kombination von Codekonstrukten unterbrochen werden kann: der Code hat eine array-Variable und Sie verfügen über eine using-Anweisung „using namespace std;“ und fügen einen Header der C++-Standardbibliothek (z.B. \<functional>) mit \<tuple> hinzu, von dem std::array nun deklariert wird.  
   
 -   **steady_clock** Die \<chrono>-Implementierung von [steady_clock](../standard-library/steady-clock-struct.md) wurde gemäß den Zuverlässigkeits- und Stabilitätsanforderungen des C++-Standards geändert. „steady_clock“ basiert nun auf [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) und „high_resolution_clock“ ist jetzt eine Typedefinition für „steady_clock“. Daher ist steady_clock::time_point nun in Visual C++ eine Typdefinition für chrono::time_point<steady_clock>; Dies ist jedoch bei anderen Implementierungen nicht unbedingt der Fall.  
   
@@ -280,7 +280,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
   
 -   **std::allocator::deallocate** In Visual C++-2013 und früheren Versionen hat std::allocator::deallocate(p, n) das für n übergebene Argument ignoriert.  Der C++-Standard erfordert, dass n dem Wert entspricht, der als erstes Argument für den Aufruf der von p zurückgegebenen Zuordnung entspricht. In der aktuellen Version wird jedoch der Wert n untersucht. Code, der die von Standardanforderungen abweichenden Argumente übergibt, stürzt möglicherweise zur Laufzeit ab.  
   
--   **hash_map und hash_set** Nicht standardmäßige Headerdateien ash_map und hash_set sind in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] veraltet und werden in künftigen Versionen nicht mehr vorhanden sein. Verwenden Sie stattdessen unordered_map und unordered_set.  
+-   **hash_map und hash_set** Die nicht standardmäßigen Headerdateien „hash_map“ und „hash_set“ sind in Visual Studio 2015 veraltet und werden in künftigen Releases nicht mehr vorhanden sein. Verwenden Sie stattdessen unordered_map und unordered_set.  
   
 -   **Vergleichsoperatoren und operator()** Assoziative Container (\<map>-Reihe) erfordern jetzt Vergleiche mit const-Funktionsaufrufoperatoren. Beim Ausführen des folgenden Codes tritt nun in einer Vergleichsklassendeklaration ein Fehler beim Kompilieren auf:  
   
@@ -294,7 +294,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
     bool operator()(const X& a, const X& b) const  
     ```  
   
--   **Typmerkmale** The old names for Typmerkmale from an earlier version of the C++ draft standard have been removed. Diese wurden in C++11 auf die C++11-Werte in [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] aktualisiert. In der folgenden Tabelle werden die alten und neuen Namen aufgeführt.  
+-   **Typmerkmale** The old names for Typmerkmale from an earlier version of the C++ draft standard have been removed. Diese wurden in C++11 auf die C++11-Werte in Visual Studio 2015 aktualisiert. In der folgenden Tabelle werden die alten und neuen Namen aufgeführt.  
   
     |Alter Name|Neuer Name|  
     |--------------|--------------|  
@@ -864,7 +864,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
   
 -   **Kopierkonstruktoren**  
   
-     In [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] und [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] generiert der Compiler einen Kopierkonstruktor für eine Klasse, die über einen benutzerdefinierten Bewegungskonstruktor, jedoch über keinen benutzerdefinierten Kopierkonstruktor verfügt. In Dev14 wird dieser implizit generierte Kopierkonstruktor ebenfalls als „= delete“ gekennzeichnet.  
+     Sowohl in [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] als auch in Visual Studio 2015 generiert der Compiler einen Kopierkonstruktor für eine Klasse, die über einen benutzerdefinierten Bewegungskonstruktor, jedoch über keinen benutzerdefinierten Kopierkonstruktor verfügt. In Dev14 wird dieser implizit generierte Kopierkonstruktor ebenfalls als „= delete“ gekennzeichnet.  
 
 <!--From here to VS_Update1 added 04/21/2017-->
 
@@ -992,7 +992,7 @@ void func(F1 f, int v1, int v2)
 
 -   **Mehrdeutige Aufrufe überladener Funktionen**  
 
-Mit dem folgenden Code wird nun C266 generiert: 'N::bind': Mehrdeutiger Aufruf einer überladenen Funktion
+Der folgende Code erzeugt nun C266: „N::bind“: Mehrdeutiger Aufruf einer überladenen Funktion
 ```cpp 
 template<typename R, typename T, typename T1, typename A1>
 void bind(R(T::*)(T1), A1&&);
@@ -1052,7 +1052,7 @@ void h()
 
 -   **Zeichenfolgenliteral ist ein Konstantenarray**  
 
-Mit dem folgenden Code wird nun C2664 generiert: 'void f(void *)': Argument 1 kann nicht von „const char (*)[2]“ in „void *“ konvertiert werden
+Der folgende Code erzeugt nun C2664: „void f(void *)“: Argument 1 kann nicht von „const char (*)[2]“ in „void *“ konvertiert werden
 ```cpp
 void f(void *);
  
@@ -1077,7 +1077,7 @@ void h(void)
 
 -   **C++ 11-UDL-Zeichenfolgen**  
 
-Mit dem folgenden Code wird nun Fehler C3688 generiert: ungültiges Literalsuffix „L“; Literaloperator oder Literaloperatorvorlage „operator ""L“ nicht gefunden
+Der folgende Code erzeugt nun den Fehler C3688: ungültiges Literalsuffix „L“; Literaloperator oder Literaloperatorvorlage „operator ""L“ nicht gefunden
 
 
 ```cpp
@@ -1118,7 +1118,7 @@ Regeln für das Verketten von Zeichenfolgen stimmen nun auch mit dem Standard ü
 
 -   **C ++ 11: Leere Zeichen entfernt**  
 
-Mit dem folgenden Code wird nun Fehler C2137 generiert: leere Zeichenkonstante
+Der folgende Code erzeugt nun den Fehler C2137: leere Zeichenkonstante
 
 ```cpp
 bool check(wchar_t c){
@@ -1182,7 +1182,7 @@ Wenn eine Funktion einen Typ zurückgibt, der verschoben werden soll, darf der R
 
 -   **Löschen von Kopierkonstruktoren**  
 
-Mit dem folgenden Code wird nun C2280 generiert 'S::S(S &&)': Es wurde versucht, auf eine gelöschte Funktion zu verweisen:
+Der folgende Code erzeugt nun C2280: „S::S(S &&)“: Es wurde versucht, auf eine gelöschte Funktion zu verweisen:
 
 ```cpp
 struct S{
@@ -1220,7 +1220,7 @@ Um den Fehler zu beheben, entfernen Sie `=` aus der Erfassungsliste.
 
 -   **Mehrdeutige Aufrufe im Zusammenhang mit Konvertierungsoperatoren**  
 
-Mit dem folgenden Code wird nun Fehler C2440 generiert: „Typumwandlung“: Konvertierung von „S2“ in „S1“ nicht möglich:
+Der folgende Code erzeugt nun C2440: „Typumwandlung“: Konvertierung von „S2“ zu „S1“ nicht möglich:
 
 ```cpp 
 struct S1 {
@@ -1252,7 +1252,7 @@ void f(S2 s2)
 
 ```
 
-Mit dem folgenden Code wird nun Fehler C2593 generiert: 'operator =' ist mehrdeutig:
+Der folgende Code erzeugt nun den Fehler C2593: „operator=“ ist mehrdeutig:
 
 ```cpp
 struct S1 {};
@@ -1277,7 +1277,7 @@ void f(S1 *p, S2 s)
 
 -   **Korrigieren ungültiger Kopierinitialisierung in nicht statischer Datenmemberinitialisierung**  
 
-Mit dem folgenden Code wird nun Fehler C2664 generiert: 'S1::S1(S1 &&)': Argument 1 kann nicht von „bool“ in „const S1 &“ konvertiert werden:
+Der folgende Code erzeugt nun den Fehler C2664: „S1::S1(S1 &&)“: Konvertierung von Argument 1 von „bool“ zu „const S1 &“ nicht möglich:
 ```cpp
 struct S1 {
     explicit S1(bool);
@@ -1296,7 +1296,7 @@ S1 s1{true}; // OK
 
 -   **Zugreifen auf Konstruktoren in „decltype“-Anweisungen**  
 
-Mit dem folgenden Code wird nun C2248 generiert: 'S::S': Kein Zugriff auf die in der Klasse „S“ deklarierten privaten Member möglich:
+Der folgende Code erzeugt nun C2248: „S::S“: Zugriff auf in der Klasse „S“ deklarierten privaten Member nicht möglich:
 ```cpp
 class S {
     S();
@@ -1320,7 +1320,7 @@ public:
 
 -   **Standardkonstruktor von Lambda wird implizit gelöscht**  
 
-Mit dem folgenden Code wird nun Fehler C3497 generiert: Es kann keine Instanz eines Lambdas erstellt werden:
+Der folgende Code erzeugt nun den Fehler C3497: Sie können keine Instanz eines Lambdaelements erstellen:
 ```cpp
 void func(){
     auto lambda = [](){};    
@@ -1352,7 +1352,7 @@ Um den Fehler zu beheben, ersetzen Sie den Lambda durch eine „functor“-Klass
 
 -   **Versuch, ein Objekt mit gelöschten Kopierkonstruktor zu verschieben**  
 
-Mit dem folgenden Code wird nun Fehler C2280 generiert: 'moveable::moveable(const moveable &)': Versuch des Verweises auf eine gelöschte Funktion
+Der folgende Code erzeugt nun den Fehler C2280: „moveable::moveable(const moveable &)“: Versuch des Verweises auf eine gelöschte Funktion
 ```cpp
 struct moveable {
 
@@ -1376,7 +1376,7 @@ S(moveable && m) :
 ```
 -   **Lokale Klasse kann nicht auf andere lokale Klasse verweisen, die später in der gleichen Funktion definiert ist**  
 
-Mit dem folgenden Code wird nun Fehler C2079 generiert: „s“ verwendet undefinierte Struktur „main::S2“
+Der folgende Code erzeugt nun den Fehler C2079: „s“ verwendet die nicht definierte Struktur "main::S2"
 ```cpp
 int main()
 {
@@ -1406,7 +1406,7 @@ struct S1 {
 
 -   **Geschützter Basiskonstruktor kann nicht im Text eines abgeleiteten Konstruktors aufgerufen werden**  
 
-Mit dem folgenden Code wird nun Fehler C2248 generiert: 'S1::S1': Kein Zugriff auf das geschützte Member möglich, das in der Klasse „S1“ deklariert ist
+Der folgende Code erzeugt nun den Fehler C2248: „S1::S1“: Zugriff auf in der Klasse „S1“ deklarierten geschützten Member nicht möglich
 ```cpp
 struct S1 {
 protected:
@@ -1423,7 +1423,7 @@ Um den Fehler zu beheben, entfernen Sie in S2 den Aufruf von S1() aus dem Konstr
 
 -   **{} verhindert Konvertierung in Zeiger**  
 
-Mit dem folgenden Code wird nun C2439 generiert 'S::p': Member konnte nicht initialisiert werden    
+Der folgende Code erzeugt nun C2439 „S::p“: Member konnte nicht initialisiert werden    
 ```cpp
 struct S {
     S() : p({ 0 }) {}
@@ -1440,7 +1440,7 @@ struct S {
 
 -   **Falsche Makrodefinition und -nutzung mit Klammern**  
 
-Mit dem folgenden Beispiel wird nun Fehler C2008 generiert: ';': unerwartetes Zeichen in Makrodefinition
+Das folgende Beispiel erzeugt nun den Fehler C2008: ";": Unerwartetes Zeichen in Makrodefinition
 ```cpp
 #define A; //cause of error
 
@@ -1450,7 +1450,7 @@ struct S {
 ```
 Ändern Sie zum Beheben des Problems die oberste Zeile in `#define A();`.
 
-Mit dem folgenden Code wird Fehler C2059 generiert: Syntaxfehler: ')'
+Der folgende Code erzeugt nun den Fehler C2059: Syntaxfehler: „)“
 ```cpp
 
 //notice the space after 'A'
@@ -1462,7 +1462,7 @@ struct S {
 ```
 Entfernen Sie zum Korrigieren des Codes das Leerzeichen zwischen A und ().
 
-Mit dem folgenden Code wird Fehler C2091 generiert: Funktionsergebnis ist eine Funktion:
+Der folgende Code erzeugt nun den Fehler C2091: Funktion gibt Funktion zurück:
 
 ```cpp
 
@@ -1474,7 +1474,7 @@ struct S {
 ```
 Um den Fehler zu beheben, entfernen Sie die Klammern nach DECLARE in S: `DECLARE;`.
 
-Mit dem folgenden Code wird Fehler C2062 generiert: Typ „int“ wurde nicht erwartet
+Der folgende Code erzeugt nun den Fehler C2062: Typ „int“ wurde nicht erwartet
 
 ```cpp
 #define A (int)
@@ -1490,7 +1490,7 @@ Um das Problem zu beheben, definieren Sie A wie folgt:
 
 -   **Zusätzliche Klammern in Deklarationen**  
 
-Mit dem folgenden Code wird Fehler C2062 generiert: Typ „int“ wurde nicht erwartet
+Der folgende Code erzeugt nun den Fehler C2062: Typ „int“ wurde nicht erwartet
 ```cpp
 
 struct S {
@@ -1504,7 +1504,7 @@ Um den Fehler zu beheben, entfernen Sie die Klammern aus `j`. Wenn die Klammern 
 
 In Visual Studio 2015 ist es wahrscheinlicher, dass vom Inlinecompiler generierte Konstruktoren von abstrakten Klassen mit virtuellen Basisklassen „__declspec(novtable)“ bei Nutzung in Kombination mit „__declspec(dllimport)“ falsch verwendet werden.
 
--   **„auto“ erfordert einzelnen Ausdruck in „direct-list“-Initialisierung** Mit dem folgenden Code wird nun Fehler C3518 generiert: "testPositions": In einem „direct-list-initialization“-Kontext kann der Typ für „auto“ nur aus einem einzelnen Initialisierungsausdruck hergeleitet werden.
+-   **„auto“ erfordert einzelnen Ausdruck in „direct-list-initialization“** Der folgende Code erzeugt nun den Fehler C3518: "testPositions": In einem „direct-list-initialization“-Kontext kann der Typ für „auto“ nur aus einem einzelnen Initialisierungsausdruck hergeleitet werden
 
 ```cpp
 auto testPositions{

@@ -1,46 +1,64 @@
 ---
-title: "SBCS- und MBCS-Datentypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MBCS"
-  - "SBCS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SBCS- und MBCS-Datentypen"
-  - "Datentypen [C], MBCS und SBCS"
+title: SBCS- und MBCS-Datentypen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MBCS
+- SBCS
+dev_langs:
+- C++
+helpviewer_keywords:
+- SBCS and MBCS data types
+- data types [C], MBCS and SBCS
 ms.assetid: 4c3ef9da-e397-48d4-800e-49dba36db171
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# SBCS- und MBCS-Datentypen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: ac4c3f7273adf9e373484f24fbb7a56ebea5903a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Jede Laufzeitbibliotheksroutine Microsoft `MBCS`, die nur ein Mehrbytezeichen behandelt oder ein Byte eines Mehrbytezeichens erwartet ein Argument `unsigned``int` \(wobei 0x00 \<\= Zeichenwert \<\= 0xFFFF und 0x00\- \<\= Bytewert \<\= 0xFF\).  Eine `MBCS` \- Routine, die Mehrbytebytes oder \-Zeichen in einem Zeichenfolgenkontext behandelt, erwartet einer Mehrbyte\-Zeichenfolge, als Zeiger `unsigned``char` dargestellt.  
+---
+# <a name="sbcs-and-mbcs-data-types"></a>SBCS- und MBCS-Datentypen
+Jede Microsoft `MBCS`-Laufzeitbibliotheksroutine, die nur ein Multibytezeichen oder ein Byte eines Multibytezeichens verarbeitet, erwartet ein `unsigned int`-Argument (wobei 0x00 <= Zeichenwert <= 0xFFFF und 0x00 <= Bytewert <= 0xFF ). Ein `MBCS`-Routine, die Multibyte-Bytes oder -zeichen in einem Zeichenfolgenkontext verarbeitet, erwartet eine Multibyte-Zeichenfolge, um als `unsigned char`-Zeiger dargestellt zu werden.  
   
 > [!CAUTION]
->  Jedes Byte eines Mehrbytezeichens kann in äußerst \- `char` dargestellt werden.  Eine `SBCS` oder ein `MBCS` Einzelbytezeichen des Typs `char` mit einem Wert, der größer als 0x7F negativ.,  Wenn ein solcher Zeichen direkt in `int` oder `long` konvertiert wird, wird das Ergebnis vom Compiler signaturerweitert und daher kann zu unerwarteten Ergebnissen führen.  
+>  Jedes Byte von einem Multibytezeichen kann in einem 8-Bit-`char` dargestellt werden. Jedes Byte eines `SBCS`- oder `MBCS`-Einzelbytezeichen vom Typ `char` mit einem Wert größer als 0x7F ist negativ. Wenn ein solches Zeichen direkt in ein `int` oder ein `long` konvertiert wird, wird das Ergebnis vom Compiler signaturerweitert und kann daher zu unerwartete Ergebnissen führen.  
   
- Daher empfiehlt es sich, ein Byte eines Mehrbytezeichens als äußerst \- `unsigned char` darzustellen.  Oder, ein negatives Ergebnis vermeiden, ein Einzelbytezeichen des Typs `char` einfach an `unsigned char` konvertieren, bevor er von `int` oder `long` konvertiert wird.  
+ Aus diesem Grund empfiehlt sich, ein Byte eines Multibytezeichens als 8-Bit-`unsigned char` darzustellen. Um ein negatives Ergebnis zu vermeiden, konvertieren Sie einfach ein Einzelbytezeichen vom Typ `char` in ein `unsigned char`, bevor Sie es in ein `int` oder ein `long` konvertieren.  
   
- Da einige `SBCS` ZeichenfolgeBehandlungsfunktionen `char*`\-Parameter \(mit Vorzeichen\), tritt `_MBCS` eine Compiler\-Warnung ausgegeben, definiert wird.  Es gibt drei Möglichkeiten, diese Warnung zu vermeiden, aufgeführt in der Reihenfolge der Effizienz:  
+ Da für einige Funktionen zur Zeichenfolgenbehandlung bei `SBCS` `char*`-Parameter (mit Vorzeichen) erforderlich sind, wird bei der Definition von `_MBCS` eine Compiler-Warnung ausgegeben, die auf einen Typenkonflikt hinweist. Es gibt drei Möglichkeiten, diese Warnung zu vermeiden, die in der Reihenfolge ihrer Effizienz aufgeführt werden:  
   
-1.  Verwenden Sie die typsicheren "" Inlinefunktionen in TCHAR.H.  Dies ist das Standardverhalten.  
+1.  Verwenden Sie die typsicheren Inlinefunktionen in TCHAR.H. Dies ist das Standardverhalten.  
   
-2.  Verwenden Sie "verweisen" macros in TCHAR.H, indem Sie in der Befehlszeile `_MB_MAP_DIRECT` definieren.  In diesem Fall müssen Sie die Typübereinstimmung manuell sicherstellen.  Dies ist die schnellste Methode, jedoch nicht typsicher ist.  
+2.  Verwenden Sie die direkten Makros in TCHAR.H, indem Sie in der Befehlszeile `_MB_MAP_DIRECT` definieren. In diesem Fall müssen Sie die Typübereinstimmung manuell sicherstellen. Dies ist die schnellste Methode; sie ist jedoch nicht typsicher.  
   
-3.  Verwenden Sie die typsicheren statisch verknüpften "" Bibliotheksfunktionen in TCHAR.H.  Definieren Sie hierzu in der Befehlszeile die Konstante `_NO_INLINING`.  Dies ist die langsamste Methode; sie bietet jedoch auch die größte Typsicherheit.  
+3.  Verwenden Sie die typsicheren statisch verknüpften Bibliotheksfunktionen in TCHAR.H. Definieren Sie hierzu in der Befehlszeile die Konstante `_NO_INLINING`. Dies ist die langsamste Methode; sie bietet jedoch auch die größte Typsicherheit.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Internationalisierung](../c-runtime-library/internationalization.md)   
  [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)

@@ -1,34 +1,52 @@
 ---
-title: "Beispiel f&#252;r ein Programm mit generischem Text | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_TCHAR-Typ"
-  - "Zuordnungen, TCHAR.H-Datentypen"
-  - "Generischer Text (Beispiel) [CRT]"
-  - "TCHAR-Typ"
-  - "TCHAR.H-Datentypen, Zuordnung"
+title: "Beispiel für ein Programm mit generischem Text | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TCHAR type
+- mappings, TCHAR.H data types
+- generic-text example [CRT]
+- TCHAR type
+- TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Beispiel f&#252;r ein Programm mit generischem Text
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0cdc18215fe80c4165ffa03a5d789af0ebc95b40
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="a-sample-generic-text-program"></a>Beispiel für ein Programm mit generischem Text
+**Microsoft-spezifisch**  
   
- Das folgende Programm, GENTEXT.C, bietet eine ausführlichere Abbildung die Verwendung von den Zuordnungen für generischen Text, die in TCHAR.H definiert werden:  
+ Das folgende Programm, GENTEXT.C, illustriert ausführlicher den Gebrauch von Allgemeintext-Zuordnungen, wie er in TCHAR.H definiert ist:  
   
 ```  
 // GENTEXT.C  
@@ -69,7 +87,7 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
   
 ```  
   
- Wenn `_MBCS` definiert wurde, GENTEXT.C\-Zuordnungen dem folgenden MBCS\-Programm:  
+ Wenn `_MBCS` definiert ist, ordnet GENTEXT.C das folgende MBCS-Programm zu:  
   
 ```  
 // crt_mbcsgtxt.c  
@@ -107,7 +125,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- Wenn `_UNICODE` definiert wurde, GENTEXT.C\-Zuordnungen zur folgenden Unicode\-Version des Programms.  Weitere Informationen über die Verwendung von  `wmain` in den Unicode\-Programmen als Ersatz für `main`, finden Sie unter [Verwenden des wmain](../c-language/using-wmain.md)*im C\-Sprachreferenz*.  
+ Wenn `_UNICODE` definiert ist, ordnet GENTEXT.C die folgende Unicode-Version des Programms zu: Weitere Informationen wie Sie `wmain` in einem Unicode-Programm als Ersatz für `main` verwenden können, finden Sie unter [Using wmain](../c-language/using-wmain.md) (Verwenden von Wmain) in *C Language Reference*.  
   
 ```  
 // crt_unicgtxt.c  
@@ -145,7 +163,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 }  
 ```  
   
- Wenn weder `_MBCS` noch `_UNICODE` definiert wurde, GENTEXT.C\-Zuordnungen zu Einzelbyte\- ASCII\-Code, wie folgt:  
+ Wenn weder `_MBCS` noch `_UNICODE` definiert ist, ordnet GENTEXT.C wie folgt einen Single Byte ASCII-Code zu:  
   
 ```  
 // crt_sbcsgtxt.c  
@@ -182,11 +200,11 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Zuordnungen für generischen Text](../c-runtime-library/generic-text-mappings.md)   
- [Datentypzuordnungen](../c-runtime-library/data-type-mappings.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Generic-Text Mappings (Zuordnungen von Konstanten mit generischem Text)](../c-runtime-library/generic-text-mappings.md)   
+ [Datentyp-Zuordnungen](../c-runtime-library/data-type-mappings.md)   
  [Zuordnungen von Konstanten und globalen Variablen](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [Routinezuordnungen](../c-runtime-library/routine-mappings.md)   
- [Verwenden von Zuordnungen für generischen Text](../c-runtime-library/using-generic-text-mappings.md)
+ [Verwenden von Allgemeintext-Zuordnungen](../c-runtime-library/using-generic-text-mappings.md)

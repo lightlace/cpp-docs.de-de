@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -42,10 +42,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 93dafafddd271eb7e068a0e822be6dd8535fc721
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 82ace58042dd9c7f9cceb0ef0781968532ae7b29
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="scanf-type-field-characters"></a>scanf-Typenfeldzeichen
@@ -63,12 +64,12 @@ Die folgenden Informationen gelten für die `scanf` -Funktionsreihe, einschließ
 |`i`|Eine ganze Zahl. Hexadezimal, wenn die Eingabezeichenfolge mit "0x" oder "0X" beginnt, oktal, wenn die Zeichenfolge mit "0" beginnt, andernfalls dezimal.|Zeiger auf `int`|Nein.|  
 |`o`|Oktale ganze Zahl|Zeiger auf `int`|Nein.|  
 |`p`|Eine Zeigeradresse in hexadezimalen Ziffern. Die maximale Anzahl von gelesenen Ziffern hängt von der Größe eines Zeigers (32 oder 64 Bit) ab, die wiederum von der Computerarchitektur abhängt. „0x“ oder „0X“ wird als Präfix akzeptiert.|Zeiger auf `void*`|Nein.|  
-|`u`|Ganze Dezimalzahl ohne Vorzeichen|Zeiger auf `unsigned``int`|Nein.|  
+|`u`|Ganze Dezimalzahl ohne Vorzeichen|Zeiger auf `unsigned int`|Nein.|  
 |`x`|Ganze Hexadezimalzahl|Zeiger auf `int`|Nein.|  
 |`e`, `E`, `f`, `F`, `g`, `G`|Gleitkommawert, der aus optionalem Vorzeichen (+ oder -), Dezimalstellen mit Dezimaltrennzeichen und einem optionalen Exponenten („e“ oder „E“) besteht, gefolgt von einer ganzen Zahl (optional mit Vorzeichen).|Zeiger auf `float`|Nein.|  
 |`a`, `A`|Ein Gleitkommawert, der aus einer Reihe von einer oder mehreren hexadezimalen Ziffern besteht, die ein optionales Dezimaltrennzeichen und einen Exponenten („p“ oder „P“) enthalten, gefolgt von einem Dezimalwert.|Zeiger auf `float`|Nein.|  
 |`n`|Kein Eingabe aus dem Stream oder Puffer gelesen.|Zeiger auf `int`, in dem die Anzahl der aus dem Stream oder Puffer erfolgreich gelesenen Zeichen bis zu diesem Zeitpunkt im aktuellen Aufruf von `scanf` -Funktionen oder `wscanf` -Funktionen gespeichert ist.|Nein.|  
-|`s`|Zeichenfolge bis zum ersten Leerzeichen (Leerzeichen, Tabstopps oder Zeilenumbruch) Um Zeichenfolgen zu lesen, die nicht durch Leerzeichen getrennt sind, verwenden Sie eckige Klammern (`[ ]`), wie in [scanf-Breitenangabe](../c-runtime-library/scanf-width-specification.md) erörtert.|Steht bei Verwendung mit `scanf` -Funktionen für ein Einzelbyte-Zeichenarray und bei Verwendung mit `wscanf` -Funktionen für ein Breitzeichenarray. In jedem Fall muss das Zeichenarray groß genug für das Eingabefeld und einen automatisch angefügten abschließenden NULL-Wert sein.|Erforderlich. Größe einschließlich Platz für einen Nullterminator.|  
+|`s`|Zeichenfolge bis zum ersten Leerzeichen (Leerzeichen, Tabstopps oder Zeilenumbruch) Um Zeichenfolgen zu lesen, die nicht durch Leerzeichen getrennt sind, verwenden Sie eckige Klammern (`[ ]`), wie dies in [scanf Width Specification](../c-runtime-library/scanf-width-specification.md).|Steht bei Verwendung mit `scanf` -Funktionen für ein Einzelbyte-Zeichenarray und bei Verwendung mit `wscanf` -Funktionen für ein Breitzeichenarray. In jedem Fall muss das Zeichenarray groß genug für das Eingabefeld und einen automatisch angefügten abschließenden NULL-Wert sein.|Erforderlich. Größe einschließlich Platz für einen Nullterminator.|  
 |`S`|Umgekehrte Größenzeichenfolge bis zum ersten Leerzeichen (Leerzeichen, Tabstopps oder Zeilenumbruch) Um Zeichenfolgen zu lesen, die nicht durch Leerzeichen getrennt sind, verwenden Sie eckige Klammern (`[ ]`), wie in [scanf-Breitenangabe](../c-runtime-library/scanf-width-specification.md) erörtert.|Steht bei Verwendung mit `scanf`-Funktionen für ein Einzelbyte-Zeichenarray und bei Verwendung mit `wscanf`-Funktionen für ein Breitzeichenarray. In jedem Fall muss das Zeichenarray groß genug für das Eingabefeld und einen automatisch angefügten abschließenden NULL-Wert sein.|Erforderlich. Größe einschließlich Platz für einen Nullterminator.|  
   
   
@@ -85,10 +86,10 @@ scanf_s("%10s %8s", string1, 11, string2, 9);
   
 |Zum Lesen von Zeichen als|Verwenden Sie diese Funktion|Mit diesen Formatbezeichnern|  
 |--------------------------|-----------------------|----------------------------------|  
-|Einzelbyte|`scanf`-Funktionen|`c`, `hc` oder `hC`|  
-|Einzelbyte|`wscanf`-Funktionen|`C`, `hc` oder `hC`|  
-|Breit|`wscanf`-Funktionen|`c`, `lc` oder `lC`|  
-|Breit|`scanf`-Funktionen|`C`, `lc` oder `lC`|  
+|Einzelbyte|`scanf` -Funktionen|`c`, `hc`oder `hC`|  
+|Einzelbyte|`wscanf` -Funktionen|`C`, `hc`oder `hC`|  
+|Breit|`wscanf` -Funktionen|`c`, `lc`oder `lC`|  
+|Breit|`scanf` -Funktionen|`C`, `lc`oder `lC`|  
   
  Verwenden Sie zum Überprüfen von Zeichenfolgen mit `scanf` -Funktionen und `wscanf` -Funktionen die oben dargestellte Tabelle mit den Typformatbezeichnern `s` und `S` anstelle von `c` und `C`.  
   

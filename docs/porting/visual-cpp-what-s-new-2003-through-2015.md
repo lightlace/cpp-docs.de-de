@@ -21,10 +21,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: 7995451c0c89fbef55bd96291978775f89932f3b
+ms.contentlocale: de-de
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
@@ -526,7 +527,7 @@ In Visual C++ 2015 und höher können fortlaufende Verbesserungen der Übereinst
   
 -   **Kopierkonstruktoren**  
   
-     In [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] und [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] generiert der Compiler einen Kopierkonstruktor für eine Klasse, die über einen benutzerdefinierten Bewegungskonstruktor, jedoch über keinen benutzerdefinierten Kopierkonstruktor verfügt. In Dev14 wird dieser implizit generierte Kopierkonstruktor ebenfalls als „= delete“ gekennzeichnet.  
+     Sowohl in [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] als auch in Visual Studio 2015 generiert der Compiler einen Kopierkonstruktor für eine Klasse, die über einen benutzerdefinierten Bewegungskonstruktor, jedoch über keinen benutzerdefinierten Kopierkonstruktor verfügt. In Dev14 wird dieser implizit generierte Kopierkonstruktor ebenfalls als „= delete“ gekennzeichnet.  
   
 ##  <a name="VS_Update1"></a> Verbesserungen bei der Übereinstimmung mit Standards in Update 1  
   
@@ -606,7 +607,7 @@ In Visual C++ 2015 und höher können fortlaufende Verbesserungen der Übereinst
   
      Außerdem, auch wenn dazu keine spezifische Diagnose ausgegeben wird, wird ein Inlineoperator „new“ als nicht wohlgeformt angesehen.  
   
--   **Aufrufen von 'operator*type*()' (benutzerdefinierte Konversion) für Nichtklassentypen**  
+-   **Aufrufen von „operator *type*()“ (benutzerdefinierte Konversion) für Nichtklassentypen**  
   
      Frühere Versionen ließen den Aufruf von 'operator *type*()' für Nichtklassentypen zu und ignorierten den Aufruf stumm. Durch dieses alte Verhalten entstand die Gefahr der stummen Erzeugung von ungültigem Code, was zu unvorhersehbarem Laufzeitverhalten führt. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2228 als Ergebnis aus.  
   
@@ -1388,7 +1389,7 @@ In Visual C++ 2015 und höher können fortlaufende Verbesserungen der Übereinst
     warning C4467: Usage of ATL attributes is deprecated  
     ```  
   
-     Wenn Sie attributierten ATL-Code bis zur Aufhebung der Unterstützung durch den Compiler weiter nutzen möchten, können Sie diese Warnung deaktivieren, indem Sie das Befehlszeilenargument `/Wv:18` oder `/wd:4467` an den Compiler übergeben oder `#pragma warning(disable:4467)` Ihrem Quellcode hinzufügen.  
+     Wenn Sie attributierten ATL-Code bis zur Aufhebung der Unterstützung durch den Compiler weiter nutzen möchten, können Sie diese Warnung deaktivieren, indem Sie das Befehlszeilenargument `/Wv:18` oder `/wd4467` an den Compiler übergeben oder `#pragma warning(disable:4467)` Ihrem Quellcode hinzufügen.  
   
      Beispiel 1 (vorher)  
   
@@ -1425,7 +1426,7 @@ In Visual C++ 2015 und höher können fortlaufende Verbesserungen der Übereinst
     };  
     ```  
   
-     Erstellen Sie zunächst die IDL-Datei. Die generierte Datei „vc140.idl “ *kann zum Abrufen einer\* .idl“-Datei verwendet werden, die die Schnittstellen und Anmerkungen enthält.  
+     Erstellen Sie zunächst die IDL-Datei. Die generierte Datei „vc140.idl“ kann zum Abrufen einer „\*.idl“-Datei verwendet werden, die die Schnittstellen und Anmerkungen enthält.  
   
      Fügen Sie als Nächstes Ihrem Build einen MIDL-Schritt hinzu, um sicherzustellen, dass die C++-Schnittstellendefinitionen generiert werden.  
   

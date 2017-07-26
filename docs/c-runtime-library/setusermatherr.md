@@ -1,62 +1,79 @@
 ---
-title: "__setusermatherr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__setusermatherr"
-apilocation: 
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcrt.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr100.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__setusermatherr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__setusermatherr"
+title: __setusermatherr | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __setusermatherr
+apilocation:
+- msvcr80.dll
+- msvcr90.dll
+- msvcrt.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr100.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- __setusermatherr
+dev_langs:
+- C++
+helpviewer_keywords:
+- __setusermatherr
 ms.assetid: f306818d-381a-4d68-8739-71b92bacb5ea
 caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# __setusermatherr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 43b4b5ec6cddcb4a325201a4f9e2afe02ef9454a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Gibt ein vom Benutzer bereitgestellten rountine an, die mathematische Fehler, statt der [\_matherr](../c-runtime-library/reference/matherr.md) Routine zu behandeln.  
+---
+# <a name="setusermatherr"></a>__setusermatherr
+Gibt eine benutzerdefinierte Routine an, die anstelle der [_matherr](../c-runtime-library/reference/matherr.md)-Routine verwendet wird, um Mathematikfehler zu behandeln.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 void __setusermatherr(  
    _HANDLE_MATH_ERROR pf   
    )  
-  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `pf`  
- Zeiger auf einer Implementierung von `_matherr`, die vom Benutzer angegeben wird.  
+ Zeiger zu einer Implementierung von `_matherr`, die vom Benutzer bereitgestellt wird.  
   
- Der Typ des Parameters wird `pf` als `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)` deklariert.  
+ Der Typ des `pf`-Parameters ist als `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)` deklariert.  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderlicher Header|  
-|-------------|---------------------------|  
-|\_\_setusermatherr|matherr.c|
+|-------------|---------------------|  
+|__setusermatherr|matherr.c|

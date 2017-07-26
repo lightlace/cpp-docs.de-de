@@ -1,78 +1,95 @@
 ---
-title: "__dllonexit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__dllonexit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr100.dll"
-  - "msvcr80.dll"
-  - "msvcr120.dll"
-  - "msvcr90.dll"
-  - "msvcr120_clr0400.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__dllonexit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__dllonexit"
+title: __dllonexit | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __dllonexit
+apilocation:
+- msvcrt.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr100.dll
+- msvcr80.dll
+- msvcr120.dll
+- msvcr90.dll
+- msvcr120_clr0400.dll
+apitype: DLLExport
+f1_keywords:
+- __dllonexit
+dev_langs:
+- C++
+helpviewer_keywords:
+- __dllonexit
 ms.assetid: 708f2ceb-f95c-46b0-a58d-d68b3fa36f12
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# __dllonexit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 147458732658b5e08efa880fc9e7e76ebcd7da63
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Registriert eine an der Beendigungszeit aufgerufen werden Routine.  
+---
+# <a name="dllonexit"></a>__dllonexit
+Registriert eine Routine, die zum Zeitpunkt der Beendigung aufgerufen werden soll.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
-_onexit_t __dllonexit(  
-   _onexit_t func,  
+_onexit_t __dllonexit(   _onexit_t func,  
    _PVFV **  pbegin,   
    _PVFV **  pend   
    )  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  `func`  
- Zeiger auf eine nach Beendigung Funktion, die ausgeführt wird.  
+ Ein Zeiger auf eine Funktion, die zum Zeitpunkt der Beendigung ausgeführt werden solle.  
   
  `pbegin`  
- Zeiger auf eine Variable, die auf den Anfang einer Liste von Funktionen verweist, um an erneut, Trennen.  
+ Ein Zeiger auf eine Variable, die auf den Anfang einer Liste mit Funktionen zeigt, die beim Trennen ausgeführt werden sollen.  
   
  `pend`  
- Zeiger die Variable, die auf das Ende einer Liste von Funktionen verweist, um an erneut, Trennen.  
+ Ein Zeiger auf eine Variable, die auf das Ende einer Liste mit Funktionen zeigt, die beim Trennen ausgeführt werden sollen.  
   
-## Rückgabewert  
- Wenn erfolgreich, ein Zeiger zur Funktion des Benutzers.  Andernfalls ein NULL\-Zeiger.  
+## <a name="return-value"></a>Rückgabewert  
+ Bei Erfolg ein Zeiger auf die Funktion des Benutzers. Andernfalls ein NULL-Zeiger.  
   
-## Hinweise  
- Die Funktion `__dllonexit` ist der [\_onexit](../c-runtime-library/reference/onexit-onexit-m.md)\-Funktion analog, sofern die globalen Variablen, die durch diese Funktion verwendet werden, sind keine zu dieser Routine sichtbar.  Anstelle der globalen Variablen verwendet diese Funktion die Parameter `pbegin` und `pend`.  
+## <a name="remarks"></a>Hinweise  
+ Die `__dllonexit`-Funktion unterscheidet sich von der [_onexit](../c-runtime-library/reference/onexit-onexit-m.md)-Funktion insofern, als dass die von der Funktion verwendeten globalen Variablen für diese Routine nicht sichtbar sind. Anstelle von globalen Variablen werden von dieser Funktion die Parameter `pbegin` und `pend` verwendet.  
   
- Die Funktionen `_onexit` und `atexit` in einer DLL, die mit MSVCRT.LIB verknüpft ist, müssen eigene atexit\-\/\_onexitliste übergeben.  Diese Routine ist der Mitarbeiter, der durch diese DLLs aufgerufen wird.  
+ Von den Funktionen `_onexit` und `atexit` in einer DLL, die mit MSVCRT.LIB verknüpft ist, müssen jeweils eigene atexit/_onexit-Listen verwaltet werden. Diese Routine ist der Worker, der von DLLs dieser Art aufgerufen wird.  
   
- Der Typ `_PVFV` wird als `typedef void (__cdecl *_PVFV)(void)` definiert.  
+ Der Typ `_PVFV` ist als `typedef void (__cdecl *_PVFV)(void)` definiert.  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Routine|Erforderliche Datei|  
-|-------------|-------------------------|  
-|\_\_dllonexit|onexit.c|  
+|-------------|-------------------|  
+|__dllonexit|onexit.c|  
   
-## Siehe auch  
- [\_onexit, \_onexit\_m](../c-runtime-library/reference/onexit-onexit-m.md)
+## <a name="see-also"></a>Siehe auch  
+ [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)
