@@ -1,41 +1,58 @@
 ---
-title: "Routinezuordnungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.mappings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tWinMain"
-  - "Allgemeintext-Zuordnungen"
-  - "TCHAR.H-Datentypen, Liste von Routinezuordnungen"
+title: Routinezuordnungen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.mappings
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tWinMain
+- TCHAR.H data types, list of routine mappings
+- generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Routinezuordnungen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1b716aacca01e72f917fe4b4083c79d39546b6c4
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Die Zuordnungen der generische Textroutinen werden in TCHAR.H. definiert.  `_tccpy` und `_tclen` werden zu Funktionen im MBCS\-Modell zugeordnet. Aus Gründen der Vollständigkeit werden sie zu Makros oder Funktionen in den SBCS\- und Unicode\-Modellen zugeordnet.  Weitere Informationen über generische Textroutinen finden Sie im entsprechenden Hilfethema über `SBCS`\-, `_MBCS`\- oder `_UNICODE`\-verwandte Routinen.  
+---
+# <a name="routine-mappings"></a>Routinezuordnungen
+Die Zuordnungen der generische Textroutinen werden in TCHAR.H. definiert. `_tccpy` und `_tclen` werden zu Funktionen im MBCS-Modell zugeordnet. Aus Gründen der Vollständigkeit werden sie zu Makros oder Funktionen in den SBCS- und Unicode-Modellen zugeordnet. Weitere Informationen über generische Textroutinen finden Sie im entsprechenden Hilfethema über `SBCS`-, `_MBCS`- oder `_UNICODE`-verwandte Routinen.  
   
- Detailliertere Informationen über die einzelnen Routinen, die in der linken Spalte der folgenden Tabelle aufgeführt sind, sind in dieser Dokumentation nicht enthalten.  Sie können jedoch die Informationen über eine entsprechende `SBCS`\-, `_MBCS`\- oder `_UNICODE`\-verwandte Routine nachschlagen.  Verwenden Sie den Befehl **Suchen** im Menü **Hilfe**, um Informationen zu den unten aufgeführten generischen Textroutinen nachzuschlagen.  
+ Detailliertere Informationen über die einzelnen Routinen, die in der linken Spalte der folgenden Tabelle aufgeführt sind, sind in dieser Dokumentation nicht enthalten. Sie können jedoch die Informationen über eine entsprechende `SBCS`-, `_MBCS`- oder `_UNICODE`-verwandte Routine nachschlagen. Verwenden Sie den Befehl **Suchen** im Menü **Hilfe**, um Informationen zu den unten aufgeführten generischen Textroutinen nachzuschlagen.  
   
  Entsprechende Informationen finden Sie unter dem Link über [Zuordnungen für generischen Text in TCHAR.H](../text/generic-text-mappings-in-tchar-h.md).  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Name der generischen Textroutine|SBCS \(\_UNICODE & MBCS nicht definiert\)|\_MBCS definiert|\_UNICODE definiert|  
-|--------------------------------------|-----------------------------------------------|----------------------|-------------------------|  
+|Name der generischen Textroutine|SBCS (_UNICODE & MBCS nicht definiert)|_MBCS definiert|_UNICODE definiert|  
+|--------------------------------|-------------------------------------------|--------------------|-----------------------|  
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|  
 |`_cgetts_s`|`_cgets_s`|`_cgets_s`|`_cgetws_s`|  
 |`_cputts`|`_cputs`|`_cputs`|`_cputws`|  
@@ -271,9 +288,9 @@ Die Zuordnungen der generische Textroutinen werden in TCHAR.H. definiert.  `_tcc
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|  
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|  
   
-## Siehe auch  
- [Zuordnungen für generischen Text](../c-runtime-library/generic-text-mappings.md)   
- [Datentypzuordnungen](../c-runtime-library/data-type-mappings.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Generic-Text Mappings (Zuordnungen von Konstanten mit generischem Text)](../c-runtime-library/generic-text-mappings.md)   
+ [Datentyp-Zuordnungen](../c-runtime-library/data-type-mappings.md)   
  [Zuordnungen von Konstanten und globalen Variablen](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [Beispiel für ein Programm mit generischem Text](../c-runtime-library/a-sample-generic-text-program.md)   
- [Verwenden von Zuordnungen für generischen Text](../c-runtime-library/using-generic-text-mappings.md)
+ [Using Generic-Text Mappings (Verwenden von Zuordnungen für generischen Text)](../c-runtime-library/using-generic-text-mappings.md)
