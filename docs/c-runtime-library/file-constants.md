@@ -1,49 +1,66 @@
 ---
-title: "Dateikonstanten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_O_EXCL"
-  - "_O_RDWR"
-  - "_O_APPEND"
-  - "_O_RDONLY"
-  - "_O_TRUNC"
-  - "_O_CREAT"
-  - "_O_WRONLY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_O_APPEND-Konstante"
-  - "_O_CREAT-Konstante"
-  - "_O_EXCL-Konstante"
-  - "_O_RDONLY-Konstante"
-  - "_O_RDWR-Konstante"
-  - "_O_TRUNC-Konstante"
-  - "_O_WRONLY-Konstante"
-  - "O_APPEND-Konstante"
-  - "O_CREAT-Konstante"
-  - "O_EXCL-Konstante"
-  - "O_RDONLY-Konstante"
-  - "O_RDWR-Konstante"
-  - "O_TRUNC-Konstante"
-  - "O_WRONLY-Konstante"
+title: Dateikonstanten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _O_EXCL
+- _O_RDWR
+- _O_APPEND
+- _O_RDONLY
+- _O_TRUNC
+- _O_CREAT
+- _O_WRONLY
+dev_langs:
+- C++
+helpviewer_keywords:
+- _O_RDWR constant
+- O_EXCL constant
+- O_RDWR constant
+- O_WRONLY constant
+- O_APPEND constant
+- O_CREAT constant
+- _O_CREAT constant
+- _O_APPEND constant
+- _O_EXCL constant
+- O_TRUNC constant
+- _O_RDONLY constant
+- _O_TRUNC constant
+- O_RDONLY constant
+- _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Dateikonstanten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 354d107b9bbaf3f60153fbce5ee66b14e2a5b96d
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-## Syntax  
+---
+# <a name="file-constants"></a>Dateikonstanten
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -51,33 +68,33 @@ caps.handback.revision: 6
   
 ```  
   
-## Hinweise  
- Der ganzzahlige Ausdruck, der aus einer oder mehreren dieser Konstanten gebildet wird, bestimmt den Typ von den zulässigen Lese\- und Schreiboperationen.  Er wird gebildet, indem eine oder mehrere Konstanten mit einer ÜbersetzungModuskonstante kombiniert.  
+## <a name="remarks"></a>Hinweise  
+ Der aus einer oder mehreren der folgenden Konstanten gebildete Ganzzahlausdruck bestimmt den Typ der durchführbaren Lese- oder Schreibvorgänge. Er wird durch Kombination einer oder mehrerer Konstanten mit einer Übersetzungsmoduskonstanten gebildet.  
   
- Die Dateikonstanten sind, wie folgt:  
+ Die Dateikonstanten lauten wie folgt:  
   
  `_O_APPEND`  
- Ordnet der Dateizeiger am Ende der Datei vor den Schreibvorgang neu.  
+ Positioniert den Dateizeiger vor jedem Schreibvorgang am Ende einer Datei.  
   
  `_O_CREAT`  
- Erstellt und öffnet eine neue Datei zum Schreiben; dies hat keine Auswirkungen, wenn die Datei, die von *Dateinamen* angegeben wird, vorhanden ist.  
+ Erstellt und öffnet eine neue Datei zum Schreiben. Dies hat keine Auswirkungen, wenn die durch *filename* angegebene Datei vorhanden ist.  
   
  `_O_EXCL`  
- Gibt einen Fehlerwert zurück, wenn die Datei, die von *Dateinamen* angegeben wird, vorhanden ist.  Gilt nur, wenn Sie mit `_O_CREAT` verwendet werden.  
+ Gibt einen Fehlerwert zurück, wenn die durch *filename* angegebene Datei vorhanden ist. Gilt nur bei Verwendung mit `_O_CREAT`.  
   
  `_O_RDONLY`  
- Öffnet Datei nur für Lesezwecke; wenn dieses Flag, angegeben wird, können weder `_O_RDWR` noch `_O_WRONLY` angegeben werden.  
+ Die Datei wird nur zum Lesen geöffnet. Wenn dieses Flag angegeben ist, kann weder `_O_RDWR` noch `_O_WRONLY` angegeben werden.  
   
  `_O_RDWR`  
- Öffnet Datei für Lesen und Schreiben; wenn dieses Flag, angegeben wird, können weder `_O_RDONLY` noch `_O_WRONLY` angegeben werden.  
+ Die Datei wird zum Lesen und Schreiben geöffnet. Wenn dieses Flag angegeben ist, kann weder `_O_RDONLY` noch `_O_WRONLY` angegeben werden.  
   
  `_O_TRUNC`  
- Öffnet und entfernt eine vorhandene Datei zur Länge 0 \(null\) ab; die Datei muss über eine Schreibberechtigung verfügen.  Der Inhalt der Datei wird gelöscht.  Wenn dieses Flag angegeben ist, können Sie `_O_RDONLY` nicht angeben.  
+ Öffnet eine vorhandene Datei und verkürzt sie auf die Länge 0 (null). Für die Datei muss eine Schreibberechtigung bestehen. Der Inhalt der Datei ist zerstört. Wenn dieses Flag angegeben ist, können Sie `_O_RDONLY` nicht angeben.  
   
  `_O_WRONLY`  
- Öffnet Datei für nur geschrieben; wenn dieses Flag, angegeben wird, können weder `_O_RDONLY` noch `_O_RDWR` angegeben werden.  
+ Die Datei wird nur zum Schreiben geöffnet. Wenn dieses Flag angegeben ist, kann weder `_O_RDONLY` noch `_O_RDWR` angegeben werden.  
   
-## Siehe auch  
- [\_open, \_wopen](../c-runtime-library/reference/open-wopen.md)   
- [\_sopen, \_wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
+## <a name="see-also"></a>Siehe auch  
+ [_open, _wopen](../c-runtime-library/reference/open-wopen.md)   
+ [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
  [Globale Konstanten](../c-runtime-library/global-constants.md)

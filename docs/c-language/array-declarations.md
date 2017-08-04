@@ -1,90 +1,108 @@
 ---
-title: "Arraydeklarationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arrays [C++], Deklarieren"
-  - "Deklarieren von Arrays"
-  - "Mehrdimensionale Arrays"
+title: Arraydeklarationen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- multidimensional arrays
+- declaring arrays
+- arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Arraydeklarationen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: ed6af1d3a1d092728cb99e6d52696e1d0f676d92
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Eine "Arraydeklaration" benennt das Array und gibt den Typ der Elemente an.  Hiermit kann auch die Anzahl von Elementen im Array definiert werden.  Eine Variable mit Arraytyp wird als Zeiger auf den Typ der Arrayelemente betrachtet.  
+---
+# <a name="array-declarations"></a>Arraydeklarationen
+Eine "Arraydeklaration" benennt das Array und gibt den Typ der Elemente an. Hiermit kann auch die Anzahl von Elementen im Array definiert werden. Eine Variable mit Arraytyp wird als Zeiger auf den Typ der Arrayelemente betrachtet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
  `declaration`:  
- *declaration\-specifiers init\-declarator\-list*  opt               **;**  
+ *declaration-specifiers init-declarator-list* opt**;**  
   
- *init\-declarator\-list*:  
- *init\-declarator*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
- *init\-declarator\-list* **,**  *init\-declarator*  
+ *init-declarator-list* **,**  *init-declarator*  
   
- *init\-declarator*:  
+ *init-declarator*:  
  *declarator*  
   
- *declarator*  **\=**  *initializer*  
+ *declarator*  **=**  *initializer*  
   
  `declarator`:  
- *pointer*  opt *direct\-declarator*  
+ *pointer* opt*direct-declarator*  
   
- *direct\-declarator*:  
- *direct\-declarator*  **\[**  *constant\-expression*  opt **\]**  
+ *direct-declarator*:  
+ *direct-declarator*  **[**  *constant-expression* opt**]**  
   
- Da *constant\-expression* optional ist, hat die Syntax zwei Formen:  
+ Da *constant-expression* optional ist, hat die Syntax zwei Formen:  
   
--   Die erste Form definiert eine Arrayvariable.  Das *constant\-expression*\-Argument innerhalb der Klammern gibt die Anzahl von Elementen im Array an.  *constant\-expression*, falls vorhanden, muss einen ganzzahligen Typ und einen Wert aufweisen, der größer null ist.  Jedes Element weist den Typ auf, der von *type\-specifier* angegeben ist, der ein beliebiger Typ außer `void` sein kann.  Ein Arrayelement darf kein Funktionstyp sein.  
+-   Die erste Form definiert eine Arrayvariable. Das *constant-expression*-Argument innerhalb der Klammern gibt die Anzahl von Elementen im Array an. *constant-expression*, falls vorhanden, muss einen ganzzahligen Typ und einen Wert aufweisen, der größer als null ist. Jedes Element weist den Typ auf, der von *type-specifier* angegeben ist, der ein beliebiger Typ außer `void` sein kann. Ein Arrayelement darf kein Funktionstyp sein.  
   
--   Die zweite Form deklariert eine Variable, die an einer anderen Stelle definiert wurde.  Sie lässt das *constant\-expression*\-Argument in Klammern weg, aber nicht die Klammern.  Sie können diese Form nur dann verwenden, wenn Sie das Array zuvor initialisiert und als Parameter oder als Verweis auf ein Array deklariert haben, das explizit an anderer Stelle im Programm definiert ist.  
+-   Die zweite Form deklariert eine Variable, die an einer anderen Stelle definiert wurde. Sie lässt das *constant-expression*-Argument in Klammern weg, aber nicht die Klammern. Sie können diese Form nur dann verwenden, wenn Sie das Array zuvor initialisiert und als Parameter oder als Verweis auf ein Array deklariert haben, das explizit an anderer Stelle im Programm definiert ist.  
   
- Bei beiden Formen vergibt *direct\-declarator* den Namen der Variablen und kann den Typ der Variablen ändern.  Die Klammern \(**\[ \]**\) nach *direct\-declarator* ändern den Deklarator in einen Arraytyp.  
+ Bei beiden Formen vergibt *direct-declarator* den Namen der Variable und kann den Typ der Variable ändern. Die Klammern (**[ ]**) nach *direct-declarator* ändern den Deklarator in einen Arraytyp.  
   
  Typqualifizierer können in der Deklaration eines Objekts des Arraytyps enthalten sein, die Qualifizierer gelten jedoch für die Elemente und nicht für das Array selbst.  
   
- Sie können ein Array von Arrays \(ein "mehrdimensionales" Array\) deklarieren, indem Sie der Arraydeklaration eine Liste konstanter Ausdrücke in Klammern in dieser Form nachstellen:  
+ Sie können ein Array von Arrays (ein "mehrdimensionales" Array) deklarieren, indem Sie der Arraydeklaration eine Liste konstanter Ausdrücke in Klammern in dieser Form nachstellen:  
   
 ```  
   
-type-specifier declarator [constant-expression] [constant-expression] ...  
+type-specifier  
+declarator [constant-expression] [constant-expression] ...  
 ```  
   
- Jeder *constant\-expression* in eckigen Klammern definiert die Anzahl von Elementen in der angegebenen Dimension: zweidimensionale Arrays haben zwei Ausdrücke in Klammern, dreidimensionale Arrays haben drei usw.  Sie können den ersten konstanten Ausdruck weglassen, wenn Sie das Array initialisiert und es als Parameter oder als Verweis auf ein Array deklariert haben, das explizit an anderer Stelle im Programm definiert ist.  
+ Jeder *constant-expression* in Klammern definiert die Anzahl von Elementen in der angegebenen Dimension: zweidimensionale Arrays haben zwei Ausdrücke in Klammern, dreidimensionale Arrays haben drei usw. Sie können den ersten konstanten Ausdruck weglassen, wenn Sie das Array initialisiert und es als Parameter oder als Verweis auf ein Array deklariert haben, das explizit an anderer Stelle im Programm definiert ist.  
   
- Sie können Arrays von Zeigern auf verschiedene Objekttypen definieren, indem Sie komplexe Deklaratoren verwenden, wie in [Interpretieren von komplexeren Deklaratoren](../c-language/interpreting-more-complex-declarators.md) beschrieben.  
+ Sie können Arrays von Zeigern auf verschiedene Objekttypen definieren, indem Sie komplexe Deklaratoren verwenden, wie unter [Interpretieren von komplexeren Deklaratoren](../c-language/interpreting-more-complex-declarators.md) beschrieben.  
   
- Arrays werden zeilenweise gespeichert.  Zum Beispiel besteht das nächste Array aus zwei Zeilen mit jeweils drei Spalten:  
+ Arrays werden zeilenweise gespeichert. Zum Beispiel besteht das nächste Array aus zwei Zeilen mit jeweils drei Spalten:  
   
 ```  
 char A[2][3];  
 ```  
   
- Die drei Spalten der ersten Zeile werden zuerst gespeichert, danach folgen die drei Spalten der zweiten Zeile.  Dies bedeutet, dass sich der letzte Feldindex am schnellsten unterscheidet.  
+ Die drei Spalten der ersten Zeile werden zuerst gespeichert, danach folgen die drei Spalten der zweiten Zeile. Dies bedeutet, dass sich der letzte Feldindex am schnellsten unterscheidet.  
   
- Um auf ein einzelnes Element eines Arrays zu verweisen, verwenden Sie einen Indexausdruck, wie unter [Postfix\-Operatoren](../c-language/postfix-operators.md) beschrieben.  
+ Um auf ein einzelnes Element eines Arrays zu verweisen, verwenden Sie einen Subscriptausdruck, wie unter [Postfix-Operatoren](../c-language/postfix-operators.md) beschrieben.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Diese Beispiele veranschaulichen Arraydeklarationen:  
   
 ```  
 float matrix[10][15];  
 ```  
   
- Das zweidimensionale Array namens `matrix` verfügt über 150 Elemente, von denen jedes einen **Gleitkomma**\-Typ besitzt.  
+ Das zweidimensionale Array namens `matrix` verfügt über 150 Elemente, von denen jedes den Typ **float** aufweist.  
   
 ```  
 struct {  
@@ -92,19 +110,19 @@ struct {
 } complex[100];  
 ```  
   
- Dies ist eine Deklaration eines Arrays von Strukturen.  Dieses Array weist 100 Elemente auf. Jedes Element ist eine Struktur, die zwei Member enthält.  
+ Dies ist eine Deklaration eines Arrays von Strukturen. Dieses Array weist 100 Elemente auf. Jedes Element ist eine Struktur, die zwei Member enthält.  
   
 ```  
 extern char *name[];  
 ```  
   
- Diese Anweisung deklariert den Typ und den Namen eines Arrays von Zeigern auf `char`.  Die tatsächliche Definition von `name` ist an anderer Stelle zu finden.  
+ Diese Anweisung deklariert den Typ und den Namen eines Arrays von Zeigern auf `char`. Die tatsächliche Definition von `name` ist an anderer Stelle zu finden.  
   
- **Microsoft\-spezifisch**  
+ **Microsoft-spezifisch**  
   
- Der Typ einer Ganzzahl, die zum Speichern der maximalen Größe eines Arrays erforderlich ist, d. h. die Größe von **size\_t**.  **size\_t** ist in der Headerdatei STDDEF.H definiert und ein `unsigned int` mit dem Bereich 0x00000000 bis 0x7CFFFFFF.  
+ Der Typ einer ganzen Zahl, die zum Speichern der maximalen Größe eines Arrays erforderlich ist, d.h. die Größe von **size_t**. **size_t** ist in der Headerdatei STDDEF.H definiert und repräsentiert eine `unsigned int` (ganze Zahl ohne Vorzeichen) aus dem Bereich 0x00000000 bis 0x7CFFFFFF.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Deklaratoren und Variablendeklarationen](../c-language/declarators-and-variable-declarations.md)

@@ -1,26 +1,43 @@
 ---
-title: "Organisation des C-Sprachverzeichnisses | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Organisation des C-Sprachverzeichnisses (C) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 7e42daa4-9c9e-4c2d-bbc4-e45405803c20
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Organisation des C-Sprachverzeichnisses
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: a7cc3901f1b6a366a1b9944707f4be75c13197bf
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
--   [C\-Elemente](../c-language/elements-of-c.md)  
+---
+# <a name="organization-of-the-c-language-reference"></a>Organisation der C-Programmiersprachenreferenz
+-   [C-Elemente](../c-language/elements-of-c.md)  
   
 -   [Programmstruktur](../c-language/program-structure.md)  
   
@@ -32,9 +49,9 @@ caps.handback.revision: 8
   
 -   [Funktionen](../c-language/functions-c.md)  
   
--   [Zusammenfassung der C\-Sprachsyntax](../c-language/c-language-syntax-summary.md)  
+-   [Zusammenfassung der C-Sprachsyntax](../c-language/c-language-syntax-summary.md)  
   
--   [Von der Implementierung abhängiges Verhalten](../c-language/implementation-defined-behavior.md)  
+-   [Implementation-Defined Behavior (Durch die Implementierung definiertes Verhalten)](../c-language/implementation-defined-behavior.md)  
   
-## Siehe auch  
- [C\-Sprachreferenz](../c-language/c-language-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [C-Sprachreferenz](../c-language/c-language-reference.md)

@@ -1,28 +1,45 @@
 ---
-title: "Bibliotheksfunktionen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Bibliotheksfunktionen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 90c096ab-31df-479e-91d8-289900dc0bff
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Bibliotheksfunktionen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1c57ba02eb88b5097945e1e6c0e7560dc61d0d25
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
--   [NULL\-Makro](../c-language/null-macro.md)  
+---
+# <a name="library-functions"></a>Bibliotheksfunktionen
+-   [NULL-Makro](../c-language/null-macro.md)  
   
--   [Diagnose von der assert\-Funktion gedruckt](../c-language/diagnostic-printed-by-the-assert-function.md)  
+-   [Diagnose von der assert-Funktion gedruckt](../c-language/diagnostic-printed-by-the-assert-function.md)  
   
 -   [Zeichentests](../c-language/character-testing.md)  
   
@@ -30,9 +47,9 @@ caps.handback.revision: 9
   
 -   [Unterlauf von Gleitkommawerten](../c-language/underflow-of-floating-point-values.md)  
   
--   [Die fmod\-Funktion](../c-language/fmod-function.md)  
+-   [Die fmod-Funktion](../c-language/fmod-function.md)  
   
--   [Die signal\-Funktion](../c-language/signal-function-c.md)  
+-   [Die signal-Funktion](../c-language/signal-function-c.md)  
   
 -   [Standardsignale](../c-language/default-signals.md)  
   
@@ -40,15 +57,15 @@ caps.handback.revision: 9
   
 -   [Leerzeilen](../c-language/blank-lines.md)  
   
--   [Nullzeichen](../c-language/null-characters.md)  
+-   [NULL-Zeichen](../c-language/null-characters.md)  
   
--   [Dateiposition im Append\-Modus](../c-language/file-position-in-append-mode.md)  
+-   [Dateiposition im Append-Modus](../c-language/file-position-in-append-mode.md)  
   
 -   [Abschneidungen von Textdateien](../c-language/truncation-of-text-files.md)  
   
 -   [Dateipufferung](../c-language/file-buffering.md)  
   
--   [Dateien der Länge 0 \(null\)](../c-language/zero-length-files.md)  
+-   [Dateien der Länge 0 (null)](../c-language/zero-length-files.md)  
   
 -   [Dateinamen](../c-language/filenames.md)  
   
@@ -64,23 +81,23 @@ caps.handback.revision: 9
   
 -   [Dateipositionsfehler](../c-language/file-position-errors.md)  
   
--   [Von der perror\-Funktion generierte Nachrichten](../c-language/messages-generated-by-the-perror-function.md)  
+-   [Von der perror-Funktion generierte Nachrichten](../c-language/messages-generated-by-the-perror-function.md)  
   
 -   [Nullspeicherbelegung](../c-language/allocating-zero-memory.md)  
   
--   [Die abort\-Funktion](../c-language/abort-function-c.md)  
+-   [Die abort-Funktion](../c-language/abort-function-c.md)  
   
--   [Die atexit\-Funktion](../c-language/atexit-function-c.md)  
+-   [Die atexit-Funktion](../c-language/atexit-function-c.md)  
   
 -   [Umgebungsnamen](../c-language/environment-names.md)  
   
--   [Die system\-Funktion](../c-language/system-function.md)  
+-   [Die system-Funktion](../c-language/system-function.md)  
   
--   [Die strerror\-Funktion](../c-language/strerror-function.md)  
+-   [Die strerror-Funktion](../c-language/strerror-function.md)  
   
 -   [Die Zeitzone](../c-language/time-zone.md)  
   
--   [Die clock\-Funktion](../c-language/clock-function-c.md)  
+-   [Die clock-Funktion](../c-language/clock-function-c.md)  
   
-## Siehe auch  
- [Durch die Implementierung definiertes Verhalten](../c-language/implementation-defined-behavior.md)
+## <a name="see-also"></a>Siehe auch  
+ [Implementation-Defined Behavior (Durch die Implementierung definiertes Verhalten)](../c-language/implementation-defined-behavior.md)

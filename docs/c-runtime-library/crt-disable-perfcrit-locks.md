@@ -1,41 +1,58 @@
 ---
-title: "_CRT_DISABLE_PERFCRIT_LOCKS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_CRT_DISABLE_PERFCRIT_LOCKS"
-  - "CRT_DISABLE_PERFCRIT_LOCKS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CRT_DISABLE_PERFCRIT_LOCKS-Konstante"
-  - "CRT_DISABLE_PERFCRIT_LOCKS-Konstante"
+title: _CRT_DISABLE_PERFCRIT_LOCKS | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _CRT_DISABLE_PERFCRIT_LOCKS
+- CRT_DISABLE_PERFCRIT_LOCKS
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRT_DISABLE_PERFCRIT_LOCKS constant
+- _CRT_DISABLE_PERFCRIT_LOCKS constant
 ms.assetid: 36cc2d86-cdb1-4b2b-a03c-c0d3818e7c6f
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# _CRT_DISABLE_PERFCRIT_LOCKS
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: c88428931b84b996ee711eb17fd42190a2c20e15
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Deaktiviert leistungskritischen Sperre in den E\/A\-Vorgänge.  
+---
+# <a name="crtdisableperfcritlocks"></a>_CRT_DISABLE_PERFCRIT_LOCKS
+Deaktiviert die leistungskritische Sperre bei E/A-Vorgängen.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #define _CRT_DISABLE_PERFCRIT_LOCKS  
 ```  
   
-## Hinweise  
- Durch die Definition dieses Symbols können die Leistung in Singlethreaded E\/A\-gebundenen Programmen verbessern, indem alle E\/A\-Vorgänge erzwingt, um ein einfädiges E\/A\-Modell anzunehmen.  Weitere Informationen finden Sie unter [Leistung von Multithreadbibliotheken](../c-runtime-library/multithreaded-libraries-performance.md).  
+## <a name="remarks"></a>Hinweise  
+ Durch die Definition dieses Symbols kann die Leistung in Singlethread-E/A-gebundenen Programmen verbessert werden, indem bei allen E/A-Vorgängen die Annahme eines Singlethread-E/A-Modells erzwungen wird. Weitere Informationen finden Sie unter [Leistung von Multithreadbibliotheken](../c-runtime-library/multithreaded-libraries-performance.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Globale Konstanten](../c-runtime-library/global-constants.md)

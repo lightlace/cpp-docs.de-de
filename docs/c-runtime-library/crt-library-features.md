@@ -47,10 +47,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 57de8d43336f8fd5c82da17f42cf6f8292600148
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 232da2506389337f6b37412161492c103db5b971
 ms.contentlocale: de-de
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="crt-library-features"></a>CRT-Bibliotheksfunktionen
@@ -59,7 +59,7 @@ In diesem Thema werden die verschiedenen LIB-Dateien erläutert, die die C-Laufz
 ## <a name="c-run-time-libraries-crt"></a>C-Laufzeitbibliotheken (CRT)  
  Die CRT (C Run-time Library, C-Laufzeitbibliothek) ist Bestandteil der C++-Standardbibliothek, die die ISO C99-Standardbibliothek umfasst. Die Visual C++-Bibliotheken, die die CRT implementieren, unterstützen die Entwicklung von systemeigenem Code und Mischungen aus systemeigenem und verwaltetem Code sowie reinen verwalteten Code für die .NET-Entwicklung. Alle Versionen der CRT unterstützen Multithreaded-Entwicklung. Die meisten Bibliotheken unterstützen sowohl statisches Linken (Binden), um die Bibliothek direkt in Ihren Code einzubinden, oder dynamisches Linken, damit in Ihrem Code allgemeine DLL-Dateien verwendet werden können.  
   
- Ab Visual Studio 2015 wurde die CRT in neue Binärdateien umgestaltet. Die UCRT (Universal CRT) enthält die Funktionen und globalen Elemente, die durch die Standard-C99 CRT-Bibliothek exportiert werden. Die UCRT ist nun eine Windows-Komponente und wird als Bestandteil von Windows 10 bereitgestellt. Die statische Bibliothek, die DLL-Importbibliothek und die Headerdateien für die UCRT sind jetzt im Windows 10 SDK zu finden. Wenn Sie Visual C++ installieren, installiert Visual Studio-Setup die Teilmenge des Windows 10 SDKs, die erforderlich ist, um die UCRT verwenden zu können. Sie können die UCRT unter jeder Version von Windows verwenden, die von Visual Studio 2015 und späteren Versionen unterstützt wird. Sie können die URCT über vcredist für unterstützte Versionen von Windows neu verteilen, die nicht Windows 10 sind. Weitere Informationen finden Sie unter [Verteilen von Visual C++-Dateien](../ide/redistributing-visual-cpp-files.md).  
+ Ab Visual Studio 2015 wurde die CRT in neue Binärdateien umgestaltet. Die UCRT (Universal CRT) enthält die Funktionen und globalen Elemente, die durch die Standard-C99 CRT-Bibliothek exportiert werden. Die UCRT ist nun eine Windows-Komponente und wird als Bestandteil von Windows 10 bereitgestellt. Die statische Bibliothek, die DLL-Importbibliothek und die Headerdateien für die UCRT sind jetzt im Windows 10 SDK zu finden. Wenn Sie Visual C++ installieren, installiert Visual Studio-Setup die Teilmenge des Windows 10 SDKs, die erforderlich ist, um die UCRT verwenden zu können. Sie können die UCRT unter jeder Version von Windows verwenden, die von Visual Studio 2015 und späteren Versionen unterstützt wird. Sie können die URCT über vcredist für unterstützte Versionen von Windows neu verteilen, die nicht Windows 10 sind. Weitere Informationen finden Sie unter [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
   
  In der folgenden Tabelle sind die Bibliotheken aufgelistet, die die UCRT implementieren.  
   
@@ -87,7 +87,7 @@ In diesem Thema werden die verschiedenen LIB-Dateien erläutert, die die C-Laufz
   
 |Bibliothek|Eigenschaften|Option|Präprozessordirektiven|  
 |-------------|---------------------|------------|-----------------------------|  
-|libcmt.lib|Bindet den systemeigenen CRT-Startcode statisch in Ihren Code ein.|**/MT**|_MT|  
+|LIBCMT.lib|Bindet den systemeigenen CRT-Startcode statisch in Ihren Code ein.|**/MT**|_MT|  
 |libcmtd.lib|Bindet die Debugversion des systemeigenen CRT-Startcode statisch ein. Nicht neu verteilbar.|**/MTd**|_DEBUG, _MT|  
 |msvcrt.lib|Statische Bibliothek für den systemeigenen CRT-Startcode zur Verwendung mit DLL UCRT und vcruntime.|**/MD**|_MT, _DLL|  
 |msvcrtd.lib|Statische Bibliothek für die Debugversion des systemeigenen CRT-Startcodes zur Verwendung mit DLL UCRT und vcruntime. Nicht neu verteilbar.|**/MDd**|_DEBUG, _MT, _DLL|  
@@ -100,7 +100,7 @@ In diesem Thema werden die verschiedenen LIB-Dateien erläutert, die die C-Laufz
   
  Die Verwendung der statisch verknüpften CRT bedeutet, dass alle von der C-Laufzeitbibliothek gespeicherten Zustandsinformationen für diese CRT-Instanz lokal sind. Wenn Sie bei einer statisch verknüpften CRT [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) verwenden, ist die Position des `strtok`-Parsers nicht mit dem `strtok`-Zustand verbunden, der im Code des gleichen Prozesses (jedoch in einer anderen DLL oder EXE) verwendet wird, welcher mit einer anderen Instanz der statischen CRT verknüpft ist. Im Gegensatz dazu teilen dynamisch verknüpfte CRT den Zustand für sämtlichen Code innerhalb eines Prozesses, der dynamisch mit der CRT verknüpft ist. Bei den neuen sichereren Versionen dieser Funktionen wie `strtok_s` tritt dieses Problem nicht auf.  
   
- Da eine durch das Verknüpfen mit einer statischen CRT erstellten DLL ihren eigenen CRT-Zustand besitzt, wird in einer DLL das statische Verknüpfen mit einer CRT nicht empfohlen, es sei denn, dass die daraus resultierenden Konsequenzen verstanden werden und erwünscht sind. Angenommen, Sie rufen [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) in einer ausführbaren Datei auf, die die DLL lädt, welche mit ihrer eigenen statischen CRT verknüpft ist. In diesem Fall werden alle vom Code in der DLL generierten Hardwareausnahmen vom Konvertierungsprogramm nicht erfasst. Die vom Code in der Hauptausführungsdatei generierten Hardwareausnahmen hingegen werden erfasst.  
+ Da eine durch das Verknüpfen mit einer statischen CRT erstellten DLL ihren eigenen CRT-Zustand besitzt, wird in einer DLL das statische Verknüpfen mit einer CRT nicht empfohlen, es sei denn, dass die daraus resultierenden Konsequenzen verstanden werden und erwünscht sind. Wenn Sie z. B. [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) in einer ausführbaren Datei aufrufen, die die DLL lädt, die mit ihrer eigenen statischen CRT verknüpft ist, werden alle vom Code in der DLL generierten Hardwareausnahmen vom Konvertierungsprogramm nicht erfasst, wohingegen die vom Code in der Hauptausführungsdatei generierten Hardwareausnahmen erfasst werden.  
   
  Wenn Sie den **/clr** -Compilerschalter verwenden, wird der Code mit der statischen Bibliothek msvcmrt.lib verknüpft. Die statische Bibliothek stellt einen Proxy zwischen dem verwalteten Code und der systemeigenen CRT bereit. Die statisch verknüpfte CRT (Option **/MT** oder Option **/MTd** ) können Sie nicht mit **/clr**verwenden. Verwenden Sie stattdessen die dynamisch verknüpften Bibliotheken (**/MD** oder **/MDd**).  
   
@@ -116,19 +116,19 @@ In diesem Thema werden die verschiedenen LIB-Dateien erläutert, die die C-Laufz
   
 |C++-Standardbibliothek|Eigenschaften|Option|Präprozessordirektiven|  
 |----------------------------|---------------------|------------|-----------------------------|  
-|LIBCPMT.LIB|Multithreaded, statischer Link|**/MT**|_MT|  
+|LIBCPMT.lib|Multithreaded, statischer Link|**/MT**|_MT|  
 |MSVCPRT.LIB|Multithreaded, dynamischer Link (Importbibliothek für MSVCP\<<Version>.dll)|**/MD**|_MT, _DLL|  
 |LIBCPMTD.LIB|Multithreaded, statischer Link|**/MTd**|_DEBUG, _MT|  
 |MSVCPRTD.LIB|Multithreaded, dynamischer Link (Importbibliothek für MSVCP\<<Version>D.DLL)|**/MDd**|_DEBUG, _MT, _DLL|  
   
- Wenn Sie eine Releaseversion des Projekts erstellen, wird abhängig von der ausgewählten Compileroption (Multithreaded, DLL, /clr) eine der grundlegenden C-Laufzeitbibliotheken (LIBCMT.LIB, MSVCMRT.LIB, MSVCRT.LIB) standardmäßig verknüpft. Wenn Sie eine der [Headerdateien der C++-Standardbibliothek](../standard-library/cpp-standard-library-header-files.md) in den Code einfügen, wird von [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] eine C++-Standardbibliothek automatisch zur Kompilierzeit eingebunden. Zum Beispiel:  
+ Wenn Sie eine Releaseversion des Projekts erstellen, wird abhängig von der ausgewählten Compileroption (Multithreaded, DLL, /clr) eine der grundlegenden C-Laufzeitbibliotheken (LIBCMT.LIB, MSVCMRT.LIB, MSVCRT.LIB) standardmäßig verknüpft. Wenn Sie eine der [Headerdateien der C++-Standardbibliothek](../standard-library/cpp-standard-library-header-files.md) in den Code einfügen, wird von Visual C++ eine C++-Standardbibliothek automatisch zur Kompilierzeit eingebunden. Zum Beispiel:  
   
 ```  
 #include <ios>   
 ```  
   
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>Welche Probleme gibt es, wenn in einer Anwendung mehrere CRT-Version verwendet werden?  
- Wenn Sie über mehr als einer DLL oder EXE-Dateien verfügen, dann verfügen Sie möglicherweise auch über mehr als eine CRT, unabhängig davon, ob Sie verschiedene Versionen von [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] verwenden. Das statische Verknüpfen der CRT mit mehreren DLLs kann das gleiche Problem darstellen. Entwickler, bei denen dieses Problem mit statischen CRTs auftritt, sollen mit **/MD** kompilieren, um die CRT-DLL zu verwenden. Wenn Ihre DLLs CRT-Ressourcen über die DLL-Grenze hinaus übergeben, treten möglicherweise Probleme mit nicht übereinstimmenden CRTs auf, und Sie müssen Ihr Projekt mit Visual C++ neu kompilieren.  
+ Wenn Sie mehrere DLL- oder EXE-Dateien besitzen, dann verfügen Sie möglicherweise auch über mehr als eine CRT-Instanz, unabhängig davon, ob Sie verschiedene Versionen von Visual C++ verwenden. Das statische Verknüpfen der CRT mit mehreren DLLs kann das gleiche Problem darstellen. Entwickler, bei denen dieses Problem mit statischen CRTs auftritt, sollen mit **/MD** kompilieren, um die CRT-DLL zu verwenden. Wenn Ihre DLLs CRT-Ressourcen über die DLL-Grenze hinaus übergeben, treten möglicherweise Probleme mit nicht übereinstimmenden CRTs auf, und Sie müssen Ihr Projekt mit Visual C++ neu kompilieren.  
   
  Wenn das Programm mehr als eine CRT-Version verwendet, muss beim Übergeben bestimmter CRT-Objekte (wie z. B. Dateihandles, Gebietsschemas und Umgebungsvariablen) über DLL-Grenzen hinweg sorgfältig vorgegangen werden. Weitere Informationen zu diesen Problemen und den jeweiligen Lösungsmöglichkeiten finden Sie unter [Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   

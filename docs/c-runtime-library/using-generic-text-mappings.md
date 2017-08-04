@@ -1,114 +1,131 @@
 ---
-title: "Verwenden von Zuordnungen f&#252;r generischen Text | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_UNICODE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_MBCS-Datentyp"
-  - "_T-Typ"
-  - "_TCHAR-Typ"
-  - "_TEXT-Typ"
-  - "_TINT-Typ"
-  - "_TSCHAR-Typ"
-  - "_TUCHAR-Typ"
-  - "_TXCHAR-Typ"
-  - "_UNICODE-Konstante"
-  - "Datentypen für generischen Text"
-  - "Allgemeintext-Zuordnungen"
-  - "Zuordnungen, Generischer Text"
-  - "MBCS-Datentyp"
-  - "T-Typ"
-  - "TCHAR-Typ"
-  - "TCHAR.H-Datentypen, Zuordnungen definiert in"
-  - "TEXT-Typ"
-  - "TINT-Typ"
-  - "TSCHAR-Typ"
-  - "TUCHAR-Typ"
-  - "TXCHAR-Typ"
-  - "UNICODE-Konstante"
+title: Verwenden von generischen Textzuordnungen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _UNICODE
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TXCHAR type
+- TINT type
+- _TCHAR type
+- TSCHAR type
+- TEXT type
+- TCHAR type
+- TCHAR.H data types, mappings defined in
+- generic-text data types
+- _TINT type
+- TUCHAR type
+- _UNICODE constant
+- TXCHAR type
+- generic-text mappings
+- _TSCHAR type
+- T type
+- mappings, generic-text
+- _TUCHAR type
+- MBCS data type
+- _MBCS data type
+- _TEXT type
+- UNICODE constant
+- _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Verwenden von Zuordnungen f&#252;r generischen Text
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 17a3f4f7be76be9f23160e351466fee4f70b9272
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="using-generic-text-mappings"></a>Verwenden von Zuordnungen für generischen Text
+**Microsoft-spezifisch**  
   
- Um verschiedene Codeentwicklung für internationale Märkte vereinfachen, stellt die Microsoft\-Laufzeitbibliothek Zuordnungen des Microsoft\-Besondere" generischen Text für viele Datentypen, Routinen und andere Objekte.  Diese Zuordnungen sind in TCHAR.H. definiert.  Sie können diese Namenszuordnungen bereit verwenden, können Sie generischen Code schreiben, der für die drei Arten der verbleibenden Zeichensätze kompiliert werden kann: ASCII \(SBCS\), MBCS\- oder Unicode, abhängig von einer eindeutigen Konstante definieren Sie mithilfe einer `#define`\-Anweisung.  Zuordnungen für generischen Text sind Microsoft\-Erweiterungen, die zu nicht konformem ANSI sind.  
+ Um die Codeentwicklung für internationale Märkte zu vereinfachen, stellt die Microsoft-Laufzeitbibliothek für viele Datentypen, Routinen und andere Objekte Microsoft-spezifische Zuordnungen für generischen Text zur Verfügung. Diese Zuordnungen werden in TCHAR.H definiert. Sie können mithilfe dieser Namenszuordnungen generischen Code schreiben, der für die folgenden drei Arten von Zeichensätzen kompiliert werden kann: ASCII (SBCS), MBCS oder Unicode. Dies hängt von der Manifestkonstante ab, die Sie mit einer `#define`-Anweisung definieren. Generische Textzuordnungen sind Microsoft-Erweiterungen, die nicht mit ANSI kompatibel sind.  
   
-### Präprozessordirektiven zum Zuordnen von generischem Text  
+### <a name="preprocessor-directives-for-generic-text-mappings"></a>Präprozessordirektiven zum Zuordnen von generischem Text  
   
-|\#define|Kompilierte Version|Beispiel|  
-|--------------|-------------------------|--------------|  
-|`_UNICODE`|Unicode \(Breitzeichen\)|`_tcsrev` wird `_wcsrev` zugeordnet.|  
+|#define|Kompilierte Version|Beispiel|  
+|--------------|----------------------|-------------|  
+|`_UNICODE`|Unicode (Breitzeichen)|`_tcsrev` wird `_wcsrev` zugeordnet.|  
 |`_MBCS`|Mehrbytezeichen|`_tcsrev` wird `_mbsrev` zugeordnet.|  
-|Keine \(Standard: weder `_UNICODE` noch `_MBCS` definiert\)|SBCS \(ASCII\)|Zuordnungen zu `strrev``_tcsrev`|  
+|Keine (bei der Standardeinstellung ist weder `_UNICODE` noch `_MBCS` definiert)|SBCS (ASCII)|`_tcsrev` wird `strrev` zugeordnet.|  
   
- Beispielsweise die Funktion `_tcsrev` für generischen Text, definiert in TCHAR.H, in den Zuordnungen zu `mbsrev`, wenn `MBCS` in einem Programm definiert wurde oder `_wcsrev` , wenn `_UNICODE`  definiert wurde.  Andernfalls `_tcsrev`  Zuordnungen zu `strrev`.  
+ Die in TCHAR.H definierte generische Textfunktion `_tcsrev` wird der `mbsrev`-Funktion zugeordnet, wenn `MBCS` in Ihrem Programm definiert wurde, oder sie wird `_wcsrev` zugeordnet, wenn `_UNICODE` definiert wurde. Andernfalls wird `_tcsrev` `strrev` zugeordnet.  
   
- Der Datentyp `_TCHAR` des generischen Text, ebenfalls definiert in TCHAR.H, in den Zuordnungen, um `char` einzugeben, wenn `_MBCS` definiert ist, zu `wchar_t`, wenn `_UNICODE` definiert wird, und `char` einzugeben, wenn auch nicht Konstante definiert ist.  Andere Datentypzuordnungen werden in TCHAR.H weitere Datentypzuordnungen zur Verfügung gestellt, aber `_TCHAR` ist der Typ, der sehr nützlich ist.  
+ Der generische Text vom Datentyp `_TCHAR`, der auch in TCHAR.H definiert ist, wird dem Typ `char` zugeordnet, wenn `_MBCS` definiert ist; dem Typ `wchar_t`, wenn `_UNICODE` definiert ist; und dem Typ `char`, wenn keine Konstante definiert ist. Zur Vereinfachung der Programmierung werden in TCHAR.H weitere Datentypzuordnungen zur Verfügung gestellt; `_TCHAR` ist jedoch die hilfreichste Zuordnung.  
   
-### Generische Textzuordnungen von Datentypen  
+### <a name="generic-text-data-type-mappings"></a>Generische Textzuordnungen von Datentypen  
   
-|Datentypname für generischen Text|\(\_UNICODE, SBCS \_MBCS nicht definiert\)|\_MBCS definiert|\_UNICODE definiert|  
-|---------------------------------------|------------------------------------------------|----------------------|-------------------------|  
+|Datentypname für generischen Text|SBCS (_UNICODE & MBCS nicht definiert)|_MBCS definiert|_UNICODE definiert|  
+|----------------------------------|--------------------------------------------|--------------------|-----------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_TINT`|`int`|`int`|`wint_t`|  
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` oder `_TEXT`|Ohne Auswirkung \(wird vom Präprozessor entfernt\)|Ohne Auswirkung \(wird vom Präprozessor entfernt\)|`L` \(konvertiert, die Zeichen oder Zeichenfolge in die Unicode\-Entsprechung folgen\)|  
+|`_T` oder `_TEXT`|Ohne Auswirkung (wird vom Präprozessor entfernt)|Ohne Auswirkung (wird vom Präprozessor entfernt)|`L` (konvertiert das nächste Zeichen oder die nächste Zeichenfolge in die Unicode-Entsprechung)|  
   
- Eine vollständige Liste mit generischen Textzuordnungen von Routinen, Variablen und anderen Objekten finden, [Zuordnungen für generischen Text](../c-runtime-library/generic-text-mappings.md).  
+ Eine vollständige Liste mit generischen Textzuordnungen von Routinen, Variablen und anderen Objekten finden Sie unter [Generische Textzuordnungen](../c-runtime-library/generic-text-mappings.md).  
   
- Die folgenden Codefragmente veranschaulichen die Verwendung von `_TCHAR` und `_tcsrev` für die Zuordnung zu den MBCS\-, zu Unicode und TO der SBCS\-Modellen.  
+ Aus den folgenden Codefragmenten geht hervor, wie `_TCHAR` und `_tcsrev` für die Zuordnung zu den MBCS-, Unicode- und SBCS-Modellen verwendet werden.  
   
 ```  
 _TCHAR *RetVal, *szString;  
 RetVal = _tcsrev(szString);  
 ```  
   
- Wenn `MBCS` definiert wurde, ordnet der Präprozessor dem vorangehenden Fragment dem folgenden Code:  
+ Wenn `MBCS` definiert wurde, ordnet der Präprozessor dem vorangehenden Fragment folgenden Code zu:  
   
 ```  
 char *RetVal, *szString;  
 RetVal = _mbsrev(szString);  
 ```  
   
- Wenn `_UNICODE` definiert wurde, ordnet der Präprozessor dem gleichen Fragment dem folgenden Code:  
+ Wenn `_UNICODE` definiert wurde, ordnet der Präprozessor diesem Fragment folgenden Code zu:  
   
 ```  
 wchar_t *RetVal, *szString;  
 RetVal = _wcsrev(szString);  
 ```  
   
- Wenn weder `_MBCS` noch `_UNICODE` definiert wurde, ordnet der Präprozessor dem Einzelbyte\- ASCII\-Code zu, wie folgt:  
+ Wenn weder `_MBCS` noch `_UNICODE` definiert wurde, ordnet der Präprozessor dem Einzelbyte-ASCII-Code das Fragment wie folgt zu:  
   
 ```  
 char *RetVal, *szString;  
 RetVal = strrev(szString);  
 ```  
   
- So können Sie eine einzige Quellcodedatei so schreiben, verwalten und kompilieren, dass sie mit Routinen ausgeführt, die zu einer der drei Zeichensätze ausgerichtet sind.  
+ Daher können Sie eine einzige Quellcodedatei so schreiben, verwalten und kompilieren, dass sie mit Routinen ausgeführt wird, die jeweils speziell auf einen der drei Zeichensätze ausgerichtet sind.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Zuordnungen für generischen Text](../c-runtime-library/generic-text-mappings.md)   
- [Datentypzuordnungen](../c-runtime-library/data-type-mappings.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Generic-Text Mappings (Zuordnungen von Konstanten mit generischem Text)](../c-runtime-library/generic-text-mappings.md)   
+ [Datentyp-Zuordnungen](../c-runtime-library/data-type-mappings.md)   
  [Zuordnungen von Konstanten und globalen Variablen](../c-runtime-library/constant-and-global-variable-mappings.md)   
- [Routinezuordnungen](../c-runtime-library/routine-mappings.md)   
+ [Routine Mappings (Routinezuordnungen)](../c-runtime-library/routine-mappings.md)   
  [Beispiel für ein Programm mit generischem Text](../c-runtime-library/a-sample-generic-text-program.md)

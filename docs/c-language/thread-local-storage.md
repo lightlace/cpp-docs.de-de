@@ -1,36 +1,53 @@
 ---
-title: "Lokaler Threadspeicher | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Speicher, Lokaler Threadspeicher"
-  - "Thread-Speicherklassenattribut"
-  - "Lokaler Threadspeicher"
-  - "Lokale Threadvariablen"
-  - "TLS (lokaler Threadspeicher)"
+title: Lokaler Threadspeicher | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- thread-local variables
+- TLS (thread local storage)
+- thread storage-class attribute
+- thread-local storage
+- storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Lokaler Threadspeicher
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 726627607d02fd559af3ab42b45d90a2435db777
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="thread-local-storage"></a>Threadlokaler Speicher
+**Microsoft-spezifisch**  
   
- Der lokale Threadspeicher \(TLS\) ist der Mechanismus, mit dem jeder Thread in einem Multithreadprozess den Speicher für threadspezifische Daten zuordnet.  In den standardmäßigen Multithreadprogrammen werden Daten auf allen Threads eines angegebenen Prozesses freigegeben, während der lokale Threadspeicher der Mechanismus zum Zuordnen der threadspezifischen Daten ist.  Eine vollständige Erörterung der Threads finden Sie im [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] unter [Threads und Prozesse](http://msdn.microsoft.com/library/windows/desktop/ms684841).  
+ Der threadlokale Speicher (TLS) ist der Mechanismus, mit dem jeder Thread in einem Multithreadprozess den Speicher für threadspezifische Daten zuordnet. In den standardmäßigen Multithreadprogrammen werden Daten auf allen Threads eines angegebenen Prozesses freigegeben, während der threadlokale Speicher der Mechanismus zum Zuordnen der threadspezifischen Daten ist. Eine vollständige Erörterung der Threads finden Sie im [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] unter [Prozesse und Threads](http://msdn.microsoft.com/library/windows/desktop/ms684841).  
   
- Die Microsoft\-Programmiersprache C schließt das erweiterte Speicherklassenattribut, thread, mit ein, das mit dem \_\_declspec\-Schlüsselwort verwendet wird, um einen threadlokale Variable zu deklarieren.  Mit folgendem Code wird z. B. eine Ganzzahl\-TLS\-Variable deklariert und mit einem Wert initialisiert:  
+ Die Microsoft-Programmiersprache C schließt das erweiterte Speicherklassenattribut, „thread“, mit ein, das mit dem __declspec-Schlüsselwort verwendet wird, um eine threadlokale Variable zu deklarieren. Mit folgendem Code wird z. B. eine Ganzzahl-TLS-Variable deklariert und mit einem Wert initialisiert:  
   
 ```  
 __declspec( thread ) int tls_i = 1;  
@@ -38,16 +55,16 @@ __declspec( thread ) int tls_i = 1;
   
  Diese Richtlinien müssen bei der Deklaration von statisch gebundenen threadlokalen Variablen beachtet werden:  
   
--   Die Verwendung von **\_\_declspec\(thread\)** kann mit dem [verzögerten Laden](../build/reference/linker-support-for-delay-loaded-dlls.md) von DLL\-Importen in Konflikt treten**.**  
+-   Die Verwendung von **__declspec(thread)** kann beim [verzögerten Laden](../build/reference/linker-support-for-delay-loaded-dlls.md) von DLL-Importen zu Konflikten führen**.**  
   
--   Sie können das Threadattribut nur auf Datendeklarationen und \-definitionen anwenden.  Die Verwendung in Funktionsdeklarationen oder \-definitionen ist nicht zulässig.  Beispielsweise verursacht der folgende Code einen Compilerfehler:  
+-   Sie können das Threadattribut nur auf Datendeklarationen und -definitionen anwenden. Die Verwendung in Funktionsdeklarationen oder -definitionen ist nicht zulässig. Beispielsweise verursacht der folgende Code einen Compilerfehler:  
   
     ```  
     #define Thread   __declspec( thread )  
     Thread void func();      /* Error */  
     ```  
   
--   Sie können das thread\-Attribut nur für Datenelemente mit statischer Speicherdauer angeben.  Hierzu zählen globale Daten \(statisch und extern\) und lokale statische Daten.  Sie können automatische Daten nicht mit dem thread\-Attribut deklarieren.  Beispielsweise verursacht der folgende Code Compilerfehler:  
+-   Sie können das thread-Attribut nur für Datenelemente mit statischer Speicherdauer angeben. Hierzu zählen globale Daten (statisch und extern) und lokale statische Daten. Sie können automatische Daten nicht mit dem thread-Attribut deklarieren. Beispielsweise verursacht der folgende Code Compilerfehler:  
   
     ```  
     #define Thread   __declspec( thread )  
@@ -62,7 +79,7 @@ __declspec( thread ) int tls_i = 1;
     }  
     ```  
   
--   Sie müssen das thread\-Attribut für die Deklaration und Definition von threadlokale Daten verwenden, unabhängig davon, ob die Deklaration und Definition in der gleichen Datei oder in separaten Dateien auftreten.  Durch folgenden Code wird z. B. ein Fehler verursacht:  
+-   Sie müssen das thread-Attribut für die Deklaration und Definition von threadlokale Daten verwenden, unabhängig davon, ob die Deklaration und Definition in der gleichen Datei oder in separaten Dateien auftreten. Durch folgenden Code wird z. B. ein Fehler verursacht:  
   
     ```  
     #define Thread   __declspec( thread )  
@@ -70,13 +87,13 @@ __declspec( thread ) int tls_i = 1;
     int Thread tls_i;     /* declaration and the definition differ. */  
     ```  
   
--   Sie können das thread\-Attribut nicht als Typmodifizierer verwenden.  Beispielsweise verursacht der folgende Code einen Compilerfehler:  
+-   Sie können das thread-Attribut nicht als Typmodifizierer verwenden. Beispielsweise verursacht der folgende Code einen Compilerfehler:  
   
     ```  
     char *ch __declspec( thread );      /* Error */  
     ```  
   
--   Die Adresse einer threadlokalen Variablen wird nicht als konstant angesehen und jeder Ausdruck mit einer solchen Adresse nicht als konstanter Ausdruck.  Dies bedeutet, dass Sie die Adresse einer threadlokalen Variablen nicht als Initialisierer für einen Zeiger verwenden können.  Folgender Code wird z. B. vom Compiler mit einem Fehlerflag versehen:  
+-   Die Adresse einer threadlokalen Variablen wird nicht als konstant angesehen und jeder Ausdruck mit einer solchen Adresse nicht als konstanter Ausdruck. Dies bedeutet, dass Sie die Adresse einer threadlokalen Variablen nicht als Initialisierer für einen Zeiger verwenden können. Folgender Code wird z. B. vom Compiler mit einem Fehlerflag versehen:  
   
     ```  
     #define Thread   __declspec( thread )  
@@ -84,7 +101,7 @@ __declspec( thread ) int tls_i = 1;
     int *p = &tls_i;      /* Error */  
     ```  
   
--   In C ist die Initialisierung einer Variablen mit einem Ausdruck zulässig, der einen Verweis auf sich selbst enthält. Dies gilt jedoch nur für Objekte, die keinen statischen Wertebereich aufweisen.  Zum Beispiel:  
+-   In C ist die Initialisierung einer Variablen mit einem Ausdruck zulässig, der einen Verweis auf sich selbst enthält. Dies gilt jedoch nur für Objekte, die keinen statischen Wertebereich aufweisen. Zum Beispiel:  
   
     ```  
     #define Thread   __declspec( thread )  
@@ -93,13 +110,13 @@ __declspec( thread ) int tls_i = 1;
     Thread int tls_i = sizeof( tls_i )    /* Okay  */  
     ```  
   
-     Beachten Sie, dass ein sizeof\-Ausdruck, der die Variable enthält, die derzeit initialisiert wird, keinen Verweis auf sich selbst darstellt und zulässig ist.  
+     Beachten Sie, dass ein sizeof-Ausdruck, der die Variable enthält, die derzeit initialisiert wird, keinen Verweis auf sich selbst darstellt und zulässig ist.  
   
--   Die Verwendung von **\_\_declspec\(thread\)** kann mit dem [verzögerten Laden](../build/reference/linker-support-for-delay-loaded-dlls.md) von DLL\-Importen in Konflikt treten**.**  
+-   Die Verwendung von **__declspec(thread)** kann beim [verzögerten Laden](../build/reference/linker-support-for-delay-loaded-dlls.md) von DLL-Importen zu Konflikten führen**.**  
   
- Weitere Informationen zur Verwendung des Threadattributs finden Sie unter [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
+ Weitere Informationen zur Verwendung des Threadattributs finden Sie unter [Multithreading-Themen](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
- **Ende Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [C\-Speicherklassenattribute \(erweitert\)](../c-language/c-extended-storage-class-attributes.md)
+## <a name="see-also"></a>Siehe auch  
+ [C-Speicherklassenattribute (erweitert)](../c-language/c-extended-storage-class-attributes.md)

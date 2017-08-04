@@ -1,33 +1,50 @@
 ---
-title: "Empfehlungen f&#252;r die Wahl zwischen Funktionen und Macros | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.functions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Funktionen [CRT], kontra Makros"
-  - "Makros, kontra Funktionen"
+title: "Empfehlungen für die Wahl zwischen Funktionen und Makros | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.functions
+dev_langs:
+- C++
+helpviewer_keywords:
+- functions [CRT], vs. macros
+- macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Empfehlungen f&#252;r die Wahl zwischen Funktionen und Macros
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 30b5a2c779e12dc16c37222f00ec45f296825498
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Die meisten Microsoft\-Laufzeitbibliotheksroutinen werden oder assemblierte Funktionen kompiliert, aber einige Routinen werden als Makros implementiert.  Wenn eine Headerdatei eine Funktion und eine Makroversion einer Routine deklariert, hat die Makrodefinition Vorrang, da diese immer nach der Funktionsdeklaration wird.  Wenn Sie eine Routine aufrufen, als die Funktion und Makro implementiert wird, können Sie den Compiler veranlasst, die Funktionsversion auf zwei Arten verwenden:  
+---
+# <a name="recommendations-for-choosing-between-functions-and-macros"></a>Empfehlungen für die Wahl zwischen Funktionen und Macros
+Die meisten Microsoft-Laufzeitbibliotheken-Routinen sind kompilierte oder assemblierte Funktionen, aber einige Routinen werden als Makros implementiert. Wenn eine Headerdatei sowohl die Funktions- als auch Makroversion einer Routine deklariert, hat die Makrodefinition Vorrang, da sie immer auf die Funktionsdeklaration folgt. Wenn Sie eine Routine aufrufen, die sowohl als Funktion als auch als Makro implementiert ist, können Sie den Compiler auf zwei Arten zwingen, die Funktionsversion zu verwenden:  
   
--   Schließen Sie den Routinenamen in Klammern ein.  
+-   Schließen Sie den Routinennamen in Klammern ein.  
   
     ```  
     #include <ctype.h>  
@@ -36,20 +53,20 @@ Die meisten Microsoft\-Laufzeitbibliotheksroutinen werden oder assemblierte Funk
                         // function version of toupper.  
     ```  
   
--   "Heben Sie" Makrodefinition mit den `#undef`\-Direktive die Definition:  
+-   Heben Sie die Makrodefinition mit der `#undef`-Richtlinie auf:  
   
     ```  
     #include <ctype.h>  
     #undef _toupper  
     ```  
   
- Wenn Sie zwischen einer Funktion und eine Makroimplementierung einer Bibliotheksroutine auswählen müssen, sollten folgende Kompromisse:  
+ Wenn Sie zwischen einer Funktions- und Makroimplementierung einer Bibliotheksroutine wählen müssen, sollten Sie die folgenden Vor- und Nachteile abwägen:  
   
--   **Speed versus size** Der Hauptvorteil der Anwendung von Makros ist schnelleren Ausführungszeit.  Während des Präprozessorlaufs wird ein \(Makro ersetzt durch ihre Definition\) inline erweitert, wenn sie verwendet wird.  Eine Funktionsdefinition tritt nur einmal und zwar unabhängig davon, wieoft sie aufgerufen wird.  Makros erhöhen möglicherweise Codegröße aber noch nicht den Aufwand, der mit Funktionsaufrufen zugeordnet ist.  
+-   **Geschwindigkeit im Vergleich zur Größe**: Der Hauptvorteil der Verwendung von Makros ist die schnellere Ausführung. Während der Vorverarbeitung wird ein Makro bei jeder Verwendung inline erweitert (durch seine Definition ersetzt). Eine Funktionsdefinition tritt nur einmal auf, unabhängig davon, wie oft sie aufgerufen wird. Makros können die Codegröße erhöhen, erfordern jedoch nicht den mit Funktionsaufrufen verbunden Mehraufwand.  
   
--   Funktion A **Function evaluation** ergibt eine Adresse aus; ein Makro jedoch nicht.  So können Sie einen Makronamen in Kontexten nicht verwenden, die einen Zeiger benötigen.  Beispielsweise können Sie einen Zeiger auf eine Funktion, jedoch kein Zeiger deklarieren einem Makro.  
+-   **Funktionsauswertung**: Eine Funktion wird als Adresse ausgewertet, ein Makro aber nicht. Sie können also keinen Makronamen in Kontexten verwenden, die einen Zeiger erfordern. Sie können z.B. einen Zeiger auf eine Funktion, aber keinen Zeiger auf ein Makro deklarieren.  
   
--   **Type\-checking**, wenn Sie eine Funktion deklariert, der Compiler kann die Argumenttypen überprüfen.  Da Sie ein Makro nicht deklarieren können, kann der Compiler Makroargumenttypen nicht untersuchen; obwohl die Argumentanzahl überprüfen kann, durchlaufen Sie einem Makro.  
+-   **Typüberprüfung**: Wenn Sie eine Funktion deklarieren, kann der Compiler die Argumenttypen überprüfen. Da Sie kein Makro deklarieren können, kann der Compiler die Makroargumenttypen nicht überprüfen; obwohl er die Anzahl von Argumenten überprüfen kann, die Sie einem Makro übergeben.  
   
-## Siehe auch  
- [CRT\-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md)
+## <a name="see-also"></a>Siehe auch  
+ [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md)

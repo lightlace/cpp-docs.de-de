@@ -1,50 +1,67 @@
 ---
-title: "Steuern von Streams | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Controlling Streams"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Steuern von Streams"
-  - "Streams"
-  - "Streams, Steuern"
+title: Steuern von Streams | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Controlling Streams
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, controlling
+- controlling streams
+- streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Steuern von Streams
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 4551a4a47e2fbfbb3fdc687103fbd3e4e6a47046
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-[fopen](../c-runtime-library/reference/fopen-wfopen.md) gibt die Adresse eines Objekts vom Typ `FILE` zurück.  Sie verwenden diese Adresse als das `stream`\-Argument zu einigen Bibliotheksfunktionen, um verschiedene Vorgänge in einer geöffneten Datei auszuführen.  Für einen Bytestrom gesamte Eingabe findet statt, als ob alle Zeichen gelesen wird, indem Sie [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) aufrufen, und ganz Ausgabe findet statt, als wäre jedes Zeichen geschrieben wird, indem Sie [fputc](../c-runtime-library/reference/fputc-fputwc.md) aufrufen.  Bei einem Breitzeichen Stream gesamte Eingabe findet statt, als ob alle Zeichen gelesen wird, indem Sie [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) aufrufen, und ganz Ausgabe findet statt, als wäre jedes Zeichen geschrieben wird, indem Sie [fputwc](../c-runtime-library/reference/fputc-fputwc.md) aufrufen.  
+---
+# <a name="controlling-streams"></a>Steuern von Streams
+[fopen](../c-runtime-library/reference/fopen-wfopen.md) gibt die Adresse eines Objekts vom Typ `FILE` zurück. Sie verwenden diese Adresse als `stream`-Argument für mehrere Bibliotheksfunktionen, um verschiedene Operationen für eine geöffnete Datei durchzuführen. Bei einem Bytestream erfolgen sämtliche Eingaben, als ob jedes Zeichen durch Aufrufen von [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) gelesen wird, während dies bei allen Ausgaben durch den Aufruf von [fputc](../c-runtime-library/reference/fputc-fputwc.md) erfolgt. Bei einem weiten Stream erfolgen sämtliche Eingaben, als ob jedes Zeichen durch Aufrufen von [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) gelesen wird, während dies bei allen Ausgaben durch den Aufruf von [fputwc](../c-runtime-library/reference/fputc-fputwc.md) erfolgt.  
   
- Sie können eine Datei schließen, indem Sie [fclose](../c-runtime-library/reference/fclose-fcloseall.md) aufrufen, nachdem ist `FILE` die Adresse des Objekts ungültig.  
+ Sie können eine Datei durch Aufrufen von [fclose](../c-runtime-library/reference/fclose-fcloseall.md) schließen. Danach ist die Adresse des `FILE`-Objekts ungültig.  
   
- Ein `FILE`\-Objekt speichert den Zustand eines Streams und enthält:  
+ Ein `FILE`-Objekt speichert den Status eines Streams wie Folgendes:  
   
--   Ein festgelegter Wert ungleich 0 \(null\) des Fehlerindikators durch eine Funktion, die ein Lese\- bzw. ein Schreibfehler trifft.  
+-   Ein Fehlerindikator, der von einer Funktion auf ungleich Null festgelegt ist und einen Lese- oder Schreibfehler findet.  
   
--   Ein festgelegter Wert ungleich 0 \(null\) des Dateiende\-Indikators durch eine Funktion, die das Ende der Datei beim Lesen trifft.  
+-   Ein Indikator für das Dateiende, der von einer Funktion auf ungleich Null festgelegt ist und beim Lesen das Ende der Datei erreicht hat.  
   
--   Ein Stellungsanzeiger gibt die folgenden Bytes im Stream an, um zu lesen oder zu schreiben, wenn die Datei das Positionieren von Anforderungen unterstützen kann.  
+-   Ein Dateipositionszeiger, der das nächste Byte in dem zu lesenden oder schreibenden Stream angibt, sofern die Datei Positionierungsanforderungen unterstützt.  
   
--   [Streamzustand](../c-runtime-library/stream-states.md) gibt an, ob der Stream liest oder schreibt akzeptiert und ob der Stream ungebunden ist, byteorientiert oder weiter ausgerichtet.  
+-   Ein [Streamstatus](../c-runtime-library/stream-states.md) gibt an, ob der Stream Lese- und/oder Schreibvorgänge akzeptiert und ob der Stream ungebunden, byteorientiert oder weit ausgerichtet ist.  
   
--   Ein Konvertierungszustand speichert den Zustand des assemblierten oder generierte generalisierten Mehrbytezeichens alle teilweise sowie an jeden Schichtzustand für die die Bytesequenz in der Datei\).  
+-   Ein Konvertierungsstatus speichert den Status von teilweise assemblierten oder generierten Multibytezeichen sowie den Umschaltzuständen für die Bytesequenz in der Datei.  
   
--   Ein Dateipuffer gibt die Adresse und der Größe eines Arrayobjekts an, das Bibliotheksfunktionen verwenden können, um die Ausführungsleistung von Lese\- und Schreibvorgänge in den Stream zu verbessern.  
+-   Ein Dateipuffer gibt die Adresse und die Größe eines Arrayobjekts an, die Bibliotheksfunktionen zur Verbesserung der Leistung von Lese- und Schreibvorgängen in den Stream nutzen können.  
   
- Ändern Sie keinen Wert, der in einem `FILE`\-Objekt oder einem Dateipuffer gespeichert wird, den Sie für dieses Objekt angeben.  Sie können ein `FILE`\-Objekt sowie die Adresse der Kopie nicht als Argument portably `stream` verwenden zu einer Bibliotheksfunktion kopieren.  
+ Ändern Sie keine in einem `FILE`-Objekt oder in einem Dateipuffer gespeicherten Werte, das bzw. den Sie für die Verwendung mit diesem Objekt angeben. Sie können ein `FILE`-Objekt nicht kopieren und die Adresse der Kopie nicht als `stream`-Argument in eine Bibliotheksfunktion kopieren.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dateien und Streams](../c-runtime-library/files-and-streams.md)

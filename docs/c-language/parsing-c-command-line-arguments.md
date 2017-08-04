@@ -1,60 +1,77 @@
 ---
-title: "Analysieren von C-Befehlszeilenargumenten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Befehlszeile, Analysieren"
-  - "Doppelte Anführungszeichen"
-  - "Analysieren, Befehlszeilenargumente"
-  - "Anführungszeichen, Befehlszeilenargumente"
-  - "Startcode, Analysieren von Befehlszeilenargumenten"
+title: Analysieren von C++-Befehlszeilenargumenten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- quotation marks, command-line arguments
+- double quotation marks
+- command line, parsing
+- parsing, command-line arguments
+- startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Analysieren von C-Befehlszeilenargumenten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 66f9ab28bfec3fe0cfd9d29d60a0ee7ac283591a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="parsing-c-command-line-arguments"></a>Analysieren von C-Befehlszeilenargumenten
+**Microsoft-spezifisch**  
   
- Beim Interpretieren von Argumenten, die in der Befehlszeile des Betriebssystems angegeben werden, verwendet der Microsoft C\-Startcode die folgenden Regeln:  
+ Beim Interpretieren von Argumenten, die in der Befehlszeile des Betriebssystems angegeben werden, verwendet der Microsoft C-Startcode die folgenden Regeln:  
   
--   Argumente werden durch einen Leerraum \(Leerzeichen oder Tabstopp\) abgegrenzt.  
+-   Argumente werden durch einen Leerraum (Leerzeichen oder Tabstopp) abgegrenzt.  
   
--   Eine in doppelte Anführungszeichen eingeschlossene Zeichenfolge wird als einzelnes Argument interpretiert, auch wenn darin Leerzeichen enthalten sind.  Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein.  Beachten Sie, dass die Einfügemarke \(**^**\) nicht als Escape\- oder Trennzeichen erkannt wird.  
+-   Eine in doppelte Anführungszeichen eingeschlossene Zeichenfolge wird als einzelnes Argument interpretiert, auch wenn darin Leerzeichen enthalten sind. Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein. Beachten Sie, dass die Einfügemarke (**^**) nicht als Escape- oder Trennzeichen erkannt wird.  
   
--   Wenn dem Anführungszeichen ein umgekehrter Schrägstrich vorangestellt wird \(**\\"**\), wird diese Zeichenfolge als literales Anführungszeichen \(**"**\) interpretiert.  
+-   Wenn dem doppelten Anführungszeichen ein umgekehrter Schrägstrich vorangestellt wird **\\"**, wird diese Zeichenfolge als literales doppeltes Anführungszeichen (**"**) interpretiert.  
   
 -   Ein umgekehrter Schrägstrich wird als solcher interpretiert, sofern er nicht unmittelbar vor einem Anführungszeichen steht.  
   
--   Wenn ein doppeltes Anführungszeichen auf eine gerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche \(**\\\\**\) ein umgekehrter Schrägstrich \(**\\**\) im `argv`\-Array platziert. Das doppelte Anführungszeichen \(**"**\) wird als Zeichenfolgentrennzeichen interpretiert.  
+-   Wenn ein doppeltes Anführungszeichen auf eine gerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche (**\\\\**) ein umgekehrter Schrägstrich (**\\**) im `argv`-Array platziert. Das doppelte Anführungszeichen (**"**) wird als Zeichenfolgentrennzeichen interpretiert.  
   
--   Wenn ein doppeltes Anführungszeichen auf eine ungerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche \(**\\\\**\) ein umgekehrter Schrägstrich \(**\\**\) im `argv`\-Array platziert. Das doppelte Anführungszeichen wird vom verbleibenden umgekehrten Schrägstrich als Escapezeichen interpretiert, sodass ein literales Anführungszeichen \(**"**\) in `argv` platziert wird.  
+-   Wenn ein doppeltes Anführungszeichen auf eine ungerade Anzahl umgekehrter Schrägstriche folgt, wird für jedes Paar umgekehrter Schrägstriche (**\\\\**) ein umgekehrter Schrägstrich (**\\**) im `argv`-Array platziert. Das doppelte Anführungszeichen wird vom verbleibenden umgekehrten Schrägstrich als Escapezeichen interpretiert, sodass ein literales doppeltes Anführungszeichen (**"**) in `argv` platziert wird.  
   
- Diese Liste veranschaulicht die zuvor genannten Regeln anhand der an `argv` übergebenen interpretierten Ergebnisse für einige beispielhafte Befehlszeilenargumente.  Die Ausgabe in der zweiten, dritten und vierten Spalte stammt aus dem ARGS.C\-Programm, das auf die Liste folgt.  
+ Diese Liste veranschaulicht die zuvor genannten Regeln anhand der an `argv` übergebenen interpretierten Ergebnisse für einige beispielhafte Befehlszeilenargumente. Die Ausgabe in der zweiten, dritten und vierten Spalte stammt aus dem ARGS.C-Programm, das auf die Liste folgt.  
   
-|Befehlszeileneingabe|argv\[1\]|argv\[2\]|argv\[3\]|  
-|--------------------------|---------------|---------------|---------------|  
+|Befehlszeileneingabe|argv[1]|argv[2]|argv[3]|  
+|-------------------------|---------------|---------------|---------------|  
 |`"a b c" d e`|`a b c`|`d`|`e`|  
 |`"ab\"c" "\\" d`|`ab"c`|`\`|`d`|  
 |`a\\\b d"e f"g h`|`a\\\b`|`de fg`|`h`|  
 |`a\\\"b c d`|`a\"b`|`c`|`d`|  
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // Parsing_C_Commandline_args.c  
@@ -85,7 +102,7 @@ int main( int argc, // Number of strings in array argv
 }  
 ```  
   
-## Kommentare  
+## <a name="comments"></a>Kommentare  
  Ein Beispiel für die Ausgabe dieses Programms ist:  
   
 ```  
@@ -103,7 +120,7 @@ Environment variables:
   WINDIR=c:\nt        
 ```  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [main\-Funktion und Programmausführung](../c-language/main-function-and-program-execution.md)
+## <a name="see-also"></a>Siehe auch  
+ [main-Funktion und Programmausführung](../c-language/main-function-and-program-execution.md)

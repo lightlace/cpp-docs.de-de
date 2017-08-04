@@ -1,55 +1,72 @@
 ---
-title: "Initialisierung von Aggregattypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Aggregattypen [C++]"
-  - "Aggregate [C++], Initialisieren"
-  - "Typen [C], Initialisieren"
-  - "union-Schlüsselwort [C]"
-  - "union-Schlüsselwort [C], Deklarationen"
+title: Initialisierung von Aggregattypen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- aggregate types [C++]
+- union keyword [C], declarations
+- types [C], initializing
+- union keyword [C]
+- aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Initialisierung von Aggregattypen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 819c7b2ebce439ae9d753dd24cc3fd8df8c3d85e
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Ein "aggregierter" Typ ist eine Struktur, eine Union oder ein Arraytyp.  Wenn ein aggregierter Typ Member von aggregierten Typen enthält, werden die Initialisierungsregeln rekursiv angewendet.  
+---
+# <a name="initializing-aggregate-types"></a>Initialisierung von Aggregattypen
+Ein "aggregierter" Typ ist eine Struktur, eine Union oder ein Arraytyp. Wenn ein aggregierter Typ Member von aggregierten Typen enthält, werden die Initialisierungsregeln rekursiv angewendet.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
  *initializer*:  
- **{**  *initializer\-list*  **}** \/\* Für Aggregatinitialisierung \*\/  
+ **{**  *initializer-list*  **}** /* Für Aggregatinitialisierung \*/  
   
- **{**  *initializer\-list*  **, }**  
+ **{**  *initializer-list*  **, }**  
   
- *initializer\-list*:  
- *Initialisierer*  
+ *initializer-list*:  
+ *initializer*  
   
- *initializer\-list*  **,**  *initializer*  
+ *initializer-list*  **,**  *initializer*  
   
- Die *initializer\-list* ist eine Liste von durch Trennzeichen getrennten Initialisierungen.  Jeder Initialisierer in der Liste ist entweder ein konstanter Ausdruck oder eine Initialisiererliste.  Daher können Initialisierungslisten geschachtelt sein.  Diese Form dient zur Initialisierung aggregierter Member eines aggregierten Typs, wie in den Beispielen in diesem Abschnitt gezeigt.  Wenn der Initialisierer für einen automatischen Bezeichner jedoch ein einzelner Ausdruck ist, muss er kein konstanter Ausdruck sein. Er muss lediglich einen geeigneten Typ für die Zuweisung zum Bezeichner aufweisen.  
+ Die *initializer-list* ist eine Liste von durch Trennzeichen getrennten Initialisierungen. Jeder Initialisierer in der Liste ist entweder ein konstanter Ausdruck oder eine Initialisiererliste. Daher können Initialisierungslisten geschachtelt sein. Diese Form dient zur Initialisierung aggregierter Member eines aggregierten Typs, wie in den Beispielen in diesem Abschnitt gezeigt. Wenn der Initialisierer für einen automatischen Bezeichner jedoch ein einzelner Ausdruck ist, muss er kein konstanter Ausdruck sein. Er muss lediglich einen geeigneten Typ für die Zuweisung zum Bezeichner aufweisen.  
   
  Für jede Initialisiererliste werden den entsprechenden Membern der aggregierten Variable die Werte der konstanten Ausdrücke in der jeweiligen Reihenfolge zugewiesen.  
   
- Wenn *initializer\-list* über weniger Werte als ein aggregierter Typ verfügt, werden die verbleibenden Member oder Elemente des aggregierten Typs auf 0 initialisiert.  Der Anfangswert eines automatischen Bezeichners, der nicht explizit initialisiert wird, ist nicht definiert.  Wenn *initializer\-list* mehr Werte als ein aggregierter Typ aufweist, wird ein Fehler ausgegeben.  Diese Regeln gelten für jede eingebettete Initialisiererliste sowie für das Aggregat als Ganzes.  
+ Wenn *initializer-list* über weniger Werte als ein aggregierter Typ verfügt, werden die verbleibenden Member oder Elemente des aggregierten Typs auf 0 (null) initialisiert. Der Anfangswert eines automatischen Bezeichners, der nicht explizit initialisiert wird, ist nicht definiert. Wenn *initializer-list* mehr Werte als ein aggregierter Typ aufweist, wird ein Fehler ausgegeben. Diese Regeln gelten für jede eingebettete Initialisiererliste sowie für das Aggregat als Ganzes.  
   
- Der Initialisierer einer Struktur ist entweder ein Ausdruck vom gleichen Typ oder eine Liste mit Initialisierern für seine Member, die in geschweifte Klammern \(**{ }**\) stehen.  Unbenannte Bitfeldmember werden nicht initialisiert.  
+ Der Initialisierer einer Struktur ist entweder ein Ausdruck vom gleichen Typ oder eine Liste mit Initialisierern für seine Member, die in geschweifte Klammern (**{ }**) stehen. Unbenannte Bitfeldmember werden nicht initialisiert.  
   
- Wenn eine Union initialisiert wird, muss *initializer\-list* ein einzelner konstanter Ausdruck sein.  Der Wert des konstanten Ausdrucks wird dem ersten Member der Union zugewiesen.  
+ Wenn eine Union initialisiert wird, muss *initializer-list* ein einzelner konstanter Ausdruck sein. Der Wert des konstanten Ausdrucks wird dem ersten Member der Union zugewiesen.  
   
- Wenn ein Array eine unbekannte Größe hat, bestimmt die Anzahl der Initialisierer die Größe des Arrays, und sein Typ wird vollständig.  Es gibt keine Möglichkeit, die Wiederholung eines Initialisierers in C anzugeben bzw. ein Element in der Mitte eines Arrays zu initialisieren, ohne alle vorangehenden Werte ebenfalls bereitzustellen.  Wenn Sie diesen Vorgang im Programm benötigen, schreiben Sie die Routine in der Assemblysprache.  
+ Wenn ein Array eine unbekannte Größe hat, bestimmt die Anzahl der Initialisierer die Größe des Arrays, und sein Typ wird vollständig. Es gibt keine Möglichkeit, die Wiederholung eines Initialisierers in C anzugeben bzw. ein Element in der Mitte eines Arrays zu initialisieren, ohne alle vorangehenden Werte ebenfalls bereitzustellen. Wenn Sie diesen Vorgang im Programm benötigen, schreiben Sie die Routine in der Assemblysprache.  
   
  Beachten Sie, dass die Anzahl von Initialisierern die Arraygröße festlegen kann:  
   
@@ -59,13 +76,13 @@ int x[ ] = { 0, 1, 2 }
   
  Wenn Sie die Größe festlegen und die falsche Anzahl von Initialisierern angeben, generiert der Compiler jedoch einen Fehler.  
   
- **Microsoft\-spezifisch**  
+ **Microsoft-spezifisch**  
   
- Die maximale Größe für ein Array wird durch **size\_t** definiert.  **size\_t** ist in der Headerdatei STDDEF.H definiert und ein `unsigned int` mit dem Bereich 0x00000000 bis 0x7CFFFFFF.  
+ Die maximale Größe für ein Array wird durch **size_t** definiert. **size_t** ist in der Headerdatei STDDEF.H definiert und ein `unsigned int` mit dem Bereich 0x00000000 bis 0x7CFFFFFF.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Dieses Beispiel zeigt Initialisierer für ein Array an.  
   
 ```  
@@ -78,9 +95,9 @@ int P[4][3] =
 };  
 ```  
   
- Diese Anweisung deklariert `P` als 4\-mal\-3\-Array und initialisiert die Elemente der ersten Zeile auf 1, die Elemente der zweiten Zeile auf 2 usw. bis zur vierten Zeile.  Beachten Sie, dass die Initialisiererliste für die dritte und vierte Zeile nach dem letzten konstanten Ausdruck Kommas enthält.  Der letzten Initialisiererliste \(`{4, 4, 4,},`\) folgt ebenfalls ein Komma.  Diese zusätzlichen Kommas sind zulässig, jedoch nicht erforderlich. Nur die Kommas, die konstante Ausdrücke voneinander trennen und diejenigen, die separate Initialisiererlisten voneinander trennen, sind erforderlich.  
+ Diese Anweisung deklariert `P` als 4-mal-3-Array und initialisiert die Elemente der ersten Zeile auf 1, die Elemente der zweiten Zeile auf 2 usw. bis zur vierten Zeile. Beachten Sie, dass die Initialisiererliste für die dritte und vierte Zeile nach dem letzten konstanten Ausdruck Kommas enthält. Der letzten Initialisiererliste (`{4, 4, 4,},`) folgt ebenfalls ein Komma. Diese zusätzlichen Kommas sind zulässig, jedoch nicht erforderlich. Nur die Kommas, die konstante Ausdrücke voneinander trennen und diejenigen, die separate Initialisiererlisten voneinander trennen, sind erforderlich.  
   
- Wenn ein aggregierter Member keine eingebettete Initialisiererliste aufweist, werden einfach jedem Member des Unteraggregats Werte in der jeweiligen Reihenfolge zugewiesen.  Daher entspricht die Initialisierung im vorherigen Beispiel Folgendem:  
+ Wenn ein aggregierter Member keine eingebettete Initialisiererliste aufweist, werden einfach jedem Member des Unteraggregats Werte in der jeweiligen Reihenfolge zugewiesen. Daher entspricht die Initialisierung im vorherigen Beispiel Folgendem:  
   
 ```  
 int P[4][3] =   
@@ -91,7 +108,7 @@ int P[4][3] =
   
  Geschweifte Klammern können auch um einzelne Initialisierer in der Liste stehen und würden helfen, das obenstehende Beispiel zu verdeutlichen.  
   
- Wenn Sie eine aggregierte Variable initialisieren, müssen Sie darauf achten, geschweifte Klammern und Initialisiererlisten ordnungsgemäß zu verwenden.  Das folgende Beispiel veranschaulicht ausführlicher, wie der Compiler geschweifte Klammern interpretiert:  
+ Wenn Sie eine aggregierte Variable initialisieren, müssen Sie darauf achten, geschweifte Klammern und Initialisiererlisten ordnungsgemäß zu verwenden. Das folgende Beispiel veranschaulicht ausführlicher, wie der Compiler geschweifte Klammern interpretiert:  
   
 ```  
 typedef struct   
@@ -106,17 +123,17 @@ triplet nlist[2][3] =
 };  
 ```  
   
- In diesem Beispiel wird `nlist` als ein 2\-mal\-3\-Array von Strukturen deklariert, wobei jede Struktur über drei Member verfügt.  Zeile 1 der Initialisierung weist Werte zur ersten Zeile von `nlist` zu, und zwar wie folgt:  
+ In diesem Beispiel wird `nlist` als ein 2-mal-3-Array von Strukturen deklariert, wobei jede Struktur über drei Member verfügt. Zeile 1 der Initialisierung weist Werte zur ersten Zeile von `nlist` zu, und zwar wie folgt:  
   
-1.  Die erste linke geschweifte Klammer in Zeile 1 signalisiert dem Compiler, dass die Initialisierung des ersten aggregierten Members von `nlist` \(also `nlist[0]`\) beginnt.  
+1.  Die erste linke geschweifte Klammer in Zeile 1 signalisiert dem Compiler, dass die Initialisierung des ersten aggregierten Members von `nlist` (also `nlist[0]`) beginnt.  
   
-2.  Die zweite linke geschweifte Klammer gibt an, dass die Initialisierung des ersten aggregierten Members von `nlist[0]` \(also die Struktur unter `nlist[0][0]`\) beginnt.  
+2.  Die zweite linke geschweifte Klammer gibt an, dass die Initialisierung des ersten aggregierten Members von `nlist[0]` (also die Struktur unter `nlist[0][0]`) beginnt.  
   
 3.  Die erste rechte geschweifte Klammer beendet die Initialisierung der Struktur `nlist[0][0]`. Die folgende linke geschweifte Klammer leitet die Initialisierung von `nlist[0][1]` ein.  
   
 4.  Der Prozess wird bis zum Ende der Zeile fortgesetzt, in der die schließende rechte geschweifte Klammer die Initialisierung von `nlist[0]` beendet.  
   
- Zeile 2 weist auf ähnliche Weise Werte zur zweiten Zeile von `nlist` zu.  Beachten Sie, dass die äußeren Gruppen von geschweiften Klammern, welche die Initialisierer in den Zeilen 1 und 2 enthalten, erforderlich sind.  Die folgende Konstruktion, in der die äußeren Klammern weggelassen sind, würde einen Fehler verursachen:  
+ Zeile 2 weist auf ähnliche Weise Werte zur zweiten Zeile von `nlist` zu. Beachten Sie, dass die äußeren Gruppen von geschweiften Klammern, welche die Initialisierer in den Zeilen 1 und 2 enthalten, erforderlich sind. Die folgende Konstruktion, in der die äußeren Klammern weggelassen sind, würde einen Fehler verursachen:  
   
 ```  
 triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */  
@@ -126,9 +143,9 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 };  
 ```  
   
- In dieser Konstruktion beginnt die erste linke geschweifte Klammer in Zeile 1 die Initialisierung von `nlist[0]`, einem Array mit drei Strukturen.  Die Werte 1, 2 und 3 werden den drei Membern der ersten Struktur zugewiesen.  Wenn die folgende rechte geschweifte Klammer gefunden wird \(nach dem Wert 3\), ist die Initialisierung von `nlist[0]` abgeschlossen und die beiden verbleibenden Strukturen im Dreistrukturarray werden automatisch auf 0 initialisiert.  Entsprechend initialisiert `{ 4,5,6 }` die erste Struktur in der zweiten Zeile von `nlist`.  Die verbleibenden beiden Strukturen von `nlist[1]` werden auf 0 festgelegt.  Wenn der Compiler auf die folgende Initialisiererliste \(`{ 7,8,9 }` \) trifft, wird versucht, `nlist[2]` zu initialisieren.  Da `nlist` nur über zwei Zeilen verfügt, verursacht dieser Versuch einen Fehler.  
+ In dieser Konstruktion beginnt die erste linke geschweifte Klammer in Zeile 1 die Initialisierung von `nlist[0]`, einem Array mit drei Strukturen. Die Werte 1, 2 und 3 werden den drei Membern der ersten Struktur zugewiesen. Wenn die folgende rechte geschweifte Klammer gefunden wird (nach dem Wert 3), ist die Initialisierung von `nlist[0]` abgeschlossen und die beiden verbleibenden Strukturen im Dreistrukturarray werden automatisch auf 0 initialisiert. Entsprechend initialisiert `{ 4,5,6 }` die erste Struktur in der zweiten Zeile von `nlist`. Die verbleibenden beiden Strukturen von `nlist[1]` werden auf 0 festgelegt. Wenn der Compiler auf die folgende Initialisiererliste (`{ 7,8,9 }`) trifft, wird versucht, `nlist[2]` zu initialisieren. Da `nlist` nur über zwei Zeilen verfügt, verursacht dieser Versuch einen Fehler.  
   
- In diesem Beispiel werden die folgenden drei `int`\-Member von `x` auf 1, 2 bzw. 3 initialisiert.  
+ In diesem Beispiel werden die folgenden drei `int`-Member von `x` auf 1, 2 bzw. 3 initialisiert.  
   
 ```  
 struct list   
@@ -157,7 +174,7 @@ union
       };  
 ```  
   
- Die Unionvariable, in diesem Beispiel `y`, wird initialisiert.  Das erste Element der Union ist ein Array, sodass der Initialisierer ein aggregierter Initialisierer ist.  Die Initialisiererliste `{'1'}` weist Werte zur ersten Zeile des Arrays zu.  Da nur ein Wert in der Liste angezeigt wird, wird das Element in der ersten Spalte auf das Zeichen `1` initialisiert, und die übrigen zwei Elemente in der Zeile werden standardmäßig auf den Wert 0 initialisiert.  Entsprechend wird das erste Element der zweiten Zeile von `x` auf das Zeichen `4` initialisiert, und die übrigen zwei Elemente in der Zeile werden auf den Wert 0 initialisiert.  
+ Die Unionvariable, in diesem Beispiel `y`, wird initialisiert. Das erste Element der Union ist ein Array, sodass der Initialisierer ein aggregierter Initialisierer ist. Die Initialisiererliste `{'1'}` weist der ersten Zeile des Arrays Werte zu. Da nur ein Wert in der Liste angezeigt wird, wird das Element in der ersten Spalte auf das Zeichen `1` initialisiert, und die übrigen zwei Elemente in der Zeile werden standardmäßig auf den Wert 0 initialisiert. Entsprechend wird das erste Element der zweiten Zeile von `x` auf das Zeichen `4` initialisiert, und die übrigen zwei Elemente in der Zeile werden auf den Wert 0 initialisiert.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Initialisierung](../c-language/initialization.md)

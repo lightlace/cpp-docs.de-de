@@ -1,66 +1,83 @@
 ---
-title: "_nolock Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_nolock-Funktionen"
-  - "nolock-Funktionen"
+title: _nolock-Funktionen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- _nolock functions
+- nolock functions
 ms.assetid: 7d651d87-38d2-4303-9897-fdb5f7a3e899
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# _nolock Functions
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b1a3e559bd3060bd29b62b07c7b47cd17ea5d3c0
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Dies sind Funktionen, die keine Sperre ausführen.  Sie werden für Benutzer bereitgestellt, die Höchstleistung benötigen.  Weitere Informationen finden Sie unter [Leistung von Multithreadbibliotheken](../c-runtime-library/multithreaded-libraries-performance.md).  
+---
+# <a name="nolock-functions"></a>_nolock Functions
+Diese Funktionen führen keine Sperrungen durch. Sie sind für Benutzer bestimmt, die maximale Leistung fordern. Weitere Informationen siehe [Leistung von Multithreadbibliotheken](../c-runtime-library/multithreaded-libraries-performance.md).  
   
- Verwenden Sie \_nolock Funktionen nur, wenn das Programm tatsächlich singlethreaded ist, oder wenn es eine eigene Sperre erreichen.  
+ Verwenden Sie _nolock-Funktionen nur, wenn Ihr Programm tatsächlich ein Singlethread-Programm ist, oder wenn es seine eigene Sperrung durchführt.  
   
- [\_fclose\_nolock](../c-runtime-library/reference/fclose-nolock.md)  
+ [_fclose_nolock](../c-runtime-library/reference/fclose-nolock.md)  
   
- [\_fflush\_nolock](../c-runtime-library/reference/fflush-nolock.md)  
+ [_fflush_nolock](../c-runtime-library/reference/fflush-nolock.md)  
   
- [\_fgetc\_nolock, \_fgetwc\_nolock](../c-runtime-library/reference/fgetc-nolock-fgetwc-nolock.md)  
+ [_fgetc_nolock, _fgetwc_nolock](../c-runtime-library/reference/fgetc-nolock-fgetwc-nolock.md)  
   
- [\_fread\_nolock](../c-runtime-library/reference/fread-nolock.md)  
+ [_fread_nolock](../c-runtime-library/reference/fread-nolock.md)  
   
- [\_fseek\_nolock, \_fseeki64\_nolock](../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md)  
+ [_fseek_nolock, _fseeki64_nolock](../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md)  
   
- [\_ftell\_nolock, \_ftelli64\_nolock](../c-runtime-library/reference/ftell-nolock-ftelli64-nolock.md)  
+ [_ftell_nolock, _ftelli64_nolock](../c-runtime-library/reference/ftell-nolock-ftelli64-nolock.md)  
   
- [\_fwrite\_nolock](../c-runtime-library/reference/fwrite-nolock.md)  
+ [_fwrite_nolock](../c-runtime-library/reference/fwrite-nolock.md)  
   
- [\_getc\_nolock, \_getwc\_nolock](../c-runtime-library/reference/getc-nolock-getwc-nolock.md)  
+ [_getc_nolock, _getwc_nolock](../c-runtime-library/reference/getc-nolock-getwc-nolock.md)  
   
- [\_getch\_nolock, \_getwch\_nolock](../c-runtime-library/reference/getch-nolock-getwch-nolock.md)  
+ [_getch_nolock, _getwch_nolock](../c-runtime-library/reference/getch-nolock-getwch-nolock.md)  
   
- [\_getchar\_nolock, \_getwchar\_nolock](../c-runtime-library/reference/getchar-nolock-getwchar-nolock.md)  
+ [_getchar_nolock, _getwchar_nolock](../c-runtime-library/reference/getchar-nolock-getwchar-nolock.md)  
   
- [\_getche\_nolock, \_getwche\_nolock](../c-runtime-library/reference/getche-nolock-getwche-nolock.md)  
+ [_getche_nolock, _getwche_nolock](../c-runtime-library/reference/getche-nolock-getwche-nolock.md)  
   
- [\_getdcwd\_nolock, \_wgetdcwd\_nolock](../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md)  
+ [_getdcwd_nolock, _wgetdcwd_nolock](../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md)  
   
- [\_putc\_nolock, \_putwc\_nolock](../c-runtime-library/reference/putc-nolock-putwc-nolock.md)  
+ [_putc_nolock, _putwc_nolock](../c-runtime-library/reference/putc-nolock-putwc-nolock.md)  
   
- [\_putch\_nolock, \_putwch\_nolock](../c-runtime-library/reference/putch-nolock-putwch-nolock.md)  
+ [_putch_nolock, _putwch_nolock](../c-runtime-library/reference/putch-nolock-putwch-nolock.md)  
   
- [\_putchar\_nolock, \_putwchar\_nolock](../c-runtime-library/reference/putchar-nolock-putwchar-nolock.md)  
+ [_putchar_nolock, _putwchar_nolock](../c-runtime-library/reference/putchar-nolock-putwchar-nolock.md)  
   
- [\_ungetc\_nolock, \_ungetwc\_nolock](../c-runtime-library/reference/ungetc-nolock-ungetwc-nolock.md)  
+ [_ungetc_nolock, _ungetwc_nolock](../c-runtime-library/reference/ungetc-nolock-ungetwc-nolock.md)  
   
- [\_ungetch\_nolock, \_ungetwch\_nolock](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)  
+ [_ungetch_nolock, _ungetwch_nolock](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Eingabe und Ausgabe](../c-runtime-library/input-and-output.md)   
  [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)

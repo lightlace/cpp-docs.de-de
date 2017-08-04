@@ -1,35 +1,52 @@
 ---
-title: "Speicherung von Zeichenfolgenliteralen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zeichenfolgenliterale, Speicher"
+title: Speicherung von Zeichenfolgenliteralen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- string literals, storage
 ms.assetid: ba5e4d2c-d456-44b3-a8ca-354af547ac50
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Speicherung von Zeichenfolgenliteralen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 8ee698c1db706c45b1b283a33ec95c135907e031
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Die Zeichen einer Literalzeichenfolge werden in Reihenfolge an zusammenhängenden Speicherorten gespeichert.  Eine Escapesequenz \(wie z. B. **\\\\** oder **\\"**\) innerhalb eines Zeichenfolgenliterals zählt als einzelnes Zeichen.  Ein NULL\-Zeichen \(dargestellt durch die Escapesequenz **\\0**\) wird automatisch angefügt und markiert das Ende eines Zeichenfolgenliterals. \(Dies tritt während [Übersetzungsphase](../preprocessor/phases-of-translation.md) 7\) auf. Beachten Sie, dass der Compiler zwei identische Zeichenfolgen nicht an zwei verschiedenen Adressen speichert.  [\/GF](../build/reference/gf-eliminate-duplicate-strings.md) erzwingt, dass der Compiler eine einzige Kopie von identischen Zeichenfolgen in die ausführbare Datei einfügt.  
+---
+# <a name="storage-of-string-literals"></a>Speicherung von Zeichenfolgenliteralen
+Die Zeichen einer Literalzeichenfolge werden in Reihenfolge an zusammenhängenden Speicherorten gespeichert. Eine Escapesequenz (wie z.B. **\\\\** oder **\\"**) innerhalb eines Zeichenfolgenliterals zählt als einzelnes Zeichen. Ein NULL-Zeichen (dargestellt durch die Escapesequenz **\0**) wird automatisch angefügt und markiert das Ende eines Zeichenfolgenliterals. (Dies geschieht bei [Übersetzungsphase](../preprocessor/phases-of-translation.md) 7.) Beachten Sie, dass der Compiler zwei identische Zeichenfolgen möglicherweise nicht an zwei verschiedenen Adressen speichert. [/GF](../build/reference/gf-eliminate-duplicate-strings.md) erzwingt, dass der Compiler eine einzige Kopie von identischen Zeichenfolgen in die ausführbare Datei einfügt.  
   
-## Hinweise  
- **Microsoft\-spezifisch**  
+## <a name="remarks"></a>Hinweise  
+ **Microsoft-spezifisch**  
   
- Zeichenfolgen haben eine statische Speicherdauer.  Weitere Informationen über die Speicherdauer finden Sie unter [Speicherklassen](../c-language/c-storage-classes.md).  
+ Zeichenfolgen haben eine statische Speicherdauer. Weitere Informationen über die Speicherdauer finden Sie unter [Speicherklassen](../c-language/c-storage-classes.md).  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [C\-Zeichenfolgenliterale](../c-language/c-string-literals.md)
+## <a name="see-also"></a>Siehe auch  
+ [C-Zeichenfolgenliterale](../c-language/c-string-literals.md)

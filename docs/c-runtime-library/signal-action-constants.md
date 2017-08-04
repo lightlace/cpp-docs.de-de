@@ -1,58 +1,75 @@
 ---
-title: "Signalaktionskonstanten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SIG_IGN"
-  - "SIG_DFL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SIG_DFL-Konstante"
-  - "SIG_IGN-Konstante"
-  - "Signalaktionskonstante"
+title: Signalaktionskonstanten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SIG_IGN
+- SIG_DFL
+dev_langs:
+- C++
+helpviewer_keywords:
+- signal action constants
+- SIG_IGN constant
+- SIG_DFL constant
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Signalaktionskonstanten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: f316218673d83187f29934ebd75a838b31005912
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Die Aktion, wenn das Unterbrechungssignal empfangen wird, hängt vom Wert von `func` ab.  
+---
+# <a name="signal-action-constants"></a>Signalaktionskonstanten
+Die Aktion, die unabhängig des Werts von `func` ausgeführt wird, wenn das Interruptsignal empfangen wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <signal.h>  
 ```  
   
-## Hinweise  
- Das `func`\-Argument muss entweder einer Funktionsadresse oder eine der Manifestkonstanten sein, unten aufgeführten werden und in SIGNAL.H. definiert sind.  
+## <a name="remarks"></a>Hinweise  
+ Das `func`-Argument muss entweder eine Funktionsadresse oder eine der unten aufgelisteten und in SIGNAL.H definierten Manifestkonstanten sein.  
   
  `SIG_DFL`  
- Verwendungssystemstandardantwort.  Wenn die aufrufende Programm\-Verwendung E\/A streamt, werden die Puffer, die durch die Laufzeitbibliothek erstellt werden, nicht entfernt.  
+ Systemstandardantwort wird verwendet. Wenn das aufrufende Programm Datenstrom-E/A verwendet, werden von der Laufzeitbibliothek erstellte Puffer nicht geleert.  
   
  `SIG_IGN`  
- Ignoriert Unterbrechungssignal.  Dieser Wert sollte nie für `SIGFPE` angegeben werden, da der Gleitkommazustand des Prozesses nicht definiert verursacht werden.  
+ Ignoriert das Interruptsignal. Dieser Wert sollte nie `SIGFPE` zugewiesen werden, da der Gleitkommazustand des Prozesses undefiniert bleibt.  
   
  `SIG_SGE`  
- Gibt einen Fehler auftrat im Signal an.  
+ Zeigt an, dass ein Fehler in dem Signal aufgetreten ist.  
   
  `SIG_ACK`  
- Gibt eine Bestätigung empfangen wurde an.  
+ Gibt an, dass eine Bestätigung empfangen wurde.  
   
  `SIG_ERR`  
- Ein Rückgabetyp von einem Signal, das einen Fehler angibt, ist aufgetreten.  
+ Ein Rückgabetyp aus einem Signal, der angibt, das ein Fehler aufgetreten ist.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [signal](../c-runtime-library/reference/signal.md)   
  [Globale Konstanten](../c-runtime-library/global-constants.md)

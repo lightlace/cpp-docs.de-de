@@ -1,49 +1,66 @@
 ---
-title: "R&#252;ckgabetyp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datentypen [C++], Funktionsrückgabetypen"
-  - "Funktionsrückgabetypen"
-  - "Funktionsrückgabetypen, Syntax"
-  - "Funktionen [C++], Rückgabetypen"
-  - "return-Schlüsselwort [C++], Funktionsrückgabetypen"
-  - "Rückgabewerte [C++]"
-  - "Rückgabewerte [C++], Function-Prozeduren"
+title: "Rückgabetyp | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- function return types
+- return values [C++], function procedures
+- function return types, syntax
+- return values [C++]
+- data types [C++], function return types
+- return keyword [C++], function return types
+- functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# R&#252;ckgabetyp
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 44079c7a9539673fb2d0b1d49e9c50acd51b237b
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="return-type"></a>Rückgabetyp
 Der Rückgabetyp einer Funktion legt die Größe und den Typ des Werts fest, der von der Funktion zurückgegeben wird, und dem Typspezifizierer in der folgenden Syntax entspricht:  
   
-## Syntax  
- *function\-definition*:  
- *declaration\-specifiers*  opt *attribute\-seq* opt *declarator declaration\-list* opt *compound\-statement*  
+## <a name="syntax"></a>Syntax  
+ *function-definition*:  
+ *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- \/\* *attribute\-seq* ist Microsoft\-spezifisch \*\/  
+ /\* *attribute-seq* ist Microsoft-spezifisch */  
   
- *declaration\-specifiers*:  
- *storage\-class\-specifier declaration\-specifiers*  opt  
+ *declaration-specifiers*:  
+ *storage-class-specifier declaration-specifiers* opt  
   
- *type\-specifier declaration\-specifiers*  opt  
+ *type-specifier declaration-specifiers* opt  
   
- *type\-qualifier declaration\-specifiers*  opt  
+ *type-qualifier declaration-specifiers* opt  
   
- *type\-specifier*:  
+ *type-specifier*:  
  **void**  
   
  **char**  
@@ -62,15 +79,15 @@ Der Rückgabetyp einer Funktion legt die Größe und den Typ des Werts fest, der
   
  **unsigned**  
   
- *struct\-or\-union\-specifier*  
+ *struct-or-union-specifier*  
   
- *enum\-specifier*  
+ *enum-specifier*  
   
- *typedef\-name*  
+ *typedef-name*  
   
- *type\-specifier* kann einen beliebigen grundlegenden\-, Struktur\- oder Union\-Typ angeben.  Wenn Sie *type\-specifier* nicht einschließen, wird der Rückgabetyp `int` angenommen.  
+ *type-specifier* kann einen beliebigen grundlegenden, Struktur- oder Union-Typ angeben. Wenn Sie *type-specifier* nicht einschließen, wird der Rückgabetyp `int` angenommen.  
   
- Der Rückgabetyp, der in der Funktionsdefinition angegeben ist, muss dem Rückgabetyp in der Funktionsdeklarationen an anderer Stelle im Programm entsprechen.  Eine Funktion gibt einen Wert zurück, wenn eine `return`\-Anweisung ausgeführt wird, die einen Ausdruck enthält.  Der Ausdruck wird ausgewertet, in den Rückgabewert konvertiert, falls erforderlich, und an den Punkt zurückgegeben, an dem die Funktion aufgerufen wurde.  Wenn eine Funktion mit dem Rückgabetyp `void` deklariert wird, generiert eine Return\-Anweisung, die einen Ausdruck enthält, eine Warnung, und der Ausdruck wird nicht ausgewertet.  
+ Der Rückgabetyp, der in der Funktionsdefinition angegeben ist, muss dem Rückgabetyp in der Funktionsdeklarationen an anderer Stelle im Programm entsprechen. Eine Funktion gibt einen Wert zurück, wenn eine `return`-Anweisung ausgeführt wird, die einen Ausdruck enthält. Der Ausdruck wird ausgewertet, in den Rückgabewert konvertiert, falls erforderlich, und an den Punkt zurückgegeben, an dem die Funktion aufgerufen wurde. Wenn eine Funktion mit dem Rückgabetyp `void` deklariert wird, generiert eine Return-Anweisung, die einen Ausdruck enthält, eine Warnung, und der Ausdruck wird nicht ausgewertet.  
   
  Die folgenden Beispiele veranschaulichen Funktionsrückgabewerte.  
   
@@ -90,7 +107,7 @@ STUDENT sortstu( STUDENT a, STUDENT b )
 }  
 ```  
   
- Dieses Beispiel definiert den `STUDENT`\-Typ mit einer `typedef`\-Deklaration und definiert die Funktion `sortstu`, sodass diese über den `STUDENT`\-Rückgabetyp verfügt.  Die Funktion wählt eines ihrer beiden Strukturargumente aus und gibt dieses zurück.  Bei nachfolgenden Aufrufen der Funktion überprüft der Compiler, ob die Argumenttypen `STUDENT` sind.  
+ Dieses Beispiel definiert den `STUDENT`-Typ mit einer `typedef`-Deklaration und definiert die Funktion `sortstu`, sodass diese über den `STUDENT`-Rückgabetyp verfügt. Die Funktion wählt eines ihrer beiden Strukturargumente aus und gibt dieses zurück. Bei nachfolgenden Aufrufen der Funktion überprüft der Compiler, ob die Argumenttypen `STUDENT` sind.  
   
 > [!NOTE]
 >  Effizienz wird erhöht, indem Zeiger auf die Struktur, statt auf die gesamte Struktur übergeben werden.  
@@ -110,9 +127,9 @@ char *smallstr( char s1[], char s2[] )
 }  
 ```  
   
- In diesem Beispiel wird eine Funktion definiert, die einen Zeiger an ein Zeichenarray zurückgibt.  Die Funktion ruft zwei Zeichenarrays \(Zeichenfolgen\) als Argumente ab und gibt einen Zeiger auf die kürzere der beiden Zeichenfolgen zurück.  Ein Zeiger auf ein Array zeigt auf das erste der Arrayelemente und hat seinen Typ. Daher ist der Rückgabetyp der Funktion ein Zeiger auf den Typ `char`.  
+ In diesem Beispiel wird eine Funktion definiert, die einen Zeiger an ein Zeichenarray zurückgibt. Die Funktion ruft zwei Zeichenarrays (Zeichenfolgen) als Argumente ab und gibt einen Zeiger auf die kürzere der beiden Zeichenfolgen zurück. Ein Zeiger auf ein Array zeigt auf das erste der Arrayelemente und hat seinen Typ. Daher ist der Rückgabetyp der Funktion ein Zeiger auf den Typ `char`.  
   
  Funktionen müssen vor dem Aufrufen nicht mit dem Rückgabetyp `int` deklariert werden, obwohl Prototypen empfohlen werden, um eine ordnungsgemäße Typüberprüfung für Argumente und Rückgabewerte zu ermöglichen.  
   
-## Siehe auch  
- [C\-Funktionsdefinitionen](../c-language/c-function-definitions.md)
+## <a name="see-also"></a>Siehe auch  
+ [C-Funktionsdefinitionen](../c-language/c-function-definitions.md)
