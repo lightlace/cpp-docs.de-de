@@ -1,139 +1,156 @@
 ---
-title: "errno-Konstanten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ENOEXEC"
-  - "ENOMEM"
-  - "E2BIG"
-  - "STRUNCATE"
-  - "ENOENT"
-  - "EMFILE"
-  - "EBADF"
-  - "EDEADLOCK"
-  - "EXDEV"
-  - "EILSEQ"
-  - "EINVAL"
-  - "EDOM"
-  - "EACCES"
-  - "ERANGE"
-  - "ENOSPC"
-  - "EAGAIN"
-  - "EEXIST"
-  - "ECHILD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "E2BIG-Konstante"
-  - "EACCES-Konstante"
-  - "EAGAIN-Konstante"
-  - "EBADF-Konstante"
-  - "ECHILD-Konstante"
-  - "EDEADLOCK-Konstante"
-  - "EDOM-Konstante"
-  - "EEXIST-Konstante"
-  - "EILSEQ-Konstante"
-  - "EINVAL-Konstante"
-  - "EMFILE-Konstante"
-  - "ENOENT-Konstante"
-  - "ENOEXEC-Konstante"
-  - "ENOMEM-Konstante"
-  - "ENOSPC-Konstante"
-  - "ERANGE-Konstante"
-  - "errno-Konstanten"
-  - "EXDEV-Konstante"
-  - "STRUNCATE-Konstante"
+title: errno-Konstanten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ENOEXEC
+- ENOMEM
+- E2BIG
+- STRUNCATE
+- ENOENT
+- EMFILE
+- EBADF
+- EDEADLOCK
+- EXDEV
+- EILSEQ
+- EINVAL
+- EDOM
+- EACCES
+- ERANGE
+- ENOSPC
+- EAGAIN
+- EEXIST
+- ECHILD
+dev_langs:
+- C++
+helpviewer_keywords:
+- ENOEXEC constant
+- EBADF constant
+- EAGAIN constant
+- EINVAL constant
+- ENOENT constant
+- errno constants
+- E2BIG constant
+- EMFILE constant
+- EDEADLOCK constant
+- ENOSPC constant
+- EDOM constant
+- ENOMEM constant
+- EACCES constant
+- EEXIST constant
+- STRUNCATE constant
+- ERANGE constant
+- ECHILD constant
+- EXDEV constant
+- EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# errno-Konstanten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 993d61cf94df06c01623f231f3a4915d0ec8cc41
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-## Syntax  
+---
+# <a name="errno-constants"></a>errno-Konstanten
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 #include <errno.h>  
 ```  
   
-## Hinweise  
- Die **errno**\-Werte sind die Konstanten, die im Fall der [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) verschiedene Fehlerbedingungen zugewiesen werden.  
+## <a name="remarks"></a>Hinweise  
+ Die **errno**-Werte sind Konstanten, die [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) bei verschiedenen Fehlerbedingungen zugewiesen werden.  
   
- ERRNO.H enthält die Definitionen der **errno**\-Werte.  Jedoch werden nicht alle Definitionen, die in ERRNO.H angegeben werden, in 32\-Bit\-Windows\-Betriebssystemen verwendet.  Einige der Werte in ERRNO.H sind vorhanden, Kompatibilität mit der UNIX\-Familie von Betriebssystemen beizubehalten.  
+ ERRNO.H enthält die Definitionen der **errno**-Werte. Jedoch werden nicht alle in ERRNO.H enthaltenen Definitionen in 32-Bit-Windows-Betriebssystemen verwendet. Einige der Werte in ERRNO.H dienen dazu, die Kompatibilität mit der UNIX-Betriebssystemfamilie beizubehalten.  
   
- Die **errno**\-Werte in ein 32\-Bit\-Windows\-Betriebssystem sind eine Teilmenge der Werte für **errno** in XENIX\-Systemen.  Daher ist der **errno**\-Wert nicht unbedingt dem eigentlichen Fehlercode, der durch einen Systemaufruf von Windows\-Betriebssystemen zurückgegeben wird.  Um auf den tatsächlichen Betriebssystemfehlercode zuzugreifen, verwenden Sie die [\_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)\-Variable, die diesen Wert enthält.  
+ Die **errno**-Werte in einem 32-Bit-Windows-Betriebssystem sind eine Teilmenge der Werte für **errno** in XENIX-Systemen. Darum ist der **errno**-Wert nicht unbedingt identisch mit dem eigentlichen Fehlercode, der durch einen Systemaufruf von Windows-Betriebssystemen zurückgeben wird. Um auf den tatsächlichen Betriebssystemfehlercode zuzugreifen, verwenden Sie die [_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)-Variable, die diesen Wert enthält.  
   
- Die folgenden Werte werden unterstützt: **errno**  
+ Die folgenden **errno**-Werte werden unterstützt:  
   
  **ECHILD**  
- Keine erstellten Prozesse.  
+ Keine generierten Prozesse.  
   
  **EAGAIN**  
- Nicht mehr Prozesse.  Ein Versuch, einen neuen Prozess zu erstellen Fehler aus, da sie nicht mehr Prozessslots gibt, oder es ist nicht genügend Arbeitsspeicher, oder die maximale Schachtelungsebene ist erreicht wurde.  
+ Keine weiteren Prozesse. Fehler beim Versuch, einen neuen Prozess zu erstellen, da keine weiteren Steckplätze mehr vorhanden sind, der Arbeitsspeicher nicht ausreicht oder die maximale Schachtelungsebene erreicht wurde.  
   
  **E2BIG**  
- Argumentliste zu lang.  
+ Argumentliste ist zu lang.  
   
  **EACCES**  
- Zugriff verweigert.  Die Berechtigungseinstellung der Datei kann nicht den angegebenen Zugriff.  Dieser Fehler gibt an, dass versucht, eine Datei \(oder in einigen Fällen auf ein Verzeichnis\) so Zugriff ausgeführt wurde, die mit den Dateiattributen nicht kompatibel ist.  
+ Berechtigung verweigert. Aufgrund der Dateiberechtigungen wird der Zugriff im angegebenen Modus verweigert. Diese Fehlermeldung gibt an, dass versucht wurde, auf eine mit den Attributen der Datei inkompatible Weise auf eine Datei (oder in einigen Fällen ein Verzeichnis) zuzugreifen.  
   
- Beispielsweise kann der Fehler auftreten, wenn ein Versuch, in einer Datei zu lesen, die nicht angezeigt wird, um eine vorhandene schreibgeschützte Datei zum Schreiben zu öffnen, oder ein Verzeichnis anstelle einer Datei zu öffnen gemacht wird.  Unter MS\-DOS Betriebssystemversionen 3.0 und höher, gibt **EACCES** auch einer Sperre oder eine Zugriffsverletzung an.  
+ Beispielsweise kann der Fehler bei dem Versuch auftreten, aus einer nicht geöffneten Datei zu lesen, eine vorhandene schreibgeschützte Datei zum Schreiben zu öffnen oder ein Verzeichnis anstelle einer Datei zu öffnen. Ab MS-DOS-Version 3.0 kann **EACCES** möglicherweise auch auf eine Sperr- oder Freigabeverletzung hinweisen.  
   
- Der Fehler kann auch auftreten, um eine Datei oder ein Verzeichnis umbenannt oder ein vorhandenes Verzeichnis zu entfernen.  
+ Der Fehler kann auch bei dem Versuch auftreten, eine Datei oder ein Verzeichnis umzubenennen oder ein vorhandenes Verzeichnis zu entfernen.  
   
  **EBADF**  
- Ungültiges Dateinummern.  Es gibt zwei mögliche Ursachen: 1\) ist der angegebene Dateideskriptor kein gültiger Wert oder bezieht sich nicht auf eine geöffnete Datei. 2\) Es wurde versucht, in einer Datei oder einem Gerät schreiben gemacht, die für den schreibgeschützten Zugriff geöffnet waren.  
+ Ungültige Dateinummer. Es gibt zwei mögliche Ursachen: 1) Der angegebene Dateideskriptor ist kein gültiger Wert oder verweist nicht auf eine geöffnete Datei. 2) Es wurde versucht, in eine Datei oder ein Gerät zu schreiben, die/das nur für schreibgeschützten Zugriff geöffnet ist.  
   
  **EDEADLOCK**  
- Ressourcendeadlock würde auftreten.  Das Argument einer mathematischen Funktion ist in der Domäne der Funktion.  
+ Deadlock von Ressourcen würde auftreten. Das an eine mathematische Funktion übergebene Argument ist nicht in der Domäne der Funktion.  
   
  **EDOM**  
- Mathematisches Argument.  
+ Mathematikargument.  
   
  **EEXIST**  
- Dateien vorhanden sind.  Es wurde versucht, eine Datei erstellt wurde, die bereits vorhanden ist.  Beispielsweise werden **\_O\_CREAT** und **\_O\_EXCL** die Flags in einem **\_open** Aufruf angegeben, die benannte Datei ist bereits vorhanden.  
+ Dateien sind vorhanden. Es wurde versucht, eine Datei zu erstellen, die bereits vorhanden ist. Die Flags **_O_CREAT** und **_O_EXCL** werden in einem **_open**-Aufruf angegeben, aber die angegebene Datei ist bereits vorhanden.  
   
  **EILSEQ**  
- Ungültige Bytesequenz, \(beispielsweise in einer MBCS\-Zeichenfolge\).  
+ Ungültige Folge von Bytes (z.B. in einer MBCS-Zeichenfolge).  
   
  **EINVAL**  
- Ungültiges Argument.  Ein ungültiger Wert wurde für eines der Argumente an eine Funktion übergeben.  Beispielsweise der Wert zugewiesen für den Ursprung, wenn, einen Dateizeiger zu positionieren \(mithilfe eines Aufrufs von **fseek**\) voranstellen dem Anfang der Datei.  
+ Ungültiges Argument. Für eines der an eine Funktion übergebenen Argumente wurde ein ungültiger Wert angegeben. Beispiel: Der für den Ursprung einer Dateizeigerpositionierung (durch einen Aufruf von **Fseek**) angegebene Wert liegt vor dem Anfang der Datei.  
   
  **EMFILE**  
- So viele Dateien geöffnet.  Nicht mehr Dateideskriptoren sind verfügbar, sodass nicht mehr Dateien geöffnet werden.  
+ Zu viele geöffnete Dateien. Es sind keine weiteren Dateideskriptoren verfügbar, sodass keine Dateien mehr geöffnet werden können.  
   
  **ENOENT**  
- keine derartige Datei oder Verzeichnis.  Die angegebene Datei oder das Verzeichnis ist nicht vorhanden oder kann nicht gefunden werden.  Diese Meldung kann auftreten, wenn eine angegebene Datei nicht vorhanden ist, oder eine Komponente eines Pfades keinen vorhandenen Verzeichnis angibt.  
+ Datei oder Verzeichnis nicht vorhanden. Die angegebene Datei oder das angegebene Verzeichnis ist nicht vorhanden oder wurde nicht gefunden. Diese Meldung kann auftreten, wenn eine angegebene Datei nicht vorhanden ist, oder eine Komponente eines Pfads kein vorhandenes Verzeichnis angibt.  
   
  **ENOEXEC**  
- Leitprogrammformatfehler.  Es wurde versucht, eine Datei auszuführen gemacht, die nicht ausgeführt werden kann, oder die ein ungültiges Format einer ausführbaren Datei wird.  
+ Exec-Formatfehler. Es wurde versucht, eine Datei auszuführen, die nicht ausführbar ist oder ein für eine ausführbare Datei ungültiges Format besitzt.  
   
  **ENOMEM**  
- Nicht genug wurden.  Nicht genügend Arbeitsspeicher ist für der angeforderten Operator verfügbar.  Beispielsweise kann diese Meldung auftreten, wenn unzulänglicher Arbeitsspeicher verfügbar ist, einen untergeordneten Prozess auszuführen oder die Zuordnungsanforderung in einem **\_getcwd** Aufruf nicht erfüllt werden kann.  
+ Der Kern reicht nicht aus. Es ist nicht genügend Arbeitsspeicher für den versuchten Operator verfügbar. Diese Meldung kann z.B. auftreten, wenn nicht genügend Arbeitsspeicher verfügbar ist, um einen untergeordneten Prozess auszuführen, oder wenn die Zuordnungsanforderung in einem **_getcwd**-Aufruf nicht erfüllt werden kann.  
   
  **ENOSPC**  
- Kein Speicherplatz links auf Gerät.  Nicht mehr Platz zum Schreiben ist auf dem Gerät verfügbar \(beispielsweise, wenn der Datenträger voll ist\).  
+ Kein Speicherplatz auf dem Gerät übrig. Auf dem Gerät ist kein Speicherplatz zum Schreiben mehr verfügbar (wenn z.B. der Datenträger voll ist).  
   
  **ERANGE**  
- Ergebnis zu groß.  Ein Argument einer mathematischen Funktion ist, mit dem Ergebnis des partiellen oder gesamten Verlust des Schritts im Ergebnis zu groß.  Dieser Fehler kann in anderen Funktionen auch auftreten, wenn ein Argument größer als erwartet ist \(beispielsweise, wenn das *Pufferargument* zu **\_getcwd** länger als erwartet ist\).  
+ Ergebnis zu groß. Ein an eine mathematische Funktion übergebenes Argument ist zu groß, was zu teilweisem oder vollständigem Bedeutungsverlust im Ergebnis führt. Dieser Fehler kann auch in anderen Funktionen auftreten, wenn ein Argument größer als erwartet ist (wenn z.B. das *buffer*-Argument für **_getcwd** länger als erwartet ist).  
   
  **EXDEV**  
- Verweis über für das Dateisystem zulässigen Wert.  Es wurde versucht, eine Datei auf einem anderen Gerät zu verschieben gemacht \(mithilfe der **umbenennen**\-Funktion\).  
+ Geräteübergreifende Verbindung. Es wurde versucht, eine Datei (mithilfe der **rename**-Funktion) zu einem anderen Gerät zu verschieben.  
   
  **STRUNCATE**  
- Eine Zeichenfolgenkopie oder \-Verkettung führten abgeschnittene eine Zeichenfolge.  Siehe [\_TRUNCATE](../c-runtime-library/truncate.md).  
+ Eine Zeichenfolgenkopie oder Verkettung resultierte in einer abgeschnittenen Zeichenfolge. Siehe [_TRUNCATE](../c-runtime-library/truncate.md).  
   
- Die folgenden Werte werden für die Kompatibilität mit Posix unterstützt.  Sie können Werte auf erforderliche nicht\-\-Posix Systemen.  
+ Die folgenden Werte werden für die Kompatibilität mit Posix unterstützt. Auf Nicht-Posix-Systemen sind sie erforderliche Werte.  
   
 ```  
 #define E2BIG [argument list too long]  
@@ -217,5 +234,5 @@ caps.handback.revision: 8
 #define EXDEV [cross device link]  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Globale Konstanten](../c-runtime-library/global-constants.md)

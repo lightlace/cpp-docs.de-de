@@ -1,33 +1,50 @@
 ---
-title: "C-Bezeichner | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Bezeichner"
-  - "Bezeichner, C"
-  - "Bezeichner, Berücksichtigung der Groß-/Kleinschreibung"
-  - "Benennen von Bezeichnern"
-  - "Symbole, C-Bezeichner"
-  - "Symbole, Berücksichtigung der Groß-/Kleinschreibung"
+title: C-Bezeichner | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- identifiers, C
+- naming identifiers
+- identifiers
+- symbols, C identifiers
+- identifiers, case sensitivity
+- symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# C-Bezeichner
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: fca83b12e469401fe18632a1df9f876964b8a493
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-"Bezeichner" oder "Symbole" sind die Namen, die Sie für Variablen, Typen, Funktionen und Beschriftungen im Programm angeben.  Bezeichnernamen müssen sich bezüglich der Schreibweise und der Groß\-\/Kleinschreibung von allen Schlüsselwörtern unterscheiden.  Sie können Schlüsselwörter \(entweder C oder Microsoft\) nicht als Bezeichner verwenden. Sie sind zur besonderen Verwendung reserviert.  Sie erstellen einen Bezeichner, indem Sie ihn in der Deklaration einer Variablen, eines Typs oder einer Funktion festlegen.  In diesem Beispiel ist `result` ein Bezeichner für eine ganzzahlige Variable. `main` und `printf` sind Bezeichnernamen für Funktionen.  
+---
+# <a name="c-identifiers"></a>C-Bezeichner
+"Bezeichner" oder "Symbole" sind die Namen, die Sie für Variablen, Typen, Funktionen und Beschriftungen im Programm angeben. Bezeichnernamen müssen sich bezüglich der Schreibweise und der Groß-/Kleinschreibung von allen Schlüsselwörtern unterscheiden. Sie können Schlüsselwörter (entweder C oder Microsoft) nicht als Bezeichner verwenden. Sie sind zur besonderen Verwendung reserviert. Sie erstellen einen Bezeichner, indem Sie ihn in der Deklaration einer Variablen, eines Typs oder einer Funktion festlegen. In diesem Beispiel ist `result` ein Bezeichner für eine ganzzahlige Variable. `main` und `printf` sind Bezeichnernamen für Funktionen.  
   
 ```  
 #include <stdio.h>  
@@ -43,33 +60,33 @@ int main()
   
  Sobald der Bezeichner deklariert wurde, können Sie ihn in späteren Programmanweisungen verwenden, um auf den zugeordneten Wert zu verweisen.  
   
- Eine besondere Art von Bezeichnern, die als Anweisungsmarken bezeichnet werden, kann in `goto`\-Anweisungen verwendet werden. \(Deklarationen werden unter [Deklarationen und Typen](../c-language/declarations-and-types.md) und Anweisungsmarken unter [goto\-Anweisungen und Anweisungen mit Bezeichnung](../c-language/goto-and-labeled-statements-c.md) erläutert.\)  
+ Eine besondere Art von Bezeichnern, die als Anweisungsmarken bezeichnet werden, kann in `goto`-Anweisungen verwendet werden. (Deklarationen werden unter [Deklarationen und Typen](../c-language/declarations-and-types.md) und Anweisungsmarken unter [goto-Anweisungen und Anweisungen mit Bezeichnung](../c-language/goto-and-labeled-statements-c.md) erläutert.)  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
  *identifier*:  
  *nondigit*  
   
- *Bezeichner, keine Ziffer*  
+ *identifier nondigit*  
   
- *Bezeichner, Ziffer*  
+ *identifier digit*  
   
  `nondigit`: einer von  
- **\_ a b c d e f g h i j k l m n o p q r s t u v w x y z**  
+ **_ a b c d e f g h i j k l m n o p q r s t u v w x y z**  
   
  **A B C D E F G H I J K L M N O P Q R S T U V W X Y Z**  
   
  `digit`: einer von  
  **0 1 2 3 4 5 6 7 8 9**  
   
- Das erste Zeichen eines Bezeichnernamens muss ein `nondigit`\-Wert sein \(das heißt, dass das erste Zeichen ein Unterstrich oder ein Groß\- oder Kleinbuchstabe sein muss\).  ANSI ermöglicht die Eingabe von sechs signifikanten Zeichen im Namen eines externen Bezeichners und von 31 signifikanten Zeichen für Namen interner Bezeichner \(in einer Funktion\).  Externe Bezeichner \(solche, die im globalen Gültigkeitsbereich oder mit der `extern`\-Speicherklasse deklariert wurden\) unterliegen möglicherweise zusätzlichen Benennungseinschränkungen, da diese Bezeichner von anderer Software wie Linker verarbeitet werden müssen.  
+ Das erste Zeichen eines Bezeichnernamens muss ein `nondigit`-Wert sein (das heißt, dass das erste Zeichen ein Unterstrich oder ein Groß- oder Kleinbuchstabe sein muss). ANSI ermöglicht die Eingabe von sechs signifikanten Zeichen im Namen eines externen Bezeichners und von 31 signifikanten Zeichen für Namen interner Bezeichner (in einer Funktion). Externe Bezeichner (solche, die im globalen Gültigkeitsbereich oder mit der `extern`-Speicherklasse deklariert wurden) unterliegen möglicherweise zusätzlichen Benennungseinschränkungen, da diese Bezeichner von anderer Software wie Linker verarbeitet werden müssen.  
   
- **Microsoft\-spezifisch**  
+ **Microsoft-spezifisch**  
   
- Obwohl ANSI 6 signifikante Zeichen in den externen Bezeichnernamen und 31 signifikante Zeichen für Namen interner Bezeichner \(in einer Funktion\) zulässt, ermöglicht der Microsoft C\-Compiler die Eingabe von 247 Zeichen in einen internen oder externen Bezeichnernamen.  Wenn ANSI\-Kompatibilität nicht erforderlich ist, können Sie diese Vorgabe in eine kleinere oder größere Zahl ändern, indem Sie die Option "\/H" \(Längenbeschränkung externer Namen\) verwenden.  
+ Obwohl ANSI 6 signifikante Zeichen in den externen Bezeichnernamen und 31 signifikante Zeichen für Namen interner Bezeichner (in einer Funktion) zulässt, ermöglicht der Microsoft C-Compiler die Eingabe von 247 Zeichen in einen internen oder externen Bezeichnernamen. Wenn ANSI-Kompatibilität nicht erforderlich ist, können Sie diese Vorgabe in eine kleinere oder größere Zahl ändern, indem Sie die Option "/H" (Längenbeschränkung externer Namen) verwenden.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
- Der C\-Compiler berücksichtigt Groß\- und Kleinbuchstaben als unterschiedliche Zeichen.  Dieses Merkmal der "Berücksichtigung der Groß\-\/Kleinschreibung" ermöglicht es Ihnen, eindeutige Bezeichner zu erstellen, die dieselbe Schreibweise, jedoch eine unterschiedliche Groß\- und Kleinschreibung für einzelne Buchstaben aufweisen.  Beispielsweise ist jeder der folgenden Bezeichner eindeutig:  
+ Der C-Compiler berücksichtigt Groß- und Kleinbuchstaben als unterschiedliche Zeichen. Dieses Merkmal der "Berücksichtigung der Groß-/Kleinschreibung" ermöglicht es Ihnen, eindeutige Bezeichner zu erstellen, die dieselbe Schreibweise, jedoch eine unterschiedliche Groß- und Kleinschreibung für einzelne Buchstaben aufweisen. Beispielsweise ist jeder der folgenden Bezeichner eindeutig:  
   
 ```  
 add  
@@ -78,13 +95,13 @@ Add
 aDD  
 ```  
   
- **Microsoft\-spezifisch**  
+ **Microsoft-spezifisch**  
   
- Wählen Sie keinen Namen für Bezeichner aus, die mit zwei Unterstrichen oder mit einem Unterstrich gefolgt von einem Großbuchstaben beginnen.  Mit dem ANSI C\-Standard können Bezeichnernamen, die mit diesen Zeichenkombinationen beginnen, für die Verwendung durch den Compiler reserviert werden.  Bezeichner mit Gültigkeit auf Dateiebene sollten nicht mit einem Unterstrich und einem nachfolgenden Kleinbuchstaben beginnen.  Bezeichnernamen, die mit diesen Zeichen beginnen, sind ebenfalls reserviert.  Gemäß der Konvention verwendet Microsoft einen Unterstrich und einen Großbuchstaben am Anfang von Makronamen und doppelte Unterstriche für Microsoft\-spezifische Schlüsselwortnamen.  Um Namenskonflikte zu vermeiden, wählen Sie stets Bezeichnernamen aus, die nicht mit einem oder zwei Unterstriche beginnen, oder Namen, die mit einem Unterstrich und einem nachfolgenden Großbuchstaben beginnen.  
+ Wählen Sie keinen Namen für Bezeichner aus, die mit zwei Unterstrichen oder mit einem Unterstrich gefolgt von einem Großbuchstaben beginnen. Mit dem ANSI C-Standard können Bezeichnernamen, die mit diesen Zeichenkombinationen beginnen, für die Verwendung durch den Compiler reserviert werden. Bezeichner mit Gültigkeit auf Dateiebene sollten nicht mit einem Unterstrich und einem nachfolgenden Kleinbuchstaben beginnen. Bezeichnernamen, die mit diesen Zeichen beginnen, sind ebenfalls reserviert. Gemäß der Konvention verwendet Microsoft einen Unterstrich und einen Großbuchstaben am Anfang von Makronamen und doppelte Unterstriche für Microsoft-spezifische Schlüsselwortnamen. Um Namenskonflikte zu vermeiden, wählen Sie stets Bezeichnernamen aus, die nicht mit einem oder zwei Unterstriche beginnen, oder Namen, die mit einem Unterstrich und einem nachfolgenden Großbuchstaben beginnen.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
- Im Folgenden finden Sie Beispiele für gültige Bezeichner, die entweder den ANSI\- oder Microsoft\-Benennungseinschränkungen entsprechen:  
+ Im Folgenden finden Sie Beispiele für gültige Bezeichner, die entweder den ANSI- oder Microsoft-Benennungseinschränkungen entsprechen:  
   
 ```  
 j  
@@ -95,17 +112,17 @@ skip12
 LastNum  
 ```  
   
- **Microsoft\-spezifisch**  
+ **Microsoft-spezifisch**  
   
- Obwohl Bezeichner in den Quelldateien standardmäßig die Groß\- und Kleinschreibung berücksichtigen, ist dies bei Symbolen in den Objektdateien nicht der Fall.  Microsoft C beachtet die Groß\-\/Kleinschreibung bei Bezeichnern innerhalb einer Kompilierungseinheit.  
+ Obwohl Bezeichner in den Quelldateien standardmäßig die Groß- und Kleinschreibung berücksichtigen, ist dies bei Symbolen in den Objektdateien nicht der Fall. Microsoft C beachtet die Groß-/Kleinschreibung bei Bezeichnern innerhalb einer Kompilierungseinheit.  
   
- Der Microsoft\-Linker beachtet die Groß\-\/Kleinschreibung.  Sie müssen alle Bezeichner entsprechend der Groß\-\/Kleinschreibung einheitlich festlegen.  
+ Der Microsoft-Linker beachtet die Groß-/Kleinschreibung. Sie müssen alle Bezeichner entsprechend der Groß-/Kleinschreibung einheitlich festlegen.  
   
- Beim Quellzeichensatz handelt es sich um einen Satz zulässiger Zeichen, die in den Quelldateien auftreten können.  In Microsoft C ist der Quellsatz der ASCII\-Standardzeichensatz.  Der Quell\- und Ausführungszeichensatz enthält die ASCII\-Zeichen, die als Escapesequenzen verwendet werden.  Weitere Informationen zum Ausführungszeichensatz finden Sie unter [Zeichenkonstanten](../c-language/c-character-constants.md).  
+ Beim Quellzeichensatz handelt es sich um einen Satz zulässiger Zeichen, die in den Quelldateien auftreten können. In Microsoft C ist der Quellsatz der ASCII-Standardzeichensatz. Der Quell- und Ausführungszeichensatz enthält die ASCII-Zeichen, die als Escapesequenzen verwendet werden. Weitere Informationen zum Ausführungszeichensatz finden Sie unter [Zeichenkonstanten](../c-language/c-character-constants.md).  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
- Ein Bezeichner hat einen "Bereich", bei der es sich um die Region des Programms handelt, in der es bekannt ist, sowie eine "Bindung", die bestimmt, ob derselbe Name in einem anderen Bereich auf denselben Bezeichner verweist.  Diese Themen werden unter [Lebensdauer, Bereich, Sichtbarkeit und Verknüpfung](../c-language/lifetime-scope-visibility-and-linkage.md) erläutert.  
+ Ein Bezeichner hat einen "Bereich", bei der es sich um die Region des Programms handelt, in der es bekannt ist, sowie eine "Bindung", die bestimmt, ob derselbe Name in einem anderen Bereich auf denselben Bezeichner verweist. Diese Themen werden unter [Lebensdauer, Bereich, Sichtbarkeit und Verknüpfung](../c-language/lifetime-scope-visibility-and-linkage.md) erläutert.  
   
-## Siehe auch  
- [Elemente von C](../c-language/elements-of-c.md)
+## <a name="see-also"></a>Siehe auch  
+ [C-Elemente](../c-language/elements-of-c.md)

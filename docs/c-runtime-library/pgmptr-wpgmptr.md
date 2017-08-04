@@ -1,68 +1,85 @@
 ---
-title: "_pgmptr, _wpgmptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pgmptr"
-  - "_pgmptr"
-  - "wpgmptr"
-  - "_wpgmptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_pgmptr-Funktion"
-  - "_wpgmptr-Funktion"
-  - "pgmptr-Funktion"
-  - "wpgmptr-Funktion"
+title: _pgmptr, _wpgmptr | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pgmptr
+- _pgmptr
+- wpgmptr
+- _wpgmptr
+dev_langs:
+- C++
+helpviewer_keywords:
+- wpgmptr function
+- _wpgmptr function
+- _pgmptr function
+- pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _pgmptr, _wpgmptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 221d1bd8259d8922695e9060eb8f2ada63d63631
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Der Pfad der ausführbaren Datei.  Veraltet; Verwenden Sie [\_get\_pgmptr](../c-runtime-library/reference/get-pgmptr.md) und [\_get\_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md).  
+---
+# <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
+Der Pfad der ausführbaren Datei. Veraltet; verwenden Sie [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) und [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md).  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 extern char *_pgmptr;  
 extern wchar_t *_wpgmptr;  
 ```  
   
-## Hinweise  
- Wenn ein Programm im Befehlsinterpreter \(Cmd.exe\) ausgeführt wird, wird `_pgmptr` automatisch zum vollständigen Pfad der ausführbaren Datei initialisiert.  Wenn Hello.exe in C:\\BIN ist und C:\\BIN im Pfad ist, wird `_pgmptr` auf C:\\BIN\\Hello.exe festgelegt, wenn Sie ausführen:  
+## <a name="remarks"></a>Hinweise  
+ Wenn ein Programm über den Befehlsinterpreter (Cmd.exe) ausgeführt wird, wird `_pgmptr` automatisch mit dem vollständigen Pfad der ausführbaren Datei initialisiert. Wenn Hello.exe sich beispielsweise in C:\BIN und C:\BIN sich im Pfad befindet, wird `_pgmptr` auf C:\BIN\Hello.exe festgelegt, wenn Sie Folgendes ausführen:  
   
 ```  
 C> hello   
 ```  
   
- Wenn ein Programm nicht über die Befehlszeile ausgeführt wird, würde `_pgmptr` dem Programmnamen \(Basisname der Datei ohne die Dateinamenerweiterung\) oder einen Dateinamen, zu einem relativen Pfad oder einen vollständigen Pfad initialisiert werden.  
+ Wenn ein Programm nicht über die Befehlszeile ausgeführt wird, könnte `_pgmptr` mit dem Programmnamen (dem Basisnamen der Datei ohne Dateinamenerweiterung) oder einem Dateinamen, relativen Pfad oder vollständigen Pfad initialisiert werden.  
   
- `_wpgmptr` ist die Breitzeichenentsprechung von `_pgmptr` für Programme, die `wmain` verwenden.  
+ `_wpgmptr` ist das Breitzeichen-Gegenstück von `_pgmptr` für die Verwendung mit Programmen, die `wmain` verwenden.  
   
-### Zuordnung generischer Textroutinen  
+### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen  
   
-|Tchar.h\-Routine|\_UNICODE und \_MBCS nicht definiert|\_MBCS definiert|\_UNICODE definiert|  
-|----------------------|------------------------------------------|----------------------|-------------------------|  
+|Tchar.h-Routine|_UNICODE und _MBCS nicht definiert|_MBCS definiert|_UNICODE definiert|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|  
   
-## Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
 |Variable|Erforderlicher Header|  
-|--------------|---------------------------|  
-|`_pgmptr`, `_wpgmptr`|\<stdlib.h\>|  
+|--------------|---------------------|  
+|`_pgmptr`, `_wpgmptr`|\<stdlib.h>|  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  Das folgende Programm veranschaulicht die Verwendung von `_pgmptr`.  
   
 ```  
@@ -80,7 +97,7 @@ int main( void )
 }  
 ```  
   
- Sie können `_wpgmptr` verwenden, indem Sie `%Fs` in `%S` und `main` zu `wmain` geändert.  
+ Sie könnten `_wpgmptr` durch Ändern von `%Fs` in `%S` und `main` in `wmain` verwenden.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Globale Variablen](../c-runtime-library/global-variables.md)

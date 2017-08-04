@@ -1,31 +1,48 @@
 ---
-title: "ANSI-Konformit&#228;t | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ANSI [C++]"
-  - "ANSI [C++], C-Standard"
+title: "ANSI-Konformität | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ANSI [C++]
+- ANSI [C++], C standard
 ms.assetid: c3a188c8-42bc-41fb-a78d-637f3175ade0
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# ANSI-Konformit&#228;t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: f941cb7461270100ef6ef0eac8b5d92ff1bcfb70
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Microsoft C entspricht dem Standard der Programmiersprache C wie in der Version 9899:1990 des ANSI C\-Standards festgelegt.  
+---
+# <a name="ansi-conformance"></a>ANSI-Konformität
+Microsoft C entspricht dem Standard der Programmiersprache C wie in der Version 9899:1990 des ANSI C-Standards festgelegt.  
   
- Microsoft\-Erweiterungen für den ANSI C\-Standard werden im Text und in der Syntax dieses Buchs sowie in der Onlinereferenz aufgeführt.  Da die Erweiterungen nicht Teil des ANSI C\-Standards sind, schränkt ihre Verwendung die Portabilität von Programmen zwischen Systemen möglicherweise ein.  Standardmäßig werden die Microsoft\-Erweiterungen aktiviert.  Um die Erweiterungen zu deaktivieren, geben Sie die Compileroption "\/Za" an.  Mit "\/Za" werden bei jeglichem Code, der nicht ANSI entspricht, Fehler oder Warnungen generiert.  
+ Microsoft-Erweiterungen für den ANSI C-Standard werden im Text und in der Syntax dieses Buchs sowie in der Onlinereferenz aufgeführt. Da die Erweiterungen nicht Teil des ANSI C-Standards sind, schränkt ihre Verwendung die Portabilität von Programmen zwischen Systemen möglicherweise ein. Standardmäßig werden die Microsoft-Erweiterungen aktiviert. Um die Erweiterungen zu deaktivieren, geben Sie die Compileroption "/Za" an. Mit "/Za" werden bei jeglichem Code, der nicht ANSI entspricht, Fehler oder Warnungen generiert.  
   
-## Siehe auch  
- [Organisation des C\-Sprachverzeichnisses](../c-language/organization-of-the-c-language-reference.md)
+## <a name="see-also"></a>Siehe auch  
+ [Organisation der C-Programmiersprachenreferenz](../c-language/organization-of-the-c-language-reference.md)

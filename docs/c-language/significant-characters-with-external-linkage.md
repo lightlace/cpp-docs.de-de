@@ -1,28 +1,45 @@
 ---
-title: "Bedeutende Zeichen mit externer Verkn&#252;pfung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Signifikante Zeichen mit externer Verknüpfung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 6f3b7e26-3fb0-4975-a95d-23a2072c1186
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Bedeutende Zeichen mit externer Verkn&#252;pfung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: e3a98479f42782bb403b43024877b742022156bd
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-**ANSI 3.1.2** Die Anzahl von signifikanten Zeichen mit externer Bindung  
+---
+# <a name="significant-characters-with-external-linkage"></a>Signifikante Zeichen mit externer Bindung
+**ANSI 3.1.2** Die Anzahl von signifikanten Zeichen mit externer Verknüpfung  
   
- Für als `extern` deklarierte Bezeichner in Programmen, die mit Microsoft C kompiliert werden, sind bis zu 247 Zeichen signifikant.  Sie können diesen Standardwert in eine kleinere Zahl ändern, indem Sie die Option "\/H" verwenden \(Längeneinschränkung von externen Namen\).  
+ Für als `extern` deklarierte Bezeichner in Programmen, die mit Microsoft C kompiliert werden, sind bis zu 247 Zeichen signifikant. Sie können diesen Standardwert in eine kleinere Zahl ändern, indem Sie die Option "/H" verwenden (Längeneinschränkung von externen Namen).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von "extern" zur Angabe der Verknüpfung](../cpp/using-extern-to-specify-linkage.md)

@@ -1,41 +1,62 @@
 ---
-title: "Eindimensionale Arrays | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arrays [C++], Eindimensional"
-  - "Klammern [ ]"
-  - "Klammern [ ], Arrays"
-  - "Eindimensionale Arrays"
-  - "Eckige Klammern [ ]"
-  - "Eckige Klammern [ ], Arrays"
-  - "Indexausdrücke"
+title: Eindimensionale Arrays | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- brackets [ ]
+- brackets [ ], arrays
+- one-dimensional arrays
+- arrays [C++], one-dimensional
+- square brackets [ ]
+- square brackets [ ], arrays
+- subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Eindimensionale Arrays
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0edd36d539fe597bec8fc34a8c7e4e0e3b8e526a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Ein Postfixausdruck, gefolgt von einem Ausdruck in eckigen Klammern \(**\[ \]**\), ist eine indizierte Darstellung eines Elements eines Arrayobjekts.  Ein Indexausdruck stellt den Wert an der Adresse dar, welche die *expression* hinter *postfix\-expression* positioniert, wenn diese ausgedrückt wird als  
+---
+# <a name="one-dimensional-arrays"></a>Eindimensionale Arrays
+Ein Postfixausdruck, gefolgt von einem Ausdruck in eckigen Klammern (**[ ]**), ist eine indizierte Darstellung eines Elements eines Arrayobjekts. Ein Indexausdruck stellt den Wert an der Adresse dar, welche die *expression* hinter *postfix-expression* positioniert, wenn diese ausgedrückt wird als  
   
 ```  
   
-postfix-expression [ expression ]  
+postfix-expression  
+[  
+expression  
+]  
+  
 ```  
   
- Normalerweise ist der von *postfix\-expression* dargestellte Wert ein Zeigerwert, z. B. ein Arraybezeichner, und *expression* ist ein Ganzzahlwert.  Syntaktisch erforderlich ist allerdings nur, dass einer der Ausdrücke vom Zeigertyp und der andere Ausdruck vom Ganzzahltyp ist.  Daher kann sich der ganzzahlige Wert an der *postfix\-expression*\-Position befinden, und der Zeigerwert kann sich in eckigen Klammern an der *expression*\- oder der "Index"\-Position befinden.  Beispielsweise ist folgender Code gültig:  
+ Normalerweise ist der von *postfix-expression* dargestellte Wert ein Zeigerwert, z. B. ein Arraybezeichner, und *expression* ist ein Ganzzahlwert. Syntaktisch erforderlich ist allerdings nur, dass einer der Ausdrücke vom Zeigertyp und der andere Ausdruck vom Ganzzahltyp ist. Daher kann der ganzzahlige Wert an der *postfix-expression*-Position sein, und der Zeigerwert kann in eckigen Klammern an der *expression*- oder der „Index“-Position sein. Beispielsweise ist folgender Code gültig:  
   
 ```  
 // one_dimensional_arrays.c  
@@ -46,9 +67,9 @@ int main() {
 }  
 ```  
   
- Indexausdrücke werden im Allgemeinen verwendet, um auf Arrayelemente zu verweisen. Sie können einen Index jedoch auf jeden Zeiger anwenden.  Ungeachtet der Reihenfolge der Werte muss *expression* in eckige Klammern \(**\[ \]**\) eingeschlossen werden.  
+ Indexausdrücke werden im Allgemeinen verwendet, um auf Arrayelemente zu verweisen. Sie können einen Index jedoch auf jeden Zeiger anwenden. Ungeachtet der Reihenfolge der Werte muss *expression* in eckige Klammern (**[ ]**) eingeschlossen werden.  
   
- Der Indexausdruck wird ausgewertet, indem der Zeigerwert zum ganzzahligen Wert hinzugefügt wird, bevor der Dereferenzierungsoperator \(**\***\) auf das Ergebnis angewandt wird. \(Eine Erläuterung des Dereferenzierungsoperators finden Sie unter [Dereferenzierungs\- und Address\-of\-Operatoren](../c-language/indirection-and-address-of-operators.md)\). Für ein eindimensionales Array sind die folgenden vier Ausdrücke gleichwertig, vorausgesetzt, dass `a` ein Zeiger ist und `b` eine ganze Zahl darstellt:  
+ Der Indexausdruck wird ausgewertet, indem der Zeigerwert zum ganzzahligen Wert hinzugefügt wird, bevor der Dereferenzierungsoperator (**\***) auf das Ergebnis angewandt wird. (Eine Erläuterung des Dereferenzierungsoperators finden Sie unter [Dereferenzierungs- und Address-of-Operatoren](../c-language/indirection-and-address-of-operators.md).) Für ein eindimensionales Array sind die folgenden vier Ausdrücke gleichwertig, vorausgesetzt, dass `a` ein Zeiger ist und `b` eine ganze Zahl darstellt:  
   
 ```  
 a[b]  
@@ -57,17 +78,17 @@ a[b]
 b[a]  
 ```  
   
- Gemäß den Konvertierungsregeln für den Additionsoperator \(angegeben in [additive Operatoren](../c-language/c-additive-operators.md)\), wird der Ganzzahlwert in einen Adressoffset konvertiert, indem er durch die Länge des Typs multipliziert wird, der vom Zeiger adressiert wird.  
+ Gemäß den Konvertierungsregeln für den Additionsoperator (angegeben in [Additive Operators](../c-language/c-additive-operators.md) [Additive Operatoren]), wird der Ganzzahlwert in einen Adressoffset konvertiert, indem er durch die Länge des Typs multipliziert wird, der vom Zeiger adressiert wird.  
   
- Nehmen Sie z. B. an, der Bezeichner `line` verweist auf ein Array von `int`\-Werten.  Der Indexausdruck `line[ i ]` wird mit folgendem Verfahren ausgewertet:  
+ Nehmen Sie z. B. an, der Bezeichner `line` verweist auf ein Array von `int`-Werten. Der Indexausdruck `line[ i ]` wird mit folgendem Verfahren ausgewertet:  
   
-1.  Der Ganzzahlwert `i` wird mit der Zahl der Bytes, die als die Länge eines `int`\-Elements definiert ist, multipliziert.  Der konvertierte Wert von `i` stellt `i` `int` Positionen dar.  
+1.  Der Ganzzahlwert `i` wird mit der Zahl der Bytes, die als die Länge eines `int`-Elements definiert ist, multipliziert. Der konvertierte Wert von `i` stellt `i` `int`-Positionen dar.  
   
-2.  Dieser konvertierte Wert wird dem ursprünglichen Zeigerwert \(`line`\) hinzugefügt, um eine Adresse zu erhalten, die um `i` `int` Positionen von `line` versetzt ist.  
+2.  Dieser konvertierte Wert wird dem ursprünglichen Zeigerwert (`line`) hinzugefügt, um eine Adresse zu erhalten, die um `i` `int`-Positionen von `line` versetzt ist.  
   
-3.  Der Dereferenzierungsoperator wird auf die neue Adresse angewendet.  Das Ergebnis ist der Wert des Arrayelements an dieser Position \(intuitiv `line [ i ]`\).  
+3.  Der Dereferenzierungsoperator wird auf die neue Adresse angewendet. Das Ergebnis ist der Wert des Arrayelements an dieser Position (intuitiv `line [ i ]`).  
   
- Der Indexausdruck `line[0]` stellt den Wert des ersten Elements der Zeile dar, da der Offset der Adresse, die von `line` dargestellt wird, 0 ist.  Gleichermaßen verweist ein Ausdruck wie `line[5]` auf den Elementoffset fünf Positionen ab der Zeile oder auf das sechste Element des Arrays.  
+ Der Indexausdruck `line[0]` stellt den Wert des ersten Elements der Zeile dar, da der Offset der Adresse, die von `line` dargestellt wird, 0 ist. Gleichermaßen verweist ein Ausdruck wie `line[5]` auf den Elementoffset fünf Positionen ab der Zeile oder auf das sechste Element des Arrays.  
   
-## Siehe auch  
- [Tiefgestellt\-Operator:](../cpp/subscript-operator.md)
+## <a name="see-also"></a>Siehe auch  
+ [Subscript-Operator: ](../cpp/subscript-operator.md)

@@ -1,28 +1,45 @@
 ---
-title: "Beispielprogramm | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Beispielprogramm | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Beispielprogramm
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: a26a09da1a1653c71ce299be94556eba2236aefd
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Das folgende C\-Quellprogramm besteht aus zwei Quelldateien.  Es vermittelt eine Übersicht über einige der verschiedenen Deklarationen und Definitionen, die in einem C\-Programm möglich sind.  In späteren Abschnitten dieses Buchs wird beschrieben, wie diese Deklarationen, Definitionen und Initialisierungen geschrieben und C\-Schlüsselwörter wie **static** und `extern` verwendet werden.  Die `printf`\-Funktion wird in der C\-Headerdatei STDIO.H deklariert.  
+---
+# <a name="example-program"></a>Beispielprogramm
+Das folgende C-Quellprogramm besteht aus zwei Quelldateien. Es vermittelt eine Übersicht über einige der verschiedenen Deklarationen und Definitionen, die in einem C-Programm möglich sind. In späteren Abschnitten dieses Buchs wird beschrieben, wie diese Deklarationen, Definitionen und Initialisierungen geschrieben und C-Schlüsselwörter wie **static** und `extern` verwendet werden. Die `printf`-Funktion wird in der C-Headerdatei STDIO.H deklariert.  
   
- Die Funktionen `main` und `max` befinden sich in separaten Dateien, und die Ausführung des Programms beginnt mit der `main`\-Funktion.  Es werden keine expliziten Benutzerfunktionen vor `main` ausgeführt.  
+ Die Funktionen `main` und `max` befinden sich in separaten Dateien, und die Ausführung des Programms beginnt mit der `main`-Funktion. Es werden keine expliziten Benutzerfunktionen vor `main` ausgeführt.  
   
 ```  
 /*****************************************************************  
@@ -74,13 +91,13 @@ int max( int a, int b )          // Note formal parameters are
 }  
 ```  
   
- FILE1.C enthält den Prototyp für die `max`\-Funktion.  Diese Art der Deklaration wird manchmal als "Vorwärtsdeklaration" bezeichnet, da die Funktion deklariert wird, bevor sie verwendet wird.  Die Definition für die `main`\-Funktion enthält Aufrufe von `max`.  
+ FILE1.C enthält den Prototyp für die `max`-Funktion. Diese Art der Deklaration wird manchmal als "Vorwärtsdeklaration" bezeichnet, da die Funktion deklariert wird, bevor sie verwendet wird. Die Definition für die `main`-Funktion enthält Aufrufe von `max`.  
   
- Die mit `#define` beginnenden Zeilen sind Präprozessordirektiven.  Diese Direktiven weisen den Präprozessor an, die Bezeichner `ONE`, `TWO` und `THREE` jeweils durch die Zahlen `1`, `2` und `3` in FILE1.C zu ersetzen.  Jedoch gelten die Direktiven nicht für FILE2.C, die separat kompiliert und dann mit FILE1.C. verknüpft wird.  Die mit `#include` beginnende Zeile weist den Compiler an, die Datei STDIO.H einzuschließen, die den Prototyp für die `printf`\-Funktion enthält.  [Präprozessordirektiven](../preprocessor/preprocessor-directives.md) werden in der *Präprozessorreferenz* erläutert.  
+ Die mit `#define` beginnenden Zeilen sind Präprozessordirektiven. Diese Direktiven weisen den Präprozessor an, die Bezeichner `ONE`, `TWO` und `THREE` jeweils durch die Zahlen `1`, `2` und `3` in FILE1.C zu ersetzen. Jedoch gelten die Direktiven nicht für FILE2.C, die separat kompiliert und dann mit FILE1.C. verknüpft wird. Die mit `#include` beginnende Zeile weist den Compiler an, die Datei STDIO.H einzuschließen, die den Prototyp für die `printf`-Funktion enthält. [Präprozessordirektiven](../preprocessor/preprocessor-directives.md) werden in der *Präprozessorreferenz* erläutert.  
   
- FILE1.C verwendet definierende Deklarationen, um die globalen Variablen `a` und `b` zu initialisieren.  Die lokalen Variablen `c` und `d` werden deklariert, aber nicht initialisiert.  Für all diese Variablen wird Speicher zugeordnet.  Die statischen und externen Variablen, `u` und `v`, werden automatisch mit 0 initialisiert.  Daher werden nur `a`, `b`, `u` und `v` sinnvolle Werte enthalten, wenn sie deklariert werden, da sie entweder explizit oder implizit initialisiert werden.  FILE2.C enthält die Funktionsdefinition für `max`.  Diese Definition erfüllt die Aufrufe von `max` in FILE1.C.  
+ FILE1.C verwendet definierende Deklarationen, um die globalen Variablen `a` und `b` zu initialisieren. Die lokalen Variablen `c` und `d` werden deklariert, aber nicht initialisiert. Für all diese Variablen wird Speicher zugeordnet. Die statischen und externen Variablen, `u` und `v`, werden automatisch mit 0 initialisiert. Daher werden nur `a`, `b`, `u` und `v` sinnvolle Werte enthalten, wenn sie deklariert werden, da sie entweder explizit oder implizit initialisiert werden. FILE2.C enthält die Funktionsdefinition für `max`. Diese Definition erfüllt die Aufrufe von `max` in FILE1.C.  
   
- Die Lebensdauer und Sichtbarkeit von Bezeichnern werden unter [Lebensdauer, Bereich, Sichtbarkeit und Verknüpfung](../c-language/lifetime-scope-visibility-and-linkage.md) behandelt.  Weitere Informationen zu Funktionen finden Sie unter [Funktionen](../c-language/functions-c.md).  
+ Die Lebensdauer und Sichtbarkeit von Bezeichnern werden unter [Lebensdauer, Bereich, Sichtbarkeit und Verknüpfung](../c-language/lifetime-scope-visibility-and-linkage.md) behandelt. Weitere Informationen zu Funktionen finden Sie unter [Funktionen](../c-language/functions-c.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Quelldateien und Quellprogramme](../c-language/source-files-and-source-programs.md)

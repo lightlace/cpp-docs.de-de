@@ -1,46 +1,63 @@
 ---
-title: "Freigeben von Konstanten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_SH_DENYNO"
-  - "_SH_DENYRD"
-  - "_SH_DENYRW"
-  - "_SH_DENYWR"
-  - "_SH_COMPAT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_SH_COMPAT-Konstante"
-  - "_SH_DENYNO-Konstante"
-  - "_SH_DENYRD-Konstante"
-  - "_SH_DENYRW-Konstante"
-  - "_SH_DENYWR-Konstante"
-  - "SH_COMPAT-Konstante"
-  - "SH_DENYNO-Konstante"
-  - "SH_DENYRD-Konstante"
-  - "SH_DENYRW-Konstante"
-  - "SH_DENYWR-Konstante"
-  - "Freigeben von Konstanten"
+title: Freigeben von Konstanten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _SH_DENYNO
+- _SH_DENYRD
+- _SH_DENYRW
+- _SH_DENYWR
+- _SH_COMPAT
+dev_langs:
+- C++
+helpviewer_keywords:
+- _SH_DENYRW constant
+- SH_DENYRD constant
+- _SH_COMPAT constant
+- _SH_DENYRD constant
+- SH_DENYRW constant
+- sharing constants
+- SH_DENYNO constant
+- _SH_DENYWR constant
+- SH_DENYWR constant
+- _SH_DENYNO constant
+- SH_COMPAT constant
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Freigeben von Konstanten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: f2cf723738fccb92421f88b6c08405083f08e0fb
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Konstanten für Filesharing\- Modi.  
+---
+# <a name="sharing-constants"></a>Freigeben von Konstanten
+Konstanten für Dateifreigabemodi.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -48,20 +65,20 @@ Konstanten für Filesharing\- Modi.
   
 ```  
   
-## Hinweise  
- Das *shflag*\-Argument bestimmt den Freigabenmodus, der aus mindestens Manifestkonstanten besteht.  Diese können mit den *oflag*\-Argumenten kombiniert werden \(siehe [Datei\-Konstanten](../c-runtime-library/file-constants.md)\).  
+## <a name="remarks"></a>Hinweise  
+ Das *shflag*-Argument, das aus einem oder mehreren Manifestkonstanten besteht, bestimmt den Freigabemodus. Diese können mit den *oflag*-Argumenten kombiniert werden (finden Sie unter [Dateikonstanten](../c-runtime-library/file-constants.md)).  
   
- In der folgenden Tabelle werden Konstanten und ihre Bedeutung auf:  
+ In der folgenden Tabelle werden die Konstanten und ihre Bedeutungen aufgelistet:  
   
 |Konstante|Bedeutung|  
-|---------------|---------------|  
-|`_SH_DENYRW`|Verweigert Lese\- und Schreibzugriff auf die Datei|  
-|`_SH_DENYWR`|Verweigert Schreibzugriff auf die Datei|  
-|`_SH_DENYRD`|Verweigert Lesezugriff auf die Datei|  
-|`_SH_DENYNO`|Ermöglicht die Lese\- und Schreibzugriff|  
-|`_SH_SECURE`|Sätze speichern Modus \(freigegebenes Lesen, einen exklusiven Schreibzugriff\).|  
+|--------------|-------------|  
+|`_SH_DENYRW`|Verweigert den Lese- und Schreibzugriff auf eine Datei.|  
+|`_SH_DENYWR`|Verweigert den Schreibzugriff auf eine Datei.|  
+|`_SH_DENYRD`|Verweigert den Lesezugriff auf eine Datei.|  
+|`_SH_DENYNO`|Erlaubt Lese- und Schreibzugriff.|  
+|`_SH_SECURE`|Legt sicheren Modus fest (freigegebenes Lesen, exklusiver Schreibzugriff).|  
   
-## Siehe auch  
- [\_sopen, \_wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
- [\_fsopen, \_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
+## <a name="see-also"></a>Siehe auch  
+ [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
+ [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
  [Globale Konstanten](../c-runtime-library/global-constants.md)

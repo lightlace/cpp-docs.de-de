@@ -1,47 +1,64 @@
 ---
-title: "Mathematische Fehlerkonstanten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_PLOSS"
-  - "_UNDERFLOW"
-  - "_TLOSS"
-  - "_SING"
-  - "_DOMAIN"
-  - "_OVERFLOW"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_DOMAIN-Konstante"
-  - "_OVERFLOW-Konstante"
-  - "_PLOSS-Konstante"
-  - "_SING-Konstante"
-  - "_TLOSS-Konstante"
-  - "_UNDERFLOW-Konstante"
-  - "DOMAIN-Konstante"
-  - "Mathematische Fehlerkonstanten"
-  - "OVERFLOW-Konstante"
-  - "PLOSS-Konstante"
-  - "SING-Konstante"
-  - "TLOSS-Konstante"
-  - "UNDERFLOW-Konstante"
+title: Math-Fehlerkonstanten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _PLOSS
+- _UNDERFLOW
+- _TLOSS
+- _SING
+- _DOMAIN
+- _OVERFLOW
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TLOSS constant
+- _SING constant
+- PLOSS constant
+- UNDERFLOW constant
+- _UNDERFLOW constant
+- _OVERFLOW constant
+- DOMAIN constant
+- OVERFLOW constant
+- TLOSS constant
+- SING constant
+- _DOMAIN constant
+- _PLOSS constant
+- math error constants
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Mathematische Fehlerkonstanten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 8dd5321d924d02ef7669166a210b193329abc13a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-## Syntax  
+---
+# <a name="math-error-constants"></a>Mathematische Fehlerkonstanten
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -49,20 +66,20 @@ caps.handback.revision: 6
   
 ```  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Die mathematischen Routinen der Laufzeitbibliothek können mathematische Fehlerkonstanten generieren.  
   
- Diese Fehler, wie folgt beschrieben, entsprechen den Ausnahmetypen, die in MATH.H definiert und werden durch die `_matherr`\-Funktion zurückgegeben, wenn eine mathematische Fehler auftritt.  
+ Die im Folgenden beschriebenen Fehler entsprechen den Ausnahmetypen, die in MATH.H definiert sind, und werden von der `_matherr`-Funktion zurückgegeben, wenn ein mathematischer Fehler auftritt.  
   
 |Konstante|Bedeutung|  
-|---------------|---------------|  
-|`_DOMAIN`|Das Argument umgehen äußere Domäne der Funktion.|  
-|`_OVERFLOW`|Ergebnis ist zu groß, im Rückgabetyp der Funktion dargestellt.|  
-|`_PLOSS`|Teilverlust an Signifikanz aufgetreten.|  
-|`_SING`|Argumenteigenheit: Argument für Funktion verfügt über ungültige Wert. \(Beispiel, wird der Wert 0 übergeben, um zu arbeiten, der ungleich 0 \(null\) erfordert.\)|  
-|`_TLOSS`|Gesamter Verlust des Schritts ist aufgetreten.|  
-|`_UNDERFLOW`|Ergebnis ist zu klein dargestellt.|  
+|--------------|-------------|  
+|`_DOMAIN`|Das Argument für die Funktion befindet sich außerhalb der Domäne der Funktion.|  
+|`_OVERFLOW`|Das Ergebnis ist zu groß, um im Rückgabetyp der Funktion dargestellt werden zu können.|  
+|`_PLOSS`|Ein teilweiser Signifikanzverlust ist aufgetreten.|  
+|`_SING`|Argumentsingularität: Das Argument für die Funktion enthält einen ungültigen Wert. (Beispiel: Es wird ein Wert von 0 an eine Funktion übergeben, die einen Wert ungleich null erfordert.)|  
+|`_TLOSS`|Ein Verlust der gesamten Signifikanz ist aufgetreten.|  
+|`_UNDERFLOW`|Das Ergebnis ist zu klein, um dargestellt werden zu können.|  
   
-## Siehe auch  
- [\_matherr](../c-runtime-library/reference/matherr.md)   
+## <a name="see-also"></a>Siehe auch  
+ [_matherr](../c-runtime-library/reference/matherr.md)   
  [Globale Konstanten](../c-runtime-library/global-constants.md)

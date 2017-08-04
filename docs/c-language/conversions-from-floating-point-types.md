@@ -1,66 +1,83 @@
 ---
-title: "Konvertierungen von Gleitkommatypen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Konvertieren von Gleitkommazahlen"
-  - "Gleitkommakonvertierung"
+title: Konvertierungen von Gleitkommatypen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- converting floating point
+- floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Konvertierungen von Gleitkommatypen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: dc37188d46029319cff88de9b2402744c17311c8
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Ein **float**\-Wert, der in einen **double**\- oder `long double`\-Wert konvertiert wird, oder ein **double**\-Wert, der in einen `long double`\-Wert konvertiert wird, erfährt keine Änderung des Werts.  Ein **double**\-Wert, der in einen **float**\-Wert konvertiert wird, wird exakt dargestellt, sofern dies möglich ist.  Genauigkeit geht möglicherweise verloren, wenn der Wert nicht exakt dargestellt werden kann.  Wenn das Ergebnis außerhalb des gültigen Bereichs liegt, ist das Verhalten nicht definiert.  Weitere Informationen über den Bereich von Gleitkommatypen erhalten Sie unter [Grenzwerte für Gleitkommakonstanten](../c-language/limits-on-floating-point-constants.md).  
+---
+# <a name="conversions-from-floating-point-types"></a>Konvertierungen von Gleitkommatypen
+Bei einem **float**-Wert, der in einen **double**- oder `long double`-Wert konvertiert wird, oder einem **double**-Wert, der in einen `long double`-Wert konvertiert wird, wird keine Änderung des Werts vorgenommen. Ein **double**-Wert, der in einen **float**-Wert konvertiert wird, wird exakt dargestellt, sofern dies möglich ist. Genauigkeit geht möglicherweise verloren, wenn der Wert nicht exakt dargestellt werden kann. Wenn das Ergebnis außerhalb des gültigen Bereichs liegt, ist das Verhalten nicht definiert. Weitere Informationen über den Bereich von Gleitkommatypen erhalten Sie unter [Grenzwerte für Gleitkommakonstanten](../c-language/limits-on-floating-point-constants.md).  
   
- Ein Gleitkommawert wird in einen ganzzahligen Wert konvertiert, indem er zuerst in einen **long**\-Wert und dann von dem **long**\-Wert in den spezifischen ganzzahligen Wert konvertiert wird.  Die Nachkommastellen des Gleitkommawerts werden bei der Konvertierung in **long** verworfen.  Wenn das Ergebnis immer noch zu groß ist, um in **long** zu passen, ist das Ergebnis der Konvertierung nicht definiert.  
+ Ein Gleitkommawert wird in einen ganzzahligen Wert konvertiert, indem er zuerst in einen **long**-Wert und dann von dem **long**-Wert in den spezifischen ganzzahligen Wert konvertiert wird. Die Nachkommastellen des Gleitkommawerts werden bei der Konvertierung in **long** verworfen. Wenn das Ergebnis immer noch zu groß ist, um in **long** zu passen, ist das Ergebnis der Konvertierung nicht definiert.  
   
- **Microsoft\-spezifisch**  
+ **Microsoft-spezifisch**  
   
- Wenn eine **double**\- oder `long double`\-Gleitkommazahl in eine kleinere Gleitkommazahl umgewandelt wird und ein Unterlauf auftritt, wird der Wert der Gleitkommavariablen in Richtung 0 \(null\) abgeschnitten.  Ein Überlauf verursacht einen Laufzeitfehler.  Beachten Sie, dass der Microsoft C\-Compiler `long double` dem Typ **double** zuordnet.  
+ Wenn eine **double**- oder `long double`-Gleitkommazahl in eine kleinere Gleitkommazahl umgewandelt wird und ein Unterlauf auftritt, wird der Wert der Gleitkommavariable in Richtung null abgeschnitten. Ein Überlauf verursacht einen Laufzeitfehler. Beachten Sie, dass der Microsoft C-Compiler `long double` dem Typ **double** zuordnet.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
  In der folgenden Tabelle werden die Konvertierungen von Gleitkommatypen zusammengefasst.  
   
-### Konvertierungen von Gleitkommatypen  
+### <a name="conversions-from-floating-point-types"></a>Konvertierungen von Gleitkommatypen  
   
-|Von|Zweck|Methode|  
-|---------|-----------|-------------|  
-|**float**|`char`|Konvertieren zu **long**; Konvertieren von **long** zu `char`|  
-|**float**|**short**|Konvertieren zu **long**; Konvertieren von **long** zu **short**|  
-|**float**|**long**|Beim Dezimaltrennzeichen abschneiden.  Wenn das Ergebnis zu groß ist, um als **long** dargestellt zu werden, ist das Ergebnis nicht definiert.|  
-|**float**|**unsigned short**|Konvertieren zu **long**; Konvertieren von **long** zu `unsigned` **short**|  
-|**float**|`unsigned long`|Konvertieren zu **long**; Konvertieren von **long** zu `unsigned` **long**|  
+|Von|Beschreibung|Methode|  
+|----------|--------|------------|  
+|**float**|`char`|Konvertieren in **long**; Konvertieren von **long** in `char`|  
+|**float**|**short**|Konvertieren in **long**; Konvertieren von **long** in **short**|  
+|**float**|**long**|Beim Dezimaltrennzeichen abschneiden. Wenn das Ergebnis zu groß ist, um als **long** dargestellt zu werden, ist das Ergebnis nicht definiert.|  
+|**float**|**unsigned short**|Konvertieren in **long**; Konvertieren von **long** in `unsigned` **short**|  
+|**float**|`unsigned long`|Konvertieren in **long**; Konvertieren von **long** in `unsigned` **long**|  
 |**float**|**double**|Ändern der internen Darstellung|  
 |**float**|`long double`|Ändern der internen Darstellung|  
-|**double**|`char`|Konvertieren zu **float**; Konvertieren von **float** zu `char`|  
-|**double**|**short**|Konvertieren zu **float**; Konvertieren von **float** zu **short**|  
-|**double**|**long**|Beim Dezimaltrennzeichen abschneiden.  Wenn das Ergebnis zu groß ist, um als **long** dargestellt zu werden, ist das Ergebnis nicht definiert.|  
-|**double**|**unsigned short**|Konvertieren zu **long**; Konvertieren von **long** zu **unsigned short**|  
-|**double**|`unsigned long`|Konvertieren zu **long**; Konvertieren von **long** zu `unsigned` **long**|  
-|**double**|**float**|Darstellen als **float**.  Wenn ein **double**\-Wert nicht exakt als **float** dargestellt werden kann, tritt ein Genauigkeitsverlust auf.  Wenn der Wert zu groß ist, um als **float** dargestellt zu werden, ist das Ergebnis nicht definiert.|  
-|`long double`|`char`|Konvertieren zu **float**; Konvertieren von **float** zu `char`|  
-|`long double`|**short**|Konvertieren zu **float**; Konvertieren von **float** zu **short**|  
-|`long double`|**long**|Beim Dezimaltrennzeichen abschneiden.  Wenn das Ergebnis zu groß ist, um als **long** dargestellt zu werden, ist das Ergebnis nicht definiert.|  
-|`long double`|**unsigned short**|Konvertieren zu **long**; Konvertieren von **long** zu `unsigned` **short**|  
-|`long double`|`unsigned long`|Konvertieren zu **long**; Konvertieren von **long** zu `unsigned` **long**|  
-|`long double`|**float**|Darstellen als **float**.  Wenn ein **double**\-Wert nicht exakt als **float** dargestellt werden kann, tritt ein Genauigkeitsverlust auf.  Wenn der Wert zu groß ist, um als **float** dargestellt zu werden, ist das Ergebnis nicht definiert.|  
+|**double**|`char`|Konvertieren in **float**; Konvertieren von **float** in `char`|  
+|**double**|**short**|Konvertieren in **float**; Konvertieren von **float** in **short**|  
+|**double**|**long**|Beim Dezimaltrennzeichen abschneiden. Wenn das Ergebnis zu groß ist, um als **long** dargestellt zu werden, ist das Ergebnis nicht definiert.|  
+|**double**|**unsigned short**|Konvertieren in **long**; Konvertieren von **long** in **unsigned short**|  
+|**double**|`unsigned long`|Konvertieren in **long**; Konvertieren von **long** in `unsigned` **long**|  
+|**double**|**float**|Darstellen als **float**. Wenn ein **double**-Wert nicht exakt als **float** dargestellt werden kann, tritt ein Genauigkeitsverlust auf. Wenn der Wert zu groß ist, um als **float** dargestellt zu werden, ist das Ergebnis nicht definiert.|  
+|`long double`|`char`|Konvertieren in **float**; Konvertieren von **float** in `char`|  
+|`long double`|**short**|Konvertieren in **float**; Konvertieren von **float** in **short**|  
+|`long double`|**long**|Beim Dezimaltrennzeichen abschneiden. Wenn das Ergebnis zu groß ist, um als **long** dargestellt zu werden, ist das Ergebnis nicht definiert.|  
+|`long double`|**unsigned short**|Konvertieren in **long**; Konvertieren von **long** in `unsigned` **short**|  
+|`long double`|`unsigned long`|Konvertieren in **long**; Konvertieren von **long** in `unsigned` **long**|  
+|`long double`|**float**|Darstellen als **float**. Wenn ein **double**-Wert nicht exakt als **float** dargestellt werden kann, tritt ein Genauigkeitsverlust auf. Wenn der Wert zu groß ist, um als **float** dargestellt zu werden, ist das Ergebnis nicht definiert.|  
 |`long double`|**double**|Der Wert **long double** wird als **double** behandelt.|  
   
- Konvertierungen von **float**, **double** oder `long double`\-Werten zu `unsigned long` sind nicht genau, wenn der Wert, der konvertiert wird, größer als der maximale positive **long**\-Wert ist.  
+ Konvertierungen von **float**, **double** oder `long double`-Werten in `unsigned long` sind nicht genau, wenn der Wert, der konvertiert wird, größer als der maximale positive **long**-Wert ist.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Zuweisungskonvertierungen](../c-language/assignment-conversions.md)

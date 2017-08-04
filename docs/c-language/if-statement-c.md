@@ -1,47 +1,64 @@
 ---
-title: "if-Anweisung (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "else"
-  - "if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "else-Klauseln"
-  - "else-Schlüsselwort [C]"
-  - "if-Schlüsselwort [C]"
-  - "if-Schlüsselwort [C], if-Anweisung (Syntax)"
-  - "Geschachtelte Anweisungen"
+title: if-Anweisung (C) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- else
+- if
+dev_langs:
+- C++
+helpviewer_keywords:
+- if keyword [C]
+- else clauses
+- else keyword [C]
+- if keyword [C], if statement syntax
+- nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# if-Anweisung (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 91da64a12f687063e65dd2045709a9b65bb93f0c
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Die Anweisung **if** steuert die bedingte Verzweigung.  Der Text einer **if**\-Anweisung wird ausgeführt, wenn der Wert des Ausdrucks ungleich 0 \(null\) ist.  Die Syntax für die **if**\-Anweisung weist zwei Formen auf.  
+---
+# <a name="if-statement-c"></a>if-Anweisung (C)
+Die Anweisung **if** steuert den bedingten Branch. Der Text einer **if**-Anweisung wird ausgeführt, wenn der Wert des Ausdrucks ungleich 0 (null) ist. Die Syntax für die **if**-Anweisung weist zwei Formen auf.  
   
-## Syntax  
- *selection\-statement*:  
- **if \(**  *expression*  **\)**  *statement*  
+## <a name="syntax"></a>Syntax  
+ *selection-statement*:  
+ **if (**  *expression*  **)**  *statement*  
   
- **if \(**  *expression*  **\)**  *statement*  **else**  *statement*  
+ **if (**  *expression*  **)**  *statement*  **else**  *statement*  
   
- In beiden Formen der **if**\-Anweisung werden Ausdrücke ausgewertet, die über einen beliebigen Wert außer einer Struktur verfügen können, einschließlich aller Nebeneffekte.  
+ In beiden Formen der **if**-Anweisung werden Ausdrücke ausgewertet, die über einen beliebigen Wert außer einer Struktur verfügen können, einschließlich aller Nebeneffekte.  
   
- In der ersten Form der Syntax, wenn *expression* auf "true" \(Wert ungleich 0\) festgelegt ist, wird *statement* ausgeführt.  Wenn *expression* "false" ist, wird *statement* ignoriert.  In der zweiten Form der Syntax, die **else** verwendet, wird die zweite *statement* ausgeführt, wenn *expression* "false" ist.  Bei beiden Formen geht die Steuerung von der **if**\-Anweisung zur nächsten Anweisung im Programm, es sei denn, eine der Anweisungen enthält **break**, **continue** oder `goto`.  
+ In der ersten Form der Syntax, wenn *expression* auf „true“ (Wert ungleich 0 [null]) festgelegt ist, wird *statement* ausgeführt. Wenn *expression* „false“ ist, wird *statement* ignoriert. In der zweiten Form der Syntax, die **else** verwendet, wird das zweite *statement* ausgeführt, wenn *expression* „false“ ist. Bei beiden Formen geht die Steuerung von der **if**-Anweisung zur nächsten Anweisung im Programm, es sei denn, eine der Anweisungen enthält **break**, **continue** oder `goto`.  
   
- Nachfolgend einige Beispiele für die **if**\-Anweisung:  
+ Nachfolgend einige Beispiele für die **if**-Anweisung:  
   
 ```  
 if ( i > 0 )  
@@ -53,9 +70,9 @@ else
 }  
 ```  
   
- In diesem Beispiel wird die Anweisung `y = x/i;` ausgeführt, wenn `i` größer als 0 ist.  Wenn `i` kleiner oder gleich 0 ist, wird `i` `x` und `f( x )` `y` zugewiesen.  Beachten Sie, dass die Anweisung, die die **if**\-Klausel bildet, mit einem Semikolon endet.  
+ In diesem Beispiel wird die Anweisung `y = x/i;` ausgeführt, wenn `i` größer als 0 ist. Wenn `i` kleiner oder gleich 0 ist, wird `i` `x` und `f( x )` `y` zugewiesen. Beachten Sie, dass die Anweisung, die die **if**-Klausel bildet, mit einem Semikolon endet.  
   
- Wenn Sie **if**\-Anweisungen und **else**\-Klauseln schachteln, verwenden Sie geschweifte Klammern, um die Anweisungen und Klauseln in Verbundanweisungen zu gruppieren, die Ihre Absicht verdeutlichen.  Wenn keine Klammern vorhanden sind, löst der Compiler Mehrdeutigkeiten auf, indem er jedes **else** dem nächstliegenden **if** zuordnet, dem ein **else** fehlt.  
+ Wenn Sie **if**-Anweisungen und **else**-Klauseln schachteln, verwenden Sie geschweifte Klammern, um die Anweisungen und Klauseln in Verbundanweisungen zu gruppieren, die Ihre Absicht verdeutlichen. Wenn keine Klammern vorhanden sind, löst der Compiler Mehrdeutigkeiten auf, indem er jedes **else** dem nächstliegenden **if** zuordnet, dem ein **else** fehlt.  
   
 ```  
 if ( i > 0 )           /* Without braces */  
@@ -65,7 +82,7 @@ if ( i > 0 )           /* Without braces */
         x = i;  
 ```  
   
- Die Klausel **else** ist mit der inneren **if**\-Anweisung in diesem Beispiel verbunden.  Wenn `i` kleiner oder gleich 0 ist, wird `x` kein Wert zugewiesen.  
+ Die Klausel **else** ist mit der inneren **if**-Anweisung in diesem Beispiel verbunden. Wenn `i` kleiner oder gleich 0 ist, wird `x` kein Wert zugewiesen.  
   
 ```  
 if ( i > 0 )   
@@ -77,7 +94,7 @@ else
     x = i;  
 ```  
   
- Die geschweiften Klammern, die die innere **if**\-Anweisung in diesem Beispiel umgeben, machen den **else**\-Teil der Klausel der äußeren **if**\-Anweisung aus.  Wenn `i` kleiner oder gleich 0 ist, wird `x` `i` zugewiesen.  
+ Die geschweiften Klammern, die die innere **if**-Anweisung in diesem Beispiel umgeben, machen den **else**-Teil der Klausel der äußeren **if**-Anweisung aus. Wenn `i` kleiner oder gleich 0 ist, wird `i` `x` zugewiesen.  
   
-## Siehe auch  
- [if\-else\-Anweisung \(C\+\+\)](../cpp/if-else-statement-cpp.md)
+## <a name="see-also"></a>Siehe auch  
+ [if-else-Anweisung (C++)](../cpp/if-else-statement-cpp.md)

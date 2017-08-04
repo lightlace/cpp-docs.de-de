@@ -1,54 +1,73 @@
 ---
-title: "Argumente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Argumente [C++], Funktion"
-  - "Funktionsargumente"
-  - "Funktionsaufrufe, Argumente"
-  - "Funktionsparameter"
-  - "Funktionsparameter, Informationen über Funktionsparameter"
-  - "Funktionen [C], Parameter"
+title: Argumente | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], function
+- function parameters
+- functions [C], parameters
+- function parameters, about function parameters
+- function arguments
+- function calls, arguments
 ms.assetid: 14cf0389-2265-41f0-9a96-f2223eb406ca
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Argumente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: f755a77679348085f5b5ceb38665351221889c7b
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="arguments"></a>Argumente
 Die Argumente in einem Funktionsaufruf haben folgendes Format:  
   
 ```  
   
-expression ( expression-list <SUB>opt</SUB> )  /* Function call */  
+expression  
+(  
+expression-list <SUB>opt</SUB> )  /* Function call */  
 ```  
   
- In einem Funktionsaufruf ist *expression\-list* eine Liste von Ausdrücken \(durch Trennzeichen getrennt\).  Die Werte dieser letzten Ausdrücke sind die Argumente, die an die Funktion übergeben werden.  Wenn die Funktion keine Argumente akzeptiert, sollte *expression\-list* das Schlüsselwort `void` enthalten.  
+ In einem Funktionsaufruf ist *expression-list* eine Liste von Ausdrücken (durch Kommas getrennt). Die Werte dieser letzten Ausdrücke sind die Argumente, die an die Funktion übergeben werden. Wenn die Funktion keine Argumente akzeptiert, sollte *expression-list* das Schlüsselwort `void` enthalten.  
   
- Ein Argument kann jeder Wert mit grundlegendem, Struktur\-, Union\- oder Zeigertyp sein.  Alle Argumente werden durch einen Wert übergeben.  Dies bedeutet, dass eine Kopie des Arguments den entsprechenden Parameter zugewiesen wird.  Die Funktion kennt die tatsächliche Speicheradresse des übergebenen Arguments nicht.  Die Funktion verwendet diese Kopie, ohne die Variable zu beeinflussen, von der sie ursprünglich abgeleitet wurde.  
+ Ein Argument kann jeder Wert mit grundlegendem, Struktur-, Union- oder Zeigertyp sein. Alle Argumente werden durch einen Wert übergeben. Dies bedeutet, dass eine Kopie des Arguments den entsprechenden Parameter zugewiesen wird. Die Funktion kennt die tatsächliche Speicheradresse des übergebenen Arguments nicht. Die Funktion verwendet diese Kopie, ohne die Variable zu beeinflussen, von der sie ursprünglich abgeleitet wurde.  
   
- Obwohl Sie Arrays oder Funktionen nicht als Argumente übergeben können, können Sie Zeiger an diese Elemente übergeben.  Zeiger bieten eine Möglichkeit, dass eine Funktion auf einen Wert über einen Verweis zugreifen kann.  Da ein Zeiger auf eine Variable die Adresse der Variable enthält, kann die Funktion diese Adresse verwenden, um auf den Wert der Variable zuzugreifen.  Zeigerargumente ermöglichen einer Funktion den Zugriff auf Arrays und Funktionen, obwohl Arrays und Funktionen nicht als Argumente übergeben werden können.  
+ Obwohl Sie Arrays oder Funktionen nicht als Argumente übergeben können, können Sie Zeiger an diese Elemente übergeben. Zeiger bieten eine Möglichkeit, dass eine Funktion auf einen Wert über einen Verweis zugreifen kann. Da ein Zeiger auf eine Variable die Adresse der Variable enthält, kann die Funktion diese Adresse verwenden, um auf den Wert der Variable zuzugreifen. Zeigerargumente ermöglichen einer Funktion den Zugriff auf Arrays und Funktionen, obwohl Arrays und Funktionen nicht als Argumente übergeben werden können.  
   
- Die Reihenfolge, in der Argumente ausgewertet werden, kann zwischen den verschiedenen Compilern und Optimierungsebenen variieren.  Allerdings werden die Argumente und alle Nebeneffekte vollständig ausgewertet, bevor die Funktion eingegeben wird.  Weitere Informationen zu Nebeneffekten finden Sie unter [Nebeneffekte](../c-language/side-effects.md).  
+ Die Reihenfolge, in der Argumente ausgewertet werden, kann zwischen den verschiedenen Compilern und Optimierungsebenen variieren. Allerdings werden die Argumente und alle Nebeneffekte vollständig ausgewertet, bevor die Funktion eingegeben wird. Weitere Informationen zu Nebeneffekten finden Sie unter [Nebeneffekte](../c-language/side-effects.md).  
   
- Die *expression\-list* in einem Funktionsaufruf wird ausgewertet und die üblichen arithmetischen Konvertierungen werden auf jedem Argument im Funktionsaufruf durchgeführt.  Wenn ein Prototyp verfügbar ist, wird der resultierende Argumenttyp mit dem entsprechenden Parameter des Prototyps verglichen.  Wenn sie nicht übereinstimmen, wird entweder eine Konvertierung durchgeführt oder eine Diagnosemeldung ausgegeben.  Die Parameter können auch die üblichen arithmetischen Konvertierungen durchlaufen.  
+ Die *expression-list* in einem Funktionsaufruf wird ausgewertet und die üblichen arithmetischen Konvertierungen werden für jedes Argument im Funktionsaufruf durchgeführt. Wenn ein Prototyp verfügbar ist, wird der resultierende Argumenttyp mit dem entsprechenden Parameter des Prototyps verglichen. Wenn sie nicht übereinstimmen, wird entweder eine Konvertierung durchgeführt oder eine Diagnosemeldung ausgegeben. Die Parameter können auch die üblichen arithmetischen Konvertierungen durchlaufen.  
   
- Die Anzahl von Ausdrücken in der *expression\-list* muss mit der Anzahl von Parametern übereinstimmen, es sei denn, der Prototyp oder die Definition der Funktion gibt explizit eine variable Anzahl von Argumenten an.  In diesem Fall überprüft der Compiler so viele Argumente wie Typnamen in der Liste von Parametern vorhanden sind, und konvertiert sie ggf. wie oben beschrieben.  Weitere Informationen finden Sie unter [Aufrufe mit einer variablen Anzahl von Argumenten](../c-language/calls-with-a-variable-number-of-arguments.md) .  
+ Die Anzahl von Ausdrücken in *expression-list* muss mit der Anzahl von Parametern übereinstimmen, es sei denn, der Prototyp oder die Definition der Funktion gibt explizit eine variable Anzahl von Argumenten an. In diesem Fall überprüft der Compiler so viele Argumente wie Typnamen in der Liste von Parametern vorhanden sind, und konvertiert sie ggf. wie oben beschrieben. Weitere Informationen finden Sie unter [Aufrufe mit einer variablen Anzahl von Argumenten](../c-language/calls-with-a-variable-number-of-arguments.md).  
   
- Wenn die Parameterliste des Prototyps nur das Schlüsselwort `void` enthält, erwartet der Compiler keine Argumente im Funktionsaufruf und keine Parameter in der Definition.  Eine Diagnosemeldung wird ausgegeben, wenn Argumente gefunden werden.  
+ Wenn die Parameterliste des Prototyps nur das Schlüsselwort `void` enthält, erwartet der Compiler keine Argumente im Funktionsaufruf und keine Parameter in der Definition. Eine Diagnosemeldung wird ausgegeben, wenn Argumente gefunden werden.  
   
-## Beispiel  
+## <a name="example"></a>Beispiel  
  In diesem Beispiel werden Zeiger als Argumente verwendet:  
   
 ```  
@@ -76,7 +95,7 @@ void swap( int *num1, int *num2 )
 }  
 ```  
   
- In diesem Beispiel wird die `swap`\-Funktion in `main` deklariert, um zwei Argumente zu erhalten, die von den Bezeichnern `num1` bzw. `num2` dargestellt werden, die beide Zeiger auf `int`\-Werte sind.  Die Parameter `num1` und `num2` in der Prototypdefinition werden ebenfalls als Zeiger auf `int`\-Typwerte deklariert.  
+ In diesem Beispiel wird die `swap`-Funktion in `main` deklariert, um zwei Argumente zu erhalten, die von den Bezeichnern `num1` bzw. `num2` dargestellt werden, die beide Zeiger auf `int`-Werte sind. Die Parameter `num1` und `num2` in der Prototypdefinition werden ebenfalls als Zeiger auf `int`-Typwerte deklariert.  
   
  Im Funktionsaufruf  
   
@@ -84,9 +103,9 @@ void swap( int *num1, int *num2 )
 swap( &x, &y )  
 ```  
   
- wird die Adresse von `x` in `num1` und die Adresse von `y` in `num2` gespeichert.  Jetzt gibt es zwei Namen oder "Aliase" für denselben Speicherort.  Verweise auf `*num1` und `*num2` in `swap` sind gewissermaßen Verweise auf `x` und `y` in `main`.  Die Zuweisungen innerhalb von `swap` tauschen tatsächlich den Inhalt von `x` und `y` aus.  Daher ist keine `return`\-Anweisung erforderlich.  
+ wird die Adresse von `x` in `num1` und die Adresse von `y` in `num2` gespeichert. Jetzt gibt es zwei Namen oder "Aliase" für denselben Speicherort. Verweise auf `*num1` und `*num2` in `swap` sind gewissermaßen Verweise auf `x` und `y` in `main`. Die Zuweisungen innerhalb von `swap` tauschen tatsächlich den Inhalt von `x` und `y` aus. Daher ist keine `return`-Anweisung erforderlich.  
   
- Der Compiler führt eine Typüberprüfung auf den Argumenten zu `swap` aus, da der Prototyp von `swap` Argumenttypen für jeden Parameter einschließt.  Die Bezeichner innerhalb der Klammern des Prototyps und der Definition können gleich oder unterschiedlich sein.  Wichtig ist, dass die Typen der Argumente mit denen der Parameterlisten im Prototyp und in der Definition übereinstimmen.  
+ Der Compiler führt eine Typüberprüfung auf den Argumenten zu `swap` aus, da der Prototyp von `swap` Argumenttypen für jeden Parameter einschließt. Die Bezeichner innerhalb der Klammern des Prototyps und der Definition können gleich oder unterschiedlich sein. Wichtig ist, dass die Typen der Argumente mit denen der Parameterlisten im Prototyp und in der Definition übereinstimmen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Funktionsaufrufe](../c-language/function-calls.md)

@@ -1,36 +1,53 @@
 ---
-title: "E/A auf niedriger Ebene | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.io"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dateihandles [C++]"
-  - "Dateihandles [C++], E/A-Funktionen"
-  - "E/A [CRT], Funktionen"
-  - "E/A [CRT], Auf niedriger Ebene"
-  - "E/A-Routine auf niedriger Ebene"
+title: E/A auf niedriger Ebene | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.io
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [CRT], low-level
+- I/O [CRT], functions
+- low-level I/O routines
+- file handles [C++]
+- file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# E/A auf niedriger Ebene
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 36128b5f262ef84986c2a4e0db1b7eeceee14ec3
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Diese Funktionen rufen das Betriebssystem direkt für Vorgang auf niedrigerer Ebene als das auf, das von Stream\-E\/A bereitgestellt wird.  Eingabe\- und Ausgabeaufrufe systemnahe puffern nicht oder formatieren Daten.  
+---
+# <a name="low-level-io"></a>E/A auf niedriger Ebene
+Diese Funktionen rufen direkt das Betriebssystem für einen Vorgang auf, der sich auf einer niedrigeren Ebene befindet als der durch Stream-E/A bereitgestellte Vorgang. Eingabe- und Ausgabeaufrufe auf niedriger Ebene puffern oder formatieren keine Daten.  
   
- Routinen systemnahe können auf die Standardstreams zugreifen, die beim Programmstart mithilfe der folgenden vordefinierten Dateideskriptoren geöffnet sind.  
+ Routinen auf niedriger Ebene können mit den folgenden vordefinierten Dateideskriptoren auf Standardstreams zugreifen, die beim Programmstart geöffnet werden.  
   
 |Stream|Dateideskriptor|  
 |------------|---------------------|  
@@ -38,29 +55,29 @@ Diese Funktionen rufen das Betriebssystem direkt für Vorgang auf niedrigerer Eb
 |`stdout`|1|  
 |`stderr`|2|  
   
- E\/A\-Routinen systemnahe legen die globale Variablen [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), wenn ein Fehler auftritt.  Sie müssen STDIO.H einschließen, wenn Sie Funktionen auf niedrigerer Ebene nur verwenden, wenn das Programm eine Konstante, die in STDIO.H definiert wird, wie das Dateiende\-Indikator \(`EOF`\) angegeben.  
+ E/A-Routinen auf niedriger Ebene legen die globale Variable [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) fest, wenn ein Fehler auftritt. Sie müssen nur dann STDIO.H bei der Verwendung von Funktionen auf niedriger Ebene einschließen, wenn das Programm eine in STDIO.H definierte Konstante erfordert, z.B. den Indikator für das Dateiende (`EOF`).  
   
-### E\/A Funktionen auf niedriger Ebene  
+### <a name="low-level-io-functions"></a>E/A-Funktionen auf niedriger Ebene  
   
 |Funktion|Verwendung|  
-|--------------|----------------|  
-|[\_close](../c-runtime-library/reference/close.md)|Geben Datei|  
-|[\_commit](../c-runtime-library/reference/commit.md)|Bündige Datei auf Festplatte|  
-|[\_creat, \_wcreat](../c-runtime-library/reference/creat-wcreat.md)|Erstellen Sie eine Datei|  
-|[\_dup](../c-runtime-library/reference/dup-dup2.md)|Nachfolgender verfügbarer RückholDateideskriptor für angegebene Datei|  
-|[\_dup2](../c-runtime-library/reference/dup-dup2.md)|Erstellen Sie zweiten Deskriptor für angegebene Datei|  
-|[\_eof](../c-runtime-library/reference/eof.md)|Test für Dateiende|  
-|[\_lseek, \_lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|Zuordnen Dateizeiger dem angegebenen Speicherort neu an|  
-|[\_open, \_wopen](../c-runtime-library/reference/open-wopen.md)|Geöffnete Datei|  
-|[\_read](../c-runtime-library/reference/read.md)|statt von Datei|  
-|[\_sopen, \_wsopen](../c-runtime-library/reference/sopen-wsopen.md), [\_sopen\_s, \_wsopen\_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Geöffnete Datei für den Datenzugriff|  
-|[\_tell, \_telli64](../c-runtime-library/reference/tell-telli64.md)|Rufen Sie aktuelle Dateizeigerposition ab|  
-|[\_umask](../c-runtime-library/reference/umask.md), [\_umask\_s](../c-runtime-library/reference/umask-s.md)|Legen Sie Dateiberechtigungsmaske fest|  
-|[\_write](../c-runtime-library/reference/write.md)|Schreiben Sie Daten in die Datei|  
+|--------------|---------|  
+|[_close](../c-runtime-library/reference/close.md)|Datei schließen|  
+|[_commit](../c-runtime-library/reference/commit.md)|Datei auf Datenträger leeren|  
+|[_creat, _wcreat](../c-runtime-library/reference/creat-wcreat.md)|Datei erstellen|  
+|[_dup](../c-runtime-library/reference/dup-dup2.md)|Nächsten verfügbaren Dateideskriptor für eine angegebene Datei zurückgeben|  
+|[_dup2](../c-runtime-library/reference/dup-dup2.md)|Zweiten Deskriptor erstellen, für die angegebenen Datei erstellen|  
+|[_eof](../c-runtime-library/reference/eof.md)|Dateiende prüfen|  
+|[_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|Position des Dateizeigers auf einen angegebenen Speicherort ändern|  
+|[_open, _wopen](../c-runtime-library/reference/open-wopen.md)|Datei öffnen|  
+|[_read](../c-runtime-library/reference/read.md)|Daten von Datei lesen|  
+|[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s, _wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Datei für die Dateifreigabe öffnen|  
+|[_tell, _telli64](../c-runtime-library/reference/tell-telli64.md)|Aktuelle Dateizeigerposition abrufen|  
+|[_umask](../c-runtime-library/reference/umask.md), [_umask_s](../c-runtime-library/reference/umask-s.md)|Dateiberechtigungsmaske festlegen|  
+|[_write](../c-runtime-library/reference/write.md)|Daten in Datei schreiben|  
   
- `_dup` und `_dup2` werden in der Regel verwendet, um den vordefinierten Dateideskriptoren mit verschiedenen Dateien zuzuordnen.  
+ `_dup` und `_dup2` werden im Allgemeinen verwendet, um verschiedenen Dateien die vordefinierten Dateideskriptoren zuzuordnen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Eingabe und Ausgabe](../c-runtime-library/input-and-output.md)   
  [Laufzeitroutinen nach Kategorie](../c-runtime-library/run-time-routines-by-category.md)   
  [Systemaufrufe](../c-runtime-library/system-calls.md)

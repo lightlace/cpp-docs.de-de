@@ -1,38 +1,55 @@
 ---
-title: "Windows-Plattformen (CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.programs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Abwärtskompatibilität [C++], Laufzeitbibliotheken in C"
-  - "Kompatibilität [C++], Laufzeitbibliotheken in C"
-  - "CRT, Kompatibilität"
-  - "MBCS [C++], Win32-Plattformen"
-  - "Betriebssysteme [C++]"
-  - "Unicode [C++], Win32-Plattformen"
+title: Windows-Plattformen (CRT) | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRT, compatibility
+- backward compatibility [C++], C run-time libraries
+- compatibility [C++], C run-time libraries
+- MBCS [C++], Win32 platforms
+- operating systems [C++]
+- Unicode [C++], Win32 platforms
 ms.assetid: 0aacaf45-6dc4-4908-bd52-57abac7b39f6
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Windows-Plattformen (CRT)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 15794df0948622e6f3c584c881d1c42b96f1e9e0
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Die C\-Laufzeitbibliotheken für [!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)] die Unterstützung von [!INCLUDE[win8](../build/includes/win8_md.md)], [!INCLUDE[winserver8](../build/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/includes/winsvr08_md.md)], Windows Vista, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 \(SP3\) für x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 \(SP2\) für x64\- und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 \(SP2\) für x86 und x64.  Diese Betriebssysteme unterstützen die Schnittstelle Windows\-Anwendungs\-Programmier \(API\) und räumen Unicode\-Unterstützung.  Darüber hinaus kann jede Win32\-Anwendung einem Mehrbyte\-Zeichensatz \(MBCS\).  
+---
+# <a name="windows-platforms-crt"></a>Windows-Plattformen (CRT)
+Die C Run-Time-Bibliotheken für [!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)] unterstützen folgende Versionen: [!INCLUDE[win8](../build/reference/includes/win8_md.md)], [!INCLUDE[winserver8](../build/reference/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/reference/includes/winsvr08_md.md)], Windows Vista, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3) für x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 (SP2) für x64 und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 (SP2) für x86 und x64. All diese Betriebssysteme unterstützen die Windows-API (Application Programming Interface) sowie Unicode. Darüber hinaus kann jede Win32-Anwendung einen Multibyte-Zeichensatz (Multibyte Character Set, MBCS) verwenden.  
   
 > [!NOTE]
->  [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] unterstützt [!INCLUDE[winxp](../build/includes/winxp_md.md)] nicht [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] und Entwicklung.  Sie müssen [!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)] installieren, um Unterstützung für [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] hinzufügen.  
+>  [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] bietet keine Unterstützung für die [!INCLUDE[winxp](../build/includes/winxp_md.md)]- und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]-Entwicklung. Sie müssen [!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)] installieren, um Unterstützung für [!INCLUDE[winxp](../build/includes/winxp_md.md)] und [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] hinzufügen zu können.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Kompatibilität](../c-runtime-library/compatibility.md)

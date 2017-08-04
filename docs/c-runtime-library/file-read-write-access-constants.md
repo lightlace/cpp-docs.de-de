@@ -1,69 +1,86 @@
 ---
-title: "Datei-Lese-/Schreibzugriffkonstanten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.constants.file"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zugriffkonstanten für Datei-Lese-/Schreibvorgänge"
-  - "Konstanten [C++], Dateiattribute"
-  - "Datei-Lese-/Schreibzugriffkonstanten"
-  - "Lese- und Schreibzugriffkonstanten"
-  - "Schreibzugriffkonstanten"
+title: Datei-Lese-/Schreibzugriffkonstanten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.constants.file
+dev_langs:
+- C++
+helpviewer_keywords:
+- read/write access constants
+- write access constants
+- access constants for file read/write
+- constants [C++], file attributes
+- file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Datei-Lese-/Schreibzugriffkonstanten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 2ec7e14c3bc943405eb115214f9b2eb424180b4e
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-## Syntax  
+---
+# <a name="file-readwrite-access-constants"></a>Datei-Lese-/Schreibzugriffkonstanten
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 #include <stdio.h>  
 ```  
   
-## Hinweise  
- Diese Konstanten geben den Zugriffstyp \("a", "r", oder "w"\) angefordert für die Datei an.  können das [Übersetzungsmodus](../c-runtime-library/file-translation-constants.md) \("b" oder "t"\) und die [Datenträgercommitmodus](../c-runtime-library/commit-to-disk-constants.md) \("c" oder "n"\) mit dem Typ des Zugriffs angegeben werden.  
+## <a name="remarks"></a>Hinweise  
+ Diese Konstanten geben den Zugriffstyp für die angeforderte Datei an („a“, „r“ oder „w“). Sowohl der [Übersetzungsmodus](../c-runtime-library/file-translation-constants.md) („b“ oder „t“) als auch der [commit-to-disk-mode](../c-runtime-library/commit-to-disk-constants.md) („c“ oder „n“) kann mit dem Zugriffstyp angegeben werden.  
   
- Die Zugriffstypen werden nachstehend beschrieben.  
+ Die Zugriffstypen werden nachfolgend beschrieben.  
   
- **"a"**  
- Öffnet sich zum Schreiben am Ende der Datei \(Anfügen\); erstellt die Datei zuerst, wenn es nicht vorhanden ist.  Alle Schreibvorgänge treten am Ende der Datei auf.  Obwohl der Dateizeiger mithilfe von `fseek` bzw. **rewind** neu angeordnet werden kann, wird er immer wieder am Ende der Datei verschoben, bevor ein Schreibvorgang durchgeführt wird.  
+ **„a“**  
+ Öffnet zum Schreiben am Ende der Datei (Anfügen); erstellt die Datei zuerst, wenn sie nicht vorhanden ist. Alle Schreibvorgänge erfolgen am Ende der Datei. Der Dateizeiger kann mit `fseek` oder **rewind** neu angeordnet werden, er wird jedoch immer wieder zurück an das Ende der Datei verschoben, bevor ein Schreibvorgang durchgeführt wird.  
   
- **"a\+"**  
- Wie wie oben, aber ermöglicht auch Lesen.  
+ **„a+“**  
+ Wie oben, erlaubt jedoch auch das Lesen.  
   
  **"r"**  
- Öffnet zum Lesen.  Wenn die Datei nicht gefunden ist nicht vorhanden oder kann, schlägt der Aufruf, um die Datei zu öffnen aus.  
+ Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder nicht gefunden werden kann, tritt beim Aufruf zum Öffnen der Datei ein Fehler auf.  
   
- **"r\+"**  
- Öffnet sowohl zum Lesen als auch zum Schreiben.  Wenn die Datei nicht gefunden ist nicht vorhanden oder kann, schlägt der Aufruf, um die Datei zu öffnen aus.  
+ **„r+“**  
+ Öffnet sowohl zum Lesen als auch zum Schreiben. Wenn die Datei nicht vorhanden ist oder nicht gefunden werden kann, tritt beim Aufruf zum Öffnen der Datei ein Fehler auf.  
   
  **"w"**  
- Öffnet eine leere Datei zum Schreiben.  Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört.  
+ Öffnet eine leere Datei zum Schreiben. Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört.  
   
- **"w\+"**  
- Öffnet eine leere Datei zum Lesen und Schreiben.  Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört.  
+ **„w+“**  
+ Öffnet eine leere Datei zum Lesen und Schreiben. Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört.  
   
- Wenn der "R\+", "w\+" oder "a\+\-" Typ, angegeben wird, wird das Lesen und Schreiben zulässt \(die Datei soll für "Update" geöffnet\).  Wenn Sie zwischen das Lesen und Schreiben wechseln, es dazwischenliegendes `fflush`, `fsetpos`, `fseek` oder **rewind** geben Vorgang müssen.  Die aktuelle Position kann für den `fsetpos` oder `fseek` Vorgang angegeben werden.  
+ Wenn als Typ „r+“, „w+“ oder „a+“ angegeben wird, sind sowohl Lese- als auch Schreibvorgänge zulässig (die Datei ist zum Aktualisieren geöffnet). Wenn Sie jedoch zwischen Lesen und Schreiben wechseln, muss ein sich dazwischen befindender Vorgang wie `fflush`, `fsetpos`, `fseek` oder **rewind** vorhanden sein. Die aktuelle Position kann für den Vorgang `fsetpos` oder `fseek` angegeben werden.  
   
-## Siehe auch  
- [\_fdopen, \_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fopen, \_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, \_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   
- [\_fsopen, \_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
- [\_popen, \_wpopen](../c-runtime-library/reference/popen-wpopen.md)   
+## <a name="see-also"></a>Siehe auch  
+ [_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
+ [freopen, _wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   
+ [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
+ [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)   
  [Globale Konstanten](../c-runtime-library/global-constants.md)

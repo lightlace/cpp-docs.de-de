@@ -1,31 +1,48 @@
 ---
-title: "C-Deklaratoren (abstrakt) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Abstrakte Deklarationen"
-  - "Deklaratoren, abstract"
+title: Abstrakte C-Deklaratoren | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, abstract
+- abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# C-Deklaratoren (abstrakt)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: cc4c700142f8dd533d98eca6ffb01fa18006a111
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Ein abstrakter Deklarator ist ein Deklarator ohne einen Bezeichner, der aus mindestens einem Zeiger\-, Array\- oder Funktionsmodifizierer besteht.  Der Zeigermodifizierer \(**\***\) steht immer vor dem Bezeichner in einem Deklarator. Modifizierer des Arrays \(**\[ \]**\) und der Funktion \( **\( \)** \) folgen dem Bezeichner.  Vor diesem Hintergrund können Sie ermitteln, wo der Bezeichner in einem abstrakten Deklarator stehen würde, und den Deklarator entsprechend interpretieren.  Weitere Informationen und Beispiele für komplexe Deklaratoren erhalten Sie unter [Interpretieren von komplexeren Deklaratoren](../c-language/interpreting-more-complex-declarators.md).  Im Allgemeinen kann `typedef` verwendet werden, um Deklaratoren zu vereinfachen.  Weitere Informationen finden Sie unter [Typedef\-Deklarationen](../c-language/typedef-declarations.md).  
+---
+# <a name="c-abstract-declarators"></a>C-Deklaratoren (abstrakt)
+Ein abstrakter Deklarator ist ein Deklarator ohne einen Bezeichner, der aus mindestens einem Zeiger-, Array- oder Funktionsmodifizierer besteht. Der Zeigermodifizierer (**\***) steht immer vor dem Bezeichner in einem Deklarator. Modifizierer des Arrays (**[ ]**) und der Funktion ( **( )** ) folgen dem Bezeichner. Vor diesem Hintergrund können Sie ermitteln, wo der Bezeichner in einem abstrakten Deklarator stehen würde, und den Deklarator entsprechend interpretieren. Weitere Informationen und Beispiele für komplexe Deklaratoren erhalten Sie unter [Interpretieren von komplexeren Deklaratoren](../c-language/interpreting-more-complex-declarators.md). Im Allgemeinen kann `typedef` verwendet werden, um Deklaratoren zu vereinfachen. Weitere Informationen finden Sie unter [Typedef-Deklarationen](../c-language/typedef-declarations.md).  
   
- Abstrakte Deklaratoren können komplex sein.  Klammern in einem komplexen abstrakten Deklarator geben eine bestimmte Interpretation an, so wie bei komplexen Deklaratoren in Deklarationen.  
+ Abstrakte Deklaratoren können komplex sein. Klammern in einem komplexen abstrakten Deklarator geben eine bestimmte Interpretation an, so wie bei komplexen Deklaratoren in Deklarationen.  
   
  Diese Beispiele veranschaulichen abstrakte Deklaratoren:  
   
@@ -52,7 +69,7 @@ int (*const []) ( unsigned int, ... )
 ```  
   
 > [!NOTE]
->  Der abstrakte Deklarator, der aus einem Satz von leeren Klammern, **\( \)**, besteht, ist nicht zulässig, da er nicht eindeutig ist.  Es ist unmöglich zu ermitteln, ob der implizite Bezeichner in die Klammern \(in diesem Fall ist dies ein unveränderter Typ\) oder vor die Klammern gehört \(in diesem Fall ist dies ein Funktionstyp\).  
+>  Der abstrakte Deklarator, der aus einem Satz von leeren Klammern, **( )**, besteht, ist nicht zulässig, da er nicht eindeutig ist. Es ist unmöglich zu ermitteln, ob der implizite Bezeichner in die Klammern (in diesem Fall ist dies ein unveränderter Typ) oder vor die Klammern gehört (in diesem Fall ist dies ein Funktionstyp).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Deklaratoren und Variablendeklarationen](../c-language/declarators-and-variable-declarations.md)

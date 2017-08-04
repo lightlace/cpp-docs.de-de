@@ -1,82 +1,104 @@
 ---
-title: "C-Enumerationsdeklarationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "#define-Direktive, Alternativ zu"
-  - "Deklarationen, Enumerationen"
-  - "Deklarieren von Enumerationen"
-  - "define-Direktive (#define), Alternativ zu"
-  - "Enumeratoren, Deklarieren"
-  - "Benannte Konstanten, Enumerationsdeklarationen"
+title: C-Enumerationsdeklarationen | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarations, enumerations
+- define directive (#define), alternative to
+- enumerators, declaring
+- '#define directive, alternative to'
+- named constants, enumeration declarations
+- declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# C-Enumerationsdeklarationen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 90d3b0837adb2bd646ef39f4898377c41a030a81
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Eine Enumeration besteht aus einem Satz von benannten ganzzahligen Konstanten.  Die Deklaration eines Enumerationstyps gibt den Namen des \(optionalen\) Enumerationstags an und definiert den Satz benannter ganzzahliger Bezeichner \(bezeichnet als "Enumerationssatz", "Enumeratorkonstanten", "Enumeratoren" oder "Member"\).  Eine Variable mit Enumerationstyp speichert einen der Werte des Enumerationssatzes, der durch diesen Typ definiert ist.  
+---
+# <a name="c-enumeration-declarations"></a>C-Enumerationsdeklarationen
+Eine Enumeration besteht aus einem Satz von benannten ganzzahligen Konstanten. Die Deklaration eines Enumerationstyps gibt den Namen des (optionalen) Enumerationstags an und definiert den Satz benannter ganzzahliger Bezeichner (bezeichnet als "Enumerationssatz", "Enumeratorkonstanten", "Enumeratoren" oder "Member"). Eine Variable mit Enumerationstyp speichert einen der Werte des Enumerationssatzes, der durch diesen Typ definiert ist.  
   
- Variablen des Typs `enum` können in Indizierungsausdrücken und als Operanden aller arithmetischen und relationalen Operatoren verwendet werden.  Enumerationen bieten eine Alternative zur Präprozessordirektive `#define` und bieten den Vorteil, dass die Werte für Sie generiert werden und normalen Bereichsregeln folgen.  
+ Variablen des Typs `enum` können in Indizierungsausdrücken und als Operanden aller arithmetischen und relationalen Operatoren verwendet werden. Enumerationen bieten eine Alternative zur Präprozessordirektive `#define` und bieten den Vorteil, dass die Werte für Sie generiert werden und normalen Bereichsregeln folgen.  
   
- In ANSI C weisen die Ausdrücke, die den Wert einer Enumeratorkonstante definieren, immer den `int`\-Typ auf. Folglich ist der einer Enumerationsvariable zugeordnete Speicher der für einen einzelnen `int`\-Wert benötigte Speicher.  Eine Enumerationskonstante oder ein Wert des enumerierten Typs kann überall dort verwendet werden, wo die Programmiersprache C einen ganzzahligen Ausdruck gestattet.  
+ In ANSI C weisen die Ausdrücke, die den Wert einer Enumeratorkonstante definieren, immer den `int`-Typ auf. Folglich ist der einer Enumerationsvariable zugeordnete Speicher der für einen einzelnen `int`-Wert benötigte Speicher. Eine Enumerationskonstante oder ein Wert des enumerierten Typs kann überall dort verwendet werden, wo die Programmiersprache C einen ganzzahligen Ausdruck gestattet.  
   
-## Syntax  
- *enum\-specifier*:  
- **enum**  *identifier*  opt **{** *enumerator\-list* **}**  
+## <a name="syntax"></a>Syntax  
+ *enum-specifier*:  
+ **enum**  *identifier* opt**{** *enumerator-list* **}**  
   
  **enum**  *identifier*  
   
- Der optionale Wert *identifier* benennt den von *enumerator\-list* definierten Enumerationstyp.  Dieser Bezeichner wird oft als "Tag" der Enumeration bezeichnet, die von der Liste angegeben wird.  Ein Typspezifizierer der Art  
+ Der optionale Wert *identifier* benennt den von *enumerator-list* definierten Enumerationstyp. Dieser Bezeichner wird oft als „Tag“ der Enumeration bezeichnet, die von der Liste angegeben wird. Ein Typspezifizierer der Art  
   
 ```  
   
-enum identifier { enumerator-list }  
+enum  
+identifier  
+{  
+enumerator-list  
+}  
+  
 ```  
   
- deklariert *identifier* als Tag der Enumeration, die vom *enumerator\-list*\-Nichtterminal spezifiziert wird.  Der "Enumeratorinhalt" wird von *enumerator\-list* definiert. Nachfolgend wird *enumerator\-list* ausführlich beschrieben.  
+ deklariert *identifier* als Tag der Enumeration, die vom *enumerator-list*-Nichtterminal spezifiziert wird. Der „Enumeratorinhalt“ wird von *enumerator-list* definiert. Nachfolgend wird *enumerator-list* ausführlich beschrieben.  
   
- Falls die Deklaration eines Tags sichtbar ist, geben nachfolgende Deklarationen, die das Tag verwenden, *enumerator\-list* jedoch weglassen, den zuvor deklarierten enumerierten Typ an.  Das Tag muss auf einen definierten Enumerationstyp verweisen, der sich im aktuellen Bereich befindet.  Da der Enumerationstyp an einer anderen Stelle definiert ist, wird *enumerator\-list* in dieser Deklaration nicht angezeigt.  Deklarationen von Typen, die aus Enumerationen abgeleitet sind, und `typedef`\-Deklarationen für Enumerationstypen können das Enumerationstag vor der Definition des Enumerationstyps verwenden.  
+ Falls die Deklaration eines Tags sichtbar ist, geben nachfolgende Deklarationen, die das Tag verwenden, *enumerator-list* jedoch weglassen, den zuvor deklarierten enumerierten Typ an. Das Tag muss auf einen definierten Enumerationstyp verweisen, der sich im aktuellen Bereich befindet. Da der Enumerationstyp an einer anderen Stelle definiert ist, wird *enumerator-list* in dieser Deklaration nicht angezeigt. Deklarationen von Typen, die aus Enumerationen abgeleitet sind, und `typedef`-Deklarationen für Enumerationstypen können das Enumerationstag vor der Definition des Enumerationstyps verwenden.  
   
-## Syntax  
- *enumerator\-list*:  
+## <a name="syntax"></a>Syntax  
+ *enumerator-list*:  
  *enumerator*  
   
- *enumerator\-list* **,**  `enumerator`  
+ *enumerator-list* **,**  `enumerator`  
   
  `enumerator`:  
- *enumeration\-constant*  
+ *enumeration-constant*  
   
- *enumeration\-constant*  **\=**  *constant\-expression*  
+ *enumeration-constant*  **=**  *constant-expression*  
   
- *enumeration\-constant*:  
+ *enumeration-constant*:  
  *identifier*  
   
- Jeder *enumeration\-constant*\-Wert in *enumeration\-list* benennt einen Wert des Enumerationssatzes.  Standardmäßig wird der erste *enumeration\-constant*\-Wert mit dem Wert 0 verknüpft.  Der folgende *enumeration\-constant*\-Listeneintrag wird mit dem Wert von \( *constant\-expression* \+ 1\) verknüpft, außer er wird explizit einem anderen Wert zugeordnet.  Der Name von *enumeration\-constant* entspricht dessen Wert.  
+ Jeder *enumeration-constant*-Wert in *enumeration-list* benennt einen Wert des Enumerationssatzes. Standardmäßig wird der erste *enumeration-constant*-Wert mit dem Wert 0 verknüpft. Der folgende *enumeration-constant*-Listeneintrag wird mit dem Wert von ( *constant-expression* + 1) verknüpft, außer er wird explizit einem anderen Wert zugeordnet. Der Name von *enumeration-constant* entspricht dessen Wert.  
   
- Sie können mit *enumeration\-constant \= constant\-expression* die Standardabfolge der Werte überschreiben.  Wird also *enumeration\-constant \= constant\-expression* in *enumerator\-list* angezeigt, wird *enumeration\-constant* dem Wert zugeordnet, der von *constant\-expression* bereitgestellt wird.  *constant\-expression* muss den `int`\-Typ aufweisen und kann negativ sein.  
+ Sie können mit *enumeration-constant = constant-expression* die Standardabfolge der Werte überschreiben. Wird also *enumeration-constant = constant-expression* in *enumerator-list* angezeigt, wird *enumeration-constant* dem Wert zugeordnet, der von *constant-expression* bereitgestellt wird. *constant-expression* muss den `int`-Typ aufweisen und kann negativ sein.  
   
  Die folgenden Regeln gelten für Member eines Enumerationssatzes:  
   
--   Ein Enumerationssatz kann doppelte konstante Werte enthalten.  Beispielsweise könnten Sie den Wert 0 für zwei verschiedene Bezeichner mit den Namen `null` und `zero` im gleichen Satz zuweisen.  
+-   Ein Enumerationssatz kann doppelte konstante Werte enthalten. Beispielsweise könnten Sie den Wert 0 für zwei verschiedene Bezeichner mit den Namen `null` und `zero` im gleichen Satz zuweisen.  
   
 -   Die Bezeichner in der Enumerationsliste müssen sich von anderen Bezeichnern im gleichen Bereich mit der gleichen Sichtbarkeit – das schließt gewöhnliche Variablennamen und Bezeichner in anderen Enumerationslisten ein – unterscheiden.  
   
--   Enumerationstags folgen normalen Bereichsregeln.  Sie müssen sich von anderen Enumerations\-, Struktur\- und Union\-Tags mit derselben Sichtbarkeit unterscheiden.  
+-   Enumerationstags folgen normalen Bereichsregeln. Sie müssen sich von anderen Enumerations-, Struktur- und Union-Tags mit derselben Sichtbarkeit unterscheiden.  
   
-## Beispiele  
+## <a name="examples"></a>Beispiele  
  Diese Beispiele veranschaulichen Enumerationsdeklarationen:  
   
 ```  
@@ -92,15 +114,15 @@ enum DAY            /* Defines an enumeration type    */
 } workday;  
 ```  
   
- Der Wert 0 wird standardmäßig `saturday` zugeordnet.  Der Bezeichner `sunday` wird explizit auf 0 festgelegt.  Den verbleibenden Bezeichnern werden standardmäßig die Werte 1 bis 5 zugewiesen.  
+ Der Wert 0 wird standardmäßig `saturday` zugeordnet. Der Bezeichner `sunday` wird explizit auf 0 festgelegt. Den verbleibenden Bezeichnern werden standardmäßig die Werte 1 bis 5 zugewiesen.  
   
- In diesem Beispiel wird ein Wert aus dem `DAY`\-Satz der Variable `today` zugewiesen.  
+ In diesem Beispiel wird ein Wert aus dem `DAY`-Satz der Variable `today` zugewiesen.  
   
 ```  
 enum DAY today = wednesday;  
 ```  
   
- Beachten Sie, dass der Name der Enumerationskonstante zum Zuweisen des Werts verwendet wird.  Da zuvor der Enumerationstyp `DAY` deklariert wurde, ist nur das Enumerationstag `DAY` erforderlich.  
+ Beachten Sie, dass der Name der Enumerationskonstante zum Zuweisen des Werts verwendet wird. Da zuvor der Enumerationstyp `DAY` deklariert wurde, ist nur das Enumerationstag `DAY` erforderlich.  
   
  Um einen ganzzahligen Wert explizit der Variable des enumerierten Datentyps zuzuweisen, verwenden Sie eine Typumwandlung:  
   
@@ -145,11 +167,11 @@ if ( match_flag == false )
     end_flag = true;  
 ```  
   
- Auch unbenannte Enumeratordatentypen können deklariert werden.  Der Name des Datentyps wird weggelassen, aber Variablen lassen sich deklarieren.  Die Variable `response` ist eine Variable des definierten Typs:  
+ Auch unbenannte Enumeratordatentypen können deklariert werden. Der Name des Datentyps wird weggelassen, aber Variablen lassen sich deklarieren. Die Variable `response` ist eine Variable des definierten Typs:  
   
 ```  
 enum { yes, no } response;  
 ```  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Enumerationen](../cpp/enumerations-cpp.md)

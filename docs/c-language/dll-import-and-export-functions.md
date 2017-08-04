@@ -1,39 +1,56 @@
 ---
-title: "Import- und Exportfunktionen einer DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Deklarieren von Funktionen, Mit dllexport und dllimport"
-  - "DLL-Exporte [C++]"
-  - "dllexport-Attribut [C++], Speicherklassenattribut"
-  - "dllimport-Attribut [C++], Speicherklassenattribut"
-  - "DLLs [C++], Importieren"
-  - "Erweiterte Speicherklassenattribute"
+title: Import- und Exportfunktionen einer DLL | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DLLs [C++], importing
+- dllimport attribute [C++], storage-class attribute
+- DLL exports [C++]
+- declaring functions, with dllexport and dllimport
+- extended storage-class attributes
+- dllexport attribute [C++], storage-class attribute
 ms.assetid: 08d164b9-770a-4e14-afeb-c6f21d9e33e4
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Import- und Exportfunktionen einer DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 96f683c796de60daabfc2da43f8e6a0a4849a535
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="dll-import-and-export-functions"></a>Import- und Exportfunktionen einer DLL
+**Microsoft-spezifisch**  
   
  Die vollständigsten und aktuellsten Informationen zu diesem Thema finden Sie unter [dllexport, dllimport](../cpp/dllexport-dllimport.md).  
   
- Die Speicherklassenmodifizierer **dllimport** und `dllexport` sind Microsoft\-spezifische Erweiterungen der Sprache C.  Diese Modifizierer definieren explizit die Schnittstelle der DLL mit dem Client \(die ausführbare Datei oder eine andere DLL\).  Durch das Deklarieren von Funktionen als `dllexport` ist keine Moduldefinitionsdatei \(.DEF\) notwendig.  Sie können auch die **dllimport**\- und `dllexport`\-Modifizierer mit Daten und Objekten verwenden.  
+ Die Speicherklassenmodifizierer **dllimport** und `dllexport` sind Microsoft-spezifische Erweiterungen der Sprache C. Diese Modifizierer definieren explizit die Schnittstelle der DLL mit dem Client (die ausführbare Datei oder eine andere DLL). Durch das Deklarieren von Funktionen als `dllexport` ist keine Moduldefinitionsdatei (.DEF) notwendig. Sie können auch die **dllimport**- und `dllexport`-Modifizierer mit Daten und Objekten verwenden.  
   
- Die **dllimport** und `dllexport` Speicherklassenmodifizierer müssen mit dem erweiterten Schlüsselwort der Attributsyntax, `__declspec`, wie in diesem Beispiel gezeigt verwendet werden:  
+ Die **dllimport** und `dllexport`-Speicherklassenmodifizierer müssen mit dem erweiterten Schlüsselwort der Attributsyntax, `__declspec`, wie in diesem Beispiel gezeigt verwendet werden:  
   
 ```  
 #define DllImport   __declspec( dllimport )  
@@ -47,7 +64,7 @@ DllExport int n;
   
  Spezifische Informationen zur Syntax für erweiterte Speicherklassenmodifizierer finden Sie unter [Erweiterte Speicherklassenattribute](../c-language/c-extended-storage-class-attributes.md).  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [C\-Funktionsdefinitionen](../c-language/c-function-definitions.md)
+## <a name="see-also"></a>Siehe auch  
+ [C-Funktionsdefinitionen](../c-language/c-function-definitions.md)

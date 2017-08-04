@@ -1,42 +1,59 @@
 ---
-title: "C-Pragmas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Pragmas, C/C++"
+title: C-Pragmas | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- pragmas, C/C++
 ms.assetid: 3d6d36b4-d565-4632-a4cd-e39aeaded5ad
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# C-Pragmas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b511f6f1d7f9fab0b45f345e39e1251df520624f
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="c-pragmas"></a>C-Pragmas
+**Microsoft-spezifisch**  
   
- Ein "Pragma" weist den Compiler an, eine bestimmte Aktion zur Kompilierzeit auszuführen.  Pragmas variieren von Compiler zu Compiler.  Beispielsweise können Sie das **optimize**\-Pragma zum Festlegen der Optimierungen verwenden, die auf dem Programm ausgeführt werden sollen.  Die Microsoft C\-Pragmen sind:  
+ Ein "Pragma" weist den Compiler an, eine bestimmte Aktion zur Kompilierzeit auszuführen. Pragmas variieren von Compiler zu Compiler. Beispielsweise können Sie das **optimize**-Pragma zum Festlegen der Optimierungen verwenden, die für das Programm ausgeführt werden sollen. Die Microsoft C-Pragmen sind:  
   
 |||||  
 |-|-|-|-|  
-|**alloc\_text**|**data\_seg**|**inline\_recursion**|**setlocale**|  
-|**auto\_inline**|**Funktion**|**intrinsic**|**warning**|  
-|**check\_stack**|**hdrstop**|**Meldung**||  
-|**code\_seg**|**include\_alias**|**optimize**||  
-|**comment**|**inline\_depth**|**pack**||  
+|**alloc_text**|**data_seg**|**inline_recursion**|**setlocale**|  
+|**auto_inline**|**function**|**intrinsic**|**warning**|  
+|**check_stack**|**hdrstop**|**message**||  
+|**code_seg**|**include_alias**|**optimize**||  
+|**comment**|**inline_depth**|**pack**||  
   
- Eine Beschreibung der Microsoft C\-Compilerpragmen finden Sie in der *Präprozessorreferenz* unter [Pragma\-Direktiven und das \_\_Pragma\-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
+ Eine Beschreibung der Microsoft C-Compilerpragmen finden Sie in der *Präprozessorreferenz* unter [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Quelldateien und Quellprogramme](../c-language/source-files-and-source-programs.md)

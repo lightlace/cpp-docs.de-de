@@ -1,49 +1,66 @@
 ---
-title: "Text- und bin&#228;re Streams | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Binäre Streams"
-  - "Textstreams"
+title: "Text- und binäre Streams | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- binary streams
+- text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Text- und bin&#228;re Streams
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b3f0a7603c2d3732c693c509e310a5a00a99300f
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Ein Textstream besteht aus einem oder mehrere Textzeilen, die geschrieben werden können einer textbezogenen angezeigt, damit sie gelesen werden können.  Beim Lesen von einen Textstream, liest das Programm `NL` \(Zeilenumbruch\) am Ende jeder Zeile.  Beim Schreiben auf einen Textstream, schreibt das Programm `NL`, um das Ende einer Zeile zu signalisieren.  Um unterschiedliche Konventionen unter Zielumgebung für die Darstellung des Texts in Dateien entspricht, können die Bibliotheksfunktionen die Anzahl und die Darstellung von Zeichen ändern, die zwischen dem Programm und einen Textstream gesendet werden.  
+---
+# <a name="text-and-binary-streams"></a>Text- und binäre Streams
+Ein Textstream besteht aus einer oder mehreren Textzeilen, die in eine textorientierte Anzeige geschrieben werden können, sodass sie gelesen werden können. Beim Lesen aus einem Textstream liest das Programm einen `NL` (Zeilenvorschub) am Ende jeder Zeile. Beim Schreiben in einen Textstream schreibt das Programm ein `NL`, um das Ende einer Zeile anzugeben. Um unterschiedliche Konventionen in Zielumgebungen für die Darstellung von Text in Dateien einander zuzuordnen, können die Bibliotheksfunktionen die Anzahl und Darstellungen der Zeichen ändern, die zwischen dem Programm und einem Textstream übertragen werden.  
   
- So erhöhen innerhalb eines Textstreams ist eingeschränkt.  Sie können den aktuellen Stellungsanzeiger abrufen, indem Sie [fgetpos](../c-runtime-library/reference/fgetpos.md) oder [ftell](../c-runtime-library/reference/ftell-ftelli64.md) aufrufen.  Sie können einen Textstream in einer zu positionieren erhielten diese Methode oder am Anfang oder Ende des Streams, indem Sie [fsetpos](../c-runtime-library/reference/fsetpos.md) oder [fseek](../c-runtime-library/reference/fseek-fseeki64.md) aufrufen.  Jede beliebige andere Meinungsänderung kann sich wird unterstützt nicht hervor.  
+ Daher ist die Positionierung innerhalb eines Textstreams beschränkt. Durch Aufrufen von [fgetpos](../c-runtime-library/reference/fgetpos.md) oder [ftell](../c-runtime-library/reference/ftell-ftelli64.md) können Sie den aktuellen Dateipositionszeiger abrufen. Sie können einen Textstream an einer auf diese Weise abgerufenen Position positionieren, oder am Anfang bzw. am Ende des Streams, indem Sie [fsetpos](../c-runtime-library/reference/fsetpos.md) oder [fseek](../c-runtime-library/reference/fseek-fseeki64.md) aufrufen. Alle anderen Positionsänderungen werden möglicherweise nicht unterstützt.  
   
- Maximale Portabilität sollte das Programm nicht schreiben:  
+ Zur maximalen Portabilität sollte das Programm Folgendes nicht schreiben:  
   
--   Leere Dateien.  
+-   Leere Dateien  
   
--   Leerzeichen am Ende einer Zeile.  
+-   Leerzeichen am Ende einer Zeile  
   
--   Partielle Zeilen \(durch Weglassen `NL` am Ende einer Datei\).  
+-   Partielle Zeilen (durch Weglassen von `NL` am Ende einer Datei)  
   
--   Zeichen die nicht druckbaren Zeichen, NL und `HT` \(Horizontaler Tabulator\).  
+-   Andere Zeichen als die druckbaren Zeichen, NL und `HT` (horizontaler Tabulator)  
   
- Wenn Sie diese Regeln befolgen, die eine Sequenz von Zeichen, die Sie aus einem Textstream \(entweder als Byte oder Mehrbytezeichen\) übereinstimmen die Folge von Zeichen lesen, Sie z Textstream schreiben, als Sie die Datei erstellt haben.  Andernfalls können die Bibliotheksfunktionen eine Datei aufheben, die Sie erstellen, wenn die Datei leer ist, wenn Sie sie schließen.  Oder sie können geändert oder Löschungszeichen, die Sie in die Datei schreiben.  
+ Wenn Sie diese Regeln befolgen, entspricht die Sequenz der Zeichen, die Sie (entweder als Byte- oder Multibytezeichen) aus einem Textstream lesen, der Sequenz der Zeichen, die Sie bei der Erstellung der Datei in den Textstream geschrieben haben. Anderenfalls können die Bibliotheksfunktionen eine von Ihnen erstellte Datei entfernen, wenn die Datei beim Schließen leer ist. Sie können auch Zeichen ändern oder löschen, die Sie in die Datei schreiben.  
   
- Ein Binärstream besteht aus einem oder mehreren Bytes aus beliebigen Informationen.  Sie können den Wert schreiben, der in einem bestimmten Objekt zu \(gespeichert wird byteorientiertem\) Binärstream a und genau lesen, der im Objekt gespeichert wurde, als Sie ihn selbst.  Die Bibliotheksfunktionen ändern nicht die Bytes, die Sie zwischen dem Programm und einem Binärstream senden.  Sie können eine beliebige Anzahl von Nullbytes der Datei jedoch anfügen, die Sie mit einem Binärstream schreiben.  Das Programm muss diese zusätzlichen Nullbytes am Ende jedes möglichen Binärstreams verarbeiten.  
+ Ein binärer Stream besteht aus einem oder mehreren Bytes willkürlicher Informationen. Sie können den in einem beliebigen Objekt gespeicherten Wert in einen (byteorientierten) binären Stream schreiben und genau lesen, was in dem Objekt beim Schreibvorgang gespeichert wurde. Die Bibliotheksfunktionen ändern nicht die Bytes, die Sie zwischen dem Programm und einem binären Stream übertragen. Sie können jedoch eine beliebige Anzahl von Nullbytes an die Datei anfügen, die Sie mit einem binären Stream schreiben. Das Programm muss diese zusätzlichen Nullbytes am Ende eines binären Streams verarbeiten.  
   
- Daher ist die Positionierung innerhalb eines Binärstreams, außer dem Positionieren relativ zum Ende des Streams genau definiert.  Sie können den aktuellen Stellungsanzeiger abrufen und ändern genauso wie für einen Textstream.  Darüber hinaus führt die Offsets, die von [ftell](../c-runtime-library/reference/ftell-ftelli64.md) und [fseek](../c-runtime-library/reference/fseek-fseeki64.md) Zählbytes vom Anfang des Streams verwendet werden \(der Byte \(null\), d die ganzzahlige arithmetischen auf diesen Offsets vorhersehbarer Ergebnisse.  
+ Daher ist die Positionierung in einem binären Stream klar definiert, ausgenommen der Positionierung relativ zum Ende des Streams. Sie können denselben aktuellen Dateipositionszeiger wie bei einem Textstream abrufen und ändern. Darüber hinaus zählen die von [ftell](../c-runtime-library/reference/ftell-ftelli64.md) und [fseek](../c-runtime-library/reference/fseek-fseeki64.md) verwendeten Offsets die Anzahl der Bytes vom Anfang des Streams (d.h. Byte null), damit die Ganzzahlarithmetik für diese Offsets vorhersagbare Ergebnisse erzielt.  
   
- Ein Bytestrom behandelt eine Datei als Bytesequenz.  Innerhalb des Programms wird der Stream wie dieselbe Bytesequenz, außer die möglichen Änderungen aus, die oben beschriebenen.  
+ Ein Bytestream verarbeitet eine Datei als Bytesequenz. Im Programm ähnelt der Stream dieser Bytesequenz, ausgenommen der möglichen oben beschriebenen Änderungen.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Dateien und Streams](../c-runtime-library/files-and-streams.md)

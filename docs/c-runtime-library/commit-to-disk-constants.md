@@ -1,61 +1,78 @@
 ---
-title: "Commit-To-Disk-Konstanten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.constants"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Commit-To-Disk-Konstanten"
+title: Commit-To-Disk-Konstanten | Microsoft-Dokumentation
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.constants
+dev_langs:
+- C++
+helpviewer_keywords:
+- commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Commit-To-Disk-Konstanten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: c8aa858543b100239d0fe2a557b22452a0a0d572
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-**Microsoft\-spezifisch**  
+---
+# <a name="commit-to-disk-constants"></a>Commit-To-Disk-Konstanten
+**Microsoft-spezifisch**  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 #include <stdio.h>  
 ```  
   
-## Hinweise  
- Diese Microsoft\-Besonderekonstanten geben an, ob der Puffer, der mit der geöffneten Datei zugeordnet ist, den Betriebssystempuffern oder auf dem Datenträger geleert wird.  Der Modus wird in der Zeichenfolge enthalten, die den Typ des Lese\-\/Schreibzugriff auf angibt \(**"r"**, **"w"**, **"a"**, **"r\+"**, **"w\+"**, **"a\+"**\).  
+## <a name="remarks"></a>Hinweise  
+ Diese Microsoft-spezifischen Konstanten geben an, ob der mit der geöffneten Datei verknüpfte Puffer in Betriebssystempuffer oder auf Datenträger geleert wird. Der Modus ist in der Zeichenfolge enthalten, die den Typ des Lese-/Schreibzugriffs angibt (**"r"**, **"w"**, **"a"**, **"r+"**, **"w+"**, **"a+"**).  
   
- Die Datenträgercommitmodi sind, wie folgt:  
+ Folgende Datenträgercommitmodi sind vorhanden:  
   
  **c**  
- Schreibt den ungeschriebenen Inhalt des angegebenen Puffers auf den Datenträger.  Diese Datenträgercommitfunktionalität tritt nur an den expliziten Aufruf auf [fflush](../c-runtime-library/reference/fflush.md) oder die [\_flushall](../c-runtime-library/reference/flushall.md)\-Funktion auf.  Dieser Modus ist während Beschäftigen vertrauliche Daten nützlich.  Wenn das Programm beendet wird, nachdem ein Aufruf von `fflush` oder `_flushall`, Sie davon ausgehen, dass die Daten die Puffer des Betriebssystems haben.  Es sei denn, eine Datei mit der Option **k** geöffnet ist, können Ihnen möglicherweise die Daten niemals auf der Festplatte, wenn das Betriebssystem auch beendet wird.  
+ Schreibt nicht geschriebene Inhalte des angegebenen Puffers auf den Datenträger. Diese Datenträgercommitfunktionalität erfolgt nur bei expliziten Aufrufen der Funktionen [fflush](../c-runtime-library/reference/fflush.md) oder [_flushall](../c-runtime-library/reference/flushall.md). Dieser Modus ist für den Umgang mit sensiblen Daten nützlich. Wenn Sie Ihr Programm beispielsweise nach einem Aufruf von `fflush` oder `_flushall` beenden, können Sie sicherstellen, dass Ihre Daten zu den Betriebssystempuffern gelangt sind. Wird eine Datei jedoch mit der Option **c** geöffnet, gelangen die Daten möglicherweise niemals zum Datenträger, wenn das Betriebssystem ebenfalls beendet wird.  
   
  **n**  
- Schreibt den ungeschriebenen Inhalt des angegebenen Puffers zum den Puffern des Betriebssystems.  Das Betriebssystem kann Daten zwischenspeichern und eine Zeit bestimmen, auf die Festplatte zu schreiben.  In vielen Bedingungen macht dieses Verhalten für effiziente Programmverhalten.  Wenn der Datenerhalt wichtig ist \(wie Banktransaktionen oder Flugticketinformationen\), sollten Sie die Option **k** verwenden.  **n** Der Modus ist der Standard.  
+ Schreibt nicht geschriebene Inhalte des angegebenen Puffers in die Betriebssystempuffer. Das Betriebssystem kann Daten zwischenspeichern und dann einen optimalen Zeitpunkt ermitteln, um Daten auf den Datenträger zu schreiben. In vielen Situationen kann dieses Verhalten ein effizientes Programmverhalten bewirken. Wenn die Aufbewahrung von Daten (z.B. Banktransaktionen oder Informationen zu Flugtickets) allerdings von entscheidender Bedeutung ist, sollten Sie eventuell die Option **c** verwenden. Die Standardeinstellung ist der **n**-Modus.  
   
 > [!NOTE]
->  Die **k** und **n** Optionen sind nicht Teil des ANSI\-Standards für `fopen`, jedoch Microsoft\-Erweiterungen und sollten nicht verwendet werden, wo ANSI\-Portabilität gewünscht wird.  
+>  Die Optionen **c** und **n** sind nicht Teil des ANSI-Standards für `fopen`, stellen jedoch Microsoft-Erweiterungen dar und sollten nicht verwendet werden, wenn ANSI-Portabilität gewünscht ist.  
   
-## Verwenden der Datenträgercommit\-Funktion mit vorhandenem Code  
- Standardmäßig schreiben Aufrufe von [fflush](../c-runtime-library/reference/fflush.md) oder [\_flushall](../c-runtime-library/reference/flushall.md) Bibliotheksfunktionen Daten in den Puffern, die das Betriebssystem verwaltet werden.  Das Betriebssystem die optimale Zeit, die Daten auf dem Datenträger tatsächlich zu schreiben.  Die Datenträgercommitfunktion der Laufzeitbibliothek können Sie sicherstellen, dass wichtige Daten direkt auf dem Datenträger statt auf den Puffer des Betriebssystems geschrieben werden.  Sie können diese Funktion auf einem vorhandenen Programm geben, ohne es umzuschreiben, indem Sie die Objektdateien mit COMMODE.OBJ verknüpfen.  
+## <a name="using-the-commit-to-disk-feature-with-existing-code"></a>Verwenden der Datenträgercommitfunktion mit vorhandenem Code  
+ Standardmäßig schreiben Aufrufe der Bibliotheksfunktionen [fflush](../c-runtime-library/reference/fflush.md) oder [_flushall](../c-runtime-library/reference/flushall.md) Daten in die vom Betriebssystem verwalteten Puffer. Das Betriebssystem ermittelt die optimale Zeit, um die Daten tatsächlich auf den Datenträger zu schreiben. Mit der Datenträgercommitfunktion der Laufzeitbibliothek können Sie sicherstellen, dass wichtige Daten direkt auf den Datenträger anstatt in die Betriebssystempuffer geschrieben werden. Sie können diese Funktion einem vorhandenen Programm ermöglichen, ohne es umschreiben zu müssen, indem Sie die Objektdateien mit COMMODE.OBJ verknüpfen.  
   
- In der resultierenden ausführbaren Datei schreiben Aufrufe `fflush` den Inhalt des Puffers direkt auf der Festplatte, und Aufrufe `_flushall` schreiben Inhalt aller Puffer dem Datenträger.  Diese beiden Features sind die einzigen wirkt sich auf COMMODE.OBJ.  
+ In der resultierenden ausführbaren Datei werden die Inhalte des Puffers durch Aufrufe von `fflush` direkt auf den Datenträger geschrieben, während die Inhalte aller Puffer durch Aufrufe von `_flushall` auf den Datenträger geschrieben werden. Dies sind die einzigen beiden von COMMODE.OBJ betroffenen Funktionen.  
   
- **END Microsoft\-spezifisch**  
+ **Ende Microsoft-spezifisch**  
   
-## Siehe auch  
- [Stream\-E\/A](../c-runtime-library/stream-i-o.md)   
- [\_fdopen, \_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fopen, \_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Stream-E/A](../c-runtime-library/stream-i-o.md)   
+ [_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
  [Globale Konstanten](../c-runtime-library/global-constants.md)

@@ -1,48 +1,65 @@
 ---
-title: "main-Funktion und Programmausf&#252;hrung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Einstiegspunkte, Programm"
-  - "main-Funktion"
-  - "main-Funktion, Programmausführung"
-  - "Programmstart [C++]"
-  - "Programme [C++], Terminieren"
-  - "Startcode, main-Funktion"
+title: "main-Funktion und Programmausführung | Microsoft-Dokumentation"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- program startup [C++]
+- entry points, program
+- main function, program execution
+- startup code, main function
+- main function
+- programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# main-Funktion und Programmausf&#252;hrung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 22a1294a8b9206d5c2f190f2c391fd83cd57841d
+ms.contentlocale: de-de
+ms.lasthandoff: 05/18/2017
 
-Jedes C\-Programm verfügt über eine primäre \(main\) Funktion, die mit **main** benannt werden muss.  Wenn der Code dem Unicode\-Programmiermodell entspricht, können Sie die Breitzeichenversion von **main**, **wmain**, verwenden.  Die **main**\-Funktion ist der Ausgangspunkt für die Programmausführung.  Es steuert in der Regel die Programmausführung durch Verweisen der Aufrufe an andere Funktionen im Programm.  Ein Programm hält normalerweise die Ausführung am Ende von **main** an, obwohl es an anderen Punkten im Programm aus mehreren Gründen beendet werden kann.  Manchmal sollten Sie u. U. die Beendigung eines Programms erzwingen, wenn ein bestimmter Fehler erkannt wird.  Verwenden Sie dazu die **exit**\-Funktion.  Weitere Informationen und ein Beispiel für die Verwendung der [exit](../c-runtime-library/reference/exit-exit-exit.md)\-Funktion finden Sie in der *Laufzeitbibliotheksreferenz*.  
+---
+# <a name="main-function-and-program-execution"></a>main-Funktion und Programmausführung
+Jedes C-Programm verfügt über eine primäre Funktion (main), die mit **main** benannt werden muss. Wenn der Code dem Unicode-Programmiermodell entspricht, können Sie die Breitzeichenversion von **main**, **wmain**, verwenden. Die **main**-Funktion ist der Ausgangspunkt für die Programmausführung. Es steuert in der Regel die Programmausführung durch Verweisen der Aufrufe an andere Funktionen im Programm. Ein Programm hält normalerweise die Ausführung am Ende von **main** an, obwohl es an anderen Punkten im Programm aus mehreren Gründen beendet werden kann. Manchmal sollten Sie u. U. die Beendigung eines Programms erzwingen, wenn ein bestimmter Fehler erkannt wird. Verwenden Sie dazu die **exit**-Funktion. Weitere Informationen und ein Beispiel für die Verwendung der [exit](../c-runtime-library/reference/exit-exit-exit.md)-Funktion finden Sie in der *Laufzeitbibliotheksreferenz*.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 main( int argc, char *argv[ ], char *envp[ ] )  
 ```  
   
-## Hinweise  
- Funktionen innerhalb des Quellprogramms führen eine oder mehrere bestimmte Aufgaben aus.  Die **main**\-Funktion ruft diese Funktionen auf, um die jeweiligen Aufgaben auszuführen.  Wenn **main** eine andere Funktion aufruft, übergibt sie die Ablaufsteuerung an die Funktion, sodass die Ausführung bei der ersten Anweisung in der Funktion beginnt.  Eine Funktion gibt die Steuerung an **main** zurück, wenn eine `return`\-Anweisung ausgeführt wird, oder wenn das Ende der Funktion erreicht ist.  
+## <a name="remarks"></a>Hinweise  
+ Funktionen innerhalb des Quellprogramms führen eine oder mehrere bestimmte Aufgaben aus. Die **main**-Funktion ruft diese Funktionen auf, um die jeweiligen Aufgaben auszuführen. Wenn **main** eine andere Funktion aufruft, übergibt sie die Ablaufsteuerung an die Funktion, sodass die Ausführung bei der ersten Anweisung in der Funktion beginnt. Eine Funktion gibt die Steuerung an **main** zurück, wenn eine `return`-Anweisung ausgeführt wird, oder wenn das Ende der Funktion erreicht ist.  
   
- Sie können beliebige Funktionen, einschließlich **main** mit Parametern deklarieren.  Der Begriff "Parameter" oder "formaler Parameter" bezieht sich auf den Bezeichner, der einen Wert empfängt, der an eine Funktion übergeben wird.  Informationen zum Übergeben von Argumenten an Parameter finden Sie unter [Parameter](../c-language/parameters.md).  Wenn eine Funktion eine andere Funktion aufruft, empfängt die aufgerufene Funktion Werte für ihre Parameter von der aufrufenden Funktion.  Diese Werte werden als "Argumente" bezeichnet. Sie können formale Parameter für **main** so deklarieren, dass es mit diesem Format Argumente in der Befehlszeile empfangen kann:  
+ Sie können beliebige Funktionen, einschließlich **main** mit Parametern deklarieren. Der Begriff "Parameter" oder "formaler Parameter" bezieht sich auf den Bezeichner, der einen Wert empfängt, der an eine Funktion übergeben wird. Informationen zum Übergeben von Argumenten an Parameter finden Sie unter [Parameter](../c-language/parameters.md). Wenn eine Funktion eine andere Funktion aufruft, empfängt die aufgerufene Funktion Werte für ihre Parameter von der aufrufenden Funktion. Diese Werte werden als „Argumente“ bezeichnet. Sie können formale Parameter für **main** so deklarieren, dass es mit diesem Format Argumente in der Befehlszeile empfangen kann:  
   
- Wenn Sie Informationen an die **main**\-Funktion übergeben möchten, werden die Parameter in der Regel `argc` und `argv` genannt, obwohl der C\-Compiler diese Namen nicht benötigt.  Die Typen für `argc` und `argv` werden von der Programmiersprache C definiert.  Normalerweise wird bei Übergabe eines dritten Parameters an **main** der betreffende Parameter `envp` benannt.  Beispiele weiter unten in diesem Abschnitt beschrieben, wie diese drei Parameter verwendet werden können, um auf Befehlszeilenargumente zuzugreifen.  Diese Parameter werden in den folgenden Abschnitten erläutert.  
+ Wenn Sie Informationen an die **main**-Funktion übergeben möchten, werden die Parameter in der Regel `argc` und `argv` genannt, obwohl der C-Compiler diese Namen nicht benötigt. Die Typen für `argc` und `argv` werden von der Programmiersprache C definiert. Normalerweise wird bei Übergabe eines dritten Parameters an **main** der betreffende Parameter `envp` benannt. Beispiele weiter unten in diesem Abschnitt beschrieben, wie diese drei Parameter verwendet werden können, um auf Befehlszeilenargumente zuzugreifen. Diese Parameter werden in den folgenden Abschnitten erläutert.  
   
  Eine Beschreibung der Breitzeichenversion von **main** finden Sie unter [Verwenden von wmain](../c-language/using-wmain.md).  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [main: Programmstart](../cpp/main-program-startup.md)
