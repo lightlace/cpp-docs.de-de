@@ -43,7 +43,7 @@ ms.lasthandoff: 05/18/2017
   
 -   [Schlüsselwörter](../c-language/summary-of-keywords.md)  
   
--   [Identifiers (Bezeichner)](../c-language/summary-of-identifiers.md)  
+-   [Bezeichner](../c-language/summary-of-identifiers.md)  
   
 -   [Konstanten](../c-language/summary-of-constants.md)  
   
