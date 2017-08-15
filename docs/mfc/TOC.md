@@ -637,7 +637,7 @@
 ## [TN060: Die neuen Windows-Standardsteuerelemente](tn060-the-new-windows-common-controls.md)
 ## [TN061: ON_NOTIFY- und WM_NOTIFY-Meldungen](tn061-on-notify-and-wm-notify-messages.md)
 ## [TN062: Meldungsreflektion für Windows-Steuerelemente](tn062-message-reflection-for-windows-controls.md)
-## [TN063: Debuggen von Interneterweiterungs-DLLs](tn063-debugging-internet-extension-dlls.md)
+## [TN063: Debugging Internet MFC extension DLLs (TN063: Debuggen von MFC-Interneterweiterungs-DLLs)](tn063-debugging-internet-extension-dlls.md)
 ## [TN064: Apartmentmodellthreading in ActiveX-Steuerelementen](tn064-apartment-model-threading-in-activex-controls.md)
 ## [TN065: Unterstützung für duale Schnittstellen für OLE-Automatisierungsserver](tn065-dual-interface-support-for-ole-automation-servers.md)
 ## [TN066: Häufige Probleme bei der Portierung von MFC 3.x nach MFC 4.0](tn066-common-mfc-3-x-to-4-0-porting-issues.md)
