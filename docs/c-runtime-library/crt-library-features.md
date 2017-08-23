@@ -46,11 +46,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 232da2506389337f6b37412161492c103db5b971
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 0ae005c2367f891e0b7a91e3f7e45d42d852fb78
 ms.contentlocale: de-de
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="crt-library-features"></a>CRT-Bibliotheksfunktionen
@@ -96,7 +96,7 @@ In diesem Thema werden die verschiedenen LIB-Dateien erläutert, die die C-Laufz
 |msvcurt.lib|**Veraltet** Statische Bibliothek für die ausschließlich verwaltete CRT.|**/clr:pure**||  
 |msvcurtd.lib|**Veraltet** Statische Bibliothek für die Debugversion der ausschließlich verwalteten CRT. Nicht neu verteilbar.|**/clr:pure**||  
   
- Wenn Sie Ihr Programm über die Befehlszeile ohne eine Compileroption linken (binden), die die C-Laufzeitbibliothek angibt, verwendet der Linker die statisch gebundenen CRT-Bibliotheken: „libcmt.lib“, „libvcruntime.lib“ und „libucrt.lib“.  
+ Wenn Sie Ihr Programm über die Befehlszeile ohne eine Compileroption verknüpfen, die die C-Laufzeitbibliothek angibt, verwendet der Linker die statisch verknüpften CRT-Bibliotheken: „libcmt.lib“, „libvcruntime.lib“ und „libucrt.lib“.  
   
  Die Verwendung der statisch verknüpften CRT bedeutet, dass alle von der C-Laufzeitbibliothek gespeicherten Zustandsinformationen für diese CRT-Instanz lokal sind. Wenn Sie bei einer statisch verknüpften CRT [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) verwenden, ist die Position des `strtok`-Parsers nicht mit dem `strtok`-Zustand verbunden, der im Code des gleichen Prozesses (jedoch in einer anderen DLL oder EXE) verwendet wird, welcher mit einer anderen Instanz der statischen CRT verknüpft ist. Im Gegensatz dazu teilen dynamisch verknüpfte CRT den Zustand für sämtlichen Code innerhalb eines Prozesses, der dynamisch mit der CRT verknüpft ist. Bei den neuen sichereren Versionen dieser Funktionen wie `strtok_s` tritt dieses Problem nicht auf.  
   

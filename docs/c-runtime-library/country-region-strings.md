@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 708651f59ceff638482264e3fc57228e8a1822b2
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 272ce38cee55661a3f4a1eb751c8808b355b59be
 ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
-Zeichenfolgen für Länder und Regionen können mit einer Sprachenzeichenfolge kombiniert werden, um eine Gebietsschemaspezifikation für die Funktionen `setlocale`, `_wsetlocale`, `_create_locale`und `_wcreate_locale` zu erstellen. Eine Liste der von den verschiedenen Windows-Betriebssystemversionen unterstützten Länder- und Regionsnamen finden Sie unter der [Referenz zur NLS(National Language Support)-API](http://msdn.microsoft.com/goglobal/bb896001.aspx). In der Liste kann die Land-/Regionszeichenfolge irgendein Landeswert aus der Spalte **Gebietsschema – Sprache Land/Region** oder irgendeine Abkürzung aus der Spalte **Abkürzung des Landes- oder Regionsnamens** sein.  
+Zeichenfolgen für Länder und Regionen können mit einer Sprachenzeichenfolge kombiniert werden, um eine Gebietsschemaspezifikation für die Funktionen `setlocale`, `_wsetlocale`, `_create_locale`und `_wcreate_locale` zu erstellen. Listen der Länder-/Regionsnamen, die von verschiedenen Windows-Betriebssystemversionen unterstützt werden, finden Sie unter [National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) (API-Referenz für die Unterstützung von Landessprachen). In den Listen kann die Zeichenfolge für Land/Region einer der Werte in der Spalte **Locale – Language County/Region** oder eine der Abkürzungen in der Spalte **Country or Region name abbreviation** sein. Weitere Informationen zur Sprachunterstützung in Windows-Betriebssystemen nach Version finden Sie unter [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) in „[MS-LCID]: Windows Language Code Identifier (LCID) Reference“ (Anhang A: Produktverhalten in „[MS-LCID]: Windows-Sprachcodebezeichner – Referenz“).  
   
  Die Implementierung der C-Laufzeitbibliothek unterstützt auch die folgenden zusätzlichen Land-/Regionszeichenfolgen und Abkürzungen:  
   

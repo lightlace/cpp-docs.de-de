@@ -33,15 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: dfbd15b0da6e09b825a1562f006416e975603ab5
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 51f99c8990015c6a9f3d50c31a370df5e3e22dbf
 ms.contentlocale: de-de
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="language-strings"></a>Language Strings
-Die Funktionen `setlocale` und `_create_locale` können die von der Windows NLS-API unterstützten Sprachen auf Betriebssystemen verwenden, die nicht die Unicode-Codepage verwenden. Eine Liste der unterstützten Sprachen nach Betriebssystemversion finden Sie in der [National Language Support (NLS) API Reference](http://msdn.microsoft.com/goglobal/bb896001.aspx) (API-Referenz zur Unterstützung der Landessprache [National Language Support, NLS]). Die Sprachenzeichenfolge kann ein beliebiger Wert aus den Spalten für die **Sprache** und die **Abkürzung der Sprachnamen** der Liste der unterstützten Sprachen sein. Die Implementierung der C-Laufzeitbibliothek unterstützt ebenfalls diese Sprachenzeichenfolgen:  
+Die Funktionen `setlocale` und `_create_locale` können die von der Windows NLS-API unterstützten Sprachen auf Betriebssystemen verwenden, die nicht die Unicode-Codepage verwenden. Eine Liste der unterstützten Sprachen nach Betriebssystemversion finden Sie in der [National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) (API-Referenz zur Unterstützung der Landessprache [National Language Support, NLS]). Die Sprachenzeichenfolge kann ein beliebiger Wert aus den Spalten für die **Sprache** und die **Abkürzung der Sprachnamen** der Liste der unterstützten Sprachen sein. Weitere Informationen zur Sprachunterstützung nach Betriebssystemversion finden Sie unter [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) in „[MS-LCID]: Windows Language Code Identifier (LCID) Reference“ (Anhang A: Produktverhalten in „[MS-LCID]: Windows-Sprachcodebezeichner – Referenz“).   
+  
+Die Implementierung der C-Laufzeitbibliothek unterstützt ebenfalls diese Sprachenzeichenfolgen:  
   
 |Sprachenzeichenfolge|Entsprechender Gebietsschemaname|  
 |---------------------|----------------------------|  
