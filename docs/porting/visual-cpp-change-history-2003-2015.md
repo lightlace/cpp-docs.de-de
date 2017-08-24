@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 5c910e117ea484b6b181b0d81de84cdc22a53fc1
 ms.contentlocale: de-de
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
@@ -69,7 +69,7 @@ Wenn Sie auf eine neue Version des Visual C++-Compilers aktualisieren, treten un
   
 #### <a name="general-changes"></a>Allgemeine Änderungen  
   
--   **Umgestaltete Binärdateien** Die CRT-Bibliothek wurde in zwei verschiedenen Binärdateien umgestaltet, eine Universal CRT (ucrtbase), die den Großteil der Standardfunkionen enthält, und eine VC-Laufzeitbibliothek (vcruntime140) mit complilergebundenen Funktionen wie Ausnahmebehandlung und systeminterne Funktionen. Wenn Sie die standardmäßigen Projekteinstellungen verwenden, sind Sie von dieser Änderung nicht betroffen, da der Linker automatisch die neuen Standardbibliotheken verwendet. Wenn Sie die **Linker** -Eigenschaft **Alle Standardbibliotheken ignorieren** des Projekts auf **Ja** festgelegt haben oder die /NODEFAULTLIB-Linkeroption in der Befehlszeile verwenden, müssen Sie die Liste der Bibliotheken (in der Eigenschaft **Zusätzliche Abhängigkeiten** ) so aktualisieren, dass sie die neuen umgestalteten Bibliotheken enthält. Ersetzen Sie die alte CRT-Bibliothek (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) mit den entsprechenden umgestalteten Bibliotheken. Für jede der beiden umgestalteten Bibliotheken gibt es eine statische (.lib) und eine dynamische (.dll) Version sowie endgültige (ohne Suffix) und Debugversionen (mit dem Suffix „d“). Die dynamischen Versionen haben eine Importbibliothek, mit der eine Verknüpfung erstellt wird. Die zwei umgestalteten Bibliotheken sind Universal CRT, insbesondere ucrtbase.dll oder .lib, ucrtbased.dll oder .lib, und die VC-Laufzeitbibliothek, libvcruntime.lib, libvcruntime.dll, libvcruntimed.lib und libvcruntimed.dll. Siehe [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md).  
+-   **Umgestaltete Binärdateien** Die CRT-Bibliothek wurde in zwei verschiedene Binärdateien umgestaltet, eine Universal CRT (ucrtbase), die den Großteil der Standardfunktionen enthält, und eine VC-Laufzeitbibliothek (vcruntime) mit compilergebundenen Funktionen wie Ausnahmebehandlung und systeminternen Funktionen. Wenn Sie die standardmäßigen Projekteinstellungen verwenden, sind Sie von dieser Änderung nicht betroffen, da der Linker automatisch die neuen Standardbibliotheken verwendet. Wenn Sie die **Linker** -Eigenschaft **Alle Standardbibliotheken ignorieren** des Projekts auf **Ja** festgelegt haben oder die /NODEFAULTLIB-Linkeroption in der Befehlszeile verwenden, müssen Sie die Liste der Bibliotheken (in der Eigenschaft **Zusätzliche Abhängigkeiten** ) so aktualisieren, dass sie die neuen umgestalteten Bibliotheken enthält. Ersetzen Sie die alte CRT-Bibliothek (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) mit den entsprechenden umgestalteten Bibliotheken. Für jede der beiden umgestalteten Bibliotheken gibt es eine statische (.lib) und eine dynamische (.dll) Version sowie endgültige (ohne Suffix) und Debugversionen (mit dem Suffix „d“). Die dynamischen Versionen haben eine Importbibliothek, mit der eine Verknüpfung erstellt wird. Die zwei umgestalteten Bibliotheken sind Universal CRT, insbesondere „ucrtbase.dll“ oder „.lib“, „ucrtbased.dll“ oder „.lib“, und die VC-Laufzeitbibliothek, „libvcruntime.lib“, vcruntime*Version*.dll, libvcruntimed.lib und vcruntimed*Version*.dll. Die *Version* sowohl in Visual Studio 2015 als auch in Visual Studio 2017 ist 140. Siehe [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md).  
   
 #### <a name="localeh"></a>\<locale.h>  
   
@@ -1423,7 +1423,7 @@ Um den Fehler zu beheben, entfernen Sie in S2 den Aufruf von S1() aus dem Konstr
 
 -   **{} verhindert Konvertierung in Zeiger**  
 
-Der folgende Code erzeugt nun C2439 „S::p“: Member konnte nicht initialisiert werden    
+Der folgende Code erzeugt nun C2439 „S::p“: Member konnte nicht initialisiert werden   
 ```cpp
 struct S {
     S() : p({ 0 }) {}

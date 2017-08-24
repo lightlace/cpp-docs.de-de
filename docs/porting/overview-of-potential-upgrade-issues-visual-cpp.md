@@ -11,10 +11,11 @@ caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
-ms.lasthandoff: 04/01/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 8d1d9d769d4cb7df5c34b42f6c104ef3c2e959bd
+ms.openlocfilehash: 8edf2d66cefca86fe51a64c9a15f83e9de040f63
+ms.contentlocale: de-de
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Überblick über potenzielle Aktualisierungsprobleme (Visual C++)
@@ -30,7 +31,7 @@ Im Laufe der Jahre wurde der Visual C++-Compiler vielen Änderungen unterzogen, 
 ### <a name="toolset"></a>Toolset  
  Die Dateiformate OBJ und LIB sind klar definiert und ändern sich nur selten. Manchmal werden diese Dateiformate erweitert, aber diese Erweiterungen haben im Allgemeinen keinen Einfluss auf die Fähigkeit neuerer Toolsets, die von älteren Toolsets erzeugten Objektdateien und Bibliotheken zu nutzen. Die einzige große Ausnahme hierbei ist die Verwendung von /GL (Link-Zeitcodegenerierung/Optimierung des gesamten Programms) bei der Kompilierung. Wenn Sie mit/GL kompilieren, kann die resultierende Objektdatei nur unter Verwendung desselben Toolsets verknüpft werden, mit dem sie erzeugt wurde. Wurde eine Objektdatei also mit /GL und dem Compiler von Visual Studio 2017 (v141) erzeugt, muss die Verknüpfung mit dem Linker von Visual Studio 2017 (v141) erfolgen. Die Gründe hierfür liegen darin, dass die internen Datenstrukturen innerhalb der /GL-Objekte über Hauptversionen des Toolsets hinweg nicht stabil sind und dass die älteren Datenformate in neueren Toolsets nicht verstanden werden.  
   
- C++ verfügt über keine stabile Anwendungsbinärdatei-Schnittstelle (ABI). Visual C++ verwaltet eine stabile ABI für alle Nebenversionen einer Version. Visual Studio 2017 und alle zugehörigen Updates sind beispielsweise binärkompatibel. Die ABI ist jedoch nicht unbedingt kompatibel über Hauptversionen von Visual C++ hinweg (mit Ausnahme von 2015 und 2017, die _binärkompatibel sind_). Wir können also wichtige Änderungen an C++-Typlayout, Namensergänzung, Ausnahmebehandlung und anderen Teilen der C++-ABI vornehmen. Angenommen, Sie verfügen über eine Objektdatei, die externe Symbole mit C++-Verknüpfung enthält. Dann kann diese Objektdatei möglicherweise nicht ordnungsgemäß mit Objektdateien verknüpft werden, die mit einer anderen Hauptversion des Visual C++-Toolsets erzeugt wurden. Beachten Sie, dass hier „funktioniert möglicherweise nicht“ ganz unterschiedliche Formen annehmen kann: Die Verknüpfung kann vollständig fehlschlagen (z. B. bei geänderter Namensergänzung). Die Verknüpfung kann erfolgreich ausgeführt werden, aber zur Laufzeit treten Fehler auf (z. B. bei geändertem Typlayout). In vielen Fällen funktioniert auch alles fehlerfrei. Beachten Sie außerdem, dass die C++-ABI zwar nicht stabil ist, die C-ABI und die für COM erforderliche Teilmenge der C++-ABI jedoch stabil sind.  
+ C++ verfügt über keine stabile Anwendungsbinärdatei-Schnittstelle (ABI). Visual C++ verwaltet eine stabile ABI für alle Nebenversionen einer Version. Visual Studio 2017 und alle zugehörigen Updates sind beispielsweise binärkompatibel. Die ABI ist jedoch nicht unbedingt kompatibel über Hauptversionen von Visual C++ hinweg (mit Ausnahme von 2015 und 2017, die _binärkompatibel sind_). Wir können also wichtige Änderungen an C++-Typlayout, Namensergänzung, Ausnahmebehandlung und anderen Teilen der C++-ABI vornehmen. Angenommen, Sie verfügen über eine Objektdatei, die externe Symbole mit C++-Verknüpfung enthält. Dann kann diese Objektdatei möglicherweise nicht ordnungsgemäß mit Objektdateien verknüpft werden, die mit einer anderen Hauptversion des Visual C++-Toolsets erzeugt wurden. Beachten Sie, dass hier „funktioniert möglicherweise nicht“ ganz unterschiedliche Formen annehmen kann: Die Verknüpfung kann vollständig fehlschlagen (z.B. bei geänderter Namensergänzung). Die Verknüpfung kann erfolgreich ausgeführt werden, aber zur Laufzeit treten Fehler auf (z.B. bei geändertem Typlayout). In vielen Fällen funktioniert auch alles fehlerfrei. Beachten Sie außerdem, dass die C++-ABI zwar nicht stabil ist, die C-ABI und die für COM erforderliche Teilmenge der C++-ABI jedoch stabil sind.  
   
 ### <a name="libraries"></a>Bibliotheken  
 
@@ -166,6 +167,5 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
  Weitere Informationen finden Sie unter [Portieren von MBCS zu Unicode](porting-guide-spy-increment.md#porting_to_unicode). Allgemeine Informationen zu MBCS im Vergleich zu Unicode finden Sie unter [Text und Zeichenfolgen in Visual C++](../text/text-and-strings-in-visual-cpp.md) und [Internationalisierung](../c-runtime-library/internationalization.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
- [Verbesserungen an der Übereinstimmung mit Standards in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md)
+ [Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md) [Verbesserungen an C++ bei der Übereinstimmung in Visual Studio 2017](../cpp-conformance-improvements-2017.md)
 
