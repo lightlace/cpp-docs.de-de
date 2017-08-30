@@ -1,5 +1,5 @@
 ---
-title: "Unterstützte Plattformen (Visual C++) | Microsoft-Dokumentation"
+title: Supported Platforms (Visual C++) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,36 +32,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0192e9bd6ef9d93e274c43c24137a27e5aa53dab
-ms.openlocfilehash: c0c209c16ad4a264b851321a2879104112da81f2
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 78fac089c9b21825bfb014fe6f26776bac58bd93
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="supported-platforms-visual-c"></a>Unterstützte Plattformen (Visual C++)
-Die Apps, die mit [!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)] erstellt werden, können folgendermaßen für verschiedene Plattformen eingesetzt werden.  
+# <a name="supported-platforms-visual-c"></a>Supported Platforms (Visual C++)
+
+Apps built by using [!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)] can be targeted to various platforms, as follows.  
   
-|Betriebssystem|x86|x64|ARM|  
+|Operating System|x86|x64|ARM|  
 |----------------------|---------|---------|---------|  
 |Windows XP|X*|X*||  
 |[!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)]|X*|X*||  
 |Windows Vista|X|X||  
-|Windows Server 2008|X|X||  
-|Windows 7|X|X||  
+|Windows Server 2008|X|X||  
+|Windows 7|X|X||  
 |Windows Server 2012 R2|X|X||  
 |Windows 8|X|X|X|  
 |Windows 8.1|X|X|X|  
 |Windows 10|X|X|X|  
 |Android **|X|X|X|  
-|iOS **|X|X|w|  
+|iOS **|X|X|X|  
+|Linux ***|X|X|X|  
   
- \* Sie können das in Visual Studio 2015, Visual Studio 2013 und Visual Studio 2012 Update 1 oder höher enthaltene Windows XP-Plattformtoolset zum Erstellen von Windows XP- und [!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)]-Projekten verwenden. Weitere Informationen zum Verwenden dieses Plattformtoolsets finden Sie unter [Konfigurieren von C++11-Programmen für Windows XP](build/configuring-programs-for-windows-xp.md). Weitere Informationen zum Ändern des Plattformtoolsets finden Sie unter [Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets](build/how-to-modify-the-target-framework-and-platform-toolset.md).  
+\* You can use the Windows XP platform toolset included in Visual Studio 2017, Visual Studio 2015, Visual Studio 2013, and Visual Studio 2012 Update 1 or later to build Windows XP and [!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)] projects. For information on how to use this platform toolset, see [Configuring Programs for Windows XP](build/configuring-programs-for-windows-xp.md). For additional information on changing the platform toolset, see [How to: Modify the Target Framework and Platform Toolset](build/how-to-modify-the-target-framework-and-platform-toolset.md).  
   
- ** Sie können die optionale Visual C++ für plattformübergreifende Mobil-Entwicklungskomponente im Visual Studio 2015-Setup verwenden, um auf IOS-oder Android-Plattformen abgezielte Apps zu entwickeln. Weitere Informationen finden Sie unter [Installieren von Visual C++ für die plattformübergreifende mobile Entwicklung](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). Um iOS-Code zu erstellen, müssen Sie einen Macintosh-Computer besitzen und weitere Anforderungen erfüllen. Eine Liste der Voraussetzungen und Installationsanweisungen finden Sie unter [Installieren und Konfigurieren von Tools zum Erstellen mit iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Sie können x86- oder ARM-Code für die Zielhardware erstellen. Verwenden Sie x86-Konfigurationen zum Entwickeln für den iOS-Simulator, Microsoft Visual Studio-Emulator für Android und einige Android-Geräte. Verwenden Sie ARM-Konfigurationen für iOS-Geräte und die meisten Android-Geräte.  
+\*\* You can install the **Mobile development with C++** workload in the Visual Studio installer (or the optional **Visual C++ for Cross Platform Mobile Development** component in Visual Studio 2015 setup) to target iOS or Android platforms. For instructions, see [Install Visual C++ for Cross-Platform Mobile Development](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). To build iOS code, you must have a Mac computer and meet other requirements. For a list of prerequisites and installation instructions, see [Install And Configure Tools to Build using iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). You can build x86 or ARM code to match the target hardware. Use x86 configurations to build for the iOS simulator, Microsoft Visual Studio Emulator for Android, and some Android devices. Use ARM configurations to build for iOS devices and most Android devices.  
   
- Informationen zum Festlegen der Zielplattformkonfiguration finden Sie unter [Vorgehensweise: Konfigurieren von Visual C++ Projekten für 64-Bit-Zielplattformen](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
+\*\*\* You can install the **Linux development with C++** workload in the Visual Studio installer to target Linux platforms. For instructions, see [Download, Install and Setup the Linux Workload](linux/download-install-and-setup-the-linux-development-workload.md). This toolset compiles your executable on the target machine, so you can build for any supported architecture.  
+
+For information about how to set the target platform configuration, see [How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual C++ Tools and Features in Visual Studio Editions (Visual C++-Tools und -Funktionen in Visual Studio-Editionen)](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)   
- [Erste Schritte](/visualstudio/ide/getting-started-with-visual-cpp-in-visual-studio)
+## <a name="see-also"></a>See Also  
+
+[Visual C++ Tools and Features in Visual Studio Editions](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)   
+[Getting Started](/visualstudio/ide/getting-started-with-visual-cpp-in-visual-studio)

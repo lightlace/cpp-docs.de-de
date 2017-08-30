@@ -1,59 +1,78 @@
 ---
-title: "H&#228;ufig auftretende 64-Bit-Migrationsprobleme bei Visual C++"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Portieren von 32-Bit-Code [C++]"
-  - "64-Bit-Anwendungen [C++]"
-  - "64-Bit-Compiler [C++], Migration"
-  - "64-Bit-Compiler [C++], Portieren von 32-Bit-Code"
-  - "64-Bit-Programmierung [C++], Migration"
-  - "Migration [C++], Probleme bei 64-Bit-Code"
-  - "Portieren von 32-Bit-Code auf 64-Bit-Code"
-  - "Aktualisieren von Visual C++-Anwendungen, 32-Bit-Code"
-  - "Win64 [C++]"
+title: Common Visual C++ 64-bit Migration Issues | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- 64-bit programming [C++], migration
+- 64-bit compiler [C++], migration
+- porting 32-bit code to 64-bit code
+- upgrading Visual C++ applications, 32-bit code
+- migration [C++], 64-bit code issues
+- 32-bit code porting [C++]
+- 64-bit applications [C++]
+- 64-bit compiler [C++], porting 32-bit code
+- Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
 caps.latest.revision: 19
-caps.handback.revision: "17"
-ms.author: "corob"
-manager: "ghogen"
----
-# H&#228;ufig auftretende 64-Bit-Migrationsprobleme bei Visual C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 90c4e0486be4556282f1a8402196e4237fca1ab6
+ms.contentlocale: de-de
+ms.lasthandoff: 08/30/2017
 
-Wenn Sie mit Visual C\+\+ Anwendungen erstellen, die unter einem 64\-Bit\-Windows\-Betriebssystem ausgeführt werden sollen, sollten Sie folgende Probleme berücksichtigen:  
+---
+# <a name="common-visual-c-64-bit-migration-issues"></a>Common Visual C++ 64-bit Migration Issues
+
+When you use Visual C++ to create applications to run on a 64-bit Windows operating system, you should be aware of the following issues:  
   
--   `int` und `long` sind unter 64\-Bit\-Windows\-Betriebssystemen 32\-Bit\-Werte.  Bei Programmen, die Sie für 64\-Bit\-Plattformen kompilieren möchten, sollten Sie darauf achten, keine Zeiger auf 32\-Bit\-Variablen zuzuweisen.  Zeiger sind auf 64\-Bit\-Plattformen 64\-Bit\-Werte, und der Zeigerwert wird abgeschnitten, wenn Sie sie einer 32\-Bit\-Variable zuweisen.  
+-   An `int` and a `long` are 32-bit values on 64-bit Windows operating systems. For programs that you plan to compile for 64-bit platforms, you should be careful not to assign pointers to 32-bit variables. Pointers are 64-bit on 64-bit platforms, and you will truncate the pointer value if you assign it to a 32-bit variable.  
   
--   `size_t`, `time_t` und  `ptrdiff_t` sind unter 64\-Bit\-Windows\-Betriebssystemen 64\-Bit\-Werte.  
+-   `size_t`, `time_t`, and `ptrdiff_t` are 64-bit values on 64-bit Windows operating systems.  
   
--   `time_t` ist unter 32\-Bit\-Windows\-Betriebssystemen in Visual C\+\+\-Versionen vor Visual C\+\+ 2005 ein 32\-Bit\-Wert.  `time_t` ist jetzt standardmäßig eine 64\-Bit\-Ganzzahl.  Weitere Informationen finden Sie unter [Time Management \(auf Englisch\)](../c-runtime-library/time-management.md).  
+-   `time_t` is a 32-bit value on 32-bit Windows operating systems in Visual C++ versions before Visual C++ 2005. `time_t` is now a 64-bit integer by default. For more information, see [Time Management](../c-runtime-library/time-management.md).  
   
-     Sie müssen berücksichtigen, wo der Code einen `int`\-Wert nimmt und als einen `size_t`\- oder `time_t`\-Wert verarbeitet.  Die Zahl kann unter Umständen größer als eine 32\-Bit\-Zahl werden, und Daten werden abgeschnitten, wenn sie wieder an den `int`\-Speicher übergeben werden.  
+     You should be aware of where your code takes an `int` value and processes it as a `size_t` or `time_t` value. It is possible that the number could grow to be larger than a 32-bit number and data will be truncated when it is passed back to the `int` storage.  
   
- Der %x\-Modifzierer\(Hexadezimal\-`int`\-Format\) `printf` funktioniert unter einem 64\-Bit\-Windows\-Betriebssystem nicht wie erwartet.  Er funktioniert nur auf den ersten 32 Bits des Werts, der an ihn übergeben wird.  
+The %x (hex `int` format) `printf` modifier will not work as expected on a 64-bit Windows operating system. It will only operate on the first 32 bits of the value that is passed to it.  
   
--   Verwenden Sie %I32x, um einen 32\-Bit\-Ganzzahltyp im Hexadezimalformat anzuzeigen.  
+-   Use %I32x to display a 32-bit integral type in hex format.  
   
--   Verwenden Sie %I64x, um einen 64\-Bit\-Ganzzahltyp im Hexadezimalformat anzuzeigen.  
+-   Use %I64x to display a 64-bit integral type in hex format.  
   
--   %p \(Hexadezimalformat für einen Zeiger\) funktioniert unter einem 64\-Bit\-Windows\-Betriebssystem wie erwartet.  
+-   The %p (hex format for a pointer) will work as expected on a 64-bit Windows operating system.  
   
- Weitere Informationen finden Sie unter:  
+For more information, see:  
   
--   [Compileroptionen](../build/reference/compiler-options.md)  
+-   [Compiler Options](../build/reference/compiler-options.md)  
   
--   [\<caps:sentence id\="tgt18" sentenceid\="8228b16e9fef41dbba1af1d78bf0cc87" class\="tgtSentence"\>Tipps zur Migration\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/aa384214)  
+-   [Migration Tips](http://msdn.microsoft.com/library/windows/desktop/aa384214)  
   
-## Siehe auch  
- [Konfigurieren von Programmen für 64\-Bit](../build/configuring-programs-for-64-bit-visual-cpp.md)   
- [Portieren des Programms](assetId:///c36c44b3-5a9b-4bb4-9b7a-469aa770ed00)
+## <a name="see-also"></a>See Also  
+
+[Configure Visual C++ for 64-bit, x64 targets](../build/configuring-programs-for-64-bit-visual-cpp.md)   
+[Visual C++ Porting and Upgrading Guide](../porting/visual-cpp-porting-and-upgrading-guide.md)

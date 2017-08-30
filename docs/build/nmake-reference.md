@@ -1,54 +1,71 @@
 ---
-title: "NMAKE-Referenz | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Microsoft Program Maintenance Utility"
-  - "NMAKE (Programm)"
-  - "Vorverarbeiten von NMAKE"
-  - "Programmausführung [C++]"
+title: NMAKE Reference | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Microsoft program maintenance utility
+- preprocessing NMAKE
+- program execution [C++]
+- NMAKE program
 ms.assetid: 24fab6e3-7e43-4da4-957a-88afbbcf8661
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# NMAKE-Referenz
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: a0b8b425a83162480a21b0d2ff5c5aabc1eacea1
+ms.contentlocale: de-de
+ms.lasthandoff: 08/30/2017
 
-Bei Microsoft Program Maintenance Utility \(NMAKE.EXE\) handelt es sich um ein in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] enthaltenes Befehlszeilentools, das Projekte auf Grundlage von in einer Beschreibungsdatei enthaltenen Befehlen erstellt.  
+---
+# <a name="nmake-reference"></a>NMAKE Reference
+The Microsoft Program Maintenance Utility (NMAKE.EXE) is a command-line tool included with [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] that builds projects based on commands that are contained in a description file.  
   
- Zum Verwenden von NMAKE müssen Sie es in einem Developer\-Eingabeaufforderungsfenster ausführen.  Ein Developer\-Eingabeaufforderungsfenster verfügt über die für die Tools, Bibliotheken und „include“\-Dateipfade festgelegten Umgebungsvariablen, die für das Erstellen an der Befehlszeile erforderlich sind.  Weitere Informationen über das Öffnen eines Developer\-Eingabeaufforderungsfensters finden Sie unter [Erstellen über die Befehlszeile](../build/building-on-the-command-line.md).  
+ To use NMAKE, you must run it in a Developer Command Prompt window. A Developer Command Prompt window has the environment variables set for the tools, libraries, and include file paths required to build at the command line. For details on how to open a Developer Command Prompt window, see [Build C/C++ code on the command line](../build/building-on-the-command-line.md).  
   
-## Worüber möchten Sie mehr erfahren?  
- [Ausführen von NMAKE](../build/running-nmake.md)  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about?  
+ [Running NMAKE](../build/running-nmake.md)  
   
- [Inhalt eines Makefiles](../build/contents-of-a-makefile.md)  
+ [Contents of a Makefile](../build/contents-of-a-makefile.md)  
   
- [Beschreibungsblöcke](../build/description-blocks.md)  
+ [Description blocks](../build/description-blocks.md)  
   
- [Befehle in einem Makefile](../build/commands-in-a-makefile.md)  
+ [Commands in a Makefile](../build/commands-in-a-makefile.md)  
   
- [Makros und NMAKE](../build/macros-and-nmake.md)  
+ [Macros and NMAKE](../build/macros-and-nmake.md)  
   
- [Rückschlussregeln](../build/inference-rules.md)  
+ [Inference rules](../build/inference-rules.md)  
   
- [Punktdirektiven](../build/dot-directives.md)  
+ [Dot directives](../build/dot-directives.md)  
   
- [Präprozessorlauf eines Makefiles](../build/makefile-preprocessing.md)  
+ [Makefile preprocessing](../build/makefile-preprocessing.md)  
   
-## Siehe auch  
- [Erstellen über die Befehlszeile](../build/building-on-the-command-line.md)   
- [C\/C\+\+\-Buildtools](../build/reference/c-cpp-build-tools.md)   
- [Erstellen und Verwalten von Visual C\+\+\-Projekten](../ide/creating-and-managing-visual-cpp-projects.md)   
- [Debuggen in Visual Studio](../Topic/Debugging%20in%20Visual%20Studio.md)   
- [Referenz zur C\/C\+\+\-Erstellung](../build/reference/c-cpp-building-reference.md)
+## <a name="see-also"></a>See Also  
+ [Build C/C++ code on the command line](../build/building-on-the-command-line.md)   
+ [C/C++ Build Tools](../build/reference/c-cpp-build-tools.md)   
+ [Creating and Managing Visual C++ Projects](../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   
+ [C/C++ Building Reference](../build/reference/c-cpp-building-reference.md)

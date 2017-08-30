@@ -1,49 +1,66 @@
 ---
-title: "Exemplarische Vorgehensweise: Kompilieren eines C++/CX-Programms in der Befehlszeile"
-ms.custom: na
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'Walkthrough: Compiling a C++/CX Program on the Command Line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
 caps.latest.revision: 8
-caps.handback.revision: "6"
-ms.author: "corob"
-manager: "ghogen"
----
-# Exemplarische Vorgehensweise: Kompilieren eines C++/CX-Programms in der Befehlszeile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 82ce88b7769c37ee6219df59c19490537cfe2571
+ms.contentlocale: de-de
+ms.lasthandoff: 08/30/2017
 
-Sie können Visual C\+\+\-Programme erstellen, die auf die Windows Runtime abzielen und diese in der Befehlszeile erstellen.  Visual C\+\+ unterstützt Visual C\+\+\-Komponentenerweiterungen \(C\+\+\/CX\), die zusätzliche Typen und Operatoren für das Windows\-Runtime\-Programmiermodell bereitstellen.  Sie können C\+\+\/CX verwenden, um Windows Phone 8.1\-, Windows Store\- und Windows\-Desktop\-Apps zu erstellen.  Weitere Informationen finden Sie unter [Einführung in C\+\+\/CX](http://msdn.microsoft.com/magazine/dn166929.aspx) und [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md).  
+---
+# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Walkthrough: Compiling a C++/CX Program on the Command Line
+You can create Visual C++ programs that target the Windows Runtime and build them on the command line. Visual C++ supports Visual C++ component extensions (C++/CX), which has additional types and operators to target the Windows Runtime programming model. You can use C++/CX to build apps for Windows Phone 8.1, Windows Store, and Windows desktop. For more information, see [A Tour of C++/CX](http://msdn.microsoft.com/magazine/dn166929.aspx) and [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md).  
   
- In dieser exemplarischen Vorgehensweise verwenden Sie einen Texteditor zur Erstellung eines grundlegenden C\+\+\/CX\-Programms und kompilieren es dann auf der Befehlszeile.  \(Sie können Sie Ihr C\+\+\/CX\-Programm verwenden, statt das gezeigte einzugeben oder Sie können ein C\+\+\/CX\-Codebeispiel aus einem anderen Hilfeartikel verwenden.  Diese Technik ist nützlich zum Erstellen und Testen von kleinen Modulen, die keine Benutzeroberflächenelemente enthalten.\)  
+ In this walkthrough, you use a text editor to create a basic C++/CX program, and then compile it on the command line. (You can use your own C++/CX program instead of typing the one that's shown, or you can use a C++/CX code sample from another help article. This technique is useful for building and testing small modules that contain no UI elements.)  
   
 > [!NOTE]
->  Sie können auch die Visual Studio IDE für die Kompilierung von C\+\+\/CX\-Programmen verwenden.  Da die IDE Design, Debuggen, Emulation und Unterstützung für die Bereitstellung, die auf der Befehlszeile nicht verfügbar ist, enthält, empfehlen wir die Verwendung der IDE zum Erstellen von Windows Store\-Apps.  Weitere Informationen finden Sie unter [Create a basic C\+\+ Store app](http://msdn.microsoft.com/library/windows/apps/dn263168).  
+>  You can also use the Visual Studio IDE to compile C++/CX programs. Because the IDE includes design, debugging, emulation, and deployment support that isn't available on the command line, we recommend that you use the IDE to build Windows Store apps. For more information, see [Create a basic C++ Store app](http://msdn.microsoft.com/library/windows/apps/dn263168).  
   
-## Vorbereitungsmaßnahmen  
- Sie benötigen grundlegende Kenntnisse der Programmiersprache C\+\+.  
+## <a name="prerequisites"></a>Prerequisites  
+ You must understand the fundamentals of the C++ language.  
   
-## Kompilieren eines C\+\+\/CX\-Programms  
- TZur Aktivierung der Kompilierung für C\+\+\/CX müssen Sie die Compileroption [\/ZW](../build/reference/zw-windows-runtime-compilation.md) verwenden.  Der Visual C\+\+\-Compiler generiert eine .exe\-Datei, die auf die Windows Runtime abzielt und mit den erforderlichen Bibliotheken verknüpft wird.  
+## <a name="compiling-a-ccx-program"></a>Compiling a C++/CX Program  
+ To enable compilation for C++/CX, you must use the [/ZW](../build/reference/zw-windows-runtime-compilation.md) compiler option. The Visual C++ compiler generates an .exe file that targets the Windows Runtime, and links to the required libraries.  
   
-#### So kompilieren Sie eine C\+\+\/CX\-Anwendung in der Befehlszeile  
+#### <a name="to-compile-a-ccx-application-on-the-command-line"></a>To compile a C++/CX application on the command line  
   
-1.  Öffnen Sie ein **Developer\-Eingabeaufforderungsfenster**.  \(Öffnen Sie im **Start**\-Fenster **Apps**.  Öffnen Sie den Ordner **Visual Studio\-Tools** unter Ihrer Version von [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], und wählen Sie dann die Verknüpfung **Developer\-Eingabeaufforderung** aus.\) Weitere Informationen dazu, wie Sie ein Eingabeaufforderungsfenster öffnen, finden Sie unter [Festlegen der Pfad\- und Umgebungsvariablen für Befehlszeilenbuilds](../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
+1.  Open a **Developer Command Prompt** window. (On the **Start** window, open **Apps**. Open the **Visual Studio Tools** folder under your version of [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], and then choose the **Developer Command Prompt** shortcut.) For more information about how to open a Developer Command Prompt window, see [Build C/C++ code on the command line](../build/building-on-the-command-line.md).  
   
-     Administratoranmeldeinformationen sind möglicherweise erforderlich, um den Code abhängig vom Betriebssystem und der Konfiguration des Computers zu kompilieren.  Zum Ausführen des Eingabeaufforderungsfensters als Administrator öffnen Sie das Kontextmenü für die **Developer\-Eingabeaufforderung**, und wählen Sie dann **Als Administrator ausführen** aus.  
+     Administrator credentials may be required to successfully compile the code, depending on the computer's operating system and configuration. To run the Command Prompt window as an administrator, open the shortcut menu for **Developer Command Prompt** and then choose **Run as administrator**.  
   
-2.  Geben Sie an der Eingabeaufforderung **notepad basiccx.cpp** ein.  
+2.  At the command prompt, enter **notepad basiccx.cpp**.  
   
-     Sie werden aufgefordert, eine Datei zu erstellen. Wählen Sie **Ja** aus.  
+     Choose **Yes** when you are prompted to create a file.  
   
-3.  Geben Sie die folgenden Zeilen in Notepad ein:  
+3.  In Notepad, enter these lines:  
   
     ```cpp  
     using namespace Platform;  
@@ -55,20 +72,21 @@ Sie können Visual C\+\+\-Programme erstellen, die auf die Windows Runtime abzie
   
     ```  
   
-4.  Wählen Sie in der Menüleiste **Datei** und dann **Speichern**.  
+4.  On the menu bar, choose **File**, **Save**.  
   
-     Sie haben eine Visual C\+\+\-Quelldatei erstellt, die den Windows Runtime [Plattformnamespace](../Topic/Platform%20namespace%20\(C++-CX\).md)\-Namespace verwendet.  
+     You have created a Visual C++ source file that uses the Windows Runtime [Platform namespace](../cppcx/platform-namespace-c-cx.md) namespace.  
   
-5.  Geben Sie an der Eingabeaufforderung **cl \/EHsc \/ZW basiccx.cpp \/link \/SUBSYSTEM:CONSOLE** ein.  Der cl.exe\-Compiler kompiliert den Quellcode in eine .obj\-Datei und führt dann den Linker aus, um ein ausführbares Programm namens basiccx.exe zu generieren.  \(Die Compileroption [\/EHsc](../build/reference/eh-exception-handling-model.md) gibt das C\+\+\-Ausnahmebehandlungsmodell und das Flag [\/link](../build/reference/link-pass-options-to-linker.md) gibt eine Konsolenanwendung an.\)  
+5.  At the command prompt, enter **cl /EHsc /ZW basiccx.cpp /link /SUBSYSTEM:CONSOLE**. The cl.exe compiler compiles the source code into an .obj file, and then runs the linker to generate an executable program named basiccx.exe. (The [/EHsc](../build/reference/eh-exception-handling-model.md) compiler option specifies the C++ exception-handling model, and the [/link](../build/reference/link-pass-options-to-linker.md) flag specifies a console application.)  
   
-6.  Geben Sie zum Ausführen des basiccx.exe\-Programms an der Eingabeaufforderung **basiccx** ein.  
+6.  To run the basiccx.exe program, at the command prompt, enter **basiccx**.  
   
-     Das Programm zeigt folgenden Text an und wird anschließend beendet:  
+     The program displays this text and exits:  
   
-  **Dies ist ein C\+\+\/CX\-Programm.**  
+    ```Output  
+    This is a C++/CX program.  
+    ```  
   
-## Siehe auch  
- [Visual C\+\+ Guided Tour](assetId:///499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [C\+\+\-Sprachreferenz](../cpp/cpp-language-reference.md)   
- [Erstellen von C\/C\+\+\-Programmen](../build/building-c-cpp-programs.md)   
- [Compileroptionen](../build/reference/compiler-options.md)
+## <a name="see-also"></a>See Also  
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [Building C/C++ Programs](../build/building-c-cpp-programs.md)   
+ [Compiler Options](../build/reference/compiler-options.md)
