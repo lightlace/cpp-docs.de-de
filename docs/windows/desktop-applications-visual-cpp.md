@@ -1,38 +1,75 @@
 ---
-title: "Windows-Desktopanwendungen (Visual C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Desktop Applications (Visual C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 caps.latest.revision: 17
-caps.handback.revision: "12"
-ms.author: "ghogen"
-manager: "ghogen"
----
-# Windows-Desktopanwendungen (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 7e1281daaf729de6935774ba34e2387bf82446e8
+ms.openlocfilehash: 670b8972daa340196aaa18bb65fb976b7c317bd1
+ms.contentlocale: de-de
+ms.lasthandoff: 08/30/2017
 
-Sie können eine Windows\-Desktopanwendung erstellen, wenn Sie eine systemeigene Desktopanwendung erstellen möchten, die eine fensterbasierte Benutzeroberfläche hat und unter Windows\-Versionen von Windows XP bis Windows 10 auf dem Windows\-Desktop ausgeführt werden kann.  
+---
+# <a name="desktop-applications-visual-c"></a>Desktop Applications (Visual C++)
+A *desktop application* in C++ is a native application that can access the full set of Windows APIs and either runs in a window or in the system console. Desktop applications in C++ can run on Windows XP through Windows 10 (although Windows XP is no longer officially supported and there are many Windows APIs that have been introduced since then).   A desktop application is distinct from a Universal Windows Platform (UWP) app, which can run on PCs running Windows 10, and also on XBox, Windows Phone, Surface Hub, and other devices. For more information about desktop vs. UWP applications, see [Choose your technology](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
   
- *Windows\-Desktopanwendung* \(in älterer Literatur auch als Win32\-Anwendung bezeichnet\) ist der herkömmliche Begriff für eine Anwendung, die Windows\-Meldungen direkt mit Meldungsschleifen verarbeitet, anstatt ein Framework wie Microsoft Foundation Classes \(MFC\), Active Template Library \(ATL\) oder .NET Framework zu verwenden. Eine Windows\-Desktopanwendung in C\+\+ kann CRT\- \(C Runtime\) und STL\-Klassen \(Standard Template Library\) und \-Funktionen, COM\-Objekte sowie jede der öffentlichen Windows\-Funktionen verwenden, die insgesamt als Windows\-API bezeichnet werden. Eine Einführung in Windows\-Desktopanwendung in C\+\+ finden Sie unter [Erfahren Sie, wie für Windows in C\+\+ programmiert wird](http://go.microsoft.com/fwlink/p/?LinkId=262281).  
+ **Terminology**  
   
- Eine Windows\-Desktopanwendung ist eine Möglichkeit, eine systemeigene Desktopanwendung für Windows zu erstellen; die andere Methode ist eine MFC\-Anwendung. MFC ist die Standardauswahl für Apps, insbesondere für Unternehmens\-Apps, die viele benutzerdefinierte Steuerelemente oder Benutzersteuerelemente haben. MFC stellt bequeme Hilfsklassen für die Serialisierung, Textbearbeitung und das Drucken sowie moderne Benutzeroberflächenelemente wie das Menüband bereit. Diese Klassen sind für eine Windows\-Desktopanwendung nicht verfügbar.  
+-   A *Win32* application is a Windows desktop application in C++ can make use of native [Windows C APIs and/or COM APIs](https://msdn.microsoft.com/en-us/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT and Standard Library  APIs, and 3rd party libraries. A Win32 application that runs in a window requires the developer to work explicitly with Windows messages inside a Windows procedure function. Despite the name, a Win32 application can be compiled as a 32-bit (x86) or 64-bit  (x64) binary. In the Visual Studio IDE, the terms x86 and Win32 are synonymous.  
   
-## Verwandte Artikel  
+-   The [Component Object Model (COM)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms694363\(v=vs.85\).aspx) is a specification that enables programs written in different languages to communicate with one another. Many Windows components are implemented as COM objects and follow standard COM rules for object creation, interface discovery and object destruction.  Using COM objects from C++ desktop applications is relatively straightforward, but writing your own COM object is more advanced. The [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) provides macros and helper functions that simplify COM development.  
   
-|Titel|Beschreibung|  
-|-----------|------------------|  
-|[Windows\-Entwicklung](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Enthält Informationen zur Windows\-API und COM. \(Einige Windows\-APIs und Drittanbieter\-DLLs werden als COM\-Objekte implementiert\).|  
-|[Hilo: Entwickeln von C\+\+\-Anwendungen für Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Beschreibt, wie Sie eine vielseitige Windows\-Desktopanwendung erstellen, die Windows\-Animationen und Direct2D verwendet, um eine karussellbasierte Benutzeroberfläche zu erstellen.|  
-|[Konsolenanwendungen](../windows/console-applications-in-visual-cpp.md)|Enthält Informationen über Konsolen\-Apps. Eine Win32\- oder Win64\-Konsolenanwendung hat kein eigenes Fenster und keine Meldungsschleife. Sie wird im Konsolenfenster ausgeführt. Eingaben und Ausgaben werden von der Befehlszeile behandelt.|  
-|[Visual C\+\+](../top/visual-cpp-in-visual-studio-2015.md)|Beschreibt die wichtigsten Features von Visual C\+\+ in Visual Studio und verlinkt zum Rest der Visual C\+\+\-Dokumentation.|  
-|[Visual C\+\+ Developer Center](http://go.microsoft.com/fwlink/p/?LinkId=252885) auf der MSDN\-Website|Enthält Lernprogramme, Blogbeiträge und Artikel, die für Windows\-Desktopanwendungen relevant sind.|  
-|[Gewusst wie: Verwenden des Windows 10\-SDKs in einer Windows\-Desktopanwendung](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Enthält Schritte zum Einrichten Ihres Projekts für das Erstellen mit dem Windows 10\-SDK.|
+-   An MFC application is a Windows desktop application that use the [Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md) to create the user interface. An MFC application can also use COM components as well as CRT and Standard Library APIs. MFC provides a thin C++ object-oriented wrapper over the window message loop and Windows APIs. MFC is the default choice for applications—especially enterprise-type applications—that have lots of user interface controls or custom user controls. MFC provides convenient helper classes for window management, serialization, text manipulation, printing, and modern user interface elements such as the ribbon. To be effective with MFC you should be familiar with Win32.  
+  
+-   A C++/CLI application or component uses extensions to C++ syntax (as allowed by the C++ Specification) to enable interaction between .NET and native C++code.  A C++/CLI application can have parts that run natively and parts that run on the .NET Framework with access to the .NET Base Class Library. C++/CLI is the preferred option when you have native C++ code that needs to work with code written in C# or Visual Basic. It is primarily intended for use in .NET DLLs rather than in user interface code. For more information, see [.NET Programming with C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  
+  
+ Any desktop application in C++ can use C Runtime (CRT) and Standard Library classes and functions, COM objects, and the public Windows functions, which collectively are known as the Windows API. For an introduction to Windows desktop applications in C++, see [Learn to Program for Windows in C++](http://go.microsoft.com/fwlink/p/?LinkId=262281).  
+  
+## <a name="in-this-section"></a>In this section  
+  
+|Title|Description|  
+|-----------|-----------------|  
+|[Console Applications](../windows/console-applications-in-visual-cpp.md)|Contains information about console apps. A Win32 (or Win64) console application has no window of its own and no message loop. It runs in the console window, and input and output are handled through the command line.|  
+|[Windows Desktop Applications](../windows/windows-desktop-applications-cpp.md)|How to create desktop applications that run in windows as opposed to the console.|  
+|[Resources for Creating a Game Using DirectX (C++)](../windows/resources-for-creating-a-game-using-directx.md)|Links to content for creating games in C++.|  
+|[Walkthrough: Creating and Using a Static Library](../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|How to create a .lib binary file.|  
+|[How to: Use the Windows 10 SDK in a Windows Desktop Application](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contains steps for setting up your project to build using the Windows 10 SDK.|  
+  
+## <a name="related-articles"></a>Related Articles  
+  
+|Title|Description|  
+|-----------|-----------------|  
+|[Windows Development](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Contains information about the Windows API and COM. (Some Windows APIs and third-party DLLs are implemented as COM objects.)|  
+|[Hilo: Developing C++ Applications for Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Describes how to create a rich-client Windows desktop application that uses Windows Animation and Direct2D to create a carousel-based user interface.  This tutorial has not been updated since Windows 7 but it still provides a throough introduction to Win32 programming.|  
+|[Visual C++](../visual-cpp-in-visual-studio.md)|Describes key features of Visual C++ in Visual Studio and links to the rest of the Visual C++ documentation.|  
+  
+## <a name="see-also"></a>See Also  
+ [Visual C++](../visual-cpp-in-visual-studio.md)
+
