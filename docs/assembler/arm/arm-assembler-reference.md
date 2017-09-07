@@ -1,37 +1,55 @@
 ---
-title: "ARM Assembler Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: ARM Assembler Reference | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: f8a076cc-9627-4328-a34a-9c44f7a3aab1
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# ARM Assembler Reference
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 42f71d9a24175d13205ec09ae7bcc90f0eb8a614
+ms.openlocfilehash: a3a472b4dd56848d63ef225bd0b0c083ef0353e2
+ms.contentlocale: de-de
+ms.lasthandoff: 08/29/2017
 
-Die Artikel in diesem Abschnitt der Dokumentation bereitstellen Referenzmaterial für die Microsoft\-ARM\-Assembler \(Armasm\) sowie zugehörige Tools.  
+---
+# <a name="arm-assembler-reference"></a>ARM Assembler Reference
+The articles in this section of the documentation provide reference material for the Microsoft ARM assembler (armasm) and related tools.  
   
-## Verwandte Artikel  
+## <a name="related-articles"></a>Related Articles  
   
-|Titel|Beschreibung|  
-|-----------|------------------|  
-|[ARM Assembler Command\-Line Reference](../../assembler/arm/arm-assembler-command-line-reference.md)|Beschreibt die Befehlszeilenoptionen für Armasm.|  
-|[ARM Assembler Diagnostic Messages](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Beschreibt häufig auftretende Armasm Warn\- und Fehlermeldungen.|  
-|[ARM Assembler Directives](../../assembler/arm/arm-assembler-directives.md)|Beschreibt die ARM\-Richtlinien, die in Armasm unterschiedlich sind.|  
-|[ARM\-Architektur Referenzhandbuch](http://go.microsoft.com/fwlink/?LinkId=246464) auf der Website ARM Infocenter.|Enthält zusätzliche Informationen über die ARM\-Assembler.|  
-|[ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/?LinkId=246102) auf der Website ARM Infocenter.|Referenz enthält zum ARM, Daumen und NEON VFP. **Note:**  "Armasm"\-Assembler, der die auf der Website ARM Infocenter bezeichnet wird, ist nicht die Microsoft\-Asmasm\-Assembler, der in Visual Studio enthalten ist, und ist in diesem Abschnitt dokumentiert.|  
+|Title|Description|  
+|-----------|-----------------|  
+|[ARM Assembler Command-Line Reference](../../assembler/arm/arm-assembler-command-line-reference.md)|Describes the armasm command-line options.|  
+|[ARM Assembler Diagnostic Messages](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Describes commonly encountered armasm warning and error messages.|  
+|[ARM Assembler Directives](../../assembler/arm/arm-assembler-directives.md)|Describes the ARM directives that are different in armasm.|  
+|[ARM Architecture Reference Manual](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual) on the ARM Developer website.|Choose the relevant manual for your ARM architecture. Each contains reference sections about ARM, Thumb, NEON, and VFP, and additional information about the ARM assembly language.|  
+|[ARM Compiler armasm User Guide](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide) on the ARM Developer website.|Choose a recent version to find up-to-date information about the ARM assembly language. **Note:**  The "armasm" assembler that is referred to on the ARM Developer website is not the Microsoft armasm assembler that is included in Visual Studio and is documented in this section.|  
   
-## Siehe auch  
- [ARM\-Spezifikationen](../../intrinsics/arm-intrinsics.md)   
- [Intrinsische Compilerfunktionen](../../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>See Also  
+ [ARM Intrinsics](../../intrinsics/arm-intrinsics.md)   
+ [Compiler Intrinsics](../../intrinsics/compiler-intrinsics.md)
+

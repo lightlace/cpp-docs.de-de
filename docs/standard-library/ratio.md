@@ -1,5 +1,5 @@
 ---
-title: '&lt;ratio&gt; | Microsoft-Dokumentation'
+title: '&lt;ratio&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -58,15 +58,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 39fdef1976a506c36a553d575c83462e7c6e9ee0
+ms.translationtype: MT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 492599963f479e3a4190c31b99156d4f7695f316
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
-Schließen Sie den Standardheader \<ratio> zum Definieren von Konstanten und Vorlagen mit ein, die zum Speichern und Bearbeiten von rationalen Zahlen zum Zeitpunkt der Kompilierung verwendet werden.  
+
+Include the standard header \<ratio> to define constants and templates that are used to store and manipulate rational numbers at compile time.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -74,26 +75,29 @@ Schließen Sie den Standardheader \<ratio> zum Definieren von Konstanten und Vor
 #include <ratio>  
 ```  
   
-### <a name="ratio-structure"></a>ratio-Struktur  
+### <a name="ratio-template"></a>ratio Template  
 
-```
-struct ratio
+```cpp
+template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
+   struct ratio // holds the ratio of Numerator to Denominator
 {
-    static constexpr intmax_t num;
-    static constexpr intmax_t den;
-    typedef ratio<num, den>  type;
-};
+   static constexpr std::intmax_t num;
+   static constexpr std::intmax_t den;
+   typedef ratio<num, den> type;
+}
 ```  
- Die [ratio-Struktur](http://msdn.microsoft.com/en-us/3f7961f4-802b-4251-b3c3-090ef91c0dba) definiert die statische Konstanten `num` und `den`, sodass `num` / `den` == N / D und `num` und `den` keine gemeinsamen Faktoren haben. `num` / `den` ist `value`, das von der Vorlagenklasse dargestellt wird. Aus diesem Grund kennzeichnet `type` die Instanziierung `ratio<N0, D0>` für die `num` == N0 und `den` == D0.  
+
+The template `ratio` defines the static constants `num` and `den` such that `num` / `den` == Numerator / Denominator and `num` and `den` have no common factors. `num` / `den` is the value that is represented by the template class. Therefore, `type` designates the instantiation `ratio<num, den>`.  
   
-### <a name="specializations"></a>Spezialisierungen  
- \<ratio > definiert auch `ratio`-Spezialisierungen, die die folgende Form aufweisen.  
+### <a name="specializations"></a>Specializations
+
+\<ratio> also defines specializations of `ratio` that have the following form.  
   
- `template <class R1, class R2> struct ratio_specialization`  
+`template <class R1, class R2> struct ratio_specialization`  
   
- Jede Spezialisierung nimmt zwei Vorlagenparameter, die auch `ratio`-Spezialisierungen sein müssen. Der `type`-Wert wird durch einen zugeordneten logischen Vorgang bestimmt.  
+Each specialization takes two template parameters that must also be specializations of `ratio`. The value of `type` is determined by an associated logical operation.  
   
-|Name|`type`-Wert|  
+|Name|`type` Value|  
 |----------|------------------|  
 |`ratio_add`|`R1 + R2`|  
 |`ratio_divide`|`R1 / R2`|  
@@ -106,17 +110,19 @@ struct ratio
 |`ratio_not_equal`|`!(R1 == R2)`|  
 |`ratio_subtract`|`R1 - R2`|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>typedefs  
+
+For convenience, the header defines ratios for the standard SI prefixes:
   
-```
-typedef ratio<1,  1000000000000000000> atto;
-typedef ratio<1,     1000000000000000> femto;
-typedef ratio<1,        1000000000000> pico;
+```cpp
+typedef ratio<1, 1000000000000000000> atto;
+typedef ratio<1, 1000000000000000> femto;
+typedef ratio<1, 1000000000000> pico;
 typedef ratio<1, 1000000000> nano;
 typedef ratio<1, 1000000> micro;
 typedef ratio<1, 1000> milli;
-typedef ratio<1,  100> centi;
-typedef ratio<1,   10> deci;
+typedef ratio<1, 100> centi;
+typedef ratio<1, 10> deci;
 typedef ratio<10, 1> deca;
 typedef ratio<100, 1> hecto;
 typedef ratio<1000, 1> kilo;
@@ -127,8 +133,8 @@ typedef ratio<1000000000000000, 1> peta;
 typedef ratio<1000000000000000000, 1> exa;
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 
