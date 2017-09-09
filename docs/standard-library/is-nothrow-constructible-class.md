@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_constructible-Klasse | Microsoft-Dokumentation
+title: is_nothrow_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- is_nothrow_constructible
 - type_traits/std::is_nothrow_constructible
 dev_langs:
 - C++
@@ -35,14 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bf39b973c39fd024de6b4b75b3cc47aeb5bec9d8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 07552a8a7222cbd00f4375ea7fa1771b96c4a5b4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isnothrowconstructible-class"></a>Is_nothrow_constructible-Klasse
-Testet, ob ein Typ konstruierbar ist, und nicht ausgelöst wird, wenn angegebene Argumenttypen verwendet werden.  
+# <a name="isnothrowconstructible-class"></a>is_nothrow_constructible Class
+Tests whether a type is constructible and is known not to throw when the specified argument types are used.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,22 +51,22 @@ template <class T, class... Args>
 struct is_nothrow_constructible;
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Der abzufragende Typ.  
+ The type to query.  
   
  `Args`  
- Die Argumenttypen, mit denen eine Übereinstimmung im Konstruktor von `T` gefunden werden soll.  
+ The argument types to match in a constructor of `T`.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz des Typprädikats ist TRUE, wenn der Typ `T` durch die Verwendung der Argumenttypen von `Args` konstruierbar ist, und wenn der Konstruktor nicht durch den Compiler ausgelöst wird; andernfalls ist sie FALSE. Typ `T` ist konstruierbar, wenn die Variablendefinition `T t(std::declval<Args>()...);` wohlgeformt ist. Sowohl `T` als auch alle Typen in `Args` müssen vollständige Typen `void` sein oder Arrays mit unbekannter Grenze.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `T` is constructible by using the argument types in `Args`, and the constructor is known by the compiler not to throw; otherwise it holds false. Type `T` is constructible if the variable definition `T t(std::declval<Args>()...);` is well-formed. Both `T` and all the types in `Args` must be complete types, `void`, or arrays of unknown bound.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: is_signed-Klasse | Microsoft-Dokumentation
+title: is_signed Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_signed
 - type_traits/std::is_signed
 dev_langs:
 - C++
@@ -35,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: e42e2f5ee1ffe76ffddb89b841c87a9e30e27bc3
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7d9f1c2d9c30215ea8c3184bef1d50e985285bea
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="issigned-class"></a>is_signed-Klasse
-Testen Sie, ob es sich beim Typ um eine ganze Zahl mit Vorzeichen handelt.  
+# <a name="issigned-class"></a>is_signed Class
+Test if type is signed integer.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,14 +51,14 @@ template <class Ty>
 struct is_signed;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Der abzufragende Typ.  
+ The type to query.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz des Typprädikats ist „true“, wenn es sich beim Typ `Ty` um einen Typ für eine ganze Zahl mit Vorzeichen oder um einen `cv-qualified`-Typ für eine ganze Zahl mit Vorzeichen handelt, andernfalls „false“.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a signed integral type or a `cv-qualified` signed integral type, otherwise it holds false.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_signed.cpp   
@@ -95,12 +94,12 @@ is_signed<unsigned int> == false
 is_signed<float> == false  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_unsigned-Klasse](../standard-library/is-unsigned-class.md)
+ [is_unsigned Class](../standard-library/is-unsigned-class.md)
 

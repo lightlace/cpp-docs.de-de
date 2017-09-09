@@ -1,5 +1,5 @@
 ---
-title: is_trivially_move_constructible-Klasse | Microsoft-Dokumentation
+title: is_trivially_move_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_trivially_move_constructible
 - type_traits/std::is_trivially_move_constructible
 dev_langs:
 - C++
@@ -34,15 +33,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: bfcd131b706f68b6cea38880c3c7fcd49527bba4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0e5210adea5cd18381d57993b58479deead5cb6b
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible-Klasse
-Testet, ob der Typ einen trivialen Bewegungskonstruktor aufweist.  
+# <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible Class
+Tests if type has trivial move constructor.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,37 +50,37 @@ template <class Ty>
 struct is_trivially_move_constructible;
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Der abzufragende Typ.  
+ The type to query.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz des Typprädikats ist TRUE, wenn der `Ty` Typ eine Klasse ist, die einen trivialen Bewegungskonstruktor aufweist; andernfalls FALSE.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that has a trivial move constructor, otherwise it holds false.  
   
- Ein Bewegungskonstruktor für eine `Ty`-Klasse ist trivial, wenn:  
+ A move constructor for a class `Ty` is trivial if:  
   
- Er wird implizit deklariert.  
+ it is implicitly declared  
   
- die Parametertypen entsprechen den einer impliziten Deklaration  
+ its parameter types are equivalent to those of an implicit declaration  
   
- die `Ty`-Klasse hat keine virtuellen Funktionen  
+ the class `Ty` has no virtual functions  
   
- die `Ty`-Klasse hat keine virtuellen Basen  
+ the class `Ty` has no virtual bases  
   
- die Klasse verfügt über keine flüchtigen nicht statischen Datenmember  
+ the class has no volatile non-static data members  
   
- alle direkten Basisklassen der `Ty`-Klasse weisen triviale Bewegungskonstruktoren auf  
+ all the direct bases of the class `Ty` have trivial move constructors  
   
- die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Bewegungskonstruktoren  
+ the classes of all the non-static data members of class type have trivial move constructors  
   
- die Klassen aller nicht statischen Datenmember vom Typarray der Klasse haben triviale Bewegungskonstruktoren  
+ the classes of all the non-static data members of type array of class have trivial move constructors  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: conditional-Klasse | Microsoft-Dokumentation
+title: conditional Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- conditional
 - type_traits/std::conditional
 dev_langs:
 - C++
@@ -35,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: b7e187e8ddbb4a9457b5fe9eddda152464d7518d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ac4654577ee1869050a2750587bdef36f170432e
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="conditional-class"></a>conditional-Klasse
-Wählt einen von zwei Typen, abhängig von der angegebenen Bedingung.  
+# <a name="conditional-class"></a>conditional Class
+Selects one of two types, depending on the specified condition.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,25 +54,25 @@ template <bool _Test, class _T1, class _T2>
 using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `B`  
- Der Wert, der den ausgewählten Typ bestimmt.  
+ The value that determines the selected type.  
   
  `T1`  
- Das Typergebnis, wenn B „true“ ist.  
+ The type result when B is true.  
   
  `T2`  
- Das Typergebnis, wenn B „false“ ist.  
+ The type result when B is false.  
   
-## <a name="remarks"></a>Hinweise  
- Die Vorlagenmember-Typdefinition (typedef) `conditional<B, T1, T2>::type` wird mit `T1` ausgewertet, wenn `B` mit `true`ausgewertet wird, und wird mit `T2` ausgewertet, wenn `B` mit `false`ausgewertet wird.  
+## <a name="remarks"></a>Remarks  
+ The template member typedef `conditional<B, T1, T2>::type` evaluates to `T1` when `B` evaluates to `true`, and evaluates to `T2` when `B` evaluates to `false`.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

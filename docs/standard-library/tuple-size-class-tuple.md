@@ -1,5 +1,5 @@
 ---
-title: tuple_size-Klasse | Microsoft-Dokumentation
+title: tuple_size Class; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,13 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- tuple_size
-- std::tuple_size
-- utility/std::tuple_size
+- tuple_size", "std::tuple_size", "utility/std::tuple_size
 dev_langs:
 - C++
 helpviewer_keywords:
-- tuple_size Class
+- ', '
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
 caps.latest.revision: 23
 author: corob-msft
@@ -35,15 +33,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: f0ae102852f1db46b68d86438e20ce9645535d19
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 15bc0b29c4775438ee93b899c061aa539f5c1546
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="tuplesize-class"></a>tuple_size-Klasse;
-Ruft die Anzahl der Elemente in einem `tuple` ab.  
+# <a name="tuplesize-class"></a>tuple_size Class;
+Reports the number of elements that a `tuple` contains.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -80,34 +78,34 @@ template <class Tuple>
    struct tuple_size<const volatile Tuple>;   
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
 *Tuple*  
-Der Typ des Tupels. 
+The type of the tuple. 
   
 *Elem*  
-Der Typ der Arrayelemente. 
+The type of the array elements. 
   
 *Size*  
-Die Größe des Arrays. 
+The size of the array. 
   
 *T1*  
-Der Typ des ersten Members des Paares. 
+The type of the first member of the pair. 
   
 *T2*  
-Der Typ des zweiten Members des Paares. 
+The type of the second member of the pair. 
   
-*Typen*  
-Die Typen der Elemente des Tupels. 
+*Types*  
+The types of the tuple elements. 
   
   
-## <a name="remarks"></a>Hinweise  
-Die Vorlagenklasse verfügt über einen Member `value` , der einem ganzzahligen konstanten Ausdruck entspricht, dessen Wert dem Wertebereich des Tupeltyps `Tuple`entspricht.  
+## <a name="remarks"></a>Remarks  
+The template class has a member `value` that is an integral constant expression whose value is the extent of the tuple type `Tuple`.  
   
-Die Vorlagenspezialisierung für Arrays verfügt über einen Member `value`, der ein ganzzahliger konstanter Ausdruck ist, dessen Wert `Size` und damit die Größe des Arrays ist.  
+The template specialization for arrays has a member `value` that is an integral constant expression whose value is `Size`, which is the size of the array.  
   
-Die Vorlagenspezialisierung für Paare verfügt über einen Member `value`, der ein ganzzahliger konstanter Ausdruck ist, dessen Wert 2 ist.  
+The template specialization for pair has a member `value` that is an integral constant expression whose value is 2.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <tuple>   
@@ -135,15 +133,15 @@ int main()
  0 1.5 2 3.7  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<tuple>  
- **Header:** \<array> (für Arrayspezialisierung)  
- **Header:** \<utility> (für Paarspezialisierung)  
+ **Header:** \<array> (for array specialization)  
+ **Header:** \<utility> (for pair specialization)  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)   
  [tuple](../standard-library/tuple-class.md)  
- [tuple_element-Klasse](../standard-library/tuple-element-class-tuple.md)
+ [tuple_element Class](../standard-library/tuple-element-class-tuple.md)
 

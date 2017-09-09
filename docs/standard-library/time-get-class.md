@@ -1,16 +1,15 @@
 ---
-title: time_get-Klasse | Microsoft-Dokumentation
+title: time_get Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - xloctime/std::time_get
-- time_get
 - locale/std::time_get::char_type
 - locale/std::time_get::iter_type
 - locale/std::time_get::date_order
@@ -30,7 +29,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- time_get class
+- std::time_get [C++]
+- std::time_get [C++], char_type
+- std::time_get [C++], iter_type
+- std::time_get [C++], date_order
+- std::time_get [C++], do_date_order
+- std::time_get [C++], do_get
+- std::time_get [C++], do_get_date
+- std::time_get [C++], do_get_monthname
+- std::time_get [C++], do_get_time
+- std::time_get [C++], do_get_weekday
+- std::time_get [C++], do_get_year
+- std::time_get [C++], get
+- std::time_get [C++], get_date
+- std::time_get [C++], get_monthname
+- std::time_get [C++], get_time
+- std::time_get [C++], get_weekday
+- std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 caps.latest.revision: 21
 author: corob-msft
@@ -50,15 +65,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 10a39553b9747ebe336939b641c54780c653c5d6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b4a902f2b06cae219920f90fd1c6a33aa7291ec4
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timeget-class"></a>time_get-Klasse
-Die Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um Konvertierungen von Sequenzen des Typs `CharType` in Zeitwerte zu steuern.  
+# <a name="timeget-class"></a>time_get Class
+The template class describes an object that can serve as a locale facet to control conversions of sequences of type `CharType` to time values.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,77 +83,77 @@ template <class CharType,
 class time_get : public time_base;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.  
+ The type used within a program to encode characters.  
   
  `InputIterator`  
- Der Iterator, von dem die Zeitwerte gelesen werden.  
+ The iterator from which the time values are read.  
   
-## <a name="remarks"></a>Hinweise  
- Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird in **id** ein eindeutiger positiver Wert gespeichert.  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>Konstruktoren  
-  
-|||  
-|-|-|  
-|[time_get](#time_get)|Der Konstruktor für Objekte des Typs `time_get`.|  
-  
-### <a name="typedefs"></a>TypeDefs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.|  
-|[iter_type](#iter_type)|Ein Typ, der einen Eingabeiterator beschreibt.|  
+|[time_get](#time_get)|The constructor for objects of type `time_get`.|  
   
-### <a name="member-functions"></a>Memberfunktionen  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[date_order](#date_order)|Gibt die Datumsreihenfolge zurück, die von einem Facet verwendet wird.|  
-|[do_date_order](#do_date_order)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um die von einem Facet verwendete Datumsreihenfolge zurückzugeben.|  
-|[do_get](#do_get)|Liest und konvertiert Zeichendaten in einen Zeitwert.|  
-|[do_get_date](#do_get_date)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge als das Datum zu analysieren, das vom `x`-Bezeichner für `strftime` erstellt wurde.|  
-|[do_get_monthname](#do_get_monthname)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge als Name des Monats zu analysieren.|  
-|[do_get_time](#do_get_time)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge als das Datum zu analysieren, das vom `X`-Bezeichner für `strftime` erstellt wurde.|  
-|[do_get_weekday](#do_get_weekday)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge als Name des Wochentags zu analysieren.|  
-|[do_get_year](#do_get_year)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge als Name des Jahres zu analysieren.|  
-|[get](#get)|Liest aus einer Zeichendatenquelle und konvertiert die Daten in eine Zeit, die in einer Zeitstruktur gespeichert wird.|  
-|[get_date](#get_date)|Analysiert eine Zeichenfolge als das Datum, das vom `x`-Bezeichner für `strftime` erzeugt wird.|  
-|[get_monthname](#get_monthname)|Analysiert eine Zeichenfolge als Name des Monats.|  
-|[get_time](#get_time)|Analysiert eine Zeichenfolge als das Datum, das vom `X`-Bezeichner für `strftime` erzeugt wird.|  
-|[get_weekday](#get_weekday)|Analysiert eine Zeichenfolge als Name des Wochentags.|  
-|[get_year](#get_year)|Analysiert eine Zeichenfolge als Name des Jahres.|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[iter_type](#iter_type)|A type that describes an input iterator.|  
   
-## <a name="requirements"></a>Anforderungen  
+### <a name="member-functions"></a>Member Functions  
+  
+|||  
+|-|-|  
+|[date_order](#date_order)|Returns the date order used by a facet.|  
+|[do_date_order](#do_date_order)|A protected virtual member function that is called to return the date order used by a facet.|  
+|[do_get](#do_get)|Reads and converts character data to a time value.|  
+|[do_get_date](#do_get_date)|A protected virtual member function that is called to parse a string as the date produced by the `x` specifier for `strftime`.|  
+|[do_get_monthname](#do_get_monthname)|A protected virtual member function that is called to parse a string as the name of the month.|  
+|[do_get_time](#do_get_time)|A protected virtual member function that is called to parse a string as the date produced by the `X` specifier for `strftime`.|  
+|[do_get_weekday](#do_get_weekday)|A protected virtual member function that is called to parse a string as the name of the day of the week.|  
+|[do_get_year](#do_get_year)|A protected virtual member function that is called to parses a string as the name of the year.|  
+|[get](#get)|Reads from a source of character data and converts that data to a time that is stored in a time struct.|  
+|[get_date](#get_date)|Parses a string as the date produced by the `x` specifier for `strftime`.|  
+|[get_monthname](#get_monthname)|Parses a string as the name of the month.|  
+|[get_time](#get_time)|Parses a string as the date produced by the `X` specifier for `strftime`.|  
+|[get_weekday](#get_weekday)|Parses a string as the name of the day of the week.|  
+|[get_year](#get_year)|Parses a string as the name of the year.|  
+  
+## <a name="requirements"></a>Requirements  
  **Header:** \<locale>  
   
  **Namespace:** std  
   
-##  <a name="char_type"></a> time_get::char_type  
- Ein Typ, mit dem ein Zeichen beschrieben wird, das von einem Gebietsschema verwendet wird.  
+##  <a name="char_type"></a>  time_get::char_type  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für den Vorlagenparameter **CharType**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
-##  <a name="date_order"></a> time_get::date_order  
- Gibt die Datumsreihenfolge zurück, die von einem Facet verwendet wird.  
+##  <a name="date_order"></a>  time_get::date_order  
+ Returns the date order used by a facet.  
   
 ```  
 dateorder date_order() const;
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Datumsreihenfolge, die von einem Facet verwendet wird.  
+### <a name="return-value"></a>Return Value  
+ The date order used by a facet.  
   
-### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt [do_date_order](#do_date_order) zurück.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_date_order](#do_date_order).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_date_order.cpp  
@@ -182,24 +197,24 @@ German_Germany.1252(day, month, year)
 English_United Kingdom.1252(day, month, year)  
 ```  
   
-##  <a name="do_date_order"></a> time_get::do_date_order  
- Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um die von einem Facet verwendete Datumsreihenfolge zurückzugeben.  
+##  <a name="do_date_order"></a>  time_get::do_date_order  
+ A protected virtual member function that is called to return the date order used by a facet.  
   
 ```  
 virtual dateorder do_date_order() const;
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Datumsreihenfolge, die von einem Facet verwendet wird.  
+### <a name="return-value"></a>Return Value  
+ The date order used by a facet.  
   
-### <a name="remarks"></a>Hinweise  
- Die virtuelle geschützte Memberfunktion gibt einen Wert vom Typ **time_base::dateorder** zurück, der die Reihenfolge beschreibt, in der Datumskomponenten von [do_get_date](#do_get_date) zugeordnet werden. In dieser Implementierung ist der Wert **time_base::mdy** und entspricht Datumsangaben der Form Dezember 2, 1979.  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function returns a value of type **time_base::dateorder**, which describes the order in which date components are matched by [do_get_date](#do_get_date). In this implementation, the value is **time_base::mdy**, corresponding to dates of the form December 2, 1979.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [date_order](#date_order), mit dem `do_date_order` aufgerufen wird.  
+### <a name="example"></a>Example  
+  See the example for [date_order](#date_order), which calls `do_date_order`.  
   
-##  <a name="do_get"></a> time_get::do_get  
- Liest und konvertiert Zeichendaten in einen Zeitwert. Verwendet einen Konvertierungsspezifizierer und -modifizierer.  
+##  <a name="do_get"></a>  time_get::do_get  
+ Reads and converts character data to a time value. Accepts one conversion specifier and modifier.  
   
 ```  
 virtual iter_type  
@@ -213,86 +228,86 @@ virtual iter_type
     char mod) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Ein Eingabeiterator, der den Anfang der zu konvertierenden Sequenz angibt.  
+ An Input iterator that indicates the start of the sequence to convert.  
   
  `last`  
- Ein Eingabeiterator, der das Ende der Sequenz angibt.  
+ An Input iterator that indicates the end of the sequence.  
   
  `iosbase`  
- Ein Streamobjekt.  
+ A stream object.  
   
  `state`  
- Ein Feld im Iosbase, in dem entsprechende bitmaskenelemente festgelegt werden, um Fehler zu kennzeichnen.  
+ A field in iosbase where appropriate bitmask elements are set to indicate errors.  
   
  `ptm`  
- Ein Zeiger auf die Zeitstruktur, in der die Zeit gespeichert werden soll.  
+ A pointer to the time structure where the time is to be stored.  
   
  `fmt`  
- Eine Konvertierungsspezifiziererzeichen.  
+ A conversion specifier character.  
   
  `mod`  
- Ein optionales Modifiziererzeichen.  
+ An optional modifier character.  
   
-### <a name="return-value"></a>Rückgabewert  
- Gibt einen Iterator zurück, der das erste nicht konvertierte Element kennzeichnet. Ein Konvertierungsfehler bewirkt, dass `ios_base::failbit` in `state` festgelegt und `first` zurückgegeben wird.  
+### <a name="return-value"></a>Return Value  
+ Returns an iterator that designates the first unconverted element. A conversion failure sets `ios_base::failbit` in `state` and returns `first`.  
   
-### <a name="remarks"></a>Hinweise  
- Die virtuelle Memberfunktion konvertiert und überspringt mindestens ein Eingabeelement im Bereich `[``first``,` `last``)`, um die Werte zu ermitteln, die in mindestens einem Member von `*pt` gespeichert sind. Ein Konvertierungsfehler bewirkt, dass `ios_base::failbit` in `state` festgelegt und `first` zurückgegeben wird. Andernfalls gibt die Funktion einen Iterator zurück, der das erste nicht konvertierte Element festlegt.  
+### <a name="remarks"></a>Remarks  
+ The virtual member function converts and skips one or more input elements in the range [`first`, `last`) to determine the values stored in one or more members of `*pt`. A conversion failure sets `ios_base::failbit` in `state` and returns `first`. Otherwise, the function returns an iterator designating the first unconverted element.  
   
- Es gibt die folgenden Konvertierungsspezifizierer:  
+ The conversion specifiers are:  
   
- `'a'` oder `'A'` – bewirkt dasselbe Verhalten wie [time_get::get_weekday](#get_weekday).  
+ `'a'` or `'A'` -- behaves the same as [time_get::get_weekday](#get_weekday).  
   
- `'b'`, `'B'` oder `'h'` – bewirkt dasselbe Verhalten wie [time_get::get_monthname](#get_monthname).  
+ `'b'`, `'B'`, or `'h'` -- behaves the same as [time_get::get_monthname](#get_monthname).  
   
- `'c'` – bewirkt dasselbe Verhalten wie `"%b %d %H : %M : %S %Y"`.  
+ `'c'` -- behaves the same as `"%b %d %H : %M : %S %Y"`.  
   
- `'C'` – konvertiert ein dezimales Eingabefeld im Bereich [0, 99] in den Wert `val` und speichert `val * 100 - 1900` in `pt-&tm_year`.  
+ `'C'` -- converts a decimal input field in the range [0, 99] to the value `val` and stores `val * 100 - 1900` in `pt-&tm_year`.  
   
- `'d'` oder `'e'` – konvertiert ein dezimales Eingabefeld im Bereich [1, 31] und speichert den Wert in `pt-&tm_mday`.  
+ `'d'` or `'e'` -- converts a decimal input field in the range [1, 31] and stores its value in `pt-&tm_mday`.  
   
- `'D'` – bewirkt dasselbe Verhalten wie `"%m / %d / %y"`.  
+ `'D'` -- behaves the same as `"%m / %d / %y"`.  
   
- `'H'` – konvertiert ein dezimales Eingabefeld im Bereich [0, 23] und speichert dessen Wert in `pt-&tm_hour`.  
+ `'H'` -- converts a decimal input field in the range [0, 23] and stores its value in `pt-&tm_hour`.  
   
- `'I'` – konvertiert ein dezimales Eingabefeld im Bereich [0, 11] und speichert dessen Wert in `pt-&tm_hour`.  
+ `'I'` -- converts a decimal input field in the range [0, 11] and stores its value in `pt-&tm_hour`.  
   
- `'j'` – konvertiert ein dezimales Eingabefeld im Bereich [1, 366] und speichert dessen Wert in `pt-&tm_yday`.  
+ `'j'` -- converts a decimal input field in the range [1, 366] and stores its value in `pt-&tm_yday`.  
   
- `'m'` – konvertiert ein dezimales Eingabefeld im Bereich [1, 12] in den Wert `val` und speichert `val - 1` in `pt-&tm_mon`.  
+ `'m'` -- converts a decimal input field in the range [1, 12] to the value `val` and stores `val - 1` in and stores its value in `pt-&tm_mon`.  
   
- `'M'` – konvertiert ein dezimales Eingabefeld im Bereich [0, 59] und speichert dessen Wert in `pt-&tm_min`.  
+ `'M'` -- converts a decimal input field in the range [0, 59] and stores its value in `pt-&tm_min`.  
   
- `'n'` oder `'t'` – bewirkt dasselbe Verhalten wie `" "`.  
+ `'n'` or `'t'` -- behaves the same as `" "`.  
   
- `'p'` – konvertiert „AM“ oder „am“ in 0 und „PM“ oder „PM“ in 12 und addiert diesen Wert zu `pt-&tm_hour` hinzu.  
+ `'p'` -- converts "AM" or "am" to zero and "PM" or "PM" to 12 and adds this value to `pt-&tm_hour`.  
   
- `'r'` – bewirkt dasselbe Verhalten wie `"%I : %M : %S %p"`.  
+ `'r'` -- behaves the same as `"%I : %M : %S %p"`.  
   
- `'R'` – bewirkt dasselbe Verhalten wie `"%H %M"`.  
+ `'R'` -- behaves the same as `"%H %M"`.  
   
- `'S'` – konvertiert ein dezimales Eingabefeld im Bereich [0, 59] und speichert dessen Wert in `pt-&tm_sec`.  
+ `'S'` -- converts a decimal input field in the range [0, 59] and stores its value in `pt-&tm_sec`.  
   
- `'T'` oder `'X'` – bewirkt dasselbe Verhalten wie `"%H : %M : S"`.  
+ `'T'` or `'X'` -- behaves the same as `"%H : %M : S"`.  
   
- `'U'` – konvertiert ein dezimales Eingabefeld im Bereich [0, 53] und speichert dessen Wert in `pt-&tm_yday`.  
+ `'U'` -- converts a decimal input field in the range [0, 53] and stores its value in `pt-&tm_yday`.  
   
- `'w'` – konvertiert ein dezimales Eingabefeld im Bereich [0, 6] und speichert dessen Wert in `pt-&tm_wday`.  
+ `'w'` -- converts a decimal input field in the range [0, 6] and stores its value in `pt-&tm_wday`.  
   
- `'W'` – konvertiert ein dezimales Eingabefeld im Bereich [0, 53] und speichert dessen Wert in `pt-&tm_yday`.  
+ `'W'` -- converts a decimal input field in the range [0, 53] and stores its value in `pt-&tm_yday`.  
   
- `'x'` – bewirkt dasselbe Verhalten wie `"%d / %m / %y"`.  
+ `'x'` -- behaves the same as `"%d / %m / %y"`.  
   
- `'y'` – konvertiert ein dezimales Eingabefeld im Bereich [0, 99] in den Wert `val` und speichert `val < 69  val + 100 : val` in `pt-&tm_year`.  
+ `'y'` -- converts a decimal input field in the range [0, 99] to the value `val` and stores `val < 69  val + 100 : val` in `pt-&tm_year`.  
   
- `'Y'` – bewirkt dasselbe Verhalten wie [time_get::get_year](#get_year).  
+ `'Y'` -- behaves the same as [time_get::get_year](#get_year).  
   
- Jeder andere Konvertierungsspezifizierer bewirkt, dass `ios_base::failbit` in `state` festgelegt wird und ein Rücksprung erfolgt. In dieser Implementierung wirkt sich keiner der Modifizierer aus.  
+ Any other conversion specifier sets `ios_base::failbit` in `state` and returns. In this implementation, any modifier has no effect.  
   
-##  <a name="do_get_date"></a> time_get::do_get_date  
- Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge als das Datum zu analysieren, das vom *x*-Bezeichner für `strftime` erstellt wurde.  
+##  <a name="do_get_date"></a>  time_get::do_get_date  
+ A protected virtual member function that is called to parse a string as the date produced by the *x* specifier for `strftime`.  
   
 ```  
 virtual iter_type do_get_date(iter_type first,
@@ -302,43 +317,43 @@ virtual iter_type do_get_date(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- Ein Format-Flag, das wenn eingestellt angibt, dass das Währungssymbol optional ist, andernfalls ist es erforderlich.  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.  
+ A pointer to where the date information is to be stored.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>Hinweise  
- Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen, und beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Datumseingabefeld erkannt hat. Wenn erfolgreich, dieses Feld auf den entsprechenden Wert wie die Komponenten konvertiert **tm::tm\_Mon**, **tm::tm\_Tag**, und **tm::tm\_Jahr**, und speichert die Ergebnisse in `ptm->tm_mon`, `ptm->tm_day`, und `ptm->tm_year`zugeordnet. Sie gibt einen Iterator zurück, der das erste Element nach dem Datumseingabefeld festlegt. Andernfalls setzt der Funktion `iosbase::failbit` in `state`. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Datumseingabefelds festlegt. In beiden Fällen legt die Funktion, wenn der Rückgabewert `last` ist, `ios_base::eofbit` auf `state` fest.  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty date input field. If successful, it converts this field to its equivalent value as the components **tm::tm\_mon**, **tm::tm\_day**, and **tm::tm\_year**, and stores the results in `ptm->tm_mon`, `ptm->tm_day`, and `ptm->tm_year`, respectively. It returns an iterator designating the first element beyond the date input field. Otherwise, the function sets `iosbase::failbit` in `state`. It returns an iterator designating the first element beyond any prefix of a valid date input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in `state`.  
   
- Das Format für das Datumseingabefeld ist vom Gebietsschema abhängig. Für das Standardgebietsschema hat das Datumseingabefeld die Form MMM DD, YYYY:  
+ The format for the date input field is locale dependent. For the default locale, the date input field has the form MMM DD, YYYY, where:  
   
--   MMM wird durch Aufrufen von [get_monthname](#get_monthname) abgeglichen, das den Monat angibt.  
+-   MMM is matched by calling [get_monthname](#get_monthname), giving the month.  
   
--   DD ist eine Folge von Dezimalziffern, deren entsprechender numerischer Wert im Bereich [1, 31] liegen muss und den Tag des Monats angibt.  
+-   DD is a sequence of decimal digits whose corresponding numeric value must be in the range [1, 31], giving the day of the month.  
   
--   YYYY wird durch Aufrufen von [get_year](#get_year) abgeglichen, das das Jahr angibt.  
+-   YYYY is matched by calling [get_year](#get_year), giving the year.  
   
- Die literalen Leerzeichen und Kommas müssen mit den entsprechenden Elementen in der Eingabesequenz übereinstimmen.  
+ The literal spaces and commas must match corresponding elements in the input sequence.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [get_date](#get_date), mit dem `do_get_date` aufgerufen wird.  
+### <a name="example"></a>Example  
+  See the example for [get_date](#get_date), which calls `do_get_date`.  
   
-##  <a name="do_get_monthname"></a> time_get::do_get_monthname  
- Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge als Name des Monats zu analysieren.  
+##  <a name="do_get_monthname"></a>  time_get::do_get_monthname  
+ A protected virtual member function that is called to parse a string as the name of the month.  
   
 ```  
 virtual iter_type do_get_monthname(iter_type first,
@@ -348,35 +363,35 @@ virtual iter_type do_get_monthname(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- Nicht verwendet.  
+ Unused.  
   
  `state`  
- Ein Ausgabeparameter, der die entsprechenden Bitmaskenelemente für den Streamstatus festlegt, je nachdem, ob die Vorgänge erfolgreich waren.  
+ An output parameter that sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- Ein Zeiger auf den Ort, an dem die Monatsinformation gespeichert werden soll.  
+ A pointer to where the month information is to be stored.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>Hinweise  
- Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen, und beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Monatseingabefeld erkannt hat. Wenn erfolgreich, dieses Feld auf den entsprechenden Wert wie die Komponente konvertiert **tm::tm\_Mon**, und speichert das Ergebnis in `ptm->tm_mon`. Sie gibt einen Iterator zurück, der das erste Element nach dem Monatseingabefeld festlegt. Andernfalls setzt der Funktion `ios_base::failbit` in *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Monatseingabefelds festlegt. In beiden Fällen ist der Rückgabewert gleich `last`, die Funktion legt `ios_base::eofbit` in *Zustand*.  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty month input field. If successful, it converts this field to its equivalent value as the component **tm::tm\_mon**, and stores the result in `ptm->tm_mon`. It returns an iterator designating the first element beyond the month input field. Otherwise, the function sets `ios_base::failbit` in *state*. It returns an iterator designating the first element beyond any prefix of a valid month input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in *state*.  
   
- Das Monatseingabefeld ist eine Sequenz, die die längste aus einer Reihe von gebietsschemaspezifischen Zeichenfolgen wie Jan, Januar, Feb, Februar usw. zuordnet. Der konvertierte Wert ist die Anzahl von Monaten seit Januar.  
+ The month input field is a sequence that matches the longest of a set of locale-specific sequences, such as Jan, January, Feb, February, and so on. The converted value is the number of months since January.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [get_monthname](#get_monthname), mit dem `do_get_monthname` aufgerufen wird.  
+### <a name="example"></a>Example  
+  See the example for [get_monthname](#get_monthname), which calls `do_get_monthname`.  
   
-##  <a name="do_get_time"></a> time_get::do_get_time  
- Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge als das Datum zu analysieren, das vom *X*-Bezeichner für `strftime` erstellt wurde.  
+##  <a name="do_get_time"></a>  time_get::do_get_time  
+ A protected virtual member function that is called to parse a string as the date produced by the *X* specifier for `strftime`.  
   
 ```  
 virtual iter_type do_get_time(iter_type first,
@@ -386,43 +401,43 @@ virtual iter_type do_get_time(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- Nicht verwendet.  
+ Unused.  
   
  `state`  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.  
+ A pointer to where the date information is to be stored.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>Hinweise  
- Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen, und beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Zeiteingabefeld erkannt hat. Wenn erfolgreich, dieses Feld auf den entsprechenden Wert wie die Komponenten konvertiert **tm::tm_hour**, **tm::tm_min**, und **tm::tm_sec**, und speichert die Ergebnisse in `ptm->tm_hour`, `ptm->tm_min`, und `ptm->tm_sec`zugeordnet. Sie gibt einen Iterator zurück, der das erste Element nach dem Zeiteingabefeld festlegt. Andernfalls setzt der Funktion `ios_base::failbit` in *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Zeiteingabefelds festlegt. In beiden Fällen ist der Rückgabewert gleich `last`, die Funktion legt `ios_base::eofbit` in *Zustand*.  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty time input field. If successful, it converts this field to its equivalent value as the components **tm::tm_hour**, **tm::tm_min**, and **tm::tm_sec**, and stores the results in `ptm->tm_hour`, `ptm->tm_min`, and `ptm->tm_sec`, respectively. It returns an iterator designating the first element beyond the time input field. Otherwise, the function sets `ios_base::failbit` in *state*. It returns an iterator designating the first element beyond any prefix of a valid time input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in *state*.  
   
- In dieser Implementierung hat das Zeiteingabefeld die Form HH:MM:SS:  
+ In this implementation, the time input field has the form HH:MM:SS, where:  
   
--   HH ist eine Folge von Dezimalziffern, deren entsprechender numerischer Wert im Bereich [0, 24) liegen muss und die Stunde des Tages angibt.  
+-   HH is a sequence of decimal digits whose corresponding numeric value must be in the range [0, 24), giving the hour of the day.  
   
--   MM ist eine Folge von Dezimalziffern, deren entsprechender numerischer Wert im Bereich [0, 60) liegen muss und die Minuten nach der Stunde angibt.  
+-   MM is a sequence of decimal digits whose corresponding numeric value must be in the range [0, 60), giving the minutes past the hour.  
   
--   SS ist eine Folge von Dezimalziffern, deren entsprechender numerischer Wert im Bereich [0, 60) liegen muss und die Sekunden nach der Minute angibt.  
+-   SS is a sequence of decimal digits whose corresponding numeric value must be in the range [0, 60), giving the seconds past the minute.  
   
- Die literalen Doppelpunkte müssen mit den entsprechenden Elementen in der Eingabesequenz übereinstimmen.  
+ The literal colons must match corresponding elements in the input sequence.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [get_time](#get_time), mit dem `do_get_time` aufgerufen wird.  
+### <a name="example"></a>Example  
+  See the example for [get_time](#get_time), which calls `do_get_time`.  
   
-##  <a name="do_get_weekday"></a> time_get::do_get_weekday  
- Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge als Name des Wochentags zu analysieren.  
+##  <a name="do_get_weekday"></a>  time_get::do_get_weekday  
+ A protected virtual member function that is called to parse a string as the name of the day of the week.  
   
 ```  
 virtual iter_type do_get_weekday(iter_type first,
@@ -432,35 +447,35 @@ virtual iter_type do_get_weekday(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- Ein Format-Flag, das wenn eingestellt angibt, dass das Währungssymbol optional ist, andernfalls ist es erforderlich.  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- Ein Zeiger auf den Ort, an dem die Wochentagsinformation gespeichert werden soll.  
+ A pointer to where the weekday information is to be stored.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>Hinweise  
- Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen, und beginnt bei `first` in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Wochentagseingabefeld erkannt hat. Wenn erfolgreich, dieses Feld auf den entsprechenden Wert wie die Komponente konvertiert **tm::tm\_"wDay"**, und speichert das Ergebnis in `ptm->tm_wday`. Sie gibt einen Iterator zurück, der das erste Element nach dem Wochentagseingabefeld festlegt. Andernfalls setzt der Funktion `ios_base::failbit` in *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Wochentagseingabefelds festlegt. In beiden Fällen ist der Rückgabewert gleich `last`, die Funktion legt `ios_base::eofbit` in *Zustand*.  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function tries to match sequential elements beginning at `first` in the sequence [ `first`, `last`) until it has recognized a complete, nonempty weekday input field. If successful, it converts this field to its equivalent value as the component **tm::tm\_wday**, and stores the result in `ptm->tm_wday`. It returns an iterator designating the first element beyond the weekday input field. Otherwise, the function sets `ios_base::failbit` in *state*. It returns an iterator designating the first element beyond any prefix of a valid weekday input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in *state*.  
   
- Das Wochentagseingabefeld ist eine Sequenz, die die längste aus einer Reihe von gebietsschemaspezifischen Zeichenfolgen wie So, Sonntag, Mo, Montag usw. zuordnet. Der konvertierte Wert ist die Anzahl von Tagen seit Sonntag.  
+ The weekday input field is a sequence that matches the longest of a set of locale-specific sequences, such as Sun, Sunday, Mon, Monday, and so on. The converted value is the number of days since Sunday.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [get_weekday](#get_weekday), mit dem `do_get_weekday` aufgerufen wird.  
+### <a name="example"></a>Example  
+  See the example for [get_weekday](#get_weekday), which calls `do_get_weekday`.  
   
-##  <a name="do_get_year"></a> time_get::do_get_year  
- Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge als Name des Jahres zu analysieren.  
+##  <a name="do_get_year"></a>  time_get::do_get_year  
+ A protected virtual member function that is called to parses a string as the name of the year.  
   
 ```  
 virtual iter_type do_get_year(iter_type first,
@@ -470,35 +485,35 @@ virtual iter_type do_get_year(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- Ein Format-Flag, das wenn eingestellt angibt, dass das Währungssymbol optional ist, andernfalls ist es erforderlich.  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- Ein Zeiger auf den Ort, an dem die Jahresinformation gespeichert werden soll.  
+ A pointer to where the year information is to be stored.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>Hinweise  
- Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen, und beginnt bei `first` in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Jahreseingabefeld erkannt hat. Wenn erfolgreich, dieses Feld auf den entsprechenden Wert wie die Komponente konvertiert **tm::tm\_Jahr**, und speichert das Ergebnis in `ptm->tm_year`. Sie gibt einen Iterator zurück, der das erste Element nach dem Jahreseingabefeld festlegt. Andernfalls setzt der Funktion `ios_base::failbit` in *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Jahreseingabefelds festlegt. In beiden Fällen ist der Rückgabewert gleich `last`, die Funktion legt `ios_base::eofbit` in *Zustand*.  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function tries to match sequential elements beginning at `first` in the sequence [ `first`, `last`) until it has recognized a complete, nonempty year input field. If successful, it converts this field to its equivalent value as the component **tm::tm\_year**, and stores the result in `ptm->tm_year`. It returns an iterator designating the first element beyond the year input field. Otherwise, the function sets `ios_base::failbit` in *state*. It returns an iterator designating the first element beyond any prefix of a valid year input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in *state*.  
   
- Das Jahreseingabefeld ist eine Folge von Dezimalziffern, deren entsprechender numerischer Wert im Bereich [1900, 2036) liegen muss. Der gespeicherte Wert ist dieser Wert minus 1900. In dieser Implementierung repräsentieren Werte im Bereich [69, 136) den Bereich von Jahren [1969, 2036). Werte im Bereich [0, 69) sind ebenfalls zulässig, können jedoch abhängig von der jeweiligen Übersetzungsumgebung entweder den Bereich von Jahren [1900, 1969) oder [2000, 2069) darstellen.  
+ The year input field is a sequence of decimal digits whose corresponding numeric value must be in the range [1900, 2036). The stored value is this value minus 1900. In this implementation, values in the range [69, 136) represent the range of years [1969, 2036). Values in the range [0, 69) are also permissible, but may represent either the range of years [1900, 1969) or [2000, 2069), depending on the specific translation environment.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [get_year](#get_year), mit dem `do_get_year` aufgerufen wird.  
+### <a name="example"></a>Example  
+  See the example for [get_year](#get_year), which calls `do_get_year`.  
   
-##  <a name="get"></a> time_get::get  
- Liest aus einer Zeichendatenquelle und konvertiert die Daten in eine Zeit, die in einer Zeitstruktur gespeichert wird. Die erste Funktion akzeptiert einen Konvertierungsspezifizierer und -modifizierer, die zweite akzeptiert mehrere.  
+##  <a name="get"></a>  time_get::get  
+ Reads from a source of character data and converts that data to a time that is stored in a time struct. The first function accepts one conversion specifier and modifier, the second accepts several.  
   
 ```  
 iter_type get(
@@ -520,50 +535,50 @@ iter_type get(
     char_type* fmt_last) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Eingabeiterator, der angibt, wo die zu konvertierende Sequenz beginnt.  
+ Input iterator that indicates where the sequence to be converted starts.  
   
  `last`  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz angibt.  
+ Input iterator that indicates the end of the sequence to be converted.  
   
  `iosbase`  
- Der Stream (Datenstrom).  
+ The stream.  
   
  `state`  
- Die entsprechenden Bitmaskenelemente werden für den Streamzustand festgelegt, um Fehler zu kennzeichnen.  
+ The appropriate bitmask elements are set for the stream state to indicate errors.  
   
  `ptm`  
- Zeiger auf die Zeitstruktur, in der die Zeit gespeichert werden soll.  
+ Pointer to the time structure where the time is to be stored.  
   
  `fmt`  
- Eine Konvertierungsspezifiziererzeichen.  
+ A conversion specifier character.  
   
  `mod`  
- Ein optionales Modifiziererzeichen.  
+ An optional modifier character.  
   
  `fmt_first`  
- Zeigt auf die Stelle, an der die Formatanweisungen beginnen.  
+ Points to where the format directives start.  
   
  `fmt_last`  
- Zeigt auf das Ende der Formatanweisungen.  
+ Points to the end of the format directives.  
   
-### <a name="return-value"></a>Rückgabewert  
- Gibt einen Iterator zum ersten Zeichen zurück, nachdem die Daten, die verwendet wurde, auf die Zeitstruktur zuweisen `*ptm`.  
+### <a name="return-value"></a>Return Value  
+ Returns an iterator to the first character after the data that was used to assign the time struct `*ptm`.  
   
-### <a name="remarks"></a>Hinweise  
- Die erste Memberfunktion gibt `do_get(first, last, iosbase, state, ptm, fmt, mod)` zurück.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns `do_get(first, last, iosbase, state, ptm, fmt, mod)`.  
   
- Die zweite Memberfunktion ruft `do_get` unter der Kontrolle des Formats auf, das durch `[fmt_first, fmt_last)` begrenzt ist. Die Funktion behandelt das Format als Sequenz von Feldern, von denen jedes die Konvertierung von null oder mehr Eingabeelementen bestimmt, die durch `[first, last)` begrenzt sind. Sie gibt einen Iterator zurück, der das erste nicht konvertierte Element festlegt. Es gibt drei Arten von Feldern:  
+ The second member function calls `do_get` under the control of the format delimited by `[fmt_first, fmt_last)`. It treats the format as a sequence of fields, each of which determines the conversion of zero or more input elements delimited by `[first, last)`. It returns an iterator designating the first unconverted element. There are three kinds of fields:  
   
- Ein Prozentzeichen (%) im Format, woraufhin ein optionaler Modifizierer `mod` im festgelegten [eoq#], gefolgt von einem Konvertierungsspezifizierer `fmt`, ersetzt `first` mit den Rückgabewert von `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Ein Konvertierungsfehler bewirkt, dass `ios_base::failbit` in `state` festgelegt wird und eine Rückkehr erfolgt.  
+ A per cent (%) in the format, followed by an optional modifier `mod` in the set [EOQ#], followed by a conversion specifier `fmt`, replaces `first` with the value returned by `do_get(first, last, iosbase, state, ptm, fmt, mod)`. A conversion failure sets `ios_base::failbit` in `state` and returns.  
   
- Ein Leerzeichenelement im Format bewirkt ein Überspringen von eingegebenen Leerzeichenelementen.  
+ A whitespace element in the format skips past zero or more input whitespace elements.  
   
- Jedes weitere Element im Format muss mit dem nächsten Eingabeelement übereinstimmen, das übersprungen wird. Ein Übereinstimmungsfehler bewirkt, dass `ios_base::failbit` in `state` festgelegt wird und eine Rückkehr erfolgt.  
+ Any other element in the format must match the next input element, which is skipped. A match failure sets `ios_base::failbit` in `state` and returns.  
   
-##  <a name="get_date"></a> time_get::get_date  
- Analysiert eine Zeichenfolge als das Datum, das vom *x*-Bezeichner für `strftime` erzeugt wird.  
+##  <a name="get_date"></a>  time_get::get_date  
+ Parses a string as the date produced by the *x* specifier for `strftime`.  
   
 ```  
 iter_type get_date(iter_type first,
@@ -573,31 +588,31 @@ iter_type get_date(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- Ein Format-Flag, das wenn eingestellt angibt, dass das Währungssymbol optional ist, andernfalls ist es erforderlich.  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.  
+ A pointer to where the date information is to be stored.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt [do_get_date](#do_get_date)( `first`, `last`, `iosbase`, `state`, `ptm`) zurück.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_get_date](#do_get_date)( `first`, `last`, `iosbase`, `state`, `ptm`).  
   
- Beachten Sie, dass Monate von 0 bis 11 gezählt werden.  
+ Note that months are counted from 0 to 11.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_get_date.cpp  
@@ -652,8 +667,8 @@ tm_yday: 0
 tm_isdst: 0  
 ```  
   
-##  <a name="get_monthname"></a> time_get::get_monthname  
- Analysiert eine Zeichenfolge als Name des Monats.  
+##  <a name="get_monthname"></a>  time_get::get_monthname  
+ Parses a string as the name of the month.  
   
 ```  
 iter_type get_monthname(iter_type first,
@@ -663,29 +678,29 @@ iter_type get_monthname(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- Nicht verwendet.  
+ Unused.  
   
  `state`  
- Ein Ausgabeparameter, der die entsprechenden Bitmaskenelemente für den Streamstatus festlegt, je nachdem, ob die Vorgänge erfolgreich waren.  
+ An output parameter that sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- Ein Zeiger auf den Ort, an dem die Monatsinformation gespeichert werden soll.  
+ A pointer to where the month information is to be stored.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt [do_get_monthname](#do_get_monthname)( `first`, `last`, `iosbase`, `state`, `ptm`) zurück.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_get_monthname](#do_get_monthname)( `first`, `last`, `iosbase`, `state`, `ptm`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_get_monthname.cpp  
@@ -740,8 +755,8 @@ tm_yday: 0
 tm_isdst: 0  
 ```  
   
-##  <a name="get_time"></a> time_get::get_time  
- Analysiert eine Zeichenfolge als das Datum, das vom *X*-Bezeichner für `strftime` erzeugt wird.  
+##  <a name="get_time"></a>  time_get::get_time  
+ Parses a string as the date produced by the *X* specifier for `strftime`.  
   
 ```  
 iter_type get_time(iter_type first,
@@ -751,29 +766,29 @@ iter_type get_time(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- Nicht verwendet.  
+ Unused.  
   
  `state`  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.  
+ A pointer to where the date information is to be stored.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt [do_get_time](#do_get_time)( `first`, `last`, `iosbase`, `state`, `ptm`) zurück.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_get_time](#do_get_time)( `first`, `last`, `iosbase`, `state`, `ptm`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_get_time.cpp  
@@ -817,8 +832,8 @@ tm_min: 13
 tm_hour: 11  
 ```  
   
-##  <a name="get_weekday"></a> time_get::get_weekday  
- Analysiert eine Zeichenfolge als Name des Wochentags.  
+##  <a name="get_weekday"></a>  time_get::get_weekday  
+ Parses a string as the name of the day of the week.  
   
 ```  
 iter_type get_weekday(iter_type first,
@@ -828,29 +843,29 @@ iter_type get_weekday(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- Ein Format-Flag, das wenn eingestellt angibt, dass das Währungssymbol optional ist, andernfalls ist es erforderlich.  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- Ein Zeiger auf den Ort, an dem die Wochentagsinformation gespeichert werden soll.  
+ A pointer to where the weekday information is to be stored.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt [do_get_weekday](#do_get_weekday)( `first`, `last`, `iosbase`, `state`, `ptm`) zurück.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_get_weekday](#do_get_weekday)( `first`, `last`, `iosbase`, `state`, `ptm`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_get_weekday.cpp  
@@ -890,8 +905,8 @@ time_get::get_time(mercredi) =
 tm_wday: 3  
 ```  
   
-##  <a name="get_year"></a> time_get::get_year  
- Analysiert eine Zeichenfolge als Name des Jahres.  
+##  <a name="get_year"></a>  time_get::get_year  
+ Parses a string as the name of the year.  
   
 ```  
 iter_type get_year(iter_type first,
@@ -901,29 +916,29 @@ iter_type get_year(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `first`  
- Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- Ein Format-Flag, das wenn eingestellt angibt, dass das Währungssymbol optional ist, andernfalls ist es erforderlich.  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- Ein Zeiger auf den Ort, an dem die Jahresinformation gespeichert werden soll.  
+ A pointer to where the year information is to be stored.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt [do_get_year](#do_get_year)( `first`, `last`, `iosbase`, `state`, `ptm`) zurück.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_get_year](#do_get_year)( `first`, `last`, `iosbase`, `state`, `ptm`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_get_year.cpp  
@@ -964,43 +979,43 @@ time_get::get_year(1928) =
 tm_year: 28  
 ```  
   
-##  <a name="iter_type"></a> time_get::iter_type  
- Ein Typ, der einen Eingabeiterator beschreibt.  
+##  <a name="iter_type"></a>  time_get::iter_type  
+ A type that describes an input iterator.  
   
 ```  
 typedef InputIterator iter_type;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Der Type ist ein Synonym für den Vorlagenparameter **InputIterator**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **InputIterator**.  
   
-##  <a name="time_get"></a> time_get::time_get  
- Der Konstruktor für Objekte des Typs `time_get`.  
+##  <a name="time_get"></a>  time_get::time_get  
+ The constructor for objects of type `time_get`.  
   
 ```  
 explicit time_get(size_t refs = 0);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `refs`  
- Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>Hinweise  
- Mögliche Werte für den `refs`-Parameter und ihre Bedeutung:  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `refs` parameter and their significance are:  
   
--   0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1: Die Lebensdauer des Objekts muss manuell verwaltet werden.  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1: Diese Werte sind nicht definiert.  
+-   \> 1: These values are not defined.  
   
- Direkte Beispiele sind nicht möglich, da der Destruktor geschützt ist.  
+ No direct examples are possible, because the destructor is protected.  
   
- Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[facet](../standard-library/locale-class.md#facet_class)( `refs`).  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `refs`).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [time_base-Klasse](../standard-library/time-base-class.md)   
- [Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [time_base Class](../standard-library/time-base-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

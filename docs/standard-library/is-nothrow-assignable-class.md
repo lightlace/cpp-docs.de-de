@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_assignable-Klasse | Microsoft-Dokumentation
+title: is_nothrow_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- is_nothrow_assignable
 - type_traits/std::is_nothrow_assignable
 dev_langs:
 - C++
@@ -35,14 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8f7cfa4eafda6061e503b5b8495d64c29a19eda8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e9184758ec0ecd094975cf7edcb7266427cca225
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isnothrowassignable-class"></a>Is_nothrow_assignable-Klasse
-Testet, ob der Wert des `From`-Typ dem `To`-Typ zugewiesen werden kann und die Zuweisung nicht ausgelöst wird.  
+# <a name="isnothrowassignable-class"></a>is_nothrow_assignable Class
+Tests whether a value of `From` type can be assigned to `To` type and the assignment is known not to throw.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,22 +51,22 @@ template <class To, class From>
 struct is_nothrow_assignable;
 ```  
   
-#### <a name="parameters"></a>Parameter  
- Aktion  
- Der Typ des Objekts, das die Zuweisung empfängt.  
+#### <a name="parameters"></a>Parameters  
+ To  
+ The type of the object that receives the assignment.  
   
- Von  
- Der Typ des Objekts, das den Wert bereitstellt.  
+ From  
+ The type of the object that provides the value.  
   
-## <a name="remarks"></a>Hinweise  
- Der Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein und der Compiler muss wissen, dass er nicht auslöst. Sowohl `From` als auch `To` müssen vollständige Typen `void` sein, oder Arrays mit unbekannter Grenze.  
+## <a name="remarks"></a>Remarks  
+ The expression `declval<To>() = declval<From>()` must be well-formed and must be known to the compiler not to throw. Both `From` and `To` must be complete types, `void`, or arrays of unknown bound.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

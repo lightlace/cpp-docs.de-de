@@ -1,5 +1,5 @@
 ---
-title: iterator-Struktur | Microsoft-Dokumentation
+title: iterator Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- iterator
 - xutility/std::iterator
 dev_langs:
 - C++
@@ -35,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: b14712f36d8cc7b4dbbdd4fd6a0cef3cb0667d8b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c634a769384b34fde401a8089ac00c6ba5a2c664
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="iterator-struct"></a>iterator-Struktur
-Eine leere Basisstruktur wird verwendet, um sicherzustellen, dass eine benutzerdefinierte Iteratorklasse ordnungsgemäß mit **iterator_trait**s funktioniert.  
+# <a name="iterator-struct"></a>iterator Struct
+An empty base struct used to ensure that a user-defined iterator class works properly with **iterator_trait**s.  
   
 ## <a name="syntax"></a>Syntax  
 ```    
@@ -56,35 +55,35 @@ struct iterator {
    typedef Reference reference;
    };  
 ```    
-## <a name="remarks"></a>Hinweise  
- Die Vorlagenstruktur wird als Basistyp für alle Iteratoren verwendet. Definiert den Membertypen  
+## <a name="remarks"></a>Remarks  
+ The template struct serves as a base type for all iterators. It defines the member types  
   
-- `iterator_category` (ein Synonym für den Vorlagenparameter `Category`).  
+- `iterator_category` (a synonym for the template parameter `Category`).  
   
-- `value_type` ( ein Synonym für den Vorlagenparameter **Type**).  
+- `value_type` (a synonym for the template parameter **Type**).  
   
-- `difference_type` (ein Synonym für den Vorlagenparameter `Distance`).  
+- `difference_type` (a synonym for the template parameter `Distance`).  
   
-- `distance_type` (ein Synonym für den Vorlagenparameter `Distance`).  
+- `distance_type` (a synonym for the template parameter `Distance`)  
   
-- `pointer` (ein Synonym für den Vorlagenparameter `Pointer`).  
+- `pointer` (a synonym for the template parameter `Pointer`).  
   
-- `reference` (ein Synonym für den Vorlagenparameter `Reference`).  
+- `reference` (a synonym for the template parameter `Reference`).  
   
- Beachten Sie, dass `value_type` kein konstanter Typ sein darf, auch wenn der **Zeiger** auf ein Objekt vom const-**Type** verweist und der Verweis ein Objekt vom const-**Type** kennzeichnet.  
+ Note that `value_type` should not be a constant type even if **pointer** points at an object of const **Type** and reference designates an object of const **Type**.  
   
-## <a name="example"></a>Beispiel  
- Unter [iterator_traits](../standard-library/iterator-traits-struct.md) finden Sie ein Beispiel für das Deklarieren und Verwenden von Typen in der Iterator-Basisklasse.  
+## <a name="example"></a>Example  
+ See [iterator_traits](../standard-library/iterator-traits-struct.md) for an example of how to declare and use the types in the iterator base class.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<iterator>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

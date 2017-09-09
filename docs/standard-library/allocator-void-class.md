@@ -1,5 +1,5 @@
 ---
-title: Allocator&lt;void&gt;-Klasse | Microsoft-Dokumentation
+title: allocator&lt;void&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ef8af7f3ea22529eed77e2259add8fcde21fbd57
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3ebd7d3b528043a8102d0c8ceabf126fb5f69edb
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="allocatorltvoidgt-class"></a>Allocator&lt;void&gt;-Klasse
-Eine Spezialisierung der Vorlagenklassenzuweisung zum Typ `void`, die die Typen definiert, die in diesem Kontext sinnvoll sind.  
+# <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; Class
+A specialization of the template class allocator to type `void`, defining the types that make sense in this context.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,8 +65,8 @@ class allocator<void> {
 };
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Die Klasse spezialisiert explizit die Vorlagenklasse [allocator](../standard-library/allocator-class.md) für den Typ *void.* Dessen Konstruktoren und Zuweisungsoperator verhalten sich genauso wie für die Vorlagenklasse, aber sie definieren nur die folgenden Typen:  
+## <a name="remarks"></a>Remarks  
+ The class explicitly specializes template class [allocator](../standard-library/allocator-class.md) for type *void.* Its constructors and assignment operator behave the same as for the template class, but it defines only the following types:  
   
 - [const_pointer](../standard-library/allocator-class.md#const_pointer).  
   
@@ -74,15 +74,15 @@ class allocator<void> {
   
 - [value_type](../standard-library/allocator-class.md#value_type).  
   
-- [rebind](../standard-library/allocator-class.md#rebind), eine geschachtelte Vorlagenklasse.  
+- [rebind](../standard-library/allocator-class.md#rebind), a nested template class.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<memory>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

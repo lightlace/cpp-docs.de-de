@@ -1,5 +1,5 @@
 ---
-title: '&lt;array&gt;-Operatoren | Microsoft-Dokumentation'
+title: '&lt;array&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,23 +18,23 @@ dev_langs:
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c85e1930bc8bfe492368fd40fe488156cf9a3ed1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4bd1ed8f2c2ea40d7f500e302189762bc7f24962
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltarraygt-operators"></a>&lt;array&gt;-Operatoren
-Der Header \<array> enthält diese `array`-Nicht-Memberfunktionen für den Vorlagenvergleich.  
+# <a name="ltarraygt-operators"></a>&lt;array&gt; operators
+The \<array> header includes these `array` non-member comparison template functions.  
   
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a> operator!=  
- Array-Vergleich, ungleich.  
+##  <a name="op_neq"></a>  operator!=  
+ Array comparison, not equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -43,23 +43,23 @@ bool operator!=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Der Typ eines Elements.  
+ The type of an element.  
   
  `N`  
- Die Größe des Arrays.  
+ The size of the array.  
   
  `left`  
- Linker zu vergleichender Container.  
+ Left container to compare.  
   
  `right`  
- Rechter zu vergleichender Container.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt `!(left == right)` zurück.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(left == right)`.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_ne.cpp   
@@ -103,8 +103,8 @@ false
 true  
 ```  
   
-##  <a name="op_lt"></a> operator&lt;  
- Array-Vergleich, kleiner als.  
+##  <a name="op_lt"></a>  operator&lt;  
+ Array comparison, less than.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -113,23 +113,23 @@ bool operator<(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Der Typ eines Elements.  
+ The type of an element.  
   
  `N`  
- Die Größe des Arrays.  
+ The size of the array.  
   
  `left`  
- Linker zu vergleichender Container.  
+ Left container to compare.  
   
  `right`  
- Rechter zu vergleichender Container.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion überlädt `operator<`, um zwei Objekte der Vorlagenklasse [Array-Klasse](../standard-library/array-class-stl.md) zu vergleichen. Die Funktion gibt `lexicographical_compare(left.begin(), left.end(), right.begin())` zurück.  
+### <a name="remarks"></a>Remarks  
+ The template function overloads `operator<` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `lexicographical_compare(left.begin(), left.end(), right.begin())`.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_lt.cpp   
@@ -174,8 +174,8 @@ false
 true  
 ```  
   
-##  <a name="op_lt_eq"></a> operator&lt;=  
- Array-Vergleich, kleiner als oder gleich.  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
+ Array comparison, less than or equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -184,23 +184,23 @@ bool operator<=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Der Typ eines Elements.  
+ The type of an element.  
   
  `N`  
- Die Größe des Arrays.  
+ The size of the array.  
   
  `left`  
- Linker zu vergleichender Container.  
+ Left container to compare.  
   
  `right`  
- Rechter zu vergleichender Container.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt `!(right < left)` zurück.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(right < left)`.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_le.cpp   
@@ -245,8 +245,8 @@ true
 false  
 ```  
   
-##  <a name="op_eq_eq"></a> operator==  
- Array-Vergleich, gleich.  
+##  <a name="op_eq_eq"></a>  operator==  
+ Array comparison, equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -255,23 +255,23 @@ bool operator==(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Der Typ eines Elements.  
+ The type of an element.  
   
  `N`  
- Die Größe des Arrays.  
+ The size of the array.  
   
  `left`  
- Linker zu vergleichender Container.  
+ Left container to compare.  
   
  `right`  
- Rechter zu vergleichender Container.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion überlädt `operator==`, um zwei Objekte der Vorlagenklasse [Array-Klasse](../standard-library/array-class-stl.md) zu vergleichen. Die Funktion gibt `equal(left.begin(), left.end(), right.begin())` zurück.  
+### <a name="remarks"></a>Remarks  
+ The template function overloads `operator==` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `equal(left.begin(), left.end(), right.begin())`.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_eq.cpp   
@@ -316,8 +316,8 @@ true
 false  
 ```  
   
-##  <a name="op_gt"></a> operator&gt;  
- Array-Vergleich, größer als.  
+##  <a name="op_gt"></a>  operator&gt;  
+ Array comparison, greater than.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -326,23 +326,23 @@ bool operator>(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Der Typ eines Elements.  
+ The type of an element.  
   
  `N`  
- Die Größe des Arrays.  
+ The size of the array.  
   
  `left`  
- Linker zu vergleichender Container.  
+ Left container to compare.  
   
  `right`  
- Rechter zu vergleichender Container.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt `(right < left)` zurück.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `(right < left)`.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_gt.cpp   
@@ -387,8 +387,8 @@ false
 true  
 ```  
   
-##  <a name="op_gt_eq"></a> operator&gt;=  
- Array-Vergleich, größer als oder gleich.  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
+ Array comparison, greater than or equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -397,23 +397,23 @@ bool operator>=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Der Typ eines Elements.  
+ The type of an element.  
   
  `N`  
- Die Größe des Arrays.  
+ The size of the array.  
   
  `left`  
- Linker zu vergleichender Container.  
+ Left container to compare.  
   
  `right`  
- Rechter zu vergleichender Container.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt `!(left < right)` zurück.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(left < right)`.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_ge.cpp   
@@ -458,7 +458,7 @@ true
 false  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<array>](../standard-library/array.md)
 
 

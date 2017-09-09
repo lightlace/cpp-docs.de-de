@@ -1,5 +1,5 @@
 ---
-title: '&lt;locale&gt;-Funktionen | Microsoft-Dokumentation'
+title: '&lt;locale&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,14 +25,30 @@ f1_keywords:
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 caps.latest.revision: 15
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c2af4555aca38e0c8997a5a1ba6f3dac34f30b3c
+helpviewer_keywords:
+- std::has_facet [C++]
+- std::isalnum [C++]
+- std::isalpha [C++]
+- std::iscntrl [C++]
+- std::isdigit [C++]
+- std::isgraph [C++]
+- std::islower [C++]
+- std::isprint [C++]
+- std::ispunct [C++]
+- std::isspace [C++]
+- std::isupper [C++]
+- std::isxdigit [C++]
+- std::tolower [C++]
+- std::toupper [C++]
+- std::use_facet [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4d3be53163b1ca0676e0561ab10ad1d8af545858
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltlocalegt-functions"></a>&lt;locale&gt;-Funktionen
+# <a name="ltlocalegt-functions"></a>&lt;locale&gt; functions
 ||||  
 |-|-|-|  
 |[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|  
@@ -41,25 +57,25 @@ ms.lasthandoff: 04/29/2017
 |[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|  
 |[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|  
   
-##  <a name="has_facet"></a> has_facet  
- Testet, ob ein bestimmtes Facet in einem angegebenen Gebietsschema gespeichert wird.  
+##  <a name="has_facet"></a>  has_facet  
+ Tests if a particular facet is stored in a specified locale.  
   
 ```  
 template <class Facet>  
 bool has_facet(const locale& Loc);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- Das Gebietsschema, das auf das Vorhandensein eines Facets getestet werden soll.  
+ The locale to be tested for the presence of a facet.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das Gebietsschema das getestete Facet hat; **FALSE**, wenn dies nicht der Fall ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the locale has the facet tested for; **false** if it does not.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion eignet sich zum Prüfen, ob die nicht obligatorischen Facets in einem Gebietsschema aufgeführt sind, bevor `use_facet` aufgerufen wird, um die Ausnahme zu vermeiden, die ausgelöst werden würde, wenn es nicht vorhanden wäre.  
+### <a name="remarks"></a>Remarks  
+ The template function is useful for checking whether nonmandatory facets are listed in a locale before `use_facet` is called to avoid the exception that would be thrown if it were not present.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_has_facet.cpp  
@@ -80,25 +96,25 @@ int main( )
 1  
 ```  
   
-##  <a name="isalnum"></a> isalnum  
- Testet, ob ein Element in einem Gebietsschema ein alphabetisches oder ein numerisches Zeichen ist.  
+##  <a name="isalnum"></a>  isalnum  
+ Tests whether an element in a locale is an alphabetic or a numeric character.  
   
 ```  
 template <class CharType>  
 bool isalnum(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das zu testende alphanumerische Element.  
+ The alphanumeric element to be tested.  
   
  `Loc`  
- Das Gebietsschema, das das zu testende alphanumerische Element enthält.  
+ The locale containing the alphanumeric element to be tested.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das getestete Element alphanumerisch ist; **FALSE**, wenn es das nicht ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is alphanumeric; **false** if it is not.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isalnum.cpp  
@@ -144,28 +160,28 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.  
 ```  
   
-##  <a name="isalpha"></a> isalpha  
- Testet, ob ein Element in einem Gebietsschema ein alphabetisches Zeichen ist.  
+##  <a name="isalpha"></a>  isalpha  
+ Tests whether an element in a locale is an alphabetic character.  
   
 ```  
 template <class CharType>  
 bool isalpha(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das zu testende Element.  
+ The element to be tested.  
   
  `Loc`  
- Das Gebietsschema, das das zu testende alphabetische Element enthält, welches getestet werden soll.  
+ The locale containing the alphabetic element to be tested.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das getestete Element alphabetisch ist; **FALSE**, wenn es das nicht ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is alphabetic; **false** if it is not.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isalpha.cpp  
@@ -205,28 +221,28 @@ int main( )
 }  
 ```  
   
-##  <a name="iscntrl"></a> iscntrl  
- Testet, ob ein Element in einem Gebietsschema ein Steuerzeichen ist.  
+##  <a name="iscntrl"></a>  iscntrl  
+ Tests whether an element in a locale is a control character.  
   
 ```  
 template <class CharType>  
 bool iscntrl(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das zu testende Element.  
+ The element to be tested.  
   
  `Loc`  
- Das Gebietsschema, das das zu testende Element enthält.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das getestete Element ein Steuerzeichen ist; **FALSE**, wenn es das nicht ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a control character; **false** if it is not.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_iscntrl.cpp  
@@ -266,28 +282,28 @@ int main( )
 }  
 ```  
   
-##  <a name="isdigit"></a> isdigit  
- Testet, ob ein Element in einem Gebietsschema ein numerisches Zeichen ist.  
+##  <a name="isdigit"></a>  isdigit  
+ Tests whether an element in a locale is a numeric character.  
   
 ```  
 template <class CharType>  
 bool isdigit(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das zu testende Element.  
+ The element to be tested.  
   
  `Loc`  
- Das Gebietsschema, das das zu testende Element enthält.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das getestete Element ein numerisches Zeichen ist; **FALSE**, wenn es das nicht ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a numeric character; **false** if it is not.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_is_digit.cpp  
@@ -327,28 +343,28 @@ int main( )
 }  
 ```  
   
-##  <a name="isgraph"></a> isgraph  
- Testet, ob ein Element in einem Gebietsschema ein alphanumerisches Zeichen oder ein Interpunktionszeichen ist.  
+##  <a name="isgraph"></a>  isgraph  
+ Tests whether an element in a locale is an alphanumeric or punctuation character.  
   
 ```  
 template <class CharType>  
 bool isgraph(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das zu testende Element.  
+ The element to be tested.  
   
  `Loc`  
- Das Gebietsschema, das das zu testende Element enthält.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das getestete Element ein alphanumerisches Zeichen oder ein Interpunktionszeichen ist; **FALSE**, wenn es das nicht ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is an alphanumeric or a punctuation character; **false** if it is not.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_is_graph.cpp  
@@ -388,28 +404,28 @@ int main( )
 }  
 ```  
   
-##  <a name="islower"></a> islower  
- Testet, ob ein Element in einem Gebietsschema kleingeschrieben ist.  
+##  <a name="islower"></a>  islower  
+ Tests whether an element in a locale is lower case.  
   
 ```  
 template <class CharType>  
 bool islower(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das zu testende Element.  
+ The element to be tested.  
   
  `Loc`  
- Das Gebietsschema, das das zu testende Element enthält.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das getestete Element ein Kleinbuchstabe ist; **FALSE**, wenn es das nicht ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a lowercase character; **false** if it is not.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_islower.cpp  
@@ -449,28 +465,28 @@ int main( )
 }  
 ```  
   
-##  <a name="isprint"></a> isprint  
- Testet, ob ein Element in einem Gebietsschema ein druckbares Zeichen ist.  
+##  <a name="isprint"></a>  isprint  
+ Tests whether an element in a locale is a printable character.  
   
 ```  
 template <class CharType>  
 bool isprint(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das zu testende Element.  
+ The element to be tested.  
   
  `Loc`  
- Das Gebietsschema, das das zu testende Element enthält.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das getestete Element druckbar ist; **FALSE**, wenn es das nicht ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a printable; **false** if it is not.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isprint.cpp  
@@ -509,28 +525,28 @@ int main( )
 }  
 ```  
   
-##  <a name="ispunct"></a> ispunct  
- Testet, ob ein Element in einem Gebietsschema ein Interpunktionszeichen ist.  
+##  <a name="ispunct"></a>  ispunct  
+ Tests whether an element in a locale is a punctuation character.  
   
 ```  
 template <class CharType>  
 bool ispunct(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das zu testende Element.  
+ The element to be tested.  
   
  `Loc`  
- Das Gebietsschema, das das zu testende Element enthält.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das getestete Element ein Interpunktionszeichen ist; **FALSE**, wenn es das nicht ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a punctuation character; **false** if it is not.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_ispunct.cpp  
@@ -570,28 +586,28 @@ int main( )
 }  
 ```  
   
-##  <a name="isspace"></a> isspace  
- Testet, ob ein Element in einem Gebietsschema ein Leerzeichen ist.  
+##  <a name="isspace"></a>  isspace  
+ Tests whether an element in a locale is a whitespace character.  
   
 ```  
 template <class CharType>  
 bool isspace(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das zu testende Element.  
+ The element to be tested.  
   
  `Loc`  
- Das Gebietsschema, das das zu testende Element enthält.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das getestete Element ein Leerzeichen ist; **FALSE**, wenn es das nicht ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a whitespace character; **false** if it is not.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isspace.cpp  
@@ -631,28 +647,28 @@ int main( )
 }  
 ```  
   
-##  <a name="isupper"></a> isupper  
- Testet, ob ein Element in einem Gebietsschema groß geschrieben ist.  
+##  <a name="isupper"></a>  isupper  
+ Tests whether an element in a locale is in upper case.  
   
 ```  
 template <class CharType>  
 bool isupper(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das zu testende Element.  
+ The element to be tested.  
   
  `Loc`  
- Das Gebietsschema, das das zu testende Element enthält.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das getestete Element ein Großbuchstabe ist; **FALSE**, wenn es das nicht ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is an uppercase character; **false** if it is not.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isupper.cpp  
@@ -692,30 +708,30 @@ int main( )
 }  
 ```  
   
-##  <a name="isxdigit"></a> isxdigit  
- Testet, ob ein Element in einem Gebietsschema ein Zeichen ist, mit dem eine Hexadezimalzahl dargestellt wird.  
+##  <a name="isxdigit"></a>  isxdigit  
+ Tests whether an element in a locale is a character used to represent a hexadecimal number.  
   
 ```  
 template <class CharType>  
 bool isxdigit(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das zu testende Element.  
+ The element to be tested.  
   
  `Loc`  
- Das Gebietsschema, das das zu testende Element enthält.  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>Rückgabewert  
- **TRUE**, wenn das getestete Element ein Zeichen ist, mit dem eine Hexadezimalzahl dargestellt wird; **FALSE**, wenn es das nicht ist.  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a character used to represent a hexadecimal number; **false** if it is not.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).  
   
- Hexadezimale Ziffern verwenden Basis 16 unter Verwendung der Zahlen 0 bis 9 sowie der Buchstaben A bis F (ohne Berücksichtigung der Groß-/Kleinschreibung) zur Darstellung von Zahlen, um die Dezimalzahlen 0 bis 15 darzustellen.  
+ Hexadecimal digits use base 16 to represent numbers, using the numbers 0 through 9 plus case-insensitive letters A through F to represent the decimal numbers 0 through 15.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isxdigit.cpp  
@@ -755,28 +771,28 @@ int main( )
 }  
 ```  
   
-##  <a name="tolower"></a> tolower  
- Konvertiert ein Zeichen in einen Kleinbuchstaben.  
+##  <a name="tolower"></a>  tolower  
+ Converts a character to lower case.  
   
 ```  
 template <class CharType>  
 CharType tolower(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das Zeichen, das in einen Kleinbuchstaben umgewandelt werden soll.  
+ The character to be converted to lower case.  
   
  `Loc`  
- Das Gebietsschema, das das Zeichen enthält, welches konvertiert werden soll.  
+ The locale containing the character to be converted.  
   
-### <a name="return-value"></a>Rückgabewert  
- Das Zeichen, das in einen Kleinbuchstaben umgewandelt wird.  
+### <a name="return-value"></a>Return Value  
+ The character converted to lower case.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_tolower.cpp  
@@ -800,28 +816,28 @@ int main( )
 }  
 ```  
   
-##  <a name="toupper"></a> toupper  
- Konvertiert ein Zeichen in einen Großbuchstaben.  
+##  <a name="toupper"></a>  toupper  
+ Converts a character to upper case.  
   
 ```  
 template <class CharType>  
 CharType toupper(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Das Zeichen, das in einen Großbuchstaben umgewandelt werden soll.  
+ The character to be converted to upper case.  
   
  `Loc`  
- Das Gebietsschema, das das zu konvertierende Zeichen enthält.  
+ The locale containing the character to be converted.  
   
-### <a name="return-value"></a>Rückgabewert  
- Das Zeichen, das in einen Großbuchstaben konvertiert wurde.  
+### <a name="return-value"></a>Return Value  
+ The character converted to upper case.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion gibt [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`) zurück. [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_toupper.cpp  
@@ -845,25 +861,25 @@ int main( )
 }  
 ```  
   
-##  <a name="use_facet"></a> use_facet  
- Gibt einen Verweis auf ein Facet eines angegebenen Typs zurück, der in einem Gebietsschema gespeichert wird.  
+##  <a name="use_facet"></a>  use_facet  
+ Returns a reference to a facet of a specified type stored in a locale.  
   
 ```  
 template <class Facet>  
 const Facet& use_facet(const locale& Loc);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- Das const-Gebietsschema, das den Typ des Facets enthält, auf den verwiesen wird.  
+ The const locale containing the type of facet being referenced.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf das im Argumentgebietsschema enthaltene Facet der Klasse `Facet`.  
+### <a name="return-value"></a>Return Value  
+ A reference to the facet of class `Facet` contained within the argument locale.  
   
-### <a name="remarks"></a>Hinweise  
- Der Verweis auf das von der Vorlagenfunktion zurückgegebene Facet bleibt gültig, solange jede Kopie des enthaltenen Gebietsschemas vorhanden ist. Wenn kein solches Facetobjekt der Klasse `Facet` im Argument-Gebietsschema aufgeführt ist, löst die Funktion eine `bad_cast`-Ausnahme aus.  
+### <a name="remarks"></a>Remarks  
+ The reference to the facet returned by the template function remains valid as long as any copy of the containing locale exists. If no such facet object of class `Facet` is listed in the argument locale, the function throws a `bad_cast` exception.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_use_facet.cpp  
@@ -902,7 +918,7 @@ The character 'a' in locale loc1 is alphabetic.
 The character '!' in locale loc2 is not alphabetic.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: remove_volatile-Klasse | Microsoft-Dokumentation
+title: remove_volatile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_volatile
 - type_traits/std::remove_volatile
 dev_langs:
 - C++
@@ -35,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 6c4e2273d6eed8e88f101a25f5b53b777a0bc48f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 40675fa94853c795e3332a285b3f3a8c5e30e720
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removevolatile-class"></a>remove_volatile-Klasse
-Wandelt einen Typ in einen permanenten Typ um.  
+# <a name="removevolatile-class"></a>remove_volatile Class
+Makes non volatile type from type.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,14 +54,14 @@ template <class T>
 using remove_volatile_t = typename remove_volatile<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Der zu ändernde Typ.  
+ The type to modify.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz von `remove_volatile<T>` enthält einen geänderten Typ, der `T1` ist, wenn `T` das Format `volatile T1` hat; andernfalls `T`.  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_volatile<T>` holds a modified-type that is `T1` when `T` is of the form `volatile T1`, otherwise `T`.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,12 +83,12 @@ int main()
 remove_volatile_t<volatile int> == int  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [add_volatile-Klasse](../standard-library/add-volatile-class.md)
+ [add_volatile Class](../standard-library/add-volatile-class.md)
 

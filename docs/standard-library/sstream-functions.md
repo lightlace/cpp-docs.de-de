@@ -1,5 +1,5 @@
 ---
-title: '&lt;sstream&gt;-Funktionen | Microsoft-Dokumentation'
+title: '&lt;sstream&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,20 +11,20 @@ f1_keywords:
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 3b5d850026627127e539d39faca18574d72d2ff8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 18aa039a12f773de2af4d27767661fdafa96abe5
 ms.contentlocale: de-de
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltsstreamgt-functions"></a>&lt;sstream&gt; Funktionen
+# <a name="ltsstreamgt-functions"></a>&lt;sstream&gt; functions
 ||  
 |-|  
 |[swap](#sstream_swap)|  
   
-##  <a name="sstream_swap"></a> swap  
- Tauscht die Werte zwischen zwei `sstream`-Objekten aus.  
+##  <a name="sstream_swap"></a>  swap  
+ Exchanges the values between two `sstream` objects.  
   
 ```  
 template <class Elem, class Tr, class Alloc>  
@@ -48,17 +48,17 @@ void swap(
     basic_stringstream<Elem, Tr, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Ein Verweis auf ein `sstream`-Objekt.|  
-|`right`|Ein Verweis auf ein `sstream`-Objekt.|  
+|`left`|Reference to an `sstream` object.|  
+|`right`|Reference to an `sstream` object.|  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion führt `left.swap(right)` aus.  
+### <a name="remarks"></a>Remarks  
+ The template function executes `left.swap(right)`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<sstream>](../standard-library/sstream.md)
 
 

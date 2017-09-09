@@ -1,5 +1,5 @@
 ---
-title: '&lt;ios&gt;-Typedefs | Microsoft-Dokumentation'
+title: '&lt;ios&gt; typedefs | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,30 +16,31 @@ f1_keywords:
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d9f9dd5f13f0f4559455ff8d8cf09bab5350b1f0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e75ab5322859bb88941968e9c1a6673fdf025ae2
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltiosgt-typedefs"></a>&lt;ios&gt;-Typedefs
+# <a name="ltiosgt-typedefs"></a>&lt;ios&gt; typedefs
 ||||  
 |-|-|-|  
 |[ios](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|  
 |[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|  
   
-##  <a name="ios"></a> ios  
- Unterstützt die ios-Klasse aus der alten iostream-Bibliothek.  
+##  <a name="ios"></a>  ios  
+ Supports the ios class from the old iostream library.  
   
 ```  
 typedef basic_ios<char, char_traits<char>> ios;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für die Vorlagenklasse [basic_ios](../standard-library/basic-ios-class.md), die auf Elemente des Typs `char` mit Standardzeichenmerkmalen spezialisiert ist.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_ios](../standard-library/basic-ios-class.md), specialized for elements of type `char` with default character traits.  
   
-##  <a name="streamoff"></a> streamoff  
- Unterstützt interne Vorgänge.  
+##  <a name="streamoff"></a>  streamoff  
+ Supports internal operations.  
   
 ```  
 #ifdef _WIN64  
@@ -49,20 +50,20 @@ typedef basic_ios<char, char_traits<char>> ios;
 #endif  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Der Typ ist eine Ganzzahl mit Vorzeichen, die ein Objekt beschreibt, das einen Byte-Offset speichern kann, der an verschiedenen Streampositionierungsvorgängen beteiligt ist. Seine Repräsentation hat mindestens 32 Wertbits. Er ist nicht unbedingt groß genug, um eine willkürliche Byte-Position innerhalb eines Streams repräsentieren zu können. Der Wert **streamoff(–1)** markiert grundsätzlich einen fehlerhaften Offset.  
+### <a name="remarks"></a>Remarks  
+ The type is a signed integer that describes an object that can store a byte offset involved in various stream positioning operations. Its representation has at least 32 value bits. It is not necessarily large enough to represent an arbitrary byte position within a stream. The value **streamoff(-1)** generally indicates an erroneous offset.  
   
-##  <a name="streampos"></a> streampos  
- Enthält die aktuelle Position des Pufferzeigers oder Dateizeigers.  
+##  <a name="streampos"></a>  streampos  
+ Holds the current position of the buffer pointer or file pointer.  
   
 ```  
 typedef fpos<mbstate_t> streampos;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für [fpo](../standard-library/fpos-class.md)< `mbstate_t`s>.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_streampos.cpp  
@@ -85,8 +86,8 @@ int main( )
 7  
 ```  
   
-##  <a name="streamsize"></a> streamsize  
- Bezeichnet die Größe des Streams.  
+##  <a name="streamsize"></a>  streamsize  
+ Denotes the size of the stream.  
   
 ```  
 #ifdef _WIN64  
@@ -96,11 +97,11 @@ int main( )
 #endif  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Der Typ ist eine Ganzzahl mit Vorzeichen, die ein Objekt beschreibt, das die Anzahl von Objekten speichern kann, die an verschiedenen Streamvorgängen beteiligt sind. Seine Repräsentation verfügt über mindestens 16 Bits. Er ist nicht unbedingt groß genug, um eine willkürliche Byte-Position innerhalb eines Streams repräsentieren zu können.  
+### <a name="remarks"></a>Remarks  
+ The type is a signed integer that describes an object that can store a count of the number of elements involved in various stream operations. Its representation has at least 16 bits. It is not necessarily large enough to represent an arbitrary byte position within a stream.  
   
-### <a name="example"></a>Beispiel  
-  Nachdem Sie folgendes Programm kompiliert und ausgeführt haben, öffnen Sie die Datei test.txt,, um den Effekt der Einstellung `streamsize` zu überprüfen.  
+### <a name="example"></a>Example  
+  After compiling and running the following program, look at the file test.txt to see the effect of setting `streamsize`.  
   
 ```  
 // ios_streamsize.cpp  
@@ -118,27 +119,27 @@ int main( )
 }  
 ```  
   
-##  <a name="wios"></a> wios  
- Unterstützt die wios-Klasse aus der alten iostream-Bibliothek.  
+##  <a name="wios"></a>  wios  
+ Supports the wios class from the old iostream library.  
   
 ```  
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für die Vorlagenklasse [basic_ios](../standard-library/basic-ios-class.md), die auf Elemente des Typs `wchar_t` mit Standardzeichenmerkmalen spezialisiert ist.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_ios](../standard-library/basic-ios-class.md), specialized for elements of type `wchar_t` with default character traits.  
   
-##  <a name="wstreampos"></a> wstreampos  
- Enthält die aktuelle Position des Pufferzeigers oder Dateizeigers.  
+##  <a name="wstreampos"></a>  wstreampos  
+ Holds the current position of the buffer pointer or file pointer.  
   
 ```  
 typedef fpos<mbstate_t> wstreampos;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für [fpo](../standard-library/fpos-class.md)< `mbstate_t`s>.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_wstreampos.cpp  
@@ -160,7 +161,7 @@ int main( )
 7  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<ios>](../standard-library/ios.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: codecvt_utf8_utf16 | Microsoft-Dokumentation
+title: codecvt_utf8_utf16 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt_utf8_utf16
 - codecvt/std::cvt_utf8_utf16
 dev_langs:
 - C++
@@ -34,35 +33,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: e628eb145b52cd3ab9b1e36770363c34099c6cb4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4f733e9eb6d5ebafe2c01fe1d7cc801fef6f7e3a
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
-Stellt ein [Gebietsschemafacet](../standard-library/locale-class.md) dar, das eine Konvertierung durchführt zwischen Breitzeichen, die als UTF-16 codiert sind, und einem Bytestream, der als UTF-8 codiert ist.
+Represents a [locale](../standard-library/locale-class.md) facet that converts between wide characters encoded as UTF-16 and a byte stream encoded as UTF-8.
 
 ```
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
 class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 ```
 
-## <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameters
 
 `Elem`  
-Der Breitzeichen-Elementtyp.  
+The wide-character element type.  
 `Maxcode`  
-Die maximale Anzahl der Zeichen für das Gebietsschemafacet.  
+The maximum number of characters for the locale facet.  
 `Mode`  
-Konfigurationsinformationen für das Gebietsschemafacet.  
+Configuration information for the locale facet.  
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Remarks
 
-Der Bytestream kann in eine Binärdatei oder eine Textdatei geschrieben werden.  
+The byte stream can be written to either a binary file or a text file.  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements
 
 Header: <codecvt> Namespace: std
 

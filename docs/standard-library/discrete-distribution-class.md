@@ -1,5 +1,5 @@
 ---
-title: discrete_distribution-Klasse | Microsoft-Dokumentation
+title: discrete_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- discrete_distribution
 - random/std::discrete_distribution
 - random/std::discrete_distribution::reset
 - random/std::discrete_distribution::probabilities
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- discrete_distribution class
+- std::discrete_distribution [C++]
+- std::discrete_distribution [C++], reset
+- std::discrete_distribution [C++], probabilities
+- std::discrete_distribution [C++], param
+- std::discrete_distribution [C++], min
+- std::discrete_distribution [C++], max
+- std::discrete_distribution [C++], param_type
+- std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
 caps.latest.revision: 21
 author: corob-msft
@@ -45,15 +51,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 270dd20a29333c64526c103c3eabe847c1c6e3c9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2118eb841d1faf4f137ac30889443768ab6d0d89
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="discretedistribution-class"></a>discrete_distribution-Klasse
-Generiert eine diskrete Ganzzahlverteilung mit Intervallen von gleicher Breite und in jedem Intervall eindeutiger Wahrscheinlichkeit.  
+# <a name="discretedistribution-class"></a>discrete_distribution Class
+Generates a discrete integer distribution that has uniform-width intervals with uniform probability in each interval.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -90,25 +96,25 @@ public:
    result_type max() const;
    };  
 ```   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
 *IntType*  
- Der Ganzzahlergebnistyp. Der Standardwert ist `int`. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+ The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Hinweise  
- Die Sampling-Verteilung weist Intervalle von gleicher Breite und in jedem Intervall eindeutiger Wahrscheinlichkeit auf. Informationen zu weiteren Sampling-Verteilungen finden Sie unter [piecewise_linear_distribution Class (piecewise_linear_distribution-Klasse)](../standard-library/piecewise-linear-distribution-class.md) und [piecewise_constant_distribution Class (piecewise_constant_distribution-Klasse)](../standard-library/piecewise-constant-distribution-class.md).  
+## <a name="remarks"></a>Remarks  
+ This sampling distribution has uniform-width intervals with uniform probability in each interval. For information about other sampling distributions, see [piecewise_linear_distribution Class](../standard-library/piecewise-linear-distribution-class.md) and [piecewise_constant_distribution Class](../standard-library/piecewise-constant-distribution-class.md).  
   
- Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft:  
+ The following table links to articles about individual members:  
   
 |||  
 |-|-|  
 |[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|  
 |`discrete_distribution::operator()`|[param_type](#param_type)|  
   
- Die Eigenschaftsfunktion `vector<double> probabilities()` gibt die einzelnen Eigenschaften für jede generierte Ganzzahl zurück.  
+ The property function `vector<double> probabilities()` returns the individual probabilities for each integer generated.  
   
- Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
+ For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -187,13 +193,13 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::    
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<random>  
   
  **Namespace:** std  
   
-##  <a name="discrete_distribution"></a> discrete_distribution::discrete_distribution  
- Erstellt die Verteilung.  
+##  <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution  
+ Constructs the distribution.  
   
 ```  
 // default constructor  
@@ -214,46 +220,46 @@ discrete_distribution(size_t count, double low, double high, UnaryOperation weig
 explicit discrete_distribution(const param_type& parm);  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
 *firstW*  
- Der erste Iterator in der Liste, aus der die Verteilung konstruiert werden soll.  
+ The first iterator in the list from which to construct the distribution.  
   
 *lastW*  
- Der letzte Iterator in der Liste, aus der die Verteilung konstruiert werden soll (nicht inklusiv, da Iteratoren für das Ende ein leeres Element verwenden).  
+ The last iterator in the list from which to construct the distribution (non-inclusive because iterators use an empty element for the end).  
   
 *weightlist*  
- Die [initializer_list](../cpp/initializers.md), aus der die Verteilung erstellt werden soll.  
+ The [initializer_list](../cpp/initializers.md) from which to construct the distribution.  
   
 *count*  
- Die Anzahl von Elementen im Verteilungsbereich. Wenn `count==0` ist, äquivalent zum Standardkonstruktor (generiert immer Null).  
+ The number of elements in the distribution range. If `count==0`, equivalent to the default constructor (always generates zero).  
   
 *low*  
- Der niedrigste Wert im Verteilungsbereich.  
+ The lowest value in the distribution range.  
   
 *high*  
- Der höchste Wert im Verteilungsbereich.  
+ The highest value in the distribution range.  
   
 *weightfunc*  
- Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Sowohl der Parameter als auch der Rückgabewert müssen in `double` konvertierbar sein.  
+ The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
 *parm*  
- Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.  
+ The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>Hinweise  
-Der Standardkonstruktor erstellt ein Objekt, dessen gespeicherter Wahrscheinlichkeitswert ein Element mit dem Wert 1 aufweist. Dies führt zu einer Verteilung, die immer Null generiert.  
+### <a name="remarks"></a>Remarks  
+The default constructor constructs an object whose stored probability value has one element with value 1. This will result in a distribution that always generates a zero.  
   
-Der Iteratorbereichskonstruktor mit den Parametern *firstW* und *lastW* erstellt mithilfe von Gewichtungswerten, die den Iteratoren während der Intervallsequenz [*firstW*, *lastW*] entnommen werden, ein Verteilungsobjekt.  
+The iterator range constructor that has parameters *firstW* and *lastW* constructs a distribution object by using weight values taken from the iterators over the interval sequence [*firstW*, *lastW*).  
   
-Der Initialisiererlistenkonstruktor mit einem *weightlist*-Parameter erstellt ein Verteilungsobjekt mit Gewichtungen aus der Initialisiererliste *weightlist*.  
+The initializer list constructor that has a *weightlist* parameter constructs a distribution object with weights from the intializer list *weightlist*.  
   
-Der Konstruktor mit den Parametern *count*, *low*, *high* und *weightfunc* erstellt ein Verteilungsobjekt, das anhand der folgenden Regeln initialisiert wird:  
--  Wenn *count* < 1, **n** = 1, und gleich dem Standardkonstruktor, der immer Null generiert.  
--  Wenn *count* > 0, **n** = *count*. Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
+The constructor that has *count*, *low*, *high*, and *weightfunc* parameters constructs a distribution object initialized based on these rules:  
+-  If *count* < 1, **n** = 1, and as such is equivalent to the default constructor, always generating zero.  
+-  If *count* > 0, **n** = *count*. Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
   
-Der Konstruktor mit einem `param_type`-Parameter *parm* erstellt ein Verteilungsobjekt und verwendet dabei *parm* als gespeicherte Parameterstruktur.  
+The constructor that has a `param_type` parameter *parm* constructs a distribution object using *parm* as the stored parameter structure.  
   
-##  <a name="param_type"></a> discrete_distribution::param_type  
- Speichert alle Parameter der Verteilung.  
+##  <a name="param_type"></a>  discrete_distribution::param_type  
+ Stores all the parameters of the distribution.  
   
 ```  
 struct param_type {  
@@ -277,35 +283,35 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
 *firstW*  
- Der erste Iterator in der Liste, aus der die Verteilung konstruiert werden soll.  
+ The first iterator in the list from which to construct the distribution.  
   
 *lastW*  
- Der letzte Iterator in der Liste, aus der die Verteilung konstruiert werden soll (nicht inklusiv, da Iteratoren für das Ende ein leeres Element verwenden).  
+ The last iterator in the list from which to construct the distribution (non-inclusive because iterators use an empty element for the end).  
   
 *weightlist*  
- Die [initializer_list](../cpp/initializers.md), aus der die Verteilung erstellt werden soll.  
+ The [initializer_list](../cpp/initializers.md) from which to construct the distribution.  
   
 *count*  
- Die Anzahl von Elementen im Verteilungsbereich. Wenn *count* 0 ist, entspricht dies dem Standardkonstruktor (generiert immer Null).  
+ The number of elements in the distribution range. If *count* is 0, this is equivalent to the default constructor (always generates zero).  
   
 *low*  
- Der niedrigste Wert im Verteilungsbereich.  
+ The lowest value in the distribution range.  
   
 *high*  
- Der höchste Wert im Verteilungsbereich.  
+ The highest value in the distribution range.  
   
 *weightfunc*  
- Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Sowohl der Parameter als auch der Rückgabewert müssen in `double` konvertierbar sein.  
+ The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
 *right*  
- Das mit diesem `param_type`-Objekt zu vergleichende Objekt.  
+ The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>Hinweise  
- Dieses Parameterpaket kann an `operator()` übergeben werden, um den Rückgabewert zu generieren.  
+### <a name="remarks"></a>Remarks  
+ This parameter package can be passed to `operator()` to generate the return value.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

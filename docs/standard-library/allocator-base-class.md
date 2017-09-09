@@ -1,5 +1,5 @@
 ---
-title: allocator_base-Klasse | Microsoft Dokumentation
+title: allocator_base Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,12 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- allocator_base
 - allocators/stdext::allocator_base
-- stdext::allocator_base
-- stdext::allocators::allocator_base
 - allocators/stdext::allocators::allocator_base
-- allocators::allocator_base
 - allocators/stdext::allocator_base::const_pointer
 - allocators/stdext::allocator_base::const_reference
 - allocators/stdext::allocator_base::difference_type
@@ -33,7 +29,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- allocator_base class
+- stdext::allocator_base [C++]
+- stdext::allocators [C++], allocator_base
+- stdext::allocator_base [C++], const_pointer
+- stdext::allocator_base [C++], const_reference
+- stdext::allocator_base [C++], difference_type
+- stdext::allocator_base [C++], pointer
+- stdext::allocator_base [C++], reference
+- stdext::allocator_base [C++], size_type
+- stdext::allocator_base [C++], value_type
+- stdext::allocator_base [C++], _Charalloc
+- stdext::allocator_base [C++], _Chardealloc
+- stdext::allocator_base [C++], address
+- stdext::allocator_base [C++], allocate
+- stdext::allocator_base [C++], construct
+- stdext::allocator_base [C++], deallocate
+- stdext::allocator_base [C++], destroy
+- stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 caps.latest.revision: 17
 author: corob-msft
@@ -53,15 +65,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 11e6300d0d625f419e47d5f60f1db175419e3420
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 55e3a008319b851260502c8ae515132b687ff0d0
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="allocatorbase-class"></a>allocator_base-Klasse
-Definiert die Basisklasse und allgemeine Funktionen, die zum Erstellen einer benutzerdefinierten Zuweisung von einem Synchronisierungsfilter erforderlich sind.  
+# <a name="allocatorbase-class"></a>allocator_base Class
+Defines the base class and common functions needed to create a user-defined allocator from a synchronization filter.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,87 +82,87 @@ template <class Type, class Sync>
 class allocator_base
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Type`|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|  
-|`Sync`|Die Synchronisierungsrichtlinie für die Zuweisung: [sync_none-Klasse](../standard-library/sync-none-class.md), [sync_per_container-Klasse](../standard-library/sync-per-container-class.md), [sync_per_thread-Klasse](../standard-library/sync-per-thread-class.md) oder [sync_shared-Klasse](../standard-library/sync-shared-class.md).|  
+|`Type`|The type of elements allocated by the allocator.|  
+|`Sync`|The synchronization policy for the allocator, which is [sync_none Class](../standard-library/sync-none-class.md), [sync_per_container Class](../standard-library/sync-per-container-class.md), [sync_per_thread Class](../standard-library/sync-per-thread-class.md), or [sync_shared Class](../standard-library/sync-shared-class.md).|  
   
-### <a name="constructors"></a>Konstruktoren  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocator_base](#allocator_base)|Konstruiert ein Objekt vom Typ `allocator_base`.|  
+|[allocator_base](#allocator_base)|Constructs an object of type `allocator_base`.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[const_pointer](#const_pointer)|Ein Typ, der einen konstanten Zeiger auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|  
-|[const_reference](#const_reference)|Ein Typ, der einen konstanten Verweis auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|  
-|[difference_type](#difference_type)|Ein ganzzahliger Typ mit Vorzeichen, der die Differenz zwischen Werten von Zeigern und dem Typ des Objekts, das von der Zuweisung verwaltet wird, darstellen kann.|  
-|[pointer](#pointer)|Ein Typ, der einen Zeiger auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|  
-|[reference](#reference)|Ein Typ, der einen Verweis auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.|  
-|[size_type](#size_type)|Ein ganzzahliger Typ ohne Vorzeichen, der die Länge einer beliebigen Sequenz darstellen kann, die ein Objekt der Vorlagenklasse `allocator_base` zuordnen kann.|  
-|[value_type](#value_type)|Ein Typ, der von der Zuweisung verwaltet wird.|  
+|[const_pointer](#const_pointer)|A type that provides a constant pointer to the type of object managed by the allocator.|  
+|[const_reference](#const_reference)|A type that provides a constant reference to type of object managed by the allocator.|  
+|[difference_type](#difference_type)|A signed integral type that can represent the difference between values of pointers to the type of object managed by the allocator.|  
+|[pointer](#pointer)|A type that provides a pointer to the type of object managed by the allocator.|  
+|[reference](#reference)|A type that provides a reference to the type of object managed by the allocator.|  
+|[size_type](#size_type)|An unsigned integral type that can represent the length of any sequence that an object of template class `allocator_base` can allocate.|  
+|[value_type](#value_type)|A type that is managed by the allocator.|  
   
-### <a name="member-functions"></a>Memberfunktionen  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[_Charalloc](#charalloc)|Ordnet einem Array des Typs `char` Speicherplatz zu.|  
-|[_Chardealloc](#chardealloc)|Gibt für das Array mit Elementen vom Typ `char` Speicherplatz frei.|  
-|[address](#address)|Sucht die Adresse eines Objekts, dessen Wert angegeben wird.|  
-|[allocate](#allocate)|Ordnet einen Speicherblock zu, der groß genug ist, um mindestens eine angegebene Anzahl von Elementen zu speichern.|  
-|[construct](#construct)|Erstellt eine bestimmte Art von Objekt an einer bestimmten Adresse, die mit einem angegebenen Wert initialisiert wird.|  
-|[deallocate](#deallocate)|Gibt eine angegebene Anzahl von Objekten im Speicher frei, beginnend an einer angegebenen Position.|  
-|[destroy](#destroy)|Ruft einen Objektdestruktor auf, ohne die Zuordnung des Speicherplatzes aufzuheben, an dem Objekt gespeichert wurde.|  
-|[max_size](#max_size)|Gibt die Anzahl der Elemente vom Typ `Type` zurück, die von einem Objekt der Klassenzuweisung zugeordnet werden konnten, bevor der freie Speicherplatz verbraucht ist.|  
+|[_Charalloc](#charalloc)|Allocates storage for an array of type `char`.|  
+|[_Chardealloc](#chardealloc)|Frees storage for the array containing elements of type `char`.|  
+|[address](#address)|Finds the address of an object whose value is specified.|  
+|[allocate](#allocate)|Allocates a block of memory large enough to store at least some specified number of elements.|  
+|[construct](#construct)|Constructs a specific type of object at a specified address that is initialized with a specified value.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[destroy](#destroy)|Calls an objects destructor without deallocating the memory where the object was stored.|  
+|[max_size](#max_size)|Returns the number of elements of type `Type` that could be allocated by an object of class allocator before the free memory is used up.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<allocators>  
   
  **Namespace:** stdext  
   
-##  <a name="charalloc"></a> allocator_base::_Charalloc  
- Ordnet einem Array des Typs `char` Speicherplatz zu.  
+##  <a name="charalloc"></a>  allocator_base::_Charalloc  
+ Allocates storage for an array of type `char`.  
   
 ```
 char *_Charalloc(size_type count);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|Die Anzahl der zuzuordnenden Elemente des Arrays.|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf das zugewiesene Objekt.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion wird von Containers verwendet, wenn sie mit einem Compiler kompiliert wird, der Rebind nicht kompilieren kann. Es implementiert `_Charalloc` für die benutzerdefinierte allocator-Klasse, indem es das Ergebnis eines Aufrufs an die Funktion `allocate` des Synchronisationsfilters zurückgibt.  
+### <a name="remarks"></a>Remarks  
+ This member function is used by containers when compiled with a compiler that cannot compile rebind. It implements `_Charalloc` for the user-defined allocator by returning the result of a call to the `allocate` function of the synchronization filter.  
   
-##  <a name="chardealloc"></a> allocator_base::_Chardealloc  
- Gibt für das Array mit Elementen vom Typ `char` Speicherplatz frei.  
+##  <a name="chardealloc"></a>  allocator_base::_Chardealloc  
+ Frees storage for the array containing elements of type `char`.  
   
 ```
 void _Chardealloc(void* ptr, size_type count);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|  
-|`count`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion wird von Containers verwendet, wenn sie mit einem Compiler kompiliert wird, der Rebind nicht kompilieren kann. Für die benutzerdefinierte allocator-Klasse implementiert es `_Chardealloc`, indem es das Ergebnis eines Aufrufs an die Funktion `deallocate` des Synchronisationsfilters zurückgibt. Der Zeiger ptr muss schon vorher für ein Zuweisungsobjekt, das gleich `*this` ist,von einen Aufruf an `_Charalloc` zurückgegeben worden sein, damit er ein Arrayobjekt der gleichen Größe und des gleichen Typs zuweisen kann. `_Chardealloc` löst nie eine Ausnahme aus.  
+### <a name="remarks"></a>Remarks  
+ This member function is used by containers when compiled with a compiler that cannot compile rebind. It implements `_Chardealloc` for the user-defined allocator by calling the `deallocate` function of the synchronization filter. The pointer ptr must have been earlier returned by a call to `_Charalloc` for an allocator object that compares equal to `*this`, allocating an array object of the same size and type. `_Chardealloc` never throws an exception.  
   
-##  <a name="address"></a> allocator_base::address  
- Sucht die Adresse eines Objekts, dessen Wert angegeben wird.  
+##  <a name="address"></a>  allocator_base::address  
+ Finds the address of an object whose value is specified.  
   
 ```
 pointer address(reference val);
@@ -158,18 +170,18 @@ pointer address(reference val);
 const_pointer address(const_reference val);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `val`  
- Der konstante oder nicht konstante Wert des Objekts, nach dessen Adresse gesucht wird.  
+ The const or nonconst value of the object whose address is being searched for.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein konstanter oder nicht konstanter Zeiger auf ein Objekt mit konstantem bzw. nicht konstantem Wert.  
+### <a name="return-value"></a>Return Value  
+ A const or nonconst pointer to the object found of, respectively, const or nonconst value.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion wird für die benutzerdefinierte allocator-Klasse implementiert, indem `&val` zurückgegeben wird.  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by returning `&val`.  
   
-##  <a name="allocate"></a> allocator_base::allocate  
- Ordnet einen Speicherblock zu, der groß genug ist, um mindestens eine angegebene Anzahl von Elementen zu speichern.  
+##  <a name="allocate"></a>  allocator_base::allocate  
+ Allocates a block of memory large enough to store at least some specified number of elements.  
   
 ```
 template <class Other>  
@@ -178,21 +190,21 @@ pointer allocate(size_type _Nx, const Other* _Hint = 0);
 pointer allocate(size_type _Nx);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|Die Anzahl der zuzuweisenden Elemente des Arrays.|  
-|`_Hint`|Dieser Parameter wird ignoriert.|  
+|`_Nx`|The number of elements in the array to be allocated.|  
+|`_Hint`|This parameter is ignored.|  
   
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf das zugewiesene Objekt.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>Hinweise  
- Die Memberfunktion implementiert Speicherreservierung für die benutzerdefinierte allocator-Klasse, indem sie das Ergebnis eines Aufrufs an die Funktion `allocate` des Synchronisationsfilters des Typs „type“ `*` wenn `_Nx == 1` zurückgibt; andernfalls indem sie das Ergebnis eines Aufrufs an den Cast `operator new(_Nx * sizeof(Type))` des Typs „Type“ `*`.  
+### <a name="remarks"></a>Remarks  
+ The member function implements memory allocation for the user-defined allocator by returning the result of a call to the `allocate` function of the synchronization filter of type Type `*` if `_Nx == 1`, otherwise by returning the result of a call to `operator new(_Nx * sizeof(Type))` cast to type Type `*`.  
   
-##  <a name="allocator_base"></a> allocator_base::allocator_base  
- Konstruiert ein Objekt vom Typ `allocator_base`.  
+##  <a name="allocator_base"></a>  allocator_base::allocator_base  
+ Constructs an object of type `allocator_base`.  
   
 ```
 allocator_base();
@@ -201,128 +213,128 @@ template <class Other>
 allocator_base(const allocator_base<Other, Sync>& right);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|Das zu kopierende Zuweisungsobjekt.|  
+|`right`|The allocator object to be copied.|  
   
-### <a name="remarks"></a>Hinweise  
- Der erste Konstruktor erstellt eine [allocator_base](../standard-library/allocator-base-class.md)-Instanz. Der zweite Konstruktor erstellt eine `allocator_base`-Instanz, so dass jede `allocator_base<Type, _Sync>`-Instanz `a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an [allocator_base](../standard-library/allocator-base-class.md) instance. The second constructor constructs an `allocator_base` instance such that for any `allocator_base<Type, _Sync>` instance `a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.  
   
-##  <a name="const_pointer"></a> allocator_base::const_pointer  
- Ein Typ, der einen konstanten Zeiger auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.  
+##  <a name="const_pointer"></a>  allocator_base::const_pointer  
+ A type that provides a constant pointer to the type of object managed by the allocator.  
   
 ```
 typedef const Type *const_pointer;
 ```  
   
-##  <a name="const_reference"></a> allocator_base::const_reference  
- Ein Typ, der einen konstanten Verweis auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.  
+##  <a name="const_reference"></a>  allocator_base::const_reference  
+ A type that provides a constant reference to type of object managed by the allocator.  
   
 ```
 typedef const Type& const_reference;
 ```  
   
-##  <a name="construct"></a> allocator_base::construct  
- Erstellt eine bestimmte Art von Objekt an einer bestimmten Adresse, die mit einem angegebenen Wert initialisiert wird.  
+##  <a name="construct"></a>  allocator_base::construct  
+ Constructs a specific type of object at a specified address that is initialized with a specified value.  
   
 ```
 void construct(pointer ptr, const Type& val);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|Ein Zeiger auf den Speicherort, in dem das Objekt erstellt werden soll.|  
-|`val`|Der Wert, mit dem das zu erstellende Objekt initialisiert werden soll.|  
+|`ptr`|A pointer to the location where the object is to be constructed.|  
+|`val`|The value with which the object being constructed is to be initialized.|  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion wird für die benutzerdefinierte allocator-Klasse implementiert, indem `new((void*)ptr Type(val)` aufgerufen wird.  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by calling `new((void*)ptr Type(val)`.  
   
-##  <a name="deallocate"></a> allocator_base::deallocate  
- Gibt eine angegebene Anzahl von Objekten im Speicher frei, beginnend an einer angegebenen Position.  
+##  <a name="deallocate"></a>  allocator_base::deallocate  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(pointer ptr, size_type _Nx);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|  
-|`_Nx`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`_Nx`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>Hinweise  
- Die Memberfunktion wird für die benutzerdefinierte allocator-Klasse implementiert, indem `deallocate(ptr)` im Synchronisationsfilter `Sync` wenn `_Nx == 1` aufgerufen wird; andernfalls Aufruf an `operator delete(_Nx * ptr)`.  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by calling `deallocate(ptr)` on the synchronization filter `Sync` if `_Nx == 1`, otherwise by calling `operator delete(_Nx * ptr)`.  
   
-##  <a name="destroy"></a> allocator_base::destroy  
- Ruft einen Objektdestruktor auf, ohne die Zuordnung des Speicherplatzes aufzuheben, an dem Objekt gespeichert wurde.  
+##  <a name="destroy"></a>  allocator_base::destroy  
+ Calls an objects destructor without deallocating the memory where the object was stored.  
   
 ```
 void destroy(pointer ptr);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|Ein Zeiger, der die Adresse des zu zerstörenden Objekts angibt.|  
+|`ptr`|A pointer designating the address of the object to be destroyed.|  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion wird für die benutzerdefinierte allocator-Klasse implementiert, indem `ptr->~Type()` aufgerufen wird.  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by calling `ptr->~Type()`.  
   
-##  <a name="difference_type"></a> allocator_base::difference_type  
- Ein ganzzahliger Typ mit Vorzeichen, der die Differenz zwischen Werten von Zeigern und dem Typ des Objekts, das von der Zuweisung verwaltet wird, darstellen kann.  
+##  <a name="difference_type"></a>  allocator_base::difference_type  
+ A signed integral type that can represent the difference between values of pointers to the type of object managed by the allocator.  
   
 ```
 typedef std::ptrdiff_t difference_type;
 ```  
   
-##  <a name="max_size"></a> allocator_base::max_size  
- Gibt die Anzahl der Elemente vom Typ `Type` zurück, die von einem Objekt der Klassenzuweisung zugeordnet werden konnten, bevor der freie Speicherplatz verbraucht ist.  
+##  <a name="max_size"></a>  allocator_base::max_size  
+ Returns the number of elements of type `Type` that could be allocated by an object of class allocator before the free memory is used up.  
   
 ```
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Anzahl von Elementen, die zugewiesen werden konnten.  
+### <a name="return-value"></a>Return Value  
+ The number of elements that could be allocated.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion wird für die benutzerdefinierte allocator-Klasse implementiert, indem `(size_t)-1 / sizeof(Type)` wenn `0 < (size_t)-1 / sizeof(Type)` zurückgegeben wird; andernfalls `1`.  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by returning `(size_t)-1 / sizeof(Type)` if `0 < (size_t)-1 / sizeof(Type)`, otherwise `1`.  
   
-##  <a name="pointer"></a> allocator_base::pointer  
- Ein Typ, der einen Zeiger auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.  
+##  <a name="pointer"></a>  allocator_base::pointer  
+ A type that provides a pointer to the type of object managed by the allocator.  
   
 ```
 typedef Type *pointer;
 ```  
   
-##  <a name="reference"></a> allocator_base::reference  
- Ein Typ, der einen Verweis auf den Typ des Objekts bereitstellt, das von der Zuweisung verwaltet wird.  
+##  <a name="reference"></a>  allocator_base::reference  
+ A type that provides a reference to the type of object managed by the allocator.  
   
 ```
 typedef Type& reference;
 ```  
   
-##  <a name="size_type"></a> allocator_base::size_type  
- Ein ganzzahliger Typ ohne Vorzeichen, der die Länge einer beliebigen Sequenz darstellen kann, die ein Objekt der Vorlagenklasse `allocator_base` zuordnen kann.  
+##  <a name="size_type"></a>  allocator_base::size_type  
+ An unsigned integral type that can represent the length of any sequence that an object of template class `allocator_base` can allocate.  
   
 ```
 typedef std::size_t size_type;
 ```  
   
-##  <a name="value_type"></a> allocator_base::value_type  
- Ein Typ, der von der Zuweisung verwaltet wird.  
+##  <a name="value_type"></a>  allocator_base::value_type  
+ A type that is managed by the allocator.  
   
 ```
 typedef Type value_type;
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

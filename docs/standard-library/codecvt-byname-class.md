@@ -1,5 +1,5 @@
 ---
-title: codecvt_byname-Klasse | Microsoft-Dokumentation
+title: codecvt_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt_byname
 - xlocale/std::codecvt_byname
 dev_langs:
 - C++
@@ -34,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: cdf0ca3993103dc8070337b98bcacdb3e8c8b9d1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7393eb9bd4ccaa163276ce7df602cddf2b42025e
 ms.contentlocale: de-de
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="codecvtbyname-class"></a>codecvt_byname-Klasse
-Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als Sortierungsfacet eines angegebenen Gebietsschemas dienen kann, sodass für einen kulturellen Bereich spezifische Informationen über Konvertierungen abgerufen werden können.  
+# <a name="codecvtbyname-class"></a>codecvt_byname Class
+A derived template class that describes an object that can serve as a collate facet of a given locale, enabling the retrieval of information specific to a cultural area concerning conversions.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,25 +67,25 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `_Locname`  
- Ein benanntes Gebietsschema.  
+ A named locale.  
   
  `_Refs`  
- Eine initiale Verweisanzahl.  
+ An initial reference count.  
   
-## <a name="remarks"></a>Hinweise  
- Byname-Facets werden automatisch erstellt, wenn ein benanntes Gebietsschema erstellt wird.  
+## <a name="remarks"></a>Remarks  
+ Byname facets are automatically created when a named locale is constructed.  
   
- Ihr Verhalten wird durch das benannte Gebietsschema `_Locname` bestimmt. Jeder Konstruktor initialisiert sein Basisobjekt mit [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`).  
+ Its behavior is determined by the named locale `_Locname`. Each constructor initializes its base object with [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<locale>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
- [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

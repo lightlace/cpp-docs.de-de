@@ -1,5 +1,5 @@
 ---
-title: poisson_distribution-Klasse | Microsoft-Dokumentation
+title: poisson_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- poisson_distribution
 - random/std::poisson_distribution
 - random/std::poisson_distribution::reset
 - random/std::poisson_distribution::mean
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- poisson_distribution class
+- std::poisson_distribution [C++]
+- std::poisson_distribution [C++], reset
+- std::poisson_distribution [C++], mean
+- std::poisson_distribution [C++], param
+- std::poisson_distribution [C++], min
+- std::poisson_distribution [C++], max
+- std::poisson_distribution [C++], param_type
+- std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
 caps.latest.revision: 19
 author: corob-msft
@@ -45,15 +51,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a8a87f4101cca4a709d594ac2ad19726eb505c00
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d7237dd8a273323eb8424223848bde9d647c06da
 ms.contentlocale: de-de
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="poissondistribution-class"></a>poisson_distribution-Klasse
-Generiert eine Poisson-Verteilung.  
+# <a name="poissondistribution-class"></a>poisson_distribution Class
+Generates a Poisson distribution.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -86,33 +92,33 @@ public:
    };  
 ``` 
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
 *IntType*  
-Der Ganzzahlergebnistyp. Der Standardwert ist `int`. Die möglichen Typen finden Sie unter [\<random>](../standard-library/random.md).  
+The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Hinweise  
-Diese Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Ganzzahltyps mit einer Poisson-Verteilung produziert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified integral type with a Poisson distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|  
 |`poisson_distribution::operator()`||[param_type](#param_type)|  
   
-Die Eigenschaftsfunktion `mean()` gibt den Wert für den gespeicherten Verteilungsparameter *mean* zurück.  
+The property function `mean()` returns the value for stored distribution parameter *mean*.  
   
-Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-Die `min()`- und `max()`-Memberfunktion gibt das jeweils kleinst- und größtmögliche Ergebnis zurück.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-Die `reset()`-Memberfunktion verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus dem Modul bezogen wurden.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entweder dem aktuellen oder dem spezifizierten Parameterpaket zurück, das auf dem URNG-Modul basiert.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-Ausführliche Informationen über die Poisson-Verteilung finden Sie im Wolfram MathWorld-Artikel [Poisson Distribution Poisson-Verteilung)](http://go.microsoft.com/fwlink/LinkId=401112).  
+For detailed information about the Poisson distribution, see the Wolfram MathWorld article [Poisson Distribution](http://go.microsoft.com/fwlink/LinkId=401112).  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -166,7 +172,7 @@ int main()
   
 ```  
   
-Erster Test:  
+First test:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.
@@ -183,7 +189,7 @@ Distribution for 100 samples:
     5 :  
 ```  
   
-Zweiter Test:  
+Second test:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.
@@ -210,35 +216,35 @@ Distribution for 100 samples:
    17 :  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<random>  
   
  **Namespace:** std  
   
-##  <a name="poisson_distribution"></a> poisson_distribution::poisson_distribution  
-Erstellt die Verteilung.  
+##  <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution  
+Constructs the distribution.  
   
 ```  
 explicit poisson_distribution(RealType mean = 1.0);
 explicit binomial_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
 *mean*  
-Der `mean`-Verteilungsparameter.  
+The `mean` distribution parameter.  
   
 *parm*  
-Die für die Erstellung der Verteilung verwendete Parameterstruktur.  
+The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>Hinweise  
- **Vorbedingung:** `0.0 < mean`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < mean`  
   
-Der erste Konstruktor konstruiert ein Objekt, dessen gespeicherter `mean`-Wert den Wert *mean* enthält.  
+The first constructor constructs an object whose stored `mean` value holds the value *mean*.  
   
-Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
-##  <a name="param_type"></a> poisson_distribution::param_type  
-Speichert die Parameter der Verteilung.  
+##  <a name="param_type"></a>  poisson_distribution::param_type  
+Stores the parameters of the distribution.  
   
 ```    
 struct param_type {  
@@ -251,15 +257,15 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>Parameter  
-Siehe Konstruktorparameter für [poisson_distribution](#poisson_distribution).  
+### <a name="parameters"></a>Parameters  
+See constructor parameters for [poisson_distribution](#poisson_distribution).  
   
-### <a name="remarks"></a>Hinweise  
- **Vorbedingung:** `0.0 < mean`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < mean`  
   
-Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteilers, an die Memberfunktion `param()` (zur Festlegung der gespeicherten Parameter einer vorhandenen Verteilung) und an `operator()` (zur Verwendung anstelle der gespeicherten Parameter) übergeben werden.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

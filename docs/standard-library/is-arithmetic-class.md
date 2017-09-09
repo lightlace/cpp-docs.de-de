@@ -1,5 +1,5 @@
 ---
-title: is_arithmetic-Klasse | Microsoft-Dokumentation
+title: is_arithmetic Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_arithmetic
 - type_traits/std::is_arithmetic
 dev_langs:
 - C++
@@ -35,15 +34,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 254e2e518bda4e8ecc82470218323c9f27691ee8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9a98daa22fd2d841cfcb9f85f2c93d25aadd1d17
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isarithmetic-class"></a>is_arithmetic-Klasse
-Prüft, ob der Typ arithmetisch ist.  
+# <a name="isarithmetic-class"></a>is_arithmetic Class
+Tests if type is arithmetic.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,14 +51,14 @@ template <class Ty>
 struct is_arithmetic;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Der abzufragende Typ.  
+ The type to query.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Instanz des Typs Prädikat enthält true, wenn der Typ `Ty` ein arithmetischer Typ ist, d. h., ein ganzzahliger Typ, ein Gleitkommawert, oder ein `cv-qualified`-Formular, andernfalls enthält er false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is an arithmetic type, that is, an integral type or a floating point type, or a `cv-qualified` form of one of them, otherwise it holds false.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_arithmetic.cpp   
@@ -91,13 +90,13 @@ is_arithmetic<int> == true
 is_arithmetic<float> == true  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** \<type_traits>  
   
  **Namespace:** std  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_floating_point-Klasse](../standard-library/is-floating-point-class.md)   
- [is_integral-Klasse](../standard-library/is-integral-class.md)
+ [is_floating_point Class](../standard-library/is-floating-point-class.md)   
+ [is_integral Class](../standard-library/is-integral-class.md)
 

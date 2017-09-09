@@ -1,5 +1,5 @@
 ---
-title: operator&lt; (&lt;Sample Container&gt;) | Microsoft-Dokumentation
+title: operator&lt; (&lt;sample container&gt;) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,12 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::operator<
-- operator<
-- std.<
-- <
-- std.operator<
-- std::<
+- std::operator<", "operator<", "std.<", "<", "std.operator<", "std::<
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -41,18 +36,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c5aac1f35d33f38546550d0fe9ae41c6a08eecc9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 74a967a4bb2314ff9f36a8753a514a3a47ce1be3
 ms.contentlocale: de-de
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;Sample Container&gt;)
+# <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;sample container&gt;)
 > [!NOTE]
->  Dieses Thema ist in der Dokumentation zu Visual C++ als nicht funktionierendes Beispiel für Container aufgeführt, die in der C++-Standardbibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekscontainer](../standard-library/stl-containers.md).  
+>  This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).  
   
- Überlädt **operator<**, um zwei Objekte der Vorlagenklasse [Container](../standard-library/sample-container-class.md) zu vergleichen.  
+ Overloads **operator<** to compare two objects of template class [Container](../standard-library/sample-container-class.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,10 +58,10 @@ bool operator<(
     const Container <Ty>& right);
 ```  
   
-## <a name="return-value"></a>Rückgabewert  
- Gibt `lexicographical_compare(left.begin, left.end, right.begin, right.end)`zurück.  
+## <a name="return-value"></a>Return Value  
+ Returns `lexicographical_compare(left.begin, left.end, right.begin, right.end)`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
 [\<sample container>](../standard-library/sample-container.md)  
 [begin](../standard-library/container-class-begin.md)  
 [end](../standard-library/container-class-end.md)  

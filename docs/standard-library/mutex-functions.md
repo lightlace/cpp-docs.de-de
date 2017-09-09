@@ -1,5 +1,5 @@
 ---
-title: '&lt;mutex&gt;-Funktionen und -Variablen | Microsoft-Dokumentation'
+title: '&lt;mutex&gt; functions and variables | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,28 +15,34 @@ f1_keywords:
 ms.assetid: 78ab3c8b-c7db-4226-ac93-e2e78ff8b964
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: dd24fb7f1b65f92c57915afa5f9b0412e019059d
+helpviewer_keywords:
+- std::adopt_lock [C++]
+- std::call_once [C++]
+- std::defer_lock [C++]
+- std::lock [C++]
+- std::try_to_lock [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 28ceab348f8daac6f764125a933d6e8e0dd12b84
 ms.contentlocale: de-de
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt;-Funktionen und -Variablen
+# <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; functions and variables
 ||||  
 |-|-|-|  
 |[adopt_lock](#adopt_lock)|[call_once](#call_once)|[defer_lock](#defer_lock)|  
 |[lock](#lock)|[try_to_lock](#try_to_lock)|  
   
-##  <a name="adopt_lock"></a> adopt_lock-Variable  
- Stellt ein Objekt dar, das an die Konstruktoren für [lock_guard](../standard-library/lock-guard-class.md) und [unique_lock](../standard-library/unique-lock-class.md) übergeben werden kann, um anzugeben, dass das ebenfalls an den Konstruktor übergebene Mutex-Objekt gesperrt ist.  
+##  <a name="adopt_lock"></a>  adopt_lock Variable  
+ Represents an object that can be passed to constructors for [lock_guard](../standard-library/lock-guard-class.md) and [unique_lock](../standard-library/unique-lock-class.md) to indicate that the mutex object that is also being passed to the constructor is locked.  
   
 ```cpp  
 const adopt_lock_t adopt_lock;
 ```  
   
-##  <a name="call_once"></a> call_once  
- Stellt einen Mechanismus zum Aufrufen eines angegebenen aufrufbaren Objekts genau einmal während der Ausführung bereit.  
+##  <a name="call_once"></a>  call_once  
+ Provides a mechanism for calling a specified callable object exactly once during execution.  
   
 ```
 template <class Callable, class... Args>
@@ -44,47 +50,47 @@ void call_once(once_flag& Flag,
     Callable F&&, Args&&... A);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Flag`  
- Ein [once_flag](../standard-library/once-flag-structure.md)-Objekt, das gewährleistet, dass das aufrufbare Objekt nur einmal aufgerufen wird.  
+ A [once_flag](../standard-library/once-flag-structure.md) object that ensures that the callable object is only called once.  
   
  `F`  
- Ein aufrufbares Objekt.  
+ A callable object.  
   
  `A`  
- Eine Argumentliste.  
+ An argument list.  
   
-### <a name="remarks"></a>Hinweise  
- Wenn `Flag` ungültig ist, löst die Funktion ein [system_error](../standard-library/system-error-class.md) mit dem Fehlercode `invalid_argument` aus. Andernfalls verwendet die Vorlagenfunktion ihr `Flag`-Argument, um zu gewährleisten, dass `F(A...)` genau einmal erfolgreich aufgerufen wird, und zwar unabhängig davon, wie oft die Vorlagenfunktion aufgerufen wird. Wenn `F(A...)` durch Auslösen einer Ausnahme beendet wird, war der Aufruf nicht erfolgreich.  
+### <a name="remarks"></a>Remarks  
+ If `Flag` is not valid, the function throws a [system_error](../standard-library/system-error-class.md) that has an error code of `invalid_argument`. Otherwise, the template function uses its `Flag` argument to ensure that it calls `F(A...)` successfully exactly once, regardless of how many times the template function is called. If `F(A...)` exits by throwing an exception, the call was not successful.  
   
-##  <a name="defer_lock"></a> defer_lock-Variable  
- Stellt ein Objekt dar, das an den Konstruktor für [unique_lock](../standard-library/unique-lock-class.md) übergeben werden kann. Dies gibt an, dass der Konstruktor das ebenfalls an ihn übergebene Mutex-Objekt nicht sperren darf.  
+##  <a name="defer_lock"></a>  defer_lock Variable  
+ Represents an object that can be passed to the constructor for [unique_lock](../standard-library/unique-lock-class.md). This indicates that the constructor should not lock the mutex object that's also being passed to it.  
   
 ```cpp  
 const defer_lock_t defer_lock;
 ```  
   
-##  <a name="lock"></a> lock  
- Versucht, alle Argumente ohne Deadlock zu sperren.  
+##  <a name="lock"></a>  lock  
+ Attempts to lock all arguments without deadlock.  
   
 ```cpp  
 template <class L1, class L2, class... L3>
 void lock(L1&, L2&, L3&...);
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Die Argumente für die Vorlagenfunktion müssen *Mutex-Typen* sein, sofern nicht Aufrufe von `try_lock` Ausnahmen auslösen könnten.  
+### <a name="remarks"></a>Remarks  
+ The arguments to the template function must be *mutex types*, except that calls to `try_lock` might throw exceptions.  
   
- Die Funktion sperrt alle Argumente ohne Deadlock durch Aufrufe von `lock`, `try_lock` und `unlock`. Wenn ein Aufruf von `lock` oder `try_lock` eine Ausnahme auslöst, ruft die Funktion auf allen Mutex-Objekten `unlock` auf, die vor dem erneuten Auslösen der Ausnahme erfolgreich gesperrt wurden.  
+ The function locks all of its arguments without deadlock by calls to `lock`, `try_lock`, and `unlock`. If a call to `lock` or `try_lock` throws an exception, the function calls `unlock` on any of the mutex objects that were successfully locked before rethrowing the exception.  
   
-##  <a name="try_to_lock"></a> try_to_lock-Variable  
- Stellt ein Objekt dar, das an den Konstruktor für [unique_lock](../standard-library/unique-lock-class.md) übergeben werden kann, um anzugeben, dass der Konstruktor versuchen muss, das ebenfalls an ihn ohne Blockierung übergebene `mutex` zu entsperren.  
+##  <a name="try_to_lock"></a>  try_to_lock Variable  
+ Represents an object that can be passed to the constructor for [unique_lock](../standard-library/unique-lock-class.md) to indicate that the constructor should try to unlock the `mutex` that is also being passed to it without blocking.  
   
 ```cpp  
 const try_to_lock_t try_to_lock;
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<mutex>](../standard-library/mutex.md)
 
 

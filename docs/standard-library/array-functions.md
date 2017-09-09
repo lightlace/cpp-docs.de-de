@@ -1,5 +1,5 @@
 ---
-title: '&lt;array&gt;-Funktionen | Microsoft-Dokumentation'
+title: '&lt;array&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,22 +17,26 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 326e4fddbf29e706faa4e726ece331a0fe64471b
+helpviewer_keywords:
+- std::array [C++], get
+- std::get [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d7bb16b490d20934a263147c0d6e28694e006552
 ms.contentlocale: de-de
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltarraygt-functions"></a>&lt;array&gt;-Funktionen
-Der Header \<array> enthält zwei Nicht-Memberfunktionen, `get` und `swap`, die `array`-Objekte verarbeiten.  
+# <a name="ltarraygt-functions"></a>&lt;array&gt; functions
+The \<array> header includes two non-member functions, `get` and `swap`, that operate on `array` objects.  
   
 |||  
 |-|-|  
 |[get](#get)|[swap](#swap)|  
   
-##  <a name="get"></a> get  
-Gibt einen Verweis auf das angegebene Element des Arrays zurück.  
+##  <a name="get"></a>  get  
+Returns a reference to the specified element of the array.  
   
 ```  
 template <int Index, class T, size_t N>  
@@ -45,20 +49,20 @@ template <int Index, class T, size_t N>
 constexpr T&& get(array<T, N>&& arr) noexcept;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Index`  
- Der Offset des Elements.  
+ The element offset.  
   
  `T`  
- Der Typ eines Elements.  
+ The type of an element.  
   
  `N`  
- Die Anzahl der Elemente im Array.  
+ The number of elements in the array.  
   
  `arr`  
- Das Array, aus dem die Auswahl erfolgt.  
+ The array to select from.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <array>   
@@ -90,31 +94,31 @@ int main()
 1 3  
 ```  
   
-##  <a name="swap"></a> swap  
-Eine Nicht-Member-Vorlagenspezialisierung von `std::swap`, die zwei `array`-Objekte miteinander tauschen kann.  
+##  <a name="swap"></a>  swap  
+A non-member template specialization of `std::swap` that swaps two `array` objects.  
   
 ```  
 template <class Ty, std::size_t N>  
 void swap(array<Ty, N>& left, array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Der Typ eines Elements.  
+ The type of an element.  
   
  `N`  
- Die Größe des Arrays.  
+ The size of the array.  
   
  `left`  
- Das erste auszutauschende Array.  
+ The first array to swap.  
   
  `right`  
- Das zweite auszutauschende Array.  
+ The second array to swap.  
   
-### <a name="remarks"></a>Hinweise  
- Die Vorlagenfunktion führt `left.swap(right)` aus.  
+### <a name="remarks"></a>Remarks  
+ The template function executes `left.swap(right)`.  
   
-### <a name="example"></a>Beispiel  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__swap.cpp   
@@ -160,7 +164,7 @@ int main()
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>See Also  
  [\<array>](../standard-library/array.md)
 
 
