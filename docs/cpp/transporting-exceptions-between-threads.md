@@ -1,38 +1,45 @@
 ---
-title: "Transportieren von Ausnahmen zwischen Threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "std::current_exception"
-  - "Transportieren von Ausnahmen zwischen Threads"
-  - "std::copy_exception"
-  - "exception_ptr"
-  - "std::exception_ptr"
-  - "std::rethrow_exception"
-  - "current_exception"
-  - "Transportieren von Ausnahmen zwischen Threads"
-  - "copy_exception"
-  - "rethrow_exception"
-  - "Verschieben von Ausnahmen zwischen Threads"
+title: Transporting Exceptions Between Threads | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- exceptions [C++], transporting between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# Transportieren von Ausnahmen zwischen Threads
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 89277d069f78ae0b73d2c2fd2d36ae13c8df807c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/11/2017
 
-Visual C++ unterstützt *Transportieren einer Ausnahme* von einem Thread zu einem anderen. Durch das Transportieren von Ausnahmen können Sie eine Ausnahme in einem Thread abfangen und anschließend die Ausnahme scheinbar in einem anderen Thread auslösen lassen. Sie können diese Funktion beispielsweise verwenden, um eine Multithreadanwendung zu schreiben, in der der primäre Thread alle Ausnahmen behandelt, die von seinen sekundären Threads ausgelöst werden. Das Transportieren von Ausnahmen ist insbesondere für Entwickler hilfreich, die parallele Programmierbibliotheken und -systeme erstellen. Um das Transportieren von Ausnahmen zu implementieren, stellt Visual C++ die [Exception_ptr](../Topic/exception_ptr.md) Typ und die [Current_exception](../Topic/current_exception.md), [Rethrow_exception](../Topic/rethrow_exception.md), und [Make_exception_ptr](../Topic/make_exception_ptr.md) Funktionen.  
+---
+# <a name="transporting-exceptions-between-threads"></a>Transporting Exceptions Between Threads
+Visual C++ supports *transporting an exception* from one thread to another. Transporting exceptions enables you to catch an exception in one thread and then make the exception appear to be thrown in a different thread. For example, you can use this feature to write a multithreaded application where the primary thread handles all the exceptions thrown by its secondary threads. Transporting exceptions is useful mostly to developers who create parallel programming libraries or systems. To implement transporting exceptions, Visual C++ provides the [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) type and the [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), and [make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) functions.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,107 +54,107 @@ namespace std
 }  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`unspecified`|Eine nicht angegebene interne Klasse, die verwendet wird, um den Typ `exception_ptr` zu implementieren.|  
-|`p`|Ein `exception_ptr`-Objekt, das auf eine Ausnahme verweist.|  
-|`E`|Eine Klasse, die eine Ausnahme darstellt.|  
-|`e`|Eine Instanz der `E`-Parameterklasse.|  
+|`unspecified`|An unspecified internal class that is used to implement the `exception_ptr` type.|  
+|`p`|An `exception_ptr` object that references an exception.|  
+|`E`|A class that represents an exception.|  
+|`e`|An instance of the parameter `E` class.|  
   
-## <a name="return-value"></a>Rückgabewert  
- Die `current_exception`-Funktion gibt ein `exception_ptr`-Objekt zurück, das auf die Ausnahme verweist, die gerade ausgeführt wird. Wenn keine Ausnahme ausgeführt wird, gibt die Funktion ein `exception_ptr`-Objekt zurück, das keiner Ausnahme zugeordnet ist.  
+## <a name="return-value"></a>Return Value  
+ The `current_exception` function returns an `exception_ptr` object that references the exception that is currently in progress. If no exception is in progress, the function returns an `exception_ptr` object that is not associated with any exception.  
   
- Die `make_exception_ptr`-Funktion gibt ein `exception_ptr`-Objekt zurück, das auf die Ausnahme verweist, die vom `e`-Parameter angegeben wird.  
+ The `make_exception_ptr` function returns an `exception_ptr` object that references the exception specified by the `e` parameter.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
-## <a name="scenario"></a>Szenario  
- Angenommen, Sie möchten eine Anwendung erstellen, die skaliert werden kann, um einen variablen Arbeitsaufwand zu verarbeiten. Um dieses Ziel zu erreichen, entwerfen Sie eine Multithreadanwendung, in der ein primärer Ausgangsthread so viele sekundäre Threads erstellt, wie zum Ausführen des Auftrags benötigt werden. Die sekundären Threads helfen dem primären Thread, Ressourcen zu verwalten, einen Lastausgleich vorzunehmen und den Durchsatz zu verbessern. Durch Verteilen der Arbeit zeigt die Multithreadanwendung eine bessere Leistung als eine Singlethreadanwendung.  
+## <a name="scenario"></a>Scenario  
+ Imagine that you want to create an application that can scale to handle a variable amount of work. To achieve this objective, you design a multithreaded application where an initial, primary thread creates as many secondary threads as it needs in order to do the job. The secondary threads help the primary thread to manage resources, to balance loads, and to improve throughput. By distributing the work, the multithreaded application performs better than a single-threaded application.  
   
- Wenn jedoch ein sekundärer Thread eine Ausnahme auslöst, sollte diese vom primären Thread behandelt werden. Dies liegt daran, dass die Anwendung Ausnahmen auf konsistente, einheitliche Art und Weise behandeln sollte, unabhängig von der Anzahl von sekundären Threads.  
+ However, if a secondary thread throws an exception, you want the primary thread to handle it. This is because you want your application to handle exceptions in a consistent, unified manner regardless of the number of secondary threads.  
   
-## <a name="solution"></a>Lösung  
- Um das vorherige Szenario zu behandeln, unterstützt der C++-Standard das Transportieren einer Ausnahme zwischen Threads. Wenn ein sekundärer Thread eine Ausnahme auslöst, wird die Ausnahme der *aktuelle Ausnahme*. Entsprechend der realen Welt, die die aktuelle Ausnahme gilt als *in-Flight*. Die aktuelle Ausnahme ist aktiv, sobald sie ausgelöst wird, bis der Ausnahmehandler, der sie abfängt, zurückgegeben wird.  
+## <a name="solution"></a>Solution  
+ To handle the previous scenario, the C++ Standard supports transporting an exception between threads. If a secondary thread throws an exception, that exception becomes the *current exception*. By analogy to the real world, the current exception is said to be *in flight*. The current exception is in flight from the time it is thrown until the exception handler that catches it returns.  
   
- Der zweite Thread kann die aktuelle Ausnahme in einem `catch`-Block abfangen und dann die `current_exception`-Funktion aufrufen, um die Ausnahme in einem `exception_ptr`-Objekt zu speichern. Das `exception_ptr`-Objekt muss für den sekundären Thread und den primären Thread verfügbar sein. Beispielsweise kann das `exception_ptr`-Objekt eine globale Variable sein, deren Zugriff durch einen Mutex gesteuert wird. Der Begriff *transport eine Ausnahme* bedeutet, dass eine Ausnahme in einem einzigen Thread konvertiert werden kann, um ein Formular, das von einem anderen Thread aus zugegriffen werden kann.  
+ The secondary thread can catch the current exception in a `catch` block, and then call the `current_exception` function to store the exception in an `exception_ptr` object. The `exception_ptr` object must be available to the secondary thread and to the primary thread. For example, the `exception_ptr` object can be a global variable whose access is controlled by a mutex. The term *transport an exception* means an exception in one thread can be converted to a form that can be accessed by another thread.  
   
- Anschließend ruft der primäre Thread die `rethrow_exception`-Funktion auf, die die Ausnahme extrahiert und anschließend aus dem `exception_ptr`-Objekt auslöst. Wenn die Ausnahme ausgelöst wird, wird sie zur aktuellen Ausnahme im primären Thread. Das heißt, die Ausnahme stammt scheinbar aus dem primären Thread.  
+ Next, the primary thread calls the `rethrow_exception` function, which extracts and then throws the exception from the `exception_ptr` object. When the exception is thrown, it becomes the current exception in the primary thread. That is, the exception appears to originate in the primary thread.  
   
- Schließlich kann der primäre Thread die aktuelle Ausnahme in einem `catch`-Block abfangen und dann verarbeiten oder für einen Ausnahmehandler höherer Ebene auslösen. Oder der primäre Thread kann die Ausnahme ignorieren und das Beenden des Vorgangs erlauben.  
+ Finally, the primary thread can catch the current exception in a `catch` block and then process it or throw it to a higher level exception handler. Or, the primary thread can ignore the exception and allow the process to end.  
   
- Die meisten Anwendungen müssen keine Ausnahmen zwischen Threads transportieren. Allerdings ist diese Funktion auf einem parallelen Computersystem nützlich, da das System die Arbeit auf sekundäre Threads, Prozessoren oder Kerne aufteilen kann. In einer parallelen Computerumgebung kann ein einzelner, dedizierter Thread alle Ausnahmen von den sekundären Threads behandeln und ein konsistentes Ausnahmebehandlungsmodell für jede Anwendung bieten.  
+ Most applications do not have to transport exceptions between threads. However, this feature is useful in a parallel computing system because the system can divide work among secondary threads, processors, or cores. In a parallel computing environment, a single, dedicated thread can handle all the exceptions from the secondary threads and can present a consistent exception-handling model to any application.  
   
- Weitere Informationen zum Antrag des Ausschusses für C++-Standards finden Sie im Internet. Suchen Sie nach der Dokumentnummer N2179 und Sprachenunterstützung für das Transportieren von Ausnahmen zwischen Threads.  
+ For more information about the C++ Standards committee proposal, search the Internet for document number N2179, titled "Language Support for Transporting Exceptions between Threads".  
   
-## <a name="exception-handling-models-and-compiler-options"></a>Ausnahmebehandlungsmodelle und Compileroptionen  
- Das Ausnahmebehandlungsmodell Ihrer Anwendung bestimmt, ob eine Ausnahme abgefangen und transportiert werden kann. Visual C++ unterstützt drei Modelle, die C++-Ausnahmen, SEH-Ausnahmen (Structured Exception Handling, Strukturierte Ausnahmebehandlung) und Common Language Runtime (CLR)-Ausnahmen behandeln können. Verwenden der [/EH](../build/reference/eh-exception-handling-model.md) und [/CLR](../build/reference/clr-common-language-runtime-compilation.md) Compileroptionen Ausnahmebehandlungsmodell Ihrer Anwendung angeben.  
+## <a name="exception-handling-models-and-compiler-options"></a>Exception-Handling Models and Compiler Options  
+ Your application's exception-handling model determines whether it can catch and transport an exception. Visual C++ supports three models that can handle C++ exceptions, structured exception handling (SEH) exceptions, and common language runtime (CLR) exceptions. Use the [/EH](../build/reference/eh-exception-handling-model.md) and [/clr](../build/reference/clr-common-language-runtime-compilation.md) compiler options to specify your application's exception-handling model.  
   
- Nur die folgende Kombination von Compileroptionen und Programmieranweisungen kann eine Ausnahme transportieren. Andere Kombinationen können entweder keine Ausnahmen abfangen oder Ausnahmen zwar abfangen, jedoch nicht transportieren.  
+ Only the following combination of compiler options and programming statements can transport an exception. Other combinations either cannot catch exceptions, or can catch but cannot transport exceptions.  
   
--   Die **/EHa** (Compileroption) und die `catch` -Anweisung können SEH- und C++-Ausnahmen transportieren.  
+-   The **/EHa** compiler option and the `catch` statement can transport SEH and C++ exceptions.  
   
--   Die **/EHa**, **/EHs**, und **/EHsc** Compileroptionen und `catch` -Anweisung können C++-Ausnahmen transportieren.  
+-   The **/EHa**, **/EHs**, and **/EHsc** compiler options and the `catch` statement can transport C++ exceptions.  
   
--   Die **/CLR** oder **/clr: pure** (Compileroption) und die `catch` -Anweisung können C++-Ausnahmen transportieren. Die **/CLR** -Compileroptionen implizieren die Angabe der **/EHa** Option. Beachten Sie, dass der Compiler das Transportieren von verwalteten Ausnahmen nicht unterstützt. Dies ist, da es sich bei verwalteten Ausnahmen, die von abgeleitet sind die [System.Exception-Klasse](../standard-library/exception-class1.md), sind bereits Objekte, die Sie mit den Funktionen der common Language Runtime zwischen Threads verschieben können.  
+-   The **/CLR** or **/CLR:pure** compiler option and the `catch` statement can transport C++ exceptions. The **/CLR** compiler options imply specification of the **/EHa** option. Note that the compiler does not support transporting managed exceptions. This is because managed exceptions, which are derived from the [System.Exception class](../standard-library/exception-class.md), are already objects that you can move between threads by using the facilities of the common languange runtime.  
   
     > [!IMPORTANT]
-    >  Es wird empfohlen, Sie geben die **/EHsc** (Compileroption) und nur C++-Ausnahmen abzufangen. Sie setzen sich ein Sicherheitsrisiko bei Verwendung der **/EHa** oder **/CLR** (Compileroption) und ein **catch** -Anweisung mit einem Auslassungszeichen *Ausnahmedeklaration* (`catch(...)`). Sie beabsichtigen möglicherweise, die `catch`-Anweisung zu verwenden, um mehrere spezifische Ausnahmen zu erfassen. Allerdings fängt die `catch(...)`-Anweisung alle C++- und SEH-Ausnahmen ab, einschließlich der unerwarteten Ausnahmen mit schwerwiegenden Ausnahmefehlern. Wenn Sie eine unerwartete Ausnahme nicht korrekt behandeln oder ignorieren, kann Malware-Code diese Möglichkeit nutzen, die Sicherheit Ihres Programms zu beeinträchtigen.  
+    >  We recommend that you specify the **/EHsc** compiler option and catch only C++ exceptions. You expose yourself to a security threat if you use the **/EHa** or **/CLR** compiler option and a **catch** statement with an ellipsis *exception-declaration* (`catch(...)`). You probably intend to use the `catch` statement to capture a few specific exceptions. However, the `catch(...)` statement captures all C++ and SEH exceptions, including unexpected ones that should be fatal. If you ignore or mishandle an unexpected exception, malicious code can use that opportunity to undermine the security of your program.  
   
-## <a name="usage"></a>Verwendung  
- In den folgenden Abschnitten wird beschrieben, wie zum Transportieren von Ausnahmen mit den `exception_ptr` Typ, und die `current_exception`, `rethrow_exception`, und `make_exception_ptr` Funktionen.  
+## <a name="usage"></a>Usage  
+ The following sections describe how to transport exceptions by using the `exception_ptr` type, and the `current_exception`, `rethrow_exception`, and `make_exception_ptr` functions.  
   
-### <a name="exceptionptr-type"></a>exception_ptr-Typ  
- Verwenden Sie ein `exception_ptr`-Objekt, um auf die aktuelle Ausnahme oder eine Instanz einer vom Benutzer angegebenen Ausnahme zu verweisen. Bei der Implementierung von Microsoft wird eine Ausnahme durch dargestellt ein [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) Struktur. Jedes `exception_ptr`-Objekt enthält ein Ausnahmeverweisfeld, das auf eine Kopie der `EXCEPTION_RECORD`-Struktur zeigt, die die Ausnahme darstellt.  
+### <a name="exceptionptr-type"></a>exception_ptr Type  
+ Use an `exception_ptr` object to reference the current exception or an instance of a user-specified exception. In the Microsoft implementation, an exception is represented by an [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) structure. Each `exception_ptr` object includes an exception reference field that points to a copy of the `EXCEPTION_RECORD` structure that represents the exception.  
   
- Wenn Sie eine `exception_ptr`-Variable deklarieren, wird die Variable keiner Ausnahme zugeordnet. Das heißt, das Ausnahmeverweisfeld ist NULL. Solche ein `exception_ptr` Objekt wird aufgerufen, eine *null Exception_ptr*.  
+ When you declare an `exception_ptr` variable, the variable is not associated with any exception. That is, its exception reference field is NULL. Such an `exception_ptr` object is called a *null exception_ptr*.  
   
- Verwenden Sie die Funktion `current_exception` oder `make_exception_ptr`, um eine Ausnahme einem `exception_ptr`-Objekt zuzuweisen. Wenn Sie einer `exception_ptr`-Variable eine Ausnahme zuweisen, zeigt das Ausnahmeverweisfeld der Variable auf eine Kopie der Ausnahme. Es ist nicht genügend Arbeitsspeicher zum Kopieren, zeigt das ausnahmeverweisfeld auf eine Kopie der eine [Std:: bad_alloc](../standard-library/bad-alloc-class.md) Ausnahme. Wenn die `current_exception` oder `make_exception_ptr` Funktion die Ausnahme kann nicht kopiert werden, einem anderen Grund, ruft die Funktion die [Beenden](../c-runtime-library/reference/terminate-crt.md) Funktion, um den aktuellen Prozess zu beenden.  
+ Use the `current_exception` or `make_exception_ptr` function to assign an exception to an `exception_ptr` object. When you assign an exception to an `exception_ptr` variable, the variable's exception reference field points to a copy of the exception. If there is insufficient memory to copy the exception, the exception reference field points to a copy of a [std::bad_alloc](../standard-library/bad-alloc-class.md) exception. If the `current_exception` or `make_exception_ptr` function cannot copy the exception for any other reason, the function calls the [terminate](../c-runtime-library/reference/terminate-crt.md) function to exit the current process.  
   
- Trotz seines Namens ist ein `exception_ptr`-Objekt nicht selbst ein Zeiger. Es folgt keiner Zeigersemantik und kann nicht mit dem Zeigermemberzugriff (`->`) oder indirection (*)-Operatoren verwendet werden. Das `exception_ptr`-Objekt weist keine öffentlichen Datenmember oder Memberfunktionen auf.  
+ Despite its name, an `exception_ptr` object is not itself a pointer. It does not obey pointer semantics and cannot be used with the pointer member access (`->`) or indirection (*) operators. The `exception_ptr` object has no public data members or member functions.  
   
- **Vergleiche:**  
+ **Comparisons:**  
   
- Sie können den Gleichheitsoperator (`==`) und den Ungleichheitsoperator (`!=`) verwenden, um zwei `exception_ptr`-Objekte zu vergleichen. Die Operatoren vergleichen nicht den Binärwert (Bitmuster) der `EXCEPTION_RECORD`-Strukturen, die die Ausnahmen darstellen. Stattdessen vergleichen die Operatoren die Adressen im Ausnahmeverweisfeld der `exception_ptr`-Objekte. Folglich sind ein NULL-`exception_ptr` und der NULL-Wert gleichwertig.  
+ You can use the equal (`==`) and not-equal (`!=`) operators to compare two `exception_ptr` objects. The operators do not compare the binary value (bit pattern) of the `EXCEPTION_RECORD` structures that represent the exceptions. Instead, the operators compare the addresses in the exception reference field of the `exception_ptr` objects. Consequently, a null `exception_ptr` and the NULL value compare as equal.  
   
-### <a name="currentexception-function"></a>current_exception-Funktion  
- Rufen Sie die `current_exception`-Funktion in einem `catch`-Block auf. Wenn eine Ausnahme aktiv ist und der `catch`-Block die Ausnahme abfangen kann, gibt die `current_exception`-Funktion ein `exception_ptr`-Objekt zurück, das auf die Ausnahme verweist. Andernfalls gibt die Funktion ein NULL-`exception_ptr`-Objekt zurück.  
+### <a name="currentexception-function"></a>current_exception Function  
+ Call the `current_exception` function in a `catch` block. If an exception is in flight and the `catch` block can catch the exception, the `current_exception` function returns an `exception_ptr` object that references the exception. Otherwise, the function returns a null `exception_ptr` object.  
   
  **Details:**  
   
- Die `current_exception` -Funktion erfasst die Ausnahme, die in-Flight unabhängig davon, ob die `catch` -Anweisung gibt ein [Ausnahmedeklaration](../cpp/try-throw-and-catch-statements-cpp.md) Anweisung.  
+ The `current_exception` function captures the exception that is in flight regardless of whether the `catch` statement specifies an [exception-declaration](../cpp/try-throw-and-catch-statements-cpp.md) statement.  
   
- Der Destruktor für die aktuelle Ausnahme wird am Ende des `catch`-Blocks aufgerufen, wenn die Ausnahme nicht erneut ausgelöst wird. Jedoch auch, wenn Sie Aufrufen der `current_exception` -Funktion im Destruktor, gibt die Funktion ein `exception_ptr` Objekt, das die aktuelle Ausnahme verweist.  
+ The destructor for the current exception is called at the end of the `catch` block if you do not rethrow the exception. However, even if you call the `current_exception` function in the destructor, the function returns an `exception_ptr` object that references the current exception.  
   
- Aufeinander folgende Aufrufe der `current_exception`-Funktion geben `exception_ptr`-Objekte zurück, die sich auf unterschiedliche Kopien der aktuellen Ausnahme beziehen. Folglich sind die Objekte bei einem Vergleich ungleich, da sie auf unterschiedliche Kopien verweisen, auch wenn die Kopien den gleichen Binärwert aufweisen.  
+ Successive calls to the `current_exception` function return `exception_ptr` objects that refer to different copies of the current exception. Consequently, the objects compare as unequal because they refer to different copies, even though the copies have the same binary value.  
   
- **SEH-Ausnahmen:**  
+ **SEH Exceptions:**  
   
- Bei Verwendung der **/EHa** -Compileroption verwenden, können Sie eine SEH-Ausnahme abfangen, in einem C++ `catch` Block. Die `current_exception`-Funktion gibt ein `exception_ptr`-Objekt zurück, das auf die SEH-Ausnahme verweist. Und die `rethrow_exception` Funktion SEH-Ausnahme auslöst, wenn Sie es mit Thetransported Aufrufen `exception_ptr` -Objekt als Argument.  
+ If you use the **/EHa** compiler option, you can catch an SEH exception in a C++ `catch` block. The `current_exception` function returns an `exception_ptr` object that references the SEH exception. And the `rethrow_exception` function throws the SEH exception if you call it with thetransported `exception_ptr` object as its argument.  
   
- Die `current_exception`-Funktion gibt einen NULL-`exception_ptr` zurück, wenn sie in einem `__finally`-SEH-Beendigungshandler, einem `__except`-Ausnahmehandler oder dem `__except`-Filterausdruck aufgerufen wird.  
+ The `current_exception` function returns a null `exception_ptr` if you call it in an SEH `__finally` termination handler, an `__except` exception handler, or the `__except` filter expression.  
   
- Eine transportierte Ausnahme unterstützt keine geschachtelte Ausnahmen. Eine geschachtelte Ausnahme tritt auf, wenn eine andere Ausnahme ausgelöst wird, während eine Ausnahme behandelt wird. Wenn Sie eine geschachtelte Ausnahme abfangen, zeigt der `EXCEPTION_RECORD.ExceptionRecord`-Datenmember auf eine Kette von `EXCEPTION_RECORD`-Strukturen, die die zugeordneten Ausnahmen beschreiben. Die `current_exception`-Funktion unterstützt keine geschachtelte Ausnahmen, da sie ein `exception_ptr`-Objekt zurückgibt, dessen `ExceptionRecord`-Datenmember auf Null gesetzt ist.  
+ A transported exception does not support nested exceptions. A nested exception occurs if another exception is thrown while an exception is being handled. If you catch a nested exception, the `EXCEPTION_RECORD.ExceptionRecord` data member points to a chain of `EXCEPTION_RECORD` structures that describe the associated exceptions. The `current_exception` function does not support nested exceptions because it returns an `exception_ptr` object whose `ExceptionRecord` data member is zeroed out.  
   
- Wenn Sie eine SEH-Ausnahme abfangen, müssen Sie den Speicher verwalten, auf den von einem Zeiger im `EXCEPTION_RECORD.ExceptionInformation`-Datenmemberarray verwiesen wird. Sie müssen sicherstellen, dass der Arbeitsspeicher während der Lebensdauer des entsprechenden `exception_ptr`-Objekts gültig ist und dass der Arbeitsspeicher freigegeben wird, wenn das `exception_ptr`-Objekt gelöscht wird.  
+ If you catch an SEH exception, you must manage the memory referenced by any pointer in the `EXCEPTION_RECORD.ExceptionInformation` data member array. You must guarantee that the memory is valid during the lifetime of the corresponding `exception_ptr` object, and that the memory is freed when the `exception_ptr` object is deleted.  
   
- Sie können Funktionen des Konvertierungsprogramms für strukturierte Ausnahmen zusammen mit der Funktion für den Ausnahmetransport verwenden. Wenn eine SEH-Ausnahme in eine C++-Ausnahme übersetzt wird, gibt die `current_exception`-Funktion einen `exception_ptr` zurück, der auf die übersetzte Ausnahme anstelle der ursprünglichen SEH-Ausnahme verweist. Die `rethrow_exception`-Funktion löst daraufhin die übersetzte Ausnahme, nicht die ursprüngliche Ausnahme, aus. Weitere Informationen zu SE Translator-Funktionen finden Sie unter [_set_se_translator](../c-runtime-library/reference/set-se-translator.md).  
+ You can use structured exception (SE) translator functions together with the transport exceptions feature. If an SEH exception is translated to a C++ exception, the `current_exception` function returns an `exception_ptr` that references the translated exception instead of the original SEH exception. The `rethrow_exception` function subsequently throws the translated exception, not the original exception. For more information about SE translator functions, see [_set_se_translator](../c-runtime-library/reference/set-se-translator.md).  
   
-### <a name="rethrowexception-function"></a>rethrow_exception-Funktion  
- Nachdem Sie eine abgefangene Ausnahme in einem `exception_ptr`-Objekt gespeichert haben, kann der primäre Thread das Objekt verarbeiten. Rufen Sie in Ihrem primären Thread die `rethrow_exception`-Funktion zusammen mit dem `exception_ptr`-Objekt als Argument auf. Die `rethrow_exception`-Funktion extrahiert die Ausnahme vom `exception_ptr`-Objekt und löst die Ausnahme anschließend im Kontext des primären Threads aus. Wenn der `p` Parameter von der `rethrow_exception` Funktion ist ein NULL-Wert `exception_ptr`, löst die Funktion [Std:: bad_exception](../standard-library/bad-exception-class.md).  
+### <a name="rethrowexception-function"></a>rethrow_exception Function  
+ After you store a caught exception in an `exception_ptr` object, the primary thread can process the object. In your primary thread, call the `rethrow_exception` function together with the `exception_ptr` object as its argument. The `rethrow_exception` function extracts the exception from the `exception_ptr` object and then throws the exception in the context of the primary thread. If the `p` parameter of the `rethrow_exception` function is a null `exception_ptr`, the function throws [std::bad_exception](../standard-library/bad-exception-class.md).  
   
- Die extrahierte Ausnahme ist jetzt die aktuelle Ausnahme im primären Thread, und Sie können sie behandeln wie jede andere Ausnahme. Wenn Sie die Ausnahme abfangen, können Sie sie sofort verarbeiten oder eine `throw`-Anweisung verwenden, um sie an einen Ausnahmehandler auf höherer Ebene zu senden. Unternehmen Sie anderenfalls nichts, und lassen Sie den standardmäßigen Systemausnahmehandler den Prozess beenden.  
+ The extracted exception is now the current exception in the primary thread, and you can handle it as you would any other exception. If you catch the exception, you can handle it immediately or use a `throw` statement to send it to a higher level exception handler. Otherwise, do nothing and let the default system exception handler terminate your process.  
   
-### <a name="makeexceptionptr-function"></a>make_exception_ptr-Funktion  
- Die `make_exception_ptr`-Funktion akzeptiert eine Instanz einer Klasse als Argument und gibt dann einen `exception_ptr` zurück, der auf die Instanz verweist. Normalerweise geben Sie eine [Ausnahmeklasse](../standard-library/exception-class1.md) Objekt als Argument für die `make_exception_ptr` funktioniert, obwohl jedes Klassenobjekt Arguments sein kann.  
+### <a name="makeexceptionptr-function"></a>make_exception_ptr Function  
+ The `make_exception_ptr` function takes an instance of a class as its argument and then returns an `exception_ptr` that references the instance. Usually, you specify an [exception class](../standard-library/exception-class.md) object as the argument to the `make_exception_ptr` function, although any class object can be the argument.  
   
- Das Aufrufen der `make_exception_ptr`-Funktion ist gleichbedeutend mit dem Auslösen einer C++-Ausnahme, die in einem `catch`-Block abgefangen wird, und dem anschließenden Aufrufen der `current_exception`-Funktion, um ein `exception_ptr`-Objekt zurückzugeben, das auf die Ausnahme verwiest. Die Microsoft-Implementierung der `make_exception_ptr`-Funktion ist effizienter als das Auslösen und anschließende Abfangen einer Ausnahme.  
+ Calling the `make_exception_ptr` function is equivalent to throwing a C++ exception, catching it in a `catch` block, and then calling the `current_exception` function to return an `exception_ptr` object that references the exception. The Microsoft implementation of the `make_exception_ptr` function is more efficient than throwing and then catching an exception.  
   
- Eine Anwendung erfordert in der Regel nicht die `make_exception_ptr` -Funktion, und es wird von ihrer Verwendung abgeraten.  
+ An application typically does not require the `make_exception_ptr` function, and we discourage its use.  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine Standard-C++-Ausnahme und eine benutzerdefinierte C++-Ausnahme von einem Thread zu einem anderen transportiert.  
+## <a name="example"></a>Example  
+ The following example transports a standard C++ exception and a custom C++ exception from one thread to another.  
   
 ```  
 // transport_exception.cpp  
@@ -249,12 +256,11 @@ exception_ptr 0: Caught an invalid_argument exception.
 exception_ptr 1: Caught a  myException exception.  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** \< Ausnahme>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<exception>  
   
-## <a name="see-also"></a>Siehe auch  
- [Behandlung von Ausnahmen](../cpp/exception-handling-in-visual-cpp.md)   
- [EXCEPTION_RECORD-Struktur](#base.exception_record_str)   
- [Handler-Syntax](#base.handler_syntax)   
- [/ EH (Ausnahmebehandlungsmodell)](../build/reference/eh-exception-handling-model.md)   
- [/ CLR (common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../cpp/exception-handling-in-visual-cpp.md)     
+ [/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md)   
+ [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md)
+

@@ -1,62 +1,78 @@
 ---
-title: "Willkommen zur&#252;ck bei C++ (Modern C++)"
-ms.custom: na
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Welcome Back to C++ (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
 caps.latest.revision: 23
-caps.handback.revision: "23"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Willkommen zur&#252;ck bei C++ (Modern C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 462f2fbc8b1c7b81a1536a9620b8f628231fb2dc
+ms.contentlocale: de-de
+ms.lasthandoff: 09/11/2017
 
-C\+\+ ist eine der am häufigsten verwendeten Programmiersprachen der Welt.  Gut geschriebene C\+\+\-Programme sind schnell und effizient.  Die Sprache ist flexibler als andere Sprachen, da sie verwendet werden kann, um eine breite Palette von Apps zu erstellen: lustige und aufregende Spiele, leistungsstarke wissenschaftliche Software, Gerätetreiber, eingebettete Programme und Windows\-Clientapps.  Seit mehr als 20 Jahren wird C\+\+ zum Lösen von Problemen wie dieser und vieler anderer.  Ihnen ist möglicherweise nicht bekannt, dass eine zunehmende Anzahl von C\+\+\-Programmierern sich von der uneleganten Programmierung im C\-Stil von einst abgewandt haben, hin zu einem modernen C\+\+.  
+---
+# <a name="welcome-back-to-c-modern-c"></a>Welcome Back to C++ (Modern C++)
+C++ is one of the most widely used programming languages in the world. Well-written C++ programs are fast and efficient. The language is more flexible than other languages because you can use it to create a wide range of apps—from fun and exciting games, to high-performance scientific software, to device drivers, embedded programs, and Windows client apps. For more than 20 years, C++ has been used to solve problems like these and many others. What you might not know is that an increasing number of C++ programmers have folded up the dowdy C-style programming of yesterday and have donned modern C++ instead.  
   
- Eine der ursprünglichen Anforderungen für C\+\+ war Abwärtskompatibilität mit der Programmiersprache C.  Inzwischen hat sich C\+\+ durch mehrere Iterationen, über C mit Klassen, die ursprüngliche C\+\+\-Sprachenspezifikation und schließlich die vielen folgenden Erweiterungen, weiter entwickelt.  Aufgrund dieses Erbes wird C\+\+ häufig als eine Programmiersprache mit vielen Paradigmen bezeichnet.  In C\+\+ können Sie rein prozedurale Programmierung im C\-Stil umsetzen, die unformatierte Zeiger, Arrays, auf NULL endende Zeichenfolgen, benutzerdefinierte Datenstrukturen und andere Funktionen umfasst, die möglicherweise große Leistung ermöglichen, jedoch Fehler und Komplexität erzeugen können.  Da Programmierung im C\-Stil voller Fehlerquellen wie diesen steckt, bestand eins der Ziele bei Erschaffung von C\+\+ im Erstellen typsicherer Programme, die leichter zu schreiben, zu erweitern und zu warten sind.  Bereitwillig wurden für C\+\+ schon früh solche Paradigmen wie die objektorientierte Programmierung angenommen.  Im Laufe der Jahre sind der Sprache Funktionen zusammen mit intensiv getesteten Standardbibliotheken von Datenstrukturen und Algorithmen hinzugefügt worden.  Aufgrund dieser Ergänzungen wurde der moderne C\+\+\-Stil möglich.  
+ One of the original requirements for C++ was backward compatibility with the C language. Since then, C++ has evolved through several iterations—C with Classes, then the original C++ language specification, and then the many subsequent enhancements. Because of this heritage, C++ is often referred to as a multi-paradigm programming language. In C++, you can do purely procedural C-style programming that involves raw pointers, arrays, null-terminated character strings, custom data structures, and other features that may enable great performance but can also spawn bugs and complexity.  Because C-style programming is fraught with perils like these, one of the founding goals for C++ was to make programs both type-safe and easier to write, extend, and maintain. Early on, C++ embraced programming paradigms such as object-oriented programming. Over the years, features have been added to the language, together with highly-tested standard libraries of data structures and algorithms. It's these additions that have made the modern C++ style possible.  
   
- Modernes C\+\+ betont:  
+ Modern C++ emphasizes:  
   
--   Stapelbasierte Bereiche anstelle von Heaps oder statischen globalen Bereichen.  
+-   Stack-based scope instead of heap or static global scope.  
   
--   Automatischer Typrückschluss antelle von expliziten Typnamen.  
+-   Auto type inference instead of explicit type names.  
   
--   Intelligente Zeiger anstelle von unformatierten Zeigern.  
+-   Smart pointers instead of raw pointers.  
   
--   `std::string` und `std::wstring`\-Typen \(siehe [\<string\>](../standard-library/string.md)\), anstelle von unformatierten `char[]`\-Arrays.  
+-   `std::string` and `std::wstring` types (see [\<string>](../standard-library/string.md)) instead of raw `char[]` arrays.  
   
--   [Standardvorlagenbibliothek](../standard-library/cpp-standard-library-header-files.md) \(STL\)\-Container wie `vector`, `list` und `map` anstelle von unformatierten Arrays oder benutzerdefinierten Containern.  Siehe [\<vector\>](../standard-library/vector.md), [\<list\>](../standard-library/list.md) und [\< Zuordnung \>](../standard-library/map.md).  
+-   [C++ Standard Library](../standard-library/cpp-standard-library-header-files.md) containers like `vector`, `list`, and `map` instead of raw arrays or custom containers. See [\<vector>](../standard-library/vector.md), [\<list>](../standard-library/list.md), and [\<map>](../standard-library/map.md).  
   
--   [STL\-Algorithmen](../standard-library/algorithm.md) anstelle von manuell Codierten.  
+-   C++ Standard Library [algorithms](../standard-library/algorithm.md) instead of manually coded ones.  
   
--   Ausnahmen zum Melden und Behandeln von Fehlerzuständen.  
+-   Exceptions, to report and handle error conditions.  
   
--   Sperrenfreie Kommunikation zwischen Threads mithilfe von STL `std::atomic<>` \(siehe [\<atomic\>](../standard-library/atomic.md)\), anstelle anderer Mechanismen zur Kommunikation zwischen Threads.  
+-   Lock-free inter-thread communication using C++ Standard Library `std::atomic<>` (see [\<atomic>](../standard-library/atomic.md)) instead of other inter-thread communication mechanisms.  
   
--   Inline [Lambda\-Funktionen](../cpp/lambda-expressions-in-cpp.md) anstelle von kleinen separat implementierten Funktionen.  
+-   Inline [lambda functions](../cpp/lambda-expressions-in-cpp.md) instead of small functions implemented separately.  
   
--   Bereichsbasiert, damit Schleifen robustere Schleifen schreiben, die mit Arrays, STL\-Containern und [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]\-Auflistungen in der Form `for ( for-range-declaration : expression )` funktionieren.  Dies ist ein Bestandteil der Kernsprachunterstützung.  Weitere Informationen finden Sie unter [Bereichsbasiert für Anweisung \(C\+\+\)](../cpp/range-based-for-statement-cpp.md).  
+-   Range-based for loops to write more robust loops that work with arrays, C++ Standard Library containers, and Windows Runtime collections in the form `for ( for-range-declaration : expression )`. This is part of the Core Language support. For more information, see [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md).  
   
- Die Programmiersprache C\+\+ selbst hat sich auch entwickelt.  Vergleichen Sie die folgenden Codeausschnitte.  In diesem Ausschnitt wird ursprünglicher C\+\+\-Code verwendet:  
+ The C++ language itself has also evolved. Compare the following code snippets. This one shows how things used to be in C++:  
   
 ```cpp  
-  
 // circle and shape are user-defined types  
 circle* p = new circle( 42 );   
 vector<shape*> v = load_shapes();  
   
 for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
     if( *i && **i == *p )  
-        cout << **i << “ is a match\n”;  
+        cout << **i << " is a match\n";  
 }  
   
 for( vector<circle*>::iterator i = v.begin();  
@@ -65,13 +81,11 @@ for( vector<circle*>::iterator i = v.begin();
 }  
   
 delete p;  
-  
 ```  
   
- In diesem wird gezeigt, wie die gleiche Aufgabe in modernem C\+\+ erreicht wird:  
+ Here's how the same thing is accomplished in modern C++:  
   
 ```cpp  
-  
 #include <memory>  
 #include <vector>  
 // ...  
@@ -79,52 +93,51 @@ delete p;
 auto p = make_shared<circle>( 42 );  
 vector<shared_ptr<shape>> v = load_shapes();  
   
-for_each( begin(v), end(v), [&](const shared_ptr<shape>& s) {  
+for( auto& s : v ) {  
     if( s && *s == *p )  
         cout << *s << " is a match\n";  
-} );  
-  
+} 
 ```  
   
- In modernem C\+\+ ist die Verwendung der Ausnahmebehandlung "neu\/löschen" oder "explizit" nicht erforderlich, da Sie statt dessen intelligente Zeiger nutzen können.  Wenn Sie die `auto`\-Typableitung und [Lambda\-Funktion](../cpp/lambda-expressions-in-cpp.md) verwenden, können Sie Code schneller und kompakter schreiben, und ihn besser verstehen.  Die `for_each`\-Schleife ist klarer, einfacher anzuwenden und weniger anfällig für unbeabsichtigte Fehler als eine `for`\-Schleife.  Sie können Bausteine mit minimalen Codezeilen verbinden, um die App zu schreiben.  Außerdem können Sie diesen Code ausnahme\- und arbeitsspeichersicher erstellen und haben keinen Zuordnungs\-\/Freigabe\- oder Fehlercodes zu verarbeiten.  
+ In modern C++, you don't have to use new/delete or explicit exception handling because you can use smart pointers instead. When you use the `auto` type deduction and [lambda function](../cpp/lambda-expressions-in-cpp.md), you can write code quicker, tighten it, and understand it better. And `for_each` is cleaner, easier to use, and less prone to unintended errors than a `for` loop. You can use boilerplate together with minimal lines of code to write your app. And you can make that code exception-safe and memory-safe, and have no allocation/deallocation or error codes to deal with.  
   
- Modernes C\+\+ enthält zwei Arten von Polymorphie: Kompilierzeit, durch Vorlagen, und Laufzeit, durch Vererbung und Virtualisierung.  Sie können die beiden Polymorphiearten mit großer Wirkungen kombinieren.  Bei der STL\-Vorlage `shared_ptr` werden interne virtuelle Methoden zum Erreichen der anscheinend mühelosen Typlöschung verwendet.  Doch überbeanspruchen Sie die Virtualisierung für Polymorphie nicht, wenn eine Vorlage die bessere Wahl ist.  Vorlagen können sehr leistungsstark sein.  
+ Modern C++ incorporates two kinds of polymorphism: compile-time, through templates, and run-time, through inheritance and virtualization. You can mix the two kinds of polymorphism to great effect. The C++ Standard Library template `shared_ptr` uses internal virtual methods to accomplish its apparently effortless type erasure. But don't over-use virtualization for polymorphism when a template is the better choice. Templates can be very powerful.  
   
- Wenn Sie von einer anderen Sprache her zu C\+\+ kommen, insbesondere bei einer verwalteten Sprache mit größtenteils Verweistypen und nur wenigen Werttypen, wissen Sie, dass C\+\+\-Klassen standardmäßig Werttypen sind.  Sie können sie allerdings als Verweistypen angeben, um polymorphes Verhalten zu ermöglichen, das objektorientierte Programmierung unterstützt.  Eine hilfreiche Sichtweise: Bei Werttypen geht es mehr um Arbeitsspeicher und Layoutsteuerung, bei Verweistypen geht es dagegen mehr um Basisklassen und virtuelle Funktionen zur Unterstützung von Polymorphie.  Standardmäßig können Werttypen kopiert werden. Sie verfügen jeweils über einen Kopierkonstruktor und ein Kopierzuweisungsoperator.  Bei der Angabe eines Verweistyps darf die Klasse nicht kopiert werden können. Deaktivieren Sie den Kopierkonstruktor und den Kopierzuweisungsoperator und verwenden Sie einen virtuellen Destruktor, der Polymorphie unterstützt.  Bei Werttypen geht es außerdem um die Inhalte, von denen, wenn sie kopiert werden, zwei unabhängige Werte zugewiesen werden, die getrennt geändert werden können.  Bei Referenztypen geht es allerdings um Identität \(welche Art von Objekt es ist\). Aus diesem Grund werden sie manchmal als polymorphe Typen bezeichnet.  
+ If you're coming to C++ from another language, especially from a managed language in which most of the types are reference types and very few are value types, know that C++ classes are value types by default. But you can specify them as reference types to enable polymorphic behavior that supports object-oriented programming. A helpful perspective: value types are more about memory and layout control, reference types are more about base classes and virtual functions to support polymorphism. By default, value types are copyable—they each have a copy constructor and a copy assignment operator. When you specify a reference type, make the class non-copyable—disable the copy constructor and copy assignment operator—and use a virtual destructor, which supports the polymorphism. Value types are also about the contents, which, when they are copied, give you two independent values that you can modify separately. But reference types are about identity—what kind of object it is—and for this reason are sometimes referred to as polymorphic types.  
   
- C\+\+ erlebt eine Renaissance, da die Leistungsfähigkeit wieder über Allem steht.  Sprachen wie Java und C\# sind gut, wenn Programmiererproduktivität wichtig ist, aber ihren Einschränkungen werden deutlich, wenn Leistungsfähigkeit entscheidend ist.  Bei Effizienz und hohe Leistungsfähigkeit, besonders auf Geräten, deren Hardware eingeschränkt ist, ist das moderne C\+\+ unschlagbar.  
+ C++ is experiencing a renaissance because power is king again. Languages like Java and C# are good when programmer productivity is important, but they show their limitations when power and performance are paramount. For high efficiency and power, especially on devices that have limited hardware, nothing beats modern C++.  
   
- Es ist nicht nur eine moderne Sprache, auch die Entwicklungstools sind modern.  Mit [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] werden alle Teile des Entwicklungszyklus robust und effizient.  Das schließt Tools der Anwendungslebenszyklus\-Verwaltung \(ALM\), IDE\-Erweiterungen wie IntelliSense, benutzerfreundliche Toolmechanismen wie XAML und das Erstellen, Debuggen sowie viele weitere Tools ein.  
+ Not only the language is modern, the development tools are, too. [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] makes all parts of the development cycle robust and efficient. It includes Application Lifecycle Management (ALM) tools, IDE enhancements like IntelliSense, tool-friendly mechanisms like XAML, and building, debugging, and many other tools.  
   
- Die Artikel in diesem Teil der Dokumentation bieten übergeordnete Richtlinien und bewährte Methoden für die wichtigsten Funktionen und Techniken zum Schreiben moderner C\+\+\-Programmen.  
+ The articles in this part of the documentation provide high-level guidelines and best practices for the most important features and techniques for writing modern C++ programs.  
   
--   [Unterstützung für C\+\+11\/14\/17\-Funktionen](../cpp/support-for-cpp11-14-17-features-modern-cpp.md)  
+-   [C++ Type System](../cpp/cpp-type-system-modern-cpp.md)  
   
--   [C\+\+\-Typsystem](../cpp/cpp-type-system-modern-cpp.md)  
+-   [Uniform Initialization and Delegating Constructors](../cpp/uniform-initialization-and-delegating-constructors.md)  
   
--   [Einheitliche Initialisierung und Delegierung von Konstruktoren](../cpp/uniform-initialization-and-delegating-constructors.md)  
+-   [Object Lifetime And Resource Management](../cpp/object-lifetime-and-resource-management-modern-cpp.md)  
   
--   [Objektlebenszeit und Ressourcenverwaltung](../cpp/object-lifetime-and-resource-management-modern-cpp.md)  
+-   [Objects Own Resources (RAII)](../cpp/objects-own-resources-raii.md)  
   
--   [Objekteigene Ressourcen \(RAII\)](../cpp/objects-own-resources-raii.md)  
+-   [Smart Pointers](../cpp/smart-pointers-modern-cpp.md)  
   
--   [Intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md)  
+-   [Pimpl For Compile-Time Encapsulation](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)  
   
--   [pimpl für Compilierungszeitkapselung](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)  
+-   [Containers](../cpp/containers-modern-cpp.md)  
   
--   [Container](../cpp/containers-modern-cpp.md)  
+-   [Algorithms](../cpp/algorithms-modern-cpp.md)  
   
--   [Algorithmen](../cpp/algorithms-modern-cpp.md)  
+-   [String and I/O Formatting (Modern C++)](../cpp/string-and-i-o-formatting-modern-cpp.md)  
   
--   [Formatieren von Zeichenfolgen und Ein\-\/Ausgaben](../cpp/string-and-i-o-formatting-modern-cpp.md)  
+-   [Errors and Exception Handling](../cpp/errors-and-exception-handling-modern-cpp.md)  
   
--   [Behandeln von Fehlern und Ausnahmen](../cpp/errors-and-exception-handling-modern-cpp.md)  
+-   [Portability At ABI Boundaries](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
--   [Portabilität an ABI\-Grenzen](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
+ For more information, see the StackOverflow article [what C++ idioms are deprecated in C++11](http://go.microsoft.com/fwlink/?LinkId=402836)  
   
- Weitere Informationen finden Sie im StackOverflow\-Artikel [Welche C\+\+\-Idiome in C\+\+11 veraltet sind](http://go.microsoft.com/fwlink/?LinkId=402836)  
-  
-## Siehe auch  
- [C\+\+\-Sprachreferenz](../cpp/cpp-language-reference.md)   
- [Lambda\-Ausdrücke](../cpp/lambda-expressions-in-cpp.md)   
- [C\+\+\-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [Lambda Expressions](../cpp/lambda-expressions-in-cpp.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)  
+ [Visual C++ language conformance](../visual-cpp-language-conformance.md)  
+

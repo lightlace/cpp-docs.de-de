@@ -1,124 +1,141 @@
 ---
-title: "Intelligente Zeiger (Modern C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Smart Pointers (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
 caps.latest.revision: 26
-caps.handback.revision: "26"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Intelligente Zeiger (Modern C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 6b25a9c39f09aef0958c475b663151b97285a6fb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/11/2017
 
-In der modernen C\+\+\-Programmierung enthält die Standardbibliothek *intelligente Zeiger*, die sicherstellen sollen, dass Programme ausnahmensicher und frei von Speicher\- und Ressourcenlecks sind.  
+---
+# <a name="smart-pointers-modern-c"></a>Smart Pointers (Modern C++)
+In modern C++ programming, the Standard Library includes *smart pointers*, which are used to help ensure that programs are free of memory and resource leaks and are exception-safe.  
   
-## Anwendungsmöglichkeiten für intelligente Zeiger  
- Intelligente Zeiger werden im `std`\-Namespace in der [\<memory\>](../standard-library/memory.md)\-Headerdatei definiert.  Sie sind für die Programmiertechnik [RAII](../cpp/objects-own-resources-raii.md) oder *Resource Acquisition Is Initialialization* \(Ressourcenbelegung ist Initialisierung\) entscheidend.  Das wichtigste Ziel dieses Technik ist sicherzustellen, dass die Ressourcenerfassung zur gleichen Zeit erfolgt wie die Initialisierung des Objekts, damit alle Ressourcen für das Objekt in einer Codezeile erstellt und vorbereitet werden können.  Praktisch ist es das Hauptprinzip von RAII, die Verfügung über jede auf dem Heap zugeordnete Ressource \(beispielsweise dynamisch zugeordneter Arbeitsspeicher oder Systemobjekthandles\) einem auf dem Stapel zugeordneten Objekt zu übertragen, dessen Destruktor sowohl den Code enthält, um die Ressource zu löschen oder freizugeben, als auch jeden zugehörigen Bereinigungscode.  
+## <a name="uses-for-smart-pointers"></a>Uses for smart pointers  
+ Smart pointers are defined in the `std` namespace in the [\<memory>](../standard-library/memory.md) header file. They are crucial to the [RAII](../cpp/objects-own-resources-raii.md) or *Resource Acquisition Is Initialialization* programming idiom. The main goal of this idiom is to ensure that resource acquisition occurs at the same time that the object is initialized, so that all resources for the object are created and made ready in one line of code. In practical terms, the main principle of RAII is to give ownership of any heap-allocated resource—for example, dynamically-allocated memory or system object handles—to a stack-allocated object whose destructor contains the code to delete or free the resource and also any associated cleanup code.  
   
- Wenn Sie einen Rohzeiger oder ein Ressourcenhandle für eine aktuelle Ressource initialisieren, sollten Sie den Zeiger in den meisten Fällen sofort einem intelligenten Zeiger zuweisen.  In modernem C\+\+ werden Rohzeiger nur in kleinen Codeblöcken mit begrenztem Gültigkeitsbereich, in Schleifen oder Hilfsfunktionen verwendet, in denen Leistung ausschlaggebend ist und keine Verwirrung über den Besitzer entstehen kann.  
+ In most cases, when you initialize a raw pointer or resource handle to point to an actual resource, pass the pointer to a smart pointer immediately. In modern C++, raw pointers are only used in small code blocks of limited scope, loops, or helper functions where performance is critical and there is no chance of confusion about ownership.  
   
- Im folgenden Beispiel wird die Deklaration eines Rohzeigers mit der eines intelligenten Zeigers verglichen.  
+ The following example compares a raw pointer declaration to a smart pointer declaration.  
   
- [!CODE [smart_pointers_intro#1](../CodeSnippet/VS_Snippets_Cpp/smart_pointers_intro#1)]  
+ [!code-cpp[smart_pointers_intro#1](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_1.cpp)]  
   
- Wie im Beispiel gezeigt, ist ein intelligenter Zeiger eine Klassenvorlage, die auf dem Stapel deklariert wird. Die Initialisierung erfolgt mit einem Rohzeiger auf ein auf dem Stapel zugeordnetes Objekt.  Nachdem der intelligente Zeiger initialisiert wurde, besitzt er den Rohzeiger.  Dies bedeutet, dass der intelligente Zeiger für das Löschen des Arbeitsspeichers zuständig ist, den der Rohzeiger angibt.  Der Destruktor des intelligenten Zeigers enthält den Aufruf zum Löschen, und weil der intelligente Zeiger auf dem Stapel deklariert wurde, wird sein Destruktor aufgerufen, sobald der intelligente Zeiger ungültig wird, auch wenn eine Ausnahme irgendwo weiter oben im Stapel ausgelöst wird.  
+ As shown in the example, a smart pointer is a class template that you declare on the stack, and initialize by using a raw pointer that points to a heap-allocated object. After the smart pointer is initialized, it owns the raw pointer. This means that the smart pointer is responsible for deleting the memory that the raw pointer specifies. The smart pointer destructor contains the call to delete, and because the smart pointer is declared on the stack, its destructor is invoked when the smart pointer goes out of scope, even if an exception is thrown somewhere further up the stack.  
   
- Greifen Sie auf den gekapselten Zeiger mit den vertrauten Zeigeroperatoren `->` und `*` zu, die von der Klasse des intelligenten Zeigers so überladen werden, dass der gekapselte Rohzeiger zurückgegeben wird.  
+ Access the encapsulated pointer by using the familiar pointer operators, `->` and `*`, which the smart pointer class overloads to return the encapsulated raw pointer.  
   
- Die Wirkungsweise eines intelligenten C\+\+\-Zeigers ähnelt dem Vorgehen bei der Objekterstellung in Sprachen wie C\#: Sie erstellen das Objekt und überlassen es dann dem System, das Objekt zur richtigen Zeit zu löschen.  Der Unterschied besteht darin, dass im Hintergrund keine separate Speicherbereinigung ausgeführt wird – der Arbeitsspeicher wird durch die C\+\+\-Standardregeln für den Gültigkeitsbereich verwaltet, sodass die Laufzeitumgebung schneller und effizienter ist.  
+ The C++ smart pointer idiom resembles object creation in languages such as C#: you create the object and then let the system take care of deleting it at the correct time. The difference is that no separate garbage collector runs in the background; memory is managed through the standard C++ scoping rules so that the runtime environment is faster and more efficient.  
   
 > [!IMPORTANT]
->  Erstellen Sie intelligente Zeiger immer in einer eigenen Codezeile und nie in einer Parameterliste, damit aufgrund bestimmter Speicherbelegungsregeln für Parameterlisten kein kleines Ressourcenleck auftritt.  
+>  Always create smart pointers on a separate line of code, never in a parameter list, so that a subtle resource leak won't occur due to certain parameter list allocation rules.  
   
- Im folgenden Beispiel wird gezeigt, wie ein intelligenter Zeiger vom Typ `unique_ptr` aus der Standardvorlagenbibliothek verwendet werden kann, um einen Zeiger auf ein großes Objekt zu kapseln.  
+ The following example shows how a `unique_ptr` smart pointer type from the C++ Standard Library could be used to encapsulate a pointer to a large object.  
   
- [!CODE [smart_pointers_intro#2](../CodeSnippet/VS_Snippets_Cpp/smart_pointers_intro#2)]  
+ [!code-cpp[smart_pointers_intro#2](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_2.cpp)]  
   
- Dieses Beispiel verdeutlicht die folgenden wesentlichen Schritte für die Verwendung von intelligenten Zeigern.  
+ The example demonstrates the following essential steps for using smart pointers.  
   
-1.  Deklarieren Sie den intelligenten Zeiger als automatische \(lokale\) Variable. \(Verwenden Sie für den intelligenten Zeiger selbst nicht den Ausdruck `new` oder `malloc`.\)  
+1.  Declare the smart pointer as an automatic (local) variable. (Do not use the `new` or `malloc` expression on the smart pointer itself.)  
   
-2.  Als Typparameter geben Sie den Typ an, auf den der gekapselte Zeiger zeigt.  
+2.  In the type parameter, specify the pointed-to type of the encapsulated pointer.  
   
-3.  Übergeben Sie einen Rohzeiger auf ein als `new` deklariertes Objekt im Konstruktor des intelligenten Zeigers. \(Einige Hilfsfunktionen oder Konstruktoren für intelligente Zeiger übernehmen das für Sie.\)  
+3.  Pass a raw pointer to a `new`-ed object in the smart pointer constructor. (Some utility functions or smart pointer constructors do this for you.)  
   
-4.  Verwenden Sie die überladenen Operatoren `->` und `*` für den Zugriff auf das Objekt.  
+4.  Use the overloaded `->` and `*` operators to access the object.  
   
-5.  Lassen Sie den intelligenten Zeiger das Objekt löschen.  
+5.  Let the smart pointer delete the object.  
   
- Intelligente Zeiger sind dafür konzipiert, im Hinblick auf Leistung und Arbeitsspeicher so effizient wie möglich sein.  Beispielsweise ist der einzige Datenmember in `unique_ptr` der gekapselte Zeiger.  Dies bedeutet, dass `unique_ptr` genau die gleiche Größe hat wie dieser Zeiger, entweder vier oder acht Bytes.  Der Zugriff auf gekapselte Zeiger mithilfe der überladenen Methoden \* und \-\> des intelligenten Zeigers ist nicht wesentlich langsamer als der direkte Zugriff auf Rohzeiger.  
+ Smart pointers are designed to be as efficient as possible both in terms of memory and performance. For example, the only data member in `unique_ptr` is the encapsulated pointer. This means that `unique_ptr` is exactly the same size as that pointer, either four bytes or eight bytes. Accessing the encapsulated pointer by using the smart pointer overloaded * and -> operators is not significantly slower than accessing the raw pointers directly.  
   
- Intelligente Zeiger verfügen über eigene Memberfunktionen, auf die mithilfe der Punktnotation zugegriffen wird.  Beispielsweise verfügen einige intelligente Zeiger der STL über eine Rücksetzungsmemberfunktion, die den Besitz des Zeigers freigibt.  Dies ist hilfreich, wenn Sie den Arbeitsspeicher des intelligenten Zeigers freigeben möchten, bevor dieser ungültig wird, wie im folgenden Beispiel gezeigt.  
+ Smart pointers have their own member functions, which are accessed by using “dot” notation. For example, some C++ Standard Library smart pointers have a reset member function that releases ownership of the pointer. This is useful when you want to free the memory owned by the smart pointer before the smart pointer goes out of scope, as shown in the following example.  
   
- [!CODE [smart_pointers_intro#3](../CodeSnippet/VS_Snippets_Cpp/smart_pointers_intro#3)]  
+ [!code-cpp[smart_pointers_intro#3](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_3.cpp)]  
   
- Intelligente Zeiger stellen normalerweise eine Möglichkeit für den direkten Zugriff auf ihre Rohzeiger bereit.  Intelligente Zeiger der STL verfügen zu diesem Zweck über eine `get`\-Memberfunktion, und `CComPtr` besitzt einen öffentlichen `p`\-Klassenmember.  Wenn Sie direkten Zugriff auf den zugrunde liegende Zeiger bereitstellen, können Sie den intelligenten Zeiger verwenden, um Arbeitsspeicher in Ihrem eigenen Code zu verwalten, und Sie können den Rohzeiger weiterhin an Code übergeben, der keine intelligenten Zeiger unterstützt.  
+ Smart pointers usually provide a way to access their  raw pointer directly. C++ Standard Library smart pointers have a `get` member function for this purpose, and `CComPtr` has a public `p` class member. By providing direct access to the underlying pointer, you can use the smart pointer to manage memory in your own code and still pass the raw pointer to code that does not support smart pointers.  
   
- [!CODE [smart_pointers_intro#4](../CodeSnippet/VS_Snippets_Cpp/smart_pointers_intro#4)]  
+ [!code-cpp[smart_pointers_intro#4](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_4.cpp)]  
   
-## Arten von intelligenten Zeigern  
- Im folgenden Abschnitt werden die in der Windows\-Programmierumgebung verfügbaren verschiedenen Arten von intelligenten Zeigern aufgeführt, und es wird beschrieben, wann sie zu verwenden sind.  
+## <a name="kinds-of-smart-pointers"></a>Kinds of Smart Pointers  
+ The following section summarizes the different kinds of smart pointers that are available in the Windows programming environment and describes when to use them.  
   
- **Intelligente Zeiger der C\+\+\-Standardbibliothek**  
- Verwenden Sie vorrangig diese intelligenten Zeiger zum Kapseln von Zeigern auf einfache alte C\+\+\-Objekte \(Plain Old CLR Objects, POCOs\).  
+ **C++ Standard Library Smart Pointers**  
+ Use these smart pointers as a first choice for encapsulating pointers to plain old C++ objects (POCO).  
   
--   `unique_ptr`    
-    Ermöglicht genau einen Besitzer für den zugrunde liegenden Zeiger.  Verwenden Sie diesen Zeiger als Standardwahl für POCOs, es sei denn, Sie sind sicher, dass Sie einen `shared_ptr` benötigen.  Kann zu einem neuen Besitzer verschoben werden, kann aber nicht kopiert oder freigegeben werden.  Ersetzt `auto_ptr`, der veraltet ist.  Ist vergleichbar mit `boost::scoped_ptr`.  `unique_ptr` ist klein und effizient; die Größe ist ein Zeiger; rvalue\-Referenzen für schnelles Einfügen und Abrufen in STL\-Auflistungen werden unterstützt.  Headerdatei: `<memory>`.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen und Verwenden von unique\_ptr\-Instanzen](../cpp/how-to-create-and-use-unique-ptr-instances.md) und [unique\_ptr\-Klasse](../standard-library/unique-ptr-class.md).  
+-   `unique_ptr`   
+     Allows exactly one owner of the underlying pointer. Use as the default choice for POCO unless you know for certain that you require a `shared_ptr`. Can be moved to a new owner, but not copied or shared. Replaces `auto_ptr`, which is deprecated. Compare to `boost::scoped_ptr`. `unique_ptr` is small and efficient; the size is one pointer and it supports rvalue references for fast insertion and retrieval from C++ Standard Library collections. Header file: `<memory>`. For more information, see [How to: Create and Use unique_ptr Instances](../cpp/how-to-create-and-use-unique-ptr-instances.md) and [unique_ptr Class](../standard-library/unique-ptr-class.md).  
   
--   `shared_ptr`    
-    Intelligenter Zeiger mit Referenzzählung.  Verwenden Sie diesen Zeiger, wenn Sie mehreren Besitzern einen Rohzeiger zuweisen möchten. Beispiel: Sie geben eine Kopie eines Zeigers von einem Container zurück, möchten aber das Original behalten.  Der Rohzeiger wird erst gelöscht, wenn alle `shared_ptr`\-Besitzer den Gültigkeitsbereich verlassen haben oder auf andere Weise nicht mehr Besitzer sind.  Die Größe beträgt zwei Zeiger; einen für das Objekt und einen für den freigegebenen Kontrollblock, der den Referenzzähler enthält.  Headerdatei: `<memory>`.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen und Verwenden von shared\_ptr\-Instanzen](../cpp/how-to-create-and-use-shared-ptr-instances.md) und [shared\_ptr\-Klasse](../standard-library/shared-ptr-class.md).  
+-   `shared_ptr`   
+     Reference-counted smart pointer. Use when you want to assign one raw pointer to multiple owners, for example, when you return a copy of a pointer from a container but want to keep the original. The raw pointer is not deleted until all `shared_ptr` owners have gone out of scope or have otherwise given up ownership. The size is two pointers; one for the object and one for the shared control block that contains the reference count. Header file: `<memory>`. For more information, see [How to: Create and Use shared_ptr Instances](../cpp/how-to-create-and-use-shared-ptr-instances.md) and [shared_ptr Class](../standard-library/shared-ptr-class.md).  
   
--   `weak_ptr`    
-    Spezielle intelligente Zeiger in Verbindung mit `shared_ptr`.  Ein `weak_ptr` ermöglicht den Zugriff auf ein Objekt, das einer oder mehreren `shared_ptr`\-Instanzen gehört, ist aber nicht an der Referenzzählung beteiligt ist.  Verwenden Sie diesen Zeiger, wenn Sie ein Objekt beobachten möchten, dieses aber nicht gültig bleiben muss.  Ist in einigen Fällen erforderlich, um Zirkelverweise zwischen `shared_ptr`\-Instanzen zu unterbrechen.  Headerdatei: `<memory>`.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen und Verwenden von weak\_ptr\-Instanzen](../cpp/how-to-create-and-use-weak-ptr-instances.md) und [weak\_ptr\-Klasse](../standard-library/weak-ptr-class.md).  
+-   `weak_ptr`   
+    Special-case smart pointer for use in conjunction with `shared_ptr`. A `weak_ptr` provides access to an object that is owned by one or more `shared_ptr` instances, but does not participate in reference counting. Use when you want to observe an object, but do not require it to remain alive. Required in some cases to break circular references between `shared_ptr` instances. Header file: `<memory>`. For more information, see [How to: Create and Use weak_ptr Instances](../cpp/how-to-create-and-use-weak-ptr-instances.md) and [weak_ptr Class](../standard-library/weak-ptr-class.md).  
   
- **Intelligente Zeiger für COM\-Objekte \(klassische Windows\-Programmierung\)**  
- Wenn Sie mit COM\-Objekten arbeiten, sollten Sie Schnittstellenzeiger mit einem geeigneten Typ eines intelligenten Zeigers kapseln.  Die ATL \(Active Template Library\) definiert mehrere intelligente Zeiger für verschiedene Zwecke.  Sie können auch den Typ `_com_ptr_t` eines intelligenten Zeigers verwenden, den der Compiler einsetzt, wenn er Wrapperklassen von .tlb\-Dateien erstellt.  Er ist die beste Wahl, wenn Sie die ATL\-Headerdateien nicht einschließen möchten.  
+ **Smart Pointers for COM Objects (Classic Windows Programming)**  
+ When you work with COM objects, wrap the interface pointers in an appropriate smart pointer type. The Active Template Library (ATL) defines several smart pointers for various purposes. You can also use the `_com_ptr_t` smart pointer type, which the compiler uses when it creates wrapper classes from .tlb files. It's the best choice when you do not want to include the ATL header files.  
   
  [CComPtr Class](../atl/reference/ccomptr-class.md)  
- Verwenden Sie diesen, sofern Sie ATL nicht verwenden können.  Führt Referenzzählung mithilfe der Methoden `AddRef` und `Release` aus.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen und Verwenden von CComPtr\- und CComQIPtr\-Instanzen](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
+ Use this unless you cannot use ATL. Performs reference counting by using the `AddRef` and `Release` methods. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComQIPtr Class](../atl/reference/ccomqiptr-class.md)  
- Ähnelt `CComPtr`, stellt jedoch zusätzlich vereinfachte Syntax zum Aufrufen von `QueryInterface` in COM\-Objekten bereit.  Weitere Informationen finden Sie unter [Gewusst wie: Erstellen und Verwenden von CComPtr\- und CComQIPtr\-Instanzen](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
+ Resembles `CComPtr` but also provides simplified syntax for calling `QueryInterface` on COM objects. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComHeapPtr Class](../atl/reference/ccomheapptr-class.md)  
- Intelligenter Zeiger auf Objekte, die `CoTaskMemFree` verwenden, um Arbeitsspeicher freizugeben.  
+ Smart pointer to objects that use `CoTaskMemFree` to free memory.  
   
  [CComGITPtr Class](../atl/reference/ccomgitptr-class.md)  
- Intelligenter Zeiger für Schnittstellen, die aus der globalen Schnittstellentabelle \(Global Interface Table, GIT\) abgerufen werden.  
+ Smart pointer for interfaces that are obtained from the global interface table (GIT).  
   
- [\_com\_ptr\_t\-Klasse](../cpp/com-ptr-t-class.md)  
- Ähnelt `CComQIPtr` bezüglich der Funktionalität, ist jedoch nicht von ATL\-Headern abhängig.  
+ [_com_ptr_t Class](../cpp/com-ptr-t-class.md)  
+ Resembles `CComQIPtr` in functionality but does not depend on ATL headers.  
   
- **Intelligente Zeiger der ATL für POCO\-Objekte**  
- Zusätzlich zu den intelligenten Zeigern für COM\-Objekte definiert ATL auch intelligente Zeiger sowie Auflistungen von intelligenten Zeigern für einfache alte C\+\+\-Objekte.  In der klassischen Windows\-Programmierung sind diese Typen nützliche Alternativen zu den STL\-Auflistungen, insbesondere wenn Codeportabilität nicht erforderlich ist, oder wenn Sie die Programmiermodelle von STL und ATL nicht kombinieren möchten.  
+ **ATL Smart Pointers for POCO Objects**  
+ In addition to smart pointers for COM objects, ATL also defines smart pointers, and collections of smart pointers, for plain old C++ objects. In classic Windows programming, these types are useful alternatives to the C++ Standard Library collections, especially when code portability is not required or when you do not want to mix the programming models of the C++ Standard Library and ATL.  
   
  [CAutoPtr Class](../atl/reference/cautoptr-class.md)  
- Intelligenter Zeiger, der eindeutigen Besitz erzwingt, indem er den Besitz auf die Kopie überträgt.  Vergleichbar mit der veralteten `std::auto_ptr`\-Klasse.  
+ Smart pointer that enforces unique ownership by transferring ownership on copy. Comparable to the deprecated `std::auto_ptr` Class.  
   
  [CHeapPtr Class](../atl/reference/cheapptr-class.md)  
- Intelligenter Zeiger für Objekte, die mit der C\-Funktion [malloc](../c-runtime-library/reference/malloc.md) zugeordnet werden.  
+ Smart pointer for objects that are allocated by using the C [malloc](../c-runtime-library/reference/malloc.md) function.  
   
  [CAutoVectorPtr Class](../atl/reference/cautovectorptr-class.md)  
- Intelligenter Zeiger für Arrays, die mit `new[]` zugeordnet werden.  
+ Smart pointer for arrays that are allocated by using `new[]`.  
   
  [CAutoPtrArray Class](../atl/reference/cautoptrarray-class.md)  
- Klasse, die ein Array mit `CAutoPtr`\-Elementen kapselt.  
+ Class that encapsulates an array of `CAutoPtr` elements.  
   
  [CAutoPtrList Class](../atl/reference/cautoptrlist-class.md)  
- Klasse, die Methoden zum Bearbeiten einer Liste von `CAutoPtr`\-Knoten kapselt.  
+ Class that encapsulates methods for manipulating a list of `CAutoPtr` nodes.  
   
-## Siehe auch  
- [Willkommen zurück bei C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C\+\+\-Sprachreferenz](../cpp/cpp-language-reference.md)   
- [C\+\+\-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)   
- [\(NOTINBUILD\)Overview: Memory Management in C\+\+](assetId:///2201885d-3d91-4a6e-aaa6-7a554e0362a8)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)   
+

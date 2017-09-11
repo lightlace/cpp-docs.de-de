@@ -1,40 +1,56 @@
 ---
-title: "pimpl f&#252;r Compilierungszeitkapselung (Modern C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Pimpl For Compile-Time Encapsulation (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
 caps.latest.revision: 11
-caps.handback.revision: "11"
-ms.author: "mblome"
-manager: "ghogen"
----
-# pimpl f&#252;r Compilierungszeitkapselung (Modern C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0982df3552bd97cbaecf754afd6d442749745412
+ms.contentlocale: de-de
+ms.lasthandoff: 09/11/2017
 
-Das *pimpl Vorgehensweise* ist eine moderne C\+\+\-Technik, Implementierung, auszublenden Kopplung zu minimieren und Schnittstellen zu trennen.  Pimpl ist unmittelbar für "Zeiger der Implementierung." Sie bereits mit dem Konzept vertraut sein jedoch kennen kann es durch andere Namen wie Cheshire\-Katzen\- oder \-Compiler\-Firewallidiom.  
+---
+# <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl For Compile-Time Encapsulation (Modern C++)
+The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.  
   
-## Warum Verwendung pimpl?  
- Im Folgenden wird gezeigt, wie das pimpl Vorgehensweise den Lebenszyklus der Softwareentwicklung verbessern kann:  
+## <a name="why-use-pimpl"></a>Why use pimpl?  
+ Here's how the pimpl idiom can improve the software development lifecycle:  
   
--   Reduzierung von Kompilierungsabhängigkeiten.  
+-   Minimization of compilation dependencies.  
   
--   Trennung der Schnittstelle und der Implementierung.  
+-   Separation of interface and implementation.  
   
--   Portabilität.  
+-   Portability.  
   
-## Pimpl\-Kopfzeile  
+## <a name="pimpl-header"></a>Pimpl header  
   
 ```cpp  
-  
 // my_class.h  
 class my_class {  
    //  ... all public and protected stuff goes here ...  
@@ -44,13 +60,12 @@ private:
   
 ```  
   
- Das pimpl Vorgehensweise vermeidet Wiederaufbauenkaskaden und spröde Objektlayouts.  Es ist für \(transitiv\) von Typen gut geeignet.  
+ The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.  
   
-## Pimpl\-Implementierung  
- Definieren Sie die `impl`\-Klasse in die CPP\-Datei.  
+## <a name="pimpl-implementation"></a>Pimpl implementation  
+ Define the `impl` class in the .cpp file.  
   
 ```cpp  
-  
 // my_class.cpp  
 class my_class::impl {  // defined privately here  
   // ... all private data and functions: all of these  
@@ -62,10 +77,10 @@ my_class::my_class(): pimpl( new impl )
 }  
 ```  
   
-## Bewährte Methoden  
- Überlegen Sie, ob nicht\-auslösende Unterstützung für Austauschspezialisierung hinzufügt.  
+## <a name="best-practices"></a>Best practices  
+ Consider whether to add support for non-throwing swap specialization.  
   
-## Siehe auch  
- [Willkommen zurück bei C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C\+\+\-Sprachreferenz](../cpp/cpp-language-reference.md)   
- [C\+\+\-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

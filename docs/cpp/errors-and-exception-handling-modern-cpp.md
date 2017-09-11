@@ -1,43 +1,59 @@
 ---
-title: "Behandeln von Fehlern und Ausnahmen (Modern C++)"
-ms.custom: na
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Errors and Exception Handling (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
 caps.latest.revision: 19
-caps.handback.revision: "19"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Behandeln von Fehlern und Ausnahmen (Modern C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 4f2e5173d1179e404cfbe13a19bf84d1ac5a865c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/11/2017
 
-In modernem C++ ist in den meisten Szenarien die Verwendung von Ausnahmen die bevorzugte Methode zum Mitteilen und Behandeln von logischen Fehlern und Laufzeitfehler. Dies gilt besonders, wenn der Stapel möglicherweise einige Funktionsaufrufe zwischen der Funktion enthält, die den Fehler entdeckt, und der Funktion, die über den Kontext für die Fehlerbehandlung verfügt. Ausnahmen stellen eine formale, gut definierte Methode für den Code bereit, der Fehler erkennt, um die Informationen an die Aufrufliste (call stack) zu übergeben.  
+---
+# <a name="errors-and-exception-handling-modern-c"></a>Errors and Exception Handling (Modern C++)
+In modern C++, in most scenarios, the preferred way to report and handle both logic errors and runtime errors is to use exceptions. This is especially true when the stack might contain several function calls between the function that detects the error and the function that has the context to know how to handle it. Exceptions provide a formal, well-defined way for code that detects errors to pass the information up the call stack.  
   
- Programmfehler werden in zwei Kategorien unterteilt: Logische Fehler, die auf Programmierfehlern beruhen, wie beispielsweise der Fehler "Index außerhalb des gültigen Bereichs", und Laufzeitfehler, die nicht der Kontrolle des Programmierers unterliegen, wie beispielsweise der Fehler "Netzwerk nicht verfügbar". In der C-Programmierung sowie in COM erfolgt die Benachrichtigung über Fehler entweder durch Rückgabe eines Werts, der einen Fehlercode oder einen Statuscode für eine bestimmte Funktion darstellt, oder durch Festlegung einer globalen Variablen, die der Aufrufer nach jedem Funktionsaufruf abrufen kann, um festzustellen, ob Fehler gemeldet wurden. Beispielsweise wird in der COM-Programmierung der HRESULT-Rückgabewert verwendet, um dem Aufrufer einen Fehler mitzuteilen, und die Win32-API enthält die GetLastError-Funktion, die den letzten Fehler abrufen kann, der von der Aufrufliste gemeldet wurde. In beiden Fällen liegt es beim Aufrufer, den Code zu erkennen und darauf entsprechend zu reagieren. Wenn der Aufrufer den Fehlercode nicht explizit behandelt, kann das Programm ohne Warnung abstürzen, oder es wird mit ungültigen Daten fortgesetzt und produziert falsche Ergebnisse.  
+ Program errors are generally divided into two categories: logic errors that are caused by programming mistakes, for example, an "index out of range" error, and runtime errors that are beyond the control of programmer, for example, a "network service unavailable" error. In C-style programming and in COM, error reporting is managed either by returning a value that represents an error code or a status code for a particular function, or by setting a global variable that the caller may optionally retrieve after every function call to see whether errors were reported. For example, COM programming uses the HRESULT return value to communicate errors to the caller, and the Win32 API has the GetLastError function to retrieve the last error that was reported by the call stack. In both of these cases, it's up to the caller to recognize the code and respond to it appropriately. If the caller doesn't explicitly handle the error code, the program might crash without warning, or continue to execute with bad data and produce incorrect results.  
   
- Ausnahmen werden in modernem C++ aus folgenden Gründen verwendet:  
+ Exceptions are preferred in modern C++ for the following reasons:  
   
--   Eine Ausnahme erzwingt, dass der aufrufende Code eine Fehlerbedingung erkennt und behandelt. Nicht behandelte Ausnahmen beenden die Programmausführung.  
+-   An exception forces calling code to recognize an error condition and handle it. Unhandled exceptions stop program execution.  
   
--   Einer Ausnahme springt zu der Position in der Aufrufliste, an welcher der Fehler behandelt werden kann. Zwischenfunktionen können die Ausnahme weitergeben. Sie müssen nicht für die Koordination mit anderen Ebenen sorgen.  
+-   An exception jumps to the point in the call stack that can handle the error. Intermediate functions can let the exception propagate. They do not have to coordinate with other layers.  
   
--   Nachdem eine Ausnahme ausgelöst wurde, zerstört der Entlademechanismus für den Ausnahmenstapel alle Objekte im Gültigkeitsbereich nach genau definierten Regeln.  
+-   The exception stack-unwinding mechanism destroys all objects in scope according to well-defined rules after an exception is thrown.  
   
--   Eine Ausnahme ermöglicht die saubere Trennung zwischen dem Code, der den Fehler erkennt, und dem Code, der den Fehler behandelt.  
+-   An exception enables a clean separation between the code that detects the error and the code that handles the error.  
   
- Das folgende vereinfachende Beispiel zeigt die notwendige Syntax zum Auslösen und Abfangen von Ausnahmen in C++.  
+ The following simplified example shows the necessary syntax for throwing and catching exceptions in C++.  
   
 ```cpp  
-  
 #include <stdexcept>  
 #include <limits>  
 #include <iostream>  
@@ -72,41 +88,42 @@ int main()
   
 ```  
   
- Ausnahmen in C++ ähneln denen in Sprachen wie C# und Java. In der `try` zu blockieren, wenn eine Ausnahme ist *ausgelöst* werden *abgefangen* vom ersten zugehörigen `catch` Block, dessen Typ, der der Ausnahme entspricht. Das heißt, die Ausführung springt von der `throw`-Anweisung zur `catch`-Anweisung. Ist kein verwendbarer catch-Block vorhanden, wird `std::terminate` aufgerufen und das Programm beendet. In C++ kann jeder Typ ausgelöst werden. Es wird jedoch empfohlen, einen Typ auslösen, der direkt oder indirekt von `std::exception` abgeleitet ist. Im vorherigen Beispiel der Ausnahmetyp [Invalid_argument](../standard-library/invalid-argument-class.md), ist in der Standardbibliothek in definiert die [\< Stdexcept>](../standard-library/stdexcept.md) -Headerdatei. C++ kennt und benötigt keinen `finally`-Block, um sicherzustellen, dass alle Ressourcen freigegeben werden, wenn eine Ausnahme ausgelöst wird. Die RAII-Technik (Resource Acquisition Is Initialization, Ressourcenbelegung ist Initialisierung), die intelligente Zeiger verwendet, bietet die erforderliche Funktionalität zur Ressourcenbereinigung. Weitere Informationen finden Sie unter [wie: Entwurf für die Ausnahmesicherheit](../cpp/how-to-design-for-exception-safety.md). Informationen über die C++-stapelentlademechanismus finden Sie unter [Ausnahmen und Stapel entladen](../cpp/exceptions-and-stack-unwinding-in-cpp.md).  
+ Exceptions in C++ resemble those in languages such as C# and Java. In the `try` block, if an exception is *thrown* it will be *caught* by the first associated `catch` block whose type matches that of the exception. In other words, execution jumps from the `throw` statement to the `catch` statement. If no usable catch block is found, `std::terminate` is invoked and the program exits. In C++, any type may be thrown; however, we recommend that you throw a type that derives directly or indirectly from `std::exception`. In the previous example, the exception type, [invalid_argument](../standard-library/invalid-argument-class.md), is defined in the standard library in the [\<stdexcept>](../standard-library/stdexcept.md) header file. C++ does not provide, and does not require, a `finally` block to make sure that all resources are released if an exception is thrown. The resource acquisition is initialization (RAII) idiom, which uses smart pointers, provides the required functionality for resource cleanup. For more information, see [How to: Design for Exception Safety](../cpp/how-to-design-for-exception-safety.md). For information about the C++ stack-unwinding mechanism, see [Exceptions and Stack Unwinding](../cpp/exceptions-and-stack-unwinding-in-cpp.md).  
   
-## <a name="basic-guidelines"></a>Grundlegende Richtlinien  
- Stabile Fehlerbehandlung ist in jeder Programmiersprache schwierig. Obwohl Ausnahmen etliche Features bereitstellen, die gute Fehlerbehandlung unterstützen, können sie Ihnen nicht die gesamte Arbeit abnehmen. Um die Vorteile des Ausnahmemechanismus auszuschöpfen, sollten Sie Ausnahmen bei der Entwicklung Ihres Codes einplanen.  
+## <a name="basic-guidelines"></a>Basic guidelines  
+ Robust error handling is challenging in any programming language. Although exceptions provide several features that support good error handling, they can't do all the work for you. To realize the benefits of the exception mechanism, keep exceptions in mind as you design your code.  
   
--   Verwenden Sie Assertionen, um Fehler zu verhindern, die nie auftreten sollten. Verwenden Sie Ausnahmen, um Fehler abzufangen, die beispielsweise bei der Eingabevalidierung oder in Parametern von öffentlichen Funktionen auftreten können. Weitere Informationen finden Sie im Abschnitt **Ausnahmen im Vergleich. Assertionen**.  
+-   Use asserts to check for errors that should never occur. Use exceptions to check for errors that might occur, for example, errors in input validation on parameters of public functions. For more information, see the section titled **Exceptions vs. Assertions**.  
   
--   Verwenden Sie Ausnahmen, wenn der Code, der den Fehler behandelt, durch einen oder mehrere eingeschobene Funktionsaufrufe von dem Code getrennt ist, der den Fehler erkennt. Erwägen Sie, Fehlercodes statt leistungskritischer Schleifen zu verwenden, wenn der Code, der den Fehler behandelt, eng mit dem Code gekoppelt ist, der den Fehler erkennt. Weitere Informationen darüber, wann Ausnahmen nicht zu verwenden, finden Sie unter [(NOTINBUILD) bei nicht auf Ausnahmen verwenden](assetId:///e810df8b-2217-4e81-bae5-02f0a69f1346).  
+-   Use exceptions when the code that handles the error might be separated from the code that detects the error by one or more intervening function calls. Consider whether to use error codes instead in performance-critical loops when code that handles the error is tightly-coupled to the code that detects it. 
   
--   Für jede Funktion, die eine Ausnahme auslösen oder verteilen kann, sollten Sie eine der drei Ausnahmegarantien bereitstellen: die starke Garantie, die grundlegende Garantie oder die Nothrow (Noexcept)-Garantie. Weitere Informationen finden Sie unter [wie: Entwurf für die Ausnahmesicherheit](../cpp/how-to-design-for-exception-safety.md).  
+-   For every function that might throw or propagate an exception, provide one of the three exception guarantees: the strong guarantee, the basic guarantee, or the nothrow (noexcept) guarantee. For more information, see [How to: Design for Exception Safety](../cpp/how-to-design-for-exception-safety.md).  
   
--   Lösen Sie Ausnahmen per Wert aus, fangen Sie Ausnahmen per Referenz ab. Fangen Sie nicht ab, was Sie nicht behandeln können. Weitere Informationen finden Sie unter [(NOTINBUILD) Richtlinien für das Auslösen und Abfangen von Ausnahmen (C++)](assetId:///0a9b0a3a-64c5-43f5-a080-fca69b89e839).  
+-   Throw exceptions by value, catch them by reference. Don’t catch what you can't handle. 
   
--   Verwenden Sie keine Ausnahmespezifikationen; sie sind seit C++11 veraltet. Weitere Informationen finden Sie im Abschnitt **Ausnahmespezifikationen und Noexcept**.  
+-   Don't use exception specifications, which are deprecated in C++11. For more information, see the section titled **Exception specifications and noexcept**.  
   
--   Verwenden Sie wenn möglich Ausnahmetypen der Standardbibliothek. Leiten Sie benutzerdefinierte Ausnahmetypen aus der [Exception-Klasse](../standard-library/exception-class1.md) Hierarchie. Weitere Informationen finden Sie unter [(NOTINBUILD) Gewusst wie: Verwenden Sie die Standard-Bibliothek Ausnahmeobjekte](assetId:///ad1fb785-ed4e-4d94-8e84-964353aed7b6).  
+-   Use standard library exception types when they apply. Derive custom exception types from the [exception Class](../standard-library/exception-class.md) hierarchy.  
   
--   Lassen Sie Ausnahmen nicht von Destruktoren oder Funktionen zur Speicherfreigabe auslösen.  
+-   Don't allow exceptions to escape from destructors or memory-deallocation functions.  
   
-## <a name="exceptions-and-performance"></a>Ausnahmen und Leistungsfähigkeit  
- Der Ausnahmemechanismus verursacht nur sehr geringe Leistungseinbußen, wenn keine Ausnahme ausgelöst wird. Wenn eine Ausnahme ausgelöst wird, sind die Kosten für Stapeldurchlauf und -Entladung ungefähr mit den Kosten eines Funktionsaufrufs vergleichbar. Zwar sind zusätzliche Datenstrukturen erforderlich, um die Aufrufliste zu durchlaufen, nachdem ein `try`-Block erreicht wurde, und es sind Zusatzbefehle nötig, um den Stapel zu entladen, wenn eine Ausnahme ausgelöst wird. Trotzdem sind in den meisten Szenarien die entsprechenden Leistungseinbußen und der Speicherbedarf nicht signifikant. Die nachteilige Auswirkung von Ausnahmen auf die Leistung ist wahrscheinlich nur auf Systemen mit sehr eingeschränktem Arbeitsspeicher von Bedeutung, oder in leistungskritischen Schleifen, in denen ein Fehler wahrscheinlich wiederkehrend auftritt, und in denen der den Fehler behandelnde Code eng mit dem Code gekoppelt ist, der den Fehler mitteilt. In jedem Fall ist es unmöglich, die Effektivkosten von Ausnahmen ohne Codeprofilierung und Messungen zu ermitteln. Auch in den seltenen Fällen, in denen die Kosten signifikant sind, sollten Sie abwägen, ob diese Kosten nicht die Vorteile rechtfertigen (wie korrekter Code, leichtere Verwaltbarkeit und andere), die von einer gut entworfenen Ausnahmerichtlinie sichergestellt werden.  
+## <a name="exceptions-and-performance"></a>Exceptions and performance  
+ The exception mechanism has a very minimal performance cost if no exception is thrown. If an exception is thrown, the cost of the stack traversal and unwinding is roughly comparable to the cost of a function call. Additional data structures are required to track the call stack after a `try` block is entered, and additional instructions are required to unwind the stack if an exception is thrown. However, in most scenarios, the cost in performance and memory footprint is not significant. The adverse effect of exceptions on performance is likely to be significant only on very memory-constrained systems, or in performance-critical loops where an error is likely to occur regularly and the code to handle it is tightly coupled to the code that reports it. In any case, it's impossible to know the actual cost of exceptions without profiling and measuring. Even in those rare cases when the cost is significant, you can weigh it against the increased correctness, easier maintainability, and other advantages that are provided by a well-designed exception policy.  
   
-## <a name="exceptions-vs-assertions"></a>Ausnahmen und Assertionen  
- Ausnahmen und Assertionen sind zwei verschiedene Mechanismen zum Erkennen von Laufzeitfehlern in einem Programm. Verwenden Sie Assertionen, um während der Entwicklung Bedingungen zu ermitteln, die niemals zutreffen dürfen, wenn der gesamte Code fehlerfrei ist. Es gibt keine Möglichkeit, einen solchen Fehler mit einer Ausnahme zu behandeln, weil der Fehler darauf hinweist, dass etwas im Code behoben werden muss. Der Fehler stellt keine Bedingung dar, die das Programm zur Laufzeit beheben muss. Eine Assertion beendet die Ausführung in der Anweisung, damit Sie den Programmzustand im Debugger überprüfen können. Dagegen setzt eine Ausnahme die Programmausführung bis zum ersten entsprechenden catch-Handler fort. Verwenden Sie Ausnahmen, um Fehlerbedingungen zu überprüfen, die zur Laufzeit auftreten können (beispielsweise "Datei nicht gefunden" oder "Nicht genügend Arbeitsspeicher"), auch wenn der Code korrekt ist. Sie sollten die Programmausführung nach solchen Bedingungen nicht sofort beenden, sondern vorher zumindest noch eine entsprechende Meldung in eine Protokolldatei schreiben. Überprüfen Sie immer Argumente für öffentliche Funktionen mithilfe von Ausnahmen. Auch wenn die Funktion fehlerfrei ist, haben Sie möglicherweise keine vollständige Kontrolle über die Argumente, die ein Benutzer übergibt.  
+## <a name="exceptions-vs-assertions"></a>Exceptions vs. assertions  
+ Exceptions and asserts are two distinct mechanisms for detecting run-time errors in a program. Use asserts to test for conditions during development that should never be true if all your code is correct. There is no point in handling such an error by using an exception because the error indicates that something in the code has to be fixed, and doesn't represent a condition that the program has to recover from at run time. An assert stops execution at the statement so that you can inspect the program state in the debugger; an exception continues execution from the first appropriate catch handler. Use exceptions to check error conditions that might occur at run time even if your code is correct, for example, "file not found" or "out of memory." You might want to recover from these conditions, even if the recovery just outputs a message to a log and ends the program. Always check arguments to public functions by using exceptions. Even if your function is error-free, you might not have complete control over arguments that a user might pass to it.  
   
-## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++-Ausnahmen und Windows SEH-Ausnahmen  
- Sowohl C-Programme als auch C++-Programme können den Mechanismus der strukturierten Ausnahmebehandlung (Structured Exception Handling, SEH) im Windows-Betriebssystem verwenden. Die Konzepte in SEH entsprechen denen für C++-Ausnahmen, außer dass SEH die Konstrukte `__try`, `__except` und `__finally` anstelle von `try` und `catch` verwendet. In Visual C++ werden C++-Ausnahmen für SEH implementiert. Wenn Sie jedoch C++-Code schreiben, verwenden Sie die Syntax für C++-Ausnahmen.  
+## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++ exceptions versus Windows SEH exceptions  
+ Both C and C++ programs can use the structured exception handling (SEH) mechanism in the Windows operating system. The concepts in SEH resemble those in C++ exceptions, except that SEH uses the `__try`, `__except`, and `__finally` constructs instead of `try` and `catch`. In Visual C++, C++ exceptions are implemented for SEH. However, when you write C++ code, use the C++ exception syntax.  
   
- Weitere Informationen zu SEH finden Sie unter [strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md).  
+ For more information about SEH, see [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md).  
   
-## <a name="exception-specifications-and-noexcept"></a>Ausnahmespezifikationen und noexcept  
- Ausnahmespezifikationen wurden in C++ als Möglichkeit eingeführt, um die Ausnahmen festzulegen, die eine Funktion auslösen kann. Ausnahmespezifikationen haben sich in der Praxis jedoch als problematisch herausgestellt und wurden im Normenentwurf C++11 als veraltet gekennzeichnet. Es wird empfohlen, Ausnahmespezifikationen nicht zu verwenden, mit Ausnahme von `throw()`, wodurch angegeben wird, dass keine Ausnahmen ausgelöst werden dürfen. Bei Verwendung der Ausnahmespezifikationen des Typs `throw(`*Typ*`)`, beachten Sie, [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] folgt nicht dem Standard auf bestimmte Weise. Weitere Informationen finden Sie unter [Ausnahmespezifikationen (Throw)](../cpp/exception-specifications-throw-cpp.md). Der Bezeichner `noexcept` wird in C++11 als die bevorzugte Alternative zu `throw()` eingeführt.  
+## <a name="exception-specifications-and-noexcept"></a>Exception specifications and noexcept  
+ Exception specifications were introduced in C++ as a way to specify the exceptions that a function might throw. However, exception specifications proved problematic in practice, and are deprecated in the C++11 draft standard. We recommend that you do not use exception specifications except for `throw()`, which indicates that the function allows no exceptions to escape. If you must use exception specifications of the type `throw(`*type*`)`, be aware that Visual C++ departs from the standard in certain ways. For more information, see [Exception Specifications (throw)](../cpp/exception-specifications-throw-cpp.md). The `noexcept` specifier is introduced in C++11 as the preferred alternative to `throw()`.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Schnittstelle zwischen nicht- Ausnahmen Code](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)   
- [Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C++-Sprachreferenz](../cpp/cpp-language-reference.md)   
- [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [How to: Interface Between Exceptional and Non-Exceptional Code](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)   
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)
+

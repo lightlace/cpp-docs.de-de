@@ -1,50 +1,67 @@
 ---
-title: "Microsoft-spezifische Modifizierer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Microsoft-Specific Modifiers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Microsoft-spezifische Modifizierer
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0aa0480efacfade3dab0f58bc8c558479e875e28
+ms.contentlocale: de-de
+ms.lasthandoff: 09/11/2017
 
-Dieser Abschnitt beschreibt Microsoft\-spezifische Erweiterungen von C\+\+ in den folgenden Bereichen:  
+---
+# <a name="microsoft-specific-modifiers"></a>Microsoft-Specific Modifiers
+This section describes Microsoft-specific extensions to C++ in the following areas:  
   
--   [Basierende Adressierung](../cpp/based-addressing.md), die Vorgehensweise, bei der ein Zeiger als Basis verwendet wird, von der andere Zeiger versetzt werden können  
+-   [Based addressing](../cpp/based-addressing.md), the practice of using a pointer as a base from which other pointers can be offset  
   
--   [Konventionen aufrufende Funktion](../cpp/calling-conventions.md)  
+-   [Function calling conventions](../cpp/calling-conventions.md)  
   
--   Erweiterte Speicherklassen\-Attribute, die mit dem Schlüsselwort [\_\_declspec](../cpp/declspec.md) deklariert wurden  
+-   Extended storage-class attributes declared with the [__declspec](../cpp/declspec.md) keyword  
   
--   Das [\_\_w64](../cpp/w64.md)\-Schlüsselwort  
+-   The [__w64](../cpp/w64.md) keyword  
   
- Viele der Microsoft\-spezifischen Schlüsselwörter können verwendet werden, um Deklaratoren zum Bilden abgeleiteter Typen zu ändern.  Weitere Informationen über Deklaratoren finden Sie unter [Deklaratoren](assetId:///8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
+ Many of the Microsoft-specific keywords can be used to modify declarators to form derived types. For more information about declarators, see [Declarators](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
   
-### Microsoft\-spezifische Schlüsselwörter  
+### <a name="microsoft-specific-keywords"></a>Microsoft-Specific Keywords  
   
-|Schlüsselwort|Bedeutung|Wird verwendet, um abgeleitete Typen zu bilden?|  
-|-------------------|---------------|-----------------------------------------------------|  
-|[\_\_based](../cpp/based-grammar.md)|Der folgende Name deklariert ein 32\-Bit\-Offset zur 32\-Bit\-Basis in der Deklaration.|Ja|  
-|[\_\_cdecl](../cpp/cdecl.md)|Der folgende Name verwendet C\-Benennungs\- und C\-Aufrufkonventionen.|Ja|  
-|[\_\_declspec](../cpp/declspec.md)|Der folgende Name gibt ein Microsoft\-spezifisches Speicherklassenattribut an.|Nein|  
-|[\_\_fastcall](../cpp/fastcall.md)|Der folgende Name deklariert eine Funktion, die Register verwendet, sofern verfügbar, anstatt des Stapels für die Argumentübergabe.|Ja|  
-|[\_\_restrict](../cpp/extension-restrict.md)|Ähnlich wie \_\_declspec\([restrict](../cpp/restrict.md)\), aber für die Verwendung mit Variablen.|Nein|  
-|[\_\_stdcall](../cpp/stdcall.md)|Der folgende Name gibt eine Funktion an, die herkömmliche Aufrufkonventionen berücksichtigt.|Ja|  
-|[\_\_w64](../cpp/w64.md)|Markiert einen Datentyp als größer bei einem 64\-Bit\-Compiler.|Nein|  
-|[\_\_unaligned](../cpp/unaligned.md)|Gibt an, dass ein Zeiger auf einen Typ oder andere Daten nicht ausgerichtet ist.|Nein|  
-|[\_\_vectorcall](../cpp/vectorcall.md)|Der folgende Name deklariert eine Funktion, die Register, einschließlich SSE\-Register, verwendet, sofern diese verfügbar sind, anstatt des Stapels für die Argumentübergabe.|Ja|  
+|Keyword|Meaning|Used to Form Derived Types?|  
+|-------------|-------------|---------------------------------|  
+|[__based](../cpp/based-grammar.md)|The name that follows declares a 32-bit offset to the 32-bit base contained in the declaration.|Yes|  
+|[__cdecl](../cpp/cdecl.md)|The name that follows uses the C naming and calling conventions.|Yes|  
+|[__declspec](../cpp/declspec.md)|The name that follows specifies a Microsoft-specific storage-class attribute.|No|  
+|[__fastcall](../cpp/fastcall.md)|The name that follows declares a function that uses registers, when available, instead of the stack for argument passing.|Yes|  
+|[__restrict](../cpp/extension-restrict.md)|Similar to __declspec([restrict](../cpp/restrict.md)), but for use on variables.|No|  
+|[__stdcall](../cpp/stdcall.md)|The name that follows specifies a function that observes the standard calling convention.|Yes|  
+|[__w64](../cpp/w64.md)|Marks a data type as being larger on a 64-bit compiler.|No|  
+|[__unaligned](../cpp/unaligned.md)|Specifies that a pointer to a type or other data is not aligned..|No|  
+|[__vectorcall](../cpp/vectorcall.md)|The name that follows declares a function that uses registers, including SSE registers, when available, instead of the stack for argument passing.|Yes|  
   
-## Siehe auch  
- [C\+\+\-Sprachreferenz](../cpp/cpp-language-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Language Reference](../cpp/cpp-language-reference.md)

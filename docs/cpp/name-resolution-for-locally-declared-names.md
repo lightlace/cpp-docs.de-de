@@ -1,29 +1,46 @@
 ---
-title: "Namensaufl&#246;sung f&#252;r lokal deklarierte Namen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Name Resolution for Locally Declared Names | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Namensaufl&#246;sung f&#252;r lokal deklarierte Namen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 767daf6f58a0389b14ea547fd912431734c41850
+ms.contentlocale: de-de
+ms.lasthandoff: 09/11/2017
 
-Der Name der Vorlage selbst kann mit oder ohne Vorlagenargumente angegeben werden.  Im Bereich einer Klassenvorlage bezieht sich der Name selbst auf die Vorlage.  Im Bereich einer Vorlagenspezialisierung oder Teilspezialisierung bezieht sich der Name allein auf die Spezialisierung oder Teilspezialisierung.  Andere Spezialisierungen oder Teilspezialisierungen der Vorlage können mit den entsprechenden Vorlagenargumenten ebenfalls referenziert werden.  
+---
+# <a name="name-resolution-for-locally-declared-names"></a>Name Resolution for Locally Declared Names
+The template's name itself can be referred to with or without the template arguments. In the scope of a class template, the name itself refers to the template. In the scope of a template specialization or partial specialization, the name alone refers to the specialization or partial specialization. Other specializations or partial specializations of the template can also be referenced, with the appropriate template arguments.  
   
-## Beispiel  
- Der folgende Code zeigt, dass der Name der Klassenvorlage A im Bereich einer Spezialisierung oder einer teilweisen Spezialisierung unterschiedlich interpretiert wird.  
+## <a name="example"></a>Example  
+ The following code shows that the class template's name A is interpreted differently in the scope of a specialization or partial specialization.  
   
 ```  
 // template_name_resolution3.cpp  
@@ -43,10 +60,10 @@ template<> class A<int> {
 };  
 ```  
   
-## Beispiel  
- Im Falle eines Namenskonflikts zwischen einem Vorlagenparameter und einem anderen Objekt kann der Vorlagenparameter ausgeblendet oder nicht ausgeblendet werden.  Die folgenden Regeln bestimmen die Vorrangigkeit.  
+## <a name="example"></a>Example  
+ In the case of a name conflict between a template parameter and another object, the template parameter can or cannot be hidden. The following rules will help determine precedence.  
   
- Der Vorlagenparameter befindet sich ab seinem ersten Auftreten bis zum Ende der Klasse oder Funktionsvorlage im Gültigkeitsbereich.  Wenn der Name erneut in der Vorlagenargumentliste oder in der Liste der Basisklassen vorkommt, bezieht er sich auf denselben Typ.  In Standard\-C\+\+ kann kein anderer Name, der mit dem Vorlagenparameter identisch ist, im selben Gültigkeitsbereich deklariert werden.  Mit einer Microsoft\-Erweiterung kann der Vorlagenparameter im Gültigkeitsbereich der Vorlage neu definiert werden.  Das folgende Beispiel zeigt die Verwendung des Vorlagenparameters in der Basisspezifizierung einer Klassenvorlage.  
+ The template parameter is in scope from the point where it first appears until the end of the class or function template. If the name appears again in the template argument list or in the list of base classes, it refers to the same type. In standard C++, no other name that is identical to the template parameter can be declared in the same scope. A Microsoft extension allows the template parameter to be redefined in the scope of the template. The following example shows using the template parameter in the base specification of a class template.  
   
 ```  
 // template_name_resolution4.cpp  
@@ -62,8 +79,8 @@ int main() {
 }  
 ```  
   
-## Beispiel  
- Wenn Sie die Memberfunktionen einer Vorlage außerhalb der Klassenvorlage definieren, kann ein anderer Vorlagenparametername verwendet werden.  Wenn die Definition für die Vorlagenmemberfunktion einen anderen Namen für den Vorlagenparameter verwendet als die Deklaration, und der Name in der Definition mit einem anderen Member der Deklaration in Konflikt steht, hat der Member in der Vorlagendeklaration Vorrang.  
+## <a name="example"></a>Example  
+ When defining a template's member functions outside the class template, a different template parameter name can be used. If the template member function definition uses a different name for the template parameter than the declaration does, and the name used in the definition conflicts with another member of the declaration, the member in the template declaration takes precedence.  
   
 ```  
 // template_name_resolution5.cpp  
@@ -92,9 +109,12 @@ int main() {
 }  
 ```  
   
-  **Z::Z\(\)**   
-## Beispiel  
- Wenn eine Vorlagenfunktion oder Memberfunktion außerhalb des Namespaces definiert wird, in dem die Vorlage deklariert wurde, hat das Vorlagenargument Vorrang vor den Namen anderer Member des Namespaces.  
+```Output  
+Z::Z()  
+```  
+  
+## <a name="example"></a>Example  
+ When defining a template function or member function outside the namespace in which the template was declared, the template argument takes precedence over the names of other members of the namespace.  
   
 ```  
 // template_name_resolution6.cpp  
@@ -122,9 +142,12 @@ int main() {
 }  
 ```  
   
-  **C\<T\>::g**   
-## Beispiel  
- In Definitionen, die sich außerhalb der Deklaration der Vorlagenklassen befinden, gilt: Wenn eine Vorlagenklasse über eine Basisklasse verfügt, die nicht von einem Vorlagenargument abhängig ist, und wenn die Basisklasse oder einer ihrer Member über denselben Namen wie ein Vorlagenargument verfügt, blendet die Basisklasse oder der Membername das Vorlagenargument aus.  
+```Output  
+C<T>::g  
+```  
+  
+## <a name="example"></a>Example  
+ In definitions that are outside of the template class declaration, if a template class has a base class that does not depend on a template argument and if the base class or one of its members has the same name as a template argument, then the base class or member name hides the template argument.  
   
 ```  
 // template_name_resolution7.cpp  
@@ -155,7 +178,10 @@ int main() {
 }  
 ```  
   
-  **Base**  
-**1**   
-## Siehe auch  
- [Namensauflösung](../cpp/templates-and-name-resolution.md)
+```Output  
+Base  
+1  
+```  
+  
+## <a name="see-also"></a>See Also  
+ [Name Resolution](../cpp/templates-and-name-resolution.md)
