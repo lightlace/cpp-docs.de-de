@@ -1,111 +1,130 @@
 ---
-title: "Speicherverwaltung: Beispiele | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Arrays [C++], Zuordnen von Ressourcen"
-  - "Arrays [C++], Speicherverwaltung"
-  - "Datenstrukturen [C++]"
-  - "Datenstrukturen [C++], Speicherbelegung"
-  - "Beispiele [MFC], Speicherreservierung"
-  - "Rahmenzuordnung"
-  - "Heapzuordnung, Beispiele"
-  - "Speicherbelegung [C++], Arrays"
-  - "Speicherbelegung [C++], Datenstrukturen"
-  - "Speicherbelegung [C++], Beispiele"
-  - "Speicherbelegung [C++], Objekte"
-  - "MFC [C++], Speicherverwaltung"
-  - "Objekte [C++], Speicherbelegung"
-  - "Objekte [C++], Speicherreservierung"
-  - "Strukturspeicherbelegung"
-  - "Typen [C++], Speicherreservierung"
+title: 'Memory Management: Examples | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], memory allocation
+- data structures [MFC]
+- arrays [MFC], allocating resources
+- objects [MFC], allocating memory
+- data structures [MFC], allocating memory
+- examples [MFC], memory allocation
+- heap allocation [MFC], examples
+- memory allocation [MFC], arrays
+- MFC, memory management
+- struct memory allocation [MFC]
+- types [MFC], memory allocation
+- memory allocation [MFC], objects
+- memory allocation [MFC], examples
+- arrays [MFC], memory management
+- frame allocation [MFC]
+- memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Speicherverwaltung: Beispiele
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 108a4988ca87c96642c2368764ec3d047de746a8
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt, wie MFC Framezuordnungen und \-Heapbelegungen für alle drei typische Arten von Speicherbelegungen durchführen:  
+---
+# <a name="memory-management-examples"></a>Memory Management: Examples
+This article describes how MFC performs frame allocations and heap allocations for each of the three typical kinds of memory allocations:  
   
--   [Ein Bytearray](#_core_allocation_of_an_array_of_bytes)  
+-   [An array of bytes](#_core_allocation_of_an_array_of_bytes)  
   
--   [Eine Datenstruktur](#_core_allocation_of_a_data_structure)  
+-   [A data structure](#_core_allocation_of_a_data_structure)  
   
--   [Ein Objekt](#_core_allocation_of_an_object)  
+-   [An object](#_core_allocation_of_an_object)  
   
-##  <a name="_core_allocation_of_an_array_of_bytes"></a> Zuordnung eines Bytearrays  
+##  <a name="_core_allocation_of_an_array_of_bytes"></a> Allocation of an Array of Bytes  
   
-#### Um ein Bytearray über den Frame zuordnen  
+#### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>To allocate an array of bytes on the frame  
   
-1.  Definieren Sie das Array wie durch den folgenden Code dargestellt.  Das Array wird automatisch gelöscht und angegeben sein Arbeitsspeicher frei, wenn die Arrayvariablen den Bereich beendet wird.  
+1.  Define the array as shown by the following code. The array is automatically deleted and its memory reclaimed when the array variable exits its scope.  
   
-     [!CODE [NVC_MFC_Utilities#1](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_Utilities#1)]  
+     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]  
   
-#### Um ein Bytearray \(bzw. jedes primitiven Datentyp\) auf dem Heap zuordnen  
+#### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>To allocate an array of bytes (or any primitive data type) on the heap  
   
-1.  Verwenden Sie den Operator **neu** mit der Arraysyntax, die in diesem Beispiel gezeigt wird:  
+1.  Use the **new** operator with the array syntax shown in this example:  
   
-     [!CODE [NVC_MFC_Utilities#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_Utilities#2)]  
+     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]  
   
-#### So Arrays vom Heap frei  
+#### <a name="to-deallocate-the-arrays-from-the-heap"></a>To deallocate the arrays from the heap  
   
-1.  Verwenden Sie den Operator **löschen**, wie folgt:  
+1.  Use the **delete** operator as follows:  
   
-     [!CODE [NVC_MFC_Utilities#3](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_Utilities#3)]  
+     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
   
-##  <a name="_core_allocation_of_a_data_structure"></a> Zuordnung einer Datenstruktur  
+##  <a name="_core_allocation_of_a_data_structure"></a> Allocation of a Data Structure  
   
-#### So einer Datenstruktur über den Frame zuordnen  
+#### <a name="to-allocate-a-data-structure-on-the-frame"></a>To allocate a data structure on the frame  
   
-1.  Definieren Sie die Strukturvariable, wie folgt:  
+1.  Define the structure variable as follows:  
   
-     [!CODE [NVC_MFC_Utilities#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_Utilities#4)]  
+     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]  
   
-     Der Speicher, der durch die Struktur belegt wird, wird freigegeben, wenn der Bereich beendet.  
+     The memory occupied by the structure is reclaimed when it exits its scope.  
   
-#### So Datenstrukturen auf dem Heap zuordnen  
+#### <a name="to-allocate-data-structures-on-the-heap"></a>To allocate data structures on the heap  
   
-1.  Verwenden Sie **neu**, um Datenstrukturen auf dem Heap zuzuordnen und **löschen**, um ihnen, wie dargestellt durch die folgenden Beispiele verwenden:  
+1.  Use **new** to allocate data structures on the heap and **delete** to deallocate them, as shown by the following examples:  
   
-     [!CODE [NVC_MFC_Utilities#5](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_Utilities#5)]  
+     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
   
-##  <a name="_core_allocation_of_an_object"></a> Zuordnung eines Objekts  
+##  <a name="_core_allocation_of_an_object"></a> Allocation of an Object  
   
-#### So fügen Sie ein Objekt über den Frame zuordnen  
+#### <a name="to-allocate-an-object-on-the-frame"></a>To allocate an object on the frame  
   
-1.  Deklarieren Sie das Objekt, wie folgt:  
+1.  Declare the object as follows:  
   
-     [!CODE [NVC_MFC_Utilities#6](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_Utilities#6)]  
+     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]  
   
-     Der Destruktor für das Objekt automatisch aufgerufen, wenn das Objekt den Bereich beendet wird.  
+     The destructor for the object is automatically invoked when the object exits its scope.  
   
-#### So fügen Sie ein Objekt auf dem Heap zuordnen  
+#### <a name="to-allocate-an-object-on-the-heap"></a>To allocate an object on the heap  
   
-1.  Verwenden Sie den Operator **neu**, der einem Zeiger auf das Objekt zurückgibt, um Objekte auf dem Heap zuzuordnen.  Verwenden Sie den Operator **löschen**, um sie zu löschen.  
+1.  Use the **new** operator, which returns a pointer to the object, to allocate objects on the heap. Use the **delete** operator to delete them.  
   
-     Die folgenden Heap\- und Framebeispiele wird davon ausgegangen, dass der Konstruktor `CPerson` keine Argumente akzeptiert.  
+     The following heap and frame examples assume that the `CPerson` constructor takes no arguments.  
   
-     [!CODE [NVC_MFC_Utilities#7](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_Utilities#7)]  
+     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     Wenn das Argument für den Konstruktor `CPerson` ein Zeiger auf `char` ist, wird die Anweisung für Framezuordnung:  
+     If the argument for the `CPerson` constructor is a pointer to `char`, the statement for frame allocation is:  
   
-     [!CODE [NVC_MFC_Utilities#8](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_Utilities#8)]  
+     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   
-     Die Anweisung für Heapreservierung ist:  
+     The statement for heap allocation is:  
   
-     [!CODE [NVC_MFC_Utilities#9](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_Utilities#9)]  
+     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]  
   
-## Siehe auch  
- [Speicherverwaltung: Heapbelegung](../mfc/memory-management-heap-allocation.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management: Heap Allocation](../mfc/memory-management-heap-allocation.md)
+
+

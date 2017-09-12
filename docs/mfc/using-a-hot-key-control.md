@@ -1,42 +1,61 @@
 ---
-title: "Verwenden eines Abk&#252;rzungstasten-Steuerelements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHotKeyCtrl-Klasse, Verwenden"
-  - "Abkürzungstasten-Steuerelemente"
+title: Using a Hot Key Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHotKeyCtrl class [MFC], using
+- hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Verwenden eines Abk&#252;rzungstasten-Steuerelements
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9590d2ea6c374523b2d369f50affab16b7467331
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Typische Verwendung eines Abkürzungstasten\-Steuerelements entspricht dem Muster unten:  
+---
+# <a name="using-a-hot-key-control"></a>Using a Hot Key Control
+Typical usage of a hot key control follows the pattern below:  
   
--   Das Steuerelement wird erstellt.  Wenn das Steuerelement in einer Dialogfeldvorlage angegeben wird, ist Erstellung automatisch, wenn das Dialogfeld erstellt wird. \(Sie sollten [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) einen Member in der Dialogfeldklasse haben, die zum Abkürzungstasten\-Steuerelement entspricht.\) Alternativ können Sie die Memberfunktion [Erstellen](../Topic/CHotKeyCtrl::Create.md) verwenden, um das Steuerelement als untergeordnetes Fenster eines jeden Fensters zu erstellen.  
+-   The control is created. If the control is specified in a dialog box template, creation is automatic when the dialog box is created. (You should have a [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) member in your dialog class that corresponds to the hot key control.) Alternatively, you can use the [Create](../mfc/reference/chotkeyctrl-class.md#create) member function to create the control as a child window of any window.  
   
--   Wenn Sie einen Standardwert für das Steuerelement festlegen möchten, rufen Sie die [SetHotKey](../Topic/CHotKeyCtrl::SetHotKey.md)\-Memberfunktion auf.  Wenn Sie bestimmte Schichtzustände verhindern möchten, rufen Sie [SetRules](../Topic/CHotKeyCtrl::SetRules.md) auf.  Für Steuerelemente in einem Dialogfeld, ist ein guter Zeitpunkt, dazu in der [OnInitDialog](../Topic/CDialog::OnInitDialog.md)\-Funktion des Dialogfelds.  
+-   If you want to set a default value for the control, call the [SetHotKey](../mfc/reference/chotkeyctrl-class.md#sethotkey) member function. If you want to prohibit certain shift states, call [SetRules](../mfc/reference/chotkeyctrl-class.md#setrules). For controls in a dialog box, a good time to do this is in the dialog box's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) function.  
   
--   Der Benutzer interagiert mit dem Steuerelement ein, indem eine Abkürzungstastenkombination drückt, während das Abkürzungstasten\-Steuerelement den Fokus besitzt.  Der Benutzer gibt, dass alle diese Aufgabe abgeschlossen ist, möglicherweise an, indem er auf eine Schaltfläche im Dialogfeld klickt.  
+-   The user interacts with the control by pressing a hot key combination when the hot key control has focus. The user then somehow indicates that this task is complete, perhaps by clicking a button in the dialog box.  
   
--   Wenn das Programm benachrichtigt wird, dass der Benutzer eine Zugriffstaste ausgewählt hat, sollte er die Memberfunktion [GetHotKey](../Topic/CHotKeyCtrl::GetHotKey.md) verwenden, um die virtuellen Schlüssel\- und Schichtzustandswerte vom Abkürzungstasten\-Steuerelement abzurufen.  
+-   When your program is notified that the user has selected a hot key, it should use the member function [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) to retrieve the virtual key and shift state values from the hot key control.  
   
--   Wenn Sie wissen, welcher Schlüssel der Benutzer, der ausgewählt ist, die Zugriffstaste mit einer der Methoden festlegen kann, die in [Festlegen einer Zugriffstaste](../mfc/setting-a-hot-key.md) beschrieben werden.  
+-   Once you know what key the user selected, you can set the hot key using one of the methods described in [Setting a Hot Key](../mfc/setting-a-hot-key.md).  
   
--   Wenn das Abkürzungstasten\-Steuerelement in einem Dialogfeld ist, werden diese und das `CHotKeyCtrl`\-Objekt automatisch zerstört.  Falls nicht, müssen Sie sicherstellen, dass das Steuerelement und das `CHotKeyCtrl`\-Objekt ordnungsgemäß gelöscht werden.  
+-   If the hot key control is in a dialog box, it and the `CHotKeyCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CHotKeyCtrl` object are properly destroyed.  
   
-## Siehe auch  
- [Verwenden von CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

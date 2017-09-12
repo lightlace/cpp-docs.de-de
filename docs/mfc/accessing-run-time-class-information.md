@@ -1,74 +1,93 @@
 ---
-title: "Zugreifen auf Laufzeit-Klasseninformationen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Klassen [C++], Laufzeit-Klasseninformationen"
-  - "CObject-Klasse, Zugreifen auf Laufzeit-Klasseninformationen"
-  - "CObject-Klasse, und RTTI"
-  - "CObject-Klasse, Verwenden der IsKindOf-Methode"
-  - "CObject-Klasse, Verwenden vom RUNTIME_CLASS-Makro"
-  - "IsKindOf method-Methode"
-  - "RTTI-Compileroption"
-  - "Laufzeit"
-  - "Laufzeit, Klasseninformation"
-  - "run-time-Klasse"
-  - "run-time-Klasse, Zugriff auf Informationen"
-  - "RUNTIME_CLASS-Makro"
-  - "RUNTIME_CLASS-Makro, Verwenden"
+title: Accessing Run-Time Class Information | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CObject class [MFC], and RTTI
+- CObject class [MFC], using IsKindOf method [MFC]
+- run time [MFC], class information
+- RUNTIME_CLASS macro [MFC]
+- CObject class [MFC], using RUNTIME_CLASS macro [MFC]
+- RTTI compiler option [MFC]
+- CObject class [MFC], accessing run-time class information
+- run time [MFC]
+- IsKindOf method method [MFC]
+- run-time class [MFC], accessing information
+- classes [MFC], run-time class information
+- run-time class [MFC]
+- RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Zugreifen auf Laufzeit-Klasseninformationen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc720b2d47767acc4ef8ffcb91d2ef214bfe609a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt z auf Informationen über die Klasse eines Objekts zur Laufzeit.  
+---
+# <a name="accessing-run-time-class-information"></a>Accessing Run-Time Class Information
+This article explains how to access information about the class of an object at run time.  
   
 > [!NOTE]
->  MFC verwendet keine Unterstützung [Laufzeit\-Typeninformationen](../cpp/run-time-type-information.md) \(RTTI\), die in Visual C\+\+ 4.0 eingeführt wurde.  
+>  MFC does not use the [Run-Time Type Information](../cpp/run-time-type-information.md) (RTTI) support introduced in Visual C++ 4.0.  
   
- Wenn Sie die Klasse von [CObject](../mfc/reference/cobject-class.md) abgeleitet und das **DEKLARIEREN**\_**DYNAMISCH** und `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE` und `IMPLEMENT_DYNCREATE` oder die `DECLARE_SERIAL` und `IMPLEMENT_SERIAL`, die Makros im Artikel [Ableiten einer Klasse von CObject](../mfc/deriving-a-class-from-cobject.md) erläutert werden verwendet haben, hat die `CObject`\-Klasse die Möglichkeit, die genauen Klasse eines Objekts zur Laufzeit zu bestimmen.  
+ If you have derived your class from [CObject](../mfc/reference/cobject-class.md) and used the **DECLARE**_**DYNAMIC** and `IMPLEMENT_DYNAMIC`, the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE`, or the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros explained in the article [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md), the `CObject` class has the ability to determine the exact class of an object at run time.  
   
- Diese Fähigkeit ist besonders hilfreich, wenn zusätzliche Typüberprüfung von Funktionsargumenten erforderlich ist und wenn Sie für besondere Zwecke auf Grundlage der Klasse eines Objekts müssen Code schreiben.  Davon wird jedoch normalerweise nicht empfohlen, da dies die Funktionalität von virtuellen Funktionen dupliziert.  
+ This ability is most useful when extra type checking of function arguments is needed and when you must write special-purpose code based on the class of an object. However, this practice is not usually recommended because it duplicates the functionality of virtual functions.  
   
- Die `CObject`\-Memberfunktion `IsKindOf` kann verwendet werden, um zu bestimmen, ob ein bestimmtes Objekt einer angegebenen Klasse gehört, oder wenn von einer bestimmten Klasse abgeleitet ist.  Das Argument für `IsKindOf` ist ein `CRuntimeClass`\-Objekt, das Sie mithilfe des `RUNTIME_CLASS`\-Makros mit dem Namen der Klasse abrufen können.  
+ The `CObject` member function `IsKindOf` can be used to determine if a particular object belongs to a specified class or if it is derived from a specific class. The argument to `IsKindOf` is a `CRuntimeClass` object, which you can get using the `RUNTIME_CLASS` macro with the name of the class.  
   
-### Um das RUNTIME\_CLASS\-Makro verwenden  
+### <a name="to-use-the-runtimeclass-macro"></a>To use the RUNTIME_CLASS macro  
   
-1.  Verwenden Sie `RUNTIME_CLASS` mit dem Namen der Klasse, wie hier gezeigt für die Klasse `CObject`:  
+1.  Use `RUNTIME_CLASS` with the name of the class, as shown here for the class `CObject`:  
   
-     [!CODE [NVC_MFCCObjectSample#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCObjectSample#4)]  
+     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]  
   
- Sie müssen selten auf das Ablaufklassenobjekt direkt zugreifen.  Eine weitere allgemeine Verwendung besteht, das `IsKindOf` Ablaufklassenobjekt zur Funktion, wie im folgenden Verfahren dargestellt zu übergeben.  Die `IsKindOf`\-Funktionstests ein Objekt, festzustellen, ob es einer bestimmten Klasse gehört.  
+ You will rarely need to access the run-time class object directly. A more common use is to pass the run-time class object to the `IsKindOf` function, as shown in the next procedure. The `IsKindOf` function tests an object to see if it belongs to a particular class.  
   
-#### Um die IsKindOf\-Funktion verwenden  
+#### <a name="to-use-the-iskindof-function"></a>To use the IsKindOf function  
   
-1.  Stellen Sie sicher, dass die Klasse Ablaufklassenunterstützung hat.  Das heißt, muss die Klasse direkt oder indirekt von `CObject` abgeleitet werden und verwendet das **DEKLARIEREN**\_**DYNAMISCH** und `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE` und `IMPLEMENT_DYNCREATE` oder die `DECLARE_SERIAL` und `IMPLEMENT_SERIAL`, die Makros im Artikel [Ableiten einer Klasse von CObject](../mfc/deriving-a-class-from-cobject.md) erläutert werden.  
+1.  Make sure the class has run-time class support. That is, the class must have been derived directly or indirectly from `CObject` and used the **DECLARE**_**DYNAMIC** and `IMPLEMENT_DYNAMIC`, the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE`, or the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros explained in the article [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md).  
   
-2.  Rufen Sie die Memberfunktion `IsKindOf` für Objekte dieser Klasse, mithilfe des Makros `RUNTIME_CLASS` auf, um das Argument `CRuntimeClass` zu generieren, wie hier gezeigt:  
+2.  Call the `IsKindOf` member function for objects of that class, using the `RUNTIME_CLASS` macro to generate the `CRuntimeClass` argument, as shown here:  
   
-     [!CODE [NVC_MFCCObjectSample#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCObjectSample#2)]  
+     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]  
   
-     [!CODE [NVC_MFCCObjectSample#5](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCObjectSample#5)]  
+     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]  
   
     > [!NOTE]
-    >  IsKindOf gibt **TRUE** zurück, wenn das Objekt ein Member der angegebenen Klasse oder einer Klasse ist, die von der angegebenen Klasse abgeleitet wird.  `IsKindOf` unterstützt Mehrfachvererbung nicht virtuelle oder Basisklassen, obwohl Sie Mehrfachvererbung für die abgeleiteten Foundations\-Klassen ggf. Microsoft verwenden können.  
+    >  IsKindOf returns **TRUE** if the object is a member of the specified class or of a class derived from the specified class. `IsKindOf` does not support multiple inheritance or virtual base classes, although you can use multiple inheritance for your derived Microsoft Foundation classes if necessary.  
   
- Ein Verwendung von Ablaufklasseninformationen ist in der dynamischen Erstellung von Objekten.  Dieser Prozess wird im Artikel [Dynamisches Erstellen von Objekten](../mfc/dynamic-object-creation.md) erläutert.  
+ One use of run-time class information is in the dynamic creation of objects. This process is discussed in the article [Dynamic Object Creation](../mfc/dynamic-object-creation.md).  
   
- Ausführlichere Informationen zur Serialisierung und Laufzeitklasseninformationen finden Sie in Artikel [Dateien in MFC](../mfc/files-in-mfc.md) und [Serialisierung](../mfc/serialization-in-mfc.md).  
+ For more detailed information on serialization and run-time class information, see the articles [Files in MFC](../mfc/files-in-mfc.md) and [Serialization](../mfc/serialization-in-mfc.md).  
   
-## Siehe auch  
- [Verwenden von CObject](../mfc/using-cobject.md)
+## <a name="see-also"></a>See Also  
+ [Using CObject](../mfc/using-cobject.md)
+
+

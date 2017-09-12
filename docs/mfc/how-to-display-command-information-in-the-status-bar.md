@@ -1,35 +1,54 @@
 ---
-title: "Gewusst wie: Anzeigen von Befehlsinformationen in der Statusleiste | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Anzeigen des Befehlsstatus"
-  - "Eingabeaufforderungen [C++]"
-  - "Statusleisten, Anzeigen von Befehlsinformationen"
-  - "Statusleisten, Meldungsbereich"
+title: 'How to: Display Command Information in the Status Bar | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- prompts [MFC]
+- displaying command status [MFC]
+- status bars [MFC], message area
+- status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Gewusst wie: Anzeigen von Befehlsinformationen in der Statusleiste
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ed04870c904c0b2cbe01686282bbfe8b4f1b1cb4
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Sie im Anwendungs\-Assistenten ausführen, um das Skelett der Anwendung zu erstellen, können Sie eine Symbolleiste und eine Statusleiste unterstützen.  Derzeit eine Option im Anwendungs\-Assistenten unterstützt beide.  Wenn eine Statusleiste vorhanden ist, stellt die Anwendung automatisch hilfreiches Feedback, während der Benutzer den Zeiger über Elemente auf Menüs verschoben.  Die Anwendung wird automatisch eine Aufforderungstext in der Statusleiste an, wenn das Menüelement hervorgehoben wird.  Wenn der Benutzer beispielsweise den Mauszeiger auf den Befehl **Ausschneiden** im Menü **Bearbeiten** bewegt, könnte die Statusleiste "Schnitte die Auswahl und schreibt sie in die Zwischenablage in" Nachrichtenbereich der Statusleiste an.  Die Eingabeaufforderung hilft dem Benutzer, den Zweck des Menüelements zu verstehen.  Dies funktioniert auch, wenn der Benutzer auf eine Schaltfläche klickt.  
+---
+# <a name="how-to-display-command-information-in-the-status-bar"></a>How to: Display Command Information in the Status Bar
+When you run the Application Wizard to create the skeleton of your application, you can support a toolbar and a status bar. Just one option in the Application Wizard supports both. When a status bar is present, the application automatically provides helpful feedback as the user moves the pointer over items on the menus. The application automatically displays a prompt string in the status bar when the menu item is highlighted. For example, when the user moves the pointer over the **Cut** command on the **Edit** menu, the status bar might display "Cuts the selection and puts it on the Clipboard" in the message area of the status bar. The prompt helps the user understand the purpose of the menu item. This also works when the user clicks a toolbar button.  
   
- Sie können dieser Statusleistenhilfe hinzufügen, indem Sie der Eingabeaufforderungen für Menüelemente definieren, die Sie dem Programm hinzufügen.  Hierzu, stellen Sie die der Eingabeaufforderungen bereit wenn Sie die Eigenschaften des Menüelements im Menü\-Editor bearbeiten.  Die Zeichenfolgen, die Sie definieren, werden in der Ressourcendatei der Anwendung gespeichert; sie dieselben IDs, die die Befehle sie berücksichtigen.  
+ You can add to this status-bar help by defining prompt strings for menu items that you add to the program. To do this, provide the prompt strings when you edit the properties of the menu item in the menu editor. The strings you define are stored in the application resource file; they have the same IDs as the commands they explain.  
   
- Standardmäßig fügt der Anwendungs\-Assistent `AFX_IDS_IDLEMESSAGE`, die ID für ein Standard "Bereit" Meldung hinzu, die angezeigt wird, wenn das Programm gewartet neue Meldungen ist.  Wenn Sie die Option der kontextbezogenen Hilfe im Anwendungs\-Assistenten angeben, wird die Nachricht geändert zu "für Hilfe, F1 drücken."  
+ By default, the Application Wizard adds `AFX_IDS_IDLEMESSAGE`, the ID for a standard "Ready" message, which is displayed when the program is waiting for new messages. If you specify the Context-Sensitive Help option in the Application Wizard, the message is changed to "For Help, press F1."  
   
-## Siehe auch  
- [Meldungsbehandlung und \-zuordnung](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

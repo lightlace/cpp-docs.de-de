@@ -1,60 +1,79 @@
 ---
-title: "Optimieren der Steuerelementdarstellung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-ActiveX-Steuerelemente, Optimieren"
+title: Optimizing Control Drawing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Optimieren der Steuerelementdarstellung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c7fe06fb28ec2274c5350aa372a1fbad0b33c269
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn ein Steuerelement angewiesen wird, die in einen Container\-angegebenen Gerätekontext zu zeichnen, wird es in der Regel GDI\-Objekte \(wie Pinsel, Stifte und Schriftarten\) in den Gerätekontext aus, führt die Zeichenvorgänge aus und stellt die vorherigen GDI\-Objekte zurückgesetzt.  Wenn der Container mehrere Steuerelemente, die in gezeichnet werden sollen, demselben Gerätekontext hat und jedes Steuerelement die GDI\-Objekte auswählt, die es benötigt, kann Zeit gespeichert werden, wenn die Steuerelemente nicht einzeln zuvor ausgewählte Objekte wiederherstellen.  Schließlich sind Steuerelemente, der Container können die ursprünglichen Objekte automatisch wiederhergestellt gezeichnet wurden.  
+---
+# <a name="optimizing-control-drawing"></a>Optimizing Control Drawing
+When a control is instructed to draw itself into a container-supplied device context, it typically selects GDI objects (such as pens, brushes, and fonts) into the device context, performs its drawing operations, and restores the previous GDI objects. If the container has multiple controls that are to be drawn into the same device context, and each control selects the GDI objects it requires, time can be saved if the controls do not individually restore previously selected objects. After all the controls have been drawn, the container can automatically restore the original objects.  
   
- Um zu erkennen ob ein Container diese Technik unterstützt, kann ein Steuerelement die [COleControl::IsOptimizedDraw](../Topic/COleControl::IsOptimizedDraw.md)\-Memberfunktion aufrufen.  Wenn diese Funktion **TRUE** zurückgibt, kann das Steuerelement den normalen Schritt der Wiederherstellung der vorher ausgewählten Objekte überspringen.  
+ To detect whether a container supports this technique, a control can call the [COleControl::IsOptimizedDraw](../mfc/reference/colecontrol-class.md#isoptimizeddraw) member function. If this function returns **TRUE**, the control can skip the normal step of restoring the previously selected objects.  
   
- Betrachten Sie ein Steuerelement, das über die folgende \(nicht optimierte\) `OnDraw`\-Funktion verfügt:  
+ Consider a control that has the following (unoptimized) `OnDraw` function:  
   
- [!CODE [NVC_MFC_AxOpt#15](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxOpt#15)]  
+ [!code-cpp[NVC_MFC_AxOpt#15](../mfc/codesnippet/cpp/optimizing-control-drawing_1.cpp)]  
   
- Der Stift und der Pinsel in diesem Beispiel sind die Variablen heißt, dass ihre als Destruktoren bezeichnet werden, wenn sie den Gültigkeitsbereich verlassen \(wenn die `OnDraw`\-Funktion beendet\).  Die Destruktoren versuchen, die entsprechenden GDI\-Objekte zu löschen.  Aber sie sollten nicht gelöscht werden, wenn Sie planen, diese werden ausgewählt in den Gerätekontext nach der Rückgabe von `OnDraw`.  
+ The pen and brush in this example are local variables, meaning their destructors will be called when they go out of scope (when the `OnDraw` function ends). The destructors will attempt to delete the corresponding GDI objects. But they should not be deleted if you plan to leave them selected into the device context upon returning from `OnDraw`.  
   
- Um die [CPen](../mfc/reference/cpen-class.md) und [CBrush](../mfc/reference/cbrush-class.md) an Objekte zerstört werden zu verhindern wenn `OnDraw` endet, speichern Sie sie in die Membervariablen statt der lokalen Variablen.  In der Klassendeklaration des Steuerelements fügen Sie Deklarationen für zwei neue Membervariablen hinzu:  
+ To prevent the [CPen](../mfc/reference/cpen-class.md) and [CBrush](../mfc/reference/cbrush-class.md) objects from being destroyed when `OnDraw` finishes, store them in member variables instead of local variables. In the control's class declaration, add declarations for two new member variables:  
   
- [!CODE [NVC_MFC_AxOpt#16](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxOpt#16)]  
-[!CODE [NVC_MFC_AxOpt#17](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxOpt#17)]  
+ [!code-cpp[NVC_MFC_AxOpt#16](../mfc/codesnippet/cpp/optimizing-control-drawing_2.h)]  
+[!code-cpp[NVC_MFC_AxOpt#17](../mfc/codesnippet/cpp/optimizing-control-drawing_3.h)]  
   
- Anschließend kann die `OnDraw` umgeschrieben Funktion werden, wie folgt:  
+ Then, the `OnDraw` function can be rewritten as follows:  
   
- [!CODE [NVC_MFC_AxOpt#18](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxOpt#18)]  
+ [!code-cpp[NVC_MFC_AxOpt#18](../mfc/codesnippet/cpp/optimizing-control-drawing_4.cpp)]  
   
- Diese Vorgehensweise vermeidet Erstellen des Stiftes und des Pinsels, wenn `OnDraw` aufgerufen wird.  Die Geschwindigkeitsverbesserung stammt auf Kosten der Sicherung von zusätzlichen Instanzdaten.  
+ This approach avoids creation of the pen and brush every time `OnDraw` is called. The speed improvement comes at the cost of maintaining additional instance data.  
   
- Wenn die Eigenschaft \- oder BackColor ändert, muss der Stift oder der Pinsel erneut erstellt werden.  Hierzu, überschreiben Sie die [OnForeColorChanged](../Topic/COleControl::OnForeColorChanged.md) und [OnBackColorChanged](../Topic/COleControl::OnBackColorChanged.md)\-Memberfunktionen:  
+ If the ForeColor or BackColor property changes, the pen or brush needs to be created again. To do this, override the [OnForeColorChanged](../mfc/reference/colecontrol-class.md#onforecolorchanged) and [OnBackColorChanged](../mfc/reference/colecontrol-class.md#onbackcolorchanged) member functions:  
   
- [!CODE [NVC_MFC_AxOpt#19](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxOpt#19)]  
+ [!code-cpp[NVC_MFC_AxOpt#19](../mfc/codesnippet/cpp/optimizing-control-drawing_5.cpp)]  
   
- Schließlich unnötige Aufrufe `SelectObject` zu vermeiden, ändern Sie `OnDraw`, wie folgt:  
+ Finally, to eliminate unnecessary `SelectObject` calls, modify `OnDraw` as follows:  
   
- [!CODE [NVC_MFC_AxOpt#20](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxOpt#20)]  
+ [!code-cpp[NVC_MFC_AxOpt#20](../mfc/codesnippet/cpp/optimizing-control-drawing_6.cpp)]  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente: Optimierung](../mfc/mfc-activex-controls-optimization.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)   
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)   
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)   
- [MFC\-ActiveX\-Steuerelement\-Assistent](../mfc/reference/mfc-activex-control-wizard.md)   
- [MFC\-ActiveX\-Steuerelemente: Darstellen eines ActiveX\-Steuerelements](../mfc/mfc-activex-controls-painting-an-activex-control.md)
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md)   
+ [MFC ActiveX Controls: Painting an ActiveX Control](../mfc/mfc-activex-controls-painting-an-activex-control.md)
+
+

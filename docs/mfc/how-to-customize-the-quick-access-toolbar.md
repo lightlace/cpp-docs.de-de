@@ -1,63 +1,82 @@
 ---
-title: "Gewusst wie: Anpassen der Symbolleiste f&#252;r den Schnellzugriff | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Symbolleiste für den Schnellzugriff, Anpassung"
+title: 'How to: Customize the Quick Access Toolbar | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Gewusst wie: Anpassen der Symbolleiste f&#252;r den Schnellzugriff
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1b26489b5f24649dabba5034ec8814ab9ea163ce
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die Symbolleiste für den Schnellzugriff \(QAT\) ist eine anpassbare Symbolleiste, die einen Satz Befehle enthält, die entweder sind, neben der Anwendungsschaltfläche oder unter den Kategorienregisterkarten angezeigt wird.  Die folgende Abbildung zeigt eine typische Symbolleiste für den Schnellzugriff an.  
+---
+# <a name="how-to-customize-the-quick-access-toolbar"></a>How to: Customize the Quick Access Toolbar
+The Quick Access Toolbar (QAT) is a customizable toolbar that contains a set of commands that are either displayed next to the Application button or under the category tabs. The following illustration shows a typical Quick Access Toolbar.  
   
- ![MFC&#45;Menübandsymbolleiste für den Schnellzugriff](../mfc/media/quick_access_toolbar.png "Quick\_Access\_Toolbar")  
+ ![MFC Ribbon Quick Access Toolbar](../mfc/media/quick_access_toolbar.png "quick_access_toolbar")  
   
- Um die Symbolleiste für den Schnellzugriff anzupassen, öffnen Sie sie im Fenster **Eigenschaften**, ändern Sie seine Befehle, und zeigen Sie das Menüband in der Vorschau.  
+ To customize the Quick Access Toolbar, open it in the **Properties** window, modify its commands, and then preview the ribbon control.  
   
-### So die Symbolleiste für den Schnellzugriff im Eigenschaftenfenster öffnen  
+### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>To open the Quick Access Toolbar in the Properties window  
   
-1.  In Visual Studio im Menü **Ansicht**, klicken Sie auf **Ressourcenansicht**.  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  Doppelklicken Sie in **Ressourcenansicht** auf die Menübandressource, um sie auf der Entwurfsoberfläche anzuzeigen.  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-3.  Auf Entwurfsoberfläche klicken Sie auf das Schnellzugriff\-Menü Symbolleiste für den mit der rechten Maustaste und klicken Sie dann auf **Eigenschaften**.  
+3.  On design surface, right-click the Quick Access Toolbar menu and then click **Properties**.  
   
-## Symbolleiste für den Schnellzugriff\-Eigenschaften  
- In der folgenden Tabelle definiert die Eigenschaften der Symbolleiste für den Schnellzugriff.  
+## <a name="quick-access-toolbar-properties"></a>Quick Access Toolbar Properties  
+ The following table defines the properties of the Quick Access Toolbar.  
   
-|Eigenschaft|Definition|  
-|-----------------|----------------|  
-|QAT\-Position|Gibt die Position der Symbolleiste für den Schnellzugriff beim Start der Anwendung an.  Die Position kann entweder **Oberhalb** oder **Unterhalb** sein das Menüband.|  
-|QAT\-Elemente|Gibt die Befehle an, die für die Symbolleiste für den Schnellzugriff verfügbar sind.|  
+|Property|Definition|  
+|--------------|----------------|  
+|QAT Position|Specifies the position of the Quick Access Toolbar when the application starts. The position can be either **Above** or **Below** the ribbon control.|  
+|QAT Items|Specifies the commands that are available for the Quick Access Toolbar.|  
   
-#### Um Befehle auf der Symbolleiste für den Schnellzugriff hinzufügen oder entfernen  
+#### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>To add or remove commands on the Quick Access Toolbar  
   
-1.  Im Fenster **Eigenschaften** klicken Sie auf **QAT\-Elemente** und klicken Sie auf die Schaltfläche mit den Auslassungspunkten **\(...\)**.  
+1.  In the **Properties** window, click **QAT Items**, and then click the ellipsis button **(...)**.  
   
-2.  Im Dialogfeld **QAT\-Element\-Editor** verwenden Sie die Schaltflächen **Hinzufügen** und **Entfernen**, um die Liste von Befehlen auf der Symbolleiste für den Schnellzugriff zu ändern.  
+2.  In the **QAT Items Editor** dialog box, use the **Add** and **Remove** buttons to modify the list of commands on the Quick Access Toolbar.  
   
-3.  Wenn Sie einen Befehl möchten, auf der Symbolleiste für den Schnellzugriff und der Symbolleiste für den Schnellzugriff\-Menü angezeigt wird, wählen Sie das Kontrollkästchen neben dem Befehl aus.  Wenn Sie den Befehl soll, nur im Menü angezeigt wird, deaktivieren Sie das Feld.  
+3.  If you want a command to appear on both the Quick Access Toolbar and the Quick Access Toolbar menu, select the box next to the command. If you want the command to appear only on the menu, clear the box.  
   
-## Vorschaufunktion des Menübands  
- Symbolleiste für den Schnellzugriff\-Befehle werden nicht auf der Entwurfsoberfläche.  Um diese anzuzeigen, müssen Sie entweder dieses Menüband in der Vorschau anzeigen bzw. die Anwendung ausführen.  
+## <a name="previewing-the-ribbon"></a>Previewing the Ribbon  
+ Quick Access Toolbar commands do not appear on the design surface. To view them, you must either preview the ribbon or run the application.  
   
-#### So das Menüband in der Vorschau anzeigen  
+#### <a name="to-preview-the-ribbon-control"></a>To preview the ribbon control  
   
--   Klicken Sie auf der **Menüband\-Editor\-SymbolleisteRibbon testen**.  
+-   On the **Ribbon Editor Toolbar**, click **Test Ribbon**.  
   
-## Siehe auch  
- [Menüband\-Designer \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

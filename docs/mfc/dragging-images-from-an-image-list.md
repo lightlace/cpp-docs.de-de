@@ -1,44 +1,63 @@
 ---
-title: "Herausziehen von Bildern aus einer Bildliste | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList-Klasse, Herausziehen von Bildern aus"
-  - "Herausziehen von Bildern aus einer Bildliste"
-  - "Bilderlisten [C++], Herausziehen von Bildern aus"
-  - "Bilder [C++], Herausziehen aus Bildlisten"
+title: Dragging Images from an Image List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], dragging images from
+- dragging images from image lists [MFC]
+- image lists [MFC], dragging images from
+- images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Herausziehen von Bildern aus einer Bildliste
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 15c483b33b5f2f3fa127b93343797747de093351
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-[CImageList](../mfc/reference/cimagelist-class.md) enthält Funktionen zum Ziehen eines Bilds auf dem Bildschirm ein.  Die ziehenden Funktionen verschieben ein Bild in reibungslos, Farbe und ohne Multilingual des Cursors blinkt.  Können maskierte und entlarvte Bilder gezogen werden.  
+---
+# <a name="dragging-images-from-an-image-list"></a>Dragging Images from an Image List
+[CImageList](../mfc/reference/cimagelist-class.md) includes functions for dragging an image on the screen. The dragging functions move an image smoothly, in color, and without any flashing of the cursor. Both masked and unmasked images can be dragged.  
   
- Die [BeginDrag](../Topic/CImageList::BeginDrag.md)\-Memberfunktion startet einen Ziehvorgang.  Die Parameter enthalten den Index des Bilds, um zu ziehen und den Speicherort des Hotspots innerhalb des Bilds.  Der Hotspot ist ein einzelnes Pixel, das die Funktionen als genaue ziehenden die Bildschirmposition des Bilds erkennen.  Normalerweise legt eine Anwendung den Hotspot, sodass diese mit dem Hotspot des Mauszeigers entspricht.  Die [DragMove](../Topic/CImageList::DragMove.md)\-Memberfunktion bewegt das Bild auf eine neue Position.  
+ The [BeginDrag](../mfc/reference/cimagelist-class.md#begindrag) member function begins a drag operation. The parameters include the index of the image to drag and the location of the hot spot within the image. The hot spot is a single pixel that the dragging functions recognize as the exact screen location of the image. Typically, an application sets the hot spot so that it coincides with the hot spot of the mouse cursor. The [DragMove](../mfc/reference/cimagelist-class.md#dragmove) member function moves the image to a new location.  
   
- Die [DragEnter](../Topic/CImageList::DragEnter.md)\-Memberfunktion wird die Anfangsposition des Ziehbilds in einem Fenster fest und zeichnet das Bild an der Position.  Die Parameter beinhalten einen Zeiger auf das Fenster, in dem das Bild und einen Punkt zeichnen, der Koordinaten der Anfangsposition innerhalb des Fensters angibt.  Die Koordinaten sind relativ zur linken oberen Ecke des Fensters, nicht der Clientbereich.  Das gilt für alle Bild\-Ziehen funktioniert erfüllt, dass Verwendet als Parameter koordiniert.  Dies bedeutet, dass Sie die Breite von Fensterelementen, beispielsweise Rahmen, der Titelleiste und der Menüleiste es müssen, wenn Sie die Koordinaten der Stelle angeben.  Wenn Sie einem Fensterhandle **NULL** angeben, wenn Sie auf, rufen `DragEnter`, zeichnen die ziehenden Funktionen das Bild im Gerätekontext, der dem im Desktopfenster zugeordnet ist, und die Koordinaten sind relativ zur linken oberen Ecke des Bildschirms.  
+ The [DragEnter](../mfc/reference/cimagelist-class.md#dragenter) member function sets the initial position of the drag image within a window and draws the image at the position. The parameters include a pointer to the window in which to draw the image and a point that specifies the coordinates of the initial position within the window. The coordinates are relative to the window's upper-left corner, not the client area. The same is true for all of the image-dragging functions that take coordinates as parameters. This means you must compensate for the widths of window elements, such as the border, title bar, and menu bar, when specifying the coordinates. If you specify a **NULL** window handle when calling `DragEnter`, the dragging functions draw the image in the device context associated with the desktop window, and the coordinates are relative to the upper-left corner of the screen.  
   
- `DragEnter` sperrt alle anderen Aktualisierungen am angegebenen Fenster während des Ziehvorgangs.  Wenn Sie eine beliebige Zeichnung während eines Ziehvorgangs, wie Hervorheben des Ziels eines Drag & Drop\-Vorgangs ausführen müssen, können Sie das gezogene Bild vorübergehend ausblenden, indem Sie die Memberfunktion [DragLeave](../Topic/CImageList::DragLeave.md) verwenden.  Sie können die [DragShowNoLock](../Topic/CImageList::DragShowNolock.md)\-Memberfunktion auch verwenden.  
+ `DragEnter` locks all other updates to the given window during the drag operation. If you need to do any drawing during a drag operation, such as highlighting the target of a drag-and-drop operation, you can temporarily hide the dragged image by using the [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) member function. You can also use the [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) member function.  
   
- Rufen Sie [EndDrag](../Topic/CImageList::EndDrag.md) auf, wenn Sie das Bild " erfolgen.  
+ Call [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) when you're done dragging the image.  
   
- Die Memberfunktion [SetDragCursorImage](../Topic/CImageList::SetDragCursorImage.md) erstellt ein neues Ziehbild, indem die angegebene Abbildung \(in der Regel ein Mauszeigerbild\) mit dem aktuellen Ziehbild kombiniert.  Da die neue ziehenden Funktionen das Bild während eines Ziehvorgangs verwenden, sollten Sie der Windows\-Funktion [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) verwenden, um den tatsächlichen Mauszeiger auszublenden, nachdem Sie `SetDragCursorImage` aufgerufen haben.  Andernfalls wird möglicherweise das System, zwei Mauszeiger für die Dauer des Ziehvorgangs zu haben.  
+ The [SetDragCursorImage](../mfc/reference/cimagelist-class.md#setdragcursorimage) member function creates a new drag image by combining the given image (typically a mouse cursor image) with the current drag image. Because the dragging functions use the new image during a drag operation, you should use the Windows [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) function to hide the actual mouse cursor after calling `SetDragCursorImage`. Otherwise, the system may appear to have two mouse cursors for the duration of the drag operation.  
   
- Wenn eine Anwendung `BeginDrag` aufruft, erstellt das System eine temporäre, interne Bildliste und Default.css das angegebene Ziehbild zur internen Liste.  Sie können einen Zeiger auf die temporären Ziehbildliste abrufen, indem Sie die Memberfunktion [GetDragImage](../Topic/CImageList::GetDragImage.md) verwenden.  Die Funktion ruft außerdem die aktuelle Ziehposition und den Offset des Ziehbilds relativ zur Ziehposition ab.  
+ When an application calls `BeginDrag`, the system creates a temporary, internal image list and copies the specified drag image to the internal list. You can retrieve a pointer to the temporary drag image list by using the [GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage) member function. The function also retrieves the current drag position and the offset of the drag image relative to the drag position.  
   
-## Siehe auch  
- [Verwenden von CImageList](../mfc/using-cimagelist.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

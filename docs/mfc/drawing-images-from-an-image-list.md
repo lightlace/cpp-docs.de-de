@@ -1,44 +1,63 @@
 ---
-title: "Darstellen von Bildern aus einer Bildliste | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList-Klasse, Bilder zeichnen aus"
-  - "zeichnen, Bilder aus der Bilderliste"
-  - "Bilderlisten [C++], Bilder zeichnen aus"
-  - "Bilder [C++], zeichnen"
+title: Drawing Images from an Image List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], drawing images from
+- drawing [MFC], images from image lists
+- image lists [MFC], drawing images from
+- images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Darstellen von Bildern aus einer Bildliste
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0ffa8a402eb7a9c34d2496a39621f12310df12c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Um ein Bild zu zeichnen, verwenden Sie die [CImageList::Draw](../Topic/CImageList::Draw.md)\-Memberfunktion.  Sie geben einen Zeiger auf ein Gerätekontextobjekt, der Index des Bildes, um zu zeichnen, der Speicherort im Gerätekontext, an dem das Bild gezeichnet und ein Satz von Flags, um dem Zeichnungsformat anzugeben.  
+---
+# <a name="drawing-images-from-an-image-list"></a>Drawing Images from an Image List
+To draw an image, use the [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) member function. You'll specify a pointer to a device context object, the index of the image to draw, the location in the device context at which to draw the image, and a set of flags to indicate the drawing style.  
   
- Wenn Sie dem Stil `ILD_TRANSPARENT` angeben, verwendet **Zeichnen** einen Vorgang in zwei Schritten, ein maskiertes Bild zu zeichnen.  Zuerst wird ein Vorgang des logischen AND\-Vorgangs auf den Bits des Bilds und den Bits der Maske aus.  Anschließend führt ein Vorgang LogischXOR auf dem Ergebnis des ersten Vorgangs und der Hintergrundbits des Zielgerätekontexts aus.  Dieser Prozess erstellt transparente Bereiche im resultierenden Bild; das bedeutet, dass jedes Bit weiße in der Maske das entsprechende Bit im resultierenden Bild, transparent sein.  
+ When you specify the `ILD_TRANSPARENT` style, **Draw** uses a two-step process to draw a masked image. First, it performs a logical-AND operation on the bits of the image and the bits of the mask. Then it performs a logical-XOR operation on the results of the first operation and the background bits of the destination device context. This process creates transparent areas in the resulting image; that is, each white bit in the mask causes the corresponding bit in the resulting image to be transparent.  
   
- Bevor Sie ein maskiertes Bild auf einem Volltonfarbenhintergrund zeichnen, können Sie die Memberfunktion [SetBkColor](../Topic/CImageList::SetBkColor.md) verwenden, um die Hintergrundfarbe der Bildliste auf die gleiche Farbe wie das Ziel festzulegen.  Das Festlegen der Farbe entfällt die Notwendigkeit, transparente Bereiche im Bild zu erstellen und aktiviert **Zeichnen**, um das Bild auf Zielgerätekontext, und einen beträchtlichen Anstiegs in der Leistung einfach zu kopieren.  Um das Bild zu zeichnen, geben Sie den `ILD_NORMAL` Format an wenn Sie **Zeichnen** aufrufen.  
+ Before drawing a masked image on a solid color background, you should use the [SetBkColor](../mfc/reference/cimagelist-class.md#setbkcolor) member function to set the background color of the image list to the same color as the destination. Setting the color eliminates the need to create transparent areas in the image and enables **Draw** to simply copy the image to the destination device context, resulting in a significant increase in performance. To draw the image, specify the `ILD_NORMAL` style when you call **Draw**.  
   
- Sie können die Hintergrundfarbe für eine maskierte Bildliste \([CImageList](../mfc/reference/cimagelist-class.md)\) jederzeit festlegen, damit sie korrekt auf jedem ausgefüllten Hintergrund.  Das Festlegen der Hintergrundfarbe auf `CLR_NONE` bewirkt Bilder, standardmäßig transparent gezeichnet werden.  Wenn Sie die Hintergrundfarbe einer Bildliste abzurufen, verwenden Sie die [GetBkColor](../Topic/CImageList::GetBkColor.md)\-Memberfunktion.  
+ You can set the background color for a masked image list ([CImageList](../mfc/reference/cimagelist-class.md)) at any time so that it draws correctly on any solid background. Setting the background color to `CLR_NONE` causes images to be drawn transparently by default. To retrieve the background color of an image list, use the [GetBkColor](../mfc/reference/cimagelist-class.md#getbkcolor) member function.  
   
- Das `ILD_BLEND25` und `ILD_BLEND50` Formatzittern das Bild mit der Systemhervorhebungsfarbe.  Diese Formate sind nützlich, wenn Sie ein maskiertes Bild verwenden, um ein Objekt dargestellt, das der Benutzer auswählen kann.  Beispielsweise können Sie das Format `ILD_BLEND50` verwenden, um das Bild zu zeichnen, wenn der Benutzer es auswählen.  
+ The `ILD_BLEND25` and `ILD_BLEND50` styles dither the image with the system highlight color. These styles are useful if you use a masked image to represent an object that the user can select. For example, you can use the `ILD_BLEND50` style to draw the image when the user selects it.  
   
- Ein nicht maskiertes Bild wird dem Zielgerätekontext mithilfe des **SRCCOPY** Rastervorgangs kopiert.  Die Farben im Bild werden identisch dargestellt unabhängig davon die Hintergrundfarbe des Gerätekontexts.  Die Zeichnungsformate, die in **Zeichnen** angegeben haben, werden auch keine Auswirkungen auf die Darstellung eines nicht maskierten Bilds.  
+ A nonmasked image is copied to the destination device context using the **SRCCOPY** raster operation. The colors in the image appear the same regardless of the background color of the device context. The drawing styles specified in **Draw** also have no effect on the appearance of a nonmasked image.  
   
- Zusätzlich zur Memberfunktion Videofunktionen erweitert anderen Funktion, [DrawIndirect](../Topic/CImageList::DrawIndirect.md), die Fähigkeit, ein Bild zu rendern.  `DrawIndirect` akzeptiert, als Parameter, eine [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)\-Struktur.  Diese Struktur kann verwendet werden, um das Rendern des Bilds aktuellen, einschließlich der Verwendung von Rastervorgangs\- \(ROP\)\- Code anpassen.  Weitere Informationen über Überrollschutzvorrichtungs\-Codes, finden Sie unter [Raster\-Operationscodes](http://msdn.microsoft.com/library/windows/desktop/dd162892) und [Bitmaps als Pinsel](http://msdn.microsoft.com/library/windows/desktop/dd183378) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ In addition to the Draw member function, another function, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), extends the ability to render an image. `DrawIndirect` takes, as a parameter, an [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) structure. This structure can be used to customize the rendering of the current image, including the use of raster operation (ROP) codes. For more information on ROP codes, see [Raster Operation Codes](http://msdn.microsoft.com/library/windows/desktop/dd162892) and [Bitmaps as Brushes](http://msdn.microsoft.com/library/windows/desktop/dd183378) in the Windows SDK.  
   
-## Siehe auch  
- [Verwenden von CImageList](../mfc/using-cimagelist.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

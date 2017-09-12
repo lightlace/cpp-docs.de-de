@@ -1,54 +1,73 @@
 ---
-title: "Struktursteuerelementstile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TVS_SINGLEEXPAND"
-  - "TVS_LINESATROOT"
-  - "TVS_HASBUTTONS"
-  - "TVS_NOTOOLTIPS"
-  - "TVS_HASLINES"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl-Klasse, Stile"
-  - "Stile, CTreeCtrl"
-  - "Stile, Struktursteuerelemente"
-  - "Struktursteuerelemente, Stile"
-  - "TVS_EDITLABELS"
-  - "TVS_HASBUTTONS"
-  - "TVS_HASLINES"
-  - "TVS_LINESATROOT"
-  - "TVS_NOTOOLTIPS"
-  - "TVS_SINGLEEXPAND"
+title: Tree Control Styles | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TVS_SINGLEEXPAND
+- TVS_LINESATROOT
+- TVS_HASBUTTONS
+- TVS_NOTOOLTIPS
+- TVS_HASLINES
+dev_langs:
+- C++
+helpviewer_keywords:
+- TVS_LINESATROOT [MFC]
+- styles [MFC], CTreeCtrl
+- styles [MFC], tree control
+- TVS_HASLINES
+- TVS_SINGLEEXPAND
+- CTreeCtrl class [MFC], styles
+- TVS_EDITLABELS [MFC]
+- TVS_NOTOOLTIPS [MFC]
+- TVS_HASBUTTONS [MFC]
+- tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Struktursteuerelementstile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 33908c85a1d2df039dbd0d120a98d89a23e0b060
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Formate der Strukturansicht \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) steuern Aspekte der Darstellung einer Strukturansicht.  Sie legen der ursprünglichen formatieren, sofern Sie die Strukturansicht erstellen.  Sie können die Stile abrufen und ändern, nachdem Sie das Struktursteuerelement erstellt haben, indem Sie die [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) und [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) verwenden Windows\-Funktionen und **GWL\_STYLE** für den `nIndex`\-Parameter angeben.  Eine vollständige Liste von Formaten, finden Sie im [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] unter [Strukturansicht\-Steuerelement\-Fensterstile](http://msdn.microsoft.com/library/windows/desktop/bb760013).  
+---
+# <a name="tree-control-styles"></a>Tree Control Styles
+Tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) styles govern aspects of a tree control's appearance. You set the initial styles when you create the tree control. You can retrieve and change the styles after creating the tree control by using the [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) and [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows functions, specifying **GWL_STYLE** for the `nIndex` parameter. For a complete list of styles, see [Tree View Control Window Styles](http://msdn.microsoft.com/library/windows/desktop/bb760013) in the Windows SDK.  
   
- Das **TVS\_HASLINES** Format erhöht die grafische Darstellung der Hierarchie einer Strukturansicht, indem Zeilen zeichnet, die untergeordnete Elemente zu den entsprechenden übergeordneten Element erstellen.  Dieses Format verknüpft Elemente nicht im Stamm der Hierarchie.  Hierzu, müssen Sie **TVS\_HASLINES** und **TVS\_LINESATROOT** Stile kombinieren.  
+ The **TVS_HASLINES** style enhances the graphic representation of a tree control's hierarchy by drawing lines that link child items to their corresponding parent item. This style does not link items at the root of the hierarchy. To do so, you need to combine the **TVS_HASLINES** and **TVS_LINESATROOT** styles.  
   
- Der Benutzer kann die Liste eines übergeordneten Elements der untergeordneten Elemente erweitern oder reduzieren, indem Sie auf das übergeordnete Element öffnen.  Eine Strukturansicht, das **TVS\_SINGLEEXPAND** Format hat, führt das Element, das ausgewählt werden, um sich selbst zu erweitern und das Element, das nicht aktiviert ist zu reduzieren.  Wenn die Maus z auf das ausgewählte Element verwendet wird und dieses Element geschlossen wird, wird es erweitert.  Wenn auf das ausgewählte Element einzel\-geklickt wird, wenn es geöffnet ist, wird sie reduziert.  
+ The user can expand or collapse a parent item's list of child items by double-clicking the parent item. A tree control that has the **TVS_SINGLEEXPAND** style causes the item being selected to expand and the item being unselected to collapse. If the mouse is used to single-click the selected item and that item is closed, it will be expanded. If the selected item is single-clicked when it is open, it will be collapsed.  
   
- Eine Strukturansicht, das **TVS\_HASBUTTONS** Format hat, eine Schaltfläche der linken Seite jedes übergeordneten Elements hinzu.  Der Benutzer kann auf die Schaltfläche klicken, um die untergeordneten Haltepunkte als Alternative zum Doppelklicken auf das übergeordnete Element zu erweitern oder zu reduzieren.  **TVS\_HASBUTTONS** fügt Schaltflächen nicht Elemente am Stamm der Hierarchie hinzu.  Hierzu, müssen Sie **TVS\_HASLINES**, **TVS\_LINESATROOT** und **TVS\_HASBUTTONS** kombinieren.  
+ A tree control that has the **TVS_HASBUTTONS** style adds a button to the left side of each parent item. The user can click the button to expand or collapse the child items as an alternative to double-clicking the parent item. **TVS_HASBUTTONS** does not add buttons to items at the root of the hierarchy. To do so, you must combine **TVS_HASLINES**, **TVS_LINESATROOT**, and **TVS_HASBUTTONS**.  
   
- Das **TVS\_EDITLABELS** Format ermöglicht es, damit der Benutzer die Bezeichnungen von Strukturansicht\-Steuerelement\-Elementen bearbeitet.  Weitere Informationen über Bearbeitungsbezeichnungen, finden Sie unter [Strukturansicht\-Steuerelement\-Bezeichnungs\-Bearbeitung](../mfc/tree-control-label-editing.md) weiter unten in diesem Thema.  
+ The **TVS_EDITLABELS** style makes it possible for the user to edit the labels of tree control items. For more information about editing labels, see [Tree Control Label Editing](../mfc/tree-control-label-editing.md) later in this topic.  
   
- Das **TVS\_NOTOOLTIPS** Format deaktiviert die automatische QuickInfofunktion von Strukturansicht\-Steuerelementen.  Diese Funktion wird automatisch eine QuickInfo an und enthält den Titel des Elements unter dem Mauszeiger, wenn der gesamte Titel nicht gerade sichtbar ist.  
+ The **TVS_NOTOOLTIPS** style disables the automatic tool tip feature of tree view controls. This feature automatically displays a tool tip, containing the title of the item under the mouse cursor, if the entire title is not currently visible.  
   
-## Siehe auch  
- [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

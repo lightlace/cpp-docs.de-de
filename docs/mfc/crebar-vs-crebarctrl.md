@@ -1,47 +1,66 @@
 ---
-title: "CReBar im Vergleich zu CReBarCtrl"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "CReBar"
-  - "CReBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CReBar-Klasse, kontra CReBarCtrl"
-  - "GetReBarCtrl-Klasse"
-  - "rebar-Steuerelemente, CReBarCtrl-Klasse"
+title: CReBar vs. CReBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CReBar
+- CReBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CReBar class [MFC], vs. CReBarCtrl
+- rebar controls [MFC], CReBarCtrl class [MFC]
+- GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
 caps.latest.revision: 10
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CReBar im Vergleich zu CReBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 65b809ff977182ff3ef4248d9794f4ae002529c1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-MFC stellt zwei Klassen, um Infoleisten zu erstellen: [CReBar](../mfc/reference/crebar-class.md) und [CReBarCtrl](../mfc/reference/crebarctrl-class.md) \(das die API des allgemeinen Windows\-Steuerelements umschließt\).  **CReBar** stellt alle Funktionen der Infoleistengemeinsamen allgemeinen ToolTip\-Steuerelement, und sie behandelt viele der erforderlichen Einstellungen und Strukturen der allgemeinen Steuerelement für Sie.  
+---
+# <a name="crebar-vs-crebarctrl"></a>CReBar vs. CReBarCtrl
+MFC provides two classes to create rebars: [CReBar](../mfc/reference/crebar-class.md) and [CReBarCtrl](../mfc/reference/crebarctrl-class.md) (which wraps the Windows common control API). **CReBar** provides all of the functionality of the rebar common control, and it handles many of the required common control settings and structures for you.  
   
- `CReBarCtrl` ist eine Wrapperklasse für das Win32\-Infoleiste\-Steuerelement und daher möglicherweise einfacher zu implementieren, wenn Sie nicht beabsichtigen, die Infoleiste in die MFC\-Architektur zu integrieren.  Wenn Sie planen, `CReBarCtrl` verwenden und die Infoleiste in die MFC\-Architektur zu integrieren, müssen Sie zusätzliche darauf achten, um Infoleiste\-Steuerelement\-Manipulationen zu MFC mitzuteilen.  Diese Kommunikation ist nicht schwierig; ist es jedoch weitere Arbeitschritte, die nicht erforderlich ist, wenn Sie **CReBar** verwenden.  
+ `CReBarCtrl` is a wrapper class for the Win32 rebar control, and therefore may be easier to implement if you do not intend to integrate the rebar into the MFC architecture. If you plan to use `CReBarCtrl` and integrate the rebar into the MFC architecture, you must take additional care to communicate rebar control manipulations to MFC. This communication is not difficult; however, it is additional work that is unneeded when you use **CReBar**.  
   
- Visual C\+\+ bietet zwei Möglichkeiten, die Infoleistengemeinsame allgemeinen ToolTip\-Steuerelement zu nutzen.  
+ Visual C++ provides two ways to take advantage of the rebar common control.  
   
--   Stellen Sie die Infoleiste mit **CReBar**, und rufen Sie anschließend [CReBar::GetReBarCtrl](../Topic/CReBar::GetReBarCtrl.md) auf, um den Zugriff auf den `CReBarCtrl`\-Memberfunktionen abzurufen.  
+-   Create the rebar using **CReBar**, and then call [CReBar::GetReBarCtrl](../mfc/reference/crebar-class.md#getrebarctrl) to get access to the `CReBarCtrl` member functions.  
   
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl` ist eine Inlinedatei Memberfunktion, die den Zeiger des **this** Infoleistenobjekts umwandeln.  Dies bedeutet, dass die Laufzeit der Funktionsaufruf keinen Aufwand hat.  
+    >  `CReBar::GetReBarCtrl` is an inline member function that casts the **this** pointer of the rebar object. This means that, at run time, the function call has no overhead.  
   
--   Stellen Sie die Infoleiste mit [CReBarCtrl](../mfc/reference/crebarctrl-class.md)\-Konstruktors erstellt.  
+-   Create the rebar using [CReBarCtrl](../mfc/reference/crebarctrl-class.md)'s constructor.  
   
- Jede Methode gibt Ihnen Zugriff in Memberfunktionen des Infoleiste\-Steuerelements.  Wenn Sie `CReBar::GetReBarCtrl` aufrufen, wird ein Verweis auf ein `CReBarCtrl`\-Objekt zurück, sodass Sie alle verwenden festlegen von Memberfunktionen.  Siehe [CReBar](../mfc/reference/crebar-class.md) zu Informationen über das Erstellen und das Erstellen einer Infoleiste mit **CReBar**.  
+ Either method will give you access to the member functions of the rebar control. When you call `CReBar::GetReBarCtrl`, it returns a reference to a `CReBarCtrl` object so you can use either set of member functions. See [CReBar](../mfc/reference/crebar-class.md) for information on constructing and creating a rebar using **CReBar**.  
   
-## Siehe auch  
- [Verwenden von CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

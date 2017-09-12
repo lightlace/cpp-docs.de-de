@@ -1,60 +1,78 @@
 ---
-title: "Assistenten und der Ressourcen-Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Anwendungsassistenten [C++], und MFC"
-  - "Klassenansicht (Tool), Verwalten von Windows-Meldungen"
-  - "Editoren, Ressource"
-  - "MFC [C++], Ressourcen-Editoren"
-  - "MFC [C++], Assistenten"
-  - "MFC-Anwendungs-Assistent"
-  - "Ressourcen-Editoren, MFC"
-  - "Assistenten [C++], MFC-Programmierung"
-  - "Assistenten [MFC]"
+title: Wizards and the Resource Editors | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- application wizards [MFC], and MFC
+- MFC, resource editors
+- resource editors, MFC
+- MFC Application Wizard
+- editors [MFC], resource
+- wizards [MFC]
+- wizards [MFC], MFC programming
+- MFC, wizards
+- Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Assistenten und der Ressourcen-Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0fc43b45dbdcf2af4fa71fe6b10b8956f943daa9
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Visual C\+\+ enthält einigen Assistenten zur Verwendung in MFC\-Programmierung, zusammen mit vielen integrierten Ressourcen\-Editoren ein.  Für programmierende ActiveX\-Steuerelemente, dient [ActiveX\-Steuerelement\-Assistent](../mfc/reference/mfc-activex-control-wizard.md) einen Zweck ähnlich dem des MFC\-Anwendungs\-Assistenten.  Während Sie MFC\-Anwendungen ohne die meisten dieser Tools schreiben können, die Tools vereinfachen und erheblich beschleunigen die Arbeit.  
+---
+# <a name="wizards-and-the-resource-editors"></a>Wizards and the Resource Editors
+Visual C++ includes several wizards for use in MFC programming, along with many integrated resource editors. For ActiveX controls programming, the [ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md) serves a purpose much like that of the MFC Application Wizard. While you can write MFC applications without most of these tools, the tools greatly simplify and speed your work.  
   
-##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> Verwenden Sie den MFC\-Anwendungs\-Assistenten, eine MFC\-Anwendung zu erstellen  
- Verwenden Sie [MFC\-Anwendungs\-Assistent](../mfc/reference/mfc-application-wizard.md), um ein MFC\-Projekt in Visual C\+\+ erstellen, die OLE und Datenbankunterstützung einschließen kann.  Dateien im Projekt enthalten die Anwendung, dokumentieren, zeigen und Rahmenfensterklassen an; Standardressourcen, einschließlich Menüs und eine optionale Symbolleiste; andere erforderliche Windows\-Dateien; und optionales .rtf Dateien das Einbinden von Standard\-Windows\-Hilfethemen, die Sie überarbeiten und erweitern können, um Hilfedatei des Programms zu erstellen.  
+##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> Use the MFC Application Wizard to Create an MFC Application  
+ Use the [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md) to create an MFC project in Visual C++, which can include OLE and database support. Files in the project contain your application, document, view, and frame-window classes; standard resources, including menus and an optional toolbar; other required Windows files; and optional .rtf files containing standard Windows Help topics that you can revise and augment to create your program's help file.  
   
-##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> Verwendungs\-Klassenansicht, um Klassen von Windows\-Meldungen von und zu verwalten  
- Erstellen Sie Klassenansichtshilfen Handlerfunktionen für Windows\-Meldungen und Befehle, erstellen und verwalten, erstellen Klassen Klassenmembervariablen, erstellen Automatisierungsmethoden und Eigenschaften, erstellen Datenbankklassen und mehr.  
+##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> Use Class View to Manage Classes and Windows Messages  
+ Class View helps you create handler functions for Windows messages and commands, create and manage classes, create class member variables, create Automation methods and properties, create database classes, and more.  
   
 > [!NOTE]
->  Der Klassenansicht ist auch hilfreich, z virtueller Funktionen in MFC\-Klassen zu überschreiben.  Wählen Sie die Klasse und die virtuelle Funktion aus, um zu überschreiben.  Der Rest des Prozesses ist die Meldungsbehandlung ähnlich, wie in den folgenden Abschnitten beschrieben.  
+>  Class View also helps you to override virtual functions in the MFC classes. Select the class and the virtual function to override. The rest of the process is similar to message handling, as described in the following paragraphs.  
   
- Anwendungen, die unter Windows ausgeführt, sind [Meldung gesteuert](../mfc/message-handling-and-mapping.md).  Benutzeraktionen und andere Ereignisse, die in der ausgeführten Programmursache Windows auftreten, um Nachrichten zu Fenstern im Programm zu senden.  Wenn der Benutzer mit der Maus in einem Fenster klickt, Windows `WM_LBUTTONDOWN` sendet eine Meldung, wenn die linke Maustaste und eine Meldung `WM_LBUTTONUP` gedrückt wird, wenn die Schaltfläche freigegeben wird.  Windows wird außerdem **WM\_COMMAND** Meldungen, wenn der Benutzer Befehle in der Menüleiste auswählt.  
+ Applications running under Windows are [message driven](../mfc/message-handling-and-mapping.md). User actions and other events that occur in the running program cause Windows to send messages to the windows in the program. For example, if the user clicks the mouse in a window, Windows sends a `WM_LBUTTONDOWN` message when the left mouse button is pressed and a `WM_LBUTTONUP` message when the button is released. Windows also sends **WM_COMMAND** messages when the user selects commands from the menu bar.  
   
- Im MFC\-Framework können verschiedene Objekte, wie Dokumente, Ansichten, Rahmenfenster, Dokumentvorlagen und das Anwendungsobjekt, Meldungen "bearbeiten".  Ein solches Objekt stellt eine Handlerfunktion "" als eine der Memberfunktionen bereit, und das Framework ordnet der eingehenden Meldungen zu seinem Handler an.  
+ In the MFC framework, various objects, such as documents, views, frame windows, document templates, and the application object, can "handle" messages. Such an object provides a "handler function" as one of its member functions, and the framework maps the incoming message to its handler.  
   
- Ein großer Teil der Programmieraufgabe wählt aus, der mit welchen Objekten und diese Zuordnung dann zu implementieren zuzuordnen die Meldungen.  Dazu verwenden Sie die Klassenansicht, und das Eigenschaftenfenster.  
+ A large part of your programming task is choosing which messages to map to which objects and then implementing that mapping. To do so, you use Class View and the Properties window.  
   
- Das Eigenschaftenfenster wird leere Meldungshandlermemberfunktionen, und Sie verwenden den Quellcode\-Editor, um den Text des Handlers zu implementieren.  Sie können Klassen \(einschließlich Klassen von eigenen, nicht von MFC\-Klassen abgeleitet\) und ihre Member mit Klassenansicht auch erstellen oder bearbeiten.  Weitere Informationen über die Verwendung der Klassenansicht und über Assistenten, die einem Projekt Code hinzufügen können, finden Sie unter [Hinzufügen neuer Funktionen mit Code\-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md).  
+ The Properties window will create empty message-handler member functions, and you use the source code editor to implement the body of the handler. You can also create or edit classes (including classes of your own, not derived from MFC classes) and their members with Class View. For more information on using Class View and about wizards that add code to a project, see [Adding Functionality with Code Wizards](../ide/adding-functionality-with-code-wizards-cpp.md).  
   
-##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> Verwenden Sie den Ressourcen\-Editoren, um Ressourcen zu erstellen und zu bearbeiten  
- Verwenden Sie [Ressourcen\-Editoren](../mfc/resource-editors.md) von Visual C\+\+, um Menüs, Dialogfeldern, benutzerdefinierte Steuerelemente, Zugriffstasten, Bitmaps, Symbole, Cursor, Zeichenfolgen und Freigeben der verwendeten Ressourcen zu erstellen und zu bearbeiten.  Ab Visual C\+\+\-Version 4.0, macht ein Symbolleisten\-Editor, Symbolleisten Erstellen einfacher.  
+##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> Use the Resource Editors to Create and Edit Resources  
+ Use the Visual C++ [resource editors](../windows/resource-editors.md) to create and edit menus, dialog boxes, custom controls, accelerator keys, bitmaps, icons, cursors, strings, and version resources. As of Visual C++ version 4.0, a toolbar editor makes creating toolbars much easier.  
   
- Um Sie sogar zu erleichtern, stellt die Microsoft Foundation Class\-Bibliothek eine Datei mit dem Namen COMMON.RES, die "ClipArt\-" Ressourcen enthält die Sie von COMMON.RES und in eigene Ressourcendatei kopieren können.  COMMON.RES schließt Symbolleistenschaltflächen, allgemeine Cursor, Symbole und mehr ein.  Sie können diese Ressourcen in der Anwendung verwenden, ändern und verteilen.  Weitere Informationen über COMMON.RES, finden Sie unter [ClipArt\-Beispiel](../top/visual-cpp-samples.md).  
+ To help you even more, the Microsoft Foundation Class Library provides a file called COMMON.RES, which contains "clip art" resources that you can copy from COMMON.RES and paste into your own resource file. COMMON.RES includes toolbar buttons, common cursors, icons, and more. You can use, modify, and redistribute these resources in your application. For more information about COMMON.RES, see the [Clipart sample](../visual-cpp-samples.md).  
   
- Der MFC\-Anwendungs\-Assistent, die Visual C\+\+\-Assistenten, die Verwendung und das MFC\-Framework übernehmen deutlich Arbeit für Sie und ausführen, den Code Verwalten viel einfacher.  Die Sammelverarbeitung anwendungsspezifischen des Codes sind im Dokument in und Ansichtsklassen.  
+ The MFC Application Wizard, the Visual C++ wizards, resource editors, and the MFC framework do a lot of work for you and make managing your code much easier. The bulk of your application-specific code is in your document and view classes.  
   
-## Siehe auch  
- [Verwenden der Klassen zum Schreiben von Anwendungen für Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+

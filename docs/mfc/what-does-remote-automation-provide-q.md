@@ -1,33 +1,51 @@
 ---
-title: "Welche Vorteile hat Remoteautomatisierung?"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Remoteautomatisierung, DCOM"
+title: What Does Remote Automation Provide? | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 269ad218-e164-40ef-9b87-25fcc8ba21de
 caps.latest.revision: 10
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Welche Vorteile hat Remoteautomatisierung?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 48da6339cea7c8a39d93641fa5c5a59d0a63e207
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Remote\- Automatisierung können Programme, um `IDispatch` Implementierungen auf einem anderen Computer aus aufzurufen.  Es unterstützt auch andere Schnittstellen, die durch Automatisierung, speziell **IEnumVARIANT** für Auflistungsunterstützung benötigt werden.  Es bietet die Möglichkeit, keine anderen COM\-Schnittstelle \(außer **IUnknown** zu verteilen, benötigen\), und wie reguläre Automatisierung, enthält es Marshallingsunterstützung nur für diese Datentypen, die durch Automatisierung unterstützt werden.  
+---
+# <a name="what-does-remote-automation-provide"></a>What Does Remote Automation Provide?
+Remote Automation allows programs to invoke `IDispatch` implementations on one machine from another. It also supports other interfaces required by Automation, specifically **IEnumVARIANT** for collection support. It does not provide the ability to distribute any other COM interface (except **IUnknown**, of course) and, like regular Automation, it contains marshaling support only for those data types supported by Automation.  
   
- Dieser Satz von Funktionen kann ein Programm, um auf die Methoden und Eigenschaften, einschließlich Zugriff, die Auflistungen zurückgeben oder Automatisierungsobjekte, eines Objekts fördern, das auf einen zugreifbaren Netzknoten ausgeführt wird.  Wenn die Clientcomputer auch die entsprechende Software ausgeführt wird, ist es möglich, den Server zurück an den Client, danach mithilfe der Automatisierungsfeatures aufzurufen \(dies funktioniert nur für 32\-Bit\- und 64\-Bit\-Clients, und ist mit den Ereignissen vergleichbar, obwohl nicht denselben Mechanismus verwendet\).  
+ This set of facilities allows a program to access the methods and properties, including those that return collections or further automation objects, of an object running on an accessible network node. If the client machine is also running the appropriate software, it is possible for the server to call back to the client, again using Automation facilities (this works for 32-bit and 64-bit clients only, and is conceptually similar to events, although it does not use the same mechanism).  
   
- Damit eine Anwendung sind funktional als Remote\-Agent\-Dienst Automatisierungsserver, muss sie als ausführbare Datei implementiert werden \(das heißt, als "lokaler Server" anstatt als "inproc Server"\).  
+ For an application to be operable as a Remote Automation server, it must be implemented as an executable (that is, as a "local server" rather than as an "inproc server").  
   
-## Siehe auch  
- [Wann ist Remoteautomatisierung angebracht?](../mfc/where-does-remote-automation-fit-in-q.md)   
- [DCOM\-Geschichte](../mfc/history-of-dcom.md)
+## <a name="see-also"></a>See Also  
+ [Where Does Remote Automation Fit In](where-does-remote-automation-fit-in-q.md)   
+ [History of DCOM](../mfc/history-of-dcom.md)
+

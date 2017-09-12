@@ -1,52 +1,71 @@
 ---
-title: "Speicherverwaltung: Rahmenzuordnung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Erkennen von Speicherverlusten"
-  - "Rahmenzuordnung"
-  - "Framevariablen"
-  - "Framevariablen, automatische Löschung von"
-  - "Heapzuordnung, vs. Rahmenzuordnung"
-  - "Speicherreservierung, Rahmen"
-  - "Speicherverluste, Zuordnen von Objekten im Frame"
-  - "Speicherverluste, Ermitteln"
-  - "Speicherverluste, Rahmenzuordnung"
-  - "Speicher, Erkennen von Verlusten"
-  - "Speicher, Freigeben"
-  - "Speicher, Freigeben"
-  - "Gültigkeitsbereich, Framevariablen"
-  - "Stapelrahmen"
-  - "Variablen, Framevariablen"
+title: 'Memory Management: Frame Allocation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory leaks [MFC], frame allocation
+- memory [MFC], detecting leaks
+- memory [MFC], reclaiming
+- memory allocation [MFC], frames
+- frame variables [MFC], automatic deletion of
+- scope [MFC], frame variables
+- heap allocation [MFC], vs. frame allocation
+- variables [MFC], frame variables
+- memory leaks [MFC], detecting
+- memory, releasing [MFC]
+- stack frames [MFC]
+- memory leaks [MFC], allocating objects on the frame
+- detecting memory leaks [MFC]
+- frame allocation [MFC]
+- frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Speicherverwaltung: Rahmenzuordnung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b52e647f3639977f28906f49de2d5a605bf32622
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Zuordnung in den Frames erhält seinen Namen vom "Stapelrahmen" installiert wird, wenn eine Funktion aufgerufen wird.  Der Stapelrahmen ist ein Speicherbereich, die vorübergehend die Argumente der Funktion enthält sowie weitere Variablen, die definierte lokale Variable der Funktion sind.  Feldvariablen werden häufig "auto" Variablen aufgerufen, da der Compiler automatisch den Speicherplatz für sie.  
+---
+# <a name="memory-management-frame-allocation"></a>Memory Management: Frame Allocation
+Allocation on the frame takes its name from the "stack frame" that is set up whenever a function is called. The stack frame is an area of memory that temporarily holds the arguments to the function as well as any variables that are defined local to the function. Frame variables are often called "automatic" variables because the compiler automatically allocates the space for them.  
   
- Es gibt zwei Schlüsseleigenschaften von Framezuordnungen.  Zuerst wenn Sie eine lokale Variable definieren, ist ausreichend Platz auf dem Stapelrahmen zugeordnet, um die gesamte Variable enthalten, selbst wenn ein großes Array oder eine Datenstruktur ist.  Zweitens Framevariablen werden automatisch deaktiviert, wenn sie den Gültigkeitsbereich verlassen:  
+ There are two key characteristics of frame allocations. First, when you define a local variable, enough space is allocated on the stack frame to hold the entire variable, even if it is a large array or data structure. Second, frame variables are automatically deleted when they go out of scope:  
   
- [!CODE [NVC_MFC_Utilities#10](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_Utilities#10)]  
+ [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- Für lokale Funktionsvariablen geschieht dieser Bereichsübergang, wenn die Funktion abgeschlossen, aber der Gültigkeitsbereich einer Framevariable kann als eine Funktion kleiner sein, wenn geschachtelte geschweifte Klammern verwendet werden.  Diese automatische Löschen von Framevariablen ist äußerst wichtig.  Bei der einfachen primitiven Typen \(wie `int` oder **byte**\), sind Arrays oder Datenstrukturen, das automatische Löschen einfach den Speicher frei, der von der Variablen verwendet wird.  Wenn die Variable den Gültigkeitsbereich erloschen ist, kann auf sie keine zur zugegriffen werden.  Bei C\+\+\-Objekte jedoch ist der Prozess des automatischen Löschens ein bisschen komplizierter.  
+ For local function variables, this scope transition happens when the function exits, but the scope of a frame variable can be smaller than a function if nested braces are used. This automatic deletion of frame variables is very important. In the case of simple primitive types (such as `int` or **byte**), arrays, or data structures, the automatic deletion simply reclaims the memory used by the variable. Since the variable has gone out of scope, it cannot be accessed anyway. In the case of C++ objects, however, the process of automatic deletion is a bit more complicated.  
   
- Wenn ein Objekt als Framevariable definiert wird, wird der Konstruktor automatisch am Punkt aufgerufen, in dem die Definition erreicht wird.  Wenn das Objekt den Gültigkeitsbereich verlässt, wird ihr Destruktor automatisch aufgerufen, bevor der Speicher des Objekts freigegeben wird.  Diese automatische Erstellung und Zerstörung können sehr zweckmäßig, müssen Sie jedoch die automatische Aufrufe, insbesondere den Destruktor berücksichtigen.  
+ When an object is defined as a frame variable, its constructor is automatically invoked at the point where the definition is encountered. When the object goes out of scope, its destructor is automatically invoked before the memory for the object is reclaimed. This automatic construction and destruction can be very handy, but you must be aware of the automatic calls, especially to the destructor.  
   
- Der Hauptvorteil beim Verknüpfen von Objekten über den Frame ist, dass es automatisch gelöscht werden.  Wenn Sie den Objekten über den Frame zuordnen, müssen Sie sich nicht um die vergessenen Objekte befürchten, die Speicherverluste verursachen. \(Ausführliche Informationen zu Speicherverlusten, finden Sie im Artikel [Erkennen von Speicherverlusten in MFC](assetId:///29ee8909-96e9-4246-9332-d3a8aa8d4658).\) Ein Nachteil der Framezuordnung ist, dass Framevariablen nicht außerhalb des Bereichs verwendet werden können.  Ein weiterer Faktor, wenn er Framezuordnung anhand Heapreservierung auswählt, ist der für große Strukturen und Objekte, ist es oft leichter, den Heap anstelle des Stapels zum Speichern zu verwenden, da Stapelspeicher oft eingeschränkt wird.  
+ The key advantage of allocating objects on the frame is that they are automatically deleted. When you allocate your objects on the frame, you don't have to worry about forgotten objects causing memory leaks. (For details on memory leaks, see the article [Detecting Memory Leaks in MFC](http://msdn.microsoft.com/en-us/29ee8909-96e9-4246-9332-d3a8aa8d4658).) A disadvantage of frame allocation is that frame variables cannot be used outside their scope. Another factor in choosing frame allocation versus heap allocation is that for large structures and objects, it is often better to use the heap instead of the stack for storage since stack space is often limited.  
   
-## Siehe auch  
- [Speicherverwaltung](../mfc/memory-management.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management](../mfc/memory-management.md)
+
+

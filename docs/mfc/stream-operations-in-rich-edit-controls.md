@@ -1,38 +1,57 @@
 ---
-title: "Streamoperationen in RichEdit-Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl-Klasse, Streamoperationen"
-  - "CRichEditCtrl-Klasse, Streamspeicher"
-  - "Rich-Edit-Steuerelemente, Streamoperationen"
-  - "Speicher, Stream in CRichEditCtrl"
-  - "Streamvorgänge in CRichEditCtrl"
-  - "Streamspeicher und CRichEditCtrl"
+title: Stream Operations in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRichEditCtrl class [MFC], stream operations
+- CRichEditCtrl class [MFC], stream storage
+- rich edit controls [MFC], stream operations
+- storage, stream in CRichEditCtrl
+- stream operations in CRichEditCtrl
+- stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Streamoperationen in RichEdit-Steuerelementen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6db5dc840d0fdd08f1f04107b53fa69a7ff4fff3
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Sie können Streams für Datenübertragung in oder aus einem Rich\-Edit\-Steuerelement \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) verwenden.  Ein Stream wird durch eine [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891)\-Struktur definiert, die einen Puffer und eine anwendungsdefinierte Rückruffunktion angibt.  
+---
+# <a name="stream-operations-in-rich-edit-controls"></a>Stream Operations in Rich Edit Controls
+You can use streams to transfer data into or out of a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). A stream is defined by an [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure, which specifies a buffer and an application-defined callback function.  
   
- Um Daten in ein Rich\-Edit\-Steuerelement zu lesen \(Objekts bedeutet, dass Sie die Daten in\), verwenden Sie die [StreamIn](../Topic/CRichEditCtrl::StreamIn.md)\-Memberfunktion.  Das Steuerelement ruft wiederholt die anwendungsdefinierte Rückruffunktion auf, die einen Teil der Daten in den Puffer jedes Mal überträgt.  
+ To read data into a rich edit control (that is, stream the data in), use the [StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) member function. The control repeatedly calls the application-defined callback function, which transfers a portion of the data into the buffer each time.  
   
- Um Inhalte eines Rich\-Edit\-Steuerelements zu speichern \(Objekts bedeutet, dass Sie die Daten aus\), können Sie die Memberfunktion [StreamOut](../Topic/CRichEditCtrl::StreamOut.md) verwenden.  Das Steuerelement schreibt wiederholt des Puffers und ruft dann die anwendungsdefinierte Rückruffunktion auf.  Für jeden Aufruf speichert die Rückruffunktion den Inhalt des Puffers.  
+ To save the contents of a rich edit control (that is, stream the data out), you can use the [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) member function. The control repeatedly writes to the buffer and then calls the application-defined callback function. For each call, the callback function saves the contents of the buffer.  
   
-## Siehe auch  
- [Verwenden von CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

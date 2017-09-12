@@ -1,48 +1,67 @@
 ---
-title: "Verwenden von CSpinButtonCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSpinButtonCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSpinButtonCtrl-Klasse, Verwenden"
-  - "Drehfeld-Steuerelement"
-  - "Auf-Ab-Steuerelemente"
-  - "Auf-Ab-Steuerelemente, Drehfeld-Steuerelement"
+title: Using CSpinButtonCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSpinButtonCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- up-down controls [MFC], spin button control
+- up-down controls
+- spin button control
+- CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Verwenden von CSpinButtonCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7afe4fb7053c5da720cf2ae219f85ea6bac649aa
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Das *Spinner\-Steuerelement* \(auch als *Auf\-Ab\-Steuerelement* \) stellt ein Paar auf Pfeile, die ein Benutzer klicken kann, um einen Wert anzupassen.  Dieser Wert ist die *aktuelle Position*.  Die Position bleibt innerhalb des Bereichs des Drehfelds.  Wenn der Benutzer auf den Aufwärtspfeil klickt, wird die Position zum Höchstwert; und der Benutzer auf den Abwärtspfeil klickt, wird die Position zum Minimum.  
+---
+# <a name="using-cspinbuttonctrl"></a>Using CSpinButtonCtrl
+The *spin button* control (also known as an *up-down* control) provides a pair of arrows that a user can click to adjust a value. This value is known as the *current position*. The position stays within the range of the spin button. When the user clicks the up arrow, the position moves toward the maximum; and when the user clicks the down arrow, the position moves toward the minimum.  
   
- Das Spinner\-Steuerelement wird in MFC durch die [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)\-Klasse dargestellt.  
+ The spin button control is represented in MFC by the [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) class.  
   
 > [!NOTE]
->  Standardmäßig verfügt der Bereich für das Drehfeld das Maximum, das auf Null \(sind \(0\) sowie der Mindest\-, das bis 100 festgelegt ist.  Da der maximale Wert kleiner als der minimale Wert ist, auf den Aufwärtspfeil wird verringert die Position und Klicken auf den Abwärtspfeil erhöht sie.  Verwenden Sie [CSpinButtonCtrl::SetRange](../Topic/CSpinButtonCtrl::SetRange.md), diese Werte anzupassen.  
+>  By default, the range for the spin button has the maximum set to zero (0) and the minimum set to 100. Because the maximum value is less than the minimum value, clicking the up arrow decreases the position and clicking the down arrow increases it. Use [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) to adjust these values.  
   
- Normalerweise wird die aktuelle Position in einem Begleitsteuerelement angezeigt.  Das Begleitsteuerelement wird als das *Buddyfenster*.  Eine Abbildung eines Drehfeld\-Steuerelements, finden Sie im [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] unter [Übergreifend Auf\-Ab\-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb759889).  
+ Typically, the current position is displayed in a companion control. The companion control is known as the *buddy window*. For an illustration of a spin button control, see [About Up-Down Controls](http://msdn.microsoft.com/library/windows/desktop/bb759889) in the Windows SDK.  
   
- Ein Drehfeld\-Steuerelement und ein Bearbeitungssteuerelementbuddyfenster, Visual Studio zu erstellen, ziehen Sie zuerst ein Bearbeitungssteuerelement zum Dialogfeld oder das Fenster, und ziehen Sie dann ein Drehfeld\-Steuerelement.  Wählen Sie das Drehfeld\-Steuerelement aus und legen Sie dessen **Auto Buddy** und Eigenschaften **Set Buddy Integer** auf **True** fest.  Legen Sie die Eigenschaft **Ausrichtung** fest; **Rechts ausrichten** ist am häufigsten Arten.  Mit diesen Einstellungen wird das Bearbeitungssteuerelement als das Buddyfenster festgelegt, da es direkt das Bearbeitungssteuerelement in der Aktivierreihenfolge unmittelbar vorangestellt ist.  Die Bearbeitungssteuerelementanzeigenganzen zahlen und das Drehfeld\-Steuerelement wird in der rechten Seite des Bearbeitungssteuerelements eingebettet.  Optional können Sie den gültigen Bereich des Drehfeld\-Steuerelements festlegen, indem Sie die [CSpinButtonCtrl::SetRange](../Topic/CSpinButtonCtrl::SetRange.md)\-Methode.  Keine Ereignishandler sind erforderlich, zwischen dem Drehfeld\-Steuerelement und dem Buddyfenster kommuniziert da diese Daten direkt.  Wenn Sie ein Drehfeld\-Steuerelement zu einem anderen Zweck, beispielsweise, mithilfe einer Reihe von Fenstern zu blättern oder Dialogfelder verwenden, fügen Sie Handler für die `UDN_DELTAPOS` Meldung hinzu und führen Sie die benutzerdefinierte Aktion dort aus.  
+ To create a spin control and an edit control buddy window, in Visual Studio, first drag an edit control to the dialog box or window, and then drag a spin control. Select the spin control and set its **Auto Buddy** and **Set Buddy Integer** properties to **True**. Also set the **Alignment** property; **Right Align** is most typical. With these settings, the edit control is set as the buddy window because it directly precedes the edit control in the tab order. The edit control displays integers and the spin control is embedded in the right side of the edit control. Optionally, you can set the valid range of the spin control by using the [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) method. No event handlers are required to communicate between the spin control and buddy window because they exchange data directly. If you use a spin control for some other purpose, for example, to page through a sequence of windows or dialog boxes, then add a handler for the `UDN_DELTAPOS` message and perform your custom action there.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Drehfeld\-Schaltflächenstile](../mfc/spin-button-styles.md)  
+-   [Spin Button Styles](../mfc/spin-button-styles.md)  
   
--   [Memberfunktionen für das Drehfeldsteuerelement](../mfc/spin-button-member-functions.md)  
+-   [Spin Button Member Functions](../mfc/spin-button-member-functions.md)  
   
-## Siehe auch  
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Klasse CMFCRibbonComboBox | Microsoft-Dokumentation
+title: CMFCRibbonComboBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,7 +31,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonComboBox class
+- CMFCRibbonComboBox [MFC], CMFCRibbonComboBox
+- CMFCRibbonComboBox [MFC], AddItem
+- CMFCRibbonComboBox [MFC], DeleteItem
+- CMFCRibbonComboBox [MFC], EnableDropDownListResize
+- CMFCRibbonComboBox [MFC], FindItem
+- CMFCRibbonComboBox [MFC], GetCount
+- CMFCRibbonComboBox [MFC], GetCurSel
+- CMFCRibbonComboBox [MFC], GetDropDownHeight
+- CMFCRibbonComboBox [MFC], GetIntermediateSize
+- CMFCRibbonComboBox [MFC], GetItem
+- CMFCRibbonComboBox [MFC], GetItemData
+- CMFCRibbonComboBox [MFC], HasEditBox
+- CMFCRibbonComboBox [MFC], IsResizeDropDownList
+- CMFCRibbonComboBox [MFC], OnSelectItem
+- CMFCRibbonComboBox [MFC], RemoveAllItems
+- CMFCRibbonComboBox [MFC], SelectItem
+- CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
 caps.latest.revision: 35
 author: mikeblome
@@ -51,15 +67,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 747006ee66445eb312c22d658706e5fe81d2a958
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a11273bf776f9a8a0ea1b0870f0244b759c4eb80
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox-Klasse
-Die `CMFCRibbonComboBox` -Klasse implementiert ein Kombinationsfeld-Steuerelement, das einer menübandleiste, einem Menübandbereich oder einem Menüband-Popupmenü hinzugefügt werden können.  
+# <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox Class
+The `CMFCRibbonComboBox` class implements a combo box control that you can add to a ribbon bar, a ribbon panel, or a ribbon popup menu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -67,45 +83,45 @@ Die `CMFCRibbonComboBox` -Klasse implementiert ein Kombinationsfeld-Steuerelemen
 class CMFCRibbonComboBox : public CMFCRibbonEdit  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>Konstruktoren  
+### <a name="constructors"></a>Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Erstellt ein CMFCRibbonComboBox-Objekt.|  
+|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Constructs a CMFCRibbonComboBox object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonComboBox::AddItem](#additem)|Fügt ein eindeutiges Element in das Listenfeld.|  
-|[CMFCRibbonComboBox::DeleteItem](#deleteitem)|Löscht ein angegebenes Element aus dem Listenfeld aus.|  
-|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|Gibt an, ob im Listenfeld Größe geändert werden kann, wenn sie nach unten fällt.|  
-|[CMFCRibbonComboBox::FindItem](#finditem)|Gibt den Index des ersten Elements im Listenfeld, das einer angegebenen Zeichenfolge übereinstimmt.|  
-|[CMFCRibbonComboBox::GetCount](#getcount)|Gibt die Anzahl der Elemente im Listenfeld.|  
-|[CMFCRibbonComboBox::GetCurSel](#getcursel)|Ruft den Index des derzeit ausgewählten Elements im Listenfeld ab.|  
-|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Ruft die Höhe des Listenfelds ab, wenn im Listenfeld nach unten gelöscht wird.|  
-|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Gibt die Größe des Kombinationsfelds zurück, wie in den Zwischenstatus angezeigt.|  
-|[CMFCRibbonComboBox::GetItem](#getitem)|Gibt die Zeichenfolge, die ein Element am angegebenen Index in das Listenfeld zugeordnet.|  
-|[CMFCRibbonComboBox::GetItemData](#getitemdata)|Gibt ein Element am angegebenen Index in das Listenfeld zugeordneten Daten zurück.|  
-|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|Gibt an, ob das Steuerelement ein Bearbeitungsfeld enthält.|  
-|[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|Gibt an, ob das Listenfeld angepasst werden kann.|  
-|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|Wird vom Framework aufgerufen, wenn der Benutzer ein Element im Listenfeld auswählt.|  
-|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|Löscht alle Elemente aus dem Listenfeld aus, und löscht das Bearbeitungsfeld.|  
-|[CMFCRibbonComboBox::SelectItem](#selectitem)|Wählt ein Element im Listenfeld aus.|  
-|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Legt die Höhe des Listenfelds fest, wenn es sichtbar ist.|  
+|[CMFCRibbonComboBox::AddItem](#additem)|Appends a unique item to the list box.|  
+|[CMFCRibbonComboBox::DeleteItem](#deleteitem)|Deletes a specified item from the list box.|  
+|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|Specifies whether the list box can change size when it drops down.|  
+|[CMFCRibbonComboBox::FindItem](#finditem)|Returns the index of the first item in the list box that matches a specified string.|  
+|[CMFCRibbonComboBox::GetCount](#getcount)|Returns the number of items in the list box.|  
+|[CMFCRibbonComboBox::GetCurSel](#getcursel)|Gets the index of the currently selected item in the list box.|  
+|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Gets the height of the list box when the list box is dropped down.|  
+|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Returns the size of the combo box as displayed in intermediate mode.|  
+|[CMFCRibbonComboBox::GetItem](#getitem)|Returns the string associated with an item at a specified index in the list box.|  
+|[CMFCRibbonComboBox::GetItemData](#getitemdata)|Returns the data associated with an item at a specified index in the list box.|  
+|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|Indicates whether the control contains an edit box.|  
+|[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|Indicates whether or not the list box can be resized.|  
+|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|Called by the framework when the user selects an item in the list box.|  
+|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|Deletes all items from the list box and clears the edit box.|  
+|[CMFCRibbonComboBox::SelectItem](#selectitem)|Selects an item in the list box.|  
+|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Sets the height of the list box when it is dropped down.|  
   
-## <a name="remarks"></a>Hinweise  
- Die Menüband-Kombinationsfeld besteht aus einem Listenfeld kombiniert mit einem statische Bezeichnung oder Beschriftung, die vom Benutzer bearbeitet werden kann. Sie müssen angeben, welcher Typ sollen, wenn die Menüband-Kombinationsfeld zu erstellen.  
+## <a name="remarks"></a>Remarks  
+ The ribbon combo box consists of a list box combined with either a static label or label that can be edited by the user. You must specify which type you want when you create your ribbon combo box.  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie ein Objekt vom Erstellen der `CMFCRibbonComboBox` -Klasse im Kombinationsfeld ein Element hinzuzufügen, wählen Sie ein Element im Kombinationsfeld und fügen Sie ein Kombinationsfeld in einem Bereich.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCRibbonComboBox` class, add an item to the combo box, select an item in the combo box, and add a combo box to a panel.  
   
- [!code-cpp[NVC_MFC_RibbonApp&#11;](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#11](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
@@ -115,11 +131,11 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
  [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxribboncombobox.h  
   
-##  <a name="additem"></a>CMFCRibbonComboBox::AddItem  
- Fügt ein eindeutiges Element in das Listenfeld.  
+##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem  
+ Appends a unique item to the list box.  
   
 ```  
 virtual INT_PTR AddItem(
@@ -127,18 +143,18 @@ virtual INT_PTR AddItem(
     DWORD_PTR dwData=0);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `lpszItem`  
- Die Zeichenfolge des hinzuzufügenden Elements.  
+ The string of the item to add.  
   
  [in] `dwData`  
- Die Daten, die das hinzuzufügende Element zugeordnet wird.  
+ The data associated with the item to add.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index des hinzugefügten Elements.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the appended item.  
   
-##  <a name="cmfcribboncombobox"></a>CMFCRibbonComboBox::CMFCRibbonComboBox  
- Erstellt ein `CMFCRibbonComboBox`-Objekt.  
+##  <a name="cmfcribboncombobox"></a>  CMFCRibbonComboBox::CMFCRibbonComboBox  
+ Constructs a `CMFCRibbonComboBox` object.  
   
 ```  
 public:  
@@ -153,27 +169,27 @@ protected:
 CMFCRibbonComboBox();
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- Die ID des Kombinationsfelds.  
+ The ID of the combo box.  
   
  [in] `bHasEditBox`  
- `TRUE`Wenn Sie ein Eingabefeld innerhalb des Steuerelements möchten; `FALSE` andernfalls.  
+ `TRUE` if you want an edit box within the control; `FALSE` otherwise.  
   
  [in] `nWidth`  
- Die Breite des Kombinationsfelds in Pixel; oder -1 für die Standardbreite.  
+ Width of the combo box in pixels; or -1 for the default width.  
   
  [in] `lpszLabel`  
- Die Bezeichnung der Anzeige des Kombinationsfelds.  
+ The display label of the combo box.  
   
  [in] `nImage`  
- Der Index der Miniaturansicht des Kombinationsfelds.  
+ The small image index of the combo box.  
   
-### <a name="remarks"></a>Hinweise  
- Die Standardbreite beträgt 108 Pixel.  
+### <a name="remarks"></a>Remarks  
+ The default width is 108 pixels.  
   
-##  <a name="deleteitem"></a>CMFCRibbonComboBox::DeleteItem  
- Löscht ein angegebenes Element aus dem Listenfeld aus.  
+##  <a name="deleteitem"></a>  CMFCRibbonComboBox::DeleteItem  
+ Deletes a specified item from the list box.  
   
 ```  
 BOOL DeleteItem(int iIndex);
@@ -182,182 +198,182 @@ BOOL DeleteItem(DWORD_PTR dwData);
 BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Der nullbasierte Index des Elements, das gelöscht werden.  
+ The zero-based index of the item to be deleted.  
   
  [in] `dwData`  
- Die Daten, die zu löschenden Element zugeordnet.  
+ The data associated with the item to be deleted.  
   
  [in] `lpszText`  
- Die Zeichenfolge des Elements, das gelöscht werden. Wenn mehrere Elemente mit derselben Zeichenfolge vorhanden sind, wird das erste Element gelöscht.  
+ The string of the item to be deleted. If there are multiple items with the same string, the first item is deleted.  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das angegebene Element gelöscht wurde. andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified item has been deleted; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enabledropdownlistresize"></a>CMFCRibbonComboBox::EnableDropDownListResize  
- Gibt an, ob im Listenfeld Größe geändert werden kann, wenn sie nach unten fällt.  
+##  <a name="enabledropdownlistresize"></a>  CMFCRibbonComboBox::EnableDropDownListResize  
+ Specifies whether the list box can change size when it drops down.  
   
 ```  
 void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`So aktivieren Sie die Größe ändern; `FALSE` zum Ändern der Größe zu deaktivieren.  
+ `TRUE` to enable resizing; `FALSE` to disable resizing.  
   
-### <a name="remarks"></a>Hinweise  
- Beim Ändern der Größe aktiviert ist, wird im Listenfeld Größe angepasst angezeigten Elemente ändern.  
+### <a name="remarks"></a>Remarks  
+ When resizing is enabled, the list box will change size to fit the items it displays.  
   
-##  <a name="finditem"></a>CMFCRibbonComboBox::FindItem  
- Gibt den Index des ersten Elements im Listenfeld, das einer angegebenen Zeichenfolge übereinstimmt.  
+##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem  
+ Returns the index of the first item in the list box that matches a specified string.  
   
 ```  
 int FindItem(LPCTSTR lpszText) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- Die Zeichenfolge eines Elements im Listenfeld.  
+ The string of an item in the list box.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index des Elements; oder -1, wenn das Element nicht gefunden wird.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the item; or -1 if the item is not found.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcount"></a>CMFCRibbonComboBox::GetCount  
- Gibt die Anzahl der Elemente im Listenfeld.  
+##  <a name="getcount"></a>  CMFCRibbonComboBox::GetCount  
+ Returns the number of items in the list box.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Elemente im Listenfeld oder 0, wenn das Listenfeld keine Elemente enthält.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the list box, or 0 if the list box contains no items.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcursel"></a>CMFCRibbonComboBox::GetCurSel  
- Ruft den Index des derzeit ausgewählten Elements im Listenfeld ab.  
+##  <a name="getcursel"></a>  CMFCRibbonComboBox::GetCurSel  
+ Gets the index of the currently selected item in the list box.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index des derzeit ausgewählten Elements im Listenfeld; oder -1, wenn kein Element ausgewählt ist.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the currently selected item in the list box; or -1 if no item is selected.  
   
-##  <a name="getdropdownheight"></a>CMFCRibbonComboBox::GetDropDownHeight  
- Ruft die Höhe des Listenfelds ab, wenn im Listenfeld nach unten gelöscht wird.  
+##  <a name="getdropdownheight"></a>  CMFCRibbonComboBox::GetDropDownHeight  
+ Gets the height of the list box when the list box is dropped down.  
   
 ```  
 int GetDropDownHeight();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Höhe in Pixel, der im Listenfeld.  
+### <a name="return-value"></a>Return Value  
+ The height, in pixels, of the list box.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonComboBox::GetIntermediateSize  
- Gibt die Größe des Kombinationsfelds zurück, wie in den Zwischenstatus angezeigt.  
+##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize  
+ Returns the size of the combo box as displayed in intermediate mode.  
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Ein Zeiger auf einen Gerätekontext für das Kombinationsfeld.  
+ Pointer to a device context for the combo box.  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Größe des Kombinationsfelds.  
+### <a name="return-value"></a>Return Value  
+ The size of the combo box.  
   
-### <a name="remarks"></a>Hinweise  
- Die zurückgegebene Größe basiert auf der Größe des Kombinationsfelds Wenn kleine Bilder angezeigt.  
+### <a name="remarks"></a>Remarks  
+ The size returned is based on the size of the combo box when it displays small images.  
   
-##  <a name="getitem"></a>CMFCRibbonComboBox::GetItem  
- Gibt die Zeichenfolge, die ein Element am angegebenen Index in das Listenfeld zugeordnet.  
+##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem  
+ Returns the string associated with an item at a specified index in the list box.  
   
 ```  
 LPCTSTR GetItem(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Der nullbasierte Index eines Elements im Listenfeld.  
+ The zero-based index of an item in the list box.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die Zeichenfolge, die dem Element zugeordnet ist; andernfalls `NULL` Wenn der Indexparameter ungültig ist oder der Indexparameter ist-1 und kein Element im Kombinationsfeld ausgewählt ist.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the string that is associated with the item; otherwise, `NULL` if the index parameter is invalid, or if the index parameter is -1 and there is no item selected in the combo box.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getitemdata"></a>CMFCRibbonComboBox::GetItemData  
- Gibt ein Element am angegebenen Index in das Listenfeld zugeordneten Daten zurück.  
+##  <a name="getitemdata"></a>  CMFCRibbonComboBox::GetItemData  
+ Returns the data associated with an item at a specified index in the list box.  
   
 ```  
 DWORD_PTR GetItemData(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Der nullbasierte Index eines Elements im Listenfeld.  
+ The zero-based index of an item in the list box.  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Daten, die dem Element zugeordnete; oder 0, wenn das Element nicht vorhanden ist oder wenn der Indexparameter ist-1 und gibt es kein Element ausgewählt ist, im Listenfeld.  
+### <a name="return-value"></a>Return Value  
+ The data associated with the item; or 0 if the item does not exist, or if the index parameter is -1 and there is no selected item in the list box.  
   
-##  <a name="haseditbox"></a>CMFCRibbonComboBox::HasEditBox  
- Gibt an, ob das Steuerelement ein Bearbeitungsfeld enthält.  
+##  <a name="haseditbox"></a>  CMFCRibbonComboBox::HasEditBox  
+ Indicates whether the control contains an edit box.  
   
 ```  
 BOOL HasEditBox() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Steuerelement ein Bearbeitungsfeld enthält. andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the control contains an edit box; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isresizedropdownlist"></a>CMFCRibbonComboBox::IsResizeDropDownList  
- Gibt an, ob das Listenfeld angepasst werden kann.  
+##  <a name="isresizedropdownlist"></a>  CMFCRibbonComboBox::IsResizeDropDownList  
+ Indicates whether or not the list box can be resized.  
   
 ```  
 BOOL IsResizeDropDownList() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn das Listenfeld angepasst werden kann. andernfalls `FALSE`. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the list box can be resized; otherwise `FALSE`. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
   
-### <a name="remarks"></a>Hinweise  
- Können Sie aktivieren, Ändern der Liste im Feld mithilfe der [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize) Methode.  
+### <a name="remarks"></a>Remarks  
+ You can enable list box resizing by using the [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize) method.  
   
-##  <a name="onselectitem"></a>CMFCRibbonComboBox::OnSelectItem  
- Wird vom Framework aufgerufen, wenn ein Benutzer ein Element im Listenfeld auswählt.  
+##  <a name="onselectitem"></a>  CMFCRibbonComboBox::OnSelectItem  
+ Called by the framework when a user selects an item in the list box.  
   
 ```  
 virtual void OnSelectItem(int nItem);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `nItem`  
- Der Index des ausgewählten Elements.  
+ The index of the selected item.  
   
-### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode, wenn Sie eine Eingabe Benutzerauswahl verarbeiten möchten.  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want to process a user input selection.  
   
-##  <a name="removeallitems"></a>CMFCRibbonComboBox::RemoveAllItems  
- Löscht alle Elemente aus dem Listenfeld aus, und löscht das Bearbeitungsfeld.  
+##  <a name="removeallitems"></a>  CMFCRibbonComboBox::RemoveAllItems  
+ Deletes all items from the list box and clears the edit box.  
   
 ```  
 void RemoveAllItems();
 ```  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="selectitem"></a>CMFCRibbonComboBox::SelectItem  
- Wählt ein Element im Listenfeld aus.  
+##  <a name="selectitem"></a>  CMFCRibbonComboBox::SelectItem  
+ Selects an item in the list box.  
   
 ```  
 BOOL SelectItem(int iIndex);
@@ -366,37 +382,37 @@ BOOL SelectItem(DWORD_PTR dwData);
 BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Der nullbasierte Index eines Elements im Listenfeld.  
+ The zero-based index of an item in the list box.  
   
  [in] `dwData`  
- Die Daten eines Elements im Listenfeld.  
+ The data associated with an item in the list box.  
   
  [in] `lpszText`  
- Die Zeichenfolge eines Elements im Listenfeld.  
+ The string of an item in the list box.  
   
-### <a name="return-value"></a>Rückgabewert  
- `TRUE`Wenn die Methode erfolgreich war; andernfalls `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdropdownheight"></a>CMFCRibbonComboBox::SetDropDownHeight  
- Legt die Höhe des Listenfelds fest, wenn es sichtbar ist.  
+##  <a name="setdropdownheight"></a>  CMFCRibbonComboBox::SetDropDownHeight  
+ Sets the height of the list box when it is dropped down.  
   
 ```  
 void SetDropDownHeight(int nHeight);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `nHeight`  
- Die Höhe in Pixel, der im Listenfeld.  
+ The height, in pixels, of the list box.  
   
-### <a name="remarks"></a>Hinweise  
- Die Standardhöhe ist 150 Pixel.  
+### <a name="remarks"></a>Remarks  
+ The default height is 150 pixels.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [Klassen](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonEdit-Klasse](../../mfc/reference/cmfcribbonedit-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonEdit Class](../../mfc/reference/cmfcribbonedit-class.md)
 

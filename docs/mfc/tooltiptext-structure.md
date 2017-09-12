@@ -1,31 +1,48 @@
 ---
-title: "TOOLTIPTEXT-Struktur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TOOLTIPTEXT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QuickInfos [C++], Benachrichtigungen"
-  - "TOOLTIPTEXT-Struktur"
+title: TOOLTIPTEXT Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TOOLTIPTEXT
+dev_langs:
+- C++
+helpviewer_keywords:
+- TOOLTIPTEXT structure [MFC]
+- tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# TOOLTIPTEXT-Struktur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e7d5ad1e3607d21d2d8243455e479e78d87897c0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Sie das [QuickInfobenachrichtigungshandler](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) schreiben, müssen Sie die `TOOLTIPTEXT`\-Struktur verwenden.  Die Member `TOOLTIPTEXT` der Struktur sind:  
+---
+# <a name="tooltiptext-structure"></a>TOOLTIPTEXT Structure
+In writing your [tool tip notification handler](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), you need to use the `TOOLTIPTEXT` structure. The members of the `TOOLTIPTEXT` structure are:  
   
  `typedef struct {`  
   
@@ -46,24 +63,26 @@ Wenn Sie das [QuickInfobenachrichtigungshandler](../mfc/handling-ttn-needtext-no
  `} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;`  
   
  `hdr`  
- Identifiziert das Tool, das Text erforderlich.  Der einzige Member dieser Struktur, die Sie unter Umständen, lautet die ID der Steuerbefehl  Die Befehls\-ID des Steuerelements ist im `idFrom` müssen Member der Struktur `NMHDR`, zugegriffen mit der Syntax `hdr.idFrom`.  Siehe [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) Erläuterungen zur Member `NMHDR` der Struktur.  
+ Identifies the tool that needs text. The only member of this structure you might need is the control's command ID. The control's command ID will be in the `idFrom` member of the `NMHDR` structure, accessed with the syntax `hdr.idFrom`. See [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) for a discussion of members of the `NMHDR` structure.  
   
  `lpszText`  
- Adresse einer Zeichenfolge, um den Text für ein Tool zu empfangen.  
+ Address of a string to receive the text for a tool.  
   
  `szText`  
- Puffern Sie, das den QuickInfo\-Text empfängt.  Eine Anwendung kann den Text in diesem Puffer als Alternative zur Angabe einer Zeichenfolgenadresse kopieren.  
+ Buffer that receives the tool tip text. An application can copy the text to this buffer as an alternative to specifying a string address.  
   
  `hinst`  
- Handle die Instanz, die eine als enthält der QuickInfo\-Text verwendet werden, Zeichenfolge.  Wenn `lpszText` die Adresse des QuickInfotexts ist, wird dieser Member NULL.  
+ Handle of the instance that contains a string to be used as the tool tip text. If `lpszText` is the address of the tool tip text, this member is NULL.  
   
- Wenn Sie die `TTN_NEEDTEXT` \- Benachrichtigung bearbeiten, die in einer der folgenden Methoden angezeigt werden, Zeichenfolge:  
+ When you handle the `TTN_NEEDTEXT` notification message, specify the string to be displayed in one of the following ways:  
   
--   Kopieren Sie den Text in den Puffer, der vom `szText`\-Member angegeben wird.  
+-   Copy the text to the buffer specified by the `szText` member.  
   
--   Kopieren Sie die Adresse des Puffers, der den Text zum `lpszText`\-Member enthält.  
+-   Copy the address of the buffer that contains the text to the `lpszText` member.  
   
--   Kopieren Sie den Bezeichner einer Zeichenfolgenressource zum `lpszText`\-Member, und kopieren Sie das Handle die Instanz, die die Ressource für den Member `hinst` enthält.  
+-   Copy the identifier of a string resource to the `lpszText` member, and copy the handle of the instance that contains the resource to the `hinst` member.  
   
-## Siehe auch  
- [QuickInfos in Fenstern, die nicht von CFrameWnd abgeleitet sind](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips in Windows Not Derived from CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+

@@ -1,53 +1,72 @@
 ---
-title: "Zwischenablage: Verwenden der Windows-Zwischenablage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zwischenablage [C++], Befehle"
-  - "Zwischenablage [C++], Windows-Zwischenablage-API"
-  - "Zwischenablagebefehle"
-  - "Zwischenablagebefehle, Implementieren"
-  - "Befehle [C++], Bearbeiten implementieren"
-  - "Ausschneiden/Kopieren und Einfügen-Befehlshandlerfunktionen"
-  - "Handlerfunktionen, Ausschneiden/Kopieren und Einfügen-Befehle"
-  - "Windows-Zwischenablage [C++]"
+title: 'Clipboard: Using the Windows Clipboard | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Clipboard commands
+- Cut/Copy and Paste command handler functions [MFC]
+- handler functions, Cut/Copy and Paste commands
+- Clipboard [MFC], commands
+- commands [MFC], implementing Edit
+- Clipboard commands [MFC], implementing
+- Windows Clipboard [MFC]
+- Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Zwischenablage: Verwenden der Windows-Zwischenablage
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 12a35751354566d8d260734aea6f19f9f8a8cabb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In diesem Thema wird beschrieben, wie die Standard\-Windows\-Zwischenablage API in der MFC\-Anwendung verwendet.  
+---
+# <a name="clipboard-using-the-windows-clipboard"></a>Clipboard: Using the Windows Clipboard
+This topic describes how to use the standard Windows Clipboard API within your MFC application.  
   
- Die meisten Anwendungen für Windows unterstützen Ausschnitt oder Kopieren von Daten zur Zwischenablage und das Einfügen von Daten aus der Zwischenablage.  Die Zwischenablagedatenformate variieren in Anwendungen.  Das Framework unterstützt nur eine begrenzte Anzahl Zwischenablageformate für eine begrenzte Anzahl Klassen.  Sie implementieren die Zwischenablage\-verknüpften normalerweise Befehle \- schneiden Sie aus, Kopieren und fügen Sie ein \- im Menü Bearbeiten für die Ansicht.  Die Klassenbibliothek definiert die Befehls\-IDs für diese Befehle: **ID\_EDIT\_CUT**, **ID\_EDIT\_COPY** und **ID\_EDIT\_PASTE**.  die MeldungZeileneingabeaufforderungen werden ebenfalls definiert.  
+ Most applications for Windows support cutting or copying data to the Windows Clipboard and pasting data from the Clipboard. The Clipboard data formats vary among applications. The framework supports only a limited number of Clipboard formats for a limited number of classes. You will normally implement the Clipboard-related commands — Cut, Copy, and Paste — on the Edit menu for your view. The class library defines the command IDs for these commands: **ID_EDIT_CUT**, **ID_EDIT_COPY**, and **ID_EDIT_PASTE**. Their message-line prompts are also defined.  
   
- [Meldungen und Befehle im Framework](../mfc/messages-and-commands-in-the-framework.md) erläutert, wie Menübefehle in der Anwendung behandelt, indem dem Menübefehl zu eine Handlerfunktion zuordnet.  Solange die Anwendung nicht Handlerfunktionen für die Zwischenablage Befehle im Menü Bearbeiten definiert, sie verbleiben deaktiviert.  Um Handlerfunktionen für über die Befehle Ausschneiden und Kopierbefehle schreiben, implementieren Sie die Auswahl in der Anwendung.  Um eine Handlerfunktion für den Befehl Einfügen zu schreiben, fragen Sie die Zwischenablage ab um festzustellen ob die Daten in einem Format enthält, das die Anwendung aufnehmen kann.  Um beispielsweise den Kopierbefehl zu aktivieren, können z Sie Handler in etwa Folgendes:  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md) explains how to handle menu commands in your application by mapping the menu command to a handler function. As long as your application does not define handler functions for the Clipboard commands on the Edit menu, they remain disabled. To write handler functions for the Cut and Copy commands, implement selection in your application. To write a handler function for the Paste command, query the Clipboard to see whether it contains data in a format your application can accept. For example, to enable the Copy command, you might write a handler something like the following:  
   
- [!CODE [NVC_MFCListView#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCListView#2)]  
+ [!code-cpp[NVC_MFCListView#2](../atl/reference/codesnippet/cpp/clipboard-using-the-windows-clipboard_1.cpp)]  
   
- Die Schnitt\-, Kopieren und Einfügen sind in bestimmten Kontexten nur sinnvoll.  Die Schnitt\- und Kopierbefehle sollten aktiviert werden nur wenn etwas ausgewählt ist, und der Befehl Einfügen, wenn etwas in der Zwischenablage sind.  Sie können dieses Verhalten im Definieren von Aktualisierungshandlerfunktionen bereitstellen, die diese Befehle in Abhängigkeit vom Kontext aktivieren oder deaktivieren.  Weitere Informationen finden Sie unter [Erstellen Benutzeroberfläche\-Objekte aktualisiert](../mfc/how-to-update-user-interface-objects.md).  
+ The Cut, Copy, and Paste commands are only meaningful in certain contexts. The Cut and Copy commands should be enabled only when something is selected, and the Paste command only when something is in the Clipboard. You can provide this behavior by defining update handler functions that enable or disable these commands depending on the context. For more information, see [How to Update User-Interface Objects](../mfc/how-to-update-user-interface-objects.md).  
   
- Die Microsoft Foundation Class\-Bibliothek bietet Unterstützung der Zwischenablage für Textausgabe mit den `CEdit` und `CEditView`\-Klassen.  Die OLE\-Klassen vereinfachen außerdem das Implementieren von Zwischenablagevorgängen, die OLE\-Elemente einschließen.  Weitere Informationen über die OLE\-Klassen, finden Sie unter [Zwischenablage: Verwenden des OLE\-Zwischenablage\-Mechanismus](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).  
+ The Microsoft Foundation Class Library does provide Clipboard support for text editing with the `CEdit` and `CEditView` classes. The OLE classes also simplify implementing Clipboard operations that involve OLE items. For more information on the OLE classes, see [Clipboard: Using the OLE Clipboard Mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).  
   
- Andere Bearbeitungsmenübefehle, wie implementiert, rückgängig machen \(**ID\_EDIT\_UNDO**\) und überprüfen Sie \(**ID\_EDIT\_REDO**\) ist, verlassen Sie auch.  Wenn die Anwendung diese Befehle nicht unterstützt, können Sie diese von der Ressourcendatei mit Visual C\+\+\-Ressourcen\-Editoren leicht löschen.  
+ Implementing other Edit menu commands, such as Undo (**ID_EDIT_UNDO**) and Redo (**ID_EDIT_REDO**), is also left to you. If your application does not support these commands, you can easily delete them from your resource file using the Visual C++ resource editors.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Kopieren und Einfügen von Daten](../mfc/clipboard-copying-and-pasting-data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Verwenden des OLE\-Zwischenablagemechanismus](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
+-   [Using the OLE Clipboard mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
-## Siehe auch  
- [Zwischenablage](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

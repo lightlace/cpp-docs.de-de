@@ -1,5 +1,5 @@
 ---
-title: CDaoParameterInfo-Struktur | Microsoft-Dokumentation
+title: CDaoParameterInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoParameterInfo structure
+- CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
 caps.latest.revision: 13
@@ -34,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: b41d26b736ea9f84c53f71dbd71949f74fb8ae52
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b8dab62695d7b2fa1b08ab5789b4becbd01d0ec1
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo-Struktur
-Die `CDaoParameterInfo` Struktur enthält Informationen über ein Parameterobjekt für Datenzugriffsobjekte (DAO) definiert.  
+# <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo Structure
+The `CDaoParameterInfo` structure contains information about a parameter object defined for data access objects (DAO).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,32 +55,32 @@ struct CDaoParameterInfo
 };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- Das Parameterobjekt bezeichnet eindeutig. Weitere Informationen finden Sie im Thema "Name-Eigenschaft" in der DAO-Hilfe.  
+ Uniquely names the parameter object. For more information, see the topic "Name Property" in DAO Help.  
   
  `m_nType`  
- Ein Wert, der den Datentyp eines Parameters-Objekts angibt. Eine Liste der möglichen Werte finden Sie unter der `m_nType` Mitglied der [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) Struktur. Weitere Informationen finden Sie im Thema "Typeigenschaft" DAO-Hilfe.  
+ A value that indicates the data type of a parameter object. For a list of the possible values, see the `m_nType` member of the [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure. For more information, see the topic "Type Property" in DAO Help.  
   
  *m_varValue*  
- Der Wert des Parameters, gespeichert einer [COleVariant](../../mfc/reference/colevariant-class.md) Objekt.  
+ The value of the parameter, stored in a [COleVariant](../../mfc/reference/colevariant-class.md) object.  
   
-## <a name="remarks"></a>Hinweise  
- Die Verweise auf die primären und sekundären oben anzugeben, wie die Informationen zurückgegeben werden, durch die [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) Memberfunktion Klasse `CDaoQueryDef`.  
+## <a name="remarks"></a>Remarks  
+ The references to Primary and Secondary above indicate how the information is returned by the [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) member function in class `CDaoQueryDef`.  
   
- MFC ist nicht mit DAO Parameterobjekte in einer Klasse gekapselt. DAO Querydef-Objekte zugrunde liegenden MFC `CDaoQueryDef` Objekte speichern Parameter in ihre Sammlungen Parameter. Zugriff auf die Parameterobjekte in einem [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) Objekt, rufen Sie des Querydef-Objekts `GetParameterInfo` Member-Funktion für einen bestimmten Parameternamen oder ein Index in die Parameters-Auflistung. Können Sie die [CDaoQueryDef::GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) Member-Funktion in Verbindung mit `GetParameterInfo` durchlaufen Sie die Parameters-Auflistung.  
+ MFC does not encapsulate DAO parameter objects in a class. DAO querydef objects underlying MFC `CDaoQueryDef` objects store parameters in their Parameters collections. To access the parameter objects in a [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) object, call the querydef object's `GetParameterInfo` member function for a particular parameter name or an index into the Parameters collection. You can use the [CDaoQueryDef::GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) member function in conjunction with `GetParameterInfo` to loop through the Parameters collection.  
   
- Informationen abgerufen werden, indem Sie die [CDaoQueryDef::GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) -Memberfunktion befindet sich in einer `CDaoParameterInfo` Struktur. Rufen Sie `GetParameterInfo` für das Querydef-Objekt, das in die Auflistung, deren Parameter den Parameter-Objekt gespeichert ist.  
+ Information retrieved by the [CDaoQueryDef::GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) member function is stored in a `CDaoParameterInfo` structure. Call `GetParameterInfo` for the querydef object in whose Parameters collection the parameter object is stored.  
   
 > [!NOTE]
->  Gegebenenfalls zu erhalten oder nur den Wert eines Parameters festzulegen, verwenden Sie die [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) und [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) Memberfunktionen der Klasse `CDaoRecordset`.  
+>  If you want to get or set only the value of a parameter, use the [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) and [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) member functions of class `CDaoRecordset`.  
   
- `CDaoParameterInfo`definiert auch eine `Dump` Memberfunktion im Debugmodus erstellt. Sie können `Dump` auf den Inhalt des Basisklassenobjekts auszugeben ein `CDaoParameterInfo` Objekt.  
+ `CDaoParameterInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoParameterInfo` object.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxdao.h  
   
-## <a name="see-also"></a>Siehe auch  
- [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoQueryDef-Klasse](../../mfc/reference/cdaoquerydef-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)
 

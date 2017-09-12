@@ -1,33 +1,52 @@
 ---
-title: "Befehls-IDs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Befehls-IDs"
-  - "Befehls-IDs, MFC"
+title: Command IDs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- command IDs, MFC
+- command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Befehls-IDs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7326b913df477a1ecbce7b0d995935e930ca5289
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ein Befehl wird vollständig durch die Befehls\-ID allein beschrieben \(codiert in der **WM\_COMMAND** Meldung\).  Diese ID wird dem Benutzeroberflächeobjekt zugeordnet, das den Befehl generiert.  In der Regel werden IDs für die Funktionalität des Benutzeroberflächeobjekts genannt, das sie zugewiesen werden.  
+---
+# <a name="command-ids"></a>Command IDs
+A command is fully described by its command ID alone (encoded in the **WM_COMMAND** message). This ID is assigned to the user-interface object that generates the command. Typically, IDs are named for the functionality of the user-interface object they are assigned to.  
   
- Ein freier Raum alles Element im Menü Bearbeiten eine ID wie **ID\_EDIT\_CLEAR\_ALL** zugewiesen werden.  Die Klassenbibliothek definiert mehrere IDs, besonders für Befehle, die das Framework selbst behandelt, wie **ID\_EDIT\_CLEAR\_ALL** oder `ID_FILE_OPEN`.  Sie erstellen andere Befehls\-IDs sich.  
+ For example, a Clear All item in the Edit menu might be assigned an ID such as **ID_EDIT_CLEAR_ALL**. The class library predefines some IDs, particularly for commands that the framework handles itself, such as **ID_EDIT_CLEAR_ALL** or `ID_FILE_OPEN`. You will create other command IDs yourself.  
   
- Wenn Sie eigene Menüs im Visual C\+\+\-Menü\-Editor erstellen, wird empfohlen, der Namenskonvention der Klassenbibliothek zu folgen, wie von `ID_FILE_OPEN` veranschaulicht.  [Standardbefehle](../mfc/standard-commands.md) erläutert die Standardbefehle, die von der Klassenbibliothek definiert werden.  
+ When you create your own menus in the Visual C++ menu editor, it is a good idea to follow the class library's naming convention as illustrated by `ID_FILE_OPEN`. [Standard Commands](../mfc/standard-commands.md) explains the standard commands defined by the class library.  
   
-## Siehe auch  
- [Benutzeroberflächenobjekte und Befehls\-IDs](../mfc/user-interface-objects-and-command-ids.md)
+## <a name="see-also"></a>See Also  
+ [User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md)
+
+

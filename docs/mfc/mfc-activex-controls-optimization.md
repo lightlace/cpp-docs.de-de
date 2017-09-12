@@ -1,75 +1,94 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Optimierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Gerätekontexte, ungeschnitten für MFC-ActiveX-Steuerelemente"
-  - "Flimmerfreie ActiveX-Steuerelemente"
-  - "MFC-ActiveX-Steuerelemente, aktiver/inaktiver Zustand"
-  - "MFC-ActiveX-Steuerelemente, flimmerfrei"
-  - "MFC-ActiveX-Steuerelemente, Mausinteraktion"
-  - "MFC-ActiveX-Steuerelemente, Optimieren"
-  - "MFC-ActiveX-Steuerelemente, Windowless"
-  - "Optimierung, ActiveX-Steuerelemente"
-  - "Optimieren der Leistung, ActiveX-Steuerelemente"
-  - "Leistung, ActiveX-Steuerelemente"
-  - "fensterlose MFC-ActiveX-Steuerelemente"
+title: 'MFC ActiveX Controls: Optimization | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], windowless
+- flicker-free ActiveX controls
+- MFC ActiveX controls [MFC], mouse interaction
+- device contexts, unclipped for MFC ActiveX controls
+- MFC ActiveX controls [MFC], optimizing
+- performance, ActiveX controls
+- optimization, ActiveX controls
+- MFC ActiveX controls [MFC], flicker-free
+- windowless MFC ActiveX controls
+- MFC ActiveX controls [MFC], active/inactive state
+- optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# MFC-ActiveX-Steuerelemente: Optimierung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 290a1296b46db5b2ce2544d07efb87c44faef15d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt Techniken, die Sie verwenden können, um die ActiveX\-Steuerelemente für eine bessere Leistung zu optimieren.  
+---
+# <a name="mfc-activex-controls-optimization"></a>MFC ActiveX Controls: Optimization
+This article explains techniques you can use to optimize your ActiveX controls for better performance.  
   
- Die Themen [Deaktivieren der Option Aktivieren, wenn sichtbar](../mfc/turning-off-the-activate-when-visible-option.md) und [Bereitstellen von Maus\-Interaktion, wenn inaktiv](../mfc/providing-mouse-interaction-while-inactive.md) erläutert werden Steuerelemente, die kein Fenster erstellen, bis aktiviert.  Das Thema [für die fensterlose Aktivierung](../mfc/providing-windowless-activation.md) erläutert Steuerelemente, die niemals ein Fenster erstellen, selbst wenn sie aktiviert sind.  
+ The topics [Turning Off the Activate When Visible Option](../mfc/turning-off-the-activate-when-visible-option.md) and [Providing Mouse Interaction While Inactive](../mfc/providing-mouse-interaction-while-inactive.md) discuss controls that don't create a window until activated. The topic [Providing Windowless Activation](../mfc/providing-windowless-activation.md) discusses controls that never create a window, even when they are activated.  
   
- Windows haben zwei signifikante Nachteile für OLE\-Objekte: sie verhindern Objekte am Sein transparent oder Nicht rechteckige, wenn aktiv, und fügen sie einem großen Aufwand der Instanziierung und Anzeige der Steuerelemente hinzu.  In der Regel ist das Erstellen eines Fensters 60 Prozent Erstellungszeitpunkt eines Steuerelements.  Mit einem einzelnen freigegebenen Fenster \(üblicherweise des Containers\) und einem weiterleitendem Code empfängt ein Steuerelement dieselben Fensterdienstleistungen, ohne im Allgemeinen einen Leistungsrückgang.  Ein Fenster haben sich größtenteils unnötiger Aufwand für das Objekt.  
+ Windows have two major drawbacks for OLE objects: they prevent objects from being transparent or nonrectangular when active, and they add a large overhead to the instantiation and display of controls. Typically, creating a window takes 60 percent of a control's creation time. With a single shared window (usually the container's) and some dispatching code, a control receives the same window services, generally without a loss of performance. Having a window is mostly unnecessary overhead for the object.  
   
- Einige Optimierungen nicht notwendigerweise die Leistung verbessert, wenn das Steuerelement in bestimmten Containern verwendet wird.  Beispielsweise unterstützten die Container, die vor 1996 freigegeben wurden, nicht fensterlose Aktivierung, daher stellt das Implementieren dieser Funktion keinen Vorteil in älteren Containern.  Allerdings unterstützt fast jeder Container Dauerhaftigkeit, sodass verbessert das Optimieren des Persistenzcodes wahrscheinlich die Leistung des Steuerelements in einem Container.  Wenn das Steuerelement speziell vorgesehen ist, mit einem bestimmten Typ Container verwendet werden, können Sie überprüfen, das von diesen Optimierungen durch diesen Container unterstützt wird.  Im Allgemeinen jedoch sollten Sie versuchen, möglichst viel dieser Techniken zu implementieren, wie zu dem bestimmten Steuerelement gelten, das Steuerelement zu gewährleisten so gut ausgeführt, wie er möglicherweise in einer großen Auswahl Containern kann.  
+ Some optimizations do not necessarily improve performance when your control is used in certain containers. For example, containers released prior to 1996 did not support windowless activation, so implementing this feature will not provide a benefit in older containers. However, nearly every container supports persistence, so optimizing your control's persistence code will likely improve its performance in any container. If your control is specifically intended to be used with one particular type of container, you may want to research which of these optimizations is supported by that container. In general, however, you should try to implement as many of these techniques as are applicable to your particular control to ensure your control performs as well as it possibly can in a wide array of containers.  
   
- Sie können viele dieser Optimierungen durch [MFC\-ActiveX\-Steuerelement\-Assistent](../mfc/reference/mfc-activex-control-wizard.md), auf der Seite [Steuerelementeinstellungen](../mfc/reference/control-settings-mfc-activex-control-wizard.md) implementieren.  
+ You can implement many of these optimizations through the [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md), on the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page.  
   
-### Optimierungs\-Optionen MFC\-ActiveX\-Steuerelement\-Assistenten\-OLE  
+### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>MFC ActiveX Control Wizard OLE Optimization Options  
   
-|Steuerelementeinstellung im MFC\-ActiveX\-Steuerelement\-Assistenten|Aktion|Weitere Informationen|  
-|--------------------------------------------------------------------------|------------|---------------------------|  
-|Kontrollkästchen **Aktivieren, wenn sichtbar**|Clear|[Deaktivieren der Option Aktivieren, wenn sichtbar](../mfc/turning-off-the-activate-when-visible-option.md)|  
-|Kontrollkästchen **Fensterlose Aktivierung**|Auswählen|[für die fensterlose Aktivierung](../mfc/providing-windowless-activation.md)|  
-|Kontrollkästchen **Nicht\-geschnittener Gerätekontext**|Auswählen|[Verwenden eines ungestutzten Gerätekontexts](../mfc/using-an-unclipped-device-context.md)|  
-|Kontrollkästchen **Flimmerfreie Aktivierung**|Auswählen|[Bereitstellen der flimmerfreien Aktivierung](../mfc/providing-flicker-free-activation.md)|  
-|Kontrollkästchen **Mauszeiger\-Benachrichtigung wenn inaktiv**|Auswählen|[Bereitstellen von Maus\-Interaktion, wenn inaktiv](../mfc/providing-mouse-interaction-while-inactive.md)|  
-|Kontrollkästchen **Optimierter Zeichencode**|Auswählen|[Optimieren der Steuerzeichnung](../mfc/optimizing-control-drawing.md)|  
+|Control setting in the MFC ActiveX Control Wizard|Action|More information|  
+|-------------------------------------------------------|------------|----------------------|  
+|**Activate when visible** check box|Clear|[Turning Off the Activate When Visible Option](../mfc/turning-off-the-activate-when-visible-option.md)|  
+|**Windowless activation** check box|Select|[Providing Windowless Activation](../mfc/providing-windowless-activation.md)|  
+|**Unclipped device context** check box|Select|[Using an Unclipped Device Context](../mfc/using-an-unclipped-device-context.md)|  
+|**Flicker-free activation** check box|Select|[Providing Flicker-Free Activation](../mfc/providing-flicker-free-activation.md)|  
+|**Mouse pointer notifications when inactive** check box|Select|[Providing Mouse Interaction While Inactive](../mfc/providing-mouse-interaction-while-inactive.md)|  
+|**Optimized drawing code** check box|Select|[Optimizing Control Drawing](../mfc/optimizing-control-drawing.md)|  
   
- Ausführliche Informationen über die Memberfunktionen, die diese Optimierungen implementieren, finden Sie unter [COleControl](../mfc/reference/colecontrol-class.md).  Die Memberfunktionen können durch Verwendungen, wie [Fensterlose Vorgänge](assetId:///e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) und [Deaktivierte Zeiger\-Behandlungs\-Funktionen](assetId:///e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) aufgeführt.  
+ For detailed information about the member functions that implement these optimizations, see [COleControl](../mfc/reference/colecontrol-class.md). The member functions are listed by use, such as [Windowless Operations](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) and [Inactive Pointer Handling Functions](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
   
- Weitere Informationen finden Sie unter:  
+ For more information, see:  
   
--   [Optimieren Dauerhaftigkeit und von Initialisierung](../mfc/optimizing-persistence-and-initialization.md)  
+-   [Optimizing Persistence and Initialization](../mfc/optimizing-persistence-and-initialization.md)  
   
--   [für die fensterlose Aktivierung](../mfc/providing-windowless-activation.md)  
+-   [Providing Windowless Activation](../mfc/providing-windowless-activation.md)  
   
--   [Deaktivieren der Option Aktivieren, wenn sichtbar](../mfc/turning-off-the-activate-when-visible-option.md)  
+-   [Turning Off the Activate When Visible Option](../mfc/turning-off-the-activate-when-visible-option.md)  
   
--   [Bereitstellen von Maus\-Interaktion, wenn inaktiv](../mfc/providing-mouse-interaction-while-inactive.md)  
+-   [Providing Mouse Interaction While Inactive](../mfc/providing-mouse-interaction-while-inactive.md)  
   
--   [Bereitstellen der flimmerfreien Aktivierung](../mfc/providing-flicker-free-activation.md)  
+-   [Providing Flicker-Free Activation](../mfc/providing-flicker-free-activation.md)  
   
--   [Verwenden eines ungestutzten Gerätekontexts](../mfc/using-an-unclipped-device-context.md)  
+-   [Using an Unclipped Device Context](../mfc/using-an-unclipped-device-context.md)  
   
--   [Optimieren der Steuerzeichnung](../mfc/optimizing-control-drawing.md)  
+-   [Optimizing Control Drawing](../mfc/optimizing-control-drawing.md)  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

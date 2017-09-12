@@ -1,5 +1,5 @@
 ---
-title: Deklarieren einer Variablen basierend auf der neuen Steuerelementklasse | Microsoft-Dokumentation
+title: Declaring a Variable Based on Your New Control Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,9 +13,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- variables, control classes
-- control classes, variables
-- classes [C++], declaring variables based on
+- variables [MFC], control classes
+- control classes [MFC], variables
+- classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
 caps.latest.revision: 9
 author: mikeblome
@@ -35,47 +35,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: a5777019ca87616fbb7c6a0d27140b3fabbf7fde
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 94098a33b5f3f311d6ddd78d5b3569eb645deea3
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="declaring-a-variable-based-on-your-new-control-class"></a>Deklarieren einer auf der neuen Steuerelementklasse basierenden Variablen
-Nachdem Sie eine MFC-Steuerelementklasse erstellt haben, können Sie eine Variable, die darauf basieren deklarieren. Um einen Kontext für die neue Variable zu gewährleisten, müssen Sie Dialog-Editor zu öffnen und bearbeiten das Dialogfeld, in dem das Steuerelement wiederverwendet werden soll. Darüber hinaus muss das Dialogfeld bereits eine Klasse zugeordnet sein. Informationen zum Verwenden des Dialog-Editors finden Sie unter [Dialog-Editor](../../windows/dialog-editor.md).  
+# <a name="declaring-a-variable-based-on-your-new-control-class"></a>Declaring a Variable Based on Your New Control Class
+Once you have created an MFC control class, you can declare a variable based on it. To provide a context for the new variable, you must open the dialog editor and edit the dialog box in which you want to use your reusable control. Also, the dialog box must already have a class associated with it. For information on using the dialog editor, see [Dialog Editor](../../windows/dialog-editor.md).  
   
-### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Zum Deklarieren einer Variablen auf Grundlage Ihrer wieder verwendbare Klasse  
+### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>To declare a variable based on your reusable class  
   
-1.  Bearbeiten Sie das Dialogfeld, ziehen Sie ein Steuerelement desselben Typs als Basisklasse des neuen Steuerelements aus der Steuerelement-Symbolleiste in das Dialogfeld.  
+1.  While editing the dialog box, drag a control of the same type as the base class of your new control from the Controls toolbar onto the dialog box.  
   
-2.  Platzieren Sie den Mauszeiger über dem abgelegten Steuerelement.  
+2.  Place the mouse pointer over the dropped control.  
   
-3.  Doppelklicken Sie beim Drücken der STRG-Taste auf das Steuerelement.  
+3.  While pressing the CTRL key, double-click the control.  
   
-     Die [Hinzufügen von Membervariablen](../../ide/add-member-variable-wizard.md) das Dialogfeld wird angezeigt.  
+     The [Add Member Variable](../../ide/add-member-variable-wizard.md) dialog box appears.  
   
-4.  In der **Zugriff** wählen Sie den richtigen Zugriff für das Steuerelement.  
+4.  In the **Access** box, select the correct access for your control.  
   
-5.  Klicken Sie auf die **Steuerelementvariable** das Kontrollkästchen.  
+5.  Click the **Control variable** check box.  
   
-6.  In der **Variablenname** Geben Sie einen Namen ein.  
+6.  In the **Variable name** box, type a name.  
   
-7.  Klicken Sie unter **Kategorie**, klicken Sie auf **Steuerelement**.  
+7.  Under **Category**, click **Control**.  
   
-8.  In der **Steuerelement-ID** Liste, wählen Sie das Steuerelement, das Sie hinzugefügt haben. Die **Variablentyp** Liste sollte den richtigen Variablentyp anzuzeigen und die **Steuerelementtyp** den korrekten Steuerelementtyp angezeigt.  
+8.  In the **Control ID** list, pick the control that you added. The **Variable type** list should display the correct variable type, and the **Control type** box should display the correct control type.  
   
-9. In der **Kommentar** fügen einen Kommentar im Code angezeigt werden soll.  
+9. In the **Comment** box, add any comment you want to appear in your code.  
   
-10. Klicken Sie auf **OK**.  
+10. Click **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Zuordnen von Meldungen zu Funktionen](../../mfc/reference/mapping-messages-to-functions.md)   
- [Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)   
- [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)   
- [Hinzufügen einer Membervariablen](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC-Meldungshandler](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigieren in der Klassenstruktur](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

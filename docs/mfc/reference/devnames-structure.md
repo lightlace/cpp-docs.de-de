@@ -1,5 +1,5 @@
 ---
-title: DEVNAMES-Struktur | Microsoft-Dokumentation
+title: DEVNAMES Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DEVNAMES
+- DEVNAMES [MFC]
 ms.assetid: aac97f60-2169-471a-ba5d-c0baed9eed9a
 caps.latest.revision: 11
 author: mikeblome
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 698a338c94dfa402dd51fa4f683b92a5d30cc0cd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 451e2942c22ab57fd39ac6bc3eca2e88869516d5
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="devnames-structure"></a>DEVNAMES-Struktur
-Die `DEVNAMES` Struktur enthält Zeichenfolgen, die der Treiber, Geräte und Ausgabe-Anschlussnamen für einen Drucker zu identifizieren.  
+# <a name="devnames-structure"></a>DEVNAMES Structure
+The `DEVNAMES` structure contains strings that identify the driver, device, and output-port names for a printer.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,27 +56,27 @@ typedef struct tagDEVNAMES { /* dvnm */
 } DEVNAMES;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  *wDriverOffset*  
- (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die eine auf Null endende Zeichenfolge, die den Dateinamen (ohne Erweiterung) des Gerätetreibers enthält. Bei der Eingabe wird diese Zeichenfolge bestimmt den Drucker mit der ursprünglich im Dialogfeld angezeigt.  
+ (Input/Output) Specifies the offset in characters to a null-terminated string that contains the filename (without the extension) of the device driver. On input, this string is used to determine the printer to display initially in the dialog box.  
   
  *wDeviceOffset*  
- (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die Null-terminierte Zeichenfolge (maximal 32 Bytes, die das Nullzeichen) mit dem Namen des Geräts. Diese Zeichenfolge muss identisch mit der **DmDeviceName** Mitglied der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Struktur.  
+ (Input/Output) Specifies the offset in characters to the null-terminated string (maximum of 32 bytes including the null) that contains the name of the device. This string must be identical to the **dmDeviceName** member of the [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) structure.  
   
  *wOutputOffset*  
- (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die auf Null endende Zeichenfolge, die der DOS-Gerätename für das physikalische Ausgabemedium (Ausgabeanschluss) enthält.  
+ (Input/Output) Specifies the offset in characters to the null-terminated string that contains the DOS device name for the physical output medium (output port).  
   
  *wDefault*  
- Gibt an, ob sich die Zeichenfolgen in der `DEVNAMES` -Struktur als Standarddrucker zu ermitteln. Diese Zeichenfolge wird verwendet, um sicherzustellen, dass seit der letzten Druckvorgang nicht als Standarddrucker geändert hat. Auf Benutzereingaben, wenn die **DN_DEFAULTPRN** Flag festgelegt ist, die anderen Werte der `DEVNAMES` Struktur mit den Standarddrucker verglichen. Wenn eine der Zeichenfolgen nicht übereinstimmen, wird eine Warnung angezeigt, die das Dokument neu formatiert werden angezeigt. Bei der Ausgabe der **wDefault** Element geändert wird, nur, wenn das Dialogfeld Seite einrichten angezeigt wurde und der Benutzer die Schaltfläche "OK hat". Die **DN_DEFAULTPRN** Flag wird festgelegt, wenn der Standarddrucker ausgewählt wurde. Wenn ein bestimmter Drucker ausgewählt ist, wird das Flag nicht festgelegt. Alle anderen Bits in diesem Member sind von der Prozedur Drucken-Dialogfeld für die interne Verwendung reserviert.  
+ Specifies whether the strings contained in the `DEVNAMES` structure identify the default printer. This string is used to verify that the default printer has not changed since the last print operation. On input, if the **DN_DEFAULTPRN** flag is set, the other values in the `DEVNAMES` structure are checked against the current default printer. If any of the strings do not match, a warning message is displayed informing the user that the document may need to be reformatted. On output, the **wDefault** member is changed only if the Print Setup dialog box was displayed and the user chose the OK button. The **DN_DEFAULTPRN** flag is set if the default printer was selected. If a specific printer is selected, the flag is not set. All other bits in this member are reserved for internal use by the Print Dialog box procedure.  
   
-## <a name="remarks"></a>Hinweise  
- Die **PrintDlg** Funktion verwendet diese Zeichenfolgen in das Dialogfeld Drucken vom System definierte Member initialisiert. Wenn der Benutzer das Dialogfeld geschlossen wird, werden Informationen über den ausgewählten Drucker in dieser Struktur zurückgegeben.  
+## <a name="remarks"></a>Remarks  
+ The **PrintDlg** function uses these strings to initialize members in the system-defined Print dialog box. When the user closes the dialog box, information about the selected printer is returned in this structure.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** commdlg.h  
   
-## <a name="see-also"></a>Siehe auch  
- [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CPrintDialog::CreatePrinterDC](../../mfc/reference/cprintdialog-class.md#createprinterdc)
 
 

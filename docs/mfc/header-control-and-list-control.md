@@ -1,49 +1,68 @@
 ---
-title: "Headersteuerelement und Listensteuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl-Klasse, mit CListCtrl"
-  - "CListCtrl-Klasse, Headersteuerelemente"
-  - "CListCtrl-Klasse, mit CHeaderCtrl"
-  - "Steuerelemente [MFC], Header"
-  - "Headersteuerelemente"
-  - "Headersteuerelemente, Listensteuerelemente verwendet mit"
+title: Header Control and List Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], with CHeaderCtrl
+- CListCtrl class [MFC], header controls
+- CHeaderCtrl class [MFC], with CListCtrl
+- controls [MFC], header
+- header controls [MFC]
+- header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Headersteuerelement und Listensteuerelement
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 144e5ee7bd7e60ad152ddcaa7d4928706a5cf1d8
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In den meisten Fällen verwenden Sie das Header\-Steuerelement, das in einem [Verwendung](../mfc/reference/clistctrl-class.md) oder [CListView](../mfc/reference/clistview-class.md)\-Objekt eingebettet wird.  jedoch, es gibt jedoch Fälle, in denen ein separates Header\-Steuerelement\-Objekt, wie Bearbeiten von Daten erwünscht ist, angeordnet in Spalten oder in Zeilen, [CView](../mfc/reference/cview-class.md) abgeleitetes Objekt.  In diesen Fällen benötigen Sie größere Kontrolle über das Aussehen und Standardverhalten eines eingebetteten Header\-Steuerelements.  
+---
+# <a name="header-control-and-list-control"></a>Header Control and List Control
+In most cases, you will use the header control that is embedded in a [CListCtrl](../mfc/reference/clistctrl-class.md) or [CListView](../mfc/reference/clistview-class.md) object. However, there are cases where a separate header control object is desirable, such as manipulating data, arranged in columns or rows, in a [CView](../mfc/reference/cview-class.md)-derived object. In these cases, you need greater control over the appearance and default behavior of an embedded header control.  
   
- Im Allgemeinen Fall, dass ein Header\-Steuerelement Standard bereitstellen soll, Standardverhalten, sollten Sie [Verwendung](../mfc/reference/clistctrl-class.md) oder stattdessen [CListView](../mfc/reference/clistview-class.md) verwenden.  Verwenden Sie `CListCtrl`, wenn Sie die Funktionalität eines Standardheader\-steuerelements soll, eingebettet in einer Listenansichtsgemeinsamen allgemeinen ToolTip\-Steuerelement.  Verwenden Sie [CListView](../mfc/reference/clistview-class.md), wenn Sie die Funktionalität eines Standardheader\-steuerelements soll, eingebettet in einem Ansichtsobjekt.  
+ In the common case that you want a header control to provide standard, default behavior, you may want to use [CListCtrl](../mfc/reference/clistctrl-class.md) or [CListView](../mfc/reference/clistview-class.md) instead. Use `CListCtrl` when you want the functionality of a default header control, embedded in a list view common control. Use [CListView](../mfc/reference/clistview-class.md) when you want the functionality of a default header control, embedded in a view object.  
   
 > [!NOTE]
->  Diese Steuerelemente umfassen nur ein integriertes Header\-Steuerelement, wenn das ListView\-Steuerelement mit dem Format `LVS_REPORT` erstellt wird.  
+>  These controls only include a built-in header control if the list view control is created using the `LVS_REPORT` style.  
   
- In den meisten Fällen kann die Darstellung des eingebetteten Header\-Steuerelements geändert werden, indem die Stile des enthaltenden Listenansicht\-Steuerelements ändert.  Außerdem können Informationen zum das Header\-Steuerelement von Memberfunktionen des übergeordneten Listenansicht\-Steuerelements abgerufen.  Für die vollständige Steuerung und Zugriff, Attributen und Formaten des eingebetteten Header\-Steuerelements, wird empfohlen, dass ein Zeiger auf Header\-Steuerelement\-Objekt abgerufen wird.  
+ In most cases, the appearance of the embedded header control can be modified by changing the styles of the containing list view control. In addition, information about the header control can be obtained through member functions of the parent list view control. However, for complete control, and access, to the attributes and styles of the embedded header control, it is recommended that a pointer to the header control object be obtained.  
   
- Auf das eingebettete Header\-Steuerelement\-Objekt kann von **CListCtrl**  oder `CListView` mit einem Aufruf zugegriffen werden entweder zur jeweiligen `GetHeaderCtrl`\-Memberfunktion der Klasse.  Der folgende Code zeigt dies:  
+ The embedded header control object can be accessed from either **CListCtrl** or `CListView` with a call to the respective class's `GetHeaderCtrl` member function. The following code demonstrates this:  
   
- [!CODE [NVC_MFCControlLadenDialog#14](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#14)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Verwenden der Bildlisten mit Header\-Steuerelementen](../mfc/using-image-lists-with-header-controls.md)  
+-   [Using image lists with header controls](../mfc/using-image-lists-with-header-controls.md)  
   
-## Siehe auch  
- [Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

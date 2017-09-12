@@ -1,51 +1,69 @@
 ---
-title: "Einschr&#228;nkungen f&#252;r CImage in fr&#252;heren Betriebssystemen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CImage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImage-Klasse, Einschränkungen"
+title: CImage Limitations with Earlier Operating Systems | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CImage
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImage class [MFC], limitations
 ms.assetid: 4bedaab8-7dd1-4c91-ab35-b75fb56765b0
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Einschr&#228;nkungen f&#252;r CImage in fr&#252;heren Betriebssystemen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d571d10243a8be1e1151651a139de8aeee07c8ea
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Viele `CImage`\-Funktionen funktionieren nur mit neueren Windows\-Versionen: Windows 95\/98 oder Windows NT 4.0 oder Windows 2000.  In diesem Artikel werden die Versionseinschränkungen bestimmter Methoden.  
+---
+# <a name="cimage-limitations-with-earlier-operating-systems"></a>CImage Limitations with Earlier Operating Systems
+Many `CImage` functions work only with newer versions of Windows: Windows 95/98 or Windows NT 4.0, or Windows 2000. This article describes the version limitations of certain methods.  
   
- [CImage::PlgBlt](../Topic/CImage::PlgBlt.md) und [CImage::MaskBlt](../Topic/CImage::MaskBlt.md) arbeiten mit nur Windows NT 4.0 oder höher.  Sie arbeiten nicht an Anwendungen unter auf Windows 95\/98 oder höher.  
+ [CImage::PlgBlt](../atl-mfc-shared/reference/cimage-class.md#plgblt) and [CImage::MaskBlt](../atl-mfc-shared/reference/cimage-class.md#maskblt) work with only Windows NT 4.0 or later. They will not work on applications running on Windows 95/98 or later.  
   
- [CImage::AlphaBlend](../Topic/CImage::AlphaBlend.md) und [CImage::TransparentBlt](../Topic/CImage::TransparentBlt.md) arbeiten mit nur Windows 2000 oder höher und Windows 98 oder höher, da Sie mit msimg32.lib verknüpfen müssen, um diese Methoden zu verwenden. \(Diese Bibliothek ist nur für Anwendungen verfügbar, die Windows 2000 oder höher und Windows 98 oder höher. ausführen\)  
+ [CImage::AlphaBlend](../atl-mfc-shared/reference/cimage-class.md#alphablend) and [CImage::TransparentBlt](../atl-mfc-shared/reference/cimage-class.md#transparentblt) work with only Windows 2000 or later and Windows 98 or later because you must link with msimg32.lib to use these methods. (This library is available only to applications running Windows 2000 or later and Windows 98 or later.)  
   
- Sie können `AlphaBlend` und `TransparentBlt` in einer Anwendung beinhalten, die auf Windows 95 oder Windows NT 4.0 ausgeführt wird, wenn diese Methoden nicht aufgerufen werden.  Wenn die Anwendung diese Methoden enthält und sie auf frühere Betriebssysteme ausgeführt werden muss, müssen Sie [\/delayload](../build/reference/delayload-delay-load-import.md) des Linkers verwenden, um das Laden von msimg32.lib hinauszuzögern.  Solange die Anwendung keine dieser Methoden bei Ausführung unter Windows NT 4.0 oder Windows 95 aufruft, versucht sie nicht, msimg32.lib zu laden.  Sie können überprüfen, ob Transparenzunterstützung verfügbar ist, die `CImage::IsTransparencySupported`\-Methode anwendend.  
+ You can include `AlphaBlend` and `TransparentBlt` in an application that runs on Windows 95 or Windows NT 4.0 only if these methods never get called. If your application includes these methods, and it must run on earlier operating systems, you must use the linker's [/delayload](../build/reference/delayload-delay-load-import.md) to delay the loading of msimg32.lib. As long as your application does not call one of these methods while running under Windows NT 4.0 or Windows 95, it will not attempt to load msimg32.lib. You can check the whether transparency support is available using the `CImage::IsTransparencySupported` method.  
   
-## Beispiel  
- [!CODE [NVC_MFCDocViewSDI#8](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocViewSDI#8)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocViewSDI#8](../mfc/codesnippet/cpp/cimage-limitations-with-earlier-operating-systems_1.cpp)]  
   
- Zum Kompilieren einer Anwendung die diese Methoden aufruft, fügen Sie eine \#define \_WIN32\_WINNT Anweisung ein bevor Sie eine \#including Systemheadern dupliziert wird und angeben dass die Version von Windows gleich oder größer als 5.0 ist:  
+ To compile an application that calls these methods, insert a #define _WIN32_WINNT statement before #including any system headers, indicating that the version of Windows is equal to or greater than 5.0:  
   
- [!CODE [NVC_MFCDocViewSDI#9](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocViewSDI#9)]  
+ [!code-cpp[NVC_MFCDocViewSDI#9](../mfc/codesnippet/cpp/cimage-limitations-with-earlier-operating-systems_2.h)]  
   
- Wenn die Anwendung nicht erforderlich, um auf ein Betriebssystemälteres als Windows 2000 oder Windows 98 ausgeführt werden, können Sie direkt zu msimg32.lib verknüpfen, ohne eine **\/delayload** zu verwenden.  
+ If your application does not need to run on an operating system older than Windows 2000 or Windows 98, you can link directly to msimg32.lib without using **/delayload**.  
   
- [CImage::Draw](../Topic/CImage::Draw.md) verhält sich anders, wenn es bei Windows 2000 und Windows 98 verwendet wird, als das mit Windows NT 4.0 oder Windows 95.  
+ [CImage::Draw](../atl-mfc-shared/reference/cimage-class.md#draw) behaves differently when used with Windows 2000 and Windows 98 than it does with Windows NT 4.0 or Windows 95.  
   
- Wenn Sie die Anwendung mit \_WIN32\_WINNT kompilieren, das auf einen Wert kleiner als 0x0500 festgelegt ist, verwendet **Zeichnen**, jedoch behandelt Transparenz nicht automatisch auf Systemen, die Windows 2000 und Windows 98 und höher ausgeführt.  
+ If you compile your application with _WIN32_WINNT set to a value less than 0x0500, **Draw** will work, but it will not handle transparency automatically on systems running Windows 2000 and Windows 98 and later.  
   
- Wenn Sie die Anwendung mit 0x0500 festgelegtem oder größerem \_WIN32\_WINNT kompilieren, behandelt **Zeichnen** Transparenz automatisch auf Systemen, die Windows 2000 oder Windows 98 und höher ausgeführt.  Er funktioniert auch, aber ohne Transparenzunterstützung, mit Windows NT 4.0 und Windows 95; jedoch müssen Sie **\/delayload** verwenden, um das Laden von msimg32.LIB zu verzögern, wie für `AlphaBlend` und `TransparentBlt` oben beschrieben.  
+ If you compile your application with _WIN32_WINNT set to 0x0500 or greater, **Draw** will handle transparency automatically on systems running Windows 2000 or Windows 98 and later. It will also work, but without transparency support, with Windows NT 4.0 and Windows 95; however, you must use **/delayload** to delay the loading of msimg32.LIB, as described above for `AlphaBlend` and `TransparentBlt`.  
   
-## Siehe auch  
+## <a name="see-also"></a>See Also  
  [CImage Class](../atl-mfc-shared/reference/cimage-class.md)
+

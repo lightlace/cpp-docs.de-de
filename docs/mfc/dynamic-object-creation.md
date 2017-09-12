@@ -1,37 +1,56 @@
 ---
-title: "Dynamische Objekterstellung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CObject-Klasse, dynamische Objekterstellung"
-  - "dynamische Objekterstellung"
-  - "Objekterstellung, dynamisch zur Laufzeit"
-  - "Objekte [C++], dynamisches Erstellen zur Laufzeit"
+title: Dynamic Object Creation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- object creation [MFC], dynamically at run time
+- CObject class [MFC], dynamic object creation
+- objects [MFC], creating dynamically at run time
+- dynamic object creation [MFC]
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Dynamische Objekterstellung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 15931a9e22697461b1a20ce4ed14d6ebbe3fe57a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel wird beschrieben, wie ein Objekt zur Laufzeit dynamisch erstellt.  Die Prozedur verwendet Ablaufklasseninformationen, wie im Artikel [Zugreifen auf Ablaufklasseninformationen](../mfc/accessing-run-time-class-information.md) erläutert.  
+---
+# <a name="dynamic-object-creation"></a>Dynamic Object Creation
+This article explains how to create an object dynamically at run time. The procedure uses run-time class information, as discussed in the article [Accessing Run-Time Class Information](../mfc/accessing-run-time-class-information.md).  
   
-#### Um ein Objekt dynamisch erstellen die Laufzeitklasse angegeben  
+#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>To dynamically create an object given its run-time class  
   
-1.  Verwenden Sie den folgenden Code, um ein Objekt dynamisch erstellen, indem Sie die `CreateObject`\-Funktion `CRuntimeClass` verwenden.  Beachten Sie die auf Fehler, `CreateObject` gibt **NULL**, anstatt eine Ausnahme auszulösen:  
+1.  Use the following code to dynamically create an object by using the `CreateObject` function of the `CRuntimeClass`. Note that on failure, `CreateObject` returns **NULL** instead of raising an exception:  
   
-     [!CODE [NVC_MFCCObjectSample#6](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCObjectSample#6)]  
+     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]  
   
-## Siehe auch  
- [Verwenden von CObject](../mfc/using-cobject.md)
+## <a name="see-also"></a>See Also  
+ [Using CObject](../mfc/using-cobject.md)
+
+

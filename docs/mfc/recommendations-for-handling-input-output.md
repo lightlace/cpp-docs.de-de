@@ -1,60 +1,78 @@
 ---
-title: "Empfehlungen zur Eingabe-/Ausgabebehandlung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dateibasierte E/A-Optionen"
-  - "E/A [C++]"
-  - "E/A [C++], Dateibasierte Optionen"
-  - "E/A [C++], Optionen"
-  - "E/A [MFC], Informationen über E/A"
+title: Recommendations for Handling Input-Output | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [MFC], about I/O
+- file-based I/O options
+- I/O [MFC]
+- I/O [MFC], options
+- I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Empfehlungen zur Eingabe-/Ausgabebehandlung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eeae4eb95cfe63e539d7b2a6764f04fa8726188b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ob Sie dateibasierte E\/A verwenden oder nicht, hängt davon ab, wie Sie auf die Fragen in der folgenden Entscheidungsstruktur reagieren:  
+---
+# <a name="recommendations-for-handling-inputoutput"></a>Recommendations for Handling Input/Output
+Whether you use file-based I/O or not depends on how you respond to the questions in the following decision tree:  
   
- **Befinden sich die primären Daten in der Anwendung in einer Datenträgerdatei?**  
+ **Does the primary data in your application reside in a disk file**  
   
--   Ja, um die primären Daten befindet sich in einer Datenträgerdatei:  
+-   Yes, the primary data resides in a disk file:  
   
-     **Liest die Anwendung die gesamte Datei in den Arbeitsspeicher auf der geöffneten Datei und schreibt die gesamte Datei wieder auf den Datenträger auf Datei\-Abwehr?**  
+     **Does the application read the whole file into memory on File Open and write the whole file back to disk on File Save**  
   
-    -   Ja: Dies ist der Dokumentfall standardmäßigen MFC.  Verwendungs **CDocument** Serialisierung.  
+    -   Yes: This is the default MFC document case. Use **CDocument** serialization.  
   
-    -   Nein: Dies ist normalerweise der Fall Transaktion\-basierten Aktualisierung der Datei.  Sie aktualisieren die Datei auf einer ProTransaktionsbasis und benötigen keine **CDocument** Serialisierung.  
+    -   No: This is typically the case of transaction-based updating of the file. You update the file on a per-transaction basis and don't need **CDocument** serialization.  
   
--   Nein, um die primären Daten befindet sich nicht in einer Datenträgerdatei:  
+-   No, the primary data doesn't reside in a disk file:  
   
-     **Befinden sich die Daten in einer ODBC\-Datenquelle?**  
+     **Does the data reside in an ODBC data source**  
   
-    -   Ja, die Daten befindet sich in einer ODBC\-Datenquelle:  
+    -   Yes, the data resides in an ODBC data source:  
   
-         Datenbankunterstützung der von MFC.  Die Implementierung des Standardanbieters MFC für diesen Fall enthält ein **CDocument**\-Objekt, das ein `CDatabase`\-Objekt speichert, wie im Artikel [Was ist das MFC\-Datenbank\-Programmiermodell?](../data/what-is-the-mfc-database-programming-model-q.md) erläutert.  Die Anwendung auch eine Arbeitsdatei lesen und schreiben \- den Zweck des Anwendungs\-Assistenten "eine Datenbankansicht archivierte und möglicherweise Stütz" Option.  In diesem Fall würden Sie die Serialisierung der Arbeitsdatei verwenden.  
+         Use MFC's database support. The standard MFC implementation for this case includes a `CDatabase` object, as discussed in the article [MFC: Using Database Classes with Documents and Views](../data/mfc-using-database-classes-with-documents-and-views.md). The application might also read and write an auxiliary file — the purpose of the application wizard "both a database view and file support" option. In this case, you'd use serialization for the auxiliary file.  
   
-    -   Nein, die Daten befindet sich nicht in einer ODBC\-Datenquelle.  
+    -   No, the data doesn't reside in an ODBC data source.  
   
-         Beispiele aus diesem Fall: die Daten befinden sich in einem NichtODBC DBMS; die Daten werden über einen anderen Mechanismus, wie OLE oder DDE gelesen.  
+         Examples of this case: the data resides in a non-ODBC DBMS; the data is read via some other mechanism, such as OLE or DDE.  
   
-         Verwenden Sie in solchen Fällen die Serialisierung nicht, und die Anwendung verfügt nicht geöffnet und sichert Menüelemente.  Sie sollten dennoch **CDocument** als Heimatstandort verwenden, wie eine Anwendung MFC\-ODBC das Dokument verwendet, um `CRecordset`\-Objekte zu speichern.  Es wird nicht die Standarddatei des Frameworks Serialisierung des offenen\/Abwehrdokuments.  
+         In such cases, you won't use serialization, and your application won't have Open and Save menu items. You might still want to use a **CDocument** as a home base, just as an MFC ODBC application uses the document to store `CRecordset` objects. But you won't use the framework's default File Open/Save document serialization.  
   
- Um das geöffnete, stellt Speicherungs\- und speichern als Befehle im Menü Datei zu unterstützen, dem Framework Dokumentserialisierung.  Serialisierung liest und schreibt Daten, einschließlich Objekte, die von der Klasse `CObject`, den permanenten Speicher, normalerweise einer Datenträgerdatei abgeleitet werden.  Serialisierung ist einfach und entspricht viele Ihrer Anforderungen, aber es kann in vielen Anwendungen nicht geeignet.  Datenzugriffsanwendungen aktualisieren in der Regel auf Daten einer ProTransaktionsbasis.  Sie aktualisieren die Datensätze, die von der Transaktion anstatt Lesen und Schreiben eine ganze Datendatei sofort beeinflusst werden.  
+ To support the Open, Save, and Save As commands on the File menu, the framework provides document serialization. Serialization reads and writes data, including objects derived from class `CObject`, to permanent storage, normally a disk file. Serialization is easy to use and serves many of your needs, but it may be inappropriate in many data-access applications. Data-access applications typically update data on a per-transaction basis. They update the records affected by the transaction rather than reading and writing a whole data file at once.  
   
- Weitere Informationen zur Serialisierung, finden Sie unter [Serialisierung](../mfc/serialization-in-mfc.md).  
+ For information about serialization, see [Serialization](../mfc/serialization-in-mfc.md).  
   
-## Siehe auch  
- [Serialisierung: Serialisierung im Vergleich zur Datenbankeingabe\/\-ausgabe](../mfc/serialization-serialization-vs-database-input-output.md)
+## <a name="see-also"></a>See Also  
+ [Serialization: Serialization vs. Database Input/Output](../mfc/serialization-serialization-vs-database-input-output.md)
+

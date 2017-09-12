@@ -1,49 +1,68 @@
 ---
-title: "Arbeiten mit Fensterobjekten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Untergeordnete Fenster, Arbeiten mit"
-  - "Fensterobjekte, Arbeiten mit"
+title: Working with Window Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- child windows [MFC], working with
+- window objects [MFC], working with
 ms.assetid: f73aa254-90e3-46a9-8e9b-d78b7054a331
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Arbeiten mit Fensterobjekten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2b5703795c56f9a5886220844a751397ad04adbb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Arbeiten mit Fensteraufrufen für zwei Arten von Aktivitäten:  
+---
+# <a name="working-with-window-objects"></a>Working with Window Objects
+Working with windows calls for two kinds of activity:  
   
--   Behandlungs\-Windows\-Meldungen  
+-   Handling Windows messages  
   
--   Zeichnen im Fenster  
+-   Drawing in the window  
   
- Um Windows\-Meldungen in jedem Fenster, einschließlich der eigenen untergeordneten Fenster verarbeiten, finden Sie unter [Zuordnungs\-Meldungen auf Funktionen](../mfc/reference/mapping-messages-to-functions.md) um die Meldungen in der C\+\+\-Fensterklasse zuzuordnen.  Schreiben Sie dann Meldungshandlermemberfunktionen in der Klasse.  
+ To handle Windows messages in any window, including your own child windows, see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md) to map the messages to your C++ window class. Then write message-handler member functions in your class.  
   
- Die meisten in einer Zeichnung Framework\-Anwendung wird in der Ansicht auf, deren [OnDraw](../Topic/CView::OnDraw.md)\-Memberfunktion aufgerufen wird, wenn der Inhalt des Fensters gezeichnet werden muss.  Wenn das Fenster ein untergeordnetes Element der Ansicht ist, Sie delegierte möglicherweise einen Teil der Zeichnungen der Ansicht hinweg im untergeordneten Fenster indem Sie `OnDraw` einen Aufruf der Memberfunktionen des Fensters verfügen.  
+ Most drawing in a framework application occurs in the view, whose [OnDraw](../mfc/reference/cview-class.md#ondraw) member function is called whenever the window's contents must be drawn. If your window is a child of the view, you might delegate some of the view's drawing to your child window by having `OnDraw` call one of your window's member functions.  
   
- In jedem Fall müssen Sie einen Gerätekontext zum Zeichnen.  Sie können die vordefinierten Stift, Pinseln und anderen Grafikobjekte verwenden, die im Gerätekontext enthalten werden, der dem Fenster zugeordnet ist.  Oder Sie können diese Objekte ändern, um die Zeichnungseffekte abzurufen, die Sie benötigen.  Wenn das Gerätekontext als Sie installiert ist, wie Sie, rufen Sie Memberfunktionen der [CDC](../mfc/reference/cdc-class.md) \(Gerätekontextklasse\) Linien, zu Formularen und dem Text auf; zu Farben verwenden; und einem Koordinatensystem arbeiten.  
+ In any case, you will need a device context for drawing. You can use the stock pen, brush, and other graphic objects contained in the device context associated with your window. Or you can modify these objects to get the drawing effects you need. With your device context set up as you like, call member functions of class [CDC](../mfc/reference/cdc-class.md) (device-context class) to draw lines, shapes, and text; to use colors; and to work with a coordinate system.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Meldungsbehandlung und Zuordnung](../mfc/message-handling-and-mapping.md)  
+-   [Message handling and mapping](../mfc/message-handling-and-mapping.md)  
   
--   [Zeichnen in einer Ansicht](../mfc/drawing-in-a-view.md)  
+-   [Drawing in a view](../mfc/drawing-in-a-view.md)  
   
--   [Gerätekontexte](../mfc/device-contexts.md)  
+-   [Device contexts](../mfc/device-contexts.md)  
   
--   [Grafikobjekte](../mfc/graphic-objects.md)  
+-   [Graphic objects](../mfc/graphic-objects.md)  
   
-## Siehe auch  
- [Fensterobjekte](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

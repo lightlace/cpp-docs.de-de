@@ -1,39 +1,58 @@
 ---
-title: "CTreeCtrl im Vergleich mit CTreeView"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-f1_keywords: 
-  - "CTreeCtrl"
-  - "CTreeView"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl-Klasse, kontra CTreeView-Klasse"
-  - "CTreeView-Klasse, kontra CTreeCtrl-Klasse"
-  - "Struktursteuerelemente, und Strukturansicht"
-  - "Strukturansicht-Steuerelemente"
+title: CTreeCtrl vs. CTreeView | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CTreeCtrl
+- CTreeView
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree view controls
+- CTreeCtrl class [MFC], vs. CTreeView class [MFC]
+- CTreeView class [MFC], vs. CTreeCtrl class [MFC]
+- tree controls [MFC], and tree view
 ms.assetid: bba5af25-103f-4b53-84d3-071bc9bd6494
 caps.latest.revision: 10
-caps.handback.revision: "6"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CTreeCtrl im Vergleich mit CTreeView
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9579c973c75898cb243fc1b47b638c35bd0423ea
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-MFC stellt zwei Klassen Tree\-Steuerelementen, die gekapselt werden: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) und [CTreeView](../mfc/reference/ctreeview-class.md).  Jede Klasse ist in verschiedenen Situationen nützlich.  
+---
+# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl vs. CTreeView
+MFC provides two classes that encapsulate tree controls: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) and [CTreeView](../mfc/reference/ctreeview-class.md). Each class is useful in different situations.  
   
- Verwenden Sie `CTreeCtrl`, wenn Sie ein einfaches Steuerelement des untergeordneten Fensters müssen; beispielsweise in einem Dialogfeld.  Sie können insbesondere die `CTreeCtrl`, wenn sie andere untergeordnete Steuerelemente im Fenster gibt, wie in einem typischen Dialogfeld verwendet werden.  
+ Use `CTreeCtrl` when you need a plain child window control; for instance, in a dialog box. You'd especially want to use `CTreeCtrl` if there will be other child controls in the window, as in a typical dialog box.  
   
- Verwenden Sie `CTreeView`, wenn das Tree\-Steuerelement wie ein Ansichtsfenster in der Dokument\-\/Ansichtarchitektur sowie in einem sich Strukturansicht soll.  `CTreeView` nimmt den gesamten Clientbereich eines Rahmenfensters oder des Splitterfensters.  Es wird automatisch angepasst, wenn sein übergeordnetes Fenster Größe geändert wird, und es kann Befehlsmeldungen von Menüs, von Zugriffstasten und Symbolleisten verarbeiten.  Da eine Strukturansicht die Daten enthält, die erforderlich sind, die Struktur anzuzeigen, muss das entsprechende Dokumentobjekt nicht schwierig \- Sie können [CDocument](../mfc/reference/cdocument-class.md) als Dokumenttyp in der Normal\-Vorlage sogar.  
+ Use `CTreeView` when you want the tree control to act like a view window in document/view architecture as well as a tree control. A `CTreeView` will occupy the entire client area of a frame window or splitter window. It will be automatically resized when its parent window is resized, and it can process command messages from menus, accelerator keys, and toolbars. Since a tree control contains the data necessary to display the tree, the corresponding document object does not have to be complicated — you could even use [CDocument](../mfc/reference/cdocument-class.md) as the document type in your document template.  
   
-## Siehe auch  
- [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

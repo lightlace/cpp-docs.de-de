@@ -1,39 +1,58 @@
 ---
-title: "Verwalten der aktuellen Ansicht | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aktuelle Ansicht im Rahmenfenster"
-  - "deaktivieren von Ansichten"
-  - "Rahmenfenster, Aktuelle Ansicht"
-  - "OnActivateView-Methode"
-  - "Ansichten, Aktivieren"
-  - "Ansichten, und OnActivateView-Methode"
-  - "Ansichten, Aktuell"
-  - "Ansichten, Deaktivieren"
+title: Managing the Current View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], and OnActivateView method [MFC]
+- views [MFC], deactivating
+- views [MFC], activating
+- frame windows [MFC], current view
+- OnActivateView method [MFC]
+- views [MFC], current
+- deactivating views [MFC]
+- current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Verwalten der aktuellen Ansicht
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fbdd5ed9ba0935fd224f2b62796ea005593b77b9
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Als Teil der Standardimplementierung von Rahmenfenstern, behält ein Rahmenfenster aktive Ansicht die momentan nachverfolgt.  Wenn das Rahmenfenster mehr als Ansicht enthält, wie beispielsweise in einem unterteilten, ist die aktuelle Ansicht die letzte Ansicht in Verwendung.  Die aktiven Ansicht ist unabhängig des aktiven Fensters in Windows oder im aktuellen Eingabefokus.  
+---
+# <a name="managing-the-current-view"></a>Managing the Current View
+As part of the default implementation of frame windows, a frame window keeps track of a currently active view. If the frame window contains more than one view, as for example in a splitter window, the current view is the most recent view in use. The active view is independent of the active window in Windows or the current input focus.  
   
- Wenn die aktive Ansicht ändert, benachrichtigt das Framework die aktuelle Ansicht, indem er die [OnActivateView](../Topic/CView::OnActivateView.md)\-Memberfunktion aufruft.  Sie können feststellen, ob die Ansicht aktiviert oder deaktiviert wird, indem `OnActivateView``bActivate`\-Parameter überprüft.  Standardmäßig legt `OnActivateView` den Fokus auf die aktuelle Ansicht auf Aktivierung fest.  Sie können `OnActivateView` überschreiben, um ein spezielles auszuführen, Verarbeitung, wenn die Ansicht deaktiviert oder reaktiviert wird.  Beispielsweise sollten Sie besondere visuelle Hinweise bereitstellen, um die aktive Ansicht von anderen unterscheiden, inaktive Ansichten.  
+ When the active view changes, the framework notifies the current view by calling its [OnActivateView](../mfc/reference/cview-class.md#onactivateview) member function. You can tell whether the view is being activated or deactivated by examining `OnActivateView`'s `bActivate` parameter. By default, `OnActivateView` sets the focus to the current view on activation. You can override `OnActivateView` to perform any special processing when the view is deactivated or reactivated. For example, you might want to provide special visual cues to distinguish the active view from other, inactive views.  
   
- Ein Rahmenfenster werden Befehle an die aktuelle \(aktive\) Ansicht weiter, wie in [Befehls\-Routing](../mfc/command-routing.md), als Teil des Standardbefehlsroutings beschrieben.  
+ A frame window forwards commands to its current (active) view, as described in [Command Routing](../mfc/command-routing.md), as part of the standard command routing.  
   
-## Siehe auch  
- [Verwenden von Rahmenfenstern](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

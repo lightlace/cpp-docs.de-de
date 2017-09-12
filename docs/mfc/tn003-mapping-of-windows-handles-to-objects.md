@@ -1,93 +1,112 @@
 ---
-title: "TN003: Zuordnen von Fensterhandles zu Objekten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mapping"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Handlezuordnungen"
-  - "Zuordnungen, Windows-Handles zu Objekten"
-  - "TN003"
-  - "Windows-Handles zu Objekten [C++]"
+title: 'TN003: Mapping of Windows Handles to Objects | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mapping
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN003
+- handle maps
+- Windows handles to objects [MFC]
+- mappings [MFC]], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# TN003: Zuordnen von Fensterhandles zu Objekten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b1ae730c803bd8c8e4e3f5c5a700ccfb52fb738e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Hinweis beschreibt die MFC\-Routinen, die die Zuordnung von Windows\-Objekthandles C\+\+\-Objekten zu unterstützen.  
+---
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Mapping of Windows Handles to Objects
+This note describes the MFC routines that support mapping Windows object handles to C++ objects.  
   
-## Das Problem  
- Windows\-Objekte werden in der Regel von verschiedenen [HANDLE](http://msdn.microsoft.com/library/windows/desktop/aa383751)\-Objekte dargestellt, die die MFC\-Klassen\-Umbruch Windows\-Objekthandles mit C\+\+ Objekte.  Die Handleumbruchsfunktionen der MFC\-Klassen\-Bibliothek lassen Sie das C\+\+\-Objekt finden, das das Windows\-Objekt umschließt, das ein bestimmtes Handle hat.  Bisweilen hat kein Objekt Wrapperobjekt einer C\+\+\-Datei und zu diesen Fällen erstellt das System ein temporäres Objekt, das als C\+\+\-Wrapper fungiert.  
+## <a name="the-problem"></a>The Problem  
+ Windows objects are typically represented by various [HANDLE](http://msdn.microsoft.com/library/windows/desktop/aa383751) objects The MFC classes wrap Windows object handles with C++ objects. The handle wrapping functions of the MFC class library let you find the C++ object that is wrapping the Windows object that has a particular handle. However, sometimes an object does not have a C++ wrapper object and at these times the system creates a temporary object to act as the C++ wrapper.  
   
- Windows \- Objekt, dass Verwendungshandlezuordnungen sind, wie folgt:  
+ The Windows objects that use handle maps are as follows:  
   
--   HWND \([CWnd](../mfc/reference/cwnd-class.md) und `CWnd` abgeleitete Klassen\)  
+-   HWND ([CWnd](../mfc/reference/cwnd-class.md) and `CWnd`-derived classes)  
   
--   HDC \([CDC](../mfc/reference/cdc-class.md) und `CDC` abgeleitete Klassen\)  
+-   HDC ([CDC](../mfc/reference/cdc-class.md) and `CDC`-derived classes)  
   
--   HMENU \([CMenu](../mfc/reference/cmenu-class.md)\)  
+-   HMENU ([CMenu](../mfc/reference/cmenu-class.md))  
   
--   HPEN \([CGdiObject](../mfc/reference/cgdiobject-class.md)\)  
+-   HPEN ([CGdiObject](../mfc/reference/cgdiobject-class.md))  
   
--   HBRUSH \(`CGdiObject`\)  
+-   HBRUSH (`CGdiObject`)  
   
--   HFONT \(`CGdiObject`\)  
+-   HFONT (`CGdiObject`)  
   
--   HBITMAP \(`CGdiObject`\)  
+-   HBITMAP (`CGdiObject`)  
   
--   HPALETTE \(`CGdiObject`\)  
+-   HPALETTE (`CGdiObject`)  
   
--   HRGN \(`CGdiObject`\)  
+-   HRGN (`CGdiObject`)  
   
--   HIMAGELIST \([CImageList](../mfc/reference/cimagelist-class.md)\)  
+-   HIMAGELIST ([CImageList](../mfc/reference/cimagelist-class.md))  
   
--   SOCKET \([CSocket](../mfc/reference/csocket-class.md)\)  
+-   SOCKET ([CSocket](../mfc/reference/csocket-class.md))  
   
- Ein Handle bis eines dieser Objekte zugewiesen, können Sie das MFC\-Objekt finden, das das Handle umschließt, indem die statische Methode `FromHandle` aufruft.  Beispielsweise HWND angegeben dem Namen `hWnd`, die folgenden Zeilen zurückgibt einen Zeiger auf `CWnd` auf, der `hWnd` umschließt:  
+ Given a handle to any one of these objects, you can find the MFC object that wraps the handle by calling the static method `FromHandle`. For example, given an HWND called `hWnd`, the following line will return a pointer to the `CWnd` that wraps `hWnd`:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- Wenn `hWnd` kein bestimmtes Wrapperobjekt hat, wird temporäres `CWnd`, um `hWnd` zu umschließen.  Dies ermöglicht es, ein gültiges C\+\+\-Objekt von jedem Handle zu erhalten.  
+ If `hWnd` does not have a specific wrapper object, a temporary `CWnd` is created to wrap `hWnd`. This makes it possible to obtain a valid C++ object from any handle.  
   
- Nachdem Sie ein Wrapperobjekt haben, können Sie das Handle einer Variable des öffentlichen Members der Wrapperklasse abrufen.  Bei `CWnd` enthält `m_hWnd` HWND für dieses Objekt.  
+ After you have a wrapper object, you can retrieve its handle from a public member variable of the wrapper class. In the case of a `CWnd`, `m_hWnd` contains the HWND for that object.  
   
-## Anfügen von Handles auf MFC\-Objekte  
- Ein neu erstelltes HandleWrapperobjekt und ein Handle für ein Windows\-Objekt gegeben, können Sie die beiden zuordnen, indem Sie die `Attach`\-Funktion entsprechend diesem Beispiel aufrufen:  
+## <a name="attaching-handles-to-mfc-objects"></a>Attaching Handles to MFC Objects  
+ Given a newly created handle-wrapper object and a handle to a Windows object, you can associate the two by calling the `Attach` function as in this example:  
   
 ```  
 CWnd myWnd;  
-myWnd.Attach(hWnd);  
+myWnd.Attach(hWnd);
 ```  
   
- Dies macht einen Eintrag der permanenten Zuordnung, die `myWnd` und `hWnd` zuordnet.  `CWnd::FromHandle(hWnd)` aufrufen, gibt jetzt einen Zeiger auf `myWnd` zurück.  Wenn `myWnd` gelöscht wird, zerstört der Destruktor automatisch `hWnd`, indem er der Windows\-Funktion [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682).  Wenn dies nicht erforderlich ist, muss `hWnd` von `myWnd` getrennt werden, bevor `myWnd` zerstört wird \(normalerweise, wenn der Bereich verlassen wird, in dem `myWnd` definiert wurde\).  Die `Detach`\-Methode geschieht.  
+ This makes an entry in the permanent map associating `myWnd` and `hWnd`. Calling `CWnd::FromHandle(hWnd)` will now return a pointer to `myWnd`. When `myWnd` is deleted, the destructor will automatically destroy `hWnd` by calling the Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) function. If this is not desired, `hWnd` must be detached from `myWnd` before `myWnd` is destroyed (normally when leaving the scope at which `myWnd` was defined). The `Detach` method does this.  
   
 ```  
-myWnd.Detach();  
+myWnd.Detach();
 ```  
   
-## Weitere zu temporären Objekte  
- Temporäre Objekte werden erstellt, wenn `FromHandle` ein Handle übergeben wird, das noch ein Wrapperobjekt hat.  Diese temporäre Objekte werden von ihrem Handle getrennt gelöscht und durch die `DeleteTempMap`\-Funktionen.  Standardmäßig ruft [CWinThread::OnIdle](../Topic/CWinThread::OnIdle.md) automatisch `DeleteTempMap` für jede Klasse, die temporäre Handlezuordnungen unterstützt.  Dies bedeutet, dass Sie nicht davon ausgehen können, dass ein Zeiger auf einen temporären Objekt hinter dem Punkt der Beendigung der Funktion gültig ist, in der der Zeiger abgerufen wurde.  
+## <a name="more-about-temporary-objects"></a>More About Temporary Objects  
+ Temporary objects are created whenever `FromHandle` is given a handle that does not already have a wrapper object. These temporary objects are detached from their handle and deleted by the `DeleteTempMap` functions. By default [CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle) automatically calls `DeleteTempMap` for each class that supports temporary handle maps. This means that you cannot assume a pointer to a temporary object will be valid past the point of exit from the function where the pointer was obtained.  
   
-## Wrapper\-Objekte und mehrere Threads  
- werden temporäre und permanente Objekte pro Thread beibehalten.  Das bedeutet, dass ein Thread auf C\+\+\-Wrapperobjekte eines anderen Threads nicht zugreifen, unabhängig davon, ob er temporär oder permanent ist.  
+## <a name="wrapper-objects-and-multiple-threads"></a>Wrapper Objects and Multiple Threads  
+ Both temporary and permanent objects are maintained on a per-thread basis. That is, one thread cannot access another thread's C++ wrapper objects, regardless of whether it is temporary or permanent.  
   
- Damit diese Objekte von einem Thread zu einem anderen zu übergeben, senden Sie sie immer als ihr systemeigener Typ `HANDLE`.  Durch Übergeben des Wrapperobjekts eine C\+\+\-Headerdatei von einem Thread zu anderen verursacht oftmals zu unerwarteten Ergebnissen.  
+ To pass these objects from one thread to another, always send them as their native `HANDLE` type. Passing a C++ wrapper object from one thread to another will often cause unexpected results.  
   
-## Siehe auch  
- [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)   
- [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

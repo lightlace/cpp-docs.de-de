@@ -1,5 +1,5 @@
 ---
-title: Klasse CMFCRibbonCustomizeDialog | Microsoft-Dokumentation
+title: CMFCRibbonCustomizeDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,10 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonCustomizeDialog class
-- CMFCRibbonCustomizeDialog class, destructor
-- ~CMFCRibbonCustomizeDialog destructor
-- GetThisClass method
+- CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
 caps.latest.revision: 22
 author: mikeblome
@@ -38,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: d27247f89901adad1778313cdde6fe206a569f0d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b9c20532c5bbe799de3df8bd63c51489f128a300
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog-Klasse
-Zeigt das Menüband **anpassen** Seite.  
+# <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog Class
+Displays the ribbon **Customize** page.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,30 +51,30 @@ Zeigt das Menüband **anpassen** Seite.
 class CMFCRibbonCustomizeDialog : public CMFCPropertySheet  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|Erstellt ein `CMFCRibbonCustomizeDialog`-Objekt.|  
-|`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|Destruktor.|  
+|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|Constructs a `CMFCRibbonCustomizeDialog` object.|  
+|`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|Destructor.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonCustomizeDialog::GetThisClass`|Vom Framework verwendet werden, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das Klassentyp zugeordnet ist.|  
+|`CMFCRibbonCustomizeDialog::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
   
-## <a name="remarks"></a>Hinweise  
- MFC instanziiert diese Klasse automatisch, wenn Sie keine AFX_WM_ON_RIBBON_CUSTOMIZE Nachricht verarbeiten, oder wenn Sie 0 aus der Message-Handler zurückgegeben.  
+## <a name="remarks"></a>Remarks  
+ MFC instantiates this class automatically if you do not process the AFX_WM_ON_RIBBON_CUSTOMIZE message, or if you return 0 from the message handler.  
   
- Wenn Sie diese Klasse in Ihrer Anwendung zu verwenden, um das Menüband anzeigen möchten **anpassen** Dialogfeld Feld, einfach instanziieren und Aufrufen der `DoModal` Methode.  
+ If you want to use this class in your application to display the ribbon **Customize** dialog box, just instantiate it and call the `DoModal` method.  
   
- Da von dieser Klasse abgeleitet ist [CMFCPropertySheet Klasse](../../mfc/reference/cmfcpropertysheet-class.md), können Sie benutzerdefinierte Seiten hinzufügen, mit der `CMFCPropertySheet` API.  
+ Because this class is derived from [CMFCPropertySheet Class](../../mfc/reference/cmfcpropertysheet-class.md), you can add custom pages by using the `CMFCPropertySheet` API.  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -89,11 +86,11 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
   
  [CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxribboncustomizedialog.h  
   
-##  <a name="cmfcribboncustomizedialog"></a>CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
- Erstellt ein `CMFCRibbonCustomizeDialog`-Objekt.  
+##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
+ Constructs a `CMFCRibbonCustomizeDialog` object.  
   
 ```  
 CMFCRibbonCustomizeDialog(
@@ -101,22 +98,22 @@ CMFCRibbonCustomizeDialog(
     CMFCRibbonBar* pRibbon);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- Ein Zeiger auf das übergeordnete Fenster (in der Regel den Hauptframe).  
+ A pointer to the parent window (usually the main frame).  
   
  [in] `pRibbon`  
- Ein Zeiger auf die `CMFCRibbonBar` das angepasst werden soll.  
+ A pointer to the `CMFCRibbonBar` that is to be customized.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCRibbonCustomizeDialog` Objekt.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCRibbonCustomizeDialog` object.  
   
- [!code-cpp[NVC_MFC_RibbonApp&18;](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]  
   
-### <a name="remarks"></a>Hinweise  
- Der Konstruktor instanziiert ein [CMFCRibbonCustomizePropertyPage Klasse](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) -Objekt und fügt es zur Auflistung der Eigenschaftenfenster.  
+### <a name="remarks"></a>Remarks  
+ The constructor instantiates a [CMFCRibbonCustomizePropertyPage Class](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) object and adds it to the collection of property sheet pages.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [Klassen](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

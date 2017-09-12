@@ -1,51 +1,70 @@
 ---
-title: "Zugreifen auf das eingebettete Monatskalender-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDateTimeCtrl-Klasse, Zugreifen auf eingebettete Steuerelemente"
-  - "CMonthCalCtrl-Klasse, Ändern der Schriftart"
-  - "DateTimePicker-Steuerelement [MFC]"
-  - "DateTimePicker-Steuerelement [MFC], Zugriff auf den Monatskalender"
-  - "Monatskalender-Steuerelement, Ändern der Schriftart"
-  - "Monatskalender-Steuerelement, eingebettet in der Datum/Uhrzeit-Auswahl"
+title: Accessing the Embedded Month Calendar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DateTimePicker control [MFC], accessing month calendar
+- CDateTimeCtrl class [MFC], accessing embedded control
+- month calendar controls [MFC], embedded in date/time picker
+- CMonthCalCtrl class [MFC], changing the font
+- month calendar controls [MFC], changing the font
+- DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Zugreifen auf das eingebettete Monatskalender-Steuerelement
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ad47b376fd5f3cc044bffe3c98116489362d046d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Auf das eingebettete Monatskalender\-Steuerelement\-Objekt kann vom `CDateTimeCtrl`\-Objekt durch einen Aufruf der Memberfunktion [GetMonthCalCtrl](../Topic/CDateTimeCtrl::GetMonthCalCtrl.md) zugegriffen werden.  
+---
+# <a name="accessing-the-embedded-month-calendar-control"></a>Accessing the Embedded Month Calendar Control
+The embedded month calendar control object can be accessed from the `CDateTimeCtrl` object with a call to the [GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) member function.  
   
 > [!NOTE]
->  Die eingebettete Monatskalender\-Steuerelement wird nur verwendet, wenn das Steuerelement für die Datums\- und Zeitauswahl nicht den festgelegten **DTS\_UPDOWN**  Format hat.  
+>  The embedded month calendar control is used only when the date and time picker control does not have the **DTS_UPDOWN** style set.  
   
- Dies ist hilfreich, wenn Sie bestimmten Attributen ändern möchten, bevor das eingebettete Steuerelement angezeigt wird.  Um dies zu erreichen, bearbeiten Sie die **DTN\_DROPDOWN** Benachrichtigung, abzurufen das Monatskalender\-Steuerelement \(mit [CDateTimeCtrl::GetMonthCalCtrl](../Topic/CDateTimeCtrl::GetMonthCalCtrl.md)\) und nehmen Sie die Änderungen.  Leider ist das Monatskalender\-Steuerelement nicht erhalten.  
+ This is useful if you want to modify certain attributes before the embedded control is displayed. To accomplish this, handle the **DTN_DROPDOWN** notification, retrieve the month calendar control (using [CDateTimeCtrl::GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)), and make your modifications. Unfortunately, the month calendar control is not persistent.  
   
- Das heißt, die Benutzeranforderungen, wenn die Anzeige des Monatskalender\-Steuerelements, ein neues Monatskalender\-Steuerelement erstellt wird \(vor der **DTN\_DROPDOWN** Benachrichtigung\).  Das Steuerelement zerstört wird \(nach der **DTN\_CLOSEUP** Benachrichtigung\) wenn es vom Benutzer schließen wird.  Dies bedeutet, dass alle Attribute, die, Sie, bevor das eingebettete Steuerelement angezeigt wird, gehen verloren ändern, wenn das eingebettete Steuerelement geschlossen wird.  
+ In other words, when the user requests the display of the month calendar control, a new month calendar control is created (before the **DTN_DROPDOWN** notification). The control is destroyed (after the **DTN_CLOSEUP** notification) when dismissed by the user. This means that any attributes you modify, before the embedded control is displayed, are lost when the embedded control is dismissed.  
   
- Im folgenden Beispiel wird dieses Verfahren, mithilfe eines Handlers für die **DTN\_DROPDOWN** Benachrichtigung.  Die Codeänderungen die Hintergrundfarbe des Monatskalender\-Steuerelements, mit einem Aufruf von [SetMonthCalColor](../Topic/CDateTimeCtrl::SetMonthCalColor.md), z Grau.  Der Code ist, wie folgt:  
+ The following example demonstrates this procedure, using a handler for the **DTN_DROPDOWN** notification. The code changes the background color of the month calendar control, with a call to [SetMonthCalColor](../mfc/reference/cdatetimectrl-class.md#setmonthcalcolor), to gray. The code is as follows:  
   
- [!CODE [NVC_MFCControlLadenDialog#5](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#5)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#5](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_1.cpp)]  
   
- Wie bereits erwähnt, sind alle Änderungen an den Eigenschaften des Monatskalender\-Steuerelements, mit zwei Ausnahmen verloren, wenn das eingebettete Steuerelement geschlossen wird.  Die erste Ausnahme, die Farben des Monatskalender\-Steuerelements, ist bereits erläutert wird.  Die zweite Ausnahme ist die Schriftart, die vom Monatskalender\-Steuerelement verwendet wird.  Sie können die Standardschriftart ändern, indem Sie einen Aufruf von [CDateTimeCtrl::SetMonthCalFont](../Topic/CDateTimeCtrl::SetMonthCalFont.md) ausführen und das Handle einer vorhandenen Schriftart übergeben.  Das folgenden Beispiel \(wobei `m_dtPicker` das Datum und Zeitsteuerobjekt ist\), wird eine andere Methode:  
+ As stated previously, all modifications to properties of the month calendar control are lost, with two exceptions, when the embedded control is dismissed. The first exception, the colors of the month calendar control, has already been discussed. The second exception is the font used by the month calendar control. You can modify the default font by making a call to [CDateTimeCtrl::SetMonthCalFont](../mfc/reference/cdatetimectrl-class.md#setmonthcalfont), passing the handle of an existing font. The following example (where `m_dtPicker` is the date and time control object) demonstrates one possible method:  
   
- [!CODE [NVC_MFCControlLadenDialog#6](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#6)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#6](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_2.cpp)]  
   
- Sobald die Schriftart, mit einem Aufruf von `CDateTimeCtrl::SetMonthCalFont`, die neue Schriftart wird gespeichert und verwendet geändert wurde beim nächsten Mal, wenn ein Monatskalender angezeigt werden soll.  
+ Once the font has been changed, with a call to `CDateTimeCtrl::SetMonthCalFont`, the new font is stored and used the next time a month calendar is to be displayed.  
   
-## Siehe auch  
- [Verwenden von CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

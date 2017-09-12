@@ -1,77 +1,96 @@
 ---
-title: "Verbindungspunkte | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IConnectionPoint"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCmdTarget-Klasse, und Verbindungspunkte"
-  - "COM, Verbindungspunkte"
-  - "Verbindungspunkte [C++]"
-  - "Verbindungen, Verbindungspunkte"
-  - "IConnectionPoint-Schnittstelle"
-  - "Schnittstellen, IConnectionPoint"
-  - "MFC [C++], COM-Unterstützung"
-  - "MFC COM, Verbindungspunkte"
-  - "OLE COM-Verbindungspunkte"
-  - "Senken, Verbindungspunkte"
+title: Connection Points | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IConnectionPoint
+dev_langs:
+- C++
+helpviewer_keywords:
+- IConnectionPoint interface
+- connections, connection points
+- OLE COM connection points
+- MFC COM, connection points
+- COM, connection points
+- interfaces, IConnectionPoint
+- MFC, COM support
+- connection points [MFC]
+- CCmdTarget class [MFC], and connection points
+- sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Verbindungspunkte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f2474c1533040128f2a7b805db4e6f15dc85bb5
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In diesem Artikel wird beschrieben, wie die Verbindung \(früher bekannt als OLE\-Verbindungspunkte\) mithilfe der MFC\-Klassen `CCmdTarget` und `CConnectionPoint` implementiert.  
+---
+# <a name="connection-points"></a>Connection Points
+This article explains how to implement connection points (formerly known as OLE connection points) using the MFC classes `CCmdTarget` and `CConnectionPoint`.  
   
- Früher definierte das Component Object Model \(COM\) einen allgemeinen Mechanismus \(**IUnknown::QueryInterface**\) der zulässigen Objekte, um Funktionalität in den Schnittstellen zu implementieren und verfügbar zu machen.  jedoch ein entsprechender Mechanismus, der die zulässigen Objekte, die ihre Funktion verfügbar zu machen, um bestimmte Schnittstellen aufzurufen nicht definiert wurden.  Das heißt, hatten definiertes COM, eingehende wie Zeiger auf Objekte \(Zeiger auf Schnittstellen des Objekts\) behandelt wurden, jedoch kein explizites Modell für Ausgangsschnittstellen \(Zeiger, die das Objekt mit den Schnittstellen anderer Objekte enthält\).  COM verfügt jetzt über ein Modell, aufgerufen Verbindungspunkte, das diese Funktionen unterstützt.  
+ In the past, the Component Object Model (COM) defined a general mechanism (**IUnknown::QueryInterface**) that allowed objects to implement and expose functionality in interfaces. However, a corresponding mechanism that allowed objects to expose their capability to call specific interfaces was not defined. That is, COM defined how incoming pointers to objects (pointers to that object's interfaces) were handled, but it did not have an explicit model for outgoing interfaces (pointers the object holds to other objects' interfaces). COM now has a model, called connection points, that supports this functionality.  
   
- Eine Verbindung besteht aus zwei Teilen: das Objekt, das die Schnittstelle aufgerufen, die Quelle und das Objekt die Schnittstelle implementiert, aufgerufen die Senke aufruft.  Ein Verbindungspunkt ist die Schnittstelle, der die Quelle verfügbar gemacht wird.  Durch sie einen Verbindungspunkt verfügbar macht, kann eine Quelle Senken, um Verbindungen zu sich herzustellen \(die Quelle\).  Durch den Verbindungspunktmechanismus \(die **IConnectionPoint** \- Schnittstelle\), wird ein Zeiger auf die Senkenschnittstelle die übergeben.  Dieser Zeiger stellt die Quelle mit Zugriff auf die Implementierung der Senke von Memberfunktionen.  Um beispielsweise ein Ereignis auszulösen, das durch die Senke implementiert wird, ist die Quelle die entsprechende Methode der Senke aufrufen.  Die folgende Abbildung zeigt den Ereignisthemen Verbindungspunkt nur.  
+ A connection has two parts: the object calling the interface, called the source, and the object implementing the interface, called the sink. A connection point is the interface exposed by the source. By exposing a connection point, a source allows sinks to establish connections to itself (the source). Through the connection point mechanism (the **IConnectionPoint** interface), a pointer to the sink interface is passed to the source object. This pointer provides the source with access to the sink's implementation of a set of member functions. For example, to fire an event implemented by the sink, the source can call the appropriate method of the sink's implementation. The following figure demonstrates the connection point just described.  
   
- ![Implementierter Verbindungspunkt](../mfc/media/vc37lh1.png "vc37LH1")  
-Implementierter Verbindungspunkt  
+ ![Implemented connection point](../mfc/media/vc37lh1.gif "vc37lh1")  
+An Implemented Connection Point  
   
- MFC implementiert dieses Modell in den Klassen [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) und [CCmdTarget](../mfc/reference/ccmdtarget-class.md).  Die Klassen, die von **CConnectionPoint**  abgeleitet werden, implementieren die **IConnectionPoint**\-Schnittstelle, verwendet, um zu Verbindungspunkten anderen Objekten verfügbar.  Die Klassen, die von `CCmdTarget` abgeleitet werden, implementieren die **IConnectionPointContainer**\-Schnittstelle, die alle verfügbaren Verbindungspunkte eines Objekts aufgelistet werden können oder einen bestimmten Verbindungspunkt sucht.  
+ MFC implements this model in the [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) and [CCmdTarget](../mfc/reference/ccmdtarget-class.md) classes. Classes derived from **CConnectionPoint** implement the **IConnectionPoint** interface, used to expose connection points to other objects. Classes derived from `CCmdTarget` implement the **IConnectionPointContainer** interface, which can enumerate all of an object's available connection points or find a specific connection point.  
   
- Für jeden Verbindungspunkt, der in der Klasse implementiert wird, müssen Sie einen inneren Element deklarieren, die den Verbindungspunkt implementiert.  Wenn Sie eine oder mehrere Verbindungspunkte implementieren, müssen Sie eine einzelne Verbindungszuordnung in der Klasse auch deklarieren.  Eine Verbindungszuordnung ist eine Tabelle von Verbindungspunkten, die das ActiveX\-Steuerelement unterstützt werden.  
+ For each connection point implemented in your class, you must declare a connection part that implements the connection point. If you implement one or more connection points, you must also declare a single connection map in your class. A connection map is a table of connection points supported by the ActiveX control.  
   
- Die folgenden Beispiele zeigen eine einfache Verbindungszuordnung und einen Verbindungspunkt.  Das erste Beispiel deklariert die Verbindungszuordnung und den Punkt; das zweite Beispiel implementiert die Belegung und den Punkt.  Beachten Sie, dass `CMyClass` `CCmdTarget` sein muss abgeleiteten Klasse.  Im ersten Beispiel wird Code in die Klassendeklaration, unter dem **protected** \-Abschnitt eingefügt:  
+ The following examples demonstrate a simple connection map and one connection point. The first example declares the connection map and point; the second example implements the map and point. Note that `CMyClass` must be a `CCmdTarget`-derived class. In the first example, code is inserted in the class declaration, under the **protected** section:  
   
- [!CODE [NVC_MFCConnectionPoints#1](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCConnectionPoints#1)]  
+ [!code-cpp[NVC_MFCConnectionPoints#1](../mfc/codesnippet/cpp/connection-points_1.h)]  
   
- `BEGIN_CONNECTION_PART` und der **END\_CONNECTION\_PART** \-Makros deklarieren eine eingebettete Klasse, `XSampleConnPt` \(abgeleitet von `CConnectionPoint`\), die diesen bestimmten Verbindungspunkt implementiert.  Falls eine `CConnectionPoint`\-Memberfunktionen überschreiben oder Memberfunktionen von eigenen hinzufügen möchten, deklarieren Sie es zwischen diesen beiden Makros.  So überschreibt beispielsweise das `CONNECTION_IID`\-Makro die Memberfunktion `CConnectionPoint::GetIID`, wenn zwischen diese beiden Makros eingefügt wird.  
+ The `BEGIN_CONNECTION_PART` and **END_CONNECTION_PART** macros declare an embedded class, `XSampleConnPt` (derived from `CConnectionPoint`), that implements this particular connection point. If you want to override any `CConnectionPoint` member functions or add member functions of your own, declare them between these two macros. For example, the `CONNECTION_IID` macro overrides the `CConnectionPoint::GetIID` member function when placed between these two macros.  
   
- Im zweiten Beispiel wird Code in der Implementierungsdatei des Steuerelements \(CPP\-Datei\) eingefügt.  Dieser Code implementiert die Verbindungszuordnung, die den Verbindungspunkt enthält, `SampleConnPt`:  
+ In the second example, code is inserted in the control's implementation file (.cpp file). This code implements the connection map, which includes the connection point, `SampleConnPt`:  
   
- [!CODE [NVC_MFCConnectionPoints#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCConnectionPoints#2)]  
+ [!code-cpp[NVC_MFCConnectionPoints#2](../mfc/codesnippet/cpp/connection-points_2.cpp)]  
   
- Wenn Ihre Klasse mehr als einen Verbindungspunkt hat, fügen Sie zusätzliche `CONNECTION_PART` zwischen Makros `BEGIN_CONNECTION_MAP` und den `END_CONNECTION_MAP`\-Makros.  
+ If your class has more than one connection point, insert additional `CONNECTION_PART` macros between the `BEGIN_CONNECTION_MAP` and `END_CONNECTION_MAP` macros.  
   
- Abschließend fügen Sie `EnableConnections` einen Aufruf im Konstruktor der Klasse hinzu.  Beispiel:  
+ Finally, add a call to `EnableConnections` in the class's constructor. For example:  
   
- [!CODE [NVC_MFCConnectionPoints#3](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCConnectionPoints#3)]  
+ [!code-cpp[NVC_MFCConnectionPoints#3](../mfc/codesnippet/cpp/connection-points_3.cpp)]  
   
- Nachdem dieser Code eingefügt wurde, das `CCmdTarget` abgeleitete Klasse macht einen Verbindungspunkt für die **ISampleSink** \-Schnittstelle verfügbar.  Die folgende Abbildung veranschaulicht dieses Beispiel.  
+ Once this code has been inserted, your `CCmdTarget`-derived class exposes a connection point for the **ISampleSink** interface. The following figure illustrates this example.  
   
- ![Mithilfe von MFC implementierter Verbindungspunkt](../mfc/media/vc37lh2.png "vc37LH2")  
-Ein Verbindungspunkt implementiert mit MFC  
+ ![Connection point implemented by using MFC](../mfc/media/vc37lh2.gif "vc37lh2")  
+A Connection Point Implemented with MFC  
   
- Normalerweise unterstützen Verbindungspunkte "Multi \- Guss \- Element" \- die Möglichkeit, das mehreren Senken zu übertragen, die mit der gleichen Schnittstelle verbunden werden.  Im folgenden Beispielsfragment wird, die von Multicastdelegaten das Traversieren von Senke jede auf einen Verbindungspunkt:  
+ Usually, connection points support "multicasting" — the ability to broadcast to multiple sinks connected to the same interface. The following example fragment demonstrates how to multicast by iterating through each sink on a connection point:  
   
- [!CODE [NVC_MFCConnectionPoints#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCConnectionPoints#4)]  
+ [!code-cpp[NVC_MFCConnectionPoints#4](../mfc/codesnippet/cpp/connection-points_4.cpp)]  
   
- In diesem Beispiel ruft die aktuelle ab, der von den Verbindungen in dem Verbindungspunkt mit `SampleConnPt` einem Aufruf für `CConnectionPoint::GetConnections` festgelegt wird.  Anschließend durchläuft die Links durch und ruft **ISampleSink::SinkFunc** auf jeder aktiven Verbindung auf.  
+ This example retrieves the current set of connections on the `SampleConnPt` connection point with a call to `CConnectionPoint::GetConnections`. It then iterates through the connections and calls **ISampleSink::SinkFunc** on every active connection.  
   
-## Siehe auch  
+## <a name="see-also"></a>See Also  
  [MFC COM](../mfc/mfc-com.md)
+
+

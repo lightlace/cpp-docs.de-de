@@ -1,5 +1,5 @@
 ---
-title: CHeaderCtrl-Klasse | Microsoft Docs
+title: CHeaderCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -43,9 +43,35 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CHeaderCtrl class
-- Windows common controls [C++], CHeaderCtrl
-- header controls, CHeaderCtrl class
+- CHeaderCtrl [MFC], CHeaderCtrl
+- CHeaderCtrl [MFC], ClearAllFilters
+- CHeaderCtrl [MFC], ClearFilter
+- CHeaderCtrl [MFC], Create
+- CHeaderCtrl [MFC], CreateDragImage
+- CHeaderCtrl [MFC], CreateEx
+- CHeaderCtrl [MFC], DeleteItem
+- CHeaderCtrl [MFC], DrawItem
+- CHeaderCtrl [MFC], EditFilter
+- CHeaderCtrl [MFC], GetBitmapMargin
+- CHeaderCtrl [MFC], GetFocusedItem
+- CHeaderCtrl [MFC], GetImageList
+- CHeaderCtrl [MFC], GetItem
+- CHeaderCtrl [MFC], GetItemCount
+- CHeaderCtrl [MFC], GetItemDropDownRect
+- CHeaderCtrl [MFC], GetItemRect
+- CHeaderCtrl [MFC], GetOrderArray
+- CHeaderCtrl [MFC], GetOverflowRect
+- CHeaderCtrl [MFC], HitTest
+- CHeaderCtrl [MFC], InsertItem
+- CHeaderCtrl [MFC], Layout
+- CHeaderCtrl [MFC], OrderToIndex
+- CHeaderCtrl [MFC], SetBitmapMargin
+- CHeaderCtrl [MFC], SetFilterChangeTimeout
+- CHeaderCtrl [MFC], SetFocusedItem
+- CHeaderCtrl [MFC], SetHotDivider
+- CHeaderCtrl [MFC], SetImageList
+- CHeaderCtrl [MFC], SetItem
+- CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
 caps.latest.revision: 24
 author: mikeblome
@@ -65,15 +91,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: faa23ea6f28c2643c9bee090ea150e37d0add97c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 42cc828d15f416fb6bf0642605ac0f997602cd02
 ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cheaderctrl-class"></a>CHeaderCtrl-Klasse
-Stellt die Funktionalität des allgemeinen Windows-Headersteuerelements bereit.  
+# <a name="cheaderctrl-class"></a>CHeaderCtrl Class
+Provides the functionality of the Windows common header control.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -81,67 +107,67 @@ Stellt die Funktionalität des allgemeinen Windows-Headersteuerelements bereit.
 class CHeaderCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|Erstellt ein `CHeaderCtrl`-Objekt.|  
+|[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|Constructs a `CHeaderCtrl` object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Löscht alle Filter für ein Headersteuerelement.|  
-|[CHeaderCtrl::ClearFilter](#clearfilter)|Löscht den Filter für ein Headersteuerelement.|  
-|[CHeaderCtrl](#create)|Erstellt ein Headersteuerelement, und fügt es einer `CHeaderCtrl` Objekt.|  
-|[CHeaderCtrl::CreateDragImage](#createdragimage)|Erstellt eine transparente Abbildversion, ein Element in einem Headersteuerelement an.|  
-|[CHeaderCtrl::CreateEx](#createex)|Erstellt ein Headersteuerelement mit der angegebenen erweiterten Fensterstile und fügt es einer `CListCtrl` Objekt.|  
-|[CHeaderCtrl::DeleteItem](#deleteitem)|Löscht ein Element aus einem Header-Steuerelement.|  
-|[CHeaderCtrl::DrawItem](#drawitem)|Zeichnet das angegebene Element eines Steuerelements Header an.|  
-|[CHeaderCtrl::EditFilter](#editfilter)|Startet den angegebenen Filter von einem Headersteuerelement bearbeiten.|  
-|[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|Ruft die Breite des Rands einer Bitmap in einem Headersteuerelement ab.|  
-|[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|Ruft den Bezeichner des Elements im aktuellen Headersteuerelement, das Fokus besitzt.|  
-|[CHeaderCtrl::GetImageList](#getimagelist)|Ruft das Handle des einer Bildliste zum Zeichnen verwendeten Headerelemente in einem Headersteuerelement ab.|  
-|[CHeaderCtrl:: GetItem](#getitem)|Ruft Informationen zu einem Element in einem Headersteuerelement ab.|  
-|[CHeaderCtrl::GetItemCount](#getitemcount)|Ruft die Anzahl der Elemente in einem Headersteuerelement ab.|  
-|[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|Ruft das umschließende Rechteck-Informationen für die angegebene Dropdown-Schaltfläche in einem Headersteuerelement ab.|  
-|[CHeaderCtrl::GetItemRect](#getitemrect)|Ruft das umschließende Rechteck für ein bestimmtes Element in einem Headersteuerelement ab.|  
-|[CHeaderCtrl:: GetOrderArray](#getorderarray)|Ruft die links-nach-rechts-Reihenfolge der Elemente in einem Headersteuerelement ab.|  
-|[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|Ruft das umschließende Rechteck der Überlaufschaltfläche für den aktuellen Header-Steuerelement ab.|  
-|[CHeaderCtrl::HitTest](#hittest)|Bestimmt, welche Headerelement, sofern vorhanden, an einem bestimmten Punkt befindet.|  
-|[InsertItem](#insertitem)|Fügt ein neues Element in einem Headersteuerelement an.|  
-|[CHeaderCtrl:: Layout](#layout)|Ruft die Größe und Position eines Steuerelements Header innerhalb eines angegebenen Rechtecks.|  
-|[CHeaderCtrl::OrderToIndex](#ordertoindex)|Ruft den Indexwert für ein Element basierend auf der Reihenfolge im Headersteuerelement ab.|  
-|[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|Legt die Breite des Rands einer Bitmap in einem Headersteuerelement fest.|  
-|[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|Legt das Timeout-Intervall zwischen dem Zeitpunkt, die eine Änderung in die FilterAttribute erfolgt und der Bereitstellung einer `HDN_FILTERCHANGE` Benachrichtigung.|  
-|[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|Legt den Fokus auf ein Element der angegebenen Header im aktuellen Headersteuerelement fest.|  
-|[CHeaderCtrl::SetHotDivider](#sethotdivider)|Ziehen der Unterteiler zwischen Headerelemente an, dass eine manuelle Änderungen and -Drop ein Headerelement.|  
-|[:: SetImageList](#setimagelist)|Ein Headersteuerelement eine Bildliste zugewiesen.|  
-|[CHeaderCtrl::SetItem](#setitem)|Legt die Attribute des angegebenen Elements in einem Headersteuerelement fest.|  
-|[CHeaderCtrl::SetOrderArray](#setorderarray)|Legt die links-nach-rechts-Reihenfolge der Elemente in einem Headersteuerelement fest.|  
+|[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Clears all filters for a header control.|  
+|[CHeaderCtrl::ClearFilter](#clearfilter)|Clears the filter for a header control.|  
+|[CHeaderCtrl::Create](#create)|Creates a header control and attaches it to a `CHeaderCtrl` object.|  
+|[CHeaderCtrl::CreateDragImage](#createdragimage)|Creates a transparent version of an item's image within a header control.|  
+|[CHeaderCtrl::CreateEx](#createex)|Creates a header control with the specified Windows extended styles and attaches it to a `CListCtrl` object.|  
+|[CHeaderCtrl::DeleteItem](#deleteitem)|Deletes an item from a header control.|  
+|[CHeaderCtrl::DrawItem](#drawitem)|Draws the specified item of a header control.|  
+|[CHeaderCtrl::EditFilter](#editfilter)|Starts editing the specified filter of a header control.|  
+|[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|Retrieves the width of the margin of a bitmap in a header control.|  
+|[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|Gets the identifier of the item in the current header control that has the focus.|  
+|[CHeaderCtrl::GetImageList](#getimagelist)|Retrieves the handle of an image list used for drawing header items in a header control.|  
+|[CHeaderCtrl::GetItem](#getitem)|Retrieves information about an item in a header control.|  
+|[CHeaderCtrl::GetItemCount](#getitemcount)|Retrieves a count of the items in a header control.|  
+|[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|Gets the bounding rectangle information for the specified drop-down button in a header control.|  
+|[CHeaderCtrl::GetItemRect](#getitemrect)|Retrieves the bounding rectangle for a given item in a header control.|  
+|[CHeaderCtrl::GetOrderArray](#getorderarray)|Retrieves the left-to-right order of items in a header control.|  
+|[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|Gets the bounding rectangle of the overflow button for the current header control.|  
+|[CHeaderCtrl::HitTest](#hittest)|Determines which header item, if any, is located at a specified point.|  
+|[CHeaderCtrl::InsertItem](#insertitem)|Inserts a new item into a header control.|  
+|[CHeaderCtrl::Layout](#layout)|Retrieves the size and position of a header control within a given rectangle.|  
+|[CHeaderCtrl::OrderToIndex](#ordertoindex)|Retrieves the index value for an item based on its order in the header control.|  
+|[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|Sets the width of the margin of a bitmap in a header control.|  
+|[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|Sets the timeout interval between the time a change takes place in the filter attributes and the posting of an `HDN_FILTERCHANGE` notification.|  
+|[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|Sets the focus to a specified header item in the current header control.|  
+|[CHeaderCtrl::SetHotDivider](#sethotdivider)|Changes the divider between header items to indicate a manual drag and drop of a header item.|  
+|[CHeaderCtrl::SetImageList](#setimagelist)|Assigns an image list to a header control.|  
+|[CHeaderCtrl::SetItem](#setitem)|Sets the attributes of the specified item in a header control.|  
+|[CHeaderCtrl::SetOrderArray](#setorderarray)|Sets the left-to-right order of items in a header control.|  
   
-## <a name="remarks"></a>Hinweise  
- Ein Headersteuerelement ist ein Fenster, das in der Regel über einen Satz von Spalten von Text oder Zahlen positioniert ist. Sie enthält einen Titel für jede Spalte, und sie können in Bereiche unterteilt werden. Benutzer können die Trennblättern ziehen, bei denen die Teile, um die Breite der einzelnen Spalten festzulegen. Eine Abbildung von einem Headersteuerelement, finden Sie unter [Headersteuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb775238).  
+## <a name="remarks"></a>Remarks  
+ A header control is a window that is usually positioned above a set of columns of text or numbers. It contains a title for each column, and it can be divided into parts. The user can drag the dividers that separate the parts to set the width of each column. For an illustration of a header control, see [Header Controls](http://msdn.microsoft.com/library/windows/desktop/bb775238).  
   
- Dieses Steuerelement (und somit die `CHeaderCtrl` Klasse) und höher verfügbar nur für Programme, die unter Windows 95-und Windows 98 und Windows NT, Version 3.51 ausgeführt wird.  
+ This control (and therefore the `CHeaderCtrl` class) is available only to programs that run under Windows 95/98 and Windows NT version 3.51 and later.  
   
- Funktionen für allgemeine Steuerelemente für Windows 95/Internet Explorer 4.0 umfasst Folgendes:  
+ Functionality added for Windows 95/Internet Explorer 4.0 common controls includes the following:  
   
--   Header Element benutzerdefinierte Reihenfolge.  
+-   Header item custom ordering.  
   
--   Headerelement- Drag & drop zum Neuordnen der Headerelemente. Verwenden der `HDS_DRAGDROP` formatieren, bei der Erstellung der `CHeaderCtrl` Objekt.  
+-   Header item drag and drop, for reordering of header items. Use the `HDS_DRAGDROP` style when you create the `CHeaderCtrl` object.  
   
--   Spalte Headertext ständig während der Größe der Spalte angezeigt werden kann. Verwenden der `HDS_FULLDRAG` Format zuzuweisen, wenn Sie erstellen ein `CHeaderCtrl` Objekt.  
+-   Header column text constantly viewable during column resizing. Use the `HDS_FULLDRAG` style when you create a `CHeaderCtrl` object.  
   
--   Header hot Track für, die das Headerelement hervorgehoben wird, wenn der Mauszeiger darüber bewegt wird. Verwenden der `HDS_HOTTRACK` formatieren, bei der Erstellung der `CHeaderCtrl` Objekt.  
+-   Header hot tracking, which highlights the header item when the pointer is hovering over it. Use the `HDS_HOTTRACK` style when you create the `CHeaderCtrl` object.  
   
--   Unterstützung für Image-Liste. Header-Elemente können Images im enthalten eine `CImageList` Objekt oder Text.  
+-   Image list support. Header items can contain images stored in a `CImageList` object or text.  
   
- Weitere Informationen zur Verwendung von `CHeaderCtrl`, finden Sie unter [Steuerelemente](../../mfc/controls-mfc.md) und [Verwenden von CHeaderCtrl](../../mfc/using-cheaderctrl.md).  
+ For more information about using `CHeaderCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CHeaderCtrl](../../mfc/using-cheaderctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -150,57 +176,57 @@ class CHeaderCtrl : public CWnd
   
  `CHeaderCtrl`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxcmn.h  
   
-##  <a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
- Erstellt ein `CHeaderCtrl`-Objekt.  
+##  <a name="cheaderctrl"></a>  CHeaderCtrl::CHeaderCtrl  
+ Constructs a `CHeaderCtrl` object.  
   
 ```  
 CHeaderCtrl();
 ```  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl Nr. 1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]  
   
-##  <a name="clearallfilters"></a>CHeaderCtrl::ClearAllFilters  
- Löscht alle Filter für ein Headersteuerelement.  
+##  <a name="clearallfilters"></a>  CHeaderCtrl::ClearAllFilters  
+ Clears all filters for a header control.  
   
 ```  
 BOOL ClearAllFilters();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) mit einem Spaltenwert "-1", wie beschrieben in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method implements the behavior of the Win32 message [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) with a column value of -1, as described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl #2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
   
-##  <a name="clearfilter"></a>CHeaderCtrl::ClearFilter  
- Löscht den Filter für ein Headersteuerelement.  
+##  <a name="clearfilter"></a>  CHeaderCtrl::ClearFilter  
+ Clears the filter for a header control.  
   
 ```  
 BOOL ClearFilter(int nColumn);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nColumn`  
- Der Spaltenwert, der angibt, welcher filter um zu löschen.  
+ Column value indicating which filter to clear.  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method implements the behavior of the Win32 message [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306), as described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl Nr. 3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
   
-##  <a name="create"></a>CHeaderCtrl  
- Erstellt ein Headersteuerelement, und fügt es einer `CHeaderCtrl` Objekt.  
+##  <a name="create"></a>  CHeaderCtrl::Create  
+ Creates a header control and attaches it to a `CHeaderCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -210,58 +236,58 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Gibt das Headersteuerelement-Stil. Eine Beschreibung der Steuerelementtypen für die Header, finden Sie unter [Steuerelementtypen für die Header](http://msdn.microsoft.com/library/windows/desktop/bb775241) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the header control's style. For a description of header control styles, see [Header Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775241) in the Windows SDK.  
   
  `rect`  
- Gibt an, Größe und Position des Headersteuerelements. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
+ Specifies the header control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  `pParentWnd`  
- Das Headersteuerelement übergeordnetes Fenster, in der Regel gibt eine `CDialog`. Es muss nicht **NULL**.  
+ Specifies the header control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- Gibt die Header-Steuerelement-ID an.  
+ Specifies the header control's ID.  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Initialisierung erfolgreich war; andernfalls 0 (null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization was successful; otherwise zero.  
   
-### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CHeaderCtrl` Objekt in zwei Schritten. Zuerst wird den Konstruktor aufrufen und dann **erstellen**, dem Headersteuerelement erstellt, und fügt es der `CHeaderCtrl` Objekt.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CHeaderCtrl` object in two steps. First, call the constructor and then call **Create**, which creates the header control and attaches it to the `CHeaderCtrl` object.  
   
- Zusätzlich zu den Steuerelementtypen für die Header können Sie die folgenden allgemeinen Steuerelementtypen bestimmt, wie das Header-Steuerelement positioniert und ändert die Größe selbst (finden Sie unter [Steuerelementtypen für die allgemeine](http://msdn.microsoft.com/library/windows/desktop/bb775498) für Weitere Informationen):  
+ In addition to the header control styles, you can use the following common control styles to determine how the header control positions and resizes itself (see [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) for more information):  
   
-- `CCS_BOTTOM`Bewirkt, dass das Steuerelement selbst am unteren Rand des übergeordneten Fensters Clientbereich positionieren und die Breite als übergeordnetes Element identisch sein Breite des Fensters.  
+- `CCS_BOTTOM` Causes the control to position itself at the bottom of the parent window's client area and sets the width to be the same as the parent window's width.  
   
-- `CCS_NODIVIDER`Verhindert, dass eine zwei-Pixel-Hervorhebung, die am oberen Rand des Steuerelements gezeichnet werden.  
+- `CCS_NODIVIDER` Prevents a two-pixel highlight from being drawn at the top of the control.  
   
-- `CCS_NOMOVEY`Bewirkt, dass das Steuerelement die Größe und Position selbst horizontal, aber nicht vertikal als Antwort auf eine `WM_SIZE` Nachricht. Wenn die `CCS_NORESIZE` Stil verwendet wird, wird dieses Format ist nicht gültig. Headersteuerelemente haben dieses Format wird standardmäßig an.  
+- `CCS_NOMOVEY` Causes the control to resize and move itself horizontally, but not vertically, in response to a `WM_SIZE` message. If the `CCS_NORESIZE` style is used, this style does not apply. Header controls have this style by default.  
   
-- `CCS_NOPARENTALIGN`Verhindert, dass das Steuerelement automatisch an der oberen bzw. unteren Rand des übergeordneten Fensters verschieben. Stattdessen wird das Steuerelement seine Position innerhalb des übergeordneten Fensters trotz Änderungen auf die Größe des übergeordneten Fensters. Wenn die `CCS_TOP` oder `CCS_BOTTOM` Format wird auch verwendet, die Höhe wird auf den Standardwert ausgerichtet, aber die Position und die Breite, bleiben unverändert.  
+- `CCS_NOPARENTALIGN` Prevents the control from automatically moving to the top or bottom of the parent window. Instead, the control keeps its position within the parent window despite changes to the size of the parent window. If the `CCS_TOP` or `CCS_BOTTOM` style is also used, the height is adjusted to the default, but the position and width remain unchanged.  
   
-- `CCS_NORESIZE`Verhindert, dass das Steuerelement die Standardbreite und-Höhe verwenden, wenn Sie die anfängliche Größe oder eine neue Größe festlegen. Stattdessen verwendet das Steuerelement an die Breite und Höhe, die in der Anforderung für die Erstellung oder Größe angegeben.  
+- `CCS_NORESIZE` Prevents the control from using the default width and height when setting its initial size or a new size. Instead, the control uses the width and height specified in the request for creation or sizing.  
   
-- `CCS_TOP`Bewirkt, dass das Steuerelement selbst am oberen Rand des übergeordneten Fensters Clientbereich positionieren und die Breite als übergeordnetes Element identisch sein Breite des Fensters.  
+- `CCS_TOP` Causes the control to position itself at the top of the parent window's client area and sets the width to be the same as the parent window's width.  
   
- Sie können auch die folgenden Fensterstile anwenden, um einem Headersteuerelement (finden Sie unter [Fensterstile](../../mfc/reference/window-styles.md) für Weitere Informationen):  
+ You can also apply the following window styles to a header control (see [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) for more information):  
   
-- **WS_CHILD** erstellt ein untergeordnetes Fenster. Kann nicht mit dem `WS_POPUP`-Stil verwendet werden.  
+- **WS_CHILD** Creates a child window. Cannot be used with the `WS_POPUP` style.  
   
-- **WS_VISIBLE** erstellt ein Fenster, das anfänglich sichtbar ist.  
+- **WS_VISIBLE** Creates a window that is initially visible.  
   
-- **WS_DISABLED** erstellt ein Fenster, das anfänglich deaktiviert ist.  
+- **WS_DISABLED** Creates a window that is initially disabled.  
   
-- **WS_GROUP** gibt das erste Steuerelement einer Gruppe von Steuerelementen in der der Benutzer von einem Steuerelement zum nächsten mit den Pfeiltasten wechseln kann. Alle Steuerelemente, die definiert, mit der **WS_GROUP** formatieren, nachdem das erste Steuerelement zur selben Gruppe gehören. Das nächste Steuerelement mit der **WS_GROUP** Stil beendet die Style-Gruppe und startet die nächste Gruppe (d. h. eine Gruppe endet, an die nächste beginnt).  
+- **WS_GROUP** Specifies the first control of a group of controls in which the user can move from one control to the next with the arrow keys. All controls defined with the **WS_GROUP** style after the first control belong to the same group. The next control with the **WS_GROUP** style ends the style group and starts the next group (that is, one group ends where the next begins).  
   
-- **WS_TABSTOP** gibt eines von beliebig vielen Steuerelementen, zwischen denen der Benutzer mit der TAB-TASTE wechseln kann. Die TAB-Taste wechselt der Benutzer auf das nächste Steuerelement gemäß der **WS_TABSTOP** Stil.  
+- **WS_TABSTOP** Specifies one of any number of controls through which the user can move by using the TAB key. The TAB key moves the user to the next control specified by the **WS_TABSTOP** style.  
   
- Wenn Sie die erweiterten Fensterstile mit dem Steuerelement verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von **erstellen**.  
+ If you want to use extended windows styles with your control, call [CreateEx](#createex) instead of **Create**.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl #4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
   
-##  <a name="createex"></a>CHeaderCtrl::CreateEx  
- Erstellt ein Steuerelement (ein untergeordnetes Fenster), und ordnen sie die `CHeaderCtrl` Objekt.  
+##  <a name="createex"></a>  CHeaderCtrl::CreateEx  
+ Creates a control (a child window) and associate it with the `CHeaderCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -272,87 +298,87 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- Das Headersteuerelement-Stil. Eine Beschreibung der Steuerelementtypen für die Header, finden Sie unter [Steuerelementtypen für die Header](http://msdn.microsoft.com/library/windows/desktop/bb775241) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Finden Sie unter [erstellen](#create) eine Liste der zusätzlichen Formatvorlagen.  
+ The header control's style. For a description of header control styles, see [Header Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775241) in the Windows SDK. See [Create](#create) for a list of additional styles.  
   
  `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der `pParentWnd`.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- Das Steuerelement untergeordnete Fenster-ID.  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Verwendung `CreateEx` anstelle von **erstellen** anzuwendende erweiterten Fensterstile, angegeben durch die Windows-erweiterten Stil ihm etwas voranzustellen **WS_EX_**.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of **Create** to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="createdragimage"></a>CHeaderCtrl::CreateDragImage  
- Erstellt eine transparente Abbildversion, ein Element in einem Headersteuerelement an.  
+##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
+ Creates a transparent version of an item's image within a header control.  
   
 ```  
 CImageList* CreateDragImage(int nIndex);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Der nullbasierte Index des Elements innerhalb des Headersteuerelements. Das Bild zu diesem Element zugewiesen bildet die Grundlage für das transparente Bild.  
+ The zero-based index of the item within the header control. The image assigned to this item is the basis for the transparent image.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) -Objekt, wenn erfolgreich; andernfalls **NULL**. Die zurückgegebene Liste enthält nur ein Bild an.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object if successful; otherwise **NULL**. The returned list contains only one image.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Es dient der Header Element Drag & Drop unterstützen.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308), as described in the Windows SDK. It is provided to support header item drag and drop.  
   
- Die `CImageList` Objekt, zu dem der zurückgegebene Zeiger weist, ist ein temporäres Objekt und wird in der nächsten Zeit im Leerlauf Verarbeitung gelöscht.  
+ The `CImageList` object to which the returned pointer points is a temporary object and is deleted in the next idle-time processing.  
   
-##  <a name="deleteitem"></a>CHeaderCtrl::DeleteItem  
- Löscht ein Element aus einem Header-Steuerelement.  
+##  <a name="deleteitem"></a>  CHeaderCtrl::DeleteItem  
+ Deletes an item from a header control.  
   
 ```  
 BOOL DeleteItem(int nPos);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- Gibt den nullbasierten Index des Elements, das gelöscht.  
+ Specifies the zero-based index of the item to delete.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl Nr. 5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
   
-##  <a name="drawitem"></a>CHeaderCtrl::DrawItem  
- Wird aufgerufen, durch das Framework, wenn sich ein Darstellungsaspekt eines Ownerdrawn-Header-Steuerelements ändert.  
+##  <a name="drawitem"></a>  CHeaderCtrl::DrawItem  
+ Called by the framework when a visual aspect of an owner-draw header control changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- Ein Zeiger auf eine [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) Struktur, die das Element zu zeichnenden beschreibt.  
+ A pointer to a [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure describing the item to be painted.  
   
-### <a name="remarks"></a>Hinweise  
- Die **ItemAction** Mitglied der `DRAWITEMSTRUCT` Struktur definiert die Zeichnen-Aktion, die ausgeführt werden soll.  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed.  
   
- Standardmäßig wird diese Memberfunktion keine Aktion ausgeführt. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für ein Ownerdrawn- `CHeaderCtrl` Objekt.  
+ By default, this member function does nothing. Override this member function to implement drawing for an owner-draw `CHeaderCtrl` object.  
   
- Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen `lpDrawItemStruct` vor diesem Element Funktion beendet wird.  
+ The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before this member function terminates.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
   
-##  <a name="editfilter"></a>CHeaderCtrl::EditFilter  
- So bearbeiten Sie die angegebenen Filter eines Steuerelements Header beginnt.  
+##  <a name="editfilter"></a>  CHeaderCtrl::EditFilter  
+ Begins to edit the specified filter of a header control.  
   
 ```  
 BOOL EditFilter(
@@ -360,81 +386,81 @@ BOOL EditFilter(
     BOOL bDiscardChanges);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nColumn`  
- Die Spalte zu bearbeiten.  
+ The column to edit.  
   
  `bDiscardChanges`  
- Ein Wert, der angibt, wie den Benutzer behandelt das Bearbeitungssteuerelement Änderungen, wenn der Benutzer gerade den Filter bearbeiten bei der [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) Nachricht gesendet wird.  
+ A value that specifies how to handle the user's editing changes if the user is in the process of editing the filter when the [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) message is sent.  
   
- Geben Sie `true` , die vom Benutzer vorgenommenen Änderungen zu verwerfen oder `false` , die vom Benutzer vorgenommene Änderungen zu übernehmen.  
+ Specify `true` to discard the changes made by the user, or `false` to accept the changes made by the user.  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method implements the behavior of the Win32 message [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312), as described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl #7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
   
-##  <a name="getbitmapmargin"></a>CHeaderCtrl::GetBitmapMargin  
- Ruft die Breite des Rands einer Bitmap in einem Headersteuerelement ab.  
+##  <a name="getbitmapmargin"></a>  CHeaderCtrl::GetBitmapMargin  
+ Retrieves the width of the margin of a bitmap in a header control.  
   
 ```  
 int GetBitmapMargin() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Breite der Bitmap Rand in Pixel.  
+### <a name="return-value"></a>Return Value  
+ The width of the bitmap margin in pixels.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314), as described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl #8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
   
-##  <a name="getfocuseditem"></a>CHeaderCtrl::GetFocusedItem  
- Ruft den Index des Elements, das in den aktuellen Header-Steuerelement den Fokus besitzt.  
+##  <a name="getfocuseditem"></a>  CHeaderCtrl::GetFocusedItem  
+ Gets the index of the item that has the focus in the current header control.  
   
 ```  
 int GetFocusedItem() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index des Headerelements, das den Fokus besitzt.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the header item that has the focus.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_headerCtrl`, d. h. verwendet, um die aktuellen Headersteuerelement zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_headerCtrl`, that is used to access the current header control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s4 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die `SetFocusedItem` und `GetFocusedItem` Methoden. In einem früheren Abschnitt des Codes wurde dem Headersteuerelement mit fünf Spalten erstellt. Allerdings können Sie ein Spaltentrennzeichen ziehen, damit, dass die Spalte nicht sichtbar ist. Im folgende Beispiel legt fest, und anschließend vergewissert sich, dass die letzte Spaltenüberschrift wie das Element den Fokus.  
+### <a name="example"></a>Example  
+ The following code example demonstrates the `SetFocusedItem` and `GetFocusedItem` methods. In an earlier section of the code, we created a header control with five columns. However, you can drag a column separator so that the column is not visible. The following example sets and then confirms the last column header as the focus item.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4;4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="getimagelist"></a>CHeaderCtrl::GetImageList  
- Ruft das Handle des einer Bildliste zum Zeichnen verwendeten Headerelemente in einem Headersteuerelement ab.  
+##  <a name="getimagelist"></a>  CHeaderCtrl::GetImageList  
+ Retrieves the handle of an image list used for drawing header items in a header control.  
   
 ```  
 CImageList* GetImageList() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Die `CImageList` Objekt, zu dem der zurückgegebene Zeiger weist, ist ein temporäres Objekt und wird in der nächsten Zeit im Leerlauf Verarbeitung gelöscht.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332), as described in the Windows SDK. The `CImageList` object to which the returned pointer points is a temporary object and is deleted in the next idle-time processing.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl 9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
   
-##  <a name="getitem"></a>CHeaderCtrl:: GetItem  
- Ruft Informationen zu einem Headerelement-Steuerelement ab.  
+##  <a name="getitem"></a>  CHeaderCtrl::GetItem  
+ Retrieves information about a header control item.  
   
 ```  
 BOOL GetItem(
@@ -442,34 +468,34 @@ BOOL GetItem(
     HDITEM* pHeaderItem) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- Gibt den nullbasierten Index des abzurufenden Elements.  
+ Specifies the zero-based index of the item to retrieve.  
   
  `pHeaderItem`  
- Zeiger auf eine [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) -Struktur, die das neue Element empfängt. Diese Struktur wird verwendet, mit der `InsertItem` und `SetItem` Memberfunktionen. Flags festgelegt wird, der **Maske** Element stellen Sie sicher, dass die Werte in die entsprechenden Elemente nach der Rückgabe ordnungsgemäß ausgefüllt werden. Wenn die **Maske** Element auf 0 (null) festgelegt ist, sind bedeutungslos, Werte in den anderen Strukturelementen.  
+ Pointer to an [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure that receives the new item. This structure is used with the `InsertItem` and `SetItem` member functions. Any flags set in the **mask** element ensure that values in the corresponding elements are properly filled in upon return. If the **mask** element is set to zero, values in the other structure elements are meaningless.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl #10](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#10](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
   
-##  <a name="getitemcount"></a>CHeaderCtrl::GetItemCount  
- Ruft die Anzahl der Elemente in einem Headersteuerelement ab.  
+##  <a name="getitemcount"></a>  CHeaderCtrl::GetItemCount  
+ Retrieves a count of the items in a header control.  
   
 ```  
 int GetItemCount() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Header-Steuerelemente bei Erfolg; andernfalls - 1.  
+### <a name="return-value"></a>Return Value  
+ Number of header control items if successful; otherwise - 1.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CHeaderCtrl::DeleteItem](#deleteitem).  
+### <a name="example"></a>Example  
+  See the example for [CHeaderCtrl::DeleteItem](#deleteitem).  
   
-##  <a name="getitemdropdownrect"></a>CHeaderCtrl::GetItemDropDownRect  
- Ruft das umschließende Rechteck der Dropdown-Schaltfläche für ein Headerelement im aktuellen Headersteuerelement ab.  
+##  <a name="getitemdropdownrect"></a>  CHeaderCtrl::GetItemDropDownRect  
+ Gets the bounding rectangle of the drop-down button for a header item in the current header control.  
   
 ```  
 BOOL GetItemDropDownRect(
@@ -477,31 +503,31 @@ BOOL GetItemDropDownRect(
     LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iItem`|Nullbasierten Index des ein Headerelement, dessen Format ist `HDF_SPLITBUTTON`. Weitere Informationen finden Sie unter der `fmt` Mitglied der [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) Struktur.|  
-|[out] `lpRect`|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, um die umschließende Rechteck Informationen zu erhalten.|  
+|[in] `iItem`|Zero-based index of a header item whose style is `HDF_SPLITBUTTON`. For more information, see the `fmt` member of the [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure.|  
+|[out] `lpRect`|Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure to receive the bounding rectangle information.|  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Funktion erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this function is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_headerCtrl`, d. h. verwendet, um die aktuellen Headersteuerelement zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_headerCtrl`, that is used to access the current header control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s4 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die `GetItemDropDownRect` Methode. In einem früheren Abschnitt des Codes wurde dem Headersteuerelement mit fünf Spalten erstellt. Im folgenden Codebeispiel wird zeichnet ein 3D Rechteck an der Stelle, auf die erste Spalte, die für die Header Dropdown-Schaltfläche reserviert ist.  
+### <a name="example"></a>Example  
+ The following code example demonstrates the `GetItemDropDownRect` method. In an earlier section of the code, we created a header control with five columns. The following code example draws a 3D rectangle around the location on the first column that is reserved for the header drop-down button.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4;2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
   
-##  <a name="getitemrect"></a>CHeaderCtrl::GetItemRect  
- Ruft das umschließende Rechteck für ein bestimmtes Element in einem Headersteuerelement ab.  
+##  <a name="getitemrect"></a>  CHeaderCtrl::GetItemRect  
+ Retrieves the bounding rectangle for a given item in a header control.  
   
 ```  
 BOOL GetItemRect(
@@ -509,21 +535,21 @@ BOOL GetItemRect(
     LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Der nullbasierte Index, der das Headerelement-Steuerelement.  
+ The zero-based index of the header control item.  
   
  `lpRect`  
- Ein Zeiger auf die Adresse einer [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das umschließende Rechteck-Informationen erhält.  
+ A pointer to the address of a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that receives the bounding rectangle information.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method implements the behavior of the Win32 message [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), as described in the Windows SDK.  
   
-##  <a name="getorderarray"></a>CHeaderCtrl:: GetOrderArray  
- Ruft die links-nach-rechts-Reihenfolge der Elemente in einem Headersteuerelement ab.  
+##  <a name="getorderarray"></a>  CHeaderCtrl::GetOrderArray  
+ Retrieves the left-to-right order of items in a header control.  
   
 ```  
 BOOL GetOrderArray(
@@ -531,84 +557,84 @@ BOOL GetOrderArray(
     int iCount);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `piArray`  
- Ein Zeiger auf die Adresse eines Puffers, der die Indexwerte der Elemente im Header-Steuerelement in der Reihenfolge empfängt in dem sie von links nach rechts angezeigt werden.  
+ A pointer to the address of a buffer that receives the index values of the items in the header control, in the order in which they appear from left to right.  
   
  `iCount`  
- Die Anzahl der Header-Steuerelemente. Darf nicht negativ sein.  
+ The number of header control items. Must be non-negative.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Es dient der Elementreihenfolge Header unterstützen.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343), as described in the Windows SDK. It is provided to support header item ordering.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl Nr. 11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
   
-##  <a name="getoverflowrect"></a>CHeaderCtrl::GetOverflowRect  
- Ruft das umschließende Rechteck der Überlaufschaltfläche des aktuellen Headersteuerelements ab.  
+##  <a name="getoverflowrect"></a>  CHeaderCtrl::GetOverflowRect  
+ Gets the bounding rectangle of the overflow button of the current header control.  
   
 ```  
 BOOL GetOverflowRect(LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[out] `lpRect`|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das umschließende Rechteck-Informationen erhält.|  
+|[out] `lpRect`|Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that receives the bounding rectangle information.|  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Funktion erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this function is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Enthält das Headersteuerelement mehr Elemente als gleichzeitig angezeigt werden können, kann das Steuerelement eine Überlaufschaltfläche, die einen Bildlauf durchführt für Elemente anzeigen, die nicht sichtbar sind. Das Headersteuerelement benötigen die `HDS_OVERFLOW` und `HDF_SPLITBUTTON` Stile dokumentüberlauf-Schaltfläche angezeigt. Das umschließende Rechteck die Überlaufschaltfläche einschließt und existiert nur, wenn die dokumentüberlauf-Schaltfläche angezeigt wird. Weitere Informationen finden Sie unter [Steuerelementtypen für die Header](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
+### <a name="remarks"></a>Remarks  
+ If the header control contains more items than can be simultaneously displayed, the control can display an overflow button that scrolls to items that are not visible. The header control must have the `HDS_OVERFLOW` and `HDF_SPLITBUTTON` styles to display the overflow button. The bounding rectangle encloses the overflow button and exists only when the overflow button is displayed. For more information, see [Header Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
   
- Diese Methode sendet die [HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_headerCtrl`, d. h. verwendet, um die aktuellen Headersteuerelement zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_headerCtrl`, that is used to access the current header control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s4 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die `GetOverflowRect` Methode. In einem früheren Abschnitt des Codes wurde dem Headersteuerelement mit fünf Spalten erstellt. Allerdings können Sie ein Spaltentrennzeichen ziehen, damit, dass die Spalte nicht sichtbar ist. Wenn einige Spalten nicht sichtbar sind, zeichnet das Headersteuerelement eine Überlaufschaltfläche. Im folgenden Codebeispiel wird zeichnet ein 3D Rechteck, um den Speicherort der dokumentüberlauf-Schaltfläche.  
+### <a name="example"></a>Example  
+ The following code example demonstrates the `GetOverflowRect` method. In an earlier section of the code, we created a header control with five columns. However, you can drag a column separator so that the column is not visible. If some columns are not visible, the header control draws an overflow button. The following code example draws a 3D rectangle around the location of the overflow button.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s4 Nr. 3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
   
-##  <a name="hittest"></a>CHeaderCtrl::HitTest  
- Bestimmt, welche Headerelement, sofern vorhanden, an einem bestimmten Punkt befindet.  
+##  <a name="hittest"></a>  CHeaderCtrl::HitTest  
+ Determines which header item, if any, is located at a specified point.  
   
 ```  
 int HitTest(LPHDHITTESTINFO* phdhti);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in, out] `phdhti`|Zeiger auf eine [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) -Struktur, gibt den Punkt zu testen und erhält es die Ergebnisse des Tests.|  
+|[in, out] `phdhti`|Pointer to a [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) structure that specifies the point to test and receives the results of the test.|  
   
-### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index des Header-Elements, sofern vorhanden, an der angegebenen Position; andernfalls -1.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the header item, if any, at the specified position; otherwise, -1.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_headerCtrl`, d. h. verwendet, um die aktuellen Headersteuerelement zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_headerCtrl`, that is used to access the current header control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s4 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die `HitTest` Methode. In einem früheren Abschnitt dieses Codebeispiels wurde dem Headersteuerelement mit fünf Spalten erstellt. Allerdings können Sie ein Spaltentrennzeichen ziehen, damit, dass die Spalte nicht sichtbar ist. In diesem Beispiel gibt den Index der Spalte, wenn es sichtbar ist, und 1, wenn die Spalte nicht sichtbar ist.  
+### <a name="example"></a>Example  
+ The following code example demonstrates the `HitTest` method. In an earlier section of this code example, we created a header control with five columns. However, you can drag a column separator so that the column is not visible. This example reports the index of the column if it is visible and -1 if the column is not visible.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s4 Nr. 1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
   
-##  <a name="insertitem"></a>InsertItem  
- Fügt ein neues Element in einem Headersteuerelement am angegebenen Index.  
+##  <a name="insertitem"></a>  CHeaderCtrl::InsertItem  
+ Inserts a new item into a header control at the specified index.  
   
 ```  
 int InsertItem(
@@ -616,171 +642,171 @@ int InsertItem(
     HDITEM* phdi);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- Der nullbasierte Index des einzufügenden Elements. Wenn der Wert 0 (null) ist, wird das Element am Anfang des Headersteuerelements eingefügt. Wenn der Wert größer als der maximale Wert ist, wird das Element am Ende des Headersteuerelements eingefügt.  
+ The zero-based index of the item to be inserted. If the value is zero, the item is inserted at the beginning of the header control. If the value is greater than the maximum value, the item is inserted at the end of the header control.  
   
  *phdi*  
- Zeiger auf eine [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) -Struktur, die Informationen zu den einzufügenden Elements enthält.  
+ Pointer to an [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure that contains information about the item to be inserted.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Index des neuen Elements, wenn erfolgreich; andernfalls - 1.  
+### <a name="return-value"></a>Return Value  
+ Index of the new item if successful; otherwise - 1.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl #12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
   
-##  <a name="layout"></a>CHeaderCtrl:: Layout  
- Ruft die Größe und Position eines Steuerelements Header innerhalb eines angegebenen Rechtecks.  
+##  <a name="layout"></a>  CHeaderCtrl::Layout  
+ Retrieves the size and position of a header control within a given rectangle.  
   
 ```  
 BOOL Layout(HDLAYOUT* pHeaderLayout);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *pHeaderLayout*  
- Zeiger auf eine [HDLAYOUT](http://msdn.microsoft.com/library/windows/desktop/bb775249) -Struktur, die Informationen zum Festlegen der Größe und Position eines Steuerelements Header enthält.  
+ Pointer to an [HDLAYOUT](http://msdn.microsoft.com/library/windows/desktop/bb775249) structure, which contains information used to set the size and position of a header control.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Funktion wird verwendet, um den entsprechenden Dimensionen für einen neuen Header-Steuerelement zu bestimmen, die ein angegebene Rechteck einnehmen.  
+### <a name="remarks"></a>Remarks  
+ This function is used to determine the appropriate dimensions for a new header control that is to occupy the given rectangle.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl #13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
   
-##  <a name="ordertoindex"></a>CHeaderCtrl::OrderToIndex  
- Ruft den Indexwert für ein Element basierend auf der Reihenfolge im Headersteuerelement ab.  
+##  <a name="ordertoindex"></a>  CHeaderCtrl::OrderToIndex  
+ Retrieves the index value for an item based on its order in the header control.  
   
 ```  
 int OrderToIndex(int nOrder) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *nOrder*  
- Die nullbasierte Reihenfolge, die das Element im Headersteuerelement, von links nach rechts angezeigt wird.  
+ The zero-based order that the item appears in the header control, from left to right.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Index des Elements basierend auf der Reihenfolge im Headersteuerelement. Der Index zählt von links nach rechts angezeigt, beginnend mit 0.  
+### <a name="return-value"></a>Return Value  
+ The index of the item, based on its order in the header control. The index counts from left to right, beginning with 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Es dient der Elementreihenfolge Header unterstützen.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 macro [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), as described in the Windows SDK. It is provided to support header item ordering.  
   
-##  <a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
- Legt die Breite des Rands einer Bitmap in einem Headersteuerelement fest.  
+##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
+ Sets the width of the margin of a bitmap in a header control.  
   
 ```  
 int SetBitmapMargin(int nWidth);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nWidth`  
- Breite in Pixel, der den Rand, der eine Bitmap in eine vorhandene Headersteuerelement umgibt angegeben.  
+ Width, specified in pixels, of the margin that surrounds a bitmap within an existing header control.  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Breite der Bitmap Rand in Pixel.  
+### <a name="return-value"></a>Return Value  
+ The width of the bitmap margin in pixels.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357), as described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl Nr. 14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
-##  <a name="setfilterchangetimeout"></a>CHeaderCtrl::SetFilterChangeTimeout  
- Legt das Timeout-Intervall zwischen dem Zeitpunkt, die eine Änderung in die FilterAttribute erfolgt und der Bereitstellung einer [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) Benachrichtigung.  
+##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
+ Sets the timeout interval between the time a change takes place in the filter attributes and the posting of an [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) notification.  
   
 ```  
 int SetFilterChangeTimeout(DWORD dwTimeOut);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *dwTimeOut*  
- Der Timeoutwert in Millisekunden.  
+ Timeout value, in milliseconds.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Index des Steuerelements Filter geändert wird.  
+### <a name="return-value"></a>Return Value  
+ The index of the filter control being modified.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359), as described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl #15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
   
-##  <a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem  
- Legt den Fokus auf ein Element der angegebenen Header im aktuellen Headersteuerelement fest.  
+##  <a name="setfocuseditem"></a>  CHeaderCtrl::SetFocusedItem  
+ Sets the focus to a specified header item in the current header control.  
   
 ```  
 BOOL SetFocusedItem(int iItem);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iItem`|Nullbasierte Index des Headerelements.|  
+|[in] `iItem`|Zero-based index of a header item.|  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) Nachricht, die in beschrieben ist die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_headerCtrl`, d. h. verwendet, um die aktuellen Headersteuerelement zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_headerCtrl`, that is used to access the current header control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s4 6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die `SetFocusedItem` und `GetFocusedItem` Methoden. In einem früheren Abschnitt des Codes wurde dem Headersteuerelement mit fünf Spalten erstellt. Allerdings können Sie ein Spaltentrennzeichen ziehen, damit, dass die Spalte nicht sichtbar ist. Im folgende Beispiel legt fest, und anschließend vergewissert sich, dass die letzte Spaltenüberschrift wie das Element den Fokus.  
+### <a name="example"></a>Example  
+ The following code example demonstrates the `SetFocusedItem` and `GetFocusedItem` methods. In an earlier section of the code, we created a header control with five columns. However, you can drag a column separator so that the column is not visible. The following example sets and then confirms the last column header as the focus item.  
   
- [!code-cpp[NVC_MFC_CHeaderCtrl_s&#4;4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
+ [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="sethotdivider"></a>CHeaderCtrl::SetHotDivider  
- Ziehen der Unterteiler zwischen Headerelemente an, dass eine manuelle Änderungen and -Drop ein Headerelement.  
+##  <a name="sethotdivider"></a>  CHeaderCtrl::SetHotDivider  
+ Changes the divider between header items to indicate a manual drag and drop of a header item.  
   
 ```  
 int SetHotDivider(CPoint pt);  
 int SetHotDivider(int nIndex);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pt`  
- Die Position des Zeigers. Das Headersteuerelement werden den entsprechenden Unterteiler basierend auf den Zeiger Position hervorgehoben.  
+ The position of the pointer. The header control highlights the appropriate divider based on the pointer's position.  
   
  `nIndex`  
- Der Index des Unterteilers hervorgehoben.  
+ The index of the highlighted divider.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Index des Unterteilers hervorgehoben.  
+### <a name="return-value"></a>Return Value  
+ The index of the highlighted divider.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Es dient der Header Element Drag & Drop unterstützen.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363), as described in the Windows SDK. It is provided to support header item drag and drop.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CHeaderCtrl Nr. 16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
   
-##  <a name="setimagelist"></a>:: SetImageList  
- Ein Headersteuerelement eine Bildliste zugewiesen.  
+##  <a name="setimagelist"></a>  CHeaderCtrl::SetImageList  
+ Assigns an image list to a header control.  
   
 ```  
 CImageList* SetImageList(CImageList* pImageList);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pImageList`  
- Ein Zeiger auf ein `CImageList` Objekt, das die Bildliste des Headersteuerelements zuzuweisenden enthält.  
+ A pointer to a `CImageList` object containing the image list to be assigned to the header control.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die [CImageList](../../mfc/reference/cimagelist-class.md) Objekts zum Headersteuerelement zuvor zugewiesen.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CImageList](../../mfc/reference/cimagelist-class.md) object previously assigned to the header control.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Die `CImageList` Objekt, zu dem der zurückgegebene Zeiger weist, ist ein temporäres Objekt und wird in der nächsten Zeit im Leerlauf Verarbeitung gelöscht.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365), as described in the Windows SDK. The `CImageList` object to which the returned pointer points is a temporary object and is deleted in the next idle-time processing.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CHeaderCtrl::GetImageList](#getimagelist).  
+### <a name="example"></a>Example  
+  See the example for [CHeaderCtrl::GetImageList](#getimagelist).  
   
-##  <a name="setitem"></a>CHeaderCtrl::SetItem  
- Legt die Attribute des angegebenen Elements in einem Headersteuerelement fest.  
+##  <a name="setitem"></a>  CHeaderCtrl::SetItem  
+ Sets the attributes of the specified item in a header control.  
   
 ```  
 BOOL SetItem(
@@ -788,21 +814,21 @@ BOOL SetItem(
     HDITEM* pHeaderItem);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- Der nullbasierte Index des Elements, das bearbeitet werden.  
+ The zero-based index of the item to be manipulated.  
   
  `pHeaderItem`  
- Zeiger auf eine [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) -Struktur, die Informationen über das neue Element enthält.  
+ Pointer to an [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure that contains information about the new item.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CHeaderCtrl:: GetItem](#getitem).  
+### <a name="example"></a>Example  
+  See the example for [CHeaderCtrl::GetItem](#getitem).  
   
-##  <a name="setorderarray"></a>CHeaderCtrl::SetOrderArray  
- Legt die links-nach-rechts-Reihenfolge der Elemente in einem Headersteuerelement fest.  
+##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray  
+ Sets the left-to-right order of items in a header control.  
   
 ```  
 BOOL SetOrderArray(
@@ -810,26 +836,26 @@ BOOL SetOrderArray(
     LPINT piArray);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `iCount`  
- Die Anzahl der Header-Steuerelemente.  
+ The number of header control items.  
   
  `piArray`  
- Ein Zeiger auf die Adresse eines Puffers, der die Indexwerte der Elemente im Header-Steuerelement in der Reihenfolge empfängt in dem sie von links nach rechts angezeigt werden.  
+ A pointer to the address of a buffer that receives the index values of the items in the header control, in the order in which they appear from left to right.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Es dient der Elementreihenfolge Header unterstützen.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 macro [HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369), as described in the Windows SDK. It is provided to support header item ordering.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CHeaderCtrl:: GetOrderArray](#getorderarray).  
+### <a name="example"></a>Example  
+  See the example for [CHeaderCtrl::GetOrderArray](#getorderarray).  
   
-## <a name="see-also"></a>Siehe auch  
- [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CTabCtrl-Klasse](../../mfc/reference/ctabctrl-class.md)   
- [CListCtrl-Klasse](../../mfc/reference/clistctrl-class.md)   
- [CImageList-Klasse](../../mfc/reference/cimagelist-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CTabCtrl Class](../../mfc/reference/ctabctrl-class.md)   
+ [CListCtrl Class](../../mfc/reference/clistctrl-class.md)   
+ [CImageList Class](../../mfc/reference/cimagelist-class.md)
 

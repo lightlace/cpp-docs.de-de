@@ -1,208 +1,227 @@
 ---
-title: "TN024: MFC-definierte Meldungen und Ressourcen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Nachrichten [C++], MFC"
-  - "Ressourcen [MFC]"
-  - "TN024"
-  - "Windows-Nachrichten [C++], MFC-definiert"
+title: 'TN024: MFC-Defined Messages and Resources | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- resources [MFC]
+- Windows messages [MFC], MFC-defined
+- messages [MFC], MFC
+- TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN024: MFC-definierte Meldungen und Ressourcen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b4b85251977bee3466a4e3857514de6fc219e56c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: MFC-Defined Messages and Resources
 > [!NOTE]
->  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert.  Daher können einige Verfahren und Themen veraltet oder falsch sein.  Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Dieser Hinweis beschreibt die internen Windows\-Meldungen und formatiert Ressource verwendet von MFC.  Diese Informationen verdeutlichen die Implementierung des Framework und werden Ihnen helfen, wenn sie die Anwendung debuggen.  Für das abenteuerliche obwohl alle diese Informationen nicht offiziell unterstützt sind, verwenden Sie möglicherweise einige dieser Informationen für komplexere Implementierungen.  
+ This note describes the internal Windows messages and resource formats used by MFC. This information explains the implementation of the framework, and will assist you in debugging your application. For the adventurous, even though all this information is officially unsupported, you may use some of this information for advanced implementations.  
   
- Dieser Hinweis enthält private Implementierungsdetails MFC; der gesamte Inhalt ist zukünftig geändert.  Private Windows\-Meldungen MFC Bedeutung haben, im Rahmen einer Anwendung nur jedoch werden in der Zukunft ändern, um systemweite Meldungen enthalten.  
+ This note contains MFC private implementation details; all the contents are subject to change in the future. MFC private Windows messages have meaning in the scope of one application only but will change in the future to contain system-wide messages.  
   
- Der Bereich von privaten Windows\-Meldungen MFC sowie die Ressourcentypen sind im reservierten "System Bereich, der von Microsoft Windows und platziert wird.  Derzeit werden nicht alle Zahlen in Bereichen verwendet und in Zukunft neue werden Zahlen kann im Gültigkeitsbereich verwendet.  Die gerade verwendeten Zahlen können geändert werden.  
+ The range of MFC private Windows messages and resource types are in the reserved "system" range set aside by Microsoft Windows. Currently not all numbers in the ranges are used and, in the future, new numbers in the range may be used. The currently used numbers may be changed.  
   
- Private Windows\-Meldungen MFC ähneln im Bereich 0x360\-0x37F \>.  
+ MFC private Windows messages are in the range 0x360->0x37F.  
   
- Private Ressourcentypen MFC ähneln im Bereich 0xF0\-0xFF \>.  
+ MFC private resource types are in the range 0xF0->0xFF.  
   
- **Private Windows\-Meldungen MFC**  
+ **MFC Private Windows Messages**  
   
- Diese Windows\-Meldungen werden anstelle virtueller Funktionen C\+\+ verwendet, in denen relativ lose Kopplung zwischen Fensterobjekten erforderlich ist und sich virtuelle Funktion einer C\+\+ nicht geeignet ist.  
+ These Windows messages are used in place of C++ virtual functions where relatively loose coupling is required between window objects and where a C++ virtual function would not be appropriate.  
   
- Diese privaten Windows\-Meldungen und zugeordneten Parameterstrukturen werden in der privaten Header "AFXPRIV.H" MFC deklariert.  Achten gewarnt Sie, das jeden möglicherweise von Code, der diese enthält, Header auf nicht dokumentiertem Verhalten und ist wahrscheinlich einlaufen zukünftige Versionen von MFC basiert.  
+ These private Windows messages and associated parameter structures are declared in the MFC private header 'AFXPRIV.H'. Be warned that any of your code that includes this header may be relying on undocumented behavior and will likely break in future versions of MFC.  
   
- Im seltenen Fall gegeben, um eine dieser Nachrichten behandeln, sollten Sie das `ON_MESSAGE` Meldungszuordnungsmakro verwenden und die Meldung im generischen LRESULT\-\/WPARAM\/LPARAMformat bearbeiten.  
+ In the rare case of needing to handle one of these messages, you should use the `ON_MESSAGE` message map macro and handle the message in the generic LRESULT/WPARAM/LPARAM format.  
   
- **WM\_QUERYAFXWNDPROC**  
+ **WM_QUERYAFXWNDPROC**  
   
- Diese Meldung wird an ein Fenster gesendet, das erstellt wird.  Dies ist sehr frühzeitig im Erstellungsprozess als Methode zur gesendet, sofern das WndProc gibt 1 zurück. **AfxWndProc. AfxWndProc**.  
-  
-|||  
-|-|-|  
-|wParam|Nicht in Verwendung|  
-|lParam|Nicht in Verwendung|  
-|gibt|1 nach **AfxWndProc** verarbeitet werden|  
-  
- **WM\_SIZEPARENT**  
-  
- Diese Meldung werden durch ein Rahmenfenster zu den unmittelbar untergeordneten Elementen während der Größenanpassung \(**CFrameWnd::OnSize** ruft `CFrameWnd::RecalcLayout` auf, das `CWnd::RepositionBars` aufruft\), um übermittelt die Steuerleisten um die Frames neu anzuordnen.  Die **AFX\_SIZEPARENTPARAMS**\-Struktur enthält das aktuelle verfügbare Clientrechteck übergeordneten und dem des HDWP \(die möglicherweise NULL sind\), um `DeferWindowPos` aufzurufen, um das neu zu minimieren.  
+ This message is sent to a window that is being created. This is sent very early in the creation process as a method of determining if the WndProc is **AfxWndProc. AfxWndProc** returns 1.  
   
 |||  
 |-|-|  
-|wParam|Nicht in Verwendung|  
-|lParam|Adresse einer **AFX\_SIZEPARENTPARAMS**\-Struktur|  
-|gibt|Wird nicht verwendet \(0\)|  
+|wParam|Not used|  
+|lParam|Not used|  
+|returns|1 if processed by **AfxWndProc**|  
   
- Die Meldung Ignorieren, gibt an, dass das Fenster nicht am Layout beteiligt ist.  
+ **WM_SIZEPARENT**  
   
- **WM\_SETMESSAGESTRING**  
-  
- Diese Meldung wird in einem Rahmenfenster gesendet, um es zu bitten, die Meldungszeile in der Statusleiste zu aktualisieren.  Entweder eine Zeichenfolgen\-ID oder ein LPCSTR sind zulässig \(jedoch nicht beide\).  
+ This message is sent by a frame window to its immediate children during resizing (**CFrameWnd::OnSize** calls `CFrameWnd::RecalcLayout` which calls `CWnd::RepositionBars`) to reposition the control bars around the side of the frame. The **AFX_SIZEPARENTPARAMS** structure contains the current available client rectangle of the parent and a HDWP (which may be NULL) with which to call `DeferWindowPos` to minimize repainting.  
   
 |||  
 |-|-|  
-|wParam|Zeichenfolgen\-ID oder \(null\)|  
-|lParam|LPCSTR für die Zeichenfolge \(oder NULL\)|  
-|gibt|Wird nicht verwendet \(0\)|  
+|wParam|Not used|  
+|lParam|Address of an **AFX_SIZEPARENTPARAMS** structure|  
+|returns|Not used (0)|  
   
- **WM\_IDLEUPDATECMDUI**  
+ Ignoring the message indicates that the window doesn't take part in the layout.  
   
- Diese Meldung wird in der Leerlaufzeit, das Leerlaufupdate von UpdateBefehl Benutzeroberflächenhandlern implementieren gesendet.  Wenn das Fenster \(normalerweise eine Steuerleiste\) die Meldung verarbeitet, erstellt es ein `CCmdUI`\-Objekt \(oder Objekt einer abgeleiteten Klasse\) und Aufruf **CCmdUI::DoUpdate** für jedes der "Elemente" im Fenster.  Diese überprüft wiederum für einen Handler `ON_UPDATE_COMMAND_UI` für die Objekte in der Befehlshandlerkette.  
+ **WM_SETMESSAGESTRING**  
   
-|||  
-|-|-|  
-|wParam|BOOL\-bDisableIfNoHandler|  
-|lParam|Wird nicht verwendet \(0\)|  
-|gibt|Wird nicht verwendet \(0\)|  
-  
- *bDisableIfNoHandler* ist ungleich 0 \(null\), das Benutzeroberflächenobjekt zu deaktivieren, wenn weder `ON_UPDATE_COMMAND_UI` noch `ON_COMMAND` einen Handler gibt.  
-  
- **WM\_EXITHELPMODE**  
-  
- Diese Meldung wird an `CFrameWnd` gesendet, das Modus der kontextbezogenen Hilfe zu verlassen.  An\- dieser Nachricht beendet die modalen Schleife, die von **CFrameWnd::OnContextHelp.** gestartet wird  
+ This message is sent to a frame window to ask it to update the message line in the status bar. Either a string ID or a LPCSTR can be specified (but not both).  
   
 |||  
 |-|-|  
-|wParam|Wird nicht verwendet \(0\)|  
-|lParam|Wird nicht verwendet \(0\)|  
-|gibt|Nicht in Verwendung|  
+|wParam|String ID (or zero)|  
+|lParam|LPCSTR for the string (or NULL)|  
+|returns|Not used (0)|  
   
- **WM\_INITIALUPDATE**  
+ **WM_IDLEUPDATECMDUI**  
   
- Diese Meldung werden durch die Normal\-Vorlage für alle Nachfolgerelemente eines Rahmenfensters gesendet, wenn die Verwendung für sie ist, deren ursprüngliche Aktualisierung durchzuführen.  Sie belegt, einen Aufruf von `CView::OnInitialUpdate` kann jedoch in anderen `CWnd` verwendet werden \- abgeleitete Klassen für andere monostabiles Aktualisieren.  
-  
-|||  
-|-|-|  
-|wParam|Wird nicht verwendet \(0\)|  
-|lParam|Wird nicht verwendet \(0\)|  
-|gibt|Wird nicht verwendet \(0\)|  
-  
- **WM\_RECALCPARENT**  
-  
- Diese Meldung wird in einer Ansicht an das übergeordnete Fenster \(Abrufen über `GetParent`\) gesendet um eine Layoutneuberechnung zu erzwingen \(normalerweise, ruft das übergeordnete Element `RecalcLayout` auf\).  Dies wird in OLE\-Serveranwendungen verwendet, in denen es erforderlich für die Frames ist, die Größe zu erweitern, da die Gesamtgröße der Ansicht vergrößert.  
-  
- Wenn das übergeordnete Fenster die Meldung verarbeitet, sollte es TRUE zurückgeben und \- Struktur zu füllen, das in lParam mit dem neuen übergeben wird, skalieren Sie dem Clientbereich.  Dies wird in `CScrollView` verwendet, um Platz Bildlaufleisten \(auf der Außenseite des Fensters, wenn sie hinzugefügt werden\), korrekt behandeln wenn ein Serverobjekt können direkt ist.  
+ This message is sent in idle time to implement the idle-time update of update-command UI handlers. If the window (usually a control bar) handles the message, it creates a `CCmdUI` object (or an object of a derived class) and call **CCmdUI::DoUpdate** for each of the "items" in the window. This will in turn check for an `ON_UPDATE_COMMAND_UI` handler for the objects in the command-handler chain.  
   
 |||  
 |-|-|  
-|wParam|Wird nicht verwendet \(0\)|  
-|lParam|LPRECT, das rectClient ist, kann NULL|  
-|gibt|TRUE, wenn neue Clientrechteck zurückgegebenen, FALSE andernfalls|  
+|wParam|BOOL bDisableIfNoHandler|  
+|lParam|Not used (0)|  
+|returns|Not used (0)|  
   
- **WM\_SIZECHILD**  
+ *bDisableIfNoHandler* is nonzero to disable the UI object if there is neither an `ON_UPDATE_COMMAND_UI` nor an `ON_COMMAND` handler.  
   
- Diese Meldung wird von `COleResizeBar` auf den Besitzerfenster gesendet \(über `GetOwner`\) Wenn der Benutzer die Größe geänderte Leiste mit den Ziehpunkten Größe ändert.  `COleIPFrameWnd` reagiert auf diese Meldung, indem es, versucht das Rahmenfenster neu anzuordnen, da der Benutzer anfordert.  
+ **WM_EXITHELPMODE**  
   
- Das neue Rechteck, angegeben in Clientkoordinaten relativ zum Rahmenfenster, das der Größe geänderte Leiste enthält, wird durch lParam am gezeigt.  
-  
-|||  
-|-|-|  
-|wParam|Wird nicht verwendet \(0\)|  
-|lParam|LPRECT\-rectNew|  
-|gibt|Wird nicht verwendet \(0\)|  
-  
- **WM\_DISABLEMODAL**  
-  
- Diese Meldung wird auf alle Popupfenstern gesendet, die von ein Rahmenfenster besitzen, das deaktiviert ist.  Das Rahmenfenster verwendet das Ergebnis, um zu bestimmen, ob das Popupfenster deaktiviert.  
-  
- Sie können dieses verwenden, um die spezielle Verarbeitung im Popupfenster auszuführen, wenn der Frame einen modalen Zustand eingeben oder bestimmte Popupfenster im Abrufen zu halten deaktiviert.  QuickInfo verwenden diese Meldung, um zum Beispiel zu zerstören, wenn das Rahmenfenster in einen modalen Zustand wechselt.  
+ This message is posted to a `CFrameWnd` that to exit context sensitive help mode. The receipt of this message terminates the modal loop started by **CFrameWnd::OnContextHelp.**  
   
 |||  
 |-|-|  
-|wParam|Wird nicht verwendet \(0\)|  
-|lParam|Wird nicht verwendet \(0\)|  
-|gibt|Wert ungleich 0 \(null\) zu **NICHT** Deaktivierung des Fenster 0, gibt das Fenster deaktiviert an|  
+|wParam|Not used (0)|  
+|lParam|Not used (0)|  
+|returns|Not used|  
   
- **WM\_FLOATSTATUS**  
+ **WM_INITIALUPDATE**  
   
- Diese Meldung wird auf alle Popupfenstern gesendet, die von ein Rahmenfenster besitzen, wenn der Frame entweder durch ein anderes Rahmenfenster der obersten Ebene aktiviert oder deaktiviert werden.  Dies wird durch die Implementierung von **MFS\_SYNCACTIVE** in `CMiniFrameWnd` verwendet, um die Aktivierung dieser Popupfenster mit der Aktivierung des Rahmenfensters der höchsten Ebene zu halten.  
+ This message is sent by the document template to all descendants of a frame window when it is safe for them to do their initial update. It maps to a call to `CView::OnInitialUpdate` but can be used in other `CWnd`-derived classes for other one-shot updating.  
   
 |||  
 |-|-|  
-|wParam|Ist einer der folgenden Werte:<br /><br /> **FS\_SHOW**<br /><br /> **FS\_HIDE**<br /><br /> **FS\_ACTIVATE**<br /><br /> **FS\_DEACTIVATE**<br /><br /> **FS\_ENABLEFS\_DISABLE**<br /><br /> **FS\_SYNCACTIVE**|  
-|lParam|Wird nicht verwendet \(0\)|  
+|wParam|Not used (0)|  
+|lParam|Not used (0)|  
+|returns|Not used (0)|  
   
- Der Rückgabewert sollte ungleich 0 \(null\), wenn **FS\_SYNCACTIVE** festgelegt ist und das Fenster seine Aktivierung mit übergeordneten Frame syncronizes.  `CMiniFrameWnd` gibt einen Wert ungleich 0 \(null\) zurück, wenn das Format auf **MFS\_SYNCACTIVE.** festgelegt wird  
+ **WM_RECALCPARENT**  
   
- Weitere Informationen finden Sie in der Implementierung von `CMiniFrameWnd`.  
+ This message is sent by a view to its parent window (obtained via `GetParent`) to force a layout recalculation (usually, the parent will call `RecalcLayout`). This is used in OLE server applications where it is necessary for the frame to grow in size as the view's total size grows.  
   
-## WM\_ACTIVATETOPLEVEL  
- Diese Meldung wird an ein Fenster der obersten Ebene gesendet, wenn ein Fenster in der Gruppe "der obersten Ebene" entweder aktiviert oder deaktiviert ist.  Ein Fenster wird ein Teil einer Gruppe der obersten Ebene, wenn es ein Fenster auf oberster Ebene \(ohne übergeordneten oder Besitzer\) ist, oder es wird mit ein solches Fenster gehört.  Diese Meldung ist zu **WM\_ACTIVATEAPP,** jedoch zu den Arbeiten in Situationen ähnlich, in denen die Fenster, die verschiedenen Prozessen gehören, in einer einzelnen Fensterhierarchie \(Common in den OLE\-Anwendungen\) kombiniert werden.  
+ If the parent window processes this message it should return TRUE and fill the RECT passed in lParam with the new size of the client area. This is used in `CScrollView` to properly handle scrollbars (place then on the outside of the window when they are added) when a server object is in-place activated.  
   
-## WM\_COMMANDHELP, WM\_HELPHITTEST, WM\_EXITHELPMODE  
- Diese Meldungen werden in der Implementierung der kontextbezogenen Hilfe verwendet.  finden Sie unter [Technischer Hinweis 28](../mfc/tn028-context-sensitive-help-support.md) weitere Informationen an.  
+|||  
+|-|-|  
+|wParam|Not used (0)|  
+|lParam|LPRECT rectClient, may be NULL|  
+|returns|TRUE if new client rectangle returned, FALSE otherwise|  
   
-## Private Ressourcen\-Formate MFC  
- Derzeit MFC definiert zwei private Ressourcenformate: **RT\_TOOLBAR** und **RT\_DLGINIT**.  
+ **WM_SIZECHILD**  
   
-## RT\_TOOLBAR\-Ressourcen\-Format  
- Die Standardsymbolleiste, die vom Anwendungs\-Assistenten angegeben wird, ist auf Grundlage einer benutzerdefinierten Ressource **RT\_TOOLBAR**, die in MFC 4.0 eingeführt wurde.  Sie können diese Ressource mithilfe des Symbolleisten\-Editors bearbeiten.  
+ This message is sent by `COleResizeBar` to its owner window (via `GetOwner`) when the user resizes the resize bar with the resize handles. `COleIPFrameWnd` responds to this message by attempting to reposition the frame window as the user has requested.  
   
-## RT\_DLGINIT\-Ressourcen\-Format  
- Ein privates Ressourcenformat MFC wird verwendet, um zusätzliche Dialogfeldinitialisierungsinformationen zu speichern.  Dieses enthält die ursprünglichen Zeichenfolgen ein, die in einem Kombinationsfeld gespeichert werden.  Das Format dieser Ressource ist nicht vorgesehen, manuell bearbeitet werden, die jedoch mit Visual C\+\+ behandelt.  
+ The new rectangle, given in client coordinates relative to the frame window which contains the resize bar, is pointed at by lParam.  
   
- Visual C\+\+ und **RT\_DLGINIT** diese Ressource ist nicht erforderlich, die zugehörigen Funktionen von MFC verwendet, da es APIalternative zur Verwendung der Informationen in der Ressource gibt.  Mit Visual C\+\+ ist es viel einfacher, die Anwendung zu erstellen, beizubehalten und langfristig zu übersetzen.  
+|||  
+|-|-|  
+|wParam|Not used (0)|  
+|lParam|LPRECT rectNew|  
+|returns|Not used (0)|  
   
- Die grundlegende Struktur einer **RT\_DLGINIT** Ressource ist, wie folgt:  
+ **WM_DISABLEMODAL**  
+  
+ This message is sent to all pop-up windows owned by a frame window that is being deactivated. The frame window uses the result to determine whether or not to disable the pop-up window.  
+  
+ You can use this to perform special processing in your pop-up window when the frame enters a modal state or to keep certain pop-up windows from getting disabled. Tooltips use this message to destroy themselves when the frame window goes into a modal state, for example.  
+  
+|||  
+|-|-|  
+|wParam|Not used (0)|  
+|lParam|Not used (0)|  
+|returns|Non-zero to **NOT** disable the window, 0 indicates the window will be disabled|  
+  
+ **WM_FLOATSTATUS**  
+  
+ This message is sent to all pop-up windows owned by a frame window when the frame is either activated or deactivated by another top-level frame window. This is used by the implementation of **MFS_SYNCACTIVE** in `CMiniFrameWnd`, to keep the activation of these pop-up windows in sync with the activation of the top level frame window.  
+  
+|||  
+|-|-|  
+|wParam|Is one of the following values:<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
+|lParam|Not used (0)|  
+  
+ The return value should be non-zero if **FS_SYNCACTIVE** is set and the window syncronizes its activation with the parent frame. `CMiniFrameWnd` returns non-zero when the style is set to **MFS_SYNCACTIVE.**  
+  
+ For more information, see the implementation of `CMiniFrameWnd`.  
+  
+## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL  
+ This message is sent to a top-level window when a window in its "top-level group" is either activated or deactivated. A window is part of a top-level group if it is a top-level window (no parent or owner), or it is owned by such a window. This message is similar in use to **WM_ACTIVATEAPP,** but works in situations where windows belonging to different processes are mixed in a single window hierarchy (common in OLE applications).  
+  
+## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_COMMANDHELP, WM_HELPHITTEST, WM_EXITHELPMODE  
+ These messages are used in the implementation of context-sensitive Help. Please refer to [Technical Note 28](../mfc/tn028-context-sensitive-help-support.md) for more information.  
+  
+## <a name="mfc-private-resource-formats"></a>MFC Private Resource Formats  
+ Currently, MFC defines two private resource formats: **RT_TOOLBAR** and **RT_DLGINIT**.  
+  
+## <a name="rttoolbar-resource-format"></a>RT_TOOLBAR Resource Format  
+ The default toolbar supplied by AppWizard is based on an **RT_TOOLBAR** custom resource, which was introduced in MFC 4.0. You can edit this resource using the Toolbar editor.  
+  
+## <a name="rtdlginit-resource-format"></a>RT_DLGINIT Resource Format  
+ One MFC private resource format is used to store extra dialog initialization information. This includes the initial strings stored in a combo box. The format of this resource is not designed to be manually edited, but is handled by Visual C++.  
+  
+ Visual C++ and this **RT_DLGINIT** resource are not required to use the related features of MFC since there are API alternative to using the information in the resource. Using Visual C++ makes it much easier to write, maintain, and translate your application in the long run.  
+  
+ The basic structure of a **RT_DLGINIT** resource is as follows:  
   
 ```  
-+---------------+                    \  
++---------------+    \  
 | Control ID    |   UINT             |  
-+---------------+                    |  
++---------------+    |  
 | Message #     |   UINT             |  
-+---------------+                    |  
++---------------+    |  
 |length of data |   DWORD            |  
-+---------------+                    |   Repeated  
++---------------+    |   Repeated  
 |   Data        |   Variable Length  |   for each control  
 |   ...         |   and Format       |   and message  
-+---------------+                    /  
++---------------+    /  
 |     0         |   BYTE  
 +---------------+  
 ```  
   
- Ein wiederholter Abschnitt enthält die Steuerelement\-ID, um die Meldung an, die Meldung \# zu senden \(eine normale Windows\-Meldung\) und ein variabler Länge von Daten zu senden.  Die Windows\-Meldung wird in einem Formular gesendet:  
+ A repeated section contains the control ID to send the message to, the Message # to send (a normal Windows message) and a variable length of data. The Windows message is sent in a form:  
   
 ```  
-SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);  
+SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 ```  
   
- Dies ist ein sehr Muster und können alle Windows\-Meldungen und Daten.  Der Visual C\+\+\-Ressourcen\-Editor und MFC unterstützen nur eine geringe Teilmenge Windows\-Meldungen: CB\_ADDSTRING für die ursprünglichen ListeAuswahlen für Kombinationsfelder \(die Daten sind eine Textzeichenfolge.\)  
+ This is a very general format, allowing any Windows messages and data content. The Visual C++ resource editor and MFC only support a limited subset of Windows messages: CB_ADDSTRING for the initial list-choices for combo boxes (the data is a text string).  
   
-## Siehe auch  
- [Technische Hinweise – nach Nummern geordnet](../mfc/technical-notes-by-number.md)   
- [Technische Hinweise – nach Kategorien geordnet](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

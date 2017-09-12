@@ -1,58 +1,77 @@
 ---
-title: "Bildlauf und Skalierung f&#252;r Ansichten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Meldungshandler"
-  - "Meldungsbehandlung, Bildlaufleisten in Ansichtsklasse"
-  - "Skalierung von Ansichten"
-  - "Bildlaufleisten, Meldungen"
-  - "Bildlauf von Ansichten"
+title: Scrolling and Scaling Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- scaling views [MFC]
+- message handling [MFC], scroll bars in view class [MFC]
+- scroll bars [MFC], messages
+- scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Bildlauf und Skalierung f&#252;r Ansichten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ba8ef3c6b1eaa228d136289323209d8bf220023
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-MFC unterstützt Ansichten, die den Bildlauf durchführen und Ansichten, die automatisch an die Größe des Rahmenfensters skaliert, das sie anzeigt.  Klasse `CScrollView` unterstützt beide Arten von Ansichten.  
+---
+# <a name="scrolling-and-scaling-views"></a>Scrolling and Scaling Views
+MFC supports views that scroll and views that are automatically scaled to the size of the frame window that displays them. Class `CScrollView` supports both kinds of views.  
   
- Weitere Informationen zum Bildlauf und Skalierung, Klasse finden Sie unter [CScrollView](../mfc/reference/cscrollview-class.md) in der *MFC\-Referenz*.  Ein Bildlaufbeispiel finden Sie unter [Sie Kritzeln Beispiel](../top/visual-cpp-samples.md).  
+ For more information about scrolling and scaling, see class [CScrollView](../mfc/reference/cscrollview-class.md) in the *MFC Reference*. For a scrolling example, see the [Scribble sample](../visual-cpp-samples.md).  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   Bildlauf einer Ansicht  
+-   Scrolling a view  
   
--   Skalieren einer Ansicht  
+-   Scaling a view  
   
--   [\<caps:sentence id\="tgt8" sentenceid\="f321fcf7c88bc6e3f892ae0fc9b2f0d8" class\="tgtSentence"\>Ansichtskoordinaten\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
+-   [View coordinates](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
   
-##  <a name="_core_scrolling_a_view"></a> Bildlauf einer Ansicht  
- Häufig ist die Größe eines Dokuments größer, als die Größe seiner Ansicht anzeigen kann.  Dies kann auftreten, da die Daten des Dokuments je, oder der Benutzer das Fenster verkleinert, das die Ansicht Formen.  In solchen Fällen muss der Bildlauf unterstützen.  
+##  <a name="_core_scrolling_a_view"></a> Scrolling a View  
+ Frequently the size of a document is greater than the size its view can display. This may occur because the document's data increases or the user shrinks the window that frames the view. In such cases, the view must support scrolling.  
   
- Jede Ansicht kann Bildlaufleistenmeldungen in den `OnHScroll` \- und `OnVScroll`\-Memberfunktionen bearbeiten.  Sie können entweder BildlaufleistenNachrichtenverarbeitung in diesen Funktionen implementieren und die ganze Arbeit selbst durchführen, oder Sie können die `CScrollView`\-Klasse verwenden, um Bildlauf für Sie zu behandeln.  
+ Any view can handle scroll-bar messages in its `OnHScroll` and `OnVScroll` member functions. You can either implement scroll-bar message handling in these functions, doing all the work yourself, or you can use the `CScrollView` class to handle scrolling for you.  
   
- `CScrollView` führt Folgendes aus:  
+ `CScrollView` does the following:  
   
--   Verwaltet Fenster und Anzeigebereichsgrößen und \-Zuordnungsmodi  
+-   Manages window and viewport sizes and mapping modes  
   
--   Führt automatisch als Reaktion auf Bildlaufleistenmeldungen  
+-   Scrolls automatically in response to scroll-bar messages  
   
- Sie können wie viel angeben, um für eine "Seite" \(wenn der Benutzer in einem Schaft für Bildlaufleiste klickt\) und eine "Zeile" liegen \(wenn der Benutzer in einem Bildlaufpfeil klickt\).  Planen Sie diese Werte, um die Art der Ansicht zu entsprechen.  Sie möchten beispielsweise in Schritten mit 1 Pixel für eine Grafikansicht jedoch in Schrittweiten auf Grundlage die Zeilenhöhe in den Textdokumenten wechseln.  
+ You can specify how much to scroll for a "page" (when the user clicks in a scroll-bar shaft) and a "line" (when the user clicks in a scroll arrow). Plan these values to suit the nature of your view. For example, you might want to scroll in 1-pixel increments for a graphics view but in increments based on the line height in text documents.  
   
-##  <a name="_core_scaling_a_view"></a> Skalieren einer Ansicht  
- Wenn Sie die Ansicht die Größe des Rahmenfensters automatisch anpassen möchten, können Sie `CScrollView` zum Skalieren anstelle des Bildlaufs verwenden.  Die logische Ansicht wird gestreckt oder verkleinert, um den Clientbereich des Fensters genau anzupassen.  Eine skalierte Ansicht enthält keine Bildlaufleisten.  
+##  <a name="_core_scaling_a_view"></a> Scaling a View  
+ When you want the view to automatically fit the size of its frame window, you can use `CScrollView` for scaling instead of scrolling. The logical view is stretched or shrunk to fit the window's client area exactly. A scaled view has no scroll bars.  
   
-## Siehe auch  
- [Verwenden von Ansichten](../mfc/using-views.md)
+## <a name="see-also"></a>See Also  
+ [Using Views](../mfc/using-views.md)
+
+

@@ -1,103 +1,120 @@
 ---
-title: "Automatisierung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automatisierungsserver, Informationen über Automatisierungsserver"
-  - "Clients, Automation"
-  - "Programmgesteuerte Steuerelemente [C++]"
-  - "Eigenschaften [MFC], Automation"
-  - "MFC [C++], COM-Unterstützung"
-  - "OLE-Automatisierung"
-  - "Automatisierung"
-  - "Server [C++], Automation"
-  - "Automatisierungsclients"
-  - "Beispielanwendungen [MFC], Automation"
-  - "Methoden [MFC]"
-  - "Übergeben von Parametern, Automation"
-  - "Automatisierungsmethode"
-  - "Automation, Übergeben von Parametern"
-  - "Automatisierungseigenschaft"
-  - "MFC COM, Automation"
-  - "Methoden [MFC], Automation"
+title: Automation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation servers, about Automation servers
+- clients, Automation
+- programmatic control [MFC]
+- properties [MFC], Automation
+- MFC, COM support
+- OLE Automation
+- Automation
+- servers [MFC], Automation
+- Automation clients
+- sample applications [MFC], Automation
+- methods [MFC]
+- passing parameters, Automation
+- Automation method [MFC]
+- Automation, passing parameters
+- Automation property [MFC]
+- MFC COM, Automation
+- methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Automatisierung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 790e80684099d8e94c954a22672a4978e37c1082
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Automation \(früher: OLE\-Automatisierung\) ermöglicht es einer Anwendung, die in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, damit sie bearbeitet werden können.  
+---
+# <a name="automation"></a>Automation
+Automation (formerly known as OLE Automation) makes it possible for one application to manipulate objects implemented in another application, or to expose objects so they can be manipulated.  
   
- Ein [Automatisierungsserver](../mfc/automation-servers.md) ist eine Anwendung \(ein COM\-Servertyp\), die seine Funktionalität über COM\-Schnittstellen für andere Anwendungen, sogenannte [Automatisierungsclients](../mfc/automation-clients.md), zur Verfügung stellt. Dank der Verfügbarkeit können Automatisierungsclients bestimmte Funktionen automatisieren, indem direkt auf Objekte zugegriffen und die angebotenen Dienste verwendet werden.  
+ An [Automation server](../mfc/automation-servers.md) is an application (a type of COM server) that exposes its functionality through COM interfaces to other applications, called [Automation clients](../mfc/automation-clients.md). The exposure enables Automation clients to automate certain functions by directly accessing objects and using the services they provide.  
   
- Automatisierungsserver und \-clients verwenden COM\-Schnittstellen, die immer von `IDispatch` abgeleitet sind und einen bestimmten Satz von Datentypen, genannt Automatisierungstypen, akzeptieren und zurückgeben. Sie können jedes Objekt automatisieren, das eine Automatisierungsschnittstelle verfügbar macht, die Methoden und Eigenschaften bereitstellt, auf die Sie von anderen Programmen zugreifen können. Automation ist für OLE und COM\-Objekte verfügbar. Das automatisierte Objekt kann lokal oder remote \(sprich, auf einem anderen Computer, auf den Sie über ein Netzwerk zugreifen können\) sein. Es gibt somit zwei Kategorien der Automatisierung:  
+ Automation servers and clients use COM interfaces that are always derived from `IDispatch` and take and return a specific set of data types called Automation types. You can automate any object that exposes an Automation interface, providing methods and properties that you can access from other applications. Automation is available for both OLE and COM objects. The automated object might be local or remote (on another machine accessible across a network); therefore there are two categories of automation:  
   
--   Automatisierung \(lokal\).  
+-   Automation (local).  
   
--   [Remoteautomatisierung](../mfc/remote-automation.md) \(über ein Netzwerk mithilfe von Distributed COM, oder DCOM\).  
+-   [Remote Automation](../mfc/remote-automation.md) (over a network, using Distributed COM, or DCOM).  
   
- Das Verfügbarmachen von Objekten ist nützlich, wenn Anwendungen Funktionen bereitstellen, die hilfreich für andere Anwendungen sind. Ein ActiveX\-Steuerelement ist beispielsweise ein Automatisierungsservertyp; die Anwendung, in der das ActiveX\-Steuerelement gehostet wird, ist der Automatisierungsclient dieses Steuerelements.  
+ Exposing objects is beneficial when applications provide functionality useful to other applications. For example, an ActiveX control is a type of Automation server; the application hosting the ActiveX control is the automation client of that control.  
   
- Ein weiteres Beispiel ist ein Textverarbeitungsprogramm, das seine Funktion zur Rechtschreibprüfung für andere Programme zur Verfügung stellt. Das Verfügbarmachen von Objekten ermöglicht es den Herstellern, ihre Anwendungen zu verbessern, indem sie die vordefinierten Funktionen von anderen Anwendungen nutzen. Auf diese Weise wendet Automation einige der Prinzipien der objektorientierten Programmierung an, z. B. Wiederverwendung und Kapselung auf der Anwendungsebene selbst.  
+ As another example, a word processor might expose its spell-checking functionality to other programs. Exposure of objects enables vendors to improve their applications by using the ready-made functionality of other applications. In this way, Automation applies some of the principles of object-oriented programming, such as reusability and encapsulation, at the level of applications themselves.  
   
- Wichtiger ist die Unterstützung, die Automation Benutzern und Lösungsanbietern bietet. Durch das Verfügbarmachen von Anwendungsfunktionen über eine gemeinsame, klar definierte Schnittstelle ermöglicht Automation die Erstellung von umfassenden Lösungen in einer einzelnen allgemeinen Programmiersprache, z. B. Microsoft Visual Basic, statt in verschiedenen anwendungsspezifischen Makrosprachen.  
+ More important is the support Automation provides to users and solution providers. By exposing application functionality through a common, well-defined interface, Automation makes it possible to build comprehensive solutions in a single general programming language, such as Microsoft Visual Basic, instead of in diverse application-specific macro languages.  
   
- Viele kommerzielle Anwendungen, wie Microsoft Excel und Microsoft Visual C\+\+, ermöglichen es Ihnen, viele ihrer Funktionen zu automatisieren. In Visual C\+\+ können Sie beispielsweise [VBScript](vtoriVBScript)\-Makros schreiben, um Builds, Aspekte der Codebearbeitung oder von Debuggingaufgaben zu automatisieren.  
+ Many commercial applications, such as Microsoft Excel and Microsoft Visual C++, allow you to automate much of their functionality. For example, in Visual C++, you can write VBScript macros to automate builds, aspects of code editing, or debugging tasks.  
   
-##  <a name="_core_passing_parameters_in_automation"></a> Übergeben von Parametern in Automation  
- Eine Schwierigkeit bei der Erstellung von Automatisierungsmethoden besteht darin, einen einheitlichen „sicheren“ Mechanismus zum Übergeben von Daten zwischen Automatisierungsservern und \-clients bereitzustellen. Automation verwendet den **VARIANT**\-Typ, um Daten zu übergeben. Der **VARIANT**\-Typ ist eine Union mit Tags. Sie verfügt über ein Datenelement für den Wert \(wobei es sich um eine anonyme C\+\+\-Union handelt\) und ein Datenelement, das den in der Union gespeicherten Informationstyp angibt. Der **VARIANT**\-Typ unterstützt eine Reihe von Standarddatentypen: 2\- und 4\-Byte\-Ganzzahlen, 4 und 8\-Byte\-Gleitkommazahlen, Zeichenfolgen und boolesche Werte. Darüber hinaus unterstützt er die `HRESULT`\- \(OLE\-Fehlercodes\), **CURRENCY**\- \(ein numerischer fester Punkttyp\) und **DATE**\- \(absolutes Datum und absolute Uhrzeit\) Typen, sowie Zeiger auf **IUnknown** und `IDispatch`\-Schnittstellen.  
+##  <a name="_core_passing_parameters_in_automation"></a> Passing Parameters in Automation  
+ One difficulty in creating Automation methods is helping to provide a uniform "safe" mechanism to pass data between automation servers and clients. Automation uses the **VARIANT** type to pass data. The **VARIANT** type is a tagged union. It has a data member for the value (this is an anonymous C++ union) and a data member indicating the type of information stored in the union. The **VARIANT** type supports a number of standard data types: 2- and 4-byte integers, 4- and 8-byte floating-point numbers, strings, and Boolean values. In addition, it supports the `HRESULT` (OLE error codes), **CURRENCY** (a fixed-point numeric type), and **DATE** (absolute date and time) types, as well as pointers to **IUnknown** and `IDispatch` interfaces.  
   
- Der **VARIANT**\-Typ ist in der [COleVariant](../mfc/reference/colevariant-class.md)\-Klasse gekapselt. Die unterstützenden **CURRENCY**\- und **DATE**\-Klassen sind in den [COleCurrency](../mfc/reference/colecurrency-class.md)\- und [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)\-Klassen gekapselt.  
+ The **VARIANT** type is encapsulated in the [COleVariant](../mfc/reference/colevariant-class.md) class. The supporting **CURRENCY** and **DATE** classes are encapsulated in the [COleCurrency](../mfc/reference/colecurrency-class.md) and [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) classes.  
   
-## Automatisierungsbeispiele  
+## <a name="automation-samples"></a>Automation Samples  
   
--   [AUTOCLIK](../top/visual-cpp-samples.md) Verwenden Sie dieses Beispiel, um mehr über Automatisierungsverfahren zu lernen und als Grundlage für weitere Informationen zur Remoteautomatisierung.  
+-   [AUTOCLIK](../visual-cpp-samples.md) Use this sample to learn Automation techniques and as a foundation for learning Remote Automation.  
   
--   [ACDUAL](../top/visual-cpp-samples.md) Fügt einer Automatisierungsserveranwendung duale Schnittstellen hinzu.  
+-   [ACDUAL](../visual-cpp-samples.md) Adds dual interfaces to an Automation server application.  
   
--   [CALCDRIV](../top/visual-cpp-samples.md) Automatisierungsclientanwendung mit MFCCALC.  
+-   [CALCDRIV](../visual-cpp-samples.md) Automation client application driving MFCCALC.  
   
--   [INPROC](../top/visual-cpp-samples.md) Demonstration einer prozessinternen Automatisierungsserveranwendung.  
+-   [INPROC](../visual-cpp-samples.md) Demonstrates an In-Process Automation server application.  
   
--   [IPDRIVE](../top/visual-cpp-samples.md) Automatisierungsclientanwendung mit INPROC.  
+-   [IPDRIVE](../visual-cpp-samples.md) Automation client application driving INPROC.  
   
--   [MFCCALC](../top/visual-cpp-samples.md) Demonstration einer Automatisierungsclientanwendung.  
+-   [MFCCALC](../visual-cpp-samples.md) Demonstrates an Automation client application.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Automatisierungsclients](../mfc/automation-clients.md)  
+-   [Automation Clients](../mfc/automation-clients.md)  
   
--   [Automatisierungsserver](../mfc/automation-servers.md)  
+-   [Automation Servers](../mfc/automation-servers.md)  
   
--   [Remoteautomatisierung](../mfc/remote-automation.md)  
+-   [Remote Automation](../mfc/remote-automation.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   
 -   [Active Technology](../mfc/mfc-com.md)  
   
-## Wie möchten Sie vorgehen?  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
   
--   [Hinzufügen einer Automatisierungsklasse](../mfc/automation-servers.md)  
+-   [Add an Automation class](../mfc/automation-servers.md)  
   
--   [Verwenden von Typbibliotheken](../mfc/automation-clients-using-type-libraries.md)  
+-   [Use type libraries](../mfc/automation-clients-using-type-libraries.md)  
+   
+-   [Access automation servers](../mfc/automation-servers.md)  
   
--   [Übergeben von Parametern in Automation](#_core_automation_topics)  
+-   [Write automation clients in C++](../mfc/automation-clients.md)  
   
--   [Zugreifen auf Automatisierungsserver](../mfc/automation-servers.md)  
-  
--   [Schreiben von Automatisierungsclients in C\+\+](../mfc/automation-clients.md)  
-  
-## Siehe auch  
+## <a name="see-also"></a>See Also  
  [MFC COM](../mfc/mfc-com.md)
+

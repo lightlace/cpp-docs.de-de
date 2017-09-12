@@ -1,34 +1,53 @@
 ---
-title: "Formatieren von Abs&#228;tzen in RichEdit-Steuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl-Klasse, Absatzformatierung in"
-  - "Formatierung [C++], Absätze"
-  - "Absatzformatierung in CRichEditCtrl"
-  - "Rich-Edit-Steuerelemente, Absatzformatierung in"
+title: Paragraph Formatting in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- rich edit controls [MFC], paragraph formatting in
+- paragraph formatting in CRichEditCtrl [MFC]
+- CRichEditCtrl class [MFC], paragraph formatting in
+- formatting [MFC], paragraphs
 ms.assetid: 0df2e4c9-2074-4e41-b913-87cb8c1b4d43
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Formatieren von Abs&#228;tzen in RichEdit-Steuerelementen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 12424417c0d2ff6ca8d48a047ee2d44b29c06a3d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Sie können Memberfunktionen des Rich\-Edit\-Steuerelements \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) werden Absätze zu formatieren und Formatierungsinformationen abzurufen.  Absatzformatierungsattributeinschließungsausrichtung, \-Registerkarten, \-Einzüge und \-Nummerierung.  
+---
+# <a name="paragraph-formatting-in-rich-edit-controls"></a>Paragraph Formatting in Rich Edit Controls
+You can use member functions of the rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) to format paragraphs and to retrieve formatting information. Paragraph formatting attributes include alignment, tabs, indents, and numbering.  
   
- Sie können Absatzformatierung anwenden, indem Sie die Memberfunktion [SetParaFormat](../Topic/CRichEditCtrl::SetParaFormat.md) verwenden.  Um die aktuelle Absatzformatierung für den markierten Text zu bestimmen, verwenden Sie die [GetParaFormat](../Topic/CRichEditCtrl::GetParaFormat.md)\-Memberfunktion.  Die [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940)\-Struktur wird mit dieser Memberfunktionen verwendet, um anzugeben Absatzformatvorlagen verwendet.  Einer der wichtigen Member von **PARAFORMAT** ist **dwMask**.  In `SetParaFormat` gibt an, welche **dwMask** Absatzstile von diesem Funktionsaufruf eingerichtet werden.  `GetParaFormat` meldet die Attribute des ersten Absatzes in der Auswahl; **dwMask** gibt den Attributen an, die während der Auswahl konsistent sind.  
+ You can apply paragraph formatting by using the [SetParaFormat](../mfc/reference/cricheditctrl-class.md#setparaformat) member function. To determine the current paragraph formatting for the selected text, use the [GetParaFormat](../mfc/reference/cricheditctrl-class.md#getparaformat) member function. The [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) structure is used with these member functions to specify paragraph attributes. One of the important members of **PARAFORMAT** is **dwMask**. In `SetParaFormat`, **dwMask** specifies which paragraph attributes will be set by this function call. `GetParaFormat` reports the attributes of the first paragraph in the selection; **dwMask** specifies the attributes that are consistent throughout the selection.  
   
-## Siehe auch  
- [Verwenden von CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,77 +1,95 @@
 ---
-title: "Dokumente, Ansichten und das Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Anwendungsobjekte [C++], Beziehung zu anderen MFC-Objekten"
-  - "Anwendungen [MFC]"
-  - "Document-Objekte, In Beziehung zu anderen MFC-Objekten"
-  - "Dokumentvorlagen, Vorlagenobjekte"
-  - "Dokument-/Ansichtsarchitektur, Informationen über Dokument-/Ansichtsarchitektur"
-  - "Dokumente [C++]"
-  - "MFC [C++], Anwendungsframework"
-  - "MFC [C++], Dokumente"
-  - "MFC [C++], Ansichten"
-  - "MFC-Objektbeziehungen"
-  - "Objekte [C++], MFC-Anwendungen"
-  - "Thread-Objekte"
-  - "View-Objekte, Beziehung zu anderen MFC-Objekten"
+title: Documents, Views, and the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document templates [MFC], template objects
+- applications [MFC]
+- MFC, application framework
+- application objects [MFC], relation to other MFC objects
+- documents [MFC]
+- MFC, documents
+- document objects [MFC], in relation to other MFC objects
+- view objects [MFC], relation to other MFC objects
+- MFC, views
+- document/view architecture [MFC], about document/view architecture
+- objects [MFC], MFC applications
+- MFC object relationships
+- thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Dokumente, Ansichten und das Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fedc1c3bd792265aa8c375a6162dd13315dcabc3
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Im eine des MFC\-Frameworks gelten die Konzepte des Dokuments und der Ansicht.  Ein Dokument ist ein Datenobjekt, auf das der Benutzer in einer Bearbeitung interagiert.  Sie wird durch den `New` oder **Öffnen** auf den Befehl **Datei** Menü erstellt und wird in der Regel in einer Datei gespeichert. \(Standard\-MFC\-Dokumente, die von Klasse **CDocument** abgeleitet sind, sind für aktiven Dokumenten und OLE\-Verbunddokumenten.\) Eine Ansicht ist ein Window\-Objekt, durch das der Benutzer auf ein Dokument interagiert.  
+---
+# <a name="documents-views-and-the-framework"></a>Documents, Views, and the Framework
+At the heart of the MFC framework are the concepts of document and view. A document is a data object with which the user interacts in an editing session. It is created by the `New` or **Open** command on the **File** menu and is typically saved in a file. (Standard MFC documents, derived from class **CDocument**, are different from Active documents and OLE compound documents.) A view is a window object through which the user interacts with a document.  
   
- Die Schlüsselobjekte in einer ausgeführten Anwendung sind:  
+ The key objects in a running application are:  
   
--   Das Dokument oder die Dokumente.  
+-   The document or documents.  
   
-     die Dokumentklasse \(wird von [CDocument](../mfc/reference/cdocument-class.md) abgeleitet\) gibt den Daten der Anwendung.  
+     Your document class (derived from [CDocument](../mfc/reference/cdocument-class.md)) specifies your application's data.  
   
-     Wenn Sie OLE\-Funktionalität in Ihrer Anwendung wünschen, leiten Sie die Dokumentklasse von [COleDocument](../mfc/reference/coledocument-class.md) oder einer der abgeleiteten Klassen, je nach Typ der Funktionalität, die Sie benötigen.  
+     If you want OLE functionality in your application, derive your document class from [COleDocument](../mfc/reference/coledocument-class.md) or one of its derived classes, depending on the type of functionality you need.  
   
--   Die Ansicht oder die Ansichten.  
+-   The view or views.  
   
-     die Ansichtsklasse \(wird von [CView](../mfc/reference/cview-class.md) abgeleitet\) ist das Fenster des Benutzers "auf den Daten." Die Ansichtsklassenkontrollen, wie der Benutzer die Daten des Dokuments wird und interagiert.  In einigen Fällen müssen Sie ein Dokument mehrere Ansichten der Daten verfügen.  
+     Your view class (derived from [CView](../mfc/reference/cview-class.md)) is the user's "window on the data." The view class controls how the user sees your document's data and interacts with it. In some cases, you may want a document to have multiple views of the data.  
   
-     Wenn Sie einen Bildlauf erfordern, leiten Sie von [CScrollView](../mfc/reference/cscrollview-class.md).  Wenn die Ansicht eine Benutzeroberfläche verfügt, die in einer Dialogfeldvorlagenressource angeordnet wird, leiten Sie von [CFormView](../mfc/reference/cformview-class.md).  Für einfache Textdaten verwenden Sie oder leiten Sie von [CEditView](../mfc/reference/ceditview-class.md).  Bei einer formularbasierten Datenzugriffs\-Anwendung wie ein Dateneingabeprogramm, leiten Sie von [CRecordView](../mfc/reference/crecordview-class.md) \(für ODBC\).  Zudem sind Klassen [CTreeView](../mfc/reference/ctreeview-class.md), [CListView](../mfc/reference/clistview-class.md) und [CRichEditView](../mfc/reference/cricheditview-class.md) verfügbar.  
+     If you need scrolling, derive from [CScrollView](../mfc/reference/cscrollview-class.md). If your view has a user interface that is laid out in a dialog-template resource, derive from [CFormView](../mfc/reference/cformview-class.md). For simple text data, use or derive from [CEditView](../mfc/reference/ceditview-class.md). For a form-based data-access application, such as a data-entry program, derive from [CRecordView](../mfc/reference/crecordview-class.md) (for ODBC). Also available are classes [CTreeView](../mfc/reference/ctreeview-class.md), [CListView](../mfc/reference/clistview-class.md), and [CRichEditView](../mfc/reference/cricheditview-class.md).  
   
--   Die Rahmenfenster  
+-   The frame windows  
   
-     Ansichten sind angezeigtes innerhalb Dokumentrahmenfenster "." In einer SDI\-Anwendung ist das Dokumentrahmenfenster auch "das Hauptrahmenfenster" für die Anwendung.  In einer MDI\-Anwendung sind Dokumentfenster die untergeordneten Fenster, die innerhalb eines Hauptrahmenfensters angezeigt werden.  Die abgeleitete Hauptrahmenfensterklasse gibt Stilen und anderen Eigenschaften der Rahmenfenster an, die die Ansichten enthalten.  Wenn Sie Rahmenfenster anpassen müssen, leiten Sie von [CFrameWnd](../mfc/reference/cframewnd-class.md), um das für SDI\-Anwendungen Dokumentrahmenfenster anzupassen.  Sind von [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), um das Hauptrahmenfenster für MDI\-Anwendungen anzupassen.  Leiten Sie außerdem eine Klasse von [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md), um unterschiedliche Weise MDI\-Dokumentrahmenfenster anzupassen, die die Anwendung unterstützt.  
+     Views are displayed inside "document frame windows." In an SDI application, the document frame window is also the "main frame window" for the application. In an MDI application, document windows are child windows displayed inside a main frame window. Your derived main frame-window class specifies the styles and other characteristics of the frame windows that contain your views. If you need to customize frame windows, derive from [CFrameWnd](../mfc/reference/cframewnd-class.md) to customize the document frame window for SDI applications. Derive from [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) to customize the main frame window for MDI applications. Also derive a class from [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) to customize each distinct kind of MDI document frame windows that your application supports.  
   
--   Die Normal\-Vorlage oder Vorlagen  
+-   The document template or templates  
   
-     Eine Normal\-Vorlage instrumentiert die Dokumentenerstellung, Ansichten und Rahmenfenster.  Eine bestimmte Dokumentvorlagenklasse, die von der [CDocTemplate](../mfc/reference/cdoctemplate-class.md)\- Klasse abgeleitet ist, erstellt und verwaltet alle geöffneten Dokumenten aus einem Typ.  Anwendungen, die mehr unterstützen, wenn ein Typ Dokument enthalten mehrere Dokumentvorlagen.  Verwenden Sie [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)\-Klasse für SDI\-Anwendungen, oder verwenden Sie [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)\-Klasse für MDI\-Anwendungen.  
+     A document template orchestrates the creation of documents, views, and frame windows. A particular document-template class, derived from class [CDocTemplate](../mfc/reference/cdoctemplate-class.md), creates and manages all open documents of one type. Applications that support more than one type of document have multiple document templates. Use class [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) for SDI applications, or use class [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) for MDI applications.  
   
--   Das Anwendungsobjekt  
+-   The application object  
   
-     die Anwendungsklasse \(wird von [CWinApp](../mfc/reference/cwinapp-class.md) abgeleitet\) steuert alle Objekte oben und Anwendungsverhalten gibt z Initialisierung und Bereinigung an.  Der die und nur das Anwendungsobjekt Anwendung erstellt und verwaltet die Dokumentvorlagen für die Dokumenttypen, welche die Anwendung unterstützt.  
+     Your application class (derived from [CWinApp](../mfc/reference/cwinapp-class.md)) controls all of the objects above and specifies application behavior such as initialization and cleanup. The application's one and only application object creates and manages the document templates for any document types the application supports.  
   
--   Threadobjekte  
+-   Thread objects  
   
-     Wenn die Anwendung separate Threads der Ausführung erstellt \- beispielsweise, Berechnungen im Hintergrund ausführen \- Sie verwenden die Klassen, die von [CWinThread](../mfc/reference/cwinthread-class.md) abgeleitet werden.  [CWinApp](../mfc/reference/cwinapp-class.md) wird auch von `CWinThread` abgeleitet und dem ersten Ausführungsthread \(oder des Hauptprozesses\) in der Anwendung darstellt.  Sie können MFC in den sekundären Threads ebenfalls verwenden.  
+     If your application creates separate threads of execution — for example, to perform calculations in the background — you'll use classes derived from [CWinThread](../mfc/reference/cwinthread-class.md). [CWinApp](../mfc/reference/cwinapp-class.md) itself is derived from `CWinThread` and represents the primary thread of execution (or the main process) in your application. You can also use MFC in secondary threads.  
   
- In einer laufenden Anwendung reagiert diese Objekte kooperativ auf Benutzeraktionen, Grenze zusammen durch Befehle und andere Meldungen.  Ein Einzelanwendungsobjekt verwaltet einen oder mehrere. Dokumentvorlagen  Jede Normal\-Vorlage erstellt und verwaltet einen oder mehrere Dokumente \(abhängig, ob die SDI\-Anwendung oder MDI ist\).  Die Benutzer und bearbeitet ein Dokument durch eine Ansicht, die innerhalb eines Rahmenfensters enthalten ist.  Die folgende Abbildung zeigt die Beziehungen zwischen diesen Objekten für eine SDI\-Anwendung an.  
+ In a running application, these objects cooperatively respond to user actions, bound together by commands and other messages. A single application object manages one or more document templates. Each document template creates and manages one or more documents (depending on whether the application is SDI or MDI). The user views and manipulates a document through a view contained inside a frame window. The following figure shows the relationships among these objects for an SDI application.  
   
- ![Objekte in einer ausgeführten SDI&#45;Anwendung](../mfc/media/vc386v1.png "vc386V1")  
-Objekte in einer ausgeführten SDI\-Anwendung  
+ ![Objects in a running SDI application](../mfc/media/vc386v1.gif "vc386v1")  
+Objects in a Running SDI Application  
   
- Der Rest dieser Familie der Artikel erklärt, wie die Frameworktools, der MFC\-Anwendungs\-Assistent und den Ressourcen\-Editoren, diese Objekte erstellen, wie diese zusammenarbeiten und wie Sie sie in der Programmierung verwenden.  Dokumente, Ansichten und Rahmenfenster werden in [Fensterobjekte](../mfc/window-objects.md) und [Dokument\-\/Ansichtarchitektur](../mfc/document-view-architecture.md) behandelt.  
+ The rest of this family of articles explains how the framework tools, the MFC Application Wizard, and the resource editors, create these objects, how they work together, and how you use them in your programming. Documents, views, and frame windows are discussed in more detail in [Window Objects](../mfc/window-objects.md) and [Document/View Architecture](../mfc/document-view-architecture.md).  
   
-## Siehe auch  
- [Verwenden der Klassen zum Schreiben von Anwendungen für Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+

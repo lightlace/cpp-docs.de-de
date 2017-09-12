@@ -1,36 +1,55 @@
 ---
-title: "Typsicherer Zugriff auf Steuerelemente ohne Code-Assistenten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialogfeldsteuerelemente, Aufrufen"
-  - "Dialogfelder, auf Steuerelemente zugreifen"
+title: Type-Safe Access to Controls Without Code Wizards | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], accessing controls
+- dialog box controls [MFC], accessing
 ms.assetid: 325b4927-d49b-42b4-8e0b-fc84f31fb059
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Typsicherer Zugriff auf Steuerelemente ohne Code-Assistenten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0a25fd1b6acbc2eb683758c35b3316e5bcc0e078
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Der erste Ansatz zum Herstellen des typsicheren Zugriff auf Steuerelemente verwendet eine Inlinedatei Memberfunktion, um den Rückgabetyp von Memberfunktion Klassen `CWnd``GetDlgItem` in den entsprechenden C\+\+\-Steuerelementtyp, wie in diesem Beispiel dargestellt:  
+---
+# <a name="type-safe-access-to-controls-without-code-wizards"></a>Type-Safe Access to Controls Without Code Wizards
+The first approach to creating type-safe access to controls uses an inline member function to cast the return type of class `CWnd`'s `GetDlgItem` member function to the appropriate C++ control type, as in this example:  
   
- [!CODE [NVC_MFCControlLadenDialog#50](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#50)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#50](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_1.cpp)]  
   
- Sie können diese Memberfunktion dann verwenden, um auf das Steuerelement in einer typsicheren Art mit dem Code zuzugreifen, der ähnlich dem folgenden ist:  
+ You can then use this member function to access the control in a type-safe manner with code similar to the following:  
   
- [!CODE [NVC_MFCControlLadenDialog#51](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#51)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#51](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_2.cpp)]  
   
-## Siehe auch  
- [Typsicherer Zugriff auf die Steuerelemente in einem Dialogfeld](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
- [Typsicherer Zugriff auf Steuerelemente mit Code\-Assistenten](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+## <a name="see-also"></a>See Also  
+ [Type-Safe Access to Controls in a Dialog Box](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
+ [Type-Safe Access to Controls With Code Wizards](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+
+

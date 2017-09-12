@@ -1,5 +1,5 @@
 ---
-title: CTypedPtrMap-Klasse | Microsoft-Dokumentation
+title: CTypedPtrMap Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,11 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- type-safe collections
-- template classes, CTypedPtrMap class
-- maps
-- CTypedPtrMap class
-- pointer maps
+- CTypedPtrMap [MFC], GetNextAssoc
+- CTypedPtrMap [MFC], Lookup
+- CTypedPtrMap [MFC], RemoveKey
+- CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
 caps.latest.revision: 23
 author: mikeblome
@@ -42,15 +41,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 919d751c6ffe4b10ffad047f1b6be832bf49a1af
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 519ab5ff8a1e959d58862f8f6f49a275cb86058d
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctypedptrmap-class"></a>CTypedPtrMap-Klasse
-Stellt einen typsicheren Wrapper für Objekte der Zeigerzuordnungsklassen `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`und `CMapStringToPtr`bereit.  
+# <a name="ctypedptrmap-class"></a>CTypedPtrMap Class
+Provides a type-safe "wrapper" for objects of the pointer-map classes `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, and `CMapStringToPtr`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,50 +58,50 @@ template<class BASE_CLASS, class KEY, class VALUE>
 class CTypedPtrMap : public BASE_CLASS  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  `BASE_CLASS`  
- Die Basisklasse der typisierten Zeigers Map-Klasse; muss eine Zeiger Map-Klasse ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, oder `CMapStringToPtr`).  
+ Base class of the typed pointer map class; must be a pointer map class ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, or `CMapStringToPtr`).  
   
  `KEY`  
- Die Klasse des Objekts, das als Schlüssel für die Zuordnung verwendet.  
+ Class of the object used as the key to the map.  
   
  `VALUE`  
- Die Klasse des Objekts in der Zuordnung gespeichert.  
+ Class of the object stored in the map.  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Ruft das nächste Element durchlaufen werden können.|  
-|[CTypedPtrMap::Lookup](#lookup)|Gibt eine `KEY` basierend auf einer `VALUE`.|  
-|[CTypedPtrMap::RemoveKey](#removekey)|Entfernt ein Element mit einem Schlüssel angegeben.|  
-|[CTypedPtrMap::SetAt](#setat)|Fügt ein Element in der Zuordnung. ersetzt ein vorhandenes Element, wenn ein übereinstimmender Schlüssel gefunden wird.|  
+|[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Gets the next element for iterating.|  
+|[CTypedPtrMap::Lookup](#lookup)|Returns a `KEY` based on a `VALUE`.|  
+|[CTypedPtrMap::RemoveKey](#removekey)|Removes an element specified by a key.|  
+|[CTypedPtrMap::SetAt](#setat)|Inserts an element into the map; replaces an existing element if a matching key is found.|  
   
-### <a name="public-operators"></a>Öffentliche Operatoren  
+### <a name="public-operators"></a>Public Operators  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTypedPtrMap::operator]](#operator_at)|Fügt ein Element in der Zuordnung.|  
+|[CTypedPtrMap::operator [ ]](#operator_at)|Inserts an element into the map.|  
   
-## <a name="remarks"></a>Hinweise  
- Bei Verwendung `CTypedPtrMap`, die C++-Typprüfung-Funktion hilft Fehler aufgrund eines nicht übereinstimmenden Zeigertypen zu vermeiden.  
+## <a name="remarks"></a>Remarks  
+ When you use `CTypedPtrMap`, the C++ type-checking facility helps eliminate errors caused by mismatched pointer types.  
   
- Da alle `CTypedPtrMap` Funktionen sind Inline, die Verwendung dieser Vorlage erheblich wirkt sich nicht die Größe oder Geschwindigkeit Ihres Codes.  
+ Because all `CTypedPtrMap` functions are inline, use of this template does not significantly affect the size or speed of your code.  
   
- Weitere Informationen zur Verwendung von `CTypedPtrMap`, finden Sie in den Artikeln [Sammlungen](../../mfc/collections.md) und [Vorlagen basierende Klassen](../../mfc/template-based-classes.md).  
+ For more information on using `CTypedPtrMap`, see the articles [Collections](../../mfc/collections.md) and [Template-Based Classes](../../mfc/template-based-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `BASE_CLASS`  
   
  `CTypedPtrMap`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxtempl.h  
   
-##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
- Ruft das Map-Element in `rNextPosition`, dann werden die `rNextPosition` zum Verweisen auf das nächste Element in der Zuordnung.  
+##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
+ Retrieves the map element at `rNextPosition`, then updates `rNextPosition` to refer to the next element in the map.  
   
 ```  
 void GetNextAssoc(
@@ -111,120 +110,120 @@ void GetNextAssoc(
     VALUE& rValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `rPosition`  
- Gibt einen Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetNextAssoc` oder `BASE_CLASS` **:: GetStartPosition** aufrufen.  
+ Specifies a reference to a **POSITION** value returned by a previous `GetNextAssoc` or `BASE_CLASS`**::GetStartPosition** call.  
   
- *SCHLÜSSEL*  
- Der Vorlagenparameter, der den Schlüsseln der Zuordnung angibt.  
+ *KEY*  
+ Template parameter specifying the type of the map's keys.  
   
  `rKey`  
- Gibt den zurückgegebenen Schlüssel des Elements abgerufen.  
+ Specifies the returned key of the retrieved element.  
   
- *WERT*  
- Der Vorlagenparameter, die den Typ der Werte für die Zuordnung.  
+ *VALUE*  
+ Template parameter specifying the type of the map's values.  
   
  `rValue`  
- Gibt den zurückgegebenen Wert des Elements abgerufen.  
+ Specifies the returned value of the retrieved element.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Funktion ist besonders hilfreich für die Iteration durch alle Elemente in der Zuordnung. Beachten Sie, dass die Sequenz Position nicht unbedingt die Sequenz von Schlüssel-Wert identisch ist.  
+### <a name="remarks"></a>Remarks  
+ This function is most useful for iterating through all the elements in the map. Note that the position sequence is not necessarily the same as the key value sequence.  
   
- Wenn das abgerufene Element das letzte Element in der Zuordnung und dann der neue Wert der `rNextPosition` Wert **NULL**.  
+ If the retrieved element is the last in the map, then the new value of `rNextPosition` is set to **NULL**.  
   
- Diese Inline-Funktionsaufrufe `BASE_CLASS` **:: GetNextAssoc**.  
+ This inline function calls `BASE_CLASS`**::GetNextAssoc**.  
   
-##  <a name="lookup"></a>CTypedPtrMap::Lookup  
- `Lookup`verwendet einen Hashalgorithmus schnell das Map-Element mit einem Schlüssel finden, die genau übereinstimmt.  
+##  <a name="lookup"></a>  CTypedPtrMap::Lookup  
+ `Lookup` uses a hashing algorithm to quickly find the map element with a key that matches exactly.  
   
 ```  
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `BASE_CLASS`  
- Festlegen der Basisklasse der Klasse diese Zuordnung Vorlagenparameter.  
+ Template parameter specifying the base class of this map's class.  
   
  `key`  
- Der Schlüssel des Elements, das gesucht werden sollen.  
+ The key of the element to be looked up.  
   
- *WERT*  
- Der Vorlagenparameter, die den Typ der Werte in dieser Zuordnung gespeichert.  
+ *VALUE*  
+ Template parameter specifying the type of values stored in this map.  
   
  `rValue`  
- Gibt den zurückgegebenen Wert des Elements abgerufen.  
+ Specifies the returned value of the retrieved element.  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Element gefunden wurde; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the element was found; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Inline-Funktionsaufrufe `BASE_CLASS` **:: Lookup**.  
+### <a name="remarks"></a>Remarks  
+ This inline function calls `BASE_CLASS`**::Lookup**.  
   
-##  <a name="operator_at"></a>CTypedPtrMap::operator]  
- Dieser Operator kann nur auf der linken Seite einer zuweisungsanweisung (ein l-Wert) verwendet werden.  
+##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]  
+ This operator can be used only on the left side of an assignment statement (an l-value).  
   
 ```  
 VALUE& operator[ ](base_class ::base_arg_key key);
 ```  
   
-### <a name="parameters"></a>Parameter  
- *WERT*  
- Der Vorlagenparameter, die den Typ der Werte in dieser Zuordnung gespeichert.  
+### <a name="parameters"></a>Parameters  
+ *VALUE*  
+ Template parameter specifying the type of values stored in this map.  
   
  `BASE_CLASS`  
- Festlegen der Basisklasse der Klasse diese Zuordnung Vorlagenparameter.  
+ Template parameter specifying the base class of this map's class.  
   
  `key`  
- Der Schlüssel des Elements, das gesucht oder in der Zuordnung erstellt werden.  
+ The key of the element to be looked up or created in the map.  
   
-### <a name="remarks"></a>Hinweise  
- Wenn kein Map-Element mit dem angegebenen Schlüssel vorhanden ist, wird ein neues Element erstellt. Es gibt keine "rechts" (r) dieser Operator entspricht, da es besteht die Möglichkeit, die ein Schlüssel nicht in der Zuordnung gefunden werden kann. Verwenden der `Lookup` Member-Funktion für das Element abrufen.  
+### <a name="remarks"></a>Remarks  
+ If there is no map element with the specified key, then a new element is created. There is no "right side" (r-value) equivalent to this operator because there is a possibility that a key may not be found in the map. Use the `Lookup` member function for element retrieval.  
   
-##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
- Diese Memberfunktion ruft `BASE_CLASS` **:: RemoveKey**.  
+##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey  
+ This member function calls `BASE_CLASS`**::RemoveKey**.  
   
 ```  
 BOOL RemoveKey(KEY key);
 ```  
   
-### <a name="parameters"></a>Parameter  
- *SCHLÜSSEL*  
- Der Vorlagenparameter, der den Schlüsseln der Zuordnung angibt.  
+### <a name="parameters"></a>Parameters  
+ *KEY*  
+ Template parameter specifying the type of the map's keys.  
   
  `key`  
- Der Schlüssel für das Element entfernt werden soll.  
+ Key for the element to be removed.  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn der Eintrag gefunden und erfolgreich entfernt wurde; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the entry was found and successfully removed; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Weitere Hinweise finden Sie unter [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).  
   
-##  <a name="setat"></a>CTypedPtrMap::SetAt  
- Diese Memberfunktion ruft `BASE_CLASS` **:: SetAt**.  
+##  <a name="setat"></a>  CTypedPtrMap::SetAt  
+ This member function calls `BASE_CLASS`**::SetAt**.  
   
 ```  
 void SetAt(KEY key, VALUE newValue);
 ```  
   
-### <a name="parameters"></a>Parameter  
- *SCHLÜSSEL*  
- Der Vorlagenparameter, der den Schlüsseln der Zuordnung angibt.  
+### <a name="parameters"></a>Parameters  
+ *KEY*  
+ Template parameter specifying the type of the map's keys.  
   
  `key`  
- Gibt den Schlüsselwert der NewValue an.  
+ Specifies the key value of the newValue.  
   
  `newValue`  
- Gibt den Zeiger des Objekts, das der Wert des neuen Elements an.  
+ Specifies the object pointer that is the value of the new element.  
   
-### <a name="remarks"></a>Hinweise  
- Weitere Hinweise finden Sie unter [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).  
   
-## <a name="see-also"></a>Siehe auch  
- [MFC-Beispiel COLLECT](../../visual-cpp-samples.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CMapPtrToPtr-Klasse](../../mfc/reference/cmapptrtoptr-class.md)   
- [CMapPtrToWord-Klasse](../../mfc/reference/cmapptrtoword-class.md)   
- [CMapWordToPtr-Klasse](../../mfc/reference/cmapwordtoptr-class.md)   
- [CMapStringToPtr-Klasse](../../mfc/reference/cmapstringtoptr-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMapPtrToPtr Class](../../mfc/reference/cmapptrtoptr-class.md)   
+ [CMapPtrToWord Class](../../mfc/reference/cmapptrtoword-class.md)   
+ [CMapWordToPtr Class](../../mfc/reference/cmapwordtoptr-class.md)   
+ [CMapStringToPtr Class](../../mfc/reference/cmapstringtoptr-class.md)
 

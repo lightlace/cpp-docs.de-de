@@ -1,74 +1,93 @@
 ---
-title: "ActiveX-Steuerelementcontainer: Verwenden von Steuerelementen in Containern, die keine Dialogfelder sind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX-Steuerelementcontainer [C++], Einfügen von Steuerelementen"
-  - "ActiveX-Steuerelementcontainer [C++], non-dialog-Container"
-  - "ActiveX-Steuerelemente [C++], Erstellen"
-  - "Create-Methode [C++], ActiveX-Steuerelemente"
-  - "CreateControl-Methode"
+title: 'ActiveX Control Containers: Using Controls in a Non-Dialog Container | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Create method [MFC], ActiveX controls
+- CreateControl method [MFC]
+- ActiveX controls [MFC], creating
+- ActiveX control containers [MFC], non-dialog containers
+- ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# ActiveX-Steuerelementcontainer: Verwenden von Steuerelementen in Containern, die keine Dialogfelder sind
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9c845604a9dc21334920c5d214d1250349ac25bf
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In einigen Anwendungen wie einer SDI\- oder MDI\-Anwendung, möchten Sie ein Steuerelement in einem Fenster der Anwendung einbetten.  Die **Erstellen**\-Memberfunktion der Wrapperklasse, eingefügt von Visual C\+\+, können eine Instanz des Steuerelements, ohne die Anforderung ein Dialogfeld dynamisch erstellen.  
+---
+# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX Control Containers: Using Controls in a Non-Dialog Container
+In some applications, such as an SDI or MDI application, you will want to embed a control in a window of the application. The **Create** member function of the wrapper class, inserted by Visual C++, can create an instance of the control dynamically, without the need for a dialog box.  
   
- Die **Erstellen**\-Memberfunktion besitzt die folgenden Parameter:  
+ The **Create** member function has the following parameters:  
   
  `lpszWindowName`  
- Ein Zeiger in der Text\- oder Beschriftungseigenschaft anzuzeigende Text, des Steuerelements \(falls vorhanden\).  
+ A pointer to the text to be displayed in the control's Text or Caption property (if any).  
   
  `dwStyle`  
- Windows\-Formate.  Eine vollständige Liste finden Sie unter [CWnd::CreateControl](../Topic/CWnd::CreateControl.md).  
+ Windows styles. For a complete list, see [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol).  
   
  `rect`  
- Gibt die Größe und Position des Steuerelements an.  
+ Specifies the control's size and position.  
   
  `pParentWnd`  
- Gibt dem übergeordneten Fenster des Steuerelements, normalerweise `CDialog` an.  Darf nicht **NULL** sein.  
+ Specifies the control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- Gibt die Steuerelement\-ID an und kann über den Container verwendet werden, um das Steuerelement zu verweisen.  
+ Specifies the control ID and can be used by the container to refer to the control.  
   
- Ein Beispiel für die Verwendung dieser Funktion, um ein ActiveX\-Steuerelement dynamisch erzeugen kann in einer Formularansicht einer SDI\-Anwendung sein.  Sie können eine Instanz des Steuerelements im `WM_CREATE`\-Handler der Anwendung erstellen.  
+ One example of using this function to dynamically create an ActiveX control would be in a form view of an SDI application. You could then create an instance of the control in the `WM_CREATE` handler of the application.  
   
- Für dieses Beispiel ist `CMyView` die Hauptansichtsklasse, ist `CCirc` die Wrapperklasse, und CIRC.H ist den Header \(.H\) Datei der Wrapperklasse.  
+ For this example, `CMyView` is the main view class, `CCirc` is the wrapper class, and CIRC.H is the header (.H) file of the wrapper class.  
   
- Diese Funktion zu implementieren ist ein vier Schritte.  
+ Implementing this feature is a four-step process.  
   
-### So fügen Sie ein ActiveX\-Steuerelement in einem NichtDialogfeldfenster dynamisch erstellen  
+### <a name="to-dynamically-create-an-activex-control-in-a-non-dialog-window"></a>To dynamically create an ActiveX control in a non-dialog window  
   
-1.  Fügen Sie CIRC.H in CMYVIEW.H, direkt vor der Klassendefinition ein: `CMyView`  
+1.  Insert CIRC.H in CMYVIEW.H, just before the `CMyView` class definition:  
   
-     [!CODE [NVC_MFC_AxCont#12](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxCont#12)]  
+     [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]  
   
-2.  Fügen Sie eine Membervariable \(vom Typ `CCirc`\) des geschützten Abschnitt der `CMyView` in CMYVIEW.H Klassendefinition hinzu:  
+2.  Add a member variable (of type `CCirc`) to the protected section of the `CMyView` class definition located in CMYVIEW.H:  
   
-     [!CODE [NVC_MFC_AxCont#13](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxCont#13)]  
-    [!CODE [NVC_MFC_AxCont#14](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxCont#14)]  
+     [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]  
+    [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]  
   
-3.  Fügen Sie `WM_CREATE` einen Meldungshandler hinzu, um `CMyView`\- Klasse.  
+3.  Add a `WM_CREATE` message handler to class `CMyView`.  
   
-4.  In die Handlerfunktion machen `CMyView::OnCreate`, einen Aufruf der `Create`\-Funktion des Steuerelements mithilfe des **this** \- Zeigers als übergeordnetes Fenster:  
+4.  In the handler function, `CMyView::OnCreate`, make a call to the control's `Create` function using the **this** pointer as the parent window:  
   
-     [!CODE [NVC_MFC_AxCont#15](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxCont#15)]  
+     [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]  
   
-5.  Erstellen Sie das Projekt neu.  Ein Circ\-Steuerelement wird dynamisch erstellt, wenn die Ansicht der Anwendung erstellt wird.  
+5.  Rebuild the project. A Circ control will be created dynamically whenever the application's view is created.  
   
-## Siehe auch  
- [ActiveX\-Steuerelementcontainer](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

@@ -1,32 +1,51 @@
 ---
-title: "Erstellen von Ownerdrawn-Registerkarten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl-Klasse, Ownerdrawn-Registerkarten"
-  - "Zeichnen, Registerkarten"
-  - "Ownerdrawn-Registerkarten"
-  - "Registerkarten, Ownerdrawn"
+title: Making Owner-Drawn Tabs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- owner-drawn tabs [MFC]
+- tabs [MFC], owner-drawn
+- CTabCtrl class [MFC], owner-drawn tabs
+- drawing [MFC], tabs
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erstellen von Ownerdrawn-Registerkarten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a1225ad6e29bde551cde3ab0df29c70fd4681bb9
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Sie können einzelne Elemente eines Registersteuerelements \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\) definieren um Ownerdrawnelemente zu sein.  Weitere Informationen finden Sie im [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] unter [Ownerdrawn\-Registerkarten](http://msdn.microsoft.com/library/windows/desktop/bb760550).  
+---
+# <a name="making-owner-drawn-tabs"></a>Making Owner-Drawn Tabs
+You can define individual items of a tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) to be owner-drawn items. For more information, see [Owner-Drawn Tabs](http://msdn.microsoft.com/library/windows/desktop/bb760550) in the Windows SDK.  
   
-## Siehe auch  
- [Verwenden von CTabCtrl](../mfc/using-ctabctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

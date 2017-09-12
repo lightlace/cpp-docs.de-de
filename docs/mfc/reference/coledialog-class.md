@@ -1,5 +1,5 @@
 ---
-title: Klasse COleDialog | Microsoft-Dokumentation
+title: COleDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,9 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE dialog boxes, base class
-- dialog boxes, OLE
-- COleDialog class
+- COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
 caps.latest.revision: 21
 author: mikeblome
@@ -37,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 018d06ac167a8c352d9f1822b373126c4e615854
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 82cc7cff7b295e2685a0456d525ed0d74af44e46
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledialog-class"></a>COleDialog-Klasse
-Stellt die Funktionalität allgemeiner Dialogfelder für OLE bereit.  
+# <a name="coledialog-class"></a>COleDialog Class
+Provides functionality common to dialog boxes for OLE.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,16 +51,16 @@ Stellt die Funktionalität allgemeiner Dialogfelder für OLE bereit.
 class COleDialog : public CCommonDialog  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDialog::GetLastError](#getlasterror)|Ruft den vom Dialogfeld zurückgegebenen Fehlercode ab.|  
+|[COleDialog::GetLastError](#getlasterror)|Gets the error code returned by the dialog box.|  
   
-## <a name="remarks"></a>Hinweise  
- Die Microsoft Foundation Class Library stellt mehrere Klassen, die von abgeleiteten `COleDialog`:  
+## <a name="remarks"></a>Remarks  
+ The Microsoft Foundation Class Library provides several classes derived from `COleDialog`:  
   
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
   
@@ -82,10 +80,10 @@ class COleDialog : public CCommonDialog
   
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
   
- Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Dialogfelder in OLE](../../mfc/dialog-boxes-in-ole.md).  
+ For more information about OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -97,25 +95,25 @@ class COleDialog : public CCommonDialog
   
  `COleDialog`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxodlgs.h  
   
-##  <a name="getlasterror"></a>COleDialog::GetLastError  
- Rufen Sie die `GetLastError` Memberfunktion, um weitere Informationen zu erhalten beim `DoModal` gibt **IDABORT**.  
+##  <a name="getlasterror"></a>  COleDialog::GetLastError  
+ Call the `GetLastError` member function to get additional error information when `DoModal` returns **IDABORT**.  
   
 ```  
 UINT GetLastError() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die zurückgegebene Fehlercodes `GetLastError` hängen die Dialogfelder angezeigt.  
+### <a name="return-value"></a>Return Value  
+ The error codes returned by `GetLastError` depend on the specific dialog box displayed.  
   
-### <a name="remarks"></a>Hinweise  
- Finden Sie unter der `DoModal` Member-Funktion in den abgeleiteten Klassen Informationen zu bestimmten Fehlermeldungen.  
+### <a name="remarks"></a>Remarks  
+ See the `DoModal` member function in the derived classes for information about specific error messages.  
   
-## <a name="see-also"></a>Siehe auch  
- [CCommonDialog-Klasse](../../mfc/reference/ccommondialog-class.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

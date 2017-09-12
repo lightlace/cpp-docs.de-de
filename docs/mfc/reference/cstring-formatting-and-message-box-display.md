@@ -1,5 +1,5 @@
 ---
-title: CString-Formatierung und Meldungsfeldanzeige | Microsoft Docs
+title: CString Formatting and Message-Box Display | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CString objects, formatting and message boxes
+- CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 caps.latest.revision: 14
 author: mikeblome
@@ -33,32 +33,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 356562dc61971aa7a74ce9e9be94fc34af58f6f9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: abe0ce15f9fdf83c4cd15156916779e112ab72a8
 ms.contentlocale: de-de
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstring-formatting-and-message-box-display"></a>CString-Formatierung und Meldungsfeldanzeige
-Eine Reihe von Funktionen werden bereitgestellt, um formatieren und Analysieren von `CString` Objekte. Wenn Sie bearbeiten müssen, verwenden Sie diese Funktionen können `CString` Objekte, aber sie sind besonders nützlich für das Formatieren von Zeichenfolgen, die in der MessageBox-Text angezeigt werden.  
+# <a name="cstring-formatting-and-message-box-display"></a>CString Formatting and Message-Box Display
+A number of functions are provided to format and parse `CString` objects. You can use these functions whenever you have to manipulate `CString` objects, but they are particularly useful for formatting strings that will appear in message-box text.  
   
- Diese Gruppe von Funktionen enthält auch eine globale Routine für ein Meldungsfeld angezeigt.  
+ This group of functions also includes a global routine for displaying a message box.  
   
-### <a name="cstring-functions"></a>CString-Funktionen  
+### <a name="cstring-functions"></a>CString Functions  
   
 |||  
 |-|-|  
-|[AfxExtractSubString](#afxextractsubstring)|Extrahiert Teilzeichenfolgen, getrennt durch ein einzelnes Zeichen aus einer angegebenen Quellzeichenfolge.|  
-|[AfxFormatString1](#afxformatstring1)|Ersetzt eine angegebene Zeichenfolge für die Formatierungszeichen "%1" in eine Zeichenfolge in der Zeichenfolgentabelle enthalten.|  
-|[AfxFormatString2](#afxformatstring2)|Ersetzt durch zwei Zeichenfolgen für das Format Zeichen "%1" und "%2" in einer Zeichenfolge in der Zeichenfolgentabelle enthalten sind.|  
-|[AfxMessageBox](#afxmessagebox)|Zeigt ein Meldungsfenster an.|  
+|[AfxExtractSubString](#afxextractsubstring)|Extracts substrings separated by a single character from a given source string.|  
+|[AfxFormatString1](#afxformatstring1)|Substitutes a given string for the format characters "%1" in a string contained in the string table.|  
+|[AfxFormatString2](#afxformatstring2)|Substitutes two strings for the format characters "%1" and "%2" in a string contained in the string table.|  
+|[AfxMessageBox](#afxmessagebox)|Displays a message box.|  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements  
   **Header** afxwin.h  
   
-##  <a name="afxextractsubstring"></a>AfxExtractSubString  
- Dieser globale Funktion kann verwendet werden, um eine Unterzeichenfolge aus einer bestimmten Quellzeichenfolge zu extrahieren.  
+##  <a name="afxextractsubstring"></a>  AfxExtractSubString  
+ This global function can be used to extract a substring from a given source string.  
   
 ```   
 BOOL AFXAPI AfxExtractSubString (
@@ -68,35 +68,35 @@ BOOL AFXAPI AfxExtractSubString (
     TCHAR chSep  = '\n'); 
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *rString*  
- -   Ein Verweis auf eine [CString](../../atl-mfc-shared/using-cstring.md) -Objekt, das eine einzelne Teilzeichenfolge erhält.  
+ -   Reference to a [CString](../../atl-mfc-shared/using-cstring.md) object that will receive an individual substring.  
   
  *lpszFullString*  
- -   Zeichenfolge, enthält den vollständigen Text der Zeichenfolge, die aus zu extrahieren.  
+ -   String containing the full text of the string to extract from.  
   
  *iSubString*  
- -   Nullbasierte Index der Teilzeichenfolge extrahiert aus *LpszFullString*.  
+ -   Zero-based index of the substring to extract from *lpszFullString*.  
   
  *chSep*  
- -   Trennzeichen zum Trennen der Teilzeichenfolgen.  
+ -   Separator character used to delimit substrings.  
   
-### <a name="return-value"></a>Rückgabewert  
- **"True"** , wenn die Funktion erfolgreich mit die Teilzeichenfolge am angegebenen Index extrahiert, andernfalls **"false"**.  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if the function successfully extracted the substring at the provided index; otherwise, **FALSE**.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Funktion ist nützlich für das Extrahieren von mehreren Teilzeichenfolgen aus einer Quellzeichenfolge, wenn ein bekanntes einzelnes Zeichen jede Teilzeichenfolge trennt. Diese Funktion sucht vom Anfang der `lpszFullString` Parameter jedes Mal aufgerufen wird.  
+### <a name="remarks"></a>Remarks  
+ This function is useful for extracting multiple substrings from a source string when a known single character separates each substring. This function searches from the beginning of the `lpszFullString` parameter each time it is called.  
   
- Diese Funktion gibt "false" zurück, wenn entweder `lpszFullString` festgelegt ist, um **NULL** oder die Funktion Erreichen des Endes des `lpszFullString` ohne suchen `iSubString`+ 1 Vorkommen des angegebenen Trennzeichens. Die `rString` Parameter wird nicht aus den ursprünglichen Wert geändert werden, wenn `lpszFullString` wurde **NULL**ist, andernfalls der `rString` Parameter auf die leere Zeichenfolge festgelegt ist, wenn die Teilzeichenfolge für den angegebenen Index nicht ermittelt werden konnte.  
+ This function will return FALSE if either `lpszFullString` is set to **NULL** or the function reaches the end of `lpszFullString` without finding `iSubString`+1 occurrences of the specified separator character. The `rString` parameter will not be modified from its original value if `lpszFullString` was set to **NULL**; otherwise, the `rString` parameter is set to the empty string if the substring could not be extracted for the specified index.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_Utilities #48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements  
   **Header** afxwin.h  
   
-##  <a name="afxformatstring1"></a>AfxFormatString1  
- Ersetzt die Zeichenfolge, die durch `lpsz1` für alle Instanzen der Zeichen "%1" in der Vorlage eine Zeichenfolgenressource identifizierten `nIDS`.  
+##  <a name="afxformatstring1"></a>  AfxFormatString1  
+ Substitutes the string pointed to by `lpsz1` for any instances of the characters "%1" in the template string resource identified by `nIDS`.  
   
 ```  
 void  AfxFormatString1(
@@ -105,29 +105,29 @@ void  AfxFormatString1(
     LPCTSTR lpsz1); 
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `rString`  
- Ein Verweis auf eine `CString` -Objekt, das die resultierende Zeichenfolge enthalten soll, nachdem die Ersetzung ausgeführt wird.  
+ A reference to a `CString` object that will contain the resultant string after the substitution is performed.  
   
  `nIDS`  
- Die Ressourcen-ID der Vorlagenzeichenfolge, die auf dem die Ersetzung ausgeführt wird.  
+ The resource ID of the template string on which the substitution will be performed.  
   
  `lpsz1`  
- Eine Zeichenfolge, die das Format Ersetzen Zeichen "%1" in der Vorlagenzeichenfolge.  
+ A string that will replace the format characters "%1" in the template string.  
   
-### <a name="remarks"></a>Hinweise  
- Das neu formatierte Zeichenfolge befindet sich in `rString`. Die Zeichenfolge in der Zeichenfolgentabelle beispielsweise "Datei" % 1"wurde nicht gefunden", und `lpsz1` ist gleich "C:\MYFILE. TXT", klicken Sie dann `rString` die Zeichenfolge"File C:\MYFILE. TXT nicht gefunden". Diese Funktion ist nützlich für das Formatieren von Zeichenfolgen, die auf MessageBoxes und anderen Fenstern gesendet.  
+### <a name="remarks"></a>Remarks  
+ The newly formed string is stored in `rString`. For example, if the string in the string table is "File %1 not found", and `lpsz1` is equal to "C:\MYFILE.TXT", then `rString` will contain the string "File C:\MYFILE.TXT not found". This function is useful for formatting strings sent to message boxes and other windows.  
   
- Wenn die Formatierungszeichen "%1" mehr als einmal in der Zeichenfolge angezeigt, werden mehrere substitutionen vorgenommen werden.  
+ If the format characters "%1" appear in the string more than once, multiple substitutions will be made.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_Utilities #25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements  
   **Header** afxwin.h  
   
-##  <a name="afxformatstring2"></a>AfxFormatString2  
- Ersetzt die Zeichenfolge, die durch `lpsz1` für alle Instanzen der Zeichen "%1" und die Zeichenfolge, die durch `lpsz2` für alle Instanzen der Zeichen "%2", in der Vorlage eine Zeichenfolgenressource identifizierten `nIDS`.  
+##  <a name="afxformatstring2"></a>  AfxFormatString2  
+ Substitutes the string pointed to by `lpsz1` for any instances of the characters "%1", and the string pointed to by `lpsz2` for any instances of the characters "%2", in the template string resource identified by `nIDS`.  
   
 ```   
 void AfxFormatString2(
@@ -137,32 +137,32 @@ void AfxFormatString2(
     LPCTSTR lpsz2); 
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `rString`  
- Ein Verweis auf die `CString` , wird die resultierende Zeichenfolge enthalten, nachdem die Ersetzung ausgeführt wird.  
+ A reference to the `CString` that will contain the resultant string after the substitution is performed.  
   
  `nIDS`  
- Die Zeichenfolgen-ID der Tabelle der Vorlagenzeichenfolge, die auf dem die Ersetzung ausgeführt wird.  
+ The string table ID of the template string on which the substitution will be performed.  
   
  `lpsz1`  
- Eine Zeichenfolge, die das Format Ersetzen Zeichen "%1" in der Vorlagenzeichenfolge.  
+ A string that will replace the format characters "%1" in the template string.  
   
  `lpsz2`  
- Eine Zeichenfolge, die das Format Ersetzen Zeichen "%2" in der Vorlagenzeichenfolge.  
+ A string that will replace the format characters "%2" in the template string.  
   
-### <a name="remarks"></a>Hinweise  
- Das neu formatierte Zeichenfolge befindet sich in `rString`. Wenn die Zeichenfolge in der Zeichenfolgentabelle "Datei" % 1"nicht gefunden wird, im Verzeichnis %2" ist beispielsweise `lpsz1` verweist auf "Datei. TXT", und `lpsz2` verweist auf"C:\MYDIR", klicken Sie dann `rString` die Zeichenfolge"File-Datei. TXT im Verzeichnis C:\MYDIR nicht gefunden"  
+### <a name="remarks"></a>Remarks  
+ The newly formed string is stored in `rString`. For example, if the string in the string table is "File %1 not found in directory %2", `lpsz1` points to "MYFILE.TXT", and `lpsz2` points to "C:\MYDIR", then `rString` will contain the string "File MYFILE.TXT not found in directory C:\MYDIR"  
   
- Wenn das Format Zeichen "%1" oder "%2" mehr als einmal in der Zeichenfolge angezeigt wird, werden mehrere substitutionen vorgenommen werden. Sie müssen nicht in numerischer Reihenfolge befinden.  
+ If the format characters "%1" or "%2" appear in the string more than once, multiple substitutions will be made. They do not have to be in numerical order.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_Utilities #26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements  
   **Header** afxwin.h  
   
-##  <a name="afxmessagebox"></a>AfxMessageBox  
- Zeigt ein Meldungsfeld auf dem Bildschirm an.  
+##  <a name="afxmessagebox"></a>  AfxMessageBox  
+ Displays a message box on the screen.  
   
 ```  
 int AfxMessageBox(
@@ -176,49 +176,49 @@ int AFXAPI AfxMessageBox(
     UINT nIDHelp = (UINT) -1); 
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- Zeigt auf ein `CString`-Objekt oder auf eine auf NULL endende Zeichenfolge, worin die im Meldungsfeld anzuzeigende Meldung enthalten ist.  
+ Points to a `CString` object or null-terminated string containing the message to be displayed in the message box.  
   
  `nType`  
- Der Stil des Meldungsfelds. Wendet keine der der [meldungsfeldstile](../../mfc/reference/message-box-styles.md) in das Feld.  
+ The style of the message box. Apply any of the [message-box styles](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) to the box.  
   
  `nIDHelp`  
- Die Hilfekontext-ID für die Meldung; 0 gibt an, dass der Standardhilfekontext der Anwendung verwendet wird.  
+ The Help context ID for the message; 0 indicates the application's default Help context will be used.  
   
  `nIDPrompt`  
- Eine eindeutige ID, die verwendet wird, um auf eine Zeichenfolge in der Zeichenfolgentabelle zu verweisen.  
+ A unique ID used to reference a string in the string table.  
   
-### <a name="return-value"></a>Rückgabewert  
- Null (0), wenn nicht genügend Arbeitsspeicher vorhanden ist, um des Meldungsfelds anzuzeigen; andernfalls wird einer der folgenden Werte zurückgegeben:  
+### <a name="return-value"></a>Return Value  
+ Zero if there is not enough memory to display the message box; otherwise, one of the following values is returned:  
   
-- **IDABORT** der Schaltfläche ausgewählt wurde.  
+- **IDABORT** The Abort button was selected.  
   
-- **IDCANCEL** Schaltfläche die "Abbrechen" ausgewählt wurde.  
+- **IDCANCEL** The Cancel button was selected.  
   
-- **IDIGNORE** Schaltfläche "der ignorieren" wurde ausgewählt.  
+- **IDIGNORE** The Ignore button was selected.  
   
-- **IDNO** der keine Schaltfläche "ausgewählt wurde.  
+- **IDNO** The No button was selected.  
   
-- **IDOK** die OK-Schaltfläche aktiviert wurde.  
+- **IDOK** The OK button was selected.  
   
-- **IDRETRY** der Wiederholen-Schaltfläche ausgewählt wurde.  
+- **IDRETRY** The Retry button was selected.  
   
-- **IDYES** Ja der Schaltfläche "ausgewählt wurde.  
+- **IDYES** The Yes button was selected.  
   
- Wenn ein Meldungsfeld eine Schaltfläche "Abbrechen", hat die **IDCANCEL** Wert wird zurückgegeben, wenn die ESC-Taste gedrückt wird, oder die Schaltfläche "Abbrechen" aktiviert ist. Enthält das Meldungsfeld keine Schaltfläche "Abbrechen", hat das Drücken der ESC-TASTE keine Auswirkung.  
+ If a message box has a Cancel button, the **IDCANCEL** value will be returned if either the ESC key is pressed or the Cancel button is selected. If the message box has no Cancel button, pressing the ESC key has no effect.  
   
- Die Funktionen [AfxFormatString1](#afxformatstring1) und [AfxFormatString2](#afxformatstring2) kann hilfreich bei der Formatierung von Text, der in einem Meldungsfeld angezeigt wird.  
+ The functions [AfxFormatString1](#afxformatstring1) and [AfxFormatString2](#afxformatstring2) can be useful in formatting text that appears in a message box.  
   
-### <a name="remarks"></a>Hinweise  
- Mit der ersten Form dieser überladenen Funktion wird eine Textzeichenfolge angezeigt, auf die durch `lpszText` im Meldungsfeld verwiesen wird, und diese Form verwendet `nIDHelp`, um einen Hilfekontext zu beschreiben. Der Hilfekontext wird verwendet, um zu einem zugeordneten Hilfethema zu wechseln, wenn der Benutzer die Hilfetaste drückt (in der Regel F1).  
+### <a name="remarks"></a>Remarks  
+ The first form of this overloaded function displays a text string pointed to by `lpszText` in the message box and uses `nIDHelp` to describe a Help context. The Help context is used to jump to an associated Help topic when the user presses the Help key (typically F1).  
   
- Das zweite Form der Funktion verwendet die Zeichenfolgenressource mit der ID `nIDPrompt`, um eine Meldung im Meldungsfeld anzuzeigen. Die zugeordnete Hilfeseite wird über den Wert von `nIDHelp` gefunden. Wenn der Wert von `nIDHelp` verwendet (1), wird die Zeichenfolgenressource-ID, `nIDPrompt`, wird für den Hilfekontext verwendet. Weitere Informationen zum Definieren eines Hilfekontexts finden Sie unter [technischer Hinweis 28](../../mfc/tn028-context-sensitive-help-support.md).  
+ The second form of the function uses the string resource with the ID `nIDPrompt` to display a message in the message box. The associated Help page is found through the value of `nIDHelp`. If the default value of `nIDHelp` is used (-1), the string resource ID, `nIDPrompt`, is used for the Help context. For more information about defining Help contexts, see [Technical Note 28](../../mfc/tn028-context-sensitive-help-support.md).  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCWindowing #133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)   
- [CStringT-Klasse](../../atl-mfc-shared/reference/cstringt-class.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CStringT Class](../../atl-mfc-shared/reference/cstringt-class.md)
 

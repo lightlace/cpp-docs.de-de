@@ -1,44 +1,63 @@
 ---
-title: "Verwenden von Struktursteuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl-Klasse, Verwenden"
-  - "Struktursteuerelemente, Informationen über Struktur-Steuerelemente"
+title: Using Tree Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], using
+- tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Verwenden von Struktursteuerelementen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 906a4ba64103450e4c2d8e0496a33bd9543122e0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Typische Verwendungen einer Strukturansicht \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) entspricht dem Muster unten:  
+---
+# <a name="using-tree-controls"></a>Using Tree Controls
+Typical usage of a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) follows the pattern below:  
   
--   Das Steuerelement wird erstellt.  Wenn das Steuerelement in einer Dialogfeldvorlage angegeben ist, oder wenn Sie `CTreeView` verwenden, ist die Erstellung automatisch, wenn das Dialogfeld oder Ansicht erstellt wird.  Wenn Sie in der Strukturansicht als untergeordnetes Fenster eines anderen Fensters erstellen möchten, verwenden Sie die [Erstellen](../Topic/CTreeCtrl::Create.md)\-Memberfunktion.  
+-   The control is created. If the control is specified in a dialog box template or if you're using `CTreeView`, creation is automatic when the dialog box or view is created. If you want to create the tree control as a child window of some other window, use the [Create](../mfc/reference/ctreectrl-class.md#create) member function.  
   
--   Wenn Sie das Struktursteuerelement Bilder verwenden, legen Sie eine Bildliste fest, indem Sie [SetImageList](../Topic/CTreeCtrl::SetImageList.md) aufrufen.  Sie können den Einzug ändern, indem Sie [SetIndent](../Topic/CTreeCtrl::SetIndent.md) aufrufen.  Eine gute Zeit, hierzu ist in [OnInitDialog](../Topic/CDialog::OnInitDialog.md) \(für Steuerelemente in Dialogfeldern\) oder [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) \(für Ansichten\).  
+-   If you want your tree control to use images, set an image list by calling [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). You can also change the indentation by calling [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). A good time to do this is in [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (for controls in dialog boxes) or [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (for views).  
   
--   Fügen Sie Daten in das Steuerelement, indem Sie sie einmal die Funktion `CTreeCtrl`[InsertItem](../Topic/CTreeCtrl::InsertItem.md) für jedes Datenelement aufrufen.  `InsertItem` gibt ein Handle für das Element, das Sie verwenden können, um es später zu verweisen, wie zurück, wenn es untergeordneten Elemente hinzufügt.  Eine gute Zeit, die Daten zu initialisieren ist in `OnInitDialog` \(für Steuerelemente in Dialogfeldern\) oder `OnInitialUpdate` \(für Ansichten\).  
+-   Put data into the control by calling the `CTreeCtrl`'s [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) function once for each data item. `InsertItem` returns a handle to the item you can use to refer to it later, such as when adding child items. A good time to initialize the data is in `OnInitDialog` (for controls in dialog boxes) or `OnInitialUpdate` (for views).  
   
--   Wenn der Benutzer das Steuerelement verwendet, sendet es verschiedene Benachrichtigungsmeldungen.  Sie können eine Funktion angeben, um alle der Meldungen zu bearbeiten, die Sie bearbeiten möchten, indem Sie einen **ON\_NOTIFY\_REFLECT**\-Makro in der Meldungszuordnung des Steuerfensters hinzufügen oder ein `ON_NOTIFY`\-Makro zur Meldungszuordnung des übergeordneten Fensters hinzufügen.  Siehe [Strukturansicht\-Steuerelement\-Benachrichtigungsmeldungen](../mfc/tree-control-notification-messages.md) weiter unten in diesem Thema für eine Liste möglicher Benachrichtigungen.  
+-   As the user interacts with the control, it will send various notification messages. You can specify a function to handle each of the messages you want to handle by adding an **ON_NOTIFY_REFLECT** macro in your control window's message map or by adding an `ON_NOTIFY` macro to your parent window's message map. See [Tree Control Notification Messages](../mfc/tree-control-notification-messages.md) later in this topic for a list of possible notifications.  
   
--   Rufen Sie die verschiedenen Funktionen des festgelegten Members zum Festlegen von Werten für das Steuerelement auf.  Ändert, dass Sie die Include ausführen können, das den Einzug festgelegt und der Text, das Bild oder die Daten zugeordnet werden mit einem Element ändert.  
+-   Call the various Set member functions to set values for the control. Changes that you can make include setting the indentation and changing the text, image, or data associated with an item.  
   
--   Verwenden Sie die verschiedenen Funktionen abrufen, um den Inhalt des Steuerelements sicherzustellen.  Sie können den Inhalt des Strukturansicht\-Steuerelements mit Funktionen auch durchlaufen, die es ermöglichen, Handles zu übergeordneten Elementen, zu untergeordneten Elementen und den Geschwistern eines bestimmten Elements abzurufen.  Sie können die untergeordneten Elemente eines bestimmten Knotens sogar sortieren.  
+-   Use the various Get functions to examine the contents of the control. You can also traverse the contents of the tree control with functions that allow you to retrieve handles to parents, children, and siblings of a specified item. You can even sort the children of a particular node.  
   
--   Wenn Sie mit dem Steuerelement verwenden, stellen Sie sicher, dass er ordnungsgemäß gelöscht wird.  Wenn dem Tree\-Steuerelement in einem Dialogfeld ist, oder wenn es eine Ansicht ist, werden diese und das `CTreeCtrl`\-Objekt automatisch zerstört.  Falls nicht, müssen Sie sicherstellen, dass das Steuerelement und das `CTreeCtrl`\-Objekt ordnungsgemäß gelöscht werden.  
+-   When you're done with the control, make sure it's properly destroyed. If the tree control is in a dialog box or if it's a view, it and the `CTreeCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CTreeCtrl` object are properly destroyed.  
   
-## Siehe auch  
- [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

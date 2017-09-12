@@ -1,48 +1,67 @@
 ---
-title: "Memberfunktionen des Schieberegler-Steuerelements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl-Klasse, Methoden"
-  - "Schieberegler-Steuerelemente, Memberfunktionen"
+title: Slider Control Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], methods
+- slider controls [MFC], member functions
 ms.assetid: dbde49ee-7306-4d14-a6ce-d09aa198178f
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Memberfunktionen des Schieberegler-Steuerelements
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 440f9a20c1d73bc7f7b125867216d356251d4a08
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Eine Anwendung kann die Memberfunktionen des Slider\-Steuerelements aufrufen, um Informationen über das Schieberegler\-Steuerelement \([CSliderCtrl](../mfc/reference/csliderctrl-class.md)\) abzurufen und dessen Eigenschaften ändern.  
+---
+# <a name="slider-control-member-functions"></a>Slider Control Member Functions
+An application can call the slider control's member functions to retrieve information about the slider control ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) and to change its characteristics.  
   
- Um die Position des Schiebereglers \(das heißt, der Wert, den der Benutzer ausgewählt hat\) abzurufen, verwenden Sie die [GetPos](../Topic/CSliderCtrl::GetPos.md)\-Memberfunktion.  Um die Position des Schiebereglers festzulegen, verwenden Sie die [SetPos](../Topic/CSliderCtrl::SetPos.md)\-Memberfunktion.  Sie können jederzeit die `VerifyPos`\-Memberfunktion verwenden, um zu überprüfen, ob der Schieberegler zwischen den Mindest\- und Höchstwerten ist.  
+ To retrieve the position of the slider (that is, the value the user has chosen), use the [GetPos](../mfc/reference/csliderctrl-class.md#getpos) member function. To set the position of the slider, use the [SetPos](../mfc/reference/csliderctrl-class.md#setpos) member function. At any time you can use the `VerifyPos` member function to make sure that the slider is between the minimum and maximum values.  
   
- Der Gültigkeitsbereich eines Schieberegler\-Steuerelements ist der Satz von zusammenhängenden Werte, die das Schieberegler\-Steuerelement darstellen kann.  Die meisten Anwendungen verwenden die Memberfunktion [SetRange](../Topic/CSliderCtrl::SetRange.md), um den Bereich eines "Slider" \- Steuerelements festzulegen, wenn es zuerst erstellt wird.  Anwendungen können den Bereich nach dem Slider\-Steuerelement dynamisch ändern erstellt wurde, indem sie die [SetRangeMax](../Topic/CSliderCtrl::SetRangeMax.md) und [SetRangeMin](../Topic/CSliderCtrl::SetRangeMin.md) verwenden Memberfunktionen.  Eine Anwendung, die den dynamisch können normalerweise geändert werden, Bereich, ruft die abschließenden Bereichseinstellungen ab, wenn der Benutzer das Arbeiten mit dem Slider\-Steuerelement beendet wurde.  Um diese Einstellungen abzurufen, verwenden Sie [GetRange](../Topic/CSliderCtrl::GetRange.md), [GetRangeMax](../Topic/CSliderCtrl::GetRangeMax.md) und [GetRangeMin](../Topic/CSliderCtrl::GetRangeMin.md)\-Memberfunktionen.  
+ The range of a slider control is the set of contiguous values that the slider control can represent. Most applications use the [SetRange](../mfc/reference/csliderctrl-class.md#setrange) member function to set the range of a slider control when it is first created. Applications can dynamically alter the range after the slider control has been created by using the [SetRangeMax](../mfc/reference/csliderctrl-class.md#setrangemax) and [SetRangeMin](../mfc/reference/csliderctrl-class.md#setrangemin) member functions. An application that allows the range to be changed dynamically typically retrieves the final range settings when the user has finished working with the slider control. To retrieve these settings, use the [GetRange](../mfc/reference/csliderctrl-class.md#getrange), [GetRangeMax](../mfc/reference/csliderctrl-class.md#getrangemax), and [GetRangeMin](../mfc/reference/csliderctrl-class.md#getrangemin) member functions.  
   
- Eine Anwendung kann das Format `TBS_AUTOTICKS` verwenden, um die Teilstriche eines "Slider" \- Steuerelements automatisch angezeigt haben.  Wenn eine Anwendung die Position festlegen muss, oder Anzahl der Teilstriche können jedoch einige Memberfunktionen verwendet werden.  
+ An application can use the `TBS_AUTOTICKS` style to have a slider control's tick marks displayed automatically. If an application needs to control the position or frequency of the tick marks, however, a number of member functions can be used.  
   
- Um die Position eines Teilstrichs festzulegen, kann eine Anwendung die Memberfunktion [SetTic](../Topic/CSliderCtrl::SetTic.md) verwenden.  Die Memberfunktion [SetTicFreq](../Topic/CSliderCtrl::SetTicFreq.md) ermöglicht es einer Anwendung, Teilstriche festzulegen, die in regelmäßigen Abständen im Bereich des Schieberegler\-Steuerelements werden.  Beispielsweise kann die Anwendung diese Memberfunktion verwenden, um nur 10 Teilstriche in einem Bereich von 1 bis 100 anzuzeigen.  
+ To set the position of a tick mark, an application can use the [SetTic](../mfc/reference/csliderctrl-class.md#settic) member function. The [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq) member function allows an application to set tick marks that appear at regular intervals in the slider control's range. For example, the application can use this member function to display only 10 tick marks in a range of 1 through 100.  
   
- Um den Index im Bereich entsprechend einem Teilstrich abzurufen, verwenden Sie die [GetTic](../Topic/CSliderCtrl::GetTic.md)\-Memberfunktion.  Die Memberfunktion [GetTicArray](../Topic/CSliderCtrl::GetTicArray.md) ruft ein Array dieser Indizes abhängig.  Um die Position eines Teilstrichs, in Clientkoordinaten abzurufen, verwenden Sie die [GetTicPos](../Topic/CSliderCtrl::GetTicPos.md)\-Memberfunktion.  Eine Anwendung kann die Anzahl der Zeiteinheiten abrufen, indem sie die [GetNumTics](../Topic/CSliderCtrl::GetNumTics.md)\-Memberfunktion verwendet.  
+ To retrieve the index in the range corresponding to a tick mark, use the [GetTic](../mfc/reference/csliderctrl-class.md#gettic) member function. The [GetTicArray](../mfc/reference/csliderctrl-class.md#getticarray) member function retrieves an array of these indices. To retrieve the position of a tick mark, in client coordinates, use the [GetTicPos](../mfc/reference/csliderctrl-class.md#getticpos) member function. An application can retrieve the number of tick marks by using the [GetNumTics](../mfc/reference/csliderctrl-class.md#getnumtics) member function.  
   
- Die Memberfunktion [ClearTics](../Topic/CSliderCtrl::ClearTics.md) entfernt alle Teilstriche eines Schieberegler\-Steuerelements.  
+ The [ClearTics](../mfc/reference/csliderctrl-class.md#cleartics) member function removes all of a slider control's tick marks.  
   
- Eine Zeilengröße des Slider\-Steuerelements bestimmt, wie weit sich der Schieberegler verschoben wird, wenn eine Anwendung eine Benachrichtigung empfängt **TB\_LINEDOWN** oder **TB\_LINEUP**.  Auf ähnliche Weise bestimmt die Seitengröße die Antwort zu den **TB\_PAGEDOWN** und **TB\_PAGEUP** Benachrichtigungsmeldungen.  Anwendungen können den Zeilen\- und Seitengrößenwerte abrufen und festlegen, indem sie [GetLineSize](../Topic/CSliderCtrl::GetLineSize.md), [SetLineSize](../Topic/CSliderCtrl::SetLineSize.md), [GetPageSize](../Topic/CSliderCtrl::GetPageSize.md) und [SetPageSize](../Topic/CSliderCtrl::SetPageSize.md) verwenden Memberfunktionen.  
+ A slider control's line size determines how far the slider moves when an application receives a **TB_LINEDOWN** or **TB_LINEUP** notification message. Similarly, the page size determines the response to the **TB_PAGEDOWN** and **TB_PAGEUP** notification messages. Applications can retrieve and set the line and page size values by using the [GetLineSize](../mfc/reference/csliderctrl-class.md#getlinesize), [SetLineSize](../mfc/reference/csliderctrl-class.md#setlinesize), [GetPageSize](../mfc/reference/csliderctrl-class.md#getpagesize), and [SetPageSize](../mfc/reference/csliderctrl-class.md#setpagesize) member functions.  
   
- Eine Anwendung kann Memberfunktionen verwenden, um die Abmessungen eines Schieberegler\-Steuerelements abzurufen.  Die Memberfunktion [GetThumbRect](../Topic/CSliderCtrl::GetThumbRect.md) ruft das umschließende Rechteck für den Schieberegler ab.  Die Memberfunktion [GetChannelRect](../Topic/CSliderCtrl::GetChannelRect.md) ruft das umschließende Rechteck für den Steuerkanal des Slider\-Steuerelements ab. \(Der Channel ist der Bereich, über denen der Schieberegler verschoben wird und die Hervorhebung enthält, wenn der Bereich ausgewählt ist.\)  
+ An application can use member functions to retrieve the dimensions of a slider control. The [GetThumbRect](../mfc/reference/csliderctrl-class.md#getthumbrect) member function retrieves the bounding rectangle for the slider. The [GetChannelRect](../mfc/reference/csliderctrl-class.md#getchannelrect) member function retrieves the bounding rectangle for the slider control's channel. (The channel is the area over which the slider moves and which contains the highlight when a range is selected.)  
   
- Wenn ein Schieberegler\-Steuerelement das Format `TBS_ENABLESELRANGE` hat, kann der Benutzer einen Bereich von zusammenhängenden Werten davon auswählen.  Einige Memberfunktionen können den dynamisch angepasst werden Auswahlbereich.  Die Memberfunktion [SetSelection](../Topic/CSliderCtrl::SetSelection.md) legt das Anfangs\- und Endposition einer Auswahl fest.  Wenn der Benutzer beendet, ein Auswahlbereich festzulegen, kann eine Anwendung die Einstellungen abrufen, indem sie die [GetSelection](../Topic/CSliderCtrl::GetSelection.md)\-Memberfunktion verwendet.  Um die Auswahl eines Benutzers löschen, verwenden Sie die [ClearSel](../Topic/CSliderCtrl::ClearSel.md)\-Memberfunktion.  
+ If a slider control has the `TBS_ENABLESELRANGE` style, the user can select a range of contiguous values from it. A number of member functions allow the selection range to be adjusted dynamically. The [SetSelection](../mfc/reference/csliderctrl-class.md#setselection) member function sets the starting and ending positions of a selection. When the user has finished setting a selection range, an application can retrieve the settings by using the [GetSelection](../mfc/reference/csliderctrl-class.md#getselection) member function. To clear a user's selection, use the [ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) member function.  
   
-## Siehe auch  
- [Verwenden von CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

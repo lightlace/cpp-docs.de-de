@@ -1,73 +1,92 @@
 ---
-title: "Verwenden von Eigenschaftenseiten in einer Anwendung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddPage-Methode"
-  - "CPropertyPage-Klasse, Stile"
-  - "Create-Methode [C++], Eigenschaftenblätter"
-  - "Dialogressourcen"
-  - "Dialogvorlagen, Eigenschaftenblätter"
-  - "DoModal-Methodeneigenschaftenblätter"
-  - "Eigenschaftenseiten, Eigenschaftenblätter"
-  - "Eigenschaftenblätter, Informationen über Eigenschaftenblätter"
+title: Using Property Sheets in Your Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog templates [MFC], property sheets
+- dialog resources
+- property pages [MFC], property sheets
+- DoModal method property sheets
+- AddPage method [MFC]
+- property sheets, about property sheets
+- Create method [MFC], property sheets
+- CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Verwenden von Eigenschaftenseiten in einer Anwendung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45c1c305309c7136dc3b749bb1489c818764479b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Um ein Eigenschaftenblatt in der Anwendung zu verwenden, führen Sie die folgenden Schritte aus:  
+---
+# <a name="using-property-sheets-in-your-application"></a>Using Property Sheets in Your Application
+To use a property sheet in your application, complete the following steps:  
   
-1.  Erstellen einer Dialogfeldvorlagen\-Ressource für jede Seite.  Beachten Sie, dass der Benutzer von einer Seite zur anderen wechseln, sodass für jede Seite so konsistent, wie möglich.  
+1.  Create a dialog template resource for each property page. Keep in mind that the user may be switching from one page to another, so lay out each page as consistently as possible.  
   
-     Die Dialogfeldvorlagen für alle Seiten müssen nicht die gleiche Größe sein.  Das Framework verwendet die Größe der längsten Seite, um zu bestimmen, welche im Eigenschaftenblatt die Eigenschaftenseiten für Leerzeichen, zuzuordnen.  
+     The dialog templates for all pages do not have to be the same size. The framework uses the size of the largest page to determine how much space to allocate in the property sheet for the property pages.  
   
-     Wenn Sie die Dialogfeldvorlagen\-Ressource für eine Eigenschaftenseite erstellen, müssen Sie folgenden Stile im Dialogfeld\-Eigenschafteneigenschaftenblatt angeben:  
+     When you create the dialog template resource for a property page, you must specify the following styles in the Dialog Properties property sheet:  
   
-    -   Legen Sie das **Beschriftung**  Eingabefeld **Allgemein**  auf der Seite auf den Text fest, den Sie auf der Registerkarte für die Seite angezeigt werden sollen.  
+    -   Set the **Caption** edit box on the **General** page to the text you wish to appear in the tab for this page.  
   
-    -   Legen Sie das **Formatvorlage**  Listenfeld auf der Seite **Stile**  auf **Untergeordnet** fest.  
+    -   Set the **Style** list box on the **Styles** page to **Child**.  
   
-    -   Legen Sie das **Rahmen**  Listenfeld auf der Seite **Stile**  auf **Dünn** fest.  
+    -   Set the **Border** list box on the **Styles** page to **Thin**.  
   
-    -   Stellen Sie sicher, dass das Kontrollkästchen **Titlebar**  auf der Seite **Stile**  ausgewählt ist.  
+    -   Ensure that the **Titlebar** check box on the **Styles** page is selected.  
   
-    -   Stellen Sie sicher, dass das Kontrollkästchen **Deaktiviert**  auf der Seite **Weitere Formate** ausgewählt ist.  
+    -   Ensure that the **Disabled** check box on the **More Styles** page is selected.  
   
-2.  Erstellen Sie [CPropertyPage](../mfc/reference/cpropertypage-class.md) abgeleitete Klasse entsprechend jeder Eigenschaftenseitendialogfeldvorlage.  Siehe [Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md).  Wählen Sie `CPropertyPage` als Basisklasse aus.  
+2.  Create a [CPropertyPage](../mfc/reference/cpropertypage-class.md)-derived class corresponding to each property page dialog template. See [Adding a Class](../ide/adding-a-class-visual-cpp.md). Choose `CPropertyPage` as the base class.  
   
-3.  Erstellen Sie die Membervariablen, um die Werte für diese Eigenschaftenseite aufzunehmen.  Das Hinzufügen von Membervariablen in eine Eigenschaftenseite ist identisch mit dem, Membervariablen zu einem Dialogfeld hinzuzufügen, da eine Eigenschaftenseite ein spezialisiertes Dialogfeld ist.  Weitere Informationen finden Sie unter [Definieren von Membervariablen für Dialogfeld\-Kontrollen](../mfc/defining-member-variables-for-dialog-controls.md).  
+3.  Create member variables to hold the values for this property page. The process for adding member variables to a property page is exactly the same as adding member variables to a dialog box, because a property page is a specialized dialog box. For more information, see [Defining Member Variables for Dialog Controls](../windows/defining-member-variables-for-dialog-controls.md).  
   
-4.  [CPropertySheet](../mfc/reference/cpropertysheet-class.md) Erstellen Sie ein Objekt im Quellcode.  Normalerweise erstellen Sie das Objekt `CPropertySheet` im Handler für den Befehl das Eigenschaftenblatt, der anzeigt.  Dieses Objekt stellt das gesamte Eigenschaftenblatt dar.  Wenn Sie ein modales Eigenschaftenblatt mit der Funktion [DoModal](../Topic/CPropertySheet::DoModal.md) erstellen, gibt das Framework drei Befehlsschaltflächen standardmäßig an: OK, Löschen und gelten.  Das Framework stellt keine Befehlsschaltflächen für das nicht modale Eigenschaftenblätter erstellt, die mit der Funktion [Erstellen](../Topic/CPropertySheet::Create.md) erstellt werden.  Sie müssen nicht, um eine Klasse von `CPropertySheet` abgeleitet werden, es sei denn, dass Sie entweder hinzufügen andere Steuerelemente \(wie ein Aktualisierung\) anzeigen oder ein nicht modales Eigenschaftenblatt soll.  Dieser Schritt ist für nicht modale Eigenschaftenblätter erforderlich, da sie keine Standardsteuerelemente enthalten, die verwendet werden können, um das Eigenschaftenblatt zu schließen.  
+4.  Construct a [CPropertySheet](../mfc/reference/cpropertysheet-class.md) object in your source code. Usually, you construct the `CPropertySheet` object in the handler for the command that displays the property sheet. This object represents the entire property sheet. If you create a modal property sheet with the [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) function, the framework supplies three command buttons by default: OK, Cancel, and Apply. The framework creates no command buttons for modeless property sheets created with the [Create](../mfc/reference/cpropertysheet-class.md#create) function. You do not need to derive a class from `CPropertySheet` unless you want to either add other controls (such as a preview window) or display a modeless property sheet. This step is necessary for modeless property sheets because they do not contain any default controls that could be used to close the property sheet.  
   
-5.  Für jede Seite zum Eigenschaftenblatt hinzugefügt werden kann, sind folgende:  
+5.  For each page to be added to the property sheet, do the following:  
   
-    -   Erstellen Sie ein Objekt für jedes von `CPropertyPage` abgeleitete Klasse, die vorher in diesem Prozess erstellt haben.  
+    -   Construct one object for each `CPropertyPage`-derived class that you created earlier in this process.  
   
-    -   Aufruf [CPropertySheet::AddPage](../Topic/CPropertySheet::AddPage.md) für jede Seite.  
+    -   Call [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) for each page.  
   
-     In der Regel erstellt das Objekt, das `CPropertySheet` erstellt, die `CPropertyPage`\-Objekte in diesem Schritt.  Wenn Sie jedoch `CPropertySheet` abgeleitete Klasse, die `CPropertyPage`\-Objekte im `CPropertySheet`\-Objekt einbetten und `AddPage` für jede Seite einer `CPropertySheet` aufrufen können \- Konstruktor der abgeleiteten Klasse implementieren.  `AddPage` fügt hinzu, dem `CPropertyPage`\-Objekt der Liste des Eigenschaftenblatts vonseiten aber eigentlich nicht enthält das Fenster für diese Seite.  Daher ist es nicht erforderlich, wenn Erstellung des Eigenschaftenblattfensters warten, um `AddPage` aufzurufen; Sie können `AddPage` vom Konstruktor des Eigenschaftenblatts aufrufen.  
+     Typically, the object that creates the `CPropertySheet` also creates the `CPropertyPage` objects in this step. However, if you implement a `CPropertySheet`-derived class, you can embed the `CPropertyPage` objects in the `CPropertySheet` object and call `AddPage` for each page from the `CPropertySheet`-derived class constructor. `AddPage` adds the `CPropertyPage` object to the property sheet's list of pages but does not actually create the window for that page. Therefore, it is not necessary to wait until creation of the property sheet window to call `AddPage`; you can call `AddPage` from the property sheet's constructor.  
   
-     Standardmäßig wird ein Eigenschaftenblatt weitere Registerkarten hat, als in einer einzelnen Zeile des Eigenschaftenblatts passt, stapeln die Registerkarten in mehreren Zeilen.  Um das Stapeln zu deaktivieren, rufen Sie die [CPropertySheet::EnableStackedTabs](../Topic/CPropertySheet::EnableStackedTabs.md) mit dem Parameter, der auf **FALSE** festgelegt wird.  Sie müssen `EnableStackedTabs` aufrufen, wenn Sie das Eigenschaftenblatt erstellen.  
+     By default, if a property sheet has more tabs than will fit in a single row of the property sheet, the tabs will stack in multiple rows. To disable stacking, call [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) with the parameter set to **FALSE**. You must call `EnableStackedTabs` when you create the property sheet.  
   
-6.  Rufen Sie [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md) oder [Erstellen](../Topic/CPropertySheet::Create.md) auf, um das Eigenschaftenblatt anzuzeigen.  Rufen Sie `DoModal` auf, um ein Eigenschaftenblatt als modales Dialogfeld zu erstellen.  Rufen Sie **Erstellen** auf, um das Eigenschaftenblatt als nicht modales Dialogfeld zu erstellen.  
+6.  Call [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) or [Create](../mfc/reference/cpropertysheet-class.md#create) to display the property sheet. Call `DoModal` to create a property sheet as a modal dialog box. Call **Create** to create the property sheet as a modeless dialog box.  
   
-7.  Austauschen von Daten zwischen Eigenschaftenseiten und den Besitzer des Eigenschaftenblatts.  Dies wird im Artikel [Austausch\-Daten](../mfc/exchanging-data.md) erläutert.  
+7.  Exchange data between property pages and the owner of the property sheet. This is explained in the article [Exchanging Data](../mfc/exchanging-data.md).  
   
- Ein Beispiel, wie Eigenschaftenblätter, finden Sie das Beispiel [Darüber](../top/visual-cpp-samples.md) allgemeine MFC verwendet.  
+ For an example of how to use property sheets, see the MFC General sample [PROPDLG](../visual-cpp-samples.md).  
   
-## Siehe auch  
- [Eigenschaftenblätter](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

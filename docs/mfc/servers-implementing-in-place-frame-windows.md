@@ -1,65 +1,84 @@
 ---
-title: "Server: Implementieren eines In-Place-Frame-Fensters | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Rahmenfenster, Implementieren"
-  - "Rahmenfenster, Direkt"
-  - "platzierte Rahmenfenster"
-  - "OLE-Serveranwendungen, Rahmenfenster"
-  - "Server, platzierte Rahmenfenster"
+title: 'Servers: Implementing In-Place Frame Windows | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], implementing
+- OLE server applications [MFC], frame windows
+- servers, in-place frame windows
+- frame windows [MFC], in-place
+- in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Server: Implementieren eines In-Place-Frame-Fensters
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ec5978a315be40d0db3cd3e52ff09e0bbc2635b2
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt, was Sie tun müssen, um die direkte Rahmenfenster in der Serveranwendung für visuelle Bearbeitung zu implementieren, wenn der Anwendungs\-Assistenten verwenden, um die Anwendung zu erstellen.  Anstatt den Einhaltens der Prozedur, die in diesem Artikel beschrieben wurde, können Sie eine bestehende Klasse des direkten Rahmenfensters entweder einer vom Assistenten generierten Anwendung der Anwendung oder einem Beispiel verwenden, die mit Visual C\+\+ bereitgestellt wurden.  
+---
+# <a name="servers-implementing-in-place-frame-windows"></a>Servers: Implementing In-Place Frame Windows
+This article explains what you must do to implement in-place frame windows in your visual editing server application if you do not use the application wizard to create your server application. In place of following the procedure outlined in this article, you could use an existing in-place frame-window class from either an application wizard-generated application or a sample provided with Visual C++.  
   
-#### Um eine Klasse des direkten Rahmenfensters deklarieren  
+#### <a name="to-declare-an-in-place-frame-window-class"></a>To declare an in-place frame-window class  
   
-1.  Leiten Sie eine Klasse des direkten Rahmenfensters von `COleIPFrameWnd`.  
+1.  Derive an in-place frame-window class from `COleIPFrameWnd`.  
   
-    -   Verwenden Sie das `DECLARE_DYNCREATE` in der Makro Klassenheaderdatei.  
+    -   Use the `DECLARE_DYNCREATE` macro in your class header file.  
   
-    -   Verwenden Sie das `IMPLEMENT_DYNCREATE`\-Makro in der Datei der Klassenimplementierung \(.cpp\).  Dadurch können Objekte dieser vom Framework erstellt werden, Klasse.  
+    -   Use the `IMPLEMENT_DYNCREATE` macro in your class implementation (.cpp) file. This allows objects of this class to be created by the framework.  
   
-2.  Deklarieren Sie einen Member `COleResizeBar` in der Rahmenfensterklasse.  Dies ist erforderlich, wenn Sie direkte Größenanpassung in Serveranwendungen unterstützen möchten.  
+2.  Declare a `COleResizeBar` member in the frame-window class. This is needed if you want to support in-place resizing in server applications.  
   
-     Deklarieren Sie einen Meldungshandler `OnCreate` \(mithilfe des Fensters **Eigenschaften** \), und rufen Sie **Erstellen** für den Member `COleResizeBar` auf, wenn Sie sie definiert haben.  
+     Declare an `OnCreate` message handler (using the **Properties** window), and call **Create** for your `COleResizeBar` member, if you've defined it.  
   
-3.  Wenn Sie eine Symbolleiste vorhanden ist, deklarieren einen Member `CToolBar` in der Rahmenfensterklasse.  
+3.  If you have a toolbar, declare a `CToolBar` member in the frame-window class.  
   
-     Überschreiben Sie die `OnCreateControlBars`\-Memberfunktion, um eine Symbolleiste zu erstellen, wenn der Server aktives gesorgt ist.  Beispiel:  
+     Override the `OnCreateControlBars` member function to create a toolbar when the server is active in place. For example:  
   
-     [!CODE [NVC_MFCOleServer#1](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCOleServer#1)]  
+     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]  
   
-     Siehe die Erörterung dieser Code nach Schritt 5.  
+     See the discussion of this code following step 5.  
   
-4.  Schließen Sie die Headerdatei für diese Klasse des direkten Rahmenfensters in der Haupt\-CPP\-Datei ein.  
+4.  Include the header file for this in-place frame-window class in your main .cpp file.  
   
-5.  In `InitInstance` für die Anwendungsklasse verfügen, rufen Sie die `SetServerInfo`\-Funktion des Dokumentvorlagenobjekts auf, um den in geöffnetem und der direkten Bearbeitung verwendet werden Ressourcen und dem direkten Rahmenfenster, anzugeben.  
+5.  In `InitInstance` for your application class, call the `SetServerInfo` function of the document template object to specify the resources and in-place frame window to be used in open and in-place editing.  
   
- Die Reihe von Funktionsaufrufen in der **if**\-Anweisung stellt die Symbolleiste von Ressourcen erstellt, die der Server bereitgestellt hat.  Damit ist die Symbolleiste ein Teil der Fensterhierarchie des Containers.  Da diese Symbolleiste von `CToolBar` abgeleitet ist, geht diese ihre Nachrichten an den Besitzer, das Rahmenfenster der Containeranwendung weiter, es sei denn, Sie den Besitzer ändern.  Deshalb ist der Aufruf von `SetOwner` erforderlich.  Dieser Aufruf wird das Fenster, in dem Befehle, das direktes Rahmenfenster des Servers sein gesendet werden und bewirkt die Meldungen, die an den Server übergeben werden.  Dies ermöglicht dem Server, die Operationen auf einer Symbolleiste zu reagieren, die er bereitstellt.  
+ The series of function calls in the **if** statement creates the toolbar from the resources the server provided. At this point, the toolbar is part of the container's window hierarchy. Because this toolbar is derived from `CToolBar`, it will pass its messages to its owner, the container application's frame window, unless you change the owner. That is why the call to `SetOwner` is necessary. This call changes the window where commands are sent to be the server's in-place frame window, causing the messages to be passed to the server. This allows the server to react to operations on the toolbar that it provides.  
   
- Die ID der Symbolleistenbitmap sollte mit der direkten anderen Ressourcen sein, die in der Serveranwendung definiert werden.  Ausführliche Informationen finden Sie unter [Menüs und Ressourcen: Server\-Hinzufügungen](../mfc/menus-and-resources-server-additions.md).  
+ The ID for the toolbar bitmap should be the same as the other in-place resources defined in your server application. See [Menus and Resources: Server Additions](../mfc/menus-and-resources-server-additions.md) for details.  
   
- Weitere Informationen finden Sie unter [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md) und [CDocTemplate::SetServerInfo](../Topic/CDocTemplate::SetServerInfo.md) in der Class Library Reference.  
+ For more information, see [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), and [CDocTemplate::SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) in the *Class Library Reference*.  
   
-## Siehe auch  
- [Server](../mfc/servers.md)   
- [Server: Implementieren eines Servers](../mfc/servers-implementing-a-server.md)   
- [Server: Implementieren von Serverdokumenten](../mfc/servers-implementing-server-documents.md)   
- [Server: Serverelemente](../mfc/servers-server-items.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)   
+ [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)   
+ [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)
+
+

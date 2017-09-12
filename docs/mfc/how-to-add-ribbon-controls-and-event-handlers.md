@@ -1,52 +1,72 @@
 ---
-title: "Gewusst wie: Hinzuf&#252;gen von Men&#252;band-Steuerelementen und Ereignishandlern | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ereignishandler, Hinzufügen"
-  - "Menübandsteuerelemente, Hinzufügen"
+title: 'How to: Add Ribbon Controls and Event Handlers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers [MFC], adding
+- ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Gewusst wie: Hinzuf&#252;gen von Men&#252;band-Steuerelementen und Ereignishandlern
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 99bd07de331cb9281bffeb39eb78123377fe31b6
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Menübandsteuerelemente sind Elemente, wie Schaltflächen und Kombinationsfelder, die Sie Bereiche hinzufügen.  Bereiche sind Bereiche der Menübandleiste, die eine Gruppe verwandter Steuerelemente anzeigen.  
+---
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>How to: Add Ribbon Controls and Event Handlers
+Ribbon controls are elements, such as buttons and combo boxes, that you add to panels. Panels are areas of the ribbon bar that display a group of related controls.  
   
- In diesem Thema öffnen Sie den Menüband\-Designer, fügen eine Schaltfläche hinzu und stellen dann ein Ereignis, Anzeigen "Hello World".  
+ In this topic, you will open the Ribbon Designer, add a button, and then link an event that displays "Hello World".  
   
-### So öffnen den Menüband\-Designer  
+### <a name="to-open-the-ribbon-designer"></a>To open the Ribbon Designer  
   
-1.  In Visual Studio im Menü **Ansicht**, klicken Sie auf **Ressourcenansicht**.  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  Doppelklicken Sie in **Ressourcenansicht** auf die Menübandressource, um sie auf der Entwurfsoberfläche anzuzeigen.  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-### So fügen Sie eine Schaltfläche und ein Ereignishandler hinzugefügt  
+### <a name="to-add-a-button-and-an-event-handler"></a>To add a Button and an Event Handler  
   
-1.  Von **Symbolleiste** auf **Schaltfläche** und ziehen Sie es an einem Bereich in der Entwurfsoberfläche.  
+1.  From the **Toolbar**, click **Button** and drag it on to a panel in the design surface.  
   
-2.  Klicken Sie auf die Schaltfläche mit der rechten Maustaste auf  **Ereignishandler hinzufügen**.  
+2.  Right-click the button, and click **Add Event Handler**.  
   
-3.  In **Ereignishandler\-Assistent** bestätigen Sie die Standardeinstellungen und klicken Sie auf **Hinzu\/Bearb.**.  Weitere Informationen finden Sie unter [Ereignishandler\-Assistent](../ide/event-handler-wizard.md).  
+3.  In the **Event Handler Wizard**, confirm the default settings and click **Add and Edit**. For more information, see [Event Handler Wizard](../ide/event-handler-wizard.md).  
   
-4.  Fügen Sie im Code\-Editor den folgenden Code in die Handlerfunktion hinzu:  
+4.  In the code editor, add the following code into the handler function:  
   
-    ```  
-    MessageBox((LPCTSTR)L"Hello World");  
-    ```  
+ ```  
+    MessageBox((LPCTSTR)L"Hello World");
+
+ ```  
   
-## Siehe auch  
- [RibbonGadgets\-Beispiel: Anwendung für Minianwendungen auf dem Menüband](../top/visual-cpp-samples.md)   
- [Menüband\-Designer \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md)   
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

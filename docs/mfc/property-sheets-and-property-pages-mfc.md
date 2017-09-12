@@ -1,43 +1,62 @@
 ---
-title: "Eigenschaftenbl&#228;tter und Eigenschaftenseiten (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPropertyPage-Klasse, Eigenschaftenblätter und -Seiten"
-  - "CPropertySheet-Klasse, Eigenschaftenblätter und -Seiten"
-  - "MFC-Dialogfelder, Registerkarten"
-  - "Eigenschaftenseiten, Eigenschaftenblätter"
-  - "Eigenschaftenblätter, Eigenschaftenseiten"
+title: Property Sheets and Property Pages (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], tabs
+- property pages [MFC], property sheets
+- CPropertyPage class [MFC], property sheets and pages
+- CPropertySheet class [MFC], property sheets and pages
+- property sheets, propert pages
 ms.assetid: de8fea12-6c35-4cef-8625-b8073a379446
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Eigenschaftenbl&#228;tter und Eigenschaftenseiten (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d8cb91f7a222fd78e5ccb53ce118b42f6938e420
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Eine MFC\- [Dialogfeld](../mfc/dialog-boxes.md) kann auf "Registerkartendialogfeld" Blick nehmen, indem Eigenschaftenblätter und Eigenschaftenseiten integriert.  Wird ein "Eigenschaftenblatt" in MFC, diese Art von Dialogfeld auf, ähnlich vielen Dialogfeldern in Microsoft Word, Excel, und Visual C\+\+, wird, einen Stapel Blätter im Registerkartenformat, ähnlich wie ein Stapel Dateiordner, die vom Vordergrund, die sehen zurückzuziehen, oder eine Gruppe überlappende Fenster zu enthalten.  Steuerelemente auf die Vorder\- Registerkarte angezeigt; nur die Registerkarte mit Bezeichnung ist auf den von Registerkarten angezeigt.  Eigenschaftenblätter sind für die Verwaltung für zahlreiche Eigenschaften oder Einstellungen besonders nützlich, die relativ ordentlich in einige Gruppen ab.  Normalerweise kann ein Eigenschaftenblatt eine Benutzeroberfläche vereinfachen, indem einige eigene Dialogfelder ersetzt.  
+---
+# <a name="property-sheets-and-property-pages-mfc"></a>Property Sheets and Property Pages (MFC)
+An MFC [dialog box](../mfc/dialog-boxes.md) can take on a "tab dialog" look by incorporating property sheets and property pages. Called a "property sheet" in MFC, this kind of dialog box, similar to many dialog boxes in Microsoft Word, Excel, and Visual C++, appears to contain a stack of tabbed sheets, much like a stack of file folders seen from front to back, or a group of cascaded windows. Controls on the front tab are visible; only the labeled tab is visible on the rear tabs. Property sheets are particularly useful for managing large numbers of properties or settings that fall fairly neatly into several groups. Typically, one property sheet can simplify a user interface by replacing several separate dialog boxes.  
   
- Seit MFC 4.0, werden Eigenschaftenblätter und Eigenschaftenseiten mit der allgemeinen Steuerelemente implementiert, die Windows 95 und Windows NT 3,51 und höher werden.  
+ As of MFC version 4.0, property sheets and property pages are implemented using the common controls that come with Windows 95 and Windows NT version 3.51 and later.  
   
- Eigenschaftenblätter werden mit Klassen [CPropertySheet](../mfc/reference/cpropertysheet-class.md) und [CPropertyPage](../mfc/reference/cpropertypage-class.md) implementiert \(beschrieben in der *MFC\-Referenz*\).  `CPropertySheet` definiert das Gesamtdialogfeld, das mehrere "Seiten" auf `CPropertyPage` enthalten kann.  
+ Property sheets are implemented with classes [CPropertySheet](../mfc/reference/cpropertysheet-class.md) and [CPropertyPage](../mfc/reference/cpropertypage-class.md) (described in the *MFC Reference*). `CPropertySheet` defines the overall dialog box, which can contain multiple "pages" based on `CPropertyPage`.  
   
- Informationen zum Erstellen und Verwenden von Eigenschaftenblättern, finden Sie im Thema [Eigenschaftenblätter](../mfc/property-sheets-mfc.md).  
+ For information on creating and working with property sheets, see the topic [Property Sheets](../mfc/property-sheets-mfc.md).  
   
-## Siehe auch  
- [Dialogfelder](../mfc/dialog-boxes.md)   
- [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)   
- [Eigenschaftenblätter und Eigenschaftenseiten in MFC](../mfc/property-sheets-and-property-pages-in-mfc.md)   
- [Datenaustausch](../mfc/exchanging-data.md)   
- [Erstellen eines nicht modalen Eigenschaftenblatts](../mfc/creating-a-modeless-property-sheet.md)   
- [Verwenden der Schaltfläche „Anwenden“](../mfc/handling-the-apply-button.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Property Sheets and Property Pages in MFC](../mfc/property-sheets-and-property-pages-in-mfc.md)   
+ [Exchanging Data](../mfc/exchanging-data.md)   
+ [Creating a Modeless Property Sheet](../mfc/creating-a-modeless-property-sheet.md)   
+ [Handling the Apply Button](../mfc/handling-the-apply-button.md)
+
+

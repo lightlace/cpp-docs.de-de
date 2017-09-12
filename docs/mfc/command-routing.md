@@ -1,56 +1,76 @@
 ---
-title: "Befehlsrouting | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, Befehlsrouting"
-  - "Behandlung von Befehlen, Routing von Befehlen"
-  - "Handler"
-  - "Handler, Befehl"
-  - "Befehlsrouting"
+title: Command Routing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command handling [MFC], routing commands
+- handlers [MFC]
+- handlers, command [MFC]
+- command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Befehlsrouting
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9b8b2c0deef88405b15d1b04dcd02fa09960bc1d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Ihre Verantwortung bei der Arbeit mit Befehlen beschränkt sich auf das Erstellen von Meldungszuordnungsverbindungen zwischen Befehlen und ihren jeweiligen Handlerfunktionen, eine Aufgabe, für die Sie das Eigenschaftenfenster verwenden. Sie müssen außerdem die meisten Befehlshandler schreiben.  
+---
+# <a name="command-routing"></a>Command Routing
+Your responsibility in working with commands is limited to making message-map connections between commands and their handler functions, a task for which you use the Properties window. You must also write most command handlers.  
   
- Windows\-Meldungen werden in der Regel an das Hauptrahmenfenster gesendet, aber Befehlsmeldungen werden dann an andere Objekte weitergeleitet. Das Framework leitet Befehle durch eine Standardsequenz von Befehlszielobjekten, wobei vorausgesetzt wird, dass eines von ihnen einen Handler für den Befehl besitzt. Jedes Befehlszielobjekt überprüft seine Meldungszuordnung, um festzustellen, ob es die eingehende Meldung verarbeiten kann.  
+ Windows messages are usually sent to the main frame window, but command messages are then routed to other objects. The framework routes commands through a standard sequence of command-target objects, one of which is expected to have a handler for the command. Each command-target object checks its message map to see if it can handle the incoming message.  
   
- Verschiedene Befehlszielklassen überprüfen ihre eigenen Meldungszuordnungen zu unterschiedlichen Zeitpunkten. In der Regel leitet eine Klasse den Befehl an bestimmte andere Objekte weiter, um ihnen die erste Chance mit dem Befehl zu geben. Wenn keines dieser Objekte den Befehl verarbeitet, überprüft die ursprüngliche Klasse ihre eigene Meldungszuordnung. Wenn sie dann keinen Handler bereitstellen kann, kann sie den Befehl noch an weitere Befehlsziele leiten. Die Tabelle [Standardmäßige Befehlsweiterleitung](#_core_standard_command_route) unten zeigt, wie die einzelnen Klassen diese Sequenz strukturieren. Die allgemeine Reihenfolge, in der ein Befehlsziel einen Befehl weiterleitet, ist:  
+ Different command-target classes check their own message maps at different times. Typically, a class routes the command to certain other objects to give them first chance at the command. If none of those objects handles the command, the original class checks its own message map. Then, if it can't supply a handler itself, it may route the command to yet more command targets. The table [Standard Command Route](#_core_standard_command_route) below shows how each of the classes structures this sequence. The general order in which a command target routes a command is:  
   
-1.  An sein derzeit aktives untergeordnetes Befehlszielobjekt.  
+1.  To its currently active child command-target object.  
   
-2.  An sich selbst.  
+2.  To itself.  
   
-3.  An andere Befehlsziele.  
+3.  To other command targets.  
   
- Wie aufwändig ist dieser Weiterleitungsmechanismus? Im Vergleich zu dem, was der Handler als Reaktion auf einen Befehl ausführt, ist der Aufwand für das Routing gering. Beachten Sie, dass das Framework nur dann Befehle generiert, wenn der Benutzer mit einem Benutzeroberflächenobjekt interagiert.  
+ How expensive is this routing mechanism Compared to what your handler does in response to a command, the cost of the routing is low. Bear in mind that the framework generates commands only when the user interacts with a user-interface object.  
   
-### Standardmäßige Befehlsweiterleitung  
+### <a name="_core_standard_command_route"></a> Standard Command Route  
   
-|Wenn ein Objekt dieses Typs einen Befehl empfängt. . .|Es gibt sich selbst und anderen Befehlszielobjekten in der folgenden Reihenfolge eine Chance, den Befehl zu verarbeiten:|  
-|------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|  
-|MDI\-Rahmenfenster \(`CMDIFrameWnd`\)|1.  Aktiver `CMDIChildWnd`<br />2.  Dieses Rahmenfenster<br />3.  Anwendung \(`CWinApp`\-Objekt\)|  
-|Dokumentrahmenfenster \(`CFrameWnd`, `CMDIChildWnd`\)|1.  Aktive Ansicht<br />2.  Dieses Rahmenfenster<br />3.  Anwendung \(`CWinApp`\-Objekt\)|  
-|Ansicht|1.  Diese Ansicht<br />2.  Der Ansicht angefügtes Dokument|  
-|Dokument|1.  Dieses Dokument<br />2.  Dem Dokument angefügte Dokumentvorlage|  
-|Dialogfeld|1.  Dieses Dialogfeld<br />2.  Fenster, das das Dialogfeld besitzt<br />3.  Anwendung \(`CWinApp`\-Objekt\)|  
+|When an object of this type receives a command . . .|It gives itself and other command-target objects a chance to handle the command in this order:|  
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
+|MDI frame window  (`CMDIFrameWnd`)|1.  Active `CMDIChildWnd`<br />2.  This frame window<br />3.  Application (`CWinApp` object)|  
+|Document frame window  (`CFrameWnd`, `CMDIChildWnd`)|1.  Active view<br />2.  This frame window<br />3.  Application (`CWinApp` object)|  
+|View|1.  This view<br />2.  Document attached to the view|  
+|Document|1.  This document<br />2.  Document template attached to the document|  
+|Dialog box|1.  This dialog box<br />2.  Window that owns the dialog box<br />3.  Application (`CWinApp` object)|  
   
- Wo nummerierte Einträge in der zweiten Spalte der vorstehenden Tabelle andere Objekte erwähnen, z. B. ein Dokument, finden Sie das entsprechende Element in der ersten Spalte. Wenn Sie z. B. in der zweiten Spalte lesen, dass die Sicht einen Befehl an sein Dokument weiterleitet, können Sie in der ersten Spalte im Eintrag „Dokument“ dem Routing weiter folgen.  
+ Where numbered entries in the second column of the preceding table mention other objects, such as a document, see the corresponding item in the first column. For instance, when you read in the second column that the view forwards a command to its document, see the "Document" entry in the first column to follow the routing further.  
   
-## Siehe auch  
- [Wie das Framework einen Handler aufruft](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

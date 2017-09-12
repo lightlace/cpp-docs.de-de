@@ -1,5 +1,5 @@
 ---
-title: Klasse CFileFind | Microsoft-Dokumentation
+title: CFileFind Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,12 +39,31 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- files [C++], finding
-- Internet files [C++], finding
-- CFileFind class
-- URLs [C++], searching for
-- local files
-- local files, searching for
+- CFileFind [MFC], CFileFind
+- CFileFind [MFC], Close
+- CFileFind [MFC], FindFile
+- CFileFind [MFC], FindNextFile
+- CFileFind [MFC], GetCreationTime
+- CFileFind [MFC], GetFileName
+- CFileFind [MFC], GetFilePath
+- CFileFind [MFC], GetFileTitle
+- CFileFind [MFC], GetFileURL
+- CFileFind [MFC], GetLastAccessTime
+- CFileFind [MFC], GetLastWriteTime
+- CFileFind [MFC], GetLength
+- CFileFind [MFC], GetRoot
+- CFileFind [MFC], IsArchived
+- CFileFind [MFC], IsCompressed
+- CFileFind [MFC], IsDirectory
+- CFileFind [MFC], IsDots
+- CFileFind [MFC], IsHidden
+- CFileFind [MFC], IsNormal
+- CFileFind [MFC], IsReadOnly
+- CFileFind [MFC], IsSystem
+- CFileFind [MFC], IsTemporary
+- CFileFind [MFC], MatchesMask
+- CFileFind [MFC], CloseContext
+- CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
 caps.latest.revision: 22
 author: mikeblome
@@ -64,15 +83,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d7e6500dfc0ff24f35dd021a54080eb7ba7f1655
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 278488f2049642b95ee48ae399fe00377b5a6272
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cfilefind-class"></a>CFileFind-Klasse
-Führt lokale Dateisuchen und ist die Basisklasse für [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) und [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), die internetdateisuchen ausführen.  
+# <a name="cfilefind-class"></a>CFileFind Class
+Performs local file searches and is the base class for [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) and [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), which perform Internet file searches.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -80,116 +99,116 @@ Führt lokale Dateisuchen und ist die Basisklasse für [CGopherFileFind](../../m
 class CFileFind : public CObject  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFileFind::CFileFind](#cfilefind)|Erstellt ein `CFileFind`-Objekt.|  
+|[CFileFind::CFileFind](#cfilefind)|Constructs a `CFileFind` object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFileFind::Close](#close)|Schließt die Suchabfrage an.|  
-|[CFileFind::FindFile](#findfile)|Sucht in einem Verzeichnis nach einem angegebenen Dateinamen.|  
-|[CFileFind::FindNextFile](#findnextfile)|Weiterhin eine Dateisuche aus einem vorherigen Aufruf von [FindFile](#findfile).|  
-|[CFileFind::GetCreationTime](#getcreationtime)|Ruft den Zeitpunkt der Erstellung die Datei.|  
-|[CFileFind::GetFileName](#getfilename)|Ruft den Namen und die Erweiterung der gefundenen Datei|  
-|[CFileFind::GetFilePath](#getfilepath)|Ruft den gesamten Pfad der gefundenen Datei.|  
-|[CFileFind::GetFileTitle](#getfiletitle)|Ruft den Titel der gefundenen Datei ab. Der Titel umfasst nicht die Erweiterung.|  
-|[CFileFind::GetFileURL](#getfileurl)|Ruft die URL, einschließlich der Dateipfad der Datei gefunden.|  
-|[CFileFind::GetLastAccessTime](#getlastaccesstime)|Ruft die Zeit ab, der die Datei zuletzt zugegriffen wurde.|  
-|[CFileFind::GetLastWriteTime](#getlastwritetime)|Ruft den Zeitpunkt, den die Datei zuletzt geändert und gespeichert wurde.|  
-|[CFileFind::GetLength](#getlength)|Ruft die Länge der gefundenen Datei in Bytes ab.|  
-|[CFileFind::GetRoot](#getroot)|Ruft das Stammverzeichnis der gefundenen Datei ab.|  
-|[CFileFind::IsArchived](#isarchived)|Bestimmt, ob die gefundene Datei archiviert wird.|  
-|[CFileFind::IsCompressed](#iscompressed)|Bestimmt, ob die gefundene Datei komprimiert wird.|  
-|[CFileFind::IsDirectory](#isdirectory)|Bestimmt, ob die gefundene Datei ein Verzeichnis ist.|  
-|[CFileFind::IsDots](#isdots)|Bestimmt, ob der Name der gefundenen Datei der ist "."oder"..", bedeutet, dass ein Verzeichnis wird.|  
-|[CFileFind::IsHidden](#ishidden)|Bestimmt, ob die gefundene Datei ausgeblendet ist.|  
-|[CFileFind::IsNormal](#isnormal)|Bestimmt, ob die gefundene Datei normal ist (das heißt, keine anderen Attribute aufweist).|  
-|[CFileFind::IsReadOnly](#isreadonly)|Bestimmt, ob die gefundene Datei schreibgeschützt ist.|  
-|[CFileFind::IsSystem](#issystem)|Bestimmt, ob die gefundene Datei eine Systemdatei ist.|  
-|[CFileFind::IsTemporary](#istemporary)|Bestimmt, ob die gefundene Datei temporär ist.|  
-|[CFileFind::MatchesMask](#matchesmask)|Gibt die gewünschte Dateiattribute der Datei gefunden werden.|  
+|[CFileFind::Close](#close)|Closes the search request.|  
+|[CFileFind::FindFile](#findfile)|Searches a directory for a specified file name.|  
+|[CFileFind::FindNextFile](#findnextfile)|Continues a file search from a previous call to [FindFile](#findfile).|  
+|[CFileFind::GetCreationTime](#getcreationtime)|Gets the time the file was created.|  
+|[CFileFind::GetFileName](#getfilename)|Gets the name, including the extension, of the found file|  
+|[CFileFind::GetFilePath](#getfilepath)|Gets the whole path of the found file.|  
+|[CFileFind::GetFileTitle](#getfiletitle)|Gets the title of the found file. The title does not include the extension.|  
+|[CFileFind::GetFileURL](#getfileurl)|Gets the URL, including the file path, of the found file.|  
+|[CFileFind::GetLastAccessTime](#getlastaccesstime)|Gets the time that the file was last accessed.|  
+|[CFileFind::GetLastWriteTime](#getlastwritetime)|Gets the time the file was last changed and saved.|  
+|[CFileFind::GetLength](#getlength)|Gets the length of the found file, in bytes.|  
+|[CFileFind::GetRoot](#getroot)|Gets the root directory of the found file.|  
+|[CFileFind::IsArchived](#isarchived)|Determines if the found file is archived.|  
+|[CFileFind::IsCompressed](#iscompressed)|Determines if the found file is compressed.|  
+|[CFileFind::IsDirectory](#isdirectory)|Determines if the found file is a directory.|  
+|[CFileFind::IsDots](#isdots)|Determines if the name of the found file has the name "." or "..", indicating that is actually a directory.|  
+|[CFileFind::IsHidden](#ishidden)|Determines if the found file is hidden.|  
+|[CFileFind::IsNormal](#isnormal)|Determines if the found file is normal (in other words, has no other attributes).|  
+|[CFileFind::IsReadOnly](#isreadonly)|Determines if the found file is read-only.|  
+|[CFileFind::IsSystem](#issystem)|Determines if the found file is a system file.|  
+|[CFileFind::IsTemporary](#istemporary)|Determines if the found file is temporary.|  
+|[CFileFind::MatchesMask](#matchesmask)|Indicates the desired file attributes of the file to be found.|  
   
-### <a name="protected-methods"></a>Geschützte Methoden  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFileFind::CloseContext](#closecontext)|Schließt die Datei, die durch das aktuelle Handle für die Suche angegeben.|  
+|[CFileFind::CloseContext](#closecontext)|Closes the file specified by the current search handle.|  
   
-### <a name="protected-data-members"></a>Geschützte Datenmember  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFileFind::m_pTM](#m_ptm)|Zeiger auf ein `CAtlTransactionManager` Objekt.|  
+|[CFileFind::m_pTM](#m_ptm)|Pointer to a `CAtlTransactionManager` object.|  
   
-## <a name="remarks"></a>Hinweise  
- `CFileFind`enthält Funktionen, die eine Suche zu starten, suchen Sie nach einer Datei und den Titel, Name oder Pfad der Datei zurück. Für Suchvorgänge im Internet, die Memberfunktion [GetFileURL](#getfileurl) gibt die URL der Datei zurück.  
+## <a name="remarks"></a>Remarks  
+ `CFileFind` includes member functions that begin a search, locate a file, and return the title, name, or path of the file. For Internet searches, the member function [GetFileURL](#getfileurl) returns the file's URL.  
   
- `CFileFind`Dient die Basisklasse für zwei andere MFC-Klassen zum Suchen von bestimmten Servertypen: `CGopherFileFind` arbeitet spezifisch mit Gopher-Server und `CFtpFileFind` arbeitet spezifisch mit FTP-Servern. Zusammen bieten diese drei Klassen einen nahtlosen Mechanismus für den Client Dateien unabhängig von der Server-Protokoll, der Dateityp oder Speicherort, auf einem lokalen Computer oder einem Remoteserver zu ermitteln.  
+ `CFileFind` is the base class for two other MFC classes designed to search particular server types: `CGopherFileFind` works specifically with gopher servers, and `CFtpFileFind` works specifically with FTP servers. Together, these three classes provide a seamless mechanism for the client to find files, regardless of the server protocol, the file type, or location, on either a local machine or a remote server.  
   
- Im folgende Code werden alle Dateien im aktuellen Verzeichnis befindet, drucken den Namen der einzelnen Dateien aufzulisten:  
+ The following code will enumerate all the files in the current directory, printing the name of each file:  
   
- [!code-cpp[NVC_MFCFiles&#31;](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_1.cpp)]  
+ [!code-cpp[NVC_MFCFiles#31](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_1.cpp)]  
   
- Um das Beispiel einfach zu halten, verwendet dieser Code die C++-Standardbibliothek `cout` Klasse. Die `cout` Zeile konnte ersetzt werden, mit einem Aufruf von `CListBox::AddString`, z. B. in einem Programm mit graphical User Interface.  
+ To keep the example simple, this code uses the C++ Standard Library `cout` class. The `cout` line could be replaced with a call to `CListBox::AddString`, for example, in a program with a graphical user interface.  
   
- Weitere Informationen zur Verwendung von `CFileFind` und die anderen WinInet-Klassen finden Sie im Artikel [Internet Programmierung mit WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ For more information about how to use `CFileFind` and the other WinInet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  `CFileFind`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afx.h  
   
-##  <a name="cfilefind"></a>CFileFind::CFileFind  
- Diese Member-Funktion wird aufgerufen, wenn ein `CFileFind` -Objekt wird erstellt.  
+##  <a name="cfilefind"></a>  CFileFind::CFileFind  
+ This member function is called when a `CFileFind` object is constructed.  
   
 ```  
 CFileFind();  
 CFileFind(CAtlTransactionManager* pTM);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pTM`  
- Zeiger auf CAtlTransactionManager-Objekt  
+ Pointer to CAtlTransactionManager object  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetFileName](#getfilename).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetFileName](#getfilename).  
   
-##  <a name="close"></a>CFileFind::Close  
- Rufen Sie diese Memberfunktion, um die Suche zu beenden, den Kontext zurücksetzen und alle Ressourcen freizugeben.  
+##  <a name="close"></a>  CFileFind::Close  
+ Call this member function to end the search, reset the context, and release all resources.  
   
 ```  
 void Close();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Nach dem Aufruf von **schließen**, Sie haben nicht zum Erstellen eines neuen `CFileFind` -Instanz vor dem Aufruf von [FindFile](#findfile) um eine neue Suche zu beginnen.  
+### <a name="remarks"></a>Remarks  
+ After calling **Close**, you do not have to create a new `CFileFind` instance before calling [FindFile](#findfile) to begin a new search.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetFileName](#getfilename).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetFileName](#getfilename).  
   
-##  <a name="closecontext"></a>CFileFind::CloseContext  
- Schließt die Datei, die durch das aktuelle Handle für die Suche angegeben.  
+##  <a name="closecontext"></a>  CFileFind::CloseContext  
+ Closes the file specified by the current search handle.  
   
 ```  
 virtual void CloseContext();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Schließt die Datei, die durch den aktuellen Wert des Handles Suche angegeben. Überschreiben Sie diese Funktion, um das Standardverhalten zu ändern.  
+### <a name="remarks"></a>Remarks  
+ Closes the file specified by the current value of the search handle. Override this function to change the default behavior.  
   
- Müssen Sie aufrufen, die [FindFile](#findfile) oder [FindNextFile](#findnextfile) Funktionen, die mindestens einmal um eine gültige Handle abzurufen. Die **FindFile** und `FindNextFile` Funktionen, die das Handle für die Suche verwenden, um Dateien mit Namen suchen, die mit einen angegebenen Namen übereinstimmen.  
+ You must call the [FindFile](#findfile) or [FindNextFile](#findnextfile) functions at least once to retrieve a valid search handle. The **FindFile** and `FindNextFile` functions use the search handle to locate files with names that match a given name.  
   
-##  <a name="findfile"></a>CFileFind::FindFile  
- Rufen Sie diese Memberfunktion, um eine Datei suchen zu öffnen.  
+##  <a name="findfile"></a>  CFileFind::FindFile  
+ Call this member function to open a file search.  
   
 ```  
 virtual BOOL FindFile(
@@ -197,18 +216,18 @@ virtual BOOL FindFile(
     DWORD dwUnused = 0);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pstrName`  
- Ein Zeiger auf eine Zeichenfolge mit dem Namen der zu suchenden Datei. Wenn Sie übergeben **NULL** für `pstrName`, **FindFile** ist einen Platzhalter (*.\*) suchen.  
+ A pointer to a string containing the name of the file to find. If you pass **NULL** for `pstrName`, **FindFile** does a wildcard (*.\*) search.  
   
  *dwUnused*  
- Reservierte zu **FindFile** polymorphen mit abgeleiteten Klassen. 0 muss sein.  
+ Reserved to make **FindFile** polymorphic with derived classes. Must be 0.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. To get extended error information, call the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>Hinweise  
- Nach dem Aufruf von **FindFile** aufrufen, um die Dateisuche zu beginnen, [FindNextFile](#findnextfile) nachfolgende Dateien abgerufen. Sie müssen Aufrufen `FindNextFile` einmal, bevor Sie das folgende Attribut eines Memberfunktionen aufrufen:  
+### <a name="remarks"></a>Remarks  
+ After calling **FindFile** to begin the file search, call [FindNextFile](#findnextfile) to retrieve subsequent files. You must call `FindNextFile` at least once before calling any of the following attribute member functions:  
   
 - [GetCreationTime](#getcreationtime)  
   
@@ -242,27 +261,27 @@ virtual BOOL FindFile(
   
 - [IsReadOnly](#isreadonly)  
   
-- [Zustand](#issystem)  
+- [IsSystem](#issystem)  
   
 - [IsTemporary](#istemporary)  
   
 - [MatchesMask](#matchesmask)  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::IsDirectory](#isdirectory).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::IsDirectory](#isdirectory).  
   
-##  <a name="findnextfile"></a>CFileFind::FindNextFile  
- Rufen Sie diese Memberfunktion zum Fortsetzen des Vorgangs einer Dateisuche aus einem vorherigen Aufruf von [FindFile](#findfile).  
+##  <a name="findnextfile"></a>  CFileFind::FindNextFile  
+ Call this member function to continue a file search from a previous call to [FindFile](#findfile).  
   
 ```  
 virtual BOOL FindNextFile();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn mehrere Dateien vorhanden sind;&0; (null), wenn die Datei im Verzeichnis der letzte ist oder ein Fehler aufgetreten ist. Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Wenn die Datei die letzte Datei im Verzeichnis ist, oder wenn keine übereinstimmenden Dateien gefunden werden können, die `GetLastError` Funktion gibt ERROR_NO_MORE_FILES zurück.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if there are more files; zero if the file found is the last one in the directory or if an error occurred. To get extended error information, call the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). If the file found is the last file in the directory, or if no matching files can be found, the `GetLastError` function returns ERROR_NO_MORE_FILES.  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen `FindNextFile` einmal, bevor Sie das folgende Attribut eines Memberfunktionen aufrufen:  
+### <a name="remarks"></a>Remarks  
+ You must call `FindNextFile` at least once before calling any of the following attribute member functions:  
   
 - [GetCreationTime](#getcreationtime)  
   
@@ -296,456 +315,456 @@ virtual BOOL FindNextFile();
   
 - [IsReadOnly](#isreadonly)  
   
-- [Zustand](#issystem)  
+- [IsSystem](#issystem)  
   
 - [IsTemporary](#istemporary)  
   
 - [MatchesMask](#matchesmask)  
   
- `FindNextFile`Dient als Wrapper für die Win32-Funktion [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
+ `FindNextFile` wraps the Win32 function [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::IsDirectory](#isdirectory).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::IsDirectory](#isdirectory).  
   
-##  <a name="getcreationtime"></a>CFileFind::GetCreationTime  
- Rufen Sie diese Memberfunktion um den Zeitpunkt zu ermitteln, an den die angegebene Datei erstellt wurde.  
+##  <a name="getcreationtime"></a>  CFileFind::GetCreationTime  
+ Call this member function to get the time the specified file was created.  
   
 ```  
 virtual BOOL GetCreationTime(FILETIME* pTimeStamp) const;  
 virtual BOOL GetCreationTime(CTime& refTime) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pTimeStamp`  
- Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur, enthält die Zeit, die die Datei erstellt wurde.  
+ A pointer to a [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) structure containing the time the file was created.  
   
  `refTime`  
- Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.  
+ A reference to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL bei Erfolg; 0, wenn nicht erfolgreich. `GetCreationTime`Gibt 0 zurück, wenn nur [FindNextFile](#findnextfile) noch nie aufgerufen wurde, auf diesem `CFileFind` Objekt.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 if unsuccessful. `GetCreationTime` returns 0 only if [FindNextFile](#findnextfile) has never been called on this `CFileFind` object.  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `GetCreationTime`.  
+### <a name="remarks"></a>Remarks  
+ You must call [FindNextFile](#findnextfile) at least once before calling `GetCreationTime`.  
   
 > [!NOTE]
->  Nicht alle Dateisysteme verwenden die gleiche Semantik den Zeitstempel, der von dieser Funktion zurückgegebenen implementieren. Diese Funktion kann von anderen Stempel Zeitfunktionen zurückgegeben, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das Attribut Zeit beibehalten denselben Wert zurückgeben. Finden Sie unter der [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur Informationen über Zeitformate. Unter einigen Betriebssystemen ist die zurückgegebene Zeit in der Zone lokal auf dem Computer wurden, dass sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
+>  Not all file systems use the same semantics to implement the time stamp returned by this function. This function may return the same value returned by other time stamp functions if the underlying file system or server does not support keeping the time attribute. See the [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure for information about time formats. On some operation systems, the returned time is in the time zone local to the machine were the file is located. See the Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API for more information.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetLength](#getlength).  
   
-##  <a name="getfilename"></a>CFileFind::GetFileName  
- Rufen Sie diese Memberfunktion zum Abrufen des Namens der Datei gefunden.  
+##  <a name="getfilename"></a>  CFileFind::GetFileName  
+ Call this member function to get the name of the found file.  
   
 ```  
 virtual CString GetFileName() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Name der Datei vor kurzem gefunden.  
+### <a name="return-value"></a>Return Value  
+ The name of the most-recently-found file.  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal, bevor Sie GetFileName aufrufen.  
+### <a name="remarks"></a>Remarks  
+ You must call [FindNextFile](#findnextfile) at least once before calling GetFileName.  
   
- `GetFileName`ist eine der drei `CFileFind` Memberfunktionen, die eine Form des Dateinamens zurückgeben. Die folgende Liste beschreibt die drei und wie variieren:  
+ `GetFileName` is one of three `CFileFind` member functions that return some form of the file name. The following list describes the three and how they vary:  
   
-- `GetFileName`Gibt den Dateinamen einschließlich der Erweiterung. Zum Beispiel der Aufruf `GetFileName` zum Generieren einer Benutzernachricht über die Datei `c:\myhtml\myfile.txt` gibt den Dateinamen `myfile.txt`.  
+- `GetFileName` returns the file name, including the extension. For example, calling `GetFileName` to generate a user message about the file `c:\myhtml\myfile.txt` returns the file name `myfile.txt`.  
   
-- [GetFilePath](#getfilepath) gibt den vollständigen Pfad für die Datei. Zum Beispiel der Aufruf `GetFilePath` zum Generieren einer Benutzernachricht über die Datei `c:\myhtml\myfile.txt` gibt den Dateipfad `c:\myhtml\myfile.txt`.  
+- [GetFilePath](#getfilepath) returns the entire path for the file. For example, calling `GetFilePath` to generate a user message about the file `c:\myhtml\myfile.txt` returns the file path `c:\myhtml\myfile.txt`.  
   
-- [GetFileTitle](#getfiletitle) gibt den Dateinamen die Erweiterung ausschließen. Zum Beispiel der Aufruf `GetFileTitle` zum Generieren einer Benutzernachricht über die Datei `c:\myhtml\myfile.txt` gibt den Titel des `myfile`.  
+- [GetFileTitle](#getfiletitle) returns the file name, excluding the file extension. For example, calling `GetFileTitle` to generate a user message about the file `c:\myhtml\myfile.txt` returns the file title `myfile`.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCFiles&#32;](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#32](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_2.cpp)]  
   
-##  <a name="getfilepath"></a>CFileFind::GetFilePath  
- Rufen Sie diese Memberfunktion zum Abrufen des vollständigen Pfads der angegebenen Datei.  
+##  <a name="getfilepath"></a>  CFileFind::GetFilePath  
+ Call this member function to get the full path of the specified file.  
   
 ```  
 virtual CString GetFilePath() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Pfad der angegebenen Datei.  
+### <a name="return-value"></a>Return Value  
+ The path of the specified file.  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `GetFilePath`.  
+### <a name="remarks"></a>Remarks  
+ You must call [FindNextFile](#findnextfile) at least once before calling `GetFilePath`.  
   
- `GetFilePath`ist eine der drei `CFileFind` Memberfunktionen, die eine Form des Dateinamens zurückgeben. Die folgende Liste beschreibt die drei und wie variieren:  
+ `GetFilePath` is one of three `CFileFind` member functions that return some form of the file name. The following list describes the three and how they vary:  
   
-- [GetFileName](#getfilename) gibt den Dateinamen einschließlich der Erweiterung. Zum Beispiel der Aufruf `GetFileName` zum Generieren einer Benutzernachricht über die Datei `c:\myhtml\myfile.txt` gibt den Dateinamen `myfile.txt`.  
+- [GetFileName](#getfilename) returns the file name, including the extension. For example, calling `GetFileName` to generate a user message about the file `c:\myhtml\myfile.txt` returns the file name `myfile.txt`.  
   
-- `GetFilePath`Gibt den vollständigen Pfad für die Datei. Zum Beispiel der Aufruf `GetFilePath` zum Generieren einer Benutzernachricht über die Datei `c:\myhtml\myfile.txt` gibt den Dateipfad `c:\myhtml\myfile.txt`.  
+- `GetFilePath` returns the entire path for the file. For example, calling `GetFilePath` to generate a user message about the file `c:\myhtml\myfile.txt` returns the file path `c:\myhtml\myfile.txt`.  
   
-- [GetFileTitle](#getfiletitle) gibt den Dateinamen die Erweiterung ausschließen. Zum Beispiel der Aufruf `GetFileTitle` zum Generieren einer Benutzernachricht über die Datei `c:\myhtml\myfile.txt` gibt den Titel des `myfile`.  
+- [GetFileTitle](#getfiletitle) returns the file name, excluding the file extension. For example, calling `GetFileTitle` to generate a user message about the file `c:\myhtml\myfile.txt` returns the file title `myfile`.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetFileName](#getfilename).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetFileName](#getfilename).  
   
-##  <a name="getfiletitle"></a>CFileFind::GetFileTitle  
- Rufen Sie diese Memberfunktion, um den Titel der gefundenen Datei abruft.  
+##  <a name="getfiletitle"></a>  CFileFind::GetFileTitle  
+ Call this member function to get the title of the found file.  
   
 ```  
 virtual CString GetFileTitle() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Titel der Datei.  
+### <a name="return-value"></a>Return Value  
+ The title of the file.  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `GetFileTitle`.  
+### <a name="remarks"></a>Remarks  
+ You must call [FindNextFile](#findnextfile) at least once before calling `GetFileTitle`.  
   
- `GetFileTitle`ist eine der drei `CFileFind` Memberfunktionen, die eine Form des Dateinamens zurückgeben. Die folgende Liste beschreibt die drei und wie variieren:  
+ `GetFileTitle` is one of three `CFileFind` member functions that return some form of the file name. The following list describes the three and how they vary:  
   
-- [GetFileName](#getfilename) gibt den Dateinamen einschließlich der Erweiterung. Zum Beispiel der Aufruf `GetFileName` zum Generieren einer Benutzernachricht über die Datei `c:\myhtml\myfile.txt` gibt den Dateinamen `myfile.txt`.  
+- [GetFileName](#getfilename) returns the file name, including the extension. For example, calling `GetFileName` to generate a user message about the file `c:\myhtml\myfile.txt` returns the file name `myfile.txt`.  
   
-- [GetFilePath](#getfilepath) gibt den vollständigen Pfad für die Datei. Zum Beispiel der Aufruf `GetFilePath` zum Generieren einer Benutzernachricht über die Datei `c:\myhtml\myfile.txt` gibt den Dateipfad `c:\myhtml\myfile.txt`.  
+- [GetFilePath](#getfilepath) returns the entire path for the file. For example, calling `GetFilePath` to generate a user message about the file `c:\myhtml\myfile.txt` returns the file path `c:\myhtml\myfile.txt`.  
   
-- `GetFileTitle`Gibt den Dateinamen die Erweiterung ausschließen. Zum Beispiel der Aufruf `GetFileTitle` zum Generieren einer Benutzernachricht über die Datei `c:\myhtml\myfile.txt` gibt den Titel des `myfile`.  
+- `GetFileTitle` returns the file name, excluding the file extension. For example, calling `GetFileTitle` to generate a user message about the file `c:\myhtml\myfile.txt` returns the file title `myfile`.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetFileName](#getfilename).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetFileName](#getfilename).  
   
-##  <a name="getfileurl"></a>CFileFind::GetFileURL  
- Rufen Sie diese Memberfunktion zum Abrufen der angegebenen URL.  
+##  <a name="getfileurl"></a>  CFileFind::GetFileURL  
+ Call this member function to retrieve the specified URL.  
   
 ```  
 virtual CString GetFileURL() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die vollständige URL.  
+### <a name="return-value"></a>Return Value  
+ The complete URL.  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `GetFileURL`.  
+### <a name="remarks"></a>Remarks  
+ You must call [FindNextFile](#findnextfile) at least once before calling `GetFileURL`.  
   
- `GetFileURL`ist vergleichbar mit der Memberfunktion [GetFilePath](#getfilepath), außer dass sie die URL im Format zurückgibt `file://path`. Zum Beispiel der Aufruf `GetFileURL` die vollständige URL für die abzurufenden `myfile.txt` gibt die URL `file://c:\myhtml\myfile.txt`.  
+ `GetFileURL` is similar to the member function [GetFilePath](#getfilepath), except that it returns the URL in the form `file://path`. For example, calling `GetFileURL` to get the complete URL for `myfile.txt` returns the URL `file://c:\myhtml\myfile.txt`.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetFileName](#getfilename).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetFileName](#getfilename).  
   
-##  <a name="getlastaccesstime"></a>CFileFind::GetLastAccessTime  
- Rufen Sie diese Memberfunktion um den Zeitpunkt zu ermitteln, den die angegebene Datei zuletzt zugegriffen wurde.  
+##  <a name="getlastaccesstime"></a>  CFileFind::GetLastAccessTime  
+ Call this member function to get the time that the specified file was last accessed.  
   
 ```  
 virtual BOOL GetLastAccessTime(CTime& refTime) const;  
 virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `refTime`  
- Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.  
+ A reference to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object.  
   
  `pTimeStamp`  
- Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur, die die Zeit der letzten Zugriff auf die Datei enthält.  
+ A pointer to a [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) structure containing the time the file was last accessed.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL bei Erfolg; 0, wenn nicht erfolgreich. `GetLastAccessTime`Gibt 0 zurück, wenn nur [FindNextFile](#findnextfile) noch nie aufgerufen wurde, auf diesem `CFileFind` Objekt.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 if unsuccessful. `GetLastAccessTime` returns 0 only if [FindNextFile](#findnextfile) has never been called on this `CFileFind` object.  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `GetLastAccessTime`.  
+### <a name="remarks"></a>Remarks  
+ You must call [FindNextFile](#findnextfile) at least once before calling `GetLastAccessTime`.  
   
 > [!NOTE]
->  Nicht alle Dateisysteme verwenden die gleiche Semantik den Zeitstempel, der von dieser Funktion zurückgegebenen implementieren. Diese Funktion kann von anderen Stempel Zeitfunktionen zurückgegeben, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das Attribut Zeit beibehalten denselben Wert zurückgeben. Finden Sie unter der [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur Informationen über Zeitformate. Unter einigen Betriebssystemen ist die zurückgegebene Zeit in der Zone lokal auf dem Computer wurden, dass sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
+>  Not all file systems use the same semantics to implement the time stamp returned by this function. This function may return the same value returned by other time stamp functions if the underlying file system or server does not support keeping the time attribute. See the [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure for information about time formats. On some operation systems, the returned time is in the time zone local to the machine were the file is located. See the Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API for more information.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetLength](#getlength).  
   
-##  <a name="getlastwritetime"></a>CFileFind::GetLastWriteTime  
- Rufen Sie diese Memberfunktion zum Zeitpunkt der letzten zu erhalten, die die Datei geändert wurde.  
+##  <a name="getlastwritetime"></a>  CFileFind::GetLastWriteTime  
+ Call this member function to get the last time the file was changed.  
   
 ```  
 virtual BOOL GetLastWriteTime(FILETIME* pTimeStamp) const;  
 virtual BOOL GetLastWriteTime(CTime& refTime) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pTimeStamp`  
- Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur, enthält die Datei zum letzten geschrieben wurde.  
+ A pointer to a [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) structure containing the time the file was last written to.  
   
  `refTime`  
- Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.  
+ A reference to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL bei Erfolg; 0, wenn nicht erfolgreich. `GetLastWriteTime`Gibt 0 zurück, wenn nur [FindNextFile](#findnextfile) noch nie aufgerufen wurde, auf diesem `CFileFind` Objekt.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 if unsuccessful. `GetLastWriteTime` returns 0 only if [FindNextFile](#findnextfile) has never been called on this `CFileFind` object.  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `GetLastWriteTime`.  
+### <a name="remarks"></a>Remarks  
+ You must call [FindNextFile](#findnextfile) at least once before calling `GetLastWriteTime`.  
   
 > [!NOTE]
->  Nicht alle Dateisysteme verwenden die gleiche Semantik den Zeitstempel, der von dieser Funktion zurückgegebenen implementieren. Diese Funktion kann von anderen Stempel Zeitfunktionen zurückgegeben, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das Attribut Zeit beibehalten denselben Wert zurückgeben. Finden Sie unter der [Win32_Find_Data](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur Informationen über Zeitformate. Unter einigen Betriebssystemen ist die zurückgegebene Zeit in der Zone lokal auf dem Computer wurden, dass sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
+>  Not all file systems use the same semantics to implement the time stamp returned by this function. This function may return the same value returned by other time stamp functions if the underlying file system or server does not support keeping the time attribute. See the [Win32_Find_Data](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure for information about time formats. On some operation systems, the returned time is in the time zone local to the machine were the file is located. See the Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API for more information.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetLength](#getlength).  
   
-##  <a name="getlength"></a>CFileFind::GetLength  
- Rufen Sie diese Memberfunktion zum Abrufen der Länge der gefundenen Datei in Byte.  
+##  <a name="getlength"></a>  CFileFind::GetLength  
+ Call this member function to get the length of the found file, in bytes.  
   
 ```  
 ULONGLONG GetLength() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Länge der gefundenen Datei in Byte.  
+### <a name="return-value"></a>Return Value  
+ The length of the found file, in bytes.  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `GetLength`.  
+### <a name="remarks"></a>Remarks  
+ You must call [FindNextFile](#findnextfile) at least once before calling `GetLength`.  
   
- `GetLength`verwendet die Win32-Struktur [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) abrufen und den Wert der Größe der Datei in Bytes zurückgegeben.  
+ `GetLength` uses the Win32 structure [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) to get and return the value of the file size, in bytes.  
   
 > [!NOTE]
->  Ab MFC 7.0 `GetLength` unterstützt 64-Bit-Ganzzahl-Typen. Zuvor möglicherweise vorhandener Code integriert diese neuere Version der Bibliothek Abschneiden Warnungen.  
+>  As of MFC 7.0, `GetLength` supports 64-bit integer types. Previously existing code built with this newer version of the library may result in truncation warnings.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCFiles&33;](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#33](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_3.cpp)]  
   
-##  <a name="getroot"></a>CFileFind::GetRoot  
- Rufen Sie diese Memberfunktion zum Abrufen der Stamm der gefundenen Datei.  
+##  <a name="getroot"></a>  CFileFind::GetRoot  
+ Call this member function to get the root of the found file.  
   
 ```  
 virtual CString GetRoot() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Stamm der aktiven Suche.  
+### <a name="return-value"></a>Return Value  
+ The root of the active search.  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `GetRoot`.  
+### <a name="remarks"></a>Remarks  
+ You must call [FindNextFile](#findnextfile) at least once before calling `GetRoot`.  
   
- Diese Memberfunktion gibt das Laufwerkangabe und der Name des Pfads verwendet, um eine Suche zu starten. Zum Beispiel der Aufruf [FindFile](#findfile) mit `*.dat` führt `GetRoot` eine leere Zeichenfolge zurückgibt. Übergeben einen Pfad ein, z. B. `c:\windows\system\*.dll`, **FindFile** Ergebnisse `GetRoot` zurückgeben `c:\windows\system\`.  
+ This member function returns the drive specifier and path name used to start a search. For example, calling [FindFile](#findfile) with `*.dat` results in `GetRoot` returning an empty string. Passing a path, such as `c:\windows\system\*.dll`, to **FindFile** results `GetRoot` returning `c:\windows\system\`.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetFileName](#getfilename).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetFileName](#getfilename).  
   
-##  <a name="isarchived"></a>CFileFind::IsArchived  
- Rufen Sie diese Memberfunktion, um festzustellen, ob die gefundene Datei archiviert wird.  
+##  <a name="isarchived"></a>  CFileFind::IsArchived  
+ Call this member function to determine if the found file is archived.  
   
 ```  
 BOOL IsArchived() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Applikationen kennzeichnen eine Archivdatei, die gesichert oder entfernt werden, mit FILE_ATTRIBUTE_ARCHIVE, ein Dateiattribut in identifiziert werden die [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur.  
+### <a name="remarks"></a>Remarks  
+ Applications mark an archive file, which is to be backed up or removed, with FILE_ATTRIBUTE_ARCHIVE, a file attribute identified in the [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure.  
   
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `IsArchived`.  
+ You must call [FindNextFile](#findnextfile) at least once before calling `IsArchived`.  
   
- Finden Sie unter der Memberfunktion [MatchesMask](#matchesmask) für eine vollständige Liste der Attribute.  
+ See the member function [MatchesMask](#matchesmask) for a complete list of file attributes.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetLength](#getlength).  
   
-##  <a name="iscompressed"></a>CFileFind::IsCompressed  
- Rufen Sie diese Memberfunktion, um festzustellen, ob die gefundene Datei komprimiert wird.  
+##  <a name="iscompressed"></a>  CFileFind::IsCompressed  
+ Call this member function to determine if the found file is compressed.  
   
 ```  
 BOOL IsCompressed() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Eine komprimierte Datei mit FILE_ATTRIBUTE_COMPRESSED markiert ist, ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Für eine Datei gibt dieses Attribut an, dass alle Daten in der Datei komprimiert wird. Für ein Verzeichnis ist gibt dieses Attribut die Komprimierung als Standard für neu erstellte Dateien und Unterverzeichnisse.  
+### <a name="remarks"></a>Remarks  
+ A compressed file is marked with FILE_ATTRIBUTE_COMPRESSED, a file attribute identified in the [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. For a file, this attribute indicates that all of the data in the file is compressed. For a directory, this attribute indicates that compression is the default for newly created files and subdirectories.  
   
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `IsCompressed`.  
+ You must call [FindNextFile](#findnextfile) at least once before calling `IsCompressed`.  
   
- Finden Sie unter der Memberfunktion [MatchesMask](#matchesmask) für eine vollständige Liste der Attribute.  
+ See the member function [MatchesMask](#matchesmask) for a complete list of file attributes.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetLength](#getlength).  
   
-##  <a name="isdirectory"></a>CFileFind::IsDirectory  
- Rufen Sie diese Memberfunktion, um festzustellen, ob die gefundene Datei ein Verzeichnis ist.  
+##  <a name="isdirectory"></a>  CFileFind::IsDirectory  
+ Call this member function to determine if the found file is a directory.  
   
 ```  
 BOOL IsDirectory() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Eine Datei, ein Verzeichnis mit FILE_ATTRIBUTE_DIRECTORY in ein Dateiattribut identifizierten gekennzeichnet ist die [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur.  
+### <a name="remarks"></a>Remarks  
+ A file that is a directory is marked with FILE_ATTRIBUTE_DIRECTORY a file attribute identified in the [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure.  
   
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `IsDirectory`.  
+ You must call [FindNextFile](#findnextfile) at least once before calling `IsDirectory`.  
   
- Finden Sie unter der Memberfunktion [MatchesMask](#matchesmask) für eine vollständige Liste der Attribute.  
+ See the member function [MatchesMask](#matchesmask) for a complete list of file attributes.  
   
-### <a name="example"></a>Beispiel  
- Dieses kleine Programm durchläuft jedes Verzeichnis auf Laufwerk C:\, und gibt den Namen des Verzeichnisses.  
+### <a name="example"></a>Example  
+ This small program recurses every directory on the C:\ drive and prints the name of the directory.  
   
- [!code-cpp[NVC_MFCFiles&#34;](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_4.cpp)]  
+ [!code-cpp[NVC_MFCFiles#34](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_4.cpp)]  
   
-##  <a name="isdots"></a>CFileFind::IsDots  
- Rufen Sie diese Memberfunktion während des Durchlaufens der Dateien für die aktuellen Verzeichnis und übergeordneten Verzeichnis Marker zu testen.  
+##  <a name="isdots"></a>  CFileFind::IsDots  
+ Call this member function to test for the current directory and parent directory markers while iterating through files.  
   
 ```  
 virtual BOOL IsDots() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null weist die gefundene Datei den Namen "."oder"..", was bedeutet, dass die gefundene Datei ein Verzeichnis ist. Andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the found file has the name "." or "..", which indicates that the found file is actually a directory. Otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `IsDots`.  
+### <a name="remarks"></a>Remarks  
+ You must call [FindNextFile](#findnextfile) at least once before calling `IsDots`.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::IsDirectory](#isdirectory).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::IsDirectory](#isdirectory).  
   
-##  <a name="ishidden"></a>CFileFind::IsHidden  
- Rufen Sie diese Memberfunktion, um festzustellen, ob die gefundene Datei ausgeblendet ist.  
+##  <a name="ishidden"></a>  CFileFind::IsHidden  
+ Call this member function to determine if the found file is hidden.  
   
 ```  
 BOOL IsHidden() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Ausgeblendete Dateien, die mit FILE_ATTRIBUTE_HIDDEN gekennzeichnet sind, ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Eine versteckte Datei ist nicht in einer normalen Verzeichnisliste enthalten.  
+### <a name="remarks"></a>Remarks  
+ Hidden files, which are marked with FILE_ATTRIBUTE_HIDDEN, a file attribute identified in the [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. A hidden file is not included in an ordinary directory listing.  
   
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `IsHidden`.  
+ You must call [FindNextFile](#findnextfile) at least once before calling `IsHidden`.  
   
- Finden Sie unter der Memberfunktion [MatchesMask](#matchesmask) für eine vollständige Liste der Attribute.  
+ See the member function [MatchesMask](#matchesmask) for a complete list of file attributes.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetLength](#getlength).  
   
-##  <a name="isnormal"></a>CFileFind::IsNormal  
- Rufen Sie diese Memberfunktion, um zu bestimmen, ob die gefundene Datei eine normale Datei.  
+##  <a name="isnormal"></a>  CFileFind::IsNormal  
+ Call this member function to determine if the found file is a normal file.  
   
 ```  
 BOOL IsNormal() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Dateien mit FILE_ATTRIBUTE_NORMAL, ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Eine normale Datei hat keine weiteren Attribute festgelegt. Alle anderen Dateiattribute Überschreiben dieses Attribut.  
+### <a name="remarks"></a>Remarks  
+ Files marked with FILE_ATTRIBUTE_NORMAL, a file attribute identified in the [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. A normal file has no other attributes set. All other file attributes override this attribute.  
   
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `IsNormal`.  
+ You must call [FindNextFile](#findnextfile) at least once before calling `IsNormal`.  
   
- Finden Sie unter der Memberfunktion [MatchesMask](#matchesmask) für eine vollständige Liste der Attribute.  
+ See the member function [MatchesMask](#matchesmask) for a complete list of file attributes.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetLength](#getlength).  
   
-##  <a name="isreadonly"></a>CFileFind::IsReadOnly  
- Rufen Sie diese Memberfunktion auf, ob die gefundene Datei schreibgeschützt ist.  
+##  <a name="isreadonly"></a>  CFileFind::IsReadOnly  
+ Call this member function to determine if the found file is read-only.  
   
 ```  
 BOOL IsReadOnly() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Eine schreibgeschützte Datei mit FILE_ATTRIBUTE_READONLY markiert ist, ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Clientanwendungen können eine solche Datei gelesen, aber nicht in ihn schreiben oder löschen Sie ihn.  
+### <a name="remarks"></a>Remarks  
+ A read-only file is marked with FILE_ATTRIBUTE_READONLY, a file attribute identified in the [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. Applications can read such a file, but they cannot write to it or delete it.  
   
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `IsReadOnly`.  
+ You must call [FindNextFile](#findnextfile) at least once before calling `IsReadOnly`.  
   
- Finden Sie unter der Memberfunktion [MatchesMask](#matchesmask) für eine vollständige Liste der Attribute.  
+ See the member function [MatchesMask](#matchesmask) for a complete list of file attributes.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetLength](#getlength).  
   
-##  <a name="issystem"></a>CFileFind::IsSystem  
- Rufen Sie diese Memberfunktion auf, ob die gefundene Datei eine Systemdatei ist.  
+##  <a name="issystem"></a>  CFileFind::IsSystem  
+ Call this member function to determine if the found file is a system file.  
   
 ```  
 BOOL IsSystem() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Eine Systemdatei mit FILE_ATTRIBUTE_SYSTEM gekennzeichnet ist, wird ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Eine Systemdatei ist Teil oder wird ausschließlich durch das Betriebssystem verwendet.  
+### <a name="remarks"></a>Remarks  
+ A system file is marked with FILE_ATTRIBUTE_SYSTEM, , a file attribute identified in the [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. A system file is part of, or is used exclusively by, the operating system.  
   
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `IsSystem`.  
+ You must call [FindNextFile](#findnextfile) at least once before calling `IsSystem`.  
   
- Finden Sie unter der Memberfunktion [MatchesMask](#matchesmask) für eine vollständige Liste der Attribute.  
+ See the member function [MatchesMask](#matchesmask) for a complete list of file attributes.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetLength](#getlength).  
   
-##  <a name="istemporary"></a>CFileFind::IsTemporary  
- Rufen Sie diese Memberfunktion, um zu bestimmen, ob die gefundene Datei eine temporäre Datei.  
+##  <a name="istemporary"></a>  CFileFind::IsTemporary  
+ Call this member function to determine if the found file is a temporary file.  
   
 ```  
 BOOL IsTemporary() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Eine temporäre Datei mit FILE_ATTRIBUTE_TEMPORARY markiert ist, ein Dateiattribut identifiziert, der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur. Eine temporäre Datei wird für die temporäre Speicherung verwendet. Clientanwendungen sollten in die Datei geschrieben, wenn Sie nur, wenn es unbedingt erforderlich. Die meisten Daten der Datei verbleibt im Arbeitsspeicher, ohne auf den Datenträger geleert wird, da die Datei schnell gelöscht werden.  
+### <a name="remarks"></a>Remarks  
+ A temporary file is marked with FILE_ATTRIBUTE_TEMPORARY, a file attribute identified in the [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure. A temporary file is used for temporary storage. Applications should write to the file only if absolutely necessary. Most of the file's data remains in memory without being flushed to the media because the file will soon be deleted.  
   
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `IsTemporary`.  
+ You must call [FindNextFile](#findnextfile) at least once before calling `IsTemporary`.  
   
- Finden Sie unter der Memberfunktion [MatchesMask](#matchesmask) für eine vollständige Liste der Attribute.  
+ See the member function [MatchesMask](#matchesmask) for a complete list of file attributes.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFileFind::GetLength](#getlength).  
+### <a name="example"></a>Example  
+  See the example for [CFileFind::GetLength](#getlength).  
   
-##  <a name="m_ptm"></a>CFileFind::m_pTM  
- Zeiger auf ein `CAtlTransactionManager` Objekt.  
+##  <a name="m_ptm"></a>  CFileFind::m_pTM  
+ Pointer to a `CAtlTransactionManager` object.  
   
 ```  
 CAtlTransactionManager* m_pTM;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="matchesmask"></a>CFileFind::MatchesMask  
- Rufen Sie diese Memberfunktion, um die Dateiattribute auf die gefundene Datei zu testen.  
+##  <a name="matchesmask"></a>  CFileFind::MatchesMask  
+ Call this member function to test the file attributes on the found file.  
   
 ```  
 virtual BOOL MatchesMask(DWORD dwMask) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `dwMask`  
- Gibt einen oder mehrere Dateiattribute, gemäß der [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) -Struktur, für die gefundene Datei. Um für mehrere Attribute zu suchen, verwenden Sie den bitweisen OR-Operator (|). Eine beliebige Kombination der folgenden Attribute ist zulässig:  
+ Specifies one or more file attributes, identified in the [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure, for the found file. To search for multiple attributes, use the bitwise OR (&#124;) operator. Any combination of the following attributes is acceptable:  
   
--   FILE_ATTRIBUTE_ARCHIVE die Datei ist eine Archivdatei. Clientanwendungen verwenden dieses Attribut zum Markieren von Dateien für die Sicherung oder Entfernung.  
+-   FILE_ATTRIBUTE_ARCHIVE   The file is an archive file. Applications use this attribute to mark files for backup or removal.  
   
--   FILE_ATTRIBUTE_COMPRESSED die Datei oder das Verzeichnis komprimiert wird. Für eine Datei bedeutet dies, dass alle Daten in der Datei komprimiert wird. Bei einem Verzeichnis bedeutet dies, dass Komprimierung der Standardwert für neu erstellte Dateien und Unterverzeichnisse.  
+-   FILE_ATTRIBUTE_COMPRESSED   The file or directory is compressed. For a file, this means that all of the data in the file is compressed. For a directory, this means that compression is the default for newly created files and subdirectories.  
   
--   FILE_ATTRIBUTE_DIRECTORY die Datei ist ein Verzeichnis.  
+-   FILE_ATTRIBUTE_DIRECTORY   The file is a directory.  
   
--   FILE_ATTRIBUTE_NORMAL die Datei verfügt über keine weiteren Attribute festgelegt. Dieses Attribut ist nur gültig, wenn allein verwendet. Alle anderen Dateiattribute Überschreiben dieses Attribut.  
+-   FILE_ATTRIBUTE_NORMAL   The file has no other attributes set. This attribute is valid only if used alone. All other file attributes override this attribute.  
   
--   FILE_ATTRIBUTE_HIDDEN die Datei ist ausgeblendet. Es ist nicht in einer normalen Verzeichnisliste enthalten sein.  
+-   FILE_ATTRIBUTE_HIDDEN   The file is hidden. It is not to be included in an ordinary directory listing.  
   
--   FILE_ATTRIBUTE_READONLY die Datei ist schreibgeschützt. Applikationen kann nicht lesen die Datei, aber in ihn schreiben oder löschen.  
+-   FILE_ATTRIBUTE_READONLY   The file is read only. Applications can read the file but cannot write to it or delete it.  
   
--   FILE_ATTRIBUTE_SYSTEM die Datei gehört, oder wird ausschließlich durch das Betriebssystem verwendet.  
+-   FILE_ATTRIBUTE_SYSTEM   The file is part of or is used exclusively by the operating system.  
   
--   FILE_ATTRIBUTE_TEMPORARY die Datei wird für die temporäre Speicherung verwendet. Clientanwendungen sollten in die Datei geschrieben, wenn Sie nur, wenn es unbedingt erforderlich. Die meisten Daten der Datei verbleibt im Arbeitsspeicher, ohne auf den Datenträger geleert wird, da die Datei schnell gelöscht werden.  
+-   FILE_ATTRIBUTE_TEMPORARY   The file is being used for temporary storage. Applications should write to the file only if absolutely necessary. Most of the file's data remains in memory without being flushed to the media because the file will soon be deleted.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. To get extended error information, call the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf von `MatchesMask`.  
+### <a name="remarks"></a>Remarks  
+ You must call [FindNextFile](#findnextfile) at least once before calling `MatchesMask`.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFCFiles&#35;](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#35](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_5.cpp)]  
   
-## <a name="see-also"></a>Siehe auch  
- [CObject-Klasse](../../mfc/reference/cobject-class.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CFtpFileFind-Klasse](../../mfc/reference/cftpfilefind-class.md)   
- [CGopherFileFind-Klasse](../../mfc/reference/cgopherfilefind-class.md)   
- [CInternetFile-Klasse](../../mfc/reference/cinternetfile-class.md)   
- [CGopherFile-Klasse](../../mfc/reference/cgopherfile-class.md)   
- [CHttpFile-Klasse](../../mfc/reference/chttpfile-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFtpFileFind Class](../../mfc/reference/cftpfilefind-class.md)   
+ [CGopherFileFind Class](../../mfc/reference/cgopherfilefind-class.md)   
+ [CInternetFile Class](../../mfc/reference/cinternetfile-class.md)   
+ [CGopherFile Class](../../mfc/reference/cgopherfile-class.md)   
+ [CHttpFile Class](../../mfc/reference/chttpfile-class.md)
 

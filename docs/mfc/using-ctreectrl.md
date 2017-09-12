@@ -1,61 +1,80 @@
 ---
-title: "Verwenden von CTreeCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CTreeCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl-Klasse, Informationen über CTreeCtrl"
-  - "Struktursteuerelemente, Verwenden"
+title: Using CTreeCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CTreeCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], about CTreeCtrl
+- tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Verwenden von CTreeCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 80479ada12cf36676de50423730804f418ef6783
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Eine Strukturansicht, dargestellt durch die [CTreeCtrl](../mfc/reference/ctreectrl-class.md), ist ein Fenster, das eine hierarchische Liste von Elementen, wie den Überschriften in einem Dokument, dass Einträge in einem Index oder die Dateien und Verzeichnisse auf einem Datenträger.  Jedes Element besteht eine Bezeichnung und einem optionalen Bitmapbild, und jedes Element kann eine Liste mit Unterelementen haben, die zugeordnet.  Wenn er auf ein Element klickt, kann der Benutzer die zugeordnete Liste mit Unterelementen erweitern und reduzieren.  Die Verzeichnisstruktur im linken Bereich des Datei\-Explorers ist ein Beispiel einer Strukturansicht.  
+---
+# <a name="using-ctreectrl"></a>Using CTreeCtrl
+A tree control, represented by the class [CTreeCtrl](../mfc/reference/ctreectrl-class.md), is a window that displays a hierarchical list of items, such as the headings in a document, the entries in an index, or the files and directories on a disk. Each item consists of a label and an optional bitmapped image, and each item can have a list of subitems associated with it. By clicking an item, the user can expand and collapse the associated list of subitems. The directory tree in the left-hand pane of File Explorer is an example of a tree control.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [CTreeCtrl für CTreeView](../mfc/ctreectrl-vs-ctreeview.md)  
+-   [CTreeCtrl vs. CTreeView](../mfc/ctreectrl-vs-ctreeview.md)  
   
--   [Verwenden von der](../mfc/using-tree-controls.md)  
+-   [Using Tree Controls](../mfc/using-tree-controls.md)  
   
--   [Kommunikation mit einem Strukturansicht](../mfc/communicating-with-a-tree-control.md)  
+-   [Communicating with a Tree Control](../mfc/communicating-with-a-tree-control.md)  
   
--   [Strukturansicht\-Steuerelement\-Formate](../mfc/tree-control-styles.md)  
+-   [Tree Control Styles](../mfc/tree-control-styles.md)  
   
--   [Strukturansicht\-Steuerelement\-Elternteil und untergeordnete Elemente](../mfc/tree-control-parent-and-child-items.md)  
+-   [Tree Control Parent and Child Items](../mfc/tree-control-parent-and-child-items.md)  
   
--   [Strukturansicht\-Steuerelement\-Element\-Position](../mfc/tree-control-item-position.md)  
+-   [Tree Control Item Position](../mfc/tree-control-item-position.md)  
   
--   [Strukturansicht\-Steuerelement\-Element\-Bezeichnungen](../mfc/tree-control-item-labels.md)  
+-   [Tree Control Item Labels](../mfc/tree-control-item-labels.md)  
   
--   [Strukturansicht\-Steuerelement\-Bezeichnungs\-Bearbeitung](../mfc/tree-control-label-editing.md)  
+-   [Tree Control Label Editing](../mfc/tree-control-label-editing.md)  
   
--   [Übersicht Strukturansicht\-Steuerelement\-Element gibt an](../mfc/tree-control-item-states-overview.md)  
+-   [Tree Control Item States Overview](../mfc/tree-control-item-states-overview.md)  
   
--   [Strukturansicht\-Steuerelement\-Bildlisten](../mfc/tree-control-image-lists.md)  
+-   [Tree Control Image Lists](../mfc/tree-control-image-lists.md)  
   
--   [Strukturansicht\-Steuerelement\-Element\-Auswahl](../mfc/tree-control-item-selection.md)  
+-   [Tree Control Item Selection](../mfc/tree-control-item-selection.md)  
   
--   [Strukturansicht\-Steuerelement\-Drag & Drop\-Vorgang](../mfc/tree-control-drag-and-drop-operations.md)  
+-   [Tree Control Drag-and-Drop Operations](../mfc/tree-control-drag-and-drop-operations.md)  
   
--   [Strukturansicht\-Steuerelement\-Element\-Informationen](../mfc/tree-control-item-information.md)  
+-   [Tree Control Item Information](../mfc/tree-control-item-information.md)  
   
--   [Strukturansicht\-Steuerelement\-Benachrichtigungsmeldungen](../mfc/tree-control-notification-messages.md)  
+-   [Tree Control Notification Messages](../mfc/tree-control-notification-messages.md)  
   
-## Siehe auch  
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

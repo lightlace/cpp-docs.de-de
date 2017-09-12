@@ -1,5 +1,5 @@
 ---
-title: CWinThread-Klasse | Microsoft Docs
+title: CWinThread Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,10 +36,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- worker threads
-- threading [MFC], safety
-- CWinThread class
-- threading [MFC], creating threads
+- CWinThread [MFC], CWinThread
+- CWinThread [MFC], CreateThread
+- CWinThread [MFC], ExitInstance
+- CWinThread [MFC], GetMainWnd
+- CWinThread [MFC], GetThreadPriority
+- CWinThread [MFC], InitInstance
+- CWinThread [MFC], IsIdleMessage
+- CWinThread [MFC], OnIdle
+- CWinThread [MFC], PostThreadMessage
+- CWinThread [MFC], PreTranslateMessage
+- CWinThread [MFC], ProcessMessageFilter
+- CWinThread [MFC], ProcessWndProcException
+- CWinThread [MFC], PumpMessage
+- CWinThread [MFC], ResumeThread
+- CWinThread [MFC], Run
+- CWinThread [MFC], SetThreadPriority
+- CWinThread [MFC], SuspendThread
+- CWinThread [MFC], m_bAutoDelete
+- CWinThread [MFC], m_hThread
+- CWinThread [MFC], m_nThreadID
+- CWinThread [MFC], m_pActiveWnd
+- CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
 caps.latest.revision: 24
 author: mikeblome
@@ -59,15 +77,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 5dfcb232b0080435800a2666735b8d6f1654b18c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0b8cd94a75a7dea9d574f9fd06141e2ec4ac3fee
 ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cwinthread-class"></a>CWinThread-Klasse
-Stellt einen Ausführungsthread innerhalb einer Anwendung dar.  
+# <a name="cwinthread-class"></a>CWinThread Class
+Represents a thread of execution within an application.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -75,78 +93,78 @@ Stellt einen Ausführungsthread innerhalb einer Anwendung dar.
 class CWinThread : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinThread::CWinThread](#cwinthread)|Erstellt ein `CWinThread`-Objekt.|  
+|[CWinThread::CWinThread](#cwinthread)|Constructs a `CWinThread` object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinThread:: CreateThread](#createthread)|Startet die Ausführung einer `CWinThread` Objekt.|  
-|[CWinThread::ExitInstance](#exitinstance)|Außer Kraft setzen Sie, um zu bereinigen, wenn der Thread beendet wird.|  
-|[CWinThread::GetMainWnd](#getmainwnd)|Ruft einen Zeiger auf das Hauptfenster des Threads ab.|  
-|[CWinThread::GetThreadPriority](#getthreadpriority)|Ruft die Priorität des aktuellen Threads ab.|  
-|[CWinThread::InitInstance](#initinstance)|Überschreiben Sie, um die instanzeninitialisierung des Threads ausführen.|  
-|[CWinThread::IsIdleMessage](#isidlemessage)|Überprüft, ob besondere Nachrichten.|  
-|[CWinThread::OnIdle](#onidle)|Überschreiben Sie, um die threadspezifische leerlaufzeitverarbeitung ausführen.|  
-|[CWinThread::PostThreadMessage](#postthreadmessage)|Sendet eine Meldung an eine andere `CWinThread` Objekt.|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtert Nachrichten, bevor sie an die Windows-Funktionen verteilt sind [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).|  
-|[CWinThread::ProcessMessageFilter](#processmessagefilter)|Bestimmte Nachrichten abfängt, bevor sie die Anwendung nicht erreichen.|  
-|[CWinThread::ProcessWndProcException](#processwndprocexception)|Fängt alle Ausnahmefehler, die von der Thread-Nachricht und Befehlshandler ausgelöst.|  
-|[CWinThread::PumpMessage](#pumpmessage)|Enthält die Nachrichtenschleife für den Thread.|  
-|[CWinThread:: ResumeThread](#resumethread)|Dekrementiert eine Thread den Unterbrechungszähler an.|  
-|[Hauptmeldungsschleife](#run)|Die Steuerungsfunktion für Threads mit der ein Nachrichtensystem. Außer Kraft setzen Sie, um die Standard-Nachrichtenschleife anzupassen.|  
-|[CWinThread::SetThreadPriority](#setthreadpriority)|Legt die Priorität des aktuellen Threads fest.|  
-|[CWinThread:: SuspendThread](#suspendthread)|Inkremente ein Thread den Unterbrechungszähler an.|  
+|[CWinThread::CreateThread](#createthread)|Starts execution of a `CWinThread` object.|  
+|[CWinThread::ExitInstance](#exitinstance)|Override to clean up when your thread terminates.|  
+|[CWinThread::GetMainWnd](#getmainwnd)|Retrieves a pointer to the main window for the thread.|  
+|[CWinThread::GetThreadPriority](#getthreadpriority)|Gets the priority of the current thread.|  
+|[CWinThread::InitInstance](#initinstance)|Override to perform thread instance initialization.|  
+|[CWinThread::IsIdleMessage](#isidlemessage)|Checks for special messages.|  
+|[CWinThread::OnIdle](#onidle)|Override to perform thread-specific idle-time processing.|  
+|[CWinThread::PostThreadMessage](#postthreadmessage)|Posts a message to another `CWinThread` object.|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filters messages before they are dispatched to the Windows functions [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).|  
+|[CWinThread::ProcessMessageFilter](#processmessagefilter)|Intercepts certain messages before they reach the application.|  
+|[CWinThread::ProcessWndProcException](#processwndprocexception)|Intercepts all unhandled exceptions thrown by the thread's message and command handlers.|  
+|[CWinThread::PumpMessage](#pumpmessage)|Contains the thread's message loop.|  
+|[CWinThread::ResumeThread](#resumethread)|Decrements a thread's suspend count.|  
+|[CWinThread::Run](#run)|Controlling function for threads with a message pump. Override to customize the default message loop.|  
+|[CWinThread::SetThreadPriority](#setthreadpriority)|Sets the priority of the current thread.|  
+|[CWinThread::SuspendThread](#suspendthread)|Increments a thread's suspend count.|  
   
-### <a name="public-operators"></a>Öffentliche Operatoren  
+### <a name="public-operators"></a>Public Operators  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinThread::operator HANDLE](#operator_handle)|Ruft das Handle der ab dem `CWinThread` Objekt.|  
+|[CWinThread::operator HANDLE](#operator_handle)|Retrieves the handle of the `CWinThread` object.|  
   
-### <a name="public-data-members"></a>Öffentliche Datenmember  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinThread::m_bAutoDelete](#m_bautodelete)|Gibt an, ob das Objekt Threadbeendigung zu zerstören.|  
-|[CWinThread::m_hThread](#m_hthread)|Handle für den aktuellen Thread.|  
-|[CWinThread::m_nThreadID](#m_nthreadid)|Die ID des aktuellen Threads.|  
-|[CWinThread::m_pActiveWnd](#m_pactivewnd)|Ein Zeiger auf das Hauptfenster der containeranwendung, wenn ein OLE-Server in-Place aktiv ist.|  
-|[CWinThread:: M_pmainwnd](#m_pmainwnd)|Enthält einen Zeiger auf das Hauptfenster der Anwendung.|  
+|[CWinThread::m_bAutoDelete](#m_bautodelete)|Specifies whether to destroy the object at thread termination.|  
+|[CWinThread::m_hThread](#m_hthread)|Handle to the current thread.|  
+|[CWinThread::m_nThreadID](#m_nthreadid)|ID of the current thread.|  
+|[CWinThread::m_pActiveWnd](#m_pactivewnd)|Pointer to the main window of the container application when an OLE server is in-place active.|  
+|[CWinThread::m_pMainWnd](#m_pmainwnd)|Holds a pointer to the application's main window.|  
   
-## <a name="remarks"></a>Hinweise  
- Der Hauptthread der Ausführung werden normalerweise von einem Objekt abgeleitet bereitgestellt `CWinApp`; `CWinApp` stammt aus `CWinThread`. Zusätzliche `CWinThread` Objekte können mehrere Threads innerhalb einer bestimmten Anwendung.  
+## <a name="remarks"></a>Remarks  
+ The main thread of execution is usually provided by an object derived from `CWinApp`; `CWinApp` is derived from `CWinThread`. Additional `CWinThread` objects allow multiple threads within a given application.  
   
- Es gibt zwei allgemeine Arten von Threads, die `CWinThread` unterstützt: Arbeitsthreads und Benutzeroberflächenthreads. Anzahl der Arbeitsthreads haben keine Nachrichtensystem: z. B. einen Thread, der im Hintergrund Berechnungen in einer Kalkulationstabelle-Anwendung ausführt. Benutzeroberflächenthreads Meldungsverteilschleife und Verarbeiten von Nachrichten, die vom System empfangen. [CWinApp](../../mfc/reference/cwinapp-class.md) und davon abgeleitete Klassen sind Beispiele für Benutzeroberflächenthreads. Andere Benutzeroberflächenthreads können auch direkt aus abgeleitet werden `CWinThread`.  
+ There are two general types of threads that `CWinThread` supports: worker threads and user-interface threads. Worker threads have no message pump: for example, a thread that performs background calculations in a spreadsheet application. User-interface threads have a message pump and process messages received from the system. [CWinApp](../../mfc/reference/cwinapp-class.md) and classes derived from it are examples of user-interface threads. Other user-interface threads can also be derived directly from `CWinThread`.  
   
- Objekte der Klasse `CWinThread` in der Regel für die Dauer des Threads vorhanden sind. Wenn Sie dieses Verhalten ändern möchten, legen Sie [M_bAutoDelete](#m_bautodelete) auf **"false"**.  
+ Objects of class `CWinThread` typically exist for the duration of the thread. If you wish to modify this behavior, set [m_bAutoDelete](#m_bautodelete) to **FALSE**.  
   
- Die `CWinThread` Klasse ist erforderlich, Code und alle MFC vollständig threadsicher zu erstellen. Threadlokalen Daten, die vom Framework verwendet wird, um die Thread-spezifische Informationen verwalten erfolgt durch `CWinThread` Objekte. Aufgrund dieser Abhängigkeit von `CWinThread` um threadlokalen Daten behandeln zu können, muss jeder Thread, der MFC verwendet von MFC erstellt werden. Z. B. ein von der Funktion zur Laufzeit erstellten Thread [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) können keine MFC-APIs verwenden.  
+ The `CWinThread` class is necessary to make your code and MFC fully thread-safe. Thread-local data used by the framework to maintain thread-specific information is managed by `CWinThread` objects. Because of this dependence on `CWinThread` to handle thread-local data, any thread that uses MFC must be created by MFC. For example, a thread created by the run-time function [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) cannot use any MFC APIs.  
   
- Rufen Sie zum Erstellen eines Threads [AfxBeginThread](application-information-and-management.md#afxbeginthread). Es gibt zwei Formen, je nachdem, ob einen Thread Worker- oder die Benutzeroberfläche angezeigt werden soll. Gegebenenfalls ein Benutzeroberflächenthread übergeben werden, um `AfxBeginThread` ein Zeiger auf die `CRuntimeClass` von Ihrer `CWinThread`-abgeleitete Klasse. Wenn ein Arbeitsthread erstellt werden sollen, übergeben Sie an `AfxBeginThread` einen Zeiger auf die Steuerungsfunktion und den Parameter an die Steuerungsfunktion. Für Arbeitsthreads und Benutzeroberflächenthreads können Sie optional Parameter angeben, die Priorität, Stapelgröße Erstellung Flags und Sicherheitsattribute ändern. `AfxBeginThread`Gibt einen Zeiger zurück, in die neue `CWinThread` Objekt.  
+ To create a thread, call [AfxBeginThread](application-information-and-management.md#afxbeginthread). There are two forms, depending on whether you want a worker or user-interface thread. If you want a user-interface thread, pass to `AfxBeginThread` a pointer to the `CRuntimeClass` of your `CWinThread`-derived class. If you want to create a worker thread, pass to `AfxBeginThread` a pointer to the controlling function and the parameter to the controlling function. For both worker threads and user-interface threads, you can specify optional parameters that modify priority, stack size, creation flags, and security attributes. `AfxBeginThread` will return a pointer to your new `CWinThread` object.  
   
- Statt `AfxBeginThread`, für das Konstruieren einer `CWinThread`-abgeleitete Objekt und rufen Sie dann `CreateThread`. Diese Methode zweistufige Konstruktion ist nützlich, wenn Sie wiederverwenden möchten, die `CWinThread` Objekt zwischen aufeinander folgenden erstellen und der Thread Ausführungen Beendigungen.  
+ Instead of calling `AfxBeginThread`, you can construct a `CWinThread`-derived object and then call `CreateThread`. This two-stage construction method is useful if you want to reuse the `CWinThread` object between successive creation and terminations of thread executions.  
   
- Weitere Informationen zu `CWinThread`, finden Sie in den Artikeln [Multithreading mit C++ und MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: Erstellen von Benutzeroberflächenthreads](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: Erstellen von Arbeitsthreads](../../parallel/multithreading-creating-worker-threads.md), und [Multithreading: Gewusst wie: Verwenden von Synchronisierungsklassen](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ For more information on `CWinThread`, see the articles [Multithreading with C++ and MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: Creating User-Interface Threads](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: Creating Worker Threads](../../parallel/multithreading-creating-worker-threads.md), and [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CWinThread`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxwin.h  
   
-##  <a name="createthread"></a>CWinThread:: CreateThread  
- Erstellt einen Thread innerhalb des Adressraums des aufrufenden Prozesses ausgeführt.  
+##  <a name="createthread"></a>  CWinThread::CreateThread  
+ Creates a thread to execute within the address space of the calling process.  
   
 ```  
 BOOL CreateThread(
@@ -155,79 +173,79 @@ BOOL CreateThread(
     LPSECURITY_ATTRIBUTES lpSecurityAttrs = NULL);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `dwCreateFlags`  
- Gibt ein zusätzliches Flag an, das die Erstellung des Threads steuert. Dieses Flag kann einen von zwei Werten enthalten:  
+ Specifies an additional flag that controls the creation of the thread. This flag can contain one of two values:  
   
-- **CREATE_SUSPENDED** der Thread wird mit einem Unterbrechungszähler 1 gestartet. Verwendung **CREATE_SUSPENDED** , wenn Sie beliebige Memberdaten des initialisieren möchten die `CWinThread` Objekt, z. B. [M_bAutoDelete](#m_bautodelete) oder Member der abgeleiteten Klasse, befor der Thread ausgeführt wird. Sobald die Initialisierung abgeschlossen ist, verwenden die [CWinThread:: ResumeThread](#resumethread) an den Thread zu starten. Der Thread wird erst ausgeführt, wenn `CWinThread::ResumeThread` aufgerufen wurde.  
+- **CREATE_SUSPENDED** Start the thread with a suspend count of one. Use **CREATE_SUSPENDED** if you want to initialize any member data of the `CWinThread` object, such as [m_bAutoDelete](#m_bautodelete) or any members of your derived class, before the thread starts running. Once your initialization is complete, use the [CWinThread::ResumeThread](#resumethread) to start the thread running. The thread will not execute until `CWinThread::ResumeThread` is called.  
   
-- **0** direkt nach dem Erstellen der Thread gestartet.  
+- **0** Start the thread immediately after creation.  
   
  `nStackSize`  
- Gibt die Stapelgröße für den neuen Thread in Bytes an. Wenn **0**, die Größe des Stapels wird standardmäßig auf die gleiche Größe wie der primäre Thread des Prozesses.  
+ Specifies the size in bytes of the stack for the new thread. If **0**, the stack size defaults to the same size as that of the process's primary thread.  
   
  `lpSecurityAttrs`  
- Verweist auf eine [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) -Struktur, die die Sicherheitsattribute für den Thread angibt.  
+ Points to a [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) structure that specifies the security attributes for the thread.  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn der Thread wurde erfolgreich erstellt wird; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the thread is created successfully; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Verwendung `AfxBeginThread` zum Erstellen eines Threadobjekts, und führen Sie es in einem Schritt. Verwendung `CreateThread` , wenn Sie das Threadobjekt zwischen aufeinander folgenden erstellen und Beenden des Threads Ausführungen wiederverwenden möchten.  
+### <a name="remarks"></a>Remarks  
+ Use `AfxBeginThread` to create a thread object and execute it in one step. Use `CreateThread` if you want to reuse the thread object between successive creation and termination of thread executions.  
   
-##  <a name="cwinthread"></a>CWinThread::CWinThread  
- Erstellt ein `CWinThread`-Objekt.  
+##  <a name="cwinthread"></a>  CWinThread::CWinThread  
+ Constructs a `CWinThread` object.  
   
 ```  
 CWinThread();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Um die Ausführung des Threads zu beginnen, rufen Sie die [CreateThread](#createthread) Memberfunktion. Erstellen Sie in der Regel Threads durch Aufruf [AfxBeginThread](application-information-and-management.md#afxbeginthread), der dieser Konstruktor aufgerufen und `CreateThread`.  
+### <a name="remarks"></a>Remarks  
+ To begin the thread's execution, call the [CreateThread](#createthread) member function. You will usually create threads by calling [AfxBeginThread](application-information-and-management.md#afxbeginthread), which will call this constructor and `CreateThread`.  
   
-##  <a name="exitinstance"></a>CWinThread::ExitInstance  
- Durch das Framework aus überschriebenen eine selten aufgerufen [ausführen](#run) Memberfunktion versucht, diese Instanz des Threads, beendet oder wenn ein Aufruf von [InitInstance](#initinstance) schlägt fehl.  
+##  <a name="exitinstance"></a>  CWinThread::ExitInstance  
+ Called by the framework from within a rarely overridden [Run](#run) member function to exit this instance of the thread, or if a call to [InitInstance](#initinstance) fails.  
   
 ```  
 virtual int ExitInstance();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Thread-Exitcode; 0 gibt an, keine Fehler, und geben einen Fehler an Werte größer als 0. Dieser Wert kann abgerufen werden, durch den Aufruf [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190).  
+### <a name="return-value"></a>Return Value  
+ The thread's exit code; 0 indicates no errors, and values greater than 0 indicate an error. This value can be retrieved by calling [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190).  
   
-### <a name="remarks"></a>Hinweise  
- Rufen Sie nicht diese Memberfunktion überall jedoch innerhalb der **ausführen** Memberfunktion. Diese Memberfunktion ist nur in Benutzeroberflächenthreads verwendet.  
+### <a name="remarks"></a>Remarks  
+ Do not call this member function from anywhere but within the **Run** member function. This member function is used only in user-interface threads.  
   
- Die standardmäßige Implementierung dieser Funktion löscht den `CWinThread` Objekt, wenn [M_bAutoDelete](#m_bautodelete) ist **"true"**. Überschreiben Sie diese Funktion, wenn Sie möchten zusätzliche Bereinigung ausführen, wenn der Thread beendet wird. Ihre Implementierung von `ExitInstance` sollten die Basisklassenversion aufrufen, nachdem der Code ausgeführt wird.  
+ The default implementation of this function deletes the `CWinThread` object if [m_bAutoDelete](#m_bautodelete) is **TRUE**. Override this function if you wish to perform additional clean-up when your thread terminates. Your implementation of `ExitInstance` should call the base class's version after your code is executed.  
   
-##  <a name="getmainwnd"></a>CWinThread::GetMainWnd  
- Wenn Ihre Anwendung einen OLE-Server ist, rufen Sie diese Funktion zum Abrufen von eines Zeigers auf das aktiven Hauptfenster der Anwendung und nicht direkt auf die `m_pMainWnd` Member des Anwendungsobjekts.  
+##  <a name="getmainwnd"></a>  CWinThread::GetMainWnd  
+ If your application is an OLE server, call this function to retrieve a pointer to the active main window of the application instead of directly referring to the `m_pMainWnd` member of the application object.  
   
 ```  
 virtual CWnd* GetMainWnd();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Diese Funktion gibt einen Zeiger auf einen der zwei Arten von Fenstern. Wenn der Thread Teil der OLE-Server ist und verfügt über ein Objekt, das in-Place aktiv innerhalb einer aktiven Container ist, gibt diese Funktion die [CWinApp::m_pActiveWnd](../../mfc/reference/cwinapp-class.md#m_pactivewnd) Datenmember der `CWinThread` Objekt.  
+### <a name="return-value"></a>Return Value  
+ This function returns a pointer to one of two types of windows. If your thread is part of an OLE server and has an object that is in-place active inside an active container, this function returns the [CWinApp::m_pActiveWnd](../../mfc/reference/cwinapp-class.md#m_pactivewnd) data member of the `CWinThread` object.  
   
- Diese Funktion gibt zurück, wenn kein Objekt, das in-Place aktiv in einem Container vorhanden ist oder die Anwendung keinen OLE-Server, der [M_pMainWnd](#m_pmainwnd) -Datenmember des Threadobjekts.  
+ If there is no object that is in-place active within a container or your application is not an OLE server, this function returns the [m_pMainWnd](#m_pmainwnd) data member of your thread object.  
   
-### <a name="remarks"></a>Hinweise  
- Für Benutzeroberflächenthreads, dies entspricht dem direkten verweisen auf die `m_pActiveWnd` Member des Anwendungsobjekts.  
+### <a name="remarks"></a>Remarks  
+ For user-interface threads, this is equivalent to directly referring to the `m_pActiveWnd` member of your application object.  
   
- Wenn es sich bei der Anwendung nicht um einen OLE-Server handelt, entspricht das Aufrufen dieser Funktion dem direkten Verweisen auf den `m_pMainWnd`-Member des Anwendungsobjekts.  
+ If your application is not an OLE server, then calling this function is equivalent to directly referring to the `m_pMainWnd` member of your application object.  
   
- Überschreiben Sie diese Funktion, um das Standardverhalten zu ändern.  
+ Override this function to modify the default behavior.  
   
-##  <a name="getthreadpriority"></a>CWinThread::GetThreadPriority  
- Ruft den aktuellen Thread Prioritätsstufe dieses Threads ab.  
+##  <a name="getthreadpriority"></a>  CWinThread::GetThreadPriority  
+ Gets the current thread priority level of this thread.  
   
 ```  
 int GetThreadPriority();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der aktuelle Thread Prioritätsstufe innerhalb seiner Prioritätsklasse. Der zurückgegebene Wert werden die folgenden von der höchsten Priorität zur niedrigsten aufgeführt:  
+### <a name="return-value"></a>Return Value  
+ The current thread priority level within its priority class. The value returned will be one of the following, listed from highest priority to lowest:  
   
 - **THREAD_PRIORITY_TIME_CRITICAL**  
   
@@ -239,149 +257,149 @@ int GetThreadPriority();
   
 - **THREAD_PRIORITY_BELOW_NORMAL**  
   
-- **RANGFOLGE VON THREAD_PRIORITY_LOWEST**  
+- **THREAD_PRIORITY_LOWEST**  
   
 - **THREAD_PRIORITY_IDLE**  
   
- Weitere Informationen über diese Prioritäten finden Sie unter [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information on these priorities, see [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) in the Windows SDK.  
   
-##  <a name="initinstance"></a>CWinThread::InitInstance  
- `InitInstance`muss überschrieben werden, um jede neue Instanz eines Threads für die Benutzeroberfläche zu initialisieren.  
+##  <a name="initinstance"></a>  CWinThread::InitInstance  
+ `InitInstance` must be overridden to initialize each new instance of a user-interface thread.  
   
 ```  
 virtual BOOL InitInstance();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Initialisierung erfolgreich ist; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization is successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Überschreiben Sie in der Regel `InitInstance` Aufgaben, die abgeschlossen sein müssen, wenn ein Thread erstellt wird.  
+### <a name="remarks"></a>Remarks  
+ Typically, you override `InitInstance` to perform tasks that must be completed when a thread is first created.  
   
- Diese Memberfunktion ist nur in Benutzeroberflächenthreads verwendet. Führen Sie die Initialisierung von Worker-Threads in die Steuerungsfunktion zu übergeben [AfxBeginThread](application-information-and-management.md#afxbeginthread).  
+ This member function is used only in user-interface threads. Perform initialization of worker threads in the controlling function passed to [AfxBeginThread](application-information-and-management.md#afxbeginthread).  
   
-##  <a name="isidlemessage"></a>CWinThread::IsIdleMessage  
- Überschreiben Sie diese Funktion zu **OnIdle** aufgerufen wird, nachdem bestimmte Nachrichten generiert werden.  
+##  <a name="isidlemessage"></a>  CWinThread::IsIdleMessage  
+ Override this function to keep **OnIdle** from being called after specific messages are generated.  
   
 ```  
 virtual BOOL IsIdleMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pMsg`  
- Verweist auf die aktuelle Nachricht verarbeitet wird.  
+ Points to the current message being processed.  
   
-### <a name="return-value"></a>Rückgabewert  
- Einen Wert ungleich NULL `OnIdle` sollte aufgerufen werden, nach der Verarbeitung Nachricht, andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if `OnIdle` should be called after processing message; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Die standardmäßige Implementierung rufen nicht **OnIdle** nach redundante Maus und Nachrichten von blinkt, Caretzeichen generiert.  
+### <a name="remarks"></a>Remarks  
+ The default implementation does not call **OnIdle** after redundant mouse messages and messages generated by blinking carets.  
   
- Wenn eine Anwendung einen kurzen Timer erstellt hat **OnIdle** aufgerufen wird, in vielen Fällen Leistungsprobleme verursacht. Überschreiben Sie zur Verbesserung der Leistung einer solchen Anwendung des `IsIdleMessage` in der Anwendungsverzeichnis `CWinApp`-abgeleitete Klasse zu suchende `WM_TIMER` Nachrichten wie folgt:  
+ If an application has created a short timer, **OnIdle** will be called frequently, causing performance problems. To improve such an application's performance, override `IsIdleMessage` in the application's `CWinApp`-derived class to check for `WM_TIMER` messages as follows:  
   
- [!code-cpp[NVC_MFCDocView #189](../../mfc/codesnippet/cpp/cwinthread-class_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#189](../../mfc/codesnippet/cpp/cwinthread-class_1.cpp)]  
   
- Behandlung von `WM_TIMER` auf diese Weise wird die Leistung verbessert, kurze Timer verwenden.  
+ Handling `WM_TIMER` in this fashion will improve performance of applications that use short timers.  
   
-##  <a name="m_bautodelete"></a>CWinThread::m_bAutoDelete  
- Gibt an, ob das `CWinThread`-Objekt der Threadbeendigung automatisch gelöscht werden soll.  
+##  <a name="m_bautodelete"></a>  CWinThread::m_bAutoDelete  
+ Specifies whether the `CWinThread` object should be automatically deleted at thread termination.  
   
 ```  
 BOOL m_bAutoDelete;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Die `m_bAutoDelete` -Datenmember ist eine öffentliche Variable des Typs **BOOL**.  
+### <a name="remarks"></a>Remarks  
+ The `m_bAutoDelete` data member is a public variable of type **BOOL**.  
   
- Der Wert von `m_bAutoDelete` beeinflusst nicht, wie das zugrunde liegende Threadhandle geschlossen wird. Das Threadhandle wird immer geschlossen, wenn das `CWinThread`-Objekt zerstört wird.  
+ The value of `m_bAutoDelete` does not affect how the underlying thread handle is closed. The thread handle is always closed when the `CWinThread` object is destroyed.  
   
-##  <a name="m_hthread"></a>CWinThread::m_hThread  
- Handle für den Thread an diese angefügt `CWinThread`.  
+##  <a name="m_hthread"></a>  CWinThread::m_hThread  
+ Handle to the thread attached to this `CWinThread`.  
   
 ```  
 HANDLE m_hThread;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Die `m_hThread` -Datenmember ist eine öffentliche Variable des Typs `HANDLE`. Es ist nur gültig, wenn die zugrunde liegende Thread derzeit vorhanden ist.  
+### <a name="remarks"></a>Remarks  
+ The `m_hThread` data member is a public variable of type `HANDLE`. It is only valid if underlying thread currently exists.  
   
-##  <a name="m_nthreadid"></a>CWinThread::m_nThreadID  
- ID des Threads angefügte `CWinThread`.  
+##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID  
+ ID of the thread attached to this `CWinThread`.  
   
 ```  
 DWORD m_nThreadID;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Die **M_nThreadID** -Datenmember ist eine öffentliche Variable des Typs `DWORD`. Es ist nur gültig, wenn die zugrunde liegende Thread derzeit vorhanden ist.  
+### <a name="remarks"></a>Remarks  
+ The **m_nThreadID** data member is a public variable of type `DWORD`. It is only valid if underlying thread currently exists.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [AfxGetThread](application-information-and-management.md#afxgetthread).  
+### <a name="example"></a>Example  
+  See the example for [AfxGetThread](application-information-and-management.md#afxgetthread).  
   
-##  <a name="m_pactivewnd"></a>CWinThread::m_pActiveWnd  
- Verwenden Sie dieses Datenelement, um einen Zeiger auf die aktive Fensterobjekt des Threads zu speichern.  
+##  <a name="m_pactivewnd"></a>  CWinThread::m_pActiveWnd  
+ Use this data member to store a pointer to your thread's active window object.  
   
 ```  
 CWnd* m_pActiveWnd;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Die Microsoft Foundation Class-Bibliothek wird automatisch Threads beendet, wenn das Fenster mit den bezeichnet `m_pActiveWnd` geschlossen wird. Wenn dieser Thread der primäre Thread für eine Anwendung ist, wird die Anwendung ebenfalls beendet. Wenn der Datenmember ist **NULL**, das aktive Fenster für der Anwendungsverzeichnis `CWinApp` Objekt geerbt werden. `m_pActiveWnd`ist eine öffentliche Variable des Typs **CWnd\***.  
+### <a name="remarks"></a>Remarks  
+ The Microsoft Foundation Class Library will automatically terminate your thread when the window referred to by `m_pActiveWnd` is closed. If this thread is the primary thread for an application, the application will also be terminated. If this data member is **NULL**, the active window for the application's `CWinApp` object will be inherited. `m_pActiveWnd` is a public variable of type **CWnd\***.  
   
- In der Regel legen Sie diese Membervariable beim Überschreiben `InitInstance`. In einem Arbeitsthread wird der Wert dieses Datenelements von seinem übergeordneten Thread geerbt.  
+ Typically, you set this member variable when you override `InitInstance`. In a worker thread, the value of this data member is inherited from its parent thread.  
   
-##  <a name="m_pmainwnd"></a>CWinThread:: M_pmainwnd  
- Verwenden Sie dieses Datenelement, um einen Zeiger auf den Thread im Hauptfenster Objekt speichern.  
+##  <a name="m_pmainwnd"></a>  CWinThread::m_pMainWnd  
+ Use this data member to store a pointer to your thread's main window object.  
   
 ```  
 CWnd* m_pMainWnd;  
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Die Microsoft Foundation Class-Bibliothek wird automatisch Threads beendet, wenn das Fenster mit den bezeichnet `m_pMainWnd` geschlossen wird. Wenn dieser Thread der primäre Thread für eine Anwendung ist, wird die Anwendung ebenfalls beendet. Wenn dieses Datenelement ist **NULL**, die im Hauptfenster der Anwendung `CWinApp` Objekt wird verwendet, um zu bestimmen, wann der Thread beendet. `m_pMainWnd`ist eine öffentliche Variable des Typs **CWnd\***.  
+### <a name="remarks"></a>Remarks  
+ The Microsoft Foundation Class Library will automatically terminate your thread when the window referred to by `m_pMainWnd` is closed. If this thread is the primary thread for an application, the application will also be terminated. If this data member is **NULL**, the main window for the application's `CWinApp` object will be used to determine when to terminate the thread. `m_pMainWnd` is a public variable of type **CWnd\***.  
   
- In der Regel legen Sie diese Membervariable beim Überschreiben `InitInstance`. In einem Arbeitsthread wird der Wert dieses Datenelements von seinem übergeordneten Thread geerbt.  
+ Typically, you set this member variable when you override `InitInstance`. In a worker thread, the value of this data member is inherited from its parent thread.  
   
-##  <a name="onidle"></a>CWinThread::OnIdle  
- Überschreiben Sie diese Memberfunktion, um die Zeit im Leerlauf Verarbeitung durchzuführen.  
+##  <a name="onidle"></a>  CWinThread::OnIdle  
+ Override this member function to perform idle-time processing.  
   
 ```  
 virtual BOOL OnIdle(LONG lCount);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `lCount`  
- Eine erhöht, jedes Mal `OnIdle` wird aufgerufen, wenn der Thread-Nachrichtenwarteschlange leer ist. Diese Anzahl wird jedes Mal auf 0 zurückgesetzt, wenn eine neue Nachricht verarbeitet wird. Sie können die `lCount` Parameter, um die relative Dauer Ermitteln der Thread wurde ohne Verarbeitung einer Nachricht im Leerlauf.  
+ A counter incremented each time `OnIdle` is called when the thread's message queue is empty. This count is reset to 0 each time a new message is processed. You can use the `lCount` parameter to determine the relative length of time the thread has been idle without processing a message.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL im Leerlauf Verarbeitungszeit empfangen; 0, wenn keine weiteren Leerlaufzeiten benötigt wird.  
+### <a name="return-value"></a>Return Value  
+ Nonzero to receive more idle processing time; 0 if no more idle processing time is needed.  
   
-### <a name="remarks"></a>Hinweise  
- `OnIdle`wird in der Standardeinstellung Nachrichtenschleife aufgerufen werden, wenn der Thread-Nachrichtenwarteschlange leer ist. Verwenden Sie die Außerkraftsetzung, um eigene Hintergrund Aufgaben im Leerlauf Ereignishandler aufzurufen.  
+### <a name="remarks"></a>Remarks  
+ `OnIdle` is called in the default message loop when the thread's message queue is empty. Use your override to call your own background idle-handler tasks.  
   
- `OnIdle`sollte zurückgeben 0 an, um anzugeben, dass keine zusätzliche Leerlaufzeit-Verarbeitung erforderlich ist. Die `lCount` Parameter wird jedes Mal inkrementiert `OnIdle` wird aufgerufen, wenn die Nachrichtenwarteschlange leer ist und wird jedes Mal eine neue Nachricht verarbeitet wird auf 0 zurückgesetzt. Sie können Ihre verschiedenen im Leerlauf Routinen, die basierend auf diese Anzahl aufrufen.  
+ `OnIdle` should return 0 to indicate that no additional idle processing time is required. The `lCount` parameter is incremented each time `OnIdle` is called when the message queue is empty and is reset to 0 each time a new message is processed. You can call your different idle routines based on this count.  
   
- Die standardmäßige Implementierung des diese Memberfunktion gibt die temporäre Objekte und nicht verwendeten DLL-Dateien aus dem Arbeitsspeicher frei.  
+ The default implementation of this member function frees temporary objects and unused dynamic link libraries from memory.  
   
- Diese Memberfunktion ist nur in Benutzeroberflächenthreads verwendet.  
+ This member function is used only in user-interface threads.  
   
- Da die Anwendung Nachrichten erst verarbeiten kann `OnIdle` zurückgegeben wird, führen Sie langwierige Aufgaben in dieser Funktion nicht aus.  
+ Because the application cannot process messages until `OnIdle` returns, do not perform lengthy tasks in this function.  
   
-##  <a name="operator_handle"></a>CWinThread::operator HANDLE  
- Ruft das Handle der ab dem `CWinThread` Objekt.  
+##  <a name="operator_handle"></a>  CWinThread::operator HANDLE  
+ Retrieves the handle of the `CWinThread` object.  
   
 ```  
 operator HANDLE() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Bei Erfolg das Handle für das Threadobjekt; andernfalls **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, the handle of the thread object; otherwise, **NULL**.  
   
-### <a name="remarks"></a>Hinweise  
- Verwenden Sie das Handle, um die Windows-APIs direkt aufrufen.  
+### <a name="remarks"></a>Remarks  
+ Use the handle to directly call Windows APIs.  
   
-##  <a name="postthreadmessage"></a>CWinThread::PostThreadMessage  
- Wird aufgerufen, um eine benutzerdefinierte Nachricht in eine andere zu senden `CWinThread` Objekt.  
+##  <a name="postthreadmessage"></a>  CWinThread::PostThreadMessage  
+ Called to post a user-defined message to another `CWinThread` object.  
   
 ```  
 BOOL PostThreadMessage(
@@ -390,44 +408,44 @@ BOOL PostThreadMessage(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `message`  
- ID der benutzerdefinierten Meldung.  
+ ID of the user-defined message.  
   
  `wParam`  
- Ersten Meldungsparameter.  
+ First message parameter.  
   
  `lParam`  
- Zweiten Meldungsparameter.  
+ Second message parameter.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Die bereitgestellte Nachricht wird an den entsprechenden Meldungshandler zugeordnet, durch die Nachricht Map-Makro `ON_THREAD_MESSAGE`.  
+### <a name="remarks"></a>Remarks  
+ The posted message is mapped to the proper message handler by the message map macro `ON_THREAD_MESSAGE`.  
   
 > [!NOTE]
->  Beim Aufrufen der Windows [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946) Funktion innerhalb einer MFC-Anwendung, die MFC-Nachricht, die Handler nicht aufgerufen werden. Weitere Informationen finden Sie unter im Knowledge Base-Artikel "PRB: MFC-Message-Handler nicht aufgerufen, mit PostThreadMessage()" (Q142415).  
+>  When calling the Windows [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946) function within an MFC application, the MFC message handlers are not called. For more information, see the Knowledge Base article, "PRB: MFC Message Handler Not Called with PostThreadMessage()" (Q142415).  
   
-##  <a name="pretranslatemessage"></a>CWinThread::PreTranslateMessage  
- Überschreiben Sie diese Funktion zu filtern, bevor sie an die Windows-Funktionen verteilt sind [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).  
+##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
+ Override this function to filter window messages before they are dispatched to the Windows functions [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pMsg`  
- Verweist auf eine [MSG-Struktur](../../mfc/reference/msg-structure1.md) , die die zu verarbeitende Meldung enthält.  
+ Points to a [MSG structure](../../mfc/reference/msg-structure1.md) containing the message to process.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL, wenn die Nachricht in vollständig verarbeitet war `PreTranslateMessage` und sollten nicht weiter verarbeitet werden. 0 (null), wenn die Nachricht auf die übliche Weise verarbeitet werden soll.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message was fully processed in `PreTranslateMessage` and should not be processed further. Zero if the message should be processed in the normal way.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion ist nur in Benutzeroberflächenthreads verwendet.  
+### <a name="remarks"></a>Remarks  
+ This member function is used only in user-interface threads.  
   
-##  <a name="processmessagefilter"></a>CWinThread::ProcessMessageFilter  
- Hookfunktion für das Framework ruft diese Memberfunktion filtern oder nur auf bestimmte Windows-Nachrichten reagiert.  
+##  <a name="processmessagefilter"></a>  CWinThread::ProcessMessageFilter  
+ The framework's hook function calls this member function to filter and respond to certain Windows messages.  
   
 ```  
 virtual BOOL ProcessMessageFilter(
@@ -435,23 +453,23 @@ virtual BOOL ProcessMessageFilter(
     LPMSG lpMsg);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `code`  
- Gibt einen Hookcode. Diese Memberfunktion verwendet den Code, um zu bestimmen, wie verarbeitet`lpMsg.`  
+ Specifies a hook code. This member function uses the code to determine how to process `lpMsg.`  
   
  `lpMsg`  
- Ein Zeiger auf ein Windows [MSG-Struktur](../../mfc/reference/msg-structure1.md).  
+ A pointer to a Windows [MSG structure](../../mfc/reference/msg-structure1.md).  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL, wenn die Nachricht verarbeitet wird; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message is processed; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Eine Hookfunktion verarbeitet Ereignisse vor dem Senden an die Anwendung normal Nachricht verarbeiten.  
+### <a name="remarks"></a>Remarks  
+ A hook function processes events before they are sent to the application's normal message processing.  
   
- Wenn Sie diese erweiterte Funktion überschreiben, müssen Sie die Basisklassenversion zum Verwalten des Frameworks aufrufen Verarbeitung zu verknüpfen.  
+ If you override this advanced feature, be sure to call the base-class version to maintain the framework's hook processing.  
   
-##  <a name="processwndprocexception"></a>CWinThread::ProcessWndProcException  
- Das Framework ruft diese Memberfunktion auf, wenn der Handler eine in einem der Meldung des Threads oder Befehlshandler ausgelöste Ausnahme nicht abfängt.  
+##  <a name="processwndprocexception"></a>  CWinThread::ProcessWndProcException  
+ The framework calls this member function whenever the handler does not catch an exception thrown in one of your thread's message or command handlers.  
   
 ```  
 virtual LRESULT ProcessWndProcException(
@@ -459,82 +477,82 @@ virtual LRESULT ProcessWndProcException(
     const MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *e*  
- Verweist auf eine nicht behandelte Ausnahme.  
+ Points to an unhandled exception.  
   
  `pMsg`  
- Verweist auf eine [MSG-Struktur](../../mfc/reference/msg-structure1.md) mit Informationen über die Windows-Meldung, die das Framework eine Ausnahme verursacht hat.  
+ Points to a [MSG structure](../../mfc/reference/msg-structure1.md) containing information about the windows message that caused the framework to throw an exception.  
   
-### <a name="return-value"></a>Rückgabewert  
- -1, wenn eine `WM_CREATE` Ausnahme wird generiert; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ -1 if a `WM_CREATE` exception is generated; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Memberfunktion nicht direkt auf.  
+### <a name="remarks"></a>Remarks  
+ Do not call this member function directly.  
   
- Die Standardimplementierung von dieser Memberfunktion behandelt nur Ausnahmen, die aus den folgenden Nachrichten generiert:  
+ The default implementation of this member function handles only exceptions generated from the following messages:  
   
-|Befehl|Aktion|  
+|Command|Action|  
 |-------------|------------|  
-|`WM_CREATE`|Ein Fehler auf.|  
-|`WM_PAINT`|Überprüfen Sie das betroffene Fenster, und somit verhindert, dass eine andere `WM_PAINT` Nachricht generiert werden.|  
+|`WM_CREATE`|Fail.|  
+|`WM_PAINT`|Validate the affected window, thus preventing another `WM_PAINT` message from being generated.|  
   
- Überschreiben Sie diese Memberfunktion zum globalen Behandlung der Ausnahmen bereitzustellen. Rufen Sie die Basisfunktionalität, nur dann, wenn das Standardverhalten angezeigt werden sollen.  
+ Override this member function to provide global handling of your exceptions. Call the base functionality only if you wish to display the default behavior.  
   
- Diese Memberfunktion ist nur in Threads verwendet, die ein Nachrichtensystem aufweisen.  
+ This member function is used only in threads that have a message pump.  
   
-##  <a name="pumpmessage"></a>CWinThread::PumpMessage  
- Enthält die Nachrichtenschleife für den Thread.  
+##  <a name="pumpmessage"></a>  CWinThread::PumpMessage  
+ Contains the thread's message loop.  
   
 ```  
 virtual BOOL PumpMessage();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- `PumpMessage`enthält die Nachrichtenschleife für den Thread. **PumpMessage** wird aufgerufen, indem Sie `CWinThread` zum Weiterleiten von Nachrichten für den Thread. Sie können Aufrufen `PumpMessage` direkt zum Erzwingen von Nachrichten an die verarbeitet werden, oder überschreiben `PumpMessage` sein Standardverhalten zu ändern.  
+### <a name="remarks"></a>Remarks  
+ `PumpMessage` contains the thread's message loop. **PumpMessage** is called by `CWinThread` to pump the thread's messages. You can call `PumpMessage` directly to force messages to be processed, or you can override `PumpMessage` to change its default behavior.  
   
- Aufrufen von `PumpMessage` direkt und sein Standardverhalten zu überschreiben, wird nur für fortgeschrittene Benutzer empfohlen.  
+ Calling `PumpMessage` directly and overriding its default behavior is recommended for advanced users only.  
   
-##  <a name="resumethread"></a>CWinThread:: ResumeThread  
- Wird aufgerufen, um die Ausführung eines Threads fortgesetzt werden, die angehalten wurde, indem die [SuspendThread](#suspendthread) Memberfunktion oder ein Thread erstellt, mit der **CREATE_SUSPENDED** Flag.  
+##  <a name="resumethread"></a>  CWinThread::ResumeThread  
+ Called to resume execution of a thread that was suspended by the [SuspendThread](#suspendthread) member function, or a thread created with the **CREATE_SUSPENDED** flag.  
   
 ```  
 DWORD ResumeThread();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Thread des vorherigen Unterbrechungszähler bei Erfolg; `0xFFFFFFFF` andernfalls. Wenn der Rückgabewert 0 (null) ist, wurde der aktuelle Thread nicht angehalten. Wenn der Rückgabewert eines ist, wird der Thread wurde angehalten, aber jetzt neu gestartet wird. Rückgabewerte, die größer als ein bedeutet, dass der Thread bleibt angehalten.  
+### <a name="return-value"></a>Return Value  
+ The thread's previous suspend count if successful; `0xFFFFFFFF` otherwise. If the return value is zero, the current thread was not suspended. If the return value is one, the thread was suspended, but is now restarted. Any return value greater than one means the thread remains suspended.  
   
-### <a name="remarks"></a>Hinweise  
- Der Unterbrechungszähler des aktuellen Threads ist um eins verringert. Wenn der Unterbrechungszähler reduziert wird auf 0 (null), setzt der Thread die Ausführung; andernfalls bleibt der Thread angehalten.  
+### <a name="remarks"></a>Remarks  
+ The suspend count of the current thread is reduced by one. If the suspend count is reduced to zero, the thread resumes execution; otherwise the thread remains suspended.  
   
-##  <a name="run"></a>Hauptmeldungsschleife  
- Stellt eine Standard-Nachrichtenschleife für Benutzeroberflächenthreads bereit.  
+##  <a name="run"></a>  CWinThread::Run  
+ Provides a default message loop for user-interface threads.  
   
 ```  
 virtual int Run();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein `int` Wert, der vom Thread zurückgegeben wird. Dieser Wert kann abgerufen werden, durch den Aufruf [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190).  
+### <a name="return-value"></a>Return Value  
+ An `int` value that is returned by the thread. This value can be retrieved by calling [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190).  
   
-### <a name="remarks"></a>Hinweise  
- **Führen Sie** erhält und Windows-Meldungen sendet, bis die Anwendung empfängt eine [WM_QUIT](http://msdn.microsoft.com/library/windows/desktop/ms632641) Nachricht. Wenn der Thread-Nachrichtenwarteschlange derzeit keine Nachrichten enthält **ausführen** Aufrufe `OnIdle` leerlaufzeitverarbeitung ausführen. Eingehende Nachrichten werden an die [PreTranslateMessage](#pretranslatemessage) Memberfunktion für spezielle Verarbeitung und dann in der Windows-Funktion [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) für die Standardtastatur Übersetzung. Schließlich die [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktion wird aufgerufen.  
+### <a name="remarks"></a>Remarks  
+ **Run** acquires and dispatches Windows messages until the application receives a [WM_QUIT](http://msdn.microsoft.com/library/windows/desktop/ms632641) message. If the thread's message queue currently contains no messages, **Run** calls `OnIdle` to perform idle-time processing. Incoming messages go to the [PreTranslateMessage](#pretranslatemessage) member function for special processing and then to the Windows function [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) for standard keyboard translation. Finally, the [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows function is called.  
   
- **Führen Sie** wird selten überschrieben wird, aber Sie können überschreiben, um spezielle Verhalten zu implementieren.  
+ **Run** is rarely overridden, but you can override it to implement special behavior.  
   
- Diese Memberfunktion ist nur in Benutzeroberflächenthreads verwendet.  
+ This member function is used only in user-interface threads.  
   
-##  <a name="setthreadpriority"></a>CWinThread::SetThreadPriority  
- Diese Funktion legt die Prioritätsstufe des aktuellen Threads innerhalb seiner Prioritätsklasse.  
+##  <a name="setthreadpriority"></a>  CWinThread::SetThreadPriority  
+ This function sets the priority level of the current thread within its priority class.  
   
 ```  
 BOOL SetThreadPriority(int nPriority);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nPriority`  
- Gibt die neue Prioritätsebene innerhalb seiner Prioritätsklasse. Dieser Parameter muss einer der folgenden Werte an, von der höchsten Priorität zur niedrigsten aufgeführt werden:  
+ Specifies the new thread priority level within its priority class. This parameter must be one of the following values, listed from highest priority to lowest:  
   
 - **THREAD_PRIORITY_TIME_CRITICAL**  
   
@@ -546,34 +564,34 @@ BOOL SetThreadPriority(int nPriority);
   
 - **THREAD_PRIORITY_BELOW_NORMAL**  
   
-- **RANGFOLGE VON THREAD_PRIORITY_LOWEST**  
+- **THREAD_PRIORITY_LOWEST**  
   
 - **THREAD_PRIORITY_IDLE**  
   
- Weitere Informationen über diese Prioritäten finden Sie unter [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information on these priorities, see [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) in the Windows SDK.  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Funktion erfolgreich ausgeführt wurde; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if function was successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Er kann nur aufgerufen werden, nachdem [CreateThread](#createthread) erfolgreich ausgeführt wurde.  
+### <a name="remarks"></a>Remarks  
+ It can only be called after [CreateThread](#createthread) successfully returns.  
   
-##  <a name="suspendthread"></a>CWinThread:: SuspendThread  
- Inkrementiert den aktuellen Thread den Unterbrechungszähler.  
+##  <a name="suspendthread"></a>  CWinThread::SuspendThread  
+ Increments the current thread's suspend count.  
   
 ```  
 DWORD SuspendThread();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Thread des vorherigen Unterbrechungszähler bei Erfolg; `0xFFFFFFFF` andernfalls.  
+### <a name="return-value"></a>Return Value  
+ The thread's previous suspend count if successful; `0xFFFFFFFF` otherwise.  
   
-### <a name="remarks"></a>Hinweise  
- Wenn Sie einen beliebigen Thread den Unterbrechungszähler über 0 (null) aufweist, wird dieser Thread nicht ausgeführt. Der Thread kann fortgesetzt werden, durch Aufrufen der [ResumeThread](#resumethread) Memberfunktion.  
+### <a name="remarks"></a>Remarks  
+ If any thread has a suspend count above zero, that thread does not execute. The thread can be resumed by calling the [ResumeThread](#resumethread) member function.  
   
-## <a name="see-also"></a>Siehe auch  
- [CCmdTarget-Klasse](../../mfc/reference/ccmdtarget-class.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CWinApp-Klasse](../../mfc/reference/cwinapp-class.md)   
- [CCmdTarget-Klasse](../../mfc/reference/ccmdtarget-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWinApp Class](../../mfc/reference/cwinapp-class.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)
 

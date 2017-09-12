@@ -1,43 +1,63 @@
 ---
-title: "Sicherheitsauswirkungen der Anpassung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-Feature Pack, Sicherheit"
-  - "Sicherheit, MFC-Feature Pack"
+title: Security Implications of Customization | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- security, MFC Feature Pack
+- MFC Feature Pack, security
 ms.assetid: 9be96b12-be38-43bd-a133-5d671265f7a1
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Sicherheitsauswirkungen der Anpassung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 882ce16a4123125e10dd7cb6c2b4743f077b5241
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In diesem Thema werden ein potenzielles Sicherheitsrisiko in MFC.  
+---
+# <a name="security-implications-of-customization"></a>Security Implications of Customization
+This topic discusses a potential security weakness in MFC.  
   
-## Mögliche Sicherheits\-Schwäche  
- MFC können den Benutzer Anpassen des Aussehens einer Anwendungsbenutzeroberfläche, beispielsweise, die Darstellung der Schaltflächen und von Symbolen.  MFC unterstützt auch benutzerdefinierte Tools, die den Benutzer Shellbefehle auszuführen.  Eine Sicherheitslücke entsteht, weil die benutzerdefinierten Einstellungen der Anwendung im Benutzerprofil in der Registrierung gespeichert werden.  Jeder, der auf die Registrierung zugreifen kann, kann diese Einstellungen ändern und ändert die Anwendungsdarstellung oder verhalten.  Beispielsweise kann ein Administrator auf dem Computer einen Benutzer imitieren, indem die Anwendung des Benutzers ausgelöst hat, beliebige Programme auszuführen \(sogar einer Netzwerkfreigabe\).  
+## <a name="potential-security-weakness"></a>Potential Security Weakness  
+ MFC allows the user customize the look of an application user interface, for example, the appearance of buttons and icons. MFC also supports user-defined tools, which let the user execute shell commands. A security vulnerability arises because the customized settings of the application are saved in the user profile in the registry. Anyone who can access the registry can edit those settings and change the application appearance or behavior. For example, an administrator on the computer could impersonate a user by causing the user's application to execute arbitrary programs (even from a network share).  
   
-## Problemumgehung  
- Sie sollten alle drei Methoden, die ein in der Registrierung zu schließen:  
+## <a name="workarounds"></a>Workarounds  
+ We recommend any of these three ways to close the vulnerabilities in the registry:  
   
--   Verschlüsseln Sie die Daten, die dort gespeichert wird  
+-   Encrypt the data that is stored there  
   
--   Speichern Sie die Daten in einer sicheren Datei nicht in der Registrierung.  
+-   Store the data in a secure file instead of in the registry.  
   
-     Um eine dieser ersten zwei Methoden zu erreichen, leiten Sie eine Klasse von [CSettingsStore Class](../mfc/reference/csettingsstore-class.md) und überschreiben Sie die Methoden für die Verschlüsselung oder Speicher außerhalb der Registrierung zu implementieren.  
+     To accomplish either of these first two ways, derive a class from [CSettingsStore Class](../mfc/reference/csettingsstore-class.md) and override its methods to implement encryption or storage outside the registry.  
   
--   Sie können Anpassungen in der Anwendung auch deaktivieren.  
+-   You can also disable customizations in your application.  
   
-## Siehe auch  
- [Anpassung für MFC](../mfc/customization-for-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Customization for MFC](../mfc/customization-for-mfc.md)
+
+

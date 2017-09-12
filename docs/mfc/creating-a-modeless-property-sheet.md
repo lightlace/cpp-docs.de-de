@@ -1,42 +1,61 @@
 ---
-title: "Erstellen eines nicht modalen Eigenschaftenblatts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Create-Methode [C++], Eigenschaftenblätter"
-  - "nicht modulare Eigenschaftenblätter"
-  - "Eigenschaftenblätter, Nicht modal"
+title: Creating a Modeless Property Sheet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modeless property sheets
+- property sheets, modeless
+- Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Erstellen eines nicht modalen Eigenschaftenblatts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb93a55b9da82f75a1bdaab5818e11ae0e075d5f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Normalerweise sind die Eigenschaftenblätter, die Sie erstellen, modal.  Wenn ein modales Eigenschaftenblatt verwendet, vor der Anwendung eines anderen Teils der Anwendung der Benutzer muss das Eigenschaftenblatt schließen.  Dieser Artikel werden Methoden beschrieben, die Sie verwenden können, um ein nicht modales Eigenschaftenblatt zu erstellen, das dem Benutzer ermöglicht, um das Eigenschaftenblatt geöffnet zu führen bei der Anwendung andere Teile der Anwendung.  
+---
+# <a name="creating-a-modeless-property-sheet"></a>Creating a Modeless Property Sheet
+Normally, the property sheets you create will be modal. When using a modal property sheet, the user must close the property sheet before using any other part of the application. This article describes methods you can use to create a modeless property sheet that allows the user to keep the property sheet open while using other parts of the application.  
   
- Um ein Eigenschaftenblatt als nicht modales Dialogfeld als nicht modales Dialogfeld anzuzeigen, rufen Sie [CPropertySheet::Create](../Topic/CPropertySheet::Create.md) anstelle von [DoModal](../Topic/CPropertySheet::DoModal.md) auf.  Sie müssen einige zusätzliche Aufgaben ebenfalls implementieren, ein nicht modales Eigenschaftenblatt zu unterstützen.  
+ To display a property sheet as a modeless dialog box instead of as a modal dialog box, call [CPropertySheet::Create](../mfc/reference/cpropertysheet-class.md#create) instead of [DoModal](../mfc/reference/cpropertysheet-class.md#domodal). You must also implement some extra tasks to support a modeless property sheet.  
   
- Eine der zusätzlichen Aufgaben ist dem Austausch von Daten zwischen dem Eigenschaftenblatt und dem externen Objekt, die es verändert, wann das Eigenschaftenblatt geöffnet ist.  Dies ist im Allgemeinen dieselbe Aufgabe wie für Standardnicht modal dialogfelder.  Der Rahmen dieser Aufgabe implementiert einen Channel der Kommunikation zwischen nicht modalen Eigenschaftenblatt und dem externen Objekt, auf die die Eigenschafteneinstellungen gelten.  Diese Implementierung ist deutlich einfacher, wenn Sie eine Klasse von [CPropertySheet](../mfc/reference/cpropertysheet-class.md) für das nicht modales Eigenschaftenblatt berechnen.  Dieser Artikel wird vorausgesetzt, dass Sie getan haben.  
+ One of the additional tasks is exchanging data between the property sheet and the external object it is modifying when the property sheet is open. This is generally the same task as for standard modeless dialog boxes. Part of this task is implementing a channel of communication between the modeless property sheet and the external object to which the property settings apply. This implementation is far easier if you derive a class from [CPropertySheet](../mfc/reference/cpropertysheet-class.md) for your modeless property sheet. This article assumes you have done so.  
   
- Eine Methode für die Kommunikation zwischen dem nicht modalen Eigenschaftenblatt und dem externen Objekt \(die aktuelle Auswahl in einer Ansicht\), ist, einen Zeiger aus dem Eigenschaftenblatt für das externe Objekt zu definieren.  Definieren einer Funktion aufgerufen \(etwa `SetMyExternalObject`\) in `CPropertySheet` abgeleitete Klasse, um den der Zeiger zu ändern, wenn der Fokus von einem externen Objekt in einen anderen ändert.  Die `SetMyExternalObject`\-Funktion muss die Einstellungen zurücksetzen, damit jede Eigenschaftenseite das neu ausgewählte externe Objekt übernommen.  Um dies zu erreichen, muss die Funktion `SetMyExternalObject` in der Lage sein auf die [CPropertyPage](../mfc/reference/cpropertypage-class.md)\-Objekte zugreifen, die der `CPropertySheet`\-Klasse gehören.  
+ One method for communicating between the modeless property sheet and the external object (the current selection in a view, for example) is to define a pointer from the property sheet to the external object. Define a function (called something like `SetMyExternalObject`) in the `CPropertySheet`-derived class to change the pointer whenever the focus changes from one external object to another. The `SetMyExternalObject` function needs to reset the settings for each property page to reflect the newly selected external object. To accomplish this, the `SetMyExternalObject` function must be able to access the [CPropertyPage](../mfc/reference/cpropertypage-class.md) objects belonging to the `CPropertySheet` class.  
   
- Die bequemste Methode, Zugriff auf den Eigenschaftenseiten innerhalb eines Eigenschaftenblatts zu ermöglichen, ist die `CPropertyPage`\-Objekte in `CPropertySheet` abgeleitetes Objekt.  Das Einbetten `CPropertyPage`\-Objekts in ein `CPropertySheet`\- abgeleitetes Objekt unterscheidet sich vom herkömmlichen Entwurf für modale Dialogfelder, deren Besitzer des Eigenschaftenblatts die `CPropertyPage`\-Objekte erstellt und sie zum Eigenschaftenblatt zu [CPropertySheet::AddPage](../Topic/CPropertySheet::AddPage.md) führt.  
+ The most convenient way to provide access to property pages within a property sheet is to embed the `CPropertyPage` objects in the `CPropertySheet`-derived object. Embedding `CPropertyPage` objects in the `CPropertySheet`-derived object differs from the typical design for modal dialog boxes, where the owner of the property sheet creates the `CPropertyPage` objects and passes them to the property sheet via [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage).  
   
- Es gibt viele Benutzeroberflächealternativen für Situationen, wenn die Einstellungen des nicht modalen Eigenschaftenblatts zu einem externen Objekt angewendet werden sollen.  Eine Alternative besteht darin, die Einstellungen der aktuellen Seite angewendet, wenn der Benutzer einen beliebigen Wert ändert.  Eine Alternative besteht darin, eine übernehmensschaltfläche bereitzustellen, die dem Benutzer ermöglicht, Änderungen auf den Eigenschaftenseiten der Animation, bevor sie für das externe Objekt übergibt.  Informationen zu Möglichkeiten, die übernehmensschaltfläche zu behandeln, finden Sie im Artikel [Behandeln der übernehmens\-Schaltfläche](../mfc/handling-the-apply-button.md).  
+ There are many user-interface alternatives for determining when the settings of the modeless property sheet should be applied to an external object. One alternative is to apply the settings of the current property page whenever the user changes any value. Another alternative is to provide an Apply button, which allows the user to accumulate changes in the property pages before committing them to the external object. For information on ways to handle the Apply button, see the article [Handling the Apply Button](../mfc/handling-the-apply-button.md).  
   
-## Siehe auch  
- [Eigenschaftenblätter](../mfc/property-sheets-mfc.md)   
- [Datenaustausch](../mfc/exchanging-data.md)   
- [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)   
+ [Exchanging Data](../mfc/exchanging-data.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

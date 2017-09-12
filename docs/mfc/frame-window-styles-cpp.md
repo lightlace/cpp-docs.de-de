@@ -1,45 +1,64 @@
 ---
-title: "Rahmenfensterstile (C++)"
-ms.custom: na
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: na
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Rahmenfenster [C++], Stile"
-  - "MFC [C++], Rahmenfenster"
-  - "PreCreateWindow-Methode, Festlegen von Fensterstilen"
-  - "Stile, Fenster"
-  - "Fensterstile [C++]"
-  - "Fenster [C++], MFC"
+title: Frame-Window Styles (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- window styles [MFC]
+- PreCreateWindow method, setting window styles
+- windows [MFC], MFC
+- frame windows [MFC], styles
+- MFC, frame windows
+- styles [MFC], windows
 ms.assetid: fc5058c1-eec8-48d8-9f76-3fc01cfa53f7
 caps.latest.revision: 8
-caps.handback.revision: "5"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Rahmenfensterstile (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 69905342d643c58727dd513451e87285b44f9d8f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die Rahmenfenster, die Sie mit dem Framework erhalten, sind für die meisten Programme an, Sie können jedoch zusätzliche Flexibilität erhalten, indem Sie den erweiterten Funktionen [PreCreateWindow](../Topic/CWnd::PreCreateWindow.md) und die globale Funktion [AfxRegisterWndClass](../Topic/AfxRegisterWndClass.md) MFC verwenden.  `PreCreateWindow` ist eine Memberfunktion von `CWnd`.  
+---
+# <a name="frame-window-styles-c"></a>Frame-Window Styles (C++)
+The frame windows you get with the framework are suitable for most programs, but you can gain additional flexibility by using the advanced functions [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) and the MFC global function [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` is a member function of `CWnd`.  
   
- Wenn Sie **WS\_HSCROLL** anwenden und **WS\_VSCROLL** das Hauptrahmenfenster formatiert, werden sie stattdessen zum **MDICLIENT** Fenster angewendet, sodass Benutzer den Bereich **MDICLIENT** wechseln.  
+ If you apply the **WS_HSCROLL** and **WS_VSCROLL** styles to the main frame window, they are instead applied to the **MDICLIENT** window so users can scroll the **MDICLIENT** area.  
   
- Wenn das **FWS\_ADDTOTITLE** Stilbit des Fensters festgelegt wird \(die sie standardmäßig ist\), wird die Ansicht im Rahmenfenster mit, welchem in der Titelleiste angezeigt Titel, sich des Fensters auf Grundlage den Dokumentnamen der Ansicht.  
+ If the window's **FWS_ADDTOTITLE** style bit is set (which it is by default), the view tells the frame window what title to display in the window's title bar based on the view's document name.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Untergeordnete MDI\-Fenster \(MDICLIENT\) verwalten](../mfc/managing-mdi-child-windows.md), das Fenster in MDI\-Frame, die die untergeordneten MDI\-Fenster enthält  
+-   [Managing MDI child windows (MDICLIENT)](../mfc/managing-mdi-child-windows.md), the window within an MDI frame that contains the MDI child windows  
   
--   [Die Formate eines Fensters geändert wird, erstellt von MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
+-   [Changing the styles of a window created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
--   [Fensterstile](../mfc/reference/window-styles.md)  
+-   [Window styles](../mfc/reference/styles-used-by-mfc.md#window-styles)  
   
-## Siehe auch  
- [Rahmenfenster](../mfc/frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Frame Windows](../mfc/frame-windows.md)
+
+

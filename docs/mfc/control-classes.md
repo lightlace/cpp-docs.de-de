@@ -1,150 +1,169 @@
 ---
-title: "Steuerelementklassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.control"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Schaltflächen, MFC-Steuerelementklassen"
-  - "Steuerelementklassen"
-  - "Steuerelementklassen, MFC"
-  - "Steuerelemente [C++], MFC-Steuerelementklassen"
-  - "Steuerelemente [MFC]"
-  - "Listenfelder, MFC-Steuerelementklassen"
-  - "Statische Anzeigesteuerelemente"
-  - "Text, Steuerelemente für Eingabe"
-  - "Benutzereingabe, MFC-Steuerelementklassen"
+title: Control Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.control
+dev_langs:
+- C++
+helpviewer_keywords:
+- static display controls [MFC]
+- control classes [MFC]
+- buttons, MFC control classes
+- controls [MFC], MFC control classes
+- controls [MFC]
+- list boxes [MFC], MFC control classes
+- control classes [MFC], MFC
+- text, controls for input [MFC]
+- user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Steuerelementklassen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dad536746997bbad1d506bac0676a277d760b126
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Steuerelementklassen kapseln eine Vielzahl von standardmäßigen, die von Steuerelementen des statischen Text zu Tree\-Steuerelementen reichen.  Darüber hinaus bietet MFC einige neue Steuerelemente, u Schaltflächen mit Bitmaps und Steuerleisten.  
+---
+# <a name="control-classes"></a>Control Classes
+Control classes encapsulate a wide variety of standard Windows controls ranging from static text controls to tree controls. In addition, MFC provides some new controls, including buttons with bitmaps and control bars.  
   
- Die Steuerelemente, deren Klassennamen in "**Strg**" enden, waren in Windows 95 und Windows NT 3,51 neu.  
+ The controls whose class names end in "**Ctrl**" were new in Windows 95 and Windows NT version 3.51.  
   
-## Statische Anzeigesteuerelemente  
+## <a name="static-display-controls"></a>Static Display Controls  
  [CStatic](../mfc/reference/cstatic-class.md)  
- Ein STATICAnzeigenfenster.  Statische Steuerelemente werden verwendet, um andere Steuerelemente in einem Dialogfeld oder in einem Fenster zu bezeichnen, entfällt oder zu trennen.  Sie zeigen auch grafische Bilder anstatt Text oder ein Feld.  
+ A static-display window. Static controls are used to label, box, or separate other controls in a dialog box or window. They may also display graphical images rather than text or a box.  
   
-## Textsteuerelemente  
+## <a name="text-controls"></a>Text Controls  
  [CEdit](../mfc/reference/cedit-class.md)  
- Ein BearbeitbarTextsteuerfenster.  Bearbeitungssteuerelemente werden verwendet, um den Text zu akzeptieren, der vom Benutzer eingegeben werden.  
+ An editable-text control window. Edit controls are used to accept textual input from the user.  
   
  [CIPAddressCtrl](../mfc/reference/cipaddressctrl-class.md)  
- Unterstützt ein Eingabefeld für das Bearbeiten einer Internetprotokoll Adresse \(ip\)\-.  
+ Supports an edit box for manipulating an Internet Protocol (IP) address.  
   
  [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)  
- Ein Steuerelement, in das der Benutzer Text eingeben und bearbeiten kann.  Anders als das Steuerelement, das in `CEdit` gekapselt wird, unterstützt ein Rich\-Edit\-Steuerelement Zeichen und Absatzformatierung und OLE\-Objekte.  
+ A control in which the user can enter and edit text. Unlike the control encapsulated in `CEdit`, a rich edit control supports character and paragraph formatting and OLE objects.  
   
-## Steuerelemente, die Zahlen darstellen  
+## <a name="controls-that-represent-numbers"></a>Controls That Represent Numbers  
  [CSliderCtrl](../mfc/reference/csliderctrl-class.md)  
- Ein Steuerelement, das einen Schieberegler enthält, den der Benutzer wechselt, um einen Wert oder einen Satz Werte auszuwählen.  
+ A control containing a slider, which the user moves to select a value or set of values.  
   
  [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)  
- Ein Paar auf Pfeilschaltflächen, die der Benutzer klicken kann, um einen Wert zu erhöhen oder zu vermindern.  
+ A pair of arrow buttons the user can click to increment or decrement a value.  
   
  [CProgressCtrl](../mfc/reference/cprogressctrl-class.md)  
- Zeigt ein Rechteck, das allmählich von links nach rechts gefüllt wird, um den Fortschritt eines Vorgangs an.  
+ Displays a rectangle that is gradually filled from left to right to indicate the progress of an operation.  
   
  [CScrollBar](../mfc/reference/cscrollbar-class.md)  
- Ein Bildlaufleisten\-Steuerelement\-Fenster.  Die Klasse stellt die Funktionalität einer Bildlaufleiste, die als Steuerelement in einem Dialogfeld oder in einem Fenster bereit, durch die der Benutzer eine Position innerhalb eines Bereichs festlegen kann.  
+ A scroll-bar control window. The class provides the functionality of a scroll bar, for use as a control in a dialog box or window, through which the user can specify a position within a range.  
   
-## Schaltflächen  
+## <a name="buttons"></a>Buttons  
  [CButton](../mfc/reference/cbutton-class.md)  
- Ein Schaltflächen\-Steuerelement\-Fenster.  Die Klasse bietet eine programmgesteuerte Schnittstelle für eine Schaltfläche, ein Kontrollkästchen oder ein Optionsfeld aus einem Dialogfeld oder in einem Fenster.  
+ A button control window. The class provides a programmatic interface for a push button, check box, or radio button in a dialog box or window.  
   
  [CBitmapButton](../mfc/reference/cbitmapbutton-class.md)  
- Eine Schaltfläche mit einer Bitmap anstatt eine Textbeschriftung.  
+ A button with a bitmap rather than a text caption.  
   
-## Listen  
+## <a name="lists"></a>Lists  
  [CListBox](../mfc/reference/clistbox-class.md)  
- Ein Listenfeld\-Steuerelement\-Fenster.  Ein Listenfeld wird eine Liste von Elementen an, die der Benutzer anzeigen und auswählen kann.  
+ A list-box control window. A list box displays a list of items that the user can view and select.  
   
  [CDragListBox](../mfc/reference/cdraglistbox-class.md)  
- Stellt die Funktionalität eines Windows\-Listenfelds bereit; kann der Benutzer den Verschiebungslistenfeldelementen, wie Dateinamen und Zeichenfolgenliterale, innerhalb des Listenfelds.  Listenfelder mit dieser Funktion sind für eine Elementliste in einer Reihenfolge anders alphabetisches, wie Einschließungspfadnamen oder Dateien in einem Projekt sinnvoll.  
+ Provides the functionality of a Windows list box; allows the user to move list box items, such as filenames and string literals, within the list box. List boxes with this capability are useful for an item list in an order other than alphabetical, such as include pathnames or files in a project.  
   
  [CComboBox](../mfc/reference/ccombobox-class.md)  
- Ein Kombinationsfeld\-Steuerelement\-Fenster.  Ein Kombinationsfeld besteht aus einem Bearbeitungssteuerelement sowie ein Listenfeld.  
+ A combo-box control window. A combo box consists of an edit control plus a list box.  
   
  [CComboBoxEx](../mfc/reference/ccomboboxex-class.md)  
- Erweitert das Kombinationsfeld\-Steuerelement durch die Unterstützung für Bildlisten.  
+ Extends the combo box control by providing support for image lists.  
   
  [CCheckListBox](../mfc/reference/cchecklistbox-class.md)  
- Zeigt eine Liste von Elementen mit Kontrollkästchen, die der Benutzer überprüfen oder deaktivieren kann, neben jedem Element.  
+ Displays a list of items with check boxes, which the user can check or clear, next to each item.  
   
  [CListCtrl](../mfc/reference/clistctrl-class.md)  
- Zeigt eine Auflistung von Elementen, jede an, die einem Symbol und einer Bezeichnung, besteht fast genauso den rechten Bereich des Datei\-Explorers.  
+ Displays a collection of items, each consisting of an icon and a label, in a manner similar to the right pane of File Explorer.  
   
  [CTreeCtrl](../mfc/reference/ctreectrl-class.md)  
- Zeigt eine hierarchische Liste von Symbolen und von Bezeichnungen angeordnetem in ähnlicher Weise ähnlichem in den linken Bereich des Datei\-Explorers an.  
+ Displays a hierarchical list of icons and labels arranged in a manner similar to the left pane of File Explorer.  
   
-## Symbolleisten und Statusleisten  
+## <a name="toolbars-and-status-bars"></a>Toolbars and Status Bars  
  [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
- Stellt die Funktionalität des allgemeinen Windows\-Symbolleisten\-Steuerelements bereit.  Die meisten Programme verwenden [CToolBar](../mfc/reference/ctoolbar-class.md) statt von dieser Klasse.  
+ Provides the functionality of the Windows toolbar common control. Most MFC programs use [CToolBar](../mfc/reference/ctoolbar-class.md) instead of this class.  
   
  [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
- Ein horizontales Fenster, normalerweise unterteilt in Bereiche, in denen eine Anwendung Statusinformationen anzeigen kann.  Die meisten Programme verwenden [CStatusBar](../mfc/reference/cstatusbar-class.md) statt von dieser Klasse.  
+ A horizontal window, usually divided into panes, in which an application can display status information. Most MFC programs use [CStatusBar](../mfc/reference/cstatusbar-class.md) instead of this class.  
   
-## Verschiedene Steuerelemente  
+## <a name="miscellaneous-controls"></a>Miscellaneous Controls  
  [CAnimateCtrl](../mfc/reference/canimatectrl-class.md)  
- Zeigt einen einfachen Videoclip an.  
+ Displays a simple video clip.  
   
  [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)  
- Ein kleines Popupfenster, das eine einzelne Textzeile den Zweck eines Tools in einer Anwendung beschreibt anzeigt.  
+ A small pop-up window that displays a single line of text describing the purpose of a tool in an application.  
   
  [CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)  
- Unterstützt entweder ein erweitertes Bearbeitungssteuerelement oder ein einfaches Kalenderschnittstellensteuerelement, das einem Benutzer ermöglicht, ein bestimmtes Datum auszuwählen oder Uhrzeitwert.  
+ Supports either an extended edit control, or a simple calendar interface control, that allows a user to choose a specific date or time value.  
   
  [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)  
- Anzeigentitel oder \-Bezeichnungen für Spalten.  
+ Displays titles or labels for columns.  
   
  [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)  
- Unterstützt ein einfaches Kalenderschnittstellensteuerelement, das einem Benutzer ermöglicht, ein Datum auszuwählen.  
+ Supports a simple calendar interface control that allows a user to select a date.  
   
  [CTabCtrl](../mfc/reference/ctabctrl-class.md)  
- Ein Steuerelement mit den Registerkarten, die der Benutzer klicken kann, analog den Trennblättern in einem Ordner.  
+ A control with tabs on which the user can click, analogous to the dividers in a notebook.  
   
  [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)  
- Ermöglicht es dem Benutzer, eine Abkürzungstastenkombination zu erstellen, die der Benutzer klicken kann, um eine Aktion schnell auszuführen.  
+ Enables the user to create a hot key combination, which the user can press to perform an action quickly.  
   
  [CLinkCtrl](../mfc/reference/clinkctrl-class.md)  
- Rendert markierten Text und startet entsprechende Anwendungen, wenn der Benutzer auf den eingebetteten Link klickt.  
+ Renders marked-up text and launches appropriate applications when the user clicks the embedded link.  
   
  [CHtmlEditCtrl](../mfc/reference/chtmleditctrl-class.md)  
- Stellt die Funktionalität des WebBrowser\-ActiveX\-Steuerelements in einem MFC\-Fenster bereit.  
+ Provides the functionality of the WebBrowser ActiveX control in an MFC window.  
   
-## Verwandte Klassen  
+## <a name="related-classes"></a>Related Classes  
  [CImageList](../mfc/reference/cimagelist-class.md)  
- Stellt die Funktionalität der Windows\-Image\-Liste bereit.  Grafiklisten werden mit Strukturansicht\-Steuerelementen Listen\-Steuerelementen und verwendet.  Sie können auch verwendet werden, um einen Satz gleich\-skalierte Bitmaps zu speichern und zu archivieren.  
+ Provides the functionality of the Windows image list. Image lists are used with list controls and tree controls. They can also be used to store and archive a set of same-sized bitmaps.  
   
  [CCtrlView](../mfc/reference/cctrlview-class.md)  
- Alle Basisklasse für zeigt zugeordnet Windows\-Steuerelementen an.  Die Ansichten auf Basis von Steuerelementen sind unten beschrieben.  
+ The base class for all views associated with Windows controls. The views based on controls are described below.  
   
  [CEditView](../mfc/reference/ceditview-class.md)  
- Eine Ansicht, die ein Windows\-Standardbearbeitungssteuerelement enthält.  
+ A view that contains a Windows standard edit control.  
   
  [CRichEditView](../mfc/reference/cricheditview-class.md)  
- Eine Ansicht, die ein Windows\-Rich\-Edit\-Steuerelement enthält.  
+ A view that contains a Windows rich edit control.  
   
  [CListView](../mfc/reference/clistview-class.md)  
- Eine Ansicht, die ein Windows\-Listensteuerelement enthält.  
+ A view that contains a Windows list control.  
   
  [CTreeView](../mfc/reference/ctreeview-class.md)  
- Eine Ansicht, die ein Windows\-Strukturansicht\-Steuerelement enthält.  
+ A view that contains a Windows tree control.  
   
-## Siehe auch  
- [Klassenübersicht](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

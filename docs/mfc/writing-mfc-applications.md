@@ -1,58 +1,77 @@
 ---
-title: "Schreiben von MFC-Anwendungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Anwendungsassistenten [C++], Internetanwendungen"
-  - "Internetanwendungen [C++], MFC"
-  - "MFC [C++], Anwendungsentwicklung"
-  - "MFC [C++], Internetanwendungen"
+title: Writing MFC Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/16/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet applications [MFC], MFC
+- MFC, Internet applications
+- application wizards [MFC], Internet applications
+- MFC, application development
 ms.assetid: 6a8d8a03-abfa-4976-86c2-c5773a4b7179
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Schreiben von MFC-Anwendungen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63072af612adf75290cbdab69867b37e9cbe1bc5
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In diesem Artikel werden die ersten Schritte, die Sie ausführen, um die Anwendung zu entwickeln.  Zunächst müssen Sie entscheiden, welche Art von Anwendung Sie schreiben.  Verschiedene der Optionen wurden in [Anwendungs\-Entwurfs\-Auswahlen](../mfc/application-design-choices.md) erläutert.  Ist die Anwendung:  
+---
+# <a name="writing-mfc-applications"></a>Writing MFC Applications
+This article explains the initial steps you take to develop your application. First, you must decide what kind of application you are writing. Several of the choices were discussed in [Application Design Choices](../mfc/application-design-choices.md). Will your application be:  
   
--   Ausführen auf das Internet oder ein Intranet?  
+-   Running on the Internet or an intranet  
   
--   Ausführen auf einem Client oder auf einem Server?  
+-   Running on a client or on a server  
   
--   Ausführen in einem Browser oder als eigenständige Anwendung?  
+-   Running in a browser or as a stand-alone application  
   
--   Verwenden von COM oder der Active Technology?  
+-   Using COM or Active technology  
   
--   Downloadingdaten mit WinInets oder asynchroner Moniker?  
+-   Downloading data using WinInet or asynchronous monikers  
   
- Ihre Entscheidungen bestimmen, welche Klassen für Ihre Anwendung geeignet sind.  der Antworten tragen auch, die Auswahl zu bestimmen, die Sie, wenn Sie ausführen, des Anwendungs\-Assistenten auszuführen, um zu starten, die Anwendung erstellt.  
+ Your decisions determine which classes are appropriate for your application. Your answers also help determine the selections you make when you run the Application Wizard to begin constructing your application.  
   
- Nachdem Sie die anfänglichen Entwurfsentscheidungen über Ihre Internetanwendung erfüllt haben, können Sie im Anwendungs\-Assistenten verwenden, um zu beginnen.  Verwenden Sie im Anwendungs\-Assistenten, um ein Anwendungsskelett zu erstellen und den Code zu ändern, wie in den folgenden Artikeln beschrieben:  
+ After you've made your initial design decisions about your Internet application, you can use the Application Wizard to get started. Use the Application Wizard to create a skeleton application and modify the code as described in the following articles:  
   
--   Ein ActiveX\-Steuerelement finden Sie unter [ActiveX\-Steuerelemente im Internet](../mfc/activex-controls-on-the-internet.md).  
+-   For an ActiveX control, see [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md).  
   
--   Ein aktives Dokument finden Sie unter [Active Documents im Internet](../mfc/active-documents-on-the-internet.md).  
+-   For an Active document, see [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md).  
   
- Die folgenden Elemente werden auch Anweisungen fest, die Ihnen helfen starten die Programmieraufgaben:  
+ The following articles also provide instructions to help you start your programming tasks:  
   
--   [Anwendungs\-Entwurfs\-Auswahlen](../mfc/application-design-choices.md)  
+-   [Application Design Choices](../mfc/application-design-choices.md)  
   
--   [Asynchrone Moniker im Internet](../mfc/asynchronous-monikers-on-the-internet.md)  
+-   [Asynchronous Monikers on the Internet](../mfc/asynchronous-monikers-on-the-internet.md)  
   
--   [WinInet\-Grundlagen](../mfc/wininet-basics.md)  
+-   [WinInet Basics](../mfc/wininet-basics.md)  
   
-## Siehe auch  
- [MFC\-Internetprogrammierungsaufgaben](../mfc/mfc-internet-programming-tasks.md)   
- [Grundlagen der MFC\-Internetprogrammierung](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

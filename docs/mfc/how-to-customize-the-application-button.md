@@ -1,66 +1,85 @@
 ---
-title: "Gewusst wie: Anpassen der Anwendungsschaltfl&#228;che | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Anwendungsschaltfläche, Anpassen"
+title: 'How to: Customize the Application Button | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Gewusst wie: Anpassen der Anwendungsschaltfl&#228;che
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28a3c05e9df5e3bb62e5019e3664a939a34e8b29
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Sie auf die Anwendungsschaltfläche klicken, wird ein Menü von Befehlen angezeigt.  Normalerweise enthält das Menü dateibezogene Befehle wie **Öffnen**, **Speichern**, **Drucken** und **Beenden**.  
+---
+# <a name="how-to-customize-the-application-button"></a>How to: Customize the Application Button
+When you click the Application button, a menu of commands is displayed. Typically, the menu contains file-related commands such as **Open**, **Save**, **Print**, and **Exit**.  
   
- ![Schaltfläche der MFC&#45;Menübandanwendung](../mfc/media/application_button.png "Application\_Button")  
+ ![MFC Ribbon Application Button](../mfc/media/application_button.png "application_button")  
   
- Um die Anwendungsschaltfläche anzupassen, öffnen Sie sie im Fenster **Eigenschaften**, ändern Sie die Eigenschaften, und zeigen Sie das Menüband in der Vorschau.  
+ To customize the Application button, open it in the **Properties** window, modify its properties, and then preview the ribbon control.  
   
-### Um die Anwendung zu öffnen Sie im Eigenschaftenfenster "  
+### <a name="to-open-the-application-button-in-the-properties-window"></a>To open the Application button in the Properties window  
   
-1.  In Visual Studio im Menü **Ansicht**, klicken Sie auf **Ressourcenansicht**.  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  Doppelklicken Sie in **Ressourcenansicht** auf die Menübandressource, um sie auf der Entwurfsoberfläche anzuzeigen.  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-3.  Auf Entwurfsoberfläche klicken Sie auf das Anwendungsschaltflächenmenü mit der rechten Maustaste und klicken Sie dann auf **Eigenschaften**.  
+3.  On design surface, right-click the Application button menu and then click **Properties**.  
   
-## Anwendungs\-Schaltflächen\-Eigenschaften  
- In der folgenden Tabelle definiert die Eigenschaften der Anwendungsschaltfläche.  
+## <a name="application-button-properties"></a>Application Button Properties  
+ The following table defines the properties of the Application button.  
   
-|Eigenschaft|Definition|  
-|-----------------|----------------|  
-|**Schaltflächen**|Enthält die Auflistung von drei Schaltflächen, die in der rechten unteren Ecke vom Anwendungsmenü werden.|  
-|**Beschriftung**|Gibt den Text des Steuerelements.  Anders als andere Menübandelemente werden die nicht Anwendungsschaltfläche Beschriftungstext an.  Stattdessen wird der Text für Barrierefreiheit verwendet.|  
-|**HDPI Image**|Gibt den Bezeichner des hohen Punkt pro Zoll\- \(HDPI\)\- Anwendungsschaltflächensymbols an.  Wenn die Anwendung auf einen Monitor für hohe DPI\-Auflösungen ausgeführt wird, wird **HDPI Image** anstelle von **Bild** verwendet.|  
-|**HDPI Large Images**|Gibt dem Bezeichner der großen Bilder für hohe DPI\-Auflösungen an.  Wenn die Anwendung auf einen Monitor für hohe DPI\-Auflösungen ausgeführt wird, wird **HDPI Large Images** anstelle von **Große Bilder** verwendet.|  
-|**HDPI Small Images**|Gibt dem Bezeichner der kleinen Bilder für hohe DPI\-Auflösungen an.  Wenn die Anwendung auf einen Monitor für hohe DPI\-Auflösungen ausgeführt wird, wird **HDPI Small Images** anstelle von **Kleine Bilder** verwendet.|  
-|**ID**|Gibt den Bezeichner des Steuerelements.|  
-|**Bild**|Gibt den Bezeichner des Anwendungsschaltflächensymbols an.  Das Symbol ist eine Bitmap des 32\-Bits 26x26, die Alphatransparenz hat.  Die transparenten Teile des Symbols werden hervorgehoben, wenn auf die Anwendungsschaltfläche vorbei geklickt oder angezeigt wird.|  
-|**Schlüssel**|Gibt die Zeichenfolge an, die angezeigt wird, wenn TasteTippnavigation aktiviert ist.  Taste\-Tippnavigation wird aktiviert, wenn Sie die ALT\-TASTE drücken.|  
-|**Große Bilder**|Gibt den Bezeichner des Bildes, das eine Reihe von Symbolen 32x32 enthält.  Die Symbole werden über die Schaltflächen in der Hauptelementauflistung verwendet.|  
-|**Hauptelemente**|Enthält eine Sammlung von Menüelementen, die das Anwendungsmenü werden.|  
-|**MRU\-Beschriftung**|Gibt den Text an, der im neuen Listenbereich angezeigt wird.|  
-|**Kleine Bilder**|Gibt den Bezeichner des Bildes, das eine Reihe von Symbolen 16x16 enthält.  Die Symbole werden über die Schaltflächen in der Schaltflächenauflistung verwendet.|  
-|**Verwendung**|Aktiviert oder deaktiviert den neuen Listenbereich.  Der neue Listenbereich wird im Anwendungsmenü.|  
-|**Breite**|Gibt die Breite in Pixel des neuen Listenbereichs an.|  
+|Property|Definition|  
+|--------------|----------------|  
+|**Buttons**|Contains the collection of up to three buttons that appear in the bottom-right corner of the Application menu.|  
+|**Caption**|Specifies the text of the control. Unlike other ribbon elements, the Application button does not display caption text. Instead, the text is used for accessibility.|  
+|**HDPI Image**|Specifies the identifier of the high dots per inch (HDPI) Application button icon. When the application runs on a high DPI monitor, **HDPI Image** is used instead of **Image**.|  
+|**HDPI Large Images**|Specifies the identifier of the high DPI large images. When the application runs on a high DPI monitor, **HDPI Large Images** is used instead of **Large Images**.|  
+|**HDPI Small Images**|Specifies the identifier of the high DPI small images. When the application runs on a high DPI monitor, **HDPI Small Images** is used instead of **Small Images**.|  
+|**ID**|Specifies the identifier of the control.|  
+|**Image**|Specifies the identifier of the Application button icon. The icon is a 32-bit 26x26 bitmap that has alpha transparency. The transparent portions of the icon are highlighted when the Application button is clicked or hovered over.|  
+|**Keys**|Specifies the string that is displayed when key-tip navigation is enabled. Key-tip navigation is enabled when you press ALT.|  
+|**Large Images**|Specifies the identifier of the image that contains a series of 32x32 icons. The icons are used by the buttons in the Main Items collection.|  
+|**Main Items**|Contains a collection of menu items that appear on the Application menu.|  
+|**MRU Caption**|Specifies the text displayed on the Recent List panel.|  
+|**Small Images**|Specifies the identifier of the image that contains a series of 16x16 icons. The icons are used by the buttons in the Buttons collection.|  
+|**Use**|Enables or disables the Recent List panel. The Recent List panel appears on the Application menu.|  
+|**Width**|Specifies the width in pixels of the Recent List panel.|  
   
- Das Anwendungsmenü wird nicht auf der Entwurfsoberfläche.  Um es anzuzeigen, müssen Sie entweder das Menüband in der Vorschau anzeigen bzw. die Anwendung ausführen.  
+ The Application menu does not appear on the design surface. To view it, you must either preview the ribbon or run the application.  
   
-#### So das Menüband in der Vorschau anzeigen  
+#### <a name="to-preview-the-ribbon-control"></a>To preview the ribbon control  
   
--   Klicken Sie auf der **Menüband\-Editor\-SymbolleisteRibbon testen**.  
+-   On the **Ribbon Editor Toolbar**, click **Test Ribbon**.  
   
-## Siehe auch  
- [Menüband\-Designer \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

@@ -1,46 +1,65 @@
 ---
-title: "Registrieren von Fensterklassen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WndProc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AfxRegisterWndClass-Methode"
-  - "Klassen [C++], Registrieren von Fensterklassen"
-  - "MFC, Fenster"
-  - "Registrieren von Fensterklassen"
-  - "Registrierung, Registrieren von Klassen"
-  - "Fensterklassen, Registrieren"
-  - "WinMain-Methode"
-  - "WinMain-Methode, und Registrieren von Fensterklassen"
-  - "WndProc-Methode"
+title: Registering Window Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WndProc
+dev_langs:
+- C++
+helpviewer_keywords:
+- window classes [MFC], registering
+- registry [MFC], registering classes
+- AfxRegisterWndClass method [MFC]
+- MFC, windows
+- WinMain method [MFC], and registering window classes
+- WndProc method [MFC]
+- classes [MFC], registering window classes
+- WinMain method [MFC]
+- registering window classes [MFC]
 ms.assetid: 30994bc4-a362-43da-bcc5-1bf67a3fc929
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Registrieren von Fensterklassen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9687fea9a7f9978b53ec2f7584225ddd534f06d3
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Fenster "\-" in der herkömmlichen Programmierung für Windows definieren die Eigenschaften einer "Klasse" \(keine C\+\+\-Klasse\) von der eine Zahl Fenster erstellt werden kann.  Diese Art von Klasse ist eine Vorlage oder ein Modell zum Erstellen von Fenstern.  
+---
+# <a name="registering-window-classes"></a>Registering Window Classes
+Window "classes" in traditional programming for Windows define the characteristics of a "class" (not a C++ class) from which any number of windows can be created. This kind of class is a template or model for creating windows.  
   
-## Fensterklassen\-Registrierung in herkömmlichen Programmen für Windows  
- In herkömmlichen einem Programm für Windows, ohne MFC, verarbeiten Sie alle Meldungen in einem Fenster in der Fensterprozedur "" oder "in **WndProc**." **WndProc** ist ein Fenster mithilfe eines "Fensterklassenregistrierungs" Prozesses zugeordnet.  Im Hauptfenster wird in der Funktion `WinMain` registriert, aber andere Klassen Fenster können überall in der Anwendung registriert sind.  Registrierung hängt von einer Struktur ab, die einen Zeiger auf die **WndProc**\-Funktion zusammen mit Spezifikation für den Cursor, Hintergrundpinsel, z. B. enthält.  Die Struktur wird als Parameter, zusammen mit des Zeichenfolgennamens der Klasse, in einem früheren Aufruf der **RegisterClass**\-Funktion übergeben.  Daher kann eine Registrierungsklasse über mehrere Fenster freigegeben werden.  
+## <a name="window-class-registration-in-traditional-programs-for-windows"></a>Window Class Registration in Traditional Programs for Windows  
+ In a traditional program for Windows, without MFC, you process all messages to a window in its "window procedure" or "**WndProc**." A **WndProc** is associated with a window by means of a "window class registration" process. The main window is registered in the `WinMain` function, but other classes of windows can be registered anywhere in the application. Registration depends on a structure that contains a pointer to the **WndProc** function together with specifications for the cursor, background brush, and so forth. The structure is passed as a parameter, along with the string name of the class, in a prior call to the **RegisterClass** function. Thus, a registration class can be shared by multiple windows.  
   
-## Fensterklassen\-Registrierung in MFC\-Programmen  
- Im Gegensatz dazu ist die häufigste Fensterklassenregistrierungsaktivität automatisch in einem MFC\-Framework\-Programm ausgeführt.  Wenn Sie MFC verwenden, leiten Sie normalerweise Fensterklasse eine C\+\+\-Headerdatei aus einer vorhandenen Bibliotheksklasse mit normaler C\+\+\-Syntax für Klassenvererbung.  Das Framework verwendet weiterhin herkömmliche "Registrierungsklassen," und stellt einige Standardzur Verfügung, nach Bedarf registriert für Sie.  Sie können zusätzliche Registrierungsklassen registrieren, indem Sie [AfxRegisterWndClass](../Topic/AfxRegisterWndClass.md) globale Funktion aufrufen und dann die registrierte Klasse die **Erstellen**\-Memberfunktion `CWnd` übergeben.  Wie, ist die herkömmliche "Registrierungsklasse" in Windows hier beschriebenen nicht mit eine C\+\+\-Klasse verwechselt werden.  
+## <a name="window-class-registration-in-mfc-programs"></a>Window Class Registration in MFC Programs  
+ In contrast, most window class registration activity is done automatically in an MFC framework program. If you are using MFC, you typically derive a C++ window class from an existing library class using the normal C++ syntax for class inheritance. The framework still uses traditional "registration classes," and it provides several standard ones, registered for you when needed. You can register additional registration classes by calling the [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) global function and then passing the registered class to the **Create** member function of `CWnd`. As described here, the traditional "registration class" in Windows is not to be confused with a C++ class.  
   
- Weitere Informationen finden Sie unter [Technischer Hinweis 1](../mfc/tn001-window-class-registration.md).  
+ For more information, see [Technical Note 1](../mfc/tn001-window-class-registration.md).  
   
-## Siehe auch  
- [Erstellen von Fenstern](../mfc/creating-windows.md)
+## <a name="see-also"></a>See Also  
+ [Creating Windows](../mfc/creating-windows.md)
+
+

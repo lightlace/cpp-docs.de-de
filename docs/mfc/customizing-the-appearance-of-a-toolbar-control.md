@@ -1,66 +1,85 @@
 ---
-title: "Anpassen der Darstellung eines Symbolleisten-Steuerelements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TBSTYLE_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBar-Klasse, Stile"
-  - "CToolBarCtrl-Klasse, Objektstile"
-  - "Flache Symbolleisten"
-  - "TBSTYLE_-Stile"
-  - "Symbolleisten-Steuerelemente [MFC], Stile"
-  - "Transparente Symbolleisten"
+title: Customizing the Appearance of a Toolbar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TBSTYLE_
+dev_langs:
+- C++
+helpviewer_keywords:
+- flat toolbars
+- CToolBar class [MFC], styles
+- transparent toolbars
+- TBSTYLE_ styles [MFC]
+- CToolBarCtrl class [MFC], object styles
+- toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Anpassen der Darstellung eines Symbolleisten-Steuerelements
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5f3f482e66b7c584f7f7ec176fdef5df895a3260
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-`CToolBarCtrl`\-Klasse stellt viele Formate, die das Aussehen \(und gelegentlich das Verhalten\) des Symbolleistenobjekts beeinflussen.  Ändern Sie das Symbolleistenobjekt, indem Sie den `dwCtrlStyle`\-Parameter der Memberfunktion `CToolBarCtrl::Create` \(oder `CToolBar::CreateEx`\) festlegen, wenn Sie zuerst das ToolBar\-Steuerelement erstellen.  
+---
+# <a name="customizing-the-appearance-of-a-toolbar-control"></a>Customizing the Appearance of a Toolbar Control
+Class `CToolBarCtrl` provides many styles that affect the appearance (and, occasionally, the behavior) of the toolbar object. Modify the toolbar object by setting the `dwCtrlStyle` parameter of the `CToolBarCtrl::Create` (or `CToolBar::CreateEx`) member function, when you first create the toolbar control.  
   
- Die folgenden Formate beeinflussen den "3D\-" Aspekt der Symbolleisten\-Schaltflächen und Platzierung des Schaltflächentexts:  
+ The following styles affect the "3D" aspect of the toolbar buttons and the placement of the button text:  
   
--   **TBSTYLE\_FLAT** stellt eine flache Symbolleiste erstellt, in der die Symbolleiste und Schaltflächen transparent sind.  Schaltflächentext wird unter Schaltflächenbitmaps.  Ist dieses Format verwendet wird, wird die Schaltfläche mit den Cursor automatisch hervorgehoben.  
+-   **TBSTYLE_FLAT** Creates a flat toolbar where both the toolbar and the buttons are transparent. Button text appears under button bitmaps. When this style is used, the button underneath the cursor is automatically highlighted.  
   
--   **TBSTYLE\_TRANSPARENT** stellt eine transparente Symbolleiste erstellt.  In einer transparenten Symbolleiste ist die Symbolleiste transparent, die Schaltflächen sind nicht.  Schaltflächentext wird unter Schaltflächenbitmaps.  
+-   **TBSTYLE_TRANSPARENT** Creates a transparent toolbar. In a transparent toolbar, the toolbar is transparent but the buttons are not. Button text appears under button bitmaps.  
   
--   **TBSTYLE\_LIST** Stellen Schaltfläche Text auf der rechten Seite der Schaltflächenbitmaps.  
+-   **TBSTYLE_LIST** Places button text to the right of button bitmaps.  
   
 > [!NOTE]
->  Um zu verhindern zeichnen Sie Probleme, neu **TBSTYLE\_FLAT** und **TBSTYLE\_TRANSPARENT** festgelegt werden Formate dürfen bevor das Symbolleistenobjekt sichtbar ist.  
+>  To prevent repaint problems, the **TBSTYLE_FLAT** and **TBSTYLE_TRANSPARENT** styles should be set before the toolbar object is visible.  
   
- Die folgenden Formate bestimmen, wenn die Symbolleiste einem Benutzer ermöglicht, um einzelne Schaltflächen innerhalb eines Symbolleistenobjekts mithilfe von Drag & Drop neu anzuordnen:  
+ The following styles determine if the toolbar allows a user to reposition individual buttons within a toolbar object using drag and drop:  
   
--   **TBSTYLE\_ALTDRAG** ermöglicht es Benutzern, die die Position einer Symbolleisten\-Schaltfläche ändern, indem er beim Ziehen die ALT\-TASTE gedrückt halten.  Wenn dieser Stil nicht angegeben wird, muss der Benutzer beim Ziehen einer Schaltfläche UMSCHALTTASTE gedrückt halten.  
+-   **TBSTYLE_ALTDRAG** Allows users to change a toolbar button's position by dragging it while holding down ALT. If this style is not specified, the user must hold down SHIFT while dragging a button.  
   
     > [!NOTE]
-    >  Das `CCS_ADJUSTABLE` Format muss angegeben werden, um zu ziehende Symbolleisten\-Schaltflächen zu aktivieren.  
+    >  The `CCS_ADJUSTABLE` style must be specified to enable toolbar buttons to be dragged.  
   
--   **TBSTYLE\_REGISTERDROP** generiert **TBN\_GETOBJECT** Benachrichtigungsmeldungen, um Ablagezielobjekte bitten, wenn der Mauszeiger auf Symbolleisten\-Schaltflächen übergibt.  
+-   **TBSTYLE_REGISTERDROP** Generates **TBN_GETOBJECT** notification messages to request drop target objects when the mouse pointer passes over toolbar buttons.  
   
- Die anderen Formate beeinflussen visuelles und nicht visuelle Aspekte der Symbolleiste \- Objekts:  
+ The remaining styles affect visual and nonvisual aspects of the toolbar object:  
   
--   `TBSTYLE_WRAPABLE` stellt eine Symbolleiste erstellt, die mehrere Zeilen von Schaltflächen verfügen kann.  Symbolleistenschaltflächen ausführen "Wrapper" zur nächsten Zeile ein, wenn die Symbolleiste zu schmal ist, dass alle Schaltflächen auf derselben Zeile aufzunehmen.  Umschließen tritt auf Trennungs\- und nongroupgrenzen auf.  
+-   `TBSTYLE_WRAPABLE` Creates a toolbar that can have multiple lines of buttons. Toolbar buttons can "wrap" to the next line when the toolbar becomes too narrow to include all buttons on the same line. Wrapping occurs on separation and nongroup boundaries.  
   
--   **TBSTYLE\_CUSTOMERASE NM\_CUSTOMDRAW** Benachrichtigungsmeldungen generiert, wenn `WM_ERASEBKGND` Meldungen verarbeitet.  
+-   **TBSTYLE_CUSTOMERASE** Generates **NM_CUSTOMDRAW** notification messages when it processes `WM_ERASEBKGND` messages.  
   
--   `TBSTYLE_TOOLTIPS` erstellt ein QuickInfo\-Steuerelement, das eine Anwendung verwenden kann, um beschreibenden Text für die Schaltflächen in der Symbolleiste anzuzeigen.  
+-   `TBSTYLE_TOOLTIPS` Creates a tool tip control that an application can use to display descriptive text for the buttons in the toolbar.  
   
- Eine vollständige Auflistung der Symbolleistenformaten und \-erweiterten Formaten, finden Sie unter [Symbolleisten\-Steuerelement\- und Schaltflächen\-Formate](http://msdn.microsoft.com/library/windows/desktop/bb760439) und [Symbolleisten\-erweiterte Formate](http://msdn.microsoft.com/library/windows/desktop/bb760430) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For a complete listing of toolbar styles and extended styles, see [Toolbar Control and Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb760439) and [Toolbar Extended Styles](http://msdn.microsoft.com/library/windows/desktop/bb760430) in the Windows SDK.  
   
-## Siehe auch  
- [Verwenden von CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

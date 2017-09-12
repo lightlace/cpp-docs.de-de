@@ -1,45 +1,64 @@
 ---
-title: "Zuordnen von Windows-Meldungen zu einer Klasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zuordnungen, Meldungen an Dialogklassen"
-  - "Meldungszuordnungen [C++], in Dialogklasse"
-  - "Meldungszuordnungen [C++], Zuordnen von Windows-Meldungen zu einer Klasse"
-  - "Meldungen an Dialogklassen"
-  - "Meldungen an Dialogklassen, Zuordnen"
-  - "MFC-Dialogfelder, Windows-Meldungen"
-  - "Windows-Nachrichten [C++], Zuordnen in Dialogklassen"
+title: Mapping Windows Messages to Your Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], Windows messages
+- message maps [MFC], in dialog class
+- Windows messages [MFC], mapping in dialog classes
+- messages to dialog class [MFC]
+- mappings [MFC]], messages to dialog class [MFC]
+- message maps [MFC], mapping Windows messages to classes
+- messages to dialog class [MFC], mapping
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Zuordnen von Windows-Meldungen zu einer Klasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d1b5e151bcd5c36647849100b50161752878bf7d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Sie das Dialogfeld benötigen, die Windows\-Meldungen bearbeiten, überschreiben Sie die entsprechenden Handlerfunktionen.  Hierzu, verwenden Sie das Eigenschaftenfenster zu [Ordnen Sie die Meldungen zu](../mfc/reference/mapping-messages-to-functions.md) die Dialogfeldklasse.  Dadurch wird ein Eintrag in der Meldungszuordnung für jede Meldung und fügt den Meldungshandlermemberfunktionen der Klasse hinzu.  Verwenden Sie den Visual C\+\+\-Quellcode\-Editor, um Code in den Meldungshandlern zu schreiben.  
+---
+# <a name="mapping-windows-messages-to-your-class"></a>Mapping Windows Messages to Your Class
+If you need your dialog box to handle Windows messages, override the appropriate handler functions. To do so, use the Properties window to [map the messages](../mfc/reference/mapping-messages-to-functions.md) to the dialog class. This writes a message-map entry for each message and adds the message-handler member functions to the class. Use the Visual C++ source code editor to write code in the message handlers.  
   
- Sie können Memberfunktionen von [CDialog\-Klasse](../mfc/reference/cdialog-class.md) und von den Basisklassen, besonders [CWnd](../mfc/reference/cwnd-class.md) auch überschreiben.  
+ You can also override member functions of [CDialog](../mfc/reference/cdialog-class.md) and its base classes, especially [CWnd](../mfc/reference/cwnd-class.md).  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Meldungsbehandlung und Zuordnung](../mfc/message-handling-and-mapping.md)  
+-   [Message handling and mapping](../mfc/message-handling-and-mapping.md)  
   
--   [Häufig überschriebene Memberfunktionen](../mfc/commonly-overridden-member-functions.md)  
+-   [Commonly overridden member functions](../mfc/commonly-overridden-member-functions.md)  
   
--   [Häufig hinzugefügte Memberfunktionen](../mfc/commonly-added-member-functions.md)  
+-   [Commonly added member functions](../mfc/commonly-added-member-functions.md)  
   
-## Siehe auch  
- [Dialogfelder](../mfc/dialog-boxes.md)   
- [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

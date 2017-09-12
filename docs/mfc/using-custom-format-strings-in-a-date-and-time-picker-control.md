@@ -1,45 +1,64 @@
 ---
-title: "Verwenden von benutzerdefinierten Formatzeichenfolgen in einem Steuerelement f&#252;r die Datums- und Zeitauswahl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDateTimeCtrl-Klasse, Anzeigestile"
-  - "DateTimePicker-Steuerelement [MFC]"
-  - "DateTimePicker-Steuerelement [MFC], Anzeigestile"
+title: Using Custom Format Strings in a Date and Time Picker Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDateTimeCtrl class [MFC], display styles
+- DateTimePicker control [MFC], display styles
+- DateTimePicker control [MFC]
 ms.assetid: 7d577f03-6ca0-4597-9093-50b78f304719
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Verwenden von benutzerdefinierten Formatzeichenfolgen in einem Steuerelement f&#252;r die Datums- und Zeitauswahl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9832b2b5316e00dc67487f5fcc117c75cc6f2f9b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Standardmäßig werden Steuerelemente für die Datums\- und Zeitauswahl drei Formattypen \(die einzelnen Stile entsprechend einem eindeutigen Format\) zum Anzeigen des aktuellen Datums bereit oder Entsperren Zeit fest:  
+---
+# <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Using Custom Format Strings in a Date and Time Picker Control
+By default, date and time picker controls provide three format types (each format corresponding to a unique style) for displaying the current date or time:  
   
--   **DTS\_LONGDATEFORMAT** wird das Datum im langen Format an und erzeugt ausgegeben wie "am Mittwoch, den 3. Januar 2000".  
+-   **DTS_LONGDATEFORMAT** Displays the date in long format, producing output like "Wednesday, January 3, 2000".  
   
--   **DTS\_SHORTDATEFORMAT** wird das Datum des kurzen Format an und erzeugt ausgegeben wie "1\/3\/00".  
+-   **DTS_SHORTDATEFORMAT** Displays the date in short format, producing output like "1/3/00".  
   
--   **DTS\_TIMEFORMAT** wird die Zeit im langen Format an und leitet erzeugt z "5:31: 42 PM".  
+-   **DTS_TIMEFORMAT** Displays the time in long format, producing output like "5:31:42 PM".  
   
- Sie können die Darstellung des Datums oder einer Uhrzeit anpassen, indem Sie eine benutzerdefinierte Formatzeichenfolge verwenden.  Diese benutzerdefinierte Zeichenfolge besteht entweder vorhandene Formatzeichen, Internformatzeichen oder eine Kombination aus beidem.  Sobald die benutzerdefinierte Zeichenfolge erstellt wird, können Sie [CDateTimeCtrl::SetFormat](../Topic/CDateTimeCtrl::SetFormat.md) einen Aufruf, das in die benutzerdefinierte Zeichenfolge einfügen.  Das Steuerelement für die Datums\- und Zeitauswahl wird der aktuelle Wert mithilfe der benutzerdefinierten Formatzeichenfolge an.  
+ However, you can customize the appearance of the date or time by using a custom format string. This custom string is made up of either existing format characters, nonformat characters, or a combination of both. Once the custom string is built, make a call to [CDateTimeCtrl::SetFormat](../mfc/reference/cdatetimectrl-class.md#setformat) passing in your custom string. The date and time picker control will then display the current value using your custom format string.  
   
- Das folgende Codebeispiel \(wobei `m_dtPicker` das `CDateTimeCtrl`\-Objekt ist, wird eine mögliche Lösung:  
+ The following example code (where `m_dtPicker` is the `CDateTimeCtrl` object) demonstrates one possible solution:  
   
- [!CODE [NVC_MFCControlLadenDialog#7](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCControlLadenDialog#7)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/cpp/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]  
   
- Zusätzlich zu den benutzerdefinierten Formatzeichenfolgen unterstützen Steuerelemente für die Datums\- und Zeitauswahl auch [Rückruffelder](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).  
+ In addition to custom format strings, date and time picker controls also support [callback fields](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).  
   
-## Siehe auch  
- [Verwenden von CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

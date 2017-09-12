@@ -1,154 +1,172 @@
 ---
-title: "Handler f&#252;r Meldungszuordnungsbereiche | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Befehlsbehandlung, Befehlsupdatehandler"
-  - "Befehls-IDs, Meldungszuordnungen"
-  - "Befehlsrouting, Befehlsupdatehandler"
-  - "Befehlsupdatehandler"
-  - "Steuerelemente-Benachrichtigungsmeldungen"
-  - "Steuerelemente [MFC], Benachrichtigungen"
-  - "Handlerfunktionen"
-  - "Handlerfunktionen, Deklarieren"
-  - "Handlerfunktionen, Meldungszuordnungsbereiche"
-  - "Handler"
-  - "Handler, Meldungszuordnungsbereiche"
-  - "Zuordnungen, Meldungsbereiche"
-  - "Meldungshandler"
-  - "Meldungsbehandlung, Meldungshandlerfunktionen"
-  - "Meldungszuordnungen, Meldungshandlerfunktionen"
-  - "Meldungszuordnungen, Bereiche"
-  - "Meldungsbereiche"
-  - "Meldungsbereiche, Zuordnen"
-  - "Meldungszuordnungsbereiche"
+title: Handlers for Message-Map Ranges | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- handlers [MFC], message-map ranges
+- message maps [MFC]], message handler functions
+- message maps [MFC]], ranges
+- control-notification messages [MFC]
+- command IDs [MFC], message mapping
+- message-map ranges [MFC]
+- handlers [MFC]
+- message handling [MFC], message handler functions
+- mappings [MFC]], message ranges
+- command handling [MFC], command update handlers
+- controls [MFC], notifications
+- handler functions [MFC], message-map ranges
+- handler functions [MFC]
+- command update handlers [MFC]
+- command routing [MFC], command update handlers
+- message ranges [MFC]
+- handler functions [MFC], declaring
+- message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Handler f&#252;r Meldungszuordnungsbereiche
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a0fe020931bc63084b3b7bfa640cec95afae0108
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel wird beschrieben, wie ein Bereich von Meldungen zu einer einzelnen Meldungshandlerfunktion zuordnet \(anstelle der Meldung der Zuordnung eine nur eine Funktion\).  
+---
+# <a name="handlers-for-message-map-ranges"></a>Handlers for Message-Map Ranges
+This article explains how to map a range of messages to a single message handler function (instead of mapping one message to only one function).  
   
- Manchmal, als Sie mehr als eine Meldung oder Steuerelementbenachrichtigung genauso genau verarbeiten müssen.  So einen Situationen möchten Sie möglicherweise alle Nachrichten zu einer einzelnen Handlerfunktion zuordnen.  Meldungszuordnungsbereiche ermöglichen, um dies für einen zusammenhängenden Bereich von Meldungen zu tun:  
+ There are times when you need to process more than one message or control notification in exactly the same way. At such times, you might wish to map all of the messages to a single handler function. Message-map ranges allow you to do this for a contiguous range of messages:  
   
--   Sie können Bereiche von Befehls\-IDs zuordnen:  
+-   You can map ranges of command IDs to:  
   
-    -   Eine Befehlshandlerfunktion.  
+    -   A command handler function.  
   
-    -   Eine Befehlsaktualisierungshandlerfunktion.  
+    -   A command update handler function.  
   
--   Steuerelement\-Benachrichtigungen Sie können für einen Bereich von Steuerelement\-IDs zu einer Meldungshandlerfunktion zuordnen.  
+-   You can map control-notification messages for a range of control IDs to a message handler function.  
   
- Themen beschrieben in diesem Artikeleinschließung:  
+ Topics covered in this article include:  
   
--   [Schreiben des Meldungszuordnungseintrags](#_core_writing_the_message.2d.map_entry)  
+-   [Writing the message-map entry](#_core_writing_the_message.2d.map_entry)  
   
--   [Deklarieren der Handlerfunktion](#_core_declaring_the_handler_function)  
+-   [Declaring the handler function](#_core_declaring_the_handler_function)  
   
--   [Beispiel für einen Bereich von Befehls\-IDs](#_core_example_for_a_range_of_command_ids)  
+-   [Example for a range of command IDs](#_core_example_for_a_range_of_command_ids)  
   
--   [Beispiel für einen Bereich von Steuerelement\-IDs](#_core_example_for_a_range_of_control_ids)  
+-   [Example for a range of control IDs](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a> Schreiben des Meldungszuordnungseintrags  
- in der CPP\-Datei fügen Sie den Eintrag in der Meldungszuordnung, wie im folgenden Beispiel gezeigt:  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> Writing the Message-Map Entry  
+ In the .CPP file, add your message-map entry, as shown in the following example:  
   
- [!CODE [NVC_MFCMessageHandling#6](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#6)]  
+ [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
   
- Der Eintrag in der Meldungszuordnung umfasst folgende Elemente:  
+ The message-map entry consists of the following items:  
   
--   Das Meldungszuordnungsbereichsmakro:  
+-   The message-map range macro:  
   
-    -   [ON\_COMMAND\_RANGE](../Topic/ON_COMMAND_RANGE.md)  
+    -   [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)  
   
-    -   [ON\_UPDATE\_COMMAND\_UI\_RANGE](../Topic/ON_UPDATE_COMMAND_UI_RANGE.md)  
+    -   [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)  
   
-    -   [ON\_CONTROL\_RANGE](../Topic/ON_CONTROL_RANGE.md)  
+    -   [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)  
   
--   Parameter dem Makro:  
+-   Parameters to the macro:  
   
-     Die ersten beiden Makros verwenden drei Parameter:  
+     The first two macros take three parameters:  
   
-    -   Die Befehls\-ID, die den Bereich beginnt  
+    -   The command ID that starts the range  
   
-    -   Die Befehls\-ID, die den Bereich beendet  
+    -   The command ID that ends the range  
   
-    -   Der Name der Meldungshandlerfunktion  
+    -   The name of the message handler function  
   
-     Der Bereich von Befehls\-IDs müssen zusammenhängend sein.  
+     The range of command IDs must be contiguous.  
   
-     Das dritte Makro, `ON_CONTROL_RANGE`, verwendet einen zusätzlichen ersten Parameter: eine Steuerelement\-Benachrichtigung, wie **EN\_CHANGE**.  
+     The third macro, `ON_CONTROL_RANGE`, takes an additional first parameter: a control-notification message, such as **EN_CHANGE**.  
   
-##  <a name="_core_declaring_the_handler_function"></a> Deklarieren der Handlerfunktion  
- Fügen Sie der Handlerfunktionsdeklaration in hinzu. Headerdatei.  Der folgende Code zeigt, wie dieser potenziell aussehen, wie unten an:  
+##  <a name="_core_declaring_the_handler_function"></a> Declaring the Handler Function  
+ Add your handler function declaration in the .H file. The following code shows how this might look, as shown below:  
   
- [!CODE [NVC_MFCMessageHandling#7](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#7)]  
+ [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- Handlerfunktionen einzige für Befehle verwenden normalerweise keine Parameter.  Mit Ausnahme von Aktualisierungshandlerfunktionen Handlerfunktionen benötigen für Meldungszuordnungsbereiche einen zusätzlichen Parameter, `nID`, des Typs **UINT**.  Dieser Parameter ist der erste Parameter.  Der zusätzliche Parameter bündelt die zusätzliche Befehls\-ID unter, die erforderlich ist, um anzugeben, die der Benutzer ausgewählt hat tatsächlich Befehl verwenden.  
+ Handler functions for single commands normally take no parameters. With the exception of update handler functions, handler functions for message-map ranges require an extra parameter, `nID`, of type **UINT**. This parameter is the first parameter. The extra parameter accommodates the extra command ID needed to specify which command the user actually chose.  
   
- Weitere Informationen über Parameteranforderungen zum Aktualisieren der Handlerfunktionen, finden Sie unter [Beispiel für einen Bereich von Befehls\-IDs](#_core_example_for_a_range_of_command_ids).  
+ For more information about parameter requirements for updating handler functions, see [Example for a Range of Command IDs](#_core_example_for_a_range_of_command_ids).  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a> Beispiel für einen Bereich von Befehls\-IDs  
- Als können Bereiche?  Ein Beispiel ist in den Behandlungsbefehlen wie dem Zoombefehl im MFC\-Beispiel [HIERSVR](../top/visual-cpp-samples.md).  Dieser Befehl vergrößert die Ansicht und skaliert es zwischen 25% und 300% seiner normalen Größe.  Ansichtsklasse HIERSVRS verwendet einen Bereich, um die Zoombefehle mit einem Eintrag in der Meldungszuordnung zu behandeln, der diesem ähnelt:  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> Example for a Range of Command IDs  
+ When might you use ranges One example is in handling commands like the Zoom command in the MFC sample [HIERSVR](../visual-cpp-samples.md). This command zooms the view, scaling it between 25% and 300% of its normal size. HIERSVR's view class uses a range to handle the Zoom commands with a message-map entry resembling this:  
   
- [!CODE [NVC_MFCMessageHandling#8](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#8)]  
+ [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
   
- Wenn Sie den Eintrag in der Meldungszuordnung schreiben, geben Sie an:  
+ When you write the message-map entry, you specify:  
   
--   Zwei Befehls\-IDs, Anfang und Ende ein zusammenhängender Bereich.  
+-   Two command IDs, beginning and ending a contiguous range.  
   
-     Hier sind sie `ID_VIEW_ZOOM25` und `ID_VIEW_ZOOM300`.  
+     Here they are `ID_VIEW_ZOOM25` and `ID_VIEW_ZOOM300`.  
   
--   Der Name der Handlerfunktion für die Befehle.  
+-   The name of the handler function for the commands.  
   
-     Hier ist es `OnZoom`.  
+     Here it's `OnZoom`.  
   
- Die Funktionsdeklaration würde diesem ähneln:  
+ The function declaration would resemble this:  
   
- [!CODE [NVC_MFCMessageHandling#9](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#9)]  
+ [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- Der Fall von Aktualisierungshandlerfunktionen ist ähnlich, und wahrscheinlich, hilfreich breit.  Es ist recht üblich, `ON_UPDATE_COMMAND_UI`\-Handler für einige Befehle zu schreiben und zu suchen Schreiben, oder Kopieren, codieren derselbe immer wieder.  Die Lösung besteht darin, einen Bereich von Befehls\-IDs zu einer Aktualisierungshandlerfunktion mithilfe des Makros `ON_UPDATE_COMMAND_UI_RANGE` zuzuordnen.  Die Befehls\-IDs müssen einen zusammenhängenden Bereich besteht.  Ein Beispiel finden Sie den **OnUpdateZoom**\-Handler und den `ON_UPDATE_COMMAND_UI_RANGE` \- Eintrag in der Meldungszuordnung in der Ansichtsklasse des HIERSVR\-Beispiel.  
+ The case of update handler functions is similar, and likely to be more widely useful. It's quite common to write `ON_UPDATE_COMMAND_UI` handlers for a number of commands and find yourself writing, or copying, the same code over and over. The solution is to map a range of command IDs to one update handler function using the `ON_UPDATE_COMMAND_UI_RANGE` macro. The command IDs must form a contiguous range. For an example, see the **OnUpdateZoom** handler and its `ON_UPDATE_COMMAND_UI_RANGE` message-map entry in the HIERSVR sample's view class.  
   
- Aktualisierungshandlerfunktionen einzige für Befehle verwenden normalerweise einen einzelnen Parameter, `pCmdUI`, des Typs **CCmdUI\***.  Im Gegensatz Handlerfunktionen benötigen Aktualisierungshandlerfunktionen für Meldungszuordnungsbereiche keinen zusätzlichen Parameter, `nID`, des Typs **UINT**.  Die Befehls\-ID, die erforderlich ist, um anzugeben, die den Benutzer ausgewählten Befehl tatsächlich, wird im `CCmdUI`\-Objekt gefunden.  
+ Update handler functions for single commands normally take a single parameter, `pCmdUI`, of type **CCmdUI\***. Unlike handler functions, update handler functions for message-map ranges do not require an extra parameter, `nID`, of type **UINT**. The command ID, which is needed to specify which command the user actually chose, is found in the `CCmdUI` object.  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a> Beispiel für einen Bereich von Steuerelement\-IDs  
- Ein weiterer interessanter Fall ordnet Steuerelement\-Benachrichtigungen für einen Bereich von Steuerelement\-IDs einem einzelnen Handler an.  Angenommen, der Benutzer eines der auf 10 Schaltflächen klicken kann.  Um alle 10 Schaltflächen auf einem Handler zuzuordnen, wird der Eintrag in der Meldungszuordnung wie folgt aussehen:  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> Example for a Range of Control IDs  
+ Another interesting case is mapping control-notification messages for a range of control IDs to a single handler. Suppose the user can click any of 10 buttons. To map all 10 buttons to one handler, your message-map entry would look like this:  
   
- [!CODE [NVC_MFCMessageHandling#10](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#10)]  
+ [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  
   
- Wenn Sie das `ON_CONTROL_RANGE`\-Makro in der Meldungszuordnung schreiben, geben Sie an:  
+ When you write the `ON_CONTROL_RANGE` macro in your message map, you specify:  
   
--   Eine bestimmte Steuerelement\-Benachrichtigung.  
+-   A particular control-notification message.  
   
-     Hier ist es **BN\_CLICKED**.  
+     Here it's **BN_CLICKED**.  
   
--   Die Steuerelement\-ID\-Werte dem zusammenhängenden Bereich von Steuerelementen.  
+-   The control ID values associated with the contiguous range of controls.  
   
-     Hier sind diese `IDC_BUTTON1` und `IDC_BUTTON10`.  
+     Here these are `IDC_BUTTON1` and `IDC_BUTTON10`.  
   
--   Der Name der Meldungshandlerfunktion.  
+-   The name of the message handler function.  
   
-     Hier ist es `OnButtonClicked`.  
+     Here it's `OnButtonClicked`.  
   
- Wenn Sie die Handlerfunktion schreiben, den **UINT** zusätzlichen Parameter, wie im Folgenden dargestellt:  
+ When you write the handler function, specify the extra **UINT** parameter, as shown in the following:  
   
- [!CODE [NVC_MFCMessageHandling#11](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#11)]  
+ [!code-cpp[NVC_MFCMessageHandling#11](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_6.cpp)]  
   
- Der Handler für `OnButtonClicked` eine einzelne **BN\_CLICKED** Meldung akzeptiert keine Parameter.  Derselbe Handler für einen Bereich von Schaltflächen wird ein **UINT**.  Der zusätzliche Parameter können Identifizieren des jeweiligen Steuerelements zu, das zum Generieren der **BN\_CLICKED** Meldung zuständig ist.  
+ The `OnButtonClicked` handler for a single **BN_CLICKED** message takes no parameters. The same handler for a range of buttons takes one **UINT**. The extra parameter allows for identifying the particular control responsible for generating the **BN_CLICKED** message.  
   
- Der Code, der im Beispiel gezeigt wird, ist typisch: den Wert konvertieren, an `int` innerhalb des Meldungsbereiches und \-behauptung, dass dieses der Fall ist.  Anschließend ergriffen Sie möglicherweise etwas unterschiedliche Aktionen, je nachdem auf die Schaltfläche geklickt wurde.  
+ The code shown in the example is typical: converting the value passed to an `int` within the message range and asserting that this is the case. Then you might take some different action depending on which button was clicked.  
   
-## Siehe auch  
- [Deklarieren von Meldungshandlerfunktionen](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

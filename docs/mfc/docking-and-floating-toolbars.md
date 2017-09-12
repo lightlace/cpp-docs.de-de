@@ -1,121 +1,140 @@
 ---
-title: "Andockbare und frei positionierbare Symbolleisten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBRS_SIZE_DYNAMIC"
-  - "CBRS_SIZE_FIXED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBRS_ALIGN_ANY-Konstante"
-  - "CBRS_SIZE_DYNAMIC-Konstante"
-  - "CBRS_SIZE_FIXED-Konstante"
-  - "Symbolleisten mit fester Größe"
-  - "Unverankerte Paletten"
-  - "Unverankerte Symbolleisten"
-  - "Rahmenfenster, Symbolleisten andocken"
-  - "Paletten, unverankert"
-  - "Größe"
-  - "Größe, Symbolleisten"
-  - "Symbolleisten-Steuerelemente [MFC], Mit Wrapper umschließen"
-  - "Symbolleisten [C++], Andocken"
-  - "Symbolleisten [C++], unverankert"
-  - "Symbolleisten [C++], Größe"
-  - "Symbolleisten [C++], Mit Wrapper umschließen"
+title: Docking and Floating Toolbars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBRS_SIZE_DYNAMIC
+- CBRS_SIZE_FIXED
+dev_langs:
+- C++
+helpviewer_keywords:
+- size [MFC], toolbars
+- size
+- frame windows [MFC], toolbar docking
+- CBRS_ALIGN_ANY constant [MFC]
+- palettes, floating
+- toolbars [MFC], docking
+- CBRS_SIZE_DYNAMIC constant [MFC]
+- floating toolbars
+- toolbars [MFC], size
+- toolbars [MFC], floating
+- fixed-size toolbars
+- CBRS_SIZE_FIXED constant [MFC]
+- toolbar controls [MFC], wrapping
+- toolbars [MFC], wrapping
+- floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Andockbare und frei positionierbare Symbolleisten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a22dbdc0aec475896833460411275c7bae8c3b85
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die Microsoft Foundation Class\-Bibliothek unterstützt andockbare Symbolleisten.  eine andockbare Symbolleiste kann an E\-Mail\-Nachrichten angehängt, oder angedockt wurde, an jede Seite des übergeordneten Fensters oder zu ihr kann, in einem eigenen Minirahmenfenster getrennt werden oder lösen.  Dieser Artikel beschreibt, wie einzelne andockbare Symbolleisten in Anwendungen.  
+---
+# <a name="docking-and-floating-toolbars"></a>Docking and Floating Toolbars
+The Microsoft Foundation Class Library supports dockable toolbars. A dockable toolbar can be attached, or docked, to any side of its parent window, or it can be detached, or floated, in its own mini-frame window. This article explains how to use dockable toolbars in your applications.  
   
- Wenn Sie im Anwendungs\-Assistenten verwenden, um das Skelett der Anwendung zu generieren, werden Sie aufgefordert auszuwählen, dass Sie, andockbare Symbolleisten soll.  Standardmäßig generiert der Anwendungs\-Assistent den Code, der die drei Aktionen auszuführen, die erforderlich sind, eine andockbare Symbolleiste in der Anwendung zu platzieren:  
+ If you use the Application Wizard to generate the skeleton of your application, you are asked to choose whether you want dockable toolbars. By default, the Application Wizard generates the code that performs the three actions necessary to place a dockable toolbar in your application:  
   
--   [Aktivieren Sie das Andocken in einem Rahmenfenster](#_core_enabling_docking_in_a_frame_window).  
+-   [Enable docking in a frame window](#_core_enabling_docking_in_a_frame_window).  
   
--   [Aktivieren Sie das Andocken für eine Symbolleiste](#_core_enabling_docking_for_a_toolbar).  
+-   [Enable docking for a toolbar](#_core_enabling_docking_for_a_toolbar).  
   
--   [Docken Sie die Symbolleiste \(an das Rahmenfenster\)](#_core_docking_the_toolbar).  
+-   [Dock the toolbar (to the frame window)](#_core_docking_the_toolbar).  
   
- Wenn diese Schritte fehlen, zeigt die Anwendung eine Standardsymbolleiste an.  Die letzten beiden Schritte müssen für jede einzelne andockbare Symbolleiste in der Anwendung ausgeführt werden.  
+ If any of these steps are missing, your application will display a standard toolbar. The last two steps must be performed for each dockable toolbar in your application.  
   
- Andere Themen beschrieben in diesem Artikeleinschließung:  
+ Other topics covered in this article include:  
   
--   [Frei verschieben der Symbolleiste](#_core_floating_the_toolbar)  
+-   [Floating the toolbar](#_core_floating_the_toolbar)  
   
--   [Die Symbolleiste dynamisch angepasst wird](#_core_dynamically_resizing_the_toolbar)  
+-   [Dynamically resizing the toolbar](#_core_dynamically_resizing_the_toolbar)  
   
--   [Festlegen von Umbruchspositionen für eine KorrigierteFormatsymbolleiste](#_core_setting_wrap_positions_for_a_fixed.2d.style_toolbar)  
+-   [Setting wrap positions for a fixed-style toolbar](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)  
   
- Siehe das Beispiel [DOCKTOOL](../top/visual-cpp-samples.md) allgemeine MFC für Beispiele.  
+ See the MFC General sample [DOCKTOOL](../visual-cpp-samples.md) for examples.  
   
-##  <a name="_core_enabling_docking_in_a_frame_window"></a> Aktivieren des Andockens in einem Rahmenfenster  
- Um Symbolleisten zu einem Rahmenfenster anzudocken, müssen das Rahmenfenster \(oder Ziel\) aktiviert werden um das Andocken zu ermöglichen.  Dies wird mithilfe der [CFrameWnd::EnableDocking](../Topic/CFrameWnd::EnableDocking.md)\-Funktion durchgeführt, die einen `DWORD` akzeptiert Parameter, der ein Satz von Stilbitangebens ist, welcher Seite des Rahmenfensters das Andocken angenommen wird.  Wenn einer Symbolleiste im Begriff ist angedockt werden und mehrere Seiten vorhanden sind, dass es angedockt werden kann, werden die Seiten, die ein In\-Parameter übergeben wird von `EnableDocking` angegeben werden, in der folgenden Reihenfolge verwendet: oberen, unteren, linken, rechten.  Wenn Sie möchten, Steuerleisten an beliebigen Stellen andocken möchten, übergeben Sie `CBRS_ALIGN_ANY` in `EnableDocking`.  
+##  <a name="_core_enabling_docking_in_a_frame_window"></a> Enabling Docking in a Frame Window  
+ To dock toolbars to a frame window, the frame window (or destination) must be enabled to allow docking. This is done using the [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) function, which takes one `DWORD` parameter that is a set of style bits indicating which side of the frame window accepts docking. If a toolbar is about to be docked and there are multiple sides that it could be docked to, the sides indicated in the parameter passed to `EnableDocking` are used in the following order: top, bottom, left, right. If you want to be able to dock control bars anywhere, pass `CBRS_ALIGN_ANY` to `EnableDocking`.  
   
-##  <a name="_core_enabling_docking_for_a_toolbar"></a> Aktivieren des Andockens für eine Symbolleiste  
- Nachdem Sie das Ziel für das Andocken vorbereitet haben, müssen Sie die Symbolleiste \(oder Quelle\) in ähnliche Weise vorbereiten.  Aufruf [CControlBar::EnableDocking](../Topic/CControlBar::EnableDocking.md) für jede Symbolleiste, das Sie andocken möchten, Zielseiten angibt, an die die Symbolleisten angedockt werden sollen.  Wenn keine der Seiten, die im Aufruf von `CControlBar::EnableDocking` mit den Seiten aktiviert werden zum Andocken vorgesehenen das Rahmenfenster, Symbolleiste angegeben werden, nicht angedockt werden kann \- es an.  Eine nicht angedockte Symbolleiste bleibt unverankert und kann im Rahmenfenster nicht wieder angedockt werden.  
+##  <a name="_core_enabling_docking_for_a_toolbar"></a> Enabling Docking for a Toolbar  
+ After you have prepared the destination for docking, you must prepare the toolbar (or source) in a similar fashion. Call [CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) for each toolbar you want to dock, specifying the destination sides to which the toolbar should dock. If none of the sides specified in the call to `CControlBar::EnableDocking` match the sides enabled for docking in the frame window, the toolbar cannot dock — it will float. Once it has been floated, it remains a floating toolbar, unable to dock to the frame window.  
   
- Wenn die Auswirkungen, den gewünschten, dauerhaft eine angedockte Symbolleiste, rufen `EnableDocking` mit einem Parameter von 0 ist.  Anschließend rufen Sie [CFrameWnd::FloatControlBar](../Topic/CFrameWnd::FloatControlBar.md).  Die Symbolleiste bleibt unverankert, dauerhaft, kann an beliebigen Stellen andocken möchten.  
+ If the effect you want is a permanently floating toolbar, call `EnableDocking` with a parameter of 0. Then call [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar). The toolbar remains floating, permanently unable to dock anywhere.  
   
-##  <a name="_core_docking_the_toolbar"></a> Andocken der Symbolleiste  
- Das Framework ruft [CFrameWnd::DockControlBar](../Topic/CFrameWnd::DockControlBar.md) auf, wenn der Benutzer versucht, Symbolleiste auf einer Seite des Rahmenfensters abzulegen, das Andocken können.  
+##  <a name="_core_docking_the_toolbar"></a> Docking the Toolbar  
+ The framework calls [CFrameWnd::DockControlBar](../mfc/reference/cframewnd-class.md#dockcontrolbar) when the user attempts to drop the toolbar on a side of the frame window that allows docking.  
   
- Außerdem können Sie diese Funktion jederzeit aufrufen, um im Rahmenfenster Steuerleisten anzudocken.  Dies wird normalerweise während der Initialisierung verwendet.  Unzulässigerweise eine Symbolleiste kann zu einer bestimmten Seite des Rahmenfensters angedockt werden.  
+ In addition, you can call this function at any time to dock control bars to the frame window. This is normally done during initialization. More than one toolbar can be docked to a particular side of the frame window.  
   
-##  <a name="_core_floating_the_toolbar"></a> Frei verschieben der Symbolleiste  
- eine andockbare Symbolleiste vom Rahmenfenster trennt, wird unverankert der Symbolleiste aufgerufen.  Aufruf [CFrameWnd::FloatControlBar](../Topic/CFrameWnd::FloatControlBar.md), um dazu.  Geben Sie der " werden an, Symbolleiste, dem Punkt, an dem sie eingefügt werden soll, und einen Ausrichtungsformat, das bestimmt, ob die unverankerte Symbolleiste horizontal oder vertikal ist.  
+##  <a name="_core_floating_the_toolbar"></a> Floating the Toolbar  
+ Detaching a dockable toolbar from the frame window is called floating the toolbar. Call [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar) to do this. Specify the toolbar to be floated, the point where it should be placed, and an alignment style that determines whether the floating toolbar is horizontal or vertical.  
   
- Das Framework ruft diese Funktion auf, wenn ein Benutzer eine Symbolleiste aus seinem angedockte Position ziehen und sie in einem Verzeichnis ablegt, in dem das Andocken nicht aktiviert ist.  Dies kann innerhalb oder außerhalb des Rahmenfensters sein.  Wie bei `DockControlBar`, können Sie diese Funktion während der Initialisierung aufrufen.  
+ The framework calls this function when a user drags a toolbar off its docked location and drops it in a location where docking is not enabled. This can be anywhere inside or outside the frame window. As with `DockControlBar`, you can also call this function during initialization.  
   
- Die MFC\-Implementierung von andockbaren Symbolleisten bietet nicht einige der erweiterten Features, die in mehreren Anwendungen genutzt werden, die einzelne andockbare Symbolleisten unterstützen.  Funktionen wie anpassbare Symbolleisten werden nicht bereitgestellt.  
+ The MFC implementation of dockable toolbars does not provide some of the extended features found in some applications that support dockable toolbars. Features such as customizable toolbars are not provided.  
   
-##  <a name="_core_dynamically_resizing_the_toolbar"></a> Die Symbolleiste dynamisch angepasst wird  
- Seit Version 4.0 von Visual C\+\+, können Sie sie aktivieren für Benutzer der Anwendung, unverankerte Symbolleisten seine Größe zu ändern.  Normalerweise verfügt eine Symbolleiste eine lange, lineare Form, horizontal angezeigt.  Sie können jedoch die Ausrichtung und die Form Symbolleiste ändern.  Wenn Benutzer eine Symbolleiste für eine der vertikalen Seiten des Rahmenfensters das Andocken, ändert die Form in einem vertikalen Layout.  Es ist auch möglich, die Symbolleiste in ein Rechteck mit mehreren Zeilen von Schaltflächen umzugestalten.  
+##  <a name="_core_dynamically_resizing_the_toolbar"></a> Dynamically Resizing the Toolbar  
+ As of Visual C++ version 4.0, you can make it possible for users of your application to resize floating toolbars dynamically. Typically, a toolbar has a long, linear shape, displayed horizontally. But you can change the toolbar's orientation and its shape. For example, when the user docks a toolbar against one of the vertical sides of the frame window, the shape changes to a vertical layout. It's also possible to reshape the toolbar into a rectangle with multiple rows of buttons.  
   
- Folgende Aktionen sind möglich:  
+ You can:  
   
--   Geben Sie als Symbolleistenmerkmal dynamische Größenanpassung an.  
+-   Specify dynamic sizing as a toolbar characteristic.  
   
--   Option feste Größe als Symbolleistenmerkmal.  
+-   Specify fixed sizing as a toolbar characteristic.  
   
- Um diese Unterstützung bereitzustellen, gibt es zwei neue Symbolleistenformate zur Verwendung in den Aufrufen an die Memberfunktion [CToolBar::Create](../Topic/CToolBar::Create.md).  Dies sind:  
+ To provide this support, there are two new toolbar styles for use in your calls to the [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) member function. They are:  
   
--   **CBRS\_SIZE\_DYNAMIC** Steuerleiste ist dynamisch.  
+-   **CBRS_SIZE_DYNAMIC** Control bar is dynamic.  
   
--   **CBRS\_SIZE\_FIXED** Steuerleiste wird behoben.  
+-   **CBRS_SIZE_FIXED** Control bar is fixed.  
   
- Das dynamische Format der Größe können den Benutzer die Symbolleiste Größe ändern, das unverankert ist, jedoch nicht in sie angedockt ist.  Die Symbolleiste "Aufgabe" um bei Bedarf, um sich als die Benutzerzieh zu verformen seine Kanten.  
+ The size dynamic style lets your user resize the toolbar while it is floating, but not while it is docked. The toolbar "wraps" where needed to change shape as the user drags its edges.  
   
- Das Größe feste Format verwaltet die Umbruchszustände einer Symbolleiste bei und die Position der Schaltflächen in jeder Spalte.  Der Benutzer Ihrer Anwendung kann die Form der Symbolleiste nicht ändern.  Die Symbolleistenumbrüche an bestimmten Orten, z Speicherorten von Trennzeichen zwischen den Schaltflächen.  Sie verwaltet diese Form bei, dass die Symbolleiste oder unverankert angedockt ist.  Der Effekt ist eine feste Palette mit mehreren Spalten von Schaltflächen.  
+ The size fixed style preserves the wrap states of a toolbar, fixing the position of the buttons in each column. Your application's user can't change the shape of the toolbar. The toolbar wraps at designated places, such as the locations of separators between the buttons. It maintains this shape whether the toolbar is docked or floating. The effect is a fixed palette with multiple columns of buttons.  
   
- Sie können [CToolBar::GetButtonStyle](../Topic/CToolBar::GetButtonStyle.md) verwenden, um einem Zustand zurückversetzen und für Schaltflächen auf den Symbolleisten zu formatieren.  Das Format einer Schaltfläche bestimmt, wie die Schaltfläche angezeigt wird und wie sie auf Benutzereingaben reagiert; der Zustand übermittelt sicher, dass die Schaltfläche in einem eingebundenen Zustand ist.  
+ You can also use [CToolBar::GetButtonStyle](../mfc/reference/ctoolbar-class.md#getbuttonstyle) to return a state and style for buttons on your toolbars. A button's style determines how the button appears and how it responds to user input; the state tells whether the button is in a wrapped state.  
   
-##  <a name="_core_setting_wrap_positions_for_a_fixed.2d.style_toolbar"></a> Festlegen von Umbruchs\-Positionen für eine Korrigierte\-Format\-Symbolleiste  
- Eine Symbolleiste mit dem Größe korrigierten Format, an denen besondere Symbolleistenschaltflächenindizes die Symbolleiste umbrochen werden.  Der folgende Code zeigt, wie Sie dies in `OnCreate` Überschreibung des Hauptrahmenfensters:  
+##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> Setting Wrap Positions for a Fixed-Style Toolbar  
+ For a toolbar with the size fixed style, designate toolbar button indexes at which the toolbar will wrap. The following code shows how to do this in your main frame window's `OnCreate` override:  
   
- [!CODE [NVC_MFCDocViewSDI#10](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocViewSDI#10)]  
+ [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]  
   
- Die [DOCKTOOL](../top/visual-cpp-samples.md) zeigt MFC allgemeinen Beispiel, wie von Memberfunktionen von Klassen [CControlBar](../mfc/reference/ccontrolbar-class.md) und [CToolBar](../mfc/reference/ctoolbar-class.md) verwendet, um dynamisches Layout einer Symbolleiste zu verwalten.  Siehe die Datei EDITBAR.CPP in DOCKTOOL.  
+ The MFC General sample [DOCKTOOL](../visual-cpp-samples.md) shows how to use member functions of classes [CControlBar](../mfc/reference/ccontrolbar-class.md) and [CToolBar](../mfc/reference/ctoolbar-class.md) to manage dynamic layout of a toolbar. See the file EDITBAR.CPP in DOCKTOOL.  
   
-### Worüber möchten Sie mehr erfahren?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Grundlagen zu Symbolleisten](../mfc/toolbar-fundamentals.md)  
+-   [Toolbar fundamentals](../mfc/toolbar-fundamentals.md)  
   
--   [QuickInfo in Symbolleisten](../mfc/toolbar-tool-tips.md)  
+-   [Toolbar tool tips](../mfc/toolbar-tool-tips.md)  
   
--   [Mit der alten Symbolleisten](../mfc/using-your-old-toolbars.md)  
+-   [Using your old toolbars](../mfc/using-your-old-toolbars.md)  
   
-## Siehe auch  
- [Implementieren der MFC\-Symbolleiste](../mfc/mfc-toolbar-implementation.md)
+## <a name="see-also"></a>See Also  
+ [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
+
+

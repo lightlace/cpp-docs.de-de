@@ -1,45 +1,64 @@
 ---
-title: "Verwenden von CSliderCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSliderCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl-Klasse, Verwenden"
-  - "Schieberegler-Steuerelemente, Verwenden"
+title: Using CSliderCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSliderCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], using
+- slider controls [MFC], using
 ms.assetid: 242c7bcd-126e-4b9b-8f76-8082ad06fe73
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Verwenden von CSliderCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a942ef48c8916866d647e7b358ffa1a6b7e4829f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die [CSliderCtrl](../mfc/reference/csliderctrl-class.md)\-Klasse stellt ein Schieberegler\-Steuerelement dar, das auch einer Trackleiste aufgerufen wird.  Ein "\-" ist ein Fenster, das einen Schieberegler und optionalen Teilstriche enthält.  Wenn der Benutzer die Bildlaufleiste, entweder mithilfe bewegt, die Maus oder die Pfeiltasten, das Schieberegler\-Steuerelement sendet Benachrichtigungsmeldungen, um der Änderung anzugeben.  
+---
+# <a name="using-csliderctrl"></a>Using CSliderCtrl
+The [CSliderCtrl](../mfc/reference/csliderctrl-class.md) class represents a slider control, which is also called a trackbar. A "slider control" is a window that contains a slider and optional tick marks. When the user moves the slider, using either the mouse or the arrow keys, the slider control sends notification messages to indicate the change.  
   
- Slider\-Steuerelementen sind nützlich, wenn der Benutzer einen einzelnen Wert oder ein Satz nachfolgende Werte in einem Bereich aus.  Beispielsweise können Sie ein Slider\-Steuerelement, um dem Benutzer zu ermöglichen, die Wiederholungsrate der Tastatur festzulegen, indem Sie den Schieberegler auf einen angegebenen Teilstrich verschieben.  
+ Slider controls are useful when you want the user to select a discrete value or a set of consecutive values in a range. For example, you might use a slider control to allow the user to set the repeat rate of the keyboard by moving the slider to a given tick mark.  
   
- Der Schieberegler in ein Slider\-Steuerelement wechselt in Schritte, die Sie angeben, wenn Sie sie erstellen.  Wenn Sie angeben, dass das Schieberegler\-Steuerelement einen Bereich von fünf haben sollte, kann den Schieberegler sechs Positionen nur einnehmen: eine Position links des Slider\-Steuerelements und Position für jedes Inkrement im Bereich.  In der Regel wird diesen Positionen durch einen Teilstrich identifiziert.  
+ The slider in a slider control moves in increments that you specify when you create it. For example, if you specify that the slider control should have a range of five, the slider can only occupy six positions: a position at the left side of the slider control and one position for each increment in the range. Typically, each of these positions is identified by a tick mark.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Verwenden der Slider\-Steuerelementen](../mfc/using-slider-controls.md)  
+-   [Using Slider Controls](../mfc/using-slider-controls.md)  
   
--   [Schieberegler\-Steuerelement\-Formate](../mfc/slider-control-styles.md)  
+-   [Slider Control Styles](../mfc/slider-control-styles.md)  
   
--   [Schieberegler\-Steuerelement\-Memberfunktionen](../mfc/slider-control-member-functions.md)  
+-   [Slider Control Member Functions](../mfc/slider-control-member-functions.md)  
   
--   [Schieberegler\-Benachrichtigungsmeldungen](../mfc/slider-notification-messages.md)  
+-   [Slider Notification Messages](../mfc/slider-notification-messages.md)  
   
-## Siehe auch  
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

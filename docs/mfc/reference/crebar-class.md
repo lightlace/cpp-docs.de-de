@@ -1,5 +1,5 @@
 ---
-title: CReBar-Klasse | Microsoft-Dokumentation
+title: CReBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- rebar controls, control bar
-- CReBar class
-- Internet Explorer 4.0 common controls
+- CReBar [MFC], AddBar
+- CReBar [MFC], Create
+- CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
 caps.latest.revision: 22
 author: mikeblome
@@ -39,15 +39,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 38ac4611503bec70ea9f809a4d4f9d4b5133e30e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19014f5049d32a469699ffcbf59052d945bc7e81
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="crebar-class"></a>CReBar-Klasse
-Eine Steuerleiste, die Layout-, Persistenz- und Zustandsinformationen für Grundleisten-Steuerelemente bereitstellt.  
+# <a name="crebar-class"></a>CReBar Class
+A control bar that provides layout, persistence, and state information for rebar controls.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,31 +55,31 @@ Eine Steuerleiste, die Layout-, Persistenz- und Zustandsinformationen für Grund
 class CReBar : public CControlBar  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CReBar::AddBar](#addbar)|Eine Infoleiste hinzugefügt ein Band.|  
-|[CReBar::Create](#create)|Erstellt das Grundleistensteuerelement und fügt es der `CReBar` Objekt.|  
-|[CReBar:: GetReBarCtrl](#getrebarctrl)|Ermöglicht den direkten Zugriff auf das zugrunde liegende Standardsteuerelement.|  
+|[CReBar::AddBar](#addbar)|Adds a band to a rebar.|  
+|[CReBar::Create](#create)|Creates the rebar control and attaches it to the `CReBar` object.|  
+|[CReBar::GetReBarCtrl](#getrebarctrl)|Allows direct access to the underlying common control.|  
   
-## <a name="remarks"></a>Hinweise  
- Ein Grundleisten-Objekt kann eine Vielzahl untergeordneter Fenster, in der Regel andere Steuerelemente, einschließlich Bearbeitungsfelder, Symbolleisten und Listenfelder enthalten. Ein Grundleisten-Objekt kann über eine angegebene Bitmap zugehöriges untergeordnetes Fenster anzuzeigen. Ihre Anwendung kann automatisch die Größe der Infoleiste oder des Benutzers kann manuell Infoleiste durch Klicken oder ziehen die Ziehleiste.  
+## <a name="remarks"></a>Remarks  
+ A rebar object can contain a variety of child windows, usually other controls, including edit boxes, toolbars, and list boxes. A rebar object can display its child windows over a specified bitmap. Your application can automatically resize the rebar, or the user can manually resize the rebar by clicking or dragging its gripper bar.  
   
- ![Beispiel eines grundleistenmenüs](../../mfc/reference/media/vc4sc61.gif "vc4sc61")  
+ ![Example of RebarMenu](../../mfc/reference/media/vc4sc61.gif "vc4sc61")  
   
-## <a name="rebar-control"></a>Grundleisten-Steuerelement  
- Ein Grundleisten-Objekt verhält sich ähnlich wie ein Toolbar-Objekt. Eine Infoleiste mithilfe des Mechanismus klicken und ziehen die Bändern Größe ändern. Einem Grundleisten-Steuerelement kann eine oder mehrere Bänder für jedes Band müssen eine beliebige Kombination aus einem Ziehleiste, eine Bitmap, eine Bezeichnung und ein untergeordnetes Fenster enthalten. Bänder dürfen jedoch nicht mehr als ein untergeordnetes Fenster.  
+## <a name="rebar-control"></a>Rebar Control  
+ A rebar object behaves similarly to a toolbar object. A rebar uses the click-and-drag mechanism to resize its bands. A rebar control can contain one or more bands, with each band having any combination of a gripper bar, a bitmap, a text label, and a child window. However, bands cannot contain more than one child window.  
   
- **CReBar** verwendet die [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) Klasse, um die Implementierung bereitzustellen. Sie erreichen das Grundleistensteuerelement durch [GetReBarCtrl](#getrebarctrl) des Steuerelements Anpassungsoptionen nutzen. Weitere Informationen zu Grundleisten-Steuerelemente, finden Sie unter `CReBarCtrl`. Weitere Informationen zur Verwendung von Grundleisten-Steuerelemente finden Sie unter [Verwenden von CReBarCtrl](../../mfc/using-crebarctrl.md).  
+ **CReBar** uses the [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) class to provide its implementation. You can access the rebar control through [GetReBarCtrl](#getrebarctrl) to take advantage of the control's customization options. For more information about rebar controls, see `CReBarCtrl`. For more information about using rebar controls, see [Using CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
 > [!CAUTION]
->  Infoleiste und Grundleisten-Steuerelement-Objekte unterstützen keine MFC Steuerleiste andocken. Wenn **CRebar::EnableDocking** aufgerufen wird, wird die Anwendung anfordern.  
+>  Rebar and rebar control objects do not support MFC control bar docking. If **CRebar::EnableDocking** is called, your application will assert.  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -89,11 +89,11 @@ class CReBar : public CControlBar
   
  `CReBar`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxext.h  
   
-##  <a name="addbar"></a>CReBar::AddBar  
- Rufen Sie diese Memberfunktion Infoleiste ein Band hinzugefügt.  
+##  <a name="addbar"></a>  CReBar::AddBar  
+ Call this member function to add a band to the rebar.  
   
 ```  
 BOOL AddBar(
@@ -111,33 +111,33 @@ BOOL AddBar(
     DWORD dwStyle = RBBS_GRIPPERALWAYS);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pBar`  
- Ein Zeiger auf ein `CWnd` Objekt, das das untergeordnete Fenster in der Infoleiste eingefügt werden soll. Das referenzierte Objekt benötigen eine **WS_CHILD**.  
+ A pointer to a `CWnd` object that is the child window to be inserted into the rebar. The referenced object must have a **WS_CHILD**.  
   
  `lpszText`  
- Ein Zeiger auf eine Zeichenfolge mit dem Text auf der Infoleiste angezeigt werden sollen. **NULL** standardmäßig. Der Text in `lpszText` ist nicht Teil des untergeordneten Fensters; es ist für die Infoleiste selbst.  
+ A pointer to a string containing the text to appear on the rebar. **NULL** by default. The text contained in `lpszText` is not part of the child window; it is on the rebar itself.  
   
  `pbmp`  
- Ein Zeiger auf ein `CBitmap` Objekt, das im Hintergrund Infoleiste angezeigt werden. **NULL** standardmäßig.  
+ A pointer to a `CBitmap` object to be displayed on the rebar background. **NULL** by default.  
   
  `dwStyle`  
- Ein `DWORD` mit dem Stil Infoleiste zuweisen. Finden Sie unter der **fStyle** funktionsbeschreibung in der Win32-Struktur [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) für eine vollständige Liste der Stile von Band.  
+ A `DWORD` containing the style to apply to the rebar. See the **fStyle** function description in the Win32 structure [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) for a complete list of band styles.  
   
  *clrFore*  
- Ein **COLORREF** -Wert, der die Vordergrundfarbe der Infoleiste darstellt.  
+ A **COLORREF** value that represents the foreground color of the rebar.  
   
  *clrBack*  
- Ein **COLORREF** -Wert, der die Hintergrundfarbe der Infoleiste darstellt.  
+ A **COLORREF** value that represents the background color of the rebar.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CReBarCtrl&#1;](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
   
-##  <a name="create"></a>CReBar::Create  
- Rufen Sie diese Memberfunktion zum Erstellen einer Infoleiste.  
+##  <a name="create"></a>  CReBar::Create  
+ Call this member function to create a rebar.  
   
 ```  
 virtual BOOL Create(
@@ -147,47 +147,47 @@ virtual BOOL Create(
     UINT nID = AFX_IDW_REBAR);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Zeiger auf die `CWnd` -Objekt, dessen Windows-Fenster das übergeordnete Element der Statusleiste ist. Normalerweise Ihr Rahmenfenster.  
+ Pointer to the `CWnd` object whose Windows window is the parent of the status bar. Normally your frame window.  
   
  `dwCtrlStyle`  
- Format des Grundleisten-Steuerelements. In der Standardeinstellung **RBS_BANDBORDERS**, welche zeigt einschränken Zeilen um benachbarte Bänder im Grundleisten-Steuerelement zu trennen. Finden Sie unter [Grundleisten-Steuerelementstile](http://msdn.microsoft.com/library/windows/desktop/bb774377) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] für eine Liste der Formate.  
+ The rebar control style. By default, **RBS_BANDBORDERS**, which displays narrow lines to separate adjacent bands within the rebar control. See [Rebar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb774377) in the Windows SDK for a list of styles.  
   
  `dwStyle`  
- Die Infoleiste Fensterstile.  
+ The rebar window styles.  
   
  `nID`  
- Die Infoleiste untergeordneten Fensters-ID.  
+ The rebar's child-window ID.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CReBar::AddBar](#addbar).  
+### <a name="example"></a>Example  
+  See the example for [CReBar::AddBar](#addbar).  
   
-##  <a name="getrebarctrl"></a>CReBar:: GetReBarCtrl  
- Diese Memberfunktion ermöglicht den direkten Zugriff auf das zugrunde liegende Standardsteuerelement.  
+##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl  
+ This member function allows direct access to the underlying common control.  
   
 ```  
 CReBarCtrl& GetReBarCtrl() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf eine [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) Objekt.  
+### <a name="return-value"></a>Return Value  
+ A reference to a [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) object.  
   
-### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Memberfunktion, um die Funktionalität der Infoleiste allgemeinen Windows-Steuerelements bei der Anpassung Ihrer Infoleiste nutzen. Beim Aufruf von `GetReBarCtrl`, es gibt ein Verweisobjekt an die `CReBarCtrl` Objekt, damit Sie beide Sätze von Memberfunktionen verwenden können.  
+### <a name="remarks"></a>Remarks  
+ Call this member function to take advantage of the functionality of the Windows rebar common control in customizing your rebar. When you call `GetReBarCtrl`, it returns a reference object to the `CReBarCtrl` object so you can use either set of member functions.  
   
- Weitere Informationen zur Verwendung von `CReBarCtrl` zum Anpassen der Infoleiste finden Sie unter [Verwenden von CReBarCtrl](../../mfc/using-crebarctrl.md).  
+ For more information about using `CReBarCtrl` to customize your rebar, see [Using CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CReBarCtrl&#2;](../../mfc/reference/codesnippet/cpp/crebar-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CReBarCtrl#2](../../mfc/reference/codesnippet/cpp/crebar-class_2.cpp)]  
   
-## <a name="see-also"></a>Siehe auch  
- [MFC-Beispiel MFCIE](../../visual-cpp-samples.md)   
- [CControlBar-Klasse](../../mfc/reference/ccontrolbar-class.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MFCIE](../../visual-cpp-samples.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

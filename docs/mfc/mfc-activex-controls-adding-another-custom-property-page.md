@@ -1,120 +1,139 @@
 ---
-title: "MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen einer weiteren benutzerdefinierten Eigenschaftenseite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX-Steuerelemente [C++], Eigenschaftenseiten"
-  - "Benutzerdefinierte Eigenschaftenseiten"
-  - "MFC ActiveX-Steuerelemente [C++], Eigenschaftenseiten"
-  - "Eigenschaftenseiten [C++], MFC-ActiveX-Steuerelemente"
+title: 'MFC ActiveX Controls: Adding Another Custom Property Page | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages [MFC], MFC ActiveX controls
+- custom property pages [MFC]
+- ActiveX controls [MFC], property pages
+- MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC-ActiveX-Steuerelemente: Hinzuf&#252;gen einer weiteren benutzerdefinierten Eigenschaftenseite
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c05175fa0a10ed2679b40d4fb3780286224d9b5d
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Gelegentlich ist ein ActiveX\-Steuerelement mehr Eigenschaften, als auf einer Eigenschaftenseite angemessen anpassen kann.  In diesem Fall können Sie Eigenschaftenseiten dem ActiveX\-Steuerelement hinzufügen, diese Eigenschaften anzuzeigen.  
+---
+# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX Controls: Adding Another Custom Property Page
+Occasionally, an ActiveX control will have more properties than can reasonably fit on one property page. In this case, you can add property pages to the ActiveX control to display these properties.  
   
- In diesem Artikel werden das Hinzufügen neuer Eigenschaftenseiten zu einem ActiveX\-Steuerelement, das bereits mindestens eine Eigenschaftenseite hat.  Weitere Informationen zum Hinzufügen vordefinierter Eigenschaftenseiten \(Schriftart, Bild oder die Farbe\), finden Sie im Artikel [MFC\-ActiveX\-Steuerelemente: Verwenden vordefinierter Eigenschaftenseiten](../mfc/mfc-activex-controls-using-stock-property-pages.md).  
+ This article discusses adding new property pages to an ActiveX control that already has at least one property page. For more information on adding stock property pages (font, picture, or color), see the article [MFC ActiveX Controls: Using Stock Property Pages](../mfc/mfc-activex-controls-using-stock-property-pages.md).  
   
- Die folgenden Verfahren ein Beispielactivex\-steuerelement\-Framework, das vom ActiveX\-Steuerelement\-Assistenten erstellt wird.  Daher sind die Klassennamen und die Bezeichner zu diesem Beispiel eindeutig.  
+ The following procedures use a sample ActiveX control framework created by the ActiveX Control Wizard. Therefore, the class names and identifiers are unique to this example.  
   
- Weitere Informationen zur Verwendung von Eigenschaftenseiten in einem ActiveX\-Steuerelement, finden Sie:  
+ For more information on using property pages in an ActiveX control, see the following articles:  
   
--   [MFC\-ActiveX\-Steuerelemente: Eigenschaftenseiten](../mfc/mfc-activex-controls-property-pages.md)  
+-   [MFC ActiveX Controls: Property Pages](../mfc/mfc-activex-controls-property-pages.md)  
   
--   [MFC\-ActiveX\-Steuerelemente: Verwenden vordefinierter Eigenschaftenseiten](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
+-   [MFC ActiveX Controls: Using Stock Property Pages](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
     > [!NOTE]
-    >  Es wird dringend empfohlen, dass neue Eigenschaftenseiten den Größenstandard für Eigenschaftenseiten für ActiveX\-Steuerelemente befolgen.  Das vordefinierte Bild und Measures der Farbeigenschaftenseiten 250x62 Dialogfeld\-Steuerelemente Einheiten \(DLU\).  Die Standardschriftarteigenschaftenseite ist 250x110 DLUs.  Die Standardeigenschaftsseite, die vom ActiveX\-Steuerelement\-Assistenten erstellt wird, verwendet den standardmäßigen 250x62 DLU.  
+    >  It is strongly recommended that new property pages adhere to the size standard for ActiveX control property pages. The stock picture and color property pages measure 250x62 dialog units (DLU). The standard font property page is 250x110 DLUs. The default property page created by the ActiveX Control Wizard uses the 250x62 DLU standard.  
   
-### So fügen Sie eine neue Eigenschaftenseitenvorlage in Ihr Projekt einfügen  
+### <a name="to-insert-a-new-property-page-template-into-your-project"></a>To insert a new property page template into your project  
   
-1.  Öffnen Sie das Steuerelementprojekt geöffnet, offene Ressourcenansicht in den Projektarbeitsbereich.  
+1.  With your control project open, open Resource View in the project workspace.  
   
-2.  Klicken Sie mit der rechten Maustaste in der Ressourcenansicht, um das Kontextmenü zu öffnen und auf **Ressource hinzufügen** zu klicken.  
+2.  Right-click in Resource View to open the shortcut menu and click **Add Resource**.  
   
-3.  Erweitern Sie den Knoten **Dialogfeld**, und wählen Sie **IDD\_OLE\_PROPPAGE\_SMALL** aus.  
+3.  Expand the **Dialog** node, and select **IDD_OLE_PROPPAGE_SMALL**.  
   
-4.  Klicken Sie auf `New`, um die Ressource dem Projekt hinzuzufügen.  
+4.  Click `New` to add the resource to your project.  
   
-5.  Wählen Sie die neue Eigenschaftenseitenvorlage aus, um das Eigenschaftenfenster zu aktualisieren.  
+5.  Select the new property page template to refresh the Properties window.  
   
-6.  Geben Sie einen neuen Wert für die **ID**\-Eigenschaft ein.  In diesem Beispiel verwendet **IDD\_PROPPAGE\_NEWPAGE**.  
+6.  Enter a new value for the **ID** property. This example uses **IDD_PROPPAGE_NEWPAGE**.  
   
-7.  Klicken Sie in der Symbolleiste auf **Speichern**.  
+7.  Click **Save** on the toolbar.  
   
-### Um die neue Vorlage mit einer Klasse zuordnen  
+### <a name="to-associate-the-new-template-with-a-class"></a>To associate the new template with a class  
   
-1.  Öffnen Sie die Klassenansicht.  
+1.  Open Class View.  
   
-2.  Klicken Sie mit der rechten Maustaste in der Klassenansicht, um das Kontextmenü zu öffnen.  
+2.  Right-click in Class View to open the shortcut menu.  
   
-3.  Klicken Sie im Kontextmenü zunächst auf **Hinzufügen** und dann auf **Klasse hinzufügen**.  
+3.  From the shortcut menu, click **Add** and then click **Add Class**.  
   
-     Dadurch wird das Dialogfeld [Klasse hinzufügen](../ide/add-class-dialog-box.md).  
+     This opens the [Add Class](../ide/add-class-dialog-box.md) dialog box.  
   
-4.  Doppelklicken Sie auf die **MFC\-Klasse** Vorlage.  
+4.  Double-click the **MFC Class** template.  
   
-5.  Im Feld **Klassenname** in [MFC\-Klassen\-Assistent](../mfc/reference/mfc-add-class-wizard.md), geben Sie einen Namen für die neue Dialogfeldklasse ein. \(In diesem Beispiel, `CAddtlPropPage`\).  
+5.  In the **Class Name** box in the [MFC Class Wizard](../mfc/reference/mfc-add-class-wizard.md), type a name for the new dialog class. (In this example, `CAddtlPropPage`.)  
   
-6.  Wenn Sie Dateinamen ändern möchten, klicken Sie auf **Ändern**.  Geben Sie die Namen für die Implementierung und Headerdateien ein, oder übernehmen Sie den Standardnamen.  
+6.  If you want to change file names, click **Change**. Type in the names for your implementation and header files, or accept the default names.  
   
-7.  Im Feld **Basisklasse**  die Option `COlePropertyPage`.  
+7.  In the **Base Class** box, select `COlePropertyPage`.  
   
-8.  Im Feld **Dialogfeld\-ID**  die Option **IDD\_PROPPAGE\_NEWPAGE** aus.  
+8.  In the **Dialog ID** box, select **IDD_PROPPAGE_NEWPAGE**.  
   
-9. Klicken Sie auf **Fertig stellen** , um die Klasse zu erstellen.  
+9. Click **Finish** to create the class.  
   
- Um dem Benutzerzugriff des Steuerelements in dieser neuen Eigenschaftenseite zuzulassen, nehmen Sie die folgenden Änderungen am ID\-Makroabschnitt die Eigenschaftenseite des Steuerelements vor \(in der Steuerimplementierungsdatei\):  
+ To allow the control's users access to this new property page, make the following changes to the control's property page IDs macro section (located in the control implementation file):  
   
- [!CODE [NVC_MFC_AxUI#32](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#32)]  
+ [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
   
- Beachten Sie, dass Sie den zweiten Parameter des `BEGIN_PROPPAGEIDS`\-Makros \(mit Eigenschaftenseitenanzahl\) von 1 bis 2. erweitern müssen.  
+ Note that you must increase the second parameter of the `BEGIN_PROPPAGEIDS` macro (the property page count) from 1 to 2.  
   
- Sie müssen die Datei der Steuerimplementierungsdatei auch ändern \(.CPP\), um die Header einzuschließen \(.H\) Datei der neuen Eigenschaftenseitenklasse.  
+ You must also modify the control implementation file (.CPP) file to include the header (.H) file of the new property page class.  
   
- Der nächste Schritt, scrollen zwei Zeichenfolgenressourcen neue erstellen, die einen Typnamen und eine Beschriftung für die neue Seite bereitstellen.  
+ The next step involves creating two new string resources that will provide a type name and a caption for the new property page.  
   
-#### So neuen Zeichenfolgenressourcen einer Eigenschaftenseite hinzufügen  
+#### <a name="to-add-new-string-resources-to-a-property-page"></a>To add new string resources to a property page  
   
-1.  Öffnen Sie das Steuerelementprojekt geöffnet, offene Ressourcenansicht.  
+1.  With your control project open, open Resource View.  
   
-2.  Doppelklicken Sie auf den Ordner **Zeichenfolgentabelle** und doppelklicken Sie dann auf die vorhandene Zeichenfolgentabellenressource, der eine Zeichenfolge hinzufügen möchten.  
+2.  Double-click the **String Table** folder and then double-click the existing string table resource to which you want to add a string.  
   
-     Dadurch wird die Zeichenfolgentabelle in einem Fenster.  
+     This opens the string table in a window.  
   
-3.  Wählen Sie die leere Zeile am Ende der Zeichenfolgentabelle aus und geben Sie den Text oder Beschriftung, die Zeichenfolge ein: beispielsweise "zusätzliche Eigenschaftenseite."  
+3.  Select the blank line at the end of the string table and type the text, or caption, of the string: for example, "Additional Property Page."  
   
-     In **String Properties** öffnet eine Seite, die **Beschriftung** und **ID** Felder angezeigt werden.  Das Feld **Beschriftung** enthält die Zeichenfolge, die Sie eingegeben haben.  
+     This opens a **String Properties** page showing **Caption** and **ID** boxes. The **Caption** box contains the string you typed.  
   
-4.  Im Feld **ID** aktivieren oder geben Sie eine ID für die Zeichenfolge ein.  Drücken Sie EINGABETASTE wenn Sie beenden.  
+4.  In the **ID** box, select or type an ID for the string. Press Enter when you finish.  
   
-     In diesem Beispiel verwendet **IDS\_SAMPLE\_ADDPAGE** für den Typnamen der neuen Eigenschaftenseite.  
+     This example uses **IDS_SAMPLE_ADDPAGE** for the type name of the new property page.  
   
-5.  Wiederholen Sie Schritte 3 und 4 mit **IDS\_SAMPLE\_ADDPPG\_CAPTION** für die ID "und die zusätzliche Eigenschaftenseite" für den Titel.  
+5.  Repeat steps 3 and 4 using **IDS_SAMPLE_ADDPPG_CAPTION** for the ID and "Additional Property Page" for the caption.  
   
-6.  in der CPP\-Datei der neuen Eigenschaftenseitenklasse \(in diesem Beispiel `CAddtlPropPage`\), ändern Sie `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry`, damit IDS\_SAMPLE\_ADDPAGE von [AfxOleRegisterPropertyPageClass](../Topic/AfxOleRegisterPropertyPageClass.md) übergeben wird, wie im folgenden Beispiel:  
+6.  In the .CPP file of your new property page class (in this example, `CAddtlPropPage`) modify the `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` so that IDS_SAMPLE_ADDPAGE is passed by [AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), as in the following example:  
   
-     [!CODE [NVC_MFC_AxUI#33](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#33)]  
+     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
   
-7.  Ändern Sie den Konstruktor von `CAddtlPropPage`, sodass **IDS\_SAMPLE\_ADDPPG\_CAPTION** an `COlePropertyPage`\-Konstruktor übergeben wird, wie folgt:  
+7.  Modify the constructor of `CAddtlPropPage` so that **IDS_SAMPLE_ADDPPG_CAPTION** is passed to the `COlePropertyPage` constructor, as follows:  
   
-     [!CODE [NVC_MFC_AxUI#34](../CodeSnippet/VS_Snippets_Cpp/NVC_MFC_AxUI#34)]  
+     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
   
- Nachdem Sie festgelegt haben, ergeben die notwendigen Änderungen das Projekt neu und verwenden Testcontainer, um die neue Eigenschaftenseite zu testen.  Informationen zum Zugreifen auf den Testcontainer finden Sie unter [Testen von Eigenschaften und Ereignissen mit dem Testcontainer](../mfc/testing-properties-and-events-with-test-container.md).  
+ After you have made the necessary modifications rebuild your project and use Test Container to test the new property page. See [Testing Properties and Events with Test Container](../mfc/testing-properties-and-events-with-test-container.md) for information on how to access the test container.  
   
-## Siehe auch  
- [MFC\-ActiveX\-Steuerelemente](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

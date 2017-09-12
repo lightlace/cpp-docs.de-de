@@ -1,39 +1,58 @@
 ---
-title: "Speicherverwaltung: Heapbelegung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "delete-Operator, Verwenden mit Debuggen (MFC)"
-  - "Erkennen von Speicherverlusten"
-  - "Heapzuordnung"
-  - "Heapzuordnung, Beschreibung"
-  - "Speicherreservierung, Heapspeicher"
-  - "Speicherverluste, Ermitteln"
-  - "Speicher, Erkennen von Verlusten"
-  - "new-Operator, Verwenden mit Debuggen (MFC)"
+title: 'Memory Management: Heap Allocation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory [MFC], detecting leaks
+- delete operator [MFC], using with debug MFC
+- heap allocation [MFC], described
+- memory allocation [MFC], heap memory
+- memory leaks [MFC], detecting
+- new operator [MFC], using with debug MFC
+- heap allocation [MFC]
+- detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Speicherverwaltung: Heapbelegung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c3fa05362ea2d20b353ed6532686fbc54dcabb60
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Der Heap ist für die Speicherbelegungsanforderungen des Programms reserviert.  Es ist ein Bereich unabhängig von dem Programmcode und dem Stapel.  Typische C\-Programme verwenden die Funktionen `malloc` und **free**, um Heapspeicher reserviert und freizugeben.  Die Debugversion von MFC bietet geänderte Versionen der integrierten Operatoren **neu** und **löschen** C\+\+, um Objekte im Heapspeicher reserviert und freizugeben.  
+---
+# <a name="memory-management-heap-allocation"></a>Memory Management: Heap Allocation
+The heap is reserved for the memory allocation needs of the program. It is an area apart from the program code and the stack. Typical C programs use the functions `malloc` and **free** to allocate and deallocate heap memory. The Debug version of MFC provides modified versions of the C++ built-in operators **new** and **delete** to allocate and deallocate objects in heap memory.  
   
- Wenn Sie **neu** und **löschen** anstelle von `malloc` und **free** verwenden, können Sie, die Speicherverwaltungs\-Debuggingserweiterungen der Klassenbibliothek zu nutzen, die hilfreich sein können, wenn von Speicherverlusten erkennt.  Wenn Sie das Programm mit der Releaseversion von MFC erstellen, stellen die Standardversionen der **neu** und **löschen**\-Operatoren eine effiziente Möglichkeit, Arbeitsspeicher Reservieren und Freigeben \(die Releaseversion von MFC bietet nicht geänderten Versionen dieser Operatoren.\)  
+ When you use **new** and **delete** instead of `malloc` and **free**, you are able to take advantage of the class library's memory-management debugging enhancements, which can be useful in detecting memory leaks. When you build your program with the Release version of MFC, the standard versions of the **new** and **delete** operators provide an efficient way to allocate and deallocate memory (the Release version of MFC does not provide modified versions of these operators).  
   
- Beachten Sie, dass die Gesamtgröße von Objekten, die auf dem Heap zugeordnet sind, nur durch den verfügbaren virtuellen Arbeitsspeicher des Systems beschränkt ist.  
+ Note that the total size of objects allocated on the heap is limited only by your system's available virtual memory.  
   
-## Siehe auch  
- [Speicherverwaltung](../mfc/memory-management.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management](../mfc/memory-management.md)
+
+

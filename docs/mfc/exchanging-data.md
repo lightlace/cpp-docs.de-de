@@ -1,38 +1,57 @@
 ---
-title: "Datenaustausch | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DDX (Dialog Data Exchange – Dialogdatenaustausch), Eigenschaftenblätter"
-  - "Austausch von Daten mit Eigenschaftenblättern"
-  - "Eigenschaftenblätter, Datenaustausch"
+title: Exchanging Data | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property sheets [MFC], data exchange
+- exchanging data with property sheets [MFC]
+- DDX (dialog data exchange) [MFC], property sheets
 ms.assetid: 689f02d0-51a9-455b-8ffb-5b44f0aefa28
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Datenaustausch
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c2e951499ecffaf6c8eb019ee3cb95d9f3bfcdeb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wie bei den meisten Dialogfeldern, ist der Austausch von Daten zwischen dem Eigenschaftenblatt und der Anwendung eine der wichtigsten Features des Eigenschaftenblatts.  Dieser Artikel wird beschrieben, wie diese Aufgabe erfüllt.  
+---
+# <a name="exchanging-data"></a>Exchanging Data
+As with most dialog boxes, the exchange of data between the property sheet and the application is one of the most important functions of the property sheet. This article describes how to accomplish this task.  
   
- Datenaustausch zwischen dem mit einem Eigenschaftenblatt handelt sich lediglich für den Austausch von Daten mit einzelnen Eigenschaftenseiten des Eigenschaftenblatts.  Die Prozedur für dem Austausch von Daten mit einer Eigenschaftenseite ist identisch mit der Aktivierungsreihenfolge für dem Austausch von Daten mit einem Dialogfeld, als [CPropertyPage](../mfc/reference/cpropertypage-class.md)\-Objekt gegenwärtig ein spezialisiertes [CDialog\-Klasse](../mfc/reference/cdialog-class.md)\-Objekt ist.  Die Prozedur genutzt die Funktion des Dialogdatenaustauschs des Frameworks \(DDX\), die dem Austausch von Daten zwischen Steuerelementen in einem Dialogfeld und Membervariablen des Dialogfelds ein.  
+ Exchanging data with a property sheet is actually a matter of exchanging data with the individual property pages of the property sheet. The procedure for exchanging data with a property page is the same as for exchanging data with a dialog box, since a [CPropertyPage](../mfc/reference/cpropertypage-class.md) object is just a specialized [CDialog](../mfc/reference/cdialog-class.md) object. The procedure takes advantage of the framework's dialog data exchange (DDX) facility, which exchanges data between controls in a dialog box and member variables of the dialog box object.  
   
- Der wichtige Unterschied zwischen dem Austausch von Daten mit einem Eigenschaftenblatt und mit einem normalen Dialogfeld ist, dass das Eigenschaftenblatt mehrere Seiten verfügt, müssen Sie Daten mit allen Seiten im Eigenschaftenblatt.  Weitere Informationen über DDX, finden Sie unter [Dialogdatenaustausch und Validierung](../mfc/dialog-data-exchange-and-validation.md).  
+ The important difference between exchanging data with a property sheet and with a normal dialog box is that the property sheet has multiple pages, so you must exchange data with all the pages in the property sheet. For more information on DDX, see [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md).  
   
- Das folgende Beispiel veranschaulicht dem Austausch von Daten zwischen einer Ansicht und zwei Seiten eines Eigenschaftenblatts:  
+ The following example illustrates exchanging data between a view and two pages of a property sheet:  
   
- [!CODE [NVC_MFCDocView#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCDocView#4)]  
+ [!code-cpp[NVC_MFCDocView#4](../mfc/codesnippet/cpp/exchanging-data_1.cpp)]  
   
-## Siehe auch  
- [Eigenschaftenblätter](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

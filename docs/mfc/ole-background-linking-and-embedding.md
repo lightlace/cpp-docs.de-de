@@ -1,43 +1,62 @@
 ---
-title: "OLE-Hintergrund: Verlinken und Einbetten | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Eingebettete Objekte [C++]"
-  - "Elementtypen"
-  - "Elementtypen, Definition"
-  - "verknüpfte Elemente (OLE) [C++]"
-  - "OLE-Elemente (eingebettet)"
-  - "OLE-Elemente, Typen"
-  - "OLE, verknüpfte Elemente"
+title: 'OLE Background: Linking and Embedding | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE embedded items [MFC]
+- item types [MFC], defined
+- item types [MFC]
+- OLE [MFC], linked items
+- linked items (OLE) [MFC]
+- embedded objects [MFC]
+- OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE-Hintergrund: Verlinken und Einbetten
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ab76058d859758ac9c42e63839ad2fd683e58e08
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Verwenden des Pastenbefehls in einer Containeranwendung kann eine eingebettete Komponente erstellen oder wie das Element ein.  Die Quelldaten für ein eingebettetes Element werden als Teil des OLE\-Dokuments gespeichert, das es enthält.  Auf diese Weise kann eine Dokumentdatei für ein Textverarbeitungsprogrammdokument Text enthalten kann und Bitmaps, Diagramme, Formeln oder einen anderen Typ außerdem Daten enthalten.  
+---
+# <a name="ole-background-linking-and-embedding"></a>OLE Background: Linking and Embedding
+Using the Paste command in a container application can create an embedded component, or embedded item. The source data for an embedded item is stored as part of the OLE document that contains it. In this way, a document file for a word processor document can contain text and also can contain bitmaps, graphs, formulas, or any other type of data.  
   
- OLE bietet eine andere Möglichkeit, Daten von einer anderen Anwendung zu speichern: Erstellen einer verknüpften Komponente oder verknüpften Elements oder ein Link.  Die Schritte zum Erstellen eines verknüpften Elements sind mit denen für das Erstellen eines eingebetteten Elemente ähnlich, außer dass Sie verwenden den Pasten\-Linkbefehl anstelle des Pastenbefehls.  Anders als eingebettete Komponente speichert eine verknüpfte Komponente einen Pfad auf die ursprünglichen Daten, die häufig in einer separaten Datei befindet.  
+ OLE provides another way to incorporate data from another application: creating a linked component, or linked item, or a link. The steps for creating a linked item are similar to those for creating an embedded item, except that you use the Paste Link command instead of the Paste command. Unlike an embedded component, a linked component stores a path to the original data, which is often in a separate file.  
   
- Wenn Sie in einem Textverarbeitungsprogrammdokument arbeiten und ein verknüpftes Element zu einigen Arbeitsblattzellen erstellen, werden die Daten für das verknüpfte Element im Arbeitsblattdokument originalen gespeichert.  Das Textverarbeitungsprogrammdokument enthält nur die Informationen, die angeben, wo das Element gefunden werden kann, d h. ein Link zum Arbeitsblattdokument originalen enthält.  Wenn Sie auf die Zellen doppelklicken, wird die Arbeitsblatt\-Anwendung gestartet und die ursprünglichen Arbeitsblattdokument wird geladen aus, in der es gespeichert wurde.  
+ For example, if you are working in a word processor document and create a linked item to some spreadsheet cells, the data for the linked item is stored in the original spreadsheet document. The word processor document contains only the information specifying where the item can be found, that is, it contains a link to the original spreadsheet document. When you double-click the cells, the spreadsheet application is launched and the original spreadsheet document is loaded from where it was stored.  
   
- Jedes OLE\-Element, ob eingebettet bzw. verknüpft, hat einen Typ, der mit dem auf der Anwendung zugeordnet wird, die es erstellt hat.  Beispielsweise ist ein Microsoft\-Paintbrushelement ein Elementtyp, und ein Microsoft Excel\-Element ist ein anderer Typ.  Einige Anwendungen können mehrere Elementtyp jedoch erstellen.  Beispielsweise kann Microsoft Excel Arbeitsblattelemente Diagrammelemente, und macrosheet Elemente erstellen.  Jedes dieser Elemente kann vom System mit einer oder **CLSID**\-Klassenbezeichner eindeutig identifiziert werden.  
+ Every OLE item, whether embedded or linked, has a type associated with it based on the application that created it. For example, a Microsoft Paintbrush item is one type of item, and a Microsoft Excel item is another type. Some applications, however, can create more than one item type. For example, Microsoft Excel can create worksheet items, chart items, and macrosheet items. Each of these items can be uniquely identified by the system using a Class Identifier or **CLSID**.  
   
-## Siehe auch  
- [OLE\-Hintergrund](../mfc/ole-background.md)   
- [OLE\-Hintergrund: Container und Server](../mfc/ole-background-containers-and-servers.md)   
- [Container: Clientelemente](../mfc/containers-client-items.md)   
- [Server: Serverelemente](../mfc/servers-server-items.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [OLE Background: Containers and Servers](../mfc/ole-background-containers-and-servers.md)   
+ [Containers: Client Items](../mfc/containers-client-items.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)
+
+

@@ -1,78 +1,96 @@
 ---
-title: "Dialogfelder | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDialog-Klasse, MFC-Dialogfelder"
-  - "MFC-Dialogfelder"
-  - "MFC, Dialogfelder"
-  - "Modale Dialogfelder, MFC-Dialogfelder"
-  - "Nicht modale Dialogfelder, MFC-Dialogfelder"
+title: Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modeless dialog boxes [MFC], MFC dialog boxes
+- MFC, dialog boxes
+- modal dialog boxes [MFC], MFC dialog boxes
+- CDialog class [MFC], MFC dialog boxes
+- MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Dialogfelder
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: be78fe33a08b538da1574f5ccf9f1a042a7a374a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Anwendungen für Windows sind häufig den Benutzer durch Dialogfelder kommunizieren.  Klasse [CDialog\-Klasse](../mfc/reference/cdialog-class.md) stellt eine Schnittstelle zum Verwalten von Dialogfeldern bereit, nimmt der Visual C\+\+\-Dialog\-Editor es einfach, Dialogfelder entwerfen und ihre Dialogfeldvorlagenressourcen zu erstellen, und Code\-Assistenten vereinfachen den Prozess das Initialisieren und Überprüfen der Steuerelemente in einem Dialogfeld und des zum Erfassen der Werte, die vom Benutzer eingegeben werden.  
+---
+# <a name="dialog-boxes"></a>Dialog Boxes
+Applications for Windows frequently communicate with the user through dialog boxes. Class [CDialog](../mfc/reference/cdialog-class.md) provides an interface for managing dialog boxes, the Visual C++ dialog editor makes it easy to design dialog boxes and create their dialog-template resources, and Code wizards simplify the process of initializing and validating the controls in a dialog box and of gathering the values entered by the user.  
   
- Dialogfelder enthalten die Steuerelemente und umfassen:  
+ Dialog boxes contain controls, including:  
   
--   Allgemeine, wie Windows\-Steuerelemente Eingabefelder PushButtons, Listenfelder, Kombinationsfelder, Struktur\-Steuerelemente, Listensteuerelemente und Statusanzeigen.  
+-   Windows common controls such as edit boxes, pushbuttons, list boxes, combo boxes, tree controls, list controls, and progress indicators.  
   
--   ActiveX\-Steuerelemente.  
+-   ActiveX controls.  
   
--   Ownerdrawnkontrollen: Steuerelemente, die Sie für Zeichnung im Dialogfeld zuständig sind.  
+-   Owner-drawn controls: controls that you are responsible for drawing in the dialog box.  
   
- In den meisten Dialogfeldern werden modal, die vor der Anwendung eines anderen Teils des Programms den Benutzer erfordern, das Dialogfeld zu schließen.  Es ist möglich, nicht modale Dialogfelder zu erstellen, die Benutzer mit anderen Fenstern arbeiten, während das Dialogfeld geöffnet ist.  MFC unterstützt beide Arten Dialogfeld mit der Klasse `CDialog`.  Die Steuerelemente werden mithilfe einer Dialogfeldvorlagenressource angeordnet und verwaltet, erstellt wurde mit [Dialog\-Editor](../mfc/dialog-editor.md).  
+ Most dialog boxes are modal, which require the user to close the dialog box before using any other part of the program. But it is possible to create modeless dialog boxes, which let users work with other windows while the dialog box is open. MFC supports both kinds of dialog box with class `CDialog`. The controls are arranged and managed using a dialog-template resource, created with the [dialog editor](../windows/dialog-editor.md).  
   
- [Eigenschaftenblätter](../mfc/property-sheets-mfc.md), das auch als Dialogfelder im Registerformat, Dialogfelder sind, die Seiten "" der verschiedenen Dialogfeld\-Steuerelemente enthalten.  Jede Seite verfügt einen Dateiordner "Registerkarte" oben.  Das Klicken auf eine Registerkarte im Vordergrund ruft dieser Seite des Dialogfelds.  
+ [Property sheets](../mfc/property-sheets-mfc.md), also known as tab dialog boxes, are dialog boxes that contain "pages" of distinct dialog-box controls. Each page has a file folder "tab" at the top. Clicking a tab brings that page to the front of the dialog box.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Beispiel: Anzeigen eines Dialogfelds zum einen Menübefehl](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)  
+-   [Example: Displaying a Dialog Box via a Menu Command](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)  
   
--   [Dialogfeldkomponenten im Framework](../mfc/dialog-box-components-in-the-framework.md)  
+-   [Dialog-box components in the framework](../mfc/dialog-box-components-in-the-framework.md)  
   
--   [Modal und nicht modale Dialogfelder](../mfc/modal-and-modeless-dialog-boxes.md)  
+-   [Modal and modeless dialog boxes](../mfc/modal-and-modeless-dialog-boxes.md)  
   
--   [Eigenschaftenblätter und Eigenschaftenseiten](../mfc/property-sheets-and-property-pages-mfc.md) in einem Dialogfeld  
+-   [Property sheets and property pages](../mfc/property-sheets-and-property-pages-mfc.md) in a dialog box  
   
--   [Erstellen der Dialogfeldressource](../mfc/creating-the-dialog-resource.md)  
+-   [Creating the dialog resource](../mfc/creating-the-dialog-resource.md)  
   
--   [Erstellen einer Dialogfeldklasse mit Code\-Assistenten](../mfc/creating-a-dialog-class-with-code-wizards.md)  
+-   [Creating a dialog class with Code Wizards](../mfc/creating-a-dialog-class-with-code-wizards.md)  
   
--   [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)  
+-   [Life cycle of a dialog box](../mfc/life-cycle-of-a-dialog-box.md)  
   
--   [Dialogdatenaustausch \(DDX\) und Validierung \(DDV\)](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog data exchange (DDX) and validation (DDV)](../mfc/dialog-data-exchange-and-validation.md)  
   
--   [Typsicherer Zugriff auf die Steuerelemente in einem Dialogfeld](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)  
+-   [Type-safe access to controls in a dialog box](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)  
   
--   [Zuordnungs\-Windows\-Meldungen zu der Klasse](../mfc/mapping-windows-messages-to-your-class.md)  
+-   [Mapping Windows messages to your class](../mfc/mapping-windows-messages-to-your-class.md)  
   
--   [Häufig überschriebene Memberfunktionen](../mfc/commonly-overridden-member-functions.md)  
+-   [Commonly Overridden Member Functions](../mfc/commonly-overridden-member-functions.md)  
   
--   [Häufig hinzugefügte Memberfunktionen](../mfc/commonly-added-member-functions.md)  
+-   [Commonly Added Member Functions](../mfc/commonly-added-member-functions.md)  
   
--   [Allgemeine Dialogfeldklassen](../mfc/common-dialog-classes.md)  
+-   [Common dialog classes](../mfc/common-dialog-classes.md)  
   
--   [Dialogfelder in OLE](../mfc/dialog-boxes-in-ole.md)  
+-   [Dialog boxes in OLE](../mfc/dialog-boxes-in-ole.md)  
   
--   Erstellen einer Anwendung, deren Benutzeroberfläche ein Dialogfeld ist: finden Sie die [CMNCTRL1](../top/visual-cpp-samples.md) oder [CMNCTRL2](../top/visual-cpp-samples.md) ein.  Der Anwendungs\-Assistent stellt diese Option ebenfalls bereit.  
+-   Create an application whose user interface is a dialog box: see the [CMNCTRL1](../visual-cpp-samples.md) or [CMNCTRL2](../visual-cpp-samples.md) sample programs. The Application Wizard provides this option as well.  
   
--   [Beispiele](../mfc/dialog-sample-list.md)  
+-   [Samples](../mfc/dialog-sample-list.md)  
   
-## Siehe auch  
- [Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

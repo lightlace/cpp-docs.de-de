@@ -1,45 +1,64 @@
 ---
-title: "Das Dateimen&#252; in einer MFC-Datenbankanwendung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Datei (Menü)"
-  - "Datenbankanwendungen [C++] Befehle im Menü „Datei“"
+title: File Menu in an MFC Database Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- File menu
+- database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Das Dateimen&#252; in einer MFC-Datenbankanwendung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df27a26720aca2ed02d9e3e972a96052ce6729ba
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Sie einer MFC\-Datenbankanwendung erstellen und nicht wie die Serialisierung verwenden, sollten Sie das geöffnete, den Abschluss, den Speicherungs\- und den Speicherungs\- als Befehle im Menü Datei interpretieren?  Während es keine Formatrichtlinien für diese Frage gibt, sind hier einige Vorschläge:  
+---
+# <a name="file-menu-in-an-mfc-database-application"></a>File Menu in an MFC Database Application
+If you create an MFC database application and don't use serialization, how should you interpret the Open, Close, Save, and Save As commands on the File menu While there are no style guidelines for this question, here are a few suggestions:  
   
--   Schließen Sie den Befehl der geöffneten Menü vollständig.  
+-   Eliminate the File menu's Open command entirely.  
   
--   Interpretieren Sie den geöffneten Befehl als "geöffnete Datenbank" und zeigen Sie dem Benutzer eine Liste der Datenquellen an, die von der Anwendung erkannt wird.  
+-   Interpret the Open command as "open database" and show the user a list of data sources your application recognizes.  
   
--   Interpretieren Sie den geöffneten Befehl, z möglicherweise "öffnen Sie Profil." Behalten Sie öffnen zum Öffnen einer serialisierten Datei, jedoch Datei verwendet, um ein serialisiertes Dokument zu speichern, das "Benutzerprofil" Informationen, wie die Einstellungen des Benutzers, einschließlich seiner oder Anmelde\-ID enthält \(optional ausschließlich des Kennworts und die Datenquelle, er oder sie funktioniert zuletzt mit.  
+-   Interpret the Open command as, perhaps, "open profile." Retain Open for opening a serialized file, but use the file to store a serialized document containing "user profile" information, such as the user's preferences, including his or her login ID (optionally excluding the password) and the data source he or she most recently worked with.  
   
- Der MFC\-Anwendungs\-Assistent unterstützt das Erstellen einer Anwendung ohne der Menü Datei\-Befehle.  Wählen Sie die Option **Datenbankansicht ohne Dateiunterstützung** auf der Seite **Datenbankunterstützung** aus.  
+ The MFC Application Wizard supports creating an application with no document-related File menu commands. Select the **Database view without file support** option on the **Database Support** page.  
   
- Um ein Menü Befehl auf eine besondere Weise interpretieren, müssen Sie mindestens Befehlshandler, meist im `CWinApp` überschreiben abgeleiteten Klasse.  Wenn Sie vollständig `OnFileOpen` \(das `ID_FILE_OPEN` den Befehl implementiert\) überschreiben, um "geöffnete Datenbank einzubeziehen: "  
+ To interpret a File menu command in a special way, you must override one or more command handlers, mostly in your `CWinApp`-derived class. For example, if you completely override `OnFileOpen` (which implements the `ID_FILE_OPEN` command) to mean "open database:"  
   
--   Rufen Sie die Basisklassenversion von `OnFileOpen` auf, da Sie vollständig die Standardimplementierung des Framework des Befehls ersetzen.  
+-   Don't call the base class version of `OnFileOpen`, since you're completely replacing the framework's default implementation of the command.  
   
--   Verwenden Sie stattdessen den Handler, um Datenquellen Dialogfeldlisten anzuzeigen.  Sie können ein solches Dialogfeld anzeigen, indem Sie `CDatabase::OpenEx` oder `CDatabase::Open` mit dem Parameter **NULL** aufrufen.  Damit wird ein ODBC\-Dialogfeld, das alle verfügbaren Datenquellen auf dem Computer des Benutzers angezeigt.  
+-   Use the handler instead to display a dialog box listing data sources. You can display such a dialog by calling `CDatabase::OpenEx` or `CDatabase::Open` with the parameter **NULL**. This opens an ODBC dialog box that displays all available data sources on the user's machine.  
   
--   Da Datenbankanwendungen in der Regel kein ganzes Dokument speichern, möchten Sie wahrscheinlich den Speicherungs\- entfernen und als Implementierungen speichern, außer, Sie verwenden ein serialisiertes Dokument verwenden, um die Profilinformationen zu speichern.  Andernfalls haben Sie möglicherweise den Befehl Speichern wie beispielsweise "Committransaktion." Weitere Informationen finden Sie im [Technischer Hinweis 22](../mfc/tn022-standard-commands-implementation.md) zum Überschreiben dieser Befehle.  
+-   Because database applications typically don't save a whole document, you'll probably want to remove the Save and Save As implementations unless you use a serialized document to store profile information. Otherwise, you might implement the Save command as, for example, "commit transaction." See [Technical Note 22](../mfc/tn022-standard-commands-implementation.md) for more information about overriding these commands.  
   
-## Siehe auch  
- [Serialisierung: Serialisierung im Vergleich zur Datenbankeingabe\/\-ausgabe](../mfc/serialization-serialization-vs-database-input-output.md)
+## <a name="see-also"></a>See Also  
+ [Serialization: Serialization vs. Database Input/Output](../mfc/serialization-serialization-vs-database-input-output.md)
+
+

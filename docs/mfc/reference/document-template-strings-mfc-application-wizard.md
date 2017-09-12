@@ -1,50 +1,69 @@
 ---
-title: "Zeichenfolgen f&#252;r Dokumentvorlagen, MFC-Anwendungs-Assistent | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.doctemp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC-Anwendungs-Assistent, Zeichenfolgen für Dokumentvorlagen"
+title: Document Template Strings, MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.doctemp
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Zeichenfolgen f&#252;r Dokumentvorlagen, MFC-Anwendungs-Assistent
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3aeaccbb050f93fb366f7352f8df0276e0327434
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Auf dieser Seite des MFC\-Anwendungs\-Assistenten können Sie die folgenden Optionen festlegen bzw. exakter abstimmen, um die Verwaltung und Lokalisierung von Dokumenten zu erleichtern.  Zeichenfolgen für Dokumentvorlagen sind für Anwendungen verfügbar, deren [Anwendungstyp](../../mfc/reference/application-type-mfc-application-wizard.md) die **Unterstützung für die Dokument\-\/Ansichtarchitektur** beinhaltet.  Sie stehen nicht für Dialogfelder zur Verfügung.  Da die meisten Zeichenfolgen für Dokumentvorlagen sichtbar sind und von den Benutzern der Anwendung verwendet werden, werden sie in die **Ressourcensprache** übersetzt, die auf der Seite **Anwendungstyp** des Assistenten angegeben wird.  
+---
+# <a name="document-template-strings-mfc-application-wizard"></a>Document Template Strings, MFC Application Wizard
+In this page of the MFC Application Wizard, provide or refine the following options to help with document management and localization. Document template strings are available for applications that include **Document/view architecture support** in the [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md). They are not available for dialog boxes. Because most document template strings are visible and used by the application's users, they are localized into the **Resource language** indicated in the **Application Type** page of the wizard.  
   
- **Nicht lokalisierte Zeichenfolgen**  
- Bezieht sich auf Anwendungen, durch die Benutzerdokumente erstellt werden.  Benutzer können Dokumente einfacher öffnen, drucken und speichern, wenn Sie eine Dateierweiterung und eine Dateityp\-ID angeben.  Diese Elemente werden nicht lokalisiert, da sie vom System und nicht vom Benutzer verwendet werden.  
+ **Nonlocalized strings**  
+ Applies to applications that create user documents. Users can open, print, and save documents more easily if you provide a file extension and a file type ID. These items are not localized because they are used by the system rather than by the user.  
   
-|Option|**Beschreibung**|  
-|------------|----------------------|  
-|**Dateierweiterung**|Legt die Dateierweiterung für die Dokumente fest, die der Benutzer beim Arbeiten in der Anwendung speichert.  Wenn das Projekt beispielsweise den Namen "Widget" hat, kann die Dateierweiterung .wgt lauten. \(Die Dateierweiterung muss ohne Punkt eingegeben werden.\)<br /><br /> Bei Angabe einer Dateierweiterung können die in der Anwendung erstellten Dokumente ohne Starten der Anwendung im Explorer gedruckt werden, sobald der Benutzer das Dokumentsymbol auf einem Druckersymbol ablegt.<br /><br /> Falls Sie keine Erweiterung angeben, muss der Benutzer beim Speichern von Dateien eigene Dateierweiterungen festlegen.  Der Assistent bietet keine Standarddateierweiterung.|  
-|**Dateityp\-ID**|Legt die Bezeichnung des Dokumenttyps in der Systemregistrierung fest.|  
+|Option|Description|  
+|------------|-----------------|  
+|**File extension**|Sets the file extension associated with the documents that the user saves when using the application. For example, if your project is named Widget, you could name the file extension .wgt. (When you enter the file extension, do not include the period.)<br /><br /> If you provide a file extension, the Explorer can print your application's documents without launching your application when the user drops the document icon on a printer icon.<br /><br /> If you do not specify an extension, a user must specify a file extension when saving files. The wizard does not provide a default file extension.|  
+|**File type ID**|Sets the label for your document type in the system registry.|  
   
- **Lokalisierte Zeichenfolgen**  
- Erstellt Zeichenfolgen, die der Anwendung und dem Dokument zugeordnet sind und die vom Benutzer der Anwendung gelesen und verwendet werden. Daher werden diese Zeichenfolgen lokalisiert.  
+ **Localized strings**  
+ Produces strings associated with the application and document that are read and used by the application's users, so the strings are localized.  
   
-|Option|**Beschreibung**|  
-|------------|----------------------|  
-|**Sprache**|Gibt die Sprache an, in der Zeichenfolgen für alle Felder unter **Lokalisierte Zeichenfolgen** angezeigt werden.  Um den Wert in diesem Feld zu ändern, wählen Sie unter **Ressourcensprache** auf der Seite [Anwendungstyp](../../mfc/reference/application-type-mfc-application-wizard.md) des MFC\-Anwendungs\-Assistenten die geeignete Sprache aus.|  
-|**Hauptrahmenüberschrift**|Legt den Text fest, der im oberen Bereich des Hauptanwendungsrahmens erscheint.  Dies ist standardmäßig der Projektname.|  
-|**Dokumenttypname**|Bezeichnet den Dokumenttyp, unter dem ein in der Anwendung erstelltes Dokument gruppiert werden kann.  Dies ist standardmäßig der Projektname.  Wenn Sie den Standardwert ändern, wird keine weitere Option in diesem Dialogfeld geändert.|  
-|**Filtername**|Legt den Namen fest, den der Benutzer bei der Suche nach Dateien dieses Typs angeben kann.  Auf diese Option kann über die Option **Dateityp** in den Windows\-Standarddialogfeldern **Öffnen** und **Speichern unter** zugegriffen werden.  Dies ist standardmäßig der Projektname, gefolgt von "Files" \(Dateien\) und der unter **Dateierweiterung** angegebenen Erweiterung.  Wenn das Projekt beispielsweise den Namen "Widget" hat und die Dateierweiterung **.wgt** lautet, ist der Filtername standardmäßig **Widget Files \(\*.wgt\)**.|  
-|**Neuer kurzer Dateiname**|Legt den Namen fest, der im Windows\-Standarddialogfeld **Neu** angezeigt wird, wenn mehr als eine Vorlage für neue Dokumente vorhanden ist.  Handelt es sich bei der Anwendung um einen [Automatisierungsserver](../../mfc/automation-servers.md), wird dieser Name als kurzer Name für das Automatisierungsobjekt verwendet.  Dies ist standardmäßig der Projektname.|  
-|**Langer Dateitypname**|Legt den Namen des Dateityps in der Systemregistrierung fest.  Handelt es sich bei der Anwendung um einen Automatisierungsserver, wird dieser Name als langer Name für das Automatisierungsobjekt verwendet.  Dies ist standardmäßig der Projektname, gefolgt von ".Document".|  
+|Option|Description|  
+|------------|-----------------|  
+|**Language**|Indicates the language in which strings are displayed for all the boxes under **Localized strings**. To change the value in this box, select the appropriate language under **Resource language** in the [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard.|  
+|**Main frame caption**|Sets the text appearing at the top of the main application frame. By default, the project name.|  
+|**Doc type name**|Identifies the type of document under which a document of the application can be grouped. By default, the project name. Changing the default does not change any other options in this dialog box.|  
+|**Filter name**|Sets the name your users can indicate to find files of your file type. This option is available from the **Files of type** and **Save as type** options in the standard Windows **Open** and **Save as** dialog boxes. By default, the project name plus Files, followed by the extension provided in **File extension**. For example, if your project is named Widget, and the file extension is .wgt, the **Filter name** is Widget Files (*.wgt) by default.|  
+|**File new short name**|Sets the name appearing in the standard Windows `New` dialog box, if there is more than one new document template. If your application is an [Automation server](../../mfc/automation-servers.md), this name is used as the short name of your Automation object. By default, the project name.|  
+|**File type long name**|Sets the file type name in the system registry. If your application is an Automation server, this name is used as the long name of your Automation object. By default, the project name plus .Document.|  
   
-## Siehe auch  
- [MFC\-Anwendungs\-Assistent](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
+
+

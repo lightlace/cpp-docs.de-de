@@ -1,51 +1,70 @@
 ---
-title: "Lesen und Schreiben von Dateien | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFile-Klasse, Objekte"
-  - "CFile-Klasse, Lesen und Schreiben von CFile-Objekte"
-  - "Beispiele [MFC], Lesen von Dateien"
-  - "Beispiele [MFC], Schreiben in Dateien"
-  - "Dateien [C++], Lesen"
-  - "Dateien [C++], Schreiben in"
-  - "MFC [C++], Dateivorgänge"
-  - "Lesen von Dateien"
-  - "Schreiben in Dateien [C++]"
+title: Reading and Writing Files | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CFile class [MFC], objects
+- examples [MFC], reading files
+- files [MFC], writing to
+- examples [MFC], writing to files
+- files [MFC], reading
+- MFC, file operations
+- CFile class [MFC], reading and writing CFile objects
+- reading files
+- writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Lesen und Schreiben von Dateien
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8ed13b13d140d6e90a758183b62958145959cc3a
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Sie die C\-Laufzeitbibliotheks\-DateiBehandlungsfunktionen verwendet haben, finden MFC\-Lesen und \-Schreiboperationen vertraut aus.  Dieser Artikel beschreibt, direkt lesen und ausgeben direkt auf ein `CFile`\-Objekt schreiben.  Sie können gepufferte Datei\-E\/A mit der Klasse [CArchive](../mfc/reference/carchive-class.md) ausführen.  
+---
+# <a name="reading-and-writing-files"></a>Reading and Writing Files
+If you've used the C run-time library file-handling functions, MFC reading and writing operations will appear familiar. This article describes reading directly from and writing directly to a `CFile` object. You can also do buffered file I/O with the [CArchive](../mfc/reference/carchive-class.md) class.  
   
-#### So Lese\- und in die Datei schreiben  
+#### <a name="to-read-from-and-write-to-the-file"></a>To read from and write to the file  
   
-1.  Verwenden Sie **Lesen** und **Schreiben**\-Memberfunktionen, um Daten in die Datei zu lesen und zu schreiben.  
+1.  Use the **Read** and **Write** member functions to read and write data in the file.  
   
-     \- oder \-  
+     -or-  
   
-2.  Die `Seek`\-Memberfunktion ist auch für das Wechseln zu einem bestimmten Offset in die Datei verfügbar.  
+2.  The `Seek` member function is also available for moving to a specific offset within the file.  
   
- **Lesen** akzeptiert einen Zeiger auf einen Puffer und die Anzahl von Bytes, die zum Lesen und die tatsächliche Anzahl von Bytes zurück, die gelesen wurden.  Wenn die benötigte Anzahl von Bytes nicht gelesen werden konnte, da dass \(EOF\) erreicht wird, wird die tatsächliche Anzahl der gelesenen Bytes zurückgegeben.  Falls tritt Lesefehler, wird eine Ausnahme ausgelöst auf.  **Schreiben** entspricht **Lesen** ähnlich, aber die Anzahl der Bytes geschrieben wurde nicht zurückgegeben.  Wenn ein Schreibfehler erfolgt, das Schreiben aller Bytes nicht angegeben einschließend, wird eine Ausnahme ausgelöst.  Wenn Sie einen gültigen `CFile`\-Objekt verfügen, können Sie von ihm lesen oder darauf wie im folgenden Beispiel schreiben:  
+ **Read** takes a pointer to a buffer and the number of bytes to read and returns the actual number of bytes that were read. If the required number of bytes could not be read because end-of-file (EOF) is reached, the actual number of bytes read is returned. If any read error occurs, an exception is thrown. **Write** is similar to **Read**, but the number of bytes written is not returned. If a write error occurs, including not writing all the bytes specified, an exception is thrown. If you have a valid `CFile` object, you can read from it or write to it as shown in the following example:  
   
- [!CODE [NVC_MFCFiles#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCFiles#2)]  
+ [!code-cpp[NVC_MFCFiles#2](../atl-mfc-shared/reference/codesnippet/cpp/reading-and-writing-files_1.cpp)]  
   
 > [!NOTE]
->  Sie sollten Eingabe\/Ausgabe\-Arbeiten innerhalb eines **try**\/**catch** Ausnahmebehandlungsblocks normalerweise ausführen.  Weitere Informationen finden Sie unter [Ausnahmebehandlung \(MFC\)](../mfc/exception-handling-in-mfc.md).  
+>  You should normally carry out input/output operations within a **try**/**catch** exception handling block. For more information, see [Exception Handling (MFC)](../mfc/exception-handling-in-mfc.md).  
   
-## Siehe auch  
- [Dateien](../mfc/files-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Files](../mfc/files-in-mfc.md)
+
+

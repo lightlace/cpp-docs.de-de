@@ -1,56 +1,74 @@
 ---
-title: "Zwischenablage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zwischenablage"
-  - "Zwischenablage, Programmieren"
-  - "Kopieren von Daten"
-  - "Ausschneiden und Kopieren von Daten"
-  - "Übertragen von Daten"
+title: Clipboard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- cutting and copying data
+- copying data
+- Clipboard
+- Clipboard, programming
+- transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Zwischenablage
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7ecf2044ecfa659b8ab372d72ce71930e430dc8b
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Diese Gruppe von Artikeln erläutert, wie Sie Support für die Windows\-Zwischenablage in MFC\-Anwendungen implementiert.  Die Zwischenablage wird auf zwei Arten verwendet:  
+---
+# <a name="clipboard"></a>Clipboard
+This family of articles explains how to implement support for the Windows Clipboard in MFC applications. The Windows Clipboard is used in two ways:  
   
--   Standardbearbeitungsmenübefehle, Implementing wie Ausschneiden, Kopieren und Einfügen.  
+-   Implementing standard Edit menu commands, such as Cut, Copy, and Paste.  
   
--   Implementieren der einheitliche Datenübertragung mit Drag & Drop \(OLE\).  
+-   Implementing uniform data transfer with drag and drop (OLE).  
   
- Die Zwischenablage ist die Standard\-Windows\-Methode des Übertragens von Daten zwischen einer Quelle und einem Ziel.  Es kann in OLE\-Vorgängen sehr hilfreich sein.  Mit dem Aufkommen OLE gibt es zwei Zwischenablagemechanismen in Windows.  Die Standard\-Windows\-Zwischenablage API ist weiterhin verfügbar, aber sie ist mit dem OLE\-Datenübertragungsmechanismus ergänzt wurde.  Einheitliche Datenübertragung \(UDT\) OLE unterstützt Ausschneiden, Kopieren und Einfügen mit der Zwischenablage und den Drag & Drop.  
+ The Clipboard is the standard Windows method of transferring data between a source and a destination. It can also be very useful in OLE operations. With the advent of OLE, there are two Clipboard mechanisms in Windows. The standard Windows Clipboard API is still available, but it has been supplemented with the OLE data transfer mechanism. OLE uniform data transfer (UDT) supports Cut, Copy, and Paste with the Clipboard and drag and drop.  
   
- Die Zwischenablage ist ein Systemdienst, der von der gesamten Windows\-Sitzung freigegeben wird, enthält kein Handle oder eine Klasse von einem eigenen.  Sie verwalten die Zwischenablage von Memberfunktionen der Klasse [CWnd](../mfc/reference/cwnd-class.md).  
+ The Clipboard is a system service shared by the entire Windows session, so it does not have a handle or class of its own. You manage the Clipboard through member functions of class [CWnd](../mfc/reference/cwnd-class.md).  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Wann jeden Zwischenablagemechanismus verwendet](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
+-   [When to use each Clipboard mechanism](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
   
--   [Verwenden der herkömmlichen Windows\-Zwischenablage API](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Using the traditional Windows Clipboard API](../mfc/clipboard-using-the-windows-clipboard.md)  
   
--   [Verwenden des OLE\-Zwischenablagemechanismus](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
+-   [Using the OLE Clipboard mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
--   [Kopieren und Einfügen von Daten](../mfc/clipboard-copying-and-pasting-data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Hinzufügen anderer Formate](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [\<caps:sentence id\="tgt18" sentenceid\="1bc8aafd7da110d0b343b54cffa169d9" class\="tgtSentence"\>Die Zwischenablage\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms648709)  
+-   [The Windows Clipboard](https://msdn.microsoft.com/library/ms648709)  
   
--   [Drag & Drop \(OLE\) implementieren](../mfc/drag-and-drop-ole.md)  
+-   [Implementing drag and drop (OLE)](../mfc/drag-and-drop-ole.md)  
   
-## Siehe auch  
- [Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

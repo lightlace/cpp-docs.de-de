@@ -1,34 +1,53 @@
 ---
-title: "Einstellungen f&#252;r das QuickInfo-Steuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Quickinfos [C++], aktivieren"
-  - "CToolTipCtrl-Klasse, Einstellungen"
+title: Settings for the Tool Tip Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], activating
+- CToolTipCtrl class [MFC], settings
 ms.assetid: ff8c5c46-2047-403a-bd98-ffec3d21ee3a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Einstellungen f&#252;r das QuickInfo-Steuerelement
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1fe26a166503e772c0ed7241cbbdb937c65b4211
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Sie können das QuickInfo\-Steuerelement \([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)\) entweder als aktiv oder als inaktiv festlegen. Wenn Sie es als aktiv festlegen, wird das QuickInfo\-Steuerelement angezeigt, wenn Sie den Cursor auf einem Tool platzieren. Wenn Sie es als inaktiv festlegen, wird das QuickInfo\-Steuerelement auch dann nicht angezeigt, wenn sich der Cursor auf einem Tool befindet. Rufen Sie [Activate](../Topic/CToolTipCtrl::Activate.md) auf, um ein QuickInfo\-Steuerelement zu aktivieren oder deaktivieren.  
+---
+# <a name="settings-for-the-tool-tip-control"></a>Settings for the Tool Tip Control
+You can set the tool tip control ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) to be either active or inactive. When you set it to be active, the tool tip control appears when the cursor is on a tool. When you set it to be inactive, the tool tip control does not appear, even if the cursor is on a tool. Call [Activate](../mfc/reference/ctooltipctrl-class.md#activate) to activate or deactivate a tool tip control.  
   
- Sie können die Anzeige eines aktiven QuickInfo\-Steuerelements, wenn sich der Cursor auf einem Tool befindet, mithilfe der Formatvorlage **TTS\_ALWAYSTIP** so festlegen, dass die Anzeige unabhängig vom Aktivierungszustand des besitzenden Fensters erfolgt. Wenn Sie dieses Formatvorlage nicht verwenden, wird das QuickInfo\-Steuerelement angezeigt, wenn das besitzende Fenster des Steuerelements aktiv ist, aber nicht, wenn es nicht aktiv ist.  
+ You can set an active tool tip to display the tool tip when the cursor is on a tool, whether or not the tool tip control's owner window is active or inactive, by using the **TTS_ALWAYSTIP** style. If you do not use this style, the tool tip control appears when the tool's owner window is active, but not when it is inactive.  
   
- Die meisten Anwendungen enthalten Symbolleisten mit Tools, die Menübefehlen entsprechen. Für solche Tools ist es sinnvoll, wenn im QuickInfo\-Steuerelement der gleiche Text wie im entsprechenden Menüelement angezeigt wird. Das System entfernt automatisch das kaufmännische Und\-Zeichen für die Tastenkombination \(&\) aus allen Zeichenfolgen, die an ein QuickInfo\-Steuerelement übergeben werden, es sei denn, das Steuerelement verwendet die Formatvorlage **TTS\_NOPREFIX**.  
+ Most applications contain toolbars with tools that correspond to menu commands. For such tools, it is convenient for the tool tip control to display the same text as the corresponding menu item. The system automatically strips the ampersand (&) accelerator characters from all strings passed to a tool tip control, unless the control has the **TTS_NOPREFIX** style.  
   
-## Siehe auch  
- [Verwenden von CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

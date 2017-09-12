@@ -1,94 +1,113 @@
 ---
-title: "Men&#252;s und Ressourcen: Containererweiterungen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDP_OLE_INIT_FAILED"
-  - "IDP_FAILED_TO_CREATE"
-  - "VK_ESCAPE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zugriffstastentabellen [C++], Containeranwendungen"
-  - "Zugriffstastentabelle für Anwendungen [C++]"
-  - "CONTAIN-Lernprogramm"
-  - "IDP_FAILED_TO_CREATE-Makro"
-  - "IDP_OLE_INIT_FAILED-Makro"
-  - "Linksmenu-Element"
-  - "OLE-Container, Menüs und Ressourcen"
-  - "Visuelle Bearbeitung, Anwendungsmenüs und Ressourcen"
-  - "VK_ESCAPE-Taste"
+title: 'Menus and Resources: Container Additions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDP_OLE_INIT_FAILED
+- IDP_FAILED_TO_CREATE
+- VK_ESCAPE
+dev_langs:
+- C++
+helpviewer_keywords:
+- application accelerator table [MFC]
+- VK_ESCAPE key [MFC]
+- IDP_FAILED_TO_CREATE macro [MFC]
+- visual editing, application menus and resources
+- OLE containers [MFC], menus and resources
+- accelerator tables [MFC], container applications
+- IDP_OLE_INIT_FAILED macro [MFC]
+- CONTAIN tutorial [MFC]
+- Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Men&#252;s und Ressourcen: Containererweiterungen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 600c7dffddb8e12c52cf07cc65868b94542656c0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt die Änderungen, die an den Menüs und anderen Ressourcen in einer Containeranwendung mit visueller Bearbeitung vorgenommen werden müssen.  
+---
+# <a name="menus-and-resources-container-additions"></a>Menus and Resources: Container Additions
+This article explains the changes that need to be made to the menus and other resources in a visual editing container application.  
   
- In den Containeranwendungen müssen zwei Typen Änderungen vorgenommen werden: vorhandenen Ressourcen zur Unterstützungsvisuellen bearbeitungen in ole und zur Einführung von neuen Ressourcen verwendet für direkte Aktivierung.  Wenn Sie im Anwendungs\-Assistenten verwenden, um Ihre Containeranwendung zu erstellen, werden diese Schritte für Sie ausgeführt, jedoch erfordern möglicherweise etwas Anpassung.  
+ In container applications, two types of changes need to be made: modifications to existing resources to support OLE visual editing and addition of new resources used for in-place activation. If you use the application wizard to create your container application, these steps will be done for you, but they may require some customization.  
   
- Wenn Sie nicht den Anwendungs\-Assistenten verwenden, sollten Sie OCLIENT.RC, das Ressourcenskript Betrachten für die OCLIENT\-Beispielanwendung, Verdeutlichung diese Änderungen implementiert werden.  Siehe das Beispiel [OCLIENT](../top/visual-cpp-samples.md) MFC\-OLE.  
+ If you do not use the application wizard, you may want to look at OCLIENT.RC, the resource script for the OCLIENT sample application, to see how these changes are implemented. See the MFC OLE sample [OCLIENT](../visual-cpp-samples.md).  
   
- Themen beschrieben in diesem Artikeleinschließung:  
+ Topics covered in this article include:  
   
--   [Container\-Menü\-Hinzufügungen](#_core_container_menu_additions)  
+-   [Container Menu Additions](#_core_container_menu_additions)  
   
--   [Zugriffstastentabellen\-Hinzufügungen](#_core_container_application_accelerator_table_additions)  
+-   [Accelerator Table Additions](#_core_container_application_accelerator_table_additions)  
   
--   [Zeichenfolgentabellen\-Hinzufügungen](#_core_string_table_additions_for_container_applications)  
+-   [String Table Additions](#_core_string_table_additions_for_container_applications)  
   
-##  <a name="_core_container_menu_additions"></a> Container\-Menü\-Hinzufügungen  
- Sie müssen die folgenden Elemente im Menü Bearbeiten hinzufügen:  
+##  <a name="_core_container_menu_additions"></a> Container Menu Additions  
+ You must add the following items to the Edit menu:  
   
-|Element|Zweck|  
-|-------------|-----------|  
-|**Neues Objekt den**|Öffnet das Objektdialogfeld OLE INSERT, um ein verknüpftes oder eingebettetes Element in das Dokument einzufügen.|  
-|**Pasten\-Link**|Fügt einen Link für Element in der Zwischenablage in das Dokument ein.|  
-|**OLE\-Verb**|Ruft das ausgewählten primäre Verb des Elements auf.  Der Text des Menüelements ändert, um das primäre Verb des ausgewählten Elements an.|  
-|**Links**|Öffnet das OLE\-Bearbeitungs\-Linkdialogfeld, um vorhandene verknüpfte Elemente zu ändern.|  
+|Item|Purpose|  
+|----------|-------------|  
+|**Insert New Object**|Opens the OLE Insert Object dialog box to insert a linked or embedded item into the document.|  
+|**Paste Link**|Pastes a link to the item on the Clipboard into the document.|  
+|**OLE Verb**|Calls the selected item's primary verb. The text of this menu item changes to reflect the primary verb of the selected item.|  
+|**Links**|Opens the OLE Edit Links dialog box to change existing linked items.|  
   
- Zusätzlich zu den Änderungen, die in diesem Artikel aufgeführt sind, muss die AFXOLECL.RC Quelldatei enthalten, das für die Microsoft Foundation Class\-Bibliotheks\-Implementierung erforderlich ist.  Einfüge\- neue Objekt ist die einzige erforderliche Menühinzufügung.  Andere Elemente können hinzugefügt werden, die, die hier aufgeführt sind, die gängigsten.  
+ In addition to the changes listed in this article, your source file must include AFXOLECL.RC, which is required for the Microsoft Foundation Class Library implementation. Insert New Object is the only required menu addition. Other items can be added, but those listed here are the most common.  
   
- Sie müssen ein neues Menü für Ihre Containeranwendung erstellen, wenn Sie direkte Aktivierung von enthaltenden Elementen unterstützen möchten.  Dieses Menü besteht aus derselben Menü und Fensterpopupmenüs verwendet haben, wenn Dateien geöffnet sind, enthält jedoch zwei Trennzeichen, die zwischen ihnen abgelegt werden.  Diese Trennzeichen werden verwendet, um anzugeben, wo das Element des Servers \(Komponente\) \(Anwendung\) seine Menüs platzieren soll, wenn es an der Stelle aktiviert ist.  Weitere Informationen über diese Menüzusammenführungstechnik, finden Sie unter [Menüs und Ressourcen: Zusammenführen von Menüs](../mfc/menus-and-resources-menu-merging.md).  
+ You must create a new menu for your container application if you want to support in-place activation of contained items. This menu consists of the same File menu and Window pop-up menus used when files are open, but it has two separators placed between them. These separators are used to indicate where the server (component) item (application) should place its menus when activated in place. For more information on this menu-merging technique, see [Menus and Resources: Menu Merging](../mfc/menus-and-resources-menu-merging.md).  
   
-##  <a name="_core_container_application_accelerator_table_additions"></a> Containeranwendungs\-Zugriffstastentabellen\-Hinzufügungen  
- Kleine Änderungen an den Zugriffstastentabellenressourcen einer Containeranwendung sind erforderlich, wenn Sie direkte Aktivierung unterstützen.  Die ersten Änderung ermöglicht dem Benutzer, die Escape\-Taste \(ESC\) zu drücken um den Modus der direkten Bearbeitung abbrechen.  Fügen Sie den folgenden Eintrag der Hauptzugriffstastentabelle hinzu:  
+##  <a name="_core_container_application_accelerator_table_additions"></a> Container Application Accelerator Table Additions  
+ Small changes to a container application's accelerator table resources are necessary if you are supporting in-place activation. The first change allows the user to press the escape key (ESC) to cancel the in-place editing mode. Add the following entry to the main accelerator table:  
   
-|ID|Key|Typ|  
-|--------|---------|---------|  
-|**ID\_CANCEL\_EDIT\_CNTR**|VK\_ESCAPE|**VIRTKEY**|  
+|ID|Key|Type|  
+|--------|---------|----------|  
+|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
   
- Die zweite Änderung ist, eine neue Zugriffstastentabelle zu erstellen, die zur neuen Menüressource entspricht, die für direkte Aktivierung erstellt wird.  Diese Tabelle enthält Einträge für die Datei\- und Fenstermenüs neben dem Eintrag **VK\_ESCAPE** oben.  Im folgenden Beispiel ist die Zugriffstastentabelle, die für direkte Aktivierung im MFC\-Beispiel [CONTAINER](../top/visual-cpp-samples.md) erstellt wird:  
+ The second change is to create a new accelerator table that corresponds to the new menu resource created for in-place activation. This table has entries for the File and Window menus in addition to the **VK_ESCAPE** entry above. The following example is the accelerator table created for in-place activation in the MFC sample [CONTAINER](../visual-cpp-samples.md):  
   
-|ID|Key|Typ|  
-|--------|---------|---------|  
-|`ID_FILE_NEW`|STRG\+N|**VIRTKEY**|  
-|`ID_FILE_OPEN`|STRG\+O|**VIRTKEY**|  
-|**ID\_FILE\_SAVE**|STRG\+S|**VIRTKEY**|  
-|**ID\_FILE\_PRINT**|STRG\+P|**VIRTKEY**|  
-|**ID\_NEXT\_PANE**|VK\_F6|**VIRTKEY**|  
-|**ID\_PREV\_PANE**|SHIFT\+VK\_F6|**VIRTKEY**|  
-|**ID\_CANCEL\_EDIT\_CNTR**|VK\_ESCAPE|**VIRTKEY**|  
+|ID|Key|Type|  
+|--------|---------|----------|  
+|`ID_FILE_NEW`|CTRL+N|**VIRTKEY**|  
+|`ID_FILE_OPEN`|CTRL+O|**VIRTKEY**|  
+|**ID_FILE_SAVE**|CTRL+S|**VIRTKEY**|  
+|**ID_FILE_PRINT**|CTRL+P|**VIRTKEY**|  
+|**ID_NEXT_PANE**|VK_F6|**VIRTKEY**|  
+|**ID_PREV_PANE**|SHIFT+VK_F6|**VIRTKEY**|  
+|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
   
-##  <a name="_core_string_table_additions_for_container_applications"></a> Zeichenfolgentabellen\-Hinzufügungen für Containeranwendungen  
- Die meisten Änderungen an Zeichenfolgentabellen für Containeranwendungen entsprechen den zusätzlichen Menüelementen, die in der [Container\-Menü\-Hinzufügungen](#_core_container_menu_additions) erwähnt werden.  Sie stellen den Text, der in der Statusleiste angezeigt wird, wenn jedes Menüelement angezeigt wird.  Als Beispiel sind hier die Zeichenfolgentabelleneinträge, die der Anwendungs\-Assistent generiert:  
+##  <a name="_core_string_table_additions_for_container_applications"></a> String Table Additions for Container Applications  
+ Most of the changes to string tables for container applications correspond to the additional menu items mentioned in [Container Menu Additions](#_core_container_menu_additions). They supply the text displayed in the status bar when each menu item is displayed. As an example, here are the string-table entries the application wizard generates:  
   
-|ID|Zeichenfolge|  
-|--------|------------------|  
-|**IDP\_OLE\_INIT\_FAILED**|OLE\-Initialisierungsfehler.  Stellen Sie sicher, dass die OLE\-Bibliotheken in der richtigen Version vorliegen.|  
-|**IDP\_FAILED\_TO\_CREATE**|Fehler beim Erstellen des Objekts.  Stellen Sie sicher, dass das Objekt in die Systemregistrierung eingegeben wird.|  
+|ID|String|  
+|--------|------------|  
+|**IDP_OLE_INIT_FAILED**|OLE initialization failed. Make sure that the OLE libraries are the correct version.|  
+|**IDP_FAILED_TO_CREATE**|Failed to create object. Make sure that the object is entered in the system registry.|  
   
-## Siehe auch  
- [Menüs und Ressourcen \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [Menüs und Ressourcen: Servererweiterungen](../mfc/menus-and-resources-server-additions.md)
+## <a name="see-also"></a>See Also  
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Menus and Resources: Server Additions](../mfc/menus-and-resources-server-additions.md)
+
+

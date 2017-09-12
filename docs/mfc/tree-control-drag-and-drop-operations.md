@@ -1,39 +1,58 @@
 ---
-title: "Drag &amp; Drop-Operationen f&#252;r das Struktursteuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl-Klasse, Drag & Drop-Operationen"
-  - "Drag & Drop, CTreeCtrl"
-  - "Struktursteuerelemente, Drag & Drop-Operationen"
+title: Tree Control Drag-and-Drop Operations | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], drag and drop operations
+- drag and drop [MFC], CTreeCtrl
+- tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Drag &amp; Drop-Operationen f&#252;r das Struktursteuerelement
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5beda5b1c08ed33e532d8987e1caee1a2745ff3c
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Eine Strukturansicht \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) sendet eine Benachrichtigung wenn der Benutzer beginnt, per ein Element ziehen.  Das Steuerelement sendet eine Benachrichtigung [TVN\_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504), wenn der Benutzer beginnt, ein Element mit der linken Maustaste und eine Benachrichtigung [TVN\_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) ziehen, wenn der Benutzer das Ziehen mit der rechten Schaltfläche gestartet wird.  Sie können eine Strukturansicht am Senden dieser Benachrichtigungen verhindern, indem Sie dem **TVS\_DISABLEDRAGDROP**\-Strukturansicht das Format geben.  
+---
+# <a name="tree-control-drag-and-drop-operations"></a>Tree Control Drag-and-Drop Operations
+A tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sends a notification when the user starts to drag an item. The control sends a [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) notification message when the user begins dragging an item with the left mouse button and a [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) notification message when the user begins dragging with the right button. You can prevent a tree control from sending these notifications by giving the tree control the **TVS_DISABLEDRAGDROP** style.  
   
- Sie erhalten ein Bild, die während eines Ziehvorgangs anzuzeigen, indem Sie die Memberfunktion [CreateDragImage](../Topic/CTreeCtrl::CreateDragImage.md) aufrufen.  Das Tree\-Steuerelement erstellt eine ziehende Bitmap auf der Bezeichnung des Elements, das gezogen wird.  Dann erstellt das Struktursteuerelement Bildlisten, fügt der Bitmap hinzu und gibt einen Zeiger auf das [CImageList](../mfc/reference/cimagelist-class.md)\-Objekt zurück.  
+ You obtain an image to display during a drag operation by calling the [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) member function. The tree control creates a dragging bitmap based on the label of the item being dragged. Then the tree control creates an image list, adds the bitmap to it, and returns a pointer to the [CImageList](../mfc/reference/cimagelist-class.md) object.  
   
- Sie müssen den Code bereitstellen, der tatsächlich das Element gezogen werden.  Dies umfasst normalerweise ziehenden, die Funktionen der Bildlistenfunktionen mit ein und die gesendeten [WM\_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) und [WM\_LBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms645608) \(oder [WM\_RBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646243)\) Nachrichten verarbeiten, nachdem der Ziehvorgang gestartet wurde.  Weitere Informationen über die Bildlistenfunktionen, finden Sie unter [CImageList](../mfc/reference/cimagelist-class.md) in der *MFC\-Referenz* und [Grafiklisten](http://msdn.microsoft.com/library/windows/desktop/bb761389) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Weitere Informationen zum das Ziehen eines Strukturansicht\-Steuerelement\-Elements, finden Sie unter [Ziehen des Strukturansichtelements](http://msdn.microsoft.com/library/windows/desktop/bb760017), in [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)].  
+ You must provide the code that actually drags the item. This typically involves using the dragging capabilities of the image list functions and processing the [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) and [WM_LBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms645608) (or [WM_RBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646243)) messages sent after the drag operation has begun. For more information about the image list functions, see [CImageList](../mfc/reference/cimagelist-class.md) in the *MFC Reference* and [Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb761389) in the Windows SDK. For more information about dragging a tree control item, see [Dragging the Tree View Item](http://msdn.microsoft.com/library/windows/desktop/bb760017), also in the [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- Wenn sich Elemente in einer Strukturansicht, die Ziele eines Drag & Drop\-Vorgangs sein sollen, müssen Sie wissen, dass der Mauszeiger auf einem Zielelement ist.  Sie können ermitteln, indem Sie die Memberfunktion [HitTest](../Topic/CTreeCtrl::HitTest.md) aufrufen.  Sie entweder einem Punkt und ganzzahligen oder der Adresse [TVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb773448) einer Struktur an, die die aktuellen Koordinaten des Mauszeigers enthält.  Wenn die Funktion beendet wird, enthält die gesamte Zahl oder Struktur ein Flag, die Position des Mauszeigers relativ zum Strukturansicht angibt.  Wenn der Cursor über ein Element in der Strukturansicht ist, enthält die Struktur das Handle des Elements auch.  
+ If items in a tree control are to be the targets of a drag-and-drop operation, you need to know when the mouse cursor is on a target item. You can find out by calling the [HitTest](../mfc/reference/ctreectrl-class.md#hittest) member function. You specify either a point and integer, or the address of a [TVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb773448) structure that contains the current coordinates of the mouse cursor. When the function returns, the integer or structure contains a flag indicating the location of the mouse cursor relative to the tree control. If the cursor is over an item in the tree control, the structure contains the handle of the item as well.  
   
- Sie können angeben, dass ein Element das Ziel eines Drag & Drop\-Vorgangs ist, indem die [SetItem](../Topic/CTreeCtrl::SetItem.md)\-Memberfunktion aufruft, um den Zustand auf den Wert `TVIS_DROPHILITED` festzulegen.  Ein Element, das den Zustand hat, wird im Format gezeichnet, das verwendet wird, um einem Drag & Drop\-Ziel anzugeben.  
+ You can indicate that an item is the target of a drag-and-drop operation by calling the [SetItem](../mfc/reference/ctreectrl-class.md#setitem) member function to set the state to the `TVIS_DROPHILITED` value. An item that has this state is drawn in the style used to indicate a drag-and-drop target.  
   
-## Siehe auch  
- [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

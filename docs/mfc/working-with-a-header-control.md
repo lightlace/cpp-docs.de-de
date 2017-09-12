@@ -1,40 +1,59 @@
 ---
-title: "Arbeiten mit dem Headersteuerelement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Headersteuerelemente"
-  - "Headersteuerelemente, Arbeiten mit"
+title: Working with a Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], working with
+- header controls
 ms.assetid: af3afb5c-bf97-451b-8fee-3adcb8257210
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Arbeiten mit dem Headersteuerelement
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9504196cddd69effb45300a1130051e2b8a1c184
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Die einfache Möglichkeit, ein Header\-Steuerelement \([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)\) zu verwenden ist in Verbindung mit einem Listensteuerelement; Gruppe finden Sie unter [Verwenden CListCtrl](../mfc/using-clistctrl.md).  Sie können ein Header\-Steuerelement auch allein verwenden.  MFC ruft **InitCommonControls** für Sie auf.  Die Hauptaufgaben sind, wie folgt:  
+---
+# <a name="working-with-a-header-control"></a>Working with a Header Control
+The easy way to use a header control ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) is in conjunction with a list control; see [Using CListCtrl](../mfc/using-clistctrl.md) later in this topic family. You can also use a header control by itself. MFC calls **InitCommonControls** for you. The key tasks are as follows:  
   
--   [Erstellen des Header\-Steuerelements](../mfc/creating-the-header-control.md)  
+-   [Creating the header control](../mfc/creating-the-header-control.md)  
   
--   [Hinzufügen von Elementen zum Header\-Steuerelement](../mfc/adding-items-to-the-header-control.md)  
+-   [Adding items to the header control](../mfc/adding-items-to-the-header-control.md)  
   
--   [Reihenfolgenelemente im Header\-Steuerelement](../mfc/ordering-items-in-the-header-control.md)  
+-   [Ordering items in the header control](../mfc/ordering-items-in-the-header-control.md)  
   
--   [Verarbeiten von Header\-Steuerelement\-Benachrichtigungen](../mfc/processing-header-control-notifications.md)  
+-   [Processing header-control notifications](../mfc/processing-header-control-notifications.md)  
   
- Wenn das Header\-Steuerelement\-Objekt in einer übergeordneten Ansicht oder einer Dialogfeldklasse eingebettet wird, wird das Steuerelement zerstört, wenn das übergeordnete Element zerstört wird.  
+ If the header control object is embedded in a parent view or dialog class, the control is destroyed when the parent is destroyed.  
   
-## Siehe auch  
- [Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

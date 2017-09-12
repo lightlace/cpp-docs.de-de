@@ -1,75 +1,94 @@
 ---
-title: "Ausnahmen: Freigeben von Objekten in Ausnahmen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zerstören von Objekten"
-  - "Ausnahmebehandlung, Zerstören von Objekten"
-  - "Befreien von Objekten"
-  - "lokale Ausnahmebehandlung"
-  - "Speicherverluste, von Ausnahme verursacht"
-  - "Auslösen von Ausnahmen, nach der Zerstörung"
-  - "Auslösen von Ausnahmen, Befreien von Objekten in Ausnahmen"
-  - "try-catch-Ausnahmebehandlung, Zerstören von Objekten"
+title: 'Exceptions: Freeing Objects in Exceptions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- throwing exceptions [MFC], freeing objects in exceptions
+- local exception handling
+- memory leaks, caused by exception
+- try-catch exception handling [MFC], destroying objects
+- destroying objects [MFC]
+- freeing objects [MFC]
+- throwing exceptions [MFC], after destroying
+- exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Ausnahmen: Freigeben von Objekten in Ausnahmen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 57c4a3a94af52ed908be7b186b7ba17862f6b799
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt die Anforderung und die Möglichkeit der Freigabe von Objekten, wenn eine Ausnahme auftritt.  Folgende Themen werden behandelt:  
+---
+# <a name="exceptions-freeing-objects-in-exceptions"></a>Exceptions: Freeing Objects in Exceptions
+This article explains the need and the method of freeing objects when an exception occurs. Topics include:  
   
--   [Die Ausnahme lokal behandeln](#_core_handling_the_exception_locally)  
+-   [Handling the exception locally](#_core_handling_the_exception_locally)  
   
--   [Ausnahmen auslösen, nachdem die Objekte zerstört wurden](#_core_throwing_exceptions_after_destroying_objects)  
+-   [Throwing exceptions after destroying objects](#_core_throwing_exceptions_after_destroying_objects)  
   
- Ausnahmen, die vom Framework oder von der Anwendung ausgelöst werden, unterbrechen normalen Ablaufsteuerung.  Deshalb ist es sehr wichtig, nah Objekte nachverfolgen, damit sie ordnungsgemäß zu entfernen können, wenn eine Ausnahme ausgelöst wird.  
+ Exceptions thrown by the framework or by your application interrupt normal program flow. Thus, it is very important to keep close track of objects so that you can properly dispose of them in case an exception is thrown.  
   
- Es gibt zwei primäre Möglichkeiten, um dazu.  
+ There are two primary methods to do this.  
   
--   Behandeln lokal unter Verwendung der **try** und **catch** Schlüsselwörter, zerstören anschließend alle Objekte mit einer Anweisung.  
+-   Handle exceptions locally using the **try** and **catch** keywords, then destroy all objects with one statement.  
   
--   Zerstören Sie dies im **catch**\-Block, bevor die Ausnahme den Blocks für weitere Behandlung auslösen.  
+-   Destroy any object in the **catch** block before throwing the exception outside the block for further handling.  
   
- Diese zwei Ansätze werden unten als Lösungen zum problematischen folgenden Beispiel veranschaulicht:  
+ These two approaches are illustrated below as solutions to the following problematic example:  
   
- [!CODE [NVC_MFCExceptions#14](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCExceptions#14)]  
+ [!code-cpp[NVC_MFCExceptions#14](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_1.cpp)]  
   
- Wie oben geschrieben, wird `myPerson` nicht gelöscht, wenn eine Ausnahme von `SomeFunc` ausgelöst wird.  Die Ausführung springt direkt dem folgenden äußeren Ausnahmehandler Umgehung die Beendigung normaler Funktion und den Code, der das Objekt gelöscht werden.  Der Zeiger auf das Objekt den Gültigkeitsbereich verlässt, wenn die Ausnahme die Funktion verlässt, und der Arbeitsspeicher, der vom Objekt belegt wird, wird nicht wiederhergestellt, solange das Programm ausgeführt wird.  Dies ist ein Speicherverlust; daher erkannt, indem die die Speicherdiagnose verwendet.  
+ As written above, `myPerson` will not be deleted if an exception is thrown by `SomeFunc`. Execution jumps directly to the next outer exception handler, bypassing the normal function exit and the code that deletes the object. The pointer to the object goes out of scope when the exception leaves the function, and the memory occupied by the object will never be recovered as long as the program is running. This is a memory leak; it would be detected by using the memory diagnostics.  
   
-##  <a name="_core_handling_the_exception_locally"></a> Die Ausnahme lokal behandeln  
- Das **try\/catch** Paradigma stellt ein defensives Programmiertechniken zum Vermeiden von Speicherverlusten und dafür bereit, dass die Objekte zerstört werden, wenn Ausnahmen auftreten.  Beispielsweise kann das Beispiel, das oben in diesem Artikel gezeigt wurde, neu geschrieben werden, wie folgt:  
+##  <a name="_core_handling_the_exception_locally"></a> Handling the Exception Locally  
+ The **try/catch** paradigm provides a defensive programming method for avoiding memory leaks and ensuring that your objects are destroyed when exceptions occur. For instance, the example shown earlier in this article could be rewritten as follows:  
   
- [!CODE [NVC_MFCExceptions#15](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCExceptions#15)]  
+ [!code-cpp[NVC_MFCExceptions#15](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]  
   
- Dieses neue diesem Beispiel werden einem Ausnahmehandler, um die Ausnahme abzufangen und lokal zu behandeln.  Es Beenden der Funktion und normalerweise zerstört das Objekt.  Der zentrale Aspekt dieses Beispiels ist, dass ein Kontext, um die Ausnahme abzufangen mit den **try\/catch** Blöcken eingerichtet wird.  Ohne lokale Ausnahmeframe wird die Funktion nie wissen, dass eine Ausnahme ausgelöst worden war und würde nicht die Möglichkeit haben normalerweise, zu beenden und das Objekt zu zerstören.  
+ This new example sets up an exception handler to catch the exception and handle it locally. It then exits the function normally and destroys the object. The important aspect of this example is that a context to catch the exception is established with the **try/catch** blocks. Without a local exception frame, the function would never know that an exception had been thrown and would not have the chance to exit normally and destroy the object.  
   
-##  <a name="_core_throwing_exceptions_after_destroying_objects"></a> Ausnahmen auslösen, nachdem die Objekte zerstört wurden  
- Eine andere Methode, Ausnahmen behandeln ist, mit dem folgenden äußeren Ausnahmebehandlungskontext weiterzuleiten.  Dem **catch**\-Block können Sie eine Bereinigung der lokal zugeordneten Objekte durchführen und die Ausnahme zur weiteren Verarbeitung anschließend auslösen.  
+##  <a name="_core_throwing_exceptions_after_destroying_objects"></a> Throwing Exceptions After Destroying Objects  
+ Another way to handle exceptions is to pass them on to the next outer exception-handling context. In your **catch** block, you can do some cleanup of your locally allocated objects and then throw the exception on for further processing.  
   
- Das auslösende Funktion muss möglicherweise Heapobjekten freigeben.  Wenn die Funktion immer das Heapobjekt freigibt, bevor sie im Normalfall zurückkehrt, sollte die Funktion den Heapobjekt freigeben, bevor die Ausnahme auslöst.  Wenn die Funktion nicht normalerweise dem Objekt verwendet, bevor sie im Normalfall zurückkehrt, dann müssen Sie entscheiden, von Fall zu Fall dass das Heapobjekt freigegeben werden soll.  
+ The throwing function may or may not need to deallocate heap objects. If the function always deallocates the heap object before returning in the normal case, then the function should also deallocate the heap object before throwing the exception. On the other hand, if the function does not normally deallocate the object before returning in the normal case, then you must decide on a case-by-case basis whether the heap object should be deallocated.  
   
- Das folgende Beispiel zeigt, wie lokal zugeordnete Objekte bereinigt werden können:  
+ The following example shows how locally allocated objects can be cleaned up:  
   
- [!CODE [NVC_MFCExceptions#16](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCExceptions#16)]  
+ [!code-cpp[NVC_MFCExceptions#16](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_3.cpp)]  
   
- Der Ausnahmemechanismus gibt automatisch Frameobjekten frei; der Destruktor des Frameobjekts wird ebenfalls aufgerufen.  
+ The exception mechanism automatically deallocates frame objects; the destructor of the frame object is also called.  
   
- Wenn Sie Funktionen aufrufen, die Ausnahmen auslösen können, können Sie **try\/catch** Blöcke verwenden, um zu überprüfen, ob Sie die Ausnahmen abfangen und eine Möglichkeit haben, alle Objekte zu zerstören, die Sie erstellt haben.  Insbesondere Beachten Sie, dass viele MFC\-Funktionen Ausnahmen auslösen können.  
+ If you call functions that can throw exceptions, you can use **try/catch** blocks to make sure that you catch the exceptions and have a chance to destroy any objects you have created. In particular, be aware that many MFC functions can throw exceptions.  
   
- Weitere Informationen finden Sie unter [Ausnahmen: Ausnahmen abfangen und Löschen](../mfc/exceptions-catching-and-deleting-exceptions.md).  
+ For more information, see [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
-## Siehe auch  
- [Ausnahmebehandlung](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

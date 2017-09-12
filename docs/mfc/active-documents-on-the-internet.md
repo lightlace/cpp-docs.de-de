@@ -1,78 +1,97 @@
 ---
-title: "Active Documents f&#252;r das Internet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Aktive Dokumente [C++], Erstellen"
-  - "Aktive Dokumente [C++], Programmierschritte"
-  - "Aktive Dokumente [C++], Verwenden von Anwendungs-Assistenten"
-  - "Anwendungsassistenten [C++]"
-  - "Anwendungsassistenten [C++], Aktive Dokumente"
+title: Active Documents on the Internet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], creating
+- application wizards [MFC], active documents
+- active documents [MFC], programming steps
+- application wizards [MFC]
+- active documents [MFC], using application wizards
 ms.assetid: a46bd8a0-e27a-4116-b1bf-dacdb7ae78d1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Active Documents f&#252;r das Internet
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4e3376e9f510fd8298f8ff8614f017823f924a0f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Active Documents stellen eine Erweiterung zu den herkömmlichen eingebetteten Objekten.  Die aktiven Dokumenten können und werden im gesamten Clientbereich mehrseitig.  Hierzu herkömmliche Menüaushandlung und können einem geöffneten Fenster in der Serveranwendung bearbeitetes direktes sowie in sein.  Anstatt, als kleines Rechteck angezeigt, das durch einen schraffierten Rahmen umgeben ist, aktive Dokumente vollständige Frames und immer direkt aktiv.  
+---
+# <a name="active-documents-on-the-internet"></a>Active Documents on the Internet
+Active documents provide an extension to traditional embedded objects. The Active documents may be multipage and are displayed in the entire client area. They do traditional menu negotiation, and can be edited in-place as well as in an open window in the server application. Instead of displaying as a small rectangle surrounded by a hatched border, Active documents are full frame and always in-place active.  
   
- Aktive Dokumente kann in einem Container wie das Microsoft Office\-Binder angezeigt werden, der eine Methode bereitstellt, ein Verbunddokument erstellen, das aus verschiedenen Dokumenttypen wie Excel besteht, abfassen und der benutzerdefinierte Dokumenttyp, die beide bearbeitete vollständige Frames sein kann.  Active Documents können im Browser wie Microsoft Internet Explorer auch angezeigt werden, der ein Active Document\-Container ist.  
+ Active documents can be viewed in a container like the Microsoft Office Binder, which provides a way to create a compound document made up of different document types like Excel, Word, and your custom document type, each of which can be edited full frame. Active documents can also be displayed in a browser such as Microsoft Internet Explorer, which is an Active document container.  
   
- **Aktives Dokumentvorteilseinschließung:**  
+ **Active document advantages include:**  
   
--   Dokumente können angezeigte vollständige Frames, im gesamten Clientfenster sein.  
+-   Documents can be viewed full frame, in the entire client window.  
   
--   Dokumente können in einem separaten Anwendungsfenster geöffnet sein.  
+-   Documents can be opened in a separate application window.  
   
-     Damit das Dokument, das Hilfsprogramm muss vom Client vorhanden ist oder heruntergeladen einzeln geöffnet wird, bevor die Anwendung ausgeführt werden kann.  Ein Viewer wird so geschrieben werden, um nur Funktionen bereitzustellen \(Word, Excel und PowerPoint stellen Viewer für ihre Dokumente bereit\).  Die Vollversion der Anwendung kann vollständige Bearbeitungsunterstützung bieten.  
+     For the document to open, the helper application must exist on the client, or be downloaded separately before the application can run. A viewer may be written to provide limited functionality (Word, PowerPoint, and Excel provide viewers for their documents). The full version of the application can provide full editing support.  
   
--   Dokumente sind immer direkt aktiv.  
+-   Documents are always in-place active.  
   
--   Die Menübefehle, die vom Container aufgerufen werden, können dem Dokument weitergeleitet werden.  
+-   Menu commands invoked from the container can be routed to your document.  
   
--   Dokumente können in einem Webbrowser angezeigt werden.  Dies bietet eine nahtlose Integration zwischen Dokumenten und anderen Webseiten.  
+-   Documents can be viewed in a Web browser. This provides seamless integration between your documents and other Web pages.  
   
-     Ein Benutzer kann eine HTML\-Webseite, dann ein Excel\-Arbeitsblatt und dann zu einem Dokument navigieren, das Sie mit MFC\-Unterstützung für Active Documents geschrieben haben.  Der Benutzer kann mit der vertrauten Weboberfläche navigieren, wie die Browserschalter nahtlos zwischen Menüs und den Ansichten einer HTML\-Seite, Excel und das Dokument der Anwendung.  
+     A user can browse an HTML Web page, then an Excel spreadsheet, and then to a document that you have written using MFC support for Active documents. The user can navigate using the familiar Web interface, as the browser switches seamlessly between the menus and views of an HTML page, Excel, and your application's document.  
   
--   Alle Anwendungen werden in allgemeinen Frame angezeigt.  
+-   All applications are displayed in a common frame.  
   
-## Anforderungen für aktive Dokumente  
- Die Schnittstellen aufgeführt in der Tabelle unter der Einschließungsschnittstellen bereits erforderlich für eingebettete Server und mehrerer neuer Schnittstellen bestimmt zu aktiven Dokumenten.  MFC stellt Standardimplementierungen für die meisten dieser Schnittstellen in der [COleServerDoc](../mfc/reference/coleserverdoc-class.md)\-Klasse bereit.  
+## <a name="requirements-for-active-documents"></a>Requirements for Active Documents  
+ The interfaces listed in the table below include interfaces already required for embedded servers and several new interfaces specific to Active documents. MFC provides default implementations for most of these interfaces in the [COleServerDoc](../mfc/reference/coleserverdoc-class.md) class.  
   
-|Ein Dokument das...|Implementiert diese Schnittstellen|  
-|-------------------------|----------------------------------------|  
-|Wird Verbunddateien als Speichermechanismus.|`IPersistStorage`.|  
-|Unterstützt die grundlegenden Einbettungsfunktionen von aktiven Dokumenten, einschließlich Erstellen der Datei.|`IPersistFile`, `IOleObject` und `IDataObject`.|  
-|Unterstützt direkte Aktivierung.|`IOleInPlaceObject` und `IOleInPlaceActiveObject` \(mithilfe des Containers `IOleInPlaceSite` und der **IOleInPlaceFrame**\-Schnittstellen\).|  
-|Unterstützt die aktiven Dokumenterweiterungen, die diese neuen Schnittstellen enthalten.  Einige Schnittstellen sind optional.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` und `IPrint`.|  
+|A document that ...|Implements these interfaces|  
+|-------------------------|---------------------------------|  
+|Uses compound files as its storage mechanism.|`IPersistStorage`.|  
+|Supports the basic embedding features of Active documents, including Create From File.|`IPersistFile`, `IOleObject`, and `IDataObject`.|  
+|Supports in-place activation.|`IOleInPlaceObject` and `IOleInPlaceActiveObject` (using the container's `IOleInPlaceSite` and **IOleInPlaceFrame** interfaces).|  
+|Supports the Active document extensions that involve these new interfaces. Some interfaces are optional.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, and `IPrint`.|  
   
- MFC bietet Unterstützung für das Erweitern vorhandener eingebetteten Serverunterstützung aktiven Dokumenten.  
+ MFC provides support for extending existing embedded server support to Active documents.  
   
-## Fügen Sie Active Document\-Unterstützung einer neuen Anwendung hinzu  
- Um eine neue Anwendung mit Active Document\-Unterstützung erstellen: Im MFC\-Anwendungs\-Assistenten auf der Seite **Verbunddokumente**, unter "ausgewählt Verbunddokumentunterstützung" die Option **Vollserver** oder **Container\/Vollserver** aus, und unter "ausgewählten Optionen" aktivieren Sie das Kontrollkästchen für **Active Document\-Server** aus.  
+## <a name="add-active-document-support-to-a-new-application"></a>Add Active Document Support to a New Application  
+ To create a new application with Active document support: In the MFC Application Wizard, on the **Compound Document Support** page, under "Select compound document support" choose **Full-server** or **Container/Full-server**, and under "Select additional options" select the check box for **Active document server**.  
   
-##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> Konvertieren eines vorhandenen prozessinternen Server MFC\-Programm zu einem Active Document\-Server  
- Wenn die Anwendung mit einer Version von Visual C\+\+ vor Version 4.2 erstellt wurde und bereits ein prozessinterner Server ist, können Sie Active Document\-Unterstützung hinzufügen, indem Sie die folgenden Klassen vornehmen:  
+##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> Convert an Existing MFC In-Process Server to an Active Document Server  
+ If your application was created with a version of Visual C++ prior to version 4.2 and is already an in-process server, you can add Active document support by making changes to the following classes:  
   
-|Klassentyp|Früher abgeleitet von|Ändern Sie, um von abgeleitet|  
-|----------------|---------------------------|-----------------------------------|  
-|Direkte Frames|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
-|Element|`COleServerItem`|`CDocObjectServerItem`|  
+|Class type|Formerly derived from|Change to derive from|  
+|----------------|---------------------------|---------------------------|  
+|In-Place Frame|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|Item|`COleServerItem`|`CDocObjectServerItem`|  
   
- Außerdem ändern Sie, wie Informationen, in die Registrierung eingetragen werden, und nehmen einige andere Änderungen vor.  Wenn die Anwendung derzeit keine COM\-Komponenten Unterstützung hat, können Sie Serverunterstützung hinzufügen, mit dem Anwendungs\-Assistenten ausführen und den COM\-Komponentebesonderecode mit der vorhandenen Anwendung integrieren.  
+ You will also change how information is entered in the registry, and make several other changes. If your application currently has no COM components support, you can add server support by running the Application Wizard and integrating the COM component-specific code with your existing application.  
   
-## Siehe auch  
- [MFC\-Internetprogrammierungsaufgaben](../mfc/mfc-internet-programming-tasks.md)   
- [Grundlagen der MFC\-Internetprogrammierung](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

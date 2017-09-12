@@ -1,79 +1,98 @@
 ---
-title: "Zwischenablage: Daten kopieren und einf&#252;gen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Zwischenablage, Kopieren von Daten nach"
-  - "Zwischenablage, Einfügen"
+title: 'Clipboard: Copying and Pasting Data | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Clipboard, copying data to
+- Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Zwischenablage: Daten kopieren und einf&#252;gen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19305f919f7276b17ac24c5e2907a8a84b23e13e
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieses Thema beschreibt die minimale Arbeit, die erforderlich ist, um das Kopieren zu und Einfügen aus der Zwischenablage in der OLE\-Anwendung zu implementieren.  Es wird empfohlen, die [Datenobjekte und Datenquellen \(OLE\)](../mfc/data-objects-and-data-sources-ole.md) Themen lesen, bevor Sie fortfahren.  
+---
+# <a name="clipboard-copying-and-pasting-data"></a>Clipboard: Copying and Pasting Data
+This topic describes the minimum work necessary to implement copying to and pasting from the Clipboard in your OLE application. It is recommended that you read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) topics before proceeding.  
   
- Bevor Sie das Kopieren oder Einfügen implementieren können, müssen Sie zuerst Funktionen bereitstellen, um die Zwischenablage, Schnitt\- und Pastenoptionen im Menü Bearbeiten zu behandeln.  
+ Before you can implement either copying or pasting, you must first provide functions to handle the Copy, Cut, and Paste options on the Edit menu.  
   
-##  <a name="_core_copying_or_cutting_data"></a> Kopieren oder Schnittparameter  
+##  <a name="_core_copying_or_cutting_data"></a> Copying or Cutting Data  
   
-#### Um Daten in die Zwischenablage kopieren  
+#### <a name="to-copy-data-to-the-clipboard"></a>To copy data to the Clipboard  
   
-1.  Bestimmen Sie, ob die Daten ist oder systemeigene Daten ist ein verknüpftes oder eingebettetes Element kopiert wird.  
+1.  Determine whether the data to be copied is native data or is an embedded or linked item.  
   
-    -   Wenn die Daten eingebettet bzw. verknüpft werden, rufen Sie einen Zeiger auf das `COleClientItem`\-Objekt, das ausgewählt wurde.  
+    -   If the data is embedded or linked, obtain a pointer to the `COleClientItem` object that has been selected.  
   
-    -   Wenn die Daten angehören und die Anwendung ein Server ist, erstellen Sie ein neues Objekt, das von `COleServerItem` abgeleitet wird, das die ausgewählten Daten enthält.  Andernfalls erstellen Sie ein `COleDataSource`\-Objekt für die Daten.  
+    -   If the data is native and the application is a server, create a new object derived from `COleServerItem` containing the selected data. Otherwise, create a `COleDataSource` object for the data.  
   
-2.  Rufen Sie die ausgewählten `CopyToClipboard`\-Memberfunktion des Elements auf.  
+2.  Call the selected item's `CopyToClipboard` member function.  
   
-3.  Wenn der Benutzer ein Ausschneidevorgang anstelle eines Kopiervorgangs auswählte, löschen Sie die ausgewählten Daten von der Anwendung.  
+3.  If the user chose a Cut operation instead of a Copy operation, delete the selected data from your application.  
   
- Um ein Beispiel dieser Sequenz zu finden, lesen Sie die **OnEditCut** und **OnEditCopy** in den Funktionen auch [OCLIENT](../top/visual-cpp-samples.md) und [HIERSVR](../top/visual-cpp-samples.md) MFC\-OLE.  Beachten Sie, dass diese Beispiele einen Zeiger auf den derzeit ausgewählten Daten warten, sodass Schritt 1 bereits abgeschlossen.  
+ To see an example of this sequence, see the **OnEditCut** and **OnEditCopy** functions in the MFC OLE sample programs [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md). Note that these samples maintain a pointer to the currently selected data, so step 1 is already complete.  
   
-##  <a name="_core_pasting_data"></a> Einfügen von Daten  
- Daten einzufügen ist schwieriger, als es kopiert, da Sie den Stil auswählen müssen, um zu verwenden, wenn Sie die Daten in die Anwendung einfügen.  
+##  <a name="_core_pasting_data"></a> Pasting Data  
+ Pasting data is more complicated than copying it because you need to choose the format to use in pasting the data into your application.  
   
-#### Um Daten aus der Zwischenablage einfügen  
+#### <a name="to-paste-data-from-the-clipboard"></a>To paste data from the Clipboard  
   
-1.  In der Ansichtsklasse die **OnEditPaste**, um von Benutzern zu behandeln, die die Pastenoption im Menü Bearbeiten auswählen.  
+1.  In your view class, implement **OnEditPaste** to handle users choosing the Paste option from the Edit menu.  
   
-2.  In der **OnEditPaste**\-Funktion erstellen Sie ein `COleDataObject`\-Objekt und rufen Sie dessen `AttachClipboard`\-Memberfunktion auf, um das Objekt an Daten in der Zwischenablage zu verknüpfen.  
+2.  In the **OnEditPaste** function, create a `COleDataObject` object and call its `AttachClipboard` member function to link this object to the data on the Clipboard.  
   
-3.  Rufen Sie `COleDataObject::IsDataAvailable` auf, um zu überprüfen, ob ein bestimmtes Format verfügbar ist.  
+3.  Call `COleDataObject::IsDataAvailable` to check whether a particular format is available.  
   
-     Alternativ können Sie `COleDataObject::BeginEnumFormats` verwenden, um nach anderen Formaten finden, bis Sie finden ein, das die meisten Ihrer Anwendung verarbeiten.  
+     Alternately, you can use `COleDataObject::BeginEnumFormats` to look for other formats until you find one most suited to your application.  
   
-4.  Führen Sie das Einfügen des Stils aus.  
+4.  Perform the paste of the format.  
   
- Ein Beispiel, wie dies funktioniert, finden Sie in der Implementierung **OnEditPaste** in den Memberfunktionen Ansichtsklassen, die in den auch [OCLIENT](../top/visual-cpp-samples.md) und [HIERSVR](../top/visual-cpp-samples.md) MFC\-OLE definiert werden.  
+ For an example of how this works, see the implementation of the **OnEditPaste** member functions in the view classes defined in the MFC OLE sample programs [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md).  
   
 > [!TIP]
->  Der Hauptvorteil des Trennens des Einfügevorgangs in seine eigene Features ist, dass die gleiche Pastencode verwendet werden, wenn Daten in die Anwendung während eines Drag & Drop\-Vorgangs abgelegt werden.  Wie im OCLIENT\-Menü und in HIERSVR, kann die `OnDrop`\-Funktion auch **DoPasteItem** aufrufen und Code wiederverwenden, der zum Implementieren Einfügevorgängen geschrieben wird.  
+>  The main benefit of separating the paste operation into its own function is that the same paste code can be used when data is dropped in your application during a drag-and-drop operation. As in OCLIENT and HIERSVR, your `OnDrop` function can also call **DoPasteItem**, reusing the code written to implement Paste operations.  
   
- Um die Inhalte einfügen\-Option im Menü Bearbeiten zu behandeln, finden Sie im Thema [Dialogfelder in OLE](../mfc/dialog-boxes-in-ole.md).  
+ To handle the Paste Special option on the Edit menu, see the topic [Dialog Boxes in OLE](../mfc/dialog-boxes-in-ole.md).  
   
-### Worüber möchten Sie mehr erfahren?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Hinzufügen anderer Formate](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [OLE\-Datenobjekte und Datenquellen und einheitliche Datenübertragung](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
--   [Drag & Drop](../mfc/drag-and-drop-ole.md)  
+-   [OLE drag and drop](../mfc/drag-and-drop-ole.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
-## Siehe auch  
- [Zwischenablage: Verwenden des OLE\-Zwischenablagemechanismus](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard: Using the OLE Clipboard Mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+

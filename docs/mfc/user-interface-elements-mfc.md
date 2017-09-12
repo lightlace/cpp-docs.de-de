@@ -1,92 +1,111 @@
 ---
-title: "Benutzeroberfl&#228;chenelemente (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, Benutzeroberfläche"
-  - "Benutzeroberflächen"
-  - "Benutzeroberflächen, Erstellen"
+title: User Interface Elements (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, user interface
+- user interfaces, creating
+- user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Benutzeroberfl&#228;chenelemente (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 957f5a89d015dbc023cd5dd464ae1fb9176166fb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Informationen darüber, wie die Benutzeroberfläche für die Anwendung, indem der MFC\-Bibliothek \(Microsoft Foundation \(MFC\) verwenden, finden Sie unter folgenden Themen.  
+---
+# <a name="user-interface-elements-mfc"></a>User Interface Elements (MFC)
+For information about how to create the user interface for your application by using the Microsoft Foundation Class (MFC) Library, see the following topics.  
   
-## In diesem Abschnitt  
- [ActiveX\-Steuerelemente](../mfc/activex-controls.md)  
- Beschreibt, wie Sie wiederverwendbare Softwarekomponente auf dem Component Object Model \(COM\) verwendet, das Modell unterstützt zahlreiche OLE\-Funktionen und angepasst werden kann, um viele Dieses anzupassen  
+## <a name="in-this-section"></a>In This Section  
+ [ActiveX Controls](../mfc/activex-controls.md)  
+ Describes how to use reusable software component based on the Component Object Model (COM), which supports a wide variety of OLE functionality and can be customized to fit many software needs  
   
- [Zwischenablage](../mfc/clipboard.md)  
- Beschreibt, wie Sie Support für die Windows\-Zwischenablage in MFC\-Anwendungen implementiert.  
+ [Clipboard](../mfc/clipboard.md)  
+ Describes how to implement support for the Windows Clipboard in MFC applications.  
   
- [Steuerelemente](../mfc/controls-mfc.md)  
- Beschreibt allgemeine Windows\-Steuerelemente, einschließlich Ownerdrawnkontrollen, ActiveX\-Steuerelemente und andere Steuerelementklassen, die von der MFC\-Bibliothek angegeben werden.  
+ [Controls](../mfc/controls-mfc.md)  
+ Describes Windows common controls, including owner-drawn controls, ActiveX controls, and other control classes supplied by the MFC Library.  
   
- [Steuerleisten](../mfc/control-bars.md)  
- Beschreibt Funktionen von Symbolleisten, Statusleisten und der Dialogleisten.  
+ [Control Bars](../mfc/control-bars.md)  
+ Describes functionality of toolbars, status bars, and dialog bars.  
   
- [Dialogleisten](../mfc/dialog-bars.md)  
- Beschreibt eine Art Steuerleiste, die beliebige Steuerelement enthalten kann.  
+ [Dialog Bars](../mfc/dialog-bars.md)  
+ Describes a kind of control bar that can contain any kind of control.  
   
- [Dialogfelder](../mfc/dialog-boxes.md)  
- Beschreibt, wie Dialogfelder erstellt wird, mithilfe der Editoren und Assistenten codiert.  
+ [Dialog Boxes](../mfc/dialog-boxes.md)  
+ Describes how to create dialog boxes by using the editors and code wizards.  
   
- [Dokument\-\/Ansichtsarchitektur](../mfc/document-view-architecture.md)  
- Beschreibt Datenverwaltung in MFC.  
+ [Document/View Architecture](../mfc/document-view-architecture.md)  
+ Describes data management in MFC.  
   
- [Formularansichten](../mfc/form-views-mfc.md)  
- Beschreibt, wie Formularunterstützung der Anwendung hinzugefügt werden.  
+ [Form Views](../mfc/form-views-mfc.md)  
+ Describes how to add forms support to your application.  
   
- [HTML\-Hilfe: Kontextbezogene Hilfe für Programme](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
- Beschreibt, wie Hilfe kontextbezogenen Anwendungen mithilfe von Benutzern hinzufügt.  
+ [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
+ Describes how to add context-sensitive help to your applications by using HTML Help.  
   
- [MDI\-Gruppen im Registerkartenformat](../mfc/mdi-tabbed-groups.md)  
- Ermöglicht Multiple Document Interface \(MDI\)\- Anwendungen, eine oder mehrere Fenster in Registerform \(oder Gruppen der Fenster im Registerkartenformat, die während *Gruppen im Registerkartenformat* bekannt\), im MDI\-Clientbereich anzuzeigen.  
+ [MDI Tabbed Groups](../mfc/mdi-tabbed-groups.md)  
+ Enables multiple document interface (MDI) applications to display one or more tabbed windows (or groups of tabbed windows, which are known as *tabbed groups*) in the MDI client area.  
   
- [Menüs](../mfc/menus-mfc.md)  
- Beschreibt, wie Menüs der Benutzeroberfläche hinzugefügt werden.  
+ [Menus](../mfc/menus-mfc.md)  
+ Describes how to add menus to your user interface.  
   
  [OLE](../mfc/ole-mfc.md)  
- Enthält Links zu Themen, die Object Linking auf Embedding erörtern.  
+ Provides links to topics that discuss object linking and embedding.  
   
- [Drucken und Druckvorschau](../mfc/printing-and-print-preview.md)  
- Beschreibt MFC\-Unterstützung für das Drucken und Druckvorschau von Anwendungen.  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)  
+ Describes MFC support for printing and print preview from your applications.  
   
- [Eigenschaftenblätter](../mfc/property-sheets-mfc.md)  
- Beschreibt, wie von verwendet, um einen Großteil Steuerelement in einem Dialogfeld zu verwalten.  
+ [Property Sheets](../mfc/property-sheets-mfc.md)  
+ Describes how to use property sheets to manage large numbers of control in a dialog box.  
   
- [Menüband\-Designer \(MFC\)](../mfc/ribbon-designer-mfc.md)  
- Beschreibt MFC\-Unterstützung zum Erstellen und Ändern von Menüband für Benutzeroberflächen.  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)  
+ Describes MFC support for creating and modifying ribbon UI resources.  
   
- [Statusleisten](../mfc/status-bars.md)  
- Beschreibt, wie das in Anwendungen.  
+ [Status Bars](../mfc/status-bars.md)  
+ Describes how to use status bars in your applications.  
   
- [QuickInfos](../mfc/tool-tips.md)  
- Beschreibt, wie Sie QuickInfos implementiert, die Benutzer bei, wenn mit den Anwendungen.  
+ [Tool Tips](../mfc/tool-tips.md)  
+ Describes how to implement tool tips to assist users in using your applications.  
   
- [Symbolleisten](../mfc/toolbars.md)  
- Beschreibt die Grundlagen, über wie Symbolleisten in MFC verwendet.  
+ [Toolbars](../mfc/toolbars.md)  
+ Describes the fundamentals about how to use toolbars in MFC.  
   
- [Visualisierungs\-Manager](../mfc/visualization-manager.md)  
- Tritt als eine Klasse, in der Sie den ganzen den Zeichnungscode die Anwendung einfügen können.  
+ [Visualization Manager](../mfc/visualization-manager.md)  
+ Acts as one class where you can put all the drawing code for your application.  
   
  [Windows](../mfc/windows.md)  
- Beschreibt die Grundlagen zu, wie Fenster in MFC verwendet.  
+ Describes the fundamentals about how to use windows in MFC.  
   
-## Verwandte Abschnitte  
- [MFC\-Desktopanwendungen](../mfc/mfc-desktop-applications.md)  
- Enthält Referenzmaterial für die MFC\-Bibliothek bereit.  MFC ist ein Satz von Klassen, die ein, das wiederum das Framework einer Anwendung ist, die Anwendung darstellt.
+## <a name="related-sections"></a>Related Sections  
+ [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)  
+ Provides reference material for the MFC Library. MFC is a set of classes that constitute an application framework, which is the framework of an application written for the Windows API.
+
+

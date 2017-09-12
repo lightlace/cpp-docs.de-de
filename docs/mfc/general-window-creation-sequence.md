@@ -1,50 +1,69 @@
 ---
-title: "Allgemeine Ablauffolge bei der Fenstererstellung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Rahmenfenster [C++], Erstellen"
-  - "Reihenfolge [C++]"
-  - "Reihenfolge [C++], Fenstererstellung"
-  - "Fenster [C++], Erstellen"
+title: General Window Creation Sequence | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sequence [MFC], window creation
+- frame windows [MFC], creating
+- windows [MFC], creating
+- sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Allgemeine Ablauffolge bei der Fenstererstellung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 48eabbb2bfd7ca90c8dbe9f82207f8770018b0e2
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Wenn Sie ein Fenster von Ihrem erstellen, verwendet z Auch, untergeordnetes Fenster, dem Framework viel den gleichen Prozess wie das, das in [Dokument\/Ansichts\-Erstellung](../mfc/document-view-creation.md) beschrieben wird.  
+---
+# <a name="general-window-creation-sequence"></a>General Window Creation Sequence
+When you create a window of your own, such as a child window, the framework uses much the same process as that described in [Document/View Creation](../mfc/document-view-creation.md).  
   
- Alle Fensterklassen, die von MFC bereitgestellte werden, legen [Konstruktion zweistufige](../mfc/one-stage-and-two-stage-construction-of-objects.md).  Das heißt, während eines Aufrufs des Operators C\+\+ **neu**, wird der Konstruktor auf und initialisiert, ein C\+\+\-Objekt stellt jedoch kein entsprechendes Windows\-Fenster erstellt.  Das wird danach durchgeführt, indem die [Erstellen](../Topic/CWnd::Create.md)\-Memberfunktion des Fensterobjekts aufruft.  
+ All the window classes provided by MFC employ [two-stage construction](../mfc/one-stage-and-two-stage-construction-of-objects.md). That is, during an invocation of the C++ **new** operator, the constructor allocates and initializes a C++ object but does not create a corresponding Windows window. That is done afterward by calling the [Create](../mfc/reference/cwnd-class.md#create) member function of the window object.  
   
- Die **Erstellen**\-Memberfunktion stellt das Windows\-Fenster erstellt und speichert seine `HWND` im öffentlichen Datenmember [m\_hWnd](../Topic/CWnd::m_hWnd.md) des C\+\+\-Objekts.  **Erstellen** gibt vollständige Flexibilität zum Erstellungsparametern.  Bevor Sie **Erstellen** aufrufen, können Sie eine Fensterklasse mit der globalen Funktion [AfxRegisterWndClass](../Topic/AfxRegisterWndClass.md) registrieren, um das Symbol festzulegen und Klasse formatiert für denjenigen Frame.  
+ The **Create** member function makes the Windows window and stores its `HWND` in the C++ object's public data member [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). **Create** gives complete flexibility over the creation parameters. Before calling **Create**, you may want to register a window class with the global function [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) in order to set the icon and class styles for the frame.  
   
- Für Rahmenfenster können Sie die Memberfunktion [LoadFrame](../Topic/CFrameWnd::LoadFrame.md) statt **Erstellen** verwenden.  `LoadFrame` stellt das Windows\-Fenster mit wenig Parameter erstellt.  Sie ruft viele Standardwerte von Ressourcen, einschließlich die Beschriftung der Frame, das Symbol\-, die Zugriffstastentabelle und das Menü ab.  
+ For frame windows, you can use the [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) member function instead of **Create**. `LoadFrame` makes the Windows window using fewer parameters. It gets many default values from resources, including the frame's caption, icon, accelerator table, and menu.  
   
 > [!NOTE]
->  das Symbol, Zugriffstastentabelle und Menüressourcen müssen eine allgemeine Ressourcen\-ID, wie **IDR\_MAINFRAME** verfügen, damit sie von LoadFrame geladen werden können.  
+>  Your icon, accelerator table, and menu resources must have a common resource ID, such as **IDR_MAINFRAME**, for them to be loaded by LoadFrame.  
   
-## Worüber möchten Sie mehr erfahren?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Fensterobjekte](../mfc/window-objects.md)  
+-   [Window objects](../mfc/window-objects.md)  
   
--   [Das Registrieren des Fensters "Klasse"](../mfc/registering-window-classes.md)  
+-   [Registering window "classes"](../mfc/registering-window-classes.md)  
   
--   [Zerstören von Fensterobjekten](../mfc/destroying-window-objects.md)  
+-   [Destroying window objects](../mfc/destroying-window-objects.md)  
   
--   [Erstellen von Dokumentrahmenfenstern](../mfc/creating-document-frame-windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
-## Siehe auch  
- [Erstellen von Fenstern](../mfc/creating-windows.md)
+## <a name="see-also"></a>See Also  
+ [Creating Windows](../mfc/creating-windows.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: CMonthCalCtrl-Klasse | Microsoft-Dokumentation
+title: CMonthCalCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -56,11 +56,48 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- month calendar controls, CMonthCalCtrl class
-- common controls, Internet Explorer 4.0
-- CMonthCalCtrl class
-- Internet Explorer 4.0 common controls
-- month calendar controls
+- CMonthCalCtrl [MFC], CMonthCalCtrl
+- CMonthCalCtrl [MFC], Create
+- CMonthCalCtrl [MFC], GetCalendarBorder
+- CMonthCalCtrl [MFC], GetCalendarCount
+- CMonthCalCtrl [MFC], GetCalendarGridInfo
+- CMonthCalCtrl [MFC], GetCalID
+- CMonthCalCtrl [MFC], GetColor
+- CMonthCalCtrl [MFC], GetCurrentView
+- CMonthCalCtrl [MFC], GetCurSel
+- CMonthCalCtrl [MFC], GetFirstDayOfWeek
+- CMonthCalCtrl [MFC], GetMaxSelCount
+- CMonthCalCtrl [MFC], GetMaxTodayWidth
+- CMonthCalCtrl [MFC], GetMinReqRect
+- CMonthCalCtrl [MFC], GetMonthDelta
+- CMonthCalCtrl [MFC], GetMonthRange
+- CMonthCalCtrl [MFC], GetRange
+- CMonthCalCtrl [MFC], GetSelRange
+- CMonthCalCtrl [MFC], GetToday
+- CMonthCalCtrl [MFC], HitTest
+- CMonthCalCtrl [MFC], IsCenturyView
+- CMonthCalCtrl [MFC], IsDecadeView
+- CMonthCalCtrl [MFC], IsMonthView
+- CMonthCalCtrl [MFC], IsYearView
+- CMonthCalCtrl [MFC], SetCalendarBorder
+- CMonthCalCtrl [MFC], SetCalendarBorderDefault
+- CMonthCalCtrl [MFC], SetCalID
+- CMonthCalCtrl [MFC], SetCenturyView
+- CMonthCalCtrl [MFC], SetColor
+- CMonthCalCtrl [MFC], SetCurrentView
+- CMonthCalCtrl [MFC], SetCurSel
+- CMonthCalCtrl [MFC], SetDayState
+- CMonthCalCtrl [MFC], SetDecadeView
+- CMonthCalCtrl [MFC], SetFirstDayOfWeek
+- CMonthCalCtrl [MFC], SetMaxSelCount
+- CMonthCalCtrl [MFC], SetMonthDelta
+- CMonthCalCtrl [MFC], SetMonthView
+- CMonthCalCtrl [MFC], SetRange
+- CMonthCalCtrl [MFC], SetSelRange
+- CMonthCalCtrl [MFC], SetToday
+- CMonthCalCtrl [MFC], SetYearView
+- CMonthCalCtrl [MFC], SizeMinReq
+- CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
 caps.latest.revision: 23
 author: mikeblome
@@ -80,15 +117,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 96cefbeb7692a07088f596fe08fec2bf179b98bc
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 84db8e53e17691e8867ab6ec2ece862f1db99975
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmonthcalctrl-class"></a>CMonthCalCtrl-Klasse
-Kapselt die Funktionalität eines Monatskalender-Steuerelements.  
+# <a name="cmonthcalctrl-class"></a>CMonthCalCtrl Class
+Encapsulates the functionality of a month calendar control.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -96,77 +133,77 @@ Kapselt die Funktionalität eines Monatskalender-Steuerelements.
 class CMonthCalCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Erstellt ein `CMonthCalCtrl`-Objekt.|  
+|[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Constructs a `CMonthCalCtrl` object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMonthCalCtrl::Create](#create)|Erstellt ein Monatskalender-Steuerelement und fügt es der `CMonthCalCtrl` Objekt.|  
-|[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Ruft die Breite des Rahmens im aktuellen Monatskalender-Steuerelement ab.|  
-|[CMonthCalCtrl::GetCalendarCount](#getcalendarcount)|Ruft die Anzahl der Kalender, die in der aktuellen Monatskalender-Steuerelement angezeigt.|  
-|[CMonthCalCtrl::GetCalendarGridInfo](#getcalendargridinfo)|Ruft Informationen über die aktuelle Monatskalender-Steuerelement.|  
-|[CMonthCalCtrl::GetCalID](#getcalid)|Ruft den Kalender für die aktuelle Monatskalender-Steuerelement.|  
-|[CMonthCalCtrl::GetColor](#getcolor)|Ruft die Farbe eines angegebenen Bereichs für ein Monatskalender-Steuerelement.|  
-|[CMonthCalCtrl::GetCurrentView](#getcurrentview)|Ruft die Ansicht, die derzeit im aktuellen Monatskalender-Steuerelement angezeigt.|  
-|[CMonthCalCtrl::GetCurSel](#getcursel)|Ruft die Systemzeit ab, wie durch das aktuell ausgewählte Datum.|  
-|[CMonthCalCtrl::GetFirstDayOfWeek](#getfirstdayofweek)|Ruft den ersten Tag der Woche, in der am weitesten links stehende Spalte des Kalenders angezeigt werden.|  
-|[CMonthCalCtrl::GetMaxSelCount](#getmaxselcount)|Ruft die aktuelle maximale Anzahl von Tagen, die in einem Monatskalender-Steuerelement ausgewählt werden können.|  
-|[CMonthCalCtrl::GetMaxTodayWidth](#getmaxtodaywidth)|Ruft die maximale Breite der Zeichenfolge "Heute" für das aktuelle Monatskalender-Steuerelement ab.|  
-|[CMonthCalCtrl::GetMinReqRect](#getminreqrect)|Ruft die minimale Größe erforderlich, um ein vollständiger Monat in einem Monatskalender-Steuerelement ab.|  
-|[CMonthCalCtrl::GetMonthDelta](#getmonthdelta)|Ruft die Bildlaufrate für ein Monatskalender-Steuerelement ab.|  
-|[CMonthCalCtrl::GetMonthRange](#getmonthrange)|Ruft das Datum Informationen, die die obere und untere Grenzwerte der Anzeige des Monatskalender-Steuerelements darstellt.|  
-|[CMonthCalCtrl::GetRange](#getrange)|Ruft die aktuellen Minimal- und Maximalwerte Datumsangaben in einem Monatskalender-Steuerelement festlegen.|  
-|[CMonthCalCtrl::GetSelRange](#getselrange)|Ruft Datumsinformationen, die die obere und untere Grenzwerte für den aktuell vom Benutzer ausgewählten Datumsbereich darstellt.|  
-|[CMonthCalCtrl::GetToday](#gettoday)|Ruft die Datumsinformationen für das Datum als "heute" für ein Monatskalender-Steuerelement ab.|  
-|[CMonthCalCtrl::HitTest](#hittest)|Bestimmt, welcher Abschnitt des Monatskalender-Steuerelements an einem bestimmten Punkt auf dem Bildschirm.|  
-|[CMonthCalCtrl::IsCenturyView](#iscenturyview)|Gibt an, ob die aktuelle Ansicht der aktuellen Monatskalender-Steuerelements Jahrhundert ist.|  
-|[CMonthCalCtrl::IsDecadeView](#isdecadeview)|Gibt an, ob die aktuelle Ansicht der aktuellen Monatskalender-Steuerelements Jahrzehnt ist.|  
-|[CMonthCalCtrl::IsMonthView](#ismonthview)|Gibt an, ob die aktuelle Ansicht im aktuellen Monatskalender-Steuerelement im Monat angezeigt wird.|  
-|[CMonthCalCtrl::IsYearView](#isyearview)|Gibt an, ob die aktuelle Ansicht der aktuellen Monatskalender-Steuerelements Jahr ist.|  
-|[CMonthCalCtrl::SetCalendarBorder](#setcalendarborder)|Legt die Breite des Rahmens im aktuellen Monatskalender-Steuerelement fest.|  
-|[CMonthCalCtrl::SetCalendarBorderDefault](#setcalendarborderdefault)|Legt die Standardbreite des Rahmens im aktuellen Monatskalender-Steuerelement fest.|  
-|[CMonthCalCtrl::SetCalID](#setcalid)|Legt den Kalender Bezeichner für das aktuelle Monatskalender-Steuerelement.|  
-|[CMonthCalCtrl::SetCenturyView](#setcenturyview)|Legt das aktuelle Monatskalender-Steuerelement um Jahrhundert anzuzeigen.|  
-|[CMonthCalCtrl::SetColor](#setcolor)|Legt die Farbe eines angegebenen Bereichs des Monatskalender-Steuerelements fest.|  
-|[CMonthCalCtrl::SetCurrentView](#setcurrentview)|Legt das aktuelle Monatskalender-Steuerelement zum Anzeigen der angegebenen Ansicht.|  
-|[CMonthCalCtrl::SetCurSel](#setcursel)|Legt fest, das derzeit ausgewählte Datum für ein Monatskalender-Steuerelement.|  
-|[CMonthCalCtrl:: SetDayState](#setdaystate)|Legt die Anzeige für Tage in einem Monatskalender-Steuerelement fest.|  
-|[CMonthCalCtrl::SetDecadeView](#setdecadeview)|Legt den aktuellen Monatskalender-Steuerelement anzuzeigende Jahrzehnt.|  
-|[CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek)|Legt den Tag der Woche, in der am weitesten links stehende Spalte des Kalenders angezeigt werden.|  
-|[CMonthCalCtrl::SetMaxSelCount](#setmaxselcount)|Legt die maximale Anzahl von Tagen, die in einem Monatskalender-Steuerelement ausgewählt werden können.|  
-|[CMonthCalCtrl::SetMonthDelta](#setmonthdelta)|Legt die Bildlaufrate für ein Monatskalender-Steuerelement.|  
-|[CMonthCalCtrl::SetMonthView](#setmonthview)|Legt das aktuelle Monatskalender-Steuerelement um Monat anzuzeigen.|  
-|[CMonthCalCtrl::SetRange](#setrange)|Legt das Minimum und das maximal zulässige Datum für ein Monatskalender-Steuerelement.|  
-|[CMonthCalCtrl::SetSelRange](#setselrange)|Legt die Auswahl für ein Monatskalender-Steuerelement auf einen bestimmten Zeitraum hinweg.|  
-|[CMonthCalCtrl::SetToday](#settoday)|Legt das Kalender-Steuerelement für den aktuellen Tag.|  
-|[CMonthCalCtrl::SetYearView](#setyearview)|Legt den aktuellen Monatskalender-Steuerelement auf Jahr anzeigen.|  
-|[CMonthCalCtrl::SizeMinReq](#sizeminreq)|Zeichnet das Monatskalender-Steuerelement die Größe Minimalwert, einen Monat.|  
-|[CMonthCalCtrl::SizeRectToMin](#sizerecttomin)|Für die aktuelle Monatskalender-Steuerelement berechnet das kleinste Rechteck, das alle Kalender enthalten kann, die in einem angegebenen Rechteck zu passen.|  
+|[CMonthCalCtrl::Create](#create)|Creates a month calendar control and attaches it to the `CMonthCalCtrl` object.|  
+|[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Retrieves the width of the border of the current month calendar control.|  
+|[CMonthCalCtrl::GetCalendarCount](#getcalendarcount)|Retrieves the number of calendars displayed in the current month calendar control.|  
+|[CMonthCalCtrl::GetCalendarGridInfo](#getcalendargridinfo)|Retrieves information about the current month calendar control.|  
+|[CMonthCalCtrl::GetCalID](#getcalid)|Retrieves the calendar identifier for the current month calendar control.|  
+|[CMonthCalCtrl::GetColor](#getcolor)|Gets the color of a specified area of a month calendar control.|  
+|[CMonthCalCtrl::GetCurrentView](#getcurrentview)|Retrieves the view that is currently displayed by the current month calendar control.|  
+|[CMonthCalCtrl::GetCurSel](#getcursel)|Retrieves the system time as indicated by the currently-selected date.|  
+|[CMonthCalCtrl::GetFirstDayOfWeek](#getfirstdayofweek)|Gets the first day of the week to be displayed in the leftmost column of the calendar.|  
+|[CMonthCalCtrl::GetMaxSelCount](#getmaxselcount)|Retrieves the current maximum number of days that can be selected in a month calendar control.|  
+|[CMonthCalCtrl::GetMaxTodayWidth](#getmaxtodaywidth)|Retrieves the maximum width of the "Today" string for the current month calendar control.|  
+|[CMonthCalCtrl::GetMinReqRect](#getminreqrect)|Retrieves the minimum size required to show a full month in a month calendar control.|  
+|[CMonthCalCtrl::GetMonthDelta](#getmonthdelta)|Retrieves the scroll rate for a month calendar control.|  
+|[CMonthCalCtrl::GetMonthRange](#getmonthrange)|Retrieves date information representing the high and low limits of a month calendar control's display.|  
+|[CMonthCalCtrl::GetRange](#getrange)|Retrieves the current minimum and maximum dates set in a month calendar control.|  
+|[CMonthCalCtrl::GetSelRange](#getselrange)|Retrieves date information representing the upper and lower limits of the date range currently selected by the user.|  
+|[CMonthCalCtrl::GetToday](#gettoday)|Retrieves the date information for the date specified as "today" for a month calendar control.|  
+|[CMonthCalCtrl::HitTest](#hittest)|Determines which section of a month calendar control is at a given point on the screen.|  
+|[CMonthCalCtrl::IsCenturyView](#iscenturyview)|Indicates whether the current view of the current month calendar control is the century view.|  
+|[CMonthCalCtrl::IsDecadeView](#isdecadeview)|Indicates whether the current view of the current month calendar control is the decade view.|  
+|[CMonthCalCtrl::IsMonthView](#ismonthview)|Indicates whether the current view of the current month calendar control is the month view.|  
+|[CMonthCalCtrl::IsYearView](#isyearview)|Indicates whether the current view of the current month calendar control is the year view.|  
+|[CMonthCalCtrl::SetCalendarBorder](#setcalendarborder)|Sets the width of the border of the current month calendar control.|  
+|[CMonthCalCtrl::SetCalendarBorderDefault](#setcalendarborderdefault)|Sets the default width of the border of the current month calendar control.|  
+|[CMonthCalCtrl::SetCalID](#setcalid)|Sets the calendar identifier for the current month calendar control.|  
+|[CMonthCalCtrl::SetCenturyView](#setcenturyview)|Sets the current month calendar control to display the century view.|  
+|[CMonthCalCtrl::SetColor](#setcolor)|Sets the color of a specified area of a month calendar control.|  
+|[CMonthCalCtrl::SetCurrentView](#setcurrentview)|Sets the current month calendar control to display the specified view.|  
+|[CMonthCalCtrl::SetCurSel](#setcursel)|Sets the currently selected date for a month calendar control.|  
+|[CMonthCalCtrl::SetDayState](#setdaystate)|Sets the display for days in a month calendar control.|  
+|[CMonthCalCtrl::SetDecadeView](#setdecadeview)|Sets the current month calendar control to the decade view.|  
+|[CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek)|Sets the day of week to be displayed in the leftmost column of the calendar.|  
+|[CMonthCalCtrl::SetMaxSelCount](#setmaxselcount)|Sets the maximum number of days that can be selected in a month calendar control.|  
+|[CMonthCalCtrl::SetMonthDelta](#setmonthdelta)|Sets the scroll rate for a month calendar control.|  
+|[CMonthCalCtrl::SetMonthView](#setmonthview)|Sets the current month calendar control to display the month view.|  
+|[CMonthCalCtrl::SetRange](#setrange)|Sets the minimum and maximum allowed dates for a month calendar control.|  
+|[CMonthCalCtrl::SetSelRange](#setselrange)|Sets the selection for a month calendar control to a given date range.|  
+|[CMonthCalCtrl::SetToday](#settoday)|Sets the calendar control for the current day.|  
+|[CMonthCalCtrl::SetYearView](#setyearview)|Sets the current month calendar control to year view.|  
+|[CMonthCalCtrl::SizeMinReq](#sizeminreq)|Repaints the month calendar control to its minimum, one-month size.|  
+|[CMonthCalCtrl::SizeRectToMin](#sizerecttomin)|For the current month calendar control, calculates the smallest rectangle that can contain all the calendars that fit in a specified rectangle.|  
   
-## <a name="remarks"></a>Hinweise  
- Im Monatskalender-Steuerelement bietet dem Benutzer mit einer einfachen Kalender-Schnittstelle, von der der Benutzer ein Datum auswählen kann. Der Benutzer kann die Anzeige von ändern:  
+## <a name="remarks"></a>Remarks  
+ The month calendar control provides the user with a simple calendar interface, from which the user can select a date. The user can change the display by:  
   
--   Scrollen rückwärts und Vorwärts, von Monat zu Monat.  
+-   Scrolling backward and forward, from month to month.  
   
--   Auf den Text der heute, um den aktuellen Tag (wenn der **MCS_NOTODAY** Stil wird nicht verwendet).  
+-   Clicking the Today text to display the current day (if the **MCS_NOTODAY** style is not used).  
   
--   Auswählen eines Monats oder eines Jahres in einem Popup-Menü.  
+-   Picking a month or a year from a pop-up menu.  
   
- Sie können anpassen, den Monat Monatskalender-Steuerelement durch eine Vielzahl von Formaten auf das Objekt angewendet werden, bei der Erstellung. Diese Stile werden im Abschnitt [Month Calendar-Steuerelementstile](http://msdn.microsoft.com/library/windows/desktop/bb760919) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ You can customize the month calendar control by applying a variety of styles to the object when you create it. These styles are described in [Month Calendar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760919) in the Windows SDK.  
   
- Im Monatskalender-Steuerelement kann mehr als einen Monat angezeigt, und es kann Tage (z. B. Feiertage) angeben, durch Fettdruck zu setzen das Datum.  
+ The month calendar control can display more than one month, and it can indicate special days (such as holidays) by bolding the date.  
   
- Weitere Informationen zur Verwendung der im Monatskalender-Steuerelements finden Sie unter [Verwenden von CMonthCalCtrl](../../mfc/using-cmonthcalctrl.md).  
+ For more information on using the month calendar control, see [Using CMonthCalCtrl](../../mfc/using-cmonthcalctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -174,21 +211,21 @@ class CMonthCalCtrl : public CWnd
   
  `CMonthCalCtrl`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxdtctl.h  
   
-##  <a name="cmonthcalctrl"></a>CMonthCalCtrl::CMonthCalCtrl  
- Erstellt ein `CMonthCalCtrl`-Objekt.  
+##  <a name="cmonthcalctrl"></a>  CMonthCalCtrl::CMonthCalCtrl  
+ Constructs a `CMonthCalCtrl` object.  
   
 ```  
 CMonthCalCtrl();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Sie müssen Aufrufen **erstellen** nach dem Erstellen des Objekts.  
+### <a name="remarks"></a>Remarks  
+ You must call **Create** after you construct the object.  
   
-##  <a name="create"></a>CMonthCalCtrl::Create  
- Erstellt ein Monatskalender-Steuerelement und fügt es der `CMonthCalCtrl` Objekt.  
+##  <a name="create"></a>  CMonthCalCtrl::Create  
+ Creates a month calendar control and attaches it to the `CMonthCalCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -205,157 +242,157 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Gibt die Kombination von Windows-Stile im Monatskalender-Steuerelement angewendet. Finden Sie unter [Month Calendar-Steuerelementstile](http://msdn.microsoft.com/library/windows/desktop/bb760919) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] für Weitere Informationen zu den.  
+ Specifies the combination of Windows styles applied to the month calendar control. See [Month Calendar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760919) in the Windows SDK for more information about the styles.  
   
  `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Enthält die Position und Größe der im Monatskalender-Steuerelement.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure. Contains the position and size of the month calendar control.  
   
  `pt`  
- Ein Verweis auf eine [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) -Struktur, die den Speicherort der im Monatskalender-Steuerelement angibt.  
+ A reference to a [POINT](http://msdn.microsoft.com/library/windows/desktop/dd162805) structure that identifies the location of the month calendar control.  
   
  `pParentWnd`  
- Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster des Monatskalender-Steuerelements ist. Er darf nicht sein **NULL**.  
+ A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the month calendar control. It must not be **NULL**.  
   
  `nID`  
- Gibt die ID der im Monatskalender-Steuerelement des Steuerelements an  
+ Specifies the month calendar control's control ID.  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Initialisierung erfolgreich war; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization was successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Erstellen Sie einen Monat Monatskalender-Steuerelement in zwei Schritten:  
+### <a name="remarks"></a>Remarks  
+ Create a month calendar control in two steps:  
   
-1.  Rufen Sie [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md) zum Erstellen einer `CMonthCalCtrl` Objekt.  
+1.  Call [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md) to construct a `CMonthCalCtrl` object.  
   
-2.  Rufen Sie diese Memberfunktion, die ein Monatskalender-Steuerelement erstellt, und fügt es der `CMonthCalCtrl` Objekt.  
+2.  Call this member function, which creates a month calendar control and attaches it to the `CMonthCalCtrl` object.  
   
- Beim Aufruf von **erstellen**, werden die allgemeinen Steuerelemente initialisiert. Die Version des **erstellen** Sie Aufruf bestimmt, wie es angepasst wird:  
+ When you call **Create**, the common controls are initialized. The version of **Create** you call determines how it is sized:  
   
--   Um MFC automatisch die Größe des Steuerelements ein Monat, die Überschreibung, die mithilfe der `pt` Parameter.  
+-   To have MFC automatically size the control to one month, call the override that uses the `pt` parameter.  
   
--   Um die Größe des Steuerelements selbst, die Überschreibung dieser Funktion, die mithilfe der `rect` Parameter.  
+-   To size the control yourself, call the override of this function that uses the `rect` parameter.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CMonthCalCtrl&#1;](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_1.cpp)]  
   
-##  <a name="getcalendarborder"></a>CMonthCalCtrl::GetCalendarBorder  
- Ruft die Breite des Rahmens im aktuellen Monatskalender-Steuerelement ab.  
+##  <a name="getcalendarborder"></a>  CMonthCalCtrl::GetCalendarBorder  
+ Retrieves the width of the border of the current month calendar control.  
   
 ```  
 int GetCalendarBorder() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Breite des Steuerelementrahmens in Pixel.  
+### <a name="return-value"></a>Return Value  
+ The width of the control border, in pixels.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [MCM_GETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760945) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [MCM_GETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760945) message, which is described in the Windows SDK.  
   
-##  <a name="getcalendarcount"></a>CMonthCalCtrl::GetCalendarCount  
- Ruft die Anzahl der Kalender, die in der aktuellen Monatskalender-Steuerelement angezeigt.  
+##  <a name="getcalendarcount"></a>  CMonthCalCtrl::GetCalendarCount  
+ Retrieves the number of calendars displayed in the current month calendar control.  
   
 ```  
 int GetCalendarCount() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Kalender, die momentan in der im Monatskalender-Steuerelement angezeigt. Die maximale zulässige Anzahl von Kalendern ist 12.  
+### <a name="return-value"></a>Return Value  
+ The number of calendars currently displayed in the month calendar control. The maximum allowed number of calendars is 12.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [MCM_GETCALENDARCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb760947) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [MCM_GETCALENDARCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb760947) message, which is described in the Windows SDK.  
   
-##  <a name="getcalendargridinfo"></a>CMonthCalCtrl::GetCalendarGridInfo  
- Ruft Informationen über die aktuelle Monatskalender-Steuerelement.  
+##  <a name="getcalendargridinfo"></a>  CMonthCalCtrl::GetCalendarGridInfo  
+ Retrieves information about the current month calendar control.  
   
 ```  
 BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[out] `pmcGridInfo`|Zeiger auf eine [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) -Struktur, die Informationen über die aktuelle Monatskalender-Steuerelement empfängt. Der Aufrufer ist verantwortlich für das zuordnen und diese Struktur zu initialisieren.|  
+|[out] `pmcGridInfo`|Pointer to a [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) structure that receives information about the current month calendar control. The caller is responsible for allocating and initializing this structure.|  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [MCM_GETCALENDARGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760949) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [MCM_GETCALENDARGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760949) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_monthCalCtrl`, d. h. mit der im Monatskalender-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_monthCalCtrl`, that is used to programmatically access the month calendar control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s&#1;9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
-### <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird die `GetCalendarGridInfo` Methode, um das Kalenderdatum abzurufen, die im aktuellen Monatskalender-Steuerelement anzeigt.  
+### <a name="example"></a>Example  
+ The following code example uses the `GetCalendarGridInfo` method to retrieve the calendar date that the current month calendar control displays.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s1&3;](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_3.cpp)]  
   
-##  <a name="getcalid"></a>CMonthCalCtrl::GetCalID  
- Ruft den Kalender für die aktuelle Monatskalender-Steuerelement.  
+##  <a name="getcalid"></a>  CMonthCalCtrl::GetCalID  
+ Retrieves the calendar identifier for the current month calendar control.  
   
 ```  
 CALID GetCalID() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Eines der [Kalender Bezeichner](http://msdn.microsoft.com/library/windows/desktop/dd317732) Konstanten.  
+### <a name="return-value"></a>Return Value  
+ One of the [calendar identifier](http://msdn.microsoft.com/library/windows/desktop/dd317732) constants.  
   
-### <a name="remarks"></a>Hinweise  
- Ein Kalender Bezeichner kennzeichnet einen regionsspezifische Kalender, z. B. die Gregorianisch (lokalisiert), Japanisch oder Hijri Kalender. Die Anwendung kann einen Kalender Bezeichner verwenden, der verschiedene Funktionen unterstützen die Sprache ist.  
+### <a name="remarks"></a>Remarks  
+ A calendar identifier denotes a region-specific calendar, such as the Gregorian (localized), Japanese, or Hijri calendars. Your application can use a calendar identifier that has various language support functions.  
   
- Diese Methode sendet die [MCM_GETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760951) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [MCM_GETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760951) message, which is described in the Windows SDK.  
   
-##  <a name="getcolor"></a>CMonthCalCtrl::GetColor  
- Ruft die Farbe des Bereichs des Monats Monatskalender-Steuerelements, die durch angegebene `nRegion`.  
+##  <a name="getcolor"></a>  CMonthCalCtrl::GetColor  
+ Retrieves the color of an area of the month calendar control specified by `nRegion`.  
   
 ```  
 COLORREF GetColor(int nRegion) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nRegion`  
- Der Bereich, der im Monatskalender-Steuerelement aus dem die Farbe abgerufen werden. Eine Liste der Werte finden Sie unter der `nRegion` Parameter der [SetColor](#setcolor).  
+ The region of the month calendar control from which the color is retrieved. For a list of values, see the `nRegion` parameter of [SetColor](#setcolor).  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Wert, der Teil im Monatskalender-Steuerelement, zugeordnete Farbe angibt, bei Erfolg. Diese Memberfunktion gibt, andernfalls-1 zurück.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value specifying the color associated with the portion of the month calendar control, if successful. Otherwise, this member function returns -1.  
   
-##  <a name="getcurrentview"></a>CMonthCalCtrl::GetCurrentView  
- Ruft die Ansicht, die derzeit im aktuellen Monatskalender-Steuerelement angezeigt.  
+##  <a name="getcurrentview"></a>  CMonthCalCtrl::GetCurrentView  
+ Retrieves the view that is currently displayed by the current month calendar control.  
   
 ```  
 DWORD GetCurrentView() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die aktuelle Ansicht der durch einen der folgenden Werte angegeben wird:  
+### <a name="return-value"></a>Return Value  
+ The current view, which is indicated by one of the following values:  
   
-|Wert|Bedeutung|  
+|Value|Meaning|  
 |-----------|-------------|  
-|`MCMV_MONTH`|Monatliche Ansicht|  
-|`MCMV_YEAR`|Jährliche Ansicht|  
-|`MCMV_DECADE`|Jahrzehnt anzeigen|  
-|`MCMV_CENTURY`|Jahrhundert anzeigen|  
+|`MCMV_MONTH`|Monthly view|  
+|`MCMV_YEAR`|Annual view|  
+|`MCMV_DECADE`|Decade view|  
+|`MCMV_CENTURY`|Century view|  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_monthCalCtrl`, d. h. mit der im Monatskalender-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_monthCalCtrl`, that is used to programmatically access the month calendar control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s&#1;9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
-### <a name="example"></a>Beispiel  
- Die folgenden Code-Beispiel-Berichte anzeigen Monatskalender-Steuerelement derzeit zeigt.  
+### <a name="example"></a>Example  
+ The following code example reports which view the month calendar control currently displays.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s&#1;7](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#7](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_4.cpp)]  
   
-##  <a name="getcursel"></a>CMonthCalCtrl::GetCurSel  
- Ruft die Systemzeit ab, wie durch das aktuell ausgewählte Datum.  
+##  <a name="getcursel"></a>  CMonthCalCtrl::GetCurSel  
+ Retrieves the system time as indicated by the currently-selected date.  
   
 ```  
 BOOL GetCurSel(COleDateTime& refDateTime) const;  BOOL GetCurSel(CTime& refDateTime) const;  
@@ -363,127 +400,127 @@ BOOL GetCurSel(COleDateTime& refDateTime) const;  BOOL GetCurSel(CTime& refDateT
 BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `refDateTime`  
- Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) Objekt oder ein [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt. Erhält die aktuelle Zeit.  
+ A reference to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object or a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object. Receives the current time.  
   
  `pDateTime`  
- Ein Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die die aktuell ausgewählte Datumsinformationen erhält. Dieser Parameter muss eine gültige Adresse sein und darf nicht sein **NULL**.  
+ A pointer to a [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure that will receive the currently-selected date information. This parameter must be a valid address and cannot be **NULL**.  
   
-### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL bei Erfolg; Otherwize 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwize 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb760957)wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb760957), as described in the Windows SDK.  
   
 > [!NOTE]
->  Diese Memberfunktion schlägt fehl, wenn das Format **MCS_MULTISELECT** festgelegt ist.  
+>  This member function fails if the style **MCS_MULTISELECT** is set.  
   
- In MFC Implementierung von `GetCurSel`, können Sie angeben, eine `COleDateTime` Verwendung eine `CTime` Verwendung oder eine `SYSTEMTIME` Struktur Nutzung.  
+ In MFC's implementation of `GetCurSel`, you can specify a `COleDateTime` usage, a `CTime` usage, or a `SYSTEMTIME` structure usage.  
   
-##  <a name="getfirstdayofweek"></a>CMonthCalCtrl::GetFirstDayOfWeek  
- Ruft den ersten Tag der Woche, in der am weitesten links stehende Spalte des Kalenders angezeigt werden.  
+##  <a name="getfirstdayofweek"></a>  CMonthCalCtrl::GetFirstDayOfWeek  
+ Gets the first day of the week to be displayed in the leftmost column of the calendar.  
   
 ```  
 int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *pbLocal*  
- Ein Zeiger auf eine **BOOL** Wert. Wenn der Wert ungleich NULL ist, entspricht die Einstellung des Steuerelements nicht die Einstellung in der Systemsteuerung.  
+ A pointer to a **BOOL** value. If the value is non-zero, the control's setting does not match the setting in the control panel.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Ganzzahlwert, der den ersten Tag der Woche darstellt. Finden Sie unter **Hinweise** für Weitere Informationen zur Bedeutung dieser Ganzzahlen.  
+### <a name="return-value"></a>Return Value  
+ An integer value that represents the first day of the week. See **Remarks** for more information on what these integers represent.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_GETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb760958), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Die Wochentage werden als Ganzzahlen dargestellt.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_GETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb760958), as described in the Windows SDK. The days of the week are represented as integers, as follows.  
   
-|Wert|Tag der Woche|  
+|Value|Day of the week|  
 |-----------|---------------------|  
-|0|Montag|  
-|1|Dienstag|  
-|2|Mittwoch|  
-|3|Donnerstag|  
-|4|Freitag|  
-|5|Samstag|  
-|6|Sonntag|  
+|0|Monday|  
+|1|Tuesday|  
+|2|Wednesday|  
+|3|Thursday|  
+|4|Friday|  
+|5|Saturday|  
+|6|Sunday|  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek).  
+### <a name="example"></a>Example  
+  See the example for [CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek).  
   
-##  <a name="getmaxselcount"></a>CMonthCalCtrl::GetMaxSelCount  
- Ruft die aktuelle maximale Anzahl von Tagen, die in einem Monatskalender-Steuerelement ausgewählt werden können.  
+##  <a name="getmaxselcount"></a>  CMonthCalCtrl::GetMaxSelCount  
+ Retrieves the current maximum number of days that can be selected in a month calendar control.  
   
 ```  
 int GetMaxSelCount() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Ganzzahlwert, der die Gesamtanzahl von Tagen ausgewählt werden können, die für das Steuerelement darstellt.  
+### <a name="return-value"></a>Return Value  
+ An integer value that represents the total number of days that can be selected for the control.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_GETMAXSELCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb760960)wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Verwenden Sie diese Memberfunktion für Steuerelemente mit den **MCS_MULTISELECT** Set formatieren.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_GETMAXSELCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb760960), as described in the Windows SDK. Use this member function for controls with the **MCS_MULTISELECT** style set.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CMonthCalCtrl::SetMaxSelCount](#setmaxselcount).  
+### <a name="example"></a>Example  
+  See the example for [CMonthCalCtrl::SetMaxSelCount](#setmaxselcount).  
   
-##  <a name="getmaxtodaywidth"></a>CMonthCalCtrl::GetMaxTodayWidth  
- Ruft die maximale Breite der Zeichenfolge "Heute" für das aktuelle Monatskalender-Steuerelement ab.  
+##  <a name="getmaxtodaywidth"></a>  CMonthCalCtrl::GetMaxTodayWidth  
+ Retrieves the maximum width of the "Today" string for the current month calendar control.  
   
 ```  
 DWORD GetMaxTodayWidth() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Breite der Zeichenfolge "Heute" in Pixel.  
+### <a name="return-value"></a>Return Value  
+ The width of the "Today" string, in pixels.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_monthCalCtrl`, d. h. mit der im Monatskalender-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_monthCalCtrl`, that is used to programmatically access the month calendar control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s&#1;9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die `GetMaxTodayWidth` Methode.  
+### <a name="example"></a>Example  
+ The following code example demonstrates the `GetMaxTodayWidth` method.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s&#1;1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_5.cpp)]  
   
-### <a name="remarks"></a>Hinweise  
- Der Benutzer kann auf das aktuelle Datum zurück, durch Klicken auf die Zeichenfolge "Heute", die am unteren Rand der im Monatskalender-Steuerelement angezeigt wird. Die Zeichenfolge "Heute" enthält Bezeichnungstext und Textformat.  
+### <a name="remarks"></a>Remarks  
+ The user can return to the current date by clicking the "Today" string, which is displayed at the bottom of the month calendar control. The "Today" string includes label text and date text.  
   
- Diese Methode sendet die [MCM_GETMAXTODAYWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760962) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [MCM_GETMAXTODAYWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760962) message, which is described in the Windows SDK.  
   
-##  <a name="getminreqrect"></a>CMonthCalCtrl::GetMinReqRect  
- Ruft die minimale Größe erforderlich, um ein vollständiger Monat in einem Monatskalender-Steuerelement ab.  
+##  <a name="getminreqrect"></a>  CMonthCalCtrl::GetMinReqRect  
+ Retrieves the minimum size required to show a full month in a month calendar control.  
   
 ```  
 BOOL GetMinReqRect(RECT* pRect) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pRect`  
- Ein Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die umschließende Rechteck Informationen erhalten. Dieser Parameter muss eine gültige Adresse sein und darf nicht sein **NULL**.  
+ A pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that will receive bounding rectangle information. This parameter must be a valid address and cannot be **NULL**.  
   
-### <a name="return-value"></a>Rückgabewert  
- Wenn erfolgreich, diese Member-Funktion einen Wert ungleich NULL zurückgibt und `lpRect` empfängt die entsprechenden Bindungsinformationen. Die Member-Funktion gibt 0 zurück, wenn dies nicht gelingt.  
+### <a name="return-value"></a>Return Value  
+ If successful, this member function returns nonzero and `lpRect` receives the applicable bounding information. If unsuccessful, the member function returns 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_GETMINREQRECT](http://msdn.microsoft.com/library/windows/desktop/bb760978), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_GETMINREQRECT](http://msdn.microsoft.com/library/windows/desktop/bb760978), as described in the Windows SDK.  
   
-##  <a name="getmonthdelta"></a>CMonthCalCtrl::GetMonthDelta  
- Ruft die Bildlaufrate für ein Monatskalender-Steuerelement ab.  
+##  <a name="getmonthdelta"></a>  CMonthCalCtrl::GetMonthDelta  
+ Retrieves the scroll rate for a month calendar control.  
   
 ```  
 int GetMonthDelta() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Bildlaufrate für das Monatskalender-Steuerelement. Die Bildlaufrate ist die Anzahl der Monate, dass das Steuerelement die Anzeige klickt der Benutzer auf eine Bildlaufschaltfläche einmal verschoben wird.  
+### <a name="return-value"></a>Return Value  
+ The scroll rate for the month calendar control. The scroll rate is the number of months that the control moves its display when the user clicks a scroll button once.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_GETMONTHDELTA](http://msdn.microsoft.com/library/windows/desktop/bb760980), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_GETMONTHDELTA](http://msdn.microsoft.com/library/windows/desktop/bb760980), as described in the Windows SDK.  
   
-##  <a name="getmonthrange"></a>CMonthCalCtrl::GetMonthRange  
- Ruft das Datum Informationen, die die obere und untere Grenzwerte der Anzeige des Monatskalender-Steuerelements darstellt.  
+##  <a name="getmonthrange"></a>  CMonthCalCtrl::GetMonthRange  
+ Retrieves date information representing the high and low limits of a month calendar control's display.  
   
 ```  
 int GetMonthRange(
@@ -502,38 +539,38 @@ int GetMonthRange(
     DWORD dwFlags) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `refMinRange`  
- Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oder [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das minimale zulässige Datum enthält.  
+ A reference to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) or [CTime](../../atl-mfc-shared/reference/ctime-class.md) object containing the minimum date allowed.  
   
  `refMaxRange`  
- Ein Verweis auf eine `COleDateTime` oder `CTime` -Objekt, das maximal zulässige Datum enthält.  
+ A reference to a `COleDateTime` or `CTime` object containing the maximum date allowed.  
   
  `pMinRange`  
- Ein Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.  
+ A pointer to a [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure containing the date at the lowest end of the range.  
   
  `pMaxRange`  
- Ein Zeiger auf eine `SYSTEMTIME` -Struktur, die das Datum am höchsten Ende des Bereichs enthält.  
+ A pointer to a `SYSTEMTIME` structure containing the date at the highest end of the range.  
   
  `dwFlags`  
- Wert, die Angabe des Bereichs der die Bereichsgrenzen abgerufen werden sollen. Dieser Wert muss eine der folgenden sein.  
+ Value specifying the scope of the range limits to be retrieved. This value must be one of the following.  
   
-|Wert|Bedeutung|  
+|Value|Meaning|  
 |-----------|-------------|  
-|GMR_DAYSTATE|Einschließen von vorangestellten und nachfolgenden Monate des sichtbaren Bereichs, die nur teilweise angezeigt werden.|  
-|GMR_VISIBLE|Enthalten Sie nur diese Monate an, die vollständig angezeigt werden.|  
+|GMR_DAYSTATE|Include preceding and trailing months of visible range that are only partially displayed.|  
+|GMR_VISIBLE|Include only those months that are entirely displayed.|  
   
-### <a name="return-value"></a>Rückgabewert  
- Eine Ganzzahl des Bereichs in Monaten über die beiden Grenzwerte erstreckt erkennbar `refMinRange` und `refMaxRange` in der ersten und zweiten Version oder `pMinRange` und `pMaxRange` in der dritten Version.  
+### <a name="return-value"></a>Return Value  
+ An integer that represents the range, in months, spanned by the two limits indicated by `refMinRange` and `refMaxRange` in the first and second versions, or `pMinRange` and `pMaxRange` in the third version.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_GETMONTHRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760981), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. In MFC Implementierung von `GetMonthRange`, können Sie angeben, `COleDateTime` Verwendung eine `CTime` Verwendung oder eine `SYSTEMTIME` Struktur Nutzung.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_GETMONTHRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760981), as described in the Windows SDK. In MFC's implementation of `GetMonthRange`, you can specify `COleDateTime` usage, a `CTime` usage, or a `SYSTEMTIME` structure usage.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CMonthCalCtrl:: SetDayState](#setdaystate).  
+### <a name="example"></a>Example  
+  See the example for [CMonthCalCtrl::SetDayState](#setdaystate).  
   
-##  <a name="getrange"></a>CMonthCalCtrl::GetRange  
- Ruft die aktuellen Minimal- und Maximalwerte Datumsangaben in einem Monatskalender-Steuerelement festlegen.  
+##  <a name="getrange"></a>  CMonthCalCtrl::GetRange  
+ Retrieves the current minimum and maximum dates set in a month calendar control.  
   
 ```  
 DWORD GetRange(
@@ -549,29 +586,29 @@ DWORD GetRange(
     LPSYSTEMTIME pMaxRange) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pMinRange`  
- Ein Zeiger auf eine `COleDateTime` -Objekt, ein `CTime` -Objekt, oder [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.  
+ A pointer to a `COleDateTime` object, a `CTime` object, or [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure containing the date at the lowest end of the range.  
   
  `pMaxRange`  
- Ein Zeiger auf eine `COleDateTime` -Objekt, ein `CTime` -Objekt, oder [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am höchsten Ende des Bereichs enthält.  
+ A pointer to a `COleDateTime` object, a `CTime` object, or [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure containing the date at the highest end of the range.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein `DWORD` ,&0; (null) sein kann (es sind keine Grenzwerte festgelegt) oder eine Kombination der folgenden Werte, die Grenze angeben.  
+### <a name="return-value"></a>Return Value  
+ A `DWORD` that can be zero (no limits are set) or a combination of the following values that specify limit information.  
   
-|Wert|Bedeutung|  
+|Value|Meaning|  
 |-----------|-------------|  
-|GDTR_MAX|Maximale wird für das Steuerelement festgelegt. `pMaxRange` gültig ist und die entsprechenden Datumsinformationen enthält.|  
-|GDTR_MIN|Eine Mindestanzahl wird für das Steuerelement festgelegt. `pMinRange` gültig ist und die entsprechenden Datumsinformationen enthält.|  
+|GDTR_MAX|A maximum limit is set for the control; `pMaxRange` is valid and contains the applicable date information.|  
+|GDTR_MIN|A minimum limit is set for the control; `pMinRange` is valid and contains the applicable date information.|  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760983), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. In MFC Implementierung von `GetRange`, können Sie angeben, eine `COleDateTime` Verwendung eine `CTime` Verwendung oder eine `SYSTEMTIME` Struktur Nutzung.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760983), as described in the Windows SDK. In MFC's implementation of `GetRange`, you can specify a `COleDateTime` usage, a `CTime` usage, or a `SYSTEMTIME` structure usage.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CMonthCalCtrl&#2;](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl#2](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_6.cpp)]  
   
-##  <a name="getselrange"></a>CMonthCalCtrl::GetSelRange  
- Ruft Datumsinformationen, die die obere und untere Grenzwerte für den aktuell vom Benutzer ausgewählten Datumsbereich darstellt.  
+##  <a name="getselrange"></a>  CMonthCalCtrl::GetSelRange  
+ Retrieves date information representing the upper and lower limits of the date range currently selected by the user.  
   
 ```  
 BOOL GetSelRange(
@@ -587,29 +624,29 @@ BOOL GetSelRange(
     LPSYSTEMTIME pMaxRange) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `refMinRange`  
- Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oder [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das minimale zulässige Datum enthält.  
+ A reference to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) or [CTime](../../atl-mfc-shared/reference/ctime-class.md) object containing the minimum date allowed.  
   
  `refMaxRange`  
- Ein Verweis auf eine `COleDateTime` oder `CTime` -Objekt, das maximal zulässige Datum enthält.  
+ A reference to a `COleDateTime` or `CTime` object containing the maximum date allowed.  
   
  `pMinRange`  
- Ein Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.  
+ A pointer to a [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure containing the date at the lowest end of the range.  
   
  `pMaxRange`  
- Ein Zeiger auf eine `SYSTEMTIME` -Struktur, die das Datum am höchsten Ende des Bereichs enthält.  
+ A pointer to a `SYSTEMTIME` structure containing the date at the highest end of the range.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_GETSELRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760985), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. `GetSelRange`schlägt fehl, wenn auf ein Monatskalender-Steuerelement angewendet wird, die nicht der **MCS_MULTISELECT** Stil.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_GETSELRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760985), as described in the Windows SDK. `GetSelRange` will fail if applied to a month calendar control that does not use the **MCS_MULTISELECT** style.  
   
- In MFC Implementierung von `GetSelRange`, können Sie angeben, `COleDateTime` Verwendung eine `CTime` Verwendung oder eine `SYSTEMTIME` Struktur Nutzung.  
+ In MFC's implementation of `GetSelRange`, you can specify `COleDateTime` usage, a `CTime` usage, or a `SYSTEMTIME` structure usage.  
   
-##  <a name="gettoday"></a>CMonthCalCtrl::GetToday  
- Ruft die Datumsinformationen für das Datum als "heute" für ein Monatskalender-Steuerelement ab.  
+##  <a name="gettoday"></a>  CMonthCalCtrl::GetToday  
+ Retrieves the date information for the date specified as "today" for a month calendar control.  
   
 ```  
 BOOL GetToday(COleDateTime& refDateTime) const;  BOOL GetToday(COleDateTime& refDateTime) const;  
@@ -617,177 +654,177 @@ BOOL GetToday(COleDateTime& refDateTime) const;  BOOL GetToday(COleDateTime& ref
 BOOL GetToday(LPSYSTEMTIME pDateTime) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `refDateTime`  
- Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oder [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt, das den aktuellen Tag angibt.  
+ A reference to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) or [CTime](../../atl-mfc-shared/reference/ctime-class.md) object indicating the current day.  
   
  `pDateTime`  
- Ein Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die die Datumsangaben zu erhalten. Dieser Parameter muss eine gültige Adresse sein und darf nicht sein **NULL**.  
+ A pointer to a [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure that will receive the date information. This parameter must be a valid address and cannot be **NULL**.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_GETTODAY](http://msdn.microsoft.com/library/windows/desktop/bb760987), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. In MFC Implementierung von `GetToday`, können Sie angeben, eine `COleDateTime` Verwendung eine `CTime` Verwendung oder eine `SYSTEMTIME` Struktur Nutzung.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_GETTODAY](http://msdn.microsoft.com/library/windows/desktop/bb760987), as described in the Windows SDK. In MFC's implementation of `GetToday`, you can specify a `COleDateTime` usage, a `CTime` usage, or a `SYSTEMTIME` structure usage.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CMonthCalCtrl&3;](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl#3](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_7.cpp)]  
   
-##  <a name="hittest"></a>CMonthCalCtrl::HitTest  
- Bestimmt, welche Monatskalender-Steuerelement, ob vorhanden, an der angegebenen Position.  
+##  <a name="hittest"></a>  CMonthCalCtrl::HitTest  
+ Determines which month calendar control, if any, is at a specified position.  
   
 ```  
 DWORD HitTest(PMCHITTESTINFO pMCHitTest);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *pMCHitTest*  
- Ein Zeiger auf eine [MCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760927) Struktur mit Treffertests für das Monatskalender-Steuerelement verweist.  
+ A pointer to a [MCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760927) structure containing hit testing points for the month calendar control.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein `DWORD`-Wert. Gleich der **uHit** Mitglied der **MCHITTESTINFO** Struktur.  
+### <a name="return-value"></a>Return Value  
+ A `DWORD` value. Equal to the **uHit** member of the **MCHITTESTINFO** structure.  
   
-### <a name="remarks"></a>Hinweise  
- `HitTest`verwendet die **MCHITTESTINFO** -Struktur, die Informationen zu den Treffertest enthält.  
+### <a name="remarks"></a>Remarks  
+ `HitTest` uses the **MCHITTESTINFO** structure, which contains information about the hit test.  
   
-##  <a name="iscenturyview"></a>CMonthCalCtrl::IsCenturyView  
- Gibt an, ob die aktuelle Ansicht der aktuellen Monatskalender-Steuerelements Jahrhundert ist.  
+##  <a name="iscenturyview"></a>  CMonthCalCtrl::IsCenturyView  
+ Indicates whether the current view of the current month calendar control is the century view.  
   
 ```  
 BOOL IsCenturyView() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn die aktuelle Ansicht Jahrhundert ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the current view is the century view; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Wenn die Nachricht gibt `MCMV_CENTURY`, gibt diese Methode `true`.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) message, which is described in the Windows SDK. If that message returns `MCMV_CENTURY`, this method returns `true`.  
   
-##  <a name="isdecadeview"></a>CMonthCalCtrl::IsDecadeView  
- Gibt an, ob die aktuelle Ansicht der aktuellen Monatskalender-Steuerelements Jahrzehnt ist.  
+##  <a name="isdecadeview"></a>  CMonthCalCtrl::IsDecadeView  
+ Indicates whether the current view of the current month calendar control is the decade view.  
   
 ```  
 BOOL IsDecadeView() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn die aktuelle Ansicht die zehn Jahre ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the current view is the decade view; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Wenn die Nachricht gibt `MCMV_DECADE`, gibt diese Methode `true`.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) message, which is described in the Windows SDK. If that message returns `MCMV_DECADE`, this method returns `true`.  
   
-##  <a name="ismonthview"></a>CMonthCalCtrl::IsMonthView  
- Gibt an, ob die aktuelle Ansicht im aktuellen Monatskalender-Steuerelement im Monat angezeigt wird.  
+##  <a name="ismonthview"></a>  CMonthCalCtrl::IsMonthView  
+ Indicates whether the current view of the current month calendar control is the month view.  
   
 ```  
 BOOL IsMonthView() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn die aktuelle Ansicht der Monat ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the current view is the month view; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Wenn die Nachricht gibt `MCMV_MONTH`, gibt diese Methode `true`.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) message, which is described in the Windows SDK. If that message returns `MCMV_MONTH`, this method returns `true`.  
   
-##  <a name="isyearview"></a>CMonthCalCtrl::IsYearView  
- Gibt an, ob die aktuelle Ansicht der aktuellen Monatskalender-Steuerelements Jahr ist.  
+##  <a name="isyearview"></a>  CMonthCalCtrl::IsYearView  
+ Indicates whether the current view of the current month calendar control is the year view.  
   
 ```  
 BOOL IsYearView() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn die aktuelle Ansicht Jahr ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the current view is the year view; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Wenn die Nachricht gibt `MCMV_YEAR`, gibt diese Methode `true`.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) message, which is described in the Windows SDK. If that message returns `MCMV_YEAR`, this method returns `true`.  
   
-##  <a name="setcalendarborder"></a>CMonthCalCtrl::SetCalendarBorder  
- Legt die Breite des Rahmens im aktuellen Monatskalender-Steuerelement fest.  
+##  <a name="setcalendarborder"></a>  CMonthCalCtrl::SetCalendarBorder  
+ Sets the width of the border of the current month calendar control.  
   
 ```  
 void SetCalendarBorder(int cxyBorder);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `cxyBorder`|Die Breite des Rahmens in Pixel.|  
+|[in] `cxyBorder`|The width of the border, in pixels.|  
   
-### <a name="remarks"></a>Hinweise  
- Wenn diese Methode erfolgreich ist, wird die Breite des Rahmens festlegen, zu der `cxyBorder` Parameter. Andernfalls wird die Breite des Rahmens auf den Standardwert, der vom aktuellen angegeben wird zurückgesetzt [Design](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), oder&0;, wenn Designs nicht verwendet werden.  
+### <a name="remarks"></a>Remarks  
+ If this method succeeds, the border width is set to the `cxyBorder` parameter. Otherwise, the border width is reset to the default value that is specified by the current [theme](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), or zero if themes are not used.  
   
- Diese Methode sendet die [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_monthCalCtrl`, d. h. mit der im Monatskalender-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_monthCalCtrl`, that is used to programmatically access the month calendar control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s&#1;9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
-### <a name="example"></a>Beispiel  
- Das folgenden Codebeispiel wird die Breite des Rahmens des Monatskalender Steuern auf acht Pixel. Verwenden der [CMonthCalCtrl::GetCalendarBorder](#getcalendarborder) Methode, um zu bestimmen, ob diese Methode erfolgreich ausgeführt wurde.  
+### <a name="example"></a>Example  
+ The following code example sets the border width of the month calendar control to eight pixels. Use the [CMonthCalCtrl::GetCalendarBorder](#getcalendarborder) method to determine whether this method succeeded.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s1&6;](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_8.cpp)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#6](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_8.cpp)]  
   
-##  <a name="setcalendarborderdefault"></a>CMonthCalCtrl::SetCalendarBorderDefault  
- Legt die Standardbreite des Rahmens im aktuellen Monatskalender-Steuerelement fest.  
+##  <a name="setcalendarborderdefault"></a>  CMonthCalCtrl::SetCalendarBorderDefault  
+ Sets the default width of the border of the current month calendar control.  
   
 ```  
 void SetCalendarBorderDefault();
 ```  
   
-### <a name="remarks"></a>Hinweise  
- Die Breite des Rahmens, der angegebene vom aktuellen Standardwert festgelegt ist [Design](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), oder&0;, wenn Designs nicht verwendet werden.  
+### <a name="remarks"></a>Remarks  
+ The border width is set to the default value specified by the current [theme](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), or zero if themes are not used.  
   
- Diese Methode sendet die [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) message, which is described in the Windows SDK.  
   
-##  <a name="setcalid"></a>CMonthCalCtrl::SetCalID  
- Legt den Kalender Bezeichner für das aktuelle Monatskalender-Steuerelement.  
+##  <a name="setcalid"></a>  CMonthCalCtrl::SetCalID  
+ Sets the calendar identifier for the current month calendar control.  
   
 ```  
 BOOL SetCalID(CALID calid);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `calid`|Eines der [Kalender Bezeichner](http://msdn.microsoft.com/library/windows/desktop/dd317732) Konstanten.|  
+|[in] `calid`|One of the [calendar identifier](http://msdn.microsoft.com/library/windows/desktop/dd317732) constants.|  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Ein Kalender Bezeichner gibt einen regionsspezifische Kalender, z. B. die Gregorianisch (lokalisiert), Japanisch oder Hijri Kalender. Verwenden der `SetCalID` Methode, um einen Kalender anzuzeigen, die durch angegeben ist die `calid` -Parameters, wenn das Gebietsschema mit dem Kalender auf Ihrem Computer installiert ist.  
+### <a name="remarks"></a>Remarks  
+ A calendar identifier specifies a region-specific calendar, such as the Gregorian (localized), Japanese, or Hijri calendars. Use the `SetCalID` method to display a calendar that is specified by the `calid` parameter if the locale that contains the calendar is installed on your computer.  
   
- Diese Methode sendet die [MCM_SETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760995) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [MCM_SETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760995) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_monthCalCtrl`, d. h. mit der im Monatskalender-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_monthCalCtrl`, that is used to programmatically access the month calendar control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s&#1;9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
-### <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird im Monatskalender-Steuerelement den Kalender Japan Zeitraum anzeigen. Die `SetCalID` Methode erfolgreich ist, nur dann, wenn Sie diesen Kalender auf Ihrem Computer installiert ist.  
+### <a name="example"></a>Example  
+ The following code example sets the month calendar control to display the Japanese Emperor Era calendar. The `SetCalID` method succeeds only if that calendar is installed on your computer.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s1&4;](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_9.cpp)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_9.cpp)]  
   
-##  <a name="setcenturyview"></a>CMonthCalCtrl::SetCenturyView  
- Legt das aktuelle Monatskalender-Steuerelement um Jahrhundert anzuzeigen.  
+##  <a name="setcenturyview"></a>  CMonthCalCtrl::SetCenturyView  
+ Sets the current month calendar control to display the century view.  
   
 ```  
 BOOL SetCenturyView();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode verwendet die [CMonthCalCtrl::SetCurrentView](#setcurrentview) Methode, um die Ansicht auf festgelegt `MCMV_CENTURY`, die die Sicht Jahrhundert darstellt.  
+### <a name="remarks"></a>Remarks  
+ This method uses the [CMonthCalCtrl::SetCurrentView](#setcurrentview) method to set the view to `MCMV_CENTURY`, which represents the century view.  
   
-##  <a name="setcolor"></a>CMonthCalCtrl::SetColor  
- Legt die Farbe eines angegebenen Bereichs des Monatskalender-Steuerelements fest.  
+##  <a name="setcolor"></a>  CMonthCalCtrl::SetColor  
+ Sets the color of a specified area of a month calendar control.  
   
 ```  
 COLORREF SetColor(
@@ -795,52 +832,52 @@ COLORREF SetColor(
     COLORREF ref);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nRegion`  
- Eine ganze Zahl, welche Monat Kalenderfarbe festlegen angibt. Dieser Wert kann eine der folgenden sein.  
+ An integer value specifying which month calendar color to set. This value can be one of the following.  
   
-|Wert|Bedeutung|  
+|Value|Meaning|  
 |-----------|-------------|  
-|MCSC_BACKGROUND|Die Hintergrundfarbe, die zwischen Monaten angezeigt.|  
-|MCSC_MONTHBK|Die Hintergrundfarbe, in der der Monat angezeigt wird.|  
-|MCSC_TEXT|Die Farbe, in der Text in einem Monat angezeigt wird.|  
-|MCSC_TITLEBK|Die Hintergrundfarbe, in der die Kalenderüberschrift angezeigt wird.|  
-|MCSC_TITLETEXT|Die Farbe, in der der Text in der Kalenderüberschrift angezeigt wird.|  
-|MCSC_TRAILINGTEXT|Die Farbe, die zum Anzeigen von Kopf-und nachfolgende Tag verwendet. Header und die nachfolgenden Tage werden die Tage aus dem vorherigen und folgenden Monate, die auf dem aktuellen Kalender angezeigt werden.|  
+|MCSC_BACKGROUND|The background color displayed between months.|  
+|MCSC_MONTHBK|The background color displayed within the month.|  
+|MCSC_TEXT|The color used to display text within a month.|  
+|MCSC_TITLEBK|The background color displayed in the calendar's title.|  
+|MCSC_TITLETEXT|The color used to display text within the calendar's title.|  
+|MCSC_TRAILINGTEXT|The color used to display header and trailing-day text. Header and trailing days are the days from the previous and following months that appear on the current calendar.|  
   
  `ref`  
- Ein **COLORREF** Wert für die neue Farbe-Einstellung für den angegebenen Teil der im Monatskalender-Steuerelement.  
+ A **COLORREF** value for the new color setting for the specified portion of the month calendar control.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein **COLORREF** Wert, der die vorherige Einstellung der Farbe für den angegebenen Teil des Monatskalender-Steuerelements, wenn erfolgreich darstellt. Andernfalls gibt diese Meldung-1 zurück.  
+### <a name="return-value"></a>Return Value  
+ A **COLORREF** value that represents the previous color setting for the specified portion of the month calendar control, if successful. Otherwise this message returns -1.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_SETCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760997), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_SETCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760997), as described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CMonthCalCtrl&4;](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl#4](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_10.cpp)]  
   
-##  <a name="setcurrentview"></a>CMonthCalCtrl::SetCurrentView  
- Legt das aktuelle Monatskalender-Steuerelement zum Anzeigen der angegebenen Ansicht.  
+##  <a name="setcurrentview"></a>  CMonthCalCtrl::SetCurrentView  
+ Sets the current month calendar control to display the specified view.  
   
 ```  
 BOOL SetCurrentView(DWORD dwNewView);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwNewView`|Einer der folgenden Werte, der angibt, ein monatlich, jährlich, zehn oder Jahrhundert anzeigen.<br /><br /> MCMV_MONTH: Monatliche Ansicht<br /><br /> MCMV_YEAR: Jährliche Ansicht<br /><br /> MCMV_DECADE: Jahrzehnt anzeigen<br /><br /> MCMV_CENTURY: Jahrhundert anzeigen|  
+|[in] `dwNewView`|One of the following values that specifies a monthly, annual, decade, or century view.<br /><br /> MCMV_MONTH: Monthly view<br /><br /> MCMV_YEAR: Annual view<br /><br /> MCMV_DECADE: Decade view<br /><br /> MCMV_CENTURY: Century view|  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [MCM_SETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760998) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [MCM_SETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760998) message, which is described in the Windows SDK.  
   
-##  <a name="setcursel"></a>CMonthCalCtrl::SetCurSel  
- Legt fest, das derzeit ausgewählte Datum für ein Monatskalender-Steuerelement.  
+##  <a name="setcursel"></a>  CMonthCalCtrl::SetCurSel  
+ Sets the currently selected date for a month calendar control.  
   
 ```  
 BOOL SetCurSel(const COleDateTime& refDateTime);  
@@ -848,24 +885,24 @@ BOOL SetCurSel(const CTime& refDateTime);
   BOOL SetCurSel(const LPSYSTEMTIME pDateTime);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `refDateTime`  
- Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oder [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt, das das aktuell ausgewählte Monatskalender-Steuerelement angibt.  
+ A reference to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) or [CTime](../../atl-mfc-shared/reference/ctime-class.md) object indicating the currently-selected month calendar control.  
   
  `pDateTime`  
- Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die das Datum als die aktuelle Auswahl festgelegten enthält.  
+ Pointer to a [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure that contains the date to be set as the current selection.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_SETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb761002), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. In MFC Implementierung von `SetCurSel`, können Sie angeben, eine `COleDateTime` Verwendung eine `CTime` Verwendung oder eine `SYSTEMTIME` Struktur Nutzung.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_SETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb761002), as described in the Windows SDK. In MFC's implementation of `SetCurSel`, you can specify a `COleDateTime` usage, a `CTime` usage, or a `SYSTEMTIME` structure usage.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CMonthCalCtrl&5;](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl#5](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_11.cpp)]  
   
-##  <a name="setdaystate"></a>CMonthCalCtrl:: SetDayState  
- Legt die Anzeige für Tage in einem Monatskalender-Steuerelement fest.  
+##  <a name="setdaystate"></a>  CMonthCalCtrl::SetDayState  
+ Sets the display for days in a month calendar control.  
   
 ```  
 BOOL SetDayState(
@@ -873,37 +910,37 @@ BOOL SetDayState(
     LPMONTHDAYSTATE pStates);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *nMonths*  
- Wert, der angibt, wie viele Elemente im Array enthalten sind, die `pStates` verweist.  
+ Value indicating how many elements are in the array that `pStates` points to.  
   
  `pStates`  
- Ein Zeiger auf eine [MONTHDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760915) Array von Werten, die definieren, wie im Monatskalender-Steuerelement, jeden Tag in der Anzeige gezeichnet wird. Die **MONTHDAYSTATE** Datentyp ist ein Bitfeld, in dem jedes Bit (1 bis 31) stellt den Zustand eines Tages eines Monats dar. Wenn eine Bit aktiviert ist, wird der entsprechende Tag angezeigt fett; Andernfalls wird es mit keine Hervorhebung angezeigt werden.  
+ A pointer to a [MONTHDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760915) array of values that define how the month calendar control will draw each day in its display. The **MONTHDAYSTATE** data type is a bit field, where each bit (1 through 31) represents the state of a day in a month. If a bit is on, the corresponding day will be displayed in bold; otherwise it will be displayed with no emphasis.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_SETDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761004), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_SETDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761004), as described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CMonthCalCtrl&6;](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl#6](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_12.cpp)]  
   
-##  <a name="setdecadeview"></a>CMonthCalCtrl::SetDecadeView  
- Legt den aktuellen Monatskalender-Steuerelement anzuzeigende Jahrzehnt.  
+##  <a name="setdecadeview"></a>  CMonthCalCtrl::SetDecadeView  
+ Sets the current month calendar control to the decade view.  
   
 ```  
 BOOL SetDecadeView();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode verwendet die [CMonthCalCtrl::SetCurrentView](#setcurrentview) Methode, um die Ansicht auf festgelegt `MCMV_DECADE`, die die Sicht Jahrzehnt darstellt.  
+### <a name="remarks"></a>Remarks  
+ This method uses the [CMonthCalCtrl::SetCurrentView](#setcurrentview) method to set the view to `MCMV_DECADE`, which represents the decade view.  
   
-##  <a name="setfirstdayofweek"></a>CMonthCalCtrl::SetFirstDayOfWeek  
- Legt den Tag der Woche, in der am weitesten links stehende Spalte des Kalenders angezeigt werden.  
+##  <a name="setfirstdayofweek"></a>  CMonthCalCtrl::SetFirstDayOfWeek  
+ Sets the day of week to be displayed in the leftmost column of the calendar.  
   
 ```  
 BOOL SetFirstDayOfWeek(
@@ -911,84 +948,84 @@ BOOL SetFirstDayOfWeek(
     int* lpnOld = NULL);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *iDay*  
- Ein Ganzzahlwert, der den Tag darstellt, wird als erster Tag der Woche festgelegt werden. Dieser Wert muss eine der Nummern der Tag sein. Finden Sie unter [GetFirstDayOfWeek](#getfirstdayofweek) eine Beschreibung der Tageszahlen.  
+ An integer value representing which day is to be set as the first day of the week. This value must be one of the day numbers. See [GetFirstDayOfWeek](#getfirstdayofweek) for a description of the day numbers.  
   
  *lpnOld*  
- Ein Zeiger auf eine Ganzzahl, die den ersten Tag der Woche zuvor festgelegt.  
+ A pointer to an integer indicating the first day of the week previously set.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL, wenn ein Wert, der von der vorherige erste Tag der Woche festgelegt ist **LOCALE_IFIRSTDAYOFWEEK**, die den Tag in der Control Panel-Einstellung angegeben ist. Andernfalls gibt diese Funktion 0 zurück.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the previous first day of the week is set to a value other than that of **LOCALE_IFIRSTDAYOFWEEK**, which is the day indicated in the control panel setting. Otherwise, this function returns 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_SETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb761006), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_SETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb761006), as described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CMonthCalCtrl&#7;](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl#7](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_13.cpp)]  
   
-##  <a name="setmaxselcount"></a>CMonthCalCtrl::SetMaxSelCount  
- Legt die maximale Anzahl von Tagen, die in einem Monatskalender-Steuerelement ausgewählt werden können.  
+##  <a name="setmaxselcount"></a>  CMonthCalCtrl::SetMaxSelCount  
+ Sets the maximum number of days that can be selected in a month calendar control.  
   
 ```  
 BOOL SetMaxSelCount(int nMax);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nMax`  
- Der Wert, der die maximale Anzahl von Tagen ausgewählt dargestellt festgelegt wird.  
+ The value that will be set to represent the maximum number of selectable days.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_SETMAXSELCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761008), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_SETMAXSELCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761008), as described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CMonthCalCtrl&#8;](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl#8](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_14.cpp)]  
   
-##  <a name="setmonthdelta"></a>CMonthCalCtrl::SetMonthDelta  
- Legt die Bildlaufrate für ein Monatskalender-Steuerelement.  
+##  <a name="setmonthdelta"></a>  CMonthCalCtrl::SetMonthDelta  
+ Sets the scroll rate for a month calendar control.  
   
 ```  
 int SetMonthDelta(int iDelta);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *iDelta*  
- Die Anzahl der Monate als Bildlaufrate für das Steuerelement festgelegt werden. Wenn dieser Wert&0; (null) ist, wird das Delta Monat standardmäßig auf zurückgesetzt, d. h. die Anzahl der Monate, die im Steuerelement angezeigt.  
+ The number of months to be set as the control's scroll rate. If this value is zero, the month delta is reset to the default, which is the number of months displayed in the control.  
   
-### <a name="return-value"></a>Rückgabewert  
- Die vorherigen Bildlaufrate. Wenn die Bildlaufrate zuvor nicht festgelegt wurde, ist der Rückgabewert 0.  
+### <a name="return-value"></a>Return Value  
+ The previous scroll rate. If the scroll rate has not been previously set, the return value is 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_SETMONTHDELTA](http://msdn.microsoft.com/library/windows/desktop/bb761010), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_SETMONTHDELTA](http://msdn.microsoft.com/library/windows/desktop/bb761010), as described in the Windows SDK.  
   
-##  <a name="setmonthview"></a>CMonthCalCtrl::SetMonthView  
- Legt das aktuelle Monatskalender-Steuerelement um Monat anzuzeigen.  
+##  <a name="setmonthview"></a>  CMonthCalCtrl::SetMonthView  
+ Sets the current month calendar control to display the month view.  
   
 ```  
 BOOL SetMonthView();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode verwendet die [CMonthCalCtrl::SetCurrentView](#setcurrentview) Methode, um die Ansicht auf festgelegt `MCMV_MONTH`, die die Monatsansicht darstellt.  
+### <a name="remarks"></a>Remarks  
+ This method uses the [CMonthCalCtrl::SetCurrentView](#setcurrentview) method to set the view to `MCMV_MONTH`, which represents the month view.  
   
-### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_monthCalCtrl`, d. h. mit der im Monatskalender-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_monthCalCtrl`, that is used to programmatically access the month calendar control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s&#1;9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
-### <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird im Monatskalender-Steuerelement den Monat, Jahr, Jahrzehnt und Jahrhundert Ansichten angezeigt.  
+### <a name="example"></a>Example  
+ The following code example sets the month calendar control to display the month, year, decade, and century views.  
   
- [!code-cpp[NVC_MFC_CMonthCalCtrl_s&#1;2](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_15.cpp)]  
+ [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_15.cpp)]  
   
-##  <a name="setrange"></a>CMonthCalCtrl::SetRange  
- Legt die minimalen und maximalen zulässigen Daten für ein Monatskalender-Steuerelement.  
+##  <a name="setrange"></a>  CMonthCalCtrl::SetRange  
+ Sets the minimum and maximum allowable dates for a month calendar control.  
   
 ```  
 BOOL SetRange(
@@ -1006,24 +1043,24 @@ BOOL SetRange(
     const LPSYSTEMTIME pMaxRange);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pMinRange`  
- Ein Zeiger auf eine `COleDateTime` -Objekt, ein `CTime` -Objekt, oder [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.  
+ A pointer to a `COleDateTime` object, a `CTime` object, or [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure containing the date at the lowest end of the range.  
   
  `pMaxRange`  
- Ein Zeiger auf eine `COleDateTime` -Objekt, ein `CTime` -Objekt, oder `SYSTEMTIME` -Struktur, die das Datum am höchsten Ende des Bereichs enthält.  
+ A pointer to a `COleDateTime` object, a `CTime` object, or `SYSTEMTIME` structure containing the date at the highest end of the range.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761012), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. In MFC Implementierung von `SetRange`, können Sie angeben, `COleDateTime` Verwendung eine `CTime` Verwendung oder eine `SYSTEMTIME` Struktur Nutzung.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761012), as described in the Windows SDK. In MFC's implementation of `SetRange`, you can specify `COleDateTime` usage, a `CTime` usage, or a `SYSTEMTIME` structure usage.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CMonthCalCtrl::GetRange](#getrange).  
+### <a name="example"></a>Example  
+  See the example for [CMonthCalCtrl::GetRange](#getrange).  
   
-##  <a name="setselrange"></a>CMonthCalCtrl::SetSelRange  
- Legt die Auswahl für ein Monatskalender-Steuerelement auf einen bestimmten Zeitraum hinweg.  
+##  <a name="setselrange"></a>  CMonthCalCtrl::SetSelRange  
+ Sets the selection for a month calendar control to a given date range.  
   
 ```  
 BOOL SetSelRange(
@@ -1041,21 +1078,21 @@ BOOL SetSelRange(
     const LPSYSTEMTIME pMaxRange);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pMinRange`  
- Ein Zeiger auf eine `COleDateTime` -Objekt, ein `CTime` -Objekt, oder [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die das Datum am niedrigsten Ende des Bereichs enthält.  
+ A pointer to a `COleDateTime` object, a `CTime` object, or [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure containing the date at the lowest end of the range.  
   
  `pMaxRange`  
- Ein Zeiger auf eine `COleDateTime` -Objekt, ein `CTime` -Objekt, oder `SYSTEMTIME` -Struktur, die das Datum am höchsten Ende des Bereichs enthält.  
+ A pointer to a `COleDateTime` object, a `CTime` object, or `SYSTEMTIME` structure containing the date at the highest end of the range.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_SETSELRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761014), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. In MFC Implementierung von `SetSelRange`, können Sie angeben, `COleDateTime` Verwendung eine `CTime` Verwendung oder eine `SYSTEMTIME` Struktur Nutzung.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_SETSELRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761014), as described in the Windows SDK. In MFC's implementation of `SetSelRange`, you can specify `COleDateTime` usage, a `CTime` usage, or a `SYSTEMTIME` structure usage.  
   
-##  <a name="settoday"></a>CMonthCalCtrl::SetToday  
- Legt das Kalender-Steuerelement für den aktuellen Tag.  
+##  <a name="settoday"></a>  CMonthCalCtrl::SetToday  
+ Sets the calendar control for the current day.  
   
 ```  
 void SetToday(const COleDateTime& refDateTime);  
@@ -1063,73 +1100,73 @@ void SetToday(const CTime* pDateTime);
   void SetToday(const LPSYSTEMTIME pDateTime);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `refDateTime`  
- Ein Verweis auf eine [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das das aktuelle Datum enthält.  
+ A reference to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object that contains the current date.  
   
  `pDateTime`  
- In der zweiten Version, die einen Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt mit Informationen über das aktuelle Datum. In der dritten Version ist ein Zeiger auf eine [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die das aktuelle Datum enthält.  
+ In the second version, a pointer to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object containing the current date information. In the third version, a pointer to a [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure that contains the current date information.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [MCM_SETTODAY](http://msdn.microsoft.com/library/windows/desktop/bb761016), wie in beschrieben die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [MCM_SETTODAY](http://msdn.microsoft.com/library/windows/desktop/bb761016), as described in the Windows SDK.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CMonthCalCtrl::GetToday](#gettoday).  
+### <a name="example"></a>Example  
+  See the example for [CMonthCalCtrl::GetToday](#gettoday).  
   
-##  <a name="setyearview"></a>CMonthCalCtrl::SetYearView  
- Legt den aktuellen Monatskalender-Steuerelement auf Jahr anzeigen.  
+##  <a name="setyearview"></a>  CMonthCalCtrl::SetYearView  
+ Sets the current month calendar control to year view.  
   
 ```  
 BOOL SetYearView();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- `true`Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode verwendet die [CMonthCalCtrl::SetCurrentView](#setcurrentview) Methode, um die Ansicht auf festgelegt `MCMV_YEAR`, der die jährliche Ansicht darstellt.  
+### <a name="remarks"></a>Remarks  
+ This method uses the [CMonthCalCtrl::SetCurrentView](#setcurrentview) method to set the view to `MCMV_YEAR`, which represents the annual view.  
   
-##  <a name="sizeminreq"></a>CMonthCalCtrl::SizeMinReq  
- Zeigt der Monat Monatskalender-Steuerelement die minimale Größe, einen Monat.  
+##  <a name="sizeminreq"></a>  CMonthCalCtrl::SizeMinReq  
+ Displays the month calendar control to the minimum size that displays one month.  
   
 ```  
 BOOL SizeMinReq(BOOL bRepaint = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `bRepaint`  
- Gibt an, ob das Steuerelement neu gezeichnet wird. In der Standardeinstellung **TRUE**. Wenn **FALSE**, erfolgt keine Aktualisierung.  
+ Specifies whether the control is to be repainted. By default, **TRUE**. If **FALSE**, no repainting occurs.  
   
-### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Monatskalender-Steuerelement auf den Minimalwert festgelegt wird; andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the month calendar control is sized to its minimum; otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Aufrufen von `SizeMinReq` erfolgreich im gesamten Monatskalender-Steuerelement für ein Monatskalender angezeigt.  
+### <a name="remarks"></a>Remarks  
+ Calling `SizeMinReq` successfully displays the entire month calendar control for one month's calendar.  
   
-##  <a name="sizerecttomin"></a>CMonthCalCtrl::SizeRectToMin  
- Für die aktuelle Monatskalender-Steuerelement berechnet das kleinste Rechteck, das alle Kalender enthalten kann, die in einem angegebenen Rechteck zu passen.  
+##  <a name="sizerecttomin"></a>  CMonthCalCtrl::SizeRectToMin  
+ For the current month calendar control, calculates the smallest rectangle that can contain all the calendars that fit in a specified rectangle.  
   
 ```  
 LPRECT SizeRectToMin(LPRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
   
-|Parameter|Beschreibung|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `lpRect`|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die ein Rechteck definiert, die die gewünschte Anzahl der Kalender enthält.|  
+|[in] `lpRect`|Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that defines a rectangle that contains the desired number of calendars.|  
   
-### <a name="return-value"></a>Rückgabewert  
- Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die ein Rechteck definiert, deren Größe kleiner oder gleich dem Rechteck definiert, durch die `lpRect` Parameter.  
+### <a name="return-value"></a>Return Value  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that defines a rectangle whose size is less than or equal to the rectangle defined by the `lpRect` parameter.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Methode berechnet, wie viele Kalender im angegebenen Rechteck passt der `lpRect` -Parameter und gibt anschließend das kleinste Rechteck, das die Anzahl der Kalender enthalten kann. Tatsächlich verkleinert diese Methode das angegebene Rechteck angepasst, dass genau die gewünschte Anzahl von Kalendern.  
+### <a name="remarks"></a>Remarks  
+ This method calculates how many calendars can fit in the rectangle specified by the `lpRect` parameter, and then returns the smallest rectangle that can contain that number of calendars. In effect, this method shrinks the specified rectangle to exactly fit the desired number of calendars.  
   
- Diese Methode sendet die [MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020) -Nachricht, die in beschrieben wird die [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020) message, which is described in the Windows SDK.  
   
-## <a name="see-also"></a>Siehe auch  
- [MFC-Beispiel CMNCTRL1](../../visual-cpp-samples.md)   
- [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CDateTimeCtrl-Klasse](../../mfc/reference/cdatetimectrl-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CMNCTRL1](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDateTimeCtrl Class](../../mfc/reference/cdatetimectrl-class.md)
 

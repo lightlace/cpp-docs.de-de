@@ -1,34 +1,53 @@
 ---
-title: "Initialisieren des Dialogfelds | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Initialisieren von Dialogfeldern"
-  - "MFC-Dialogfelder, Initialisieren"
-  - "Modale Dialogfelder, Initialisieren"
-  - "Nicht modale Dialogfelder, Initialisieren"
-  - "OnInitDialog-Methode"
+title: Initializing the Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing dialog boxes [MFC]
+- OnInitDialog method [MFC]
+- modal dialog boxes [MFC], initializing
+- modeless dialog boxes [MFC], initializing
+- MFC dialog boxes [MFC], initializing
 ms.assetid: 968142f5-19f9-4b34-a1d4-8e6412d4379b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Initialisieren des Dialogfelds
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9981b1802f2a3a9e873c86ccee724ce781466f24
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Nachdem das Dialogfeld und sämtliche Steuerelemente erstellt sind, jedoch bevor das Dialogfeld \(jedes Typs\) auf dem Bildschirm angezeigt wird, wird die [OnInitDialog](../Topic/CDialog::OnInitDialog.md)\-Memberfunktion des Dialogfeldobjekts aufgerufen.  Ein modales Dialogfeld tritt dies während des Aufrufs auf `DoModal`.  Ein nicht modales Dialogfeld wird `OnInitDialog` aufgerufen, wenn **Erstellen** aufgerufen wird.  Sie überschreiben normalerweise `OnInitDialog`, um die Steuerelemente im Dialogfeld, z Festlegen des ursprünglichen Texts eines Eingabefelds zu initialisieren.  Sie müssen die `OnInitDialog`\-Memberfunktion der Basisklasse, `CDialog` aufrufen, von der `OnInitDialog` \- Überschreibung.  
+---
+# <a name="initializing-the-dialog-box"></a>Initializing the Dialog Box
+After the dialog box and all of its controls are created but just before the dialog box (of either type) appears on the screen, the dialog object's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) member function is called. For a modal dialog box, this occurs during the `DoModal` call. For a modeless dialog box, `OnInitDialog` is called when **Create** is called. You typically override `OnInitDialog` to initialize the dialog box's controls, such as setting the initial text of an edit box. You must call the `OnInitDialog` member function of the base class, `CDialog`, from your `OnInitDialog` override.  
   
- Wenn Sie die Hintergrundfarbe des Dialogfelds \(und die aller anderen Dialogfelder\) in der Anwendung festlegen möchten, finden Sie unter [Festlegen der Hintergrundfarbe des Dialogfelds](../mfc/setting-the-dialog-box’s-background-color.md).  
+ If you want to set your dialog box's background color (and that of all other dialog boxes in your application), see [Setting the Dialog Box's Background Color](../mfc/setting-the-dialog-boxs-background-color.md).  
   
-## Siehe auch  
- [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

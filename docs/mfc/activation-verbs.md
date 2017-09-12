@@ -1,48 +1,67 @@
 ---
-title: "Aktivierung: Verben | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Aktivierung [C++], Verben"
-  - "edit-Verb"
-  - "OLE [C++], Aktivierung"
-  - "OLE [C++], Bearbeiten"
-  - "OLE-Aktivierung"
-  - "Primäres Verb"
-  - "Verben"
+title: 'Activation: Verbs | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- verbs [MFC]
+- OLE [MFC], activation
+- edit verb [MFC]
+- activation [MFC], verbs
+- OLE [MFC], editing
+- Primary verb [MFC]
+- OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Aktivierung: Verben
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 605a86d854e96660375a2eaf60c0cae0e5105c64
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt die Rolle, die primäre und sekundäre Verben in OLE [Aktivierung](../mfc/activation-cpp.md) wiedergeben.  
+---
+# <a name="activation-verbs"></a>Activation: Verbs
+This article explains the role primary and secondary verbs play in OLE [activation](../mfc/activation-cpp.md).  
   
- Normalerweise lässt das Doppelklicken auf ein eingebettetes Element dem Benutzer, um es zu bearbeiten.  Allerdings verhalten sich bestimmte Elemente auf diese Weise nicht.  Beispielsweise wird durch Doppelklicken auf ein Element, das mit der Anwendung der Sound Aufzeichnung erstellt wird, Server nicht in einem separaten Fenster; Stattdessen gibt sie den Sound wieder.  
+ Usually, double-clicking an embedded item allows the user to edit it. However, certain items do not behave this way. For example, double-clicking an item created with the Sound Recorder application does not open the server in a separate window; instead, it plays the sound.  
   
- Der Grund für diesen Verhaltensunterschied ist, dass Elemente der Sound Aufzeichnung haben ein anderes "primäres Verb." Das primäre Verb ist die ausgeführte Aktion, wenn der Benutzer auf ein OLE\-Element doppelklickt.  Für die meisten Typen OLE\-Elemente, ist das wichtigste Verb Bearbeiten, die den Server startet, der das Element erstellt wurde.  Bei einigen Arten Elemente, z Elemente der Sound Aufzeichnung, ist das wichtigste Verb Spiel.  
+ The reason for this behavior difference is that Sound Recorder items have a different "primary verb." The primary verb is the action performed when the user double-clicks an OLE item. For most types of OLE items, the primary verb is Edit, which launches the server that created the item. For some types of items, such as Sound Recorder items, the primary verb is Play.  
   
- Viele Typen OLE\-Elemente unterstützen nur ein Verb, und Bearbeiten ist das häufigste.  Sowohl eine Elementtypen mehrere Verben.  Beispielsweise Elementunterstützungsbearbeitung der Sound Aufzeichnung als sekundäres Verb.  
+ Many types of OLE items support only one verb, and Edit is the most common one. However, some types of items support multiple verbs. For example, Sound Recorder items support Edit as a secondary verb.  
   
- Ein weiteres Verb, das häufig verwendet wird, wird geöffnet.  Die geöffnete Verb steht zur Bearbeitung identisch, außer die Serveranwendung in einem separaten Fenster gestartet wird.  Dies Verb sollte verwendet werden, wenn entweder die Containeranwendung oder die Serveranwendung keine direkte Aktivierung unterstützt.  
+ Another verb used frequently is Open. The Open verb is identical to Edit, except the server application is launched in a separate window. This verb should be used when either the container application or the server application does not support in-place activation.  
   
- Alle Verben als primäres Verb müssen durch einen Untermenübefehl aufgerufen werden, wenn das Element ausgewählt ist.  Dies Untermenü enthält alle Verben, die vom Element unterstützt werden und nach den *Typnamen* Befehl  **Objekt** im Menü **Bearbeiten** erreicht.  Informationen zum den *Typnamen* **Objekt** Befehl, finden Sie im Artikel [Menüs und Ressourcen: Container\-Hinzufügungen](../mfc/menus-and-resources-container-additions.md).  
+ Any verbs other than the primary verb must be invoked through a submenu command when the item is selected. This submenu contains all the verbs supported by the item and is usually reached by the *typename* **Object** command on the **Edit** menu. For information on the *typename* **Object** command, see the article [Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md).  
   
- Die Verben, die eine Serveranwendung unterstützt, werden in der Windows\-Registrierungsdatenbank aufgeführt.  Wenn die Serveranwendung mit der Microsoft Foundation Class\-Bibliothek geschrieben wird, registriert diese automatisch alle Verben, wenn der Server gestartet wird.  Wenn nicht, sollten Sie sie während der Initialisierungsphase der Serveranwendung registrieren.  Weitere Informationen finden Sie im Artikel [Registrierung](../mfc/registration.md).  
+ The verbs a server application supports are listed in the Windows registration database. If your server application is written with the Microsoft Foundation Class Library, it will automatically register all verbs when the server is started. If not, you should register them during the server application's initialization phase. For more information, see the article [Registration](../mfc/registration.md).  
   
-## Siehe auch  
- [Aktivierung](../mfc/activation-cpp.md)   
- [Container](../mfc/containers.md)   
- [Server](../mfc/servers.md)
+## <a name="see-also"></a>See Also  
+ [Activation](../mfc/activation-cpp.md)   
+ [Containers](../mfc/containers.md)   
+ [Servers](../mfc/servers.md)
+
+

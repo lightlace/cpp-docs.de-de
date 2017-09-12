@@ -1,5 +1,5 @@
 ---
-title: MINMAXINFO-Struktur | Microsoft-Dokumentation
+title: MINMAXINFO Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MINMAXINFO structure
+- MINMAXINFO structure [MFC]
 ms.assetid: be6fb578-f98a-4581-9ada-be9df308ed2f
 caps.latest.revision: 10
 author: mikeblome
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 772416bdac3c72f55644fa31aef23ba76a14e606
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c47c470afa26a0db326f9403d5adcfc557caceea
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="minmaxinfo-structure"></a>MINMAXINFO-Struktur
-Die `MINMAXINFO` Struktur enthält Informationen über ein Fenster maximiert Größe und Position und die minimalen und maximalen Tracking-Größe.  
+# <a name="minmaxinfo-structure"></a>MINMAXINFO Structure
+The `MINMAXINFO` structure contains information about a window's maximized size and position and its minimum and maximum tracking size.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,27 +55,27 @@ typedef struct tagMINMAXINFO {
 } MINMAXINFO;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+#### <a name="parameters"></a>Parameters  
  *ptReserved*  
- Für die interne Verwendung vorgesehen.  
+ Reserved for internal use.  
   
  *ptMaxSize*  
- Gibt die maximierten Breite (point.x) und der maximierten Höhe (point.y) des Fensters.  
+ Specifies the maximized width (point.x) and the maximized height (point.y) of the window.  
   
  `ptMaxPosition`  
- Gibt die Position des linken Rands des maximierten Fensters (point.x) und die Position des oberen Rands der maximierten Fensters (point.y).  
+ Specifies the position of the left side of the maximized window (point.x) and the position of the top of the maximized window (point.y).  
   
  *ptMinTrackSize*  
- Gibt die minimale Trackingbreite (point.x) und die minimale Höhe (point.y) des Fensters nachverfolgen.  
+ Specifies the minimum tracking width (point.x) and the minimum tracking height (point.y) of the window.  
   
  *ptMaxTrackSize*  
- Gibt die maximale Breite (point.x) nachverfolgen und die maximale Höhe (point.y) des Fensters nachverfolgen.  
+ Specifies the maximum tracking width (point.x) and the maximum tracking height (point.y) of the window.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** winuser.h  
   
-## <a name="see-also"></a>Siehe auch  
- [Strukturen, Stile, Rückrufe und Meldungszuordnungen](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)
 
 

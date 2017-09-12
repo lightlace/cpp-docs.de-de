@@ -1,5 +1,5 @@
 ---
-title: CTabCtrl-Klasse | Microsoft Docs
+title: CTabCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -47,9 +47,39 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- tab controls
-- CTabCtrl class, common controls
-- CTabCtrl class
+- CTabCtrl [MFC], CTabCtrl
+- CTabCtrl [MFC], AdjustRect
+- CTabCtrl [MFC], Create
+- CTabCtrl [MFC], CreateEx
+- CTabCtrl [MFC], DeleteAllItems
+- CTabCtrl [MFC], DeleteItem
+- CTabCtrl [MFC], DeselectAll
+- CTabCtrl [MFC], DrawItem
+- CTabCtrl [MFC], GetCurFocus
+- CTabCtrl [MFC], GetCurSel
+- CTabCtrl [MFC], GetExtendedStyle
+- CTabCtrl [MFC], GetImageList
+- CTabCtrl [MFC], GetItem
+- CTabCtrl [MFC], GetItemCount
+- CTabCtrl [MFC], GetItemRect
+- CTabCtrl [MFC], GetItemState
+- CTabCtrl [MFC], GetRowCount
+- CTabCtrl [MFC], GetToolTips
+- CTabCtrl [MFC], HighlightItem
+- CTabCtrl [MFC], HitTest
+- CTabCtrl [MFC], InsertItem
+- CTabCtrl [MFC], RemoveImage
+- CTabCtrl [MFC], SetCurFocus
+- CTabCtrl [MFC], SetCurSel
+- CTabCtrl [MFC], SetExtendedStyle
+- CTabCtrl [MFC], SetImageList
+- CTabCtrl [MFC], SetItem
+- CTabCtrl [MFC], SetItemExtra
+- CTabCtrl [MFC], SetItemSize
+- CTabCtrl [MFC], SetItemState
+- CTabCtrl [MFC], SetMinTabWidth
+- CTabCtrl [MFC], SetPadding
+- CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
 caps.latest.revision: 21
 author: mikeblome
@@ -69,15 +99,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 150b11e4989cd45ba2a8065c86c07510d00c346c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5714de6c675d433320ce3095205b4c78f9701323
 ms.contentlocale: de-de
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctabctrl-class"></a>CTabCtrl-Klasse
-Stellt die Funktionalität des allgemeinen Windows-Registerkarten-Steuerelements bereit.  
+# <a name="ctabctrl-class"></a>CTabCtrl Class
+Provides the functionality of the Windows common tab control.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -85,59 +115,59 @@ Stellt die Funktionalität des allgemeinen Windows-Registerkarten-Steuerelements
 class CTabCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabCtrl::CTabCtrl](#ctabctrl)|Erstellt ein `CTabCtrl`-Objekt.|  
+|[CTabCtrl::CTabCtrl](#ctabctrl)|Constructs a `CTabCtrl` object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabCtrl::AdjustRect](#adjustrect)|Ein Registerkarten-Steuerelement Anzeigebereich erhält ein Rechteck Fenster berechnet, oder berechnet das fensterrechtecke aus, das einen bestimmten Anzeigebereich entsprechen würden.|  
-|[CTabCtrl::Create](#create)|Erstellt ein Registerkarten-Steuerelement, und fügt ihn mit einer Instanz von einem `CTabCtrl` Objekt.|  
-|[CTabCtrl::CreateEx](#createex)|Erstellt ein Registerkarten-Steuerelement mit der angegebenen erweiterten Fensterstile und fügt Sie ihn mit einer Instanz von einem `CTabCtrl` Objekt.|  
-|[CTabCtrl::DeleteAllItems](#deleteallitems)|Entfernt alle Elemente aus einem Registerkarten-Steuerelement.|  
-|[CTabCtrl::DeleteItem](#deleteitem)|Entfernt ein Element aus einem Registerkarten-Steuerelement.|  
-|[CTabCtrl::DeselectAll](#deselectall)|Setzt die Elemente in einem Registerkarten-Steuerelement, und deaktivieren, die gedrückt wurden.|  
-|[CTabCtrl::DrawItem](#drawitem)|Zeichnet ein angegebenes Element ein Registerkarten-Steuerelements an.|  
-|[CTabCtrl::GetCurFocus](#getcurfocus)|Ruft die Registerkarte mit der aktuelle Fokus des Registerkarten-Steuerelement ab.|  
-|[CTabCtrl::GetCurSel](#getcursel)|Bestimmt, die derzeit ausgewählte Registerkarte in einem Registerkarten-Steuerelement.|  
-|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Ruft die erweiterten Stile, die derzeit für das Registerkarten-Steuerelement verwendet werden.|  
-|[CTabCtrl::GetImageList](#getimagelist)|Ruft die einem Registerkarten-Steuerelement zugeordnete Bildliste ab.|  
-|[CTabCtrl::GetItem](#getitem)|Ruft Informationen zu einer Registerkarte in einem Registerkarten-Steuerelement ab.|  
-|[CTabCtrl::GetItemCount](#getitemcount)|Ruft die Anzahl der Registerkarten im Registerkarten-Steuerelement ab.|  
-|[CTabCtrl::GetItemRect](#getitemrect)|Ruft das umschließende Rechteck für eine Registerkarte in einem Registerkarten-Steuerelement ab.|  
-|[CTabCtrl::GetItemState](#getitemstate)|Ruft den Zustand des angegebenen Steuerelements Registerkartenelements ab.|  
-|[CTabCtrl::GetRowCount](#getrowcount)|Ruft die aktuelle Anzahl der Zeilen mit Registerkarten im Registerkarten-Steuerelement ab.|  
-|[CTabCtrl::GetToolTips](#gettooltips)|Ruft das Handle für das Registerkarten-Steuerelement zugeordneten QuickInfo-Steuerelement ab.|  
-|[CTabCtrl::HighlightItem](#highlightitem)|Legt den Status Hervorhebung ein Registerkartenelement an.|  
-|[CTabCtrl::HitTest](#hittest)|Bestimmt die Registerkarte ", sofern vorhanden, an eine angegebene Bildschirmposition befindet.|  
-|[CTabCtrl:: InsertItem](#insertitem)|Fügt eine neue Registerkarte in einem Registerkarten-Steuerelement.|  
-|[CTabCtrl::RemoveImage](#removeimage)|Entfernt ein Bild aus einer Bildliste ein Registerkarten-Steuerelement.|  
-|[CTabCtrl::SetCurFocus](#setcurfocus)|Legt den Fokus auf eine angegebene Registerkarte in einem Registerkarten-Steuerelement fest.|  
-|[CTabCtrl::SetCurSel](#setcursel)|Wählt eine Registerkarte in einem Registerkarten-Steuerelement aus.|  
-|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|Legt die erweiterte Formate für ein Registerkarten-Steuerelement fest.|  
-|[CTabCtrl::SetImageList](#setimagelist)|Ein Registerkarten-Steuerelement mit einer Bildliste zugewiesen.|  
-|[CTabCtrl::SetItem](#setitem)|Legt fest, einige oder alle Attribute für eine Registerkarte.|  
-|[CTabCtrl::SetItemExtra](#setitemextra)|Legt die Anzahl der Bytes / Registerkarte für die Anwendung definierte Daten in einem Registerkarten-Steuerelement reserviert.|  
-|[CTabCtrl::SetItemSize](#setitemsize)|Legt die Breite und Höhe eines Elements.|  
-|[CTabCtrl::SetItemState](#setitemstate)|Legt den Zustand des angegebenen Steuerelements Registerkartenelements fest.|  
-|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|Legt die minimale Breite der Elemente in einem Registerkarten-Steuerelement fest.|  
-|[CTabCtrl::SetPadding](#setpadding)|Legt die Größe des Speicherplatzes (Auffüllung) aus, um jede Registerkarte Symbol und Bezeichnung in einem Registerkarten-Steuerelement fest.|  
-|[CTabCtrl::SetToolTips](#settooltips)|Ein Registerkarten-Steuerelement ein QuickInfo-Steuerelement zugewiesen.|  
+|[CTabCtrl::AdjustRect](#adjustrect)|Calculates a tab control's display area given a window rectangle, or calculates the window rectangle that would correspond to a given display area.|  
+|[CTabCtrl::Create](#create)|Creates a tab control and attaches it to an instance of a `CTabCtrl` object.|  
+|[CTabCtrl::CreateEx](#createex)|Creates a tab control with the specified Windows extended styles and attaches it to an instance of a `CTabCtrl` object.|  
+|[CTabCtrl::DeleteAllItems](#deleteallitems)|Removes all items from a tab control.|  
+|[CTabCtrl::DeleteItem](#deleteitem)|Removes an item from a tab control.|  
+|[CTabCtrl::DeselectAll](#deselectall)|Resets items in a tab control, clearing any that were pressed.|  
+|[CTabCtrl::DrawItem](#drawitem)|Draws a specified item of a tab control.|  
+|[CTabCtrl::GetCurFocus](#getcurfocus)|Retrieves the tab with the current focus of a tab control.|  
+|[CTabCtrl::GetCurSel](#getcursel)|Determines the currently selected tab in a tab control.|  
+|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Retrieves the extended styles that are currently in use for the tab control.|  
+|[CTabCtrl::GetImageList](#getimagelist)|Retrieves the image list associated with a tab control.|  
+|[CTabCtrl::GetItem](#getitem)|Retrieves information about a tab in a tab control.|  
+|[CTabCtrl::GetItemCount](#getitemcount)|Retrieves the number of tabs in the tab control.|  
+|[CTabCtrl::GetItemRect](#getitemrect)|Retrieves the bounding rectangle for a tab in a tab control.|  
+|[CTabCtrl::GetItemState](#getitemstate)|Retrieves the state of the indicated tab control item.|  
+|[CTabCtrl::GetRowCount](#getrowcount)|Retrieves the current number of rows of tabs in a tab control.|  
+|[CTabCtrl::GetToolTips](#gettooltips)|Retrieves the handle of the tool tip control associated with a tab control.|  
+|[CTabCtrl::HighlightItem](#highlightitem)|Sets the highlight state of a tab item.|  
+|[CTabCtrl::HitTest](#hittest)|Determines which tab, if any, is at a specified screen position.|  
+|[CTabCtrl::InsertItem](#insertitem)|Inserts a new tab in a tab control.|  
+|[CTabCtrl::RemoveImage](#removeimage)|Removes an image from a tab control's image list.|  
+|[CTabCtrl::SetCurFocus](#setcurfocus)|Sets the focus to a specified tab in a tab control.|  
+|[CTabCtrl::SetCurSel](#setcursel)|Selects a tab in a tab control.|  
+|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|Sets the extended styles for a tab control.|  
+|[CTabCtrl::SetImageList](#setimagelist)|Assigns an image list to a tab control.|  
+|[CTabCtrl::SetItem](#setitem)|Sets some or all of a tab's attributes.|  
+|[CTabCtrl::SetItemExtra](#setitemextra)|Sets the number of bytes per tab reserved for application-defined data in a tab control.|  
+|[CTabCtrl::SetItemSize](#setitemsize)|Sets the width and height of an item.|  
+|[CTabCtrl::SetItemState](#setitemstate)|Sets the state of the indicated tab control item.|  
+|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|Sets the minimum width of items in a tab control.|  
+|[CTabCtrl::SetPadding](#setpadding)|Sets the amount of space (padding) around each tab's icon and label in a tab control.|  
+|[CTabCtrl::SetToolTips](#settooltips)|Assigns a tool tip control to a tab control.|  
   
-## <a name="remarks"></a>Hinweise  
- Ein "Registerkarten-Steuerelement" ist analog zu den Trennblättern in einem Notizbuch oder die Bezeichnungen in einer CAB-Datei. Durch Verwenden eines Registerkarten-Steuerelements können in einer Anwendung mehrere Seiten für denselben Bereich in einem Fenster oder Dialogfeld definiert werden. Jede Seite besteht aus einem Satz von Informationen oder eine Gruppe von Steuerelementen, die die Anwendung zeigt an, wenn der Benutzer die entsprechende Registerkarte auswählt. Eine besondere Art von Registerkarten-Steuerelement zeigt die Registerkarten, die Schaltflächen aussehen. Klicken auf eine Schaltfläche sollte sofort zum Ausführen eines Befehls anstelle eine Seite anzeigen.  
+## <a name="remarks"></a>Remarks  
+ A "tab control" is analogous to the dividers in a notebook or the labels in a file cabinet. By using a tab control, an application can define multiple pages for the same area of a window or dialog box. Each page consists of a set of information or a group of controls that the application displays when the user selects the corresponding tab. A special type of tab control displays tabs that look like buttons. Clicking a button should immediately perform a command instead of displaying a page.  
   
- Dieses Steuerelement (und somit die `CTabCtrl` Klasse) und höher verfügbar nur für Programme, die unter Windows 95-und Windows 98 und Windows NT, Version 3.51 ausgeführt wird.  
+ This control (and therefore the `CTabCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- Weitere Informationen zur Verwendung von `CTabCtrl`, finden Sie unter [Steuerelemente](../../mfc/controls-mfc.md) und [Verwenden von CTabCtrl](../../mfc/using-ctabctrl.md).  
+ For more information on using `CTabCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CTabCtrl](../../mfc/using-ctabctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -146,28 +176,28 @@ class CTabCtrl : public CWnd
   
  `CTabCtrl`  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxcmn.h  
   
-##  <a name="adjustrect"></a>CTabCtrl::AdjustRect  
- Ein Registerkarten-Steuerelement Anzeigebereich erhält ein Rechteck Fenster berechnet, oder berechnet das fensterrechtecke aus, das einen bestimmten Anzeigebereich entsprechen würden.  
+##  <a name="adjustrect"></a>  CTabCtrl::AdjustRect  
+ Calculates a tab control's display area given a window rectangle, or calculates the window rectangle that would correspond to a given display area.  
   
 ```  
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `bLarger`  
- Gibt an, welcher Vorgang ausgeführt. Wenn dieser Parameter ist **"true"**, `lpRect` gibt ein Anzeigerechteck und das entsprechende Fenster Rechteck empfängt. Wenn dieser Parameter ist **"false"**, `lpRect` gibt ein Rechteck Fenster und die entsprechenden Anzeigerechteck empfängt.  
+ Indicates which operation to perform. If this parameter is **TRUE**, `lpRect` specifies a display rectangle and receives the corresponding window rectangle. If this parameter is **FALSE**, `lpRect` specifies a window rectangle and receives the corresponding display rectangle.  
   
  `lpRect`  
- Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, gibt das angegebene Rechteck und das berechnete Rechteck empfängt.  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that specifies the given rectangle and receives the calculated rectangle.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CTabCtrl Nr. 1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
   
-##  <a name="create"></a>CTabCtrl::Create  
- Erstellt ein Registerkarten-Steuerelement, und fügt ihn mit einer Instanz von einem `CTabCtrl` Objekt.  
+##  <a name="create"></a>  CTabCtrl::Create  
+ Creates a tab control and attaches it to an instance of a `CTabCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -177,44 +207,44 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Gibt das Registerkarten-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Steuerelementtypen für die Registerkarte](http://msdn.microsoft.com/library/windows/desktop/bb760549), beschrieben, in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Finden Sie unter **"Hinweise"** eine Liste der Fensterstile, die auch auf das Steuerelement angewendet werden können.  
+ Specifies the tab control's style. Apply any combination of [tab control styles](http://msdn.microsoft.com/library/windows/desktop/bb760549), described in the Windows SDK. See **Remarks** for a list of window styles that you can also apply to the control.  
   
  `rect`  
- Gibt an, Größe und Position des Steuerelements. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
+ Specifies the tab control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  `pParentWnd`  
- Gibt an, das Registerkarten-Steuerelement übergeordnetes Fenster, in der Regel eine `CDialog`. Es muss nicht **NULL**.  
+ Specifies the tab control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- Gibt das Registerkarten-Steuerelement-ID an.  
+ Specifies the tab control's ID.  
   
-### <a name="return-value"></a>Rückgabewert  
- **"True"** , wenn die Initialisierung des Objekts erfolgreich, andernfalls war **"false"**.  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if initialization of the object was successful; otherwise **FALSE**.  
   
-### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CTabCtrl` Objekt in zwei Schritten. Zunächst rufen Sie den Konstruktor, und rufen Sie anschließend **erstellen**, die das Registerkarten-Steuerelement erstellt, und fügt es der `CTabCtrl` Objekt.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CTabCtrl` object in two steps. First, call the constructor, and then call **Create**, which creates the tab control and attaches it to the `CTabCtrl` object.  
   
- Zusätzlich zu Steuerelementtypen für die Registerkarte können Sie die folgenden Fensterstile auf ein Registerkarten-Steuerelement anwenden:  
+ In addition to tab control styles, you can apply the following window styles to a tab control:  
   
-- **WS_CHILD** erstellt ein untergeordnetes Fenster, das das Registerkarten-Steuerelement darstellt. Kann nicht mit dem `WS_POPUP`-Stil verwendet werden.  
+- **WS_CHILD** Creates a child window that represents the tab control. Cannot be used with the `WS_POPUP` style.  
   
-- **WS_VISIBLE** erstellt ein Registerkarten-Steuerelement, das anfänglich sichtbar ist.  
+- **WS_VISIBLE** Creates a tab control that is initially visible.  
   
-- **WS_DISABLED** erstellt ein Fenster, das anfänglich deaktiviert ist.  
+- **WS_DISABLED** Creates a window that is initially disabled.  
   
-- **WS_GROUP** gibt das erste Steuerelement einer Gruppe von Steuerelementen in der der Benutzer von einem Steuerelement zum nächsten mit den Pfeiltasten wechseln kann. Alle Steuerelemente, die definiert, mit der **WS_GROUP** formatieren, nachdem das erste Steuerelement zur selben Gruppe gehören. Das nächste Steuerelement mit der **WS_GROUP** Stil beendet die Style-Gruppe und startet die nächste Gruppe (d. h. eine Gruppe endet, an die nächste beginnt).  
+- **WS_GROUP** Specifies the first control of a group of controls in which the user can move from one control to the next with the arrow keys. All controls defined with the **WS_GROUP** style after the first control belong to the same group. The next control with the **WS_GROUP** style ends the style group and starts the next group (that is, one group ends where the next begins).  
   
-- **WS_TABSTOP** gibt eines von beliebig vielen Steuerelementen, zwischen denen der Benutzer mit der TAB-TASTE wechseln kann. Die TAB-Taste wechselt der Benutzer auf das nächste Steuerelement gemäß der **WS_TABSTOP** Stil.  
+- **WS_TABSTOP** Specifies one of any number of controls through which the user can move by using the TAB key. The TAB key moves the user to the next control specified by the **WS_TABSTOP** style.  
   
- Rufen Sie zum Erstellen eines Registerkartensteuerelements mit erweiterten Fensterstile [CTabCtrl::CreateEx](#createex) anstelle von **erstellen**.  
+ To create a tab control with extended window styles, call [CTabCtrl::CreateEx](#createex) instead of **Create**.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CTabCtrl #2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
   
-##  <a name="createex"></a>CTabCtrl::CreateEx  
- Erstellt ein Steuerelement (ein untergeordnetes Fenster) und ordnet sie der `CTabCtrl` Objekt.  
+##  <a name="createex"></a>  CTabCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CTabCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -225,222 +255,222 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- Gibt das Registerkarten-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Steuerelementtypen für die Registerkarte](http://msdn.microsoft.com/library/windows/desktop/bb760549), beschrieben, in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Finden Sie unter **"Hinweise"** in [erstellen](#create) eine Liste der Fensterstile, die auch auf das Steuerelement angewendet werden können.  
+ Specifies the tab control's style. Apply any combination of [tab control styles](http://msdn.microsoft.com/library/windows/desktop/bb760549), described in the Windows SDK. See **Remarks** in [Create](#create) for a list of window styles that you can also apply to the control.  
   
  `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der `pParentWnd`.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- Das Steuerelement untergeordnete Fenster-ID.  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL bei Erfolg, andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful otherwise 0.  
   
-### <a name="remarks"></a>Hinweise  
- Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende erweiterten Fensterstile, angegeben durch die Windows-erweiterten Stil ihm etwas voranzustellen **WS_EX_**.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
- `CreateEx`das Steuerelement erstellt, mit der erweiterten Fensterstile gemäß `dwExStyle`. Erweiterte Formate, die spezifisch für ein Steuerelement mit Set [SetExtendedStyle](#setextendedstyle). Verwenden Sie z. B. `CreateEx` festzulegende Stile als **WS_EX_CONTEXTHELP**, verwenden jedoch `SetExtendedStyle` festzulegende Stile als **TCS_EX_FLATSEPARATORS**. Weitere Informationen finden Sie unter die Stile, die in beschriebenen [Registerkarte Steuerelementtypen erweiterte](http://msdn.microsoft.com/library/windows/desktop/bb760546) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ `CreateEx` creates the control with the extended Windows styles specified by `dwExStyle`. Set extended styles specific to a control using [SetExtendedStyle](#setextendedstyle). For example, use `CreateEx` to set such styles as **WS_EX_CONTEXTHELP**, but use `SetExtendedStyle` to set such styles as **TCS_EX_FLATSEPARATORS**. For more information, see the styles described in [Tab Control Extended Styles](http://msdn.microsoft.com/library/windows/desktop/bb760546) in the Windows SDK.  
   
-##  <a name="ctabctrl"></a>CTabCtrl::CTabCtrl  
- Erstellt ein `CTabCtrl`-Objekt.  
+##  <a name="ctabctrl"></a>  CTabCtrl::CTabCtrl  
+ Constructs a `CTabCtrl` object.  
   
 ```  
 CTabCtrl();
 ```  
   
-##  <a name="deleteallitems"></a>CTabCtrl::DeleteAllItems  
- Entfernt alle Elemente aus einem Registerkarten-Steuerelement.  
+##  <a name="deleteallitems"></a>  CTabCtrl::DeleteAllItems  
+ Removes all items from a tab control.  
   
 ```  
 BOOL DeleteAllItems();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="deleteitem"></a>CTabCtrl::DeleteItem  
- Entfernt das angegebene Element aus einem Registerkarten-Steuerelement.  
+##  <a name="deleteitem"></a>  CTabCtrl::DeleteItem  
+ Removes the specified item from a tab control.  
   
 ```  
 BOOL DeleteItem(int nItem);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Nullbasierter Wert, der das zu löschende Element.  
+ Zero-based value of the item to delete.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CTabCtrl Nr. 3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
   
-##  <a name="deselectall"></a>CTabCtrl::DeselectAll  
- Setzt die Elemente in einem Registerkarten-Steuerelement, und deaktivieren, die gedrückt wurden.  
+##  <a name="deselectall"></a>  CTabCtrl::DeselectAll  
+ Resets items in a tab control, clearing any that were pressed.  
   
 ```  
 void DeselectAll(BOOL fExcludeFocus);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  *fExcludeFocus*  
- Flag, die den Rahmen der Deaktivierung des Elements angibt. Wenn dieser Parameter, um festgelegt wird **"false"**, alle Schaltflächen der Registerkarte "zurückgesetzt werden. Wenn sie, um festgelegt ist **"true"**, und klicken Sie dann alle Elemente der Registerkarte mit Ausnahme der aktuell ausgewählte zurückgesetzt werden.  
+ Flag that specifies the scope of the item deselection. If this parameter is set to **FALSE**, all tab buttons will be reset. If it is set to **TRUE**, then all tab items except for the one currently selected will be reset.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message, [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), as described in the Windows SDK.  
   
-##  <a name="drawitem"></a>CTabCtrl::DrawItem  
- Wird aufgerufen, durch das Framework, wenn sich ein Darstellungsaspekt eines Ownerdrawn-Registerkarte Steuerelements ändert.  
+##  <a name="drawitem"></a>  CTabCtrl::DrawItem  
+ Called by the framework when a visual aspect of an owner-draw tab control changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- Ein Zeiger auf eine [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) Struktur, die das Element zu zeichnenden beschreibt.  
+ A pointer to a [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure describing the item to be painted.  
   
-### <a name="remarks"></a>Hinweise  
- Die **ItemAction** Mitglied der `DRAWITEMSTRUCT` Struktur definiert die Zeichnen-Aktion, die ausgeführt werden soll.  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed.  
   
- Standardmäßig wird diese Memberfunktion keine Aktion ausgeführt. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für ein Ownerdrawn- `CTabCtrl` Objekt.  
+ By default, this member function does nothing. Override this member function to implement drawing for an owner-draw `CTabCtrl` object.  
   
- Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen `lpDrawItemStruct` vor diesem Element Funktion beendet wird.  
+ The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before this member function terminates.  
   
-##  <a name="getcurfocus"></a>CTabCtrl::GetCurFocus  
- Ruft den Index der Registerkarte mit dem aktuellen Fokus ab.  
+##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus  
+ Retrieves the index of the tab with the current focus.  
   
 ```  
 int GetCurFocus() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index der Registerkarte mit dem aktuellen Fokus.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the tab with the current focus.  
   
-##  <a name="getcursel"></a>CTabCtrl::GetCurSel  
- Ruft die derzeit ausgewählte Registerkarte in einem Registerkarten-Steuerelement ab.  
+##  <a name="getcursel"></a>  CTabCtrl::GetCurSel  
+ Retrieves the currently selected tab in a tab control.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Nullbasierte Index des ausgewählten Registerkarte im Erfolgsfall oder -1, wenn keine Registerkarte ausgewählt wird.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the selected tab if successful or - 1 if no tab is selected.  
   
-##  <a name="getextendedstyle"></a>CTabCtrl::GetExtendedStyle  
- Ruft die erweiterten Stile, die derzeit für das Registerkarten-Steuerelement verwendet werden.  
+##  <a name="getextendedstyle"></a>  CTabCtrl::GetExtendedStyle  
+ Retrieves the extended styles that are currently in use for the tab control.  
   
 ```  
 DWORD GetExtendedStyle();
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Stellt die erweiterten Stile aktuell in Verwendung für das Registerkarten-Steuerelement dar. Dieser Wert ist eine Kombination von [Registerkarten-Steuerelement, die erweiterten Stile](http://msdn.microsoft.com/library/windows/desktop/bb760546)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ Represents the extended styles currently in use for the tab control. This value is a combination of [tab control extended styles](http://msdn.microsoft.com/library/windows/desktop/bb760546), as described in the Windows SDK.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585), as described in the Windows SDK.  
   
-##  <a name="getimagelist"></a>CTabCtrl::GetImageList  
- Ruft die einem Tab-Steuerelement zugeordnete Bildliste ab.  
+##  <a name="getimagelist"></a>  CTabCtrl::GetImageList  
+ Retrieves the image list that's associated with a tab control.  
   
 ```  
 CImageList* GetImageList() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Bei Erfolg, ein Zeiger auf der Registerkarte die Bildliste steuern. andernfalls **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, a pointer to the image list of the tab control; otherwise, **NULL**.  
   
-##  <a name="getitem"></a>CTabCtrl::GetItem  
- Ruft Informationen zu einer Registerkarte in einem Registerkarten-Steuerelement ab.  
+##  <a name="getitem"></a>  CTabCtrl::GetItem  
+ Retrieves information about a tab in a tab control.  
   
 ```  
 BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Nullbasierter Index der Registerkarte.  
+ Zero-based index of the tab.  
   
  `pTabCtrlItem`  
- Zeiger auf eine [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) Struktur verwendet, um die abzurufenden Informationen anzugeben. Auch verwendet zum Empfangen von Informationen über die Registerkarte. Diese Struktur wird verwendet, mit der `InsertItem`, `GetItem`, und `SetItem` Memberfunktionen.  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, used to specify the information to retrieve. Also used to receive information about the tab. This structure is used with the `InsertItem`, `GetItem`, and `SetItem` member functions.  
   
-### <a name="return-value"></a>Rückgabewert  
- Gibt **"true"** bei Erfolg; **"False"** andernfalls.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** if successful; **FALSE** otherwise.  
   
-### <a name="remarks"></a>Hinweise  
- Wenn die Nachricht gesendet wird, die **Maske** Element gibt an, welche Attribute zurück. Wenn der **Maske** Element gibt an, der `TCIF_TEXT` Wert, der **PszText** Datenmember muss die Adresse des Puffers, der den Elementtext empfängt enthalten und die **CchTextMax** Datenmember muss die Größe des Puffers angeben.  
+### <a name="remarks"></a>Remarks  
+ When the message is sent, the **mask** member specifies which attributes to return. If the **mask** member specifies the `TCIF_TEXT` value, the **pszText** member must contain the address of the buffer that receives the item text and the **cchTextMax** member must specify the size of the buffer.  
   
- **Maske**  
- Wert, der angibt, welche `TCITEM` Strukturmember abgerufen oder festgelegt. Dieser Member kann 0 (null) oder eine Kombination der folgenden Werte sein:  
+ **mask**  
+ Value specifying which `TCITEM` structure members to retrieve or set. This member can be zero or a combination of the following values:  
   
-- `TCIF_TEXT`Die **PszText** Member ist gültig.  
+- `TCIF_TEXT` The **pszText** member is valid.  
   
-- `TCIF_IMAGE`Die `iImage` Element ist ungültig.  
+- `TCIF_IMAGE` The `iImage` member is valid.  
   
-- `TCIF_PARAM`Die **lParam** Member ist gültig.  
+- `TCIF_PARAM` The **lParam** member is valid.  
   
-- `TCIF_RTLREADING`Der Text der **PszText** mit Lesefolge von rechts nach links in Hebräisch und Arabisch-Systemen angezeigt wird.  
+- `TCIF_RTLREADING` The text of **pszText** is displayed using right-to-left reading order on Hebrew or Arabic systems.  
   
-- `TCIF_STATE`Die **dwState-Datenmember** Member ist gültig.  
+- `TCIF_STATE` The **dwState** member is valid.  
   
  **pszText**  
- Ein Zeiger auf eine Null endende Zeichenfolge, die den Registerkartentext ein enthält, wenn die Struktur Informationen zu einer Registerkarte enthält. Wenn die Struktur Informationen empfängt, gibt dieses Elements die Adresse des Puffers, in den Registerkartentext ein geschrieben.  
+ Pointer to a null-terminated string containing the tab text if the structure contains information about a tab. If the structure is receiving information, this member specifies the address of the buffer that receives the tab text.  
   
  **cchTextMax**  
- Größe des Puffers verweist **PszText**. Bei diesem Member wird ignoriert, wenn die Struktur Informationen nicht empfangen wird.  
+ Size of the buffer pointed to by **pszText**. This member is ignored if the structure is not receiving information.  
   
  `iImage`  
- Index in des Registerkarten-Steuerelements Bildliste oder -1, wenn kein für die Registerkarte Bild.  
+ Index into the tab control's image list, or - 1 if there is no image for the tab.  
   
  **lParam**  
- Die Registerkarte zugeordnete anwendungsdefinierte Daten. Wenn mehr als vier Bytes der Anwendung definierte Daten pro Registerkarte vorhanden sind, eine Anwendung muss eine Struktur definieren und verwenden sie anstelle der `TCITEM` Struktur. Das erste Element der Anwendung definierte Struktur muss eine [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)Struktur. Die **TCITEMHEADER** Struktur ist identisch mit der `TCITEM` Struktur, aber ohne die **lParam** Member. Der Unterschied zwischen der Größe der Struktur und die Größe der **TCITEMHEADER** Struktur sollte die Anzahl der zusätzlichen Bytes pro Registerkarte entsprechen.  
+ Application-defined data associated with the tab. If there are more than four bytes of application-defined data per tab, an application must define a structure and use it instead of the `TCITEM` structure. The first member of the application-defined structure must be a [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)structure. The **TCITEMHEADER** structure is identical to the `TCITEM` structure, but without the **lParam** member. The difference between the size of your structure and the size of the **TCITEMHEADER** structure should equal the number of extra bytes per tab.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CTabCtrl #4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
   
-##  <a name="getitemcount"></a>CTabCtrl::GetItemCount  
- Ruft die Anzahl der Registerkarten im Registerkarten-Steuerelement ab.  
+##  <a name="getitemcount"></a>  CTabCtrl::GetItemCount  
+ Retrieves the number of tabs in the tab control.  
   
 ```  
 int GetItemCount() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Anzahl der Elemente im Registerkarten-Steuerelement.  
+### <a name="return-value"></a>Return Value  
+ Number of items in the tab control.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="getitemrect"></a>CTabCtrl::GetItemRect  
- Ruft das umschließende Rechteck für die angegebene Registerkarte in einem Registerkarten-Steuerelement ab.  
+##  <a name="getitemrect"></a>  CTabCtrl::GetItemRect  
+ Retrieves the bounding rectangle for the specified tab in a tab control.  
   
 ```  
 BOOL GetItemRect(int nItem,   LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Nullbasierte Index des Registerkartenelements.  
+ Zero-based index of the tab item.  
   
  `lpRect`  
- Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das umschließende Rechteck der Registerkarte empfängt. Diese Koordinaten verwenden aktuelle Zuordnungsmodus des Viewports an.  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that receives the bounding rectangle of the tab. These coordinates use the viewport's current mapping mode.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="getitemstate"></a>CTabCtrl::GetItemState  
- Ruft den Zustand des Steuerelements Registerkartenelements identifizierten `nItem`.  
+##  <a name="getitemstate"></a>  CTabCtrl::GetItemState  
+ Retrieves the state of the tab control item identified by `nItem`.  
   
 ```  
 DWORD GetItemState(
@@ -448,86 +478,86 @@ DWORD GetItemState(
     DWORD dwMask) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Die nullbasierte Indexnummer des Elements, für das Informationen abgerufen werden sollen.  
+ The zero-based index number of the item for which to retrieve state information.  
   
  `dwMask`  
- Maske, die angeben, welche der Zustand des Elements zurückgeben flags. Eine Liste von Werten, finden Sie unter der Maske Mitglied der [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) strukturieren, wie beschrieben in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Mask specifying which of the item's state flags to return. For a list of values, see the mask member of the [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, as described in the Windows SDK.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf eine `DWORD` Wert empfangen die Statusinformationen. Kann einer der folgenden Werte sein:  
+### <a name="return-value"></a>Return Value  
+ A reference to a `DWORD` value receiving the state information. Can be one of the following values:  
   
-|Wert|Beschreibung|  
+|Value|Description|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|Das Registerkartenelement-Steuerelement ausgewählt ist.|  
-|**TCIS_HIGHLIGHTED**|Das Registerkartenelement-Steuerelement wird hervorgehoben, und die Registerkarte und Text mit der aktuellen Hervorhebungsfarbe gezeichnet werden. Bei der Verwendung der Hervorhebungsfarbe wird dies eine "true" Interpolation, keine Ditheringfarbe sein.|  
+|**TCIS_BUTTONPRESSED**|The tab control item is selected.|  
+|**TCIS_HIGHLIGHTED**|The tab control item is highlighted, and the tab and text are drawn using the current highlight color. When using highlight color, this will be a true interpolation, not a dithered color.|  
   
-### <a name="remarks"></a>Hinweise  
- Zustand eines Elements wird angegeben, indem die **dwState-Datenmember** Mitglied der `TCITEM` Struktur.  
+### <a name="remarks"></a>Remarks  
+ An item's state is specified by the **dwState** member of the `TCITEM` structure.  
   
-##  <a name="getrowcount"></a>CTabCtrl::GetRowCount  
- Ruft die aktuelle Anzahl der Zeilen in einem Registerkarten-Steuerelement ab.  
+##  <a name="getrowcount"></a>  CTabCtrl::GetRowCount  
+ Retrieves the current number of rows in a tab control.  
   
 ```  
 int GetRowCount() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Zeilen mit Registerkarten im Registerkarten-Steuerelement.  
+### <a name="return-value"></a>Return Value  
+ The number of rows of tabs in the tab control.  
   
-### <a name="remarks"></a>Hinweise  
- Registerkarte nur Steuerelemente, die die **TCS_MULTILINE** können mehrere Zeilen mit Registerkarten sind.  
+### <a name="remarks"></a>Remarks  
+ Only tab controls that have the **TCS_MULTILINE** style can have multiple rows of tabs.  
   
-##  <a name="gettooltips"></a>CTabCtrl::GetToolTips  
- Ruft das Handle für das Registerkarten-Steuerelement zugeordneten QuickInfo-Steuerelement ab.  
+##  <a name="gettooltips"></a>  CTabCtrl::GetToolTips  
+ Retrieves the handle of the tool tip control associated with a tab control.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
-### <a name="return-value"></a>Rückgabewert  
- Handle für das QuickInfo-Steuerelement im Erfolgsfall; andernfalls **NULL**.  
+### <a name="return-value"></a>Return Value  
+ Handle of the tool tip control if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Hinweise  
- Ein Registerkarten-Steuerelement wird ein QuickInfo-Steuerelement erstellt, ist die **TCS_TOOLTIPS** Stil. Sie können auch ein Registerkarten-Steuerelement ein QuickInfo-Steuerelement zuweisen der `SetToolTips` Memberfunktion.  
+### <a name="remarks"></a>Remarks  
+ A tab control creates a tool tip control if it has the **TCS_TOOLTIPS** style. You can also assign a tool tip control to a tab control by using the `SetToolTips` member function.  
   
-##  <a name="highlightitem"></a>CTabCtrl::HighlightItem  
- Legt den Status Hervorhebung ein Registerkartenelement an.  
+##  <a name="highlightitem"></a>  CTabCtrl::HighlightItem  
+ Sets the highlight state of a tab item.  
   
 ```  
 BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `idItem`  
- Nullbasierte Index des ein Registerkartenelement-Steuerelement.  
+ Zero-based index of a tab control item.  
   
  `fHighlight`  
- -Wert, der die Hervorhebung Zustand festgelegt werden. Wenn dieser Wert ist **"true"**, die Registerkarte hervorgehoben; Wenn **"false"**, auf den Standardzustand die Registerkarte "festgelegt ist.  
+ Value specifying the highlight state to be set. If this value is **TRUE**, the tab is highlighted; if **FALSE**, the tab is set to its default state.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich 0, wenn erfolgreich, andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert die Win32-Meldung [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the Win32 message [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602), as described in the Windows SDK.  
   
-##  <a name="hittest"></a>CTabCtrl::HitTest  
- Bestimmt, welche Registerkarte gegebenenfalls an der angegebenen Bildschirmposition ist.  
+##  <a name="hittest"></a>  CTabCtrl::HitTest  
+ Determines which tab, if any, is at the specified screen position.  
   
 ```  
 int HitTest(TCHITTESTINFO* pHitTestInfo) const;  
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pHitTestInfo`  
- Zeiger auf eine [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553) strukturieren, wie beschrieben in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], gibt die Bildschirmposition, um zu testen.  
+ Pointer to a [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553) structure, as described in the Windows SDK, which specifies the screen position to test.  
   
-### <a name="return-value"></a>Rückgabewert  
- Gibt den nullbasierten Index der Registerkarte "oder"-1 zurück, wenn keine Registerkarte an der angegebenen Position befindet.  
+### <a name="return-value"></a>Return Value  
+ Returns the zero-based index of the tab or - 1 if no tab is at the specified position.  
   
-##  <a name="insertitem"></a>CTabCtrl:: InsertItem  
- Fügt eine neue Registerkarte in einer vorhandenen Registerkarten-Steuerelement.  
+##  <a name="insertitem"></a>  CTabCtrl::InsertItem  
+ Inserts a new tab in an existing tab control.  
   
 ```  
 LONG InsertItem(
@@ -564,179 +594,179 @@ LONG InsertItem(
     DWORD dwStateMask);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Nullbasierte Index der neuen Registerkarte.  
+ Zero-based index of the new tab.  
   
  `pTabCtrlItem`  
- Zeiger auf eine [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) -Struktur, die die Attribute der Registerkarte angibt.  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure that specifies the attributes of the tab.  
   
  `lpszItem`  
- Adresse des eine auf Null endende Zeichenfolge, die den Text der Registerkarte "enthält.  
+ Address of a null-terminated string that contains the text of the tab.  
   
  `nImage`  
- Der nullbasierte Index des ein Bild aus einer Bildliste eingefügt werden soll.  
+ The zero-based index of an image to insert from an image list.  
   
  `nMask`  
- Gibt an, welche `TCITEM` Struktur Attribute festlegen. 0 (null) oder eine Kombination der folgenden Werte kann sein:  
+ Specifies which `TCITEM` structure attributes to set. Can be zero or a combination of the following values:  
   
-- `TCIF_TEXT`Die **PszText** Member ist gültig.  
+- `TCIF_TEXT` The **pszText** member is valid.  
   
-- `TCIF_IMAGE`Die `iImage` Element ist ungültig.  
+- `TCIF_IMAGE` The `iImage` member is valid.  
   
-- `TCIF_PARAM`Die **lParam** Member ist gültig.  
+- `TCIF_PARAM` The **lParam** member is valid.  
   
-- `TCIF_RTLREADING`Der Text der **PszText** mit Lesefolge von rechts nach links in Hebräisch und Arabisch-Systemen angezeigt wird.  
+- `TCIF_RTLREADING` The text of **pszText** is displayed using right-to-left reading order on Hebrew or Arabic systems.  
   
-- `TCIF_STATE`Die **dwState-Datenmember** Member ist gültig.  
+- `TCIF_STATE` The **dwState** member is valid.  
   
  `lParam`  
- Die Registerkarte zugeordnete anwendungsdefinierte Daten.  
+ Application-defined data associated with the tab.  
   
  `dwState`  
- Gibt Werte für die Element-Zustände. Weitere Informationen finden Sie unter [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies values for the item's states. For more information, see [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) in the Windows SDK.  
   
- *den dwStateMask*  
- Gibt an, welche Zustände festgelegt werden. Weitere Informationen finden Sie unter [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ *dwStateMask*  
+ Specifies which states are to be set. For more information, see [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) in the Windows SDK.  
   
-### <a name="return-value"></a>Rückgabewert  
- Nullbasierte Index der neuen Registerkarte im Erfolgsfall, andernfalls andernfalls - 1.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the new tab if successful; otherwise - 1.  
   
-### <a name="example"></a>Beispiel  
- [!code-cpp[NVC_MFC_CTabCtrl Nr. 5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
   
-##  <a name="removeimage"></a>CTabCtrl::RemoveImage  
- Entfernt das angegebene Image aus einer Bildliste ein Registerkarten-Steuerelement.  
+##  <a name="removeimage"></a>  CTabCtrl::RemoveImage  
+ Removes the specified image from a tab control's image list.  
   
 ```  
 void RemoveImage(int nImage);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nImage`  
- Nullbasierte Index des Bilds zu entfernen.  
+ Zero-based index of the image to remove.  
   
-### <a name="remarks"></a>Hinweise  
- Das Registerkarten-Steuerelement aktualisiert jede Registerkarte Abbildindex aus, sodass jede Registerkarte dasselbe Bild zugeordnet ist.  
+### <a name="remarks"></a>Remarks  
+ The tab control updates each tab's image index so that each tab remains associated with the same image.  
   
-##  <a name="setcurfocus"></a>CTabCtrl::SetCurFocus  
- Legt den Fokus auf eine angegebene Registerkarte in einem Registerkarten-Steuerelement fest.  
+##  <a name="setcurfocus"></a>  CTabCtrl::SetCurFocus  
+ Sets the focus to a specified tab in a tab control.  
   
 ```  
 void SetCurFocus(int nItem);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Gibt den Index der Registerkarte, die den Fokus erhält.  
+ Specifies the index of the tab that gets the focus.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610), as described in the Windows SDK.  
   
-##  <a name="setcursel"></a>CTabCtrl::SetCurSel  
- Wählt eine Registerkarte in einem Registerkarten-Steuerelement aus.  
+##  <a name="setcursel"></a>  CTabCtrl::SetCurSel  
+ Selects a tab in a tab control.  
   
 ```  
 int SetCurSel(int nItem);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Der nullbasierte Index des Elements, das ausgewählt werden.  
+ The zero-based index of the item to be selected.  
   
-### <a name="return-value"></a>Rückgabewert  
- Nullbasierten Index des zuvor ausgewählten Registerkarte im Erfolgsfall, andernfalls - 1.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the previously selected tab if successful, otherwise - 1.  
   
-### <a name="remarks"></a>Hinweise  
- Ein Registerkarten-Steuerelement sendet keine **TCN_SELCHANGING** oder **TCN_SELCHANGE** Benachrichtigung, wenn eine Registerkarte ausgewählt wird mit dieser Funktion. Diese Benachrichtigungen gesendet werden, mithilfe von **WM_NOTIFY**, wenn der Benutzer klickt oder die Tastatur verwendet, um Registerkarten zu ändern.  
+### <a name="remarks"></a>Remarks  
+ A tab control does not send a **TCN_SELCHANGING** or **TCN_SELCHANGE** notification message when a tab is selected using this function. These notifications are sent, using **WM_NOTIFY**, when the user clicks or uses the keyboard to change tabs.  
   
-##  <a name="setextendedstyle"></a>CTabCtrl::SetExtendedStyle  
- Legt die erweiterte Formate für ein Registerkarten-Steuerelement fest.  
+##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle  
+ Sets the extended styles for a tab control.  
   
 ```  
 DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `dwNewStyle`  
- Wert, der eine Kombination der Registerkarte angibt steuern die erweiterten Stile.  
+ Value specifying a combination of tab control extended styles.  
   
  `dwExMask`  
- Ein `DWORD` -Wert, der gibt an, welche Formate in `dwNewStyle` betroffen sein werden. Nur die erweiterten Stile in `dwExMask` geändert werden. Alle anderen Arten werden unverändert beibehalten. Wenn dieser Parameter 0 (null), und klicken Sie dann alle Formate in `dwNewStyle` beeinflusst werden.  
+ A `DWORD` value that indicates which styles in `dwNewStyle` are to be affected. Only the extended styles in `dwExMask` will be changed. All other styles will be maintained as is. If this parameter is zero, then all of the styles in `dwNewStyle` will be affected.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ein `DWORD` -Wert, der vorherige enthält [Registerkarten-Steuerelement, die erweiterten Stile](http://msdn.microsoft.com/library/windows/desktop/bb760546)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ A `DWORD` value that contains the previous [tab control extended styles](http://msdn.microsoft.com/library/windows/desktop/bb760546), as described in the Windows SDK.  
   
-### <a name="return-value"></a>Rückgabewert  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ This member function implements the behavior of the Win32 message [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), as described in the Windows SDK.  
   
-##  <a name="setimagelist"></a>CTabCtrl::SetImageList  
- Ein Registerkarten-Steuerelement mit einer Bildliste zugewiesen.  
+##  <a name="setimagelist"></a>  CTabCtrl::SetImageList  
+ Assigns an image list to a tab control.  
   
 ```  
 CImageList* SetImageList(CImageList* pImageList);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pImageList`  
- Zeiger auf die Bildliste des Registersteuerelements zugewiesen werden.  
+ Pointer to the image list to be assigned to the tab control.  
   
-### <a name="return-value"></a>Rückgabewert  
- Gibt einen Zeiger auf die vorherige Bildliste oder **NULL** , wenn keine vorherige Image-Liste vorhanden ist.  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the previous image list or **NULL** if there is no previous image list.  
   
-##  <a name="setitem"></a>CTabCtrl::SetItem  
- Legt fest, einige oder alle Attribute für eine Registerkarte.  
+##  <a name="setitem"></a>  CTabCtrl::SetItem  
+ Sets some or all of a tab's attributes.  
   
 ```  
 BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Nullbasierter Index des Elements.  
+ Zero-based index of the item.  
   
  `pTabCtrlItem`  
- Zeiger auf eine [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) Struktur, die das neue Elementattribute enthält. Die **Maske** Element gibt an, welche Attribute festgelegt. Wenn die **Maske** Element angibt der `TCIF_TEXT` Wert, der **PszText** Element ist die Adresse einer Null-terminierte Zeichenfolge und der **CchTextMax** Element wird ignoriert.  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure that contains the new item attributes. The **mask** member specifies which attributes to set. If the **mask** member specifies the `TCIF_TEXT` value, the **pszText** member is the address of a null-terminated string and the **cchTextMax** member is ignored.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [GetItem](#getitem).  
+### <a name="example"></a>Example  
+  See the example for [GetItem](#getitem).  
   
-##  <a name="setitemextra"></a>CTabCtrl::SetItemExtra  
- Legt die Anzahl der Bytes / Registerkarte für die Anwendung definierte Daten in einem Registerkarten-Steuerelement reserviert.  
+##  <a name="setitemextra"></a>  CTabCtrl::SetItemExtra  
+ Sets the number of bytes per tab reserved for application-defined data in a tab control.  
   
 ```  
 BOOL SetItemExtra(int nBytes);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nBytes`  
- Die Anzahl der zusätzlichen Bytes festgelegt.  
+ The number of extra bytes to set.  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich 0, wenn erfolgreich, andernfalls 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633), as described in the Windows SDK.  
   
-##  <a name="setitemsize"></a>CTabCtrl::SetItemSize  
- Legt die Breite und Höhe des Registerkarten-Steuerelements fest.  
+##  <a name="setitemsize"></a>  CTabCtrl::SetItemSize  
+ Sets the width and height of the tab control items.  
   
 ```  
 CSize SetItemSize(CSize size);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `size`  
- Die neue Breite und Höhe des Registerkarten-Steuerelements in Pixeln.  
+ The new width and height, in pixels, of the tab control items.  
   
-### <a name="return-value"></a>Rückgabewert  
- Gibt die alte Breite und Höhe des Registerkarten-Steuerelements zurück.  
+### <a name="return-value"></a>Return Value  
+ Returns the old width and height of the tab control items.  
   
-##  <a name="setitemstate"></a>CTabCtrl::SetItemState  
- Legt den Zustand des dem Registerkartenelement-Steuerelement identifizierten `nItem`.  
+##  <a name="setitemstate"></a>  CTabCtrl::SetItemState  
+ Sets the state of the tab control item identified by `nItem`.  
   
 ```  
 BOOL SetItemState(
@@ -745,72 +775,72 @@ BOOL SetItemState(
     DWORD dwState);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Die nullbasierte Indexnummer des Elements, für die Zustandsinformationen festgelegt.  
+ The zero-based index number of the item for which to set state information.  
   
  `dwMask`  
- Maske, die angeben, welche der Zustand des Elements flags festgelegt. Eine Liste von Werten, finden Sie unter der Maske Mitglied der [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) strukturieren, wie beschrieben in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Mask specifying which of the item's state flags to set. For a list of values, see the mask member of the [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, as described in the Windows SDK.  
   
  `dwState`  
- Ein Verweis auf eine `DWORD` Wert, der die Zustandsinformationen enthält. Kann einer der folgenden Werte sein:  
+ A reference to a `DWORD` value containing the state information. Can be one of the following values:  
   
-|Wert|Beschreibung|  
+|Value|Description|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|Das Registerkartenelement-Steuerelement ausgewählt ist.|  
-|**TCIS_HIGHLIGHTED**|Das Registerkartenelement-Steuerelement wird hervorgehoben, und die Registerkarte und Text mit der aktuellen Hervorhebungsfarbe gezeichnet werden. Bei der Verwendung der Hervorhebungsfarbe wird dies eine "true" Interpolation, keine Ditheringfarbe sein.|  
+|**TCIS_BUTTONPRESSED**|The tab control item is selected.|  
+|**TCIS_HIGHLIGHTED**|The tab control item is highlighted, and the tab and text are drawn using the current highlight color. When using highlight color, this will be a true interpolation, not a dithered color.|  
   
-### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="setmintabwidth"></a>CTabCtrl::SetMinTabWidth  
- Legt die minimale Breite der Elemente in einem Registerkarten-Steuerelement fest.  
+##  <a name="setmintabwidth"></a>  CTabCtrl::SetMinTabWidth  
+ Sets the minimum width of items in a tab control.  
   
 ```  
 int SetMinTabWidth(int cx);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `cx`  
- Die Mindestbreite für ein Registerkartenelement-Steuerelement festgelegt werden. Wenn dieser Parameter auf-1 festgelegt ist, wird das Steuerelement die Standardbreite der Registerkarte verwenden.  
+ Minimum width to be set for a tab control item. If this parameter is set to -1, the control will use the default tab width.  
   
-### <a name="return-value"></a>Rückgabewert  
- Die vorherige Registerkarte minimale Breite.  
+### <a name="return-value"></a>Return Value  
+ The previous minimum tab width.  
   
-### <a name="return-value"></a>Rückgabewert  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637)gemäß der Beschreibung in der [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ This member function implements the behavior of the Win32 message [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637), as described in the Windows SDK.  
   
-##  <a name="setpadding"></a>CTabCtrl::SetPadding  
- Legt die Größe des Speicherplatzes (Auffüllung) aus, um jede Registerkarte Symbol und Bezeichnung in einem Registerkarten-Steuerelement fest.  
+##  <a name="setpadding"></a>  CTabCtrl::SetPadding  
+ Sets the amount of space (padding) around each tab's icon and label in a tab control.  
   
 ```  
 void SetPadding(CSize size);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `size`  
- Legt die Größe des Speicherplatzes (Auffüllung) aus, um jede Registerkarte Symbol und Bezeichnung in einem Registerkarten-Steuerelement fest.  
+ Sets the amount of space (padding) around each tab's icon and label in a tab control.  
   
-##  <a name="settooltips"></a>CTabCtrl::SetToolTips  
- Ein Registerkarten-Steuerelement ein QuickInfo-Steuerelement zugewiesen.  
+##  <a name="settooltips"></a>  CTabCtrl::SetToolTips  
+ Assigns a tool tip control to a tab control.  
   
 ```  
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `pWndTip`  
- Das Handle des QuickInfo-Steuerelements.  
+ Handle of the tool tip control.  
   
-### <a name="remarks"></a>Hinweise  
- Sie erhalten das QuickInfo-Steuerelement ein Registerkarten-Steuerelement zugeordnet sind, von einem Aufruf an `GetToolTips`.  
+### <a name="remarks"></a>Remarks  
+ You can get the tool tip control associated with a tab control by making a call to `GetToolTips`.  
   
-### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-## <a name="see-also"></a>Siehe auch  
- [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [CHeaderCtrl-Klasse](../../mfc/reference/cheaderctrl-class.md)   
- [CListCtrl-Klasse](../../mfc/reference/clistctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CHeaderCtrl Class](../../mfc/reference/cheaderctrl-class.md)   
+ [CListCtrl Class](../../mfc/reference/clistctrl-class.md)
 

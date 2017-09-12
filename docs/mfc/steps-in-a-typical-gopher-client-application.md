@@ -1,45 +1,63 @@
 ---
-title: "Schritte in einer typischen Gopher-Clientanwendung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Gopher-Clientanwendungen"
-  - "Internetanwendungen, gopher-Clientanwendungen"
-  - "Internetclientanwendungen, Gophertabelle"
-  - "WinInet-Klassen, Gopher"
+title: Steps in a Typical Gopher Client Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- WinInet classes [MFC], gopher
+- Internet applications [MFC], gopher client applications
+- Gopher client applications [MFC]
+- Internet client applications [MFC], gopher table
 ms.assetid: 3e4e1869-5da0-453d-8ba9-b648c894bb90
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Schritte in einer typischen Gopher-Clientanwendung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4dcd34fc91fb6b32bfe87060f73f3579f9d169ea
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-In der folgenden Tabelle werden die Schritte angezeigt, die Sie in einer typischen Gopher\-Clientanwendung ausgeführt haben.  
+---
+# <a name="steps-in-a-typical-gopher-client-application"></a>Steps in a Typical Gopher Client Application
+The following table shows the steps you might perform in a typical gopher client application.  
   
-|Das Ziel|Aktionen, die Sie ausführen|Effekte|  
-|--------------|---------------------------------|-------------|  
-|Starten Sie eine Gopher\-Sitzung.|Erstellen Sie ein [CInternetSession](../mfc/reference/cinternetsession-class.md)\-Objekt.|Initialisiert WinInet\-Klassen und schließt am Server an.|  
-|Schließen Sie mit einem Gopherserver an.|Verwenden Sie [CInternetSession::GetGopherConnection](../Topic/CInternetSession::GetGopherConnection.md).|[CGopherConnection](../mfc/reference/cgopherconnection-class.md) Gibt ein Objekt zurück.|  
-|Suchen Sie die erste Ressource im Gopher.|Verwenden Sie [CGopherFileFind::FindFile](../Topic/CGopherFileFind::FindFile.md).|Sucht die erste Datei.  Gibt FALSE zurück, wenn keine Dateien gefunden werden.|  
-|Suchen Sie die folgende Ressource im Gopher.|Verwenden Sie [CGopherFileFind::FindNextFile](../Topic/CGopherFileFind::FindNextFile.md).|Sucht die folgende Datei.  Gibt FALSE zurück, wenn die Datei nicht gefunden wird.|  
-|Öffnen Sie die Datei, die von **FindFile** oder `FindNextFile` zum Lesen gefunden wird.|Rufen Sie einen Gopher\-Locator mithilfe von [CGopherFileFind::GetLocator](../Topic/CGopherFileFind::GetLocator.md) ab.  Verwenden Sie [CGopherConnection::OpenFile](../Topic/CGopherConnection::OpenFile.md).|Öffnet die Datei, die vom Locator angegeben wird.  `OpenFile` gibt ein Objekt zurück. [CGopherFile](../mfc/reference/cgopherfile-class.md)|  
-|Öffnen Sie eine Datei mithilfe eines Gopher\-Locators, den Sie angeben.|Erstellen Sie einen Gopher\-Locator mit [CGopherConnection::CreateLocator](../Topic/CGopherConnection::CreateLocator.md) erstellt.  Verwenden Sie [CGopherConnection::OpenFile](../Topic/CGopherConnection::OpenFile.md).|Öffnet die Datei, die vom Locator angegeben wird.  `OpenFile` gibt ein Objekt zurück. [CGopherFile](../mfc/reference/cgopherfile-class.md)|  
-|Lesen aus der Datei.|Verwenden Sie [CGopherFile](../mfc/reference/cgopherfile-class.md).|Liest die angegebene Anzahl von Bytes, mithilfe eines Puffers, den Sie angeben.|  
-|Behandeln von Ausnahmen|Verwenden Sie die [CInternetException](../mfc/reference/cinternetexception-class.md)\-Klasse.|Behandelt alle gängigen Internet\-Ausnahmetypen.|  
-|Beenden Sie die Gopher\-Sitzung.|Löschen Sie sich das Objekt unter [CInternetSession](../mfc/reference/cinternetsession-class.md).|Bereinigt automatisch geöffnet Dateihandles und Verbindungen.|  
+|Your goal|Actions you take|Effects|  
+|---------------|----------------------|-------------|  
+|Begin a gopher session.|Create a [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Initializes WinInet and connects to server.|  
+|Connect to a gopher server.|Use [CInternetSession::GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection).|Returns a [CGopherConnection](../mfc/reference/cgopherconnection-class.md) object.|  
+|Find the first resource in the gopher.|Use [CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile).|Finds the first file. Returns FALSE if no files are found.|  
+|Find the next resource in the gopher.|Use [CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile).|Finds the next file. Returns FALSE if the file is not found.|  
+|Open the file found by **FindFile** or `FindNextFile` for reading.|Get a gopher locator using [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Use [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|Opens the file specified by the locator. `OpenFile` returns a [CGopherFile](../mfc/reference/cgopherfile-class.md) object.|  
+|Open a file using a gopher locator you supply.|Create a gopher locator using [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator). Use [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|Opens the file specified by the locator. `OpenFile` returns a [CGopherFile](../mfc/reference/cgopherfile-class.md) object.|  
+|Read from the file.|Use [CGopherFile](../mfc/reference/cgopherfile-class.md).|Reads the specified number of bytes, using a buffer you supply.|  
+|Handle exceptions.|Use the [CInternetException](../mfc/reference/cinternetexception-class.md) class.|Handles all common Internet exception types.|  
+|End the gopher session.|Dispose of the [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Automatically cleans up open file handles and connections.|  
   
-## Siehe auch  
- [Win32\-Interneterweiterungen \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [Voraussetzungen für Internetclientklassen](../mfc/prerequisites-for-internet-client-classes.md)   
- [Schreiben einer Internetclientanwendung mithilfe von MFC\-WinInet\-Klassen](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)   
+ [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+

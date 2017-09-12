@@ -1,50 +1,69 @@
 ---
-title: "Windows Sockets: Ableiten von Socket-Classen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Abgeleitete Klassen, aus Socketklassen"
-  - "Sockets [C++], Ableiten aus Socketklassen"
-  - "Windows-Sockets [C++], Ableiten aus Socketklassen"
+title: 'Windows Sockets: Deriving from Socket Classes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- derived classes [MFC], from socket classes
+- Windows Sockets [MFC], deriving from socket classes
+- sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Windows Sockets: Ableiten von Socket-Classen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 796e65a7e54f1b98ea57b3682a6ef94db3e95524
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt einige der Funktionen, die Sie erhalten, indem Sie die eigene Klasse von einer der Socketklassen berechnen.  
+---
+# <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: Deriving from Socket Classes
+This article describes some of the functionality you can gain by deriving your own class from one of the socket classes.  
   
- Sie können eigene Socketklassen in [CAsyncSocket](../mfc/reference/casyncsocket-class.md) oder von [CSocket](../mfc/reference/csocket-class.md) ableiten, um die eigene Funktionen hinzuzufügen.  Insbesondere können diese Klassen verschiedene virtuelle Memberfunktionen, die Sie überschreiben können.  Diese Funktionen enthalten [OnReceive](../Topic/CAsyncSocket::OnReceive.md), [OnSend](../Topic/CAsyncSocket::OnSend.md), [OnAccept](../Topic/CAsyncSocket::OnAccept.md), [OnConnect](../Topic/CAsyncSocket::OnConnect.md) und [OnClose](../Topic/CAsyncSocket::OnClose.md).  Sie können die Funktionen in der abgeleiteten Socketklasse überschreiben, um die entsprechenden Benachrichtigungen zu nutzen, die sie bereitstellen, wenn Netzwerkereignisse auftreten.  Das Framework ruft diese Benachrichtigungsrückruffunktionen auf, um Sie über wichtige Socketereignissen, wie dem Empfang der Daten zu benachrichtigen, die Sie lesen beginnen können.  Weitere Informationen über Benachrichtigungsfunktionen, finden Sie unter [Windows Sockets: Socket\-Benachrichtigungen](../mfc/windows-sockets-socket-notifications.md).  
+ You can derive your own socket classes from either [CAsyncSocket](../mfc/reference/casyncsocket-class.md) or [CSocket](../mfc/reference/csocket-class.md) to add your own functionality. In particular, these classes supply a number of virtual member functions that you can override. These functions include [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive), [OnSend](../mfc/reference/casyncsocket-class.md#onsend), [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept), [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect), and [OnClose](../mfc/reference/casyncsocket-class.md#onclose). You can override the functions in your derived socket class to take advantage of the notifications they provide when network events occur. The framework calls these notification callback functions to notify you of important socket events, such as the receipt of data that you can begin reading. For more information about notification functions, see [Windows Sockets: Socket Notifications](../mfc/windows-sockets-socket-notifications.md).  
   
- Außerdem stellt Klasse `CSocket` die [OnMessagePending](../Topic/CSocket::OnMessagePending.md)\-Memberfunktion \(ein erweitertes schreibbares\).  MFC ruft diese Funktion auf, wenn der Socket Windows\-basierte Meldungen weiterleitet.  Sie können `OnMessagePending` überschreiben, um nach bestimmten Meldungen von Windows zu finden und auf diese reagieren.  
+ Additionally, class `CSocket` supplies the [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) member function (an advanced overridable). MFC calls this function while the socket is pumping Windows-based messages. You can override `OnMessagePending` to look for particular messages from Windows and respond to them.  
   
- Die Standardversion von `OnMessagePending` des in der Klasse, die `CSocket`, für die Meldungswarteschlange `WM_PAINT` Meldungen während des Wartens auf einen blockierenden Aufruf, indem es überprüft.  Sie leitet Zeichenmeldungen weiter, um Anzeigenqualität zu verbessern.  Neben der Möglichkeit nützliches einige, wird dies veranschaulicht eine Möglichkeit, die u sich die Funktion überschrieben.  Ein weiteres Beispiel sollten Sie die Verwendung von `OnMessagePending` für die folgende Aufgabe.  Angenommen, Sie ein nicht modales Dialogfeld beim Warten auf eine Netzwerktransaktion anzuzeigen, indem es.  Das Dialogfeld enthält eine Schaltfläche Abbrechen, die der Benutzer verwenden kann, um zu Transaktionen abzubrechen, die zu lang dauert.  Ihre `OnMessagePending` Überschreibung pumpte möglicherweise die Meldungen, die an diesem nicht modalen Dialogfeld beziehen.  
+ The default version of `OnMessagePending` supplied in class `CSocket` examines the message queue for `WM_PAINT` messages while waiting for a blocking call to complete. It dispatches paint messages to improve display quality. Aside from doing something useful, this illustrates one way you might override the function yourself. As another example, consider using `OnMessagePending` for the following task. Suppose you display a modeless dialog box while waiting for a network transaction to complete. The dialog box contains a Cancel button that the user can use to cancel blocking transactions that take too long. Your `OnMessagePending` override might pump messages related to this modeless dialog box.  
   
- In der Überschreibung `OnMessagePending` geben Sie **TRUE** oder der Rückgabe aus einem Aufruf an die Basisklassenversion von `OnMessagePending` zurück.  Rufen Sie die Basisklassenversion aufgelistet, wenn die Arbeit ausführt, die Sie noch fertiges soll.  
+ In your `OnMessagePending` override, return either **TRUE** or the return from a call to the base-class version of `OnMessagePending`. Call the base-class version if it performs work that you still want done.  
   
- Weitere Informationen finden Sie unter:  
+ For more information, see:  
   
--   [Windows Sockets: Verwenden von Sockets mit Archiven](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets: Verwenden der Klasse CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: Blockieren](../mfc/windows-sockets-blocking.md)  
+-   [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md)  
   
--   [Windows Sockets: Bytereihenfolge](../mfc/windows-sockets-byte-ordering.md)  
+-   [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md)  
   
--   [Windows Sockets: Konvertieren von Zeichenfolgen](../mfc/windows-sockets-converting-strings.md)  
+-   [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md)  
   
-## Siehe auch  
- [Windows\-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Klasse CMFCRibbonApplicationButton | Microsoft-Dokumentation
+title: CMFCRibbonApplicationButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonApplicationButton class
+- CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
+- CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
 caps.latest.revision: 25
 author: mikeblome
@@ -36,15 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a6fc19c2af854f3cd4ee3dc3a3008abcb4714ba3
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8b9462c709795fd9c7a55ff234b2b0116d41666c
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton-Klasse
-Implementiert eine spezielle Schaltfläche in der oberen linken Ecke des Anwendungsfensters. Wenn sie angeklickt wird, öffnet die Schaltfläche ein Menü, das normalerweise allgemeine **Datei** -Befehle wie **Öffnen**, **Speichern**und **Beenden**enthält.  
+# <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton Class
+Implements a special button located in the top-left corner of the application window. When clicked, the button opens a menu that usually contains common **File** commands like **Open**, **Save**, and **Exit**.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,30 +53,30 @@ Implementiert eine spezielle Schaltfläche in der oberen linken Ecke des Anwendu
 class CMFCRibbonApplicationButton : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|Erstellt und initialisiert ein `CMFCRibbonApplicationButton`-Objekt.|  
+|[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|Constructs and initializes a `CMFCRibbonApplicationButton` object.|  
   
-### <a name="public-methods"></a>Öffentliche Methoden  
+### <a name="public-methods"></a>Public Methods  
   
-|Name|Beschreibung|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonApplicationButton::CreateObject`|Wird vom Framework verwendet, um eine dynamische Instanz dieses Klassentyps zu erstellen.|  
-|`CMFCRibbonApplicationButton::GetThisClass`|Vom Framework verwendet werden, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das Klassentyp zugeordnet ist.|  
-|[CMFCRibbonApplicationButton::SetImage](#setimage)|Die Anwendungsschaltfläche Menüband wird ein Bild zugewiesen.|  
+|`CMFCRibbonApplicationButton::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCRibbonApplicationButton::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCRibbonApplicationButton::SetImage](#setimage)|Assigns an image to the ribbon application button.|  
   
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCRibbonApplicationButton` Klasse. Das Beispiel zeigt, wie ein Bild der Schaltfläche zugewiesen, und wie die QuickInfo festgelegt. Dieser Codeausschnitt ist Teil der [zeichnen Clientbeispiel](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCRibbonApplicationButton` class. The example shows how to assign an image to the application button, and how to set its tooltip. This code snippet is part of the [Draw Client sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DrawClient&4;](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]  
-[!code-cpp[NVC_MFC_DrawClient&5;](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]  
+[!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [Von CObject](../../mfc/reference/cobject-class.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
@@ -83,11 +84,11 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
   
  [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements  
  **Header:** afxRibbonBar.h  
   
-##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
- Erstellt und initialisiert ein [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) Objekt.  
+##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
+ Constructs and initializes a [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) object.  
   
 ```  
 CMFCRibbonApplicationButton();  
@@ -95,36 +96,36 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
   CMFCRibbonApplicationButton(HBITMAP hBmp);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  `uiBmpResID`  
- Die Ressourcen-ID des Bilds auf der Schaltfläche angezeigt.  
+ The resource ID of the image to display on the application button.  
   
  `hBmp`  
- Ein Handle für eine Bitmap, die auf die Anwendungsschaltfläche angezeigt.  
+ A handle to a bitmap to display on the application button.  
   
-### <a name="remarks"></a>Hinweise  
- Die Anwendungsschaltfläche Menüband ist eine spezielle Schaltfläche, die in der oberen linken Ecke des Anwendungsfensters befindet. Wenn ein Benutzer auf diese Schaltfläche klickt, wird die Anwendung öffnet ein Menü, das normalerweise allgemeine **Datei** Befehle, wie z. B. **öffnen**, **speichern**, und **beenden**.  
+### <a name="remarks"></a>Remarks  
+ The ribbon application button is a special button that is located in the upper-left corner of the application window. When a user clicks this button, the application opens a menu that usually contains common **File** commands, such as **Open**, **Save**, and **Exit**.  
   
-##  <a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
- Die Schaltfläche ein Bild zugewiesen.  
+##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage  
+ Assigns an image to the application button.  
   
 ```  
 void SetImage(UINT uiBmpResID);  
 void SetImage(HBITMAP hBmp);
 ```  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  [in] `uiBmpResID`  
- Die Ressourcen-ID des Bilds auf der Schaltfläche angezeigt.  
+ The resource ID of the image to display on the application button.  
   
  [in] `hBmp`  
- Ein Handle für eine Bitmap, die auf die Anwendungsschaltfläche angezeigt.  
+ A handle to a bitmap to display on the application button.  
   
-### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode ein neues Abbild an die Anwendungsschaltfläche Menüband zuweisen, nachdem Sie die Schaltfläche erstellen. Die Schaltfläche befindet sich in der oberen linken Ecke des Anwendungsfensters.  
+### <a name="remarks"></a>Remarks  
+ Use this method to assign a new image to the ribbon application button after you create the button. The application button is located in the upper-left corner of the application window.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
- [Klassen](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton-Klasse](../../mfc/reference/cmfcribbonbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)
 

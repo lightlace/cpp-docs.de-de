@@ -1,33 +1,50 @@
 ---
-title: "Container: Client-Element-Zust&#228;nde | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Clientelemente und OLE-Container"
-  - "Lebensdauer, Lebenszeitzustände und OLE-Containerclientelemente"
-  - "OLE-Container, Clientelement-Zustände"
-  - "Zustände, OLE-Containerclientelement"
+title: 'Containers: Client-Item States | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE containers [MFC], client-item states
+- states, OLE container client-item
+- lifetime, lifetime states and OLE container client items
+- client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Container: Client-Element-Zust&#228;nde
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ba2e8fc0ad0f57ec6c964d592442033a63ebb67f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel beschreibt die verschiedenen Zustände, die ein Clientelement von während seiner Lebensdauer wird.  
+---
+# <a name="containers-client-item-states"></a>Containers: Client-Item States
+This article explains the different states a client item passes through in its lifetime.  
   
- Ein Clientelement wird durch mehrere Zustände, das erstellt, aktiviert, geändert und gespeichert ist.  Jedes Mal wenn die Statusänderungen des Elements, dem Framework [COleClientItem::OnChange](../Topic/COleClientItem::OnChange.md) mit der `OLE_CHANGED_STATE` aufruft Benachrichtigung.  Der zweite Parameter ist ein Wert der **COleClientItem::ItemState**\-Enumeration.  Er kann einen der folgenden Werte:  
+ A client item passes through several states as it is created, activated, modified, and saved. Each time the item's state changes, the framework calls [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) with the `OLE_CHANGED_STATE` notification. The second parameter is a value from the **COleClientItem::ItemState** enumeration. It can be one of the following:  
   
 -   **COleClientItem::emptyState**  
   
@@ -39,17 +56,18 @@ Dieser Artikel beschreibt die verschiedenen Zustände, die ein Clientelement von
   
 -   **COleClientItem::activeUIState**  
   
- im leeren Zustand ein Clientelement noch nicht vollständig ein Element.  Arbeitsspeicher ist dafür verbunden, aber noch nicht mit den Daten des OLE\-Elements initialisiert.  Dies ist der Zustand, den einem Clientelement ist in, wenn es durch einen Aufruf von **neu** erstellt wurde jedoch noch den zweiten Schritt der üblichen zwei Schritte umfassenden Erstellung unterzogen hat.  
+ In the empty state, a client item is not yet completely an item. Memory has been allocated for it, but it has not yet been initialized with the OLE item's data. This is the state a client item is in when it has been created through a call to **new** but has not yet undergone the second step of the typical two-step creation.  
   
- Im zweiten Schritt ausgeführt durch einen Aufruf von `COleClientItem::CreateFromFile` oder einer anderen Funktion **CreateFrom***xxxx*, wird das Element vollständig erstellt.  Die OLE\-Daten \(von einer Datei oder einer anderen Quelle, z der Zwischenablage sind\) mit `COleClientItem` abgeleitetes Objekt verbunden.  Jetzt wird das Element im geladenen Zustand.  
+ In the second step, performed through a call to `COleClientItem::CreateFromFile` or another **CreateFrom***xxxx* function, the item is completely created. The OLE data (from a file or some other source, such as the Clipboard) has been associated with the `COleClientItem`-derived object. Now the item is in the loaded state.  
   
- Wenn ein Element im Fenster des Servers anstelle direkt im Dokument des Containers geöffnet geöffnet wurde, ist es im geöffneten \(vollständig oder öffnen Sie sie\), Zustand.  In diesem Zustand wird ein Kreuzschraffieren normalerweise über die Darstellung des Elements im Fenster des Containers gezeichnete, um anzugeben, dass das Element an anderer Stelle aktiv ist.  
+ When an item has been opened in the server's window rather than opened in place in the container's document, it is in the open (or fully open) state. In this state, a cross-hatch usually is drawn over the representation of the item in the container's window to indicate that the item is active elsewhere.  
   
- Wenn ein Element an der Stelle aktiviert wurde, übergibt es, normalerweise nur kurz, durch den aktiven Zustand.  Es gibt den aktiven Zustand der Benutzeroberfläche, in dem der Server die Menüs, Symbolleisten und andere Benutzeroberflächekomponenten mit denen des Containers zusammengeführt wurde.  Das Vorhandensein dieser Benutzeroberflächekomponenten unterscheidet den aktiven Zustand der Benutzeroberfläche im aktiven Zustand.  Andernfalls entspricht der aktiven Zustand dem aktiven Zustand der Benutzeroberfläche.  Wenn die Serverunterstützung rückgängig macht, muss der Server erforderlich, die Rückgängigzustandsinformationen des OLE\-Elements beizubehalten, nachdem sie geladen oder Zustand erreicht wird.  
+ When an item has been activated in place, it passes, usually only briefly, through the active state. It then enters the UI active state, in which the server has merged its menus, toolbars, and other user-interface components with those of the container. The presence of these user-interface components distinguishes the UI active state from the active state. Otherwise, the active state resembles the UI active state. If the server supports Undo, the server is required to retain the OLE item's undo-state information until it reaches the loaded or open state.  
   
-## Siehe auch  
- [Container](../mfc/containers.md)   
- [Aktivierung](../mfc/activation-cpp.md)   
- [Container: Client\-Element\-Benachrichtigungen](../mfc/containers-client-item-notifications.md)   
- [Tracker](../mfc/trackers.md)   
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Activation](../mfc/activation-cpp.md)   
+ [Containers: Client-Item Notifications](../mfc/containers-client-item-notifications.md)   
+ [Trackers](../mfc/trackers.md)   
  [CRectTracker Class](../mfc/reference/crecttracker-class.md)
+

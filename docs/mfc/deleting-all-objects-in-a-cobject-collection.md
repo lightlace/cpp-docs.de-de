@@ -1,91 +1,110 @@
 ---
-title: "L&#246;schen aller Objekte in einer CObject-Sammlung | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CObject-Klassenauflistung"
-  - "CObject-Klasse, Löschen in Auflistung"
-  - "Auflistungsklassen, Löschen aller Objekte"
-  - "Auflistungsklassen, Freigegebene Objekte"
-  - "Objekte [C++], Löschen in Auflistungen"
-  - "Objekte in CObject-Auflistungen"
-  - "Objekte in CObject-Auflistungen, Löschen"
+title: Deleting All Objects in a CObject Collection | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], deleting in collections
+- objects in CObject collections, deleting
+- CObject class [MFC], deleting in collection
+- collection classes [MFC], deleting all objects
+- CObject class collection
+- objects in CObject collections
+- collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# L&#246;schen aller Objekte in einer CObject-Sammlung
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f85d6ead18f6fb338c3e911484cdbca8c6c15eb
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel wird beschrieben, wie Sie die Objekte in einer Auflistung gelöscht \(ohne das Auflistungsobjekt selbst zu deaktivieren\).  
+---
+# <a name="deleting-all-objects-in-a-cobject-collection"></a>Deleting All Objects in a CObject Collection
+This article explains how to delete all objects in a collection (without deleting the collection object itself).  
   
- Um alle Objekte in einer Sammlung von `CObject`s \(oder Objekten zu löschen abgeleitet von `CObject`\), verwenden Sie eine der Iterationstechniken, die im Artikel [Zugreifen auf alle Member einer Auflistung](../mfc/accessing-all-members-of-a-collection.md) beschrieben werden um jedes Objekt einzeln zu löschen.  
+ To delete all the objects in a collection of `CObject`s (or of objects derived from `CObject`), you use one of the iteration techniques described in the article [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md) to delete each object in turn.  
   
 > [!CAUTION]
->  Objekte in Auflistungen können freigegeben werden.  Das heißt, enthält die Auflistung ein Zeiger auf das Objekt, aber andere Teile des Programms haben möglicherweise auch Zeiger zum gleichen Objekt.  Begrenzen Sie, dass kein Objekt löschen, das freigegeben wird, bis alle Bestandteile mithilfe des Objekts haben.  
+>  Objects in collections can be shared. That is, the collection keeps a pointer to the object, but other parts of the program may also have pointers to the same object. You must be careful not to delete an object that is shared until all the parts have finished using the object.  
   
- In diesem Artikel wird gezeigt, wie Sie Objekte in löscht:  
+ This article shows you how to delete the objects in:  
   
--   [Eine Liste](#_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject)  
+-   [A list](#_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject)  
   
--   [Ein Array](#_core_to_delete_all_elements_in_an_array)  
+-   [An array](#_core_to_delete_all_elements_in_an_array)  
   
--   [Eine Zuordnung](#_core_to_delete_all_elements_in_a_map)  
+-   [A map](#_core_to_delete_all_elements_in_a_map)  
   
-#### Um alle Objekte in einer Liste von zu Zeigern CObject löschen  
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  To delete all objects in a list of pointers to CObject  
   
-1.  Verwendung von `GetHeadPosition` und `GetNext`, durch die Liste durchlaufen.  
+1.  Use `GetHeadPosition` and `GetNext` to iterate through the list.  
   
-2.  Verwenden Sie den Operator **löschen**, um jedes Objekt zu löschen, wie es in der Iteration gefunden wird.  
+2.  Use the **delete** operator to delete each object as it is encountered in the iteration.  
   
-3.  Rufen Sie die Funktion `RemoveAll` auf, um alle Elemente aus der Liste entfernen, nachdem die Objekte, die mit den Elementen zugeordnet sind, gelöscht wurden.  
+3.  Call the `RemoveAll` function to remove all elements from the list after the objects associated with those elements have been deleted.  
   
- Das folgende Beispiel zeigt, wie Sie die Objekte aus einer Liste von `CPerson`\-Objekten gelöscht.  Jedes Objekt in der Liste ist ein Zeiger auf ein `CPerson`\-Objekt, das ursprünglich auf dem Heap reserviert wurde.  
+ The following example shows how to delete all objects from a list of `CPerson` objects. Each object in the list is a pointer to a `CPerson` object that was originally allocated on the heap.  
   
- [!CODE [NVC_MFCCollections#17](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCollections#17)]  
+ [!code-cpp[NVC_MFCCollections#17](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_1.cpp)]  
   
- Der letzte Funktionsaufruf, `RemoveAll`, ist eine Listenmemberfunktion, die alle Elemente aus der Liste entfernt.  Die Memberfunktion `RemoveAt` wird ein einzelnes Element.  
+ The last function call, `RemoveAll`, is a list member function that removes all elements from the list. The member function `RemoveAt` removes a single element.  
   
- Beachten Sie den Unterschied zwischen dem Löschen des Objekts eines Elements und das Entfernen des Elements selbst.  Ein Element aus der Liste entfernen, entfernt nur den Verweis der Liste auf das Objekt.  Das Objekt ist noch im Arbeitsspeicher.  Wenn Sie ein Objekt löschen, wird es auf vorhanden und der Arbeitsspeicher wird freigegeben.  Daher ist es wichtig, ein Element zu entfernen, nachdem das Objekt des Elements gelöscht wurde, damit die Liste nicht versucht, auf Objekte zugreifen, die nicht mehr vorhanden sind.  
+ Notice the difference between deleting an element's object and removing the element itself. Removing an element from the list merely removes the list's reference to the object. The object still exists in memory. When you delete an object, it ceases to exist and its memory is reclaimed. Thus, it is important to remove an element immediately after the element's object has been deleted so that the list won't try to access objects that no longer exist.  
   
-#### Um alle Elemente in einem Array löschen  
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  To delete all elements in an array  
   
-1.  Verwenden Sie `GetSize` und Ganzzahlenindexwerte, um das Array zu durchlaufen.  
+1.  Use `GetSize` and integer index values to iterate through the array.  
   
-2.  Verwenden Sie den Operator **löschen**, um die jeweiligen Elemente zu löschen, wie es in der Iteration gefunden wird.  
+2.  Use the **delete** operator to delete each element as it is encountered in the iteration.  
   
-3.  Rufen Sie die Funktion `RemoveAll` auf, um alle Elemente aus dem Array entfernen, nachdem sie gelöscht wurden.  
+3.  Call the `RemoveAll` function to remove all elements from the array after they have been deleted.  
   
-     Der Code zum Löschen aller Elemente eines Arrays ist, wie folgt:  
+     The code for deleting all elements of an array is as follows:  
   
-     [!CODE [NVC_MFCCollections#18](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCollections#18)]  
+     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]  
   
- Wie im Listenbeispiel oben, können Sie `RemoveAll` aufrufen, um alle Elemente in einem Array oder in `RemoveAt` zu entfernen, wenn ein einzelnes Element zu entfernen.  
+ As with the list example above, you can call `RemoveAll` to remove all elements in an array or `RemoveAt` to remove an individual element.  
   
-#### Um alle Elemente in einer Zuordnung löschen  
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> To delete all elements in a map  
   
-1.  Verwenden Sie `GetStartPosition` und `GetNextAssoc`, um das Array zu durchlaufen.  
+1.  Use `GetStartPosition` and `GetNextAssoc` to iterate through the array.  
   
-2.  Verwenden Sie den Operator **löschen**, um den Schlüssel und\/oder den Wert für jedes Kartenelement zu löschen, wie es in der Iteration gefunden wird.  
+2.  Use the **delete** operator to delete the key and/or value for each map element as it is encountered in the iteration.  
   
-3.  Rufen Sie die Funktion `RemoveAll` auf, um alle Elemente aus der Zuordnung zu entfernen, nachdem sie gelöscht wurden.  
+3.  Call the `RemoveAll` function to remove all elements from the map after they have been deleted.  
   
-     Der Code zum Löschen aller Elemente einer Auflistung `CMap` lautet wie folgt.  Jedes Element in der Zuordnung hat eine Zeichenfolge als Schlüssel und `CPerson`\-Objekt \(abgeleitet von `CObject`\) als Wert.  
+     The code for deleting all elements of a `CMap` collection is as follows. Each element in the map has a string as the key and a `CPerson` object (derived from `CObject`) as the value.  
   
-     [!CODE [NVC_MFCCollections#19](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCCollections#19)]  
+     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]  
   
- Sie können `RemoveAll` aufrufen, um alle Elemente in einer Zuordnung oder `RemoveKey` zu entfernen, wenn ein einzelnes Element mit dem angegebenen Schlüssel zu entfernen.  
+ You can call `RemoveAll` to remove all elements in a map or `RemoveKey` to remove an individual element with the specified key.  
   
-## Siehe auch  
- [Zugreifen auf alle Elemente einer Auflistung](../mfc/accessing-all-members-of-a-collection.md)
+## <a name="see-also"></a>See Also  
+ [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)
+
+

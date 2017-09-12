@@ -1,48 +1,67 @@
 ---
-title: "R&#252;ckrufelemente und die R&#252;ckrufmaske | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Rückrufelemente in der CListCtrl-Klasse"
-  - "CListCtrl-Klasse, Rückrufelemente und Rückrufmaske"
+title: Callback Items and the Callback Mask | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback items in CListCtrl class [MFC]
+- CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# R&#252;ckrufelemente und die R&#252;ckrufmaske
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e943e5445620b25437a0f6d70a6703a927d5e636
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Für jedes seiner Elemente, speichert ein Listenansicht\-Steuerelement in der Regel den Bezeichnungstext, den Bildlistenindex der Symbole des Elements und einem Satz von Bitflags für den Zustand des Elements.  Sie können einzelne Elemente als Rückrufelemente definieren, die hilfreich sind, wenn die Anwendung bereits einige der Informationen für ein Element gespeichert werden.  
+---
+# <a name="callback-items-and-the-callback-mask"></a>Callback Items and the Callback Mask
+For each of its items, a list view control typically stores the label text, the image list index of the item's icons, and a set of bit flags for the item's state. You can define individual items as callback items, which are useful if your application already stores some of the information for an item.  
   
- Sie definieren ein Element wie ein Rückrufelement, indem Sie entsprechenden Werte für die `pszText` und `iImage` müssen Member der **LV\_ITEM** \-Struktur angeben \(siehe [CListCtrl::GetItem](../Topic/CListCtrl::GetItem.md)\).  Wenn die Verwendung des Elements oder den Text des Unterelements beibehält, den **LPSTR\_TEXTCALLBACK**\-Wert für den `pszText`\-Member.  Wenn die Anwendung das Symbol für das Element nachverfolgt, den **I\_IMAGECALLBACK**\-Wert für den `iImage`\-Member.  
+ You define an item as a callback item by specifying appropriate values for the `pszText` and `iImage` members of the **LV_ITEM** structure (see [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). If the application maintains the item's or subitem's text, specify the **LPSTR_TEXTCALLBACK** value for the `pszText` member. If the application keeps track of the icon for the item, specify the **I_IMAGECALLBACK** value for the `iImage` member.  
   
- Zusätzlich zum Definieren von Rückrufelementen, können Sie die Rückrufmaske des Steuerelements ändern.  Diese Maske ist ein Satz von Bitflags, die den Elementzuständen angeben, für die die Anwendung, anstatt das Steuerelement, Speicher die aktuellen Daten.  Die Rückrufmaske gilt auf die Elemente aller Steuerelements, anders als die Rückrufelementbezeichnung zu, die auf ein bestimmtes Element gilt.  Die Rückrufmaske ist standardmäßig null und heißt dass die Kontrollspuren alle Zustände.  Um dieses Standardverhalten zu ändern, initialisieren Sie die Maske zu jeder Kombination der folgenden Werte:  
+ In addition to defining callback items, you can also modify the control's callback mask. This mask is a set of bit flags that specify the item states for which the application, rather than the control, stores the current data. The callback mask applies to all of the control's items, unlike the callback item designation, which applies to a specific item. The callback mask is zero by default, meaning that the control tracks all item states. To change this default behavior, initialize the mask to any combination of the following values:  
   
--   `LVIS_CUT` wird das Element für einen Ausschneide\- und Einfügevorgang markiert.  
+-   `LVIS_CUT` The item is marked for a cut-and-paste operation.  
   
--   `LVIS_DROPHILITED` das Element wird als Drag & Drop\-Ziel hervorgehoben.  
+-   `LVIS_DROPHILITED` The item is highlighted as a drag-and-drop target.  
   
--   `LVIS_FOCUSED` \- Element besitzt den Fokus.  
+-   `LVIS_FOCUSED` The item has the focus.  
   
--   `LVIS_SELECTED` das Element ist ausgewählt.  
+-   `LVIS_SELECTED` The item is selected.  
   
--   **LVIS\_OVERLAYMASK** speichert die Anwendung den Bildlistenindex des aktuellen Overlaybilds für jedes Element.  
+-   **LVIS_OVERLAYMASK** The application stores the image list index of the current overlay image for each item.  
   
--   **LVIS\_STATEIMAGEMASK** speichert die Anwendung den Bildlistenindex des Bilds des aktuellen Zustands für jedes Element.  
+-   **LVIS_STATEIMAGEMASK** The application stores the image list index of the current state image for each item.  
   
- Weitere Informationen zum Abrufen und Festlegen dieser Maske, finden Sie unter [CListCtrl::GetCallbackMask](../Topic/CListCtrl::GetCallbackMask.md) und [CListCtrl::SetCallbackMask](../Topic/CListCtrl::SetCallbackMask.md).  
+ For further information on retrieving and setting this mask, see [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) and [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).  
   
-## Siehe auch  
- [Verwenden von CListCtrl](../mfc/using-clistctrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

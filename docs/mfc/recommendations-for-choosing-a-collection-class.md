@@ -1,107 +1,127 @@
 ---
-title: "Empfehlungen f&#252;r die Auswahl einer Sammlungsklasse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Typsicherheit von Auflistungsklassen [C++]"
-  - "Auflistungsklassen, Serialisierung"
-  - "Auflistungsklassen, Geschwindigkeit"
-  - "Auflistungsklassen, Typsicherheit"
-  - "Auflistungsklassen, Auswählen"
-  - "Auflistungsklassen, Funktionalität"
-  - "Formen, Auflistung"
-  - "Auflistungsklassen, vorlagenbasiert"
-  - "MFC-Auflistungsklassen, Merkmale"
-  - "Auflistungsklassen, Informationen über Auflistungsklassen"
-  - "Serialisierung [C++], Auflistungsklassen"
-  - "Auflistungsklassen, Duplikate zugelassen"
-  - "Auflistungsklassen, Formen"
+title: Recommendations for Choosing a Collection Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- type safety of collection classes [MFC]
+- collection classes [MFC], serialization
+- collection classes [MFC], speed
+- collection classes [MFC], type safety
+- collection classes [MFC], choosing
+- collection classes [MFC], functionality
+- shapes, collection
+- collection classes [MFC], template-based
+- MFC collection classes [MFC], characteristics
+- collection classes [MFC], about collection classes [MFC]
+- serialization [MFC], collection classes
+- collection classes [MFC], duplicates allowed
+- collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Empfehlungen f&#252;r die Auswahl einer Sammlungsklasse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 293503782cc27ef44654cf7931fcb8235ac66eee
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Dieser Artikel enthält ausführliche Informationen zur Auswahl einer Auflistungsklasse für Ihre besonderen Anwendungsanforderungen.  
+---
+# <a name="recommendations-for-choosing-a-collection-class"></a>Recommendations for Choosing a Collection Class
+This article contains detailed information designed to help you choose a collection class for your particular application needs.  
   
- Ihre Wahl einer Auflistungsklasse hängt von mehreren Faktoren ab, einschließlich:  
+ Your choice of a collection class depends on a number of factors, including:  
   
--   Features der Klassenform: Reihenfolge, Indizierung und Leistung, wie in der Tabelle [Auflistungsformfeatures](#_core_collection_shape_features) weiter unten in diesem Thema gezeigt  
+-   The features of the class shape: order, indexing, and performance, as shown in the [Collection Shape Features](#_core_collection_shape_features) table later in this topic  
   
--   ob die Klasse C\+\+\-Vorlagen verwendet  
+-   Whether the class uses C++ templates  
   
--   ob die in der Auflistung gespeicherten Elemente serialisiert werden können  
+-   Whether the elements stored in the collection can be serialized  
   
--   ob die in der Auflistung gespeicherten Elemente zur Diagnose gesichert werden können  
+-   Whether the elements stored in the collection can be dumped for diagnostics  
   
--   ob die Auflistung typsicher ist  
+-   Whether the collection is type-safe  
   
- Die folgende Tabelle, [Auflistungsformfeatures](#_core_collection_shape_features), fasst die Merkmale der verfügbaren Auflistungsformen zusammen.  
+ The following table, [Collection Shape Features](#_core_collection_shape_features), summarizes the characteristics of the available collection shapes.  
   
--   In Spalten 2 und 3 werden die Anordnungs\- und Zugriffsmerkmale jeder Form beschrieben. In der Tabelle bedeutet der Ausdruck „geordnet“, dass die Reihenfolge, in der Elemente eingefügt und gelöscht werden, deren Reihenfolge in der Auflistung bestimmt. Es bedeutet nicht, dass die Elemente anhand ihres Inhalts sortiert werden. Der Begriff „indiziert“ bedeutet, dass die Elemente in der Auflistung über einen Ganzzahlenindex, ähnlich wie die Elemente in einem normalen Array, abgerufen werden können.  
+-   Columns 2 and 3 describe each shape's ordering and access characteristics. In the table, the term "ordered" means that the order in which items are inserted and deleted determines their order in the collection; it does not mean the items are sorted on their contents. The term "indexed" means that the items in the collection can be retrieved by an integer index, much like items in a typical array.  
   
--   In Spalten 4 und 5 wird die Leistung jeder Form beschrieben. In Anwendungen, die viele Einfügungen in die Auflistung erfordern, ist möglicherweise die Einfügungsgeschwindigkeit besonders wichtig; für andere Programme könnte die Suchgeschwindigkeit wichtiger sein.  
+-   Columns 4 and 5 describe each shape's performance. In applications that require many insertions into the collection, insertion speed might be especially important; for other applications, lookup speed may be more important.  
   
--   In Spalte 6 wird beschrieben, ob die einzelnen Formen doppelte Elemente zulassen.  
+-   Column 6 describes whether each shape allows duplicate elements.  
   
-### Auflistungsformfeatures  
+### <a name="_core_collection_shape_features"></a>  Collection Shape Features  
   
-|Form|Geordnet?|Indiziert?|Einfügen eines Elements|Suchen nach einem angegebenen Element|Doppelte Elemente?|  
-|----------|---------------|----------------|-----------------------------|-------------------------------------------|------------------------|  
-|Liste|Ja|Nein|Fast|Langsam|Ja|  
-|Array|Ja|Nach Ganzzahl|Langsam|Langsam|Ja|  
-|Zuordnung|Nein|Nach Schlüssel|Fast|Fast|Nein \(Schlüssel\) Ja \(Werte\)|  
+|Shape|Ordered|Indexed|Insert an element|Search for specified element|Duplicate elements|  
+|-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|  
+|List|Yes|No|Fast|Slow|Yes|  
+|Array|Yes|By int|Slow|Slow|Yes|  
+|Map|No|By key|Fast|Fast|No (keys) Yes (values)|  
   
- In der folgenden Tabelle, [Merkmale von MFC\-Auflistungsklassen](#_core_characteristics_of_mfc_collection_classes), werden weitere wichtige Merkmale bestimmter MFC\-Auflistungsklassen als Anleitung zur Auswahl zusammengefasst. Ihre Wahl kann davon abhängen, ob die Klasse auf C\+\+\-Vorlagen basiert, ihre Elemente über den MFC\-Mechanismus zur [Dokumentserialisierung](../mfc/serialization-in-mfc.md) serialisiert werden können, die Elemente über den MFC\-Diagnosesicherungsmechanismus gesichert werden können oder die Klasse typsicher ist – d. h., ob Sie den Typ der Elemente gewährleisten können, die in einer auf der Klasse basierenden Auflistung gespeichert und daraus abgerufen werden.  
+ The following table, [Characteristics of MFC Collection Classes](#_core_characteristics_of_mfc_collection_classes), summarizes other important characteristics of specific MFC collection classes as a guide to selection. Your choice may depend on whether the class is based on C++ templates, whether its elements can be serialized via MFC's document [serialization](../mfc/serialization-in-mfc.md) mechanism, whether its elements can be dumped via MFC's diagnostic dumping mechanism, or whether the class is type-safe — that is, whether you can guarantee the type of elements stored in and retrieved from a collection based on the class.  
   
-### Merkmale von MFC\-Auflistungsklassen  
+### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Characteristics of MFC Collection Classes  
   
-|Klasse|Verwendet C\+\+\-<br /><br /> Vorlagen|Wird bei Bedarf<br /><br /> serialisiert|Wird bei Bedarf<br /><br /> gesichert|Is<br /><br /> typsicher|  
-|------------|------------------------------------|--------------------------------------|-----------------------------------|----------------------|  
-|`CArray`|Ja|Ja 1|Ja 1|Nein|  
-|`CByteArray`|Nein|Ja|Ja|Ja 3|  
-|`CDWordArray`|Nein|Ja|Ja|Ja 3|  
-|`CList`|Ja|Ja 1|Ja 1|Nein|  
-|`CMap`|Ja|Ja 1|Ja 1|Nein|  
-|`CMapPtrToPtr`|Nein|Nein|Ja|Nein|  
-|`CMapPtrToWord`|Nein|Nein|Ja|Nein|  
-|`CMapStringToOb`|Nein|Ja|Ja|Nein|  
-|`CMapStringToPtr`|Nein|Nein|Ja|Nein|  
-|`CMapStringToString`|Nein|Ja|Ja|Ja 3|  
-|`CMapWordToOb`|Nein|Ja|Ja|Nein|  
-|`CMapWordToPtr`|Nein|Nein|Ja|Nein|  
-|`CObArray`|Nein|Ja|Ja|Nein|  
-|`CObList`|Nein|Ja|Ja|Nein|  
-|`CPtrArray`|Nein|Nein|Ja|Nein|  
-|`CPtrList`|Nein|Nein|Ja|Nein|  
-|`CStringArray`|Nein|Ja|Ja|Ja 3|  
-|`CStringList`|Nein|Ja|Ja|Ja 3|  
-|`CTypedPtrArray`|Ja|Je nachdem 2|Ja|Ja|  
-|`CTypedPtrList`|Ja|Je nachdem 2|Ja|Ja|  
-|`CTypedPtrMap`|Ja|Je nachdem 2|Ja|Ja|  
-|`CUIntArray`|Nein|Nein|Ja|Ja 3|  
-|`CWordArray`|Nein|Ja|Ja|Ja 3|  
+|Class|Uses C++<br /><br /> templates|Can be<br /><br /> serialized|Can be<br /><br /> dumped|Is<br /><br /> type-safe|  
+|-----------|------------------------------|---------------------------|-----------------------|-----------------------|  
+|`CArray`|Yes|Yes 1|Yes 1|No|  
+|`CByteArray`|No|Yes|Yes|Yes 3|  
+|`CDWordArray`|No|Yes|Yes|Yes 3|  
+|`CList`|Yes|Yes 1|Yes 1|No|  
+|`CMap`|Yes|Yes 1|Yes 1|No|  
+|`CMapPtrToPtr`|No|No|Yes|No|  
+|`CMapPtrToWord`|No|No|Yes|No|  
+|`CMapStringToOb`|No|Yes|Yes|No|  
+|`CMapStringToPtr`|No|No|Yes|No|  
+|`CMapStringToString`|No|Yes|Yes|Yes 3|  
+|`CMapWordToOb`|No|Yes|Yes|No|  
+|`CMapWordToPtr`|No|No|Yes|No|  
+|`CObArray`|No|Yes|Yes|No|  
+|`CObList`|No|Yes|Yes|No|  
+|`CPtrArray`|No|No|Yes|No|  
+|`CPtrList`|No|No|Yes|No|  
+|`CStringArray`|No|Yes|Yes|Yes 3|  
+|`CStringList`|No|Yes|Yes|Yes 3|  
+|`CTypedPtrArray`|Yes|Depends 2|Yes|Yes|  
+|`CTypedPtrList`|Yes|Depends 2|Yes|Yes|  
+|`CTypedPtrMap`|Yes|Depends 2|Yes|Yes|  
+|`CUIntArray`|No|No|Yes|Yes 3|  
+|`CWordArray`|No|Yes|Yes|Yes 3|  
   
- 1. Zum Serialisieren müssen Sie explizit die `Serialize`\-Funktion des Auflistungsobjekts aufrufen; zum Sichern müssen Sie explizit seine `Dump`\-Funktion aufrufen. Sie können nicht die Form `ar << collObj` zum Serialisieren oder die Form `dmp` `<< collObj` zum Sichern verwenden.  
+ 1. To serialize, you must explicitly call the collection object's `Serialize` function; to dump, you must explicitly call its `Dump` function. You cannot use the form `ar << collObj` to serialize or the form `dmp` `<< collObj` to dump.  
   
- 2. Serialisierbarkeit hängt vom zugrunde liegenden Auflistungstyp ab. Wenn z. B. ein typisiertes Zeigerarray auf `CObArray` basiert, ist es serialisierbar; auf `CPtrArray` basierend ist es nicht serialisierbar. Im Allgemeinen können die „Ptr“\-Klassen nicht serialisiert werden.  
+ 2. Serializability depends on the underlying collection type. For example, if a typed pointer array is based on `CObArray`, it is serializable; if based on `CPtrArray`, it is not serializable. In general, the "Ptr" classes cannot be serialized.  
   
- 3. Wenn in dieser Spalte „Ja“ markiert ist, ist eine Auflistungsklasse ohne Vorlage typsicher, sofern Sie sie wie vorgesehen verwenden. Wenn Sie z. B. Bytes in einem `CByteArray` speichern, ist das Array typsicher. Aber wenn Sie es zum Speichern von Zeichen verwenden, ist die Typsicherheit nicht so sicher.  
+ 3. If marked Yes in this column, a nontemplate collection class is type-safe provided you use it as intended. For example, if you store bytes in a `CByteArray`, the array is type-safe. But if you use it to store characters, its type safety is less certain.  
   
-## Siehe auch  
- [Auflistungen](../mfc/collections.md)   
- [Vorlagenbasierte Klassen](../mfc/template-based-classes.md)   
- [Gewusst wie: Erstellen einer typsicheren Auflistung](../mfc/how-to-make-a-type-safe-collection.md)   
- [Zugreifen auf alle Elemente einer Auflistung](../mfc/accessing-all-members-of-a-collection.md)
+## <a name="see-also"></a>See Also  
+ [Collections](../mfc/collections.md)   
+ [Template-Based Classes](../mfc/template-based-classes.md)   
+ [How to: Make a Type-Safe Collection](../mfc/how-to-make-a-type-safe-collection.md)   
+ [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)
+
+

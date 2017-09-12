@@ -1,37 +1,56 @@
 ---
-title: "Elementbezeichnungen in Struktursteuerelementen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl-Klasse, Elementbezeichnungen"
-  - "Elementbezeichnungen"
-  - "Elementbezeichnungen, Struktursteuerelemente"
-  - "Bezeichnungen, CTreeCtrl-Elemente"
-  - "Struktursteuerelemente, Elementbezeichnungen"
+title: Tree Control Item Labels | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree controls [MFC], item labels
+- labels, CTreeCtrl items
+- CTreeCtrl class [MFC], item labels
+- item labels, tree controls
+- item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Elementbezeichnungen in Struktursteuerelementen
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f81e05ccda98bca47c810f1e948b51652c187017
+ms.contentlocale: de-de
+ms.lasthandoff: 09/12/2017
 
-Sie geben in der Regel den Text der Beschriftung eines Elements an, wenn Sie das Element dem Strukturansicht\-Steuerelement \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) hinzufügen.  Die `InsertItem`\-Memberfunktion kann [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) eine Struktur, die die Eigenschaften des Elements definiert, u übergeben eine Zeichenfolge, die den Text der Beschriftung enthält.  `InsertItem` verfügt über mehrere Überladungen, die mit verschiedenen Kombinationen von Parametern aufgerufen werden können.  
+---
+# <a name="tree-control-item-labels"></a>Tree Control Item Labels
+You typically specify the text of an item's label when adding the item to the tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). The `InsertItem` member function can pass a [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) structure that defines the item's properties, including a string containing the text of the label. `InsertItem` has several overloads that can be called with various combinations of parameters.  
   
- Eine Strukturansicht belegt für das Speichern jedes Elements; Speicher Text der Elementbezeichnungen akzeptiert einen erheblichen Teil dieses Speichers auf.  Wenn die Anwendung eine Kopie der Zeichenfolgen in der Strukturansicht enthält, können Sie die Speicheranforderungen des Steuerelements verringern, indem Sie dem **LPSTR\_TEXTCALLBACK**\-Wert im **pszText**\-Member von `TV_ITEM` oder `lpszItem` den Parameter angeben, anstatt, tatsächliche Zeichenfolgen dem Strukturansicht\-Steuerelement zu übergeben.  Mit **LPSTR\_TEXTCALLBACK** Ursachen das Struktursteuerelement, um den Text der Beschriftung eines Elements aus der Anwendung abrufen, wenn das Element neu gezeichnet werden muss.  Um den Text abzurufen, sendet das Tree\-Steuerelement eine [TVN\_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518), die die Benachrichtigung Adresse einer [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418)\-Struktur enthält.  Sie müssen reagieren, indem Sie die entsprechenden Member der enthaltenden Struktur festlegen.  
+ A tree control allocates memory for storing each item; the text of the item labels takes up a significant portion of this memory. If your application maintains a copy of the strings in the tree control, you can decrease the memory requirements of the control by specifying the **LPSTR_TEXTCALLBACK** value in the **pszText** member of `TV_ITEM` or the `lpszItem` parameter instead of passing actual strings to the tree control. Using **LPSTR_TEXTCALLBACK** causes the tree control to retrieve the text of an item's label from the application whenever the item needs to be redrawn. To retrieve the text, the tree control sends a [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) notification message, which includes the address of a [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) structure. You must respond by setting the appropriate members of the included structure.  
   
- Eine Strukturansicht wird der Arbeitsspeicher, der vom Heap des Prozesses zugeordnet wird, der das Struktursteuerelement erstellt.  Die maximale Anzahl der Elemente in einem Strukturansicht basiert auf den Arbeitsspeicher, der im Heap verfügbar ist.  Jedes Element verwendet 64 Bytes.  
+ A tree control uses memory allocated from the heap of the process that creates the tree control. The maximum number of items in a tree control is based on the amount of memory available in the heap. Each item takes 64 bytes.  
   
-## Siehe auch  
- [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

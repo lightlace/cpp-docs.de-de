@@ -1,5 +1,5 @@
 ---
-title: "Definieren einen Meldungshandler für eine reflektierte Meldung | Microsoft-Dokumentation"
+title: Defining a Message Handler for a Reflected Message | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- messages, reflected
-- message handling, reflected messages
+- messages [MFC], reflected
+- message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
 caps.latest.revision: 9
 author: mikeblome
@@ -34,52 +34,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0033c75d351aa201a0c18e81395d764b9d45761b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e7a447048143d175e143a3e9c3072c844194bf8
 ms.contentlocale: de-de
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="defining-a-message-handler-for-a-reflected-message"></a>Definieren eines Meldungshandlers für eine reflektierte Meldung
-Sobald Sie eine neue MFC-Steuerelementklasse erstellt haben, können Sie Meldungshandler dafür definieren. Reflektierte Meldung-Handler können eine Klasse eigene Nachrichten zu verarbeiten, bevor die Nachricht vom übergeordneten Element empfangen wurde. Sie können die MFC-Bibliothek [Funktion CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) Funktion zum Senden von Nachrichten über das Steuerelement an ein übergeordnetes Fenster.  
+# <a name="defining-a-message-handler-for-a-reflected-message"></a>Defining a Message Handler for a Reflected Message
+Once you have created a new MFC control class, you can define message handlers for it. Reflected message handlers allow your control class to handle its own messages before the message is received by the parent. You can use the MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) function to send messages from your control to a parent window.  
   
- Erstellen Sie mit dieser Funktionalität Sie z. B. könnten ein Listenfeld, das sich selbst neu gezeichnet wird, statt auf das übergeordnete Fenster (Besitzer gezeichnet) möchten. Weitere Informationen zu reflektierte Nachrichten finden Sie unter [reflektiert Nachrichten Behandeln von](../../mfc/handling-reflected-messages.md).  
+ With this functionality you could, for example, create a list box that will redraw itself rather than relying on the parent window to do so (owner drawn). For more information on reflected messages, see [Handling Reflected Messages](../../mfc/handling-reflected-messages.md).  
   
- Erstellen einer [ActiveX-Steuerelement](../../mfc/activex-controls-on-the-internet.md) mit den gleichen Funktionen müssen Sie ein Projekt für das ActiveX-Steuerelement erstellen.  
+ To create an [ActiveX control](../../mfc/activex-controls-on-the-internet.md) with the same functionality, you must create a project for the ActiveX control.  
   
 > [!NOTE]
->  Sie können keine reflektierte Meldung hinzufügen (OCM*Nachricht*) mithilfe des Eigenschaftenfensters für ein ActiveX-steuern, wie unten beschrieben. Diese Nachrichten müssen Sie manuell hinzufügen.  
+>  You cannot add a reflected message (OCM_*Message*) for an ActiveX control using the Properties window, as described below. You must add these messages manually.  
   
-### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>Um einen Meldungshandler für eine reflektierte Meldung im Fenster Eigenschaften zu definieren.  
+### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>To define a message handler for a reflected message from the Properties window  
   
-1.  Fügen Sie dem MFC-Projekt ein Steuerelement, z. B. eine Liste, einem Grundleisten-Steuerelement, eine Symbolleiste oder ein Strukturansicht-Steuerelement hinzu.  
+1.  Add a control, such as a list, a rebar control, a toolbar, or a tree control, to your MFC project.  
   
-2.  Klicken Sie in der Klassenansicht auf den Namen der Steuerelementklasse.  
+2.  In Class View, click the name of your control class.  
   
-3.  In der [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window), der Name der Steuerelementklasse wird angezeigt, der **Klassenname** Liste.  
+3.  In the [Properties window](/visualstudio/ide/reference/properties-window), the control class name appears in the **Class Name** list.  
   
-4.  Klicken Sie auf die **Nachrichten** Schaltfläche, um die Anzeige der Windows-Meldungen, die auf dem Steuerelement hinzugefügt.  
+4.  Click the **Messages** button to display the Windows messages available to add to the control.  
   
-5.  Bildlauf nach unten in der Liste der Nachrichten im Fenster "Eigenschaften", bis Sie die Überschrift anzuzeigen, **reflektiert**. Klicken Sie alternativ auf die **Kategorien** Schaltfläche und die Ansicht reduzieren, finden Sie unter der **reflektiert** Überschrift.  
+5.  Scroll down the list of messages in the Properties window until you see the heading **Reflected**. Alternately, click the **Categories** button and collapse the view to see the **Reflected** heading.  
   
-6.  Wählen Sie die reflektierte Meldung für die Sie einen Handler definieren möchten. Reflektierte Meldungen werden mit einem Gleichheitszeichen (=) gekennzeichnet.  
+6.  Select the reflected message for which you want to define a handler. Reflected messages are marked with an equal sign (=).  
   
-7.  Klicken Sie auf die Zelle in der rechten Spalte im Fenster Eigenschaften auf den vorgeschlagenen Namen den Handler als anzeigen \<hinzufügen >*HandlerName*. (Z. B. die **= WM_CTLCOLOR** Meldungshandler schlägt \<hinzufügen >**CtlColor vor**).  
+7.  Click the cell in the right column in the Properties window to display the suggested name of the handler as \<add>*HandlerName*. (For example, the **=WM_CTLCOLOR** message handler suggests \<add>**CtlColor**).  
   
-8.  Klicken Sie auf den vorgeschlagenen Namen zu akzeptieren. Der Handler wird dem Projekt hinzugefügt.  
+8.  Click the suggested name to accept. The handler is added to your project.  
   
-     Message-Handler-Namen, die Sie hinzugefügt haben angezeigt, in der rechten Spalte des Fensters reflektierte Meldungen  
+     Message handler names that you have added appear in the right column of the reflected messages window.  
   
-9. Zum Bearbeiten oder Löschen einen Meldungshandler, wiederholen Sie die Schritte 4 bis 7. Klicken Sie auf die Zelle mit dem Handlernamen bearbeiten oder löschen, und klicken Sie auf die entsprechende Aufgabe.  
+9. To edit or delete a message handler, repeat steps 4 through 7. Click the cell containing the handler name to edit or delete and click the appropriate task.  
   
-## <a name="see-also"></a>Siehe auch  
- [Zuordnen von Meldungen zu Funktionen](../../mfc/reference/mapping-messages-to-functions.md)   
- [Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)   
- [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)   
- [Hinzufügen einer Membervariablen](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC-Meldungshandler](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigieren in der Klassenstruktur](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 
